@@ -2,7 +2,7 @@
 
 exports[`Canonical Feature Index page A11y I can see the skip to content link 1`] = `"مواد پر جائیں"`;
 
-exports[`Canonical Feature Index page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=95&amp;p=urdu.science.feature_index.51314202.page&amp;x1=[urn%3Abbc%3Acps%3A8c1f4760-de67-744b-bfd2-16eb1e9fd644]&amp;x2=[responsive]&amp;x3=[news-urdu]&amp;x4=[ur]&amp;x7=[index-section]&amp;x8=[simorgh-nojs]&amp;x9=[%DA%A9%D9%88%D8%B1%D9%88%D9%86%D8%A7%2B%D9%88%D8%A7%D8%A6%D8%B1%D8%B3%3A%2B%D8%AA%D8%AD%D9%82%DB%8C%D9%82%D8%8C%2B%D8%AA%D8%B4%D8%AE%DB%8C%D8%B5%2B%D8%A7%D9%88%D8%B1%2B%D8%A7%D8%AD%D8%AA%DB%8C%D8%A7%D8%B7%2B-%2BBBC%2BNews%2B%D8%A7%D8%B1%D8%AF%D9%88]&amp;x11=[2020-01-31T08%3A48%3A32.000Z]&amp;x12=[2020-09-29T10%3A13%3A59.000Z]\\"/>"`;
+exports[`Canonical Feature Index page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=95&amp;p=urdu.science.feature_index.51314202.page&amp;x1=[urn%3Abbc%3Acps%3A8c1f4760-de67-744b-bfd2-16eb1e9fd644]&amp;x2=[responsive]&amp;x3=[news-urdu]&amp;x4=[ur]&amp;x7=[index-section]&amp;x8=[simorgh-nojs]&amp;x9=[%DA%A9%D9%88%D8%B1%D9%88%D9%86%D8%A7%2520%D9%88%D8%A7%D8%A6%D8%B1%D8%B3%3A%2520%D8%AA%D8%AD%D9%82%DB%8C%D9%82%D8%8C%2520%D8%AA%D8%B4%D8%AE%DB%8C%D8%B5%2520%D8%A7%D9%88%D8%B1%2520%D8%A7%D8%AD%D8%AA%DB%8C%D8%A7%D8%B7%2520-%2520BBC%2520News%2520%D8%A7%D8%B1%D8%AF%D9%88]&amp;x11=[2020-01-31T08%3A48%3A32.000Z]&amp;x12=[2020-09-29T10%3A13%3A59.000Z]\\"/>"`;
 
 exports[`Canonical Feature Index page Footer Anchors should match text and url 1`] = `
 Object {
@@ -69,7 +69,7 @@ Object {
 
 exports[`Canonical Feature Index page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/urdu"`;
 
-exports[`Canonical Feature Index page Footer I can see the footer copyright and external linking text 1`] = `"© 2022 بی بی سی. بی بی سی بیرونی ویب سائٹس کے مواد کا ذمہ دار نہیں بیرونی لنکس کے بارے میں ہماری پالیسی."`;
+exports[`Canonical Feature Index page Footer I can see the footer copyright and external linking text 1`] = `"© 2023 بی بی سی. بی بی سی بیرونی ویب سائٹس کے مواد کا ذمہ دار نہیں بیرونی لنکس کے بارے میں ہماری پالیسی."`;
 
 exports[`Canonical Feature Index page Header I can see the branding 1`] = `"BBC News, اردو"`;
 
@@ -205,8 +205,6 @@ exports[`Canonical Feature Index page SEO Canonical link 1`] = `"http://localhos
 
 exports[`Canonical Feature Index page SEO Dir attribute 1`] = `"rtl"`;
 
-exports[`Canonical Feature Index page SEO FB admins 1`] = `"100004154058350"`;
-
 exports[`Canonical Feature Index page SEO FB app ID 1`] = `"1609039196070050"`;
 
 exports[`Canonical Feature Index page SEO Heading level 1 1`] = `"کورونا وائرس: تحقیق، تشخیص اور احتیاط"`;
@@ -302,7 +300,7 @@ exports[`Canonical Feature Index page Story Promo Image should match image 1`] =
   alt="بل گیٹس"
   class="bbc-1uwua2r"
   height="576"
-  sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
+  sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
   src="https://ichef.bbci.co.uk/news/660/cpsprodpb/B04F/production/_112753154_bill.jpg"
   srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/B04F/production/_112753154_bill.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/B04F/production/_112753154_bill.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/B04F/production/_112753154_bill.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/B04F/production/_112753154_bill.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/B04F/production/_112753154_bill.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/B04F/production/_112753154_bill.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/B04F/production/_112753154_bill.jpg 660w"
   style="aspect-ratio:1024 / 576"

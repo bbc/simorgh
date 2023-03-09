@@ -2724,8 +2724,11 @@ module.exports = () => ({
       articles: {
         environments: {
           live: {
-            paths: ['/igbo/articles/ckjn8jnrn75o'],
-            enabled: false,
+            paths: [
+              '/igbo/articles/ckjn8jnrn75o',
+              '/igbo/articles/c0jgdy9d841o',
+            ],
+            enabled: true,
           },
           test: {
             paths: ['/igbo/articles/cr1lw620ygjo'],
@@ -3688,7 +3691,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: ['/kyrgyz/topics/cvpv9djp9qqt?renderer_env=test'],
+            enabled: true,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -3885,14 +3904,14 @@ module.exports = () => ({
           live: {
             paths: [
               '/marathi/podcasts/p09431p4', // Podcast Brand
-              '/marathi/podcasts/p09431p4/p09kx7q9', // Podcast Episode
+              '/marathi/podcasts/p09431p4/p0f1vp21', // Podcast Episode
             ],
             enabled: true,
           },
           test: {
             paths: [
               '/marathi/podcasts/p09431p4', // Podcast Brand
-              '/marathi/podcasts/p09431p4/p09kx7q9', // Podcast Episode
+              '/marathi/podcasts/p09431p4/p0f1vp21', // Podcast Episode
             ],
             enabled: true,
           },
@@ -5404,7 +5423,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: false,
+        smoke: true,
       },
       errorPage404: {
         environments: {
@@ -8600,7 +8619,7 @@ module.exports = () => ({
               '/ukchina/simp/52970385', // CPS video
               '/ukchina/simp/elt/2015/08/150908_are_326_barrel_of_laughs_audio', // TC2 audio
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [

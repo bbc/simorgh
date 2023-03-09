@@ -1,11 +1,4 @@
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_GHOST,
-  C_POSTBOX_30,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
 import cyrillic from '../../../components/ThemeProvider/fontScripts/cyrillic';
-import brandSVG from '../../chameleonLogos/ukrainian';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/uk';
 import withContext from '../../../contexts/utils/withContext';
@@ -38,7 +31,6 @@ const baseServiceConfig = {
   imageCopyrightOffscreenText: 'Автор фото, ',
   service: 'ukrainian' as Services,
   serviceName: 'Ukrainian',
-  themeColor: `${C_POSTBOX}`,
   twitterCreator: '@BBC_ua',
   twitterSite: '@BBC_ua',
   noBylinesPolicy:
@@ -49,13 +41,6 @@ const baseServiceConfig = {
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   frontPageTitle: 'Новини',
-  theming: {
-    brandBackgroundColour: `${C_POSTBOX}`,
-    brandLogoColour: `${C_WHITE}`,
-    brandForegroundColour: `${C_GHOST}`,
-    brandHighlightColour: `${C_WHITE}`,
-    brandBorderColour: `${C_POSTBOX_30}`,
-  },
   showAdPlaceholder: true,
   showRelatedTopics: true,
   podcastPromo: {
@@ -245,6 +230,7 @@ const baseServiceConfig = {
       duration: 'Тривалість',
       recentEpisodes: 'Більше',
       podcastExternalLinks: 'Цей подкаст доступний у',
+      download: 'Завантажити епізод',
     },
     socialEmbed: {
       caption: {
@@ -280,7 +266,6 @@ const baseServiceConfig = {
     relatedTopics: 'Також на цю тему',
     ...secondaryColumnTranslations,
   },
-  brandSVG,
   mostRead: {
     header: 'Найпопулярніше',
     lastUpdated: 'Останнє оновлення:',

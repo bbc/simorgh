@@ -1007,6 +1007,10 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - L
   text-decoration: underline;
 }
 
+.emotion-10 button:focus-visible {
+  outline: 0.1875rem solid #000000;
+}
+
 @media (min-width: 25rem) {
   .emotion-10 {
     width: 17.3125rem;
@@ -1047,6 +1051,7 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - L
           dir="ltr"
         >
           <button
+            data-terms-banner="accept"
             on="tap:cookieId.show, privacyId.hide"
             type="button"
           >
@@ -1059,6 +1064,7 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - L
         >
           <span>
             <a
+              data-terms-banner="reject"
               href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
               on="tap:cookieId.show, privacyId.hide"
             >
@@ -1290,6 +1296,10 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - R
   text-decoration: underline;
 }
 
+.emotion-10 button:focus-visible {
+  outline: 0.1875rem solid #000000;
+}
+
 @media (min-width: 25rem) {
   .emotion-10 {
     width: 17.3125rem;
@@ -1330,6 +1340,7 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - R
           dir="rtl"
         >
           <button
+            data-terms-banner="accept"
             on="tap:cookieId.show, privacyId.hide"
             type="button"
           >
@@ -1342,6 +1353,7 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - R
         >
           <span>
             <a
+              data-terms-banner="reject"
               href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
               on="tap:cookieId.show, privacyId.hide"
             >

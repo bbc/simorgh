@@ -8,7 +8,6 @@ import DocumentComponent from './component';
 Helmet.canUseDOM = false;
 
 describe('Document Component', () => {
-  const assetOrigins = ['http://example.com'];
   const data = { test: 'data' };
   const legacyScripts = (
     <>
@@ -35,7 +34,6 @@ describe('Document Component', () => {
   // eslint-disable-next-line react/prop-types
   const TestDocumentComponent = ({ service, isAmp }) => (
     <DocumentComponent
-      assetOrigins={assetOrigins}
       app={{
         css: '.css-7prgni-StyledLink{display:inline-block;}',
         ids: ['7prgni-StyledLink'],
@@ -90,16 +88,5 @@ describe('Document Component', () => {
     const linksHtml = renderToStaticMarkup(links);
 
     expect(head).not.toContainHTML(linksHtml);
-  });
-
-  it('should render preload links on canonical', () => {
-    const dom = new JSDOM(
-      renderToString(<TestDocumentComponent service="news" />),
-    );
-
-    const head = dom.window.document.querySelector('head');
-    const linksHtml = renderToStaticMarkup(links);
-
-    expect(head).toContainHTML(linksHtml);
   });
 });

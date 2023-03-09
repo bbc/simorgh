@@ -9,11 +9,9 @@ import {
 } from '#psammead/psammead-assets/src/amp-boilerplate';
 import { AMP_GEO_SCRIPT } from '#components/AmpGeo';
 import serialiseForScript from '#lib/utilities/serialiseForScript';
-import ResourceHints from '#components/ResourceHints';
 import IfAboveIE9 from '#components/IfAboveIE9Comment';
 
 const Document = ({
-  assetOrigins,
   app,
   data,
   helmet,
@@ -21,7 +19,6 @@ const Document = ({
   modernScripts,
   legacyScripts,
   links,
-  service,
 }) => {
   const htmlAttrs = helmet.htmlAttributes.toComponent();
   const meta = helmet.meta.toComponent();
@@ -49,13 +46,11 @@ const Document = ({
   return (
     <html lang="en-GB" {...noJsHtmlAttrs} {...htmlAttrs}>
       <head>
-        {!['pidgin', 'hindi'].includes(service) && (
-          <ResourceHints assetOrigins={assetOrigins} />
-        )}
         {meta}
-        {!isAmp && links}
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         {title}
+        {helmetLinkTags}
+        {headScript}
         {isAmp ? (
           <style
             amp-custom=""
@@ -72,8 +67,6 @@ const Document = ({
             }}
           />
         )}
-        {helmetLinkTags}
-        {headScript}
         {isAmp && (
           <>
             <style amp-boilerplate="">{AMP_SCRIPT}</style>
@@ -100,6 +93,7 @@ const Document = ({
             }}
           />
         )}
+        {!isAmp && links}
         {scriptsAllowed && scriptTags}
         {scriptsAllowed && (
           <script

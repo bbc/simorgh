@@ -1,454 +1,1796 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::article:cgn6emk3jm8o",
-    "locators": {
-      "optimoUrn": "urn:bbc:optimo:asset:cgn6emk3jm8o"
-    },
-    "type": "article",
-    "createdBy": "Somali",
-    "language": "so",
-    "lastUpdated": 1569597702526,
-    "firstPublished": 1562936492234,
-    "lastPublished": 1562936492234,
-    "options": {},
-    "analyticsLabels": {},
-    "passport": {
-      "language": "so",
-      "home": "http://www.bbc.co.uk/ontologies/passport/home/Somali"
-    },
-    "tags": {},
-    "version": "v1.1.2",
-    "blockTypes": [
-      "headline",
-      "text",
-      "paragraph",
-      "fragment",
-      "image",
-      "caption",
-      "altText",
-      "rawImage",
-      "urlLink",
-      "video",
-      "subheadline"
-    ]
-  },
-  "content": {
-    "model": {
-      "blocks": [
-        {
-          "type": "headline",
-          "model": {
-            "blocks": [
-              {
-                "type": "text",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "paragraph",
-                      "model": {
-                        "text": "Tani waa cinwaanka maqaalkan imtixaanka",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "Tani waa cinwaanka maqaalkan imtixaanka",
-                              "attributes": []
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "image",
-          "model": {
-            "blocks": [
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Sawirkan tijaabada ah, oo ah xuquuqda daabacaadda BBC, waxay muujineysaa khariidad Faransiis ah. Muuqaalku wuxuu ku jiraa saddexda qaybood ee ugu horreeya wuxuuna leeyahay cinwaankan.",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Sawirkan tijaabada ah, oo ah xuquuqda daabacaadda BBC, waxay muujineysaa khariidad Faransiis ah. Muuqaalku wuxuu ku jiraa saddexda qaybood ee ugu horreeya wuxuuna leeyahay cinwaankan.",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Khariidadda Faransiiska oo muujineysa Paris iyo Cognac\r",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Khariidadda Faransiiska oo muujineysa Paris iyo Cognac\r",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "rawImage",
-                "model": {
-                  "width": 624,
-                  "height": 351,
-                  "locator": "9d53/test/ad9ec840-de13-11e9-b23c-f1ac9644bb55.jpg",
-                  "originCode": "cpsdevpb",
-                  "copyrightHolder": "BBC"
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "text",
-          "model": {
-            "blocks": [
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "Kani waa baaldi qoraal ah, oo ay ku jiraan xariir url ah oo loo maro bogga bogga cimilada ee BBC Weather.",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "Kani waa baaldi qoraal ah, oo ay ku jiraan xariir url ah oo loo maro ",
-                        "attributes": []
-                      }
-                    },
-                    {
-                      "type": "urlLink",
-                      "model": {
-                        "text": "bogga bogga cimilada ee BBC Weather.",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "bogga bogga cimilada ee BBC Weather.",
-                              "attributes": []
-                            }
-                          }
-                        ],
-                        "locator": "https://www.bbc.com/weather",
-                        "isExternal": false
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "video",
-          "model": {
-            "locator": "urn:bbc:pips:pid:p01k6msm",
-            "blocks": [
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Way yaryihiin, laakiin innaga bini'aadamka waxbaan baran karnaa shay ama labo quraanyo.",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Way yaryihiin, laakiin innaga bini'aadamka waxbaan baran karnaa shay ama labo quraanyo.",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "aresMedia",
-                "model": {
-                  "blocks": [
-                    {
-                      "blockId": "urn:bbc:ares::clip:p01k6msm",
-                      "type": "aresMediaMetadata",
-                      "model": {
-                        "id": "p01k6msm",
-                        "subType": "clip",
-                        "format": "audio_video",
-                        "title": "Five things ants can teach us about management",
-                        "synopses": {
-                          "short": "They may be tiny, but us humans could learn a thing or two from ants."
-                        },
-                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
-                        "imageCopyright": "BBC",
-                        "embedding": true,
-                        "advertising": true,
-                        "versions": [
-                          {
-                            "versionId": "p01k6msp",
-                            "types": ["Original"],
-                            "duration": 191,
-                            "durationISO8601": "PT3M11S",
-                            "warnings": {
-                              "short": "Contains strong language and adult humour.",
-                              "long": "Contains strong language and adult humour."
-                            },
-                            "availableTerritories": {
-                              "uk": true,
-                              "nonUk": true
-                            },
-                            "availableFrom": 1540218932000
-                          }
-                        ],
-                        "syndication": {
-                          "destinations": []
-                        }
-                      }
-                    },
-                    {
-                      "type": "image",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "rawImage",
-                            "model": {
-                              "width": 1920,
-                              "height": 1080,
-                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg",
-                              "originCode": "mpv",
-                              "copyrightHolder": "BBC"
-                            }
+  "data": {
+    "article": {
+      "content": {
+        "model": {
+          "blocks": [
+            {
+              "id": "6520347b",
+              "type": "headline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "9039d742",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "7bf22806",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "Tani waa cinwaanka maqaalkan imtixaanka",
+                            "blocks": [
+                              {
+                                "id": "998d8d81",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "Tani waa cinwaanka maqaalkan imtixaanka",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
                           },
-                          {
-                            "type": "altText",
-                            "model": {
-                              "blocks": [
-                                {
-                                  "type": "text",
-                                  "model": {
-                                    "blocks": [
-                                      {
-                                        "type": "paragraph",
-                                        "model": {
-                                          "text": "Ants",
-                                          "blocks": [
-                                            {
-                                              "type": "fragment",
-                                              "model": {
-                                                "text": "Ants",
-                                                "attributes": []
-                                              }
-                                            }
-                                          ]
-                                        }
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "subheadline",
-          "model": {
-            "blocks": [
-              {
-                "type": "text",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "paragraph",
-                      "model": {
-                        "text": "Kani waa qayb hoosaad ka kooban",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "Kani waa qayb hoosaad ka kooban",
-                              "attributes": []
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "image",
-          "model": {
-            "blocks": [
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Ciyaartoyda Kubadda Cagta kadib ciyaar",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Ciyaartoyda Kubadda Cagta kadib ciyaar",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      1,
+                      1
+                    ]
+                  }
+                ]
               },
-              {
-                "type": "rawImage",
-                "model": {
-                  "width": 2048,
-                  "height": 1152,
-                  "locator": "4a79/test/725adb60-de14-11e9-b23c-f1ac9644bb55.jpg",
-                  "originCode": "cpsdevpb",
-                  "copyrightHolder": "Getty Images"
-                }
-              }
-            ]
-          }
+              "position": [
+                1
+              ]
+            },
+            {
+              "id": "995cd05d",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "6393dfcd",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "1c90289a",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "73869271",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Sawirkan tijaabada ah, oo ah xuquuqda daabacaadda BBC, waxay muujineysaa khariidad Faransiis ah. Muuqaalku wuxuu ku jiraa saddexda qaybood ee ugu horreeya wuxuuna leeyahay cinwaankan.",
+                                  "blocks": [
+                                    {
+                                      "id": "b7e26998",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Sawirkan tijaabada ah, oo ah xuquuqda daabacaadda BBC, waxay muujineysaa khariidad Faransiis ah. Muuqaalku wuxuu ku jiraa saddexda qaybood ee ugu horreeya wuxuuna leeyahay cinwaankan.",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        2,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  2,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            2,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      2,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "6bc84ad9",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "e34699f3",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "5ed25435",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Khariidadda Faransiiska oo muujineysa Paris iyo Cognac\r",
+                                  "blocks": [
+                                    {
+                                      "id": "aa175d50",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Khariidadda Faransiiska oo muujineysa Paris iyo Cognac\r",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        2,
+                                        2,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  2,
+                                  2,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            2,
+                            2,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      2,
+                      2
+                    ]
+                  },
+                  {
+                    "id": "17d8780e",
+                    "type": "rawImage",
+                    "model": {
+                      "width": 624,
+                      "height": 351,
+                      "locator": "9d53/test/ad9ec840-de13-11e9-b23c-f1ac9644bb55.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "BBC"
+                    },
+                    "position": [
+                      2,
+                      3
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                2
+              ]
+            },
+            {
+              "id": "f2700eec",
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1562936492234,
+                "lastPublished": 1562936492234
+              },
+              "position": [
+                3
+              ]
+            },
+            {
+              "id": "a2900f94",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "e6a6e31a",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Kani waa baaldi qoraal ah, oo ay ku jiraan xariir url ah oo loo maro bogga bogga cimilada ee BBC Weather.",
+                      "blocks": [
+                        {
+                          "id": "9eba9426",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Kani waa baaldi qoraal ah, oo ay ku jiraan xariir url ah oo loo maro ",
+                            "attributes": []
+                          },
+                          "position": [
+                            4,
+                            1,
+                            1
+                          ]
+                        },
+                        {
+                          "id": "de5e992c",
+                          "type": "urlLink",
+                          "model": {
+                            "text": "bogga bogga cimilada ee BBC Weather.",
+                            "blocks": [
+                              {
+                                "id": "e2b24d4b",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "bogga bogga cimilada ee BBC Weather.",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  4,
+                                  1,
+                                  2,
+                                  1
+                                ]
+                              }
+                            ],
+                            "locator": "https://www.bbc.com/weather",
+                            "isExternal": false
+                          },
+                          "position": [
+                            4,
+                            1,
+                            2
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      4,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                4
+              ]
+            },
+            {
+              "id": "b99dca53",
+              "type": "video",
+              "model": {
+                "locator": "urn:bbc:pips:pid:p01k6msm",
+                "blocks": [
+                  {
+                    "id": "069524b4",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "81339940",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "6aeb9e1c",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Way yaryihiin, laakiin innaga bini'aadamka waxbaan baran karnaa shay ama labo quraanyo.",
+                                  "blocks": [
+                                    {
+                                      "id": "e7b4ccf7",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Way yaryihiin, laakiin innaga bini'aadamka waxbaan baran karnaa shay ama labo quraanyo.",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        5,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  5,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            5,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      5,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "530e141b",
+                    "type": "aresMedia",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "ee63b26c",
+                          "blockId": "urn:bbc:ares::clip:p01k6msm",
+                          "type": "aresMediaMetadata",
+                          "model": {
+                            "id": "p01k6msm",
+                            "subType": "clip",
+                            "format": "audio_video",
+                            "title": "Five things ants can teach us about management",
+                            "synopses": {
+                              "short": "They may be tiny, but us humans could learn a thing or two from ants."
+                            },
+                            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+                            "imageCopyright": "BBC",
+                            "embedding": true,
+                            "advertising": true,
+                            "versions": [
+                              {
+                                "versionId": "p01k6msp",
+                                "types": [
+                                  "Original"
+                                ],
+                                "duration": 191,
+                                "durationISO8601": "PT3M11S",
+                                "warnings": {
+                                  "short": "Contains strong language and adult humour.",
+                                  "long": "Contains strong language and adult humour."
+                                },
+                                "availableTerritories": {
+                                  "uk": true,
+                                  "nonUk": true
+                                },
+                                "availableFrom": 1540218932000
+                              }
+                            ],
+                            "syndication": {
+                              "destinations": []
+                            },
+                            "smpKind": "programme"
+                          },
+                          "position": [
+                            5,
+                            2,
+                            1
+                          ]
+                        },
+                        {
+                          "id": "2d13d07b",
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "0fd523bc",
+                                "type": "rawImage",
+                                "model": {
+                                  "width": 1920,
+                                  "height": 1080,
+                                  "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg",
+                                  "originCode": "mpv",
+                                  "copyrightHolder": "BBC"
+                                },
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  1
+                                ]
+                              },
+                              {
+                                "id": "038ff747",
+                                "type": "altText",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "7399d4ce",
+                                      "type": "text",
+                                      "model": {
+                                        "blocks": [
+                                          {
+                                            "id": "44300b17",
+                                            "type": "paragraph",
+                                            "model": {
+                                              "text": "Ants",
+                                              "blocks": [
+                                                {
+                                                  "id": "5dd84c73",
+                                                  "type": "fragment",
+                                                  "model": {
+                                                    "text": "Ants",
+                                                    "attributes": []
+                                                  },
+                                                  "position": [
+                                                    5,
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    1,
+                                                    1,
+                                                    1
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            "position": [
+                                              5,
+                                              2,
+                                              2,
+                                              2,
+                                              1,
+                                              1
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      "position": [
+                                        5,
+                                        2,
+                                        2,
+                                        2,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  2
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            5,
+                            2,
+                            2
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      5,
+                      2
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                5
+              ]
+            },
+            {
+              "id": "a0e5cec0",
+              "type": "subheadline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "a33c5c26",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "b9c579fe",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "Kani waa qayb hoosaad ka kooban",
+                            "blocks": [
+                              {
+                                "id": "bbdadd51",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "Kani waa qayb hoosaad ka kooban",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  6,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            6,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      6,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                6
+              ]
+            },
+            {
+              "id": "9f0466b5",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "fdb689f0",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "7bd34589",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "7b429571",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Ciyaartoyda Kubadda Cagta kadib ciyaar",
+                                  "blocks": [
+                                    {
+                                      "id": "b8bb57f8",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Ciyaartoyda Kubadda Cagta kadib ciyaar",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        7,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  7,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            7,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      7,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "01f9276f",
+                    "type": "rawImage",
+                    "model": {
+                      "width": 2048,
+                      "height": 1152,
+                      "locator": "4a79/test/725adb60-de14-11e9-b23c-f1ac9644bb55.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "Getty Images"
+                    },
+                    "position": [
+                      7,
+                      2
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                7
+              ]
+            },
+            {
+              "id": "d331157d",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "f4d350f5",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Maqaalkaan tijaabada ah waxaa loo sameeyay si aan ugusameyno tijaabooyinka otomaatiga ee dhamaadka iyo dhamaadka dhamaadka bartayada internetka.",
+                      "blocks": [
+                        {
+                          "id": "d7ee935d",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Maqaalkaan tijaabada ah waxaa loo sameeyay si aan ugusameyno tijaabooyinka otomaatiga ee dhamaadka iyo dhamaadka dhamaadka bartayada internetka.",
+                            "attributes": []
+                          },
+                          "position": [
+                            8,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      8,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                8
+              ]
+            },
+            {
+              "id": "dbf6e349",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                9
+              ]
+            },
+            {
+              "id": "e32dab96",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                10
+              ]
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "id": "urn:bbc:ares::article:cgn6emk3jm8o",
+        "locators": {
+          "optimoUrn": "urn:bbc:optimo:asset:cgn6emk3jm8o",
+          "canonicalUrl": "https://www.bbc.com/somali/articles/cgn6emk3jm8o"
+        },
+        "type": "article",
+        "createdBy": "Somali",
+        "language": "so",
+        "firstPublished": 1562936492234,
+        "lastPublished": 1562936492234,
+        "analyticsLabels": {
+          "producer": "Somali",
+          "page": "somali.articles.cgn6emk3jm8o.page"
+        },
+        "passport": {
+          "language": "so",
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Somali",
+          "taggings": []
+        },
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment",
+          "image",
+          "caption",
+          "altText",
+          "rawImage",
+          "urlLink",
+          "video",
+          "subheadline",
+          "aresMedia"
+        ],
+        "allowAdvertising": true
+      },
+      "promo": {
+        "headlines": {
+          "seoHeadline": "Tani waa cinwaanka SEO ee maqaalkan tijaabada ah"
+        }
+      }
+    },
+    "secondaryData": {
+      "topStories": [
+        {
+          "headlines": {
+            "headline": "Ciidamada Kenya oo dilay 20 qof oo ah Dagaalyahano Soomaaliya"
+          },
+          "locators": {
+            "assetUri": "/somali/23229325",
+            "cpsUrn": "urn:bbc:content:assetUri:somali/23229325",
+            "assetId": "23229325"
+          },
+          "summary": "Iska hor imaadkan ayaa yimi kadib markii ay ciidamada kenya dariiq ay adeegsanayeen ay u galeen kooxda all-shabaab",
+          "timestamp": 1549020753000,
+          "language": "so",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63699075",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/DF0B/test/_63699075_a927b152-283c-4651-b6ca-214a833bd3d6.jpg",
+            "path": "/cpsdevpb/DF0B/test/_63699075_a927b152-283c-4651-b6ca-214a833bd3d6.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Ciidamada Kenya",
+            "caption": "Dagaal al-shabab",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "prominence": "standard",
+          "section": {
+            "subType": "IDX",
+            "name": "Somali",
+            "uri": "/somali/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:somali/23229325",
+          "type": "cps"
         },
         {
-          "type": "text",
-          "model": {
-            "blocks": [
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "Maqaalkaan tijaabada ah waxaa loo sameeyay si aan ugusameyno tijaabooyinka otomaatiga ee dhamaadka iyo dhamaadka dhamaadka bartayada internetka.",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "Maqaalkaan tijaabada ah waxaa loo sameeyay si aan ugusameyno tijaabooyinka otomaatiga ee dhamaadka iyo dhamaadka dhamaadka bartayada internetka.",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
+          "headlines": {
+            "headline": "At least 4 people have been killed in Somalia last two days"
+          },
+          "locators": {
+            "assetUri": "/somali/23229315",
+            "cpsUrn": "urn:bbc:content:assetUri:somali/23229315",
+            "assetId": "23229315"
+          },
+          "summary": "The conflict between Shabab and Somali military started last hours in Thursday evening .",
+          "timestamp": 1549020492000,
+          "language": "so",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63699248",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/1494B/test/_63699248__105291263_c7f54b81-8ecb-4eec-a0e3-07c695af77f8-1.jpg",
+            "path": "/cpsdevpb/1494B/test/_63699248__105291263_c7f54b81-8ecb-4eec-a0e3-07c695af77f8-1.jpg",
+            "height": 351,
+            "width": 624,
+            "altText": "conflict",
+            "caption": "Shabab",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "prominence": "standard",
+          "section": {
+            "subType": "IDX",
+            "name": "Somali",
+            "uri": "/somali/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:somali/23229315",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Flim jacayl ah oo ay wada jilayaan dad kala diin duwan"
+          },
+          "locators": {
+            "assetUri": "/somali/23229342",
+            "cpsUrn": "urn:bbc:content:assetUri:somali/23229342",
+            "assetId": "23229342"
+          },
+          "summary": "Flim jacayl ah oo ay wada jilayaan wiil uu imaam soomaali ah dhalay iyo gabar uu baadaari dhalay.",
+          "timestamp": 1549020191000,
+          "language": "so",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63699123",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/7DC7/test/_63699123_40b5215d-d54e-4852-bede-221637e99601.jpg",
+            "path": "/cpsdevpb/7DC7/test/_63699123_40b5215d-d54e-4852-bede-221637e99601.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "The Actors",
+            "caption": "Jilayaasha filimka cusub",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "prominence": "standard",
+          "section": {
+            "subType": "IDX",
+            "name": "Somali",
+            "uri": "/somali/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:somali/23229342",
+          "type": "cps"
         }
-      ]
+      ],
+      "features": [
+        {
+          "headlines": {
+            "headline": "Uganda oo sheegtay ka baxida Soomaaliya 22"
+          },
+          "locators": {
+            "assetUri": "/somali/23055610",
+            "cpsUrn": "urn:bbc:content:assetUri:somali/23055610",
+            "assetId": "23055610"
+          },
+          "summary": "Uganda oo sheegtay ka baxida Soomaaliya",
+          "timestamp": 1466697516000,
+          "language": "so",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63492505",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/C561/test/_63492505_150419131354_amisom_640x360_afp.jpg",
+            "path": "/cpsdevpb/C561/test/_63492505_150419131354_amisom_640x360_afp.jpg",
+            "height": 371,
+            "width": 660,
+            "altText": "Soomaaliya",
+            "caption": "Soomaaliya",
+            "copyrightHolder": "AFP",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63492507",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/11381/test/_63492507_150419131354_amisom_640x360_afp.jpg",
+            "path": "/cpsdevpb/11381/test/_63492507_150419131354_amisom_640x360_afp.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Soomaaliya",
+            "caption": "Soomaaliya",
+            "copyrightHolder": "AFP",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Somali",
+            "uri": "/somali/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:somali/23055610",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Uganda oo sheegtay ka baxida Soomaaliya 23"
+          },
+          "locators": {
+            "assetUri": "/somali/23055612",
+            "cpsUrn": "urn:bbc:content:assetUri:somali/23055612",
+            "assetId": "23055612"
+          },
+          "summary": "Uganda oo sheegtay ka baxida Soomaaliya",
+          "timestamp": 1466697562000,
+          "language": "so",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63492505",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/C561/test/_63492505_150419131354_amisom_640x360_afp.jpg",
+            "path": "/cpsdevpb/C561/test/_63492505_150419131354_amisom_640x360_afp.jpg",
+            "height": 371,
+            "width": 660,
+            "altText": "Soomaaliya",
+            "caption": "Soomaaliya",
+            "copyrightHolder": "AFP",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63492507",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/11381/test/_63492507_150419131354_amisom_640x360_afp.jpg",
+            "path": "/cpsdevpb/11381/test/_63492507_150419131354_amisom_640x360_afp.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Soomaaliya",
+            "caption": "Soomaaliya",
+            "copyrightHolder": "AFP",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Somali",
+            "uri": "/somali/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:somali/23055612",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Uganda oo sheegtay ka baxida Soomaaliya 24"
+          },
+          "locators": {
+            "assetUri": "/somali/23055613",
+            "cpsUrn": "urn:bbc:content:assetUri:somali/23055613",
+            "assetId": "23055613"
+          },
+          "summary": "Uganda oo sheegtay ka baxida Soomaaliya",
+          "timestamp": 1466697594000,
+          "language": "so",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63492505",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/C561/test/_63492505_150419131354_amisom_640x360_afp.jpg",
+            "path": "/cpsdevpb/C561/test/_63492505_150419131354_amisom_640x360_afp.jpg",
+            "height": 371,
+            "width": 660,
+            "altText": "Soomaaliya",
+            "caption": "Soomaaliya",
+            "copyrightHolder": "AFP",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63492507",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/11381/test/_63492507_150419131354_amisom_640x360_afp.jpg",
+            "path": "/cpsdevpb/11381/test/_63492507_150419131354_amisom_640x360_afp.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Soomaaliya",
+            "caption": "Soomaaliya",
+            "copyrightHolder": "AFP",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Somali",
+            "uri": "/somali/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:somali/23055613",
+          "type": "cps"
+        }
+      ],
+      "mostRead": {
+        "generated": "2023-02-17T16:34:57.065Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
+        "totalRecords": 20,
+        "records": [
+          {
+            "id": "548051f3-4c53-3c4e-9960-811682bfa184",
+            "rank": 1,
+            "count": 9946,
+            "urn": "urn:bbc:curie:asset:548051f3-4c53-3c4e-9960-811682bfa184",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Uganda oo sheegtay ka baxida Soomaaliya 29",
+                "headline": "Uganda oo sheegtay ka baxida Soomaaliya 29"
+              },
+              "locators": {
+                "assetUri": "/somali/23055619",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:548051f3-4c53-3c4e-9960-811682bfa184",
+                "assetId": "23055619",
+                "cpsUrn": "urn:bbc:content:assetUri:somali/23055619",
+                "curie": "http://www.bbc.co.uk/asset/548051f3-4c53-3c4e-9960-811682bfa184"
+              },
+              "summary": "Uganda oo sheegtay ka baxida Soomaaliya",
+              "timestamp": 1466697857000,
+              "language": "so",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Somali",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63492505",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/C561/test/_63492505_150419131354_amisom_640x360_afp.jpg",
+                "path": "/cpsdevpb/C561/test/_63492505_150419131354_amisom_640x360_afp.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "Soomaaliya",
+                "caption": "Soomaaliya",
+                "copyrightHolder": "AFP",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:somali/23055619",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "06b6e2aa-6b30-5544-9515-d9b1234f3016",
+            "rank": 2,
+            "count": 9552,
+            "urn": "urn:bbc:curie:asset:06b6e2aa-6b30-5544-9515-d9b1234f3016",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Doorashada Madaxweynaha oo dib loo dhigay",
+                "headline": "Doorashada Madaxweynaha oo dib loo dhigay"
+              },
+              "locators": {
+                "assetUri": "/somali/war-23064034",
+                "cpsUrn": "urn:bbc:content:assetUri:somali/war-23064034",
+                "curie": "http://www.bbc.co.uk/asset/06b6e2aa-6b30-5544-9515-d9b1234f3016",
+                "assetId": "23064034"
+              },
+              "summary": "Guddiga doorashooyinka ee Soomaaliya ayaa sheegay in dib loo dhigay doorashada madaxtinimada ilaa bisha Disembar.",
+              "timestamp": 1470046565000,
+              "language": "so",
+              "indexImage": {
+                "id": "63498390",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/24AD/test/_63498390_79ca2214-158a-4188-9afa-b5f07eb32a6d.jpg",
+                "path": "/cpsdevpb/24AD/test/_63498390_79ca2214-158a-4188-9afa-b5f07eb32a6d.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Guddiga doorashada ayaa tartanka madaxweyninamada dib u dhigay ilaa bisha Disembar",
+                "caption": "Guddiga doorashada",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:somali/war-23064034",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "9985c256-9ce2-af4d-98f9-8abaa834e750",
+            "rank": 3,
+            "count": 9373,
+            "urn": "urn:bbc:curie:asset:9985c256-9ce2-af4d-98f9-8abaa834e750",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Uganda oo sheegtay ka baxida Soomaaliya 13",
+                "headline": "Uganda oo sheegtay ka baxida Soomaaliya 13"
+              },
+              "locators": {
+                "assetUri": "/somali/23055599",
+                "cpsUrn": "urn:bbc:content:assetUri:somali/23055599",
+                "curie": "http://www.bbc.co.uk/asset/9985c256-9ce2-af4d-98f9-8abaa834e750",
+                "assetId": "23055599"
+              },
+              "summary": "Uganda oo sheegtay ka baxida Soomaaliya",
+              "timestamp": 1466697065000,
+              "language": "so",
+              "indexImage": {
+                "id": "63492505",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/C561/test/_63492505_150419131354_amisom_640x360_afp.jpg",
+                "path": "/cpsdevpb/C561/test/_63492505_150419131354_amisom_640x360_afp.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "Soomaaliya",
+                "caption": "Soomaaliya",
+                "copyrightHolder": "AFP",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:somali/23055599",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "724b0458-ec53-2045-a7c9-7d66b2b77156",
+            "rank": 4,
+            "count": 9199,
+            "urn": "urn:bbc:curie:asset:724b0458-ec53-2045-a7c9-7d66b2b77156",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Russian shopping centre fire kills 64",
+                "headline": "Russia fire: Dozens killed in Kemerovo shopping centre"
+              },
+              "locators": {
+                "assetUri": "/amharic/news-23193936",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:724b0458-ec53-2045-a7c9-7d66b2b77156",
+                "assetId": "23193936",
+                "cpsUrn": "urn:bbc:content:assetUri:amharic/news-23193936",
+                "curie": "http://www.bbc.co.uk/asset/724b0458-ec53-2045-a7c9-7d66b2b77156"
+              },
+              "summary": "Over 60 people have died in a fire at a shopping and entertainment complex in the Siberian coal-mining city of Kemerovo.",
+              "timestamp": 1522067833000,
+              "language": "am",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Amharic",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63662295",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/E75A/test/_63662295_hi045777092.jpg",
+                "path": "/cpsdevpb/E75A/test/_63662295_hi045777092.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Firefighters tackle fatal shopping centre fire in the Russian city of Kemerovo",
+                "caption": "Komerovo lies some 3600 kilometres from the Russia capital- Moscow",
+                "copyrightHolder": "Reuters",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:amharic/news-23193936",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "94273e6f-4bc6-7248-bf12-263c7665da33",
+            "rank": 5,
+            "count": 9188,
+            "urn": "urn:bbc:curie:asset:94273e6f-4bc6-7248-bf12-263c7665da33",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Uganda oo sheegtay ka baxida Soomaaliya 10",
+                "headline": "Uganda oo sheegtay ka baxida Soomaaliya 10"
+              },
+              "locators": {
+                "assetUri": "/somali/23055593",
+                "cpsUrn": "urn:bbc:content:assetUri:somali/23055593",
+                "curie": "http://www.bbc.co.uk/asset/94273e6f-4bc6-7248-bf12-263c7665da33",
+                "assetId": "23055593"
+              },
+              "summary": "Uganda oo sheegtay ka baxida Soomaaliya",
+              "timestamp": 1466696458000,
+              "language": "so",
+              "indexImage": {
+                "id": "63492505",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/C561/test/_63492505_150419131354_amisom_640x360_afp.jpg",
+                "path": "/cpsdevpb/C561/test/_63492505_150419131354_amisom_640x360_afp.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "Soomaaliya",
+                "caption": "Soomaaliya",
+                "copyrightHolder": "AFP",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:somali/23055593",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "781dc2c0-8882-174c-9a6b-5aebba244712",
+            "rank": 6,
+            "count": 8959,
+            "urn": "urn:bbc:curie:asset:781dc2c0-8882-174c-9a6b-5aebba244712",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Uganda oo sheegtay ka baxida Soomaaliya 28",
+                "headline": "Uganda oo sheegtay ka baxida Soomaaliya 28"
+              },
+              "locators": {
+                "assetUri": "/somali/23055618",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:781dc2c0-8882-174c-9a6b-5aebba244712",
+                "assetId": "23055618",
+                "cpsUrn": "urn:bbc:content:assetUri:somali/23055618",
+                "curie": "http://www.bbc.co.uk/asset/781dc2c0-8882-174c-9a6b-5aebba244712"
+              },
+              "summary": "Uganda oo sheegtay ka baxida Soomaaliya",
+              "timestamp": 1466697816000,
+              "language": "so",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Somali",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63492505",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/C561/test/_63492505_150419131354_amisom_640x360_afp.jpg",
+                "path": "/cpsdevpb/C561/test/_63492505_150419131354_amisom_640x360_afp.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "Soomaaliya",
+                "caption": "Soomaaliya",
+                "copyrightHolder": "AFP",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:somali/23055618",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "b6327109-7cfe-f047-80ab-6ee6dd095a17",
+            "rank": 7,
+            "count": 8917,
+            "urn": "urn:bbc:curie:asset:b6327109-7cfe-f047-80ab-6ee6dd095a17",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Uganda oo sheegtay ka baxida Soomaaliya 4",
+                "headline": "Uganda oo sheegtay ka baxida Soomaaliya 4"
+              },
+              "locators": {
+                "assetUri": "/somali/23055587",
+                "cpsUrn": "urn:bbc:content:assetUri:somali/23055587",
+                "curie": "http://www.bbc.co.uk/asset/b6327109-7cfe-f047-80ab-6ee6dd095a17",
+                "assetId": "23055587"
+              },
+              "summary": "Uganda oo sheegtay ka baxida Soomaaliya",
+              "timestamp": 1466696217000,
+              "language": "so",
+              "indexImage": {
+                "id": "63492505",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/C561/test/_63492505_150419131354_amisom_640x360_afp.jpg",
+                "path": "/cpsdevpb/C561/test/_63492505_150419131354_amisom_640x360_afp.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "Soomaaliya",
+                "caption": "Soomaaliya",
+                "copyrightHolder": "AFP",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:somali/23055587",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "cb4f84e4-6d4e-344e-82e6-8ed31adaa2e8",
+            "rank": 8,
+            "count": 8719,
+            "urn": "urn:bbc:curie:asset:cb4f84e4-6d4e-344e-82e6-8ed31adaa2e8",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Al-Shabaab oo qabsaday Rabdhuure front page",
+                "headline": "Al-Shabaab oo qabsaday Rabdhuure front page"
+              },
+              "locators": {
+                "assetUri": "/somali/23057460",
+                "cpsUrn": "urn:bbc:content:assetUri:somali/23057460",
+                "curie": "http://www.bbc.co.uk/asset/cb4f84e4-6d4e-344e-82e6-8ed31adaa2e8",
+                "assetId": "23057460"
+              },
+              "summary": "Wararka ka imaanaya degmada Rabdhuure ee gobolka Bakool, ayaa sheegaya in dagaalyahanno ka tirsan Al-Shabaab ay qabsadeen degmadaasi, ka dib markii ay isaga baxeen ciidammada Itoobiya iyo kuwa dawladda oo halkaasi gacanta ku hayay labadii sano ee ugu danbeysay.",
+              "timestamp": 1467630682000,
+              "language": "so",
+              "indexImage": {
+                "id": "63493825",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/CE67/test/_63493825_151010165731_poklonskaya_crimea_640x360_reuters_nocredit.jpg",
+                "path": "/cpsdevpb/CE67/test/_63493825_151010165731_poklonskaya_crimea_640x360_reuters_nocredit.jpg",
+                "height": 360,
+                "width": 640,
+                "altText": "Rabdhuure ayaa waxaa shalay isaga baxay ciidanka dawladda iyo kuwa Itoobiya.",
+                "caption": "Rabdhuure ayaa waxaa shalay isaga baxay ciidanka dawladda iyo kuwa Itoobiya.",
+                "copyrightHolder": "EPA",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:somali/23057460",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "68ec8801-1f21-b948-90f2-d214c0db0d54",
+            "rank": 9,
+            "count": 8289,
+            "urn": "urn:bbc:curie:asset:68ec8801-1f21-b948-90f2-d214c0db0d54",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Sawirada weerarkii Faransiiska",
+                "headline": "Sawirada weerarkii Faransiiska"
+              },
+              "locators": {
+                "assetUri": "/somali/war-23063465",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:68ec8801-1f21-b948-90f2-d214c0db0d54",
+                "assetId": "23063465",
+                "cpsUrn": "urn:bbc:content:assetUri:somali/war-23063465",
+                "curie": "http://www.bbc.co.uk/asset/68ec8801-1f21-b948-90f2-d214c0db0d54"
+              },
+              "summary": "Images from the French town of Saint-Etienne-du-Rouvray, near Rouen, where a priest was killed in an attack by two men claiming links to the so-called Islamic State group.",
+              "timestamp": 1469789013000,
+              "language": "so",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Somali",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63497926",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/F603/test/_63497926_76a15963-e234-470a-b5c7-08013027f40c.jpg",
+                "path": "/cpsdevpb/F603/test/_63497926_76a15963-e234-470a-b5c7-08013027f40c.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Paris",
+                "caption": "General view of town",
+                "copyrightHolder": "AP",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:somali/war-23063465",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "fe37a995-6e7c-5d4c-8dc7-52697609d55e",
+            "rank": 10,
+            "count": 8058,
+            "urn": "urn:bbc:curie:asset:fe37a995-6e7c-5d4c-8dc7-52697609d55e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Uganda oo sheegtay ka baxida Soomaaliya 3",
+                "headline": "Uganda oo sheegtay ka baxida Soomaaliya 3"
+              },
+              "locators": {
+                "assetUri": "/somali/23055586",
+                "cpsUrn": "urn:bbc:content:assetUri:somali/23055586",
+                "curie": "http://www.bbc.co.uk/asset/fe37a995-6e7c-5d4c-8dc7-52697609d55e",
+                "assetId": "23055586"
+              },
+              "summary": "Uganda oo sheegtay ka baxida Soomaaliya",
+              "timestamp": 1466695961000,
+              "language": "so",
+              "indexImage": {
+                "id": "63492505",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/C561/test/_63492505_150419131354_amisom_640x360_afp.jpg",
+                "path": "/cpsdevpb/C561/test/_63492505_150419131354_amisom_640x360_afp.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "Soomaaliya",
+                "caption": "Soomaaliya",
+                "copyrightHolder": "AFP",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:somali/23055586",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "18c51b63-9808-9541-ad64-65e2f38eee9e",
+            "rank": 11,
+            "count": 7928,
+            "urn": "urn:bbc:curie:asset:18c51b63-9808-9541-ad64-65e2f38eee9e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "The drug-smuggling fishermen vowing to clear their name",
+                "headline": "A fishermen is vowing to clear their name of drug-smuggling"
+              },
+              "locators": {
+                "assetUri": "/somali/23169840",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:18c51b63-9808-9541-ad64-65e2f38eee9e",
+                "assetId": "23169840",
+                "cpsUrn": "urn:bbc:content:assetUri:somali/23169840",
+                "curie": "http://www.bbc.co.uk/asset/18c51b63-9808-9541-ad64-65e2f38eee9e"
+              },
+              "summary": "Six years ago, a group of fishermen were convicted for their role in one of the biggest drug smuggling hauls in British history.",
+              "timestamp": 1512475948000,
+              "language": "so",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Somali",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63604091",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/4A60/test/_63604091_003316001-1.jpg",
+                "path": "/cpsdevpb/4A60/test/_63604091_003316001-1.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "A fishing boat on the dock",
+                "caption": "The men's fishing boat, the Galwad, has not seen the sea for years",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:somali/23169840",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "33fea2d0-660d-6544-bc62-91b1f0745aa6",
+            "rank": 12,
+            "count": 7926,
+            "urn": "urn:bbc:curie:asset:33fea2d0-660d-6544-bc62-91b1f0745aa6",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Jabhadda Al-Nusra oo Al-Qacidda ka baxday",
+                "headline": "Jabhadda Al-Nusra oo Al-Qacidda ka baxday"
+              },
+              "locators": {
+                "assetUri": "/somali/war-23063378",
+                "cpsUrn": "urn:bbc:content:assetUri:somali/war-23063378",
+                "curie": "http://www.bbc.co.uk/asset/33fea2d0-660d-6544-bc62-91b1f0745aa6",
+                "assetId": "23063378"
+              },
+              "summary": "Mid kamid ah kooxaha islaamiyiinta ugu awoodda badan ee Suuriye ee Al-Nusra ayaa ku dhawaaqday inay xiriirka u jartay ururka Al-Qacidda.",
+              "timestamp": 1469784410000,
+              "language": "so",
+              "byline": {
+                "name": "Ahmed Ibrahim",
+                "title": "Dimishiq, Suuriya",
+                "persons": [
+                  {
+                    "name": "Adam Mynott",
+                    "function": "BBC News, Risalpur"
+                  }
+                ]
+              },
+              "indexImage": {
+                "id": "63497822",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/595F/test/_63497822_6e249c05-99a1-41d1-b05a-2749f1ccb8d6.jpg",
+                "path": "/cpsdevpb/595F/test/_63497822_6e249c05-99a1-41d1-b05a-2749f1ccb8d6.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Hoggaamiyaha Al- Nusra",
+                "caption": "Hoggaamiyaha Al- Nusra",
+                "copyrightHolder": "Reuters",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:somali/war-23063378",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "f78ee0bd-56e4-f045-b99e-e5f93ffdf5a9",
+            "rank": 13,
+            "count": 7679,
+            "urn": "urn:bbc:curie:asset:f78ee0bd-56e4-f045-b99e-e5f93ffdf5a9",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "What's the point of testimonials ?",
+                "headline": "What's the point of football testimonials like Rooney's?"
+              },
+              "locators": {
+                "assetUri": "/swahili/23064075",
+                "cpsUrn": "urn:bbc:content:assetUri:swahili/23064075",
+                "curie": "http://www.bbc.co.uk/asset/f78ee0bd-56e4-f045-b99e-e5f93ffdf5a9",
+                "assetId": "23064075"
+              },
+              "summary": "Wayne Rooney is marking 12 years at Manchester United with a testimonial match against his former club Everton. But, considering the traditional aim of testimonials has been to raise much-needed money for players as they leave the game, why do we still need them in the era of multi-millionaire footballers?",
+              "timestamp": 1470047776000,
+              "language": "sw",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63498465",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/DCA9/test/_63498465_hi034300829.jpg",
+                "path": "/cpsdevpb/DCA9/test/_63498465_hi034300829.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Wayne Rooney",
+                "caption": "Wayne Rooney praying for more money?",
+                "copyrightHolder": "Reuters",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:swahili/23064075",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "3e82a88e-08c5-774d-8afa-970f217e4dc6",
+            "rank": 14,
+            "count": 7569,
+            "urn": "urn:bbc:curie:asset:3e82a88e-08c5-774d-8afa-970f217e4dc6",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Nasri oo cayil dartii tababarka looga reebay",
+                "headline": "Nasri oo cayil dartii tababarka looga reebay"
+              },
+              "locators": {
+                "assetUri": "/somali/cayaaraha-23063778",
+                "cpsUrn": "urn:bbc:content:assetUri:somali/cayaaraha-23063778",
+                "curie": "http://www.bbc.co.uk/asset/3e82a88e-08c5-774d-8afa-970f217e4dc6",
+                "assetId": "23063778"
+              },
+              "summary": "Ciyaaryahanka qadka dhexe uga ciyaaraha kooxda Manchester City, Samir Nasri ma uusan ciyaarin inta lagu guda jiray ciyaaraha saaxiibtinimada iyo tababarada taas oo ay ugu wacan tahay inuu cayilay, sidaasi waxaa sheegay macallim Pep Guardiola.",
+              "timestamp": 1469875118000,
+              "language": "so",
+              "indexImage": {
+                "id": "63498151",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/3B55/test/_63498151_5c3651fd-8dcc-4a1b-b064-7cd1b0e92982.jpg",
+                "path": "/cpsdevpb/3B55/test/_63498151_5c3651fd-8dcc-4a1b-b064-7cd1b0e92982.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "nasri",
+                "copyrightHolder": "EPA",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:somali/cayaaraha-23063778",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "514e2d44-4208-a240-93fa-a9bc5d4e4aeb",
+            "rank": 15,
+            "count": 7125,
+            "urn": "urn:bbc:curie:asset:514e2d44-4208-a240-93fa-a9bc5d4e4aeb",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Uganda oo sheegtay ka baxida Soomaaliya 9",
+                "headline": "Uganda oo sheegtay ka baxida Soomaaliya 9"
+              },
+              "locators": {
+                "assetUri": "/somali/23055592",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:514e2d44-4208-a240-93fa-a9bc5d4e4aeb",
+                "assetId": "23055592",
+                "cpsUrn": "urn:bbc:content:assetUri:somali/23055592",
+                "curie": "http://www.bbc.co.uk/asset/514e2d44-4208-a240-93fa-a9bc5d4e4aeb"
+              },
+              "summary": "Uganda oo sheegtay ka baxida Soomaaliya",
+              "timestamp": 1466696429000,
+              "language": "so",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Somali",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63492505",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/C561/test/_63492505_150419131354_amisom_640x360_afp.jpg",
+                "path": "/cpsdevpb/C561/test/_63492505_150419131354_amisom_640x360_afp.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "Soomaaliya",
+                "caption": "Soomaaliya",
+                "copyrightHolder": "AFP",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:somali/23055592",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "4e78cedb-a5e3-c745-8cfc-a57e20a6c599",
+            "rank": 16,
+            "count": 7111,
+            "urn": "urn:bbc:curie:asset:4e78cedb-a5e3-c745-8cfc-a57e20a6c599",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Ruushka oo diyaarad looga soo riday Suuriya",
+                "headline": "Diyaaradahooda qumaatiga u kaco oo ay isticmaalayeen milatarigooda ku sugan Suuriya ayaa toogasha lagu soo riday maanta."
+              },
+              "locators": {
+                "assetUri": "/somali/23064013",
+                "cpsUrn": "urn:bbc:content:assetUri:somali/23064013",
+                "curie": "http://www.bbc.co.uk/asset/4e78cedb-a5e3-c745-8cfc-a57e20a6c599",
+                "assetId": "23064013"
+              },
+              "summary": "Wasaaradda difaaca ee dalka Ruushka, ayaa sheegtay in shan qof ay saarnaayeen diyaaradaasi markii ay ku soo dhacday gobalka Idlib.",
+              "timestamp": 1470057814000,
+              "language": "so",
+              "indexImage": {
+                "id": "63500516",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/F03C/test/_63500516_mediaitem63500515.jpg",
+                "path": "/cpsdevpb/F03C/test/_63500516_mediaitem63500515.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Ciidamadii Diyaarada",
+                "caption": "Ciidamadii Diyaarada 2aad",
+                "copyrightHolder": "Reuters",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:somali/23064013",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "cf6ba0a4-6c8b-ad42-89f1-e4c1d6f84595",
+            "rank": 17,
+            "count": 6990,
+            "urn": "urn:bbc:curie:asset:cf6ba0a4-6c8b-ad42-89f1-e4c1d6f84595",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Laba biladood oo dahab ah oo Britain ay qaadatay",
+                "headline": "Laba biladood oo dahab ah oo Britain ay qaadatay"
+              },
+              "locators": {
+                "assetUri": "/somali/war-23067073",
+                "cpsUrn": "urn:bbc:content:assetUri:somali/war-23067073",
+                "curie": "http://www.bbc.co.uk/asset/cf6ba0a4-6c8b-ad42-89f1-e4c1d6f84595",
+                "assetId": "23067073"
+              },
+              "summary": "Tartamada Rio ayaa waxay galeen heer aad u adag dhowaanna waxaa bilaabanaya orodka.",
+              "timestamp": 1470906016000,
+              "language": "so",
+              "byline": {
+                "name": "Alan Johnstons ",
+                "title": "BBC Somali",
+                "persons": [
+                  {
+                    "name": "Alan Johnstons",
+                    "function": "BBC News"
+                  }
+                ]
+              },
+              "indexImage": {
+                "id": "63502982",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/70F8/test/_63502982_6426bf9a-5f34-40e9-9f8e-dd219db4fdb4.jpg",
+                "path": "/cpsdevpb/70F8/test/_63502982_6426bf9a-5f34-40e9-9f8e-dd219db4fdb4.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Dumar ka qeybgalaya tartanka orodada ee Rio",
+                "caption": "Dumar ku tartamaya orodka",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:somali/war-23067073",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "40452a9f-9a43-bc4c-9833-d92c77d7ccfb",
+            "rank": 18,
+            "count": 6839,
+            "urn": "urn:bbc:curie:asset:40452a9f-9a43-bc4c-9833-d92c77d7ccfb",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "South Africa to have Local Elections from Today",
+                "headline": "South Africa to have Local Elections"
+              },
+              "locators": {
+                "assetUri": "/swahili/23064024",
+                "cpsUrn": "urn:bbc:content:assetUri:swahili/23064024",
+                "curie": "http://www.bbc.co.uk/asset/40452a9f-9a43-bc4c-9833-d92c77d7ccfb",
+                "assetId": "23064024"
+              },
+              "summary": "South Africa to hold Local Elections which will determine whether the ANC will still be in power",
+              "timestamp": 1470046254000,
+              "language": "sw",
+              "indexImage": {
+                "id": "63498351",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/3C1D/test/_63498351_034310774-2.jpg",
+                "path": "/cpsdevpb/3C1D/test/_63498351_034310774-2.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Uchaguzi wa serikali za mitaa kuamua hatma ya ANC",
+                "caption": "Jacob Zuma",
+                "copyrightHolder": "JOHN WESSELS",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:swahili/23064024",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "3bd8a6c2-2e7d-eb43-8f83-c8b30c179bc6",
+            "rank": 19,
+            "count": 6578,
+            "urn": "urn:bbc:curie:asset:3bd8a6c2-2e7d-eb43-8f83-c8b30c179bc6",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Uganda oo sheegtay ka baxida Soomaaliya 7",
+                "headline": "Uganda oo sheegtay ka baxida Soomaaliya 7"
+              },
+              "locators": {
+                "assetUri": "/somali/23055590",
+                "cpsUrn": "urn:bbc:content:assetUri:somali/23055590",
+                "curie": "http://www.bbc.co.uk/asset/3bd8a6c2-2e7d-eb43-8f83-c8b30c179bc6",
+                "assetId": "23055590"
+              },
+              "summary": "Uganda oo sheegtay ka baxida Soomaaliya",
+              "timestamp": 1466696337000,
+              "language": "so",
+              "indexImage": {
+                "id": "63492505",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/C561/test/_63492505_150419131354_amisom_640x360_afp.jpg",
+                "path": "/cpsdevpb/C561/test/_63492505_150419131354_amisom_640x360_afp.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "Soomaaliya",
+                "caption": "Soomaaliya",
+                "copyrightHolder": "AFP",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:somali/23055590",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "1fd1efed-af9b-394e-88f2-d937fbb1d58a",
+            "rank": 20,
+            "count": 6531,
+            "urn": "urn:bbc:curie:asset:1fd1efed-af9b-394e-88f2-d937fbb1d58a",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Ciidammada Gabon oo weerraray mucaaradka",
+                "headline": "Doorashada Gabon: Ciidamada ammaanka oo weeraray xarunta mucaaradka"
+              },
+              "locators": {
+                "assetUri": "/somali/war-23071104",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:1fd1efed-af9b-394e-88f2-d937fbb1d58a",
+                "assetId": "23071104",
+                "cpsUrn": "urn:bbc:content:assetUri:somali/war-23071104",
+                "curie": "http://www.bbc.co.uk/asset/1fd1efed-af9b-394e-88f2-d937fbb1d58a"
+              },
+              "summary": "Iska hor imaad ayaa ka dhacay Gabon, kadib markii madaxweynaha xilka haya Cali Bongo lagu dhawaaqay inuu ku guulaystay doorashada in ka yar lix kun oo cod.",
+              "timestamp": 1472733274000,
+              "language": "so",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Somali",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63506000",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/003C/test/_63506000_img_2226.jpg",
+                "path": "/cpsdevpb/003C/test/_63506000_img_2226.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Madaxweyne Kibaki oo karoonka Nyayo ka hadlay",
+                "caption": "Kibaki",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:somali/war-23071104",
+              "type": "cps"
+            }
+          }
+        ]
+      }
     }
   },
-  "promo": {
-    "headlines": {
-      "seoHeadline": "Tani waa cinwaanka SEO ee maqaalkan tijaabada ah"
-    },
-    "locators": {
-      "optimoUrn": "urn:bbc:optimo:asset:cgn6emk3jm8o"
-    },
-    "summary": {
-      "blocks": [
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "attributes": [],
-                        "text": ""
-                      },
-                      "type": "fragment"
-                    }
-                  ],
-                  "text": ""
-                },
-                "type": "paragraph"
-              }
-            ]
-          },
-          "type": "text"
-        }
-      ]
-    },
-    "timestamp": 1562936492234,
-    "id": "urn:bbc:ares::article:cgn6emk3jm8o",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "site": {
-      "subType": "site",
-      "name": "Somali",
-      "uri": "/somali",
-      "type": "simple"
-    },
-    "groups": []
-  }
+  "contentType": "application/json; charset=utf-8"
 }

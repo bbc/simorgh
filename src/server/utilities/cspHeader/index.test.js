@@ -64,6 +64,7 @@ describe('cspHeader', () => {
         'https://*.imrworldwide.com',
         'https://*.twitter.com',
         'https://connect.facebook.net',
+        'https://cdn.privacy-mgmt.com',
         "'self'",
       ].sort(),
       defaultSrcExpectation: [
@@ -84,6 +85,7 @@ describe('cspHeader', () => {
         'https://www.youtube.com',
         'https://www.youtube-nocookie.com',
         'https://www.facebook.com',
+        'https://cdn.privacy-mgmt.com',
         "'self'",
       ].sort(),
       imgSrcExpectation: [
@@ -117,7 +119,7 @@ describe('cspHeader', () => {
       ].sort(),
       styleSrcExpectation: [...bbcDomains, "'unsafe-inline'"].sort(),
       mediaSrcExpectation: [...bbcDomains].sort(),
-      workerSrcExpectation: ['blob:'],
+      workerSrcExpectation: ['blob:', '*.bbc.co.uk', '*.bbc.com'],
       prefetchSrcExpectation: ['https://*.googlesyndication.com'],
     },
     {
@@ -141,6 +143,7 @@ describe('cspHeader', () => {
         'https://*.imrworldwide.com',
         'https://*.optimizely.com',
         'https://*.wearehearken.eu',
+        'https://cdn.privacy-mgmt.com',
         "'self'",
       ].sort(),
       defaultSrcExpectation: [
@@ -150,6 +153,7 @@ describe('cspHeader', () => {
       ].sort(),
       fontSrcExpectation: [
         ...bbcDomains,
+        'data:',
         'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/',
         'https://fonts.gstatic.com',
       ].sort(),
@@ -170,6 +174,7 @@ describe('cspHeader', () => {
         'https://edigitalsurvey.com',
         'https://www.tiktok.com',
         'https://*.facebook.com',
+        'https://cdn.privacy-mgmt.com',
         "'self'",
       ].sort(),
       imgSrcExpectation: [
@@ -195,7 +200,6 @@ describe('cspHeader', () => {
       scriptSrcExpectation: [
         ...bbcDomains,
         'https://*.adsafeprotected.com',
-        'https://client.rum.us-east-1.amazonaws.com',
         'https://cdn.ampproject.org',
         'https://*.chartbeat.com',
         'https://*.g.doubleclick.net',
@@ -207,6 +211,7 @@ describe('cspHeader', () => {
         'https://www.googletagservices.com',
         'https://bbc.gscontxt.net',
         'https://*.imrworldwide.com',
+        'https://cdn.privacy-mgmt.com',
         'https://www.instagram.com',
         'https://sb.scorecardresearch.com',
         'https://*.twimg.com',
@@ -231,7 +236,7 @@ describe('cspHeader', () => {
         "'unsafe-inline'",
       ].sort(),
       mediaSrcExpectation: [...bbcDomains].sort(),
-      workerSrcExpectation: ["'self'"],
+      workerSrcExpectation: ["'self'", '*.bbc.co.uk', '*.bbc.com'],
       prefetchSrcExpectation: ['https://*.googlesyndication.com'],
     },
     {
@@ -253,6 +258,7 @@ describe('cspHeader', () => {
         'https://*.googlesyndication.com',
         'https://*.gstatic.com',
         'https://*.imrworldwide.com',
+        'https://cdn.privacy-mgmt.com',
         'https://*.twitter.com',
         'https://connect.facebook.net',
         "'self'",
@@ -275,6 +281,7 @@ describe('cspHeader', () => {
         'https://www.youtube-nocookie.com',
         'https://www.tiktok.com',
         'https://www.facebook.com',
+        'https://cdn.privacy-mgmt.com',
         "'self'",
       ].sort(),
       imgSrcExpectation: [
@@ -310,7 +317,7 @@ describe('cspHeader', () => {
       ].sort(),
       styleSrcExpectation: [...bbcDomains, "'unsafe-inline'"].sort(),
       mediaSrcExpectation: [...bbcDomains].sort(),
-      workerSrcExpectation: ['blob:'],
+      workerSrcExpectation: ['blob:', '*.bbc.co.uk', '*.bbc.com'],
       prefetchSrcExpectation: ['https://*.googlesyndication.com'],
     },
     {
@@ -335,6 +342,7 @@ describe('cspHeader', () => {
         'https://*.imrworldwide.com',
         'https://*.optimizely.com',
         'https://*.wearehearken.eu',
+        'https://cdn.privacy-mgmt.com',
         "'self'",
       ].sort(),
       defaultSrcExpectation: [
@@ -344,6 +352,7 @@ describe('cspHeader', () => {
       ].sort(),
       fontSrcExpectation: [
         ...bbcDomains,
+        'data:',
         'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/',
         'https://fonts.gstatic.com',
       ].sort(),
@@ -364,6 +373,7 @@ describe('cspHeader', () => {
         'https://www.youtube-nocookie.com',
         'https://www.tiktok.com',
         'https://*.facebook.com',
+        'https://cdn.privacy-mgmt.com',
         "'self'",
       ].sort(),
       imgSrcExpectation: [
@@ -398,7 +408,6 @@ describe('cspHeader', () => {
         'https://www.instagram.com',
         'https://*.twimg.com',
         'https://public.flourish.studio',
-        'https://client.rum.us-east-1.amazonaws.com',
         'https://*.adsafeprotected.com',
         'https://cdn.ampproject.org',
         'https://*.g.doubleclick.net',
@@ -410,6 +419,7 @@ describe('cspHeader', () => {
         'https://bbc.gscontxt.net',
         'https://sb.scorecardresearch.com',
         'https://*.imrworldwide.com',
+        'https://cdn.privacy-mgmt.com',
         'https://www.tiktok.com',
         'https://lf16-tiktok-web.ttwstatic.com',
         'https://*.facebook.com',
@@ -429,7 +439,7 @@ describe('cspHeader', () => {
         "'unsafe-inline'",
       ].sort(),
       mediaSrcExpectation: [...bbcDomains].sort(),
-      workerSrcExpectation: ["'self'"],
+      workerSrcExpectation: ["'self'", '*.bbc.co.uk', '*.bbc.com'],
       prefetchSrcExpectation: ['https://*.googlesyndication.com'].sort(),
     },
   ].forEach(

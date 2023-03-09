@@ -1,489 +1,1863 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::article:cdd6p3r9g7jo",
-    "locators": {
-      "optimoUrn": "urn:bbc:optimo:asset:cdd6p3r9g7jo",
-      "canonicalUrl": "https://www.bbc.com/japanese/articles/cdd6p3r9g7jo"
-    },
-    "type": "article",
-    "createdBy": "Japanese",
-    "language": "ja",
-    "lastUpdated": 1575558194135,
-    "firstPublished": 1574854693250,
-    "lastPublished": 1574854693250,
-    "options": {},
-    "analyticsLabels": {},
-    "passport": {
-      "language": "ja",
-      "home": "http://www.bbc.co.uk/ontologies/passport/home/Japanese",
-      "passportId": "0b575826-1478-40bb-957b-799dfd7fbd84",
-      "locator": "urn:bbc:optimo:asset:cdd6p3r9g7jo",
-      "availability": "AVAILABLE",
-      "taggings": []
-    },
-    "tags": {},
-    "version": "v1.1.3",
-    "blockTypes": [
-      "headline",
-      "text",
-      "paragraph",
-      "fragment",
-      "image",
-      "caption",
-      "altText",
-      "rawImage",
-      "urlLink",
-      "video",
-      "subheadline"
-    ]
-  },
-  "content": {
-    "model": {
-      "blocks": [
-        {
-          "type": "headline",
-          "model": {
-            "blocks": [
-              {
-                "type": "text",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "paragraph",
-                      "model": {
-                        "text": "これは、このテスト記事の見出しです",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "これは、このテスト記事の見出しです",
-                              "attributes": []
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "image",
-          "model": {
-            "blocks": [
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "このテスト画像、著作権は、フランスの地図を示しています。画像は最初の3ブロックにあり、このキャプションがあります。",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "このテスト画像、著作権は、フランスの地図を示しています。画像は最初の3ブロックにあり、このキャプションがあります。",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "このテスト画像、著作権BBCは、フランスの地図を示しています。画像は最初の3ブロックにあり、このキャプションがあります。",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "このテスト画像、著作権BBCは、フランスの地図を示しています。画像は最初の3ブロックにあり、このキャプションがあります。",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "rawImage",
-                "model": {
-                  "width": 624,
-                  "height": 351,
-                  "locator": "cba9/test/c8130910-1109-11ea-acaa-cd607a38aea4.jpg",
-                  "originCode": "cpsdevpb",
-                  "copyrightHolder": "BBC"
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "text",
-          "model": {
-            "blocks": [
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "これはテキストブロックで、ホームページへのリンクが含まれています。",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "これはテキストブロックで、ホームページへのリンク",
-                        "attributes": []
-                      }
-                    },
-                    {
-                      "type": "urlLink",
-                      "model": {
-                        "text": "が含まれています",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "が含まれています",
-                              "attributes": []
-                            }
-                          }
-                        ],
-                        "locator": "https://www.bbc.co.uk/weather",
-                        "isExternal": false
-                      }
-                    },
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "。",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "video",
-          "model": {
-            "locator": "urn:bbc:pips:pid:p01k6msm",
-            "blocks": [
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "これはテキストブロックで、ホームページへのリ",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "これはテキストブロックで、ホームページへのリ",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "aresMedia",
-                "model": {
-                  "blocks": [
-                    {
-                      "blockId": "urn:bbc:ares::clip:p01k6msm",
-                      "type": "aresMediaMetadata",
-                      "model": {
-                        "id": "p01k6msm",
-                        "subType": "clip",
-                        "format": "audio_video",
-                        "title": "Five things ants can teach us about management",
-                        "synopses": {
-                          "short": "They may be tiny, but us humans could learn a thing or two from ants."
-                        },
-                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
-                        "imageCopyright": "BBC",
-                        "embedding": true,
-                        "advertising": true,
-                        "versions": [
-                          {
-                            "versionId": "p01k6msp",
-                            "types": ["Original"],
-                            "duration": 191,
-                            "durationISO8601": "PT3M11S",
-                            "warnings": {
-                              "short": "Contains strong language and adult humour.",
-                              "long": "Contains strong language and adult humour."
-                            },
-                            "availableTerritories": {
-                              "uk": true,
-                              "nonUk": true,
-                              "world": false
-                            },
-                            "availableFrom": 1540218932000
-                          }
-                        ],
-                        "syndication": {
-                          "destinations": []
-                        }
-                      }
-                    },
-                    {
-                      "type": "image",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "rawImage",
-                            "model": {
-                              "width": 1920,
-                              "height": 1080,
-                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg",
-                              "originCode": "mpv",
-                              "copyrightHolder": "BBC"
-                            }
+  "data": {
+    "article": {
+      "content": {
+        "model": {
+          "blocks": [
+            {
+              "id": "73786acc",
+              "type": "headline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "66e926fb",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "b971e540",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "これは、このテスト記事の見出しです",
+                            "blocks": [
+                              {
+                                "id": "a4dd9dd8",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "これは、このテスト記事の見出しです",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
                           },
-                          {
-                            "type": "altText",
-                            "model": {
-                              "blocks": [
-                                {
-                                  "type": "text",
-                                  "model": {
-                                    "blocks": [
-                                      {
-                                        "type": "paragraph",
-                                        "model": {
-                                          "text": "Ants",
-                                          "blocks": [
-                                            {
-                                              "type": "fragment",
-                                              "model": {
-                                                "text": "Ants",
-                                                "attributes": []
-                                              }
-                                            }
-                                          ]
-                                        }
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "subheadline",
-          "model": {
-            "blocks": [
-              {
-                "type": "text",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "paragraph",
-                      "model": {
-                        "text": "これはサブヘッドラインブロックです",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "これはサブヘッドラインブロックです",
-                              "attributes": []
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "image",
-          "model": {
-            "blocks": [
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "これはサブヘッドラインブロックです",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "これはサブヘッドラインブロックです",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      1,
+                      1
+                    ]
+                  }
+                ]
               },
-              {
-                "type": "rawImage",
-                "model": {
-                  "width": 800,
-                  "height": 450,
-                  "locator": "31f8/test/2e024fb0-110a-11ea-acaa-cd607a38aea4.jpg",
-                  "originCode": "cpsdevpb",
-                  "copyrightHolder": "Getty Images"
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "text",
-          "model": {
-            "blocks": [
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "このテスト記事は、ウェブサイトで自動化されたエンドツーエンドのテストを実行できるように作成されています。",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "このテスト記事は、ウェブサイトで自動化されたエンドツーエンドのテストを実行できるように作成されています。",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "text",
-          "model": {
-            "blocks": [
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
+              "position": [
+                1
+              ]
+            },
+            {
+              "id": "fb922b81",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "8e642a62",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "3f19ba25",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "f1df13cb",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "このテスト画像、著作権は、フランスの地図を示しています。画像は最初の3ブロックにあり、このキャプションがあります。",
+                                  "blocks": [
+                                    {
+                                      "id": "74d70258",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "このテスト画像、著作権は、フランスの地図を示しています。画像は最初の3ブロックにあり、このキャプションがあります。",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        2,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  2,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            2,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      2,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "da2b0bcd",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "4eedcfbe",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "752e0ba6",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "このテスト画像、著作権BBCは、フランスの地図を示しています。画像は最初の3ブロックにあり、このキャプションがあります。",
+                                  "blocks": [
+                                    {
+                                      "id": "7e039cb6",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "このテスト画像、著作権BBCは、フランスの地図を示しています。画像は最初の3ブロックにあり、このキャプションがあります。",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        2,
+                                        2,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  2,
+                                  2,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            2,
+                            2,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      2,
+                      2
+                    ]
+                  },
+                  {
+                    "id": "394513c2",
+                    "type": "rawImage",
+                    "model": {
+                      "width": 624,
+                      "height": 351,
+                      "locator": "cba9/test/c8130910-1109-11ea-acaa-cd607a38aea4.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "BBC"
+                    },
+                    "position": [
+                      2,
+                      3
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                2
+              ]
+            },
+            {
+              "id": "ce51d6f0",
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1574854693250,
+                "lastPublished": 1574854693250
+              },
+              "position": [
+                3
+              ]
+            },
+            {
+              "id": "d406602d",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "4ad5b695",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "これはテキストブロックで、ホームページへのリンクが含まれています。",
+                      "blocks": [
+                        {
+                          "id": "dacf73d2",
+                          "type": "fragment",
+                          "model": {
+                            "text": "これはテキストブロックで、ホームページへのリンク",
+                            "attributes": []
+                          },
+                          "position": [
+                            4,
+                            1,
+                            1
+                          ]
+                        },
+                        {
+                          "id": "95ad1d73",
+                          "type": "urlLink",
+                          "model": {
+                            "text": "が含まれています",
+                            "blocks": [
+                              {
+                                "id": "693e4346",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "が含まれています",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  4,
+                                  1,
+                                  2,
+                                  1
+                                ]
+                              }
+                            ],
+                            "locator": "https://www.bbc.co.uk/weather",
+                            "isExternal": false
+                          },
+                          "position": [
+                            4,
+                            1,
+                            2
+                          ]
+                        },
+                        {
+                          "id": "437d77dd",
+                          "type": "fragment",
+                          "model": {
+                            "text": "。",
+                            "attributes": []
+                          },
+                          "position": [
+                            4,
+                            1,
+                            3
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      4,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                4
+              ]
+            },
+            {
+              "id": "0986a415",
+              "type": "video",
+              "model": {
+                "locator": "urn:bbc:pips:pid:p01k6msm",
+                "blocks": [
+                  {
+                    "id": "0ae51afa",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "ad98aafa",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "a440609c",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "これはテキストブロックで、ホームページへのリ",
+                                  "blocks": [
+                                    {
+                                      "id": "12278013",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "これはテキストブロックで、ホームページへのリ",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        5,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  5,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            5,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      5,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "7c3cd80b",
+                    "type": "aresMedia",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "d8129683",
+                          "blockId": "urn:bbc:ares::clip:p01k6msm",
+                          "type": "aresMediaMetadata",
+                          "model": {
+                            "id": "p01k6msm",
+                            "subType": "clip",
+                            "format": "audio_video",
+                            "title": "Five things ants can teach us about management",
+                            "synopses": {
+                              "short": "They may be tiny, but us humans could learn a thing or two from ants."
+                            },
+                            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+                            "imageCopyright": "BBC",
+                            "embedding": true,
+                            "advertising": true,
+                            "versions": [
+                              {
+                                "versionId": "p01k6msp",
+                                "types": [
+                                  "Original"
+                                ],
+                                "duration": 191,
+                                "durationISO8601": "PT3M11S",
+                                "warnings": {
+                                  "short": "Contains strong language and adult humour.",
+                                  "long": "Contains strong language and adult humour."
+                                },
+                                "availableTerritories": {
+                                  "uk": true,
+                                  "nonUk": true
+                                },
+                                "availableFrom": 1540218932000
+                              }
+                            ],
+                            "syndication": {
+                              "destinations": []
+                            },
+                            "smpKind": "programme"
+                          },
+                          "position": [
+                            5,
+                            2,
+                            1
+                          ]
+                        },
+                        {
+                          "id": "0d2f39b2",
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "9ca27f6b",
+                                "type": "rawImage",
+                                "model": {
+                                  "width": 1920,
+                                  "height": 1080,
+                                  "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg",
+                                  "originCode": "mpv",
+                                  "copyrightHolder": "BBC"
+                                },
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  1
+                                ]
+                              },
+                              {
+                                "id": "72129ed8",
+                                "type": "altText",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "f9c70033",
+                                      "type": "text",
+                                      "model": {
+                                        "blocks": [
+                                          {
+                                            "id": "3ccf9419",
+                                            "type": "paragraph",
+                                            "model": {
+                                              "text": "Ants",
+                                              "blocks": [
+                                                {
+                                                  "id": "ceb20eeb",
+                                                  "type": "fragment",
+                                                  "model": {
+                                                    "text": "Ants",
+                                                    "attributes": []
+                                                  },
+                                                  "position": [
+                                                    5,
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    1,
+                                                    1,
+                                                    1
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            "position": [
+                                              5,
+                                              2,
+                                              2,
+                                              2,
+                                              1,
+                                              1
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      "position": [
+                                        5,
+                                        2,
+                                        2,
+                                        2,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  2
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            5,
+                            2,
+                            2
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      5,
+                      2
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                5
+              ]
+            },
+            {
+              "id": "08de362b",
+              "type": "subheadline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "ce489374",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "1d85f195",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "これはサブヘッドラインブロックです",
+                            "blocks": [
+                              {
+                                "id": "d2bcb543",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "これはサブヘッドラインブロックです",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  6,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            6,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      6,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                6
+              ]
+            },
+            {
+              "id": "f044721e",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "cc031ab0",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "776ea8d3",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "5ad3f1f8",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "これはサブヘッドラインブロックです",
+                                  "blocks": [
+                                    {
+                                      "id": "be09d770",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "これはサブヘッドラインブロックです",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        7,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  7,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            7,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      7,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "2ad938e7",
+                    "type": "rawImage",
+                    "model": {
+                      "width": 800,
+                      "height": 450,
+                      "locator": "31f8/test/2e024fb0-110a-11ea-acaa-cd607a38aea4.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "Getty Images"
+                    },
+                    "position": [
+                      7,
+                      2
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                7
+              ]
+            },
+            {
+              "id": "ff63fa5e",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "4109bb12",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "このテスト記事は、ウェブサイトで自動化されたエンドツーエンドのテストを実行できるように作成されています。  ",
+                      "blocks": [
+                        {
+                          "id": "cf30ff2d",
+                          "type": "fragment",
+                          "model": {
+                            "text": "このテスト記事は、ウェブサイトで自動化されたエンドツーエンドのテストを実行できるように作成されています。  ",
+                            "attributes": []
+                          },
+                          "position": [
+                            8,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      8,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                8
+              ]
+            },
+            {
+              "id": "4042341e",
+              "type": "text",
+              "model": {
+                "blocks": []
+              },
+              "position": [
+                9
+              ]
+            },
+            {
+              "id": "7923a7cb",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                10
+              ]
+            },
+            {
+              "id": "a4a6eef6",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                11
+              ]
+            }
+          ]
         }
-      ]
-    }
-  },
-  "promo": {
-    "headlines": {
-      "seoHeadline": "これは、このテスト記事の見出しです"
+      },
+      "metadata": {
+        "id": "urn:bbc:ares::article:cdd6p3r9g7jo",
+        "locators": {
+          "optimoUrn": "urn:bbc:optimo:asset:cdd6p3r9g7jo",
+          "canonicalUrl": "https://www.bbc.com/japanese/articles/cdd6p3r9g7jo"
+        },
+        "type": "article",
+        "createdBy": "Japanese",
+        "language": "ja",
+        "firstPublished": 1574854693250,
+        "lastPublished": 1574854693250,
+        "analyticsLabels": {
+          "producer": "Japanese",
+          "page": "japanese.articles.cdd6p3r9g7jo.page"
+        },
+        "passport": {
+          "language": "ja",
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Japanese",
+          "taggings": []
+        },
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment",
+          "image",
+          "caption",
+          "altText",
+          "rawImage",
+          "urlLink",
+          "video",
+          "subheadline",
+          "aresMedia"
+        ],
+        "allowAdvertising": true
+      },
+      "promo": {
+        "headlines": {
+          "seoHeadline": "これは、このテスト記事の見出しです"
+        }
+      }
     },
-    "locators": {
-      "optimoUrn": "urn:bbc:optimo:asset:cdd6p3r9g7jo"
-    },
-    "summary": {
-      "blocks": [
+    "secondaryData": {
+      "topStories": [
         {
-          "model": {
-            "blocks": [
+          "headlines": {
+            "headline": "バンコク爆発　防犯カメラの男がバックパックを"
+          },
+          "locators": {
+            "assetUri": "/japanese/23003065",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:28575ae8-9c47-b34d-ba24-2b357f05c226",
+            "assetId": "23003065",
+            "cpsUrn": "urn:bbc:content:assetUri:japanese/23003065",
+            "curie": "http://www.bbc.co.uk/asset/28575ae8-9c47-b34d-ba24-2b357f05c226"
+          },
+          "summary": "タイ・バンコク中心部で17日夜に起きた爆発事件で、警察が防犯カメラに映った男性を主要容疑者として捜査していることが明らかになった",
+          "timestamp": 1569397424000,
+          "language": "ja",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63465747",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/12404/test/_63465747__85014888_e8a5e758-c509-4719-b771-25d11da22a7e.jpg",
+            "path": "/cpsdevpb/12404/test/_63465747__85014888_e8a5e758-c509-4719-b771-25d11da22a7e.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "バンコク爆発の現場",
+            "caption": "バンコク爆発の現場",
+            "copyrightHolder": "EPA",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "ホーム",
+            "uri": "/japanese/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:japanese/23003065",
+          "type": "cps"
+        }
+      ],
+      "features": [
+        {
+          "headlines": {
+            "headline": "ギリシャ金融支援、原則合意　巨額債務は"
+          },
+          "locators": {
+            "assetUri": "/japanese/23002306",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:7a5e649c-8fc2-9f46-9823-4d3e22dce7ae",
+            "assetId": "23002306",
+            "cpsUrn": "urn:bbc:content:assetUri:japanese/23002306",
+            "curie": "http://www.bbc.co.uk/asset/7a5e649c-8fc2-9f46-9823-4d3e22dce7ae"
+          },
+          "summary": "欧州委員会は11日、ギリシャが債権団との金融支援策に「原則として」合意したと明らかにした。ギリシャ政府は今後、議会承認を求めていく。",
+          "timestamp": 1439345119000,
+          "language": "ja",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63465027",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/11978/test/_63465027_greece.jpg",
+            "path": "/cpsdevpb/11978/test/_63465027_greece.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "アテネ中心部のホテルで夜通しの交渉の末、合意達成。",
+            "caption": "アテネ中心部のホテルで夜通しの交渉の末、合意達成。",
+            "copyrightHolder": "Reuters",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false,
+            "hasShortForm": true
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "世界",
+            "uri": "/japanese/world",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:japanese/23002306",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "The rise of the priority queue",
+            "overtyped": "The new queue"
+          },
+          "locators": {
+            "assetUri": "/news/magazine-19712847",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:ff819582-928b-374d-9f99-f9a33e6fdded",
+            "assetId": "19712847",
+            "cpsUrn": "urn:bbc:content:assetUri:news/magazine-19712847",
+            "curie": "http://www.bbc.co.uk/asset/ff819582-928b-374d-9f99-f9a33e6fdded"
+          },
+          "summary": "Instead of waiting in line for their turn, Americans are finding themselves in a new kind of queue - where people who can pay get higher priority.",
+          "timestamp": 1349307898000,
+          "language": "en-gb",
+          "byline": {
+            "name": "By Benjamen Walker",
+            "title": "BBC World Service",
+            "persons": [
               {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "attributes": [],
-                        "text": ""
-                      },
-                      "type": "fragment"
-                    }
-                  ],
-                  "text": ""
-                },
-                "type": "paragraph"
+                "name": "Benjamen Walker",
+                "function": "BBC World Service"
               }
             ]
           },
-          "type": "text"
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63275669",
+            "subType": "index",
+            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63275000/jpg/_63275669_woman_getty_624.jpg",
+            "path": "/tmcs/media/images/63275000/jpg/_63275669_woman_getty_624.jpg",
+            "height": 351,
+            "width": 624,
+            "altText": "Woman in a queue in New York",
+            "copyrightHolder": "Getty Images",
+            "originCode": "tmcs",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63273601",
+            "subType": "index-thumbnail",
+            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63273000/jpg/_63273601_queue_getty.jpg",
+            "path": "/tmcs/media/images/63273000/jpg/_63273601_queue_getty.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Woman in a queue in New York",
+            "copyrightHolder": "Getty Images",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Magazine",
+            "uri": "/news/magazine",
+            "type": "simple"
+          },
+          "overtypedSummary": "How people are paying to get to the front",
+          "site": {
+            "subType": "site",
+            "name": "BBC News",
+            "uri": "/news",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:news/magazine-19712847",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "人民元、連日大幅切り下げ　アジア株下落"
+          },
+          "locators": {
+            "assetUri": "/japanese/23002307",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:dcc1bd03-a09b-3f48-afb9-065970f11af9",
+            "assetId": "23002307",
+            "cpsUrn": "urn:bbc:content:assetUri:japanese/23002307",
+            "curie": "http://www.bbc.co.uk/asset/dcc1bd03-a09b-3f48-afb9-065970f11af9"
+          },
+          "summary": "中国の中央銀行、中国人民銀行は12日、人民元レートの基準値を前日に続けて切り下げ、1ドル＝6.3306 元と発表した。前日比1.6％の切り下げ。11日には前日比2％近く切り下げ、世界各地の市場を揺るがした。",
+          "timestamp": 1439351723000,
+          "language": "ja",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63465038",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/14470/test/_63465038__84831682_nikkeiepa.jpg",
+            "path": "/cpsdevpb/14470/test/_63465038__84831682_nikkeiepa.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "中国人民銀行による人民元切り下げに各国市場のトレーダーたちは当惑",
+            "caption": "中国人民銀行による人民元切り下げに各国市場のトレーダーたちは当惑",
+            "copyrightHolder": "EPA",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false,
+            "hasShortForm": true
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "ホーム",
+            "uri": "/japanese/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:japanese/23002307",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Our photo used in anti-gay marriage ad",
+            "overtyped": "Image theft"
+          },
+          "locators": {
+            "assetUri": "/news/magazine-19804286",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:153c6d20-2954-d844-b586-bbbc4cee285c",
+            "assetId": "19804286",
+            "cpsUrn": "urn:bbc:content:assetUri:news/magazine-19804286",
+            "curie": "http://www.bbc.co.uk/asset/153c6d20-2954-d844-b586-bbbc4cee285c"
+          },
+          "summary": "For two gay men, the photograph showed them at their happiest, but for an anti-gay marriage political group, the image represented the wrong kind of family values.",
+          "timestamp": 1349343672000,
+          "language": "en-gb",
+          "byline": {
+            "name": "By Daniel Nasaw",
+            "title": "BBC News Magazine, Washington",
+            "persons": [
+              {
+                "name": "Daniel Nasaw",
+                "function": "BBC News Magazine, Washington"
+              }
+            ]
+          },
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63251964",
+            "subType": "index",
+            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63251000/jpg/_63251964_brianandtom_khoriginal-464x261.jpg",
+            "path": "/tmcs/media/images/63251000/jpg/_63251964_brianandtom_khoriginal-464x261.jpg",
+            "height": 261,
+            "width": 464,
+            "altText": "Brian Edwards and Tom Privitere",
+            "copyrightHolder": "Kristina Hill Photography",
+            "originCode": "tmcs",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63251966",
+            "subType": "index-thumbnail",
+            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63251000/jpg/_63251966_brianandtom_khoriginal-464x261.jpg",
+            "path": "/tmcs/media/images/63251000/jpg/_63251966_brianandtom_khoriginal-464x261.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Brian Edwards and Tom Privitere",
+            "copyrightHolder": "Kristina Hill Photography",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Magazine",
+            "uri": "/news/magazine",
+            "type": "simple"
+          },
+          "overtypedSummary": "Our photo was used in anti-gay marriage ad",
+          "site": {
+            "subType": "site",
+            "name": "BBC News",
+            "uri": "/news",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:news/magazine-19804286",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Inside Pakistan's drone country",
+            "overtyped": "Drone country"
+          },
+          "locators": {
+            "assetUri": "/news/world-asia-india-19714959",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:e6b5139b-fd4f-944f-b206-8edec74b816b",
+            "assetId": "19714959",
+            "cpsUrn": "urn:bbc:content:assetUri:news/world-asia-india-19714959",
+            "curie": "http://www.bbc.co.uk/asset/e6b5139b-fd4f-944f-b206-8edec74b816b"
+          },
+          "summary": "An eyewitness account of life under the constant buzzing of drones in tribal north-west Pakistan.",
+          "timestamp": 1349307768000,
+          "language": "en-gb",
+          "byline": {
+            "name": "By Ahmed Wali Mujeeb ",
+            "title": "BBC News, Waziristan",
+            "persons": [
+              {
+                "name": "Ahmed Wali Mujeeb",
+                "function": "BBC News"
+              }
+            ]
+          },
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63283268",
+            "subType": "index",
+            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63283000/jpg/_63283268_waz_afp624.jpg",
+            "path": "/tmcs/media/images/63283000/jpg/_63283268_waz_afp624.jpg",
+            "height": 351,
+            "width": 624,
+            "altText": "Remains of a destroyed house in South Waziristan",
+            "copyrightHolder": "AFP",
+            "originCode": "tmcs",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63278602",
+            "subType": "index-thumbnail",
+            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63278000/jpg/_63278602_waz_afp320.jpg",
+            "path": "/tmcs/media/images/63278000/jpg/_63278602_waz_afp320.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Wreck of building in South Waziristan",
+            "copyrightHolder": "AFP",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Asia",
+            "uri": "/news/world/asia",
+            "type": "simple"
+          },
+          "overtypedSummary": "High stress in the world's 'most dangerous place'",
+          "site": {
+            "subType": "site",
+            "name": "BBC News",
+            "uri": "/news",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:news/world-asia-india-19714959",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "It's time to reap benefits of 4G"
+          },
+          "locators": {
+            "assetUri": "/news/business-19210539",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:dc6b3c79-c4ea-fe4d-bf74-8c64cac7448c",
+            "assetId": "19210539",
+            "cpsUrn": "urn:bbc:content:assetUri:news/business-19210539",
+            "curie": "http://www.bbc.co.uk/asset/dc6b3c79-c4ea-fe4d-bf74-8c64cac7448c"
+          },
+          "summary": "More than 40 countries around the world have upgraded their mobile networks to handle high-speed 4G - and more must do the same, writes Olaf Swantee.",
+          "timestamp": 1345761934000,
+          "language": "en-gb",
+          "byline": {
+            "name": "Viewpoint by Olaf Swantee",
+            "title": "Chief executive, Everything Everywhere",
+            "persons": [
+              {
+                "name": "لیز spokesmanدوست",
+                "function": "ارتش عراق"
+              }
+            ]
+          },
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "62187726",
+            "subType": "index",
+            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/62187000/jpg/_62187726_119447601.jpg",
+            "path": "/tmcs/media/images/62187000/jpg/_62187726_119447601.jpg",
+            "height": 1152,
+            "width": 2048,
+            "altText": "Festival-goers use their mobile phones and cameras to record a concert of the British band Portishead",
+            "copyrightHolder": "Getty Images",
+            "originCode": "tmcs",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "62187728",
+            "subType": "index-thumbnail",
+            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/62187000/jpg/_62187728_119447601.jpg",
+            "path": "/tmcs/media/images/62187000/jpg/_62187728_119447601.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Festival-goers use their mobile phones and cameras to record a concert of the British band Portishead",
+            "copyrightHolder": "Getty Images",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Economy",
+            "uri": "/news/business/economy",
+            "type": "simple"
+          },
+          "site": {
+            "subType": "site",
+            "name": "BBC News",
+            "uri": "/news",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:news/business-19210539",
+          "type": "cps"
         }
-      ]
-    },
-    "timestamp": 1574854693250,
-    "id": "urn:bbc:ares::article:cdd6p3r9g7jo",
-    "type": "cps"
+      ],
+      "mostRead": {
+        "generated": "2023-02-18T02:56:56.714Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T11:38:00Z",
+        "totalRecords": 18,
+        "records": [
+          {
+            "id": "55922956-6b17-d94f-a873-1e94c945a2e8",
+            "rank": 1,
+            "count": 9493,
+            "urn": "urn:bbc:curie:asset:55922956-6b17-d94f-a873-1e94c945a2e8",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "物まね「バットマン」が自動車事故死　病気の子供応援",
+                "headline": "物まね「バットマン」が自動車事故死　病気の子供応援"
+              },
+              "locators": {
+                "assetUri": "/japanese/23003063",
+                "cpsUrn": "urn:bbc:content:assetUri:japanese/23003063",
+                "curie": "http://www.bbc.co.uk/asset/55922956-6b17-d94f-a873-1e94c945a2e8",
+                "assetId": "23003063"
+              },
+              "summary": "バットマンの衣装を着て病院の子供を訪問し元気づけることで有名となったアメリカの51歳男性がメリーランド州で交通事故に遭い死亡した。",
+              "timestamp": 1439884787000,
+              "language": "ja",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63465638",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/146C8/test/_63465638_9e08b3fa-623a-4010-8b0b-6092e4c3be9d.jpg",
+                "path": "/cpsdevpb/146C8/test/_63465638_9e08b3fa-623a-4010-8b0b-6092e4c3be9d.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "ロビンソンさんはバットマンとして病気の子供たちを応援してきた。",
+                "caption": "ロビンソンさんはバットマンとして病気の子供たちを応援してきた。",
+                "copyrightHolder": "Pittsburgh Tribune Review",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:japanese/23003063",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "153c6d20-2954-d844-b586-bbbc4cee285c",
+            "rank": 2,
+            "count": 8700,
+            "urn": "urn:bbc:curie:asset:153c6d20-2954-d844-b586-bbbc4cee285c",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Our photo used in anti-gay marriage ad",
+                "headline": "Privitere and Edwards: Our photo used in anti-gay union ad"
+              },
+              "locators": {
+                "assetUri": "/news/magazine-19804286",
+                "cpsUrn": "urn:bbc:content:assetUri:news/magazine-19804286",
+                "curie": "http://www.bbc.co.uk/asset/153c6d20-2954-d844-b586-bbbc4cee285c",
+                "assetId": "19804286"
+              },
+              "summary": "For two gay men, the photograph showed them at their happiest, but for an anti-gay marriage political group, the image represented the wrong kind of family values.",
+              "timestamp": 1349343672000,
+              "language": "en-GB",
+              "byline": {
+                "name": "By Daniel Nasaw",
+                "title": "BBC News Magazine, Washington",
+                "persons": [
+                  {
+                    "name": "Daniel Nasaw",
+                    "function": "BBC News Magazine, Washington"
+                  }
+                ]
+              },
+              "indexImage": {
+                "id": "63251964",
+                "subType": "index",
+                "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63251000/jpg/_63251964_brianandtom_khoriginal-464x261.jpg",
+                "path": "/tmcs/media/images/63251000/jpg/_63251964_brianandtom_khoriginal-464x261.jpg",
+                "height": 261,
+                "width": 464,
+                "altText": "Brian Edwards and Tom Privitere",
+                "copyrightHolder": "",
+                "originCode": "tmcs",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:news/magazine-19804286",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "84321b08-5116-1b49-b4fb-780bd1e2c64d",
+            "rank": 3,
+            "count": 7660,
+            "urn": "urn:bbc:curie:asset:84321b08-5116-1b49-b4fb-780bd1e2c64d",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "天神爆発　中国首相が現地入り　",
+                "headline": "天神爆発　中国首相が現地入り　"
+              },
+              "locators": {
+                "assetUri": "/japanese/23002921",
+                "cpsUrn": "urn:bbc:content:assetUri:japanese/23002921",
+                "curie": "http://www.bbc.co.uk/asset/84321b08-5116-1b49-b4fb-780bd1e2c64d",
+                "assetId": "23002921"
+              },
+              "summary": "中国・天津市の「浜海新区」の爆発事故で17日、李克強首相が現地に入り被害者を見舞った。",
+              "timestamp": 1439798373000,
+              "language": "ja",
+              "indexImage": {
+                "id": "63465456",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/FFB0/test/_63465456_63465455.jpg",
+                "path": "/cpsdevpb/FFB0/test/_63465456_63465455.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "李首相が被害者見舞う",
+                "copyrightHolder": "CCTV",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:japanese/23002921",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "7a5e649c-8fc2-9f46-9823-4d3e22dce7ae",
+            "rank": 4,
+            "count": 5886,
+            "urn": "urn:bbc:curie:asset:7a5e649c-8fc2-9f46-9823-4d3e22dce7ae",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ギリシャ金融支援、原則合意　巨額債務は",
+                "headline": "ギリシャ金融支援、原則合意　巨額債務は"
+              },
+              "locators": {
+                "assetUri": "/japanese/23002306",
+                "cpsUrn": "urn:bbc:content:assetUri:japanese/23002306",
+                "curie": "http://www.bbc.co.uk/asset/7a5e649c-8fc2-9f46-9823-4d3e22dce7ae",
+                "assetId": "23002306"
+              },
+              "summary": "欧州委員会は11日、ギリシャが債権団との金融支援策に「原則として」合意したと明らかにした。ギリシャ政府は今後、議会承認を求めていく。",
+              "timestamp": 1439345119000,
+              "language": "ja",
+              "indexImage": {
+                "id": "63465027",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/11978/test/_63465027_greece.jpg",
+                "path": "/cpsdevpb/11978/test/_63465027_greece.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "アテネ中心部のホテルで夜通しの交渉の末、合意達成。",
+                "caption": "アテネ中心部のホテルで夜通しの交渉の末、合意達成。",
+                "copyrightHolder": "Reuters",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:japanese/23002306",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "c67c23b6-0842-f64e-a4a0-3bea1dca632e",
+            "rank": 5,
+            "count": 5169,
+            "urn": "urn:bbc:curie:asset:c67c23b6-0842-f64e-a4a0-3bea1dca632e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "クリントン前国務長官、個人メールサーバーをFBIに",
+                "headline": "クリントン前国務長官、個人メールサーバーをFBIに"
+              },
+              "locators": {
+                "assetUri": "/japanese/23002315",
+                "cpsUrn": "urn:bbc:content:assetUri:japanese/23002315",
+                "curie": "http://www.bbc.co.uk/asset/c67c23b6-0842-f64e-a4a0-3bea1dca632e",
+                "assetId": "23002315"
+              },
+              "summary": "2016年米大統領選の有力候補、ヒラリー・クリントン前国務長官は、長官時代に使っていた個人メールアドレスのメールサーバーを米連邦捜査局（FBI）に提供することになった。",
+              "timestamp": 1439363002000,
+              "language": "ja",
+              "indexImage": {
+                "id": "63465067",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/12918/test/_63465067__84831646_cfb2a379-78ef-4b99-bb58-bff4ea4eb6e1.jpg",
+                "path": "/cpsdevpb/12918/test/_63465067__84831646_cfb2a379-78ef-4b99-bb58-bff4ea4eb6e1.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "国務長官時代のクリントン氏のメールの使い方が大統領選の争点に。",
+                "caption": "国務長官時代のクリントン氏のメールの使い方が大統領選の争点に。",
+                "copyrightHolder": "Reuters",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:japanese/23002315",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "eae591ac-480e-7a44-9c66-1e6940fb8067",
+            "rank": 6,
+            "count": 5083,
+            "urn": "urn:bbc:curie:asset:eae591ac-480e-7a44-9c66-1e6940fb8067",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "バンコク爆発　防犯カメラ映像の男を捜査と",
+                "headline": "バンコク爆発　防犯カメラ映像の男を捜査と"
+              },
+              "locators": {
+                "assetUri": "/japanese/23003043",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:eae591ac-480e-7a44-9c66-1e6940fb8067",
+                "assetId": "23003043",
+                "cpsUrn": "urn:bbc:content:assetUri:japanese/23003043",
+                "curie": "http://www.bbc.co.uk/asset/eae591ac-480e-7a44-9c66-1e6940fb8067"
+              },
+              "summary": "タイのプラユット暫定首相は18日、バンコク中心部の爆弾事件についてタイにとって「過去最悪の攻撃」と述べた。",
+              "timestamp": 1439882732000,
+              "language": "ja",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Japanese",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63465597",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/136C4/test/_63465597_63465595.jpg",
+                "path": "/cpsdevpb/136C4/test/_63465597_63465595.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "バンコク中心部の爆発は外国人を標的にしたと見られる。",
+                "caption": "バンコク中心部の爆発は外国人を標的にしたと見られる。",
+                "copyrightHolder": "EPA",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:japanese/23003043",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "ff819582-928b-374d-9f99-f9a33e6fdded",
+            "rank": 7,
+            "count": 4675,
+            "urn": "urn:bbc:curie:asset:ff819582-928b-374d-9f99-f9a33e6fdded",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "The rise of the priority queue",
+                "headline": "Priority queues: Paying to get to the front of the line"
+              },
+              "locators": {
+                "assetUri": "/news/magazine-19712847",
+                "cpsUrn": "urn:bbc:content:assetUri:news/magazine-19712847",
+                "curie": "http://www.bbc.co.uk/asset/ff819582-928b-374d-9f99-f9a33e6fdded",
+                "assetId": "19712847"
+              },
+              "summary": "Instead of waiting in line for their turn, Americans are finding themselves in a new kind of queue - where people who can pay get higher priority.",
+              "timestamp": 1349307898000,
+              "language": "en-GB",
+              "byline": {
+                "name": "By Benjamen Walker",
+                "title": "BBC World Service",
+                "persons": [
+                  {
+                    "name": "Benjamen Walker",
+                    "function": "BBC World Service"
+                  }
+                ]
+              },
+              "indexImage": {
+                "id": "63275669",
+                "subType": "index",
+                "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63275000/jpg/_63275669_woman_getty_624.jpg",
+                "path": "/tmcs/media/images/63275000/jpg/_63275669_woman_getty_624.jpg",
+                "height": 351,
+                "width": 624,
+                "altText": "Woman in a queue in New York",
+                "copyrightHolder": "",
+                "originCode": "tmcs",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:news/magazine-19712847",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "dcc1bd03-a09b-3f48-afb9-065970f11af9",
+            "rank": 8,
+            "count": 4674,
+            "urn": "urn:bbc:curie:asset:dcc1bd03-a09b-3f48-afb9-065970f11af9",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "人民元、連日大幅切り下げ　アジア株下落",
+                "headline": "人民元、連日大幅切り下げ　アジア株下落"
+              },
+              "locators": {
+                "assetUri": "/japanese/23002307",
+                "cpsUrn": "urn:bbc:content:assetUri:japanese/23002307",
+                "curie": "http://www.bbc.co.uk/asset/dcc1bd03-a09b-3f48-afb9-065970f11af9",
+                "assetId": "23002307"
+              },
+              "summary": "中国の中央銀行、中国人民銀行は12日、人民元レートの基準値を前日に続けて切り下げ、1ドル＝6.3306 元と発表した。前日比1.6％の切り下げ。11日には前日比2％近く切り下げ、世界各地の市場を揺るがした。",
+              "timestamp": 1439351723000,
+              "language": "ja",
+              "indexImage": {
+                "id": "63465038",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/14470/test/_63465038__84831682_nikkeiepa.jpg",
+                "path": "/cpsdevpb/14470/test/_63465038__84831682_nikkeiepa.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "中国人民銀行による人民元切り下げに各国市場のトレーダーたちは当惑",
+                "caption": "中国人民銀行による人民元切り下げに各国市場のトレーダーたちは当惑",
+                "copyrightHolder": "EPA",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:japanese/23002307",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "dc6b3c79-c4ea-fe4d-bf74-8c64cac7448c",
+            "rank": 9,
+            "count": 4673,
+            "urn": "urn:bbc:curie:asset:dc6b3c79-c4ea-fe4d-bf74-8c64cac7448c",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "It's time to reap benefits of 4G",
+                "headline": "It's time to reap the benefits of 4G mobile networks"
+              },
+              "locators": {
+                "assetUri": "/news/business-19210539",
+                "cpsUrn": "urn:bbc:content:assetUri:news/business-19210539",
+                "curie": "http://www.bbc.co.uk/asset/dc6b3c79-c4ea-fe4d-bf74-8c64cac7448c",
+                "assetId": "19210539"
+              },
+              "summary": "More than 40 countries around the world have upgraded their mobile networks to handle high-speed 4G - and more must do the same, writes Olaf Swantee.",
+              "timestamp": 1345761934000,
+              "language": "en-gb",
+              "byline": {
+                "name": "Viewpoint by Olaf Swantee",
+                "title": "Chief executive, Everything Everywhere",
+                "persons": [
+                  {
+                    "name": "A spokesman",
+                    "function": "No to AV campaign"
+                  }
+                ]
+              },
+              "indexImage": {
+                "id": "62187726",
+                "subType": "index",
+                "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/62187000/jpg/_62187726_119447601.jpg",
+                "path": "/tmcs/media/images/62187000/jpg/_62187726_119447601.jpg",
+                "height": 1152,
+                "width": 2048,
+                "altText": "Festival-goers use their mobile phones and cameras to record a concert of the British band Portishead",
+                "copyrightHolder": "Getty Images",
+                "originCode": "tmcs",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:news/business-19210539",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "4e7f00b6-d8a9-2240-b73d-b1d081fa1350",
+            "rank": 10,
+            "count": 4390,
+            "urn": "urn:bbc:curie:asset:4e7f00b6-d8a9-2240-b73d-b1d081fa1350",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ネフェルティティ妃はツタンカーメンの王墓に埋葬？",
+                "headline": "ネフェルティティ妃はツタンカーメンの王墓に埋葬？"
+              },
+              "locators": {
+                "assetUri": "/japanese/23002312",
+                "cpsUrn": "urn:bbc:content:assetUri:japanese/23002312",
+                "curie": "http://www.bbc.co.uk/asset/4e7f00b6-d8a9-2240-b73d-b1d081fa1350",
+                "assetId": "23002312"
+              },
+              "summary": "美しい彫像で知られる古代エジプトのネフェルティティ王妃は、有名なツタンカーメンの墓に埋葬されていた？　米アリゾナ大学の考古学者、ニコラス・リーブス氏が、王墓の解析データをもとにその可能性を提唱した。",
+              "timestamp": 1439357416000,
+              "language": "ja",
+              "indexImage": {
+                "id": "63465049",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/16F68/test/_63465049__84821613_84821612.jpg",
+                "path": "/cpsdevpb/16F68/test/_63465049__84821613_84821612.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "ネフェルティティ妃の埋葬地は謎のまま",
+                "caption": "ネフェルティティ妃の埋葬地は謎のまま",
+                "copyrightHolder": "AFP/Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:japanese/23002312",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "72b487e5-41f9-e84a-b59a-430a8a8ae1e8",
+            "rank": 11,
+            "count": 4192,
+            "urn": "urn:bbc:curie:asset:72b487e5-41f9-e84a-b59a-430a8a8ae1e8",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "人民元、3日連続で大幅引き下げ",
+                "headline": "人民元、3日連続で大幅引き下げ"
+              },
+              "locators": {
+                "assetUri": "/japanese/23002521",
+                "cpsUrn": "urn:bbc:content:assetUri:japanese/23002521",
+                "curie": "http://www.bbc.co.uk/asset/72b487e5-41f9-e84a-b59a-430a8a8ae1e8",
+                "assetId": "23002521"
+              },
+              "summary": "中国の中央銀行、中国人民銀行は13日、人民元取引の基準値を3日連続で大幅に引き下げ、前日より対ドルで1.1％下げて1ドル＝6.4010元にした。",
+              "timestamp": 1439436322000,
+              "language": "ja",
+              "indexImage": {
+                "id": "63465159",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/173B4/test/_63465159_9ad04766-8ffd-405a-8bbe-9376e6761a52.jpg",
+                "path": "/cpsdevpb/173B4/test/_63465159_9ad04766-8ffd-405a-8bbe-9376e6761a52.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "中国人民銀行は人民元を世界市場により連動させる方針を表明。",
+                "caption": "中国人民銀行は人民元を世界市場により連動させる方針を表明。",
+                "copyrightHolder": "AFP",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:japanese/23002521",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "639fc664-1939-c44b-8920-8475501f6d2f",
+            "rank": 12,
+            "count": 4176,
+            "urn": "urn:bbc:curie:asset:639fc664-1939-c44b-8920-8475501f6d2f",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "バンコク爆発　現場は悲惨な混乱の極み",
+                "headline": "バンコク爆発　現場は悲惨な混乱の極み"
+              },
+              "locators": {
+                "assetUri": "/japanese/23003044",
+                "cpsUrn": "urn:bbc:content:assetUri:japanese/23003044",
+                "curie": "http://www.bbc.co.uk/asset/639fc664-1939-c44b-8920-8475501f6d2f",
+                "assetId": "23003044"
+              },
+              "summary": "タイ・バンコク中心部を17日深夜に襲った爆弾事件で、発生直後に現場に着いたBBCのジョナサン・ヘッド特派員は、現場は混乱の極みだったと。",
+              "timestamp": 1439867540000,
+              "language": "ja",
+              "indexImage": {
+                "id": "63465613",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/7BA8/test/_63465613__85003683_hi028593541.jpg",
+                "path": "/cpsdevpb/7BA8/test/_63465613__85003683_hi028593541.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "タイ・バンコクの爆発現場は悲惨な混乱の極みに。",
+                "caption": "タイ・バンコクの爆発現場は悲惨な混乱の極みに。",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:japanese/23003044",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "28575ae8-9c47-b34d-ba24-2b357f05c226",
+            "rank": 13,
+            "count": 3793,
+            "urn": "urn:bbc:curie:asset:28575ae8-9c47-b34d-ba24-2b357f05c226",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "バンコク爆発　防犯カメラの男がバックパックを",
+                "headline": "バンコク爆発　防犯カメラの男がバックパックを"
+              },
+              "locators": {
+                "assetUri": "/japanese/23003065",
+                "cpsUrn": "urn:bbc:content:assetUri:japanese/23003065",
+                "curie": "http://www.bbc.co.uk/asset/28575ae8-9c47-b34d-ba24-2b357f05c226",
+                "assetId": "23003065"
+              },
+              "summary": "タイ・バンコク中心部で17日夜に起きた爆発事件で、警察が防犯カメラに映った男性を主要容疑者として捜査していることが明らかになった",
+              "timestamp": 1569397424000,
+              "language": "ja",
+              "indexImage": {
+                "id": "63465747",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/12404/test/_63465747__85014888_e8a5e758-c509-4719-b771-25d11da22a7e.jpg",
+                "path": "/cpsdevpb/12404/test/_63465747__85014888_e8a5e758-c509-4719-b771-25d11da22a7e.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "バンコク爆発の現場",
+                "caption": "バンコク爆発の現場",
+                "copyrightHolder": "EPA",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:japanese/23003065",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "33752551-8127-5644-b2b3-79c31897f5ba",
+            "rank": 14,
+            "count": 3624,
+            "urn": "urn:bbc:curie:asset:33752551-8127-5644-b2b3-79c31897f5ba",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "不明マレーシア機の残骸？　翼の一部が漂着",
+                "headline": "不明マレーシア機の残骸？　翼の一部が漂着"
+              },
+              "locators": {
+                "assetUri": "/japanese/23001055",
+                "cpsUrn": "urn:bbc:content:assetUri:japanese/23001055",
+                "curie": "http://www.bbc.co.uk/asset/33752551-8127-5644-b2b3-79c31897f5ba",
+                "assetId": "23001055"
+              },
+              "summary": "仏領レユニオン島に流れ着いたこの機体の一部が、航空界最大のミステリーのひとつの答えとなるのでしょうか。",
+              "timestamp": 1438240466000,
+              "language": "ja",
+              "byline": {
+                "name": "ワシントン",
+                "title": "トム・ベイトマン",
+                "persons": [
+                  {
+                    "name": "Tom Bateman",
+                    "function": "Reporter",
+                    "thumbnail": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/55151000/jpg/_55151493_tombateman.jpg"
+                  }
+                ]
+              },
+              "indexImage": {
+                "id": "63464077",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/12CF6/test/_63464077_f479j1ye.jpg",
+                "path": "/cpsdevpb/12CF6/test/_63464077_f479j1ye.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Malaysian Remote Sensing Agency (MRSA)",
+                "caption": "マレーシア航空機MH370の捜索範囲と不明漂流物が発見された場所（マレーシア政府公表資料）",
+                "copyrightHolder": "Malaysian Remote Sensing Agency (MRSA)",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:japanese/23001055",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "e6b5139b-fd4f-944f-b206-8edec74b816b",
+            "rank": 15,
+            "count": 3269,
+            "urn": "urn:bbc:curie:asset:e6b5139b-fd4f-944f-b206-8edec74b816b",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Inside Pakistan's drone country",
+                "headline": "Inside Pakistan's drone country"
+              },
+              "locators": {
+                "assetUri": "/news/world-asia-india-19714959",
+                "cpsUrn": "urn:bbc:content:assetUri:news/world-asia-india-19714959",
+                "curie": "http://www.bbc.co.uk/asset/e6b5139b-fd4f-944f-b206-8edec74b816b",
+                "assetId": "19714959"
+              },
+              "summary": "An eyewitness account of life under the constant buzzing of drones in tribal north-west Pakistan.",
+              "timestamp": 1349307768000,
+              "language": "en-GB",
+              "byline": {
+                "name": "By Ahmed Wali Mujeeb ",
+                "title": "BBC News, Waziristan",
+                "persons": [
+                  {
+                    "name": "Ahmed Wali Mujeeb",
+                    "function": "BBC News"
+                  }
+                ]
+              },
+              "indexImage": {
+                "id": "63283268",
+                "subType": "index",
+                "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63283000/jpg/_63283268_waz_afp624.jpg",
+                "path": "/tmcs/media/images/63283000/jpg/_63283268_waz_afp624.jpg",
+                "height": 351,
+                "width": 624,
+                "altText": "Remains of a destroyed house in South Waziristan",
+                "copyrightHolder": "",
+                "originCode": "tmcs",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:news/world-asia-india-19714959",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "e83488cd-0f0f-fe43-abe3-01c0d40b4690",
+            "rank": 16,
+            "count": 2407,
+            "urn": "urn:bbc:curie:asset:e83488cd-0f0f-fe43-abe3-01c0d40b4690",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ISがイラクのクルド人に化学兵器攻撃か",
+                "headline": "ISがイラクのクルド人に化学兵器攻撃か"
+              },
+              "locators": {
+                "assetUri": "/japanese/23002773",
+                "cpsUrn": "urn:bbc:content:assetUri:japanese/23002773",
+                "curie": "http://www.bbc.co.uk/asset/e83488cd-0f0f-fe43-abe3-01c0d40b4690",
+                "assetId": "23002773"
+              },
+              "summary": "複数政府の関係者によると、過激派組織「イスラム国」（IS）がイラク北部でクルド人勢力に対して化学兵器を使用した疑いがもたれている。",
+              "timestamp": 1439530200000,
+              "language": "ja",
+              "id": "urn:bbc:ares::asset:japanese/23002773",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "9583b7cb-428e-0949-bf34-07b96985a6b4",
+            "rank": 17,
+            "count": 1905,
+            "urn": "urn:bbc:curie:asset:9583b7cb-428e-0949-bf34-07b96985a6b4",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "天津爆発、化学専門チームが現地入り　倉庫には青酸ナトリウムも",
+                "headline": "天津爆発、化学専門チームが現地入り　倉庫には青酸ナトリウムも"
+              },
+              "locators": {
+                "assetUri": "/japanese/23002771",
+                "cpsUrn": "urn:bbc:content:assetUri:japanese/23002771",
+                "curie": "http://www.bbc.co.uk/asset/9583b7cb-428e-0949-bf34-07b96985a6b4",
+                "assetId": "23002771"
+              },
+              "summary": "中国国営新華社通信によると、北部・天津の港湾地区で12日深夜に起きた大爆発の現場に、政府は人民解放軍の化学専門チームを派遣した。",
+              "timestamp": 1439518513000,
+              "language": "ja",
+              "indexImage": {
+                "id": "63465388",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/15924/test/_63465388__84876226_6a727841-d4af-4178-9cf0-a86029360996.jpg",
+                "path": "/cpsdevpb/15924/test/_63465388__84876226_6a727841-d4af-4178-9cf0-a86029360996.jpg",
+                "height": 351,
+                "width": 624,
+                "altText": "爆発現場は危険化学品の貯蔵庫のため、消防士たちは化学防護服を身に着けていた（写真・AP）",
+                "caption": "爆発現場は危険化学品の貯蔵庫のため、消防士たちは化学防護服を身に着けていた（写真・AP）",
+                "copyrightHolder": "AP",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:japanese/23002771",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "ab836399-a03f-5b43-996e-b094c9b003bb",
+            "rank": 18,
+            "count": 77,
+            "urn": "urn:bbc:curie:asset:ab836399-a03f-5b43-996e-b094c9b003bb",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "赤ちゃんはバイクで誕生？　中国の路上に",
+                "headline": "赤ちゃんはバイクで誕生？　中国の路上に"
+              },
+              "locators": {
+                "assetUri": "/japanese/23000930",
+                "cpsUrn": "urn:bbc:content:assetUri:japanese/23000930",
+                "curie": "http://www.bbc.co.uk/asset/ab836399-a03f-5b43-996e-b094c9b003bb",
+                "assetId": "23000930"
+              },
+              "summary": "陣痛で病院にやってきた女性のおなかに赤ちゃんがいない？　救急外来の医師たちは仰天したそうだ。",
+              "timestamp": 1438149919000,
+              "language": "ja",
+              "byline": {
+                "name": "BBC",
+                "title": "「各社のニュース」班",
+                "persons": [
+                  {
+                    "name": "A spokesman",
+                    "function": "No to AV campaign"
+                  }
+                ]
+              },
+              "indexImage": {
+                "id": "63463992",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/74F0/test/_63463992_p81agl3z.jpg",
+                "path": "/cpsdevpb/74F0/test/_63463992_p81agl3z.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "中国の赤ちゃん",
+                "caption": "中国の赤ちゃん（本文とは関係ありません）",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:japanese/23000930",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   },
-  "relatedContent": {
-    "site": {
-      "subType": "site",
-      "name": "Japanese",
-      "uri": "/japanese",
-      "type": "simple"
-    },
-    "groups": []
-  }
+  "contentType": "application/json; charset=utf-8"
 }

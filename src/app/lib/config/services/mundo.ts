@@ -1,11 +1,4 @@
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_GHOST,
-  C_POSTBOX_30,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
 import latinWithDiacritics from '../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
-import brandSVG from '../../chameleonLogos/mundo';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/es';
 import withContext from '../../../contexts/utils/withContext';
@@ -39,7 +32,6 @@ export const service: DefaultServiceConfig = {
     service: 'mundo',
     serviceName: 'News Mundo',
     languageName: 'Spanish',
-    themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcmundo',
     twitterSite: '@bbcmundo',
     noBylinesPolicy:
@@ -51,13 +43,6 @@ export const service: DefaultServiceConfig = {
     swPath: '/sw.js',
     frontPageTitle: 'Noticias',
     iTunesAppId: 515255747,
-    theming: {
-      brandBackgroundColour: `${C_POSTBOX}`,
-      brandLogoColour: `${C_WHITE}`,
-      brandForegroundColour: `${C_GHOST}`,
-      brandHighlightColour: `${C_WHITE}`,
-      brandBorderColour: `${C_POSTBOX_30}`,
-    },
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
@@ -265,7 +250,6 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'Principales noticias',
       featuresAnalysisTitle: 'No te lo pierdas',
     },
-    brandSVG,
     mostRead: {
       header: 'Más leídas',
       lastUpdated: 'Última actualización:',
@@ -340,10 +324,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Internacional',
         url: '/mundo/topics/c2lej05epw5t',
-      },
-      {
-        title: 'Qatar 2022',
-        url: '/mundo/topics/c36v5eq58ngt',
       },
       {
         title: 'Hay Festival',

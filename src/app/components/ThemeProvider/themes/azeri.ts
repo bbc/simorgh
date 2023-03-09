@@ -2,6 +2,7 @@ import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
 import latinWithDiacriticsScript from '../fontScripts/latinWithDiacritics';
 import helmetFontVariants from '../fontVariants/helmet';
 import withThemeProvider from '../withThemeProvider';
+import brandSVG from '../chameleonLogos/azeri';
 
 const azeriTheme = {
   palette: {
@@ -16,6 +17,7 @@ const azeriTheme = {
     fontFaces: [],
     fontVariants: helmetFontVariants,
   },
+  brandSVG,
 };
 
 export default withThemeProvider(azeriTheme);

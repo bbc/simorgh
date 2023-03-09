@@ -1,6 +1,10 @@
 import path from 'ramda/src/path';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
-import { getBlockData, getVideoEmbedUrl } from './helpers';
+import {
+  getBlockData,
+  getVideoEmbedUrl,
+  fetchArticlePageData,
+} from './helpers';
 import config from '../../../support/config/services';
 import { serviceNumerals } from '../../../../src/app/legacy/containers/MostRead/Canonical/Rank';
 
@@ -19,8 +23,14 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
   service,
   pageType,
   variant,
-}) =>
+}) => {
+  let articlesData;
   describe(`Running testsForAMPOnly for ${service} ${pageType}`, () => {
+    before(async () => {
+      articlesData = await fetchArticlePageData(service, variant).then(
+        ({ body }) => body,
+      );
+    });
     it('should contain an amp-img', () => {
       if (serviceHasFigure(service)) {
         cy.get('figure')
@@ -34,33 +44,29 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
 
     describe('Media Player: AMP', () => {
       it('should render a placeholder image', () => {
-        cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
-          const media = getBlockData('video', body);
-          if (media && media.type === 'video') {
-            cy.get('[data-e2e="media-player"]').within(() => {
-              cy.get('div')
-                .should('have.attr', 'data-e2e')
-                .should('not.be.empty');
-            });
-          }
-        });
+        const media = getBlockData('video', articlesData);
+        if (media && media.type === 'video') {
+          cy.get('[data-e2e="media-player"]').within(() => {
+            cy.get('div')
+              .should('have.attr', 'data-e2e')
+              .should('not.be.empty');
+          });
+        }
       });
 
       it('should render an iframe with a valid URL', () => {
-        cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
-          const media = getBlockData('video', body);
-          if (media && media.type === 'video') {
-            const { lang } = appConfig[service][variant];
-            const embedUrl = getVideoEmbedUrl(body, lang, true);
-            cy.get(`amp-iframe[src="${embedUrl}"]`).should('be.visible');
-            cy.testResponseCodeAndTypeRetry({
-              path: embedUrl,
-              responseCode: 200,
-              type: 'text/html',
-              allowFallback: true,
-            });
-          }
-        });
+        const media = getBlockData('video', articlesData);
+        if (media && media.type === 'video') {
+          const { lang } = appConfig[service][variant];
+          const embedUrl = getVideoEmbedUrl(articlesData, lang, true);
+          cy.get(`amp-iframe[src="${embedUrl}"]`).should('be.visible');
+          cy.testResponseCodeAndTypeRetry({
+            path: embedUrl,
+            responseCode: 200,
+            type: 'text/html',
+            allowFallback: true,
+          });
+        }
       });
     });
 
@@ -120,7 +126,7 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
             });
           });
         });
-        it(`Most read list should contain hrefs`, () => {
+        it(`Most read list should contain hrefs that are not empty`, () => {
           cy.request(mostReadPath).then(({ body: mostReadJson }) => {
             const mostReadRecords = mostReadJson.totalRecords;
             cy.fixture(`toggles/${config[service].name}.json`).then(toggles => {
@@ -133,12 +139,17 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
                 cy.get('[data-e2e="most-read"] > amp-list div')
                   .next()
                   .within(() => {
-                    cy.get('a').should('have.attr', 'href');
+                    cy.get('a').each($el => {
+                      cy.wrap($el)
+                        .should('have.attr', 'href')
+                        .should('not.be.empty');
+                    });
                   });
               }
             });
           });
         });
+
         it('should not show most read list when data fetch fails', () => {
           cy.intercept(
             {
@@ -164,7 +175,7 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
       }
     });
   });
-
+};
 // For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
 export const testsThatNeverRunDuringSmokeTestingForAMPOnly = ({
   service,

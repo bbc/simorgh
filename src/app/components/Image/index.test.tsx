@@ -276,28 +276,15 @@ describe('Image - AMP pages', () => {
     render(<Fixture isAmp />);
 
     const imageEls = screen.getAllByAltText('Test image alt text');
-    expect(imageEls.length).toBe(2);
+    expect(imageEls.length).toBe(1);
     expect(imageEls[0].nodeName).toBe('AMP-IMG');
-    expect(imageEls[1].nodeName).toBe('AMP-IMG');
   });
 
-  it('should render webp image', () => {
+  it('should render jpg image', () => {
     render(<Fixture isAmp />);
 
     const imageEls = screen.getAllByAltText('Test image alt text');
-    expect(imageEls[0]).not.toHaveAttribute('fallback', '');
     expect(imageEls[0]).toHaveAttribute(
-      'srcset',
-      '/test-image-200.webp 200w, /test-image-500.webp 500w',
-    );
-  });
-
-  it('should render jpeg fallback image', () => {
-    render(<Fixture isAmp />);
-
-    const imageEls = screen.getAllByAltText('Test image alt text');
-    expect(imageEls[1]).toHaveAttribute('fallback', '');
-    expect(imageEls[1]).toHaveAttribute(
       'srcset',
       '/test-image-200.jpg 200w, /test-image-500.jpg 500w',
     );
@@ -309,8 +296,6 @@ describe('Image - AMP pages', () => {
     const imageEl = screen.getAllByAltText('Test image alt text');
     expect(imageEl[0]).toHaveAttribute('width', '500');
     expect(imageEl[0]).toHaveAttribute('height', '281');
-    expect(imageEl[1]).toHaveAttribute('width', '500');
-    expect(imageEl[1]).toHaveAttribute('height', '281');
   });
 
   it('should render a placeholder image by default', () => {
@@ -396,6 +381,7 @@ describe('Image - AMP pages', () => {
       >
         <amp-img
           alt="Test image alt text"
+          fallback=""
           layout="fill"
           src="/test-image-500.jpg"
         />
@@ -419,6 +405,7 @@ describe('Image - AMP pages', () => {
       >
         <amp-img
           alt="Test image alt text"
+          fallback=""
           layout="fill"
           src="/test-image-500.jpg"
           srcset="/test-image-200.jpg 200w, /test-image-500.jpg 500w"
@@ -427,7 +414,7 @@ describe('Image - AMP pages', () => {
     `);
   });
 
-  it('should match markup for a responsive webp image with a jpeg fallback', () => {
+  it('should match markup for a responsive jpg image', () => {
     const { container } = render(
       <Image
         isAmp
@@ -447,19 +434,12 @@ describe('Image - AMP pages', () => {
       >
         <amp-img
           alt="Test image alt text"
+          fallback=""
           layout="fill"
+          sizes="(max-width: 600px) 480px, 800px"
           src="/test-image-500.webp"
-          srcset="/test-image-200.webp 200w, /test-image-500.webp 500w"
-        >
-          <amp-img
-            alt="Test image alt text"
-            fallback=""
-            layout="fill"
-            sizes="(max-width: 600px) 480px, 800px"
-            src="/test-image-500.webp"
-            srcset="/test-image-200.jpg 200w, /test-image-500.jpg 500w"
-          />
-        </amp-img>
+          srcset="/test-image-200.jpg 200w, /test-image-500.jpg 500w"
+        />
       </div>
     `);
   });

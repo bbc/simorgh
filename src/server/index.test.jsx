@@ -13,10 +13,10 @@ import {
 import { FRONT_PAGE, MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 import Document from './Document/component';
 import routes from '../app/routes';
-import getAssetOrigins from './utilities/getAssetOrigins';
 import * as renderDocument from './Document';
 import sendCustomMetrics from './utilities/customMetrics';
 import { NON_200_RESPONSE } from './utilities/customMetrics/metrics.const';
+import { getMvtVaryHeaders } from './utilities/mvtHeader';
 
 // mimic the logic in `src/index.js` which imports the `server/index.jsx`
 dotenv.config({ path: './envConfig/local.env' });
@@ -97,6 +97,7 @@ const mockRouteProps = ({
 };
 
 jest.mock('./utilities/customMetrics');
+jest.mock('./utilities/mvtHeader');
 
 const renderDocumentSpy = jest.spyOn(renderDocument, 'default');
 
@@ -109,8 +110,6 @@ const testRenderedData =
   async () => {
     const { text, status } = await makeRequest(url);
 
-    const assetOrigins = getAssetOrigins(service);
-
     expect(status).toBe(200);
 
     expect(reactDomServer.renderToString).toHaveBeenCalled();
@@ -122,11 +121,9 @@ const testRenderedData =
           ids: [],
           html: '<h1>Mock app</h1>',
         }}
-        assetOrigins={assetOrigins}
         data={successDataResponse}
         helmet={{ head: 'tags' }}
         isAmp={isAmp}
-        service={service}
         legacyScripts="__mock_script_elements__"
         modernScripts="__mock_script_elements__"
         links="__mock_link_elements__"
@@ -946,7 +943,7 @@ describe('Server', () => {
       it('should respond with JSON', async () => {
         const { body } = await makeRequest('/news/articles/c0g992jmmkko.json');
         expect(body).toEqual(
-          expect.objectContaining({ content: expect.any(Object) }),
+          expect.objectContaining({ data: expect.any(Object) }),
         );
       });
 
@@ -1312,8 +1309,6 @@ describe('Server', () => {
       it('should respond with rendered data', async () => {
         const { text, status } = await makeRequest(`/${service}/foobar`);
 
-        const assetOrigins = getAssetOrigins(service);
-
         expect(status).toBe(404);
 
         expect(reactDomServer.renderToString).toHaveBeenCalled();
@@ -1325,11 +1320,9 @@ describe('Server', () => {
               ids: [],
               html: '<h1>Mock app</h1>',
             }}
-            assetOrigins={assetOrigins}
             data={dataResponse}
             helmet={{ head: 'tags' }}
             isAmp={isAmp}
-            service={service}
             legacyScripts="__mock_script_elements__"
             modernScripts="__mock_script_elements__"
             links="__mock_link_elements__"
@@ -1392,11 +1385,22 @@ describe('Server HTTP Headers - Status Endpoint', () => {
 });
 
 describe('Server HTTP Headers - Page Endpoints', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
+  const successDataResponse = {
+    isAmp: false,
+    data: { some: 'data' },
+    service: 'someService',
+    status: 200,
+  };
+
   it(`should set a cache-control header`, async () => {
     const { header } = await makeRequest('/mundo');
 
     expect(header['cache-control']).toBe(
-      'public, stale-if-error=90, stale-while-revalidate=30, max-age=30',
+      'public, stale-if-error=120, stale-while-revalidate=30, max-age=30',
     );
   });
 
@@ -1404,6 +1408,40 @@ describe('Server HTTP Headers - Page Endpoints', () => {
     const { header } = await makeRequest('/mundo');
 
     expect(header['referrer-policy']).toBe('no-referrer-when-downgrade');
+  });
+
+  it(`should add mvt experiment header names to vary if they are enabled`, async () => {
+    mockRouteProps({
+      dataResponse: successDataResponse,
+    });
+    getMvtVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
+
+    const { header } = await makeRequest('/mundo/c0000000001o');
+
+    expect(header.vary).toBe('mvt-simorgh_dark_mode, Accept-Encoding');
+  });
+
+  it(`should not add mvt experiment header names to vary if they are not enabled`, async () => {
+    mockRouteProps({
+      dataResponse: successDataResponse,
+    });
+    getMvtVaryHeaders.mockReturnValue('');
+
+    const { header } = await makeRequest('/mundo/articles/c0000000001o');
+
+    expect(header.vary).toBe('Accept-Encoding');
+  });
+
+  it(`should not add mvt experiment header names to vary if on AMP`, async () => {
+    mockRouteProps({
+      dataResponse: successDataResponse,
+      isAmp: true,
+    });
+    getMvtVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
+
+    const { header } = await makeRequest('/mundo/articles/c0000000001o');
+
+    expect(header.vary).toBe('Accept-Encoding');
   });
 });
 

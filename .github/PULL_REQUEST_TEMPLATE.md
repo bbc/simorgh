@@ -1,22 +1,22 @@
-Resolves #NUMBER
+Resolves JIRA [number]
 
-**Overall change:**
-_A very high-level summary of easily-reproducible changes that can be understood by non-devs._
+Overall changes
+======
+_A very high-level summary of easily-reproducible changes that can be understood by non-devs, and why these changes where made._
 
-**Code changes:**
+Code changes
+======
 
 - _A bullet point list of key code changes that have been made._
-- _When describing code changes, try to communicate **how** and **why** you implemented something a specific way, not just **what** has changed._
 
----
+Testing
+======
+1. _List the steps used to test this PR._
 
-- [ ] I have assigned myself to this PR and the corresponding issues
-- [ ] I have added the `cross-team` label to this PR if it requires visibility across World Service teams
-- [ ] I have assigned this PR to the Simorgh project
-- [ ] (BBC contributors only) This PR follows the [repository use guidelines](https://github.com/bbc/simorgh-infrastructure/blob/latest/documentation/repository-guidelines.md)
+Helpful Links
+======
+_Add Links to useful resources related to this PR if applicable._
 
-**Testing:**
+[Coding Standards](https://github.com/bbc/simorgh/blob/latest/docs/Coding-Standards/README.md)
 
-- [ ] Automated (jest and/or cypress) tests added (for new features) or updated (for existing features)
-- [ ] If necessary, I have run the local E2E non-smoke tests relevant to my changes (`CYPRESS_APP_ENV=local CYPRESS_SMOKE=false yarn test:e2e:interactive`)
-- [ ] This PR requires manual testing
+[Repository use guidelines](https://github.com/bbc/simorgh-infrastructure/blob/latest/documentation/repository-guidelines.md)

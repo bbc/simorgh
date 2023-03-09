@@ -68,7 +68,7 @@ describe('mostRead buildParams', () => {
         serviceContext,
       );
       expect(result).toMatchInlineSnapshot(
-        `"s=598285&s2=70&p=pidgin.popular.read.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x2=[responsive]&x3=[news-pidgin]&x4=[pcm]&x5=[http%253A%252F%252Flocalhost%252F]&x7=[list-datadriven]&x8=[simorgh]&x9=[De%2Bone%2Bwe%2Bdem%2Bde%2Bread%2Bwell%2Bwell%2B-%2BBBC%2BNews%2BPidgin]&x11=[2019-11-06T15%3A00%3A00Z]&x12=[2030-01-01T17%3A00%3A00Z]"`,
+        `"s=598285&s2=70&p=pidgin.popular.read.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x2=[responsive]&x3=[news-pidgin]&x4=[pcm]&x5=[http%253A%252F%252Flocalhost%252F]&x7=[list-datadriven]&x8=[simorgh]&x9=[De%2520one%2520we%2520dem%2520de%2520read%2520well%2520well%2520-%2520BBC%2520News%2520Pidgin]&x11=[2019-11-06T15%3A00%3A00Z]&x12=[2030-01-01T17%3A00%3A00Z]"`,
       );
     });
   });

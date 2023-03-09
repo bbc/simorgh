@@ -11,6 +11,7 @@ import {
   articleDataPidgin,
   articleDataPidginWithAds,
   articleDataPidginWithByline,
+  sampleRecommendations,
 } from '#pages/ArticlePage/fixtureData';
 import newsMostReadData from '#data/news/mostRead';
 import persianMostReadData from '#data/persian/mostRead';
@@ -21,6 +22,10 @@ import {
   singleTextBlock,
 } from '#models/blocks/index';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import {
+  OptimizelyExperiment,
+  OptimizelyProvider,
+} from '@optimizely/react-sdk';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ArticlePage from './ArticlePage';
 import ThemeProvider from '../../components/ThemeProvider';
@@ -32,10 +37,41 @@ jest.mock('#containers/ChartbeatAnalytics', () => {
   return ChartbeatAnalytics;
 });
 
+jest.mock('@optimizely/react-sdk', () => {
+  const actualModules = jest.requireActual('@optimizely/react-sdk');
+  return {
+    __esModule: true,
+    ...actualModules,
+    OptimizelyExperiment: jest.fn(),
+  };
+});
+
 jest.mock('#containers/OptimizelyPageViewTracking', () => {
   const OptimizelyPageViewTracking = () => null;
   return OptimizelyPageViewTracking;
 });
+
+jest.mock('#containers/OptimizelyArticleCompleteTracking', () => {
+  const OptimizelyArticleCompleteTracking = () => null;
+  return OptimizelyArticleCompleteTracking;
+});
+
+const optimizely = {
+  onReady: jest.fn(() => Promise.resolve()),
+  track: jest.fn(),
+  user: {
+    attributes: {},
+  },
+  close: jest.fn(),
+};
+
+const recommendationSettings = {
+  hasStoryRecommendations: true,
+  skipLink: {
+    text: 'Skip recommendations and continue reading',
+    endTextVisuallyHidden: 'End of recommendations',
+  },
+};
 
 const Context = ({
   service = 'pidgin',
@@ -54,6 +90,9 @@ const Context = ({
           ads: {
             enabled: adsToggledOn,
           },
+          cpsRecommendations: {
+            enabled: true,
+          },
         }}
       >
         <RequestContextProvider
@@ -66,8 +105,13 @@ const Context = ({
           statusCode={200}
           showAdsBasedOnLocation={showAdsBasedOnLocation}
         >
-          <ServiceContextProvider service={service}>
-            {children}
+          <ServiceContextProvider
+            service={service}
+            recommendations={recommendationSettings}
+          >
+            <OptimizelyProvider optimizely={optimizely} isServerSide>
+              {children}
+            </OptimizelyProvider>
           </ServiceContextProvider>
         </RequestContextProvider>
       </ToggleContextProvider>
@@ -262,11 +306,11 @@ it('should render a rtl article (persian) with most read correctly', async () =>
     </Context>,
   );
 
-  await waitFor(() => container.querySelector('#Most-Read'));
+  await waitFor(() => {
+    const mostReadSection = container.querySelector('#Most-Read');
+    expect(mostReadSection).not.toBeNull();
+  });
 
-  const mostReadSection = container.querySelector('#Most-Read');
-
-  expect(mostReadSection).not.toBeNull();
   expect(container).toMatchSnapshot();
 });
 
@@ -279,11 +323,11 @@ it('should render a ltr article (pidgin) with most read correctly', async () => 
     </Context>,
   );
 
-  await waitFor(() => container.querySelector('#Most-Read'));
+  await waitFor(() => {
+    const mostReadSection = container.querySelector('#Most-Read');
+    expect(mostReadSection).not.toBeNull();
+  });
 
-  const mostReadSection = container.querySelector('#Most-Read');
-
-  expect(mostReadSection).not.toBeNull();
   expect(container).toMatchSnapshot();
 });
 
@@ -403,4 +447,31 @@ it('should show ads when enabled', async () => {
       expect(adElement).not.toBeInTheDocument();
     }
   });
+});
+
+it('should render WSOJ recommendations when passed', async () => {
+  const pageDataWithSecondaryColumn = {
+    ...articleDataNews,
+    recommendations: sampleRecommendations,
+  };
+
+  OptimizelyExperiment.mockImplementation(props => {
+    const { children } = props;
+
+    const variation = 'control';
+
+    if (children != null && typeof children === 'function') {
+      return <>{children(variation, true, false)}</>;
+    }
+
+    return null;
+  });
+
+  const { getByText } = render(
+    <Context service="turkce">
+      <ArticlePage pageData={pageDataWithSecondaryColumn} />
+    </Context>,
+  );
+
+  expect(getByText('SAMPLE RECOMMENDATION 1 - HEADLINE')).toBeInTheDocument();
 });

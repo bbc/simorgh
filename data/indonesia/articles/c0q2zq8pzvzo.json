@@ -1,454 +1,1896 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::article:c0q2zq8pzvzo",
-    "locators": {
-      "optimoUrn": "urn:bbc:optimo:asset:c0q2zq8pzvzo"
-    },
-    "type": "article",
-    "createdBy": "Indonesia",
-    "language": "id",
-    "lastUpdated": 1569260046554,
-    "firstPublished": 1562941587903,
-    "lastPublished": 1562941587903,
-    "options": {},
-    "analyticsLabels": {},
-    "passport": {
-      "language": "id",
-      "home": "http://www.bbc.co.uk/ontologies/passport/home/Indonesia"
-    },
-    "tags": {},
-    "version": "v1.1.2",
-    "blockTypes": [
-      "headline",
-      "text",
-      "paragraph",
-      "fragment",
-      "image",
-      "caption",
-      "altText",
-      "rawImage",
-      "urlLink",
-      "video",
-      "subheadline"
-    ]
-  },
-  "content": {
-    "model": {
-      "blocks": [
-        {
-          "type": "headline",
-          "model": {
-            "blocks": [
-              {
-                "type": "text",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "paragraph",
-                      "model": {
-                        "text": "Ini adalah judul artikel tes ini",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "Ini adalah judul artikel tes ini",
-                              "attributes": []
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "image",
-          "model": {
-            "blocks": [
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Gambar uji ini, hak cipta BBC, menunjukkan peta Prancis. Gambar berada di tiga blok pertama dan memiliki teks ini.",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Gambar uji ini, hak cipta BBC, menunjukkan peta Prancis. Gambar berada di tiga blok pertama dan memiliki teks ini.",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Peta Prancis menunjukkan Paris dan Cognac",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Peta Prancis menunjukkan Paris dan Cognac",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "rawImage",
-                "model": {
-                  "width": 624,
-                  "height": 351,
-                  "locator": "1d58/test/d37d5d10-de27-11e9-b23c-f1ac9644bb55.jpg",
-                  "originCode": "cpsdevpb",
-                  "copyrightHolder": "BBC"
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "text",
-          "model": {
-            "blocks": [
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "Ini adalah blok teks, yang berisi tautan url ke beranda BBC Weather.",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "Ini adalah blok teks, yang berisi tautan url ke ",
-                        "attributes": []
-                      }
-                    },
-                    {
-                      "type": "urlLink",
-                      "model": {
-                        "text": "beranda BBC Weather.",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "beranda BBC Weather.",
-                              "attributes": []
-                            }
-                          }
-                        ],
-                        "locator": "https://www.bbc.com/weather",
-                        "isExternal": false
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "video",
-          "model": {
-            "locator": "urn:bbc:pips:pid:p01k6msm",
-            "blocks": [
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Ini adalah blok video yang berisi video tentang semut",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Ini adalah blok video yang berisi video tentang semut",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "aresMedia",
-                "model": {
-                  "blocks": [
-                    {
-                      "blockId": "urn:bbc:ares::clip:p01k6msm",
-                      "type": "aresMediaMetadata",
-                      "model": {
-                        "id": "p01k6msm",
-                        "subType": "clip",
-                        "format": "audio_video",
-                        "title": "Five things ants can teach us about management",
-                        "synopses": {
-                          "short": "They may be tiny, but us humans could learn a thing or two from ants."
-                        },
-                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
-                        "imageCopyright": "BBC",
-                        "embedding": true,
-                        "advertising": true,
-                        "versions": [
-                          {
-                            "versionId": "p01k6msp",
-                            "types": ["Original"],
-                            "duration": 191,
-                            "durationISO8601": "PT3M11S",
-                            "warnings": {
-                              "short": "Contains strong language and adult humour.",
-                              "long": "Contains strong language and adult humour."
-                            },
-                            "availableTerritories": {
-                              "uk": true,
-                              "nonUk": true
-                            },
-                            "availableFrom": 1540218932000
-                          }
-                        ],
-                        "syndication": {
-                          "destinations": []
-                        }
-                      }
-                    },
-                    {
-                      "type": "image",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "rawImage",
-                            "model": {
-                              "width": 1920,
-                              "height": 1080,
-                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg",
-                              "originCode": "mpv",
-                              "copyrightHolder": "BBC"
-                            }
+  "data": {
+    "article": {
+      "content": {
+        "model": {
+          "blocks": [
+            {
+              "id": "d84cc50f",
+              "type": "headline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "d25439ab",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "684fe598",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "Ini adalah judul artikel tes ini",
+                            "blocks": [
+                              {
+                                "id": "1d4db4aa",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "Ini adalah judul artikel tes ini",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
                           },
-                          {
-                            "type": "altText",
-                            "model": {
-                              "blocks": [
-                                {
-                                  "type": "text",
-                                  "model": {
-                                    "blocks": [
-                                      {
-                                        "type": "paragraph",
-                                        "model": {
-                                          "text": "Ants",
-                                          "blocks": [
-                                            {
-                                              "type": "fragment",
-                                              "model": {
-                                                "text": "Ants",
-                                                "attributes": []
-                                              }
-                                            }
-                                          ]
-                                        }
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      1,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                1
+              ]
+            },
+            {
+              "id": "7d86ae56",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "43b9ff4b",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "20c93f7d",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "257a40d5",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Gambar uji ini, hak cipta BBC, menunjukkan peta Prancis. Gambar berada di tiga blok pertama dan memiliki teks ini.",
+                                  "blocks": [
+                                    {
+                                      "id": "9b91d4cb",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Gambar uji ini, hak cipta BBC, menunjukkan peta Prancis. Gambar berada di tiga blok pertama dan memiliki teks ini.",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        2,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  2,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            2,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      2,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "8849f3c6",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "83e0ef19",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "ee1773d7",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Peta Prancis menunjukkan Paris dan Cognac",
+                                  "blocks": [
+                                    {
+                                      "id": "a8a3f7da",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Peta Prancis menunjukkan Paris dan Cognac",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        2,
+                                        2,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  2,
+                                  2,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            2,
+                            2,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      2,
+                      2
+                    ]
+                  },
+                  {
+                    "id": "858cd0d2",
+                    "type": "rawImage",
+                    "model": {
+                      "width": 624,
+                      "height": 351,
+                      "locator": "1d58/test/d37d5d10-de27-11e9-b23c-f1ac9644bb55.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "BBC"
+                    },
+                    "position": [
+                      2,
+                      3
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                2
+              ]
+            },
+            {
+              "id": "7bdeddb8",
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1562941587903,
+                "lastPublished": 1562941587903
+              },
+              "position": [
+                3
+              ]
+            },
+            {
+              "id": "e1956644",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "343d851f",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Ini adalah blok teks, yang berisi tautan url ke beranda BBC Weather.",
+                      "blocks": [
+                        {
+                          "id": "5e9f8e12",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Ini adalah blok teks, yang berisi tautan url ke ",
+                            "attributes": []
+                          },
+                          "position": [
+                            4,
+                            1,
+                            1
+                          ]
+                        },
+                        {
+                          "id": "7bced6a1",
+                          "type": "urlLink",
+                          "model": {
+                            "text": "beranda BBC Weather.",
+                            "blocks": [
+                              {
+                                "id": "ce015791",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "beranda BBC Weather.",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  4,
+                                  1,
+                                  2,
+                                  1
+                                ]
+                              }
+                            ],
+                            "locator": "https://www.bbc.com/weather",
+                            "isExternal": false
+                          },
+                          "position": [
+                            4,
+                            1,
+                            2
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      4,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                4
+              ]
+            },
+            {
+              "id": "efd3171c",
+              "type": "video",
+              "model": {
+                "locator": "urn:bbc:pips:pid:p01k6msm",
+                "blocks": [
+                  {
+                    "id": "1224edc5",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "e96ae551",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "49d66033",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Ini adalah blok video yang berisi video tentang semut",
+                                  "blocks": [
+                                    {
+                                      "id": "19b8921d",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Ini adalah blok video yang berisi video tentang semut",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        5,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  5,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            5,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      5,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "5c616e91",
+                    "type": "aresMedia",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "c30ce7f4",
+                          "blockId": "urn:bbc:ares::clip:p01k6msm",
+                          "type": "aresMediaMetadata",
+                          "model": {
+                            "id": "p01k6msm",
+                            "subType": "clip",
+                            "format": "audio_video",
+                            "title": "Five things ants can teach us about management",
+                            "synopses": {
+                              "short": "They may be tiny, but us humans could learn a thing or two from ants."
+                            },
+                            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+                            "imageCopyright": "BBC",
+                            "embedding": true,
+                            "advertising": true,
+                            "versions": [
+                              {
+                                "versionId": "p01k6msp",
+                                "types": [
+                                  "Original"
+                                ],
+                                "duration": 191,
+                                "durationISO8601": "PT3M11S",
+                                "warnings": {
+                                  "short": "Contains strong language and adult humour.",
+                                  "long": "Contains strong language and adult humour."
+                                },
+                                "availableTerritories": {
+                                  "uk": true,
+                                  "nonUk": true
+                                },
+                                "availableFrom": 1540218932000
+                              }
+                            ],
+                            "syndication": {
+                              "destinations": []
+                            },
+                            "smpKind": "programme"
+                          },
+                          "position": [
+                            5,
+                            2,
+                            1
+                          ]
+                        },
+                        {
+                          "id": "731d5b02",
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "98bc05c8",
+                                "type": "rawImage",
+                                "model": {
+                                  "width": 1920,
+                                  "height": 1080,
+                                  "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg",
+                                  "originCode": "mpv",
+                                  "copyrightHolder": "BBC"
+                                },
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  1
+                                ]
+                              },
+                              {
+                                "id": "1a2fecc5",
+                                "type": "altText",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "db166367",
+                                      "type": "text",
+                                      "model": {
+                                        "blocks": [
+                                          {
+                                            "id": "67eb039c",
+                                            "type": "paragraph",
+                                            "model": {
+                                              "text": "Ants",
+                                              "blocks": [
+                                                {
+                                                  "id": "8adc1492",
+                                                  "type": "fragment",
+                                                  "model": {
+                                                    "text": "Ants",
+                                                    "attributes": []
+                                                  },
+                                                  "position": [
+                                                    5,
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    1,
+                                                    1,
+                                                    1
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            "position": [
+                                              5,
+                                              2,
+                                              2,
+                                              2,
+                                              1,
+                                              1
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      "position": [
+                                        5,
+                                        2,
+                                        2,
+                                        2,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  2
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            5,
+                            2,
+                            2
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      5,
+                      2
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                5
+              ]
+            },
+            {
+              "id": "4d7d52d5",
+              "type": "subheadline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "71e36102",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "faa037aa",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "Ini adalah blok subjudul",
+                            "blocks": [
+                              {
+                                "id": "53555f39",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "Ini adalah blok subjudul",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  6,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            6,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      6,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                6
+              ]
+            },
+            {
+              "id": "d09612bc",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "8829e344",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "146e4331",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "34d54adb",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "\rPesepakbola setelah pertandingan",
+                                  "blocks": [
+                                    {
+                                      "id": "16b5edc5",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "\rPesepakbola setelah pertandingan",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        7,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  7,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            7,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      7,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "691e4258",
+                    "type": "rawImage",
+                    "model": {
+                      "width": 2048,
+                      "height": 1152,
+                      "locator": "4629/test/3b60f9a0-de28-11e9-b23c-f1ac9644bb55.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "Getty Images"
+                    },
+                    "position": [
+                      7,
+                      2
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                7
+              ]
+            },
+            {
+              "id": "d8cc5f92",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "6691817f",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Artikel pengujian ini telah dibuat sehingga kami dapat menjalankan tes end-to-end otomatis di situs web kami.",
+                      "blocks": [
+                        {
+                          "id": "d7ba2aa6",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Artikel pengujian ini telah dibuat sehingga kami dapat menjalankan tes end-to-end otomatis di situs web kami.",
+                            "attributes": []
+                          },
+                          "position": [
+                            8,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      8,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                8
+              ]
+            },
+            {
+              "id": "0d802418",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                9
+              ]
+            },
+            {
+              "id": "6c2d6043",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                10
+              ]
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "id": "urn:bbc:ares::article:c0q2zq8pzvzo",
+        "locators": {
+          "optimoUrn": "urn:bbc:optimo:asset:c0q2zq8pzvzo",
+          "canonicalUrl": "https://www.bbc.com/indonesia/articles/c0q2zq8pzvzo"
         },
-        {
-          "type": "subheadline",
-          "model": {
-            "blocks": [
-              {
-                "type": "text",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "paragraph",
-                      "model": {
-                        "text": "Ini adalah blok subjudul",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "Ini adalah blok subjudul",
-                              "attributes": []
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
+        "type": "article",
+        "createdBy": "Indonesia",
+        "language": "id",
+        "firstPublished": 1562941587903,
+        "lastPublished": 1562941587903,
+        "analyticsLabels": {
+          "producer": "Indonesian",
+          "page": "indonesia.articles.c0q2zq8pzvzo.page"
         },
+        "passport": {
+          "language": "id",
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Indonesia",
+          "taggings": []
+        },
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment",
+          "image",
+          "caption",
+          "altText",
+          "rawImage",
+          "urlLink",
+          "video",
+          "subheadline",
+          "aresMedia"
+        ],
+        "allowAdvertising": true
+      },
+      "promo": {
+        "headlines": {
+          "seoHeadline": "Ini adalah judul SEO dari artikel tes ini"
+        }
+      }
+    },
+    "secondaryData": {
+      "topStories": [
         {
-          "type": "image",
-          "model": {
-            "blocks": [
+          "headlines": {
+            "headline": "Storms, floods hit central Yangon"
+          },
+          "locators": {
+            "assetUri": "/indonesia/indonesia-23130787",
+            "cpsUrn": "urn:bbc:content:assetUri:indonesia/indonesia-23130787",
+            "assetId": "23130787"
+          },
+          "summary": "Torrential rain floods major streets in Yangon.",
+          "timestamp": 1496904832000,
+          "language": "id",
+          "byline": {
+            "name": "Lyse Doucet & Mayuri Mei Lin",
+            "title": "BBC News, Damascus",
+            "persons": [
               {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "\rPesepakbola setelah pertandingan",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "\rPesepakbola setelah pertandingan",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
+                "name": "Lyse Doucet",
+                "function": "BBC News, Damascus",
+                "thumbnail": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/53048000/jpg/_53048763_50850069.jpg"
               },
               {
-                "type": "rawImage",
-                "model": {
-                  "width": 2048,
-                  "height": 1152,
-                  "locator": "4629/test/3b60f9a0-de28-11e9-b23c-f1ac9644bb55.jpg",
-                  "originCode": "cpsdevpb",
-                  "copyrightHolder": "Getty Images"
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "text",
-          "model": {
-            "blocks": [
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "Artikel pengujian ini telah dibuat sehingga kami dapat menjalankan tes end-to-end otomatis di situs web kami.",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "Artikel pengujian ini telah dibuat sehingga kami dapat menjalankan tes end-to-end otomatis di situs web kami.",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        }
-      ]
-    }
-  },
-  "promo": {
-    "headlines": {
-      "seoHeadline": "Ini adalah judul SEO dari artikel tes ini"
-    },
-    "locators": {
-      "optimoUrn": "urn:bbc:optimo:asset:c0q2zq8pzvzo"
-    },
-    "summary": {
-      "blocks": [
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "attributes": [],
-                        "text": ""
-                      },
-                      "type": "fragment"
-                    }
-                  ],
-                  "text": ""
-                },
-                "type": "paragraph"
+                "name": "Mayuri Mei Lin",
+                "function": "BBC Indonesia"
               }
             ]
           },
-          "type": "text"
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63540090",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/232C/test/_63540090_mediaitem63540088.jpg",
+            "path": "/cpsdevpb/232C/test/_63540090_mediaitem63540088.jpg",
+            "height": 1152,
+            "width": 2048,
+            "altText": "Leatherback turtle",
+            "copyrightHolder": "Science Photo Library",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "id": "urn:bbc:ares::asset:indonesia/indonesia-23130787",
+          "type": "cps"
         }
-      ]
-    },
-    "timestamp": 1562941587903,
-    "id": "urn:bbc:ares::article:c0q2zq8pzvzo",
-    "type": "cps"
+      ],
+      "features": [
+        {
+          "headlines": {
+            "headline": "18 Beli tiket pesawat demi iPhone?"
+          },
+          "locators": {
+            "assetUri": "/indonesia/23077181",
+            "cpsUrn": "urn:bbc:content:assetUri:indonesia/23077181",
+            "assetId": "23077181"
+          },
+          "summary": "Polisi Singapura mendakwa dua orang yang membeli tiket pesawat agar bisa masuk ruang tunggu keberangkatan demi untuk membeli iPhone 7.",
+          "timestamp": 1474554777000,
+          "language": "id",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63510891",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/4D59/test/_63510891_21e0c61d-e324-4f93-b423-bdc539eae28e.jpg",
+            "path": "/cpsdevpb/4D59/test/_63510891_21e0c61d-e324-4f93-b423-bdc539eae28e.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+            "caption": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+            "copyrightHolder": "iStock",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63510893",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/9B79/test/_63510893_mediaitem63510892.jpg",
+            "path": "/cpsdevpb/9B79/test/_63510893_mediaitem63510892.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+            "caption": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+            "copyrightHolder": "iStock",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Berita",
+            "uri": "/indonesia/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:indonesia/23077181",
+          "type": "cps"
+        },
+        {
+          "name": "Siapakah Alicia Machado yang mengaku diolok 'Miss Piggy' oleh Trump?",
+          "summary": "Seorang mantan Miss Universe menjadi topik dalam debat pertama calon presiden Amerika Serikat dari Partai Republik Donald Trump dan Partai Demokrat Hillary Clinton.",
+          "indexImage": {
+            "id": "63514243",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/85C1/test/_63514243_151010165731_poklonskaya_crimea_640x360_reuters_nocredit.jpg",
+            "path": "/cpsdevpb/85C1/test/_63514243_151010165731_poklonskaya_crimea_640x360_reuters_nocredit.jpg",
+            "height": 371,
+            "width": 660,
+            "altText": "Alicia Machado terpilih sebagai Miss Universe pada 1996 dan mengklaim diolok oleh Trump.",
+            "caption": "Alicia Machado terpilih sebagai Miss Universe pada 1996 dan mengklaim diolok oleh Trump.",
+            "copyrightHolder": "AP",
+            "type": "image"
+          },
+          "indexThumbnail": {
+            "id": "63514245",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/D3E1/test/_63514245_151010165731_poklonskaya_crimea_640x360_reuters_nocredit.jpg",
+            "path": "/cpsdevpb/D3E1/test/_63514245_151010165731_poklonskaya_crimea_640x360_reuters_nocredit.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Alicia Machado terpilih sebagai Miss Universe pada 1996 dan mengklaim diolok oleh Trump.",
+            "caption": "Alicia Machado terpilih sebagai Miss Universe pada 1996 dan mengklaim diolok oleh Trump.",
+            "copyrightHolder": "AP",
+            "type": "image"
+          },
+          "uri": "http://www.bbc.com/indonesia/majalah/2016/09/160927_trensosial_trump_machado",
+          "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/indonesia/majalah/2016/09/160927_trensosial_trump_machado",
+          "contentType": "Text",
+          "assetTypeCode": "PRO",
+          "timestamp": 1475660376000,
+          "type": "link"
+        },
+        {
+          "headlines": {
+            "headline": "20 Beli tiket pesawat demi iPhone?"
+          },
+          "locators": {
+            "assetUri": "/indonesia/23077183",
+            "cpsUrn": "urn:bbc:content:assetUri:indonesia/23077183",
+            "assetId": "23077183"
+          },
+          "summary": "Polisi Singapura mendakwa dua orang yang membeli tiket pesawat agar bisa masuk ruang tunggu keberangkatan demi untuk membeli iPhone 7.",
+          "timestamp": 1474554821000,
+          "language": "id",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63510891",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/4D59/test/_63510891_21e0c61d-e324-4f93-b423-bdc539eae28e.jpg",
+            "path": "/cpsdevpb/4D59/test/_63510891_21e0c61d-e324-4f93-b423-bdc539eae28e.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+            "caption": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+            "copyrightHolder": "iStock",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63510893",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/9B79/test/_63510893_mediaitem63510892.jpg",
+            "path": "/cpsdevpb/9B79/test/_63510893_mediaitem63510892.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+            "caption": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+            "copyrightHolder": "iStock",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Berita",
+            "uri": "/indonesia/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:indonesia/23077183",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "21 Beli tiket pesawat demi iPhone?"
+          },
+          "locators": {
+            "assetUri": "/indonesia/23077184",
+            "cpsUrn": "urn:bbc:content:assetUri:indonesia/23077184",
+            "assetId": "23077184"
+          },
+          "summary": "Polisi Singapura mendakwa dua orang yang membeli tiket pesawat agar bisa masuk ruang tunggu keberangkatan demi untuk membeli iPhone 7.",
+          "timestamp": 1474554936000,
+          "language": "id",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63510891",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/4D59/test/_63510891_21e0c61d-e324-4f93-b423-bdc539eae28e.jpg",
+            "path": "/cpsdevpb/4D59/test/_63510891_21e0c61d-e324-4f93-b423-bdc539eae28e.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+            "caption": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+            "copyrightHolder": "iStock",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63510893",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/9B79/test/_63510893_mediaitem63510892.jpg",
+            "path": "/cpsdevpb/9B79/test/_63510893_mediaitem63510892.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+            "caption": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+            "copyrightHolder": "iStock",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Berita",
+            "uri": "/indonesia/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:indonesia/23077184",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "22 Beli tiket pesawat demi iPhone?"
+          },
+          "locators": {
+            "assetUri": "/indonesia/23077185",
+            "cpsUrn": "urn:bbc:content:assetUri:indonesia/23077185",
+            "assetId": "23077185"
+          },
+          "summary": "Polisi Singapura mendakwa dua orang yang membeli tiket pesawat agar bisa masuk ruang tunggu keberangkatan demi untuk membeli iPhone 7.",
+          "timestamp": 1474554951000,
+          "language": "id",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63510891",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/4D59/test/_63510891_21e0c61d-e324-4f93-b423-bdc539eae28e.jpg",
+            "path": "/cpsdevpb/4D59/test/_63510891_21e0c61d-e324-4f93-b423-bdc539eae28e.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+            "caption": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+            "copyrightHolder": "iStock",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63510893",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/9B79/test/_63510893_mediaitem63510892.jpg",
+            "path": "/cpsdevpb/9B79/test/_63510893_mediaitem63510892.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+            "caption": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+            "copyrightHolder": "iStock",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Berita",
+            "uri": "/indonesia/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:indonesia/23077185",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "23 Beli tiket pesawat demi iPhone?"
+          },
+          "locators": {
+            "assetUri": "/indonesia/23077186",
+            "cpsUrn": "urn:bbc:content:assetUri:indonesia/23077186",
+            "assetId": "23077186"
+          },
+          "summary": "Polisi Singapura mendakwa dua orang yang membeli tiket pesawat agar bisa masuk ruang tunggu keberangkatan demi untuk membeli iPhone 7.",
+          "timestamp": 1474554977000,
+          "language": "id",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63510891",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/4D59/test/_63510891_21e0c61d-e324-4f93-b423-bdc539eae28e.jpg",
+            "path": "/cpsdevpb/4D59/test/_63510891_21e0c61d-e324-4f93-b423-bdc539eae28e.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+            "caption": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+            "copyrightHolder": "iStock",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63510893",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/9B79/test/_63510893_mediaitem63510892.jpg",
+            "path": "/cpsdevpb/9B79/test/_63510893_mediaitem63510892.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+            "caption": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+            "copyrightHolder": "iStock",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Berita",
+            "uri": "/indonesia/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:indonesia/23077186",
+          "type": "cps"
+        }
+      ],
+      "mostRead": {
+        "generated": "2023-02-17T16:26:00.25Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T11:38:00Z",
+        "totalRecords": 20,
+        "records": [
+          {
+            "id": "615f86aa-0ba4-e84b-81d4-b0d686093961",
+            "rank": 1,
+            "count": 9758,
+            "urn": "urn:bbc:curie:asset:615f86aa-0ba4-e84b-81d4-b0d686093961",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "London 'dibakar' untuk mengenang kebakaran 1666",
+                "headline": "London 'dibakar' untuk mengenang kebakaran 1666"
+              },
+              "locators": {
+                "assetUri": "/indonesia/majalah-23080667",
+                "cpsUrn": "urn:bbc:content:assetUri:indonesia/majalah-23080667",
+                "curie": "http://www.bbc.co.uk/asset/615f86aa-0ba4-e84b-81d4-b0d686093961",
+                "assetId": "23080667"
+              },
+              "summary": "Peringatan kebakaran besar London 350 tahun lalu diperingati kembali dengan membakar replika kota London abad ke-17 updated.",
+              "timestamp": 1475687211000,
+              "language": "id",
+              "indexImage": {
+                "id": "63514203",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/7621/test/_63514203_160229092514_oscars--1.jpg",
+                "path": "/cpsdevpb/7621/test/_63514203_160229092514_oscars--1.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Replika London abad ke-17 dibakar di Sungai Thames, Minggu 4 September, untuk mengenang kebakaran besar 350 tahun lalu.",
+                "caption": "Replika London abad ke-17 dibakar di Sungai Thames, Minggu 4 September, untuk mengenang kebakaran besar 350 tahun lalu updated.",
+                "copyrightHolder": "Magnum Photos",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:indonesia/majalah-23080667",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "bed6b38e-5bde-a24a-abb5-cce6dc53fbc1",
+            "rank": 2,
+            "count": 9393,
+            "urn": "urn:bbc:curie:asset:bed6b38e-5bde-a24a-abb5-cce6dc53fbc1",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "42 Beli tiket pesawat demi iPhone?",
+                "headline": "42 Beli tiket pesawat demi iPhone?"
+              },
+              "locators": {
+                "assetUri": "/indonesia/23077205",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:bed6b38e-5bde-a24a-abb5-cce6dc53fbc1",
+                "assetId": "23077205",
+                "cpsUrn": "urn:bbc:content:assetUri:indonesia/23077205",
+                "curie": "http://www.bbc.co.uk/asset/bed6b38e-5bde-a24a-abb5-cce6dc53fbc1"
+              },
+              "summary": "Polisi Singapura mendakwa dua orang yang membeli tiket pesawat agar bisa masuk ruang tunggu keberangkatan demi untuk membeli iPhone 7.",
+              "timestamp": 1474558912000,
+              "language": "id",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Indonesia",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63510891",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/4D59/test/_63510891_21e0c61d-e324-4f93-b423-bdc539eae28e.jpg",
+                "path": "/cpsdevpb/4D59/test/_63510891_21e0c61d-e324-4f93-b423-bdc539eae28e.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+                "caption": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+                "copyrightHolder": "iStock",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:indonesia/23077205",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "d4dc8fd8-54d0-3f46-bd6f-53a2746ac529",
+            "rank": 3,
+            "count": 9236,
+            "urn": "urn:bbc:curie:asset:d4dc8fd8-54d0-3f46-bd6f-53a2746ac529",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "19 Beli tiket pesawat demi iPhone?",
+                "headline": "19 Beli tiket pesawat demi iPhone?"
+              },
+              "locators": {
+                "assetUri": "/indonesia/23077182",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:d4dc8fd8-54d0-3f46-bd6f-53a2746ac529",
+                "assetId": "23077182",
+                "cpsUrn": "urn:bbc:content:assetUri:indonesia/23077182",
+                "curie": "http://www.bbc.co.uk/asset/d4dc8fd8-54d0-3f46-bd6f-53a2746ac529"
+              },
+              "summary": "Polisi Singapura mendakwa dua orang yang membeli tiket pesawat agar bisa masuk ruang tunggu keberangkatan demi untuk membeli iPhone 7.",
+              "timestamp": 1474554795000,
+              "language": "id",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Indonesia",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63510891",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/4D59/test/_63510891_21e0c61d-e324-4f93-b423-bdc539eae28e.jpg",
+                "path": "/cpsdevpb/4D59/test/_63510891_21e0c61d-e324-4f93-b423-bdc539eae28e.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+                "caption": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+                "copyrightHolder": "iStock",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:indonesia/23077182",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "006f7bad-2387-e74e-872d-2f542759d4c6",
+            "rank": 4,
+            "count": 9234,
+            "urn": "urn:bbc:curie:asset:006f7bad-2387-e74e-872d-2f542759d4c6",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "38 Beli tiket pesawat demi iPhone?",
+                "headline": "38 Beli tiket pesawat demi iPhone?"
+              },
+              "locators": {
+                "assetUri": "/indonesia/23077230",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:006f7bad-2387-e74e-872d-2f542759d4c6",
+                "assetId": "23077230",
+                "cpsUrn": "urn:bbc:content:assetUri:indonesia/23077230",
+                "curie": "http://www.bbc.co.uk/asset/006f7bad-2387-e74e-872d-2f542759d4c6"
+              },
+              "summary": "Polisi Singapura mendakwa dua orang yang membeli tiket pesawat agar bisa masuk ruang tunggu keberangkatan demi untuk membeli iPhone 7.",
+              "timestamp": 1474560862000,
+              "language": "id",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Indonesia",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63510891",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/4D59/test/_63510891_21e0c61d-e324-4f93-b423-bdc539eae28e.jpg",
+                "path": "/cpsdevpb/4D59/test/_63510891_21e0c61d-e324-4f93-b423-bdc539eae28e.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+                "caption": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+                "copyrightHolder": "iStock",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:indonesia/23077230",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "39d6a17c-3fbe-2540-8091-3ed65be8527f",
+            "rank": 5,
+            "count": 8778,
+            "urn": "urn:bbc:curie:asset:39d6a17c-3fbe-2540-8091-3ed65be8527f",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "18 Beli tiket pesawat demi iPhone?",
+                "headline": "18 Beli tiket pesawat demi iPhone?"
+              },
+              "locators": {
+                "assetUri": "/indonesia/23077181",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:39d6a17c-3fbe-2540-8091-3ed65be8527f",
+                "assetId": "23077181",
+                "cpsUrn": "urn:bbc:content:assetUri:indonesia/23077181",
+                "curie": "http://www.bbc.co.uk/asset/39d6a17c-3fbe-2540-8091-3ed65be8527f"
+              },
+              "summary": "Polisi Singapura mendakwa dua orang yang membeli tiket pesawat agar bisa masuk ruang tunggu keberangkatan demi untuk membeli iPhone 7.",
+              "timestamp": 1474554777000,
+              "language": "id",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Indonesia",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63510891",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/4D59/test/_63510891_21e0c61d-e324-4f93-b423-bdc539eae28e.jpg",
+                "path": "/cpsdevpb/4D59/test/_63510891_21e0c61d-e324-4f93-b423-bdc539eae28e.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+                "caption": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+                "copyrightHolder": "iStock",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:indonesia/23077181",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "610aaf7f-19ef-e742-b034-51b4b7ca7eb2",
+            "rank": 6,
+            "count": 8499,
+            "urn": "urn:bbc:curie:asset:610aaf7f-19ef-e742-b034-51b4b7ca7eb2",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "30 Beli tiket pesawat demi iPhone?",
+                "headline": "30 Beli tiket pesawat demi iPhone?"
+              },
+              "locators": {
+                "assetUri": "/indonesia/23077193",
+                "cpsUrn": "urn:bbc:content:assetUri:indonesia/23077193",
+                "curie": "http://www.bbc.co.uk/asset/610aaf7f-19ef-e742-b034-51b4b7ca7eb2",
+                "assetId": "23077193"
+              },
+              "summary": "Polisi Singapura mendakwa dua orang yang membeli tiket pesawat agar bisa masuk ruang tunggu keberangkatan demi untuk membeli iPhone 7.",
+              "timestamp": 1474557419000,
+              "language": "id",
+              "indexImage": {
+                "id": "63510891",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/4D59/test/_63510891_21e0c61d-e324-4f93-b423-bdc539eae28e.jpg",
+                "path": "/cpsdevpb/4D59/test/_63510891_21e0c61d-e324-4f93-b423-bdc539eae28e.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+                "caption": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+                "copyrightHolder": "iStock",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:indonesia/23077193",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "c12662b0-b8ae-894d-b959-7374e96159f9",
+            "rank": 7,
+            "count": 8340,
+            "urn": "urn:bbc:curie:asset:c12662b0-b8ae-894d-b959-7374e96159f9",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "29 Beli tiket pesawat demi iPhone?",
+                "headline": "29 Beli tiket pesawat demi iPhone?"
+              },
+              "locators": {
+                "assetUri": "/indonesia/23077192",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:c12662b0-b8ae-894d-b959-7374e96159f9",
+                "assetId": "23077192",
+                "cpsUrn": "urn:bbc:content:assetUri:indonesia/23077192",
+                "curie": "http://www.bbc.co.uk/asset/c12662b0-b8ae-894d-b959-7374e96159f9"
+              },
+              "summary": "Polisi Singapura mendakwa dua orang yang membeli tiket pesawat agar bisa masuk ruang tunggu keberangkatan demi untuk membeli iPhone 7.",
+              "timestamp": 1474557364000,
+              "language": "id",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Indonesia",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63510891",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/4D59/test/_63510891_21e0c61d-e324-4f93-b423-bdc539eae28e.jpg",
+                "path": "/cpsdevpb/4D59/test/_63510891_21e0c61d-e324-4f93-b423-bdc539eae28e.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+                "caption": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+                "copyrightHolder": "iStock",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:indonesia/23077192",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "229bff6b-4b88-754d-a968-3253deb73835",
+            "rank": 8,
+            "count": 8097,
+            "urn": "urn:bbc:curie:asset:229bff6b-4b88-754d-a968-3253deb73835",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "9 Beli tiket pesawat demi iPhone?",
+                "headline": "9 Beli tiket pesawat demi iPhone?"
+              },
+              "locators": {
+                "assetUri": "/indonesia/23077171",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:229bff6b-4b88-754d-a968-3253deb73835",
+                "assetId": "23077171",
+                "cpsUrn": "urn:bbc:content:assetUri:indonesia/23077171",
+                "curie": "http://www.bbc.co.uk/asset/229bff6b-4b88-754d-a968-3253deb73835"
+              },
+              "summary": "Polisi Singapura mendakwa dua orang yang membeli tiket pesawat agar bisa masuk ruang tunggu keberangkatan demi untuk membeli iPhone 7.",
+              "timestamp": 1474554209000,
+              "language": "id",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Indonesia",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63510891",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/4D59/test/_63510891_21e0c61d-e324-4f93-b423-bdc539eae28e.jpg",
+                "path": "/cpsdevpb/4D59/test/_63510891_21e0c61d-e324-4f93-b423-bdc539eae28e.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+                "caption": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+                "copyrightHolder": "iStock",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:indonesia/23077171",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "b26b5009-0fd6-7c47-a644-ab6fc8699962",
+            "rank": 9,
+            "count": 7949,
+            "urn": "urn:bbc:curie:asset:b26b5009-0fd6-7c47-a644-ab6fc8699962",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Celtic menahan imbang Manchester City 3-3",
+                "headline": "Celtic menahan imbang Manchester City 3-3"
+              },
+              "locators": {
+                "assetUri": "/indonesia/live/olahraga-23080896",
+                "cpsUrn": "urn:bbc:content:assetUri:indonesia/live/olahraga-23080896",
+                "curie": "http://www.bbc.co.uk/asset/b26b5009-0fd6-7c47-a644-ab6fc8699962",
+                "assetId": "23080896"
+              },
+              "summary": "Celtic mendapat angka pertama dalam babak penyisihan Grup G Liga Champions setelah menahan imbang tim tamu Manchester City dengan angka 3-3.",
+              "timestamp": 1475672328000,
+              "language": "id",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": [],
+                "predicates": {
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c7c7fcfe-5246-434e-9422-cdc925fe3a79#id",
+                      "thingLabel": "Donald Trump",
+                      "thingUri": "http://www.bbc.co.uk/things/c7c7fcfe-5246-434e-9422-cdc925fe3a79#id",
+                      "thingId": "c7c7fcfe-5246-434e-9422-cdc925fe3a79",
+                      "thingType": [
+                        "core:Person",
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "tagging:Agent",
+                        "tagging:AmbiguousTerm"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Donald_Trump"
+                      ],
+                      "thingEnglishLabel": "Donald Trump",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "indexImage": {
+                "id": "63514321",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/3035/test/_63514321_160928204129_theo_walcott__640x360_pa_nocredit.jpg",
+                "path": "/cpsdevpb/3035/test/_63514321_160928204129_theo_walcott__640x360_pa_nocredit.jpg",
+                "height": 351,
+                "width": 624,
+                "altText": "Theo Walcott mencetak kedua gol yang mengantarkan kemenangan Arsenal atas Basel.",
+                "caption": "Theo Walcott mencetak kedua gol yang mengantarkan kemenangan Arsenal atas Basel.",
+                "copyrightHolder": "BBC Sport",
+                "type": "image"
+              },
+              "isLive": false,
+              "scheduledStartTime": 1475625600000,
+              "scheduledEndTime": 1480464000000,
+              "liveStatus": "AUTO",
+              "id": "urn:bbc:ares::asset:indonesia/live/olahraga-23080896",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "55643711-4016-f047-bee0-2fd5edd385fd",
+            "rank": 10,
+            "count": 7857,
+            "urn": "urn:bbc:curie:asset:55643711-4016-f047-bee0-2fd5edd385fd",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "28 Beli tiket pesawat demi iPhone?",
+                "headline": "28 Beli tiket pesawat demi iPhone?"
+              },
+              "locators": {
+                "assetUri": "/indonesia/23077191",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:55643711-4016-f047-bee0-2fd5edd385fd",
+                "assetId": "23077191",
+                "cpsUrn": "urn:bbc:content:assetUri:indonesia/23077191",
+                "curie": "http://www.bbc.co.uk/asset/55643711-4016-f047-bee0-2fd5edd385fd"
+              },
+              "summary": "Polisi Singapura mendakwa dua orang yang membeli tiket pesawat agar bisa masuk ruang tunggu keberangkatan demi untuk membeli iPhone 7.",
+              "timestamp": 1474555171000,
+              "language": "id",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Indonesia",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63510891",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/4D59/test/_63510891_21e0c61d-e324-4f93-b423-bdc539eae28e.jpg",
+                "path": "/cpsdevpb/4D59/test/_63510891_21e0c61d-e324-4f93-b423-bdc539eae28e.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+                "caption": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+                "copyrightHolder": "iStock",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:indonesia/23077191",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "1fca5618-0043-6548-a19d-83f7b1ba83bb",
+            "rank": 11,
+            "count": 7737,
+            "urn": "urn:bbc:curie:asset:1fca5618-0043-6548-a19d-83f7b1ba83bb",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "39 Beli tiket pesawat demi iPhone?",
+                "headline": "39 Beli tiket pesawat demi iPhone?"
+              },
+              "locators": {
+                "assetUri": "/indonesia/23077202",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:1fca5618-0043-6548-a19d-83f7b1ba83bb",
+                "assetId": "23077202",
+                "cpsUrn": "urn:bbc:content:assetUri:indonesia/23077202",
+                "curie": "http://www.bbc.co.uk/asset/1fca5618-0043-6548-a19d-83f7b1ba83bb"
+              },
+              "summary": "Polisi Singapura mendakwa dua orang yang membeli tiket pesawat agar bisa masuk ruang tunggu keberangkatan demi untuk membeli iPhone 7.",
+              "timestamp": 1474558867000,
+              "language": "id",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Indonesia",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63510891",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/4D59/test/_63510891_21e0c61d-e324-4f93-b423-bdc539eae28e.jpg",
+                "path": "/cpsdevpb/4D59/test/_63510891_21e0c61d-e324-4f93-b423-bdc539eae28e.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+                "caption": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+                "copyrightHolder": "iStock",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:indonesia/23077202",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "68d90168-4137-4041-803e-2240d77f26de",
+            "rank": 12,
+            "count": 7631,
+            "urn": "urn:bbc:curie:asset:68d90168-4137-4041-803e-2240d77f26de",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "16 Beli tiket pesawat demi iPhone?",
+                "headline": "16 Beli tiket pesawat demi iPhone?"
+              },
+              "locators": {
+                "assetUri": "/indonesia/23077179",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:68d90168-4137-4041-803e-2240d77f26de",
+                "assetId": "23077179",
+                "cpsUrn": "urn:bbc:content:assetUri:indonesia/23077179",
+                "curie": "http://www.bbc.co.uk/asset/68d90168-4137-4041-803e-2240d77f26de"
+              },
+              "summary": "Polisi Singapura mendakwa dua orang yang membeli tiket pesawat agar bisa masuk ruang tunggu keberangkatan demi untuk membeli iPhone 7.",
+              "timestamp": 1474554712000,
+              "language": "id",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Indonesia",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63510891",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/4D59/test/_63510891_21e0c61d-e324-4f93-b423-bdc539eae28e.jpg",
+                "path": "/cpsdevpb/4D59/test/_63510891_21e0c61d-e324-4f93-b423-bdc539eae28e.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+                "caption": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+                "copyrightHolder": "iStock",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:indonesia/23077179",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "945b5252-ca22-0d45-9570-1c2b98665310",
+            "rank": 13,
+            "count": 7056,
+            "urn": "urn:bbc:curie:asset:945b5252-ca22-0d45-9570-1c2b98665310",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "25 Beli tiket pesawat demi iPhone?",
+                "headline": "25 Beli tiket pesawat demi iPhone?"
+              },
+              "locators": {
+                "assetUri": "/indonesia/23077188",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:945b5252-ca22-0d45-9570-1c2b98665310",
+                "assetId": "23077188",
+                "cpsUrn": "urn:bbc:content:assetUri:indonesia/23077188",
+                "curie": "http://www.bbc.co.uk/asset/945b5252-ca22-0d45-9570-1c2b98665310"
+              },
+              "summary": "Polisi Singapura mendakwa dua orang yang membeli tiket pesawat agar bisa masuk ruang tunggu keberangkatan demi untuk membeli iPhone 7.",
+              "timestamp": 1474555127000,
+              "language": "id",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Indonesia",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63510891",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/4D59/test/_63510891_21e0c61d-e324-4f93-b423-bdc539eae28e.jpg",
+                "path": "/cpsdevpb/4D59/test/_63510891_21e0c61d-e324-4f93-b423-bdc539eae28e.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+                "caption": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+                "copyrightHolder": "iStock",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:indonesia/23077188",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "2235a1d7-cbce-1d49-adff-14f8a8f68200",
+            "rank": 14,
+            "count": 6913,
+            "urn": "urn:bbc:curie:asset:2235a1d7-cbce-1d49-adff-14f8a8f68200",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "41 Beli tiket pesawat demi iPhone?",
+                "headline": "41 Beli tiket pesawat demi iPhone?"
+              },
+              "locators": {
+                "assetUri": "/indonesia/23077204",
+                "cpsUrn": "urn:bbc:content:assetUri:indonesia/23077204",
+                "curie": "http://www.bbc.co.uk/asset/2235a1d7-cbce-1d49-adff-14f8a8f68200",
+                "assetId": "23077204"
+              },
+              "summary": "Polisi Singapura mendakwa dua orang yang membeli tiket pesawat agar bisa masuk ruang tunggu keberangkatan demi untuk membeli iPhone 7.",
+              "timestamp": 1474558850000,
+              "language": "id",
+              "indexImage": {
+                "id": "63510891",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/4D59/test/_63510891_21e0c61d-e324-4f93-b423-bdc539eae28e.jpg",
+                "path": "/cpsdevpb/4D59/test/_63510891_21e0c61d-e324-4f93-b423-bdc539eae28e.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+                "caption": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+                "copyrightHolder": "iStock",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:indonesia/23077204",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "5c9b367a-3131-2240-ab96-b840cce9efc8",
+            "rank": 15,
+            "count": 6570,
+            "urn": "urn:bbc:curie:asset:5c9b367a-3131-2240-ab96-b840cce9efc8",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "27 Beli tiket pesawat demi iPhone?",
+                "headline": "27 Beli tiket pesawat demi iPhone?"
+              },
+              "locators": {
+                "assetUri": "/indonesia/23077190",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:5c9b367a-3131-2240-ab96-b840cce9efc8",
+                "assetId": "23077190",
+                "cpsUrn": "urn:bbc:content:assetUri:indonesia/23077190",
+                "curie": "http://www.bbc.co.uk/asset/5c9b367a-3131-2240-ab96-b840cce9efc8"
+              },
+              "summary": "Polisi Singapura mendakwa dua orang yang membeli tiket pesawat agar bisa masuk ruang tunggu keberangkatan demi untuk membeli iPhone 7.",
+              "timestamp": 1474555157000,
+              "language": "id",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Indonesia",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63510891",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/4D59/test/_63510891_21e0c61d-e324-4f93-b423-bdc539eae28e.jpg",
+                "path": "/cpsdevpb/4D59/test/_63510891_21e0c61d-e324-4f93-b423-bdc539eae28e.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+                "caption": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+                "copyrightHolder": "iStock",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:indonesia/23077190",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "e7c77c50-344c-e649-b14d-67d0fffa770f",
+            "rank": 16,
+            "count": 6442,
+            "urn": "urn:bbc:curie:asset:e7c77c50-344c-e649-b14d-67d0fffa770f",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "22 Beli tiket pesawat demi iPhone?",
+                "headline": "22 Beli tiket pesawat demi iPhone?"
+              },
+              "locators": {
+                "assetUri": "/indonesia/23077185",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:e7c77c50-344c-e649-b14d-67d0fffa770f",
+                "assetId": "23077185",
+                "cpsUrn": "urn:bbc:content:assetUri:indonesia/23077185",
+                "curie": "http://www.bbc.co.uk/asset/e7c77c50-344c-e649-b14d-67d0fffa770f"
+              },
+              "summary": "Polisi Singapura mendakwa dua orang yang membeli tiket pesawat agar bisa masuk ruang tunggu keberangkatan demi untuk membeli iPhone 7.",
+              "timestamp": 1474554951000,
+              "language": "id",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Indonesia",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63510891",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/4D59/test/_63510891_21e0c61d-e324-4f93-b423-bdc539eae28e.jpg",
+                "path": "/cpsdevpb/4D59/test/_63510891_21e0c61d-e324-4f93-b423-bdc539eae28e.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+                "caption": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+                "copyrightHolder": "iStock",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:indonesia/23077185",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "5e8495a7-9057-c749-8a05-901272d6d0d2",
+            "rank": 17,
+            "count": 6371,
+            "urn": "urn:bbc:curie:asset:5e8495a7-9057-c749-8a05-901272d6d0d2",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "31 Beli tiket pesawat demi iPhone?",
+                "headline": "31 Beli tiket pesawat demi iPhone?"
+              },
+              "locators": {
+                "assetUri": "/indonesia/23077194",
+                "cpsUrn": "urn:bbc:content:assetUri:indonesia/23077194",
+                "curie": "http://www.bbc.co.uk/asset/5e8495a7-9057-c749-8a05-901272d6d0d2",
+                "assetId": "23077194"
+              },
+              "summary": "Polisi Singapura mendakwa dua orang yang membeli tiket pesawat agar bisa masuk ruang tunggu keberangkatan demi untuk membeli iPhone 7.",
+              "timestamp": 1474557502000,
+              "language": "id",
+              "indexImage": {
+                "id": "63510891",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/4D59/test/_63510891_21e0c61d-e324-4f93-b423-bdc539eae28e.jpg",
+                "path": "/cpsdevpb/4D59/test/_63510891_21e0c61d-e324-4f93-b423-bdc539eae28e.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+                "caption": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+                "copyrightHolder": "iStock",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:indonesia/23077194",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "906b12ea-6a1f-344c-8c9f-a640955a63f0",
+            "rank": 18,
+            "count": 6213,
+            "urn": "urn:bbc:curie:asset:906b12ea-6a1f-344c-8c9f-a640955a63f0",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "26 Beli tiket pesawat demi iPhone?",
+                "headline": "26 Beli tiket pesawat demi iPhone?"
+              },
+              "locators": {
+                "assetUri": "/indonesia/23077189",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:906b12ea-6a1f-344c-8c9f-a640955a63f0",
+                "assetId": "23077189",
+                "cpsUrn": "urn:bbc:content:assetUri:indonesia/23077189",
+                "curie": "http://www.bbc.co.uk/asset/906b12ea-6a1f-344c-8c9f-a640955a63f0"
+              },
+              "summary": "Polisi Singapura mendakwa dua orang yang membeli tiket pesawat agar bisa masuk ruang tunggu keberangkatan demi untuk membeli iPhone 7.",
+              "timestamp": 1474555143000,
+              "language": "id",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Indonesia",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63510891",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/4D59/test/_63510891_21e0c61d-e324-4f93-b423-bdc539eae28e.jpg",
+                "path": "/cpsdevpb/4D59/test/_63510891_21e0c61d-e324-4f93-b423-bdc539eae28e.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+                "caption": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+                "copyrightHolder": "iStock",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:indonesia/23077189",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "2612450c-982c-d949-91c3-f2f73654cbc2",
+            "rank": 19,
+            "count": 6075,
+            "urn": "urn:bbc:curie:asset:2612450c-982c-d949-91c3-f2f73654cbc2",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "23 Beli tiket pesawat demi iPhone?",
+                "headline": "23 Beli tiket pesawat demi iPhone?"
+              },
+              "locators": {
+                "assetUri": "/indonesia/23077186",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:2612450c-982c-d949-91c3-f2f73654cbc2",
+                "assetId": "23077186",
+                "cpsUrn": "urn:bbc:content:assetUri:indonesia/23077186",
+                "curie": "http://www.bbc.co.uk/asset/2612450c-982c-d949-91c3-f2f73654cbc2"
+              },
+              "summary": "Polisi Singapura mendakwa dua orang yang membeli tiket pesawat agar bisa masuk ruang tunggu keberangkatan demi untuk membeli iPhone 7.",
+              "timestamp": 1474554977000,
+              "language": "id",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Indonesia",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63510891",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/4D59/test/_63510891_21e0c61d-e324-4f93-b423-bdc539eae28e.jpg",
+                "path": "/cpsdevpb/4D59/test/_63510891_21e0c61d-e324-4f93-b423-bdc539eae28e.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+                "caption": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+                "copyrightHolder": "iStock",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:indonesia/23077186",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "7a633fe0-a0ad-2e4c-9833-5e5e43113932",
+            "rank": 20,
+            "count": 6016,
+            "urn": "urn:bbc:curie:asset:7a633fe0-a0ad-2e4c-9833-5e5e43113932",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "34 Beli tiket pesawat demi iPhone?",
+                "headline": "34 Beli tiket pesawat demi iPhone?"
+              },
+              "locators": {
+                "assetUri": "/indonesia/23077197",
+                "cpsUrn": "urn:bbc:content:assetUri:indonesia/23077197",
+                "curie": "http://www.bbc.co.uk/asset/7a633fe0-a0ad-2e4c-9833-5e5e43113932",
+                "assetId": "23077197"
+              },
+              "summary": "Polisi Singapura mendakwa dua orang yang membeli tiket pesawat agar bisa masuk ruang tunggu keberangkatan demi untuk membeli iPhone 7.",
+              "timestamp": 1474557586000,
+              "language": "id",
+              "indexImage": {
+                "id": "63510891",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/4D59/test/_63510891_21e0c61d-e324-4f93-b423-bdc539eae28e.jpg",
+                "path": "/cpsdevpb/4D59/test/_63510891_21e0c61d-e324-4f93-b423-bdc539eae28e.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+                "caption": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+                "copyrightHolder": "iStock",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:indonesia/23077197",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   },
-  "relatedContent": {
-    "site": {
-      "subType": "site",
-      "name": "Indonesia",
-      "uri": "/indonesia",
-      "type": "simple"
-    },
-    "groups": []
-  }
+  "contentType": "application/json; charset=utf-8"
 }

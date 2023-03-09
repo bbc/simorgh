@@ -1,3 +1,4 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
 import React, {
@@ -126,24 +127,11 @@ const Image = ({
               src={src}
               width={width}
               height={height}
-              srcSet={srcSet}
+              srcSet={getImgSrcSet()}
+              sizes={getImgSizes()}
+              fallback=""
               attribution={attribution}
-            >
-              {fallbackSrcSet && (
-                <amp-img
-                  class="bbc-image"
-                  layout={ampImgLayout}
-                  alt={alt}
-                  src={src}
-                  width={width}
-                  height={height}
-                  srcSet={fallbackSrcSet}
-                  sizes={sizes}
-                  fallback=""
-                  attribution={attribution}
-                />
-              )}
-            </amp-img>
+            />
           </>
         ) : (
           <ImageWrapper>

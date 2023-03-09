@@ -25,6 +25,7 @@ exports[`Media Player: AMP Entry renders a landscape container with an amp-ifram
         alt=""
         attribution=""
         data-e2e="media-player__placeholder"
+        fallback=""
         height="16"
         layout="fill"
         placeholder="true"
@@ -62,6 +63,7 @@ exports[`Media Player: AMP Entry renders a portrait container with amp-iframe an
         alt=""
         attribution=""
         data-e2e="media-player__placeholder"
+        fallback=""
         height="9"
         layout="fill"
         placeholder="true"
@@ -105,6 +107,7 @@ exports[`Media Player: AMP Entry renders the audio skin 1`] = `
         alt=""
         attribution=""
         data-e2e="media-player__placeholder"
+        fallback=""
         height="16"
         layout="fill"
         placeholder="true"
@@ -261,13 +264,23 @@ exports[`Media Player: Canonical Entry renders a landscape container with a plac
             aria-hidden="true"
             class="emotion-15 emotion-16"
             focusable="false"
-            height="12px"
-            viewBox="0 0 32 32"
-            width="12px"
+            height="12"
+            viewBox="0 0 12 12"
+            width="12"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <polygon
-              points="3,32 29,16 3,0"
-            />
+            <g
+              fill="none"
+              fill-rule="evenodd"
+            >
+              <path
+                d="M.5.6h12v12H.5z"
+              />
+              <path
+                d="M2.144.96v11.28l8.712-5.64z"
+                fill="currentColor"
+              />
+            </g>
           </svg>
         </div>
         <time
@@ -464,13 +477,23 @@ exports[`Media Player: Canonical Entry renders a placeholder image with guidance
             aria-hidden="true"
             class="emotion-17 emotion-18"
             focusable="false"
-            height="12px"
-            viewBox="0 0 32 32"
-            width="12px"
+            height="12"
+            viewBox="0 0 12 12"
+            width="12"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <polygon
-              points="3,32 29,16 3,0"
-            />
+            <g
+              fill="none"
+              fill-rule="evenodd"
+            >
+              <path
+                d="M.5.6h12v12H.5z"
+              />
+              <path
+                d="M2.144.96v11.28l8.712-5.64z"
+                fill="currentColor"
+              />
+            </g>
           </svg>
         </div>
         <time
@@ -635,13 +658,23 @@ exports[`Media Player: Canonical Entry renders a portrait container with a place
             aria-hidden="true"
             class="emotion-15 emotion-16"
             focusable="false"
-            height="12px"
-            viewBox="0 0 32 32"
-            width="12px"
+            height="12"
+            viewBox="0 0 12 12"
+            width="12"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <polygon
-              points="3,32 29,16 3,0"
-            />
+            <g
+              fill="none"
+              fill-rule="evenodd"
+            >
+              <path
+                d="M.5.6h12v12H.5z"
+              />
+              <path
+                d="M2.144.96v11.28l8.712-5.64z"
+                fill="currentColor"
+              />
+            </g>
           </svg>
         </div>
         <time
@@ -688,9 +721,12 @@ exports[`Media Player: Canonical Entry renders an iframe when showPlaceholder is
       allow="autoplay"
       allowfullscreen=""
       class="emotion-2 emotion-3"
+      height="362.953125"
+      loading="lazy"
       scrolling="no"
       src="http://foo.bar/iframe"
       title="Media player"
+      width="645.25"
     />
     <noscript />
   </div>
@@ -729,9 +765,12 @@ exports[`Media Player: Canonical Entry renders the audio skin 1`] = `
       allow="autoplay"
       allowfullscreen=""
       class="emotion-2 emotion-3"
+      height="362.953125"
+      loading="lazy"
       scrolling="no"
       src="https://www.test.bbc.com/ws/av-embeds/media/bbc_korean_radio/liveradio"
       title="Audio player"
+      width="645.25"
     />
     <noscript />
   </div>
@@ -931,13 +970,23 @@ exports[`Media Player: Canonical Entry renders with no-js styles when noJsClassN
             aria-hidden="true"
             class="emotion-17 emotion-18"
             focusable="false"
-            height="12px"
-            viewBox="0 0 32 32"
-            width="12px"
+            height="12"
+            viewBox="0 0 12 12"
+            width="12"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <polygon
-              points="3,32 29,16 3,0"
-            />
+            <g
+              fill="none"
+              fill-rule="evenodd"
+            >
+              <path
+                d="M.5.6h12v12H.5z"
+              />
+              <path
+                d="M2.144.96v11.28l8.712-5.64z"
+                fill="currentColor"
+              />
+            </g>
           </svg>
         </div>
         <time
@@ -1021,9 +1070,12 @@ exports[`Media Player: Canonical Entry shows a loading image before the player i
       allow="autoplay"
       allowfullscreen=""
       class="emotion-2 emotion-3"
+      height="362.953125"
+      loading="lazy"
       scrolling="no"
       src="http://foo.bar/iframe"
       title="Media player"
+      width="645.25"
     />
     <div
       class="emotion-4 emotion-5"

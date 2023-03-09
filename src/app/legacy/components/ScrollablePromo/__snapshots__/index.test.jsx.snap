@@ -214,6 +214,7 @@ exports[`ScrollablePromo it should match a11y snapshot for list 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -467,6 +468,7 @@ exports[`ScrollablePromo it should match a11y snapshot for list with no title 1`
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -707,6 +709,7 @@ exports[`ScrollablePromo it should match a11y snapshot for single card 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;

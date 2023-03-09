@@ -225,6 +225,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-13:before {
@@ -365,7 +366,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
   margin: 0 0.25rem;
   color: #222222;
   fill: currentColor;
-  width: 0.8125rem;
+  width: 0.75rem;
   height: 0.75rem;
 }
 
@@ -673,6 +674,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -796,7 +798,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
         >
           <a
             aria-labelledby="bulletin-radio2016rio_olympics_2016_urdu"
-            class="emotion-13 emotion-14"
+            class="focusIndicatorDisplayBlock emotion-13 emotion-14"
             href="http://www.bbc.com/urdu/indepth/rio_olympics_2016_urdu"
           >
             <span
@@ -871,12 +873,12 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
           >
             <picture>
               <source
-                sizes="(max-width: 1008px) 33vw, 321px"
+                sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                 srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg.webp 320w, https://ichef.bbci.co.uk/news/640/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg.webp 640w"
                 type="image/webp"
               />
               <source
-                sizes="(max-width: 1008px) 33vw, 321px"
+                sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                 srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg 320w, https://ichef.bbci.co.uk/news/640/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg 640w"
                 type="image/jpeg"
               />
@@ -906,13 +908,23 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
                   aria-hidden="true"
                   class="emotion-42 emotion-43"
                   focusable="false"
-                  height="12px"
-                  viewBox="0 0 32 32"
-                  width="12px"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  width="12"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <polygon
-                    points="3,32 29,16 3,0"
-                  />
+                  <g
+                    fill="none"
+                    fill-rule="evenodd"
+                  >
+                    <path
+                      d="M.5.6h12v12H.5z"
+                    />
+                    <path
+                      d="M2.144.96v11.28l8.712-5.64z"
+                      fill="currentColor"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -928,7 +940,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
         >
           <a
             aria-labelledby="promo-urdubbc_urdu_tvtv_programmesw13xttn1limit4-video-1"
-            class="emotion-48 emotion-49"
+            class="focusIndicatorDisplayInlineBlock emotion-48 emotion-49"
             href="/urdu/bbc_urdu_tv/tv_programmes/w13xttn1?limit=4"
           >
             <span
@@ -1146,6 +1158,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -1481,7 +1494,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
   margin: 0 0.25rem;
   color: #222222;
   fill: currentColor;
-  width: 0.8125rem;
+  width: 0.75rem;
   height: 0.75rem;
 }
 
@@ -1603,7 +1616,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
         >
           <a
             aria-labelledby="promo-pidginsport44416820-text-1"
-            class="emotion-9 emotion-10"
+            class="focusIndicatorDisplayInlineBlock emotion-9 emotion-10"
             href="/pidgin/sport-44416820"
           >
             <span
@@ -1633,12 +1646,12 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
           >
             <picture>
               <source
-                sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
+                sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
                 srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 660w"
                 type="image/webp"
               />
               <source
-                sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
+                sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
                 srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 660w"
                 type="image/jpeg"
               />
@@ -1680,12 +1693,12 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
           >
             <picture>
               <source
-                sizes="(max-width: 1008px) 33vw, 321px"
+                sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                 srcset="https://ichef.bbci.co.uk/news/70/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 320w, https://ichef.bbci.co.uk/news/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 660w"
                 type="image/webp"
               />
               <source
-                sizes="(max-width: 1008px) 33vw, 321px"
+                sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                 srcset="https://ichef.bbci.co.uk/news/70/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 660w"
                 type="image/jpeg"
               />
@@ -1740,7 +1753,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
         >
           <a
             aria-labelledby="promo-pidgin-audio-1"
-            class="emotion-9 emotion-10"
+            class="focusIndicatorDisplayInlineBlock emotion-9 emotion-10"
             href="/pidgin"
           >
             <span
@@ -1992,6 +2005,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-13:before {
@@ -2132,7 +2146,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
   margin: 0 0.25rem;
   color: #222222;
   fill: currentColor;
-  width: 0.8125rem;
+  width: 0.75rem;
   height: 0.75rem;
 }
 
@@ -2350,6 +2364,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -2473,7 +2488,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
         >
           <a
             aria-labelledby="bulletin-radio2016rio_olympics_2016_urdu"
-            class="emotion-13 emotion-14"
+            class="focusIndicatorDisplayBlock emotion-13 emotion-14"
             href="http://www.bbc.com/urdu/indepth/rio_olympics_2016_urdu"
           >
             <span
@@ -2548,12 +2563,12 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
           >
             <picture>
               <source
-                sizes="(max-width: 1008px) 33vw, 321px"
+                sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                 srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg.webp 320w, https://ichef.bbci.co.uk/news/640/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg.webp 640w"
                 type="image/webp"
               />
               <source
-                sizes="(max-width: 1008px) 33vw, 321px"
+                sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                 srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg 320w, https://ichef.bbci.co.uk/news/640/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg 640w"
                 type="image/jpeg"
               />
@@ -2583,13 +2598,23 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
                   aria-hidden="true"
                   class="emotion-42 emotion-43"
                   focusable="false"
-                  height="12px"
-                  viewBox="0 0 32 32"
-                  width="12px"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  width="12"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <polygon
-                    points="3,32 29,16 3,0"
-                  />
+                  <g
+                    fill="none"
+                    fill-rule="evenodd"
+                  >
+                    <path
+                      d="M.5.6h12v12H.5z"
+                    />
+                    <path
+                      d="M2.144.96v11.28l8.712-5.64z"
+                      fill="currentColor"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -2605,7 +2630,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
         >
           <a
             aria-labelledby="promo-urdubbc_urdu_tvtv_programmesw13xttn1limit4-video-2"
-            class="emotion-48 emotion-49"
+            class="focusIndicatorDisplayInlineBlock emotion-48 emotion-49"
             href="/urdu/bbc_urdu_tv/tv_programmes/w13xttn1?limit=4"
           >
             <span
@@ -2650,12 +2675,12 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
           >
             <picture>
               <source
-                sizes="(max-width: 1008px) 33vw, 321px"
+                sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                 srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/18AA/production/_107041360_ff.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/18AA/production/_107041360_ff.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/18AA/production/_107041360_ff.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/18AA/production/_107041360_ff.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/18AA/production/_107041360_ff.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/18AA/production/_107041360_ff.jpg.webp 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/18AA/production/_107041360_ff.jpg.webp 660w"
                 type="image/webp"
               />
               <source
-                sizes="(max-width: 1008px) 33vw, 321px"
+                sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                 srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/18AA/production/_107041360_ff.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/18AA/production/_107041360_ff.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/18AA/production/_107041360_ff.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/18AA/production/_107041360_ff.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/18AA/production/_107041360_ff.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/18AA/production/_107041360_ff.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/18AA/production/_107041360_ff.jpg 660w"
                 type="image/jpeg"
               />
@@ -2683,7 +2708,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
         >
           <a
             aria-labelledby="promo-urdupakistan48346840-text-3"
-            class="emotion-48 emotion-49"
+            class="focusIndicatorDisplayInlineBlock emotion-48 emotion-49"
             href="/urdu/pakistan-48346840"
           >
             <span
@@ -2728,12 +2753,12 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
           >
             <picture>
               <source
-                sizes="(max-width: 1008px) 33vw, 321px"
+                sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                 srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/1694F/production/_101059429_world_cup_trophy_getty.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/1694F/production/_101059429_world_cup_trophy_getty.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/1694F/production/_101059429_world_cup_trophy_getty.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/1694F/production/_101059429_world_cup_trophy_getty.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/1694F/production/_101059429_world_cup_trophy_getty.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/1694F/production/_101059429_world_cup_trophy_getty.jpg.webp 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/1694F/production/_101059429_world_cup_trophy_getty.jpg.webp 660w"
                 type="image/webp"
               />
               <source
-                sizes="(max-width: 1008px) 33vw, 321px"
+                sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                 srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/1694F/production/_101059429_world_cup_trophy_getty.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/1694F/production/_101059429_world_cup_trophy_getty.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/1694F/production/_101059429_world_cup_trophy_getty.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/1694F/production/_101059429_world_cup_trophy_getty.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/1694F/production/_101059429_world_cup_trophy_getty.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/1694F/production/_101059429_world_cup_trophy_getty.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/1694F/production/_101059429_world_cup_trophy_getty.jpg 660w"
                 type="image/jpeg"
               />
@@ -2761,7 +2786,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
         >
           <a
             aria-labelledby="promo-urdusport48361817-text-4"
-            class="emotion-48 emotion-49"
+            class="focusIndicatorDisplayInlineBlock emotion-48 emotion-49"
             href="/urdu/sport-48361817"
           >
             <span
@@ -3047,6 +3072,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -3138,7 +3164,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
   margin: 0 0.25rem;
   color: #222222;
   fill: currentColor;
-  width: 0.8125rem;
+  width: 0.75rem;
   height: 0.75rem;
 }
 
@@ -3203,12 +3229,12 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
           >
             <picture>
               <source
-                sizes="(max-width: 1008px) 33vw, 321px"
+                sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                 srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 660w"
                 type="image/webp"
               />
               <source
-                sizes="(max-width: 1008px) 33vw, 321px"
+                sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                 srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 660w"
                 type="image/jpeg"
               />
@@ -3236,7 +3262,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
         >
           <a
             aria-labelledby="promo-pidginsport44416820-text-1"
-            class="emotion-17 emotion-18"
+            class="focusIndicatorDisplayInlineBlock emotion-17 emotion-18"
             href="/pidgin/sport-44416820"
           >
             <span
@@ -3276,12 +3302,12 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
           >
             <picture>
               <source
-                sizes="(max-width: 1008px) 33vw, 321px"
+                sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                 srcset="https://ichef.bbci.co.uk/news/70/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 320w, https://ichef.bbci.co.uk/news/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 660w"
                 type="image/webp"
               />
               <source
-                sizes="(max-width: 1008px) 33vw, 321px"
+                sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                 srcset="https://ichef.bbci.co.uk/news/70/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 660w"
                 type="image/jpeg"
               />
@@ -3336,7 +3362,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
         >
           <a
             aria-labelledby="promo-pidgin-audio-2"
-            class="emotion-17 emotion-18"
+            class="focusIndicatorDisplayInlineBlock emotion-17 emotion-18"
             href="/pidgin"
           >
             <span
@@ -3381,12 +3407,12 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
           >
             <picture>
               <source
-                sizes="(max-width: 1008px) 33vw, 321px"
+                sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                 srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg.webp 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg.webp 660w"
                 type="image/webp"
               />
               <source
-                sizes="(max-width: 1008px) 33vw, 321px"
+                sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                 srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg 660w"
                 type="image/jpeg"
               />
@@ -3414,7 +3440,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
         >
           <a
             aria-labelledby="promo-pidginsport44439411-text-3"
-            class="emotion-17 emotion-18"
+            class="focusIndicatorDisplayInlineBlock emotion-17 emotion-18"
             href="/pidgin/sport-44439411"
           >
             <span
@@ -3454,12 +3480,12 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
           >
             <picture>
               <source
-                sizes="(max-width: 1008px) 33vw, 321px"
+                sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                 srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png.webp 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png.webp 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png.webp 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png.webp 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png.webp 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png.webp 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png.webp 660w"
                 type="image/webp"
               />
               <source
-                sizes="(max-width: 1008px) 33vw, 321px"
+                sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                 srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png 660w"
                 type="image/png"
               />
@@ -3487,7 +3513,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
         >
           <a
             aria-labelledby="promo-pidginsport44425543-text-4"
-            class="emotion-17 emotion-18"
+            class="focusIndicatorDisplayInlineBlock emotion-17 emotion-18"
             href="/pidgin/sport-44425543"
           >
             <span
@@ -3734,6 +3760,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-13:before {
@@ -3874,7 +3901,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
   margin: 0 0.25rem;
   color: #222222;
   fill: currentColor;
-  width: 0.8125rem;
+  width: 0.75rem;
   height: 0.75rem;
 }
 
@@ -4010,7 +4037,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.5rem;
-  display: inline;
+  display: inline-block;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -4033,6 +4060,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -4201,7 +4229,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
         >
           <a
             aria-labelledby="bulletin-radio2016rio_olympics_2016_urdu"
-            class="emotion-13 emotion-14"
+            class="focusIndicatorDisplayBlock emotion-13 emotion-14"
             href="http://www.bbc.com/urdu/indepth/rio_olympics_2016_urdu"
           >
             <span
@@ -4280,13 +4308,23 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
               aria-hidden="true"
               class="emotion-36 emotion-37"
               focusable="false"
-              height="12px"
-              viewBox="0 0 32 32"
-              width="12px"
+              height="12"
+              viewBox="0 0 12 12"
+              width="12"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <polygon
-                points="3,32 29,16 3,0"
-              />
+              <g
+                fill="none"
+                fill-rule="evenodd"
+              >
+                <path
+                  d="M.5.6h12v12H.5z"
+                />
+                <path
+                  d="M2.144.96v11.28l8.712-5.64z"
+                  fill="currentColor"
+                />
+              </g>
             </svg>
           </div>
         </div>
@@ -4295,7 +4333,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
         >
           <a
             aria-labelledby="promo-urdubbc_urdu_tvtv_programmesw13xttn1limit4-video-2"
-            class="emotion-40 emotion-41"
+            class="focusIndicatorDisplayInlineBlock emotion-40 emotion-41"
             href="/urdu/bbc_urdu_tv/tv_programmes/w13xttn1?limit=4"
           >
             <span
@@ -4331,7 +4369,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
         >
           <a
             aria-labelledby="promo-urdupakistan48346840-text-3"
-            class="emotion-40 emotion-41"
+            class="focusIndicatorDisplayInlineBlock emotion-40 emotion-41"
             href="/urdu/pakistan-48346840"
           >
             <span
@@ -4367,7 +4405,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
         >
           <a
             aria-labelledby="promo-urdusport48361817-text-4"
-            class="emotion-40 emotion-41"
+            class="focusIndicatorDisplayInlineBlock emotion-40 emotion-41"
             href="/urdu/sport-48361817"
           >
             <span
@@ -4564,7 +4602,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
-  display: inline;
+  display: inline-block;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -4587,6 +4625,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -4680,7 +4719,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
   margin: 0 0.25rem;
   color: #222222;
   fill: currentColor;
-  width: 0.8125rem;
+  width: 0.75rem;
   height: 0.75rem;
 }
 
@@ -4786,7 +4825,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
         >
           <a
             aria-labelledby="promo-pidginsport44416820-text-1"
-            class="emotion-9 emotion-10"
+            class="focusIndicatorDisplayInlineBlock emotion-9 emotion-10"
             href="/pidgin/sport-44416820"
           >
             <span
@@ -4848,7 +4887,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
         >
           <a
             aria-labelledby="promo-pidgin-audio-2"
-            class="emotion-9 emotion-10"
+            class="focusIndicatorDisplayInlineBlock emotion-9 emotion-10"
             href="/pidgin"
           >
             <span
@@ -4884,7 +4923,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
         >
           <a
             aria-labelledby="promo-pidginsport44439411-text-3"
-            class="emotion-9 emotion-10"
+            class="focusIndicatorDisplayInlineBlock emotion-9 emotion-10"
             href="/pidgin/sport-44439411"
           >
             <span
@@ -4920,7 +4959,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
         >
           <a
             aria-labelledby="promo-pidginsport44425543-text-4"
-            class="emotion-9 emotion-10"
+            class="focusIndicatorDisplayInlineBlock emotion-9 emotion-10"
             href="/pidgin/sport-44425543"
           >
             <span
@@ -5167,6 +5206,7 @@ exports[`FrontPageStoryRows Container - snapshots TopRow - rtl 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-13:before {
@@ -5307,7 +5347,7 @@ exports[`FrontPageStoryRows Container - snapshots TopRow - rtl 1`] = `
   margin: 0 0.25rem;
   color: #222222;
   fill: currentColor;
-  width: 0.8125rem;
+  width: 0.75rem;
   height: 0.75rem;
 }
 
@@ -5346,7 +5386,7 @@ exports[`FrontPageStoryRows Container - snapshots TopRow - rtl 1`] = `
         >
           <a
             aria-labelledby="bulletin-radio2016rio_olympics_2016_urdu"
-            class="emotion-13 emotion-14"
+            class="focusIndicatorDisplayBlock emotion-13 emotion-14"
             href="http://www.bbc.com/urdu/indepth/rio_olympics_2016_urdu"
           >
             <span
@@ -5669,6 +5709,7 @@ exports[`FrontPageStoryRows Container - snapshots TopRow 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -5740,12 +5781,12 @@ exports[`FrontPageStoryRows Container - snapshots TopRow 1`] = `
           >
             <picture>
               <source
-                sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
+                sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
                 srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 660w"
                 type="image/webp"
               />
               <source
-                sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
+                sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
                 srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 660w"
                 type="image/jpeg"
               />
@@ -5773,7 +5814,7 @@ exports[`FrontPageStoryRows Container - snapshots TopRow 1`] = `
         >
           <a
             aria-labelledby="promo-pidginsport44416820-text-1"
-            class="emotion-17 emotion-18"
+            class="focusIndicatorDisplayInlineBlock emotion-17 emotion-18"
             href="/pidgin/sport-44416820"
           >
             <span

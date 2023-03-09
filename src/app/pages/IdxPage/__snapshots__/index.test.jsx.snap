@@ -394,6 +394,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -1598,7 +1599,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 
 .emotion-274 {
   color: #6E6E73;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0 0 0;
   display: inline-block;
   width: 100%;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -1629,6 +1630,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   font-size: 0.875rem;
   line-height: 1.25rem;
   color: #6E6E73;
+  padding-top: 0.5rem;
   padding-bottom: 1rem;
   margin: 0;
 }
@@ -1699,7 +1701,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   margin: 0 0.25rem;
   color: #222222;
   fill: currentColor;
-  width: 0.8125rem;
+  width: 0.75rem;
   height: 0.75rem;
 }
 
@@ -1737,6 +1739,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-309:before {
@@ -1773,7 +1776,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 
 .emotion-315 {
   color: #3F3F42;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0 0 0;
   display: inline-block;
   width: 100%;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -2399,7 +2402,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                       alt="هبت الله آخوندزاده"
                       class="emotion-25"
                       height="351"
-                      sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
+                      sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
                       src="https://ichef.bbci.co.uk/news/660/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg"
                       srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg 320w, https://ichef.bbci.co.uk/news/624/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg 624w"
                       width="624"
@@ -2420,7 +2423,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
               >
                 <a
                   aria-labelledby="promo-persianafghanistan52735886-1"
-                  class="emotion-32 emotion-33"
+                  class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                   href="/persian/afghanistan-52735886"
                 >
                   <span
@@ -2503,7 +2506,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                         class="emotion-25"
                         height="549"
                         loading="lazy"
-                        sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
+                        sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
                         src="https://ichef.bbci.co.uk/news/660/cpsprodpb/69E2/production/_112360172_p08dlh0q.jpg"
                         srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/69E2/production/_112360172_p08dlh0q.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/69E2/production/_112360172_p08dlh0q.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/69E2/production/_112360172_p08dlh0q.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/69E2/production/_112360172_p08dlh0q.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/69E2/production/_112360172_p08dlh0q.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/69E2/production/_112360172_p08dlh0q.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/69E2/production/_112360172_p08dlh0q.jpg 660w"
                         width="976"
@@ -2526,13 +2529,23 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                           aria-hidden="true"
                           class="emotion-70 emotion-71"
                           focusable="false"
-                          height="12px"
-                          viewBox="0 0 32 32"
-                          width="12px"
+                          height="12"
+                          viewBox="0 0 12 12"
+                          width="12"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
-                          <polygon
-                            points="3,32 29,16 3,0"
-                          />
+                          <g
+                            fill="none"
+                            fill-rule="evenodd"
+                          >
+                            <path
+                              d="M.5.6h12v12H.5z"
+                            />
+                            <path
+                              d="M2.144.96v11.28l8.712-5.64z"
+                              fill="currentColor"
+                            />
+                          </g>
                         </svg>
                         <time
                           class="emotion-72 emotion-73"
@@ -2554,7 +2567,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 >
                   <a
                     aria-labelledby="promo-persianafghanistan52726383-1"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/persian/afghanistan-52726383"
                   >
                     <span
@@ -2616,7 +2629,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                         class="emotion-25"
                         height="549"
                         loading="lazy"
-                        sizes="(max-width: 1008px) 33vw, 321px"
+                        sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                         src="https://ichef.bbci.co.uk/news/660/cpsprodpb/16367/production/_112338909_p08dhqgn.jpg"
                         srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/16367/production/_112338909_p08dhqgn.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/16367/production/_112338909_p08dhqgn.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/16367/production/_112338909_p08dhqgn.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/16367/production/_112338909_p08dhqgn.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/16367/production/_112338909_p08dhqgn.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/16367/production/_112338909_p08dhqgn.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/16367/production/_112338909_p08dhqgn.jpg 660w"
                         width="976"
@@ -2639,13 +2652,23 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                           aria-hidden="true"
                           class="emotion-70 emotion-71"
                           focusable="false"
-                          height="12px"
-                          viewBox="0 0 32 32"
-                          width="12px"
+                          height="12"
+                          viewBox="0 0 12 12"
+                          width="12"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
-                          <polygon
-                            points="3,32 29,16 3,0"
-                          />
+                          <g
+                            fill="none"
+                            fill-rule="evenodd"
+                          >
+                            <path
+                              d="M.5.6h12v12H.5z"
+                            />
+                            <path
+                              d="M2.144.96v11.28l8.712-5.64z"
+                              fill="currentColor"
+                            />
+                          </g>
                         </svg>
                         <time
                           class="emotion-72 emotion-73"
@@ -2667,7 +2690,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 >
                   <a
                     aria-labelledby="promo-watchlisten-persianafghanistan52710877-1"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/persian/afghanistan-52710877"
                   >
                     <span
@@ -2729,7 +2752,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                         class="emotion-25"
                         height="549"
                         loading="lazy"
-                        sizes="(max-width: 1008px) 33vw, 321px"
+                        sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                         src="https://ichef.bbci.co.uk/news/660/cpsprodpb/714B/production/_112330092_p08dg29q.jpg"
                         srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/714B/production/_112330092_p08dg29q.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/714B/production/_112330092_p08dg29q.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/714B/production/_112330092_p08dg29q.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/714B/production/_112330092_p08dg29q.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/714B/production/_112330092_p08dg29q.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/714B/production/_112330092_p08dg29q.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/714B/production/_112330092_p08dg29q.jpg 660w"
                         width="976"
@@ -2752,13 +2775,23 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                           aria-hidden="true"
                           class="emotion-70 emotion-71"
                           focusable="false"
-                          height="12px"
-                          viewBox="0 0 32 32"
-                          width="12px"
+                          height="12"
+                          viewBox="0 0 12 12"
+                          width="12"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
-                          <polygon
-                            points="3,32 29,16 3,0"
-                          />
+                          <g
+                            fill="none"
+                            fill-rule="evenodd"
+                          >
+                            <path
+                              d="M.5.6h12v12H.5z"
+                            />
+                            <path
+                              d="M2.144.96v11.28l8.712-5.64z"
+                              fill="currentColor"
+                            />
+                          </g>
                         </svg>
                         <time
                           class="emotion-72 emotion-73"
@@ -2780,7 +2813,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 >
                   <a
                     aria-labelledby="promo-watchlisten-persianafghanistan52699256-2"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/persian/afghanistan-52699256"
                   >
                     <span
@@ -2842,7 +2875,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                         class="emotion-25"
                         height="549"
                         loading="lazy"
-                        sizes="(max-width: 1008px) 33vw, 321px"
+                        sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                         src="https://ichef.bbci.co.uk/news/660/cpsprodpb/16F3/production/_112257850_p08d21ll.jpg"
                         srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/16F3/production/_112257850_p08d21ll.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/16F3/production/_112257850_p08d21ll.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/16F3/production/_112257850_p08d21ll.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/16F3/production/_112257850_p08d21ll.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/16F3/production/_112257850_p08d21ll.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/16F3/production/_112257850_p08d21ll.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/16F3/production/_112257850_p08d21ll.jpg 660w"
                         width="976"
@@ -2865,13 +2898,23 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                           aria-hidden="true"
                           class="emotion-70 emotion-71"
                           focusable="false"
-                          height="12px"
-                          viewBox="0 0 32 32"
-                          width="12px"
+                          height="12"
+                          viewBox="0 0 12 12"
+                          width="12"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
-                          <polygon
-                            points="3,32 29,16 3,0"
-                          />
+                          <g
+                            fill="none"
+                            fill-rule="evenodd"
+                          >
+                            <path
+                              d="M.5.6h12v12H.5z"
+                            />
+                            <path
+                              d="M2.144.96v11.28l8.712-5.64z"
+                              fill="currentColor"
+                            />
+                          </g>
                         </svg>
                         <time
                           class="emotion-72 emotion-73"
@@ -2893,7 +2936,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 >
                   <a
                     aria-labelledby="promo-watchlisten-persianafghanistan52651714-3"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/persian/afghanistan-52651714"
                   >
                     <span
@@ -2955,7 +2998,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                         class="emotion-25"
                         height="549"
                         loading="lazy"
-                        sizes="(max-width: 1008px) 33vw, 321px"
+                        sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                         src="https://ichef.bbci.co.uk/news/660/cpsprodpb/5130/production/_112248702_p08czkfz.jpg"
                         srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/5130/production/_112248702_p08czkfz.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/5130/production/_112248702_p08czkfz.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/5130/production/_112248702_p08czkfz.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/5130/production/_112248702_p08czkfz.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/5130/production/_112248702_p08czkfz.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/5130/production/_112248702_p08czkfz.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/5130/production/_112248702_p08czkfz.jpg 660w"
                         width="976"
@@ -2978,13 +3021,23 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                           aria-hidden="true"
                           class="emotion-70 emotion-71"
                           focusable="false"
-                          height="12px"
-                          viewBox="0 0 32 32"
-                          width="12px"
+                          height="12"
+                          viewBox="0 0 12 12"
+                          width="12"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
-                          <polygon
-                            points="3,32 29,16 3,0"
-                          />
+                          <g
+                            fill="none"
+                            fill-rule="evenodd"
+                          >
+                            <path
+                              d="M.5.6h12v12H.5z"
+                            />
+                            <path
+                              d="M2.144.96v11.28l8.712-5.64z"
+                              fill="currentColor"
+                            />
+                          </g>
                         </svg>
                         <time
                           class="emotion-72 emotion-73"
@@ -3006,7 +3059,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 >
                   <a
                     aria-labelledby="promo-watchlisten-persianafghanistan52640314-4"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/persian/afghanistan-52640314"
                   >
                     <span
@@ -3271,7 +3324,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   >
                     <a
                       aria-labelledby="scheduleItem-p086pms9"
-                      class="emotion-309 emotion-310"
+                      class="focusIndicatorDisplayBlock emotion-309 emotion-310"
                       href="/persian/bbc_dari_radio/w172x1rwggbcdq8"
                     >
                       <span
@@ -3401,7 +3454,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   >
                     <a
                       aria-labelledby="scheduleItem-p086pjpq"
-                      class="emotion-309 emotion-310"
+                      class="focusIndicatorDisplayBlock emotion-309 emotion-310"
                       href="/persian/bbc_dari_radio/w3csz8fk"
                     >
                       <span
@@ -3531,7 +3584,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   >
                     <a
                       aria-labelledby="scheduleItem-p086phc8"
-                      class="emotion-309 emotion-310"
+                      class="focusIndicatorDisplayBlock emotion-309 emotion-310"
                       href="/persian/bbc_dari_radio/w3csz7tn"
                     >
                       <span
@@ -3665,7 +3718,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                         class="emotion-25"
                         height="549"
                         loading="lazy"
-                        sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
+                        sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
                         src="https://ichef.bbci.co.uk/news/660/cpsprodpb/2591/production/_112371690_ghaniabdullahdostum.jpg"
                         srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/2591/production/_112371690_ghaniabdullahdostum.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/2591/production/_112371690_ghaniabdullahdostum.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/2591/production/_112371690_ghaniabdullahdostum.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/2591/production/_112371690_ghaniabdullahdostum.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/2591/production/_112371690_ghaniabdullahdostum.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/2591/production/_112371690_ghaniabdullahdostum.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/2591/production/_112371690_ghaniabdullahdostum.jpg 660w"
                         width="976"
@@ -3686,7 +3739,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 >
                   <a
                     aria-labelledby="promo-persianafghanistan52722865-1"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/persian/afghanistan-52722865"
                   >
                     <span
@@ -3735,7 +3788,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                         class="emotion-25"
                         height="576"
                         loading="lazy"
-                        sizes="(max-width: 1008px) 33vw, 321px"
+                        sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                         src="https://ichef.bbci.co.uk/news/660/cpsprodpb/14D18/production/_112327258_52697976.jpg"
                         srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/14D18/production/_112327258_52697976.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/14D18/production/_112327258_52697976.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/14D18/production/_112327258_52697976.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/14D18/production/_112327258_52697976.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/14D18/production/_112327258_52697976.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/14D18/production/_112327258_52697976.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/14D18/production/_112327258_52697976.jpg 660w"
                         width="1024"
@@ -3756,7 +3809,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 >
                   <a
                     aria-labelledby="promo-features-persianafghanistan52697976-1"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/persian/afghanistan-52697976"
                   >
                     <span
@@ -3805,7 +3858,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                         class="emotion-25"
                         height="549"
                         loading="lazy"
-                        sizes="(max-width: 1008px) 33vw, 321px"
+                        sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                         src="https://ichef.bbci.co.uk/news/660/cpsprodpb/127FD/production/_112337757_mediaitem112337756.jpg"
                         srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/127FD/production/_112337757_mediaitem112337756.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/127FD/production/_112337757_mediaitem112337756.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/127FD/production/_112337757_mediaitem112337756.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/127FD/production/_112337757_mediaitem112337756.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/127FD/production/_112337757_mediaitem112337756.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/127FD/production/_112337757_mediaitem112337756.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/127FD/production/_112337757_mediaitem112337756.jpg 660w"
                         width="976"
@@ -3826,7 +3879,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 >
                   <a
                     aria-labelledby="promo-features-persianblogviewpoints52616632-2"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/persian/blog-viewpoints-52616632"
                   >
                     <span
@@ -3875,7 +3928,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                         class="emotion-25"
                         height="351"
                         loading="lazy"
-                        sizes="(max-width: 1008px) 33vw, 321px"
+                        sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                         src="https://ichef.bbci.co.uk/news/660/cpsprodpb/9A26/production/_112326493_da218544-95c0-487b-8222-6cd0d67358f7.jpg"
                         srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/9A26/production/_112326493_da218544-95c0-487b-8222-6cd0d67358f7.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/9A26/production/_112326493_da218544-95c0-487b-8222-6cd0d67358f7.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/9A26/production/_112326493_da218544-95c0-487b-8222-6cd0d67358f7.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/9A26/production/_112326493_da218544-95c0-487b-8222-6cd0d67358f7.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/9A26/production/_112326493_da218544-95c0-487b-8222-6cd0d67358f7.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/9A26/production/_112326493_da218544-95c0-487b-8222-6cd0d67358f7.jpg 320w, https://ichef.bbci.co.uk/news/624/cpsprodpb/9A26/production/_112326493_da218544-95c0-487b-8222-6cd0d67358f7.jpg 624w"
                         width="624"
@@ -3896,7 +3949,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 >
                   <a
                     aria-labelledby="promo-features-persianafghanistan52700014-3"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/persian/afghanistan-52700014"
                   >
                     <span
@@ -3945,7 +3998,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                         class="emotion-25"
                         height="549"
                         loading="lazy"
-                        sizes="(max-width: 1008px) 33vw, 321px"
+                        sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                         src="https://ichef.bbci.co.uk/news/660/cpsprodpb/12071/production/_112314837_c8f29fc99996dfa78f964234a3f76283_xl.jpg"
                         srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/12071/production/_112314837_c8f29fc99996dfa78f964234a3f76283_xl.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/12071/production/_112314837_c8f29fc99996dfa78f964234a3f76283_xl.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/12071/production/_112314837_c8f29fc99996dfa78f964234a3f76283_xl.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/12071/production/_112314837_c8f29fc99996dfa78f964234a3f76283_xl.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/12071/production/_112314837_c8f29fc99996dfa78f964234a3f76283_xl.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/12071/production/_112314837_c8f29fc99996dfa78f964234a3f76283_xl.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/12071/production/_112314837_c8f29fc99996dfa78f964234a3f76283_xl.jpg 660w"
                         width="976"
@@ -3966,7 +4019,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 >
                   <a
                     aria-labelledby="promo-features-persianblogviewpoints52692067-4"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/persian/blog-viewpoints-52692067"
                   >
                     <span
@@ -4049,7 +4102,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 dir="rtl"
               >
                 <a
-                  class="emotion-568 emotion-569"
+                  class="focusIndicatorDisplayTableCell emotion-568 emotion-569"
                   href="/persian/world-50317704"
                 >
                   توافق با جدایی‌طلبان یمن؛ ایران اعتراض کرد، سازمان ملل استقبال
@@ -4090,7 +4143,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 dir="rtl"
               >
                 <a
-                  class="emotion-568 emotion-569"
+                  class="focusIndicatorDisplayTableCell emotion-568 emotion-569"
                   href="/persian/iran-50319870"
                 >
                   فراخوان آذری جهرمی برای مناظره اینستاگرامی - زرآبادی: در مجلس مناظره کنیم
@@ -4131,7 +4184,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 dir="rtl"
               >
                 <a
-                  class="emotion-568 emotion-569"
+                  class="focusIndicatorDisplayTableCell emotion-568 emotion-569"
                   href="/persian/world-50320610"
                 >
                   ترکیه: همسر ابوبکر بغدادی را 'دستگیر کردیم'
@@ -4172,7 +4225,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 dir="rtl"
               >
                 <a
-                  class="emotion-568 emotion-569"
+                  class="focusIndicatorDisplayTableCell emotion-568 emotion-569"
                   href="/persian/world-50316456"
                 >
                   غنی سازی مجدد در فردو: مکرون اقدام ایران را 'عمیقا مایه نگرانی' خواند
@@ -4213,7 +4266,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 dir="rtl"
               >
                 <a
-                  class="emotion-568 emotion-569"
+                  class="focusIndicatorDisplayTableCell emotion-568 emotion-569"
                   href="/persian/magazine-50249226"
                 >
                   دوازده دلیل حکمرانی حشرات: سوسک می‌تواند دو هفته بدون سر زنده بماند
@@ -4254,7 +4307,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 dir="rtl"
               >
                 <a
-                  class="emotion-568 emotion-569"
+                  class="focusIndicatorDisplayTableCell emotion-568 emotion-569"
                   href="/persian/world-50317700"
                 >
                   انتخابات ایالتی آمریکا؛ دموکرات‌ها از جمهوری‌خواهان پیش افتادند
@@ -4295,7 +4348,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 dir="rtl"
               >
                 <a
-                  class="emotion-568 emotion-569"
+                  class="focusIndicatorDisplayTableCell emotion-568 emotion-569"
                   href="/persian/sport-50322486"
                 >
                   عراق اردن را به عنوان میزبان بازی با ایران معرفی کرد
@@ -4336,7 +4389,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 dir="rtl"
               >
                 <a
-                  class="emotion-568 emotion-569"
+                  class="focusIndicatorDisplayTableCell emotion-568 emotion-569"
                   href="/persian/iran-features-50310665"
                 >
                   آیا تهران بازی هسته ای را به هم می‌زند؟
@@ -4377,7 +4430,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 dir="rtl"
               >
                 <a
-                  class="emotion-568 emotion-569"
+                  class="focusIndicatorDisplayTableCell emotion-568 emotion-569"
                   href="/persian/world-50316450"
                 >
                   آمریکا: دو ایرانی اتهام جمع‌آوری اطلاعات علیه سازمان مجاهدین در خاک آمریکا را پذیرفتند
@@ -4418,7 +4471,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 dir="rtl"
               >
                 <a
-                  class="emotion-568 emotion-569"
+                  class="focusIndicatorDisplayTableCell emotion-568 emotion-569"
                   href="/persian/sport-50318030"
                 >
                   فوتبال ایران و عراق؛ ایران: امن است بازی می‌کنیم، فیفا: ناامن است بازی نکنید
@@ -4837,6 +4890,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -4949,6 +5003,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  display: inline-block;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -5917,7 +5972,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                       alt="трамвай"
                       class="emotion-25"
                       height="549"
-                      sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
+                      sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
                       src="https://ichef.bbci.co.uk/news/660/cpsprodpb/1667D/production/_112337719_gettyimages-1210623351.jpg"
                       srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/1667D/production/_112337719_gettyimages-1210623351.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/1667D/production/_112337719_gettyimages-1210623351.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/1667D/production/_112337719_gettyimages-1210623351.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/1667D/production/_112337719_gettyimages-1210623351.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/1667D/production/_112337719_gettyimages-1210623351.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/1667D/production/_112337719_gettyimages-1210623351.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/1667D/production/_112337719_gettyimages-1210623351.jpg 660w"
                       width="976"
@@ -5938,7 +5993,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
               >
                 <a
                   aria-labelledby="promo-ukrainiannewsrussian52721557-1"
-                  class="emotion-32 emotion-33"
+                  class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                   href="/ukrainian/news-russian-52721557"
                 >
                   <span
@@ -5972,7 +6027,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   class="emotion-42 emotion-43"
                 >
                   <a
-                    class="emotion-44 emotion-45"
+                    class="focusIndicatorDisplayInlineBlock emotion-44 emotion-45"
                     href="/ukrainian/features-russian-52633464"
                   >
                     <span>
@@ -5997,7 +6052,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             class="emotion-8 emotion-9"
           >
             <a
-              class="emotion-52 emotion-53"
+              class="focusIndicatorDisplayBlock emotion-52 emotion-53"
               href="/ukrainian/magazine_russian"
             >
               <span
@@ -6048,7 +6103,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 >
                   <a
                     aria-labelledby="promo-verticals-ukrainianfeaturesrussian52261329-1"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/ukrainian/features-russian-52261329"
                   >
                     <span
@@ -6087,7 +6142,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                         class="emotion-25"
                         height="549"
                         loading="lazy"
-                        sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
+                        sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
                         src="https://ichef.bbci.co.uk/news/660/cpsprodpb/DE34/production/_111648865_1stimage.png"
                         srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/DE34/production/_111648865_1stimage.png 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/DE34/production/_111648865_1stimage.png 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/DE34/production/_111648865_1stimage.png 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/DE34/production/_111648865_1stimage.png 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/DE34/production/_111648865_1stimage.png 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/DE34/production/_111648865_1stimage.png 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/DE34/production/_111648865_1stimage.png 660w"
                         width="976"
@@ -6126,7 +6181,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                         class="emotion-25"
                         height="549"
                         loading="lazy"
-                        sizes="(max-width: 1008px) 33vw, 321px"
+                        sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                         src="https://ichef.bbci.co.uk/news/660/cpsprodpb/3979/production/_111831741_p086k2k4.jpg"
                         srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/3979/production/_111831741_p086k2k4.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/3979/production/_111831741_p086k2k4.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/3979/production/_111831741_p086k2k4.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/3979/production/_111831741_p086k2k4.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/3979/production/_111831741_p086k2k4.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/3979/production/_111831741_p086k2k4.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/3979/production/_111831741_p086k2k4.jpg 660w"
                         width="976"
@@ -6147,7 +6202,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 >
                   <a
                     aria-labelledby="promo-ukrainianfeaturesrussian52357130-1"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/ukrainian/features-russian-52357130"
                   >
                     <span
@@ -6223,7 +6278,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 >
                   <a
                     aria-labelledby="promo-also-in-the-news-ukrainiannewsrussian52663545-1"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/ukrainian/news-russian-52663545"
                   >
                     <span
@@ -6262,7 +6317,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                         class="emotion-25"
                         height="549"
                         loading="lazy"
-                        sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
+                        sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
                         src="https://ichef.bbci.co.uk/news/660/cpsprodpb/12C60/production/_112269867_gettyimages-518161624.jpg"
                         srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/12C60/production/_112269867_gettyimages-518161624.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/12C60/production/_112269867_gettyimages-518161624.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/12C60/production/_112269867_gettyimages-518161624.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/12C60/production/_112269867_gettyimages-518161624.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/12C60/production/_112269867_gettyimages-518161624.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/12C60/production/_112269867_gettyimages-518161624.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/12C60/production/_112269867_gettyimages-518161624.jpg 660w"
                         width="976"
@@ -6301,7 +6356,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                         class="emotion-25"
                         height="549"
                         loading="lazy"
-                        sizes="(max-width: 1008px) 33vw, 321px"
+                        sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                         src="https://ichef.bbci.co.uk/news/660/cpsprodpb/9420/production/_112202973_p07zv7wd.jpg"
                         srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/9420/production/_112202973_p07zv7wd.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/9420/production/_112202973_p07zv7wd.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/9420/production/_112202973_p07zv7wd.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/9420/production/_112202973_p07zv7wd.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/9420/production/_112202973_p07zv7wd.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/9420/production/_112202973_p07zv7wd.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/9420/production/_112202973_p07zv7wd.jpg 660w"
                         width="976"
@@ -6322,7 +6377,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 >
                   <a
                     aria-labelledby="promo-ukrainianvertfutrussian52663551-1"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/ukrainian/vert-fut-russian-52663551"
                   >
                     <span
@@ -6371,7 +6426,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                         class="emotion-25"
                         height="549"
                         loading="lazy"
-                        sizes="(max-width: 1008px) 33vw, 321px"
+                        sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                         src="https://ichef.bbci.co.uk/news/660/cpsprodpb/E8DE/production/_112241695_gettyimages-1160105235.jpg"
                         srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/E8DE/production/_112241695_gettyimages-1160105235.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/E8DE/production/_112241695_gettyimages-1160105235.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/E8DE/production/_112241695_gettyimages-1160105235.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/E8DE/production/_112241695_gettyimages-1160105235.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/E8DE/production/_112241695_gettyimages-1160105235.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/E8DE/production/_112241695_gettyimages-1160105235.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/E8DE/production/_112241695_gettyimages-1160105235.jpg 660w"
                         width="976"
@@ -6392,7 +6447,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 >
                   <a
                     aria-labelledby="promo-also-in-the-news-ukrainianfeaturesrussian52633464-1"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/ukrainian/features-russian-52633464"
                   >
                     <span
@@ -6441,7 +6496,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                         class="emotion-25"
                         height="549"
                         loading="lazy"
-                        sizes="(max-width: 1008px) 33vw, 321px"
+                        sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                         src="https://ichef.bbci.co.uk/news/660/cpsprodpb/9201/production/_97977373_breaking_news_centered_976_russian.png"
                         srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/9201/production/_97977373_breaking_news_centered_976_russian.png 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/9201/production/_97977373_breaking_news_centered_976_russian.png 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/9201/production/_97977373_breaking_news_centered_976_russian.png 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/9201/production/_97977373_breaking_news_centered_976_russian.png 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/9201/production/_97977373_breaking_news_centered_976_russian.png 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/9201/production/_97977373_breaking_news_centered_976_russian.png 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/9201/production/_97977373_breaking_news_centered_976_russian.png 660w"
                         width="976"
@@ -6462,7 +6517,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 >
                   <a
                     aria-labelledby="promo-also-in-the-news-ukrainiannewsrussian52647120-2"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/ukrainian/news-russian-52647120"
                   >
                     <span
@@ -6511,7 +6566,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                         class="emotion-25"
                         height="549"
                         loading="lazy"
-                        sizes="(max-width: 1008px) 33vw, 321px"
+                        sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                         src="https://ichef.bbci.co.uk/news/660/cpsprodpb/3DAF/production/_112019751_gettyimages-1208499095.jpg"
                         srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/3DAF/production/_112019751_gettyimages-1208499095.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/3DAF/production/_112019751_gettyimages-1208499095.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/3DAF/production/_112019751_gettyimages-1208499095.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/3DAF/production/_112019751_gettyimages-1208499095.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/3DAF/production/_112019751_gettyimages-1208499095.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/3DAF/production/_112019751_gettyimages-1208499095.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/3DAF/production/_112019751_gettyimages-1208499095.jpg 660w"
                         width="976"
@@ -6532,7 +6587,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 >
                   <a
                     aria-labelledby="promo-also-in-the-news-ukrainiannewsrussian52493624-3"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/ukrainian/news-russian-52493624"
                   >
                     <span
@@ -6581,7 +6636,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                         class="emotion-25"
                         height="549"
                         loading="lazy"
-                        sizes="(max-width: 1008px) 33vw, 321px"
+                        sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                         src="https://ichef.bbci.co.uk/news/660/cpsprodpb/6A88/production/_111827272_hi060961146.jpg"
                         srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/6A88/production/_111827272_hi060961146.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/6A88/production/_111827272_hi060961146.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/6A88/production/_111827272_hi060961146.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/6A88/production/_111827272_hi060961146.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/6A88/production/_111827272_hi060961146.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/6A88/production/_111827272_hi060961146.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/6A88/production/_111827272_hi060961146.jpg 660w"
                         width="976"
@@ -6602,7 +6657,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 >
                   <a
                     aria-labelledby="promo-also-in-the-news-ukrainianfeaturesrussian52395098-4"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/ukrainian/features-russian-52395098"
                   >
                     <span
@@ -6651,7 +6706,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                         class="emotion-25"
                         height="549"
                         loading="lazy"
-                        sizes="(max-width: 1008px) 33vw, 321px"
+                        sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                         src="https://ichef.bbci.co.uk/news/660/cpsprodpb/14D1D/production/_111977258_964118.jpg"
                         srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/14D1D/production/_111977258_964118.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/14D1D/production/_111977258_964118.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/14D1D/production/_111977258_964118.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/14D1D/production/_111977258_964118.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/14D1D/production/_111977258_964118.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/14D1D/production/_111977258_964118.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/14D1D/production/_111977258_964118.jpg 660w"
                         width="976"
@@ -6672,7 +6727,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 >
                   <a
                     aria-labelledby="promo-also-in-the-news-ukrainiannewsrussian52443350-1"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/ukrainian/news-russian-52443350"
                   >
                     <span
@@ -6721,7 +6776,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                         class="emotion-25"
                         height="549"
                         loading="lazy"
-                        sizes="(max-width: 1008px) 33vw, 321px"
+                        sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                         src="https://ichef.bbci.co.uk/news/660/cpsprodpb/15CF4/production/_111423398_trendingcovid-19phonecloseup.jpg"
                         srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/15CF4/production/_111423398_trendingcovid-19phonecloseup.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/15CF4/production/_111423398_trendingcovid-19phonecloseup.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/15CF4/production/_111423398_trendingcovid-19phonecloseup.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/15CF4/production/_111423398_trendingcovid-19phonecloseup.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/15CF4/production/_111423398_trendingcovid-19phonecloseup.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/15CF4/production/_111423398_trendingcovid-19phonecloseup.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/15CF4/production/_111423398_trendingcovid-19phonecloseup.jpg 660w"
                         width="976"
@@ -6742,7 +6797,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 >
                   <a
                     aria-labelledby="promo-also-in-the-news-ukrainianfeaturesrussian52339462-2"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/ukrainian/features-russian-52339462"
                   >
                     <span
@@ -6791,7 +6846,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                         class="emotion-25"
                         height="549"
                         loading="lazy"
-                        sizes="(max-width: 1008px) 33vw, 321px"
+                        sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                         src="https://ichef.bbci.co.uk/news/660/cpsprodpb/2B60/production/_111840111_gettyimages-1209598072-1.jpg"
                         srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/2B60/production/_111840111_gettyimages-1209598072-1.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/2B60/production/_111840111_gettyimages-1209598072-1.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/2B60/production/_111840111_gettyimages-1209598072-1.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/2B60/production/_111840111_gettyimages-1209598072-1.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/2B60/production/_111840111_gettyimages-1209598072-1.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/2B60/production/_111840111_gettyimages-1209598072-1.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/2B60/production/_111840111_gettyimages-1209598072-1.jpg 660w"
                         width="976"
@@ -6812,7 +6867,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 >
                   <a
                     aria-labelledby="promo-also-in-the-news-ukrainianfeaturesrussian52336989-3"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/ukrainian/features-russian-52336989"
                   >
                     <span
@@ -6861,7 +6916,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                         class="emotion-25"
                         height="549"
                         loading="lazy"
-                        sizes="(max-width: 1008px) 33vw, 321px"
+                        sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                         src="https://ichef.bbci.co.uk/news/660/cpsprodpb/14C39/production/_111194058_cough_index_getty_2.jpg"
                         srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/14C39/production/_111194058_cough_index_getty_2.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/14C39/production/_111194058_cough_index_getty_2.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/14C39/production/_111194058_cough_index_getty_2.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/14C39/production/_111194058_cough_index_getty_2.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/14C39/production/_111194058_cough_index_getty_2.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/14C39/production/_111194058_cough_index_getty_2.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/14C39/production/_111194058_cough_index_getty_2.jpg 660w"
                         width="976"
@@ -6882,7 +6937,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 >
                   <a
                     aria-labelledby="promo-also-in-the-news-ukrainianfeaturesrussian52344279-4"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/ukrainian/features-russian-52344279"
                   >
                     <span
@@ -6920,7 +6975,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             class="emotion-8 emotion-9"
           >
             <a
-              class="emotion-52 emotion-53"
+              class="focusIndicatorDisplayBlock emotion-52 emotion-53"
               href="/ukrainian/russian/media/photogalleries"
             >
               <span
@@ -6979,7 +7034,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                         class="emotion-25"
                         height="549"
                         loading="lazy"
-                        sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
+                        sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
                         src="https://ichef.bbci.co.uk/news/660/cpsprodpb/12506/production/_109241057_mediaitem109241054.jpg"
                         srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/12506/production/_109241057_mediaitem109241054.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/12506/production/_109241057_mediaitem109241054.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/12506/production/_109241057_mediaitem109241054.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/12506/production/_109241057_mediaitem109241054.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/12506/production/_109241057_mediaitem109241054.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/12506/production/_109241057_mediaitem109241054.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/12506/production/_109241057_mediaitem109241054.jpg 660w"
                         width="976"
@@ -7000,7 +7055,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 >
                   <a
                     aria-labelledby="promo-ukrainianfeaturesrussian50186307-1"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/ukrainian/features-russian-50186307"
                   >
                     <span
@@ -7049,7 +7104,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                         class="emotion-25"
                         height="336"
                         loading="lazy"
-                        sizes="(max-width: 1008px) 33vw, 321px"
+                        sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                         src="https://ichef.bbci.co.uk/news/660/cpsprodpb/4B37/production/_108855291_2111111111111111e.jpg"
                         srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/4B37/production/_108855291_2111111111111111e.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/4B37/production/_108855291_2111111111111111e.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/4B37/production/_108855291_2111111111111111e.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/4B37/production/_108855291_2111111111111111e.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/4B37/production/_108855291_2111111111111111e.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/4B37/production/_108855291_2111111111111111e.jpg 320w, https://ichef.bbci.co.uk/news/598/cpsprodpb/4B37/production/_108855291_2111111111111111e.jpg 598w"
                         width="598"
@@ -7070,7 +7125,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 >
                   <a
                     aria-labelledby="promo-picture-galleries-ukrainianfeaturesrussian49780932-1"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/ukrainian/features-russian-49780932"
                   >
                     <span
@@ -7119,7 +7174,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                         class="emotion-25"
                         height="549"
                         loading="lazy"
-                        sizes="(max-width: 1008px) 33vw, 321px"
+                        sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                         src="https://ichef.bbci.co.uk/news/660/cpsprodpb/7481/production/_108652892__108652183_mediaitem108652182.jpg"
                         srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/7481/production/_108652892__108652183_mediaitem108652182.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/7481/production/_108652892__108652183_mediaitem108652182.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/7481/production/_108652892__108652183_mediaitem108652182.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/7481/production/_108652892__108652183_mediaitem108652182.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/7481/production/_108652892__108652183_mediaitem108652182.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/7481/production/_108652892__108652183_mediaitem108652182.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/7481/production/_108652892__108652183_mediaitem108652182.jpg 660w"
                         width="976"
@@ -7140,7 +7195,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 >
                   <a
                     aria-labelledby="promo-picture-galleries-ukrainianfeaturesrussian49621722-2"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/ukrainian/features-russian-49621722"
                   >
                     <span
@@ -7189,7 +7244,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                         class="emotion-25"
                         height="549"
                         loading="lazy"
-                        sizes="(max-width: 1008px) 33vw, 321px"
+                        sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                         src="https://ichef.bbci.co.uk/news/660/cpsprodpb/161B8/production/_108625509_ecbecce5-3fd5-4ed6-887f-a08d267a22c4.jpg"
                         srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/161B8/production/_108625509_ecbecce5-3fd5-4ed6-887f-a08d267a22c4.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/161B8/production/_108625509_ecbecce5-3fd5-4ed6-887f-a08d267a22c4.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/161B8/production/_108625509_ecbecce5-3fd5-4ed6-887f-a08d267a22c4.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/161B8/production/_108625509_ecbecce5-3fd5-4ed6-887f-a08d267a22c4.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/161B8/production/_108625509_ecbecce5-3fd5-4ed6-887f-a08d267a22c4.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/161B8/production/_108625509_ecbecce5-3fd5-4ed6-887f-a08d267a22c4.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/161B8/production/_108625509_ecbecce5-3fd5-4ed6-887f-a08d267a22c4.jpg 660w"
                         width="976"
@@ -7210,7 +7265,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 >
                   <a
                     aria-labelledby="promo-picture-galleries-ukrainiannewsrussian49613573-3"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/ukrainian/news-russian-49613573"
                   >
                     <span
@@ -7259,7 +7314,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                         class="emotion-25"
                         height="567"
                         loading="lazy"
-                        sizes="(max-width: 1008px) 33vw, 321px"
+                        sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                         src="https://ichef.bbci.co.uk/news/660/cpsprodpb/03C0/production/_108306900_p07jt24w.jpg"
                         srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/03C0/production/_108306900_p07jt24w.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/03C0/production/_108306900_p07jt24w.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/03C0/production/_108306900_p07jt24w.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/03C0/production/_108306900_p07jt24w.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/03C0/production/_108306900_p07jt24w.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/03C0/production/_108306900_p07jt24w.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/03C0/production/_108306900_p07jt24w.jpg 660w"
                         width="1008"
@@ -7280,7 +7335,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 >
                   <a
                     aria-labelledby="promo-picture-galleries-ukrainianfeaturesrussian49382281-4"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/ukrainian/features-russian-49382281"
                   >
                     <span
@@ -7356,7 +7411,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 >
                   <a
                     aria-labelledby="promo-features-ukrainianfeaturesrussian52653319-1"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/ukrainian/features-russian-52653319"
                   >
                     <span
@@ -7395,7 +7450,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                         class="emotion-25"
                         height="549"
                         loading="lazy"
-                        sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
+                        sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
                         src="https://ichef.bbci.co.uk/news/660/cpsprodpb/7650/production/_112288203_photo_2020-05-15_13-49-37.jpg"
                         srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/7650/production/_112288203_photo_2020-05-15_13-49-37.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/7650/production/_112288203_photo_2020-05-15_13-49-37.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/7650/production/_112288203_photo_2020-05-15_13-49-37.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/7650/production/_112288203_photo_2020-05-15_13-49-37.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/7650/production/_112288203_photo_2020-05-15_13-49-37.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/7650/production/_112288203_photo_2020-05-15_13-49-37.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/7650/production/_112288203_photo_2020-05-15_13-49-37.jpg 660w"
                         width="976"
@@ -7434,7 +7489,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                         class="emotion-25"
                         height="549"
                         loading="lazy"
-                        sizes="(max-width: 1008px) 33vw, 321px"
+                        sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                         src="https://ichef.bbci.co.uk/news/660/cpsprodpb/3712/production/_112289041_62827699-7331-41bf-a3fb-e16a7d95064a.jpg"
                         srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/3712/production/_112289041_62827699-7331-41bf-a3fb-e16a7d95064a.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/3712/production/_112289041_62827699-7331-41bf-a3fb-e16a7d95064a.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/3712/production/_112289041_62827699-7331-41bf-a3fb-e16a7d95064a.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/3712/production/_112289041_62827699-7331-41bf-a3fb-e16a7d95064a.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/3712/production/_112289041_62827699-7331-41bf-a3fb-e16a7d95064a.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/3712/production/_112289041_62827699-7331-41bf-a3fb-e16a7d95064a.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/3712/production/_112289041_62827699-7331-41bf-a3fb-e16a7d95064a.jpg 660w"
                         width="976"
@@ -7455,7 +7510,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 >
                   <a
                     aria-labelledby="promo-ukrainiannewsrussian52675911-1"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/ukrainian/news-russian-52675911"
                   >
                     <span
@@ -7504,7 +7559,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                         class="emotion-25"
                         height="549"
                         loading="lazy"
-                        sizes="(max-width: 1008px) 33vw, 321px"
+                        sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                         src="https://ichef.bbci.co.uk/news/660/cpsprodpb/FA23/production/_112253046_whatsubject.jpg"
                         srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/FA23/production/_112253046_whatsubject.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/FA23/production/_112253046_whatsubject.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/FA23/production/_112253046_whatsubject.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/FA23/production/_112253046_whatsubject.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/FA23/production/_112253046_whatsubject.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/FA23/production/_112253046_whatsubject.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/FA23/production/_112253046_whatsubject.jpg 660w"
                         width="976"
@@ -7525,7 +7580,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 >
                   <a
                     aria-labelledby="promo-features-ukrainiannewsrussian52688931-1"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/ukrainian/news-russian-52688931"
                   >
                     <span
@@ -7574,7 +7629,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                         class="emotion-25"
                         height="549"
                         loading="lazy"
-                        sizes="(max-width: 1008px) 33vw, 321px"
+                        sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                         src="https://ichef.bbci.co.uk/news/660/cpsprodpb/8DAC/production/_112186263_f3c8f683-5024-4136-b475-12b73f015bee.jpg"
                         srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/8DAC/production/_112186263_f3c8f683-5024-4136-b475-12b73f015bee.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/8DAC/production/_112186263_f3c8f683-5024-4136-b475-12b73f015bee.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/8DAC/production/_112186263_f3c8f683-5024-4136-b475-12b73f015bee.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/8DAC/production/_112186263_f3c8f683-5024-4136-b475-12b73f015bee.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/8DAC/production/_112186263_f3c8f683-5024-4136-b475-12b73f015bee.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/8DAC/production/_112186263_f3c8f683-5024-4136-b475-12b73f015bee.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/8DAC/production/_112186263_f3c8f683-5024-4136-b475-12b73f015bee.jpg 660w"
                         width="976"
@@ -7595,7 +7650,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 >
                   <a
                     aria-labelledby="promo-features-ukrainianfeaturesrussian52620256-2"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/ukrainian/features-russian-52620256"
                   >
                     <span
@@ -7644,7 +7699,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                         class="emotion-25"
                         height="549"
                         loading="lazy"
-                        sizes="(max-width: 1008px) 33vw, 321px"
+                        sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                         src="https://ichef.bbci.co.uk/news/660/cpsprodpb/109C8/production/_112204086_gettyimages-1211911817.jpg"
                         srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/109C8/production/_112204086_gettyimages-1211911817.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/109C8/production/_112204086_gettyimages-1211911817.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/109C8/production/_112204086_gettyimages-1211911817.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/109C8/production/_112204086_gettyimages-1211911817.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/109C8/production/_112204086_gettyimages-1211911817.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/109C8/production/_112204086_gettyimages-1211911817.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/109C8/production/_112204086_gettyimages-1211911817.jpg 660w"
                         width="976"
@@ -7665,7 +7720,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 >
                   <a
                     aria-labelledby="promo-features-ukrainiannewsrussian52597888-3"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/ukrainian/news-russian-52597888"
                   >
                     <span
@@ -7714,7 +7769,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                         class="emotion-25"
                         height="576"
                         loading="lazy"
-                        sizes="(max-width: 1008px) 33vw, 321px"
+                        sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                         src="https://ichef.bbci.co.uk/news/660/cpsprodpb/245B/production/_112170390_smallergettyimages-1204224469-1.jpg"
                         srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/245B/production/_112170390_smallergettyimages-1204224469-1.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/245B/production/_112170390_smallergettyimages-1204224469-1.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/245B/production/_112170390_smallergettyimages-1204224469-1.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/245B/production/_112170390_smallergettyimages-1204224469-1.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/245B/production/_112170390_smallergettyimages-1204224469-1.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/245B/production/_112170390_smallergettyimages-1204224469-1.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/245B/production/_112170390_smallergettyimages-1204224469-1.jpg 660w"
                         width="1024"
@@ -7735,7 +7790,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 >
                   <a
                     aria-labelledby="promo-features-ukrainianfeaturesrussian52573535-4"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/ukrainian/features-russian-52573535"
                   >
                     <span

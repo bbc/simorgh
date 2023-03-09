@@ -9,8 +9,8 @@ Please familiarise yourself with our:
 - [Code of conduct](https://github.com/bbc/psammead/blob/latest/CODE_OF_CONDUCT.md)
 - [Code Standards and Ways of Working](https://github.com/bbc/psammead/blob/latest/Code-Standards-and-Ways-of-Working.md)
 - [Contributing guidelines](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md)
-- [Guide to Code Reviews](https://github.com/bbc/simorgh/blob/latest/docs/Code-Reviews.md)
-- [Github Project Board Guide](https://github.com/bbc/simorgh/blob/latest/docs/Project-Board-Guide.md)
+- [Guide to Code Reviews](https://github.com/bbc/simorgh/blob/latest/docs/Code-Reviews.stories.mdx)
+- [Github Project Board Guide](https://github.com/bbc/simorgh/blob/latest/docs/Project-Board-Guide.stories.mdx)
 - [Primary README](https://github.com/bbc/psammead/blob/latest/README.md)
 - [Versioning and changelogs](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md#versioning-and-changelogs)
 - [Use/consumption of Psammead packages guidelines and package list](https://github.com/bbc/psammead/blob/latest/packages/README.md) (you are here)
@@ -50,8 +50,8 @@ You can do this in pure CSS:
     font-family: 'ReithSans';
     font-style: normal;
     font-weight: 400;
-    src: url('https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff2')
-        format('woff2'), url('https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff')
+    src: url('https://static.files.bbci.co.uk/fonts/reith/r2.512/BBCReithSans_W_Rg.woff2')
+        format('woff2'), url('https://static.files.bbci.co.uk/fonts/reith/r2.512/BBCReithSans_W_Rg.woff')
         format('woff');
   }
   @font-face {
@@ -59,8 +59,8 @@ You can do this in pure CSS:
     font-family: 'ReithSerif';
     font-style: normal;
     font-weight: 600;
-    src: url('https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff2')
-        format('woff2'), url('https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff')
+    src: url('https://static.files.bbci.co.uk/fonts/reith/r2.512/BBCReithSerif_W_Md.woff2')
+        format('woff2'), url('https://static.files.bbci.co.uk/fonts/reith/r2.512/BBCReithSerif_W_Md.woff')
         format('woff');
   }
 </style>

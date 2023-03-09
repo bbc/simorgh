@@ -1,10 +1,3 @@
-import brandSVG from '../../../legacy/psammead/psammead-assets/src/svgs/naidheachdan';
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_GHOST,
-  C_POSTBOX_30,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
 import latinWithDiacritics from '../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
 import '#psammead/moment-timezone-include/tz/Europe/London';
 import withContext from '../../../contexts/utils/withContext';
@@ -38,7 +31,6 @@ export const service: DefaultServiceConfig = {
     service: 'naidheachdan',
     serviceName: 'Naidheachdan',
     languageName: 'Scottish Gaelic',
-    themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnaidheachdan',
     twitterSite: '@bbcnaidheachdan',
     noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
@@ -49,13 +41,6 @@ export const service: DefaultServiceConfig = {
     frontPageTitle: 'Dachaigh',
     showAdPlaceholder: false,
     showRelatedTopics: true,
-    theming: {
-      brandBackgroundColour: `${C_POSTBOX}`,
-      brandLogoColour: `${C_WHITE}`,
-      brandForegroundColour: `${C_GHOST}`,
-      brandHighlightColour: `${C_WHITE}`,
-      brandBorderColour: `${C_POSTBOX_30}`,
-    },
     translations: {
       ads: {
         advertisementLabel: 'Advertisement',
@@ -219,7 +204,6 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'Prìomh Sgeulachdan',
       featuresAnalysisTitle: 'Sgeulachdan Aithriseach',
     },
-    brandSVG,
     mostRead: {
       header: 'As motha leughte',
       lastUpdated: 'Air ùrachadh mu dheireadh:',

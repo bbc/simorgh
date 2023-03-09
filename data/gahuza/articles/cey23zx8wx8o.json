@@ -1,461 +1,1899 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::article:cey23zx8wx8o",
-    "locators": {
-      "optimoUrn": "urn:bbc:optimo:asset:cey23zx8wx8o"
-    },
-    "type": "article",
-    "createdBy": "Gahuza",
-    "language": "rw",
-    "lastUpdated": 1570032625860,
-    "firstPublished": 1562936358638,
-    "lastPublished": 1562936358638,
-    "options": {},
-    "analyticsLabels": {},
-    "passport": {
-      "language": "rw",
-      "home": "http://www.bbc.co.uk/ontologies/passport/home/Gahuza"
-    },
-    "tags": {},
-    "version": "v1.1.2",
-    "blockTypes": [
-      "headline",
-      "text",
-      "paragraph",
-      "fragment",
-      "image",
-      "caption",
-      "altText",
-      "rawImage",
-      "urlLink",
-      "video",
-      "subheadline"
-    ]
-  },
-  "content": {
-    "model": {
-      "blocks": [
-        {
-          "type": "headline",
-          "model": {
-            "blocks": [
-              {
-                "type": "text",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "paragraph",
-                      "model": {
-                        "text": "Mwaramukanye amahoro mwese muteze amatwi\n\n",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "Mwaramukanye amahoro mwese muteze amatwi\n\n",
-                              "attributes": []
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "image",
-          "model": {
-            "blocks": [
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Abarihimbye turi kumwe muri iki kiganiro, barabidusobanurira neza.",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Abarihimbye turi kumwe muri iki kiganiro, barabidusobanurira neza.",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Ibyo ni byo tugiye kuganiraho muri iki kiganiro",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Ibyo ni byo tugiye kuganiraho muri iki kiganiro",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "rawImage",
-                "model": {
-                  "width": 624,
-                  "height": 351,
-                  "locator": "1bed/test/e2f3a520-e137-11e9-b23c-f1ac9644bb55.jpg",
-                  "originCode": "cpsdevpb",
-                  "copyrightHolder": "BBC"
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "text",
-          "model": {
-            "blocks": [
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "Iki kiganiro mwagiteguriwe kandi murakigezwaho umuyobozi w'ishami rya BBC.",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "Iki kiganiro mwagiteguriwe kandi murakigezwaho ",
-                        "attributes": []
-                      }
-                    },
-                    {
-                      "type": "urlLink",
-                      "model": {
-                        "text": "umuyobozi w'ishami rya BBC",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "umuyobozi w'ishami rya BBC",
-                              "attributes": []
-                            }
-                          }
-                        ],
-                        "locator": "https://www.bbc.co.uk/weather",
-                        "isExternal": false
-                      }
-                    },
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": ".",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "video",
-          "model": {
-            "locator": "urn:bbc:pips:pid:p01k6msm",
-            "blocks": [
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Kumenya aho ivuye se aho iri ubu n'aho igana ho hifashe.",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Kumenya aho ivuye se aho iri ubu n'aho igana ho hifashe.",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "aresMedia",
-                "model": {
-                  "blocks": [
-                    {
-                      "blockId": "urn:bbc:ares::clip:p01k6msm",
-                      "type": "aresMediaMetadata",
-                      "model": {
-                        "id": "p01k6msm",
-                        "subType": "clip",
-                        "format": "audio_video",
-                        "title": "Five things ants can teach us about management",
-                        "synopses": {
-                          "short": "They may be tiny, but us humans could learn a thing or two from ants."
-                        },
-                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
-                        "imageCopyright": "BBC",
-                        "embedding": true,
-                        "advertising": true,
-                        "versions": [
-                          {
-                            "versionId": "p01k6msp",
-                            "types": ["Original"],
-                            "duration": 191,
-                            "durationISO8601": "PT3M11S",
-                            "warnings": {
-                              "short": "Contains strong language and adult humour.",
-                              "long": "Contains strong language and adult humour."
-                            },
-                            "availableTerritories": {
-                              "uk": true,
-                              "nonUk": true
-                            },
-                            "availableFrom": 1540218932000
-                          }
-                        ],
-                        "syndication": {
-                          "destinations": []
-                        }
-                      }
-                    },
-                    {
-                      "type": "image",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "rawImage",
-                            "model": {
-                              "width": 1920,
-                              "height": 1080,
-                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg",
-                              "originCode": "mpv",
-                              "copyrightHolder": "BBC"
-                            }
+  "data": {
+    "article": {
+      "content": {
+        "model": {
+          "blocks": [
+            {
+              "id": "518563c8",
+              "type": "headline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "cf20f9ad",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "bb2301ec",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "Mwaramukanye amahoro mwese muteze amatwi\n\n",
+                            "blocks": [
+                              {
+                                "id": "902694a6",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "Mwaramukanye amahoro mwese muteze amatwi\n\n",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
                           },
-                          {
-                            "type": "altText",
-                            "model": {
-                              "blocks": [
-                                {
-                                  "type": "text",
-                                  "model": {
-                                    "blocks": [
-                                      {
-                                        "type": "paragraph",
-                                        "model": {
-                                          "text": "Ants",
-                                          "blocks": [
-                                            {
-                                              "type": "fragment",
-                                              "model": {
-                                                "text": "Ants",
-                                                "attributes": []
-                                              }
-                                            }
-                                          ]
-                                        }
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      1,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                1
+              ]
+            },
+            {
+              "id": "ba430878",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "74c38e1c",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "ea773983",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "63ac440a",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Abarihimbye turi kumwe muri iki kiganiro, barabidusobanurira neza.",
+                                  "blocks": [
+                                    {
+                                      "id": "6b23a331",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Abarihimbye turi kumwe muri iki kiganiro, barabidusobanurira neza.",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        2,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  2,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            2,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      2,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "78bfb160",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "103691cc",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "06aea31e",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Ibyo ni byo tugiye kuganiraho muri iki kiganiro",
+                                  "blocks": [
+                                    {
+                                      "id": "15e3fde5",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Ibyo ni byo tugiye kuganiraho muri iki kiganiro",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        2,
+                                        2,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  2,
+                                  2,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            2,
+                            2,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      2,
+                      2
+                    ]
+                  },
+                  {
+                    "id": "59d5d756",
+                    "type": "rawImage",
+                    "model": {
+                      "width": 624,
+                      "height": 351,
+                      "locator": "1bed/test/e2f3a520-e137-11e9-b23c-f1ac9644bb55.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "BBC"
+                    },
+                    "position": [
+                      2,
+                      3
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                2
+              ]
+            },
+            {
+              "id": "dc154449",
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1562936358638,
+                "lastPublished": 1562936358638
+              },
+              "position": [
+                3
+              ]
+            },
+            {
+              "id": "925bd2dd",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "1a72e323",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Iki kiganiro mwagiteguriwe kandi murakigezwaho umuyobozi w'ishami rya BBC.",
+                      "blocks": [
+                        {
+                          "id": "a4652f28",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Iki kiganiro mwagiteguriwe kandi murakigezwaho ",
+                            "attributes": []
+                          },
+                          "position": [
+                            4,
+                            1,
+                            1
+                          ]
+                        },
+                        {
+                          "id": "1bf61dc5",
+                          "type": "urlLink",
+                          "model": {
+                            "text": "umuyobozi w'ishami rya BBC",
+                            "blocks": [
+                              {
+                                "id": "a5217f7d",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "umuyobozi w'ishami rya BBC",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  4,
+                                  1,
+                                  2,
+                                  1
+                                ]
+                              }
+                            ],
+                            "locator": "https://www.bbc.co.uk/weather",
+                            "isExternal": false
+                          },
+                          "position": [
+                            4,
+                            1,
+                            2
+                          ]
+                        },
+                        {
+                          "id": "615a5dbe",
+                          "type": "fragment",
+                          "model": {
+                            "text": ".",
+                            "attributes": []
+                          },
+                          "position": [
+                            4,
+                            1,
+                            3
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      4,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                4
+              ]
+            },
+            {
+              "id": "fe123334",
+              "type": "video",
+              "model": {
+                "locator": "urn:bbc:pips:pid:p01k6msm",
+                "blocks": [
+                  {
+                    "id": "d519218f",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "6f9e84d5",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "18c6291b",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Kumenya aho ivuye se aho iri ubu n'aho igana ho hifashe.",
+                                  "blocks": [
+                                    {
+                                      "id": "d22ff4c1",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Kumenya aho ivuye se aho iri ubu n'aho igana ho hifashe.",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        5,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  5,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            5,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      5,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "98ae787c",
+                    "type": "aresMedia",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "9690ae38",
+                          "blockId": "urn:bbc:ares::clip:p01k6msm",
+                          "type": "aresMediaMetadata",
+                          "model": {
+                            "id": "p01k6msm",
+                            "subType": "clip",
+                            "format": "audio_video",
+                            "title": "Five things ants can teach us about management",
+                            "synopses": {
+                              "short": "They may be tiny, but us humans could learn a thing or two from ants."
+                            },
+                            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+                            "imageCopyright": "BBC",
+                            "embedding": true,
+                            "advertising": true,
+                            "versions": [
+                              {
+                                "versionId": "p01k6msp",
+                                "types": [
+                                  "Original"
+                                ],
+                                "duration": 191,
+                                "durationISO8601": "PT3M11S",
+                                "warnings": {
+                                  "short": "Contains strong language and adult humour.",
+                                  "long": "Contains strong language and adult humour."
+                                },
+                                "availableTerritories": {
+                                  "uk": true,
+                                  "nonUk": true
+                                },
+                                "availableFrom": 1540218932000
+                              }
+                            ],
+                            "syndication": {
+                              "destinations": []
+                            },
+                            "smpKind": "programme"
+                          },
+                          "position": [
+                            5,
+                            2,
+                            1
+                          ]
+                        },
+                        {
+                          "id": "e6a40c4a",
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "89cee794",
+                                "type": "rawImage",
+                                "model": {
+                                  "width": 1920,
+                                  "height": 1080,
+                                  "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg",
+                                  "originCode": "mpv",
+                                  "copyrightHolder": "BBC"
+                                },
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  1
+                                ]
+                              },
+                              {
+                                "id": "e644c6bd",
+                                "type": "altText",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "8f9df1e3",
+                                      "type": "text",
+                                      "model": {
+                                        "blocks": [
+                                          {
+                                            "id": "e99ebc1d",
+                                            "type": "paragraph",
+                                            "model": {
+                                              "text": "Ants",
+                                              "blocks": [
+                                                {
+                                                  "id": "a209aea7",
+                                                  "type": "fragment",
+                                                  "model": {
+                                                    "text": "Ants",
+                                                    "attributes": []
+                                                  },
+                                                  "position": [
+                                                    5,
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    1,
+                                                    1,
+                                                    1
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            "position": [
+                                              5,
+                                              2,
+                                              2,
+                                              2,
+                                              1,
+                                              1
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      "position": [
+                                        5,
+                                        2,
+                                        2,
+                                        2,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  2
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            5,
+                            2,
+                            2
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      5,
+                      2
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                5
+              ]
+            },
+            {
+              "id": "c7091d2a",
+              "type": "subheadline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "7a7ea58a",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "86ec323a",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "Abarundi bari mu mishyikirano y'amahoro\n\n",
+                            "blocks": [
+                              {
+                                "id": "9a376e10",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "Abarundi bari mu mishyikirano y'amahoro\n\n",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  6,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            6,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      6,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                6
+              ]
+            },
+            {
+              "id": "f2f5cf7b",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "f4da397a",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "bfcfca0c",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "deaea0d8",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Footballers after a match",
+                                  "blocks": [
+                                    {
+                                      "id": "71886e53",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Footballers after a match",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        7,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  7,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            7,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      7,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "28aa9ab7",
+                    "type": "rawImage",
+                    "model": {
+                      "width": 2048,
+                      "height": 1152,
+                      "locator": "284c/test/37dd02c0-e138-11e9-b23c-f1ac9644bb55.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "Getty Images"
+                    },
+                    "position": [
+                      7,
+                      2
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                7
+              ]
+            },
+            {
+              "id": "f83f3ad4",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "5cb0fe74",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Izina Gahuzamiryango ninaho ryavuye, kwari uguhuza imiryango babisabwe n'uwari umuyobozi w'ishami.\n\n\n\n.",
+                      "blocks": [
+                        {
+                          "id": "9e53eb58",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Izina Gahuzamiryango ninaho ryavuye, kwari uguhuza imiryango babisabwe n'uwari umuyobozi w'ishami.\n\n\n\n.",
+                            "attributes": []
+                          },
+                          "position": [
+                            8,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      8,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                8
+              ]
+            },
+            {
+              "id": "cf3cbe13",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                9
+              ]
+            },
+            {
+              "id": "9a77a7e0",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                10
+              ]
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "id": "urn:bbc:ares::article:cey23zx8wx8o",
+        "locators": {
+          "optimoUrn": "urn:bbc:optimo:asset:cey23zx8wx8o",
+          "canonicalUrl": "https://www.bbc.com/gahuza/articles/cey23zx8wx8o"
+        },
+        "type": "article",
+        "createdBy": "Gahuza",
+        "language": "rw",
+        "firstPublished": 1562936358638,
+        "lastPublished": 1562936358638,
+        "analyticsLabels": {
+          "producer": "Gahuza",
+          "page": "gahuza.articles.cey23zx8wx8o.page"
+        },
+        "passport": {
+          "language": "rw",
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Gahuza",
+          "taggings": []
+        },
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment",
+          "image",
+          "caption",
+          "altText",
+          "rawImage",
+          "urlLink",
+          "video",
+          "subheadline",
+          "aresMedia"
+        ],
+        "allowAdvertising": true
+      },
+      "promo": {
+        "headlines": {
+          "seoHeadline": "Abarihimbye turi kumwe muri iki kiganiro barabidusobanurira neza."
+        }
+      }
+    },
+    "secondaryData": {
+      "topStories": [
+        {
+          "headlines": {
+            "headline": "Intambara yo kubohoza ikivuko ca Hudaydah yatanguye muri Yemen"
+          },
+          "locators": {
+            "assetUri": "/gahuza/23204135",
+            "cpsUrn": "urn:bbc:content:assetUri:gahuza/23204135",
+            "curie": "http://www.bbc.co.uk/asset/9a5c4dba-11be-f24e-911f-b8eb7a4c3dc0",
+            "assetId": "23204135"
+          },
+          "summary": "Urunani rurongowe na Arabia Saudite rwatanguye ibitero ku kivuko gifise akamaro kanini muri Yemen ca Hudaydah, kiri mu minwe y'abagwani.",
+          "timestamp": 1528888682000,
+          "language": "rw",
+          "passport": {
+            "category": {
+              "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+              "categoryName": "News"
+            },
+            "taggings": []
+          },
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63681333",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/8226/test/_63681333_002564611-1.jpg",
+            "path": "/cpsdevpb/8226/test/_63681333_002564611-1.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "ikivuko ca Hudaydah",
+            "caption": "Ikivuko ca Hudaydah muri Yemen kiriko kiragwanirwa",
+            "copyrightHolder": "AFP/Getty",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "prominence": "maximum",
+          "section": {
+            "subType": "IDX",
+            "name": "Urupapuro rw'itangiriro",
+            "uri": "/gahuza/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:gahuza/23204135",
+          "type": "cps"
+        }
+      ],
+      "features": [
+        {
+          "headlines": {
+            "headline": "gfggghfghdghd"
+          },
+          "locators": {
+            "assetUri": "/gahuza/amakuru-23029740",
+            "cpsUrn": "urn:bbc:content:assetUri:gahuza/amakuru-23029740",
+            "curie": "http://www.bbc.co.uk/asset/d39ed048-9ec0-c946-adbe-4d92f698f14a",
+            "assetId": "23029740"
+          },
+          "summary": "ffdgdghfhfhfghdfgdfgdgdhdfg",
+          "timestamp": 1457956554000,
+          "language": "rw",
+          "cpsType": "PGL",
+          "indexImage": {
+            "id": "63477338",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/145B1/test/_63477338_63477331.jpg",
+            "path": "/cpsdevpb/145B1/test/_63477338_63477331.jpg",
+            "height": 576,
+            "width": 1024,
+            "altText": "vcgfghfgh",
+            "caption": "fghgfhgghfgh",
+            "copyrightHolder": "AP",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "id": "urn:bbc:ares::asset:gahuza/amakuru-23029740",
+          "type": "cps"
         },
         {
-          "type": "subheadline",
-          "model": {
-            "blocks": [
-              {
-                "type": "text",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "paragraph",
-                      "model": {
-                        "text": "Abarundi bari mu mishyikirano y'amahoro\n\n",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "Abarundi bari mu mishyikirano y'amahoro\n\n",
-                              "attributes": []
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
+          "headlines": {
+            "headline": "Ifarasi iramenya ko umuntu ashavuye canke anezerewe"
+          },
+          "locators": {
+            "assetUri": "/gahuza/amakuru-23022558",
+            "cpsUrn": "urn:bbc:content:assetUri:gahuza/amakuru-23022558",
+            "curie": "http://www.bbc.co.uk/asset/cbe19d17-dbda-fa48-9f27-37752e0752ac",
+            "assetId": "23022558"
+          },
+          "summary": "Abategetsi bo mu bushikiranganji bw’imigenderanire bwa Amerika, bavuga ko babonye ivyemeza ko reta y’Urwanda ifise uruhara mu mabi amaze imisi akorerwa mu gihugu kibanyi c’Uburundi.",
+          "timestamp": 1455192628000,
+          "language": "rw",
+          "passport": {
+            "category": {
+              "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+              "categoryName": "News"
+            },
+            "taggings": []
+          },
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63473858",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/14F4D/test/_63473858_141022192445_paul_kagame_640x360_reuters_nocredit.jpg",
+            "path": "/cpsdevpb/14F4D/test/_63473858_141022192445_paul_kagame_640x360_reuters_nocredit.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Prezida w'Urwanda Paul Kagame",
+            "caption": "Prezida w'Urwanda Paul Kagame",
+            "copyrightHolder": "Reuters",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "id": "urn:bbc:ares::asset:gahuza/amakuru-23022558",
+          "type": "cps"
         },
         {
-          "type": "image",
-          "model": {
-            "blocks": [
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
+          "headlines": {
+            "headline": "Ifarasi iramenya ko umuntu ashavuye canke anezerewe 1"
+          },
+          "locators": {
+            "assetUri": "/gahuza/amakuru-23022559",
+            "cpsUrn": "urn:bbc:content:assetUri:gahuza/amakuru-23022559",
+            "curie": "http://www.bbc.co.uk/asset/7f823991-068a-3d4c-bfb6-1e0338defff9",
+            "assetId": "23022559"
+          },
+          "summary": "Abategetsi bo mu bushikiranganji bw’imigenderanire bwa Amerika, bavuga ko babonye ivyemeza ko reta y’Urwanda ifise uruhara mu mabi amaze imisi akorerwa mu gihugu kibanyi c’Uburundi.",
+          "timestamp": 1455192646000,
+          "language": "rw",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63473858",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/14F4D/test/_63473858_141022192445_paul_kagame_640x360_reuters_nocredit.jpg",
+            "path": "/cpsdevpb/14F4D/test/_63473858_141022192445_paul_kagame_640x360_reuters_nocredit.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Prezida w'Urwanda Paul Kagame",
+            "caption": "Prezida w'Urwanda Paul Kagame",
+            "copyrightHolder": "Reuters",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "id": "urn:bbc:ares::asset:gahuza/amakuru-23022559",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Ifarasi iramenya ko umuntu ashavuye canke anezerewe 2"
+          },
+          "locators": {
+            "assetUri": "/gahuza/amakuru-23022560",
+            "cpsUrn": "urn:bbc:content:assetUri:gahuza/amakuru-23022560",
+            "curie": "http://www.bbc.co.uk/asset/637ee7f1-e6ce-da4b-b2a9-50342b8d2c37",
+            "assetId": "23022560"
+          },
+          "summary": "Abategetsi bo mu bushikiranganji bw’imigenderanire bwa Amerika, bavuga ko babonye ivyemeza ko reta y’Urwanda ifise uruhara mu mabi amaze imisi akorerwa mu gihugu kibanyi c’Uburundi.",
+          "timestamp": 1455192682000,
+          "language": "rw",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63473858",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/14F4D/test/_63473858_141022192445_paul_kagame_640x360_reuters_nocredit.jpg",
+            "path": "/cpsdevpb/14F4D/test/_63473858_141022192445_paul_kagame_640x360_reuters_nocredit.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Prezida w'Urwanda Paul Kagame",
+            "caption": "Prezida w'Urwanda Paul Kagame",
+            "copyrightHolder": "Reuters",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "id": "urn:bbc:ares::asset:gahuza/amakuru-23022560",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Urwanda rurafise uruhara mu bwicanyi bubera mu Burundi 8"
+          },
+          "locators": {
+            "assetUri": "/gahuza/amakuru-23022516",
+            "cpsUrn": "urn:bbc:content:assetUri:gahuza/amakuru-23022516",
+            "curie": "http://www.bbc.co.uk/asset/f7843f99-6411-c342-a0aa-1b14cea693c7",
+            "assetId": "23022516"
+          },
+          "summary": "Abategetsi bo mu bushikiranganji bw’imigenderanire bwa Amerika, bavuga ko babonye ivyemeza ko reta y’Urwanda ifise uruhara mu mabi amaze imisi akorerwa mu gihugu kibanyi c’Uburundi.",
+          "timestamp": 1455191114000,
+          "language": "rw",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63473858",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/14F4D/test/_63473858_141022192445_paul_kagame_640x360_reuters_nocredit.jpg",
+            "path": "/cpsdevpb/14F4D/test/_63473858_141022192445_paul_kagame_640x360_reuters_nocredit.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Prezida w'Urwanda Paul Kagame",
+            "caption": "Prezida w'Urwanda Paul Kagame",
+            "copyrightHolder": "Reuters",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "id": "urn:bbc:ares::asset:gahuza/amakuru-23022516",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Urwanda rurafise uruhara mu bwicanyi bubera mu Burundi 7"
+          },
+          "locators": {
+            "assetUri": "/gahuza/amakuru-23022515",
+            "cpsUrn": "urn:bbc:content:assetUri:gahuza/amakuru-23022515",
+            "curie": "http://www.bbc.co.uk/asset/d09d522a-ec48-df4f-bc73-e5555ca45269",
+            "assetId": "23022515"
+          },
+          "summary": "Abategetsi bo mu bushikiranganji bw’imigenderanire bwa Amerika, bavuga ko babonye ivyemeza ko reta y’Urwanda ifise uruhara mu mabi amaze imisi akorerwa mu gihugu kibanyi c’Uburundi.",
+          "timestamp": 1455191098000,
+          "language": "rw",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63473858",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/14F4D/test/_63473858_141022192445_paul_kagame_640x360_reuters_nocredit.jpg",
+            "path": "/cpsdevpb/14F4D/test/_63473858_141022192445_paul_kagame_640x360_reuters_nocredit.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Prezida w'Urwanda Paul Kagame",
+            "caption": "Prezida w'Urwanda Paul Kagame",
+            "copyrightHolder": "Reuters",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "id": "urn:bbc:ares::asset:gahuza/amakuru-23022515",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Amaziko ya Turabi yitabwe n'ibihumbi"
+          },
+          "locators": {
+            "assetUri": "/gahuza/amakuru-23028132",
+            "cpsUrn": "urn:bbc:content:assetUri:gahuza/amakuru-23028132",
+            "curie": "http://www.bbc.co.uk/asset/0dab09b3-f68e-7045-b558-935b960a026c",
+            "assetId": "23028132"
+          },
+          "summary": "Guhamba Hassan al Turabi kwitabiriwe cyane",
+          "timestamp": 1457355910000,
+          "language": "rw",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63476705",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/C64F/test/_63476705_tv000123786.jpg",
+            "path": "/cpsdevpb/C64F/test/_63476705_tv000123786.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Hassan al Turabi yashyinguwe",
+            "caption": "Turabi yashyinguwe",
+            "copyrightHolder": "AP",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "id": "urn:bbc:ares::asset:gahuza/amakuru-23028132",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Buhari avuga ku ifaranga rya Naira 12"
+          },
+          "locators": {
+            "assetUri": "/gahuza/amakuru-23058546",
+            "cpsUrn": "urn:bbc:content:assetUri:gahuza/amakuru-23058546",
+            "curie": "http://www.bbc.co.uk/asset/f9b4fbd2-e469-8f49-b1d1-e177dfa1d5a1",
+            "assetId": "23058546"
+          },
+          "summary": "Igwa ry'ibiciro bya peteroli ku isi ryatumye agaciro k'ifaranga rya Naira rikoreshwa muri Nigeria kagwa mu bavunja amafaranga mu buryo butemewe n'amategeko.",
+          "timestamp": 1467896589000,
+          "language": "rw",
+          "cpsType": "MAP",
+          "media": {
+            "id": "63305311",
+            "subType": "index",
+            "format": "video",
+            "externalId": "p00zc1p4",
+            "duration": "PT2M13S",
+            "caption": "ඉන්දියාවේ බැංගලෝර් නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.",
+            "image": {
+              "id": "63305311",
+              "subType": "thumbnail",
+              "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63302000/jpg/_63302851_63302850.jpg",
+              "path": "/tmcs/media/images/63302000/jpg/_63302851_63302850.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "Facebook 1bn graphic",
+              "copyrightHolder": "BBC",
+              "type": "image"
+            },
+            "embedding": false,
+            "available": true,
+            "live": false,
+            "type": "version"
+          },
+          "indexImage": {
+            "id": "63302853",
+            "subType": "index",
+            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63302000/jpg/_63302853_63302850.jpg",
+            "path": "/tmcs/media/images/63302000/jpg/_63302853_63302850.jpg",
+            "height": 360,
+            "width": 640,
+            "altText": "Facebook 1bn graphic",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63302857",
+            "subType": "index-thumbnail",
+            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63302000/jpg/_63302857_63302855.jpg",
+            "path": "/tmcs/media/images/63302000/jpg/_63302857_63302855.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Facebook 'Like' button",
+            "copyrightHolder": "Agency",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "id": "urn:bbc:ares::asset:gahuza/amakuru-23058546",
+          "type": "cps"
+        }
+      ],
+      "mostRead": {
+        "generated": "2023-02-17T21:22:56.595Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
+        "totalRecords": 20,
+        "records": [
+          {
+            "id": "c0b02898-33a9-f044-ba46-4fa61d88be34",
+            "rank": 1,
+            "count": 9910,
+            "urn": "urn:bbc:curie:asset:c0b02898-33a9-f044-ba46-4fa61d88be34",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "normal gallery",
+                "headline": "normal gallery"
+              },
+              "locators": {
+                "assetUri": "/amharic/23132863",
+                "cpsUrn": "urn:bbc:content:assetUri:amharic/23132863",
+                "curie": "http://www.bbc.co.uk/asset/c0b02898-33a9-f044-ba46-4fa61d88be34",
+                "assetId": "23132863"
+              },
+              "summary": "africa rising",
+              "timestamp": 1497449200000,
+              "language": "am",
+              "indexImage": {
+                "id": "63542556",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/FFF4/test/_63542556_mediaitem63542555.jpg",
+                "path": "/cpsdevpb/FFF4/test/_63542556_mediaitem63542555.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "ethiopia glowing",
+                "caption": "artalea",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:amharic/23132863",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "d09d522a-ec48-df4f-bc73-e5555ca45269",
+            "rank": 2,
+            "count": 8571,
+            "urn": "urn:bbc:curie:asset:d09d522a-ec48-df4f-bc73-e5555ca45269",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Urwanda rurafise uruhara mu bwicanyi bubera mu Burundi 7",
+                "headline": "Urwanda rurafise uruhara mu bwicanyi bubera mu Burundi 7"
+              },
+              "locators": {
+                "assetUri": "/gahuza/amakuru-23022515",
+                "cpsUrn": "urn:bbc:content:assetUri:gahuza/amakuru-23022515",
+                "curie": "http://www.bbc.co.uk/asset/d09d522a-ec48-df4f-bc73-e5555ca45269",
+                "assetId": "23022515"
+              },
+              "summary": "Abategetsi bo mu bushikiranganji bw’imigenderanire bwa Amerika, bavuga ko babonye ivyemeza ko reta y’Urwanda ifise uruhara mu mabi amaze imisi akorerwa mu gihugu kibanyi c’Uburundi.",
+              "timestamp": 1455191098000,
+              "language": "rw",
+              "indexImage": {
+                "id": "63473858",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/14F4D/test/_63473858_141022192445_paul_kagame_640x360_reuters_nocredit.jpg",
+                "path": "/cpsdevpb/14F4D/test/_63473858_141022192445_paul_kagame_640x360_reuters_nocredit.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Prezida w'Urwanda Paul Kagame",
+                "caption": "Prezida w'Urwanda Paul Kagame",
+                "copyrightHolder": "Reuters",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:gahuza/amakuru-23022515",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "cd7a9ec0-4819-8046-90f1-26bece38f362",
+            "rank": 3,
+            "count": 7615,
+            "urn": "urn:bbc:curie:asset:cd7a9ec0-4819-8046-90f1-26bece38f362",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Zahinduye imirishyo muri CAF",
+                "headline": "Zahinduye imirishyo muri CAF"
+              },
+              "locators": {
+                "assetUri": "/gahuza/imikino-23108996",
+                "cpsUrn": "urn:bbc:content:assetUri:gahuza/imikino-23108996",
+                "curie": "http://www.bbc.co.uk/asset/cd7a9ec0-4819-8046-90f1-26bece38f362",
+                "assetId": "23108996"
+              },
+              "summary": "Zahinduye imirishyo muri CAF Issa Hayatou arasezererwa",
+              "timestamp": 1489744358000,
+              "language": "rw",
+              "indexImage": {
+                "id": "63531179",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/17B59/test/_63531179_5b58fee3-63e9-4c82-a5a8-5d56eb7bfbd9.jpg",
+                "path": "/cpsdevpb/17B59/test/_63531179_5b58fee3-63e9-4c82-a5a8-5d56eb7bfbd9.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Umukuru mushya wa CAF",
+                "copyrightHolder": "AFP",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:gahuza/imikino-23108996",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "d39ed048-9ec0-c946-adbe-4d92f698f14a",
+            "rank": 4,
+            "count": 7262,
+            "urn": "urn:bbc:curie:asset:d39ed048-9ec0-c946-adbe-4d92f698f14a",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "gfggghfghdghd",
+                "headline": "gfggghfghdghd"
+              },
+              "locators": {
+                "assetUri": "/gahuza/amakuru-23029740",
+                "cpsUrn": "urn:bbc:content:assetUri:gahuza/amakuru-23029740",
+                "curie": "http://www.bbc.co.uk/asset/d39ed048-9ec0-c946-adbe-4d92f698f14a",
+                "assetId": "23029740"
+              },
+              "summary": "ffdgdghfhfhfghdfgdfgdgdhdfg",
+              "timestamp": 1457956554000,
+              "language": "rw",
+              "indexImage": {
+                "id": "63477338",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/145B1/test/_63477338_63477331.jpg",
+                "path": "/cpsdevpb/145B1/test/_63477338_63477331.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "vcgfghfgh",
+                "caption": "fghgfhgghfgh",
+                "copyrightHolder": "AP",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:gahuza/amakuru-23029740",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "cbe19d17-dbda-fa48-9f27-37752e0752ac",
+            "rank": 5,
+            "count": 7253,
+            "urn": "urn:bbc:curie:asset:cbe19d17-dbda-fa48-9f27-37752e0752ac",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Ifarasi iramenya ko umuntu ashavuye canke anezerewe",
+                "headline": "Ifarasi iramenya ko umuntu ashavuye canke anezerewe"
+              },
+              "locators": {
+                "assetUri": "/gahuza/amakuru-23022558",
+                "cpsUrn": "urn:bbc:content:assetUri:gahuza/amakuru-23022558",
+                "curie": "http://www.bbc.co.uk/asset/cbe19d17-dbda-fa48-9f27-37752e0752ac",
+                "assetId": "23022558"
+              },
+              "summary": "Abategetsi bo mu bushikiranganji bw’imigenderanire bwa Amerika, bavuga ko babonye ivyemeza ko reta y’Urwanda ifise uruhara mu mabi amaze imisi akorerwa mu gihugu kibanyi c’Uburundi.",
+              "timestamp": 1455192628000,
+              "language": "rw",
+              "indexImage": {
+                "id": "63473858",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/14F4D/test/_63473858_141022192445_paul_kagame_640x360_reuters_nocredit.jpg",
+                "path": "/cpsdevpb/14F4D/test/_63473858_141022192445_paul_kagame_640x360_reuters_nocredit.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Prezida w'Urwanda Paul Kagame",
+                "caption": "Prezida w'Urwanda Paul Kagame",
+                "copyrightHolder": "Reuters",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:gahuza/amakuru-23022558",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "158c4355-879e-074c-aeb2-3cdcb5d82b21",
+            "rank": 6,
+            "count": 7168,
+            "urn": "urn:bbc:curie:asset:158c4355-879e-074c-aeb2-3cdcb5d82b21",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Imyiyerekano yo kwiyamiriza abimukira muri Afrika yapfo",
+                "headline": "Imyiyerekano ikaze yo kwiyamiriza abimukira muri Afrika yapfo"
+              },
+              "locators": {
+                "assetUri": "/gahuza/amakuru-23103488",
+                "cpsUrn": "urn:bbc:content:assetUri:gahuza/amakuru-23103488",
+                "curie": "http://www.bbc.co.uk/asset/158c4355-879e-074c-aeb2-3cdcb5d82b21",
+                "assetId": "23103488"
+              },
+              "summary": "Igipolisi ca Afrika yepfo cakoresheje amasasu ya plastique mu gushwiragiza abari mu migumuko.",
+              "timestamp": 1487945198000,
+              "language": "rw",
+              "indexImage": {
+                "id": "63529775",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/E1C0/test/_63529775_76cbc2bd-5901-46b5-9216-7a8f2a8be9d3.jpg",
+                "path": "/cpsdevpb/E1C0/test/_63529775_76cbc2bd-5901-46b5-9216-7a8f2a8be9d3.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Umunya Somali afise ibuye atabawe n'abapolisi",
+                "caption": "Umunya Somali afise ibuye atabawe n'abapolisi",
+                "copyrightHolder": "AFP",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:gahuza/amakuru-23103488",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "0dab09b3-f68e-7045-b558-935b960a026c",
+            "rank": 7,
+            "count": 7102,
+            "urn": "urn:bbc:curie:asset:0dab09b3-f68e-7045-b558-935b960a026c",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Amaziko ya Turabi yitabwe n'ibihumbi",
+                "headline": "Amaziko ya Turabi yitabwe n'ibihumbi"
+              },
+              "locators": {
+                "assetUri": "/gahuza/amakuru-23028132",
+                "cpsUrn": "urn:bbc:content:assetUri:gahuza/amakuru-23028132",
+                "curie": "http://www.bbc.co.uk/asset/0dab09b3-f68e-7045-b558-935b960a026c",
+                "assetId": "23028132"
+              },
+              "summary": "Guhamba Hassan al Turabi kwitabiriwe cyane",
+              "timestamp": 1457355910000,
+              "language": "rw",
+              "indexImage": {
+                "id": "63476705",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/C64F/test/_63476705_tv000123786.jpg",
+                "path": "/cpsdevpb/C64F/test/_63476705_tv000123786.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Hassan al Turabi yashyinguwe",
+                "caption": "Turabi yashyinguwe",
+                "copyrightHolder": "AP",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:gahuza/amakuru-23028132",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "7c127ba9-5dc9-b94c-9a8c-9013f5676482",
+            "rank": 8,
+            "count": 7090,
+            "urn": "urn:bbc:curie:asset:7c127ba9-5dc9-b94c-9a8c-9013f5676482",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Irahira rya perezida mushya wa Somalia",
+                "headline": "Irahira rya perezida mushya wa Somalia"
+              },
+              "locators": {
+                "assetUri": "/gahuza/23103478",
+                "cpsUrn": "urn:bbc:content:assetUri:gahuza/23103478",
+                "curie": "http://www.bbc.co.uk/asset/7c127ba9-5dc9-b94c-9a8c-9013f5676482",
+                "assetId": "23103478"
+              },
+              "summary": "Perezida mushya wa Somalia - Mohamed Abdullahi Farmajo - ararahira uyu munsi mu muhango ubera mu murwa mukuru, Mogadishu.",
+              "timestamp": 1487944935000,
+              "language": "rw",
+              "indexImage": {
+                "id": "63529766",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/104E8/test/_63529766_41883ab5-113d-4cc4-8feb-76438971809f.jpg",
+                "path": "/cpsdevpb/104E8/test/_63529766_41883ab5-113d-4cc4-8feb-76438971809f.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Somalia mu matora",
+                "caption": "Umukuru wa Somalia",
+                "copyrightHolder": "AFP",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:gahuza/23103478",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "783b9817-289e-4a41-a1c0-9b74f7a135fa",
+            "rank": 9,
+            "count": 6794,
+            "urn": "urn:bbc:curie:asset:783b9817-289e-4a41-a1c0-9b74f7a135fa",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "hdfha wheihiho ihfiohflkndl",
+                "headline": "hdfha wheihiho ihfiohflkndl"
+              },
+              "locators": {
+                "assetUri": "/news/uk-23145804",
+                "cpsUrn": "urn:bbc:content:assetUri:news/uk-23145804",
+                "curie": "http://www.bbc.co.uk/asset/783b9817-289e-4a41-a1c0-9b74f7a135fa",
+                "assetId": "23145804"
+              },
+              "summary": "hisdp asodpkpo sdo hieh oiwheriwei hoia sheiroawepr hpawhe tpawetansdho iw",
+              "timestamp": 1502080082000,
+              "language": "en-gb",
+              "byline": {
+                "name": "Donald Brilliant",
+                "title": "SUPER REPORTER",
+                "persons": [
+                  {
+                    "name": "Aastha Dabral",
+                    "function": "Graphics Designer"
+                  }
+                ]
+              },
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": [],
+                "predicates": {
+                  "about": [
                     {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Footballers after a match",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Footballers after a match",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
+                      "value": "http://www.bbc.co.uk/things/c7c7fcfe-5246-434e-9422-cdc925fe3a79#id",
+                      "thingLabel": "Donald Trump",
+                      "thingUri": "http://www.bbc.co.uk/things/c7c7fcfe-5246-434e-9422-cdc925fe3a79#id",
+                      "thingId": "c7c7fcfe-5246-434e-9422-cdc925fe3a79",
+                      "thingType": [
+                        "core:Person",
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "tagging:Agent",
+                        "tagging:AmbiguousTerm"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Donald_Trump"
+                      ],
+                      "thingEnglishLabel": "Donald Trump",
+                      "type": "about"
                     }
                   ]
                 }
               },
-              {
-                "type": "rawImage",
-                "model": {
-                  "width": 2048,
-                  "height": 1152,
-                  "locator": "284c/test/37dd02c0-e138-11e9-b23c-f1ac9644bb55.jpg",
-                  "originCode": "cpsdevpb",
-                  "copyrightHolder": "Getty Images"
-                }
-              }
-            ]
+              "indexImage": {
+                "id": "63580733",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/83AC/test/_63580733_8989fcc4-dfb7-4c5b-9317-a1e52a61318b.jpg",
+                "path": "/cpsdevpb/83AC/test/_63580733_8989fcc4-dfb7-4c5b-9317-a1e52a61318b.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Justin",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:news/uk-23145804",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "32d0799d-2a12-724a-beae-0497131caba9",
+            "rank": 10,
+            "count": 6582,
+            "urn": "urn:bbc:curie:asset:32d0799d-2a12-724a-beae-0497131caba9",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Burundi: Nta byobo rusange birimo imirambo",
+                "headline": "Burundi: Icyegeranyo cya leta kiravuga ko byobo rusange birimo imirambo"
+              },
+              "locators": {
+                "assetUri": "/gahuza/amakuru-23029098",
+                "cpsUrn": "urn:bbc:content:assetUri:gahuza/amakuru-23029098",
+                "curie": "http://www.bbc.co.uk/asset/32d0799d-2a12-724a-beae-0497131caba9",
+                "assetId": "23029098"
+              },
+              "summary": "Leta y'uBurundi yasohoye icyegeranyo ku iperereza ry'ibyobo rusange bivugwa leta yahambye abantu.",
+              "timestamp": 1457703669000,
+              "language": "rw",
+              "indexImage": {
+                "id": "63477218",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/13D7D/test/_63477218_027182704-1.jpg",
+                "path": "/cpsdevpb/13D7D/test/_63477218_027182704-1.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Perezida Pierre Nkurunziza",
+                "caption": "Perezida Nkurunziza arangije inama",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:gahuza/amakuru-23029098",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "583e3dbc-30f5-ca48-8144-b95a2d51fb6e",
+            "rank": 11,
+            "count": 6572,
+            "urn": "urn:bbc:curie:asset:583e3dbc-30f5-ca48-8144-b95a2d51fb6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Ivyo abarokotse kuri Grand-Bassam babonye",
+                "headline": "Ivyo abarokotse kuri Grand-Bassam babonye"
+              },
+              "locators": {
+                "assetUri": "/gahuza/amakuru-23029737",
+                "cpsUrn": "urn:bbc:content:assetUri:gahuza/amakuru-23029737",
+                "curie": "http://www.bbc.co.uk/asset/583e3dbc-30f5-ca48-8144-b95a2d51fb6e",
+                "assetId": "23029737"
+              },
+              "summary": "Umugore w'umunya Cote d'Ivoire yavuze ko yitiranije abagavye ico gitero b'abo mu nzego z'umutekano mu gihe bariko baregera aho ari -kugeza batanguye kurasa abantu babegereye.",
+              "timestamp": 1457955619000,
+              "language": "rw",
+              "byline": {
+                "name": "jgjgjgjgjgj",
+                "title": "BBC Sport",
+                "persons": [
+                  {
+                    "name": "Abigail Kemp",
+                    "function": "BBC Sport",
+                    "thumbnail": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63452000/jpg/_63452278__74729197_74725138.jpg",
+                    "twitterName": "www.twitter.com/wwwww"
+                  }
+                ]
+              },
+              "indexImage": {
+                "id": "63477309",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/16109/test/_63477309_031971431-1.jpg",
+                "path": "/cpsdevpb/16109/test/_63477309_031971431-1.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "dggjgujfyff",
+                "caption": "jhjggffff",
+                "copyrightHolder": "AP",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:gahuza/amakuru-23029737",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "e4203a99-13ad-e44e-bc46-2597c04b1923",
+            "rank": 12,
+            "count": 6193,
+            "urn": "urn:bbc:curie:asset:e4203a99-13ad-e44e-bc46-2597c04b1923",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Trump yiyemeje guhagarika amasezerano ya nucleaire 2",
+                "headline": "Amerika: DonaldTrump yiyemeje guhagarika amasezerano ya nucleaire"
+              },
+              "locators": {
+                "assetUri": "/gahuza/amakuru-23030819",
+                "cpsUrn": "urn:bbc:content:assetUri:gahuza/amakuru-23030819",
+                "curie": "http://www.bbc.co.uk/asset/e4203a99-13ad-e44e-bc46-2597c04b1923",
+                "assetId": "23030819"
+              },
+              "summary": "Uwushaka kwitoza mu kibanza c'umukuru w'igihugu mu mugambwe w'aba republicains muri Amerika, Donald Trump, yiyemeje gufuta amasezerano y'ibirwanisho vy'ubumara",
+              "timestamp": 1458646353000,
+              "language": "rw",
+              "indexImage": {
+                "id": "63477693",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/9AFD/test/_63477693_032109814-1.jpg",
+                "path": "/cpsdevpb/9AFD/test/_63477693_032109814-1.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Donald Trump yiyamamaza",
+                "caption": "Donald Trump yiyamamaza muri Amerika",
+                "copyrightHolder": "Reuters",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:gahuza/amakuru-23030819",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "82b05cba-23c4-654b-bcfe-ac879b7bc3ff",
+            "rank": 13,
+            "count": 5958,
+            "urn": "urn:bbc:curie:asset:82b05cba-23c4-654b-bcfe-ac879b7bc3ff",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Amatora muri DR Congo: 17 bapfuye",
+                "headline": "Amatora muri DR Congo: 17 bapfiriye mu myigaragambyo yamagana Kabila"
+              },
+              "locators": {
+                "assetUri": "/gahuza/amakuru-23075734",
+                "cpsUrn": "urn:bbc:content:assetUri:gahuza/amakuru-23075734",
+                "curie": "http://www.bbc.co.uk/asset/82b05cba-23c4-654b-bcfe-ac879b7bc3ff",
+                "assetId": "23075734"
+              },
+              "summary": "Muungano mkuu wa upinzani nchini Jamhuri ya Demokrasia ya Congo unasema kuwa zaidi ya watu 50 waliuawa wakati wa mandamano ya kumpinga rais Joseph Kabila siku ya Jumatatu mjini Kinshasa.",
+              "timestamp": 1474368181000,
+              "language": "rw",
+              "indexImage": {
+                "id": "63509716",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/F15E/test/_63509716_mediaitem63509715.jpg",
+                "path": "/cpsdevpb/F15E/test/_63509716_mediaitem63509715.jpg",
+                "height": 1152,
+                "width": 2048,
+                "altText": "Nkurunziza",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:gahuza/amakuru-23075734",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "7f7ccba2-82e2-dc46-b757-8f74d206281b",
+            "rank": 14,
+            "count": 5726,
+            "urn": "urn:bbc:curie:asset:7f7ccba2-82e2-dc46-b757-8f74d206281b",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Erdogan yahigiye abakora iterabwoba",
+                "headline": "Turkish Recep Tayeb Erdogan yahigiye abakora iterabwoba"
+              },
+              "locators": {
+                "assetUri": "/gahuza/amakuru-23029715",
+                "cpsUrn": "urn:bbc:content:assetUri:gahuza/amakuru-23029715",
+                "curie": "http://www.bbc.co.uk/asset/7f7ccba2-82e2-dc46-b757-8f74d206281b",
+                "assetId": "23029715"
+              },
+              "summary": "Bugize gatatu haba ibitero nka bene ico muri Turkiya muri ano mezi make aheze.",
+              "timestamp": 1457953963000,
+              "language": "rw",
+              "byline": {
+                "name": "dkdkdk d",
+                "title": "dfdfd",
+                "persons": [
+                  {
+                    "name": "Aaron Strutt",
+                    "function": "Deporte",
+                    "url": "/news/system/google_sitemap",
+                    "correspondentId": "Google sitemap",
+                    "thumbnail": "http://b.files.bbci.co.uk/4373/test/_63476271_images-1.jpg"
+                  }
+                ]
+              },
+              "indexImage": {
+                "id": "63477298",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/15CBD/test/_63477298_031971118-1.jpg",
+                "path": "/cpsdevpb/15CBD/test/_63477298_031971118-1.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Igituro catewe caciye",
+                "caption": "Igituro catewe caciye cugarwa, abajejwe gutabara bagerageza gufasha abakomeretse.",
+                "copyrightHolder": "AFP",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:gahuza/amakuru-23029715",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "ff0ecb8b-68e3-ac45-8327-d06ee5aec706",
+            "rank": 15,
+            "count": 5459,
+            "urn": "urn:bbc:curie:asset:ff0ecb8b-68e3-ac45-8327-d06ee5aec706",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Abantu 16 bicishijwe imihoro n'amashoka i Beni",
+                "headline": "Abantu 16 bicishijwe imihoro n'amashoka i Beni dd dkdk dkdkd"
+              },
+              "locators": {
+                "assetUri": "/gahuza/amakuru-23038412",
+                "cpsUrn": "urn:bbc:content:assetUri:gahuza/amakuru-23038412",
+                "curie": "http://www.bbc.co.uk/asset/ff0ecb8b-68e3-ac45-8327-d06ee5aec706",
+                "assetId": "23038412"
+              },
+              "summary": "Abantu bitwaje imihoro n'amashoka bishe abantu 16 mu burasirazuba bwa Republika Iharanira Demokarasi ya Congo.",
+              "timestamp": 1462445464000,
+              "language": "rw",
+              "indexImage": {
+                "id": "63482939",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/16EE8/test/_63482939_032775754-2.jpg",
+                "path": "/cpsdevpb/16EE8/test/_63482939_032775754-2.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "barack obama",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:gahuza/amakuru-23038412",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "4dcadf8f-89ae-7341-b6e4-36c5a03b3b20",
+            "rank": 16,
+            "count": 5294,
+            "urn": "urn:bbc:curie:asset:4dcadf8f-89ae-7341-b6e4-36c5a03b3b20",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Abou Diaby buca asubira mu kibuga 1",
+                "headline": "Abou Diaby buca asubira mu kibuga 1"
+              },
+              "locators": {
+                "assetUri": "/gahuza/amakuru-23022537",
+                "cpsUrn": "urn:bbc:content:assetUri:gahuza/amakuru-23022537",
+                "curie": "http://www.bbc.co.uk/asset/4dcadf8f-89ae-7341-b6e4-36c5a03b3b20",
+                "assetId": "23022537"
+              },
+              "summary": "Abategetsi bo mu bushikiranganji bw’imigenderanire bwa Amerika, bavuga ko babonye ivyemeza ko reta y’Urwanda ifise uruhara mu mabi amaze imisi akorerwa mu gihugu kibanyi c’Uburundi.",
+              "timestamp": 1455191549000,
+              "language": "rw",
+              "indexImage": {
+                "id": "63473858",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/14F4D/test/_63473858_141022192445_paul_kagame_640x360_reuters_nocredit.jpg",
+                "path": "/cpsdevpb/14F4D/test/_63473858_141022192445_paul_kagame_640x360_reuters_nocredit.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Prezida w'Urwanda Paul Kagame",
+                "caption": "Prezida w'Urwanda Paul Kagame",
+                "copyrightHolder": "Reuters",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:gahuza/amakuru-23022537",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "9a5c4dba-11be-f24e-911f-b8eb7a4c3dc0",
+            "rank": 17,
+            "count": 4781,
+            "urn": "urn:bbc:curie:asset:9a5c4dba-11be-f24e-911f-b8eb7a4c3dc0",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Intambara yo kubohoza ikivuko ca Hudaydah yatanguye muri Yemen",
+                "headline": "Intambara yo kubohoza ikivuko ca Hudaydah yatanguye muri Yemen"
+              },
+              "locators": {
+                "assetUri": "/gahuza/23204135",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:9a5c4dba-11be-f24e-911f-b8eb7a4c3dc0",
+                "assetId": "23204135",
+                "cpsUrn": "urn:bbc:content:assetUri:gahuza/23204135",
+                "curie": "http://www.bbc.co.uk/asset/9a5c4dba-11be-f24e-911f-b8eb7a4c3dc0"
+              },
+              "summary": "Urunani rurongowe na Arabia Saudite rwatanguye ibitero ku kivuko gifise akamaro kanini muri Yemen ca Hudaydah, kiri mu minwe y'abagwani.",
+              "timestamp": 1528888682000,
+              "language": "rw",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Gahuza",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63681333",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/8226/test/_63681333_002564611-1.jpg",
+                "path": "/cpsdevpb/8226/test/_63681333_002564611-1.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "ikivuko ca Hudaydah",
+                "caption": "Ikivuko ca Hudaydah muri Yemen kiriko kiragwanirwa",
+                "copyrightHolder": "AFP/Getty",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:gahuza/23204135",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "b23e57e4-78fd-a146-9810-b93d27adcab0",
+            "rank": 18,
+            "count": 4780,
+            "urn": "urn:bbc:curie:asset:b23e57e4-78fd-a146-9810-b93d27adcab0",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Korea ya ruguru yagerageje ikindi gisasu",
+                "headline": "Ikindi gisasu cya Koreya ya Ruguru"
+              },
+              "locators": {
+                "assetUri": "/gahuza/23127050",
+                "cpsUrn": "urn:bbc:content:assetUri:gahuza/23127050",
+                "curie": "http://www.bbc.co.uk/asset/b23e57e4-78fd-a146-9810-b93d27adcab0",
+                "assetId": "23127050"
+              },
+              "summary": "Korea ya ruguru iravuga ko yagerageje igisasu cya rutura cyo mu bwoko bwa ballistique cyagenze mu kirere hafi ibirometero 500 mbere yo kugwa mu nyanja y'Ubuyapani.",
+              "timestamp": 1495451835000,
+              "language": "rw",
+              "indexImage": {
+                "id": "63537816",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/F1B1/test/_63537816_000097641-1.jpg",
+                "path": "/cpsdevpb/F1B1/test/_63537816_000097641-1.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Igerageza ry'ikindi gisasu",
+                "caption": "Koreya ya Ruguru",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:gahuza/23127050",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "932b648e-6c05-5046-92bc-cef8d2d71e29",
+            "rank": 19,
+            "count": 4678,
+            "urn": "urn:bbc:curie:asset:932b648e-6c05-5046-92bc-cef8d2d71e29",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "AMISOM irihweza ukuntu ikora muri Somalia 4",
+                "headline": "AMISOM irihweza ukuntu ikora muri Somalia 4"
+              },
+              "locators": {
+                "assetUri": "/gahuza/imikino-23025909",
+                "cpsUrn": "urn:bbc:content:assetUri:gahuza/imikino-23025909",
+                "curie": "http://www.bbc.co.uk/asset/932b648e-6c05-5046-92bc-cef8d2d71e29",
+                "assetId": "23025909"
+              },
+              "summary": "Abarongoye ibihugu bitanga abasirikare mu mugwi AMISOM uhagarariye amahoro muri Somalia, basavye ko hasubirwamwo vuba uko bahangana na Al Shabaab.",
+              "timestamp": 1456744043000,
+              "language": "rw",
+              "indexImage": {
+                "id": "63475529",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/1698D/test/_63475529_160229073338_amisom_djibouti_512x288_bbc_nocredit.jpg",
+                "path": "/cpsdevpb/1698D/test/_63475529_160229073338_amisom_djibouti_512x288_bbc_nocredit.jpg",
+                "height": 351,
+                "width": 624,
+                "altText": "Inama ya AMISOM muri Djibouti yasavye ko hatangwa ubundi buryo",
+                "caption": "Inama ya AMISOM muri Djibouti yasavye ko hatangwa ubundi buryo",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:gahuza/imikino-23025909",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "7f823991-068a-3d4c-bfb6-1e0338defff9",
+            "rank": 20,
+            "count": 4659,
+            "urn": "urn:bbc:curie:asset:7f823991-068a-3d4c-bfb6-1e0338defff9",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Ifarasi iramenya ko umuntu ashavuye canke anezerewe 1",
+                "headline": "Ifarasi iramenya ko umuntu ashavuye canke anezerewe 1"
+              },
+              "locators": {
+                "assetUri": "/gahuza/amakuru-23022559",
+                "cpsUrn": "urn:bbc:content:assetUri:gahuza/amakuru-23022559",
+                "curie": "http://www.bbc.co.uk/asset/7f823991-068a-3d4c-bfb6-1e0338defff9",
+                "assetId": "23022559"
+              },
+              "summary": "Abategetsi bo mu bushikiranganji bw’imigenderanire bwa Amerika, bavuga ko babonye ivyemeza ko reta y’Urwanda ifise uruhara mu mabi amaze imisi akorerwa mu gihugu kibanyi c’Uburundi.",
+              "timestamp": 1455192646000,
+              "language": "rw",
+              "indexImage": {
+                "id": "63473858",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/14F4D/test/_63473858_141022192445_paul_kagame_640x360_reuters_nocredit.jpg",
+                "path": "/cpsdevpb/14F4D/test/_63473858_141022192445_paul_kagame_640x360_reuters_nocredit.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Prezida w'Urwanda Paul Kagame",
+                "caption": "Prezida w'Urwanda Paul Kagame",
+                "copyrightHolder": "Reuters",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:gahuza/amakuru-23022559",
+              "type": "cps"
+            }
           }
-        },
-        {
-          "type": "text",
-          "model": {
-            "blocks": [
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "Izina Gahuzamiryango ninaho ryavuye, kwari uguhuza imiryango babisabwe n'uwari umuyobozi w'ishami.\n\n\n\n.",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "Izina Gahuzamiryango ninaho ryavuye, kwari uguhuza imiryango babisabwe n'uwari umuyobozi w'ishami.\n\n\n\n.",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        }
-      ]
+        ]
+      }
     }
   },
-  "promo": {
-    "headlines": {
-      "seoHeadline": "Abarihimbye turi kumwe muri iki kiganiro barabidusobanurira neza."
-    },
-    "locators": {
-      "optimoUrn": "urn:bbc:optimo:asset:cey23zx8wx8o"
-    },
-    "summary": {
-      "blocks": [
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "attributes": [],
-                        "text": ""
-                      },
-                      "type": "fragment"
-                    }
-                  ],
-                  "text": ""
-                },
-                "type": "paragraph"
-              }
-            ]
-          },
-          "type": "text"
-        }
-      ]
-    },
-    "timestamp": 1562936358638,
-    "id": "urn:bbc:ares::article:cey23zx8wx8o",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "site": {
-      "subType": "site",
-      "name": "Gahuza",
-      "uri": "/gahuza",
-      "type": "simple"
-    },
-    "groups": []
-  }
+  "contentType": "application/json; charset=utf-8"
 }

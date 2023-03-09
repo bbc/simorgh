@@ -67,7 +67,7 @@ exports[`Canonical Navigation snapshots should correctly render Canonical naviga
   right: 0;
   bottom: 0;
   top: 0;
-  border: 0.25rem solid #B80000;
+  border: 0.25rem solid #000000;
 }
 
 @media (min-width: 37.5rem) {
@@ -124,6 +124,18 @@ exports[`Canonical Navigation snapshots should correctly render Canonical naviga
     display: none;
   }
 
+  .emotion-12:focus-visible {
+    outline: none;
+  }
+
+  .emotion-12:focus-visible::after {
+    outline: 0.1875rem solid #000000;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
   .emotion-12:after {
     content: ' ';
     height: 100%;
@@ -135,11 +147,10 @@ exports[`Canonical Navigation snapshots should correctly render Canonical naviga
     overflow: hidden;
     pointer-events: none;
     background: linear-gradient(
-            to right,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 1)
-              100%
-          );
+          to right,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 1) 100%
+        );
   }
 
   @media (min-width: 25rem) {
@@ -188,7 +199,7 @@ exports[`Canonical Navigation snapshots should correctly render Canonical naviga
       >
         <button
           aria-expanded="false"
-          class="emotion-6 emotion-7"
+          class="focusIndicatorRemove emotion-6 emotion-7"
           dir="ltr"
           type="button"
         >

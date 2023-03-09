@@ -9,13 +9,13 @@ import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstra
 import useToggle from '#hooks/useToggle';
 import { RequestContext } from '#contexts/RequestContext';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
+import Curation from '#app/components/Curation';
 import styles from './index.styles';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import TopicImage from './TopicImage';
 import TopicTitle from './TopicTitle';
 import TopicDescription from './TopicDescription';
 import Pagination from './Pagination';
-import Curation, { VISUAL_STYLE } from './Curation';
 
 const TopicPage = ({ pageData }) => {
   const { lang, translations } = useContext(ServiceContext);
@@ -93,20 +93,24 @@ const TopicPage = ({ pageData }) => {
               title: curationTitle,
               link,
               position,
-            }) => (
-              <Curation
-                headingLevel={curationTitle && 3}
-                key={curationId}
-                visualStyle={VISUAL_STYLE.NONE}
-                visualProminance={visualProminence}
-                promos={summaries}
-                title={curationTitle}
-                topStoriesTitle={topStoriesTitle}
-                position={position}
-                link={link}
-                curationLength={curations && curations.length}
-              />
-            ),
+              visualStyle,
+            }) => {
+              return (
+                <React.Fragment key={`${curationId}-${position}`}>
+                  <Curation
+                    headingLevel={curationTitle && 3}
+                    visualStyle={visualStyle}
+                    visualProminence={visualProminence}
+                    promos={summaries}
+                    title={curationTitle}
+                    topStoriesTitle={topStoriesTitle}
+                    position={position}
+                    link={link}
+                    curationLength={curations && curations.length}
+                  />
+                </React.Fragment>
+              );
+            },
           )}
           <Pagination
             activePage={activePage}

@@ -1,431 +1,1964 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::article:cq0y4008d4vo",
-    "locators": {
-      "optimoUrn": "urn:bbc:optimo:asset:cq0y4008d4vo"
-    },
-    "type": "article",
-    "createdBy": "Telugu",
-    "language": "te",
-    "lastUpdated": 1572879993926,
-    "firstPublished": 1562942618861,
-    "lastPublished": 1562942618861,
-    "options": {},
-    "analyticsLabels": {},
-    "passport": {
-      "language": "te",
-      "home": "http://www.bbc.co.uk/ontologies/passport/home/Telugu"
-    },
-    "tags": {},
-    "version": "v1.1.2",
-    "blockTypes": [
-      "headline",
-      "text",
-      "paragraph",
-      "fragment",
-      "image",
-      "caption",
-      "altText",
-      "rawImage",
-      "urlLink",
-      "video",
-      "subheadline"
-    ]
-  },
-  "content": {
-    "model": {
-      "blocks": [
-        {
-          "type": "headline",
-          "model": {
-            "blocks": [
-              {
-                "type": "text",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "paragraph",
-                      "model": {
-                        "text": "ఈ పరీక్షా వ్యాసం యొక్క శీర్షిక ఇది",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "ఈ పరీక్షా వ్యాసం యొక్క శీర్షిక ఇది",
-                              "attributes": []
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "image",
-          "model": {
-            "blocks": [
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "ఈ పరీక్ష చిత్రం, కాపీరైట్ BBC, ఫ్రాన్స్ యొక్క మ్యాప్‌ను చూపిస్తుంది. చిత్రం మొదటి మూడు బ్లాకులలో ఉంది మరియు ఈ శీర్షిక ఉంది.",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "ఈ పరీక్ష చిత్రం, కాపీరైట్ BBC, ఫ్రాన్స్ యొక్క మ్యాప్‌ను చూపిస్తుంది. చిత్రం మొదటి మూడు బ్లాకులలో ఉంది మరియు ఈ శీర్షిక ఉంది.",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "ఈ పరీక్ష చిత్రం, కాపీరైట్ BBC, ఫ్రాన్స్ యొక్క మ్యాప్‌ను చూపిస్తుంది. చిత్రం మొదటి మూడు బ్లాకులలో ఉంది మరియు ఈ శీర్షిక ఉంది.",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "ఈ పరీక్ష చిత్రం, కాపీరైట్ BBC, ఫ్రాన్స్ యొక్క మ్యాప్‌ను చూపిస్తుంది. చిత్రం మొదటి మూడు బ్లాకులలో ఉంది మరియు ఈ శీర్షిక ఉంది.",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "rawImage",
-                "model": {
-                  "width": 624,
-                  "height": 351,
-                  "locator": "b931/test/574551d0-fcbd-11e9-9afe-1371928331c5.jpg",
-                  "originCode": "cpsdevpb",
-                  "copyrightHolder": "BBC"
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "text",
-          "model": {
-            "blocks": [
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "ఇది టెక్స్ట్ బ్లాక్, ఇది BBC వాతావరణ హోమ్‌పేజీకి లింక్‌ను కలిగి ఉంది.",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "ఇది టెక్స్ట్ బ్లాక్, ఇది ",
-                        "attributes": []
-                      }
-                    },
-                    {
-                      "type": "urlLink",
-                      "model": {
-                        "text": "BBC వాతావరణ",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "BBC వాతావరణ",
-                              "attributes": []
-                            }
-                          }
-                        ],
-                        "locator": "https://www.bbc.co.uk/weather",
-                        "isExternal": false
-                      }
-                    },
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": " హోమ్‌పేజీకి లింక్‌ను కలిగి ఉంది.",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "video",
-          "model": {
-            "locator": "urn:bbc:pips:pid:p01djw2m",
-            "blocks": [
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "చైనీస్ సూపర్ హైవే యూజర్లు కొత్త జంక్షన్ చూసి ఆశ్చర్యపోయారు",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "చైనీస్ సూపర్ హైవే యూజర్లు కొత్త జంక్షన్ చూసి ఆశ్చర్యపోయారు",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "aresMedia",
-                "model": {
-                  "blocks": [
-                    {
-                      "blockId": "urn:bbc:ares::clip:p01djw2m",
-                      "type": "aresMediaMetadata",
-                      "model": {
-                        "id": "p01djw2m",
-                        "subType": "clip",
-                        "format": "audio_video",
-                        "title": "Motorists amazed by new China highway",
-                        "synopses": {
-                          "short": "Chinese superhighway users amazed by new junction",
-                          "medium": "The motorists got their first glimpse of the new road system earlier.",
-                          "long": "A new $450m Chinese highway opened earlier, giving Shanghai motorists their first glimpse of the future of road travel.\n\nMany were left confused."
-                        },
-                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01djw9d.jpg",
-                        "embedding": false,
-                        "advertising": true,
-                        "caption": "The road was funded by foreign investors in China",
-                        "versions": [
-                          {
-                            "versionId": "p01djw2p",
-                            "types": ["Original"],
-                            "duration": 28,
-                            "durationISO8601": "PT28S",
-                            "warnings": {},
-                            "availableTerritories": {
-                              "uk": true,
-                              "nonUk": true
-                            },
-                            "availableFrom": 1507025738000
-                          }
-                        ],
-                        "syndication": {
-                          "destinations": []
+  "data": {
+    "article": {
+      "content": {
+        "model": {
+          "blocks": [
+            {
+              "id": "64966d9a",
+              "type": "headline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "785ff839",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "9e80c79e",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "ఈ పరీక్షా వ్యాసం యొక్క శీర్షిక ఇది",
+                            "blocks": [
+                              {
+                                "id": "cf54084c",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "ఈ పరీక్షా వ్యాసం యొక్క శీర్షిక ఇది",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
                         }
-                      }
+                      ]
                     },
-                    {
-                      "type": "image",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "rawImage",
-                            "model": {
-                              "height": 720,
-                              "width": 1280,
-                              "copyrightHolder": "BBC",
-                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01djw9d.jpg",
-                              "originCode": "mpv"
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "subheadline",
-          "model": {
-            "blocks": [
-              {
-                "type": "text",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "paragraph",
-                      "model": {
-                        "text": "\rఇది ఉపశీర్షిక",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "\rఇది ఉపశీర్షిక",
-                              "attributes": []
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "image",
-          "model": {
-            "blocks": [
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "\rఇది ఉపశీర్షిక",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "\rఇది ఉపశీర్షిక",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
+                    "position": [
+                      1,
+                      1
+                    ]
+                  }
+                ]
               },
-              {
-                "type": "rawImage",
-                "model": {
-                  "width": 800,
-                  "height": 450,
-                  "locator": "261c/test/b4446330-fcbd-11e9-9afe-1371928331c5.jpg",
-                  "originCode": "cpsdevpb",
-                  "copyrightHolder": "Getty Images"
-                }
-              }
-            ]
-          }
+              "position": [
+                1
+              ]
+            },
+            {
+              "id": "3e5e1857",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "95ba7ef7",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "52911053",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "b5255460",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "ఈ పరీక్ష చిత్రం, కాపీరైట్ BBC, ఫ్రాన్స్ యొక్క మ్యాప్‌ను చూపిస్తుంది. చిత్రం మొదటి మూడు బ్లాకులలో ఉంది మరియు ఈ శీర్షిక ఉంది.",
+                                  "blocks": [
+                                    {
+                                      "id": "534eb50f",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "ఈ పరీక్ష చిత్రం, కాపీరైట్ BBC, ఫ్రాన్స్ యొక్క మ్యాప్‌ను చూపిస్తుంది. చిత్రం మొదటి మూడు బ్లాకులలో ఉంది మరియు ఈ శీర్షిక ఉంది.",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        2,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  2,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            2,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      2,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "441613f4",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "87266765",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "6274691d",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "ఈ పరీక్ష చిత్రం, కాపీరైట్ BBC, ఫ్రాన్స్ యొక్క మ్యాప్‌ను చూపిస్తుంది. చిత్రం మొదటి మూడు బ్లాకులలో ఉంది మరియు ఈ శీర్షిక ఉంది.",
+                                  "blocks": [
+                                    {
+                                      "id": "1913e07a",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "ఈ పరీక్ష చిత్రం, కాపీరైట్ BBC, ఫ్రాన్స్ యొక్క మ్యాప్‌ను చూపిస్తుంది. చిత్రం మొదటి మూడు బ్లాకులలో ఉంది మరియు ఈ శీర్షిక ఉంది.",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        2,
+                                        2,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  2,
+                                  2,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            2,
+                            2,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      2,
+                      2
+                    ]
+                  },
+                  {
+                    "id": "ad4b7db2",
+                    "type": "rawImage",
+                    "model": {
+                      "width": 624,
+                      "height": 351,
+                      "locator": "b931/test/574551d0-fcbd-11e9-9afe-1371928331c5.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "BBC"
+                    },
+                    "position": [
+                      2,
+                      3
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                2
+              ]
+            },
+            {
+              "id": "395321e4",
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1562942618861,
+                "lastPublished": 1562942618861
+              },
+              "position": [
+                3
+              ]
+            },
+            {
+              "id": "c22a9cc0",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "85316f98",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "ఇది టెక్స్ట్ బ్లాక్, ఇది BBC వాతావరణ హోమ్‌పేజీకి లింక్‌ను కలిగి ఉంది.",
+                      "blocks": [
+                        {
+                          "id": "d4ee80e5",
+                          "type": "fragment",
+                          "model": {
+                            "text": "ఇది టెక్స్ట్ బ్లాక్, ఇది ",
+                            "attributes": []
+                          },
+                          "position": [
+                            4,
+                            1,
+                            1
+                          ]
+                        },
+                        {
+                          "id": "1007049e",
+                          "type": "urlLink",
+                          "model": {
+                            "text": "BBC వాతావరణ",
+                            "blocks": [
+                              {
+                                "id": "2302d2b7",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "BBC వాతావరణ",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  4,
+                                  1,
+                                  2,
+                                  1
+                                ]
+                              }
+                            ],
+                            "locator": "https://www.bbc.co.uk/weather",
+                            "isExternal": false
+                          },
+                          "position": [
+                            4,
+                            1,
+                            2
+                          ]
+                        },
+                        {
+                          "id": "460f83c2",
+                          "type": "fragment",
+                          "model": {
+                            "text": " హోమ్‌పేజీకి లింక్‌ను కలిగి ఉంది.",
+                            "attributes": []
+                          },
+                          "position": [
+                            4,
+                            1,
+                            3
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      4,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                4
+              ]
+            },
+            {
+              "id": "78d4a3f2",
+              "type": "video",
+              "model": {
+                "locator": "urn:bbc:pips:pid:p01djw2m",
+                "blocks": [
+                  {
+                    "id": "d95ac130",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "88740cbb",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "7cd114f4",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "చైనీస్ సూపర్ హైవే యూజర్లు కొత్త జంక్షన్ చూసి ఆశ్చర్యపోయారు",
+                                  "blocks": [
+                                    {
+                                      "id": "7ea3ffdc",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "చైనీస్ సూపర్ హైవే యూజర్లు కొత్త జంక్షన్ చూసి ఆశ్చర్యపోయారు",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        5,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  5,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            5,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      5,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "0a9a89e5",
+                    "type": "aresMedia",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "f7d4314a",
+                          "blockId": "urn:bbc:ares::clip:p01djw2m",
+                          "type": "aresMediaMetadata",
+                          "model": {
+                            "id": "p01djw2m",
+                            "subType": "clip",
+                            "format": "audio_video",
+                            "title": "Motorists amazed by new China highway",
+                            "synopses": {
+                              "short": "Chinese superhighway users amazed by new junction",
+                              "medium": "The motorists got their first glimpse of the new road system earlier.",
+                              "long": "A new $450m Chinese highway opened earlier, giving Shanghai motorists their first glimpse of the future of road travel.\n\nMany were left confused."
+                            },
+                            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01djw9d.jpg",
+                            "embedding": false,
+                            "advertising": true,
+                            "caption": "The road was funded by foreign investors in China",
+                            "versions": [
+                              {
+                                "versionId": "p01djw2p",
+                                "types": [
+                                  "Original"
+                                ],
+                                "duration": 28,
+                                "durationISO8601": "PT28S",
+                                "warnings": {},
+                                "availableTerritories": {
+                                  "uk": true,
+                                  "nonUk": true
+                                },
+                                "availableFrom": 1507025738000
+                              }
+                            ],
+                            "syndication": {
+                              "destinations": []
+                            },
+                            "smpKind": "programme"
+                          },
+                          "position": [
+                            5,
+                            2,
+                            1
+                          ]
+                        },
+                        {
+                          "id": "3e5a5d05",
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "d0166b7f",
+                                "type": "rawImage",
+                                "model": {
+                                  "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01djw9d.jpg",
+                                  "originCode": "mpv"
+                                },
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            5,
+                            2,
+                            2
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      5,
+                      2
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                5
+              ]
+            },
+            {
+              "id": "5bc032f6",
+              "type": "subheadline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "873a3ef9",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "fdbff439",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "\rఇది ఉపశీర్షిక",
+                            "blocks": [
+                              {
+                                "id": "a21cb470",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "\rఇది ఉపశీర్షిక",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  6,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            6,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      6,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                6
+              ]
+            },
+            {
+              "id": "66c60fd8",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "10c9d9a2",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "1430bedd",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "57a234e8",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "\rఇది ఉపశీర్షిక",
+                                  "blocks": [
+                                    {
+                                      "id": "eb2d37ce",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "\rఇది ఉపశీర్షిక",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        7,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  7,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            7,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      7,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "47c72c0d",
+                    "type": "rawImage",
+                    "model": {
+                      "width": 800,
+                      "height": 450,
+                      "locator": "261c/test/b4446330-fcbd-11e9-9afe-1371928331c5.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "Getty Images"
+                    },
+                    "position": [
+                      7,
+                      2
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                7
+              ]
+            },
+            {
+              "id": "a604ec09",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "04ab6a8f",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "ఈ పరీక్షా వ్యాసం సృష్టించబడింది, తద్వారా మేము మా వెబ్‌సైట్‌లో పరీక్షలను అమలు చేయగలము.",
+                      "blocks": [
+                        {
+                          "id": "35d7ced2",
+                          "type": "fragment",
+                          "model": {
+                            "text": "ఈ పరీక్షా వ్యాసం సృష్టించబడింది, తద్వారా మేము మా వెబ్‌సైట్‌లో పరీక్షలను అమలు చేయగలము.",
+                            "attributes": []
+                          },
+                          "position": [
+                            8,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      8,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                8
+              ]
+            },
+            {
+              "id": "bd444e61",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                9
+              ]
+            },
+            {
+              "id": "762d5d2a",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                10
+              ]
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "id": "urn:bbc:ares::article:cq0y4008d4vo",
+        "locators": {
+          "optimoUrn": "urn:bbc:optimo:asset:cq0y4008d4vo",
+          "canonicalUrl": "https://www.bbc.com/telugu/articles/cq0y4008d4vo"
+        },
+        "type": "article",
+        "createdBy": "Telugu",
+        "language": "te",
+        "firstPublished": 1562942618861,
+        "lastPublished": 1562942618861,
+        "analyticsLabels": {
+          "producer": "Telugu",
+          "page": "telugu.articles.cq0y4008d4vo.page"
+        },
+        "passport": {
+          "language": "te",
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Telugu",
+          "taggings": []
+        },
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment",
+          "image",
+          "caption",
+          "altText",
+          "rawImage",
+          "urlLink",
+          "video",
+          "subheadline",
+          "aresMedia"
+        ],
+        "allowAdvertising": true
+      },
+      "promo": {
+        "headlines": {
+          "seoHeadline": "డక్‌వర్త్ లూయీస్: క్రికెట్ మ్యాచ్‌లో వర్షం పడితే ఫలితం తేల్చేది వీళ్లే... అసలు ఇది ఎలా పుట్టింది?"
+        }
+      }
+    },
+    "secondaryData": {
+      "topStories": [
+        {
+          "headlines": {
+            "headline": "నార్వే: జీతాల దాపరికంలేని దేశం1"
+          },
+          "locators": {
+            "assetUri": "/telugu/23145894",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:c5b404d5-fdee-2e4b-9aaf-3f0495a40f2a",
+            "assetId": "23145894",
+            "cpsUrn": "urn:bbc:content:assetUri:telugu/23145894",
+            "curie": "http://www.bbc.co.uk/asset/c5b404d5-fdee-2e4b-9aaf-3f0495a40f2a"
+          },
+          "summary": "తెలుగురాష్ట్రాల్లో టీవీ యాంక‌ర్లు, విలేక‌రుల జీతాలు ఎంత‌నేది ర‌హ‌స్య‌మే. కానీ, నార్వేలో మాత్రం ఇలాంటి ర‌హ‌స్యాలేమీ లేవు. ఎవ‌రెవ‌రికి ఎంతెంత జీతం అందుతోంద‌నేది ఎవ‌రైనా తెలుసుకోవ‌చ్చు.",
+          "timestamp": 1502801273000,
+          "language": "te",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63588924",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/A7EC/test/_63588924__97036295_gettyimages-137403025.jpg",
+            "path": "/cpsdevpb/A7EC/test/_63588924__97036295_gettyimages-137403025.jpg",
+            "height": 371,
+            "width": 660,
+            "altText": "నార్వే పారదర్శక జీతాలు బీబీసీ జర్నలిస్టులు",
+            "copyrightHolder": "Getty Images",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "వార్తలు",
+            "uri": "/telugu/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:telugu/23145894",
+          "type": "cps"
         },
         {
-          "type": "text",
-          "model": {
-            "blocks": [
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "ఈ పరీక్షా వ్యాసం సృష్టించబడింది, తద్వారా మేము మా వెబ్‌సైట్‌లో పరీక్షలను అమలు చేయగలము.",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "ఈ పరీక్షా వ్యాసం సృష్టించబడింది, తద్వారా మేము మా వెబ్‌సైట్‌లో పరీక్షలను అమలు చేయగలము.",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
+          "headlines": {
+            "headline": "ఇది ప్రేమ ఫార్ములా"
+          },
+          "locators": {
+            "assetUri": "/telugu/23148036",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:c0e11b27-68cf-124e-a79e-47b7b233c5bf",
+            "assetId": "23148036",
+            "cpsUrn": "urn:bbc:content:assetUri:telugu/23148036",
+            "curie": "http://www.bbc.co.uk/asset/c0e11b27-68cf-124e-a79e-47b7b233c5bf"
+          },
+          "summary": "మీ ప్రేమ కలకాలం పదిలంగా ఉండాలంటే ఏం చేయాలి? మీ భాగస్వామి మీపై ఎల్లప్పుడూ ప్రేమ వర్షం కురిపించాలంటే మీరు ఎలా ప్రవర్తించాలి? మీరు ప్రేమలో గెలవాలంటే ఎలా ఉండాలి? ఈ ప్రశ్నలకు సమాధానం ఇచ్చే ప్రయత్నం చేసింది మ్యాథమేటిక్స్ ఆఫ్ లవ్ అనే పుస్తకం. ఆ పుస్తకం చదివే ఓపిక లేదంటారా.. అయితే దాని రచయిత హన్నా ఫ్రై చెప్పే మ్యాజిక్ ఫార్ములాను ఫాలోకావొచ్చు. ఇంతకీ ఆ ఫార్ములా ఏంటంటే..",
+          "timestamp": 1502699762000,
+          "language": "te",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63588669",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/179B0/test/_63588669_love2.jpg",
+            "path": "/cpsdevpb/179B0/test/_63588669_love2.jpg",
+            "height": 576,
+            "width": 1024,
+            "altText": "తదవలతద",
+            "caption": "మీ ప్రేమ కలకాలం పదిలంగా ఉండాలంటే ఏం చేయాలి?",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "వార్తలు",
+            "uri": "/telugu/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:telugu/23148036",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "ఫార్మా వెయ్యి శాతం ధరల పెరుగుదల"
+          },
+          "locators": {
+            "assetUri": "/telugu/india-23450044",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:ca8e19e9-09c2-490b-8c8c-0f3b834fdcc4",
+            "assetId": "23450044",
+            "cpsUrn": "urn:bbc:content:assetUri:telugu/india-23450044",
+            "curie": "http://www.bbc.co.uk/asset/ca8e19e9-09c2-490b-8c8c-0f3b834fdcc4"
+          },
+          "summary": "సంవత్సరాల సుదీర్ఘ విచారణ తర్వాత, యూకే యొక్క పోటీ మరియు మార్కెట్ అథారిటీ గురువారం 10 కి పైగా ఔషధ కంపెనీలకు 0 260 మిలియన్ కంటే ఎక్కువ విలువైన జరిమానాలను",
+          "timestamp": 1628510453000,
+          "language": "te",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63762666",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/10442/test/_63762666_generic_onlineshoppinggetty.jpg",
+            "path": "/cpsdevpb/10442/test/_63762666_generic_onlineshoppinggetty.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "generic_onlineshopping",
+            "copyrightHolder": "Getty Images",
+            "originCode": "cpsdevpb",
+            "allowSyndication": true,
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "id": "urn:bbc:ares::asset:telugu/india-23450044",
+          "type": "cps"
         }
-      ]
+      ],
+      "features": [
+        {
+          "headlines": {
+            "headline": "కోహ్లీ రికార్డు బద్దలుకొట్టిన ఆమ్లా 5"
+          },
+          "locators": {
+            "assetUri": "/telugu/international-23129803",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:506a27f4-4da0-5e47-806f-4faa5b40e384",
+            "assetId": "23129803",
+            "cpsUrn": "urn:bbc:content:assetUri:telugu/international-23129803",
+            "curie": "http://www.bbc.co.uk/asset/506a27f4-4da0-5e47-806f-4faa5b40e384"
+          },
+          "summary": "కోహ్లీ రికార్డును ఆమ్లా గతంలో దాటేసిన సంగతి తెలిసిందే.",
+          "timestamp": 1496633460000,
+          "language": "te",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63539209",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/160B5/test/_63539209_mediaitem63539207.jpg",
+            "path": "/cpsdevpb/160B5/test/_63539209_mediaitem63539207.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "తెలిసిందే",
+            "copyrightHolder": "iStock",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "id": "urn:bbc:ares::asset:telugu/international-23129803",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "వివిధ రకాల క్యాన్సర్ వ్యాధిని నివారించే- మేడిపండు 15"
+          },
+          "locators": {
+            "assetUri": "/telugu/international-23125458",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:195e20a4-2e63-2e4f-9672-6f1024b68549",
+            "assetId": "23125458",
+            "cpsUrn": "urn:bbc:content:assetUri:telugu/international-23125458",
+            "curie": "http://www.bbc.co.uk/asset/195e20a4-2e63-2e4f-9672-6f1024b68549"
+          },
+          "summary": "వివిధ రకాల క్యాన్సర్ వ్యాధిని నివారించే- మేడిపండు",
+          "timestamp": 1494946452000,
+          "language": "en-gb",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63536850",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/16E7/test/_63536850__96067914_21f3ca15-032f-47cf-b38c-cb661a0af403.jpg",
+            "path": "/cpsdevpb/16E7/test/_63536850__96067914_21f3ca15-032f-47cf-b38c-cb661a0af403.jpg",
+            "height": 371,
+            "width": 660,
+            "altText": "చేస్తుంది",
+            "caption": "చేస్తుంది",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63536853",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/8C17/test/_63536853__96067914_21f3ca15-032f-47cf-b38c-cb661a0af403.jpg",
+            "path": "/cpsdevpb/8C17/test/_63536853__96067914_21f3ca15-032f-47cf-b38c-cb661a0af403.jpg",
+            "height": 171,
+            "width": 304,
+            "altText": "చేస్తుంది",
+            "caption": "చేస్తుంది",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false,
+            "hasShortForm": true
+          },
+          "id": "urn:bbc:ares::asset:telugu/international-23125458",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "వివిధ రకాల క్యాన్సర్ వ్యాధిని నివారించే- మేడిపండు 16"
+          },
+          "locators": {
+            "assetUri": "/telugu/international-23125459",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:c88d7588-1617-d04a-88a6-6e3458cde1a9",
+            "assetId": "23125459",
+            "cpsUrn": "urn:bbc:content:assetUri:telugu/international-23125459",
+            "curie": "http://www.bbc.co.uk/asset/c88d7588-1617-d04a-88a6-6e3458cde1a9"
+          },
+          "summary": "వివిధ రకాల క్యాన్సర్ వ్యాధిని నివారించే- మేడిపండు",
+          "timestamp": 1494946467000,
+          "language": "en-gb",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63536850",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/16E7/test/_63536850__96067914_21f3ca15-032f-47cf-b38c-cb661a0af403.jpg",
+            "path": "/cpsdevpb/16E7/test/_63536850__96067914_21f3ca15-032f-47cf-b38c-cb661a0af403.jpg",
+            "height": 371,
+            "width": 660,
+            "altText": "చేస్తుంది",
+            "caption": "చేస్తుంది",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63536853",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/8C17/test/_63536853__96067914_21f3ca15-032f-47cf-b38c-cb661a0af403.jpg",
+            "path": "/cpsdevpb/8C17/test/_63536853__96067914_21f3ca15-032f-47cf-b38c-cb661a0af403.jpg",
+            "height": 171,
+            "width": 304,
+            "altText": "చేస్తుంది",
+            "caption": "చేస్తుంది",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false,
+            "hasShortForm": true
+          },
+          "id": "urn:bbc:ares::asset:telugu/international-23125459",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "వివిధ రకాల క్యాన్సర్ వ్యాధిని నివారించే- మేడిపండు 17"
+          },
+          "locators": {
+            "assetUri": "/telugu/international-23125460",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:e0f642ca-4964-da45-b1fd-f929c4f7a741",
+            "assetId": "23125460",
+            "cpsUrn": "urn:bbc:content:assetUri:telugu/international-23125460",
+            "curie": "http://www.bbc.co.uk/asset/e0f642ca-4964-da45-b1fd-f929c4f7a741"
+          },
+          "summary": "వివిధ రకాల క్యాన్సర్ వ్యాధిని నివారించే- మేడిపండు",
+          "timestamp": 1509967796000,
+          "language": "en-gb",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63598853",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/8C31/test/_63598853_140223222022_512x288i.jpg",
+            "path": "/cpsdevpb/8C31/test/_63598853_140223222022_512x288i.jpg",
+            "height": 351,
+            "width": 624,
+            "altText": "పరీక్ష ప్రోగ్రెస్లో ఉంది",
+            "caption": "పరీక్ష ప్రోగ్రెస్లో ఉంది",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63536853",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/8C17/test/_63536853__96067914_21f3ca15-032f-47cf-b38c-cb661a0af403.jpg",
+            "path": "/cpsdevpb/8C17/test/_63536853__96067914_21f3ca15-032f-47cf-b38c-cb661a0af403.jpg",
+            "height": 171,
+            "width": 304,
+            "altText": "చేస్తుంది",
+            "caption": "చేస్తుంది",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false,
+            "hasShortForm": true
+          },
+          "id": "urn:bbc:ares::asset:telugu/international-23125460",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "వివిధ రకాల క్యాన్సర్ వ్యాధిని నివారించే- మేడిపండు 18"
+          },
+          "locators": {
+            "assetUri": "/telugu/international-23125461",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:7c1af126-d577-844d-9246-3d12abbba230",
+            "assetId": "23125461",
+            "cpsUrn": "urn:bbc:content:assetUri:telugu/international-23125461",
+            "curie": "http://www.bbc.co.uk/asset/7c1af126-d577-844d-9246-3d12abbba230"
+          },
+          "summary": "వివిధ రకాల క్యాన్సర్ వ్యాధిని నివారించే- మేడిపండు",
+          "timestamp": 1494946501000,
+          "language": "en-gb",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63536850",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/16E7/test/_63536850__96067914_21f3ca15-032f-47cf-b38c-cb661a0af403.jpg",
+            "path": "/cpsdevpb/16E7/test/_63536850__96067914_21f3ca15-032f-47cf-b38c-cb661a0af403.jpg",
+            "height": 371,
+            "width": 660,
+            "altText": "చేస్తుంది",
+            "caption": "చేస్తుంది",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63536853",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/8C17/test/_63536853__96067914_21f3ca15-032f-47cf-b38c-cb661a0af403.jpg",
+            "path": "/cpsdevpb/8C17/test/_63536853__96067914_21f3ca15-032f-47cf-b38c-cb661a0af403.jpg",
+            "height": 171,
+            "width": 304,
+            "altText": "చేస్తుంది",
+            "caption": "చేస్తుంది",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false,
+            "hasShortForm": true
+          },
+          "id": "urn:bbc:ares::asset:telugu/international-23125461",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "వివిధ రకాల క్యాన్సర్ వ్యాధిని నివారించే- మేడిపండు 19"
+          },
+          "locators": {
+            "assetUri": "/telugu/international-23125462",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:0c592a59-a93f-eb46-b69a-a9c28522b9c5",
+            "assetId": "23125462",
+            "cpsUrn": "urn:bbc:content:assetUri:telugu/international-23125462",
+            "curie": "http://www.bbc.co.uk/asset/0c592a59-a93f-eb46-b69a-a9c28522b9c5"
+          },
+          "summary": "వివిధ రకాల క్యాన్సర్ వ్యాధిని నివారించే- మేడిపండు",
+          "timestamp": 1494946517000,
+          "language": "en-gb",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63536850",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/16E7/test/_63536850__96067914_21f3ca15-032f-47cf-b38c-cb661a0af403.jpg",
+            "path": "/cpsdevpb/16E7/test/_63536850__96067914_21f3ca15-032f-47cf-b38c-cb661a0af403.jpg",
+            "height": 371,
+            "width": 660,
+            "altText": "చేస్తుంది",
+            "caption": "చేస్తుంది",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63536853",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/8C17/test/_63536853__96067914_21f3ca15-032f-47cf-b38c-cb661a0af403.jpg",
+            "path": "/cpsdevpb/8C17/test/_63536853__96067914_21f3ca15-032f-47cf-b38c-cb661a0af403.jpg",
+            "height": 171,
+            "width": 304,
+            "altText": "చేస్తుంది",
+            "caption": "చేస్తుంది",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false,
+            "hasShortForm": true
+          },
+          "id": "urn:bbc:ares::asset:telugu/international-23125462",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "తోళ్లు, పాదరక్షల పరిశ్రమకు రూ.4,000 కోట్ల ప్రోత్సాహకాలు pgl!"
+          },
+          "locators": {
+            "assetUri": "/telugu/other-news-23128500",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:782e2023-a5bb-1d4f-8ca1-60da126bf06d",
+            "assetId": "23128500",
+            "cpsUrn": "urn:bbc:content:assetUri:telugu/other-news-23128500",
+            "curie": "http://www.bbc.co.uk/asset/782e2023-a5bb-1d4f-8ca1-60da126bf06d"
+          },
+          "summary": "దిల్లీ: తోళ్లు, పాదరక్షల పరిశ్రమకు రూ.4,000 కోట్ల విలువైన ప్రోత్సాహకాలను వచ్చే జులైలో ప్రభుత్వం ప్రకటించే అవకాశం ఉంది.",
+          "timestamp": 1496156733000,
+          "language": "te",
+          "passport": {
+            "category": {
+              "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+              "categoryName": "News"
+            },
+            "taggings": []
+          },
+          "cpsType": "PGL",
+          "indexImage": {
+            "id": "63538728",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/1435F/test/_63538728_160223135053_rwanda_minister_for_refugees_640x360_bbc_nocredit.jpg",
+            "path": "/cpsdevpb/1435F/test/_63538728_160223135053_rwanda_minister_for_refugees_640x360_bbc_nocredit.jpg",
+            "height": 288,
+            "width": 512,
+            "altText": "ఇప్పటికే రూ.500 కోట్లను ఆర్థిక శాఖ మంజూరు చేసింది. ఈ రంగంలో బాటా ఇండియా, లిబర్టీ షూస్‌, మీర్జా ఇంటర్నేషనల్‌, రిలాక్సో ఫుట్‌వేర్‌ వంటివి దిగ్గజ సంస్థలుగా చెప్పవచ్చు.",
+            "caption": "ఇప్పటికే రూ.500 కోట్లను ఆర్థిక శాఖ మంజూరు చేసింది. ఈ రంగంలో బాటా ఇండియా, లిబర్టీ షూస్‌, మీర్జా ఇంటర్నేషనల్‌, రిలాక్సో ఫుట్‌వేర్‌ వంటివి దిగ్గజ సంస్థలుగా చెప్పవచ్చు.",
+            "copyrightHolder": "BBC తెలుగు",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63538724",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/A71F/test/_63538724_160223135053_rwanda_minister_for_refugees_640x360_bbc_nocredit.jpg",
+            "path": "/cpsdevpb/A71F/test/_63538724_160223135053_rwanda_minister_for_refugees_640x360_bbc_nocredit.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "ఇప్పటికే రూ.500 కోట్లను ఆర్థిక శాఖ మంజూరు చేసింది. ఈ రంగంలో బాటా ఇండియా, లిబర్టీ షూస్‌, మీర్జా ఇంటర్నేషనల్‌, రిలాక్సో ఫుట్‌వేర్‌ వంటివి దిగ్గజ సంస్థలుగా చెప్పవచ్చు.",
+            "caption": "ఇప్పటికే రూ.500 కోట్లను ఆర్థిక శాఖ మంజూరు చేసింది. ఈ రంగంలో బాటా ఇండియా, లిబర్టీ షూస్‌, మీర్జా ఇంటర్నేషనల్‌, రిలాక్సో ఫుట్‌వేర్‌ వంటివి దిగ్గజ సంస్థలుగా చెప్పవచ్చు.",
+            "copyrightHolder": "BBC తెలుగు",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "id": "urn:bbc:ares::asset:telugu/other-news-23128500",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "వివిధ రకాల క్యాన్సర్ వ్యాధిని నివారించే- మేడిపండు 20"
+          },
+          "locators": {
+            "assetUri": "/telugu/international-23125463",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:a629e0d7-ae33-794c-95aa-06d2223cf33c",
+            "assetId": "23125463",
+            "cpsUrn": "urn:bbc:content:assetUri:telugu/international-23125463",
+            "curie": "http://www.bbc.co.uk/asset/a629e0d7-ae33-794c-95aa-06d2223cf33c"
+          },
+          "summary": "వివిధ రకాల క్యాన్సర్ వ్యాధిని నివారించే- మేడిపండు",
+          "timestamp": 1494946535000,
+          "language": "en-gb",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63536850",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/16E7/test/_63536850__96067914_21f3ca15-032f-47cf-b38c-cb661a0af403.jpg",
+            "path": "/cpsdevpb/16E7/test/_63536850__96067914_21f3ca15-032f-47cf-b38c-cb661a0af403.jpg",
+            "height": 371,
+            "width": 660,
+            "altText": "చేస్తుంది",
+            "caption": "చేస్తుంది",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63536853",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/8C17/test/_63536853__96067914_21f3ca15-032f-47cf-b38c-cb661a0af403.jpg",
+            "path": "/cpsdevpb/8C17/test/_63536853__96067914_21f3ca15-032f-47cf-b38c-cb661a0af403.jpg",
+            "height": 171,
+            "width": 304,
+            "altText": "చేస్తుంది",
+            "caption": "చేస్తుంది",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false,
+            "hasShortForm": true
+          },
+          "id": "urn:bbc:ares::asset:telugu/international-23125463",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "TEST - Live - Scheduled"
+          },
+          "locators": {
+            "assetUri": "/news/live/23180040",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:9ee2766a-0673-b24e-82e3-4b313b001859",
+            "assetId": "23180040",
+            "cpsUrn": "urn:bbc:content:assetUri:news/live/23180040",
+            "curie": "http://www.bbc.co.uk/asset/9ee2766a-0673-b24e-82e3-4b313b001859"
+          },
+          "summary": "TEST - Live - Scheduled",
+          "timestamp": 1515770194000,
+          "language": "en-gb",
+          "passport": {
+            "category": {
+              "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+              "categoryName": "News"
+            },
+            "taggings": []
+          },
+          "cpsType": "LIV",
+          "isLive": true,
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Europe",
+            "uri": "/news/business/europe",
+            "type": "simple"
+          },
+          "site": {
+            "subType": "site",
+            "name": "BBC News",
+            "uri": "/news",
+            "type": "simple"
+          },
+          "liveStatus": "LIVE",
+          "id": "urn:bbc:ares::asset:news/live/23180040",
+          "type": "cps"
+        }
+      ],
+      "mostRead": {
+        "generated": "2023-02-17T18:10:00.144Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
+        "totalRecords": 20,
+        "records": [
+          {
+            "id": "4b7641b6-9f19-6640-b22c-f107715ba2e8",
+            "rank": 1,
+            "count": 9744,
+            "urn": "urn:bbc:curie:asset:4b7641b6-9f19-6640-b22c-f107715ba2e8",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "వివిధ రకాల క్యాన్సర్ వ్యాధిని నివారించే- మేడిపండు 28",
+                "headline": "వివిధ రకాల క్యాన్సర్ వ్యాధిని నివారించే- మేడిపండు 28"
+              },
+              "locators": {
+                "assetUri": "/telugu/international-23125481",
+                "cpsUrn": "urn:bbc:content:assetUri:telugu/international-23125481",
+                "curie": "http://www.bbc.co.uk/asset/4b7641b6-9f19-6640-b22c-f107715ba2e8",
+                "assetId": "23125481"
+              },
+              "summary": "వివిధ రకాల క్యాన్సర్ వ్యాధిని నివారించే- మేడిపండు",
+              "timestamp": 1494946720000,
+              "language": "en-gb",
+              "indexImage": {
+                "id": "63536850",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/16E7/test/_63536850__96067914_21f3ca15-032f-47cf-b38c-cb661a0af403.jpg",
+                "path": "/cpsdevpb/16E7/test/_63536850__96067914_21f3ca15-032f-47cf-b38c-cb661a0af403.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "చేస్తుంది",
+                "caption": "చేస్తుంది",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:telugu/international-23125481",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "301fd6c4-d816-094f-ab02-2ff9bf50db22",
+            "rank": 2,
+            "count": 9683,
+            "urn": "urn:bbc:curie:asset:301fd6c4-d816-094f-ab02-2ff9bf50db22",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "వివిధ రకాల క్యాన్సర్ వ్యాధిని నివారించే- మేడిపండు 10",
+                "headline": "వివిధ రకాల క్యాన్సర్ వ్యాధిని నివారించే- మేడిపండు 10"
+              },
+              "locators": {
+                "assetUri": "/telugu/international-23125413",
+                "cpsUrn": "urn:bbc:content:assetUri:telugu/international-23125413",
+                "curie": "http://www.bbc.co.uk/asset/301fd6c4-d816-094f-ab02-2ff9bf50db22",
+                "assetId": "23125413"
+              },
+              "summary": "వివిధ రకాల క్యాన్సర్ వ్యాధిని నివారించే- మేడిపండు",
+              "timestamp": 1494946366000,
+              "language": "en-gb",
+              "indexImage": {
+                "id": "63536850",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/16E7/test/_63536850__96067914_21f3ca15-032f-47cf-b38c-cb661a0af403.jpg",
+                "path": "/cpsdevpb/16E7/test/_63536850__96067914_21f3ca15-032f-47cf-b38c-cb661a0af403.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "చేస్తుంది",
+                "caption": "చేస్తుంది",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:telugu/international-23125413",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "79cbc53a-d891-104c-930b-8fd0a2183a9a",
+            "rank": 3,
+            "count": 9457,
+            "urn": "urn:bbc:curie:asset:79cbc53a-d891-104c-930b-8fd0a2183a9a",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "కోహ్లీ రికార్డు బద్దలుకొట్టిన ఆమ్లా 3",
+                "headline": "కోహ్లీ రికార్డు బద్దలుకొట్టిన ఆమ్లా 3"
+              },
+              "locators": {
+                "assetUri": "/telugu/india-23129801",
+                "cpsUrn": "urn:bbc:content:assetUri:telugu/india-23129801",
+                "curie": "http://www.bbc.co.uk/asset/79cbc53a-d891-104c-930b-8fd0a2183a9a",
+                "assetId": "23129801"
+              },
+              "summary": "కోహ్లీ రికార్డును ఆమ్లా గతంలో దాటేసిన సంగతి తెలిసిందే.",
+              "timestamp": 1496633428000,
+              "language": "te",
+              "indexImage": {
+                "id": "63539209",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/160B5/test/_63539209_mediaitem63539207.jpg",
+                "path": "/cpsdevpb/160B5/test/_63539209_mediaitem63539207.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "తెలిసిందే",
+                "copyrightHolder": "iStock",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:telugu/india-23129801",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "1a91716f-95a3-1b40-8ee6-897b4f016267",
+            "rank": 4,
+            "count": 9389,
+            "urn": "urn:bbc:curie:asset:1a91716f-95a3-1b40-8ee6-897b4f016267",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "వివిధ రకాల క్యాన్సర్ వ్యాధిని నివారించే- మేడిపండు 24",
+                "headline": "వివిధ రకాల క్యాన్సర్ వ్యాధిని నివారించే- మేడిపండు 24"
+              },
+              "locators": {
+                "assetUri": "/telugu/international-23125477",
+                "cpsUrn": "urn:bbc:content:assetUri:telugu/international-23125477",
+                "curie": "http://www.bbc.co.uk/asset/1a91716f-95a3-1b40-8ee6-897b4f016267",
+                "assetId": "23125477"
+              },
+              "summary": "వివిధ రకాల క్యాన్సర్ వ్యాధిని నివారించే- మేడిపండు",
+              "timestamp": 1494946639000,
+              "language": "en-gb",
+              "indexImage": {
+                "id": "63536850",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/16E7/test/_63536850__96067914_21f3ca15-032f-47cf-b38c-cb661a0af403.jpg",
+                "path": "/cpsdevpb/16E7/test/_63536850__96067914_21f3ca15-032f-47cf-b38c-cb661a0af403.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "చేస్తుంది",
+                "caption": "చేస్తుంది",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:telugu/international-23125477",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "401fa4e8-e4b6-da40-a4f2-f1d3216b7ab5",
+            "rank": 5,
+            "count": 9139,
+            "urn": "urn:bbc:curie:asset:401fa4e8-e4b6-da40-a4f2-f1d3216b7ab5",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "వివిధ రకాల క్యాన్సర్ వ్యాధిని నివారించే- మేడిపండు 32",
+                "headline": "వివిధ రకాల క్యాన్సర్ వ్యాధిని నివారించే- మేడిపండు 32"
+              },
+              "locators": {
+                "assetUri": "/telugu/international-23125485",
+                "cpsUrn": "urn:bbc:content:assetUri:telugu/international-23125485",
+                "curie": "http://www.bbc.co.uk/asset/401fa4e8-e4b6-da40-a4f2-f1d3216b7ab5",
+                "assetId": "23125485"
+              },
+              "summary": "వివిధ రకాల క్యాన్సర్ వ్యాధిని నివారించే- మేడిపండు",
+              "timestamp": 1494946787000,
+              "language": "en-gb",
+              "indexImage": {
+                "id": "63536850",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/16E7/test/_63536850__96067914_21f3ca15-032f-47cf-b38c-cb661a0af403.jpg",
+                "path": "/cpsdevpb/16E7/test/_63536850__96067914_21f3ca15-032f-47cf-b38c-cb661a0af403.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "చేస్తుంది",
+                "caption": "చేస్తుంది",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:telugu/international-23125485",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "ebecc166-298d-6746-9361-9831a8428a65",
+            "rank": 6,
+            "count": 8598,
+            "urn": "urn:bbc:curie:asset:ebecc166-298d-6746-9361-9831a8428a65",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "వివిధ రకాల క్యాన్సర్ వ్యాధిని నివారించే- మేడిపండు 4",
+                "headline": "వివిధ రకాల క్యాన్సర్ వ్యాధిని నివారించే- మేడిపండు 4"
+              },
+              "locators": {
+                "assetUri": "/telugu/international-23125406",
+                "cpsUrn": "urn:bbc:content:assetUri:telugu/international-23125406",
+                "curie": "http://www.bbc.co.uk/asset/ebecc166-298d-6746-9361-9831a8428a65",
+                "assetId": "23125406"
+              },
+              "summary": "వివిధ రకాల క్యాన్సర్ వ్యాధిని నివారించే- మేడిపండు",
+              "timestamp": 1494943146000,
+              "language": "en-gb",
+              "indexImage": {
+                "id": "63536850",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/16E7/test/_63536850__96067914_21f3ca15-032f-47cf-b38c-cb661a0af403.jpg",
+                "path": "/cpsdevpb/16E7/test/_63536850__96067914_21f3ca15-032f-47cf-b38c-cb661a0af403.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "చేస్తుంది",
+                "caption": "చేస్తుంది",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:telugu/international-23125406",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "70c9c82a-5f05-a14f-9761-e4d1f042c96a",
+            "rank": 7,
+            "count": 8598,
+            "urn": "urn:bbc:curie:asset:70c9c82a-5f05-a14f-9761-e4d1f042c96a",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "వివిధ రకాల క్యాన్సర్ వ్యాధిని నివారించే- మేడిపండు 6",
+                "headline": "వివిధ రకాల క్యాన్సర్ వ్యాధిని నివారించే- మేడిపండు 6"
+              },
+              "locators": {
+                "assetUri": "/telugu/international-23125408",
+                "cpsUrn": "urn:bbc:content:assetUri:telugu/international-23125408",
+                "curie": "http://www.bbc.co.uk/asset/70c9c82a-5f05-a14f-9761-e4d1f042c96a",
+                "assetId": "23125408"
+              },
+              "summary": "వివిధ రకాల క్యాన్సర్ వ్యాధిని నివారించే- మేడిపండు",
+              "timestamp": 1494946105000,
+              "language": "en-gb",
+              "indexImage": {
+                "id": "63536850",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/16E7/test/_63536850__96067914_21f3ca15-032f-47cf-b38c-cb661a0af403.jpg",
+                "path": "/cpsdevpb/16E7/test/_63536850__96067914_21f3ca15-032f-47cf-b38c-cb661a0af403.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "చేస్తుంది",
+                "caption": "చేస్తుంది",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:telugu/international-23125408",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "20db6774-11a8-1b46-9f54-daa1308ae73a",
+            "rank": 8,
+            "count": 8537,
+            "urn": "urn:bbc:curie:asset:20db6774-11a8-1b46-9f54-daa1308ae73a",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "వివిధ రకాల క్యాన్సర్ వ్యాధిని నివారించే- మేడిపండు 14",
+                "headline": "వివిధ రకాల క్యాన్సర్ వ్యాధిని నివారించే- మేడిపండు 14"
+              },
+              "locators": {
+                "assetUri": "/telugu/international-23125457",
+                "cpsUrn": "urn:bbc:content:assetUri:telugu/international-23125457",
+                "curie": "http://www.bbc.co.uk/asset/20db6774-11a8-1b46-9f54-daa1308ae73a",
+                "assetId": "23125457"
+              },
+              "summary": "వివిధ రకాల క్యాన్సర్ వ్యాధిని నివారించే- మేడిపండు",
+              "timestamp": 1494946435000,
+              "language": "en-gb",
+              "indexImage": {
+                "id": "63536850",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/16E7/test/_63536850__96067914_21f3ca15-032f-47cf-b38c-cb661a0af403.jpg",
+                "path": "/cpsdevpb/16E7/test/_63536850__96067914_21f3ca15-032f-47cf-b38c-cb661a0af403.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "చేస్తుంది",
+                "caption": "చేస్తుంది",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:telugu/international-23125457",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "60073089-d056-464b-ae01-e834d47a6b63",
+            "rank": 9,
+            "count": 8397,
+            "urn": "urn:bbc:curie:asset:60073089-d056-464b-ae01-e834d47a6b63",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "వివిధ రకాల క్యాన్సర్ వ్యాధిని నివారించే- మేడిపండు 27",
+                "headline": "వివిధ రకాల క్యాన్సర్ వ్యాధిని నివారించే- మేడిపండు 27"
+              },
+              "locators": {
+                "assetUri": "/telugu/international-23125480",
+                "cpsUrn": "urn:bbc:content:assetUri:telugu/international-23125480",
+                "curie": "http://www.bbc.co.uk/asset/60073089-d056-464b-ae01-e834d47a6b63",
+                "assetId": "23125480"
+              },
+              "summary": "వివిధ రకాల క్యాన్సర్ వ్యాధిని నివారించే- మేడిపండు",
+              "timestamp": 1494946706000,
+              "language": "en-gb",
+              "indexImage": {
+                "id": "63536850",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/16E7/test/_63536850__96067914_21f3ca15-032f-47cf-b38c-cb661a0af403.jpg",
+                "path": "/cpsdevpb/16E7/test/_63536850__96067914_21f3ca15-032f-47cf-b38c-cb661a0af403.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "చేస్తుంది",
+                "caption": "చేస్తుంది",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:telugu/international-23125480",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "978190c5-b071-f04b-aeeb-f8dbba0fe7f6",
+            "rank": 10,
+            "count": 8116,
+            "urn": "urn:bbc:curie:asset:978190c5-b071-f04b-aeeb-f8dbba0fe7f6",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "గుజరాత్ వరదలు: 200 మందికి పైగా మృతి",
+                "headline": "గుజరాత్ వరదలు: 200 మందికి పైగా మృతి"
+              },
+              "locators": {
+                "assetUri": "/telugu/23144024",
+                "cpsUrn": "urn:bbc:content:assetUri:telugu/23144024",
+                "curie": "http://www.bbc.co.uk/asset/978190c5-b071-f04b-aeeb-f8dbba0fe7f6",
+                "assetId": "23144024"
+              },
+              "summary": "గుజరాత్ వరదల్లో 218 మంది మృతి చెందారని ప్రభుత్వాధికారులు ధృవీకరించారు.",
+              "timestamp": 1501584377000,
+              "language": "te",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63582753",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/8B90/test/_63582753_1.jpg",
+                "path": "/cpsdevpb/8B90/test/_63582753_1.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "గుజరాత్ వరదలు",
+                "caption": "గుజరాత్‌లో మృతుల సంఖ్య గత రెండు రోజుల్లోనే రెట్టింపయ్యింది.",
+                "copyrightHolder": "AFP",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:telugu/23144024",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "ac3fbe62-ed17-504d-8ea0-38ced75b0a0d",
+            "rank": 11,
+            "count": 7843,
+            "urn": "urn:bbc:curie:asset:ac3fbe62-ed17-504d-8ea0-38ced75b0a0d",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "కోహ్లీ రికార్డు బద్దలుకొట్టిన ఆమ్లా 6",
+                "headline": "కోహ్లీ రికార్డు బద్దలుకొట్టిన ఆమ్లా 6"
+              },
+              "locators": {
+                "assetUri": "/telugu/international-23129804",
+                "cpsUrn": "urn:bbc:content:assetUri:telugu/international-23129804",
+                "curie": "http://www.bbc.co.uk/asset/ac3fbe62-ed17-504d-8ea0-38ced75b0a0d",
+                "assetId": "23129804"
+              },
+              "summary": "కోహ్లీ రికార్డును ఆమ్లా గతంలో దాటేసిన సంగతి తెలిసిందే.",
+              "timestamp": 1496633971000,
+              "language": "te",
+              "indexImage": {
+                "id": "63539209",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/160B5/test/_63539209_mediaitem63539207.jpg",
+                "path": "/cpsdevpb/160B5/test/_63539209_mediaitem63539207.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "తెలిసిందే",
+                "copyrightHolder": "iStock",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:telugu/international-23129804",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "c5b404d5-fdee-2e4b-9aaf-3f0495a40f2a",
+            "rank": 12,
+            "count": 7531,
+            "urn": "urn:bbc:curie:asset:c5b404d5-fdee-2e4b-9aaf-3f0495a40f2a",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "నార్వే: జీతాల దాపరికంలేని దేశం1",
+                "headline": "నార్వే: జీతాల దాపరికంలేని దేశం1"
+              },
+              "locators": {
+                "assetUri": "/telugu/23145894",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:c5b404d5-fdee-2e4b-9aaf-3f0495a40f2a",
+                "assetId": "23145894",
+                "cpsUrn": "urn:bbc:content:assetUri:telugu/23145894",
+                "curie": "http://www.bbc.co.uk/asset/c5b404d5-fdee-2e4b-9aaf-3f0495a40f2a"
+              },
+              "summary": "తెలుగురాష్ట్రాల్లో టీవీ యాంక‌ర్లు, విలేక‌రుల జీతాలు ఎంత‌నేది ర‌హ‌స్య‌మే. కానీ, నార్వేలో మాత్రం ఇలాంటి ర‌హ‌స్యాలేమీ లేవు. ఎవ‌రెవ‌రికి ఎంతెంత జీతం అందుతోంద‌నేది ఎవ‌రైనా తెలుసుకోవ‌చ్చు.",
+              "timestamp": 1502801273000,
+              "language": "te",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Telugu",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63588924",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/A7EC/test/_63588924__97036295_gettyimages-137403025.jpg",
+                "path": "/cpsdevpb/A7EC/test/_63588924__97036295_gettyimages-137403025.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "నార్వే పారదర్శక జీతాలు బీబీసీ జర్నలిస్టులు",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:telugu/23145894",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "140757e7-e198-764d-8973-501df5b92abc",
+            "rank": 13,
+            "count": 6979,
+            "urn": "urn:bbc:curie:asset:140757e7-e198-764d-8973-501df5b92abc",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "కోహ్లీ రికార్డు బద్దలుకొట్టిన ఆమ్లా 14",
+                "headline": "కోహ్లీ రికార్డు బద్దలుకొట్టిన ఆమ్లా 14"
+              },
+              "locators": {
+                "assetUri": "/telugu/media-23129810",
+                "cpsUrn": "urn:bbc:content:assetUri:telugu/media-23129810",
+                "curie": "http://www.bbc.co.uk/asset/140757e7-e198-764d-8973-501df5b92abc",
+                "assetId": "23129810"
+              },
+              "summary": "కోహ్లీ రికార్డును ఆమ్లా గతంలో దాటేసిన సంగతి తెలిసిందే.",
+              "timestamp": 1496633750000,
+              "language": "te",
+              "indexImage": {
+                "id": "63539209",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/160B5/test/_63539209_mediaitem63539207.jpg",
+                "path": "/cpsdevpb/160B5/test/_63539209_mediaitem63539207.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "తెలిసిందే",
+                "copyrightHolder": "iStock",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:telugu/media-23129810",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "c3a55887-76eb-e54c-bd42-69b8f1b2d9d9",
+            "rank": 14,
+            "count": 6903,
+            "urn": "urn:bbc:curie:asset:c3a55887-76eb-e54c-bd42-69b8f1b2d9d9",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "వివిధ రకాల క్యాన్సర్ వ్యాధిని నివారించే- మేడిపండు 34",
+                "headline": "వివిధ రకాల క్యాన్సర్ వ్యాధిని నివారించే- మేడిపండు 34"
+              },
+              "locators": {
+                "assetUri": "/telugu/international-23125487",
+                "cpsUrn": "urn:bbc:content:assetUri:telugu/international-23125487",
+                "curie": "http://www.bbc.co.uk/asset/c3a55887-76eb-e54c-bd42-69b8f1b2d9d9",
+                "assetId": "23125487"
+              },
+              "summary": "వివిధ రకాల క్యాన్సర్ వ్యాధిని నివారించే- మేడిపండు",
+              "timestamp": 1494946820000,
+              "language": "en-gb",
+              "indexImage": {
+                "id": "63536850",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/16E7/test/_63536850__96067914_21f3ca15-032f-47cf-b38c-cb661a0af403.jpg",
+                "path": "/cpsdevpb/16E7/test/_63536850__96067914_21f3ca15-032f-47cf-b38c-cb661a0af403.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "చేస్తుంది",
+                "caption": "చేస్తుంది",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:telugu/international-23125487",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "2f0ade9a-85f5-2441-b613-673def6ead8c",
+            "rank": 15,
+            "count": 6835,
+            "urn": "urn:bbc:curie:asset:2f0ade9a-85f5-2441-b613-673def6ead8c",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "వివిధ రకాల క్యాన్సర్ వ్యాధిని నివారించే- మేడిపండు 31",
+                "headline": "వివిధ రకాల క్యాన్సర్ వ్యాధిని నివారించే- మేడిపండు 31"
+              },
+              "locators": {
+                "assetUri": "/telugu/international-23125484",
+                "cpsUrn": "urn:bbc:content:assetUri:telugu/international-23125484",
+                "curie": "http://www.bbc.co.uk/asset/2f0ade9a-85f5-2441-b613-673def6ead8c",
+                "assetId": "23125484"
+              },
+              "summary": "వివిధ రకాల క్యాన్సర్ వ్యాధిని నివారించే- మేడిపండు",
+              "timestamp": 1494946771000,
+              "language": "en-gb",
+              "indexImage": {
+                "id": "63536850",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/16E7/test/_63536850__96067914_21f3ca15-032f-47cf-b38c-cb661a0af403.jpg",
+                "path": "/cpsdevpb/16E7/test/_63536850__96067914_21f3ca15-032f-47cf-b38c-cb661a0af403.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "చేస్తుంది",
+                "caption": "చేస్తుంది",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:telugu/international-23125484",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "782e2023-a5bb-1d4f-8ca1-60da126bf06d",
+            "rank": 16,
+            "count": 6643,
+            "urn": "urn:bbc:curie:asset:782e2023-a5bb-1d4f-8ca1-60da126bf06d",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "తోళ్లు, పాదరక్షల పరిశ్రమకు రూ.4,000 కోట్ల ప్రోత్సాహకాలు pgl!",
+                "headline": "తోళ్లు, పాదరక్షల పరిశ్రమకు రూ.4,000 కోట్ల ప్రోత్సాహకాలు pgl సగలదీ!"
+              },
+              "locators": {
+                "assetUri": "/telugu/other-news-23128500",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:782e2023-a5bb-1d4f-8ca1-60da126bf06d",
+                "assetId": "23128500",
+                "cpsUrn": "urn:bbc:content:assetUri:telugu/other-news-23128500",
+                "curie": "http://www.bbc.co.uk/asset/782e2023-a5bb-1d4f-8ca1-60da126bf06d"
+              },
+              "summary": "దిల్లీ: తోళ్లు, పాదరక్షల పరిశ్రమకు రూ.4,000 కోట్ల విలువైన ప్రోత్సాహకాలను వచ్చే జులైలో ప్రభుత్వం ప్రకటించే అవకాశం ఉంది.",
+              "timestamp": 1496156733000,
+              "language": "te",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Telugu",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63538728",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/1435F/test/_63538728_160223135053_rwanda_minister_for_refugees_640x360_bbc_nocredit.jpg",
+                "path": "/cpsdevpb/1435F/test/_63538728_160223135053_rwanda_minister_for_refugees_640x360_bbc_nocredit.jpg",
+                "height": 288,
+                "width": 512,
+                "altText": "ఇప్పటికే రూ.500 కోట్లను ఆర్థిక శాఖ మంజూరు చేసింది. ఈ రంగంలో బాటా ఇండియా, లిబర్టీ షూస్‌, మీర్జా ఇంటర్నేషనల్‌, రిలాక్సో ఫుట్‌వేర్‌ వంటివి దిగ్గజ సంస్థలుగా చెప్పవచ్చు.",
+                "caption": "ఇప్పటికే రూ.500 కోట్లను ఆర్థిక శాఖ మంజూరు చేసింది. ఈ రంగంలో బాటా ఇండియా, లిబర్టీ షూస్‌, మీర్జా ఇంటర్నేషనల్‌, రిలాక్సో ఫుట్‌వేర్‌ వంటివి దిగ్గజ సంస్థలుగా చెప్పవచ్చు.",
+                "copyrightHolder": "BBC తెలుగు",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:telugu/other-news-23128500",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "730b207f-dbd9-7543-b76d-affefe5f5add",
+            "rank": 17,
+            "count": 6411,
+            "urn": "urn:bbc:curie:asset:730b207f-dbd9-7543-b76d-affefe5f5add",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "కోహ్లీ రికార్డు బద్దలుకొట్టిన ఆమ్లా 7",
+                "headline": "కోహ్లీ రికార్డు బద్దలుకొట్టిన ఆమ్లా 7"
+              },
+              "locators": {
+                "assetUri": "/telugu/other-news-23129805",
+                "cpsUrn": "urn:bbc:content:assetUri:telugu/other-news-23129805",
+                "curie": "http://www.bbc.co.uk/asset/730b207f-dbd9-7543-b76d-affefe5f5add",
+                "assetId": "23129805"
+              },
+              "summary": "కోహ్లీ రికార్డును ఆమ్లా గతంలో దాటేసిన సంగతి తెలిసిందే.",
+              "timestamp": 1496633504000,
+              "language": "te",
+              "indexImage": {
+                "id": "63539209",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/160B5/test/_63539209_mediaitem63539207.jpg",
+                "path": "/cpsdevpb/160B5/test/_63539209_mediaitem63539207.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "తెలిసిందే",
+                "copyrightHolder": "iStock",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:telugu/other-news-23129805",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "506a27f4-4da0-5e47-806f-4faa5b40e384",
+            "rank": 18,
+            "count": 6281,
+            "urn": "urn:bbc:curie:asset:506a27f4-4da0-5e47-806f-4faa5b40e384",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "కోహ్లీ రికార్డు బద్దలుకొట్టిన ఆమ్లా 5",
+                "headline": "కోహ్లీ రికార్డు బద్దలుకొట్టిన ఆమ్లా 5"
+              },
+              "locators": {
+                "assetUri": "/telugu/international-23129803",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:506a27f4-4da0-5e47-806f-4faa5b40e384",
+                "assetId": "23129803",
+                "cpsUrn": "urn:bbc:content:assetUri:telugu/international-23129803",
+                "curie": "http://www.bbc.co.uk/asset/506a27f4-4da0-5e47-806f-4faa5b40e384"
+              },
+              "summary": "కోహ్లీ రికార్డును ఆమ్లా గతంలో దాటేసిన సంగతి తెలిసిందే.",
+              "timestamp": 1496633460000,
+              "language": "te",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Telugu",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63539209",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/160B5/test/_63539209_mediaitem63539207.jpg",
+                "path": "/cpsdevpb/160B5/test/_63539209_mediaitem63539207.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "తెలిసిందే",
+                "copyrightHolder": "iStock",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:telugu/international-23129803",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "0c592a59-a93f-eb46-b69a-a9c28522b9c5",
+            "rank": 19,
+            "count": 6258,
+            "urn": "urn:bbc:curie:asset:0c592a59-a93f-eb46-b69a-a9c28522b9c5",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "వివిధ రకాల క్యాన్సర్ వ్యాధిని నివారించే- మేడిపండు 19",
+                "headline": "వివిధ రకాల క్యాన్సర్ వ్యాధిని నివారించే- మేడిపండు 19"
+              },
+              "locators": {
+                "assetUri": "/telugu/international-23125462",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:0c592a59-a93f-eb46-b69a-a9c28522b9c5",
+                "assetId": "23125462",
+                "cpsUrn": "urn:bbc:content:assetUri:telugu/international-23125462",
+                "curie": "http://www.bbc.co.uk/asset/0c592a59-a93f-eb46-b69a-a9c28522b9c5"
+              },
+              "summary": "వివిధ రకాల క్యాన్సర్ వ్యాధిని నివారించే- మేడిపండు",
+              "timestamp": 1494946517000,
+              "language": "en-gb",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Telugu",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63536850",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/16E7/test/_63536850__96067914_21f3ca15-032f-47cf-b38c-cb661a0af403.jpg",
+                "path": "/cpsdevpb/16E7/test/_63536850__96067914_21f3ca15-032f-47cf-b38c-cb661a0af403.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "చేస్తుంది",
+                "caption": "చేస్తుంది",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:telugu/international-23125462",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "bb4b700b-4ece-ff48-97ef-b34917e35872",
+            "rank": 20,
+            "count": 6217,
+            "urn": "urn:bbc:curie:asset:bb4b700b-4ece-ff48-97ef-b34917e35872",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "‘ఆధ్యాత్మికతకూ, శాస్త్రవిజ్ఞానికీ పొసగదు’",
+                "headline": "ఆధ్యాత్మికతతో శాస్త్రవిజ్ఞానానికి పొత్తు కుదరదన్న పీఎం భార్గవ"
+              },
+              "locators": {
+                "assetUri": "/telugu/23144405",
+                "cpsUrn": "urn:bbc:content:assetUri:telugu/23144405",
+                "curie": "http://www.bbc.co.uk/asset/bb4b700b-4ece-ff48-97ef-b34917e35872",
+                "assetId": "23144405"
+              },
+              "summary": "మంగళవారం హైదరాబాద్‌లో మృతి చెందిన ప్రముఖ శాస్త్రవేత్త పీఎం భార్గవ గతంలో జన్యుమార్పిడి వంటి విషయాల్లో ప్రభుత్వ విధానాలను తప్పుపట్టారు.",
+              "timestamp": 1501670628000,
+              "language": "te",
+              "indexImage": {
+                "id": "63583107",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/111FA/test/_63583107_1501596117.bhargav-kannumutha.jpg",
+                "path": "/cpsdevpb/111FA/test/_63583107_1501596117.bhargav-kannumutha.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "ప్రముఖ శాస్త్రవేత్త పీఎం భార్గవ హైదరాబాద్‌లో మృతి చెందారు",
+                "caption": "ప్రముఖ శాస్త్రవేత్త పీఎం భార్గవ హైదరాబాద్‌లో మృతి చెందారు",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:telugu/23144405",
+              "type": "cps"
+            }
+          }
+        ]
+      }
     }
   },
-  "promo": {
-    "headlines": {
-      "seoHeadline": "డక్‌వర్త్ లూయీస్: క్రికెట్ మ్యాచ్‌లో వర్షం పడితే ఫలితం తేల్చేది వీళ్లే... అసలు ఇది ఎలా పుట్టింది?"
-    },
-    "locators": {
-      "optimoUrn": "urn:bbc:optimo:asset:cq0y4008d4vo"
-    },
-    "summary": {
-      "blocks": [
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "attributes": [],
-                        "text": ""
-                      },
-                      "type": "fragment"
-                    }
-                  ],
-                  "text": ""
-                },
-                "type": "paragraph"
-              }
-            ]
-          },
-          "type": "text"
-        }
-      ]
-    },
-    "timestamp": 1562942618861,
-    "id": "urn:bbc:ares::article:cq0y4008d4vo",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "site": {
-      "subType": "site",
-      "name": "Telugu",
-      "uri": "/telugu",
-      "type": "simple"
-    },
-    "groups": []
-  }
+  "contentType": "application/json; charset=utf-8"
 }

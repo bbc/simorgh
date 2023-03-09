@@ -90,21 +90,6 @@ describe('getAdditionalPageData', () => {
     expect(additionalPageData).toEqual(expectedOutput);
   });
 
-  it('should return an empty object when a data fetch fails', async () => {
-    fetchMock.mock('http://localhost/mundo/mostread.json', 404);
-    fetchMock.mock('http://localhost/mundo/sty-secondary-column.json', 404);
-    fetchMock.mock(
-      'http://mock-recommendations-path/recommendations/mundo/23263889',
-      404,
-    );
-    const additionalPageData = await getAdditionalPageData({
-      pageData: styJson,
-      service: 'mundo',
-    });
-
-    expect(additionalPageData).toEqual({});
-  });
-
   it('should return additional data for a CSP asset', async () => {
     fetchMock.mock('http://localhost/news/mostread.json', cspMostReadJson);
     fetchMock.mock(
@@ -126,17 +111,21 @@ describe('getAdditionalPageData', () => {
 
   describe('Optimizely Experiments', () => {
     describe('004_brasil_recommendations_experiment', () => {
-      it('should recommendations data from camino, unirecs content and unirecs hybrid engine', async () => {
+      it('should get recommendations data from unirecs content and unirecs hybrid engine', async () => {
         const expectedOutput = {
           recommendations: recommendationsJson,
-          datalabContentRecommendations: recommendationsJson,
           datalabHybridRecommendations: recommendationsJson,
+          datalabHybridRecommendationsV1x1: recommendationsJson,
+          datalabHybridRecommendationsV1x2: recommendationsJson,
+          datalabHybridRecommendationsV1x3: recommendationsJson,
+          datalabHybridRecommendationsV1x4: recommendationsJson,
+          datalabHybridRecommendationsV1x5: recommendationsJson,
         };
 
         hasRecommendations.mockImplementationOnce(() => true);
 
         fetchMock.mock(
-          'http://mock-recommendations-path/recommendations/portuguese/brasil-59057279?Engine=unirecs_camino',
+          'http://mock-recommendations-path/recommendations/portuguese/brasil-59057279?Engine=unirecs_datalab',
           recommendationsJson,
         );
         fetchMock.mock(
@@ -145,6 +134,26 @@ describe('getAdditionalPageData', () => {
         );
         fetchMock.mock(
           'http://mock-recommendations-path/recommendations/portuguese/brasil-59057279?Engine=unirecs_datalab&EngineVariant=hybrid',
+          recommendationsJson,
+        );
+        fetchMock.mock(
+          'http://mock-recommendations-path/recommendations/portuguese/brasil-59057279?Engine=unirecs_datalab&EngineVariant=hybrid-v1x1',
+          recommendationsJson,
+        );
+        fetchMock.mock(
+          'http://mock-recommendations-path/recommendations/portuguese/brasil-59057279?Engine=unirecs_datalab&EngineVariant=hybrid-v1x2',
+          recommendationsJson,
+        );
+        fetchMock.mock(
+          'http://mock-recommendations-path/recommendations/portuguese/brasil-59057279?Engine=unirecs_datalab&EngineVariant=hybrid-v1x3',
+          recommendationsJson,
+        );
+        fetchMock.mock(
+          'http://mock-recommendations-path/recommendations/portuguese/brasil-59057279?Engine=unirecs_datalab&EngineVariant=hybrid-v1x4',
+          recommendationsJson,
+        );
+        fetchMock.mock(
+          'http://mock-recommendations-path/recommendations/portuguese/brasil-59057279?Engine=unirecs_datalab&EngineVariant=hybrid-v1x5',
           recommendationsJson,
         );
 

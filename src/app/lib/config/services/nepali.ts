@@ -1,11 +1,4 @@
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_GHOST,
-  C_POSTBOX_30,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
 import devanagari from '../../../components/ThemeProvider/fontScripts/devanagari';
-import brandSVG from '../../chameleonLogos/nepali';
 import '#psammead/moment-timezone-include/tz/Asia/Kathmandu';
 import '#psammead/psammead-locales/moment/ne';
 import withContext from '../../../contexts/utils/withContext';
@@ -39,7 +32,6 @@ export const service: DefaultServiceConfig = {
     service: 'nepali',
     serviceName: 'Nepali',
     languageName: 'Nepali',
-    themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnepali',
     twitterSite: '@bbcnepali',
     noBylinesPolicy:
@@ -50,13 +42,6 @@ export const service: DefaultServiceConfig = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'मुख पृष्ठ',
-    theming: {
-      brandBackgroundColour: `${C_POSTBOX}`,
-      brandLogoColour: `${C_WHITE}`,
-      brandForegroundColour: `${C_GHOST}`,
-      brandHighlightColour: `${C_WHITE}`,
-      brandBorderColour: `${C_POSTBOX_30}`,
-    },
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
@@ -229,8 +214,9 @@ export const service: DefaultServiceConfig = {
         previousRadioShow: 'पछिल्लो रेडिओ कार्यक्रम',
         nextRadioShow: 'अघिल्लो रेडिओ कार्यक्रम',
         duration: 'समयावधि',
-        recentEpisodes: 'पहिलेका कार्यक्रमहरु',
+        recentEpisodes: 'पहिलेका कार्यक्रमहरू',
         podcastExternalLinks: 'यो पडकास्ट सुन्नकालागि यहाँ उपलब्ध छ',
+        download: 'एपिसोड डाउनलोड',
       },
       socialEmbed: {
         caption: {
@@ -264,7 +250,6 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'मुख्य समाचार',
       featuresAnalysisTitle: 'अन‌ि यो पनि',
     },
-    brandSVG,
     mostRead: {
       header: 'धेरै पढिएको',
       lastUpdated: 'मा अन्तिम चोटि अद्यावधिक',
@@ -335,15 +320,11 @@ export const service: DefaultServiceConfig = {
         url: '/nepali/topics/cp2d78r6qppt',
       },
       {
-        title: 'विश्वकप फुटबल २०२२',
-        url: '/nepali/topics/c00r2x03gvkt',
-      },
-      {
         title: 'पछिल्लो कार्यक्रम',
         url: '/nepali/media-54029171',
       },
       {
-        title: 'भिडियो',
+        title: 'भिडिओ',
         url: '/nepali/topics/cw9kv027nwnt',
       },
     ],

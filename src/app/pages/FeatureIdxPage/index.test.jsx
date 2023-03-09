@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import fetchMock from 'fetch-mock';
 import { BrowserRouter } from 'react-router-dom';
 import { render, act } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -139,10 +138,7 @@ describe('Feature Idx Page', () => {
   let pageData;
 
   beforeEach(async () => {
-    fetchMock.mock(
-      'http://localhost/some-feature-idx-page-path.json',
-      JSON.stringify(urduPageData),
-    );
+    fetch.mockResponse(JSON.stringify(urduPageData));
 
     ({ pageData } = await getInitialData({
       path: 'some-feature-idx-page-path',
@@ -151,18 +147,16 @@ describe('Feature Idx Page', () => {
   });
 
   afterEach(() => {
-    fetchMock.restore();
     jest.clearAllMocks();
   });
 
   describe('Assertions', () => {
     it('should render visually hidden text as h1', async () => {
-      let container;
-      await act(async () => {
-        ({ container } = render(
-          <FeatureIdxPageWithContext pageData={pageData} />,
-        ));
+      const { container } = render(
+        <FeatureIdxPageWithContext pageData={pageData} />,
+      );
 
+      await act(async () => {
         const h1 = container.querySelector('h1');
         const content = h1.getAttribute('id');
         const tabIndex = h1.getAttribute('tabIndex');
@@ -177,12 +171,11 @@ describe('Feature Idx Page', () => {
     });
 
     it('should render flattened sections', async () => {
-      let container;
-      await act(async () => {
-        ({ container } = render(
-          <FeatureIdxPageWithContext pageData={pageData} />,
-        ));
+      const { container } = render(
+        <FeatureIdxPageWithContext pageData={pageData} />,
+      );
 
+      await act(async () => {
         const sections = container.querySelectorAll('section');
         expect(sections).toHaveLength(4);
         sections.forEach(section => {

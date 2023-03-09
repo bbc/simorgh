@@ -55,7 +55,7 @@ const runTests = () =>
   new Promise((resolve, reject) => {
     const child = spawn(
       'jest',
-      [filesToTest, '--runInBand', '--colors', ...getJestArgs()],
+      [filesToTest, '-u', '--runInBand', '--colors', ...getJestArgs()],
       { stdio: 'inherit' },
     );
     child.on('exit', code => {

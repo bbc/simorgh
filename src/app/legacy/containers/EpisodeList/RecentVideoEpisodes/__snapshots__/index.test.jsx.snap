@@ -284,6 +284,7 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
 }
 
 .emotion-31 {
+  display: block;
   line-height: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -505,13 +506,23 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
                 aria-hidden="true"
                 class="emotion-25 emotion-26"
                 focusable="false"
-                height="12px"
-                viewBox="0 0 32 32"
-                width="12px"
+                height="12"
+                viewBox="0 0 12 12"
+                width="12"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <polygon
-                  points="3,32 29,16 3,0"
-                />
+                <g
+                  fill="none"
+                  fill-rule="evenodd"
+                >
+                  <path
+                    d="M.5.6h12v12H.5z"
+                  />
+                  <path
+                    d="M2.144.96v11.28l8.712-5.64z"
+                    fill="currentColor"
+                  />
+                </g>
               </svg>
               <span
                 class="emotion-27 emotion-28"
@@ -526,7 +537,7 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
           >
             <a
               aria-labelledby="episodeLinkIndex-0"
-              class="emotion-31 emotion-32"
+              class="focusIndicatorDisplayBlock focusIndicatorInvert emotion-31 emotion-32"
               href="/afrique/bbc_afrique_tv/tv/w172xc9xq2gllfk"
             >
               <span
@@ -598,13 +609,23 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
                 aria-hidden="true"
                 class="emotion-25 emotion-26"
                 focusable="false"
-                height="12px"
-                viewBox="0 0 32 32"
-                width="12px"
+                height="12"
+                viewBox="0 0 12 12"
+                width="12"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <polygon
-                  points="3,32 29,16 3,0"
-                />
+                <g
+                  fill="none"
+                  fill-rule="evenodd"
+                >
+                  <path
+                    d="M.5.6h12v12H.5z"
+                  />
+                  <path
+                    d="M2.144.96v11.28l8.712-5.64z"
+                    fill="currentColor"
+                  />
+                </g>
               </svg>
               <span
                 class="emotion-27 emotion-28"
@@ -619,7 +640,7 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
           >
             <a
               aria-labelledby="episodeLinkIndex-1"
-              class="emotion-31 emotion-32"
+              class="focusIndicatorDisplayBlock focusIndicatorInvert emotion-31 emotion-32"
               href="/afrique/bbc_afrique_tv/tv/w172xc9xq2ghpjg"
             >
               <span
@@ -691,13 +712,23 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
                 aria-hidden="true"
                 class="emotion-25 emotion-26"
                 focusable="false"
-                height="12px"
-                viewBox="0 0 32 32"
-                width="12px"
+                height="12"
+                viewBox="0 0 12 12"
+                width="12"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <polygon
-                  points="3,32 29,16 3,0"
-                />
+                <g
+                  fill="none"
+                  fill-rule="evenodd"
+                >
+                  <path
+                    d="M.5.6h12v12H.5z"
+                  />
+                  <path
+                    d="M2.144.96v11.28l8.712-5.64z"
+                    fill="currentColor"
+                  />
+                </g>
               </svg>
               <span
                 class="emotion-27 emotion-28"
@@ -712,7 +743,7 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
           >
             <a
               aria-labelledby="episodeLinkIndex-2"
-              class="emotion-31 emotion-32"
+              class="focusIndicatorDisplayBlock focusIndicatorInvert emotion-31 emotion-32"
               href="/afrique/bbc_afrique_tv/tv/w172xc9xq2gdsmc"
             >
               <span

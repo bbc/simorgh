@@ -1,10 +1,3 @@
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_GHOST,
-  C_POSTBOX_30,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
-import brandSVG from '../../chameleonLogos/azeri';
 import '#psammead/moment-timezone-include/tz/Asia/Baku';
 import '#psammead/psammead-locales/moment/az';
 import latinWithDiacritics from '../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
@@ -39,7 +32,6 @@ export const service: DefaultServiceConfig = {
     service: 'azeri',
     serviceName: 'Azərbaycanca',
     languageName: 'Azerbaijani',
-    themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcazeri',
     twitterSite: '@bbcazeri',
     noBylinesPolicy:
@@ -50,13 +42,6 @@ export const service: DefaultServiceConfig = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Xəbərlər, Qaynar Xəbərlər, Analiz, Video',
-    theming: {
-      brandBackgroundColour: `${C_POSTBOX}`,
-      brandLogoColour: `${C_WHITE}`,
-      brandForegroundColour: `${C_GHOST}`,
-      brandHighlightColour: `${C_WHITE}`,
-      brandBorderColour: `${C_POSTBOX_30}`,
-    },
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
@@ -263,7 +248,6 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'Digər xəbərlər',
       featuresAnalysisTitle: 'Bunları da oxuyun',
     },
-    brandSVG,
     mostRead: {
       header: 'Ən çox oxunan',
       lastUpdated: 'Ən son yeniləmə:',

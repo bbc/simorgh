@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, waitFor } from '@testing-library/react';
+import { waitFor } from '@testing-library/react';
 import {
   ARTICLE_PAGE,
   FRONT_PAGE,
@@ -18,9 +18,9 @@ import igboFrontPageData from '#data/igbo/frontpage/index.json';
 import somaliFrontPageData from '#data/somali/frontpage/index.json';
 import liveRadioPageData from '#data/korean/bbc_korean_radio/liveradio.json';
 import { getSummary } from '#lib/utilities/parseAssetData/index';
-import getAuthorTwitterHandle from '#app/pages/ArticlePage/getAuthorTwitterHandle';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { render } from '../../../components/react-testing-library-with-providers';
 import services from '../../../../server/utilities/serviceConfigs';
+import { getAuthorTwitterHandle } from '../../../components/Byline/utilities';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import MetadataContainer from './index';
 
@@ -428,21 +428,11 @@ it('should render the facebook metatags', async () => {
   render(<CanonicalNewsInternationalOrigin />);
 
   await waitFor(() => {
-    const fbAdminId = document
-      .querySelector('head > meta[property="fb:admins"]')
-      .getAttribute('content');
     const fbAppId = document
       .querySelector('head > meta[property="fb:app_id"]')
       .getAttribute('content');
-    const fbPages = document
-      .querySelector('head > meta[property="fb:pages"]')
-      .getAttribute('content');
 
-    expect(fbAdminId).toEqual('100004154058350');
     expect(fbAppId).toEqual('1609039196070050');
-    expect(fbPages).toEqual(
-      '285361880228,192168680794107,9432520138,347501767628,264572343581678,303522857815,166580710064489,592266607456680,260669183761,160817274042538,236659822607,237647452933504,10150118096995434,113097918700687,143048895744759,81395234664,207150596007088,167959249906191,64040652712,190992343324,103678496456574,367167334474,160894643929209,186742265162,1526071940947174,230299653821,124158667615790,126548377386804,298318986864908,1068750829805728,228458913833525,163571453661989,660673490805047,948946275170651,485274381864409,1633841096923106,654070648098812',
-    );
   });
 });
 
@@ -785,158 +775,180 @@ it('should render the open graph image if provided', async () => {
   });
 });
 
-shouldMatchSnapshot(
-  'should match for Canonical News & international origin',
-  <CanonicalNewsInternationalOrigin />,
-);
+describe('Snapshot', () => {
+  it('should match for Canonical News & international origin', () => {
+    const { container } = render(<CanonicalNewsInternationalOrigin />);
+    expect(container).toMatchSnapshot();
+  });
 
-shouldMatchSnapshot(
-  'should match for AMP News & UK origin',
-  <MetadataWithContext
-    service="news"
-    bbcOrigin={dotCoDotUKOrigin}
-    platform="amp"
-    id="c0000000001o"
-    pageType={ARTICLE_PAGE}
-    pathname="/news/articles/c0000000001o.amp"
-    {...newsArticleMetadataProps}
-  />,
-);
+  it('should match for AMP News & UK origin', () => {
+    const { container } = render(
+      <MetadataWithContext
+        service="news"
+        bbcOrigin={dotCoDotUKOrigin}
+        platform="amp"
+        id="c0000000001o"
+        pageType={ARTICLE_PAGE}
+        pathname="/news/articles/c0000000001o.amp"
+        {...newsArticleMetadataProps}
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-shouldMatchSnapshot(
-  'should match for Persian News & byline twitter handle',
-  <MetadataWithContext
-    service="pidgin"
-    bbcOrigin={dotComOrigin}
-    platform="canonical"
-    id="cwl08rd38l6o"
-    pageType={ARTICLE_PAGE}
-    pathname="/pidgin/articles/cwl08rd38l6o"
-    {...pidginArticleWithBylineMetadataProps}
-  />,
-);
+  it('should match for Persian News & byline twitter handle', () => {
+    const { container } = render(
+      <MetadataWithContext
+        service="pidgin"
+        bbcOrigin={dotComOrigin}
+        platform="canonical"
+        id="cwl08rd38l6o"
+        pageType={ARTICLE_PAGE}
+        pathname="/pidgin/articles/cwl08rd38l6o"
+        {...pidginArticleWithBylineMetadataProps}
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-shouldMatchSnapshot(
-  'should match for Persian News & international origin',
-  <MetadataWithContext
-    service="persian"
-    bbcOrigin={dotComOrigin}
-    platform="canonical"
-    id="c4vlle3q337o"
-    pageType={ARTICLE_PAGE}
-    pathname="/persian/articles/c4vlle3q337o"
-    {...persianArticleMetadataProps}
-  />,
-);
+  it('should match for Persian News & international origin', () => {
+    const { container } = render(
+      <MetadataWithContext
+        service="persian"
+        bbcOrigin={dotComOrigin}
+        platform="canonical"
+        id="c4vlle3q337o"
+        pageType={ARTICLE_PAGE}
+        pathname="/persian/articles/c4vlle3q337o"
+        {...persianArticleMetadataProps}
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-shouldMatchSnapshot(
-  'should match for Persian News & UK origin',
-  <MetadataWithContext
-    service="persian"
-    bbcOrigin={dotCoDotUKOrigin}
-    platform="amp"
-    id="c4vlle3q337o"
-    pageType={ARTICLE_PAGE}
-    pathname="/persian/articles/c4vlle3q337o.amp"
-    {...persianArticleMetadataProps}
-  />,
-);
+  it('should match for Persian News & UK origin', () => {
+    const { container } = render(
+      <MetadataWithContext
+        service="persian"
+        bbcOrigin={dotCoDotUKOrigin}
+        platform="amp"
+        id="c4vlle3q337o"
+        pageType={ARTICLE_PAGE}
+        pathname="/persian/articles/c4vlle3q337o.amp"
+        {...persianArticleMetadataProps}
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-shouldMatchSnapshot(
-  'should match for WS Frontpages',
-  <MetadataWithContext
-    service="igbo"
-    bbcOrigin={dotComOrigin}
-    platform="canonical"
-    id={null}
-    pageType={FRONT_PAGE}
-    pathname="/igbo"
-    title="Ogbako"
-    lang={igboFrontPageData.metadata.language}
-    description={igboFrontPageData.metadata.summary}
-    openGraphType="website"
-  />,
-);
+  it('should match for WS Frontpages', () => {
+    const { container } = render(
+      <MetadataWithContext
+        service="igbo"
+        bbcOrigin={dotComOrigin}
+        platform="canonical"
+        id={null}
+        pageType={FRONT_PAGE}
+        pathname="/igbo"
+        title="Ogbako"
+        lang={igboFrontPageData.metadata.language}
+        description={igboFrontPageData.metadata.summary}
+        openGraphType="website"
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-shouldMatchSnapshot(
-  'should match for WS Media liveradio',
-  <MetadataWithContext
-    service="korean"
-    bbcOrigin={dotComOrigin}
-    platform="canonical"
-    id={null}
-    pageType={MEDIA_PAGE}
-    pathname="/korean/bbc_korean_radio/liveradio"
-    title={liveRadioPageData.promo.name}
-    lang={liveRadioPageData.metadata.language}
-    description={liveRadioPageData.promo.summary}
-    openGraphType="website"
-  />,
-);
+  it('should match for WS Media liveradio', () => {
+    const { container } = render(
+      <MetadataWithContext
+        service="korean"
+        bbcOrigin={dotComOrigin}
+        platform="canonical"
+        id={null}
+        pageType={MEDIA_PAGE}
+        pathname="/korean/bbc_korean_radio/liveradio"
+        title={liveRadioPageData.promo.name}
+        lang={liveRadioPageData.metadata.language}
+        description={liveRadioPageData.promo.summary}
+        openGraphType="website"
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-shouldMatchSnapshot(
-  'should match for Ukrainian STY with Ukrainian lang on canonical',
-  <MetadataWithContext
-    lang="uk"
-    service="ukrainian"
-    bbcOrigin={dotComOrigin}
-    platform="canonical"
-    id="news-53577781"
-    pageType={ARTICLE_PAGE}
-    pathname="/ukrainian/news-53577781"
-    description="BBC Ukrainian"
-    openGraphType="website"
-    title="BBC Ukrainian"
-  />,
-);
+  it('should match for Ukrainian STY with Ukrainian lang on canonical', () => {
+    const { container } = render(
+      <MetadataWithContext
+        lang="uk"
+        service="ukrainian"
+        bbcOrigin={dotComOrigin}
+        platform="canonical"
+        id="news-53577781"
+        pageType={ARTICLE_PAGE}
+        pathname="/ukrainian/news-53577781"
+        description="BBC Ukrainian"
+        openGraphType="website"
+        title="BBC Ukrainian"
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-shouldMatchSnapshot(
-  'should match for Ukrainian STY with Ukrainian lang on Amp',
-  <MetadataWithContext
-    lang="uk"
-    service="ukrainian"
-    bbcOrigin={dotComOrigin}
-    platform="amp"
-    id="news-53577781"
-    pageType={ARTICLE_PAGE}
-    pathname="/ukrainian/news-53577781.amp"
-    description="BBC Ukrainian"
-    openGraphType="website"
-    title="BBC Ukrainian"
-  />,
-);
+  it('should match for Ukrainian STY with Ukrainian lang on Amp', () => {
+    const { container } = render(
+      <MetadataWithContext
+        lang="uk"
+        service="ukrainian"
+        bbcOrigin={dotComOrigin}
+        platform="amp"
+        id="news-53577781"
+        pageType={ARTICLE_PAGE}
+        pathname="/ukrainian/news-53577781.amp"
+        description="BBC Ukrainian"
+        openGraphType="website"
+        title="BBC Ukrainian"
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-shouldMatchSnapshot(
-  'should match for Ukrainian STY with Russian lang on canonical',
-  <MetadataWithContext
-    lang="ru"
-    service="ukrainian"
-    bbcOrigin={dotComOrigin}
-    platform="canonical"
-    id="news-53577781"
-    pageType={ARTICLE_PAGE}
-    pathname="/ukrainian/news-53577781"
-    description="BBC Ukrainian"
-    openGraphType="website"
-    title="BBC Ukrainian"
-  />,
-);
+  it('should match for Ukrainian STY with Russian lang on canonical', () => {
+    const { container } = render(
+      <MetadataWithContext
+        lang="ru"
+        service="ukrainian"
+        bbcOrigin={dotComOrigin}
+        platform="canonical"
+        id="news-53577781"
+        pageType={ARTICLE_PAGE}
+        pathname="/ukrainian/news-53577781"
+        description="BBC Ukrainian"
+        openGraphType="website"
+        title="BBC Ukrainian"
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-shouldMatchSnapshot(
-  'should match for Ukrainian STY with Russian lang on Amp',
-  <MetadataWithContext
-    lang="ru"
-    service="ukrainian"
-    bbcOrigin={dotComOrigin}
-    platform="amp"
-    id="news-53577781"
-    pageType={ARTICLE_PAGE}
-    pathname="/ukrainian/news-53577781.amp"
-    description="BBC Ukrainian"
-    openGraphType="website"
-    title="BBC Ukrainian"
-  />,
-);
+  it('should match for Ukrainian STY with Russian lang on Amp', () => {
+    const { container } = render(
+      <MetadataWithContext
+        lang="ru"
+        service="ukrainian"
+        bbcOrigin={dotComOrigin}
+        platform="amp"
+        id="news-53577781"
+        pageType={ARTICLE_PAGE}
+        pathname="/ukrainian/news-53577781.amp"
+        description="BBC Ukrainian"
+        openGraphType="website"
+        title="BBC Ukrainian"
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
+});
 
 describe('apple-itunes-app meta tag', () => {
   const CanonicalCPSAssetInternationalOrigin = ({

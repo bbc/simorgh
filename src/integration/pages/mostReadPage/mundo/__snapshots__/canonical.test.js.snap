@@ -2,7 +2,7 @@
 
 exports[`Canonical Most Read Page A11y I can see the skip to content link 1`] = `"Ir al contenido"`;
 
-exports[`Canonical Most Read Page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=62&amp;p=mundo.popular.read.page&amp;x2=[responsive]&amp;x3=[news-mundo]&amp;x4=[es]&amp;x7=[list-datadriven]&amp;x8=[simorgh-nojs]&amp;x9=[M%C3%A1s%2Ble%C3%ADdas%2B-%2BBBC%2BNews%2BMundo]&amp;x11=[2019-11-06T16%3A24%3A00Z]&amp;x12=[2100-11-06T16%3A39%3A00Z]\\"/>"`;
+exports[`Canonical Most Read Page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=62&amp;p=mundo.popular.read.page&amp;x2=[responsive]&amp;x3=[news-mundo]&amp;x4=[es]&amp;x7=[list-datadriven]&amp;x8=[simorgh-nojs]&amp;x9=[M%C3%A1s%2520le%C3%ADdas%2520-%2520BBC%2520News%2520Mundo]&amp;x11=[2019-11-06T16%3A24%3A00Z]&amp;x12=[2100-11-06T16%3A39%3A00Z]\\"/>"`;
 
 exports[`Canonical Most Read Page Footer Anchors should match text and url 1`] = `
 Object {
@@ -69,7 +69,7 @@ Object {
 
 exports[`Canonical Most Read Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/mundo"`;
 
-exports[`Canonical Most Read Page Footer I can see the footer copyright and external linking text 1`] = `"© 2022 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
+exports[`Canonical Most Read Page Footer I can see the footer copyright and external linking text 1`] = `"© 2023 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
 
 exports[`Canonical Most Read Page Header I can see the branding 1`] = `"BBC News, Mundo"`;
 
@@ -96,61 +96,54 @@ Object {
 
 exports[`Canonical Most Read Page Header Navigation link should match text and url 4`] = `
 Object {
-  "text": "Qatar 2022",
-  "url": "/mundo/topics/c36v5eq58ngt",
-}
-`;
-
-exports[`Canonical Most Read Page Header Navigation link should match text and url 5`] = `
-Object {
   "text": "Hay Festival",
   "url": "/mundo/noticias-36795069",
 }
 `;
 
-exports[`Canonical Most Read Page Header Navigation link should match text and url 6`] = `
+exports[`Canonical Most Read Page Header Navigation link should match text and url 5`] = `
 Object {
   "text": "Economía",
   "url": "/mundo/topics/c06gq9v4xp3t",
 }
 `;
 
-exports[`Canonical Most Read Page Header Navigation link should match text and url 7`] = `
+exports[`Canonical Most Read Page Header Navigation link should match text and url 6`] = `
 Object {
   "text": "Ciencia",
   "url": "/mundo/topics/ckdxnw959n7t",
 }
 `;
 
-exports[`Canonical Most Read Page Header Navigation link should match text and url 8`] = `
+exports[`Canonical Most Read Page Header Navigation link should match text and url 7`] = `
 Object {
   "text": "Salud",
   "url": "/mundo/topics/cpzd498zkxgt",
 }
 `;
 
-exports[`Canonical Most Read Page Header Navigation link should match text and url 9`] = `
+exports[`Canonical Most Read Page Header Navigation link should match text and url 8`] = `
 Object {
   "text": "Cultura",
   "url": "/mundo/topics/c2dwq9zyv4yt",
 }
 `;
 
-exports[`Canonical Most Read Page Header Navigation link should match text and url 10`] = `
+exports[`Canonical Most Read Page Header Navigation link should match text and url 9`] = `
 Object {
   "text": "Tecnología",
   "url": "/mundo/topics/cyx5krnw38vt",
 }
 `;
 
-exports[`Canonical Most Read Page Header Navigation link should match text and url 11`] = `
+exports[`Canonical Most Read Page Header Navigation link should match text and url 10`] = `
 Object {
   "text": "Centroamérica Cuenta",
   "url": "/mundo/noticias-43826245",
 }
 `;
 
-exports[`Canonical Most Read Page Header Navigation link should match text and url 12`] = `
+exports[`Canonical Most Read Page Header Navigation link should match text and url 11`] = `
 Object {
   "text": "BBC Extra",
   "url": "/mundo/noticias-48908206",
@@ -254,8 +247,6 @@ Object {
 exports[`Canonical Most Read Page SEO Canonical link 1`] = `"http://localhost:7080/mundo/popular/read"`;
 
 exports[`Canonical Most Read Page SEO Dir attribute 1`] = `"ltr"`;
-
-exports[`Canonical Most Read Page SEO FB admins 1`] = `"100004154058350"`;
 
 exports[`Canonical Most Read Page SEO FB app ID 1`] = `"1609039196070050"`;
 

@@ -2,6 +2,7 @@ import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
 import latinScript from '../fontScripts/latin';
 import helmetFontVariants from '../fontVariants/helmet';
 import withThemeProvider from '../withThemeProvider';
+import brandSVG from '../chameleonLogos/igbo';
 
 const igboTheme = {
   palette: {
@@ -16,6 +17,7 @@ const igboTheme = {
     fontVariants: helmetFontVariants,
     fontFaces: [],
   },
+  brandSVG,
 };
 
 export default withThemeProvider(igboTheme);

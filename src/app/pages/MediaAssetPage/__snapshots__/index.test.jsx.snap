@@ -1187,9 +1187,12 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                       allow="autoplay"
                       allowfullscreen=""
                       class="emotion-13 emotion-14"
+                      height="362.953125"
+                      loading="lazy"
                       scrolling="no"
                       src="/ws/av-embeds/cps/uzbek/sport-23248721/bbc_world_service_west_africa/uz-Cyrl"
                       title="Медиа плейер"
+                      width="645.25"
                     />
                     <div
                       class="emotion-15 emotion-16"
@@ -1304,7 +1307,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 >
                   Шу йил апрел ойида Ўзбекистон Президенти Ислом 
                   <a
-                    class="emotion-53 emotion-54"
+                    class="focusIndicatorReducedWidth emotion-53 emotion-54"
                     href="/uzbek"
                   >
                     Каримов ўзининг
@@ -1422,7 +1425,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                     role="listitem"
                   >
                     <a
-                      class="emotion-53 emotion-54"
+                      class="focusIndicatorReducedWidth emotion-53 emotion-54"
                       href="/uzbek"
                     >
                       Ўзбек деҳқонининг косаси нега оқармайди
@@ -1433,7 +1436,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                     role="listitem"
                   >
                     <a
-                      class="emotion-53 emotion-54"
+                      class="focusIndicatorReducedWidth emotion-53 emotion-54"
                       href="/uzbek"
                     >
                       Ўзбек деҳқонининг косаси нега оқармайди
@@ -1444,7 +1447,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                     role="listitem"
                   >
                     <a
-                      class="emotion-53 emotion-54"
+                      class="focusIndicatorReducedWidth emotion-53 emotion-54"
                       href="/uzbek"
                     >
                       Ўзбек деҳқонининг косаси нега оқармайди
@@ -1455,7 +1458,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                     role="listitem"
                   >
                     <a
-                      class="emotion-53 emotion-54"
+                      class="focusIndicatorReducedWidth emotion-53 emotion-54"
                       href="/uzbek"
                     >
                       Ўзбек деҳқонининг косаси нега оқармайди
@@ -3511,6 +3514,7 @@ exports[`Media Asset Page should render component 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -3611,7 +3615,7 @@ exports[`Media Asset Page should render component 1`] = `
   margin: 0 0.25rem;
   color: #222222;
   fill: currentColor;
-  width: 0.8125rem;
+  width: 0.75rem;
   height: 0.75rem;
 }
 
@@ -3672,9 +3676,12 @@ exports[`Media Asset Page should render component 1`] = `
                       allow="autoplay"
                       allowfullscreen=""
                       class="emotion-13 emotion-14"
+                      height="362.953125"
+                      loading="lazy"
                       scrolling="no"
                       src="/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm"
                       title="Media player"
+                      width="645.25"
                     />
                     <div
                       class="emotion-15 emotion-16"
@@ -3803,7 +3810,7 @@ exports[`Media Asset Page should render component 1`] = `
                     role="listitem"
                   >
                     <a
-                      class="emotion-62 emotion-63"
+                      class="focusIndicatorReducedWidth emotion-62 emotion-63"
                       href="/afrique/23248423"
                     >
                       &lt;Media Asset Page&gt;
@@ -3814,7 +3821,7 @@ exports[`Media Asset Page should render component 1`] = `
                     role="listitem"
                   >
                     <a
-                      class="emotion-62 emotion-63"
+                      class="focusIndicatorReducedWidth emotion-62 emotion-63"
                       href="/afrique/23248423"
                     >
                       &lt;Media Asset Page&gt;
@@ -3825,7 +3832,7 @@ exports[`Media Asset Page should render component 1`] = `
                     role="listitem"
                   >
                     <a
-                      class="emotion-62 emotion-63"
+                      class="focusIndicatorReducedWidth emotion-62 emotion-63"
                       href="/afrique/23248423"
                     >
                       &lt;Media Asset Page&gt;
@@ -3836,7 +3843,7 @@ exports[`Media Asset Page should render component 1`] = `
                     role="listitem"
                   >
                     <a
-                      class="emotion-62 emotion-63"
+                      class="focusIndicatorReducedWidth emotion-62 emotion-63"
                       href="/pidgin"
                     >
                       this is the link text
@@ -3847,7 +3854,7 @@ exports[`Media Asset Page should render component 1`] = `
                     role="listitem"
                   >
                     <a
-                      class="emotion-62 emotion-63"
+                      class="focusIndicatorReducedWidth emotion-62 emotion-63"
                       href="/pidgin"
                     >
                       this is the link text
@@ -3858,7 +3865,7 @@ exports[`Media Asset Page should render component 1`] = `
                     role="listitem"
                   >
                     <a
-                      class="emotion-62 emotion-63"
+                      class="focusIndicatorReducedWidth emotion-62 emotion-63"
                       href="/pidgin"
                     >
                       this is the link text
@@ -3891,7 +3898,7 @@ exports[`Media Asset Page should render component 1`] = `
                     role="listitem"
                   >
                     <a
-                      class="emotion-62 emotion-63"
+                      class="focusIndicatorReducedWidth emotion-62 emotion-63"
                       href="/afrique/23248423"
                     >
                       &lt;Media Asset Page&gt;
@@ -3902,7 +3909,7 @@ exports[`Media Asset Page should render component 1`] = `
                     role="listitem"
                   >
                     <a
-                      class="emotion-62 emotion-63"
+                      class="focusIndicatorReducedWidth emotion-62 emotion-63"
                       href="/afrique/23248423"
                     >
                       &lt;Media Asset Page&gt;
@@ -3913,7 +3920,7 @@ exports[`Media Asset Page should render component 1`] = `
                     role="listitem"
                   >
                     <a
-                      class="emotion-62 emotion-63"
+                      class="focusIndicatorReducedWidth emotion-62 emotion-63"
                       href="/afrique/23248423"
                     >
                       &lt;Media Asset Page&gt;
@@ -3924,7 +3931,7 @@ exports[`Media Asset Page should render component 1`] = `
                     role="listitem"
                   >
                     <a
-                      class="emotion-62 emotion-63"
+                      class="focusIndicatorReducedWidth emotion-62 emotion-63"
                       href="/pidgin"
                     >
                       this is the link text
@@ -3935,7 +3942,7 @@ exports[`Media Asset Page should render component 1`] = `
                     role="listitem"
                   >
                     <a
-                      class="emotion-62 emotion-63"
+                      class="focusIndicatorReducedWidth emotion-62 emotion-63"
                       href="/pidgin"
                     >
                       this is the link text
@@ -3946,7 +3953,7 @@ exports[`Media Asset Page should render component 1`] = `
                     role="listitem"
                   >
                     <a
-                      class="emotion-62 emotion-63"
+                      class="focusIndicatorReducedWidth emotion-62 emotion-63"
                       href="/pidgin"
                     >
                       this is the link text
@@ -3978,7 +3985,7 @@ exports[`Media Asset Page should render component 1`] = `
                   </i>
                   dolore "eu fugiat nulla" pariatur. 
                   <a
-                    class="emotion-62 emotion-63"
+                    class="focusIndicatorReducedWidth emotion-62 emotion-63"
                     href="/pidgin"
                   >
                     Excepteur
@@ -4084,7 +4091,7 @@ exports[`Media Asset Page should render component 1`] = `
                 >
                   Lorem ipsum
                   <a
-                    class="emotion-62 emotion-63"
+                    class="focusIndicatorReducedWidth emotion-62 emotion-63"
                     href="/pidgin"
                   >
                      dolor sit amet
@@ -4347,7 +4354,7 @@ exports[`Media Asset Page should render component 1`] = `
                                 class="emotion-255"
                                 height="351"
                                 loading="lazy"
-                                sizes="(max-width: 1008px) 33vw, 321px"
+                                sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                                 src="https://ichef.test.bbci.co.uk/news/660/cpsdevpb/5C06/test/_63585532_ozubuluchurch.jpg"
                                 srcset="https://ichef.test.bbci.co.uk/news/70/cpsdevpb/5C06/test/_63585532_ozubuluchurch.jpg 70w, https://ichef.test.bbci.co.uk/news/95/cpsdevpb/5C06/test/_63585532_ozubuluchurch.jpg 95w, https://ichef.test.bbci.co.uk/news/144/cpsdevpb/5C06/test/_63585532_ozubuluchurch.jpg 144w, https://ichef.test.bbci.co.uk/news/183/cpsdevpb/5C06/test/_63585532_ozubuluchurch.jpg 183w, https://ichef.test.bbci.co.uk/news/240/cpsdevpb/5C06/test/_63585532_ozubuluchurch.jpg 240w, https://ichef.test.bbci.co.uk/news/320/cpsdevpb/5C06/test/_63585532_ozubuluchurch.jpg 320w, https://ichef.test.bbci.co.uk/news/624/cpsdevpb/5C06/test/_63585532_ozubuluchurch.jpg 624w"
                                 width="624"
@@ -4368,7 +4375,7 @@ exports[`Media Asset Page should render component 1`] = `
                         >
                           <a
                             aria-labelledby="promo-rel-content-pidgintori23145776-1"
-                            class="emotion-262 emotion-263"
+                            class="focusIndicatorDisplayInlineBlock emotion-262 emotion-263"
                             href="/pidgin/tori-23145776"
                           >
                             <span
@@ -4412,7 +4419,7 @@ exports[`Media Asset Page should render component 1`] = `
                                 class="emotion-255"
                                 height="351"
                                 loading="lazy"
-                                sizes="(max-width: 1008px) 33vw, 321px"
+                                sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                                 src="https://ichef.test.bbci.co.uk/news/660/cpsdevpb/13644/test/_63582497_black-gay.jpg"
                                 srcset="https://ichef.test.bbci.co.uk/news/70/cpsdevpb/13644/test/_63582497_black-gay.jpg 70w, https://ichef.test.bbci.co.uk/news/95/cpsdevpb/13644/test/_63582497_black-gay.jpg 95w, https://ichef.test.bbci.co.uk/news/144/cpsdevpb/13644/test/_63582497_black-gay.jpg 144w, https://ichef.test.bbci.co.uk/news/183/cpsdevpb/13644/test/_63582497_black-gay.jpg 183w, https://ichef.test.bbci.co.uk/news/240/cpsdevpb/13644/test/_63582497_black-gay.jpg 240w, https://ichef.test.bbci.co.uk/news/320/cpsdevpb/13644/test/_63582497_black-gay.jpg 320w, https://ichef.test.bbci.co.uk/news/624/cpsdevpb/13644/test/_63582497_black-gay.jpg 624w"
                                 width="624"
@@ -4433,7 +4440,7 @@ exports[`Media Asset Page should render component 1`] = `
                         >
                           <a
                             aria-labelledby="promo-rel-content-pidgintori23143754-2"
-                            class="emotion-262 emotion-263"
+                            class="focusIndicatorDisplayInlineBlock emotion-262 emotion-263"
                             href="/pidgin/tori-23143754"
                           >
                             <span
@@ -4515,7 +4522,7 @@ exports[`Media Asset Page should render component 1`] = `
                         >
                           <a
                             aria-labelledby="promo-rel-content-pidgin23146654-3"
-                            class="emotion-262 emotion-263"
+                            class="focusIndicatorDisplayInlineBlock emotion-262 emotion-263"
                             href="/pidgin/23146654"
                           >
                             <span
@@ -4567,7 +4574,7 @@ exports[`Media Asset Page should render component 1`] = `
                                 class="emotion-255"
                                 height="576"
                                 loading="lazy"
-                                sizes="(max-width: 1008px) 33vw, 321px"
+                                sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                                 src="https://ichef.test.bbci.co.uk/news/660/cpsdevpb/B7E8/test/_63708074_mediaitem63708073.png"
                                 srcset="https://ichef.test.bbci.co.uk/news/70/cpsdevpb/B7E8/test/_63708074_mediaitem63708073.png 70w, https://ichef.test.bbci.co.uk/news/95/cpsdevpb/B7E8/test/_63708074_mediaitem63708073.png 95w, https://ichef.test.bbci.co.uk/news/144/cpsdevpb/B7E8/test/_63708074_mediaitem63708073.png 144w, https://ichef.test.bbci.co.uk/news/183/cpsdevpb/B7E8/test/_63708074_mediaitem63708073.png 183w, https://ichef.test.bbci.co.uk/news/240/cpsdevpb/B7E8/test/_63708074_mediaitem63708073.png 240w, https://ichef.test.bbci.co.uk/news/320/cpsdevpb/B7E8/test/_63708074_mediaitem63708073.png 320w, https://ichef.test.bbci.co.uk/news/660/cpsdevpb/B7E8/test/_63708074_mediaitem63708073.png 660w"
                                 width="1024"
@@ -4621,7 +4628,7 @@ exports[`Media Asset Page should render component 1`] = `
                         >
                           <a
                             aria-labelledby="promo-rel-content-pidginmedia23147054-4"
-                            class="emotion-262 emotion-263"
+                            class="focusIndicatorDisplayInlineBlock emotion-262 emotion-263"
                             href="/pidgin/media-23147054"
                           >
                             <span

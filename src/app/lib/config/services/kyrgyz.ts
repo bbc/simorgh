@@ -1,11 +1,4 @@
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_GHOST,
-  C_POSTBOX_30,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
 import cyrillic from '../../../components/ThemeProvider/fontScripts/cyrillic';
-import brandSVG from '../../chameleonLogos/kyrgyz';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/ky';
 import withContext from '../../../contexts/utils/withContext';
@@ -39,7 +32,6 @@ export const service: DefaultServiceConfig = {
     service: 'kyrgyz',
     serviceName: 'News Кыргыз КызMATы',
     languageName: 'Kyrgyz',
-    themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbckyrgyz',
     twitterSite: '@bbckyrgyz',
     noBylinesPolicy:
@@ -50,13 +42,6 @@ export const service: DefaultServiceConfig = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Кабарлар, акыркы мүнөттөгү кабарлар, талдоо, видео',
-    theming: {
-      brandBackgroundColour: `${C_POSTBOX}`,
-      brandLogoColour: `${C_WHITE}`,
-      brandForegroundColour: `${C_GHOST}`,
-      brandHighlightColour: `${C_WHITE}`,
-      brandBorderColour: `${C_POSTBOX_30}`,
-    },
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
@@ -236,6 +221,7 @@ export const service: DefaultServiceConfig = {
         duration: 'Узактыгы',
         recentEpisodes: 'Мурдагы берүүлөр',
         podcastExternalLinks: 'Бул подкастты башка платформалардан дагы угуңуз',
+        download: 'Подкастты жүктөп алыңыз',
       },
       socialEmbed: {
         caption: {
@@ -269,7 +255,6 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'Башкы кабарлар',
       featuresAnalysisTitle: 'Редактордун тандоосу',
     },
-    brandSVG,
     mostRead: {
       header: 'Эң көп окулгандар',
       lastUpdated: 'Акыркы жаңылоо:',
@@ -342,16 +327,16 @@ export const service: DefaultServiceConfig = {
         url: '/kyrgyz/topics/ck2l9z012nkt',
       },
       {
-        title: 'Видео',
-        url: '/kyrgyz/media/video',
-      },
-      {
-        title: 'Маданият/Илим',
-        url: '/kyrgyz/topics/czp8pjrkgp0t',
+        title: 'САПАР',
+        url: '/kyrgyz/topics/c6z8lg83w7mt',
       },
       {
         title: 'Журнал',
-        url: '/kyrgyz/magazine-54071664',
+        url: '/kyrgyz/topics/czp8pjrkgp0t',
+      },
+      {
+        title: 'Подкасттар',
+        url: '/kyrgyz/podcasts/p0c80v81',
       },
     ],
   },

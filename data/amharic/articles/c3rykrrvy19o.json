@@ -1,186 +1,1459 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::article:c3rykrrvy19o",
-    "locators": {
-      "optimoUrn": "urn:bbc:optimo:asset:c3rykrrvy19o"
+  "data": {
+    "article": {
+      "content": {
+        "model": {
+          "blocks": [
+            {
+              "id": "1080fcca",
+              "type": "headline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "3a726f1d",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "64e5bdf8",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "የቀደመው ዘመናዊ ሰው ከአፍሪካ ውጪ ተገኘ",
+                            "blocks": [
+                              {
+                                "id": "1bae994a",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "የቀደመው ዘመናዊ ሰው ከአፍሪካ ውጪ ተገኘ",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      1,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                1
+              ]
+            },
+            {
+              "id": "05c4585e",
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1562942682443,
+                "lastPublished": 1562942682443
+              },
+              "position": [
+                2
+              ]
+            },
+            {
+              "id": "6cc4e0eb",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "11e1781d",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "ተመራማሪዎች ከዘመናዊ ሰው ጋር ተቀራራቢ የሆነ ዝርያ ከአፍሪካ ውጪ አገኙ።",
+                      "blocks": [
+                        {
+                          "id": "90d75fad",
+                          "type": "fragment",
+                          "model": {
+                            "text": "ተመራማሪዎች ከዘመናዊ ሰው ጋር ተቀራራቢ የሆነ ዝርያ ከአፍሪካ ውጪ አገኙ።",
+                            "attributes": []
+                          },
+                          "position": [
+                            3,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      3,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "d028b943",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "በግሪክ የተገኘው የራስ ቅል አውሮጳ በኒያንደርታሎች በተወረረችበት ወቅት 210 ሺህ ዓመት ያስቆጠረ ነው ተብሏል።",
+                      "blocks": [
+                        {
+                          "id": "75678af5",
+                          "type": "fragment",
+                          "model": {
+                            "text": "በግሪክ የተገኘው የራስ ቅል አውሮጳ በኒያንደርታሎች በተወረረችበት ወቅት 210 ሺህ ዓመት ያስቆጠረ ነው ተብሏል።",
+                            "attributes": []
+                          },
+                          "position": [
+                            3,
+                            2,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      3,
+                      2
+                    ]
+                  },
+                  {
+                    "id": "ab7ce991",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "ጥናቱ ይፋ እንዳደረገው፤ የሰው ልጅ ከአፍሪካ ወደ አውሮጳ ቅድመ ፍልሰት ስለማድረጉ ታሪክ ምንም አይነት የዘረመል ማስረጃ የለውም ለሚለው ሌላ አስረጅ ሆኖ ቀርቧል።",
+                      "blocks": [
+                        {
+                          "id": "035d19ee",
+                          "type": "fragment",
+                          "model": {
+                            "text": "ጥናቱ ይፋ እንዳደረገው፤ የሰው ልጅ ከአፍሪካ ወደ አውሮጳ ቅድመ ፍልሰት ስለማድረጉ ታሪክ ምንም አይነት የዘረመል ማስረጃ የለውም ለሚለው ሌላ አስረጅ ሆኖ ቀርቧል።",
+                            "attributes": []
+                          },
+                          "position": [
+                            3,
+                            3,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      3,
+                      3
+                    ]
+                  },
+                  {
+                    "id": "9c15225b",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "ይህ ግኝት የታተመው 'ኔቸር' በተሰኘው ጆርናል ላይ ነው።",
+                      "blocks": [
+                        {
+                          "id": "c61f049d",
+                          "type": "fragment",
+                          "model": {
+                            "text": "ይህ ግኝት የታተመው 'ኔቸር' በተሰኘው ጆርናል ላይ ነው።",
+                            "attributes": []
+                          },
+                          "position": [
+                            3,
+                            4,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      3,
+                      4
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                3
+              ]
+            },
+            {
+              "id": "3292ff3a",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                4
+              ]
+            },
+            {
+              "id": "1f6fbfe0",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "a6cd541a",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "ተመራማሪዎች በ1970ዎቹ በግሪክ አፒዲማ ዋሻ ውስጥ ሁለት ጠቃሚ ቅሪተ አካል አግኝተው ነበር።",
+                      "blocks": [
+                        {
+                          "id": "b5c0afe7",
+                          "type": "fragment",
+                          "model": {
+                            "text": "ተመራማሪዎች በ1970ዎቹ በግሪክ አፒዲማ ዋሻ ውስጥ ሁለት ጠቃሚ ቅሪተ አካል አግኝተው ነበር።",
+                            "attributes": []
+                          },
+                          "position": [
+                            5,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      5,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                5
+              ]
+            },
+            {
+              "id": "289cc4b5",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                6
+              ]
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "id": "urn:bbc:ares::article:c3rykrrvy19o",
+        "locators": {
+          "optimoUrn": "urn:bbc:optimo:asset:c3rykrrvy19o",
+          "canonicalUrl": "https://www.bbc.com/amharic/articles/c3rykrrvy19o"
+        },
+        "type": "article",
+        "createdBy": "Amharic",
+        "language": "am",
+        "firstPublished": 1562942682443,
+        "lastPublished": 1562942682443,
+        "analyticsLabels": {
+          "contentId": "urn:bbc:optimo:asset:c3rykrrvy19o",
+          "producer": "Amharic",
+          "page": "amharic.articles.c3rykrrvy19o.page"
+        },
+        "passport": {
+          "language": "am",
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Amharic",
+          "taggings": []
+        },
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment"
+        ],
+        "allowAdvertising": true
+      },
+      "promo": {
+        "headlines": {
+          "seoHeadline": "የቀደመው ዘመናዊ ሰው ከአፍሪካ ውጪ ተገኘ"
+        }
+      }
     },
-    "type": "article",
-    "createdBy": "Amharic",
-    "language": "am",
-    "lastUpdated": 1562942685780,
-    "firstPublished": 1562942682443,
-    "lastPublished": 1562942682443,
-    "options": {},
-    "analyticsLabels": {},
-    "passport": {
-      "language": "am",
-      "home": "http://www.bbc.co.uk/ontologies/passport/home/Amharic"
-    },
-    "tags": {},
-    "version": "v1.1.0",
-    "blockTypes": ["headline", "text", "paragraph", "fragment"]
-  },
-  "content": {
-    "model": {
-      "blocks": [
+    "secondaryData": {
+      "topStories": [
         {
-          "type": "headline",
-          "model": {
-            "blocks": [
-              {
-                "type": "text",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "paragraph",
-                      "model": {
-                        "text": "የቀደመው ዘመናዊ ሰው ከአፍሪካ ውጪ ተገኘ",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "የቀደመው ዘመናዊ ሰው ከአፍሪካ ውጪ ተገኘ",
-                              "attributes": []
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
+          "headlines": {
+            "headline": "Rugby World Cup: New Zealand Wins"
+          },
+          "locators": {
+            "assetUri": "/amharic/23229261",
+            "cpsUrn": "urn:bbc:content:assetUri:amharic/23229261",
+            "assetId": "23229261"
+          },
+          "summary": "Pomp and colour at the Rugby World Cup as New Zealand emerge as winners",
+          "timestamp": 1548937539000,
+          "language": "am",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63699058",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/14C6B/test/_63699058_051933947-1.jpg",
+            "path": "/cpsdevpb/14C6B/test/_63699058_051933947-1.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "New Zealand Rugby Player takes picture with fans",
+            "caption": "All smiles as New Zealand wins Rugby World Cup",
+            "copyrightHolder": "MICHAEL BRADLEY",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "prominence": "standard",
+          "section": {
+            "subType": "IDX",
+            "name": "ዜና",
+            "uri": "/amharic/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:amharic/23229261",
+          "type": "cps"
         },
         {
-          "type": "text",
-          "model": {
-            "blocks": [
+          "headlines": {
+            "headline": "Royal Wedding Picture Collections"
+          },
+          "locators": {
+            "assetUri": "/amharic/23229137",
+            "cpsUrn": "urn:bbc:content:assetUri:amharic/23229137",
+            "assetId": "23229137"
+          },
+          "summary": "Royal Weddings: world's lavish weddings",
+          "timestamp": 1548936793000,
+          "language": "am",
+          "passport": {
+            "category": {
+              "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+              "categoryName": "Feature"
+            },
+            "campaigns": [
               {
-                "type": "paragraph",
-                "model": {
-                  "text": "ተመራማሪዎች ከዘመናዊ ሰው ጋር ተቀራራቢ የሆነ ዝርያ ከአፍሪካ ውጪ አገኙ።",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "ተመራማሪዎች ከዘመናዊ ሰው ጋር ተቀራራቢ የሆነ ዝርያ ከአፍሪካ ውጪ አገኙ።",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "በግሪክ የተገኘው የራስ ቅል አውሮጳ በኒያንደርታሎች በተወረረችበት ወቅት 210 ሺህ ዓመት ያስቆጠረ ነው ተብሏል።",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "በግሪክ የተገኘው የራስ ቅል አውሮጳ በኒያንደርታሎች በተወረረችበት ወቅት 210 ሺህ ዓመት ያስቆጠረ ነው ተብሏል።",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "ጥናቱ ይፋ እንዳደረገው፤ የሰው ልጅ ከአፍሪካ ወደ አውሮጳ ቅድመ ፍልሰት ስለማድረጉ ታሪክ ምንም አይነት የዘረመል ማስረጃ የለውም ለሚለው ሌላ አስረጅ ሆኖ ቀርቧል።",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "ጥናቱ ይፋ እንዳደረገው፤ የሰው ልጅ ከአፍሪካ ወደ አውሮጳ ቅድመ ፍልሰት ስለማድረጉ ታሪክ ምንም አይነት የዘረመል ማስረጃ የለውም ለሚለው ሌላ አስረጅ ሆኖ ቀርቧል።",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "ይህ ግኝት የታተመው 'ኔቸር' በተሰኘው ጆርናል ላይ ነው።",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "ይህ ግኝት የታተመው 'ኔቸር' በተሰኘው ጆርናል ላይ ነው።",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "ተመራማሪዎች በ1970ዎቹ በግሪክ አፒዲማ ዋሻ ውስጥ ሁለት ጠቃሚ ቅሪተ አካል አግኝተው ነበር።",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "ተመራማሪዎች በ1970ዎቹ በግሪክ አፒዲማ ዋሻ ውስጥ ሁለት ጠቃሚ ቅሪተ አካል አግኝተው ነበር።",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
+                "campaignId": "5ad86270c93a9f000eecb255",
+                "campaignName": "Amuse me"
               }
-            ]
-          }
-        }
-      ]
-    }
-  },
-  "promo": {
-    "headlines": {
-      "seoHeadline": "የቀደመው ዘመናዊ ሰው ከአፍሪካ ውጪ ተገኘ"
-    },
-    "locators": {
-      "optimoUrn": "urn:bbc:optimo:asset:c3rykrrvy19o"
-    },
-    "summary": {
-      "blocks": [
+            ],
+            "taggings": []
+          },
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63698985",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/E66D/test/_63698985_53969591-7ee0-483a-b4c5-1ac33e66894a.jpg",
+            "path": "/cpsdevpb/E66D/test/_63698985_53969591-7ee0-483a-b4c5-1ac33e66894a.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Wedding of Prince Harry and Ms. Meghan Markle",
+            "caption": "Wedding of Prince Harry and Ms. Meghan Markle",
+            "copyrightHolder": "Getty Images",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "prominence": "standard",
+          "section": {
+            "subType": "IDX",
+            "name": "ዜና",
+            "uri": "/amharic/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:amharic/23229137",
+          "type": "cps"
+        },
         {
-          "model": {
-            "blocks": [
+          "headlines": {
+            "headline": "''አይ.ኤስን መቀላቀል የፈለኩበት ምክንያት. . . ''"
+          },
+          "locators": {
+            "assetUri": "/amharic/23118972",
+            "cpsUrn": "urn:bbc:content:assetUri:amharic/23118972",
+            "assetId": "23118972"
+          },
+          "summary": "''አይ.ኤስን መቀላቀል የፈለኩበት ምክንያት. . . ''",
+          "timestamp": 1493202691000,
+          "language": "am",
+          "cpsType": "MAP",
+          "media": {
+            "id": "p01cj5w4",
+            "subType": "clip",
+            "format": "video",
+            "title": "''አይ.ኤስን መቀላቀል የፈለኩበት ምክንያት''",
+            "synopses": {
+              "short": "ቪድዮ"
+            },
+            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01cj70g.jpg",
+            "embedding": false,
+            "advertising": true,
+            "caption": "ቪድዮ",
+            "versions": [
               {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "attributes": [],
-                        "text": ""
-                      },
-                      "type": "fragment"
-                    }
-                  ],
-                  "text": ""
+                "versionId": "p01cj5w6",
+                "types": [
+                  "Original"
+                ],
+                "duration": 59,
+                "durationISO8601": "PT59S",
+                "warnings": {},
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
                 },
-                "type": "paragraph"
+                "availableFrom": 1501161311000
+              }
+            ],
+            "smpKind": "programme",
+            "type": "media"
+          },
+          "indexImage": {
+            "id": "63581875",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/E1DA/test/_63581875_p01cj70g.jpg",
+            "path": "/cpsdevpb/E1DA/test/_63581875_p01cj70g.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "''አይ.ኤስን መቀላቀል የፈለኩበት ምክንያት. . . ''",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63581752",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/6476/test/_63581752_p01cj70g.jpg",
+            "path": "/cpsdevpb/6476/test/_63581752_p01cj70g.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "''አይ.ኤስን መቀላቀል የፈለኩበት ምክንያት. . . ''",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "prominence": "standard",
+          "section": {
+            "subType": "IDX",
+            "name": "ዜና",
+            "uri": "/amharic/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:amharic/23118972",
+          "type": "cps"
+        }
+      ],
+      "features": [
+        {
+          "headlines": {
+            "headline": "መሪዎች ስደተኛ ቢሆኑ ምን ይመስሉ ነበር?"
+          },
+          "locators": {
+            "assetUri": "/amharic/news-23148117",
+            "cpsUrn": "urn:bbc:content:assetUri:amharic/news-23148117",
+            "assetId": "23148117"
+          },
+          "summary": "ዶናልድ ትራምፕ ህጻን አቅፈው፥ ቭላድሚር ፑቲን እየለመኑ ባሻር አል አሳድ በበኩላቸው ሜድትራኒያን ላይ ሊሰምጡ ሲሉ የሚያሳዩት ስዕሎች የሶሪያዊው አርቲስት አብደላ አል ኦማሪ ናቸው። ስዕሎቹ ስደተኞች የሚያልፉበትን ጉዞ ያሳያሉ ተብሏል። አንዳንዶቹ ስዕልች ከዚህ በታች ቀርበዋል።",
+          "timestamp": 1503497035000,
+          "language": "am",
+          "cpsType": "PGL",
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "id": "urn:bbc:ares::asset:amharic/news-23148117",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "ከእግር ኳስ ሜዳ ወደ ኮኛክ ጠመቃ"
+          },
+          "locators": {
+            "assetUri": "/amharic/sport-23141115",
+            "cpsUrn": "urn:bbc:content:assetUri:amharic/sport-23141115",
+            "assetId": "23141115"
+          },
+          "summary": "እስከ እንግሊዝ ፕሪሚር ሊግ ድረስ የተጫወተው አይቮሪኮስታዊው ኦሊቪዬ ቴቢሊ በአሁኑ ወቅት ታዋቂ ኮኛክ ጠማቂ ሆኗል።",
+          "timestamp": 1500628096000,
+          "language": "am",
+          "cpsType": "STY",
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "id": "urn:bbc:ares::asset:amharic/sport-23141115",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "የአፍሪካን ታሪክ ከቅኝ ገዢዎች ነጻ የማውጣት ተጋድሎ"
+          },
+          "locators": {
+            "assetUri": "/amharic/news-23141014",
+            "cpsUrn": "urn:bbc:content:assetUri:amharic/news-23141014",
+            "assetId": "23141014"
+          },
+          "summary": "የተዛባው የአፍሪካ ታሪከ ለዘመናት በምዕራባውያን ጸኃፍት ሲተረክ ቆይቶ እ.አ.አ በ1960ዎቹ የበርካታ አፍሪካውያን የቅኝ ግዛት ዘመን ማብቃቱን ተከትሎ አፍሪካ ታሪኳንም ነጻ ለማውጣት ተነሳች።",
+          "timestamp": 1503391098000,
+          "language": "am",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63578945",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/D6CB/test/_63578945_bf0aba74-cc98-4aef-af88-b218c641a71a.jpg",
+            "path": "/cpsdevpb/D6CB/test/_63578945_bf0aba74-cc98-4aef-af88-b218c641a71a.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "አክሱም ሃውልት",
+            "caption": "የአክሱምን ስልጣኔ አሻራዎች አሁንም ድረስ በጽናት እንደቆሙ ነው",
+            "copyrightHolder": "AFP",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63580693",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/9AB8/test/_63580693_bf0aba74-cc98-4aef-af88-b218c641a71a.jpg",
+            "path": "/cpsdevpb/9AB8/test/_63580693_bf0aba74-cc98-4aef-af88-b218c641a71a.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "አክሱም ሃውልት",
+            "caption": "የአክሱምን ስልጣኔ አሻራዎች አሁንም ድረስ በጽናት እንደቆሙ ነው",
+            "copyrightHolder": "AFP",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "id": "urn:bbc:ares::asset:amharic/news-23141014",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "በጉንዳን ኃይል የሚንቀሳቀስ ኣዉቶቡስ"
+          },
+          "locators": {
+            "assetUri": "/amharic/news-23140994",
+            "cpsUrn": "urn:bbc:content:assetUri:amharic/news-23140994",
+            "assetId": "23140994"
+          },
+          "summary": "በኔዘርላንድ የሚገኙ 40 ተማሪዎች የአየር ብክለት የማያስከትል በፎርሚክ ኣሲድ የሚንቀሳቀስ አዉቶቡስ ለገበያ ኣቀረቡ",
+          "timestamp": 1500627785000,
+          "language": "am",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63578903",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/790B/test/_63578903_426009ee-0cdf-452a-90e3-9184f9f2de71.jpg",
+            "path": "/cpsdevpb/790B/test/_63578903_426009ee-0cdf-452a-90e3-9184f9f2de71.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "ቲም ፋስት",
+            "caption": "የቲም ፋስት ኣባላት ለኣብነት በሠሩት ባስ ፊትለፊት ለፎቶ ተደርድረዉ",
+            "copyrightHolder": "CHRIST CLIJSEN",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63579615",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/C9F1/test/_63579615_426009ee-0cdf-452a-90e3-9184f9f2de71.jpg",
+            "path": "/cpsdevpb/C9F1/test/_63579615_426009ee-0cdf-452a-90e3-9184f9f2de71.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "ቲም ፋስት",
+            "caption": "የቲም ፋስት ኣባላት ለኣብነት በሠሩት ባስ ፊትለፊት ለፎቶ ተደርድረዉ",
+            "copyrightHolder": "CHRIST CLIJSEN",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "id": "urn:bbc:ares::asset:amharic/news-23140994",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "ተመራማሪዎች፡ ትዳር \"ጤናን ይጠብቃል\""
+          },
+          "locators": {
+            "assetUri": "/amharic/news-23140715",
+            "cpsUrn": "urn:bbc:content:assetUri:amharic/news-23140715",
+            "assetId": "23140715"
+          },
+          "summary": "ትዳር ለልብ ጤና እንደሚጠቅም ተመራማሪዎች አስረድተዋል።",
+          "timestamp": 1503306829000,
+          "language": "am",
+          "byline": {
+            "name": "Kalkidan Yibeltal",
+            "title": "BBC Amharic",
+            "persons": [
+              {
+                "name": "Kalkidan Yibeltal",
+                "function": "BBC Amharic"
               }
             ]
           },
-          "type": "text"
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63578347",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/12293/test/_63578347__96368980_gettyimages-504282184.jpg",
+            "path": "/cpsdevpb/12293/test/_63578347__96368980_gettyimages-504282184.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "ትዳር ለጤና ይበጃል",
+            "copyrightHolder": "ኩዝሚክስቱዲዮ/ጌቲ",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63589592",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/739E/test/_63589592__96368980_gettyimages-504282184.jpg",
+            "path": "/cpsdevpb/739E/test/_63589592__96368980_gettyimages-504282184.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "ትዳር ለጤና ይበጃል",
+            "copyrightHolder": "ኩዝሚክስቱዲዮ/ጌቲ",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "id": "urn:bbc:ares::asset:amharic/news-23140715",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "ቴሌፖርቴሽን: ዛሬ የፎቶን ቅንጣት ከሆነ ነገ ሰው ሊሆን ይሆን?"
+          },
+          "locators": {
+            "assetUri": "/amharic/news-23148096",
+            "cpsUrn": "urn:bbc:content:assetUri:amharic/news-23148096",
+            "assetId": "23148096"
+          },
+          "summary": "ቴሌፖረቴሽን አንድን ቁስ አካል ወይንም ኃይል አካላዊ ግፊት ሳይደረግ ከአንድ ቦታ ወደ ሌላ ቦታ ማዘዋወርን የሚጠይቅ ፅንሥ-ሐሳብ ነው።",
+          "timestamp": 1503391505000,
+          "language": "am",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63588694",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/C218/test/_63588694_fe6b68df-734d-4f84-ab8b-aaaa401be034.jpg",
+            "path": "/cpsdevpb/C218/test/_63588694_fe6b68df-734d-4f84-ab8b-aaaa401be034.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "ማንም ሄዶ ወደማያውቀው ልንጓዝ ይሆን?",
+            "caption": "ማንም ሄዶ ወደማያውቀው ልንጓዝ ይሆን?",
+            "copyrightHolder": "Getty Images",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63588696",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/11038/test/_63588696_fe6b68df-734d-4f84-ab8b-aaaa401be034.jpg",
+            "path": "/cpsdevpb/11038/test/_63588696_fe6b68df-734d-4f84-ab8b-aaaa401be034.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "ማንም ሄዶ ወደማያውቀው ልንጓዝ ይሆን?",
+            "caption": "ማንም ሄዶ ወደማያውቀው ልንጓዝ ይሆን?",
+            "copyrightHolder": "Getty Images",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "id": "urn:bbc:ares::asset:amharic/news-23148096",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "ቅድመ እና ድህረ ፕሬዝደንቱ ትራምፕ!"
+          },
+          "locators": {
+            "assetUri": "/amharic/23143895",
+            "cpsUrn": "urn:bbc:content:assetUri:amharic/23143895",
+            "assetId": "23143895"
+          },
+          "summary": "ፕሬዝደንት ዶናልድ ትራምፕ በምርጫ ቅስቀሳቸው ወቅት ብዙ ነገር ሊያሳኩ እነዳሰቡ ቃል ገብተው ነበር። ምን ያህሉከ ተሳካላቸው? ምነ ያህሉስ ካሰቡት ውጭ ሆነ?",
+          "timestamp": 1503392558000,
+          "language": "am",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63583050",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/13AE/test/_63583050_1f421e97-66aa-44c5-ab81-9c9ab1841d0d.jpg",
+            "path": "/cpsdevpb/13AE/test/_63583050_1f421e97-66aa-44c5-ab81-9c9ab1841d0d.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "ትራምፕ",
+            "caption": "ፕሬዝደንት ዶናልድ ትራምፕ በምርጫ ቅስቀሳቸው ወቅት ብዙ ነገር ሊያሳኩ እነዳሰቡ ቃል ገብተው ነበር።",
+            "copyrightHolder": "AFP",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63589596",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/10FDE/test/_63589596_hi037202751.jpg",
+            "path": "/cpsdevpb/10FDE/test/_63589596_hi037202751.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "ትራምፕ",
+            "caption": "ፕሬዝደንት ዶናልድ ትራምፕ በምርጫ ቅስቀሳቸው ወቅት ብዙ ነገር ሊያሳኩ እነዳሰቡ ቃል ገብተው ነበር።",
+            "copyrightHolder": "AFP",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "ዜና",
+            "uri": "/amharic/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:amharic/23143895",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "በህይወት የሌለው የዓለማችን ሀብታሙ ሰው"
+          },
+          "locators": {
+            "assetUri": "/amharic/news-23140375",
+            "cpsUrn": "urn:bbc:content:assetUri:amharic/news-23140375",
+            "assetId": "23140375"
+          },
+          "summary": "በግሪጎሪ የቀን አቆጣጠር ከ1459-1525 ዓመተ ምህረት የኖረው ጄኮብ ፉገር ዛሬ በሕይወት ቢኖር ኖሮ ከሁሉም ባለጸጋዎች የበለጠ ሀብት ይኖረው ነበር።",
+          "timestamp": 1500987770000,
+          "language": "am",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63578355",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/D85B/test/_63578355_.gif",
+            "path": "/cpsdevpb/D85B/test/_63578355_.gif",
+            "height": 371,
+            "width": 660,
+            "altText": "ጃኮብ ፉጀር",
+            "caption": "የዓለማችን ሀብታሙ ሰው",
+            "copyrightHolder": "ጌቲ ኢሜጅስ",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63578555",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/D923/test/_63578555__96921357_fuggerei.gif",
+            "path": "/cpsdevpb/D923/test/_63578555__96921357_fuggerei.gif",
+            "height": 180,
+            "width": 320,
+            "altText": "የፉጄሪ ቤቶች",
+            "copyrightHolder": "Getty Images",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "id": "urn:bbc:ares::asset:amharic/news-23140375",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "2ችግር ፈቺውን የአፍሪካውያን የፈጠራ ውጤትን ይተዋወቁ"
+          },
+          "locators": {
+            "assetUri": "/amharic/news-23143386",
+            "cpsUrn": "urn:bbc:content:assetUri:amharic/news-23143386",
+            "assetId": "23143386"
+          },
+          "summary": "ከዓለማችን ህዝብ 1.3 ቢሊዮን የሚሆነው የኤሌክትሪክ ኃይል ተጠቃሚ አይደለም። የገጠር ነዋሪዎችን ከትላልቅ የኃይል ማሰራጫዎች ተጠቃሚ ለማድረግ አስቸጋሪ ከመሆኑ በተጨማሪ የተለመዱትን የጸሃይ ሃይል ማመንጫዎች ደግሞ ውስን ሃይል ብቻ ነው የሚያመነጩት።",
+          "timestamp": 1503305763000,
+          "language": "am",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63582165",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/DB40/test/_63582165_3567a3bc-a914-4513-9396-ba978380e4b1.jpg",
+            "path": "/cpsdevpb/DB40/test/_63582165_3567a3bc-a914-4513-9396-ba978380e4b1.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "የልብ ምርመራ",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "id": "urn:bbc:ares::asset:amharic/news-23143386",
+          "type": "cps"
         }
-      ]
-    },
-    "timestamp": 1562942682443,
-    "id": "urn:bbc:ares::article:c3rykrrvy19o",
-    "type": "cps"
+      ],
+      "mostRead": {
+        "generated": "2023-02-17T18:04:00.615Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
+        "totalRecords": 19,
+        "records": [
+          {
+            "id": "2e281fd5-18e9-9f4b-bfcf-694f45c66a31",
+            "rank": 1,
+            "count": 8842,
+            "urn": "urn:bbc:curie:asset:2e281fd5-18e9-9f4b-bfcf-694f45c66a31",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ዓለምን የቀየረው የሁለቱ ተማሪዎች ፕሮጀክት!",
+                "headline": "ዓለምን የቀየረው የሁለቱ ተማሪዎች ፕሮጀክት!"
+              },
+              "locators": {
+                "assetUri": "/amharic/news-23149061",
+                "cpsUrn": "urn:bbc:content:assetUri:amharic/news-23149061",
+                "curie": "http://www.bbc.co.uk/asset/2e281fd5-18e9-9f4b-bfcf-694f45c66a31",
+                "assetId": "23149061"
+              },
+              "summary": "ጉግል-ዓለምን የቀየረው የሁለቱ ተማሪዎች ፕሮጀክት!",
+              "timestamp": 1503306105000,
+              "language": "am",
+              "indexImage": {
+                "id": "63589361",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/400E/test/_63589361__95031565_gettyimages-630609020.jpg",
+                "path": "/cpsdevpb/400E/test/_63589361__95031565_gettyimages-630609020.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "ጉግል",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:amharic/news-23149061",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "a905f315-a4dc-334f-8016-b07fa0ae21bc",
+            "rank": 2,
+            "count": 7955,
+            "urn": "urn:bbc:curie:asset:a905f315-a4dc-334f-8016-b07fa0ae21bc",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "መሪዎች ስደተኛ ቢሆኑ ምን ይመስሉ ነበር?",
+                "headline": "መሪዎች ስደተኛ ቢሆኑ ምን ይመስሉ ነበር?"
+              },
+              "locators": {
+                "assetUri": "/amharic/news-23148117",
+                "cpsUrn": "urn:bbc:content:assetUri:amharic/news-23148117",
+                "curie": "http://www.bbc.co.uk/asset/a905f315-a4dc-334f-8016-b07fa0ae21bc",
+                "assetId": "23148117"
+              },
+              "summary": "ዶናልድ ትራምፕ ህጻን አቅፈው፥ ቭላድሚር ፑቲን እየለመኑ ባሻር አል አሳድ በበኩላቸው ሜድትራኒያን ላይ ሊሰምጡ ሲሉ የሚያሳዩት ስዕሎች የሶሪያዊው አርቲስት አብደላ አል ኦማሪ ናቸው። ስዕሎቹ ስደተኞች የሚያልፉበትን ጉዞ ያሳያሉ ተብሏል። አንዳንዶቹ ስዕልች ከዚህ በታች ቀርበዋል።",
+              "timestamp": 1503497035000,
+              "language": "am",
+              "id": "urn:bbc:ares::asset:amharic/news-23148117",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "6486e4a7-26e0-a04c-9b10-8305848c1a82",
+            "rank": 3,
+            "count": 7559,
+            "urn": "urn:bbc:curie:asset:6486e4a7-26e0-a04c-9b10-8305848c1a82",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "በቀን አንድ ስኒ ተጨማሪ ቡና መጠጣት አድሜን በሶት ወር ያስረዝማል",
+                "headline": "ተመራማሪዎች ቡና መጠጣት እድሜን ያስረዝማል አሉ"
+              },
+              "locators": {
+                "assetUri": "/amharic/news-23140545",
+                "cpsUrn": "urn:bbc:content:assetUri:amharic/news-23140545",
+                "curie": "http://www.bbc.co.uk/asset/6486e4a7-26e0-a04c-9b10-8305848c1a82",
+                "assetId": "23140545"
+              },
+              "summary": "በአስር አውሮፓ ሃገሮች ውስጥ በግማሸ ሚሊየን ሰዎች ላይ በተሰራው ጥናት መሰረት ከሆነ በቀን ሶስት ስኒ ቡና የሚጠጡ ሰዎች ረጅም እድሜ እንደሚኖሩ አረጋገጠ።",
+              "timestamp": 1503391230000,
+              "language": "am",
+              "indexImage": {
+                "id": "63580264",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/B480/test/_63580264__96887457_gettyimages-629111916.jpg",
+                "path": "/cpsdevpb/B480/test/_63580264__96887457_gettyimages-629111916.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "ቡና ለጤና የሚሰጠው ጥቅም",
+                "caption": "ተመራማሪዎች ቡና መጠጣት እድሜን ያስረዝማል አሉ",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:amharic/news-23140545",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "6b3f15a2-dfa2-0247-8dd3-6dbbd5720478",
+            "rank": 4,
+            "count": 7284,
+            "urn": "urn:bbc:curie:asset:6b3f15a2-dfa2-0247-8dd3-6dbbd5720478",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "መነሻ ሀሳብ ወይስ የሙዚቃ ቅጂ መብት ጥሰት?",
+                "headline": "መነሻ ሀሳብ ወይስ የሙዚቃ ቅጂ መብት ጥሰት?"
+              },
+              "locators": {
+                "assetUri": "/amharic/news-23148046",
+                "cpsUrn": "urn:bbc:content:assetUri:amharic/news-23148046",
+                "curie": "http://www.bbc.co.uk/asset/6b3f15a2-dfa2-0247-8dd3-6dbbd5720478",
+                "assetId": "23148046"
+              },
+              "summary": "'ብለርድ ላይንስ' የተሰኘው የሮቢን ቲኬ ሙዚቃ መነሻ ዜማውን ከማርቪን ጌይ 'ጋ ቱ ጊቭ ኢት አፕ' በመወሰዱ ሙዚቀኛው ለማርቪን ቤተሰቦቹ 7.3 ሚሊዮን ዶላር ካሳ ከፍለዋል።",
+              "timestamp": 1503391113000,
+              "language": "am",
+              "id": "urn:bbc:ares::asset:amharic/news-23148046",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "aa16c9c9-88b1-ae45-8c90-270dbd0352ac",
+            "rank": 5,
+            "count": 6242,
+            "urn": "urn:bbc:curie:asset:aa16c9c9-88b1-ae45-8c90-270dbd0352ac",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ዛሬን በታሪክ- የአትላንታ ቦምብ ፍንዳታ",
+                "headline": "ዛሬን በታሪክ- የአትላንታ ቦምብ ፍንዳታ"
+              },
+              "locators": {
+                "assetUri": "/amharic/news-23142405",
+                "cpsUrn": "urn:bbc:content:assetUri:amharic/news-23142405",
+                "curie": "http://www.bbc.co.uk/asset/aa16c9c9-88b1-ae45-8c90-270dbd0352ac",
+                "assetId": "23142405"
+              },
+              "summary": "ዛሬን በታሪክ- የአትላንታ ቦምብ ፍንዳታ",
+              "timestamp": 1500986493000,
+              "language": "am",
+              "indexImage": {
+                "id": "63581744",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/AEAE/test/_63581744_ata.jpg",
+                "path": "/cpsdevpb/AEAE/test/_63581744_ata.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "አትላንታ",
+                "caption": "የአትላንታ ቦምብ ፍንዳታ ሐምሌ 20 1988",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:amharic/news-23142405",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "fe0b9141-d707-9e4c-abf2-b6bccd910dbc",
+            "rank": 6,
+            "count": 5576,
+            "urn": "urn:bbc:curie:asset:fe0b9141-d707-9e4c-abf2-b6bccd910dbc",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ቴሌፖርቴሽን: ዛሬ የፎቶን ቅንጣት ከሆነ ነገ ሰው ሊሆን ይሆን?",
+                "headline": "ቴሌፖርቴሽን: ዛሬ የፎቶን ቅንጣት ካጓጓዝን ነገ ሰው ልናጓጓዝ ይሆን?"
+              },
+              "locators": {
+                "assetUri": "/amharic/news-23148096",
+                "cpsUrn": "urn:bbc:content:assetUri:amharic/news-23148096",
+                "curie": "http://www.bbc.co.uk/asset/fe0b9141-d707-9e4c-abf2-b6bccd910dbc",
+                "assetId": "23148096"
+              },
+              "summary": "ቴሌፖረቴሽን አንድን ቁስ አካል ወይንም ኃይል አካላዊ ግፊት ሳይደረግ ከአንድ ቦታ ወደ ሌላ ቦታ ማዘዋወርን የሚጠይቅ ፅንሥ-ሐሳብ ነው።",
+              "timestamp": 1503391505000,
+              "language": "am",
+              "indexImage": {
+                "id": "63588694",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/C218/test/_63588694_fe6b68df-734d-4f84-ab8b-aaaa401be034.jpg",
+                "path": "/cpsdevpb/C218/test/_63588694_fe6b68df-734d-4f84-ab8b-aaaa401be034.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "ማንም ሄዶ ወደማያውቀው ልንጓዝ ይሆን?",
+                "caption": "ማንም ሄዶ ወደማያውቀው ልንጓዝ ይሆን?",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:amharic/news-23148096",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "7c509a8b-d48a-ce47-b5e7-2e3dcbc5c6d2",
+            "rank": 7,
+            "count": 5465,
+            "urn": "urn:bbc:curie:asset:7c509a8b-d48a-ce47-b5e7-2e3dcbc5c6d2",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ሳምንቱን በፎቶ",
+                "headline": "ሳምንቱን በፎቶ"
+              },
+              "locators": {
+                "assetUri": "/amharic/news-23142354",
+                "cpsUrn": "urn:bbc:content:assetUri:amharic/news-23142354",
+                "curie": "http://www.bbc.co.uk/asset/7c509a8b-d48a-ce47-b5e7-2e3dcbc5c6d2",
+                "assetId": "23142354"
+              },
+              "summary": "ከዓለም ዙሪያ የተገኙ የተለያዩ ፎቶግራጎችን የምናስተናግድበት ዓምድ",
+              "timestamp": 1500978069000,
+              "language": "am",
+              "indexImage": {
+                "id": "63581142",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/5E36/test/_63581142_timor.jpg",
+                "path": "/cpsdevpb/5E36/test/_63581142_timor.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "ቲሞር",
+                "caption": "የምስቅ ቲሞር የነጻ አውጭ ግንባር ፓርቲ ደጋፊዎች በሀገሪቱ መዲና ዲሊ ሰልፍ ሲያካሂዱ",
+                "copyrightHolder": "AFP",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:amharic/news-23142354",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "fbffaabf-1f0e-9a46-8825-267e5b6d1009",
+            "rank": 8,
+            "count": 4876,
+            "urn": "urn:bbc:curie:asset:fbffaabf-1f0e-9a46-8825-267e5b6d1009",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ከእግር ኳስ ሜዳ ወደ ኮኛክ ጠመቃ",
+                "headline": "ከእግር ኳስ ሜዳ ወደ ኮኛክ ጠመቃ"
+              },
+              "locators": {
+                "assetUri": "/amharic/sport-23141115",
+                "cpsUrn": "urn:bbc:content:assetUri:amharic/sport-23141115",
+                "curie": "http://www.bbc.co.uk/asset/fbffaabf-1f0e-9a46-8825-267e5b6d1009",
+                "assetId": "23141115"
+              },
+              "summary": "እስከ እንግሊዝ ፕሪሚር ሊግ ድረስ የተጫወተው አይቮሪኮስታዊው ኦሊቪዬ ቴቢሊ በአሁኑ ወቅት ታዋቂ ኮኛክ ጠማቂ ሆኗል።",
+              "timestamp": 1500628096000,
+              "language": "am",
+              "id": "urn:bbc:ares::asset:amharic/sport-23141115",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "b225912b-532b-a64c-8107-54ee645f3ce8",
+            "rank": 9,
+            "count": 4097,
+            "urn": "urn:bbc:curie:asset:b225912b-532b-a64c-8107-54ee645f3ce8",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Test headline - sport",
+                "headline": "Test headline - sport"
+              },
+              "locators": {
+                "assetUri": "/amharic/sport-23157883",
+                "cpsUrn": "urn:bbc:content:assetUri:amharic/sport-23157883",
+                "curie": "http://www.bbc.co.uk/asset/b225912b-532b-a64c-8107-54ee645f3ce8",
+                "assetId": "23157883"
+              },
+              "summary": "This is a summary",
+              "timestamp": 1507804080000,
+              "language": "am",
+              "indexImage": {
+                "id": "63596027",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/11985/test/_63596027__98280501_mortgage_crop_getty.jpg",
+                "path": "/cpsdevpb/11985/test/_63596027__98280501_mortgage_crop_getty.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "image",
+                "caption": "image",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:amharic/sport-23157883",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "fd16be02-32e7-9345-ab5c-aa06eea96fc3",
+            "rank": 10,
+            "count": 3390,
+            "urn": "urn:bbc:curie:asset:fd16be02-32e7-9345-ab5c-aa06eea96fc3",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "2ችግር ፈቺውን የአፍሪካውያን የፈጠራ ውጤትን ይተዋወቁ",
+                "headline": "2ችግር ፈቺውን የአፍሪካውያን የፈጠራ ውጤትን ይተዋወቁ"
+              },
+              "locators": {
+                "assetUri": "/amharic/news-23143386",
+                "cpsUrn": "urn:bbc:content:assetUri:amharic/news-23143386",
+                "curie": "http://www.bbc.co.uk/asset/fd16be02-32e7-9345-ab5c-aa06eea96fc3",
+                "assetId": "23143386"
+              },
+              "summary": "ከዓለማችን ህዝብ 1.3 ቢሊዮን የሚሆነው የኤሌክትሪክ ኃይል ተጠቃሚ አይደለም። የገጠር ነዋሪዎችን ከትላልቅ የኃይል ማሰራጫዎች ተጠቃሚ ለማድረግ አስቸጋሪ ከመሆኑ በተጨማሪ የተለመዱትን የጸሃይ ሃይል ማመንጫዎች ደግሞ ውስን ሃይል ብቻ ነው የሚያመነጩት።",
+              "timestamp": 1503305763000,
+              "language": "am",
+              "indexImage": {
+                "id": "63582165",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/DB40/test/_63582165_3567a3bc-a914-4513-9396-ba978380e4b1.jpg",
+                "path": "/cpsdevpb/DB40/test/_63582165_3567a3bc-a914-4513-9396-ba978380e4b1.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "የልብ ምርመራ",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:amharic/news-23143386",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "49e0db2b-00aa-3644-aee0-b39cbd09c3c2",
+            "rank": 11,
+            "count": 3357,
+            "urn": "urn:bbc:curie:asset:49e0db2b-00aa-3644-aee0-b39cbd09c3c2",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ቅድመ እና ድህረ ፕሬዝደንቱ ትራምፕ!",
+                "headline": "ቅድመ እና ድህረ ፕሬዝደንቱ ትራምፕ!"
+              },
+              "locators": {
+                "assetUri": "/amharic/23143895",
+                "cpsUrn": "urn:bbc:content:assetUri:amharic/23143895",
+                "curie": "http://www.bbc.co.uk/asset/49e0db2b-00aa-3644-aee0-b39cbd09c3c2",
+                "assetId": "23143895"
+              },
+              "summary": "ፕሬዝደንት ዶናልድ ትራምፕ በምርጫ ቅስቀሳቸው ወቅት ብዙ ነገር ሊያሳኩ እነዳሰቡ ቃል ገብተው ነበር። ምን ያህሉከ ተሳካላቸው? ምነ ያህሉስ ካሰቡት ውጭ ሆነ?",
+              "timestamp": 1503392558000,
+              "language": "am",
+              "indexImage": {
+                "id": "63583050",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/13AE/test/_63583050_1f421e97-66aa-44c5-ab81-9c9ab1841d0d.jpg",
+                "path": "/cpsdevpb/13AE/test/_63583050_1f421e97-66aa-44c5-ab81-9c9ab1841d0d.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "ትራምፕ",
+                "caption": "ፕሬዝደንት ዶናልድ ትራምፕ በምርጫ ቅስቀሳቸው ወቅት ብዙ ነገር ሊያሳኩ እነዳሰቡ ቃል ገብተው ነበር።",
+                "copyrightHolder": "AFP",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:amharic/23143895",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "f09924d1-eb4d-d644-9493-cd69781aa7ca",
+            "rank": 12,
+            "count": 2682,
+            "urn": "urn:bbc:curie:asset:f09924d1-eb4d-d644-9493-cd69781aa7ca",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ሳምንቱን በምስል",
+                "headline": "ሳምንቱን በምስል"
+              },
+              "locators": {
+                "assetUri": "/amharic/23143329",
+                "cpsUrn": "urn:bbc:content:assetUri:amharic/23143329",
+                "curie": "http://www.bbc.co.uk/asset/f09924d1-eb4d-d644-9493-cd69781aa7ca",
+                "assetId": "23143329"
+              },
+              "summary": "ሳምንቱን በምስል",
+              "timestamp": 1501236158000,
+              "language": "am",
+              "indexImage": {
+                "id": "63582041",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/36CC/test/_63582041_3.jpg",
+                "path": "/cpsdevpb/36CC/test/_63582041_3.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "ኬንያ ምርጫ",
+                "caption": "የኬንያ መሪው ፓርቲ ጁቢሊ ደጋፊ አርብ እለት የፕሬዚደንት ኡሁሪ ኬንያታ ምስል ያለበት ወረቀት በመያዝ በመዲናዋ ናይሮቢ በሚደረገገው ቅስቀሳ ላይ ሲሳተፍ። የኬንያ ፐሬዝደንታዊ ምርጫ በመጪው ነሓሴ 1 ይከናወናል።",
+                "copyrightHolder": "AFP",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:amharic/23143329",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "3bd3b4a7-9cd9-b74a-8bdc-683a402b2a7e",
+            "rank": 13,
+            "count": 1589,
+            "urn": "urn:bbc:curie:asset:3bd3b4a7-9cd9-b74a-8bdc-683a402b2a7e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "በህይወት የሌለው የዓለማችን ሀብታሙ ሰው",
+                "headline": "በዓለማችን ታሪክ ሀብታሙን ሰው ያውቁታል?"
+              },
+              "locators": {
+                "assetUri": "/amharic/news-23140375",
+                "cpsUrn": "urn:bbc:content:assetUri:amharic/news-23140375",
+                "curie": "http://www.bbc.co.uk/asset/3bd3b4a7-9cd9-b74a-8bdc-683a402b2a7e",
+                "assetId": "23140375"
+              },
+              "summary": "በግሪጎሪ የቀን አቆጣጠር ከ1459-1525 ዓመተ ምህረት የኖረው ጄኮብ ፉገር ዛሬ በሕይወት ቢኖር ኖሮ ከሁሉም ባለጸጋዎች የበለጠ ሀብት ይኖረው ነበር።",
+              "timestamp": 1500987770000,
+              "language": "am",
+              "indexImage": {
+                "id": "63578355",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/D85B/test/_63578355_.gif",
+                "path": "/cpsdevpb/D85B/test/_63578355_.gif",
+                "height": 371,
+                "width": 660,
+                "altText": "ጃኮብ ፉጀር",
+                "caption": "የዓለማችን ሀብታሙ ሰው",
+                "copyrightHolder": "ጌቲ ኢሜጅስ",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:amharic/news-23140375",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "036997cd-4fee-5b4a-beae-aea3fa979bf9",
+            "rank": 14,
+            "count": 1383,
+            "urn": "urn:bbc:curie:asset:036997cd-4fee-5b4a-beae-aea3fa979bf9",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ፕሮፋይል-ፕሬዝደንት ኢሳያስ አፈወርቂ",
+                "headline": "ፕሮፋይል-ፕሬዝደንት ኢሳያስ አፈወርቂ"
+              },
+              "locators": {
+                "assetUri": "/amharic/23143844",
+                "cpsUrn": "urn:bbc:content:assetUri:amharic/23143844",
+                "curie": "http://www.bbc.co.uk/asset/036997cd-4fee-5b4a-beae-aea3fa979bf9",
+                "assetId": "23143844"
+              },
+              "summary": "ኤርትራ ነጻነቷን ካገኘችበት ከ1983 ዓ.ም አንስቶ ኤርትራን በፕሬዝደነትነት ሲመሯት ቆይተዋል። ኢሳያስ አፈወርቂ የሚመሩት ፓርቲ በሃገሪቷ የሚገኘው ብቸኛው የፖለቲካ ፓርቲ ነው",
+              "timestamp": 1503392778000,
+              "language": "am",
+              "indexImage": {
+                "id": "63582603",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/77A4/test/_63582603_c7cdb71b-e25d-4b4a-9288-db1ae8029302.jpg",
+                "path": "/cpsdevpb/77A4/test/_63582603_c7cdb71b-e25d-4b4a-9288-db1ae8029302.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "የኤርትራው ፕሬዝደንት ኢሳያስ አፍወርቂን የሚያሳይ ምስል",
+                "caption": "የኤርትራው ፕሬዝደንት ኢሳያስ አፍወርቂ",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:amharic/23143844",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "6d424c02-0a8f-0546-abf5-af72fef8337c",
+            "rank": 15,
+            "count": 1271,
+            "urn": "urn:bbc:curie:asset:6d424c02-0a8f-0546-abf5-af72fef8337c",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "የምንጥላቸው ልብሶች መጨረሻ ምን ይሆን?",
+                "headline": "የምንጥላቸው ልብሶች መጨረሻ ምን ይሆን?"
+              },
+              "locators": {
+                "assetUri": "/amharic/news-23141044",
+                "cpsUrn": "urn:bbc:content:assetUri:amharic/news-23141044",
+                "curie": "http://www.bbc.co.uk/asset/6d424c02-0a8f-0546-abf5-af72fef8337c",
+                "assetId": "23141044"
+              },
+              "summary": "ከመላው ዓለም ተሰበሰቡት እና በምዕራባዊ የህንድ የወደብ ከተማ ካንዳላ የሚገቡት ጥቅም ላይ የዋሉ ልብሶች በጭነት መኪና ወደ ፓኒፓት ይጓጓዛሉ። እነዚህ ልብሶች ብርድ ልብስ ሆነው ተመልሰው ወደ መላው ዓለም ይላካሉ።",
+              "timestamp": 1500628103000,
+              "language": "am",
+              "id": "urn:bbc:ares::asset:amharic/news-23141044",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "35a3432a-59f8-0042-bd3d-122e5b302fe9",
+            "rank": 16,
+            "count": 939,
+            "urn": "urn:bbc:curie:asset:35a3432a-59f8-0042-bd3d-122e5b302fe9",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "የአፍሪካን ታሪክ ከቅኝ ገዢዎች ነጻ የማውጣት ተጋድሎ",
+                "headline": "ዘመናትን የተሻገረ ታላቅ ምስጢር-የአፍሪካ ታሪክ"
+              },
+              "locators": {
+                "assetUri": "/amharic/news-23141014",
+                "cpsUrn": "urn:bbc:content:assetUri:amharic/news-23141014",
+                "curie": "http://www.bbc.co.uk/asset/35a3432a-59f8-0042-bd3d-122e5b302fe9",
+                "assetId": "23141014"
+              },
+              "summary": "የተዛባው የአፍሪካ ታሪከ ለዘመናት በምዕራባውያን ጸኃፍት ሲተረክ ቆይቶ እ.አ.አ በ1960ዎቹ የበርካታ አፍሪካውያን የቅኝ ግዛት ዘመን ማብቃቱን ተከትሎ አፍሪካ ታሪኳንም ነጻ ለማውጣት ተነሳች።",
+              "timestamp": 1503391098000,
+              "language": "am",
+              "indexImage": {
+                "id": "63578945",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/D6CB/test/_63578945_bf0aba74-cc98-4aef-af88-b218c641a71a.jpg",
+                "path": "/cpsdevpb/D6CB/test/_63578945_bf0aba74-cc98-4aef-af88-b218c641a71a.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "አክሱም ሃውልት",
+                "caption": "የአክሱምን ስልጣኔ አሻራዎች አሁንም ድረስ በጽናት እንደቆሙ ነው",
+                "copyrightHolder": "AFP",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:amharic/news-23141014",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "511e2730-00bd-754f-a950-8c472c5f3f12",
+            "rank": 17,
+            "count": 677,
+            "urn": "urn:bbc:curie:asset:511e2730-00bd-754f-a950-8c472c5f3f12",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ተመራማሪዎች፡ ትዳር \"ጤናን ይጠብቃል\"",
+                "headline": "ተመራማሪዎች፡ ትዳር \"ጤናን ይጠብቃል\""
+              },
+              "locators": {
+                "assetUri": "/amharic/news-23140715",
+                "cpsUrn": "urn:bbc:content:assetUri:amharic/news-23140715",
+                "curie": "http://www.bbc.co.uk/asset/511e2730-00bd-754f-a950-8c472c5f3f12",
+                "assetId": "23140715"
+              },
+              "summary": "ትዳር ለልብ ጤና እንደሚጠቅም ተመራማሪዎች አስረድተዋል።",
+              "timestamp": 1503306829000,
+              "language": "am",
+              "byline": {
+                "name": "Kalkidan Yibeltal",
+                "title": "BBC Amharic",
+                "persons": [
+                  {
+                    "name": "Kalkidan Yibeltal",
+                    "function": "BBC Amharic"
+                  }
+                ]
+              },
+              "indexImage": {
+                "id": "63578347",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/12293/test/_63578347__96368980_gettyimages-504282184.jpg",
+                "path": "/cpsdevpb/12293/test/_63578347__96368980_gettyimages-504282184.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "ትዳር ለጤና ይበጃል",
+                "copyrightHolder": "ኩዝሚክስቱዲዮ/ጌቲ",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:amharic/news-23140715",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "8af6251f-5f92-c94c-978c-c5ebd7e574c8",
+            "rank": 18,
+            "count": 512,
+            "urn": "urn:bbc:curie:asset:8af6251f-5f92-c94c-978c-c5ebd7e574c8",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "በጉንዳን ኃይል የሚንቀሳቀስ ኣዉቶቡስ",
+                "headline": "ጉንዳኖች የሚረጩትን ፎርሚክ ኣሲድን በመጠቀም ኣገልግሎት መስጠት የጀመረዉ ኣዉቶቡስ"
+              },
+              "locators": {
+                "assetUri": "/amharic/news-23140994",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:8af6251f-5f92-c94c-978c-c5ebd7e574c8",
+                "assetId": "23140994",
+                "cpsUrn": "urn:bbc:content:assetUri:amharic/news-23140994",
+                "curie": "http://www.bbc.co.uk/asset/8af6251f-5f92-c94c-978c-c5ebd7e574c8"
+              },
+              "summary": "በኔዘርላንድ የሚገኙ 40 ተማሪዎች የአየር ብክለት የማያስከትል በፎርሚክ ኣሲድ የሚንቀሳቀስ አዉቶቡስ ለገበያ ኣቀረቡ",
+              "timestamp": 1500627785000,
+              "language": "am",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Amharic",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63578903",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/790B/test/_63578903_426009ee-0cdf-452a-90e3-9184f9f2de71.jpg",
+                "path": "/cpsdevpb/790B/test/_63578903_426009ee-0cdf-452a-90e3-9184f9f2de71.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "ቲም ፋስት",
+                "caption": "የቲም ፋስት ኣባላት ለኣብነት በሠሩት ባስ ፊትለፊት ለፎቶ ተደርድረዉ",
+                "copyrightHolder": "CHRIST CLIJSEN",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:amharic/news-23140994",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "c31dd8c5-2e55-9143-8ed2-5f9c15d6c91c",
+            "rank": 19,
+            "count": 92,
+            "urn": "urn:bbc:curie:asset:c31dd8c5-2e55-9143-8ed2-5f9c15d6c91c",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "በጥቅም ላይ የዋሉ የጥንታዊ ግብፅ የህክምና ጥበባት",
+                "headline": "በጥቅም ላይ የዋሉ የጥንታዊ ግብፅ የህክምና ጥበባት"
+              },
+              "locators": {
+                "assetUri": "/amharic/news-23143874",
+                "cpsUrn": "urn:bbc:content:assetUri:amharic/news-23143874",
+                "curie": "http://www.bbc.co.uk/asset/c31dd8c5-2e55-9143-8ed2-5f9c15d6c91c",
+                "assetId": "23143874"
+              },
+              "summary": "በጥንታዊ ግብፅ ህክምና ከጥንቆላ ጋር ከመተሳሰሩ በተጨማሪ ሳይንስና ሀይማኖትም የአንድ ሳንቲም ሁለት ገፅታ ነበራቸዉ።",
+              "timestamp": 1503391264000,
+              "language": "am",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "id": "urn:bbc:ares::asset:amharic/news-23143874",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   },
-  "relatedContent": {
-    "site": {
-      "subType": "site",
-      "name": "Amharic",
-      "uri": "/amharic",
-      "type": "simple"
-    },
-    "groups": []
-  }
+  "contentType": "application/json; charset=utf-8"
 }

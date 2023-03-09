@@ -1,11 +1,4 @@
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_GHOST,
-  C_POSTBOX_30,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
 import latinWithDiacritics from '../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
-import brandSVG from '../../chameleonLogos/portuguese';
 import '#psammead/moment-timezone-include/tz/America/Sao_Paulo';
 import '#psammead/psammead-locales/moment/pt-br';
 import withContext from '../../../contexts/utils/withContext';
@@ -40,7 +33,6 @@ export const service: DefaultServiceConfig = {
     service: 'portuguese',
     serviceName: 'News Brasil',
     languageName: 'Portuguese',
-    themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcbrasil',
     twitterSite: '@bbcbrasil',
     noBylinesPolicy:
@@ -53,13 +45,6 @@ export const service: DefaultServiceConfig = {
     swPath: '/sw.js',
     frontPageTitle: 'Notícias, vídeos, análise e contexto em português',
     passportHomes: ['brasil'],
-    theming: {
-      brandBackgroundColour: `${C_POSTBOX}`,
-      brandLogoColour: `${C_WHITE}`,
-      brandForegroundColour: `${C_GHOST}`,
-      brandHighlightColour: `${C_WHITE}`,
-      brandBorderColour: `${C_POSTBOX_30}`,
-    },
     showAdPlaceholder: true,
     showRelatedTopics: true,
     podcastPromo: {
@@ -250,6 +235,7 @@ export const service: DefaultServiceConfig = {
         duration: 'Duration',
         recentEpisodes: 'Mais',
         podcastExternalLinks: 'O podcast está disponível em',
+        download: 'Baixar episódio',
       },
       socialEmbed: {
         caption: {
@@ -272,8 +258,8 @@ export const service: DefaultServiceConfig = {
           endTextVisuallyHidden: 'Final de %provider_name% post',
         },
         consentBanner: {
-          heading: `Aceita conteúdo de [social_media_site]?`,
-          body: `Este item inclui conteúdo extraído de [social_media_site]. Pedimos sua autorzação antes que algo seja carregado, pois eles podem estar utilizando cookies e outras tecnologias. Você pode consultar a [link] política de uso de cookies [/link] e [link] os termos de privacidade  [/link] do [social_media_site] antes de concordar. Para acessar o conteúdo clique em "aceitar e continuar".`,
+          heading: `Aceita conteúdo do [social_media_site]?`,
+          body: `Este item inclui conteúdo extraído do [social_media_site]. Pedimos sua autorização antes que algo seja carregado, pois eles podem estar utilizando cookies e outras tecnologias. Você pode consultar a [link] política de uso de cookies [/link] e [link] os termos de privacidade [/link] do [social_media_site] antes de concordar. Para acessar o conteúdo clique em "aceitar e continuar".`,
           button: 'Aceite e continue',
         },
       },
@@ -286,7 +272,6 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'Principais notícias',
       featuresAnalysisTitle: 'Leia mais',
     },
-    brandSVG,
     mostRead: {
       header: 'Mais lidas',
       lastUpdated: 'Última atualização:',
@@ -381,10 +366,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Vídeos',
         url: '/portuguese/topics/c9y2j35dn2zt',
-      },
-      {
-        title: 'Copa do Mundo',
-        url: '/portuguese/topics/c5qvpqjz43dt',
       },
     ],
   },

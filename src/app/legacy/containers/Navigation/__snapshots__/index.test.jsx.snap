@@ -69,7 +69,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   right: 0;
   bottom: 0;
   top: 0;
-  border: 0.25rem solid #B80000;
+  border: 0.25rem solid #000000;
 }
 
 @media (min-width: 37.5rem) {
@@ -194,6 +194,18 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
     display: none;
   }
 
+  .emotion-65:focus-visible {
+    outline: none;
+  }
+
+  .emotion-65:focus-visible::after {
+    outline: 0.1875rem solid #000000;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
   .emotion-65:after {
     content: ' ';
     height: 100%;
@@ -205,11 +217,10 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
     overflow: hidden;
     pointer-events: none;
     background: linear-gradient(
-            to right,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 1)
-              100%
-          );
+          to right,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 1) 100%
+        );
   }
 
   @media (min-width: 25rem) {
@@ -270,13 +281,13 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FDFDFD;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline-block;
   padding: 0.75rem 0.25rem;
+  outline: none;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -306,7 +317,6 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   right: 0;
   bottom: 0;
   border-bottom: 0.25rem solid #B80000;
-  border-bottom: 0.3125rem solid #B80000;
 }
 
 .emotion-71:focus::after {
@@ -317,7 +327,18 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   bottom: 0;
   border-bottom: 0.25rem solid #B80000;
   top: 0;
-  border: 0.25rem solid #B80000;
+  border: 0.1875rem solid #000000;
+}
+
+.emotion-71:focus-visible::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+  top: 0;
+  border: 0.1875rem solid #000000;
 }
 
 .emotion-73::after {
@@ -335,13 +356,13 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FDFDFD;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline-block;
   padding: 0.75rem 0.25rem;
+  outline: none;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -381,7 +402,18 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   bottom: 0;
   border-bottom: 0.25rem solid #B80000;
   top: 0;
-  border: 0.25rem solid #B80000;
+  border: 0.1875rem solid #000000;
+}
+
+.emotion-79:focus-visible::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+  top: 0;
+  border: 0.1875rem solid #000000;
 }
 
 <div>
@@ -405,7 +437,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
       </amp-state>
       <button
         aria-expanded="false"
-        class="emotion-4 emotion-5"
+        class="focusIndicatorRemove emotion-4 emotion-5"
         data-amp-bind-aria-expanded="menuState.expanded ? \\"true\\" : \\"false\\""
         dir="ltr"
         on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),
@@ -662,7 +694,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
           >
             <a
               aria-labelledby="NavigationLinks-Home"
-              class="emotion-71 emotion-72"
+              class="focusIndicatorRemove emotion-71 emotion-72"
               href="/news"
             >
               <span
@@ -685,7 +717,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
             role="listitem"
           >
             <a
-              class="emotion-79 emotion-72"
+              class="focusIndicatorRemove emotion-79 emotion-72"
               href="/news/uk"
             >
               UK
@@ -697,7 +729,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
             role="listitem"
           >
             <a
-              class="emotion-79 emotion-72"
+              class="focusIndicatorRemove emotion-79 emotion-72"
               href="/news/world"
             >
               World
@@ -709,7 +741,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
             role="listitem"
           >
             <a
-              class="emotion-79 emotion-72"
+              class="focusIndicatorRemove emotion-79 emotion-72"
               href="/news/business"
             >
               Business
@@ -721,7 +753,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
             role="listitem"
           >
             <a
-              class="emotion-79 emotion-72"
+              class="focusIndicatorRemove emotion-79 emotion-72"
               href="/news/politics"
             >
               Politics
@@ -733,7 +765,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
             role="listitem"
           >
             <a
-              class="emotion-79 emotion-72"
+              class="focusIndicatorRemove emotion-79 emotion-72"
               href="/news/technology"
             >
               Tech
@@ -745,7 +777,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
             role="listitem"
           >
             <a
-              class="emotion-79 emotion-72"
+              class="focusIndicatorRemove emotion-79 emotion-72"
               href="/news/science_and_environment"
             >
               Science
@@ -757,7 +789,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
             role="listitem"
           >
             <a
-              class="emotion-79 emotion-72"
+              class="focusIndicatorRemove emotion-79 emotion-72"
               href="/news/health"
             >
               Health
@@ -769,7 +801,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
             role="listitem"
           >
             <a
-              class="emotion-79 emotion-72"
+              class="focusIndicatorRemove emotion-79 emotion-72"
               href="/news/education"
             >
               Family & Education
@@ -781,7 +813,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
             role="listitem"
           >
             <a
-              class="emotion-79 emotion-72"
+              class="focusIndicatorRemove emotion-79 emotion-72"
               href="/news/entertainment_and_arts"
             >
               Entertainment & Arts
@@ -793,7 +825,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
             role="listitem"
           >
             <a
-              class="emotion-79 emotion-72"
+              class="focusIndicatorRemove emotion-79 emotion-72"
               href="/news/stories"
             >
               Stories
@@ -875,7 +907,7 @@ exports[`Navigation Container should correctly render amp navigation on non-home
   right: 0;
   bottom: 0;
   top: 0;
-  border: 0.25rem solid #B80000;
+  border: 0.25rem solid #000000;
 }
 
 @media (min-width: 37.5rem) {
@@ -995,6 +1027,18 @@ exports[`Navigation Container should correctly render amp navigation on non-home
     display: none;
   }
 
+  .emotion-61:focus-visible {
+    outline: none;
+  }
+
+  .emotion-61:focus-visible::after {
+    outline: 0.1875rem solid #000000;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
   .emotion-61:after {
     content: ' ';
     height: 100%;
@@ -1006,11 +1050,10 @@ exports[`Navigation Container should correctly render amp navigation on non-home
     overflow: hidden;
     pointer-events: none;
     background: linear-gradient(
-            to right,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 1)
-              100%
-          );
+          to right,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 1) 100%
+        );
   }
 
   @media (min-width: 25rem) {
@@ -1071,13 +1114,13 @@ exports[`Navigation Container should correctly render amp navigation on non-home
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FDFDFD;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline-block;
   padding: 0.75rem 0.25rem;
+  outline: none;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1117,7 +1160,18 @@ exports[`Navigation Container should correctly render amp navigation on non-home
   bottom: 0;
   border-bottom: 0.25rem solid #B80000;
   top: 0;
-  border: 0.25rem solid #B80000;
+  border: 0.1875rem solid #000000;
+}
+
+.emotion-67:focus-visible::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+  top: 0;
+  border: 0.1875rem solid #000000;
 }
 
 <div>
@@ -1141,7 +1195,7 @@ exports[`Navigation Container should correctly render amp navigation on non-home
       </amp-state>
       <button
         aria-expanded="false"
-        class="emotion-4 emotion-5"
+        class="focusIndicatorRemove emotion-4 emotion-5"
         data-amp-bind-aria-expanded="menuState.expanded ? \\"true\\" : \\"false\\""
         dir="ltr"
         on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),
@@ -1389,7 +1443,7 @@ exports[`Navigation Container should correctly render amp navigation on non-home
             role="listitem"
           >
             <a
-              class="emotion-67 emotion-68"
+              class="focusIndicatorRemove emotion-67 emotion-68"
               href="/news"
             >
               Home
@@ -1401,7 +1455,7 @@ exports[`Navigation Container should correctly render amp navigation on non-home
             role="listitem"
           >
             <a
-              class="emotion-67 emotion-68"
+              class="focusIndicatorRemove emotion-67 emotion-68"
               href="/news/uk"
             >
               UK
@@ -1413,7 +1467,7 @@ exports[`Navigation Container should correctly render amp navigation on non-home
             role="listitem"
           >
             <a
-              class="emotion-67 emotion-68"
+              class="focusIndicatorRemove emotion-67 emotion-68"
               href="/news/world"
             >
               World
@@ -1425,7 +1479,7 @@ exports[`Navigation Container should correctly render amp navigation on non-home
             role="listitem"
           >
             <a
-              class="emotion-67 emotion-68"
+              class="focusIndicatorRemove emotion-67 emotion-68"
               href="/news/business"
             >
               Business
@@ -1437,7 +1491,7 @@ exports[`Navigation Container should correctly render amp navigation on non-home
             role="listitem"
           >
             <a
-              class="emotion-67 emotion-68"
+              class="focusIndicatorRemove emotion-67 emotion-68"
               href="/news/politics"
             >
               Politics
@@ -1449,7 +1503,7 @@ exports[`Navigation Container should correctly render amp navigation on non-home
             role="listitem"
           >
             <a
-              class="emotion-67 emotion-68"
+              class="focusIndicatorRemove emotion-67 emotion-68"
               href="/news/technology"
             >
               Tech
@@ -1461,7 +1515,7 @@ exports[`Navigation Container should correctly render amp navigation on non-home
             role="listitem"
           >
             <a
-              class="emotion-67 emotion-68"
+              class="focusIndicatorRemove emotion-67 emotion-68"
               href="/news/science_and_environment"
             >
               Science
@@ -1473,7 +1527,7 @@ exports[`Navigation Container should correctly render amp navigation on non-home
             role="listitem"
           >
             <a
-              class="emotion-67 emotion-68"
+              class="focusIndicatorRemove emotion-67 emotion-68"
               href="/news/health"
             >
               Health
@@ -1485,7 +1539,7 @@ exports[`Navigation Container should correctly render amp navigation on non-home
             role="listitem"
           >
             <a
-              class="emotion-67 emotion-68"
+              class="focusIndicatorRemove emotion-67 emotion-68"
               href="/news/education"
             >
               Family & Education
@@ -1497,7 +1551,7 @@ exports[`Navigation Container should correctly render amp navigation on non-home
             role="listitem"
           >
             <a
-              class="emotion-67 emotion-68"
+              class="focusIndicatorRemove emotion-67 emotion-68"
               href="/news/entertainment_and_arts"
             >
               Entertainment & Arts
@@ -1509,7 +1563,7 @@ exports[`Navigation Container should correctly render amp navigation on non-home
             role="listitem"
           >
             <a
-              class="emotion-67 emotion-68"
+              class="focusIndicatorRemove emotion-67 emotion-68"
               href="/news/stories"
             >
               Stories
@@ -1591,7 +1645,7 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
   right: 0;
   bottom: 0;
   top: 0;
-  border: 0.25rem solid #B80000;
+  border: 0.25rem solid #000000;
 }
 
 @media (min-width: 37.5rem) {
@@ -1711,6 +1765,18 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
     display: none;
   }
 
+  .emotion-61:focus-visible {
+    outline: none;
+  }
+
+  .emotion-61:focus-visible::after {
+    outline: 0.1875rem solid #000000;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
   .emotion-61:after {
     content: ' ';
     height: 100%;
@@ -1722,11 +1788,10 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
     overflow: hidden;
     pointer-events: none;
     background: linear-gradient(
-            to right,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 1)
-              100%
-          );
+          to right,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 1) 100%
+        );
   }
 
   @media (min-width: 25rem) {
@@ -1787,13 +1852,13 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FDFDFD;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline-block;
   padding: 0.75rem 0.25rem;
+  outline: none;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1833,7 +1898,18 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
   bottom: 0;
   border-bottom: 0.25rem solid #B80000;
   top: 0;
-  border: 0.25rem solid #B80000;
+  border: 0.1875rem solid #000000;
+}
+
+.emotion-67:focus-visible::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+  top: 0;
+  border: 0.1875rem solid #000000;
 }
 
 <div>
@@ -1857,7 +1933,7 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
       </amp-state>
       <button
         aria-expanded="false"
-        class="emotion-4 emotion-5"
+        class="focusIndicatorRemove emotion-4 emotion-5"
         data-amp-bind-aria-expanded="menuState.expanded ? \\"true\\" : \\"false\\""
         dir="ltr"
         on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),
@@ -2105,7 +2181,7 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
             role="listitem"
           >
             <a
-              class="emotion-67 emotion-68"
+              class="focusIndicatorRemove emotion-67 emotion-68"
               href="/news"
             >
               Home
@@ -2117,7 +2193,7 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
             role="listitem"
           >
             <a
-              class="emotion-67 emotion-68"
+              class="focusIndicatorRemove emotion-67 emotion-68"
               href="/news/uk"
             >
               UK
@@ -2129,7 +2205,7 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
             role="listitem"
           >
             <a
-              class="emotion-67 emotion-68"
+              class="focusIndicatorRemove emotion-67 emotion-68"
               href="/news/world"
             >
               World
@@ -2141,7 +2217,7 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
             role="listitem"
           >
             <a
-              class="emotion-67 emotion-68"
+              class="focusIndicatorRemove emotion-67 emotion-68"
               href="/news/business"
             >
               Business
@@ -2153,7 +2229,7 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
             role="listitem"
           >
             <a
-              class="emotion-67 emotion-68"
+              class="focusIndicatorRemove emotion-67 emotion-68"
               href="/news/politics"
             >
               Politics
@@ -2165,7 +2241,7 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
             role="listitem"
           >
             <a
-              class="emotion-67 emotion-68"
+              class="focusIndicatorRemove emotion-67 emotion-68"
               href="/news/technology"
             >
               Tech
@@ -2177,7 +2253,7 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
             role="listitem"
           >
             <a
-              class="emotion-67 emotion-68"
+              class="focusIndicatorRemove emotion-67 emotion-68"
               href="/news/science_and_environment"
             >
               Science
@@ -2189,7 +2265,7 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
             role="listitem"
           >
             <a
-              class="emotion-67 emotion-68"
+              class="focusIndicatorRemove emotion-67 emotion-68"
               href="/news/health"
             >
               Health
@@ -2201,7 +2277,7 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
             role="listitem"
           >
             <a
-              class="emotion-67 emotion-68"
+              class="focusIndicatorRemove emotion-67 emotion-68"
               href="/news/education"
             >
               Family & Education
@@ -2213,7 +2289,7 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
             role="listitem"
           >
             <a
-              class="emotion-67 emotion-68"
+              class="focusIndicatorRemove emotion-67 emotion-68"
               href="/news/entertainment_and_arts"
             >
               Entertainment & Arts
@@ -2225,7 +2301,7 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
             role="listitem"
           >
             <a
-              class="emotion-67 emotion-68"
+              class="focusIndicatorRemove emotion-67 emotion-68"
               href="/news/stories"
             >
               Stories
@@ -2305,7 +2381,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   right: 0;
   bottom: 0;
   top: 0;
-  border: 0.25rem solid #B80000;
+  border: 0.25rem solid #000000;
 }
 
 @media (min-width: 37.5rem) {
@@ -2362,6 +2438,18 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
     display: none;
   }
 
+  .emotion-12:focus-visible {
+    outline: none;
+  }
+
+  .emotion-12:focus-visible::after {
+    outline: 0.1875rem solid #000000;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
   .emotion-12:after {
     content: ' ';
     height: 100%;
@@ -2373,11 +2461,10 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
     overflow: hidden;
     pointer-events: none;
     background: linear-gradient(
-            to right,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 1)
-              100%
-          );
+          to right,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 1) 100%
+        );
   }
 
   @media (min-width: 25rem) {
@@ -2431,13 +2518,13 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FDFDFD;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline-block;
   padding: 0.75rem 0.25rem;
+  outline: none;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -2467,7 +2554,6 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   right: 0;
   bottom: 0;
   border-bottom: 0.25rem solid #B80000;
-  border-bottom: 0.3125rem solid #B80000;
 }
 
 .emotion-18:focus::after {
@@ -2478,7 +2564,18 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   bottom: 0;
   border-bottom: 0.25rem solid #B80000;
   top: 0;
-  border: 0.25rem solid #B80000;
+  border: 0.1875rem solid #000000;
+}
+
+.emotion-18:focus-visible::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+  top: 0;
+  border: 0.1875rem solid #000000;
 }
 
 .emotion-20::after {
@@ -2496,13 +2593,13 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FDFDFD;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline-block;
   padding: 0.75rem 0.25rem;
+  outline: none;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -2542,7 +2639,18 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   bottom: 0;
   border-bottom: 0.25rem solid #B80000;
   top: 0;
-  border: 0.25rem solid #B80000;
+  border: 0.1875rem solid #000000;
+}
+
+.emotion-26:focus-visible::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+  top: 0;
+  border: 0.1875rem solid #000000;
 }
 
 .emotion-64 {
@@ -2640,7 +2748,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
       >
         <button
           aria-expanded="false"
-          class="emotion-6 emotion-7"
+          class="focusIndicatorRemove emotion-6 emotion-7"
           dir="ltr"
           type="button"
         >
@@ -2678,7 +2786,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
             >
               <a
                 aria-labelledby="NavigationLinks-Home"
-                class="emotion-18 emotion-19"
+                class="focusIndicatorRemove emotion-18 emotion-19"
                 href="/news"
               >
                 <span
@@ -2701,7 +2809,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
               role="listitem"
             >
               <a
-                class="emotion-26 emotion-19"
+                class="focusIndicatorRemove emotion-26 emotion-19"
                 href="/news/uk"
               >
                 UK
@@ -2713,7 +2821,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
               role="listitem"
             >
               <a
-                class="emotion-26 emotion-19"
+                class="focusIndicatorRemove emotion-26 emotion-19"
                 href="/news/world"
               >
                 World
@@ -2725,7 +2833,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
               role="listitem"
             >
               <a
-                class="emotion-26 emotion-19"
+                class="focusIndicatorRemove emotion-26 emotion-19"
                 href="/news/business"
               >
                 Business
@@ -2737,7 +2845,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
               role="listitem"
             >
               <a
-                class="emotion-26 emotion-19"
+                class="focusIndicatorRemove emotion-26 emotion-19"
                 href="/news/politics"
               >
                 Politics
@@ -2749,7 +2857,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
               role="listitem"
             >
               <a
-                class="emotion-26 emotion-19"
+                class="focusIndicatorRemove emotion-26 emotion-19"
                 href="/news/technology"
               >
                 Tech
@@ -2761,7 +2869,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
               role="listitem"
             >
               <a
-                class="emotion-26 emotion-19"
+                class="focusIndicatorRemove emotion-26 emotion-19"
                 href="/news/science_and_environment"
               >
                 Science
@@ -2773,7 +2881,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
               role="listitem"
             >
               <a
-                class="emotion-26 emotion-19"
+                class="focusIndicatorRemove emotion-26 emotion-19"
                 href="/news/health"
               >
                 Health
@@ -2785,7 +2893,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
               role="listitem"
             >
               <a
-                class="emotion-26 emotion-19"
+                class="focusIndicatorRemove emotion-26 emotion-19"
                 href="/news/education"
               >
                 Family & Education
@@ -2797,7 +2905,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
               role="listitem"
             >
               <a
-                class="emotion-26 emotion-19"
+                class="focusIndicatorRemove emotion-26 emotion-19"
                 href="/news/entertainment_and_arts"
               >
                 Entertainment & Arts
@@ -2809,7 +2917,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
               role="listitem"
             >
               <a
-                class="emotion-26 emotion-19"
+                class="focusIndicatorRemove emotion-26 emotion-19"
                 href="/news/stories"
               >
                 Stories
@@ -3085,7 +3193,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
   right: 0;
   bottom: 0;
   top: 0;
-  border: 0.25rem solid #B80000;
+  border: 0.25rem solid #000000;
 }
 
 @media (min-width: 37.5rem) {
@@ -3142,6 +3250,18 @@ exports[`Navigation Container should correctly render canonical navigation on no
     display: none;
   }
 
+  .emotion-12:focus-visible {
+    outline: none;
+  }
+
+  .emotion-12:focus-visible::after {
+    outline: 0.1875rem solid #000000;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
   .emotion-12:after {
     content: ' ';
     height: 100%;
@@ -3153,11 +3273,10 @@ exports[`Navigation Container should correctly render canonical navigation on no
     overflow: hidden;
     pointer-events: none;
     background: linear-gradient(
-            to right,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 1)
-              100%
-          );
+          to right,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 1) 100%
+        );
   }
 
   @media (min-width: 25rem) {
@@ -3211,13 +3330,13 @@ exports[`Navigation Container should correctly render canonical navigation on no
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FDFDFD;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline-block;
   padding: 0.75rem 0.25rem;
+  outline: none;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -3257,7 +3376,18 @@ exports[`Navigation Container should correctly render canonical navigation on no
   bottom: 0;
   border-bottom: 0.25rem solid #B80000;
   top: 0;
-  border: 0.25rem solid #B80000;
+  border: 0.1875rem solid #000000;
+}
+
+.emotion-18:focus-visible::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+  top: 0;
+  border: 0.1875rem solid #000000;
 }
 
 .emotion-60 {
@@ -3350,7 +3480,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
       >
         <button
           aria-expanded="false"
-          class="emotion-6 emotion-7"
+          class="focusIndicatorRemove emotion-6 emotion-7"
           dir="ltr"
           type="button"
         >
@@ -3387,7 +3517,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
               role="listitem"
             >
               <a
-                class="emotion-18 emotion-19"
+                class="focusIndicatorRemove emotion-18 emotion-19"
                 href="/news"
               >
                 Home
@@ -3399,7 +3529,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
               role="listitem"
             >
               <a
-                class="emotion-18 emotion-19"
+                class="focusIndicatorRemove emotion-18 emotion-19"
                 href="/news/uk"
               >
                 UK
@@ -3411,7 +3541,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
               role="listitem"
             >
               <a
-                class="emotion-18 emotion-19"
+                class="focusIndicatorRemove emotion-18 emotion-19"
                 href="/news/world"
               >
                 World
@@ -3423,7 +3553,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
               role="listitem"
             >
               <a
-                class="emotion-18 emotion-19"
+                class="focusIndicatorRemove emotion-18 emotion-19"
                 href="/news/business"
               >
                 Business
@@ -3435,7 +3565,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
               role="listitem"
             >
               <a
-                class="emotion-18 emotion-19"
+                class="focusIndicatorRemove emotion-18 emotion-19"
                 href="/news/politics"
               >
                 Politics
@@ -3447,7 +3577,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
               role="listitem"
             >
               <a
-                class="emotion-18 emotion-19"
+                class="focusIndicatorRemove emotion-18 emotion-19"
                 href="/news/technology"
               >
                 Tech
@@ -3459,7 +3589,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
               role="listitem"
             >
               <a
-                class="emotion-18 emotion-19"
+                class="focusIndicatorRemove emotion-18 emotion-19"
                 href="/news/science_and_environment"
               >
                 Science
@@ -3471,7 +3601,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
               role="listitem"
             >
               <a
-                class="emotion-18 emotion-19"
+                class="focusIndicatorRemove emotion-18 emotion-19"
                 href="/news/health"
               >
                 Health
@@ -3483,7 +3613,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
               role="listitem"
             >
               <a
-                class="emotion-18 emotion-19"
+                class="focusIndicatorRemove emotion-18 emotion-19"
                 href="/news/education"
               >
                 Family & Education
@@ -3495,7 +3625,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
               role="listitem"
             >
               <a
-                class="emotion-18 emotion-19"
+                class="focusIndicatorRemove emotion-18 emotion-19"
                 href="/news/entertainment_and_arts"
               >
                 Entertainment & Arts
@@ -3507,7 +3637,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
               role="listitem"
             >
               <a
-                class="emotion-18 emotion-19"
+                class="focusIndicatorRemove emotion-18 emotion-19"
                 href="/news/stories"
               >
                 Stories
@@ -3775,7 +3905,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
   right: 0;
   bottom: 0;
   top: 0;
-  border: 0.25rem solid #B80000;
+  border: 0.25rem solid #000000;
 }
 
 @media (min-width: 37.5rem) {
@@ -3832,6 +3962,18 @@ exports[`Navigation Container should correctly render canonical navigation on no
     display: none;
   }
 
+  .emotion-12:focus-visible {
+    outline: none;
+  }
+
+  .emotion-12:focus-visible::after {
+    outline: 0.1875rem solid #000000;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
   .emotion-12:after {
     content: ' ';
     height: 100%;
@@ -3843,11 +3985,10 @@ exports[`Navigation Container should correctly render canonical navigation on no
     overflow: hidden;
     pointer-events: none;
     background: linear-gradient(
-            to right,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 1)
-              100%
-          );
+          to right,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 1) 100%
+        );
   }
 
   @media (min-width: 25rem) {
@@ -3901,13 +4042,13 @@ exports[`Navigation Container should correctly render canonical navigation on no
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FDFDFD;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline-block;
   padding: 0.75rem 0.25rem;
+  outline: none;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -3947,7 +4088,18 @@ exports[`Navigation Container should correctly render canonical navigation on no
   bottom: 0;
   border-bottom: 0.25rem solid #B80000;
   top: 0;
-  border: 0.25rem solid #B80000;
+  border: 0.1875rem solid #000000;
+}
+
+.emotion-18:focus-visible::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+  top: 0;
+  border: 0.1875rem solid #000000;
 }
 
 .emotion-60 {
@@ -4040,7 +4192,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
       >
         <button
           aria-expanded="false"
-          class="emotion-6 emotion-7"
+          class="focusIndicatorRemove emotion-6 emotion-7"
           dir="ltr"
           type="button"
         >
@@ -4077,7 +4229,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
               role="listitem"
             >
               <a
-                class="emotion-18 emotion-19"
+                class="focusIndicatorRemove emotion-18 emotion-19"
                 href="/news"
               >
                 Home
@@ -4089,7 +4241,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
               role="listitem"
             >
               <a
-                class="emotion-18 emotion-19"
+                class="focusIndicatorRemove emotion-18 emotion-19"
                 href="/news/uk"
               >
                 UK
@@ -4101,7 +4253,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
               role="listitem"
             >
               <a
-                class="emotion-18 emotion-19"
+                class="focusIndicatorRemove emotion-18 emotion-19"
                 href="/news/world"
               >
                 World
@@ -4113,7 +4265,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
               role="listitem"
             >
               <a
-                class="emotion-18 emotion-19"
+                class="focusIndicatorRemove emotion-18 emotion-19"
                 href="/news/business"
               >
                 Business
@@ -4125,7 +4277,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
               role="listitem"
             >
               <a
-                class="emotion-18 emotion-19"
+                class="focusIndicatorRemove emotion-18 emotion-19"
                 href="/news/politics"
               >
                 Politics
@@ -4137,7 +4289,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
               role="listitem"
             >
               <a
-                class="emotion-18 emotion-19"
+                class="focusIndicatorRemove emotion-18 emotion-19"
                 href="/news/technology"
               >
                 Tech
@@ -4149,7 +4301,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
               role="listitem"
             >
               <a
-                class="emotion-18 emotion-19"
+                class="focusIndicatorRemove emotion-18 emotion-19"
                 href="/news/science_and_environment"
               >
                 Science
@@ -4161,7 +4313,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
               role="listitem"
             >
               <a
-                class="emotion-18 emotion-19"
+                class="focusIndicatorRemove emotion-18 emotion-19"
                 href="/news/health"
               >
                 Health
@@ -4173,7 +4325,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
               role="listitem"
             >
               <a
-                class="emotion-18 emotion-19"
+                class="focusIndicatorRemove emotion-18 emotion-19"
                 href="/news/education"
               >
                 Family & Education
@@ -4185,7 +4337,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
               role="listitem"
             >
               <a
-                class="emotion-18 emotion-19"
+                class="focusIndicatorRemove emotion-18 emotion-19"
                 href="/news/entertainment_and_arts"
               >
                 Entertainment & Arts
@@ -4197,7 +4349,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
               role="listitem"
             >
               <a
-                class="emotion-18 emotion-19"
+                class="focusIndicatorRemove emotion-18 emotion-19"
                 href="/news/stories"
               >
                 Stories

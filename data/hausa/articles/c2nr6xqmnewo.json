@@ -1,454 +1,1916 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::article:c2nr6xqmnewo",
-    "locators": {
-      "optimoUrn": "urn:bbc:optimo:asset:c2nr6xqmnewo"
-    },
-    "type": "article",
-    "createdBy": "Hausa",
-    "language": "ha",
-    "lastUpdated": 1569258503455,
-    "firstPublished": 1562936829639,
-    "lastPublished": 1562936829639,
-    "options": {},
-    "analyticsLabels": {},
-    "passport": {
-      "language": "ha",
-      "home": "http://www.bbc.co.uk/ontologies/passport/home/Hausa"
-    },
-    "tags": {},
-    "version": "v1.1.2",
-    "blockTypes": [
-      "headline",
-      "text",
-      "paragraph",
-      "fragment",
-      "image",
-      "caption",
-      "altText",
-      "rawImage",
-      "urlLink",
-      "video",
-      "subheadline"
-    ]
-  },
-  "content": {
-    "model": {
-      "blocks": [
-        {
-          "type": "headline",
-          "model": {
-            "blocks": [
-              {
-                "type": "text",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "paragraph",
-                      "model": {
-                        "text": "Wannan shine taken wannan labarin gwajin",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "Wannan shine taken wannan labarin gwajin",
-                              "attributes": []
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "image",
-          "model": {
-            "blocks": [
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Wannan hoton gwaji, mallakin BBC, ya nuna taswirar Faransa. Hoton yana cikin katangar ukun farko kuma yana da wannan taken.",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Wannan hoton gwaji, mallakin BBC, ya nuna taswirar Faransa. Hoton yana cikin katangar ukun farko kuma yana da wannan taken.",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Taswirar Faransa wanda ke nuna Paris da Cognac",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Taswirar Faransa wanda ke nuna Paris da Cognac",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "rawImage",
-                "model": {
-                  "width": 624,
-                  "height": 351,
-                  "locator": "08d8/test/4926a890-de24-11e9-b23c-f1ac9644bb55.jpg",
-                  "originCode": "cpsdevpb",
-                  "copyrightHolder": "BBC"
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "text",
-          "model": {
-            "blocks": [
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "Wannan toshiyar rubutu ce, wacce take dauke da hanyar url zuwa shafin yanar gizo na Weather Weather.",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "Wannan toshiyar rubutu ce, wacce take dauke da hanyar url zuwa ",
-                        "attributes": []
-                      }
-                    },
-                    {
-                      "type": "urlLink",
-                      "model": {
-                        "text": "shafin yanar gizo na Weather Weather.",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "shafin yanar gizo na Weather Weather.",
-                              "attributes": []
-                            }
-                          }
-                        ],
-                        "locator": "https://www.bbc.com/weather",
-                        "isExternal": false
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "video",
-          "model": {
-            "locator": "urn:bbc:pips:pid:p01k6msm",
-            "blocks": [
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Wannan toshe bidiyon da ke da bidiyo game da tururuwa",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Wannan toshe bidiyon da ke da bidiyo game da tururuwa",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "aresMedia",
-                "model": {
-                  "blocks": [
-                    {
-                      "blockId": "urn:bbc:ares::clip:p01k6msm",
-                      "type": "aresMediaMetadata",
-                      "model": {
-                        "id": "p01k6msm",
-                        "subType": "clip",
-                        "format": "audio_video",
-                        "title": "Five things ants can teach us about management",
-                        "synopses": {
-                          "short": "They may be tiny, but us humans could learn a thing or two from ants."
-                        },
-                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
-                        "imageCopyright": "BBC",
-                        "embedding": true,
-                        "advertising": true,
-                        "versions": [
-                          {
-                            "versionId": "p01k6msp",
-                            "types": ["Original"],
-                            "duration": 191,
-                            "durationISO8601": "PT3M11S",
-                            "warnings": {
-                              "short": "Contains strong language and adult humour.",
-                              "long": "Contains strong language and adult humour."
-                            },
-                            "availableTerritories": {
-                              "uk": true,
-                              "nonUk": true
-                            },
-                            "availableFrom": 1540218932000
-                          }
-                        ],
-                        "syndication": {
-                          "destinations": []
-                        }
-                      }
-                    },
-                    {
-                      "type": "image",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "rawImage",
-                            "model": {
-                              "width": 1920,
-                              "height": 1080,
-                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg",
-                              "originCode": "mpv",
-                              "copyrightHolder": "BBC"
-                            }
+  "data": {
+    "article": {
+      "content": {
+        "model": {
+          "blocks": [
+            {
+              "id": "ae5f40e4",
+              "type": "headline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "26a63f35",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "0ecef1dc",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "Wannan shine taken wannan labarin gwajin",
+                            "blocks": [
+                              {
+                                "id": "3e1eb398",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "Wannan shine taken wannan labarin gwajin",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
                           },
-                          {
-                            "type": "altText",
-                            "model": {
-                              "blocks": [
-                                {
-                                  "type": "text",
-                                  "model": {
-                                    "blocks": [
-                                      {
-                                        "type": "paragraph",
-                                        "model": {
-                                          "text": "Ants",
-                                          "blocks": [
-                                            {
-                                              "type": "fragment",
-                                              "model": {
-                                                "text": "Ants",
-                                                "attributes": []
-                                              }
-                                            }
-                                          ]
-                                        }
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "subheadline",
-          "model": {
-            "blocks": [
-              {
-                "type": "text",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "paragraph",
-                      "model": {
-                        "text": "Wannan tosheken abu ne",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "Wannan tosheken abu ne",
-                              "attributes": []
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "image",
-          "model": {
-            "blocks": [
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "'Yan wasan kwallon kafa bayan wasa",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "'Yan wasan kwallon kafa bayan wasa",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      1,
+                      1
+                    ]
+                  }
+                ]
               },
-              {
-                "type": "rawImage",
-                "model": {
-                  "width": 2048,
-                  "height": 1152,
-                  "locator": "0e99/test/a12646e0-de24-11e9-b23c-f1ac9644bb55.jpg",
-                  "originCode": "cpsdevpb",
-                  "copyrightHolder": "Getty Images"
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "text",
-          "model": {
-            "blocks": [
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "An ƙirƙiri wannan labarin gwaji ne domin mu iya yin gwajin ƙarshen-kai-ƙarshen-kai akan gidan yanar gizon mu.",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "An ƙirƙiri wannan labarin gwaji ne domin mu iya yin gwajin ƙarshen-kai-ƙarshen-kai akan gidan yanar gizon mu.",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
+              "position": [
+                1
+              ]
+            },
+            {
+              "id": "b2b2c224",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "6e093566",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "952a2697",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "1605dea3",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Wannan hoton gwaji, mallakin BBC, ya nuna taswirar Faransa. Hoton yana cikin katangar ukun farko kuma yana da wannan taken.",
+                                  "blocks": [
+                                    {
+                                      "id": "d855d1f5",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Wannan hoton gwaji, mallakin BBC, ya nuna taswirar Faransa. Hoton yana cikin katangar ukun farko kuma yana da wannan taken.",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        2,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  2,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            2,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      2,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "99a85fca",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "e2d220b0",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "98286498",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Taswirar Faransa wanda ke nuna Paris da Cognac",
+                                  "blocks": [
+                                    {
+                                      "id": "0e0d4345",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Taswirar Faransa wanda ke nuna Paris da Cognac",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        2,
+                                        2,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  2,
+                                  2,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            2,
+                            2,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      2,
+                      2
+                    ]
+                  },
+                  {
+                    "id": "5430e009",
+                    "type": "rawImage",
+                    "model": {
+                      "width": 624,
+                      "height": 351,
+                      "locator": "08d8/test/4926a890-de24-11e9-b23c-f1ac9644bb55.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "BBC"
+                    },
+                    "position": [
+                      2,
+                      3
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                2
+              ]
+            },
+            {
+              "id": "109e07cd",
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1562936829639,
+                "lastPublished": 1562936829639
+              },
+              "position": [
+                3
+              ]
+            },
+            {
+              "id": "6cc88dcd",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "8a214a8d",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Wannan toshiyar rubutu ce, wacce take dauke da hanyar url zuwa shafin yanar gizo na Weather Weather.",
+                      "blocks": [
+                        {
+                          "id": "5ba63977",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Wannan toshiyar rubutu ce, wacce take dauke da hanyar url zuwa ",
+                            "attributes": []
+                          },
+                          "position": [
+                            4,
+                            1,
+                            1
+                          ]
+                        },
+                        {
+                          "id": "1653107e",
+                          "type": "urlLink",
+                          "model": {
+                            "text": "shafin yanar gizo na Weather Weather.",
+                            "blocks": [
+                              {
+                                "id": "5d5679d6",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "shafin yanar gizo na Weather Weather.",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  4,
+                                  1,
+                                  2,
+                                  1
+                                ]
+                              }
+                            ],
+                            "locator": "https://www.bbc.com/weather",
+                            "isExternal": false
+                          },
+                          "position": [
+                            4,
+                            1,
+                            2
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      4,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                4
+              ]
+            },
+            {
+              "id": "142ebeac",
+              "type": "video",
+              "model": {
+                "locator": "urn:bbc:pips:pid:p01k6msm",
+                "blocks": [
+                  {
+                    "id": "0e232cd5",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "1adeb257",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "f2c28cf4",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Wannan toshe bidiyon da ke da bidiyo game da tururuwa",
+                                  "blocks": [
+                                    {
+                                      "id": "51ba0a8a",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Wannan toshe bidiyon da ke da bidiyo game da tururuwa",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        5,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  5,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            5,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      5,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "57223068",
+                    "type": "aresMedia",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "ed9f7367",
+                          "blockId": "urn:bbc:ares::clip:p01k6msm",
+                          "type": "aresMediaMetadata",
+                          "model": {
+                            "id": "p01k6msm",
+                            "subType": "clip",
+                            "format": "audio_video",
+                            "title": "Five things ants can teach us about management",
+                            "synopses": {
+                              "short": "They may be tiny, but us humans could learn a thing or two from ants."
+                            },
+                            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+                            "imageCopyright": "BBC",
+                            "embedding": true,
+                            "advertising": true,
+                            "versions": [
+                              {
+                                "versionId": "p01k6msp",
+                                "types": [
+                                  "Original"
+                                ],
+                                "duration": 191,
+                                "durationISO8601": "PT3M11S",
+                                "warnings": {
+                                  "short": "Contains strong language and adult humour.",
+                                  "long": "Contains strong language and adult humour."
+                                },
+                                "availableTerritories": {
+                                  "uk": true,
+                                  "nonUk": true
+                                },
+                                "availableFrom": 1540218932000
+                              }
+                            ],
+                            "syndication": {
+                              "destinations": []
+                            },
+                            "smpKind": "programme"
+                          },
+                          "position": [
+                            5,
+                            2,
+                            1
+                          ]
+                        },
+                        {
+                          "id": "34099ff3",
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "c55e2b3f",
+                                "type": "rawImage",
+                                "model": {
+                                  "width": 1920,
+                                  "height": 1080,
+                                  "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg",
+                                  "originCode": "mpv",
+                                  "copyrightHolder": "BBC"
+                                },
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  1
+                                ]
+                              },
+                              {
+                                "id": "1c04df33",
+                                "type": "altText",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "de024421",
+                                      "type": "text",
+                                      "model": {
+                                        "blocks": [
+                                          {
+                                            "id": "6388ca33",
+                                            "type": "paragraph",
+                                            "model": {
+                                              "text": "Ants",
+                                              "blocks": [
+                                                {
+                                                  "id": "f76881ac",
+                                                  "type": "fragment",
+                                                  "model": {
+                                                    "text": "Ants",
+                                                    "attributes": []
+                                                  },
+                                                  "position": [
+                                                    5,
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    1,
+                                                    1,
+                                                    1
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            "position": [
+                                              5,
+                                              2,
+                                              2,
+                                              2,
+                                              1,
+                                              1
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      "position": [
+                                        5,
+                                        2,
+                                        2,
+                                        2,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  2
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            5,
+                            2,
+                            2
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      5,
+                      2
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                5
+              ]
+            },
+            {
+              "id": "6cb17a9c",
+              "type": "subheadline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "e8982d33",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "51bad368",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "Wannan tosheken abu ne",
+                            "blocks": [
+                              {
+                                "id": "9629a7f1",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "Wannan tosheken abu ne",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  6,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            6,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      6,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                6
+              ]
+            },
+            {
+              "id": "05e40d31",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "d36426b7",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "300f036c",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "d3204d25",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "'Yan wasan kwallon kafa bayan wasa",
+                                  "blocks": [
+                                    {
+                                      "id": "15cdab65",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "'Yan wasan kwallon kafa bayan wasa",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        7,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  7,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            7,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      7,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "64ec01c0",
+                    "type": "rawImage",
+                    "model": {
+                      "width": 2048,
+                      "height": 1152,
+                      "locator": "0e99/test/a12646e0-de24-11e9-b23c-f1ac9644bb55.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "Getty Images"
+                    },
+                    "position": [
+                      7,
+                      2
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                7
+              ]
+            },
+            {
+              "id": "efa31894",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "aa821bec",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "An ƙirƙiri wannan labarin gwaji ne domin mu iya yin gwajin ƙarshen-kai-ƙarshen-kai akan gidan yanar gizon mu.",
+                      "blocks": [
+                        {
+                          "id": "49f5fa81",
+                          "type": "fragment",
+                          "model": {
+                            "text": "An ƙirƙiri wannan labarin gwaji ne domin mu iya yin gwajin ƙarshen-kai-ƙarshen-kai akan gidan yanar gizon mu.",
+                            "attributes": []
+                          },
+                          "position": [
+                            8,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      8,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                8
+              ]
+            },
+            {
+              "id": "3c8f550f",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                9
+              ]
+            },
+            {
+              "id": "1a00c1ac",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                10
+              ]
+            }
+          ]
         }
-      ]
-    }
-  },
-  "promo": {
-    "headlines": {
-      "seoHeadline": "Wannan shine taken SEO na wannan labarin gwaji"
+      },
+      "metadata": {
+        "id": "urn:bbc:ares::article:c2nr6xqmnewo",
+        "locators": {
+          "optimoUrn": "urn:bbc:optimo:asset:c2nr6xqmnewo",
+          "canonicalUrl": "https://www.bbc.com/hausa/articles/c2nr6xqmnewo"
+        },
+        "type": "article",
+        "createdBy": "Hausa",
+        "language": "ha",
+        "firstPublished": 1562936829639,
+        "lastPublished": 1562936829639,
+        "analyticsLabels": {
+          "producer": "Hausa",
+          "page": "hausa.articles.c2nr6xqmnewo.page"
+        },
+        "passport": {
+          "language": "ha",
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Hausa",
+          "taggings": []
+        },
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment",
+          "image",
+          "caption",
+          "altText",
+          "rawImage",
+          "urlLink",
+          "video",
+          "subheadline",
+          "aresMedia"
+        ],
+        "allowAdvertising": true
+      },
+      "promo": {
+        "headlines": {
+          "seoHeadline": "Wannan shine taken SEO na wannan labarin gwaji"
+        }
+      }
     },
-    "locators": {
-      "optimoUrn": "urn:bbc:optimo:asset:c2nr6xqmnewo"
-    },
-    "summary": {
-      "blocks": [
+    "secondaryData": {
+      "topStories": [
         {
-          "model": {
-            "blocks": [
+          "headlines": {
+            "headline": "Arrest made after Lesotho Prime Minister's wife shot dead"
+          },
+          "locators": {
+            "assetUri": "/hausa/23133668",
+            "cpsUrn": "urn:bbc:content:assetUri:hausa/23133668",
+            "curie": "http://www.bbc.co.uk/asset/7d0f2b47-b1b0-3649-8ecb-c87b75e0e064",
+            "assetId": "23133668"
+          },
+          "summary": "Police are investigating the murder of Lesotho prime minister Thomas Thaban'e wife on Thursday night.",
+          "timestamp": 1497612381000,
+          "language": "ha",
+          "byline": {
+            "name": "Trevor McDonald",
+            "title": "TV News Reader in Lesotho",
+            "persons": [
               {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "attributes": [],
-                        "text": ""
-                      },
-                      "type": "fragment"
-                    }
-                  ],
-                  "text": ""
-                },
-                "type": "paragraph"
+                "name": "Trevor McDonald",
+                "function": "TV News Reader"
               }
             ]
           },
-          "type": "text"
+          "passport": {
+            "category": {
+              "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+              "categoryName": "News"
+            },
+            "taggings": []
+          },
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63551449",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/170CF/test/_63551449_mediaitem63551448.jpg",
+            "path": "/cpsdevpb/170CF/test/_63551449_mediaitem63551448.jpg",
+            "height": 1152,
+            "width": 2048,
+            "altText": "David Beckham in Lesotho",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63551451",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/3C37/test/_63551451_mediaitem63551448.jpg",
+            "path": "/cpsdevpb/3C37/test/_63551451_mediaitem63551448.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "David Beckham in Lesotho",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "prominence": "standard",
+          "section": {
+            "subType": "IDX",
+            "name": "Labaran Duniya",
+            "uri": "/hausa/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:hausa/23133668",
+          "type": "cps"
         }
-      ]
-    },
-    "timestamp": 1562936829639,
-    "id": "urn:bbc:ares::article:c2nr6xqmnewo",
-    "type": "cps"
+      ],
+      "features": [
+        {
+          "headlines": {
+            "headline": "Zuma ya fuskanci koma baya kan cin hanci 24"
+          },
+          "locators": {
+            "assetUri": "/hausa/23055838",
+            "cpsUrn": "urn:bbc:content:assetUri:hausa/23055838",
+            "curie": "http://www.bbc.co.uk/asset/7a7c603a-2c2c-ad4a-81d6-c45c1d899a67",
+            "assetId": "23055838"
+          },
+          "summary": "Zuma ya fuskanci koma baya kan cin hanci",
+          "timestamp": 1466777533000,
+          "language": "ha",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63492735",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "path": "/cpsdevpb/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "height": 371,
+            "width": 660,
+            "altText": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "caption": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "copyrightHolder": "Reuters",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63492737",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/12001/test/_63492737_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "path": "/cpsdevpb/12001/test/_63492737_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "caption": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "copyrightHolder": "Reuters",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Labaran Duniya",
+            "uri": "/hausa/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:hausa/23055838",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Buhari zai ziyarci Chadi"
+          },
+          "locators": {
+            "assetUri": "/hausa/23066033",
+            "cpsUrn": "urn:bbc:content:assetUri:hausa/23066033",
+            "curie": "http://www.bbc.co.uk/asset/1398a8dd-3020-9840-b56d-8cf987d96e4f",
+            "assetId": "23066033"
+          },
+          "summary": "Shugaba Muhammadu Buhari na Najeriya, zai halarci taron rantsar da shugaban kasar Chadi, Paul Biya a karo na biyar.",
+          "timestamp": 1470654674000,
+          "language": "ha",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63502231",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/33A4/test/_63502231_034222410-1.jpg",
+            "path": "/cpsdevpb/33A4/test/_63502231_034222410-1.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Shugaba Buhari na Najeriya a harabar karbar baki na fadar Aso Rock",
+            "caption": "Shugaba Buhari na Najeriya a harabar karbar baki na fadar Aso Rock",
+            "copyrightHolder": "Reuters",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63502233",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/81C4/test/_63502233_034222410-1.jpg",
+            "path": "/cpsdevpb/81C4/test/_63502233_034222410-1.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Shugaba Buhari na Najeriya a harabar karbar baki na fadar Aso Rock",
+            "caption": "Shugaba Buhari na Najeriya a harabar karbar baki na fadar Aso Rock",
+            "copyrightHolder": "Reuters",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Labaran Duniya",
+            "uri": "/hausa/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:hausa/23066033",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Zuma ya fuskanci koma baya kan cin hanci 25"
+          },
+          "locators": {
+            "assetUri": "/hausa/23055840",
+            "cpsUrn": "urn:bbc:content:assetUri:hausa/23055840",
+            "curie": "http://www.bbc.co.uk/asset/fc36e3ee-7ad2-d949-8efd-1e21ddfa7a45",
+            "assetId": "23055840"
+          },
+          "summary": "Zuma ya fuskanci koma baya kan cin hanci",
+          "timestamp": 1466777561000,
+          "language": "ha",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63492735",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "path": "/cpsdevpb/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "height": 371,
+            "width": 660,
+            "altText": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "caption": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "copyrightHolder": "Reuters",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63492737",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/12001/test/_63492737_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "path": "/cpsdevpb/12001/test/_63492737_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "caption": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "copyrightHolder": "Reuters",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Labaran Duniya",
+            "uri": "/hausa/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:hausa/23055840",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Zuma ya fuskanci koma baya kan cin hanci 14"
+          },
+          "locators": {
+            "assetUri": "/hausa/23055802",
+            "cpsUrn": "urn:bbc:content:assetUri:hausa/23055802",
+            "curie": "http://www.bbc.co.uk/asset/544f2c67-3e5f-c84d-9236-01c5c8ad2290",
+            "assetId": "23055802"
+          },
+          "summary": "Zuma ya fuskanci koma baya kan cin hanci",
+          "timestamp": 1466775797000,
+          "language": "ha",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63492735",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "path": "/cpsdevpb/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "height": 371,
+            "width": 660,
+            "altText": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "caption": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "copyrightHolder": "Reuters",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63492737",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/12001/test/_63492737_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "path": "/cpsdevpb/12001/test/_63492737_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "caption": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "copyrightHolder": "Reuters",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Labaran Duniya",
+            "uri": "/hausa/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:hausa/23055802",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Zuma ya fuskanci koma baya kan cin hanci 15"
+          },
+          "locators": {
+            "assetUri": "/hausa/23055824",
+            "cpsUrn": "urn:bbc:content:assetUri:hausa/23055824",
+            "curie": "http://www.bbc.co.uk/asset/48dbd911-7bc3-454f-83c5-b0630efbf4d2",
+            "assetId": "23055824"
+          },
+          "summary": "Zuma ya fuskanci koma baya kan cin hanci",
+          "timestamp": 1466775863000,
+          "language": "ha",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63492735",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "path": "/cpsdevpb/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "height": 371,
+            "width": 660,
+            "altText": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "caption": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "copyrightHolder": "Reuters",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63492737",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/12001/test/_63492737_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "path": "/cpsdevpb/12001/test/_63492737_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "caption": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "copyrightHolder": "Reuters",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Labaran Duniya",
+            "uri": "/hausa/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:hausa/23055824",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Zuma ya fuskanci koma baya kan cin hanci 16"
+          },
+          "locators": {
+            "assetUri": "/hausa/23055825",
+            "cpsUrn": "urn:bbc:content:assetUri:hausa/23055825",
+            "curie": "http://www.bbc.co.uk/asset/830c2186-ba2e-4246-8daa-bfd7f8ce80e9",
+            "assetId": "23055825"
+          },
+          "summary": "Zuma ya fuskanci koma baya kan cin hanci",
+          "timestamp": 1466775892000,
+          "language": "ha",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63492735",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "path": "/cpsdevpb/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "height": 371,
+            "width": 660,
+            "altText": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "caption": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "copyrightHolder": "Reuters",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63492737",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/12001/test/_63492737_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "path": "/cpsdevpb/12001/test/_63492737_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "caption": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "copyrightHolder": "Reuters",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Labaran Duniya",
+            "uri": "/hausa/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:hausa/23055825",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Zuma ya fuskanci koma baya kan cin hanci 36"
+          },
+          "locators": {
+            "assetUri": "/hausa/23057308",
+            "cpsUrn": "urn:bbc:content:assetUri:hausa/23057308",
+            "curie": "http://www.bbc.co.uk/asset/e04ad7fd-3304-5c40-b5cf-71d9cd5db2dd",
+            "assetId": "23057308"
+          },
+          "summary": "Zuma ya fuskanci koma baya kan cin hanci",
+          "timestamp": 1467623284000,
+          "language": "ha",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63492735",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "path": "/cpsdevpb/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "height": 371,
+            "width": 660,
+            "altText": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "caption": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "copyrightHolder": "Reuters",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63492737",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/12001/test/_63492737_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "path": "/cpsdevpb/12001/test/_63492737_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "caption": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "copyrightHolder": "Reuters",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Labaran Duniya",
+            "uri": "/hausa/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:hausa/23057308",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Zuma ya fuskanci koma baya kan cin hanci 37"
+          },
+          "locators": {
+            "assetUri": "/hausa/23057309",
+            "cpsUrn": "urn:bbc:content:assetUri:hausa/23057309",
+            "curie": "http://www.bbc.co.uk/asset/ebae53c5-1884-f344-b695-f27397e83fdf",
+            "assetId": "23057309"
+          },
+          "summary": "Zuma ya fuskanci koma baya kan cin hanci",
+          "timestamp": 1467623298000,
+          "language": "ha",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63492735",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "path": "/cpsdevpb/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "height": 371,
+            "width": 660,
+            "altText": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "caption": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "copyrightHolder": "Reuters",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63492737",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/12001/test/_63492737_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "path": "/cpsdevpb/12001/test/_63492737_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "caption": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "copyrightHolder": "Reuters",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Labaran Duniya",
+            "uri": "/hausa/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:hausa/23057309",
+          "type": "cps"
+        }
+      ],
+      "mostRead": {
+        "generated": "2023-02-17T16:23:57.122Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T11:38:00Z",
+        "totalRecords": 20,
+        "records": [
+          {
+            "id": "609e0c04-3b12-aa49-8341-c0a40af7c97f",
+            "rank": 1,
+            "count": 9136,
+            "urn": "urn:bbc:curie:asset:609e0c04-3b12-aa49-8341-c0a40af7c97f",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Zuma ya fuskanci koma baya kan cin hanci 32",
+                "headline": "Zuma ya fuskanci koma baya kan cin hanci 32"
+              },
+              "locators": {
+                "assetUri": "/hausa/23057301",
+                "cpsUrn": "urn:bbc:content:assetUri:hausa/23057301",
+                "curie": "http://www.bbc.co.uk/asset/609e0c04-3b12-aa49-8341-c0a40af7c97f",
+                "assetId": "23057301"
+              },
+              "summary": "Zuma ya fuskanci koma baya kan cin hanci",
+              "timestamp": 1467622987000,
+              "language": "ha",
+              "indexImage": {
+                "id": "63492735",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+                "path": "/cpsdevpb/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+                "caption": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+                "copyrightHolder": "Reuters",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:hausa/23057301",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "be832240-623c-4141-a0ca-ec9fce2b4827",
+            "rank": 2,
+            "count": 9097,
+            "urn": "urn:bbc:curie:asset:be832240-623c-4141-a0ca-ec9fce2b4827",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Zuma ya fuskanci koma baya kan cin hanci 3",
+                "headline": "Zuma ya fuskanci koma baya kan cin hanci 3"
+              },
+              "locators": {
+                "assetUri": "/hausa/23055778",
+                "cpsUrn": "urn:bbc:content:assetUri:hausa/23055778",
+                "curie": "http://www.bbc.co.uk/asset/be832240-623c-4141-a0ca-ec9fce2b4827",
+                "assetId": "23055778"
+              },
+              "summary": "Zuma ya fuskanci koma baya kan cin hanci",
+              "timestamp": 1466775304000,
+              "language": "ha",
+              "indexImage": {
+                "id": "63492735",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+                "path": "/cpsdevpb/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+                "caption": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+                "copyrightHolder": "Reuters",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:hausa/23055778",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "1d4e6959-33e2-ad4c-9bbf-ad56af227e48",
+            "rank": 3,
+            "count": 8988,
+            "urn": "urn:bbc:curie:asset:1d4e6959-33e2-ad4c-9bbf-ad56af227e48",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Zuma ya fuskanci koma baya kan cin hanci 11",
+                "headline": "Zuma ya fuskanci koma baya kan cin hanci 11"
+              },
+              "locators": {
+                "assetUri": "/hausa/23055796",
+                "cpsUrn": "urn:bbc:content:assetUri:hausa/23055796",
+                "curie": "http://www.bbc.co.uk/asset/1d4e6959-33e2-ad4c-9bbf-ad56af227e48",
+                "assetId": "23055796"
+              },
+              "summary": "Zuma ya fuskanci koma baya kan cin hanci",
+              "timestamp": 1466775559000,
+              "language": "ha",
+              "indexImage": {
+                "id": "63492735",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+                "path": "/cpsdevpb/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+                "caption": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+                "copyrightHolder": "Reuters",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:hausa/23055796",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "27da7040-d7ad-544b-97c1-8ea6f1077fda",
+            "rank": 4,
+            "count": 8902,
+            "urn": "urn:bbc:curie:asset:27da7040-d7ad-544b-97c1-8ea6f1077fda",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Zuma ya fuskanci koma baya kan cin hanci 23",
+                "headline": "Zuma ya fuskanci koma baya kan cin hanci 23"
+              },
+              "locators": {
+                "assetUri": "/hausa/23055836",
+                "cpsUrn": "urn:bbc:content:assetUri:hausa/23055836",
+                "curie": "http://www.bbc.co.uk/asset/27da7040-d7ad-544b-97c1-8ea6f1077fda",
+                "assetId": "23055836"
+              },
+              "summary": "Zuma ya fuskanci koma baya kan cin hanci",
+              "timestamp": 1466777321000,
+              "language": "ha",
+              "indexImage": {
+                "id": "63492735",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+                "path": "/cpsdevpb/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+                "caption": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+                "copyrightHolder": "Reuters",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:hausa/23055836",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "cf206d30-48fc-e342-a859-dcc7ab932d77",
+            "rank": 5,
+            "count": 8663,
+            "urn": "urn:bbc:curie:asset:cf206d30-48fc-e342-a859-dcc7ab932d77",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Zuma ya fuskanci koma baya kan cin hanci 34",
+                "headline": "Zuma ya fuskanci koma baya kan cin hanci 34"
+              },
+              "locators": {
+                "assetUri": "/hausa/23057304",
+                "cpsUrn": "urn:bbc:content:assetUri:hausa/23057304",
+                "curie": "http://www.bbc.co.uk/asset/cf206d30-48fc-e342-a859-dcc7ab932d77",
+                "assetId": "23057304"
+              },
+              "summary": "Zuma ya fuskanci koma baya kan cin hanci",
+              "timestamp": 1467623181000,
+              "language": "ha",
+              "indexImage": {
+                "id": "63492735",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+                "path": "/cpsdevpb/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+                "caption": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+                "copyrightHolder": "Reuters",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:hausa/23057304",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "3308e28e-8f8f-794b-a4a8-459fa6873703",
+            "rank": 6,
+            "count": 8641,
+            "urn": "urn:bbc:curie:asset:3308e28e-8f8f-794b-a4a8-459fa6873703",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Zuma ya fuskanci koma baya kan cin hanci 18",
+                "headline": "Zuma ya fuskanci koma baya kan cin hanci 18"
+              },
+              "locators": {
+                "assetUri": "/hausa/23055828",
+                "cpsUrn": "urn:bbc:content:assetUri:hausa/23055828",
+                "curie": "http://www.bbc.co.uk/asset/3308e28e-8f8f-794b-a4a8-459fa6873703",
+                "assetId": "23055828"
+              },
+              "summary": "Zuma ya fuskanci koma baya kan cin hanci",
+              "timestamp": 1466775996000,
+              "language": "ha",
+              "indexImage": {
+                "id": "63492735",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+                "path": "/cpsdevpb/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+                "caption": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+                "copyrightHolder": "Reuters",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:hausa/23055828",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "ac80d260-1659-d44a-a06d-f2bcbcf9e30b",
+            "rank": 7,
+            "count": 8554,
+            "urn": "urn:bbc:curie:asset:ac80d260-1659-d44a-a06d-f2bcbcf9e30b",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Zuma ya fuskanci koma baya kan cin hanci 22",
+                "headline": "Zuma ya fuskanci koma baya kan cin hanci 22"
+              },
+              "locators": {
+                "assetUri": "/hausa/23055833",
+                "cpsUrn": "urn:bbc:content:assetUri:hausa/23055833",
+                "curie": "http://www.bbc.co.uk/asset/ac80d260-1659-d44a-a06d-f2bcbcf9e30b",
+                "assetId": "23055833"
+              },
+              "summary": "Zuma ya fuskanci koma baya kan cin hanci",
+              "timestamp": 1466777241000,
+              "language": "ha",
+              "indexImage": {
+                "id": "63492735",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+                "path": "/cpsdevpb/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+                "caption": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+                "copyrightHolder": "Reuters",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:hausa/23055833",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "f5ab07f7-9f21-c341-b979-c1b942f610f3",
+            "rank": 8,
+            "count": 8435,
+            "urn": "urn:bbc:curie:asset:f5ab07f7-9f21-c341-b979-c1b942f610f3",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Zuma ya fuskanci koma baya kan cin hanci 31",
+                "headline": "Zuma ya fuskanci koma baya kan cin hanci 31"
+              },
+              "locators": {
+                "assetUri": "/hausa/23055848",
+                "cpsUrn": "urn:bbc:content:assetUri:hausa/23055848",
+                "curie": "http://www.bbc.co.uk/asset/f5ab07f7-9f21-c341-b979-c1b942f610f3",
+                "assetId": "23055848"
+              },
+              "summary": "Zuma ya fuskanci koma baya kan cin hanci",
+              "timestamp": 1466777792000,
+              "language": "ha",
+              "indexImage": {
+                "id": "63492735",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+                "path": "/cpsdevpb/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+                "caption": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+                "copyrightHolder": "Reuters",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:hausa/23055848",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "23051fa1-ee6f-ce45-a83e-cda1ad49efbb",
+            "rank": 9,
+            "count": 8161,
+            "urn": "urn:bbc:curie:asset:23051fa1-ee6f-ce45-a83e-cda1ad49efbb",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Zuma ya fuskanci koma baya kan cin hanci 19",
+                "headline": "Zuma ya fuskanci koma baya kan cin hanci 19"
+              },
+              "locators": {
+                "assetUri": "/hausa/23055829",
+                "cpsUrn": "urn:bbc:content:assetUri:hausa/23055829",
+                "curie": "http://www.bbc.co.uk/asset/23051fa1-ee6f-ce45-a83e-cda1ad49efbb",
+                "assetId": "23055829"
+              },
+              "summary": "Zuma ya fuskanci koma baya kan cin hanci",
+              "timestamp": 1466776453000,
+              "language": "ha",
+              "indexImage": {
+                "id": "63492735",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+                "path": "/cpsdevpb/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+                "caption": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+                "copyrightHolder": "Reuters",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:hausa/23055829",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "ee0f6cc9-5c73-c54e-934b-a1ab5a82e5d9",
+            "rank": 10,
+            "count": 7867,
+            "urn": "urn:bbc:curie:asset:ee0f6cc9-5c73-c54e-934b-a1ab5a82e5d9",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Zuma ya fuskanci koma baya kan cin hanci 10",
+                "headline": "Zuma ya fuskanci koma baya kan cin hanci 10"
+              },
+              "locators": {
+                "assetUri": "/hausa/23055795",
+                "cpsUrn": "urn:bbc:content:assetUri:hausa/23055795",
+                "curie": "http://www.bbc.co.uk/asset/ee0f6cc9-5c73-c54e-934b-a1ab5a82e5d9",
+                "assetId": "23055795"
+              },
+              "summary": "Zuma ya fuskanci koma baya kan cin hanci",
+              "timestamp": 1466775539000,
+              "language": "ha",
+              "indexImage": {
+                "id": "63492735",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+                "path": "/cpsdevpb/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+                "caption": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+                "copyrightHolder": "Reuters",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:hausa/23055795",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "fc36e3ee-7ad2-d949-8efd-1e21ddfa7a45",
+            "rank": 11,
+            "count": 7818,
+            "urn": "urn:bbc:curie:asset:fc36e3ee-7ad2-d949-8efd-1e21ddfa7a45",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Zuma ya fuskanci koma baya kan cin hanci 25",
+                "headline": "Zuma ya fuskanci koma baya kan cin hanci 25"
+              },
+              "locators": {
+                "assetUri": "/hausa/23055840",
+                "cpsUrn": "urn:bbc:content:assetUri:hausa/23055840",
+                "curie": "http://www.bbc.co.uk/asset/fc36e3ee-7ad2-d949-8efd-1e21ddfa7a45",
+                "assetId": "23055840"
+              },
+              "summary": "Zuma ya fuskanci koma baya kan cin hanci",
+              "timestamp": 1466777561000,
+              "language": "ha",
+              "indexImage": {
+                "id": "63492735",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+                "path": "/cpsdevpb/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+                "caption": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+                "copyrightHolder": "Reuters",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:hausa/23055840",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "adf2d43a-6242-a64a-a117-60e51b65ee1d",
+            "rank": 12,
+            "count": 7800,
+            "urn": "urn:bbc:curie:asset:adf2d43a-6242-a64a-a117-60e51b65ee1d",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Zuma ya fuskanci koma baya kan cin hanci 5",
+                "headline": "Zuma ya fuskanci koma baya kan cin hanci 5"
+              },
+              "locators": {
+                "assetUri": "/hausa/23055780",
+                "cpsUrn": "urn:bbc:content:assetUri:hausa/23055780",
+                "curie": "http://www.bbc.co.uk/asset/adf2d43a-6242-a64a-a117-60e51b65ee1d",
+                "assetId": "23055780"
+              },
+              "summary": "Zuma ya fuskanci koma baya kan cin hanci",
+              "timestamp": 1466775368000,
+              "language": "ha",
+              "indexImage": {
+                "id": "63492735",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+                "path": "/cpsdevpb/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+                "caption": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+                "copyrightHolder": "Reuters",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:hausa/23055780",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "b2c76d59-d4a9-b641-973b-f23b97fc990a",
+            "rank": 13,
+            "count": 7462,
+            "urn": "urn:bbc:curie:asset:b2c76d59-d4a9-b641-973b-f23b97fc990a",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Zuma ya fuskanci koma baya kan cin hanci 27",
+                "headline": "Zuma ya fuskanci koma baya kan cin hanci 27"
+              },
+              "locators": {
+                "assetUri": "/hausa/23055843",
+                "cpsUrn": "urn:bbc:content:assetUri:hausa/23055843",
+                "curie": "http://www.bbc.co.uk/asset/b2c76d59-d4a9-b641-973b-f23b97fc990a",
+                "assetId": "23055843"
+              },
+              "summary": "Zuma ya fuskanci koma baya kan cin hanci",
+              "timestamp": 1466777659000,
+              "language": "ha",
+              "indexImage": {
+                "id": "63492735",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+                "path": "/cpsdevpb/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+                "caption": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+                "copyrightHolder": "Reuters",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:hausa/23055843",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "544f2c67-3e5f-c84d-9236-01c5c8ad2290",
+            "rank": 14,
+            "count": 7105,
+            "urn": "urn:bbc:curie:asset:544f2c67-3e5f-c84d-9236-01c5c8ad2290",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Zuma ya fuskanci koma baya kan cin hanci 14",
+                "headline": "Zuma ya fuskanci koma baya kan cin hanci 14"
+              },
+              "locators": {
+                "assetUri": "/hausa/23055802",
+                "cpsUrn": "urn:bbc:content:assetUri:hausa/23055802",
+                "curie": "http://www.bbc.co.uk/asset/544f2c67-3e5f-c84d-9236-01c5c8ad2290",
+                "assetId": "23055802"
+              },
+              "summary": "Zuma ya fuskanci koma baya kan cin hanci",
+              "timestamp": 1466775797000,
+              "language": "ha",
+              "indexImage": {
+                "id": "63492735",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+                "path": "/cpsdevpb/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+                "caption": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+                "copyrightHolder": "Reuters",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:hausa/23055802",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "9cf73dce-3e49-9941-ae4d-26446a9f384b",
+            "rank": 15,
+            "count": 7056,
+            "urn": "urn:bbc:curie:asset:9cf73dce-3e49-9941-ae4d-26446a9f384b",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Zuma ya fuskanci koma baya kan cin hanci 17",
+                "headline": "Zuma ya fuskanci koma baya kan cin hanci 17"
+              },
+              "locators": {
+                "assetUri": "/hausa/23055827",
+                "cpsUrn": "urn:bbc:content:assetUri:hausa/23055827",
+                "curie": "http://www.bbc.co.uk/asset/9cf73dce-3e49-9941-ae4d-26446a9f384b",
+                "assetId": "23055827"
+              },
+              "summary": "Zuma ya fuskanci koma baya kan cin hanci",
+              "timestamp": 1466775946000,
+              "language": "ha",
+              "indexImage": {
+                "id": "63492735",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+                "path": "/cpsdevpb/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+                "caption": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+                "copyrightHolder": "Reuters",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:hausa/23055827",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "9ba313e1-2ac2-8949-8274-bad5ab77daa0",
+            "rank": 16,
+            "count": 7024,
+            "urn": "urn:bbc:curie:asset:9ba313e1-2ac2-8949-8274-bad5ab77daa0",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Zuma ya fuskanci koma baya kan cin hanci 9",
+                "headline": "Zuma ya fuskanci koma baya kan cin hanci 9"
+              },
+              "locators": {
+                "assetUri": "/hausa/23055794",
+                "cpsUrn": "urn:bbc:content:assetUri:hausa/23055794",
+                "curie": "http://www.bbc.co.uk/asset/9ba313e1-2ac2-8949-8274-bad5ab77daa0",
+                "assetId": "23055794"
+              },
+              "summary": "Zuma ya fuskanci koma baya kan cin hanci",
+              "timestamp": 1466775478000,
+              "language": "ha",
+              "indexImage": {
+                "id": "63492735",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+                "path": "/cpsdevpb/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+                "caption": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+                "copyrightHolder": "Reuters",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:hausa/23055794",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "d80d3303-81dc-c14d-9ac1-370b1c4d836b",
+            "rank": 17,
+            "count": 6627,
+            "urn": "urn:bbc:curie:asset:d80d3303-81dc-c14d-9ac1-370b1c4d836b",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Normal Headline",
+                "headline": "Full Headline"
+              },
+              "locators": {
+                "assetUri": "/amharic/23132712",
+                "cpsUrn": "urn:bbc:content:assetUri:amharic/23132712",
+                "curie": "http://www.bbc.co.uk/asset/d80d3303-81dc-c14d-9ac1-370b1c4d836b",
+                "assetId": "23132712"
+              },
+              "summary": "Introduction to the story",
+              "timestamp": 1497449474000,
+              "language": "am",
+              "id": "urn:bbc:ares::asset:amharic/23132712",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "c55584b7-2ffb-8844-a317-ec3bd9e7830a",
+            "rank": 18,
+            "count": 6493,
+            "urn": "urn:bbc:curie:asset:c55584b7-2ffb-8844-a317-ec3bd9e7830a",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Scottish Tory leader pledged her own \"absolute\" commitment to it",
+                "headline": "Scottish Tory leader pledged her own \"absolute\" commitment to it"
+              },
+              "locators": {
+                "assetUri": "/mundo/23117191",
+                "cpsUrn": "urn:bbc:content:assetUri:mundo/23117191",
+                "curie": "http://www.bbc.co.uk/asset/c55584b7-2ffb-8844-a317-ec3bd9e7830a",
+                "assetId": "23117191"
+              },
+              "summary": "Conservative's election manifesto",
+              "timestamp": 1492683343000,
+              "language": "es",
+              "id": "urn:bbc:ares::asset:mundo/23117191",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "bd5b5796-1fe0-d349-b7f1-623712d30275",
+            "rank": 19,
+            "count": 6406,
+            "urn": "urn:bbc:curie:asset:bd5b5796-1fe0-d349-b7f1-623712d30275",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Zuma ya fuskanci koma baya kan cin hanci 4",
+                "headline": "Zuma ya fuskanci koma baya kan cin hanci 4"
+              },
+              "locators": {
+                "assetUri": "/hausa/23055779",
+                "cpsUrn": "urn:bbc:content:assetUri:hausa/23055779",
+                "curie": "http://www.bbc.co.uk/asset/bd5b5796-1fe0-d349-b7f1-623712d30275",
+                "assetId": "23055779"
+              },
+              "summary": "Zuma ya fuskanci koma baya kan cin hanci",
+              "timestamp": 1466775323000,
+              "language": "ha",
+              "indexImage": {
+                "id": "63492735",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+                "path": "/cpsdevpb/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+                "caption": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+                "copyrightHolder": "Reuters",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:hausa/23055779",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "48dbd911-7bc3-454f-83c5-b0630efbf4d2",
+            "rank": 20,
+            "count": 6284,
+            "urn": "urn:bbc:curie:asset:48dbd911-7bc3-454f-83c5-b0630efbf4d2",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Zuma ya fuskanci koma baya kan cin hanci 15",
+                "headline": "Zuma ya fuskanci koma baya kan cin hanci 15"
+              },
+              "locators": {
+                "assetUri": "/hausa/23055824",
+                "cpsUrn": "urn:bbc:content:assetUri:hausa/23055824",
+                "curie": "http://www.bbc.co.uk/asset/48dbd911-7bc3-454f-83c5-b0630efbf4d2",
+                "assetId": "23055824"
+              },
+              "summary": "Zuma ya fuskanci koma baya kan cin hanci",
+              "timestamp": 1466775863000,
+              "language": "ha",
+              "indexImage": {
+                "id": "63492735",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+                "path": "/cpsdevpb/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+                "caption": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+                "copyrightHolder": "Reuters",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:hausa/23055824",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   },
-  "relatedContent": {
-    "site": {
-      "subType": "site",
-      "name": "Hausa",
-      "uri": "/hausa",
-      "type": "simple"
-    },
-    "groups": []
-  }
+  "contentType": "application/json; charset=utf-8"
 }

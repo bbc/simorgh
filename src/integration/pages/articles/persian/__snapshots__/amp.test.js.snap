@@ -159,7 +159,7 @@ Object {
 
 exports[`AMP Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/persian"`;
 
-exports[`AMP Articles Footer I can see the footer copyright and external linking text 1`] = `"© 2022 بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر."`;
+exports[`AMP Articles Footer I can see the footer copyright and external linking text 1`] = `"© 2023 بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر."`;
 
 exports[`AMP Articles Header I can see the branding 1`] = `"BBC News, فارسی"`;
 
@@ -261,31 +261,20 @@ Object {
 }
 `;
 
-exports[`AMP Articles Image Caption should match text 1`] = `"توضیح تصویر، نوشیدنی‌ها داغ در بسته‌های سربسته توزیع می‌شوند"`;
+exports[`AMP Articles Image Caption should match text 1`] = `"توضیح تصویر، نوشیدنی‌ها داغ در بسته‌های سربسته توزیع می‌شوند "`;
 
 exports[`AMP Articles Image should match snapshot 1`] = `
 <amp-img
   alt="قهوه"
   attribution="Getty Images"
   data-hero="true"
-  height="576"
+  fallback=""
+  height="360"
   layout="responsive"
-  src="https://ichef.bbci.co.uk/news/640/cpsprodpb/87F5/production/_103150843_mediaitem103146787.jpg"
-  srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/87F5/production/_103150843_mediaitem103146787.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/87F5/production/_103150843_mediaitem103146787.jpg.webp 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/87F5/production/_103150843_mediaitem103146787.jpg.webp 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/87F5/production/_103150843_mediaitem103146787.jpg.webp 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/87F5/production/_103150843_mediaitem103146787.jpg.webp 800w"
-  width="1024"
->
-  <amp-img
-    alt="قهوه"
-    attribution="Getty Images"
-    data-hero="true"
-    fallback=""
-    height="576"
-    layout="responsive"
-    src="https://ichef.bbci.co.uk/news/640/cpsprodpb/87F5/production/_103150843_mediaitem103146787.jpg"
-    srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/87F5/production/_103150843_mediaitem103146787.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/87F5/production/_103150843_mediaitem103146787.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/87F5/production/_103150843_mediaitem103146787.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/87F5/production/_103150843_mediaitem103146787.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/87F5/production/_103150843_mediaitem103146787.jpg 800w"
-    width="1024"
-  />
-</amp-img>
+  src="https://ichef.bbci.co.uk/news/640/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg"
+  srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg 624w, https://ichef.bbci.co.uk/news/640/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg 640w"
+  width="640"
+/>
 `;
 
 exports[`AMP Articles Main heading should match text 1`] = `"پهپادی که برایتان قهوه می‌آورد"`;
@@ -364,8 +353,6 @@ exports[`AMP Articles SEO Canonical link 1`] = `"http://localhost:7080/persian/a
 
 exports[`AMP Articles SEO Dir attribute 1`] = `"rtl"`;
 
-exports[`AMP Articles SEO FB admins 1`] = `"100004154058350"`;
-
 exports[`AMP Articles SEO FB app ID 1`] = `"1609039196070050"`;
 
 exports[`AMP Articles SEO Heading level 1 1`] = `"پهپادی که برایتان قهوه می‌آورد"`;
@@ -378,12 +365,6 @@ Object {
   "@graph": Array [
     Object {
       "@type": "Article",
-      "about": Array [
-        Object {
-          "@type": "Thing",
-          "name": " پهپاد",
-        },
-      ],
       "author": Object {
         "@type": "NewsMediaOrganization",
         "logo": Object {
@@ -395,8 +376,8 @@ Object {
         "name": "BBC News فارسی",
         "noBylinesPolicy": "https://www.bbc.com/persian/institutional-49283091#authorexpertise",
       },
-      "dateModified": "2018-08-24T14:57:42.000Z",
-      "datePublished": "2018-08-24T14:57:42.000Z",
+      "dateModified": "2019-07-23T15:47:11.893Z",
+      "datePublished": "2019-05-28T13:42:44.996Z",
       "headline": "پهپادی که برایتان قهوه می‌آورد",
       "image": Object {
         "@type": "ImageObject",
@@ -468,7 +449,7 @@ exports[`AMP Articles SEO Twitter title 1`] = `"پهپادی که برایتان
 
 exports[`AMP Articles Timestamp should match text and date 1`] = `
 Object {
-  "date": "2018-08-24",
-  "text": "۲ شهریور ۱۳۹۷ - ۲۴ اوت ۲۰۱۸",
+  "date": "2019-05-28",
+  "text": "۷ خرداد ۱۳۹۸ - ۲۸ مه ۲۰۱۹",
 }
 `;

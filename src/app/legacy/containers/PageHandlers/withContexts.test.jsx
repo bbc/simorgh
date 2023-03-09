@@ -55,6 +55,7 @@ describe('withContexts HOC', () => {
         enabled: false,
       },
     },
+    mvtExperiments: [{ experimentName: 'foo', variation: 'bar' }],
   };
 
   shouldMatchSnapshot(
@@ -97,6 +98,7 @@ describe('withContexts HOC', () => {
               enabled: false,
             },
           },
+          mvtExperiments: [{ experimentName: 'foo', variation: 'bar' }],
         };
         render(<ContextsHOC {...fixture} />);
         expect(requestContextSpy).toHaveBeenCalled();
@@ -131,6 +133,7 @@ describe('withContexts HOC', () => {
             enabled: false,
           },
         },
+        mvtExperiments: [{ experimentName: 'foo', variation: 'bar' }],
       };
 
       render(<ContextsHOC {...fixture} />);

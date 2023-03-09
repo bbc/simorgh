@@ -88,7 +88,10 @@ const Canonical = ({
         allow="autoplay"
         scrolling="no"
         gesture="media"
+        loading="lazy"
         allowFullScreen
+        width="645.25"
+        height="362.953125"
       />
       {showLoadingImage && (
         <LoadingImageWrapper>

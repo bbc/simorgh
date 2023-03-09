@@ -12,7 +12,7 @@ describe('withRum', () => {
       const scriptEl = document.querySelector('script');
       expect(scriptEl).toBeInTheDocument();
       expect(scriptEl.src).toEqual(
-        'https://client.rum.us-east-1.amazonaws.com/1.2.1/cwr.js',
+        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/vendor/cwr.js',
       );
     });
   });

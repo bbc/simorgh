@@ -1,6 +1,9 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { TOPIC_PAGE } from '#app/routes/utils/pageTypes';
+import { data as kyrgyzTopicWithMessageBanners } from '#data/kyrgyz/topics/cvpv9djp9qqt.json';
+import { data as mundoBannerVariations } from '#data/mundo/topics/cw90edn9kw4t.json';
+import { VISUAL_PROMINENCE, VISUAL_STYLE } from '#models/types/promoData';
 import { render } from '../../components/react-testing-library-with-providers';
 import TopicPage from './TopicPage';
 import {
@@ -157,6 +160,85 @@ describe('Topic Page', () => {
       } else {
         expect(adElement).not.toBeInTheDocument();
       }
+    });
+  });
+
+  describe('Message Banner', () => {
+    it('should only render when visual style is banner and visual prominence is normal', () => {
+      const messageBannerCuration =
+        kyrgyzTopicWithMessageBanners.curations.find(
+          ({ visualStyle, visualProminence }) =>
+            visualProminence === VISUAL_PROMINENCE.NORMAL &&
+            visualStyle === VISUAL_STYLE.BANNER,
+        );
+
+      const { getByRole } = render(
+        <TopicPage pageData={kyrgyzTopicWithMessageBanners} />,
+        getOptionParams({ service: 'kyrgyz', lang: 'ky' }),
+      );
+
+      const messageBanner = getByRole('region', {
+        name: messageBannerCuration.title,
+      });
+
+      expect(messageBanner).toBeInTheDocument();
+    });
+
+    it('should render multiple message banners with unique ids', () => {
+      render(
+        <TopicPage pageData={mundoBannerVariations} />,
+        getOptionParams({ service: 'mundo', lang: 'es' }),
+      );
+      expect(document.querySelectorAll("[id^='message-banner']")).toHaveLength(
+        3,
+      );
+      expect(document.querySelectorAll("[id='message-banner']")).toHaveLength(
+        0,
+      );
+    });
+
+    it('should not render when visual style is banner and visual prominence is high', () => {
+      const { queryByRole } = render(
+        <TopicPage pageData={kyrgyzTopicWithMessageBanners} />,
+        getOptionParams({ service: 'kyrgyz', lang: 'ky' }),
+      );
+      const highProminenceBanner = kyrgyzTopicWithMessageBanners.curations.find(
+        curation =>
+          curation.visualStyle === VISUAL_STYLE.BANNER &&
+          curation.visualProminence === VISUAL_PROMINENCE.HIGH,
+      );
+      expect(
+        queryByRole('region', { name: highProminenceBanner.title }),
+      ).not.toBeInTheDocument();
+    });
+
+    it('should not render when visual style is not banner', () => {
+      render(
+        <TopicPage pageData={amharicSingleItem} />,
+        getOptionParams({ service: 'amharic', lang: 'am' }),
+      );
+
+      expect(document.querySelectorAll("[id^='message-banner']")).toHaveLength(
+        0,
+      );
+    });
+
+    it('should only render the first summary if there is more than one summary in the curation', () => {
+      const messageBannerCuration =
+        kyrgyzTopicWithMessageBanners.curations.find(
+          ({ visualStyle, visualProminence, summaries }) =>
+            visualProminence === VISUAL_PROMINENCE.NORMAL &&
+            visualStyle === VISUAL_STYLE.BANNER &&
+            summaries.length > 1,
+        );
+      const { queryAllByRole } = render(
+        <TopicPage pageData={kyrgyzTopicWithMessageBanners} />,
+        getOptionParams({ service: 'kyrgyz', lang: 'ky' }),
+      );
+      const messageBanners = queryAllByRole('region', {
+        name: messageBannerCuration.title,
+      });
+      expect(messageBanners).toHaveLength(1);
     });
   });
 });

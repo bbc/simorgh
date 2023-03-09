@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { string, node, shape, arrayOf, bool, number } from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { RequestContext } from '#contexts/RequestContext';
+import { useTheme } from '@emotion/react';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import {
   getIconAssetUrl,
@@ -12,10 +13,7 @@ import {
 } from './utils';
 
 const ENGLISH_SERVICES = ['news', 'sport'];
-const FACEBOOK_ADMIN_ID = 100004154058350;
 const FACEBOOK_APP_ID = 1609039196070050;
-const FACEBOOK_PAGES =
-  '285361880228,192168680794107,9432520138,347501767628,264572343581678,303522857815,166580710064489,592266607456680,260669183761,160817274042538,236659822607,237647452933504,10150118096995434,113097918700687,143048895744759,81395234664,207150596007088,167959249906191,64040652712,190992343324,103678496456574,367167334474,160894643929209,186742265162,1526071940947174,230299653821,124158667615790,126548377386804,298318986864908,1068750829805728,228458913833525,163571453661989,660673490805047,948946275170651,485274381864409,1633841096923106,654070648098812';
 const iconSizes = {
   'apple-touch-icon': [
     '72x72',
@@ -72,11 +70,13 @@ const MetadataContainer = ({
     dir,
     locale,
     isoLang,
-    themeColor,
     twitterCreator,
     twitterSite,
     iTunesAppId,
   } = useContext(ServiceContext);
+  const {
+    palette: { BRAND_BACKGROUND },
+  } = useTheme();
   const appleTouchIcon = getAppleTouchUrl(service);
   const isEnglishService = ENGLISH_SERVICES.includes(service);
   const alternateLinksEnglishSites = [
@@ -120,7 +120,7 @@ const MetadataContainer = ({
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta charSet="utf-8" />
       <meta name="robots" content="noodp, noydir, max-image-preview:large" />
-      <meta name="theme-color" content={themeColor} />
+      <meta name="theme-color" content={BRAND_BACKGROUND} />
       <meta
         name="viewport"
         content="width=device-width, initial-scale=1, minimum-scale=1"
@@ -141,11 +141,9 @@ const MetadataContainer = ({
       <meta name="apple-mobile-web-app-title" content={brandName} />
       <meta name="application-name" content={brandName} />
       <meta name="description" content={description} />
-      <meta property="fb:admins" content={FACEBOOK_ADMIN_ID} />
       <meta property="fb:app_id" content={FACEBOOK_APP_ID} />
-      <meta property="fb:pages" content={FACEBOOK_PAGES} />
       <meta name="mobile-web-app-capable" content="yes" />
-      <meta name="msapplication-TileColor" content={themeColor} />
+      <meta name="msapplication-TileColor" content={BRAND_BACKGROUND} />
       <meta
         name="msapplication-TileImage"
         content={getIconAssetUrl(service, '144x144')}

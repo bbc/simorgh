@@ -412,7 +412,7 @@ exports[`Gist should render the gist with multiple list items 1`] = `
             </i>
             <a
               aria-label="links,, external"
-              class="emotion-20 emotion-21"
+              class="focusIndicatorReducedWidth emotion-20 emotion-21"
               href="https://www.google.com"
             >
               links,
@@ -420,7 +420,7 @@ exports[`Gist should render the gist with multiple list items 1`] = `
              
             <a
               aria-label="and bold-italic-links,, external"
-              class="emotion-20 emotion-21"
+              class="focusIndicatorReducedWidth emotion-20 emotion-21"
               href="https://www.google.com"
             >
               <i

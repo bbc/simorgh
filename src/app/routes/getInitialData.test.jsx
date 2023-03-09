@@ -1,4 +1,9 @@
-import { ERROR_PAGE, TOPIC_PAGE } from '#app/routes/utils/pageTypes';
+import {
+  ERROR_PAGE,
+  TOPIC_PAGE,
+  ARTICLE_PAGE,
+  HOME_PAGE,
+} from '#app/routes/utils/pageTypes';
 import routes from './index';
 
 const MOCK_PATH = 'mock-path';
@@ -7,7 +12,13 @@ const toggles = {
   liveRadioSchedule: { enabled: true },
 };
 
-const pageTypesToSkip = [ERROR_PAGE, TOPIC_PAGE];
+const pageTypesToSkip = [
+  ERROR_PAGE,
+  TOPIC_PAGE,
+  ARTICLE_PAGE,
+  HOME_PAGE,
+  'cpsAsset',
+];
 
 routes
   .filter(route => !pageTypesToSkip.includes(route.pageType))

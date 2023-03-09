@@ -1,10 +1,3 @@
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_GHOST,
-  C_POSTBOX_30,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
-import brandSVG from '../../chameleonLogos/pidgin';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import '#psammead/psammead-locales/moment/pcm';
 import '#psammead/moment-timezone-include/tz/Africa/Lagos';
@@ -39,7 +32,6 @@ export const service: DefaultServiceConfig = {
     audioCaptionOffscreenText: 'Wetin we call dis Audio, ',
     defaultCaptionOffscreenText: 'Wetin we call am, ',
     imageCopyrightOffscreenText: 'Wia dis foto come from, ',
-    brandSVG,
     script: latin,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
@@ -48,16 +40,8 @@ export const service: DefaultServiceConfig = {
       'https://www.bbc.com/pidgin/institutional-48528766#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/pidgin/institutional-48528766',
     isTrustProjectParticipant: true,
-    themeColor: `${C_POSTBOX}`,
     twitterCreator: '@BBCNews', // to be updated
     twitterSite: '@BBCNews', // to be updated
-    theming: {
-      brandBackgroundColour: `${C_POSTBOX}`,
-      brandLogoColour: `${C_WHITE}`,
-      brandForegroundColour: `${C_GHOST}`,
-      brandHighlightColour: `${C_WHITE}`,
-      brandBorderColour: `${C_POSTBOX_30}`,
-    },
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
@@ -69,6 +53,7 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'Tori we dem pay for',
       },
+      recommendationTitle: 'Recommended articles',
       seeAll: 'See everitin',
       home: 'Home',
       currentPage: 'Page where you dey',
@@ -274,7 +259,11 @@ export const service: DefaultServiceConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      hasStoryRecommendations: true,
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     navigation: [
       {

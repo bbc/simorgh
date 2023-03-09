@@ -1,454 +1,1893 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::article:czjqge2jwn2o",
-    "locators": {
-      "optimoUrn": "urn:bbc:optimo:asset:czjqge2jwn2o"
-    },
-    "type": "article",
-    "createdBy": "Swahili",
-    "language": "sw",
-    "lastUpdated": 1569252305397,
-    "firstPublished": 1562936569893,
-    "lastPublished": 1562936569893,
-    "options": {},
-    "analyticsLabels": {},
-    "passport": {
-      "language": "sw",
-      "home": "http://www.bbc.co.uk/ontologies/passport/home/Swahili"
-    },
-    "tags": {},
-    "version": "v1.1.2",
-    "blockTypes": [
-      "headline",
-      "text",
-      "paragraph",
-      "fragment",
-      "image",
-      "caption",
-      "altText",
-      "rawImage",
-      "urlLink",
-      "video",
-      "subheadline"
-    ]
-  },
-  "content": {
-    "model": {
-      "blocks": [
-        {
-          "type": "headline",
-          "model": {
-            "blocks": [
-              {
-                "type": "text",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "paragraph",
-                      "model": {
-                        "text": "Hii ndio kichwa cha habari cha makala haya ya majaribio",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "Hii ndio kichwa cha habari cha makala haya ya majaribio",
-                              "attributes": []
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "image",
-          "model": {
-            "blocks": [
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Picha ya jaribio, hakimiliki ya BBC, inaonyesha ramani ya Ufaransa. Picha iko kwenye vitalu vitatu vya kwanza na ina maelezo haya.",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Picha ya jaribio, hakimiliki ya BBC, inaonyesha ramani ya Ufaransa. Picha iko kwenye vitalu vitatu vya kwanza na ina maelezo haya.",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Ramani ya Ufaransa inayoonyesha Paris na Cognac",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Ramani ya Ufaransa inayoonyesha Paris na Cognac",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "rawImage",
-                "model": {
-                  "width": 624,
-                  "height": 351,
-                  "locator": "adb4/test/aac5ccc0-de15-11e9-b23c-f1ac9644bb55.jpg",
-                  "originCode": "cpsdevpb",
-                  "copyrightHolder": "BBC"
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "text",
-          "model": {
-            "blocks": [
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "Hiki ni kizuizi cha maandishi, ambayo yana kiunga cha url kwa ukurasa wa nyumbani wa BBC Weather.",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "Hiki ni kizuizi cha maandishi, ambayo yana kiunga cha url kwa ",
-                        "attributes": []
-                      }
-                    },
-                    {
-                      "type": "urlLink",
-                      "model": {
-                        "text": "ukurasa wa nyumbani wa BBC Weather.",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "ukurasa wa nyumbani wa BBC Weather.",
-                              "attributes": []
-                            }
-                          }
-                        ],
-                        "locator": "https://www.bbc.com/weather",
-                        "isExternal": false
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "video",
-          "model": {
-            "locator": "urn:bbc:pips:pid:p01k6msm",
-            "blocks": [
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Hii ni kizuizi cha video kilicho na video kuhusu mchwa",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Hii ni kizuizi cha video kilicho na video kuhusu mchwa",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "aresMedia",
-                "model": {
-                  "blocks": [
-                    {
-                      "blockId": "urn:bbc:ares::clip:p01k6msm",
-                      "type": "aresMediaMetadata",
-                      "model": {
-                        "id": "p01k6msm",
-                        "subType": "clip",
-                        "format": "audio_video",
-                        "title": "Five things ants can teach us about management",
-                        "synopses": {
-                          "short": "They may be tiny, but us humans could learn a thing or two from ants."
-                        },
-                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
-                        "imageCopyright": "BBC",
-                        "embedding": true,
-                        "advertising": true,
-                        "versions": [
-                          {
-                            "versionId": "p01k6msp",
-                            "types": ["Original"],
-                            "duration": 191,
-                            "durationISO8601": "PT3M11S",
-                            "warnings": {
-                              "short": "Contains strong language and adult humour.",
-                              "long": "Contains strong language and adult humour."
-                            },
-                            "availableTerritories": {
-                              "uk": true,
-                              "nonUk": true
-                            },
-                            "availableFrom": 1540218932000
-                          }
-                        ],
-                        "syndication": {
-                          "destinations": []
-                        }
-                      }
-                    },
-                    {
-                      "type": "image",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "rawImage",
-                            "model": {
-                              "width": 1920,
-                              "height": 1080,
-                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg",
-                              "originCode": "mpv",
-                              "copyrightHolder": "BBC"
-                            }
+  "data": {
+    "article": {
+      "content": {
+        "model": {
+          "blocks": [
+            {
+              "id": "1e590f21",
+              "type": "headline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "1600ff32",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "5ab004e3",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "Hii ndio kichwa cha habari cha makala haya ya majaribio",
+                            "blocks": [
+                              {
+                                "id": "959c66f5",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "Hii ndio kichwa cha habari cha makala haya ya majaribio",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
                           },
-                          {
-                            "type": "altText",
-                            "model": {
-                              "blocks": [
-                                {
-                                  "type": "text",
-                                  "model": {
-                                    "blocks": [
-                                      {
-                                        "type": "paragraph",
-                                        "model": {
-                                          "text": "Ants",
-                                          "blocks": [
-                                            {
-                                              "type": "fragment",
-                                              "model": {
-                                                "text": "Ants",
-                                                "attributes": []
-                                              }
-                                            }
-                                          ]
-                                        }
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      1,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                1
+              ]
+            },
+            {
+              "id": "ed75a944",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "baf49819",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "53869ff2",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "4b19f299",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Picha ya jaribio, hakimiliki ya BBC, inaonyesha ramani ya Ufaransa. Picha iko kwenye vitalu vitatu vya kwanza na ina maelezo haya.",
+                                  "blocks": [
+                                    {
+                                      "id": "31de2c23",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Picha ya jaribio, hakimiliki ya BBC, inaonyesha ramani ya Ufaransa. Picha iko kwenye vitalu vitatu vya kwanza na ina maelezo haya.",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        2,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  2,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            2,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      2,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "82b1f035",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "5f6f0be2",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "99406e08",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Ramani ya Ufaransa inayoonyesha Paris na Cognac",
+                                  "blocks": [
+                                    {
+                                      "id": "295e39c2",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Ramani ya Ufaransa inayoonyesha Paris na Cognac",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        2,
+                                        2,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  2,
+                                  2,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            2,
+                            2,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      2,
+                      2
+                    ]
+                  },
+                  {
+                    "id": "b50e1069",
+                    "type": "rawImage",
+                    "model": {
+                      "width": 624,
+                      "height": 351,
+                      "locator": "adb4/test/aac5ccc0-de15-11e9-b23c-f1ac9644bb55.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "BBC"
+                    },
+                    "position": [
+                      2,
+                      3
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                2
+              ]
+            },
+            {
+              "id": "16d735af",
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1562936569893,
+                "lastPublished": 1562936569893
+              },
+              "position": [
+                3
+              ]
+            },
+            {
+              "id": "118827cd",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "f418ed81",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Hiki ni kizuizi cha maandishi, ambayo yana kiunga cha url kwa ukurasa wa nyumbani wa BBC Weather.",
+                      "blocks": [
+                        {
+                          "id": "3b4ef59e",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Hiki ni kizuizi cha maandishi, ambayo yana kiunga cha url kwa ",
+                            "attributes": []
+                          },
+                          "position": [
+                            4,
+                            1,
+                            1
+                          ]
+                        },
+                        {
+                          "id": "e813b57c",
+                          "type": "urlLink",
+                          "model": {
+                            "text": "ukurasa wa nyumbani wa BBC Weather.",
+                            "blocks": [
+                              {
+                                "id": "1da468b6",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "ukurasa wa nyumbani wa BBC Weather.",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  4,
+                                  1,
+                                  2,
+                                  1
+                                ]
+                              }
+                            ],
+                            "locator": "https://www.bbc.com/weather",
+                            "isExternal": false
+                          },
+                          "position": [
+                            4,
+                            1,
+                            2
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      4,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                4
+              ]
+            },
+            {
+              "id": "65e2c4f4",
+              "type": "video",
+              "model": {
+                "locator": "urn:bbc:pips:pid:p01k6msm",
+                "blocks": [
+                  {
+                    "id": "4e31e292",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "3dd4af74",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "85a1b404",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Hii ni kizuizi cha video kilicho na video kuhusu mchwa",
+                                  "blocks": [
+                                    {
+                                      "id": "085cc362",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Hii ni kizuizi cha video kilicho na video kuhusu mchwa",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        5,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  5,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            5,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      5,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "852ef365",
+                    "type": "aresMedia",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "90e0a6eb",
+                          "blockId": "urn:bbc:ares::clip:p01k6msm",
+                          "type": "aresMediaMetadata",
+                          "model": {
+                            "id": "p01k6msm",
+                            "subType": "clip",
+                            "format": "audio_video",
+                            "title": "Five things ants can teach us about management",
+                            "synopses": {
+                              "short": "They may be tiny, but us humans could learn a thing or two from ants."
+                            },
+                            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+                            "imageCopyright": "BBC",
+                            "embedding": true,
+                            "advertising": true,
+                            "versions": [
+                              {
+                                "versionId": "p01k6msp",
+                                "types": [
+                                  "Original"
+                                ],
+                                "duration": 191,
+                                "durationISO8601": "PT3M11S",
+                                "warnings": {
+                                  "short": "Contains strong language and adult humour.",
+                                  "long": "Contains strong language and adult humour."
+                                },
+                                "availableTerritories": {
+                                  "uk": true,
+                                  "nonUk": true
+                                },
+                                "availableFrom": 1540218932000
+                              }
+                            ],
+                            "syndication": {
+                              "destinations": []
+                            },
+                            "smpKind": "programme"
+                          },
+                          "position": [
+                            5,
+                            2,
+                            1
+                          ]
+                        },
+                        {
+                          "id": "a736da3e",
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "af671b48",
+                                "type": "rawImage",
+                                "model": {
+                                  "width": 1920,
+                                  "height": 1080,
+                                  "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg",
+                                  "originCode": "mpv",
+                                  "copyrightHolder": "BBC"
+                                },
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  1
+                                ]
+                              },
+                              {
+                                "id": "86e0cb07",
+                                "type": "altText",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "df1fa659",
+                                      "type": "text",
+                                      "model": {
+                                        "blocks": [
+                                          {
+                                            "id": "36a8ae31",
+                                            "type": "paragraph",
+                                            "model": {
+                                              "text": "Ants",
+                                              "blocks": [
+                                                {
+                                                  "id": "bc7ef6bc",
+                                                  "type": "fragment",
+                                                  "model": {
+                                                    "text": "Ants",
+                                                    "attributes": []
+                                                  },
+                                                  "position": [
+                                                    5,
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    1,
+                                                    1,
+                                                    1
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            "position": [
+                                              5,
+                                              2,
+                                              2,
+                                              2,
+                                              1,
+                                              1
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      "position": [
+                                        5,
+                                        2,
+                                        2,
+                                        2,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  2
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            5,
+                            2,
+                            2
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      5,
+                      2
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                5
+              ]
+            },
+            {
+              "id": "8a55e24c",
+              "type": "subheadline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "b96fc56a",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "7604dc16",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "Hii ni kifungu cha kichwa cha chini",
+                            "blocks": [
+                              {
+                                "id": "3ef1c21d",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "Hii ni kifungu cha kichwa cha chini",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  6,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            6,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      6,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                6
+              ]
+            },
+            {
+              "id": "e3302545",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "1af2a161",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "b6f8bae0",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "f56726a4",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Wadau wa mpira wa miguu baada ya mechi",
+                                  "blocks": [
+                                    {
+                                      "id": "a82b89c0",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Wadau wa mpira wa miguu baada ya mechi",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        7,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  7,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            7,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      7,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "f3897798",
+                    "type": "rawImage",
+                    "model": {
+                      "width": 2048,
+                      "height": 1152,
+                      "locator": "f737/test/2d7d3d60-de16-11e9-b23c-f1ac9644bb55.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "Getty Images"
+                    },
+                    "position": [
+                      7,
+                      2
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                7
+              ]
+            },
+            {
+              "id": "2992fec7",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "9642e7cc",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Nakala hii ya majaribio imeundwa ili tuweze kuendesha vipimo vya kujiendesha kwa-mwisho kwenye wavuti yetu.",
+                      "blocks": [
+                        {
+                          "id": "84822929",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Nakala hii ya majaribio imeundwa ili tuweze kuendesha vipimo vya kujiendesha kwa-mwisho kwenye wavuti yetu.",
+                            "attributes": []
+                          },
+                          "position": [
+                            8,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      8,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                8
+              ]
+            },
+            {
+              "id": "b236f6aa",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                9
+              ]
+            },
+            {
+              "id": "5fac485b",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                10
+              ]
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "id": "urn:bbc:ares::article:czjqge2jwn2o",
+        "locators": {
+          "optimoUrn": "urn:bbc:optimo:asset:czjqge2jwn2o",
+          "canonicalUrl": "https://www.bbc.com/swahili/articles/czjqge2jwn2o"
         },
-        {
-          "type": "subheadline",
-          "model": {
-            "blocks": [
-              {
-                "type": "text",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "paragraph",
-                      "model": {
-                        "text": "Hii ni kifungu cha kichwa cha chini",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "Hii ni kifungu cha kichwa cha chini",
-                              "attributes": []
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
+        "type": "article",
+        "createdBy": "Swahili",
+        "language": "sw",
+        "firstPublished": 1562936569893,
+        "lastPublished": 1562936569893,
+        "analyticsLabels": {
+          "producer": "Swahili",
+          "page": "swahili.articles.czjqge2jwn2o.page"
         },
+        "passport": {
+          "language": "sw",
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Swahili",
+          "taggings": []
+        },
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment",
+          "image",
+          "caption",
+          "altText",
+          "rawImage",
+          "urlLink",
+          "video",
+          "subheadline",
+          "aresMedia"
+        ],
+        "allowAdvertising": true
+      },
+      "promo": {
+        "headlines": {
+          "seoHeadline": "Hii ndio kichwa cha SEO cha makala haya ya majaribio"
+        }
+      }
+    },
+    "secondaryData": {
+      "topStories": [
         {
-          "type": "image",
-          "model": {
-            "blocks": [
+          "headlines": {
+            "headline": "Waziri mkuu wa Ethiopia akiri vikosi vya Eritrea vipo Tigray"
+          },
+          "locators": {
+            "assetUri": "/swahili/habari-23391955",
+            "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-23391955",
+            "curie": "http://www.bbc.co.uk/asset/7766fc81-fc33-486d-9f36-c860b3ae2cc8",
+            "assetId": "23391955"
+          },
+          "summary": "Abiy, ambaye ni mshindi wa zamani wa Tuzo ya Amani ya Nobel, hakukiri kwamba wanajeshi wa Eritrea walipelekwa katika miji ya Ethiopia.",
+          "timestamp": 1616583104000,
+          "language": "sw",
+          "byline": {
+            "name": "Aiden James & James Alexander",
+            "title": "Ripota wa Bunge",
+            "persons": [
               {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Wadau wa mpira wa miguu baada ya mechi",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Wadau wa mpira wa miguu baada ya mechi",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
+                "name": "Aiden James",
+                "function": "Producer, BBC Parliament"
               },
               {
-                "type": "rawImage",
-                "model": {
-                  "width": 2048,
-                  "height": 1152,
-                  "locator": "f737/test/2d7d3d60-de16-11e9-b23c-f1ac9644bb55.jpg",
-                  "originCode": "cpsdevpb",
-                  "copyrightHolder": "Getty Images"
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "text",
-          "model": {
-            "blocks": [
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "Nakala hii ya majaribio imeundwa ili tuweze kuendesha vipimo vya kujiendesha kwa-mwisho kwenye wavuti yetu.",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "Nakala hii ya majaribio imeundwa ili tuweze kuendesha vipimo vya kujiendesha kwa-mwisho kwenye wavuti yetu.",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        }
-      ]
-    }
-  },
-  "promo": {
-    "headlines": {
-      "seoHeadline": "Hii ndio kichwa cha SEO cha makala haya ya majaribio"
-    },
-    "locators": {
-      "optimoUrn": "urn:bbc:optimo:asset:czjqge2jwn2o"
-    },
-    "summary": {
-      "blocks": [
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "attributes": [],
-                        "text": ""
-                      },
-                      "type": "fragment"
-                    }
-                  ],
-                  "text": ""
-                },
-                "type": "paragraph"
+                "name": "James Alexander",
+                "function": "BBC News"
               }
             ]
           },
-          "type": "text"
+          "passport": {
+            "category": {
+              "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+              "categoryName": "News"
+            },
+            "taggings": []
+          },
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63750168",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/15059/test/_63750168_24febmbezi.jpg",
+            "path": "/cpsdevpb/15059/test/_63750168_24febmbezi.jpg",
+            "height": 576,
+            "width": 1024,
+            "altText": "Magufuli",
+            "copyrightHolder": "Ikulu, Tanzania",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "prominence": "maximum",
+          "id": "urn:bbc:ares::asset:swahili/habari-23391955",
+          "type": "cps"
         }
-      ]
-    },
-    "timestamp": 1562936569893,
-    "id": "urn:bbc:ares::article:czjqge2jwn2o",
-    "type": "cps"
+      ],
+      "features": [
+        {
+          "headlines": {
+            "headline": "headlines as usual"
+          },
+          "locators": {
+            "assetUri": "/hausa/23132403",
+            "cpsUrn": "urn:bbc:content:assetUri:hausa/23132403",
+            "curie": "http://www.bbc.co.uk/asset/a07dc85d-221d-3549-bf70-21327d0ffc0a",
+            "assetId": "23132403"
+          },
+          "summary": "This is what appears ABOVE the images",
+          "timestamp": 1497449053000,
+          "language": "ha",
+          "cpsType": "PGL",
+          "indexImage": {
+            "id": "63542132",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/5A54/test/_63542132_mediaitem63542131.jpg",
+            "path": "/cpsdevpb/5A54/test/_63542132_mediaitem63542131.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "as",
+            "caption": "Shorter is better for captions.",
+            "copyrightHolder": "Reuters",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63542380",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/2084/test/_63542380_mediaitem63542131.jpg",
+            "path": "/cpsdevpb/2084/test/_63542380_mediaitem63542131.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "as",
+            "caption": "Shorter is better for captions.",
+            "copyrightHolder": "Reuters",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Labaran Duniya",
+            "uri": "/hausa/front_page",
+            "type": "simple"
+          },
+          "site": {
+            "subType": "site",
+            "name": "BBC Hausa",
+            "uri": "/hausa",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:hausa/23132403",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Mahujaji Waislamu kuvalishwa bangili za kielektroniki 10"
+          },
+          "locators": {
+            "assetUri": "/swahili/23057190",
+            "cpsUrn": "urn:bbc:content:assetUri:swahili/23057190",
+            "curie": "http://www.bbc.co.uk/asset/9c4ddd78-8a72-3c43-b593-34357a477708",
+            "assetId": "23057190"
+          },
+          "summary": "Mahujaji Waislamu kuvalishwa bangili za kielektroniki",
+          "timestamp": 1467384075000,
+          "language": "sw",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63493493",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/9A0F/test/_63493493_160529154036_hajj_624x351_getty.jpg",
+            "path": "/cpsdevpb/9A0F/test/_63493493_160529154036_hajj_624x351_getty.jpg",
+            "height": 351,
+            "width": 624,
+            "altText": "Mahujaji",
+            "caption": "Mahujaji",
+            "copyrightHolder": "Getty Images",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63493495",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/E82F/test/_63493495_160529154036_hajj_624x351_getty.jpg",
+            "path": "/cpsdevpb/E82F/test/_63493495_160529154036_hajj_624x351_getty.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Mahujaji",
+            "caption": "Mahujaji",
+            "copyrightHolder": "Getty Images",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Swahili",
+            "uri": "/swahili/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:swahili/23057190",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Mahujaji Waislamu kuvalishwa bangili za kielektroniki 11"
+          },
+          "locators": {
+            "assetUri": "/swahili/23057191",
+            "cpsUrn": "urn:bbc:content:assetUri:swahili/23057191",
+            "curie": "http://www.bbc.co.uk/asset/457464d4-526e-c644-ade9-60e6e549dfe3",
+            "assetId": "23057191"
+          },
+          "summary": "Mahujaji Waislamu kuvalishwa bangili za kielektroniki",
+          "timestamp": 1467384085000,
+          "language": "sw",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63493493",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/9A0F/test/_63493493_160529154036_hajj_624x351_getty.jpg",
+            "path": "/cpsdevpb/9A0F/test/_63493493_160529154036_hajj_624x351_getty.jpg",
+            "height": 351,
+            "width": 624,
+            "altText": "Mahujaji",
+            "caption": "Mahujaji",
+            "copyrightHolder": "Getty Images",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63493495",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/E82F/test/_63493495_160529154036_hajj_624x351_getty.jpg",
+            "path": "/cpsdevpb/E82F/test/_63493495_160529154036_hajj_624x351_getty.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Mahujaji",
+            "caption": "Mahujaji",
+            "copyrightHolder": "Getty Images",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Swahili",
+            "uri": "/swahili/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:swahili/23057191",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Mahujaji Waislamu kuvalishwa bangili za kielektroniki 12"
+          },
+          "locators": {
+            "assetUri": "/swahili/23057192",
+            "cpsUrn": "urn:bbc:content:assetUri:swahili/23057192",
+            "curie": "http://www.bbc.co.uk/asset/67d1d814-a0f5-794a-ad61-175a84bf3ceb",
+            "assetId": "23057192"
+          },
+          "summary": "Mahujaji Waislamu kuvalishwa bangili za kielektroniki",
+          "timestamp": 1467384096000,
+          "language": "sw",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63493493",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/9A0F/test/_63493493_160529154036_hajj_624x351_getty.jpg",
+            "path": "/cpsdevpb/9A0F/test/_63493493_160529154036_hajj_624x351_getty.jpg",
+            "height": 351,
+            "width": 624,
+            "altText": "Mahujaji",
+            "caption": "Mahujaji",
+            "copyrightHolder": "Getty Images",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63493495",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/E82F/test/_63493495_160529154036_hajj_624x351_getty.jpg",
+            "path": "/cpsdevpb/E82F/test/_63493495_160529154036_hajj_624x351_getty.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Mahujaji",
+            "caption": "Mahujaji",
+            "copyrightHolder": "Getty Images",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Swahili",
+            "uri": "/swahili/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:swahili/23057192",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Mahujaji Waislamu kuvalishwa bangili za kielektroniki 23"
+          },
+          "locators": {
+            "assetUri": "/swahili/23057208",
+            "cpsUrn": "urn:bbc:content:assetUri:swahili/23057208",
+            "curie": "http://www.bbc.co.uk/asset/274cd6b3-1f76-ff42-8099-24441e6268b7",
+            "assetId": "23057208"
+          },
+          "summary": "Mahujaji Waislamu kuvalishwa bangili za kielektroniki",
+          "timestamp": 1467384560000,
+          "language": "sw",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63493493",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/9A0F/test/_63493493_160529154036_hajj_624x351_getty.jpg",
+            "path": "/cpsdevpb/9A0F/test/_63493493_160529154036_hajj_624x351_getty.jpg",
+            "height": 351,
+            "width": 624,
+            "altText": "Mahujaji",
+            "caption": "Mahujaji",
+            "copyrightHolder": "Getty Images",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63493495",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/E82F/test/_63493495_160529154036_hajj_624x351_getty.jpg",
+            "path": "/cpsdevpb/E82F/test/_63493495_160529154036_hajj_624x351_getty.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Mahujaji",
+            "caption": "Mahujaji",
+            "copyrightHolder": "Getty Images",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Swahili",
+            "uri": "/swahili/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:swahili/23057208",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Mahujaji Waislamu kuvalishwa bangili za kielektroniki 24"
+          },
+          "locators": {
+            "assetUri": "/swahili/23057209",
+            "cpsUrn": "urn:bbc:content:assetUri:swahili/23057209",
+            "curie": "http://www.bbc.co.uk/asset/83aabac5-bb49-5345-b731-c6ff78f695e9",
+            "assetId": "23057209"
+          },
+          "summary": "Mahujaji Waislamu kuvalishwa bangili za kielektroniki",
+          "timestamp": 1467384569000,
+          "language": "sw",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63493493",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/9A0F/test/_63493493_160529154036_hajj_624x351_getty.jpg",
+            "path": "/cpsdevpb/9A0F/test/_63493493_160529154036_hajj_624x351_getty.jpg",
+            "height": 351,
+            "width": 624,
+            "altText": "Mahujaji",
+            "caption": "Mahujaji",
+            "copyrightHolder": "Getty Images",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63493495",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/E82F/test/_63493495_160529154036_hajj_624x351_getty.jpg",
+            "path": "/cpsdevpb/E82F/test/_63493495_160529154036_hajj_624x351_getty.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Mahujaji",
+            "caption": "Mahujaji",
+            "copyrightHolder": "Getty Images",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Swahili",
+            "uri": "/swahili/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:swahili/23057209",
+          "type": "cps"
+        }
+      ],
+      "mostRead": {
+        "generated": "2023-02-17T16:35:57.709Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T10:53:00Z",
+        "totalRecords": 20,
+        "records": [
+          {
+            "id": "1dbaf25d-ab5f-1a43-b9bb-1d3f999d8547",
+            "rank": 1,
+            "count": 9555,
+            "urn": "urn:bbc:curie:asset:1dbaf25d-ab5f-1a43-b9bb-1d3f999d8547",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Photo Gallery mm",
+                "headline": "Photo Gallery mm"
+              },
+              "locators": {
+                "assetUri": "/swahili/23097839",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:1dbaf25d-ab5f-1a43-b9bb-1d3f999d8547",
+                "assetId": "23097839",
+                "cpsUrn": "urn:bbc:content:assetUri:swahili/23097839",
+                "curie": "http://www.bbc.co.uk/asset/1dbaf25d-ab5f-1a43-b9bb-1d3f999d8547"
+              },
+              "summary": "summary of Photo Gallery moe",
+              "timestamp": 1484322075000,
+              "language": "sw",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Swahili",
+                "taggings": []
+              },
+              "id": "urn:bbc:ares::asset:swahili/23097839",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "4851c913-0c81-e847-8d03-e7a3a0e2e53d",
+            "rank": 2,
+            "count": 9448,
+            "urn": "urn:bbc:curie:asset:4851c913-0c81-e847-8d03-e7a3a0e2e53d",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Mahujaji Waislamu kuvalishwa bangili za kielektroniki 35",
+                "headline": "Mahujaji Waislamu kuvalishwa bangili za kielektroniki 35"
+              },
+              "locators": {
+                "assetUri": "/swahili/23057226",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:4851c913-0c81-e847-8d03-e7a3a0e2e53d",
+                "assetId": "23057226",
+                "cpsUrn": "urn:bbc:content:assetUri:swahili/23057226",
+                "curie": "http://www.bbc.co.uk/asset/4851c913-0c81-e847-8d03-e7a3a0e2e53d"
+              },
+              "summary": "Mahujaji Waislamu kuvalishwa bangili za kielektroniki",
+              "timestamp": 1467385192000,
+              "language": "sw",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Swahili",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63493493",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/9A0F/test/_63493493_160529154036_hajj_624x351_getty.jpg",
+                "path": "/cpsdevpb/9A0F/test/_63493493_160529154036_hajj_624x351_getty.jpg",
+                "height": 351,
+                "width": 624,
+                "altText": "Mahujaji",
+                "caption": "Mahujaji",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:swahili/23057226",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "05a6a26f-eaf1-c74a-9ed5-6dc75ab1dbcc",
+            "rank": 3,
+            "count": 9403,
+            "urn": "urn:bbc:curie:asset:05a6a26f-eaf1-c74a-9ed5-6dc75ab1dbcc",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Wetherspoon pub chain its social media accounts",
+                "headline": "Wetherspoon pub chain shuts its social media accounts"
+              },
+              "locators": {
+                "assetUri": "/swahili/23196809",
+                "cpsUrn": "urn:bbc:content:assetUri:swahili/23196809",
+                "curie": "http://www.bbc.co.uk/asset/05a6a26f-eaf1-c74a-9ed5-6dc75ab1dbcc",
+                "assetId": "23196809"
+              },
+              "summary": "Pub chain JD Wetherspoon has used Twitter to tell its 44,000 followers that it is quitting social media.",
+              "timestamp": 1523874477000,
+              "language": "sw",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63675350",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/14ED/test/_63675350_005049271-1.jpg",
+                "path": "/cpsdevpb/14ED/test/_63675350_005049271-1.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Description of the image",
+                "caption": "caption goes below the image",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:swahili/23196809",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "274cd6b3-1f76-ff42-8099-24441e6268b7",
+            "rank": 4,
+            "count": 9354,
+            "urn": "urn:bbc:curie:asset:274cd6b3-1f76-ff42-8099-24441e6268b7",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Mahujaji Waislamu kuvalishwa bangili za kielektroniki 23",
+                "headline": "Mahujaji Waislamu kuvalishwa bangili za kielektroniki 23"
+              },
+              "locators": {
+                "assetUri": "/swahili/23057208",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:274cd6b3-1f76-ff42-8099-24441e6268b7",
+                "assetId": "23057208",
+                "cpsUrn": "urn:bbc:content:assetUri:swahili/23057208",
+                "curie": "http://www.bbc.co.uk/asset/274cd6b3-1f76-ff42-8099-24441e6268b7"
+              },
+              "summary": "Mahujaji Waislamu kuvalishwa bangili za kielektroniki",
+              "timestamp": 1467384560000,
+              "language": "sw",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Swahili",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63493493",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/9A0F/test/_63493493_160529154036_hajj_624x351_getty.jpg",
+                "path": "/cpsdevpb/9A0F/test/_63493493_160529154036_hajj_624x351_getty.jpg",
+                "height": 351,
+                "width": 624,
+                "altText": "Mahujaji",
+                "caption": "Mahujaji",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:swahili/23057208",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "72110b60-5243-8d4b-92e7-887068e79d02",
+            "rank": 5,
+            "count": 9342,
+            "urn": "urn:bbc:curie:asset:72110b60-5243-8d4b-92e7-887068e79d02",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Nicolas Sarkozy to face trial over 2012 campaign financing",
+                "headline": "French president to stand trial over allegations of illegally financing his failed re-election bid"
+              },
+              "locators": {
+                "assetUri": "/swahili/23100566",
+                "cpsUrn": "urn:bbc:content:assetUri:swahili/23100566",
+                "curie": "http://www.bbc.co.uk/asset/72110b60-5243-8d4b-92e7-887068e79d02",
+                "assetId": "23100566"
+              },
+              "summary": "Former French president Nicolas Sarkozy is to face trial over the allegedly fraudulent financing of his doomed 2012 bid for re-election, a legal source has said.",
+              "timestamp": 1486468592000,
+              "language": "sw",
+              "indexImage": {
+                "id": "63528360",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/18EE/test/_63528360_003414956-1.jpg",
+                "path": "/cpsdevpb/18EE/test/_63528360_003414956-1.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Nicolas Sarkozy, the former French president",
+                "caption": "Nicolas Sarkozy, the former French president",
+                "copyrightHolder": "AFP/Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:swahili/23100566",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "179e0735-8eef-9147-b83f-2e7b531095cb",
+            "rank": 6,
+            "count": 9157,
+            "urn": "urn:bbc:curie:asset:179e0735-8eef-9147-b83f-2e7b531095cb",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Mahujaji Waislamu kuvalishwa bangili za kielektroniki 38",
+                "headline": "Mahujaji Waislamu kuvalishwa bangili za kielektroniki 38"
+              },
+              "locators": {
+                "assetUri": "/swahili/23057230",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:179e0735-8eef-9147-b83f-2e7b531095cb",
+                "assetId": "23057230",
+                "cpsUrn": "urn:bbc:content:assetUri:swahili/23057230",
+                "curie": "http://www.bbc.co.uk/asset/179e0735-8eef-9147-b83f-2e7b531095cb"
+              },
+              "summary": "Mahujaji Waislamu kuvalishwa bangili za kielektroniki",
+              "timestamp": 1467385277000,
+              "language": "sw",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Swahili",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63493493",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/9A0F/test/_63493493_160529154036_hajj_624x351_getty.jpg",
+                "path": "/cpsdevpb/9A0F/test/_63493493_160529154036_hajj_624x351_getty.jpg",
+                "height": 351,
+                "width": 624,
+                "altText": "Mahujaji",
+                "caption": "Mahujaji",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:swahili/23057230",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "1b313528-1140-034c-8300-aa6974a23bc7",
+            "rank": 7,
+            "count": 9115,
+            "urn": "urn:bbc:curie:asset:1b313528-1140-034c-8300-aa6974a23bc7",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Saudis condemn US shift on Jerusalem",
+                "headline": "Jerusalem status: Saudis condemn Trump's announcement"
+              },
+              "locators": {
+                "assetUri": "/swahili/23170349",
+                "cpsUrn": "urn:bbc:content:assetUri:swahili/23170349",
+                "curie": "http://www.bbc.co.uk/asset/1b313528-1140-034c-8300-aa6974a23bc7",
+                "assetId": "23170349"
+              },
+              "summary": "International criticism grows over Donald Trump's move to recognise Jerusalem as Israel's capital.",
+              "timestamp": 1512648028000,
+              "language": "sw",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63604586",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/10BBC/test/_63604586_mediaitem63604585.jpg",
+                "path": "/cpsdevpb/10BBC/test/_63604586_mediaitem63604585.jpg",
+                "height": 1152,
+                "width": 2048,
+                "altText": "Ismail Haniya",
+                "copyrightHolder": "AFP",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:swahili/23170349",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "81efd346-fdad-c64a-85c3-d2621671488b",
+            "rank": 8,
+            "count": 8934,
+            "urn": "urn:bbc:curie:asset:81efd346-fdad-c64a-85c3-d2621671488b",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Mahujaji Waislamu kuvalishwa bangili za kielektroniki 30",
+                "headline": "Mahujaji Waislamu kuvalishwa bangili za kielektroniki 30"
+              },
+              "locators": {
+                "assetUri": "/swahili/23057217",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:81efd346-fdad-c64a-85c3-d2621671488b",
+                "assetId": "23057217",
+                "cpsUrn": "urn:bbc:content:assetUri:swahili/23057217",
+                "curie": "http://www.bbc.co.uk/asset/81efd346-fdad-c64a-85c3-d2621671488b"
+              },
+              "summary": "Mahujaji Waislamu kuvalishwa bangili za kielektroniki",
+              "timestamp": 1467384774000,
+              "language": "sw",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Swahili",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63493493",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/9A0F/test/_63493493_160529154036_hajj_624x351_getty.jpg",
+                "path": "/cpsdevpb/9A0F/test/_63493493_160529154036_hajj_624x351_getty.jpg",
+                "height": 351,
+                "width": 624,
+                "altText": "Mahujaji",
+                "caption": "Mahujaji",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:swahili/23057217",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "55e7d624-4d70-c84e-8957-436aef63df9f",
+            "rank": 9,
+            "count": 8831,
+            "urn": "urn:bbc:curie:asset:55e7d624-4d70-c84e-8957-436aef63df9f",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Weibo backtracks after 'gay ban' outrage",
+                "headline": "China's Sina Weibo backtracks from gay content ban after outrage"
+              },
+              "locators": {
+                "assetUri": "/swahili/23196820",
+                "cpsUrn": "urn:bbc:content:assetUri:swahili/23196820",
+                "curie": "http://www.bbc.co.uk/asset/55e7d624-4d70-c84e-8957-436aef63df9f",
+                "assetId": "23196820"
+              },
+              "summary": "The Chinese social media giant reverses a ban on gay content after a wave of defiant protests.",
+              "timestamp": 1523875517000,
+              "language": "sw",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63675344",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/AD45/test/_63675344_d422aed1-db13-49da-adf9-9a0105e3f1bd.jpg",
+                "path": "/cpsdevpb/AD45/test/_63675344_d422aed1-db13-49da-adf9-9a0105e3f1bd.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Activist Pu Chunmei (left) was one of several Sina Weibo users who protested against the ban",
+                "caption": "Activist Pu Chunmei (left) was one of several Sina Weibo users who protested against the ban",
+                "copyrightHolder": "Pu Chinmei",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:swahili/23196820",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "b281dcff-9205-e04a-ae4e-c5622a8c3eb7",
+            "rank": 10,
+            "count": 8745,
+            "urn": "urn:bbc:curie:asset:b281dcff-9205-e04a-ae4e-c5622a8c3eb7",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Speaker John Bercow criticised over Donald Trump comments",
+                "headline": "Speaker John Bercow is criticised for his comments over Donald Trump"
+              },
+              "locators": {
+                "assetUri": "/swahili/23100535",
+                "cpsUrn": "urn:bbc:content:assetUri:swahili/23100535",
+                "curie": "http://www.bbc.co.uk/asset/b281dcff-9205-e04a-ae4e-c5622a8c3eb7",
+                "assetId": "23100535"
+              },
+              "summary": "England's housing market is \"broken\", ministers have admitted, as they unveil plans to build more affordable homes.",
+              "timestamp": 1486465707000,
+              "language": "sw",
+              "indexImage": {
+                "id": "63528301",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/288E/test/_63528301_011400771-1.jpg",
+                "path": "/cpsdevpb/288E/test/_63528301_011400771-1.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Description of the picture",
+                "caption": "Caption goes underneath the picture",
+                "copyrightHolder": "Jason Merritt",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:swahili/23100535",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "1729b7f8-24ef-7040-a945-fd311034e6fc",
+            "rank": 11,
+            "count": 8608,
+            "urn": "urn:bbc:curie:asset:1729b7f8-24ef-7040-a945-fd311034e6fc",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Alpacas celebrate the beginning of spring",
+                "headline": "Alpacas celebrate the beginning of spring"
+              },
+              "locators": {
+                "assetUri": "/swahili/23124175",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:1729b7f8-24ef-7040-a945-fd311034e6fc",
+                "assetId": "23124175",
+                "cpsUrn": "urn:bbc:content:assetUri:swahili/23124175",
+                "curie": "http://www.bbc.co.uk/asset/1729b7f8-24ef-7040-a945-fd311034e6fc"
+              },
+              "summary": "Peru's alpacas mark the annual celebration of flowers",
+              "timestamp": 1494339403000,
+              "language": "sw",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Swahili",
+                "taggings": []
+              },
+              "id": "urn:bbc:ares::asset:swahili/23124175",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "37a67132-5b73-c94f-99be-407d678641be",
+            "rank": 12,
+            "count": 8521,
+            "urn": "urn:bbc:curie:asset:37a67132-5b73-c94f-99be-407d678641be",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Pressure grows on Saudi over jouro",
+                "headline": "Jamal Khashoggi: Pressure grows on Saudi over the disapperance"
+              },
+              "locators": {
+                "assetUri": "/swahili/23219749",
+                "cpsUrn": "urn:bbc:content:assetUri:swahili/23219749",
+                "curie": "http://www.bbc.co.uk/asset/37a67132-5b73-c94f-99be-407d678641be",
+                "assetId": "23219749"
+              },
+              "summary": "Pressure is growing on Saudi Arabia to explain the fate of journalist Jamal Khashoggi, as US Secretary of State Mike Pompeo met King Salman in Riyadh.",
+              "timestamp": 1539697862000,
+              "language": "sw",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63692540",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/11B1/test/_63692540_049990567-2.jpg",
+                "path": "/cpsdevpb/11B1/test/_63692540_049990567-2.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "US secretary of state and Saudi foreign minister trying to reach a decision.",
+                "caption": "US Secretary of State Michael R. Pompeo (L) meeting with Saudi Foreign Minister Adel al-Jubeir in Riyadh",
+                "copyrightHolder": "US DEPARTMENT OF STATE HANDOUT",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:swahili/23219749",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "c75debfa-59a1-1049-9a3c-180e008f360a",
+            "rank": 13,
+            "count": 8513,
+            "urn": "urn:bbc:curie:asset:c75debfa-59a1-1049-9a3c-180e008f360a",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "IOC yabadili kauli kuhusu wanariadha wa Urusi",
+                "headline": "IOC yabadili kauli kuhusu wanariadha wa Urusi Olimpiki"
+              },
+              "locators": {
+                "assetUri": "/swahili/habari-23063886",
+                "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-23063886",
+                "curie": "http://www.bbc.co.uk/asset/c75debfa-59a1-1049-9a3c-180e008f360a",
+                "assetId": "23063886"
+              },
+              "summary": "Kamati ya kimataifa ya olimpiki IOC imetangaza kuwa inaunda jopo la wanachama watatu ambao watakaotoa uamuzi wa mwisho wa wanariadha wagani wa Urusi watashiriki mashindano ya olimpiki ya Rio ambayo yataanza siku ya Ijumaa.",
+              "timestamp": 1469994885000,
+              "language": "sw",
+              "indexImage": {
+                "id": "63498274",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/B8B9/test/_63498274_turkeygetty.jpg",
+                "path": "/cpsdevpb/B8B9/test/_63498274_turkeygetty.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Wanajeshi Uturuki",
+                "caption": "Uturuki",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:swahili/habari-23063886",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "68f56388-5b0f-4248-845c-c501de47b44d",
+            "rank": 14,
+            "count": 8073,
+            "urn": "urn:bbc:curie:asset:68f56388-5b0f-4248-845c-c501de47b44d",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Singer Demi Lovato speaks out after suspected",
+                "headline": "Singer Demi Lovato speaks out after suspected overdose"
+              },
+              "locators": {
+                "assetUri": "/swahili/23210754",
+                "cpsUrn": "urn:bbc:content:assetUri:swahili/23210754",
+                "curie": "http://www.bbc.co.uk/asset/68f56388-5b0f-4248-845c-c501de47b44d",
+                "assetId": "23210754"
+              },
+              "summary": "US pop singer Demi Lovato has issued her first statement after she was taken to hospital for a suspected drug overdose last month.",
+              "timestamp": 1533551268000,
+              "language": "sw",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63685290",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/242A/test/_63685290_003620696-2.jpg",
+                "path": "/cpsdevpb/242A/test/_63685290_003620696-2.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Description of the image",
+                "caption": "goes underneath the image",
+                "copyrightHolder": "AFP Getty",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:swahili/23210754",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "a30d8429-c40c-8d40-8819-8a0e36a5411b",
+            "rank": 15,
+            "count": 8042,
+            "urn": "urn:bbc:curie:asset:a30d8429-c40c-8d40-8819-8a0e36a5411b",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Rwanda breastfeeding",
+                "headline": "Rwanda breastfeeding"
+              },
+              "locators": {
+                "assetUri": "/swahili/habari-23108767",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:a30d8429-c40c-8d40-8819-8a0e36a5411b",
+                "assetId": "23108767",
+                "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-23108767",
+                "curie": "http://www.bbc.co.uk/asset/a30d8429-c40c-8d40-8819-8a0e36a5411b"
+              },
+              "summary": "Rwanda's breast feeding campain",
+              "timestamp": 1489654480000,
+              "language": "sw",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Swahili",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63531112",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/5279/test/_63531112_mediaitem63531110.jpg",
+                "path": "/cpsdevpb/5279/test/_63531112_mediaitem63531110.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "JKKHHGGGD",
+                "caption": "HHGKKSHJ",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:swahili/habari-23108767",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "07aa7f0e-4e98-c447-b6c7-d6aa653de4e1",
+            "rank": 16,
+            "count": 7872,
+            "urn": "urn:bbc:curie:asset:07aa7f0e-4e98-c447-b6c7-d6aa653de4e1",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Miguna Miguna : Kenya opposition figure deported again",
+                "headline": "Miguna Miguna : Kenya opposition figure deported again extra for story"
+              },
+              "locators": {
+                "assetUri": "/swahili/habari-23194856",
+                "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-23194856",
+                "curie": "http://www.bbc.co.uk/asset/07aa7f0e-4e98-c447-b6c7-d6aa653de4e1",
+                "assetId": "23194856"
+              },
+              "summary": "Mr Miguna has written on Facebook that he has got up and found himself in Dubai and that he needs treatment.",
+              "timestamp": 1522311767000,
+              "language": "sw",
+              "indexImage": {
+                "id": "63663344",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/AD30/test/_63663344_hi045787254.jpg",
+                "path": "/cpsdevpb/AD30/test/_63663344_hi045787254.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "test",
+                "caption": "Test",
+                "copyrightHolder": "DANIEL IRUNGU",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:swahili/habari-23194856",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "ccebc0d0-411c-d249-a364-79b3f782b073",
+            "rank": 17,
+            "count": 7560,
+            "urn": "urn:bbc:curie:asset:ccebc0d0-411c-d249-a364-79b3f782b073",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Mahujaji Waislamu kuvalishwa bangili za kielektroniki 19",
+                "headline": "Mahujaji Waislamu kuvalishwa bangili za kielektroniki 19"
+              },
+              "locators": {
+                "assetUri": "/swahili/23057203",
+                "cpsUrn": "urn:bbc:content:assetUri:swahili/23057203",
+                "curie": "http://www.bbc.co.uk/asset/ccebc0d0-411c-d249-a364-79b3f782b073",
+                "assetId": "23057203"
+              },
+              "summary": "Mahujaji Waislamu kuvalishwa bangili za kielektroniki",
+              "timestamp": 1467384376000,
+              "language": "sw",
+              "indexImage": {
+                "id": "63493493",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/9A0F/test/_63493493_160529154036_hajj_624x351_getty.jpg",
+                "path": "/cpsdevpb/9A0F/test/_63493493_160529154036_hajj_624x351_getty.jpg",
+                "height": 351,
+                "width": 624,
+                "altText": "Mahujaji",
+                "caption": "Mahujaji",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:swahili/23057203",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "947588da-b4b0-ce4e-b686-309b65297863",
+            "rank": 18,
+            "count": 7524,
+            "urn": "urn:bbc:curie:asset:947588da-b4b0-ce4e-b686-309b65297863",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Capturing the environment",
+                "headline": "Capturing the environment in pictures"
+              },
+              "locators": {
+                "assetUri": "/swahili/habari-23108760",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:947588da-b4b0-ce4e-b686-309b65297863",
+                "assetId": "23108760",
+                "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-23108760",
+                "curie": "http://www.bbc.co.uk/asset/947588da-b4b0-ce4e-b686-309b65297863"
+              },
+              "summary": "Photographs entered for the Syngenta Photography Award on the theme of Grow-Conserve.",
+              "timestamp": 1489649677000,
+              "language": "sw",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Swahili",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63531014",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/A035/test/_63531014_karoki_bedanfv-rak17.jpg",
+                "path": "/cpsdevpb/A035/test/_63531014_karoki_bedanfv-rak17.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Yan Wang Preston, Forest #6, 2011YAN WANG PRESTON",
+                "caption": "Yan Wang Preston, Forest #6, 2011YAN WANG PRESTON",
+                "copyrightHolder": "Victah Sailer",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:swahili/habari-23108760",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "189b044a-dc24-7d47-abd9-cc179c67723c",
+            "rank": 19,
+            "count": 7506,
+            "urn": "urn:bbc:curie:asset:189b044a-dc24-7d47-abd9-cc179c67723c",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "AUSTRALIAN PM BACKS ANTI-RUSSIA ACTION",
+                "headline": "Spy poisoning: Australian PM condemns Russian 'recklessness' in UK"
+              },
+              "locators": {
+                "assetUri": "/swahili/23194256",
+                "cpsUrn": "urn:bbc:content:assetUri:swahili/23194256",
+                "curie": "http://www.bbc.co.uk/asset/189b044a-dc24-7d47-abd9-cc179c67723c",
+                "assetId": "23194256"
+              },
+              "summary": "More than 100 Russian diplomats from more than 20 countries were expelled in a co-ordinated response by the US and EU nations on Monday.",
+              "timestamp": 1522136503000,
+              "language": "sw",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63662744",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/AEB6/test/_63662744_pmmalcolm.jpg",
+                "path": "/cpsdevpb/AEB6/test/_63662744_pmmalcolm.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "PM TURNBULL ADDRESSING THE MEDIA",
+                "caption": "\"THIS IS ABOUT THE ACTION OF THE RUSSIAN GOVERNMENT\" SAYS PM TURNBULL",
+                "copyrightHolder": "EPA",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:swahili/23194256",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "4edcef33-bd7c-8445-aa17-b4b23b25ab8c",
+            "rank": 20,
+            "count": 7267,
+            "urn": "urn:bbc:curie:asset:4edcef33-bd7c-8445-aa17-b4b23b25ab8c",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Northern Ireland and England schools in global t",
+                "headline": "Northern Ireland and England schools in global top 10 for reading"
+              },
+              "locators": {
+                "assetUri": "/swahili/23169827",
+                "cpsUrn": "urn:bbc:content:assetUri:swahili/23169827",
+                "curie": "http://www.bbc.co.uk/asset/4edcef33-bd7c-8445-aa17-b4b23b25ab8c",
+                "assetId": "23169827"
+              },
+              "summary": "Northern Ireland and England are in the top 10 of the world's best primary school readers in global rankings.",
+              "timestamp": 1512473428000,
+              "language": "sw",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63604064",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/B3D8/test/_63604064_003620696-2.jpg",
+                "path": "/cpsdevpb/B3D8/test/_63604064_003620696-2.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Description of the image",
+                "caption": "the caption goes below the image",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:swahili/23169827",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   },
-  "relatedContent": {
-    "site": {
-      "subType": "site",
-      "name": "Swahili",
-      "uri": "/swahili",
-      "type": "simple"
-    },
-    "groups": []
-  }
+  "contentType": "application/json; charset=utf-8"
 }

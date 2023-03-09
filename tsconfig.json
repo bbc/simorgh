@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": "./",
     "target": "es6",
     "lib": ["dom", "dom.iterable", "esnext"], // List of library files to be included in the compilation
     "allowJs": true, // Allow JavaScript files to be compiled
@@ -19,7 +20,21 @@
     "noUnusedLocals": true, // Report errors on unused locals
     "noUnusedParameters": true, // Report errors on unused parameters
     "incremental": true, // Enable incremental compilation by reading/writing information from prior compilations to a file on disk
-    "noFallthroughCasesInSwitch": true // Report errors for fallthrough cases in switch statement
+    "noFallthroughCasesInSwitch": true, // Report errors for fallthrough cases in switch statement
+    "paths": {
+      "#app/*": ["src/app/*"],
+      "#contexts/*": ["src/app/contexts/*"],
+      "#components/*": ["src/app/legacy/components/*"],
+      "#containers/*": ["src/app/legacy/containers/*"],
+      "#data/*": ["data/*"],
+      "#hooks/*": ["src/app/hooks/*"],
+      "#lib/*": ["src/app/lib/*"],
+      "#psammead/*": ["src/app/legacy/psammead/*"],
+      "#models/*": ["src/app/models/*"],
+      "#testHelpers/*": ["./src/testHelpers/*"],
+      "#pages/*": ["src/app/pages/*"],
+      "#server/*": ["src/server/*"]
+    }
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "build", "src/app/legacy/**/*"]

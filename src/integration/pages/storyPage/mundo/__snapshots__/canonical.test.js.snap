@@ -2,7 +2,7 @@
 
 exports[`Canonical Story Page A11y I can see the skip to content link 1`] = `"Ir al contenido"`;
 
-exports[`Canonical Story Page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=62&amp;p=world%3A%3Amundo.world.story.51266689.page&amp;x2=[responsive]&amp;x3=[news-mundo]&amp;x4=[es]&amp;x7=[article]&amp;x8=[simorgh-nojs]&amp;x9=[Brexit%3A%2Bqu%C3%A9%2Bcambiar%C3%A1%2Bpara%2Bvisitar%2C%2Btrabajar%2By%2Bestudiar%2Ben%2BReino%2BUnido%2Btras%2Bla%2Bsalida%2Bdel%2Bpa%C3%ADs%2Bde%2Bla%2BUni%C3%B3n%2BEuropea%2B-%2BBBC%2BNews%2BMundo]&amp;x11=[2020-01-30T06%3A35%3A49.000Z]&amp;x12=[2020-01-31T23%3A08%3A08.000Z]&amp;x14=[0b0bfd5a-81b8-43fa-91fc-57f1fcd24487~2e91364c-5c77-4660-b76e-d76202785e64~6a73afa3-ea6b-45c1-80bb-49060b99f864~9a18805c-fb88-40ba-9763-bcc121d5d55c~ca170ae3-99c1-48db-9b67-2866f85e7342~f94293fd-ff83-400e-8bc0-89ec01930fce]&amp;x16=[WS%20-%20Give%20me%20perspective]&amp;x17=[Explainer]\\"/>"`;
+exports[`Canonical Story Page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=62&amp;p=world%3A%3Amundo.world.story.51266689.page&amp;x2=[responsive]&amp;x3=[news-mundo]&amp;x4=[es]&amp;x7=[article]&amp;x8=[simorgh-nojs]&amp;x9=[Brexit%3A%2520qu%C3%A9%2520cambiar%C3%A1%2520para%2520visitar%2C%2520trabajar%2520y%2520estudiar%2520en%2520Reino%2520Unido%2520tras%2520la%2520salida%2520del%2520pa%C3%ADs%2520de%2520la%2520Uni%C3%B3n%2520Europea%2520-%2520BBC%2520News%2520Mundo]&amp;x11=[2020-01-30T06%3A35%3A49.000Z]&amp;x12=[2020-01-31T23%3A08%3A08.000Z]&amp;x14=[0b0bfd5a-81b8-43fa-91fc-57f1fcd24487~2e91364c-5c77-4660-b76e-d76202785e64~6a73afa3-ea6b-45c1-80bb-49060b99f864~9a18805c-fb88-40ba-9763-bcc121d5d55c~ca170ae3-99c1-48db-9b67-2866f85e7342~f94293fd-ff83-400e-8bc0-89ec01930fce]&amp;x16=[WS%20-%20Give%20me%20perspective]&amp;x17=[Explainer]\\"/>"`;
 
 exports[`Canonical Story Page Apple iTunes App meta tag should match name and content 1`] = `
 Object {
@@ -76,7 +76,7 @@ Object {
 
 exports[`Canonical Story Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/mundo"`;
 
-exports[`Canonical Story Page Footer I can see the footer copyright and external linking text 1`] = `"© 2022 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
+exports[`Canonical Story Page Footer I can see the footer copyright and external linking text 1`] = `"© 2023 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
 
 exports[`Canonical Story Page Header I can see the branding 1`] = `"BBC News, Mundo"`;
 
@@ -103,61 +103,54 @@ Object {
 
 exports[`Canonical Story Page Header Navigation link should match text and url 4`] = `
 Object {
-  "text": "Qatar 2022",
-  "url": "/mundo/topics/c36v5eq58ngt",
-}
-`;
-
-exports[`Canonical Story Page Header Navigation link should match text and url 5`] = `
-Object {
   "text": "Hay Festival",
   "url": "/mundo/noticias-36795069",
 }
 `;
 
-exports[`Canonical Story Page Header Navigation link should match text and url 6`] = `
+exports[`Canonical Story Page Header Navigation link should match text and url 5`] = `
 Object {
   "text": "Economía",
   "url": "/mundo/topics/c06gq9v4xp3t",
 }
 `;
 
-exports[`Canonical Story Page Header Navigation link should match text and url 7`] = `
+exports[`Canonical Story Page Header Navigation link should match text and url 6`] = `
 Object {
   "text": "Ciencia",
   "url": "/mundo/topics/ckdxnw959n7t",
 }
 `;
 
-exports[`Canonical Story Page Header Navigation link should match text and url 8`] = `
+exports[`Canonical Story Page Header Navigation link should match text and url 7`] = `
 Object {
   "text": "Salud",
   "url": "/mundo/topics/cpzd498zkxgt",
 }
 `;
 
-exports[`Canonical Story Page Header Navigation link should match text and url 9`] = `
+exports[`Canonical Story Page Header Navigation link should match text and url 8`] = `
 Object {
   "text": "Cultura",
   "url": "/mundo/topics/c2dwq9zyv4yt",
 }
 `;
 
-exports[`Canonical Story Page Header Navigation link should match text and url 10`] = `
+exports[`Canonical Story Page Header Navigation link should match text and url 9`] = `
 Object {
   "text": "Tecnología",
   "url": "/mundo/topics/cyx5krnw38vt",
 }
 `;
 
-exports[`Canonical Story Page Header Navigation link should match text and url 11`] = `
+exports[`Canonical Story Page Header Navigation link should match text and url 10`] = `
 Object {
   "text": "Centroamérica Cuenta",
   "url": "/mundo/noticias-43826245",
 }
 `;
 
-exports[`Canonical Story Page Header Navigation link should match text and url 12`] = `
+exports[`Canonical Story Page Header Navigation link should match text and url 11`] = `
 Object {
   "text": "BBC Extra",
   "url": "/mundo/noticias-48908206",
@@ -255,8 +248,6 @@ Object {
 exports[`Canonical Story Page SEO Canonical link 1`] = `"http://localhost:7080/mundo/noticias-internacional-51266689"`;
 
 exports[`Canonical Story Page SEO Dir attribute 1`] = `"ltr"`;
-
-exports[`Canonical Story Page SEO FB admins 1`] = `"100004154058350"`;
 
 exports[`Canonical Story Page SEO FB app ID 1`] = `"1609039196070050"`;
 
