@@ -5,7 +5,6 @@ import {
 } from './fixtureData';
 import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
 import Component from '.';
-import ThemeProvider from '../../../components/ThemeProvider';
 
 export default {
   title: 'Containers/Image with Placeholder',
@@ -16,22 +15,9 @@ export default {
 };
 
 // Canonical
-export const DefaultExample = () => (
-  <ThemeProvider service="news">
-    <ImageWithPlaceholder />
-  </ThemeProvider>
-);
-
-export const WithALazyLoadedImage = () => (
-  <ThemeProvider service="news">
-    <LazyLoadImageWithPlaceholder />
-  </ThemeProvider>
-);
+export const DefaultExample = ImageWithPlaceholder;
+export const WithALazyLoadedImage = LazyLoadImageWithPlaceholder;
 
 // Amp
-export const AmpExample = () => (
-  <ThemeProvider service="news">
-    <AmpImageWithPlaceholder />
-  </ThemeProvider>
-);
+export const AmpExample = AmpImageWithPlaceholder;
 AmpExample.decorators = [AmpDecorator];
