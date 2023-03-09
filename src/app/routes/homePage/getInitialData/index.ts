@@ -1,20 +1,13 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import { Agent } from 'https';
-import pipe from 'ramda/src/pipe';
 import Url from 'url-parse';
 import nodeLogger from '../../../lib/logger.node';
-import { getUrlPath } from '../../../lib/utilities/urlParser';
 import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
 import fetchPageData from '../../utils/fetchPageData';
 import { Services } from '../../../models/types/global';
-import HOME_PAGE_TEST_CONFIG from './test-config';
+import HOME_PAGE_CONFIG from './page-config';
 
 const logger = nodeLogger(__filename);
-
-const removeAmp = (path: string) => path.split('.')[0];
-const popId = (path: string) => path.split('/').pop();
-
-const getId = (pageType: string) => pipe(getUrlPath, removeAmp, popId);
 
 const getEnvironment = (pathname: string) => {
   if (pathname.includes('renderer_env=test')) {
@@ -45,21 +38,16 @@ type Props = {
   pageType: 'homePage';
 };
 
-export default async ({
-  getAgent,
-  service,
-  pageType,
-  path: pathname,
-}: Props) => {
+export default async ({ getAgent, service, path: pathname }: Props) => {
   try {
     const env = getEnvironment(pathname);
     const isLocal = !env || env === 'local';
-    const idsForService = HOME_PAGE_TEST_CONFIG[service];
+    const idsForService = HOME_PAGE_CONFIG[service];
 
     const agent = !isLocal ? await getAgent() : null;
     const id = env === 'live' ? idsForService.live : idsForService.test;
 
-    // if (!id) throw handleError('Home ID is invalid', 500);
+    if (!id) throw handleError('Home ID is invalid', 500);
 
     let fetchUrl = Url(process.env.BFF_PATH as string).set('query', {
       id,
@@ -70,9 +58,7 @@ export default async ({
     const optHeaders = { 'ctx-service-env': env };
 
     if (isLocal) {
-      // if (pageType === 'homePage') {
       fetchUrl = Url(`/${service}/tipohome`);
-      // }
     }
 
     // @ts-ignore - Ignore fetchPageData argument types
@@ -84,21 +70,13 @@ export default async ({
 
     const { data } = json;
 
-    const imageData = data.imageData || null;
-
     return {
       status,
       pageData: {
         id,
         title: data.title,
-        description: data.description,
-        imageData,
+        pageType: 'home',
         curations: data.curations,
-        activePage: data.activePage || 1,
-        pageCount: data.pageCount,
-        metadata: {
-          type: 'Home',
-        },
       },
     };
   } catch ({ message, status }) {
