@@ -46,10 +46,11 @@ jobs:
           https://api.github.com/repos/${{ github.repository }}/commits/latest \
           --fail \
           | jq -r '.commit.message' \
-          | sed 's/#[0-9]\{1,\}/\<a href="https:\/\/github.com\/bbc\/simorgh\/pull\/10668\"\>&\<\/a\>/' \
+          | sed 's/#[0-9]\{1,\}/\<a href="https:\/\/github.com\/bbc\/simorgh\/pull\/&\"\>&\<\/a\>/' \
           | sed 's/pull\/\#\{1,\}/pull\//' \
           | sed -e 's/"/\\"/g' -e 's/$/<br>/g' -e "s/'/%27/g" \
           | tr '\n' ' ' \
+          | tr '\r' ' ' \
           )
           
           echo $NEW_RELEASE_MESSSAGE
