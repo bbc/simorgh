@@ -54,16 +54,17 @@ export default async ({
   try {
     const env = getEnvironment(pathname);
     const isLocal = !env || env === 'local';
+    const idsForService = HOME_PAGE_TEST_CONFIG[service];
 
     const agent = !isLocal ? await getAgent() : null;
-    const id = HOME_PAGE_TEST_CONFIG[service];
+    const id = env === 'live' ? idsForService.live : idsForService.test;
 
     // if (!id) throw handleError('Home ID is invalid', 500);
 
     let fetchUrl = Url(process.env.BFF_PATH as string).set('query', {
       id,
       service,
-      pageType,
+      pageType: 'home',
     });
 
     const optHeaders = { 'ctx-service-env': env };

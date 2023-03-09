@@ -1,5 +1,9 @@
-const HOME_PAGE_TEST_CONFIG: { [key: string]: string } = {
-  kyrgyz: 'cm7682qz7v1t',
-};
+const HOME_PAGE_TEST_CONFIG: { [key: string]: { test: string; live: string } } =
+  {
+    kyrgyz: {
+      test: 'cm7682qz7v1t',
+      live: 'crg7kj2e52nt',
+    },
+  };
 
 export default HOME_PAGE_TEST_CONFIG;
