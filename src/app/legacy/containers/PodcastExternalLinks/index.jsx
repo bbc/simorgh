@@ -20,6 +20,7 @@ import { getGreatPrimer } from '#psammead/gel-foundations/src/typography';
 import useViewTracker from '#hooks/useViewTracker';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 
+import idSanitiser from '#app/lib/utilities/idSanitiser';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import Link from './Link';
 
@@ -159,9 +160,14 @@ const PodcastExternalLinks = ({ brandTitle, links }) => {
               <PodcastExternalLink
                 linkText={linkText}
                 linkUrl={linkUrl}
-                aria={{ 'aria-labelledby': `externalLinkId-${linkText}` }}
+                aria={{
+                  'aria-labelledby': `externalLinkId-${idSanitiser(linkText)}`,
+                }}
               >
-                <span role="text" id={`externalLinkId-${linkText}`}>
+                <span
+                  role="text"
+                  id={`externalLinkId-${idSanitiser(linkText)}`}
+                >
                   <span lang={ExternalLinkTextLangs[linkText] || lang}>
                     {linkText}
                   </span>
