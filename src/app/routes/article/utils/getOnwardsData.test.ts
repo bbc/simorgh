@@ -39,6 +39,20 @@ describe('WSOJ data', () => {
 
     expect(additionalPageData).toEqual(expectedOutput);
   });
+
+  it('should NOT return recommendations data for sfv articles', async () => {
+    const expectedOutput = {};
+
+    const additionalPageData = await getOnwardsPageData({
+      pathname: '/kyrgyz/articles/c0000000000o.amp?renderer_env=live',
+      service: 'kyrgyz',
+      isAdvertising: true,
+      isArticleSfv: true,
+      agent,
+    });
+
+    expect(additionalPageData).toEqual(expectedOutput);
+  });
 });
 
 describe('Optimizely Experiments', () => {
