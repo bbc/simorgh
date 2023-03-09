@@ -125,8 +125,18 @@ const PodcastExternalLinks = ({ brandTitle, links }) => {
     ['media', 'podcastExternalLinks'],
     translations,
   );
+  const downloadLinkTranslation = pathOr(
+    'Download',
+    ['media', 'download'],
+    translations,
+  );
   const hasMultipleLinks = links.length > 1;
   const firstLink = links[0];
+  const lastLink = links[links.length - 1];
+
+  if (lastLink.linkType === 'download') {
+    lastLink.linkText = downloadLinkTranslation;
+  }
 
   return (
     <Wrapper
