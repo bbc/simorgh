@@ -47,11 +47,8 @@ export const getPodcastExternalLinks = async (
     if (!brandPid) return [];
     let downloadLink = [];
     const links = pathOr([], ['default', variant, brandPid], linkData);
-    if (service) {
-      downloadLink = getDownloadLink(versionId);
-      return [...links, getRssLink(brandPid), downloadLink];
-    }
-    return [...links, getRssLink(brandPid)];
+    downloadLink = getDownloadLink(versionId);
+    return [...links, getRssLink(brandPid), downloadLink];
   } catch (err) {
     logger.warn(PODCAST_SERVICE_MISSING, {
       service,
