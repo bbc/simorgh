@@ -93,12 +93,14 @@ const getOnwardsPageData = async ({
   service,
   variant,
   isAdvertising,
+  isArticleSfv = false,
   agent,
 }: {
   pathname: string;
   service: string;
   variant?: string;
   isAdvertising: boolean;
+  isArticleSfv?: boolean;
   agent: Agent | null;
 }) => {
   const recommendationsAllowed = await hasArticleRecommendations(
@@ -107,7 +109,7 @@ const getOnwardsPageData = async ({
     variant,
   );
 
-  if (!recommendationsAllowed || agent == null) return {};
+  if (!recommendationsAllowed || agent == null || isArticleSfv) return {};
 
   const removeAmpAndRenderSuffixes = /(\.|\?).*/g;
   const urlsToFetch = await getRecommendationsURLs(
