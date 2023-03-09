@@ -50,6 +50,7 @@ jobs:
           | sed 's/pull\/\#\{1,\}/pull\//' \
           | sed -e 's/"/\\"/g' -e 's/$/<br>/g' -e "s/'/%27/g" \
           | tr '\n' ' ' \
+          | tr '\r' ' ' \
           )
           
           echo $NEW_RELEASE_MESSSAGE
