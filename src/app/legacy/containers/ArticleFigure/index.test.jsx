@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react';
+import { render } from '../../../components/react-testing-library-with-providers';
 import {
   FigureImage,
   FigureAmpImage,
