@@ -13,7 +13,7 @@ import Image from '../Image';
 import bylineExtractor from './utilities/bylineExtractor';
 
 type Props = {
-  blocks: any;
+  blocks: object[];
 };
 
 const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {

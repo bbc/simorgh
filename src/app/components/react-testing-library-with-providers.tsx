@@ -15,7 +15,7 @@ jest.mock('./ThemeProvider');
 interface Props {
   children: JSX.Element | JSX.Element[];
   isAmp?: boolean;
-  pageData?: any;
+  pageData?: object;
   pageType?: PageTypes;
   pathname?: string;
   service?: Services;
