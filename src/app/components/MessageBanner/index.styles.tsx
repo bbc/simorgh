@@ -34,7 +34,7 @@ const styles = {
     css({
       paddingTop: '1.5rem',
       paddingBottom: '0.5rem',
-      color: palette.WHITE,
+      color: palette.SPORT_YELLOW,
     }),
   paragraph: ({ palette }: Theme) =>
     css({
