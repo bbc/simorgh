@@ -73,6 +73,7 @@ jobs:
           projectToken: ${{ secrets.CHROMATIC_APP_CODE }}
           buildScriptName: 'build:storybook'
           exitOnceUploaded: true
+          onlyChanged: true
 
       - name: Chromatic UI Tests - Latest
         uses: chromaui/action@v1
@@ -82,6 +83,7 @@ jobs:
           projectToken: ${{ secrets.CHROMATIC_APP_CODE }}
           buildScriptName: 'build:storybook'
           exitOnceUploaded: true
+          onlyChanged: true
           autoAcceptChanges: true # Auto accept changes to accept a new baseline when merging to latest
 
       - name: Duplicate Dependency Checker
