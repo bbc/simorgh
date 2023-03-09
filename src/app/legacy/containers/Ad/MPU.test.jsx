@@ -1,10 +1,12 @@
 import React from 'react';
-import { act } from '@testing-library/react';
 import { StaticRouter } from 'react-router-dom';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { FEATURE_INDEX_PAGE } from '#app/routes/utils/pageTypes';
-import { render } from '../../../components/react-testing-library-with-providers';
+import {
+  render,
+  act,
+} from '../../../components/react-testing-library-with-providers';
 import MPU from './MPU';
 
 const toggles = {

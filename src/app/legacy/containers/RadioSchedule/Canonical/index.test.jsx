@@ -1,10 +1,12 @@
 import React from 'react';
 import fetchMock from 'fetch-mock';
-import { act } from '@testing-library/react';
 import arabicRadioScheduleData from '#data/arabic/bbc_arabic_radio/schedule.json';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
-import { render } from '../../../../components/react-testing-library-with-providers';
+import {
+  render,
+  act,
+} from '../../../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import CanonicalRadioSchedule from '.';
 import processRadioSchedule from '../utilities/processRadioSchedule';

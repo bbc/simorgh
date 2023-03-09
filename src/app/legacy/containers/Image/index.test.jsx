@@ -1,11 +1,14 @@
 import React from 'react';
-import { screen, waitFor } from '@testing-library/react';
 import {
   isNull,
   suppressPropWarnings,
 } from '#psammead/psammead-test-helpers/src';
 import { blockContainingText, blockArrayModel } from '#models/blocks';
-import { render } from '../../../components/react-testing-library-with-providers';
+import {
+  render,
+  screen,
+  waitFor,
+} from '../../../components/react-testing-library-with-providers';
 import ImageContainer from './index';
 
 describe('Image', () => {

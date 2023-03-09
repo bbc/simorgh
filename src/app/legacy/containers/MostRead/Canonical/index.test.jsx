@@ -1,5 +1,4 @@
 import React from 'react';
-import { act } from '@testing-library/react';
 import fetchMock from 'fetch-mock';
 import nodeLogger from '#testHelpers/loggerMock';
 import arabicMostReadData from '#data/arabic/mostRead';
@@ -14,7 +13,10 @@ import {
 } from '#lib/logger.const';
 import * as viewTracking from '#hooks/useViewTracker';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
-import { render } from '../../../../components/react-testing-library-with-providers';
+import {
+  render,
+  act,
+} from '../../../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import CanonicalMostRead from '.';
 import {
