@@ -16,6 +16,7 @@ const bffArticleJson = {
       content: {},
       metadata: {
         allowAdvertising: true,
+        consumableAsSFV: true,
       },
       promo: {},
       relatedContent: {},
@@ -134,6 +135,7 @@ describe('Articles - BFF Fetching', () => {
       pathname: '/kyrgyz/articles/c0000000000o.amp?renderer_env=live',
       service: 'kyrgyz',
       isAdvertising: true,
+      isArticleSfv: true,
       agent,
       variant: undefined,
     });
