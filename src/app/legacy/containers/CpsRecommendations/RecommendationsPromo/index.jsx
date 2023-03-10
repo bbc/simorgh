@@ -11,12 +11,6 @@ import {
 } from '#psammead/gel-foundations/src/breakpoints';
 import { getSerifMedium } from '#psammead/psammead-styles/src/font-styles';
 import { getPica } from '#psammead/gel-foundations/src/typography';
-import {
-  C_METAL,
-  C_GREY_2,
-  C_GREY_10,
-  C_GHOST,
-} from '#psammead/psammead-styles/src/colours';
 import { shape, string, oneOfType } from 'prop-types';
 import { optimoStoryItem, storyItem } from '#models/propTypes/storyItem';
 
@@ -32,7 +26,10 @@ const StyledPromoWrapper = styled.div`
   position: relative;
   padding: ${GEL_SPACING};
   margin-top: ${GEL_SPACING};
-  background-color: ${props => (props.isArticlePage ? C_GHOST : C_GREY_2)};
+  background-color: ${props =>
+    props.isArticlePage
+      ? props.theme.palette.GHOST
+      : props.theme.palette.GREY_2};
 `;
 
 const ImageWrapper = styled.div`
@@ -68,7 +65,7 @@ const TextWrapper = styled.div`
 
 const Link = styled.a`
   position: static;
-  color: ${C_GREY_10};
+  color: ${props => props.theme.palette.GREY_10};
   text-decoration: none;
   overflow-wrap: break-word;
 
@@ -90,14 +87,14 @@ const Link = styled.a`
   }
 
   &:visited {
-    color: ${C_METAL};
+    color: ${props => props.theme.palette.METAL};
   }
 `;
 
 const StyledHeadline = styled.div`
   ${({ service }) => getSerifMedium(service)}
   ${({ script }) => getPica(script)}
-  color: ${C_GREY_10};
+  color: ${props => props.theme.palette.GREY_10};
   margin: 0;
   height: 100%;
   display: flex;
