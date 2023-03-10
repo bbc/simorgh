@@ -55,5 +55,5 @@ jobs:
       - name: Build Simorgh - Next.JS app
         run: |
           echo ${GITHUB_REF##*/}
-          cd ./ws-nextjs-app
+          working-directory: ./ws-nextjs-app
           yarn build
