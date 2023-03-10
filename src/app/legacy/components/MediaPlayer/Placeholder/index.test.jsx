@@ -1,6 +1,9 @@
 import React from 'react';
-import { fireEvent, getByText } from '@testing-library/react';
-import { render } from '../../../../components/react-testing-library-with-providers';
+import {
+  render,
+  fireEvent,
+  getByText,
+} from '../../../../components/react-testing-library-with-providers';
 import Placeholder from '.';
 
 describe('Media Player: Placeholder', () => {
