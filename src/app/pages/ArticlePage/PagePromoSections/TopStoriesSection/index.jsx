@@ -3,7 +3,6 @@ import { arrayOf, shape } from 'prop-types';
 import { storyItem } from '#models/propTypes/storyItem';
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
-import { C_GREY_2 } from '#psammead/psammead-styles/src/colours';
 import isEmpty from 'ramda/src/isEmpty';
 import useViewTracker from '#hooks/useViewTracker';
 import { OptimizelyContext } from '@optimizely/react-sdk';
@@ -81,7 +80,6 @@ const TopStoriesSection = ({ content }) => {
       <StyledSectionLabel
         labelId={LABEL_ID}
         columnType="secondary"
-        backgroundColor={C_GREY_2}
         script={script}
         service={service}
       >
