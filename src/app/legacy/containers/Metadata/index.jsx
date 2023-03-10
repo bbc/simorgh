@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { string, node, shape, arrayOf, bool, number } from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { RequestContext } from '#contexts/RequestContext';
+import { useTheme } from '@emotion/react';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import {
   getIconAssetUrl,
@@ -69,11 +70,13 @@ const MetadataContainer = ({
     dir,
     locale,
     isoLang,
-    themeColor,
     twitterCreator,
     twitterSite,
     iTunesAppId,
   } = useContext(ServiceContext);
+  const {
+    palette: { BRAND_BACKGROUND },
+  } = useTheme();
   const appleTouchIcon = getAppleTouchUrl(service);
   const isEnglishService = ENGLISH_SERVICES.includes(service);
   const alternateLinksEnglishSites = [
@@ -117,7 +120,7 @@ const MetadataContainer = ({
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta charSet="utf-8" />
       <meta name="robots" content="noodp, noydir, max-image-preview:large" />
-      <meta name="theme-color" content={themeColor} />
+      <meta name="theme-color" content={BRAND_BACKGROUND} />
       <meta
         name="viewport"
         content="width=device-width, initial-scale=1, minimum-scale=1"
@@ -140,7 +143,7 @@ const MetadataContainer = ({
       <meta name="description" content={description} />
       <meta property="fb:app_id" content={FACEBOOK_APP_ID} />
       <meta name="mobile-web-app-capable" content="yes" />
-      <meta name="msapplication-TileColor" content={themeColor} />
+      <meta name="msapplication-TileColor" content={BRAND_BACKGROUND} />
       <meta
         name="msapplication-TileImage"
         content={getIconAssetUrl(service, '144x144')}

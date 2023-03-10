@@ -11,7 +11,7 @@ jobs:
         node-version: [16.x]
     env:
       CI: true
-
+    
     steps:
       - uses: actions/checkout@v3
         with:
@@ -25,25 +25,36 @@ jobs:
       - name: Get New Release TagName
         id: newReleaseTagName
         run: |
-          NEW_RELEASE_TAG_NAME = $(curl \
-          -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
-          -H "Accept: application/vnd.github+json" \
-          -H "X-GitHub-Api-Version: 2022-11-28" \
-          https://api.github.com/repos/bbc/${{ github.repository }}/releases/latest \
+          JSON_RESPONSE=$(curl \
+          -H 'Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
+          -H 'Accept: application/vnd.github+json' \
+          -H 'X-GitHub-Api-Version: 2022-11-28' \
+          https://api.github.com/repos/${{ github.repository }}/releases/latest \
           --fail \
           | jq -r '.tag_name' \
-          | awk 'BEGIN{FS=OFS="."} {$2+=1} 1)' >> $GITHUB_OUTPUT
+          | awk 'BEGIN{FS=OFS="."} {$2+=1} 1')
+          echo $JSON_RESPONSE
+          echo "NEW_RELEASE_TAG_NAME=$JSON_RESPONSE" >> $GITHUB_OUTPUT
 
       - name: Get New Release Commit Message
         id: newReleaseMessage
         run: |
-          NEW_RELEASE_MESSSAGE = $(curl \
-          -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
-          -H "Accept: application/vnd.github+json" \
-          -H "X-GitHub-Api-Version: 2022-11-28" \
-          https://api.github.com/repos/bbc/${{ github.repository }}/commits/latest \
+          NEW_RELEASE_MESSSAGE=$(curl \
+          -H 'Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
+          -H 'Accept: application/vnd.github+json' \
+          -H 'X-GitHub-Api-Version: 2022-11-28' \
+          https://api.github.com/repos/${{ github.repository }}/commits/latest \
           --fail \
-          | jq -r '.commit.message') >> $GITHUB_OUTPUT
+          | jq -r '.commit.message' \
+          | sed 's/#[0-9]\{1,\}/\<a href="https:\/\/github.com\/bbc\/simorgh\/pull\/&\"\>&\<\/a\>/' \
+          | sed 's/pull\/\#\{1,\}/pull\//' \
+          | sed -e 's/"/\\"/g' -e 's/$/<br>/g' -e "s/'/%27/g" \
+          | tr '\n' ' ' \
+          | tr '\r' ' ' \
+          )
+          
+          echo $NEW_RELEASE_MESSSAGE
+          echo "NEW_RELEASE_MESSSAGE=$NEW_RELEASE_MESSSAGE" >> $GITHUB_OUTPUT
 
       - name: Publish 
         run: |
@@ -52,7 +63,7 @@ jobs:
           -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
           -H "Accept: application/vnd.github+json" \
           -H "X-GitHub-Api-Version: 2022-11-28" \
-          https://api.github.com/repos/bbc/${{ github.repository }}/releases \
+          https://api.github.com/repos/${{ github.repository }}/releases \
           -d '{
             "tag_name": "${{ steps.newReleaseTagName.outputs.NEW_RELEASE_TAG_NAME }}", 
             "target_commitish": "latest", 

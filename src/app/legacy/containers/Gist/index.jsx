@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
+import { useTheme } from '@emotion/react';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING_DBL,
@@ -8,11 +9,6 @@ import {
   GEL_SPACING_TRPL,
   GEL_SPACING_HLF_TRPL,
 } from '#psammead/gel-foundations/src/spacings';
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_GREY_6,
-} from '#psammead/psammead-styles/src/colours';
 import {
   getSansRegular,
   getSansBold,
@@ -30,9 +26,9 @@ import { ServiceContext } from '../../../contexts/ServiceContext';
 import UnorderedList from '../BulletedList';
 
 const GistWrapper = styled.div`
-  color: ${C_GREY_6};
-  border-top: ${GEL_SPACING_HLF} solid ${C_POSTBOX};
-  background-color: ${C_WHITE};
+  color: ${props => props.theme.palette.GREY_6};
+  border-top: ${GEL_SPACING_HLF} solid ${props => props.theme.palette.POSTBOX};
+  background-color: ${props => props.theme.palette.WHITE};
   ${({ dir }) =>
     dir === 'ltr'
       ? `padding: ${GEL_SPACING_TRPL} ${GEL_SPACING_TRPL} 0 ${GEL_SPACING_DBL};`
@@ -76,7 +72,7 @@ const GistList = styled(UnorderedList)`
   }
 `;
 
-const componentsToRender = (service, script, dir) => ({
+const componentsToRender = (service, script, dir, bulletPointColour) => ({
   text: props => (
     <Text
       {...props}
@@ -88,7 +84,7 @@ const componentsToRender = (service, script, dir) => ({
             script={script}
             direction={dir === 'rtl' ? 'right' : 'left'}
             bulletPointShape="square"
-            bulletPointColour={C_GREY_6}
+            bulletPointColour={bulletPointColour}
           />
         ),
       }}
@@ -98,6 +94,9 @@ const componentsToRender = (service, script, dir) => ({
 
 const Gist = ({ blocks }) => {
   const { service, script, dir, translations } = useContext(ServiceContext);
+  const {
+    palette: { GREY_6: bulletPointColour },
+  } = useTheme();
   const gistTitle = pathOr('At a glance', ['gist'], translations);
   return (
     <GridItemLarge role="region" aria-labelledby="gist-title">
@@ -107,7 +106,12 @@ const Gist = ({ blocks }) => {
         </GistIntroduction>
         <Blocks
           blocks={blocks}
-          componentsToRender={componentsToRender(service, script, dir)}
+          componentsToRender={componentsToRender(
+            service,
+            script,
+            dir,
+            bulletPointColour,
+          )}
         />
       </GistWrapper>
     </GridItemLarge>

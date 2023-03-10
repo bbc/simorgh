@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "b5a9e13c",
+              "id": "ec7ae47b",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "544764f3",
+                    "id": "e3c346a9",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "a84c4e46",
+                          "id": "96f74bbd",
                           "type": "paragraph",
                           "model": {
                             "text": "English with Persian Block",
                             "blocks": [
                               {
-                                "id": "ed9aa005",
+                                "id": "07a4eb21",
                                 "type": "fragment",
                                 "model": {
                                   "text": "English with Persian Block",
@@ -56,7 +56,7 @@
               ]
             },
             {
-              "id": "1394e0b5",
+              "id": "26523fe7",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562930939502,
@@ -67,18 +67,18 @@
               ]
             },
             {
-              "id": "db8845ae",
+              "id": "20299d1f",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "cfb2c2cc",
+                    "id": "1659523a",
                     "type": "paragraph",
                     "model": {
                       "text": "I am a text block written in English. Below this is a block with the language 'Farsi' containing text 'روباه چه میگوید'. ",
                       "blocks": [
                         {
-                          "id": "6135c389",
+                          "id": "49235484",
                           "type": "fragment",
                           "model": {
                             "text": "I am a text block written in English. Below this is a block with the language 'Farsi' containing text 'روباه چه میگوید'. ",
@@ -98,19 +98,19 @@
                     ]
                   },
                   {
-                    "id": "deba2583",
+                    "id": "e20b0387",
                     "type": "paragraph",
                     "model": {
                       "text": "\n202Bروباه چه میگوید\n202C",
                       "blocks": [
                         {
-                          "id": "c4aae10c",
+                          "id": "bf740fd1",
                           "type": "inline",
                           "model": {
                             "text": "روباه چه میگوید",
                             "blocks": [
                               {
-                                "id": "d3f71541",
+                                "id": "8bba294b",
                                 "type": "fragment",
                                 "model": {
                                   "text": "روباه چه میگوید",
@@ -140,13 +140,13 @@
                     ]
                   },
                   {
-                    "id": "8916e1c9",
+                    "id": "71ec6ec3",
                     "type": "paragraph",
                     "model": {
                       "text": "Below is a link in language 'Farsi' with the title 'چیسربرگر'",
                       "blocks": [
                         {
-                          "id": "ee4d875b",
+                          "id": "bb806a8b",
                           "type": "fragment",
                           "model": {
                             "text": "Below is a link in language 'Farsi' with the title 'چیسربرگر'",
@@ -166,25 +166,25 @@
                     ]
                   },
                   {
-                    "id": "5f01d7e9",
+                    "id": "b8e353b5",
                     "type": "paragraph",
                     "model": {
                       "text": "\n202Bچیسربرگر\n202C",
                       "blocks": [
                         {
-                          "id": "be4decd5",
+                          "id": "bbd2ba8a",
                           "type": "inline",
                           "model": {
                             "text": "چیسربرگر",
                             "blocks": [
                               {
-                                "id": "953e425b",
+                                "id": "a9a425e0",
                                 "type": "urlLink",
                                 "model": {
                                   "text": "چیسربرگر",
                                   "blocks": [
                                     {
-                                      "id": "c306a29b",
+                                      "id": "b91cc96f",
                                       "type": "fragment",
                                       "model": {
                                         "text": "چیسربرگر",
@@ -232,7 +232,7 @@
               ]
             },
             {
-              "id": "2d82acf8",
+              "id": "fcd684cd",
               "type": "mpu",
               "model": {},
               "position": [
@@ -240,18 +240,18 @@
               ]
             },
             {
-              "id": "fd60f3e8",
+              "id": "c2632e40",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "ec83783e",
+                    "id": "6d5ad451",
                     "type": "paragraph",
                     "model": {
                       "text": "🤷",
                       "blocks": [
                         {
-                          "id": "9920be5a",
+                          "id": "cca1b0ac",
                           "type": "fragment",
                           "model": {
                             "text": "🤷",
@@ -275,6 +275,16 @@
               "position": [
                 5
               ]
+            },
+            {
+              "id": "9c207464",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                6
+              ]
             }
           ]
         }
@@ -282,14 +292,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:cv7yn5n25rno",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cv7yn5n25rno"
+          "optimoUrn": "urn:bbc:optimo:asset:cv7yn5n25rno",
+          "canonicalUrl": "https://www.bbc.com/news/articles/cv7yn5n25rno"
         },
         "type": "article",
         "createdBy": "News",
         "language": "en-gb",
         "firstPublished": 1562930939502,
         "lastPublished": 1563358511643,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:cv7yn5n25rno",
           "producer": "News",
@@ -300,7 +310,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
           "taggings": []
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -312,12 +321,9 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "testing links"
-        },
-        "images": {},
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -357,6 +363,7 @@
             "altText": "Liz Truss outside Number 10",
             "copyrightHolder": "Lisa White",
             "originCode": "cpsdevpb",
+            "allowSyndication": false,
             "type": "image"
           },
           "options": {
@@ -400,6 +407,7 @@
             "caption": "Angela Lansbury",
             "copyrightHolder": "BBC",
             "originCode": "cpsdevpb",
+            "allowSyndication": true,
             "type": "image"
           },
           "options": {
@@ -418,16 +426,17 @@
           "type": "cps"
         },
         {
-          "name": "How Spain looked on as dozens were crushed to death at its border",
+          "name": "15 homes, three survivors - how the quake wiped out one Turkish apartment block",
           "indexImage": {
-            "id": "63957134",
+            "id": "63977455",
             "subType": "index",
-            "href": "http://b.files.bbci.co.uk/A8A7/test/_63957134_camera-super_promo_new_safe_zone.jpg",
-            "path": "/cpsdevpb/A8A7/test/_63957134_camera-super_promo_new_safe_zone.jpg",
+            "href": "http://b.files.bbci.co.uk/D8B5/test/_63977455_mediaitem128597908.jpg",
+            "path": "/cpsdevpb/D8B5/test/_63977455_mediaitem128597908.jpg",
             "height": 549,
             "width": 976,
-            "altText": "CCTV cam",
+            "altText": "Ceyda",
             "copyrightHolder": "BBC",
+            "allowSyndication": true,
             "type": "image"
           },
           "uri": "https://www.bbc.co.uk/news/uk-61593081",
@@ -439,102 +448,6 @@
         }
       ],
       "features": [
-        {
-          "headlines": {
-            "headline": "Angela Lansbury: from stage to Cabot Cove"
-          },
-          "locators": {
-            "assetUri": "/news/23384748",
-            "curieCpsUrn": "urn:bbc:cps:curie:asset:00d18665-46b6-42fa-87c4-9b382029f73b",
-            "assetId": "23384748",
-            "cpsUrn": "urn:bbc:content:assetUri:news/23384748",
-            "curie": "http://www.bbc.co.uk/asset/00d18665-46b6-42fa-87c4-9b382029f73b"
-          },
-          "summary": "Test",
-          "timestamp": 1643303379000,
-          "language": "en-gb",
-          "cpsType": "STY",
-          "indexImage": {
-            "id": "63902259",
-            "subType": "index",
-            "href": "http://b.files.bbci.co.uk/173F4/test/_63902259_the-lead-up-to-jessica-fletchers-final-case-1616009924.jpg",
-            "path": "/cpsdevpb/173F4/test/_63902259_the-lead-up-to-jessica-fletchers-final-case-1616009924.jpg",
-            "height": 562,
-            "width": 1000,
-            "altText": "ange",
-            "caption": "ange",
-            "copyrightHolder": "Ange",
-            "originCode": "cpsdevpb",
-            "type": "image"
-          },
-          "imageThumbnail": {
-            "id": "63902263",
-            "subType": "index-thumbnail",
-            "href": "http://b.files.bbci.co.uk/8D7C/test/_63902263_the-lead-up-to-jessica-fletchers-final-case-1616009924.jpg",
-            "path": "/cpsdevpb/8D7C/test/_63902263_the-lead-up-to-jessica-fletchers-final-case-1616009924.jpg",
-            "height": 180,
-            "width": 320,
-            "altText": "Ange",
-            "caption": "Ange",
-            "copyrightHolder": "ANge",
-            "type": "image"
-          },
-          "options": {
-            "isBreakingNews": false,
-            "isFactCheck": false,
-            "hasShortForm": true
-          },
-          "section": {
-            "subType": "IDX",
-            "name": "Home",
-            "uri": "/news/front_page",
-            "type": "simple"
-          },
-          "id": "urn:bbc:ares::asset:news/23384748",
-          "type": "cps"
-        },
-        {
-          "name": "When Mr Blobby got to Christmas number one",
-          "summary": "a test video link promo",
-          "indexImage": {
-            "id": "63942309",
-            "subType": "index",
-            "href": "http://b.files.bbci.co.uk/160D4/test/_63942309_hi001100397.jpg",
-            "path": "/cpsdevpb/160D4/test/_63942309_hi001100397.jpg",
-            "height": 1152,
-            "width": 2048,
-            "altText": "Mr Blobby",
-            "caption": "Mr Blobby",
-            "copyrightHolder": "BBC",
-            "type": "image"
-          },
-          "uri": "https://www.test.bbc.co.uk/iplayer/episode/b03srsjl",
-          "contentType": "Video",
-          "assetTypeCode": "PRO",
-          "timestamp": 1662997270000,
-          "type": "link"
-        },
-        {
-          "name": "Florence Pugh on her primary school nativity...",
-          "summary": "90s all the way",
-          "indexImage": {
-            "id": "63958321",
-            "subType": "index",
-            "href": "http://b.files.bbci.co.uk/3061/test/_63958321_p0dd2wvy.jpg",
-            "path": "/cpsdevpb/3061/test/_63958321_p0dd2wvy.jpg",
-            "height": 360,
-            "width": 640,
-            "altText": "florence pugh",
-            "caption": "florence pugh",
-            "copyrightHolder": "BBC",
-            "type": "image"
-          },
-          "uri": "https://www.test.bbc.co.uk/sounds/play/m001dmln",
-          "contentType": "Audio",
-          "assetTypeCode": "PRO",
-          "timestamp": 1668169266000,
-          "type": "link"
-        },
         {
           "headlines": {
             "headline": "Wales pip Scotland in World Cup thriller"
@@ -561,6 +474,7 @@
             "caption": "Bevan kicks wales to win",
             "copyrightHolder": "Huw Evans picture agency",
             "originCode": "cpsdevpb",
+            "allowSyndication": true,
             "type": "image"
           },
           "options": {
@@ -584,31 +498,67 @@
           "type": "cps"
         },
         {
+          "name": "When Mr Blobby got to Christmas number one",
+          "summary": "a test video link promo",
+          "indexImage": {
+            "id": "63942309",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/160D4/test/_63942309_hi001100397.jpg",
+            "path": "/cpsdevpb/160D4/test/_63942309_hi001100397.jpg",
+            "height": 1152,
+            "width": 2048,
+            "altText": "Mr Blobby",
+            "caption": "Mr Blobby",
+            "copyrightHolder": "BBC",
+            "allowSyndication": true,
+            "type": "image"
+          },
+          "uri": "https://www.test.bbc.co.uk/iplayer/episode/b03srsjl",
+          "contentType": "Video",
+          "assetTypeCode": "PRO",
+          "timestamp": 1662997270000,
+          "type": "link"
+        },
+        {
           "headlines": {
-            "headline": "Lego Titanic sunk"
+            "headline": "Angela Lansbury: from stage to Cabot Cove"
           },
           "locators": {
-            "assetUri": "/news/business-23481281",
-            "curieCpsUrn": "urn:bbc:cps:curie:asset:06cb5998-373d-41ea-b249-6aec87d3329b",
-            "assetId": "23481281",
-            "cpsUrn": "urn:bbc:content:assetUri:news/business-23481281",
-            "curie": "http://www.bbc.co.uk/asset/06cb5998-373d-41ea-b249-6aec87d3329b"
+            "assetUri": "/news/23384748",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:00d18665-46b6-42fa-87c4-9b382029f73b",
+            "assetId": "23384748",
+            "cpsUrn": "urn:bbc:content:assetUri:news/23384748",
+            "curie": "http://www.bbc.co.uk/asset/00d18665-46b6-42fa-87c4-9b382029f73b"
           },
-          "summary": "Lego are perhaps sunk",
-          "timestamp": 1643736926000,
+          "summary": "Test",
+          "timestamp": 1643303379000,
           "language": "en-gb",
           "cpsType": "STY",
           "indexImage": {
-            "id": "63969899",
+            "id": "63902259",
             "subType": "index",
-            "href": "http://b.files.bbci.co.uk/18638/test/_63969899_r.jpg",
-            "path": "/cpsdevpb/18638/test/_63969899_r.jpg",
-            "height": 546,
-            "width": 970,
-            "altText": "The Lego Titanic",
-            "caption": "titanic",
-            "copyrightHolder": "BBC",
+            "href": "http://b.files.bbci.co.uk/173F4/test/_63902259_the-lead-up-to-jessica-fletchers-final-case-1616009924.jpg",
+            "path": "/cpsdevpb/173F4/test/_63902259_the-lead-up-to-jessica-fletchers-final-case-1616009924.jpg",
+            "height": 562,
+            "width": 1000,
+            "altText": "ange",
+            "caption": "ange",
+            "copyrightHolder": "Ange",
             "originCode": "cpsdevpb",
+            "allowSyndication": false,
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63902263",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/8D7C/test/_63902263_the-lead-up-to-jessica-fletchers-final-case-1616009924.jpg",
+            "path": "/cpsdevpb/8D7C/test/_63902263_the-lead-up-to-jessica-fletchers-final-case-1616009924.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Ange",
+            "caption": "Ange",
+            "copyrightHolder": "ANge",
+            "allowSyndication": false,
             "type": "image"
           },
           "options": {
@@ -618,11 +568,11 @@
           },
           "section": {
             "subType": "IDX",
-            "name": "Business",
-            "uri": "/news/business",
+            "name": "Home",
+            "uri": "/news/front_page",
             "type": "simple"
           },
-          "id": "urn:bbc:ares::asset:news/business-23481281",
+          "id": "urn:bbc:ares::asset:news/23384748",
           "type": "cps"
         },
         {
@@ -638,6 +588,7 @@
             "altText": "spice girls",
             "caption": "spice girls",
             "copyrightHolder": "BBC",
+            "allowSyndication": true,
             "type": "image"
           },
           "uri": "https://www.test.bbc.co.uk/sounds/play/m001bjpb",
@@ -645,6 +596,61 @@
           "assetTypeCode": "PRO",
           "timestamp": 1662998543000,
           "type": "link"
+        },
+        {
+          "headlines": {
+            "headline": "Taylor Swift's success"
+          },
+          "locators": {
+            "assetUri": "/news/live/23479940",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:bde9ec0e-a4ca-4802-99c0-5513e67914c7",
+            "assetId": "23479940",
+            "cpsUrn": "urn:bbc:content:assetUri:news/live/23479940",
+            "curie": "http://www.bbc.co.uk/asset/bde9ec0e-a4ca-4802-99c0-5513e67914c7"
+          },
+          "summary": "this is live",
+          "timestamp": 1643273171000,
+          "language": "en-gb",
+          "cpsType": "LIV",
+          "indexImage": {
+            "id": "63902238",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/14514/test/_63902238_4815.jpg",
+            "path": "/cpsdevpb/14514/test/_63902238_4815.jpg",
+            "height": 394,
+            "width": 700,
+            "altText": "Taylor",
+            "caption": "Taylor",
+            "copyrightHolder": "Taylor Swift",
+            "allowSyndication": false,
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63902240",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/107C/test/_63902240_4815.jpg",
+            "path": "/cpsdevpb/107C/test/_63902240_4815.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "tay",
+            "caption": "taylor",
+            "copyrightHolder": "Taylor",
+            "allowSyndication": false,
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Home",
+            "uri": "/news/front_page",
+            "type": "simple"
+          },
+          "liveStatus": "AUTO",
+          "id": "urn:bbc:ares::asset:news/live/23479940",
+          "type": "cps"
         },
         {
           "name": "Snoods at the ready as ice grips Cardiff",
@@ -659,6 +665,7 @@
             "altText": "weatherman",
             "caption": "bbc",
             "copyrightHolder": "BBC",
+            "allowSyndication": true,
             "type": "image"
           },
           "uri": "http://www.bbc.co.uk/weather/weather_watcher/",
@@ -666,6 +673,28 @@
           "contentType": "Video",
           "assetTypeCode": "PRO",
           "timestamp": 1663062828000,
+          "type": "link"
+        },
+        {
+          "name": "Florence Pugh on her primary school nativity...",
+          "summary": "90s all the way",
+          "indexImage": {
+            "id": "63958321",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/3061/test/_63958321_p0dd2wvy.jpg",
+            "path": "/cpsdevpb/3061/test/_63958321_p0dd2wvy.jpg",
+            "height": 360,
+            "width": 640,
+            "altText": "florence pugh",
+            "caption": "florence pugh",
+            "copyrightHolder": "BBC",
+            "allowSyndication": true,
+            "type": "image"
+          },
+          "uri": "https://www.test.bbc.co.uk/sounds/play/m001dmln",
+          "contentType": "Audio",
+          "assetTypeCode": "PRO",
+          "timestamp": 1668169266000,
           "type": "link"
         },
         {
@@ -681,6 +710,7 @@
             "altText": "newsround",
             "caption": "newsround",
             "copyrightHolder": "BBC",
+            "allowSyndication": true,
             "type": "image"
           },
           "uri": "https://www.test.bbc.co.uk/bitesize/subjects/zf48q6f",
@@ -691,46 +721,67 @@
         },
         {
           "headlines": {
-            "headline": "Taylor Swift makes history as she takes over entire US top 10"
+            "headline": "Test MAP C7",
+            "overtyped": "An audio link here"
           },
           "locators": {
-            "assetUri": "/news/entertainment-arts-23536303",
-            "curieCpsUrn": "urn:bbc:cps:curie:asset:db1029c2-e76d-4a03-83c3-139588cec64e",
-            "assetId": "23536303",
-            "cpsUrn": "urn:bbc:content:assetUri:news/entertainment-arts-23536303",
-            "curie": "http://www.bbc.co.uk/asset/db1029c2-e76d-4a03-83c3-139588cec64e"
+            "assetUri": "/news/av/entertainment-arts-23520613",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:4ae96ddf-024d-4984-b696-deb7beaff4aa",
+            "assetId": "23520613",
+            "cpsUrn": "urn:bbc:content:assetUri:news/av/entertainment-arts-23520613",
+            "curie": "http://www.bbc.co.uk/asset/4ae96ddf-024d-4984-b696-deb7beaff4aa"
           },
-          "summary": "Taylor Swift is the music industry",
-          "timestamp": 1667321886000,
+          "summary": "A summary",
+          "timestamp": 1660654442000,
           "language": "en-gb",
-          "byline": {
-            "name": "By Sian Prescott",
-            "title": "BBC News",
-            "persons": [
+          "cpsType": "MAP",
+          "media": {
+            "id": "p01g2pxw",
+            "subType": "episode",
+            "format": "audio",
+            "title": "Test MAP C7",
+            "synopses": {
+              "short": "Test MAP C7"
+            },
+            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01g2py6.jpg",
+            "embedding": true,
+            "advertising": false,
+            "caption": "Test MAP C7",
+            "versions": [
               {
-                "name": "Sian Prescott",
-                "function": "BBC News"
+                "versionId": "p01g2pxh",
+                "types": [
+                  "Podcast"
+                ],
+                "duration": 174,
+                "durationISO8601": "PT2M54S",
+                "warnings": {},
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": false
+                },
+                "availableFrom": 1516795320000
               }
-            ]
+            ],
+            "smpKind": "radioProgramme",
+            "type": "media"
           },
-          "cpsType": "STY",
           "indexImage": {
-            "id": "63957242",
+            "id": "63958326",
             "subType": "index",
-            "href": "http://b.files.bbci.co.uk/5ED3/test/_63957242_hi059116421.jpg",
-            "path": "/cpsdevpb/5ED3/test/_63957242_hi059116421.jpg",
-            "height": 549,
-            "width": 976,
-            "altText": "TAYLOR THE SWIFT",
-            "caption": "Taylor",
+            "href": "http://b.files.bbci.co.uk/F3B1/test/_63958326_p01g2py6.jpg",
+            "path": "/cpsdevpb/F3B1/test/_63958326_p01g2py6.jpg",
+            "height": 1152,
+            "width": 2048,
+            "altText": "asdfadsf",
+            "caption": "sdfsdf",
             "copyrightHolder": "BBC",
-            "originCode": "cpsdevpb",
+            "allowSyndication": true,
             "type": "image"
           },
           "options": {
             "isBreakingNews": false,
-            "isFactCheck": false,
-            "hasShortForm": true
+            "isFactCheck": false
           },
           "section": {
             "subType": "IDX",
@@ -738,12 +789,12 @@
             "uri": "/news/entertainment_and_arts",
             "type": "simple"
           },
-          "id": "urn:bbc:ares::asset:news/entertainment-arts-23536303",
+          "id": "urn:bbc:ares::asset:news/av/entertainment-arts-23520613",
           "type": "cps"
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T21:23:56.994Z",
+        "generated": "2023-02-18T03:08:59.186Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T11:38:00Z",
         "totalRecords": 20,

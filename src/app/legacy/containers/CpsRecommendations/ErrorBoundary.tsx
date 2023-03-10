@@ -6,7 +6,10 @@ import { RequestContext } from '../../../contexts/RequestContext';
 const logger = nodeLogger(__filename);
 
 type Props = {
-  recommendations: any[];
+  recommendations: {
+    headlines: object;
+    locators: object;
+  }[];
 };
 
 const checkRecommendations = (recommendations: Props['recommendations']) => {
