@@ -76,7 +76,7 @@ const CanonicalAd = ({ slotType, className }) => {
         {/* Add Ad scripts to document head */}
         <script type="module" src={getBootstrapSrc(queryString)} async />
         <script
-          nomodule="nomodule"
+          noModule="nomodule"
           src={getBootstrapSrc(queryString, true)}
           async
         />
