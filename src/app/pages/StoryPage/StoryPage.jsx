@@ -40,7 +40,6 @@ import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import CpsTable from '#containers/CpsTable';
 import Byline from '#containers/Byline';
 import CpsSocialEmbedContainer from '#containers/SocialEmbed/Cps';
-import CpsRecommendations from '#containers/CpsRecommendations';
 import { InlinePodcastPromo } from '#containers/PodcastPromo';
 
 import {
@@ -58,6 +57,7 @@ import NielsenAnalytics from '#containers/NielsenAnalytics';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import categoryType from './categoryMap/index';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
+import OptimizelyRecommendation from '../../components/OptimizelyRecommendations';
 
 const MpuContainer = styled(AdContainer)`
   margin-bottom: ${GEL_SPACING_TRPL};
@@ -105,7 +105,6 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     pageData,
   );
   const featuresInitialData = path(['secondaryColumn', 'features'], pageData);
-  const recommendationsData = path(['recommendations'], pageData);
   const topics = path(['metadata', 'topics'], pageData);
 
   const gridColumns = {
@@ -196,9 +195,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     table: props => <CpsTable {...props} />,
     mpu: props =>
       isAdsEnabled ? <MpuContainer {...props} slotType="mpu" /> : null,
-    wsoj: props => (
-      <CpsRecommendations {...props} items={recommendationsData} />
-    ),
+    wsoj: props => <OptimizelyRecommendation pageData={pageData} {...props} />,
     disclaimer: props => (
       <Disclaimer {...props} increasePaddingOnDesktop={false} />
     ),

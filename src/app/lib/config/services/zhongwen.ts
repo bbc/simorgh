@@ -314,6 +314,7 @@ export const service: ZhongwenConfig = {
         duration: '节目全长',
         recentEpisodes: '存档节目',
         podcastExternalLinks: 'This podcast is also available on',
+        download: '下载本集节目',
       },
       socialEmbed: {
         caption: {
@@ -605,6 +606,7 @@ export const service: ZhongwenConfig = {
         duration: '節目全長',
         recentEpisodes: '存档节目',
         podcastExternalLinks: 'This podcast is also available on',
+        download: '下載本集節目',
       },
       socialEmbed: {
         caption: {

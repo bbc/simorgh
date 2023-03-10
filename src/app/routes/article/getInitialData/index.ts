@@ -2,13 +2,14 @@
 import { Agent } from 'https';
 import pipe from 'ramda/src/pipe';
 import Url from 'url-parse';
-import getRecommendationsUrl from '#app/lib/utilities/getUrlHelpers/getRecommendationsUrl';
 import getAdditionalPageData from '#app/routes/cpsAsset/utils/getAdditionalPageData';
 import nodeLogger from '../../../lib/logger.node';
 import { getUrlPath } from '../../../lib/utilities/urlParser';
 import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
 import fetchPageData from '../../utils/fetchPageData';
 import { Services, Variants } from '../../../models/types/global';
+import getOnwardsPageData from '../utils/getOnwardsData';
+import { advertisingAllowed, isSfv } from '../utils/paramChecks';
 
 const logger = nodeLogger(__filename);
 
@@ -95,24 +96,6 @@ export default async ({
       ...(!isLocal && { agent, optHeaders }),
     });
 
-    const wsojURL = getRecommendationsUrl({
-      assetUri: pathname.replace(/(\.|\?).*/g, ''),
-      engine: 'unirecs_datalab',
-      engineVariant: '',
-    });
-
-    let wsojData = [];
-    try {
-      // @ts-ignore - Ignore fetchPageData argument types
-      const { json: wsojJson = [] } = await fetchPageData({
-        path: wsojURL,
-        ...{ agent, optHeaders },
-      });
-      wsojData = wsojJson;
-    } catch (error) {
-      logger.error('Recommendations JSON malformed', error);
-    }
-
     // Ensure all local CPS fixture and test data is in the correct format
     if (isLocal && pageType === 'cpsAsset') {
       const secondaryData = await getAdditionalPageData({
@@ -144,12 +127,28 @@ export default async ({
       data: { article, secondaryData },
     } = json;
 
+    const isAdvertising = advertisingAllowed(pageType, article);
+    const isArticleSfv = isSfv(article);
+    let wsojData = [];
+    try {
+      wsojData = await getOnwardsPageData({
+        pathname,
+        service,
+        variant,
+        isAdvertising,
+        isArticleSfv,
+        agent,
+      });
+    } catch (error) {
+      logger.error('Recommendations JSON malformed', error);
+    }
+
     return {
       status,
       pageData: {
         ...article,
         secondaryColumn: secondaryData,
-        recommendations: wsojData,
+        ...(wsojData && wsojData),
       },
     };
   } catch ({ message, status }) {

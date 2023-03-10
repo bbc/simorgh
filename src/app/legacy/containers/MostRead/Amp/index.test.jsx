@@ -1,9 +1,12 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import fetchMock from 'fetch-mock';
-import { render, act } from '@testing-library/react';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
+import {
+  render,
+  act,
+} from '../../../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import AmpMostRead from '.';
 

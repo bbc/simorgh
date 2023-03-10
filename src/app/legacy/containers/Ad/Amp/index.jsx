@@ -9,7 +9,6 @@ import {
   AMP_ADS_JS,
 } from '#psammead/psammead-assets/src/amp-boilerplate';
 import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
-import { C_GREY_3, C_RHINO } from '#psammead/psammead-styles/src/colours';
 import { getMinion } from '#psammead/gel-foundations/src/typography';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
@@ -23,7 +22,7 @@ import { ampLeaderboardStyles, ampMpuStyles } from '../utilities/adSlotStyles';
 const AccessDiv = props => <div {...props} />;
 
 const AdSection = styled.section`
-  background-color: ${C_GREY_3};
+  background-color: ${props => props.theme.palette.GREY_3};
 `;
 
 const AdContainer = styled.div`
@@ -51,7 +50,7 @@ const DisplayWrapper = styled(AccessDiv)`
 const StyledLink = styled.a`
   ${({ script }) => script && getMinion(script)}
   ${({ service }) => getSansRegular(service)}
-  color: ${C_RHINO};
+  color: ${props => props.theme.palette.RHINO};
   text-decoration: none;
   text-transform: uppercase;
   display: block;

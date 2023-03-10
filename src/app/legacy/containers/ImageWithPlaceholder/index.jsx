@@ -1,11 +1,11 @@
 import React, { useContext, useState } from 'react';
+import { useTheme } from '@emotion/react';
 import { string, number, bool, node, elementType } from 'prop-types';
 import styled from '@emotion/styled';
 import LazyLoad from 'react-lazyload';
 import ImagePlaceholder from '#psammead/psammead-image-placeholder/src';
 import Image, { AmpImg } from '#psammead/psammead-image/src';
 import { Helmet } from 'react-helmet';
-import { C_GHOST } from '#psammead/psammead-styles/src/colours';
 import { RequestContext } from '#contexts/RequestContext';
 
 const LAZYLOAD_OFFSET = 250; // amount of pixels below the viewport to begin loading the image
@@ -67,6 +67,10 @@ const ImageWithPlaceholder = ({
 
   const isImgJpg = imgType === 'jpg' || imgType === 'jpeg';
 
+  const {
+    palette: { GHOST },
+  } = useTheme();
+
   return (
     <>
       {preload && (
@@ -95,7 +99,7 @@ const ImageWithPlaceholder = ({
             fallbackSrcset={fallbackSrcset}
             height={height}
             width={width}
-            style={!isImgJpg ? { backgroundColor: C_GHOST } : null}
+            style={!isImgJpg ? { backgroundColor: GHOST } : null}
             {...(preload && { 'data-hero': true })}
           />
         ) : (

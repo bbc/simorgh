@@ -54,7 +54,11 @@ import yoruba from '../themes/yoruba';
 import zhongwenSimp from '../themes/zhongwen/simp';
 import zhongwenTrad from '../themes/zhongwen/trad';
 
-const themeProviders: { [index: string]: any } = {
+type ThemeProvider = {
+  [index: string]: React.FC<Props> | { [index: string]: React.FC<Props> };
+};
+
+const themeProviders: ThemeProvider = {
   afaanoromoo,
   afrique,
   amharic,
@@ -125,7 +129,9 @@ const ThemeProvider = ({ children, service, ...rest }: Props) => {
   const ThemeProviderSynchronous =
     variant === 'default' || !variant
       ? themeProviders[service]
-      : themeProviders[service][variant];
+      : // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore - TODO: come back to this
+        themeProviders[service][variant];
 
   return <ThemeProviderSynchronous>{children}</ThemeProviderSynchronous>;
 };

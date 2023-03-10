@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "3d08aed2",
+              "id": "d4cfd782",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "05334f7a",
+                    "id": "cc4a1ad1",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "c70d6d65",
+                          "id": "f7067cce",
                           "type": "paragraph",
                           "model": {
                             "text": "WS Test: Links Block",
                             "blocks": [
                               {
-                                "id": "0a11b974",
+                                "id": "5f07ac0b",
                                 "type": "fragment",
                                 "model": {
                                   "text": "WS Test: Links Block",
@@ -56,7 +56,7 @@
               ]
             },
             {
-              "id": "191518f3",
+              "id": "e71818c4",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1646994589132,
@@ -67,18 +67,18 @@
               ]
             },
             {
-              "id": "ed72bdff",
+              "id": "65d9a462",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "7130b8fc",
+                    "id": "75304ae7",
                     "type": "paragraph",
                     "model": {
                       "text": "Testing inline links block. ",
                       "blocks": [
                         {
-                          "id": "61905a00",
+                          "id": "ffcf6d94",
                           "type": "fragment",
                           "model": {
                             "text": "Testing inline links block. ",
@@ -98,13 +98,13 @@
                     ]
                   },
                   {
-                    "id": "007b9a42",
+                    "id": "e6e3de7b",
                     "type": "paragraph",
                     "model": {
                       "text": "Inline links with media, timestamp and no title. ",
                       "blocks": [
                         {
-                          "id": "6310f241",
+                          "id": "d15577d7",
                           "type": "fragment",
                           "model": {
                             "text": "Inline links with media, timestamp and no title. ",
@@ -130,39 +130,39 @@
               ]
             },
             {
-              "id": "7ac18c59",
+              "id": "fa7818e6",
               "type": "links",
               "model": {
                 "blocks": [
                   {
-                    "id": "515ab5db",
+                    "id": "baf4fb7a",
                     "type": "link",
                     "model": {
                       "locator": "urn:bbc:cps:curie:asset:800b4caf-3081-5047-ba3f-4f46a9344aae",
                       "blocks": [
                         {
-                          "id": "b8804169",
+                          "id": "c2120dc9",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "53bb3caf",
+                                "id": "b0180579",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "dcf82bba",
+                                      "id": "0334030c",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "3971ad1b",
+                                            "id": "7d6333ad",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "BBC MInute",
                                               "blocks": [
                                                 {
-                                                  "id": "f5c685bf",
+                                                  "id": "208b3334",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "BBC MInute",
@@ -209,7 +209,7 @@
                                 ]
                               },
                               {
-                                "id": "73fa6995",
+                                "id": "97b016fa",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 1024,
@@ -235,25 +235,25 @@
                           ]
                         },
                         {
-                          "id": "dedaebfb",
+                          "id": "276d678f",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "192e4fbe",
+                                "id": "fb89e737",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "BBC News Pidgin One Minute News",
                                   "blocks": [
                                     {
-                                      "id": "a5cf2cf2",
+                                      "id": "df64c673",
                                       "type": "urlLink",
                                       "model": {
                                         "text": "BBC News Pidgin One Minute News",
                                         "locator": "https://www.test.bbc.com/pidgin/media-23147054",
                                         "blocks": [
                                           {
-                                            "id": "fe8385e7",
+                                            "id": "3ae681a5",
                                             "type": "fragment",
                                             "model": {
                                               "text": "BBC News Pidgin One Minute News",
@@ -297,12 +297,12 @@
                           ]
                         },
                         {
-                          "id": "d6eb07c4",
+                          "id": "ee10f069",
                           "type": "aresLink",
                           "model": {
                             "blocks": [
                               {
-                                "id": "68c9cb09",
+                                "id": "e61aa588",
                                 "type": "cpsLinkMetadata",
                                 "model": {
                                   "assetType": "MAP",
@@ -317,12 +317,12 @@
                                 ]
                               },
                               {
-                                "id": "bb540518",
+                                "id": "1d0e8a4d",
                                 "type": "aresMedia",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "7c3875e5",
+                                      "id": "ab7fcac6",
                                       "blockId": "urn:bbc:ares::clip:p01cqycr",
                                       "type": "aresMediaMetadata",
                                       "model": {
@@ -368,12 +368,12 @@
                                       ]
                                     },
                                     {
-                                      "id": "879b5064",
+                                      "id": "c326e740",
                                       "type": "image",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "42127e9f",
+                                            "id": "255412ed",
                                             "type": "rawImage",
                                             "model": {
                                               "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01cqz13.jpg",
@@ -423,34 +423,34 @@
                     ]
                   },
                   {
-                    "id": "68e3928f",
+                    "id": "edab5645",
                     "type": "link",
                     "model": {
                       "locator": "urn:bbc:cps:curie:asset:0f35c912-afc7-1a4b-9518-7853401c1149",
                       "blocks": [
                         {
-                          "id": "0ce4d0d4",
+                          "id": "a7317ad5",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "8ded7bc8",
+                                "id": "704a2d5e",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "d3f3f0b7",
+                                      "id": "189532f1",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "74cd1256",
+                                            "id": "b507b159",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "Keyframe #2",
                                               "blocks": [
                                                 {
-                                                  "id": "c7a4bb9c",
+                                                  "id": "73d84541",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "Keyframe #2",
@@ -497,7 +497,7 @@
                                 ]
                               },
                               {
-                                "id": "0728a652",
+                                "id": "b548cd0e",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 1024,
@@ -523,25 +523,25 @@
                           ]
                         },
                         {
-                          "id": "4cb5af41",
+                          "id": "c10c33cb",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "3ebabe48",
+                                "id": "cc221e80",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Bayelsa election: Thugs enta my house destroy my property - Seriake Dickson",
                                   "blocks": [
                                     {
-                                      "id": "37a9be37",
+                                      "id": "685a5782",
                                       "type": "urlLink",
                                       "model": {
                                         "text": "Bayelsa election: Thugs enta my house destroy my property - Seriake Dickson",
                                         "locator": "https://www.test.bbc.com/pidgin/media-23267821",
                                         "blocks": [
                                           {
-                                            "id": "a8830e83",
+                                            "id": "dcc89edb",
                                             "type": "fragment",
                                             "model": {
                                               "text": "Bayelsa election: Thugs enta my house destroy my property - Seriake Dickson",
@@ -585,12 +585,12 @@
                           ]
                         },
                         {
-                          "id": "b1cb8c59",
+                          "id": "ad4d5947",
                           "type": "aresLink",
                           "model": {
                             "blocks": [
                               {
-                                "id": "05591391",
+                                "id": "99374d53",
                                 "type": "cpsLinkMetadata",
                                 "model": {
                                   "assetType": "MAP",
@@ -604,12 +604,12 @@
                                 ]
                               },
                               {
-                                "id": "ee19b74d",
+                                "id": "d99bc789",
                                 "type": "aresMedia",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "fcdd6512",
+                                      "id": "94d30d4e",
                                       "blockId": "urn:bbc:ares::clip:p01p5qfc",
                                       "type": "aresMediaMetadata",
                                       "model": {
@@ -656,12 +656,12 @@
                                       ]
                                     },
                                     {
-                                      "id": "818832b3",
+                                      "id": "f9988ee7",
                                       "type": "image",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "33c7c0bc",
+                                            "id": "3678e8d3",
                                             "type": "rawImage",
                                             "model": {
                                               "width": 1920,
@@ -679,23 +679,23 @@
                                             ]
                                           },
                                           {
-                                            "id": "fcab4b64",
+                                            "id": "4f052964",
                                             "type": "altText",
                                             "model": {
                                               "blocks": [
                                                 {
-                                                  "id": "5c563f77",
+                                                  "id": "fd4d2aa2",
                                                   "type": "text",
                                                   "model": {
                                                     "blocks": [
                                                       {
-                                                        "id": "d08b99f0",
+                                                        "id": "175b313d",
                                                         "type": "paragraph",
                                                         "model": {
                                                           "text": "Keyframe #2",
                                                           "blocks": [
                                                             {
-                                                              "id": "7b948f1e",
+                                                              "id": "a2cc3db0",
                                                               "type": "fragment",
                                                               "model": {
                                                                 "text": "Keyframe #2",
@@ -784,34 +784,34 @@
                     ]
                   },
                   {
-                    "id": "ff488f69",
+                    "id": "9d648d39",
                     "type": "link",
                     "model": {
                       "locator": "urn:bbc:optimo:asset:cg9yj3x13m0o",
                       "blocks": [
                         {
-                          "id": "3b57faeb",
+                          "id": "7a0c82c8",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "2d9351ac",
+                                "id": "d1690699",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "c5de9f96",
+                                      "id": "68d7dc9a",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "f961f937",
+                                            "id": "65ad02f9",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "Promo test",
                                               "blocks": [
                                                 {
-                                                  "id": "26f35a4b",
+                                                  "id": "51285563",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "Promo test",
@@ -858,7 +858,7 @@
                                 ]
                               },
                               {
-                                "id": "7835dcf9",
+                                "id": "9d43e2b1",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 817,
@@ -884,25 +884,25 @@
                           ]
                         },
                         {
-                          "id": "d5b403c6",
+                          "id": "d1fc6364",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "21300ebe",
+                                "id": "69b8bc7c",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "This is a promo test",
                                   "blocks": [
                                     {
-                                      "id": "33a5b6d3",
+                                      "id": "a48f6a6f",
                                       "type": "urlLink",
                                       "model": {
                                         "text": "This is a promo test",
                                         "locator": "https://www.test.bbc.com/pidgin/articles/cg9yj3x13m0o",
                                         "blocks": [
                                           {
-                                            "id": "e5f1f0c2",
+                                            "id": "de675ce9",
                                             "type": "fragment",
                                             "model": {
                                               "text": "This is a promo test",
@@ -946,12 +946,12 @@
                           ]
                         },
                         {
-                          "id": "8e10c527",
+                          "id": "8a3ea8a9",
                           "type": "aresLink",
                           "model": {
                             "blocks": [
                               {
-                                "id": "8fade879",
+                                "id": "f5d672a9",
                                 "type": "optimoLinkMetadata",
                                 "model": {
                                   "timestamp": 1622753625680
@@ -987,18 +987,18 @@
               "blockGroupIndex": 1
             },
             {
-              "id": "c505087a",
+              "id": "10de7fc0",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "b65c9b3f",
+                    "id": "57da3479",
                     "type": "paragraph",
                     "model": {
                       "text": "Testing links block with title ",
                       "blocks": [
                         {
-                          "id": "16d947df",
+                          "id": "0a17406e",
                           "type": "fragment",
                           "model": {
                             "text": "Testing links block with title ",
@@ -1024,28 +1024,28 @@
               ]
             },
             {
-              "id": "5d9b5905",
+              "id": "e5b8c141",
               "type": "links",
               "model": {
                 "blocks": [
                   {
-                    "id": "05a36aed",
+                    "id": "717cf413",
                     "type": "title",
                     "model": {
                       "blocks": [
                         {
-                          "id": "0ac34061",
+                          "id": "7519acd6",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "f7d02fe0",
+                                "id": "7e7e1d25",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "This is a test links block title",
                                   "blocks": [
                                     {
-                                      "id": "4ed817db",
+                                      "id": "ab4fbf69",
                                       "type": "fragment",
                                       "model": {
                                         "text": "This is a test links block title",
@@ -1084,34 +1084,34 @@
                     ]
                   },
                   {
-                    "id": "2bab5835",
+                    "id": "f1a320bb",
                     "type": "link",
                     "model": {
                       "locator": "urn:bbc:cps:curie:asset:0f35c912-afc7-1a4b-9518-7853401c1149",
                       "blocks": [
                         {
-                          "id": "e7ba7dc5",
+                          "id": "6314a334",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "11e766be",
+                                "id": "1f6ccbb2",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "f579ffd9",
+                                      "id": "d527f3b9",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "bf34e990",
+                                            "id": "216e2cdf",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "Keyframe #2",
                                               "blocks": [
                                                 {
-                                                  "id": "110c84e5",
+                                                  "id": "638e2953",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "Keyframe #2",
@@ -1158,7 +1158,7 @@
                                 ]
                               },
                               {
-                                "id": "555cf7e0",
+                                "id": "b3dbc094",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 1024,
@@ -1184,25 +1184,25 @@
                           ]
                         },
                         {
-                          "id": "bfd9a91f",
+                          "id": "3075d725",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "845c93a7",
+                                "id": "137c4197",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Bayelsa election: Thugs enta my house destroy my property - Seriake Dickson",
                                   "blocks": [
                                     {
-                                      "id": "74149140",
+                                      "id": "b649b086",
                                       "type": "urlLink",
                                       "model": {
                                         "text": "Bayelsa election: Thugs enta my house destroy my property - Seriake Dickson",
                                         "locator": "https://www.test.bbc.com/pidgin/media-23267821",
                                         "blocks": [
                                           {
-                                            "id": "29ed9c41",
+                                            "id": "a2c25c1e",
                                             "type": "fragment",
                                             "model": {
                                               "text": "Bayelsa election: Thugs enta my house destroy my property - Seriake Dickson",
@@ -1246,12 +1246,12 @@
                           ]
                         },
                         {
-                          "id": "b00267b0",
+                          "id": "266a89f2",
                           "type": "aresLink",
                           "model": {
                             "blocks": [
                               {
-                                "id": "8f7e7f5d",
+                                "id": "d06a3b75",
                                 "type": "cpsLinkMetadata",
                                 "model": {
                                   "assetType": "MAP",
@@ -1265,12 +1265,12 @@
                                 ]
                               },
                               {
-                                "id": "33c758be",
+                                "id": "ce5d8760",
                                 "type": "aresMedia",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "64e07bc0",
+                                      "id": "e5e089a0",
                                       "blockId": "urn:bbc:ares::clip:p01p5qfc",
                                       "type": "aresMediaMetadata",
                                       "model": {
@@ -1317,12 +1317,12 @@
                                       ]
                                     },
                                     {
-                                      "id": "995ff7c1",
+                                      "id": "cb95e6a7",
                                       "type": "image",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "32927c0a",
+                                            "id": "a81e413c",
                                             "type": "rawImage",
                                             "model": {
                                               "width": 1920,
@@ -1340,23 +1340,23 @@
                                             ]
                                           },
                                           {
-                                            "id": "2179b58f",
+                                            "id": "c98106de",
                                             "type": "altText",
                                             "model": {
                                               "blocks": [
                                                 {
-                                                  "id": "fa452e86",
+                                                  "id": "b0ec9c24",
                                                   "type": "text",
                                                   "model": {
                                                     "blocks": [
                                                       {
-                                                        "id": "4e1fdefa",
+                                                        "id": "279eff80",
                                                         "type": "paragraph",
                                                         "model": {
                                                           "text": "Keyframe #2",
                                                           "blocks": [
                                                             {
-                                                              "id": "42f679c0",
+                                                              "id": "648e1924",
                                                               "type": "fragment",
                                                               "model": {
                                                                 "text": "Keyframe #2",
@@ -1445,34 +1445,34 @@
                     ]
                   },
                   {
-                    "id": "8d4461eb",
+                    "id": "a7341e1d",
                     "type": "link",
                     "model": {
                       "locator": "urn:bbc:cps:curie:asset:800b4caf-3081-5047-ba3f-4f46a9344aae",
                       "blocks": [
                         {
-                          "id": "86539cef",
+                          "id": "e8b7d5ee",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "a2883d87",
+                                "id": "6dfe076e",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "440043c2",
+                                      "id": "afb03a7c",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "db36cb54",
+                                            "id": "f3ee4322",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "BBC MInute",
                                               "blocks": [
                                                 {
-                                                  "id": "d86b145c",
+                                                  "id": "0e08147b",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "BBC MInute",
@@ -1519,7 +1519,7 @@
                                 ]
                               },
                               {
-                                "id": "f82c802d",
+                                "id": "ecb13fbe",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 1024,
@@ -1545,25 +1545,25 @@
                           ]
                         },
                         {
-                          "id": "5186e531",
+                          "id": "347ce3f9",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "16aa1d41",
+                                "id": "d2e6488d",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "BBC News Pidgin One Minute News",
                                   "blocks": [
                                     {
-                                      "id": "c9dab0c4",
+                                      "id": "5b4139de",
                                       "type": "urlLink",
                                       "model": {
                                         "text": "BBC News Pidgin One Minute News",
                                         "locator": "https://www.test.bbc.com/pidgin/media-23147054",
                                         "blocks": [
                                           {
-                                            "id": "230fc060",
+                                            "id": "1151ff91",
                                             "type": "fragment",
                                             "model": {
                                               "text": "BBC News Pidgin One Minute News",
@@ -1607,12 +1607,12 @@
                           ]
                         },
                         {
-                          "id": "fbe69435",
+                          "id": "e6817b59",
                           "type": "aresLink",
                           "model": {
                             "blocks": [
                               {
-                                "id": "400ebc6e",
+                                "id": "8e101e9d",
                                 "type": "cpsLinkMetadata",
                                 "model": {
                                   "assetType": "MAP",
@@ -1627,12 +1627,12 @@
                                 ]
                               },
                               {
-                                "id": "852fc7b3",
+                                "id": "f28f3ec4",
                                 "type": "aresMedia",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "7873867a",
+                                      "id": "4d6da508",
                                       "blockId": "urn:bbc:ares::clip:p01cqycr",
                                       "type": "aresMediaMetadata",
                                       "model": {
@@ -1678,12 +1678,12 @@
                                       ]
                                     },
                                     {
-                                      "id": "3ebb8d15",
+                                      "id": "24148212",
                                       "type": "image",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "82dde72a",
+                                            "id": "d212c5b0",
                                             "type": "rawImage",
                                             "model": {
                                               "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01cqz13.jpg",
@@ -1741,18 +1741,18 @@
               "blockGroupIndex": 2
             },
             {
-              "id": "cc986c67",
+              "id": "851466a3",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "3d36c21c",
+                    "id": "091ba24e",
                     "type": "paragraph",
                     "model": {
                       "text": "Below is a links block with no title -  it should be rendered like related content",
                       "blocks": [
                         {
-                          "id": "20226233",
+                          "id": "1c36998c",
                           "type": "fragment",
                           "model": {
                             "text": "Below is a links block with no title -  it should be rendered like related content",
@@ -1778,7 +1778,7 @@
               ]
             },
             {
-              "id": "02ce4812",
+              "id": "6d1f796a",
               "type": "mpu",
               "model": {},
               "position": [
@@ -1786,39 +1786,39 @@
               ]
             },
             {
-              "id": "f191b9cf",
+              "id": "8964de44",
               "type": "relatedContent",
               "model": {
                 "blocks": [
                   {
-                    "id": "427c43af",
+                    "id": "f878e13e",
                     "type": "link",
                     "model": {
                       "locator": "urn:bbc:cps:curie:asset:0f35c912-afc7-1a4b-9518-7853401c1149",
                       "blocks": [
                         {
-                          "id": "82d84401",
+                          "id": "71bfe772",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "4e1c2e90",
+                                "id": "f3413a85",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "13440cda",
+                                      "id": "52abb184",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "5e478196",
+                                            "id": "e8cff352",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "Keyframe #2",
                                               "blocks": [
                                                 {
-                                                  "id": "ed231ca4",
+                                                  "id": "829b7e97",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "Keyframe #2",
@@ -1865,7 +1865,7 @@
                                 ]
                               },
                               {
-                                "id": "f66170d6",
+                                "id": "c1a2eb90",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 1024,
@@ -1891,25 +1891,25 @@
                           ]
                         },
                         {
-                          "id": "8466d440",
+                          "id": "5959ebe8",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "2ef9d3da",
+                                "id": "fc0dac46",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Bayelsa election: Thugs enta my house destroy my property - Seriake Dickson",
                                   "blocks": [
                                     {
-                                      "id": "05605723",
+                                      "id": "301a16b7",
                                       "type": "urlLink",
                                       "model": {
                                         "text": "Bayelsa election: Thugs enta my house destroy my property - Seriake Dickson",
                                         "locator": "https://www.test.bbc.com/pidgin/media-23267821",
                                         "blocks": [
                                           {
-                                            "id": "240b01bf",
+                                            "id": "eec90627",
                                             "type": "fragment",
                                             "model": {
                                               "text": "Bayelsa election: Thugs enta my house destroy my property - Seriake Dickson",
@@ -1953,12 +1953,12 @@
                           ]
                         },
                         {
-                          "id": "1d47f2b0",
+                          "id": "84999516",
                           "type": "aresLink",
                           "model": {
                             "blocks": [
                               {
-                                "id": "8c513f42",
+                                "id": "746795cd",
                                 "type": "cpsLinkMetadata",
                                 "model": {
                                   "assetType": "MAP",
@@ -1972,12 +1972,12 @@
                                 ]
                               },
                               {
-                                "id": "ce8dc8be",
+                                "id": "5308e99d",
                                 "type": "aresMedia",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "ffc866c6",
+                                      "id": "29899923",
                                       "blockId": "urn:bbc:ares::clip:p01p5qfc",
                                       "type": "aresMediaMetadata",
                                       "model": {
@@ -2024,12 +2024,12 @@
                                       ]
                                     },
                                     {
-                                      "id": "82efd837",
+                                      "id": "bcea7f4a",
                                       "type": "image",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "ac4b2db9",
+                                            "id": "34ad3d09",
                                             "type": "rawImage",
                                             "model": {
                                               "width": 1920,
@@ -2047,23 +2047,23 @@
                                             ]
                                           },
                                           {
-                                            "id": "dff4d483",
+                                            "id": "84d9e94c",
                                             "type": "altText",
                                             "model": {
                                               "blocks": [
                                                 {
-                                                  "id": "c6ff0e27",
+                                                  "id": "e66cfd89",
                                                   "type": "text",
                                                   "model": {
                                                     "blocks": [
                                                       {
-                                                        "id": "22e5b072",
+                                                        "id": "ff45cd2d",
                                                         "type": "paragraph",
                                                         "model": {
                                                           "text": "Keyframe #2",
                                                           "blocks": [
                                                             {
-                                                              "id": "f4fe3492",
+                                                              "id": "cdb32e4d",
                                                               "type": "fragment",
                                                               "model": {
                                                                 "text": "Keyframe #2",
@@ -2152,34 +2152,34 @@
                     ]
                   },
                   {
-                    "id": "37d8d3f2",
+                    "id": "3eaaf2b5",
                     "type": "link",
                     "model": {
                       "locator": "urn:bbc:cps:curie:asset:800b4caf-3081-5047-ba3f-4f46a9344aae",
                       "blocks": [
                         {
-                          "id": "9a75245c",
+                          "id": "21242839",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "bf26ab24",
+                                "id": "83096587",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "636740ff",
+                                      "id": "0a5846f8",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "7f41489d",
+                                            "id": "a4849a04",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "BBC MInute",
                                               "blocks": [
                                                 {
-                                                  "id": "a156ea76",
+                                                  "id": "7393f817",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "BBC MInute",
@@ -2226,7 +2226,7 @@
                                 ]
                               },
                               {
-                                "id": "f2bfb3ad",
+                                "id": "f520b595",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 1024,
@@ -2252,25 +2252,25 @@
                           ]
                         },
                         {
-                          "id": "410a785b",
+                          "id": "43888738",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "496466f4",
+                                "id": "a6258fad",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "BBC News Pidgin One Minute News",
                                   "blocks": [
                                     {
-                                      "id": "1aad872b",
+                                      "id": "5a225e48",
                                       "type": "urlLink",
                                       "model": {
                                         "text": "BBC News Pidgin One Minute News",
                                         "locator": "https://www.test.bbc.com/pidgin/media-23147054",
                                         "blocks": [
                                           {
-                                            "id": "e616bc4f",
+                                            "id": "2c81e742",
                                             "type": "fragment",
                                             "model": {
                                               "text": "BBC News Pidgin One Minute News",
@@ -2314,12 +2314,12 @@
                           ]
                         },
                         {
-                          "id": "bcf1e37f",
+                          "id": "a31a48fc",
                           "type": "aresLink",
                           "model": {
                             "blocks": [
                               {
-                                "id": "a7946163",
+                                "id": "6debe837",
                                 "type": "cpsLinkMetadata",
                                 "model": {
                                   "assetType": "MAP",
@@ -2334,12 +2334,12 @@
                                 ]
                               },
                               {
-                                "id": "6f1c0272",
+                                "id": "a0550647",
                                 "type": "aresMedia",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "255769b4",
+                                      "id": "a9ca5f5b",
                                       "blockId": "urn:bbc:ares::clip:p01cqycr",
                                       "type": "aresMediaMetadata",
                                       "model": {
@@ -2385,12 +2385,12 @@
                                       ]
                                     },
                                     {
-                                      "id": "daabff6e",
+                                      "id": "80f52961",
                                       "type": "image",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "15d47803",
+                                            "id": "ce75a8f4",
                                             "type": "rawImage",
                                             "model": {
                                               "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01cqz13.jpg",
@@ -2440,34 +2440,34 @@
                     ]
                   },
                   {
-                    "id": "a12d60ab",
+                    "id": "6eaaa421",
                     "type": "link",
                     "model": {
                       "locator": "urn:bbc:optimo:asset:cg9yj3x13m0o",
                       "blocks": [
                         {
-                          "id": "310a1396",
+                          "id": "a2fab2a2",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "062e41bf",
+                                "id": "8cc0399b",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "e51b87a9",
+                                      "id": "66e0b122",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "c96b5cb8",
+                                            "id": "0ab5d934",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "test",
                                               "blocks": [
                                                 {
-                                                  "id": "e9696184",
+                                                  "id": "a46e88de",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "test",
@@ -2514,7 +2514,7 @@
                                 ]
                               },
                               {
-                                "id": "d810f6a1",
+                                "id": "43dd0c90",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 817,
@@ -2540,25 +2540,25 @@
                           ]
                         },
                         {
-                          "id": "5df4e134",
+                          "id": "f2352e20",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "6a287f4c",
+                                "id": "e5badffb",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "This is a promo test",
                                   "blocks": [
                                     {
-                                      "id": "587026c1",
+                                      "id": "5ba8d629",
                                       "type": "urlLink",
                                       "model": {
                                         "text": "This is a promo test",
                                         "locator": "https://www.test.bbc.com/pidgin/articles/cg9yj3x13m0o",
                                         "blocks": [
                                           {
-                                            "id": "11b89c48",
+                                            "id": "35c9b75b",
                                             "type": "fragment",
                                             "model": {
                                               "text": "This is a promo test",
@@ -2602,12 +2602,12 @@
                           ]
                         },
                         {
-                          "id": "6debf162",
+                          "id": "23317c3f",
                           "type": "aresLink",
                           "model": {
                             "blocks": [
                               {
-                                "id": "c7c4478c",
+                                "id": "0c8b1682",
                                 "type": "optimoLinkMetadata",
                                 "model": {
                                   "timestamp": 1622753625680
@@ -2639,6 +2639,16 @@
               "position": [
                 9
               ]
+            },
+            {
+              "id": "969d768f",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                10
+              ]
             }
           ]
         }
@@ -2646,14 +2656,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:cnd6yxmxvp2o",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cnd6yxmxvp2o"
+          "optimoUrn": "urn:bbc:optimo:asset:cnd6yxmxvp2o",
+          "canonicalUrl": "https://www.bbc.com/pidgin/articles/cnd6yxmxvp2o"
         },
         "type": "article",
         "createdBy": "Pidgin",
         "language": "pcm",
         "firstPublished": 1646994589132,
         "lastPublished": 1646994589132,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:cnd6yxmxvp2o",
           "producer": "Pidgin",
@@ -2677,7 +2687,6 @@
             ]
           }
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -2696,7 +2705,6 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "WS Test: Links Block",
           "promoHeadline": {
@@ -2797,8 +2805,7 @@
               }
             }
           ]
-        },
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -3284,7 +3291,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T21:04:58.371Z",
+        "generated": "2023-02-18T03:04:58.493Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
         "totalRecords": 20,

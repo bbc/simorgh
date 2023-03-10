@@ -2,6 +2,7 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { render, waitFor } from '@testing-library/react';
+import { OptimizelyProvider } from '@optimizely/react-sdk';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import newsMostReadData from '#data/news/mostRead';
@@ -21,6 +22,25 @@ jest.mock('#containers/ChartbeatAnalytics', () => {
 jest.mock('#containers/OptimizelyPageViewTracking', () => {
   const OptimizelyPageViewTracking = () => null;
   return OptimizelyPageViewTracking;
+});
+
+const optimizely = {
+  onReady: jest.fn(() => Promise.resolve()),
+  track: jest.fn(),
+  user: {
+    attributes: {},
+  },
+  close: jest.fn(),
+};
+
+jest.mock('#containers/OptimizelyPageViewTracking', () => {
+  const OptimizelyPageViewTracking = () => null;
+  return OptimizelyPageViewTracking;
+});
+
+jest.mock('#containers/OptimizelyArticleCompleteTracking', () => {
+  const OptimizelyArticleCompleteTracking = () => null;
+  return OptimizelyArticleCompleteTracking;
 });
 
 const recommendationSettings = {
@@ -67,7 +87,9 @@ const Context = ({
             service={service}
             recommendations={recommendationSettings}
           >
-            {children}
+            <OptimizelyProvider optimizely={optimizely} isServerSide>
+              {children}
+            </OptimizelyProvider>
           </ServiceContextProvider>
         </RequestContextProvider>
       </ToggleContextProvider>
@@ -75,20 +97,22 @@ const Context = ({
   </BrowserRouter>
 );
 
-beforeEach(() => {
-  fetch.resetMocks();
-});
+describe('MediaArticlePage', () => {
+  beforeEach(() => {
+    fetch.resetMocks();
+  });
 
-it('should render a news article correctly', async () => {
-  fetch.mockResponse(JSON.stringify(newsMostReadData));
+  it('should render a news article correctly', async () => {
+    fetch.mockResponse(JSON.stringify(newsMostReadData));
 
-  const { container } = render(
-    <Context service="news">
-      <MediaArticlePage pageData={pidginPageData} />
-    </Context>,
-  );
+    const { container } = render(
+      <Context service="news">
+        <MediaArticlePage pageData={pidginPageData} />
+      </Context>,
+    );
 
-  await waitFor(() => {
-    expect(container).toMatchSnapshot();
+    await waitFor(() => {
+      expect(container).toMatchSnapshot();
+    });
   });
 });
