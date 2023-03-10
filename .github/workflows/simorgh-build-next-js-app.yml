@@ -53,7 +53,8 @@ jobs:
         run: ./scripts/installNodeModules.sh
 
       - name: Build Simorgh - Next.JS app
-        run: |
-          echo ${GITHUB_REF##*/}
+        run: 
           working-directory: ./ws-nextjs-app
+          |
+          echo ${GITHUB_REF##*/}
           yarn build
