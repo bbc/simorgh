@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { useTheme } from '@emotion/react';
 import { arrayOf, shape, oneOfType } from 'prop-types';
 import styled from '@emotion/styled';
 import {
@@ -8,7 +9,6 @@ import {
 } from '#psammead/gel-foundations/src/breakpoints';
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
-import { C_GHOST, C_GREY_2 } from '#psammead/psammead-styles/src/colours';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
@@ -28,7 +28,10 @@ import RecommendationsPromo from './RecommendationsPromo';
 import ErrorBoundary from './ErrorBoundary';
 
 const RecommendationsWrapper = styled.div`
-  background-color: ${props => (props.isArticlePage ? C_GREY_2 : C_GHOST)};
+  background-color: ${props =>
+    props.isArticlePage
+      ? props.theme.palette.GREY_2
+      : props.theme.palette.GHOST};
   margin: ${GEL_SPACING_TRPL} 0;
   padding: ${GEL_SPACING_DBL} ${GEL_SPACING};
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
@@ -61,6 +64,9 @@ const CpsRecommendations = ({ items }) => {
     role: 'region',
     'aria-labelledby': labelId,
   };
+  const {
+    palette: { GREY_2, GHOST },
+  } = useTheme();
 
   const { hasStoryRecommendations } = recommendations;
 
@@ -106,7 +112,7 @@ const CpsRecommendations = ({ items }) => {
                 mobileDivider={false}
                 overrideHeadingAs="strong"
                 bar={false}
-                backgroundColor={isArticlePage ? C_GREY_2 : C_GHOST}
+                backgroundColor={isArticlePage ? GREY_2 : GHOST}
               >
                 {title}
               </LabelComponent>
