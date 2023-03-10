@@ -25,6 +25,7 @@ const AmpImgPlaceholderContainer = ({
   return (
     <div
       style={{ backgroundColor: `${darkMode ? C_SHADOW : C_LUNAR}` }}
+      // eslint-disable-next-line react/no-unknown-property
       fallback={fallback}
       placeholder={placeholder}
     >
