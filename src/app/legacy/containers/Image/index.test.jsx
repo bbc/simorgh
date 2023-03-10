@@ -1,12 +1,14 @@
 import React from 'react';
-import { render, screen, waitFor } from '@testing-library/react';
 import {
-  shouldMatchSnapshot,
   isNull,
   suppressPropWarnings,
 } from '#psammead/psammead-test-helpers/src';
 import { blockContainingText, blockArrayModel } from '#models/blocks';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import {
+  render,
+  screen,
+  waitFor,
+} from '../../../components/react-testing-library-with-providers';
 import ImageContainer from './index';
 
 describe('Image', () => {
@@ -159,12 +161,13 @@ describe('Image', () => {
       ),
     ]);
 
-    shouldMatchSnapshot(
-      'should render an image with alt text and offscreen copyright',
-      <ServiceContextProvider service="news">
-        <ImageContainer sizes="100vw" {...dataWithNonBbcCopyright} />
-      </ServiceContextProvider>,
-    );
+    it('should render an image with alt text and offscreen copyright', () => {
+      const { container } = render(
+        <ImageContainer sizes="100vw" {...dataWithNonBbcCopyright} />,
+        { service: 'news' },
+      );
+      expect(container).toMatchSnapshot();
+    });
 
     const dataWithCaption = blockArrayModel([
       rawImageBlock,
@@ -180,12 +183,13 @@ describe('Image', () => {
       ),
     ]);
 
-    shouldMatchSnapshot(
-      'should render an image with alt text and caption',
-      <ServiceContextProvider service="news">
-        <ImageContainer sizes="100vw" {...dataWithCaption} />
-      </ServiceContextProvider>,
-    );
+    it('should render an image with alt text and caption', () => {
+      const { container } = render(
+        <ImageContainer sizes="100vw" {...dataWithCaption} />,
+        { service: 'news' },
+      );
+      expect(container).toMatchSnapshot();
+    });
 
     const dataWithOtherOriginCode = blockArrayModel([
       rawImageBlockWithOtherOriginCode,
@@ -196,11 +200,12 @@ describe('Image', () => {
       ),
     ]);
 
-    shouldMatchSnapshot(
-      'should render an image with other originCode - this would be a broken image',
-      <ServiceContextProvider service="news">
-        <ImageContainer sizes="100vw" {...dataWithOtherOriginCode} />
-      </ServiceContextProvider>,
-    );
+    it('should render an image with other originCode - this would be a broken image', () => {
+      const { container } = render(
+        <ImageContainer sizes="100vw" {...dataWithOtherOriginCode} />,
+        { service: 'news' },
+      );
+      expect(container).toMatchSnapshot();
+    });
   });
 });
