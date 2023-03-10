@@ -26,7 +26,7 @@ type Props = {
   getAgent: () => Promise<Agent>;
   service: Services;
   path: string;
-  pageType: 'homePage';
+  pageType: 'home';
 };
 
 export default async ({ getAgent, service, path: pathname }: Props) => {
