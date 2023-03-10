@@ -9347,7 +9347,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"compression@npm:^1.7.4":
+"compression@npm:1.7.4, compression@npm:^1.7.4":
   version: 1.7.4
   resolution: "compression@npm:1.7.4"
   dependencies:
@@ -20294,6 +20294,7 @@ __metadata:
     chromatic: 6.5.4
     chrome-launcher: 0.15.1
     cli-table: 0.3.11
+    compression: 1.7.4
     compression-webpack-plugin: 9.2.0
     copy-webpack-plugin: 9.1.0
     core-js: 3.22.2
