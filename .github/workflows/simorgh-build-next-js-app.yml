@@ -1,0 +1,59 @@
+name: Simorgh CI - Build Next.JS app
+on:
+  create:
+    branches:
+      - '**'
+  pull_request:
+    branches:
+      - '**'
+  push:
+    branches:
+      - latest
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.x]
+    env:
+      CI: true
+      LOG_LEVEL: 'error'
+      CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+      GIT_COMMIT_SHA: ${{ github.sha }}
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      # Sets the GIT_BRANCH env variable on a push event which occurs when we merge a PR. ${GITHUB_REF##*/} is the shorthand syntax for getting the short branch name
+      - name: Set GIT_BRANCH Environment Variable For Push Event
+        if: ${{ github.event_name == 'push' }}
+        run: echo "GIT_BRANCH=$(echo ${GITHUB_REF##*/})" >> $GITHUB_ENV
+
+      # Sets the GIT_BRANCH env variable on a pull request event which occurs when we create/update a PR. ${{ github.head_ref }} is the syntax for getting the short branch name
+      - name: Set GIT_BRANCH Environment Variable For Pull Request Event
+        if: ${{ github.event_name == 'pull_request' }}
+        run: echo "GIT_BRANCH=${{ github.head_ref }}" >> $GITHUB_ENV
+
+      - name: Cache Node Modules
+        id: cache
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: node-modules-${{ hashFiles('yarn.lock') }}
+
+      - name: Install Node Modules
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: ./scripts/installNodeModules.sh
+
+      - name: Build Simorgh - Next.JS app
+        run: |
+          echo ${GITHUB_REF##*/}
+          cd ./ws-nextjs-app
+          yarn build
