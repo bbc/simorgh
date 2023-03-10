@@ -1,5 +1,5 @@
-import React from 'react';
-/** @jsx jsx */ import { jsx } from '@emotion/core';
+/** @jsx jsx */
+import { jsx } from '@emotion/core';
 import styles from './index.styles';
 import {
   Recommend,

@@ -1,4 +1,5 @@
-import React from 'react';
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
 import styles from './index.styles';
 
 export const Confirm = ({ className }: { className?: string }) => (
