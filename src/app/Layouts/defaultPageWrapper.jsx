@@ -20,8 +20,9 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: ${props =>
-    props.darkMode ? props.theme.palette.BLACK : props.theme.palette.GHOST};
+  background-color: ${({ darkMode }) =>
+    props =>
+      darkMode ? props.theme.palette.BLACK : props.theme.palette.GHOST};
 `;
 
 const Content = styled.div`
