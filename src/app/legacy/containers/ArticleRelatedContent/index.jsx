@@ -1,11 +1,11 @@
 import React from 'react';
+import { useTheme } from '@emotion/react';
 import { arrayOf, shape, string } from 'prop-types';
 import tail from 'ramda/src/tail';
 import identity from 'ramda/src/identity';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import pathEq from 'ramda/src/pathEq';
-import { C_GREY_2 } from '#psammead/psammead-styles/src/colours';
 import CpsRelatedContent from '#containers/CpsRelatedContent';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import { gridColumnsPrimary } from '#pages/ArticlePage/ArticlePageGrid';
@@ -95,6 +95,10 @@ export const buildStoryPromos = optimoRelatedContent => {
 };
 
 const ArticleRelatedContent = ({ content }) => {
+  const {
+    palette: { GREY_2 },
+  } = useTheme();
+
   if (!pathEq(['type'], 'relatedContent', content)) return null;
   const items = pathOr([], ['model', 'blocks'], content);
 
@@ -113,7 +117,7 @@ const ArticleRelatedContent = ({ content }) => {
       {...(customTitle && { title: customTitle })}
       parentColumns={gridColumnsPrimary}
       content={storyPromoItems}
-      sectionLabelBackground={C_GREY_2}
+      sectionLabelBackground={GREY_2}
     />
   );
 };

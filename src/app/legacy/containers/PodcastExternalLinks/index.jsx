@@ -3,7 +3,6 @@ import React, { useContext } from 'react';
 import { arrayOf, shape, string } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
-import { C_CLOUD_LIGHT, C_SHADOW } from '#psammead/psammead-styles/src/colours';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
 import {
@@ -36,8 +35,8 @@ const ExternalLinkTextLangs = {
 };
 
 const Wrapper = styled.aside`
-  border-top: 0.0625rem ${C_CLOUD_LIGHT} solid;
-  border-bottom: 0.0625rem ${C_CLOUD_LIGHT} solid;
+  border-top: 0.0625rem ${props => props.theme.palette.CLOUD_LIGHT} solid;
+  border-bottom: 0.0625rem ${props => props.theme.palette.CLOUD_LIGHT} solid;
   margin: 0;
   padding: 0;
   margin-bottom: ${GEL_SPACING};
@@ -49,7 +48,7 @@ const Wrapper = styled.aside`
 const ThirdPartyLinksTitle = styled.h2`
   ${({ script }) => getGreatPrimer(script)}
   ${({ service }) => getSansRegular(service)}
-  color: ${C_SHADOW};
+  color: ${props => props.theme.palette.SHADOW};
   margin: 0;
   margin-top: 1rem;
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
@@ -72,13 +71,14 @@ const StyledListItem = styled.li`
   display: inline-block;
   &:not(:first-of-type) > a > span {
     ${({ dir }) =>
-      dir === 'rtl'
-        ? `
+      props =>
+        dir === 'rtl'
+          ? `
       padding-right: 1rem;
-      border-right: 0.0625rem ${C_CLOUD_LIGHT} solid;`
-        : `
+      border-right: 0.0625rem ${props.theme.palette.CLOUD_LIGHT} solid;`
+          : `
       padding-left: 1rem;
-      border-left: 0.0625rem ${C_CLOUD_LIGHT} solid;
+      border-left: 0.0625rem ${props.theme.palette.CLOUD_LIGHT} solid;
       `}
   }
 `;

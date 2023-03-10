@@ -1,7 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import { render } from '../../../components/react-testing-library-with-providers';
 import BulletinContainer from '.';
 
 const tvBulletinItem = {
@@ -48,57 +46,75 @@ const liveRadioBulletinItem = {
   isLive: true,
 };
 
-const BulletinWithContext = (item, service = 'igbo') => (
-  <ServiceContextProvider service={service}>
-    <BulletinContainer item={item} />
-  </ServiceContextProvider>
-);
-
 describe('Bulletin Container', () => {
   describe('snapshots', () => {
-    shouldMatchSnapshot(
-      'should render a TV bulletin correctly',
-      BulletinWithContext(tvBulletinItem),
-    );
+    it('should render a TV bulletin correctly', () => {
+      const { container } = render(
+        <BulletinContainer item={tvBulletinItem} />,
+        { service: 'igbo' },
+      );
+      expect(container).toMatchSnapshot();
+    });
 
-    shouldMatchSnapshot(
-      'should render a TV bulletin with lang attribute',
-      BulletinWithContext(tvBulletinItem, 'scotland'),
-    );
+    it('should render a TV bulletin with lang attribute', () => {
+      const { container } = render(
+        <BulletinContainer item={tvBulletinItem} />,
+        { service: 'scotland' },
+      );
+      expect(container).toMatchSnapshot();
+    });
 
-    shouldMatchSnapshot(
-      'should render a Live TV bulletin correctly',
-      BulletinWithContext(liveTvBulletinItem),
-    );
+    it('should render a Live TV bulletin correctly', () => {
+      const { container } = render(
+        <BulletinContainer item={liveTvBulletinItem} />,
+        { service: 'igbo' },
+      );
+      expect(container).toMatchSnapshot();
+    });
 
-    shouldMatchSnapshot(
-      'should render a Radio bulletin correctly',
-      BulletinWithContext(radioBulletinItem),
-    );
+    it('should render a Radio bulletin correctly', () => {
+      const { container } = render(
+        <BulletinContainer item={radioBulletinItem} />,
+        { service: 'igbo' },
+      );
+      expect(container).toMatchSnapshot();
+    });
 
-    shouldMatchSnapshot(
-      'should render a Live Radio bulletin correctly',
-      BulletinWithContext(liveRadioBulletinItem),
-    );
+    it('should render a Live Radio bulletin correctly', () => {
+      const { container } = render(
+        <BulletinContainer item={liveRadioBulletinItem} />,
+        { service: 'igbo' },
+      );
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('assertion tests', () => {
     it('should render the Live TV offscreen text', () => {
-      const { container } = render(BulletinWithContext(liveTvBulletinItem));
+      const { container } = render(
+        <BulletinContainer item={liveTvBulletinItem} />,
+        { service: 'igbo' },
+      );
       const span = container.getElementsByTagName('span')[1];
 
       expect(span.textContent).toEqual('NA EME UGBU A ');
     });
 
     it('should render the Live Radio offscreen text', () => {
-      const { container } = render(BulletinWithContext(liveRadioBulletinItem));
+      const { container } = render(
+        <BulletinContainer item={liveRadioBulletinItem} />,
+        { service: 'igbo' },
+      );
       const span = container.getElementsByTagName('span')[1];
 
       expect(span.textContent).toEqual('NA EME UGBU A ');
     });
 
     it('should render the LIVE label', () => {
-      const { container } = render(BulletinWithContext(liveTvBulletinItem));
+      const { container } = render(
+        <BulletinContainer item={liveTvBulletinItem} />,
+        { service: 'igbo' },
+      );
       const span = container.getElementsByTagName('span')[1];
 
       expect(span.getAttribute('aria-hidden')).toBeDefined();

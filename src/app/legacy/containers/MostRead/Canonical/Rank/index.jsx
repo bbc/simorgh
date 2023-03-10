@@ -22,7 +22,6 @@ import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
   GEL_GROUP_0_SCREEN_WIDTH_MAX,
 } from '#psammead/gel-foundations/src/breakpoints';
-import { C_POSTBOX } from '#psammead/psammead-styles/src/colours';
 import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import { grid } from '#psammead/psammead-styles/src/detection';
 import { getSerifLight } from '#psammead/psammead-styles/src/font-styles';
@@ -145,7 +144,7 @@ const StyledSpan = styled.span`
   ${({ script, size }) =>
     script && size === 'small' ? getTrafalgar(script) : getFoolscap(script)}
   position: relative;
-  color: ${C_POSTBOX};
+  color: ${props => props.theme.palette.POSTBOX};
   margin: 0; /* Reset */
   padding: 0;
   /* reduce the letter spacing of Japanese numerals */
