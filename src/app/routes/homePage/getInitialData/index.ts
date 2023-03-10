@@ -9,6 +9,8 @@ import HOME_PAGE_CONFIG from './page-config';
 
 const logger = nodeLogger(__filename);
 
+type Envs = 'test' | 'live' | 'local' | 'undefined';
+
 const getEnvironment = (pathname: string) => {
   if (pathname.includes('renderer_env=test')) {
     return 'test';
@@ -17,18 +19,7 @@ const getEnvironment = (pathname: string) => {
     return 'live';
   }
 
-  return process.env.SIMORGH_APP_ENV;
-};
-
-interface BFFError extends Error {
-  status: number;
-}
-
-const handleError = (message: string, status: number) => {
-  const error = new Error(message) as BFFError;
-  error.status = status;
-
-  return error;
+  return process.env.SIMORGH_APP_ENV as Envs;
 };
 
 type Props = {
@@ -42,12 +33,9 @@ export default async ({ getAgent, service, path: pathname }: Props) => {
   try {
     const env = getEnvironment(pathname);
     const isLocal = !env || env === 'local';
-    const idsForService = HOME_PAGE_CONFIG[service];
 
     const agent = !isLocal ? await getAgent() : null;
-    const id = env === 'live' ? idsForService.live : idsForService.test;
-
-    if (!id) throw handleError('Home ID is invalid', 500);
+    const id = !isLocal ? HOME_PAGE_CONFIG[service][env] : null;
 
     let fetchUrl = Url(process.env.BFF_PATH as string).set('query', {
       id,
