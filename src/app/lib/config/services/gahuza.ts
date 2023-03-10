@@ -350,7 +350,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'Amajwi n’amashusho',
-        url: '/gahuza/media/video',
+        url: '/gahuza/topics/crldzm936jmt',
       },
     ],
   },

@@ -354,7 +354,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'Bidiyo',
-        url: '/hausa/media/video',
+        url: '/hausa/topics/cn09qmz4jryt',
       },
       {
         title: 'Shirye-shirye na Musamman',
