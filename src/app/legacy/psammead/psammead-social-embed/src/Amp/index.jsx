@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import React, { memo } from 'react';
 import { string } from 'prop-types';
 import { Helmet } from 'react-helmet';

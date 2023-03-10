@@ -273,6 +273,7 @@ const AmpHead = () => (
   <Helmet>
     <script
       async
+      // eslint-disable-next-line react/no-unknown-property
       custom-element="amp-bind"
       src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
     />

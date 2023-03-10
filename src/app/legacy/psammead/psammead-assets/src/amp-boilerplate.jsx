@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 /*
   AMP Boilerplate Code https://github.com/ampproject/amphtml/blob/master/spec/amp-boilerplate.md
 */
