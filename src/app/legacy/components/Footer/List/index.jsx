@@ -91,9 +91,10 @@ const StyledList = styled.ul`
   }
 
   ${({ trustProjectLink }) =>
-    trustProjectLink &&
-    `> li:first-of-type {
-    border-bottom: 0.0625rem solid ${props => props.theme.palette.SHADOW};
+    props =>
+      trustProjectLink &&
+      `> li:first-of-type {
+    border-bottom: 0.0625rem solid ${props.theme.palette.SHADOW};
     padding: ${GEL_SPACING} 0;
     margin-bottom: ${GEL_SPACING};
     grid-column: 1/-1;
