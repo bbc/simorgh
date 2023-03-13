@@ -116,10 +116,10 @@ describe('MessageBanner', () => {
       afterEach(() => {
         process.env.SIMORGH_APP_ENV = originalEnvironment;
       });
-      it('should not render banner when the environment is live', () => {
+      it('should render banner when the environment is live', () => {
         process.env.SIMORGH_APP_ENV = 'live';
 
-        // if islive is true, do not show banner
+        // if islive is true, show banner
         const { container } = render(
           <MessageBanner
             heading={kyrgyzMessageBannerOnePromo.title}
@@ -129,7 +129,7 @@ describe('MessageBanner', () => {
             image={summary.imageUrl}
           />,
         );
-        expect(container).toBeEmptyDOMElement();
+        expect(container).not.toBeEmptyDOMElement();
         expect(isLive()).toBe(true);
       });
 

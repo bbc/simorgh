@@ -28,10 +28,6 @@ const MessageBanner = ({
   const { dir } = useContext(ServiceContext);
   const isRtl = dir === 'rtl';
 
-  if (isLive()) {
-    return null;
-  }
-
   const id = `message-banner-${heading.replaceAll(' ', '-')}`;
 
   return (
