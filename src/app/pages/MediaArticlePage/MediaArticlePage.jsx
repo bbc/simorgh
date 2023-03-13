@@ -122,18 +122,6 @@ const MediaArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
   const recommendationsData = path(['recommendations'], pageData);
 
-<<<<<<< Updated upstream
-  const isAdsEnabled = [
-    path(['metadata', 'allowAdvertising'], pageData),
-    !path(['metadata', 'consumableAsSFV'], pageData),
-    adsEnabled,
-    showAdsBasedOnLocation,
-  ].every(Boolean);
-
-  const adcampaign = path(['metadata', 'adCampaignKeyword'], pageData);
-
-=======
->>>>>>> Stashed changes
   const headline = getHeadline(pageData);
   const description = getSummary(pageData) || getHeadline(pageData);
   const firstPublished = getFirstPublished(pageData);
