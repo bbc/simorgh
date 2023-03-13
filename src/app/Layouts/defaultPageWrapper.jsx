@@ -22,7 +22,9 @@ const Wrapper = styled.div`
   justify-content: space-between;
   background-color: ${({ darkMode }) =>
     props =>
-      darkMode ? props.theme.palette.BLACK : props.theme.palette.GHOST};
+      darkMode
+        ? props.theme.palette.MIDNIGHT_BLACK
+        : props.theme.palette.GHOST};
 `;
 
 const Content = styled.div`
