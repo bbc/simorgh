@@ -75,10 +75,43 @@ export default {
   Component,
   decorators: [withKnobs],
   parameters: {
-    design: {
-      type: 'figma',
-      url: 'https://www.figma.com/file/OKzTxh7By6S0jj4U1Tgvug/Promos-(test-file)?node-id=0%3A1&t=qMVxFebf53G5pxtx-0',
-    },
+    design: [
+      {
+        name: 'Group 0',
+        type: 'figma',
+        url: 'https://www.figma.com/file/OKzTxh7By6S0jj4U1Tgvug/Promos-(test-file)?node-id=4%3A259&t=rrFhi8jBxJykyAhM-0',
+      },
+      {
+        name: 'Group 1',
+        type: 'figma',
+        url: 'https://www.figma.com/file/OKzTxh7By6S0jj4U1Tgvug/Promos-(test-file)?node-id=4%3A266&t=rrFhi8jBxJykyAhM-0',
+      },
+      {
+        name: 'Group 2',
+        type: 'figma',
+        url: 'https://www.figma.com/file/OKzTxh7By6S0jj4U1Tgvug/Promos-(test-file)?node-id=4%3A223&t=rrFhi8jBxJykyAhM-0',
+      },
+      {
+        name: 'Group 3',
+        type: 'figma',
+        url: 'https://www.figma.com/file/OKzTxh7By6S0jj4U1Tgvug/Promos-(test-file)?node-id=4%3A245&t=rrFhi8jBxJykyAhM-0',
+      },
+      {
+        name: 'Group 4',
+        type: 'figma',
+        url: 'https://www.figma.com/file/OKzTxh7By6S0jj4U1Tgvug/Promos-(test-file)?node-id=5%3A510&t=rrFhi8jBxJykyAhM-0',
+      },
+      {
+        name: 'Typography',
+        type: 'figma',
+        url: 'https://www.figma.com/file/OKzTxh7By6S0jj4U1Tgvug/Promos-(test-file)?node-id=2%3A63&t=rrFhi8jBxJykyAhM-0',
+      },
+      {
+        name: 'States',
+        type: 'figma',
+        url: 'https://www.figma.com/file/OKzTxh7By6S0jj4U1Tgvug/Promos-(test-file)?node-id=6%3A492&t=rrFhi8jBxJykyAhM-0',
+      },
+    ],
     chromatic: { disable: true },
   },
 };
