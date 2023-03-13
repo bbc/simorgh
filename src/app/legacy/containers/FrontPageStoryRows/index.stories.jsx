@@ -75,6 +75,10 @@ export default {
   Component,
   decorators: [withKnobs],
   parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/OKzTxh7By6S0jj4U1Tgvug/Promos-(test-file)?node-id=5%3A510&t=ico6H3BEmSWFAoCF-1',
+    },
     chromatic: { disable: true },
   },
 };
