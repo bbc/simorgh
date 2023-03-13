@@ -130,6 +130,7 @@ const MediaArticlePage = ({ pageData, mostReadEndpointOverride }) => {
 
   const isAdsEnabled = [
     path(['metadata', 'allowAdvertising'], pageData),
+    !path(['metadata', 'consumableAsSFV'], pageData),
     adsEnabled,
     showAdsBasedOnLocation,
   ].every(Boolean);

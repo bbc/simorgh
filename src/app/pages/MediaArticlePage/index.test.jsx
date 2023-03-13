@@ -115,4 +115,20 @@ describe('MediaArticlePage', () => {
       expect(container).toMatchSnapshot();
     });
   });
+
+  it('should NOT render mpu or advert leaderboard', async () => {
+    fetch.mockResponse(JSON.stringify(newsMostReadData));
+
+    const { container } = render(
+      <Context service="news" adsToggledOn showAdsBasedOnLocation>
+        <MediaArticlePage pageData={pidginPageData} />
+      </Context>,
+    );
+
+    const adElements = container.querySelectorAll('[data-e2e="advertisement"]');
+
+    await waitFor(() => {
+      expect(adElements.length).toBe(0);
+    });
+  });
 });
