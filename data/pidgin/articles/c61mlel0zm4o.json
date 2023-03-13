@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "aa18b9a0",
+              "id": "119dcb68",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "0d782935",
+                    "id": "65ded2a6",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "53dc2f5d",
+                          "id": "1c3ea88a",
                           "type": "paragraph",
                           "model": {
                             "text": "Bullet Point test for WS - Pidgin",
                             "blocks": [
                               {
-                                "id": "172cb162",
+                                "id": "ff7c0d4f",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Bullet Point test for WS - Pidgin",
@@ -56,7 +56,7 @@
               ]
             },
             {
-              "id": "8e4c3fe7",
+              "id": "97bb0fca",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1625733353540,
@@ -67,18 +67,18 @@
               ]
             },
             {
-              "id": "a296fbad",
+              "id": "2e28cf6f",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "0bb0cda4",
+                    "id": "c8a94dfc",
                     "type": "paragraph",
                     "model": {
                       "text": "Start of Bullet point list",
                       "blocks": [
                         {
-                          "id": "69ecdfed",
+                          "id": "23614a8a",
                           "type": "fragment",
                           "model": {
                             "text": "Start of Bullet point list",
@@ -98,23 +98,23 @@
                     ]
                   },
                   {
-                    "id": "f40ef15a",
+                    "id": "c482558d",
                     "type": "unorderedList",
                     "model": {
                       "blocks": [
                         {
-                          "id": "c86bdf2e",
+                          "id": "de43176b",
                           "type": "listItem",
                           "model": {
                             "blocks": [
                               {
-                                "id": "7c00afac",
+                                "id": "5c6d567c",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Item 1 ",
                                   "blocks": [
                                     {
-                                      "id": "38723281",
+                                      "id": "22e27b4c",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Item 1 ",
@@ -146,18 +146,18 @@
                           ]
                         },
                         {
-                          "id": "35c32714",
+                          "id": "308fcdc1",
                           "type": "listItem",
                           "model": {
                             "blocks": [
                               {
-                                "id": "0ba548e6",
+                                "id": "34b30e6f",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Item 2 bold",
                                   "blocks": [
                                     {
-                                      "id": "a1017ec4",
+                                      "id": "26ef60e7",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Item 2 ",
@@ -172,7 +172,7 @@
                                       ]
                                     },
                                     {
-                                      "id": "66ac6abb",
+                                      "id": "e9ffe28f",
                                       "type": "fragment",
                                       "model": {
                                         "text": "bold",
@@ -206,18 +206,18 @@
                           ]
                         },
                         {
-                          "id": "171d56a5",
+                          "id": "e1346904",
                           "type": "listItem",
                           "model": {
                             "blocks": [
                               {
-                                "id": "a425595a",
+                                "id": "6fb3e2a9",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Item 3 indent",
                                   "blocks": [
                                     {
-                                      "id": "34694af9",
+                                      "id": "d5a135d6",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Item 3 ",
@@ -232,7 +232,7 @@
                                       ]
                                     },
                                     {
-                                      "id": "74d2a6e4",
+                                      "id": "63a08a92",
                                       "type": "fragment",
                                       "model": {
                                         "text": "indent",
@@ -266,18 +266,18 @@
                           ]
                         },
                         {
-                          "id": "6579d3dc",
+                          "id": "02ae997b",
                           "type": "listItem",
                           "model": {
                             "blocks": [
                               {
-                                "id": "ecbbfe19",
+                                "id": "67cc3213",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Item 4 link",
                                   "blocks": [
                                     {
-                                      "id": "efeee461",
+                                      "id": "62711ff2",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Item 4 ",
@@ -292,13 +292,13 @@
                                       ]
                                     },
                                     {
-                                      "id": "eaafb785",
+                                      "id": "9d8afacb",
                                       "type": "urlLink",
                                       "model": {
                                         "text": "link",
                                         "blocks": [
                                           {
-                                            "id": "30d28a66",
+                                            "id": "f90443fc",
                                             "type": "fragment",
                                             "model": {
                                               "text": "link",
@@ -350,13 +350,13 @@
                     ]
                   },
                   {
-                    "id": "e2ce072f",
+                    "id": "f61f1634",
                     "type": "paragraph",
                     "model": {
                       "text": "End of Bullet point list",
                       "blocks": [
                         {
-                          "id": "30b905b8",
+                          "id": "32eee3f0",
                           "type": "fragment",
                           "model": {
                             "text": "End of Bullet point list",
@@ -376,13 +376,13 @@
                     ]
                   },
                   {
-                    "id": "69177323",
+                    "id": "9bf46e1d",
                     "type": "paragraph",
                     "model": {
                       "text": "Start of Numbered list",
                       "blocks": [
                         {
-                          "id": "2ad70863",
+                          "id": "e47ed543",
                           "type": "fragment",
                           "model": {
                             "text": "Start of Numbered list",
@@ -408,7 +408,7 @@
               ]
             },
             {
-              "id": "e0f3aef2",
+              "id": "13536457",
               "type": "mpu",
               "model": {},
               "position": [
@@ -416,28 +416,28 @@
               ]
             },
             {
-              "id": "b9bad561",
+              "id": "fe646930",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "ce201937",
+                    "id": "7fe56829",
                     "type": "orderedList",
                     "model": {
                       "blocks": [
                         {
-                          "id": "a0220274",
+                          "id": "dba94c3d",
                           "type": "listItem",
                           "model": {
                             "blocks": [
                               {
-                                "id": "3ffcc445",
+                                "id": "138e488e",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Item 1 ",
                                   "blocks": [
                                     {
-                                      "id": "f5bb8e35",
+                                      "id": "2f072042",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Item 1 ",
@@ -469,18 +469,18 @@
                           ]
                         },
                         {
-                          "id": "0e538213",
+                          "id": "98101beb",
                           "type": "listItem",
                           "model": {
                             "blocks": [
                               {
-                                "id": "9e73f136",
+                                "id": "a3cd2f46",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Item 2 bold",
                                   "blocks": [
                                     {
-                                      "id": "4213a22a",
+                                      "id": "32a63142",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Item 2 ",
@@ -495,7 +495,7 @@
                                       ]
                                     },
                                     {
-                                      "id": "f064e5cd",
+                                      "id": "f00cbd53",
                                       "type": "fragment",
                                       "model": {
                                         "text": "bold",
@@ -529,18 +529,18 @@
                           ]
                         },
                         {
-                          "id": "e77f2888",
+                          "id": "2346dbc2",
                           "type": "listItem",
                           "model": {
                             "blocks": [
                               {
-                                "id": "34ef8982",
+                                "id": "58856059",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Item 3 indent",
                                   "blocks": [
                                     {
-                                      "id": "a9b8a895",
+                                      "id": "3227fb56",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Item 3 ",
@@ -555,7 +555,7 @@
                                       ]
                                     },
                                     {
-                                      "id": "6bbee27d",
+                                      "id": "216eaef7",
                                       "type": "fragment",
                                       "model": {
                                         "text": "indent",
@@ -589,18 +589,18 @@
                           ]
                         },
                         {
-                          "id": "128de6d6",
+                          "id": "612fe170",
                           "type": "listItem",
                           "model": {
                             "blocks": [
                               {
-                                "id": "0a8099b9",
+                                "id": "bb28cb2c",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Item 4 link",
                                   "blocks": [
                                     {
-                                      "id": "8c686805",
+                                      "id": "6722c71b",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Item 4 ",
@@ -615,13 +615,13 @@
                                       ]
                                     },
                                     {
-                                      "id": "d830b865",
+                                      "id": "4e98df77",
                                       "type": "urlLink",
                                       "model": {
                                         "text": "link",
                                         "blocks": [
                                           {
-                                            "id": "36b4629c",
+                                            "id": "9d9866ca",
                                             "type": "fragment",
                                             "model": {
                                               "text": "link",
@@ -671,22 +671,69 @@
                       5,
                       1
                     ]
-                  },
+                  }
+                ]
+              },
+              "position": [
+                5
+              ]
+            },
+            {
+              "id": "cbc4bd0c",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                6
+              ]
+            },
+            {
+              "id": "7c88738c",
+              "type": "text",
+              "model": {
+                "blocks": [
                   {
-                    "id": "4583b557",
+                    "id": "f3b19d29",
                     "type": "paragraph",
                     "model": {
                       "text": "End of Numbered list",
                       "blocks": [
                         {
-                          "id": "85be5742",
+                          "id": "b354f7d5",
                           "type": "fragment",
                           "model": {
                             "text": "End of Numbered list",
                             "attributes": []
                           },
                           "position": [
-                            5,
+                            7,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      7,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "6701ba01",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Bullet list indents",
+                      "blocks": [
+                        {
+                          "id": "f584cf02",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Bullet list indents",
+                            "attributes": []
+                          },
+                          "position": [
+                            7,
                             2,
                             1
                           ]
@@ -694,62 +741,36 @@
                       ]
                     },
                     "position": [
-                      5,
+                      7,
                       2
                     ]
                   },
                   {
-                    "id": "6dc68cea",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "Bullet list indents",
-                      "blocks": [
-                        {
-                          "id": "382d200e",
-                          "type": "fragment",
-                          "model": {
-                            "text": "Bullet list indents",
-                            "attributes": []
-                          },
-                          "position": [
-                            5,
-                            3,
-                            1
-                          ]
-                        }
-                      ]
-                    },
-                    "position": [
-                      5,
-                      3
-                    ]
-                  },
-                  {
-                    "id": "c25d3360",
+                    "id": "d8c019b8",
                     "type": "unorderedList",
                     "model": {
                       "blocks": [
                         {
-                          "id": "8bb40375",
+                          "id": "727c55ea",
                           "type": "listItem",
                           "model": {
                             "blocks": [
                               {
-                                "id": "4b5df500",
+                                "id": "16dece9d",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Not",
                                   "blocks": [
                                     {
-                                      "id": "5d1b4c8e",
+                                      "id": "82a9c82f",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Not",
                                         "attributes": []
                                       },
                                       "position": [
-                                        5,
-                                        4,
+                                        7,
+                                        3,
                                         1,
                                         1,
                                         1
@@ -758,38 +779,38 @@
                                   ]
                                 },
                                 "position": [
-                                  5,
-                                  4,
+                                  7,
+                                  3,
                                   1,
                                   1
                                 ]
                               },
                               {
-                                "id": "8e0a23e8",
+                                "id": "4b5eb117",
                                 "type": "unorderedList",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "37da5706",
+                                      "id": "c04deac6",
                                       "type": "listItem",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "adc5a264",
+                                            "id": "81290a21",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "sure",
                                               "blocks": [
                                                 {
-                                                  "id": "3099250a",
+                                                  "id": "ba19a3ed",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "sure",
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    5,
-                                                    4,
+                                                    7,
+                                                    3,
                                                     1,
                                                     2,
                                                     1,
@@ -800,8 +821,8 @@
                                               ]
                                             },
                                             "position": [
-                                              5,
-                                              4,
+                                              7,
+                                              3,
                                               1,
                                               2,
                                               1,
@@ -809,31 +830,31 @@
                                             ]
                                           },
                                           {
-                                            "id": "abd34ccb",
+                                            "id": "77ddafb6",
                                             "type": "unorderedList",
                                             "model": {
                                               "blocks": [
                                                 {
-                                                  "id": "1cef10b9",
+                                                  "id": "dd7cecb5",
                                                   "type": "listItem",
                                                   "model": {
                                                     "blocks": [
                                                       {
-                                                        "id": "70d6cfb1",
+                                                        "id": "f35d486f",
                                                         "type": "paragraph",
                                                         "model": {
                                                           "text": "what",
                                                           "blocks": [
                                                             {
-                                                              "id": "0edb070e",
+                                                              "id": "f1d35604",
                                                               "type": "fragment",
                                                               "model": {
                                                                 "text": "what",
                                                                 "attributes": []
                                                               },
                                                               "position": [
-                                                                5,
-                                                                4,
+                                                                7,
+                                                                3,
                                                                 1,
                                                                 2,
                                                                 1,
@@ -846,8 +867,8 @@
                                                           ]
                                                         },
                                                         "position": [
-                                                          5,
-                                                          4,
+                                                          7,
+                                                          3,
                                                           1,
                                                           2,
                                                           1,
@@ -857,31 +878,31 @@
                                                         ]
                                                       },
                                                       {
-                                                        "id": "19adaeec",
+                                                        "id": "133b7f59",
                                                         "type": "unorderedList",
                                                         "model": {
                                                           "blocks": [
                                                             {
-                                                              "id": "a68745bd",
+                                                              "id": "50587b19",
                                                               "type": "listItem",
                                                               "model": {
                                                                 "blocks": [
                                                                   {
-                                                                    "id": "c70003a6",
+                                                                    "id": "44401718",
                                                                     "type": "paragraph",
                                                                     "model": {
                                                                       "text": "should",
                                                                       "blocks": [
                                                                         {
-                                                                          "id": "49e7cc30",
+                                                                          "id": "18a0b1b1",
                                                                           "type": "fragment",
                                                                           "model": {
                                                                             "text": "should",
                                                                             "attributes": []
                                                                           },
                                                                           "position": [
-                                                                            5,
-                                                                            4,
+                                                                            7,
+                                                                            3,
                                                                             1,
                                                                             2,
                                                                             1,
@@ -896,8 +917,8 @@
                                                                       ]
                                                                     },
                                                                     "position": [
-                                                                      5,
-                                                                      4,
+                                                                      7,
+                                                                      3,
                                                                       1,
                                                                       2,
                                                                       1,
@@ -909,31 +930,31 @@
                                                                     ]
                                                                   },
                                                                   {
-                                                                    "id": "bf5f5015",
+                                                                    "id": "1bdec0f3",
                                                                     "type": "unorderedList",
                                                                     "model": {
                                                                       "blocks": [
                                                                         {
-                                                                          "id": "bf7f202d",
+                                                                          "id": "278f3f2f",
                                                                           "type": "listItem",
                                                                           "model": {
                                                                             "blocks": [
                                                                               {
-                                                                                "id": "f1e49a82",
+                                                                                "id": "099fdab9",
                                                                                 "type": "paragraph",
                                                                                 "model": {
                                                                                   "text": "happen",
                                                                                   "blocks": [
                                                                                     {
-                                                                                      "id": "53087c9c",
+                                                                                      "id": "8af66522",
                                                                                       "type": "fragment",
                                                                                       "model": {
                                                                                         "text": "happen",
                                                                                         "attributes": []
                                                                                       },
                                                                                       "position": [
-                                                                                        5,
-                                                                                        4,
+                                                                                        7,
+                                                                                        3,
                                                                                         1,
                                                                                         2,
                                                                                         1,
@@ -950,8 +971,8 @@
                                                                                   ]
                                                                                 },
                                                                                 "position": [
-                                                                                  5,
-                                                                                  4,
+                                                                                  7,
+                                                                                  3,
                                                                                   1,
                                                                                   2,
                                                                                   1,
@@ -965,31 +986,31 @@
                                                                                 ]
                                                                               },
                                                                               {
-                                                                                "id": "0c8535e9",
+                                                                                "id": "82324283",
                                                                                 "type": "unorderedList",
                                                                                 "model": {
                                                                                   "blocks": [
                                                                                     {
-                                                                                      "id": "f9343da7",
+                                                                                      "id": "1d4e54f9",
                                                                                       "type": "listItem",
                                                                                       "model": {
                                                                                         "blocks": [
                                                                                           {
-                                                                                            "id": "5615dff1",
+                                                                                            "id": "1393de90",
                                                                                             "type": "paragraph",
                                                                                             "model": {
                                                                                               "text": "here",
                                                                                               "blocks": [
                                                                                                 {
-                                                                                                  "id": "e0669ce6",
+                                                                                                  "id": "aab04b49",
                                                                                                   "type": "fragment",
                                                                                                   "model": {
                                                                                                     "text": "here",
                                                                                                     "attributes": []
                                                                                                   },
                                                                                                   "position": [
-                                                                                                    5,
-                                                                                                    4,
+                                                                                                    7,
+                                                                                                    3,
                                                                                                     1,
                                                                                                     2,
                                                                                                     1,
@@ -1008,8 +1029,8 @@
                                                                                               ]
                                                                                             },
                                                                                             "position": [
-                                                                                              5,
-                                                                                              4,
+                                                                                              7,
+                                                                                              3,
                                                                                               1,
                                                                                               2,
                                                                                               1,
@@ -1027,8 +1048,8 @@
                                                                                         ]
                                                                                       },
                                                                                       "position": [
-                                                                                        5,
-                                                                                        4,
+                                                                                        7,
+                                                                                        3,
                                                                                         1,
                                                                                         2,
                                                                                         1,
@@ -1045,8 +1066,8 @@
                                                                                   ]
                                                                                 },
                                                                                 "position": [
-                                                                                  5,
-                                                                                  4,
+                                                                                  7,
+                                                                                  3,
                                                                                   1,
                                                                                   2,
                                                                                   1,
@@ -1062,8 +1083,8 @@
                                                                             ]
                                                                           },
                                                                           "position": [
-                                                                            5,
-                                                                            4,
+                                                                            7,
+                                                                            3,
                                                                             1,
                                                                             2,
                                                                             1,
@@ -1078,8 +1099,8 @@
                                                                       ]
                                                                     },
                                                                     "position": [
-                                                                      5,
-                                                                      4,
+                                                                      7,
+                                                                      3,
                                                                       1,
                                                                       2,
                                                                       1,
@@ -1093,8 +1114,8 @@
                                                                 ]
                                                               },
                                                               "position": [
-                                                                5,
-                                                                4,
+                                                                7,
+                                                                3,
                                                                 1,
                                                                 2,
                                                                 1,
@@ -1107,8 +1128,8 @@
                                                           ]
                                                         },
                                                         "position": [
-                                                          5,
-                                                          4,
+                                                          7,
+                                                          3,
                                                           1,
                                                           2,
                                                           1,
@@ -1120,8 +1141,8 @@
                                                     ]
                                                   },
                                                   "position": [
-                                                    5,
-                                                    4,
+                                                    7,
+                                                    3,
                                                     1,
                                                     2,
                                                     1,
@@ -1132,8 +1153,8 @@
                                               ]
                                             },
                                             "position": [
-                                              5,
-                                              4,
+                                              7,
+                                              3,
                                               1,
                                               2,
                                               1,
@@ -1143,8 +1164,8 @@
                                         ]
                                       },
                                       "position": [
-                                        5,
-                                        4,
+                                        7,
+                                        3,
                                         1,
                                         2,
                                         1
@@ -1153,8 +1174,8 @@
                                   ]
                                 },
                                 "position": [
-                                  5,
-                                  4,
+                                  7,
+                                  3,
                                   1,
                                   2
                                 ]
@@ -1162,22 +1183,22 @@
                             ]
                           },
                           "position": [
-                            5,
-                            4,
+                            7,
+                            3,
                             1
                           ]
                         }
                       ]
                     },
                     "position": [
-                      5,
-                      4
+                      7,
+                      3
                     ]
                   }
                 ]
               },
               "position": [
-                5
+                7
               ]
             }
           ]
@@ -1186,14 +1207,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:c61mlel0zm4o",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c61mlel0zm4o"
+          "optimoUrn": "urn:bbc:optimo:asset:c61mlel0zm4o",
+          "canonicalUrl": "https://www.bbc.com/pidgin/articles/c61mlel0zm4o"
         },
         "type": "article",
         "createdBy": "Pidgin",
         "language": "pcm",
         "firstPublished": 1625733353540,
         "lastPublished": 1625733353540,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:c61mlel0zm4o",
           "producer": "Pidgin",
@@ -1217,7 +1238,6 @@
             ]
           }
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -1231,7 +1251,6 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "Bullet Point test for WS",
           "promoHeadline": {
@@ -1261,7 +1280,6 @@
             ]
           }
         },
-        "images": {},
         "summary": {
           "blocks": [
             {
@@ -1287,8 +1305,7 @@
               }
             }
           ]
-        },
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -1774,7 +1791,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T21:04:58.371Z",
+        "generated": "2023-02-18T03:04:58.493Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
         "totalRecords": 20,

@@ -139,6 +139,7 @@ const ContentAnchor = ({ children, initialHeight, initialWidth }) => {
         height: nextWrapperHeight,
       });
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [contentElRect]);
 
   useLayoutEffect(() => {

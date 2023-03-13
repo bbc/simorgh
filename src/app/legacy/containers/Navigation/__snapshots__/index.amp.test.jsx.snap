@@ -142,7 +142,7 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
     outline: none;
   }
 
-  .emotion-15:focus-visible:focus-visible::after {
+  .emotion-15:focus-visible::after {
     outline: 0.1875rem solid #000000;
     content: '';
     position: absolute;
@@ -150,7 +150,7 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
     height: 100%;
   }
 
-  .emotion-15:focus-visible:after {
+  .emotion-15:after {
     content: ' ';
     height: 100%;
     width: 3rem;
@@ -168,7 +168,7 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
   }
 
   @media (min-width: 25rem) {
-    .emotion-15:focus-visible:after {
+    .emotion-15:after {
       width: 6rem;
     }
   }

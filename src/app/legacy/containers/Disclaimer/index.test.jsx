@@ -1,8 +1,8 @@
 import React from 'react';
-import { render } from '@testing-library/react';
 
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { ServiceContext } from '../../../contexts/ServiceContext';
+import { render } from '../../../components/react-testing-library-with-providers';
 
 import DisclaimerComponent from '.';
 
