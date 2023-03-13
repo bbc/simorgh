@@ -119,7 +119,7 @@ describe('MessageBanner', () => {
       it('should render banner when the environment is live', () => {
         process.env.SIMORGH_APP_ENV = 'live';
 
-        // if islive is true, show banner
+        // if isLive is true, show banner
         const { container } = render(
           <MessageBanner
             heading={kyrgyzMessageBannerOnePromo.title}
