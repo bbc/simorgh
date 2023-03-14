@@ -34,8 +34,8 @@ export default async ({ getAgent, service, path: pathname }: Props) => {
     const env = getEnvironment(pathname);
     const isLocal = !env || env === 'local';
 
-    const agent = !isLocal ? await getAgent() : null;
-    const id = !isLocal ? HOME_PAGE_CONFIG[service][env] : null;
+    const agent = isLocal ? null : await getAgent();
+    const id = isLocal ? null : HOME_PAGE_CONFIG[service][env];
 
     let fetchUrl = Url(process.env.BFF_PATH as string).set('query', {
       id,
