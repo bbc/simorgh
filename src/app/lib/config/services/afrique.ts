@@ -360,7 +360,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'Vidéos',
-        url: '/afrique/media/video',
+        url: '/afrique/topics/cz4vn9gyd6rt',
       },
       {
         title: 'Nos émissions',
