@@ -15,7 +15,6 @@ import PromoList from '#components/OptimoPromos/PromoList';
 import { BORDER_SPACING_DBL } from '../constants';
 
 export const StyledSectionLabel = styled(SectionLabel)`
-  background-color: ${props => props.theme.palette.GREY_2}
   margin-top: 0;
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     margin-top: 0;

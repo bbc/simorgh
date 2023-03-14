@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { useTheme } from '@emotion/react';
 import { arrayOf, shape } from 'prop-types';
 import { storyItem } from '#models/propTypes/storyItem';
 import pathOr from 'ramda/src/pathOr';
@@ -55,6 +56,10 @@ const TopStoriesSection = ({ content }) => {
   const eventTrackingDataSend = path(['block'], eventTrackingData);
   const viewRef = useViewTracker(eventTrackingDataSend);
 
+  const {
+    palette: { GREY_2 },
+  } = useTheme();
+
   if (!content || isEmpty(content)) return null;
 
   const title = pathOr('Top Stories', ['topStoriesTitle'], translations);
@@ -80,6 +85,7 @@ const TopStoriesSection = ({ content }) => {
       <StyledSectionLabel
         labelId={LABEL_ID}
         columnType="secondary"
+        backgroundColor={GREY_2}
         script={script}
         service={service}
       >
