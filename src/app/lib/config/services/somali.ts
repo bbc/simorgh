@@ -332,7 +332,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'Muuqaal',
-        url: '/somali/media/video',
+        url: '/somali/topics/c7pl4k5r9xxt',
       },
       {
         title: 'Barnaamijyada Idaacadda',
