@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { useContext } from 'react';
 import { jsx } from '@emotion/react';
-import isLive from '#lib/utilities/isLive';
 import Paragraph from '../Paragraph';
 import Heading from '../Heading';
 import Image from '../Image';
