@@ -294,7 +294,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'ቪድዮ',
-        url: '/tigrinya/media/video',
+        url: '/tigrinya/topics/crldzm9n4rdt',
       },
       {
         title: 'ኣመና ፍቱዋት',
