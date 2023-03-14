@@ -238,7 +238,7 @@ Object {
 exports[`AMP Media Asset Page Header Navigation link should match text and url 5`] = `
 Object {
   "text": "Video",
-  "url": "/pidgin/media/video",
+  "url": "/pidgin/topics/c3l19z3k1ert",
 }
 `;
 

@@ -1,14 +1,13 @@
 import React from 'react';
 import dissocPath from 'ramda/src/dissocPath';
 import identity from 'ramda/src/identity';
-import { render } from '@testing-library/react';
 
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 
 import * as viewTracking from '#hooks/useViewTracker';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { render } from '../../../components/react-testing-library-with-providers';
 import { service as russianServiceConfig } from '../../../lib/config/services/russian';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { InlinePodcastPromo, SecondaryColumnPodcastPromo } from '.';
@@ -40,7 +39,10 @@ const {
 } = russianServiceConfig.default.podcastPromo;
 
 describe('Inline', () => {
-  shouldMatchSnapshot('Should render correctly', <PromoWithContext inline />);
+  it('Should render correctly', () => {
+    const { container } = render(<PromoWithContext inline />);
+    expect(container).toMatchSnapshot();
+  });
 
   it('should show when all props are available', () => {
     const { getByText, getByRole } = render(<PromoWithContext inline />);
@@ -140,7 +142,10 @@ describe('Inline', () => {
 });
 
 describe('SecondaryColumn', () => {
-  shouldMatchSnapshot('Should render correctly', <PromoWithContext />);
+  it('Should render correctly', () => {
+    const { container } = render(<PromoWithContext />);
+    expect(container).toMatchSnapshot();
+  });
 
   it('should show when all props are available', () => {
     const { getByText, getByRole } = render(<PromoWithContext />);

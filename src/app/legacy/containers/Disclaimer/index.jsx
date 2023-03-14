@@ -10,7 +10,6 @@ import {
   GEL_SPACING_TRPL,
   GEL_SPACING_QUIN,
 } from '#psammead/gel-foundations/src/spacings';
-import { C_GREY_6, C_GREY_2 } from '#psammead/psammead-styles/src/colours';
 import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
@@ -29,8 +28,8 @@ const InfoBanner = styled.p`
 const Inner = styled.section`
   ${({ script }) => script && getLongPrimer(script)}
   ${({ service }) => service && getSansLight(service)}
-  background: ${C_GREY_2};
-  color: ${C_GREY_6};
+  background: ${props => props.theme.palette.GREY_2};
+  color: ${props => props.theme.palette.GREY_6};
   margin-bottom: ${GEL_SPACING_TRPL};
   padding: ${GEL_SPACING_DBL};
   @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {

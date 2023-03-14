@@ -1,9 +1,8 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { render } from '@testing-library/react';
 import { RequestContext } from '#contexts/RequestContext';
 import isLive from '#lib/utilities/isLive';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { render } from '../../../../components/react-testing-library-with-providers';
 import CanonicalAd, { getBootstrapSrc } from '.';
 
 const defaultRequestContextData = {
@@ -52,15 +51,17 @@ describe('CanonicalAds Ads', () => {
   });
 
   describe('Snapshots', () => {
-    shouldMatchSnapshot(
-      'should correctly render an Canonical leaderboard ad with dotcom-bootstrap script',
-      <CanonicalAdWithContext slotType="leaderboard" />,
-    );
+    it('should correctly render an Canonical leaderboard ad with dotcom-bootstrap script', () => {
+      const { container } = render(
+        <CanonicalAdWithContext slotType="leaderboard" />,
+      );
+      expect(container).toMatchSnapshot();
+    });
 
-    shouldMatchSnapshot(
-      'should correctly render a Canonical mpu ad with dotcom-bootstrap script',
-      <CanonicalAdWithContext slotType="mpu" />,
-    );
+    it('should correctly render a Canonical mpu ad with dotcom-bootstrap script', () => {
+      const { container } = render(<CanonicalAdWithContext slotType="mpu" />);
+      expect(container).toMatchSnapshot();
+    });
   });
 });
 

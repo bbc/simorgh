@@ -1,5 +1,8 @@
 import React from 'react';
-import { render, waitFor } from '@testing-library/react';
+import {
+  render,
+  waitFor,
+} from '../../../../components/react-testing-library-with-providers';
 import VjAmp from './VjAmp';
 
 const vjProps = {

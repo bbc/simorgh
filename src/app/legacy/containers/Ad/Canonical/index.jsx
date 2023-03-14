@@ -7,13 +7,12 @@ import pathOr from 'ramda/src/pathOr';
 import { RequestContext } from '#contexts/RequestContext';
 import isLive from '#lib/utilities/isLive';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
-import { C_GREY_3 } from '#psammead/psammead-styles/src/colours';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
 import { leaderboardStyles, mpuStyles } from '../utilities/adSlotStyles';
 
 const AdContainer = styled.section`
-  background-color: ${C_GREY_3};
+  background-color: ${props => props.theme.palette.GREY_3};
   ${({ slotType }) => (slotType === 'mpu' ? mpuStyles : leaderboardStyles)}
 `;
 

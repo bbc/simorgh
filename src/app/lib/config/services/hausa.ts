@@ -239,6 +239,7 @@ export const service: DefaultServiceConfig = {
         duration: 'Tsawon lokaci',
         recentEpisodes: 'Kari',
         podcastExternalLinks: 'Za a iya samun wannan Podcast din a',
+        download: 'Sauke shiri',
       },
       socialEmbed: {
         caption: {
@@ -353,7 +354,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'Bidiyo',
-        url: '/hausa/media/video',
+        url: '/hausa/topics/cn09qmz4jryt',
       },
       {
         title: 'Shirye-shirye na Musamman',
