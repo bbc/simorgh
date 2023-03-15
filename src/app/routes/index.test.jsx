@@ -29,7 +29,7 @@ import indexPageJson from '#data/ukrainian/ukraine_in_russian';
 import storyPageRecommendationsData from '#data/mundo/recommendations/index.json';
 import sportArticlePageJson from '#data/sport/articles/cj80n66ddnko.json';
 
-import { FRONT_PAGE, HOME_PAGE, ERROR_PAGE } from '#app/routes/utils/pageTypes';
+import { FRONT_PAGE, ERROR_PAGE } from '#app/routes/utils/pageTypes';
 import routes from '.';
 import * as fetchPageData from './utils/fetchPageData';
 import {
