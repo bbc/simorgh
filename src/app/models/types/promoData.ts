@@ -30,7 +30,7 @@ export type VisualStyle = keyof typeof VISUAL_STYLE;
 
 export type VisualProminence = keyof typeof VISUAL_PROMINENCE;
 
-export interface Curation {
+export interface CurationProps {
   visualStyle: VisualStyle;
   visualProminence: VisualProminence;
   promos: Summary[];
