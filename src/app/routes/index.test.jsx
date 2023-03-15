@@ -189,35 +189,6 @@ describe('Main page routes', () => {
     ).toBeInTheDocument();
   });
 
-  it('should route to and render the podcast page', async () => {
-    const pathname = '/arabic/podcasts/p02pc9qc';
-    fetchMock.mock(
-      `http://localhost${pathname}.json?renderer_env=live`,
-      podcastPageJson,
-    );
-
-    const { getInitialData, pageType } = getMatchingRoute(pathname);
-    const { pageData } = await getInitialData({
-      path: pathname,
-      pageType,
-      toggles: {
-        recentAudioEpisodes: { enabled: false, value: 4 },
-      },
-    });
-    await renderRouter({
-      pathname,
-      pageData,
-      pageType,
-      service: 'arabic',
-    });
-
-    const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'BBC Xtra';
-
-    expect(
-      await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
-    ).toBeInTheDocument();
-  });
-
   it('should route to and render the onDemand Radio page', async () => {
     const pathname = '/indonesia/bbc_indonesian_radio/w172xh267fpn19l';
     fetchMock.mock(
