@@ -364,7 +364,7 @@ Object {
   "@context": "http://schema.org",
   "@graph": Array [
     Object {
-      "@type": "Article",
+      "@type": "NewsArticle",
       "author": Object {
         "@type": "NewsMediaOrganization",
         "logo": Object {
