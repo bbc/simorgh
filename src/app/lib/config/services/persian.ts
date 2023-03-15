@@ -1,9 +1,3 @@
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_GHOST,
-  C_POSTBOX_30,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
 import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
 import 'moment/locale/fa';
 import '#psammead/moment-timezone-include/tz/GMT';
@@ -40,7 +34,6 @@ export const service: DefaultServiceConfig = {
     serviceName: 'Persian',
     languageName: 'Persian',
     altCalendar: jalaali,
-    themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcpersian',
     twitterSite: '@bbcpersian',
     noBylinesPolicy:
@@ -51,13 +44,6 @@ export const service: DefaultServiceConfig = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'صفحه اول',
-    theming: {
-      brandBackgroundColour: `${C_POSTBOX}`,
-      brandLogoColour: `${C_WHITE}`,
-      brandForegroundColour: `${C_GHOST}`,
-      brandHighlightColour: `${C_WHITE}`,
-      brandBorderColour: `${C_POSTBOX_30}`,
-    },
     showAdPlaceholder: true,
     showRelatedTopics: true,
     podcastPromo: {
@@ -271,6 +257,7 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'برنامه رادیویی بعدی',
         duration: 'مدت',
         podcastExternalLinks: 'این پادکست در این زمان قابل دسترس است',
+        download: 'دانلود برنامه',
       },
       socialEmbed: {
         caption: {

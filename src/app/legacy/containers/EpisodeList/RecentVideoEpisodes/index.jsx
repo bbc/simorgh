@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/aria-role */
 import React, { useContext } from 'react';
+import { useTheme } from '@emotion/react';
 import { arrayOf, shape, string, number } from 'prop-types';
 import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
@@ -10,10 +11,6 @@ import {
   formatUnixTimestamp,
 } from '#psammead/psammead-timestamp-container/src/utilities';
 import SectionLabel from '#psammead/psammead-section-label/src';
-import {
-  C_WHITE,
-  C_MIDNIGHT_BLACK,
-} from '#psammead/psammead-styles/src/colours';
 import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
@@ -27,7 +24,7 @@ import EpisodeList from '#containers/EpisodeList';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 
 const StyledSectionLabel = styled(SectionLabel)`
-  color: ${C_WHITE};
+  color: ${props => props.theme.palette.WHITE};
   margin-bottom: 0;
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     margin-bottom: ${GEL_SPACING_DBL};
@@ -36,7 +33,6 @@ const StyledSectionLabel = styled(SectionLabel)`
     margin-bottom: ${GEL_SPACING_TRPL};
   }
 `;
-
 const InlineDiv = styled.div`
   display: inline;
 `;
@@ -45,6 +41,10 @@ const RecentVideoEpisodes = ({ masterBrand, episodes }) => {
   const { script, service, dir, timezone, datetimeLocale, translations } =
     useContext(ServiceContext);
   const { isAmp, variant } = useContext(RequestContext);
+
+  const {
+    palette: { MIDNIGHT_BLACK },
+  } = useTheme();
 
   if (!episodes.length) return null;
 
@@ -79,7 +79,7 @@ const RecentVideoEpisodes = ({ masterBrand, episodes }) => {
         script={script}
         service={service}
         dir={dir}
-        backgroundColor={C_MIDNIGHT_BLACK}
+        backgroundColor={MIDNIGHT_BLACK}
         labelId="recent-episodes"
       >
         {recentEpisodesTranslation}

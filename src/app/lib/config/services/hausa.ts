@@ -1,9 +1,3 @@
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_GHOST,
-  C_POSTBOX_30,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/ha';
@@ -38,7 +32,6 @@ export const service: DefaultServiceConfig = {
     service: 'hausa',
     serviceName: 'Hausa',
     languageName: 'Hausa',
-    themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbchausa',
     twitterSite: '@bbchausa',
     noBylinesPolicy:
@@ -49,13 +42,6 @@ export const service: DefaultServiceConfig = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Labaran Duniya',
-    theming: {
-      brandBackgroundColour: `${C_POSTBOX}`,
-      brandLogoColour: `${C_WHITE}`,
-      brandForegroundColour: `${C_GHOST}`,
-      brandHighlightColour: `${C_WHITE}`,
-      brandBorderColour: `${C_POSTBOX_30}`,
-    },
     showAdPlaceholder: true,
     showRelatedTopics: true,
     podcastPromo: {
@@ -253,6 +239,7 @@ export const service: DefaultServiceConfig = {
         duration: 'Tsawon lokaci',
         recentEpisodes: 'Kari',
         podcastExternalLinks: 'Za a iya samun wannan Podcast din a',
+        download: 'Sauke shiri',
       },
       socialEmbed: {
         caption: {
@@ -367,7 +354,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'Bidiyo',
-        url: '/hausa/media/video',
+        url: '/hausa/topics/cn09qmz4jryt',
       },
       {
         title: 'Shirye-shirye na Musamman',

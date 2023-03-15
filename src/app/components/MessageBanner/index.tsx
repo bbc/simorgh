@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { useContext } from 'react';
 import { jsx } from '@emotion/react';
-import isLive from '#lib/utilities/isLive';
 import Paragraph from '../Paragraph';
 import Heading from '../Heading';
 import Image from '../Image';
@@ -12,10 +11,10 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 
 interface MessageBannerProps {
   heading: string;
-  description: string;
-  link: string;
+  description?: string;
+  link?: string;
   linkText: string;
-  image: string;
+  image?: string;
 }
 
 const MessageBanner = ({
@@ -27,10 +26,6 @@ const MessageBanner = ({
 }: MessageBannerProps) => {
   const { dir } = useContext(ServiceContext);
   const isRtl = dir === 'rtl';
-
-  if (isLive()) {
-    return null;
-  }
 
   const id = `message-banner-${heading.replaceAll(' ', '-')}`;
 

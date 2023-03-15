@@ -1,9 +1,3 @@
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_GHOST,
-  C_POSTBOX_30,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import '#psammead/psammead-locales/moment/yo';
 import '#psammead/moment-timezone-include/tz/Africa/Lagos';
@@ -38,16 +32,8 @@ export const service: DefaultServiceConfig = {
     service: 'yoruba',
     serviceName: 'Yoruba',
     languageName: 'Yoruba',
-    themeColor: `${C_POSTBOX}`,
     twitterCreator: '@BBCNews', // to be updated
     twitterSite: '@BBCNews', // to be updated
-    theming: {
-      brandBackgroundColour: `${C_POSTBOX}`,
-      brandLogoColour: `${C_WHITE}`,
-      brandForegroundColour: `${C_GHOST}`,
-      brandHighlightColour: `${C_WHITE}`,
-      brandBorderColour: `${C_POSTBOX_30}`,
-    },
     showAdPlaceholder: false,
     showRelatedTopics: true,
     noBylinesPolicy:
@@ -321,7 +307,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'Fídíò',
-        url: '/yoruba/media/video',
+        url: '/yoruba/topics/ck5rznlk6k3t',
       },
       {
         title: 'Èyí to gbajúmọ̀ jù',

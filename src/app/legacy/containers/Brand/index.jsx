@@ -17,11 +17,8 @@ const StyledBrand = styled(Brand)`
 `;
 
 const BrandContainer = ({ skipLink, scriptLink, brandRef, ...props }) => {
-  const { product, serviceLocalizedName, service, theming } =
-    useContext(ServiceContext);
+  const { product, serviceLocalizedName, service } = useContext(ServiceContext);
   const { brandSVG } = useTheme();
-
-  const { brandBackgroundColour, brandLogoColour } = theming;
   const svgMaxHeight = 24;
   const svgMinHeight = 16;
   const svgRatio = brandSVG && brandSVG.ratio;
@@ -30,8 +27,6 @@ const BrandContainer = ({ skipLink, scriptLink, brandRef, ...props }) => {
 
   return (
     <StyledBrand
-      backgroundColour={brandBackgroundColour}
-      logoColour={brandLogoColour}
       product={product}
       serviceLocalisedName={serviceLocalizedName}
       svgHeight={svgMaxHeight}

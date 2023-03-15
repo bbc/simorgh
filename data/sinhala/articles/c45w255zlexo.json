@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "35ab6709",
+              "id": "d1ebc178",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "eb1230b2",
+                    "id": "76c8b30d",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "1d3d8b88",
+                          "id": "bf4bb75c",
                           "type": "paragraph",
                           "model": {
                             "text": "මෙම පරීක්ෂණ ලිපියේ සිරස්තලය මෙයයි",
                             "blocks": [
                               {
-                                "id": "172c3fa3",
+                                "id": "5cd57989",
                                 "type": "fragment",
                                 "model": {
                                   "text": "මෙම පරීක්ෂණ ලිපියේ සිරස්තලය මෙයයි",
@@ -56,28 +56,28 @@
               ]
             },
             {
-              "id": "3796bfc3",
+              "id": "30921a56",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "c271d33d",
+                    "id": "f0c40b45",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "80e71295",
+                          "id": "79923a73",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "78e3f6d4",
+                                "id": "9cafed20",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "මෙම පරීක්ෂණ රූපය, ප්‍රකාශන හිමිකම් බීබීසී, ප්‍රංශයේ සිතියමක් පෙන්වයි. රූපය පළමු කොටස් තුනෙහි ඇති අතර මෙම ශීර්ෂ පා ය ඇත.\r",
                                   "blocks": [
                                     {
-                                      "id": "6b3570e3",
+                                      "id": "e277f026",
                                       "type": "fragment",
                                       "model": {
                                         "text": "මෙම පරීක්ෂණ රූපය, ප්‍රකාශන හිමිකම් බීබීසී, ප්‍රංශයේ සිතියමක් පෙන්වයි. රූපය පළමු කොටස් තුනෙහි ඇති අතර මෙම ශීර්ෂ පා ය ඇත.\r",
@@ -116,23 +116,23 @@
                     ]
                   },
                   {
-                    "id": "82e9097a",
+                    "id": "15b69041",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "efdcca5b",
+                          "id": "3ee242fb",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "a1b0da35",
+                                "id": "65fd5767",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "මෙම පරීක්ෂණ රූපය, ප්‍රකාශන හිමිකම් බීබීසී, ප්‍රංශයේ සිතියමක් පෙන්වයි. රූපය පළමු කොටස් තුනෙහි ඇති අතර මෙම ශීර්ෂ පා ය ඇත.\r",
                                   "blocks": [
                                     {
-                                      "id": "09688c88",
+                                      "id": "0e19e2f7",
                                       "type": "fragment",
                                       "model": {
                                         "text": "මෙම පරීක්ෂණ රූපය, ප්‍රකාශන හිමිකම් බීබීසී, ප්‍රංශයේ සිතියමක් පෙන්වයි. රූපය පළමු කොටස් තුනෙහි ඇති අතර මෙම ශීර්ෂ පා ය ඇත.\r",
@@ -171,7 +171,7 @@
                     ]
                   },
                   {
-                    "id": "60b3c117",
+                    "id": "d2ea64b8",
                     "type": "rawImage",
                     "model": {
                       "width": 624,
@@ -192,7 +192,7 @@
               ]
             },
             {
-              "id": "c11ebc3e",
+              "id": "767e58de",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562942502450,
@@ -203,18 +203,18 @@
               ]
             },
             {
-              "id": "a96d00a8",
+              "id": "7a44f212",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "0ba471c8",
+                    "id": "817ee97e",
                     "type": "paragraph",
                     "model": {
                       "text": "මෙය පෙළ වාරණයක් වන අතර එය බීබීසී කාලගුණ මුල් පිටුවට සබැඳියක් අඩංගු වේ.",
                       "blocks": [
                         {
-                          "id": "f7b78a9d",
+                          "id": "0124e6e0",
                           "type": "fragment",
                           "model": {
                             "text": "මෙය පෙළ වාරණයක් වන අතර එය බීබීසී කාලගුණ මුල් පිටුවට ",
@@ -227,13 +227,13 @@
                           ]
                         },
                         {
-                          "id": "0726fb6e",
+                          "id": "f9715032",
                           "type": "urlLink",
                           "model": {
                             "text": "සබැඳියක් අඩංගු වේ",
                             "blocks": [
                               {
-                                "id": "3c38487f",
+                                "id": "22ec71b4",
                                 "type": "fragment",
                                 "model": {
                                   "text": "සබැඳියක් අඩංගු වේ",
@@ -257,7 +257,7 @@
                           ]
                         },
                         {
-                          "id": "d9e6621b",
+                          "id": "b58e4a2a",
                           "type": "fragment",
                           "model": {
                             "text": ".",
@@ -283,29 +283,29 @@
               ]
             },
             {
-              "id": "0a6f1a46",
+              "id": "f1d754ec",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01djw2m",
                 "blocks": [
                   {
-                    "id": "7176e64a",
+                    "id": "9b2919b3",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "b9099198",
+                          "id": "e084621a",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "d2e99e9c",
+                                "id": "cf19adba",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "චීන සුපිරි අධිවේගී මාර්ග භාවිතා කරන්නන් නව මංසන්ධියෙන් මවිතයට පත් වේ",
                                   "blocks": [
                                     {
-                                      "id": "8e57ca43",
+                                      "id": "16e4f738",
                                       "type": "fragment",
                                       "model": {
                                         "text": "චීන සුපිරි අධිවේගී මාර්ග භාවිතා කරන්නන් නව මංසන්ධියෙන් මවිතයට පත් වේ",
@@ -344,12 +344,12 @@
                     ]
                   },
                   {
-                    "id": "cc1d01f7",
+                    "id": "7c469abd",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "4bce3aa6",
+                          "id": "5c7bafa3",
                           "blockId": "urn:bbc:ares::clip:p01djw2m",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -394,12 +394,12 @@
                           ]
                         },
                         {
-                          "id": "5d5eae08",
+                          "id": "587dd8ab",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "e08205db",
+                                "id": "faa800a4",
                                 "type": "rawImage",
                                 "model": {
                                   "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01djw9d.jpg",
@@ -434,23 +434,23 @@
               ]
             },
             {
-              "id": "04be7358",
+              "id": "e1ed7c40",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "56b103c2",
+                    "id": "6453098e",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "fbec37d7",
+                          "id": "2af847a4",
                           "type": "paragraph",
                           "model": {
                             "text": "මෙය උප සිරස්තලයකි",
                             "blocks": [
                               {
-                                "id": "327162a8",
+                                "id": "6f7d78b4",
                                 "type": "fragment",
                                 "model": {
                                   "text": "මෙය උප සිරස්තලයකි",
@@ -485,28 +485,28 @@
               ]
             },
             {
-              "id": "d8ff8bc2",
+              "id": "e31ed7b9",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "3a43cd5d",
+                    "id": "c02cd6f8",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "c12d4542",
+                          "id": "1c67eb86",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "dff5e93d",
+                                "id": "4424fa8d",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "මෙය උප සිරස්තලයකි",
                                   "blocks": [
                                     {
-                                      "id": "59b94343",
+                                      "id": "57d64ab0",
                                       "type": "fragment",
                                       "model": {
                                         "text": "මෙය උප සිරස්තලයකි",
@@ -545,7 +545,7 @@
                     ]
                   },
                   {
-                    "id": "c1760e5e",
+                    "id": "ed05b320",
                     "type": "rawImage",
                     "model": {
                       "width": 800,
@@ -566,18 +566,18 @@
               ]
             },
             {
-              "id": "b31762c9",
+              "id": "869cca83",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "0631d590",
+                    "id": "41a5f5f3",
                     "type": "paragraph",
                     "model": {
                       "text": "අපගේ වෙබ් අඩවියේ පරීක්ෂණ ක්‍රියාත්මක කිරීමට හැකිවන පරිදි මෙම පරීක්ෂණ ලිපිය නිර්මාණය කර ඇත.\r",
                       "blocks": [
                         {
-                          "id": "4378870e",
+                          "id": "b1c835e0",
                           "type": "fragment",
                           "model": {
                             "text": "අපගේ වෙබ් අඩවියේ පරීක්ෂණ ක්‍රියාත්මක කිරීමට හැකිවන පරිදි මෙම පරීක්ෂණ ලිපිය නිර්මාණය කර ඇත.\r",
@@ -603,11 +603,21 @@
               ]
             },
             {
-              "id": "6a31f7e6",
+              "id": "13488c5d",
               "type": "mpu",
               "model": {},
               "position": [
                 9
+              ]
+            },
+            {
+              "id": "4348d91c",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                10
               ]
             }
           ]
@@ -616,14 +626,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:c45w255zlexo",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c45w255zlexo"
+          "optimoUrn": "urn:bbc:optimo:asset:c45w255zlexo",
+          "canonicalUrl": "https://www.bbc.com/sinhala/articles/c45w255zlexo"
         },
         "type": "article",
         "createdBy": "Sinhala",
         "language": "si",
         "firstPublished": 1562942502450,
         "lastPublished": 1562942502450,
-        "options": {},
         "analyticsLabels": {
           "producer": "Sinhala",
           "page": "sinhala.articles.c45w255zlexo.page"
@@ -633,7 +643,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Sinhala",
           "taggings": []
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -651,12 +660,9 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "පේටන්ට් බලපත්‍ර 107ක් හිමි රාජකීය සමාජයට එක් වූ ශ්‍රී ලංකාවේ මහාචාර්යවරයා සමග කතාබහක්"
-        },
-        "images": {},
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -941,7 +947,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T23:03:57.792Z",
+        "generated": "2023-02-17T21:18:56.982Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
         "totalRecords": 20,

@@ -1,7 +1,3 @@
-import {
-  C_DARK_SALTIRE,
-  C_WHITE,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import '#psammead/psammead-locales/moment/en-gb';
 import '#psammead/moment-timezone-include/tz/Europe/London';
@@ -34,7 +30,6 @@ export const service: DefaultServiceConfig = {
     service: 'scotland',
     serviceName: 'Scotland',
     languageName: 'English',
-    themeColor: `${C_DARK_SALTIRE}`,
     twitterCreator: '@BBCScotland',
     twitterSite: '@BBCScotland',
     noBylinesPolicy: null,
@@ -45,13 +40,6 @@ export const service: DefaultServiceConfig = {
     swPath: '/articles/sw.js',
     frontPageTitle: 'Home',
     passportHomes: ['BBCScotland'],
-    theming: {
-      brandBackgroundColour: `${C_DARK_SALTIRE}`,
-      brandLogoColour: `${C_WHITE}`,
-      brandForegroundColour: `${C_WHITE}`,
-      brandHighlightColour: `${C_WHITE}`,
-      brandBorderColour: `${C_WHITE}`,
-    },
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {

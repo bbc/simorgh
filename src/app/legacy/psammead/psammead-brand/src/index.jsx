@@ -36,7 +36,7 @@ const SvgWrapper = styled.div`
 `;
 
 const Banner = styled.div`
-  background-color: ${props => props.backgroundColour};
+  background-color: ${props => props.theme.palette.BRAND_BACKGROUND};
   height: ${44 / 16}rem;
   width: 100%;
   padding: 0 ${GEL_SPACING};
@@ -85,22 +85,24 @@ const StyledLink = styled.a`
   &:hover,
   &:focus {
     text-decoration: none;
-    border-bottom: ${GEL_SPACING_HLF} solid ${props => props.logoColour};
+    border-bottom: ${GEL_SPACING_HLF} solid
+      ${props => props.theme.palette.BRAND_LOGO};
     margin-bottom: -${GEL_SPACING_HLF};
   }
 
   // Custom focus indicator styling applied to pseudo-element. Global focus indicator styling has been removed.
   &:focus-visible::after {
     ${styledLinkOutline}
-    border-top: ${GEL_SPACING_HLF} solid ${props => props.logoColour};
-    outline: ${GEL_SPACING_HLF} solid ${props => props.logoColour};
+    border-top: ${GEL_SPACING_HLF} solid ${props =>
+      props.theme.palette.BRAND_LOGO};
+    outline: ${GEL_SPACING_HLF} solid ${props => props.theme.palette.BRAND_LOGO};
   }
 `;
 
 // `currentColor` has been used to address high contrast mode in Firefox.
 const BrandSvg = styled.svg`
   box-sizing: content-box;
-  color: ${props => props.logoColour};
+  color: ${props => props.theme.palette.BRAND_LOGO};
   fill: currentColor;
   height: ${20 / 16}rem;
 
@@ -141,13 +143,7 @@ LocalisedBrandName.defaultProps = {
   serviceLocalisedName: null,
 };
 
-const StyledBrand = ({
-  linkId,
-  product,
-  serviceLocalisedName,
-  svg,
-  logoColour,
-}) => (
+const StyledBrand = ({ linkId, product, serviceLocalisedName, svg }) => (
   <>
     {svg && (
       <>
@@ -161,7 +157,6 @@ const StyledBrand = ({
           xmlns="http://www.w3.org/2000/svg"
           focusable="false"
           aria-hidden="true"
-          logoColour={logoColour}
           height="32"
         >
           {svg.group}
@@ -188,7 +183,6 @@ const brandProps = {
       width: number.isRequired,
     }).isRequired,
   }).isRequired,
-  logoColour: string.isRequired,
 };
 
 StyledBrand.propTypes = brandProps;
@@ -205,8 +199,6 @@ const Brand = forwardRef((props, ref) => {
     url,
     borderTop,
     borderBottom,
-    backgroundColour,
-    logoColour,
     scriptLink,
     skipLink,
     linkId,
@@ -218,8 +210,6 @@ const Brand = forwardRef((props, ref) => {
       svgHeight={svgHeight}
       borderTop={borderTop}
       borderBottom={borderBottom}
-      backgroundColour={backgroundColour}
-      logoColour={logoColour}
       scriptLink={scriptLink}
       {...rest}
     >
@@ -228,7 +218,6 @@ const Brand = forwardRef((props, ref) => {
           <StyledLink
             href={url}
             id={linkId}
-            logoColour={logoColour}
             className="focusIndicatorRemove"
             // This is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
             aria-labelledby={`BrandLink-${linkId}`}

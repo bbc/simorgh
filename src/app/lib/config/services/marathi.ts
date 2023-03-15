@@ -1,9 +1,3 @@
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_GHOST,
-  C_POSTBOX_30,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
 import devanagari from '../../../components/ThemeProvider/fontScripts/devanagari';
 import '#psammead/moment-timezone-include/tz/Asia/Kolkata';
 import '#psammead/psammead-locales/moment/mr';
@@ -38,7 +32,6 @@ export const service: DefaultServiceConfig = {
     service: 'marathi',
     serviceName: 'Marathi',
     languageName: 'Marathi',
-    themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnewsmarathi',
     twitterSite: '@bbcnewsmarathi',
     noBylinesPolicy:
@@ -49,13 +42,6 @@ export const service: DefaultServiceConfig = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'बातम्या',
-    theming: {
-      brandBackgroundColour: `${C_POSTBOX}`,
-      brandLogoColour: `${C_WHITE}`,
-      brandForegroundColour: `${C_GHOST}`,
-      brandHighlightColour: `${C_WHITE}`,
-      brandBorderColour: `${C_POSTBOX_30}`,
-    },
     showAdPlaceholder: false,
     showRelatedTopics: true,
     podcastPromo: {
@@ -243,6 +229,7 @@ export const service: DefaultServiceConfig = {
         duration: 'वेळ',
         recentEpisodes: 'ताजे एपिसोड',
         podcastExternalLinks: 'हे पॉडकास्ट तुम्ही इथे ऐकू शकता',
+        download: 'एपिसोड डाऊनलोड करा',
       },
       socialEmbed: {
         caption: {

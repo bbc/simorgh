@@ -5,21 +5,25 @@ import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import Gist from '.';
 import blocks from './fixtures';
+import ThemeProvider from '../../../components/ThemeProvider';
+import { ThemeContext } from '@emotion/react';
 
 // eslint-disable-next-line react/prop-types
 const Component = ({ service, script, dir }) => {
   return (
-    <ToggleContextProvider
-      toggles={{
-        gist: {
-          enabled: true,
-        },
-      }}
-    >
-      <ServiceContextProvider service={service} script={script} dir={dir}>
-        <Gist blocks={blocks} />;
-      </ServiceContextProvider>
-    </ToggleContextProvider>
+    <ThemeProvider service={service}>
+      <ToggleContextProvider
+        toggles={{
+          gist: {
+            enabled: true,
+          },
+        }}
+      >
+        <ServiceContextProvider service={service} script={script} dir={dir}>
+          <Gist blocks={blocks} />;
+        </ServiceContextProvider>
+      </ToggleContextProvider>
+    </ThemeProvider>
   );
 };
 
