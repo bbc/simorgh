@@ -10,7 +10,10 @@ const agent = { cert: 'cert', ca: 'ca', key: 'key' };
 const getAgent = jest.fn(() => Promise.resolve(agent as unknown as Agent));
 
 describe('Home Page - BFF Fetching', () => {
+  const originalEnvironment = process.env.SIMORGH_APP_ENV;
+
   afterEach(() => {
+    process.env.SIMORGH_APP_ENV = originalEnvironment;
     jest.clearAllMocks();
   });
 
@@ -26,7 +29,7 @@ describe('Home Page - BFF Fetching', () => {
     );
 
     await getInitialData({
-      path: 'http://localhost/kyrgyz/tipohome',
+      path: '/kyrgyz/tipohome',
       getAgent,
       service: 'kyrgyz',
       pageType: 'home',
