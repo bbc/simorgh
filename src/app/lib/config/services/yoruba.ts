@@ -307,7 +307,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'Fídíò',
-        url: '/yoruba/media/video',
+        url: '/yoruba/topics/ck5rznlk6k3t',
       },
       {
         title: 'Èyí to gbajúmọ̀ jù',
