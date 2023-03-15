@@ -1,10 +1,10 @@
-// eslint-disable no-console
+/* eslint-disable no-console */
 const path = require('path');
 const depcheck = require('depcheck');
 
 const options = {
   specials: ['bin', 'eslint', 'jest', 'babel', 'webpack'],
-  ignoreDirs: ['build', '.storybook/SidebarLabel'],
+  ignoreDirs: ['build', '.storybook'],
   ignoreMatches: [
     'puppeteer',
     'isarray',
@@ -28,7 +28,7 @@ depcheck(
 
       return {
         ...obj,
-        key: missing[key],
+        [key]: missing[key],
       };
     }, {});
 
