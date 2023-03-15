@@ -41,3 +41,13 @@ export interface CurationProps {
   topStoriesTitle?: string;
   curationLength?: number;
 }
+
+export type CurationData = {
+  summaries: Summary[];
+  visualStyle: VisualStyle;
+  visualProminence: VisualProminence;
+  curationId: string;
+  title: string;
+  link: string;
+  position: number;
+};
