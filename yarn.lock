@@ -6074,6 +6074,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react-lazyload@npm:^3.2.0":
+  version: 3.2.0
+  resolution: "@types/react-lazyload@npm:3.2.0"
+  dependencies:
+    "@types/react": "*"
+  checksum: bb9399481be2b1f4eaef67d24497951a5e5d2a3cfef6a24157da71d2b8f0abbb0ab1d72a89c05705bb8b5dc1c980a0ee4af3d5c435a6533da240836e8fd410b8
+  languageName: node
+  linkType: hard
+
 "@types/react-router-dom@npm:5.3.3":
   version: 5.3.3
   resolution: "@types/react-router-dom@npm:5.3.3"
@@ -20277,6 +20286,7 @@ __metadata:
     "@types/react": 18.0.28
     "@types/react-dom": 18.0.11
     "@types/react-helmet": 6.1.6
+    "@types/react-lazyload": ^3.2.0
     "@types/react-router-dom": 5.3.3
     "@types/testing-library__react": 10.2.0
     "@types/url-parse": ^1.4.8

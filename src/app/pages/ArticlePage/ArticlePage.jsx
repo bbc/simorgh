@@ -45,7 +45,7 @@ import LinkedData from '#containers/LinkedData';
 import MostReadContainer from '#containers/MostRead';
 import MostReadSection from '#containers/MostRead/section';
 import MostReadSectionLabel from '#containers/MostRead/label';
-import SocialEmbedContainer from '#containers/SocialEmbed';
+import SocialEmbed from '#app/components/SocialEmbed';
 import AdContainer from '#containers/Ad';
 import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
 
@@ -187,7 +187,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
     ),
     timestamp: props =>
       hasByline ? null : <Timestamp {...props} popOut={false} />,
-    social: SocialEmbedContainer,
+    social: SocialEmbed,
     group: gist,
     links: props => <ScrollablePromo {...props} />,
     mpu: props =>

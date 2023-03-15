@@ -39,7 +39,7 @@ import fauxHeadline from '#containers/FauxHeadline';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import CpsTable from '#containers/CpsTable';
 import Byline from '#containers/Byline';
-import CpsSocialEmbedContainer from '#containers/SocialEmbed/Cps';
+import SocialEmbed from '#app/components/SocialEmbed';
 import { InlinePodcastPromo } from '#containers/PodcastPromo';
 
 import {
@@ -191,7 +191,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     version: props => <MediaPlayer {...props} assetUri={assetUri} />,
     byline: props => <StyledByline {...props} />,
     include: props => <Include {...props} />,
-    social_embed: props => <CpsSocialEmbedContainer {...props} />,
+    social_embed: SocialEmbed,
     table: props => <CpsTable {...props} />,
     mpu: props =>
       isAdsEnabled ? <MpuContainer {...props} slotType="mpu" /> : null,
