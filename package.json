@@ -78,7 +78,6 @@
     "@loadable/component": "5.15.3",
     "@loadable/server": "5.15.3",
     "@optimizely/react-sdk": "2.9.1",
-    "@testing-library/user-event": "14.4.3",
     "aws-embedded-metrics": "2.0.6",
     "compression": "1.7.4",
     "core-js": "3.29.0",
