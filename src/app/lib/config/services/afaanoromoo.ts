@@ -323,7 +323,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'Viidiyoo',
-        url: '/afaanoromoo/media/video',
+        url: '/afaanoromoo/topics/ck0dg7dpjwwt',
       },
       {
         title: 'Jajjaboo',
