@@ -9,7 +9,7 @@ import HOME_PAGE_CONFIG from './page-config';
 
 const logger = nodeLogger(__filename);
 
-type Envs = 'test' | 'live' | 'local' | 'undefined';
+type Envs = 'test' | 'live' | 'local' | undefined;
 
 const getEnvironment = (pathname: string) => {
   if (pathname.includes('renderer_env=test')) {
@@ -26,10 +26,15 @@ type Props = {
   getAgent: () => Promise<Agent>;
   service: Services;
   path: string;
-  pageType: 'home';
+  pageType: string;
 };
 
-export default async ({ getAgent, service, path: pathname }: Props) => {
+export default async ({
+  getAgent,
+  service,
+  path: pathname,
+  pageType,
+}: Props) => {
   try {
     const env = getEnvironment(pathname);
     const isLocal = !env || env === 'local';
@@ -40,18 +45,17 @@ export default async ({ getAgent, service, path: pathname }: Props) => {
     let fetchUrl = Url(process.env.BFF_PATH as string).set('query', {
       id,
       service,
-      pageType: 'home',
+      pageType,
     });
-
-    const optHeaders = { 'ctx-service-env': env };
 
     if (isLocal) {
       fetchUrl = Url(`/${service}/tipohome`);
     }
 
+    const optHeaders = { 'ctx-service-env': env };
+
     // @ts-ignore - Ignore fetchPageData argument types
-    // eslint-disable-next-line prefer-const
-    let { status, json } = await fetchPageData({
+    const { status, json } = await fetchPageData({
       path: fetchUrl.toString(),
       ...(!isLocal && { agent, optHeaders }),
     });
@@ -63,7 +67,7 @@ export default async ({ getAgent, service, path: pathname }: Props) => {
       pageData: {
         id,
         title: data.title,
-        pageType: 'home',
+        pageType,
         curations: data.curations,
       },
     };
