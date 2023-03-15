@@ -138,8 +138,8 @@ Object {
 
 exports[`Canonical Most Watched Page Header Navigation link should match text and url 10`] = `
 Object {
-  "text": "Page en cours, Vidéos",
-  "url": "/afrique/media/video",
+  "text": "Vidéos",
+  "url": "/afrique/topics/cz4vn9gyd6rt",
 }
 `;
 
