@@ -1,4 +1,4 @@
-const getOriginContext = bbcOrigin => {
+const getOriginContext = (bbcOrigin: string | null) => {
   let origin = 'https://www.bbc.co.uk';
   let isUK = true;
 
@@ -9,7 +9,8 @@ const getOriginContext = bbcOrigin => {
     process.env &&
     process.env.SIMORGH_APP_ENV === 'local'
   ) {
-    origin = process.env.SIMORGH_BASE_URL;
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+    origin = process.env.SIMORGH_BASE_URL!;
   } else if (
     typeof window !== 'undefined' &&
     window.location &&

@@ -1,3 +1,4 @@
+import { PageTypes, Services } from '#app/models/types/global';
 import { ARTICLE_PAGE, FRONT_PAGE } from '#app/routes/utils/pageTypes';
 import getStatsPageIdentifier from '.';
 
@@ -40,8 +41,8 @@ describe('getStatsPageIdentifier', () => {
   testScenarios.forEach(({ service, pageType, id, expected, summary }) => {
     it(summary, () => {
       const statsPageIdentifier = getStatsPageIdentifier({
-        service,
-        pageType,
+        service: service as Services,
+        pageType: pageType as PageTypes,
         id,
       });
       expect(statsPageIdentifier).toEqual(expected);
