@@ -260,9 +260,6 @@ const MediaArticlePage = ({ pageData, mostReadEndpointOverride }) => {
         aboutTags={aboutTags}
         imageLocator={promoImage}
       />
-      {isAdsEnabled && !isAmp && (
-        <CanonicalAdBootstrapJs adcampaign={adcampaign} />
-      )}
       <MediaArticlePageGrid>
         <Primary>
           <Main role="main">
