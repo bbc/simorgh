@@ -1,8 +1,8 @@
 import React, { memo } from 'react';
 import styled from '@emotion/styled';
 
-import { Services, SocialEmbedProviders } from '#app/models/types/global';
-import { detokenise, dictionaryFactory } from '../utilities';
+import { SocialEmbedProviders } from '#app/models/types/global';
+import { detokenise, dictionaryFactory } from './utilities';
 
 const BORDER_WEIGHT = '0.0625rem';
 
@@ -48,7 +48,6 @@ const Wrapper = styled.div`
 
 type Props = {
   provider: SocialEmbedProviders;
-  service: Services;
   text: string;
   linkText: string;
   linkTextSuffixVisuallyHidden: string;

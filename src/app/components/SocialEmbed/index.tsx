@@ -25,17 +25,16 @@ import { checkIsSupportedProvider } from './utilities';
 import styles, { getWrapperHeightStyles } from './index.styles';
 import getSocialMetadata from './utilities/getSocialMetadata';
 
-const SocialEmbedContainer = ({
-  blocks,
-  source,
-}: {
+type Props = {
   blocks: {
     type: SocialEmbedProviders;
     indexOfType: number;
     model: object;
   }[];
   source: string;
-}) => {
+};
+
+const SocialEmbedContainer = ({ blocks, source }: Props) => {
   const { isAmp, pageType } = useContext(RequestContext) as {
     isAmp: boolean;
     pageType: PageTypes;
@@ -47,7 +46,7 @@ const SocialEmbedContainer = ({
   const { id, oEmbed, fallback, skipLink, embedCaption, provider } =
     getSocialMetadata({ blocks, source, pageType, translations });
 
-  if (!id || !provider) {
+  if (!id || !provider || !skipLink) {
     return null;
   }
 

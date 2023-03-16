@@ -66,11 +66,7 @@ export const dictionaryFactory = ({
   '%provider%': provider,
 });
 
-export const getCaptionText = ({
-  pageType,
-  caption,
-  provider,
-}: {
+type CaptionTextProps = {
   pageType: PageTypes;
   caption?: {
     text: string;
@@ -79,7 +75,13 @@ export const getCaptionText = ({
     articleAdditionalText: string;
   };
   provider: SocialEmbedProviders;
-}) => {
+};
+
+export const getCaptionText = ({
+  pageType,
+  caption,
+  provider,
+}: CaptionTextProps) => {
   if (!caption) return null;
 
   if (pageType === ARTICLE_PAGE) {

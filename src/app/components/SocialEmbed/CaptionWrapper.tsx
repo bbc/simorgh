@@ -4,7 +4,7 @@ import { RequestContext } from '#contexts/RequestContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { Theme } from '@emotion/react';
 import { PageTypes } from '#app/models/types/global';
-import { visuallyHiddenStyle } from '../utilities';
+import { visuallyHiddenStyle } from './utilities';
 
 const Figure = styled.figure<{ isArticlePage: boolean }>`
   margin: 0;
@@ -38,7 +38,7 @@ const FigCaption = styled.figcaption<{ isArticlePage: boolean }>`
 type Props = {
   textPrefixVisuallyHidden: string;
   text: string;
-  additionalText: string;
+  additionalText?: string | null;
 };
 
 const CaptionWrapper = ({

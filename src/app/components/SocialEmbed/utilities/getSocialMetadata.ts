@@ -42,7 +42,7 @@ export default ({ blocks, source, pageType, translations }: Props) => {
     const index = indexOfType + 1;
 
     id = pathOr('', ['id'], model);
-    const href = path(['href'], model);
+    const href = pathOr('', ['href'], model);
 
     oEmbed = path<OEmbed>(['embed', 'oembed'], model);
 
@@ -97,7 +97,11 @@ export default ({ blocks, source, pageType, translations }: Props) => {
     caption = captionTranslations;
   }
 
-  const embedCaption = getCaptionText({ pageType, caption, provider });
+  let embedCaption;
+
+  if (caption && provider) {
+    embedCaption = getCaptionText({ pageType, caption, provider });
+  }
 
   return {
     id,

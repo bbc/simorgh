@@ -6,7 +6,7 @@ import {
   detokenise,
   dictionaryFactory,
   visuallyHiddenStyle,
-} from '../utilities';
+} from './utilities';
 
 const BORDER_WEIGHT = '0.125rem';
 const GEL_SPACING_THREE_QRTS = `0.75rem`;
