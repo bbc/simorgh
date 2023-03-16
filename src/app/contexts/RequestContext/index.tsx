@@ -48,23 +48,23 @@ export const RequestContext = React.createContext<RequestContextProps>(
 );
 
 type RequestProviderProps = {
-  bbcOrigin: string | null;
-  id: string | null;
+  bbcOrigin?: string | null;
+  id?: string | null;
   isAmp: boolean;
-  isNextJs: boolean;
+  isNextJs?: boolean;
   pageType: PageTypes;
   pathname: string;
-  previousPath: string | null;
+  previousPath?: string | null;
   service: Services;
-  showAdsBasedOnLocation: boolean;
-  statusCode: number | null;
-  timeOnServer: number | null;
-  mvtExperiments: {
+  showAdsBasedOnLocation?: boolean;
+  statusCode?: number | null;
+  timeOnServer?: number | null;
+  mvtExperiments?: {
     experimentName: string;
     variation: string;
     type: 'experiment' | 'feature';
   } | null;
-  variant: Variants | null;
+  variant?: Variants | null;
 };
 
 export const RequestContextProvider = ({
