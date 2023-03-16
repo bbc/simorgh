@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
 import { node, bool } from 'prop-types';
-import { C_LUNAR } from '#psammead/psammead-styles/src/colours';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
@@ -26,7 +25,7 @@ export const StoryPromoLiBase = styled.li`
     border &&
     `
     @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-      border-bottom: 0.0625rem solid ${C_LUNAR};
+      border-bottom: 0.0625rem solid ${props => props.theme.palette.LUNAR};
     }
   `}
 

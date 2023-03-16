@@ -7,12 +7,6 @@ exports[`StoryPromo list base should render correctly 1`] = `
   padding: 0;
 }
 
-@media (max-width: 62.9375rem) {
-  .emotion-2 {
-    border-bottom: 0.0625rem solid #F2F2F2;
-  }
-}
-
 .emotion-2:last-child {
   border: none;
 }
@@ -433,12 +427,6 @@ exports[`StoryPromo list should render correctly 1`] = `
 
 .emotion-2 {
   padding: 0.5rem 0 1rem;
-}
-
-@media (max-width: 62.9375rem) {
-  .emotion-2 {
-    border-bottom: 0.0625rem solid #F2F2F2;
-  }
 }
 
 .emotion-2:last-child {
