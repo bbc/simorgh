@@ -1,11 +1,12 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-console */
-import React, { useContext } from 'react';
+import React, { PropsWithChildren, useContext } from 'react';
 import { render, screen } from '@testing-library/react';
 
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
+import { PageTypes } from '#app/models/types/global';
 import { ServiceContextProvider } from '../ServiceContext';
 import { EventTrackingContextProvider, EventTrackingContext } from '.';
 import fixtureData from './fixtureData.json';
@@ -16,13 +17,19 @@ const defaultToggles = {
   },
 };
 
+type Props = {
+  pageData?: object | null;
+  pageType?: PageTypes;
+  toggles?: Record<string, unknown>;
+};
+
 // eslint-disable-next-line react/prop-types
 const Wrapper = ({
   children,
   pageData = fixtureData,
   pageType = STORY_PAGE,
   toggles = defaultToggles,
-}) => (
+}: PropsWithChildren<Props>) => (
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.com"
     pageType={pageType}
@@ -65,7 +72,7 @@ describe('Expected use', () => {
     );
 
     const testEl = screen.getByTestId('test-component');
-    const trackingData = JSON.parse(testEl.textContent);
+    const trackingData = JSON.parse(testEl.textContent as string);
 
     expect(trackingData).toEqual({
       campaignID: 'article-sty',
@@ -90,7 +97,7 @@ describe('Expected use', () => {
     );
 
     const testEl = screen.getByTestId('test-component');
-    const trackingData = JSON.parse(testEl.textContent);
+    const trackingData = JSON.parse(testEl.textContent as string);
 
     expect(trackingData).toEqual({});
   });
@@ -111,7 +118,7 @@ describe('Error handling', () => {
     }
 
     const testEl = screen.getByTestId('test-component');
-    const trackingData = JSON.parse(testEl.textContent);
+    const trackingData = JSON.parse(testEl.textContent as string);
 
     expect(trackingData).toEqual({});
     expect(errorMessage).toBeUndefined();
@@ -123,6 +130,7 @@ describe('Error handling', () => {
 
     try {
       render(
+        // @ts-expect-error - testing handling of a page type that does not exist
         <Wrapper pageType="funky-page-type">
           <TestComponent />
         </Wrapper>,
@@ -132,7 +140,7 @@ describe('Error handling', () => {
     }
 
     const testEl = screen.getByTestId('test-component');
-    const trackingData = JSON.parse(testEl.textContent);
+    const trackingData = JSON.parse(testEl.textContent as string);
 
     expect(trackingData).toEqual({});
     expect(errorMessage).toBeUndefined();
