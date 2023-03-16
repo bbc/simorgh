@@ -9,6 +9,7 @@ import {
   frontPageManifestPath,
   frontPageSwPath,
   homePagePath,
+  homePageDataPath,
   homePageManifestPath,
   homePageSwPath,
   cpsAssetPagePath,
@@ -162,6 +163,24 @@ describe('homePagePath', () => {
     '/tipohome/persian.amp',
   ];
   shouldNotMatchInvalidRoutes(invalidRoutes, homePagePath);
+});
+
+describe('homePageDataPath', () => {
+  const validRoutes = [
+    '/news/tipohome.json',
+    '/kyrgyz/tipohome.json',
+    '/news/cyr/tipohome.json',
+    '/persian/trad/tipohome.json',
+  ];
+  shouldMatchValidRoutes(validRoutes, homePageDataPath);
+
+  const invalidRoutes = [
+    '/news/data/tipohome.json',
+    '/iplayer/tipohome.json',
+    '/news/foobar/tipohome.json',
+    '/persian/nontrad/tipohome.json',
+  ];
+  shouldNotMatchInvalidRoutes(invalidRoutes, homePageDataPath);
 });
 
 describe('articleSwPath', () => {

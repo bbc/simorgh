@@ -13,6 +13,7 @@ export default ({
 
   switch (pageType) {
     case 'frontpage':
+    case 'homePage':
     case 'mostRead':
     case 'mostWatched':
     case 'secondaryColumn':

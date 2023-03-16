@@ -12,11 +12,6 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
-import {
-  C_WHITE,
-  C_GREY_8,
-  C_METAL,
-} from '#psammead/psammead-styles/src/colours';
 import makeRelativeUrlPath from '#lib/utilities/makeRelativeUrlPath';
 import ImageWithPlaceholder from '#containers/ImageWithPlaceholder';
 import { ServiceContext } from '../../../contexts/ServiceContext';
@@ -67,7 +62,8 @@ const A = styled.a`
   display: inline-block;
   ${({ service }) => service && getSerifRegular(service)}
   text-decoration: none;
-  color: ${({ isAmp }) => (isAmp ? 'black' : 'white')};
+  color: ${props =>
+    props.isAmp ? props.theme.palette.BLACK : props.theme.palette.WHITE};
   font-size: 0.9375rem;
   line-height: 1.33;
   margin: 0.875rem ${GEL_SPACING} 0 ${GEL_SPACING};
@@ -77,7 +73,8 @@ const A = styled.a`
     margin: 0.875rem ${GEL_SPACING_DBL} 0 ${GEL_SPACING_DBL};
   }
   &:visited {
-    color: ${({ isAmp }) => (isAmp ? C_METAL : '#e6e8ea')};
+    color: ${props =>
+      props.isAmp ? props.theme.palette.METAL : props.theme.palette.GREY_3};
   }
   &:focus {
     text-decoration: underline;
@@ -85,7 +82,8 @@ const A = styled.a`
 `;
 
 const LazyloadPlaceholder = styled.div`
-  background-color: ${({ isAmp }) => (isAmp ? C_WHITE : C_GREY_8)};
+  background-color: ${props =>
+    props.isAmp ? props.theme.palette.WHITE : props.theme.palette.GREY_8};
   min-height: 100px;
   padding-bottom: ${GEL_SPACING_DBL};
 `;
