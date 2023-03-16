@@ -5,7 +5,7 @@ import HomePage from './HomePage';
 describe('Home Page', () => {
   it('should render a hello message', () => {
     const { container } = render(
-      <HomePage pageData={{ id: '1234', title: 'Abcd' }} />,
+      <HomePage pageData={{ id: '1234', title: 'Abcd', curations: [] }} />,
     );
     expect(container).not.toBeEmptyDOMElement();
     expect(container.firstChild?.textContent).toBe(
