@@ -1,23 +1,19 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import { render } from '../../../components/react-testing-library-with-providers';
 import PaginationComponent from '.';
 
 // eslint-disable-next-line react/prop-types
 const renderComponent = ({
-  service = 'news',
   activePage = 1,
   pageCount = 2,
   pageXOfY = 'Page {x} of {y}',
 } = {}) =>
   render(
-    <ServiceContextProvider service={service}>
-      <PaginationComponent
-        activePage={activePage}
-        pageCount={pageCount}
-        pageXOfY={pageXOfY}
-      />
-    </ServiceContextProvider>,
+    <PaginationComponent
+      activePage={activePage}
+      pageCount={pageCount}
+      pageXOfY={pageXOfY}
+    />,
   );
 
 describe('Topic Pagination', () => {

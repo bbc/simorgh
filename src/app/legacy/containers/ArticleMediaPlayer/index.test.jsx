@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { render } from '../../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import ArticleMediaPlayerContainer from '.';
 import { validAresMediaVideoBlock } from '../MediaPlayer/fixtureData';
@@ -31,16 +31,23 @@ const GenerateMediaPlayer = ({
 );
 
 describe('MediaPlayer', () => {
-  shouldMatchSnapshot(
-    'Calls the canonical media player, with a placeholder',
-    <GenerateMediaPlayer
-      platform="canonical"
-      blocks={[validAresMediaVideoBlock]}
-    />,
-  );
+  it('Calls the canonical media player, with a placeholder', () => {
+    const { container } = render(
+      <GenerateMediaPlayer
+        platform="canonical"
+        blocks={[validAresMediaVideoBlock]}
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'Calls the amp media player',
-    <GenerateMediaPlayer platform="amp" blocks={[validAresMediaVideoBlock]} />,
-  );
+  it('Calls the amp media player', () => {
+    const { container } = render(
+      <GenerateMediaPlayer
+        platform="amp"
+        blocks={[validAresMediaVideoBlock]}
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 });

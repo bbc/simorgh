@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
+import { useTheme } from '@emotion/react';
 import { arrayOf, shape } from 'prop-types';
 import { storyItem } from '#models/propTypes/storyItem';
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
-import { C_GREY_2 } from '#psammead/psammead-styles/src/colours';
 import isEmpty from 'ramda/src/isEmpty';
 import useViewTracker from '#hooks/useViewTracker';
 import { OptimizelyContext } from '@optimizely/react-sdk';
@@ -56,6 +56,10 @@ const TopStoriesSection = ({ content }) => {
   const eventTrackingDataSend = path(['block'], eventTrackingData);
   const viewRef = useViewTracker(eventTrackingDataSend);
 
+  const {
+    palette: { GREY_2 },
+  } = useTheme();
+
   if (!content || isEmpty(content)) return null;
 
   const title = pathOr('Top Stories', ['topStoriesTitle'], translations);
@@ -81,7 +85,7 @@ const TopStoriesSection = ({ content }) => {
       <StyledSectionLabel
         labelId={LABEL_ID}
         columnType="secondary"
-        backgroundColor={C_GREY_2}
+        backgroundColor={GREY_2}
         script={script}
         service={service}
       >

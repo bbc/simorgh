@@ -1,24 +1,25 @@
-import { render } from '@testing-library/react';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { render } from '../../../components/react-testing-library-with-providers';
 import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
 import { renderRadioSchedule } from './testHelpers/helper';
 
 describe('RadioSchedule', () => {
-  shouldMatchSnapshot(
-    'should render ltr radio schedules correctly',
-    renderRadioSchedule({}),
-  );
+  it('should render ltr radio schedules correctly', () => {
+    const { container } = render(renderRadioSchedule({}));
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render rtl radio schedules correctly',
-    renderRadioSchedule({
-      service: 'arabic',
-      script: arabic,
-      dir: 'rtl',
-      locale: 'ar',
-      selectedService: 'arabic',
-    }),
-  );
+  it('should render rtl radio schedules correctly', () => {
+    const { container } = render(
+      renderRadioSchedule({
+        service: 'arabic',
+        script: arabic,
+        dir: 'rtl',
+        locale: 'ar',
+        selectedService: 'arabic',
+      }),
+    );
+    expect(container).toMatchSnapshot();
+  });
 
   it('should render with passed component', () => {
     const { container } = render(
