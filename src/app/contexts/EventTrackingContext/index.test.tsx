@@ -20,7 +20,12 @@ const defaultToggles = {
 type Props = {
   pageData?: object | null;
   pageType?: PageTypes;
-  toggles?: Record<string, unknown>;
+  toggles?: {
+    [key: string]: {
+      enabled: boolean;
+      value?: string;
+    };
+  };
 };
 
 // eslint-disable-next-line react/prop-types
