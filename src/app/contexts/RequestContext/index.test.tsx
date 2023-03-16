@@ -7,6 +7,7 @@ import * as getOriginContext from './getOriginContext';
 import * as getEnv from './getEnv';
 import * as getMetaUrls from './getMetaUrls';
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const { RequestContextProvider, RequestContext } = require('./index');
 
 const Component = () => {
@@ -28,11 +29,18 @@ jest.mock('./getOriginContext');
 jest.mock('./getEnv');
 jest.mock('./getMetaUrls');
 
-getStatsDestination.default.mockReturnValue('getStatsDestination');
-getStatsPageIdentifier.default.mockReturnValue('getStatsPageIdentifier');
-getOriginContext.default.mockReturnValue({ isUK: true, origin: 'origin' });
-getEnv.default.mockReturnValue('getEnv');
-getMetaUrls.default.mockReturnValue({
+(getStatsDestination.default as jest.Mock).mockReturnValue(
+  'getStatsDestination',
+);
+(getStatsPageIdentifier.default as jest.Mock).mockReturnValue(
+  'getStatsPageIdentifier',
+);
+(getOriginContext.default as jest.Mock).mockReturnValue({
+  isUK: true,
+  origin: 'origin',
+});
+(getEnv.default as jest.Mock).mockReturnValue('getEnv');
+(getMetaUrls.default as jest.Mock).mockReturnValue({
   canonicalLink: 'canonicalLink',
   ampLink: 'ampLink',
   canonicalUkLink: 'canonicalUkLink',
@@ -145,7 +153,7 @@ describe('RequestContext', () => {
     });
 
     it('should return a PS statsDestination when isAmp is true and outside the UK', () => {
-      getOriginContext.default.mockReturnValue({
+      (getOriginContext.default as jest.Mock).mockReturnValue({
         isUK: false,
         origin: 'origin',
       });

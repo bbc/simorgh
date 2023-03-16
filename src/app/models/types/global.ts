@@ -1,3 +1,7 @@
+export type Environments = 'local' | 'test' | 'live';
+
+export type Platforms = 'amp' | 'canonical';
+
 export type SocialEmbedProviders =
   | 'facebook'
   | 'twitter'

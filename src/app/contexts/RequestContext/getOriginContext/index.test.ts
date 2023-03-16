@@ -48,6 +48,7 @@ describe('getOriginContext', () => {
         origin: location,
       });
 
+      // eslint-disable-next-line @typescript-eslint/no-var-requires
       const getOriginContext = require('./index').default; // eslint-disable-line global-require
 
       expect(getOriginContext(bbcOrigin)).toEqual(expected);
@@ -56,6 +57,7 @@ describe('getOriginContext', () => {
 });
 
 describe('getOriginContext - localhost', () => {
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
   const getOriginContext = require('./index').default; // eslint-disable-line global-require
 
   beforeEach(() => {
