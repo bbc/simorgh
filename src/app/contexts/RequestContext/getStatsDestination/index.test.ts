@@ -1,4 +1,4 @@
-import { AppEnvs, Services } from '#app/models/types/global';
+import { Environments, Services } from '#app/models/types/global';
 import getStatsDestination from '.';
 
 describe('getStatsDestination', () => {
@@ -576,7 +576,7 @@ describe('getStatsDestination', () => {
     it(summary, () => {
       const statsDestination = getStatsDestination({
         isUK,
-        env: env as AppEnvs,
+        env: env as Environments,
         service: service as Services,
       });
       expect(statsDestination).toEqual(expected);

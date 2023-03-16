@@ -1,6 +1,6 @@
-export type AppEnvs = 'local' | 'test' | 'live';
+export type Environments = 'local' | 'test' | 'live';
 
-export type AppPlatforms = 'amp' | 'canonical';
+export type Platforms = 'amp' | 'canonical';
 
 export type SocialEmbedProviders =
   | 'facebook'

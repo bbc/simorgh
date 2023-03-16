@@ -2,11 +2,11 @@
    see table on this issue https://github.com/bbc/simorgh/issues/2995
 */
 
-import { AppEnvs, Services } from '#app/models/types/global';
+import { Environments, Services } from '#app/models/types/global';
 
 type Props = {
   isUK?: boolean | null;
-  env?: AppEnvs | null;
+  env?: Environments | null;
   service: Services;
 };
 

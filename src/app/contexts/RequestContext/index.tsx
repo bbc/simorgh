@@ -1,7 +1,7 @@
 import React, { PropsWithChildren } from 'react';
 import {
-  AppEnvs,
-  AppPlatforms,
+  Environments,
+  Platforms,
   PageTypes,
   Services,
   Variants,
@@ -19,7 +19,7 @@ type RequestContextProps = {
   canonicalLink: string;
   canonicalUkLink: string;
   canonicalNonUkLink: string;
-  env: AppEnvs;
+  env: Environments;
   id: string | null;
   isAmp: boolean;
   isNextJs: boolean;
@@ -32,7 +32,7 @@ type RequestContextProps = {
   origin: string;
   pageType: PageTypes;
   pathname: string;
-  platform: AppPlatforms;
+  platform: Platforms;
   previousPath: string | null;
   service: Services;
   showAdsBasedOnLocation: boolean;
@@ -84,8 +84,8 @@ export const RequestContextProvider = ({
   variant = null,
 }: PropsWithChildren<RequestProviderProps>) => {
   const { isUK, origin } = getOriginContext(bbcOrigin);
-  const env = getEnv(origin);
-  const platform: AppPlatforms = isAmp ? 'amp' : 'canonical';
+  const env: Environments = getEnv(origin);
+  const platform: Platforms = isAmp ? 'amp' : 'canonical';
   const statsDestination = getStatsDestination({
     isUK: platform === 'amp' ? true : isUK, // getDestination requires that statsDestination is a PS variant on AMP
     env,
