@@ -39,12 +39,6 @@ exports[`ConsentBanner should correctly render for ltr service 1`] = `
   border-bottom: solid 0.0625rem #AEAEB5;
 }
 
-.emotion-2 a:focus,
-.emotion-2 a:hover {
-  color: #222222;
-  background-color: #F6A21D;
-}
-
 .emotion-2 a:hover,
 .emotion-2 a:focus {
   border-bottom: solid 0.125rem transparent;
@@ -178,12 +172,6 @@ exports[`ConsentBanner should correctly render for ltr service 1`] = `
   }
 }
 
-.emotion-8 button:focus,
-.emotion-8 button:hover {
-  color: #222222;
-  background-color: #F6A21D;
-}
-
 .emotion-8 button:hover,
 .emotion-8 button:focus {
   -webkit-text-decoration: underline;
@@ -290,12 +278,6 @@ exports[`ConsentBanner should correctly render for rtl service 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: solid 0.0625rem #AEAEB5;
-}
-
-.emotion-2 a:focus,
-.emotion-2 a:hover {
-  color: #222222;
-  background-color: #F6A21D;
 }
 
 .emotion-2 a:hover,
@@ -431,12 +413,6 @@ exports[`ConsentBanner should correctly render for rtl service 1`] = `
   }
 }
 
-.emotion-8 button:focus,
-.emotion-8 button:hover {
-  color: #222222;
-  background-color: #F6A21D;
-}
-
 .emotion-8 button:hover,
 .emotion-8 button:focus {
   -webkit-text-decoration: underline;
@@ -543,12 +519,6 @@ exports[`ConsentBanner with hidden attribute on wrapper should correctly render 
   -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: solid 0.0625rem #AEAEB5;
-}
-
-.emotion-2 a:focus,
-.emotion-2 a:hover {
-  color: #222222;
-  background-color: #F6A21D;
 }
 
 .emotion-2 a:hover,
@@ -682,12 +652,6 @@ exports[`ConsentBanner with hidden attribute on wrapper should correctly render 
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
-}
-
-.emotion-8 button:focus,
-.emotion-8 button:hover {
-  color: #222222;
-  background-color: #F6A21D;
 }
 
 .emotion-8 button:hover,

@@ -12,16 +12,6 @@ import {
 import styled from '@emotion/styled';
 import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import {
-  C_CONSENT_BACKGROUND,
-  C_CONSENT_ACTION,
-  C_CONSENT_CONTENT,
-  C_WHITE,
-  C_PEBBLE,
-  C_EBON,
-  C_GHOST,
-} from '#psammead/psammead-styles/src/colours';
-import { BLACK } from '#app/components/ThemeProvider/palette';
-import {
   getDoublePica,
   getLongPrimer,
   getBodyCopy,
@@ -47,14 +37,14 @@ const transparentBorderHeight = '0.0625rem';
 const hoverFocusStyles = `
   &:focus,
   &:hover {
-    color: ${C_EBON};
-    background-color: ${C_CONSENT_ACTION};
+    color: ${props => props.theme.palette.EBON};
+    background-color: ${props => props.theme.palette.CONSENT_ACTION};
   }
 `;
 
 const Wrapper = styled.div`
   ${({ service }) => getSansRegular(service)}
-  background-color: ${C_CONSENT_BACKGROUND};
+  background-color: ${props => props.theme.palette.CONSENT_BACKGROUND};
   border-top: solid ${transparentBorderHeight} transparent;
 
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
@@ -76,9 +66,9 @@ const CenterWrapper = styled.div`
   margin: 0 auto;
 
   a {
-    color: ${C_CONSENT_ACTION};
+    color: ${props => props.theme.palette.CONSENT_ACTION};
     text-decoration: none;
-    border-bottom: solid 0.0625rem ${C_PEBBLE};
+    border-bottom: solid 0.0625rem ${props => props.theme.palette.PEBBLE};
 
     ${hoverFocusStyles}
   }
@@ -101,7 +91,7 @@ const FocusableH2 = forwardRef(({ className, children, dir }, ref) => {
 
 const Title = styled(FocusableH2)`
   ${({ script }) => script && getDoublePica(script)};
-  color: ${C_WHITE};
+  color: ${props => props.theme.palette.WHITE};
   font-weight: 700;
   padding: 0;
   margin: 0;
@@ -119,7 +109,7 @@ const Options = styled.ul`
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: ${C_CONSENT_ACTION};
+  color: ${props => props.theme.palette.CONSENT_ACTION};
   font-weight: 600;
   padding: 0;
   margin: 0;
@@ -148,7 +138,7 @@ export const ConsentBannerText = styled.p`
   ${({ script }) => script && getBodyCopy(script)};
   margin-top: ${GEL_SPACING_DBL};
   margin-bottom: ${GEL_SPACING_TRPL};
-  color: ${C_CONSENT_CONTENT};
+  color: ${props => props.theme.palette.CONSENT_CONTENT};
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     margin-top: ${GEL_SPACING_TRPL};
@@ -165,9 +155,9 @@ const ListItem = styled.li`
     ${({ script }) => script && getLongPrimer(script)};
     width: 100%;
     min-height: 2.75rem;
-    color: ${C_EBON};
+    color: ${props => props.theme.palette.EBON};
     font-weight: bold;
-    background-color: ${C_GHOST};
+    background-color: ${props => props.theme.palette.GHOST};
     border: solid ${transparentBorderHeight} transparent;
     margin: 0;
     cursor: pointer;
@@ -180,7 +170,8 @@ const ListItem = styled.li`
     // Applies focus indicator black outline.
     // Overrides dotted Mozilla focus ring applied by Normalize global styles.
     &:focus-visible {
-      outline: ${focusIndicatorThickness} solid ${BLACK};
+      outline: ${focusIndicatorThickness} solid
+        ${props => props.theme.palette.BLACK};
     }
 
     ${hoverFocusStyles}
