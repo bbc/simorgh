@@ -1,7 +1,16 @@
 /* Returns stats destnation for ATI based on origin, service and env
    see table on this issue https://github.com/bbc/simorgh/issues/2995
 */
-const getStatsDestination = ({ isUK = true, env = 'test', service }) => {
+
+import { Environments, Services } from '#app/models/types/global';
+
+type Props = {
+  isUK?: boolean | null;
+  env?: Environments | null;
+  service: Services;
+};
+
+const getStatsDestination = ({ isUK = true, env = 'test', service }: Props) => {
   let destination = '';
   switch (service) {
     case 'news':

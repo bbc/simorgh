@@ -23,6 +23,14 @@ describe('constructDataFilePath', () => {
     });
   });
 
+  describe('Home Page', () => {
+    it('should construct correct data file path', () => {
+      expect(
+        constructDataFilePath({ pageType: 'homePage', service: 'kyrgyz' }),
+      ).toEqual(`${DATA_PATH}/data/kyrgyz/homePage/index.json`);
+    });
+  });
+
   describe('Most Read', () => {
     it('should construct correct data file path', () => {
       expect(
