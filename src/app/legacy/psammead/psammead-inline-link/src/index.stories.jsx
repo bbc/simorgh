@@ -13,7 +13,6 @@ import {
   getSansRegularItalic,
   getSansBoldItalic,
 } from '#psammead/psammead-styles/src/font-styles';
-import { C_POSTBOX } from '#psammead/psammead-styles/src/colours';
 import notes from '../README.md';
 import InlineLink from './index';
 
@@ -41,7 +40,7 @@ const Caption = styled.figcaption`
 
 const textDecorationStyle = {
   borderBottom: 'none',
-  textDecoration: `underline ${C_POSTBOX}`,
+  textDecoration: `underline ${props => props.theme.palette.POSTBOX}`,
 };
 
 /* eslint-disable react/prop-types */
