@@ -3,7 +3,10 @@
 exports[`Navigation should render correctly 1`] = `
 .emotion-0 {
   position: relative;
-  background-color: #FFFFFF;
+}
+
+.emotion-0 background-color:function (props) {
+  returnisOpen? props.theme.palette.EBON : props.theme.palette.WHITE;
 }
 
 .emotion-0::after {
@@ -314,13 +317,10 @@ exports[`Navigation should render correctly 1`] = `
 exports[`Navigation should render correctly when ampOpenClass prop is provided 1`] = `
 .emotion-0 {
   position: relative;
-  background-color: #FFFFFF;
 }
 
-@media (max-width: 37.4375rem) {
-  .emotion-0.is-open {
-    background-color: #222222;
-  }
+.emotion-0 background-color:function (props) {
+  returnisOpen? props.theme.palette.EBON : props.theme.palette.WHITE;
 }
 
 .emotion-0::after {
@@ -631,7 +631,10 @@ exports[`Navigation should render correctly when ampOpenClass prop is provided 1
 exports[`Navigation should render correctly when isOpen is true 1`] = `
 .emotion-0 {
   position: relative;
-  background-color: #222222;
+}
+
+.emotion-0 background-color:function (props) {
+  returnisOpen? props.theme.palette.EBON : props.theme.palette.WHITE;
 }
 
 .emotion-0::after {
@@ -992,7 +995,10 @@ exports[`Scrollable Navigation should render correctly 1`] = `
 
 .emotion-2 {
   position: relative;
-  background-color: #FFFFFF;
+}
+
+.emotion-2 background-color:function (props) {
+  returnisOpen? props.theme.palette.EBON : props.theme.palette.WHITE;
 }
 
 .emotion-2::after {
