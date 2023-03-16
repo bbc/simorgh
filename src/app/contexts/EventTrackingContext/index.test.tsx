@@ -130,7 +130,8 @@ describe('Error handling', () => {
 
     try {
       render(
-        <Wrapper pageType="error">
+        // @ts-expect-error - testing handling of a page type that does not exist
+        <Wrapper pageType="funky-page-type">
           <TestComponent />
         </Wrapper>,
       );
