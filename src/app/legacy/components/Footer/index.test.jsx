@@ -1,7 +1,9 @@
 import React from 'react';
-import { screen } from '@testing-library/react';
 import Footer from '#components/Footer';
-import { render } from '../../../components/react-testing-library-with-providers';
+import {
+  render,
+  screen,
+} from '../../../components/react-testing-library-with-providers';
 
 describe('Footer', () => {
   const { trustProjectLink, externalLink, links, copyrightText } = {
