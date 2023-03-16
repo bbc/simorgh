@@ -9,7 +9,6 @@ exports[`ImagePlaceholderAmp should render dark mode version correctly 1`] = `
   >
     <div
       placeholder=""
-      style="background-color: rgb(63, 63, 66);"
     >
       <amp-img
         height="17px"
@@ -35,7 +34,6 @@ exports[`ImagePlaceholderAmp should render dark mode version correctly 1`] = `
     </div>
     <div
       fallback=""
-      style="background-color: rgb(63, 63, 66);"
     >
       <amp-img
         height="17px"
@@ -72,7 +70,6 @@ exports[`ImagePlaceholderAmp should render normal version correctly 1`] = `
   >
     <div
       placeholder=""
-      style="background-color: rgb(242, 242, 242);"
     >
       <amp-img
         height="17px"
@@ -98,7 +95,6 @@ exports[`ImagePlaceholderAmp should render normal version correctly 1`] = `
     </div>
     <div
       fallback=""
-      style="background-color: rgb(242, 242, 242);"
     >
       <amp-img
         height="17px"
