@@ -1,3 +1,5 @@
+import { Environments } from '#app/models/types/global';
+
 export default (pathname: string) => {
   if (pathname.includes('renderer_env=test')) {
     return 'test';
@@ -6,5 +8,5 @@ export default (pathname: string) => {
     return 'live';
   }
 
-  return process.env.SIMORGH_APP_ENV;
+  return process.env.SIMORGH_APP_ENV as Environments;
 };
