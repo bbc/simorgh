@@ -28,7 +28,6 @@ import { C_GREY_2, C_WHITE } from '#psammead/psammead-styles/src/colours';
 import { singleTextBlock } from '#app/models/blocks';
 import { articleDataPropTypes } from '#models/propTypes/article';
 import ArticleMetadata from '#containers/ArticleMetadata';
-import { RequestContext } from '#contexts/RequestContext';
 import headings from '#containers/Headings';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import gist from '#containers/Gist';
@@ -47,7 +46,6 @@ import MostReadContainer from '#containers/MostRead';
 import MostReadSection from '#containers/MostRead/section';
 import MostReadSectionLabel from '#containers/MostRead/label';
 import SocialEmbedContainer from '#containers/SocialEmbed';
-import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
 
 import {
   getArticleId,
@@ -116,20 +114,10 @@ const StyledRelatedTopics = styled(RelatedTopics)`
 `;
 
 const MediaArticlePage = ({ pageData, mostReadEndpointOverride }) => {
-  const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
   const { articleAuthor, isTrustProjectParticipant, showRelatedTopics } =
     useContext(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
-  const { enabled: adsEnabled } = useToggle('ads');
   const recommendationsData = path(['recommendations'], pageData);
-
-  const isAdsEnabled = [
-    path(['metadata', 'allowAdvertising'], pageData),
-    adsEnabled,
-    showAdsBasedOnLocation,
-  ].every(Boolean);
-
-  const adcampaign = path(['metadata', 'adCampaignKeyword'], pageData);
 
   const headline = getHeadline(pageData);
   const description = getSummary(pageData) || getHeadline(pageData);
