@@ -9,6 +9,7 @@ import {
 } from '#app/models/types/promoData';
 import Curation from '#app/components/Curation';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import styles from './index.styles';
 
 interface HomePageProps {
   pageData: {
@@ -26,33 +27,37 @@ const HomePage = ({ pageData }: HomePageProps) => {
 
   return (
     <>
-      {curations.map(
-        ({
-          visualProminence,
-          summaries,
-          curationId,
-          title: curationTitle,
-          link,
-          position,
-          visualStyle,
-        }) => {
-          return (
-            <React.Fragment key={`${curationId}-${position}`}>
-              <Curation
-                headingLevel={curationTitle ? 3 : 2}
-                visualStyle={visualStyle as VisualStyle}
-                visualProminence={visualProminence as VisualProminence}
-                promos={summaries}
-                title={curationTitle}
-                topStoriesTitle={topStoriesTitle}
-                position={position}
-                link={link}
-                curationLength={curations && curations.length}
-              />
-            </React.Fragment>
-          );
-        },
-      )}
+      <main css={styles.main}>
+        <div css={styles.inner}>
+          {curations.map(
+            ({
+              visualProminence,
+              summaries,
+              curationId,
+              title: curationTitle,
+              link,
+              position,
+              visualStyle,
+            }) => {
+              return (
+                <React.Fragment key={`${curationId}-${position}`}>
+                  <Curation
+                    headingLevel={curationTitle ? 3 : 2}
+                    visualStyle={visualStyle as VisualStyle}
+                    visualProminence={visualProminence as VisualProminence}
+                    promos={summaries}
+                    title={curationTitle}
+                    topStoriesTitle={topStoriesTitle}
+                    position={position}
+                    link={link}
+                    curationLength={curations && curations.length}
+                  />
+                </React.Fragment>
+              );
+            },
+          )}
+        </div>
+      </main>
     </>
   );
 };

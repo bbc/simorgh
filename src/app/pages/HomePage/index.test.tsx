@@ -11,4 +11,11 @@ describe('Home Page', () => {
       kyrgyzHomePageData.curations.length,
     );
   });
+
+  it('should apply provided margin size to the main element', () => {
+    const { getByRole } = render(<HomePage pageData={kyrgyzHomePageData} />);
+    expect(getByRole('main')).toHaveStyle({
+      margin: '0px 0.5rem',
+    });
+  });
 });
