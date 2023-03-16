@@ -23,7 +23,7 @@ function ErrorBoundary({
   recommendations,
   children,
 }: PropsWithChildren<Props>) {
-  const { pathname } = useContext(RequestContext) as { pathname: string };
+  const { pathname } = useContext(RequestContext);
 
   const isValidRecommendations = checkRecommendations(recommendations);
 
