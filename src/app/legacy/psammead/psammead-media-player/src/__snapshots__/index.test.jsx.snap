@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Media Player: AMP Entry renders a landscape container with an amp-iframe and nested amp-img 1`] = `
+exports[`Media Player: AMP Entry should render a landscape container with an amp-iframe and nested amp-img 1`] = `
 .emotion-0 {
   padding-top: 56.25%;
   position: relative;
@@ -38,7 +38,7 @@ exports[`Media Player: AMP Entry renders a landscape container with an amp-ifram
 </div>
 `;
 
-exports[`Media Player: AMP Entry renders a portrait container with amp-iframe and nested amp-img 1`] = `
+exports[`Media Player: AMP Entry should render a portrait container with amp-iframe and nested amp-img 1`] = `
 .emotion-0 {
   padding-top: 177.78%;
   position: relative;
@@ -76,7 +76,7 @@ exports[`Media Player: AMP Entry renders a portrait container with amp-iframe an
 </div>
 `;
 
-exports[`Media Player: AMP Entry renders the audio skin 1`] = `
+exports[`Media Player: AMP Entry should render the audio skin 1`] = `
 .emotion-0 {
   height: 165px;
   position: relative;
@@ -120,7 +120,7 @@ exports[`Media Player: AMP Entry renders the audio skin 1`] = `
 </div>
 `;
 
-exports[`Media Player: Canonical Entry renders a landscape container with a placeholder image 1`] = `
+exports[`Media Player: Canonical Entry should render a landscape container with a placeholder image 1`] = `
 .emotion-0 {
   padding-top: 56.25%;
   position: relative;
@@ -301,7 +301,7 @@ exports[`Media Player: Canonical Entry renders a landscape container with a plac
 </div>
 `;
 
-exports[`Media Player: Canonical Entry renders a placeholder image with guidance 1`] = `
+exports[`Media Player: Canonical Entry should render a placeholder image with guidance 1`] = `
 .emotion-0 {
   padding-top: 56.25%;
   position: relative;
@@ -514,7 +514,7 @@ exports[`Media Player: Canonical Entry renders a placeholder image with guidance
 </div>
 `;
 
-exports[`Media Player: Canonical Entry renders a portrait container with a placeholder image 1`] = `
+exports[`Media Player: Canonical Entry should render a portrait container with a placeholder image 1`] = `
 .emotion-0 {
   padding-top: 177.78%;
   position: relative;
@@ -695,7 +695,7 @@ exports[`Media Player: Canonical Entry renders a portrait container with a place
 </div>
 `;
 
-exports[`Media Player: Canonical Entry renders an iframe when showPlaceholder is false 1`] = `
+exports[`Media Player: Canonical Entry should render an iframe when showPlaceholder is false 1`] = `
 .emotion-0 {
   padding-top: 56.25%;
   position: relative;
@@ -733,7 +733,7 @@ exports[`Media Player: Canonical Entry renders an iframe when showPlaceholder is
 </div>
 `;
 
-exports[`Media Player: Canonical Entry renders the audio skin 1`] = `
+exports[`Media Player: Canonical Entry should render the audio skin 1`] = `
 .emotion-0 {
   height: 165px;
   position: relative;
@@ -777,7 +777,7 @@ exports[`Media Player: Canonical Entry renders the audio skin 1`] = `
 </div>
 `;
 
-exports[`Media Player: Canonical Entry renders with no-js styles when noJsClassName prop is used 1`] = `
+exports[`Media Player: Canonical Entry should render with no-js styles when noJsClassName prop is used 1`] = `
 .emotion-0 {
   padding-top: 56.25%;
   position: relative;
@@ -1007,7 +1007,7 @@ exports[`Media Player: Canonical Entry renders with no-js styles when noJsClassN
 </div>
 `;
 
-exports[`Media Player: Canonical Entry shows a loading image before the player is ready when showLoadingImage is true 1`] = `
+exports[`Media Player: Canonical Entry should show a loading image before the player is ready when showLoadingImage is true 1`] = `
 .emotion-0 {
   padding-top: 56.25%;
   position: relative;
