@@ -3,11 +3,11 @@ import styled from '@emotion/styled';
 import { node, number, string } from 'prop-types';
 
 import { GEL_SPACING_DBL } from '#psammead/gel-foundations/src/spacings';
-import { C_GREY_8 } from '#psammead/psammead-styles/src/colours';
 import useImageColour from '#hooks/useImageColour';
+import { GREY_8 } from '../../../components/ThemeProvider/palette';
 
 const BLUR_RADIUS = 15;
-const FALLBACK_COLOUR = C_GREY_8;
+const FALLBACK_COLOUR = GREY_8;
 
 const Wrapper = styled.div`
   position: relative;

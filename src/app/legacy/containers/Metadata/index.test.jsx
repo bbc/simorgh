@@ -1,5 +1,4 @@
 import React from 'react';
-import { waitFor } from '@testing-library/react';
 import {
   ARTICLE_PAGE,
   FRONT_PAGE,
@@ -18,7 +17,10 @@ import igboFrontPageData from '#data/igbo/frontpage/index.json';
 import somaliFrontPageData from '#data/somali/frontpage/index.json';
 import liveRadioPageData from '#data/korean/bbc_korean_radio/liveradio.json';
 import { getSummary } from '#lib/utilities/parseAssetData/index';
-import { render } from '../../../components/react-testing-library-with-providers';
+import {
+  render,
+  waitFor,
+} from '../../../components/react-testing-library-with-providers';
 import services from '../../../../server/utilities/serviceConfigs';
 import { getAuthorTwitterHandle } from '../../../components/Byline/utilities';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';

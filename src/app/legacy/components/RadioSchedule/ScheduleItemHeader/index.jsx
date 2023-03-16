@@ -12,7 +12,6 @@ import {
   getSansRegular,
 } from '#psammead/psammead-styles/src/font-styles';
 import { getPica } from '#psammead/gel-foundations/src/typography';
-import { C_KINGFISHER } from '#psammead/psammead-styles/src/colours';
 import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import durationDictionary, { programStateConfig } from '../utilities';
@@ -39,7 +38,7 @@ const StyledLink = styled(Link)`
 const NextLabel = styled.span`
   ${({ service }) => service && getSansBold(service)}
   ${({ script }) => script && getPica(script)}
-  color: ${C_KINGFISHER};
+  color: ${props => props.theme.palette.KINGFISHER};
   display: inline-block;
 
   ${({ dir }) =>
