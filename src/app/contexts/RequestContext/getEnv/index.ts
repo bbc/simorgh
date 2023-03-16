@@ -1,4 +1,6 @@
-const getEnv = origin => {
+import { AppEnvs } from '#app/models/types/global';
+
+const getEnv = (origin: string): AppEnvs => {
   if (origin.includes('local')) {
     return 'local';
   }

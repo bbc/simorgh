@@ -1,3 +1,7 @@
+export type AppEnvs = 'local' | 'test' | 'live';
+
+export type AppPlatforms = 'amp' | 'canonical';
+
 export type SocialEmbedProviders =
   | 'facebook'
   | 'twitter'
