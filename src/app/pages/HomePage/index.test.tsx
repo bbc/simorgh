@@ -1,15 +1,14 @@
 import React from 'react';
+import { data as kyrgyzHomePageData } from '#data/kyrgyz/homePage/index.json';
 import { render } from '../../components/react-testing-library-with-providers';
 import HomePage from './HomePage';
 
 describe('Home Page', () => {
-  it('should render a hello message', () => {
-    const { container } = render(
-      <HomePage pageData={{ id: '1234', title: 'Abcd', curations: [] }} />,
-    );
+  it('should render a section for each curation', () => {
+    const { container } = render(<HomePage pageData={kyrgyzHomePageData} />);
     expect(container).not.toBeEmptyDOMElement();
-    expect(container.firstChild?.textContent).toBe(
-      'Hi, I am a Home Page component and your page id is 1234 and the title is Abcd!',
+    expect(container.getElementsByTagName('section').length).toEqual(
+      kyrgyzHomePageData.curations.length,
     );
   });
 });

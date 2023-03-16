@@ -2,13 +2,18 @@
 /* @jsxFrag React.Fragment */
 import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
-import { CurationData } from '#app/models/types/promoData';
+import {
+  CurationData,
+  VisualProminence,
+  VisualStyle,
+} from '#app/models/types/promoData';
 import Curation from '#app/components/Curation';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
 interface HomePageProps {
   pageData: {
-    id: string;
+    pageType: string;
+    id?: string;
     title: string;
     curations: CurationData[];
   };
@@ -35,8 +40,8 @@ const HomePage = ({ pageData }: HomePageProps) => {
             <React.Fragment key={`${curationId}-${position}`}>
               <Curation
                 // headingLevel={curationTitle && 3}
-                visualStyle={visualStyle}
-                visualProminence={visualProminence}
+                visualStyle={visualStyle as VisualStyle}
+                visualProminence={visualProminence as VisualProminence}
                 promos={summaries}
                 title={curationTitle}
                 topStoriesTitle={topStoriesTitle}
@@ -48,7 +53,6 @@ const HomePage = ({ pageData }: HomePageProps) => {
           );
         },
       )}
-      )
     </>
   );
 };
