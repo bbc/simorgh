@@ -22,6 +22,7 @@ describe('Local Server', () => {
     ${'Article with variant'}          | ${'/zhongwen/articles/c3xd4x9prgyo/simp.json'}                   | ${'/zhongwen/articles/c3xd4x9prgyo/simp.json'}
     ${'Front Page'}                    | ${'/pidgin.json'}                                                | ${'/pidgin/frontpage/index.json'}
     ${'Front Page with variant'}       | ${'/zhongwen/trad.json'}                                         | ${'/zhongwen/frontpage/trad.json'}
+    ${'Home Page'}                     | ${'/kyrgyz/tipohome.json'}                                       | ${'/kyrgyz/homePage/index.json'}
     ${'Most Read'}                     | ${'/pidgin/mostread.json'}                                       | ${'/pidgin/mostRead/index.json'}
     ${'Most Read with variant'}        | ${'/zhongwen/mostread/trad.json'}                                | ${'/zhongwen/mostRead/trad.json'}
     ${'Most Watched'}                  | ${'/pidgin/mostwatched.json'}                                    | ${'/pidgin/mostWatched/index.json'}
