@@ -129,6 +129,7 @@ const CanonicalEmbed = ({ provider, oEmbed, onRender }) => {
     if (onRender && hasLoadedLibrary && onLibraryLoad) {
       onLibraryLoad(onRender);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [hasLoadedLibrary]);
 
   return (

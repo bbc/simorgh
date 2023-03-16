@@ -1,6 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { render } from '../../../../components/react-testing-library-with-providers';
 import Message from './index';
 import '@testing-library/jest-dom/extend-expect';
 
@@ -20,8 +19,10 @@ describe('Media Message', () => {
     expect(message).toBeInTheDocument();
   });
 
-  shouldMatchSnapshot(
-    'matches media message snapshot',
-    <Message message="Контент більше не доступний" service="ukrainian" />,
-  );
+  it('matches media message snapshot', () => {
+    const { container } = render(
+      <Message message="Контент більше не доступний" service="ukrainian" />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 });

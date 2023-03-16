@@ -1,5 +1,3 @@
-import { render } from '@testing-library/react';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import {
   VideoCanonicalWithPlaceholder,
   VideoCanonicalNoPlaceholder,
@@ -11,23 +9,27 @@ import {
   UnavailableVideoCanonical,
   UnavailableVideoAmp,
 } from './fixtureData';
+import { render } from '../../../components/react-testing-library-with-providers';
 import logMissingMediaId from './helpers/logMissingMediaId';
 
 jest.mock('./helpers/logMissingMediaId');
 jest.mock('#lib/utilities/onClient');
 
 describe('MediaPlayer', () => {
-  shouldMatchSnapshot(
-    'Calls the canonical placeholder when platform is canonical and showPlaceholder is true',
-    VideoCanonicalWithPlaceholder,
-  );
+  it('Calls the canonical placeholder when platform is canonical and showPlaceholder is true', () => {
+    const { container } = render(VideoCanonicalWithPlaceholder);
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'Does not Call the canonical placeholder when platform is canonical but showPlaceholder is false',
-    VideoCanonicalNoPlaceholder,
-  );
+  it('Does not Call the canonical placeholder when platform is canonical but showPlaceholder is false', () => {
+    const { container } = render(VideoCanonicalNoPlaceholder);
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot('Renders the AMP player when platform is AMP', VideoAmp);
+  it('Renders the AMP player when platform is AMP', () => {
+    const { container } = render(VideoAmp);
+    expect(container).toMatchSnapshot();
+  });
 });
 
 it('should display the AMP media caption', () => {
