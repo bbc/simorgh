@@ -52,7 +52,7 @@ type Props = {
   linkText: string;
   linkTextSuffixVisuallyHidden: string;
   linkHref: string;
-  warningText: string;
+  warningText: string | null;
 };
 
 const Notice = ({

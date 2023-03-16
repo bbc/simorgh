@@ -46,7 +46,7 @@ const SocialEmbedContainer = ({ blocks, source }: Props) => {
   const { id, oEmbed, fallback, skipLink, embedCaption, provider } =
     getSocialMetadata({ blocks, source, pageType, translations });
 
-  if (!id || !provider || !skipLink) {
+  if (!id || !provider || !skipLink || !fallback) {
     return null;
   }
 

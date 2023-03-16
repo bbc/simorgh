@@ -38,7 +38,7 @@ const createTranslations = ({
         translations,
       ),
       warningText: pathOr(
-        '',
+        null,
         ['socialEmbed', 'fallback', 'warningText'],
         translations,
       ),

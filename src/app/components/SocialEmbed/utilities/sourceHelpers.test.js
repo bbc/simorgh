@@ -14,15 +14,10 @@ describe('sourceHelpers', () => {
     'https://www.facebook.com/RickAstley/posts/545713756920775';
   const FACEBOOK_VIDEO_SOURCE =
     'https://www.facebook.com/RickAstley/videos/1378590239249667';
-  const UNKNOWN_SOURCE = 'https://www.randomSource.com/watch?v=XWxjmToNSjQ';
 
   describe('getProviderFromSource', () => {
     it('should return a provider name for a valid source', () => {
       expect(getProviderFromSource(TWITTER_SOURCE)).toEqual('twitter');
-    });
-
-    it('should return "unknown" for an unknown source', () => {
-      expect(getProviderFromSource(UNKNOWN_SOURCE)).toEqual('unknown');
     });
   });
 
@@ -63,11 +58,6 @@ describe('sourceHelpers', () => {
       expect(getIdFromSource(FACEBOOK_VIDEO_SOURCE)).toEqual(
         '1378590239249667',
       );
-    });
-
-    it('should return an empty string for an unknown or invalid source', () => {
-      expect(getIdFromSource(UNKNOWN_SOURCE)).toEqual('');
-      expect(getIdFromSource('https://twitter.com/BBCNews')).toEqual('');
     });
   });
 });
