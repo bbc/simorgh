@@ -281,7 +281,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'Ihe nkiri',
-        url: '/igbo/media/video',
+        url: '/igbo/topics/c3l19z3qjmyt',
       },
       {
         title: 'Nke ka ewuewu',

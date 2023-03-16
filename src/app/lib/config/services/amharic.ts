@@ -310,7 +310,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'ቪዲዮ',
-        url: '/amharic/media/video',
+        url: '/amharic/topics/c917ezk2pmvt',
       },
       {
         title: 'በጣም የተወደዱ',
