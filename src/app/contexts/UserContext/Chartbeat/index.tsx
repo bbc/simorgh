@@ -1,10 +1,12 @@
 import React, { useContext } from 'react';
 import useToggle from '#hooks/useToggle';
 import CanonicalChartbeatBeacon from '#containers/ChartbeatAnalytics/canonical';
-import { canonicalChartbeatPropTypes } from '#models/propTypes/chartbeatAnalytics';
+import { canonicalChartbeatPropTypes } from '#app/models/propTypes/chartbeatAnalytics';
 import { RequestContext } from '../../RequestContext';
 
-const Chartbeat = ({ config }) => {
+type Props = typeof canonicalChartbeatPropTypes | null;
+
+const Chartbeat = ({ config = null }: { config: Props }) => {
   const { enabled } = useToggle('chartbeatAnalytics');
   const { isAmp } = useContext(RequestContext);
 
@@ -12,15 +14,9 @@ const Chartbeat = ({ config }) => {
     return null;
   }
 
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
   return <CanonicalChartbeatBeacon chartbeatConfig={config} />;
-};
-
-Chartbeat.propTypes = {
-  config: canonicalChartbeatPropTypes,
-};
-
-Chartbeat.defaultProps = {
-  config: null,
 };
 
 export default Chartbeat;
