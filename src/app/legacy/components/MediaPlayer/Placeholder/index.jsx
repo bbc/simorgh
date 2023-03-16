@@ -3,8 +3,6 @@ import styled from '@emotion/styled';
 import { string, func, shape, oneOf } from 'prop-types';
 import Image from '#psammead/psammead-image/src';
 import PlayButton from '#psammead/psammead-play-button/src';
-import { C_POSTBOX } from '#psammead/psammead-styles/src/colours';
-import { BLACK, WHITE } from '#app/components/ThemeProvider/palette';
 import Guidance from '../Guidance';
 import { focusIndicatorThickness } from '../../../../components/ThemeProvider/focusIndicator';
 
@@ -31,8 +29,10 @@ const StyledPlayButton = styled(PlayButton)`
   // Custom focus indicator styling applied to pseudo-element. Global focus indicator styling has been removed.
   &:focus-visible::before {
     ${placeholderOutline}
-    box-shadow: 0 0 0 ${focusIndicatorThickness} ${WHITE} inset;
-    border: ${focusIndicatorThickness} solid ${BLACK};
+    box-shadow: 0 0 0 ${focusIndicatorThickness}  ${props =>
+      props.theme.palette.WHITE} inset;
+    border: ${focusIndicatorThickness} solid
+      ${props => props.theme.palette.BLACK};
   }
 `;
 
@@ -46,7 +46,7 @@ const StyledPlaceholder = styled.div`
 
   &:hover, &:focus {
     ${StyledPlayButton} {
-      background-color: ${C_POSTBOX};
+      background-color: ${props => props.theme.palette.POSTBOX};
     }
   }
 `;

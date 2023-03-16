@@ -1,5 +1,5 @@
 import React, { PropsWithChildren } from 'react';
-import { render } from '@testing-library/react';
+import { render } from '../../react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import Subhead from '.';
 
