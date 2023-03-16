@@ -1,11 +1,6 @@
 import React, { useContext } from 'react';
 import { node, string } from 'prop-types';
 import styled from '@emotion/styled';
-import {
-  C_WHITE,
-  C_GREY_6,
-  C_BLACK,
-} from '#psammead/psammead-styles/src/colours';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { GEL_BREVIER } from '#psammead/gel-foundations/src/typography';
 import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
@@ -15,8 +10,8 @@ import { visuallyHiddenStyle } from '../utilities';
 
 const Figure = styled.figure`
   margin: 0;
-  background-color: ${({ isArticlePage }) =>
-    isArticlePage ? 'transparent' : C_BLACK};
+  background-color: ${({ isArticlePage }, props) =>
+    isArticlePage ? 'transparent' : props.theme.palette.BLACK};
 `;
 
 const FigCaption = styled.figcaption`
@@ -24,7 +19,8 @@ const FigCaption = styled.figcaption`
   ${GEL_BREVIER}
   
   ${({ isArticlePage }) => `
-    color: ${isArticlePage ? C_GREY_6 : C_WHITE};
+    color: ${props =>
+      isArticlePage ? props.theme.palette.GREY_6 : props.theme.palette.WHITE};
     padding: ${isArticlePage ? `${GEL_SPACING} 0` : GEL_SPACING};
   `}
 
