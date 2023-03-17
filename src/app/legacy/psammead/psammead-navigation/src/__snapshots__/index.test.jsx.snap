@@ -6,7 +6,7 @@ exports[`Navigation should render correctly 1`] = `
 }
 
 .emotion-0 background-color:function (props) {
-  returnisOpen? props.theme.palette.EBON : props.theme.palette.WHITE;
+  returnisOpen?(cov_iligcbjo3().b[5][0]++, props.theme.palette.EBON) : (cov_iligcbjo3().b[5][1]++, props.theme.palette.WHITE);
 }
 
 .emotion-0::after {
@@ -320,7 +320,7 @@ exports[`Navigation should render correctly when ampOpenClass prop is provided 1
 }
 
 .emotion-0 background-color:function (props) {
-  returnisOpen? props.theme.palette.EBON : props.theme.palette.WHITE;
+  returnisOpen?(cov_iligcbjo3().b[5][0]++, props.theme.palette.EBON) : (cov_iligcbjo3().b[5][1]++, props.theme.palette.WHITE);
 }
 
 .emotion-0::after {
@@ -634,7 +634,7 @@ exports[`Navigation should render correctly when isOpen is true 1`] = `
 }
 
 .emotion-0 background-color:function (props) {
-  returnisOpen? props.theme.palette.EBON : props.theme.palette.WHITE;
+  returnisOpen?(cov_iligcbjo3().b[5][0]++, props.theme.palette.EBON) : (cov_iligcbjo3().b[5][1]++, props.theme.palette.WHITE);
 }
 
 .emotion-0::after {
@@ -998,7 +998,7 @@ exports[`Scrollable Navigation should render correctly 1`] = `
 }
 
 .emotion-2 background-color:function (props) {
-  returnisOpen? props.theme.palette.EBON : props.theme.palette.WHITE;
+  returnisOpen?(cov_iligcbjo3().b[5][0]++, props.theme.palette.EBON) : (cov_iligcbjo3().b[5][1]++, props.theme.palette.WHITE);
 }
 
 .emotion-2::after {
