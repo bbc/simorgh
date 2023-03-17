@@ -7,10 +7,10 @@ const pageType = 'home';
 
 urls.forEach(url => {
   const { service, variant = 'default' } = url;
-  const paths = url[getAppEnv()];
+  const currentPath = url[getAppEnv()];
 
-  paths.forEach(currentPath => {
-    describe(`${pageType} - ${currentPath}`, () => {
+  if (currentPath) {
+    describe(`Tests for ${pageType} page - ${currentPath}`, () => {
       before(() => {
         Cypress.env('currentPath', currentPath);
         visitPage(currentPath, pageType);
@@ -22,5 +22,5 @@ urls.forEach(url => {
         variant,
       });
     });
-  });
+  }
 });

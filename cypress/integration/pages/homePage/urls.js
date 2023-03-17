@@ -1,8 +1,7 @@
 export default [
   {
     service: 'kyrgyz',
-    local: ['/kyrgyz/tipohome'],
-    test: ['/kyrgyz/tipohome'],
-    live: [],
+    local: '/kyrgyz/tipohome',
+    test: '/kyrgyz/tipohome',
   },
 ];
