@@ -931,7 +931,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   width: 100%;
   width: calc(100% - 0.5rem);
   margin-left: 0.5rem;
-  border-left: 1px solid #6E6E73;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1706,12 +1705,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 .emotion-201 {
   padding: 0.5rem 0 1rem;
-}
-
-@media (max-width: 62.9375rem) {
-  .emotion-201 {
-    border-bottom: 0.0625rem solid #F2F2F2;
-  }
 }
 
 .emotion-201:last-child {
@@ -4680,7 +4673,6 @@ exports[`Story Page should render correctly when the secondary column data is no
   width: 100%;
   width: calc(100% - 0.5rem);
   margin-left: 0.5rem;
-  border-left: 1px solid #6E6E73;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -7785,7 +7777,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   width: 100%;
   width: calc(100% - 0.5rem);
   margin-left: 0.5rem;
-  border-left: 1px solid #6E6E73;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -8560,12 +8551,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 .emotion-202 {
   padding: 0.5rem 0 1rem;
-}
-
-@media (max-width: 62.9375rem) {
-  .emotion-202 {
-    border-bottom: 0.0625rem solid #F2F2F2;
-  }
 }
 
 .emotion-202:last-child {

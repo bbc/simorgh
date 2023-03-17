@@ -738,7 +738,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
   width: 100%;
   width: calc(100% - 0.5rem);
   margin-left: 0.5rem;
-  border-left: 1px solid #6E6E73;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -2784,7 +2783,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
   width: 100%;
   width: calc(100% - 0.5rem);
   margin-left: 0.5rem;
-  border-left: 1px solid #6E6E73;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -4842,7 +4840,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   width: 100%;
   width: calc(100% - 0.5rem);
   margin-left: 0.5rem;
-  border-left: 1px solid #6E6E73;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -5280,12 +5277,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 .emotion-217 {
   padding: 0.5rem 0 1rem;
-}
-
-@media (max-width: 62.9375rem) {
-  .emotion-217 {
-    border-bottom: 0.0625rem solid #F2F2F2;
-  }
 }
 
 .emotion-217:last-child {
@@ -7368,7 +7359,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
   width: 100%;
   width: calc(100% - 0.5rem);
   margin-left: 0.5rem;
-  border-left: 1px solid #6E6E73;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -8854,7 +8844,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   width: 100%;
   width: calc(100% - 0.5rem);
   margin-left: 0.5rem;
-  border-left: 1px solid #6E6E73;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -9564,12 +9553,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 .emotion-431 {
   padding: 0.5rem 0 1rem;
-}
-
-@media (max-width: 62.9375rem) {
-  .emotion-431 {
-    border-bottom: 0.0625rem solid #F2F2F2;
-  }
 }
 
 .emotion-431:last-child {

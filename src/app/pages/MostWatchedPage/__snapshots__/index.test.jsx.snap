@@ -354,12 +354,6 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
   padding: 0.5rem 0 1rem;
 }
 
-@media (max-width: 62.9375rem) {
-  .emotion-17 {
-    border-bottom: 0.0625rem solid #F2F2F2;
-  }
-}
-
 .emotion-17:last-child {
   border: none;
 }

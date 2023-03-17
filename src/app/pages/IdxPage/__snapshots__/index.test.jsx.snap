@@ -562,12 +562,6 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   padding: 0.5rem 0 1rem;
 }
 
-@media (max-width: 62.9375rem) {
-  .emotion-54 {
-    border-bottom: 0.0625rem solid #F2F2F2;
-  }
-}
-
 .emotion-54:last-child {
   border: none;
 }
@@ -765,12 +759,6 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 
 .emotion-89 {
   padding: 0.5rem 0 1rem;
-}
-
-@media (max-width: 62.9375rem) {
-  .emotion-89 {
-    border-bottom: 0.0625rem solid #F2F2F2;
-  }
 }
 
 .emotion-89:last-child {
@@ -5173,12 +5161,6 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   padding: 0.5rem 0 1rem;
 }
 
-@media (max-width: 62.9375rem) {
-  .emotion-66 {
-    border-bottom: 0.0625rem solid #F2F2F2;
-  }
-}
-
 .emotion-66:last-child {
   border: none;
 }
@@ -5493,12 +5475,6 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   padding: 0.5rem 0 1rem;
 }
 
-@media (max-width: 62.9375rem) {
-  .emotion-89 {
-    border-bottom: 0.0625rem solid #F2F2F2;
-  }
-}
-
 .emotion-89:last-child {
   border: none;
 }
@@ -5760,12 +5736,6 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 
 .emotion-376 {
   padding: 0.5rem 0 1rem;
-}
-
-@media (max-width: 62.9375rem) {
-  .emotion-376 {
-    border-bottom: 0.0625rem solid #F2F2F2;
-  }
 }
 
 .emotion-376:last-child {
