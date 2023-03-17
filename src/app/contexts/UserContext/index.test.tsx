@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
-import ReactDOM from 'react-dom';
-import { act } from 'react-dom/test-utils';
+import { render } from '@testing-library/react';
 import { UserContext, UserContextProvider } from '.';
 import { getCookiePolicy, personalisationEnabled } from './cookies';
 import * as chartbeat from './Chartbeat';
@@ -18,8 +17,11 @@ jest.mock('./cookies', () => ({
   personalisationEnabled: jest.fn(),
 }));
 
-const mockChartbeat = jest.fn().mockReturnValue('chartbeat');
-chartbeat.default = mockChartbeat;
+jest.mock('./Chartbeat');
+
+const mockChartbeat = (chartbeat.default as jest.Mock).mockReturnValue(
+  'chartbeat',
+);
 
 const DummyComponent = () => {
   useContext(UserContext);
@@ -32,21 +34,15 @@ const DummyComponentWithContext = () => (
   </UserContextProvider>
 );
 
-let container;
-
 describe('UserContext', () => {
   beforeEach(() => {
-    container = document.createElement('div');
-    document.body.appendChild(container);
-    getCookiePolicy.mockReturnValue('111');
-    personalisationEnabled.mockReturnValue(true);
+    (getCookiePolicy as jest.Mock).mockReturnValue('111');
+    (personalisationEnabled as jest.Mock).mockReturnValue(true);
     jest.clearAllMocks();
   });
 
   it('should provide cookie values, state function and render chartbeat', () => {
-    act(() => {
-      ReactDOM.render(<DummyComponentWithContext />, container);
-    });
+    render(<DummyComponentWithContext />);
 
     expect(personalisationEnabled).toHaveBeenCalledWith('111');
 
