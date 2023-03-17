@@ -1,9 +1,3 @@
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_GHOST,
-  C_POSTBOX_30,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
 import devanagari from '../../../components/ThemeProvider/fontScripts/devanagari';
 import '#psammead/moment-timezone-include/tz/Asia/Kolkata';
 import '#psammead/psammead-locales/moment/hi';
@@ -38,7 +32,6 @@ export const service: DefaultServiceConfig = {
     service: 'hindi',
     serviceName: 'Hindi',
     languageName: 'Hindi',
-    themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbchindi',
     twitterSite: '@bbchindi',
     noBylinesPolicy:
@@ -50,13 +43,6 @@ export const service: DefaultServiceConfig = {
     swPath: '/sw.js',
     frontPageTitle:
       'ब्रेकिंग न्यूज़ समाचार, ताजा खबर | News, latest news, breaking news',
-    theming: {
-      brandBackgroundColour: `${C_POSTBOX}`,
-      brandLogoColour: `${C_WHITE}`,
-      brandForegroundColour: `${C_GHOST}`,
-      brandHighlightColour: `${C_WHITE}`,
-      brandBorderColour: `${C_POSTBOX_30}`,
-    },
     showAdPlaceholder: true,
     showRelatedTopics: true,
     podcastPromo: {
@@ -262,6 +248,7 @@ export const service: DefaultServiceConfig = {
         duration: 'अवधि',
         recentEpisodes: 'प्रसारण का समय',
         podcastExternalLinks: 'ये पॉडकास्ट इन प्लेटफ़ॉर्म्स पर भी उपलब्ध है -',
+        download: 'एपिसोड डाउनलोड करें',
       },
       socialEmbed: {
         caption: {

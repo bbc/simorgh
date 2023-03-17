@@ -1,5 +1,5 @@
 import { Agent } from 'https';
-import * as getRecommendationsUrl from '#app/lib/utilities/getUrlHelpers/getRecommendationsUrl';
+import * as getOnwardsPageData from '../utils/getOnwardsData';
 import * as fetchPageData from '../../utils/fetchPageData';
 import nodeLogger from '../../../../testHelpers/loggerMock';
 import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
@@ -14,7 +14,10 @@ const bffArticleJson = {
   data: {
     article: {
       content: {},
-      metadata: {},
+      metadata: {
+        allowAdvertising: true,
+        consumableAsSFV: true,
+      },
       promo: {},
       relatedContent: {},
     },
@@ -46,6 +49,7 @@ describe('Articles - BFF Fetching', () => {
       path: '/kyrgyz/articles/c0000000000o',
       getAgent,
       service: 'kyrgyz',
+      pageType: 'article',
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
@@ -68,6 +72,7 @@ describe('Articles - BFF Fetching', () => {
       path: '/kyrgyz/articles/c0000000000o',
       getAgent,
       service: 'kyrgyz',
+      pageType: 'article',
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
@@ -94,6 +99,7 @@ describe('Articles - BFF Fetching', () => {
       path: '/kyrgyz/articles/c0000000000o',
       getAgent,
       service: 'kyrgyz',
+      pageType: 'article',
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
@@ -108,46 +114,30 @@ describe('Articles - BFF Fetching', () => {
   it('should request WSOJ data.', async () => {
     process.env.SIMORGH_APP_ENV = 'live';
 
-    const recommendData = [{ type: 'TEST_RECOMMEND_DATA' }];
     const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
-    const getRecommendationsSpy = jest.spyOn(getRecommendationsUrl, 'default');
+    const getOnwardsPageDataSpy = jest.spyOn(getOnwardsPageData, 'default');
 
-    fetchDataSpy
-      .mockReturnValueOnce(
-        Promise.resolve({
-          status: 200,
-          json: JSON.stringify(bffArticleJson),
-        }),
-      )
-      .mockReturnValueOnce(
-        Promise.resolve({
-          status: 200,
-          json: JSON.stringify(recommendData),
-        }),
-      );
-
-    getRecommendationsSpy.mockReturnValueOnce(
-      '/recommendations/kyrgyz/articles/c0000000000o?Engine=unirecs_datalab',
+    fetchDataSpy.mockReturnValueOnce(
+      Promise.resolve({
+        status: 200,
+        json: bffArticleJson,
+      }),
     );
 
     await getInitialData({
       path: '/kyrgyz/articles/c0000000000o.amp?renderer_env=live',
       getAgent,
       service: 'kyrgyz',
+      pageType: 'article',
     });
 
-    expect(getRecommendationsSpy).toBeCalledWith({
-      assetUri: '/kyrgyz/articles/c0000000000o',
-      engine: 'unirecs_datalab',
-      engineVariant: '',
-    });
-
-    expect(fetchDataSpy).toHaveBeenNthCalledWith(2, {
-      path: '/recommendations/kyrgyz/articles/c0000000000o?Engine=unirecs_datalab',
+    expect(getOnwardsPageDataSpy).toBeCalledWith({
+      pathname: '/kyrgyz/articles/c0000000000o.amp?renderer_env=live',
+      service: 'kyrgyz',
+      isAdvertising: true,
+      isArticleSfv: true,
       agent,
-      optHeaders: {
-        'ctx-service-env': 'live',
-      },
+      variant: undefined,
     });
   });
 
@@ -166,6 +156,7 @@ describe('Articles - BFF Fetching', () => {
       path: '/kyrgyz/articles/c0000000000o?renderer_env=test',
       getAgent,
       service: 'kyrgyz',
+      pageType: 'article',
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
@@ -192,6 +183,7 @@ describe('Articles - BFF Fetching', () => {
       path: '/kyrgyz/articles/c0000000000o?renderer_env=live',
       getAgent,
       service: 'kyrgyz',
+      pageType: 'article',
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
@@ -212,6 +204,7 @@ describe('Articles - BFF Fetching', () => {
       path: '/kyrgyz/articles/c0000000000o',
       getAgent,
       service: 'kyrgyz',
+      pageType: 'article',
     });
 
     expect(nodeLogger.error).toHaveBeenCalledWith(BFF_FETCH_ERROR, {
@@ -234,6 +227,7 @@ describe('Articles - BFF Fetching', () => {
       path: '/kyrgyz/articles/c0000000000o',
       getAgent,
       service: 'kyrgyz',
+      pageType: 'article',
     });
 
     expect(nodeLogger.error).toHaveBeenCalledWith(BFF_FETCH_ERROR, {
@@ -257,6 +251,7 @@ describe('Articles - BFF Fetching', () => {
       path: '/kyrgyz/articles/somethingelse',
       getAgent,
       service: 'kyrgyz',
+      pageType: 'article',
     });
 
     expect(nodeLogger.error).toHaveBeenCalledWith(BFF_FETCH_ERROR, {
@@ -287,6 +282,7 @@ describe('Articles - BFF Fetching', () => {
       path: '/kyrgyz/articles/c0000000000o',
       getAgent,
       service: 'kyrgyz',
+      pageType: 'article',
     });
 
     expect(nodeLogger.error).toHaveBeenCalledWith(BFF_FETCH_ERROR, {

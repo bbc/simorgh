@@ -195,6 +195,7 @@ export const testsThatFollowSmokeTestConfig = ({
         });
         ['YouTube', 'Instagram', 'TikTok', 'Twitter', 'Facebook'].forEach(
           socialMediaProviderName => {
+            // eslint-disable-next-line func-names
             it(`${socialMediaProviderName} embed is rendered when it exists on page`, function () {
               if (socialIsOnPage(socialMediaProviderName)) {
                 const SocialEmbedsData = getAllSocialBlocksByProviderName(

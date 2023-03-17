@@ -4,7 +4,7 @@ exports[`regex utils snapshots should create expected regex from getAfricaEyeTVP
 
 exports[`regex utils snapshots should create expected regex from getArticleManifestRegex 1`] = `"/:service(news|persian|igbo)/:local(articles|erthyglau|sgeulachdan)/manifest.json"`;
 
-exports[`regex utils snapshots should create expected regex from getArticleRegex 1`] = `"/:service(news|persian|igbo)/:local(articles|erthyglau|sgeulachdan)/:id(c[a-zA-Z0-9]{10}o):variant(/simp|/trad|/cyr|/lat)?:amp(.amp)?"`;
+exports[`regex utils snapshots should create expected regex from getArticleRegex 1`] = `"/:service(news|persian|igbo)?:discipline(/[a-z0-9-_]{1,})?/:local(articles|erthyglau|sgeulachdan)/:id(c[a-zA-Z0-9]{10}o):variant(/simp|/trad|/cyr|/lat)?:amp(.amp)?"`;
 
 exports[`regex utils snapshots should create expected regex from getArticleSwRegex 1`] = `"/:service(news|persian|igbo)/:local(articles|erthyglau|sgeulachdan)/sw.js"`;
 
@@ -13,6 +13,12 @@ exports[`regex utils snapshots should create expected regex from getCpsAssetRege
 exports[`regex utils snapshots should create expected regex from getErrorPageRegex 1`] = `"/:service(news|persian|igbo)/:errorCode(404|500):variant(/simp|/trad|/cyr|/lat)?"`;
 
 exports[`regex utils snapshots should create expected regex from getFrontPageRegex 1`] = `"/:service(news|persian|igbo):variant(/simp|/trad|/cyr|/lat)?:amp(.amp)?"`;
+
+exports[`regex utils snapshots should create expected regex from getHomePageManifestRegex 1`] = `"/:service(news|persian|igbo)/tipohome/manifest.json"`;
+
+exports[`regex utils snapshots should create expected regex from getHomePageRegex 1`] = `"/:service(news|persian|igbo):variant(/simp|/trad|/cyr|/lat)?/tipohome:amp(.amp)?"`;
+
+exports[`regex utils snapshots should create expected regex from getHomePageSwRegex 1`] = `"/:service(news|persian|igbo)/tipohome/sw.js"`;
 
 exports[`regex utils snapshots should create expected regex from getIdxPageRegex 1`] = `"/:idx(persian/afghanistan|ukrainian/ukraine_in_russian):amp(.amp)?"`;
 

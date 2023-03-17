@@ -5,7 +5,6 @@ import findIndex from 'ramda/src/findIndex';
 import styled from '@emotion/styled';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
 import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
-import { C_GHOST } from '#psammead/psammead-styles/src/colours';
 import { frontPageDataPropTypes } from '#models/propTypes/frontPage';
 import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
@@ -25,6 +24,7 @@ import MostReadSectionLabel from '#containers/MostRead/label';
 import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
 import { NEGATIVE_MARGIN } from '#lib/styles.const';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import { GHOST } from '../../components/ThemeProvider/palette';
 
 const FrontPageMostReadSection = styled(MostReadSection)`
   /* To centre page layout for Group 4+ */
@@ -41,7 +41,7 @@ const StyledRadioScheduleContainer = styled(RadioScheduleContainer)`
 
 const MostReadWrapper = ({ children }) => (
   <FrontPageMostReadSection>
-    <MostReadSectionLabel backgroundColor={C_GHOST} />
+    <MostReadSectionLabel backgroundColor={GHOST} />
     {children}
   </FrontPageMostReadSection>
 );

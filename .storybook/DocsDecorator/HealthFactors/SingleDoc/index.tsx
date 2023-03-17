@@ -1,6 +1,6 @@
 import React from 'react';
 import Text from '../../../../src/app/components/Text';
-import { Confirm, Close, ExternalLink, Help } from '../Icons/icons';
+import { Confirm, Close, ExternalLink, Help } from '../Icons';
 import styles from './index.styles';
 import VisuallyHiddenText from '../../../../src/app/legacy/psammead/psammead-visually-hidden-text/src';
 import idSanitiser from '../../../../src/app/lib/utilities/idSanitiser';
@@ -62,13 +62,7 @@ const SingleDoc = ({
         </Text>
       </div>
       <div css={styles.documentationLink}>
-        <Text
-          as="a"
-          href={url}
-          css={styles.link}
-          size="brevier"
-          fontVariant="sansBold"
-        >
+        <Text as="a" href={url} size="brevier" fontVariant="sansBold">
           <span>{urlLabel}</span>
           <span
             aria-hidden

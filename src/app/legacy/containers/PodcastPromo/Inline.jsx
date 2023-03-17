@@ -18,7 +18,6 @@ import {
   getLongPrimer,
 } from '#psammead/gel-foundations/src/typography';
 import { getSerifMedium } from '#psammead/psammead-styles/src/font-styles';
-import { C_LUNAR } from '#psammead/psammead-styles/src/colours';
 import useViewTracker from '#hooks/useViewTracker';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 
@@ -34,7 +33,7 @@ const GEL_GROUP_1_WIDTH_360PX = '22.5rem';
 
 const ResponsivePodcastPromoWrapper = styled.div`
   ${({ dir }) => (dir === 'ltr' ? 'float: right;' : 'float: left;')}
-  background: ${C_LUNAR};
+  background: ${props => props.theme.palette.LUNAR};
   margin: ${GEL_SPACING_TRPL} 0;
   height: auto;
 

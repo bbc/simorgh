@@ -1,9 +1,3 @@
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_GHOST,
-  C_POSTBOX_30,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import '#psammead/moment-timezone-include/tz/Africa/Addis_Ababa';
 import '#psammead/psammead-locales/moment/om';
@@ -39,7 +33,6 @@ export const service: DefaultServiceConfig = {
     service: 'afaanoromoo',
     serviceName: 'Afaan Oromoo',
     languageName: 'Oromo',
-    themeColor: `${C_POSTBOX}`,
     twitterCreator: '@BBCNews',
     twitterSite: '@BBCNews',
     noBylinesPolicy:
@@ -51,13 +44,6 @@ export const service: DefaultServiceConfig = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Oduu',
-    theming: {
-      brandBackgroundColour: `${C_POSTBOX}`,
-      brandLogoColour: `${C_WHITE}`,
-      brandForegroundColour: `${C_GHOST}`,
-      brandHighlightColour: `${C_WHITE}`,
-      brandBorderColour: `${C_POSTBOX_30}`,
-    },
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
@@ -337,7 +323,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'Viidiyoo',
-        url: '/afaanoromoo/media/video',
+        url: '/afaanoromoo/topics/ck0dg7dpjwwt',
       },
       {
         title: 'Jajjaboo',

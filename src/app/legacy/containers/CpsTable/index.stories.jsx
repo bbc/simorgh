@@ -5,14 +5,17 @@ import { ServiceContext } from '../../../contexts/ServiceContext';
 
 import CpsTable from '.';
 import fixtures from './fixtures';
+import ThemeProvider from '../../../components/ThemeProvider';
 
 // eslint-disable-next-line react/prop-types
 const Component = ({ fixture }) => (
-  <ServiceContext.Provider
-    value={{ script: latin, service: 'sport', dir: 'ltr' }}
-  >
-    <CpsTable supportedServices={['sport']} blocks={fixture} />
-  </ServiceContext.Provider>
+  <ThemeProvider service="sport">
+    <ServiceContext.Provider
+      value={{ script: latin, service: 'sport', dir: 'ltr' }}
+    >
+      <CpsTable supportedServices={['sport']} blocks={fixture} />
+    </ServiceContext.Provider>
+  </ThemeProvider>
 );
 
 export default {

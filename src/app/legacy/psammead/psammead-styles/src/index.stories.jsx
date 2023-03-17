@@ -12,7 +12,6 @@ import {
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import { select, withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src/withServicesKnob';
-import json5 from 'json5';
 import {
   getSansRegular,
   getSansBold,
@@ -80,7 +79,7 @@ const getFontStyles = fontName => {
     .replace(/: /g, ':"')
     .replace(/;/g, '",');
 
-  const { fontFamily, fontWeight } = json5.parse(camelCase(fontStyle));
+  const { fontFamily, fontWeight } = JSON.parse(camelCase(fontStyle));
   return { fontFamily, fontWeight };
 };
 

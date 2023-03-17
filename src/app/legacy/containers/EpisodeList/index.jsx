@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { C_CLOUD_LIGHT } from '#psammead/psammead-styles/src/colours';
 import { GEL_SPACING_DBL } from '#psammead/gel-foundations/src/spacings';
 import { string, shape, arrayOf, oneOf, element, bool } from 'prop-types';
 import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
@@ -30,7 +29,7 @@ const StyledEpisodeListItem = styled.li`
     padding-bottom: 0;
   }
   &:not(:last-child) {
-    border-bottom: 1px ${C_CLOUD_LIGHT} solid;
+    border-bottom: 1px ${props => props.theme.palette.CLOUD_LIGHT} solid;
   }
 `;
 

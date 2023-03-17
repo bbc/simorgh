@@ -1,11 +1,10 @@
 import React from 'react';
-import { render } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
-
 import ltrRecommendationsData from '#data/mundo/recommendations/index.json';
 import rtlRecommendationsData from '#data/arabic/recommendations/index.json';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
+import { render } from '../../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 
 import CpsRecommendations from '.';

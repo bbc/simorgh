@@ -1,11 +1,7 @@
 import React from 'react';
 import HealthFactors from '.';
 import ThemeProvider from '../../../src/app/components/ThemeProvider';
-import {
-  allCompletedDocs,
-  threeOutstandingActions,
-  allMissingDocs,
-} from './fixture';
+import { allCompletedDocs, threeOutstandingActions } from './fixture';
 import metadata from './metadata.json';
 import md from './README.md';
 
@@ -17,7 +13,7 @@ const HealthFactorsComponent = ({ metadataFixture }) => (
 );
 
 export default {
-  title: 'components/HealthFactors',
+  title: 'components/HealthFactors/HealthFactorsComponent',
   component: HealthFactorsComponent,
   parameters: {
     metadata,

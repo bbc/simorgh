@@ -11,12 +11,13 @@ const tvMasterBrandRegex = 'bbc_[a-z]+_tv';
 const errorCodeRegex = '404|500';
 const idxRegex = 'persian/afghanistan|ukrainian/ukraine_in_russian';
 const brandEpisodeRegex = 'tv|tv_programmes';
+const sportDisciplineRegex = '/[a-z0-9-_]{1,}';
 
 const getServiceRegex = services => services.join('|');
 
 export const getArticleRegex = services => {
   const serviceRegex = getServiceRegex(services);
-  return `/:service(${serviceRegex})/:local(${articleLocalRegex})/:id(${idRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
+  return `/:service(${serviceRegex})?:discipline(${sportDisciplineRegex})?/:local(${articleLocalRegex})/:id(${idRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
 };
 
 export const getArticleSwRegex = services => {
@@ -34,6 +35,11 @@ export const getFrontPageRegex = services => {
   return `/:service(${serviceRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
 };
 
+export const getHomePageRegex = services => {
+  const serviceRegex = getServiceRegex(services);
+  return `/:service(${serviceRegex}):variant(${variantRegex})?/tipohome:amp(${ampRegex})?`;
+};
+
 export const getSwRegex = services => {
   const serviceRegex = getServiceRegex(services);
   return `/:service(${serviceRegex})/sw.js`;
@@ -42,6 +48,16 @@ export const getSwRegex = services => {
 export const getManifestRegex = services => {
   const serviceRegex = getServiceRegex(services);
   return `/:service(${serviceRegex})/manifest.json`;
+};
+
+export const getHomePageSwRegex = services => {
+  const serviceRegex = getServiceRegex(services);
+  return `/:service(${serviceRegex})/tipohome/sw.js`;
+};
+
+export const getHomePageManifestRegex = services => {
+  const serviceRegex = getServiceRegex(services);
+  return `/:service(${serviceRegex})/tipohome/manifest.json`;
 };
 
 export const getCpsAssetRegex = services => {

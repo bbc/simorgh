@@ -1,7 +1,6 @@
 import React from 'react';
-import { render } from '@testing-library/react';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { render } from '../../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import Gist from '.';
 import fixtureData, { fixtureDataOneItem } from './fixtures';
@@ -35,13 +34,15 @@ describe('Gist', () => {
     expect(container.querySelectorAll('li').length).toEqual(5);
   });
 
-  shouldMatchSnapshot(
-    'should render the gist with multiple list items',
-    <GistWithContext />,
-  );
+  it('should render the gist with multiple list items', () => {
+    const { container } = render(<GistWithContext />);
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render the gist with one list item',
-    <GistWithContext blocks={fixtureDataOneItem} />,
-  );
+  it('should render the gist with one list item', () => {
+    const { container } = render(
+      <GistWithContext blocks={fixtureDataOneItem} />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 });

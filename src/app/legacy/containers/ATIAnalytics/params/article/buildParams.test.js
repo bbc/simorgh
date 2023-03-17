@@ -26,13 +26,14 @@ const validURLParams = {
   contentId: 'urn:bbc:optimo:asset://www.bbc.co.uk',
   contentType: 'article',
   language: 'language',
-  ldpThingIds: 'thing+id+1~thing+id+2',
-  ldpThingLabels: 'thing+english+label+1~thing+english+label+2',
+  ldpThingIds: 'thing%20id%201~thing%20id%202',
+  ldpThingLabels: 'thing%20english%20label%201~thing%20english%20label%202',
   pageIdentifier: 'service.articles.//www.bbc.co.uk.page',
   pageTitle: 'pageTitle',
   producerId: serviceContext.atiAnalyticsProducerId,
   timePublished: analyticsUtils.getPublishedDatetime(),
   timeUpdated: analyticsUtils.getPublishedDatetime(),
+  categoryName: 'thing%20english%20label%201~thing%20english%20label%202',
   service: 'service',
   libraryVersion: analyticsUtils.LIBRARY_VERSION,
   nationsProducer: 'scotland',
@@ -81,7 +82,7 @@ describe('buildParams', () => {
   });
 
   describe('buildArticleATIParams', () => {
-    it('should return the right object', () => {
+    it('should return the right article object when no pageType is specified', () => {
       const result = buildArticleATIParams(
         article,
         requestContext,
@@ -89,6 +90,26 @@ describe('buildParams', () => {
       );
       expect(result).toEqual(validURLParams);
     });
+  });
+
+  it('should return the right article object when an article pageType is specified', () => {
+    const result = buildArticleATIParams(
+      article,
+      requestContext,
+      serviceContext,
+      'article',
+    );
+    expect(result).toEqual({ ...validURLParams, contentType: 'article' });
+  });
+
+  it('should return the right media-article object when a mediaArticle pageType is specified', () => {
+    const result = buildArticleATIParams(
+      article,
+      requestContext,
+      serviceContext,
+      'article-sfv',
+    );
+    expect(result).toEqual({ ...validURLParams, contentType: 'article-sfv' });
   });
 
   describe('buildArticleATIUrl', () => {
@@ -99,7 +120,7 @@ describe('buildParams', () => {
         serviceContext,
       );
       expect(result).toMatchInlineSnapshot(
-        `"s=598285&s2=atiAnalyticsProducerId&p=service.articles.%2F%2Fwww.bbc.co.uk.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Aoptimo%3Aasset%3A%2F%2Fwww.bbc.co.uk]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http%253A%252F%252Flocalhost%252F]&x6=[originpreviousPath]&x7=[article]&x8=[simorgh]&x9=[pageTitle]&x10=[scotland]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x13=[thing%2Benglish%2Blabel%2B1~thing%2Benglish%2Blabel%2B2]&x14=[thing%2Bid%2B1~thing%2Bid%2B2]&ref=originpreviousPath"`,
+        `"s=598285&s2=atiAnalyticsProducerId&p=service.articles.%2F%2Fwww.bbc.co.uk.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Aoptimo%3Aasset%3A%2F%2Fwww.bbc.co.uk]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http%253A%252F%252Flocalhost%252F]&x6=[originpreviousPath]&x7=[article]&x8=[simorgh]&x9=[pageTitle]&x10=[scotland]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x13=[thing%2520english%2520label%25201~thing%2520english%2520label%25202]&x14=[thing%2520id%25201~thing%2520id%25202]&x17=[thing%2520english%2520label%25201~thing%2520english%2520label%25202]&ref=originpreviousPath"`,
       );
     });
   });

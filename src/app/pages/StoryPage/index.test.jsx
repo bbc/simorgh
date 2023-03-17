@@ -31,7 +31,7 @@ import ukrainianMostReadData from '#data/ukrainian/mostRead/index.json';
 import portuguesePageData from '#data/portuguese/cpsAssets/brasil-54196636';
 import portugueseRecommendationData from '#data/portuguese/recommendations/index';
 
-// 004_brasil_recommendations_experiment
+// 005_brasil_recommendations_experiment
 import userEvent from '@testing-library/user-event';
 import portugueseMostReadData from '#data/portuguese/mostRead/index';
 import {
@@ -49,7 +49,7 @@ import ThemeProvider from '../../components/ThemeProvider';
 import russianPageDataWithoutInlinePromo from './fixtureData/russianPageDataWithoutPromo';
 import StoryPageIndex from '.';
 
-// 004_brasil_recommendations_experiment
+// 005_brasil_recommendations_experiment
 import StoryPage from './StoryPage';
 
 fetchMock.config.overwriteRoutes = false; // http://www.wheresrhys.co.uk/fetch-mock/#usageconfiguration allows us to mock the same endpoint multiple times
@@ -85,7 +85,7 @@ jest.mock('#containers/Ad/Canonical/CanonicalAdBootstrapJs', () => {
   return CanonicalAdBootstrapJs;
 });
 
-// 004_brasil_recommendations_experiment
+// 005_brasil_recommendations_experiment
 jest.mock('#containers/ATIAnalytics/beacon', () => {
   return {
     __esModule: true,
@@ -94,7 +94,7 @@ jest.mock('#containers/ATIAnalytics/beacon', () => {
   };
 });
 
-// 004_brasil_recommendations_experiment
+// 005_brasil_recommendations_experiment
 jest.mock('@optimizely/react-sdk', () => {
   const actualModules = jest.requireActual('@optimizely/react-sdk');
   return {
@@ -104,7 +104,7 @@ jest.mock('@optimizely/react-sdk', () => {
   };
 });
 
-// 004_brasil_recommendations_experiment
+// 005_brasil_recommendations_experiment
 const optimizely = {
   onReady: jest.fn(() => Promise.resolve()),
   track: jest.fn(),
@@ -128,7 +128,7 @@ const defaultToggleState = {
   },
 };
 
-// 004_brasil_recommendations_experiment
+// 005_brasil_recommendations_experiment
 const PageWithContext = ({
   pageData,
   service,
@@ -255,11 +255,10 @@ jest.mock('#hooks/useOptimizelyVariation', () => () => mockHook);
 const pageType = 'cpsAsset';
 
 describe('Story Page', () => {
-  const appEnv = process.env.SIMORGH_APP_ENV;
   beforeEach(() => {
     process.env.SIMORGH_ICHEF_BASE_URL = 'https://ichef.test.bbci.co.uk';
     process.env.RECOMMENDATIONS_ENDPOINT = 'http://mock-recommendations-path';
-    // 004_brasil_recommendations_experiment
+    // 005_brasil_recommendations_experiment
     OptimizelyExperiment.mockImplementation(props => {
       const { children } = props;
 
@@ -275,21 +274,21 @@ describe('Story Page', () => {
 
   afterEach(() => {
     fetchMock.restore();
+
     delete process.env.SIMORGH_ICHEF_BASE_URL;
     delete process.env.RECOMMENDATIONS_ENDPOINT;
-    process.env.SIMORGH_APP_ENV = appEnv;
   });
 
   describe('snapshots', () => {
     it('should match snapshot for STY', async () => {
-      fetchMock.mock('http://localhost/some-cps-sty-path.json', pidginPageData);
-      fetchMock.mock(
-        'http://localhost/pidgin/mostread.json',
-        pidginMostReadData,
-      );
-      fetchMock.mock(
-        'http://localhost/pidgin/sty-secondary-column.json',
-        pidginSecondaryColumnData,
+      fetch.mockResponse(
+        JSON.stringify({
+          ...pidginPageData,
+          secondaryData: {
+            ...pidginSecondaryColumnData,
+            mostRead: pidginMostReadData,
+          },
+        }),
       );
 
       const { pageData } = await getInitialData({
@@ -307,11 +306,14 @@ describe('Story Page', () => {
   });
 
   it('should only render firstPublished timestamp for Igbo when lastPublished is less than 1 min later', async () => {
-    fetchMock.mock('http://localhost/some-cps-sty-path.json', igboPageData);
-    fetchMock.mock('http://localhost/igbo/mostread.json', igboMostReadData);
-    fetchMock.mock(
-      'http://localhost/igbo/sty-secondary-column.json',
-      igboSecondaryColumnData,
+    fetch.mockResponse(
+      JSON.stringify({
+        ...igboPageData,
+        secondaryData: {
+          ...igboSecondaryColumnData,
+          mostRead: igboMostReadData,
+        },
+      }),
     );
 
     const { pageData } = await getInitialData({
@@ -325,11 +327,14 @@ describe('Story Page', () => {
   });
 
   it('should not show the pop-out timestamp when allowDateStamp is false', async () => {
-    fetchMock.mock('http://localhost/some-cps-sty-path.json', igboPageData);
-    fetchMock.mock('http://localhost/igbo/mostread.json', igboMostReadData);
-    fetchMock.mock(
-      'http://localhost/igbo/sty-secondary-column.json',
-      igboSecondaryColumnData,
+    fetch.mockResponse(
+      JSON.stringify({
+        ...igboPageData,
+        secondaryData: {
+          ...igboSecondaryColumnData,
+          mostRead: igboMostReadData,
+        },
+      }),
     );
 
     const { pageData } = await getInitialData({
@@ -353,9 +358,14 @@ describe('Story Page', () => {
   });
 
   it('should render correctly when the secondary column data is not available', async () => {
-    fetchMock.mock('http://localhost/some-cps-sty-path.json', pidginPageData);
-    fetchMock.mock('http://localhost/pidgin/mostread.json', pidginMostReadData);
-    fetchMock.mock('http://localhost/pidgin/sty-secondary-column.json', {});
+    fetch.mockResponse(
+      JSON.stringify({
+        ...pidginPageData,
+        secondaryData: {
+          mostRead: pidginMostReadData,
+        },
+      }),
+    );
 
     const { pageData } = await getInitialData({
       path: '/some-cps-sty-path',
@@ -369,17 +379,14 @@ describe('Story Page', () => {
   });
 
   it('should render secondary column with lang attribute of `serviceLang` when a language override is present', async () => {
-    fetchMock.mock(
-      'http://localhost/some-cps-sty-path.json',
-      ukrainianInRussianPageData,
-    );
-    fetchMock.mock(
-      'http://localhost/ukrainian/sty-secondary-column.json',
-      ukrainianSecondaryColumnData,
-    );
-    fetchMock.mock(
-      'http://localhost/ukrainian/mostread.json',
-      ukrainianMostReadData,
+    fetch.mockResponse(
+      JSON.stringify({
+        ...ukrainianInRussianPageData,
+        secondaryData: {
+          ...ukrainianSecondaryColumnData,
+          mostRead: ukrainianMostReadData,
+        },
+      }),
     );
 
     const { pageData } = await getInitialData({
@@ -412,14 +419,14 @@ describe('Story Page', () => {
         },
       };
 
-      fetchMock.mock('http://localhost/some-cps-sty-path.json', pidginPageData);
-      fetchMock.mock(
-        'http://localhost/pidgin/mostread.json',
-        pidginMostReadData,
-      );
-      fetchMock.mock(
-        'http://localhost/pidgin/sty-secondary-column.json',
-        pidginSecondaryColumnData,
+      fetch.mockResponse(
+        JSON.stringify({
+          ...pidginPageData,
+          secondaryData: {
+            ...pidginSecondaryColumnData,
+            mostRead: pidginMostReadData,
+          },
+        }),
       );
 
       const { pageData } = await getInitialData({
@@ -453,14 +460,14 @@ describe('Story Page', () => {
     const pidginPageDataDisallowAdvertising = deepClone(pidginPageData);
     pidginPageDataDisallowAdvertising.metadata.options.allowAdvertising = false;
 
-    fetchMock.mock(
-      'http://localhost/some-cps-sty-path.json',
-      pidginPageDataDisallowAdvertising,
-    );
-    fetchMock.mock('http://localhost/pidgin/mostread.json', pidginMostReadData);
-    fetchMock.mock(
-      'http://localhost/pidgin/sty-secondary-column.json',
-      pidginSecondaryColumnData,
+    fetch.mockResponse(
+      JSON.stringify({
+        ...pidginPageDataDisallowAdvertising,
+        secondaryData: {
+          ...pidginSecondaryColumnData,
+          mostRead: pidginMostReadData,
+        },
+      }),
     );
 
     const { pageData } = await getInitialData({
@@ -491,11 +498,14 @@ describe('Story Page', () => {
       },
     };
 
-    fetchMock.mock('http://localhost/some-cps-sty-path.json', pidginPageData);
-    fetchMock.mock('http://localhost/pidgin/mostread.json', pidginMostReadData);
-    fetchMock.mock(
-      'http://localhost/pidgin/sty-secondary-column.json',
-      pidginSecondaryColumnData,
+    fetch.mockResponse(
+      JSON.stringify({
+        ...pidginPageData,
+        secondaryData: {
+          ...pidginSecondaryColumnData,
+          mostRead: pidginMostReadData,
+        },
+      }),
     );
 
     const { pageData } = await getInitialData({
@@ -526,11 +536,14 @@ describe('Story Page', () => {
       },
     };
 
-    fetchMock.mock('http://localhost/some-cps-sty-path.json', pidginPageData);
-    fetchMock.mock('http://localhost/pidgin/mostread.json', pidginMostReadData);
-    fetchMock.mock(
-      'http://localhost/pidgin/sty-secondary-column.json',
-      pidginSecondaryColumnData,
+    fetch.mockResponse(
+      JSON.stringify({
+        ...pidginPageData,
+        secondaryData: {
+          ...pidginSecondaryColumnData,
+          mostRead: pidginMostReadData,
+        },
+      }),
     );
 
     const { pageData } = await getInitialData({
@@ -556,7 +569,6 @@ describe('Story Page', () => {
   });
 
   it(`should configure canonical ad bootstrap with campaign where 'adCampaignKeyword' is in metadata`, async () => {
-    process.env.SIMORGH_APP_ENV = 'test';
     const toggles = {
       ads: {
         enabled: true,
@@ -566,14 +578,14 @@ describe('Story Page', () => {
     const pidginPageDataAdCampaign = deepClone(pidginPageData);
     pidginPageDataAdCampaign.metadata.adCampaignKeyword = 'royalwedding';
 
-    fetchMock.mock(
-      'http://localhost/some-cps-sty-path.json',
-      pidginPageDataAdCampaign,
-    );
-    fetchMock.mock('http://localhost/pidgin/mostread.json', pidginMostReadData);
-    fetchMock.mock(
-      'http://localhost/pidgin/sty-secondary-column.json',
-      pidginSecondaryColumnData,
+    fetch.mockResponse(
+      JSON.stringify({
+        ...pidginPageDataAdCampaign,
+        secondaryData: {
+          ...pidginSecondaryColumnData,
+          mostRead: pidginMostReadData,
+        },
+      }),
     );
 
     const { pageData } = await getInitialData({
@@ -597,18 +609,20 @@ describe('Story Page', () => {
   });
 
   it('should configure canonical ad bootstrap where campaign is not in metadata', async () => {
-    process.env.SIMORGH_APP_ENV = 'test';
     const toggles = {
       ads: {
         enabled: true,
       },
     };
 
-    fetchMock.mock('http://localhost/some-cps-sty-path.json', pidginPageData);
-    fetchMock.mock('http://localhost/pidgin/mostread.json', pidginMostReadData);
-    fetchMock.mock(
-      'http://localhost/pidgin/sty-secondary-column.json',
-      pidginSecondaryColumnData,
+    fetch.mockResponse(
+      JSON.stringify({
+        ...pidginPageData,
+        secondaryData: {
+          ...pidginSecondaryColumnData,
+          mostRead: pidginMostReadData,
+        },
+      }),
     );
 
     const { pageData } = await getInitialData({
@@ -632,7 +646,6 @@ describe('Story Page', () => {
   });
 
   it('should not render canonical ad bootstrap on amp', async () => {
-    process.env.SIMORGH_APP_ENV = 'test';
     const observers = new Map();
     const observerSpy = jest
       .spyOn(global, 'IntersectionObserver')
@@ -661,11 +674,14 @@ describe('Story Page', () => {
       },
     };
 
-    fetchMock.mock('http://localhost/some-cps-sty-path.json', pidginPageData);
-    fetchMock.mock('http://localhost/pidgin/mostread.json', pidginMostReadData);
-    fetchMock.mock(
-      'http://localhost/pidgin/sty-secondary-column.json',
-      pidginSecondaryColumnData,
+    fetch.mockResponse(
+      JSON.stringify({
+        ...pidginPageData,
+        secondaryData: {
+          ...pidginSecondaryColumnData,
+          mostRead: pidginMostReadData,
+        },
+      }),
     );
 
     const { pageData } = await getInitialData({
@@ -694,24 +710,20 @@ describe('Story Page', () => {
   });
 
   it('should render the inline podcast promo component on russian pages with a paragraph of 940 characters and after 8th paragraph', async () => {
-    process.env.SIMORGH_APP_ENV = 'test';
     const toggles = {
       podcastPromo: {
         enabled: true,
       },
     };
 
-    fetchMock.mock(
-      'http://localhost/some-cps-sty-path.json',
-      russianPageDataWithInlinePromo,
-    );
-    fetchMock.mock(
-      'http://localhost/russian/mostread.json',
-      russianMostReadData,
-    );
-    fetchMock.mock(
-      'http://localhost/russian/sty-secondary-column.json',
-      russianSecondaryColumnData,
+    fetch.mockResponse(
+      JSON.stringify({
+        ...russianPageDataWithInlinePromo,
+        secondaryData: {
+          ...russianSecondaryColumnData,
+          mostRead: russianMostReadData,
+        },
+      }),
     );
 
     const { pageData } = await getInitialData({
@@ -739,24 +751,20 @@ describe('Story Page', () => {
   });
 
   it('should not render the inline podcast promo component on russian pages with paragraphs of less than 940 characters', async () => {
-    process.env.SIMORGH_APP_ENV = 'test';
     const toggles = {
       podcastPromo: {
         enabled: true,
       },
     };
 
-    fetchMock.mock(
-      'http://localhost/some-cps-sty-path.json',
-      russianPageDataWithoutInlinePromo,
-    );
-    fetchMock.mock(
-      'http://localhost/russian/mostread.json',
-      russianMostReadData,
-    );
-    fetchMock.mock(
-      'http://localhost/russian/sty-secondary-column.json',
-      russianSecondaryColumnData,
+    fetch.mockResponse(
+      JSON.stringify({
+        ...russianPageDataWithoutInlinePromo,
+        secondaryData: {
+          ...russianSecondaryColumnData,
+          mostRead: russianMostReadData,
+        },
+      }),
     );
 
     const { pageData } = await getInitialData({
@@ -785,7 +793,7 @@ describe('Story Page', () => {
   });
 
   describe.skip('Optimizely Experiments', () => {
-    describe('004_brasil_recommendations_experiment', () => {
+    describe('005_brasil_recommendations_experiment', () => {
       beforeEach(() => {
         process.env.RECOMMENDATIONS_ENDPOINT =
           'http://mock-recommendations-path';
@@ -966,6 +974,73 @@ describe('Story Page', () => {
 
           const recommendationsEndpoint =
             'http://mock-recommendations-path/recommendations/portuguese/brasil-54196636?Engine=unirecs_datalab&EngineVariant=hybrid';
+
+          fetchMock.mock(
+            'http://localhost/some-cps-sty-path.json',
+            portuguesePageData,
+          );
+
+          fetchMock.mock(recommendationsEndpoint, portugueseRecommendationData);
+
+          const { pageData } = await getInitialData({
+            path: '/some-cps-sty-path',
+            service: 'portuguese',
+            pageType,
+          });
+
+          const { getAllByRole } = render(
+            <Page pageData={pageData} service="portuguese" toggles={toggles} />,
+          );
+
+          const [recommendationsRegions] = getAllByRole('region').filter(
+            item =>
+              item.getAttribute('aria-labelledby') ===
+              'recommendations-heading',
+          );
+
+          const recommendationsItems = within(
+            recommendationsRegions,
+          ).getAllByRole('listitem');
+
+          expect(fetchMock.calls()[1][0]).toBe(recommendationsEndpoint);
+          expect(recommendationsRegions).not.toBeNull();
+          expect(recommendationsItems).toHaveLength(4);
+        });
+      });
+
+      describe('hybrid_recs_v1x1', () => {
+        beforeEach(() => {
+          process.env.RECOMMENDATIONS_ENDPOINT =
+            'http://mock-recommendations-path';
+          OptimizelyExperiment.mockImplementation(props => {
+            const { children } = props;
+
+            const variation = 'variation_1';
+
+            if (children != null && typeof children === 'function') {
+              return <>{children(variation, true, false)}</>;
+            }
+
+            return null;
+          });
+        });
+
+        afterEach(() => {
+          delete process.env.RECOMMENDATIONS_ENDPOINT;
+        });
+
+        it('should fetch and render recommendations from datalab hybrid variant endpoint when variation is hybrid_recs_v1x1 and service is portuguese', async () => {
+          const toggles = {
+            cpsRecommendations: {
+              enabled: true,
+            },
+            eventTracking: {
+              enabled: true,
+            },
+          };
+
+          const recommendationsEndpoint =
+            'http://mock-recommendations-path/recommendations/portuguese/brasil-54196636?Engine=unirecs_datalab&EngineVariant=hybrid-v1x1';
 
           fetchMock.mock(
             'http://localhost/some-cps-sty-path.json',

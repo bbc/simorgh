@@ -1,9 +1,3 @@
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_GHOST,
-  C_POSTBOX_30,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
 import devanagari from '../../../components/ThemeProvider/fontScripts/devanagari';
 import '#psammead/moment-timezone-include/tz/Asia/Kathmandu';
 import '#psammead/psammead-locales/moment/ne';
@@ -38,7 +32,6 @@ export const service: DefaultServiceConfig = {
     service: 'nepali',
     serviceName: 'Nepali',
     languageName: 'Nepali',
-    themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnepali',
     twitterSite: '@bbcnepali',
     noBylinesPolicy:
@@ -49,13 +42,6 @@ export const service: DefaultServiceConfig = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'मुख पृष्ठ',
-    theming: {
-      brandBackgroundColour: `${C_POSTBOX}`,
-      brandLogoColour: `${C_WHITE}`,
-      brandForegroundColour: `${C_GHOST}`,
-      brandHighlightColour: `${C_WHITE}`,
-      brandBorderColour: `${C_POSTBOX_30}`,
-    },
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
@@ -230,6 +216,7 @@ export const service: DefaultServiceConfig = {
         duration: 'समयावधि',
         recentEpisodes: 'पहिलेका कार्यक्रमहरू',
         podcastExternalLinks: 'यो पडकास्ट सुन्नकालागि यहाँ उपलब्ध छ',
+        download: 'एपिसोड डाउनलोड',
       },
       socialEmbed: {
         caption: {

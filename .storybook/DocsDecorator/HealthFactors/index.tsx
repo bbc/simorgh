@@ -1,12 +1,12 @@
 import React from 'react';
-import count from 'ramda/src/count';
 import path from 'ramda/src/path';
 import moment from 'moment';
 import Text from '../../../src/app/components/Text';
-import { Recommend, Warning, Activity } from './Icons/icons';
+import { Recommend, Warning, Activity } from './Icons';
 import SingleDoc from './SingleDoc';
 import styles from './index.styles';
 import HealthFactorsMetadata from '../types';
+import { getActionCount } from '../../helpers/healthFactors';
 
 const HealthFactors = ({ metadata }: { metadata?: HealthFactorsMetadata }) => {
   const uxAccessibility = path(['uxAccessibilityDoc'], metadata);
@@ -35,10 +35,7 @@ const HealthFactors = ({ metadata }: { metadata?: HealthFactorsMetadata }) => {
     'Three actions outstanding',
   ];
 
-  const actionCount = count(
-    action => typeof action === 'undefined' || !getDone(action),
-    [uxAccessibility, uxSwarm, acceptanceCriteria],
-  );
+  const actionCount = getActionCount(metadata);
 
   const headline = metadata
     ? actionTitles[actionCount]
@@ -46,24 +43,28 @@ const HealthFactors = ({ metadata }: { metadata?: HealthFactorsMetadata }) => {
 
   const hasIcon =
     actionCount === 0 ? (
-      <Recommend css={[styles.icon, styles.recommendIcon]} />
+      <span aria-hidden css={[styles.titleIcon, styles.recommendIcon]}>
+        <Recommend css={[styles.icon]} />
+      </span>
     ) : (
-      <Warning css={[styles.icon, styles.warningIcon]} />
+      <span aria-hidden css={[styles.titleIcon, styles.warningIcon]}>
+        <Warning css={[styles.icon]} />
+      </span>
     );
 
   const actionIcon = metadata ? (
     hasIcon
   ) : (
-    <Activity css={[styles.icon, styles.actionIcon]} />
+    <span aria-hidden css={[styles.titleIcon, styles.actionIcon]}>
+      <Activity css={[styles.icon]} />
+    </span>
   );
 
   return (
     <div css={styles.componentHealthContainer}>
       <div css={styles.headerContainer}>
         <div css={styles.titleContainer}>
-          <span aria-hidden css={styles.titleIcon}>
-            {actionIcon}
-          </span>
+          {actionIcon}
           <Text
             size="greatPrimer"
             fontVariant="sansBold"

@@ -16,6 +16,7 @@ export const buildArticleATIParams = (
   articleData,
   requestContext,
   serviceContext,
+  pageType = 'article',
 ) => {
   const { platform, isUK, statsDestination, previousPath, origin } =
     requestContext || {};
@@ -25,7 +26,7 @@ export const buildArticleATIParams = (
   return {
     appName: atiAnalyticsAppName,
     contentId: getContentId(articleData),
-    contentType: 'article',
+    contentType: pageType,
     language: getLanguage(articleData),
     ldpThingIds: getThingAttributes('thingId', articleData),
     ldpThingLabels: getThingAttributes('thingEnglishLabel', articleData),
@@ -42,6 +43,7 @@ export const buildArticleATIParams = (
     previousPath,
     origin,
     nationsProducer: getNationsProducer(articleData),
+    categoryName: getThingAttributes('thingEnglishLabel', articleData),
   };
 };
 
@@ -49,9 +51,15 @@ export const buildArticleATIUrl = (
   articleData,
   requestContext,
   serviceContext,
+  pageType = 'article',
 ) => {
   return buildATIPageTrackPath(
-    buildArticleATIParams(articleData, requestContext, serviceContext),
+    buildArticleATIParams(
+      articleData,
+      requestContext,
+      serviceContext,
+      pageType,
+    ),
   );
 };
 

@@ -6,7 +6,10 @@ import { RequestContext } from '../../../contexts/RequestContext';
 const logger = nodeLogger(__filename);
 
 type Props = {
-  recommendations: any[];
+  recommendations: {
+    headlines: object;
+    locators: object;
+  }[];
 };
 
 const checkRecommendations = (recommendations: Props['recommendations']) => {
@@ -20,7 +23,7 @@ function ErrorBoundary({
   recommendations,
   children,
 }: PropsWithChildren<Props>) {
-  const { pathname } = useContext(RequestContext) as { pathname: string };
+  const { pathname } = useContext(RequestContext);
 
   const isValidRecommendations = checkRecommendations(recommendations);
 

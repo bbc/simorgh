@@ -11,9 +11,10 @@ import { service as arabicConfig } from '../../lib/config/services/arabic';
 import { service as igboConfig } from '../../lib/config/services/igbo';
 import { service as newsConfig } from '../../lib/config/services/news';
 import { service as serbianConfig } from '../../lib/config/services/serbian';
-import { service as japaneseConfig } from '../../lib/config/services/japanese'
+import { service as japaneseConfig } from '../../lib/config/services/japanese';
 import { getLocalMostReadEndpoint } from '#lib/utilities/getUrlHelpers/getMostReadUrls';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
+import ThemeProvider from '../../components/ThemeProvider';
 import FrontPage from '.';
 
 const serviceDataSets = {
@@ -37,21 +38,25 @@ const serviceConfigs = {
 
 // eslint-disable-next-line react/prop-types
 const Component = ({ service, variant } = {}) => (
-  <BrowserRouter>
-    <FrontPage
-      isAmp={false}
-      pageType={FRONT_PAGE}
-      status={200}
-      pathname={serviceConfigs[service][variant || 'default'].navigation[0].url}
-      service={service}
-      variant={variant}
-      pageData={serviceDataSets[service][variant || 'default']}
-      mostReadEndpointOverride={getLocalMostReadEndpoint({
-        service,
-        variant,
-      })}
-    />
-  </BrowserRouter>
+  <ThemeProvider service={service}>
+    <BrowserRouter>
+      <FrontPage
+        isAmp={false}
+        pageType={FRONT_PAGE}
+        status={200}
+        pathname={
+          serviceConfigs[service][variant || 'default'].navigation[0].url
+        }
+        service={service}
+        variant={variant}
+        pageData={serviceDataSets[service][variant || 'default']}
+        mostReadEndpointOverride={getLocalMostReadEndpoint({
+          service,
+          variant,
+        })}
+      />
+    </BrowserRouter>
+  </ThemeProvider>
 );
 
 export default {

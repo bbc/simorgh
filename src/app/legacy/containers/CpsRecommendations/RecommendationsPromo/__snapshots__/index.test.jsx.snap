@@ -237,6 +237,5 @@ exports[`RecommendationsPromo it renders a Story Promo wrapped in a Grid compone
       </div>
     </div>
   </div>
-  ,
 </div>
 `;
