@@ -41,7 +41,7 @@ const someGlobalCSS = css`
 `;
 
 const SomeStyledComponent = css`
-  background-color: ${C_POSTBOX};
+  background-color: ${POSTBOX};
   font-family: ${GEL_FF_REITH_SANS};
 `;
 ```

@@ -70,19 +70,18 @@ Will be null if no error has occurred, or an error string if something has gone 
 
 ```javascript
 import styled from '@emotion/styled';
-import { C_GHOST, C_EBON } from '@bbc/psammead';
 import useImageAnalyser from './';
 
 const MyElement = styled.div`
-  color: ${C_EBON};
+  color: ${props => props.theme.palette.EBON};
   background: ${props => props.background.hex};
 `;
 
 const MyComponent = () => {
   const options = {
     minimumContrast: 7,
-    contrastColour: C_EBON,
-    fallbackColour: C_GHOST,
+    contrastColour: ${props => props.theme.palette.EBON},
+    fallbackColour: ${props => props.theme.palette.GHOST},
   };
   const { colour } = useImageAnalyser(
     'http://placekitten.com/200/300',
