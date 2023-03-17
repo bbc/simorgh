@@ -55,7 +55,7 @@ const getCampaignID = (pageType: CampaignPageTypes) => {
     [CORRESPONDENT_STORY_PAGE]: 'article-csp',
     [TOPIC_PAGE]: 'topic-page',
     [LIVE_PAGE]: 'live-page',
-    [HOME_PAGE]: 'index-home'
+    [HOME_PAGE]: 'index-home',
   }[pageType];
 
   if (!campaignID) {
