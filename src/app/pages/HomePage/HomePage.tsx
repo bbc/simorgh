@@ -11,7 +11,7 @@ interface HomePageProps {
 
 const HomePage = ({ pageData }: HomePageProps) => {
   return (
-    <div>
+    <div data-testid="home-page">
       Hi, I am a Home Page component and your page id is {pageData.id} and the
       title is {pageData.title}!
     </div>
