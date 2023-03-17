@@ -18,6 +18,7 @@ import {
   TOPIC_PAGE,
   LIVE_PAGE,
   MEDIA_ARTICLE_PAGE,
+  HOME_PAGE,
 } from '#app/routes/utils/pageTypes';
 import { PageTypes, Platforms } from '#app/models/types/global';
 import { ServiceContext } from '../ServiceContext';
@@ -36,7 +37,7 @@ export const EventTrackingContext = createContext<EventTrackingContextProps>(
   {} as EventTrackingContextProps,
 );
 
-type CampaignPageTypes = Exclude<PageTypes, 'error' | 'home'>;
+type CampaignPageTypes = Exclude<PageTypes, 'error'>;
 
 const getCampaignID = (pageType: CampaignPageTypes) => {
   const campaignID = {
@@ -54,6 +55,7 @@ const getCampaignID = (pageType: CampaignPageTypes) => {
     [CORRESPONDENT_STORY_PAGE]: 'article-csp',
     [TOPIC_PAGE]: 'topic-page',
     [LIVE_PAGE]: 'live-page',
+    [HOME_PAGE]: 'index-home'
   }[pageType];
 
   if (!campaignID) {

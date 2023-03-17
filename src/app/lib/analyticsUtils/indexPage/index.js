@@ -3,6 +3,7 @@ import {
   FRONT_PAGE,
   INDEX_PAGE,
   FEATURE_INDEX_PAGE,
+  HOME_PAGE,
 } from '#app/routes/utils/pageTypes';
 
 export const getPageIdentifier = (indexPageData, service) => {
@@ -51,6 +52,7 @@ export const getPageTitle = (indexPageData, brandName) => {
 export const getContentType = pageType => {
   switch (pageType) {
     case FRONT_PAGE:
+    case HOME_PAGE:
       return 'index-home';
     case INDEX_PAGE:
       return 'index-section';
