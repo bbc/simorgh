@@ -68,12 +68,6 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages
   padding: 0.5rem 0 1rem;
 }
 
-@media (max-width: 62.9375rem) {
-  .emotion-4 {
-    border-bottom: 0.0625rem solid #F2F2F2;
-  }
-}
-
 .emotion-4:last-child {
   border: none;
 }
@@ -660,12 +654,6 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages
 
 .emotion-4 {
   padding: 0.5rem 0 1rem;
-}
-
-@media (max-width: 62.9375rem) {
-  .emotion-4 {
-    border-bottom: 0.0625rem solid #F2F2F2;
-  }
 }
 
 .emotion-4:last-child {

@@ -302,7 +302,6 @@ exports[`SocialEmbedContainer AMP should match snapshot 1`] = `
   font-style: normal;
   font-size: 0.875rem;
   line-height: 1rem;
-  color: #545658;
   padding: 0.5rem 0;
 }
 
@@ -316,6 +315,10 @@ exports[`SocialEmbedContainer AMP should match snapshot 1`] = `
   .emotion-14 {
     font-size: 0.8125rem;
   }
+}
+
+.emotion-14 color:function (props) {
+  returnisArticlePage?(cov_2b60xavi2p().b[1][0]++, props.theme.palette.GREY_6) : (cov_2b60xavi2p().b[1][1]++, props.theme.palette.WHITE);
 }
 
 .emotion-14>span {
@@ -628,7 +631,6 @@ exports[`SocialEmbedContainer Canonical should render a Facebook Post block and 
   font-style: normal;
   font-size: 0.875rem;
   line-height: 1rem;
-  color: #545658;
   padding: 0.5rem 0;
 }
 
@@ -642,6 +644,10 @@ exports[`SocialEmbedContainer Canonical should render a Facebook Post block and 
   .emotion-12 {
     font-size: 0.8125rem;
   }
+}
+
+.emotion-12 color:function (props) {
+  returnisArticlePage?(cov_2b60xavi2p().b[1][0]++, props.theme.palette.GREY_6) : (cov_2b60xavi2p().b[1][1]++, props.theme.palette.WHITE);
 }
 
 .emotion-12>span {
@@ -955,7 +961,6 @@ exports[`SocialEmbedContainer Canonical should render a Facebook Video block and
   font-style: normal;
   font-size: 0.875rem;
   line-height: 1rem;
-  color: #545658;
   padding: 0.5rem 0;
 }
 
@@ -969,6 +974,10 @@ exports[`SocialEmbedContainer Canonical should render a Facebook Video block and
   .emotion-12 {
     font-size: 0.8125rem;
   }
+}
+
+.emotion-12 color:function (props) {
+  returnisArticlePage?(cov_2b60xavi2p().b[1][0]++, props.theme.palette.GREY_6) : (cov_2b60xavi2p().b[1][1]++, props.theme.palette.WHITE);
 }
 
 .emotion-12>span {
@@ -1377,7 +1386,6 @@ exports[`SocialEmbedContainer Canonical should render a TikTok block and unmount
   font-style: normal;
   font-size: 0.875rem;
   line-height: 1rem;
-  color: #545658;
   padding: 0.5rem 0;
 }
 
@@ -1391,6 +1399,10 @@ exports[`SocialEmbedContainer Canonical should render a TikTok block and unmount
   .emotion-14 {
     font-size: 0.8125rem;
   }
+}
+
+.emotion-14 color:function (props) {
+  returnisArticlePage?(cov_2b60xavi2p().b[1][0]++, props.theme.palette.GREY_6) : (cov_2b60xavi2p().b[1][1]++, props.theme.palette.WHITE);
 }
 
 .emotion-14>span {
@@ -1693,7 +1705,6 @@ exports[`SocialEmbedContainer Canonical should render a Twitter block and unmoun
   font-style: normal;
   font-size: 0.875rem;
   line-height: 1rem;
-  color: #545658;
   padding: 0.5rem 0;
 }
 
@@ -1707,6 +1718,10 @@ exports[`SocialEmbedContainer Canonical should render a Twitter block and unmoun
   .emotion-12 {
     font-size: 0.8125rem;
   }
+}
+
+.emotion-12 color:function (props) {
+  returnisArticlePage?(cov_2b60xavi2p().b[1][0]++, props.theme.palette.GREY_6) : (cov_2b60xavi2p().b[1][1]++, props.theme.palette.WHITE);
 }
 
 .emotion-12>span {
@@ -2103,7 +2118,6 @@ exports[`SocialEmbedContainer Canonical should render a YouTube block and unmoun
   font-style: normal;
   font-size: 0.875rem;
   line-height: 1rem;
-  color: #545658;
   padding: 0.5rem 0;
 }
 
@@ -2117,6 +2131,10 @@ exports[`SocialEmbedContainer Canonical should render a YouTube block and unmoun
   .emotion-14 {
     font-size: 0.8125rem;
   }
+}
+
+.emotion-14 color:function (props) {
+  returnisArticlePage?(cov_2b60xavi2p().b[1][0]++, props.theme.palette.GREY_6) : (cov_2b60xavi2p().b[1][1]++, props.theme.palette.WHITE);
 }
 
 .emotion-14>span {
@@ -2416,7 +2434,6 @@ exports[`SocialEmbedContainer Canonical should render an Instagram block and unm
   font-style: normal;
   font-size: 0.875rem;
   line-height: 1rem;
-  color: #545658;
   padding: 0.5rem 0;
 }
 
@@ -2430,6 +2447,10 @@ exports[`SocialEmbedContainer Canonical should render an Instagram block and unm
   .emotion-12 {
     font-size: 0.8125rem;
   }
+}
+
+.emotion-12 color:function (props) {
+  returnisArticlePage?(cov_2b60xavi2p().b[1][0]++, props.theme.palette.GREY_6) : (cov_2b60xavi2p().b[1][1]++, props.theme.palette.WHITE);
 }
 
 .emotion-12>span {

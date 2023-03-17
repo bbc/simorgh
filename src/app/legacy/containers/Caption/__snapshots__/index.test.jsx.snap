@@ -14,7 +14,6 @@ exports[`should render caption text with example Farsi offscreen text 1`] = `
   width: 100%;
   width: calc(100% - 0.5rem);
   margin-left: 0.5rem;
-  border-left: 1px solid #6E6E73;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -105,7 +104,6 @@ exports[`should render caption text with example News offscreen text 1`] = `
   width: 100%;
   width: calc(100% - 0.5rem);
   margin-left: 0.5rem;
-  border-left: 1px solid #6E6E73;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -196,7 +194,6 @@ exports[`should render caption with multiple paragraphs 1`] = `
   width: 100%;
   width: calc(100% - 0.5rem);
   margin-left: 0.5rem;
-  border-left: 1px solid #6E6E73;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -293,7 +290,6 @@ exports[`should render correctly with inline block 1`] = `
   width: 100%;
   width: calc(100% - 0.5rem);
   margin-left: 0.5rem;
-  border-left: 1px solid #6E6E73;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {

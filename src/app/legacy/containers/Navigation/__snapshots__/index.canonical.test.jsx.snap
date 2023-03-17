@@ -3,7 +3,10 @@
 exports[`Canonical Navigation snapshots should correctly render Canonical navigation 1`] = `
 .emotion-0 {
   position: relative;
-  background-color: #FFFFFF;
+}
+
+.emotion-0 background-color:function (props) {
+  returnisOpen?(cov_iligcbjo3().b[5][0]++, props.theme.palette.EBON) : (cov_iligcbjo3().b[5][1]++, props.theme.palette.WHITE);
 }
 
 .emotion-0::after {

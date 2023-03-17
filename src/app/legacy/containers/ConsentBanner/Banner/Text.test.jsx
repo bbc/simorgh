@@ -1,7 +1,7 @@
 import React from 'react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { render } from '../../../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import BannerText from './Text';
 
@@ -46,23 +46,34 @@ const bannerTextWithContext = (message, topLevelDomain) => (
 );
 
 describe('Consent Banner Text', () => {
-  shouldMatchSnapshot(
-    'should correctly render banner text in the UK',
+  it(
+    'should correctly render banner text in the UK', () => {
+       const { container } = render( 
     bannerTextWithContext(bannerMessaging, 'co.uk'),
   );
+   expect(container).toMatchSnapshot();
+});
 
-  shouldMatchSnapshot(
-    'should correctly render banner text outside the UK',
+  it(
+    'should correctly render banner text outside the UK', () => {
+        const { container } = render(
     bannerTextWithContext(bannerMessaging, 'com'),
   );
+   expect(container).toMatchSnapshot();
+});
 
-  shouldMatchSnapshot(
-    'should correctly render banner text with a link in the UK',
+  it('should correctly render banner text with a link in the UK', () => {
+        const { container } = render(
     bannerTextWithContext(bannerWithLinkMessaging, 'co.uk'),
   );
+   expect(container).toMatchSnapshot();
+});
 
-  shouldMatchSnapshot(
-    'should correctly render banner text with a link outside the UK',
+  it(
+    'should correctly render banner text with a link outside the UK', () => {
+        const { container } = render(
     bannerTextWithContext(bannerWithLinkMessaging, 'com'),
   );
+   expect(container).toMatchSnapshot();
+});
 });

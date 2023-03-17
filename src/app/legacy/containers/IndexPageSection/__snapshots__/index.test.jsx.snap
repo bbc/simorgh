@@ -208,12 +208,6 @@ HTMLCollection [
   padding: 0.5rem 0 1rem;
 }
 
-@media (max-width: 62.9375rem) {
-  .emotion-18 {
-    border-bottom: 0.0625rem solid #F2F2F2;
-  }
-}
-
 .emotion-18:last-child {
   border: none;
 }
@@ -607,12 +601,6 @@ HTMLCollection [
 
 .emotion-41 {
   padding: 0.5rem 0 1rem;
-}
-
-@media (max-width: 62.9375rem) {
-  .emotion-41 {
-    border-bottom: 0.0625rem solid #F2F2F2;
-  }
 }
 
 .emotion-41:last-child {
@@ -1509,12 +1497,6 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
   padding: 0.5rem 0 1rem;
 }
 
-@media (max-width: 62.9375rem) {
-  .emotion-18 {
-    border-bottom: 0.0625rem solid #F2F2F2;
-  }
-}
-
 .emotion-18:last-child {
   border: none;
 }
@@ -1908,12 +1890,6 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 
 .emotion-41 {
   padding: 0.5rem 0 1rem;
-}
-
-@media (max-width: 62.9375rem) {
-  .emotion-41 {
-    border-bottom: 0.0625rem solid #F2F2F2;
-  }
 }
 
 .emotion-41:last-child {
@@ -2792,12 +2768,6 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
   padding: 0.5rem 0 1rem;
 }
 
-@media (max-width: 62.9375rem) {
-  .emotion-16 {
-    border-bottom: 0.0625rem solid #F2F2F2;
-  }
-}
-
 .emotion-16:last-child {
   border: none;
 }
@@ -3213,12 +3183,6 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
 
 .emotion-39 {
   padding: 0.5rem 0 1rem;
-}
-
-@media (max-width: 62.9375rem) {
-  .emotion-39 {
-    border-bottom: 0.0625rem solid #F2F2F2;
-  }
 }
 
 .emotion-39:last-child {
@@ -4341,12 +4305,6 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
   padding: 0.5rem 0 1rem;
 }
 
-@media (max-width: 62.9375rem) {
-  .emotion-16 {
-    border-bottom: 0.0625rem solid #F2F2F2;
-  }
-}
-
 .emotion-16:last-child {
   border: none;
 }
@@ -4740,12 +4698,6 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
 
 .emotion-39 {
   padding: 0.5rem 0 1rem;
-}
-
-@media (max-width: 62.9375rem) {
-  .emotion-39 {
-    border-bottom: 0.0625rem solid #F2F2F2;
-  }
 }
 
 .emotion-39:last-child {
