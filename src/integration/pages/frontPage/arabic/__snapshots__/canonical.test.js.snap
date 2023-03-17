@@ -340,13 +340,11 @@ exports[`Canonical Front Page Sections should match headline text 15`] = `"با�
 
 exports[`Canonical Front Page Sections should match headline text 16`] = `"مباشر"`;
 
-exports[`Canonical Front Page Sections should match headline text 17`] = `"البث الإذاعي"`;
+exports[`Canonical Front Page Sections should match headline text 17`] = `"اخترنا لكم"`;
 
-exports[`Canonical Front Page Sections should match headline text 18`] = `"اخترنا لكم"`;
+exports[`Canonical Front Page Sections should match headline text 18`] = `"بطولة كأس العالم 2018المزيد"`;
 
-exports[`Canonical Front Page Sections should match headline text 19`] = `"بطولة كأس العالم 2018المزيد"`;
-
-exports[`Canonical Front Page Sections should match headline text 20`] = `"روابط لبي بي سي"`;
+exports[`Canonical Front Page Sections should match headline text 19`] = `"روابط لبي بي سي"`;
 
 exports[`Canonical Front Page Useful Links should match text and url 1`] = `"وظائف شاغرة في بي بي سي عربي - /arabic/front_page"`;
 

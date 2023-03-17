@@ -94,50 +94,6 @@ Object {
 }
 `;
 
-exports[`AMP Story Page Analytics ATI 1`] = `
-Object {
-  "requests": Object {
-    "base": "https://logws1363.ati-host.net?",
-    "pageview": "\${base}s=598343&s2=62&p=world%3A%3Amundo.world.story.51266689.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x2=[amp]&x3=[news-mundo]&x4=[es]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article]&x8=[simorgh]&x9=[Brexit%3A%2520qu%C3%A9%2520cambiar%C3%A1%2520para%2520visitar%2C%2520trabajar%2520y%2520estudiar%2520en%2520Reino%2520Unido%2520tras%2520la%2520salida%2520del%2520pa%C3%ADs%2520de%2520la%2520Uni%C3%B3n%2520Europea%2520-%2520BBC%2520News%2520Mundo]&x11=[2020-01-30T06%3A35%3A49.000Z]&x12=[2020-01-31T23%3A08%3A08.000Z]&x14=[0b0bfd5a-81b8-43fa-91fc-57f1fcd24487~2e91364c-5c77-4660-b76e-d76202785e64~6a73afa3-ea6b-45c1-80bb-49060b99f864~9a18805c-fb88-40ba-9763-bcc121d5d55c~ca170ae3-99c1-48db-9b67-2866f85e7342~f94293fd-ff83-400e-8bc0-89ec01930fce]&x16=[WS%20-%20Give%20me%20perspective]&x17=[Explainer]&ref=\${documentReferrer}",
-  },
-  "transport": Object {
-    "beacon": false,
-    "image": true,
-    "xhrpost": false,
-  },
-  "triggers": Object {
-    "trackPageview": Object {
-      "on": "visible",
-      "request": "pageview",
-    },
-  },
-}
-`;
-
-exports[`AMP Story Page Analytics chartbeat 1`] = `
-Object {
-  "vars": Object {
-    "contentType": "STY",
-    "domain": "test.bbc.co.uk",
-    "sections": "Mundo, Mundo - Internacional, Mundo - STY, Mundo - Internacional - STY, Mundo - Explainer-category",
-    "title": "Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea",
-    "uid": 50924,
-    "virtualReferrer": "\${documentReferrer}",
-  },
-}
-`;
-
-exports[`AMP Story Page Analytics comscore 1`] = `
-Object {
-  "extraUrlParams": Object {
-    "comscorekw": "amp",
-  },
-  "vars": Object {
-    "c2": "17986528",
-  },
-}
-`;
-
 exports[`AMP Story Page Footer Anchors should match text and url 1`] = `
 Object {
   "text": "BBC News, Mundo",
@@ -286,21 +242,9 @@ Object {
 
 exports[`AMP Story Page Image Caption should match text 1`] = `"Pie de foto, Llegó el día de la salida de Reino Unido de la UE."`;
 
-exports[`AMP Story Page Image should match snapshot 1`] = `
-<amp-img
-  alt="A person holding a union jack umbrella in front of Big Ben"
-  attribution="Getty Images"
-  data-hero="true"
-  fallback=""
-  height="549"
-  layout="responsive"
-  src="https://ichef.bbci.co.uk/news/640/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg"
-  srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 800w"
-  width="976"
-/>
-`;
+exports[`AMP Story Page Image should match snapshot 1`] = `null`;
 
-exports[`AMP Story Page Main heading should match text 1`] = `"Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea"`;
+exports[`AMP Story Page Main heading should match text 1`] = `"Página no encontrada"`;
 
 exports[`AMP Story Page SEO Apple Touch Icon should match attributes 1`] = `
 Object {
@@ -378,7 +322,7 @@ exports[`AMP Story Page SEO Dir attribute 1`] = `"ltr"`;
 
 exports[`AMP Story Page SEO FB app ID 1`] = `"1609039196070050"`;
 
-exports[`AMP Story Page SEO Heading level 1 1`] = `"Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea"`;
+exports[`AMP Story Page SEO Heading level 1 1`] = `"Página no encontrada"`;
 
 exports[`AMP Story Page SEO Lang attribute 1`] = `"es"`;
 
@@ -494,15 +438,15 @@ exports[`AMP Story Page SEO OG type 1`] = `"article"`;
 
 exports[`AMP Story Page SEO OG url 1`] = `"http://localhost:7080/mundo/noticias-internacional-51266689"`;
 
-exports[`AMP Story Page SEO Page title 1`] = `"Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea - BBC News Mundo"`;
+exports[`AMP Story Page SEO Page title 1`] = `"Página no encontrada - BBC News Mundo"`;
 
-exports[`AMP Story Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
+exports[`AMP Story Page SEO Robots meta tag 1`] = `"noindex,nofollow"`;
 
 exports[`AMP Story Page SEO Twitter card 1`] = `"summary_large_image"`;
 
 exports[`AMP Story Page SEO Twitter creator 1`] = `"@bbcmundo"`;
 
-exports[`AMP Story Page SEO Twitter description 1`] = `"Tras casi cuatro años de desacuerdos y negociaciones, este viernes Reino Unido dejará formalmente la Unión Europea. ¿Qué cambios supone esto para quienes quieran hacer turismo, estudiar o trabajar en Reino Unido?"`;
+exports[`AMP Story Page SEO Twitter description 1`] = `"Página no encontrada"`;
 
 exports[`AMP Story Page SEO Twitter image alt 1`] = `"A person holding a union jack umbrella in front of Big Ben"`;
 
@@ -510,11 +454,4 @@ exports[`AMP Story Page SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/n
 
 exports[`AMP Story Page SEO Twitter site 1`] = `"@bbcmundo"`;
 
-exports[`AMP Story Page SEO Twitter title 1`] = `"Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea - BBC News Mundo"`;
-
-exports[`AMP Story Page Timestamp should match text and date 1`] = `
-Object {
-  "date": "2020-01-30",
-  "text": "30 enero 2020",
-}
-`;
+exports[`AMP Story Page SEO Twitter title 1`] = `"Página no encontrada - BBC News Mundo"`;
