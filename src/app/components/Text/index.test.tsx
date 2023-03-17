@@ -25,7 +25,7 @@ describe('Text', () => {
       color: '#141414',
       fontSize: '0.9375rem',
       lineHeight: '1.25rem',
-      fontFamily: '"Times New Roman",ReithSans,Helvetica,Arial,sans-serif',
+      fontFamily: 'ReithSans,Helvetica,Arial,sans-serif',
       fontStyle: 'normal',
       fontWeight: 400,
     });
