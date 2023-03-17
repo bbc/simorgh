@@ -1,12 +1,14 @@
 import React from 'react';
-import { waitFor } from '@testing-library/react';
 import {
   articleDataNews,
   articleDataPersian,
   articleDataPidginWithByline,
 } from '#pages/ArticlePage/fixtureData';
 import { getAuthorTwitterHandle } from '../../../components/Byline/utilities';
-import { render } from '../../../components/react-testing-library-with-providers';
+import {
+  render,
+  waitFor,
+} from '../../../components/react-testing-library-with-providers';
 import ArticleMetadata from './index';
 
 const getISOStringDate = date => new Date(date).toISOString();

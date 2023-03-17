@@ -145,6 +145,7 @@
     "@testing-library/react-hooks": "8.0.1",
     "@testing-library/user-event": "14.4.3",
     "@types/jest": "26.0.24",
+    "@types/js-cookie": "^3.0.3",
     "@types/jsdom": "^20.0.0",
     "@types/loadable__component": "5.13.4",
     "@types/ramda": "0.28.15",
