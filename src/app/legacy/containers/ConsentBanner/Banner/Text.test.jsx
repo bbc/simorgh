@@ -46,34 +46,29 @@ const bannerTextWithContext = (message, topLevelDomain) => (
 );
 
 describe('Consent Banner Text', () => {
-  it(
-    'should correctly render banner text in the UK', () => {
-       const { container } = render( 
-    bannerTextWithContext(bannerMessaging, 'co.uk'),
-  );
-   expect(container).toMatchSnapshot();
-});
+  it('should correctly render banner text in the UK', () => {
+    const { container } = render(
+      bannerTextWithContext(bannerMessaging, 'co.uk'),
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  it(
-    'should correctly render banner text outside the UK', () => {
-        const { container } = render(
-    bannerTextWithContext(bannerMessaging, 'com'),
-  );
-   expect(container).toMatchSnapshot();
-});
+  it('should correctly render banner text outside the UK', () => {
+    const { container } = render(bannerTextWithContext(bannerMessaging, 'com'));
+    expect(container).toMatchSnapshot();
+  });
 
   it('should correctly render banner text with a link in the UK', () => {
-        const { container } = render(
-    bannerTextWithContext(bannerWithLinkMessaging, 'co.uk'),
-  );
-   expect(container).toMatchSnapshot();
-});
+    const { container } = render(
+      bannerTextWithContext(bannerWithLinkMessaging, 'co.uk'),
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  it(
-    'should correctly render banner text with a link outside the UK', () => {
-        const { container } = render(
-    bannerTextWithContext(bannerWithLinkMessaging, 'com'),
-  );
-   expect(container).toMatchSnapshot();
-});
+  it('should correctly render banner text with a link outside the UK', () => {
+    const { container } = render(
+      bannerTextWithContext(bannerWithLinkMessaging, 'com'),
+    );
+    expect(container).toMatchSnapshot();
+  });
 });
