@@ -19,7 +19,7 @@ describe('Paragraph', () => {
       color: '#141414',
       fontSize: '0.9375rem',
       lineHeight: '1.25rem',
-      fontFamily: 'ReithSans,Helvetica,Arial,sans-serif',
+      fontFamily: '"Times New Roman",ReithSans,Helvetica,Arial,sans-serif',
       fontStyle: 'normal',
       fontWeight: 400,
       margin: 0,
