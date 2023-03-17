@@ -25,7 +25,7 @@ describe('Heading', () => {
       color: '#141414',
       fontSize: '1.75rem',
       lineHeight: '2.25rem',
-      fontFamily: 'Times,ReithSans,Helvetica,Arial,sans-serif',
+      fontFamily: '"Times New Roman",ReithSans,Helvetica,Arial,sans-serif',
       fontStyle: 'normal',
       fontWeight: 700,
       margin: 0,
