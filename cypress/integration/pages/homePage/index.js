@@ -1,9 +1,10 @@
+import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import urls from './urls';
 import getAppEnv from '../../../support/helpers/getAppEnv';
 import visitPage from '../../../support/helpers/visitPage';
 import runTests from './tests';
 
-const pageType = 'home';
+const pageType = HOME_PAGE;
 
 urls.forEach(url => {
   const { service, variant = 'default' } = url;
