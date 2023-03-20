@@ -267,10 +267,7 @@ const MediaArticlePage = ({ pageData, mostReadEndpointOverride }) => {
       <MediaArticlePageGrid>
         <Primary>
           <Main role="main">
-            <Blocks
-              blocks={blocks}
-              componentsToRender={componentsToRender}
-            />
+            <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           </Main>
           {showRelatedTopics && topics && (
             <StyledRelatedTopics
