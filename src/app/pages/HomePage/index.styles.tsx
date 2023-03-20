@@ -12,13 +12,6 @@ const styles = {
     maxWidth: '63rem',
     margin: '0 auto',
   }),
-  inline: ({ mq }: Theme) =>
-    css({
-      [mq.GROUP_4_MIN_WIDTH]: {
-        alignItems: 'center',
-        display: 'flex',
-      },
-    }),
 };
 
 export default styles;
