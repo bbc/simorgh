@@ -1,5 +1,10 @@
-import React, { useState } from 'react';
-import { node } from 'prop-types';
+import React, {
+  PropsWithChildren,
+  useState,
+  Dispatch,
+  SetStateAction,
+} from 'react';
+import { Services, Variants } from '#app/models/types/global';
 import {
   getCookiePolicy,
   personalisationEnabled,
@@ -7,9 +12,19 @@ import {
 } from './cookies';
 import Chartbeat from './Chartbeat';
 
-export const UserContext = React.createContext({});
+type UserContextProps = {
+  cookiePolicy: string;
+  sendCanonicalChartbeatBeacon: Dispatch<SetStateAction<null>>;
+  updateCookiePolicy: Dispatch<SetStateAction<null>>;
+  personalisationEnabled: boolean;
+  setPreferredVariantCookie: (service: Services, variant: Variants) => void;
+};
 
-export const UserContextProvider = ({ children }) => {
+export const UserContext = React.createContext<UserContextProps>(
+  {} as UserContextProps,
+);
+
+export const UserContextProvider = ({ children }: PropsWithChildren) => {
   const [cookiePolicy, setCookiePolicy] = useState(getCookiePolicy());
   const [chartbeatConfig, sendCanonicalChartbeatBeacon] = useState(null);
 
@@ -27,8 +42,4 @@ export const UserContextProvider = ({ children }) => {
       {children}
     </UserContext.Provider>
   );
-};
-
-UserContextProvider.propTypes = {
-  children: node.isRequired,
 };
