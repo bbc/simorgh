@@ -201,188 +201,62 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   padding-bottom: 1.5rem;
 }
 
-@media (max-width: 14.9375rem) {
-  .emotion-10 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-10 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-10 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-10 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-10 {
-    margin-left: 16.666666666666668%;
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-10 {
-    margin-left: 33.333333333333336%;
-  }
-}
-
-@supports (display: grid) {
-  .emotion-10 {
-    display: block;
-    width: initial;
-    margin: 0;
-  }
-
-  @media (max-width: 14.9375rem) {
-    .emotion-10 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      padding: 0 0.5rem;
-      grid-column-start: 1;
-    }
-  }
-
-  @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-10 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      padding: 0 0.5rem;
-      grid-column-start: 1;
-    }
-  }
-
-  @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-10 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      padding: 0 1rem;
-      grid-column-start: 1;
-    }
-  }
-
-  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-10 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      padding: 0 1rem;
-      grid-column-start: 1;
-    }
-  }
-
-  @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-10 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      grid-column-start: 2;
-    }
-  }
-
-  @media (min-width: 80rem) {
-    .emotion-10 {
-      grid-template-columns: repeat(12, 1fr);
-      grid-column-end: span 12;
-      grid-column-start: 5;
-    }
-  }
-}
-
-.emotion-12 {
-  font-size: 1.75rem;
-  line-height: 2rem;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  color: #141414;
-  display: block;
+.emotion-10 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
   margin: 0;
-  padding: 2rem 0;
-  overflow-wrap: anywhere;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-12 {
-    font-size: 2rem;
-    line-height: 2.25rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-12 {
-    font-size: 2.75rem;
-    line-height: 3rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-12 {
-    padding: 2.5rem 0;
-  }
-}
-
-.emotion-12:focus {
-  outline: none;
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-14 {
+  .emotion-12 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-14 {
+  .emotion-12 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-14 {
+  .emotion-12 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-14 {
+  .emotion-12 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-14 {
+  .emotion-12 {
     margin-left: 20%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-14 {
+  .emotion-12 {
     margin-left: 40%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-14 {
+  .emotion-12 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-14 {
+    .emotion-12 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -390,7 +264,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-14 {
+    .emotion-12 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -398,7 +272,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-14 {
+    .emotion-12 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -406,7 +280,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-14 {
+    .emotion-12 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
@@ -414,7 +288,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-14 {
+    .emotion-12 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
@@ -422,7 +296,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   }
 
   @media (min-width: 80rem) {
-    .emotion-14 {
+    .emotion-12 {
       grid-template-columns: repeat(10, 1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
@@ -430,19 +304,19 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   }
 }
 
-.emotion-16 {
+.emotion-14 {
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
 }
 
-.emotion-18 {
+.emotion-16 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
 }
 
-.emotion-20 {
+.emotion-18 {
   position: absolute;
   top: 0;
   left: 0;
@@ -451,12 +325,12 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   cursor: default;
 }
 
-.emotion-20:hover .emotion-26,
-.emotion-20:focus .emotion-26 {
+.emotion-18:hover .emotion-24,
+.emotion-18:focus .emotion-24 {
   background-color: #B80000;
 }
 
-.emotion-22 {
+.emotion-20 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -470,31 +344,31 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-22 {
+  .emotion-20 {
     font-size: 0.875rem;
   }
 }
 
-.no-js .emotion-22 {
+.no-js .emotion-20 {
   background-color: rgba(34, 34, 34, 0.75);
 }
 
 @media screen and (-ms-high-contrast: active) {
-  .no-js .emotion-22 {
+  .no-js .emotion-20 {
     background-color: transparent;
   }
 }
 
-.no-js .emotion-22 .guidance-message {
+.no-js .emotion-20 .guidance-message {
   display: none;
 }
 
-.emotion-24 {
+.emotion-22 {
   position: absolute;
   bottom: 0;
 }
 
-.emotion-27 {
+.emotion-25 {
   background-color: #222222;
   border: none;
   color: #FFFFFF;
@@ -515,18 +389,18 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   left: 0;
 }
 
-.emotion-27:hover,
-.emotion-27:focus {
+.emotion-25:hover,
+.emotion-25:focus {
   background-color: #B80000;
   -webkit-transition: background-color 300ms;
   transition: background-color 300ms;
 }
 
-.no-js .emotion-27 {
+.no-js .emotion-25 {
   display: none;
 }
 
-.emotion-27:focus-visible::before {
+.emotion-25:focus-visible::before {
   content: '';
   position: absolute;
   left: 0;
@@ -537,18 +411,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   border: 0.1875rem solid #000000;
 }
 
-.emotion-29 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
-.emotion-31>svg {
+.emotion-29>svg {
   color: #FFFFFF;
   fill: currentColor;
   height: 1.5rem;
@@ -556,7 +419,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   width: 1.5rem;
 }
 
-.emotion-33 {
+.emotion-31 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -565,17 +428,17 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   height: 0.75rem;
 }
 
-.emotion-35 {
+.emotion-33 {
   display: block;
   margin-top: 0.5rem;
 }
 
-.emotion-37 {
+.emotion-35 {
   display: block;
   width: 100%;
 }
 
-.emotion-39 {
+.emotion-37 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -592,37 +455,37 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-39 {
+  .emotion-37 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-39 {
+  .emotion-37 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-39 {
+  .emotion-37 {
     width: 100%;
     margin: 0.5rem 0 0;
   }
 }
 
-.emotion-39>p {
+.emotion-37>p {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.emotion-39>p:last-child {
+.emotion-37>p:last-child {
   padding-bottom: 0;
 }
 
 @media (min-width: 25rem) and (max-width: 62.9375rem) {
-  .emotion-39 {
+  .emotion-37 {
     width: calc(100% - 1rem);
     margin-left: 1rem;
     padding-right: 1rem;
@@ -631,61 +494,61 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
 }
 
 @media (min-width: 63rem) {
-  .emotion-39 {
+  .emotion-37 {
     padding-right: 0;
     padding-left: 0.5rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-43 {
+  .emotion-41 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-43 {
+  .emotion-41 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-43 {
+  .emotion-41 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-43 {
+  .emotion-41 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-43 {
-    margin-left: 20%;
+  .emotion-41 {
+    margin-left: 16.666666666666668%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-43 {
-    margin-left: 40%;
+  .emotion-41 {
+    margin-left: 33.333333333333336%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-43 {
+  .emotion-41 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-43 {
+    .emotion-41 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -694,7 +557,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-43 {
+    .emotion-41 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -703,7 +566,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-43 {
+    .emotion-41 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -712,7 +575,151 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-43 {
+    .emotion-41 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-41 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      grid-column-start: 2;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-41 {
+      grid-template-columns: repeat(12, 1fr);
+      grid-column-end: span 12;
+      grid-column-start: 5;
+    }
+  }
+}
+
+.emotion-44 {
+  font-size: 1.75rem;
+  line-height: 2rem;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #141414;
+  display: block;
+  margin: 0;
+  padding: 2rem 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-44 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-44 {
+    font-size: 2.75rem;
+    line-height: 3rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-44 {
+    padding: 2.5rem 0;
+  }
+}
+
+@media (max-width: 62.9375rem) {
+  .emotion-44 {
+    padding: 0.5rem 0 2rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-44 {
+    padding: 1rem 0 2.5rem;
+  }
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-46 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-46 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-46 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-46 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-46 {
+    margin-left: 20%;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-46 {
+    margin-left: 40%;
+  }
+}
+
+@supports (display: grid) {
+  .emotion-46 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-46 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-46 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-46 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-46 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       padding: 0 1rem;
@@ -721,7 +728,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-43 {
+    .emotion-46 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
@@ -729,7 +736,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   }
 
   @media (min-width: 80rem) {
-    .emotion-43 {
+    .emotion-46 {
       grid-template-columns: repeat(10, 1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
@@ -737,7 +744,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   }
 }
 
-.emotion-45 {
+.emotion-48 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #545658;
@@ -749,24 +756,24 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-45 {
+  .emotion-48 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-45 {
+  .emotion-48 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-45:last-child {
+.emotion-48:last-child {
   padding-bottom: 1rem;
 }
 
-.emotion-49 {
+.emotion-52 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -778,26 +785,26 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-49 {
+  .emotion-52 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-49 {
+  .emotion-52 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-49 {
+  .emotion-52 {
     padding-top: 2rem;
   }
 }
 
-.emotion-53 {
+.emotion-56 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -809,21 +816,21 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-53 {
+  .emotion-56 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-53 {
+  .emotion-56 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-53 {
+  .emotion-56 {
     padding-right: 2.5rem;
   }
 }
@@ -848,56 +855,51 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
           class="emotion-8 emotion-9"
           role="main"
         >
-          <div
-            class="emotion-10 emotion-4"
-            dir="ltr"
+          <h1
+            class="emotion-10 emotion-11"
+            id="content"
+            tabindex="-1"
           >
-            <h1
-              class="emotion-12 emotion-13"
-              id="content"
-              tabindex="-1"
-            >
-              WS Media (1) -Media above title
-            </h1>
-          </div>
+            WS Media (1) -Media above title
+          </h1>
           <div
-            class="emotion-14 emotion-4"
+            class="emotion-12 emotion-4"
             dir="ltr"
           >
             <figure
-              class="emotion-16 emotion-17"
+              class="emotion-14 emotion-15"
             >
               <div
-                class="emotion-18 emotion-19"
+                class="emotion-16 emotion-17"
                 data-e2e="media-player"
               >
                 <div
-                  class="emotion-20 emotion-21"
+                  class="emotion-18 emotion-19"
                   data-e2e="media-player__placeholder"
                 >
                   <div
-                    class="emotion-22 emotion-23"
+                    class="emotion-20 emotion-21"
                     data-e2e="media-player__guidance"
                   >
                     <noscript
-                      class="emotion-24 emotion-25"
+                      class="emotion-22 emotion-23"
                     />
                   </div>
                   <button
-                    class="focusIndicatorRemove emotion-26 emotion-27 emotion-28"
+                    class="focusIndicatorRemove emotion-24 emotion-25 emotion-26"
                   >
                     <span
-                      class="emotion-29 emotion-30"
+                      class="emotion-10 emotion-11"
                     >
                       Play video, "BBC launch trailer for We Know Our Place women's sport campaign", Duration 0,54
                     </span>
                     <div
                       aria-hidden="true"
-                      class="emotion-31 emotion-32"
+                      class="emotion-29 emotion-30"
                     >
                       <svg
                         aria-hidden="true"
-                        class="emotion-33 emotion-34"
+                        class="emotion-31 emotion-32"
                         focusable="false"
                         height="12"
                         viewBox="0 0 12 12"
@@ -920,7 +922,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
                     </div>
                     <time
                       aria-hidden="true"
-                      class="emotion-35 emotion-36"
+                      class="emotion-33 emotion-34"
                       datetime="PT54S"
                     >
                       00:54
@@ -928,17 +930,17 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
                   </button>
                   <img
                     alt=""
-                    class="emotion-37 emotion-38"
+                    class="emotion-35 emotion-36"
                     src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01thw3g.jpg"
                   />
                 </div>
               </div>
               <figcaption
-                class="emotion-39 emotion-40"
+                class="emotion-37 emotion-38"
                 dir="ltr"
               >
                 <span
-                  class="emotion-29 emotion-30"
+                  class="emotion-10 emotion-11"
                 >
                   Video caption, 
                 </span>
@@ -949,22 +951,32 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
             </figure>
           </div>
           <div
-            class="emotion-43 emotion-4"
+            class="emotion-41 emotion-4"
+            dir="ltr"
+          >
+            <strong
+              class="emotion-43 emotion-44 emotion-45"
+            >
+              WS Media (1) -Media above title
+            </strong>
+          </div>
+          <div
+            class="emotion-46 emotion-4"
             dir="ltr"
           >
             <time
-              class="emotion-45 emotion-46"
+              class="emotion-48 emotion-49"
               datetime="2023-01-17"
             >
               17 January 2023
             </time>
           </div>
           <div
-            class="emotion-43 emotion-4"
+            class="emotion-46 emotion-4"
             dir="ltr"
           >
             <h2
-              class="emotion-49 emotion-50"
+              class="emotion-52 emotion-53"
               id="Headline"
               tabindex="-1"
             >
@@ -972,11 +984,11 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
             </h2>
           </div>
           <div
-            class="emotion-43 emotion-4"
+            class="emotion-46 emotion-4"
             dir="ltr"
           >
             <p
-              class="emotion-53 emotion-54"
+              class="emotion-56 emotion-57"
               dir="ltr"
             >
               Page Text
