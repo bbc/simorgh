@@ -49,6 +49,7 @@ import MostReadSectionLabel from '#containers/MostRead/label';
 import SocialEmbedContainer from '#containers/SocialEmbed';
 import AdContainer from '#containers/Ad';
 import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
+import fauxHeadline from '#containers/FauxHeadline';
 
 import {
   getArticleId,
@@ -167,6 +168,7 @@ const MediaArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   );
 
   const componentsToRender = {
+    fauxHeadline,
     visuallyHiddenHeadline,
     headline: headings,
     subheadline: headings,
