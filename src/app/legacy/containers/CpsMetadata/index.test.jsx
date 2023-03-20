@@ -1,7 +1,9 @@
 import React from 'react';
-import { waitFor } from '@testing-library/react';
 import { articleDataNews } from '#pages/ArticlePage/fixtureData';
-import { render } from '../../../components/react-testing-library-with-providers';
+import {
+  render,
+  waitFor,
+} from '../../../components/react-testing-library-with-providers';
 import CpsMetadata from './index';
 
 const getISOStringDate = date => new Date(date).toISOString();

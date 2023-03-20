@@ -1,6 +1,7 @@
 import React from 'react';
 import path from 'ramda/src/path';
 import styled from '@emotion/styled';
+import { useTheme } from '@emotion/react';
 
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
 import {
@@ -8,8 +9,6 @@ import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
 } from '#psammead/gel-foundations/src/spacings';
-
-import { C_GREY_2 } from '#psammead/psammead-styles/src/colours';
 
 import { articleDataPropTypes } from '#models/propTypes/article';
 
@@ -29,6 +28,10 @@ const SecondaryColumn = ({ pageData }) => {
   const topStoriesContent = path(['secondaryColumn', 'topStories'], pageData);
   const featuresContent = path(['secondaryColumn', 'features'], pageData);
 
+  const {
+    palette: { GREY_2 },
+  } = useTheme();
+
   if (!topStoriesContent && !featuresContent) return null;
 
   return (
@@ -43,7 +46,7 @@ const SecondaryColumn = ({ pageData }) => {
           <FeaturesAnalysis
             content={featuresContent}
             parentColumns={gridColumnsSecondary}
-            sectionLabelBackground={C_GREY_2}
+            sectionLabelBackground={GREY_2}
           />
         </ResponsiveComponentWrapper>
       )}
