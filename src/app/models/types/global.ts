@@ -1,3 +1,7 @@
+export type Environments = 'local' | 'test' | 'live';
+
+export type Platforms = 'amp' | 'canonical';
+
 export type SocialEmbedProviders =
   | 'facebook'
   | 'twitter'
@@ -19,7 +23,7 @@ export type PageTypes =
   | 'PGL'
   | 'CSP'
   | 'TOPIC'
-  | 'HOME';
+  | 'home';
 
 export type SerbianService = {
   service: 'serbian';

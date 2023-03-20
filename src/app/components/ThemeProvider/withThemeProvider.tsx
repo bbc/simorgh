@@ -263,7 +263,7 @@ const withThemeProvider = ({
   };
 
   const ThemeProvider: React.FC<Props> = ({ children }) => {
-    const { isAmp } = useContext(RequestContext) as { isAmp: boolean };
+    const { isAmp } = useContext(RequestContext);
     return (
       <EmotionThemeProvider theme={theme}>
         {children}
