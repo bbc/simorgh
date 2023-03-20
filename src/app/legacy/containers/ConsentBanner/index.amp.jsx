@@ -1,9 +1,11 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import AmpGeo from '#components/AmpGeo';
+import isLive from '#lib/utilities/isLive';
 import Banner from './Banner/index.amp';
 
-const ampConsentData = {
+// Funding Choices CMP, to be replaced with Sourcepoint
+const fcConsentData = {
   consents: {
     'user-consent': {
       promptIfUnknownForGeoGroup: 'eea',
@@ -22,6 +24,30 @@ const ampConsentData = {
     },
   },
 };
+
+// Sourcepoint CMP, will replace Funding Choices
+const spConsentData = {
+  checkConsentHref:
+    'https://cdn.privacy-mgmt.com/wrapper/tcfv2/v1/amp-v2?authId=CLIENT_ID',
+  consentRequired: 'remote',
+  consentInstanceId: 'sourcepoint',
+  promptUISrc:
+    'https://cdn.privacy-mgmt.com/amp/unified/index.html?authId=CLIENT_ID&source_url=SOURCE_URL',
+  cookies: {
+    enabled: true,
+    'AMP-CONSENT': { value: 'LINKER_PARAM(authId, _a)' },
+  },
+  clientConfig: {
+    accountId: 1786,
+    propertyHref: 'https://www.bbc.com',
+    stageCampaign: false,
+    pmTab: 'purposes',
+    privacyManagerId: 648235,
+    initialHeight: 80,
+  },
+};
+
+const ampConsentData = isLive() ? fcConsentData : spConsentData;
 
 const jsonInlinedScript = data => (
   <script
