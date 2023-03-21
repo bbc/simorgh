@@ -7,6 +7,7 @@ import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
 import { RequestContext } from '#contexts/RequestContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { visuallyHiddenStyle } from '../utilities';
+import { GREY_6, WHITE } from '../../../../../components/ThemeProvider';
 
 const Figure = styled.figure`
   margin: 0;
@@ -20,8 +21,7 @@ const FigCaption = styled.figcaption`
   ${GEL_BREVIER}
   
   ${({ isArticlePage }) => `
-    color: ${props =>
-      isArticlePage ? props.theme.palette.GREY_6 : props.theme.palette.WHITE};
+    color: ${isArticlePage ? GREY_6 : WHITE};
     padding: ${isArticlePage ? `${GEL_SPACING} 0` : GEL_SPACING};
   `}
 

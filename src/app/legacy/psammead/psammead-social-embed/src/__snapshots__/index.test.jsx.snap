@@ -1175,6 +1175,7 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
   font-style: normal;
   font-size: 0.875rem;
   line-height: 1rem;
+  color: undefined;
   padding: 0.5rem 0;
 }
 
@@ -1188,10 +1189,6 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
   .emotion-10 {
     font-size: 0.8125rem;
   }
-}
-
-.emotion-10 color:function (props) {
-  returnisArticlePage?(cov_pkkxiwqe4().b[1][0]++, props.theme.palette.GREY_6) : (cov_pkkxiwqe4().b[1][1]++, props.theme.palette.WHITE);
 }
 
 .emotion-10>span {
@@ -1803,6 +1800,7 @@ exports[`CanonicalSocialEmbed YouTube should render correctly for YouTube 1`] = 
   font-style: normal;
   font-size: 0.875rem;
   line-height: 1rem;
+  color: undefined;
   padding: 0.5rem 0;
 }
 
@@ -1816,10 +1814,6 @@ exports[`CanonicalSocialEmbed YouTube should render correctly for YouTube 1`] = 
   .emotion-8 {
     font-size: 0.8125rem;
   }
-}
-
-.emotion-8 color:function (props) {
-  returnisArticlePage?(cov_pkkxiwqe4().b[1][0]++, props.theme.palette.GREY_6) : (cov_pkkxiwqe4().b[1][1]++, props.theme.palette.WHITE);
 }
 
 .emotion-8>span {
