@@ -4,6 +4,11 @@ import {
   ThemeProvider as EmotionThemeProvider,
   Theme,
 } from '@emotion/react';
+import {
+  ThemeComponent,
+  applyDarkPalette,
+  ThemeContextPOC,
+} from '#app/contexts/ThemeContextPOC';
 import focusIndicator from './focusIndicator';
 import { RequestContext } from '../../contexts/RequestContext';
 
@@ -264,8 +269,10 @@ const withThemeProvider = ({
 
   const ThemeProvider: React.FC<Props> = ({ children }) => {
     const { isAmp } = useContext(RequestContext);
+    const { darkMode } = useContext(ThemeContextPOC);
+
     return (
-      <EmotionThemeProvider theme={theme}>
+      <EmotionThemeProvider theme={darkMode ? applyDarkPalette(theme) : theme}>
         {children}
         {isAmp && <Global styles={fontFaces} />}
         <Global styles={focusIndicator} />
@@ -273,7 +280,15 @@ const withThemeProvider = ({
     );
   };
 
-  return ThemeProvider;
+  const ThemeWrapper: React.FC<Props> = props => {
+    return (
+      <ThemeComponent>
+        <ThemeProvider {...props} />
+      </ThemeComponent>
+    );
+  };
+
+  return ThemeWrapper;
 };
 
 export default withThemeProvider;
