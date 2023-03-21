@@ -3,23 +3,23 @@ const pidginPageData = {
     model: {
       blocks: [
         {
-          id: 'fd03416f',
-          type: 'headline',
+          id: '2484b596',
+          type: 'visuallyHiddenHeadline',
           model: {
             blocks: [
               {
-                id: 'e91a3127',
+                id: '5ecf3620',
                 type: 'text',
                 model: {
                   blocks: [
                     {
-                      id: 'fa2fdac4',
+                      id: '3b9abb26',
                       type: 'paragraph',
                       model: {
                         text: 'WS Media (1) -Media above title',
                         blocks: [
                           {
-                            id: 'b679fd57',
+                            id: 'ebf8d803',
                             type: 'fragment',
                             model: {
                               text: 'WS Media (1) -Media above title',
@@ -40,29 +40,29 @@ const pidginPageData = {
           position: [1],
         },
         {
-          id: 'c8048f31',
+          id: 'd3d6bfd8',
           type: 'video',
           model: {
             locator: 'urn:bbc:pips:pid:p01thw20',
             blocks: [
               {
-                id: 'e92b193b',
+                id: '58e40776',
                 type: 'caption',
                 model: {
                   blocks: [
                     {
-                      id: 'edd2f8de',
+                      id: '114d678b',
                       type: 'text',
                       model: {
                         blocks: [
                           {
-                            id: '9ef3953b',
+                            id: '9a21a54a',
                             type: 'paragraph',
                             model: {
                               text: 'BBC launch trailer for We Know Our Place women\'s sport campaign"',
                               blocks: [
                                 {
-                                  id: '31fc56b9',
+                                  id: 'dee173c5',
                                   type: 'fragment',
                                   model: {
                                     text: 'BBC launch trailer for We Know Our Place women\'s sport campaign"',
@@ -83,12 +83,12 @@ const pidginPageData = {
                 position: [2, 1],
               },
               {
-                id: 'cafbaa21',
+                id: 'e1ede8f7',
                 type: 'aresMedia',
                 model: {
                   blocks: [
                     {
-                      id: '3652279b',
+                      id: 'ac79d69f',
                       blockId: 'urn:bbc:ares::clip:p01thw20',
                       type: 'aresMediaMetadata',
                       model: {
@@ -127,12 +127,12 @@ const pidginPageData = {
                       position: [2, 2, 1],
                     },
                     {
-                      id: '5b6bcc8c',
+                      id: '9aed1eb7',
                       type: 'image',
                       model: {
                         blocks: [
                           {
-                            id: 'db7954e3',
+                            id: '4a56948a',
                             type: 'rawImage',
                             model: {
                               width: 1428,
@@ -144,23 +144,23 @@ const pidginPageData = {
                             position: [2, 2, 2, 1],
                           },
                           {
-                            id: '08c303ea',
+                            id: 'c51e6bae',
                             type: 'altText',
                             model: {
                               blocks: [
                                 {
-                                  id: 'f3ad262f',
+                                  id: '22b766bb',
                                   type: 'text',
                                   model: {
                                     blocks: [
                                       {
-                                        id: '3c60dd58',
+                                        id: '4d434bcb',
                                         type: 'paragraph',
                                         model: {
                                           text: 'BBC launch trailer for We Know Our Place women\'s sport campaign"',
                                           blocks: [
                                             {
-                                              id: 'f1a9d7d7',
+                                              id: '5d45d744',
                                               type: 'fragment',
                                               model: {
                                                 text: 'BBC launch trailer for We Know Our Place women\'s sport campaign"',
@@ -193,68 +193,77 @@ const pidginPageData = {
           position: [2],
         },
         {
-          id: 'f36890f3',
+          id: 'c66579d3',
+          type: 'fauxHeadline',
+          model: {
+            blocks: [
+              {
+                id: '4fe12ad6',
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      id: '89a8aca0',
+                      type: 'paragraph',
+                      model: {
+                        text: 'WS Media (1) -Media above title',
+                        blocks: [
+                          {
+                            id: 'ce185601',
+                            type: 'fragment',
+                            model: {
+                              text: 'WS Media (1) -Media above title',
+                              attributes: [],
+                            },
+                            position: [3, 1, 1, 1],
+                          },
+                        ],
+                      },
+                      position: [3, 1, 1],
+                    },
+                  ],
+                },
+                position: [3, 1],
+              },
+            ],
+          },
+          position: [3],
+        },
+        {
+          id: '0f40aced',
           type: 'timestamp',
           model: {
             firstPublished: 1673964186410,
             lastPublished: 1673964957894,
           },
-          position: [3],
+          position: [4],
         },
         {
-          id: 'e1979b13',
+          id: 'c1d129a8',
           type: 'subheadline',
           model: {
             blocks: [
               {
-                id: 'b9cdd687',
+                id: '6b4b39da',
                 type: 'text',
                 model: {
                   blocks: [
                     {
-                      id: 'a73424f8',
+                      id: '4c816797',
                       type: 'paragraph',
                       model: {
                         text: 'Headline',
                         blocks: [
                           {
-                            id: '2b33bca0',
+                            id: '95335515',
                             type: 'fragment',
                             model: {
                               text: 'Headline',
                               attributes: [],
                             },
-                            position: [4, 1, 1, 1],
+                            position: [5, 1, 1, 1],
                           },
                         ],
-                      },
-                      position: [4, 1, 1],
-                    },
-                  ],
-                },
-                position: [4, 1],
-              },
-            ],
-          },
-          position: [4],
-        },
-        {
-          id: 'bc7c4b90',
-          type: 'text',
-          model: {
-            blocks: [
-              {
-                id: 'c69035e1',
-                type: 'paragraph',
-                model: {
-                  text: 'Page Text',
-                  blocks: [
-                    {
-                      id: 'a8e7dbba',
-                      type: 'fragment',
-                      model: {
-                        text: 'Page Text',
-                        attributes: [],
                       },
                       position: [5, 1, 1],
                     },
@@ -267,13 +276,35 @@ const pidginPageData = {
           position: [5],
         },
         {
-          id: 'b0d7e705',
-          type: 'mpu',
-          model: {},
+          id: 'c57b7f9f',
+          type: 'text',
+          model: {
+            blocks: [
+              {
+                id: '2200c25c',
+                type: 'paragraph',
+                model: {
+                  text: 'Page Text',
+                  blocks: [
+                    {
+                      id: 'cfa9b294',
+                      type: 'fragment',
+                      model: {
+                        text: 'Page Text',
+                        attributes: [],
+                      },
+                      position: [6, 1, 1],
+                    },
+                  ],
+                },
+                position: [6, 1],
+              },
+            ],
+          },
           position: [6],
         },
         {
-          id: '9295a77f',
+          id: 'e094dc5b',
           type: 'wsoj',
           model: {
             type: 'recommendations',
