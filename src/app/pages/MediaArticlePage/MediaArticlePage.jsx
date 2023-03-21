@@ -1,12 +1,15 @@
-import React, { useContext } from 'react';
+/** @jsxRuntime classic */
+/** @jsx jsx */
+
+import { useContext } from 'react';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import propEq from 'ramda/src/propEq';
 import styled from '@emotion/styled';
-import { useTheme } from '@emotion/react';
+import { jsx, useTheme } from '@emotion/react';
 import { string, node } from 'prop-types';
 import useToggle from '#hooks/useToggle';
-import CpsRecommendations from '#containers/CpsRecommendations';
+import isLive from '#app/lib/utilities/isLive';
 
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
@@ -41,7 +44,7 @@ import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import OptimizelyPageViewTracking from '#containers/OptimizelyPageViewTracking';
 import OptimizelyArticleCompleteTracking from '#containers/OptimizelyArticleCompleteTracking';
-import articleMediaPlayer from '#containers/ArticleMediaPlayer';
+import ArticleMediaPlayer from '#containers/ArticleMediaPlayer';
 import LinkedData from '#containers/LinkedData';
 import MostReadContainer from '#containers/MostRead';
 import MostReadSection from '#containers/MostRead/section';
@@ -49,6 +52,8 @@ import MostReadSectionLabel from '#containers/MostRead/label';
 import SocialEmbedContainer from '#containers/SocialEmbed';
 import AdContainer from '#containers/Ad';
 import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
+import fauxHeadline from '#containers/FauxHeadline';
+import CpsRecommendations from '#containers/CpsRecommendations';
 
 import {
   getArticleId,
@@ -77,6 +82,8 @@ import RelatedContentSection from './PagePromoSections/RelatedContentSection';
 import SecondaryColumn from './SecondaryColumn';
 
 import MediaArticlePageGrid, { Primary } from './MediaArticlePageGrid';
+
+import styles from './MediaArticlePage.styles';
 
 const Wrapper = styled.div`
   background-color: ${props => props.theme.palette.GREY_2};
@@ -167,11 +174,28 @@ const MediaArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   );
 
   const componentsToRender = {
+    fauxHeadline,
     visuallyHiddenHeadline,
     headline: headings,
     subheadline: headings,
-    audio: articleMediaPlayer,
-    video: articleMediaPlayer,
+    audio: props => (
+      /**
+       * TODO: Consolate the styling into a single stylesheet for the media player
+       * - The media player needs padding top applied, but is also inheriting styles from other components
+       */
+      <div css={!isLive() && styles.mediaPlayer}>
+        <ArticleMediaPlayer {...props} />
+      </div>
+    ),
+    video: props => (
+      /**
+       * TODO: Consolate the styling into a single stylesheet for the media player
+       * - The media player needs padding top applied, but is also inheriting styles from other components
+       */
+      <div css={!isLive() && styles.mediaPlayer}>
+        <ArticleMediaPlayer {...props} />
+      </div>
+    ),
     text,
     byline: props =>
       hasByline ? (
@@ -279,7 +303,12 @@ const MediaArticlePage = ({ pageData, mostReadEndpointOverride }) => {
         <Primary>
           <Main role="main">
             <Blocks
-              blocks={articleBlocks}
+              /**
+               * TODO: Remove isLive check when a11y swarm is complete
+               * - Live will continue to work as it does now, using the visuallyHiddenHeadline block inserted manually
+               * - Test will use the BFF to format the ordering of the blocks, so no work is needed in Simorgh
+               */
+              blocks={isLive() ? articleBlocks : blocks}
               componentsToRender={componentsToRender}
             />
           </Main>
