@@ -2,11 +2,12 @@ import { WHITE as WHITE_NORMAL } from '#app/components/ThemeProvider/palette';
 import DARK_PALETTE, {
   WHITE as WHITE_INVERTED,
 } from '#app/components/ThemeProvider/paletteInverted';
-import { Theme } from '@emotion/react';
+import { Theme, ThemeProvider } from '@emotion/react';
 import styled from '@emotion/styled';
 import React, {
   createContext,
   Dispatch,
+  FC,
   PropsWithChildren,
   SetStateAction,
   useContext,
@@ -56,4 +57,32 @@ export const ToggleButton = () => {
 
 export const applyDarkPalette = (ancestorTheme: Theme): Theme => {
   return { ...ancestorTheme, ...DARK_PALETTE } as Theme;
+};
+
+export const withDarkTheme = (Component: FC) => {
+  const DarkThemePage = (props: JSX.IntrinsicAttributes) => {
+    const { darkMode } = useContext(ThemeContextPOC);
+    // The Nested ThemeProvider here takes the theme of it's ancestor ThemeProvider as input
+    // for the applyDarkPalette function above, as recommended in emotion docs:
+    // https://emotion.sh/docs/theming#themeprovider-reactcomponenttype
+    return (
+      <ThemeProvider theme={darkMode ? applyDarkPalette : theme => theme}>
+        <Component {...props} />
+      </ThemeProvider>
+    );
+  };
+
+  return DarkThemePage;
+};
+
+export const ThemeWrapper = (Component: FC) => {
+  const DarkThemeComponent = withDarkTheme(Component);
+
+  const DarkThemeWrapper = (props: JSX.IntrinsicAttributes) => (
+    <ThemeComponent>
+      <DarkThemeComponent {...props} />
+    </ThemeComponent>
+  );
+
+  return DarkThemeWrapper;
 };
