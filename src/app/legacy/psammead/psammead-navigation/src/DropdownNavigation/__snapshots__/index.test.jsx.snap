@@ -716,6 +716,7 @@ exports[`Dropdown navigation should render correctly when closer 1`] = `
 }
 
 .emotion-20 {
+  border-left: 0.25rem solid #B80000;
   padding-left: 0.5rem;
 }
 
@@ -976,6 +977,7 @@ exports[`Dropdown navigation should render correctly when open 1`] = `
 }
 
 .emotion-20 {
+  border-left: 0.25rem solid #B80000;
   padding-left: 0.5rem;
 }
 

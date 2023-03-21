@@ -10,8 +10,9 @@ import { visuallyHiddenStyle } from '../utilities';
 
 const Figure = styled.figure`
   margin: 0;
-  background-color: ${({ isArticlePage }, props) =>
-    isArticlePage ? 'transparent' : props.theme.palette.BLACK};
+  background-color: ${({ isArticlePage }) =>
+    props =>
+      isArticlePage ? 'transparent' : props.theme.palette.BLACK};
 `;
 
 const FigCaption = styled.figcaption`

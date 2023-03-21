@@ -413,10 +413,7 @@ exports[`Header Snapshots should render correctly for WS frontpage 1`] = `
 
 .emotion-29 {
   position: relative;
-}
-
-.emotion-29 background-color:function (props) {
-  returnisOpen?(cov_iligcbjo3().b[5][0]++, props.theme.palette.EBON) : (cov_iligcbjo3().b[5][1]++, props.theme.palette.WHITE);
+  background-color: #FFFFFF;
 }
 
 .emotion-29::after {
@@ -1637,10 +1634,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
 
 .emotion-29 {
   position: relative;
-}
-
-.emotion-29 background-color:function (props) {
-  returnisOpen?(cov_iligcbjo3().b[5][0]++, props.theme.palette.EBON) : (cov_iligcbjo3().b[5][1]++, props.theme.palette.WHITE);
+  background-color: #FFFFFF;
 }
 
 .emotion-29::after {
@@ -2861,10 +2855,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
 
 .emotion-29 {
   position: relative;
-}
-
-.emotion-29 background-color:function (props) {
-  returnisOpen?(cov_iligcbjo3().b[5][0]++, props.theme.palette.EBON) : (cov_iligcbjo3().b[5][1]++, props.theme.palette.WHITE);
+  background-color: #FFFFFF;
 }
 
 .emotion-29::after {

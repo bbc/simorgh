@@ -3,10 +3,7 @@
 exports[`Navigation Container should correctly render amp navigation 1`] = `
 .emotion-0 {
   position: relative;
-}
-
-.emotion-0 background-color:function (props) {
-  returnisOpen?(cov_iligcbjo3().b[5][0]++, props.theme.palette.EBON) : (cov_iligcbjo3().b[5][1]++, props.theme.palette.WHITE);
+  background-color: #FFFFFF;
 }
 
 .emotion-0::after {
@@ -173,6 +170,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
 }
 
 .emotion-20 {
+  border-left: 0.25rem solid #B80000;
   padding-left: 0.5rem;
 }
 
@@ -837,10 +835,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
 exports[`Navigation Container should correctly render amp navigation on non-home navigation page 1`] = `
 .emotion-0 {
   position: relative;
-}
-
-.emotion-0 background-color:function (props) {
-  returnisOpen?(cov_iligcbjo3().b[5][0]++, props.theme.palette.EBON) : (cov_iligcbjo3().b[5][1]++, props.theme.palette.WHITE);
+  background-color: #FFFFFF;
 }
 
 .emotion-0::after {
@@ -1572,10 +1567,7 @@ exports[`Navigation Container should correctly render amp navigation on non-home
 exports[`Navigation Container should correctly render amp navigation on non-navigation page 1`] = `
 .emotion-0 {
   position: relative;
-}
-
-.emotion-0 background-color:function (props) {
-  returnisOpen?(cov_iligcbjo3().b[5][0]++, props.theme.palette.EBON) : (cov_iligcbjo3().b[5][1]++, props.theme.palette.WHITE);
+  background-color: #FFFFFF;
 }
 
 .emotion-0::after {
@@ -2307,10 +2299,7 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
 exports[`Navigation Container should correctly render canonical navigation 1`] = `
 .emotion-0 {
   position: relative;
-}
-
-.emotion-0 background-color:function (props) {
-  returnisOpen?(cov_iligcbjo3().b[5][0]++, props.theme.palette.EBON) : (cov_iligcbjo3().b[5][1]++, props.theme.palette.WHITE);
+  background-color: #FFFFFF;
 }
 
 .emotion-0::after {
@@ -2723,6 +2712,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
 }
 
 .emotion-72 {
+  border-left: 0.25rem solid #B80000;
   padding-left: 0.5rem;
 }
 
@@ -3121,10 +3111,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
 exports[`Navigation Container should correctly render canonical navigation on non-home navigation page 1`] = `
 .emotion-0 {
   position: relative;
-}
-
-.emotion-0 background-color:function (props) {
-  returnisOpen?(cov_iligcbjo3().b[5][0]++, props.theme.palette.EBON) : (cov_iligcbjo3().b[5][1]++, props.theme.palette.WHITE);
+  background-color: #FFFFFF;
 }
 
 .emotion-0::after {
@@ -3836,10 +3823,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
 exports[`Navigation Container should correctly render canonical navigation on non-navigation page 1`] = `
 .emotion-0 {
   position: relative;
-}
-
-.emotion-0 background-color:function (props) {
-  returnisOpen?(cov_iligcbjo3().b[5][0]++, props.theme.palette.EBON) : (cov_iligcbjo3().b[5][1]++, props.theme.palette.WHITE);
+  background-color: #FFFFFF;
 }
 
 .emotion-0::after {
