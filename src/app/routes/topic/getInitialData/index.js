@@ -16,6 +16,7 @@ const getId = pipe(getUrlPath, removeAmp, popId);
 
 const getServiceEnv = pathname => {
   const url = Url(`https://www.bbc.com${pathname}`, true);
+
   return url.query.renderer_env || 'live';
 };
 
