@@ -2,7 +2,7 @@
 import { jsx } from '@emotion/react';
 import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
 import {
-  Curation as CurationProps,
+  CurationProps,
   VISUAL_STYLE,
   VISUAL_PROMINENCE,
 } from '#models/types/promoData';
