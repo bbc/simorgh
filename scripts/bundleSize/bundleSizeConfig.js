@@ -8,6 +8,6 @@ module.exports = {
    * We are allowing a variance of -5 on `MIN_SIZE` and +5 on `MAX_SIZE` to avoid the need for frequent changes, as bundle sizes can fluctuate
    */
 
-  MIN_SIZE: 802 - 5,
-  MAX_SIZE: 1237 + 5,
+  MIN_SIZE: 803 - 5,
+  MAX_SIZE: 1238 + 5,
 };
