@@ -30,7 +30,7 @@ export type VisualStyle = keyof typeof VISUAL_STYLE;
 
 export type VisualProminence = keyof typeof VISUAL_PROMINENCE;
 
-export interface Curation {
+export interface CurationProps {
   visualStyle: VisualStyle;
   visualProminence: VisualProminence;
   promos: Summary[];
@@ -41,3 +41,16 @@ export interface Curation {
   topStoriesTitle?: string;
   curationLength?: number;
 }
+
+export type CurationData = {
+  summaries: Summary[];
+  visualStyle?: VisualStyle | string;
+  visualProminence: VisualProminence | string;
+  curationId: string;
+  title?: string;
+  link?: string;
+  position: number;
+  activePage?: number;
+  pageCount?: number;
+  curationType?: string;
+};
