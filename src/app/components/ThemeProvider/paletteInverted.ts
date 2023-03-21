@@ -1,5 +1,3 @@
-import { Theme } from '@emotion/react';
-
 export const ARCHIVE_BLUE = '#3A549C';
 export const BLUEJAY = '#0F556C';
 export const BLUEJAY_LHT = '#C3DEE7';
