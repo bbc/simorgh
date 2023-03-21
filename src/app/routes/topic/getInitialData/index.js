@@ -15,10 +15,8 @@ const popId = path => path.split('/').pop();
 const getId = pipe(getUrlPath, removeAmp, popId);
 
 const getServiceEnv = pathname => {
-  const url = new URL(`https://www.bbc.com${pathname}`);
-  const params = new URLSearchParams(url.search);
-
-  return params.get('renderer_env') || 'live';
+  const url = Url(`https://www.bbc.com${pathname}`, true);
+  return url.query.renderer_env || 'live';
 };
 
 export default async ({ getAgent, service, path: pathname, variant, page }) => {
