@@ -14,7 +14,7 @@ import { articleDataPropTypes } from '#models/propTypes/article';
 
 import FeaturesAnalysis from '#containers/CpsFeaturesAnalysis';
 import TopStoriesSection from './PagePromoSections/TopStoriesSection';
-import { Secondary, gridColumnsSecondary } from './MediaArticlePageGrid';
+import styles from './MediaArticlePage.styles';
 
 const ResponsiveComponentWrapper = styled.div`
   margin-bottom: ${GEL_SPACING_TRPL};
@@ -35,7 +35,7 @@ const SecondaryColumn = ({ pageData }) => {
   if (!topStoriesContent && !featuresContent) return null;
 
   return (
-    <Secondary>
+    <div css={styles.secondaryColumn}>
       {topStoriesContent && (
         <ResponsiveComponentWrapper data-testid="top-stories">
           <TopStoriesSection content={topStoriesContent} />
@@ -45,12 +45,11 @@ const SecondaryColumn = ({ pageData }) => {
         <ResponsiveComponentWrapper data-testid="features">
           <FeaturesAnalysis
             content={featuresContent}
-            parentColumns={gridColumnsSecondary}
             sectionLabelBackground={GREY_2}
           />
         </ResponsiveComponentWrapper>
       )}
-    </Secondary>
+    </div>
   );
 };
 

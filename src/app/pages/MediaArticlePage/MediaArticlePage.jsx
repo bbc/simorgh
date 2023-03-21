@@ -81,13 +81,7 @@ import RelatedContentSection from './PagePromoSections/RelatedContentSection';
 
 import SecondaryColumn from './SecondaryColumn';
 
-import MediaArticlePageGrid, { Primary } from './MediaArticlePageGrid';
-
 import styles from './MediaArticlePage.styles';
-
-const Wrapper = styled.div`
-  background-color: ${props => props.theme.palette.GREY_2};
-`;
 
 const MediaArticlePageMostReadSection = styled(MostReadSection)`
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
@@ -108,10 +102,6 @@ const MediaArticlePageMostReadSection = styled(MostReadSection)`
     padding: 0 ${GEL_SPACING_DBL} ${GEL_SPACING_TRPL};
     max-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN};
   }
-`;
-
-const Main = styled.main`
-  padding-bottom: ${GEL_SPACING_TRPL};
 `;
 
 const StyledRelatedTopics = styled(RelatedTopics)`
@@ -264,7 +254,7 @@ const MediaArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   };
 
   return (
-    <Wrapper>
+    <div css={styles.pageWrapper}>
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
       <ComscoreAnalytics />
@@ -299,9 +289,9 @@ const MediaArticlePage = ({ pageData, mostReadEndpointOverride }) => {
         <CanonicalAdBootstrapJs adcampaign={adcampaign} />
       )}
       {isAdsEnabled && <AdContainer slotType="leaderboard" />}
-      <MediaArticlePageGrid>
-        <Primary>
-          <Main role="main">
+      <div css={styles.grid}>
+        <div css={styles.primaryColumn}>
+          <main css={styles.mainContent} role="main">
             <Blocks
               /**
                * TODO: Remove isLive check when a11y swarm is complete
@@ -311,7 +301,7 @@ const MediaArticlePage = ({ pageData, mostReadEndpointOverride }) => {
               blocks={isLive() ? articleBlocks : blocks}
               componentsToRender={componentsToRender}
             />
-          </Main>
+          </main>
           {showRelatedTopics && topics && (
             <StyledRelatedTopics
               topics={topics}
@@ -321,16 +311,16 @@ const MediaArticlePage = ({ pageData, mostReadEndpointOverride }) => {
             />
           )}
           <RelatedContentSection content={blocks} />
-        </Primary>
+        </div>
         <SecondaryColumn pageData={pageData} />
-      </MediaArticlePageGrid>
+      </div>
       <MostReadContainer
         mostReadEndpointOverride={mostReadEndpointOverride}
         wrapper={MostReadWrapper}
       />
       <OptimizelyPageViewTracking />
       <OptimizelyArticleCompleteTracking />
-    </Wrapper>
+    </div>
   );
 };
 
