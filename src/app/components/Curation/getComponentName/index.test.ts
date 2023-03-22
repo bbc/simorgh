@@ -1,4 +1,7 @@
-import { VISUAL_STYLE, VISUAL_PROMINENCE } from '#models/types/promoData';
+import {
+  VISUAL_STYLE,
+  VISUAL_PROMINENCE,
+} from '#app/models/types/curationData';
 import getComponentName, { COMPONENT_NAMES } from '.';
 
 const { MINIMUM, LOW, NORMAL, HIGH, MAXIMUM } = VISUAL_PROMINENCE;

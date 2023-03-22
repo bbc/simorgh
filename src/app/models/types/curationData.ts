@@ -42,7 +42,7 @@ export interface CurationProps {
   curationLength?: number;
 }
 
-export type CurationData = {
+export interface CurationData {
   summaries: Summary[];
   visualStyle?: VisualStyle | string;
   visualProminence: VisualProminence | string;
@@ -53,4 +53,4 @@ export type CurationData = {
   activePage?: number;
   pageCount?: number;
   curationType?: string;
-};
+}
