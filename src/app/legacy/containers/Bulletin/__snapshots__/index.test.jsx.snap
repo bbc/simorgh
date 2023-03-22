@@ -3,6 +3,7 @@
 exports[`Bulletin Container snapshots should render a Live Radio bulletin correctly 1`] = `
 .emotion-0 {
   position: relative;
+  background-color: #F2F2F2;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-column-gap: 1rem;
@@ -96,6 +97,7 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
 }
 
 .emotion-8 {
+  color: #222222;
   margin: 0;
   padding: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -383,6 +385,7 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
 exports[`Bulletin Container snapshots should render a Live TV bulletin correctly 1`] = `
 .emotion-0 {
   position: relative;
+  background-color: #F2F2F2;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-column-gap: 1rem;
@@ -481,6 +484,7 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
 }
 
 .emotion-8 {
+  color: #222222;
   margin: 0;
   padding: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -773,6 +777,7 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
 exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1`] = `
 .emotion-0 {
   position: relative;
+  background-color: #F2F2F2;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-column-gap: 1rem;
@@ -866,6 +871,7 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
 }
 
 .emotion-8 {
+  color: #222222;
   margin: 0;
   padding: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1138,6 +1144,7 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
 exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] = `
 .emotion-0 {
   position: relative;
+  background-color: #F2F2F2;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-column-gap: 1rem;
@@ -1236,6 +1243,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
 }
 
 .emotion-8 {
+  color: #222222;
   margin: 0;
   padding: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1513,6 +1521,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
 exports[`Bulletin Container snapshots should render a TV bulletin with lang attribute 1`] = `
 .emotion-0 {
   position: relative;
+  background-color: #F2F2F2;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-column-gap: 1rem;
@@ -1611,6 +1620,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin with lang attr
 }
 
 .emotion-8 {
+  color: #222222;
   margin: 0;
   padding: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;

@@ -828,6 +828,12 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - L
   border-bottom: solid 0.0625rem #AEAEB5;
 }
 
+.emotion-2 a:focus,
+.emotion-2 a:hover {
+  color: #222222;
+  background-color: #F6A21D;
+}
+
 .emotion-2 a:hover,
 .emotion-2 a:focus {
   border-bottom: solid 0.125rem transparent;
@@ -989,6 +995,12 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - L
   }
 }
 
+.emotion-10 button:focus,
+.emotion-10 button:hover {
+  color: #222222;
+  background-color: #F6A21D;
+}
+
 .emotion-10 button:hover,
 .emotion-10 button:focus {
   -webkit-text-decoration: underline;
@@ -1103,6 +1115,12 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - R
   -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: solid 0.0625rem #AEAEB5;
+}
+
+.emotion-2 a:focus,
+.emotion-2 a:hover {
+  color: #222222;
+  background-color: #F6A21D;
 }
 
 .emotion-2 a:hover,
@@ -1264,6 +1282,12 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - R
     font-size: 0.875rem;
     line-height: 1.375rem;
   }
+}
+
+.emotion-10 button:focus,
+.emotion-10 button:hover {
+  color: #222222;
+  background-color: #F6A21D;
 }
 
 .emotion-10 button:hover,

@@ -738,6 +738,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
   width: 100%;
   width: calc(100% - 0.5rem);
   margin-left: 0.5rem;
+  border-left: 1px solid #6E6E73;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -2783,6 +2784,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
   width: 100%;
   width: calc(100% - 0.5rem);
   margin-left: 0.5rem;
+  border-left: 1px solid #6E6E73;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -4840,6 +4842,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   width: 100%;
   width: calc(100% - 0.5rem);
   margin-left: 0.5rem;
+  border-left: 1px solid #6E6E73;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -7359,6 +7362,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
   width: 100%;
   width: calc(100% - 0.5rem);
   margin-left: 0.5rem;
+  border-left: 1px solid #6E6E73;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -8844,6 +8848,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   width: 100%;
   width: calc(100% - 0.5rem);
   margin-left: 0.5rem;
+  border-left: 1px solid #6E6E73;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {

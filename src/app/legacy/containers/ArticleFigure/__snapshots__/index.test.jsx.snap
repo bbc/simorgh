@@ -745,6 +745,7 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
   width: 100%;
   width: calc(100% - 0.5rem);
   margin-left: 0.5rem;
+  border-left: 1px solid #6E6E73;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1144,6 +1145,7 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
   width: 100%;
   width: calc(100% - 0.5rem);
   margin-left: 0.5rem;
+  border-left: 1px solid #6E6E73;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1543,6 +1545,7 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
   width: 100%;
   width: calc(100% - 0.5rem);
   margin-left: 0.5rem;
+  border-left: 1px solid #6E6E73;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -2914,6 +2917,7 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
   width: 100%;
   width: calc(100% - 0.5rem);
   margin-left: 0.5rem;
+  border-left: 1px solid #6E6E73;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -3317,6 +3321,7 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
   width: 100%;
   width: calc(100% - 0.5rem);
   margin-left: 0.5rem;
+  border-left: 1px solid #6E6E73;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -3720,6 +3725,7 @@ exports[`ArticleFigure should render an image with caption text with inline link
   width: 100%;
   width: calc(100% - 0.5rem);
   margin-left: 0.5rem;
+  border-left: 1px solid #6E6E73;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
