@@ -35,7 +35,7 @@ describe('Paragraph', () => {
       color: '#141414',
       fontSize: '0.9375rem',
       lineHeight: '1.5rem',
-      fontFamily: 'Arial,Verdana,Geneva,Helvetica,sans-serif',
+      fontFamily: '"Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif',
       fontStyle: 'normal',
       fontWeight: 400,
       margin: 0,

@@ -56,7 +56,7 @@ describe('Text', () => {
       fontSize: '0.9375rem',
       lineHeight: '1.5rem',
       fontFamily:
-        '"BBC Reith Qalam",Times New Roman,Arial,Verdana,Geneva,Helvetica,sans-serif',
+        '"BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif',
       fontStyle: 'normal',
       fontWeight: 400,
     });
