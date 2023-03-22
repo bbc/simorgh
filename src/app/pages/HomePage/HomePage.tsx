@@ -26,7 +26,6 @@ const HomePage = ({ pageData }: HomePageProps) => {
   const { topStoriesTitle } = translations;
 
   return (
-  
     <>
       <main css={styles.main}>
         <div css={styles.inner}>
