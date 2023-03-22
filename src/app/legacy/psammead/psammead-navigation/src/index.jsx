@@ -237,9 +237,9 @@ NavigationLi.defaultProps = {
 // color of the Navigation
 const StyledNav = styled.nav`
   position: relative;
-  ${({ isOpen }) =>
-    `background-color: ${props =>
-      isOpen ? props.theme.palette.EBON : props.theme.palette.WHITE};`}
+  background-color: ${({ isOpen }) =>
+    props =>
+      isOpen ? props.theme.palette.EBON : props.theme.palette.WHITE};
   ${({ ampOpenClass }) =>
     ampOpenClass &&
     `
@@ -249,7 +249,6 @@ const StyledNav = styled.nav`
         }
       }
     `}
-  
 
   &::after {
     content: '';

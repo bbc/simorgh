@@ -428,10 +428,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 
 .emotion-31 {
   position: relative;
-}
-
-.emotion-31 background-color:function (props) {
-  returnisOpen?(cov_iligcbjo3().b[5][0]++, props.theme.palette.EBON) : (cov_iligcbjo3().b[5][1]++, props.theme.palette.WHITE);
+  background-color: #FFFFFF;
 }
 
 .emotion-31::after {
