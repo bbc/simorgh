@@ -6,7 +6,6 @@ import Byline from './index';
 describe('Byline', () => {
   it('should render correctly', () => {
     const { container } = render(
-      'should render correctly',
       <Byline
         service="news"
         script={latin}
@@ -20,7 +19,6 @@ describe('Byline', () => {
 
   it('should render correctly without an avatar', () => {
     const { container } = render(
-      'should render correctly without an avatar',
       <Byline
         service="news"
         script={latin}
