@@ -382,6 +382,12 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
   padding: 0.5rem 0 1rem;
 }
 
+@media (max-width: 62.9375rem) {
+  .emotion-21 {
+    border-bottom: 0.0625rem solid #F2F2F2;
+  }
+}
+
 .emotion-21:last-child {
   border: none;
 }

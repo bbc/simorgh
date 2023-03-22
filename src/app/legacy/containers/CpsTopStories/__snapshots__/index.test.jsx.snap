@@ -325,6 +325,12 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
   padding: 0.5rem 0 1rem;
 }
 
+@media (max-width: 62.9375rem) {
+  .emotion-19 {
+    border-bottom: 0.0625rem solid #F2F2F2;
+  }
+}
+
 .emotion-19:last-child {
   border: none;
 }

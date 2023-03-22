@@ -5,6 +5,12 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
   padding: 0.5rem 0 1rem;
 }
 
+@media (max-width: 62.9375rem) {
+  .emotion-1 {
+    border-bottom: 0.0625rem solid #F2F2F2;
+  }
+}
+
 .emotion-1:last-child {
   border: none;
 }
@@ -366,6 +372,12 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
 
 .emotion-26 {
   padding: 0.5rem 0 1rem;
+}
+
+@media (max-width: 62.9375rem) {
+  .emotion-26 {
+    border-bottom: 0.0625rem solid #F2F2F2;
+  }
 }
 
 .emotion-26:last-child {
@@ -960,6 +972,12 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
   padding: 0.5rem 0 1rem;
 }
 
+@media (max-width: 62.9375rem) {
+  .emotion-1 {
+    border-bottom: 0.0625rem solid #F2F2F2;
+  }
+}
+
 .emotion-1:last-child {
   border: none;
 }
@@ -1282,6 +1300,12 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
 
 .emotion-22 {
   padding: 0.5rem 0 1rem;
+}
+
+@media (max-width: 62.9375rem) {
+  .emotion-22 {
+    border-bottom: 0.0625rem solid #F2F2F2;
+  }
 }
 
 .emotion-22:last-child {
@@ -1759,6 +1783,12 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
 exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1`] = `
 .emotion-1 {
   padding: 0.5rem 0 1rem;
+}
+
+@media (max-width: 62.9375rem) {
+  .emotion-1 {
+    border-bottom: 0.0625rem solid #F2F2F2;
+  }
 }
 
 .emotion-1:last-child {
@@ -2788,6 +2818,12 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
   padding: 0.5rem 0 1rem;
 }
 
+@media (max-width: 62.9375rem) {
+  .emotion-1 {
+    border-bottom: 0.0625rem solid #F2F2F2;
+  }
+}
+
 .emotion-1:last-child {
   border: none;
 }
@@ -3502,6 +3538,12 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
 exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rtl 1`] = `
 .emotion-1 {
   padding: 0.5rem 0 1rem;
+}
+
+@media (max-width: 62.9375rem) {
+  .emotion-1 {
+    border-bottom: 0.0625rem solid #F2F2F2;
+  }
 }
 
 .emotion-1:last-child {
@@ -4390,6 +4432,12 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
   padding: 0.5rem 0 1rem;
 }
 
+@media (max-width: 62.9375rem) {
+  .emotion-1 {
+    border-bottom: 0.0625rem solid #F2F2F2;
+  }
+}
+
 .emotion-1:last-child {
   border: none;
 }
@@ -4938,6 +4986,12 @@ exports[`FrontPageStoryRows Container - snapshots TopRow - rtl 1`] = `
   padding: 0.5rem 0 1rem;
 }
 
+@media (max-width: 62.9375rem) {
+  .emotion-1 {
+    border-bottom: 0.0625rem solid #F2F2F2;
+  }
+}
+
 .emotion-1:last-child {
   border: none;
 }
@@ -5392,6 +5446,12 @@ exports[`FrontPageStoryRows Container - snapshots TopRow - rtl 1`] = `
 exports[`FrontPageStoryRows Container - snapshots TopRow 1`] = `
 .emotion-1 {
   padding: 0.5rem 0 1rem;
+}
+
+@media (max-width: 62.9375rem) {
+  .emotion-1 {
+    border-bottom: 0.0625rem solid #F2F2F2;
+  }
 }
 
 .emotion-1:last-child {

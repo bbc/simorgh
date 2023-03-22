@@ -17,6 +17,7 @@ import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { NAV_BAR_TOP_BOTTOM_SPACING } from './DropdownNavigation';
 import { focusIndicatorThickness } from '../../../../components/ThemeProvider/focusIndicator';
+import { EBON, POSTBOX } from '../../../../components/ThemeProvider/palette';
 
 const SPACING_AROUND_NAV_ITEMS = `${NAV_BAR_TOP_BOTTOM_SPACING}rem`; // 12px
 const CURRENT_ITEM_HOVER_BORDER = '0.3125rem'; // 5px
@@ -74,8 +75,7 @@ const StyledLink = styled.a`
     ${({ currentLink }) =>
       currentLink &&
       `
-        border-bottom: ${CURRENT_ITEM_HOVER_BORDER} solid ${props =>
-        props.theme.palette.POSTBOX};
+        border-bottom: ${CURRENT_ITEM_HOVER_BORDER} solid ${POSTBOX};
       `}
   }
 
@@ -245,7 +245,7 @@ const StyledNav = styled.nav`
     `
       &.${ampOpenClass} {
         @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
-          background-color: ${props => props.theme.palette.EBON};
+          background-color: ${EBON};
         }
       }
     `}

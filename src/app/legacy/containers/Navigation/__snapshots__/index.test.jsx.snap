@@ -6,6 +6,12 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   background-color: #FFFFFF;
 }
 
+@media (max-width: 37.4375rem) {
+  .emotion-0.si-nav-open {
+    background-color: #222222;
+  }
+}
+
 .emotion-0::after {
   content: '';
   position: absolute;
@@ -311,6 +317,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   right: 0;
   bottom: 0;
   border-bottom: 0.25rem solid #B80000;
+  border-bottom: 0.3125rem solid #B80000;
 }
 
 .emotion-71:focus::after {
@@ -836,6 +843,12 @@ exports[`Navigation Container should correctly render amp navigation on non-home
 .emotion-0 {
   position: relative;
   background-color: #FFFFFF;
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-0.si-nav-open {
+    background-color: #222222;
+  }
 }
 
 .emotion-0::after {
@@ -1568,6 +1581,12 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
 .emotion-0 {
   position: relative;
   background-color: #FFFFFF;
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-0.si-nav-open {
+    background-color: #222222;
+  }
 }
 
 .emotion-0::after {
@@ -2536,6 +2555,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   right: 0;
   bottom: 0;
   border-bottom: 0.25rem solid #B80000;
+  border-bottom: 0.3125rem solid #B80000;
 }
 
 .emotion-18:focus::after {

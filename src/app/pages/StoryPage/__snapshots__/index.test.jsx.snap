@@ -1708,6 +1708,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   padding: 0.5rem 0 1rem;
 }
 
+@media (max-width: 62.9375rem) {
+  .emotion-201 {
+    border-bottom: 0.0625rem solid #F2F2F2;
+  }
+}
+
 .emotion-201:last-child {
   border: none;
 }
@@ -8554,6 +8560,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 .emotion-202 {
   padding: 0.5rem 0 1rem;
+}
+
+@media (max-width: 62.9375rem) {
+  .emotion-202 {
+    border-bottom: 0.0625rem solid #F2F2F2;
+  }
 }
 
 .emotion-202:last-child {
