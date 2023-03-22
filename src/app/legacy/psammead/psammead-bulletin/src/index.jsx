@@ -25,10 +25,11 @@ import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
 import { Link } from '#psammead/psammead-story-promo/src';
 import ImageGridItem from './ImageStyles';
 import TextGridItem from './TextStyles';
+import { LUNAR, EBON } from '../../../../components/ThemeProvider/palette';
 
 const bulletinWrapperStyles = `
   position: relative;
-  background-color: ${props => props.theme.palette.LUNAR};
+  background-color: ${LUNAR};
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-column-gap: ${GEL_SPACING_DBL};
@@ -47,7 +48,7 @@ const TVBulletinWrapper = styled.div`
 `;
 
 const headingStyles = ({ service }) => `
-  color: ${props => props.theme.palette.EBON};
+  color: ${EBON};
   margin: 0; /* Reset */
   padding: ${GEL_SPACING};
   ${service && getSerifMedium(service)}

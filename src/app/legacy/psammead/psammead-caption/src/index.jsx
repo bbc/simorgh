@@ -14,10 +14,11 @@ import {
 import { getLongPrimer } from '#psammead/gel-foundations/src/typography';
 import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
+import { METAL } from '../../../../components/ThemeProvider/palette';
 
 const rtlStyles = `
   margin-right: ${GEL_MARGIN_BELOW_400PX};
-  border-right: 1px solid ${props => props.theme.palette.METAL};
+  border-right: 1px solid ${METAL};
 
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     width: calc(100% - ${GEL_MARGIN_ABOVE_400PX});
@@ -34,7 +35,7 @@ const rtlStyles = `
 
 const ltrStyles = `
   margin-left: ${GEL_MARGIN_BELOW_400PX};
-  border-left: 1px solid ${props => props.theme.palette.METAL};
+  border-left: 1px solid ${METAL};
 
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     width: calc(100% - ${GEL_MARGIN_ABOVE_400PX});
