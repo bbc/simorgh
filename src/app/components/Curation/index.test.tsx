@@ -2,7 +2,10 @@ import React from 'react';
 
 import fixture from '#data/pidgin/topics/c95y35941vrt.json';
 import mundoFixture from '#data/mundo/topics/c1en6xwmpkvt.json';
-import { VISUAL_STYLE, VISUAL_PROMINENCE } from '#models/types/promoData';
+import {
+  VISUAL_STYLE,
+  VISUAL_PROMINENCE,
+} from '#app/models/types/curationData';
 import { render } from '../react-testing-library-with-providers';
 import Curation from '.';
 
