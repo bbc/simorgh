@@ -8,6 +8,7 @@ export default {
     }),
   grid: ({ mq }: Theme) =>
     css({
+      // Need a better way to define these values globally
       maxWidth: `${pixelsToRem(1008)}rem`,
       margin: '0 auto',
       display: 'grid',
@@ -72,7 +73,7 @@ export default {
       [mq.GROUP_5_MIN_WIDTH]: {
         margin: '0 auto',
         padding: `0 ${spacings.DOUBLE}rem ${spacings.TRIPLE}rem`,
-        // May need a better way to define these values globally
+        // Need a better way to define these values globally
         maxWidth: `${pixelsToRem(1280)}rem`,
       },
     }),
