@@ -74,6 +74,7 @@ describe('SectionLabel', () => {
           >
             بعض محتوى النص
           </SectionLabel>,
+          { service: 'persian' },
         );
         expect(container).toMatchSnapshot();
       });
@@ -139,6 +140,7 @@ describe('SectionLabel', () => {
           >
             بعض محتوى النص
           </SectionLabel>,
+          { service: 'persian' },
         );
         expect(container).toMatchSnapshot();
       });
@@ -186,6 +188,7 @@ describe('SectionLabel', () => {
             >
               بعض محتوى النص
             </SectionLabel>,
+            { service: 'persian' },
           );
           expect(container).toMatchSnapshot();
         });
@@ -238,6 +241,7 @@ describe('SectionLabel', () => {
             >
               بعض محتوى النص
             </SectionLabel>,
+            { service: 'persian' },
           );
           expect(container).toMatchSnapshot();
         });

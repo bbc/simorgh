@@ -4,7 +4,6 @@ import {
   render,
   fireEvent,
 } from '../../../components/react-testing-library-with-providers';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import InlineLinkContainer from './index';
 
 const fragmentBlock = (text, attributes = []) => ({
@@ -16,68 +15,62 @@ const fragmentBlock = (text, attributes = []) => ({
   },
 });
 
-const testInternalInlineLink = (description, locator, blocks, isExternal) => {
-  it('should render correctly', () => {
-    const { container } = render(
-      description,
-      /*
-      for the value it would bring, it is much simpler to wrap a react-router Link in a Router, rather than mock a Router or pass some mocked context.
-    */
-      <StaticRouter>
-        <ServiceContextProvider service="news">
-          <InlineLinkContainer
-            locator={locator}
-            blocks={blocks}
-            isExternal={isExternal}
-          />
-        </ServiceContextProvider>
-      </StaticRouter>,
-    );
-    expect(container).toMatchSnapshot();
-  });
-};
-
 // eslint-disable-next-line react/prop-types
 const InlineLinkContext = ({ locator, isExternal, blocks, onClick }) => (
   <StaticRouter>
-    <ServiceContextProvider service="news">
-      <InlineLinkContainer
-        locator={locator}
-        blocks={blocks}
-        isExternal={isExternal}
-        onClick={onClick}
-      />
-    </ServiceContextProvider>
+    <InlineLinkContainer
+      locator={locator}
+      blocks={blocks}
+      isExternal={isExternal}
+      onClick={onClick}
+    />
   </StaticRouter>
 );
 
 describe('InlineLinkContainer', () => {
   describe('link matching routes for SPA', () => {
-    testInternalInlineLink(
-      'should render correctly',
-      'https://www.bbc.com/news/articles/c0g992jmmkko',
-      [fragmentBlock('This is text for an internal link')],
-      false,
-    );
+    it('should render correctly', () => {
+      const { container } = render(
+        /*
+      for the value it would bring, it is much simpler to wrap a react-router Link in a Router, rather than mock a Router or pass some mocked context.
+    */
+        <StaticRouter>
+          <InlineLinkContainer
+            locator="https://www.bbc.com/news/articles/c0g992jmmkko"
+            blocks={[fragmentBlock('This is text for an internal link')]}
+            isExternal={false}
+          />
+        </StaticRouter>,
+      );
+      expect(container).toMatchSnapshot();
+    });
 
-    testInternalInlineLink(
-      'should render correctly for TEST environment',
-      'https://www.test.bbc.com/news/articles/c0g992jmmkko',
-      [fragmentBlock('This is text for an internal link')],
-      false,
-    );
+    it('should render correctly for TEST environment', () => {
+      const { container } = render(
+        /*
+      for the value it would bring, it is much simpler to wrap a react-router Link in a Router, rather than mock a Router or pass some mocked context.
+    */
+        <StaticRouter>
+          <InlineLinkContainer
+            locator="https://www.test.bbc.com/news/articles/c0g992jmmkko"
+            blocks={[fragmentBlock('This is text for an internal link')]}
+            isExternal={false}
+          />
+        </StaticRouter>,
+      );
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('internal link not matching SPA route', () => {
     it('should render correctly', () => {
       const { container } = render(
-        <ServiceContextProvider service="news">
-          <InlineLinkContainer
-            locator="https://www.bbc.com/news"
-            blocks={[fragmentBlock('This is bold text for a link', ['bold'])]}
-            isExternal={false}
-          />
-        </ServiceContextProvider>,
+        <InlineLinkContainer
+          locator="https://www.bbc.com/news"
+          blocks={[fragmentBlock('This is bold text for a link', ['bold'])]}
+          isExternal={false}
+        />,
+        { service: 'news' },
       );
       expect(container).toMatchSnapshot();
     });
@@ -86,26 +79,24 @@ describe('InlineLinkContainer', () => {
   describe('external link accessibility', () => {
     it('should be explicitly marked "external" for screen reader users', () => {
       const { container } = render(
-        <ServiceContextProvider service="news">
-          <InlineLinkContainer
-            locator="https://www.example.com/"
-            blocks={[fragmentBlock('This is a link')]}
-            isExternal
-          />
-        </ServiceContextProvider>,
+        <InlineLinkContainer
+          locator="https://www.example.com/"
+          blocks={[fragmentBlock('This is a link')]}
+          isExternal
+        />,
+        { service: 'news' },
       );
       expect(container).toMatchSnapshot();
     });
 
     it('should be explicitly marked "external" for screen reader users & localised', () => {
       const { container } = render(
-        <ServiceContextProvider service="persian">
-          <InlineLinkContainer
-            locator="https://www.example.com/"
-            blocks={[fragmentBlock('این لینک هست')]}
-            isExternal
-          />
-        </ServiceContextProvider>,
+        <InlineLinkContainer
+          locator="https://www.example.com/"
+          blocks={[fragmentBlock('این لینک هست')]}
+          isExternal
+        />,
+        { service: 'persian' },
       );
       expect(container).toMatchSnapshot();
     });

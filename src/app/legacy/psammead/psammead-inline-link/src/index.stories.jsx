@@ -15,6 +15,7 @@ import {
 } from '#psammead/psammead-styles/src/font-styles';
 import notes from '../README.md';
 import InlineLink from './index';
+import { POSTBOX } from '../../../../components/ThemeProvider/palette';
 
 const RegularParagraph = styled.p`
   ${({ script }) => getBodyCopy(script)};
@@ -40,7 +41,7 @@ const Caption = styled.figcaption`
 
 const textDecorationStyle = {
   borderBottom: 'none',
-  textDecoration: `underline ${props => props.theme.palette.POSTBOX}`,
+  textDecoration: `underline ${POSTBOX}`,
 };
 
 /* eslint-disable react/prop-types */

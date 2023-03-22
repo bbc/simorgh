@@ -1175,7 +1175,7 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
   font-style: normal;
   font-size: 0.875rem;
   line-height: 1rem;
-  color: undefined;
+  color: #545658;
   padding: 0.5rem 0;
 }
 
@@ -1800,7 +1800,7 @@ exports[`CanonicalSocialEmbed YouTube should render correctly for YouTube 1`] = 
   font-style: normal;
   font-size: 0.875rem;
   line-height: 1rem;
-  color: undefined;
+  color: #545658;
   padding: 0.5rem 0;
 }
 

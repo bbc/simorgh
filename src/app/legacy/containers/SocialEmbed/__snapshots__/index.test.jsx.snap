@@ -302,7 +302,7 @@ exports[`SocialEmbedContainer AMP should match snapshot 1`] = `
   font-style: normal;
   font-size: 0.875rem;
   line-height: 1rem;
-  color: undefined;
+  color: #545658;
   padding: 0.5rem 0;
 }
 
@@ -628,7 +628,7 @@ exports[`SocialEmbedContainer Canonical should render a Facebook Post block and 
   font-style: normal;
   font-size: 0.875rem;
   line-height: 1rem;
-  color: undefined;
+  color: #545658;
   padding: 0.5rem 0;
 }
 
@@ -955,7 +955,7 @@ exports[`SocialEmbedContainer Canonical should render a Facebook Video block and
   font-style: normal;
   font-size: 0.875rem;
   line-height: 1rem;
-  color: undefined;
+  color: #545658;
   padding: 0.5rem 0;
 }
 
@@ -1377,7 +1377,7 @@ exports[`SocialEmbedContainer Canonical should render a TikTok block and unmount
   font-style: normal;
   font-size: 0.875rem;
   line-height: 1rem;
-  color: undefined;
+  color: #545658;
   padding: 0.5rem 0;
 }
 
@@ -1693,7 +1693,7 @@ exports[`SocialEmbedContainer Canonical should render a Twitter block and unmoun
   font-style: normal;
   font-size: 0.875rem;
   line-height: 1rem;
-  color: undefined;
+  color: #545658;
   padding: 0.5rem 0;
 }
 
@@ -2103,7 +2103,7 @@ exports[`SocialEmbedContainer Canonical should render a YouTube block and unmoun
   font-style: normal;
   font-size: 0.875rem;
   line-height: 1rem;
-  color: undefined;
+  color: #545658;
   padding: 0.5rem 0;
 }
 
@@ -2416,7 +2416,7 @@ exports[`SocialEmbedContainer Canonical should render an Instagram block and unm
   font-style: normal;
   font-size: 0.875rem;
   line-height: 1rem;
-  color: undefined;
+  color: #545658;
   padding: 0.5rem 0;
 }
 
