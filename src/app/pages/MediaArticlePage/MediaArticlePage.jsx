@@ -4,12 +4,10 @@
 import { useContext } from 'react';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
-import propEq from 'ramda/src/propEq';
 import styled from '@emotion/styled';
 import { jsx, useTheme } from '@emotion/react';
 import { string, node } from 'prop-types';
 import useToggle from '#hooks/useToggle';
-import isLive from '#app/lib/utilities/isLive';
 
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
@@ -28,7 +26,7 @@ import {
   GEL_SPACING_QUAD,
   GEL_SPACING_QUIN,
 } from '#psammead/gel-foundations/src/spacings';
-import { singleTextBlock } from '#app/models/blocks';
+
 import { articleDataPropTypes } from '#models/propTypes/article';
 import ArticleMetadata from '#containers/ArticleMetadata';
 import { RequestContext } from '#contexts/RequestContext';
@@ -154,7 +152,6 @@ const MediaArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const aboutTags = getAboutTags(pageData);
   const topics = path(['metadata', 'topics'], pageData);
   const blocks = pathOr([], ['content', 'model', 'blocks'], pageData);
-  const startsWithHeading = propEq('type', 'headline')(blocks[0] || {});
 
   const bylineBlock = blocks.find(block => block.type === 'byline');
   const bylineContribBlocks = pathOr([], ['model', 'blocks'], bylineBlock);
@@ -183,7 +180,7 @@ const MediaArticlePage = ({ pageData, mostReadEndpointOverride }) => {
        * TODO: Consolate the styling into a single stylesheet for the media player
        * - The media player needs padding top applied, but is also inheriting styles from other components
        */
-      <div css={!isLive() && styles.mediaPlayer}>
+      <div css={styles.mediaPlayer}>
         <ArticleMediaPlayer {...props} />
       </div>
     ),
@@ -192,7 +189,7 @@ const MediaArticlePage = ({ pageData, mostReadEndpointOverride }) => {
        * TODO: Consolate the styling into a single stylesheet for the media player
        * - The media player needs padding top applied, but is also inheriting styles from other components
        */
-      <div css={!isLive() && styles.mediaPlayer}>
+      <div css={styles.mediaPlayer}>
         <ArticleMediaPlayer {...props} />
       </div>
     ),
@@ -225,16 +222,6 @@ const MediaArticlePage = ({ pageData, mostReadEndpointOverride }) => {
       <CpsRecommendations {...props} items={recommendationsData} />
     ),
   };
-
-  const visuallyHiddenBlock = {
-    id: null,
-    model: { blocks: [singleTextBlock(headline)] },
-    type: 'visuallyHiddenHeadline',
-  };
-
-  const articleBlocks = startsWithHeading
-    ? blocks
-    : [visuallyHiddenBlock, ...blocks];
 
   const promoImageBlocks = pathOr(
     [],
@@ -302,15 +289,7 @@ const MediaArticlePage = ({ pageData, mostReadEndpointOverride }) => {
       <MediaArticlePageGrid>
         <Primary>
           <Main role="main">
-            <Blocks
-              /**
-               * TODO: Remove isLive check when a11y swarm is complete
-               * - Live will continue to work as it does now, using the visuallyHiddenHeadline block inserted manually
-               * - Test will use the BFF to format the ordering of the blocks, so no work is needed in Simorgh
-               */
-              blocks={isLive() ? articleBlocks : blocks}
-              componentsToRender={componentsToRender}
-            />
+            <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           </Main>
           {showRelatedTopics && topics && (
             <StyledRelatedTopics
