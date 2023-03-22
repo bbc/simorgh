@@ -26,7 +26,7 @@ describe('Timestamp', () => {
     isNull('should return null', <Timestamp />);
   });
 
-  it('should render withouth a leading zero on the day', () => {
+  it('should render without a leading zero on the day', () => {
     const { container } = render(
       <Timestamp
         timestamp={noLeadingZeroTimestamp}
