@@ -4,28 +4,9 @@
 import { useContext } from 'react';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
-import styled from '@emotion/styled';
 import { jsx, useTheme } from '@emotion/react';
 import { string, node } from 'prop-types';
 import useToggle from '#hooks/useToggle';
-
-import {
-  GEL_GROUP_1_SCREEN_WIDTH_MAX,
-  GEL_GROUP_2_SCREEN_WIDTH_MIN,
-  GEL_GROUP_3_SCREEN_WIDTH_MAX,
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
-  GEL_GROUP_4_SCREEN_WIDTH_MAX,
-  GEL_GROUP_5_SCREEN_WIDTH_MIN,
-} from '#psammead/gel-foundations/src/breakpoints';
-import {
-  GEL_MARGIN_ABOVE_400PX,
-  GEL_MARGIN_BELOW_400PX,
-  GEL_SPACING,
-  GEL_SPACING_DBL,
-  GEL_SPACING_TRPL,
-  GEL_SPACING_QUAD,
-  GEL_SPACING_QUIN,
-} from '#psammead/gel-foundations/src/spacings';
 
 import { articleDataPropTypes } from '#models/propTypes/article';
 import ArticleMetadata from '#containers/ArticleMetadata';
@@ -80,40 +61,6 @@ import RelatedContentSection from './PagePromoSections/RelatedContentSection';
 import SecondaryColumn from './SecondaryColumn';
 
 import styles from './MediaArticlePage.styles';
-
-const MediaArticlePageMostReadSection = styled(MostReadSection)`
-  @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
-    margin: 0 ${GEL_MARGIN_BELOW_400PX} 0 ${GEL_MARGIN_BELOW_400PX};
-    padding-bottom: ${GEL_SPACING_TRPL};
-  }
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-    margin: 0 ${GEL_MARGIN_ABOVE_400PX} 0 ${GEL_MARGIN_ABOVE_400PX};
-    padding-bottom: ${GEL_SPACING_QUAD};
-  }
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
-    margin: 0 ${GEL_MARGIN_ABOVE_400PX} 0 ${GEL_MARGIN_ABOVE_400PX};
-    padding-bottom: ${GEL_SPACING_QUIN};
-  }
-  @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
-    width: 100%; /* Needed for IE11 */
-    margin: 0 auto;
-    padding: 0 ${GEL_SPACING_DBL} ${GEL_SPACING_TRPL};
-    max-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN};
-  }
-`;
-
-const StyledRelatedTopics = styled(RelatedTopics)`
-  margin: ${GEL_SPACING_DBL};
-  padding-bottom: ${GEL_SPACING};
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    margin: ${GEL_SPACING_QUAD} 0;
-    padding-bottom: ${GEL_SPACING_QUAD};
-  }
-`;
-
-const MpuContainer = styled(AdContainer)`
-  margin-bottom: ${GEL_SPACING_TRPL};
-`;
 
 const MediaArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
@@ -207,7 +154,9 @@ const MediaArticlePage = ({ pageData, mostReadEndpointOverride }) => {
     group: gist,
     links: props => <ScrollablePromo {...props} />,
     mpu: props =>
-      isAdsEnabled ? <MpuContainer {...props} slotType="mpu" /> : null,
+      isAdsEnabled ? (
+        <AdContainer css={styles.adContainer} {...props} slotType="mpu" />
+      ) : null,
     wsoj: props => (
       <CpsRecommendations {...props} items={recommendationsData} />
     ),
@@ -230,10 +179,10 @@ const MediaArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   );
 
   const MostReadWrapper = ({ children }) => (
-    <MediaArticlePageMostReadSection>
+    <MostReadSection css={styles.mostReadSection}>
       <MostReadSectionLabel mobileDivider={showRelatedTopics && topics} />
       {children}
-    </MediaArticlePageMostReadSection>
+    </MostReadSection>
   );
 
   MostReadWrapper.propTypes = {
@@ -282,7 +231,8 @@ const MediaArticlePage = ({ pageData, mostReadEndpointOverride }) => {
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           </main>
           {showRelatedTopics && topics && (
-            <StyledRelatedTopics
+            <RelatedTopics
+              css={styles.relatedTopics}
               topics={topics}
               mobileDivider={false}
               backgroundColour={GREY_2}

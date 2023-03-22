@@ -47,4 +47,42 @@ export default {
     css({
       paddingTop: `${spacings.TRIPLE}rem`,
     }),
+  adContainer: ({ spacings }: Theme) =>
+    css({
+      marginBottom: `${spacings.TRIPLE}rem`,
+    }),
+
+  mostReadSection: ({ spacings, mq }: Theme) =>
+    css({
+      [mq.GROUP_1_MAX_WIDTH]: {
+        margin: `0 ${spacings.FULL}rem`,
+        paddingBottom: `${spacings.TRIPLE}rem`,
+      },
+      [mq.GROUP_2_MIN_WIDTH]: {
+        [mq.GROUP_3_MAX_WIDTH]: {
+          margin: `0 ${spacings.DOUBLE}rem`,
+          paddingBottom: `${spacings.QUADRUPLE}rem`,
+        },
+      },
+      [mq.GROUP_4_ONLY]: {
+        margin: `0 ${spacings.DOUBLE}rem`,
+        paddingBottom: `${spacings.QUINTUPLE}rem`,
+      },
+      [mq.GROUP_5_MIN_WIDTH]: {
+        margin: '0 auto',
+        padding: `0 ${spacings.DOUBLE}rem ${spacings.TRIPLE}rem`,
+        // May need a better way to define these values globally
+        maxWidth: `${pixelsToRem(1280)}rem`,
+      },
+    }),
+  relatedTopics: ({ spacings, mq }: Theme) =>
+    css({
+      margin: `${spacings.DOUBLE}rem`,
+      paddingBottom: `${spacings.FULL}rem`,
+
+      [mq.GROUP_4_MIN_WIDTH]: {
+        margin: `${spacings.QUADRUPLE}rem 0`,
+        paddingBottom: `${spacings.QUADRUPLE}rem`,
+      },
+    }),
 };
