@@ -45,6 +45,7 @@ const SecondaryColumn = ({ pageData }) => {
         <ResponsiveComponentWrapper data-testid="features">
           <FeaturesAnalysis
             content={featuresContent}
+            parentColumns={{}}
             sectionLabelBackground={GREY_2}
           />
         </ResponsiveComponentWrapper>
