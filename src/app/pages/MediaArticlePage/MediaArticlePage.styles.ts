@@ -22,6 +22,7 @@ export default {
     css({
       // Start at col 1 and span 12 columns
       gridColumn: '1 / span 12',
+      paddingBottom: '2rem',
 
       [mq.GROUP_4_MIN_WIDTH]: {
         // Start at col 1 and span 8 columns
@@ -30,13 +31,13 @@ export default {
     }),
   secondaryColumn: ({ mq }: Theme) =>
     css({
-      marginTop: '2rem',
       // Start at col 1 and span 12 columns
       gridColumn: '1 / span 12',
 
       [mq.GROUP_4_MIN_WIDTH]: {
         // Start at col 9 and span 4 columns
         gridColumn: '9 / span 4',
+        marginTop: '2rem',
       },
     }),
   mainContent: ({ spacings }: Theme) =>

@@ -20,6 +20,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
 
 .emotion-2 {
   grid-column: 1/span 12;
+  padding-bottom: 2rem;
 }
 
 @media (min-width: 63rem) {
