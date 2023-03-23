@@ -108,8 +108,8 @@ const HOME_PAGE_CONFIG: { [service in Services]: { [env in Envs]: string } } = {
     live: 'c0rp0kp534xt',
   },
   pidgin: {
-    test: '',
-    live: '',
+    test: 'c93v2kkz841t',
+    live: 'ck3yk9nz25qt',
   },
   portuguese: {
     test: '',
