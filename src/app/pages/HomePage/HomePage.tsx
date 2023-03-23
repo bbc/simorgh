@@ -2,12 +2,9 @@
 /* @jsxFrag React.Fragment */
 import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
-import {
-  CurationData,
-  VisualProminence,
-  VisualStyle,
-} from '#app/models/types/curationData';
-import Curation from '#app/components/Curation';
+import { VisualProminence, VisualStyle } from '../../models/types/curationData';
+import Curation from '../../components/Curation';
+import VisuallyHiddenText from '../../legacy/psammead/psammead-visually-hidden-text/src';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import styles from './index.styles';
 
@@ -22,12 +19,19 @@ interface HomePageProps {
 
 const HomePage = ({ pageData }: HomePageProps) => {
   const { curations } = pageData;
-  const { translations } = useContext(ServiceContext);
-  const { topStoriesTitle } = translations;
+  const { translations, product, serviceLocalizedName } =
+    useContext(ServiceContext);
+  const { topStoriesTitle, home } = translations;
 
   return (
     <>
       <main css={styles.main}>
+        <VisuallyHiddenText id="content" tabIndex={-1} as="h1">
+          {/* eslint-disable-next-line jsx-a11y/aria-role */}
+          <span role="text">
+            <span lang="en-GB">{product}</span>, {serviceLocalizedName} - {home}
+          </span>
+        </VisuallyHiddenText>
         <div css={styles.inner}>
           {curations.map(
             ({
