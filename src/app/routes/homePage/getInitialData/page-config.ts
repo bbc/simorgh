@@ -100,8 +100,8 @@ const HOME_PAGE_CONFIG: { [service in Services]: { [env in Envs]: string } } = {
     live: '',
   },
   pashto: {
-    test: '',
-    live: '',
+    test: 'c15er11z5g9t',
+    live: 'c44d8kpmz42t',
   },
   persian: {
     test: '',
