@@ -15,7 +15,7 @@ import {
 import { getPica } from '#psammead/gel-foundations/src/typography';
 import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
-import VisuallyHiddenText from '../../../../../components/psammead-visually-hidden-text/src';
+import VisuallyHiddenText from '../../../../../components/psammead-visually-hidden-text';
 
 export const NAV_BAR_TOP_BOTTOM_SPACING = 0.75; // 12px
 

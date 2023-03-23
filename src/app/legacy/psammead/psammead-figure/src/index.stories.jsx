@@ -6,7 +6,7 @@ import Copyright from '#psammead/psammead-copyright/src';
 import Image from '#psammead/psammead-image/src';
 import ImagePlaceholder from '#psammead/psammead-image-placeholder/src';
 import Paragraph from '#psammead/psammead-paragraph/src';
-import VisuallyHiddenText from '../../../../components/psammead-visually-hidden-text/src';
+import VisuallyHiddenText from '../../../../components/psammead-visually-hidden-text';
 import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import notes from '../README.md';
 import Figure from '.';

@@ -12,7 +12,7 @@ import {
 } from '#psammead/psammead-styles/src/font-styles';
 import { getPica } from '#psammead/gel-foundations/src/typography';
 import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
-import VisuallyHiddenText from '../../../../components/psammead-visually-hidden-text/src';
+import VisuallyHiddenText from '../../../../components/psammead-visually-hidden-text';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import durationDictionary, { programStateConfig } from '../utilities';
 

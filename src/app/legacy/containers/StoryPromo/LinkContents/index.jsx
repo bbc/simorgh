@@ -6,7 +6,7 @@ import pick from 'ramda/src/pick';
 import formatDuration from '#lib/utilities/formatDuration';
 import { getHeadline } from '#lib/utilities/getStoryPromoInfo';
 import { storyItem } from '#models/propTypes/storyItem';
-import VisuallyHiddenText from '../../../../components/psammead-visually-hidden-text/src';
+import VisuallyHiddenText from '../../../../components/psammead-visually-hidden-text';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import { isPgl, isMap } from '../utilities';
 

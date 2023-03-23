@@ -14,7 +14,7 @@ import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
 } from '#psammead/gel-foundations/src/breakpoints';
-import VisuallyHiddenText from '../../../components/psammead-visually-hidden-text/src';
+import VisuallyHiddenText from '../../../components/psammead-visually-hidden-text';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
 import buildBlocks, { TYPE, VISIBILITY } from './buildBlocks';

@@ -22,7 +22,7 @@ import { RequestContext } from '#contexts/RequestContext';
 import EpisodeList from '#containers/EpisodeList';
 import useViewTracker from '#hooks/useViewTracker';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
-import VisuallyHiddenText from '../../../../components/psammead-visually-hidden-text/src';
+import VisuallyHiddenText from '../../../../components/psammead-visually-hidden-text';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 
 const Spacer = styled.aside`

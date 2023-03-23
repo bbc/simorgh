@@ -22,7 +22,7 @@ import MostReadSection from '#containers/MostRead/section';
 import MostReadSectionLabel from '#containers/MostRead/label';
 import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
 import { NEGATIVE_MARGIN } from '#lib/styles.const';
-import VisuallyHiddenText from '../../components/psammead-visually-hidden-text/src';
+import VisuallyHiddenText from '../../components/psammead-visually-hidden-text';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { GHOST } from '../../components/ThemeProvider/palette';
 

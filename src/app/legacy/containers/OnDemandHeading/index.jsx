@@ -18,7 +18,7 @@ import {
   getParagon,
 } from '#psammead/gel-foundations/src/typography';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
-import VisuallyHiddenText from '../../../components/psammead-visually-hidden-text/src';
+import VisuallyHiddenText from '../../../components/psammead-visually-hidden-text';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const BrandTitle = styled.span`

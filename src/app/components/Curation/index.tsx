@@ -5,7 +5,7 @@ import {
   VISUAL_STYLE,
   VISUAL_PROMINENCE,
 } from '#app/models/types/curationData';
-import VisuallyHiddenText from '../psammead-visually-hidden-text/src';
+import VisuallyHiddenText from '../psammead-visually-hidden-text';
 import CurationGrid from './CurationGrid';
 import HierarchicalGrid from './HierarchicalGrid';
 import Subheading from './Subhead';
