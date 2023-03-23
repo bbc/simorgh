@@ -164,8 +164,8 @@ const HOME_PAGE_CONFIG: { [service in Services]: { [env in Envs]: string } } = {
     live: 'cq01ke649v0t',
   },
   turkce: {
-    test: '',
-    live: '',
+    test: 'cmvw7884exet',
+    live: 'c3eg5kgl56zt',
   },
   ukchina: {
     test: '',
