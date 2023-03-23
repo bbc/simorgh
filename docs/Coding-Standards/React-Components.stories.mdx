@@ -259,6 +259,14 @@ And all components meeting our standards will from now on will be maintained in 
 
 Where possible we want to apply standardisation as an ‘opportunistic refactor’. As we look to use existing components to deliver a feature, we commit to rebuilding those components or porting them across applying new best practices. Through doing this we gradually improve the consistency and standards of our components rather then embarking on a unrealistic drive to rebuild all components to a new standard. The necessity of delivering a feature keeps scope under control while the standards maintain the quality of the code for that feature.
 
+Since it will be not be feasible to migrate all components to the new standard, sometimes we will need to make a judgment call, on a case-by-case basis, about when or whether to apply standardisation.
+
+As a rule of thumb, the following criteria could be used to help make this decision:
+- The component requires significant modification as part of the feature delivery
+- The component is a visual component
+- The component is likely to be reused in future development work
+
+
 ## Typescript for Frontend Components
 
 - Our visual components should be written in TypeScript to clearly document each component’s API and get the benefits of compile-time type checking between components.
@@ -267,7 +275,7 @@ Where possible we want to apply standardisation as an ‘opportunistic refactor�
   - We can locate any shared types in `src/app/components/models`
 - Types should be as strict as possible
   - Avoid use of the `any` type and try and define a more specific type
-  - Where a prop has a fixed set of options use a `[union](https://camchenry.com/blog/typescript-union-type)` [type](https://camchenry.com/blog/typescript-union-type) [](https://camchenry.com/blog/typescript-union-type)to restrict the prop to those fixed options
+  - Where a prop has a fixed set of options use a `[union type](https://camchenry.com/blog/typescript-union-type)` to restrict the prop to those fixed options
 - Typescript components do not use directory aliases because previously this has been used as a band-aid on poor file organisation. In theory, by relying on the principle of code colocation and not nesting files mutliple directory levels deep, then import paths should not be so difficult to maintain and not reach for code in far away places.
 
 ## Component Health
