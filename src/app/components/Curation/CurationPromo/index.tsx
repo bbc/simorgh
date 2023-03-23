@@ -2,9 +2,9 @@
 import React, { useContext } from 'react';
 import moment from 'moment';
 import path from 'ramda/src/path';
-import VisuallyHiddenText from '#app/components/psammead-visually-hidden-text/src';
 import formatDuration from '#app/lib/utilities/formatDuration';
 import Promo from '#components/Promo';
+import VisuallyHiddenText from '../../psammead-visually-hidden-text/src';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { Promo as CurationPromoProps } from '../types';
 

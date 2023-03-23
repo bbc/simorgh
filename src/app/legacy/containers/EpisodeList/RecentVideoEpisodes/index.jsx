@@ -4,7 +4,6 @@ import { useTheme } from '@emotion/react';
 import { arrayOf, shape, string, number } from 'prop-types';
 import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
-import VisuallyHiddenText from '#app/components/psammead-visually-hidden-text/src';
 import Timestamp from '#psammead/psammead-timestamp-container/src';
 import {
   formatDuration,
@@ -21,6 +20,7 @@ import {
 } from '#psammead/gel-foundations/src/breakpoints';
 import { RequestContext } from '#contexts/RequestContext';
 import EpisodeList from '#containers/EpisodeList';
+import VisuallyHiddenText from '../../../../components/psammead-visually-hidden-text/src';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 
 const StyledSectionLabel = styled(SectionLabel)`

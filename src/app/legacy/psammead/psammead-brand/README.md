@@ -6,9 +6,11 @@ The `Brand` component provides the BBC service logo (as SVG), nested inside a st
 
 `Brand` takes a `product`, `svgHeight`, `minWidth`, `maxWidth`, `url`, `serviceLocalisedName`, `backgroundColour`, `logoColour` and `svg` as props.
 
-The `product` is passed to a [VisuallyHiddenText](https://github.com/bbc/psammead/tree/latest/packages/components/psammead-visually-hidden-text) component, nested inside Brand.
+The `product` is passed to a [VisuallyHiddenText](../../../components/psammead-visually-hidden-text/README.md) component, nested inside Brand.
 
-The `serviceLocalisedName` is an optional prop referring to the local name of a service eg `Yoruba`. It is also passed to [VisuallyHiddenText](https://github.com/bbc/psammead/tree/latest/packages/components/psammead-visually-hidden-text) inside the Brand component.
+
+The `serviceLocalisedName` is an optional prop referring to the local name of a service eg `Yoruba`. It is also passed to [VisuallyHiddenText](../../../components/psammead-visually-hidden-text/README.md) inside the Brand component.
+
 
 The `svg` prop must contain a `group`, `viewbox` values and a `ratio`, which is used within an `svg` element. Examples of the `svg` object can be found in [#legacy/psammead-assets/src](https://github.com/bbc/psammead/blob/latest/packages/utilities/psammead-assets/README.md#service-svgs).
 

@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { string, bool } from 'prop-types';
-import VisuallyHiddenText from '#app/components/psammead-visually-hidden-text/src';
 import moment from 'moment';
 import formatDuration from '#app/lib/utilities/formatDuration';
+import VisuallyHiddenText from '../../../../components/psammead-visually-hidden-text/src';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import PromoContext from '../PromoContext';
 

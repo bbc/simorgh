@@ -15,7 +15,6 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
-import VisuallyHiddenText from '#app/components/psammead-visually-hidden-text/src';
 import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import Grid, { GelPageGrid } from '#components/Grid';
@@ -32,6 +31,7 @@ import FooterTimestamp from '#containers/OnDemandFooterTimestamp';
 import MetadataContainer from '#containers/Metadata';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
+import VisuallyHiddenText from '../../components/psammead-visually-hidden-text/src';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import getPlaceholderImageUrl from '../../routes/utils/getPlaceholderImageUrl';
 

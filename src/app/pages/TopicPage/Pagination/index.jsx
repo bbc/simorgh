@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import { number, string } from 'prop-types';
-import VisuallyHiddenText from '#app/components/psammead-visually-hidden-text/src';
 import {
   getSansRegular,
   getSansBold,
@@ -15,6 +14,7 @@ import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
 } from '#psammead/gel-foundations/src/breakpoints';
+import VisuallyHiddenText from '../../../components/psammead-visually-hidden-text/src';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
 import buildBlocks, { TYPE, VISIBILITY } from './buildBlocks';

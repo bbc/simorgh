@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { shape, string, node, bool, oneOf } from 'prop-types';
-import VisuallyHiddenText from '#app/components/psammead-visually-hidden-text/src';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,
@@ -15,6 +14,7 @@ import {
 import { getPica } from '#psammead/gel-foundations/src/typography';
 import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
+import VisuallyHiddenText from '../../../../components/psammead-visually-hidden-text/src';
 import { NAV_BAR_TOP_BOTTOM_SPACING } from './DropdownNavigation';
 import { focusIndicatorThickness } from '../../../../components/ThemeProvider/focusIndicator';
 

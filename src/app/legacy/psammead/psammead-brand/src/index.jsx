@@ -1,7 +1,6 @@
 import React, { forwardRef } from 'react';
 import styled from '@emotion/styled';
 import { string, number, node, shape, bool } from 'prop-types';
-import VisuallyHiddenText from '#app/components/psammead-visually-hidden-text/src';
 import {
   GEL_GROUP_0_SCREEN_WIDTH_MAX,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
@@ -12,6 +11,7 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
+import VisuallyHiddenText from '../../../../components/psammead-visually-hidden-text/src';
 import { focusIndicatorThickness } from '../../../../components/ThemeProvider/focusIndicator';
 
 const SVG_WRAPPER_MAX_WIDTH_ABOVE_1280PX = '63rem';
