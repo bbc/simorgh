@@ -30,19 +30,15 @@ import {
 } from '#psammead/gel-foundations/src/spacings';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { focusIndicatorThickness } from '../../../../components/ThemeProvider/focusIndicator';
-import {
-  CONSENT_ACTION,
-  EBON,
-} from '../../../../components/ThemeProvider/palette';
 
 // Transparent border is to show the top of the wrapper and button border in high-contrast mode
 const transparentBorderHeight = '0.0625rem';
 
-const hoverFocusStyles = `
+const hoverFocusStyles = ({ theme }) => `
   &:focus,
   &:hover {
-    color: ${EBON};
-    background-color: ${CONSENT_ACTION};
+    color: ${theme.palette.EBON};
+    background-color: ${theme.palette.CONSENT_ACTION};
   }
 `;
 

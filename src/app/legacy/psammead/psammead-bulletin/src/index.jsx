@@ -25,14 +25,13 @@ import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
 import { Link } from '#psammead/psammead-story-promo/src';
 import ImageGridItem from './ImageStyles';
 import TextGridItem from './TextStyles';
-import { LUNAR, EBON } from '../../../../components/ThemeProvider/palette';
 
-const bulletinWrapperStyles = `
+const bulletinWrapperStyles = ({ theme }) => `
   position: relative;
-  background-color: ${LUNAR};
+  background-color: ${theme.palette.LUNAR};
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-column-gap: ${GEL_SPACING_DBL};
+  grid-column-gap: ${`${theme.spacings.DOUBLE}rem`};
 `;
 
 const RadioBulletinWrapper = styled.div`
@@ -47,8 +46,8 @@ const TVBulletinWrapper = styled.div`
   }
 `;
 
-const headingStyles = ({ service }) => `
-  color: ${EBON};
+const headingStyles = ({ service, theme }) => `
+  color: ${theme.palette.EBON};
   margin: 0; /* Reset */
   padding: ${GEL_SPACING};
   ${service && getSerifMedium(service)}

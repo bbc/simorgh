@@ -4,7 +4,6 @@ import { string, func, shape, oneOf } from 'prop-types';
 import Image from '#psammead/psammead-image/src';
 import PlayButton from '#psammead/psammead-play-button/src';
 import Guidance from '../Guidance';
-import { POSTBOX } from '../../../../../components/ThemeProvider/palette';
 
 const StyledPlayButton = styled(PlayButton)`
   position: absolute;
@@ -27,7 +26,7 @@ const StyledPlaceholder = styled.div`
 
   &:hover, &:focus {
     ${StyledPlayButton} {
-      background-color: ${POSTBOX};
+      background-color: ${props => props.theme.palette.POSTBOX};
     }
   }
 `;

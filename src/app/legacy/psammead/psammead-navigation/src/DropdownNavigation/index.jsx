@@ -3,7 +3,6 @@ import styled from '@emotion/styled';
 import { shape, string, bool, func, oneOf, node } from 'prop-types';
 import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
 import { navigationIcons } from '#psammead/psammead-assets/src/svgs';
-import { BLACK, POSTBOX } from '#app/components/ThemeProvider/palette';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,
@@ -20,9 +19,9 @@ import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 
 export const NAV_BAR_TOP_BOTTOM_SPACING = 0.75; // 12px
 
-const getStyles = dir => {
+const getStyles = (dir, theme) => {
   const direction = dir === 'ltr' ? 'left' : 'right';
-  return `border-${direction}: ${GEL_SPACING_HLF} solid ${POSTBOX};
+  return `border-${direction}: ${GEL_SPACING_HLF} solid ${theme.palette.POSTBOX};
           padding-${direction}: ${GEL_SPACING};`;
 };
 
@@ -117,7 +116,7 @@ const StyledDropdownLink = styled.a`
 `;
 
 const StyledCurrentLink = styled.span`
-  ${({ dir }) => getStyles(dir)}
+  ${({ dir, theme }) => getStyles(dir, theme)}
 `;
 
 StyledCurrentLink.defaultProps = {
@@ -215,7 +214,7 @@ const MenuButton = styled(Button)`
       ${props => props.theme.palette.WHITE};
     ::after {
       ${iconBorderPosition};
-      border: ${GEL_SPACING_HLF} solid ${BLACK};
+      border: ${GEL_SPACING_HLF} solid ${props => props.theme.palette.BLACK};
     }
   }
 

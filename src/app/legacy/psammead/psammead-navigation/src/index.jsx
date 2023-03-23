@@ -17,7 +17,6 @@ import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { NAV_BAR_TOP_BOTTOM_SPACING } from './DropdownNavigation';
 import { focusIndicatorThickness } from '../../../../components/ThemeProvider/focusIndicator';
-import { EBON, POSTBOX } from '../../../../components/ThemeProvider/palette';
 
 const SPACING_AROUND_NAV_ITEMS = `${NAV_BAR_TOP_BOTTOM_SPACING}rem`; // 12px
 const CURRENT_ITEM_HOVER_BORDER = '0.3125rem'; // 5px
@@ -72,10 +71,10 @@ const StyledLink = styled.a`
     ${ListItemBorder}
     border-bottom: ${GEL_SPACING_HLF} solid ${props =>
       props.theme.palette.POSTBOX};
-    ${({ currentLink }) =>
+    ${({ currentLink, theme }) =>
       currentLink &&
       `
-        border-bottom: ${CURRENT_ITEM_HOVER_BORDER} solid ${POSTBOX};
+        border-bottom: ${CURRENT_ITEM_HOVER_BORDER} solid ${theme.palette.POSTBOX};
       `}
   }
 
@@ -240,12 +239,12 @@ const StyledNav = styled.nav`
   background-color: ${({ isOpen }) =>
     props =>
       isOpen ? props.theme.palette.EBON : props.theme.palette.WHITE};
-  ${({ ampOpenClass }) =>
+  ${({ ampOpenClass, theme }) =>
     ampOpenClass &&
     `
       &.${ampOpenClass} {
         @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
-          background-color: ${EBON};
+          background-color: ${theme.palette.EBON};
         }
       }
     `}
