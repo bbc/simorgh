@@ -12,8 +12,8 @@ const HOME_PAGE_CONFIG: { [service in Services]: { [env in Envs]: string } } = {
     live: 'c44dyn08mejt',
   },
   afrique: {
-    test: '',
-    live: '',
+    test: 'cjln1ww62p1t',
+    live: 'cg58k91z9e3t',
   },
   amharic: {
     test: '',
