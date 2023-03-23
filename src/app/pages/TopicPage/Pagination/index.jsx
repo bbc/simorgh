@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import { number, string } from 'prop-types';
-import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
+import VisuallyHiddenText from '#app/components/psammead-visually-hidden-text/src';
 import {
   getSansRegular,
   getSansBold,

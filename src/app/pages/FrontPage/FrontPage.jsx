@@ -4,7 +4,7 @@ import path from 'ramda/src/path';
 import findIndex from 'ramda/src/findIndex';
 import styled from '@emotion/styled';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
-import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
+import VisuallyHiddenText from '#app/components/psammead-visually-hidden-text/src';
 import { frontPageDataPropTypes } from '#models/propTypes/frontPage';
 import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';

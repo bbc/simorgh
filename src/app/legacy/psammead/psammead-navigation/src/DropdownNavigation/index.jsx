@@ -1,7 +1,7 @@
 import React, { cloneElement, useRef } from 'react';
 import styled from '@emotion/styled';
 import { shape, string, bool, func, oneOf, node } from 'prop-types';
-import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
+import VisuallyHiddenText from '#app/components/psammead-visually-hidden-text/src';
 import { navigationIcons } from '#psammead/psammead-assets/src/svgs';
 import {
   GEL_SPACING_HLF,

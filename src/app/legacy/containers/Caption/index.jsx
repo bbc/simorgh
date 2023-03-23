@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { oneOfType, object, arrayOf, shape, string } from 'prop-types';
-import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
+import VisuallyHiddenText from '#app/components/psammead-visually-hidden-text/src';
 import Caption from '#psammead/psammead-caption/src';
 import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '../../../contexts/ServiceContext';

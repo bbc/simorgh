@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import moment from 'moment-timezone';
 import { shape, bool, string } from 'prop-types';
-import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
+import VisuallyHiddenText from '#app/components/psammead-visually-hidden-text/src';
 import pathOr from 'ramda/src/pathOr';
 import pick from 'ramda/src/pick';
 import formatDuration from '#lib/utilities/formatDuration';
