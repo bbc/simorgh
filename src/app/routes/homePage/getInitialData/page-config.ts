@@ -188,8 +188,8 @@ const HOME_PAGE_CONFIG: { [service in Services]: { [env in Envs]: string } } = {
     live: 'c5q5105m81dt',
   },
   yoruba: {
-    test: '',
-    live: '',
+    test: 'cw95pllwv8rt',
+    live: 'cvpk14mq48kt',
   },
   zhongwen: {
     test: '',
