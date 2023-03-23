@@ -180,8 +180,8 @@ const HOME_PAGE_CONFIG: { [service in Services]: { [env in Envs]: string } } = {
     live: 'c44d8kd7lgzt',
   },
   uzbek: {
-    test: '',
-    live: '',
+    test: 'cvp5j113ngqt',
+    live: 'c44d8kd7q4gt',
   },
   vietnamese: {
     test: '',
