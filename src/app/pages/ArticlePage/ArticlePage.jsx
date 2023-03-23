@@ -48,7 +48,7 @@ import MostReadSectionLabel from '#containers/MostRead/label';
 import SocialEmbedContainer from '#containers/SocialEmbed';
 import AdContainer from '#containers/Ad';
 import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
-
+import { ToggleButton } from '#app/contexts/ThemeContextPOC/ThemeContextPOC';
 import {
   getArticleId,
   getHeadline,
@@ -275,6 +275,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
       <ArticlePageGrid>
         <Primary>
           <Main role="main">
+            <ToggleButton />
             <Blocks
               blocks={articleBlocks}
               componentsToRender={componentsToRender}

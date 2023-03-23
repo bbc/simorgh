@@ -1,18 +1,17 @@
 import styled from '@emotion/styled';
 import {
   C_POSTBOX,
-  C_METAL,
   C_EBON,
 } from '#psammead/psammead-styles/src/colours';
 
 const InlineLink = styled.a`
-  color: ${C_EBON};
-  border-bottom: 1px solid ${C_POSTBOX};
+  color: ${props => props.theme.palette.EBON};
+  border-bottom: 1px solid ${props => props.theme.palette.POSTBOX};
   text-decoration: none;
 
   &:visited {
-    color: ${C_METAL};
-    border-bottom: 1px solid ${C_METAL};
+    color: ${props => props.theme.palette.METAL};
+    border-bottom: 1px solid ${props => props.theme.palette.METAL};
   }
 
   &:focus,
