@@ -76,8 +76,8 @@ const HOME_PAGE_CONFIG: { [service in Services]: { [env in Envs]: string } } = {
     live: 'cm2rq13ed9wt',
   },
   marathi: {
-    test: '',
-    live: '',
+    test: 'ck2nellj5ppt',
+    live: 'crezq2dg90mt',
   },
   mundo: {
     test: '',
