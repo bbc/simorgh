@@ -32,8 +32,8 @@ const HOME_PAGE_CONFIG: { [service in Services]: { [env in Envs]: string } } = {
     live: 'c1295dq496yt',
   },
   bengali: {
-    test: '',
-    live: '',
+    test: 'c2eq2ggzz8kt',
+    live: 'cg81xp242zxt',
   },
   burmese: {
     test: '',
