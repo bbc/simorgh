@@ -930,7 +930,7 @@ exports[`Headings with rich text headline with italic text should render h1 with
 </div>
 `;
 
-exports[`Headings with rich text should render headline with bold & italic text should render h1 with <i><b> tags 1`] = `
+exports[`Headings with rich text should render headline with bold & italic text should render h1 with <b><i> tags 1`] = `
 @media (max-width: 14.9375rem) {
   .emotion-0 {
     padding: 0 0.5rem;

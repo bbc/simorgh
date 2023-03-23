@@ -2,9 +2,9 @@ import styled from '@emotion/styled';
 import { string, oneOf, shape } from 'prop-types';
 import { getBodyCopy } from '#psammead/gel-foundations/src/typography';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
-import { C_SHADOW } from '#psammead/psammead-styles/src/colours';
 import { GEL_SPACING_DBL } from '#psammead/gel-foundations/src/spacings';
 import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
+import { SHADOW } from '#app/components/ThemeProvider/palette';
 
 const BulletedList = styled.ul`
   ${({ script }) => script && getBodyCopy(script)};
@@ -41,7 +41,7 @@ BulletedList.defaultProps = {
   dir: 'ltr',
   role: 'list',
   bulletPointShape: 'round',
-  bulletPointColour: C_SHADOW,
+  bulletPointColour: SHADOW,
 };
 
 export const BulletedListItem = styled.li`

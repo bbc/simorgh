@@ -1,5 +1,5 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { render } from '../../../components/react-testing-library-with-providers';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import CopyrightContainer from './index';
 
@@ -21,12 +21,16 @@ const persianServiceContextStub = {
   imageCopyrightOffscreenText: ' ، منبع تصویر',
 };
 
-shouldMatchSnapshot(
-  'should render Copyright with news service context',
-  CopyrightWithContext('This is some copyright text', newsServiceContextStub),
-);
+it('should render Copyright with news service context', () => {
+  const { container } = render(
+    CopyrightWithContext('This is some copyright text', newsServiceContextStub),
+  );
+  expect(container).toMatchSnapshot();
+});
 
-shouldMatchSnapshot(
-  'should render Copyright with persian service context',
-  CopyrightWithContext('Getty Images', persianServiceContextStub),
-);
+it('should render Copyright with persian service context', () => {
+  const { container } = render(
+    CopyrightWithContext('Getty Images', persianServiceContextStub),
+  );
+  expect(container).toMatchSnapshot();
+});
