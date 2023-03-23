@@ -52,8 +52,8 @@ const HOME_PAGE_CONFIG: { [service in Services]: { [env in Envs]: string } } = {
     live: 'cx0edn859g0t',
   },
   hausa: {
-    test: '',
-    live: '',
+    test: 'cvp5j11g223t',
+    live: 'cy1v5ngp4d9t',
   },
   hindi: {
     test: '',
