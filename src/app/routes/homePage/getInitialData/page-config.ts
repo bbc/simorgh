@@ -160,8 +160,8 @@ const HOME_PAGE_CONFIG: { [service in Services]: { [env in Envs]: string } } = {
     live: 'c2w0dk01g2kt',
   },
   tigrinya: {
-    test: '',
-    live: '',
+    test: 'c6zr6pp4e4xt',
+    live: 'cq01ke649v0t',
   },
   turkce: {
     test: '',
