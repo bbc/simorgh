@@ -36,8 +36,8 @@ const HOME_PAGE_CONFIG: { [service in Services]: { [env in Envs]: string } } = {
     live: 'cg81xp242zxt',
   },
   burmese: {
-    test: '',
-    live: '',
+    test: 'c897lqqzk1zt',
+    live: 'cn6rql5k0z5t',
   },
   cymrufyw: {
     test: '',
