@@ -44,12 +44,12 @@ const HOME_PAGE_CONFIG: { [service in Services]: { [env in Envs]: string } } = {
     live: '',
   },
   gahuza: {
-    test: '',
-    live: '',
-  },
-  gujarati: {
     test: 'c897lqqzkgkt',
     live: 'cz4vn9gy9pyt',
+  },
+  gujarati: {
+    test: '',
+    live: '',
   },
   hausa: {
     test: '',
@@ -127,6 +127,10 @@ const HOME_PAGE_CONFIG: { [service in Services]: { [env in Envs]: string } } = {
     test: '',
     live: '',
   },
+  serbian: {
+    test: '',
+    live: '',
+  },
   sport: {
     test: '',
     live: '',
@@ -163,6 +167,14 @@ const HOME_PAGE_CONFIG: { [service in Services]: { [env in Envs]: string } } = {
     test: '',
     live: '',
   },
+  ukchina: {
+    test: '',
+    live: '',
+  },
+  ukrainian: {
+    test: '',
+    live: '',
+  },
   urdu: {
     test: '',
     live: '',
@@ -179,19 +191,7 @@ const HOME_PAGE_CONFIG: { [service in Services]: { [env in Envs]: string } } = {
     test: '',
     live: '',
   },
-  serbian: {
-    test: '',
-    live: '',
-  },
-  ukchina: {
-    test: '',
-    live: '',
-  },
   zhongwen: {
-    test: '',
-    live: '',
-  },
-  ukrainian: {
     test: '',
     live: '',
   },
