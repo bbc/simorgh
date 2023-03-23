@@ -120,8 +120,8 @@ const HOME_PAGE_CONFIG: { [service in Services]: { [env in Envs]: string } } = {
     live: 'c0rp0kp5ezmt',
   },
   russian: {
-    test: '',
-    live: '',
+    test: 'c7pe2jj9q7zt',
+    live: 'c0rp0kp5l7kt',
   },
   scotland: {
     test: '',
