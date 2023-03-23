@@ -15,27 +15,23 @@ export default {
 
       [mq.GROUP_4_MIN_WIDTH]: {
         padding: '0 1rem',
-        // gridGap: '1rem', <- This is the same as the 'enableGelGutters' prop on the Grid component
+        gridGap: '1rem',
       },
     }),
   primaryColumn: ({ mq }: Theme) =>
     css({
-      // Start at col 1 and span 12 columns
       gridColumn: '1 / span 12',
       paddingBottom: '2rem',
 
       [mq.GROUP_4_MIN_WIDTH]: {
-        // Start at col 1 and span 8 columns
         gridColumn: '1 / span 8',
       },
     }),
   secondaryColumn: ({ mq }: Theme) =>
     css({
-      // Start at col 1 and span 12 columns
       gridColumn: '1 / span 12',
 
       [mq.GROUP_4_MIN_WIDTH]: {
-        // Start at col 9 and span 4 columns
         gridColumn: '9 / span 4',
         marginTop: '2rem',
       },
