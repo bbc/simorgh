@@ -1,0 +1,614 @@
+{
+    "data": {
+      "title": "BBC News Кыргыз Кызматы",
+      "pageType": "home",
+      "curations": [
+        {
+          "summaries": [
+            {
+              "type": "article",
+              "title": "13:31 - “Баланы сабады деп аялымды камап салышарын өзүм да билген эмесмин”. Кадамжайда токмоктолгон наристенин атасы\r",
+              "firstPublished": "2023-02-02T09:42:49.334Z",
+              "link": "https://www.bbc.com/kyrgyz/articles/cjy500vqllzo",
+              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg",
+              "description": "Наристенин сабалышы коомчулукта карама-каршы пикирлерди жаратып, айрымдар келинди энелик укуктан ажыратуу керек дешсе, башкалары балдардын зомбулукка кабылышына атанын да күнөөсү бар деп жатат.",
+              "imageAlt": "test",
+              "id": "cjy500vqllzo"
+            },
+            {
+              "type": "article",
+              "title": "“Баланы сабады деп аялымды камап салышарын өзүм да билген эмесмин”. Кадамжайда токмоктолгон наристенин атасы 2\r",
+              "firstPublished": "2023-02-02T10:06:00.977Z",
+              "link": "https://www.bbc.com/kyrgyz/articles/cy0pvvd9jvpo",
+              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg",
+              "description": "",
+              "imageAlt": "test",
+              "id": "cy0pvvd9jvpo"
+            },
+            {
+              "type": "article",
+              "title": "“Баланы сабады деп аялымды камап салышарын өзүм да билген эмесмин”. Кадамжайда токмоктолгон наристенин атасы 3\r",
+              "firstPublished": "2023-02-02T10:06:57.156Z",
+              "link": "https://www.bbc.com/kyrgyz/articles/cemg3359nwro",
+              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg",
+              "description": "",
+              "imageAlt": "test",
+              "id": "cemg3359nwro"
+            },
+            {
+              "type": "article",
+              "title": "“Баланы сабады деп аялымды камап салышарын өзүм да билген эмесмин”. Кадамжайда токмоктолгон наристенин атасы 4\r",
+              "firstPublished": "2023-02-02T10:07:37.729Z",
+              "link": "https://www.bbc.com/kyrgyz/articles/cp56zz9mg01o",
+              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg",
+              "description": "",
+              "imageAlt": "test",
+              "id": "cp56zz9mg01o"
+            },
+            {
+              "type": "article",
+              "title": "“Баланы сабады деп аялымды камап салышарын өзүм да билген эмесмин”. Кадамжайда токмоктолгон наристенин атасы 5\r",
+              "firstPublished": "2023-02-02T10:08:28.652Z",
+              "link": "https://www.bbc.com/kyrgyz/articles/cnk299l1mdgo",
+              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg",
+              "description": "",
+              "imageAlt": "test",
+              "id": "cnk299l1mdgo"
+            },
+            {
+              "type": "article",
+              "title": "“Баланы сабады деп аялымды камап салышарын өзүм да билген эмесмин”. Кадамжайда токмоктолгон наристенин атасы 6\r",
+              "firstPublished": "2023-02-02T10:09:07.061Z",
+              "link": "https://www.bbc.com/kyrgyz/articles/c2qz889lr6do",
+              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg",
+              "description": "",
+              "imageAlt": "test",
+              "id": "c2qz889lr6do"
+            },
+            {
+              "type": "article",
+              "title": "“Баланы сабады деп аялымды камап салышарын өзүм да билген эмесмин”. Кадамжайда токмоктолгон наристенин атасы 7\r",
+              "firstPublished": "2023-02-02T10:09:45.580Z",
+              "link": "https://www.bbc.com/kyrgyz/articles/cy0z22ny3jwo",
+              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg",
+              "description": "",
+              "imageAlt": "test",
+              "id": "cy0z22ny3jwo"
+            },
+            {
+              "type": "article",
+              "title": "“Баланы сабады деп аялымды камап салышарын өзүм да билген эмесмин”. Кадамжайда токмоктолгон наристенин атасы 8\r",
+              "firstPublished": "2023-02-02T10:10:40.111Z",
+              "link": "https://www.bbc.com/kyrgyz/articles/c0n933z8qnyo",
+              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg",
+              "description": "",
+              "imageAlt": "test",
+              "id": "c0n933z8qnyo"
+            },
+            {
+              "type": "article",
+              "title": "“Баланы сабады деп аялымды камап салышарын өзүм да билген эмесмин”. Кадамжайда токмоктолгон наристенин атасы 9\r",
+              "firstPublished": "2023-02-02T10:11:19.977Z",
+              "link": "https://www.bbc.com/kyrgyz/articles/cndr228x0y4o",
+              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg",
+              "description": "",
+              "imageAlt": "test",
+              "id": "cndr228x0y4o"
+            },
+            {
+              "type": "article",
+              "title": "“Баланы сабады деп аялымды камап салышарын өзүм да билген эмесмин”. Кадамжайда токмоктолгон наристенин атасы 10\r",
+              "firstPublished": "2023-02-02T10:11:56.211Z",
+              "link": "https://www.bbc.com/kyrgyz/articles/cx9exxrn6wlo",
+              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg",
+              "description": "",
+              "imageAlt": "test",
+              "id": "cx9exxrn6wlo"
+            },
+            {
+              "type": "article",
+              "title": "“Баланы сабады деп аялымды камап салышарын өзүм да билген эмесмин”. Кадамжайда токмоктолгон наристенин атасы 11\r",
+              "firstPublished": "2023-02-02T10:13:18.938Z",
+              "link": "https://www.bbc.com/kyrgyz/articles/c12pxxzkzjdo",
+              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg",
+              "description": "",
+              "imageAlt": "test",
+              "id": "c12pxxzkzjdo"
+            },
+            {
+              "type": "article",
+              "title": "“Баланы сабады деп аялымды камап салышарын өзүм да билген эмесмин”. Кадамжайда токмоктолгон наристенин атасы 12\r",
+              "firstPublished": "2023-02-02T10:13:50.742Z",
+              "link": "https://www.bbc.com/kyrgyz/articles/c4xljjkewl1o",
+              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg",
+              "description": "",
+              "imageAlt": "test",
+              "id": "c4xljjkewl1o"
+            }
+          ],
+          "activePage": 1,
+          "pageCount": 1,
+          "curationId": "urn:bbc:tipo:list:905b0f54-c03d-426f-9d3b-cb31f00c0d8f",
+          "curationType": "tipo-curation",
+          "position": 0,
+          "visualProminence": "HIGH"
+        },
+        {
+          "summaries": [
+            {
+              "type": "article",
+              "title": "Холокостту эскерүү күнү: Унутулган цыган курмандыктары эстеликтерди сактап калуу үчүн күрөшүүдө",
+              "firstPublished": "2023-02-02T11:37:24.774Z",
+              "link": "https://www.bbc.com/kyrgyz/articles/cjjd7zd38z3o",
+              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/fedf/test/679106e0-a2ed-11ed-9015-6935ab4fa6ca.jpg",
+              "description": "Тарыхчылар Холокост учурунда 250 миңден 500 миңге чейин рома жана синти тектүүлөр (цыгандардын түрү) өлтүрүлгөн деп эсептешет. Бирок бул курмандыктар дээрлик унутта кала берет.",
+              "imageAlt": "test",
+              "id": "cjjd7zd38z3o"
+            },
+            {
+              "type": "article",
+              "title": "Холокостту эскерүү күнү: Унутулган цыган курмандыктары эстеликтерди сактап калуу үчүн күрөшүүдө 2",
+              "firstPublished": "2023-02-02T11:39:55.636Z",
+              "link": "https://www.bbc.com/kyrgyz/articles/c4w7243gmdro",
+              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/fedf/test/679106e0-a2ed-11ed-9015-6935ab4fa6ca.jpg",
+              "description": "",
+              "imageAlt": "test",
+              "id": "c4w7243gmdro"
+            },
+            {
+              "type": "article",
+              "title": "Холокостту эскерүү күнү: Унутулган цыган курмандыктары эстеликтерди сактап калуу үчүн күрөшүүдө 3",
+              "firstPublished": "2023-02-02T11:40:31.717Z",
+              "link": "https://www.bbc.com/kyrgyz/articles/c85pgx2ndx6o",
+              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/fedf/test/679106e0-a2ed-11ed-9015-6935ab4fa6ca.jpg",
+              "description": "",
+              "imageAlt": "test",
+              "id": "c85pgx2ndx6o"
+            },
+            {
+              "type": "article",
+              "title": "Холокостту эскерүү күнү: Унутулган цыган курмандыктары эстеликтерди сактап калуу үчүн күрөшүүдө 4",
+              "firstPublished": "2023-02-02T11:41:09.361Z",
+              "link": "https://www.bbc.com/kyrgyz/articles/cmel5j6wwk2o",
+              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/fedf/test/679106e0-a2ed-11ed-9015-6935ab4fa6ca.jpg",
+              "description": "",
+              "imageAlt": "test",
+              "id": "cmel5j6wwk2o"
+            },
+            {
+              "type": "article",
+              "title": "Холокостту эскерүү күнү: Унутулган цыган курмандыктары эстеликтерди сактап калуу үчүн күрөшүүдө 5",
+              "firstPublished": "2023-02-02T11:41:54.105Z",
+              "link": "https://www.bbc.com/kyrgyz/articles/cd0x1jwnw66o",
+              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/fedf/test/679106e0-a2ed-11ed-9015-6935ab4fa6ca.jpg",
+              "description": "",
+              "imageAlt": "test",
+              "id": "cd0x1jwnw66o"
+            },
+            {
+              "type": "article",
+              "title": "Холокостту эскерүү күнү: Унутулган цыган курмандыктары эстеликтерди сактап калуу үчүн күрөшүүдө 6",
+              "firstPublished": "2023-02-02T11:42:38.776Z",
+              "link": "https://www.bbc.com/kyrgyz/articles/c65eglnzz1vo",
+              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/fedf/test/679106e0-a2ed-11ed-9015-6935ab4fa6ca.jpg",
+              "description": "",
+              "imageAlt": "test",
+              "id": "c65eglnzz1vo"
+            },
+            {
+              "type": "article",
+              "title": "Холокостту эскерүү күнү: Унутулган цыган курмандыктары эстеликтерди сактап калуу үчүн күрөшүүдө 7",
+              "firstPublished": "2023-02-02T11:43:14.865Z",
+              "link": "https://www.bbc.com/kyrgyz/articles/cj2r5lzp6k0o",
+              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/fedf/test/679106e0-a2ed-11ed-9015-6935ab4fa6ca.jpg",
+              "description": "",
+              "imageAlt": "test",
+              "id": "cj2r5lzp6k0o"
+            },
+            {
+              "type": "article",
+              "title": "Холокостту эскерүү күнү: Унутулган цыган курмандыктары эстеликтерди сактап калуу үчүн күрөшүүдө 8",
+              "firstPublished": "2023-02-02T11:43:47.440Z",
+              "link": "https://www.bbc.com/kyrgyz/articles/c2qz8l2zn5eo",
+              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/fedf/test/679106e0-a2ed-11ed-9015-6935ab4fa6ca.jpg",
+              "description": "",
+              "imageAlt": "test",
+              "id": "c2qz8l2zn5eo"
+            },
+            {
+              "type": "article",
+              "title": "Холокостту эскерүү күнү: Унутулган цыган курмандыктары эстеликтерди сактап калуу үчүн күрөшүүдө 9",
+              "firstPublished": "2023-02-02T11:44:19.096Z",
+              "link": "https://www.bbc.com/kyrgyz/articles/cm18pzwq691o",
+              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/fedf/test/679106e0-a2ed-11ed-9015-6935ab4fa6ca.jpg",
+              "description": "",
+              "imageAlt": "test",
+              "id": "cm18pzwq691o"
+            },
+            {
+              "type": "article",
+              "title": "Холокостту эскерүү күнү: Унутулган цыган курмандыктары эстеликтерди сактап калуу үчүн күрөшүүдө 10",
+              "firstPublished": "2023-02-02T11:45:03.037Z",
+              "link": "https://www.bbc.com/kyrgyz/articles/cr89pqv3el2o",
+              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/fedf/test/679106e0-a2ed-11ed-9015-6935ab4fa6ca.jpg",
+              "description": "",
+              "imageAlt": "test",
+              "id": "cr89pqv3el2o"
+            }
+          ],
+          "activePage": 1,
+          "pageCount": 1,
+          "curationId": "urn:bbc:tipo:list:524cf34b-cac2-4ce2-ac64-53eb70019202",
+          "curationType": "tipo-curation",
+          "position": 1,
+          "title": "Редактордун тандоосу",
+          "visualProminence": "HIGH"
+        },
+        {
+          "summaries": [
+            {
+              "type": "article",
+              "title": "Кыргыз-өзбек алакаcы: сандар жана фактылар",
+              "firstPublished": "2023-02-06T13:36:00.218Z",
+              "link": "https://www.bbc.com/kyrgyz/articles/cr9p5rw62j7o",
+              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/9c84/test/00e66a00-a623-11ed-9015-6935ab4fa6ca.jpg",
+              "description": "Өзбекстандын президенти Шавкат Мирзиёев 26-27-январь күндөрү Кыргызстанга мамлекеттик сапар менен келет.",
+              "imageAlt": "test",
+              "id": "cr9p5rw62j7o"
+            },
+            {
+              "type": "article",
+              "title": "Кыргыз-өзбек алакаcы: сандар жана фактылар 2",
+              "firstPublished": "2023-02-06T13:37:11.912Z",
+              "link": "https://www.bbc.com/kyrgyz/articles/cnk23wye4kyo",
+              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/9c84/test/00e66a00-a623-11ed-9015-6935ab4fa6ca.jpg",
+              "description": "Өзбекстандын президенти Шавкат Мирзиёев 26-27-январь күндөрү Кыргызстанга мамлекеттик сапар менен келет.",
+              "imageAlt": "test",
+              "id": "cnk23wye4kyo"
+            },
+            {
+              "type": "article",
+              "title": "Кыргыз-өзбек алакаcы: сандар жана фактылар 3",
+              "firstPublished": "2023-02-06T13:37:48.118Z",
+              "link": "https://www.bbc.com/kyrgyz/articles/c0n89302mwdo",
+              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/9c84/test/00e66a00-a623-11ed-9015-6935ab4fa6ca.jpg",
+              "description": "Өзбекстандын президенти Шавкат Мирзиёев 26-27-январь күндөрү Кыргызстанга мамлекеттик сапар менен келет.",
+              "imageAlt": "test",
+              "id": "c0n89302mwdo"
+            },
+            {
+              "type": "article",
+              "title": "Кыргыз-өзбек алакаcы: сандар жана фактылар 4",
+              "firstPublished": "2023-02-06T13:38:21.709Z",
+              "link": "https://www.bbc.com/kyrgyz/articles/clygdvn0vepo",
+              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/9c84/test/00e66a00-a623-11ed-9015-6935ab4fa6ca.jpg",
+              "description": "Өзбекстандын президенти Шавкат Мирзиёев 26-27-январь күндөрү Кыргызстанга мамлекеттик сапар менен келет.",
+              "imageAlt": "test",
+              "id": "clygdvn0vepo"
+            },
+            {
+              "type": "article",
+              "title": "Кыргыз-өзбек алакаcы: сандар жана фактылар 5",
+              "firstPublished": "2023-02-06T13:38:53.193Z",
+              "link": "https://www.bbc.com/kyrgyz/articles/c0n2glkxx13o",
+              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/9c84/test/00e66a00-a623-11ed-9015-6935ab4fa6ca.jpg",
+              "description": "Өзбекстандын президенти Шавкат Мирзиёев 26-27-январь күндөрү Кыргызстанга мамлекеттик сапар менен келет.",
+              "imageAlt": "test",
+              "id": "c0n2glkxx13o"
+            },
+            {
+              "type": "article",
+              "title": "Кыргыз-өзбек алакаcы: сандар жана фактылар 6",
+              "firstPublished": "2023-02-06T13:39:22.009Z",
+              "link": "https://www.bbc.com/kyrgyz/articles/c85pqkmwkw5o",
+              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/9c84/test/00e66a00-a623-11ed-9015-6935ab4fa6ca.jpg",
+              "description": "Өзбекстандын президенти Шавкат Мирзиёев 26-27-январь күндөрү Кыргызстанга мамлекеттик сапар менен келет.",
+              "imageAlt": "test",
+              "id": "c85pqkmwkw5o"
+            },
+            {
+              "type": "article",
+              "title": "Кыргыз-өзбек алакаcы: сандар жана фактылар 7",
+              "firstPublished": "2023-02-06T13:39:55.607Z",
+              "link": "https://www.bbc.com/kyrgyz/articles/c85pqkmz8e2o",
+              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/9c84/test/00e66a00-a623-11ed-9015-6935ab4fa6ca.jpg",
+              "description": "Өзбекстандын президенти Шавкат Мирзиёев 26-27-январь күндөрү Кыргызстанга мамлекеттик сапар менен келет.",
+              "imageAlt": "test",
+              "id": "c85pqkmz8e2o"
+            },
+            {
+              "type": "article",
+              "title": "Кыргыз-өзбек алакаcы: сандар жана фактылар 8",
+              "firstPublished": "2023-02-06T13:40:23.909Z",
+              "link": "https://www.bbc.com/kyrgyz/articles/ck42g152vl6o",
+              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/9c84/test/00e66a00-a623-11ed-9015-6935ab4fa6ca.jpg",
+              "description": "Өзбекстандын президенти Шавкат Мирзиёев 26-27-январь күндөрү Кыргызстанга мамлекеттик сапар менен келет.",
+              "imageAlt": "test",
+              "id": "ck42g152vl6o"
+            }
+          ],
+          "activePage": 1,
+          "pageCount": 1,
+          "link": "https://www.bbc.com/kyrgyz/topics/cz74kjpyk07t",
+          "curationId": "urn:bbc:tipo:list:4991ab89-0967-4653-9760-f3e133896a46",
+          "curationType": "tipo-curation",
+          "position": 2,
+          "title": "Кыргызстан",
+          "visualProminence": "NORMAL",
+          "visualStyle": "COLLECTION"
+        },
+        {
+          "summaries": [
+            {
+              "type": "article",
+              "title": "Кытайдын жаңы ачык саясаты. Си Цзиньпин саясий багытын өзгөрттү",
+              "firstPublished": "2023-02-06T13:45:17.207Z",
+              "link": "https://www.bbc.com/kyrgyz/articles/c6x9vjk8zy2o",
+              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/1ce1/test/49d62d80-a624-11ed-9015-6935ab4fa6ca.jpg",
+              "description": "Кытайда кайрадан чоң өзгөрүүлөр орун алууда. КЭРдин төрагасы Си Цзиньпин бир нече жылга созулган катаал саясий нуктан кайра баш тартууда. ",
+              "imageAlt": "test",
+              "id": "c6x9vjk8zy2o"
+            },
+            {
+              "type": "article",
+              "title": "Кытайдын жаңы ачык саясаты. Си Цзиньпин саясий багытын өзгөрттү 2",
+              "firstPublished": "2023-02-06T13:47:06.980Z",
+              "link": "https://www.bbc.com/kyrgyz/articles/cw1kzjme384o",
+              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/1ce1/test/49d62d80-a624-11ed-9015-6935ab4fa6ca.jpg",
+              "description": "Кытайда кайрадан чоң өзгөрүүлөр орун алууда. КЭРдин төрагасы Си Цзиньпин бир нече жылга созулган катаал саясий нуктан кайра баш тартууда. ",
+              "imageAlt": "test",
+              "id": "cw1kzjme384o"
+            },
+            {
+              "type": "article",
+              "title": "Кытайдын жаңы ачык саясаты. Си Цзиньпин саясий багытын өзгөрттү 3",
+              "firstPublished": "2023-02-06T13:47:34.717Z",
+              "link": "https://www.bbc.com/kyrgyz/articles/c3d1vyrdx21o",
+              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/1ce1/test/49d62d80-a624-11ed-9015-6935ab4fa6ca.jpg",
+              "description": "Кытайда кайрадан чоң өзгөрүүлөр орун алууда. КЭРдин төрагасы Си Цзиньпин бир нече жылга созулган катаал саясий нуктан кайра баш тартууда. ",
+              "imageAlt": "test",
+              "id": "c3d1vyrdx21o"
+            },
+            {
+              "type": "article",
+              "title": "Кытайдын жаңы ачык саясаты. Си Цзиньпин саясий багытын өзгөрттү 4",
+              "firstPublished": "2023-02-06T13:48:04.311Z",
+              "link": "https://www.bbc.com/kyrgyz/articles/c86jzl31jm5o",
+              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/1ce1/test/49d62d80-a624-11ed-9015-6935ab4fa6ca.jpg",
+              "description": "Кытайда кайрадан чоң өзгөрүүлөр орун алууда. КЭРдин төрагасы Си Цзиньпин бир нече жылга созулган катаал саясий нуктан кайра баш тартууда. ",
+              "imageAlt": "test",
+              "id": "c86jzl31jm5o"
+            },
+            {
+              "type": "article",
+              "title": "Кытайдын жаңы ачык саясаты. Си Цзиньпин саясий багытын өзгөрттү 5",
+              "firstPublished": "2023-02-06T13:48:35.778Z",
+              "link": "https://www.bbc.com/kyrgyz/articles/cp567nq7kx6o",
+              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/1ce1/test/49d62d80-a624-11ed-9015-6935ab4fa6ca.jpg",
+              "description": "Кытайда кайрадан чоң өзгөрүүлөр орун алууда. КЭРдин төрагасы Си Цзиньпин бир нече жылга созулган катаал саясий нуктан кайра баш тартууда. ",
+              "imageAlt": "test",
+              "id": "cp567nq7kx6o"
+            },
+            {
+              "type": "article",
+              "title": "Кытайдын жаңы ачык саясаты. Си Цзиньпин саясий багытын өзгөрттү 6",
+              "firstPublished": "2023-02-06T13:49:01.557Z",
+              "link": "https://www.bbc.com/kyrgyz/articles/cv748vmk2pno",
+              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/1ce1/test/49d62d80-a624-11ed-9015-6935ab4fa6ca.jpg",
+              "description": "Кытайда кайрадан чоң өзгөрүүлөр орун алууда. КЭРдин төрагасы Си Цзиньпин бир нече жылга созулган катаал саясий нуктан кайра баш тартууда. ",
+              "imageAlt": "test",
+              "id": "cv748vmk2pno"
+            },
+            {
+              "type": "article",
+              "title": "Кытайдын жаңы ачык саясаты. Си Цзиньпин саясий багытын өзгөрттү 7",
+              "firstPublished": "2023-02-06T13:49:31.970Z",
+              "link": "https://www.bbc.com/kyrgyz/articles/ck9yxzvv7deo",
+              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/1ce1/test/49d62d80-a624-11ed-9015-6935ab4fa6ca.jpg",
+              "description": "Кытайда кайрадан чоң өзгөрүүлөр орун алууда. КЭРдин төрагасы Си Цзиньпин бир нече жылга созулган катаал саясий нуктан кайра баш тартууда. ",
+              "imageAlt": "test",
+              "id": "ck9yxzvv7deo"
+            },
+            {
+              "type": "article",
+              "title": "Кытайдын жаңы ачык саясаты. Си Цзиньпин саясий багытын өзгөрттү 8",
+              "firstPublished": "2023-02-06T13:50:08.108Z",
+              "link": "https://www.bbc.com/kyrgyz/articles/c380rxlx2z9o",
+              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/1ce1/test/49d62d80-a624-11ed-9015-6935ab4fa6ca.jpg",
+              "description": "Кытайда кайрадан чоң өзгөрүүлөр орун алууда. КЭРдин төрагасы Си Цзиньпин бир нече жылга созулган катаал саясий нуктан кайра баш тартууда. ",
+              "imageAlt": "test",
+              "id": "c380rxlx2z9o"
+            }
+          ],
+          "activePage": 1,
+          "pageCount": 1,
+          "link": "https://www.bbc.com/kyrgyz/topics/ck2l9z012nkt",
+          "curationId": "urn:bbc:tipo:list:d4ec3c0c-1aa7-445e-9ef2-59d341b41038",
+          "curationType": "tipo-curation",
+          "position": 3,
+          "title": "Дүйнө",
+          "visualProminence": "NORMAL",
+          "visualStyle": "COLLECTION"
+        },
+        {
+          "summaries": [
+            {
+              "type": "link",
+              "title": "Би-Би-Си ТВ жаңылыктары",
+              "firstPublished": "",
+              "link": "https://www.bbc.com/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=4",
+              "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/0af7/test/5a5151c0-a3aa-11ed-9015-6935ab4fa6ca.png",
+              "description": "Би-Би-Си Кыргыз кызматынын эл аралык жаңылыктарын көрүңүз.",
+              "imageAlt": "Microphone",
+              "id": "https%3A%2F%2Fwww.bbc.com%2Fkyrgyz%2Fbbc_kyrgyz_tv%2Ftv_programmes%2Fw13xttqx%3Flimit%3D4"
+            }
+          ],
+          "activePage": 1,
+          "pageCount": 1,
+          "link": "https://www.bbc.com/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=4",
+          "curationId": "urn:bbc:tipo:list:d296b66f-a9d7-4a2f-bea4-7a9d253368c5",
+          "curationType": "tipo-curation",
+          "position": 4,
+          "title": "Би-Би-Си ТВ жаңылыктары",
+          "visualProminence": "NORMAL",
+          "visualStyle": "BANNER"
+        },
+        {
+          "summaries": [
+            {
+              "type": "article",
+              "title": "Холокостту эскерүү күнү: Унутулган цыган курмандыктары эстеликтерди сактап калуу үчүн күрөшүүдө",
+              "firstPublished": "2023-02-07T14:51:20.980Z",
+              "link": "https://www.bbc.com/kyrgyz/articles/cr91pzee4dro",
+              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/ae4d/test/a12d7570-a6f6-11ed-9015-6935ab4fa6ca.jpg",
+              "description": "\"Эмне үчүн бизди жок кылгысы келди? Бизге эмнеге кыргын салышты?\" - деп суроо салат 83 жаштагы \"цыган Холокостунан\" аман калган Хинта Георге.",
+              "imageAlt": "test",
+              "id": "cr91pzee4dro"
+            },
+            {
+              "type": "article",
+              "title": "Холокостту эскерүү күнү: Унутулган цыган курмандыктары эстеликтерди сактап калуу үчүн күрөшүүдө 2",
+              "firstPublished": "2023-02-07T14:52:16.175Z",
+              "link": "https://www.bbc.com/kyrgyz/articles/cd0nevdy25vo",
+              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/ae4d/test/a12d7570-a6f6-11ed-9015-6935ab4fa6ca.jpg",
+              "description": "\"Эмне үчүн бизди жок кылгысы келди? Бизге эмнеге кыргын салышты?\" - деп суроо салат 83 жаштагы \"цыган Холокостунан\" аман калган Хинта Георге.",
+              "imageAlt": "test",
+              "id": "cd0nevdy25vo"
+            },
+            {
+              "type": "article",
+              "title": "Холокостту эскерүү күнү: Унутулган цыган курмандыктары эстеликтерди сактап калуу үчүн күрөшүүдө 3",
+              "firstPublished": "2023-02-07T14:52:44.188Z",
+              "link": "https://www.bbc.com/kyrgyz/articles/czmnz5184jeo",
+              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/ae4d/test/a12d7570-a6f6-11ed-9015-6935ab4fa6ca.jpg",
+              "description": "\"Эмне үчүн бизди жок кылгысы келди? Бизге эмнеге кыргын салышты?\" - деп суроо салат 83 жаштагы \"цыган Холокостунан\" аман калган Хинта Георге.",
+              "imageAlt": "test",
+              "id": "czmnz5184jeo"
+            }
+          ],
+          "activePage": 1,
+          "pageCount": 1,
+          "link": "https://www.bbc.com/kyrgyz/topics/czp8pjrkgp0t",
+          "curationId": "urn:bbc:tipo:list:1bd01bb2-78c3-4189-8961-2c5395d1ee13",
+          "curationType": "tipo-curation",
+          "position": 5,
+          "title": "Журнал",
+          "visualProminence": "HIGH"
+        },
+        {
+          "summaries": [
+            {
+              "type": "audio",
+              "duration": "PT3M1S",
+              "title": "Би-Би-Си дүрбүсүндө",
+              "firstPublished": "",
+              "link": "https://www.bbc.com/kyrgyz/podcasts/p0c80v81/p0f5nz0b",
+              "imageUrl": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0c80xlp.jpg",
+              "description": "УИА реформасы: оптимизациядан кийин интеграция",
+              "imageAlt": "",
+              "id": "p0f5nz0b"
+            },
+            {
+              "type": "audio",
+              "duration": "PT2M38S",
+              "title": "Би-Би-Си дүрбүсүндө",
+              "firstPublished": "",
+              "link": "https://www.bbc.com/kyrgyz/podcasts/p0c80v81/p0f4nt6x",
+              "imageUrl": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0c80xlp.jpg",
+              "description": "Путин өзөктүк стратегиялык куралдарын сыноого даярдоону буйруду",
+              "imageAlt": "",
+              "id": "p0f4nt6x"
+            },
+            {
+              "type": "audio",
+              "duration": "PT5M27S",
+              "title": "Би-Би-Си дүрбүсүндө",
+              "firstPublished": "",
+              "link": "https://www.bbc.com/kyrgyz/podcasts/p0c80v81/p0f3zky6",
+              "imageUrl": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0c80xlp.jpg",
+              "description": "Күчүктөн чыккан чыр: Мугалим эмнеден жаңылды?",
+              "imageAlt": "",
+              "id": "p0f3zky6"
+            },
+            {
+              "type": "audio",
+              "duration": "PT1M41S",
+              "title": "Би-Би-Си дүрбүсүндө",
+              "firstPublished": "",
+              "link": "https://www.bbc.com/kyrgyz/podcasts/p0c80v81/p0f35dzw",
+              "imageUrl": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0c80xlp.jpg",
+              "description": "Атамбаев камактан чыкты, мурдагы сот өкүмдөрү жокко чыгарылды",
+              "imageAlt": "",
+              "id": "p0f35dzw"
+            }
+          ],
+          "activePage": 1,
+          "pageCount": 1,
+          "link": "https://www.bbc.com/kyrgyz/podcasts/p0c80v81/p0dwnqrb",
+          "curationId": "urn:bbc:programmes:available-episodes:p0c80v81",
+          "curationType": "available-episodes",
+          "position": 6,
+          "title": "Видео жана Подкасттар",
+          "visualProminence": "NORMAL",
+          "visualStyle": "FEED"
+        },
+        {
+          "summaries": [
+            {
+              "type": "video",
+              "duration": "PT30S",
+              "title": "\"Сапар\": Дүйнөнү өзгөрткөн айымдар",
+              "firstPublished": "2023-02-02T11:56:17.767Z",
+              "link": "https://www.bbc.com/kyrgyz/articles/c6rgpy2y00qo",
+              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/566e/test/6a6de0b0-a2f0-11ed-b0be-cf2bcb458493.png",
+              "description": "",
+              "imageAlt": "test",
+              "id": "c6rgpy2y00qo"
+            },
+            {
+              "type": "video",
+              "duration": "PT30S",
+              "title": "\"Сапар\": Дүйнөнү өзгөрткөн айымдар 2",
+              "firstPublished": "2023-02-02T11:56:49.913Z",
+              "link": "https://www.bbc.com/kyrgyz/articles/cd0nz6e5lj0o",
+              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/566e/test/6a6de0b0-a2f0-11ed-b0be-cf2bcb458493.png",
+              "description": "",
+              "imageAlt": "test",
+              "id": "cd0nz6e5lj0o"
+            },
+            {
+              "type": "video",
+              "duration": "PT30S",
+              "title": "\"Сапар\": Дүйнөнү өзгөрткөн айымдар 3",
+              "firstPublished": "2023-02-02T11:57:11.013Z",
+              "link": "https://www.bbc.com/kyrgyz/articles/cle6ylr495ko",
+              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/566e/test/6a6de0b0-a2f0-11ed-b0be-cf2bcb458493.png",
+              "description": "",
+              "imageAlt": "test",
+              "id": "cle6ylr495ko"
+            },
+            {
+              "type": "video",
+              "duration": "PT30S",
+              "title": "\"Сапар\": Дүйнөнү өзгөрткөн айымдар 4",
+              "firstPublished": "2023-02-02T11:57:24.839Z",
+              "link": "https://www.bbc.com/kyrgyz/articles/cd0qkxer6rko",
+              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/566e/test/6a6de0b0-a2f0-11ed-b0be-cf2bcb458493.png",
+              "description": "",
+              "imageAlt": "test",
+              "id": "cd0qkxer6rko"
+            }
+          ],
+          "activePage": 1,
+          "pageCount": 1,
+          "curationId": "urn:bbc:tipo:list:c8c07db7-0a13-4e50-b41d-135d8f761949",
+          "curationType": "tipo-curation",
+          "position": 7,
+          "title": "Би-Би-Си \"САПАР\"",
+          "visualProminence": "NORMAL",
+          "visualStyle": "COLLECTION"
+        }
+      ]
+    },
+    "contentType": "application/json; charset=utf-8"
+  }
