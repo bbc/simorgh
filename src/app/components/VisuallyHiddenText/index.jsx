@@ -1,12 +1,8 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import styles from './index.styles';
 
-interface VisuallyHiddenTextProps {
-  as?: React.ElementType;
-  children?: React.ReactNode;
-}
-
-const VisuallyHiddenText = ({ as, children }: VisuallyHiddenTextProps) => {
+const VisuallyHiddenText = ({ as, children }) => {
   const Component = as || 'span';
 
   return <Component css={styles.visuallyHidden}>{children}</Component>;
