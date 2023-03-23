@@ -8,7 +8,7 @@ export default {
     }),
   grid: ({ mq, gridWidths }: Theme) =>
     css({
-      maxWidth: `${pixelsToRem(gridWidths[1080])}rem`,
+      maxWidth: `${pixelsToRem(gridWidths[1008])}rem`,
       margin: '0 auto',
       display: 'grid',
       gridTemplateColumns: 'repeat(12, 1fr)',

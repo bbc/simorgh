@@ -433,7 +433,7 @@ export type GridWidths = {
   400: number;
   600: number;
   900: number;
-  1080: number;
+  1008: number;
   1280: number;
 };
 
