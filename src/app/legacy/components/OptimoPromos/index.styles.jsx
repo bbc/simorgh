@@ -7,7 +7,6 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
-import { C_WHITE } from '#psammead/psammead-styles/src/colours';
 
 export const ContentWrapper = styled.div`
   padding: ${GEL_SPACING};
@@ -23,6 +22,6 @@ export const ContentWrapper = styled.div`
 
 export const PromoWrapper = styled.div`
   position: relative;
-  background-color: ${C_WHITE};
+  background-color: ${props => props.theme.palette.WHITE};
   height: 100%;
 `;

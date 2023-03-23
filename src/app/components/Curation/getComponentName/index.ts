@@ -3,7 +3,7 @@ import {
   VisualProminence,
   VISUAL_STYLE,
   VISUAL_PROMINENCE,
-} from '#app/models/types/promoData';
+} from '#app/models/types/curationData';
 
 export const COMPONENT_NAMES = {
   MESSAGE_BANNER: 'message-banner',

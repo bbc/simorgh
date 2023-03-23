@@ -350,7 +350,7 @@ Object {
   "@context": "http://schema.org",
   "@graph": Array [
     Object {
-      "@type": "Article",
+      "@type": "NewsArticle",
       "about": Array [
         Object {
           "@type": "Thing",

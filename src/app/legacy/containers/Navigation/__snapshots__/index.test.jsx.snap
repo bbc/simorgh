@@ -317,6 +317,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   right: 0;
   bottom: 0;
   border-bottom: 0.25rem solid #B80000;
+  border-bottom: 0.3125rem solid #B80000;
 }
 
 .emotion-71:focus::after {
@@ -2554,6 +2555,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   right: 0;
   bottom: 0;
   border-bottom: 0.25rem solid #B80000;
+  border-bottom: 0.3125rem solid #B80000;
 }
 
 .emotion-18:focus::after {

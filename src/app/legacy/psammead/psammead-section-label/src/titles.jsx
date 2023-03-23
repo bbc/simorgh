@@ -16,8 +16,8 @@ import {
   getLongPrimer,
   getDoublePica,
 } from '#psammead/gel-foundations/src/typography';
-import { C_EBON, C_GHOST } from '#psammead/psammead-styles/src/colours';
 import { getSansBold } from '#psammead/psammead-styles/src/font-styles';
+import { GHOST } from '#app/components/ThemeProvider/palette';
 
 const minClickableHeightPx = 44;
 const minClickableHeightRem = minClickableHeightPx / 16;
@@ -36,7 +36,7 @@ const FlexColumn = styled.span`
 `;
 
 const SectionLabelLink = styled.a`
-  color: ${C_EBON};
+  color: ${props => props.theme.palette.EBON};
   text-decoration: none;
 
   &:focus,
@@ -97,7 +97,7 @@ const IndexLinkCta = styled.span`
   ${({ script }) => script && getLongPrimer(script)};
   ${({ service }) => getSansBold(service)};
   ${titleMargins};
-  color: ${C_EBON};
+  color: ${props => props.theme.palette.EBON};
   background-color: ${props => props.backgroundColor};
   white-space: nowrap;
   ${paddingReverseDir}: ${GEL_SPACING_DBL};
@@ -146,7 +146,7 @@ PlainTitle.propTypes = {
 };
 
 PlainTitle.defaultProps = {
-  backgroundColor: C_GHOST,
+  backgroundColor: GHOST,
 };
 
 export const LinkTitle = ({
@@ -201,5 +201,5 @@ LinkTitle.propTypes = {
 };
 
 LinkTitle.defaultProps = {
-  backgroundColor: C_GHOST,
+  backgroundColor: GHOST,
 };

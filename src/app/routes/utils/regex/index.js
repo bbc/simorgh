@@ -43,6 +43,8 @@ export const frontPageSwPath = getSwRegex(allServices);
 export const frontPageManifestPath = getManifestRegex(allServices);
 
 export const homePagePath = getHomePageRegex(allServices);
+export const homePageDataPath = `${homePagePath}.json`;
+
 export const homePageSwPath = getHomePageSwRegex(allServices);
 export const homePageManifestPath = getHomePageManifestRegex(allServices);
 

@@ -1,28 +1,34 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { render } from '../../../../components/react-testing-library-with-providers';
 import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import arabic from '../../../../components/ThemeProvider/fontScripts/arabic';
 import Paragraph from './index';
 
 describe('Paragraph', () => {
-  shouldMatchSnapshot(
-    'should render correctly',
-    <Paragraph script={latin} service="news">
-      This is text in a paragraph.
-    </Paragraph>,
-  );
+  it('should render correctly', () => {
+    const { container } = render(
+      <Paragraph script={latin} service="news">
+        This is text in a paragraph.
+      </Paragraph>,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render correctly in dark mode',
-    <Paragraph script={latin} service="news" darkMode>
-      This is text in a paragraph.
-    </Paragraph>,
-  );
+  it('should render correctly in dark mode', () => {
+    const { container } = render(
+      <Paragraph script={latin} service="news" darkMode>
+        This is text in a paragraph.
+      </Paragraph>,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render correctly with arabic script typography values',
-    <Paragraph script={arabic} service="persian">
-      بعض محتوى النص
-    </Paragraph>,
-  );
+  it('should render correctly with arabic script typography values', () => {
+    const { container } = render(
+      <Paragraph script={arabic} service="persian">
+        بعض محتوى النص
+      </Paragraph>,
+    );
+    expect(container).toMatchSnapshot();
+  });
 });

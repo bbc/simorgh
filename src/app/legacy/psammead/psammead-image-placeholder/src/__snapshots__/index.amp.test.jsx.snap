@@ -1,6 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ImagePlaceholderAmp should render dark mode version correctly 1`] = `
+.emotion-0 {
+  background-color: #3F3F42;
+}
+
 <div>
   <amp-img
     height="128px"
@@ -8,8 +12,8 @@ exports[`ImagePlaceholderAmp should render dark mode version correctly 1`] = `
     width="645px"
   >
     <div
+      class="emotion-0"
       placeholder=""
-      style="background-color: rgb(63, 63, 66);"
     >
       <amp-img
         height="17px"
@@ -34,8 +38,8 @@ exports[`ImagePlaceholderAmp should render dark mode version correctly 1`] = `
       />
     </div>
     <div
+      class="emotion-0"
       fallback=""
-      style="background-color: rgb(63, 63, 66);"
     >
       <amp-img
         height="17px"
@@ -64,6 +68,10 @@ exports[`ImagePlaceholderAmp should render dark mode version correctly 1`] = `
 `;
 
 exports[`ImagePlaceholderAmp should render normal version correctly 1`] = `
+.emotion-0 {
+  background-color: #F2F2F2;
+}
+
 <div>
   <amp-img
     height="128px"
@@ -71,8 +79,8 @@ exports[`ImagePlaceholderAmp should render normal version correctly 1`] = `
     width="645px"
   >
     <div
+      class="emotion-0"
       placeholder=""
-      style="background-color: rgb(242, 242, 242);"
     >
       <amp-img
         height="17px"
@@ -97,8 +105,8 @@ exports[`ImagePlaceholderAmp should render normal version correctly 1`] = `
       />
     </div>
     <div
+      class="emotion-0"
       fallback=""
-      style="background-color: rgb(242, 242, 242);"
     >
       <amp-img
         height="17px"

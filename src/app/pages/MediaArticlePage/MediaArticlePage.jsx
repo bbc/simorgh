@@ -1,11 +1,13 @@
-import React, { useContext } from 'react';
+/** @jsxRuntime classic */
+/** @jsx jsx */
+
+import { useContext } from 'react';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
-import propEq from 'ramda/src/propEq';
 import styled from '@emotion/styled';
+import { jsx, useTheme } from '@emotion/react';
 import { string, node } from 'prop-types';
 import useToggle from '#hooks/useToggle';
-import CpsRecommendations from '#containers/CpsRecommendations';
 
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
@@ -24,8 +26,7 @@ import {
   GEL_SPACING_QUAD,
   GEL_SPACING_QUIN,
 } from '#psammead/gel-foundations/src/spacings';
-import { C_GREY_2, C_WHITE } from '#psammead/psammead-styles/src/colours';
-import { singleTextBlock } from '#app/models/blocks';
+
 import { articleDataPropTypes } from '#models/propTypes/article';
 import ArticleMetadata from '#containers/ArticleMetadata';
 import { RequestContext } from '#contexts/RequestContext';
@@ -41,7 +42,7 @@ import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import OptimizelyPageViewTracking from '#containers/OptimizelyPageViewTracking';
 import OptimizelyArticleCompleteTracking from '#containers/OptimizelyArticleCompleteTracking';
-import articleMediaPlayer from '#containers/ArticleMediaPlayer';
+import ArticleMediaPlayer from '#containers/ArticleMediaPlayer';
 import LinkedData from '#containers/LinkedData';
 import MostReadContainer from '#containers/MostRead';
 import MostReadSection from '#containers/MostRead/section';
@@ -49,6 +50,8 @@ import MostReadSectionLabel from '#containers/MostRead/label';
 import SocialEmbedContainer from '#containers/SocialEmbed';
 import AdContainer from '#containers/Ad';
 import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
+import fauxHeadline from '#containers/FauxHeadline';
+import CpsRecommendations from '#containers/CpsRecommendations';
 
 import {
   getArticleId,
@@ -78,8 +81,10 @@ import SecondaryColumn from './SecondaryColumn';
 
 import MediaArticlePageGrid, { Primary } from './MediaArticlePageGrid';
 
+import styles from './MediaArticlePage.styles';
+
 const Wrapper = styled.div`
-  background-color: ${C_GREY_2};
+  background-color: ${props => props.theme.palette.GREY_2};
 `;
 
 const MediaArticlePageMostReadSection = styled(MostReadSection)`
@@ -128,6 +133,10 @@ const MediaArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const { enabled: adsEnabled } = useToggle('ads');
   const recommendationsData = path(['recommendations'], pageData);
 
+  const {
+    palette: { GREY_2, WHITE },
+  } = useTheme();
+
   const isAdsEnabled = [
     path(['metadata', 'allowAdvertising'], pageData),
     adsEnabled,
@@ -143,7 +152,6 @@ const MediaArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const aboutTags = getAboutTags(pageData);
   const topics = path(['metadata', 'topics'], pageData);
   const blocks = pathOr([], ['content', 'model', 'blocks'], pageData);
-  const startsWithHeading = propEq('type', 'headline')(blocks[0] || {});
 
   const bylineBlock = blocks.find(block => block.type === 'byline');
   const bylineContribBlocks = pathOr([], ['model', 'blocks'], bylineBlock);
@@ -163,11 +171,28 @@ const MediaArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   );
 
   const componentsToRender = {
+    fauxHeadline,
     visuallyHiddenHeadline,
     headline: headings,
     subheadline: headings,
-    audio: articleMediaPlayer,
-    video: articleMediaPlayer,
+    audio: props => (
+      /**
+       * TODO: Consolate the styling into a single stylesheet for the media player
+       * - The media player needs padding top applied, but is also inheriting styles from other components
+       */
+      <div css={styles.mediaPlayer}>
+        <ArticleMediaPlayer {...props} />
+      </div>
+    ),
+    video: props => (
+      /**
+       * TODO: Consolate the styling into a single stylesheet for the media player
+       * - The media player needs padding top applied, but is also inheriting styles from other components
+       */
+      <div css={styles.mediaPlayer}>
+        <ArticleMediaPlayer {...props} />
+      </div>
+    ),
     text,
     byline: props =>
       hasByline ? (
@@ -197,16 +222,6 @@ const MediaArticlePage = ({ pageData, mostReadEndpointOverride }) => {
       <CpsRecommendations {...props} items={recommendationsData} />
     ),
   };
-
-  const visuallyHiddenBlock = {
-    id: null,
-    model: { blocks: [singleTextBlock(headline)] },
-    type: 'visuallyHiddenHeadline',
-  };
-
-  const articleBlocks = startsWithHeading
-    ? blocks
-    : [visuallyHiddenBlock, ...blocks];
 
   const promoImageBlocks = pathOr(
     [],
@@ -274,17 +289,14 @@ const MediaArticlePage = ({ pageData, mostReadEndpointOverride }) => {
       <MediaArticlePageGrid>
         <Primary>
           <Main role="main">
-            <Blocks
-              blocks={articleBlocks}
-              componentsToRender={componentsToRender}
-            />
+            <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           </Main>
           {showRelatedTopics && topics && (
             <StyledRelatedTopics
               topics={topics}
               mobileDivider={false}
-              backgroundColour={C_GREY_2}
-              tagBackgroundColour={C_WHITE}
+              backgroundColour={GREY_2}
+              tagBackgroundColour={WHITE}
             />
           )}
           <RelatedContentSection content={blocks} />

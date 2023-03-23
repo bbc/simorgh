@@ -1,8 +1,7 @@
 import React from 'react';
 import { v4 as uuid } from 'uuid';
-import { render } from '@testing-library/react';
 import { blockContainingText } from '#models/blocks';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { render } from '../../../components/react-testing-library-with-providers';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
@@ -161,29 +160,37 @@ const CaptionWithContext = (block, contextStub, type) => (
   </ServiceContext.Provider>
 );
 
-shouldMatchSnapshot(
-  'should render caption text with example News offscreen text',
-  CaptionWithContext(captionBlock, newsServiceContextStub, 'caption'),
-);
+it('should render caption text with example News offscreen text', () => {
+  const { container } = render(
+    CaptionWithContext(captionBlock, newsServiceContextStub, 'caption'),
+  );
+  expect(container).toMatchSnapshot();
+});
 
-shouldMatchSnapshot(
-  'should render caption text with example Farsi offscreen text',
-  CaptionWithContext(captionBlock, persianServiceContextStub, 'caption'),
-);
+it('should render caption text with example Farsi offscreen text', () => {
+  const { container } = render(
+    CaptionWithContext(captionBlock, persianServiceContextStub, 'caption'),
+  );
+  expect(container).toMatchSnapshot();
+});
 
-shouldMatchSnapshot(
-  'should render caption with multiple paragraphs',
-  CaptionWithContext(
-    captionBlock3Paragraphs,
-    newsServiceContextStub,
-    'caption',
-  ),
-);
+it('should render caption with multiple paragraphs', () => {
+  const { container } = render(
+    CaptionWithContext(
+      captionBlock3Paragraphs,
+      newsServiceContextStub,
+      'caption',
+    ),
+  );
+  expect(container).toMatchSnapshot();
+});
 
-shouldMatchSnapshot(
-  'should render correctly with inline block',
-  CaptionWithContext(blocksWithInline, newsServiceContextStub, 'caption'),
-);
+it('should render correctly with inline block', () => {
+  const { container } = render(
+    CaptionWithContext(blocksWithInline, newsServiceContextStub, 'caption'),
+  );
+  expect(container).toMatchSnapshot();
+});
 
 describe('with offscreen text', () => {
   it('should render the default offscreen text', () => {

@@ -1,15 +1,14 @@
 import styled from '@emotion/styled';
-import { C_GREY_6, C_GREY_10 } from '#psammead/psammead-styles/src/colours';
 
 const A = styled.a`
-  color: ${C_GREY_10};
+  color: ${props => props.theme.palette.GREY_10};
   text-decoration: none;
   &:hover,
   &:focus {
     text-decoration: underline;
   }
   &:visited {
-    color: ${C_GREY_6};
+    color: ${props => props.theme.palette.GREY_6};
   }
   &:before {
     position: absolute;
