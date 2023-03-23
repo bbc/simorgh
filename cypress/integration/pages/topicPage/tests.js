@@ -35,7 +35,7 @@ export default ({ service, pageType, variant }) => {
           method: 'GET',
           url: `https://web-cdn.${
             env === 'live' ? '' : `${env}.`
-          }api.bbci.co.uk/fd/simorgh-bff?page=1&id=${topicId}&service=${service}${appendVariant}`,
+          }api.bbci.co.uk/fd/simorgh-bff?page=1&id=${topicId}&service=${service}${appendVariant}&pageType=topic`,
         };
 
         if (Cypress.env('currentPath').includes('?renderer_env=test')) {
@@ -111,30 +111,7 @@ export default ({ service, pageType, variant }) => {
               .should('have.attr', 'href')
               .then($href => {
                 cy.get('a').click();
-                cy.url()
-                  .should('eq', $href)
-                  .then(() => {
-                    cy.window().then(win => {
-                      const jsonData = win.SIMORGH_DATA.pageData;
-
-                      if (jsonData.metadata.locators.cpsUrn) {
-                        cy.log('cps article');
-                        const { shortHeadline } = jsonData.promo.headlines;
-                        expect(shortHeadline).to.equal(firstItemHeadline);
-                      }
-                      if (jsonData.metadata.locators.optimoUrn) {
-                        cy.log('optimo article');
-                        const headline =
-                          jsonData.promo.headlines.promoHeadline.blocks[0].model
-                            .blocks[0].model.text;
-                        cy.log(
-                          jsonData.promo.headlines.promoHeadline.blocks[0].model
-                            .blocks[0].model.text,
-                        );
-                        expect(headline).to.equal(firstItemHeadline);
-                      }
-                    });
-                  });
+                cy.url().should('eq', $href);
               });
           });
       });

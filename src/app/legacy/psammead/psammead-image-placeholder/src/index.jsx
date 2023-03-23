@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { number, bool, objectOf, string } from 'prop-types';
-import { C_LUNAR, C_SHADOW } from '#psammead/psammead-styles/src/colours';
 import {
   BBC_BLOCKS,
   BBC_BLOCKS_DARK_MODE,
@@ -20,7 +19,9 @@ const StyledImagePlaceholder = styled.div`
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: ${({ darkMode }) => (darkMode ? C_SHADOW : C_LUNAR)};
+  background-color: ${({ darkMode }) =>
+    props =>
+      darkMode ? props.theme.palette.SHADOW : props.theme.palette.LUNAR};
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 60px 17px;

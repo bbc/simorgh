@@ -2,12 +2,6 @@ import React from 'react';
 import { string, bool, shape } from 'prop-types';
 import styled from '@emotion/styled';
 import {
-  C_LUNAR,
-  C_SHADOW,
-  C_EBON,
-  C_METAL,
-} from '#psammead/psammead-styles/src/colours';
-import {
   GEL_SPACING_TRPL,
   GEL_SPACING,
 } from '#psammead/gel-foundations/src/spacings';
@@ -31,12 +25,12 @@ const FILL_VIEWPORT_STYLES = `
 const StyledEmbedError = styled.div`
   ${({ service }) => getSansRegular(service)}
   ${GEL_BODY_COPY};
-  background-color: ${C_LUNAR};
+  background-color: ${props => props.theme.palette.LUNAR};
   background-image: url(data:image/svg+xml;base64,${BBC_BLOCKS});
   background-position: center ${GEL_SPACING_TRPL};
   background-repeat: no-repeat;
   background-size: ${BBC_BLOCKS_WIDTH};
-  color: ${C_SHADOW};
+  color: ${props => props.theme.palette.SHADOW};
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -55,13 +49,13 @@ const StyledErrorMessage = styled.div`
 
   a {
     ${({ service }) => getSansBold(service)}
-    color: ${C_EBON};
+    color: ${props => props.theme.palette.EBON};
     display: block;
     margin-top: ${GEL_SPACING};
     text-decoration: none;
 
     &:visited {
-      color: ${C_METAL};
+      color: ${props => props.theme.palette.METAL};
     }
 
     &:hover,

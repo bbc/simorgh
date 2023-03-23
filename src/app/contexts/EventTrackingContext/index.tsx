@@ -1,7 +1,5 @@
-import React, { createContext, useContext } from 'react';
-import { node } from 'prop-types';
+import React, { createContext, PropsWithChildren, useContext } from 'react';
 
-import { pageDataPropType } from '#models/propTypes/data';
 import { RequestContext } from '#contexts/RequestContext';
 import { buildATIEventTrackingParams } from '#containers/ATIAnalytics/params';
 import useToggle from '#hooks/useToggle';
@@ -20,12 +18,28 @@ import {
   TOPIC_PAGE,
   LIVE_PAGE,
   MEDIA_ARTICLE_PAGE,
+  HOME_PAGE,
 } from '#app/routes/utils/pageTypes';
+import { PageTypes, Platforms } from '#app/models/types/global';
 import { ServiceContext } from '../ServiceContext';
 
-export const EventTrackingContext = createContext({});
+type EventTrackingContextProps =
+  | {
+      campaignID: string;
+      pageIdentifier: string;
+      platform: Platforms;
+      producerId: string;
+      statsDestination: string;
+    }
+  | Record<string, never>;
 
-const getCampaignID = pageType => {
+export const EventTrackingContext = createContext<EventTrackingContextProps>(
+  {} as EventTrackingContextProps,
+);
+
+type CampaignPageTypes = Exclude<PageTypes, 'error'>;
+
+const getCampaignID = (pageType: CampaignPageTypes) => {
   const campaignID = {
     [ARTICLE_PAGE]: 'article',
     [MEDIA_ARTICLE_PAGE]: 'article-sfv',
@@ -41,7 +55,9 @@ const getCampaignID = pageType => {
     [CORRESPONDENT_STORY_PAGE]: 'article-csp',
     [TOPIC_PAGE]: 'topic-page',
     [LIVE_PAGE]: 'live-page',
+    [HOME_PAGE]: 'index-home',
   }[pageType];
+
   if (!campaignID) {
     // eslint-disable-next-line no-console
     console.error(
@@ -54,7 +70,14 @@ const getCampaignID = pageType => {
 
 const NO_TRACKING_PROPS = {};
 
-export const EventTrackingContextProvider = ({ children, pageData }) => {
+type EventTrackingProviderProps = {
+  pageData?: object | null;
+};
+
+export const EventTrackingContextProvider = ({
+  children,
+  pageData = null,
+}: PropsWithChildren<EventTrackingProviderProps>) => {
   const requestContext = useContext(RequestContext);
   const serviceContext = useContext(ServiceContext);
   const { enabled: eventTrackingIsEnabled } = useToggle('eventTracking');
@@ -68,7 +91,9 @@ export const EventTrackingContextProvider = ({ children, pageData }) => {
     );
   }
 
-  const campaignID = getCampaignID(requestContext.pageType);
+  const campaignID = getCampaignID(
+    requestContext.pageType as CampaignPageTypes,
+  );
   const { pageIdentifier, platform, statsDestination } =
     buildATIEventTrackingParams(pageData, requestContext, serviceContext);
   const trackingProps = {
@@ -87,13 +112,4 @@ export const EventTrackingContextProvider = ({ children, pageData }) => {
       {children}
     </EventTrackingContext.Provider>
   );
-};
-
-EventTrackingContextProvider.propTypes = {
-  children: node.isRequired,
-  pageData: pageDataPropType,
-};
-
-EventTrackingContextProvider.defaultProps = {
-  pageData: null,
 };

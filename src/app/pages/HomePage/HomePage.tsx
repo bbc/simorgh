@@ -1,20 +1,65 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
+import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
+import {
+  CurationData,
+  VisualProminence,
+  VisualStyle,
+} from '#app/models/types/curationData';
+import Curation from '#app/components/Curation';
+import { ServiceContext } from '../../contexts/ServiceContext';
+import styles from './index.styles';
 
 interface HomePageProps {
   pageData: {
-    id: string;
+    pageType: string;
+    id?: string;
     title: string;
+    curations: CurationData[];
   };
 }
 
 const HomePage = ({ pageData }: HomePageProps) => {
+  const { curations } = pageData;
+  const { translations } = useContext(ServiceContext);
+  const { topStoriesTitle } = translations;
+
   return (
-    <div>
-      Hi, I am a Home Page component and your page id is {pageData.id} and the
-      title is {pageData.title}!
-    </div>
+    <>
+      <main css={styles.main}>
+        <div css={styles.inner}>
+          {curations.map(
+            ({
+              visualProminence,
+              summaries,
+              curationId,
+              title: curationTitle,
+              link,
+              position,
+              visualStyle,
+            }) => {
+              return (
+                <React.Fragment key={`${curationId}-${position}`}>
+                  <Curation
+                    headingLevel={curationTitle ? 3 : 2}
+                    visualStyle={visualStyle as VisualStyle}
+                    visualProminence={visualProminence as VisualProminence}
+                    promos={summaries}
+                    title={curationTitle}
+                    topStoriesTitle={topStoriesTitle}
+                    position={position}
+                    link={link}
+                    curationLength={curations && curations.length}
+                  />
+                </React.Fragment>
+              );
+            },
+          )}
+        </div>
+      </main>
+    </>
   );
 };
+
 export default HomePage;

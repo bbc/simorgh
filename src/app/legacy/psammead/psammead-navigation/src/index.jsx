@@ -3,11 +3,6 @@ import styled from '@emotion/styled';
 import { shape, string, node, bool, oneOf } from 'prop-types';
 import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
 import {
-  C_WHITE,
-  C_EBON,
-  C_GREY_3,
-} from '#psammead/psammead-styles/src/colours';
-import {
   GEL_SPACING_HLF,
   GEL_SPACING,
   GEL_SPACING_SEXT,
@@ -30,7 +25,7 @@ const NavWrapper = styled.div`
   position: relative;
   max-width: 63.4rem;
   margin: 0;
-  background-color: ${C_WHITE};
+  background-color: ${props => props.theme.palette.WHITE};
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     margin: 0 0.8rem;
   }
@@ -76,11 +71,10 @@ const StyledLink = styled.a`
     ${ListItemBorder}
     border-bottom: ${GEL_SPACING_HLF} solid ${props =>
       props.theme.palette.POSTBOX};
-    ${({ currentLink }) =>
+    ${({ currentLink, theme }) =>
       currentLink &&
       `
-        border-bottom: ${CURRENT_ITEM_HOVER_BORDER} solid ${props =>
-        props.theme.palette.POSTBOX};
+        border-bottom: ${CURRENT_ITEM_HOVER_BORDER} solid ${theme.palette.POSTBOX};
       `}
   }
 
@@ -242,17 +236,18 @@ NavigationLi.defaultProps = {
 // color of the Navigation
 const StyledNav = styled.nav`
   position: relative;
-  ${({ isOpen }) => `background-color: ${isOpen ? C_EBON : C_WHITE};`}
-  ${({ ampOpenClass }) =>
+  background-color: ${({ isOpen }) =>
+    props =>
+      isOpen ? props.theme.palette.EBON : props.theme.palette.WHITE};
+  ${({ ampOpenClass, theme }) =>
     ampOpenClass &&
     `
       &.${ampOpenClass} {
         @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
-          background-color: ${C_EBON};
+          background-color: ${theme.palette.EBON};
         }
       }
     `}
-  
 
   &::after {
     content: '';
@@ -260,7 +255,7 @@ const StyledNav = styled.nav`
     bottom: 0;
     right: 0;
     left: 0;
-    border-bottom: 0.0625rem solid ${C_GREY_3};
+    border-bottom: 0.0625rem solid ${props => props.theme.palette.GREY_3};
   }
 
   ${StyledListItem} {

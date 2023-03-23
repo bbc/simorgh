@@ -39,6 +39,7 @@ describe('UserContext cookies', () => {
 
   describe('getPreferredVariant', () => {
     it('should return null if service is null', () => {
+      // @ts-expect-error - we are testing null service
       expect(getPreferredVariant()).toEqual(null);
     });
 
@@ -70,18 +71,23 @@ describe('UserContext cookies', () => {
     it('should not set invalid service or variant', () => {
       Cookie.set(POLICY_COOKIE, '111');
       cookieSetterSpy.mockClear();
+      // @ts-expect-error - we are testing null variant
       setPreferredVariantCookie('news', '');
       expect(cookieSetterSpy).not.toHaveBeenCalled();
+      // @ts-expect-error - we are testing null service and not passing in a variant
       setPreferredVariantCookie('');
       expect(cookieSetterSpy).not.toHaveBeenCalled();
+      // @ts-expect-error - we are testing not passing in a variant
       setPreferredVariantCookie('news');
       expect(cookieSetterSpy).not.toHaveBeenCalled();
+      // @ts-expect-error - we are testing not passing in a service and variant
       setPreferredVariantCookie();
       expect(cookieSetterSpy).not.toHaveBeenCalled();
     });
 
     it('should set preferred variant if personalisation cookies enabled', () => {
       Cookie.set(POLICY_COOKIE, '111');
+      // @ts-expect-error - we are testing a test service and variant
       setPreferredVariantCookie('foo', 'bar');
       expect(cookieSetterSpy).toHaveBeenCalledWith('ckps_foo', 'bar', {
         domain: '.bbc.com',
@@ -182,6 +188,8 @@ describe('UserContext cookies', () => {
       },
     ].forEach(({ test, cookiePolicy, result }) => {
       it(`expect ${result} ${test}`, () =>
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
         expect(personalisationEnabled(cookiePolicy))[result]());
     });
   });
