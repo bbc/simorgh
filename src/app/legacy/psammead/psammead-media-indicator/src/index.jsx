@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { node, bool, string, oneOf, shape } from 'prop-types';
-import { C_WHITE, C_EBON } from '#psammead/psammead-styles/src/colours';
 import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
 import { getMinion } from '#psammead/gel-foundations/src/typography';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
@@ -9,8 +8,8 @@ import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
 
 const StyledMediaIndicator = styled.div`
-  color: ${C_EBON};
-  background-color: ${C_WHITE};
+  color: ${props => props.theme.palette.EBON};
+  background-color: ${props => props.theme.palette.WHITE};
   ${({ service }) => getSansRegular(service)}
   ${({ script }) => script && getMinion(script)};
 

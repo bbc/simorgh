@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Media Message matches media message snapshot 1`] = `
+exports[`Media Message should match media message snapshot 1`] = `
 .emotion-0 {
   position: absolute;
   top: 0;
