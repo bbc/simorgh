@@ -1,4 +1,4 @@
-export default [
+const urls = [
   {
     service: 'kyrgyz',
     local: '/kyrgyz/tipohome',
@@ -6,3 +6,7 @@ export default [
     live: null,
   },
 ];
+
+export default () => {
+  return urls;
+};
