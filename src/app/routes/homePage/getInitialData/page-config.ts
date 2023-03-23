@@ -20,8 +20,8 @@ const HOME_PAGE_CONFIG: { [service in Services]: { [env in Envs]: string } } = {
     live: 'cg58k91re1gt',
   },
   arabic: {
-    test: '',
-    live: '',
+    test: 'cx35pee6zvpt',
+    live: 'cq01ke64p2et',
   },
   archive: {
     test: '',
