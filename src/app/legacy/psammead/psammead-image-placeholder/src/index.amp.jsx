@@ -11,7 +11,6 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
-import { SHADOW, LUNAR } from '../../../../components/ThemeProvider/palette';
 
 const bgImageDark = `data:image/svg+xml;base64,${BBC_BLOCKS_DARK_MODE}`;
 const bgImageRegular = `data:image/svg+xml;base64,${BBC_BLOCKS}`;
@@ -24,7 +23,9 @@ const AmpImgPlaceholderContainer = ({
 }) => {
   return (
     <div
-      style={{ backgroundColor: `${darkMode ? SHADOW : LUNAR}` }}
+      css={({ palette }) => ({
+        backgroundColor: `${darkMode ? palette.SHADOW : palette.LUNAR}`,
+      })}
       fallback={fallback}
       placeholder={placeholder}
     >
