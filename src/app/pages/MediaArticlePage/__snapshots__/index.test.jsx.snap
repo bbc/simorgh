@@ -15,7 +15,8 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
 @media (min-width: 63rem) {
   .emotion-1 {
     padding: 0 1rem;
-    grid-gap: 1rem;
+    -webkit-column-gap: 1rem;
+    column-gap: 1rem;
   }
 }
 

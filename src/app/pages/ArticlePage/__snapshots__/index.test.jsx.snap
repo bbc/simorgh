@@ -15,7 +15,8 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
 @media (min-width: 63rem) {
   .emotion-1 {
     padding: 0 1rem;
-    grid-gap: 1rem;
+    -webkit-column-gap: 1rem;
+    column-gap: 1rem;
   }
 }
 
@@ -1546,7 +1547,8 @@ exports[`should render a news article correctly 1`] = `
 @media (min-width: 63rem) {
   .emotion-1 {
     padding: 0 1rem;
-    grid-gap: 1rem;
+    -webkit-column-gap: 1rem;
+    column-gap: 1rem;
   }
 }
 
@@ -1896,7 +1898,8 @@ exports[`should render a news article with headline in the middle correctly 1`] 
 @media (min-width: 63rem) {
   .emotion-1 {
     padding: 0 1rem;
-    grid-gap: 1rem;
+    -webkit-column-gap: 1rem;
+    column-gap: 1rem;
   }
 }
 
@@ -2273,7 +2276,8 @@ exports[`should render a news article without headline correctly 1`] = `
 @media (min-width: 63rem) {
   .emotion-1 {
     padding: 0 1rem;
-    grid-gap: 1rem;
+    -webkit-column-gap: 1rem;
+    column-gap: 1rem;
   }
 }
 
@@ -2492,7 +2496,8 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
 @media (min-width: 63rem) {
   .emotion-1 {
     padding: 0 1rem;
-    grid-gap: 1rem;
+    -webkit-column-gap: 1rem;
+    column-gap: 1rem;
   }
 }
 

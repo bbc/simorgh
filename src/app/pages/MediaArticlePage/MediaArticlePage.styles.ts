@@ -15,7 +15,7 @@ export default {
 
       [mq.GROUP_4_MIN_WIDTH]: {
         padding: '0 1rem',
-        gridGap: '1rem',
+        columnGap: '1rem',
       },
     }),
   primaryColumn: ({ mq }: Theme) =>
