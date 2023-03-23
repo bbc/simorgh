@@ -107,7 +107,7 @@ describe('Media Player: Placeholder', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('shold render no-js styles when noJsClassName prop is used', () => {
+  it('should render no-js styles when noJsClassName prop is used', () => {
     const { container } = render(
       <Placeholder
         onClick={mockOnClick}

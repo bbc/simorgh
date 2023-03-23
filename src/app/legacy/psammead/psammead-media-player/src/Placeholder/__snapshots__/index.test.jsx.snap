@@ -1,224 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Media Player: Placeholder shold render no-js styles when noJsClassName prop is used 1`] = `
-.emotion-0 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  cursor: default;
-}
-
-.emotion-0:hover .emotion-8,
-.emotion-0:focus .emotion-8 {
-  background-color: #B80000;
-}
-
-.emotion-2 {
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  border: 0.0625rem solid transparent;
-  color: #FFFFFF;
-  background-color: rgba(34, 34, 34, 0.75);
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-2 {
-    font-size: 0.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast: active) {
-  .emotion-2 {
-    background-color: transparent;
-  }
-}
-
-.no-js .emotion-2 {
-  background-color: rgba(34, 34, 34, 0.75);
-}
-
-@media screen and (-ms-high-contrast: active) {
-  .no-js .emotion-2 {
-    background-color: transparent;
-  }
-}
-
-.no-js .emotion-2 .guidance-message {
-  display: none;
-}
-
-.emotion-4 {
-  display: block;
-  font-weight: normal;
-  padding: 0.5rem;
-  border-bottom: 0.0625rem solid transparent;
-}
-
-@media screen and (-ms-high-contrast: active) {
-  .emotion-4 {
-    background-color: window;
-  }
-}
-
-@media (min-width: 25rem) {
-  .emotion-4 {
-    padding: 1rem;
-  }
-}
-
-.emotion-6 {
-  position: absolute;
-  bottom: 0;
-}
-
-.emotion-9 {
-  background-color: #222222;
-  border: none;
-  color: #FFFFFF;
-  cursor: pointer;
-  display: block;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  height: 5rem;
-  padding: 0;
-  -webkit-transition: background-color 300ms;
-  transition: background-color 300ms;
-  width: 5rem;
-  position: absolute;
-  bottom: 0;
-}
-
-.emotion-9:hover,
-.emotion-9:focus {
-  background-color: #B80000;
-  -webkit-transition: background-color 300ms;
-  transition: background-color 300ms;
-}
-
-.no-js .emotion-9 {
-  display: none;
-}
-
-.emotion-11 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
-.emotion-13>svg {
-  color: #FFFFFF;
-  fill: currentColor;
-  height: 1.5rem;
-  margin-top: 0.5rem;
-  width: 1.5rem;
-}
-
-.emotion-15 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
-  color: #222222;
-  fill: currentColor;
-  width: 0.75rem;
-  height: 0.75rem;
-}
-
-.emotion-17 {
-  display: block;
-  margin-top: 0.5rem;
-}
-
-.emotion-19 {
-  display: block;
-  width: 100%;
-}
-
-<div>
-  <div
-    class="emotion-0 emotion-1"
-    data-e2e="media-player__placeholder"
-  >
-    <div
-      class="emotion-2 emotion-3"
-      data-e2e="media-player__guidance"
-    >
-      <strong
-        aria-hidden="true"
-        class="guidance-message emotion-4 emotion-5"
-      >
-        Guidance: May contain strong language, sexual or violent content that may offend.
-      </strong>
-      <noscript
-        class="emotion-6 emotion-7"
-      />
-    </div>
-    <button
-      class="emotion-8 emotion-9 emotion-10"
-    >
-      <span
-        class="emotion-11 emotion-12"
-      >
-        Guidance: May contain strong language, sexual or violent content that may offend. Play video, "Dog chases cat.", 2 minutes 30 seconds
-      </span>
-      <div
-        aria-hidden="true"
-        class="emotion-13 emotion-14"
-      >
-        <svg
-          aria-hidden="true"
-          class="emotion-15 emotion-16"
-          focusable="false"
-          height="12"
-          viewBox="0 0 12 12"
-          width="12"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="none"
-            fill-rule="evenodd"
-          >
-            <path
-              d="M.5.6h12v12H.5z"
-            />
-            <path
-              d="M2.144.96v11.28l8.712-5.64z"
-              fill="currentColor"
-            />
-          </g>
-        </svg>
-      </div>
-      <time
-        aria-hidden="true"
-        class="emotion-17 emotion-18"
-        datetime="PT2M30S"
-      >
-        2:30
-      </time>
-    </button>
-    <img
-      alt=""
-      class="emotion-19 emotion-20"
-      src="http://foo.bar/placeholder.png"
-    />
-  </div>
-</div>
-`;
-
 exports[`Media Player: Placeholder should render a video placeholder 1`] = `
 .emotion-0 {
   position: absolute;
@@ -1055,6 +836,225 @@ exports[`Media Player: Placeholder should render an audio placeholder without du
     <img
       alt=""
       class="emotion-15 emotion-16"
+      src="http://foo.bar/placeholder.png"
+    />
+  </div>
+</div>
+`;
+
+exports[`Media Player: Placeholder should render no-js styles when noJsClassName prop is used 1`] = `
+.emotion-0 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: default;
+}
+
+.emotion-0:hover .emotion-8,
+.emotion-0:focus .emotion-8 {
+  background-color: #B80000;
+}
+
+.emotion-2 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border: 0.0625rem solid transparent;
+  color: #FFFFFF;
+  background-color: rgba(34, 34, 34, 0.75);
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    font-size: 0.875rem;
+  }
+}
+
+@media screen and (-ms-high-contrast: active) {
+  .emotion-2 {
+    background-color: transparent;
+  }
+}
+
+.no-js .emotion-2 {
+  background-color: rgba(34, 34, 34, 0.75);
+}
+
+@media screen and (-ms-high-contrast: active) {
+  .no-js .emotion-2 {
+    background-color: transparent;
+  }
+}
+
+.no-js .emotion-2 .guidance-message {
+  display: none;
+}
+
+.emotion-4 {
+  display: block;
+  font-weight: normal;
+  padding: 0.5rem;
+  border-bottom: 0.0625rem solid transparent;
+}
+
+@media screen and (-ms-high-contrast: active) {
+  .emotion-4 {
+    background-color: window;
+  }
+}
+
+@media (min-width: 25rem) {
+  .emotion-4 {
+    padding: 1rem;
+  }
+}
+
+.emotion-6 {
+  position: absolute;
+  bottom: 0;
+}
+
+.emotion-9 {
+  background-color: #222222;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: block;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  height: 5rem;
+  padding: 0;
+  -webkit-transition: background-color 300ms;
+  transition: background-color 300ms;
+  width: 5rem;
+  position: absolute;
+  bottom: 0;
+}
+
+.emotion-9:hover,
+.emotion-9:focus {
+  background-color: #B80000;
+  -webkit-transition: background-color 300ms;
+  transition: background-color 300ms;
+}
+
+.no-js .emotion-9 {
+  display: none;
+}
+
+.emotion-11 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-13>svg {
+  color: #FFFFFF;
+  fill: currentColor;
+  height: 1.5rem;
+  margin-top: 0.5rem;
+  width: 1.5rem;
+}
+
+.emotion-15 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.emotion-17 {
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.emotion-19 {
+  display: block;
+  width: 100%;
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1"
+    data-e2e="media-player__placeholder"
+  >
+    <div
+      class="emotion-2 emotion-3"
+      data-e2e="media-player__guidance"
+    >
+      <strong
+        aria-hidden="true"
+        class="guidance-message emotion-4 emotion-5"
+      >
+        Guidance: May contain strong language, sexual or violent content that may offend.
+      </strong>
+      <noscript
+        class="emotion-6 emotion-7"
+      />
+    </div>
+    <button
+      class="emotion-8 emotion-9 emotion-10"
+    >
+      <span
+        class="emotion-11 emotion-12"
+      >
+        Guidance: May contain strong language, sexual or violent content that may offend. Play video, "Dog chases cat.", 2 minutes 30 seconds
+      </span>
+      <div
+        aria-hidden="true"
+        class="emotion-13 emotion-14"
+      >
+        <svg
+          aria-hidden="true"
+          class="emotion-15 emotion-16"
+          focusable="false"
+          height="12"
+          viewBox="0 0 12 12"
+          width="12"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g
+            fill="none"
+            fill-rule="evenodd"
+          >
+            <path
+              d="M.5.6h12v12H.5z"
+            />
+            <path
+              d="M2.144.96v11.28l8.712-5.64z"
+              fill="currentColor"
+            />
+          </g>
+        </svg>
+      </div>
+      <time
+        aria-hidden="true"
+        class="emotion-17 emotion-18"
+        datetime="PT2M30S"
+      >
+        2:30
+      </time>
+    </button>
+    <img
+      alt=""
+      class="emotion-19 emotion-20"
       src="http://foo.bar/placeholder.png"
     />
   </div>

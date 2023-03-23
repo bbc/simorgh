@@ -568,7 +568,7 @@ exports[`MediaPlayer should render the canonical legacy media player 1`] = `
 </div>
 `;
 
-exports[`MediaPlayer should render the canonical player with a placeholder 1`] = `
+exports[`MediaPlayer should render the canonical player without a placeholder 1`] = `
 .emotion-1 {
   margin-top: 0.5rem;
 }

@@ -36,7 +36,7 @@ const GenerateMediaPlayer = ({
 );
 
 describe('MediaPlayer', () => {
-  it('should render the canonical player with a placeholder', () => {
+  it('should render the canonical player without a placeholder', () => {
     const { container } = render(
       <GenerateMediaPlayer
         platform="canonical"
