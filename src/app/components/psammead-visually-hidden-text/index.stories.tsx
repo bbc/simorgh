@@ -3,9 +3,9 @@ import { withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import md from './README.md';
 import VisuallyHiddenText from '.';
-import ThemeProvider from '../../ThemeProvider';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
-import { Services, Variants } from '../../../models/types/global';
+import ThemeProvider from '../ThemeProvider';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import { Services, Variants } from '../../models/types/global';
 
 interface Props {
   service: Services;
