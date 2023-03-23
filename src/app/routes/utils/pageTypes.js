@@ -13,4 +13,4 @@ export const PHOTO_GALLERY_PAGE = 'PGL';
 export const CORRESPONDENT_STORY_PAGE = 'CSP';
 export const TOPIC_PAGE = 'TOPIC';
 export const LIVE_PAGE = 'LIVE';
-export const HOME_PAGE = 'HOME';
+export const HOME_PAGE = 'home';
