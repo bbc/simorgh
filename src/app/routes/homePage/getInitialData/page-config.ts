@@ -48,8 +48,8 @@ const HOME_PAGE_CONFIG: { [service in Services]: { [env in Envs]: string } } = {
     live: '',
   },
   gujarati: {
-    test: '',
-    live: '',
+    test: 'c897lqqzkgkt',
+    live: 'cz4vn9gy9pyt',
   },
   hausa: {
     test: '',
