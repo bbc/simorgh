@@ -68,8 +68,8 @@ const HOME_PAGE_CONFIG: { [service in Services]: { [env in Envs]: string } } = {
     live: 'c89lm51033zt',
   },
   japanese: {
-    test: '',
-    live: '',
+    test: 'c44evppzl99t',
+    live: 'cn6rql5n51nt',
   },
   korean: {
     test: '',
