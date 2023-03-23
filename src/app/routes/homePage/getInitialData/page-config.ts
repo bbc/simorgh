@@ -56,8 +56,8 @@ const HOME_PAGE_CONFIG: { [service in Services]: { [env in Envs]: string } } = {
     live: 'cy1v5ngp4d9t',
   },
   hindi: {
-    test: '',
-    live: '',
+    test: 'cg8nwjjm7vet',
+    live: 'c6z8lgd39q7t',
   },
   igbo: {
     test: '',
