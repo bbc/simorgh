@@ -1,7 +1,9 @@
-import React from 'react';
+/** @jsxRuntime classic */
+/** @jsx jsx */
+
 import path from 'ramda/src/path';
 import styled from '@emotion/styled';
-import { useTheme } from '@emotion/react';
+import { jsx, useTheme } from '@emotion/react';
 
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
 import {
