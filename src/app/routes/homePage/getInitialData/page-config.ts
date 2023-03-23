@@ -112,8 +112,8 @@ const HOME_PAGE_CONFIG: { [service in Services]: { [env in Envs]: string } } = {
     live: 'ck3yk9nz25qt',
   },
   portuguese: {
-    test: '',
-    live: '',
+    test: 'c7pe2jj9l7mt',
+    live: 'c0rp0kp57p1t',
   },
   punjabi: {
     test: '',
