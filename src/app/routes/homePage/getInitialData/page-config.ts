@@ -104,8 +104,8 @@ const HOME_PAGE_CONFIG: { [service in Services]: { [env in Envs]: string } } = {
     live: 'c44d8kpmz42t',
   },
   persian: {
-    test: '',
-    live: '',
+    test: 'c3rpqvvzem3t',
+    live: 'c0rp0kp534xt',
   },
   pidgin: {
     test: '',
