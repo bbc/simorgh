@@ -71,6 +71,10 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
   const { enabled: adsEnabled } = useToggle('ads');
 
+  const {
+    palette: { GREY_2, WHITE },
+  } = useTheme();
+
   const isAdsEnabled = [
     path(['metadata', 'allowAdvertising'], pageData),
     adsEnabled,
@@ -140,10 +144,6 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
       ) : null,
     wsoj: props => <OptimizelyRecommendation pageData={pageData} {...props} />,
   };
-
-  const {
-    palette: { GREY_2, WHITE },
-  } = useTheme();
 
   const visuallyHiddenBlock = {
     id: null,

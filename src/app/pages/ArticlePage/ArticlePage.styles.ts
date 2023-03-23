@@ -40,10 +40,6 @@ export default {
     css({
       paddingBottom: `${spacings.TRIPLE}rem`,
     }),
-  mediaPlayer: ({ spacings }: Theme) =>
-    css({
-      paddingTop: `${spacings.TRIPLE}rem`,
-    }),
   adContainer: ({ spacings }: Theme) =>
     css({
       marginBottom: `${spacings.TRIPLE}rem`,
