@@ -28,8 +28,8 @@ const HOME_PAGE_CONFIG: { [service in Services]: { [env in Envs]: string } } = {
     live: '',
   },
   azeri: {
-    test: '',
-    live: '',
+    test: 'cx35pee66wwt',
+    live: 'c1295dq496yt',
   },
   bengali: {
     test: '',
