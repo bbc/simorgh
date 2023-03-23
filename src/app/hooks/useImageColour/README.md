@@ -38,7 +38,7 @@ The first argument to the hook is a link to the image to be used.
 - For us to be able to download the image, the server must respond with appropriate CORS headers. BBC services, including iChef, do include the required headers.
 - Any image size beyond approximately 20 x 20 pixels is unnecessary. Unless a larger version of the image is being downloaded anyway for some other use, generally using a very small image will conserve bandwidth
 
-##### `options`
+`options`
 
 The hook accepts a second, optional argument. This argument can contain various configuration options:
 
@@ -50,7 +50,7 @@ The hook accepts a second, optional argument. This argument can contain various 
 
 The hook returns an object with the following keys:
 
-###### `colour`
+`colour`
 
 An object containing the selected colour. This object has the following keys:
 
@@ -58,11 +58,11 @@ An object containing the selected colour. This object has the following keys:
 - `rgb` - An array representing the colour's red, green and blue components, eg `[255, 0, 5]`
 - `isFallback` - A boolean representing whether this colour was the `fallbackColour` passed in the input options
 
-###### `isLoading`
+`isLoading`
 
 A boolean that will be true if the hook is currently analysing an image. Note that changing the URL passed to the hook when this value is `true` will have no effect.
 
-###### `error`
+`error`
 
 Will be null if no error has occurred, or an error string if something has gone wrong. See the section on Error Handling below.
 
@@ -70,19 +70,18 @@ Will be null if no error has occurred, or an error string if something has gone 
 
 ```javascript
 import styled from '@emotion/styled';
-import { C_GHOST, C_EBON } from '@bbc/psammead';
 import useImageAnalyser from './';
 
 const MyElement = styled.div`
-  color: ${C_EBON};
+  color: ${props => props.theme.palette.EBON};
   background: ${props => props.background.hex};
 `;
 
 const MyComponent = () => {
   const options = {
     minimumContrast: 7,
-    contrastColour: C_EBON,
-    fallbackColour: C_GHOST,
+    contrastColour: ${props => props.theme.palette.EBON},
+    fallbackColour: ${props => props.theme.palette.GHOST},
   };
   const { colour } = useImageAnalyser(
     'http://placekitten.com/200/300',

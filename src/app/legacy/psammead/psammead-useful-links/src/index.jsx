@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { getSerifMedium } from '#psammead/psammead-styles/src/font-styles';
-import { C_EBON, C_METAL } from '#psammead/psammead-styles/src/colours';
 import { grid } from '#psammead/psammead-styles/src/detection';
 import { getPica } from '#psammead/gel-foundations/src/typography';
 import {
@@ -21,7 +20,7 @@ const getRowCount = (children, columns) =>
 export const UsefulLink = styled.a`
   ${({ script }) => script && getPica(script)};
   ${({ service }) => service && getSerifMedium(service)};
-  color: ${C_EBON};
+  color: ${props => props.theme.palette.EBON};
   text-decoration: none;
   &:hover,
   &:focus {
@@ -29,7 +28,7 @@ export const UsefulLink = styled.a`
   }
 
   &:visited {
-    color: ${C_METAL};
+    color: ${props => props.theme.palette.METAL};
   }
 `;
 

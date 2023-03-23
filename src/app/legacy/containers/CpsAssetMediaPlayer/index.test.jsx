@@ -3,10 +3,10 @@ import { BrowserRouter } from 'react-router-dom';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 import {
-  shouldMatchSnapshot,
   isNull,
   suppressPropWarnings,
 } from '#psammead/psammead-test-helpers/src';
+import { render } from '../../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import CpsAssetMediaPlayerContainer from '.';
 import videoBlock from './fixtures';
@@ -36,43 +36,51 @@ const GenerateMediaPlayer = ({
 );
 
 describe('MediaPlayer', () => {
-  shouldMatchSnapshot(
-    'render the canonical player without a placeholder',
-    <GenerateMediaPlayer
-      platform="canonical"
-      blocks={[videoBlock]}
-      assetUri="/pidgin/123456789"
-    />,
-  );
+  it('should render the canonical player without a placeholder', () => {
+    const { container } = render(
+      <GenerateMediaPlayer
+        platform="canonical"
+        blocks={[videoBlock]}
+        assetUri="/pidgin/123456789"
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'render the amp player',
-    <GenerateMediaPlayer
-      platform="amp"
-      blocks={[videoBlock]}
-      assetUri="/pidgin/123456789"
-    />,
-  );
+  it('should render the amp player', () => {
+    const { container } = render(
+      <GenerateMediaPlayer
+        platform="amp"
+        blocks={[videoBlock]}
+        assetUri="/pidgin/123456789"
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'render canonical legacy media player',
-    <GenerateMediaPlayer
-      platform="canonical"
-      blocks={[videoBlock]}
-      assetUri="/russian/multimedia/2016/05/160505_v_diving_record"
-      isLegacyMedia
-    />,
-  );
+  it('should render the canonical legacy media player', () => {
+    const { container } = render(
+      <GenerateMediaPlayer
+        platform="canonical"
+        blocks={[videoBlock]}
+        assetUri="/russian/multimedia/2016/05/160505_v_diving_record"
+        isLegacyMedia
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'render amp legacy media player',
-    <GenerateMediaPlayer
-      platform="amp"
-      blocks={[videoBlock]}
-      assetUri="/russian/multimedia/2016/05/160505_v_diving_record"
-      isLegacyMedia
-    />,
-  );
+  it('should render the amp legacy media player', () => {
+    const { container } = render(
+      <GenerateMediaPlayer
+        platform="amp"
+        blocks={[videoBlock]}
+        assetUri="/russian/multimedia/2016/05/160505_v_diving_record"
+        isLegacyMedia
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
   suppressPropWarnings(['assetUri']);
   isNull(
