@@ -88,8 +88,8 @@ const HOME_PAGE_CONFIG: { [service in Services]: { [env in Envs]: string } } = {
     live: '',
   },
   nepali: {
-    test: '',
-    live: '',
+    test: 'c897lqqz91gt',
+    live: 'c44d8kpmzlgt',
   },
   news: {
     test: '',
