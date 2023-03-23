@@ -128,8 +128,8 @@ const HOME_PAGE_CONFIG: { [service in Services]: { [env in Envs]: string } } = {
     live: '',
   },
   serbian: {
-    test: '',
-    live: '',
+    test: 'c6zr6pp47w7t',
+    live: 'c1x6gk68d8qt',
   },
   sport: {
     test: '',
