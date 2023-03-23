@@ -156,8 +156,8 @@ const HOME_PAGE_CONFIG: { [service in Services]: { [env in Envs]: string } } = {
     live: 'c2w0dk010q2t',
   },
   thai: {
-    test: '',
-    live: '',
+    test: 'cjln1ww9v13t',
+    live: 'c2w0dk01g2kt',
   },
   tigrinya: {
     test: '',
