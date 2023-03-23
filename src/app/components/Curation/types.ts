@@ -1,4 +1,4 @@
-import { Summary } from '#models/types/promoData';
+import { Summary } from '#app/models/types/curationData';
 import { Services, Variants } from '#models/types/global';
 
 export interface Promo extends Summary {
