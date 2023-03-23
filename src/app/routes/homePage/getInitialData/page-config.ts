@@ -8,8 +8,8 @@ const HOME_PAGE_CONFIG: { [service in Services]: { [env in Envs]: string } } = {
     live: 'crg7kj2e52nt',
   },
   afaanoromoo: {
-    test: '',
-    live: '',
+    test: 'c93v2kkzl24t',
+    live: 'c44dyn08mejt',
   },
   afrique: {
     test: '',
