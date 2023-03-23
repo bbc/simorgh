@@ -60,8 +60,8 @@ const HOME_PAGE_CONFIG: { [service in Services]: { [env in Envs]: string } } = {
     live: 'c6z8lgd39q7t',
   },
   igbo: {
-    test: '',
-    live: '',
+    test: 'c44evppzkj4t',
+    live: 'cp2dkn6rzj5t',
   },
   indonesia: {
     test: '',
