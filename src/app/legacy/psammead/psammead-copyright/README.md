@@ -16,7 +16,8 @@ Displays a source attribution in block capitals in the bottom-right of the paren
 
 ## Usage
 
-Commonly used alongside [`psammead-figure`](https://github.com/BBC-News/psammead/tree/latest/packages/components/psammead-figure), [`psammead-image`](https://github.com/BBC-News/psammead/tree/latest/packages/components/psammead-image) and [`psammead-image-placeholder`](https://github.com/BBC-News/psammead/tree/latest/packages/components/psammead-image-placeholder). Can also pass in [`psammead-visually-hidden-text`](../../../components/psammead-visually-hidden-text/README.md) in order to announce the component.
+Commonly used alongside [`psammead-figure`](https://github.com/BBC-News/psammead/tree/latest/packages/components/psammead-figure), [`psammead-image`](https://github.com/BBC-News/psammead/tree/latest/packages/components/psammead-image) and [`psammead-image-placeholder`](https://github.com/BBC-News/psammead/tree/latest/packages/components/psammead-image-placeholder). Can also pass in [`VisuallyHiddenText`](../../../components/VisuallyHiddenText/README.md) in order to announce the component.
+
 
 
 ```jsx

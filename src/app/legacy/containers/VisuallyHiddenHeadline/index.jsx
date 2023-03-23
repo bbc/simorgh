@@ -2,7 +2,7 @@ import React from 'react';
 import path from 'ramda/src/path';
 import { textDefaultPropTypes } from '#models/propTypes';
 import { headlineModelPropTypes } from '#models/propTypes/headline';
-import VisuallyHiddenText from '../../../components/psammead-visually-hidden-text';
+import VisuallyHiddenText from '../../../components/VisuallyHiddenText';
 
 const VisuallyHiddenHeadline = props => (
   <VisuallyHiddenText as="h1" {...props} />

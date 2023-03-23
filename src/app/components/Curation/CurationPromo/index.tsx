@@ -4,7 +4,7 @@ import moment from 'moment';
 import path from 'ramda/src/path';
 import formatDuration from '#app/lib/utilities/formatDuration';
 import Promo from '#components/Promo';
-import VisuallyHiddenText from '../../psammead-visually-hidden-text';
+import VisuallyHiddenText from '../../VisuallyHiddenText';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { Promo as CurationPromoProps } from '../types';
 

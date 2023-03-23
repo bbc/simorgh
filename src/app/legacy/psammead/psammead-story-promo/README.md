@@ -125,7 +125,8 @@ import StoryPromo, {
 import MediaIndicator from '#psammead/psammead-media-indicator/src';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import LiveLabel from '#psammead/psammead-live-label/src';
-import VisuallyHiddenText from '../../../components/psammead-visually-hidden-text';
+import VisuallyHiddenText from '../../../components/VisuallyHiddenText';
+
 
 
 

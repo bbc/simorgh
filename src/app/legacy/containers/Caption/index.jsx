@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { oneOfType, object, arrayOf, shape, string } from 'prop-types';
 import Caption from '#psammead/psammead-caption/src';
 import pathOr from 'ramda/src/pathOr';
-import VisuallyHiddenText from '../../../components/psammead-visually-hidden-text';
+import VisuallyHiddenText from '../../../components/VisuallyHiddenText';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import Blocks from '../Blocks';
 import Fragment from '../Fragment';

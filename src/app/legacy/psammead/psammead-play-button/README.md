@@ -56,7 +56,8 @@ The `PlayButton` component is designed to be used in a media asset placeholder c
 
 ### Accessibility notes
 
-This component is expected to provide information about the playable media to screenreaders and other assistive technology. It is required that the title of the media be passed to the `title` prop and, if duration is to be displayed, a human-friendly version to `durationSpoken`. If the video has guidance information, this is also read out in the assitive text. This is used to build a string, which is rendered in a [VisuallyHiddenText](../../../components/psammead-visually-hidden-text/README.md) element. The icon is marked as `aria-hidden="true"`, which means it should be ignored by screenreaders.
+This component is expected to provide information about the playable media to screenreaders and other assistive technology. It is required that the title of the media be passed to the `title` prop and, if duration is to be displayed, a human-friendly version to `durationSpoken`. If the video has guidance information, this is also read out in the assitive text. This is used to build a string, which is rendered in a [VisuallyHiddenText](../../../components/VisuallyHiddenText/README.md) element. The icon is marked as `aria-hidden="true"`, which means it should be ignored by screenreaders.
+
 
 
 <!-- ## Roadmap -->

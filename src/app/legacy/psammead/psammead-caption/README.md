@@ -18,13 +18,15 @@ The `psammead-caption` component is a styled `figcaption` element.
 
 ## Usage
 
-`psammead-caption` can be used together with the [`psammead-figure`](https://github.com/bbc/psammead/tree/latest/packages/components/psammead-figure) and [`psammead-visually-hidden-text`](../../../components/psammead-visually-hidden-text/README.md) components in this way. This visually hidden text is to give context to users of Assistive Technology.
+`psammead-caption` can be used together with the [`psammead-figure`](https://github.com/bbc/psammead/tree/latest/packages/components/psammead-figure) and [`VisuallyHiddenText`](../../../components/VisuallyHiddenText/README.md) components in this way. This visually hidden text is to give context to users of Assistive Technology.
+
 
 
 ```jsx
 import Caption from '#psammead/psammead-caption/src';
 import Figure from '#psammead/psammead-figure/src';
-import VisuallyHiddenText from '../../../psammead-visually-hidden-text';
+import VisuallyHiddenText from '../../../VisuallyHiddenText';
+
 
 import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
 

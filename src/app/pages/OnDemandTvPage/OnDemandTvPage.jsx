@@ -31,7 +31,7 @@ import FooterTimestamp from '#containers/OnDemandFooterTimestamp';
 import MetadataContainer from '#containers/Metadata';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
-import VisuallyHiddenText from '../../components/psammead-visually-hidden-text';
+import VisuallyHiddenText from '../../components/VisuallyHiddenText';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import getPlaceholderImageUrl from '../../routes/utils/getPlaceholderImageUrl';
 

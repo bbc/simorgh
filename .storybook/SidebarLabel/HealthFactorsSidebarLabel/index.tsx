@@ -8,7 +8,7 @@ import {
 } from '../../DocsDecorator/HealthFactors/Icons';
 import ThemeProvider from '../../../src/app/components/ThemeProvider';
 import { getActionCount } from '../../helpers/healthFactors';
-import VisuallyHiddenText from '../../../src/app/components/psammead-visually-hidden-text';
+import VisuallyHiddenText from '../../../src/app/components/VisuallyHiddenText';
 
 const HealthFactorsSidebarLabel = ({ metadata, name }) => {
   const actionCount = getActionCount(metadata);

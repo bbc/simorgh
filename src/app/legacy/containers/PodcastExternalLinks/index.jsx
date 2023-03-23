@@ -19,7 +19,7 @@ import useViewTracker from '#hooks/useViewTracker';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 
 import idSanitiser from '#app/lib/utilities/idSanitiser';
-import VisuallyHiddenText from '../../../components/psammead-visually-hidden-text';
+import VisuallyHiddenText from '../../../components/VisuallyHiddenText';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import Link from './Link';
 

@@ -11,7 +11,7 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
-import VisuallyHiddenText from '../../../../components/psammead-visually-hidden-text';
+import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 import { focusIndicatorThickness } from '../../../../components/ThemeProvider/focusIndicator';
 
 const SVG_WRAPPER_MAX_WIDTH_ABOVE_1280PX = '63rem';

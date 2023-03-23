@@ -22,7 +22,8 @@ The following example shows `psammead-figure` wrapping an
 - [psammead-image](https://github.com/bbc/psammead/tree/latest/packages/components/psammead-image), an `<img>`
 - [psammead-caption](https://github.com/bbc/psammead/tree/latest/packages/components/psammead-caption), a `<figcaption>`
 - [psammead-copyright](https://github.com/bbc/psammead/tree/latest/packages/components/psammead-copyright), a `<p>`
-- [psammead-visually-hidden-text](../../../components/psammead-visually-hidden-text/README.md), a hidden `<span>` available only to assistive technology
+- [VisuallyHiddenText](../../../components/VisuallyHiddenText/README.md), a hidden `<span>` available only to assistive technology
+
 
 
 ```jsx
@@ -31,7 +32,8 @@ import Copyright from '#psammead/psammead-copyright/src';
 import Figure from '#psammead/psammead-figure/src';
 import Image from '#psammead/psammead-image/src';
 import ImagePlaceholder from '#psammead/psammead-image-placeholder/src';
-import VisuallyHiddenText from '../../../components/psammead-visually-hidden-text';
+import VisuallyHiddenText from '../../../components/VisuallyHiddenText';
+
 
 
 

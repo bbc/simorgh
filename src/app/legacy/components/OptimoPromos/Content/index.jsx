@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { string, bool } from 'prop-types';
 import moment from 'moment';
 import formatDuration from '#app/lib/utilities/formatDuration';
-import VisuallyHiddenText from '../../../../components/psammead-visually-hidden-text';
+import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import PromoContext from '../PromoContext';
 
