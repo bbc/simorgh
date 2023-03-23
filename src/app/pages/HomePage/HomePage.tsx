@@ -2,7 +2,11 @@
 /* @jsxFrag React.Fragment */
 import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
-import { VisualProminence, VisualStyle } from '../../models/types/curationData';
+import {
+  VisualProminence,
+  VisualStyle,
+  CurationData,
+} from '../../models/types/curationData';
 import Curation from '../../components/Curation';
 import VisuallyHiddenText from '../../legacy/psammead/psammead-visually-hidden-text/src';
 import { ServiceContext } from '../../contexts/ServiceContext';
