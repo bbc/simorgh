@@ -82,7 +82,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   ].every(Boolean);
 
   const adcampaign = path(['metadata', 'adCampaignKeyword'], pageData);
-  console.log('test something');
+
   const headline = getHeadline(pageData);
   const description = getSummary(pageData) || getHeadline(pageData);
   const firstPublished = getFirstPublished(pageData);
