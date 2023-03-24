@@ -44,11 +44,6 @@ export default {
     css({
       paddingTop: `${spacings.TRIPLE}rem`,
     }),
-  adContainer: ({ spacings }: Theme) =>
-    css({
-      marginBottom: `${spacings.TRIPLE}rem`,
-    }),
-
   mostReadSection: ({ spacings, mq, gridWidths }: Theme) =>
     css({
       [mq.GROUP_1_MAX_WIDTH]: {

@@ -44,7 +44,6 @@ export default {
     css({
       marginBottom: `${spacings.TRIPLE}rem`,
     }),
-
   mostReadSection: ({ spacings, mq, gridWidths }: Theme) =>
     css({
       [mq.GROUP_1_MAX_WIDTH]: {
