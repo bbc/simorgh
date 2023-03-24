@@ -20,8 +20,11 @@ import {
 
 const checkIsSupportedProvider = (provider, pageType) => {
   // Optimo Articles support all social media providers
-  if (pageType === ARTICLE_PAGE) return provider;
-
+  if (pageType === ARTICLE_PAGE) {
+    return ['twitter', 'instagram', 'youtube', 'facebook', 'tiktok'].includes(
+      provider,
+    );
+  }
   // CPS Pages only support a select few
   if ([STORY_PAGE, CORRESPONDENT_STORY_PAGE].includes(pageType)) {
     return ['twitter', 'instagram', 'youtube'].includes(provider);

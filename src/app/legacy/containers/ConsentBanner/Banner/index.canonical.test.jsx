@@ -1,51 +1,54 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
-import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
+import { render } from '../../../../components/react-testing-library-with-providers';
 import Banner from './index.canonical';
 
 describe('Canonical Consent Banner Container', () => {
-  const privacy = ({ description, service }) =>
-    shouldMatchSnapshot(
-      description,
-      <ServiceContextProvider service={service}>
-        <Banner type="privacy" onAccept={() => {}} onReject={() => {}} />
-      </ServiceContextProvider>,
+  it('should correctly render privacy banner - LTR layout', () => {
+    const { container } = render(
+      <Banner type="privacy" onAccept={() => {}} onReject={() => {}} />,
+      {
+        service: 'news',
+      },
     );
-
-  privacy({
-    description: 'should correctly render privacy banner - LTR layout',
-    service: 'news',
+    expect(container).toMatchSnapshot();
   });
 
-  privacy({
-    description: 'should correctly render privacy banner - RTL layout',
-    service: 'arabic',
-  });
-
-  const cookie = ({ description, service }) =>
-    shouldMatchSnapshot(
-      description,
-      <ServiceContextProvider service={service}>
-        <Banner type="cookie" onAccept={() => {}} onReject={() => {}} />
-      </ServiceContextProvider>,
+  it('should correctly render privacy banner - RTL layout', () => {
+    const { container } = render(
+      <Banner type="privacy" onAccept={() => {}} onReject={() => {}} />,
+      {
+        service: 'arabic',
+      },
     );
-
-  cookie({
-    description: 'should correctly render cookie banner - LTR layout',
-    service: 'news',
+    expect(container).toMatchSnapshot();
   });
 
-  cookie({
-    description: 'should correctly render cookie banner - RTL layout',
-    service: 'arabic',
+  it('should correctly render cookie banner - LTR layout', () => {
+    const { container } = render(
+      <Banner type="cookie" onAccept={() => {}} onReject={() => {}} />,
+      {
+        service: 'news',
+      },
+    );
+    expect(container).toMatchSnapshot();
+  });
+
+  it('should correctly render cookie banner - RTL layout', () => {
+    const { container } = render(
+      <Banner type="cookie" onAccept={() => {}} onReject={() => {}} />,
+      {
+        service: 'arabic',
+      },
+    );
+    expect(container).toMatchSnapshot();
   });
 
   it('should focus on banner heading on mount', () => {
     const { getByText } = render(
-      <ServiceContextProvider service="news">
-        <Banner type="cookie" onAccept={() => {}} onReject={() => {}} />
-      </ServiceContextProvider>,
+      <Banner type="cookie" onAccept={() => {}} onReject={() => {}} />,
+      {
+        service: 'news',
+      },
     );
 
     const heading = getByText('Let us know you agree to cookies');

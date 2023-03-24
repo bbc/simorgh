@@ -3,7 +3,6 @@ import { storiesOf } from '@storybook/react';
 import styled from '@emotion/styled';
 import { withKnobs, text, boolean } from '@storybook/addon-knobs';
 import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
-import { C_CLOUD_LIGHT } from '#psammead/psammead-styles/src/colours';
 import { GEL_SPACING_HLF } from '#psammead/gel-foundations/src/spacings';
 import { Headline, Link } from '#psammead/psammead-story-promo/src';
 import notes from '../README.md';
@@ -11,7 +10,7 @@ import MediaIndicator from './index';
 
 // To ensure the white box in the media indicator is visible.
 const Page = styled.div`
-  background: ${C_CLOUD_LIGHT};
+  background: ${props => props.theme.palette.CLOUD_LIGHT};
   height: 100vh;
 `;
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { C_EBON } from '#psammead/psammead-styles/src/colours';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING_DBL,
@@ -15,7 +14,7 @@ const defaultAttrs = {
 const MediaIcon = styled.svg`
   vertical-align: middle;
   margin: 0 ${GEL_SPACING_HLF};
-  color: ${C_EBON};
+  color: ${props => props.theme.palette.EBON};
   fill: currentColor;
 `;
 

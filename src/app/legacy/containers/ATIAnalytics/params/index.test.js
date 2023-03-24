@@ -8,6 +8,7 @@ import {
   MEDIA_ASSET_PAGE,
   PHOTO_GALLERY_PAGE,
   MEDIA_ARTICLE_PAGE,
+  HOME_PAGE,
 } from '#app/routes/utils/pageTypes';
 import { buildATIUrl, buildATIEventTrackingParams } from '.';
 
@@ -195,6 +196,17 @@ describe('ATIAnalytics params', () => {
       );
     });
 
+    it('should return the correct homePage url', () => {
+      const url = buildATIUrl(
+        frontPage,
+        { ...requestContext, pageType: HOME_PAGE },
+        serviceContext,
+      );
+      expect(url).toMatchInlineSnapshot(
+        `"s=598285&s2=atiAnalyticsProducerId&p=service.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Acps%3A00000000-0000-0000-0000-000000000000]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http%253A%252F%252Flocalhost%252F]&x7=[index-home]&x8=[simorgh]&x9=[title%2520-%2520brandName]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]"`,
+      );
+    });
+
     it('should return the right IDX page url', () => {
       const url = buildATIUrl(
         idxPage,
@@ -342,6 +354,29 @@ describe('ATIAnalytics params', () => {
       const params = buildATIEventTrackingParams(
         frontPage,
         { ...requestContext, pageType: FRONT_PAGE },
+        serviceContext,
+      );
+      expect(params).toEqual({
+        appName: 'atiAnalyticsAppName',
+        contentId: 'urn:bbc:cps:00000000-0000-0000-0000-000000000000',
+        contentType: 'index-home',
+        language: 'language',
+        pageIdentifier: 'service.page',
+        pageTitle: 'title - brandName',
+        libraryVersion: 'simorgh',
+        platform: 'platform',
+        producerId: 'atiAnalyticsProducerId',
+        service: 'service',
+        statsDestination: 'statsDestination',
+        timePublished: '1970-01-01T00:00:00.000Z',
+        timeUpdated: '1970-01-01T00:00:00.000Z',
+      });
+    });
+
+    it('should return the correct homePage params', () => {
+      const params = buildATIEventTrackingParams(
+        frontPage,
+        { ...requestContext, pageType: HOME_PAGE },
         serviceContext,
       );
       expect(params).toEqual({
