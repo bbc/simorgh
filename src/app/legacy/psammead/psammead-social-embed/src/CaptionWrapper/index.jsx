@@ -23,8 +23,8 @@ const FigCaption = styled.figcaption`
   ${({ service }) => getSansRegular(service)}
   ${GEL_BREVIER}
   
-  ${({ isArticlePage }) => `
-    color: ${isArticlePage ? C_GREY_6 : C_WHITE};
+  ${({ isArticlePage, theme }) => `
+    color: ${isArticlePage ? theme.palette.GREY_6 : C_WHITE};
     padding: ${isArticlePage ? `${GEL_SPACING} 0` : GEL_SPACING};
   `}
 

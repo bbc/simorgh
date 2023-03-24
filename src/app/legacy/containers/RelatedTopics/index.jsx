@@ -25,7 +25,7 @@ const StyledTopicsWrapper = styled.aside`
 
 const StyledSectionLabel = styled(SectionLabel)`
   margin-top: 0;
-
+  color: ${props => props.theme.palette.GREY_10};
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     margin-bottom: 1rem;
   }

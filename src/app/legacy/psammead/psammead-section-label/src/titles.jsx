@@ -75,6 +75,7 @@ const Title = styled.span`
   ${({ script }) => script && getDoublePica(script)};
   ${({ service }) => getSansBold(service)}
   background-color: ${props => props.backgroundColor};
+  color: ${props => props.theme.palette.GREY_10};
   ${titleMargins};
   ${paddingDir}: ${GEL_SPACING};
 

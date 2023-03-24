@@ -20,6 +20,9 @@ const StyledTimestamp = styled.time`
   ${({ script, typographyFunc }) =>
     script && typographyFunc && typographyFunc(script)}
   color: ${props => props.theme.palette.GREY_6};
+  div[class*='PromoWrapper'] div & {
+    color: ${props => props.theme.palette.GREY_6_PROMO_TIME};
+  }
   display: block;
   ${({ service }) => getSansRegular(service)}
   ${props => props.padding && PADDING}

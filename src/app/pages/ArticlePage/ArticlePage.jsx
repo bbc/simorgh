@@ -196,7 +196,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   };
 
   const {
-    palette: { GREY_2, WHITE },
+    palette: { GREY_2, WHITE_TAG },
   } = useTheme();
 
   const visuallyHiddenBlock = {
@@ -225,12 +225,17 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
     filterForBlockType(promoImageBlocks, 'rawImage'),
   );
 
-  const MostReadWrapper = ({ children }) => (
-    <ArticlePageMostReadSection>
-      <MostReadSectionLabel mobileDivider={showRelatedTopics && topics} />
-      {children}
-    </ArticlePageMostReadSection>
-  );
+  const MostReadWrapper = ({ children }) => {
+    return (
+      <ArticlePageMostReadSection>
+        <MostReadSectionLabel
+          mobileDivider={showRelatedTopics && topics}
+          backgroundColor={GREY_2}
+        />
+        {children}
+      </ArticlePageMostReadSection>
+    );
+  };
 
   MostReadWrapper.propTypes = {
     children: node.isRequired,
@@ -286,7 +291,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
               topics={topics}
               mobileDivider={false}
               backgroundColour={GREY_2}
-              tagBackgroundColour={WHITE}
+              tagBackgroundColour={WHITE_TAG}
             />
           )}
           <RelatedContentSection content={blocks} />

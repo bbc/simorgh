@@ -21,6 +21,7 @@ interface Palette extends BrandPalette {
   DARK_SALTIRE: string;
   DIM_GREY: string;
   EBON: string;
+  EBON_LINK: string;
   GHOST: string;
   GREY_10: string;
   GREY_11: string;
@@ -28,6 +29,7 @@ interface Palette extends BrandPalette {
   GREY_3: string;
   GREY_5: string;
   GREY_6: string;
+  GREY_6_PROMO_TIME: string;
   GREY_7: string;
   GREY_8: string;
   KINGFISHER: string;
@@ -35,6 +37,7 @@ interface Palette extends BrandPalette {
   LUNAR: string;
   LUNAR_LIGHT: string;
   METAL: string;
+  METAL_VISITED: string;
   MIDNIGHT_BLACK: string;
   NEWSROUND_PURPLE: string;
   NEWSROUND_PURPLE_30: string;
@@ -54,6 +57,7 @@ interface Palette extends BrandPalette {
   STORM: string;
   WEATHER_BLUE: string;
   WHITE: string;
+  WHITE_TAG: string;
 }
 
 interface MediaQueries {

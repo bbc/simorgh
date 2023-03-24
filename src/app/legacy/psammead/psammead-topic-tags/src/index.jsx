@@ -1,11 +1,7 @@
 import React, { forwardRef } from 'react';
 import { string, shape, node, func } from 'prop-types';
 import styled from '@emotion/styled';
-import {
-  C_LUNAR,
-  C_EBON,
-  C_METAL,
-} from '#psammead/psammead-styles/src/colours';
+import { C_LUNAR, C_METAL } from '#psammead/psammead-styles/src/colours';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,
@@ -51,7 +47,7 @@ const SingleTopicTagItem = styled.div`
     align-items: center;
     background-color: ${({ backgroundColour }) => backgroundColour};
     text-decoration: none;
-    color: ${C_EBON};
+    color: ${props => props.theme.palette.EBON};
 
     &:hover,
     &:focus {
