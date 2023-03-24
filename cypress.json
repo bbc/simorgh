@@ -10,6 +10,7 @@
   "ignoreTestFiles": [
     "**/README.md",
     "**/pages/**/tests.js",
+    "**/pages/**/urls.js",
     "**/pages/**/testsForAMPOnly.js",
     "**/*/pages/**/testsForCanonicalOnly.js",
     "**/pages/testsForAllPages.js",

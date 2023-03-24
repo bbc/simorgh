@@ -1,6 +1,5 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import ThemeProvider from '../../../components/ThemeProvider';

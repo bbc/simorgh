@@ -1,5 +1,5 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { render } from '../../../../components/react-testing-library-with-providers';
 import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import { UsefulLink, UsefulLinksLi, UsefulLinksUl } from './index';
 
@@ -27,27 +27,31 @@ const usefulCaptions = [
 ];
 
 describe('One useful link', () => {
-  shouldMatchSnapshot(
-    'should render correctly',
-    <UsefulLink script={latin} service="news" href={usefulCaptions[0].url}>
-      {usefulCaptions[0].name}
-    </UsefulLink>,
-  );
+  it('should render correctly', () => {
+    const { container } = render(
+      <UsefulLink script={latin} service="news" href={usefulCaptions[0].url}>
+        {usefulCaptions[0].name}
+      </UsefulLink>,
+    );
+    expect(container).toMatchSnapshot();
+  });
 });
 
 describe('Multiple useful links', () => {
-  shouldMatchSnapshot(
-    'should render correctly',
-    <UsefulLinksUl>
-      {usefulCaptions.map(item => {
-        return (
-          <UsefulLinksLi key={usefulCaptions.indexOf(item)}>
-            <UsefulLink script={latin} service="news" href={item.url}>
-              {item.name}
-            </UsefulLink>
-          </UsefulLinksLi>
-        );
-      })}
-    </UsefulLinksUl>,
-  );
+  it('should render correctly', () => {
+    const { container } = render(
+      <UsefulLinksUl>
+        {usefulCaptions.map(item => {
+          return (
+            <UsefulLinksLi key={usefulCaptions.indexOf(item)}>
+              <UsefulLink script={latin} service="news" href={item.url}>
+                {item.name}
+              </UsefulLink>
+            </UsefulLinksLi>
+          );
+        })}
+      </UsefulLinksUl>,
+    );
+    expect(container).toMatchSnapshot();
+  });
 });
