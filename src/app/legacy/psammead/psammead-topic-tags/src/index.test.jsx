@@ -1,6 +1,5 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
-import { render } from '@testing-library/react';
+import { render } from '../../../../components/react-testing-library-with-providers';
 import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import burmeseTypography from '../../../../components/ThemeProvider/fontScripts/burmese';
 import arabicTypography from '../../../../components/ThemeProvider/fontScripts/arabic';
@@ -12,57 +11,56 @@ describe('TopicTags', () => {
     script: latin,
   };
 
-  shouldMatchSnapshot(
-    'should correctly render a single topic for news',
-    <TopicTags {...newsProps}>
-      <TopicTag name="test1" link="#" />
-    </TopicTags>,
-  );
+  it('should correctly render a single topic tag for news', () => {
+    const { container } = render(
+      <TopicTags {...newsProps}>
+        <TopicTag name="test1" link="#" />
+      </TopicTags>,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should correctly render multiple topic tags for news',
-    <TopicTags {...newsProps}>
-      <TopicTag name="test1" link="#" />
-      <TopicTag name="test2" link="#" />
-      <TopicTag name="test3" link="#" />
-      <TopicTag name="test4" link="#" />
-    </TopicTags>,
-  );
+  it('should correctly render multiple topic tags for news', () => {
+    const { container } = render(
+      <TopicTags {...newsProps}>
+        <TopicTag name="test1" link="#" />
+        <TopicTag name="test2" link="#" />
+        <TopicTag name="test3" link="#" />
+        <TopicTag name="test4" link="#" />
+      </TopicTags>,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should correctly render a single topic tag for burmese',
-    <TopicTags service="burmese" script={burmeseTypography}>
-      <TopicTag name="test1" link="#" />
-    </TopicTags>,
-  );
+  it('should correctly render a single topic tag for burmese', () => {
+    const { container } = render(
+      <TopicTags service="burmese" script={burmeseTypography}>
+        <TopicTag name="test1" link="#" />
+      </TopicTags>,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should correctly render a single topic tag for persian',
-    <TopicTags service="persian" script={arabicTypography}>
-      <TopicTag name="test1" link="#" />
-    </TopicTags>,
-  );
+  it('should correctly render a single topic tag for persian', () => {
+    const { container } = render(
+      <TopicTags service="persian" script={arabicTypography}>
+        <TopicTag name="test1" link="#" />
+      </TopicTags>,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should correctly render multiple topic tags for arabic',
-    <TopicTags service="arabic" script={arabicTypography}>
-      <TopicTag name="test1" link="#" />
-      <TopicTag name="test2" link="#" />
-      <TopicTag name="test3" link="#" />
-      <TopicTag name="test4" link="#" />
-    </TopicTags>,
-  );
-
-  shouldMatchSnapshot(
-    'should ignore non-TopicTag children',
-    <TopicTags {...newsProps}>
-      <TopicTag name="test1" link="#" />
-      <div>
-        <p>ignore</p>
-      </div>
-      <TopicTag name="test2" link="#" />
-    </TopicTags>,
-  );
+  it('should correctly render multiple topic tags for arabic', () => {
+    const { container } = render(
+      <TopicTags service="arabic" script={arabicTypography}>
+        <TopicTag name="test1" link="#" />
+        <TopicTag name="test2" link="#" />
+        <TopicTag name="test3" link="#" />
+        <TopicTag name="test4" link="#" />
+      </TopicTags>,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
   it('should ignore non-TopicTag children', () => {
     const { container } = render(
