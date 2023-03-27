@@ -10,6 +10,12 @@ export const testsThatAlwaysRun = ({ service, pageType }) => {
 // For testing features that may differ across services but share a common logic e.g. translated strings.
 export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
   describe(`Tests for ${service} ${pageType}`, () => {
+    let mediaArticlesData;
+    before(async () => {
+      mediaArticlesData = await fetchArticlePageData(service, variant).then(
+        ({ body }) => body,
+      );
+    });
     it.only('shows media at top of page', () => {
       // media-player__guidance
       cy.get('[data-e2e="media-player"]')
