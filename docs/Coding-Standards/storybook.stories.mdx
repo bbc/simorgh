@@ -4,6 +4,7 @@ import storyIcon from './images/storybook-story-icon.png';
 import groupIcon from './images/storybook-group-icon.png';
 import folderIcon from './images/storybook-folder-icon.png';
 import docsIcon from './images/storybook-docs-icon.png';
+import figmaPreview from './images/figma-preview.png';
 
 <Meta title="Coding Standards/Storybook" />
 
@@ -11,21 +12,20 @@ import docsIcon from './images/storybook-docs-icon.png';
 
 ## What is storybook
 
-Storybook is a library developed and maitained by [chromatic](https://www.chromatic.com/?utm_source=storybook_website&utm_medium=link&utm_campaign=storybook).
+Storybook is a library developed and maintained by [chromatic](https://www.chromatic.com/?utm_source=storybook_website&utm_medium=link&utm_campaign=storybook).
 Storybook is a frontend workshop for building UI components and pages in isolation.
 More information about Storybook can be found [here](https://storybook.js.org/docs/react/get-started/why-storybook).
 
 The World Service team adopted Storybook to share components with team members which have no access to Simorgh locally (e.g. UX, BA, etc...).
-Furthermore, we use Storybook to a11y swarm components that cannot be deployed to test/live environements.
+Furthermore, we use Storybook to a11y swarm components that cannot be deployed to test/live environments.
 
-The latest update of our Storybook included the addition of the docs addon which allows to preview documentation in Storybook. Thus, other than what we used to
-do in the past, storybook has now become our main entry point to Simorgh's documentation.
+The latest update of our Storybook included the addition of the docs addon which allows previewing documentation in Storybook. Thus, storybook has recently become our main entry point to Simorgh's documentation.
 
 ## Storybook Tutorial
 
 ### Introduction - Essentials
 
-Storybook works with path glob patterns that point to stories files. The globs patterns can be found in `.storybook/main.js`:
+Storybook works with path glob patterns that point to stories files. The glob patterns can be found in `.storybook/main.js`:
 
 ```jsx
 stories: [
@@ -39,7 +39,7 @@ stories: [
 ],
 ```
 
-for any of our stories or documentation to correctly display in storybook we must ensure that the folder where they are stored is pointed by any of the above paths glob patterns.
+For any of our stories or documentation to correctly display in storybook we must ensure that the folder where they are stored is pointed by any of the above path glob patterns.
 
 ### How to add documentation
 
@@ -59,7 +59,7 @@ The above code will allow storybook to grab the markdown you wrote below the `Me
 
 ### Creating a Basic component's story
 
-To create a story for one of your components, co-locate a file called `index.stories.tsx` where your componnet's entry point (index.tsx/jsx) is located.
+To create a story for one of your components, co-locate a file called `index.stories.tsx` where your component's entry point (index.tsx/jsx) is located.
 Inside this folder import your component and do a default export of the object showed below:
 
 ```jsx
@@ -75,7 +75,7 @@ export default {
 
 ### Creating story for a component with variants
 
-If your component has different behaviours depending on the props passed to it, you can create more variants with different props passed to it. All these variants will be disaplyed in the component's story.
+If your component has different behaviours depending on the props passed to it, you can create more variants with different props passed to it. All these variants will be displayed in the component's story.
 
 ```jsx
 // Same as above but we will need React
@@ -94,7 +94,7 @@ export const Variant1 = () => <MyComponent prop1={variant1} />;
 export const Variant2 = () => <MyComponent prop1={variant2} />;
 ```
 
-### Creating story for a component that rquires providers
+### Creating story for a component that require providers
 
 To do this, we will first need to create a dummy component which nests out component to the provider our component needs.
 
@@ -204,7 +204,11 @@ Once this is done, our storybook will take care of adding the health factors com
 
 ### How to add Figma previews
 
-To create a didebar windows with Figma or Zepplin UX designs, add the following `array of objects` to the parameters of your `index.stories.jsx` export:
+Preview example:
+
+<img src={figmaPreview} alt="Figma preview tab in storybook" />
+
+To create a sidebar windows with Figma or Zepplin UX designs, add the following `array of objects` to the parameters of your `index.stories.jsx` export:
 
 ```jsx
 import myComponent
@@ -245,7 +249,7 @@ export default {
 };
 ```
 
-To get Figma Urls that points to specific section of a design, select the design you want to display and copy the link showed by the browser:
+To get Figma URL which point to specific section of a design, select the design you want to display and copy the link showed by the browser:
 
 <img
   src={figmaImage}
@@ -262,7 +266,7 @@ Most of our components must work with both right-to-left and left-to-right typog
 
 #### How?
 
-Create and export a left-to-right and right-to-left variat:
+Create and export a left-to-right and right-to-left variant:
 
 ```jsx
 export const rightToLeft = <div />;
@@ -275,7 +279,7 @@ export const leftToRight = <div />;
 
 When creating a story make sure to add at least one english language story for each component's variant. This can be done by modifying the `props` you are passing to your component.
 
-Most of BBC staff in our team only understand English. With this premisis it should be clear that writing our story in different language might
+Most of BBC staff in our team only understand English. With this premises it should be clear that writing our story in different language might
 cause oversight in our part due to the added challenge of translating from a foreign language.
 Furthermore, as already mentioned, we sometimes use storybook to a11y swarm components. As described in [Assistive technology testing in a foreign language](https://bbc.github.io/accessibility-news-and-you/assistive-technology/assistive-technology-testing-in-a-foreign-language.html),
 we should:
@@ -285,7 +289,7 @@ we should:
 
 #### How?
 
-pass english metadata to your component
+Pass english metadata to your component.
 
 ## Folder Structure Standards
 
@@ -312,7 +316,9 @@ the file you are currently reading it titled `title="Coding Standards/Storybook"
 Note that in this case there is no folder.
 
 Groups and folders can be both seen as containers. However groups are defined as containers that hold multiple stories. Whereas folder holds the groups, single stories, or mixture of these typologies.
-At this stage, Yyu should not worry about this difference as storybook automatically takes care of applying the correct container.
+At this stage, you should not worry about this difference as storybook automatically takes care of applying the correct container.
+
+For more information about storybook hierarchy read [naming components and hierarchy](https://storybook.js.org/docs/react/writing-stories/naming-components-and-hierarchy)
 
 ### Stories must be inside a root and a folder/Group
 
@@ -393,3 +399,17 @@ Avoid unnecessary nesting as well as allowing the health factors sidebar labels 
   - folder (level 1)
     - folder (level 2)
       - story
+
+## Create a storybook checklist
+
+- [ ] Create the index.stories.tsx co-located with the component
+- [ ] Create the basic story
+- [ ] Add ltr/rtl and english variants
+- [ ] Add health factors component metadata
+- [ ] Add component's documentation
+- [ ] Add Figma links:
+  - [ ] Group 0-5
+  - [ ] Typography
+  - [ ] States
+  - [ ] Screen reader UX
+- [ ] Praise yourself for the good work d(•́ω•̀)
