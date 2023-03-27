@@ -263,9 +263,22 @@ Where possible we want to apply standardisation as an â€˜opportunistic refactorâ
 Since it will be not be feasible to migrate all components to the new standard, sometimes we will need to make a judgment call, on a case-by-case basis, about when or whether to apply standardisation.
 
 As a rule of thumb, the following criteria could be used to help make this decision:
-- The component requires significant modification as part of the feature delivery
-- The component is a visual component
-- The component is likely to be reused in future development work
+- _The component requires modification as part of feature delivery_
+
+  If the component needs to be updated anyway to accommodate for new functionality, then we can opportunistically refactor it now to make it more understandable for future maintainers.
+
+- _The component is small and simple_
+
+  The work involved in standardising these components is likely to be minimal, and so, makes them good candidates for migration.
+
+- _The component is a visual component_
+
+  Our current guidelines are largely focussed on visual rather than non-visual components, e.g. component health focuses on UX and accessibility, which is more applicable for components which are displayed in Storybook.
+
+- _The component is likely to be require modification in future development work_
+
+  When a component has a high likelihood of change as part of future feature development, we gain more value by bringing it up to standard. Time spent by engineers comprehending how a legacy component works, is time which could potentially be saved if the component was brought up to standard.
+
 
 
 ## Typescript for Frontend Components
