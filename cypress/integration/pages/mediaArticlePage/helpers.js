@@ -60,13 +60,14 @@ export const fetchArticlePageData = async (service, variant, urlOverride) => {
 
     const bffUrl = `https://web-cdn.${
       env === 'live' ? '' : `${env}.`
-    }api.bbci.co.uk/fd/simorgh-bff?pageType=article&id=${articleId}&service=${service}${
+      }api.bbci.co.uk/fd/simorgh-bff?pageType=article&id=${articleId}&service=${service}${
       variant ? `&variant=${variant}` : ''
-    }`;
+      }`;
 
     cy.log(bffUrl);
     return cy.request({
       url: bffUrl,
+      // cache: 'no-store',
       headers: { 'ctx-service-env': env },
     });
   }
