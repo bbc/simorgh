@@ -1,7 +1,6 @@
 /* eslint react/prop-types: 0 */
 import React from 'react';
 import { bool } from 'prop-types';
-import { C_LUNAR, C_SHADOW } from '#psammead/psammead-styles/src/colours';
 import {
   BBC_BLOCKS,
   BBC_BLOCKS_DARK_MODE,
@@ -24,7 +23,9 @@ const AmpImgPlaceholderContainer = ({
 }) => {
   return (
     <div
-      style={{ backgroundColor: `${darkMode ? C_SHADOW : C_LUNAR}` }}
+      css={({ palette }) => ({
+        backgroundColor: `${darkMode ? palette.SHADOW : palette.LUNAR}`,
+      })}
       fallback={fallback}
       placeholder={placeholder}
     >

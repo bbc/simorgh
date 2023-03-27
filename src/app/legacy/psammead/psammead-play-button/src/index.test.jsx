@@ -1,65 +1,77 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { render } from '../../../../components/react-testing-library-with-providers';
 import PlayButton from './index';
 
 describe('PlayButton', () => {
-  shouldMatchSnapshot(
-    'should render video by default',
-    <PlayButton service="news" title="Dog chases cat." onClick={() => {}} />,
-  );
+  it('should render video by default', () => {
+    const { container } = render(
+      <PlayButton service="news" title="Dog chases cat." onClick={() => {}} />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render video indicator correctly',
-    <PlayButton
-      service="news"
-      title="Dog chases cat."
-      onClick={() => {}}
-      duration="2:30"
-      durationSpoken="2 minutes 30 seconds"
-      datetime="PT2M30S"
-      className="foo"
-    />,
-  );
+  it('should render video indicator correctly', () => {
+    const { container } = render(
+      <PlayButton
+        service="news"
+        title="Dog chases cat."
+        onClick={() => {}}
+        duration="2:30"
+        durationSpoken="2 minutes 30 seconds"
+        datetime="PT2M30S"
+        className="foo"
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render video correctly without duration details',
-    <PlayButton service="news" title="Dog chases cat." onClick={() => {}} />,
-  );
+  it('should render video correctly without duration details', () => {
+    const { container } = render(
+      <PlayButton service="news" title="Dog chases cat." onClick={() => {}} />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render audio indicator correctly',
-    <PlayButton
-      service="news"
-      title="Dog barks at cat."
-      onClick={() => {}}
-      duration="2:30"
-      durationSpoken="2 minutes 30 seconds"
-      datetime="PT2M30S"
-      type="audio"
-      className="foo"
-    />,
-  );
+  it('should render audio indicator correctly', () => {
+    const { container } = render(
+      <PlayButton
+        service="news"
+        title="Dog barks at cat."
+        onClick={() => {}}
+        duration="2:30"
+        durationSpoken="2 minutes 30 seconds"
+        datetime="PT2M30S"
+        type="audio"
+        className="foo"
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render audio correctly without duration details',
-    <PlayButton
-      service="news"
-      title="Dog barks at cat."
-      onClick={() => {}}
-      type="audio"
-    />,
-  );
+  it('should render audio correctly without duration details', () => {
+    const { container } = render(
+      <PlayButton
+        service="news"
+        title="Dog barks at cat."
+        onClick={() => {}}
+        type="audio"
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render video correctly with duration and guidance message',
-    <PlayButton
-      service="news"
-      title="Dog chases cat."
-      onClick={() => {}}
-      duration="2:30"
-      durationSpoken="2 minutes 30 seconds"
-      datetime="PT2M30S"
-      guidanceMessage="Guidance: May contain strong language that may offend."
-    />,
-  );
+  it('should render video correctly with duration and guidance message', () => {
+    const { container } = render(
+      <PlayButton
+        service="news"
+        title="Dog chases cat."
+        onClick={() => {}}
+        duration="2:30"
+        durationSpoken="2 minutes 30 seconds"
+        datetime="PT2M30S"
+        guidanceMessage="Guidance: May contain strong language that may offend."
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 });

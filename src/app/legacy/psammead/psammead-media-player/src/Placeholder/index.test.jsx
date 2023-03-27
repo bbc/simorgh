@@ -1,6 +1,9 @@
 import React from 'react';
-import { render, fireEvent, getByText } from '@testing-library/react';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import {
+  render,
+  fireEvent,
+  getByText,
+} from '../../../../../components/react-testing-library-with-providers';
 import Placeholder from '.';
 
 describe('Media Player: Placeholder', () => {
@@ -15,49 +18,61 @@ describe('Media Player: Placeholder', () => {
     jest.resetModules();
   });
 
-  shouldMatchSnapshot(
-    'should render a video placeholder',
-    <Placeholder
-      onClick={mockOnClick}
-      src="http://foo.bar/placeholder.png"
-      service="news"
-      mediaInfo={{ title: 'Dog chases cat.', ...withDuration }}
-      noJsMessage="no js"
-    />,
-  );
+  it('should render a video placeholder', () => {
+    const { container } = render(
+      <Placeholder
+        onClick={mockOnClick}
+        src="http://foo.bar/placeholder.png"
+        service="news"
+        mediaInfo={{ title: 'Dog chases cat.', ...withDuration }}
+        noJsMessage="no js"
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render a video placeholder without duration',
-    <Placeholder
-      onClick={mockOnClick}
-      src="http://foo.bar/placeholder.png"
-      service="news"
-      mediaInfo={{ title: 'Dog chases cat.' }}
-      noJsMessage="no js"
-    />,
-  );
+  it('should render a video placeholder without duration', () => {
+    const { container } = render(
+      <Placeholder
+        onClick={mockOnClick}
+        src="http://foo.bar/placeholder.png"
+        service="news"
+        mediaInfo={{ title: 'Dog chases cat.' }}
+        noJsMessage="no js"
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render an audio placeholder',
-    <Placeholder
-      onClick={mockOnClick}
-      src="http://foo.bar/placeholder.png"
-      service="news"
-      mediaInfo={{ type: 'audio', title: 'Dog barks at cat.', ...withDuration }}
-      noJsMessage="no js"
-    />,
-  );
+  it('should render an audio placeholder', () => {
+    const { container } = render(
+      <Placeholder
+        onClick={mockOnClick}
+        src="http://foo.bar/placeholder.png"
+        service="news"
+        mediaInfo={{
+          type: 'audio',
+          title: 'Dog barks at cat.',
+          ...withDuration,
+        }}
+        noJsMessage="no js"
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render an audio placeholder without duration',
-    <Placeholder
-      onClick={mockOnClick}
-      src="http://foo.bar/placeholder.png"
-      service="news"
-      mediaInfo={{ type: 'audio', title: 'Dog barks at cat.' }}
-      noJsMessage="no js"
-    />,
-  );
+  it('should render an audio placeholder without duration', () => {
+    const { container } = render(
+      <Placeholder
+        onClick={mockOnClick}
+        src="http://foo.bar/placeholder.png"
+        service="news"
+        mediaInfo={{ type: 'audio', title: 'Dog barks at cat.' }}
+        noJsMessage="no js"
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
   it('should call onClick when the placeholder and play button is clicked', () => {
     const { container } = render(
@@ -74,36 +89,40 @@ describe('Media Player: Placeholder', () => {
     expect(mockOnClick).toHaveBeenCalledTimes(2);
   });
 
-  shouldMatchSnapshot(
-    'should render a video placeholder with guidance',
-    <Placeholder
-      onClick={mockOnClick}
-      src="http://foo.bar/placeholder.png"
-      service="news"
-      mediaInfo={{
-        title: 'Dog chases cat.',
-        guidanceMessage:
-          'Guidance: May contain strong language, sexual or violent content that may offend.',
-        ...withDuration,
-      }}
-      noJsMessage="no js"
-    />,
-  );
+  it('should render a video placeholder with guidance', () => {
+    const { container } = render(
+      <Placeholder
+        onClick={mockOnClick}
+        src="http://foo.bar/placeholder.png"
+        service="news"
+        mediaInfo={{
+          title: 'Dog chases cat.',
+          guidanceMessage:
+            'Guidance: May contain strong language, sexual or violent content that may offend.',
+          ...withDuration,
+        }}
+        noJsMessage="no js"
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render no-js styles when noJsClassName prop is used',
-    <Placeholder
-      onClick={mockOnClick}
-      src="http://foo.bar/placeholder.png"
-      service="news"
-      mediaInfo={{
-        title: 'Dog chases cat.',
-        guidanceMessage:
-          'Guidance: May contain strong language, sexual or violent content that may offend.',
-        ...withDuration,
-      }}
-      noJsMessage="no js"
-      noJsClassName="no-js"
-    />,
-  );
+  it('should render no-js styles when noJsClassName prop is used', () => {
+    const { container } = render(
+      <Placeholder
+        onClick={mockOnClick}
+        src="http://foo.bar/placeholder.png"
+        service="news"
+        mediaInfo={{
+          title: 'Dog chases cat.',
+          guidanceMessage:
+            'Guidance: May contain strong language, sexual or violent content that may offend.',
+          ...withDuration,
+        }}
+        noJsMessage="no js"
+        noJsClassName="no-js"
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 });

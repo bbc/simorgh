@@ -9,7 +9,7 @@ import {
 } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 import * as svgs from '#psammead/psammead-assets/src/svgs';
-import { C_POSTBOX, C_WHITE } from '#psammead/psammead-styles/src/colours';
+import { POSTBOX, WHITE } from '../../../../components/ThemeProvider/palette';
 import {
   withServicesKnob,
   buildRTLSubstories,
@@ -33,8 +33,8 @@ const inputs = (service = 'news') => {
   const svgHeightInput = number('desired height svg', svgMaxHeight);
   const borderBottom = boolean('Border Bottom', false);
   const borderTop = boolean('Border Top', false);
-  const backgroundColour = color('Background colour', `${C_POSTBOX}`);
-  const logoColour = color('Logo colour', `${C_WHITE}`);
+  const backgroundColour = color('Background colour', `${POSTBOX}`);
+  const logoColour = color('Logo colour', `${WHITE}`);
 
   return {
     productInput,

@@ -1,5 +1,5 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { render } from '../../../components/react-testing-library-with-providers';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import InlineContainer from '.';
@@ -40,8 +40,8 @@ const InlineContainerWithContext = blocks => (
 );
 
 describe('InlineContainer', () => {
-  shouldMatchSnapshot(
-    'should render correctly',
-    InlineContainerWithContext([persianLink]),
-  );
+  it('should render correctly', () => {
+    const { container } = render(InlineContainerWithContext([persianLink]));
+    expect(container).toMatchSnapshot();
+  });
 });

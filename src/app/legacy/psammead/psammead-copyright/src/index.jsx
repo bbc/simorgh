@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
 import { oneOf } from 'prop-types';
-import { C_WHITE } from '#psammead/psammead-styles/src/colours';
 import {
   GEL_SPACING,
   GEL_SPACING_HLF,
@@ -14,7 +13,7 @@ const Copyright = styled.p`
   ${GEL_MINION};
   background-color: rgba(34, 34, 34, 0.75);
   text-transform: uppercase;
-  color: ${C_WHITE};
+  color: ${props => props.theme.palette.WHITE};
   padding: ${GEL_SPACING_HLF} ${GEL_SPACING};
   font-family: ${GEL_FF_REITH_SANS};
   position: absolute;
