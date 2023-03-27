@@ -6,7 +6,7 @@ import {
   CurationData,
   VisualProminence,
   VisualStyle,
-} from '#app/models/types/promoData';
+} from '#app/models/types/curationData';
 import Curation from '#app/components/Curation';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import styles from './index.styles';
@@ -26,7 +26,6 @@ const HomePage = ({ pageData }: HomePageProps) => {
   const { topStoriesTitle } = translations;
 
   return (
-  
     <>
       <main css={styles.main}>
         <div css={styles.inner}>

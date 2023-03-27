@@ -1,8 +1,7 @@
 import React from 'react';
-import { render } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { render } from '../../../components/react-testing-library-with-providers';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { service as pidginServiceConfig } from '../../../lib/config/services/pidgin';
 import BylineContainer from './index';
@@ -32,14 +31,16 @@ const BylineContainerWithContext = ({
 };
 
 describe('Byline', () => {
-  shouldMatchSnapshot(
-    'should render correctly for STY pages with name and title',
-    BylineContainerWithContext({
-      pageType: STORY_PAGE,
-      service: 'pidgin',
-      blocks: [{ name: 'John Smith', title: 'Art Editor' }],
-    }),
-  );
+  it('should render correctly for STY pages with name and title', () => {
+    const { container } = render(
+      BylineContainerWithContext({
+        pageType: STORY_PAGE,
+        service: 'pidgin',
+        blocks: [{ name: 'John Smith', title: 'Art Editor' }],
+      }),
+    );
+    expect(container).toMatchSnapshot();
+  });
 
   it('should render nothing if blocks is null', () => {
     render(

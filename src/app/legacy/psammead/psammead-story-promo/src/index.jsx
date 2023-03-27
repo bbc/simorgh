@@ -23,11 +23,6 @@ import {
   getDoublePica,
 } from '#psammead/gel-foundations/src/typography';
 import {
-  C_EBON,
-  C_METAL,
-  C_SHADOW,
-} from '#psammead/psammead-styles/src/colours';
-import {
   getSansRegular,
   getSerifMedium,
 } from '#psammead/psammead-styles/src/font-styles';
@@ -127,7 +122,7 @@ const headlineTypography = script => ({
 });
 
 export const Headline = styled.h3`
-  color: ${C_EBON};
+  color: ${props => props.theme.palette.EBON};
   margin: 0; /* Reset */
   padding-bottom: ${GEL_SPACING};
   ${({ service }) => getSerifMedium(service)}
@@ -177,7 +172,7 @@ const summaryStyles = {
 export const Summary = styled.p`
   ${({ script }) => script && getLongPrimer(script)};
   ${({ service }) => getSansRegular(service)}
-  color: ${C_SHADOW};
+  color: ${props => props.theme.palette.SHADOW};
   margin: 0; /* Reset */
   padding-bottom: ${GEL_SPACING};
 
@@ -201,7 +196,7 @@ Summary.defaultProps = {
 // `display: inline-block` has been used to resolve Focus Indicator bug in Firefox high contrast mode.
 export const Link = styled.a`
   position: static;
-  color: ${C_EBON};
+  color: ${props => props.theme.palette.EBON};
   text-decoration: none;
   overflow-wrap: break-word;
   display: inline-block;
@@ -224,7 +219,7 @@ export const Link = styled.a`
   }
 
   &:visited {
-    color: ${C_METAL};
+    color: ${props => props.theme.palette.METAL};
   }
 `;
 

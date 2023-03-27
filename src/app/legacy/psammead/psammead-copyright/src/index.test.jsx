@@ -1,15 +1,17 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { render } from '../../../../components/react-testing-library-with-providers';
 import Copyright from './index';
 
 describe('Copyright', () => {
-  shouldMatchSnapshot(
-    'should render correctly',
-    <Copyright>Getty Images</Copyright>,
-  );
+  it('should render correctly', () => {
+    const { container } = render(<Copyright>Getty Images</Copyright>);
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render correctly when passed prop position with value "right"',
-    <Copyright position="right">Getty Images</Copyright>,
-  );
+  it('should render correctly when passed prop position with value "right"', () => {
+    const { container } = render(
+      <Copyright position="right">Getty Images</Copyright>,
+    );
+    expect(container).toMatchSnapshot();
+  });
 });

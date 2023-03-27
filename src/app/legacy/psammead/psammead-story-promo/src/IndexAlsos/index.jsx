@@ -7,11 +7,6 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
-import {
-  C_EBON,
-  C_METAL,
-  C_LUNAR,
-} from '#psammead/psammead-styles/src/colours';
 import { getBrevier } from '#psammead/gel-foundations/src/typography';
 import { getSerifMedium } from '#psammead/psammead-styles/src/font-styles';
 import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
@@ -23,7 +18,7 @@ const StyledIndexAlsos = styled.div`
 `;
 
 const StyledIndexAlso = styled.div`
-  border-top: 1px solid ${C_LUNAR};
+  border-top: 1px solid ${props => props.theme.palette.LUNAR};
   padding: ${GEL_SPACING} 0;
 `;
 
@@ -37,7 +32,7 @@ const StyledIndexAlsosUl = styled.ul`
 const StyledIndexAlsosLink = styled.a`
   ${({ script }) => script && getBrevier(script)};
   ${({ service }) => getSerifMedium(service)}
-  color: ${C_EBON};
+  color: ${props => props.theme.palette.EBON};
   text-decoration: none;
   display: inline-block;
 
@@ -47,7 +42,7 @@ const StyledIndexAlsosLink = styled.a`
   }
 
   &:visited {
-    color: ${C_METAL};
+    color: ${props => props.theme.palette.METAL};
   }
 
   & svg {
