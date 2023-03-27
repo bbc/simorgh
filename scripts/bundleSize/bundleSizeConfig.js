@@ -9,5 +9,5 @@ module.exports = {
    */
 
   MIN_SIZE: 783 - 5,
-  MAX_SIZE: 1219 + 5,
+  MAX_SIZE: 1223 + 5,
 };
