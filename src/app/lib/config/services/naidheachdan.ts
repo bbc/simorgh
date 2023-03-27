@@ -57,7 +57,7 @@ export const service: DefaultServiceConfig = {
         audioPlayer: 'Audio player',
         videoPlayer: 'Video player',
       },
-      gist: 'At a glance',
+      gist: 'Geàrr-shealladh',
       error: {
         404: {
           statusCode: '404',
@@ -88,6 +88,12 @@ export const service: DefaultServiceConfig = {
           callToActionLast: '',
           callToActionLinkUrl: 'https://www.bbc.com/naidheachdan',
         },
+      },
+      byline: {
+        articleInformation: 'Article information',
+        author: 'Author',
+        reportingFrom: 'Ag aithris às',
+        role: 'Role',
       },
       consentBanner: {
         privacy: {
