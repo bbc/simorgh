@@ -90,10 +90,10 @@ export const service: DefaultServiceConfig = {
         },
       },
       byline: {
-        articleInformation: 'Məqalə barədə məlumat',
-        author: 'Müəllif',
-        reportingFrom: 'Məkan',
-        role: 'Vəzifə',
+        articleInformation: 'Gwybodaeth am yr erthygl',
+        author: 'Awdur',
+        reportingFrom: 'Yn gohebu o',
+        role: 'Swydd',
       },
       consentBanner: {
         privacy: {
