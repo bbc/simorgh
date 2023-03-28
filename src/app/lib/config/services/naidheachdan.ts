@@ -212,13 +212,15 @@ export const service: DefaultServiceConfig = {
           text: 'Dh’fhaodadh sanasan a bhith an lùib stuth',
           articleText:
             'Chan eil am BBC an urra ri na tha air Làraichean-lìn air an taobh a-muigh.',
-          articleAdditionalText: 'Dh’fhaodadh sanasan a bhith an lùib stuth %provider_name%.',
+          articleAdditionalText:
+            'Dh’fhaodadh sanasan a bhith an lùib stuth %provider_name%.',
         },
         fallback: {
           text: 'Chan eil seo ri fhaighinn',
           linkText: 'VFaic tuilleadh %provider_name%',
           linkTextSuffixVisuallyHidden: ', taobh a-muigh',
-          warningText: 'Chan eil am BBC an urra ri na tha air Làraichean-lìn air an taobh a-muigh.',
+          warningText:
+            'Chan eil am BBC an urra ri na tha air Làraichean-lìn air an taobh a-muigh.',
         },
         skipLink: {
           text: 'Leum thairis air %provider_name% teachdaireachd',

@@ -210,13 +210,15 @@ export const service: DefaultServiceConfig = {
           text: 'Gallai hysbysebion ymddangos yng nghynnwys',
           articleText:
             "Dyw'r BBC ddim yn gyfrifol am gynnwys gwefannau allanol.",
-          articleAdditionalText: 'Gallai hysbysebion ymddangos yng nghynnwys %provider_name%.',
+          articleAdditionalText:
+            'Gallai hysbysebion ymddangos yng nghynnwys %provider_name%.',
         },
         fallback: {
           text: 'Mae’n flin gennym ein bod yn cael trafferth dangos y post hwn.',
           linkText: 'Gwylio’r post gwreiddiol ar %provider_name%',
           linkTextSuffixVisuallyHidden: ', dolen allanol',
-          warningText: "Dyw'r BBC ddim yn gyfrifol am gynnwys gwefannau allanol.",
+          warningText:
+            "Dyw'r BBC ddim yn gyfrifol am gynnwys gwefannau allanol.",
         },
         skipLink: {
           text: 'I osgoi neges %provider_name%',
