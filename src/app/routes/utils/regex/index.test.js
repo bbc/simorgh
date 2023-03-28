@@ -559,7 +559,7 @@ describe('legacyAssetPageDataPath', () => {
   shouldNotMatchInvalidRoutes(invalidDataRoutes, legacyAssetPageDataPath);
 });
 
-describe('frontPage and homePage paths', () => {
+describe('frontPage -> homePage migration', () => {
   const services = Object.keys(serviceConfig);
 
   const homePageServices = ['kyrgyz'];
