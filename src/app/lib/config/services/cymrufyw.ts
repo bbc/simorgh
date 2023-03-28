@@ -58,7 +58,7 @@ export const service: DefaultServiceConfig = {
         audioPlayer: 'Audio player',
         videoPlayer: 'Video player',
       },
-      gist: 'At a glance',
+      gist: 'Cipolwg',
       error: {
         404: {
           statusCode: '404',
@@ -88,6 +88,12 @@ export const service: DefaultServiceConfig = {
           callToActionLast: '',
           callToActionLinkUrl: 'https://www.bbc.com/cymrufyw',
         },
+      },
+      byline: {
+        articleInformation: 'Gwybodaeth am yr erthygl',
+        author: 'Awdur',
+        reportingFrom: 'Yn gohebu o',
+        role: 'Swydd',
       },
       consentBanner: {
         privacy: {
