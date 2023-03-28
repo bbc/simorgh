@@ -284,7 +284,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'Video',
-        url: '/pidgin/media/video',
+        url: '/pidgin/topics/c3l19z3k1ert',
       },
       {
         title: 'Sport',

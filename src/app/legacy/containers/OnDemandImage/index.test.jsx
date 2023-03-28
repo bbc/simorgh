@@ -1,8 +1,7 @@
 import React from 'react';
-import { render } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { render } from '../../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import OnDemandImage from '.';
 
@@ -21,10 +20,12 @@ const component = ({ url, isAmp, service, alt }) => (
 );
 
 describe('AudioPlayer blocks OnDemandHeading', () => {
-  shouldMatchSnapshot(
-    'should render correctly',
-    component({ url: 'mock-url', isAmp: false, service: 'news' }),
-  );
+  it('should render correctly', () => {
+    const { container } = render(
+      component({ url: 'mock-url', isAmp: false, service: 'news' }),
+    );
+    expect(container).toMatchSnapshot();
+  });
 
   it('should ensure the image has the right attributes', () => {
     const { getByAltText } = render(

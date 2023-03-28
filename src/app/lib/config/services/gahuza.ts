@@ -234,6 +234,7 @@ export const service: DefaultServiceConfig = {
         duration: 'Umwanya bimara',
         recentEpisodes: 'Ibiganiro byashise',
         podcastExternalLinks: 'Iyi podcast iraboneka kandi kuri',
+        download: 'Pakurura ikiganiro',
       },
       socialEmbed: {
         caption: {
@@ -349,7 +350,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'Amajwi n’amashusho',
-        url: '/gahuza/media/video',
+        url: '/gahuza/topics/crldzm936jmt',
       },
     ],
   },

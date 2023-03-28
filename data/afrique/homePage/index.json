@@ -1,0 +1,49 @@
+{
+  "data": {
+    "title": "BBC News Afrique",
+    "pageType": "home",
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "Bamako au rythme de la campagne",
+            "firstPublished": "2018-07-09T12:24:38.000Z",
+            "link": "https://www.bbc.com/afrique/23207464",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/4FD6/test/_63683402_048023982-1.jpg",
+            "description": "Au Mali, la campagne en vue de la présidentielle du 29 juillet prochain a été lancée samedi pour 21 jours. Dimanche deux rassemblements majeurs ont été tenus à Bamako.",
+            "imageAlt": "Crowds cheer in a stadium at a campaign rally in Bamako.",
+            "id": "162377de-914a-314b-bcaf-ea6c42942751"
+          },
+          {
+            "type": "article",
+            "title": "Obama speechless at Ant's divorce",
+            "firstPublished": "2018-10-16T11:32:54.000Z",
+            "link": "https://www.bbc.com/afrique/23219709",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/0DC9/test/_63692530_049987760-1.jpg",
+            "description": "TV presenter Ant McPartlin and his estranged wife Lisa Armstrong have been granted a divorce.",
+            "imageAlt": "Photo of Ant McPartlin and former wife smiling in front of a group of fans",
+            "id": "42576178-7f01-c14b-8ef5-32febb1dd6c4"
+          },
+          {
+            "type": "article",
+            "title": "Macron inaugure le TGV au Maroc",
+            "firstPublished": "2018-11-15T11:18:31.000Z",
+            "link": "https://www.bbc.com/afrique/23222399",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/1161/test/_63694440_043549290-1.jpg",
+            "description": "Le président Emmanuel Macron se rend jeudi au Maroc pour une visite de quelques heures.",
+            "imageAlt": "Macron pendant l inauguration du tgv",
+            "id": "625cdde8-911d-db45-aebf-cf70373255f7"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:0fa07975-8996-4264-b722-e220a4c5eda1",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "visualProminence": "HIGH"
+      }
+    ]
+  },
+  "contentType": "application/json; charset=utf-8"
+}

@@ -14,6 +14,12 @@ const popId = path => path.split('/').pop();
 
 const getId = pipe(getUrlPath, removeAmp, popId);
 
+const getServiceEnv = pathname => {
+  const url = Url(`https://www.bbc.com${pathname}`, true);
+
+  return url.query.renderer_env || 'live';
+};
+
 export default async ({ getAgent, service, path: pathname, variant, page }) => {
   try {
     const env = getEnvironment(pathname);
@@ -40,7 +46,8 @@ export default async ({ getAgent, service, path: pathname, variant, page }) => {
       ? Url(`/${service}${variantPath}/topics/${id}`)
       : parsedBffUrl;
 
-    const optHeaders = isLocal ? null : { 'ctx-service-env': env };
+    const serviceEnv = getServiceEnv(pathname);
+    const optHeaders = isLocal ? null : { 'ctx-service-env': serviceEnv };
 
     const { status, json } = await fetchPageData({
       path: fetchUrl.toString(),

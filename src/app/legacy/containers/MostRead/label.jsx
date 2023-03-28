@@ -7,7 +7,7 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
 } from '#psammead/gel-foundations/src/breakpoints';
 import { GEL_SPACING_DBL } from '#psammead/gel-foundations/src/spacings';
-import { C_GREY_2 } from '#psammead/psammead-styles/src/colours';
+import { GREY_2 } from '../../../components/ThemeProvider/palette';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const SectionLabelWithMargin = styled(SectionLabel)`
@@ -44,7 +44,7 @@ MostReadSectionLabel.propTypes = {
 
 MostReadSectionLabel.defaultProps = {
   mobileDivider: true,
-  backgroundColor: C_GREY_2,
+  backgroundColor: GREY_2,
 };
 
 export default MostReadSectionLabel;

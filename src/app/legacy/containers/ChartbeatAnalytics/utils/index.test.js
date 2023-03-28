@@ -14,6 +14,7 @@ import {
   PHOTO_GALLERY_PAGE,
   STORY_PAGE,
   TOPIC_PAGE,
+  MEDIA_ARTICLE_PAGE,
 } from '#app/routes/utils/pageTypes';
 import {
   chartbeatUID,
@@ -63,6 +64,11 @@ describe('Chartbeat utilities', () => {
         pageType: ARTICLE_PAGE,
         expectedDefaultType: 'New Article',
         expectedShortType: 'ART',
+      },
+      {
+        pageType: MEDIA_ARTICLE_PAGE,
+        expectedDefaultType: 'article-sfv',
+        expectedShortType: 'article-sfv',
       },
       {
         pageType: 'index',
@@ -610,6 +616,190 @@ describe('Chartbeat utilities', () => {
         uid: 50924,
         useCanonical: true,
         virtualReferrer: 'test.bbc.com/previous-path',
+      };
+
+      expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
+    });
+  });
+
+  describe('Chartbeat Media Article Page - article-sfv', () => {
+    it("should have 'video' in its identifier when the primary media type is video", () => {
+      const fixtureData = {
+        pageType: MEDIA_ARTICLE_PAGE,
+        data: {
+          metadata: {
+            passport: {
+              taggings: [
+                {
+                  predicate: 'http://www.bbc.co.uk/ontologies/bbc/infoClass',
+                  value:
+                    'http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id',
+                },
+                {
+                  predicate:
+                    'http://www.bbc.co.uk/ontologies/bbc/primaryMediaType',
+                  value:
+                    'http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id',
+                },
+              ],
+            },
+          },
+        },
+        service: 'pidgin',
+      };
+
+      const expectedConfig = {
+        domain: 'test.bbc.co.uk',
+        idSync: {
+          bbc_hid: 'foobar',
+        },
+        path: '/',
+        sections: 'Pidgin, Pidgin - video',
+        title: null,
+        type: 'article-sfv',
+        uid: 50924,
+        useCanonical: true,
+        virtualReferrer: null,
+      };
+
+      expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
+    });
+
+    it("should have 'audio' in its identifier when the primary media type is audio", () => {
+      const fixtureData = {
+        pageType: MEDIA_ARTICLE_PAGE,
+        data: {
+          metadata: {
+            passport: {
+              taggings: [
+                {
+                  predicate: 'http://www.bbc.co.uk/ontologies/bbc/infoClass',
+                  value:
+                    'http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id',
+                },
+                {
+                  predicate:
+                    'http://www.bbc.co.uk/ontologies/bbc/primaryMediaType',
+                  value:
+                    'http://www.bbc.co.uk/things/fe1fbc8a-bb44-4bf8-8b12-52e58c6345a4#id',
+                },
+              ],
+            },
+          },
+        },
+        service: 'pidgin',
+      };
+
+      const expectedConfig = {
+        domain: 'test.bbc.co.uk',
+        idSync: {
+          bbc_hid: 'foobar',
+        },
+        path: '/',
+        sections: 'Pidgin, Pidgin - audio',
+        title: null,
+        type: 'article-sfv',
+        uid: 50924,
+        useCanonical: true,
+        virtualReferrer: null,
+      };
+
+      expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
+    });
+
+    it("should have 'article-sfv' in its identifier when there are no taggings", () => {
+      const fixtureData = {
+        pageType: MEDIA_ARTICLE_PAGE,
+        data: {
+          metadata: {
+            passport: {},
+          },
+        },
+        service: 'pidgin',
+      };
+
+      const expectedConfig = {
+        domain: 'test.bbc.co.uk',
+        idSync: {
+          bbc_hid: 'foobar',
+        },
+        path: '/',
+        sections: 'Pidgin, Pidgin - article-sfv',
+        title: null,
+        type: 'article-sfv',
+        uid: 50924,
+        useCanonical: true,
+        virtualReferrer: null,
+      };
+
+      expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
+    });
+
+    it("should have 'article-sfv' in its identifier when the primary media type cannot be established", () => {
+      const fixtureData = {
+        pageType: MEDIA_ARTICLE_PAGE,
+        data: {
+          metadata: {
+            passport: {
+              taggings: [
+                {
+                  predicate: 'http://www.bbc.co.uk/ontologies/bbc/infoClass',
+                  value:
+                    'http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id',
+                },
+                {
+                  predicate:
+                    'http://www.bbc.co.uk/ontologies/bbc/SOME_OTHER_TAG',
+                  value:
+                    'http://www.bbc.co.uk/things/fe1fbc8a-bb44-4bf8-8b12-52e58c6345a4#id',
+                },
+              ],
+            },
+          },
+        },
+        service: 'pidgin',
+      };
+
+      const expectedConfig = {
+        domain: 'test.bbc.co.uk',
+        idSync: {
+          bbc_hid: 'foobar',
+        },
+        path: '/',
+        sections: 'Pidgin, Pidgin - article-sfv',
+        title: null,
+        type: 'article-sfv',
+        uid: 50924,
+        useCanonical: true,
+        virtualReferrer: null,
+      };
+
+      expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
+    });
+
+    it('should not intefere with regular article page identifiers', () => {
+      const fixtureData = {
+        pageType: ARTICLE_PAGE,
+        data: {
+          metadata: {
+            passport: {},
+          },
+        },
+        service: 'pidgin',
+      };
+
+      const expectedConfig = {
+        domain: 'test.bbc.co.uk',
+        idSync: {
+          bbc_hid: 'foobar',
+        },
+        path: '/',
+        sections: 'Pidgin, Pidgin - ART',
+        title: 'This is an article title',
+        type: 'New Article',
+        uid: 50924,
+        useCanonical: true,
+        virtualReferrer: null,
       };
 
       expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);

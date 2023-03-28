@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import { bool, number } from 'prop-types';
-import { C_PEBBLE, C_METAL } from '#psammead/psammead-styles/src/colours';
 import { getLongPrimer } from '#psammead/gel-foundations/src/typography';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
@@ -18,7 +17,9 @@ const smallScreenMargin = `
 const Wrapper = styled.time`
   ${({ script }) => script && getLongPrimer(script)}
   ${({ service }) => getSansRegular(service)}
-  color: ${({ darkMode }) => (darkMode ? C_PEBBLE : C_METAL)};
+  color: ${({ darkMode }) =>
+    props =>
+      darkMode ? props.theme.palette.PEBBLE : props.theme.palette.METAL};
   display: inline-block;
 
   ${({ darkMode }) => !darkMode && smallScreenMargin}

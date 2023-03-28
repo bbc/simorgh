@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import { Agent } from 'https';
-import pathOr from 'ramda/src/pathOr';
 import Url from 'url-parse';
 import getAdditionalPageData from '#app/routes/cpsAsset/utils/getAdditionalPageData';
 import getEnvironment from '#app/routes/utils/getEnvironment';
@@ -10,6 +9,7 @@ import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
 import fetchPageData from '../../utils/fetchPageData';
 import { Services, Variants } from '../../../models/types/global';
 import getOnwardsPageData from '../utils/getOnwardsData';
+import { advertisingAllowed, isSfv } from '../utils/paramChecks';
 
 const logger = nodeLogger(__filename);
 
@@ -103,17 +103,8 @@ export default async ({
       data: { article, secondaryData },
     } = json;
 
-    let isAdvertising = false;
-    if (pageType === 'cpsAsset') {
-      isAdvertising = pathOr(
-        false,
-        ['metadata', 'options', 'allowAdvertising'],
-        article,
-      );
-    } else {
-      isAdvertising = pathOr(false, ['metadata', 'allowAdvertising'], article);
-    }
-
+    const isAdvertising = advertisingAllowed(pageType, article);
+    const isArticleSfv = isSfv(article);
     let wsojData = [];
     try {
       wsojData = await getOnwardsPageData({
@@ -121,6 +112,7 @@ export default async ({
         service,
         variant,
         isAdvertising,
+        isArticleSfv,
         agent,
       });
     } catch (error) {

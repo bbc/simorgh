@@ -3,6 +3,7 @@ import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import propEq from 'ramda/src/propEq';
 import styled from '@emotion/styled';
+import { useTheme } from '@emotion/react';
 import { string, node } from 'prop-types';
 import useToggle from '#hooks/useToggle';
 
@@ -23,7 +24,6 @@ import {
   GEL_SPACING_QUAD,
   GEL_SPACING_QUIN,
 } from '#psammead/gel-foundations/src/spacings';
-import { C_GREY_2, C_WHITE } from '#psammead/psammead-styles/src/colours';
 import { singleTextBlock } from '#app/models/blocks';
 import { articleDataPropTypes } from '#models/propTypes/article';
 import ArticleMetadata from '#containers/ArticleMetadata';
@@ -80,7 +80,7 @@ import ArticlePageGrid, { Primary } from './ArticlePageGrid';
 import OptimizelyRecommendation from '../../components/OptimizelyRecommendations';
 
 const Wrapper = styled.div`
-  background-color: ${C_GREY_2};
+  background-color: ${props => props.theme.palette.GREY_2};
 `;
 
 const ArticlePageMostReadSection = styled(MostReadSection)`
@@ -197,6 +197,10 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
     wsoj: props => <OptimizelyRecommendation pageData={pageData} {...props} />,
   };
 
+  const {
+    palette: { GREY_2, WHITE },
+  } = useTheme();
+
   const visuallyHiddenBlock = {
     id: null,
     model: { blocks: [singleTextBlock(headline)] },
@@ -282,8 +286,8 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
             <StyledRelatedTopics
               topics={topics}
               mobileDivider={false}
-              backgroundColour={C_GREY_2}
-              tagBackgroundColour={C_WHITE}
+              backgroundColour={GREY_2}
+              tagBackgroundColour={WHITE}
             />
           )}
           <RelatedContentSection content={blocks} />
