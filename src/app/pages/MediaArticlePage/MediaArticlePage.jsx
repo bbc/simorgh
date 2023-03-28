@@ -221,7 +221,6 @@ const MediaArticlePage = ({ pageData }) => {
       <MediaArticlePageGrid>
         <Primary>
           <Main role="main">
-            <h1>MEDIA PAGE</h1>
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           </Main>
           {showRelatedTopics && topics && (

@@ -859,9 +859,6 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
           class="emotion-8 emotion-9"
           role="main"
         >
-          <h1>
-            MEDIA PAGE
-          </h1>
           <h1
             class="emotion-10 emotion-11"
             id="content"
