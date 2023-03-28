@@ -205,6 +205,8 @@ export const service: DefaultServiceConfig = {
         duration: 'Duration',
       },
       socialEmbed: {},
+      topStoriesTitle: 'Prif Straeon',
+      featuresAnalysisTitle: 'Cylchgrawn',
     },
     mostRead: {
       header: 'Mwyaf poblogaidd',
