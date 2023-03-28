@@ -204,7 +204,34 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
       },
-      socialEmbed: {},
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Disgrifiad, ',
+          text: 'Gallai hysbysebion ymddangos yng nghynnwys',
+          articleText:
+            "Dyw'r BBC ddim yn gyfrifol am gynnwys gwefannau allanol.",
+          articleAdditionalText:
+            'Gallai hysbysebion ymddangos yng nghynnwys %provider_name%.',
+        },
+        fallback: {
+          text: 'Mae’n flin gennym ein bod yn cael trafferth dangos y post hwn.',
+          linkText: 'Gwylio’r post gwreiddiol ar %provider_name%',
+          linkTextSuffixVisuallyHidden: ', dolen allanol',
+          warningText:
+            "Dyw'r BBC ddim yn gyfrifol am gynnwys gwefannau allanol.",
+        },
+        skipLink: {
+          text: 'I osgoi neges %provider_name%',
+          endTextVisuallyHidden: 'Diwedd neges %provider_name%',
+        },
+        consentBanner: {
+          heading: `Caniatáu cynnwys [social_media_site]?`,
+          body: `Mae’r erthygl hon yn cynnwys deunydd gan [social_media_site]. Gofynnwn am eich caniatâd cyn llwytho unrhyw beth, gan y gallai Twitter ddefnyddio cwcis neu dechnoleg arall. Mae’n bosib eich bod am ddarllen [link] polisi cwcis [/link] [social_media_site] a [link] pholisi preifatrwydd [/link] cyn derbyn. Er mwyn gweld y cynnwys dewiswch ‘derbyn a pharhau’.`,
+          button: 'Derbyn a pharhau',
+        },
+      },
+      topStoriesTitle: 'Prif Straeon',
+      featuresAnalysisTitle: 'Cylchgrawn',
     },
     mostRead: {
       header: 'Mwyaf poblogaidd',
