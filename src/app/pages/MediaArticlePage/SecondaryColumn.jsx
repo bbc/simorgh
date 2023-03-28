@@ -1,7 +1,6 @@
 import React from 'react';
 import path from 'ramda/src/path';
 import styled from '@emotion/styled';
-import { useTheme } from '@emotion/react';
 
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
 import {
@@ -12,9 +11,7 @@ import {
 
 import { articleDataPropTypes } from '#models/propTypes/article';
 
-import FeaturesAnalysis from '#containers/CpsFeaturesAnalysis';
-import TopStoriesSection from './PagePromoSections/TopStoriesSection';
-import { Secondary, gridColumnsSecondary } from './MediaArticlePageGrid';
+import { Secondary } from './MediaArticlePageGrid';
 
 const ResponsiveComponentWrapper = styled.div`
   margin-bottom: ${GEL_SPACING_TRPL};
@@ -25,31 +22,13 @@ const ResponsiveComponentWrapper = styled.div`
 `;
 
 const SecondaryColumn = ({ pageData }) => {
-  const topStoriesContent = path(['secondaryColumn', 'topStories'], pageData);
-  const featuresContent = path(['secondaryColumn', 'features'], pageData);
+  const latestMedia = path(['secondaryColumn', 'latestMedia'], pageData);
 
-  const {
-    palette: { GREY_2 },
-  } = useTheme();
-
-  if (!topStoriesContent && !featuresContent) return null;
+  if (!latestMedia) return null;
 
   return (
     <Secondary>
-      {topStoriesContent && (
-        <ResponsiveComponentWrapper data-testid="top-stories">
-          <TopStoriesSection content={topStoriesContent} />
-        </ResponsiveComponentWrapper>
-      )}
-      {featuresContent && (
-        <ResponsiveComponentWrapper data-testid="features">
-          <FeaturesAnalysis
-            content={featuresContent}
-            parentColumns={gridColumnsSecondary}
-            sectionLabelBackground={GREY_2}
-          />
-        </ResponsiveComponentWrapper>
-      )}
+      <ResponsiveComponentWrapper data-testid="features" />
     </Secondary>
   );
 };
