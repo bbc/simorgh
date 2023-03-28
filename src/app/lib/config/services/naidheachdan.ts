@@ -206,7 +206,30 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
       },
-      socialEmbed: {},
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Fo-thiotal, ',
+          text: 'Dh’fhaodadh sanasan a bhith an lùib stuth',
+          articleText:
+            'Chan eil am BBC an urra ri na tha air Làraichean-lìn air an taobh a-muigh.',
+          articleAdditionalText: 'Dh’fhaodadh sanasan a bhith an lùib stuth %provider_name%.',
+        },
+        fallback: {
+          text: 'Chan eil seo ri fhaighinn',
+          linkText: 'VFaic tuilleadh %provider_name%',
+          linkTextSuffixVisuallyHidden: ', taobh a-muigh',
+          warningText: 'Chan eil am BBC an urra ri na tha air Làraichean-lìn air an taobh a-muigh.',
+        },
+        skipLink: {
+          text: 'Leum thairis air %provider_name% teachdaireachd',
+          endTextVisuallyHidden: 'Deireadh %provider_name% teachdaireachd',
+        },
+        consentBanner: {
+          heading: `Cead do stuth [social_media_site]?`,
+          body: `Tha stuth [social_media_site] an cois an artaigil seo. Tha sinn a’ sireadh cead bhuat mus tèid sìon luchdachadh, oir dh’fhaodadh iad ‘briosgaidean’ agus teicneòlas eile a chur an sàs. ‘S dòcha gum biodh tu airson [link] poileasaidh nam briosgaidean aca [/link] a leughadh agus [link] am poileasaidh prìobhaideachd aca [/link]  mus tèid thu air adhart. Airson sùil a thoirt air an stuth seo, tagh 'Gabh ris agus lean ort'.`,
+          button: 'Gabh ris agus lean ort',
+        },
+      },
       topStoriesTitle: 'Prìomh Sgeulachdan',
       featuresAnalysisTitle: 'Sgeulachdan Aithriseach',
     },
