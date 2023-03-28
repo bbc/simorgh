@@ -562,8 +562,8 @@ describe('legacyAssetPageDataPath', () => {
 describe('frontPage and homePage paths', () => {
   const services = Object.keys(serviceConfig);
 
-  const homePageRoutes = ['/kyrgyz'];
-  const homePageRoutesToString = homePageRoutes.join(',');
+  const homePageServices = ['kyrgyz'];
+  const homePageRoutes = homePageServices.map(service => `/${service}`);
 
   const originalApplicationEnvironment = process.env.SIMORGH_APP_ENV;
 
@@ -572,7 +572,7 @@ describe('frontPage and homePage paths', () => {
   });
 
   describe.each(['local', 'test'])(
-    `${homePageRoutesToString} should match as homePage routes on the %s environment`,
+    `homePage regex on the %s environment`,
     environment => {
       process.env.SIMORGH_APP_ENV = environment;
 
@@ -583,7 +583,7 @@ describe('frontPage and homePage paths', () => {
   );
 
   describe.each(['local', 'test'])(
-    `${homePageRoutesToString} should not match as frontPage routes on the %s environment`,
+    `frontPage regex on the %s environment`,
     environment => {
       process.env.SIMORGH_APP_ENV = environment;
 
@@ -593,7 +593,7 @@ describe('frontPage and homePage paths', () => {
     },
   );
 
-  describe(`${homePageRoutesToString} should match as frontPage routes on the live environment`, () => {
+  describe(`frontPage regex on the live environment`, () => {
     process.env.SIMORGH_APP_ENV = 'live';
 
     const frontPageRegex = getFrontPageRegex(services);
@@ -601,7 +601,7 @@ describe('frontPage and homePage paths', () => {
     shouldMatchValidRoutes(homePageRoutes, frontPageRegex);
   });
 
-  describe(`${homePageRoutesToString} should not match as homePage routes on the live environment`, () => {
+  describe(`homePage regex on the live environment`, () => {
     process.env.SIMORGH_APP_ENV = 'live';
 
     const homePageRegex = getHomePageRegex(services);
