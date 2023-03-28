@@ -86,7 +86,7 @@ describe('ArticleMetadata get branded image', () => {
           .querySelector('head > meta[property="og:image"]')
           .getAttribute('content'),
       ).toEqual(
-        'https://ichef.test.bbci.co.uk/ace/standard/1024/branded_news/c34e/live/fea48140-27e5-11eb-a689-1f68cd2c5502.jpg',
+        'https://ichef.test.bbci.co.uk/news/1024/branded_news/c34e/live/fea48140-27e5-11eb-a689-1f68cd2c5502.jpg',
       );
     });
   });
