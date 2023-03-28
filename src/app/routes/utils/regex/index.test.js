@@ -28,6 +28,9 @@ import {
   recommendationsDataRegex,
 } from './index';
 
+import serviceConfig from '../../../lib/config/services/loadableConfig';
+import { getFrontPageRegex, getHomePageRegex } from './utils/index';
+
 jest.mock('#server/utilities/serviceConfigs', () => ({
   news: {},
   persian: {},
@@ -554,4 +557,55 @@ describe('legacyAssetPageDataPath', () => {
     return `${path}.json`;
   });
   shouldNotMatchInvalidRoutes(invalidDataRoutes, legacyAssetPageDataPath);
+});
+
+describe('frontPage and homePage paths', () => {
+  const services = Object.keys(serviceConfig);
+
+  const homePageRoutes = ['/kyrgyz'];
+  const homePageRoutesToString = homePageRoutes.join(',');
+
+  const originalApplicationEnvironment = process.env.SIMORGH_APP_ENV;
+
+  afterEach(() => {
+    process.env.SIMORGH_APP_ENV = originalApplicationEnvironment;
+  });
+
+  describe.each(['local', 'test'])(
+    `${homePageRoutesToString} should match as homePage routes on the %s environment`,
+    environment => {
+      process.env.SIMORGH_APP_ENV = environment;
+
+      const homePageRegex = getHomePageRegex(services);
+
+      shouldMatchValidRoutes(homePageRoutes, homePageRegex);
+    },
+  );
+
+  describe.each(['local', 'test'])(
+    `${homePageRoutesToString} should not match as frontPage routes on the %s environment`,
+    environment => {
+      process.env.SIMORGH_APP_ENV = environment;
+
+      const frontPageRegex = getFrontPageRegex(services);
+
+      shouldNotMatchInvalidRoutes(homePageRoutes, frontPageRegex);
+    },
+  );
+
+  describe(`${homePageRoutesToString} should match as frontPage routes on the live environment`, () => {
+    process.env.SIMORGH_APP_ENV = 'live';
+
+    const frontPageRegex = getFrontPageRegex(services);
+
+    shouldMatchValidRoutes(homePageRoutes, frontPageRegex);
+  });
+
+  describe(`${homePageRoutesToString} should not match as homePage routes on the live environment`, () => {
+    process.env.SIMORGH_APP_ENV = 'live';
+
+    const homePageRegex = getHomePageRegex(services);
+
+    shouldNotMatchInvalidRoutes(homePageRoutes, homePageRegex);
+  });
 });
