@@ -5,7 +5,7 @@ export const promoProps = {
   url: '/mundo/internacional-23038380',
   image: {
     ratio: 52,
-    src: 'https://ichef.bbci.co.uk/news/400/cpsdevpb/DDFC/test/_63482865_orange2.jpg',
+    src: 'https://ichef.bbci.co.uk/ace/standard/400/cpsdevpb/DDFC/test/_63482865_orange2.jpg',
     alt: 'Orange 2',
     width: 976,
   },

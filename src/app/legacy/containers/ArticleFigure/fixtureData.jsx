@@ -18,7 +18,7 @@ import ThemeProvider from '../../../components/ThemeProvider';
 const imageAlt = 'Pauline Clayton';
 const imageHeight = 360;
 const imageSrc =
-  'https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg';
+  'https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg';
 const imageWidth = 640;
 const imageRatio = 56.25;
 const captionBlock = text => blockContainingText('caption', text, 'mock-id');

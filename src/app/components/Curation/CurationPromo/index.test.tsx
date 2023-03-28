@@ -16,7 +16,7 @@ const Fixture = ({ lazy, type = 'article', duration }: FixtureProps) => (
     lazy={lazy}
     title="Promo title"
     firstPublished="2022-03-30T07:37:18.253Z"
-    imageUrl="https://ichef.bbci.co.uk/news/240/cpsprodpb/17CDB/production/_123699479_indigena.jpg"
+    imageUrl="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/17CDB/production/_123699479_indigena.jpg"
     imageAlt="Campesino indígena peruano."
     link="https://www.bbc.com/mundo/noticias-america-latina-60742314"
     type={type}

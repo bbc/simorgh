@@ -12,7 +12,7 @@ describe('CpsMetadata get branded image', () => {
     const service = 'pidgin';
     const actual = getBrandedImage(locator, service);
     const expected =
-      'https://ichef.test.bbci.co.uk/news/1024/branded_pidgin/729E/test/_63724392_gettyimages-1098075358.jpg';
+      'https://ichef.test.bbci.co.uk/ace/standard/1024/branded_pidgin/729E/test/_63724392_gettyimages-1098075358.jpg';
 
     expect(actual).toEqual(expected);
   });
@@ -24,7 +24,7 @@ describe('CpsMetadata get branded image', () => {
     const service = 'igbo';
     const actual = getBrandedImage(locator, service);
     const expected =
-      'https://ichef.test.bbci.co.uk/news/1024/branded_igbo/729E/test/_63724392_gettyimages-1098075358.jpg';
+      'https://ichef.test.bbci.co.uk/ace/standard/1024/branded_igbo/729E/test/_63724392_gettyimages-1098075358.jpg';
 
     expect(actual).toEqual(expected);
   });
@@ -36,7 +36,7 @@ describe('CpsMetadata get branded image', () => {
     const service = 'korean';
     const actual = getBrandedImage(locator, service);
     const expected =
-      'https://ichef.bbci.co.uk/news/1024/branded_korean/729E/test/_63724392_gettyimages-1098075358.jpg';
+      'https://ichef.bbci.co.uk/ace/standard/1024/branded_korean/729E/test/_63724392_gettyimages-1098075358.jpg';
 
     expect(actual).toEqual(expected);
   });

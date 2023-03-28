@@ -19,7 +19,7 @@ describe('Hierarchical Grid Curation', () => {
       firstPublished: '2022-01-06T19:00:29.000Z',
       link: 'https://www.bbc.com/pidgin/tori-59901959',
       imageUrl:
-        'https://ichef.bbci.co.uk/news/{width}/cpsprodpb/DE3A/production/_122609865_january6timelinewetinhappunforjanuary6oneyearago.jpg',
+        'https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/DE3A/production/_122609865_january6timelinewetinhappunforjanuary6oneyearago.jpg',
       description:
         'Here na reminder of wetin happun on di historic day when rioters storm di Capitol exactly one year ago.',
       imageAlt: 'January 6 timeline: Wetin happun for January 6 one year ago?',
