@@ -1,0 +1,59 @@
+{
+  "data": {
+    "title": "BBC News Afaan Oromoo",
+    "pageType": "home",
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "Murteessaan taphaa bilbila daawwataa ilaalee galchii haqe hojiirraa dhorkame",
+            "firstPublished": "2023-03-23T06:36:05.923Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/cd13jx6362xo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/ffed/live/3a399e00-c94e-11ed-9c0a-850cb2e3bd6c.jpg",
+            "description": "",
+            "imageAlt": "Bilbila ",
+            "id": "cd13jx6362xo"
+          },
+          {
+            "type": "article",
+            "title": "Gameessi ispoortii Itoophiyaa Garramoo Damboobaa yeroo yaadatamu ",
+            "firstPublished": "2023-03-19T05:58:59.980Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/cz5plg7k65po",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/4edf/live/1d3fa7f0-c614-11ed-9ccb-9b782cd7ef27.jpg",
+            "description": "",
+            "imageAlt": "Garramoo Damboobaa Olompikii Meelbarniifi Room irratti Itoophiyaa bakka bu'uun dorgome",
+            "id": "cz5plg7k65po"
+          },
+          {
+            "type": "article",
+            "title": "Lammii Itoophiyaa faana Abbabaa Biqilaa bu'uun maaraatoonii miila duwwaa fiiguuf kaayyeffate",
+            "firstPublished": "2023-03-18T05:20:41.177Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/c1dxrn42pz9o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/cb1c/live/32a03d30-c4cf-11ed-8018-07e7bae1357d.png",
+            "description": "",
+            "imageAlt": "Ermiyaas Dilbata dhuftu fiiguuf karoorfate",
+            "id": "c1dxrn42pz9o"
+          },
+          {
+            "type": "article",
+            "title": "Arsenaal Yurooppaa Liigii mo'amuunsaa sadarkaa Piriimiyeer Liigii keessatti qabu miidhaa?",
+            "firstPublished": "2023-03-17T13:01:48.303Z",
+            "link": "https://www.bbc.com/afaanoromoo/articles/c0vzw4vqv2jo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/b8f5/live/683792a0-c4c4-11ed-9d83-03c542b6619e.png",
+            "description": "",
+            "imageAlt": "Arteettaan erga gareensaa Ispoortiing Lisbaaniin mo'ameen booda yaada kenne",
+            "id": "c0vzw4vqv2jo"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:vivo:curation:bbc3cdcf-2034-48e2-9c72-1b9bd1083fda",
+        "curationType": "vivo-stream",
+        "position": 0,
+        "visualProminence": "NORMAL"
+      }
+    ]
+  },
+  "contentType": "application/json; charset=utf-8"
+}
