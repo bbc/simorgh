@@ -115,7 +115,7 @@ const CanonicalNewsInternationalOrigin = props => (
 const CanonicalMapInternationalOrigin = () => (
   <MetadataWithContext
     service="pidgin"
-    image="http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg"
+    image="http://ichef.test.bbci.co.uk/ace/standard/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg"
     imageAltText="connectionAltText"
     imageWidth={100}
     imageHeight={200}
@@ -743,7 +743,7 @@ it('should render the open graph image if provided', async () => {
     {
       property: 'og:image',
       content:
-        'http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg',
+        'http://ichef.test.bbci.co.uk/ace/standard/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg',
     },
     { property: 'og:image:alt', content: 'connectionAltText' },
     { property: 'og:image:width', content: '100' },
@@ -752,7 +752,7 @@ it('should render the open graph image if provided', async () => {
     {
       name: 'twitter:image:src',
       content:
-        'http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg',
+        'http://ichef.test.bbci.co.uk/ace/standard/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg',
     },
   ];
 

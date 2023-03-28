@@ -38,14 +38,14 @@ describe('CpsMetadata get branded image', () => {
       {
         property: 'og:image',
         content:
-          'https://ichef.test.bbci.co.uk/news/1024/branded_news/6FC4/test/_63721682_p01kx435.jpg',
+          'https://ichef.test.bbci.co.uk/ace/standard/1024/branded_news/6FC4/test/_63721682_p01kx435.jpg',
       },
       { property: 'og:image:alt', content: 'connectionAltText' },
       { name: 'twitter:image:alt', content: 'connectionAltText' },
       {
         name: 'twitter:image:src',
         content:
-          'https://ichef.test.bbci.co.uk/news/1024/branded_news/6FC4/test/_63721682_p01kx435.jpg',
+          'https://ichef.test.bbci.co.uk/ace/standard/1024/branded_news/6FC4/test/_63721682_p01kx435.jpg',
       },
       { content: 'https://www.facebook.com/bbcnews', name: 'article:author' },
       { content: '2018-01-01T12:01:00.000Z', name: 'article:published_time' },
