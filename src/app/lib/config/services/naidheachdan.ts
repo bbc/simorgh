@@ -90,10 +90,10 @@ export const service: DefaultServiceConfig = {
         },
       },
       byline: {
-        articleInformation: 'Article information',
-        author: 'Author',
+        articleInformation: 'Fiosrachadh mun artaigil',
+        author: 'Ùghdar',
         reportingFrom: 'Ag aithris às',
-        role: 'Role',
+        role: 'Dreuchd',
       },
       consentBanner: {
         privacy: {
