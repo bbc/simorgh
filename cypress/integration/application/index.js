@@ -4,6 +4,7 @@ import serviceHasPageType from '../../support/helpers/serviceHasPageType';
 import ampOnlyServices from '../../support/helpers/ampOnlyServices';
 import envConfig from '../../support/config/envs';
 import getPaths from '../../support/helpers/getPaths';
+import { getTopicPagePath } from '../pages/topicPage/helpers';
 
 const servicesUsingArticlePaths = ['news', 'scotland'];
 
@@ -41,7 +42,8 @@ describe('Application', () => {
           if (serviceHasPageType(service, 'topicPage')) {
             const paths = getPaths(service, 'topicPage');
             paths.forEach(currentPath => {
-              const fullPath = `${envConfig.baseUrl}${currentPath}`;
+              const topicPagePath = getTopicPagePath(currentPath);
+              const fullPath = `${envConfig.baseUrl}${topicPagePath}`;
               cy.log(fullPath);
               cy.visit(fullPath);
             });
