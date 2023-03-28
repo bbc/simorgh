@@ -1,5 +1,5 @@
-import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
+import pixelsToRem from '../../utilities/pixelsToRem';
 
 export default {
   pageWrapper: ({ palette }: Theme) =>
