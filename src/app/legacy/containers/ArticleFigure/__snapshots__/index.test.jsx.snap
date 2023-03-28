@@ -421,7 +421,7 @@ exports[`ArticleFigure should render an AMP image with alt text 1`] = `
             fallback=""
             height="360"
             layout="responsive"
-            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+            src="https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
             width="640"
           />
         </div>
@@ -817,7 +817,7 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
             fallback=""
             height="360"
             layout="responsive"
-            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+            src="https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
             width="640"
           />
           <p
@@ -1228,7 +1228,7 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
             fallback=""
             height="360"
             layout="responsive"
-            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+            src="https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
             width="640"
           />
         </div>
@@ -1646,7 +1646,7 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
             fallback=""
             height="360"
             layout="responsive"
-            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+            src="https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
             width="640"
           />
         </div>
@@ -1913,7 +1913,7 @@ exports[`ArticleFigure should render an AMP image with copyright text 1`] = `
             fallback=""
             height="360"
             layout="responsive"
-            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+            src="https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
             width="640"
           />
           <p
@@ -2145,7 +2145,7 @@ exports[`ArticleFigure should render an image and caption for a portrait with ne
             alt="Pauline Clayton"
             class="emotion-8 emotion-9 emotion-10"
             height="1240"
-            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+            src="https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
             width="600"
           />
         </div>
@@ -2366,7 +2366,7 @@ exports[`ArticleFigure should render an image and caption for a square with nest
             alt="Pauline Clayton"
             class="emotion-8 emotion-9 emotion-10"
             height="1240"
-            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+            src="https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
             width="1240"
           />
         </div>
@@ -2587,7 +2587,7 @@ exports[`ArticleFigure should render an image with alt text 1`] = `
             alt="Pauline Clayton"
             class="emotion-8 emotion-9 emotion-10"
             height="360"
-            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+            src="https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
             width="640"
           />
         </div>
@@ -2987,7 +2987,7 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
             alt="Pauline Clayton"
             class="emotion-8 emotion-9 emotion-10"
             height="360"
-            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+            src="https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
             width="640"
           />
           <p
@@ -3402,7 +3402,7 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
             alt="Pauline Clayton"
             class="emotion-8 emotion-9 emotion-10"
             height="360"
-            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+            src="https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
             width="640"
           />
         </div>
@@ -3824,7 +3824,7 @@ exports[`ArticleFigure should render an image with caption text with inline link
             alt="Pauline Clayton"
             class="emotion-8 emotion-9 emotion-10"
             height="360"
-            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+            src="https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
             width="640"
           />
         </div>
@@ -4095,7 +4095,7 @@ exports[`ArticleFigure should render an image with copyright text 1`] = `
             alt="Pauline Clayton"
             class="emotion-8 emotion-9 emotion-10"
             height="360"
-            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+            src="https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
             width="640"
           />
           <p

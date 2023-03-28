@@ -453,8 +453,8 @@ exports[`ArticleRelatedContent should render related content 1`] = `
                     height="562"
                     loading="lazy"
                     sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
-                    src="https://ichef.bbci.co.uk/news/660/cpsdevpb/72c5/test/47abb9d0-5431-11ec-b75b-9f9fe566903d.png"
-                    srcset="https://ichef.bbci.co.uk/news/70/cpsdevpb/72c5/test/47abb9d0-5431-11ec-b75b-9f9fe566903d.png 70w, https://ichef.bbci.co.uk/news/95/cpsdevpb/72c5/test/47abb9d0-5431-11ec-b75b-9f9fe566903d.png 95w, https://ichef.bbci.co.uk/news/144/cpsdevpb/72c5/test/47abb9d0-5431-11ec-b75b-9f9fe566903d.png 144w, https://ichef.bbci.co.uk/news/183/cpsdevpb/72c5/test/47abb9d0-5431-11ec-b75b-9f9fe566903d.png 183w, https://ichef.bbci.co.uk/news/240/cpsdevpb/72c5/test/47abb9d0-5431-11ec-b75b-9f9fe566903d.png 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/72c5/test/47abb9d0-5431-11ec-b75b-9f9fe566903d.png 320w, https://ichef.bbci.co.uk/news/660/cpsdevpb/72c5/test/47abb9d0-5431-11ec-b75b-9f9fe566903d.png 660w"
+                    src="https://ichef.bbci.co.uk/ace/standard/660/cpsdevpb/72c5/test/47abb9d0-5431-11ec-b75b-9f9fe566903d.png"
+                    srcset="https://ichef.bbci.co.uk/ace/standard/70/cpsdevpb/72c5/test/47abb9d0-5431-11ec-b75b-9f9fe566903d.png 70w, https://ichef.bbci.co.uk/ace/standard/95/cpsdevpb/72c5/test/47abb9d0-5431-11ec-b75b-9f9fe566903d.png 95w, https://ichef.bbci.co.uk/ace/standard/144/cpsdevpb/72c5/test/47abb9d0-5431-11ec-b75b-9f9fe566903d.png 144w, https://ichef.bbci.co.uk/ace/standard/183/cpsdevpb/72c5/test/47abb9d0-5431-11ec-b75b-9f9fe566903d.png 183w, https://ichef.bbci.co.uk/ace/standard/240/cpsdevpb/72c5/test/47abb9d0-5431-11ec-b75b-9f9fe566903d.png 240w, https://ichef.bbci.co.uk/ace/standard/320/cpsdevpb/72c5/test/47abb9d0-5431-11ec-b75b-9f9fe566903d.png 320w, https://ichef.bbci.co.uk/ace/standard/660/cpsdevpb/72c5/test/47abb9d0-5431-11ec-b75b-9f9fe566903d.png 660w"
                     width="999"
                   />
                 </picture>

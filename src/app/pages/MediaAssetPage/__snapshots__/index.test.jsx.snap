@@ -4355,8 +4355,8 @@ exports[`Media Asset Page should render component 1`] = `
                                 height="351"
                                 loading="lazy"
                                 sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
-                                src="https://ichef.test.bbci.co.uk/news/660/cpsdevpb/5C06/test/_63585532_ozubuluchurch.jpg"
-                                srcset="https://ichef.test.bbci.co.uk/news/70/cpsdevpb/5C06/test/_63585532_ozubuluchurch.jpg 70w, https://ichef.test.bbci.co.uk/news/95/cpsdevpb/5C06/test/_63585532_ozubuluchurch.jpg 95w, https://ichef.test.bbci.co.uk/news/144/cpsdevpb/5C06/test/_63585532_ozubuluchurch.jpg 144w, https://ichef.test.bbci.co.uk/news/183/cpsdevpb/5C06/test/_63585532_ozubuluchurch.jpg 183w, https://ichef.test.bbci.co.uk/news/240/cpsdevpb/5C06/test/_63585532_ozubuluchurch.jpg 240w, https://ichef.test.bbci.co.uk/news/320/cpsdevpb/5C06/test/_63585532_ozubuluchurch.jpg 320w, https://ichef.test.bbci.co.uk/news/624/cpsdevpb/5C06/test/_63585532_ozubuluchurch.jpg 624w"
+                                src="https://ichef.test.bbci.co.uk/ace/standard/660/cpsdevpb/5C06/test/_63585532_ozubuluchurch.jpg"
+                                srcset="https://ichef.test.bbci.co.uk/ace/standard/70/cpsdevpb/5C06/test/_63585532_ozubuluchurch.jpg 70w, https://ichef.test.bbci.co.uk/ace/standard/95/cpsdevpb/5C06/test/_63585532_ozubuluchurch.jpg 95w, https://ichef.test.bbci.co.uk/ace/standard/144/cpsdevpb/5C06/test/_63585532_ozubuluchurch.jpg 144w, https://ichef.test.bbci.co.uk/ace/standard/183/cpsdevpb/5C06/test/_63585532_ozubuluchurch.jpg 183w, https://ichef.test.bbci.co.uk/ace/standard/240/cpsdevpb/5C06/test/_63585532_ozubuluchurch.jpg 240w, https://ichef.test.bbci.co.uk/ace/standard/320/cpsdevpb/5C06/test/_63585532_ozubuluchurch.jpg 320w, https://ichef.test.bbci.co.uk/ace/standard/624/cpsdevpb/5C06/test/_63585532_ozubuluchurch.jpg 624w"
                                 width="624"
                               />
                             </picture>
@@ -4420,8 +4420,8 @@ exports[`Media Asset Page should render component 1`] = `
                                 height="351"
                                 loading="lazy"
                                 sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
-                                src="https://ichef.test.bbci.co.uk/news/660/cpsdevpb/13644/test/_63582497_black-gay.jpg"
-                                srcset="https://ichef.test.bbci.co.uk/news/70/cpsdevpb/13644/test/_63582497_black-gay.jpg 70w, https://ichef.test.bbci.co.uk/news/95/cpsdevpb/13644/test/_63582497_black-gay.jpg 95w, https://ichef.test.bbci.co.uk/news/144/cpsdevpb/13644/test/_63582497_black-gay.jpg 144w, https://ichef.test.bbci.co.uk/news/183/cpsdevpb/13644/test/_63582497_black-gay.jpg 183w, https://ichef.test.bbci.co.uk/news/240/cpsdevpb/13644/test/_63582497_black-gay.jpg 240w, https://ichef.test.bbci.co.uk/news/320/cpsdevpb/13644/test/_63582497_black-gay.jpg 320w, https://ichef.test.bbci.co.uk/news/624/cpsdevpb/13644/test/_63582497_black-gay.jpg 624w"
+                                src="https://ichef.test.bbci.co.uk/ace/standard/660/cpsdevpb/13644/test/_63582497_black-gay.jpg"
+                                srcset="https://ichef.test.bbci.co.uk/ace/standard/70/cpsdevpb/13644/test/_63582497_black-gay.jpg 70w, https://ichef.test.bbci.co.uk/ace/standard/95/cpsdevpb/13644/test/_63582497_black-gay.jpg 95w, https://ichef.test.bbci.co.uk/ace/standard/144/cpsdevpb/13644/test/_63582497_black-gay.jpg 144w, https://ichef.test.bbci.co.uk/ace/standard/183/cpsdevpb/13644/test/_63582497_black-gay.jpg 183w, https://ichef.test.bbci.co.uk/ace/standard/240/cpsdevpb/13644/test/_63582497_black-gay.jpg 240w, https://ichef.test.bbci.co.uk/ace/standard/320/cpsdevpb/13644/test/_63582497_black-gay.jpg 320w, https://ichef.test.bbci.co.uk/ace/standard/624/cpsdevpb/13644/test/_63582497_black-gay.jpg 624w"
                                 width="624"
                               />
                             </picture>
@@ -4575,8 +4575,8 @@ exports[`Media Asset Page should render component 1`] = `
                                 height="576"
                                 loading="lazy"
                                 sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
-                                src="https://ichef.test.bbci.co.uk/news/660/cpsdevpb/B7E8/test/_63708074_mediaitem63708073.png"
-                                srcset="https://ichef.test.bbci.co.uk/news/70/cpsdevpb/B7E8/test/_63708074_mediaitem63708073.png 70w, https://ichef.test.bbci.co.uk/news/95/cpsdevpb/B7E8/test/_63708074_mediaitem63708073.png 95w, https://ichef.test.bbci.co.uk/news/144/cpsdevpb/B7E8/test/_63708074_mediaitem63708073.png 144w, https://ichef.test.bbci.co.uk/news/183/cpsdevpb/B7E8/test/_63708074_mediaitem63708073.png 183w, https://ichef.test.bbci.co.uk/news/240/cpsdevpb/B7E8/test/_63708074_mediaitem63708073.png 240w, https://ichef.test.bbci.co.uk/news/320/cpsdevpb/B7E8/test/_63708074_mediaitem63708073.png 320w, https://ichef.test.bbci.co.uk/news/660/cpsdevpb/B7E8/test/_63708074_mediaitem63708073.png 660w"
+                                src="https://ichef.test.bbci.co.uk/ace/standard/660/cpsdevpb/B7E8/test/_63708074_mediaitem63708073.png"
+                                srcset="https://ichef.test.bbci.co.uk/ace/standard/70/cpsdevpb/B7E8/test/_63708074_mediaitem63708073.png 70w, https://ichef.test.bbci.co.uk/ace/standard/95/cpsdevpb/B7E8/test/_63708074_mediaitem63708073.png 95w, https://ichef.test.bbci.co.uk/ace/standard/144/cpsdevpb/B7E8/test/_63708074_mediaitem63708073.png 144w, https://ichef.test.bbci.co.uk/ace/standard/183/cpsdevpb/B7E8/test/_63708074_mediaitem63708073.png 183w, https://ichef.test.bbci.co.uk/ace/standard/240/cpsdevpb/B7E8/test/_63708074_mediaitem63708073.png 240w, https://ichef.test.bbci.co.uk/ace/standard/320/cpsdevpb/B7E8/test/_63708074_mediaitem63708073.png 320w, https://ichef.test.bbci.co.uk/ace/standard/660/cpsdevpb/B7E8/test/_63708074_mediaitem63708073.png 660w"
                                 width="1024"
                               />
                             </picture>
