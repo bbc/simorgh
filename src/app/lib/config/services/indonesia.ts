@@ -273,6 +273,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'Berita Utama',
       featuresAnalysisTitle: 'Majalah',
+      latestMediaTitle: 'Terbaru',
     },
     mostRead: {
       header: 'Paling banyak dibaca',
