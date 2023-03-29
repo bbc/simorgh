@@ -16,10 +16,17 @@ storiesOf('Components/VisuallyHiddenText', module)
   .addDecorator(withServicesKnob())
   .add(
     'default',
-    ({ text, service }: Props) => (
-      <VisuallyHiddenText>
-        {service === 'news' ? 'Visually hidden text' : text}
-      </VisuallyHiddenText>
-    ),
+    () => {
+      const props: Props = {
+        text: 'Some text',
+        service: 'news',
+      };
+
+      return (
+        <VisuallyHiddenText {...props}>
+          {props.service === 'news' ? 'Visually hidden text' : props.text}
+        </VisuallyHiddenText>
+      );
+    },
     { notes, knobs: { escapeHTML: false } },
   );
