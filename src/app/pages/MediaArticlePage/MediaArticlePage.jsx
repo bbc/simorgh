@@ -6,25 +6,15 @@ import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
 import { jsx, useTheme } from '@emotion/react';
-import { string, node } from 'prop-types';
+import { string } from 'prop-types';
 import useToggle from '#hooks/useToggle';
 
+import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
 import {
-  GEL_GROUP_1_SCREEN_WIDTH_MAX,
-  GEL_GROUP_2_SCREEN_WIDTH_MIN,
-  GEL_GROUP_3_SCREEN_WIDTH_MAX,
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
-  GEL_GROUP_4_SCREEN_WIDTH_MAX,
-  GEL_GROUP_5_SCREEN_WIDTH_MIN,
-} from '#psammead/gel-foundations/src/breakpoints';
-import {
-  GEL_MARGIN_ABOVE_400PX,
-  GEL_MARGIN_BELOW_400PX,
   GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
-  GEL_SPACING_QUIN,
 } from '#psammead/gel-foundations/src/spacings';
 
 import { articleDataPropTypes } from '#models/propTypes/article';
@@ -43,9 +33,6 @@ import OptimizelyPageViewTracking from '#containers/OptimizelyPageViewTracking';
 import OptimizelyArticleCompleteTracking from '#containers/OptimizelyArticleCompleteTracking';
 import ArticleMediaPlayer from '#containers/ArticleMediaPlayer';
 import LinkedData from '#containers/LinkedData';
-import MostReadContainer from '#containers/MostRead';
-import MostReadSection from '#containers/MostRead/section';
-import MostReadSectionLabel from '#containers/MostRead/label';
 import SocialEmbedContainer from '#containers/SocialEmbed';
 import fauxHeadline from '#containers/FauxHeadline';
 import CpsRecommendations from '#containers/CpsRecommendations';
@@ -84,27 +71,6 @@ const Wrapper = styled.div`
   background-color: ${props => props.theme.palette.GREY_2};
 `;
 
-const MediaArticlePageMostReadSection = styled(MostReadSection)`
-  @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
-    margin: 0 ${GEL_MARGIN_BELOW_400PX} 0 ${GEL_MARGIN_BELOW_400PX};
-    padding-bottom: ${GEL_SPACING_TRPL};
-  }
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-    margin: 0 ${GEL_MARGIN_ABOVE_400PX} 0 ${GEL_MARGIN_ABOVE_400PX};
-    padding-bottom: ${GEL_SPACING_QUAD};
-  }
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
-    margin: 0 ${GEL_MARGIN_ABOVE_400PX} 0 ${GEL_MARGIN_ABOVE_400PX};
-    padding-bottom: ${GEL_SPACING_QUIN};
-  }
-  @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
-    width: 100%; /* Needed for IE11 */
-    margin: 0 auto;
-    padding: 0 ${GEL_SPACING_DBL} ${GEL_SPACING_TRPL};
-    max-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN};
-  }
-`;
-
 const Main = styled.main`
   padding-bottom: ${GEL_SPACING_TRPL};
 `;
@@ -118,7 +84,7 @@ const StyledRelatedTopics = styled(RelatedTopics)`
   }
 `;
 
-const MediaArticlePage = ({ pageData, mostReadEndpointOverride }) => {
+const MediaArticlePage = ({ pageData }) => {
   const { articleAuthor, isTrustProjectParticipant, showRelatedTopics } =
     useContext(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
@@ -220,17 +186,6 @@ const MediaArticlePage = ({ pageData, mostReadEndpointOverride }) => {
     filterForBlockType(promoImageBlocks, 'rawImage'),
   );
 
-  const MostReadWrapper = ({ children }) => (
-    <MediaArticlePageMostReadSection>
-      <MostReadSectionLabel mobileDivider={showRelatedTopics && topics} />
-      {children}
-    </MediaArticlePageMostReadSection>
-  );
-
-  MostReadWrapper.propTypes = {
-    children: node.isRequired,
-  };
-
   return (
     <Wrapper>
       <ATIAnalytics data={pageData} />
@@ -280,10 +235,6 @@ const MediaArticlePage = ({ pageData, mostReadEndpointOverride }) => {
         </Primary>
         <SecondaryColumn pageData={pageData} />
       </MediaArticlePageGrid>
-      <MostReadContainer
-        mostReadEndpointOverride={mostReadEndpointOverride}
-        wrapper={MostReadWrapper}
-      />
       <OptimizelyPageViewTracking />
       <OptimizelyArticleCompleteTracking />
     </Wrapper>
