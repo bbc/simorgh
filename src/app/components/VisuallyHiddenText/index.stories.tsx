@@ -17,7 +17,7 @@ const Component = ({ service, text }: Props) => (
 );
 
 export default {
-  title: 'Components/VisuallyHiddenText',
+  title: 'New Components/VisuallyHiddenText',
   Component,
   decorators: [withKnobs, withServicesKnob()],
   parameters: { docs: { page: notes } },
