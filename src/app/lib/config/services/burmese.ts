@@ -279,6 +279,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'ထိပ်တန်း သတင်းများ',
       featuresAnalysisTitle: 'ဆောင်းပါး',
+      latestMediaTitle: 'နောက်ဆုံးရ',
     },
     mostRead: {
       header: 'အဖတ်အများဆုံး',

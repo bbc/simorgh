@@ -350,6 +350,7 @@ export const service: SerbianConfig = {
       },
       topStoriesTitle: 'Najvažnije',
       featuresAnalysisTitle: 'Reportaže',
+      latestMediaTitle: 'Najnovije',
     },
   },
   cyr: {
@@ -667,6 +668,7 @@ export const service: SerbianConfig = {
       },
       topStoriesTitle: 'Најважније',
       featuresAnalysisTitle: 'Репортаже',
+      latestMediaTitle: 'Најновије',
     },
   },
 };

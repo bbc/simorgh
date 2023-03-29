@@ -252,6 +252,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'Isi akụkọ',
       featuresAnalysisTitle: 'Kọwaara m isi akụkọ',
+      latestMediaTitle: 'Kachasị ọhụrụ',
     },
     mostRead: {
       header: 'Akachasị Gụọ',

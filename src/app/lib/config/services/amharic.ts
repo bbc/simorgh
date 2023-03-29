@@ -240,6 +240,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'እንዳያመልጥዎ',
       featuresAnalysisTitle: 'ከየፈርጁ',
+      latestMediaTitle: 'የቅርብ ጊዜ',
     },
     mostRead: {
       header: 'ብዙ የተነበቡ',

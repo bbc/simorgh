@@ -247,6 +247,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'Tin chính',
       featuresAnalysisTitle: 'Góc nhìn và chuyên mục',
+      latestMediaTitle: 'Mới nhất',
     },
     mostRead: {
       header: 'Đọc nhiều nhất',
