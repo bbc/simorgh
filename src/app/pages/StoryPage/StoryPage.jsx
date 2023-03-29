@@ -33,8 +33,6 @@ import FeaturesAnalysis from '#containers/CpsFeaturesAnalysis';
 import MostReadContainer from '#containers/MostRead';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
-import OptimizelyPageViewTracking from '#containers/OptimizelyPageViewTracking';
-import OptimizelyArticleCompleteTracking from '#containers/OptimizelyArticleCompleteTracking';
 import fauxHeadline from '#containers/FauxHeadline';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import CpsTable from '#containers/CpsTable';
@@ -337,8 +335,6 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
         >
           <main role="main">
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
-            <OptimizelyArticleCompleteTracking />
-            <OptimizelyPageViewTracking />
           </main>
 
           {showRelatedTopics && topics && (
