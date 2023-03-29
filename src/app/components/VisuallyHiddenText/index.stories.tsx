@@ -1,5 +1,4 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import { Services } from '../../models/types/global';
@@ -11,22 +10,19 @@ interface Props {
   text: string;
 }
 
-storiesOf('Components/VisuallyHiddenText', module)
-  .addDecorator(withKnobs)
-  .addDecorator(withServicesKnob())
-  .add(
-    'default',
-    () => {
-      const props: Props = {
-        text: 'Some text',
-        service: 'news',
-      };
+const Component = ({ service, text }: Props) => (
+  <VisuallyHiddenText>
+    {service === 'news' ? 'Visually hidden text' : text}
+  </VisuallyHiddenText>
+);
 
-      return (
-        <VisuallyHiddenText {...props}>
-          {props.service === 'news' ? 'Visually hidden text' : props.text}
-        </VisuallyHiddenText>
-      );
-    },
-    { notes, knobs: { escapeHTML: false } },
-  );
+export default {
+  title: 'Components/VisuallyHiddenText',
+  Component,
+  decorators: [withKnobs, withServicesKnob()],
+  parameters: { docs: { page: notes } },
+};
+
+export const VisuallyHiddenTextOne = ({ service, text }: Props) => (
+  <Component service={service} text={text} />
+);
