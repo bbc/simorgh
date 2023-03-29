@@ -1,7 +1,7 @@
-import { css, Theme } from '@emotion/react';
+import { css } from '@emotion/react';
 
 const styles = {
-  hiddenText: ({ mq }: Theme) =>
+  hiddenText: () =>
     css({
       clipPath: 'inset(100%)',
       clip: 'rect(1px, 1px, 1px, 1px)',
