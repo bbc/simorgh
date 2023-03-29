@@ -49,11 +49,6 @@ jest.mock('#containers/ComscoreAnalytics', () => {
   return ComscoreAnalytics;
 });
 
-jest.mock('#containers/OptimizelyPageViewTracking', () => {
-  const OptimizelyPageViewTracking = () => null;
-  return OptimizelyPageViewTracking;
-});
-
 jest.mock('#containers/Ad', () => {
   const AdsContainer = () => <div data-testid="sty-ads">STY ADS</div>;
   return AdsContainer;
@@ -164,9 +159,6 @@ jest.mock('#containers/PageHandlers/withContexts', () => Component => {
 
   return ContextsContainer;
 });
-
-const mockHook = jest.fn();
-jest.mock('#hooks/useOptimizelyVariation', () => () => mockHook);
 
 const pageType = 'cpsAsset';
 
