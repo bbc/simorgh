@@ -248,6 +248,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'প্রধান খবর',
       featuresAnalysisTitle: 'চিঠিপত্র ও মতামত',
+      latestMediaTitle: 'সর্বশেষ',
     },
     mostRead: {
       header: 'সর্বাধিক পঠিত',

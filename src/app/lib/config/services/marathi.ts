@@ -264,6 +264,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'मोठ्या बातम्या',
       featuresAnalysisTitle: 'Features',
+      latestMediaTitle: 'नवीनतम',
     },
     mostRead: {
       header: 'सर्वाधिक वाचलेले',
