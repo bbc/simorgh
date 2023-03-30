@@ -23,8 +23,6 @@ import Timestamp from '#containers/ArticleTimestamp';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
-import OptimizelyPageViewTracking from '#containers/OptimizelyPageViewTracking';
-import OptimizelyArticleCompleteTracking from '#containers/OptimizelyArticleCompleteTracking';
 import articleMediaPlayer from '#containers/ArticleMediaPlayer';
 import LinkedData from '#containers/LinkedData';
 import MostReadContainer from '#containers/MostRead';
@@ -49,6 +47,7 @@ import filterForBlockType from '#lib/utilities/blockHandlers';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 import ScrollablePromo from '#components/ScrollablePromo';
+import CpsRecommendations from '#containers/CpsRecommendations';
 import Byline from '../../components/Byline';
 import {
   bylineExtractor,
@@ -59,8 +58,6 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import RelatedContentSection from './PagePromoSections/RelatedContentSection';
 
 import SecondaryColumn from './SecondaryColumn';
-
-import OptimizelyRecommendation from '../../components/OptimizelyRecommendations';
 
 import styles from './ArticlePage.styles';
 
@@ -108,6 +105,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
     ['metadata', 'passport', 'predicates', 'formats'],
     pageData,
   );
+  const recommendationsData = pathOr([], ['recommendations'], pageData);
 
   const componentsToRender = {
     visuallyHiddenHeadline,
@@ -139,10 +137,10 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
     group: gist,
     links: props => <ScrollablePromo {...props} />,
     mpu: props =>
-      isAdsEnabled ? (
-        <AdContainer css={styles.adContainer} {...props} slotType="mpu" />
-      ) : null,
-    wsoj: props => <OptimizelyRecommendation pageData={pageData} {...props} />,
+      isAdsEnabled ? <AdContainer {...props} slotType="mpu" /> : null,
+    wsoj: props => (
+      <CpsRecommendations {...props} items={recommendationsData} />
+    ),
   };
 
   const visuallyHiddenBlock = {
@@ -243,8 +241,6 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
         mostReadEndpointOverride={mostReadEndpointOverride}
         wrapper={MostReadWrapper}
       />
-      <OptimizelyPageViewTracking />
-      <OptimizelyArticleCompleteTracking />
     </div>
   );
 };
