@@ -16,7 +16,7 @@ Adds non-visible text to the page, to be utilised by screen-readers and other as
 ## Usage
 
 ```tsx
-import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
+import VisuallyHiddenText from 'src/app/components/VisuallyHiddenText';
 
 const WrappingComponent = () => (
   <VisuallyHiddenText>Some offscreen text</VisuallyHiddenText>
