@@ -1,10 +1,12 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { render } from '@testing-library/react';
 import VisuallyHiddenText from './index';
 
 describe('VisuallyHiddenText', () => {
-  shouldMatchSnapshot(
-    'should render off screen text for screen readers',
-    <VisuallyHiddenText>Some offscreen text</VisuallyHiddenText>,
-  );
+  it('should render off screen text for screen readers', () => {
+    const { container } = render(
+      <VisuallyHiddenText>Some offscreen text</VisuallyHiddenText>,
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
 });
