@@ -2858,9 +2858,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                       Cheese strings stilton cheesy feet. Cheese strings fondue cow fromage edam halloumi cut the cheese cream cheese. Melted cheese brie rubber cheese parmesan cut the cheese queso st. agur blue cheese dolcelatte. Port-salut croque monsieur cheese and wine cheese triangles cheesy grin.
                     </p>
                   </div>
-                  <div
-                    aria-hidden="true"
-                  />
                 </main>
               </div>
               <div
@@ -6246,9 +6243,6 @@ exports[`Story Page should render correctly when the secondary column data is no
                       Cheese strings stilton cheesy feet. Cheese strings fondue cow fromage edam halloumi cut the cheese cream cheese. Melted cheese brie rubber cheese parmesan cut the cheese queso st. agur blue cheese dolcelatte. Port-salut croque monsieur cheese and wine cheese triangles cheesy grin.
                     </p>
                   </div>
-                  <div
-                    aria-hidden="true"
-                  />
                 </main>
               </div>
               <div
@@ -9655,9 +9649,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       Cheese strings stilton cheesy feet. Cheese strings fondue cow fromage edam halloumi cut the cheese cream cheese. Melted cheese brie rubber cheese parmesan cut the cheese queso st. agur blue cheese dolcelatte. Port-salut croque monsieur cheese and wine cheese triangles cheesy grin.
                     </p>
                   </div>
-                  <div
-                    aria-hidden="true"
-                  />
                 </main>
               </div>
               <div
