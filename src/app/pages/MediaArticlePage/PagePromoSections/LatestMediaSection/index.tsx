@@ -1,4 +1,4 @@
-import React, { useContext, FC, HTMLAttributes } from 'react';
+import React, { useContext } from 'react';
 import { useTheme } from '@emotion/react';
 import { arrayOf, shape } from 'prop-types';
 import { storyItem } from '#models/propTypes/storyItem';
@@ -6,7 +6,6 @@ import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
 import isEmpty from 'ramda/src/isEmpty';
 import useViewTracker from '#hooks/useViewTracker';
-import { OptimizelyContext } from '@optimizely/react-sdk';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import {
   StyledSectionLabel,
@@ -16,28 +15,15 @@ import {
 } from './index.styles';
 import TopStoriesItem from './TopStoriesItem';
 import generatePromoId from '../generatePromoId';
-import GREY_2 from '../../../../components/';
 
-interface Props extends HTMLAttributes<HTMLElement> {
-  item: string;
-  index: number;
-  eventTrackingData: string;
-  viewRef: string;
-}
-
-const renderLatestMediaList: FC<Props> = ({
-  item,
-  index,
-  eventTrackingData,
-  viewRef,
-}: Props) => {
+const renderTopStoriesList = (item, index, eventTrackingData, viewRef) => {
   const contentType = pathOr('', ['contentType'], item);
   const assetUri = pathOr('', ['locators', 'assetUri'], item);
   const canonicalUrl = pathOr('', ['locators', 'canonicalUrl'], item);
   const uri = pathOr('', ['uri'], item);
 
   const ariaLabelledBy = generatePromoId({
-    sectionType: 'latest-media',
+    sectionType: 'top-stories',
     assetUri,
     canonicalUrl,
     uri,
@@ -57,38 +43,35 @@ const renderLatestMediaList: FC<Props> = ({
   );
 };
 
-const latestMediaSection = ({ content }) => {
+const TopStoriesSection = ({ content }) => {
   const { translations, script, service } = useContext(ServiceContext);
-  //   const { optimizely } = useContext(OptimizelyContext);
-  //   const eventTrackingData = {
-  //     block: {
-  //       componentName: 'latest-media',
-  //       optimizely,
-  //     },
-  //   };
-  //   const eventTrackingDataSend = path(['block'], eventTrackingData);
-  //   const viewRef = useViewTracker(eventTrackingDataSend);
+  const eventTrackingData = {
+    block: {
+      componentName: 'top-stories',
+    },
+  };
+  const eventTrackingDataSend = path(['block'], eventTrackingData);
+  const viewRef = useViewTracker(eventTrackingDataSend);
 
-  //   const {
-  //     palette: { GREY_2 },
-  //   } = useTheme();
+  const {
+    palette: { GREY_2 },
+  } = useTheme();
 
   if (!content || isEmpty(content)) return null;
 
-  const title = pathOr('Latest', ['latestMediaTitle'], translations);
+  const title = pathOr('Top Stories', ['topStoriesTitle'], translations);
   const hasSingleContent = content.length === 1;
-  const LABEL_ID = 'latest-media-heading';
+  const LABEL_ID = 'top-stories-heading';
 
   const contentType = pathOr('', ['contentType'], content[0]);
   const assetUri = pathOr('', ['locators', 'assetUri'], content[0]);
   const uri = pathOr('', ['uri'], content[0]);
-  const ariaLabelledBy = 'Yes';
-  //   const ariaLabelledBy = generatePromoId({
-  //     sectionType: 'top-stories',
-  //     assetUri,
-  //     uri,
-  //     contentType,
-  //   });
+  const ariaLabelledBy = generatePromoId({
+    sectionType: 'top-stories',
+    assetUri,
+    uri,
+    contentType,
+  });
 
   return (
     <StyledTopStoriesSection
@@ -110,14 +93,13 @@ const latestMediaSection = ({ content }) => {
         <TopStoriesItem
           item={content[0]}
           ariaLabelledBy={ariaLabelledBy}
-          //   ref={viewRef}
-          //   eventTrackingData={eventTrackingData}
+          ref={viewRef}
+          eventTrackingData={eventTrackingData}
         />
       ) : (
         <StyledPromoList>
           {content.map((item, index) =>
-            // renderLatestMediaList(item, index, eventTrackingData, viewRef)
-            renderLatestMediaList(item, index),
+            renderTopStoriesList(item, index, eventTrackingData, viewRef),
           )}
         </StyledPromoList>
       )}
@@ -125,8 +107,8 @@ const latestMediaSection = ({ content }) => {
   );
 };
 
-latestMediaSection.propTypes = { content: arrayOf(shape(storyItem)) };
+TopStoriesSection.propTypes = { content: arrayOf(shape(storyItem)) };
 
-latestMediaSection.defaultProps = { content: [] };
+TopStoriesSection.defaultProps = { content: [] };
 
-export default latestMediaSection;
+export default TopStoriesSection;
