@@ -178,6 +178,7 @@ export interface Translations {
   };
   topStoriesTitle?: string;
   featuresAnalysisTitle?: string;
+  latestMediaTitle?: string;
 }
 
 export interface TranslationsError {
