@@ -4,9 +4,10 @@ import Promo from '#components/OptimoPromos';
 import { LatestMediaItemProp } from '../LatestMediaTypes';
 import { ServiceContext } from '../../../../../contexts/ServiceContext';
 import {
-  StyledTitle,
-  StyledTimestamp,
-  StyledTopStoriesWrapper,
+  StyledPromoContentWrapper,
+  StyledPromoMediaIndicator,
+  StyledPromoTitle,
+  StyledPromoWrapper,
 } from './index.styles';
 
 const LatestMediaItem = ({
@@ -21,21 +22,23 @@ const LatestMediaItem = ({
 
   return (
     <div>
-      <StyledTopStoriesWrapper ref={ref}>
+      <StyledPromoWrapper ref={ref}>
         <Promo
           to={item.link}
           ariaLabelledBy={ariaLabelledBy}
           mediaType={item.type}
           eventTrackingData={eventTrackingData}
         >
-          <Promo.ContentWrapper>
-            <StyledTitle as="h3" script={script}>
-              {/* <Promo.Link>{mediaType && <Promo.MediaIndicator />}</Promo.Link> */}
-            </StyledTitle>
-          </Promo.ContentWrapper>
-          <p>{item.description}</p>
+          <Promo.Link>
+            <StyledPromoContentWrapper>
+              {item.type && <StyledPromoMediaIndicator />}
+              <StyledPromoTitle as="h3" script={script}>
+                {item.title}
+              </StyledPromoTitle>
+            </StyledPromoContentWrapper>
+          </Promo.Link>
         </Promo>
-      </StyledTopStoriesWrapper>
+      </StyledPromoWrapper>
 
       <hr />
     </div>
