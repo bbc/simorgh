@@ -4,7 +4,7 @@ import { StaticRouter } from 'react-router-dom';
 import deepClone from 'ramda/src/clone';
 
 // test helpers
-import { render, waitFor } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import assocPath from 'ramda/src/assocPath';
 import fetchMock from 'fetch-mock';
 
@@ -542,28 +542,6 @@ describe('Story Page', () => {
   });
 
   it('should not render canonical ad bootstrap on amp', async () => {
-    const observers = new Map();
-    const observerSpy = jest
-      .spyOn(global, 'IntersectionObserver')
-      .mockImplementationOnce(cb => {
-        const item = {
-          callback: cb,
-          elements: new Set(),
-        };
-
-        const instance = {
-          observe: jest.fn(element => {
-            item.elements.add(element);
-          }),
-          disconnect: jest.fn(() => {
-            item.elements.clear();
-          }),
-        };
-
-        observers.set(instance, item);
-
-        return instance;
-      });
     const toggles = {
       ads: {
         enabled: true,
@@ -597,12 +575,7 @@ describe('Story Page', () => {
     );
 
     const adBootstrap = queryByTestId('adBootstrap');
-
-    await waitFor(() => {
-      expect(adBootstrap).not.toBeInTheDocument();
-      observers.clear();
-      observerSpy.mockRestore();
-    });
+    expect(adBootstrap).not.toBeInTheDocument();
   });
 
   it('should render the inline podcast promo component on russian pages with a paragraph of 940 characters and after 8th paragraph', async () => {
