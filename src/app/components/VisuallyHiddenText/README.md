@@ -1,4 +1,4 @@
-# visually-hidden-text - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Fcomponents%2Fpsammead-visually-hidden-text%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Fcomponents%2Fpsammead-visually-hidden-text%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/components/psammead-visually-hidden-text)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-visually-hidden-text) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/components/psammead-visually-hidden-text)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-visually-hidden-text&type=peer) [![Storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg?sanitize=true)](https://bbc.github.io/psammead/?path=/story/visuallyhiddentext--default) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/#legacy/psammead-visually-hidden-text/src.svg)](https://www.npmjs.com/package/#legacy/psammead-visually-hidden-text/src) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md)
+# visually-hidden-text - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/simorgh/badge.svg?targetFile=packages%2Fcomponents%2Fsimorgh-visually-hidden-text%2Fpackage.json)](https://snyk.io/test/github/bbc/simorgh?targetFile=packages%2Fcomponents%2Fsimorgh-visually-hidden-text%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/simorgh.svg?path=packages/components/simorgh-visually-hidden-text)](https://david-dm.org/bbc/simorgh?path=packages/components/simorgh-visually-hidden-text) [![peerDependencies Status](https://david-dm.org/bbc/simorgh/peer-status.svg?path=packages/components/simorgh-visually-hidden-text)](https://david-dm.org/bbc/simorgh?path=packages/components/simorgh-visually-hidden-text&type=peer) [![Storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg?sanitize=true)](https://bbc.github.io/simorgh/?path=/story/visuallyhiddentext--default) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/simorgh/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/#legacy/simorgh-visually-hidden-text/src.svg)](https://www.npmjs.com/package/#legacy/simorgh-visually-hidden-text/src) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bbc/simorgh/blob/latest/CONTRIBUTING.md)
 
 ## Description
 
@@ -6,7 +6,7 @@ Adds non-visible text to the page, to be utilised by screen-readers and other as
 
 ## Installation
 
-`npm install #legacy/psammead-visually-hidden-text/src`
+`npm install #app/components/simorgh-visually-hidden-text/src`
 
 ## Props
 
@@ -46,7 +46,7 @@ Similarly, when adding hidden text that will occur partway through an article, a
 
 Simorgh is completely open source. We are grateful for any contributions, whether they be new components, bug fixes or general improvements. Please see our primary contributing guide which can be found at [the root of the Simorgh respository](https://github.com/bbc/simorgh/blob/latest/CONTRIBUTING.md).
 
-### [Code of Conduct](https://github.com/bbc/psammead/blob/latest/CODE_OF_CONDUCT.md)
+### [Code of Conduct](https://github.com/bbc/simorgh/blob/latest/CODE_OF_CONDUCT.md)
 
 We welcome feedback and help on this work. By participating in this project, you agree to abide by the [code of conduct](https://github.com/bbc/simorgh/blob/latest/CODE_OF_CONDUCT.md). Please take a moment to read it.
 
