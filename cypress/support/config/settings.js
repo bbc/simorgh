@@ -9022,15 +9022,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/ukrainian/articles/c8zv0eed9gko'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/ukrainian/articles/cp4l2mrejvdo'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/ukrainian/articles/cp4l2mrejvdo'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
