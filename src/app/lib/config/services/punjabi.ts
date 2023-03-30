@@ -247,6 +247,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'ਤਾਜ਼ਾ ਘਟਨਾਕ੍ਰਮ',
       featuresAnalysisTitle: 'ਦ੍ਰਿਸ਼ਟੀਕੋਣ',
+      latestMediaTitle: 'ਬਿਲਕੁਲ ਨਵਾਂ',
     },
     mostRead: {
       header: 'ਸਭ ਤੋਂ ਵੱਧ ਪੜ੍ਹਿਆ ਗਿਆ',
