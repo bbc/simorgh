@@ -1,9 +1,3 @@
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_GHOST,
-  C_POSTBOX_30,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
 import noAscendersOrDescenders from '../../../components/ThemeProvider/fontScripts/noAscOrDesc';
 import '#psammead/moment-timezone-include/tz/GMT';
 import 'moment/locale/zh-cn';
@@ -28,7 +22,6 @@ const baseServiceConfig = {
   service: 'zhongwen' as Services,
   serviceName: 'News 中文',
   languageName: 'Chinese',
-  themeColor: `${C_POSTBOX}`,
   twitterCreator: '@bbcchinese',
   twitterSite: '@bbcchinese',
   isTrustProjectParticipant: true,
@@ -54,13 +47,6 @@ const baseServiceConfig = {
       text: '分集',
       href: 'https://www.bbc.com/zhongwen/trad/podcasts/p02pc9xp',
     },
-  },
-  theming: {
-    brandBackgroundColour: `${C_POSTBOX}`,
-    brandLogoColour: `${C_WHITE}`,
-    brandForegroundColour: `${C_GHOST}`,
-    brandHighlightColour: `${C_WHITE}`,
-    brandBorderColour: `${C_POSTBOX_30}`,
   },
   showAdPlaceholder: true,
   showRelatedTopics: true,
@@ -328,6 +314,7 @@ export const service: ZhongwenConfig = {
         duration: '节目全长',
         recentEpisodes: '存档节目',
         podcastExternalLinks: 'This podcast is also available on',
+        download: '下载本集节目',
       },
       socialEmbed: {
         caption: {
@@ -348,7 +335,7 @@ export const service: ZhongwenConfig = {
         },
         consentBanner: {
           heading: `允许[social_media_site]内容`,
-          body: `此文包含[social_media_site}提供的内容。由于这些内容会使用曲奇或小甜饼等科技，我们在加载任何内容前会寻求您的认可。  您可能在给与许可前愿意阅读[social_media_site][link]小甜饼政策[/link]和[link]隐私政策[/link]。 希望阅读上述内容，请点击“接受并继续”。`,
+          body: `此文包含[social_media_site]提供的内容。由于这些内容会使用曲奇或小甜饼等科技，我们在加载任何内容前会寻求您的认可。  您可能在给与许可前愿意阅读[social_media_site][link]小甜饼政策[/link]和[link]隐私政策[/link]。 希望阅读上述内容，请点击“接受并继续”。`,
         },
       },
       include: {
@@ -358,6 +345,7 @@ export const service: ZhongwenConfig = {
       },
       topStoriesTitle: '头条新闻',
       featuresAnalysisTitle: '特别推荐',
+      latestMediaTitle: '最新',
     },
   },
   trad: {
@@ -619,6 +607,7 @@ export const service: ZhongwenConfig = {
         duration: '節目全長',
         recentEpisodes: '存档节目',
         podcastExternalLinks: 'This podcast is also available on',
+        download: '下載本集節目',
       },
       socialEmbed: {
         caption: {
@@ -639,7 +628,7 @@ export const service: ZhongwenConfig = {
         },
         consentBanner: {
           heading: `允許[social_media_site]内容`,
-          body: `此文包含[social_media_site}提供的内容。由於這些内容會使用曲奇或小甜餅等科技，我們在加載任何内容前會尋求您的認可。  您可能在給予許可前希望閲讀[social_media_site][link]曲奇政策[/link]和[link]隱私政策[/link]。希望閲讀上述内容，請點擊“接受並繼續”。`,
+          body: `此文包含[social_media_site]提供的内容。由於這些内容會使用曲奇或小甜餅等科技，我們在加載任何内容前會尋求您的認可。  您可能在給予許可前希望閲讀[social_media_site][link]曲奇政策[/link]和[link]隱私政策[/link]。希望閲讀上述内容，請點擊“接受並繼續”。`,
         },
       },
       include: {
@@ -649,6 +638,7 @@ export const service: ZhongwenConfig = {
       },
       topStoriesTitle: '頭條新聞',
       featuresAnalysisTitle: '特別推薦',
+      latestMediaTitle: '最新',
     },
   },
 };

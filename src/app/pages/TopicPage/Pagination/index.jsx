@@ -8,13 +8,6 @@ import {
 } from '#psammead/psammead-styles/src/font-styles';
 
 import {
-  C_GREY_5,
-  C_GREY_10,
-  C_GREY_6,
-  C_POSTBOX,
-} from '#psammead/psammead-styles/src/colours';
-
-import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
@@ -64,7 +57,7 @@ const StyledUnorderedList = styled.ul`
 
 const TextSummary = styled.div`
   ${({ service }) => getSansRegular(service)};
-  color: ${C_GREY_6};
+  color: ${props => props.theme.palette.GREY_6};
   display: inline-block;
   margin: 0 1.375rem;
   b {
@@ -96,7 +89,7 @@ const Block = styled.li`
 `;
 
 const EllipsisBlock = styled(Block)`
-  color: ${C_GREY_5};
+  color: ${props => props.theme.palette.GREY_5};
   svg {
     @media screen and (forced-colors: active) {
       fill: canvasText;
@@ -106,29 +99,30 @@ const EllipsisBlock = styled(Block)`
 
 const A = styled.a`
   display: block;
-  color: ${C_GREY_10};
+  color: ${props => props.theme.palette.GREY_10};
   text-decoration: none;
   height: 100%;
   width: 100%;
 
   ${({ isActive }) =>
-    isActive
-      ? `
+    props =>
+      isActive
+        ? `
         padding: 0.0625rem 0.625rem 0 0.625rem;
-        border-bottom: 0.25rem ${C_POSTBOX} solid;
+        border-bottom: 0.25rem ${props.theme.palette.POSTBOX} solid;
         &:hover,
         &:focus {
          padding: 0;
-         border: 0.0625rem ${C_POSTBOX} solid;
+         border: 0.0625rem ${props.theme.palette.POSTBOX} solid;
          border-bottom-width: 0.25rem;
        }
       `
-      : `
+        : `
        padding: 0.0625rem;
        &:hover,
        &:focus {
          padding: 0;
-         border: 0.0625rem ${C_POSTBOX} solid;
+         border: 0.0625rem ${props.theme.palette.POSTBOX} solid;
        }`}
 `;
 
@@ -136,6 +130,7 @@ const A = styled.a`
 const LinkComponent = ({ children, pageNumber, isActive, ...rest }) => (
   <A
     href={`?page=${pageNumber}`}
+    className="focusIndicatorOutlineBlack"
     {...(isActive && { isActive: true, 'aria-current': 'page' })}
     {...rest}
   >

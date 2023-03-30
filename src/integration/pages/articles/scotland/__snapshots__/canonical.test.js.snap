@@ -2,7 +2,7 @@
 
 exports[`Canonical Articles A11y I can see the skip to content link 1`] = `"Skip to content"`;
 
-exports[`Canonical Articles Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598274&amp;s2=79&amp;p=scotland.articles.czwj5l0n210o.page&amp;x1=[urn%3Abbc%3Aoptimo%3Aasset%3Aczwj5l0n210o]&amp;x2=[responsive]&amp;x3=[scotland]&amp;x4=[en-gb]&amp;x7=[article]&amp;x8=[simorgh-nojs]&amp;x9=[This%2Bis%2Bthe%2BSEO%2Bheadline%2Bof%2Bthis%2Btest%2Barticle]&amp;x11=[2019-09-13T12%3A36%3A29.124Z]&amp;x12=[2019-09-13T12%3A36%3A29.124Z]\\"/>"`;
+exports[`Canonical Articles Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598274&amp;s2=79&amp;p=scotland.articles.czwj5l0n210o.page&amp;x1=[urn%3Abbc%3Aoptimo%3Aasset%3Aczwj5l0n210o]&amp;x2=[responsive]&amp;x3=[scotland]&amp;x4=[en-gb]&amp;x7=[article]&amp;x8=[simorgh-nojs]&amp;x9=[This%2520is%2520the%2520SEO%2520headline%2520of%2520this%2520test%2520article]&amp;x11=[2019-09-13T12%3A36%3A29.124Z]&amp;x12=[2019-09-13T12%3A36%3A29.124Z]\\"/>"`;
 
 exports[`Canonical Articles Footer Anchors should match text and url 1`] = `
 Object {
@@ -78,7 +78,7 @@ exports[`Canonical Articles Image Caption should match text 1`] = `"Image captio
 exports[`Canonical Articles Image should match snapshot 1`] = `
 <img
   alt="Map of France showing Paris and Cognac"
-  class="e3vrtyk0 bbc-15pa1ki-StyledImg-StyledImage e1mo64ex0"
+  class="e3vrtyk0 bbc-rb7xa0 e1mo64ex0"
   height="351"
   sizes="(min-width: 1008px) 760px, 100vw"
   src="https://ichef.bbci.co.uk/news/640/cpsdevpb/feb2/test/36ddabc0-d622-11e9-851e-f35866034a7a.jpg"
@@ -174,7 +174,7 @@ Object {
   "@context": "http://schema.org",
   "@graph": Array [
     Object {
-      "@type": "Article",
+      "@type": "NewsArticle",
       "author": Object {
         "@type": "Organization",
         "logo": Object {

@@ -4,6 +4,7 @@ import {
   ThemeProvider as EmotionThemeProvider,
   Theme,
 } from '@emotion/react';
+import focusIndicator from './focusIndicator';
 import { RequestContext } from '../../contexts/RequestContext';
 
 import {
@@ -262,11 +263,12 @@ const withThemeProvider = ({
   };
 
   const ThemeProvider: React.FC<Props> = ({ children }) => {
-    const { isAmp } = useContext(RequestContext) as { isAmp: boolean };
+    const { isAmp } = useContext(RequestContext);
     return (
       <EmotionThemeProvider theme={theme}>
         {children}
         {isAmp && <Global styles={fontFaces} />}
+        <Global styles={focusIndicator} />
       </EmotionThemeProvider>
     );
   };

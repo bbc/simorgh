@@ -13,6 +13,7 @@ const logCodes = {
   DATA_FETCH_ERROR_SECONDARY_COLUMN: 'data_fetch_error_secondary_column',
   DATA_NOT_FOUND: 'data_response_404',
   DATA_REQUEST_RECEIVED: 'data_request_received',
+  DATA_RESPONSE_FROM_CACHE: 'data_response_from_cache',
   BFF_FETCH_ERROR: 'bff_fetch_error',
 
   // Files
@@ -86,6 +87,9 @@ const logCodes = {
 
   // Recommendations
   RECOMMENDATIONS_MISSING_DATA: 'recommendations_missing_data',
+
+  // Logging
+  ATI_LOGGING_ERROR: 'ati_logging_error',
 };
 
 module.exports = logCodes;

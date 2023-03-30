@@ -123,6 +123,17 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
   display: none;
 }
 
+.emotion-13:focus-visible::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF inset;
+  border: 0.1875rem solid #000000;
+}
+
 .emotion-15 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -188,7 +199,7 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
           />
         </div>
         <button
-          class="emotion-12 emotion-13 emotion-14"
+          class="focusIndicatorRemove emotion-12 emotion-13 emotion-14"
         >
           <span
             class="emotion-15 emotion-16"

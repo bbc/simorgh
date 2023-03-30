@@ -53,6 +53,7 @@ exports[`ProgramCard should render correctly for live 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-6:before {
@@ -109,7 +110,7 @@ exports[`ProgramCard should render correctly for live 1`] = `
 
 .emotion-14 {
   color: #3F3F42;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0 0 0;
   display: inline-block;
   width: 100%;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -140,6 +141,7 @@ exports[`ProgramCard should render correctly for live 1`] = `
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
+  padding-top: 0.5rem;
   padding-bottom: 1rem;
   margin: 0;
 }
@@ -230,7 +232,7 @@ exports[`ProgramCard should render correctly for live 1`] = `
       >
         <a
           aria-labelledby="scheduleItem-1"
-          class="emotion-6 emotion-7"
+          class="focusIndicatorDisplayBlock emotion-6 emotion-7"
           href="/news/articles/cn7k01xp8kxo"
         >
           <span
@@ -401,7 +403,7 @@ exports[`ProgramCard should render correctly for next 1`] = `
 
 .emotion-12 {
   color: #6E6E73;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0 0 0;
   display: inline-block;
   width: 100%;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -432,6 +434,7 @@ exports[`ProgramCard should render correctly for next 1`] = `
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
+  padding-top: 0.5rem;
   padding-bottom: 1rem;
   margin: 0;
 }
@@ -651,6 +654,7 @@ exports[`ProgramCard should render correctly for onDemand 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-6:before {
@@ -698,7 +702,7 @@ exports[`ProgramCard should render correctly for onDemand 1`] = `
 
 .emotion-12 {
   color: #3F3F42;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0 0 0;
   display: inline-block;
   width: 100%;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -729,6 +733,7 @@ exports[`ProgramCard should render correctly for onDemand 1`] = `
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
+  padding-top: 0.5rem;
   padding-bottom: 1rem;
   margin: 0;
 }
@@ -819,7 +824,7 @@ exports[`ProgramCard should render correctly for onDemand 1`] = `
       >
         <a
           aria-labelledby="scheduleItem-1"
-          class="emotion-6 emotion-7"
+          class="focusIndicatorDisplayBlock emotion-6 emotion-7"
           href="/news/articles/cn7k01xp8kxo"
         >
           <span
@@ -947,6 +952,7 @@ exports[`ProgramCard should render correctly in RTL 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-6:before {
@@ -994,7 +1000,7 @@ exports[`ProgramCard should render correctly in RTL 1`] = `
 
 .emotion-12 {
   color: #3F3F42;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0 0 0;
   display: inline-block;
   width: 100%;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -1025,6 +1031,7 @@ exports[`ProgramCard should render correctly in RTL 1`] = `
   font-size: 0.875rem;
   line-height: 1.25rem;
   color: #6E6E73;
+  padding-top: 0.5rem;
   padding-bottom: 1rem;
   margin: 0;
 }
@@ -1115,7 +1122,7 @@ exports[`ProgramCard should render correctly in RTL 1`] = `
       >
         <a
           aria-labelledby="scheduleItem-1"
-          class="emotion-6 emotion-7"
+          class="focusIndicatorDisplayBlock emotion-6 emotion-7"
           href="/arabic/articles/c1er5mjnznzo"
         >
           <span
@@ -1243,6 +1250,7 @@ exports[`ProgramCard should render correctly without summary 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-6:before {
@@ -1299,7 +1307,7 @@ exports[`ProgramCard should render correctly without summary 1`] = `
 
 .emotion-14 {
   color: #3F3F42;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0 0 0;
   display: inline-block;
   width: 100%;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -1395,7 +1403,7 @@ exports[`ProgramCard should render correctly without summary 1`] = `
       >
         <a
           aria-labelledby="scheduleItem-1"
-          class="emotion-6 emotion-7"
+          class="focusIndicatorDisplayBlock emotion-6 emotion-7"
           href="/news/articles/cn7k01xp8kxo"
         >
           <span

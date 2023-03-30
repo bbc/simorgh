@@ -2,7 +2,7 @@
 
 exports[`Canonical Articles A11y I can see the skip to content link 1`] = `"مشاهده محتوا"`;
 
-exports[`Canonical Articles Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=69&amp;p=persian.articles.c4vlle3q337o.page&amp;x1=[urn%3Abbc%3Aoptimo%3Aasset%3Ac4vlle3q337o]&amp;x2=[responsive]&amp;x3=[news-persian]&amp;x4=[fa]&amp;x7=[article]&amp;x8=[simorgh-nojs]&amp;x9=[%D9%BE%D9%87%D9%BE%D8%A7%D8%AF%DB%8C%2B%DA%A9%D9%87%2B%D8%A8%D8%B1%D8%A7%DB%8C%D8%AA%D8%A7%D9%86%2B%D9%82%D9%87%D9%88%D9%87%2B%D9%85%DB%8C%E2%80%8C%D8%A2%D9%88%D8%B1%D8%AF]&amp;x11=[2019-05-28T13%3A42%3A44.996Z]&amp;x12=[2019-07-23T15%3A47%3A11.893Z]\\"/>"`;
+exports[`Canonical Articles Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=69&amp;p=persian.articles.c4vlle3q337o.page&amp;x1=[urn%3Abbc%3Aoptimo%3Aasset%3Ac4vlle3q337o]&amp;x2=[responsive]&amp;x3=[news-persian]&amp;x4=[fa]&amp;x7=[article]&amp;x8=[simorgh-nojs]&amp;x9=[%D9%BE%D9%87%D9%BE%D8%A7%D8%AF%DB%8C%2520%DA%A9%D9%87%2520%D8%A8%D8%B1%D8%A7%DB%8C%D8%AA%D8%A7%D9%86%2520%D9%82%D9%87%D9%88%D9%87%2520%D9%85%DB%8C%E2%80%8C%D8%A2%D9%88%D8%B1%D8%AF]&amp;x11=[2019-05-28T13%3A42%3A44.996Z]&amp;x12=[2019-07-23T15%3A47%3A11.893Z]\\"/>"`;
 
 exports[`Canonical Articles Footer Anchors should match text and url 1`] = `
 Object {
@@ -176,7 +176,7 @@ exports[`Canonical Articles Image Caption should match text 1`] = `"توضیح �
 exports[`Canonical Articles Image should match snapshot 1`] = `
 <img
   alt="قهوه"
-  class="e3vrtyk0 bbc-15pa1ki-StyledImg-StyledImage e1mo64ex0"
+  class="e3vrtyk0 bbc-rb7xa0 e1mo64ex0"
   height="360"
   sizes="(min-width: 1008px) 760px, 100vw"
   src="https://ichef.bbci.co.uk/news/640/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg"
@@ -272,7 +272,7 @@ Object {
   "@context": "http://schema.org",
   "@graph": Array [
     Object {
-      "@type": "Article",
+      "@type": "NewsArticle",
       "author": Object {
         "@type": "NewsMediaOrganization",
         "logo": Object {

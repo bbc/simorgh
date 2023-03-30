@@ -2,7 +2,7 @@
 
 exports[`Canonical Media Asset Page A11y I can see the skip to content link 1`] = `"Waka go wetin de inside"`;
 
-exports[`Canonical Media Asset Page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=70&amp;p=pidgin.media_asset.23248703.page&amp;x2=[responsive]&amp;x3=[news-pidgin]&amp;x4=[pcm]&amp;x7=[article-media-asset]&amp;x8=[simorgh-nojs]&amp;x9=[Simorgh%3A%2BMedia%2BPod%2BBuild%2BFirst%2BCPS%2BMedia%2BAsset%2BPage%2Bin%2BSimorgh%2B%26%2B%3C%2B%3E%2B-%2BBBC%2BNews%2BPidgin]&amp;x11=[2019-09-13T15%3A31%3A44.000Z]&amp;x12=[2019-11-20T12%3A24%3A25.000Z]&amp;x16=[Inspire%20me~Give%20me%20perspective~Keep%20me%20on%20trend]&amp;x17=[Opinion]\\"/>"`;
+exports[`Canonical Media Asset Page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=70&amp;p=pidgin.media_asset.23248703.page&amp;x2=[responsive]&amp;x3=[news-pidgin]&amp;x4=[pcm]&amp;x7=[article-media-asset]&amp;x8=[simorgh-nojs]&amp;x9=[Simorgh%3A%2520Media%2520Pod%2520Build%2520First%2520CPS%2520Media%2520Asset%2520Page%2520in%2520Simorgh%2520%26%2520%3C%2520%3E%2520-%2520BBC%2520News%2520Pidgin]&amp;x11=[2019-09-13T15%3A31%3A44.000Z]&amp;x12=[2019-11-20T12%3A24%3A25.000Z]&amp;x16=[Inspire%20me~Give%20me%20perspective~Keep%20me%20on%20trend]&amp;x17=[Opinion]\\"/>"`;
 
 exports[`Canonical Media Asset Page Footer Anchors should match text and url 1`] = `
 Object {
@@ -104,7 +104,7 @@ Object {
 exports[`Canonical Media Asset Page Header Navigation link should match text and url 5`] = `
 Object {
   "text": "Video",
-  "url": "/pidgin/media/video",
+  "url": "/pidgin/topics/c3l19z3k1ert",
 }
 `;
 

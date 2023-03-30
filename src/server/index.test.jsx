@@ -16,6 +16,7 @@ import routes from '../app/routes';
 import * as renderDocument from './Document';
 import sendCustomMetrics from './utilities/customMetrics';
 import { NON_200_RESPONSE } from './utilities/customMetrics/metrics.const';
+import { getMvtVaryHeaders } from './utilities/mvtHeader';
 
 // mimic the logic in `src/index.js` which imports the `server/index.jsx`
 dotenv.config({ path: './envConfig/local.env' });
@@ -96,6 +97,7 @@ const mockRouteProps = ({
 };
 
 jest.mock('./utilities/customMetrics');
+jest.mock('./utilities/mvtHeader');
 
 const renderDocumentSpy = jest.spyOn(renderDocument, 'default');
 
@@ -1383,6 +1385,17 @@ describe('Server HTTP Headers - Status Endpoint', () => {
 });
 
 describe('Server HTTP Headers - Page Endpoints', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
+  const successDataResponse = {
+    isAmp: false,
+    data: { some: 'data' },
+    service: 'someService',
+    status: 200,
+  };
+
   it(`should set a cache-control header`, async () => {
     const { header } = await makeRequest('/mundo');
 
@@ -1395,6 +1408,40 @@ describe('Server HTTP Headers - Page Endpoints', () => {
     const { header } = await makeRequest('/mundo');
 
     expect(header['referrer-policy']).toBe('no-referrer-when-downgrade');
+  });
+
+  it(`should add mvt experiment header names to vary if they are enabled`, async () => {
+    mockRouteProps({
+      dataResponse: successDataResponse,
+    });
+    getMvtVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
+
+    const { header } = await makeRequest('/mundo/c0000000001o');
+
+    expect(header.vary).toBe('mvt-simorgh_dark_mode, Accept-Encoding');
+  });
+
+  it(`should not add mvt experiment header names to vary if they are not enabled`, async () => {
+    mockRouteProps({
+      dataResponse: successDataResponse,
+    });
+    getMvtVaryHeaders.mockReturnValue('');
+
+    const { header } = await makeRequest('/mundo/articles/c0000000001o');
+
+    expect(header.vary).toBe('Accept-Encoding');
+  });
+
+  it(`should not add mvt experiment header names to vary if on AMP`, async () => {
+    mockRouteProps({
+      dataResponse: successDataResponse,
+      isAmp: true,
+    });
+    getMvtVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
+
+    const { header } = await makeRequest('/mundo/articles/c0000000001o');
+
+    expect(header.vary).toBe('Accept-Encoding');
   });
 });
 

@@ -4,6 +4,7 @@ import { text } from '@storybook/addon-knobs';
 import styled from '@emotion/styled';
 import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import MediaMessageComponent from '.';
+import ThemeProvider from '../../../../components/ThemeProvider';
 
 const StyledMessageContainer = styled.div`
   padding-top: 56.25%;
@@ -12,7 +13,7 @@ const StyledMessageContainer = styled.div`
 `;
 
 export default {
-  title: 'Components/Media Message',
+  title: 'Components/Media Message/Media Message',
   component: MediaMessageComponent,
   parameters: {
     chromatic: {
@@ -26,8 +27,10 @@ export default {
 export const MediaMessage = ({ service }) => {
   const id = text('Message', 'Контент більше не доступний');
   return (
-    <StyledMessageContainer>
-      <MediaMessageComponent service={service} message={id} />
-    </StyledMessageContainer>
+    <ThemeProvider service={service}>
+      <StyledMessageContainer>
+        <MediaMessageComponent service={service} message={id} />
+      </StyledMessageContainer>
+    </ThemeProvider>
   );
 };

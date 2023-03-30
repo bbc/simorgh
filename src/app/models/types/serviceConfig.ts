@@ -59,7 +59,6 @@ export type ServiceConfig = {
   altCalendar?: {
     formatDate: (gregorianMoment: unknown) => string | null;
   };
-  themeColor: string;
   twitterCreator: string;
   twitterSite: string;
   noBylinesPolicy?: string | null;
@@ -71,13 +70,6 @@ export type ServiceConfig = {
   frontPageTitle: string;
   passportHomes?: string[];
   iTunesAppId?: number;
-  theming: {
-    brandBackgroundColour: string;
-    brandLogoColour: string;
-    brandForegroundColour: string;
-    brandHighlightColour: string;
-    brandBorderColour: string;
-  };
   showAdPlaceholder: boolean;
   showRelatedTopics: boolean;
   podcastPromo?: PodcastPromo;

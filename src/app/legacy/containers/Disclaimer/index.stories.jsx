@@ -6,6 +6,7 @@ import pathOr from 'ramda/src/pathOr';
 
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import DisclaimerComponent from '.';
+import ThemeProvider from '../../../components/ThemeProvider';
 
 const DISCLAIMER_FIXTURE = {
   news: {
@@ -57,24 +58,26 @@ const Component = ({ service }) => {
     DISCLAIMER_FIXTURE,
   );
   return (
-    <ToggleContextProvider
-      toggles={{
-        disclaimer: {
-          enabled: true,
-        },
-      }}
-    >
-      <ServiceContext.Provider
-        value={{ service, disclaimer, externalLinkText }}
+    <ThemeProvider service={service}>
+      <ToggleContextProvider
+        toggles={{
+          disclaimer: {
+            enabled: true,
+          },
+        }}
       >
-        <DisclaimerComponent />
-      </ServiceContext.Provider>
-    </ToggleContextProvider>
+        <ServiceContext.Provider
+          value={{ service, disclaimer, externalLinkText }}
+        >
+          <DisclaimerComponent />
+        </ServiceContext.Provider>
+      </ToggleContextProvider>
+    </ThemeProvider>
   );
 };
 
 export default {
-  title: 'Containers/Disclaimer',
+  title: 'Containers/Disclaimer/Disclaimer',
   Component,
   decorators: [withKnobs, withServicesKnob({ defaultService: 'russian' })],
   parameters: { chromatic: { disable: true } },

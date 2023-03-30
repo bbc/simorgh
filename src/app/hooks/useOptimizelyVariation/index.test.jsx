@@ -2,8 +2,9 @@ import * as optimizelyReactSdk from '@optimizely/react-sdk';
 import { renderHook } from '@testing-library/react-hooks';
 import useOptimizelyVariation from '.';
 
-describe('useOptimizelyVariation', () => {
+describe('useOptimizelyVariation client side', () => {
   const useDecisionSpy = jest.spyOn(optimizelyReactSdk, 'useDecision');
+  const isClientSide = true;
 
   afterEach(() => {
     jest.clearAllMocks();
@@ -13,7 +14,7 @@ describe('useOptimizelyVariation', () => {
     useDecisionSpy.mockReturnValue([{ variationKey: 'control' }, true, false]);
 
     const { result } = renderHook(() =>
-      useOptimizelyVariation('correct_experiment_id'),
+      useOptimizelyVariation('correct_experiment_id', {}, isClientSide),
     );
 
     expect(result.current).toEqual('control');
@@ -23,7 +24,7 @@ describe('useOptimizelyVariation', () => {
     useDecisionSpy.mockReturnValue([{ variationKey: null }, false, false]);
 
     const { result } = renderHook(() =>
-      useOptimizelyVariation('correct_experiment_id'),
+      useOptimizelyVariation('correct_experiment_id', {}, isClientSide),
     );
 
     expect(result.current).toEqual(null);
@@ -33,7 +34,7 @@ describe('useOptimizelyVariation', () => {
     useDecisionSpy.mockReturnValue([{ variationKey: null }, true, true]);
 
     const { result } = renderHook(() =>
-      useOptimizelyVariation('correct_experiment_id'),
+      useOptimizelyVariation('correct_experiment_id', {}, isClientSide),
     );
 
     expect(result.current).toEqual(null);
@@ -43,7 +44,7 @@ describe('useOptimizelyVariation', () => {
     useDecisionSpy.mockReturnValue([{ variationKey: null }, true, false]);
 
     const { result } = renderHook(() =>
-      useOptimizelyVariation('wrong_experiment_id'),
+      useOptimizelyVariation('wrong_experiment_id', {}, isClientSide),
     );
 
     expect(result.current).toEqual(null);
@@ -52,8 +53,30 @@ describe('useOptimizelyVariation', () => {
   it('should return a variation of null when the experiment id is null', () => {
     useDecisionSpy.mockReturnValue([{ variationKey: null }, true, false]);
 
-    const { result } = renderHook(() => useOptimizelyVariation(null));
+    const { result } = renderHook(() =>
+      useOptimizelyVariation(null, {}, isClientSide),
+    );
 
     expect(result.current).toEqual(null);
+  });
+});
+
+describe('useOptimizelyVariation server side', () => {
+  const useDecisionSpy = jest.spyOn(optimizelyReactSdk, 'useDecision');
+  const isClientSide = false;
+
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
+  it('should not use useDecision hook when client side optimizely is disabled', () => {
+    useDecisionSpy.mockReturnValue([{ variationKey: 'control' }, true, false]);
+
+    const { result } = renderHook(() =>
+      useOptimizelyVariation('correct_experiment_id', {}, isClientSide),
+    );
+
+    expect(result.current).toEqual(true);
+    expect(useDecisionSpy).toBeCalledTimes(0);
   });
 });

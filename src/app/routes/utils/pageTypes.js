@@ -1,4 +1,5 @@
 export const ARTICLE_PAGE = 'article';
+export const MEDIA_ARTICLE_PAGE = 'mediaArticle';
 export const FRONT_PAGE = 'frontPage';
 export const MEDIA_PAGE = 'media';
 export const MOST_READ_PAGE = 'mostRead';
@@ -12,3 +13,4 @@ export const PHOTO_GALLERY_PAGE = 'PGL';
 export const CORRESPONDENT_STORY_PAGE = 'CSP';
 export const TOPIC_PAGE = 'TOPIC';
 export const LIVE_PAGE = 'LIVE';
+export const HOME_PAGE = 'home';

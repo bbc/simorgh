@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "66ba7a4f",
+              "id": "defec402",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "f3214603",
+                    "id": "9aeb95c1",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "965464ad",
+                          "id": "ca966220",
                           "type": "paragraph",
                           "model": {
                             "text": "Single Byline (all)",
                             "blocks": [
                               {
-                                "id": "8a53e92b",
+                                "id": "5c1868f7",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Single Byline (all)",
@@ -56,33 +56,33 @@
               ]
             },
             {
-              "id": "3064af08",
+              "id": "bfd8e2e1",
               "type": "byline",
               "model": {
                 "blocks": [
                   {
-                    "id": "b54a5e68",
+                    "id": "2beaca30",
                     "type": "contributor",
                     "model": {
                       "blocks": [
                         {
-                          "id": "6e11b13a",
+                          "id": "a28c6568",
                           "type": "name",
                           "model": {
                             "blocks": [
                               {
-                                "id": "59a90076",
+                                "id": "8596750f",
                                 "type": "text",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "36a6f187",
+                                      "id": "36373147",
                                       "type": "paragraph",
                                       "model": {
                                         "text": "Single Byline (all values)",
                                         "blocks": [
                                           {
-                                            "id": "22087a93",
+                                            "id": "eaf53770",
                                             "type": "fragment",
                                             "model": {
                                               "text": "Single Byline (all values)",
@@ -125,23 +125,23 @@
                           ]
                         },
                         {
-                          "id": "f5c3d631",
+                          "id": "15337ab0",
                           "type": "role",
                           "model": {
                             "blocks": [
                               {
-                                "id": "accdd252",
+                                "id": "10db259d",
                                 "type": "text",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "82ef2ff2",
+                                      "id": "a60f333e",
                                       "type": "paragraph",
                                       "model": {
                                         "text": "Role Test value",
                                         "blocks": [
                                           {
-                                            "id": "70f7dbfa",
+                                            "id": "bfe2d31b",
                                             "type": "fragment",
                                             "model": {
                                               "text": "Role Test value",
@@ -184,30 +184,30 @@
                           ]
                         },
                         {
-                          "id": "b7554df6",
+                          "id": "5de22cb8",
                           "type": "link",
                           "model": {
                             "blocks": [
                               {
-                                "id": "26770a02",
+                                "id": "581d79ef",
                                 "type": "text",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "b882546e",
+                                      "id": "9cbc9e90",
                                       "type": "paragraph",
                                       "model": {
                                         "text": "handle",
                                         "blocks": [
                                           {
-                                            "id": "1e46a64b",
+                                            "id": "721abd06",
                                             "type": "urlLink",
                                             "model": {
                                               "text": "handle",
                                               "locator": "https://twitter.com/handle",
                                               "blocks": [
                                                 {
-                                                  "id": "98e45e17",
+                                                  "id": "3f631605",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "handle",
@@ -263,23 +263,23 @@
                           ]
                         },
                         {
-                          "id": "0a6e2cf6",
+                          "id": "afef15cf",
                           "type": "location",
                           "model": {
                             "blocks": [
                               {
-                                "id": "8306b896",
+                                "id": "1809cb9b",
                                 "type": "text",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "e726ea0d",
+                                      "id": "5cb4212b",
                                       "type": "paragraph",
                                       "model": {
                                         "text": "London",
                                         "blocks": [
                                           {
-                                            "id": "51877d2f",
+                                            "id": "862c9c35",
                                             "type": "fragment",
                                             "model": {
                                               "text": "London",
@@ -335,7 +335,7 @@
               ]
             },
             {
-              "id": "c51a9e7b",
+              "id": "911c1bf2",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1657276403250,
@@ -346,18 +346,18 @@
               ]
             },
             {
-              "id": "0aea60dc",
+              "id": "0f3fb820",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "6ac81c9e",
+                    "id": "138bc41d",
                     "type": "paragraph",
                     "model": {
                       "text": "Byline with all values set ",
                       "blocks": [
                         {
-                          "id": "00f5811d",
+                          "id": "d33182a8",
                           "type": "fragment",
                           "model": {
                             "text": "Byline with all values set ",
@@ -383,11 +383,21 @@
               ]
             },
             {
-              "id": "0ae06c75",
+              "id": "b5c01706",
               "type": "mpu",
               "model": {},
               "position": [
                 5
+              ]
+            },
+            {
+              "id": "0a376752",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                6
               ]
             }
           ]
@@ -396,14 +406,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:c1j5mz19jdko",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c1j5mz19jdko"
+          "optimoUrn": "urn:bbc:optimo:asset:c1j5mz19jdko",
+          "canonicalUrl": "https://www.bbc.com/pidgin/articles/c1j5mz19jdko"
         },
         "type": "article",
         "createdBy": "Pidgin",
         "language": "pcm",
         "firstPublished": 1657276403250,
         "lastPublished": 1665590247567,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:c1j5mz19jdko",
           "producer": "Pidgin",
@@ -427,7 +437,6 @@
             ]
           }
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -445,7 +454,6 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "Single Byline (all)",
           "promoHeadline": {
@@ -475,7 +483,6 @@
             ]
           }
         },
-        "images": {},
         "summary": {
           "blocks": [
             {
@@ -501,8 +508,7 @@
               }
             }
           ]
-        },
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -988,7 +994,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T21:04:58.371Z",
+        "generated": "2023-02-18T03:04:58.493Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
         "totalRecords": 20,

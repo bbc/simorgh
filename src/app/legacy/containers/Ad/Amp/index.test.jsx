@@ -1,9 +1,8 @@
 import React from 'react';
-import { render } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import AmpAd, { AMP_ACCESS_FETCH } from './index';
+import { render } from '../../../../components/react-testing-library-with-providers';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import latinDiacritics from '../../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
 
@@ -53,15 +52,15 @@ describe('AMP Ads', () => {
   });
 
   describe('Snapshots', () => {
-    shouldMatchSnapshot(
-      'should correctly render an AMP leaderboard ad',
-      adWithContext('leaderboard'),
-    );
+    it('should correctly render an AMP leaderboard ad', () => {
+      const { container } = render(adWithContext('leaderboard'));
+      expect(container).toMatchSnapshot();
+    });
 
-    shouldMatchSnapshot(
-      'should correctly render an AMP mpu ad',
-      adWithContext('mpu'),
-    );
+    it('should correctly render an AMP mpu ad', () => {
+      const { container } = render(adWithContext('mpu'));
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('Assertions', () => {

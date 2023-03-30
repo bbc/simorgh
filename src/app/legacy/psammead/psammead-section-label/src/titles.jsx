@@ -16,8 +16,8 @@ import {
   getLongPrimer,
   getDoublePica,
 } from '#psammead/gel-foundations/src/typography';
-import { C_EBON, C_GHOST } from '#psammead/psammead-styles/src/colours';
 import { getSansBold } from '#psammead/psammead-styles/src/font-styles';
+import { GHOST } from '#app/components/ThemeProvider/palette';
 
 const minClickableHeightPx = 44;
 const minClickableHeightRem = minClickableHeightPx / 16;
@@ -36,7 +36,7 @@ const FlexColumn = styled.span`
 `;
 
 const SectionLabelLink = styled.a`
-  color: ${C_EBON};
+  color: ${props => props.theme.palette.EBON};
   text-decoration: none;
 
   &:focus,
@@ -48,6 +48,7 @@ const SectionLabelLink = styled.a`
 SectionLabelLink.propTypes = {
   href: string.isRequired,
   labelId: string.isRequired,
+  className: string,
 };
 
 const FlexRow = styled.span`
@@ -96,7 +97,7 @@ const IndexLinkCta = styled.span`
   ${({ script }) => script && getLongPrimer(script)};
   ${({ service }) => getSansBold(service)};
   ${titleMargins};
-  color: ${C_EBON};
+  color: ${props => props.theme.palette.EBON};
   background-color: ${props => props.backgroundColor};
   white-space: nowrap;
   ${paddingReverseDir}: ${GEL_SPACING_DBL};
@@ -145,7 +146,7 @@ PlainTitle.propTypes = {
 };
 
 PlainTitle.defaultProps = {
-  backgroundColor: C_GHOST,
+  backgroundColor: GHOST,
 };
 
 export const LinkTitle = ({
@@ -158,7 +159,11 @@ export const LinkTitle = ({
   service,
   backgroundColor,
 }) => (
-  <SectionLabelLink href={href} labelId={labelId}>
+  <SectionLabelLink
+    href={href}
+    labelId={labelId}
+    className="focusIndicatorDisplayBlock"
+  >
     <FlexColumn>
       <FlexRow role="text">
         <Title
@@ -196,5 +201,5 @@ LinkTitle.propTypes = {
 };
 
 LinkTitle.defaultProps = {
-  backgroundColor: C_GHOST,
+  backgroundColor: GHOST,
 };

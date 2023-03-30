@@ -98,7 +98,7 @@ exports[`AMP Media Asset Page Analytics ATI 1`] = `
 Object {
   "requests": Object {
     "base": "https://logws1363.ati-host.net?",
-    "pageview": "\${base}s=598343&s2=70&p=pidgin.media_asset.23248703.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x2=[amp]&x3=[news-pidgin]&x4=[pcm]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article-media-asset]&x8=[simorgh]&x9=[Simorgh%3A%2BMedia%2BPod%2BBuild%2BFirst%2BCPS%2BMedia%2BAsset%2BPage%2Bin%2BSimorgh%2B%26%2B%3C%2B%3E%2B-%2BBBC%2BNews%2BPidgin]&x11=[2019-09-13T15%3A31%3A44.000Z]&x12=[2019-11-20T12%3A24%3A25.000Z]&x16=[Inspire%20me~Give%20me%20perspective~Keep%20me%20on%20trend]&x17=[Opinion]&ref=\${documentReferrer}",
+    "pageview": "\${base}s=598343&s2=70&p=pidgin.media_asset.23248703.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x2=[amp]&x3=[news-pidgin]&x4=[pcm]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article-media-asset]&x8=[simorgh]&x9=[Simorgh%3A%2520Media%2520Pod%2520Build%2520First%2520CPS%2520Media%2520Asset%2520Page%2520in%2520Simorgh%2520%26%2520%3C%2520%3E%2520-%2520BBC%2520News%2520Pidgin]&x11=[2019-09-13T15%3A31%3A44.000Z]&x12=[2019-11-20T12%3A24%3A25.000Z]&x16=[Inspire%20me~Give%20me%20perspective~Keep%20me%20on%20trend]&x17=[Opinion]&ref=\${documentReferrer}",
   },
   "transport": Object {
     "beacon": false,
@@ -238,7 +238,7 @@ Object {
 exports[`AMP Media Asset Page Header Navigation link should match text and url 5`] = `
 Object {
   "text": "Video",
-  "url": "/pidgin/media/video",
+  "url": "/pidgin/topics/c3l19z3k1ert",
 }
 `;
 

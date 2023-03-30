@@ -7,78 +7,17 @@ import {
 import { getMostReadEndpoint } from '#lib/utilities/getUrlHelpers/getMostReadUrls';
 import getMostWatchedEndpoint from '#lib/utilities/getUrlHelpers/getMostWatchedUrl';
 import getSecondaryColumnUrl from '#lib/utilities/getUrlHelpers/getSecondaryColumnUrl';
-import getRecommendationsUrl from '#lib/utilities/getUrlHelpers/getRecommendationsUrl';
 import { SECONDARY_DATA_TIMEOUT } from '#app/lib/utilities/getFetchTimeouts';
 import getAgent from '#server/utilities/getAgent/index';
 import nodeLogger from '#lib/logger.node';
 import { DATA_FETCH_ERROR } from '#lib/logger.const';
 import getAssetType from './getAssetType';
 import getAssetUri from './getAssetUri';
-import hasRecommendations from './hasRecommendations';
 import hasMostRead from './hasMostRead';
 import fetchPageData from '../../utils/fetchPageData';
 
 const noop = () => {};
 const logger = nodeLogger(__filename);
-
-// 004_brasil_recommendations_experiment
-const getRecommendations = (service, assetUri) => {
-  if (service !== 'portuguese') {
-    return [
-      {
-        name: 'recommendations',
-        attachAgent: true,
-        path: getRecommendationsUrl({
-          assetUri,
-          engine: 'unirecs_datalab',
-        }),
-        assetUri,
-        api: 'recommendations',
-        apiContext: 'secondary_data',
-      },
-    ];
-  }
-
-  return [
-    {
-      name: 'recommendations',
-      attachAgent: true,
-      path: getRecommendationsUrl({
-        assetUri,
-        engine: 'unirecs_datalab',
-      }),
-      assetUri,
-      api: 'recommendations',
-      apiContext: 'secondary_data',
-    },
-    {
-      name: 'datalabContentRecommendations',
-      attachAgent: true,
-      engine: 'unirecs_datalab_content',
-      path: getRecommendationsUrl({
-        assetUri,
-        engine: 'unirecs_datalab',
-        engineVariant: 'content',
-      }),
-      assetUri,
-      api: 'datalab_content',
-      apiContext: 'secondary_data',
-    },
-    {
-      name: 'datalabHybridRecommendations',
-      attachAgent: true,
-      engine: 'unirecs_datalab_hybrid',
-      path: getRecommendationsUrl({
-        assetUri,
-        engine: 'unirecs_datalab',
-        engineVariant: 'hybrid',
-      }),
-      assetUri,
-      api: 'datalab_hybrid',
-      apiContext: 'secondary_data',
-    },
-  ];
-};
 
 const pageTypeUrls = async (
   assetType,
@@ -111,10 +50,6 @@ const pageTypeUrls = async (
           api: 'secondary_column',
           apiContext: 'secondary_data',
         },
-        // 004_brasil_recommendations_experiment
-        ...((await hasRecommendations(service, variant, pageData))
-          ? getRecommendations(service, assetUri)
-          : []),
       ].filter(i => i);
     case MEDIA_ASSET_PAGE:
       return [
@@ -164,10 +99,15 @@ const fetchUrl = async ({ name, path, attachAgent, ...loggerArgs }) => {
   }
 };
 
-const getAdditionalPageData = async ({ pageData, service, variant, env }) => {
+const getAdditionalPageData = async ({
+  pageData,
+  service,
+  variant,
+  env,
+  path = '',
+}) => {
   const assetType = getAssetType(pageData);
-  const assetUri = getAssetUri(pageData);
-
+  const assetUri = getAssetUri(pageData) ?? path;
   const urlsToFetch = await pageTypeUrls(
     assetType,
     service,

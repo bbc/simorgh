@@ -1,7 +1,10 @@
 import React from 'react';
-import { render, getByText, getByRole } from '@testing-library/react';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
+import {
+  render,
+  getByText,
+  getByRole,
+} from '../../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import OnDemandHeadingContainer from '.';
 
@@ -22,12 +25,15 @@ const Component = ({ ariaHidden, idAttr, darkMode, episodeTitle }) => (
 );
 
 describe('AudioPlayer blocks OnDemandHeading', () => {
-  shouldMatchSnapshot('should render correctly', <Component />);
+  it('should render correctly', () => {
+    const { container } = render(<Component />);
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render correctly - dark mode',
-    <Component darkMode />,
-  );
+  it('should render correctly - dark mode', () => {
+    const { container } = render(<Component darkMode />);
+    expect(container).toMatchSnapshot();
+  });
 
   it('should have semantic h1 with child span with role attribute = text so that screen readers read the BrandTitle and Datestamp in one go', () => {
     render(<Component />);

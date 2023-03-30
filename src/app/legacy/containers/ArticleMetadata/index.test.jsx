@@ -1,38 +1,17 @@
 import React from 'react';
-import { render, waitFor } from '@testing-library/react';
-import { RequestContextProvider } from '#contexts/RequestContext';
-import { ToggleContextProvider } from '#contexts/ToggleContext';
 import {
   articleDataNews,
   articleDataPersian,
   articleDataPidginWithByline,
 } from '#pages/ArticlePage/fixtureData';
-import getAuthorTwitterHandle from '#app/pages/ArticlePage/getAuthorTwitterHandle';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import { getAuthorTwitterHandle } from '../../../components/Byline/utilities';
+import {
+  render,
+  waitFor,
+} from '../../../components/react-testing-library-with-providers';
 import ArticleMetadata from './index';
 
 const getISOStringDate = date => new Date(date).toISOString();
-
-// eslint-disable-next-line react/prop-types
-const Context = ({ service, children }) => (
-  <ServiceContextProvider service={service}>
-    <ToggleContextProvider>
-      <RequestContextProvider
-        bbcOrigin="https://www.test.bbc.co.uk"
-        id="c0000000000o"
-        isAmp={false}
-        pageType={ARTICLE_PAGE}
-        pathname="/pathname"
-        service={service}
-        statusCode={200}
-      >
-        {children}
-      </RequestContextProvider>
-    </ToggleContextProvider>
-  </ServiceContextProvider>
-);
 
 const propsForNewsInternational = {
   articleId: articleDataNews.metadata.id,
@@ -55,11 +34,9 @@ const propsForNewsInternationalWithByline = {
 };
 
 it('should render the article tags', async () => {
-  render(
-    <Context service="news">
-      <ArticleMetadata {...propsForNewsInternational} />
-    </Context>,
-  );
+  render(<ArticleMetadata {...propsForNewsInternational} />, {
+    service: 'news',
+  });
 
   const expected = [
     { content: 'Royal Wedding 2018', name: 'article:tag' },
@@ -95,13 +72,12 @@ describe('ArticleMetadata get branded image', () => {
 
   it('should render og:image if image provided', async () => {
     render(
-      <Context service="news">
-        <ArticleMetadata
-          {...propsForNewsInternational}
-          imageLocator="c34e/live/fea48140-27e5-11eb-a689-1f68cd2c5502.jpg"
-          imageAltText="Mock Image Alt Text"
-        />
-      </Context>,
+      <ArticleMetadata
+        {...propsForNewsInternational}
+        imageLocator="c34e/live/fea48140-27e5-11eb-a689-1f68cd2c5502.jpg"
+        imageAltText="Mock Image Alt Text"
+      />,
+      { service: 'news' },
     );
 
     await waitFor(() => {
@@ -118,12 +94,11 @@ describe('ArticleMetadata get branded image', () => {
 
 it('should render the article section meta tag if section provided', async () => {
   render(
-    <Context service="news">
-      <ArticleMetadata
-        {...propsForNewsInternational}
-        section="Mock Article Section"
-      />
-    </Context>,
+    <ArticleMetadata
+      {...propsForNewsInternational}
+      section="Mock Article Section"
+    />,
+    { service: 'news' },
   );
 
   await waitFor(() => {
@@ -136,11 +111,9 @@ it('should render the article section meta tag if section provided', async () =>
 });
 
 it("should render the twitter creator meta tag with the author's handle if provided in the byline", async () => {
-  render(
-    <Context service="news">
-      <ArticleMetadata {...propsForNewsInternationalWithByline} />
-    </Context>,
-  );
+  render(<ArticleMetadata {...propsForNewsInternationalWithByline} />, {
+    service: 'news',
+  });
 
   await waitFor(() => {
     expect(
@@ -151,16 +124,16 @@ it("should render the twitter creator meta tag with the author's handle if provi
   });
 });
 
-shouldMatchSnapshot(
-  'should match snapshot for News & International',
-  <Context service="news">
-    <ArticleMetadata {...propsForNewsInternational} />
-  </Context>,
-);
+it('should match snapshot for News & International', () => {
+  const { container } = render(
+    <ArticleMetadata {...propsForNewsInternational} />,
+    { service: 'news' },
+  );
+  expect(container).toMatchSnapshot();
+});
 
-shouldMatchSnapshot(
-  'should match snapshot for Persian News & UK origin',
-  <Context service="persian">
+it('should match snapshot for Persian News & UK origin', () => {
+  const { container } = render(
     <ArticleMetadata
       articleId={articleDataPersian.metadata.id}
       title={articleDataPersian.promo.headlines.seoHeadline}
@@ -176,13 +149,16 @@ shouldMatchSnapshot(
       mentionsTags={articleDataPersian.metadata.tags.mentions}
       lang={articleDataPersian.metadata.passport.language}
       description={articleDataPersian.promo.headlines.seoHeadline}
-    />
-  </Context>,
-);
+    />,
+    { service: 'persian' },
+  );
+  expect(container).toMatchSnapshot();
+});
 
-shouldMatchSnapshot(
-  'should match snapshot for News article with provided author twitter handle',
-  <Context service="news">
-    <ArticleMetadata {...propsForNewsInternationalWithByline} />
-  </Context>,
-);
+it('should match snapshot for News article with provided author twitter handle', () => {
+  const { container } = render(
+    <ArticleMetadata {...propsForNewsInternationalWithByline} />,
+    { service: 'news' },
+  );
+  expect(container).toMatchSnapshot();
+});

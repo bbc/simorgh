@@ -1,5 +1,4 @@
 import React from 'react';
-import { render } from '@testing-library/react';
 import path from 'ramda/src/path';
 import pidginPageData from '#data/pidgin/cpsAssets/tori-49450859';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
@@ -9,6 +8,7 @@ import {
   shouldMatchSnapshot,
   suppressPropWarnings,
 } from '#psammead/psammead-test-helpers/src';
+import { render } from '../../../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import RecommendationsPromoList from './index';
 
@@ -36,10 +36,21 @@ beforeEach(jest.clearAllMocks);
 describe('RecommendationsPromoList', () => {
   suppressPropWarnings(['optimizely', 'null']);
 
-  shouldMatchSnapshot(
-    'it renders a list of Story Promos wrapped in Grid components',
-    <Fixture />,
-  );
+  it('it renders a list of Story Promos wrapped in Grid components', () => {
+    const { container } = render(
+      <RecommendationsPromoList promoItems={promoItems} dir="ltr" />,
+      {
+        service: 'pidgin',
+        toggles: {
+          eventTracking: {
+            enabled: true,
+          },
+        },
+        pageType: 'STY',
+      },
+    );
+    expect(container).toMatchSnapshot();
+  });
 
   it('should render multiple promos in an unordered list', () => {
     const { container, getByRole } = render(<Fixture />);

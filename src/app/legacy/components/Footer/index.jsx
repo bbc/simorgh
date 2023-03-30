@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { arrayOf, shape, string, node, bool } from 'prop-types';
-import { C_EBON, C_WHITE } from '#psammead/psammead-styles/src/colours';
 import {
   getSansBold,
   getSansRegular,
@@ -25,7 +24,7 @@ import List from './List';
 const SitewideLinksWrapper = styled.div`
   ${({ script }) => script && getBrevier(script)}
   ${({ service }) => service && getSansRegular(service)}
-  background-color: ${C_EBON};
+  background-color: ${props => props.theme.palette.EBON};
 
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     padding: 0 ${GEL_MARGIN_BELOW_400PX};
@@ -43,16 +42,21 @@ const ConstrainedWrapper = styled.div`
 `;
 
 const StyledParagraph = styled.p`
-  color: ${C_WHITE};
+  color: ${props => props.theme.palette.WHITE};
   margin: 0;
   padding: ${GEL_SPACING_DBL} 0;
+
+  // removes padding which creates touch target from the final "inline" link so the Focus Indicator doesn't obscure other text.
+  a {
+    padding: 0;
+  }
 `;
 
 const StyledAmpCookieSettingsButton = styled(AmpCookieSettingsButton)`
   ${({ service }) => service && getSansBold(service)}
   background: none;
   border: none;
-  color: ${C_WHITE};
+  color: ${props => props.theme.palette.WHITE};
   cursor: pointer;
   display: block;
   padding: ${GEL_SPACING} 0 ${GEL_SPACING};

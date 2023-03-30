@@ -1,6 +1,9 @@
 import Cookie from 'js-cookie';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
+import find from 'ramda/src/find';
+import propSatisfies from 'ramda/src/propSatisfies';
+import includes from 'ramda/src/includes';
 import onClient from '#lib/utilities/onClient';
 import { getPromoHeadline } from '#lib/analyticsUtils/article';
 import { getPageTitle } from '#lib/analyticsUtils/indexPage';
@@ -18,6 +21,7 @@ import {
   STORY_PAGE,
   TOPIC_PAGE,
   LIVE_PAGE,
+  MEDIA_ARTICLE_PAGE,
 } from '#app/routes/utils/pageTypes';
 
 const ID_COOKIE = 'ckns_sylphid';
@@ -46,6 +50,8 @@ export const getType = (pageType, shorthand = false) => {
       return shorthand ? INDEX_PAGE : 'Index';
     case ARTICLE_PAGE:
       return shorthand ? 'ART' : 'New Article';
+    case MEDIA_ARTICLE_PAGE:
+      return 'article-sfv';
     case MEDIA_ASSET_PAGE:
       return 'article-media-asset';
     case MEDIA_PAGE:
@@ -69,6 +75,28 @@ export const getType = (pageType, shorthand = false) => {
   }
 };
 
+const AUDIO_KEY = 'fe1fbc8a-bb44-4bf8-8b12-52e58c6345a4';
+const VIDEO_KEY = 'ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f';
+const getPrimaryMediaType = taggings => {
+  const defaultLabel = 'article-sfv';
+  // FIND THE primaryMediaType ELEMENT IN THE LIST OF TAGGINGS
+  const primaryMediaTag = find(
+    propSatisfies(includes('primaryMediaType'), 'predicate'),
+    taggings,
+  );
+
+  if (!primaryMediaTag) {
+    return defaultLabel;
+  }
+
+  const isAudio = propSatisfies(includes(AUDIO_KEY), 'value', primaryMediaTag);
+  const isVideo = propSatisfies(includes(VIDEO_KEY), 'value', primaryMediaTag);
+
+  if (isAudio) return 'audio';
+  if (isVideo) return 'video';
+  return defaultLabel;
+};
+
 export const buildSections = ({
   service,
   pageType,
@@ -77,6 +105,7 @@ export const buildSections = ({
   sectionName,
   categoryName,
   mediaPageType,
+  taggings,
 }) => {
   const addProducer = producer && service !== producer;
   const serviceCap = capitalize(service);
@@ -104,6 +133,15 @@ export const buildSections = ({
       return [
         serviceCap,
         buildSectionItem(serviceCap, mediaSectionLabel[mediaPageType]),
+        ...(addProducer ? buildSectionArr(serviceCap, producer, type) : []),
+        ...(chapter ? buildSectionArr(serviceCap, chapter, type) : []),
+      ].join(', ');
+    case MEDIA_ARTICLE_PAGE:
+      return [
+        serviceCap,
+        ...(pageType
+          ? buildSectionItem(serviceCap, getPrimaryMediaType(taggings))
+          : []),
         ...(addProducer ? buildSectionArr(serviceCap, producer, type) : []),
         ...(chapter ? buildSectionArr(serviceCap, chapter, type) : []),
       ].join(', ');
@@ -179,13 +217,14 @@ export const getConfig = ({
   );
 
   const mediaPageType = pathOr('', ['metadata', 'type'], data);
-
+  const taggings = pathOr([], ['metadata', 'passport', 'taggings'], data);
   const sections = buildSections({
     service,
     pageType,
     sectionName,
     categoryName,
     mediaPageType,
+    taggings,
   });
   const cookie = getSylphidCookie();
   const type = getType(pageType);

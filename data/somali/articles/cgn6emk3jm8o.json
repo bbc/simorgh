@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "e5783ef1",
+              "id": "6520347b",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "a76c139f",
+                    "id": "9039d742",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "83f4d854",
+                          "id": "7bf22806",
                           "type": "paragraph",
                           "model": {
                             "text": "Tani waa cinwaanka maqaalkan imtixaanka",
                             "blocks": [
                               {
-                                "id": "26d3a3a2",
+                                "id": "998d8d81",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Tani waa cinwaanka maqaalkan imtixaanka",
@@ -56,28 +56,28 @@
               ]
             },
             {
-              "id": "1147e599",
+              "id": "995cd05d",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "127dbb98",
+                    "id": "6393dfcd",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "af149c9c",
+                          "id": "1c90289a",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "b9993c52",
+                                "id": "73869271",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Sawirkan tijaabada ah, oo ah xuquuqda daabacaadda BBC, waxay muujineysaa khariidad Faransiis ah. Muuqaalku wuxuu ku jiraa saddexda qaybood ee ugu horreeya wuxuuna leeyahay cinwaankan.",
                                   "blocks": [
                                     {
-                                      "id": "9d8c37eb",
+                                      "id": "b7e26998",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Sawirkan tijaabada ah, oo ah xuquuqda daabacaadda BBC, waxay muujineysaa khariidad Faransiis ah. Muuqaalku wuxuu ku jiraa saddexda qaybood ee ugu horreeya wuxuuna leeyahay cinwaankan.",
@@ -116,23 +116,23 @@
                     ]
                   },
                   {
-                    "id": "fbf724d5",
+                    "id": "6bc84ad9",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "55e5bc37",
+                          "id": "e34699f3",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "7be1c817",
+                                "id": "5ed25435",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Khariidadda Faransiiska oo muujineysa Paris iyo Cognac\r",
                                   "blocks": [
                                     {
-                                      "id": "613aac18",
+                                      "id": "aa175d50",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Khariidadda Faransiiska oo muujineysa Paris iyo Cognac\r",
@@ -171,7 +171,7 @@
                     ]
                   },
                   {
-                    "id": "7ac03564",
+                    "id": "17d8780e",
                     "type": "rawImage",
                     "model": {
                       "width": 624,
@@ -192,7 +192,7 @@
               ]
             },
             {
-              "id": "726206c9",
+              "id": "f2700eec",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562936492234,
@@ -203,18 +203,18 @@
               ]
             },
             {
-              "id": "c9d86982",
+              "id": "a2900f94",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "b19421d4",
+                    "id": "e6a6e31a",
                     "type": "paragraph",
                     "model": {
                       "text": "Kani waa baaldi qoraal ah, oo ay ku jiraan xariir url ah oo loo maro bogga bogga cimilada ee BBC Weather.",
                       "blocks": [
                         {
-                          "id": "44490456",
+                          "id": "9eba9426",
                           "type": "fragment",
                           "model": {
                             "text": "Kani waa baaldi qoraal ah, oo ay ku jiraan xariir url ah oo loo maro ",
@@ -227,13 +227,13 @@
                           ]
                         },
                         {
-                          "id": "acdb52f6",
+                          "id": "de5e992c",
                           "type": "urlLink",
                           "model": {
                             "text": "bogga bogga cimilada ee BBC Weather.",
                             "blocks": [
                               {
-                                "id": "abecee57",
+                                "id": "e2b24d4b",
                                 "type": "fragment",
                                 "model": {
                                   "text": "bogga bogga cimilada ee BBC Weather.",
@@ -270,29 +270,29 @@
               ]
             },
             {
-              "id": "468a1146",
+              "id": "b99dca53",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01k6msm",
                 "blocks": [
                   {
-                    "id": "7a7d1dfd",
+                    "id": "069524b4",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "cc03ef30",
+                          "id": "81339940",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "e75a034f",
+                                "id": "6aeb9e1c",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Way yaryihiin, laakiin innaga bini'aadamka waxbaan baran karnaa shay ama labo quraanyo.",
                                   "blocks": [
                                     {
-                                      "id": "6b8c6dcc",
+                                      "id": "e7b4ccf7",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Way yaryihiin, laakiin innaga bini'aadamka waxbaan baran karnaa shay ama labo quraanyo.",
@@ -331,12 +331,12 @@
                     ]
                   },
                   {
-                    "id": "9c845f68",
+                    "id": "530e141b",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "33255d3b",
+                          "id": "ee63b26c",
                           "blockId": "urn:bbc:ares::clip:p01k6msm",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -382,12 +382,12 @@
                           ]
                         },
                         {
-                          "id": "d4a8b957",
+                          "id": "2d13d07b",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "f641d30f",
+                                "id": "0fd523bc",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 1920,
@@ -404,23 +404,23 @@
                                 ]
                               },
                               {
-                                "id": "ab3dd53c",
+                                "id": "038ff747",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "f8db0c17",
+                                      "id": "7399d4ce",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "cd80db2f",
+                                            "id": "44300b17",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "Ants",
                                               "blocks": [
                                                 {
-                                                  "id": "e644d741",
+                                                  "id": "5dd84c73",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "Ants",
@@ -488,23 +488,23 @@
               ]
             },
             {
-              "id": "3664612e",
+              "id": "a0e5cec0",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "d33ced89",
+                    "id": "a33c5c26",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "e77ac2d8",
+                          "id": "b9c579fe",
                           "type": "paragraph",
                           "model": {
                             "text": "Kani waa qayb hoosaad ka kooban",
                             "blocks": [
                               {
-                                "id": "e28d0080",
+                                "id": "bbdadd51",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Kani waa qayb hoosaad ka kooban",
@@ -539,28 +539,28 @@
               ]
             },
             {
-              "id": "fe9deff8",
+              "id": "9f0466b5",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "76846545",
+                    "id": "fdb689f0",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "0f9d068b",
+                          "id": "7bd34589",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "4faa96b8",
+                                "id": "7b429571",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Ciyaartoyda Kubadda Cagta kadib ciyaar",
                                   "blocks": [
                                     {
-                                      "id": "bac5d157",
+                                      "id": "b8bb57f8",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Ciyaartoyda Kubadda Cagta kadib ciyaar",
@@ -599,7 +599,7 @@
                     ]
                   },
                   {
-                    "id": "8efb6cdd",
+                    "id": "01f9276f",
                     "type": "rawImage",
                     "model": {
                       "width": 2048,
@@ -620,18 +620,18 @@
               ]
             },
             {
-              "id": "a13d0570",
+              "id": "d331157d",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "110d8040",
+                    "id": "f4d350f5",
                     "type": "paragraph",
                     "model": {
                       "text": "Maqaalkaan tijaabada ah waxaa loo sameeyay si aan ugusameyno tijaabooyinka otomaatiga ee dhamaadka iyo dhamaadka dhamaadka bartayada internetka.",
                       "blocks": [
                         {
-                          "id": "ef9acb70",
+                          "id": "d7ee935d",
                           "type": "fragment",
                           "model": {
                             "text": "Maqaalkaan tijaabada ah waxaa loo sameeyay si aan ugusameyno tijaabooyinka otomaatiga ee dhamaadka iyo dhamaadka dhamaadka bartayada internetka.",
@@ -657,11 +657,21 @@
               ]
             },
             {
-              "id": "e8d4fd56",
+              "id": "dbf6e349",
               "type": "mpu",
               "model": {},
               "position": [
                 9
+              ]
+            },
+            {
+              "id": "e32dab96",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                10
               ]
             }
           ]
@@ -670,14 +680,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:cgn6emk3jm8o",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cgn6emk3jm8o"
+          "optimoUrn": "urn:bbc:optimo:asset:cgn6emk3jm8o",
+          "canonicalUrl": "https://www.bbc.com/somali/articles/cgn6emk3jm8o"
         },
         "type": "article",
         "createdBy": "Somali",
         "language": "so",
         "firstPublished": 1562936492234,
         "lastPublished": 1562936492234,
-        "options": {},
         "analyticsLabels": {
           "producer": "Somali",
           "page": "somali.articles.cgn6emk3jm8o.page"
@@ -687,7 +697,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Somali",
           "taggings": []
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -705,12 +714,9 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "Tani waa cinwaanka SEO ee maqaalkan tijaabada ah"
-        },
-        "images": {},
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -992,7 +998,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T23:04:57.512Z",
+        "generated": "2023-02-17T16:34:57.065Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
         "totalRecords": 20,

@@ -1,13 +1,10 @@
 import React from 'react';
-import { render } from '@testing-library/react';
 
 import * as viewTracking from '#hooks/useViewTracker';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
-import {
-  shouldMatchSnapshot,
-  suppressPropWarnings,
-} from '#psammead/psammead-test-helpers/src';
+import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
+import { render } from '../../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import PodcastExternalLinks from '.';
 
@@ -50,10 +47,10 @@ const links = [
 describe('PodcastExternalLinks', () => {
   suppressPropWarnings(['aria.aria-labelledby', 'undefined']);
 
-  shouldMatchSnapshot(
-    'Should render external links',
-    <Component links={links} />,
-  );
+  it('Should render external links', () => {
+    const { container } = render(<Component links={links} />);
+    expect(container).toMatchSnapshot();
+  });
 
   it('should render the right amount of items', () => {
     const { container, getByRole } = render(<Component links={links} />);

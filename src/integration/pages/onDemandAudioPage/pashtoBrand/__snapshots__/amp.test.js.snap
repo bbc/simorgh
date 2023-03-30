@@ -98,7 +98,7 @@ exports[`AMP On Demand Audio Page Analytics ATI 1`] = `
 Object {
   "requests": Object {
     "base": "https://logws1363.ati-host.net?",
-    "pageview": "\${base}s=598343&s2=68&p=pashto.bbc_pashto_radio.w172xjcjkv7gw1w.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn%3Abbc%3Apips%3Ap0340yr4]&x2=[amp]&x3=[news-pashto]&x4=[ps]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[player-episode]&x8=[simorgh]&x9=[%D9%88%D8%B1%D9%88%D8%B3%D8%AA%D9%8A%2B%D8%AE%D8%A8%D8%B1%D9%88%D9%86%D9%87%2B-%2BBBC%2BNews%2B%D9%BE%DA%9A%D8%AA%D9%88]&ref=\${documentReferrer}",
+    "pageview": "\${base}s=598343&s2=68&p=pashto.bbc_pashto_radio.w172xjcjkv7gw1w.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn%3Abbc%3Apips%3Ap0340yr4]&x2=[amp]&x3=[news-pashto]&x4=[ps]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[player-episode]&x8=[simorgh]&x9=[%D9%88%D8%B1%D9%88%D8%B3%D8%AA%D9%8A%2520%D8%AE%D8%A8%D8%B1%D9%88%D9%86%D9%87%2520-%2520BBC%2520News%2520%D9%BE%DA%9A%D8%AA%D9%88]&ref=\${documentReferrer}",
   },
   "transport": Object {
     "beacon": false,
@@ -269,7 +269,7 @@ exports[`AMP On Demand Audio Page I can see the episode summary 1`] = `"د نړ�
 
 exports[`AMP On Demand Audio Page I can see the episode title 1`] = `"۱۸ می ۲۰۲۰"`;
 
-exports[`AMP On Demand Audio Page I can see the hero image 1`] = `"https://ichef.bbci.co.uk/images/ic/128x128/p08b23c8.png"`;
+exports[`AMP On Demand Audio Page I can see the hero image 1`] = `"https://ichef.bbci.co.uk/images/ic/256x256/p08b23c8.png"`;
 
 exports[`AMP On Demand Audio Page Main heading should match text 1`] = `"وروستي خبرونه, ۱۸ می ۲۰۲۰"`;
 

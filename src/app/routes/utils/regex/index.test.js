@@ -8,6 +8,10 @@ import {
   frontPageDataPath,
   frontPageManifestPath,
   frontPageSwPath,
+  homePagePath,
+  homePageDataPath,
+  homePageManifestPath,
+  homePageSwPath,
   cpsAssetPagePath,
   cpsAssetPageDataPath,
   podcastEpisodePath,
@@ -139,6 +143,46 @@ describe('frontPageDataPath', () => {
   shouldNotMatchInvalidRoutes(invalidRoutes, frontPageDataPath);
 });
 
+describe('homePagePath', () => {
+  const validRoutes = [
+    '/news/tipohome',
+    '/persian/tipohome',
+    '/news/tipohome.amp',
+    '/persian/tipohome.amp',
+    '/news/simp/tipohome',
+    '/persian/trad/tipohome',
+    '/news/lat/tipohome.amp',
+    '/persian/cyr/tipohome.amp',
+  ];
+  shouldMatchValidRoutes(validRoutes, homePagePath);
+
+  const invalidRoutes = [
+    '/news/tipohome/simp',
+    '/news/tipohome/simp.amp',
+    '/tipohome/persian',
+    '/tipohome/persian.amp',
+  ];
+  shouldNotMatchInvalidRoutes(invalidRoutes, homePagePath);
+});
+
+describe('homePageDataPath', () => {
+  const validRoutes = [
+    '/news/tipohome.json',
+    '/kyrgyz/tipohome.json',
+    '/news/cyr/tipohome.json',
+    '/persian/trad/tipohome.json',
+  ];
+  shouldMatchValidRoutes(validRoutes, homePageDataPath);
+
+  const invalidRoutes = [
+    '/news/data/tipohome.json',
+    '/iplayer/tipohome.json',
+    '/news/foobar/tipohome.json',
+    '/persian/nontrad/tipohome.json',
+  ];
+  shouldNotMatchInvalidRoutes(invalidRoutes, homePageDataPath);
+});
+
 describe('articleSwPath', () => {
   const validRoutes = [
     '/news/articles/sw.js',
@@ -194,6 +238,33 @@ describe('frontPageManifestPath', () => {
     '/news/trad/sw.js',
   ];
   shouldNotMatchInvalidRoutes(invalidRoutes, frontPageManifestPath);
+});
+
+describe('homePageSwPath', () => {
+  const validRoutes = ['/news/tipohome/sw.js', '/persian/tipohome/sw.js'];
+  shouldMatchValidRoutes(validRoutes, homePageSwPath);
+
+  const invalidRoutes = [
+    '/news/articles/tipohome/sw.js',
+    '/persian/tipohome/sw',
+    '/persian/simp/tipohome/sw.js',
+  ];
+  shouldNotMatchInvalidRoutes(invalidRoutes, homePageSwPath);
+});
+
+describe('homePageManifestPath', () => {
+  const validRoutes = [
+    '/news/tipohome/manifest.json',
+    '/persian/tipohome/manifest.json',
+  ];
+  shouldMatchValidRoutes(validRoutes, homePageManifestPath);
+
+  const invalidRoutes = [
+    '/news/articles/tipohome/manifest.json',
+    '/hausa/tipohome/manifest',
+    '/hausa/simp/tipohome/manifest.json',
+  ];
+  shouldNotMatchInvalidRoutes(invalidRoutes, homePageManifestPath);
 });
 
 describe('onDemandRadioPath', () => {

@@ -1,5 +1,4 @@
 import React from 'react';
-import { render } from '@testing-library/react';
 import {
   shouldMatchSnapshot,
   suppressPropWarnings,
@@ -11,6 +10,7 @@ import * as clickTracking from '#hooks/useClickTrackerHandler';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
 
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
+import { render } from '../../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import { promoProps, cpsPromoFixture, linkPromoFixture } from './fixtures';
 
@@ -41,20 +41,20 @@ const Component = ({ service = 'mundo', variant, ...rest }) => {
 describe('Frosted Glass Promo', () => {
   suppressPropWarnings(['image.height', 'undefined']);
 
-  shouldMatchSnapshot(
-    'when given props directly',
-    <Component {...promoProps} />,
-  );
+  it('when given props directly', () => {
+    const { container } = render(<Component {...promoProps} />);
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'when given props for a CPS promo',
-    <Component {...cpsPromoFixture} />,
-  );
+  it('when given props for a CPS promo', () => {
+    const { container } = render(<Component {...cpsPromoFixture} />);
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'when given props for a Link promo',
-    <Component {...linkPromoFixture} />,
-  );
+  it('when given props for a Link promo', () => {
+    const { container } = render(<Component {...linkPromoFixture} />);
+    expect(container).toMatchSnapshot();
+  });
 
   it('should render the appropriate elements - CPS Promo', () => {
     const { container, getByText } = render(<Component {...cpsPromoFixture} />);

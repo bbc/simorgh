@@ -1,9 +1,3 @@
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_GHOST,
-  C_POSTBOX_30,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import '#psammead/moment-timezone-include/tz/Africa/Nairobi';
 import '#psammead/psammead-locales/moment/sw';
@@ -38,7 +32,6 @@ export const service: DefaultServiceConfig = {
     service: 'swahili',
     serviceName: 'Swahili',
     languageName: 'Swahili',
-    themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcswahili',
     twitterSite: '@bbcswahili',
     noBylinesPolicy:
@@ -49,13 +42,6 @@ export const service: DefaultServiceConfig = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Swahili',
-    theming: {
-      brandBackgroundColour: `${C_POSTBOX}`,
-      brandLogoColour: `${C_WHITE}`,
-      brandForegroundColour: `${C_GHOST}`,
-      brandHighlightColour: `${C_WHITE}`,
-      brandBorderColour: `${C_POSTBOX_30}`,
-    },
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
@@ -339,8 +325,20 @@ export const service: DefaultServiceConfig = {
         url: '/swahili/topics/ckdxndddjkxt',
       },
       {
+        title: 'Makala',
+        url: '/swahili/topics/c6z8lg838klt',
+      },
+      {
+        title: 'Afya',
+        url: '/swahili/topics/cvjp2jj60v3t',
+      },
+      {
+        title: 'Burudani',
+        url: '/swahili/topics/c2dwqddr7y3t',
+      },
+      {
         title: 'Video',
-        url: '/swahili/media/video',
+        url: '/swahili/topics/cz40xlzvj6kt',
       },
       {
         title: 'Vipindi vya Redio',

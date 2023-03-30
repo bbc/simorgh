@@ -5,7 +5,6 @@ import {
   getPica,
   getGreatPrimer,
 } from '#psammead/gel-foundations/src/typography';
-import { C_EBON } from '#psammead/psammead-styles/src/colours';
 import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import { grid } from '#psammead/psammead-styles/src/detection';
 import { getSerifMedium } from '#psammead/psammead-styles/src/font-styles';
@@ -34,7 +33,7 @@ const StyledLink = styled.a`
   ${({ service }) => getSerifMedium(service)}
 
   position: static;
-  color: ${C_EBON};
+  color: ${props => props.theme.palette.EBON};
   text-decoration: none;
   margin-bottom: ${GEL_SPACING};
 
@@ -109,6 +108,7 @@ export const MostReadLink = ({
         service={service}
         size={size}
         onClick={clickTrackerHandler}
+        className="focusIndicatorDisplayTableCell"
       >
         {title}
       </StyledLink>

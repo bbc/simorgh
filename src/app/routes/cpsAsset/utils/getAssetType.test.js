@@ -23,6 +23,6 @@ describe('getAssetType', () => {
   it('should return undefined when no jsonData is passed in', () => {
     const assetType = getAssetType();
 
-    expect(assetType).toEqual(undefined);
+    expect(assetType).toEqual(null);
   });
 });

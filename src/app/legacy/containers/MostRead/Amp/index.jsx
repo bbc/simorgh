@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { useTheme } from '@emotion/react';
 import { Helmet } from 'react-helmet';
 import { string, oneOf, elementType } from 'prop-types';
 import styled from '@emotion/styled';
@@ -9,7 +10,6 @@ import {
 } from '#psammead/psammead-assets/src/amp-boilerplate';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import pathOr from 'ramda/src/pathOr';
-import { C_SHADOW } from '#psammead/psammead-styles/src/colours';
 import { getBodyCopy } from '#psammead/gel-foundations/src/typography';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import { MostReadItemWrapper, MostReadLink } from '../Canonical/Item';
@@ -35,6 +35,11 @@ const rankTranslationScript = (endpoint, service) => {
         if (!item.promo.headlines.shortHeadline) {
           item.promo.headlines.shortHeadline = item.promo.headlines.seoHeadline;
         }
+
+        if(!item.promo.locators.assetUri) {
+          item.promo.locators.assetUri = item.promo.locators.canonicalUrl;
+        }
+
       });
 
       return data;
@@ -57,10 +62,15 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
 
   const onlyinnerscript = rankTranslationScript(endpoint, service);
 
+  const {
+    palette: { SHADOW },
+  } = useTheme();
+
   const FallbackText = styled.p`
     ${() => getSansRegular(service)}
     ${() => getBodyCopy(script)}
-    color: ${C_SHADOW};
+    // eslint-disable-next-line react/prop-types
+    color: ${SHADOW};
     margin: 0;
   `;
 
@@ -98,7 +108,6 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
             )}
           />
         </Helmet>
-
         <amp-list
           src="amp-script:dataFunctions.getRemoteData"
           items="records"

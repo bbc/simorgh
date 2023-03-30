@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "207f1fa9",
+              "id": "64b88aee",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "98ded0db",
+                    "id": "511fe2bd",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "2fa066b8",
+                          "id": "65adc605",
                           "type": "paragraph",
                           "model": {
                             "text": "Test Links page",
                             "blocks": [
                               {
-                                "id": "7d5925c7",
+                                "id": "8dc4a109",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Test Links page",
@@ -56,7 +56,7 @@
               ]
             },
             {
-              "id": "a79f3cd5",
+              "id": "e53254db",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1637670147913,
@@ -67,18 +67,18 @@
               ]
             },
             {
-              "id": "5b30ad00",
+              "id": "69e329cc",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "7368b498",
+                    "id": "6f91c742",
                     "type": "paragraph",
                     "model": {
                       "text": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
                       "blocks": [
                         {
-                          "id": "cc63604f",
+                          "id": "08c52331",
                           "type": "fragment",
                           "model": {
                             "text": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
@@ -104,28 +104,28 @@
               ]
             },
             {
-              "id": "589ec9b9",
+              "id": "52fa8380",
               "type": "links",
               "model": {
                 "blocks": [
                   {
-                    "id": "2e233951",
+                    "id": "a05af677",
                     "type": "title",
                     "model": {
                       "blocks": [
                         {
-                          "id": "ced25dd8",
+                          "id": "a61abf07",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "52d3bb3c",
+                                "id": "296f439a",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Show all links (no images)",
                                   "blocks": [
                                     {
-                                      "id": "8ee2c8e5",
+                                      "id": "a9973337",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Show all links (no images)",
@@ -164,34 +164,34 @@
                     ]
                   },
                   {
-                    "id": "eb313f6c",
+                    "id": "d429deb3",
                     "type": "link",
                     "model": {
                       "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.co.uk%2Fpidgin",
                       "blocks": [
                         {
-                          "id": "a1b940dd",
+                          "id": "62cea96f",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "d8d28acf",
+                                "id": "87426334",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "292c2360",
+                                      "id": "17c072ed",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "9d7e6851",
+                                            "id": "99e1659d",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "Image to ignore",
                                               "blocks": [
                                                 {
-                                                  "id": "13508622",
+                                                  "id": "fcb1715b",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "Image to ignore",
@@ -238,7 +238,7 @@
                                 ]
                               },
                               {
-                                "id": "fe945cd7",
+                                "id": "04166d71",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 976,
@@ -264,25 +264,25 @@
                           ]
                         },
                         {
-                          "id": "92a36e33",
+                          "id": "fc5cd917",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "d5284af3",
+                                "id": "acf858ff",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Show headline",
                                   "blocks": [
                                     {
-                                      "id": "ef990461",
+                                      "id": "f87702b7",
                                       "type": "urlLink",
                                       "model": {
                                         "text": "Show headline",
                                         "locator": "https://www.bbc.co.uk/pidgin",
                                         "blocks": [
                                           {
-                                            "id": "f2ef03ff",
+                                            "id": "d0e33ec5",
                                             "type": "fragment",
                                             "model": {
                                               "text": "Show headline",
@@ -333,31 +333,31 @@
                     ]
                   },
                   {
-                    "id": "6c2d7096",
+                    "id": "53d124a2",
                     "type": "link",
                     "model": {
                       "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.com%2Fmundo",
                       "blocks": [
                         {
-                          "id": "31a1e01c",
+                          "id": "fb58fc1c",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "fbc96964",
+                                "id": "364dc74a",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Link with Headline",
                                   "blocks": [
                                     {
-                                      "id": "6704aa5b",
+                                      "id": "3c3ba3ba",
                                       "type": "urlLink",
                                       "model": {
                                         "text": "Link with Headline",
                                         "locator": "https://www.bbc.com/mundo",
                                         "blocks": [
                                           {
-                                            "id": "abe8c63f",
+                                            "id": "40485e88",
                                             "type": "fragment",
                                             "model": {
                                               "text": "Link with Headline",
@@ -408,31 +408,31 @@
                     ]
                   },
                   {
-                    "id": "f1170c3c",
+                    "id": "55c31231",
                     "type": "link",
                     "model": {
                       "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.com%2Fbrasil",
                       "blocks": [
                         {
-                          "id": "4cc7afc4",
+                          "id": "13eefe7f",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "a0a97de3",
+                                "id": "fabee279",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "https://www.bbc.com/brasil",
                                   "blocks": [
                                     {
-                                      "id": "ea27fe05",
+                                      "id": "e983df49",
                                       "type": "urlLink",
                                       "model": {
                                         "text": "https://www.bbc.com/brasil",
                                         "locator": "https://www.bbc.com/brasil",
                                         "blocks": [
                                           {
-                                            "id": "c94611f1",
+                                            "id": "1d283a1e",
                                             "type": "fragment",
                                             "model": {
                                               "text": "https://www.bbc.com/brasil",
@@ -491,18 +491,18 @@
               "blockGroupIndex": 1
             },
             {
-              "id": "95f8feff",
+              "id": "2b0edd0f",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "0162d3c0",
+                    "id": "e905bf4a",
                     "type": "paragraph",
                     "model": {
                       "text": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
                       "blocks": [
                         {
-                          "id": "c1e86f53",
+                          "id": "35278a1b",
                           "type": "fragment",
                           "model": {
                             "text": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
@@ -528,28 +528,28 @@
               ]
             },
             {
-              "id": "ab2a136d",
+              "id": "d51321c5",
               "type": "links",
               "model": {
                 "blocks": [
                   {
-                    "id": "b3314050",
+                    "id": "c7bd0f83",
                     "type": "title",
                     "model": {
                       "blocks": [
                         {
-                          "id": "a645a0ea",
+                          "id": "113d9ded",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "77e9f98e",
+                                "id": "cb508a54",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Single link",
                                   "blocks": [
                                     {
-                                      "id": "91189f4d",
+                                      "id": "4f73e535",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Single link",
@@ -588,31 +588,31 @@
                     ]
                   },
                   {
-                    "id": "68ca55cd",
+                    "id": "f084e9aa",
                     "type": "link",
                     "model": {
                       "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.com%2Fpidgin",
                       "blocks": [
                         {
-                          "id": "18b290b7",
+                          "id": "d0fd4a35",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "cbd374f6",
+                                "id": "b67fcd5c",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Single link",
                                   "blocks": [
                                     {
-                                      "id": "b3a14d63",
+                                      "id": "3d38cf62",
                                       "type": "urlLink",
                                       "model": {
                                         "text": "Single link",
                                         "locator": "https://www.bbc.com/pidgin",
                                         "blocks": [
                                           {
-                                            "id": "8da27453",
+                                            "id": "3f67c77b",
                                             "type": "fragment",
                                             "model": {
                                               "text": "Single link",
@@ -671,18 +671,18 @@
               "blockGroupIndex": 2
             },
             {
-              "id": "95b2167d",
+              "id": "5e659a0e",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "b2408058",
+                    "id": "90daf761",
                     "type": "paragraph",
                     "model": {
                       "text": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
                       "blocks": [
                         {
-                          "id": "430c2b4d",
+                          "id": "a8bfd9ee",
                           "type": "fragment",
                           "model": {
                             "text": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
@@ -708,28 +708,28 @@
               ]
             },
             {
-              "id": "69802cff",
+              "id": "734eaf71",
               "type": "links",
               "model": {
                 "blocks": [
                   {
-                    "id": "76793d76",
+                    "id": "4e188593",
                     "type": "title",
                     "model": {
                       "blocks": [
                         {
-                          "id": "49cdee9e",
+                          "id": "361a4931",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "0493a185",
+                                "id": "8bb3c3e2",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Long headline ",
                                   "blocks": [
                                     {
-                                      "id": "3ba56b52",
+                                      "id": "7b1d6bed",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Long headline ",
@@ -768,31 +768,31 @@
                     ]
                   },
                   {
-                    "id": "356460c8",
+                    "id": "c45c9832",
                     "type": "link",
                     "model": {
                       "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.co.uk%2Fyoruba",
                       "blocks": [
                         {
-                          "id": "e2fe99b9",
+                          "id": "77af1958",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "19b2171d",
+                                "id": "c05928ca",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "This is a long headline that should be truncated to 3 lines only in the promo. I could go on and on and on and on and on. ",
                                   "blocks": [
                                     {
-                                      "id": "eb36f74d",
+                                      "id": "1fa42089",
                                       "type": "urlLink",
                                       "model": {
                                         "text": "This is a long headline that should be truncated to 3 lines only in the promo. I could go on and on and on and on and on. ",
                                         "locator": "https://www.bbc.co.uk/yoruba",
                                         "blocks": [
                                           {
-                                            "id": "0145c7f5",
+                                            "id": "cc249b6e",
                                             "type": "fragment",
                                             "model": {
                                               "text": "This is a long headline that should be truncated to 3 lines only in the promo. I could go on and on and on and on and on. ",
@@ -851,18 +851,18 @@
               "blockGroupIndex": 3
             },
             {
-              "id": "e8d3b044",
+              "id": "85da7e65",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "3501d617",
+                    "id": "0b6c315b",
                     "type": "paragraph",
                     "model": {
                       "text": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
                       "blocks": [
                         {
-                          "id": "cf7d9466",
+                          "id": "e5e8648e",
                           "type": "fragment",
                           "model": {
                             "text": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
@@ -888,7 +888,7 @@
               ]
             },
             {
-              "id": "4711f854",
+              "id": "329c1e98",
               "type": "mpu",
               "model": {},
               "position": [
@@ -896,28 +896,28 @@
               ]
             },
             {
-              "id": "3ac3cf9d",
+              "id": "9ede9ac5",
               "type": "links",
               "model": {
                 "blocks": [
                   {
-                    "id": "d8c68701",
+                    "id": "d007490b",
                     "type": "title",
                     "model": {
                       "blocks": [
                         {
-                          "id": "d7ed51da",
+                          "id": "248620f8",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "d8bfe531",
+                                "id": "ddd44cd3",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Only show 3 links",
                                   "blocks": [
                                     {
-                                      "id": "dc7e2c78",
+                                      "id": "d619fa6f",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Only show 3 links",
@@ -956,31 +956,31 @@
                     ]
                   },
                   {
-                    "id": "e2ca9e41",
+                    "id": "e7b6d762",
                     "type": "link",
                     "model": {
                       "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.com%2Fpidgin",
                       "blocks": [
                         {
-                          "id": "51a7dd5d",
+                          "id": "da5d1cf8",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "eb7fcfaa",
+                                "id": "cd8d90ab",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Link 1",
                                   "blocks": [
                                     {
-                                      "id": "a1320597",
+                                      "id": "9bbbcd6c",
                                       "type": "urlLink",
                                       "model": {
                                         "text": "Link 1",
                                         "locator": "https://www.bbc.com/pidgin",
                                         "blocks": [
                                           {
-                                            "id": "c645e7c6",
+                                            "id": "3419c93c",
                                             "type": "fragment",
                                             "model": {
                                               "text": "Link 1",
@@ -1031,31 +1031,31 @@
                     ]
                   },
                   {
-                    "id": "f2806fb7",
+                    "id": "8f364e11",
                     "type": "link",
                     "model": {
                       "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.com%2Fmundo",
                       "blocks": [
                         {
-                          "id": "8e590bd0",
+                          "id": "d2f42788",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "e1e82acd",
+                                "id": "b4029448",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Link 2",
                                   "blocks": [
                                     {
-                                      "id": "f223d315",
+                                      "id": "2b2289e6",
                                       "type": "urlLink",
                                       "model": {
                                         "text": "Link 2",
                                         "locator": "https://www.bbc.com/mundo",
                                         "blocks": [
                                           {
-                                            "id": "766f6a6e",
+                                            "id": "266a4f14",
                                             "type": "fragment",
                                             "model": {
                                               "text": "Link 2",
@@ -1106,31 +1106,31 @@
                     ]
                   },
                   {
-                    "id": "f15b2de8",
+                    "id": "40723973",
                     "type": "link",
                     "model": {
                       "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.com%2Fyoruba",
                       "blocks": [
                         {
-                          "id": "24f787e7",
+                          "id": "ffa5a6d5",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "998d0bc7",
+                                "id": "5e96c185",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Link 3",
                                   "blocks": [
                                     {
-                                      "id": "29dd1e00",
+                                      "id": "a807ee8b",
                                       "type": "urlLink",
                                       "model": {
                                         "text": "Link 3",
                                         "locator": "https://www.bbc.com/yoruba",
                                         "blocks": [
                                           {
-                                            "id": "8bf9ce7a",
+                                            "id": "23db6fe8",
                                             "type": "fragment",
                                             "model": {
                                               "text": "Link 3",
@@ -1181,31 +1181,31 @@
                     ]
                   },
                   {
-                    "id": "d2f534c3",
+                    "id": "5a07bf72",
                     "type": "link",
                     "model": {
                       "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.com%2Fbrasil",
                       "blocks": [
                         {
-                          "id": "a3ef9665",
+                          "id": "fae4fc24",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "9213703d",
+                                "id": "e02495c1",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Link 4 (not shown)",
                                   "blocks": [
                                     {
-                                      "id": "ffb71d89",
+                                      "id": "fe504ee2",
                                       "type": "urlLink",
                                       "model": {
                                         "text": "Link 4 (not shown)",
                                         "locator": "https://www.bbc.com/brasil",
                                         "blocks": [
                                           {
-                                            "id": "edbddd4a",
+                                            "id": "f77425ef",
                                             "type": "fragment",
                                             "model": {
                                               "text": "Link 4 (not shown)",
@@ -1256,31 +1256,31 @@
                     ]
                   },
                   {
-                    "id": "46ef003e",
+                    "id": "fd88ef56",
                     "type": "link",
                     "model": {
                       "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.com%2Farabic",
                       "blocks": [
                         {
-                          "id": "c560e801",
+                          "id": "9ed7bebd",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "4b164dd1",
+                                "id": "9642a2fc",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Link 5 (not shown)",
                                   "blocks": [
                                     {
-                                      "id": "c98a92a9",
+                                      "id": "cd7550d5",
                                       "type": "urlLink",
                                       "model": {
                                         "text": "Link 5 (not shown)",
                                         "locator": "https://www.bbc.com/arabic",
                                         "blocks": [
                                           {
-                                            "id": "d61cdc8b",
+                                            "id": "6a49f00e",
                                             "type": "fragment",
                                             "model": {
                                               "text": "Link 5 (not shown)",
@@ -1339,18 +1339,18 @@
               "blockGroupIndex": 4
             },
             {
-              "id": "5a9cc16f",
+              "id": "9ebc4a13",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "c3eb191a",
+                    "id": "70f572f5",
                     "type": "paragraph",
                     "model": {
                       "text": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
                       "blocks": [
                         {
-                          "id": "dc565af7",
+                          "id": "92113c50",
                           "type": "fragment",
                           "model": {
                             "text": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
@@ -1376,35 +1376,45 @@
               ]
             },
             {
-              "id": "d611f2d6",
+              "id": "1fbda172",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                13
+              ]
+            },
+            {
+              "id": "8be803de",
               "type": "relatedContent",
               "model": {
                 "blocks": [
                   {
-                    "id": "7b5e4a31",
+                    "id": "d3991b4e",
                     "type": "title",
                     "model": {
                       "blocks": [
                         {
-                          "id": "946679d5",
+                          "id": "38bf36cf",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "6b8413a5",
+                                "id": "59cdaa7c",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Related content block",
                                   "blocks": [
                                     {
-                                      "id": "acc31d03",
+                                      "id": "a935e745",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Related content block",
                                         "attributes": []
                                       },
                                       "position": [
-                                        13,
+                                        14,
                                         1,
                                         1,
                                         1,
@@ -1414,7 +1424,7 @@
                                   ]
                                 },
                                 "position": [
-                                  13,
+                                  14,
                                   1,
                                   1,
                                   1
@@ -1423,7 +1433,7 @@
                             ]
                           },
                           "position": [
-                            13,
+                            14,
                             1,
                             1
                           ]
@@ -1431,46 +1441,46 @@
                       ]
                     },
                     "position": [
-                      13,
+                      14,
                       1
                     ]
                   },
                   {
-                    "id": "46acac2f",
+                    "id": "65465e67",
                     "type": "link",
                     "model": {
                       "locator": "urn:bbc:cps:curie:asset:b5c53243-a695-e059-e040-850a02846523",
                       "blocks": [
                         {
-                          "id": "663745ca",
+                          "id": "432845ff",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "1df66501",
+                                "id": "109d1ae5",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "f11e478f",
+                                      "id": "f58bc402",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "d99e8260",
+                                            "id": "4b9edb2e",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "BBC Test Image",
                                               "blocks": [
                                                 {
-                                                  "id": "c72289e0",
+                                                  "id": "cdfba5b7",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "BBC Test Image",
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    13,
+                                                    14,
                                                     2,
                                                     1,
                                                     1,
@@ -1482,7 +1492,7 @@
                                               ]
                                             },
                                             "position": [
-                                              13,
+                                              14,
                                               2,
                                               1,
                                               1,
@@ -1493,7 +1503,7 @@
                                         ]
                                       },
                                       "position": [
-                                        13,
+                                        14,
                                         2,
                                         1,
                                         1,
@@ -1503,14 +1513,14 @@
                                   ]
                                 },
                                 "position": [
-                                  13,
+                                  14,
                                   2,
                                   1,
                                   1
                                 ]
                               },
                               {
-                                "id": "b2f0f565",
+                                "id": "3dc7e5be",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 640,
@@ -1521,7 +1531,7 @@
                                   "copyrightHolder": "BBC"
                                 },
                                 "position": [
-                                  13,
+                                  14,
                                   2,
                                   1,
                                   2
@@ -1530,38 +1540,38 @@
                             ]
                           },
                           "position": [
-                            13,
+                            14,
                             2,
                             1
                           ]
                         },
                         {
-                          "id": "19aec36e",
+                          "id": "b6e487d9",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "762ee700",
+                                "id": "7d09a7f4",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "News homepage",
                                   "blocks": [
                                     {
-                                      "id": "b2d5afcf",
+                                      "id": "2364cff8",
                                       "type": "urlLink",
                                       "model": {
                                         "text": "News homepage",
                                         "locator": "https://www.bbc.co.uk/news",
                                         "blocks": [
                                           {
-                                            "id": "95423917",
+                                            "id": "3118a440",
                                             "type": "fragment",
                                             "model": {
                                               "text": "News homepage",
                                               "attributes": []
                                             },
                                             "position": [
-                                              13,
+                                              14,
                                               2,
                                               2,
                                               1,
@@ -1573,7 +1583,7 @@
                                         "isExternal": false
                                       },
                                       "position": [
-                                        13,
+                                        14,
                                         2,
                                         2,
                                         1,
@@ -1583,7 +1593,7 @@
                                   ]
                                 },
                                 "position": [
-                                  13,
+                                  14,
                                   2,
                                   2,
                                   1
@@ -1592,7 +1602,7 @@
                             ]
                           },
                           "position": [
-                            13,
+                            14,
                             2,
                             2
                           ]
@@ -1600,46 +1610,46 @@
                       ]
                     },
                     "position": [
-                      13,
+                      14,
                       2
                     ]
                   },
                   {
-                    "id": "6a451d4f",
+                    "id": "54354f41",
                     "type": "link",
                     "model": {
                       "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.co.uk%2Fmundo",
                       "blocks": [
                         {
-                          "id": "407ca038",
+                          "id": "4a1f2b7f",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "4cf81dc8",
+                                "id": "fd058c99",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "a2d8d3b1",
+                                      "id": "a6aced9f",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "12182c30",
+                                            "id": "1a717e1d",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "Breaking News image",
                                               "blocks": [
                                                 {
-                                                  "id": "7bea2995",
+                                                  "id": "ff5513ea",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "Breaking News image",
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    13,
+                                                    14,
                                                     3,
                                                     1,
                                                     1,
@@ -1651,7 +1661,7 @@
                                               ]
                                             },
                                             "position": [
-                                              13,
+                                              14,
                                               3,
                                               1,
                                               1,
@@ -1662,7 +1672,7 @@
                                         ]
                                       },
                                       "position": [
-                                        13,
+                                        14,
                                         3,
                                         1,
                                         1,
@@ -1672,14 +1682,14 @@
                                   ]
                                 },
                                 "position": [
-                                  13,
+                                  14,
                                   3,
                                   1,
                                   1
                                 ]
                               },
                               {
-                                "id": "2efa10ab",
+                                "id": "40c453c9",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 976,
@@ -1690,7 +1700,7 @@
                                   "copyrightHolder": "BBC"
                                 },
                                 "position": [
-                                  13,
+                                  14,
                                   3,
                                   1,
                                   2
@@ -1699,38 +1709,38 @@
                             ]
                           },
                           "position": [
-                            13,
+                            14,
                             3,
                             1
                           ]
                         },
                         {
-                          "id": "3f62cbee",
+                          "id": "187e87a9",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "f172779f",
+                                "id": "1402cda5",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Mundo homepage",
                                   "blocks": [
                                     {
-                                      "id": "dd661530",
+                                      "id": "96bc523e",
                                       "type": "urlLink",
                                       "model": {
                                         "text": "Mundo homepage",
                                         "locator": "https://www.bbc.co.uk/mundo",
                                         "blocks": [
                                           {
-                                            "id": "7d0ae2b1",
+                                            "id": "5b291ba2",
                                             "type": "fragment",
                                             "model": {
                                               "text": "Mundo homepage",
                                               "attributes": []
                                             },
                                             "position": [
-                                              13,
+                                              14,
                                               3,
                                               2,
                                               1,
@@ -1742,7 +1752,7 @@
                                         "isExternal": false
                                       },
                                       "position": [
-                                        13,
+                                        14,
                                         3,
                                         2,
                                         1,
@@ -1752,7 +1762,7 @@
                                   ]
                                 },
                                 "position": [
-                                  13,
+                                  14,
                                   3,
                                   2,
                                   1
@@ -1761,7 +1771,7 @@
                             ]
                           },
                           "position": [
-                            13,
+                            14,
                             3,
                             2
                           ]
@@ -1769,14 +1779,14 @@
                       ]
                     },
                     "position": [
-                      13,
+                      14,
                       3
                     ]
                   }
                 ]
               },
               "position": [
-                13
+                14
               ]
             }
           ]
@@ -1785,14 +1795,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:crrrkxz2k0ko",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:crrrkxz2k0ko"
+          "optimoUrn": "urn:bbc:optimo:asset:crrrkxz2k0ko",
+          "canonicalUrl": "https://www.bbc.com/pidgin/articles/crrrkxz2k0ko"
         },
         "type": "article",
         "createdBy": "Pidgin",
         "language": "pcm",
         "firstPublished": 1637670147913,
         "lastPublished": 1638873511565,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:crrrkxz2k0ko",
           "producer": "Pidgin",
@@ -1820,7 +1830,6 @@
             ]
           }
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -1838,7 +1847,6 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "Test Links page",
           "promoHeadline": {
@@ -1939,8 +1947,7 @@
               }
             }
           ]
-        },
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -2426,7 +2433,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T21:04:58.371Z",
+        "generated": "2023-02-18T03:04:58.493Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
         "totalRecords": 20,

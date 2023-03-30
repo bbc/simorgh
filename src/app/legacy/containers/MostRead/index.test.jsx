@@ -1,5 +1,4 @@
 import React from 'react';
-import { render, act } from '@testing-library/react';
 import fetchMock from 'fetch-mock';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
@@ -13,6 +12,10 @@ import {
   CORRESPONDENT_STORY_PAGE,
 } from '#app/routes/utils/pageTypes';
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
+import {
+  render,
+  act,
+} from '../../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import MostReadContainer from '.';
 import { setFreshPromoTimestamp } from './utilities/testHelpers';

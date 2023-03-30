@@ -4,8 +4,11 @@ import {
   getArticleSwRegex,
   getArticleManifestRegex,
   getFrontPageRegex,
+  getHomePageRegex,
   getSwRegex,
   getManifestRegex,
+  getHomePageSwRegex,
+  getHomePageManifestRegex,
   getCpsAssetRegex,
   getLiveRadioRegex,
   getPodcastEpisodeRegex,
@@ -38,6 +41,12 @@ export const frontPageDataPath = `${frontPagePath}.json`;
 
 export const frontPageSwPath = getSwRegex(allServices);
 export const frontPageManifestPath = getManifestRegex(allServices);
+
+export const homePagePath = getHomePageRegex(allServices);
+export const homePageDataPath = `${homePagePath}.json`;
+
+export const homePageSwPath = getHomePageSwRegex(allServices);
+export const homePageManifestPath = getHomePageManifestRegex(allServices);
 
 export const cpsAssetPagePath = getCpsAssetRegex(allServices);
 export const cpsAssetPageDataPath = `${cpsAssetPagePath}.json`;

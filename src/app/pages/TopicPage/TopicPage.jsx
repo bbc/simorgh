@@ -9,15 +9,13 @@ import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstra
 import useToggle from '#hooks/useToggle';
 import { RequestContext } from '#contexts/RequestContext';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
-import isLive from '#lib/utilities/isLive';
+import Curation from '#app/components/Curation';
 import styles from './index.styles';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import TopicImage from './TopicImage';
 import TopicTitle from './TopicTitle';
 import TopicDescription from './TopicDescription';
 import Pagination from './Pagination';
-import MessageBanner from '../../components/MessageBanner';
-import Curation, { VISUAL_PROMINANCE, VISUAL_STYLE } from './Curation';
 
 const TopicPage = ({ pageData }) => {
   const { lang, translations } = useContext(ServiceContext);
@@ -53,14 +51,6 @@ const TopicPage = ({ pageData }) => {
     .replace('{y}', pageCount);
 
   const pageTitle = `${title}, ${translatedPage}`;
-
-  const shouldRenderMessageBanner = (visualStyle, visualProminence) => {
-    return (
-      visualStyle === VISUAL_STYLE.BANNER &&
-      visualProminence === VISUAL_PROMINANCE.NORMAL &&
-      !isLive()
-    );
-  };
 
   return (
     <>
@@ -104,19 +94,13 @@ const TopicPage = ({ pageData }) => {
               link,
               position,
               visualStyle,
-            }) => (
-              <React.Fragment key={`${curationId}-${position}`}>
-                {shouldRenderMessageBanner(visualStyle, visualProminence) ? (
-                  <MessageBanner
-                    title={curationTitle}
-                    summaries={summaries}
-                    position={position}
-                  />
-                ) : (
+            }) => {
+              return (
+                <React.Fragment key={`${curationId}-${position}`}>
                   <Curation
                     headingLevel={curationTitle && 3}
                     visualStyle={visualStyle}
-                    visualProminance={visualProminence}
+                    visualProminence={visualProminence}
                     promos={summaries}
                     title={curationTitle}
                     topStoriesTitle={topStoriesTitle}
@@ -124,9 +108,9 @@ const TopicPage = ({ pageData }) => {
                     link={link}
                     curationLength={curations && curations.length}
                   />
-                )}
-              </React.Fragment>
-            ),
+                </React.Fragment>
+              );
+            },
           )}
           <Pagination
             activePage={activePage}

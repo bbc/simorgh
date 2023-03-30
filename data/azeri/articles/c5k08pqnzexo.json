@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "6b92d75e",
+              "id": "18e95454",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "ab5ca12c",
+                    "id": "4c63ec4c",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "e591e108",
+                          "id": "f2f82dd6",
                           "type": "paragraph",
                           "model": {
                             "text": "Bu test məqaləsinin başlığı budur",
                             "blocks": [
                               {
-                                "id": "f7c5b5b9",
+                                "id": "53f122ca",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Bu test məqaləsinin başlığı budur",
@@ -56,28 +56,28 @@
               ]
             },
             {
-              "id": "acc987e1",
+              "id": "c173d1f1",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "56c1b510",
+                    "id": "41da5bbc",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "ff9944ca",
+                          "id": "33749ea1",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "2127ad5e",
+                                "id": "46c1eff4",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Bu test şəkli, müəllif hüquqları BBC, Fransanın bir xəritəsini göstərir. Şəkil ilk üç blokdadır və bu başlıq var.",
                                   "blocks": [
                                     {
-                                      "id": "58013033",
+                                      "id": "a6cf5426",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Bu test şəkli, müəllif hüquqları BBC, Fransanın bir xəritəsini göstərir. Şəkil ilk üç blokdadır və bu başlıq var.",
@@ -116,23 +116,23 @@
                     ]
                   },
                   {
-                    "id": "308257ab",
+                    "id": "3c5ae6a4",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "3fed4c51",
+                          "id": "fb8f903a",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "192771d0",
+                                "id": "38135236",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Map of France showing Paris and Cognac",
                                   "blocks": [
                                     {
-                                      "id": "cf5f91cf",
+                                      "id": "cfb587aa",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Map of France showing Paris and Cognac",
@@ -171,7 +171,7 @@
                     ]
                   },
                   {
-                    "id": "bb764616",
+                    "id": "f7b03de9",
                     "type": "rawImage",
                     "model": {
                       "width": 624,
@@ -192,7 +192,7 @@
               ]
             },
             {
-              "id": "1c84582d",
+              "id": "1bce8d34",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562936692555,
@@ -203,18 +203,18 @@
               ]
             },
             {
-              "id": "6e6a4e2a",
+              "id": "0d97e6f3",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "18e4ee07",
+                    "id": "befd5dc0",
                     "type": "paragraph",
                     "model": {
                       "text": "Bu BBC Hava səhifəsinə bir url bağlantısı olan bir mətn blokudur.",
                       "blocks": [
                         {
-                          "id": "01b85d4d",
+                          "id": "f0044f21",
                           "type": "fragment",
                           "model": {
                             "text": "Bu ",
@@ -227,13 +227,13 @@
                           ]
                         },
                         {
-                          "id": "d23220a1",
+                          "id": "fb5528a7",
                           "type": "urlLink",
                           "model": {
                             "text": "BBC Hava səhifəsinə",
                             "blocks": [
                               {
-                                "id": "6f8d3bc9",
+                                "id": "a4e0dd6e",
                                 "type": "fragment",
                                 "model": {
                                   "text": "BBC Hava səhifəsinə",
@@ -257,7 +257,7 @@
                           ]
                         },
                         {
-                          "id": "82c624af",
+                          "id": "7a822010",
                           "type": "fragment",
                           "model": {
                             "text": " bir url bağlantısı olan bir mətn blokudur.",
@@ -283,29 +283,29 @@
               ]
             },
             {
-              "id": "01bb31f4",
+              "id": "137d0249",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01k6msm",
                 "blocks": [
                   {
-                    "id": "b88662ab",
+                    "id": "f06f5928",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "25bd252f",
+                          "id": "e1456b27",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "1ff8651d",
+                                "id": "7f6bc4ee",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Bu qarışqalar haqqında bir video ehtiva edən bir video blokdur",
                                   "blocks": [
                                     {
-                                      "id": "2140e77a",
+                                      "id": "d0d9e059",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Bu qarışqalar haqqında bir video ehtiva edən bir video blokdur",
@@ -344,12 +344,12 @@
                     ]
                   },
                   {
-                    "id": "f9e1a4cd",
+                    "id": "c224aebb",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "75934507",
+                          "id": "1a6473f1",
                           "blockId": "urn:bbc:ares::clip:p01k6msm",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -395,12 +395,12 @@
                           ]
                         },
                         {
-                          "id": "2d6dd0c8",
+                          "id": "c3cd96fc",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "37419663",
+                                "id": "d2870f8d",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 1920,
@@ -417,23 +417,23 @@
                                 ]
                               },
                               {
-                                "id": "2b8d0cbf",
+                                "id": "afbe500c",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "405b53a0",
+                                      "id": "64f5ae73",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "db4f0b98",
+                                            "id": "1777b50d",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "Ants",
                                               "blocks": [
                                                 {
-                                                  "id": "269113a0",
+                                                  "id": "a2a2a15e",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "Ants",
@@ -501,23 +501,23 @@
               ]
             },
             {
-              "id": "511ca094",
+              "id": "0798911a",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "e1a2970d",
+                    "id": "9974f8d3",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "00c80c4e",
+                          "id": "93755e73",
                           "type": "paragraph",
                           "model": {
                             "text": "Bu alt alt blokdur",
                             "blocks": [
                               {
-                                "id": "d4e6d4f5",
+                                "id": "fe4981e1",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Bu alt alt blokdur",
@@ -552,28 +552,28 @@
               ]
             },
             {
-              "id": "58d31cb1",
+              "id": "e0db15e5",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "1169880a",
+                    "id": "a362cf13",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "f97a72f4",
+                          "id": "c73a17c3",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "443251f8",
+                                "id": "489ef17d",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Matçdan sonra futbolçular",
                                   "blocks": [
                                     {
-                                      "id": "55301551",
+                                      "id": "26f97278",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Matçdan sonra futbolçular",
@@ -612,7 +612,7 @@
                     ]
                   },
                   {
-                    "id": "3fa820fc",
+                    "id": "5bbad209",
                     "type": "rawImage",
                     "model": {
                       "width": 2048,
@@ -633,18 +633,18 @@
               ]
             },
             {
-              "id": "6611b97c",
+              "id": "fe7772ca",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "6939166e",
+                    "id": "841ce4f7",
                     "type": "paragraph",
                     "model": {
                       "text": "Bu test məqaləsi veb saytımızda avtomatlaşdırılmış son nöqtəli sınaqları keçirə biləcəyimiz üçün yaradıldı.",
                       "blocks": [
                         {
-                          "id": "423a4d2d",
+                          "id": "3f7a0b4b",
                           "type": "fragment",
                           "model": {
                             "text": "Bu test məqaləsi veb saytımızda avtomatlaşdırılmış son nöqtəli sınaqları keçirə biləcəyimiz üçün yaradıldı.",
@@ -670,11 +670,21 @@
               ]
             },
             {
-              "id": "fb11813f",
+              "id": "9bd83fac",
               "type": "mpu",
               "model": {},
               "position": [
                 9
+              ]
+            },
+            {
+              "id": "cc4f42fe",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                10
               ]
             }
           ]
@@ -683,14 +693,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:c5k08pqnzexo",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c5k08pqnzexo"
+          "optimoUrn": "urn:bbc:optimo:asset:c5k08pqnzexo",
+          "canonicalUrl": "https://www.bbc.com/azeri/articles/c5k08pqnzexo"
         },
         "type": "article",
         "createdBy": "Azeri",
         "language": "az",
         "firstPublished": 1562936692555,
         "lastPublished": 1569598550759,
-        "options": {},
         "analyticsLabels": {
           "producer": "Azeri",
           "page": "azeri.articles.c5k08pqnzexo.page"
@@ -700,7 +710,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Azeri",
           "taggings": []
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -718,12 +727,9 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "Bu test məqaləsinin SEO başlığı"
-        },
-        "images": {},
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -979,7 +985,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T22:49:57.272Z",
+        "generated": "2023-02-17T16:34:56.346Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
         "totalRecords": 20,

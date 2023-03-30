@@ -1,8 +1,4 @@
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
-import {
-  C_ARCHIVE_BLUE,
-  C_WHITE,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
 import '#psammead/psammead-locales/moment/en-gb';
 import '#psammead/moment-timezone-include/tz/Europe/London';
 import withContext from '../../../contexts/utils/withContext';
@@ -34,7 +30,6 @@ export const service: DefaultServiceConfig = {
     service: 'archive',
     serviceName: 'Archive',
     languageName: 'English',
-    themeColor: `${C_ARCHIVE_BLUE}`,
     twitterCreator: '@BBCArchive',
     twitterSite: '@BBCArchive',
     noBylinesPolicy: null,
@@ -44,13 +39,6 @@ export const service: DefaultServiceConfig = {
     manifestPath: '/articles/manifest.json',
     swPath: '/articles/sw.js',
     frontPageTitle: 'Home',
-    theming: {
-      brandBackgroundColour: `${C_ARCHIVE_BLUE}`,
-      brandLogoColour: `${C_WHITE}`,
-      brandForegroundColour: `${C_WHITE}`,
-      brandHighlightColour: `${C_WHITE}`,
-      brandBorderColour: `${C_WHITE}`,
-    },
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
@@ -217,6 +205,9 @@ export const service: DefaultServiceConfig = {
     },
     radioSchedule: {
       hasRadioSchedule: false,
+    },
+    recommendations: {
+      hasStoryRecommendations: false,
     },
     footer: {
       externalLink: {

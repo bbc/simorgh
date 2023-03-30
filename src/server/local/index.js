@@ -5,6 +5,7 @@ import {
   articleDataPath,
   cpsAssetPageDataPath,
   frontPageDataPath,
+  homePageDataPath,
   IdxDataPath,
   legacyAssetPageDataPath,
   mostReadDataRegexPath,
@@ -76,6 +77,17 @@ export default server => {
 
       const dataFilePath = constructDataFilePath({
         pageType: 'frontpage',
+        service,
+        variant,
+      });
+
+      sendDataFile(res, dataFilePath, next);
+    })
+    .get(homePageDataPath, async ({ params }, res, next) => {
+      const { service, variant } = params;
+
+      const dataFilePath = constructDataFilePath({
+        pageType: 'homePage',
         service,
         variant,
       });
@@ -169,16 +181,16 @@ export default server => {
       sendDataFile(res, `${dataFilePath}.json`, next);
     })
     .get(topicDataPath, async ({ params }, res, next) => {
-      const { service, variant, id } = params;
+      const { service, id, variant = '' } = params;
 
       const dataFilePath = path.join(
         process.cwd(),
         'data',
         service,
         variant,
+        'topics',
         id,
       );
-
       sendDataFile(res, `${dataFilePath}.json`, next);
     })
     .get(cpsAssetPageDataPath, async ({ params }, res, next) => {
