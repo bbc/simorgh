@@ -10,9 +10,8 @@ export const StyledTimestamp = styled(Promo.Timestamp)`
 
 export const StyledPromoContentWrapper = styled.div`
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 3fr;
 `;
-
 export const StyledPromoTitle = styled(Promo.Title)`
   width: 100%;
   ${({ script }: { script: object }) => script && getPica(script)}
