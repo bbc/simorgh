@@ -1,8 +1,4 @@
 import styled from '@emotion/styled';
-import {
-  C_POSTBOX,
-  C_EBON,
-} from '#psammead/psammead-styles/src/colours';
 
 const InlineLink = styled.a`
   color: ${props => props.theme.palette.EBON};
@@ -16,8 +12,8 @@ const InlineLink = styled.a`
 
   &:focus,
   &:hover {
-    border-bottom: 2px solid ${C_POSTBOX};
-    color: ${C_POSTBOX};
+    border-bottom: 2px solid ${props => props.theme.palette.POSTBOX};
+    color: ${props => props.theme.palette.POSTBOX};
   }
 `;
 

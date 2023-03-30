@@ -3,7 +3,6 @@ import { string, shape } from 'prop-types';
 import styled from '@emotion/styled';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
-import { C_METAL, C_SHADOW } from '#psammead/psammead-styles/src/colours';
 import { getLongPrimer } from '#psammead/gel-foundations/src/typography';
 
 const AVATAR_DIAMETER = '4rem';
@@ -40,10 +39,10 @@ const Person = styled.ul`
 `;
 
 const Name = styled.li`
-  color: ${C_SHADOW};
+  color: ${props => props.theme.palette.SHADOW};
 `;
 const Title = styled.li`
-  color: ${C_METAL};
+  color: ${props => props.theme.palette.METAL};
 `;
 
 const Byline = ({ service, script, name, title, avatar }) => (

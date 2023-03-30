@@ -15,9 +15,9 @@ import { getLongPrimer } from '#psammead/gel-foundations/src/typography';
 import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 
-const rtlStyles = color => `
+const rtlStyles = ({ theme }) => `
   margin-right: ${GEL_MARGIN_BELOW_400PX};
-  border-right: 1px solid ${color};
+  border-right: 1px solid ${theme.palette.METAL};
 
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     width: calc(100% - ${GEL_MARGIN_ABOVE_400PX});
@@ -32,9 +32,9 @@ const rtlStyles = color => `
   }
 `;
 
-const ltrStyles = color => `
+const ltrStyles = ({ theme }) => `
   margin-left: ${GEL_MARGIN_BELOW_400PX};
-  border-left: 1px solid ${color};
+  border-left: 1px solid ${theme.palette.METAL};
 
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     width: calc(100% - ${GEL_MARGIN_ABOVE_400PX});

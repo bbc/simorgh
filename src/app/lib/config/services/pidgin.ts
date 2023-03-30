@@ -243,6 +243,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'Top Tori',
       featuresAnalysisTitle: 'Informate me',
+      latestMediaTitle: 'New things',
     },
     mostRead: {
       header: 'De one we dem de read well well',

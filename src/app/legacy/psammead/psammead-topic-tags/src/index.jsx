@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 import { string, shape, node, func } from 'prop-types';
 import styled from '@emotion/styled';
-import { C_LUNAR, C_METAL } from '#psammead/psammead-styles/src/colours';
+import { LUNAR } from '#app/components/ThemeProvider/palette';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,
@@ -54,7 +54,7 @@ const SingleTopicTagItem = styled.div`
       text-decoration: underline;
     }
     &:visited {
-      color: ${C_METAL};
+      color: ${props => props.theme.palette.METAL};
     }
   }
 `;
@@ -126,5 +126,5 @@ TopicTags.propTypes = {
 
 TopicTags.defaultProps = {
   children: [],
-  tagBackgroundColour: C_LUNAR,
+  tagBackgroundColour: LUNAR,
 };

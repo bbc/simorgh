@@ -256,6 +256,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'Wararka ugu waaweyn',
       featuresAnalysisTitle: 'Xul',
+      latestMediaTitle: 'Arrimhii u danbeeyey',
     },
     mostRead: {
       header: 'Ugu akhris badan',

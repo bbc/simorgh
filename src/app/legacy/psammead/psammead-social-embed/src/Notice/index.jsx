@@ -2,12 +2,6 @@ import React, { memo } from 'react';
 import { string } from 'prop-types';
 import styled from '@emotion/styled';
 import {
-  C_PEBBLE,
-  C_METAL,
-  C_EBON,
-  C_SHADOW,
-} from '#psammead/psammead-styles/src/colours';
-import {
   getSansRegular,
   getSansBold,
 } from '#psammead/psammead-styles/src/font-styles';
@@ -27,9 +21,9 @@ const BORDER_WEIGHT = '0.0625rem';
 const Wrapper = styled.div`
   ${({ service }) => getSansRegular(service)}
   ${GEL_BODY_COPY}
-  border: ${BORDER_WEIGHT} solid ${C_PEBBLE};
+  border: ${BORDER_WEIGHT} solid ${props => props.theme.palette.PEBBLE};
   border-radius: ${GEL_SPACING};
-  color: ${C_SHADOW};
+  color: ${props => props.theme.palette.SHADOW};
   padding: ${GEL_SPACING_DBL};
 
   p {
@@ -44,11 +38,11 @@ const Wrapper = styled.div`
 
   a {
     ${({ service }) => getSansBold(service)}
-    color: ${C_EBON};
+    color: ${props => props.theme.palette.EBON};
     text-decoration: none;
 
     &:visited {
-      color: ${C_METAL};
+      color: ${props => props.theme.palette.METAL};
     }
 
     &:hover,

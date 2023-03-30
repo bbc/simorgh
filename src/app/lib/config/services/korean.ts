@@ -247,6 +247,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: '주요뉴스',
       featuresAnalysisTitle: '이 시간 이슈',
+      latestMediaTitle: '최신',
     },
     mostRead: {
       header: 'TOP 뉴스',

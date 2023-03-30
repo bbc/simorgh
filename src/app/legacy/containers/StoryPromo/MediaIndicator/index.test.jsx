@@ -1,13 +1,10 @@
 import React from 'react';
-import { render } from '@testing-library/react';
 import {
   MEDIA_ASSET_PAGE,
   PHOTO_GALLERY_PAGE,
 } from '#app/routes/utils/pageTypes';
-import {
-  shouldMatchSnapshot,
-  isNull,
-} from '#psammead/psammead-test-helpers/src';
+import { isNull } from '#psammead/psammead-test-helpers/src';
+import { render } from '../../../../components/react-testing-library-with-providers';
 import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import arabic from '../../../../components/ThemeProvider/fontScripts/arabic';
 import MediaIndicator from '.';
@@ -117,56 +114,79 @@ const noMediaFormat = {
 };
 
 describe('Story Promo Media Indicator', () => {
-  shouldMatchSnapshot(
-    'should render an audio item correctly',
-    <MediaIndicator dir="ltr" item={audioItem} script={latin} service="news" />,
-  );
+  it('should render an audio item correctly', () => {
+    const { container } = render(
+      <MediaIndicator
+        dir="ltr"
+        item={audioItem}
+        script={latin}
+        service="news"
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render a video item correctly',
-    <MediaIndicator dir="ltr" item={videoItem} script={latin} service="news" />,
-  );
+  it('should render a video item correctly', () => {
+    const { container } = render(
+      <MediaIndicator
+        dir="ltr"
+        item={videoItem}
+        script={latin}
+        service="news"
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render video indicator correctly when inline',
-    <MediaIndicator
-      dir="ltr"
-      item={videoItem}
-      script={latin}
-      service="news"
-      isInline
-    />,
-  );
+  it('should render video indicator correctly when inline', () => {
+    const { container } = render(
+      <MediaIndicator
+        dir="ltr"
+        item={videoItem}
+        script={latin}
+        service="news"
+        isInline
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render video indicator correctly when inline on RTL',
-    <MediaIndicator
-      dir="rtl"
-      item={videoItem}
-      script={arabic}
-      service="persian"
-      isInline
-    />,
-  );
-  shouldMatchSnapshot(
-    'should render a photo gallery item correctly',
-    <MediaIndicator
-      dir="ltr"
-      item={photogalleryItem}
-      script={latin}
-      service="news"
-    />,
-  );
+  it('should render video indicator correctly when inline on RTL', () => {
+    const { container } = render(
+      <MediaIndicator
+        dir="rtl"
+        item={videoItem}
+        script={arabic}
+        service="persian"
+        isInline
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render correctly even without duration',
-    <MediaIndicator
-      dir="ltr"
-      item={noDurationItem}
-      script={latin}
-      service="news"
-    />,
-  );
+  it('should render a photo gallery item correctly', () => {
+    const { container } = render(
+      <MediaIndicator
+        dir="ltr"
+        item={photogalleryItem}
+        script={latin}
+        service="news"
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
+
+  it('should render correctly even without duration', () => {
+    const { container } = render(
+      <MediaIndicator
+        dir="ltr"
+        item={noDurationItem}
+        script={latin}
+        service="news"
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
   it('should render correctly even without duration and cps type', () => {
     const { container } = render(

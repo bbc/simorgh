@@ -9,6 +9,7 @@ import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 import CpsAssetMediaPlayerContainer from '.';
 import videoBlock from './fixtures';
 import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
+import { ThemeProvider } from '../../../components/ThemeProvider';
 
 const defaultToggles = {
   mediaPlayer: {
@@ -19,24 +20,26 @@ const defaultToggles = {
 // eslint-disable-next-line react/prop-types
 const Component = ({ isAmp }) => {
   return (
-    <ToggleContextProvider toggles={defaultToggles}>
-      <ServiceContextProvider service="pidgin">
-        <RequestContextProvider
-          isAmp={isAmp}
-          pageType={MEDIA_ASSET_PAGE}
-          origin="https://www.bbc.com"
-          service="pidgin"
-          pathname="/pathname"
-        >
-          <BrowserRouter>
-            <CpsAssetMediaPlayerContainer
-              blocks={[videoBlock]}
-              assetUri="/pidgin/23248703"
-            />
-          </BrowserRouter>
-        </RequestContextProvider>
-      </ServiceContextProvider>
-    </ToggleContextProvider>
+    <ThemeProvider service="pidgin">
+      <ToggleContextProvider toggles={defaultToggles}>
+        <ServiceContextProvider service="pidgin">
+          <RequestContextProvider
+            isAmp={isAmp}
+            pageType={MEDIA_ASSET_PAGE}
+            origin="https://www.bbc.com"
+            service="pidgin"
+            pathname="/pathname"
+          >
+            <BrowserRouter>
+              <CpsAssetMediaPlayerContainer
+                blocks={[videoBlock]}
+                assetUri="/pidgin/23248703"
+              />
+            </BrowserRouter>
+          </RequestContextProvider>
+        </ServiceContextProvider>
+      </ToggleContextProvider>
+    </ThemeProvider>
   );
 };
 
