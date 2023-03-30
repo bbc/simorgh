@@ -6,6 +6,7 @@ import {
   VISUAL_STYLE,
   VISUAL_PROMINENCE,
 } from '#app/models/types/curationData';
+import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import { render } from '../react-testing-library-with-providers';
 import Curation from '.';
 
@@ -27,7 +28,12 @@ const components = {
   },
 };
 
-describe('Topic Curations', () => {
+describe('Curation', () => {
+  suppressPropWarnings(['type', 'link']);
+  suppressPropWarnings(['useLargeImages', 'undefined']);
+  suppressPropWarnings(['children', 'string']);
+  suppressPropWarnings(['type', 'article']);
+
   it.each(Object.entries(components))(
     `should render a $testId component`,
     // testId is the key in the components object above
