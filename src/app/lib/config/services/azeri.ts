@@ -322,10 +322,6 @@ export const service: DefaultServiceConfig = {
         title: 'Beynəlxalq',
         url: '/azeri/topics/cde15l4vn02t',
       },
-      {
-        title: 'Video',
-        url: '/azeri/media/video',
-      },
     ],
   },
 };
