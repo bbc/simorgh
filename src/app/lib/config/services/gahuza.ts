@@ -267,6 +267,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: "Inkuru iri kw'isonga",
       featuresAnalysisTitle: 'Ivyo BBC Gahuza ibahitiramwo',
+      latestMediaTitle: 'Ibiheruka',
     },
     mostRead: {
       header: 'Ibisomwa cane',

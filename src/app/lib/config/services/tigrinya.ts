@@ -228,6 +228,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'ዜናታት',
       featuresAnalysisTitle: 'ኣዘራረብቲ ዛዕባታት',
+      latestMediaTitle: 'ናይ መወዳእታ',
     },
     mostRead: {
       header: 'ብብዝሒ ዝተነበ',
