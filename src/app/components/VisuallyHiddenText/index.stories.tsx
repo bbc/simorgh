@@ -23,6 +23,6 @@ export default {
   parameters: { docs: { page: notes } },
 };
 
-export const VisuallyHiddenTextOne = ({ service, text }: Props) => (
+export const Example = ({ service, text }: Props) => (
   <Component service={service} text={text} />
 );
