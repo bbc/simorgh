@@ -3,14 +3,16 @@ import React from 'react';
 import useViewTracker from '#hooks/useViewTracker';
 import generatePromoId from '../generatePromoId';
 import LatestMediaItem from './LatestMediaItem';
-import { LatestMedia, TrackingBlock } from './LatestMediaTypes';
-
-
+import {
+  LatestMedia,
+  TrackingBlock,
+  EventTrackingData,
+} from './LatestMediaTypes';
 
 const renderLatestMediaList = (
   item: LatestMedia,
   index: number,
-  eventTrackingData: { block: TrackingBlock },
+  eventTrackingData: EventTrackingData,
   viewRef: () => Promise<void>,
 ) => {
   const ariaLabelledBy = generatePromoId({

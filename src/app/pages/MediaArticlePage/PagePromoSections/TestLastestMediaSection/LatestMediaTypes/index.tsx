@@ -13,9 +13,13 @@ export type TrackingBlock = {
   componentName: string;
 };
 
+export type EventTrackingData = {
+  block: TrackingBlock;
+};
+
 export type LatestMediaItemProp = {
   item: LatestMedia;
-  ariaLabelledBy: unknown;
-  ref: unknown;
-  eventTrackingData: unknown;
+  ariaLabelledBy: string;
+  ref: () => Promise<void>;
+  eventTrackingData: EventTrackingData;
 };
