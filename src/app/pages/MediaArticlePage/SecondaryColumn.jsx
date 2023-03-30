@@ -12,10 +12,8 @@ import {
 
 import { articleDataPropTypes } from '#models/propTypes/article';
 
-import FeaturesAnalysis from '#containers/CpsFeaturesAnalysis';
-import TopStoriesSection from './PagePromoSections/TopStoriesSection';
-import latestMediaSection from './PagePromoSections/LatestMediaSection';
-import { Secondary, gridColumnsSecondary } from './MediaArticlePageGrid';
+import LatestMediaSection from './PagePromoSections/TestLastestMediaSection';
+import { Secondary } from './MediaArticlePageGrid';
 
 const ResponsiveComponentWrapper = styled.div`
   margin-bottom: ${GEL_SPACING_TRPL};
@@ -28,33 +26,15 @@ const ResponsiveComponentWrapper = styled.div`
 const SecondaryColumn = ({ pageData }) => {
   const topStoriesContent = path(['secondaryColumn', 'topStories'], pageData);
   const featuresContent = path(['secondaryColumn', 'features'], pageData);
-  const latestMediaContent = path(['secondaryColumn', 'latest'], pageData);
-
-  const {
-    palette: { GREY_2 },
-  } = useTheme();
+  const latestMediaContent = path(['secondaryColumn', 'latestMedia'], pageData);
 
   if (!topStoriesContent && !featuresContent) return null;
 
   return (
     <Secondary>
-      {topStoriesContent && (
-        <ResponsiveComponentWrapper data-testid="top-stories">
-          <TopStoriesSection content={topStoriesContent} />
-        </ResponsiveComponentWrapper>
-      )}
-      {featuresContent && (
-        <ResponsiveComponentWrapper data-testid="features">
-          <FeaturesAnalysis
-            content={featuresContent}
-            parentColumns={gridColumnsSecondary}
-            sectionLabelBackground={GREY_2}
-          />
-        </ResponsiveComponentWrapper>
-      )}
       {latestMediaContent && (
         <ResponsiveComponentWrapper data-testid="latest-media">
-          <latestMediaSection content={latestMediaContent} />
+          <LatestMediaSection content={latestMediaContent} />
         </ResponsiveComponentWrapper>
       )}
     </Secondary>
