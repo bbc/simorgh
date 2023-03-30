@@ -265,6 +265,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'முக்கிய செய்திகள்',
       featuresAnalysisTitle: 'சிறப்புச் செய்திகள்',
+      latestMediaTitle: 'மிகச் சமீபத்தியது',
     },
     mostRead: {
       header: 'அதிகம் படிக்கப்பட்டது',
