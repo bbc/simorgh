@@ -3,11 +3,7 @@ import isEmpty from 'ramda/src/isEmpty';
 import Promo from '#components/OptimoPromos';
 import { LatestMediaItemProp } from '../LatestMediaTypes';
 import { ServiceContext } from '../../../../../contexts/ServiceContext';
-import {
-  StyledTitle,
-  StyledTimestamp,
-  StyledTopStoriesWrapper,
-} from './index.styles';
+import styles, { StyledTopStoriesWrapper } from './index.styles';
 
 const LatestMediaItem = ({
   item,
@@ -29,9 +25,9 @@ const LatestMediaItem = ({
           eventTrackingData={eventTrackingData}
         >
           <Promo.ContentWrapper>
-            <StyledTitle as="h3" script={script}>
+            <Promo.Title css={styles.StyledTitleCss} as="h3" script={script}>
               {/* <Promo.Link>{mediaType && <Promo.MediaIndicator />}</Promo.Link> */}
-            </StyledTitle>
+            </Promo.Title>
           </Promo.ContentWrapper>
           <p>{item.description}</p>
         </Promo>
