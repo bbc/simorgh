@@ -86,6 +86,9 @@ jobs:
           onlyChanged: true
           autoAcceptChanges: true # Auto accept changes to accept a new baseline when merging to latest
 
+      - name: Check Component Health Metadata
+        run: yarn test:component-health
+
       - name: Duplicate Dependency Checker
         run: yarn test:dependencies
 
