@@ -113,6 +113,7 @@
   },
   "devDependencies": {
     "@babel/core": "7.21.0",
+    "@babel/node": "^7.20.7",
     "@babel/plugin-proposal-export-default-from": "7.18.10",
     "@babel/plugin-proposal-object-rest-spread": "7.20.7",
     "@babel/plugin-proposal-throw-expressions": "7.18.6",
