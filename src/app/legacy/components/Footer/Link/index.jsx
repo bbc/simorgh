@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { string, bool } from 'prop-types';
+import { string, bool, func } from 'prop-types';
 import { getSansBold } from '#psammead/psammead-styles/src/font-styles';
 import { GEL_SPACING_HLF_TRPL } from '#psammead/gel-foundations/src/spacings';
 
@@ -17,13 +17,14 @@ const StyledLink = styled.a`
   }
 `;
 
-const Link = ({ service, text, href, inline, lang }) => (
+const Link = ({ service, text, href, inline, lang, onClick }) => (
   <StyledLink
     service={service}
     lang={lang}
     inline={inline}
     href={href}
     className="focusIndicatorInvert"
+    onClick={onClick}
   >
     {text}
   </StyledLink>
@@ -33,6 +34,7 @@ Link.defaultProps = {
   service: null,
   inline: false,
   lang: null,
+  onClick: null,
 };
 
 Link.propTypes = {
@@ -41,6 +43,7 @@ Link.propTypes = {
   text: string.isRequired,
   lang: string,
   inline: bool,
+  onClick: func,
 };
 
 export default Link;

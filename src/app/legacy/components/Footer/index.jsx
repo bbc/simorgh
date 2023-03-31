@@ -70,24 +70,48 @@ const StyledAmpCookieSettingsButton = styled(AmpCookieSettingsButton)`
   }
 `;
 
+const showSourcePointMessage = e => {
+  e.preventDefault();
+  if (window.dotcom) {
+    window.dotcom.showSourcePointMessage();
+  }
+};
+
 const SitewideLinks = ({
   links,
   trustProjectLink,
   copyrightText,
   externalLink,
   isAmp,
+  showAdsBasedOnLocation,
   script,
   service,
 }) => {
   const elements = links.map(({ id, text, href, lang }) => {
-    if (isAmp && id === 'COOKIE_SETTINGS') {
-      return (
-        <StyledAmpCookieSettingsButton lang={lang} service={service}>
-          {text}
-        </StyledAmpCookieSettingsButton>
-      );
+    if (id === 'COOKIE_SETTINGS') {
+      if (isAmp) {
+        return (
+          <StyledAmpCookieSettingsButton lang={lang} service={service}>
+            {text}
+          </StyledAmpCookieSettingsButton>
+        );
+      }
+
+      if (showAdsBasedOnLocation) {
+        return (
+          <Link
+            service={service}
+            text={text}
+            href={href}
+            lang={lang}
+            onClick={showSourcePointMessage}
+          />
+        );
+      }
+    } else {
+      return <Link service={service} text={text} href={href} lang={lang} />;
     }
-    return <Link service={service} text={text} href={href} lang={lang} />;
+    return null;
   });
 
   return (
@@ -123,6 +147,7 @@ SitewideLinks.propTypes = {
   trustProjectLink: linkPropTypes,
   externalLink: linkPropTypes.isRequired,
   isAmp: bool,
+  showAdsBasedOnLocation: bool,
   script: shape({}),
   service: string,
 };
@@ -132,6 +157,7 @@ SitewideLinks.defaultProps = {
   service: null,
   isAmp: false,
   trustProjectLink: null,
+  showAdsBasedOnLocation: false,
 };
 
 export default SitewideLinks;
