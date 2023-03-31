@@ -57,6 +57,7 @@ export default ({ service, pageType, variant }) => {
         });
         cy.log(`topic id ${topicId}`);
       }
+      cy.clearLocalStorage();
     });
 
     describe(`Page content`, () => {

@@ -251,6 +251,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'Бош мақола',
       featuresAnalysisTitle: 'Муҳаррир танлови',
+      latestMediaTitle: 'Сўнгги',
     },
     mostRead: {
       header: 'Энг кўп ўқилган',

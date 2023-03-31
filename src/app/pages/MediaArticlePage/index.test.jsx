@@ -2,7 +2,6 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { render, waitFor } from '@testing-library/react';
-import { OptimizelyProvider } from '@optimizely/react-sdk';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import newsMostReadData from '#data/news/mostRead';
@@ -17,30 +16,6 @@ jest.mock('../../components/ThemeProvider');
 jest.mock('#containers/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
-});
-
-jest.mock('#containers/OptimizelyPageViewTracking', () => {
-  const OptimizelyPageViewTracking = () => null;
-  return OptimizelyPageViewTracking;
-});
-
-const optimizely = {
-  onReady: jest.fn(() => Promise.resolve()),
-  track: jest.fn(),
-  user: {
-    attributes: {},
-  },
-  close: jest.fn(),
-};
-
-jest.mock('#containers/OptimizelyPageViewTracking', () => {
-  const OptimizelyPageViewTracking = () => null;
-  return OptimizelyPageViewTracking;
-});
-
-jest.mock('#containers/OptimizelyArticleCompleteTracking', () => {
-  const OptimizelyArticleCompleteTracking = () => null;
-  return OptimizelyArticleCompleteTracking;
 });
 
 const recommendationSettings = {
@@ -87,9 +62,7 @@ const Context = ({
             service={service}
             recommendations={recommendationSettings}
           >
-            <OptimizelyProvider optimizely={optimizely} isServerSide>
-              {children}
-            </OptimizelyProvider>
+            {children}
           </ServiceContextProvider>
         </RequestContextProvider>
       </ToggleContextProvider>
@@ -113,6 +86,22 @@ describe('MediaArticlePage', () => {
 
     await waitFor(() => {
       expect(container).toMatchSnapshot();
+    });
+  });
+
+  it('should NOT render mpu or advert leaderboard', async () => {
+    fetch.mockResponse(JSON.stringify(newsMostReadData));
+
+    const { container } = render(
+      <Context service="news" adsToggledOn showAdsBasedOnLocation>
+        <MediaArticlePage pageData={pidginPageData} />
+      </Context>,
+    );
+
+    const adElements = container.querySelectorAll('[data-e2e="advertisement"]');
+
+    await waitFor(() => {
+      expect(adElements.length).toBe(0);
     });
   });
 });

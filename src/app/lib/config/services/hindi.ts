@@ -284,6 +284,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'टॉप स्टोरी',
       featuresAnalysisTitle: 'ज़रूर पढ़ें',
+      latestMediaTitle: 'ताज़ा',
     },
     mostRead: {
       header: 'सबसे अधिक पढ़ी गईं',
