@@ -3,7 +3,7 @@ import glob from 'glob';
 import { dirname } from 'path';
 
 const ALLOW_LIST = [
-  // 'src/app/components/Byline',
+  'src/app/components/Byline',
   'src/app/components/Curation',
   'src/app/components/Heading',
   'src/app/components/Image',
