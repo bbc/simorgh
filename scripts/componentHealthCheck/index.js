@@ -2,7 +2,7 @@
 import glob from 'glob';
 import { dirname } from 'path';
 
-const ALLOW_LIST = [
+const COMPONENTS_WITHOUT_METADATA_ALLOW_LIST = [
   'src/app/components/Byline',
   'src/app/components/Curation',
   'src/app/components/Heading',
@@ -56,9 +56,9 @@ const componentsWithMetadata = glob
   .map(path => dirname(path));
 
 const componentsWithoutMetadata = allComponentsWithStories.filter(
-  component =>
+  (component) =>
     !componentsWithMetadata.includes(component) &&
-    !ALLOW_LIST.includes(component),
+    !COMPONENTS_WITHOUT_METADATA_ALLOW_LIST.includes(component)
 );
 
 if (componentsWithoutMetadata.length > 0) {
