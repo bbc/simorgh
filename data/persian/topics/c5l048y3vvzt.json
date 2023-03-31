@@ -1,0 +1,780 @@
+{
+  "data": {
+    "title": "جام جهانی فوتبال ۲۰۲۲ قطر",
+    "description": "مطالب ویژه",
+    "imageData": {
+      "url": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/cc9d/live/ae2120a0-69e4-11ed-94b2-efbc7109d3dd.jpg",
+      "urlTemplate": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/cc9d/live/ae2120a0-69e4-11ed-94b2-efbc7109d3dd.jpg",
+      "originalSize": {
+        "width": 1184,
+        "height": 795
+      },
+      "altText": "world cup",
+      "copyright": "Reuters",
+      "type": "badge"
+    },
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "جام جهانی ۲۰۲۲؛ آمار و ارقام چه می‌گویند؟",
+            "firstPublished": "2022-12-20T16:25:36.283Z",
+            "link": "https://www.bbc.com/persian/articles/czv0vwnyj51o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/ca62/live/36d97f40-8061-11ed-aee9-fdf600c4d890.jpg",
+            "description": "بعد از انجام ۶۴ بازی و ثبت رکورد ۱۷۲ گل در مسابقات جام جهانی ۲۰۲۲ قطر، سرانجام آرژانتین در دیدار نهایی با پیروزی دراماتیک در ضربات پنالتی مقابل فرانسه، برای سومین بار قهرمان جام جهانی شد.",
+            "imageAlt": "لیونل مسی ۳۵ ساله، یکی از ۲۳ بازیکن با تجربه این دوره بود که در مجموع ۸۳ بازی را از ابتدا در ترکیب تیم‌های خود شروع کردند و رکوردی تازه برای جام جهانی به جا گذاشتند",
+            "id": "czv0vwnyj51o"
+          },
+          {
+            "type": "article",
+            "title": "نکات فنی مهم جام جهانی ۲۰۲۲؛ از ضرورت شماره ۹ کلاسیک تا جادوی فوتبال خیابانی",
+            "firstPublished": "2022-12-19T20:54:29.622Z",
+            "link": "https://www.bbc.com/persian/articles/ce92r9q9zn5o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/b82b/live/28ab3ad0-7fb2-11ed-9a9a-951f0708fe77.jpg",
+            "description": "جام جهانی ۲۰۲۲ با قهرمانی آرژانتین به پایان رسید اما مثل تمام دوره‌های پیشین این مسابقات، الگوهای فنی ویژه‌ای در آن پدیدار شد. این مطلب نگاهی دارد به سه نکته فنی برجسته جام جهانی ۲۰۲۲",
+            "imageAlt": "امباپه",
+            "id": "ce92r9q9zn5o"
+          },
+          {
+            "type": "article",
+            "title": "جام جهانی ۲۰۲۲ قطر؛ آرژانتین فرانسه را شکست داد و قهرمان جهان شد",
+            "firstPublished": "2022-12-18T14:00:05.000Z",
+            "link": "https://www.bbc.com/persian/live/sport-64018719",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/888A/production/_128045943_gettyimages-1450101880.jpg",
+            "description": "با دیدار تیم‌های آرژانتین و فرانسه در ورزشگاه لوسیل قطر، قهرمان این دوره جام جهانی مشخص شد. به دنبال یک بازی نفس‌گیر و جذاب و پس از وقت اضافی و کشیده شدن بازی به ضربات- پنالتی، آرژانتین فرانسه را شکست داد و برای سومین بار قهرمان جهان شد.",
+            "imageAlt": "مسی و هم تیمی‌هایش پس از پیروزی مقابل فرانسه",
+            "id": "e735ae42-6b2a-4cb1-b8f5-72f683264541"
+          },
+          {
+            "type": "article",
+            "title": "فینال جام جهانی ۲۰۲۲؛ جدال فرانسه و آرژانتین بر سر نداشتن توپ ",
+            "firstPublished": "2022-12-18T05:08:12.251Z",
+            "link": "https://www.bbc.com/persian/articles/cevd9rkq045o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/ac03/live/0bc14300-7e28-11ed-9998-c9ebfd9a4c3f.jpg",
+            "description": "فینال جام جهانی ۲۰۲۲ امروز (یکشنبه ۱۷ دسامبر) در حالی برگزار می‌شود که تیم‌های بزرگ و قدرتمندی مثل برزیل، انگلیس، اسپانیا، آلمان، هلند و پرتغال در مراحل مختلف حذف شدند تا فرصت حضور در فینال به فرانسه و آرژانتین برسد.\n",
+            "imageAlt": "فرانسه و آرژانتین",
+            "id": "cevd9rkq045o"
+          },
+          {
+            "type": "article",
+            "title": "جدال امباپه و مسی در فینال جام جهانی ۲۰۲۲؛ بازیکنانی که بر جام جهانی حکومت کردند",
+            "firstPublished": "2022-12-16T07:37:38.319Z",
+            "link": "https://www.bbc.com/persian/articles/c3g5d8x90g1o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/f0b4/live/79d97630-7c86-11ed-ad43-15bdc001f0b8.jpg",
+            "description": "بخش ورزشی بی‌بی‌سی نگاهی انداخته به شش جام جهانی که در آن فوق ستاره‌های یک تیم با نمایشی درخشان و مقتدرانه، تورنمنت را به نام خودشان ثبت کردند.",
+            "imageAlt": "قهرمانان جام جهانی",
+            "id": "c3g5d8x90g1o"
+          },
+          {
+            "type": "article",
+            "title": "نیمه نهایی جام جهانی ۲۰۲۲؛ مراکش «دیوانه» نیست و جام می‌خواهد ",
+            "firstPublished": "2022-12-14T11:28:09.389Z",
+            "link": "https://www.bbc.com/persian/articles/c51xznde502o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/6d60/live/57043990-7b9d-11ed-9089-af070607acb0.jpg",
+            "description": "این نخستین بار است که یک تیم آفریقایی به جمع ۴ تیم پایانی جام جهانی می رسد. وقتی قبل از شروع جام جهانی، ساموئل اتوئو ستاره سال‌های قبل بارسلونا و چلسی پیشبینی کرد که مراکش و کامرون فینال ۲۰۲۲ را برگزار خواهند کرد، مورد تمسخر بسیاری از کاربران شبکه‌های اجتماعی قرار گرفت.",
+            "imageAlt": "مراکش و فرانسه",
+            "id": "c51xznde502o"
+          },
+          {
+            "type": "article",
+            "title": "نیمه نهایی جام جهانی  ۲۰۲۲؛ کرواسی از مسی می‌ترسد، آرژانتین از توپ‌های بلند",
+            "firstPublished": "2022-12-13T12:33:57.978Z",
+            "link": "https://www.bbc.com/persian/articles/c2e9y9ngqr3o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/0302/live/685ac490-7ae2-11ed-aa14-f1abf812febd.jpg",
+            "description": "وقتی بازی‌های مرحله یک هشتم نهایی جام جهانی آغاز شد، کمتر کسی تصور می‌کرد یکی از دو بازی نیمه نهایی میان کرواسی و آرژانتین برگزار شود. با نگاهی به مسیر مسابقات، اغلب کارشناسان و هواداران فوتبال منتظر بودند بازی برزیل-آرژانتین یا برزیل-هلند را در نیمه نهایی تماشا کنند.",
+            "imageAlt": "کرواسی و آرژانتین",
+            "id": "c2e9y9ngqr3o"
+          },
+          {
+            "type": "article",
+            "title": "ویتوریو پوتزو؛ مردی که دو ستاره روی پیراهن تیم ملی فوتبال ایتالیا گذاشت",
+            "firstPublished": "2022-12-12T05:58:51.376Z",
+            "link": "https://www.bbc.com/persian/articles/c3g5240nxxqo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/c8d7/live/8dd0aa70-795f-11ed-89c7-b98f88ef558d.jpg",
+            "description": "هنگامی  که دیدیه دشان در نیمه‌نهایی روز چهارشنبه تیمش را مقابل مراکش رهبری می‌کند، امیدوار است که خودش را به رکوردی نزدیک کند که پیش از این فقط یک نفر در فوتبال جهان بدست آورده است.",
+            "imageAlt": "ویتوریو پوتزو و تیم ملی ایتالیا",
+            "id": "c3g5240nxxqo"
+          },
+          {
+            "type": "article",
+            "title": "جام جهانی قطر؛ انگلیس-فرانسه: شب تاریخی برای امباپه و کین",
+            "firstPublished": "2022-12-10T10:32:00.616Z",
+            "link": "https://www.bbc.com/persian/articles/c25xz0dnj31o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/7cec/live/a7f67610-77b0-11ed-84ac-f71170d9063c.jpg",
+            "description": "انگلیس و فرانسه، دو مدعی جدی قهرمانی جام جهانی در مرحله یک‌چهارم نهایی به هم رسیده‌اند. هر دو تیم از مرحله گروهی با اقتدار صعود کردند و در یک‌هشتم نهایی هم قاطعانه برنده شدند.",
+            "imageAlt": "فوتبال انگلیس و فرانسه",
+            "id": "c25xz0dnj31o"
+          },
+          {
+            "type": "article",
+            "title": "فوتبال هلند-آرژانتین؛ پایان آرزوی بزرگ فان‌خال یا مسی؟",
+            "firstPublished": "2022-12-09T10:37:50.978Z",
+            "link": "https://www.bbc.com/persian/articles/c51xkqz2ykgo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/45c8/live/1dabc320-77e7-11ed-8adb-319198613d3d.jpg",
+            "description": "یکی از این تقابل‌های کلاسیک، بازی هلند-آرژانتین است. دست‌کم دو بازی به یادماندنی از رویارویی آرژانتین و هلند در ادوار مختلف جام جهانی را به یاد داریم؛ یکی در فینال جام جهانی ۱۹۷۸ که آرژانتین میزبان مسابقات بود و در فینال هلند را ۳ بر یک شکست داد و قهرمان جهان شد.",
+            "imageAlt": "مسی و فان دایک",
+            "id": "c51xkqz2ykgo"
+          },
+          {
+            "type": "article",
+            "title": "جام جهانی ۲۰۲۲ قطر؛ تمام آن چه باید در مورد کیلیان امباپه بدانید",
+            "firstPublished": "2022-12-08T05:38:41.535Z",
+            "link": "https://www.bbc.com/persian/articles/crgklrml2gno",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/3453/live/c540fb20-761e-11ed-9a18-f9d38333430f.jpg",
+            "description": "گرچه در جام جهانی ۲۰۲۲ قطر بازیکنان زیادی درخشیده‌اند اما هنوز کسی نتوانسته در این زمینه به کیلیان امباپه، فوق ستاره تیم ملی فوتبال فرانسه نزدیک شود.",
+            "imageAlt": "امباپه",
+            "id": "crgklrml2gno"
+          },
+          {
+            "type": "article",
+            "title": "تکرار کابوس منچستریونایتد؛ رونالدو، پرنده‌ای که به قفس بازگشت",
+            "firstPublished": "2022-12-07T12:56:36.797Z",
+            "link": "https://www.bbc.com/persian/articles/c72qwkyewvpo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/f758/live/63b9ac10-762a-11ed-8f97-dbc3d3d6d939.jpg",
+            "description": "پیروزی خیره‌کننده شش بر یک پرتغال مقابل سوییس، مقتدرانه‌ترین پیروزی یکی از هشت تیم راه یافته به مرحله یک چهارم نهایی جام جهانی است. این نتیجه اما درحالی رقم خورد که کریستیانو رونالدو برای نخستین بار در ۱۶ سال گذشته، در بازی تیم ملی پرتغال نیمکت‌نشین شده بود و جانشین او یعنی گونسالو راموس هم ۳ گل در جریان بازی زد، تا عملا ترکیب پرتغال بدون رونالدو، تثبیت شود.",
+            "imageAlt": "رونالدو",
+            "id": "c72qwkyewvpo"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:50980c2a-0a64-4a5f-939b-aecd07ac6d33",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "title": "مطالب ویژه",
+        "visualProminence": "NORMAL"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "جام جهانی ۲۰۲۲؛ چه کسانی از جام جهانی پول درمی‌آورند؟",
+            "firstPublished": "2022-12-27T05:52:51.616Z",
+            "link": "https://www.bbc.com/persian/articles/clwn2lzwq8po",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/7966/live/a3bc0cf0-8533-11ed-ba2d-816e41c4565e.jpg",
+            "description": "جام جهانی ۲۰۲۲ قطر به اعتقاد بسیاری بحث‌برانگیزترین جام جهانی تاریخ بود، هرچند که بیشترین درآمد را برای فیفا به ارمغان آورد. اما این درآمدها چگونه و از چه راه‌هایی حاصل شدند؟ کشور میزبان و اسپانسرها چگونه از این مسابقات منتفع شدند؟",
+            "imageAlt": "جام جهانی قطر",
+            "id": "clwn2lzwq8po"
+          },
+          {
+            "type": "article",
+            "title": "جام جهانی فوتبال ۲۰۲۲ قطر - نتایج مسابقات",
+            "firstPublished": "2022-11-18T13:10:47.000Z",
+            "link": "https://www.bbc.com/persian/sport-63642816",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/09F0/production/_127644520_qatar_2022_results_tables_promo_976-nc.png",
+            "description": "تازه‌ترین نتایج رقابت‌های جام جهانی فوتبال ۲۰۲۲ قطر را در اینجا ببینید.",
+            "imageAlt": "World Cup 2022 - Scores & fixtures",
+            "id": "50ccbd06-03a7-4bfb-b90f-f24f68d89715"
+          },
+          {
+            "type": "article",
+            "title": "از صید مروارید تا برگزاری جام جهانی فوتبال؛ مسابقاتی در خدمت بلندپروازی قطر",
+            "firstPublished": "2022-11-13T15:44:09.135Z",
+            "link": "https://www.bbc.com/persian/articles/c9wev9kv0lro",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/a432/live/46302970-6348-11ed-b95b-a93044aa492f.jpg",
+            "description": "یک برنامه بلندپروازانه توسعه اقتصادی در کنار سرمایه‌گذاری‌های هوشمندانه در بازارهای بین‌اللملی سرمایه، قطری‌ها را به یکی از بازیگرهای اصلی اقتصاد جهان تبدیل کرده است. در این میان جام جهانی ۲۰۲۲ فوتبال حکم یک «کاتالیزور» را برای قطر در این مسیر دارد.",
+            "imageAlt": "جام جهانی قطر",
+            "id": "c9wev9kv0lro"
+          },
+          {
+            "type": "article",
+            "title": "جام جهانی ۲۰۲۲ قطر؛ کفش طلا پای چه کسی خواهد رفت؟ ",
+            "firstPublished": "2022-11-16T14:06:31.746Z",
+            "link": "https://www.bbc.com/persian/articles/cw0j9419w6lo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/0789/live/955154c0-6514-11ed-8e4d-7b25e25a1d14.jpg",
+            "description": "یکی از جذاب‌ترین چالش‌ها در جام جهانی مثل هر تورنمنت فوتبالی دیگری، رقابت مهاجمان برای کسب عنوان آقای گلی و بدست آوردن کفش طلای این رقابت‌هاست.  در آستانه رقابت‌های جام جهانی قطر، این مطلب نگاهی دارد به بازیکنانی که بیش از همه بخت تصاحب این جایزه را دارند.",
+            "imageAlt": "کفش طلا",
+            "id": "cw0j9419w6lo"
+          },
+          {
+            "type": "article",
+            "title": "جام جهانی ۲۰۲۲ قطر؛ آن‌چه مسافران جام جهانی باید بدانند",
+            "firstPublished": "2022-04-03T22:21:23.000Z",
+            "link": "https://www.bbc.com/persian/sport-60973820",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/A8E7/production/_121593234_qatar2-index.jpg",
+            "description": "جام جهانی فوتبال برای نخستین بار در خاورمیانه و کشوری مسلمان برگزار می‌شود. شرایط ویژه کشور قطر موجب شده بسیاری از هواداران فوتبال انتظار تورنمنتی متفاوت را داشته باشند؛ اما در زمستان آینده اگر قصد دیدن جام جهانی ۲۰۲۲ را از نزدیک دارید، باید منتظر چه شرایطی باشید؟",
+            "imageAlt": "Qatar World Cup",
+            "id": "fa52ebc0-1928-4d9e-bbe7-ec8d4a35592b"
+          },
+          {
+            "type": "article",
+            "title": "جام جهانی ۲۰۲۲ قطر؛ ده نکته جذاب در مورد مرحله گروهی مسابقات",
+            "firstPublished": "2022-04-05T04:39:40.000Z",
+            "link": "https://www.bbc.com/persian/sport-60985627",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/6D1A/production/_124003972_-ebb88b46-59f7-4144-8bce-8166eebe9233.png",
+            "description": "گرچه هنوز تکلیف سه تیم حاضر در این مسابقات روشن نشده است ولی از همین حالا هم می‌توان حساب بعضی از بازی‌ها را از بقیه سوا کرد. اما گل سر سبد بازی‌های دور مقدماتی جام جهانی کدام مسابقات هستند؟ این مطلب نگاهی انداخته به ۱۰ نکته جذاب مرحله گروهی جام جهانی قطر.",
+            "imageAlt": "Kylian Mbappe, Lionel Messi, Harry Kane and Sadio Mane",
+            "id": "2ed312e2-f706-4fd2-aef2-978fd70d930a"
+          },
+          {
+            "type": "article",
+            "title": "جام جهانی ۲۰۲۲ قطر؛ از ورزشگاه‌های میزبان چه می‌دانیم؟",
+            "firstPublished": "2022-04-12T09:04:14.000Z",
+            "link": "https://www.bbc.com/persian/sport-61058693",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/B3A6/production/_124109954_-cfb79695-b4b3-452d-942c-bf2a57f7c11e.png",
+            "description": "یک ورزشگاه شکل عرق‌چین است؛ دیگری را شبیه کشتی ساخته‌اند و آن یکی مثل خیمه‌هاست. از مدت‌ها قبل معلوم بود که ورزشگاه‌های این جام جهانی با دوره‌های قبلی تفاوت دارند. این مطلب نگاهی دارد به ورزشگاه‌های جام جهانی قطر که قرار است از سی آبان امسال (۲۱ نوامبر) شروع شود.",
+            "imageAlt": "Al Thumama, Stadium 974, Al Bayt",
+            "id": "173f01c5-f603-461c-8e2f-ac3c5dd171fd"
+          },
+          {
+            "type": "article",
+            "title": "جام جهانی کی برگزار می‌شود و چرا قطر میزبان شد؟",
+            "firstPublished": "2022-06-16T09:50:11.000Z",
+            "link": "https://www.bbc.com/persian/sport-61799297",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/163A1/production/_125314019_gettyimages-1387877982.jpg",
+            "description": "جام جهانی فوتبال نوامبر و دسامبر امسال (آبان و آذر) در قطر برگزار می‌شود. این مطلب به بعضی سئوالات در مورد این مسابقات جواب می‌دهد.",
+            "imageAlt": "Fan holding a Qatar football scarf",
+            "id": "5f887368-1f47-42c1-b870-5a261fd94efd"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:677a03f2-ddeb-4990-af56-afd058ed9447",
+        "curationType": "tipo-curation",
+        "position": 1,
+        "title": "درباره جام جهانی بیشتر بدانیم",
+        "visualProminence": "NORMAL"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "رونالدو؛ راه رستگاری با برزیل در جام جهانی ۲۰۰۲",
+            "firstPublished": "2022-11-30T05:20:16.120Z",
+            "link": "https://www.bbc.com/persian/articles/ceq2vlv9pdzo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/ad76/live/8f57bf00-6ff0-11ed-aff8-0fa2a4cc0030.jpg",
+            "description": "در پنجمین و آخرین قسمت از مطالب مربوط به اسطوره‌های جام جهانی، بخش ورزشی بی‌بی‌سی به رونالدو ستاره برزیل و برنده کفش طلای جام جهانی ۲۰۰۲ می‌پردازد.",
+            "imageAlt": "رونالدو",
+            "id": "ceq2vlv9pdzo"
+          },
+          {
+            "type": "article",
+            "title": "یوهان کرویف؛ توتال فوتبال و مسابقاتی که همه چیز را تغییر داد",
+            "firstPublished": "2022-11-15T07:55:31.097Z",
+            "link": "https://www.bbc.com/persian/articles/c51pyy60v8po",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/e480/live/a88d2820-6375-11ed-8a4b-ff7e0ed3fb5a.jpg",
+            "description": "در چهارمین مطلب در مورد اسطوره‌های جام جهانی، بخش ورزشی بی‌بی‌سی به یوهان کرویف پرداخته و توتال فوتبالی که هلند در جام جهانی ۱۹۷۴ بازی می‌کرد و تصویر فوتبال در دنیا را تغییر داد.",
+            "imageAlt": "کرویف",
+            "id": "c51pyy60v8po"
+          },
+          {
+            "type": "article",
+            "title": "پله و جام جهانی ۱۹۷۰؛ چگونه بهترین بازیکن دوران «اسطوره‎‌تر» شد",
+            "firstPublished": "2022-11-14T07:01:53.001Z",
+            "link": "https://www.bbc.com/persian/articles/c88jzy11qlvo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/d0ac/live/043d8690-604e-11ed-af40-7dc243a72731.jpg",
+            "description": "در سومین بخش از بررسی اسطوره‌های جام جهانی، بخش ورزشی بی‌بی‌سی نگاهی انداخته به پله و نقش او در قهرمانی تیم رویایی برزیل در جام جهانی ۱۹۷۰.",
+            "imageAlt": "پله",
+            "id": "c88jzy11qlvo"
+          },
+          {
+            "type": "article",
+            "title": "دیگو مارادونا؛ متقلبی مکار یا نابغه‌ای شگفت‌انگیز؟",
+            "firstPublished": "2022-11-06T13:54:19.120Z",
+            "link": "https://www.bbc.com/persian/articles/c259gvzz1qyo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/39c0/live/614dc870-56aa-11ed-ac87-630245663c6a.jpg",
+            "description": "در دومین قسمت از مرور زندگی اسطوره‌های جام جهانی گی‌یم بالاگه، نویسنده کتاب زندگینامه دیگو مارادونا و کارشناس فوتبال اسپانیا، نگاهی انداخته به پشت پرده عملکرد دیگو ماردونا و این که چگونه شماره ۱۰ آرژانتین الهام‌بخش این تیم در قهرمانی جام جهانی ۱۹۸۶ شد.",
+            "imageAlt": "دیگو مارادونا",
+            "id": "c259gvzz1qyo"
+          },
+          {
+            "type": "article",
+            "title": "زین‌الدین زیدان؛ نگاهی به جام جهانی ۱۹۹۸ و ستاره‌ای که به اتحاد جامعه فرانسه کمک کرد",
+            "firstPublished": "2022-11-02T14:33:49.072Z",
+            "link": "https://www.bbc.com/persian/articles/c1vrkq3r6pvo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/110b/live/8e24cae0-56a2-11ed-9e82-b53f00dcb05c.jpg",
+            "description": "در اولین بخش از مرور اسطوره‌های جام جهانی فوتبال، بخش ورزشی بی‌بی‌سی نگاهی انداخته به زین‌الدین زیدان و نقش او در رهبری تیمی که جامعه چند فرهنگی فرانسه را پس از قهرمانی در جام جهانی ۱۹۹۸ متحد کرد.",
+            "imageAlt": "تیم ملی فرانسه",
+            "id": "c1vrkq3r6pvo"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:f4b81e46-54a8-4b12-9791-db929c5261c5",
+        "curationType": "tipo-curation",
+        "position": 2,
+        "title": "اسطوره‌های جام جهانی",
+        "visualProminence": "NORMAL"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "گروه A جام جهانی ۲۰۲۲ قطر: نبرد قاره‌ها",
+            "firstPublished": "2022-11-17T06:06:34.221Z",
+            "link": "https://www.bbc.com/persian/articles/cp0dl6vg9qpo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/f479/live/b3df7b00-65bf-11ed-b4e9-8dc238ee8955.jpg",
+            "description": "حضور چهار نماینده از چهار قاره مختلف، فرصت تماشای نبرد سبک‌های مختلف فوتبال را به علاقه‌مندان فوتبال می‌دهد. بازی افتتاحیه این گروه بین دو تیم قطر، میزبان مسابقات و اکوادور در روز ۲۹ آبان امسال، سوت شروع این دوره از مسابقات جام جهانی خواهد بود.",
+            "imageAlt": "گروه اول جام جهانی",
+            "id": "cp0dl6vg9qpo"
+          },
+          {
+            "type": "article",
+            "title": "گروه B جام جهانی ۲۰۲۲ قطر: سیاسی‌ترین گروه با بالاترین رده‌بندی",
+            "firstPublished": "2022-11-19T06:00:23.119Z",
+            "link": "https://www.bbc.com/persian/articles/c9e1vl8ggv9o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/34bc/live/38e2fc80-65d6-11ed-bf01-875ef85763ed.jpg",
+            "description": "حضور ایران در برابر کشورهای انگلیسی زبان به ویژه آمریکا و انگلیس، این گروه را تبدیل به سیاسی‌ترین گروه مسابقات جام جهانی امسال کرده است. ایران که شاهد گسترش اعتراضات سراسری است، پس از ۲۴ سال مجدداً با آمریکا دیدار خواهد کرد.",
+            "imageAlt": "گروه دوم جام جهانی",
+            "id": "c9e1vl8ggv9o"
+          },
+          {
+            "type": "article",
+            "title": "گروه C جام جهانی؛ آخرین تانگو در قطر",
+            "firstPublished": "2022-11-22T11:34:22.453Z",
+            "link": "https://www.bbc.com/persian/articles/c727z6rlgj5o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/c6ca/live/959f6560-6a51-11ed-92f1-2df8f16e5f80.jpg",
+            "description": "آرژانتین با مسی، از مدعیان اصلی و همیشگی قهرمانی، بخت مسلم صعود از این گروه است و نبرد برای رتبه دوم بین دو تیم مکزیک و لهستان خواهد بود. اما نباید از آمادگی بازیکنان عربستان که دور مقدماتی را با اقتدار پشت سرگذاشتند و آشنایی که با آب و هوای قطر دارند، براحتی گذشت.",
+            "imageAlt": "گروه سوم جام جهانی",
+            "id": "c727z6rlgj5o"
+          },
+          {
+            "type": "article",
+            "title": "گروه D جام جهانی: تاریخ برای فرانسه تکرار خواهد شد؟",
+            "firstPublished": "2022-11-22T13:25:26.609Z",
+            "link": "https://www.bbc.com/persian/articles/c8v14m9gr30o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/fefb/live/8eab30c0-6a5d-11ed-9ffc-afdbcf56acfd.jpg",
+            "description": "نکته برجسته در خصوص گروه چهارم مسابقات، حضور قهرمان دور گذشته جام جهانی، یعنی فرانسه است و بسیاری نگاه‌ها به درخشش ستارگان آبی به ویژه امباپه خواهد بود.",
+            "imageAlt": "گروه چهارم جام جهانی",
+            "id": "c8v14m9gr30o"
+          },
+          {
+            "type": "article",
+            "title": "گروه E جام جهانی: گروه مرگ",
+            "firstPublished": "2022-11-23T10:32:26.193Z",
+            "link": "https://www.bbc.com/persian/articles/c14rqeelzv7o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/33ce/live/b6b39ee0-6a7b-11ed-982f-b7cd16c53da6.jpg",
+            "description": "پس از پایان مراسم قرعه‌کشی و اعلام گروه‌ها، حضور دو تیم قدرتمند اروپا و قهرمانان سال‌های گذشته جام جهانی، آلمان و اسپانیا در کنار تیم قدرتمند ژاپن و تیم شگفتی ساز جام جهانی ۲۰۱۴، کاستاریکا، بسیاری از کارشناسان فوتبال را متقاعد کرد تا عنوان گروه مرگ را به این گروه بدهند.",
+            "imageAlt": "گروه E جام جهانی",
+            "id": "c14rqeelzv7o"
+          },
+          {
+            "type": "article",
+            "title": "گروه F جام جهانی: جدال نسل‌های طلایی",
+            "firstPublished": "2022-11-23T08:12:47.136Z",
+            "link": "https://www.bbc.com/persian/articles/cj7z3z42e3no",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/5755/live/89095800-6ab1-11ed-b9ea-73da17e3ba92.jpg",
+            "description": "تماشای بازی ستارگان مشهور فوتبال جهان در ترکیب تیم‌های بلژیک، کرواسی و مراکش، از جذابیت‌های این گروه جام جهانی است. نسل طلایی بلژیک در سال‌های پایانی خود به دنبال ثبت یک خاطره خوب است و کرواسی پس از نایب قهرمانی در دوره قبل جام جهانی در پی تکرار موفقیت به قطر خواهد آمد.",
+            "imageAlt": "گروه F جام جهانی",
+            "id": "cj7z3z42e3no"
+          },
+          {
+            "type": "article",
+            "title": "گروه G جام جهانی؛ یک دورهمی دیگر",
+            "firstPublished": "2022-11-24T06:06:33.794Z",
+            "link": "https://www.bbc.com/persian/articles/c165p1dnjdko",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1b4f/live/e9b3fe40-6b4b-11ed-9016-a3c4e22531cf.jpg",
+            "description": "نام برزیل که در همه دوره‌های جام جهانی حضور داشته و با ۵ قهرمانی پرافتخارترین تیم دنیاست، هر گروهی را جذاب می‌کند. برزیل در دو جام جهانی قبلی عملکرد چندان مطلوبی نداشته اما در حالی وارد قطر شد که در رتبه نخست رده‌بندی فیفا قرار دارد.",
+            "imageAlt": "گروه G جام جهانی",
+            "id": "c165p1dnjdko"
+          },
+          {
+            "type": "article",
+            "title": "گروه H جام جهانی؛ در انتظار جدالی نزدیک ",
+            "firstPublished": "2022-11-24T07:41:01.943Z",
+            "link": "https://www.bbc.com/persian/articles/cd1023de8y0o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/4500/live/642fd2e0-6b68-11ed-9ebc-693e69336630.jpg",
+            "description": "این گروه شاید نام خیلی بزرگی نداشته باشد اما انتظار می‌رود که یکی از جذاب‌ترین و نزدیک‌ترین جدال‌های جام جهانی در آن شکل بگیرد. این آخرین شانس کریستیانو رونالدو برای قهرمانی در جام جهانی و تکمیل کلکسیون افتخاراتش است، او که از جام جهانی ۲۰۰۶ به این سو نتونسته از مرحله یک‌هشتم نهایی بالاتر برود به شکستن این طلسم می‌اندیشد.",
+            "imageAlt": "گروه H جام جهانی",
+            "id": "cd1023de8y0o"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:685e3cae-22c0-4dd9-8c74-3891c80ba072",
+        "curationType": "tipo-curation",
+        "position": 3,
+        "title": "نمایه گروه‌ها",
+        "visualProminence": "NORMAL"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "واکنش‌ها به حذف ایران در جام جهانی؛ از  «تیم ملی» تا «تیم ملا»",
+            "firstPublished": "2022-11-30T16:35:25.986Z",
+            "link": "https://www.bbc.com/persian/articles/cg38yqn1v4lo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/ba0f/live/97db8380-70c4-11ed-b2a6-05c2eb880dbf.jpg",
+            "description": "بازی تیم ملی فوتبال ایران مقابل آمریکا در جام جهانی ۲۰۲۲ که با شکست و حذف ایران همراه شد، مسابقه‌ای منحصر به فرد در دنیا بود. شکست تیم ملی فوتبال ایران برابر آمریکا و حذف این تیم از ادامه رقابت‌ها، خیلی زود با واکنش روبرو شد. تیم ملی فوتبال ایران در قطر بهترین نتیجه و بدترین نتیجه تاریخش را گرفت، اما از آن مهم‌تر رویکرد مردم نسبت به این تیم بوده است. این برای نخستین بار در تاریخ فوتبال ایران است که بخش عمده‌ای از مردم به دنبال شکست تیم ملی خوشحالی می‌کنند. خش زیادی از مردم ایران این تیم را نه تیم خودشان که تیم جمهوری اسلامی می‌دانند و با گذشت چهار دهه از انقلاب اسلامی برای اولین بار به یک «تیم ملی» لقب «تیم ملا» دادند.",
+            "imageAlt": "تماشاگران فوتبال ایران",
+            "id": "cg38yqn1v4lo"
+          },
+          {
+            "type": "article",
+            "title": "نگاهی به ایران در جام جهانی ۲۰۲۲؛ ضعیف در نیمه اول، ترسناک بعد از دقیقه ۹۰",
+            "firstPublished": "2022-11-30T16:57:24.039Z",
+            "link": "https://www.bbc.com/persian/articles/cxej3zegjdko",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/6b12/live/a4559410-70ca-11ed-89d7-37ea318889a7.jpg",
+            "description": "ماموریت تیم ایران در جام جهانی ۲۰۲۲ با شکست مقابل آمریکا به پایان رسید؛ مسابقه‌ای که پیش از آغاز آن، کادرفنی و بازیکنان ایران نسبت به روند و نتیجه آن کاملا خوشبین بودند اما در جریان بازی آمریکا تیم برتر میدان بود و پیروز شد.",
+            "imageAlt": "کیروش ",
+            "id": "cxej3zegjdko"
+          },
+          {
+            "type": "article",
+            "title": "فوتبال ایران و آمریکا؛ یک ضربه در چارچوب و وداع با جام جهانی",
+            "firstPublished": "2022-11-29T23:14:21.000Z",
+            "link": "https://www.bbc.com/persian/sport-63801120",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/EF62/production/_127828216_gettyimages-1445551445.jpg",
+            "description": "بازی سرنوشت‌ساز ایران و آمریکا درحالی آغاز شد که کارلوس کی‌روش تصمیم گرفت هیچ تغییری در ترکیب خط دفاع، هافبک و حمله خود ایجاد نکند.",
+            "imageAlt": "کیروش",
+            "id": "82e13326-532d-417b-9c1c-0c3fd1738763"
+          },
+          {
+            "type": "article",
+            "title": "ایران با شکست مقابل آمریکا از جام جهانی حذف شد",
+            "firstPublished": "2022-11-29T21:11:23.000Z",
+            "link": "https://www.bbc.com/persian/sport-63801119",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/74B0/production/_127827892_gettyimages-1445535865.jpg",
+            "description": "تیم ملی فوتبال ایران با شکست یک بر صفر مقابل آمریکا از جام جهانی ۲۰۲۲ قطر حذف شد. با این حال، این مسابقه که «سیاسی‌ترین رقابت جام» لقب گرفته بود در خارج از مستطیل سبز با حواشی فراوانی روبرو بود از جمله برخورد ماموران قطری با تماشاگران ضدجمهوری اسلامی.",
+            "imageAlt": "ایران و آمریکا",
+            "id": "d0aa9db0-0524-4137-b0e2-1d34cf47a109"
+          },
+          {
+            "type": "commentary",
+            "title": "ایران به آمریکا باخت و حذف شد؛ تماشاچیان موفق شدند نام مهسا امینی را در ورزشگاه به نمایش بگذارند",
+            "firstPublished": "2022-11-29T17:53:30.000Z",
+            "link": "https://www.bbc.com/persian/live/sport-63799526",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/11B7C/production/_127827527_ca189d588f5eabbb32e62a178b6400795b5832c9.jpg",
+            "description": "بازی ایران و آمریکا که به شکل قابل توجهی تحت تاثیر اعتراض‌های ایران برگزار شد، با نتیجه یک بر صفر به نفع آمریکا به پایان رسید و ایران حذف شد. در جریان این بازی ماموران قطری به شکل گسترده از نمایش داده شدن هرگونه شعار در حمایت از معترضان در ایران جلوگیری کردند. با این حال چند تماشاچی موفق شدند نام مهسا امینی را در ورزشگاه به نمایش بگذارند. چند ساعت قبل از این بازی اعلام شد که تعداد معترضان کشته شده در اعتراض‌های ایران به ۴۴۸ نفر شامل ۶۰ کودک رسیده است.",
+            "imageAlt": ".",
+            "id": "37f122b5-dbed-4b1f-bc75-c3622d962591"
+          },
+          {
+            "type": "article",
+            "title": "فوتبال ایران و آمریکا؛ «باید تیم ملی را پس گرفت یا تمرکز باید روی اعتراضات باشد؟»",
+            "firstPublished": "2022-11-29T15:53:55.555Z",
+            "link": "https://www.bbc.com/persian/articles/c4n2zrvggr0o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/68ec/live/df338ce0-6ffd-11ed-b68f-279fbd5e083b.jpg",
+            "description": "پس از برد تیم ملی فوتبال ایران مقابل ولز در دومین بازی مرحله گروهی جام جهانی ۲۰۲۲ قطر و در آستانه بازی سرنوشت‌ساز مقابل آمریکا، شواهدی از یک تغییر انگاره‌های ذهنی و به دنبال آن تغییر در فضای نگرشی و واکنشی در میان معترضان به چشم می‌خورد.",
+            "imageAlt": "تماشاگر زن فوتبال ایران",
+            "id": "c4n2zrvggr0o"
+          },
+          {
+            "type": "article",
+            "title": "فوتبال ایران-آمریکا؛ تاکتیک ساوتگیت، نقشه راه کی‌روش",
+            "firstPublished": "2022-11-29T05:27:56.320Z",
+            "link": "https://www.bbc.com/persian/articles/c721v51jzx6o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/63c4/live/88494450-6f3b-11ed-a208-5d56ac5eb5e8.jpg",
+            "description": "ایران-آمریکا یکی از حساس‌ترین بازی‌های جام جهانی است؛ مسابقه‌ای که برای دومین بار در تاریخ جام جهانی برگزار می‌شود و می‌توان گفت که به اندازه یکی از بازی‌های حذفی مهم جام جهانی، حساس و دیدنی است.",
+            "imageAlt": "کیروش و رامین رضائیان",
+            "id": "c721v51jzx6o"
+          },
+          {
+            "type": "article",
+            "title": "استفاده از «رانت» اعزام تماشاگر حکومتی به قطر خبرساز شد",
+            "firstPublished": "2022-11-28T12:25:35.000Z",
+            "link": "https://www.bbc.com/persian/iran-63782072",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/150CC/production/_127802268_gettyimages-1444397309.jpg",
+            "description": "یک روز پس از انتشار فایلی درباره برنامه‌ریزی حکومت ایران برای کنترل فضای عمومی و ورزشگاه در قطر، احمد راستینه سخنگوی کمیسیون فرهنگی مجلس شورای اسلامی اعلام کرد درباره «اعزام افراد و کارکنان دولتی» و اختصاص «رانت» برای حضور در جام جهانی تحقیق می‌کند.",
+            "imageAlt": "هواداران حکومت پرچم‌های حکومت جمهوری اسلامی ایران با کلمه الله را حمل می‌کردند",
+            "id": "bd3a5088-732c-4db2-84bc-372421985d2a"
+          },
+          {
+            "type": "article",
+            "title": "هک خبرگزاری فارس؛ افشای فایل صوتی برنامه‌ریزی حکومت در جام جهانی قطر",
+            "firstPublished": "2022-11-27T19:28:10.000Z",
+            "link": "https://www.bbc.com/persian/iran-63775390",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/14BFD/production/_127798948_dd59caa0-d8b4-4788-9bc5-a8886a801366.jpg",
+            "description": "بخشی از اسناد و یک فایل صوتی که گروه هکری «بلک ریوارد» بعد از هک کردن خبرگزاری فارس، نزدیک به سپاه پاسداران منتشر کرده است، مربوط به برنامه‌ریزی حکومت برای کنترل شرایط در داخل و خارج از ایران در ارتباط با حضور تیم ملی فوتبال در جام جهانی قطر است.",
+            "imageAlt": "ساختمان خبرگزاری فارس",
+            "id": "9d37d61e-f33b-4a1c-8f34-fe820748155e"
+          },
+          {
+            "type": "article",
+            "title": "جام جهانی ۲۰۲۲؛ کلینزمن: با کی‌روش حرف می‌زنم",
+            "firstPublished": "2022-11-27T12:24:29.423Z",
+            "link": "https://www.bbc.com/persian/articles/crg26m27znpo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/d005/live/580bdbb0-6e4e-11ed-9b0f-a123ae4e9beb.jpg",
+            "description": "یورگن کلینزمن، کاپیتان و سرمربی سابق تیم ملی فوتبال آلمان گفت که می‌خواهد با کارلوس کی‌روش برای «آرام کردن مسائل» صحبت کند. سرمربی تیم ایران قبلا انتقادهای کلینزمن از تیمش را «بدنامی فوتبال» خوانده بود.\nیورگن کلینزمن که به عنوان کارشناس با تلویزونی بی‌بی‌سی همکاری می‌کند، در بازی مقابل ولز تیم ایران را متهم کرده بود که «روی داور کار می‌کند.»",
+            "imageAlt": "یورگن کلینزمن کاپیتان تیم ملی فوتبال آلمان در دیدار جام جهانی ۱۹۹۸ مقابل ایران بود",
+            "id": "crg26m27znpo"
+          },
+          {
+            "type": "article",
+            "title": "تحلیل فوتبال ایران با ولز؛ ایران توپ را به حریف داد و برنده شد",
+            "firstPublished": "2022-11-25T15:02:18.737Z",
+            "link": "https://www.bbc.com/persian/articles/c72e3pp5jvno",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/c413/live/f2a955c0-6cce-11ed-94b2-efbc7109d3dd.jpg",
+            "description": "بازی دوم ایران درحالی آغاز شد که با توجه به نتایج روز اول در گروه دوم جام جهانی و تساوی ولز مقابل آمریکا، کارلوس کی‌روش به احتمال فراوان روی کسب ۴ امتیاز برای صعود به دور دوم مسابقات حساب می‌کرد.",
+            "imageAlt": "روزبه چشمی",
+            "id": "c72e3pp5jvno"
+          },
+          {
+            "type": "article",
+            "title": "جام جهانی ۲۰۲۲ قطر؛ تیم ملی فوتبال ایران دو بر صفر ولز را شکست داد",
+            "firstPublished": "2022-11-25T12:26:00.000Z",
+            "link": "https://www.bbc.com/persian/sport-63738823",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/7088/production/_127780882_gettyimages-1444436094.jpg",
+            "description": "تیم ملی فوتبال ایران در دومین بازی خود از مرحله گروهی جام جهانی ۲۰۲۲ قطر دو بر صفر با گل‌های روزبه چشمی و رامین رضائیان مقابل ولز پیروز شد. این تیم حالا با ۳ امتیاز در رتبه دوم جدوم قرار دارد و با یک تساوی مقابل آمریکا در بازی سه‌شنبه شب هم بخت صعود دارد.",
+            "imageAlt": "کارلوس کیروش",
+            "id": "9ed38f50-90ec-4b0f-8734-1c6d9b4018e4"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:b309c070-170f-4e44-a6a0-397b4b440550",
+        "curationType": "tipo-curation",
+        "position": 4,
+        "title": "ایران و جام جهانی",
+        "visualProminence": "NORMAL"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "امی مارتینز چگونه بهترین دروازه‌بان جهان شد؟",
+            "firstPublished": "2023-03-01T06:56:15.977Z",
+            "link": "https://www.bbc.com/persian/articles/cd12p2gjwwdo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/efa3/live/f218a1a0-b784-11ed-ba9f-f742b706fec6.jpg",
+            "description": "سپتامبر ۲۰۲۰ که امی مارتینز از آرسنال راهی استون ویلا شد، فهرستی از اهدافش را تهیه کرد و به کمدش در رختکن چسباند؛ یکی از این هدف‌ها «بهترین دروازه‌بان دنیا شدن» بود.",
+            "imageAlt": "امی مارتینز",
+            "id": "cd12p2gjwwdo"
+          },
+          {
+            "type": "article",
+            "title": "سلمان رشدی: احساس خوش‌ شانسی می‌کنم؛ تحت تاثیر حمایت فوتبالیست‌ها از اعتراضات ایران قرار گرفتم",
+            "firstPublished": "2023-02-07T14:11:57.873Z",
+            "link": "https://www.bbc.com/persian/articles/c726rxrnryro",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/a30c/live/60becf80-a6e6-11ed-87ac-0741a9eff217.jpg",
+            "description": "سلمان رشدی، نویسنده کتاب آیات شیطانی که در حمله‌ای در ماه اوت به شدت زخمی شده بود، در مصاحبه‌ای شرایط خود را تشریح و نظر خود را پیرامون برخی موضوعات مطرح کرده است. از ضارب خود را احمق توصیف کرده و گفته است تحت تاثیر حمایت فوتبالیست‌های جام جهانی از اعتراضات ایران قرار گرفت.",
+            "imageAlt": "رشدی",
+            "id": "c726rxrnryro"
+          },
+          {
+            "type": "article",
+            "title": "«خداحافظی» کارلوس کی‌روش؛ چهره‌ای که تغییر کرد",
+            "firstPublished": "2023-02-01T16:01:58.830Z",
+            "link": "https://www.bbc.com/persian/articles/cd1jdz98eq5o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/5015/live/ecad2c70-a232-11ed-9c15-cde74d3dc388.jpg",
+            "description": "رسانه‌ها در ایران، از قطعی شدن جدایی کارلوس کی‌روش سرمربی تیم ملی فوتبال ایران خبر می‌دهند. استدلال آن‌ها مبتنی بر آخرین متنی است که کی‌روش در شبکه‌های اجتماعی منتشر کرد. ",
+            "imageAlt": "کیروش",
+            "id": "cd1jdz98eq5o"
+          },
+          {
+            "type": "article",
+            "title": "«تحلیل‌گر انگلیسی»؛ مردی که پشت پرده موفقیت مراکش در جام جهانی قرار داشت",
+            "firstPublished": "2023-01-31T12:32:04.388Z",
+            "link": "https://www.bbc.com/persian/articles/c2vn0vj9ez4o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/fd72/live/728dc430-a15c-11ed-852c-45c90e46d4ee.jpg",
+            "description": "کینگستون در نوامبر پارسال، به‌عنوان تحلیل‌گر تیم ملی مراکش، یکی از حریفان آینده این تیم یعنی بلژیک را مطالعه می‌کرد و معتقد بود که می‌تواند از برخی جزئیات استفاده کند و آن را تبدیل به اتفاق مهمی کند. او به همراه همکارانش، موسی الحبشی، نبیل حیز و عمر هارک، مربی دروازه‌بانان مراکش نقشه‌ای کشیدند که نتیجه آن پیروزی تاریخی برابر بلژیک بود.",
+            "imageAlt": "هریسون کینگستون، سومین نفر از سمت چپ در ردیف عقب، با سابقه کار برای کاردیف، تاتنهام، برنلی و لیورپول به‌عنوان مدیر تحلیل عملکرد مراکش استخدام شد",
+            "id": "c2vn0vj9ez4o"
+          },
+          {
+            "type": "article",
+            "title": "جام جهانی ۲۰۲۲؛ چه کسانی از جام جهانی پول درمی‌آورند؟",
+            "firstPublished": "2022-12-27T05:52:51.616Z",
+            "link": "https://www.bbc.com/persian/articles/clwn2lzwq8po",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/7966/live/a3bc0cf0-8533-11ed-ba2d-816e41c4565e.jpg",
+            "description": "جام جهانی ۲۰۲۲ قطر به اعتقاد بسیاری بحث‌برانگیزترین جام جهانی تاریخ بود، هرچند که بیشترین درآمد را برای فیفا به ارمغان آورد. اما این درآمدها چگونه و از چه راه‌هایی حاصل شدند؟ کشور میزبان و اسپانسرها چگونه از این مسابقات منتفع شدند؟",
+            "imageAlt": "جام جهانی قطر",
+            "id": "clwn2lzwq8po"
+          },
+          {
+            "type": "article",
+            "title": "تماشاگران گل ریچارلیسون به صربستان را بهترین گل جام جهانی برگزیدند",
+            "firstPublished": "2022-12-23T21:43:10.524Z",
+            "link": "https://www.bbc.com/persian/articles/cqlz252n9j2o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/a313/live/21d32200-82e5-11ed-a60f-a3d460db0179.jpg",
+            "description": "فدراسیون جهانی فوتبال (فیفا)اعلام کرد که تماشاگران، گل ریچارلیسون به تیم صربستان از سوی کاربران سایت فیفا، به عنوان بهترین گل جام جهانی انتخاب شد.",
+            "imageAlt": "ریچارلیسون",
+            "id": "cqlz252n9j2o"
+          },
+          {
+            "type": "article",
+            "title": "جام جهانی ۲۰۲۲؛ آمار و ارقام چه می‌گویند؟",
+            "firstPublished": "2022-12-20T16:25:36.283Z",
+            "link": "https://www.bbc.com/persian/articles/czv0vwnyj51o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/ca62/live/36d97f40-8061-11ed-aee9-fdf600c4d890.jpg",
+            "description": "بعد از انجام ۶۴ بازی و ثبت رکورد ۱۷۲ گل در مسابقات جام جهانی ۲۰۲۲ قطر، سرانجام آرژانتین در دیدار نهایی با پیروزی دراماتیک در ضربات پنالتی مقابل فرانسه، برای سومین بار قهرمان جام جهانی شد.",
+            "imageAlt": "لیونل مسی ۳۵ ساله، یکی از ۲۳ بازیکن با تجربه این دوره بود که در مجموع ۸۳ بازی را از ابتدا در ترکیب تیم‌های خود شروع کردند و رکوردی تازه برای جام جهانی به جا گذاشتند",
+            "id": "czv0vwnyj51o"
+          },
+          {
+            "type": "article",
+            "title": "جام جهانی ۲۰۲۲؛ قهرمانان به آرژانتین برگشتند و یک روز تعطیل عمومی اعلام شد",
+            "firstPublished": "2022-12-20T11:28:30.000Z",
+            "link": "https://www.bbc.com/persian/sport-64021304",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/11893/production/_128072817_30f5ad9b02f7d247c093abf99b7e430e19ce0fe3.jpg",
+            "description": "بازیکنان تیم ملی فوتبال آرژانتین پس از قهرمانی در جام جهانی ۲۰۲۲ قطر به کشورشان برگشتند و در فرودگاه بوئنوس آیرس با استقبالی گسترده روبرو شدند. در این کشور به مناسبت قهرمانی یک روز تعطیل عمومی اعلام شد.",
+            "imageAlt": "Fans greet the Argentina bus",
+            "id": "33d473b2-b608-469e-9877-44459bb631e4"
+          },
+          {
+            "type": "article",
+            "title": "نکات فنی مهم جام جهانی ۲۰۲۲؛ از ضرورت شماره ۹ کلاسیک تا جادوی فوتبال خیابانی",
+            "firstPublished": "2022-12-19T20:54:29.622Z",
+            "link": "https://www.bbc.com/persian/articles/ce92r9q9zn5o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/b82b/live/28ab3ad0-7fb2-11ed-9a9a-951f0708fe77.jpg",
+            "description": "جام جهانی ۲۰۲۲ با قهرمانی آرژانتین به پایان رسید اما مثل تمام دوره‌های پیشین این مسابقات، الگوهای فنی ویژه‌ای در آن پدیدار شد. این مطلب نگاهی دارد به سه نکته فنی برجسته جام جهانی ۲۰۲۲",
+            "imageAlt": "امباپه",
+            "id": "ce92r9q9zn5o"
+          },
+          {
+            "type": "article",
+            "title": "جام جهانی ۲۰۲۲؛ آلبوم عکس جشن قهرمانی مردم آرژانتین",
+            "firstPublished": "2022-12-19T18:13:11.000Z",
+            "link": "https://www.bbc.com/persian/sport-64021301",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/16994/production/_128046529_gettyimages-1245721895.jpg",
+            "description": "به دنبال قهرمانی تیم ملی فوتبال آرژانتین در جام جهانی ۲۰۲۲ قطر، جشنواره‌ای از شادی و سرور در این کشور راه افتاد.",
+            "imageAlt": "تماشاگر آرژانتین",
+            "id": "be2593b0-7147-48d1-b0af-975b62126c42"
+          },
+          {
+            "type": "article",
+            "title": "جام جهانی ۲۰۲۲؛ نگاهی به شش ستاره نوظهور مسابقات",
+            "firstPublished": "2022-12-19T05:22:07.478Z",
+            "link": "https://www.bbc.com/persian/articles/c9xpz53e3yzo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/7ec0/live/07c1c140-7ecc-11ed-bec4-d939ad5b4756.png",
+            "description": "جام جهانی ۲۰۲۲ قطر نیز مانند تمام تورنمنت‌های بزرگ فرصتی بود برای چهره شدن بازیکنان کم سن و سالی که پس از برگزاری مسابقات خود را نه به عنوان جوانانی مستعد که به عنوان ستاره‌های جدید فوتبال جهان معرفی کردند.\n",
+            "imageAlt": "ستاره های جوان جام جهانی",
+            "id": "c9xpz53e3yzo"
+          },
+          {
+            "type": "article",
+            "title": "تحلیل فینال جام جهانی ۲۰۲۲؛ امباپه پا به پای مسی درخشید، دشان به اسکالونی باخت",
+            "firstPublished": "2022-12-18T21:22:50.201Z",
+            "link": "https://www.bbc.com/persian/articles/cldn0k60zezo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/c5c5/live/4d657950-7f15-11ed-a774-c1eab896d97b.jpg",
+            "description": "تیم ملی آرژانتین در حالی قهرمان جام جهانی قطر شد که مسابقات را با شکست ناباورانه به عربستان سعودی آغاز کرد، اما این تیم  با هدایت لیونل اسکالونی بازی به بازی بهتر شد و در فینال به اوج رسید.",
+            "imageAlt": "مسی",
+            "id": "cldn0k60zezo"
+          },
+          {
+            "type": "article",
+            "title": "فینال جام جهانی ۲۰۲۲ قطر؛ تیم ملی فوتبال آرژانتین قهرمان شد",
+            "firstPublished": "2022-12-18T18:16:20.000Z",
+            "link": "https://www.bbc.com/persian/sport-64019145",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/DAF6/production/_128045065_gettyimages-1450109553.jpg",
+            "description": "تیم ملی فوتبال آرژانتین با پیروزی مقابل فرانسه قهرمان جام جهانی ۲۰۲۲ قطر شد. این بازی در پایان وقت‌های عادی و اضافی سه بر سه تمام شد و آرژانتین در ضربات پنالتی چهار بر دو حریفش را شکست داد.",
+            "imageAlt": "مسی",
+            "id": "ea2d77e3-5055-4e10-a7c6-20c442017cf1"
+          },
+          {
+            "type": "article",
+            "title": "فینال جام جهانی ۲۰۲۲؛ جدال فرانسه و آرژانتین بر سر نداشتن توپ ",
+            "firstPublished": "2022-12-18T05:08:12.251Z",
+            "link": "https://www.bbc.com/persian/articles/cevd9rkq045o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/ac03/live/0bc14300-7e28-11ed-9998-c9ebfd9a4c3f.jpg",
+            "description": "فینال جام جهانی ۲۰۲۲ امروز (یکشنبه ۱۷ دسامبر) در حالی برگزار می‌شود که تیم‌های بزرگ و قدرتمندی مثل برزیل، انگلیس، اسپانیا، آلمان، هلند و پرتغال در مراحل مختلف حذف شدند تا فرصت حضور در فینال به فرانسه و آرژانتین برسد.\n",
+            "imageAlt": "فرانسه و آرژانتین",
+            "id": "cevd9rkq045o"
+          },
+          {
+            "type": "article",
+            "title": "جام جهانی ۲۰۲۲؛ کرواسی با پیروزی مقابل مراکش سوم شد",
+            "firstPublished": "2022-12-17T17:38:36.296Z",
+            "link": "https://www.bbc.com/persian/articles/cy70zwwvp1zo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/fb2f/live/22ecfd00-7e30-11ed-8e99-d33d08d6a28a.jpg",
+            "description": "تیم ملی فوتبال کرواسی با پیروزی ۱-۲ مقابل مراکش، شگفتی‌ساز جام جهانی ۲۰۲۲ قطر، به رتبه سوم این تورنمنت رسید.",
+            "imageAlt": "کرواسی",
+            "id": "cy70zwwvp1zo"
+          },
+          {
+            "type": "article",
+            "title": "جدال امباپه و مسی در فینال جام جهانی ۲۰۲۲؛ بازیکنانی که بر جام جهانی حکومت کردند",
+            "firstPublished": "2022-12-16T07:37:38.319Z",
+            "link": "https://www.bbc.com/persian/articles/c3g5d8x90g1o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/f0b4/live/79d97630-7c86-11ed-ad43-15bdc001f0b8.jpg",
+            "description": "بخش ورزشی بی‌بی‌سی نگاهی انداخته به شش جام جهانی که در آن فوق ستاره‌های یک تیم با نمایشی درخشان و مقتدرانه، تورنمنت را به نام خودشان ثبت کردند.",
+            "imageAlt": "قهرمانان جام جهانی",
+            "id": "c3g5d8x90g1o"
+          },
+          {
+            "type": "article",
+            "title": "واکنش‌ها به عملکرد «بهترین بازیکن تاریخ»؛ مسی: این فینال آخرین بازی من در جام جهانی خواهد بود",
+            "firstPublished": "2022-12-15T12:12:36.658Z",
+            "link": "https://www.bbc.com/persian/articles/cpre8j055v5o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/38f2/live/88a4b7e0-7bca-11ed-989e-bb09585b8ca2.jpg",
+            "description": "لیونل مسی، کاپیتان تیم ملی فوتبال آرژانتین گفته که فینال روز یکشنبه، آخرین بازی او در جام جهانی خواهد بود. این مهاجم ۳۵ ساله در دیدار نیمه‌نهایی و پیروزی سه بر صفر سه‌شنبه شب مقابل کرواسی، پنجمین گل خود در جام جهانی ۲۰۲۲ قطر را زد و در دو گل دیگر نیز نقش مستقیم داشت.",
+            "imageAlt": "لیونل مسی",
+            "id": "cpre8j055v5o"
+          },
+          {
+            "type": "article",
+            "title": "نیمه نهایی جام جهانی ۲۰۲۲؛ حذف شگفت‌انگیزها، فرانسه در یک قدمی تکرار قهرمانی",
+            "firstPublished": "2022-12-14T22:22:51.296Z",
+            "link": "https://www.bbc.com/persian/articles/c72qgel72y9o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/6146/live/4e3de3c0-7bfb-11ed-9a0c-73c3ab4b4b7a.jpg",
+            "description": "تیم ملی فوتبال فرانسه با پیروزی دو بر صفر مقابل مراکش به فینال جام جهانی ۲۰۱۲ قطر رسید و حریف آرژانتین در فینال شنبه شب شد.\n\n",
+            "imageAlt": "تئو هرناندز در دقیقه ۵ بازی دروازه مراکش را باز کرد",
+            "id": "c72qgel72y9o"
+          },
+          {
+            "type": "article",
+            "title": "نیمه نهایی جام جهانی ۲۰۲۲؛ مراکش «دیوانه» نیست و جام می‌خواهد ",
+            "firstPublished": "2022-12-14T11:28:09.389Z",
+            "link": "https://www.bbc.com/persian/articles/c51xznde502o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/6d60/live/57043990-7b9d-11ed-9089-af070607acb0.jpg",
+            "description": "این نخستین بار است که یک تیم آفریقایی به جمع ۴ تیم پایانی جام جهانی می رسد. وقتی قبل از شروع جام جهانی، ساموئل اتوئو ستاره سال‌های قبل بارسلونا و چلسی پیشبینی کرد که مراکش و کامرون فینال ۲۰۲۲ را برگزار خواهند کرد، مورد تمسخر بسیاری از کاربران شبکه‌های اجتماعی قرار گرفت.",
+            "imageAlt": "مراکش و فرانسه",
+            "id": "c51xznde502o"
+          },
+          {
+            "type": "article",
+            "title": "جام جهانی ۲۰۲۲ قطر؛ آرژانتین در فینال با فرمانده مسی",
+            "firstPublished": "2022-12-13T21:58:49.771Z",
+            "link": "https://www.bbc.com/persian/articles/c25kygx9k5po",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/0993/live/92b15280-7b2e-11ed-a525-b5d391d4efd4.jpg",
+            "description": "تیم ملی فوتبال آرژانتین با پیروزی سه بر صفر مقابل کرواسی به دیدار نهایی جام جهانی ۲۰۲۲ قطر رسید. برای آرژانتین در این بازی لیونل مسی (۳۴) از روی نقطه پنالتی، جولیان آلوارز (۳۹ و ۶۹) گل زدند.",
+            "imageAlt": "آرژانتین",
+            "id": "c25kygx9k5po"
+          },
+          {
+            "type": "article",
+            "title": "نیمه نهایی جام جهانی  ۲۰۲۲؛ کرواسی از مسی می‌ترسد، آرژانتین از توپ‌های بلند",
+            "firstPublished": "2022-12-13T12:33:57.978Z",
+            "link": "https://www.bbc.com/persian/articles/c2e9y9ngqr3o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/0302/live/685ac490-7ae2-11ed-aa14-f1abf812febd.jpg",
+            "description": "وقتی بازی‌های مرحله یک هشتم نهایی جام جهانی آغاز شد، کمتر کسی تصور می‌کرد یکی از دو بازی نیمه نهایی میان کرواسی و آرژانتین برگزار شود. با نگاهی به مسیر مسابقات، اغلب کارشناسان و هواداران فوتبال منتظر بودند بازی برزیل-آرژانتین یا برزیل-هلند را در نیمه نهایی تماشا کنند.",
+            "imageAlt": "کرواسی و آرژانتین",
+            "id": "c2e9y9ngqr3o"
+          },
+          {
+            "type": "article",
+            "title": "رسوایی «رشوه قطر» به یک مقام اتحادیه اروپا «تهدید دموکراسی» است",
+            "firstPublished": "2022-12-12T22:14:15.000Z",
+            "link": "https://www.bbc.com/persian/world-63952197",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/12D6F/production/_127976177_evakaili.png",
+            "description": "چهار نفر در ارتباط با پرونده دریافت رشوه‌ از قطر برای کمک به اعمال نفوذ این کشور بازداشت شده‌اند.",
+            "imageAlt": "Eva Kaili was arrested on Saturday and has reportedly had her assets frozen",
+            "id": "cad13fe8-ad82-4a03-ac95-ed35aee2aea7"
+          },
+          {
+            "type": "article",
+            "title": "ویتوریو پوتزو؛ مردی که دو ستاره روی پیراهن تیم ملی فوتبال ایتالیا گذاشت",
+            "firstPublished": "2022-12-12T05:58:51.376Z",
+            "link": "https://www.bbc.com/persian/articles/c3g5240nxxqo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/c8d7/live/8dd0aa70-795f-11ed-89c7-b98f88ef558d.jpg",
+            "description": "هنگامی  که دیدیه دشان در نیمه‌نهایی روز چهارشنبه تیمش را مقابل مراکش رهبری می‌کند، امیدوار است که خودش را به رکوردی نزدیک کند که پیش از این فقط یک نفر در فوتبال جهان بدست آورده است.",
+            "imageAlt": "ویتوریو پوتزو و تیم ملی ایتالیا",
+            "id": "c3g5240nxxqo"
+          },
+          {
+            "type": "article",
+            "title": "یک‌چهارم نهایی جام جهانی؛ انگلیس حذف شد، رویای رونالدو به باد رفت",
+            "firstPublished": "2022-12-10T17:30:59.000Z",
+            "link": "https://www.bbc.com/persian/sport-63924358",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/F13C/production/_127965716_gettyimages-1245520496.jpg",
+            "description": "در دومین روز از رقابت‌های مرحله یک‌چهارم نهایی جام جهانی ۲۰۲۲ قطر، فرانسه با پیروزی دو بر یک مقابل انگلیس حریف مراکشی شد که در بازی قبلی پرتغال را یک بر صفر شکست داده بود.",
+            "imageAlt": "هری کین و گرث ساوتگیت",
+            "id": "66e0412e-aa44-4445-ad8e-5b36c37db02c"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 6,
+        "curationId": "urn:bbc:vivo:curation:bdd43795-e481-408d-a93b-2cc10bc71cb2",
+        "curationType": "vivo-stream",
+        "position": 5,
+        "title": "سایر خبرها",
+        "visualProminence": "NORMAL",
+        "visualStyle": "FEED"
+      }
+    ],
+    "activePage": null,
+    "pageCount": null,
+    "variantTopicId": null
+  },
+  "contentType": "application/json; charset=utf-8"
+}
