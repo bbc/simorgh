@@ -13,6 +13,7 @@ import {
   RelatedContentListRtl,
 } from './fixture';
 import md from './README.md';
+import metadata from './metadata.json';
 
 const BackGround = styled.div`
   width: 100%;
@@ -44,6 +45,7 @@ export default {
   RelatedContentComponent,
   decorators: [withKnobs, withServicesKnob()],
   parameters: {
+    metadata,
     docs: {
       page: md,
     },
