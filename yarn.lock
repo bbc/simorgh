@@ -4658,6 +4658,29 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@storybook/addon-toolbars@npm:^6.5.16":
+  version: 6.5.16
+  resolution: "@storybook/addon-toolbars@npm:6.5.16"
+  dependencies:
+    "@storybook/addons": 6.5.16
+    "@storybook/api": 6.5.16
+    "@storybook/client-logger": 6.5.16
+    "@storybook/components": 6.5.16
+    "@storybook/theming": 6.5.16
+    core-js: ^3.8.2
+    regenerator-runtime: ^0.13.7
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+  peerDependenciesMeta:
+    react:
+      optional: true
+    react-dom:
+      optional: true
+  checksum: 7a30259bef831769db3e8d76ad439cc5deec919abf47b27a9d0143a581434748d2c8868fbbf8b9cce2910fd61f2200415b6ab5bc0dfab02436fbea2c312da770
+  languageName: node
+  linkType: hard
+
 "@storybook/addon-viewport@npm:6.5.16":
   version: 6.5.16
   resolution: "@storybook/addon-viewport@npm:6.5.16"
@@ -21334,6 +21357,7 @@ __metadata:
     "@storybook/addon-controls": 6.5.16
     "@storybook/addon-docs": 6.5.16
     "@storybook/addon-knobs": 6.4.0
+    "@storybook/addon-toolbars": ^6.5.16
     "@storybook/addon-viewport": 6.5.16
     "@storybook/builder-webpack5": 6.5.16
     "@storybook/manager-webpack5": 6.5.16
