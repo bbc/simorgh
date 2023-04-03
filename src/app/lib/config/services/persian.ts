@@ -290,6 +290,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'مهمترین خبرها',
       featuresAnalysisTitle: 'گزارش و تحلیل',
+      latestMediaTitle: 'تازه ترین',
     },
     mostRead: {
       header: 'پربیننده‌ترین‌ها',

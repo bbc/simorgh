@@ -246,6 +246,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'ප්‍රධාන පුවත',
       featuresAnalysisTitle: 'දැක්ම',
+      latestMediaTitle: 'අලුත්ම',
     },
     mostRead: {
       header: 'වැඩිපුරම කියැවූ',

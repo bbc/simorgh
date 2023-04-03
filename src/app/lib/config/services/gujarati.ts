@@ -252,6 +252,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'નવાજૂની',
       featuresAnalysisTitle: 'બીબીસી વિશેષ',
+      latestMediaTitle: 'લેટેસ્ટ',
     },
     mostRead: {
       header: 'સૌથી વધારે વંચાયેલા સમાચાર',
