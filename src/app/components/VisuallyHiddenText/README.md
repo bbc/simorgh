@@ -15,6 +15,8 @@ Adds non-visible text to the page, to be utilised by screen-readers and other as
 
 ## Usage
 
+Example 1:
+
 ```tsx
 import VisuallyHiddenText from 'src/app/components/VisuallyHiddenText';
 
@@ -22,6 +24,21 @@ const WrappingComponent = () => (
   <VisuallyHiddenText>Some offscreen text</VisuallyHiddenText>
 );
 ```
+
+Example 2:
+
+```tsx
+import VisuallyHiddenText from 'src/app/components/VisuallyHiddenText';
+
+const WrappingComponent = () => (
+  <VisuallyHiddenText>
+      <span role="text"> 
+        <span>{product}</span>, {serviceLocalizedName} - {home}
+      </span> 
+  </VisuallyHiddenText>
+);
+```
+
 
 Please bear in mind that if CSS is disabled, any `children` will be shown inline. Testing your usage of the component should include disabling page styling.
 
