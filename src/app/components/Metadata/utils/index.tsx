@@ -1,42 +1,42 @@
-import React from 'react';
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
+import { Services } from '#app/models/types/global';
+import { AppleItunesApp, AlternateLink, IconSizes, IconType } from '../types';
 
-export const getIconAssetUrl = (service, size) =>
+export const getIconAssetUrl = (service: Services, size: string) =>
   `https://static.files.bbci.co.uk/ws/simorgh-assets/public/${service}/images/icons/icon-${size}.png`;
 
-const createIconLinks = (service, iconSizes, iconType) => {
-  return iconSizes.map(size => {
+const createIconLinks = (
+  service: Services,
+  iconSizes: IconSizes,
+  iconType: IconType,
+) => {
+  const iconSizesForType = iconSizes[iconType];
+
+  return iconSizesForType.map(size => {
     const iconAssetUrl = getIconAssetUrl(service, size);
-    const key = `${service}-${size}`;
 
     if (iconType === 'icon') {
       return (
-        <link
-          key={key}
-          rel="icon"
-          type="image/png"
-          href={iconAssetUrl}
-          sizes={size}
-        />
+        <link rel="icon" type="image/png" href={iconAssetUrl} sizes={size} />
       );
     }
 
-    return (
-      <link key={key} rel="apple-touch-icon" sizes={size} href={iconAssetUrl} />
-    );
+    return <link rel="apple-touch-icon" sizes={size} href={iconAssetUrl} />;
   });
 };
 
-export const getIconLinks = (service, iconSizes) => {
+export const getIconLinks = (service: Services, iconSizes: IconSizes) => {
   if (!iconSizes) {
     return null;
   }
   const iconTypes = Object.keys(iconSizes);
-  return iconTypes.map(iconType => {
-    return createIconLinks(service, iconSizes[iconType], iconType);
+  return iconTypes.map((iconType: IconType) => {
+    return createIconLinks(service, iconSizes, iconType);
   });
 };
 
-export const getAppleTouchUrl = service => {
+export const getAppleTouchUrl = (service: Services) => {
   return [
     process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN,
     process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH,
@@ -45,13 +45,8 @@ export const getAppleTouchUrl = service => {
   ].join('');
 };
 
-export const renderAlternateLinks = link => (
-  <link
-    rel="alternate"
-    href={link.href}
-    hrefLang={link.hrefLang}
-    key={link.hrefLang}
-  />
+export const renderAlternateLinks = (link: AlternateLink) => (
+  <link rel="alternate" href={link.href} hrefLang={link.hrefLang} />
 );
 
 export const renderAppleItunesApp = ({
@@ -59,7 +54,7 @@ export const renderAppleItunesApp = ({
   canonicalLink,
   isAmp,
   hasAppleItunesAppBanner,
-}) => {
+}: AppleItunesApp) => {
   const isCanonical = !isAmp;
 
   const shouldRender = [
