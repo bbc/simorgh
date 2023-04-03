@@ -23,3 +23,8 @@ export type LatestMediaItemProp = {
   ref: () => Promise<void>;
   eventTrackingData: EventTrackingData;
 };
+
+export type ImageProp = {
+  src: string;
+  useLargeImages: boolean;
+};

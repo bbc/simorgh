@@ -1,13 +1,16 @@
-import React, { useContext } from 'react';
+/** @jsxRuntime classic */
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
+import { useContext } from 'react';
 import isEmpty from 'ramda/src/isEmpty';
 import Promo from '#components/OptimoPromos';
 import { LatestMediaItemProp } from '../LatestMediaTypes';
 import { ServiceContext } from '../../../../../contexts/ServiceContext';
 import {
-  StyledPromoContentWrapper,
-  StyledPromoMediaIndicator,
+  // StyledPromoMediaIndicator,
   StyledPromoTitle,
-  StyledPromoWrapper,
+  StyledTimestamp,
+  styles,
 } from './index.styles';
 
 const LatestMediaItem = ({
@@ -20,26 +23,31 @@ const LatestMediaItem = ({
 
   if (!item || isEmpty(item)) return null;
 
+  const timestamp = item.firstPublished;
+
+  const src = item.imageUrl.replace('{width}', '240');
+
   return (
-    <div>
-      <StyledPromoWrapper ref={ref}>
-        <Promo
-          to={item.link}
-          ariaLabelledBy={ariaLabelledBy}
-          mediaType={item.type}
-          eventTrackingData={eventTrackingData}
-        >
-          <Promo.Link>
-            <StyledPromoContentWrapper>
-              {item.type && <StyledPromoMediaIndicator />}
+    <div ref={ref} css={styles.inline}>
+      <Promo
+        to={item.link}
+        ariaLabelledBy={ariaLabelledBy}
+        mediaType={item.type}
+        eventTrackingData={eventTrackingData}
+      >
+        <div css={styles.myStyle}>
+          <Promo.Image src={src} altText="Hello" width={50} height={50} />
+          {/* {item.type && <StyledPromoMediaIndicator />} */}
+          <div>
+            <Promo.Link>
               <StyledPromoTitle as="h3" script={script}>
                 {item.title}
               </StyledPromoTitle>
-            </StyledPromoContentWrapper>
-          </Promo.Link>
-        </Promo>
-      </StyledPromoWrapper>
-
+            </Promo.Link>
+            <StyledTimestamp>{timestamp}</StyledTimestamp>
+          </div>
+        </div>
+      </Promo>
       <hr />
     </div>
   );
