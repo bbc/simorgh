@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import { Services } from '#app/models/types/global';
@@ -9,20 +10,31 @@ export const getIconAssetUrl = (service: Services, size: string) =>
 const createIconLinks = (
   service: Services,
   iconSizes: IconSizes,
-  iconType: IconType,
+  iconType: string,
 ) => {
-  const iconSizesForType = iconSizes[iconType];
+  const iconSizesForType = iconSizes[iconType as IconType];
 
   return iconSizesForType.map(size => {
     const iconAssetUrl = getIconAssetUrl(service, size);
+    const key = `${service}-${size}`;
 
     if (iconType === 'icon') {
       return (
-        <link rel="icon" type="image/png" href={iconAssetUrl} sizes={size} />
+        <link
+          /* @ts-ignore:   Property 'key' does not exist on type 'LinkProps & { css?: Interpolation<Theme>; }'.ts(2322) */
+          key={key}
+          rel="icon"
+          type="image/png"
+          href={iconAssetUrl}
+          sizes={size}
+        />
       );
     }
 
-    return <link rel="apple-touch-icon" sizes={size} href={iconAssetUrl} />;
+    return (
+      /* @ts-ignore:   Property 'key' does not exist on type 'LinkProps & { css?: Interpolation<Theme>; }'.ts(2322) */
+      <link key={key} rel="apple-touch-icon" sizes={size} href={iconAssetUrl} />
+    );
   });
 };
 
@@ -31,7 +43,7 @@ export const getIconLinks = (service: Services, iconSizes: IconSizes) => {
     return null;
   }
   const iconTypes = Object.keys(iconSizes);
-  return iconTypes.map((iconType: IconType) => {
+  return iconTypes.map(iconType => {
     return createIconLinks(service, iconSizes, iconType);
   });
 };
@@ -46,7 +58,13 @@ export const getAppleTouchUrl = (service: Services) => {
 };
 
 export const renderAlternateLinks = (link: AlternateLink) => (
-  <link rel="alternate" href={link.href} hrefLang={link.hrefLang} />
+  <link
+    rel="alternate"
+    href={link.href}
+    hrefLang={link.hrefLang}
+    /* @ts-ignore:   Property 'key' does not exist on type 'LinkProps & { css?: Interpolation<Theme>; }'.ts(2322) */
+    key={link.hrefLang}
+  />
 );
 
 export const renderAppleItunesApp = ({
