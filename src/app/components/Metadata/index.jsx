@@ -3,7 +3,7 @@ import { string, node, shape, arrayOf, bool, number } from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { RequestContext } from '#contexts/RequestContext';
 import { useTheme } from '@emotion/react';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import { ServiceContext } from '../../contexts/ServiceContext';
 import {
   getIconAssetUrl,
   getIconLinks,

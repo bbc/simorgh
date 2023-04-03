@@ -17,13 +17,10 @@ import igboFrontPageData from '#data/igbo/frontpage/index.json';
 import somaliFrontPageData from '#data/somali/frontpage/index.json';
 import liveRadioPageData from '#data/korean/bbc_korean_radio/liveradio.json';
 import { getSummary } from '#lib/utilities/parseAssetData/index';
-import {
-  render,
-  waitFor,
-} from '../../../components/react-testing-library-with-providers';
-import services from '../../../../server/utilities/serviceConfigs';
-import { getAuthorTwitterHandle } from '../../../components/Byline/utilities';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import { render, waitFor } from '../react-testing-library-with-providers';
+import services from '../../../server/utilities/serviceConfigs';
+import { getAuthorTwitterHandle } from '../Byline/utilities';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import MetadataContainer from './index';
 
 const dotComOrigin = 'https://www.bbc.com';

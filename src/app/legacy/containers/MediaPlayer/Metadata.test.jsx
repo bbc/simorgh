@@ -1,6 +1,6 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
-import Metadata from './Metadata';
+import Metadata from '../../../components/Metadata';
 
 const validAresMediaBlocks = [
   {

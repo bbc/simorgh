@@ -30,7 +30,7 @@ import {
   emptyBlockArrayDefaultProps,
 } from '#models/propTypes';
 import { ServiceContext } from '../../../contexts/ServiceContext';
-import Metadata from './Metadata';
+import Metadata from '../../../components/Metadata';
 import Caption from '../Caption';
 import logMissingMediaId from './helpers/logMissingMediaId';
 

@@ -29,7 +29,7 @@ import getEmbedUrl, {
 import AVPlayer from '#containers/AVPlayer';
 import RecentVideoEpisodes from '#containers/EpisodeList/RecentVideoEpisodes';
 import FooterTimestamp from '#containers/OnDemandFooterTimestamp';
-import MetadataContainer from '#containers/Metadata';
+import MetadataContainer from '#app/components/Metadata';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import { ServiceContext } from '../../contexts/ServiceContext';

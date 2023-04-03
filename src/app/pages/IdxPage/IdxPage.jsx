@@ -14,7 +14,6 @@ import {
   GEL_MARGIN_BELOW_400PX,
   GEL_MARGIN_ABOVE_400PX,
 } from '#psammead/gel-foundations/src/spacings';
-import MetadataContainer from '#containers/Metadata';
 import LinkedData from '#containers/LinkedData';
 import IndexHeading from '#containers/IndexHeading';
 import IndexPageContainer from '#components/PageLayout/IndexPageContainer';
@@ -28,6 +27,7 @@ import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import MetadataContainer from '../../components/Metadata';
 import { GHOST } from '../../components/ThemeProvider/palette';
 
 const IdxMostReadSection = styled(MostReadSection)`
