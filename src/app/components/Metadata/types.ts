@@ -45,3 +45,23 @@ export interface MetadataParams {
   hasAppleItunesAppBanner?: boolean;
   hasAmpPage?: boolean;
 }
+
+interface Headlines {
+  seoHeadline: string;
+}
+interface Promo {
+  headlines: Headlines;
+}
+
+interface Passport {
+  language: string;
+}
+
+interface Metadata {
+  passport: Passport;
+}
+
+export interface PageData {
+  promo: Promo;
+  metadata: Metadata;
+}

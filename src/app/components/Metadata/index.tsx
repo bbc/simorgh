@@ -30,8 +30,8 @@ const iconSizes: IconSizes = {
   icon: ['72x72', '96x96', '192x192'],
 };
 
-const renderTags = (tags: Tag[]) =>
-  tags.map(({ thingLabel: content }) => (
+const renderTags = (tags?: Tag[]) =>
+  tags?.map(({ thingLabel: content }) => (
     <meta name="article:tag" content={content} key={content} />
   ));
 

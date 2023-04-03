@@ -61,7 +61,7 @@ export const renderAlternateLinks = (link: AlternateLink) => (
   <link
     rel="alternate"
     href={link.href}
-    hrefLang={link.hrefLang}
+    hrefLang={link.hrefLang || ''}
     /* @ts-ignore:   Property 'key' does not exist on type 'LinkProps & { css?: Interpolation<Theme>; }'.ts(2322) */
     key={link.hrefLang}
   />

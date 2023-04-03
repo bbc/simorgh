@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import {
   ARTICLE_PAGE,
   FRONT_PAGE,
@@ -23,23 +24,14 @@ import services from '../../../server/utilities/serviceConfigs';
 import { getAuthorTwitterHandle } from '../Byline/utilities';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import MetadataContainer from './index';
-import { MetadataParams } from './types';
+import { MetadataParams, PageData } from './types';
 
 const dotComOrigin = 'https://www.bbc.com';
 const dotCoDotUKOrigin = 'https://www.bbc.co.uk';
 
 type Platform = 'canonical' | 'amp';
 
-interface ArticleMetadataProps {
-  title: string;
-  lang: string;
-  description: string;
-  openGraphType: string;
-  aboutTags: Tag[];
-  mentionsTags: Tag[];
-}
-
-const getArticleMetadataProps = (data: ArticleMetadataProps) => ({
+const getArticleMetadataProps = (data: PageData) => ({
   title: data.promo.headlines.seoHeadline,
   lang: data.metadata.passport.language,
   description: getSummary(data),
@@ -62,7 +54,7 @@ interface MetadataWithContextParams extends MetadataParams {
   bbcOrigin: string;
   platform: Platform;
   pageType: PageTypes;
-  id: string;
+  id?: string | null;
   pathname: string;
 }
 
@@ -802,15 +794,13 @@ it('should render the open graph image if provided', async () => {
 
 describe('Snapshot', () => {
   it('should match for Canonical News & international origin', () => {
-    const { container } = render(<CanonicalNewsInternationalOrigin />);
-
-    console.log({container});
-
+    render(<CanonicalNewsInternationalOrigin />);
+    const container = Helmet.peek();
     expect(container).toMatchSnapshot();
   });
 
   it('should match for AMP News & UK origin', () => {
-    const { container } = render(
+    render(
       <MetadataWithContext
         service="news"
         bbcOrigin={dotCoDotUKOrigin}
@@ -821,11 +811,12 @@ describe('Snapshot', () => {
         {...newsArticleMetadataProps}
       />,
     );
+    const container = Helmet.peek();
     expect(container).toMatchSnapshot();
   });
 
   it('should match for Persian News & byline twitter handle', () => {
-    const { container } = render(
+    render(
       <MetadataWithContext
         service="pidgin"
         bbcOrigin={dotComOrigin}
@@ -836,11 +827,12 @@ describe('Snapshot', () => {
         {...pidginArticleWithBylineMetadataProps}
       />,
     );
+    const container = Helmet.peek();
     expect(container).toMatchSnapshot();
   });
 
   it('should match for Persian News & international origin', () => {
-    const { container } = render(
+    render(
       <MetadataWithContext
         service="persian"
         bbcOrigin={dotComOrigin}
@@ -851,11 +843,12 @@ describe('Snapshot', () => {
         {...persianArticleMetadataProps}
       />,
     );
+    const container = Helmet.peek();
     expect(container).toMatchSnapshot();
   });
 
   it('should match for Persian News & UK origin', () => {
-    const { container } = render(
+    render(
       <MetadataWithContext
         service="persian"
         bbcOrigin={dotCoDotUKOrigin}
@@ -866,11 +859,12 @@ describe('Snapshot', () => {
         {...persianArticleMetadataProps}
       />,
     );
+    const container = Helmet.peek();
     expect(container).toMatchSnapshot();
   });
 
   it('should match for WS Frontpages', () => {
-    const { container } = render(
+    render(
       <MetadataWithContext
         service="igbo"
         bbcOrigin={dotComOrigin}
@@ -884,11 +878,12 @@ describe('Snapshot', () => {
         openGraphType="website"
       />,
     );
+    const container = Helmet.peek();
     expect(container).toMatchSnapshot();
   });
 
   it('should match for WS Media liveradio', () => {
-    const { container } = render(
+    render(
       <MetadataWithContext
         service="korean"
         bbcOrigin={dotComOrigin}
@@ -902,11 +897,12 @@ describe('Snapshot', () => {
         openGraphType="website"
       />,
     );
+    const container = Helmet.peek();
     expect(container).toMatchSnapshot();
   });
 
   it('should match for Ukrainian STY with Ukrainian lang on canonical', () => {
-    const { container } = render(
+    render(
       <MetadataWithContext
         lang="uk"
         service="ukrainian"
@@ -920,11 +916,12 @@ describe('Snapshot', () => {
         title="BBC Ukrainian"
       />,
     );
+    const container = Helmet.peek();
     expect(container).toMatchSnapshot();
   });
 
   it('should match for Ukrainian STY with Ukrainian lang on Amp', () => {
-    const { container } = render(
+    render(
       <MetadataWithContext
         lang="uk"
         service="ukrainian"
@@ -938,11 +935,12 @@ describe('Snapshot', () => {
         title="BBC Ukrainian"
       />,
     );
+    const container = Helmet.peek();
     expect(container).toMatchSnapshot();
   });
 
   it('should match for Ukrainian STY with Russian lang on canonical', () => {
-    const { container } = render(
+    render(
       <MetadataWithContext
         lang="ru"
         service="ukrainian"
@@ -956,11 +954,12 @@ describe('Snapshot', () => {
         title="BBC Ukrainian"
       />,
     );
+    const container = Helmet.peek();
     expect(container).toMatchSnapshot();
   });
 
   it('should match for Ukrainian STY with Russian lang on Amp', () => {
-    const { container } = render(
+    render(
       <MetadataWithContext
         lang="ru"
         service="ukrainian"
@@ -974,6 +973,7 @@ describe('Snapshot', () => {
         title="BBC Ukrainian"
       />,
     );
+    const container = Helmet.peek();
     expect(container).toMatchSnapshot();
   });
 });
