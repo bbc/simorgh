@@ -1,7 +1,7 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { render } from '../../../components/react-testing-library-with-providers';
 import Metadata from '../../../components/Metadata';
-import { Helmet } from 'react-helmet';
 
 const validAresMediaBlocks = [
   {
