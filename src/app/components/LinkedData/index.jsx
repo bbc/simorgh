@@ -4,7 +4,7 @@ import { string, shape, arrayOf, bool, object } from 'prop-types';
 import { RequestContext } from '#contexts/RequestContext';
 import serialiseForScript from '#lib/utilities/serialiseForScript';
 import getBrandedImage from '#lib/utilities/getBrandedImage';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import { ServiceContext } from '../../contexts/ServiceContext';
 import getAboutTagsContent from './getAboutTagsContent';
 
 const LinkedData = ({

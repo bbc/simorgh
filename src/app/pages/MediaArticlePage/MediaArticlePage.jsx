@@ -29,7 +29,6 @@ import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import ArticleMediaPlayer from '#containers/ArticleMediaPlayer';
-import LinkedData from '#containers/LinkedData';
 import SocialEmbedContainer from '#containers/SocialEmbed';
 import fauxHeadline from '#containers/FauxHeadline';
 import CpsRecommendations from '#containers/CpsRecommendations';
@@ -49,6 +48,7 @@ import filterForBlockType from '#lib/utilities/blockHandlers';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 import ScrollablePromo from '#components/ScrollablePromo';
+import LinkedData from '../../components/LinkedData';
 import Byline from '../../components/Byline';
 import {
   bylineExtractor,
