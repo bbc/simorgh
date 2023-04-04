@@ -50,8 +50,10 @@ const LatestMediaItem = ({
           <PlaceholderWrapper>
             <Promo.Image src={src} altText="Hello" width={50} height={50} />
             <div css={styles.placeholderInfo}>
-              {item.type && <StyledPromoMediaIndicator />}{' '}
-              {formatMediaDuration(item.duration)}
+              <div>
+                {item.type && <StyledPromoMediaIndicator />}
+                {formatMediaDuration(item.duration)}
+              </div>
             </div>
           </PlaceholderWrapper>
           <div>

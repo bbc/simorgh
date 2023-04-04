@@ -1,8 +1,11 @@
+/** @jsxRuntime classic */
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
 import path from 'ramda/src/path';
-import React from 'react';
 import useViewTracker from '#hooks/useViewTracker';
 import generatePromoId from '../generatePromoId';
 import LatestMediaItem from './LatestMediaItem';
+import styles from './index.styles';
 import {
   LatestMedia,
   TrackingBlock,
@@ -47,7 +50,7 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] }) => {
   const viewRef = useViewTracker(eventTrackingDataSend);
 
   return (
-    <div>
+    <div css={styles.LatestMediaGridWrapper}>
       {content.map((item, index) =>
         renderLatestMediaList(item, index, eventTrackingData, viewRef),
       )}

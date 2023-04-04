@@ -12,8 +12,7 @@ export const styles = {
       height: '100%',
       // backgroundColor: 'blue',
       [mq.GROUP_3_ONLY]: {
-        display: 'inline-block',
-        maxWidth: '50%',
+        width: '100%',
         // backgroundColor: 'yellow',
       },
     }),
@@ -28,10 +27,29 @@ export const styles = {
   placeholderInfo: ({ mq }: Theme) =>
     css({
       width: '100%',
-      backgroundColor: 'blue',
+      backgroundColor: 'LightCyan',
+      display: 'flex',
+      minWidth: '5rem',
+      padding: '0.5rem',
       [mq.GROUP_3_ONLY]: {
-        backgroundColor: 'pink',
-        maxWidth: '23%',
+        position: 'relative',
+        backgroundColor: 'PaleGreen',
+        maxWidth: '22%',
+        height: '20%',
+        top: '-20%',
+        '& div': {
+          margin: 'auto',
+        },
+      },
+      [mq.GROUP_2_ONLY]: {
+        position: 'relative',
+        backgroundColor: 'Cornsilk',
+        maxWidth: '50%',
+        height: '35%',
+        top: '-35%',
+        '& div': {
+          margin: 'auto',
+        },
       },
     }),
 };
