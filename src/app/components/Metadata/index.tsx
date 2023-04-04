@@ -1,3 +1,4 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, useTheme } from '@emotion/react';
 import { useContext } from 'react';
