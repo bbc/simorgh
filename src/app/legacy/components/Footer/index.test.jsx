@@ -58,9 +58,10 @@ describe('Footer', () => {
           trustProjectLink={trustProjectLink}
         />,
       );
-      expect(
-        screen.getByText('Do not share or sell my info'),
-      ).toHaveAttribute('data-testid', 'amp-cookie-settings-button');
+      expect(screen.getByText('Do not share or sell my info')).toHaveAttribute(
+        'data-testid',
+        'amp-cookie-settings-button',
+      );
     });
   });
 
