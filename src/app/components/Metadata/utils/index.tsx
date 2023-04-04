@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
+import React from 'react';
 import { Services } from '#app/models/types/global';
 import { AppleItunesApp, AlternateLink, IconSizes, IconType } from '../types';
 
