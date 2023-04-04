@@ -28,14 +28,14 @@ const LatestMediaItem = ({
   const src = item.imageUrl.replace('{width}', '240');
 
   return (
-    <div ref={ref} css={styles.inline}>
+    <div ref={ref} css={styles.gridOuter}>
       <Promo
         to={item.link}
         ariaLabelledBy={ariaLabelledBy}
         mediaType={item.type}
         eventTrackingData={eventTrackingData}
       >
-        <div css={styles.myStyle}>
+        <div css={styles.gridInner}>
           <Promo.Image src={src} altText="Hello" width={50} height={50} />
           {/* {item.type && <StyledPromoMediaIndicator />} */}
           <div>
