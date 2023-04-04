@@ -360,6 +360,10 @@ export const service: DefaultServiceConfig = {
         title: 'کالم',
         url: '/pashto/columns-54029178',
       },
+      {
+        title: 'پر سټلایت خپرونې',
+        url: '/pashto/articles/c4n55eygdn0o',
+      },
     ],
   },
 };
