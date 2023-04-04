@@ -11,10 +11,10 @@ import idxPageDataPropTypes from '#models/propTypes/idxPage';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
-import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
 import useToggle from '#hooks/useToggle';
-import AdContainer from '#containers/Ad';
-import MPUContainer from '#containers/Ad/MPU';
+import CanonicalAdBootstrapJs from '../../components/Ad/Canonical/CanonicalAdBootstrapJs';
+import AdContainer from '../../components/Ad';
+import MPUContainer from '../../components/Ad/MPU';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import flattenGroups from './flattenGroups';
 

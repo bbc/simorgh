@@ -4,12 +4,12 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
-import { render } from '../../../components/react-testing-library-with-providers';
-import latinDiacritics from '../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
+import { render } from '../react-testing-library-with-providers';
+import latinDiacritics from '../ThemeProvider/fontScripts/latinWithDiacritics';
 import {
   ServiceContext,
   ServiceContextProvider,
-} from '../../../contexts/ServiceContext';
+} from '../../contexts/ServiceContext';
 
 import AdContainer from './index';
 
