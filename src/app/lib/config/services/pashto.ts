@@ -350,7 +350,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'ويډيوګانې',
-        url: '/pashto/media/video',
+        url: '/pashto/topics/c2m45zyk0mmt',
       },
       {
         title: 'ځانګړې پاڼې',
