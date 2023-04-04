@@ -24,7 +24,7 @@ import services from '../../../server/utilities/serviceConfigs';
 import { getAuthorTwitterHandle } from '../Byline/utilities';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import MetadataContainer from './index';
-import { MetadataParams, PageData } from './types';
+import { MetadataProps, PageData } from './types';
 
 const dotComOrigin = 'https://www.bbc.com';
 const dotCoDotUKOrigin = 'https://www.bbc.co.uk';
@@ -49,7 +49,7 @@ const pidginArticleWithBylineMetadataProps = {
   ),
 };
 
-interface MetadataWithContextParams extends MetadataParams {
+interface MetadataWithContextParams extends MetadataProps {
   service: Services;
   bbcOrigin: string;
   platform: Platform;
