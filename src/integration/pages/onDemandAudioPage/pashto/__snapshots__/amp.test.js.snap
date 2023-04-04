@@ -245,7 +245,7 @@ Object {
 exports[`AMP On Demand Audio Page Header Navigation link should match text and url 7`] = `
 Object {
   "text": "ويډيوګانې",
-  "url": "/pashto/media/video",
+  "url": "/pashto/topics/c2m45zyk0mmt",
 }
 `;
 
@@ -260,6 +260,13 @@ exports[`AMP On Demand Audio Page Header Navigation link should match text and u
 Object {
   "text": "کالم",
   "url": "/pashto/columns-54029178",
+}
+`;
+
+exports[`AMP On Demand Audio Page Header Navigation link should match text and url 10`] = `
+Object {
+  "text": "پر سټلایت خپرونې",
+  "url": "/pashto/articles/c4n55eygdn0o",
 }
 `;
 
