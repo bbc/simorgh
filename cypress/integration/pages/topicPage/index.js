@@ -17,6 +17,7 @@ Object.keys(config)
       describe(`${pageType} - ${currentPath}`, () => {
         before(() => {
           Cypress.env('currentPath', currentPath);
+          cy.clearLocalStorage();
           visitPage(getTopicPagePath(currentPath), pageType);
         });
         crossPlatformTests({

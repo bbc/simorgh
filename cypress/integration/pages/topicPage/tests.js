@@ -35,7 +35,7 @@ export default ({ service, pageType, variant }) => {
           method: 'GET',
           url: `https://web-cdn.${
             env === 'live' ? '' : `${env}.`
-          }api.bbci.co.uk/fd/simorgh-bff?page=1&id=${topicId}&service=${service}${appendVariant}&pageType=topic`,
+            }api.bbci.co.uk/fd/simorgh-bff?page=1&id=${topicId}&service=${service}${appendVariant}&pageType=topic`,
         };
 
         if (Cypress.env('currentPath').includes('?renderer_env=test')) {
@@ -57,7 +57,6 @@ export default ({ service, pageType, variant }) => {
         });
         cy.log(`topic id ${topicId}`);
       }
-      cy.clearLocalStorage();
     });
 
     describe(`Page content`, () => {
