@@ -25,6 +25,15 @@ export const styles = {
         gridTemplateColumns: 'repeat(1, 1fr)',
       },
     }),
+  placeholderInfo: ({ mq }: Theme) =>
+    css({
+      width: '100%',
+      backgroundColor: 'blue',
+      [mq.GROUP_3_ONLY]: {
+        backgroundColor: 'pink',
+        maxWidth: '23%',
+      },
+    }),
 };
 
 export const StyledTimestamp = styled(Promo.Timestamp)`
@@ -37,5 +46,10 @@ export const StyledPromoTitle = styled(Promo.Title)`
 
 // Commented out alongside element.
 export const StyledPromoMediaIndicator = styled(Promo.MediaIndicator)`
-  // width: 100%;
+  border: blue solid 2px;
+`;
+
+export const PlaceholderWrapper = styled.div`
+  display: 'flex';
+  flexwrap: 'wrap';
 `;
