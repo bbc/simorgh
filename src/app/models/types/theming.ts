@@ -473,5 +473,6 @@ declare module '@emotion/react' {
       serifLight: FontStyles;
     };
     brandSVG: BrandSVG;
+    isDarkUi: boolean;
   }
 }

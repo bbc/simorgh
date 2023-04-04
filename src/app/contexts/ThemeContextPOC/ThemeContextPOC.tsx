@@ -89,6 +89,7 @@ export const applyDarkPalette = (ancestorTheme: Theme): Theme => {
       ...ancestorTheme.palette,
       ...DARK_PALETTE,
     },
+    isDarkUi: true,
   };
   return { ...ancestorTheme, ...changes } as Theme;
 };

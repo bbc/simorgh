@@ -268,6 +268,7 @@ const withThemeProvider = ({
       SEXTUPLE,
     },
     brandSVG,
+    isDarkUi: false,
   };
 
   const ThemeProvider: React.FC<Props> = ({ children }) => {
