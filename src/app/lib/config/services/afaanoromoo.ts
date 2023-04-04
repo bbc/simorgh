@@ -252,6 +252,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'Isin hin darbiin',
       featuresAnalysisTitle: `Maaltu haasa'ama?`,
+      latestMediaTitle: 'Haaraa',
     },
     mostRead: {
       header: "Baay'ee kan dubbifame",

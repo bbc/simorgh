@@ -6,7 +6,6 @@ import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
 import { jsx, useTheme } from '@emotion/react';
-import { string } from 'prop-types';
 import useToggle from '#hooks/useToggle';
 
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
@@ -29,8 +28,6 @@ import Timestamp from '#containers/ArticleTimestamp';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
-import OptimizelyPageViewTracking from '#containers/OptimizelyPageViewTracking';
-import OptimizelyArticleCompleteTracking from '#containers/OptimizelyArticleCompleteTracking';
 import ArticleMediaPlayer from '#containers/ArticleMediaPlayer';
 import LinkedData from '#containers/LinkedData';
 import SocialEmbedContainer from '#containers/SocialEmbed';
@@ -235,19 +232,12 @@ const MediaArticlePage = ({ pageData }) => {
         </Primary>
         <SecondaryColumn pageData={pageData} />
       </MediaArticlePageGrid>
-      <OptimizelyPageViewTracking />
-      <OptimizelyArticleCompleteTracking />
     </Wrapper>
   );
 };
 
 MediaArticlePage.propTypes = {
   pageData: articleDataPropTypes.isRequired,
-  mostReadEndpointOverride: string,
-};
-
-MediaArticlePage.defaultProps = {
-  mostReadEndpointOverride: null,
 };
 
 export default MediaArticlePage;

@@ -237,6 +237,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'Ìròyìn tó ṣe kókó',
       featuresAnalysisTitle: 'Ìwádìí kíkún lóríi kókó ìròyìn ',
+      latestMediaTitle: 'Èyí tí ó ṣẹ̀ṣẹ̀dé',
     },
     mostRead: {
       header: 'Èyítí A Ń Kà Jùlọ',

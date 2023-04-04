@@ -269,6 +269,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'اہم خبریں',
       featuresAnalysisTitle: 'فیچر اور تجزیے',
+      latestMediaTitle: 'تازہ ترین',
     },
     mostRead: {
       header: 'سب سے زیادہ پڑھی جانے والی',
