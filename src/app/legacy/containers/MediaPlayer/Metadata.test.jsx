@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { render } from '../../../components/react-testing-library-with-providers';
-import Metadata from '../../../components/Metadata';
+import Metadata from './Metadata';
 
 const validAresMediaBlocks = [
   {
@@ -46,16 +46,15 @@ describe('Metadata', () => {
   const embedSource =
     'https://www.test.bbc.com/ws/av-embeds/articles/c3wmq4d1y3wo/p01k6mtv/en-GB';
 
-  it('should render Metadata correctly when aresMedia has no metadata block ', () => {
-    render(
+  it('should not render Metadata when aresMedia has no metadata block ', () => {
+    const { container } = render(
       <Metadata
         aresMediaBlock={aresMediaBlockWithNoMetadata}
         embedSource={embedSource}
       />,
     );
 
-    const container = Helmet.peek();
-    expect(container).toMatchSnapshot();
+    expect(container).toBeEmptyDOMElement();
   });
 
   it('should render Metadata correctly when aresMedia has a metadata block', () => {
