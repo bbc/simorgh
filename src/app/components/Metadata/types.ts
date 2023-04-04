@@ -28,7 +28,7 @@ export interface Tag {
   thingSameAs: string[];
 }
 
-export interface MetadataParams {
+export interface MetadataProps {
   title: string;
   socialHeadline?: string;
   lang: string;

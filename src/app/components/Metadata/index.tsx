@@ -11,7 +11,7 @@ import {
   renderAlternateLinks,
   renderAppleItunesApp,
 } from './utils';
-import { IconSizes, MetadataParams, Tag } from './types';
+import { IconSizes, MetadataProps, Tag } from './types';
 
 const ENGLISH_SERVICES = ['news', 'sport'];
 const FACEBOOK_APP_ID = '1609039196070050';
@@ -51,7 +51,7 @@ const MetadataContainer = ({
   children,
   hasAppleItunesAppBanner = false,
   hasAmpPage = true,
-}: MetadataParams) => {
+}: MetadataProps) => {
   const {
     isAmp,
     canonicalLink,
