@@ -24,14 +24,14 @@ import services from '../../../server/utilities/serviceConfigs';
 import { getAuthorTwitterHandle } from '../Byline/utilities';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import MetadataContainer from './index';
-import { MetadataProps, PageData } from './types';
+import { MetadataProps, PageDataProps } from './types';
 
 const dotComOrigin = 'https://www.bbc.com';
 const dotCoDotUKOrigin = 'https://www.bbc.co.uk';
 
 type Platform = 'canonical' | 'amp';
 
-const getArticleMetadataProps = (data: PageData) => ({
+const getArticleMetadataProps = (data: PageDataProps) => ({
   title: data.promo.headlines.seoHeadline,
   lang: data.metadata.passport.language,
   description: getSummary(data),
@@ -49,7 +49,7 @@ const pidginArticleWithBylineMetadataProps = {
   ),
 };
 
-interface MetadataWithContextParams extends MetadataProps {
+interface MetadataWithContextProps extends MetadataProps {
   service: Services;
   bbcOrigin: string;
   platform: Platform;
@@ -78,7 +78,7 @@ const MetadataWithContext = ({
   mentionsTags,
   hasAppleItunesAppBanner,
   hasAmpPage,
-}: MetadataWithContextParams) => (
+}: MetadataWithContextProps) => (
   <ServiceContextProvider service={service} pageLang={lang}>
     <RequestContextProvider
       bbcOrigin={bbcOrigin}
@@ -108,12 +108,12 @@ const MetadataWithContext = ({
   </ServiceContextProvider>
 );
 
-interface CanonicalNewsInternationalOriginParams {
+interface CanonicalNewsInternationalOriginProps {
   hasAmpPage?: boolean;
 }
 
 const CanonicalNewsInternationalOrigin = (
-  props: CanonicalNewsInternationalOriginParams,
+  props: CanonicalNewsInternationalOriginProps,
 ) => (
   <MetadataWithContext
     service="news"
@@ -979,7 +979,7 @@ describe('Snapshot', () => {
 });
 
 describe('apple-itunes-app meta tag', () => {
-  interface CanonicalCPSAssetInternationalOriginParams {
+  interface CanonicalCPSAssetInternationalOriginProps {
     service: Services;
     platform: Platform;
     hasAppleItunesAppBanner: boolean;
@@ -989,7 +989,7 @@ describe('apple-itunes-app meta tag', () => {
     service,
     platform,
     hasAppleItunesAppBanner,
-  }: CanonicalCPSAssetInternationalOriginParams) => (
+  }: CanonicalCPSAssetInternationalOriginProps) => (
     <MetadataWithContext
       service={service}
       bbcOrigin={dotComOrigin}

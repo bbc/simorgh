@@ -61,7 +61,7 @@ interface Metadata {
   passport: Passport;
 }
 
-export interface PageData {
+export interface PageDataProps {
   promo: Promo;
   metadata: Metadata;
 }
