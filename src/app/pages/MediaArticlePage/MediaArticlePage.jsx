@@ -5,7 +5,6 @@ import { useContext } from 'react';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import { jsx, useTheme } from '@emotion/react';
-import { string, node } from 'prop-types';
 import useToggle from '#hooks/useToggle';
 
 import { articleDataPropTypes } from '#models/propTypes/article';
@@ -22,9 +21,6 @@ import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import ArticleMediaPlayer from '#containers/ArticleMediaPlayer';
 import LinkedData from '#containers/LinkedData';
-import MostReadContainer from '#containers/MostRead';
-import MostReadSection from '#containers/MostRead/section';
-import MostReadSectionLabel from '#containers/MostRead/label';
 import SocialEmbedContainer from '#containers/SocialEmbed';
 import fauxHeadline from '#containers/FauxHeadline';
 import CpsRecommendations from '#containers/CpsRecommendations';
@@ -57,7 +53,7 @@ import SecondaryColumn from './SecondaryColumn';
 
 import styles from './MediaArticlePage.styles';
 
-const MediaArticlePage = ({ pageData, mostReadEndpointOverride }) => {
+const MediaArticlePage = ({ pageData }) => {
   const { articleAuthor, isTrustProjectParticipant, showRelatedTopics } =
     useContext(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
@@ -159,17 +155,6 @@ const MediaArticlePage = ({ pageData, mostReadEndpointOverride }) => {
     filterForBlockType(promoImageBlocks, 'rawImage'),
   );
 
-  const MostReadWrapper = ({ children }) => (
-    <MostReadSection css={styles.mostReadSection}>
-      <MostReadSectionLabel mobileDivider={showRelatedTopics && topics} />
-      {children}
-    </MostReadSection>
-  );
-
-  MostReadWrapper.propTypes = {
-    children: node.isRequired,
-  };
-
   return (
     <div css={styles.pageWrapper}>
       <ATIAnalytics data={pageData} />
@@ -220,21 +205,12 @@ const MediaArticlePage = ({ pageData, mostReadEndpointOverride }) => {
         </div>
         <SecondaryColumn pageData={pageData} />
       </div>
-      <MostReadContainer
-        mostReadEndpointOverride={mostReadEndpointOverride}
-        wrapper={MostReadWrapper}
-      />
     </div>
   );
 };
 
 MediaArticlePage.propTypes = {
   pageData: articleDataPropTypes.isRequired,
-  mostReadEndpointOverride: string,
-};
-
-MediaArticlePage.defaultProps = {
-  mostReadEndpointOverride: null,
 };
 
 export default MediaArticlePage;
