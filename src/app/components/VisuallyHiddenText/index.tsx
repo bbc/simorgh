@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import { PropsWithChildren } from 'react';
-import Text from '../Text';
 import styles from './index.styles';
 
 interface VisuallyHiddenTextProps {
@@ -16,10 +15,11 @@ const VisuallyHiddenText = ({
   tabIndex,
   as,
 }: PropsWithChildren<VisuallyHiddenTextProps>) => {
+  const Component = as || 'span';
   return (
-    <Text css={styles.visuallyHiddenText} id={id} tabIndex={tabIndex} as={as}>
+    <Component css={styles.visuallyHiddenText} id={id} tabIndex={tabIndex}>
       {children}
-    </Text>
+    </Component>
   );
 };
 
