@@ -1,10 +1,7 @@
+import { Services } from '#app/models/types/global';
 import React from 'react';
-import { RequestContextProvider } from '#contexts/RequestContext';
-import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
-import AmpAd, { AMP_ACCESS_FETCH } from './index';
+import Ad, { AMP_ACCESS_FETCH } from '.';
 import { render } from '../../react-testing-library-with-providers';
-import { ServiceContext } from '../../../contexts/ServiceContext';
-import latinDiacritics from '../../ThemeProvider/fontScripts/latinWithDiacritics';
 import { SlotType } from '../types';
 
 const adJsonAttributes = (slotType: SlotType) => ({
@@ -15,33 +12,15 @@ const adJsonAttributes = (slotType: SlotType) => ({
   },
 });
 
-const adTranslations = {
-  ads: {
-    advertisementLabel: 'Publicités',
-  },
-};
+interface RenderParams {
+  service: Services;
+  showAdsBasedOnLocation: boolean;
+}
 
-const adWithContext = (slotType: SlotType, showAdPlaceholder = false) => (
-  <RequestContextProvider
-    bbcOrigin="https://www.test.bbc.com"
-    isAmp
-    pageType={FRONT_PAGE}
-    service="afrique"
-    pathname="/"
-  >
-    <ServiceContext.Provider
-      value={{
-        service: 'afrique',
-        dir: 'ltr',
-        script: latinDiacritics,
-        translations: adTranslations,
-        showAdPlaceholder,
-      }}
-    >
-      <AmpAd slotType={slotType} />
-    </ServiceContext.Provider>
-  </RequestContextProvider>
-);
+const renderOptions: RenderParams = {
+  service: 'afrique',
+  showAdsBasedOnLocation: true,
+};
 
 describe('AMP Ads', () => {
   beforeAll(() => {
@@ -54,12 +33,12 @@ describe('AMP Ads', () => {
 
   describe('Snapshots', () => {
     it('should correctly render an AMP leaderboard ad', () => {
-      const { container } = render(adWithContext('leaderboard'));
+      const { container } = render(<Ad slotType="leaderboard" />);
       expect(container).toMatchSnapshot();
     });
 
     it('should correctly render an AMP mpu ad', () => {
-      const { container } = render(adWithContext('mpu'));
+      const { container } = render(<Ad slotType="mpu" />, { ...renderOptions });
       expect(container).toMatchSnapshot();
     });
   });
@@ -68,8 +47,9 @@ describe('AMP Ads', () => {
     it('should not render ad placeholder in UK when showAdPlaceholder in service config is false', () => {
       const { getByLabelText } = render(
         <div className="amp-geo-group-eea amp-geo-group-gbOrUnknown">
-          {adWithContext('leaderboard', false)}
+          <Ad slotType="leaderboard" />
         </div>,
+        { ...renderOptions, service: 'news' },
       );
 
       expect(getByLabelText('Publicités')).not.toBeVisible();
@@ -78,8 +58,9 @@ describe('AMP Ads', () => {
     it('should render ad placeholder in UK when showAdPlaceholder in service config is true', () => {
       const { getByLabelText } = render(
         <div className="amp-geo-group-eea amp-geo-group-gbOrUnknown">
-          {adWithContext('leaderboard', true)}
+          <Ad slotType="leaderboard" />
         </div>,
+        { ...renderOptions },
       );
 
       expect(getByLabelText('Publicités')).toBeVisible();
@@ -93,7 +74,10 @@ describe('AMP Ads', () => {
       'should render ad placeholder outside of the UK - $location',
       ({ className }) => {
         const { getByLabelText } = render(
-          <div className={className}>{adWithContext('leaderboard')}</div>,
+          <div className={className}>
+            <Ad slotType="leaderboard" />
+          </div>,
+          { ...renderOptions },
         );
 
         expect(getByLabelText('Publicités')).toBeVisible();
@@ -101,14 +85,18 @@ describe('AMP Ads', () => {
     );
 
     it('should render two leaderboard ads', () => {
-      const { container } = render(adWithContext('leaderboard'));
+      const { container } = render(<Ad slotType="leaderboard" />, {
+        ...renderOptions,
+      });
       const ampAd = container.querySelectorAll('amp-ad');
 
       expect(ampAd.length).toBe(2);
     });
 
     it('should display leaderboard ad with values for all of the needed attributes', () => {
-      const { container } = render(adWithContext('leaderboard'));
+      const { container } = render(<Ad slotType="leaderboard" />, {
+        ...renderOptions,
+      });
 
       const ampAd = container.querySelectorAll('amp-ad');
       ampAd.forEach(ad => {
@@ -130,14 +118,18 @@ describe('AMP Ads', () => {
     });
 
     it('should render one mpu ad', () => {
-      const { container } = render(adWithContext('mpu'));
+      const { container } = render(<Ad slotType="mpu" />, {
+        ...renderOptions,
+      });
       const ampAd = container.querySelectorAll('amp-ad');
 
       expect(ampAd.length).toBe(1);
     });
 
     it('should display mpu ad with values for all of the needed attributes', () => {
-      const { container } = render(adWithContext('mpu'));
+      const { container } = render(<Ad slotType="mpu" />, {
+        ...renderOptions,
+      });
 
       const ampAd = container.querySelectorAll('amp-ad');
       ampAd.forEach(ad => {
@@ -158,7 +150,9 @@ describe('AMP Ads', () => {
     });
 
     it('should render an `advertisement` label', () => {
-      const { container } = render(adWithContext('leaderboard'));
+      const { container } = render(<Ad slotType="leaderboard" />, {
+        ...renderOptions,
+      });
       const links = container.querySelectorAll('a');
       const advertisementLabel = links && links[0];
       expect(advertisementLabel.textContent).toEqual('Publicités');
