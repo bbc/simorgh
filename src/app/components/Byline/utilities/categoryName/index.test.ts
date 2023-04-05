@@ -69,9 +69,9 @@ describe('categoryName', () => {
     'should return NewsArticle when predicates formats are not present',
     predicatesFormats => {
       const schemaDotOrgType = categoryName(
+        true,
         passportTaggings,
         predicatesFormats,
-        true,
       );
 
       expect(schemaDotOrgType).toEqual('NewsArticle');
@@ -132,7 +132,7 @@ describe('categoryName', () => {
         },
       ];
 
-      const schemaDotOrgType = categoryName(testTaggings, testFormats, true);
+      const schemaDotOrgType = categoryName(true, testTaggings, testFormats);
 
       expect(schemaDotOrgType).toEqual(expectedSchemaDotOrgType);
     },
