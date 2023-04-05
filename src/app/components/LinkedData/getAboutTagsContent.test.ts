@@ -1,7 +1,8 @@
+import { Tag } from './types';
 import getAboutTagsContent from './getAboutTagsContent';
 
 it('returns undefined if no about tags are provided', () => {
-  const aboutTags = [];
+  const aboutTags: Tag[] = [];
   expect(getAboutTagsContent(aboutTags)).toEqual(undefined);
 });
 

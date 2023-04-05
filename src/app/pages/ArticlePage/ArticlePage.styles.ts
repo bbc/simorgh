@@ -40,9 +40,9 @@ export default {
     css({
       paddingBottom: `${spacings.TRIPLE}rem`,
     }),
-  mediaPlayer: ({ spacings }: Theme) =>
+  adContainer: ({ spacings }: Theme) =>
     css({
-      paddingTop: `${spacings.TRIPLE}rem`,
+      marginBottom: `${spacings.TRIPLE}rem`,
     }),
   mostReadSection: ({ spacings, mq, gridWidths }: Theme) =>
     css({
