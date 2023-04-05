@@ -21,7 +21,7 @@ const Component = ({ service, variant }: StoryProps) => {
   );
 };
 
-const WithLink = ({ service, variant }: StorybookProps) => {
+const WithLink = ({ service, variant }: StoryProps) => {
   return (
     <ThemeProvider service={service} variant={variant}>
       <ServiceContextProvider service={service} variant={variant}>
