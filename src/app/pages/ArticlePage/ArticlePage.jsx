@@ -3,7 +3,7 @@ import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import propEq from 'ramda/src/propEq';
 import styled from '@emotion/styled';
-import { useTheme } from '@emotion/react';
+import { css, useTheme } from '@emotion/react';
 import { string, node } from 'prop-types';
 import useToggle from '#hooks/useToggle';
 
@@ -61,7 +61,8 @@ import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 import ScrollablePromo from '#components/ScrollablePromo';
 import CpsRecommendations from '#containers/CpsRecommendations';
-import AdContainer from '../../components/Ad';
+import Ad from '../../components/Ad';
+import MPU from '../../components/Ad/MPU';
 import CanonicalAdBootstrapJs from '../../components/Ad/Canonical/CanonicalAdBootstrapJs';
 import Byline from '../../components/Byline';
 import {
@@ -114,9 +115,9 @@ const StyledRelatedTopics = styled(RelatedTopics)`
   }
 `;
 
-const MpuContainer = styled(AdContainer)`
-  margin-bottom: ${GEL_SPACING_TRPL};
-`;
+const mpuStyle = css({
+  marginBottom: GEL_SPACING_TRPL,
+});
 
 const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
@@ -189,8 +190,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
     social: SocialEmbedContainer,
     group: gist,
     links: props => <ScrollablePromo {...props} />,
-    mpu: props =>
-      isAdsEnabled ? <MpuContainer {...props} slotType="mpu" /> : null,
+    mpu: props => (isAdsEnabled ? <MPU {...props} css={mpuStyle} /> : null),
     wsoj: props => (
       <CpsRecommendations {...props} items={recommendationsData} />
     ),
@@ -272,7 +272,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
       {isAdsEnabled && !isAmp && (
         <CanonicalAdBootstrapJs adcampaign={adcampaign} />
       )}
-      {isAdsEnabled && <AdContainer slotType="leaderboard" />}
+      {isAdsEnabled && <Ad slotType="leaderboard" />}
       <ArticlePageGrid>
         <Primary>
           <Main role="main">

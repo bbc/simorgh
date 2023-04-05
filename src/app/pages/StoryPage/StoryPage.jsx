@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { node } from 'prop-types';
 import styled from '@emotion/styled';
+import { css } from '@emotion/react';
 import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
@@ -51,15 +52,12 @@ import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
-import AdContainer from '../../components/Ad';
+import Ad from '../../components/Ad';
+import MPU from '../../components/Ad/MPU';
 import CanonicalAdBootstrapJs from '../../components/Ad/Canonical/CanonicalAdBootstrapJs';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import categoryType from './categoryMap/index';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
-
-const MpuContainer = styled(AdContainer)`
-  margin-bottom: ${GEL_SPACING_TRPL};
-`;
 
 const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   const {
@@ -169,6 +167,10 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     showAdsBasedOnLocation,
   ].every(Boolean);
 
+  const mpuStyle = css({
+    marginBottom: GEL_SPACING_TRPL,
+  });
+
   const componentsToRender = {
     fauxHeadline,
     visuallyHiddenHeadline,
@@ -192,8 +194,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     include: props => <Include {...props} />,
     social_embed: props => <CpsSocialEmbedContainer {...props} />,
     table: props => <CpsTable {...props} />,
-    mpu: props =>
-      isAdsEnabled ? <MpuContainer {...props} slotType="mpu" /> : null,
+    mpu: props => (isAdsEnabled ? <MPU {...props} css={mpuStyle} /> : null),
     wsoj: props => (
       <CpsRecommendations {...props} items={recommendationsData} />
     ),
@@ -321,7 +322,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
       {isAdsEnabled && !isAmp && (
         <CanonicalAdBootstrapJs adcampaign={adcampaign} />
       )}
-      {isAdsEnabled && <AdContainer slotType="leaderboard" />}
+      {isAdsEnabled && <Ad slotType="leaderboard" />}
       <StoryPageGrid
         columns={gridColumns}
         enableGelGutters
