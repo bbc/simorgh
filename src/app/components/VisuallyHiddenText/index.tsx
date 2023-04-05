@@ -15,7 +15,6 @@ const VisuallyHiddenText = ({
   tabIndex,
   as,
 }: PropsWithChildren<VisuallyHiddenTextProps>) => {
-
   const Component = as || 'span';
   return (
     <Component css={styles.visuallyHiddenText} id={id} tabIndex={tabIndex}>
