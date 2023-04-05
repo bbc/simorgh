@@ -1,29 +1,14 @@
-import React, { useContext } from 'react';
+/** @jsxRuntime classic */
+/** @jsx jsx */
+
+import { useContext } from 'react';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import propEq from 'ramda/src/propEq';
-import styled from '@emotion/styled';
-import { css, useTheme } from '@emotion/react';
+import { jsx, useTheme } from '@emotion/react';
 import { string, node } from 'prop-types';
 import useToggle from '#hooks/useToggle';
 
-import {
-  GEL_GROUP_1_SCREEN_WIDTH_MAX,
-  GEL_GROUP_2_SCREEN_WIDTH_MIN,
-  GEL_GROUP_3_SCREEN_WIDTH_MAX,
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
-  GEL_GROUP_4_SCREEN_WIDTH_MAX,
-  GEL_GROUP_5_SCREEN_WIDTH_MIN,
-} from '#psammead/gel-foundations/src/breakpoints';
-import {
-  GEL_MARGIN_ABOVE_400PX,
-  GEL_MARGIN_BELOW_400PX,
-  GEL_SPACING,
-  GEL_SPACING_DBL,
-  GEL_SPACING_TRPL,
-  GEL_SPACING_QUAD,
-  GEL_SPACING_QUIN,
-} from '#psammead/gel-foundations/src/spacings';
 import { singleTextBlock } from '#app/models/blocks';
 import { articleDataPropTypes } from '#models/propTypes/article';
 import ArticleMetadata from '#containers/ArticleMetadata';
@@ -39,7 +24,6 @@ import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import articleMediaPlayer from '#containers/ArticleMediaPlayer';
-import LinkedData from '#containers/LinkedData';
 import MostReadContainer from '#containers/MostRead';
 import MostReadSection from '#containers/MostRead/section';
 import MostReadSectionLabel from '#containers/MostRead/label';
@@ -64,6 +48,7 @@ import CpsRecommendations from '#containers/CpsRecommendations';
 import Ad from '../../components/Ad';
 import MPU from '../../components/Ad/MPU';
 import CanonicalAdBootstrapJs from '../../components/Ad/Canonical/CanonicalAdBootstrapJs';
+import LinkedData from '../../components/LinkedData';
 import Byline from '../../components/Byline';
 import {
   bylineExtractor,
@@ -75,49 +60,7 @@ import RelatedContentSection from './PagePromoSections/RelatedContentSection';
 
 import SecondaryColumn from './SecondaryColumn';
 
-import ArticlePageGrid, { Primary } from './ArticlePageGrid';
-
-const Wrapper = styled.div`
-  background-color: ${props => props.theme.palette.GREY_2};
-`;
-
-const ArticlePageMostReadSection = styled(MostReadSection)`
-  @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
-    margin: 0 ${GEL_MARGIN_BELOW_400PX} 0 ${GEL_MARGIN_BELOW_400PX};
-    padding-bottom: ${GEL_SPACING_TRPL};
-  }
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-    margin: 0 ${GEL_MARGIN_ABOVE_400PX} 0 ${GEL_MARGIN_ABOVE_400PX};
-    padding-bottom: ${GEL_SPACING_QUAD};
-  }
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
-    margin: 0 ${GEL_MARGIN_ABOVE_400PX} 0 ${GEL_MARGIN_ABOVE_400PX};
-    padding-bottom: ${GEL_SPACING_QUIN};
-  }
-  @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
-    width: 100%; /* Needed for IE11 */
-    margin: 0 auto;
-    padding: 0 ${GEL_SPACING_DBL} ${GEL_SPACING_TRPL};
-    max-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN};
-  }
-`;
-
-const Main = styled.main`
-  padding-bottom: ${GEL_SPACING_TRPL};
-`;
-
-const StyledRelatedTopics = styled(RelatedTopics)`
-  margin: ${GEL_SPACING_DBL};
-  padding-bottom: ${GEL_SPACING};
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    margin: ${GEL_SPACING_QUAD} 0;
-    padding-bottom: ${GEL_SPACING_QUAD};
-  }
-`;
-
-const mpuStyle = css({
-  marginBottom: GEL_SPACING_TRPL,
-});
+import styles from './ArticlePage.styles';
 
 const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
@@ -125,6 +68,10 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
     useContext(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
   const { enabled: adsEnabled } = useToggle('ads');
+
+  const {
+    palette: { GREY_2, WHITE },
+  } = useTheme();
 
   const isAdsEnabled = [
     path(['metadata', 'allowAdvertising'], pageData),
@@ -190,15 +137,11 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
     social: SocialEmbedContainer,
     group: gist,
     links: props => <ScrollablePromo {...props} />,
-    mpu: props => (isAdsEnabled ? <MPU {...props} css={mpuStyle} /> : null),
+    mpu: props => (isAdsEnabled ? <MPU {...props} css={styles.mpuAd} /> : null),
     wsoj: props => (
       <CpsRecommendations {...props} items={recommendationsData} />
     ),
   };
-
-  const {
-    palette: { GREY_2, WHITE },
-  } = useTheme();
 
   const visuallyHiddenBlock = {
     id: null,
@@ -227,10 +170,10 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   );
 
   const MostReadWrapper = ({ children }) => (
-    <ArticlePageMostReadSection>
+    <MostReadSection css={styles.mostReadSection}>
       <MostReadSectionLabel mobileDivider={showRelatedTopics && topics} />
       {children}
-    </ArticlePageMostReadSection>
+    </MostReadSection>
   );
 
   MostReadWrapper.propTypes = {
@@ -238,7 +181,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   };
 
   return (
-    <Wrapper>
+    <div css={styles.pageWrapper}>
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
       <ComscoreAnalytics />
@@ -273,16 +216,17 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
         <CanonicalAdBootstrapJs adcampaign={adcampaign} />
       )}
       {isAdsEnabled && <Ad slotType="leaderboard" />}
-      <ArticlePageGrid>
-        <Primary>
-          <Main role="main">
+      <div css={styles.grid}>
+        <div css={styles.primaryColumn}>
+          <main css={styles.mainContent} role="main">
             <Blocks
               blocks={articleBlocks}
               componentsToRender={componentsToRender}
             />
-          </Main>
+          </main>
           {showRelatedTopics && topics && (
-            <StyledRelatedTopics
+            <RelatedTopics
+              css={styles.relatedTopics}
               topics={topics}
               mobileDivider={false}
               backgroundColour={GREY_2}
@@ -290,14 +234,14 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
             />
           )}
           <RelatedContentSection content={blocks} />
-        </Primary>
+        </div>
         <SecondaryColumn pageData={pageData} />
-      </ArticlePageGrid>
+      </div>
       <MostReadContainer
         mostReadEndpointOverride={mostReadEndpointOverride}
         wrapper={MostReadWrapper}
       />
-    </Wrapper>
+    </div>
   );
 };
 

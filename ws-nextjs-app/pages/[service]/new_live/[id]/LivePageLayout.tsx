@@ -4,11 +4,11 @@
 import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
 import MetadataContainer from '#app/legacy/containers/Metadata';
-import LinkedDataContainer from '#app/legacy/containers/LinkedData';
 import Pagination from '#pages/TopicPage/Pagination';
 import Heading from '#app/components/Heading';
 import { ServiceContext } from '#contexts/ServiceContext';
 import nodeLogger from '#lib/logger.node';
+import LinkedDataContainer from '../../../../../src/app/components/LinkedData';
 
 import styles from './styles';
 

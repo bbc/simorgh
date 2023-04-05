@@ -119,6 +119,8 @@ import {
   GROUP_D_MIN_WIDTH,
 } from './fontMediaQueries';
 
+import gridWidths from './gridWidths';
+
 import { BrandPalette, Typography, BrandSVG } from '../../models/types/theming';
 
 type Props = {
@@ -260,6 +262,7 @@ const withThemeProvider = ({
       SEXTUPLE,
     },
     brandSVG,
+    gridWidths,
   };
 
   const ThemeProvider: React.FC<Props> = ({ children }) => {

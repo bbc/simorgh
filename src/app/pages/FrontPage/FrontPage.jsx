@@ -8,7 +8,6 @@ import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
 import { frontPageDataPropTypes } from '#models/propTypes/frontPage';
 import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
-import LinkedData from '#containers/LinkedData';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
@@ -25,6 +24,7 @@ import MPUContainer from '../../components/Ad/MPU';
 import CanonicalAdBootstrapJs from '../../components/Ad/Canonical/CanonicalAdBootstrapJs';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { GHOST } from '../../components/ThemeProvider/palette';
+import LinkedData from '../../components/LinkedData';
 
 const FrontPageMostReadSection = styled(MostReadSection)`
   /* To centre page layout for Group 4+ */

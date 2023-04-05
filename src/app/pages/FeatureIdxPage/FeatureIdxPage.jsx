@@ -3,7 +3,6 @@ import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import { RequestContext } from '#contexts/RequestContext';
 import MetadataContainer from '#containers/Metadata';
-import LinkedData from '#containers/LinkedData';
 import IndexHeading from '#containers/IndexHeading';
 import IndexPageContainer from '#components/PageLayout/IndexPageContainer';
 import IndexPageSection from '#containers/IndexPageSection';
@@ -16,6 +15,7 @@ import CanonicalAdBootstrapJs from '../../components/Ad/Canonical/CanonicalAdBoo
 import AdContainer from '../../components/Ad';
 import MPUContainer from '../../components/Ad/MPU';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import LinkedData from '../../components/LinkedData';
 import flattenGroups from './flattenGroups';
 
 const FeatureIdxPage = ({ pageData }) => {
