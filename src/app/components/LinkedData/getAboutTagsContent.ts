@@ -1,13 +1,15 @@
-const checkType = types => {
+import { Tag } from './types';
+
+const checkType = (types?: string[]) => {
   const acceptableTypes = ['core:Person', 'core:Organization', 'core:Place'];
 
-  if (types.length === 0) {
+  if (types?.length === 0) {
     return 'Thing';
   }
 
   let typesFound = 0;
   let typeFound;
-  types.forEach(type => {
+  types?.forEach(type => {
     if (acceptableTypes.includes(type)) {
       typesFound += 1;
       typeFound = type.replace('core:', '');
@@ -20,16 +22,16 @@ const checkType = types => {
   return 'Thing';
 };
 
-const checkSameAs = uris => {
+const checkSameAs = (uris: string[]) => {
   const sameAs = uris.filter(uri => uri.startsWith('http://dbpedia.org/'));
   return sameAs.length ? sameAs : undefined;
 };
 
-export default aboutTags => {
+export default (aboutTags: Tag[]) => {
   if (aboutTags && aboutTags.length > 0) {
-    const content = [];
+    const content: Tag[] = [];
     aboutTags.forEach(tag => {
-      const about = {
+      const about: Tag = {
         '@type': checkType(tag.thingType),
         name: tag.thingLabel,
       };
