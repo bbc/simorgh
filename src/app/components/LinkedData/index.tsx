@@ -1,14 +1,14 @@
 import React, { useContext } from 'react';
 import { Helmet } from 'react-helmet';
-import { string, shape, arrayOf, bool, object } from 'prop-types';
 import { RequestContext } from '#contexts/RequestContext';
 import serialiseForScript from '#lib/utilities/serialiseForScript';
 import getBrandedImage from '#lib/utilities/getBrandedImage';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import { ServiceContext } from '../../contexts/ServiceContext';
 import getAboutTagsContent from './getAboutTagsContent';
+import { LinkedDataProps } from './types';
 
 const LinkedData = ({
-  showAuthor,
+  showAuthor = false,
   type,
   seoTitle,
   headline,
@@ -16,10 +16,10 @@ const LinkedData = ({
   datePublished,
   dateModified,
   aboutTags,
-  entities,
+  entities = [],
   imageLocator,
   bylineLinkedData,
-}) => {
+}: LinkedDataProps) => {
   const {
     brandName,
     publishingPrinciples,
@@ -163,47 +163,6 @@ const LinkedData = ({
       </script>
     </Helmet>
   );
-};
-
-LinkedData.propTypes = {
-  showAuthor: bool,
-  type: string.isRequired,
-  seoTitle: string.isRequired,
-  headline: string,
-  description: string,
-  datePublished: string,
-  dateModified: string,
-  aboutTags: arrayOf(
-    shape({
-      '@type': string,
-      name: string,
-      sameAs: arrayOf(string),
-    }),
-  ),
-  // eslint-disable-next-line react/forbid-prop-types
-  entities: arrayOf(object),
-  imageLocator: string,
-  bylineLinkedData: shape({
-    authorName: string,
-    jobRole: string,
-    twitterText: string,
-    twitterLink: string,
-    authorImage: string,
-    location: string,
-    authorTopicUrl: string,
-  }),
-};
-
-LinkedData.defaultProps = {
-  showAuthor: false,
-  headline: undefined,
-  description: undefined,
-  datePublished: undefined,
-  dateModified: undefined,
-  aboutTags: undefined,
-  entities: [],
-  imageLocator: undefined,
-  bylineLinkedData: undefined,
 };
 
 export default LinkedData;
