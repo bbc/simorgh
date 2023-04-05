@@ -3,10 +3,7 @@ import { render, RenderOptions } from '@testing-library/react';
 
 import { ServiceContextProvider } from '../contexts/ServiceContext';
 import { RequestContextProvider } from '../contexts/RequestContext';
-import {
-  ToggleContextProvider,
-  ToggleContextProviderProps,
-} from '../contexts/ToggleContext';
+import { ToggleContextProvider } from '../contexts/ToggleContext';
 import { UserContextProvider } from '../contexts/UserContext';
 import { EventTrackingContextProvider } from '../contexts/EventTrackingContext';
 import pageDataFixture from '../../../data/news/articles/c0g992jmmkko.json';
@@ -22,7 +19,11 @@ interface Props {
   pageType?: PageTypes;
   pathname?: string;
   service?: Services;
-  toggles?: ToggleContextProviderProps;
+  toggles?: {
+    [key: string]: {
+      enabled: boolean;
+    };
+  };
   showAdsBasedOnLocation?: boolean;
   variant?: Variants;
 }
