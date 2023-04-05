@@ -670,5 +670,3 @@ exports[`Ad Container Snapshots Canonical should correctly render an mpu ad 1`] 
   </section>
 </div>
 `;
-
-exports[`Ad Snapshots Canonical should correctly render a leaderboard ad 1`] = `<div />`;

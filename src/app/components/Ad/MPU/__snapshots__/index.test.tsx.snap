@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MPU should render without gel margins at all breakpoints and gel padding at smaller breakpoints 1`] = `<div />`;
