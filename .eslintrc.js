@@ -28,6 +28,10 @@ module.exports = {
     'react/jsx-one-expression-per-line': 'off',
     'react/jsx-props-no-spreading': 'off',
     'react/function-component-definition': 'off',
+    'react/no-unknown-property': [
+      'error',
+      { ignore: ['imagesrcset', 'imagesizes'] },
+    ],
     'linebreak-style': process.platform === 'win32' ? 'off' : ['error', 'unix'],
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
