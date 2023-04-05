@@ -2,7 +2,6 @@ import React, { useContext, Fragment } from 'react';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import { RequestContext } from '#contexts/RequestContext';
-import LinkedData from '#containers/LinkedData';
 import IndexHeading from '#containers/IndexHeading';
 import IndexPageContainer from '#components/PageLayout/IndexPageContainer';
 import IndexPageSection from '#containers/IndexPageSection';
@@ -16,6 +15,7 @@ import AdContainer from '#containers/Ad';
 import MPUContainer from '#containers/Ad/MPU';
 import MetadataContainer from '../../components/Metadata';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import LinkedData from '../../components/LinkedData';
 import flattenGroups from './flattenGroups';
 
 const FeatureIdxPage = ({ pageData }) => {
