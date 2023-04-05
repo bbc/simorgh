@@ -69,19 +69,20 @@ const fileLogger = createLogger({
     }),
   ),
   transports: [
-    new transports.File(loggerOptions.file),
+    new transports.Console(loggerOptions.console),
+    // new transports.File(loggerOptions.file),
 
-    // console output is sent to syslog - this can consume a lot of disk space in instances that
-    // handle a lot of traffic, so we only enable console output in some environments
-    ...(process.env.LOG_TO_CONSOLE === 'true'
-      ? [new transports.Console(loggerOptions.console)]
-      : []),
+    // // console output is sent to syslog - this can consume a lot of disk space in instances that
+    // // handle a lot of traffic, so we only enable console output in some environments
+    // ...(process.env.LOG_TO_CONSOLE === 'true'
+    //   ? [new transports.Console(loggerOptions.console)]
+    //   : []),
   ],
 });
 
 class Logger {
   constructor(callingFile) {
-    createLogDirectory(LOG_DIR);
+    // createLogDirectory(LOG_DIR);
     const file = folderAndFilename(callingFile);
 
     this.error = (event, message) => {
