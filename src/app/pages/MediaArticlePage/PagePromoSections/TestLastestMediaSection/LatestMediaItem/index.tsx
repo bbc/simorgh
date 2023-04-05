@@ -7,11 +7,11 @@ import moment from 'moment';
 import formatDuration from '#app/lib/utilities/formatDuration';
 import Promo from '#components/OptimoPromos';
 import { LatestMediaItemProp } from '../LatestMediaTypes';
+import LatestMediaIndicator from '../LatestMediaIndicator';
 import { ServiceContext } from '../../../../../contexts/ServiceContext';
 import {
   PlaceholderWrapper,
   PlaceholderInfo,
-  StyledPromoMediaIndicator,
   StyledPromoTitle,
   StyledTimestamp,
   styles,
@@ -49,16 +49,11 @@ const LatestMediaItem = ({
         <div css={styles.gridInner}>
           <PlaceholderWrapper>
             <Promo.Image src={src} altText="Hello" width={50} height={50} />
-            <div css={styles.placeholderInfo}>
-              <div>
-                {item.type && <StyledPromoMediaIndicator />}
-                {formatMediaDuration(item.duration)}
-              </div>
-            </div>
+            <LatestMediaIndicator>{item.duration}</LatestMediaIndicator>
           </PlaceholderWrapper>
           <div>
             <Promo.Link>
-              <StyledPromoTitle as="h3" script={script}>
+              <StyledPromoTitle as="h3">
                 <Promo.Content
                   mediaDuration={item.description}
                   headline={item.title}

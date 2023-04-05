@@ -28,3 +28,7 @@ export type ImageProp = {
   src: string;
   useLargeImages: boolean;
 };
+
+export type LatestMediaIndicatorProp = {
+  children: string;
+};
