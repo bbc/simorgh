@@ -7,9 +7,9 @@ import services from '../../../../server/utilities/serviceConfigs';
 import ThemeProvider from '../../ThemeProvider';
 
 import Subheading from '.';
-import { StorybookProps } from '../types';
+import { StoryProps } from '../../../models/types/storybook';
 
-const Component = ({ service, variant }: StorybookProps) => {
+const Component = ({ service, variant }: StoryProps) => {
   return (
     <ThemeProvider service={service} variant={variant}>
       <ServiceContextProvider service={service} variant={variant}>
