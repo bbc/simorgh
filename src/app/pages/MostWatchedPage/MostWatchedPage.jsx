@@ -20,10 +20,10 @@ import IndexPageContainer from '#components/PageLayout/IndexPageContainer';
 import IndexHeading from '#containers/IndexHeading';
 import MostWatchedContainer from '#containers/MostWatched';
 import MetadataContainer from '#containers/Metadata';
-import LinkedData from '#containers/LinkedData';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import LinkedData from '../../components/LinkedData';
 
 const StyledIndexHeading = styled(IndexHeading)`
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
