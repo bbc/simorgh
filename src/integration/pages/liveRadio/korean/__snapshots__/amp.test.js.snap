@@ -223,12 +223,19 @@ Object {
 
 exports[`AMP Korean Live Radio Page Header Navigation link should match text and url 3`] = `
 Object {
+  "text": "라디오",
+  "url": "/korean/bbc_korean_radio/programmes/w13xttll",
+}
+`;
+
+exports[`AMP Korean Live Radio Page Header Navigation link should match text and url 4`] = `
+Object {
   "text": "다운로드",
   "url": "/korean/downloads",
 }
 `;
 
-exports[`AMP Korean Live Radio Page Header Navigation link should match text and url 4`] = `
+exports[`AMP Korean Live Radio Page Header Navigation link should match text and url 5`] = `
 Object {
   "text": "TOP 뉴스",
   "url": "/korean/popular/read",
