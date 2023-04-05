@@ -4,17 +4,8 @@
 import { useContext } from 'react';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
-import styled from '@emotion/styled';
 import { jsx, useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
-
-import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
-import {
-  GEL_SPACING,
-  GEL_SPACING_DBL,
-  GEL_SPACING_TRPL,
-  GEL_SPACING_QUAD,
-} from '#psammead/gel-foundations/src/spacings';
 
 import { articleDataPropTypes } from '#models/propTypes/article';
 import ArticleMetadata from '#containers/ArticleMetadata';
@@ -60,26 +51,7 @@ import RelatedContentSection from './PagePromoSections/RelatedContentSection';
 
 import SecondaryColumn from './SecondaryColumn';
 
-import MediaArticlePageGrid, { Primary } from './MediaArticlePageGrid';
-
 import styles from './MediaArticlePage.styles';
-
-const Wrapper = styled.div`
-  background-color: ${props => props.theme.palette.GREY_2};
-`;
-
-const Main = styled.main`
-  padding-bottom: ${GEL_SPACING_TRPL};
-`;
-
-const StyledRelatedTopics = styled(RelatedTopics)`
-  margin: ${GEL_SPACING_DBL};
-  padding-bottom: ${GEL_SPACING};
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    margin: ${GEL_SPACING_QUAD} 0;
-    padding-bottom: ${GEL_SPACING_QUAD};
-  }
-`;
 
 const MediaArticlePage = ({ pageData }) => {
   const { articleAuthor, isTrustProjectParticipant, showRelatedTopics } =
@@ -184,7 +156,7 @@ const MediaArticlePage = ({ pageData }) => {
   );
 
   return (
-    <Wrapper>
+    <div css={styles.pageWrapper}>
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
       <ComscoreAnalytics />
@@ -215,13 +187,14 @@ const MediaArticlePage = ({ pageData }) => {
         aboutTags={aboutTags}
         imageLocator={promoImage}
       />
-      <MediaArticlePageGrid>
-        <Primary>
-          <Main role="main">
+      <div css={styles.grid}>
+        <div css={styles.primaryColumn}>
+          <main css={styles.mainContent} role="main">
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
-          </Main>
+          </main>
           {showRelatedTopics && topics && (
-            <StyledRelatedTopics
+            <RelatedTopics
+              css={styles.relatedTopics}
               topics={topics}
               mobileDivider={false}
               backgroundColour={GREY_2}
@@ -229,10 +202,10 @@ const MediaArticlePage = ({ pageData }) => {
             />
           )}
           <RelatedContentSection content={blocks} />
-        </Primary>
+        </div>
         <SecondaryColumn pageData={pageData} />
-      </MediaArticlePageGrid>
-    </Wrapper>
+      </div>
+    </div>
   );
 };
 
