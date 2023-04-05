@@ -970,6 +970,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/node@npm:^7.20.7":
+  version: 7.20.7
+  resolution: "@babel/node@npm:7.20.7"
+  dependencies:
+    "@babel/register": ^7.18.9
+    commander: ^4.0.1
+    core-js: ^3.26.0
+    node-environment-flags: ^1.0.5
+    regenerator-runtime: ^0.13.11
+    v8flags: ^3.1.1
+  peerDependencies:
+    "@babel/core": ^7.0.0-0
+  bin:
+    babel-node: ./bin/babel-node.js
+  checksum: 3a5c307db92666bba1856d4fbf147df17332185a6cfbf4e9e2b3e08bc2fb1efa1ba963b88e05d0e0da4e1e5fd6cdb7a2e3e644c00a8e7dea883a900ad9f631e5
+  languageName: node
+  linkType: hard
+
 "@babel/parser@npm:7.16.4":
   version: 7.16.4
   resolution: "@babel/parser@npm:7.16.4"
@@ -3010,6 +3028,21 @@ __metadata:
   peerDependencies:
     "@babel/core": ^7.0.0-0
   checksum: 1d8e888c104022c2924803fc9e217c99f8a9b87dc5bf8ea1ddd9921765102c8267d2bd92d4f42aaa1b5ca3713ea400580b29702bb89829a59d63baf0321eb284
+  languageName: node
+  linkType: hard
+
+"@babel/register@npm:^7.18.9":
+  version: 7.21.0
+  resolution: "@babel/register@npm:7.21.0"
+  dependencies:
+    clone-deep: ^4.0.1
+    find-cache-dir: ^2.0.0
+    make-dir: ^2.1.0
+    pirates: ^4.0.5
+    source-map-support: ^0.5.16
+  peerDependencies:
+    "@babel/core": ^7.0.0-0
+  checksum: 9745cc7520b4c5e64cc54f4851c3b78af82e1f8cffc9041f5cc0b9aef62d86a9a8617327fc975b5e0e39cb5cc0aba7ae02429884390ee93e0de29152fa849b4f
   languageName: node
   linkType: hard
 
@@ -9636,7 +9669,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"commander@npm:^4.1.1":
+"commander@npm:^4.0.1, commander@npm:^4.1.1":
   version: 4.1.1
   resolution: "commander@npm:4.1.1"
   checksum: d7b9913ff92cae20cb577a4ac6fcc121bd6223319e54a40f51a14740a681ad5c574fd29a57da478a5f234a6fa6c52cbf0b7c641353e03c648b1ae85ba670b977
@@ -9925,6 +9958,13 @@ __metadata:
   version: 3.21.0
   resolution: "core-js@npm:3.21.0"
   checksum: 87df49aa2c5d0a521c52102b6669842dd30b334742e86dd4e0173c51230bc48d610060ab6de0f149766d188325b8c1b84598f901cf455674fe6c03ccc5c8026f
+  languageName: node
+  linkType: hard
+
+"core-js@npm:^3.26.0":
+  version: 3.29.1
+  resolution: "core-js@npm:3.29.1"
+  checksum: b38446dbfcfd3887b3d4922990da487e2c95044cb4c5717aaf95e786a4c6b218f05c056c7ed6c699169b9794a49fec890e402659d54661fc56965a0eb717e7bd
   languageName: node
   linkType: hard
 
@@ -13744,6 +13784,15 @@ __metadata:
   dependencies:
     react-is: ^16.7.0
   checksum: b1538270429b13901ee586aa44f4cc3ecd8831c061d06cb8322e50ea17b3f5ce4d0e2e66394761e6c8e152cd8c34fb3b4b690116c6ce2bd45b18c746516cb9e8
+  languageName: node
+  linkType: hard
+
+"homedir-polyfill@npm:^1.0.1":
+  version: 1.0.3
+  resolution: "homedir-polyfill@npm:1.0.3"
+  dependencies:
+    parse-passwd: ^1.0.0
+  checksum: 18dd4db87052c6a2179d1813adea0c4bfcfa4f9996f0e226fefb29eb3d548e564350fa28ec46b0bf1fbc0a1d2d6922ceceb80093115ea45ff8842a4990139250
   languageName: node
   linkType: hard
 
@@ -17636,6 +17685,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"node-environment-flags@npm:^1.0.5":
+  version: 1.0.6
+  resolution: "node-environment-flags@npm:1.0.6"
+  dependencies:
+    object.getownpropertydescriptors: ^2.0.3
+    semver: ^5.7.0
+  checksum: 268139ed0f7fabdca346dcb26931300ec7a1dc54a58085a849e5c78a82b94967f55df40177a69d4e819da278d98686d5c4fd49ab0d7bcff16fda25b6fffc4ca3
+  languageName: node
+  linkType: hard
+
 "node-fetch@npm:2.6.7, node-fetch@npm:^2.6.1, node-fetch@npm:^2.6.7":
   version: 2.6.7
   resolution: "node-fetch@npm:2.6.7"
@@ -18543,6 +18602,13 @@ __metadata:
     json-parse-even-better-errors: ^2.3.0
     lines-and-columns: ^1.1.6
   checksum: 62085b17d64da57f40f6afc2ac1f4d95def18c4323577e1eced571db75d9ab59b297d1d10582920f84b15985cbfc6b6d450ccbf317644cfa176f3ed982ad87e2
+  languageName: node
+  linkType: hard
+
+"parse-passwd@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "parse-passwd@npm:1.0.0"
+  checksum: 4e55e0231d58f828a41d0f1da2bf2ff7bcef8f4cb6146e69d16ce499190de58b06199e6bd9b17fbf0d4d8aef9052099cdf8c4f13a6294b1a522e8e958073066e
   languageName: node
   linkType: hard
 
@@ -20906,7 +20972,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"semver@npm:2 || 3 || 4 || 5, semver@npm:^5.4.1, semver@npm:^5.5.0, semver@npm:^5.6.0":
+"semver@npm:2 || 3 || 4 || 5, semver@npm:^5.4.1, semver@npm:^5.5.0, semver@npm:^5.6.0, semver@npm:^5.7.0":
   version: 5.7.1
   resolution: "semver@npm:5.7.1"
   bin:
@@ -21224,6 +21290,7 @@ __metadata:
   resolution: "simorgh@workspace:."
   dependencies:
     "@babel/core": 7.21.0
+    "@babel/node": ^7.20.7
     "@babel/plugin-proposal-export-default-from": 7.18.10
     "@babel/plugin-proposal-object-rest-spread": 7.20.7
     "@babel/plugin-proposal-throw-expressions": 7.18.6
@@ -23648,6 +23715,15 @@ __metadata:
     convert-source-map: ^1.6.0
     source-map: ^0.7.3
   checksum: 54ce92bec2727879626f623d02c8d193f0c7e919941fa373ec135189a8382265117f5316ea317a1e12a5f9c13d84d8449052a731fe3306fa4beaafbfa4cab229
+  languageName: node
+  linkType: hard
+
+"v8flags@npm:^3.1.1":
+  version: 3.2.0
+  resolution: "v8flags@npm:3.2.0"
+  dependencies:
+    homedir-polyfill: ^1.0.1
+  checksum: 193db08aa396d993da04d3d985450784aa0010f51613005d13ef97d7b2b9e1ba5aef04affa585037adece12de5ca532f6f5fc40288495eab55e2eebc201809d2
   languageName: node
   linkType: hard
 

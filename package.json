@@ -37,8 +37,9 @@
     "stop": "./scripts/killApp.sh",
     "storybook": "node .storybook/buildFontPreloads && start-storybook -p 9001 -s .storybook/static -c .storybook",
     "test": "yarn build && yarn test:local",
-    "test:local": "yarn test:lint && yarn test:dependencies && yarn test:unit && run-p --race start amp:validate && run-p --race start test:integration:ci",
+    "test:local": "yarn test:lint && yarn test:dependencies && yarn test:component-health && yarn test:unit && run-p --race start amp:validate && run-p --race start test:integration:ci",
     "test:dependencies": "node ./scripts/dependencyCheck",
+    "test:component-health": "babel-node ./scripts/componentHealthCheck",
     "test:e2e": "yarn stop && yarn build && run-p --race start cypress",
     "test:e2e:interactive": "yarn stop && yarn build && run-p --race start cypress:interactive",
     "test:lint": "eslint --ext .js,jsx,json,ts,tsx ./src ./data ./cypress ./.storybook ./webpack** && stylelint 'src/**/*.js' 'src/**/*.jsx'",
@@ -113,6 +114,7 @@
   },
   "devDependencies": {
     "@babel/core": "7.21.0",
+    "@babel/node": "^7.20.7",
     "@babel/plugin-proposal-export-default-from": "7.18.10",
     "@babel/plugin-proposal-object-rest-spread": "7.20.7",
     "@babel/plugin-proposal-throw-expressions": "7.18.6",
