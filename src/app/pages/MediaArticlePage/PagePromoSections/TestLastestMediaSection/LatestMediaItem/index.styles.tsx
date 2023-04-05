@@ -1,19 +1,17 @@
 import styled from '@emotion/styled';
 import { css, Theme } from '@emotion/react';
 import Promo from '#components/OptimoPromos';
-import { BORDER_SPACING } from '../../constants';
 
 export const styles = {
-  borderBottom: ({ mq }: Theme) =>
+  gridOuter: ({ mq, spacings }: Theme) =>
     css({
-      width: '100%',
-    }),
-  gridOuter: ({ mq }: Theme) =>
-    css({
-      border: `${BORDER_SPACING} solid transparent`,
+      borderBottom: `${spacings.FULL}rem solid transparent`,
+      borderTop: `${spacings.FULL}rem solid transparent`,
       height: '100%',
       [mq.GROUP_3_ONLY]: {
         width: '100%',
+        borderBottom: `0rem`,
+        borderTop: `0rem`,
       },
     }),
   gridInner: ({ mq }: Theme) =>

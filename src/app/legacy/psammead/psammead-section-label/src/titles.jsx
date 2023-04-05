@@ -88,7 +88,7 @@ const Title = styled.span`
 
 Title.propTypes = {
   dir: oneOf(['ltr', 'rtl']).isRequired,
-  id: string.isRequired,
+  id: string.isRequired, 
   script: shape(scriptPropType).isRequired,
   service: string.isRequired,
 };

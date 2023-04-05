@@ -1,11 +1,17 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
+import { useContext } from 'react';
 import { jsx } from '@emotion/react';
 import path from 'ramda/src/path';
 import useViewTracker from '#hooks/useViewTracker';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import generatePromoId from '../generatePromoId';
 import LatestMediaItem from './LatestMediaItem';
-import styles from './index.styles';
+import styles, {
+  StyledPromoItem,
+  StyledPromoList,
+  StyledSectionLabel,
+} from './index.styles';
 import {
   LatestMedia,
   TrackingBlock,
@@ -28,16 +34,20 @@ const renderLatestMediaList = (
   });
 
   return (
-    <LatestMediaItem
-      item={item}
-      ariaLabelledBy={ariaLabelledBy}
-      ref={viewRef}
-      eventTrackingData={eventTrackingData}
-    />
+    <StyledPromoItem>
+      <LatestMediaItem
+        item={item}
+        ariaLabelledBy={ariaLabelledBy}
+        ref={viewRef}
+        eventTrackingData={eventTrackingData}
+      />
+    </StyledPromoItem>
   );
 };
 
 const LatestMediaSection = ({ content }: { content: LatestMedia[] }) => {
+  const { service, dir, translations } = useContext(ServiceContext);
+
   const eventTrackingData = {
     block: {
       componentName: 'latest-media',
@@ -48,12 +58,27 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] }) => {
     eventTrackingData,
   );
   const viewRef = useViewTracker(eventTrackingDataSend);
-
   return (
-    <div css={styles.LatestMediaGridWrapper}>
-      {content.map((item, index) =>
-        renderLatestMediaList(item, index, eventTrackingData, viewRef),
-      )}
+    <div css={styles.OuterWrapper}>
+      <StyledSectionLabel
+        columnType="secondary"
+        dir={dir}
+        href={null}
+        labelId={undefined}
+        linkText={null}
+        script={undefined}
+        service={service}
+        backgroundColor="transparent"
+        overrideHeadingAs={null}
+        visuallyHidden={false}
+      >
+        {translations.latestMediaTitle ?? 'Latest'}
+      </StyledSectionLabel>
+      <StyledPromoList>
+        {content.map((item, index) =>
+          renderLatestMediaList(item, index, eventTrackingData, viewRef),
+        )}
+      </StyledPromoList>
     </div>
   );
 };

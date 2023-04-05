@@ -1,28 +1,16 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import { useContext } from 'react';
 import isEmpty from 'ramda/src/isEmpty';
-import moment from 'moment';
-import formatDuration from '#app/lib/utilities/formatDuration';
 import Promo from '#components/OptimoPromos';
 import { LatestMediaItemProp } from '../LatestMediaTypes';
 import LatestMediaIndicator from '../LatestMediaIndicator';
-import { ServiceContext } from '../../../../../contexts/ServiceContext';
 import {
   PlaceholderWrapper,
-  PlaceholderInfo,
   StyledPromoTitle,
   StyledTimestamp,
   styles,
 } from './index.styles';
-
-const formatMediaDuration = (mediaDuration: string) => {
-  const separator = ':';
-  const duration = moment.duration(mediaDuration, 'seconds');
-  const durationString = formatDuration({ duration, separator }) as string;
-  return durationString;
-};
 
 const LatestMediaItem = ({
   item,
@@ -30,8 +18,6 @@ const LatestMediaItem = ({
   eventTrackingData,
   ref,
 }: LatestMediaItemProp) => {
-  const { script } = useContext(ServiceContext);
-
   if (!item || isEmpty(item)) return null;
 
   const timestamp = item.firstPublished;
@@ -66,7 +52,6 @@ const LatestMediaItem = ({
           </div>
         </div>
       </Promo>
-      <hr />
     </div>
   );
 };
