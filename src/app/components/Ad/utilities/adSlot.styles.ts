@@ -1,12 +1,7 @@
-import {
-  GEL_GROUP_2_SCREEN_WIDTH_MIN,
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '#psammead/gel-foundations/src/breakpoints';
+import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
-  GEL_SPACING_QUAD,
   GEL_SPACING_TRPL,
 } from '#psammead/gel-foundations/src/spacings';
 
@@ -39,14 +34,14 @@ const LARGE_LEADERBOARD_WIDTH_MIN = '58.75rem'; // 940px
 // This value is the total height of the Ad Label (25px) whilst accounting for the bottom margin (8px)
 const AD_UNIT_MARGIN = 2.0625; // 33px
 
-const MPU_HEIGHTS = {
+export const MPU_HEIGHTS = {
   GROUP_1: `${3.125 + AD_UNIT_MARGIN}rem`,
   // 50px + AD_UNIT_MARGIN = 75px
   GROUP_3: `${15.625 + AD_UNIT_MARGIN}rem`,
   // 250px + AD_UNIT_MARGIN = 275px
 };
 
-const LEADERBOARD_HEIGHTS = {
+export const LEADERBOARD_HEIGHTS = {
   GROUP_1: `${3.125 + AD_UNIT_MARGIN}rem`,
   // 50px + AD_UNIT_MARGIN = 75px
   GROUP_2: `${3.75 + AD_UNIT_MARGIN}rem`,
@@ -57,38 +52,17 @@ const LEADERBOARD_HEIGHTS = {
   // 266px + AD_UNIT_MARGIN = 291px
 };
 
+export const MPU_MINIMUM_WIDTH = `@media (min-width: ${MPU_WIDTH_MIN})`;
+export const MPU_MINIMUM_WIDTH_PADDING = `@media (min-width: ${MPU_WIDTH_MIN_PADDING})`;
+export const LEADERBOARD_MINIMUM_WIDTH = `@media (min-width: ${LEADERBOARD_WIDTH_MIN})`;
+export const LEADERBOARD_MINIMUM_WIDTH_PADDING = `@media (min-width: ${LEADERBOARD_WIDTH_MIN_PADDING})`;
+export const LEADERBOARD_LARGE_MINIMUM_WIDTH = `@media (min-width: ${LARGE_LEADERBOARD_WIDTH_MIN})`;
+
 /*
   The Ad Unit (dotcom-ad-inner) already has margin-bottom of 0.5rem and
   the 'ADVERTISEMENT' Label (dotcom-ad-text) already has margin-top of 0.5rem,
   hence the padding is set such that this is accounted for.
 */
-
-export const leaderboardStyles = `
-  display: none;
-  visibility: hidden;
-  @media (min-width: ${LEADERBOARD_WIDTH_MIN}) {
-    min-height: ${LEADERBOARD_HEIGHTS.GROUP_1};
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    visibility: visible;
-  }
-  @media (min-width: ${LEADERBOARD_WIDTH_MIN_PADDING}) {
-    padding: ${GEL_SPACING_DBL} 0;
-  }
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    min-height: ${LEADERBOARD_HEIGHTS.GROUP_2};
-  }
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    min-height: ${LEADERBOARD_HEIGHTS.GROUP_3};
-    padding: ${GEL_SPACING_QUAD} 0;
-  }
-  @media (min-width: ${LARGE_LEADERBOARD_WIDTH_MIN}) {
-    min-height: ${LEADERBOARD_HEIGHTS.LARGE};
-    padding: ${GEL_SPACING_TRPL} 0;
-    };
-  }
-`;
 
 export const ampLeaderboardStyles = `
   display: none;
@@ -104,25 +78,6 @@ export const ampLeaderboardStyles = `
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     min-height: ${LEADERBOARD_HEIGHTS.LARGE};
     padding: ${GEL_SPACING_TRPL} 0;
-  }
-`;
-
-export const mpuStyles = `
-  display: none;
-  visibility: hidden;
-  padding: 0;
-  @media (min-width: ${MPU_WIDTH_MIN}) {
-    min-height: ${MPU_HEIGHTS.GROUP_1};
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    visibility: visible;
-  }
-  @media (min-width: ${MPU_WIDTH_MIN_PADDING}) {
-    padding: ${GEL_SPACING_DBL} 0 ${GEL_SPACING} 0;
-  }
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    min-height: ${MPU_HEIGHTS.GROUP_3};
   }
 `;
 

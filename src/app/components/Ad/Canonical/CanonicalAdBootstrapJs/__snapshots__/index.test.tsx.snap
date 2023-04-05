@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` 1`] = `undefined`;
+
+exports[`Canonical Ad BootstrapJs Snapshots should push dotcom bootstrap and configuration to a head script 1`] = `
+Object {
+  "baseTag": Array [],
+  "bodyAttributes": Object {},
+  "defer": true,
+  "encode": true,
+  "htmlAttributes": Object {},
+  "linkTags": Array [],
+  "metaTags": Array [],
+  "noscriptTags": Array [],
+  "onChangeClientState": [Function],
+  "scriptTags": Array [
+    Object {
+      "innerHTML": "
+    window.dotcom = window.dotcom || { cmd: [] };
+    window.dotcomConfig = {
+      pageAds: true,
+      playerAds: false
+    };
+    ",
+      "type": "text/javascript",
+    },
+  ],
+  "styleTags": Array [],
+  "title": undefined,
+  "titleAttributes": Object {},
+}
+`;

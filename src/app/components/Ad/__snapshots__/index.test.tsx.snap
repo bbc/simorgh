@@ -89,7 +89,7 @@ exports[`Ad Container Snapshots AMP should correctly render a leaderboard ad 1`]
   >
     <section
       aria-hidden="true"
-      aria-label="Publicidad"
+      aria-label="Advertisement"
       class="emotion-2 emotion-3"
       data-e2e="advertisement"
       role="region"
@@ -106,7 +106,7 @@ exports[`Ad Container Snapshots AMP should correctly render a leaderboard ad 1`]
             href="https://www.bbc.com/usingthebbc/cookies/"
             tabindex="-1"
           >
-            Publicidad
+            Advertisement
           </a>
           <amp-ad
             data-a4a-upgrade-type="amp-ad-network-doubleclick-impl"
@@ -117,7 +117,7 @@ exports[`Ad Container Snapshots AMP should correctly render a leaderboard ad 1`]
             data-npa-on-unknown-consent="true"
             data-slot="/4817/bbccom.test.site.amp.news"
             height="50"
-            json="{\\"targeting\\":{\\"slot\\":\\"leaderboard\\",\\"asset_type\\":\\"index\\",\\"channel\\":\\"mundo\\"}}"
+            json="{\\"targeting\\":{\\"slot\\":\\"leaderboard\\",\\"asset_type\\":\\"index\\",\\"channel\\":\\"news\\"}}"
             media="(max-width: 62.9375rem)"
             type="doubleclick"
             width="320"
@@ -131,7 +131,7 @@ exports[`Ad Container Snapshots AMP should correctly render a leaderboard ad 1`]
             data-npa-on-unknown-consent="true"
             data-slot="/4817/bbccom.test.site.amp.news"
             height="250"
-            json="{\\"targeting\\":{\\"slot\\":\\"leaderboard\\",\\"asset_type\\":\\"index\\",\\"channel\\":\\"mundo\\"}}"
+            json="{\\"targeting\\":{\\"slot\\":\\"leaderboard\\",\\"asset_type\\":\\"index\\",\\"channel\\":\\"news\\"}}"
             media="(min-width: 63rem)"
             type="doubleclick"
             width="970"
@@ -226,7 +226,7 @@ exports[`Ad Container Snapshots AMP should correctly render an mpu ad 1`] = `
   >
     <section
       aria-hidden="true"
-      aria-label="Publicidad 2"
+      aria-label="Advertisement 2"
       class="emotion-2 emotion-3"
       data-e2e="advertisement"
       role="region"
@@ -243,7 +243,7 @@ exports[`Ad Container Snapshots AMP should correctly render an mpu ad 1`] = `
             href="https://www.bbc.com/usingthebbc/cookies/"
             tabindex="-1"
           >
-            Publicidad
+            Advertisement
           </a>
           <amp-ad
             data-a4a-upgrade-type="amp-ad-network-doubleclick-impl"
@@ -254,7 +254,7 @@ exports[`Ad Container Snapshots AMP should correctly render an mpu ad 1`] = `
             data-npa-on-unknown-consent="true"
             data-slot="/4817/bbccom.test.site.amp.news"
             height="250"
-            json="{\\"targeting\\":{\\"slot\\":\\"mpu\\",\\"asset_type\\":\\"index\\",\\"channel\\":\\"mundo\\"}}"
+            json="{\\"targeting\\":{\\"slot\\":\\"mpu\\",\\"asset_type\\":\\"index\\",\\"channel\\":\\"news\\"}}"
             type="doubleclick"
             width="300"
           />
@@ -497,7 +497,7 @@ exports[`Ad Container Snapshots AMP should render a leaderboard ad without a pla
   >
     <section
       aria-hidden="true"
-      aria-label="Publicidad"
+      aria-label="Advertisement"
       class="emotion-2 emotion-3"
       data-e2e="advertisement"
       role="region"
@@ -514,7 +514,7 @@ exports[`Ad Container Snapshots AMP should render a leaderboard ad without a pla
             href="https://www.bbc.com/usingthebbc/cookies/"
             tabindex="-1"
           >
-            Publicidad
+            Advertisement
           </a>
           <amp-ad
             data-a4a-upgrade-type="amp-ad-network-doubleclick-impl"
@@ -525,7 +525,7 @@ exports[`Ad Container Snapshots AMP should render a leaderboard ad without a pla
             data-npa-on-unknown-consent="true"
             data-slot="/4817/bbccom.test.site.amp.news"
             height="50"
-            json="{\\"targeting\\":{\\"slot\\":\\"leaderboard\\",\\"asset_type\\":\\"index\\",\\"channel\\":\\"mundo\\"}}"
+            json="{\\"targeting\\":{\\"slot\\":\\"leaderboard\\",\\"asset_type\\":\\"index\\",\\"channel\\":\\"news\\"}}"
             media="(max-width: 62.9375rem)"
             type="doubleclick"
             width="320"
@@ -539,7 +539,7 @@ exports[`Ad Container Snapshots AMP should render a leaderboard ad without a pla
             data-npa-on-unknown-consent="true"
             data-slot="/4817/bbccom.test.site.amp.news"
             height="250"
-            json="{\\"targeting\\":{\\"slot\\":\\"leaderboard\\",\\"asset_type\\":\\"index\\",\\"channel\\":\\"mundo\\"}}"
+            json="{\\"targeting\\":{\\"slot\\":\\"leaderboard\\",\\"asset_type\\":\\"index\\",\\"channel\\":\\"news\\"}}"
             media="(min-width: 63rem)"
             type="doubleclick"
             width="970"
@@ -553,7 +553,6 @@ exports[`Ad Container Snapshots AMP should render a leaderboard ad without a pla
 
 exports[`Ad Container Snapshots Canonical should correctly render a leaderboard ad 1`] = `
 .emotion-0 {
-  background-color: #E6E8EA;
   display: none;
   visibility: hidden;
 }
@@ -606,7 +605,7 @@ exports[`Ad Container Snapshots Canonical should correctly render a leaderboard 
   <section
     aria-hidden="true"
     aria-label="Publicidad"
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     data-e2e="advertisement"
     role="region"
   >
@@ -660,7 +659,7 @@ exports[`Ad Container Snapshots Canonical should correctly render an mpu ad 1`] 
   <section
     aria-hidden="true"
     aria-label="Publicidad 2"
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     data-e2e="advertisement"
     role="region"
   >
@@ -671,3 +670,5 @@ exports[`Ad Container Snapshots Canonical should correctly render an mpu ad 1`] 
   </section>
 </div>
 `;
+
+exports[`Ad Snapshots Canonical should correctly render a leaderboard ad 1`] = `<div />`;

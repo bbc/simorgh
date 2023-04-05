@@ -1,4 +1,11 @@
-const getAdsAriaLabel = (adsLabel, dir, slotType) => {
+import { Direction } from '#app/models/types/serviceConfig';
+import { SlotType } from '../../types';
+
+const getAdsAriaLabel = (
+  adsLabel: string,
+  dir: Direction,
+  slotType: SlotType,
+) => {
   const mpuLabel =
     dir === 'ltr' || adsLabel === 'Advertisement'
       ? `${adsLabel} 2`

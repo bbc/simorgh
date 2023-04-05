@@ -14,7 +14,7 @@ import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
 import AdSlot from './AdSlot';
-import { ampLeaderboardStyles, ampMpuStyles } from '../utilities/adSlotStyles';
+import { ampLeaderboardStyles, ampMpuStyles } from '../utilities/adSlot.styles';
 
 // styled-components removes non-standard attributes (such as AMP attributes) on
 // server rendering. spreading props like this allows us to add AMP attributes

@@ -2,11 +2,12 @@ import React from 'react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 import AmpAd, { AMP_ACCESS_FETCH } from './index';
-import { render } from '../../../../components/react-testing-library-with-providers';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
-import latinDiacritics from '../../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
+import { render } from '../../react-testing-library-with-providers';
+import { ServiceContext } from '../../../contexts/ServiceContext';
+import latinDiacritics from '../../ThemeProvider/fontScripts/latinWithDiacritics';
+import { SlotType } from '../types';
 
-const adJsonAttributes = slotType => ({
+const adJsonAttributes = (slotType: SlotType) => ({
   targeting: {
     slot: slotType,
     asset_type: 'index',
@@ -20,7 +21,7 @@ const adTranslations = {
   },
 };
 
-const adWithContext = (slotType, showAdPlaceholder = false) => (
+const adWithContext = (slotType: SlotType, showAdPlaceholder = false) => (
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.com"
     isAmp

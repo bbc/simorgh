@@ -1,8 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { string } from 'prop-types';
+import { CanonicalAdBootstrapJsProps } from '../../types';
 
-const CanonicalAdBootstrapJs = ({ adcampaign }) => {
+const CanonicalAdBootstrapJs = ({
+  adcampaign,
+}: CanonicalAdBootstrapJsProps) => {
   let innerHTML;
 
   if (adcampaign) {
@@ -35,14 +37,6 @@ const CanonicalAdBootstrapJs = ({ adcampaign }) => {
       ]}
     />
   );
-};
-
-CanonicalAdBootstrapJs.propTypes = {
-  adcampaign: string,
-};
-
-CanonicalAdBootstrapJs.defaultProps = {
-  adcampaign: null,
 };
 
 export default CanonicalAdBootstrapJs;

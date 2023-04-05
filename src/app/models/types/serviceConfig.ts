@@ -28,6 +28,8 @@ export type UkrainianConfig = {
   [key in UkrainianService['variant']]: ServiceConfig;
 };
 
+export type Direction = 'rtl' | 'ltr';
+
 export type ServiceConfig = {
   lang: string;
   articleAuthor: string;
@@ -41,7 +43,7 @@ export type ServiceConfig = {
   serviceLocalizedName?: string;
   defaultImage: string;
   defaultImageAltText: string;
-  dir: string;
+  dir: Direction;
   externalLinkText: string;
   imageCaptionOffscreenText: string;
   videoCaptionOffscreenText: string;

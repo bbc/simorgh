@@ -1,21 +1,28 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import React from 'react';
-import { render, act, waitFor } from '@testing-library/react';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
-import CanonicalAdBootstrapJs from './CanonicalAdBootstrapJs';
+import { Helmet } from 'react-helmet';
+import {
+  render,
+  act,
+  waitFor,
+} from '../../../react-testing-library-with-providers';
+import CanonicalAdBootstrapJs from '.';
 
-describe('CanonicalAds Ads', () => {
+describe('Canonical Ad BootstrapJs', () => {
   beforeEach(() => {
     document.querySelectorAll('head script').forEach(script => {
-      script.parentNode.removeChild(script);
+      script.parentNode?.removeChild(script);
     });
+    // @ts-ignore
     delete window.dotcomConfig;
+    // @ts-ignore
     delete window.dotcom;
   });
   describe('Snapshots', () => {
-    shouldMatchSnapshot(
-      'should push dotcom bootstrap and configuration to a head script',
-      <CanonicalAdBootstrapJs />,
-    );
+    it('should push dotcom bootstrap and configuration to a head script', () => {
+      render(<CanonicalAdBootstrapJs />);
+      expect(Helmet.peek()).toMatchSnapshot();
+    });
   });
 
   describe('Assertions', () => {
@@ -25,6 +32,7 @@ describe('CanonicalAds Ads', () => {
       });
 
       await waitFor(() => {
+        // @ts-ignore
         expect(window.dotcomConfig).toEqual({
           pageAds: true,
           playerAds: false,
@@ -38,6 +46,7 @@ describe('CanonicalAds Ads', () => {
       });
 
       await waitFor(() => {
+        // @ts-ignore
         expect(window.dotcomConfig).toEqual({
           adcampaign: 'a-campaign',
           pageAds: true,

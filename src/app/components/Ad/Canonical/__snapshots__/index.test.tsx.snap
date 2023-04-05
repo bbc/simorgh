@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CanonicalAds Ads Snapshots should correctly render a Canonical mpu ad with dotcom-bootstrap script 1`] = `
+exports[`Canonical Ad Snapshots should correctly render a Canonical mpu ad with dotcom-bootstrap script 1`] = `
 .emotion-0 {
   background-color: #E6E8EA;
   display: none;
@@ -42,7 +42,7 @@ exports[`CanonicalAds Ads Snapshots should correctly render a Canonical mpu ad w
   <section
     aria-hidden="true"
     aria-label="Advertisement 2"
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     data-e2e="advertisement"
     role="region"
   >
@@ -54,9 +54,8 @@ exports[`CanonicalAds Ads Snapshots should correctly render a Canonical mpu ad w
 </div>
 `;
 
-exports[`CanonicalAds Ads Snapshots should correctly render an Canonical leaderboard ad with dotcom-bootstrap script 1`] = `
+exports[`Canonical Ad Snapshots should correctly render an Canonical leaderboard ad with dotcom-bootstrap script 1`] = `
 .emotion-0 {
-  background-color: #E6E8EA;
   display: none;
   visibility: hidden;
 }
@@ -109,7 +108,7 @@ exports[`CanonicalAds Ads Snapshots should correctly render an Canonical leaderb
   <section
     aria-hidden="true"
     aria-label="Advertisement"
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     data-e2e="advertisement"
     role="region"
   >

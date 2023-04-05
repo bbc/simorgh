@@ -1,6 +1,6 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
-import AdSlot, { getDataSlot, getAssetType } from './AdSlot';
+import { render } from '../../../react-testing-library-with-providers';
+import AdSlot, { getDataSlot, getAssetType } from '.';
 
 describe('getAssetType', () => {
   it('should return an asset type of story given a pageType of STY', () => {
@@ -20,20 +20,29 @@ describe('getAssetType', () => {
 
 describe('Amp AdSlot', () => {
   describe('Snapshots', () => {
-    shouldMatchSnapshot(
-      'should correctly render a leaderboard AdSlot',
-      <AdSlot service="mundo" slotType="leaderboard" pageType="STY" />,
-    );
-    shouldMatchSnapshot(
-      'should correctly render a mpu AdSlot',
-      <AdSlot service="mundo" slotType="mpu" pageType="IDX" />,
-    );
+    it('should correctly render a leaderboard AdSlot', () => {
+      const { container } = render(
+        <AdSlot service="mundo" slotType="leaderboard" pageType="STY" />,
+      );
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should correctly render a mpu AdSlot', () => {
+      const { container } = render(
+        <AdSlot service="mundo" slotType="mpu" pageType="IDX" />,
+      );
+
+      expect(container).toMatchSnapshot();
+    });
   });
 });
 
 describe('getDataSlot', () => {
+  const originalApplicationEnvironment = process.env.SIMORGH_APP_ENV;
+
   afterEach(() => {
-    delete process.env.SIMORGH_APP_ENV;
+    process.env.SIMORGH_APP_ENV = originalApplicationEnvironment;
   });
 
   describe('Is a World Service Site', () => {

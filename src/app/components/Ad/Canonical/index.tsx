@@ -1,22 +1,19 @@
+/** @jsxRuntime classic */
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
 import React, { useEffect, useContext } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import { oneOf, string } from 'prop-types';
-import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
 import { RequestContext } from '#contexts/RequestContext';
 import isLive from '#lib/utilities/isLive';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
-import { leaderboardStyles, mpuStyles } from '../utilities/adSlotStyles';
+import { AdProps, WindowWithDotCom } from '../types';
+import styles from './index.styles';
 
-const AdContainer = styled.section`
-  background-color: ${props => props.theme.palette.GREY_3};
-  ${({ slotType }) => (slotType === 'mpu' ? mpuStyles : leaderboardStyles)}
-`;
-
-export const getBootstrapSrc = (queryString, useLegacy = false) => {
+export const getBootstrapSrc = (queryString: string, useLegacy = false) => {
   const adsTestScript =
     'https://gn-web-assets.api.bbc.com/ngas/latest/test/dotcom-bootstrap.js';
   const adsLegacyTestScript =
@@ -36,7 +33,7 @@ export const getBootstrapSrc = (queryString, useLegacy = false) => {
   return useLegacy ? adsLegacyTestScript : adsTestScript;
 };
 
-const CanonicalAd = ({ slotType, className }) => {
+const CanonicalAd = ({ slotType, className }: AdProps) => {
   const { showAdsBasedOnLocation } = useContext(RequestContext);
   const location = useLocation();
   const queryString = location.search;
@@ -49,16 +46,20 @@ const CanonicalAd = ({ slotType, className }) => {
   const ariaLabel = getAdsAriaLabel(label, dir, slotType);
 
   useEffect(() => {
-    if (window.dotcom) {
-      window.dotcom.cmd.push(() => {
-        window.dotcom.ads.registerSlot(slotType);
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    const windowWithDotCom: WindowWithDotCom = window.dotcom;
+
+    if (windowWithDotCom) {
+      windowWithDotCom.cmd.push(() => {
+        windowWithDotCom.ads.registerSlot(slotType);
       });
     }
 
     return () => {
-      if (window.dotcom) {
-        window.dotcom.cmd.push(() => {
-          window.dotcom.ads.destroySlot(slotType);
+      if (windowWithDotCom) {
+        windowWithDotCom.cmd.push(() => {
+          windowWithDotCom.ads.destroySlot(slotType);
         });
       }
     };
@@ -70,19 +71,15 @@ const CanonicalAd = ({ slotType, className }) => {
   }
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         {/* Add Ad scripts to document head */}
         <script type="module" src={getBootstrapSrc(queryString)} async />
-        <script
-          nomodule="nomodule"
-          src={getBootstrapSrc(queryString, true)}
-          async
-        />
+        <script noModule src={getBootstrapSrc(queryString, true)} async />
       </Helmet>
 
-      <AdContainer
-        slotType={slotType}
+      <section
+        css={slotType === 'mpu' ? styles.mpu : styles.leaderboard}
         aria-label={ariaLabel}
         aria-hidden="true"
         role="region"
@@ -90,18 +87,9 @@ const CanonicalAd = ({ slotType, className }) => {
         className={className}
       >
         <div id={`dotcom-${slotType}`} className="dotcom-ad" />
-      </AdContainer>
-    </>
+      </section>
+    </React.Fragment>
   );
-};
-
-CanonicalAd.propTypes = {
-  slotType: oneOf(['leaderboard', 'mpu']).isRequired,
-  className: string,
-};
-
-CanonicalAd.defaultProps = {
-  className: null,
 };
 
 export default CanonicalAd;
