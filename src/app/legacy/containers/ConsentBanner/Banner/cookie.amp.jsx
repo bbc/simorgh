@@ -171,6 +171,7 @@ const OptionsItem = styled.li`
 // eslint-disable-next-line react/prop-types
 export const AmpCookieSettingsButton = ({ children, lang, className }) => (
   <button
+    // eslint-disable-next-line react/no-unknown-property
     on="tap:consent.prompt, privacy.hide, cookie.show, AMP.setState({ isManagingSettings: true })"
     type="button"
     data-testid="amp-cookie-settings-button"
@@ -197,6 +198,7 @@ const AmpCookieBanner = ({
       <Helmet>
         <script
           async
+          // eslint-disable-next-line react/no-unknown-property
           custom-element="amp-bind"
           src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
         />
@@ -224,6 +226,7 @@ const AmpCookieBanner = ({
             <OptionsItem script={script} service={service}>
               <button
                 type="button"
+                // eslint-disable-next-line react/no-unknown-property
                 on="tap:AMP.setState({ isManagingSettings: true }), manageCookiesHeading.focus"
               >
                 {initial.manage}
