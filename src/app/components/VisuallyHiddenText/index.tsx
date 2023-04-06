@@ -16,6 +16,7 @@ const VisuallyHiddenText = ({
   tabIndex,
   as,
   lang,
+  ...htmlAttributes
 }: PropsWithChildren<VisuallyHiddenTextProps>) => {
   const Component = as || 'span';
   return (
@@ -24,6 +25,7 @@ const VisuallyHiddenText = ({
       id={id}
       tabIndex={tabIndex}
       lang={lang}
+      {...htmlAttributes}
     >
       {children}
     </Component>
