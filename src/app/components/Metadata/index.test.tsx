@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import {
   ARTICLE_PAGE,
   FRONT_PAGE,
@@ -17,19 +18,20 @@ import igboFrontPageData from '#data/igbo/frontpage/index.json';
 import somaliFrontPageData from '#data/somali/frontpage/index.json';
 import liveRadioPageData from '#data/korean/bbc_korean_radio/liveradio.json';
 import { getSummary } from '#lib/utilities/parseAssetData/index';
-import {
-  render,
-  waitFor,
-} from '../../../components/react-testing-library-with-providers';
-import services from '../../../../server/utilities/serviceConfigs';
-import { getAuthorTwitterHandle } from '../../../components/Byline/utilities';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import { Services, PageTypes } from '#app/models/types/global';
+import { render, waitFor } from '../react-testing-library-with-providers';
+import services from '../../../server/utilities/serviceConfigs';
+import { getAuthorTwitterHandle } from '../Byline/utilities';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import MetadataContainer from './index';
+import { MetadataProps, PageDataProps } from './types';
 
 const dotComOrigin = 'https://www.bbc.com';
 const dotCoDotUKOrigin = 'https://www.bbc.co.uk';
 
-const getArticleMetadataProps = data => ({
+type Platform = 'canonical' | 'amp';
+
+const getArticleMetadataProps = (data: PageDataProps) => ({
   title: data.promo.headlines.seoHeadline,
   lang: data.metadata.passport.language,
   description: getSummary(data),
@@ -47,8 +49,16 @@ const pidginArticleWithBylineMetadataProps = {
   ),
 };
 
+interface MetadataWithContextProps extends MetadataProps {
+  service: Services;
+  bbcOrigin: string;
+  platform: Platform;
+  pageType: PageTypes;
+  id?: string | null;
+  pathname: string;
+}
+
 const MetadataWithContext = ({
-  /* eslint-disable react/prop-types */
   service,
   bbcOrigin,
   platform,
@@ -68,8 +78,7 @@ const MetadataWithContext = ({
   mentionsTags,
   hasAppleItunesAppBanner,
   hasAmpPage,
-  /* eslint-enable react/prop-types */
-}) => (
+}: MetadataWithContextProps) => (
   <ServiceContextProvider service={service} pageLang={lang}>
     <RequestContextProvider
       bbcOrigin={bbcOrigin}
@@ -99,7 +108,13 @@ const MetadataWithContext = ({
   </ServiceContextProvider>
 );
 
-const CanonicalNewsInternationalOrigin = props => (
+interface CanonicalNewsInternationalOriginProps {
+  hasAmpPage?: boolean;
+}
+
+const CanonicalNewsInternationalOrigin = (
+  props: CanonicalNewsInternationalOriginProps,
+) => (
   <MetadataWithContext
     service="news"
     bbcOrigin={dotComOrigin}
@@ -134,8 +149,8 @@ it('should render the dir and lang attribute', async () => {
   await waitFor(() => {
     const htmlEl = document.querySelector('html');
 
-    expect(htmlEl.getAttribute('dir')).toEqual('ltr');
-    expect(htmlEl.getAttribute('lang')).toEqual('en-gb');
+    expect(htmlEl?.getAttribute('dir')).toEqual('ltr');
+    expect(htmlEl?.getAttribute('lang')).toEqual('en-gb');
   });
 });
 
@@ -143,7 +158,7 @@ it('should render the document title', async () => {
   render(<CanonicalNewsInternationalOrigin />);
 
   await waitFor(() => {
-    const actual = document.querySelector('head > title').innerHTML;
+    const actual = document.querySelector('head > title')?.innerHTML;
 
     expect(actual).toEqual('Article Headline for SEO - BBC News');
   });
@@ -155,7 +170,7 @@ it('should render the canonical link', async () => {
   await waitFor(() => {
     const actual = document
       .querySelector('head > link[rel="canonical"]')
-      .getAttribute('href');
+      ?.getAttribute('href');
 
     expect(actual).toEqual('https://www.bbc.com/news/articles/c0000000001o');
   });
@@ -339,9 +354,9 @@ it('should render the favicon', async () => {
   await waitFor(() => {
     const favicon = document.querySelector('head > link[rel="shortcut icon"]');
 
-    expect(favicon.getAttribute('href')).toEqual('/favicon.ico');
-    expect(favicon.getAttribute('rel')).toEqual('shortcut icon');
-    expect(favicon.getAttribute('type')).toEqual('image/x-icon');
+    expect(favicon?.getAttribute('href')).toEqual('/favicon.ico');
+    expect(favicon?.getAttribute('rel')).toEqual('shortcut icon');
+    expect(favicon?.getAttribute('type')).toEqual('image/x-icon');
   });
 });
 
@@ -351,7 +366,7 @@ it('should render the IE X-UA-Compatible meta tag', async () => {
   await waitFor(() => {
     const actual = document
       .querySelector('head > meta[http-equiv="X-UA-Compatible"]')
-      .getAttribute('content');
+      ?.getAttribute('content');
 
     expect(actual).toEqual('IE=edge');
   });
@@ -373,7 +388,7 @@ it('should render the robots meta tag', async () => {
   await waitFor(() => {
     const actual = document
       .querySelector('head > meta[name="robots"]')
-      .getAttribute('content');
+      ?.getAttribute('content');
     expect(actual).toEqual(expected);
   });
 });
@@ -384,7 +399,7 @@ it('should render the theme-colour meta tag', async () => {
   await waitFor(() => {
     const actual = document
       .querySelector('head > meta[name="theme-color"]')
-      .getAttribute('content');
+      ?.getAttribute('content');
 
     expect(actual).toEqual('#B80000');
   });
@@ -396,7 +411,7 @@ it('should render the apple-mobile-web-app-title', async () => {
   await waitFor(() => {
     const actual = document
       .querySelector('head > meta[name="apple-mobile-web-app-title"]')
-      .getAttribute('content');
+      ?.getAttribute('content');
 
     expect(actual).toEqual('BBC News');
   });
@@ -408,7 +423,7 @@ it('should render the application name meta tag', async () => {
   await waitFor(() => {
     const actual = document
       .querySelector('head > meta[name="application-name"]')
-      .getAttribute('content');
+      ?.getAttribute('content');
 
     expect(actual).toEqual('BBC News');
   });
@@ -420,7 +435,7 @@ it('should render the description meta tag', async () => {
   await waitFor(() => {
     const actual = document
       .querySelector('head > meta[name="description"]')
-      .getAttribute('content');
+      ?.getAttribute('content');
 
     expect(actual).toEqual('Article summary.');
   });
@@ -432,7 +447,7 @@ it('should render the facebook metatags', async () => {
   await waitFor(() => {
     const fbAppId = document
       .querySelector('head > meta[property="fb:app_id"]')
-      .getAttribute('content');
+      ?.getAttribute('content');
 
     expect(fbAppId).toEqual('1609039196070050');
   });
@@ -444,7 +459,7 @@ it('should render the mobile-web-app-capable meta tag', async () => {
   await waitFor(() => {
     const actual = document
       .querySelector('head > meta[name="mobile-web-app-capable"]')
-      .getAttribute('content');
+      ?.getAttribute('content');
 
     expect(actual).toEqual('yes');
   });
@@ -456,10 +471,10 @@ it('should render the msapplication meta tags', async () => {
   await waitFor(() => {
     const tileColour = document
       .querySelector('head > meta[name=msapplication-TileColor]')
-      .getAttribute('content');
+      ?.getAttribute('content');
     const tileImage = document
       .querySelector('head > meta[name=msapplication-TileImage]')
-      .getAttribute('content');
+      ?.getAttribute('content');
 
     expect(tileColour).toEqual('#B80000');
     expect(tileImage).toEqual(
@@ -547,7 +562,7 @@ it('should render the twitter handle of the author', async () => {
     expect(
       document
         .querySelector('meta[name="twitter:creator"]')
-        .getAttribute('content'),
+        ?.getAttribute('content'),
     ).toEqual('@mary_harper');
   });
 });
@@ -572,7 +587,7 @@ it('should render the default service twitter handle for a Front Page asset', as
     expect(
       document
         .querySelector('meta[name="twitter:creator"]')
-        .getAttribute('content'),
+        ?.getAttribute('content'),
     ).toEqual('@bbcsomali');
   });
 });
@@ -597,7 +612,7 @@ it('should render the default service twitter handle for a Story Page asset', as
     expect(
       document
         .querySelector('meta[name="twitter:creator"]')
-        .getAttribute('content'),
+        ?.getAttribute('content'),
     ).toEqual('@bbcmundo');
   });
 });
@@ -622,7 +637,7 @@ it('should render the default service twitter handle for a Media Asset Page asse
     expect(
       document
         .querySelector('meta[name="twitter:creator"]')
-        .getAttribute('content'),
+        ?.getAttribute('content'),
     ).toEqual('@BBCArabic');
   });
 });
@@ -647,7 +662,7 @@ it('should render the default service twitter handle for a Photo Gallery asset',
     expect(
       document
         .querySelector('meta[name="twitter:creator"]')
-        .getAttribute('content'),
+        ?.getAttribute('content'),
     ).toEqual('@bbcuzbek');
   });
 });
@@ -678,7 +693,7 @@ it('should render the amp page link tag by default', async () => {
 
   await waitFor(() => {
     const ampLinkEl = document.querySelector('head > link[rel="amphtml"]');
-    const ampUrl = ampLinkEl.getAttribute('href');
+    const ampUrl = ampLinkEl?.getAttribute('href');
 
     expect(ampLinkEl).toBeInTheDocument();
     expect(ampUrl).toEqual(
@@ -779,12 +794,13 @@ it('should render the open graph image if provided', async () => {
 
 describe('Snapshot', () => {
   it('should match for Canonical News & international origin', () => {
-    const { container } = render(<CanonicalNewsInternationalOrigin />);
+    render(<CanonicalNewsInternationalOrigin />);
+    const container = Helmet.peek();
     expect(container).toMatchSnapshot();
   });
 
   it('should match for AMP News & UK origin', () => {
-    const { container } = render(
+    render(
       <MetadataWithContext
         service="news"
         bbcOrigin={dotCoDotUKOrigin}
@@ -795,11 +811,12 @@ describe('Snapshot', () => {
         {...newsArticleMetadataProps}
       />,
     );
+    const container = Helmet.peek();
     expect(container).toMatchSnapshot();
   });
 
   it('should match for Persian News & byline twitter handle', () => {
-    const { container } = render(
+    render(
       <MetadataWithContext
         service="pidgin"
         bbcOrigin={dotComOrigin}
@@ -810,11 +827,12 @@ describe('Snapshot', () => {
         {...pidginArticleWithBylineMetadataProps}
       />,
     );
+    const container = Helmet.peek();
     expect(container).toMatchSnapshot();
   });
 
   it('should match for Persian News & international origin', () => {
-    const { container } = render(
+    render(
       <MetadataWithContext
         service="persian"
         bbcOrigin={dotComOrigin}
@@ -825,11 +843,12 @@ describe('Snapshot', () => {
         {...persianArticleMetadataProps}
       />,
     );
+    const container = Helmet.peek();
     expect(container).toMatchSnapshot();
   });
 
   it('should match for Persian News & UK origin', () => {
-    const { container } = render(
+    render(
       <MetadataWithContext
         service="persian"
         bbcOrigin={dotCoDotUKOrigin}
@@ -840,11 +859,12 @@ describe('Snapshot', () => {
         {...persianArticleMetadataProps}
       />,
     );
+    const container = Helmet.peek();
     expect(container).toMatchSnapshot();
   });
 
   it('should match for WS Frontpages', () => {
-    const { container } = render(
+    render(
       <MetadataWithContext
         service="igbo"
         bbcOrigin={dotComOrigin}
@@ -858,11 +878,12 @@ describe('Snapshot', () => {
         openGraphType="website"
       />,
     );
+    const container = Helmet.peek();
     expect(container).toMatchSnapshot();
   });
 
   it('should match for WS Media liveradio', () => {
-    const { container } = render(
+    render(
       <MetadataWithContext
         service="korean"
         bbcOrigin={dotComOrigin}
@@ -876,11 +897,12 @@ describe('Snapshot', () => {
         openGraphType="website"
       />,
     );
+    const container = Helmet.peek();
     expect(container).toMatchSnapshot();
   });
 
   it('should match for Ukrainian STY with Ukrainian lang on canonical', () => {
-    const { container } = render(
+    render(
       <MetadataWithContext
         lang="uk"
         service="ukrainian"
@@ -894,11 +916,12 @@ describe('Snapshot', () => {
         title="BBC Ukrainian"
       />,
     );
+    const container = Helmet.peek();
     expect(container).toMatchSnapshot();
   });
 
   it('should match for Ukrainian STY with Ukrainian lang on Amp', () => {
-    const { container } = render(
+    render(
       <MetadataWithContext
         lang="uk"
         service="ukrainian"
@@ -912,11 +935,12 @@ describe('Snapshot', () => {
         title="BBC Ukrainian"
       />,
     );
+    const container = Helmet.peek();
     expect(container).toMatchSnapshot();
   });
 
   it('should match for Ukrainian STY with Russian lang on canonical', () => {
-    const { container } = render(
+    render(
       <MetadataWithContext
         lang="ru"
         service="ukrainian"
@@ -930,11 +954,12 @@ describe('Snapshot', () => {
         title="BBC Ukrainian"
       />,
     );
+    const container = Helmet.peek();
     expect(container).toMatchSnapshot();
   });
 
   it('should match for Ukrainian STY with Russian lang on Amp', () => {
-    const { container } = render(
+    render(
       <MetadataWithContext
         lang="ru"
         service="ukrainian"
@@ -948,18 +973,23 @@ describe('Snapshot', () => {
         title="BBC Ukrainian"
       />,
     );
+    const container = Helmet.peek();
     expect(container).toMatchSnapshot();
   });
 });
 
 describe('apple-itunes-app meta tag', () => {
+  interface CanonicalCPSAssetInternationalOriginProps {
+    service: Services;
+    platform: Platform;
+    hasAppleItunesAppBanner: boolean;
+  }
+
   const CanonicalCPSAssetInternationalOrigin = ({
-    /* eslint-disable react/prop-types */
     service,
     platform,
     hasAppleItunesAppBanner,
-    /* eslint-disable react/prop-types */
-  }) => (
+  }: CanonicalCPSAssetInternationalOriginProps) => (
     <MetadataWithContext
       service={service}
       bbcOrigin={dotComOrigin}
@@ -994,7 +1024,7 @@ describe('apple-itunes-app meta tag', () => {
         );
         expect(appleItunesApp).toBeInTheDocument();
 
-        const content = appleItunesApp.getAttribute('content');
+        const content = appleItunesApp?.getAttribute('content');
         expect(content).toEqual(
           `app-id=${iTunesAppId}, app-argument=https://www.bbc.com/${service}/asset-12345678?utm_medium=banner&utm_content=apple-itunes-app`,
         );
