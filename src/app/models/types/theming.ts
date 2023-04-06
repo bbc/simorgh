@@ -480,5 +480,6 @@ declare module '@emotion/react' {
     };
     brandSVG: BrandSVG;
     gridWidths: GridWidths;
+    isDarkUi: boolean;
   }
 }

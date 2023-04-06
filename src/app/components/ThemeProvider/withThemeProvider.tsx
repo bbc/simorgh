@@ -263,10 +263,16 @@ const withThemeProvider = ({
     },
     brandSVG,
     gridWidths,
+    isDarkUi: false,
   };
 
   const ThemeProvider: React.FC<Props> = ({ children }) => {
-    const { isAmp } = useContext(RequestContext);
+    const { isAmp, pageType } = useContext(RequestContext);
+
+    if (pageType === 'mediaArticle') {
+      theme.isDarkUi = true;
+    }
+
     return (
       <EmotionThemeProvider theme={theme}>
         {children}
