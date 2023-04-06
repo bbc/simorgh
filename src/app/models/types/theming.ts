@@ -431,6 +431,16 @@ export type BrandSVG = {
   };
 };
 
+export type GridWidths = {
+  240: number;
+  360: number;
+  400: number;
+  600: number;
+  900: number;
+  1008: number;
+  1280: number;
+};
+
 declare module '@emotion/react' {
   export interface Theme {
     palette: Palette;
@@ -473,6 +483,7 @@ declare module '@emotion/react' {
       serifLight: FontStyles;
     };
     brandSVG: BrandSVG;
+    gridWidths: GridWidths;
     isDarkUi: boolean;
   }
 }
