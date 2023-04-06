@@ -9026,7 +9026,7 @@ module.exports = () => ({
           },
           test: {
             paths: ['/ukrainian/articles/cp4l2mrejvdo'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/ukrainian/articles/cp4l2mrejvdo'],
