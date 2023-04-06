@@ -1570,6 +1570,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
             >
               <a
                 class="focusIndicatorInvert emotion-162 emotion-163"
+                display="block"
                 href="https://www.bbc.com/news/help-41670342"
               >
                 Why you can trust the BBC
@@ -1581,6 +1582,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
             >
               <a
                 class="focusIndicatorInvert emotion-162 emotion-163"
+                display="block"
                 href="https://www.bbc.com/terms"
               >
                 Terms of Use
@@ -1592,6 +1594,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
             >
               <a
                 class="focusIndicatorInvert emotion-162 emotion-163"
+                display="block"
                 href="https://www.bbc.co.uk/aboutthebbc/"
               >
                 About the BBC
@@ -1603,6 +1606,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
             >
               <a
                 class="focusIndicatorInvert emotion-162 emotion-163"
+                display="block"
                 href="https://www.bbc.com/privacy/"
               >
                 Privacy Policy
@@ -1614,6 +1618,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
             >
               <a
                 class="focusIndicatorInvert emotion-162 emotion-163"
+                display="block"
                 href="https://www.bbc.com/usingthebbc/cookies/"
               >
                 Cookies
@@ -1625,6 +1630,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
             >
               <a
                 class="focusIndicatorInvert emotion-162 emotion-163"
+                display="block"
                 href="https://www.bbc.com/accessibility/"
               >
                 Accessibility Help
@@ -1636,6 +1642,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
             >
               <a
                 class="focusIndicatorInvert emotion-162 emotion-163"
+                display="block"
                 href="https://www.bbc.com/contact/"
               >
                 Contact the BBC
@@ -1659,6 +1666,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
              
             <a
               class="focusIndicatorInvert emotion-192 emotion-163"
+              display="inline"
               href="https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links"
             >
               Read about our approach to external linking.

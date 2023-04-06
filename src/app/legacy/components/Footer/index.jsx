@@ -72,7 +72,7 @@ const StyledAmpCookieSettingsButton = styled(AmpCookieSettingsButton)`
 
 const showSourcePointMessage = e => {
   e.preventDefault();
-  if (window.dotcom) {
+  if (window.dotcom && window.dotcom.showSourcePointMessage) {
     window.dotcom.showSourcePointMessage();
   }
 };
@@ -98,6 +98,7 @@ const SitewideLinks = ({
       }
 
       if (showAdsBasedOnLocation) {
+        const JSenabled = Number && typeof window !== 'undefined';
         return (
           <Link
             service={service}
@@ -105,6 +106,8 @@ const SitewideLinks = ({
             href={href}
             lang={lang}
             onClick={showSourcePointMessage}
+            onlyShowIfJSenabled
+            visible={JSenabled}
           />
         );
       }

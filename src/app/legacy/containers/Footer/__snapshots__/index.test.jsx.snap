@@ -399,6 +399,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
           >
             <a
               class="focusIndicatorInvert emotion-21 emotion-22"
+              display="block"
               href="https://www.bbc.com/news/help-41670342"
             >
               Why you can trust the BBC
@@ -410,6 +411,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
           >
             <a
               class="focusIndicatorInvert emotion-21 emotion-22"
+              display="block"
               href="https://www.bbc.com/terms"
             >
               Terms of Use
@@ -421,6 +423,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
           >
             <a
               class="focusIndicatorInvert emotion-21 emotion-22"
+              display="block"
               href="https://www.bbc.co.uk/aboutthebbc/"
             >
               About the BBC
@@ -432,6 +435,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
           >
             <a
               class="focusIndicatorInvert emotion-21 emotion-22"
+              display="block"
               href="https://www.bbc.com/privacy/"
             >
               Privacy Policy
@@ -443,6 +447,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
           >
             <a
               class="focusIndicatorInvert emotion-21 emotion-22"
+              display="block"
               href="https://www.bbc.com/usingthebbc/cookies/"
             >
               Cookies
@@ -454,6 +459,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
           >
             <a
               class="focusIndicatorInvert emotion-21 emotion-22"
+              display="block"
               href="https://www.bbc.com/accessibility/"
             >
               Accessibility Help
@@ -465,6 +471,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
           >
             <a
               class="focusIndicatorInvert emotion-21 emotion-22"
+              display="block"
               href="https://www.bbc.com/contact/"
             >
               Contact the BBC
@@ -488,6 +495,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
            
           <a
             class="focusIndicatorInvert emotion-51 emotion-22"
+            display="inline"
             href="https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links"
           >
             Read about our approach to external linking.
