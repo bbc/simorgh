@@ -13,8 +13,8 @@ import getMediaId from '#lib/utilities/getMediaId';
 import getMasterbrand from '#lib/utilities/getMasterbrand';
 import getEmbedUrl from '#lib/utilities/getUrlHelpers/getEmbedUrl';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
-import MetadataContainer from '#containers/Metadata';
 import ATIAnalytics from '#containers/ATIAnalytics';
+import MetadataContainer from '../../components/Metadata';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import LinkedData from '../../components/LinkedData';
 
