@@ -322,6 +322,10 @@ export const service: DefaultServiceConfig = {
         url: '/korean/topics/cnwng7v0e54t',
       },
       {
+        title: '라디오',
+        url: '/korean/bbc_korean_radio/programmes/w13xttll',
+      },
+      {
         title: '다운로드',
         url: '/korean/downloads',
       },
