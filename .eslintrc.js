@@ -30,7 +30,17 @@ module.exports = {
     'react/function-component-definition': 'off',
     'react/no-unknown-property': [
       'error',
-      { ignore: ['imagesrcset', 'imagesizes', 'css'] },
+      {
+        ignore: [
+          'imagesrcset',
+          'imagesizes',
+          'css',
+          'custom-element',
+          'custom-template',
+          'amp-boilerplate',
+          'amp-custom',
+        ],
+      },
     ],
     'linebreak-style': process.platform === 'win32' ? 'off' : ['error', 'unix'],
     'react-hooks/rules-of-hooks': 'error',
