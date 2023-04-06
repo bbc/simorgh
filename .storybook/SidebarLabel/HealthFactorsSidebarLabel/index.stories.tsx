@@ -51,4 +51,6 @@ export const OutstandingActions = () => (
   />
 );
 
-export const Missing = () => <HealthFactorsSidebarLabel name="Component name" />;
+export const Missing = () => (
+  <HealthFactorsSidebarLabel name="Component name" />
+);
