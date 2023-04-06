@@ -3,6 +3,10 @@ import envConfig from '../../../support/config/envs';
 import appToggles from '../../../support/helpers/useAppToggles';
 import { getBlockData, getBlockByType, getVideoEmbedUrl } from './helpers';
 
+
+// TODO: Remove after https://github.com/bbc/simorgh/issues/2959
+const serviceHasCaption = service => service === 'news';
+
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
 export const testsThatAlwaysRunForCanonicalOnly = ({ service, pageType }) => {
@@ -41,8 +45,8 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
         });
 
         it('should have a visible image that is lazyloaded and has a noscript fallback image', () => {
-          cy.get('[data-e2e="image-placeholder"]').as('imagePlaceholder');
-          cy.get('@imagePlaceholder').eq(1).should('be.visible');
+          cy.get('[data-e2e="image-placeholder"]').eq(1).as('imagePlaceholder');
+          cy.get('@imagePlaceholder').should('be.visible');
           cy.get('@imagePlaceholder').scrollIntoView();
           cy.get('@imagePlaceholder').within(() => {
             cy.get('noscript').contains('<img ');
@@ -50,30 +54,37 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
           });
         });
 
-        it('should have an image with a caption', () => {
-          cy.window().then(win => {
-            const { model } = getBlockData('image', win.SIMORGH_DATA.pageData);
-            const {
-              model: { blocks },
-            } =
-              model && model.blocks && getBlockByType(model.blocks, 'caption');
-            const { text: captionText } =
-              blocks && blocks[0].model.blocks[0].model;
-            if (captionText) {
-              cy.get('figcaption')
-                .eq(0)
-                .should('be.visible')
-                .and('contain', captionText);
-            } else {
-              // check for image with no caption
-              cy.get('figure')
-                .eq(0)
-                .within(() => {
-                  cy.get('figcaption').should('not.exist');
-                });
-            }
+        if (serviceHasCaption(service)) {
+          it('should have an image with a caption', () => {
+            cy.window().then(win => {
+              const { model } = getBlockData(
+                'image',
+                win.SIMORGH_DATA.pageData,
+              );
+              const {
+                model: { blocks },
+              } =
+                model &&
+                model.blocks &&
+                getBlockByType(model.blocks, 'caption');
+              const { text: captionText } =
+                blocks && blocks[0].model.blocks[0].model;
+              if (captionText) {
+                cy.get('figcaption')
+                  .eq(0)
+                  .should('be.visible')
+                  .and('contain', captionText);
+              } else {
+                // check for image with no caption
+                cy.get('figure')
+                  .eq(0)
+                  .within(() => {
+                    cy.get('figcaption').should('not.exist');
+                  });
+              }
+            });
           });
-        });
+        }
       });
 
     describe('Media Player: Canonical', () => {
