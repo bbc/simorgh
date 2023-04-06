@@ -64,7 +64,6 @@ const configuration = {
 export const AMP_GEO_SCRIPT = (
   <script
     async
-    // eslint-disable-next-line react/no-unknown-property
     custom-element="amp-geo"
     src="https://cdn.ampproject.org/v0/amp-geo-0.1.js"
   />
