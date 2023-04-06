@@ -3,9 +3,6 @@ import envConfig from '../../../support/config/envs';
 import appToggles from '../../../support/helpers/useAppToggles';
 import { getBlockData, getBlockByType, getVideoEmbedUrl } from './helpers';
 
-// TODO: Remove after https://github.com/bbc/simorgh/issues/2959
-const serviceHasCaption = service => service === 'news';
-
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
 export const testsThatAlwaysRunForCanonicalOnly = ({ service, pageType }) => {
@@ -32,7 +29,6 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
       });
     }
 
-    if (serviceHasCaption(service)) {
       describe('Image with placeholder', () => {
         it('should have a visible image that is not lazyloaded', () => {
           cy.get('[data-e2e="image-placeholder"]')
@@ -45,14 +41,13 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
         });
 
         it('should have a visible image that is lazyloaded and has a noscript fallback image', () => {
-          cy.get('[data-e2e="image-placeholder"]')
-            .eq(1)
-            .scrollIntoView()
-            .should('be.visible')
-            .within(() => {
-              cy.get('noscript').contains('<img ');
-              cy.get('div[class*="lazyload-placeholder"]').should('exist');
-            });
+          cy.get('[data-e2e="image-placeholder"]').as('imagePlaceholder');
+          cy.get('@imagePlaceholder').eq(1).should('be.visible');
+          cy.get('@imagePlaceholder').scrollIntoView();
+          cy.get('@imagePlaceholder').within(() => {
+            cy.get('noscript').contains('<img ');
+            cy.get('div[class*="lazyload-placeholder"]').should('exist');
+          });
         });
 
         it('should have an image with a caption', () => {
@@ -80,7 +75,6 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
           });
         });
       });
-    }
 
     describe('Media Player: Canonical', () => {
       it('should render a visible placeholder image', () => {
