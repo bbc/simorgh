@@ -7,7 +7,7 @@ import { GEL_SPACING_HLF_TRPL } from '#psammead/gel-foundations/src/spacings';
 const StyledLink = styled.a`
   ${({ service }) => service && getSansBold(service)}
   color: ${props => props.theme.palette.WHITE};
-  display: ${props => props.display};
+  display: ${props => props.displayState};
   padding: ${GEL_SPACING_HLF_TRPL} 0 ${GEL_SPACING_HLF_TRPL};
   text-decoration: none;
 
@@ -49,7 +49,7 @@ const Link = ({
     <StyledLink
       service={service}
       lang={lang}
-      display={display}
+      displayState={display}
       href={href}
       className="focusIndicatorInvert"
       onClick={onClick}
