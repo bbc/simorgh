@@ -185,6 +185,7 @@ export default {
   component: myComponent,
   parameters: {
     design:
+    [
       {
         name: 'Screen Reader UX',
         type: 'figma',
@@ -257,15 +258,52 @@ We should:
 
 Pass english metadata to your component.
 
-### Must follow this order when adding Figma links.
+### Must follow a specific documentation order when adding Figma links.
+
+The documentation should be added as following:
+
+- Screen Reader UX
+- Typography
+- States
+- Groups 0-5
 
 #### Why?
 
-To keep consistency on the way we store our documentation.
+To keep consistency on the way we store our documentation and give priority to most used documentations first.
 
 #### How?
 
-Order the design array accordingly.
+Order the design array accordingly:
+
+```jsx
+[
+  {
+    name: 'Screen Reader UX',
+    type: 'figma',
+    url: 'https://www.figma.com/file/OKzTxh7By6S0jj4U1Tgvug/Promos-(test-file)?node-id=4-471&t=JSEMesVDoLfIbFCm-0',
+  },
+  {
+    name: 'Typography',
+    type: 'figma',
+    url: 'https://www.figma.com/file/OKzTxh7By6S0jj4U1Tgvug/Promos-(test-file)?node-id=2%3A63&t=rrFhi8jBxJykyAhM-0',
+  },
+  {
+    name: 'States',
+    type: 'figma',
+    url: 'https://www.figma.com/file/OKzTxh7By6S0jj4U1Tgvug/Promos-(test-file)?node-id=6%3A492&t=rrFhi8jBxJykyAhM-0',
+  },
+  {
+    name: 'Group 0',
+    type: 'figma',
+    url: 'https://www.figma.com/file/OKzTxh7By6S0jj4U1Tgvug/Promos-(test-file)?node-id=4%3A259&t=rrFhi8jBxJykyAhM-0',
+  },
+  {
+    name: 'Group 1',
+    type: 'figma',
+    url: 'https://www.figma.com/file/OKzTxh7By6S0jj4U1Tgvug/Promos-(test-file)?node-id=4%3A266&t=rrFhi8jBxJykyAhM-0',
+  },
+];
+```
 
 ## Folder Structure Standards
 
