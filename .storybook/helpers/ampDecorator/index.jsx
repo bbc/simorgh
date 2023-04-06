@@ -19,7 +19,6 @@ const AmpDecorator = storyFn => (
       <link rel="canonical" href="http://foobar.com" />
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width,minimum-scale=1" />
-      {/* eslint-disable-next-line react/no-unknown-property */}
       <style amp-boilerplate="">{AMP_SCRIPT}</style>
       <noscript>{`<style amp-boilerplate="">${AMP_NO_SCRIPT}</style>`}</noscript>
       {AMP_JS}
