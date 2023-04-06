@@ -2,6 +2,7 @@
 /* @jsxFrag React.Fragment */
 import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
+import path from 'ramda/src/path';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import {
   VisualProminence,
@@ -11,6 +12,7 @@ import {
 import Curation from '../../components/Curation';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import styles from './index.styles';
+import MetadataContainer from '../../components/Metadata';
 
 interface HomePageProps {
   pageData: {
@@ -23,12 +25,23 @@ interface HomePageProps {
 
 const HomePage = ({ pageData }: HomePageProps) => {
   const { curations } = pageData;
-  const { translations, product, serviceLocalizedName } =
+  const description: string | undefined = path(
+    ['metadata', 'summary'],
+    pageData,
+  );
+  const { translations, product, serviceLocalizedName, frontPageTitle, lang } =
     useContext(ServiceContext);
   const { topStoriesTitle, home } = translations;
 
   return (
     <>
+      <MetadataContainer
+        title={frontPageTitle}
+        lang={lang}
+        description={description}
+        openGraphType="website"
+        hasAmpPage
+      />
       <main css={styles.main}>
         <VisuallyHiddenText id="content" tabIndex={-1} as="h1">
           {/* eslint-disable-next-line jsx-a11y/aria-role */}

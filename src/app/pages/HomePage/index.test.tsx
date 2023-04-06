@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { data as kyrgyzHomePageData } from '#data/kyrgyz/homePage/index.json';
+import { Helmet } from 'react-helmet';
 import { render } from '../../components/react-testing-library-with-providers';
 import HomePage from './HomePage';
 
@@ -46,5 +47,12 @@ describe('Home Page', () => {
     const langSpan = span?.querySelector('span');
     expect(langSpan?.getAttribute('lang')).toEqual('en-GB');
     expect(langSpan?.textContent).toEqual('BBC News');
+  });
+
+  it('should have a metadata title', () => {
+    const { container } = render(<HomePage pageData={kyrgyzHomePageData} />, {
+      service: 'kyrgyz',
+    });
+    expect(Helmet.peek().title).toEqual(kyrgyzHomePageData.title);
   });
 });

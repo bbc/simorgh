@@ -33,7 +33,7 @@ export interface MetadataProps {
   socialHeadline?: string;
   lang: string;
   twitterHandle?: string;
-  description: string;
+  description: string | undefined;
   openGraphType: string;
   aboutTags?: Tag[];
   mentionsTags?: Tag[];
