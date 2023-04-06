@@ -7,6 +7,7 @@ interface VisuallyHiddenTextProps {
   id?: string;
   tabIndex?: number;
   as?: React.ElementType;
+  lang?: string;
 }
 
 const VisuallyHiddenText = ({
@@ -14,10 +15,16 @@ const VisuallyHiddenText = ({
   id,
   tabIndex,
   as,
+  lang,
 }: PropsWithChildren<VisuallyHiddenTextProps>) => {
   const Component = as || 'span';
   return (
-    <Component css={styles.visuallyHiddenText} id={id} tabIndex={tabIndex}>
+    <Component
+      css={styles.visuallyHiddenText}
+      id={id}
+      tabIndex={tabIndex}
+      lang={lang}
+    >
       {children}
     </Component>
   );
