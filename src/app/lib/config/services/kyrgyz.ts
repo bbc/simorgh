@@ -254,6 +254,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'Башкы кабарлар',
       featuresAnalysisTitle: 'Редактордун тандоосу',
+      latestMediaTitle: 'Соңку',
     },
     mostRead: {
       header: 'Эң көп окулгандар',

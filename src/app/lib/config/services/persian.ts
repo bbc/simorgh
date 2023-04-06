@@ -48,16 +48,16 @@ export const service: DefaultServiceConfig = {
     showRelatedTopics: true,
     podcastPromo: {
       title: 'پادکست',
-      brandTitle: 'رادیو فارسی بی‌بی‌سی',
+      brandTitle: 'پرگار',
       brandDescription:
-        'پادکست چشم‌انداز بامدادی رادیو بی‌بی‌سی – دوشنبه ۱۹ اردیبهشت ۱۴۰۱',
+        'برنامه‌ای که در آن مهمانان برنامه به پرسش‌های چالشی مربوط به جامعه امروز پاسخ می‌دهند',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0bq9rkk.jpg',
-        alt: 'پادکست چشم‌انداز بامدادی رادیو بی‌بی‌سی',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg',
+        alt: 'پرگار',
       },
       linkLabel: {
         text: 'پادکست',
-        href: 'https://www.bbc.com/persian/podcasts/p02pc9mc',
+        href: 'https://www.bbc.com/persian/podcasts/p02pc9wf',
       },
       skipLink: {
         text: 'از %title% رد شوید و به خواندن ادامه دهید',
@@ -290,6 +290,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'مهمترین خبرها',
       featuresAnalysisTitle: 'گزارش و تحلیل',
+      latestMediaTitle: 'تازه ترین',
     },
     mostRead: {
       header: 'پربیننده‌ترین‌ها',
@@ -372,7 +373,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'ویدیو',
-        url: '/persian/media/video',
+        url: '/persian/topics/c6z7mnr559gt',
       },
       {
         title: 'تلویزیون',
