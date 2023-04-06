@@ -58,13 +58,18 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] }) => {
     eventTrackingData,
   );
   const viewRef = useViewTracker(eventTrackingDataSend);
+  const LABEL_ID = 'latest-media-heading';
   return (
-    <div css={styles.OuterWrapper}>
+    <section
+      css={styles.LatestMediaSection}
+      aria-labelledby={LABEL_ID}
+      role="region"
+    >
       <StyledSectionLabel
         columnType="secondary"
         dir={dir}
         href={null}
-        labelId={undefined}
+        labelId={LABEL_ID}
         linkText={null}
         script={undefined}
         service={service}
@@ -79,7 +84,7 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] }) => {
           renderLatestMediaList(item, index, eventTrackingData, viewRef),
         )}
       </StyledPromoList>
-    </div>
+    </section>
   );
 };
 

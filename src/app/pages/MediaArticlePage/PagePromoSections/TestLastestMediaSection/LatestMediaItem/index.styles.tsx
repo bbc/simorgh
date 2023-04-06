@@ -17,9 +17,10 @@ export const styles = {
   gridInner: ({ mq }: Theme) =>
     css({
       display: 'grid',
-      gridTemplateColumns: 'repeat(2, 1fr)',
+      gridTemplateColumns: '1fr 2fr',
+      columnGap: '1rem',
       [mq.GROUP_3_ONLY]: {
-        gridTemplateColumns: 'repeat(1, 1fr)',
+        gridTemplateColumns: '1fr',
       },
     }),
 };
