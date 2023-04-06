@@ -8,7 +8,6 @@ import Text from '../Text';
 import { LeftChevron, RightChevron } from '../icons';
 import styles from './index.styles';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import idSanitiser from '../../lib/utilities/idSanitiser';
 
 interface MessageBannerProps {
   heading: string;
@@ -28,10 +27,10 @@ const MessageBanner = ({
   const { dir } = useContext(ServiceContext);
   const isRtl = dir === 'rtl';
 
-  const id = `message-banner-${idSanitiser(heading)}`;
+  const id = `message-banner-${heading.replaceAll(' ', '-')}`;
 
-  <section
   return (
+    <section
       css={styles.container}
       role="region"
       aria-labelledby={id}
