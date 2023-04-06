@@ -206,18 +206,20 @@ export const testsThatFollowSmokeTestConfig = ({
                   socialMediaProviderName.toLowerCase();
                 SocialEmbedsData.forEach(content => {
                   const socialMediaUrl = content.model.source;
-                  const socialMediaEmbedId = `[data-e2e="${lowercaseSocialMediaProviderName}-embed-${socialMediaUrl}"]`;
-                  cy.get(socialMediaEmbedId).scrollIntoView();
-                  cy.get(socialMediaEmbedId).within(() => {
-                    cy.get(`[data-testid="consentBanner"]`).should('exist');
-                    cy.get(`iframe`).should('not.exist');
-                    // TODO: Revisit why this is failing to find the iframe in time
-                    // cy.get(`[data-testid="banner-button"]`).click();
-                    // cy.get(`iframe`).should('exist');
-                    // cy.get(
-                    //   `[href^="#end-of-${lowercaseSocialMediaProviderName}-content"]`,
-                    // ).should('exist');
-                  });
+                  cy.get(
+                    `[data-e2e="${lowercaseSocialMediaProviderName}-embed-${socialMediaUrl}"]`,
+                  )
+                    .scrollIntoView()
+                    .within(() => {
+                      cy.get(`[data-testid="consentBanner"]`).should('exist');
+                      cy.get(`iframe`).should('not.exist');
+                      // TODO: Revisit why this is failing to find the iframe in time
+                      // cy.get(`[data-testid="banner-button"]`).click();
+                      // cy.get(`iframe`).should('exist');
+                      // cy.get(
+                      //   `[href^="#end-of-${lowercaseSocialMediaProviderName}-content"]`,
+                      // ).should('exist');
+                    });
                 });
               } else {
                 cy.log(`No ${socialMediaProviderName} embed on page`);
