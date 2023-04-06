@@ -32,13 +32,14 @@ module.exports = {
       'error',
       {
         ignore: [
-          'imagesrcset',
-          'imagesizes',
+          'amp-boilerplate',
+          'amp-custom',
           'css',
           'custom-element',
           'custom-template',
-          'amp-boilerplate',
-          'amp-custom',
+          'fallback',
+          'imagesizes',
+          'imagesrcset',
         ],
       },
     ],
