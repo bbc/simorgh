@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { data as kyrgyzHomePageData } from '#data/kyrgyz/homePage/index.json';
 import { Helmet } from 'react-helmet';
 import { render } from '../../components/react-testing-library-with-providers';
@@ -50,7 +50,7 @@ describe('Home Page', () => {
   });
 
   it('should have a metadata title', () => {
-    const { container } = render(<HomePage pageData={kyrgyzHomePageData} />, {
+    render(<HomePage pageData={kyrgyzHomePageData} />, {
       service: 'kyrgyz',
     });
     expect(Helmet.peek().title).toEqual(kyrgyzHomePageData.title);
