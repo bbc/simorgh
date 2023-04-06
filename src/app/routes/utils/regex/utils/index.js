@@ -1,3 +1,5 @@
+import isLive from "#app/lib/utilities/isLive";
+
 const idRegex = 'c[a-zA-Z0-9]{10}o';
 const ampRegex = '.amp';
 const assetUriRegex = '[a-z0-9-_]{0,}[0-9]{8,}';
@@ -31,7 +33,15 @@ export const getArticleManifestRegex = services => {
 };
 
 export const getFrontPageRegex = services => {
-  const serviceRegex = getServiceRegex(services);
+  // if environment is not live then filter out and remove kyrgyz from list of services
+  let frontPageServices = services;
+  if (!isLive()) {
+    frontPageServices = services.filter(service => service !== 'kyrgyz');
+  }
+  const serviceRegex = getServiceRegex(frontPageServices);
+  console.log(
+    `/:service(${serviceRegex}):variant(${variantRegex})?:amp(${ampRegex})?`,
+  );
   return `/:service(${serviceRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
 };
 
