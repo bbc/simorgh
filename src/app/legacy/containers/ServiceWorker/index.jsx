@@ -9,7 +9,6 @@ const AmpHead = () => (
   <Helmet>
     <script
       async
-      // eslint-disable-next-line react/no-unknown-property
       custom-element="amp-install-serviceworker"
       src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"
     />
