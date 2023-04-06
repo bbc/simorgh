@@ -6,7 +6,7 @@ import Promo from '#components/OptimoPromos';
 import { LatestMediaItemProp } from '../LatestMediaTypes';
 import LatestMediaIndicator from '../LatestMediaIndicator';
 import {
-  PlaceholderWrapper,
+  ImageWrapper,
   StyledPromoTitle,
   StyledTimestamp,
   styles,
@@ -25,31 +25,29 @@ const LatestMediaItem = ({
   const src = item.imageUrl.replace('{width}', '240');
 
   return (
-    <div ref={ref} css={styles.gridOuter}>
+    <div ref={ref} css={styles.promoWrapper}>
       <Promo
         to={item.link}
         ariaLabelledBy={ariaLabelledBy}
         mediaType={item.type}
         eventTrackingData={eventTrackingData}
       >
-        <div css={styles.gridInner}>
-          <PlaceholderWrapper>
-            <Promo.Image src={src} altText="Hello" width={50} height={50} />
-            <LatestMediaIndicator>{item.duration}</LatestMediaIndicator>
-          </PlaceholderWrapper>
-          <div>
-            <Promo.Link>
-              <StyledPromoTitle as="h3">
-                <Promo.Content
-                  mediaDuration={item.description}
-                  headline={item.title}
-                  isPhotoGallery={false}
-                  isLive={false}
-                />
-              </StyledPromoTitle>
-            </Promo.Link>
-            <StyledTimestamp>{timestamp}</StyledTimestamp>
-          </div>
+        <ImageWrapper>
+          <Promo.Image src={src} altText="Hello" width={50} height={50} />
+          <LatestMediaIndicator>{item.duration}</LatestMediaIndicator>
+        </ImageWrapper>
+        <div css={styles.textWrapper}>
+          <Promo.Link>
+            <StyledPromoTitle as="h3">
+              <Promo.Content
+                mediaDuration={item.description}
+                headline={item.title}
+                isPhotoGallery={false}
+                isLive={false}
+              />
+            </StyledPromoTitle>
+          </Promo.Link>
+          <StyledTimestamp>{timestamp}</StyledTimestamp>
         </div>
       </Promo>
     </div>

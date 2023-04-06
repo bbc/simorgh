@@ -17,11 +17,10 @@ const styles = {
     }),
   LatestMediaGridWrapper: ({ mq }: Theme) =>
     css({
-      display: 'grid',
-      gridTemplateColumns: 'repeat(1, 1fr)',
       [mq.GROUP_3_ONLY]: {
-        gridTemplateColumns: 'repeat(2, 1fr)',
-        columnGap: '1rem',
+        display: 'flex',
+        flexWrap: 'wrap',
+        columnGap: '3%',
         rowGap: '1.5rem',
       },
     }),
@@ -30,6 +29,7 @@ const styles = {
       borderBottom: `${pixelsToRem(1)}rem ${palette.GREY_10} solid`,
       [mq.GROUP_3_ONLY]: {
         borderBottom: '0rem',
+        width: '48.5%',
       },
     }),
   SectionTitleWrapper: ({ mq, spacings }: Theme) =>
