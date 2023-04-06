@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import { PropsWithChildren } from 'react';
+import { ComponentPropsWithoutRef } from 'react';
 import styles from './index.styles';
 
 interface VisuallyHiddenTextProps<T extends React.ElementType> {
@@ -17,7 +17,8 @@ const VisuallyHiddenText = <T extends React.ElementType>({
   as,
   lang,
   ...htmlAttributes
-}: PropsWithChildren<VisuallyHiddenTextProps<T>>) => {
+}: VisuallyHiddenTextProps<T> &
+  Omit<ComponentPropsWithoutRef<T>, keyof VisuallyHiddenTextProps<T>>) => {
   const Component = as || 'span';
   return (
     <Component
