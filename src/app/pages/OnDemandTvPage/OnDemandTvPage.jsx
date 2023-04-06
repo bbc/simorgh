@@ -28,11 +28,11 @@ import getEmbedUrl, {
 import AVPlayer from '#containers/AVPlayer';
 import RecentVideoEpisodes from '#containers/EpisodeList/RecentVideoEpisodes';
 import FooterTimestamp from '#containers/OnDemandFooterTimestamp';
-import MetadataContainer from '#containers/Metadata';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import LinkedData from '../../components/LinkedData';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import MetadataContainer from '../../components/Metadata';
 import getPlaceholderImageUrl from '../../routes/utils/getPlaceholderImageUrl';
 
 const getGroups = (zero, one, two, three, four, five) => ({
