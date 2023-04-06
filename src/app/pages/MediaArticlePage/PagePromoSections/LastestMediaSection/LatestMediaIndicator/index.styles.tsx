@@ -3,18 +3,18 @@ import Promo from '#components/OptimoPromos';
 import { css, Theme } from '@emotion/react';
 
 export const styles = {
-  placeholderInfo: ({ mq, fontSizes, fontVariants }: Theme) =>
+  placeholderInfo: ({ mq, fontSizes, fontVariants, palette }: Theme) =>
     css({
       width: '100%',
       ...fontSizes.minion,
       ...fontVariants.sansRegular,
-      backgroundColor: 'LightCyan',
       display: 'flex',
       minWidth: '5rem',
-      padding: '0.5rem',
+      padding: '0.5rem 0.125rem 0.5rem 0.125rem',
       [mq.GROUP_3_ONLY]: {
+        padding: '0.5rem',
         position: 'absolute',
-        backgroundColor: 'PaleGreen',
+        backgroundColor: palette.WHITE,
         maxWidth: '4.125rem',
         height: '2.5rem',
         transform: 'translateY(-2.5rem)',
@@ -23,8 +23,9 @@ export const styles = {
         },
       },
       [mq.GROUP_2_ONLY]: {
+        padding: '0.5rem',
         position: 'absolute',
-        backgroundColor: 'PaleGreen',
+        backgroundColor: palette.WHITE,
         maxWidth: '4.125rem',
         height: '2.125rem',
         transform: 'translateY(-2.125rem)',

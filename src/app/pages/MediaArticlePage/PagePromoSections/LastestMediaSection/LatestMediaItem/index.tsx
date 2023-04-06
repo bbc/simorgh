@@ -10,6 +10,7 @@ import {
   StyledPromoTitle,
   StyledTimestamp,
   styles,
+  StyledPromo,
 } from './index.styles';
 
 const LatestMediaItem = ({
@@ -26,30 +27,31 @@ const LatestMediaItem = ({
 
   return (
     <div ref={ref} css={styles.promoWrapper}>
-      <Promo
+      <StyledPromo
         to={item.link}
         ariaLabelledBy={ariaLabelledBy}
         mediaType={item.type}
         eventTrackingData={eventTrackingData}
+        className="removeBackground"
       >
         <ImageWrapper>
           <Promo.Image src={src} altText="Hello" width={50} height={50} />
           <LatestMediaIndicator>{item.duration}</LatestMediaIndicator>
         </ImageWrapper>
         <div css={styles.textWrapper}>
-          <Promo.Link>
-            <StyledPromoTitle as="h3">
+          <StyledPromoTitle as="h3">
+            <Promo.Link>
               <Promo.Content
                 mediaDuration={item.description}
                 headline={item.title}
                 isPhotoGallery={false}
                 isLive={false}
               />
-            </StyledPromoTitle>
-          </Promo.Link>
+            </Promo.Link>
+          </StyledPromoTitle>
           <StyledTimestamp>{timestamp}</StyledTimestamp>
         </div>
-      </Promo>
+      </StyledPromo>
     </div>
   );
 };

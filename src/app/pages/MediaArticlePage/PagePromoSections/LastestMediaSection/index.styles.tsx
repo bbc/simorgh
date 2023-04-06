@@ -27,9 +27,13 @@ const styles = {
   LatestMediaPromoBorder: ({ mq, palette }: Theme) =>
     css({
       borderBottom: `${pixelsToRem(1)}rem ${palette.GREY_10} solid`,
+      marginBotton: '0',
       [mq.GROUP_3_ONLY]: {
-        borderBottom: '0rem',
+        borderBottom: '0',
         width: '48.5%',
+      },
+      '&:last-child': {
+        borderBottom: 'none',
       },
     }),
   SectionTitleWrapper: ({ mq, spacings }: Theme) =>
@@ -53,6 +57,7 @@ export const StyledPromoList = styled(PromoList)`
 
 export const StyledPromoItem = styled(PromoItem)`
   ${props => styles.LatestMediaPromoBorder(props.theme)}
+  margin-bottom: 0;
 `;
 
 export const StyledSectionLabel = styled(SectionLabel)`

@@ -12,7 +12,7 @@ import {
 
 import { articleDataPropTypes } from '#models/propTypes/article';
 
-import LatestMediaSection from './PagePromoSections/TestLastestMediaSection';
+import LatestMediaSection from './PagePromoSections/LastestMediaSection';
 import { Secondary } from './MediaArticlePageGrid';
 
 const ResponsiveComponentWrapper = styled.div`

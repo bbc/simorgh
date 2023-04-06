@@ -52,3 +52,7 @@ export const ImageWrapper = styled.div`
     width: 100%;
   }
 `;
+
+export const StyledPromo = styled(Promo)`
+  background-color: transparent;
+`;
