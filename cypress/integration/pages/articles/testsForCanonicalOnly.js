@@ -114,10 +114,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
               .within(() => {
                 // Check for video with guidance message
                 if (longGuidanceWarning) {
-                  cy.get('[data-e2e="media-player__placeholder"]')
-                    .within(() => {
-                      cy.get('strong');
-                    })
+                  cy.get('[data-e2e="media-player__placeholder"] strong')
                     .should('be.visible')
                     .and('contain', longGuidanceWarning);
                   // Check for video with no guidance message
@@ -171,11 +168,9 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
               },
               lang,
             );
-            cy.get('[data-e2e="media-player"] button')
-              .click()
-              .then(() => {
-                cy.get(`iframe[src*="${embedUrl}"]`).should('be.visible');
-              });
+            cy.get('[data-e2e="media-player"] button').click();
+            cy.get(`iframe[src*="${embedUrl}"]`).should('be.visible');
+
             cy.testResponseCodeAndTypeRetry({
               path: embedUrl,
               responseCode: 200,
