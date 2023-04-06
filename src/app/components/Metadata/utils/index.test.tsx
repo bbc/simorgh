@@ -1,14 +1,14 @@
 import React from 'react';
-import { renderAppleItunesApp } from './utils';
+import { renderAppleItunesApp } from '.';
 
 describe('Metadata utils', () => {
   describe('renderAppleItunesApp', () => {
     it('should return null when iTunesAppId is empty', () => {
-      expect(renderAppleItunesApp({ iTunesAppId: null })).toBeNull();
+      expect(renderAppleItunesApp({ iTunesAppId: undefined })).toBeNull();
     });
 
     it('should return null when canonicalLink is empty', () => {
-      expect(renderAppleItunesApp({ canonicalLink: null })).toBeNull();
+      expect(renderAppleItunesApp({ canonicalLink: undefined })).toBeNull();
     });
 
     it('should return null when platform is AMP', () => {
