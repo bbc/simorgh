@@ -1,3 +1,5 @@
+import idSanitiser from '../../../../src/app/lib/utilities/idSanitiser';
+
 export default ({ service, pageType, variant }) => {
   let topicId;
   let variantTopicId;
@@ -9,6 +11,7 @@ export default ({ service, pageType, variant }) => {
   let messageBanner;
   const scriptSwitchServices = ['serbian', 'ukchina', 'zhongwen'];
   let otherVariant;
+
   describe(`Tests for ${service} ${pageType}`, () => {
     beforeEach(() => {
       cy.log(Cypress.env('currentPath'));
@@ -118,24 +121,20 @@ export default ({ service, pageType, variant }) => {
       });
       it('clicking the message banner should navigate to the correct page', () => {
         if (messageBanner) {
+          const messageBannerId = idSanitiser(messageBanner.title);
+          const messageBannerComponent = `[data-testid="${`message-banner-${messageBannerId}`}"]`;
+
           cy.go('back');
-          cy.get(
-            `[data-testid="${`message-banner-${messageBanner.title.replaceAll(
-              ' ',
-              '-',
-            )}`}"]`,
-          )
-            .scrollIntoView()
-            .should('exist')
-            .within(() => {
-              cy.get('a')
-                .should('have.attr', 'href')
-                .then($href => {
-                  cy.log($href);
-                  cy.get('a').click();
-                  cy.url().should('eq', messageBanner.summaries[0].link);
-                });
-            });
+          cy.get(messageBannerComponent).should('exist').scrollIntoView();
+          cy.get(messageBannerComponent).within(() => {
+            cy.get('a')
+              .should('have.attr', 'href')
+              .then($href => {
+                cy.log($href);
+                cy.get('a').click();
+                cy.url().should('eq', messageBanner.summaries[0].link);
+              });
+          });
         } else {
           cy.log('No Message Banner exist on Page!');
         }
