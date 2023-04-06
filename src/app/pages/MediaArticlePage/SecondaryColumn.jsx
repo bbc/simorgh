@@ -1,19 +1,17 @@
-import React from 'react';
+/** @jsxRuntime classic */
+/** @jsx jsx */
 import path from 'ramda/src/path';
+import { jsx } from '@emotion/react';
+import { articleDataPropTypes } from '#models/propTypes/article';
 import styled from '@emotion/styled';
-// import { useTheme } from '@emotion/react';
-
-import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
 } from '#psammead/gel-foundations/src/spacings';
-
-import { articleDataPropTypes } from '#models/propTypes/article';
-
+import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
 import LatestMediaSection from './PagePromoSections/LastestMediaSection';
-import { Secondary } from './MediaArticlePageGrid';
+import styles from './MediaArticlePage.styles';
 
 const ResponsiveComponentWrapper = styled.div`
   margin-bottom: ${GEL_SPACING_TRPL};
@@ -31,13 +29,13 @@ const SecondaryColumn = ({ pageData }) => {
   if (!topStoriesContent && !featuresContent) return null;
 
   return (
-    <Secondary>
+    <div css={styles.secondaryColumn}>
       {latestMediaContent && (
         <ResponsiveComponentWrapper data-testid="latest-media">
           <LatestMediaSection content={latestMediaContent} />
         </ResponsiveComponentWrapper>
       )}
-    </Secondary>
+    </div>
   );
 };
 

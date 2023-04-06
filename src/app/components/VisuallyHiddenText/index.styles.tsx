@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
 
 const styles = {
-  hiddenText: () =>
+  visuallyHiddenText: () =>
     css({
       clipPath: 'inset(100%)',
       clip: 'rect(1px, 1px, 1px, 1px)',
