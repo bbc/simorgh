@@ -30,8 +30,8 @@ const MessageBanner = ({
 
   const id = `message-banner-${idSanitiser(heading)}`;
 
-  <section
   return (
+    <section
       css={styles.container}
       role="region"
       aria-labelledby={id}

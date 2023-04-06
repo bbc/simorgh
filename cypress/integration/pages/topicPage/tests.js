@@ -121,12 +121,15 @@ export default ({ service, pageType, variant }) => {
       });
       it('clicking the message banner should navigate to the correct page', () => {
         if (messageBanner) {
-          const messageBannerId = idSanitiser(messageBanner.title);
-          const messageBannerComponent = `[data-testid="${`message-banner-${messageBannerId}`}"]`;
-
           cy.go('back');
-          cy.get(messageBannerComponent).should('exist').scrollIntoView();
-          cy.get(messageBannerComponent).within(() => {
+          cy.get(
+            `[data-testid="${`message-banner-${idSanitiser(
+              messageBanner.title,
+            )}`}"]`,
+          ).as('messageBanner');
+          cy.get('@messageBanner').should('exist');
+          cy.get('@messageBanner').scrollIntoView();
+          cy.get('@messageBanner').within(() => {
             cy.get('a')
               .should('have.attr', 'href')
               .then($href => {
