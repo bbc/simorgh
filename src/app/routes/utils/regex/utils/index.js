@@ -1,4 +1,4 @@
-import isLive from "#app/lib/utilities/isLive";
+import isLive from '#app/lib/utilities/isLive';
 
 const idRegex = 'c[a-zA-Z0-9]{10}o';
 const ampRegex = '.amp';
@@ -39,15 +39,20 @@ export const getFrontPageRegex = services => {
     frontPageServices = services.filter(service => service !== 'kyrgyz');
   }
   const serviceRegex = getServiceRegex(frontPageServices);
-  console.log(
-    `/:service(${serviceRegex}):variant(${variantRegex})?:amp(${ampRegex})?`,
-  );
   return `/:service(${serviceRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
 };
 
-export const getHomePageRegex = services => {
+export const getTipoHomeRegex = services => {
   const serviceRegex = getServiceRegex(services);
   return `/:service(${serviceRegex}):variant(${variantRegex})?/tipohome:amp(${ampRegex})?`;
+};
+
+export const getHomePageRegex = () => {
+  if (!isLive()) {
+    const homePageServiceRegex = getServiceRegex(['kyrgyz']);
+    return `/:service(${homePageServiceRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
+  }
+  return '';
 };
 
 export const getSwRegex = services => {
@@ -58,16 +63,6 @@ export const getSwRegex = services => {
 export const getManifestRegex = services => {
   const serviceRegex = getServiceRegex(services);
   return `/:service(${serviceRegex})/manifest.json`;
-};
-
-export const getHomePageSwRegex = services => {
-  const serviceRegex = getServiceRegex(services);
-  return `/:service(${serviceRegex})/tipohome/sw.js`;
-};
-
-export const getHomePageManifestRegex = services => {
-  const serviceRegex = getServiceRegex(services);
-  return `/:service(${serviceRegex})/tipohome/manifest.json`;
 };
 
 export const getCpsAssetRegex = services => {
