@@ -45,8 +45,9 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
         });
 
         it('should have a visible image that is lazyloaded and has a noscript fallback image', () => {
-          cy.get('[data-e2e="image-placeholder"]').eq(1).scrollIntoView();
           cy.get('[data-e2e="image-placeholder"]')
+            .eq(1)
+            .scrollIntoView()
             .should('be.visible')
             .within(() => {
               cy.get('noscript').contains('<img ');
@@ -114,7 +115,10 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
               .within(() => {
                 // Check for video with guidance message
                 if (longGuidanceWarning) {
-                  cy.get('[data-e2e="media-player__placeholder"] strong')
+                  cy.get('[data-e2e="media-player__placeholder"]')
+                    .within(() => {
+                      cy.get('strong');
+                    })
                     .should('be.visible')
                     .and('contain', longGuidanceWarning);
                   // Check for video with no guidance message
@@ -168,9 +172,11 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
               },
               lang,
             );
-            cy.get('[data-e2e="media-player"] button').click();
-            cy.get(`iframe[src*="${embedUrl}"]`).should('be.visible');
-
+            cy.get('[data-e2e="media-player"] button')
+              .click()
+              .then(() => {
+                cy.get(`iframe[src*="${embedUrl}"]`).should('be.visible');
+              });
             cy.testResponseCodeAndTypeRetry({
               path: embedUrl,
               responseCode: 200,
