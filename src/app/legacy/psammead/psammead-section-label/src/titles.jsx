@@ -77,7 +77,7 @@ const Title = styled.span`
   background-color: ${({ backgroundColor, theme }) =>
     theme.isDarkUi ? theme.palette.GREY_10 : backgroundColor};
   color: ${({ theme }) =>
-    theme.isDarkUi ? theme.palette.LUNAR : props.theme.palette.EBON};
+    theme.isDarkUi ? theme.palette.LUNAR : theme.palette.EBON};
   ${titleMargins};
   ${paddingDir}: ${GEL_SPACING};
 

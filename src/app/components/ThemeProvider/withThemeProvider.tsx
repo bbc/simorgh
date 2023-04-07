@@ -27,6 +27,7 @@ import {
   GREY_11,
   GREY_2,
   GREY_3,
+  GREY_4,
   GREY_5,
   GREY_6,
   GREY_7,
@@ -218,6 +219,7 @@ const withThemeProvider = ({
       GREY_11,
       GREY_2,
       GREY_3,
+      GREY_4,
       GREY_5,
       GREY_6,
       GREY_7,
@@ -269,7 +271,7 @@ const withThemeProvider = ({
   const ThemeProvider: React.FC<Props> = ({ children }) => {
     const { isAmp, pageType } = useContext(RequestContext);
 
-    if (pageType === 'mediaArticle') {
+    if (pageType === 'mediaArticle' || pageType === 'article') {
       theme.isDarkUi = true;
     }
 

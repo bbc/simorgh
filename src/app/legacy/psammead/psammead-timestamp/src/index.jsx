@@ -20,7 +20,7 @@ const StyledTimestamp = styled.time`
   ${({ script, typographyFunc }) =>
     script && typographyFunc && typographyFunc(script)}
   color: ${({ darkMode, theme }) =>
-    darkMode || theme.isDarkUi ? theme.palette.LUNAR : theme.palette.GREY_6};
+    darkMode || theme.isDarkUi ? theme.palette.GREY_3 : theme.palette.GREY_6};
   display: block;
   ${({ service }) => getSansRegular(service)}
   ${props => props.padding && PADDING}

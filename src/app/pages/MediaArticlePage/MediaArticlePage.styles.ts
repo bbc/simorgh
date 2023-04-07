@@ -2,9 +2,9 @@ import { css, Theme } from '@emotion/react';
 import pixelsToRem from '../../utilities/pixelsToRem';
 
 export default {
-  pageWrapper: ({ palette, isDarkUi }: Theme) =>
+  pageWrapper: ({ palette }: Theme) =>
     css({
-      backgroundColor: isDarkUi ? palette.GREY_10 : palette.GREY_2,
+      backgroundColor: palette.GREY_10,
     }),
   grid: ({ mq, gridWidths }: Theme) =>
     css({
