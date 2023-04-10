@@ -5432,7 +5432,9 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: ['/pidgin/articles/cvpde7nqj92o'],
+            paths: [
+              '/pidgin/articles/cvpde7nqj92o'
+            ],
             enabled: true,
           },
           local: {

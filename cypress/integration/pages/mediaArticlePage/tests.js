@@ -22,32 +22,31 @@ export const testsThatFollowSmokeTestConfig = ({
 }) => {
   let mediaArticleData;
   describe(`Tests for ${service} ${pageType}`, () => {
-    before(async () => {
-      mediaArticleData = await fetchArticlePageData(service, variant).then(
-        ({ body }) => body,
-      );
+    // before(() => {
+    // fetchArticlePageData(service, variant).then((response) => {
+    //   mediaArticleData = response;
+    //   cy.log(mediaArticleData);
+    // });
+    // });
 
-      // fetchArticlePageData(service, variant).then(({ body }) => {
-      //   cy.log(body);
-      // variantTopicId = body.data.variantTopicId;
-      // pageCount = body.data.pageCount;
-      // numberOfItems = body.data.curations[0].summaries.length;
-      // firstItemHeadline = body.data.curations[0].summaries[0].title;
-      // messageBanner = body.data.curations.find(
-      //   curation =>
-      //     curation.visualProminence === 'NORMAL' &&
-      //     curation.visualStyle === 'BANNER',
-      // );
-      // });
-    });
-
-    it.only('shows media at top of page', () => {
-      cy.log(mediaArticleData.data.metadata.consumableAsSFV);
-      expect(mediaArticleData.data.metadata.consumableAsSFV).toBe(true);
+    it('shows media at top of page', () => {
+      // cy.log(mediaArticleData.contentType);
+      // cy.log(mediaArticleData.data.article.metadata.consumableAsSFV);
+      // expect(mediaArticleData.data.metadata.consumableAsSFV).toBe(true);
       cy.get('[data-e2e="media-player"]')
         .should('be.visible')
-        .should('have.css', 'top', '0px');
+        .should('have.css', 'top', '0px')
     });
+
+    it('dont load "Top Stories", "Feature" and "Most read"', () => {
+      // the feature and top stories will not be removed for now but will eventually be replaced by 
+      // the new TIPO curated "Latest Videos" onward journeys when those tickets are complete
+
+      // cy.get('[data-testid="features"]').should('not.exist');
+      // cy.get('[data-testid="top-stories"]').should('not.exist');
+      cy.get('[data-e2e="most-read"]').should('not.exist');
+    });
+
   });
 };
 

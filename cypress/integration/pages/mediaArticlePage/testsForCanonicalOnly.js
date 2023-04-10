@@ -20,7 +20,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
 }) =>
   describe(`Canonical Tests for ${service} ${pageType}`, () => {
     if (appToggles.chartbeatAnalytics.enabled) {
-      describe.only('Chartbeat', () => {
+      describe('Chartbeat', () => {
         if (envConfig.chartbeatEnabled) {
           it('should have a script with src value set to chartbeat source', () => {
             cy.hasScriptWithChartbeatSrc();
