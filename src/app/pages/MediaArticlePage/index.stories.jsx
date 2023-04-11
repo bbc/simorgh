@@ -5,7 +5,7 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { UserContextProvider } from '#contexts/UserContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { MEDIA_ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import articleData from '#data/news/articles/c0g992jmmkko.json';
 import articleDataWithRelatedContent from '#data/afrique/articles/c7yn6nznljdo.json';
 import articleDataWithSingleRelatedContent from '#data/afrique/articles/cz216x22106o.json';
@@ -29,7 +29,7 @@ const ComponentWithContext = ({ data: { data } }) => {
       <ServiceContextProvider service="news">
         <RequestContextProvider
           isAmp={false}
-          pageType={ARTICLE_PAGE}
+          pageType={MEDIA_ARTICLE_PAGE}
           service="news"
         >
           <UserContextProvider>
@@ -51,7 +51,7 @@ const ComponentWithContext = ({ data: { data } }) => {
 
 export default {
   Component: ComponentWithContext,
-  title: 'Pages/Article Page',
+  title: 'Pages/Media Article Page',
   decorators: [withKnobs],
   parameters: { layout: 'fullscreen' },
 };
