@@ -3,6 +3,7 @@
 import { useContext } from 'react';
 import { jsx } from '@emotion/react';
 import path from 'ramda/src/path';
+import isEmpty from 'ramda/src/isEmpty';
 import useViewTracker from '#hooks/useViewTracker';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import generatePromoId from '../generatePromoId';
@@ -34,7 +35,7 @@ const renderLatestMediaList = (
   });
 
   return (
-    <StyledPromoItem>
+    <StyledPromoItem key={index}>
       <LatestMediaItem
         item={item}
         ariaLabelledBy={ariaLabelledBy}
@@ -45,7 +46,7 @@ const renderLatestMediaList = (
   );
 };
 
-const LatestMediaSection = ({ content }: { content: LatestMedia[] }) => {
+const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
   const { service, dir, translations } = useContext(ServiceContext);
 
   const eventTrackingData = {
@@ -59,6 +60,9 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] }) => {
   );
   const viewRef = useViewTracker(eventTrackingDataSend);
   const LABEL_ID = 'latest-media-heading';
+
+  if (!content || isEmpty(content)) return null;
+
   return (
     <section
       css={styles.LatestMediaSection}

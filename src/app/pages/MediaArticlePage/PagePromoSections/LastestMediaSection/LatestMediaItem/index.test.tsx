@@ -6,7 +6,7 @@ import {
 
 import LatestMediaItem from '.';
 import PromoContext from '../../../../../legacy/components/OptimoPromos/PromoContext';
-import { LatestMedia } from '../LatestMediaTypes';
+import { EventTrackingData, LatestMedia } from '../LatestMediaTypes';
 
 interface FixtureProps {
   mediaType?: 'audio' | 'video';
@@ -14,7 +14,7 @@ interface FixtureProps {
 }
 
 const Fixture = ({ mediaType, imageAlt }: FixtureProps) => {
-  const item = {
+  const item: LatestMedia = {
     id: 'cg311yd88jgo',
     type: 'video',
     duration: 'PT3M41S',
@@ -30,14 +30,16 @@ const Fixture = ({ mediaType, imageAlt }: FixtureProps) => {
   return (
     <PromoContext.Provider value={{ mediaType }}>
       <LatestMediaItem
-        item={item as unknown as LatestMedia}
+        item={item}
         ariaLabelledBy="promo-item"
+        ref={() => Promise.resolve()}
+        eventTrackingData={{} as unknown as EventTrackingData}
       />
     </PromoContext.Provider>
   );
 };
 
-describe('Latest Media Indicator', () => {
+describe('Latest Media Item', () => {
   it('should format the img url correctly', () => {
     render(<Fixture />);
 
@@ -69,30 +71,4 @@ describe('Latest Media Indicator', () => {
 
     expect(img.getAttribute('alt')).toEqual('test alt text');
   });
-
-  // it('should render play icon when item is video', () => {
-  //   const container = render(<Fixture duration="PT3M41S" mediaType="video" />);
-
-  //   expect(container).toMatchSnapshot();
-  // });
-
-  // it('should render speaker icon when item is audio', () => {
-  //   const container = render(<Fixture duration="PT3M41S" mediaType="audio" />);
-
-  //   expect(container).toMatchSnapshot();
-  // });
-
-  // it('should only render icon when no duration provided', () => {
-  //   const container = render(<Fixture duration="" mediaType="audio" />);
-
-  //   expect(container).toMatchSnapshot();
-  // });
-
-  // it('should have aria-hidden attribute on time element', () => {
-  //   const container = render(<Fixture duration="PT3M41S" mediaType="audio" />);
-
-  //   const durationString = '3:41';
-
-  //   expect(container.getByText(durationString)).toHaveAttribute('aria-hidden');
-  // });
 });
