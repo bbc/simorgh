@@ -24,7 +24,7 @@ const FILL_VIEWPORT_STYLES = `
 
 const StyledEmbedError = styled.div`
   ${({ service }) => getSansRegular(service)}
-  ${GEL_BODY_COPY}
+  ${GEL_BODY_COPY};
   background-color: ${props => props.theme.palette.LUNAR};
   background-image: url(data:image/svg+xml;base64,${BBC_BLOCKS});
   background-position: center ${GEL_SPACING_TRPL};
