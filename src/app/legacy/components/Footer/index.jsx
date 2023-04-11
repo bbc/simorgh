@@ -98,7 +98,6 @@ const SitewideLinks = ({
       }
 
       if (showAdsBasedOnLocation) {
-        const JSenabled = Number && typeof window !== 'undefined';
         return (
           <Link
             service={service}
@@ -107,7 +106,6 @@ const SitewideLinks = ({
             lang={lang}
             onClick={openPrivacyManagerModal}
             onlyShowIfJSenabled
-            visible={JSenabled}
           />
         );
       }

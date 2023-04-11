@@ -26,15 +26,14 @@ const Link = ({
   lang,
   onClick,
   onlyShowIfJSenabled,
-  visible,
 }) => {
   const [isVisible, setVisible] = useState(onlyShowIfJSenabled !== true);
 
   useEffect(() => {
     if (onlyShowIfJSenabled && onClient()) {
-      setVisible(visible);
+      setVisible(true);
     }
-  }, [onlyShowIfJSenabled, visible]);
+  }, [onlyShowIfJSenabled]);
 
   let display = inline ? 'inline' : 'block';
   if (!isVisible) {
@@ -61,7 +60,6 @@ Link.defaultProps = {
   lang: null,
   onClick: null,
   onlyShowIfJSenabled: false,
-  visible: true,
 };
 
 Link.propTypes = {
@@ -72,7 +70,6 @@ Link.propTypes = {
   inline: bool,
   onClick: func,
   onlyShowIfJSenabled: bool,
-  visible: bool,
 };
 
 export default Link;
