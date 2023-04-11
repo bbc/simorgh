@@ -38,7 +38,7 @@ const PromoWrapper = styled.div`
 
 const LabelComponent = styled.strong`
   display: block;
-  ${({ script }) => script && getDoublePica(script)}
+  ${({ script }) => script && getDoublePica(script)};
   ${({ service }) => getSansRegular(service)}
   margin-bottom: ${GEL_SPACING_DBL};
   color: ${props => props.theme.palette.SHADOW};
