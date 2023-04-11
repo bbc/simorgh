@@ -43,11 +43,11 @@ const StyledScrollableNav = styled.div`
     outline: none;
   }
 
-  // Change default focus indicator on Firefox to be inline with new focus indicator styling.
+  /* Change default focus indicator on Firefox to be inline with new focus indicator styling. */
   &:focus-visible::after {
     outline: ${focusIndicatorThickness} solid ${props =>
   props.theme.palette.BLACK};
-    ${scrollableNavOutline};
+    ${scrollableNavOutline}
   }
 
   &:after {
@@ -71,7 +71,7 @@ const StyledScrollableNav = styled.div`
       ${props => hexToRGB(props.theme.palette.WHITE, 1)} 100%
     );
   }
-`;
+}`;
 
 export const ScrollableNavigation = ({ children, dir, ...props }) => (
   <StyledScrollableNav data-e2e="scrollable-nav" dir={dir} {...props}>
