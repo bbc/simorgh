@@ -47,12 +47,12 @@ export const getTipoHomeRegex = services => {
   return `/:service(${serviceRegex}):variant(${variantRegex})?/tipohome:amp(${ampRegex})?`;
 };
 
+// eslint-disable-next-line consistent-return
 export const getHomePageRegex = () => {
   if (!isLive()) {
     const homePageServiceRegex = getServiceRegex(['kyrgyz']);
     return `/:service(${homePageServiceRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
   }
-  return '';
 };
 
 export const getSwRegex = services => {
