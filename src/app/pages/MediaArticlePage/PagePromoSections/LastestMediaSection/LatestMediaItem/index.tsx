@@ -41,7 +41,7 @@ const LatestMediaItem = ({
             width={50}
             height={50}
           />
-          <LatestMediaIndicator>{item.duration}</LatestMediaIndicator>
+          <LatestMediaIndicator duration={item.duration} />
         </ImageWrapper>
         <div css={styles.textWrapper}>
           <StyledPromoTitle as="h3">

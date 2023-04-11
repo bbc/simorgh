@@ -7,11 +7,11 @@ import { LatestMediaIndicatorProp } from '../LatestMediaTypes';
 
 import { StyledPromoMediaIndicator, StyledTime, styles } from './index.styles';
 
-const formatChildren = (children: string) => {
-  if (!children) return null;
-  const duration = moment.duration(children, 'seconds');
-  const durationString = formatDuration({ duration });
-  const isoDuration = duration.toISOString();
+const formatChildren = (duration: string) => {
+  if (!duration) return null;
+  const momentDuration = moment.duration(duration, 'seconds');
+  const durationString = formatDuration({ duration: momentDuration });
+  const isoDuration = momentDuration.toISOString();
   return (
     <StyledTime dateTime={isoDuration} suppressHydrationWarning>
       {durationString}
@@ -19,11 +19,11 @@ const formatChildren = (children: string) => {
   );
 };
 
-const LatestMediaIndicator = ({ children }: LatestMediaIndicatorProp) => {
+const LatestMediaIndicator = ({ duration }: LatestMediaIndicatorProp) => {
   return (
     <div css={styles.placeholderInfo} aria-hidden>
       <StyledPromoMediaIndicator />
-      {formatChildren(children)}
+      {formatChildren(duration)}
     </div>
   );
 };

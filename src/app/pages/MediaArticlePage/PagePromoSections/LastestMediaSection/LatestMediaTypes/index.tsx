@@ -31,5 +31,5 @@ export type ImageProp = {
 };
 
 export type LatestMediaIndicatorProp = {
-  children: string;
+  duration: string;
 };
