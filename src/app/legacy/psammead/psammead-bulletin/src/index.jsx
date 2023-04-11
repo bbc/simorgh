@@ -35,12 +35,12 @@ const bulletinWrapperStyles = ({ theme }) => `
 `;
 
 const RadioBulletinWrapper = styled.div`
-  ${bulletinWrapperStyles};
+  ${bulletinWrapperStyles}
   background-color: ${props => props.theme.palette.LUNAR};
 `;
 
 const TVBulletinWrapper = styled.div`
-  ${bulletinWrapperStyles};
+  ${bulletinWrapperStyles}
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     padding: ${GEL_SPACING_DBL};
   }
@@ -161,8 +161,8 @@ const PlayCTA = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  ${({ script }) => script && getPica(script)};
-  ${({ service }) => service && getSansRegular(service)};
+  ${({ script }) => script && getPica(script)}
+  ${({ service }) => service && getSansRegular(service)}
   ${({ bulletinType }) => playCtaStyles[bulletinType]}
 `;
 
