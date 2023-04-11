@@ -79,7 +79,7 @@ const OperaPromoBox = styled.div`
 
 const TimeStamp = styled(PromoTimestamp)`
   margin-top: ${GEL_SPACING};
-  color: ${({ theme }) => (theme.isDarkUi ? theme.palette.GREY_6 : 'inherit')};
+  color: ${({ theme }) => theme.isDarkUi && theme.palette.GREY_6};
 `;
 
 const Promo = ({ block, onClick }) => {

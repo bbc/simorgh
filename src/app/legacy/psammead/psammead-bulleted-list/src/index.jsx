@@ -14,8 +14,7 @@ const BulletedList = styled.ul`
 
   & > li {
     position: relative;
-    color: ${({ theme }) =>
-      theme.isDarkUi ? theme.palette.GREY_2 : 'inherit'};
+    color: ${({ theme }) => theme.isDarkUi && theme.palette.GREY_2};
   }
 
   & > li::before {
