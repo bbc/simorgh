@@ -247,6 +247,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: '주요뉴스',
       featuresAnalysisTitle: '이 시간 이슈',
+      latestMediaTitle: '최신',
     },
     mostRead: {
       header: 'TOP 뉴스',
@@ -319,6 +320,10 @@ export const service: DefaultServiceConfig = {
       {
         title: '비디오',
         url: '/korean/topics/cnwng7v0e54t',
+      },
+      {
+        title: '라디오',
+        url: '/korean/bbc_korean_radio/programmes/w13xttll',
       },
       {
         title: '다운로드',

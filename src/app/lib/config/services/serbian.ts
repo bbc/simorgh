@@ -133,7 +133,7 @@ export const service: SerbianConfig = {
       },
       {
         title: 'Video',
-        url: '/serbian/lat/media/video',
+        url: '/serbian/lat/topics/c44vyp5g049t',
       },
       {
         title: 'Najpopularnije',
@@ -350,6 +350,7 @@ export const service: SerbianConfig = {
       },
       topStoriesTitle: 'Najvažnije',
       featuresAnalysisTitle: 'Reportaže',
+      latestMediaTitle: 'Najnovije',
     },
   },
   cyr: {
@@ -450,7 +451,7 @@ export const service: SerbianConfig = {
       },
       {
         title: 'Видео',
-        url: '/serbian/cyr/media/video',
+        url: '/serbian/cyr/topics/crg7kj2ejj2t',
       },
       {
         title: 'Најпопуларније',
@@ -667,6 +668,7 @@ export const service: SerbianConfig = {
       },
       topStoriesTitle: 'Најважније',
       featuresAnalysisTitle: 'Репортаже',
+      latestMediaTitle: 'Најновије',
     },
   },
 };

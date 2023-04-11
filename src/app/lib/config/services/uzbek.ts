@@ -251,6 +251,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'Бош мақола',
       featuresAnalysisTitle: 'Муҳаррир танлови',
+      latestMediaTitle: 'Сўнгги',
     },
     mostRead: {
       header: 'Энг кўп ўқилган',
@@ -335,8 +336,8 @@ export const service: DefaultServiceConfig = {
         url: '/uzbek/topics/cjgn7n7v3yjt',
       },
       {
-        title: 'Видео',
-        url: '/uzbek/media/video',
+        title: 'BBC News O‘zbek TV dasturi',
+        url: '/uzbek/bbc_uzbek_tv/tv_programmes/w13xttqv?limit=4',
       },
     ],
   },

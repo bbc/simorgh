@@ -255,6 +255,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'ముఖ్యమైన కథనాలు',
       featuresAnalysisTitle: 'ఫీచర్లు',
+      latestMediaTitle: 'తాజా వార్తలు',
     },
     mostRead: {
       header: 'ఎక్కువమంది చదివినవి',

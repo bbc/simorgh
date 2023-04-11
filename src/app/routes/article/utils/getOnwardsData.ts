@@ -8,41 +8,23 @@ import { SECONDARY_DATA_TIMEOUT } from '#app/lib/utilities/getFetchTimeouts';
 import fetchPageData from '../../utils/fetchPageData';
 import nodeLogger from '../../../lib/logger.node';
 import hasArticleRecommendations from './hasArticleRecommendations';
-import mappings from './mappings';
 
 const logger = nodeLogger(__filename);
 
-const getRecommendationsURLs = async (service: string, assetUri: string) => {
-  if (service !== 'portuguese') {
-    return [
-      {
-        name: 'recommendations',
-        path: getRecommendationsUrl({
-          assetUri,
-          engine: 'unirecs_datalab',
-          engineVariant: null,
-        }),
-        assetUri,
-        api: 'recommendations',
-        apiContext: 'secondary_data',
-      },
-    ];
-  }
-
-  return mappings.map(variant => {
-    return {
-      name: variant.name,
-      ...(variant.engine && { engine: variant.engine }),
+const getRecommendationsURLs = async (assetUri: string) => {
+  return [
+    {
+      name: 'recommendations',
       path: getRecommendationsUrl({
         assetUri,
         engine: 'unirecs_datalab',
-        engineVariant: variant.engineVariant ? variant.engineVariant : null,
+        engineVariant: null,
       }),
       assetUri,
-      api: variant.api,
+      api: 'recommendations',
       apiContext: 'secondary_data',
-    };
-  });
+    },
+  ];
 };
 
 const validateResponse = (
@@ -50,7 +32,6 @@ const validateResponse = (
   name: string,
 ) => {
   if (status === 200 && !isEmpty(json)) {
-    // 005_brasil_recommendations_experiment
     return { [name]: json };
   }
 
@@ -67,7 +48,6 @@ const fetchUrl =
     name: string;
     path: string;
   }) => {
-    // 005_brasil_recommendations_experiment
     try {
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore - Ignore fetchPageData argument types
@@ -113,7 +93,6 @@ const getOnwardsPageData = async ({
 
   const removeAmpAndRenderSuffixes = /(\.|\?).*/g;
   const urlsToFetch = await getRecommendationsURLs(
-    service,
     pathname.replace(removeAmpAndRenderSuffixes, ''),
   );
   const fetchURLFunction = fetchUrl(agent);
