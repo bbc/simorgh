@@ -7,8 +7,8 @@ import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import { SHADOW } from '#app/components/ThemeProvider/palette';
 
 const BulletedList = styled.ul`
-  ${({ script }) => script && getBodyCopy(script)};
-  ${({ service }) => getSansRegular(service)};
+  ${({ script }) => script && getBodyCopy(script)}
+  ${({ service }) => getSansRegular(service)}
   margin-top: 0;
   list-style-type: none;
 
