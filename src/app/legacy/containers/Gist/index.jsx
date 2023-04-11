@@ -54,14 +54,18 @@ const GistList = styled(UnorderedList)`
 
   ul {
     padding: 0;
+
+    & > li {
+      color: ${({ theme }) => theme.isDarkUi && theme.palette.GREY_6};
+    }
   }
 
   li {
     ${({ service }) => getSansRegular(service)}
     ${({ script }) => getGreatPrimer(script)}
     ${({ direction }) => `padding-${direction}: ${GEL_SPACING_HLF_TRPL};`}
-    color: ${({ theme }) => theme.isDarkUi && theme.palette.GREY_6};
     margin-bottom: ${GEL_SPACING_DBL};
+
     &:last-child {
       padding-bottom: ${GEL_SPACING_DBL};
     }
