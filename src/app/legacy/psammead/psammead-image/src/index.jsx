@@ -26,7 +26,7 @@ const StyledPicture = styled.picture`
   display: block;
   width: 100%;
   visibility: visible;
-  ${props => props.fade && fadeIn};
+  ${props => props.fade && fadeIn}
 `;
 
 const StyledImg = styled.img`

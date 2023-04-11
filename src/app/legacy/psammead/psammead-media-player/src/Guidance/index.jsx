@@ -13,7 +13,7 @@ const GUIDANCE_BACKGROUND = 'rgba(34, 34, 34, 0.75)';
 
 const GuidanceWrapper = styled.div`
   ${({ service }) => getSansRegular(service)}
-  ${GEL_LONG_PRIMER};
+  ${GEL_LONG_PRIMER}
   width: 100%;
   height: 100%;
   position: absolute;

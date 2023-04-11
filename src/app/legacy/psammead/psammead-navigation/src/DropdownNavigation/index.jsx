@@ -101,7 +101,7 @@ const StyledDropdownLi = styled.li`
 `;
 
 const StyledDropdownLink = styled.a`
-  ${({ script }) => script && getPica(script)};
+  ${({ script }) => script && getPica(script)}
   ${({ service }) => service && getSansRegular(service)}
   color: ${props => props.theme.palette.GREY_10};
   text-decoration: none;
@@ -213,7 +213,7 @@ const MenuButton = styled(Button)`
     box-shadow: inset 0 0 0 ${GEL_SPACING_HLF}
       ${props => props.theme.palette.WHITE};
     ::after {
-      ${iconBorderPosition};
+      ${iconBorderPosition}
       border: ${GEL_SPACING_HLF} solid ${props => props.theme.palette.BLACK};
     }
   }

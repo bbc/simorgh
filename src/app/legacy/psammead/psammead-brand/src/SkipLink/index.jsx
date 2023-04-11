@@ -24,8 +24,8 @@ const SkipLink = styled.a`
   border: ${SKIP_LINK_BORDER} solid #000;
   color: ${SKIP_LINK_COLOR};
   text-decoration: none;
-  ${({ script }) => script && getPica(script)};
-  ${({ service }) => service && getSansRegular(service)};
+  ${({ script }) => script && getPica(script)}
+  ${({ service }) => service && getSansRegular(service)}
 
   &:focus {
     clip-path: none;

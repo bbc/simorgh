@@ -170,7 +170,7 @@ const summaryStyles = {
 };
 
 export const Summary = styled.p`
-  ${({ script }) => script && getLongPrimer(script)};
+  ${({ script }) => script && getLongPrimer(script)}
   ${({ service }) => getSansRegular(service)}
   color: ${props => props.theme.palette.SHADOW};
   margin: 0; /* Reset */

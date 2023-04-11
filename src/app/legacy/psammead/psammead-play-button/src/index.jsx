@@ -20,7 +20,7 @@ const Button = styled.button`
   cursor: pointer;
   display: block;
   ${({ service }) => getSansBold(service)}
-  ${GEL_MINION};
+  ${GEL_MINION}
   height: ${GEL_SPACING_DEC};
   padding: 0;
   transition: background-color ${BGC_TRANSITION_DURATION};

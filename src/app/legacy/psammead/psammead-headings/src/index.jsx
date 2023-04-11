@@ -17,7 +17,7 @@ import {
 } from '#psammead/psammead-styles/src/font-styles';
 
 export const Headline = styled.h1`
-  ${({ script }) => script && getCanon(script)};
+  ${({ script }) => script && getCanon(script)}
   ${({ service }) => getSerifMedium(service)}
   color: ${({ darkMode }) =>
     props =>
@@ -41,7 +41,7 @@ Headline.defaultProps = {
 };
 
 export const SubHeading = styled.h2`
-  ${({ script }) => script && getTrafalgar(script)};
+  ${({ script }) => script && getTrafalgar(script)}
   ${({ service }) => getSansBold(service)}
   color: ${({ darkMode }) =>
     props =>

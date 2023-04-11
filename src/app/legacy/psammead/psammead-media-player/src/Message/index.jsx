@@ -22,7 +22,7 @@ const StyledWrapper = styled.div`
 
 const MessageWrapper = styled.div`
   ${({ service }) => getSansRegular(service)}
-  ${GEL_LONG_PRIMER};
+  ${GEL_LONG_PRIMER}
   width: 100%;
   height: 100%;
   position: absolute;

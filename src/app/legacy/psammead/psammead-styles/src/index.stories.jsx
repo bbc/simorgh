@@ -40,13 +40,13 @@ const ColourBox = styled.div`
   padding: ${GEL_SPACING_DBL} ${GEL_SPACING};
   border-radius: 0.3125rem;
   display: inline-block;
-  ${getBodyCopy(latin)};
+  ${getBodyCopy(latin)}
 `;
 
 const ColourValue = styled.div`
   padding-left: ${GEL_SPACING};
   display: inline-block;
-  ${getBodyCopy(latin)};
+  ${getBodyCopy(latin)}
 `;
 
 const Detects = styled.li`
@@ -86,19 +86,19 @@ const getFontStyles = fontName => {
 const detectionExamples = ['display: grid', grid];
 
 const RegularParagraph = styled.p`
-  ${({ script }) => script && getBodyCopy(script)};
+  ${({ script }) => script && getBodyCopy(script)}
   ${({ service }) => getSansRegular(service)}
 `;
 const BoldParagraph = styled.p`
-  ${({ script }) => script && getBodyCopy(script)};
+  ${({ script }) => script && getBodyCopy(script)}
   ${({ service }) => getSansBold(service)}
 `;
 const ItalicParagraph = styled.p`
-  ${({ script }) => script && getBodyCopy(script)};
+  ${({ script }) => script && getBodyCopy(script)}
   ${({ service }) => getSansRegularItalic(service)}
 `;
 const BoldItalicParagraph = styled.p`
-  ${({ script }) => script && getBodyCopy(script)};
+  ${({ script }) => script && getBodyCopy(script)}
   ${({ service }) => getSansBoldItalic(service)}
 `;
 

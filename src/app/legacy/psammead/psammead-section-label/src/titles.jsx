@@ -72,10 +72,10 @@ const titleMargins = `
 `;
 
 const Title = styled.span`
-  ${({ script }) => script && getDoublePica(script)};
+  ${({ script }) => script && getDoublePica(script)}
   ${({ service }) => getSansBold(service)}
   background-color: ${props => props.backgroundColor};
-  ${titleMargins};
+  ${titleMargins}
   ${paddingDir}: ${GEL_SPACING};
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
@@ -94,9 +94,9 @@ Title.propTypes = {
 };
 
 const IndexLinkCta = styled.span`
-  ${({ script }) => script && getLongPrimer(script)};
-  ${({ service }) => getSansBold(service)};
-  ${titleMargins};
+  ${({ script }) => script && getLongPrimer(script)}
+  ${({ service }) => getSansBold(service)}
+  ${titleMargins}
   color: ${props => props.theme.palette.EBON};
   background-color: ${props => props.backgroundColor};
   white-space: nowrap;
