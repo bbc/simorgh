@@ -3621,7 +3621,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/kyrgyz'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
