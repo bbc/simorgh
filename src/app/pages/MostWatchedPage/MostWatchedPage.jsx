@@ -19,9 +19,9 @@ import Grid, { GelPageGrid } from '#components/Grid';
 import IndexPageContainer from '#components/PageLayout/IndexPageContainer';
 import IndexHeading from '#containers/IndexHeading';
 import MostWatchedContainer from '#containers/MostWatched';
-import MetadataContainer from '#containers/Metadata';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import ATIAnalytics from '#containers/ATIAnalytics';
+import MetadataContainer from '../../components/Metadata';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import LinkedData from '../../components/LinkedData';
 
