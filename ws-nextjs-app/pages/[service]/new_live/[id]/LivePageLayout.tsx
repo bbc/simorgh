@@ -3,11 +3,11 @@
 
 import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
-import MetadataContainer from '#app/legacy/containers/Metadata';
 import Pagination from '#pages/TopicPage/Pagination';
 import Heading from '#app/components/Heading';
 import { ServiceContext } from '#contexts/ServiceContext';
 import nodeLogger from '#lib/logger.node';
+import MetadataContainer from '../../../../../src/app/components/Metadata';
 import LinkedDataContainer from '../../../../../src/app/components/LinkedData';
 
 import styles from './styles';
