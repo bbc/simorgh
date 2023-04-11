@@ -6,9 +6,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { UserContextProvider } from '#contexts/UserContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { MEDIA_ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-import articleData from '#data/news/articles/c0g992jmmkko.json';
-import articleDataWithRelatedContent from '#data/afrique/articles/c7yn6nznljdo.json';
-import articleDataWithSingleRelatedContent from '#data/afrique/articles/cz216x22106o.json';
+import articleData from '#data/hausa/articles/cw43vy8zdjvo.json';
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
 import MediaArticlePageComponent from './MediaArticlePage';
@@ -58,12 +56,4 @@ export default {
 
 export const MediaArticlePage = props => (
   <ComponentWithContext {...props} data={articleData} />
-);
-
-export const MediaArticlePageWithRelatedContent = props => (
-  <ComponentWithContext {...props} data={articleDataWithRelatedContent} />
-);
-
-export const MediaArticlePageWithSingleRelatedContent = props => (
-  <ComponentWithContext {...props} data={articleDataWithSingleRelatedContent} />
 );
