@@ -10,9 +10,6 @@ import {
   frontPageSwPath,
   tipoHomePath,
   tipoHomeDataPath,
-  // add in tests in frontPage migrations tests
-  // homePagePath,
-  // homePageDataPath,
   cpsAssetPagePath,
   cpsAssetPageDataPath,
   podcastEpisodePath,
