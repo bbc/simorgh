@@ -34,20 +34,34 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
   });
 
   describe('Media Player: Canonical', () => {
-    it('shows media at top of page', () => {
-      // cy.log(mediaArticleData.contentType);
-      // cy.log(mediaArticleData.data.article.metadata.consumableAsSFV);
-      // expect(mediaArticleData.data.metadata.consumableAsSFV).toBe(true);
+    it('Media player is rendered on page', () => {
       cy.get('[data-e2e="media-player"]')
         .should('be.visible')
         .should('have.css', 'top', '0px')
         .within(() => {
+          cy.get('img')
+            .should('be.visible')
+            .should('have.attr', 'src')
+            .should('not.be.empty');
           cy.get('button')
             .should('be.visible')
-            .click()
-            .then(() => {
-              cy.get(`iframe`).should('be.visible');
-            });
+            .within(() => {
+              cy.get('svg').should('be.visible');
+              cy.get('time').should('be.visible').should('have.attr', 'datetime');
+              // .and('eq', durationISO8601);
+            })
+        });
+    });
+
+    it('media can be played', () => {
+      cy.intercept('GET', 'https://open.test.bbc.co.uk/mediaselector').as('mediaSelector')
+      cy.get('[data-e2e="media-player"]')
+        .should('be.visible')
+        .should('have.css', 'top', '0px')
+        .within(() => {
+          cy.get('button').should('be.visible').click().then(() => {
+            cy.get(`iframe`).should('be.visible');
+          });
         });
     });
   });

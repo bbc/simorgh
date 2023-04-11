@@ -25,15 +25,12 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
   variant,
 }) => {
   describe(`Running testsForAMPOnly for ${service} ${pageType}`, () => {
-    describe('Media Player: Canonical', () => {
-
-      it('shows media at top of page', () => {
+    describe('Media Player: AMP', () => {
+      it('Media player is rendered on page', () => {
         cy.get('[data-e2e="media-player"]').within(() => {
-
           cy.get('div')
             .should('have.attr', 'data-e2e')
             .should('not.be.empty');
-
         });
       });
     });

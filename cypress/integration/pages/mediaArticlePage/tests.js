@@ -30,7 +30,6 @@ export const testsThatFollowSmokeTestConfig = ({
     });
 
     describe('Media Player', () => {
-
       it('caption beneath a mediaplayer is visible', () => {
         const media = getBlockData('video', mediaArticleData);
         const { text } =
