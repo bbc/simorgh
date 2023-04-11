@@ -70,10 +70,10 @@ const StyledAmpCookieSettingsButton = styled(AmpCookieSettingsButton)`
   }
 `;
 
-const showSourcePointMessage = e => {
+const openPrivacyManagerModal = e => {
   e.preventDefault();
-  if (window.dotcom && window.dotcom.showSourcePointMessage) {
-    window.dotcom.showSourcePointMessage();
+  if (window.dotcom && window.dotcom.openPrivacyManagerModal) {
+    window.dotcom.openPrivacyManagerModal();
   }
 };
 
@@ -105,7 +105,7 @@ const SitewideLinks = ({
             text={text}
             href={href}
             lang={lang}
-            onClick={showSourcePointMessage}
+            onClick={openPrivacyManagerModal}
             onlyShowIfJSenabled
             visible={JSenabled}
           />
