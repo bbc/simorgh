@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import { string, bool, func } from 'prop-types';
 import { getSansBold } from '#psammead/psammead-styles/src/font-styles';
 import { GEL_SPACING_HLF_TRPL } from '#psammead/gel-foundations/src/spacings';
+import onClient from '#lib/utilities/onClient';
 
 const StyledLink = styled.a`
   ${({ service }) => service && getSansBold(service)}
@@ -28,17 +29,12 @@ const Link = ({
   visible,
 }) => {
   const [isVisible, setVisible] = useState(onlyShowIfJSenabled !== true);
-  const [clientside, setClientside] = useState(false);
 
   useEffect(() => {
-    if (onlyShowIfJSenabled) {
-      if (clientside) {
-        setVisible(visible);
-      } else {
-        setClientside(true);
-      }
+    if (onlyShowIfJSenabled && onClient()) {
+      setVisible(visible);
     }
-  }, [onlyShowIfJSenabled, clientside, visible]);
+  }, [onlyShowIfJSenabled, visible]);
 
   let display = inline ? 'inline' : 'block';
   if (!isVisible) {
