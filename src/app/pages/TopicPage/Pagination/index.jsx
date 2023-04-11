@@ -56,12 +56,12 @@ const StyledUnorderedList = styled.ul`
 `;
 
 const TextSummary = styled.div`
-  ${({ service }) => getSansRegular(service)}
+  ${({ service }) => getSansRegular(service)};
   color: ${props => props.theme.palette.GREY_6};
   display: inline-block;
   margin: 0 1.375rem;
   b {
-    ${({ service }) => getSansBold(service)}
+    ${({ service }) => getSansBold(service)};
   }
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     display: none;
@@ -69,7 +69,7 @@ const TextSummary = styled.div`
 `;
 
 const Block = styled.li`
-  ${({ service }) => getSansBold(service)}
+  ${({ service }) => getSansBold(service)};
   ${({ visibility }) => visibilityToMediaQuery(visibility)}
   width: 2.75rem;
   height: 2.75rem;
