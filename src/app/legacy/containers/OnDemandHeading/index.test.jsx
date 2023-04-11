@@ -74,7 +74,7 @@ describe('AudioPlayer blocks OnDemandHeading', () => {
     render(<Component />);
 
     const visuallyHiddenComma = document.querySelector(
-      'span[class*="VisuallyHiddenText"]',
+      'span[class*="visuallyHiddenText"]',
     );
 
     expect(visuallyHiddenComma).toBeInTheDocument();
