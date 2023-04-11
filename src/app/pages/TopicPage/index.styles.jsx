@@ -4,7 +4,6 @@ const styles = {
   main: ({ spacings, mq }) =>
     css({
       margin: `0 ${spacings.FULL}rem`,
-      /* stylelint-disable-next-line selector-type-no-unknown */
       [mq.GROUP_2_MIN_WIDTH]: {
         margin: `0 ${spacings.DOUBLE}rem`,
       },
@@ -15,7 +14,6 @@ const styles = {
   }),
   inline: ({ mq }) =>
     css({
-      /* stylelint-disable-next-line selector-type-no-unknown */
       [mq.GROUP_4_MIN_WIDTH]: {
         alignItems: 'center',
         display: 'flex',
@@ -24,7 +22,6 @@ const styles = {
   title: ({ spacings, mq }) =>
     css({
       margin: `${spacings.TRIPLE}rem 0`,
-      /* stylelint-disable selector-type-no-unknown */
       [mq.GROUP_2_MIN_WIDTH]: {
         margin: `${spacings.QUADRUPLE} 0`,
       },
@@ -34,7 +31,6 @@ const styles = {
       [mq.GROUP_4_MIN_WIDTH]: {
         margin: `${spacings.QUINTUPLE}rem 0 ${spacings.SEXTUPLE}rem 0`,
       },
-      /* stylelint-enable */
     }),
 };
 
