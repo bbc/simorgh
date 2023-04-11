@@ -7,6 +7,7 @@ export type LatestMedia = {
   link: string;
   title: string;
   type: 'video' | 'audio';
+  imageAlt?: string;
 };
 
 export type TrackingBlock = {

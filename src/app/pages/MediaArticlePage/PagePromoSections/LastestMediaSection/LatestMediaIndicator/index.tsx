@@ -21,7 +21,7 @@ const formatChildren = (children: string) => {
 
 const LatestMediaIndicator = ({ children }: LatestMediaIndicatorProp) => {
   return (
-    <div css={styles.placeholderInfo}>
+    <div css={styles.placeholderInfo} aria-hidden>
       <StyledPromoMediaIndicator />
       {formatChildren(children)}
     </div>

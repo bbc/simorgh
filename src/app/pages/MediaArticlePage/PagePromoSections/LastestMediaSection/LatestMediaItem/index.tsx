@@ -35,14 +35,19 @@ const LatestMediaItem = ({
         className="removeBackground"
       >
         <ImageWrapper>
-          <Promo.Image src={src} altText="Hello" width={50} height={50} />
+          <Promo.Image
+            src={src}
+            altText={item.imageAlt ?? 'media image'}
+            width={50}
+            height={50}
+          />
           <LatestMediaIndicator>{item.duration}</LatestMediaIndicator>
         </ImageWrapper>
         <div css={styles.textWrapper}>
           <StyledPromoTitle as="h3">
             <Promo.Link>
               <Promo.Content
-                mediaDuration={item.description}
+                mediaDuration={item.duration}
                 headline={item.title}
                 isPhotoGallery={false}
                 isLive={false}
