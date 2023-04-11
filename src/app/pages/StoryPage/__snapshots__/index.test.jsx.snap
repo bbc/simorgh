@@ -2014,12 +2014,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   padding: 0 0 0.5rem 0;
 }
 
-.emotion-262:not(:first-child):not(:last-child) {
-  padding: 0.5rem 0 0.5rem 0;
-}
-
 .emotion-262:last-child {
   padding: 0.5rem 0 0 0;
+}
+
+.emotion-262:not(:first-child):not(:last-child) {
+  padding: 0.5rem 0 0.5rem 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
@@ -2028,8 +2028,8 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 
   .emotion-262:first-child,
-  .emotion-262:not(:first-child):not(:last-child),
-  .emotion-262:last-child {
+  .emotion-262:last-child,
+  .emotion-262:not(:first-child):not(:last-child) {
     padding: 0;
   }
 }
@@ -8805,12 +8805,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   padding: 0 0 0.5rem 0;
 }
 
-.emotion-255:not(:first-child):not(:last-child) {
-  padding: 0.5rem 0 0.5rem 0;
-}
-
 .emotion-255:last-child {
   padding: 0.5rem 0 0 0;
+}
+
+.emotion-255:not(:first-child):not(:last-child) {
+  padding: 0.5rem 0 0.5rem 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
@@ -8819,8 +8819,8 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 
   .emotion-255:first-child,
-  .emotion-255:not(:first-child):not(:last-child),
-  .emotion-255:last-child {
+  .emotion-255:last-child,
+  .emotion-255:not(:first-child):not(:last-child) {
     padding: 0;
   }
 }
