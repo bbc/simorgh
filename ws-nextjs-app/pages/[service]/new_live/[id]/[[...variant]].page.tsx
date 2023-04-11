@@ -38,7 +38,7 @@ const getPageData = async ({
   const data = await bffFetch({
     getAgent,
     page,
-    path: `${id}${rendererEnv ? `?renderer_env=${rendererEnv}` : ''}}`,
+    path: `${id}${rendererEnv ? `?renderer_env=${rendererEnv}` : ''}`,
     service,
     variant,
   });
