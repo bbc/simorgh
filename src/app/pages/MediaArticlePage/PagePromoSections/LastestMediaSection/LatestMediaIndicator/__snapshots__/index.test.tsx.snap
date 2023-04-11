@@ -1,0 +1,1002 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Latest Media Indicator should only render icon when no duration provided 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": .emotion-0 {
+  width: 100%;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 5rem;
+  padding: 0.5rem 0.125rem 0.5rem 0.125rem;
+}
+
+@media (min-width: 20rem) {
+  .emotion-0 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-0 {
+    padding: 0.5rem;
+    position: absolute;
+    background-color: #FFFFFF;
+    max-width: 4.125rem;
+    height: 2.5rem;
+    -webkit-transform: translateY(-2.5rem);
+    -moz-transform: translateY(-2.5rem);
+    -ms-transform: translateY(-2.5rem);
+    transform: translateY(-2.5rem);
+  }
+
+  .emotion-0 time {
+    margin: auto;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    padding: 0.5rem;
+    position: absolute;
+    background-color: #FFFFFF;
+    max-width: 4.125rem;
+    height: 2.125rem;
+    -webkit-transform: translateY(-2.125rem);
+    -moz-transform: translateY(-2.125rem);
+    -ms-transform: translateY(-2.125rem);
+    transform: translateY(-2.125rem);
+  }
+
+  .emotion-0 time {
+    margin: auto;
+  }
+}
+
+.emotion-1 {
+  display: inline-block;
+  padding-right: 0.5rem;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+@media screen and (-ms-high-contrast: active) {
+  .emotion-3>svg {
+    fill: #FFFFFF;
+  }
+}
+
+.emotion-5 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+<body>
+    <div>
+      <div
+        class="emotion-0"
+      >
+        <div
+          aria-hidden="true"
+          class="emotion-1 emotion-2"
+        >
+          <div
+            class="emotion-3 emotion-4"
+          >
+            <svg
+              aria-hidden="true"
+              class="emotion-5 emotion-6"
+              focusable="false"
+              height="12px"
+              viewBox="0 0 13 12"
+              width="13px"
+            >
+              <path
+                d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
+              />
+              <path
+                d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": .emotion-0 {
+  width: 100%;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 5rem;
+  padding: 0.5rem 0.125rem 0.5rem 0.125rem;
+}
+
+@media (min-width: 20rem) {
+  .emotion-0 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-0 {
+    padding: 0.5rem;
+    position: absolute;
+    background-color: #FFFFFF;
+    max-width: 4.125rem;
+    height: 2.5rem;
+    -webkit-transform: translateY(-2.5rem);
+    -moz-transform: translateY(-2.5rem);
+    -ms-transform: translateY(-2.5rem);
+    transform: translateY(-2.5rem);
+  }
+
+  .emotion-0 time {
+    margin: auto;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    padding: 0.5rem;
+    position: absolute;
+    background-color: #FFFFFF;
+    max-width: 4.125rem;
+    height: 2.125rem;
+    -webkit-transform: translateY(-2.125rem);
+    -moz-transform: translateY(-2.125rem);
+    -ms-transform: translateY(-2.125rem);
+    transform: translateY(-2.125rem);
+  }
+
+  .emotion-0 time {
+    margin: auto;
+  }
+}
+
+.emotion-1 {
+  display: inline-block;
+  padding-right: 0.5rem;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+@media screen and (-ms-high-contrast: active) {
+  .emotion-3>svg {
+    fill: #FFFFFF;
+  }
+}
+
+.emotion-5 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+<div>
+    <div
+      class="emotion-0"
+    >
+      <div
+        aria-hidden="true"
+        class="emotion-1 emotion-2"
+      >
+        <div
+          class="emotion-3 emotion-4"
+        >
+          <svg
+            aria-hidden="true"
+            class="emotion-5 emotion-6"
+            focusable="false"
+            height="12px"
+            viewBox="0 0 13 12"
+            width="13px"
+          >
+            <path
+              d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
+            />
+            <path
+              d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Latest Media Indicator should render play icon when item is video 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": .emotion-0 {
+  width: 100%;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 5rem;
+  padding: 0.5rem 0.125rem 0.5rem 0.125rem;
+}
+
+@media (min-width: 20rem) {
+  .emotion-0 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-0 {
+    padding: 0.5rem;
+    position: absolute;
+    background-color: #FFFFFF;
+    max-width: 4.125rem;
+    height: 2.5rem;
+    -webkit-transform: translateY(-2.5rem);
+    -moz-transform: translateY(-2.5rem);
+    -ms-transform: translateY(-2.5rem);
+    transform: translateY(-2.5rem);
+  }
+
+  .emotion-0 time {
+    margin: auto;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    padding: 0.5rem;
+    position: absolute;
+    background-color: #FFFFFF;
+    max-width: 4.125rem;
+    height: 2.125rem;
+    -webkit-transform: translateY(-2.125rem);
+    -moz-transform: translateY(-2.125rem);
+    -ms-transform: translateY(-2.125rem);
+    transform: translateY(-2.125rem);
+  }
+
+  .emotion-0 time {
+    margin: auto;
+  }
+}
+
+.emotion-1 {
+  display: inline-block;
+  padding-right: 0.5rem;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+@media screen and (-ms-high-contrast: active) {
+  .emotion-3>svg {
+    fill: #FFFFFF;
+  }
+}
+
+.emotion-5 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.emotion-7 {
+  padding: 0.25;
+  top: 0.09rem;
+}
+
+<body>
+    <div>
+      <div
+        class="emotion-0"
+      >
+        <div
+          aria-hidden="true"
+          class="emotion-1 emotion-2"
+        >
+          <div
+            class="emotion-3 emotion-4"
+          >
+            <svg
+              aria-hidden="true"
+              class="emotion-5 emotion-6"
+              focusable="false"
+              height="12"
+              viewBox="0 0 12 12"
+              width="12"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g
+                fill="none"
+                fill-rule="evenodd"
+              >
+                <path
+                  d="M.5.6h12v12H.5z"
+                />
+                <path
+                  d="M2.144.96v11.28l8.712-5.64z"
+                  fill="currentColor"
+                />
+              </g>
+            </svg>
+          </div>
+        </div>
+        <time
+          aria-hidden="true"
+          class="emotion-7 emotion-8"
+          datetime="PT3M41S"
+        >
+          3:41
+        </time>
+      </div>
+    </div>
+  </body>,
+  "container": .emotion-0 {
+  width: 100%;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 5rem;
+  padding: 0.5rem 0.125rem 0.5rem 0.125rem;
+}
+
+@media (min-width: 20rem) {
+  .emotion-0 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-0 {
+    padding: 0.5rem;
+    position: absolute;
+    background-color: #FFFFFF;
+    max-width: 4.125rem;
+    height: 2.5rem;
+    -webkit-transform: translateY(-2.5rem);
+    -moz-transform: translateY(-2.5rem);
+    -ms-transform: translateY(-2.5rem);
+    transform: translateY(-2.5rem);
+  }
+
+  .emotion-0 time {
+    margin: auto;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    padding: 0.5rem;
+    position: absolute;
+    background-color: #FFFFFF;
+    max-width: 4.125rem;
+    height: 2.125rem;
+    -webkit-transform: translateY(-2.125rem);
+    -moz-transform: translateY(-2.125rem);
+    -ms-transform: translateY(-2.125rem);
+    transform: translateY(-2.125rem);
+  }
+
+  .emotion-0 time {
+    margin: auto;
+  }
+}
+
+.emotion-1 {
+  display: inline-block;
+  padding-right: 0.5rem;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+@media screen and (-ms-high-contrast: active) {
+  .emotion-3>svg {
+    fill: #FFFFFF;
+  }
+}
+
+.emotion-5 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.emotion-7 {
+  padding: 0.25;
+  top: 0.09rem;
+}
+
+<div>
+    <div
+      class="emotion-0"
+    >
+      <div
+        aria-hidden="true"
+        class="emotion-1 emotion-2"
+      >
+        <div
+          class="emotion-3 emotion-4"
+        >
+          <svg
+            aria-hidden="true"
+            class="emotion-5 emotion-6"
+            focusable="false"
+            height="12"
+            viewBox="0 0 12 12"
+            width="12"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              fill="none"
+              fill-rule="evenodd"
+            >
+              <path
+                d="M.5.6h12v12H.5z"
+              />
+              <path
+                d="M2.144.96v11.28l8.712-5.64z"
+                fill="currentColor"
+              />
+            </g>
+          </svg>
+        </div>
+      </div>
+      <time
+        aria-hidden="true"
+        class="emotion-7 emotion-8"
+        datetime="PT3M41S"
+      >
+        3:41
+      </time>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Latest Media Indicator should render speaker icon when item is audio 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": .emotion-0 {
+  width: 100%;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 5rem;
+  padding: 0.5rem 0.125rem 0.5rem 0.125rem;
+}
+
+@media (min-width: 20rem) {
+  .emotion-0 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-0 {
+    padding: 0.5rem;
+    position: absolute;
+    background-color: #FFFFFF;
+    max-width: 4.125rem;
+    height: 2.5rem;
+    -webkit-transform: translateY(-2.5rem);
+    -moz-transform: translateY(-2.5rem);
+    -ms-transform: translateY(-2.5rem);
+    transform: translateY(-2.5rem);
+  }
+
+  .emotion-0 time {
+    margin: auto;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    padding: 0.5rem;
+    position: absolute;
+    background-color: #FFFFFF;
+    max-width: 4.125rem;
+    height: 2.125rem;
+    -webkit-transform: translateY(-2.125rem);
+    -moz-transform: translateY(-2.125rem);
+    -ms-transform: translateY(-2.125rem);
+    transform: translateY(-2.125rem);
+  }
+
+  .emotion-0 time {
+    margin: auto;
+  }
+}
+
+.emotion-1 {
+  display: inline-block;
+  padding-right: 0.5rem;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+@media screen and (-ms-high-contrast: active) {
+  .emotion-3>svg {
+    fill: #FFFFFF;
+  }
+}
+
+.emotion-5 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.emotion-7 {
+  padding: 0.25;
+  top: 0.09rem;
+}
+
+<body>
+    <div>
+      <div
+        class="emotion-0"
+      >
+        <div
+          aria-hidden="true"
+          class="emotion-1 emotion-2"
+        >
+          <div
+            class="emotion-3 emotion-4"
+          >
+            <svg
+              aria-hidden="true"
+              class="emotion-5 emotion-6"
+              focusable="false"
+              height="12px"
+              viewBox="0 0 13 12"
+              width="13px"
+            >
+              <path
+                d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
+              />
+              <path
+                d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
+              />
+            </svg>
+          </div>
+        </div>
+        <time
+          aria-hidden="true"
+          class="emotion-7 emotion-8"
+          datetime="PT3M41S"
+        >
+          3:41
+        </time>
+      </div>
+    </div>
+  </body>,
+  "container": .emotion-0 {
+  width: 100%;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 5rem;
+  padding: 0.5rem 0.125rem 0.5rem 0.125rem;
+}
+
+@media (min-width: 20rem) {
+  .emotion-0 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-0 {
+    padding: 0.5rem;
+    position: absolute;
+    background-color: #FFFFFF;
+    max-width: 4.125rem;
+    height: 2.5rem;
+    -webkit-transform: translateY(-2.5rem);
+    -moz-transform: translateY(-2.5rem);
+    -ms-transform: translateY(-2.5rem);
+    transform: translateY(-2.5rem);
+  }
+
+  .emotion-0 time {
+    margin: auto;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    padding: 0.5rem;
+    position: absolute;
+    background-color: #FFFFFF;
+    max-width: 4.125rem;
+    height: 2.125rem;
+    -webkit-transform: translateY(-2.125rem);
+    -moz-transform: translateY(-2.125rem);
+    -ms-transform: translateY(-2.125rem);
+    transform: translateY(-2.125rem);
+  }
+
+  .emotion-0 time {
+    margin: auto;
+  }
+}
+
+.emotion-1 {
+  display: inline-block;
+  padding-right: 0.5rem;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+@media screen and (-ms-high-contrast: active) {
+  .emotion-3>svg {
+    fill: #FFFFFF;
+  }
+}
+
+.emotion-5 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.emotion-7 {
+  padding: 0.25;
+  top: 0.09rem;
+}
+
+<div>
+    <div
+      class="emotion-0"
+    >
+      <div
+        aria-hidden="true"
+        class="emotion-1 emotion-2"
+      >
+        <div
+          class="emotion-3 emotion-4"
+        >
+          <svg
+            aria-hidden="true"
+            class="emotion-5 emotion-6"
+            focusable="false"
+            height="12px"
+            viewBox="0 0 13 12"
+            width="13px"
+          >
+            <path
+              d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
+            />
+            <path
+              d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
+            />
+          </svg>
+        </div>
+      </div>
+      <time
+        aria-hidden="true"
+        class="emotion-7 emotion-8"
+        datetime="PT3M41S"
+      >
+        3:41
+      </time>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

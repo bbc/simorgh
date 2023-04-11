@@ -13,7 +13,7 @@ const formatChildren = (duration: string) => {
   const durationString = formatDuration({ duration: momentDuration });
   const isoDuration = momentDuration.toISOString();
   return (
-    <StyledTime dateTime={isoDuration} suppressHydrationWarning>
+    <StyledTime dateTime={isoDuration} suppressHydrationWarning aria-hidden>
       {durationString}
     </StyledTime>
   );
@@ -21,7 +21,7 @@ const formatChildren = (duration: string) => {
 
 const LatestMediaIndicator = ({ duration }: LatestMediaIndicatorProp) => {
   return (
-    <div css={styles.placeholderInfo} aria-hidden>
+    <div css={styles.placeholderInfo}>
       <StyledPromoMediaIndicator />
       {formatChildren(duration)}
     </div>
