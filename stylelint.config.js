@@ -7,6 +7,7 @@ module.exports = {
         severity: 'warning',
       },
     ],
+    'no-extra-semicolons': null,
   },
   extends: ['stylelint-config-recommended'],
 };
