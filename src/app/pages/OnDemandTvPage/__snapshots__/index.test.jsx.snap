@@ -287,7 +287,7 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
-  color: #F2F2F2;
+  color: #F6F6F6;
   display: block;
   margin: 0;
   padding: 2rem 0;
@@ -885,7 +885,7 @@ exports[`should show the expired content message if episode is expired 1`] = `
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
-  color: #F2F2F2;
+  color: #F6F6F6;
   display: block;
   margin: 0;
   padding: 2rem 0;
@@ -1470,7 +1470,7 @@ exports[`should show the future content message if episode is not yet available 
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
-  color: #F2F2F2;
+  color: #F6F6F6;
   display: block;
   margin: 0;
   padding: 2rem 0;
@@ -2055,7 +2055,7 @@ exports[`should show the future content message if episode is pending 1`] = `
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
-  color: #F2F2F2;
+  color: #F6F6F6;
   display: block;
   margin: 0;
   padding: 2rem 0;
