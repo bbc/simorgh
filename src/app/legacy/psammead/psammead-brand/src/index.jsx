@@ -61,9 +61,9 @@ const Banner = styled.div`
       }rem;`}
   }
 
-  ${({ borderTop }) => borderTop && `border-top: ${TRANSPARENT_BORDER}`};
+  ${({ borderTop }) => borderTop && `border-top: ${TRANSPARENT_BORDER}`}
   ${({ borderBottom }) =>
-    borderBottom && `border-bottom: ${TRANSPARENT_BORDER}`};
+    borderBottom && `border-bottom: ${TRANSPARENT_BORDER}`}
 `;
 
 const styledLinkOutline = `
@@ -90,7 +90,7 @@ const StyledLink = styled.a`
     margin-bottom: -${GEL_SPACING_HLF};
   }
 
-  // Custom focus indicator styling applied to pseudo-element. Global focus indicator styling has been removed.
+  /* Custom focus indicator styling applied to pseudo-element. Global focus indicator styling has been removed. */
   &:focus-visible::after {
     ${styledLinkOutline}
     border-top: ${GEL_SPACING_HLF} solid ${props =>
