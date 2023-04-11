@@ -145,7 +145,7 @@ const withThemeProvider = ({
     BRAND_HIGHLIGHT,
     BRAND_BORDER,
   } = brandPalette;
-  const theme: Theme = {
+  const themeConfig: Theme = {
     fontSizes: {
       atlas: getAtlasSize(script),
       elephant: getElephantSize(script),
@@ -271,9 +271,10 @@ const withThemeProvider = ({
   const ThemeProvider: React.FC<Props> = ({ children }) => {
     const { isAmp, pageType } = useContext(RequestContext);
 
-    if (pageType === 'mediaArticle' || pageType === 'article') {
-      theme.isDarkUi = true;
-    }
+    const theme = {
+      ...themeConfig,
+      isDarkUi: ['mediaArticle', 'article'].includes(pageType),
+    };
 
     return (
       <EmotionThemeProvider theme={theme}>
