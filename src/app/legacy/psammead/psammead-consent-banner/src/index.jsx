@@ -90,7 +90,7 @@ const FocusableH2 = forwardRef(({ className, children, dir }, ref) => {
 });
 
 const Title = styled(FocusableH2)`
-  ${({ script }) => script && getDoublePica(script)};
+  ${({ script }) => script && getDoublePica(script)}
   color: ${props => props.theme.palette.WHITE};
   font-weight: 700;
   padding: 0;
@@ -105,7 +105,7 @@ const Title = styled(FocusableH2)`
  * The '& li + li' below allows for styling every `li` element except the first.
  */
 const Options = styled.ul`
-  ${({ script }) => script && getLongPrimer(script)};
+  ${({ script }) => script && getLongPrimer(script)}
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -135,7 +135,7 @@ const Options = styled.ul`
 `;
 
 export const ConsentBannerText = styled.p`
-  ${({ script }) => script && getBodyCopy(script)};
+  ${({ script }) => script && getBodyCopy(script)}
   margin-top: ${GEL_SPACING_DBL};
   margin-bottom: ${GEL_SPACING_TRPL};
   color: ${props => props.theme.palette.CONSENT_CONTENT};
@@ -152,7 +152,7 @@ const ListItem = styled.li`
   width: 100%;
   word-break: break-word;
   & button {
-    ${({ script }) => script && getLongPrimer(script)};
+    ${({ script }) => script && getLongPrimer(script)}
     width: 100%;
     min-height: 2.75rem;
     color: ${props => props.theme.palette.EBON};
@@ -167,8 +167,8 @@ const ListItem = styled.li`
       text-decoration: underline;
     }
 
-    // Applies focus indicator black outline.
-    // Overrides dotted Mozilla focus ring applied by Normalize global styles.
+    /* Applies focus indicator black outline.
+       Overrides dotted Mozilla focus ring applied by Normalize global styles. */
     &:focus-visible {
       outline: ${focusIndicatorThickness} solid
         ${props => props.theme.palette.BLACK};
