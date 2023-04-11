@@ -6,7 +6,7 @@ import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 
 const Paragraph = styled.p`
-  ${({ script }) => script && getBodyCopy(script)}
+  ${({ script }) => script && getBodyCopy(script)};
   ${({ service }) => getSansRegular(service)}
   color: ${({ darkMode }) =>
     props =>

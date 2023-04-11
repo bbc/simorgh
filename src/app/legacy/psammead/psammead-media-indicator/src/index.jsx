@@ -11,7 +11,7 @@ const StyledMediaIndicator = styled.div`
   color: ${props => props.theme.palette.EBON};
   background-color: ${props => props.theme.palette.WHITE};
   ${({ service }) => getSansRegular(service)}
-  ${({ script }) => script && getMinion(script)}
+  ${({ script }) => script && getMinion(script)};
 
   ${({ isInline, dir }) =>
     isInline

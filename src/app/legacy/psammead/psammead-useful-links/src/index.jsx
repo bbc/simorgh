@@ -18,8 +18,8 @@ const getRowCount = (children, columns) =>
   Math.ceil(React.Children.count(children) / columns);
 
 export const UsefulLink = styled.a`
-  ${({ script }) => script && getPica(script)}
-  ${({ service }) => service && getSerifMedium(service)}
+  ${({ script }) => script && getPica(script)};
+  ${({ service }) => service && getSerifMedium(service)};
   color: ${props => props.theme.palette.EBON};
   text-decoration: none;
   &:hover,

@@ -18,24 +18,24 @@ import InlineLink from './index';
 import { POSTBOX } from '../../../../components/ThemeProvider/palette';
 
 const RegularParagraph = styled.p`
-  ${({ script }) => getBodyCopy(script)}
+  ${({ script }) => getBodyCopy(script)};
   ${({ service }) => getSansRegular(service)}
 `;
 const BoldParagraph = styled.p`
-  ${({ script }) => getBodyCopy(script)}
+  ${({ script }) => getBodyCopy(script)};
   ${({ service }) => getSansBold(service)}
 `;
 const ItalicParagraph = styled.p`
-  ${({ script }) => getBodyCopy(script)}
+  ${({ script }) => getBodyCopy(script)};
   ${({ service }) => getSansRegularItalic(service)}
 `;
 const BoldItalicParagraph = styled.p`
-  ${({ script }) => getBodyCopy(script)}
+  ${({ script }) => getBodyCopy(script)};
   ${({ service }) => getSansBoldItalic(service)}
 `;
 
 const Caption = styled.figcaption`
-  ${({ script }) => getLongPrimer(script)}
+  ${({ script }) => getLongPrimer(script)};
   ${({ service }) => getSansRegularItalic(service)}
 `;
 

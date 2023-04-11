@@ -11,7 +11,7 @@ export const visuallyHiddenTextStyle = `
 `;
 
 const VisuallyHiddenText = styled.span`
-  ${visuallyHiddenTextStyle}
+  ${visuallyHiddenTextStyle};
 `;
 
 export default VisuallyHiddenText;
