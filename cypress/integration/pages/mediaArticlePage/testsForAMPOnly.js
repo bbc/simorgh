@@ -25,9 +25,20 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
   variant,
 }) => {
   describe(`Running testsForAMPOnly for ${service} ${pageType}`, () => {
-    // TBD
+    describe('Media Player: Canonical', () => {
+
+      it('shows media at top of page', () => {
+        cy.get('[data-e2e="media-player"]').within(() => {
+
+          cy.get('div')
+            .should('have.attr', 'data-e2e')
+            .should('not.be.empty');
+
+        });
+      });
+    });
   });
-};
+}
 // For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
 export const testsThatNeverRunDuringSmokeTestingForAMPOnly = ({
   service,

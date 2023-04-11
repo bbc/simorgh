@@ -17,7 +17,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
   service,
   pageType,
   variant,
-}) =>
+}) => {
   describe(`Canonical Tests for ${service} ${pageType}`, () => {
     if (appToggles.chartbeatAnalytics.enabled) {
       describe('Chartbeat', () => {
@@ -32,6 +32,26 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
       });
     }
   });
+
+  describe('Media Player: Canonical', () => {
+    it('shows media at top of page', () => {
+      // cy.log(mediaArticleData.contentType);
+      // cy.log(mediaArticleData.data.article.metadata.consumableAsSFV);
+      // expect(mediaArticleData.data.metadata.consumableAsSFV).toBe(true);
+      cy.get('[data-e2e="media-player"]')
+        .should('be.visible')
+        .should('have.css', 'top', '0px')
+        .within(() => {
+          cy.get('button')
+            .should('be.visible')
+            .click()
+            .then(() => {
+              cy.get(`iframe`).should('be.visible');
+            });
+        });
+    });
+  });
+};
 
 // For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
 export const testsThatNeverRunDuringSmokeTestingForCanonicalOnly = ({

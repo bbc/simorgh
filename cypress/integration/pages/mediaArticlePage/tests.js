@@ -22,20 +22,26 @@ export const testsThatFollowSmokeTestConfig = ({
 }) => {
   let mediaArticleData;
   describe(`Tests for ${service} ${pageType}`, () => {
-    // before(() => {
-    // fetchArticlePageData(service, variant).then((response) => {
-    //   mediaArticleData = response;
-    //   cy.log(mediaArticleData);
-    // });
-    // });
+    before(() => {
+      cy.getArticlePageData(service, variant).then((response) => {
+        mediaArticleData = response.body;
+        console.log(JSON.stringify(mediaArticleData));
+      });
+    });
 
-    it('shows media at top of page', () => {
-      // cy.log(mediaArticleData.contentType);
-      // cy.log(mediaArticleData.data.article.metadata.consumableAsSFV);
-      // expect(mediaArticleData.data.metadata.consumableAsSFV).toBe(true);
-      cy.get('[data-e2e="media-player"]')
-        .should('be.visible')
-        .should('have.css', 'top', '0px')
+    describe('Media Player', () => {
+
+      it('caption beneath a mediaplayer is visible', () => {
+        const media = getBlockData('video', mediaArticleData);
+        const { text } =
+          getBlockByType(media.model.blocks, 'caption').model.blocks[0].model.blocks[0].model;
+        cy.get('figcaption')
+          .within(() => {
+            cy.get('p')
+              .should('be.visible')
+              .should('contain', text);
+          });
+      });
     });
 
     it('dont load "Top Stories", "Feature" and "Most read"', () => {
