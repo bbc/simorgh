@@ -1391,18 +1391,18 @@ exports[`StoryPromo - Top Story should render with multiple Index Alsos correctl
   margin: 0;
 }
 
-.emotion-18 {
+.emotion-17 {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
-.emotion-20 {
+.emotion-19 {
   border-top: 1px solid #F2F2F2;
   padding: 0.5rem 0;
 }
 
-.emotion-22 {
+.emotion-21 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -1415,34 +1415,34 @@ exports[`StoryPromo - Top Story should render with multiple Index Alsos correctl
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-22 {
+  .emotion-21 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-22 {
+  .emotion-21 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-22:hover,
-.emotion-22:focus {
+.emotion-21:hover,
+.emotion-21:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-22:visited {
+.emotion-21:visited {
   color: #6E6E73;
 }
 
-.emotion-22 svg {
+.emotion-21 svg {
   margin: 0;
 }
 
-.emotion-24 {
+.emotion-23 {
   color: #222222;
   background-color: #FFFFFF;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -1456,20 +1456,20 @@ exports[`StoryPromo - Top Story should render with multiple Index Alsos correctl
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-24 {
+  .emotion-23 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-24 {
+  .emotion-23 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
-.emotion-26 {
+.emotion-25 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1481,7 +1481,7 @@ exports[`StoryPromo - Top Story should render with multiple Index Alsos correctl
   height: 100%;
 }
 
-.emotion-28 {
+.emotion-27 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -1534,35 +1534,35 @@ exports[`StoryPromo - Top Story should render with multiple Index Alsos correctl
         data-e2e="index-alsos"
       >
         <h4
-          class="emotion-16 emotion-17"
+          class="emotion-16"
         >
           Related content
         </h4>
         <ul
-          class="emotion-18 emotion-19"
+          class="emotion-17 emotion-18"
           role="list"
         >
           <li
-            class="emotion-20 emotion-21"
+            class="emotion-19 emotion-20"
             role="listitem"
           >
             <a
               aria-labelledby="IndexAlsosLink-hausalabarai48916590"
-              class="focusIndicatorDisplayInlineBlock emotion-22 emotion-23"
+              class="focusIndicatorDisplayInlineBlock emotion-21 emotion-22"
               href="/hausa/labarai-48916590"
             >
               <div
                 aria-hidden="true"
-                class="emotion-24 emotion-25"
+                class="emotion-23 emotion-24"
                 data-e2e="media-indicator"
                 dir="ltr"
               >
                 <div
-                  class="emotion-26 emotion-27"
+                  class="emotion-25 emotion-26"
                 >
                   <svg
                     aria-hidden="true"
-                    class="emotion-28 emotion-29"
+                    class="emotion-27 emotion-28"
                     focusable="false"
                     height="12"
                     viewBox="0 0 12 12"
@@ -1589,7 +1589,7 @@ exports[`StoryPromo - Top Story should render with multiple Index Alsos correctl
                 role="text"
               >
                 <span
-                  class="emotion-16 emotion-17"
+                  class="emotion-16"
                 >
                   video, 
                 </span>
@@ -1600,11 +1600,11 @@ exports[`StoryPromo - Top Story should render with multiple Index Alsos correctl
             </a>
           </li>
           <li
-            class="emotion-20 emotion-21"
+            class="emotion-19 emotion-20"
             role="listitem"
           >
             <a
-              class="focusIndicatorDisplayInlineBlock emotion-22 emotion-23"
+              class="focusIndicatorDisplayInlineBlock emotion-21 emotion-22"
               href="/hausa/labarai-42837051"
             >
               <span>
@@ -1826,12 +1826,12 @@ exports[`StoryPromo - Top Story should render with one Index Also correctly 1`] 
   margin: 0;
 }
 
-.emotion-18 {
+.emotion-17 {
   border-top: 1px solid #F2F2F2;
   padding: 0.5rem 0;
 }
 
-.emotion-20 {
+.emotion-19 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -1844,34 +1844,34 @@ exports[`StoryPromo - Top Story should render with one Index Also correctly 1`] 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-20 {
+  .emotion-19 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-20 {
+  .emotion-19 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-20:hover,
-.emotion-20:focus {
+.emotion-19:hover,
+.emotion-19:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-20:visited {
+.emotion-19:visited {
   color: #6E6E73;
 }
 
-.emotion-20 svg {
+.emotion-19 svg {
   margin: 0;
 }
 
-.emotion-22 {
+.emotion-21 {
   color: #222222;
   background-color: #FFFFFF;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -1885,20 +1885,20 @@ exports[`StoryPromo - Top Story should render with one Index Also correctly 1`] 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-22 {
+  .emotion-21 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-22 {
+  .emotion-21 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
-.emotion-24 {
+.emotion-23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1910,7 +1910,7 @@ exports[`StoryPromo - Top Story should render with one Index Also correctly 1`] 
   height: 100%;
 }
 
-.emotion-26 {
+.emotion-25 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -1963,30 +1963,30 @@ exports[`StoryPromo - Top Story should render with one Index Also correctly 1`] 
         data-e2e="index-alsos"
       >
         <h4
-          class="emotion-16 emotion-17"
+          class="emotion-16"
         >
           Related content
         </h4>
         <div
-          class="emotion-18 emotion-19"
+          class="emotion-17 emotion-18"
         >
           <a
             aria-labelledby="IndexAlsosLink-hausalabarai48916590"
-            class="focusIndicatorDisplayInlineBlock emotion-20 emotion-21"
+            class="focusIndicatorDisplayInlineBlock emotion-19 emotion-20"
             href="/hausa/labarai-48916590"
           >
             <div
               aria-hidden="true"
-              class="emotion-22 emotion-23"
+              class="emotion-21 emotion-22"
               data-e2e="media-indicator"
               dir="ltr"
             >
               <div
-                class="emotion-24 emotion-25"
+                class="emotion-23 emotion-24"
               >
                 <svg
                   aria-hidden="true"
-                  class="emotion-26 emotion-27"
+                  class="emotion-25 emotion-26"
                   focusable="false"
                   height="12"
                   viewBox="0 0 12 12"
@@ -2013,7 +2013,7 @@ exports[`StoryPromo - Top Story should render with one Index Also correctly 1`] 
               role="text"
             >
               <span
-                class="emotion-16 emotion-17"
+                class="emotion-16"
               >
                 video, 
               </span>
@@ -2191,7 +2191,7 @@ exports[`StoryPromo should render Live promo correctly 1`] = `
   margin: 0;
 }
 
-.emotion-16 {
+.emotion-15 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -2203,28 +2203,28 @@ exports[`StoryPromo should render Live promo correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-16 {
+  .emotion-15 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-16 {
+  .emotion-15 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-16 {
+  .emotion-15 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-16 {
+  .emotion-15 {
     display: none;
     visibility: hidden;
   }
@@ -2269,7 +2269,7 @@ exports[`StoryPromo should render Live promo correctly 1`] = `
               LIVE 
             </span>
             <span
-              class="emotion-14 emotion-15"
+              class="emotion-14"
               lang="en-GB"
             >
               Live, 
@@ -2279,7 +2279,7 @@ exports[`StoryPromo should render Live promo correctly 1`] = `
         </a>
       </h3>
       <p
-        class="emotion-16 emotion-17"
+        class="emotion-15 emotion-16"
       >
         The summary of the promo
       </p>
@@ -2453,7 +2453,7 @@ exports[`StoryPromo should render a RTL Live promo correctly 1`] = `
   margin: 0;
 }
 
-.emotion-16 {
+.emotion-15 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -2465,28 +2465,28 @@ exports[`StoryPromo should render a RTL Live promo correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-16 {
+  .emotion-15 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-16 {
+  .emotion-15 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-16 {
+  .emotion-15 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-16 {
+  .emotion-15 {
     display: none;
     visibility: hidden;
   }
@@ -2531,7 +2531,7 @@ exports[`StoryPromo should render a RTL Live promo correctly 1`] = `
               LIVE 
             </span>
             <span
-              class="emotion-14 emotion-15"
+              class="emotion-14"
               lang="en-GB"
             >
               Live, 
@@ -2541,7 +2541,7 @@ exports[`StoryPromo should render a RTL Live promo correctly 1`] = `
         </a>
       </h3>
       <p
-        class="emotion-16 emotion-17"
+        class="emotion-15 emotion-16"
       >
         The summary of the promo
       </p>
