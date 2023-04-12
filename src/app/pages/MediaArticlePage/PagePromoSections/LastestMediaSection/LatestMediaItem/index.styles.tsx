@@ -1,10 +1,6 @@
 import styled from '@emotion/styled';
 import { css, Theme } from '@emotion/react';
 import Promo from '#components/OptimoPromos';
-import {
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
-  GEL_GROUP_3_SCREEN_WIDTH_MAX,
-} from '#app/legacy/psammead/gel-foundations/src/breakpoints';
 
 export const styles = {
   promoWrapper: ({ mq, spacings }: Theme) =>
@@ -34,6 +30,15 @@ export const styles = {
         marginTop: `0.75rem`,
       },
     }),
+  imageWrapper: ({ mq }: Theme) =>
+    css({
+      width: '33%',
+      display: 'inline-block',
+      verticalAlign: 'top',
+      [mq.GROUP_3_ONLY]: {
+        width: '100%',
+      },
+    }),
 };
 
 export const StyledTimestamp = styled(Promo.Timestamp)`
@@ -42,15 +47,6 @@ export const StyledTimestamp = styled(Promo.Timestamp)`
 
 export const StyledPromoTitle = styled(Promo.Title)`
   ${props => styles.promoTitle(props.theme)}
-`;
-
-export const ImageWrapper = styled.div`
-  width: 33%;
-  display: inline-block;
-  vertical-align: top;
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-    width: 100%;
-  }
 `;
 
 export const StyledPromo = styled(Promo)`

@@ -6,7 +6,6 @@ import Promo from '#components/OptimoPromos';
 import { LatestMediaItemProp } from '../LatestMediaTypes';
 import LatestMediaIndicator from '../LatestMediaIndicator';
 import {
-  ImageWrapper,
   StyledPromoTitle,
   StyledTimestamp,
   styles,
@@ -34,7 +33,7 @@ const LatestMediaItem = ({
         eventTrackingData={eventTrackingData}
         className="removeBackground"
       >
-        <ImageWrapper>
+        <div css={styles.imageWrapper}>
           <Promo.Image
             src={src}
             altText={item.imageAlt ?? 'media image'}
@@ -42,7 +41,7 @@ const LatestMediaItem = ({
             height={50}
           />
           <LatestMediaIndicator duration={item.duration} />
-        </ImageWrapper>
+        </div>
         <div css={styles.textWrapper}>
           <StyledPromoTitle as="h3">
             <Promo.Link>
