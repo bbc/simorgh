@@ -57,6 +57,12 @@ const GistList = styled(UnorderedList)`
 
     & > li {
       color: ${({ theme }) => theme.isDarkUi && theme.palette.GREY_8};
+
+      &::before {
+        background-color: ${({ theme }) =>
+          theme.isDarkUi && theme.palette.GREY_8};
+        border-color: ${({ theme }) => theme.isDarkUi && theme.palette.GREY_8};
+      }
     }
   }
 
@@ -68,12 +74,6 @@ const GistList = styled(UnorderedList)`
 
     &:last-child {
       padding-bottom: ${GEL_SPACING_DBL};
-    }
-
-    &::before {
-      background-color: ${({ theme }) =>
-        theme.isDarkUi && theme.palette.GREY_8};
-      border-color: ${({ theme }) => theme.isDarkUi && theme.palette.GREY_8};
     }
 
     > * {
