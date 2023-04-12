@@ -47,7 +47,7 @@ const renderLatestMediaList = (
 };
 
 const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
-  const { service, dir, translations } = useContext(ServiceContext);
+  const { service, dir, translations, script } = useContext(ServiceContext);
 
   const eventTrackingData = {
     block: {
@@ -85,7 +85,7 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
         href={null}
         labelId={LABEL_ID}
         linkText={null}
-        script={undefined}
+        script={script}
         service={service}
         backgroundColor="transparent"
         overrideHeadingAs={null}
