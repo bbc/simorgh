@@ -5,7 +5,7 @@ import AmpAd from './Amp';
 import CanonicalAd from './Canonical';
 import { AdProps } from './types';
 
-const AdContainer = ({ slotType, className }: AdProps) => {
+const Ad = ({ slotType, className }: AdProps) => {
   const { isAmp } = useContext(RequestContext);
   const { enabled: adsEnabled } = useToggle('ads');
 
@@ -13,8 +13,8 @@ const AdContainer = ({ slotType, className }: AdProps) => {
     return null;
   }
 
-  const Ad = isAmp ? AmpAd : CanonicalAd;
-  return <Ad slotType={slotType} className={className} />;
+  const AdComponent = isAmp ? AmpAd : CanonicalAd;
+  return <AdComponent slotType={slotType} className={className} />;
 };
 
-export default AdContainer;
+export default Ad;

@@ -15,11 +15,11 @@ import IndexPageContainer from '#components/PageLayout/IndexPageContainer';
 import IndexPageSection from '#containers/IndexPageSection';
 import RadioScheduleContainer from '#containers/RadioSchedule';
 import MetadataContainer from '#containers/Metadata';
-import MostReadContainer from '#containers/MostRead';
+import MostReAd from '#containers/MostRead';
 import MostReadSection from '#containers/MostRead/section';
 import MostReadSectionLabel from '#containers/MostRead/label';
 import { NEGATIVE_MARGIN } from '#lib/styles.const';
-import AdContainer from '../../components/Ad';
+import Ad from '../../components/Ad';
 import MPUContainer from '../../components/Ad/MPU';
 import CanonicalAdBootstrapJs from '../../components/Ad/Canonical/CanonicalAdBootstrapJs';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -47,7 +47,7 @@ const MostReadWrapper = ({ children }) => (
 );
 
 const renderMostRead = mostReadEndpointOverride => (
-  <MostReadContainer
+  <MostReAd
     mostReadEndpointOverride={mostReadEndpointOverride}
     columnLayout="twoColumn"
     wrapper={MostReadWrapper}
@@ -102,7 +102,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
         hasAmpPage={false}
       />
       <LinkedData type="WebPage" seoTitle={seoTitle} />
-      <AdContainer slotType="leaderboard" />
+      <Ad slotType="leaderboard" />
       <main role="main">
         <VisuallyHiddenText id="content" tabIndex="-1" as="h1">
           {offScreenText}

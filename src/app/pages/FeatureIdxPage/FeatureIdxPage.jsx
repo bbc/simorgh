@@ -12,7 +12,7 @@ import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import useToggle from '#hooks/useToggle';
 import CanonicalAdBootstrapJs from '../../components/Ad/Canonical/CanonicalAdBootstrapJs';
-import AdContainer from '../../components/Ad';
+import Ad from '../../components/Ad';
 import MPUContainer from '../../components/Ad/MPU';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import LinkedData from '../../components/LinkedData';
@@ -50,7 +50,7 @@ const FeatureIdxPage = ({ pageData }) => {
         openGraphType="website"
       />
       <LinkedData type="WebPage" seoTitle={seoTitle} />
-      <AdContainer slotType="leaderboard" />
+      <Ad slotType="leaderboard" />
       <main role="main">
         <IndexPageContainer>
           <IndexHeading id="content" pageType="fix">

@@ -33,7 +33,9 @@ describe('AMP Ads', () => {
 
   describe('Snapshots', () => {
     it('should correctly render an AMP leaderboard ad', () => {
-      const { container } = render(<Ad slotType="leaderboard" />);
+      const { container } = render(<Ad slotType="leaderboard" />, {
+        ...renderOptions,
+      });
       expect(container).toMatchSnapshot();
     });
 
@@ -52,7 +54,7 @@ describe('AMP Ads', () => {
         { ...renderOptions, service: 'news' },
       );
 
-      expect(getByLabelText('Publicités')).not.toBeVisible();
+      expect(getByLabelText('Advertisement')).not.toBeVisible();
     });
 
     it('should render ad placeholder in UK when showAdPlaceholder in service config is true', () => {

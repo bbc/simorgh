@@ -3,7 +3,10 @@ import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/uk';
 import withContext from '../../../contexts/utils/withContext';
 import { mainTranslations as russianMainTranslations } from './russian';
-import { UkrainianConfig } from '../../../models/types/serviceConfig';
+import {
+  Direction,
+  UkrainianConfig,
+} from '../../../models/types/serviceConfig';
 import { Services } from '../../../models/types/global';
 
 const secondaryColumnTranslations = {
@@ -22,7 +25,7 @@ const baseServiceConfig = {
   serviceLocalizedName: 'Україна',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/ukrainian.png',
   defaultImageAltText: 'BBC News Україна',
-  dir: `ltr`,
+  dir: 'ltr' as Direction,
   externalLinkText: ', зовнішнє',
   imageCaptionOffscreenText: 'Підпис до фото, ',
   videoCaptionOffscreenText: 'Підпис до відео, ',

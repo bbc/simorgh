@@ -1,10 +1,3 @@
-import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
-import {
-  GEL_SPACING,
-  GEL_SPACING_DBL,
-  GEL_SPACING_TRPL,
-} from '#psammead/gel-foundations/src/spacings';
-
 // Ad Slot Widths (for custom breakpoints)
 /*
   These have an extra 16px (1rem) variant added in order to account for the padding on both the left and
@@ -57,40 +50,3 @@ export const MPU_MINIMUM_WIDTH_PADDING = `@media (min-width: ${MPU_WIDTH_MIN_PAD
 export const LEADERBOARD_MINIMUM_WIDTH = `@media (min-width: ${LEADERBOARD_WIDTH_MIN})`;
 export const LEADERBOARD_MINIMUM_WIDTH_PADDING = `@media (min-width: ${LEADERBOARD_WIDTH_MIN_PADDING})`;
 export const LEADERBOARD_LARGE_MINIMUM_WIDTH = `@media (min-width: ${LARGE_LEADERBOARD_WIDTH_MIN})`;
-
-/*
-  The Ad Unit (dotcom-ad-inner) already has margin-bottom of 0.5rem and
-  the 'ADVERTISEMENT' Label (dotcom-ad-text) already has margin-top of 0.5rem,
-  hence the padding is set such that this is accounted for.
-*/
-
-export const ampLeaderboardStyles = `
-  display: none;
-  visibility: hidden;
-  @media (min-width: ${LEADERBOARD_WIDTH_MIN}) {
-    min-height: ${LEADERBOARD_HEIGHTS.GROUP_1};
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    visibility: visible;
-    padding: ${GEL_SPACING_DBL} 0;
-  }
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    min-height: ${LEADERBOARD_HEIGHTS.LARGE};
-    padding: ${GEL_SPACING_TRPL} 0;
-  }
-`;
-
-export const ampMpuStyles = `
-  display: none;
-  visibility: hidden;
-  padding: 0;
-  @media (min-width: ${MPU_WIDTH_MIN}) {
-    min-height: ${MPU_HEIGHTS.GROUP_3};
-    padding: padding: ${GEL_SPACING_DBL} 0 ${GEL_SPACING} 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    visibility: visible;
-  }
-`;

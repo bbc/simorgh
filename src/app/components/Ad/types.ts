@@ -1,6 +1,5 @@
-import { PageTypes, Services } from '#app/models/types/global';
+import { PageTypes, Services, Direction } from '#app/models/types/global';
 
-/* eslint-disable @typescript-eslint/ban-types */
 export type SlotType = 'leaderboard' | 'mpu';
 
 export interface AdProps {
@@ -40,4 +39,16 @@ export interface AdJsonDataProps {
   service: Services;
   slotType: SlotType;
   assetType: string;
+}
+
+export interface AmpAdContentProps {
+  service: Services;
+  dir: Direction;
+  label: string;
+  slotType: SlotType;
+  pageType: PageTypes;
+}
+
+export interface AmpAdProps extends AmpAdContentProps {
+  ariaLabel: string;
 }
