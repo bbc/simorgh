@@ -1,4 +1,4 @@
-import { Direction } from '#app/models/types/serviceConfig';
+import { Direction } from '#app/models/types/global';
 import { SlotType } from '../../types';
 
 const getAdsAriaLabel = (
