@@ -70,6 +70,12 @@ const GistList = styled(UnorderedList)`
       padding-bottom: ${GEL_SPACING_DBL};
     }
 
+    &::before {
+      background-color: ${({ theme }) =>
+        theme.isDarkUi && theme.palette.GREY_8};
+      border-color: ${({ theme }) => theme.isDarkUi && theme.palette.GREY_8};
+    }
+
     > * {
       color: ${({ theme }) => theme.isDarkUi && theme.palette.GREY_8};
 
