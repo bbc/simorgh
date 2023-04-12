@@ -261,7 +261,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
   margin: 0;
 }
 
-.emotion-17 {
+.emotion-16 {
   color: #3F3F42;
   margin: 0;
   padding: 0 0.5rem 1rem;
@@ -273,26 +273,26 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-17 {
+  .emotion-16 {
     font-size: 0.9375rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-17 {
+  .emotion-16 {
     font-size: 0.875rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-17 {
+  .emotion-16 {
     padding-right: 0;
   }
 }
 
-.emotion-19 {
+.emotion-18 {
   background-color: #222222;
   border: 0.0625rem solid transparent;
   color: #FFFFFF;
@@ -317,21 +317,21 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-19 {
+  .emotion-18 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-19 {
+  .emotion-18 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-19 {
+  .emotion-18 {
     display: -webkit-inline-box;
     display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
@@ -341,7 +341,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
   }
 }
 
-.emotion-21 {
+.emotion-20 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -353,7 +353,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
   padding-left: 0.5rem;
 }
 
-.emotion-21>svg {
+.emotion-20>svg {
   color: #FFFFFF;
   fill: currentColor;
   width: 1.0625rem;
@@ -361,7 +361,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
   margin: 0;
 }
 
-.emotion-23 {
+.emotion-22 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -370,121 +370,121 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
   height: 0.75rem;
 }
 
-.emotion-26 {
+.emotion-25 {
   padding: 0.5rem 0 1rem;
 }
 
 @media (max-width: 62.9375rem) {
-  .emotion-26 {
+  .emotion-25 {
     border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 
-.emotion-26:last-child {
+.emotion-25:last-child {
   border: none;
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-26 {
+  .emotion-25 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-26 {
+  .emotion-25 {
     padding: 0 0 1.5rem;
   }
 }
 
-.emotion-26:first-child {
+.emotion-25:first-child {
   padding-top: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-26:first-child {
+  .emotion-25:first-child {
     padding-top: 1rem;
   }
 }
 
-.emotion-26:last-child {
+.emotion-25:last-child {
   padding-bottom: 0;
 }
 
 @supports (display: grid) {
-  .emotion-26 {
+  .emotion-25 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-26 {
+    .emotion-25 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-26 {
+    .emotion-25 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-26 {
+    .emotion-25 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-26 {
+    .emotion-25 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-26 {
+    .emotion-25 {
       grid-template-columns: repeat(2, 1fr);
       grid-column-end: span 2;
     }
   }
 
   @media (min-width: 80rem) {
-    .emotion-26 {
+    .emotion-25 {
       grid-template-columns: repeat(2, 1fr);
       grid-column-end: span 2;
     }
   }
 }
 
-.emotion-28 {
+.emotion-27 {
   position: relative;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-28 {
+  .emotion-27 {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-column-gap: 0.5rem;
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-28 {
+    .emotion-27 {
       grid-column-gap: 1rem;
     }
   }
 
   @media (min-width: 63rem) {
-    .emotion-28 {
+    .emotion-27 {
       display: block;
     }
   }
 }
 
-.emotion-30 {
+.emotion-29 {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -492,24 +492,24 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
 }
 
 @media (min-width: 63rem) {
-  .emotion-30 {
+  .emotion-29 {
     display: block;
     width: 100%;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-30 {
+  .emotion-29 {
     width: initial;
     grid-column: 1/span 2;
   }
 }
 
-.emotion-32 {
+.emotion-31 {
   position: relative;
 }
 
-.emotion-34 {
+.emotion-33 {
   height: 0;
   overflow: hidden;
   position: relative;
@@ -523,45 +523,45 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
 }
 
 @media (min-width: 25rem) {
-  .emotion-34 {
+  .emotion-33 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-34 {
+  .emotion-33 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-.emotion-35 {
+.emotion-34 {
   width: 100%;
   height: auto;
   object-fit: cover;
 }
 
 @media (min-width: 25rem) {
-  .emotion-36 {
+  .emotion-35 {
     position: absolute;
     bottom: 0;
   }
 }
 
-.emotion-36>* {
+.emotion-35>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
 @media (max-width: 24.9375rem) {
-  .emotion-36>* {
+  .emotion-35>* {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
-.emotion-38 {
+.emotion-37 {
   color: #222222;
   background-color: #FFFFFF;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -573,20 +573,20 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-38 {
+  .emotion-37 {
     font-size: 0.75rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-38 {
+  .emotion-37 {
     font-size: 0.75rem;
     line-height: 1.125rem;
   }
 }
 
-.emotion-40 {
+.emotion-39 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -598,7 +598,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
   height: 100%;
 }
 
-.emotion-42 {
+.emotion-41 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -607,7 +607,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
   height: 0.75rem;
 }
 
-.emotion-44 {
+.emotion-43 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
@@ -615,13 +615,13 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-44 {
+  .emotion-43 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-44 {
+  .emotion-43 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -629,7 +629,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-44 {
+  .emotion-43 {
     display: block;
     width: initial;
     padding: initial;
@@ -637,13 +637,13 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
   }
 
   @media (min-width: 63rem) {
-    .emotion-44 {
+    .emotion-43 {
       padding-top: 0.5rem;
     }
   }
 }
 
-.emotion-46 {
+.emotion-45 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -655,20 +655,20 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-46 {
+  .emotion-45 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-46 {
+  .emotion-45 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
-.emotion-48 {
+.emotion-47 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -678,7 +678,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
   overflow-wrap: anywhere;
 }
 
-.emotion-48:before {
+.emotion-47:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -690,17 +690,17 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
   z-index: 1;
 }
 
-.emotion-48:hover,
-.emotion-48:focus {
+.emotion-47:hover,
+.emotion-47:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-48:visited {
+.emotion-47:visited {
   color: #6E6E73;
 }
 
-.emotion-50 {
+.emotion-49 {
   font-size: 0.9375rem;
   line-height: 1.375rem;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -712,34 +712,34 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-50 {
+  .emotion-49 {
     font-size: 0.9375rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-50 {
+  .emotion-49 {
     font-size: 0.875rem;
     line-height: 1.375rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-50 {
+  .emotion-49 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-50 {
+  .emotion-49 {
     display: none;
     visibility: hidden;
   }
 }
 
-.emotion-52 {
+.emotion-51 {
   font-size: 0.875rem;
   line-height: 1.25rem;
   color: #545658;
@@ -750,14 +750,14 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-52 {
+  .emotion-51 {
     font-size: 0.875rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-52 {
+  .emotion-51 {
     font-size: 0.8125rem;
     line-height: 1.25rem;
   }
@@ -806,7 +806,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
               role="text"
             >
               <span
-                class="emotion-15 emotion-16"
+                class="emotion-15"
               >
                 استمع, 
               </span>
@@ -817,23 +817,23 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
           </a>
         </h3>
         <p
-          class="emotion-17 emotion-18"
+          class="emotion-16 emotion-17"
           dir="rtl"
         >
           مقابلہ جرمنی سے ہوگا۔
         </p>
         <div
           aria-hidden="true"
-          class="emotion-19 emotion-20"
+          class="emotion-18 emotion-19"
           dir="rtl"
         >
           <span
-            class="emotion-21 emotion-22"
+            class="emotion-20 emotion-21"
             dir="rtl"
           >
             <svg
               aria-hidden="true"
-              class="emotion-23 emotion-24"
+              class="emotion-22 emotion-23"
               focusable="false"
               height="12px"
               viewBox="0 0 13 12"
@@ -853,22 +853,22 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
     </div>
   </li>
   <li
-    class="emotion-0 emotion-26 emotion-2"
+    class="emotion-0 emotion-25 emotion-2"
     dir="rtl"
   >
     <div
-      class="emotion-28 emotion-29"
+      class="emotion-27 emotion-28"
       data-e2e="story-promo"
     >
       <div
-        class="emotion-30 emotion-31"
+        class="emotion-29 emotion-30"
         dir="rtl"
       >
         <div
-          class="emotion-32 emotion-33"
+          class="emotion-31 emotion-32"
         >
           <div
-            class="emotion-34"
+            class="emotion-33"
             style="padding-bottom: 56.25%;"
           >
             <picture>
@@ -884,7 +884,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
               />
               <img
                 alt="سیربین"
-                class="emotion-35"
+                class="emotion-34"
                 height="360"
                 loading="lazy"
                 src="https://ichef.bbci.co.uk/news/660/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg"
@@ -893,20 +893,20 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
             </picture>
           </div>
           <div
-            class="emotion-36 emotion-37"
+            class="emotion-35 emotion-36"
           >
             <div
               aria-hidden="true"
-              class="emotion-38 emotion-39"
+              class="emotion-37 emotion-38"
               data-e2e="media-indicator"
               dir="rtl"
             >
               <div
-                class="emotion-40 emotion-41"
+                class="emotion-39 emotion-40"
               >
                 <svg
                   aria-hidden="true"
-                  class="emotion-42 emotion-43"
+                  class="emotion-41 emotion-42"
                   focusable="false"
                   height="12"
                   viewBox="0 0 12 12"
@@ -932,15 +932,15 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
         </div>
       </div>
       <div
-        class="emotion-44 emotion-45"
+        class="emotion-43 emotion-44"
         dir="rtl"
       >
         <h3
-          class="emotion-46 emotion-47"
+          class="emotion-45 emotion-46"
         >
           <a
             aria-labelledby="promo-urdubbc_urdu_tvtv_programmesw13xttn1limit4-video-1"
-            class="focusIndicatorDisplayInlineBlock emotion-48 emotion-49"
+            class="focusIndicatorDisplayInlineBlock emotion-47 emotion-48"
             href="/urdu/bbc_urdu_tv/tv_programmes/w13xttn1?limit=4"
           >
             <span
@@ -951,12 +951,12 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
           </a>
         </h3>
         <p
-          class="emotion-50 emotion-51"
+          class="emotion-49 emotion-50"
         >
           سیربین پیر سے جمعہ پاکستان کے مقامی وقت کے مطابق شام سات بجے بی بی سی اردو ڈاٹ کام پر لائیو دیکھا جا سکتا ہے۔ اس لنک پر آپ اس کا آن ڈیمانڈ ورژن دیکھ سکتے ہیں۔
         </p>
         <time
-          class="emotion-52 emotion-53"
+          class="emotion-51 emotion-52"
           datetime="2017-02-07"
         >
           7 فبراير/ شباط 2017
@@ -2041,7 +2041,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
   margin: 0;
 }
 
-.emotion-17 {
+.emotion-16 {
   color: #3F3F42;
   margin: 0;
   padding: 0 0.5rem 1rem;
@@ -2053,26 +2053,26 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-17 {
+  .emotion-16 {
     font-size: 0.9375rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-17 {
+  .emotion-16 {
     font-size: 0.875rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-17 {
+  .emotion-16 {
     padding-right: 0;
   }
 }
 
-.emotion-19 {
+.emotion-18 {
   background-color: #222222;
   border: 0.0625rem solid transparent;
   color: #FFFFFF;
@@ -2097,21 +2097,21 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-19 {
+  .emotion-18 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-19 {
+  .emotion-18 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-19 {
+  .emotion-18 {
     display: -webkit-inline-box;
     display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
@@ -2121,7 +2121,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
   }
 }
 
-.emotion-21 {
+.emotion-20 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2133,7 +2133,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
   padding-left: 0.5rem;
 }
 
-.emotion-21>svg {
+.emotion-20>svg {
   color: #FFFFFF;
   fill: currentColor;
   width: 1.0625rem;
@@ -2141,7 +2141,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
   margin: 0;
 }
 
-.emotion-23 {
+.emotion-22 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -2150,31 +2150,31 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
   height: 0.75rem;
 }
 
-.emotion-28 {
+.emotion-27 {
   position: relative;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-28 {
+  .emotion-27 {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-column-gap: 0.5rem;
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-28 {
+    .emotion-27 {
       grid-column-gap: 1rem;
     }
   }
 
   @media (min-width: 63rem) {
-    .emotion-28 {
+    .emotion-27 {
       display: block;
     }
   }
 }
 
-.emotion-30 {
+.emotion-29 {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -2182,24 +2182,24 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
 }
 
 @media (min-width: 63rem) {
-  .emotion-30 {
+  .emotion-29 {
     display: block;
     width: 100%;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-30 {
+  .emotion-29 {
     width: initial;
     grid-column: 1/span 2;
   }
 }
 
-.emotion-32 {
+.emotion-31 {
   position: relative;
 }
 
-.emotion-34 {
+.emotion-33 {
   height: 0;
   overflow: hidden;
   position: relative;
@@ -2213,45 +2213,45 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
 }
 
 @media (min-width: 25rem) {
-  .emotion-34 {
+  .emotion-33 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-34 {
+  .emotion-33 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-.emotion-35 {
+.emotion-34 {
   width: 100%;
   height: auto;
   object-fit: cover;
 }
 
 @media (min-width: 25rem) {
-  .emotion-36 {
+  .emotion-35 {
     position: absolute;
     bottom: 0;
   }
 }
 
-.emotion-36>* {
+.emotion-35>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
 @media (max-width: 24.9375rem) {
-  .emotion-36>* {
+  .emotion-35>* {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
-.emotion-38 {
+.emotion-37 {
   color: #222222;
   background-color: #FFFFFF;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -2263,20 +2263,20 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-38 {
+  .emotion-37 {
     font-size: 0.75rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-38 {
+  .emotion-37 {
     font-size: 0.75rem;
     line-height: 1.125rem;
   }
 }
 
-.emotion-40 {
+.emotion-39 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2288,7 +2288,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
   height: 100%;
 }
 
-.emotion-42 {
+.emotion-41 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -2297,7 +2297,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
   height: 0.75rem;
 }
 
-.emotion-44 {
+.emotion-43 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
@@ -2305,13 +2305,13 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-44 {
+  .emotion-43 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-44 {
+  .emotion-43 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -2319,7 +2319,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-44 {
+  .emotion-43 {
     display: block;
     width: initial;
     padding: initial;
@@ -2327,13 +2327,13 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
   }
 
   @media (min-width: 63rem) {
-    .emotion-44 {
+    .emotion-43 {
       padding-top: 0.5rem;
     }
   }
 }
 
-.emotion-46 {
+.emotion-45 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -2345,20 +2345,20 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-46 {
+  .emotion-45 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-46 {
+  .emotion-45 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
-.emotion-48 {
+.emotion-47 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -2368,7 +2368,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
   overflow-wrap: anywhere;
 }
 
-.emotion-48:before {
+.emotion-47:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -2380,17 +2380,17 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
   z-index: 1;
 }
 
-.emotion-48:hover,
-.emotion-48:focus {
+.emotion-47:hover,
+.emotion-47:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-48:visited {
+.emotion-47:visited {
   color: #6E6E73;
 }
 
-.emotion-50 {
+.emotion-49 {
   font-size: 0.9375rem;
   line-height: 1.375rem;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -2402,34 +2402,34 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-50 {
+  .emotion-49 {
     font-size: 0.9375rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-50 {
+  .emotion-49 {
     font-size: 0.875rem;
     line-height: 1.375rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-50 {
+  .emotion-49 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-50 {
+  .emotion-49 {
     display: none;
     visibility: hidden;
   }
 }
 
-.emotion-52 {
+.emotion-51 {
   font-size: 0.875rem;
   line-height: 1.25rem;
   color: #545658;
@@ -2440,14 +2440,14 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-52 {
+  .emotion-51 {
     font-size: 0.875rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-52 {
+  .emotion-51 {
     font-size: 0.8125rem;
     line-height: 1.25rem;
   }
@@ -2496,7 +2496,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
               role="text"
             >
               <span
-                class="emotion-15 emotion-16"
+                class="emotion-15"
               >
                 استمع, 
               </span>
@@ -2507,23 +2507,23 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
           </a>
         </h3>
         <p
-          class="emotion-17 emotion-18"
+          class="emotion-16 emotion-17"
           dir="rtl"
         >
           مقابلہ جرمنی سے ہوگا۔
         </p>
         <div
           aria-hidden="true"
-          class="emotion-19 emotion-20"
+          class="emotion-18 emotion-19"
           dir="rtl"
         >
           <span
-            class="emotion-21 emotion-22"
+            class="emotion-20 emotion-21"
             dir="rtl"
           >
             <svg
               aria-hidden="true"
-              class="emotion-23 emotion-24"
+              class="emotion-22 emotion-23"
               focusable="false"
               height="12px"
               viewBox="0 0 13 12"
@@ -2547,18 +2547,18 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
     dir="rtl"
   >
     <div
-      class="emotion-28 emotion-29"
+      class="emotion-27 emotion-28"
       data-e2e="story-promo"
     >
       <div
-        class="emotion-30 emotion-31"
+        class="emotion-29 emotion-30"
         dir="rtl"
       >
         <div
-          class="emotion-32 emotion-33"
+          class="emotion-31 emotion-32"
         >
           <div
-            class="emotion-34"
+            class="emotion-33"
             style="padding-bottom: 56.25%;"
           >
             <picture>
@@ -2574,7 +2574,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
               />
               <img
                 alt="سیربین"
-                class="emotion-35"
+                class="emotion-34"
                 height="360"
                 loading="lazy"
                 src="https://ichef.bbci.co.uk/news/660/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg"
@@ -2583,20 +2583,20 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
             </picture>
           </div>
           <div
-            class="emotion-36 emotion-37"
+            class="emotion-35 emotion-36"
           >
             <div
               aria-hidden="true"
-              class="emotion-38 emotion-39"
+              class="emotion-37 emotion-38"
               data-e2e="media-indicator"
               dir="rtl"
             >
               <div
-                class="emotion-40 emotion-41"
+                class="emotion-39 emotion-40"
               >
                 <svg
                   aria-hidden="true"
-                  class="emotion-42 emotion-43"
+                  class="emotion-41 emotion-42"
                   focusable="false"
                   height="12"
                   viewBox="0 0 12 12"
@@ -2622,15 +2622,15 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
         </div>
       </div>
       <div
-        class="emotion-44 emotion-45"
+        class="emotion-43 emotion-44"
         dir="rtl"
       >
         <h3
-          class="emotion-46 emotion-47"
+          class="emotion-45 emotion-46"
         >
           <a
             aria-labelledby="promo-urdubbc_urdu_tvtv_programmesw13xttn1limit4-video-2"
-            class="focusIndicatorDisplayInlineBlock emotion-48 emotion-49"
+            class="focusIndicatorDisplayInlineBlock emotion-47 emotion-48"
             href="/urdu/bbc_urdu_tv/tv_programmes/w13xttn1?limit=4"
           >
             <span
@@ -2641,12 +2641,12 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
           </a>
         </h3>
         <p
-          class="emotion-50 emotion-51"
+          class="emotion-49 emotion-50"
         >
           سیربین پیر سے جمعہ پاکستان کے مقامی وقت کے مطابق شام سات بجے بی بی سی اردو ڈاٹ کام پر لائیو دیکھا جا سکتا ہے۔ اس لنک پر آپ اس کا آن ڈیمانڈ ورژن دیکھ سکتے ہیں۔
         </p>
         <time
-          class="emotion-52 emotion-53"
+          class="emotion-51 emotion-52"
           datetime="2017-02-07"
         >
           7 فبراير/ شباط 2017
@@ -2659,18 +2659,18 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
     dir="rtl"
   >
     <div
-      class="emotion-28 emotion-29"
+      class="emotion-27 emotion-28"
       data-e2e="story-promo"
     >
       <div
-        class="emotion-30 emotion-31"
+        class="emotion-29 emotion-30"
         dir="rtl"
       >
         <div
-          class="emotion-32 emotion-33"
+          class="emotion-31 emotion-32"
         >
           <div
-            class="emotion-34"
+            class="emotion-33"
             style="padding-bottom: 56.25%;"
           >
             <picture>
@@ -2686,7 +2686,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
               />
               <img
                 alt="پکوان"
-                class="emotion-35"
+                class="emotion-34"
                 height="549"
                 loading="lazy"
                 src="https://ichef.bbci.co.uk/news/660/cpsprodpb/18AA/production/_107041360_ff.jpg"
@@ -2695,20 +2695,20 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
             </picture>
           </div>
           <div
-            class="emotion-36 emotion-37"
+            class="emotion-35 emotion-36"
           />
         </div>
       </div>
       <div
-        class="emotion-44 emotion-45"
+        class="emotion-43 emotion-44"
         dir="rtl"
       >
         <h3
-          class="emotion-46 emotion-47"
+          class="emotion-45 emotion-46"
         >
           <a
             aria-labelledby="promo-urdupakistan48346840-text-3"
-            class="focusIndicatorDisplayInlineBlock emotion-48 emotion-49"
+            class="focusIndicatorDisplayInlineBlock emotion-47 emotion-48"
             href="/urdu/pakistan-48346840"
           >
             <span
@@ -2719,12 +2719,12 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
           </a>
         </h3>
         <p
-          class="emotion-50 emotion-51"
+          class="emotion-49 emotion-50"
         >
           کیا آپ نے کبھی غور کیا کہ بعض ریستوران اور ڈھابے کھانے کے لیے دوسروں سے زیادہ مشہور کیوں ہوتے ہیں؟ ٹیکنالوجی کے اس دور میں بھی کیا کھانا بنانے کی خفیہ تراکیب موجود ہیں۔ بی بی سی اردو کی اس نئی سیریز میں ہم آپ کو ایسی ہی کچھ دکانوں اور ڈھابوں پر لے چلیں گے تاکہ آپ جان سکیں کہ آخر ان کا کھانا اتنا مشہور کیوں ہے؟
         </p>
         <time
-          class="emotion-52 emotion-53"
+          class="emotion-51 emotion-52"
           datetime="2019-05-21"
         >
           21 مايو/ أيار 2019
@@ -2737,18 +2737,18 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
     dir="rtl"
   >
     <div
-      class="emotion-28 emotion-29"
+      class="emotion-27 emotion-28"
       data-e2e="story-promo"
     >
       <div
-        class="emotion-30 emotion-31"
+        class="emotion-29 emotion-30"
         dir="rtl"
       >
         <div
-          class="emotion-32 emotion-33"
+          class="emotion-31 emotion-32"
         >
           <div
-            class="emotion-34"
+            class="emotion-33"
             style="padding-bottom: 56.25%;"
           >
             <picture>
@@ -2764,7 +2764,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
               />
               <img
                 alt="The World Cup trophy"
-                class="emotion-35"
+                class="emotion-34"
                 height="1152"
                 loading="lazy"
                 src="https://ichef.bbci.co.uk/news/660/cpsprodpb/1694F/production/_101059429_world_cup_trophy_getty.jpg"
@@ -2773,20 +2773,20 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
             </picture>
           </div>
           <div
-            class="emotion-36 emotion-37"
+            class="emotion-35 emotion-36"
           />
         </div>
       </div>
       <div
-        class="emotion-44 emotion-45"
+        class="emotion-43 emotion-44"
         dir="rtl"
       >
         <h3
-          class="emotion-46 emotion-47"
+          class="emotion-45 emotion-46"
         >
           <a
             aria-labelledby="promo-urdusport48361817-text-4"
-            class="focusIndicatorDisplayInlineBlock emotion-48 emotion-49"
+            class="focusIndicatorDisplayInlineBlock emotion-47 emotion-48"
             href="/urdu/sport-48361817"
           >
             <span
@@ -2797,12 +2797,12 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
           </a>
         </h3>
         <p
-          class="emotion-50 emotion-51"
+          class="emotion-49 emotion-50"
         >
           انگلینڈ اور ویلز میں جاری دنیائے کرکٹ کے سب سے بڑے مقابلوں پر بی بی سی اردو کی خصوصی کوریج دیکھنے کے لیے کلک کریں
         </p>
         <time
-          class="emotion-52 emotion-53"
+          class="emotion-51 emotion-52"
           datetime="2019-06-03"
         >
           3 يونيو/ حزيران 2019
@@ -3796,7 +3796,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
   margin: 0;
 }
 
-.emotion-17 {
+.emotion-16 {
   color: #3F3F42;
   margin: 0;
   padding: 0 0.5rem 1rem;
@@ -3808,26 +3808,26 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-17 {
+  .emotion-16 {
     font-size: 0.9375rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-17 {
+  .emotion-16 {
     font-size: 0.875rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-17 {
+  .emotion-16 {
     padding-right: 0;
   }
 }
 
-.emotion-19 {
+.emotion-18 {
   background-color: #222222;
   border: 0.0625rem solid transparent;
   color: #FFFFFF;
@@ -3852,21 +3852,21 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-19 {
+  .emotion-18 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-19 {
+  .emotion-18 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-19 {
+  .emotion-18 {
     display: -webkit-inline-box;
     display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
@@ -3876,7 +3876,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
   }
 }
 
-.emotion-21 {
+.emotion-20 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3888,7 +3888,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
   padding-left: 0.5rem;
 }
 
-.emotion-21>svg {
+.emotion-20>svg {
   color: #FFFFFF;
   fill: currentColor;
   width: 1.0625rem;
@@ -3896,7 +3896,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
   margin: 0;
 }
 
-.emotion-23 {
+.emotion-22 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -3905,31 +3905,31 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
   height: 0.75rem;
 }
 
-.emotion-28 {
+.emotion-27 {
   position: relative;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-28 {
+  .emotion-27 {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-column-gap: 0.5rem;
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-28 {
+    .emotion-27 {
       grid-column-gap: 1rem;
     }
   }
 
   @media (min-width: 63rem) {
-    .emotion-28 {
+    .emotion-27 {
       display: block;
     }
   }
 }
 
-.emotion-30 {
+.emotion-29 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
@@ -3938,25 +3938,25 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-30 {
+  .emotion-29 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-30 {
+  .emotion-29 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
   }
 }
 
-.emotion-30>div {
+.emotion-29>div {
   vertical-align: middle;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-30 {
+  .emotion-29 {
     display: block;
     width: initial;
     padding: initial;
@@ -3965,22 +3965,22 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
   }
 
   @media (min-width: 63rem) {
-    .emotion-30 {
+    .emotion-29 {
       padding-top: 0;
     }
   }
 }
 
-.emotion-30>div {
+.emotion-29>div {
   display: inline-block;
   vertical-align: initial;
 }
 
-.emotion-30 svg {
+.emotion-29 svg {
   margin: 0;
 }
 
-.emotion-32 {
+.emotion-31 {
   color: #222222;
   background-color: #FFFFFF;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -3994,20 +3994,20 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-32 {
+  .emotion-31 {
     font-size: 0.75rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-32 {
+  .emotion-31 {
     font-size: 0.75rem;
     line-height: 1.125rem;
   }
 }
 
-.emotion-34 {
+.emotion-33 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4019,7 +4019,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
   height: 100%;
 }
 
-.emotion-36 {
+.emotion-35 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -4028,7 +4028,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
   height: 0.75rem;
 }
 
-.emotion-38 {
+.emotion-37 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -4041,20 +4041,20 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-38 {
+  .emotion-37 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-38 {
+  .emotion-37 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
-.emotion-40 {
+.emotion-39 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -4064,7 +4064,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
   overflow-wrap: anywhere;
 }
 
-.emotion-40:before {
+.emotion-39:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -4076,17 +4076,17 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
   z-index: 1;
 }
 
-.emotion-40:hover,
-.emotion-40:focus {
+.emotion-39:hover,
+.emotion-39:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-40:visited {
+.emotion-39:visited {
   color: #6E6E73;
 }
 
-.emotion-42 {
+.emotion-41 {
   font-size: 0.875rem;
   line-height: 1.25rem;
   color: #545658;
@@ -4097,97 +4097,97 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-42 {
+  .emotion-41 {
     font-size: 0.875rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-42 {
+  .emotion-41 {
     font-size: 0.8125rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-45 {
+.emotion-44 {
   padding: 0.5rem 0 1rem;
 }
 
-.emotion-45:last-child {
+.emotion-44:last-child {
   border: none;
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-45 {
+  .emotion-44 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-45 {
+  .emotion-44 {
     padding: 0 0 1.5rem;
   }
 }
 
-.emotion-45:first-child {
+.emotion-44:first-child {
   padding-top: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-45:first-child {
+  .emotion-44:first-child {
     padding-top: 1rem;
   }
 }
 
-.emotion-45:last-child {
+.emotion-44:last-child {
   padding-bottom: 0;
 }
 
 @supports (display: grid) {
-  .emotion-45 {
+  .emotion-44 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-45 {
+    .emotion-44 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-45 {
+    .emotion-44 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-45 {
+    .emotion-44 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-45 {
+    .emotion-44 {
       grid-template-columns: repeat(3, 1fr);
       grid-column-end: span 3;
     }
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-45 {
+    .emotion-44 {
       grid-template-columns: repeat(2, 1fr);
       grid-column-end: span 2;
     }
   }
 
   @media (min-width: 80rem) {
-    .emotion-45 {
+    .emotion-44 {
       grid-template-columns: repeat(2, 1fr);
       grid-column-end: span 2;
     }
@@ -4237,7 +4237,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
               role="text"
             >
               <span
-                class="emotion-15 emotion-16"
+                class="emotion-15"
               >
                 استمع, 
               </span>
@@ -4248,23 +4248,23 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
           </a>
         </h3>
         <p
-          class="emotion-17 emotion-18"
+          class="emotion-16 emotion-17"
           dir="rtl"
         >
           مقابلہ جرمنی سے ہوگا۔
         </p>
         <div
           aria-hidden="true"
-          class="emotion-19 emotion-20"
+          class="emotion-18 emotion-19"
           dir="rtl"
         >
           <span
-            class="emotion-21 emotion-22"
+            class="emotion-20 emotion-21"
             dir="rtl"
           >
             <svg
               aria-hidden="true"
-              class="emotion-23 emotion-24"
+              class="emotion-22 emotion-23"
               focusable="false"
               height="12px"
               viewBox="0 0 13 12"
@@ -4288,25 +4288,25 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
     dir="rtl"
   >
     <div
-      class="emotion-28 emotion-29"
+      class="emotion-27 emotion-28"
       data-e2e="story-promo"
     >
       <div
-        class="emotion-30 emotion-31"
+        class="emotion-29 emotion-30"
         dir="rtl"
       >
         <div
           aria-hidden="true"
-          class="emotion-32 emotion-33"
+          class="emotion-31 emotion-32"
           data-e2e="media-indicator"
           dir="rtl"
         >
           <div
-            class="emotion-34 emotion-35"
+            class="emotion-33 emotion-34"
           >
             <svg
               aria-hidden="true"
-              class="emotion-36 emotion-37"
+              class="emotion-35 emotion-36"
               focusable="false"
               height="12"
               viewBox="0 0 12 12"
@@ -4329,11 +4329,11 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
           </div>
         </div>
         <h3
-          class="emotion-38 emotion-39"
+          class="emotion-37 emotion-38"
         >
           <a
             aria-labelledby="promo-urdubbc_urdu_tvtv_programmesw13xttn1limit4-video-2"
-            class="focusIndicatorDisplayInlineBlock emotion-40 emotion-41"
+            class="focusIndicatorDisplayInlineBlock emotion-39 emotion-40"
             href="/urdu/bbc_urdu_tv/tv_programmes/w13xttn1?limit=4"
           >
             <span
@@ -4344,7 +4344,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
           </a>
         </h3>
         <time
-          class="emotion-42 emotion-43"
+          class="emotion-41 emotion-42"
           datetime="2017-02-07"
         >
           7 فبراير/ شباط 2017
@@ -4353,23 +4353,23 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
     </div>
   </li>
   <li
-    class="emotion-0 emotion-45 emotion-2"
+    class="emotion-0 emotion-44 emotion-2"
     dir="rtl"
   >
     <div
-      class="emotion-28 emotion-29"
+      class="emotion-27 emotion-28"
       data-e2e="story-promo"
     >
       <div
-        class="emotion-30 emotion-31"
+        class="emotion-29 emotion-30"
         dir="rtl"
       >
         <h3
-          class="emotion-38 emotion-39"
+          class="emotion-37 emotion-38"
         >
           <a
             aria-labelledby="promo-urdupakistan48346840-text-3"
-            class="focusIndicatorDisplayInlineBlock emotion-40 emotion-41"
+            class="focusIndicatorDisplayInlineBlock emotion-39 emotion-40"
             href="/urdu/pakistan-48346840"
           >
             <span
@@ -4380,7 +4380,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
           </a>
         </h3>
         <time
-          class="emotion-42 emotion-43"
+          class="emotion-41 emotion-42"
           datetime="2019-05-21"
         >
           21 مايو/ أيار 2019
@@ -4393,19 +4393,19 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
     dir="rtl"
   >
     <div
-      class="emotion-28 emotion-29"
+      class="emotion-27 emotion-28"
       data-e2e="story-promo"
     >
       <div
-        class="emotion-30 emotion-31"
+        class="emotion-29 emotion-30"
         dir="rtl"
       >
         <h3
-          class="emotion-38 emotion-39"
+          class="emotion-37 emotion-38"
         >
           <a
             aria-labelledby="promo-urdusport48361817-text-4"
-            class="focusIndicatorDisplayInlineBlock emotion-40 emotion-41"
+            class="focusIndicatorDisplayInlineBlock emotion-39 emotion-40"
             href="/urdu/sport-48361817"
           >
             <span
@@ -4416,7 +4416,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
           </a>
         </h3>
         <time
-          class="emotion-42 emotion-43"
+          class="emotion-41 emotion-42"
           datetime="2019-06-03"
         >
           3 يونيو/ حزيران 2019
@@ -5242,7 +5242,7 @@ exports[`FrontPageStoryRows Container - snapshots TopRow - rtl 1`] = `
   margin: 0;
 }
 
-.emotion-17 {
+.emotion-16 {
   color: #3F3F42;
   margin: 0;
   padding: 0 0.5rem 1rem;
@@ -5254,26 +5254,26 @@ exports[`FrontPageStoryRows Container - snapshots TopRow - rtl 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-17 {
+  .emotion-16 {
     font-size: 0.9375rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-17 {
+  .emotion-16 {
     font-size: 0.875rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-17 {
+  .emotion-16 {
     padding-right: 0;
   }
 }
 
-.emotion-19 {
+.emotion-18 {
   background-color: #222222;
   border: 0.0625rem solid transparent;
   color: #FFFFFF;
@@ -5298,21 +5298,21 @@ exports[`FrontPageStoryRows Container - snapshots TopRow - rtl 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-19 {
+  .emotion-18 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-19 {
+  .emotion-18 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-19 {
+  .emotion-18 {
     display: -webkit-inline-box;
     display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
@@ -5322,7 +5322,7 @@ exports[`FrontPageStoryRows Container - snapshots TopRow - rtl 1`] = `
   }
 }
 
-.emotion-21 {
+.emotion-20 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5334,7 +5334,7 @@ exports[`FrontPageStoryRows Container - snapshots TopRow - rtl 1`] = `
   padding-left: 0.5rem;
 }
 
-.emotion-21>svg {
+.emotion-20>svg {
   color: #FFFFFF;
   fill: currentColor;
   width: 1.0625rem;
@@ -5342,7 +5342,7 @@ exports[`FrontPageStoryRows Container - snapshots TopRow - rtl 1`] = `
   margin: 0;
 }
 
-.emotion-23 {
+.emotion-22 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -5394,7 +5394,7 @@ exports[`FrontPageStoryRows Container - snapshots TopRow - rtl 1`] = `
               role="text"
             >
               <span
-                class="emotion-15 emotion-16"
+                class="emotion-15"
               >
                 استمع, 
               </span>
@@ -5405,23 +5405,23 @@ exports[`FrontPageStoryRows Container - snapshots TopRow - rtl 1`] = `
           </a>
         </h3>
         <p
-          class="emotion-17 emotion-18"
+          class="emotion-16 emotion-17"
           dir="rtl"
         >
           مقابلہ جرمنی سے ہوگا۔
         </p>
         <div
           aria-hidden="true"
-          class="emotion-19 emotion-20"
+          class="emotion-18 emotion-19"
           dir="rtl"
         >
           <span
-            class="emotion-21 emotion-22"
+            class="emotion-20 emotion-21"
             dir="rtl"
           >
             <svg
               aria-hidden="true"
-              class="emotion-23 emotion-24"
+              class="emotion-22 emotion-23"
               focusable="false"
               height="12px"
               viewBox="0 0 13 12"

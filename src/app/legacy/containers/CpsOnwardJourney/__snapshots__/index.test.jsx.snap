@@ -1834,17 +1834,6 @@ exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
   }
 }
 
-.emotion-8:not(:focus):not(:active) {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
 .emotion-11 {
   position: relative;
   z-index: 0;
@@ -1964,17 +1953,6 @@ exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
   .emotion-19 {
     padding-right: 1rem;
   }
-}
-
-.emotion-21 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
 }
 
 <div>
@@ -2299,17 +2277,6 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
   }
 }
 
-.emotion-8:not(:focus):not(:active) {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
 .emotion-11 {
   position: relative;
   z-index: 0;
@@ -2429,17 +2396,6 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
   .emotion-19 {
     padding-right: 1rem;
   }
-}
-
-.emotion-23 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
 }
 
 <div>

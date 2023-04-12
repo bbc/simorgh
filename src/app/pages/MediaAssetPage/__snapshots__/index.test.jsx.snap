@@ -96,55 +96,55 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   margin: 0;
 }
 
-.emotion-7 {
+.emotion-6 {
   margin-top: 0.5rem;
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-7 {
+  .emotion-6 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-7 {
+  .emotion-6 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-7 {
+  .emotion-6 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-7 {
+  .emotion-6 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-7 {
+  .emotion-6 {
     margin-left: 16.666666666666668%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-7 {
+  .emotion-6 {
     margin-left: 33.333333333333336%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-7 {
+  .emotion-6 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-7 {
+    .emotion-6 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -152,7 +152,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-7 {
+    .emotion-6 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -160,7 +160,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-7 {
+    .emotion-6 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -168,7 +168,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-7 {
+    .emotion-6 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -176,7 +176,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-7 {
+    .emotion-6 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -184,7 +184,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   }
 
   @media (min-width: 80rem) {
-    .emotion-7 {
+    .emotion-6 {
       grid-template-columns: repeat(12, 1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -192,52 +192,52 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   }
 }
 
-.emotion-7 figure {
+.emotion-6 figure {
   padding-bottom: 1rem;
 }
 
 @media (max-width: 24.9375rem) {
-  .emotion-7 {
+  .emotion-6 {
     margin-top: 0.5rem;
   }
 }
 
 @media (min-width: 25rem) {
-  .emotion-7 {
+  .emotion-6 {
     margin-top: 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-7 {
+  .emotion-6 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-7 {
+  .emotion-6 {
     padding: 0.5rem 0 0;
     margin-top: 2rem;
   }
 
-  .emotion-7 figure {
+  .emotion-6 figure {
     padding-bottom: 1.5rem;
   }
 }
 
-.emotion-9 {
+.emotion-8 {
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
 }
 
-.emotion-11 {
+.emotion-10 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
 }
 
-.emotion-13 {
+.emotion-12 {
   z-index: 1;
   border: 0;
   left: 0;
@@ -248,7 +248,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   height: 100%;
 }
 
-.emotion-15 {
+.emotion-14 {
   position: absolute;
   left: 0;
   top: 0;
@@ -256,7 +256,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   height: 100%;
 }
 
-.emotion-17 {
+.emotion-16 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -271,68 +271,68 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
 }
 
 @media (min-width: 25rem) {
-  .emotion-17 {
+  .emotion-16 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-17 {
+  .emotion-16 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-19 {
+  .emotion-18 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-19 {
+  .emotion-18 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-19 {
+  .emotion-18 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-19 {
+  .emotion-18 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-19 {
+  .emotion-18 {
     margin-left: 16.666666666666668%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-19 {
+  .emotion-18 {
     margin-left: 33.333333333333336%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-19 {
+  .emotion-18 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-19 {
+    .emotion-18 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -341,7 +341,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-19 {
+    .emotion-18 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -350,7 +350,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-19 {
+    .emotion-18 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -359,7 +359,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-19 {
+    .emotion-18 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -368,7 +368,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-19 {
+    .emotion-18 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -376,7 +376,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   }
 
   @media (min-width: 80rem) {
-    .emotion-19 {
+    .emotion-18 {
       grid-template-columns: repeat(12, 1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -384,7 +384,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   }
 }
 
-.emotion-22 {
+.emotion-21 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -397,86 +397,86 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-22 {
+  .emotion-21 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-22 {
+  .emotion-21 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-22 {
+  .emotion-21 {
     padding: 2.5rem 0;
   }
 }
 
 @media (max-width: 62.9375rem) {
-  .emotion-22 {
+  .emotion-21 {
     padding: 0.5rem 0 2rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-22 {
+  .emotion-21 {
     padding: 1rem 0 2.5rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-25 {
+  .emotion-24 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-25 {
+  .emotion-24 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-25 {
+  .emotion-24 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-25 {
+  .emotion-24 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-25 {
+  .emotion-24 {
     margin-left: 20%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-25 {
+  .emotion-24 {
     margin-left: 40%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-25 {
+  .emotion-24 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-25 {
+    .emotion-24 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -485,7 +485,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-25 {
+    .emotion-24 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -494,7 +494,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-25 {
+    .emotion-24 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -503,7 +503,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-25 {
+    .emotion-24 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       padding: 0 1rem;
@@ -512,7 +512,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-25 {
+    .emotion-24 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
@@ -520,7 +520,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   }
 
   @media (min-width: 80rem) {
-    .emotion-25 {
+    .emotion-24 {
       grid-template-columns: repeat(10, 1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
@@ -529,18 +529,18 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
 }
 
 @media (max-width: 62.9375rem) {
-  .emotion-25 {
+  .emotion-24 {
     padding-bottom: 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-25 {
+  .emotion-24 {
     padding-bottom: 1.5rem;
   }
 }
 
-.emotion-27 {
+.emotion-26 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #545658;
@@ -552,72 +552,72 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-27 {
+  .emotion-26 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-27 {
+  .emotion-26 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-27:last-child {
+.emotion-26:last-child {
   padding-bottom: 1rem;
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-29 {
+  .emotion-28 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-29 {
+  .emotion-28 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-29 {
+  .emotion-28 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-29 {
+  .emotion-28 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-29 {
+  .emotion-28 {
     margin-left: 20%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-29 {
+  .emotion-28 {
     margin-left: 40%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-29 {
+  .emotion-28 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-29 {
+    .emotion-28 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -626,7 +626,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-29 {
+    .emotion-28 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -635,7 +635,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-29 {
+    .emotion-28 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -644,7 +644,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-29 {
+    .emotion-28 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       padding: 0 1rem;
@@ -653,7 +653,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-29 {
+    .emotion-28 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
@@ -661,7 +661,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   }
 
   @media (min-width: 80rem) {
-    .emotion-29 {
+    .emotion-28 {
       grid-template-columns: repeat(10, 1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
@@ -669,7 +669,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   }
 }
 
-.emotion-31 {
+.emotion-30 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -681,26 +681,26 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-31 {
+  .emotion-30 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-31 {
+  .emotion-30 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-31 {
+  .emotion-30 {
     padding-right: 2.5rem;
   }
 }
 
-.emotion-41 {
+.emotion-40 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: italic;
@@ -708,77 +708,77 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   font-weight: inherit;
 }
 
-.emotion-53 {
+.emotion-52 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-53:visited {
+.emotion-52:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.emotion-53:focus,
-.emotion-53:hover {
+.emotion-52:focus,
+.emotion-52:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
 
-.emotion-76 {
+.emotion-75 {
   margin-bottom: 1.5rem;
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-76 {
+  .emotion-75 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-76 {
+  .emotion-75 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-76 {
+  .emotion-75 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-76 {
+  .emotion-75 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-76 {
+  .emotion-75 {
     margin-left: 20%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-76 {
+  .emotion-75 {
     margin-left: 40%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-76 {
+  .emotion-75 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-76 {
+    .emotion-75 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -787,7 +787,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-76 {
+    .emotion-75 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -796,7 +796,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-76 {
+    .emotion-75 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -805,7 +805,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-76 {
+    .emotion-75 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       padding: 0 1rem;
@@ -814,7 +814,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-76 {
+    .emotion-75 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
@@ -822,7 +822,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   }
 
   @media (min-width: 80rem) {
-    .emotion-76 {
+    .emotion-75 {
       grid-template-columns: repeat(10, 1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
@@ -830,7 +830,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   }
 }
 
-.emotion-78 {
+.emotion-77 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -841,24 +841,24 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-78 {
+  .emotion-77 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-78 {
+  .emotion-77 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
-.emotion-78>li {
+.emotion-77>li {
   position: relative;
 }
 
-.emotion-78>li::before {
+.emotion-77>li::before {
   top: 0.5rem;
   content: ' ';
   position: absolute;
@@ -869,55 +869,55 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   left: -1rem;
 }
 
-.emotion-80 {
+.emotion-79 {
   margin-bottom: 1rem;
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-109 {
+  .emotion-108 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-109 {
+  .emotion-108 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-109 {
+  .emotion-108 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-109 {
+  .emotion-108 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-109 {
+  .emotion-108 {
     margin-left: 16.666666666666668%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-109 {
+  .emotion-108 {
     margin-left: 33.333333333333336%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-109 {
+  .emotion-108 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-109 {
+    .emotion-108 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -925,7 +925,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-109 {
+    .emotion-108 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -933,7 +933,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-109 {
+    .emotion-108 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -941,7 +941,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-109 {
+    .emotion-108 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -949,7 +949,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-109 {
+    .emotion-108 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -957,7 +957,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   }
 
   @media (min-width: 80rem) {
-    .emotion-109 {
+    .emotion-108 {
       grid-template-columns: repeat(12, 1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -965,14 +965,14 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   }
 }
 
-.emotion-111 {
+.emotion-110 {
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
 }
 
 @supports (display: grid) {
-  .emotion-113 {
+  .emotion-112 {
     display: grid;
     position: initial;
     width: initial;
@@ -980,7 +980,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-113 {
+    .emotion-112 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -988,7 +988,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-113 {
+    .emotion-112 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -996,7 +996,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-113 {
+    .emotion-112 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -1004,7 +1004,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-113 {
+    .emotion-112 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -1012,7 +1012,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-113 {
+    .emotion-112 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -1020,7 +1020,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   }
 
   @media (min-width: 80rem) {
-    .emotion-113 {
+    .emotion-112 {
       grid-template-columns: repeat(12, 1fr);
       grid-column-end: span 12;
       grid-column-gap: 1rem;
@@ -1029,50 +1029,50 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-115 {
+  .emotion-114 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-115 {
+  .emotion-114 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-115 {
+  .emotion-114 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-115 {
+  .emotion-114 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-115 {
+  .emotion-114 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-115 {
+  .emotion-114 {
     margin-left: 0%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-115 {
+  .emotion-114 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-115 {
+    .emotion-114 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -1080,7 +1080,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-115 {
+    .emotion-114 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -1088,7 +1088,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-115 {
+    .emotion-114 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -1096,7 +1096,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-115 {
+    .emotion-114 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -1104,7 +1104,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-115 {
+    .emotion-114 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -1112,7 +1112,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   }
 
   @media (min-width: 80rem) {
-    .emotion-115 {
+    .emotion-114 {
       grid-template-columns: repeat(12, 1fr);
       grid-column-end: span 12;
       grid-column-start: 1;
@@ -1120,7 +1120,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   }
 }
 
-.emotion-119 {
+.emotion-118 {
   font-size: 0.75rem;
   line-height: 1rem;
   background-color: rgba(34, 34, 34, 0.75);
@@ -1134,18 +1134,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   left: 0;
 }
 
-.emotion-121 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
-.emotion-130 {
+.emotion-129 {
   padding-bottom: 2rem;
 }
 
@@ -1177,27 +1166,27 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
               role="main"
             >
               <h1
-                class="emotion-4 emotion-5"
+                class="emotion-4"
                 id="content"
                 tabindex="-1"
               >
                 Ўзбек деҳқонининг косаси нега оқармайдиshort
               </h1>
               <div
-                class="emotion-6 emotion-7 emotion-3"
+                class="emotion-5 emotion-6 emotion-3"
                 dir="ltr"
               >
                 <div
-                  class="emotion-9 emotion-10"
+                  class="emotion-8 emotion-9"
                 >
                   <div
-                    class="emotion-11 emotion-12"
+                    class="emotion-10 emotion-11"
                     data-e2e="media-player"
                   >
                     <iframe
                       allow="autoplay"
                       allowfullscreen=""
-                      class="emotion-13 emotion-14"
+                      class="emotion-12 emotion-13"
                       height="362.953125"
                       loading="lazy"
                       scrolling="no"
@@ -1206,10 +1195,10 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                       width="645.25"
                     />
                     <div
-                      class="emotion-15 emotion-16"
+                      class="emotion-14 emotion-15"
                     >
                       <div
-                        class="emotion-17 emotion-18"
+                        class="emotion-16 emotion-17"
                         data-e2e="image-placeholder"
                         style="padding-bottom: 56.25%;"
                       />
@@ -1219,32 +1208,32 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </div>
               </div>
               <div
-                class="emotion-19 emotion-3"
+                class="emotion-18 emotion-3"
                 dir="ltr"
               >
                 <strong
-                  class="emotion-21 emotion-22 emotion-23"
+                  class="emotion-20 emotion-21 emotion-22"
                 >
                   Ўзбек деҳқонининг косаси нега оқармайдиshort
                 </strong>
               </div>
               <div
-                class="emotion-24 emotion-25 emotion-3"
+                class="emotion-23 emotion-24 emotion-3"
                 dir="ltr"
               >
                 <time
-                  class="emotion-27 emotion-28"
+                  class="emotion-26 emotion-27"
                   datetime="2019-09-13"
                 >
                   13 сентябр 2019
                 </time>
               </div>
               <div
-                class="emotion-29 emotion-3"
+                class="emotion-28 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-31 emotion-32"
+                  class="emotion-30 emotion-31"
                   dir="ltr"
                 >
                   <b>
@@ -1253,11 +1242,11 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </p>
               </div>
               <div
-                class="emotion-29 emotion-3"
+                class="emotion-28 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-31 emotion-32"
+                  class="emotion-30 emotion-31"
                   dir="ltr"
                 >
                   <b>
@@ -1269,22 +1258,22 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </p>
               </div>
               <div
-                class="emotion-29 emotion-3"
+                class="emotion-28 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-31 emotion-32"
+                  class="emotion-30 emotion-31"
                   dir="ltr"
                 >
                   <i
-                    class="emotion-41 emotion-42"
+                    class="emotion-40 emotion-41"
                   >
                     <b>
                       Ўзбек деҳқонининг косаси нега оқармайди
                     </b>
                   </i>
                   <i
-                    class="emotion-41 emotion-42"
+                    class="emotion-40 emotion-41"
                   >
                     <b>
                        heading
@@ -1293,11 +1282,11 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </p>
               </div>
               <div
-                class="emotion-29 emotion-3"
+                class="emotion-28 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-31 emotion-32"
+                  class="emotion-30 emotion-31"
                   dir="ltr"
                 >
                   <b>
@@ -1309,16 +1298,16 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </p>
               </div>
               <div
-                class="emotion-29 emotion-3"
+                class="emotion-28 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-31 emotion-32"
+                  class="emotion-30 emotion-31"
                   dir="ltr"
                 >
                   Шу йил апрел ойида Ўзбекистон Президенти Ислом 
                   <a
-                    class="focusIndicatorReducedWidth emotion-53 emotion-54"
+                    class="focusIndicatorReducedWidth emotion-52 emotion-53"
                     href="/uzbek"
                   >
                     Каримов ўзининг
@@ -1327,11 +1316,11 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </p>
               </div>
               <div
-                class="emotion-29 emotion-3"
+                class="emotion-28 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-31 emotion-32"
+                  class="emotion-30 emotion-31"
                   dir="ltr"
                 >
                   Шу вақтгача ҳам ўзбекистонлик деҳқонлар ўз маҳсулотларини хорижга олиб 
@@ -1342,72 +1331,72 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </p>
               </div>
               <div
-                class="emotion-29 emotion-3"
+                class="emotion-28 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-31 emotion-32"
+                  class="emotion-30 emotion-31"
                   dir="ltr"
                 >
                   Ўз мева-сабзавотини Россияга олиб чиқишда бу компания ёрдамига умид қилган боғбонларнинг гилослари бузила бошлагани ҳақидаги хабарлар ҳам тарқалди..
                 </p>
               </div>
               <div
-                class="emotion-29 emotion-3"
+                class="emotion-28 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-31 emotion-32"
+                  class="emotion-30 emotion-31"
                   dir="ltr"
                 >
                   Ҳозирда Ўзбекистонда айни пишиқчилик ва етиштирилган маҳсулот учун кенгроқ бозор топиш масаласи яна долзарб турар экан, мамлакат раҳбарининг сўзларидан сўнг вазият нақадар ўзгарган?
                 </p>
               </div>
               <div
-                class="emotion-29 emotion-3"
+                class="emotion-28 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-31 emotion-32"
+                  class="emotion-30 emotion-31"
                   dir="ltr"
                 >
                   Би-би-си билан суҳбатда иқтисодий таҳлилчи Анвар Ҳусаиновнинг айтишича, юқори минбардан айтилган сўзларга қарамай, қишлоқ хўжалиги маҳсулотларини хорижга, жумладан Россия бозорига олиб чиқишда ҳануз кўплаб муаммолар мавжуд.
                 </p>
               </div>
               <div
-                class="emotion-29 emotion-3"
+                class="emotion-28 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-31 emotion-32"
+                  class="emotion-30 emotion-31"
                   dir="ltr"
                 >
                   "Албатта ўтган йилларга қараганда маҳсулотлар экспорти анча кўпайган. Россиядан юк машиналари келиб, тўғридан-тўғри деҳқонлардан нақд пулга 
                 </p>
               </div>
               <div
-                class="emotion-75 emotion-76 emotion-3"
+                class="emotion-74 emotion-75 emotion-3"
                 dir="ltr"
               >
                 <ul
-                  class="emotion-78 emotion-79"
+                  class="emotion-77 emotion-78"
                   dir="ltr"
                   role="list"
                 >
                   <li
-                    class="emotion-80 emotion-81"
+                    class="emotion-79 emotion-80"
                     role="listitem"
                   >
                     Ўзбек деҳқонининг косаси нега оқармайди
                   </li>
                   <li
-                    class="emotion-80 emotion-81"
+                    class="emotion-79 emotion-80"
                     role="listitem"
                   >
                     Ўзбек деҳқонининг косаси нега оқармайди
                   </li>
                   <li
-                    class="emotion-80 emotion-81"
+                    class="emotion-79 emotion-80"
                     role="listitem"
                   >
                     <b>
@@ -1415,7 +1404,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                     </b>
                   </li>
                   <li
-                    class="emotion-80 emotion-81"
+                    class="emotion-79 emotion-80"
                     role="listitem"
                   >
                     Ўзбек деҳқонининг косаси нега оқармайди
@@ -1423,53 +1412,53 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </ul>
               </div>
               <div
-                class="emotion-75 emotion-76 emotion-3"
+                class="emotion-74 emotion-75 emotion-3"
                 dir="ltr"
               >
                 <ul
-                  class="emotion-78 emotion-79"
+                  class="emotion-77 emotion-78"
                   dir="ltr"
                   role="list"
                 >
                   <li
-                    class="emotion-80 emotion-81"
+                    class="emotion-79 emotion-80"
                     role="listitem"
                   >
                     <a
-                      class="focusIndicatorReducedWidth emotion-53 emotion-54"
+                      class="focusIndicatorReducedWidth emotion-52 emotion-53"
                       href="/uzbek"
                     >
                       Ўзбек деҳқонининг косаси нега оқармайди
                     </a>
                   </li>
                   <li
-                    class="emotion-80 emotion-81"
+                    class="emotion-79 emotion-80"
                     role="listitem"
                   >
                     <a
-                      class="focusIndicatorReducedWidth emotion-53 emotion-54"
+                      class="focusIndicatorReducedWidth emotion-52 emotion-53"
                       href="/uzbek"
                     >
                       Ўзбек деҳқонининг косаси нега оқармайди
                     </a>
                   </li>
                   <li
-                    class="emotion-80 emotion-81"
+                    class="emotion-79 emotion-80"
                     role="listitem"
                   >
                     <a
-                      class="focusIndicatorReducedWidth emotion-53 emotion-54"
+                      class="focusIndicatorReducedWidth emotion-52 emotion-53"
                       href="/uzbek"
                     >
                       Ўзбек деҳқонининг косаси нега оқармайди
                     </a>
                   </li>
                   <li
-                    class="emotion-80 emotion-81"
+                    class="emotion-79 emotion-80"
                     role="listitem"
                   >
                     <a
-                      class="focusIndicatorReducedWidth emotion-53 emotion-54"
+                      class="focusIndicatorReducedWidth emotion-52 emotion-53"
                       href="/uzbek"
                     >
                       Ўзбек деҳқонининг косаси нега оқармайди
@@ -1478,22 +1467,22 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </ul>
               </div>
               <div
-                class="emotion-109 emotion-3"
+                class="emotion-108 emotion-3"
                 dir="ltr"
               >
                 <figure
-                  class="emotion-111 emotion-112"
+                  class="emotion-110 emotion-111"
                 >
                   <div
-                    class="emotion-113 emotion-3"
+                    class="emotion-112 emotion-3"
                     dir="ltr"
                   >
                     <div
-                      class="emotion-115 emotion-3"
+                      class="emotion-114 emotion-3"
                       dir="ltr"
                     >
                       <div
-                        class="emotion-17 emotion-18"
+                        class="emotion-16 emotion-17"
                         data-e2e="image-placeholder"
                         style="padding-bottom: 56.25%;"
                       >
@@ -1506,11 +1495,11 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                         </div>
                         <noscript />
                         <p
-                          class="emotion-119 emotion-120"
+                          class="emotion-118 emotion-119"
                           role="text"
                         >
                           <span
-                            class="emotion-121"
+                            class="emotion-4"
                           >
                             Сурат манбаси, 
                           </span>
@@ -1526,22 +1515,22 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </figure>
               </div>
               <div
-                class="emotion-29 emotion-3"
+                class="emotion-28 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-31 emotion-32"
+                  class="emotion-30 emotion-31"
                   dir="ltr"
                 >
                   Ўзбек деҳқонининг косаси нега оқармайди transmission info 
                 </p>
               </div>
               <div
-                class="emotion-29 emotion-3"
+                class="emotion-28 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-31 emotion-32"
+                  class="emotion-30 emotion-31"
                   dir="ltr"
                 >
                   Ўзбек деҳқонининг косаси нега оқармайди footer 
@@ -1549,7 +1538,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
               </div>
             </main>
             <div
-              class="emotion-130 emotion-131"
+              class="emotion-129 emotion-130"
             />
           </div>
         </div>
@@ -1655,55 +1644,55 @@ exports[`Media Asset Page should render component 1`] = `
   margin: 0;
 }
 
-.emotion-7 {
+.emotion-6 {
   margin-top: 0.5rem;
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-7 {
+  .emotion-6 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-7 {
+  .emotion-6 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-7 {
+  .emotion-6 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-7 {
+  .emotion-6 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-7 {
+  .emotion-6 {
     margin-left: 16.666666666666668%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-7 {
+  .emotion-6 {
     margin-left: 33.333333333333336%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-7 {
+  .emotion-6 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-7 {
+    .emotion-6 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -1711,7 +1700,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-7 {
+    .emotion-6 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -1719,7 +1708,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-7 {
+    .emotion-6 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -1727,7 +1716,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-7 {
+    .emotion-6 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -1735,7 +1724,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-7 {
+    .emotion-6 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -1743,7 +1732,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 80rem) {
-    .emotion-7 {
+    .emotion-6 {
       grid-template-columns: repeat(12, 1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -1751,52 +1740,52 @@ exports[`Media Asset Page should render component 1`] = `
   }
 }
 
-.emotion-7 figure {
+.emotion-6 figure {
   padding-bottom: 1rem;
 }
 
 @media (max-width: 24.9375rem) {
-  .emotion-7 {
+  .emotion-6 {
     margin-top: 0.5rem;
   }
 }
 
 @media (min-width: 25rem) {
-  .emotion-7 {
+  .emotion-6 {
     margin-top: 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-7 {
+  .emotion-6 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-7 {
+  .emotion-6 {
     padding: 0.5rem 0 0;
     margin-top: 2rem;
   }
 
-  .emotion-7 figure {
+  .emotion-6 figure {
     padding-bottom: 1.5rem;
   }
 }
 
-.emotion-9 {
+.emotion-8 {
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
 }
 
-.emotion-11 {
+.emotion-10 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
 }
 
-.emotion-13 {
+.emotion-12 {
   z-index: 1;
   border: 0;
   left: 0;
@@ -1807,7 +1796,7 @@ exports[`Media Asset Page should render component 1`] = `
   height: 100%;
 }
 
-.emotion-15 {
+.emotion-14 {
   position: absolute;
   left: 0;
   top: 0;
@@ -1815,7 +1804,7 @@ exports[`Media Asset Page should render component 1`] = `
   height: 100%;
 }
 
-.emotion-17 {
+.emotion-16 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -1830,68 +1819,68 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width: 25rem) {
-  .emotion-17 {
+  .emotion-16 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-17 {
+  .emotion-16 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-19 {
+  .emotion-18 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-19 {
+  .emotion-18 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-19 {
+  .emotion-18 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-19 {
+  .emotion-18 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-19 {
+  .emotion-18 {
     margin-left: 16.666666666666668%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-19 {
+  .emotion-18 {
     margin-left: 33.333333333333336%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-19 {
+  .emotion-18 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-19 {
+    .emotion-18 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -1900,7 +1889,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-19 {
+    .emotion-18 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -1909,7 +1898,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-19 {
+    .emotion-18 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -1918,7 +1907,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-19 {
+    .emotion-18 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -1927,7 +1916,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-19 {
+    .emotion-18 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -1935,7 +1924,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 80rem) {
-    .emotion-19 {
+    .emotion-18 {
       grid-template-columns: repeat(12, 1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -1943,7 +1932,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 }
 
-.emotion-22 {
+.emotion-21 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1956,86 +1945,86 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-22 {
+  .emotion-21 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-22 {
+  .emotion-21 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-22 {
+  .emotion-21 {
     padding: 2.5rem 0;
   }
 }
 
 @media (max-width: 62.9375rem) {
-  .emotion-22 {
+  .emotion-21 {
     padding: 0.5rem 0 2rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-22 {
+  .emotion-21 {
     padding: 1rem 0 2.5rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-25 {
+  .emotion-24 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-25 {
+  .emotion-24 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-25 {
+  .emotion-24 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-25 {
+  .emotion-24 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-25 {
+  .emotion-24 {
     margin-left: 20%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-25 {
+  .emotion-24 {
     margin-left: 40%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-25 {
+  .emotion-24 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-25 {
+    .emotion-24 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -2044,7 +2033,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-25 {
+    .emotion-24 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -2053,7 +2042,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-25 {
+    .emotion-24 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -2062,7 +2051,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-25 {
+    .emotion-24 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       padding: 0 1rem;
@@ -2071,7 +2060,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-25 {
+    .emotion-24 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
@@ -2079,7 +2068,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 80rem) {
-    .emotion-25 {
+    .emotion-24 {
       grid-template-columns: repeat(10, 1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
@@ -2088,18 +2077,18 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (max-width: 62.9375rem) {
-  .emotion-25 {
+  .emotion-24 {
     padding-bottom: 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-25 {
+  .emotion-24 {
     padding-bottom: 1.5rem;
   }
 }
 
-.emotion-27 {
+.emotion-26 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #545658;
@@ -2111,72 +2100,72 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-27 {
+  .emotion-26 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-27 {
+  .emotion-26 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-27:last-child {
+.emotion-26:last-child {
   padding-bottom: 1rem;
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-31 {
+  .emotion-30 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-31 {
+  .emotion-30 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-31 {
+  .emotion-30 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-31 {
+  .emotion-30 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-31 {
+  .emotion-30 {
     margin-left: 20%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-31 {
+  .emotion-30 {
     margin-left: 40%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-31 {
+  .emotion-30 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-31 {
+    .emotion-30 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -2185,7 +2174,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-31 {
+    .emotion-30 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -2194,7 +2183,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-31 {
+    .emotion-30 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -2203,7 +2192,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-31 {
+    .emotion-30 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       padding: 0 1rem;
@@ -2212,7 +2201,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-31 {
+    .emotion-30 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
@@ -2220,7 +2209,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 80rem) {
-    .emotion-31 {
+    .emotion-30 {
       grid-template-columns: repeat(10, 1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
@@ -2228,7 +2217,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 }
 
-.emotion-33 {
+.emotion-32 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -2240,26 +2229,26 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-33 {
+  .emotion-32 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-33 {
+  .emotion-32 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-33 {
+  .emotion-32 {
     padding-right: 2.5rem;
   }
 }
 
-.emotion-37 {
+.emotion-36 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -2271,78 +2260,78 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-37 {
+  .emotion-36 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-37 {
+  .emotion-36 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-37 {
+  .emotion-36 {
     padding-top: 2rem;
   }
 }
 
-.emotion-56 {
+.emotion-55 {
   margin-bottom: 1.5rem;
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-56 {
+  .emotion-55 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-56 {
+  .emotion-55 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-56 {
+  .emotion-55 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-56 {
+  .emotion-55 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-56 {
+  .emotion-55 {
     margin-left: 20%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-56 {
+  .emotion-55 {
     margin-left: 40%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-56 {
+  .emotion-55 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-56 {
+    .emotion-55 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -2351,7 +2340,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-56 {
+    .emotion-55 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -2360,7 +2349,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-56 {
+    .emotion-55 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -2369,7 +2358,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-56 {
+    .emotion-55 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       padding: 0 1rem;
@@ -2378,7 +2367,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-56 {
+    .emotion-55 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
@@ -2386,7 +2375,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 80rem) {
-    .emotion-56 {
+    .emotion-55 {
       grid-template-columns: repeat(10, 1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
@@ -2394,7 +2383,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 }
 
-.emotion-58 {
+.emotion-57 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -2405,24 +2394,24 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-58 {
+  .emotion-57 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-58 {
+  .emotion-57 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
-.emotion-58>li {
+.emotion-57>li {
   position: relative;
 }
 
-.emotion-58>li::before {
+.emotion-57>li::before {
   top: 0.5rem;
   content: ' ';
   position: absolute;
@@ -2433,29 +2422,29 @@ exports[`Media Asset Page should render component 1`] = `
   left: -1rem;
 }
 
-.emotion-60 {
+.emotion-59 {
   margin-bottom: 1rem;
 }
 
-.emotion-62 {
+.emotion-61 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-62:visited {
+.emotion-61:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.emotion-62:focus,
-.emotion-62:hover {
+.emotion-61:focus,
+.emotion-61:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
 
-.emotion-121 {
+.emotion-120 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: italic;
@@ -2464,50 +2453,50 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-163 {
+  .emotion-162 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-163 {
+  .emotion-162 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-163 {
+  .emotion-162 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-163 {
+  .emotion-162 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-163 {
+  .emotion-162 {
     margin-left: 16.666666666666668%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-163 {
+  .emotion-162 {
     margin-left: 33.333333333333336%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-163 {
+  .emotion-162 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-163 {
+    .emotion-162 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -2515,7 +2504,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-163 {
+    .emotion-162 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -2523,7 +2512,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-163 {
+    .emotion-162 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -2531,7 +2520,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-163 {
+    .emotion-162 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -2539,7 +2528,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-163 {
+    .emotion-162 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -2547,7 +2536,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 80rem) {
-    .emotion-163 {
+    .emotion-162 {
       grid-template-columns: repeat(12, 1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -2555,14 +2544,14 @@ exports[`Media Asset Page should render component 1`] = `
   }
 }
 
-.emotion-165 {
+.emotion-164 {
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
 }
 
 @supports (display: grid) {
-  .emotion-167 {
+  .emotion-166 {
     display: grid;
     position: initial;
     width: initial;
@@ -2570,7 +2559,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-167 {
+    .emotion-166 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -2578,7 +2567,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-167 {
+    .emotion-166 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -2586,7 +2575,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-167 {
+    .emotion-166 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -2594,7 +2583,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-167 {
+    .emotion-166 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -2602,7 +2591,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-167 {
+    .emotion-166 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -2610,7 +2599,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 80rem) {
-    .emotion-167 {
+    .emotion-166 {
       grid-template-columns: repeat(12, 1fr);
       grid-column-end: span 12;
       grid-column-gap: 1rem;
@@ -2619,50 +2608,50 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-169 {
+  .emotion-168 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-169 {
+  .emotion-168 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-169 {
+  .emotion-168 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-169 {
+  .emotion-168 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-169 {
+  .emotion-168 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-169 {
+  .emotion-168 {
     margin-left: 0%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-169 {
+  .emotion-168 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-169 {
+    .emotion-168 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -2670,7 +2659,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-169 {
+    .emotion-168 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -2678,7 +2667,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-169 {
+    .emotion-168 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -2686,7 +2675,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-169 {
+    .emotion-168 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -2694,7 +2683,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-169 {
+    .emotion-168 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -2702,7 +2691,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 80rem) {
-    .emotion-169 {
+    .emotion-168 {
       grid-template-columns: repeat(12, 1fr);
       grid-column-end: span 12;
       grid-column-start: 1;
@@ -2710,7 +2699,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 }
 
-.emotion-173 {
+.emotion-172 {
   font-size: 0.75rem;
   line-height: 1rem;
   background-color: rgba(34, 34, 34, 0.75);
@@ -2724,62 +2713,51 @@ exports[`Media Asset Page should render component 1`] = `
   left: 0;
 }
 
-.emotion-175 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
 @media (max-width: 14.9375rem) {
-  .emotion-176 {
+  .emotion-175 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-176 {
+  .emotion-175 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-176 {
+  .emotion-175 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-176 {
+  .emotion-175 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-176 {
+  .emotion-175 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-176 {
+  .emotion-175 {
     margin-left: 0%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-176 {
+  .emotion-175 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-176 {
+    .emotion-175 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -2787,7 +2765,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-176 {
+    .emotion-175 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -2795,7 +2773,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-176 {
+    .emotion-175 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -2803,7 +2781,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-176 {
+    .emotion-175 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
@@ -2811,7 +2789,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-176 {
+    .emotion-175 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
@@ -2819,7 +2797,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 80rem) {
-    .emotion-176 {
+    .emotion-175 {
       grid-template-columns: repeat(10, 1fr);
       grid-column-end: span 10;
       grid-column-start: 1;
@@ -2827,7 +2805,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 }
 
-.emotion-178 {
+.emotion-177 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -2844,37 +2822,37 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-178 {
+  .emotion-177 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-178 {
+  .emotion-177 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-178 {
+  .emotion-177 {
     width: 100%;
     margin: 0.5rem 0 0;
   }
 }
 
-.emotion-178>p {
+.emotion-177>p {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.emotion-178>p:last-child {
+.emotion-177>p:last-child {
   padding-bottom: 0;
 }
 
 @media (min-width: 25rem) and (max-width: 62.9375rem) {
-  .emotion-178 {
+  .emotion-177 {
     width: calc(100% - 1rem);
     margin-left: 1rem;
     padding-right: 1rem;
@@ -2883,18 +2861,18 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width: 63rem) {
-  .emotion-178 {
+  .emotion-177 {
     padding-right: 0;
     padding-left: 0.5rem;
   }
 }
 
-.emotion-221 {
+.emotion-220 {
   width: 100%;
 }
 
 @supports (display: grid) {
-  .emotion-221 {
+  .emotion-220 {
     display: grid;
     position: initial;
     width: initial;
@@ -2902,7 +2880,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-221 {
+    .emotion-220 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -2910,7 +2888,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-221 {
+    .emotion-220 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -2918,7 +2896,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-221 {
+    .emotion-220 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -2926,7 +2904,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-221 {
+    .emotion-220 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -2934,7 +2912,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-221 {
+    .emotion-220 {
       grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -2942,7 +2920,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 80rem) {
-    .emotion-221 {
+    .emotion-220 {
       grid-template-columns: repeat(20, 1fr);
       grid-column-end: span 20;
       grid-column-gap: 1rem;
@@ -2951,72 +2929,72 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-221 {
+  .emotion-220 {
     margin: 0 auto;
     max-width: 63rem;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-221 {
+  .emotion-220 {
     margin: 0 auto;
     max-width: 80rem;
   }
 }
 
-.emotion-224 {
+.emotion-223 {
   margin-bottom: 1rem;
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-224 {
+  .emotion-223 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-224 {
+  .emotion-223 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-224 {
+  .emotion-223 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-224 {
+  .emotion-223 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-224 {
+  .emotion-223 {
     margin-left: 16.666666666666668%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-224 {
+  .emotion-223 {
     margin-left: 33.333333333333336%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-224 {
+  .emotion-223 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-224 {
+    .emotion-223 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -3025,7 +3003,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-224 {
+    .emotion-223 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -3034,7 +3012,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-224 {
+    .emotion-223 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -3043,7 +3021,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-224 {
+    .emotion-223 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -3052,7 +3030,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-224 {
+    .emotion-223 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -3060,7 +3038,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 80rem) {
-    .emotion-224 {
+    .emotion-223 {
       grid-template-columns: repeat(12, 1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -3069,26 +3047,26 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-224 {
+  .emotion-223 {
     margin-bottom: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-224 {
+  .emotion-223 {
     padding-bottom: 1.5rem;
     margin-bottom: 2rem;
   }
 }
 
 @media (max-width: 37.5rem) {
-  .emotion-224 {
+  .emotion-223 {
     padding-bottom: 2rem;
     margin-bottom: 1rem;
   }
 }
 
-.emotion-227 {
+.emotion-226 {
   position: relative;
   z-index: 0;
   color: #141414;
@@ -3097,29 +3075,29 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-227 {
+  .emotion-226 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-227 {
+  .emotion-226 {
     margin-bottom: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-227 {
+  .emotion-226 {
     margin-top: 0;
   }
 }
 
-.emotion-229 {
+.emotion-228 {
   margin: 0;
   padding: 0;
 }
 
-.emotion-231 {
+.emotion-230 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3129,7 +3107,7 @@ exports[`Media Asset Page should render component 1`] = `
   flex-direction: column;
 }
 
-.emotion-233 {
+.emotion-232 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3149,7 +3127,7 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-233 {
+  .emotion-232 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -3157,7 +3135,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 }
 
-.emotion-235 {
+.emotion-234 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -3177,39 +3155,39 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-235 {
+  .emotion-234 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-235 {
+  .emotion-234 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-235 {
+  .emotion-234 {
     margin: 0;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-235 {
+  .emotion-234 {
     padding-right: 1rem;
   }
 }
 
-.emotion-238 {
+.emotion-237 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
 @supports (display: grid) {
-  .emotion-238 {
+  .emotion-237 {
     display: grid;
     position: initial;
     width: initial;
@@ -3217,7 +3195,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-238 {
+    .emotion-237 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -3225,7 +3203,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-238 {
+    .emotion-237 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -3233,7 +3211,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-238 {
+    .emotion-237 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -3241,7 +3219,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-238 {
+    .emotion-237 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -3249,7 +3227,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-238 {
+    .emotion-237 {
       grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -3257,7 +3235,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 80rem) {
-    .emotion-238 {
+    .emotion-237 {
       grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -3265,134 +3243,134 @@ exports[`Media Asset Page should render component 1`] = `
   }
 }
 
-.emotion-241 {
+.emotion-240 {
   padding: 0.5rem 0 1rem;
 }
 
 @media (max-width: 62.9375rem) {
-  .emotion-241 {
+  .emotion-240 {
     border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 
-.emotion-241:last-child {
+.emotion-240:last-child {
   border: none;
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-241 {
+  .emotion-240 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-241 {
+  .emotion-240 {
     padding: 0 0 1.5rem;
   }
 }
 
-.emotion-241:first-child {
+.emotion-240:first-child {
   padding-top: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-241:first-child {
+  .emotion-240:first-child {
     padding-top: 1rem;
   }
 }
 
-.emotion-241:last-child {
+.emotion-240:last-child {
   padding-bottom: 0;
 }
 
 @media (min-width: 63rem) {
-  .emotion-241 {
+  .emotion-240 {
     border-bottom: 0.0625rem solid #F2F2F2;
     padding: 1rem 0 1rem;
   }
 }
 
 @supports (display: grid) {
-  .emotion-241 {
+  .emotion-240 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-241 {
+    .emotion-240 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-241 {
+    .emotion-240 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-241 {
+    .emotion-240 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-241 {
+    .emotion-240 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-241 {
+    .emotion-240 {
       grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
     }
   }
 
   @media (min-width: 80rem) {
-    .emotion-241 {
+    .emotion-240 {
       grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
     }
   }
 }
 
-.emotion-244 {
+.emotion-243 {
   position: relative;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-244 {
+  .emotion-243 {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-column-gap: 0.5rem;
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-244 {
+    .emotion-243 {
       grid-column-gap: 1rem;
     }
   }
 
   @media (min-width: 63rem) {
-    .emotion-244 {
+    .emotion-243 {
       display: block;
     }
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-244 {
+  .emotion-243 {
     display: grid;
   }
 }
 
-.emotion-246 {
+.emotion-245 {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -3400,24 +3378,24 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width: 63rem) {
-  .emotion-246 {
+  .emotion-245 {
     display: block;
     width: 100%;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-246 {
+  .emotion-245 {
     width: initial;
     grid-column: 1/span 2;
   }
 }
 
-.emotion-248 {
+.emotion-247 {
   position: relative;
 }
 
-.emotion-250 {
+.emotion-249 {
   height: 0;
   overflow: hidden;
   position: relative;
@@ -3431,45 +3409,45 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width: 25rem) {
-  .emotion-250 {
+  .emotion-249 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-250 {
+  .emotion-249 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-.emotion-251 {
+.emotion-250 {
   width: 100%;
   height: auto;
   object-fit: cover;
 }
 
 @media (min-width: 25rem) {
-  .emotion-252 {
+  .emotion-251 {
     position: absolute;
     bottom: 0;
   }
 }
 
-.emotion-252>* {
+.emotion-251>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
 @media (max-width: 24.9375rem) {
-  .emotion-252>* {
+  .emotion-251>* {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
-.emotion-254 {
+.emotion-253 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
@@ -3477,13 +3455,13 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-254 {
+  .emotion-253 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-254 {
+  .emotion-253 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -3491,7 +3469,7 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-254 {
+  .emotion-253 {
     display: block;
     width: initial;
     padding: initial;
@@ -3499,13 +3477,13 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 63rem) {
-    .emotion-254 {
+    .emotion-253 {
       padding-top: 0.5rem;
     }
   }
 }
 
-.emotion-256 {
+.emotion-255 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -3517,20 +3495,20 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-256 {
+  .emotion-255 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-256 {
+  .emotion-255 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-258 {
+.emotion-257 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -3540,7 +3518,7 @@ exports[`Media Asset Page should render component 1`] = `
   overflow-wrap: anywhere;
 }
 
-.emotion-258:before {
+.emotion-257:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -3552,17 +3530,17 @@ exports[`Media Asset Page should render component 1`] = `
   z-index: 1;
 }
 
-.emotion-258:hover,
-.emotion-258:focus {
+.emotion-257:hover,
+.emotion-257:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-258:visited {
+.emotion-257:visited {
   color: #6E6E73;
 }
 
-.emotion-260 {
+.emotion-259 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #545658;
@@ -3573,20 +3551,20 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-260 {
+  .emotion-259 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-260 {
+  .emotion-259 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-298 {
+.emotion-297 {
   color: #222222;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -3598,20 +3576,20 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-298 {
+  .emotion-297 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-298 {
+  .emotion-297 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
-.emotion-300 {
+.emotion-299 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3623,7 +3601,7 @@ exports[`Media Asset Page should render component 1`] = `
   height: 100%;
 }
 
-.emotion-302 {
+.emotion-301 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -3632,7 +3610,7 @@ exports[`Media Asset Page should render component 1`] = `
   height: 0.8125rem;
 }
 
-.emotion-332 {
+.emotion-330 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -3641,11 +3619,11 @@ exports[`Media Asset Page should render component 1`] = `
   height: 0.75rem;
 }
 
-.emotion-334 {
+.emotion-332 {
   padding: 0 0.25rem;
 }
 
-.emotion-348 {
+.emotion-344 {
   padding-bottom: 2rem;
 }
 
@@ -3677,27 +3655,27 @@ exports[`Media Asset Page should render component 1`] = `
               role="main"
             >
               <h1
-                class="emotion-4 emotion-5"
+                class="emotion-4"
                 id="content"
                 tabindex="-1"
               >
                 Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh & &lt; &gt;
               </h1>
               <div
-                class="emotion-6 emotion-7 emotion-3"
+                class="emotion-5 emotion-6 emotion-3"
                 dir="ltr"
               >
                 <div
-                  class="emotion-9 emotion-10"
+                  class="emotion-8 emotion-9"
                 >
                   <div
-                    class="emotion-11 emotion-12"
+                    class="emotion-10 emotion-11"
                     data-e2e="media-player"
                   >
                     <iframe
                       allow="autoplay"
                       allowfullscreen=""
-                      class="emotion-13 emotion-14"
+                      class="emotion-12 emotion-13"
                       height="362.953125"
                       loading="lazy"
                       scrolling="no"
@@ -3706,10 +3684,10 @@ exports[`Media Asset Page should render component 1`] = `
                       width="645.25"
                     />
                     <div
-                      class="emotion-15 emotion-16"
+                      class="emotion-14 emotion-15"
                     >
                       <div
-                        class="emotion-17 emotion-18"
+                        class="emotion-16 emotion-17"
                         data-e2e="image-placeholder"
                         style="padding-bottom: 56.25%;"
                       />
@@ -3719,28 +3697,28 @@ exports[`Media Asset Page should render component 1`] = `
                 </div>
               </div>
               <div
-                class="emotion-19 emotion-3"
+                class="emotion-18 emotion-3"
                 dir="ltr"
               >
                 <strong
-                  class="emotion-21 emotion-22 emotion-23"
+                  class="emotion-20 emotion-21 emotion-22"
                 >
                   Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh & &lt; &gt;
                 </strong>
               </div>
               <div
-                class="emotion-24 emotion-25 emotion-3"
+                class="emotion-23 emotion-24 emotion-3"
                 dir="ltr"
               >
                 <time
-                  class="emotion-27 emotion-28"
+                  class="emotion-26 emotion-27"
                   datetime="2019-09-13"
                 >
                   13 September 2019
                 </time>
                 <div>
                   <time
-                    class="emotion-27 emotion-28"
+                    class="emotion-26 emotion-27"
                     datetime="2019-11-20"
                   >
                     New Informate 20 November 2019
@@ -3748,11 +3726,11 @@ exports[`Media Asset Page should render component 1`] = `
                 </div>
               </div>
               <div
-                class="emotion-31 emotion-3"
+                class="emotion-30 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-33 emotion-34"
+                  class="emotion-32 emotion-33"
                   dir="ltr"
                 >
                   <b>
@@ -3761,11 +3739,11 @@ exports[`Media Asset Page should render component 1`] = `
                 </p>
               </div>
               <div
-                class="emotion-31 emotion-3"
+                class="emotion-30 emotion-3"
                 dir="ltr"
               >
                 <h2
-                  class="emotion-37 emotion-38"
+                  class="emotion-36 emotion-37"
                   id="This-is-a-heading-<->"
                   tabindex="-1"
                 >
@@ -3773,11 +3751,11 @@ exports[`Media Asset Page should render component 1`] = `
                 </h2>
               </div>
               <div
-                class="emotion-31 emotion-3"
+                class="emotion-30 emotion-3"
                 dir="ltr"
               >
                 <h2
-                  class="emotion-37 emotion-38"
+                  class="emotion-36 emotion-37"
                   id="This-is-a-subheading-<->"
                   tabindex="-1"
                 >
@@ -3785,11 +3763,11 @@ exports[`Media Asset Page should render component 1`] = `
                 </h2>
               </div>
               <div
-                class="emotion-31 emotion-3"
+                class="emotion-30 emotion-3"
                 dir="ltr"
               >
                 <h2
-                  class="emotion-37 emotion-38"
+                  class="emotion-36 emotion-37"
                   id="This-is-a-crosshead-<->"
                   tabindex="-1"
                 >
@@ -3797,97 +3775,97 @@ exports[`Media Asset Page should render component 1`] = `
                 </h2>
               </div>
               <div
-                class="emotion-31 emotion-3"
+                class="emotion-30 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-33 emotion-34"
+                  class="emotion-32 emotion-33"
                   dir="ltr"
                 >
                   This is regular paragraph text. "Lorem ipsum dolor sit amet", consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </p>
               </div>
               <div
-                class="emotion-31 emotion-3"
+                class="emotion-30 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-33 emotion-34"
+                  class="emotion-32 emotion-33"
                   dir="ltr"
                 >
                   Bulleted list:
                 </p>
               </div>
               <div
-                class="emotion-55 emotion-56 emotion-3"
+                class="emotion-54 emotion-55 emotion-3"
                 dir="ltr"
               >
                 <ul
-                  class="emotion-58 emotion-59"
+                  class="emotion-57 emotion-58"
                   dir="ltr"
                   role="list"
                 >
                   <li
-                    class="emotion-60 emotion-61"
+                    class="emotion-59 emotion-60"
                     role="listitem"
                   >
                     <a
-                      class="focusIndicatorReducedWidth emotion-62 emotion-63"
+                      class="focusIndicatorReducedWidth emotion-61 emotion-62"
                       href="/afrique/23248423"
                     >
                       &lt;Media Asset Page&gt;
                     </a>
                   </li>
                   <li
-                    class="emotion-60 emotion-61"
+                    class="emotion-59 emotion-60"
                     role="listitem"
                   >
                     <a
-                      class="focusIndicatorReducedWidth emotion-62 emotion-63"
+                      class="focusIndicatorReducedWidth emotion-61 emotion-62"
                       href="/afrique/23248423"
                     >
                       &lt;Media Asset Page&gt;
                     </a>
                   </li>
                   <li
-                    class="emotion-60 emotion-61"
+                    class="emotion-59 emotion-60"
                     role="listitem"
                   >
                     <a
-                      class="focusIndicatorReducedWidth emotion-62 emotion-63"
+                      class="focusIndicatorReducedWidth emotion-61 emotion-62"
                       href="/afrique/23248423"
                     >
                       &lt;Media Asset Page&gt;
                     </a>
                   </li>
                   <li
-                    class="emotion-60 emotion-61"
+                    class="emotion-59 emotion-60"
                     role="listitem"
                   >
                     <a
-                      class="focusIndicatorReducedWidth emotion-62 emotion-63"
+                      class="focusIndicatorReducedWidth emotion-61 emotion-62"
                       href="/pidgin"
                     >
                       this is the link text
                     </a>
                   </li>
                   <li
-                    class="emotion-60 emotion-61"
+                    class="emotion-59 emotion-60"
                     role="listitem"
                   >
                     <a
-                      class="focusIndicatorReducedWidth emotion-62 emotion-63"
+                      class="focusIndicatorReducedWidth emotion-61 emotion-62"
                       href="/pidgin"
                     >
                       this is the link text
                     </a>
                   </li>
                   <li
-                    class="emotion-60 emotion-61"
+                    class="emotion-59 emotion-60"
                     role="listitem"
                   >
                     <a
-                      class="focusIndicatorReducedWidth emotion-62 emotion-63"
+                      class="focusIndicatorReducedWidth emotion-61 emotion-62"
                       href="/pidgin"
                     >
                       this is the link text
@@ -3896,86 +3874,86 @@ exports[`Media Asset Page should render component 1`] = `
                 </ul>
               </div>
               <div
-                class="emotion-31 emotion-3"
+                class="emotion-30 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-33 emotion-34"
+                  class="emotion-32 emotion-33"
                   dir="ltr"
                 >
                   Numbered list:
                 </p>
               </div>
               <div
-                class="emotion-55 emotion-56 emotion-3"
+                class="emotion-54 emotion-55 emotion-3"
                 dir="ltr"
               >
                 <ul
-                  class="emotion-58 emotion-59"
+                  class="emotion-57 emotion-58"
                   dir="ltr"
                   role="list"
                 >
                   <li
-                    class="emotion-60 emotion-61"
+                    class="emotion-59 emotion-60"
                     role="listitem"
                   >
                     <a
-                      class="focusIndicatorReducedWidth emotion-62 emotion-63"
+                      class="focusIndicatorReducedWidth emotion-61 emotion-62"
                       href="/afrique/23248423"
                     >
                       &lt;Media Asset Page&gt;
                     </a>
                   </li>
                   <li
-                    class="emotion-60 emotion-61"
+                    class="emotion-59 emotion-60"
                     role="listitem"
                   >
                     <a
-                      class="focusIndicatorReducedWidth emotion-62 emotion-63"
+                      class="focusIndicatorReducedWidth emotion-61 emotion-62"
                       href="/afrique/23248423"
                     >
                       &lt;Media Asset Page&gt;
                     </a>
                   </li>
                   <li
-                    class="emotion-60 emotion-61"
+                    class="emotion-59 emotion-60"
                     role="listitem"
                   >
                     <a
-                      class="focusIndicatorReducedWidth emotion-62 emotion-63"
+                      class="focusIndicatorReducedWidth emotion-61 emotion-62"
                       href="/afrique/23248423"
                     >
                       &lt;Media Asset Page&gt;
                     </a>
                   </li>
                   <li
-                    class="emotion-60 emotion-61"
+                    class="emotion-59 emotion-60"
                     role="listitem"
                   >
                     <a
-                      class="focusIndicatorReducedWidth emotion-62 emotion-63"
+                      class="focusIndicatorReducedWidth emotion-61 emotion-62"
                       href="/pidgin"
                     >
                       this is the link text
                     </a>
                   </li>
                   <li
-                    class="emotion-60 emotion-61"
+                    class="emotion-59 emotion-60"
                     role="listitem"
                   >
                     <a
-                      class="focusIndicatorReducedWidth emotion-62 emotion-63"
+                      class="focusIndicatorReducedWidth emotion-61 emotion-62"
                       href="/pidgin"
                     >
                       this is the link text
                     </a>
                   </li>
                   <li
-                    class="emotion-60 emotion-61"
+                    class="emotion-59 emotion-60"
                     role="listitem"
                   >
                     <a
-                      class="focusIndicatorReducedWidth emotion-62 emotion-63"
+                      class="focusIndicatorReducedWidth emotion-61 emotion-62"
                       href="/pidgin"
                     >
                       this is the link text
@@ -3984,11 +3962,11 @@ exports[`Media Asset Page should render component 1`] = `
                 </ul>
               </div>
               <div
-                class="emotion-31 emotion-3"
+                class="emotion-30 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-33 emotion-34"
+                  class="emotion-32 emotion-33"
                   dir="ltr"
                 >
                   Lorem ipsum dolor sit amet, 
@@ -4001,13 +3979,13 @@ exports[`Media Asset Page should render component 1`] = `
                   </b>
                   ex ea commodo consequat. Duis aute irure dolor in reprehenderit
                   <i
-                    class="emotion-121 emotion-122"
+                    class="emotion-120 emotion-121"
                   >
                      in voluptate velit esse cillum 
                   </i>
                   dolore "eu fugiat nulla" pariatur. 
                   <a
-                    class="focusIndicatorReducedWidth emotion-62 emotion-63"
+                    class="focusIndicatorReducedWidth emotion-61 emotion-62"
                     href="/pidgin"
                   >
                     Excepteur
@@ -4016,104 +3994,104 @@ exports[`Media Asset Page should render component 1`] = `
                 </p>
               </div>
               <div
-                class="emotion-31 emotion-3"
+                class="emotion-30 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-33 emotion-34"
+                  class="emotion-32 emotion-33"
                   dir="ltr"
                 >
                   Testing special characters: !"£$%^&*()_+=-{}[]:@~;'#&lt;&gt;?,./\\\`\\# 7.7 E 2₉₈₇₆₅₄₃₂₁₀⁹⁸⁷⁶⁵⁴³²¹⁰ⁿ☆★ŷŶŵŴÿþýüûúùø÷öõôóòñðïîíìëêéèçæåäãâáßÞÝÜÛÚÙØ×ÖÕÔÓÒÑÐÏÎÍÌËÊÉÈ
                 </p>
               </div>
               <div
-                class="emotion-31 emotion-3"
+                class="emotion-30 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-33 emotion-34"
+                  class="emotion-32 emotion-33"
                   dir="ltr"
                 >
                   ÇÆÆÅÄÃÂÁÀ¿¾½¼»º¸·¶µ´±°¯®¬«ª©¨§¦¥¤£¢¡ ~#
                 </p>
               </div>
               <div
-                class="emotion-31 emotion-3"
+                class="emotion-30 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-33 emotion-34"
+                  class="emotion-32 emotion-33"
                   dir="ltr"
                 >
                   Table:
                 </p>
               </div>
               <div
-                class="emotion-31 emotion-3"
+                class="emotion-30 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-33 emotion-34"
+                  class="emotion-32 emotion-33"
                   dir="ltr"
                 >
                   Social media embed:
                 </p>
               </div>
               <div
-                class="emotion-31 emotion-3"
+                class="emotion-30 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-33 emotion-34"
+                  class="emotion-32 emotion-33"
                   dir="ltr"
                 >
                   Quote box:
                 </p>
               </div>
               <div
-                class="emotion-31 emotion-3"
+                class="emotion-30 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-33 emotion-34"
+                  class="emotion-32 emotion-33"
                   dir="ltr"
                 >
                   Correspondent quote box:
                 </p>
               </div>
               <div
-                class="emotion-31 emotion-3"
+                class="emotion-30 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-33 emotion-34"
+                  class="emotion-32 emotion-33"
                   dir="ltr"
                 >
                   Fact box:
                 </p>
               </div>
               <div
-                class="emotion-31 emotion-3"
+                class="emotion-30 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-33 emotion-34"
+                  class="emotion-32 emotion-33"
                   dir="ltr"
                 >
                   ­
                 </p>
               </div>
               <div
-                class="emotion-31 emotion-3"
+                class="emotion-30 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-33 emotion-34"
+                  class="emotion-32 emotion-33"
                   dir="ltr"
                 >
                   Lorem ipsum
                   <a
-                    class="focusIndicatorReducedWidth emotion-62 emotion-63"
+                    class="focusIndicatorReducedWidth emotion-61 emotion-62"
                     href="/pidgin"
                   >
                      dolor sit amet
@@ -4122,22 +4100,22 @@ exports[`Media Asset Page should render component 1`] = `
                 </p>
               </div>
               <div
-                class="emotion-163 emotion-3"
+                class="emotion-162 emotion-3"
                 dir="ltr"
               >
                 <figure
-                  class="emotion-165 emotion-166"
+                  class="emotion-164 emotion-165"
                 >
                   <div
-                    class="emotion-167 emotion-3"
+                    class="emotion-166 emotion-3"
                     dir="ltr"
                   >
                     <div
-                      class="emotion-169 emotion-3"
+                      class="emotion-168 emotion-3"
                       dir="ltr"
                     >
                       <div
-                        class="emotion-17 emotion-18"
+                        class="emotion-16 emotion-17"
                         data-e2e="image-placeholder"
                         style="padding-bottom: 56.25%;"
                       >
@@ -4150,11 +4128,11 @@ exports[`Media Asset Page should render component 1`] = `
                         </div>
                         <noscript />
                         <p
-                          class="emotion-173 emotion-174"
+                          class="emotion-172 emotion-173"
                           role="text"
                         >
                           <span
-                            class="emotion-175"
+                            class="emotion-4"
                           >
                             Wia dis foto come from, 
                           </span>
@@ -4167,15 +4145,15 @@ exports[`Media Asset Page should render component 1`] = `
                       </div>
                     </div>
                     <div
-                      class="emotion-176 emotion-3"
+                      class="emotion-175 emotion-3"
                       dir="ltr"
                     >
                       <figcaption
-                        class="emotion-178 emotion-179"
+                        class="emotion-177 emotion-178"
                         dir="ltr"
                       >
                         <span
-                          class="emotion-175"
+                          class="emotion-4"
                         >
                           Wetin we call dis foto, 
                         </span>
@@ -4188,22 +4166,22 @@ exports[`Media Asset Page should render component 1`] = `
                 </figure>
               </div>
               <div
-                class="emotion-163 emotion-3"
+                class="emotion-162 emotion-3"
                 dir="ltr"
               >
                 <figure
-                  class="emotion-165 emotion-166"
+                  class="emotion-164 emotion-165"
                 >
                   <div
-                    class="emotion-167 emotion-3"
+                    class="emotion-166 emotion-3"
                     dir="ltr"
                   >
                     <div
-                      class="emotion-169 emotion-3"
+                      class="emotion-168 emotion-3"
                       dir="ltr"
                     >
                       <div
-                        class="emotion-17 emotion-18"
+                        class="emotion-16 emotion-17"
                         data-e2e="image-placeholder"
                         style="padding-bottom: 56.25%;"
                       >
@@ -4216,11 +4194,11 @@ exports[`Media Asset Page should render component 1`] = `
                         </div>
                         <noscript />
                         <p
-                          class="emotion-173 emotion-174"
+                          class="emotion-172 emotion-173"
                           role="text"
                         >
                           <span
-                            class="emotion-175"
+                            class="emotion-4"
                           >
                             Wia dis foto come from, 
                           </span>
@@ -4233,15 +4211,15 @@ exports[`Media Asset Page should render component 1`] = `
                       </div>
                     </div>
                     <div
-                      class="emotion-176 emotion-3"
+                      class="emotion-175 emotion-3"
                       dir="ltr"
                     >
                       <figcaption
-                        class="emotion-178 emotion-179"
+                        class="emotion-177 emotion-178"
                         dir="ltr"
                       >
                         <span
-                          class="emotion-175"
+                          class="emotion-4"
                         >
                           Wetin we call dis foto, 
                         </span>
@@ -4254,34 +4232,34 @@ exports[`Media Asset Page should render component 1`] = `
                 </figure>
               </div>
               <div
-                class="emotion-55 emotion-56 emotion-3"
+                class="emotion-54 emotion-55 emotion-3"
                 dir="ltr"
               >
                 <ul
-                  class="emotion-58 emotion-59"
+                  class="emotion-57 emotion-58"
                   dir="ltr"
                   role="list"
                 >
                   <li
-                    class="emotion-60 emotion-61"
+                    class="emotion-59 emotion-60"
                     role="listitem"
                   >
                     sunt in culpa qui officia deserunt mollit anim id est laborum
                   </li>
                   <li
-                    class="emotion-60 emotion-61"
+                    class="emotion-59 emotion-60"
                     role="listitem"
                   >
                     sunt in culpa qui officia deserunt mollit anim id est laborum
                   </li>
                   <li
-                    class="emotion-60 emotion-61"
+                    class="emotion-59 emotion-60"
                     role="listitem"
                   >
                     sunt in culpa qui officia deserunt mollit anim id est laborum
                   </li>
                   <li
-                    class="emotion-60 emotion-61"
+                    class="emotion-59 emotion-60"
                     role="listitem"
                   >
                     v3 draft
@@ -4289,22 +4267,22 @@ exports[`Media Asset Page should render component 1`] = `
                 </ul>
               </div>
               <div
-                class="emotion-31 emotion-3"
+                class="emotion-30 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-33 emotion-34"
+                  class="emotion-32 emotion-33"
                   dir="ltr"
                 >
                   This is transmission info 
                 </p>
               </div>
               <div
-                class="emotion-31 emotion-3"
+                class="emotion-30 emotion-3"
                 dir="ltr"
               >
                 <p
-                  class="emotion-33 emotion-34"
+                  class="emotion-32 emotion-33"
                   dir="ltr"
                 >
                   This is the footer 
@@ -4313,29 +4291,29 @@ exports[`Media Asset Page should render component 1`] = `
             </main>
             <section
               aria-labelledby="related-content-heading"
-              class="emotion-1 emotion-221 emotion-3"
+              class="emotion-1 emotion-220 emotion-3"
               data-e2e="related-content-heading"
               dir="ltr"
               role="region"
             >
               <div
-                class="emotion-223 emotion-224 emotion-3"
+                class="emotion-222 emotion-223 emotion-3"
                 dir="ltr"
               >
                 <div
-                  class="emotion-226 emotion-227 emotion-228"
+                  class="emotion-225 emotion-226 emotion-227"
                 >
                   <h2
-                    class="emotion-229 emotion-230"
+                    class="emotion-228 emotion-229"
                   >
                     <span
-                      class="emotion-231 emotion-232"
+                      class="emotion-230 emotion-231"
                     >
                       <span
-                        class="emotion-233 emotion-234"
+                        class="emotion-232 emotion-233"
                       >
                         <span
-                          class="emotion-235 emotion-236"
+                          class="emotion-234 emotion-235"
                           dir="ltr"
                           id="related-content-heading"
                         >
@@ -4346,34 +4324,34 @@ exports[`Media Asset Page should render component 1`] = `
                   </h2>
                 </div>
                 <ol
-                  class="emotion-3 emotion-238 emotion-239"
+                  class="emotion-3 emotion-237 emotion-238"
                   data-e2e="most-watched-ol"
                   dir="ltr"
                   role="list"
                 >
                   <li
-                    class="emotion-3 emotion-241 emotion-242"
+                    class="emotion-3 emotion-240 emotion-241"
                     dir="ltr"
                   >
                     <div
-                      class="emotion-243 emotion-244 emotion-245"
+                      class="emotion-242 emotion-243 emotion-244"
                       data-e2e="story-promo"
                     >
                       <div
-                        class="emotion-246 emotion-247"
+                        class="emotion-245 emotion-246"
                         dir="ltr"
                       >
                         <div
-                          class="emotion-248 emotion-249"
+                          class="emotion-247 emotion-248"
                         >
                           <div
-                            class="emotion-250"
+                            class="emotion-249"
                             style="padding-bottom: 56.25%;"
                           >
                             <picture>
                               <img
                                 alt="One gun enter St. Phillips Church for Ozubulu, Anambra and shoot and kill 11 people, injure 18 others"
-                                class="emotion-251"
+                                class="emotion-250"
                                 height="351"
                                 loading="lazy"
                                 sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
@@ -4384,20 +4362,20 @@ exports[`Media Asset Page should render component 1`] = `
                             </picture>
                           </div>
                           <div
-                            class="emotion-252 emotion-253"
+                            class="emotion-251 emotion-252"
                           />
                         </div>
                       </div>
                       <div
-                        class="emotion-254 emotion-255"
+                        class="emotion-253 emotion-254"
                         dir="ltr"
                       >
                         <h3
-                          class="emotion-256 emotion-257"
+                          class="emotion-255 emotion-256"
                         >
                           <a
                             aria-labelledby="promo-rel-content-pidgintori23145776-1"
-                            class="focusIndicatorDisplayInlineBlock emotion-258 emotion-259"
+                            class="focusIndicatorDisplayInlineBlock emotion-257 emotion-258"
                             href="/pidgin/tori-23145776"
                           >
                             <span
@@ -4408,7 +4386,7 @@ exports[`Media Asset Page should render component 1`] = `
                           </a>
                         </h3>
                         <time
-                          class="emotion-260 emotion-28"
+                          class="emotion-259 emotion-27"
                           datetime="2017-08-08"
                         >
                           8th August 2017
@@ -4417,28 +4395,28 @@ exports[`Media Asset Page should render component 1`] = `
                     </div>
                   </li>
                   <li
-                    class="emotion-3 emotion-241 emotion-242"
+                    class="emotion-3 emotion-240 emotion-241"
                     dir="ltr"
                   >
                     <div
-                      class="emotion-243 emotion-244 emotion-245"
+                      class="emotion-242 emotion-243 emotion-244"
                       data-e2e="story-promo"
                     >
                       <div
-                        class="emotion-246 emotion-247"
+                        class="emotion-245 emotion-246"
                         dir="ltr"
                       >
                         <div
-                          class="emotion-248 emotion-249"
+                          class="emotion-247 emotion-248"
                         >
                           <div
-                            class="emotion-250"
+                            class="emotion-249"
                             style="padding-bottom: 56.25%;"
                           >
                             <picture>
                               <img
                                 alt="Two homosexual men"
-                                class="emotion-251"
+                                class="emotion-250"
                                 height="351"
                                 loading="lazy"
                                 sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
@@ -4449,20 +4427,20 @@ exports[`Media Asset Page should render component 1`] = `
                             </picture>
                           </div>
                           <div
-                            class="emotion-252 emotion-253"
+                            class="emotion-251 emotion-252"
                           />
                         </div>
                       </div>
                       <div
-                        class="emotion-254 emotion-255"
+                        class="emotion-253 emotion-254"
                         dir="ltr"
                       >
                         <h3
-                          class="emotion-256 emotion-257"
+                          class="emotion-255 emotion-256"
                         >
                           <a
                             aria-labelledby="promo-rel-content-pidgintori23143754-2"
-                            class="focusIndicatorDisplayInlineBlock emotion-258 emotion-259"
+                            class="focusIndicatorDisplayInlineBlock emotion-257 emotion-258"
                             href="/pidgin/tori-23143754"
                           >
                             <span
@@ -4473,7 +4451,7 @@ exports[`Media Asset Page should render component 1`] = `
                           </a>
                         </h3>
                         <time
-                          class="emotion-260 emotion-28"
+                          class="emotion-259 emotion-27"
                           datetime="2017-08-08"
                         >
                           8th August 2017
@@ -4482,40 +4460,40 @@ exports[`Media Asset Page should render component 1`] = `
                     </div>
                   </li>
                   <li
-                    class="emotion-3 emotion-241 emotion-242"
+                    class="emotion-3 emotion-240 emotion-241"
                     dir="ltr"
                   >
                     <div
-                      class="emotion-243 emotion-244 emotion-245"
+                      class="emotion-242 emotion-243 emotion-244"
                       data-e2e="story-promo"
                     >
                       <div
-                        class="emotion-246 emotion-247"
+                        class="emotion-245 emotion-246"
                         dir="ltr"
                       >
                         <div
-                          class="emotion-248 emotion-249"
+                          class="emotion-247 emotion-248"
                         >
                           <div
-                            class="emotion-17 emotion-18"
+                            class="emotion-16 emotion-17"
                             data-e2e="image-placeholder"
                             style="padding-bottom: 56.25%;"
                           />
                           <div
-                            class="emotion-252 emotion-253"
+                            class="emotion-251 emotion-252"
                           >
                             <div
                               aria-hidden="true"
-                              class="emotion-298 emotion-299"
+                              class="emotion-297 emotion-298"
                               data-e2e="media-indicator"
                               dir="ltr"
                             >
                               <div
-                                class="emotion-300 emotion-301"
+                                class="emotion-299 emotion-300"
                               >
                                 <svg
                                   aria-hidden="true"
-                                  class="emotion-302 emotion-303"
+                                  class="emotion-301 emotion-302"
                                   focusable="false"
                                   height="13px"
                                   viewBox="0 0 32 26"
@@ -4536,15 +4514,15 @@ exports[`Media Asset Page should render component 1`] = `
                         </div>
                       </div>
                       <div
-                        class="emotion-254 emotion-255"
+                        class="emotion-253 emotion-254"
                         dir="ltr"
                       >
                         <h3
-                          class="emotion-256 emotion-257"
+                          class="emotion-255 emotion-256"
                         >
                           <a
                             aria-labelledby="promo-rel-content-pidgin23146654-3"
-                            class="focusIndicatorDisplayInlineBlock emotion-258 emotion-259"
+                            class="focusIndicatorDisplayInlineBlock emotion-257 emotion-258"
                             href="/pidgin/23146654"
                           >
                             <span
@@ -4552,7 +4530,7 @@ exports[`Media Asset Page should render component 1`] = `
                               role="text"
                             >
                               <span
-                                class="emotion-4 emotion-5"
+                                class="emotion-4"
                               >
                                 Image gallery, 
                               </span>
@@ -4563,7 +4541,7 @@ exports[`Media Asset Page should render component 1`] = `
                           </a>
                         </h3>
                         <time
-                          class="emotion-260 emotion-28"
+                          class="emotion-259 emotion-27"
                           datetime="2017-08-08"
                         >
                           8th August 2017
@@ -4572,28 +4550,28 @@ exports[`Media Asset Page should render component 1`] = `
                     </div>
                   </li>
                   <li
-                    class="emotion-3 emotion-241 emotion-242"
+                    class="emotion-3 emotion-240 emotion-241"
                     dir="ltr"
                   >
                     <div
-                      class="emotion-243 emotion-244 emotion-245"
+                      class="emotion-242 emotion-243 emotion-244"
                       data-e2e="story-promo"
                     >
                       <div
-                        class="emotion-246 emotion-247"
+                        class="emotion-245 emotion-246"
                         dir="ltr"
                       >
                         <div
-                          class="emotion-248 emotion-249"
+                          class="emotion-247 emotion-248"
                         >
                           <div
-                            class="emotion-250"
+                            class="emotion-249"
                             style="padding-bottom: 56.25%;"
                           >
                             <picture>
                               <img
                                 alt="BBC MInute"
-                                class="emotion-251"
+                                class="emotion-250"
                                 height="576"
                                 loading="lazy"
                                 sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
@@ -4604,20 +4582,20 @@ exports[`Media Asset Page should render component 1`] = `
                             </picture>
                           </div>
                           <div
-                            class="emotion-252 emotion-253"
+                            class="emotion-251 emotion-252"
                           >
                             <div
                               aria-hidden="true"
-                              class="emotion-298 emotion-299"
+                              class="emotion-297 emotion-298"
                               data-e2e="media-indicator"
                               dir="ltr"
                             >
                               <div
-                                class="emotion-300 emotion-301"
+                                class="emotion-299 emotion-300"
                               >
                                 <svg
                                   aria-hidden="true"
-                                  class="emotion-332 emotion-333"
+                                  class="emotion-330 emotion-331"
                                   focusable="false"
                                   height="12px"
                                   viewBox="0 0 13 12"
@@ -4631,7 +4609,7 @@ exports[`Media Asset Page should render component 1`] = `
                                   />
                                 </svg>
                                 <time
-                                  class="emotion-334 emotion-335"
+                                  class="emotion-332 emotion-333"
                                   datetime="PT15S"
                                 >
                                   0:15
@@ -4642,15 +4620,15 @@ exports[`Media Asset Page should render component 1`] = `
                         </div>
                       </div>
                       <div
-                        class="emotion-254 emotion-255"
+                        class="emotion-253 emotion-254"
                         dir="ltr"
                       >
                         <h3
-                          class="emotion-256 emotion-257"
+                          class="emotion-255 emotion-256"
                         >
                           <a
                             aria-labelledby="promo-rel-content-pidginmedia23147054-4"
-                            class="focusIndicatorDisplayInlineBlock emotion-258 emotion-259"
+                            class="focusIndicatorDisplayInlineBlock emotion-257 emotion-258"
                             href="/pidgin/media-23147054"
                           >
                             <span
@@ -4658,7 +4636,7 @@ exports[`Media Asset Page should render component 1`] = `
                               role="text"
                             >
                               <span
-                                class="emotion-4 emotion-5"
+                                class="emotion-4"
                               >
                                 Make you listen, 
                               </span>
@@ -4666,7 +4644,7 @@ exports[`Media Asset Page should render component 1`] = `
                                 BBC News Pidgin One Minute News
                               </span>
                               <span
-                                class="emotion-4 emotion-5"
+                                class="emotion-4"
                               >
                                 , Duration 0,15
                               </span>
@@ -4674,7 +4652,7 @@ exports[`Media Asset Page should render component 1`] = `
                           </a>
                         </h3>
                         <time
-                          class="emotion-260 emotion-28"
+                          class="emotion-259 emotion-27"
                           datetime="2017-08-17"
                         >
                           17th August 2017
@@ -4686,7 +4664,7 @@ exports[`Media Asset Page should render component 1`] = `
               </div>
             </section>
             <div
-              class="emotion-348 emotion-349"
+              class="emotion-344 emotion-345"
             />
           </div>
         </div>

@@ -1958,25 +1958,14 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   height: 0.75rem;
 }
 
-.emotion-237 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
-.emotion-256 {
+.emotion-255 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-256 {
+  .emotion-255 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     -webkit-column-gap: 1rem;
@@ -1985,72 +1974,72 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 }
 
-.emotion-258 {
+.emotion-257 {
   padding: 0.5rem 0 1rem;
   line-height: 0;
   height: 100%;
 }
 
-.emotion-258:last-child {
+.emotion-257:last-child {
   border: none;
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-258 {
+  .emotion-257 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-258 {
+  .emotion-257 {
     padding: 0 0 1.5rem;
   }
 }
 
-.emotion-258:first-child {
+.emotion-257:first-child {
   padding-top: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-258:first-child {
+  .emotion-257:first-child {
     padding-top: 1rem;
   }
 }
 
-.emotion-258:last-child {
+.emotion-257:last-child {
   padding-bottom: 0;
 }
 
-.emotion-258:first-child {
+.emotion-257:first-child {
   padding: 0 0 0.5rem 0;
 }
 
-.emotion-258:not(:first-child):not(:last-child) {
+.emotion-257:not(:first-child):not(:last-child) {
   padding: 0.5rem 0 0.5rem 0;
 }
 
-.emotion-258:last-child {
+.emotion-257:last-child {
   padding: 0.5rem 0 0 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-258 {
+  .emotion-257 {
     padding: 0;
   }
 
-  .emotion-258:first-child,
-  .emotion-258:not(:first-child):not(:last-child),
-  .emotion-258:last-child {
+  .emotion-257:first-child,
+  .emotion-257:not(:first-child):not(:last-child),
+  .emotion-257:last-child {
     padding: 0;
   }
 }
 
-.emotion-276 {
+.emotion-275 {
   margin-bottom: 1.5rem;
   padding: 1rem;
 }
 
-.emotion-279 {
+.emotion-278 {
   position: relative;
   z-index: 0;
   color: #141414;
@@ -2059,18 +2048,18 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-279 {
+  .emotion-278 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-279 {
+  .emotion-278 {
     margin-bottom: 1.5rem;
   }
 }
 
-.emotion-290 {
+.emotion-289 {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -2079,7 +2068,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @supports (display: grid) {
-  .emotion-290 {
+  .emotion-289 {
     display: grid;
     position: initial;
     width: initial;
@@ -2087,7 +2076,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-290 {
+    .emotion-289 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -2095,7 +2084,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-290 {
+    .emotion-289 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -2103,7 +2092,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-290 {
+    .emotion-289 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -2111,7 +2100,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-290 {
+    .emotion-289 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -2119,7 +2108,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-290 {
+    .emotion-289 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -2127,7 +2116,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 
   @media (min-width: 80rem) {
-    .emotion-290 {
+    .emotion-289 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -2135,62 +2124,62 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 }
 
-.emotion-293 {
+.emotion-292 {
   position: relative;
   padding-bottom: 1.5rem;
 }
 
 @supports (display: grid) {
-  .emotion-293 {
+  .emotion-292 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-293 {
+    .emotion-292 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-293 {
+    .emotion-292 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-293 {
+    .emotion-292 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-293 {
+    .emotion-292 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
     }
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-293 {
+    .emotion-292 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
     }
   }
 
   @media (min-width: 80rem) {
-    .emotion-293 {
+    .emotion-292 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
     }
   }
 }
 
-.emotion-295 {
+.emotion-294 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2203,30 +2192,30 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-297 {
+  .emotion-296 {
     min-width: 1.75rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-297 {
+  .emotion-296 {
     min-width: 1.75rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-297 {
+  .emotion-296 {
     min-width: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-297 {
+  .emotion-296 {
     min-width: 2.5rem;
   }
 }
 
-.emotion-299 {
+.emotion-298 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -2239,32 +2228,32 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-299 {
+  .emotion-298 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-299 {
+  .emotion-298 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
-.emotion-301 {
+.emotion-300 {
   padding-top: 0.2rem;
   padding-left: 0.5rem;
   padding-right: 1rem;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-301 {
+  .emotion-300 {
     padding-right: 0;
   }
 }
 
-.emotion-303 {
+.emotion-302 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -2278,26 +2267,26 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-303 {
+  .emotion-302 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-303 {
+  .emotion-302 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-303:hover,
-.emotion-303:focus {
+.emotion-302:hover,
+.emotion-302:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-303:before {
+.emotion-302:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -2309,7 +2298,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   z-index: 1;
 }
 
-.emotion-305 {
+.emotion-304 {
   padding-top: 0.5rem;
 }
 
@@ -3034,7 +3023,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                   role="text"
                                 >
                                   <span
-                                    class="emotion-237 emotion-238"
+                                    class="emotion-36"
                                   >
                                     Make you listen, 
                                   </span>
@@ -3089,67 +3078,67 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                       </h2>
                     </div>
                     <ul
-                      class="emotion-256 emotion-257"
+                      class="emotion-255 emotion-256"
                       role="list"
                     >
                       <li
-                        class="emotion-258 emotion-259"
+                        class="emotion-257 emotion-258"
                       >
                         <span
                           data-testid="frosted-promo-loader"
                         />
                       </li>
                       <li
-                        class="emotion-258 emotion-259"
+                        class="emotion-257 emotion-258"
                       >
                         <span
                           data-testid="frosted-promo-loader"
                         />
                       </li>
                       <li
-                        class="emotion-258 emotion-259"
+                        class="emotion-257 emotion-258"
                       >
                         <span
                           data-testid="frosted-promo-loader"
                         />
                       </li>
                       <li
-                        class="emotion-258 emotion-259"
+                        class="emotion-257 emotion-258"
                       >
                         <span
                           data-testid="frosted-promo-loader"
                         />
                       </li>
                       <li
-                        class="emotion-258 emotion-259"
+                        class="emotion-257 emotion-258"
                       >
                         <span
                           data-testid="frosted-promo-loader"
                         />
                       </li>
                       <li
-                        class="emotion-258 emotion-259"
+                        class="emotion-257 emotion-258"
                       >
                         <span
                           data-testid="frosted-promo-loader"
                         />
                       </li>
                       <li
-                        class="emotion-258 emotion-259"
+                        class="emotion-257 emotion-258"
                       >
                         <span
                           data-testid="frosted-promo-loader"
                         />
                       </li>
                       <li
-                        class="emotion-258 emotion-259"
+                        class="emotion-257 emotion-258"
                       >
                         <span
                           data-testid="frosted-promo-loader"
                         />
                       </li>
                       <li
-                        class="emotion-258 emotion-259"
+                        class="emotion-257 emotion-258"
                       >
                         <span
                           data-testid="frosted-promo-loader"
@@ -3159,7 +3148,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   </section>
                 </div>
                 <div
-                  class="emotion-276 emotion-277"
+                  class="emotion-275 emotion-276"
                 >
                   <section
                     aria-labelledby="Most-Read"
@@ -3167,7 +3156,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                     role="region"
                   >
                     <div
-                      class="emotion-278 emotion-279 emotion-186"
+                      class="emotion-277 emotion-278 emotion-186"
                     >
                       <h2
                         class="emotion-187 emotion-188"
@@ -3190,40 +3179,40 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                       </h2>
                     </div>
                     <ol
-                      class="emotion-289 emotion-290 emotion-2"
+                      class="emotion-288 emotion-289 emotion-2"
                       dir="ltr"
                       role="list"
                     >
                       <li
-                        class="emotion-292 emotion-293 emotion-2"
+                        class="emotion-291 emotion-292 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-295 emotion-296"
+                          class="emotion-294 emotion-295"
                         >
                           <div
-                            class="emotion-297 emotion-298"
+                            class="emotion-296 emotion-297"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-299 emotion-300"
+                              class="emotion-298 emotion-299"
                             >
                               1
                             </span>
                           </div>
                           <div
-                            class="emotion-301 emotion-302"
+                            class="emotion-300 emotion-301"
                             dir="ltr"
                           >
                             <a
-                              class="focusIndicatorDisplayTableCell emotion-303 emotion-304"
+                              class="focusIndicatorDisplayTableCell emotion-302 emotion-303"
                               href="/igbo/afirika-50299413"
                             >
                               Obi adịghị ndị Igbo mma n'ọnọdụ ha nọ na Naịjirịa - Ekweremadu
                             </a>
                             <div
-                              class="emotion-305 emotion-306"
+                              class="emotion-304 emotion-305"
                             >
                               <time
                                 class="emotion-207 emotion-208"
@@ -3236,35 +3225,35 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         </div>
                       </li>
                       <li
-                        class="emotion-292 emotion-293 emotion-2"
+                        class="emotion-291 emotion-292 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-295 emotion-296"
+                          class="emotion-294 emotion-295"
                         >
                           <div
-                            class="emotion-297 emotion-298"
+                            class="emotion-296 emotion-297"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-299 emotion-300"
+                              class="emotion-298 emotion-299"
                             >
                               2
                             </span>
                           </div>
                           <div
-                            class="emotion-301 emotion-302"
+                            class="emotion-300 emotion-301"
                             dir="ltr"
                           >
                             <a
-                              class="focusIndicatorDisplayTableCell emotion-303 emotion-304"
+                              class="focusIndicatorDisplayTableCell emotion-302 emotion-303"
                               href="/igbo/afirika-50295552"
                             >
                               Ihe gọọmentị Naịjirịa sị a ga-eme tupu ha agbapee 'border'
                             </a>
                             <div
-                              class="emotion-305 emotion-306"
+                              class="emotion-304 emotion-305"
                             >
                               <time
                                 class="emotion-207 emotion-208"
@@ -3277,35 +3266,35 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         </div>
                       </li>
                       <li
-                        class="emotion-292 emotion-293 emotion-2"
+                        class="emotion-291 emotion-292 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-295 emotion-296"
+                          class="emotion-294 emotion-295"
                         >
                           <div
-                            class="emotion-297 emotion-298"
+                            class="emotion-296 emotion-297"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-299 emotion-300"
+                              class="emotion-298 emotion-299"
                             >
                               3
                             </span>
                           </div>
                           <div
-                            class="emotion-301 emotion-302"
+                            class="emotion-300 emotion-301"
                             dir="ltr"
                           >
                             <a
-                              class="focusIndicatorDisplayTableCell emotion-303 emotion-304"
+                              class="focusIndicatorDisplayTableCell emotion-302 emotion-303"
                               href="/igbo/afirika-50227971"
                             >
                               Onye bụ 'Sarah Baartman' a e ji maka ya adọri Dice Ailes?
                             </a>
                             <div
-                              class="emotion-305 emotion-306"
+                              class="emotion-304 emotion-305"
                             >
                               <time
                                 class="emotion-207 emotion-208"
@@ -3318,35 +3307,35 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         </div>
                       </li>
                       <li
-                        class="emotion-292 emotion-293 emotion-2"
+                        class="emotion-291 emotion-292 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-295 emotion-296"
+                          class="emotion-294 emotion-295"
                         >
                           <div
-                            class="emotion-297 emotion-298"
+                            class="emotion-296 emotion-297"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-299 emotion-300"
+                              class="emotion-298 emotion-299"
                             >
                               4
                             </span>
                           </div>
                           <div
-                            class="emotion-301 emotion-302"
+                            class="emotion-300 emotion-301"
                             dir="ltr"
                           >
                             <a
-                              class="focusIndicatorDisplayTableCell emotion-303 emotion-304"
+                              class="focusIndicatorDisplayTableCell emotion-302 emotion-303"
                               href="/igbo/afirika-50299416"
                             >
                               Ụlọ na-agba ọkụ n'ahia Balogun, Legọs
                             </a>
                             <div
-                              class="emotion-305 emotion-306"
+                              class="emotion-304 emotion-305"
                             >
                               <time
                                 class="emotion-207 emotion-208"
@@ -3359,35 +3348,35 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         </div>
                       </li>
                       <li
-                        class="emotion-292 emotion-293 emotion-2"
+                        class="emotion-291 emotion-292 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-295 emotion-296"
+                          class="emotion-294 emotion-295"
                         >
                           <div
-                            class="emotion-297 emotion-298"
+                            class="emotion-296 emotion-297"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-299 emotion-300"
+                              class="emotion-298 emotion-299"
                             >
                               5
                             </span>
                           </div>
                           <div
-                            class="emotion-301 emotion-302"
+                            class="emotion-300 emotion-301"
                             dir="ltr"
                           >
                             <a
-                              class="focusIndicatorDisplayTableCell emotion-303 emotion-304"
+                              class="focusIndicatorDisplayTableCell emotion-302 emotion-303"
                               href="/igbo/afirika-50259685"
                             >
                               Gịnị bụ ikuchi nwaanyị n'ala Igbo?
                             </a>
                             <div
-                              class="emotion-305 emotion-306"
+                              class="emotion-304 emotion-305"
                             >
                               <time
                                 class="emotion-207 emotion-208"
@@ -3400,35 +3389,35 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         </div>
                       </li>
                       <li
-                        class="emotion-292 emotion-293 emotion-2"
+                        class="emotion-291 emotion-292 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-295 emotion-296"
+                          class="emotion-294 emotion-295"
                         >
                           <div
-                            class="emotion-297 emotion-298"
+                            class="emotion-296 emotion-297"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-299 emotion-300"
+                              class="emotion-298 emotion-299"
                             >
                               6
                             </span>
                           </div>
                           <div
-                            class="emotion-301 emotion-302"
+                            class="emotion-300 emotion-301"
                             dir="ltr"
                           >
                             <a
-                              class="focusIndicatorDisplayTableCell emotion-303 emotion-304"
+                              class="focusIndicatorDisplayTableCell emotion-302 emotion-303"
                               href="/igbo/afirika-50294336"
                             >
                               Nne ụmụaka atọ ụlọ aja dagburu n'Ebonyi amabeghị na ha nwụrụ
                             </a>
                             <div
-                              class="emotion-305 emotion-306"
+                              class="emotion-304 emotion-305"
                             >
                               <time
                                 class="emotion-207 emotion-208"
@@ -3441,35 +3430,35 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         </div>
                       </li>
                       <li
-                        class="emotion-292 emotion-293 emotion-2"
+                        class="emotion-291 emotion-292 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-295 emotion-296"
+                          class="emotion-294 emotion-295"
                         >
                           <div
-                            class="emotion-297 emotion-298"
+                            class="emotion-296 emotion-297"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-299 emotion-300"
+                              class="emotion-298 emotion-299"
                             >
                               7
                             </span>
                           </div>
                           <div
-                            class="emotion-301 emotion-302"
+                            class="emotion-300 emotion-301"
                             dir="ltr"
                           >
                             <a
-                              class="focusIndicatorDisplayTableCell emotion-303 emotion-304"
+                              class="focusIndicatorDisplayTableCell emotion-302 emotion-303"
                               href="/igbo/afirika-50292027"
                             >
                               Akwamozu o kwesiri ịbụ oriri na nkwari?
                             </a>
                             <div
-                              class="emotion-305 emotion-306"
+                              class="emotion-304 emotion-305"
                             >
                               <time
                                 class="emotion-207 emotion-208"
@@ -3482,35 +3471,35 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         </div>
                       </li>
                       <li
-                        class="emotion-292 emotion-293 emotion-2"
+                        class="emotion-291 emotion-292 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-295 emotion-296"
+                          class="emotion-294 emotion-295"
                         >
                           <div
-                            class="emotion-297 emotion-298"
+                            class="emotion-296 emotion-297"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-299 emotion-300"
+                              class="emotion-298 emotion-299"
                             >
                               8
                             </span>
                           </div>
                           <div
-                            class="emotion-301 emotion-302"
+                            class="emotion-300 emotion-301"
                             dir="ltr"
                           >
                             <a
-                              class="focusIndicatorDisplayTableCell emotion-303 emotion-304"
+                              class="focusIndicatorDisplayTableCell emotion-302 emotion-303"
                               href="/igbo/afirika-50289214"
                             >
                               Gịnị ka ị ma maka 'Aba Women's riot' mere afọ 90 gara aga?
                             </a>
                             <div
-                              class="emotion-305 emotion-306"
+                              class="emotion-304 emotion-305"
                             >
                               <time
                                 class="emotion-207 emotion-208"
@@ -3523,35 +3512,35 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         </div>
                       </li>
                       <li
-                        class="emotion-292 emotion-293 emotion-2"
+                        class="emotion-291 emotion-292 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-295 emotion-296"
+                          class="emotion-294 emotion-295"
                         >
                           <div
-                            class="emotion-297 emotion-298"
+                            class="emotion-296 emotion-297"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-299 emotion-300"
+                              class="emotion-298 emotion-299"
                             >
                               9
                             </span>
                           </div>
                           <div
-                            class="emotion-301 emotion-302"
+                            class="emotion-300 emotion-301"
                             dir="ltr"
                           >
                             <a
-                              class="focusIndicatorDisplayTableCell emotion-303 emotion-304"
+                              class="focusIndicatorDisplayTableCell emotion-302 emotion-303"
                               href="/igbo/mba-uba-50266111"
                             >
                               Eke adọgbuola nwaanyị ji ya eme ihe olu
                             </a>
                             <div
-                              class="emotion-305 emotion-306"
+                              class="emotion-304 emotion-305"
                             >
                               <time
                                 class="emotion-207 emotion-208"
@@ -3564,35 +3553,35 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         </div>
                       </li>
                       <li
-                        class="emotion-292 emotion-293 emotion-2"
+                        class="emotion-291 emotion-292 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-295 emotion-296"
+                          class="emotion-294 emotion-295"
                         >
                           <div
-                            class="emotion-297 emotion-298"
+                            class="emotion-296 emotion-297"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-299 emotion-300"
+                              class="emotion-298 emotion-299"
                             >
                               10
                             </span>
                           </div>
                           <div
-                            class="emotion-301 emotion-302"
+                            class="emotion-300 emotion-301"
                             dir="ltr"
                           >
                             <a
-                              class="focusIndicatorDisplayTableCell emotion-303 emotion-304"
+                              class="focusIndicatorDisplayTableCell emotion-302 emotion-303"
                               href="/igbo/afirika-50279948"
                             >
                               Etu dị na nwunye zụtara ụmụaka abụọ si ma n'ọnya ndị uweojii
                             </a>
                             <div
-                              class="emotion-305 emotion-306"
+                              class="emotion-304 emotion-305"
                             >
                               <time
                                 class="emotion-207 emotion-208"

@@ -1930,54 +1930,54 @@ exports[`should render a news article with headline in the middle correctly 1`] 
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-6 {
+  .emotion-5 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-6 {
+  .emotion-5 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-6 {
+  .emotion-5 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-6 {
+  .emotion-5 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-6 {
+  .emotion-5 {
     margin-left: 20%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-6 {
+  .emotion-5 {
     margin-left: 40%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-6 {
+  .emotion-5 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-6 {
+    .emotion-5 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -1986,7 +1986,7 @@ exports[`should render a news article with headline in the middle correctly 1`] 
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-6 {
+    .emotion-5 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -1995,7 +1995,7 @@ exports[`should render a news article with headline in the middle correctly 1`] 
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-6 {
+    .emotion-5 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -2004,7 +2004,7 @@ exports[`should render a news article with headline in the middle correctly 1`] 
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-6 {
+    .emotion-5 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       padding: 0 1rem;
@@ -2013,7 +2013,7 @@ exports[`should render a news article with headline in the middle correctly 1`] 
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-6 {
+    .emotion-5 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
@@ -2021,7 +2021,7 @@ exports[`should render a news article with headline in the middle correctly 1`] 
   }
 
   @media (min-width: 80rem) {
-    .emotion-6 {
+    .emotion-5 {
       grid-template-columns: repeat(10, 1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
@@ -2029,7 +2029,7 @@ exports[`should render a news article with headline in the middle correctly 1`] 
   }
 }
 
-.emotion-8 {
+.emotion-7 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -2041,74 +2041,74 @@ exports[`should render a news article with headline in the middle correctly 1`] 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-8 {
+  .emotion-7 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-8 {
+  .emotion-7 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-8 {
+  .emotion-7 {
     padding-right: 2.5rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-10 {
+  .emotion-9 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-10 {
+  .emotion-9 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-10 {
+  .emotion-9 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-10 {
+  .emotion-9 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-10 {
+  .emotion-9 {
     margin-left: 16.666666666666668%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-10 {
+  .emotion-9 {
     margin-left: 33.333333333333336%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-10 {
+  .emotion-9 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-10 {
+    .emotion-9 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -2117,7 +2117,7 @@ exports[`should render a news article with headline in the middle correctly 1`] 
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-10 {
+    .emotion-9 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -2126,7 +2126,7 @@ exports[`should render a news article with headline in the middle correctly 1`] 
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-10 {
+    .emotion-9 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -2135,7 +2135,7 @@ exports[`should render a news article with headline in the middle correctly 1`] 
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-10 {
+    .emotion-9 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -2144,7 +2144,7 @@ exports[`should render a news article with headline in the middle correctly 1`] 
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-10 {
+    .emotion-9 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -2152,7 +2152,7 @@ exports[`should render a news article with headline in the middle correctly 1`] 
   }
 
   @media (min-width: 80rem) {
-    .emotion-10 {
+    .emotion-9 {
       grid-template-columns: repeat(12, 1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -2160,7 +2160,7 @@ exports[`should render a news article with headline in the middle correctly 1`] 
   }
 }
 
-.emotion-12 {
+.emotion-11 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -2174,26 +2174,26 @@ exports[`should render a news article with headline in the middle correctly 1`] 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-12 {
+  .emotion-11 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-12 {
+  .emotion-11 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-12 {
+  .emotion-11 {
     padding: 2.5rem 0;
   }
 }
 
-.emotion-12:focus {
+.emotion-11:focus {
   outline: none;
 }
 
@@ -2216,39 +2216,39 @@ exports[`should render a news article with headline in the middle correctly 1`] 
           role="main"
         >
           <h1
-            class="emotion-4 emotion-5"
+            class="emotion-4"
             id="content"
             tabindex="-1"
           >
             SEO Headline
           </h1>
           <div
-            class="emotion-6 emotion-7"
+            class="emotion-5 emotion-6"
             dir="ltr"
           >
             <p
-              class="emotion-8 emotion-9"
+              class="emotion-7 emotion-8"
               dir="ltr"
             >
               Paragraph above headline
             </p>
           </div>
           <div
-            class="emotion-10 emotion-7"
+            class="emotion-9 emotion-6"
             dir="ltr"
           >
             <strong
-              class="emotion-12 emotion-13"
+              class="emotion-11 emotion-12"
             >
               Article Headline
             </strong>
           </div>
           <div
-            class="emotion-6 emotion-7"
+            class="emotion-5 emotion-6"
             dir="ltr"
           >
             <p
-              class="emotion-8 emotion-9"
+              class="emotion-7 emotion-8"
               dir="ltr"
             >
               Paragraph below headline
@@ -2308,54 +2308,54 @@ exports[`should render a news article without headline correctly 1`] = `
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-6 {
+  .emotion-5 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-6 {
+  .emotion-5 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-6 {
+  .emotion-5 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-6 {
+  .emotion-5 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-6 {
+  .emotion-5 {
     margin-left: 20%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-6 {
+  .emotion-5 {
     margin-left: 40%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-6 {
+  .emotion-5 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-6 {
+    .emotion-5 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -2364,7 +2364,7 @@ exports[`should render a news article without headline correctly 1`] = `
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-6 {
+    .emotion-5 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -2373,7 +2373,7 @@ exports[`should render a news article without headline correctly 1`] = `
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-6 {
+    .emotion-5 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -2382,7 +2382,7 @@ exports[`should render a news article without headline correctly 1`] = `
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-6 {
+    .emotion-5 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       padding: 0 1rem;
@@ -2391,7 +2391,7 @@ exports[`should render a news article without headline correctly 1`] = `
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-6 {
+    .emotion-5 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
@@ -2399,7 +2399,7 @@ exports[`should render a news article without headline correctly 1`] = `
   }
 
   @media (min-width: 80rem) {
-    .emotion-6 {
+    .emotion-5 {
       grid-template-columns: repeat(10, 1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
@@ -2407,7 +2407,7 @@ exports[`should render a news article without headline correctly 1`] = `
   }
 }
 
-.emotion-8 {
+.emotion-7 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -2419,21 +2419,21 @@ exports[`should render a news article without headline correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-8 {
+  .emotion-7 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-8 {
+  .emotion-7 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-8 {
+  .emotion-7 {
     padding-right: 2.5rem;
   }
 }
@@ -2457,18 +2457,18 @@ exports[`should render a news article without headline correctly 1`] = `
           role="main"
         >
           <h1
-            class="emotion-4 emotion-5"
+            class="emotion-4"
             id="content"
             tabindex="-1"
           >
             Article Headline
           </h1>
           <div
-            class="emotion-6 emotion-7"
+            class="emotion-5 emotion-6"
             dir="ltr"
           >
             <p
-              class="emotion-8 emotion-9"
+              class="emotion-7 emotion-8"
               dir="ltr"
             >
               Paragraph 1
