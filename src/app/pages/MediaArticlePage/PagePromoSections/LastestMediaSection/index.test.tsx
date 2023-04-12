@@ -1,7 +1,4 @@
 import React from 'react';
-import { ServiceContextProvider } from '#app/contexts/ServiceContext';
-import { ToggleContextProvider } from '#app/contexts/ToggleContext';
-import { Services } from '#app/models/types/global';
 import {
   render,
   screen,
@@ -12,28 +9,14 @@ import hausaArticle from '../../../../../../data/hausa/articles/cxr0765kxlzo.jso
 import afaanoromooArticle from '../../../../../../data/afaanoromoo/articles/crgqplm3rmyo.json';
 import { LatestMedia } from './LatestMediaTypes';
 
-const Fixture = ({
-  content,
-  service = 'hausa',
-}: {
-  content: LatestMedia[] | null;
-  service?: Services;
-}) => {
-  return (
-    <ServiceContextProvider service={service}>
-      <ToggleContextProvider>
-        <LatestMediaSection content={content} />
-      </ToggleContextProvider>
-    </ServiceContextProvider>
-  );
-};
-
 describe('Latest Media Section', () => {
   it('should render 4 list items within <ul> tags', () => {
     const hausaLatestMediaList = hausaArticle.data.secondaryData
       .latestMedia as LatestMedia[];
 
-    const { container } = render(<Fixture content={hausaLatestMediaList} />);
+    const { container } = render(
+      <LatestMediaSection content={hausaLatestMediaList} />,
+    );
 
     const listItems = screen.getAllByRole('listitem');
     const list = container.querySelector('ul');
@@ -42,7 +25,7 @@ describe('Latest Media Section', () => {
   });
 
   it('should return empty section if theres no latest media', () => {
-    const { container } = render(<Fixture content={null} />);
+    const { container } = render(<LatestMediaSection content={null} />);
 
     const list = container.querySelector('ul');
     expect(list).not.toBeInTheDocument();
@@ -50,7 +33,7 @@ describe('Latest Media Section', () => {
 
   it('should return empty section if theres zero latest media', () => {
     const { container } = render(
-      <Fixture content={[] as unknown as LatestMedia[]} />,
+      <LatestMediaSection content={[] as unknown as LatestMedia[]} />,
     );
 
     const list = container.querySelector('ul');
@@ -61,7 +44,9 @@ describe('Latest Media Section', () => {
     const noTranslationForService = hausaArticle.data.secondaryData
       .latestMedia as LatestMedia[];
 
-    render(<Fixture content={noTranslationForService} />);
+    render(<LatestMediaSection content={noTranslationForService} />, {
+      service: 'hausa',
+    });
 
     expect(screen.getByText('Latest')).toBeInTheDocument();
   });
@@ -70,9 +55,9 @@ describe('Latest Media Section', () => {
     const translationAvailForService = afaanoromooArticle.data.secondaryData
       .latestMedia as LatestMedia[];
 
-    render(
-      <Fixture content={translationAvailForService} service="afaanoromoo" />,
-    );
+    render(<LatestMediaSection content={translationAvailForService} />, {
+      service: 'afaanoromoo',
+    });
 
     expect(screen.getByText('Haaraa')).toBeInTheDocument();
   });
@@ -81,7 +66,7 @@ describe('Latest Media Section', () => {
     const hausaLatestMediaList = hausaArticle.data.secondaryData
       .latestMedia as LatestMedia[];
 
-    render(<Fixture content={hausaLatestMediaList} />);
+    render(<LatestMediaSection content={hausaLatestMediaList} />);
 
     const region = screen.getByRole('region');
     expect(region).toBeInTheDocument();
@@ -91,7 +76,10 @@ describe('Latest Media Section', () => {
     const hausaLatestMediaList = hausaArticle.data.secondaryData
       .latestMedia as LatestMedia[];
 
-    const { container } = render(<Fixture content={hausaLatestMediaList} />);
+    const { container } = render(
+      <LatestMediaSection content={hausaLatestMediaList} />,
+      { service: 'hausa' },
+    );
 
     const ariaLabel = container
       .querySelector(`section`)
@@ -108,7 +96,9 @@ describe('Latest Media Section', () => {
     const hausaLatestMediaList = hausaArticle.data.secondaryData
       .latestMedia as LatestMedia[];
 
-    render(<Fixture content={[hausaLatestMediaList[0]]} />);
+    render(<LatestMediaSection content={[hausaLatestMediaList[0]]} />, {
+      service: 'hausa',
+    });
 
     const listItems = screen.queryAllByRole('listitem');
     const list = screen.queryByRole('list');
