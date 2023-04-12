@@ -2,7 +2,7 @@
 
 exports[`MediaArticlePage should render a news article correctly 1`] = `
 .emotion-0 {
-  background-color: #141414;
+  background-color: #F6F6F6;
 }
 
 .emotion-1 {
