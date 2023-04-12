@@ -8,9 +8,8 @@ import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 const Paragraph = styled.p`
   ${({ script }) => script && getBodyCopy(script)};
   ${({ service }) => getSansRegular(service)}
-  color: ${({ darkMode }) =>
-    props =>
-      darkMode ? props.theme.palette.LUNAR : props.theme.palette.GREY_10};
+  color: ${({ darkMode, theme }) =>
+    darkMode || theme.isDarkUi ? theme.palette.LUNAR : theme.palette.GREY_10};
   padding-bottom: ${GEL_SPACING_TRPL};
   margin: 0; /* Reset */
 `;

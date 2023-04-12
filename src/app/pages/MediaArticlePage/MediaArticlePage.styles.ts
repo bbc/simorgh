@@ -4,7 +4,7 @@ import pixelsToRem from '../../utilities/pixelsToRem';
 export default {
   pageWrapper: ({ palette }: Theme) =>
     css({
-      backgroundColor: palette.GREY_2,
+      backgroundColor: palette.GREY_10,
     }),
   grid: ({ mq, gridWidths }: Theme) =>
     css({
