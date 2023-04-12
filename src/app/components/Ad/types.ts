@@ -29,24 +29,21 @@ export interface CanonicalAdBootstrapJsProps {
   adcampaign?: string | null;
 }
 
-export interface AmpAdSlotProps {
-  service: Services;
-  slotType: SlotType;
-  pageType: PageTypes;
-}
-
 export interface AdJsonDataProps {
   service: Services;
   slotType: SlotType;
   assetType: string;
 }
 
-export interface AmpAdContentProps {
+export interface AmpAdSlotProps {
   service: Services;
-  dir: Direction;
-  label: string;
   slotType: SlotType;
   pageType: PageTypes;
+}
+
+export interface AmpAdContentProps extends AmpAdSlotProps {
+  dir: Direction;
+  label: string;
 }
 
 export interface AmpAdProps extends AmpAdContentProps {
