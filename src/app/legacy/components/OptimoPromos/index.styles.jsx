@@ -22,7 +22,6 @@ export const ContentWrapper = styled.div`
 
 export const PromoWrapper = styled.div`
   position: relative;
-  background-color: ${({ theme }) =>
-    theme.isDarkUi ? theme.palette.GREY_3 : theme.palette.WHITE};
+  background-color: ${props => props.theme.palette.WHITE};
   height: 100%;
 `;

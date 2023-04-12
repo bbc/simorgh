@@ -26,7 +26,6 @@ interface Palette extends BrandPalette {
   GREY_11: string;
   GREY_2: string;
   GREY_3: string;
-  GREY_4: string;
   GREY_5: string;
   GREY_6: string;
   GREY_7: string;
@@ -481,6 +480,5 @@ declare module '@emotion/react' {
     };
     brandSVG: BrandSVG;
     gridWidths: GridWidths;
-    isDarkUi: boolean;
   }
 }

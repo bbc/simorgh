@@ -17,9 +17,7 @@ import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 
 const rtlStyles = ({ theme }) => `
   margin-right: ${GEL_MARGIN_BELOW_400PX};
-  border-right: 1px solid ${
-    theme.isDarkUi ? theme.palette.GREY_3 : theme.palette.METAL
-  };
+  border-right: 1px solid ${theme.palette.METAL};
 
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     width: calc(100% - ${GEL_MARGIN_ABOVE_400PX});
@@ -36,9 +34,7 @@ const rtlStyles = ({ theme }) => `
 
 const ltrStyles = ({ theme }) => `
   margin-left: ${GEL_MARGIN_BELOW_400PX};
-  border-left: 1px solid ${
-    theme.isDarkUi ? theme.palette.GREY_3 : theme.palette.METAL
-  };
+  border-left: 1px solid ${theme.palette.METAL};
 
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     width: calc(100% - ${GEL_MARGIN_ABOVE_400PX});
@@ -56,8 +52,7 @@ const ltrStyles = ({ theme }) => `
 const Caption = styled.figcaption`
   ${({ script }) => script && getLongPrimer(script)}
   ${({ service }) => getSansRegular(service)}
-  color: ${({ theme }) =>
-    theme.isDarkUi ? theme.palette.GREY_3 : theme.palette.GREY_6};
+  color: ${props => props.theme.palette.GREY_6};
   margin-top: ${GEL_SPACING};
   padding-left: ${GEL_MARGIN_BELOW_400PX};
   padding-right: ${GEL_MARGIN_BELOW_400PX};

@@ -1,8 +1,4 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-
-import { jsx } from '@emotion/react';
-import { useContext, forwardRef } from 'react';
+import React, { useContext, forwardRef } from 'react';
 import { shape, string } from 'prop-types';
 import path from 'ramda/src/path';
 import { createSrcsets } from '#lib/utilities/srcSet';
@@ -10,7 +6,7 @@ import buildIChefURL from '#app/lib/utilities/ichefURL';
 import Promo from '#components/OptimoPromos';
 import isEmpty from 'ramda/src/isEmpty';
 import { ServiceContext } from '../../../../../contexts/ServiceContext';
-import styles from './index.styles';
+import { TitleWithContent, StyledRelatedContentWrapper } from './index.styles';
 
 const RelatedContentItem = forwardRef(
   ({ item, ariaLabelledBy, eventTrackingData }, viewRef) => {
@@ -101,8 +97,10 @@ const RelatedContentItem = forwardRef(
 
     const titleHasContent = titleTag === 'h3';
 
+    const Title = titleHasContent ? TitleWithContent : Promo.Title;
+
     return (
-      <div css={styles.wrapper} ref={viewRef}>
+      <StyledRelatedContentWrapper ref={viewRef}>
         <Promo
           to={assetUri}
           ariaLabelledBy={ariaLabelledBy}
@@ -117,21 +115,15 @@ const RelatedContentItem = forwardRef(
             height={height}
           />
           <Promo.ContentWrapper>
-            <Promo.Title
-              css={titleHasContent ? styles.promoTitle : null}
-              as={titleTag}
-              script={script}
-            >
+            <Title as={titleTag} script={script}>
               <Promo.Link>
                 <Promo.Content headline={headline} />
               </Promo.Link>
-            </Promo.Title>
-            <Promo.Timestamp css={styles.promoTimestamp}>
-              {timestamp}
-            </Promo.Timestamp>
+            </Title>
+            <Promo.Timestamp>{timestamp}</Promo.Timestamp>
           </Promo.ContentWrapper>
         </Promo>
-      </div>
+      </StyledRelatedContentWrapper>
     );
   },
 );

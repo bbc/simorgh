@@ -12,15 +12,14 @@ export default {
 
   bylineList: () => css({ listStyle: 'none', padding: 0, margin: 0 }),
 
-  author: ({ palette, isDarkUi }: Theme) =>
+  author: ({ palette }: Theme) =>
     css({
-      color: isDarkUi ? palette.GREY_2 : palette.GREY_10,
+      color: palette.GREY_10,
       display: 'inline-block',
       verticalAlign: 'middle',
     }),
 
-  jobRole: ({ palette, isDarkUi }: Theme) =>
-    css({ color: isDarkUi ? palette.GREY_2 : palette.GREY_6 }),
+  jobRole: ({ palette }: Theme) => css({ color: palette.GREY_6 }),
 
   twitterText: ({ palette }: Theme) =>
     css({
@@ -29,11 +28,11 @@ export default {
       verticalAlign: 'middle',
     }),
 
-  authorChevron: ({ palette, isDarkUi, spacings, mq }: Theme) =>
+  authorChevron: ({ palette, spacings, mq }: Theme) =>
     css({
       verticalAlign: 'middle',
       margin: `0 ${spacings.HALF}rem`,
-      color: isDarkUi ? palette.GREY_2 : palette.GREY_10,
+      color: palette.GREY_10,
       fill: 'currentcolor',
       width: `${spacings.FULL + spacings.HALF}rem`,
       height: `${spacings.FULL + spacings.HALF}rem`,
@@ -82,16 +81,16 @@ export default {
       clear: 'both',
     }),
 
-  locationText: ({ palette, isDarkUi }: Theme) =>
+  locationText: ({ palette }: Theme) =>
     css({
-      color: isDarkUi ? palette.GREY_2 : palette.SHADOW,
+      color: palette.SHADOW,
       display: 'block',
       paddingTop: ` ${pixelsToRem(4)}rem`,
     }),
 
-  reportingFromText: ({ palette, isDarkUi }: Theme) =>
+  reportingFromText: ({ palette }: Theme) =>
     css({
-      color: isDarkUi ? palette.GREY_2 : palette.SHADOW,
+      color: palette.SHADOW,
     }),
 
   timestampLineBreak: ({ palette, spacings }: Theme) =>

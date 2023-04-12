@@ -3,17 +3,15 @@ import pixelsToRem from '../../utilities/pixelsToRem';
 import { focusIndicatorThickness } from '../ThemeProvider/focusIndicator';
 
 export default {
-  parent: ({ palette, isDarkUi }: Theme) =>
+  parent: ({ palette }: Theme) =>
     css({
-      backgroundColor: isDarkUi ? palette.GREY_3 : palette.WHITE,
+      backgroundColor: palette.WHITE,
       padding: `${pixelsToRem(16)}rem`,
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'flex-start',
-      border: `${pixelsToRem(1)}rem solid ${
-        isDarkUi ? palette.GREY_2 : palette.GREY_5
-      }`,
+      border: `${pixelsToRem(1)}rem solid ${palette.GREY_5}`,
     }),
 
   textBody: ({ spacings, palette }: Theme) =>
@@ -37,12 +35,10 @@ export default {
       },
     }),
 
-  button: ({ spacings, palette, isDarkUi }: Theme) =>
+  button: ({ spacings, palette }: Theme) =>
     css({
-      backgroundColor: isDarkUi ? palette.GREY_3 : palette.WHITE,
-      border: `${pixelsToRem(1)}rem solid ${
-        isDarkUi ? palette.GREY_10 : palette.PHILIPPINE_GREY
-      }`,
+      backgroundColor: palette.WHITE,
+      border: `${pixelsToRem(1)}rem solid ${palette.PHILIPPINE_GREY}`,
       borderRadius: 0,
       padding: `${spacings.FULL}rem`,
       cursor: 'pointer',

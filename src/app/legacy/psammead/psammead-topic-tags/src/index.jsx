@@ -45,19 +45,16 @@ const SingleTopicTagItem = styled.div`
     min-height: ${MIN_TAG_HEIGHT};
     padding: ${GEL_SPACING} ${GEL_SPACING_DBL};
     align-items: center;
-    background-color: ${({ backgroundColour, theme }) =>
-      theme.isDarkUi ? theme.palette.GREY_7 : backgroundColour};
+    background-color: ${({ backgroundColour }) => backgroundColour};
     text-decoration: none;
-    color: ${({ theme }) =>
-      theme.isDarkUi ? theme.palette.GREY_2 : theme.palette.EBON};
+    color: ${props => props.theme.palette.EBON};
 
     &:hover,
     &:focus {
       text-decoration: underline;
     }
     &:visited {
-      color: ${({ theme }) =>
-        theme.isDarkUi ? theme.palette.GREY_2 : theme.palette.METAL};
+      color: ${props => props.theme.palette.METAL};
     }
   }
 `;

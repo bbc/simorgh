@@ -5,8 +5,10 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { UserContextProvider } from '#contexts/UserContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
-import { MEDIA_ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-import articleData from '#data/hausa/articles/cw43vy8zdjvo.json';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import articleData from '#data/news/articles/c0g992jmmkko.json';
+import articleDataWithRelatedContent from '#data/afrique/articles/c7yn6nznljdo.json';
+import articleDataWithSingleRelatedContent from '#data/afrique/articles/cz216x22106o.json';
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
 import MediaArticlePageComponent from './MediaArticlePage';
@@ -27,7 +29,7 @@ const ComponentWithContext = ({ data: { data } }) => {
       <ServiceContextProvider service="news">
         <RequestContextProvider
           isAmp={false}
-          pageType={MEDIA_ARTICLE_PAGE}
+          pageType={ARTICLE_PAGE}
           service="news"
         >
           <UserContextProvider>
@@ -49,11 +51,19 @@ const ComponentWithContext = ({ data: { data } }) => {
 
 export default {
   Component: ComponentWithContext,
-  title: 'Pages/Media Article Page',
+  title: 'Pages/Article Page',
   decorators: [withKnobs],
   parameters: { layout: 'fullscreen' },
 };
 
 export const MediaArticlePage = props => (
   <ComponentWithContext {...props} data={articleData} />
+);
+
+export const MediaArticlePageWithRelatedContent = props => (
+  <ComponentWithContext {...props} data={articleDataWithRelatedContent} />
+);
+
+export const MediaArticlePageWithSingleRelatedContent = props => (
+  <ComponentWithContext {...props} data={articleDataWithSingleRelatedContent} />
 );

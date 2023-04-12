@@ -28,8 +28,7 @@ import UnorderedList from '../BulletedList';
 const GistWrapper = styled.div`
   color: ${props => props.theme.palette.GREY_6};
   border-top: ${GEL_SPACING_HLF} solid ${props => props.theme.palette.POSTBOX};
-  background-color: ${({ theme }) =>
-    theme.isDarkUi ? theme.palette.GREY_3 : theme.palette.WHITE};
+  background-color: ${props => props.theme.palette.WHITE};
   ${({ dir }) =>
     dir === 'ltr'
       ? `padding: ${GEL_SPACING_TRPL} ${GEL_SPACING_TRPL} 0 ${GEL_SPACING_DBL};`
@@ -45,7 +44,6 @@ const GistIntroduction = styled.strong`
   ${({ script }) => getDoublePica(script)}
   display: inline-block;
   padding-bottom: ${GEL_SPACING_TRPL};
-  color: ${({ theme }) => theme.isDarkUi && theme.palette.GREY_6};
 `;
 
 const GistList = styled(UnorderedList)`
@@ -54,10 +52,6 @@ const GistList = styled(UnorderedList)`
 
   ul {
     padding: 0;
-
-    & > li {
-      color: ${({ theme }) => theme.isDarkUi && theme.palette.GREY_6};
-    }
   }
 
   li {
@@ -65,13 +59,8 @@ const GistList = styled(UnorderedList)`
     ${({ script }) => getGreatPrimer(script)}
     ${({ direction }) => `padding-${direction}: ${GEL_SPACING_HLF_TRPL};`}
     margin-bottom: ${GEL_SPACING_DBL};
-
     &:last-child {
       padding-bottom: ${GEL_SPACING_DBL};
-    }
-
-    > * {
-      color: ${({ theme }) => theme.isDarkUi && theme.palette.GREY_6};
     }
   }
 
