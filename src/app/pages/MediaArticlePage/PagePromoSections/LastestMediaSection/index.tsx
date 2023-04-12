@@ -62,6 +62,16 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
   const LABEL_ID = 'latest-media-heading';
 
   if (!content || isEmpty(content)) return null;
+  const hasSingleContent = content.length === 1;
+  const singleItem = content[0];
+  const ariaLabelledBy = generatePromoId({
+    sectionType: 'latest-media',
+    assetUri: null,
+    canonicalUrl: singleItem.link,
+    uri: null,
+    contentType: singleItem.type,
+    index: 0,
+  });
 
   return (
     <section
@@ -83,11 +93,20 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
       >
         {translations.latestMediaTitle ?? 'Latest'}
       </StyledSectionLabel>
-      <StyledPromoList>
-        {content.map((item, index) =>
-          renderLatestMediaList(item, index, eventTrackingData, viewRef),
-        )}
-      </StyledPromoList>
+      {hasSingleContent ? (
+        <LatestMediaItem
+          item={singleItem}
+          ariaLabelledBy={ariaLabelledBy}
+          ref={viewRef}
+          eventTrackingData={eventTrackingData}
+        />
+      ) : (
+        <StyledPromoList>
+          {content.map((item, index) =>
+            renderLatestMediaList(item, index, eventTrackingData, viewRef),
+          )}
+        </StyledPromoList>
+      )}
     </section>
   );
 };

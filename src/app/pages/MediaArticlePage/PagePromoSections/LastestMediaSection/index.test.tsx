@@ -67,17 +67,53 @@ describe('Latest Media Section', () => {
   });
 
   it('should render correct translated title if a translation is available', () => {
-    const noTranslationForService = afaanoromooArticle.data.secondaryData
+    const translationAvailForService = afaanoromooArticle.data.secondaryData
       .latestMedia as LatestMedia[];
 
-    render(<Fixture content={noTranslationForService} service="afaanoromoo" />);
+    render(
+      <Fixture content={translationAvailForService} service="afaanoromoo" />,
+    );
 
     expect(screen.getByText('Haaraa')).toBeInTheDocument();
   });
 
-  it('should have a region role', () => {});
+  it('should have a region role', () => {
+    const hausaLatestMediaList = hausaArticle.data.secondaryData
+      .latestMedia as LatestMedia[];
 
-  it('should have a section label, labelled by the section label id', () => {});
+    render(<Fixture content={hausaLatestMediaList} />);
 
-  it('should render RelatedContent component without <ul> and <li> when given single item in collection', () => {});
+    const region = screen.getByRole('region');
+    expect(region).toBeInTheDocument();
+  });
+
+  it('should have a section label, labelled by the section label id', () => {
+    const hausaLatestMediaList = hausaArticle.data.secondaryData
+      .latestMedia as LatestMedia[];
+
+    const { container } = render(<Fixture content={hausaLatestMediaList} />);
+
+    const ariaLabel = container
+      .querySelector(`section`)
+      ?.getAttribute('aria-labelledby');
+    expect(ariaLabel).toMatch('latest-media-heading');
+    const regionLabelId = screen
+      .getByRole('region')
+      .getAttribute('aria-labelledBy');
+    const LabelLabelId = screen.getByText('Latest').getAttribute('id');
+    expect(regionLabelId).toBe(LabelLabelId);
+  });
+
+  it('should render RelatedContent component without <ul> and <li> when given single item in collection', () => {
+    const hausaLatestMediaList = hausaArticle.data.secondaryData
+      .latestMedia as LatestMedia[];
+
+    render(<Fixture content={[hausaLatestMediaList[0]]} />);
+
+    const listItems = screen.queryAllByRole('listitem');
+    const list = screen.queryByRole('list');
+
+    expect(listItems.length).toBe(0);
+    expect(list).toBeNull();
+  });
 });
