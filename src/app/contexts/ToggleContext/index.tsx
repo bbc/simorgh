@@ -25,7 +25,7 @@ const ToggleContext = createContext<ToggleContextProps>(
   {} as ToggleContextProps,
 );
 
-export type ToggleContextProviderProps = {
+type ToggleContextProviderProps = {
   toggles?: {
     [key: symbol]: {
       enabled: boolean;
