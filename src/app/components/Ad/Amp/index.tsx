@@ -13,7 +13,7 @@ import { ServiceContext } from '../../../contexts/ServiceContext';
 import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
 import AdSlot from './AdSlot';
 import styles from './index.styles';
-import { AmpAdContentProps, AmpAdProps, SlotType } from '../types';
+import { AmpAdContentProps, AmpAdProps, AdProps } from '../types';
 
 const AMP_ACCESS_DATA = (endpoint: string) => ({
   authorization: endpoint,
@@ -131,7 +131,7 @@ const AdWithPlaceholder = ({
   );
 };
 
-const AmpAd = ({ slotType }: { slotType: SlotType }) => {
+const AmpAd = ({ slotType }: AdProps) => {
   const { translations, dir, service, showAdPlaceholder } =
     useContext(ServiceContext);
   const { pageType } = useContext(RequestContext);
