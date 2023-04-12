@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Simorgh",
   "main": "./src/client.js",
+  "type": "module",
   "sideEffects": [
     "./src/app/legacy/psammead/moment-timezone-include/**/*.*",
     "./src/app/legacy/psammead/psammead-locales/**/*.*",
