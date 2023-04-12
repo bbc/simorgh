@@ -5,7 +5,7 @@ import moment from 'moment';
 import formatDuration from '#app/lib/utilities/formatDuration';
 import { LatestMediaIndicatorProp } from '../LatestMediaTypes';
 
-import { StyledPromoMediaIndicator, StyledTime, styles } from './index.styles';
+import { StyledPromoMediaIndicator, styles } from './index.styles';
 
 const formatChildren = (duration: string) => {
   if (!duration) return null;
@@ -13,9 +13,9 @@ const formatChildren = (duration: string) => {
   const durationString = formatDuration({ duration: momentDuration });
   const isoDuration = momentDuration.toISOString();
   return (
-    <StyledTime dateTime={isoDuration} suppressHydrationWarning aria-hidden>
+    <time dateTime={isoDuration} suppressHydrationWarning aria-hidden>
       {durationString}
-    </StyledTime>
+    </time>
   );
 };
 
