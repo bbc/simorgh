@@ -45,7 +45,7 @@ const GistIntroduction = styled.strong`
   ${({ script }) => getDoublePica(script)}
   display: inline-block;
   padding-bottom: ${GEL_SPACING_TRPL};
-  color: ${({ theme }) => theme.isDarkUi && theme.palette.GREY_6};
+  color: ${({ theme }) => theme.isDarkUi && theme.palette.GREY_8};
 `;
 
 const GistList = styled(UnorderedList)`
@@ -56,7 +56,7 @@ const GistList = styled(UnorderedList)`
     padding: 0;
 
     & > li {
-      color: ${({ theme }) => theme.isDarkUi && theme.palette.GREY_6};
+      color: ${({ theme }) => theme.isDarkUi && theme.palette.GREY_8};
     }
   }
 
@@ -71,7 +71,11 @@ const GistList = styled(UnorderedList)`
     }
 
     > * {
-      color: ${({ theme }) => theme.isDarkUi && theme.palette.GREY_6};
+      color: ${({ theme }) => theme.isDarkUi && theme.palette.GREY_8};
+
+      &:visited {
+        color: ${({ theme }) => theme.isDarkUi && theme.palette.GREY_6};
+      }
     }
   }
 
