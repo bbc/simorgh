@@ -45,6 +45,10 @@ export default {
   Component,
   parameters: {
     metadata,
+    backgrounds: {
+      default: 'Dark',
+      values: [{ name: 'Dark', value: '#141414' }],
+    },
   },
   decorators: [withKnobs, withServicesKnob()],
 };

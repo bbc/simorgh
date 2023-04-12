@@ -339,10 +339,6 @@ export const parameters = {
         name: 'CPS',
         value: '#FFFFFF',
       },
-      {
-        name: 'Dark',
-        value: '#141414',
-      },
     ],
   },
 };
