@@ -4,10 +4,10 @@ import createCache from '@emotion/cache';
 import { CacheProvider } from '@emotion/react';
 import { loadableReady } from '@loadable/component';
 import { hydrateRoot } from 'react-dom/client';
-import { template, templateStyles } from '#lib/joinUsTemplate';
-import loggerNode from '#lib/logger.node';
-import { ClientApp } from './app/legacy/containers/App';
-import routes from './app/routes';
+import { template, templateStyles } from '#lib/joinUsTemplate.js';
+import loggerNode from '#lib/logger.node.js';
+import { ClientApp } from './app/legacy/containers/App/index.jsx';
+import routes from './app/routes/index.js';
 
 const logger = loggerNode();
 const data = window.SIMORGH_DATA || {};

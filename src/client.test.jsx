@@ -3,8 +3,8 @@ import * as reactDom from 'react-dom/client';
 import {
   resetWindowValue,
   setWindowValue,
-} from '#psammead/psammead-test-helpers/src';
-import '#testHelpers/loggerMock';
+} from '#psammead/psammead-test-helpers/src/index.js';
+import '#testHelpers/loggerMock.js';
 
 jest.mock('react-dom/client');
 
