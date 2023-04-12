@@ -15,7 +15,7 @@ interface Ads {
   destroySlot: SlotFunction;
 }
 
-type PushFunction = (fn: SlotFunction) => void;
+type PushFunction = (slotFunction: SlotFunction) => void;
 
 interface Cmd {
   push: PushFunction;
