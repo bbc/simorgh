@@ -41,6 +41,7 @@ module.exports = {
       },
     ],
     'import/extensions': 'off',
+    'import/no-unresolved': 'warn',
     'jsx-a11y/no-redundant-roles': 'off',
   },
   settings: {
@@ -64,6 +65,7 @@ module.exports = {
             extensions: ['.jsx', '.tsx'],
           },
         ],
+        '@typescript-eslint/ban-ts-comment': 'off',
         ...{
           // adds support for type, interface and enum declarations https://typescript-eslint.io/rules/no-use-before-define/#how-to-use
           'no-use-before-define': 'off',

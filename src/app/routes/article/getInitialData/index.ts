@@ -2,15 +2,19 @@
 import { Agent } from 'https';
 import pipe from 'ramda/src/pipe';
 import Url from 'url-parse';
-import getAdditionalPageData from '#app/routes/cpsAsset/utils/getAdditionalPageData';
-import getEnvironment from '#app/routes/utils/getEnvironment';
-import nodeLogger from '../../../lib/logger.node';
-import { getUrlPath } from '../../../lib/utilities/urlParser';
-import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
-import fetchPageData from '../../utils/fetchPageData';
-import { Services, Variants } from '../../../models/types/global';
-import getOnwardsPageData from '../utils/getOnwardsData';
-import { advertisingAllowed, isSfv } from '../utils/paramChecks';
+import getAdditionalPageData from '#app/routes/cpsAsset/utils/getAdditionalPageData.js';
+// @ts-ignore
+import getEnvironment from '#app/routes/utils/getEnvironment/index.ts';
+import nodeLogger from '../../../lib/logger.node.js';
+import { getUrlPath } from '../../../lib/utilities/urlParser/index.js';
+import { BFF_FETCH_ERROR } from '../../../lib/logger.const.js';
+import fetchPageData from '../../utils/fetchPageData/index.js';
+// @ts-ignore
+import { Services, Variants } from '../../../models/types/global.ts';
+// @ts-ignore
+import getOnwardsPageData from '../utils/getOnwardsData.ts';
+// @ts-ignore
+import { advertisingAllowed, isSfv } from '../utils/paramChecks.ts';
 
 const logger = nodeLogger(__filename);
 

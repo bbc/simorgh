@@ -1,8 +1,9 @@
 import { Agent } from 'https';
-import * as getOnwardsPageData from '../utils/getOnwardsData';
-import * as fetchPageData from '../../utils/fetchPageData';
-import nodeLogger from '../../../../testHelpers/loggerMock';
-import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
+// @ts-ignore
+import * as getOnwardsPageData from '../utils/getOnwardsData.ts';
+import * as fetchPageData from '../../utils/fetchPageData/index.js';
+import nodeLogger from '../../../../testHelpers/loggerMock.js';
+import { BFF_FETCH_ERROR } from '../../../lib/logger.const.js';
 import getInitialData from '.';
 
 process.env.BFF_PATH = 'https://mock-bff-path';

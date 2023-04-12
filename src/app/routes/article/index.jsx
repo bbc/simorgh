@@ -1,13 +1,13 @@
 import React from 'react';
 import pathOr from 'ramda/src/pathOr';
-import { ArticlePage, ErrorPage, MediaArticlePage } from '#pages';
-import { articlePath } from '#app/routes/utils/regex';
+import { ArticlePage, ErrorPage, MediaArticlePage } from '#pages/index.js';
+import { articlePath } from '#app/routes/utils/regex/index.js';
 import {
   ARTICLE_PAGE,
   MEDIA_ARTICLE_PAGE,
   ERROR_PAGE,
-} from '#app/routes/utils/pageTypes';
-import getInitialData from './getInitialData';
+} from '#app/routes/utils/pageTypes.js';
+import getInitialData from './getInitialData/index.ts';
 
 const ArticleVariation = props => {
   const consumable = pathOr(

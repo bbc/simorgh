@@ -1,6 +1,7 @@
 import pathOr from 'ramda/src/pathOr';
 import { InferProps } from 'prop-types';
-import { articleDataPropTypes } from '../../../models/propTypes/article';
+// @ts-ignore
+import { articleDataPropTypes } from '../../../models/propTypes/article/index.js';
 
 export type ArticleType = InferProps<typeof articleDataPropTypes>;
 

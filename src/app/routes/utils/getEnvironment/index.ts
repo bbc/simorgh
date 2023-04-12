@@ -1,4 +1,5 @@
-import { Environments } from '#app/models/types/global';
+// eslint-disable-next-line import/no-unresolved
+import { Environments } from '#app/models/types/global.js';
 
 export default (pathname: string) => {
   if (pathname.includes('renderer_env=test')) {

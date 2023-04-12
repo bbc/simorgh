@@ -36,6 +36,6 @@
       "#server/*": ["src/server/*"]
     }
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
   "exclude": ["node_modules", "build", "src/app/legacy/**/*"]
 }
