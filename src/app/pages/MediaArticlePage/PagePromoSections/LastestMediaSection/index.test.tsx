@@ -1,5 +1,5 @@
 import React from 'react';
-import { ServiceContextProvider } from '#app/contexts/ServiceContext/__mocks__';
+import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
 import { Services } from '#app/models/types/global';
 import {
@@ -72,10 +72,10 @@ describe('Latest Media Section', () => {
 
     render(<Fixture content={noTranslationForService} service="afaanoromoo" />);
 
-    expect(screen.getByText('Latest')).toBeInTheDocument();
+    expect(screen.getByText('Haaraa')).toBeInTheDocument();
   });
 
-  it('should haver a region role', () => {});
+  it('should have a region role', () => {});
 
   it('should have a section label, labelled by the section label id', () => {});
 
