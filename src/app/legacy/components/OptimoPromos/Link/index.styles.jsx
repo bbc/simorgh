@@ -26,7 +26,8 @@ const Link = styled.a`
   }
 
   &:visited {
-    color: ${props => props.theme.palette.METAL};
+    color: ${({ theme }) =>
+      theme.isDarkUi ? theme.palette.GREY_6 : theme.palette.METAL};
   }
 `;
 
