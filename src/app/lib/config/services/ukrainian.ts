@@ -3,11 +3,8 @@ import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/uk';
 import withContext from '../../../contexts/utils/withContext';
 import { mainTranslations as russianMainTranslations } from './russian';
-import {
-  Direction,
-  UkrainianConfig,
-} from '../../../models/types/serviceConfig';
-import { Services } from '../../../models/types/global';
+import { UkrainianConfig } from '../../../models/types/serviceConfig';
+import { Services, Direction } from '../../../models/types/global';
 
 const secondaryColumnTranslations = {
   topStoriesTitle: 'Головне',

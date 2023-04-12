@@ -4,8 +4,8 @@ import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/sr-cyrl';
 import '#psammead/psammead-locales/moment/sr';
 import withContext from '../../../contexts/utils/withContext';
-import { Direction, SerbianConfig } from '../../../models/types/serviceConfig';
-import { Services } from '../../../models/types/global';
+import { SerbianConfig } from '../../../models/types/serviceConfig';
+import { Services, Direction } from '../../../models/types/global';
 
 const baseServiceConfig = {
   articleAuthor: 'https://www.facebook.com/bbcnews',
