@@ -62,7 +62,7 @@ exports[`AMP Ads Snapshots should correctly render an AMP leaderboard ad 1`] = `
   text-align: right;
 }
 
-@media (min-width: 20rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-4 {
     font-size: 0.75rem;
     line-height: 1rem;
@@ -198,7 +198,7 @@ exports[`AMP Ads Snapshots should correctly render an AMP mpu ad 1`] = `
   text-align: right;
 }
 
-@media (min-width: 20rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-4 {
     font-size: 0.75rem;
     line-height: 1rem;
