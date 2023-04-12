@@ -2,6 +2,8 @@ import React, { PropsWithChildren } from 'react';
 
 import { withKnobs } from '@storybook/addon-knobs';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
+import { RequestContextProvider } from '#contexts/RequestContext';
+import { MEDIA_ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import { withServicesKnob } from '../../../../legacy/psammead/psammead-storybook-helpers/src';
 import ThemeProvider from '../../../../components/ThemeProvider';
@@ -22,13 +24,20 @@ interface ComponentProps extends Props {
   content: LatestMedia[];
 }
 const Component = ({ service, content }: PropsWithChildren<ComponentProps>) => (
-  <ThemeProvider service={service}>
-    <ServiceContextProvider service={service}>
-      <ToggleContextProvider>
-        <LatestMediaSection content={content} />
-      </ToggleContextProvider>
-    </ServiceContextProvider>
-  </ThemeProvider>
+  <RequestContextProvider
+    isAmp={false}
+    pageType={MEDIA_ARTICLE_PAGE}
+    service={service}
+    pathname=""
+  >
+    <ThemeProvider service={service}>
+      <ServiceContextProvider service={service}>
+        <ToggleContextProvider>
+          <LatestMediaSection content={content} />
+        </ToggleContextProvider>
+      </ServiceContextProvider>
+    </ThemeProvider>
+  </RequestContextProvider>
 );
 
 export default {

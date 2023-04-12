@@ -61,7 +61,7 @@ export const MediaArticlePage = props => (
   <ComponentWithContext {...props} data={articleData} />
 );
 
-export const MediaArticlePageWithLatestMedia = props => (
+export const MediaArticlePageWithLatestMediaImages = props => (
   <ComponentWithContext {...props} data={pidginArticle} />
 );
 

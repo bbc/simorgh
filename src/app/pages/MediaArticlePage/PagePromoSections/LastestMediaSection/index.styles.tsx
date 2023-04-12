@@ -6,8 +6,9 @@ import styled from '@emotion/styled';
 import SectionLabel from '#psammead/psammead-section-label/src';
 
 const styles = {
-  LatestMediaSection: ({ mq }: Theme) =>
+  LatestMediaSection: ({ mq, isDarkUi, palette }: Theme) =>
     css({
+      backgroundColor: isDarkUi ? palette.GREY_10 : palette.GREY_2,
       marginLeft: '0.5rem',
       marginRight: '0.5rem',
       [mq.GROUP_3_ONLY]: {
