@@ -47,7 +47,7 @@ const renderLatestMediaList = (
 };
 
 const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
-  const { service, dir, translations, script } = useContext(ServiceContext);
+  const { service, dir, translations } = useContext(ServiceContext);
 
   const eventTrackingData = {
     block: {
@@ -85,7 +85,7 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
         href={null}
         labelId={LABEL_ID}
         linkText={null}
-        script={script}
+        script={undefined}
         service={service}
         backgroundColor="transparent"
         overrideHeadingAs={null}
@@ -94,12 +94,14 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
         {translations.latestMediaTitle ?? 'Latest'}
       </StyledSectionLabel>
       {hasSingleContent ? (
-        <LatestMediaItem
-          item={singleItem}
-          ariaLabelledBy={ariaLabelledBy}
-          ref={viewRef}
-          eventTrackingData={eventTrackingData}
-        />
+        <div css={styles.LatestMediaPromoBorderAndWidth}>
+          <LatestMediaItem
+            item={singleItem}
+            ariaLabelledBy={ariaLabelledBy}
+            ref={viewRef}
+            eventTrackingData={eventTrackingData}
+          />
+        </div>
       ) : (
         <StyledPromoList>
           {content.map((item, index) =>

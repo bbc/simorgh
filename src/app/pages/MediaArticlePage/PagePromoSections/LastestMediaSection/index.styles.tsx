@@ -24,7 +24,7 @@ const styles = {
         rowGap: '1.5rem',
       },
     }),
-  LatestMediaPromoBorder: ({ mq, palette }: Theme) =>
+  LatestMediaPromoBorderAndWidth: ({ mq, palette }: Theme) =>
     css({
       borderBottom: `${pixelsToRem(1)}rem ${palette.GREY_2} solid`,
       marginBotton: '0',
@@ -56,7 +56,7 @@ export const StyledPromoList = styled(PromoList)`
 `;
 
 export const StyledPromoItem = styled(PromoItem)`
-  ${props => styles.LatestMediaPromoBorder(props.theme)}
+  ${props => styles.LatestMediaPromoBorderAndWidth(props.theme)}
   margin-bottom: 0;
 `;
 
