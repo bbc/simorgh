@@ -26,7 +26,7 @@ import {
   legacyAssetPageDataPath,
   secondaryColumnDataRegexPath,
   recommendationsDataRegex,
-} from './index';
+} from './index.js';
 
 jest.mock('#server/utilities/serviceConfigs', () => ({
   news: {},

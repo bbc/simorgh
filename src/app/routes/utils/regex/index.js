@@ -1,4 +1,4 @@
-import services from '../../../lib/config/services/loadableConfig';
+import services from '../../../lib/config/services/loadableConfig.ts';
 import {
   getArticleRegex,
   getArticleSwRegex,
@@ -26,7 +26,7 @@ import {
   getSecondaryColumnDataRegex,
   getRecommendationsDataRegex,
   getAfricaEyeTVPageRegex,
-} from './utils';
+} from './utils/index.js';
 
 const allServices = Object.keys(services);
 
