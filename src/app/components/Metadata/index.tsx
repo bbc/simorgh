@@ -1,9 +1,10 @@
-import React, { useContext } from 'react';
-import { string, node, shape, arrayOf, bool, number } from 'prop-types';
+/** @jsxRuntime classic */
+/** @jsx jsx */
+import { jsx, useTheme } from '@emotion/react';
+import { useContext } from 'react';
 import { Helmet } from 'react-helmet';
 import { RequestContext } from '#contexts/RequestContext';
-import { useTheme } from '@emotion/react';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import { ServiceContext } from '../../contexts/ServiceContext';
 import {
   getIconAssetUrl,
   getIconLinks,
@@ -11,10 +12,11 @@ import {
   renderAlternateLinks,
   renderAppleItunesApp,
 } from './utils';
+import { IconSizes, MetadataProps, Tag } from './types';
 
 const ENGLISH_SERVICES = ['news', 'sport'];
-const FACEBOOK_APP_ID = 1609039196070050;
-const iconSizes = {
+const FACEBOOK_APP_ID = '1609039196070050';
+const iconSizes: IconSizes = {
   'apple-touch-icon': [
     '72x72',
     '96x96',
@@ -29,8 +31,8 @@ const iconSizes = {
   icon: ['72x72', '96x96', '192x192'],
 };
 
-const renderTags = tags =>
-  tags.map(({ thingLabel: content }) => (
+const renderTags = (tags?: Tag[]) =>
+  tags?.map(({ thingLabel: content }) => (
     <meta name="article:tag" content={content} key={content} />
   ));
 
@@ -48,9 +50,9 @@ const MetadataContainer = ({
   imageWidth,
   imageHeight,
   children,
-  hasAppleItunesAppBanner,
-  hasAmpPage,
-}) => {
+  hasAppleItunesAppBanner = false,
+  hasAmpPage = true,
+}: MetadataProps) => {
   const {
     isAmp,
     canonicalLink,
@@ -151,8 +153,12 @@ const MetadataContainer = ({
       <meta property="og:description" content={description} />
       <meta property="og:image" content={metaImage} />
       <meta property="og:image:alt" content={metaImageAltText} />
-      {imageWidth && <meta property="og:image:width" content={imageWidth} />}
-      {imageHeight && <meta property="og:image:height" content={imageHeight} />}
+      {imageWidth && (
+        <meta property="og:image:width" content={String(imageWidth)} />
+      )}
+      {imageHeight && (
+        <meta property="og:image:height" content={String(imageHeight)} />
+      )}
       <meta property="og:locale" content={locale} />
       <meta property="og:site_name" content={brandName} />
       <meta property="og:title" content={socialTitle} />
@@ -183,49 +189,6 @@ const MetadataContainer = ({
       {children}
     </Helmet>
   );
-};
-
-const tagPropTypes = shape({
-  thingUri: string,
-  topicId: string,
-  topicName: string,
-  curationType: arrayOf(string),
-  thingId: string,
-  thingLabel: string,
-  thingType: arrayOf(string),
-  thingSameAs: arrayOf(string),
-});
-
-MetadataContainer.propTypes = {
-  title: string.isRequired,
-  socialHeadline: string,
-  lang: string.isRequired,
-  twitterHandle: string,
-  description: string.isRequired,
-  openGraphType: string.isRequired,
-  aboutTags: arrayOf(tagPropTypes),
-  mentionsTags: arrayOf(tagPropTypes),
-  image: string,
-  imageAltText: string,
-  imageWidth: number,
-  imageHeight: number,
-  children: node,
-  hasAppleItunesAppBanner: bool,
-  hasAmpPage: bool,
-};
-
-MetadataContainer.defaultProps = {
-  socialHeadline: null,
-  aboutTags: [],
-  mentionsTags: [],
-  image: null,
-  imageAltText: null,
-  imageWidth: null,
-  imageHeight: null,
-  children: null,
-  hasAppleItunesAppBanner: false,
-  hasAmpPage: true,
-  twitterHandle: null,
 };
 
 export default MetadataContainer;

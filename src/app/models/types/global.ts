@@ -13,6 +13,7 @@ export type SocialEmbedProviders =
 
 export type PageTypes =
   | 'article'
+  | 'mediaArticle'
   | 'frontPage'
   | 'media'
   | 'mostRead'
@@ -20,7 +21,7 @@ export type PageTypes =
   | 'error'
   | 'IDX'
   | 'FIX'
-  | 'MAP'
+  | 'MAP' // CPS MAP page
   | 'STY'
   | 'PGL'
   | 'CSP'
