@@ -1,9 +1,5 @@
 import pixelsToRem from '../../utilities/pixelsToRem';
-import {
-  GROUP_B_MIN_WIDTH,
-  GROUP_B_ONLY,
-  GROUP_D_MIN_WIDTH,
-} from './fontMediaQueries';
+import { GROUP_B_ONLY, GROUP_D_MIN_WIDTH } from './fontMediaQueries';
 import { GelFontSize, TypographyScript } from '../../models/types/theming';
 
 const getGelFontSizeStyles =
