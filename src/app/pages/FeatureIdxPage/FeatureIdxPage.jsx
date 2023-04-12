@@ -13,7 +13,7 @@ import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import useToggle from '#hooks/useToggle';
 import CanonicalAdBootstrapJs from '../../components/Ad/Canonical/CanonicalAdBootstrapJs';
 import Ad from '../../components/Ad';
-import MPUContainer from '../../components/Ad/MPU';
+import MPU from '../../components/Ad/MPU';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import LinkedData from '../../components/LinkedData';
 import flattenGroups from './flattenGroups';
@@ -66,7 +66,7 @@ const FeatureIdxPage = ({ pageData }) => {
                   sectionNumber={index}
                   showAllPromos
                 />
-                {isFirstSection && <MPUContainer />}
+                {isFirstSection && <MPU />}
               </Fragment>
             );
           })}

@@ -15,12 +15,12 @@ import IndexPageContainer from '#components/PageLayout/IndexPageContainer';
 import IndexPageSection from '#containers/IndexPageSection';
 import RadioScheduleContainer from '#containers/RadioSchedule';
 import MetadataContainer from '#containers/Metadata';
-import MostReAd from '#containers/MostRead';
+import MostReadContainer from '#containers/MostRead';
 import MostReadSection from '#containers/MostRead/section';
 import MostReadSectionLabel from '#containers/MostRead/label';
 import { NEGATIVE_MARGIN } from '#lib/styles.const';
 import Ad from '../../components/Ad';
-import MPUContainer from '../../components/Ad/MPU';
+import MPU from '../../components/Ad/MPU';
 import CanonicalAdBootstrapJs from '../../components/Ad/Canonical/CanonicalAdBootstrapJs';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { GHOST } from '../../components/ThemeProvider/palette';
@@ -47,7 +47,7 @@ const MostReadWrapper = ({ children }) => (
 );
 
 const renderMostRead = mostReadEndpointOverride => (
-  <MostReAd
+  <MostReadContainer
     mostReadEndpointOverride={mostReadEndpointOverride}
     columnLayout="twoColumn"
     wrapper={MostReadWrapper}
@@ -118,7 +118,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
                   />
                 )}
               <IndexPageSection group={group} sectionNumber={index} />
-              {group.type === 'top-stories' && <MPUContainer />}
+              {group.type === 'top-stories' && <MPU />}
             </Fragment>
           ))}
           {!hasUsefulLinks && renderMostRead(mostReadEndpointOverride)}
