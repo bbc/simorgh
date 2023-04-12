@@ -6,7 +6,7 @@ import {
 
 import LatestMediaSection from '.';
 import hausaArticle from '../../../../../../data/hausa/articles/cxr0765kxlzo.json';
-import afaanoromooArticle from '../../../../../../data/afaanoromoo/articles/crgqplm3rmyo.json';
+import tamilArticle from '../../../../../../data/tamil/articles/c84m2jl4dpzo.json';
 import { LatestMedia } from './LatestMediaTypes';
 
 describe('Latest Media Section', () => {
@@ -52,14 +52,14 @@ describe('Latest Media Section', () => {
   });
 
   it('should render correct translated title if a translation is available', () => {
-    const translationAvailForService = afaanoromooArticle.data.secondaryData
+    const translationAvailForService = tamilArticle.data.secondaryData
       .latestMedia as LatestMedia[];
 
     render(<LatestMediaSection content={translationAvailForService} />, {
-      service: 'afaanoromoo',
+      service: 'tamil',
     });
 
-    expect(screen.getByText('Haaraa')).toBeInTheDocument();
+    expect(screen.getByText('மிகச் சமீபத்தியது')).toBeInTheDocument();
   });
 
   it('should have a region role', () => {
