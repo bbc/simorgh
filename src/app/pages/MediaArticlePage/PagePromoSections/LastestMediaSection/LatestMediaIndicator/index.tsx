@@ -13,7 +13,12 @@ const formatChildren = (duration: string) => {
   const durationString = formatDuration({ duration: momentDuration });
   const isoDuration = momentDuration.toISOString();
   return (
-    <time dateTime={isoDuration} suppressHydrationWarning aria-hidden>
+    <time
+      dateTime={isoDuration}
+      suppressHydrationWarning
+      aria-hidden
+      css={styles.time}
+    >
       {durationString}
     </time>
   );

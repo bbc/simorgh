@@ -26,7 +26,7 @@ const styles = {
     }),
   LatestMediaPromoBorder: ({ mq, palette }: Theme) =>
     css({
-      borderBottom: `${pixelsToRem(1)}rem ${palette.GREY_10} solid`,
+      borderBottom: `${pixelsToRem(1)}rem ${palette.GREY_2} solid`,
       marginBotton: '0',
       [mq.GROUP_3_ONLY]: {
         borderBottom: '0',

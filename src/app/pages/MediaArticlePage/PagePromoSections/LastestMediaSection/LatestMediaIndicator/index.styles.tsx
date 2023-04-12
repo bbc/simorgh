@@ -34,8 +34,31 @@ export const styles = {
         },
       },
     }),
+  time: ({ palette, mq }: Theme) =>
+    css({
+      color: palette.GREY_2,
+      [mq.GROUP_2_ONLY]: {
+        color: palette.EBON,
+      },
+      [mq.GROUP_3_ONLY]: {
+        color: palette.EBON,
+      },
+    }),
+  promoMediaIndicator: ({ palette, mq }: Theme) =>
+    css({
+      svg: {
+        color: palette.GREY_2,
+        fill: 'currentColor',
+        [mq.GROUP_2_ONLY]: {
+          color: palette.EBON,
+        },
+        [mq.GROUP_3_ONLY]: {
+          color: palette.EBON,
+        },
+      },
+    }),
 };
 
 export const StyledPromoMediaIndicator = styled(Promo.MediaIndicator)`
-  border: blue solid 2px;
+  ${props => styles.promoMediaIndicator(props.theme)}
 `;

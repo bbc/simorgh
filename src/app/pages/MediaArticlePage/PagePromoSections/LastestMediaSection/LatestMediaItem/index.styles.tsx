@@ -39,6 +39,13 @@ export const styles = {
         width: '100%',
       },
     }),
+  promoLink: ({ palette }: Theme) =>
+    css({
+      color: palette.GREY_2,
+      '&:visited': {
+        color: palette.GREY_5,
+      },
+    }),
 };
 
 export const StyledTimestamp = styled(Promo.Timestamp)`
