@@ -39,8 +39,3 @@ export const styles = {
 export const StyledPromoMediaIndicator = styled(Promo.MediaIndicator)`
   border: blue solid 2px;
 `;
-
-export const StyledTime = styled.time`
-  padding: ${props => props.theme.spacings.HALF};
-  top: 0.09rem;
-`;
