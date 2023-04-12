@@ -168,7 +168,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   ].every(Boolean);
 
   const mpuStyle = css({
-    marginBottom: GEL_SPACING_TRPL,
+    marginBottom: `${GEL_SPACING_TRPL}rem`,
   });
 
   const componentsToRender = {
@@ -194,7 +194,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     include: props => <Include {...props} />,
     social_embed: props => <CpsSocialEmbedContainer {...props} />,
     table: props => <CpsTable {...props} />,
-    mpu: props => (isAdsEnabled ? <MPU {...props} css={mpuStyle} /> : null),
+    mpu: () => (isAdsEnabled ? <MPU css={mpuStyle} /> : null),
     wsoj: props => (
       <CpsRecommendations {...props} items={recommendationsData} />
     ),
