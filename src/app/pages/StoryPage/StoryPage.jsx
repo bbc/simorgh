@@ -194,7 +194,8 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     include: props => <Include {...props} />,
     social_embed: props => <CpsSocialEmbedContainer {...props} />,
     table: props => <CpsTable {...props} />,
-    mpu: () => (isAdsEnabled ? <MPU css={mpuStyle} /> : null),
+    mpu: ({ className }) =>
+      isAdsEnabled ? <MPU css={mpuStyle} className={className} /> : null,
     wsoj: props => (
       <CpsRecommendations {...props} items={recommendationsData} />
     ),

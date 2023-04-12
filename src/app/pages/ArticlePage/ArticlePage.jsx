@@ -137,7 +137,8 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
     social: SocialEmbedContainer,
     group: gist,
     links: props => <ScrollablePromo {...props} />,
-    mpu: props => (isAdsEnabled ? <MPU {...props} css={styles.mpuAd} /> : null),
+    mpu: ({ className }) =>
+      isAdsEnabled ? <MPU css={styles.mpuAd} className={className} /> : null,
     wsoj: props => (
       <CpsRecommendations {...props} items={recommendationsData} />
     ),
