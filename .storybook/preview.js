@@ -558,7 +558,7 @@ addDecorator((Story, context) => {
       <ToggleContextProvider toggles={{}}>
         <ServiceContextProvider
           service={context.globals.service.service}
-          variant={context.globals.service.variatn}
+          variant={context.globals.service.variant}
         >
           <EventTrackingContextProvider pageData={pageDataFixture}>
             <UserContextProvider>
