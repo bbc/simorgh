@@ -275,7 +275,7 @@ const withThemeProvider = ({
     // TODO: Think of a better way to do this of OnDemand Audio/Video page types
     const isDarkUiPage =
       pageType === 'mediaArticle' ||
-      (pageType === 'media' && pathname.includes('tv'));
+      (pageType === 'media' && pathname?.includes('tv'));
 
     const theme = {
       ...themeConfig,

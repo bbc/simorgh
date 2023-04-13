@@ -14,6 +14,8 @@ import { render } from '../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import _OnDemandTvPage from './OnDemandTvPage';
 
+const pageType = MEDIA_PAGE;
+
 const OnDemandTvPage = withMediaError(_OnDemandTvPage);
 
 const toggles = {
@@ -47,6 +49,10 @@ const renderPage = async ({ pageData, service, isAmp = false }) => {
   await act(async () => {
     result = await render(
       <Page pageData={pageData} service={service} isAmp={isAmp} />,
+      {
+        pageType,
+        pathname: '/some-ondemand-tv-path',
+      },
     );
   });
 
@@ -61,8 +67,6 @@ jest.mock('../../legacy/containers/ChartbeatAnalytics', () => {
 });
 
 const { env } = process;
-
-const pageType = MEDIA_PAGE;
 
 describe('OnDemand TV Brand Page ', () => {
   beforeEach(() => {
