@@ -97,9 +97,6 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
 
   const hasByline = !!bylineLinkedData;
 
-  const embedBlock = blocks.find(block => block.type === 'embed');
-  const embedData = pathOr([], ['model', 'blocks'], embedBlock);
-
   const articleAuthorTwitterHandle = hasByline
     ? getAuthorTwitterHandle(blocks)
     : null;
@@ -138,7 +135,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
     timestamp: props =>
       hasByline ? null : <Timestamp {...props} popOut={false} />,
     social: SocialEmbedContainer,
-    // embed: Uploader,
+    embed: Uploader,
     group: gist,
     links: props => <ScrollablePromo {...props} />,
     mpu: props =>
@@ -228,7 +225,6 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
               blocks={articleBlocks}
               componentsToRender={componentsToRender}
             />
-            <Uploader blocks={embedData} />
           </main>
           {showRelatedTopics && topics && (
             <RelatedTopics
