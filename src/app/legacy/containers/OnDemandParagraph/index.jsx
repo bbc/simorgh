@@ -8,7 +8,7 @@ import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const StyledParagraphComponent = styled(ParagraphComponent)`
   padding-bottom: 16px;
-  ${({ theme }) => !theme.isDarkUi && `color: ${theme.palette.METAL};`}
+  color: ${({ theme }) => !theme.isDarkUi && theme.palette.METAL};
   @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     padding-bottom: ${GEL_SPACING};
   }

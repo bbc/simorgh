@@ -19,7 +19,11 @@ describe('MediaPageBlocks Paragraph', () => {
   it('should render correctly - dark mode', () => {
     const { container } = render(
       <Paragraph uuid="uuid" idAttr="idAttr" text="Example text" />,
-      { service: 'news' },
+      {
+        service: 'afrique',
+        pageType: 'media',
+        pathname: '/afrique/bbc_afrique_tv/tv/w172xc9xq2gllfk',
+      },
     );
     expect(container).toMatchSnapshot();
   });
