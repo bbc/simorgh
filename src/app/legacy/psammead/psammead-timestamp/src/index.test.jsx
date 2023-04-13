@@ -14,11 +14,14 @@ describe('Timestamp', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('should render dark mode Timestamp correctly', () => {
+  it('should render dark mode Timestamp correctly on page types that support a dark UI ', () => {
     const { container } = render(
       <Timestamp datetime="1530947227000" script={latin} service="news">
         7 July 2018
       </Timestamp>,
+      {
+        pageType: 'mediaArticle',
+      },
     );
     expect(container).toMatchSnapshot();
   });
