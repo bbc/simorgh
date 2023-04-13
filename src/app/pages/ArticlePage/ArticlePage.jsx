@@ -48,6 +48,7 @@ import NielsenAnalytics from '#containers/NielsenAnalytics';
 import ScrollablePromo from '#components/ScrollablePromo';
 import CpsRecommendations from '#containers/CpsRecommendations';
 import LinkedData from '../../components/LinkedData';
+import Uploader from '../../components/Uploader';
 import Byline from '../../components/Byline';
 import {
   bylineExtractor,
@@ -96,6 +97,9 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
 
   const hasByline = !!bylineLinkedData;
 
+  const embedBlock = blocks.find(block => block.type === 'embed');
+  const embedData = pathOr([], ['model', 'blocks'], embedBlock);
+
   const articleAuthorTwitterHandle = hasByline
     ? getAuthorTwitterHandle(blocks)
     : null;
@@ -134,6 +138,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
     timestamp: props =>
       hasByline ? null : <Timestamp {...props} popOut={false} />,
     social: SocialEmbedContainer,
+    // embed: Uploader,
     group: gist,
     links: props => <ScrollablePromo {...props} />,
     mpu: props =>
@@ -223,6 +228,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
               blocks={articleBlocks}
               componentsToRender={componentsToRender}
             />
+            <Uploader blocks={embedData} />
           </main>
           {showRelatedTopics && topics && (
             <RelatedTopics
