@@ -272,7 +272,10 @@ const withThemeProvider = ({
   const ThemeProvider: React.FC<Props> = ({ children }) => {
     const { isAmp, pageType, pathname } = useContext(RequestContext);
 
-    const isDarkUiPage = pageType === 'mediaArticle' || pathname.includes('tv');
+    // TODO: Think of a better way to do this of OnDemand Audio/Video page types
+    const isDarkUiPage =
+      pageType === 'mediaArticle' ||
+      (pageType === 'media' && pathname.includes('tv'));
 
     const theme = {
       ...themeConfig,
