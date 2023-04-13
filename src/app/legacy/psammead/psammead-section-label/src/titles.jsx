@@ -76,7 +76,7 @@ const Title = styled.span`
   ${({ service }) => getSansBold(service)}
   background-color: ${({ backgroundColor, theme }) =>
     theme.isDarkUi ? theme.palette.GREY_10 : backgroundColor};
-  color: ${({ theme }) => theme.isDarkUi && theme.palette.LUNAR};
+  color: ${({ theme }) => theme.isDarkUi && theme.palette.GREY_2};
   ${titleMargins};
   ${paddingDir}: ${GEL_SPACING};
 
