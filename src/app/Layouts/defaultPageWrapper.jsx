@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Helmet } from 'react-helmet';
-import { node, shape, bool, number } from 'prop-types';
+import { node, shape, number } from 'prop-types';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import GlobalStyles from '#psammead/psammead-styles/src/global-styles';

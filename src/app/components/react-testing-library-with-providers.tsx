@@ -38,24 +38,26 @@ const AllTheProviders: FC<Props> = ({
   showAdsBasedOnLocation = false,
 }: Props) => {
   return (
-    <ThemeProvider service={service} variant={variant}>
-      <ToggleContextProvider toggles={toggles}>
-        <ServiceContextProvider service={service} variant={variant}>
-          <RequestContextProvider
-            bbcOrigin="https://www.test.bbc.com"
-            pageType={pageType}
-            isAmp={isAmp}
-            service={service}
-            pathname={pathname}
-            showAdsBasedOnLocation={showAdsBasedOnLocation}
-          >
-            <EventTrackingContextProvider pageData={pageData}>
-              <UserContextProvider>{children}</UserContextProvider>
-            </EventTrackingContextProvider>
-          </RequestContextProvider>
-        </ServiceContextProvider>
-      </ToggleContextProvider>
-    </ThemeProvider>
+    <ToggleContextProvider toggles={toggles}>
+      <ServiceContextProvider service={service} variant={variant}>
+        <RequestContextProvider
+          bbcOrigin="https://www.test.bbc.com"
+          pageType={pageType}
+          isAmp={isAmp}
+          service={service}
+          pathname={pathname}
+          showAdsBasedOnLocation={showAdsBasedOnLocation}
+        >
+          <EventTrackingContextProvider pageData={pageData}>
+            <UserContextProvider>
+              <ThemeProvider service={service} variant={variant}>
+                {children}
+              </ThemeProvider>
+            </UserContextProvider>
+          </EventTrackingContextProvider>
+        </RequestContextProvider>
+      </ServiceContextProvider>
+    </ToggleContextProvider>
   );
 };
 
