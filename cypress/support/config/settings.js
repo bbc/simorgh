@@ -3609,23 +3609,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/kyrgyz'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/kyrgyz'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/kyrgyz'],
-            enabled: true,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: {
         environments: {
           live: {
@@ -4726,7 +4710,7 @@ module.exports = () => ({
           },
           test: {
             paths: ['/newsround/23212028'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/newsround/56331357'],

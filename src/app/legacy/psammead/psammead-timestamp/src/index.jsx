@@ -19,9 +19,8 @@ const PADDING = `
 const StyledTimestamp = styled.time`
   ${({ script, typographyFunc }) =>
     script && typographyFunc && typographyFunc(script)}
-  color: ${({ darkMode }) =>
-    props =>
-      darkMode ? props.theme.palette.LUNAR : props.theme.palette.GREY_6};
+  color: ${({ darkMode, theme }) =>
+    darkMode || theme.isDarkUi ? theme.palette.GREY_3 : theme.palette.GREY_6};
   display: block;
   ${({ service }) => getSansRegular(service)}
   ${props => props.padding && PADDING}
