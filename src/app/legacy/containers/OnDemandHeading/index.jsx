@@ -9,6 +9,11 @@ import {
   GEL_GROUP_1_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
 import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
+import {
+  getDoublePica,
+  getParagon,
+} from '#psammead/gel-foundations/src/typography';
+import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const BrandTitle = styled.span`
@@ -17,7 +22,7 @@ const BrandTitle = styled.span`
   width: 100%;
   padding-bottom: ${({ theme }) => `${theme.spacings.FULL}rem`};
   word-break: break-word;
-  ${({ theme }) => !theme.isDarkUi && { ...theme.fontSizes.paragon }}
+  ${({ script, theme }) => (theme.isDarkUi ? '' : script && getParagon(script))}
   ${MEDIA_QUERY_TYPOGRAPHY.LAPTOP_AND_LARGER} {
     padding-bottom: ${({ theme }) => `${theme.spacings.DOUBLE}rem`};
     word-break: break-word;
@@ -28,10 +33,8 @@ const BrandTitle = styled.span`
 const Subheading = styled.span`
   display: inline-block;
   margin: 0;
-  ${({ theme }) => ({
-    ...theme.fontSizes.doublePica,
-    ...theme.fontVariants.sansRegular,
-  })}
+  ${({ script }) => script && getDoublePica(script)}
+  ${({ service }) => getSansRegular(service)}
   @media (max-width: 22.5rem) and (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
     font-size: 1.125rem;
     line-height: 1.375rem;

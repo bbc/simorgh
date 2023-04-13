@@ -348,24 +348,24 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
 .emotion-27 {
   display: inline-block;
   margin: 0;
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
+  font-style: normal;
 }
 
-@media (min-width: 20rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-27 {
     font-size: 1.25rem;
-    line-height: 1.5rem;
+    line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-27 {
     font-size: 1.5rem;
-    line-height: 1.75rem;
+    line-height: 2rem;
   }
 }
 
@@ -954,24 +954,24 @@ exports[`should show the expired content message if episode is expired 1`] = `
 .emotion-24 {
   display: inline-block;
   margin: 0;
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
+  font-style: normal;
 }
 
-@media (min-width: 20rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-24 {
     font-size: 1.25rem;
-    line-height: 1.5rem;
+    line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-24 {
     font-size: 1.5rem;
-    line-height: 1.75rem;
+    line-height: 2rem;
   }
 }
 
@@ -1547,24 +1547,24 @@ exports[`should show the future content message if episode is not yet available 
 .emotion-24 {
   display: inline-block;
   margin: 0;
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
+  font-style: normal;
 }
 
-@media (min-width: 20rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-24 {
     font-size: 1.25rem;
-    line-height: 1.5rem;
+    line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-24 {
     font-size: 1.5rem;
-    line-height: 1.75rem;
+    line-height: 2rem;
   }
 }
 
@@ -2140,24 +2140,24 @@ exports[`should show the future content message if episode is pending 1`] = `
 .emotion-24 {
   display: inline-block;
   margin: 0;
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
+  font-style: normal;
 }
 
-@media (min-width: 20rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-24 {
     font-size: 1.25rem;
-    line-height: 1.5rem;
+    line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-24 {
     font-size: 1.5rem;
-    line-height: 1.75rem;
+    line-height: 2rem;
   }
 }
 
