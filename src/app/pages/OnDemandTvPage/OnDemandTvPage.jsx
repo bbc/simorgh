@@ -175,7 +175,7 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
               hasBottomPadding={false}
               skin="classic"
               showLoadingImage
-              darkMode
+              darkPlaceholder
             />
           ) : (
             <MediaError skin="video" />
