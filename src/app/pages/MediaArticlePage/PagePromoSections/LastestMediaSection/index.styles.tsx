@@ -1,9 +1,5 @@
-import PromoItem from '#app/legacy/components/OptimoPromos/PromoItem/index.styles';
-import PromoList from '#app/legacy/components/OptimoPromos/PromoList';
 import pixelsToRem from '#app/utilities/pixelsToRem';
 import { Theme, css } from '@emotion/react';
-import styled from '@emotion/styled';
-import SectionLabel from '#psammead/psammead-section-label/src';
 
 const styles = {
   LatestMediaSection: ({ mq, isDarkUi, palette }: Theme) =>
@@ -35,7 +31,7 @@ const styles = {
         borderBottom: 'none',
       },
     }),
-  SectionTitleWrapper: ({ mq, spacings }: Theme) =>
+  SectionTitle: ({ mq, spacings }: Theme) =>
     css({
       marginTop: `0rem`,
       marginBottom: `0rem`,
@@ -49,18 +45,5 @@ const styles = {
       },
     }),
 };
-
-export const StyledPromoList = styled(PromoList)`
-  ${props => styles.LatestMediaGridWrapper(props.theme)}
-`;
-
-export const StyledPromoItem = styled(PromoItem)`
-  ${props => styles.LatestMediaPromoBorderAndWidth(props.theme)}
-  margin-bottom: 0;
-`;
-
-export const StyledSectionLabel = styled(SectionLabel)`
-  ${props => styles.SectionTitleWrapper(props.theme)}
-`;
 
 export default styles;

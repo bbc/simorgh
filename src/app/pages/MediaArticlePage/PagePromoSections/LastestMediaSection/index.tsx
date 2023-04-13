@@ -6,13 +6,12 @@ import path from 'ramda/src/path';
 import isEmpty from 'ramda/src/isEmpty';
 import useViewTracker from '#hooks/useViewTracker';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import PromoItem from '#app/legacy/components/OptimoPromos/PromoItem/index.styles';
+import PromoList from '#app/legacy/components/OptimoPromos/PromoList';
+import SectionLabel from '#psammead/psammead-section-label/src';
 import generatePromoId from '../generatePromoId';
 import LatestMediaItem from './LatestMediaItem';
-import styles, {
-  StyledPromoItem,
-  StyledPromoList,
-  StyledSectionLabel,
-} from './index.styles';
+import styles from './index.styles';
 import {
   LatestMedia,
   TrackingBlock,
@@ -35,14 +34,14 @@ const renderLatestMediaList = (
   });
 
   return (
-    <StyledPromoItem key={index}>
+    <PromoItem key={index} css={styles.LatestMediaPromoBorderAndWidth}>
       <LatestMediaItem
         item={item}
         ariaLabelledBy={ariaLabelledBy}
         ref={viewRef}
         eventTrackingData={eventTrackingData}
       />
-    </StyledPromoItem>
+    </PromoItem>
   );
 };
 
@@ -79,7 +78,7 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
       aria-labelledby={LABEL_ID}
       role="region"
     >
-      <StyledSectionLabel
+      <SectionLabel
         columnType="secondary"
         dir={dir}
         href={null}
@@ -90,9 +89,10 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
         backgroundColor="transparent"
         overrideHeadingAs={null}
         visuallyHidden={false}
+        css={styles.SectionTitle}
       >
         {translations.latestMediaTitle ?? 'Latest'}
-      </StyledSectionLabel>
+      </SectionLabel>
       {hasSingleContent ? (
         <div css={styles.LatestMediaPromoBorderAndWidth}>
           <LatestMediaItem
@@ -103,11 +103,11 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
           />
         </div>
       ) : (
-        <StyledPromoList>
+        <PromoList css={styles.LatestMediaGridWrapper}>
           {content.map((item, index) =>
             renderLatestMediaList(item, index, eventTrackingData, viewRef),
           )}
-        </StyledPromoList>
+        </PromoList>
       )}
     </section>
   );

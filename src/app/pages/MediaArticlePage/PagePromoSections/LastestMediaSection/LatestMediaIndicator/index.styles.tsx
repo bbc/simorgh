@@ -1,8 +1,6 @@
-import styled from '@emotion/styled';
-import Promo from '#components/OptimoPromos';
 import { css, Theme } from '@emotion/react';
 
-export const styles = {
+const styles = {
   placeholderInfo: ({ mq, fontSizes, fontVariants, palette }: Theme) =>
     css({
       width: '100%',
@@ -59,6 +57,4 @@ export const styles = {
     }),
 };
 
-export const StyledPromoMediaIndicator = styled(Promo.MediaIndicator)`
-  ${props => styles.promoMediaIndicator(props.theme)}
-`;
+export default styles;

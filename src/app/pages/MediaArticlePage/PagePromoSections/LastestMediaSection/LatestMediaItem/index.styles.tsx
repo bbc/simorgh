@@ -1,8 +1,6 @@
-import styled from '@emotion/styled';
 import { css, Theme } from '@emotion/react';
-import Promo from '#components/OptimoPromos';
 
-export const styles = {
+const styles = {
   promoWrapper: ({ mq, spacings }: Theme) =>
     css({
       borderBottom: `${spacings.FULL}rem solid transparent`,
@@ -46,16 +44,14 @@ export const styles = {
         color: palette.GREY_5,
       },
     }),
+  promoStyle: () =>
+    css({
+      backgroundColor: 'transparent',
+    }),
+  timeStamp: ({ spacings }: Theme) =>
+    css({
+      paddingTop: `${spacings.FULL}rem`,
+    }),
 };
 
-export const StyledTimestamp = styled(Promo.Timestamp)`
-  padding-top: ${props => props.theme.spacings.FULL}rem;
-`;
-
-export const StyledPromoTitle = styled(Promo.Title)`
-  ${props => styles.promoTitle(props.theme)}
-`;
-
-export const StyledPromo = styled(Promo)`
-  background-color: transparent;
-`;
+export default styles;

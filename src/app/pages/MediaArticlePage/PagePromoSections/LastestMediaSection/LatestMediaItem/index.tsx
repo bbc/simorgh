@@ -5,12 +5,7 @@ import isEmpty from 'ramda/src/isEmpty';
 import Promo from '#components/OptimoPromos';
 import { LatestMediaItemProp } from '../LatestMediaTypes';
 import LatestMediaIndicator from '../LatestMediaIndicator';
-import {
-  StyledPromoTitle,
-  StyledTimestamp,
-  styles,
-  StyledPromo,
-} from './index.styles';
+import styles from './index.styles';
 
 const LatestMediaItem = ({
   item,
@@ -26,12 +21,13 @@ const LatestMediaItem = ({
 
   return (
     <div ref={ref} css={styles.promoWrapper}>
-      <StyledPromo
+      <Promo
         to={item.link}
         ariaLabelledBy={ariaLabelledBy}
         mediaType={item.type}
         eventTrackingData={eventTrackingData}
         className="removeBackground"
+        css={styles.promoStyle}
       >
         <div css={styles.imageWrapper}>
           <Promo.Image
@@ -43,7 +39,7 @@ const LatestMediaItem = ({
           <LatestMediaIndicator duration={item.duration} />
         </div>
         <div css={styles.textWrapper}>
-          <StyledPromoTitle as="h3">
+          <Promo.Title as="h3" css={styles.promoTitle}>
             <Promo.Link css={styles.promoLink}>
               <Promo.Content
                 mediaDuration={item.duration}
@@ -52,10 +48,10 @@ const LatestMediaItem = ({
                 isLive={false}
               />
             </Promo.Link>
-          </StyledPromoTitle>
-          <StyledTimestamp>{timestamp}</StyledTimestamp>
+          </Promo.Title>
+          <Promo.Timestamp css={styles.timeStamp}>{timestamp}</Promo.Timestamp>
         </div>
-      </StyledPromo>
+      </Promo>
     </div>
   );
 };
