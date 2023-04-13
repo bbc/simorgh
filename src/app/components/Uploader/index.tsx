@@ -8,6 +8,7 @@ import Heading from '../Heading';
 import Paragraph from '../Paragraph';
 import Text from '../Text';
 import { LeftChevron, RightChevron } from '../icons';
+import styles from './index.styles';
 
 interface UploaderProps {
   blocks: object[];
@@ -72,17 +73,25 @@ const Uploader = ({ blocks }: UploaderProps) => {
   const id = `${(title as string).replaceAll(' ', '-')}`;
 
   return (
-    <section role="region" aria-labelledby={id}>
-      <Heading level={2}>{title as string}</Heading>
-      <Paragraph>{text as string}</Paragraph>
-      <a href={linkAddress as string}>
-        <div>
-          <Text size="pica" fontVariant="sansBold">
-            {linkText as string}
-            {isRtl ? <LeftChevron /> : <RightChevron />}
-          </Text>
-        </div>
-      </a>
+    <section role="region" aria-labelledby={id} css={styles.container}>
+      <div css={styles.card}>
+        <Heading level={2} size="paragon" css={styles.heading}>
+          {title as string}
+        </Heading>
+        <Paragraph css={styles.paragraph}>{text as string}</Paragraph>
+        <a href={linkAddress as string} css={styles.linkBackground}>
+          <div>
+            <Text size="pica" fontVariant="sansBold" css={styles.link}>
+              {linkText as string}
+              {isRtl ? (
+                <LeftChevron css={styles.chevron} />
+              ) : (
+                <RightChevron css={styles.chevron} />
+              )}
+            </Text>
+          </div>
+        </a>
+      </div>
     </section>
   );
 };
