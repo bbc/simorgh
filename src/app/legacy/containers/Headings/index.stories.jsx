@@ -1,4 +1,5 @@
 import React from 'react';
+import { ThemeProvider } from '../../../components/ThemeProvider';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import HeadingsContainer from '.';
@@ -11,7 +12,9 @@ const subheadline = blocksSingleFragment('This is a subheadline.', []);
 // eslint-disable-next-line react/prop-types
 const Component = ({ type, blocks }) => (
   <ServiceContext.Provider value={{ script: latin, service: 'news' }}>
-    <HeadingsContainer type={type} blocks={blocks} />
+    <ThemeProvider service="news">
+      <HeadingsContainer type={type} blocks={blocks} />
+    </ThemeProvider>
   </ServiceContext.Provider>
 );
 

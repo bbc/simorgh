@@ -14,11 +14,14 @@ describe('Headline component', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('should render correctly in dark mode', () => {
+  it('should render correctly on page types that support a dark ui', () => {
     const { container } = render(
       <Headline script={latin} service="news">
         This is my headline.
       </Headline>,
+      {
+        pageType: 'mediaArticle',
+      },
     );
     expect(container).toMatchSnapshot();
   });
@@ -43,11 +46,14 @@ describe('SubHeading component', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('should render correctly in dark mode', () => {
+  it('should render correctly on page types that support a dark ui', () => {
     const { container } = render(
       <SubHeading script={latin} service="news">
         This is a SubHeading
       </SubHeading>,
+      {
+        pageType: 'mediaArticle',
+      },
     );
     expect(container).toMatchSnapshot();
   });

@@ -43,15 +43,6 @@ storiesOf('Components/SubHeading', module)
     { notes, knobs: { escapeHTML: false } },
   )
   .add(
-    'darkMode',
-    ({ text: textSnippet, script, service }) => (
-      <SubHeading script={script} service={service}>
-        {textSnippet}
-      </SubHeading>
-    ),
-    { notes, knobs: { escapeHTML: false }, options: { theme: themes.dark } },
-  )
-  .add(
     'with optional ID',
     ({ text: textSnippet, script, service }) => {
       const id = text('ID', 'foo', 'Other');
