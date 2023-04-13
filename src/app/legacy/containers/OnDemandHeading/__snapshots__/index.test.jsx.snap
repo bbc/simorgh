@@ -65,12 +65,12 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly - dark mode 
   margin: 0;
   font-size: 1.125rem;
   line-height: 1.375rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-style: normal;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
+  font-style: normal;
 }
 
-@media (min-width: 20rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-6 {
     font-size: 1.25rem;
     line-height: 1.5rem;
@@ -175,7 +175,7 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly 1`] = `
   line-height: 1.5rem;
 }
 
-@media (min-width: 20rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-2 {
     font-size: 1.375rem;
     line-height: 1.625rem;
@@ -214,11 +214,11 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly 1`] = `
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
 }
 
-@media (min-width: 20rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-6 {
     font-size: 1.25rem;
     line-height: 1.5rem;
