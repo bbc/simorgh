@@ -4710,7 +4710,7 @@ module.exports = () => ({
           },
           test: {
             paths: ['/newsround/23212028'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/newsround/56331357'],
