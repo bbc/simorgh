@@ -119,7 +119,7 @@ exports[`Timestamp should render dark mode Timestamp correctly 1`] = `
 .emotion-0 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #F2F2F2;
+  color: #E6E8EA;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
