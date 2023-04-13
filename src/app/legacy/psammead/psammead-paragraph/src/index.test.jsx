@@ -14,11 +14,14 @@ describe('Paragraph', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('should render correctly in dark mode', () => {
+  it('should render correctly on page types that support a dark ui', () => {
     const { container } = render(
       <Paragraph script={latin} service="news">
         This is text in a paragraph.
       </Paragraph>,
+      {
+        pageType: 'mediaArticle',
+      },
     );
     expect(container).toMatchSnapshot();
   });

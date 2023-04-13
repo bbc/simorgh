@@ -24,15 +24,6 @@ storiesOf('Components/Paragraph', module)
     { notes, knobs: { escapeHTML: false } },
   )
   .add(
-    'dark mode',
-    ({ text, script, service }) => (
-      <Paragraph script={script} service={service}>
-        {text}
-      </Paragraph>
-    ),
-    { notes, knobs: { escapeHTML: false }, options: { theme: themes.dark } },
-  )
-  .add(
     'containing an inline link',
     ({ text, script, service }) => (
       <Paragraph script={script} service={service}>

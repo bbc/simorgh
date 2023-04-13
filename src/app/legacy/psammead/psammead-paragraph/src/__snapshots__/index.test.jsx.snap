@@ -70,6 +70,41 @@ exports[`Paragraph should render correctly in dark mode 1`] = `
 </div>
 `;
 
+exports[`Paragraph should render correctly on page types that support a dark ui 1`] = `
+.emotion-0 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #F6F6F6;
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+<div>
+  <p
+    class="emotion-0 emotion-1"
+  >
+    This is text in a paragraph.
+  </p>
+</div>
+`;
+
 exports[`Paragraph should render correctly with arabic script typography values 1`] = `
 .emotion-0 {
   font-size: 0.9375rem;
