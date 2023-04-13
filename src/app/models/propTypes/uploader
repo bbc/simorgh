@@ -1,0 +1,24 @@
+import { string, shape, arrayOf } from 'prop-types';
+
+const uploaderBlockPropTypes = {
+  provider: string.isRequired,
+  blocks: arrayOf(
+    shape({
+      model: shape({
+        blocks: arrayOf(
+          shape({
+            model: shape({
+              blocks: arrayOf(
+                shape({
+                  type: string.isRequired,
+                }),
+              ),
+            }),
+          }),
+        ),
+      }),
+    }),
+  ),
+};
+
+export default uploaderBlockPropTypes;
