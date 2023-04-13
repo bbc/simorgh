@@ -16,7 +16,7 @@ describe('Paragraph', () => {
 
   it('should render correctly in dark mode', () => {
     const { container } = render(
-      <Paragraph script={latin} service="news" darkMode>
+      <Paragraph script={latin} service="news">
         This is text in a paragraph.
       </Paragraph>,
     );

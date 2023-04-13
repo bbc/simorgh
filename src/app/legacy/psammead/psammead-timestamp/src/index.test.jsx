@@ -16,12 +16,7 @@ describe('Timestamp', () => {
 
   it('should render dark mode Timestamp correctly', () => {
     const { container } = render(
-      <Timestamp
-        datetime="1530947227000"
-        script={latin}
-        service="news"
-        darkMode
-      >
+      <Timestamp datetime="1530947227000" script={latin} service="news">
         7 July 2018
       </Timestamp>,
     );

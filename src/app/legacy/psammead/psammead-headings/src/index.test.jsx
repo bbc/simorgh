@@ -16,7 +16,7 @@ describe('Headline component', () => {
 
   it('should render correctly in dark mode', () => {
     const { container } = render(
-      <Headline script={latin} service="news" darkMode>
+      <Headline script={latin} service="news">
         This is my headline.
       </Headline>,
     );
@@ -45,7 +45,7 @@ describe('SubHeading component', () => {
 
   it('should render correctly in dark mode', () => {
     const { container } = render(
-      <SubHeading script={latin} service="news" darkMode>
+      <SubHeading script={latin} service="news">
         This is a SubHeading
       </SubHeading>,
     );

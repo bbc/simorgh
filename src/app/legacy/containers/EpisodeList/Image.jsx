@@ -82,7 +82,6 @@ const EpisodeImage = props => {
     'classname',
     'script',
     'service',
-    'darkMode',
   ]);
 
   return (

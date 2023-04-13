@@ -56,7 +56,7 @@ storiesOf('Components/Timestamp', module)
   .add(
     'dark mode',
     ({ service }) => (
-      <ExampleTimestamp service={service} darkMode>
+      <ExampleTimestamp service={service}>
         {text('Timestamp Text', '7 July 2018')}
       </ExampleTimestamp>
     ),

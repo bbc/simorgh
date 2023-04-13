@@ -270,11 +270,13 @@ const withThemeProvider = ({
   };
 
   const ThemeProvider: React.FC<Props> = ({ children }) => {
-    const { isAmp, pageType } = useContext(RequestContext);
+    const { isAmp, pageType, pathname } = useContext(RequestContext);
+
+    const isDarkUiPage = pageType === 'mediaArticle' || pathname.includes('tv');
 
     const theme = {
       ...themeConfig,
-      isDarkUi: pageType === 'mediaArticle' && !isLive(),
+      isDarkUi: isDarkUiPage && !isLive(),
     };
 
     return (

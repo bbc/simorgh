@@ -14,10 +14,7 @@ import {
   GEL_GROUP_1_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
 import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
-import {
-  getDoublePica,
-  getParagon,
-} from '#psammead/gel-foundations/src/typography';
+import { getDoublePica } from '#psammead/gel-foundations/src/typography';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
@@ -27,7 +24,7 @@ const BrandTitle = styled.span`
   width: 100%;
   padding-bottom: ${GEL_SPACING};
   word-break: break-word;
-  ${({ script, darkMode }) => (darkMode ? '' : script && getParagon(script))}
+  ${({ theme }) => (theme.isDarkUi ? '' : theme.fontSizes.getParagon)}
   ${MEDIA_QUERY_TYPOGRAPHY.LAPTOP_AND_LARGER} {
     padding-bottom: ${GEL_SPACING_DBL};
     word-break: break-word;
@@ -60,7 +57,6 @@ const OnDemandHeadingContainer = ({
   releaseDateTimeStamp,
   episodeTitle,
   ariaHidden,
-  darkMode,
   className,
 }) => {
   const { script, service, timezone, datetimeLocale } =
@@ -81,15 +77,12 @@ const OnDemandHeadingContainer = ({
       script={script}
       service={service}
       id={idAttr}
-      darkMode={darkMode}
       className={className}
       {...(idAttr === 'content' && { tabIndex: '-1' })}
       {...(ariaHidden && { as: 'strong', 'aria-hidden': 'true' })}
     >
       <TextWrapper {...(ariaHidden ? {} : { role: 'text' })}>
-        <BrandTitle script={script} darkMode={darkMode}>
-          {brandTitle}
-        </BrandTitle>
+        <BrandTitle script={script}>{brandTitle}</BrandTitle>
         <VisuallyHiddenText>, </VisuallyHiddenText>
         <Subheading script={script} service={service}>
           {episodeTitle || formattedTimestamp}
@@ -105,7 +98,6 @@ OnDemandHeadingContainer.propTypes = {
   releaseDateTimeStamp: number.isRequired,
   episodeTitle: string,
   ariaHidden: bool,
-  darkMode: bool,
   className: string,
 };
 
@@ -113,7 +105,6 @@ OnDemandHeadingContainer.defaultProps = {
   idAttr: null,
   episodeTitle: null,
   ariaHidden: false,
-  darkMode: false,
   className: '',
 };
 

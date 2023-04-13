@@ -88,7 +88,6 @@ const RecentVideoEpisodes = ({ masterBrand, episodes }) => {
         script={script}
         service={service}
         dir={dir}
-        darkMode
         ulProps={ulProps}
         liProps={liProps}
       >

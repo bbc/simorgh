@@ -26,7 +26,7 @@ storiesOf('Components/Paragraph', module)
   .add(
     'dark mode',
     ({ text, script, service }) => (
-      <Paragraph script={script} service={service} darkMode>
+      <Paragraph script={script} service={service}>
         {text}
       </Paragraph>
     ),

@@ -35,6 +35,10 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import MetadataContainer from '../../components/Metadata';
 import getPlaceholderImageUrl from '../../routes/utils/getPlaceholderImageUrl';
 
+const Wrapper = styled.div`
+  background-color: ${({ theme }) => theme.palette.GREY_10};
+`;
+
 const getGroups = (zero, one, two, three, four, five) => ({
   group0: zero,
   group1: one,
@@ -118,7 +122,7 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
     : headline;
 
   return (
-    <>
+    <Wrapper>
       <ChartbeatAnalytics data={pageData} />
       <ATIAnalytics data={pageData} />
       <ComscoreAnalytics />
@@ -185,7 +189,6 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
             brandTitle={brandTitle}
             releaseDateTimeStamp={releaseDateTimeStamp}
             episodeTitle={episodeTitle}
-            darkMode
             ariaHidden
           />
         </Grid>
@@ -197,13 +200,9 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
         >
           <OnDemandParagraphContainer
             text={episodeTitle ? mediumSynopsis : shortSynopsis}
-            darkMode
           />
           {episodeTitle && (
-            <FooterTimestamp
-              releaseDateTimeStamp={releaseDateTimeStamp}
-              darkMode
-            />
+            <FooterTimestamp releaseDateTimeStamp={releaseDateTimeStamp} />
           )}
         </Grid>
       </StyledGelPageGrid>
@@ -226,7 +225,7 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
           </Grid>
         </StyledGelPageGrid>
       )}
-    </>
+    </Wrapper>
   );
 };
 

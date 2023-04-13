@@ -18,7 +18,7 @@ describe('MediaPageBlocks Paragraph', () => {
 
   it('should render correctly - dark mode', () => {
     const { container } = render(
-      <Paragraph uuid="uuid" idAttr="idAttr" text="Example text" darkMode />,
+      <Paragraph uuid="uuid" idAttr="idAttr" text="Example text" />,
       { service: 'news' },
     );
     expect(container).toMatchSnapshot();

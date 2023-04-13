@@ -23,7 +23,7 @@ storiesOf('Components/Headline', module)
   .add(
     'dark mode',
     ({ text: textSnippet, script, service }) => (
-      <Headline script={script} service={service} darkMode>
+      <Headline script={script} service={service}>
         {textSnippet}
       </Headline>
     ),
@@ -45,7 +45,7 @@ storiesOf('Components/SubHeading', module)
   .add(
     'darkMode',
     ({ text: textSnippet, script, service }) => (
-      <SubHeading script={script} service={service} darkMode>
+      <SubHeading script={script} service={service}>
         {textSnippet}
       </SubHeading>
     ),
