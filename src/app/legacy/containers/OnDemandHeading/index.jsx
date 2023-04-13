@@ -4,29 +4,22 @@ import styled from '@emotion/styled';
 import { Headline } from '#psammead/psammead-headings/src';
 import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
 import {
-  GEL_SPACING,
-  GEL_SPACING_DBL,
-  GEL_SPACING_TRPL,
-} from '#psammead/gel-foundations/src/spacings';
-import {
   MEDIA_QUERY_TYPOGRAPHY,
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
   GEL_GROUP_1_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
 import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
-import { getDoublePica } from '#psammead/gel-foundations/src/typography';
-import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const BrandTitle = styled.span`
   display: block;
   line-height: 1;
   width: 100%;
-  padding-bottom: ${GEL_SPACING};
+  padding-bottom: ${({ theme }) => `${theme.spacings.FULL}rem`};
   word-break: break-word;
-  ${({ theme }) => (theme.isDarkUi ? '' : theme.fontSizes.getParagon)}
+  ${({ theme }) => !theme.isDarkUi && { ...theme.fontSizes.paragon }}
   ${MEDIA_QUERY_TYPOGRAPHY.LAPTOP_AND_LARGER} {
-    padding-bottom: ${GEL_SPACING_DBL};
+    padding-bottom: ${({ theme }) => `${theme.spacings.DOUBLE}rem`};
     word-break: break-word;
     line-height: 1.09;
   }
@@ -35,18 +28,20 @@ const BrandTitle = styled.span`
 const Subheading = styled.span`
   display: inline-block;
   margin: 0;
-  ${({ script }) => script && getDoublePica(script)}
-  ${({ service }) => getSansRegular(service)}
+  ${({ theme }) => ({
+    ...theme.fontSizes.doublePica,
+    ...theme.fontVariants.sansRegular,
+  })}
   @media (max-width: 22.5rem) and (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
     font-size: 1.25rem;
-    line-height: ${GEL_SPACING_TRPL};
+    line-height: ${({ theme }) => `${theme.spacings.TRIPLE}rem`};
   }
   ${MEDIA_QUERY_TYPOGRAPHY.LAPTOP_AND_LARGER} {
-    font-size: ${GEL_SPACING_TRPL};
+    font-size: ${({ theme }) => `${theme.spacings.TRIPLE}rem`};
     line-height: 1.75rem;
   }
 `;
