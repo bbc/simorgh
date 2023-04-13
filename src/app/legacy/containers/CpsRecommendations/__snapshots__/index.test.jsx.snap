@@ -155,6 +155,17 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 }
 
+.emotion-6:not(:focus):not(:active) {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
 .emotion-9 {
   position: relative;
   z-index: 0;
@@ -464,6 +475,17 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   color: #6E6E73;
 }
 
+.emotion-33 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
 <div>
   <div
     class="emotion-0 emotion-1"
@@ -708,6 +730,17 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   .emotion-6 {
     font-size: 0.8125rem;
   }
+}
+
+.emotion-6:not(:focus):not(:active) {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
 }
 
 .emotion-9 {
@@ -1136,6 +1169,17 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   color: #6E6E73;
 }
 
+.emotion-90 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
 <div>
   <div
     class="emotion-0 emotion-1"
@@ -1533,6 +1577,17 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   .emotion-6 {
     font-size: 0.8125rem;
   }
+}
+
+.emotion-6:not(:focus):not(:active) {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
 }
 
 .emotion-9 {
@@ -1959,6 +2014,17 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 .emotion-37:visited {
   color: #6E6E73;
+}
+
+.emotion-90 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
 }
 
 <div>

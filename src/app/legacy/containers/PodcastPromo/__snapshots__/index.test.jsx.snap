@@ -69,6 +69,17 @@ exports[`Inline Should render correctly 1`] = `
   }
 }
 
+.emotion-7:not(:focus):not(:active) {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
 .emotion-9 {
   margin: 0 0 1rem;
 }
@@ -461,6 +472,17 @@ exports[`Inline Should render correctly 1`] = `
   fill: currentColor;
   width: 1rem;
   height: 1rem;
+}
+
+.emotion-33 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
 }
 
 <div>
