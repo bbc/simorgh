@@ -10,7 +10,7 @@ export const styles = {
       ...fontVariants.sansRegular,
       display: 'flex',
       minWidth: '5rem',
-      padding: '0.5rem 0.125rem 0.5rem 0.125rem',
+      padding: '0.5rem 0.125rem',
       [mq.GROUP_3_ONLY]: {
         padding: '0.5rem',
         position: 'absolute',

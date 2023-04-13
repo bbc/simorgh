@@ -11,7 +11,6 @@ const LatestMediaIndicator = ({ duration }: LatestMediaIndicatorProp) => {
   const momentDuration = moment.duration(duration, 'seconds');
   const durationString = formatDuration({ duration: momentDuration });
   const isoDuration = momentDuration.toISOString();
-
   return (
     <div css={styles.placeholderInfo}>
       <StyledPromoMediaIndicator />

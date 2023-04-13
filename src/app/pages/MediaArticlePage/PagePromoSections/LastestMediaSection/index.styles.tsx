@@ -9,11 +9,9 @@ const styles = {
   LatestMediaSection: ({ mq, isDarkUi, palette }: Theme) =>
     css({
       backgroundColor: isDarkUi ? palette.GREY_10 : palette.GREY_2,
-      marginLeft: '0.5rem',
-      marginRight: '0.5rem',
+      margin: '0 0.5rem',
       [mq.GROUP_3_ONLY]: {
-        marginLeft: '1rem',
-        marginRight: '1rem',
+        margin: '0 1rem',
       },
     }),
   LatestMediaGridWrapper: ({ mq }: Theme) =>
@@ -28,7 +26,7 @@ const styles = {
   LatestMediaPromoBorderAndWidth: ({ mq, palette }: Theme) =>
     css({
       borderBottom: `${pixelsToRem(1)}rem ${palette.GREY_2} solid`,
-      marginBotton: '0',
+      marginBottom: '0',
       [mq.GROUP_3_ONLY]: {
         borderBottom: '0',
         width: '48.5%',
