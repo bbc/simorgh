@@ -123,12 +123,14 @@ import {
 
 import gridWidths from './gridWidths';
 
+import { MEDIA_ARTICLE_PAGE, MEDIA_PAGE } from '../../routes/utils/pageTypes';
 import { BrandPalette, Typography, BrandSVG } from '../../models/types/theming';
 import { PageTypes } from '../../models/types/global';
 
 const isDarkUiPage = (pageType: PageTypes, derivedPageType?: string | null) =>
-  pageType === 'mediaArticle' ||
-  (pageType === 'media' && derivedPageType?.toLowerCase() === 'on demand tv');
+  pageType === MEDIA_ARTICLE_PAGE ||
+  (pageType === MEDIA_PAGE &&
+    derivedPageType?.toLowerCase() === 'on demand tv');
 
 type Props = {
   children: React.ReactNode;

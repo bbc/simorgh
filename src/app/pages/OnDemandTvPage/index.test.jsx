@@ -32,7 +32,7 @@ const Page = ({ pageData, service, isAmp = false }) => (
         <RequestContextProvider
           bbcOrigin="https://www.test.bbc.com"
           isAmp={isAmp}
-          pageType={MEDIA_PAGE}
+          pageType={pageType}
           derivedPageType="On Demand TV"
           pathname="/pathname"
           service={service}

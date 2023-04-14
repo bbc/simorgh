@@ -20,7 +20,7 @@ describe('MediaPageBlocks Paragraph', () => {
     const { container } = render(
       <Paragraph uuid="uuid" idAttr="idAttr" text="Example text" />,
       {
-        service: 'afrique',
+        service: 'news',
         pageType: 'media',
         derivedPageType: 'On Demand TV',
       },
