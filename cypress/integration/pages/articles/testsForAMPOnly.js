@@ -1,9 +1,6 @@
 import path from 'ramda/src/path';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
-import {
-  getBlockData,
-  getVideoEmbedUrl,
-} from './helpers';
+import { getBlockData, getVideoEmbedUrl } from './helpers';
 import config from '../../../support/config/services';
 import { serviceNumerals } from '../../../../src/app/legacy/containers/MostRead/Canonical/Rank';
 

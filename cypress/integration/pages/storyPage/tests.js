@@ -18,9 +18,11 @@ export const testsThatFollowSmokeTestConfig = ({
   describe(`testsThatFollowSmokeTestConfig to run for ${service} ${pageType}`, () => {
     it('should render a description for the page', () => {
       cy.getPageData(service, pageType).then(({ body }) => {
-        const descriptionBlock = body.data.article.content.blocks.find(
-          block => block.role === 'introduction',
-        );
+        const descriptionBlock = (
+          Cypress.env('APP_ENV') !== 'local'
+            ? body.data.article.content.blocks
+            : body.content.blocks
+        ).find(block => block.role === 'introduction');
         // Condition added because introduction is non-mandatory
         if (descriptionBlock) {
           const descriptionHtml = pathOr({}, ['text'], descriptionBlock);
@@ -35,9 +37,11 @@ export const testsThatFollowSmokeTestConfig = ({
 
     it('should render paragraph text for the page', () => {
       cy.getPageData(service, pageType).then(({ body }) => {
-        const paragraphBlock = body.data.article.content.blocks.find(
-          block => block.type === 'paragraph',
-        );
+        const paragraphBlock = (
+          Cypress.env('APP_ENV') !== 'local'
+            ? body.data.article.content.blocks
+            : body.content.blocks
+        ).find(block => block.type === 'paragraph');
         // Conditional because in test assets the data model structure is sometimes variable and unusual
         // so cannot be accessed in the same way across assets
         if (paragraphBlock) {
