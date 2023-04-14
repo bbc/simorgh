@@ -25,8 +25,8 @@ describe('Recent Video Episodes', () => {
       <RecentVideoEpisodes masterBrand="bbc_afrique_tv" episodes={afrique} />,
       {
         pageType: 'media',
+        derivedPageType: 'On Demand TV',
         service: 'afrique',
-        pathname: '/afrique/bbc_afrique_tv/tv/w172xc9xq2gllfk',
       },
     );
     expect(container).toMatchSnapshot();

@@ -22,7 +22,7 @@ describe('MediaPageBlocks Paragraph', () => {
       {
         service: 'afrique',
         pageType: 'media',
-        pathname: '/afrique/bbc_afrique_tv/tv/w172xc9xq2gllfk',
+        derivedPageType: 'On Demand TV',
       },
     );
     expect(container).toMatchSnapshot();

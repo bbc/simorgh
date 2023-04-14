@@ -32,8 +32,8 @@ describe('AudioPlayer blocks OnDemandHeading', () => {
   it('should render correctly - dark mode', () => {
     const { container } = render(<Component />, {
       pageType: 'media',
+      derivedPageType: 'On Demand TV',
       service: 'afrique',
-      pathname: '/afrique/bbc_afrique_tv/tv/w172xc9xq2gllfk',
     });
     expect(container).toMatchSnapshot();
   });

@@ -33,6 +33,7 @@ const Page = ({ pageData, service, isAmp = false }) => (
           bbcOrigin="https://www.test.bbc.com"
           isAmp={isAmp}
           pageType={MEDIA_PAGE}
+          derivedPageType="On Demand TV"
           pathname="/pathname"
           service={service}
           statusCode={200}
@@ -51,7 +52,7 @@ const renderPage = async ({ pageData, service, isAmp = false }) => {
       <Page pageData={pageData} service={service} isAmp={isAmp} />,
       {
         pageType,
-        pathname: '/some-ondemand-tv-path',
+        derivedPageType: 'On Demand TV',
       },
     );
   });

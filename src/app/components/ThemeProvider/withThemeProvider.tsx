@@ -124,6 +124,11 @@ import {
 import gridWidths from './gridWidths';
 
 import { BrandPalette, Typography, BrandSVG } from '../../models/types/theming';
+import { PageTypes } from '../../models/types/global';
+
+const isDarkUiPage = (pageType: PageTypes, derivedPageType?: string | null) =>
+  pageType === 'mediaArticle' ||
+  (pageType === 'media' && derivedPageType?.toLowerCase() === 'on demand tv');
 
 type Props = {
   children: React.ReactNode;
@@ -270,16 +275,13 @@ const withThemeProvider = ({
   };
 
   const ThemeProvider: React.FC<Props> = ({ children }) => {
-    const { isAmp, pageType, pathname } = useContext(RequestContext);
+    const { isAmp, pageType, derivedPageType } = useContext(RequestContext);
 
-    // TODO: Think of a better way to do this of OnDemand Audio/Video page types
-    const isDarkUiPage =
-      pageType === 'mediaArticle' ||
-      (pageType === 'media' && pathname?.includes('tv'));
+    const darkUiPage = isDarkUiPage(pageType, derivedPageType);
 
     const theme = {
       ...themeConfig,
-      isDarkUi: isDarkUiPage && !isLive(),
+      isDarkUi: darkUiPage && !isLive(),
     };
 
     return (

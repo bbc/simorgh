@@ -17,6 +17,7 @@ interface Props {
   isAmp?: boolean;
   pageData?: object;
   pageType?: PageTypes;
+  derivedPageType?: string | null;
   pathname?: string;
   service?: Services;
   toggles?: Record<string, boolean>;
@@ -31,6 +32,7 @@ const AllTheProviders: FC<Props> = ({
   isAmp = false,
   pageData = pageDataFixture,
   pageType = 'article',
+  derivedPageType,
   pathname = '/news/articles/c0g992jmmkko',
   service = 'news',
   toggles = {},
@@ -46,6 +48,7 @@ const AllTheProviders: FC<Props> = ({
           isAmp={isAmp}
           service={service}
           pathname={pathname}
+          derivedPageType={derivedPageType}
           showAdsBasedOnLocation={showAdsBasedOnLocation}
         >
           <EventTrackingContextProvider pageData={pageData}>
@@ -69,6 +72,7 @@ const customRender = (
     isAmp,
     pageData,
     pageType,
+    derivedPageType,
     pathname,
     service,
     toggles,
@@ -82,6 +86,7 @@ const customRender = (
         isAmp={isAmp}
         pageData={pageData}
         pageType={pageType}
+        derivedPageType={derivedPageType}
         pathname={pathname}
         service={service}
         toggles={toggles}
