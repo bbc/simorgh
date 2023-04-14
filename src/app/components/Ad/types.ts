@@ -2,9 +2,12 @@ import { PageTypes, Services, Direction } from '#app/models/types/global';
 
 export type SlotType = 'leaderboard' | 'mpu';
 
-export interface AdProps {
-  slotType: SlotType;
+export interface MPUAdProps {
   className?: string;
+}
+
+export interface AdProps extends MPUAdProps {
+  slotType: SlotType;
 }
 
 type SlotFunction = (slotType: string) => void;

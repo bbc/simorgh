@@ -2,9 +2,9 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import Ad from '..';
-import { AdProps } from '../types';
+import { MPUAdProps } from '../types';
 import styles from './index.styles';
 
-export default ({ className }: AdProps) => {
+export default ({ className }: MPUAdProps) => {
   return <Ad css={styles.mpu} slotType="mpu" className={className} />;
 };
