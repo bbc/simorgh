@@ -49,7 +49,7 @@ exports[`Headline component should render correctly in dark mode 1`] = `
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-style: normal;
-  color: #F2F2F2;
+  color: #F6F6F6;
   display: block;
   margin: 0;
   padding: 2rem 0;
@@ -175,7 +175,7 @@ exports[`SubHeading component should render correctly in dark mode 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  color: #F2F2F2;
+  color: #F6F6F6;
   margin: 0;
   padding: 1.5rem 0;
 }

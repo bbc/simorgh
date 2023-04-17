@@ -3609,23 +3609,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/kyrgyz'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/kyrgyz'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/kyrgyz'],
-            enabled: true,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: {
         environments: {
           live: {

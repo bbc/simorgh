@@ -15,8 +15,8 @@ import errorNoRouteMatch from './errorNoRouteMatch';
 
 export default [
   article,
-  frontPage,
   homePage,
+  frontPage,
   liveRadio,
   mostRead,
   mostWatched,
