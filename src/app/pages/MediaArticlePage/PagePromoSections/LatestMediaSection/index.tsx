@@ -61,7 +61,7 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
   const LABEL_ID = 'latest-media-heading';
 
   if (!content || isEmpty(content)) return null;
-  const hasSingleContent = content.length === 1;
+  const hasSingleItem = content.length === 1;
   const singleItem = content[0];
   const ariaLabelledBy = generatePromoId({
     sectionType: 'latest-media',
@@ -93,7 +93,7 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
       >
         {translations.latestMediaTitle ?? 'Latest'}
       </SectionLabel>
-      {hasSingleContent ? (
+      {hasSingleItem ? (
         <div css={styles.LatestMediaPromoBorderAndWidth}>
           <LatestMediaItem
             item={singleItem}
