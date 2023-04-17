@@ -14,7 +14,7 @@ const SecondaryColumn = ({ pageData }) => {
   if (!topStoriesContent && !featuresContent) return null;
 
   return (
-    <div css={styles.secondaryColumn}>
+    <div css={styles.latestMediaColumn}>
       {latestMediaContent && (
         <div data-testid="latest-media" css={styles.responsiveComponentWrapper}>
           <LatestMediaSection content={latestMediaContent} />

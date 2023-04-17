@@ -188,22 +188,20 @@ const MediaArticlePage = ({ pageData }) => {
         imageLocator={promoImage}
       />
       <div css={styles.grid}>
-        <div css={styles.primaryColumn}>
-          <main css={styles.mainContent} role="main">
-            <Blocks blocks={blocks} componentsToRender={componentsToRender} />
-          </main>
-          {showRelatedTopics && topics && (
-            <RelatedTopics
-              css={styles.relatedTopics}
-              topics={topics}
-              mobileDivider={false}
-              backgroundColour={GREY_2}
-              tagBackgroundColour={WHITE}
-            />
-          )}
-          <RelatedContentSection content={blocks} />
-        </div>
+        <main css={styles.mainContent} role="main">
+          <Blocks blocks={blocks} componentsToRender={componentsToRender} />
+        </main>
         <SecondaryColumn pageData={pageData} />
+        {showRelatedTopics && topics && (
+          <RelatedTopics
+            css={styles.additionalContent}
+            topics={topics}
+            mobileDivider={false}
+            backgroundColour={GREY_2}
+            tagBackgroundColour={WHITE}
+          />
+        )}
+        <RelatedContentSection css={styles.additionalContent} content={blocks} />
       </div>
     </div>
   );

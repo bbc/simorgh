@@ -17,33 +17,25 @@ export default {
       margin: '0 auto',
       display: 'grid',
       gridTemplateColumns: 'repeat(12, 1fr)',
-
       [mq.GROUP_4_MIN_WIDTH]: {
         padding: '0 1rem',
         columnGap: '1rem',
       },
     }),
-  primaryColumn: ({ mq }: Theme) =>
+  latestMediaColumn: ({ mq }: Theme) =>
     css({
       gridColumn: '1 / span 12',
-      paddingBottom: '2rem',
-
+      padding: '2rem 0',
+      [mq.GROUP_4_MIN_WIDTH]: {
+        gridColumn: '9 / span 4',
+      },
+    }),
+  mainContent: ({ mq }: Theme) =>
+    css({
+      gridColumn: '1 / span 12',
       [mq.GROUP_4_MIN_WIDTH]: {
         gridColumn: '1 / span 8',
       },
-    }),
-  secondaryColumn: ({ mq }: Theme) =>
-    css({
-      gridColumn: '1 / span 12',
-
-      [mq.GROUP_4_MIN_WIDTH]: {
-        gridColumn: '9 / span 4',
-        marginTop: '2rem',
-      },
-    }),
-  mainContent: ({ spacings }: Theme) =>
-    css({
-      paddingBottom: `${spacings.TRIPLE}rem`,
     }),
   mediaPlayer: ({ spacings }: Theme) =>
     css({
@@ -71,27 +63,17 @@ export default {
         maxWidth: `${pixelsToRem(gridWidths[1280])}rem`,
       },
     }),
-  relatedTopics: ({ spacings, mq }: Theme) =>
+  additionalContent: ({ spacings, mq }: Theme) =>
     css({
+      gridColumn: '1 / span 12',
       margin: `${spacings.DOUBLE}rem`,
       paddingBottom: `${spacings.FULL}rem`,
-
       [mq.GROUP_4_MIN_WIDTH]: {
         margin: `${spacings.QUADRUPLE}rem 0`,
         paddingBottom: `${spacings.QUADRUPLE}rem`,
+        gridColumn: '1 / span 8',
       },
     }),
-
-  topStoriesAndFeaturesSection: ({ spacings, mq }: Theme) =>
-    css({
-      marginBottom: `${spacings.TRIPLE}rem`,
-
-      [mq.GROUP_4_MIN_WIDTH]: {
-        marginBottom: `${spacings.FULL}rem`,
-        padding: `${spacings.DOUBLE}rem`,
-      },
-    }),
-
   responsiveComponentWrapper: ({ mq }: Theme) =>
     css({
       marginBottom: `${GEL_SPACING_TRPL}`,
