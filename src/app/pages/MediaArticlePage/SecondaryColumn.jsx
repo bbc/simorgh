@@ -3,7 +3,7 @@
 import path from 'ramda/src/path';
 import { jsx } from '@emotion/react';
 import { articleDataPropTypes } from '#models/propTypes/article';
-import LatestMediaSection from './PagePromoSections/LastestMediaSection';
+import LatestMediaSection from './PagePromoSections/LatestMediaSection';
 import styles from './MediaArticlePage.styles';
 
 const SecondaryColumn = ({ pageData }) => {
