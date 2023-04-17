@@ -78,9 +78,9 @@ const Uploader = ({ blocks }: UploaderProps) => {
         <Heading level={2} size="paragon" css={styles.heading}>
           {title as string}
         </Heading>
-        <Paragraph css={styles.paragraph}>{text as string}</Paragraph>
-        <a href={linkAddress as string} css={styles.linkBackground}>
-          <div>
+        <Paragraph>{text as string}</Paragraph>
+        <div css={styles.linkContainer}>
+          <a href={linkAddress as string} css={styles.linkBackground}>
             <Text size="pica" fontVariant="sansBold" css={styles.link}>
               {linkText as string}
               {isRtl ? (
@@ -89,8 +89,8 @@ const Uploader = ({ blocks }: UploaderProps) => {
                 <RightChevron css={styles.chevron} />
               )}
             </Text>
-          </div>
-        </a>
+          </a>
+        </div>
       </div>
     </section>
   );

@@ -14,28 +14,40 @@ const styles = {
   card: ({ spacings, palette }: Theme) =>
     css({
       backgroundColor: palette.WHITE,
-      padding: `${spacings.DOUBLE}rem`,
+      paddingLeft: `${spacings.DOUBLE}rem`,
+      paddingRight: `${spacings.DOUBLE}rem`,
     }),
   heading: ({ spacings }: Theme) =>
     css({
       paddingTop: `${spacings.DOUBLE}rem`,
       paddingBottom: `${pixelsToRem(12)}rem`,
     }),
-  paragraph: () =>
+  linkContainer: () =>
     css({
-      color: '#000000',
+      display: 'flex',
+      justifyContent: 'start',
     }),
-  linkBackground: () =>
+  linkBackground: ({ spacings, palette }: Theme) =>
     css({
-      color: '#000000',
+      padding: `${pixelsToRem(11)}rem 
+      ${pixelsToRem(15)}rem 
+      ${pixelsToRem(13)}rem 
+      ${spacings.DOUBLE}rem`,
+      marginTop: `${spacings.DOUBLE}rem`,
+      marginBottom: `${spacings.DOUBLE}rem`,
+      backgroundColor: palette.BLACK,
+      width: 'auto',
+      textDecoration: 'none',
     }),
-  link: () =>
+  link: ({ palette }: Theme) =>
     css({
-      color: '#000000',
+      color: palette.WHITE,
     }),
-  chevron: () =>
+  chevron: ({ palette }: Theme) =>
     css({
       marginInlineStart: `${pixelsToRem(12)}rem`,
+      color: palette.WHITE,
+      fill: 'currentcolor',
     }),
 };
 export default styles;
