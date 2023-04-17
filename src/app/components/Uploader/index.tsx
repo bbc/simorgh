@@ -12,13 +12,17 @@ import styles from './index.styles';
 
 interface UploaderProps {
   blocks: object[];
-  title: string;
-  text: string;
-  link: string;
 }
 
 const Uploader = ({ blocks }: UploaderProps) => {
-  // const type = path([0, 'type'], blocks);
+  // console.log(blocks);
+  // console.log(typeof blocks);
+  const { dir } = useContext(ServiceContext);
+  const isRtl = dir === 'rtl';
+
+  const type = path([0, 'type'], blocks); // aresUploader
+  if (type !== 'aresUploader') return null;
+
   const uploaderBlocks = path([0, 'model', 'blocks'], blocks);
 
   const title = path(
@@ -67,15 +71,12 @@ const Uploader = ({ blocks }: UploaderProps) => {
     uploaderBlocks,
   );
 
-  const { dir } = useContext(ServiceContext);
-  const isRtl = dir === 'rtl';
-
   const id = `${(title as string).replaceAll(' ', '-')}`;
 
   return (
     <section role="region" aria-labelledby={id} css={styles.container}>
       <div css={styles.card}>
-        <Heading level={2} size="paragon" css={styles.heading}>
+        <Heading level={2} size="paragon" css={styles.heading} id={id}>
           {title as string}
         </Heading>
         <Paragraph>{text as string}</Paragraph>
