@@ -1,8 +1,3 @@
-import {
-  GEL_SPACING,
-  GEL_SPACING_DBL,
-  GEL_SPACING_TRPL,
-} from '#app/legacy/psammead/gel-foundations/src/spacings';
 import { css, Theme } from '@emotion/react';
 import pixelsToRem from '../../utilities/pixelsToRem';
 
@@ -92,12 +87,13 @@ export default {
       },
     }),
 
-  responsiveComponentWrapper: ({ mq }: Theme) =>
+  responsiveComponentWrapper: ({ spacings, mq }: Theme) =>
     css({
-      marginBottom: `${GEL_SPACING_TRPL}`,
+      marginBottom: `${spacings.TRIPLE}rem`,
+
       [mq.GROUP_4_MIN_WIDTH]: {
-        marginBottom: `${GEL_SPACING}`,
-        padding: `${GEL_SPACING_DBL}`,
+        marginBottom: `${spacings.FULL}rem`,
+        padding: `${spacings.DOUBLE}rem`,
       },
     }),
 };
