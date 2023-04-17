@@ -9,7 +9,7 @@ const Paragraph = styled.p`
   ${({ script }) => script && getBodyCopy(script)};
   ${({ service }) => getSansRegular(service)}
   color: ${({ darkMode, theme }) =>
-    darkMode || theme.isDarkUi ? theme.palette.LUNAR : theme.palette.GREY_10};
+    darkMode || theme.isDarkUi ? theme.palette.GREY_2 : theme.palette.GREY_10};
   padding-bottom: ${GEL_SPACING_TRPL};
   margin: 0; /* Reset */
 `;
