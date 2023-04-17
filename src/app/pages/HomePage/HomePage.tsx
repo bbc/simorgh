@@ -19,7 +19,7 @@ interface HomePageProps {
     id?: string;
     title: string;
     curations: CurationData[];
-    description?: string;
+    description: string;
   };
 }
 
