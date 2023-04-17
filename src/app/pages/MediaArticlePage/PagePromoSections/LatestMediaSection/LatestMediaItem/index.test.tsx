@@ -6,10 +6,10 @@ import {
 
 import LatestMediaItem from '.';
 import PromoContext from '../../../../../legacy/components/OptimoPromos/PromoContext';
-import { EventTrackingData, LatestMedia } from '../types';
+import { EventTrackingData, LatestMedia, Media } from '../types';
 
 interface FixtureProps {
-  mediaType?: 'audio' | 'video';
+  mediaType?: Media;
   imageAlt?: string;
 }
 

@@ -6,10 +6,11 @@ import {
 
 import LatestMediaIndicator from '.';
 import PromoContext from '../../../../../legacy/components/OptimoPromos/PromoContext';
+import { Media } from '../types';
 
 interface FixtureProps {
   duration: string;
-  mediaType?: 'audio' | 'video';
+  mediaType?: Media;
 }
 
 const Fixture = ({ duration, mediaType }: FixtureProps) => {

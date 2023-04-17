@@ -1,3 +1,5 @@
+export type Media = 'video' | 'audio';
+
 export type LatestMedia = {
   description: string;
   duration: string;
@@ -6,7 +8,7 @@ export type LatestMedia = {
   imageUrl: string;
   link: string;
   title: string;
-  type: 'video' | 'audio';
+  type: Media;
   imageAlt?: string;
 };
 
