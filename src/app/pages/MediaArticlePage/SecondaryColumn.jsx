@@ -7,11 +7,8 @@ import LatestMediaSection from './PagePromoSections/LatestMediaSection';
 import styles from './MediaArticlePage.styles';
 
 const SecondaryColumn = ({ pageData }) => {
-  const topStoriesContent = path(['secondaryColumn', 'topStories'], pageData);
-  const featuresContent = path(['secondaryColumn', 'features'], pageData);
   const latestMediaContent = path(['secondaryColumn', 'latestMedia'], pageData);
-
-  if (!topStoriesContent && !featuresContent) return null;
+  if (!latestMediaContent) return null;
 
   return (
     <div css={styles.secondaryColumn}>
