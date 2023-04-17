@@ -42,4 +42,4 @@ jobs:
         run: ./scripts/installNodeModules.sh
 
       - name: Integration Tests
-        run: yarn test:integration -- --ci
+        run: yarn test:integration:ci
