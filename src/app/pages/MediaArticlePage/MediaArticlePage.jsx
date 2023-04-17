@@ -191,6 +191,15 @@ const MediaArticlePage = ({ pageData }) => {
         <main css={styles.mainContent} role="main">
           <Blocks blocks={blocks} componentsToRender={componentsToRender} />
         </main>
+        {showRelatedTopics && topics && (
+          <RelatedTopics
+            css={styles.additionalContent}
+            topics={topics}
+            mobileDivider={false}
+            backgroundColour={GREY_2}
+            tagBackgroundColour={WHITE}
+          />
+        )}
         <SecondaryColumn pageData={pageData} />
         {showRelatedTopics && topics && (
           <RelatedTopics
@@ -201,7 +210,10 @@ const MediaArticlePage = ({ pageData }) => {
             tagBackgroundColour={WHITE}
           />
         )}
-        <RelatedContentSection css={styles.additionalContent} content={blocks} />
+        <RelatedContentSection
+          css={styles.additionalContent}
+          content={blocks}
+        />
       </div>
     </div>
   );

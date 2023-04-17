@@ -25,9 +25,10 @@ export default {
   latestMediaColumn: ({ mq }: Theme) =>
     css({
       gridColumn: '1 / span 12',
-      padding: '2rem 0',
+      paddingTop: '2rem',
       [mq.GROUP_4_MIN_WIDTH]: {
         gridColumn: '9 / span 4',
+        order: '2',
       },
     }),
   mainContent: ({ mq }: Theme) =>
@@ -35,33 +36,12 @@ export default {
       gridColumn: '1 / span 12',
       [mq.GROUP_4_MIN_WIDTH]: {
         gridColumn: '1 / span 8',
+        order: '1',
       },
     }),
   mediaPlayer: ({ spacings }: Theme) =>
     css({
       paddingTop: `${spacings.TRIPLE}rem`,
-    }),
-  mostReadSection: ({ spacings, mq, gridWidths }: Theme) =>
-    css({
-      [mq.GROUP_1_MAX_WIDTH]: {
-        margin: `0 ${spacings.FULL}rem`,
-        paddingBottom: `${spacings.TRIPLE}rem`,
-      },
-      [mq.GROUP_2_MIN_WIDTH]: {
-        [mq.GROUP_3_MAX_WIDTH]: {
-          margin: `0 ${spacings.DOUBLE}rem`,
-          paddingBottom: `${spacings.QUADRUPLE}rem`,
-        },
-      },
-      [mq.GROUP_4_ONLY]: {
-        margin: `0 ${spacings.DOUBLE}rem`,
-        paddingBottom: `${spacings.QUINTUPLE}rem`,
-      },
-      [mq.GROUP_5_MIN_WIDTH]: {
-        margin: '0 auto',
-        padding: `0 ${spacings.DOUBLE}rem ${spacings.TRIPLE}rem`,
-        maxWidth: `${pixelsToRem(gridWidths[1280])}rem`,
-      },
     }),
   additionalContent: ({ spacings, mq }: Theme) =>
     css({
@@ -69,9 +49,11 @@ export default {
       margin: `${spacings.DOUBLE}rem`,
       paddingBottom: `${spacings.FULL}rem`,
       [mq.GROUP_4_MIN_WIDTH]: {
-        margin: `${spacings.QUADRUPLE}rem 0`,
-        paddingBottom: `${spacings.QUADRUPLE}rem`,
         gridColumn: '1 / span 8',
+        order: '3',
+        '&:last-child': {
+          marginBottom: `${spacings.QUADRUPLE}rem`,
+        },
       },
     }),
   responsiveComponentWrapper: ({ mq }: Theme) =>
