@@ -2,7 +2,6 @@
 /* @jsxFrag React.Fragment */
 import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
-import path from 'ramda/src/path';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import {
   VisualProminence,
@@ -20,15 +19,13 @@ interface HomePageProps {
     id?: string;
     title: string;
     curations: CurationData[];
+    description?: string;
   };
 }
 
 const HomePage = ({ pageData }: HomePageProps) => {
-  const { curations } = pageData;
-  const description: string | undefined = path(
-    ['metadata', 'summary'],
-    pageData,
-  );
+  const { curations, description } = pageData;
+
   const { translations, product, serviceLocalizedName, frontPageTitle, lang } =
     useContext(ServiceContext);
   const { topStoriesTitle, home } = translations;

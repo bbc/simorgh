@@ -53,6 +53,19 @@ describe('Home Page', () => {
     render(<HomePage pageData={kyrgyzHomePageData} />, {
       service: 'kyrgyz',
     });
-    expect(Helmet.peek().title).toEqual(kyrgyzHomePageData.title);
+    expect(Helmet.peek().title).toEqual(
+      'Кабарлар, акыркы мүнөттөгү кабарлар, талдоо, видео - BBC News Кыргыз Кызматы',
+    );
+  });
+
+  it('should have a metadata description', () => {
+    render(<HomePage pageData={kyrgyzHomePageData} />, {
+      service: 'kyrgyz',
+    });
+    const helmetContent = Helmet.peek();
+    const findDescription = helmetContent.metaTags.find(
+      ({ name }) => name === 'description',
+    );
+    expect(findDescription?.content).toEqual(kyrgyzHomePageData.description);
   });
 });
