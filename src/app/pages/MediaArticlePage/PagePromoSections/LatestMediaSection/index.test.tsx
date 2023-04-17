@@ -7,7 +7,7 @@ import {
 import LatestMediaSection from '.';
 import hausaArticle from '../../../../../../data/hausa/articles/cxr0765kxlzo.json';
 import tamilArticle from '../../../../../../data/tamil/articles/c84m2jl4dpzo.json';
-import { LatestMedia } from './LatestMediaTypes';
+import { LatestMedia } from './types';
 
 describe('Latest Media Section', () => {
   it('should render 4 list items within <ul> tags', () => {

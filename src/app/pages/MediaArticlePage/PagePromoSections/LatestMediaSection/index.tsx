@@ -12,11 +12,7 @@ import SectionLabel from '#psammead/psammead-section-label/src';
 import generatePromoId from '../generatePromoId';
 import LatestMediaItem from './LatestMediaItem';
 import styles from './index.styles';
-import {
-  LatestMedia,
-  TrackingBlock,
-  EventTrackingData,
-} from './LatestMediaTypes';
+import { LatestMedia, TrackingBlock, EventTrackingData } from './types';
 
 const renderLatestMediaList = (
   item: LatestMedia,
@@ -34,7 +30,7 @@ const renderLatestMediaList = (
   });
 
   return (
-    <PromoItem key={index} css={styles.LatestMediaPromoBorderAndWidth}>
+    <PromoItem key={index} css={styles.latestMediaPromoBorderAndWidth}>
       <LatestMediaItem
         item={item}
         ariaLabelledBy={ariaLabelledBy}
@@ -61,7 +57,7 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
   const LABEL_ID = 'latest-media-heading';
 
   if (!content || isEmpty(content)) return null;
-  const hasSingleContent = content.length === 1;
+  const hasSingleItem = content.length === 1;
   const singleItem = content[0];
   const ariaLabelledBy = generatePromoId({
     sectionType: 'latest-media',
@@ -74,7 +70,7 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
 
   return (
     <section
-      css={styles.LatestMediaSection}
+      css={styles.latestMediaSection}
       aria-labelledby={LABEL_ID}
       role="region"
     >
@@ -89,12 +85,12 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
         backgroundColor="transparent"
         overrideHeadingAs={null}
         visuallyHidden={false}
-        css={styles.SectionTitle}
+        css={styles.sectionTitle}
       >
         {translations.latestMediaTitle ?? 'Latest'}
       </SectionLabel>
-      {hasSingleContent ? (
-        <div css={styles.LatestMediaPromoBorderAndWidth}>
+      {hasSingleItem ? (
+        <div css={styles.latestMediaPromoBorderAndWidth}>
           <LatestMediaItem
             item={singleItem}
             ariaLabelledBy={ariaLabelledBy}
@@ -103,7 +99,7 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
           />
         </div>
       ) : (
-        <PromoList css={styles.LatestMediaGridWrapper}>
+        <PromoList css={styles.latestMediaGridWrapper}>
           {content.map((item, index) =>
             renderLatestMediaList(item, index, eventTrackingData, viewRef),
           )}

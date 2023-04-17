@@ -4,7 +4,7 @@ import { jsx } from '@emotion/react';
 import moment from 'moment';
 import formatDuration from '#app/lib/utilities/formatDuration';
 import Promo from '#components/OptimoPromos';
-import { LatestMediaIndicatorProp } from '../LatestMediaTypes';
+import { LatestMediaIndicatorProp } from '../types';
 import styles from './index.styles';
 
 const LatestMediaIndicator = ({ duration }: LatestMediaIndicatorProp) => {
