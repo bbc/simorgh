@@ -15,8 +15,6 @@ interface UploaderProps {
 }
 
 const Uploader = ({ blocks }: UploaderProps) => {
-  // console.log(blocks);
-  // console.log(typeof blocks);
   const { dir } = useContext(ServiceContext);
   const isRtl = dir === 'rtl';
 

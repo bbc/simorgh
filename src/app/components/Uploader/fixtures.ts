@@ -1,5 +1,4 @@
-// eslint-disable-next-line import/prefer-default-export
-const pidginEmbedUgcUploader = [
+const pidginUploaderEmbed = [
   {
     id: '2488a6c7',
     type: 'aresUploader',
@@ -167,7 +166,7 @@ const pidginEmbedUgcUploader = [
   },
 ];
 
-const uploaderWithIncorrectType = [
+const uploaderEmbedWithIncorrectType = [
   {
     id: '2488a6c7',
     type: 'invalid',
@@ -335,4 +334,4 @@ const uploaderWithIncorrectType = [
   },
 ];
 
-export { pidginEmbedUgcUploader, uploaderWithIncorrectType };
+export { pidginUploaderEmbed, uploaderEmbedWithIncorrectType };
