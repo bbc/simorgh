@@ -1,12 +1,4 @@
-import React from 'react';
-import ColorCard from '.';
-
-export default {
-  title: 'storybook components/ColorCard',
-  component: ColorCard,
-};
-
-const COLORS = [
+export const COLORS = [
   { colorName: 'ARCHIVE_BLUE ', colorCode: '#3A549C' },
   { colorName: 'BLACK ', colorCode: '#000000' },
   { colorName: 'BLUEJAY ', colorCode: '#0F556C' },
@@ -56,5 +48,3 @@ const COLORS = [
   { colorName: 'WEATHER_BLUE ', colorCode: '#067EB3' },
   { colorName: 'WHITE ', colorCode: '#FFFFFF' },
 ];
-
-export const colorCardWhite = () => <ColorCard COLORS={COLORS} />;
