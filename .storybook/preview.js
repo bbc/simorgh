@@ -14,6 +14,7 @@ import { ToggleContextProvider } from '../src/app/contexts/ToggleContext';
 import { UserContextProvider } from '../src/app/contexts/UserContext';
 import { EventTrackingContextProvider } from '../src/app/contexts/EventTrackingContext';
 import pageDataFixture from '../data/news/articles/c0g992jmmkko.json';
+import logo from './logo.svg';
 
 const REITH_SERIF_REGULAR = {
   '@font-face': {
@@ -320,8 +321,15 @@ addDecorator(story => {
 
 const theme = create({
   base: 'light',
+  // Typography
+  fontBase: '"Open Sans", sans-serif',
+  fontCode: 'monospace',
+
   brandTitle: 'BBC Simorgh',
-  brandUrl: 'https://github.com/bbc/simorgh',
+  brandUrl: 'https://https://github.com/bbc/simorgh.com',
+  brandImage: logo,
+
+  colorSecondary: '#B80000',
 });
 
 export const globalTypes = {
