@@ -35,7 +35,7 @@ const styles = {
       ${spacings.DOUBLE}rem`,
       marginTop: `${spacings.DOUBLE}rem`,
       marginBottom: `${spacings.DOUBLE}rem`,
-      backgroundColor: palette.BLACK,
+      backgroundColor: palette.GREY_10,
       width: 'auto',
       textDecoration: 'none',
     }),
