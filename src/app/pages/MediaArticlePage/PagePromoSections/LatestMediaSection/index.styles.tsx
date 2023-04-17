@@ -2,7 +2,7 @@ import pixelsToRem from '#app/utilities/pixelsToRem';
 import { Theme, css } from '@emotion/react';
 
 const styles = {
-  LatestMediaSection: ({ mq, isDarkUi, palette }: Theme) =>
+  latestMediaSection: ({ mq, isDarkUi, palette }: Theme) =>
     css({
       backgroundColor: isDarkUi ? palette.GREY_10 : palette.GREY_2,
       margin: '0 0.5rem',
@@ -10,7 +10,7 @@ const styles = {
         margin: '0 1rem',
       },
     }),
-  LatestMediaGridWrapper: ({ mq }: Theme) =>
+  latestMediaGridWrapper: ({ mq }: Theme) =>
     css({
       [mq.GROUP_3_ONLY]: {
         display: 'flex',
@@ -19,7 +19,7 @@ const styles = {
         rowGap: '1.5rem',
       },
     }),
-  LatestMediaPromoBorderAndWidth: ({ mq, palette }: Theme) =>
+  latestMediaPromoBorderAndWidth: ({ mq, palette }: Theme) =>
     css({
       borderBottom: `${pixelsToRem(1)}rem ${palette.GREY_2} solid`,
       marginBottom: '0',
@@ -31,7 +31,7 @@ const styles = {
         borderBottom: 'none',
       },
     }),
-  SectionTitle: ({ mq, spacings }: Theme) =>
+  sectionTitle: ({ mq, spacings }: Theme) =>
     css({
       marginTop: `0rem`,
       marginBottom: `0rem`,
