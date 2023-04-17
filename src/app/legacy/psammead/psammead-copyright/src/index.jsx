@@ -10,7 +10,7 @@ import {
 } from '#psammead/gel-foundations/src/typography';
 
 const Copyright = styled.p`
-  ${GEL_MINION}
+  ${GEL_MINION};
   background-color: rgba(34, 34, 34, 0.75);
   text-transform: uppercase;
   color: ${props => props.theme.palette.WHITE};
