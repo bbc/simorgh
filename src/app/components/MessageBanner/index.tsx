@@ -8,6 +8,7 @@ import Text from '../Text';
 import { LeftChevron, RightChevron } from '../icons';
 import styles from './index.styles';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import CtaLink from '../CtaLink';
 
 interface MessageBannerProps {
   heading: string;
@@ -46,7 +47,7 @@ const MessageBanner = ({
           </Paragraph>
         </div>
         <div css={styles.flex}>
-          <a
+          {/* <a
             href={link}
             css={styles.linkBackground}
             className="focusIndicatorInvert"
@@ -61,7 +62,13 @@ const MessageBanner = ({
                 )}
               </Text>
             </div>
-          </a>
+          </a> */}
+          <CtaLink
+            href={link}
+            linkText={linkText}
+            css={styles.linkBackground}
+            className="focusIndicatorInvert"
+          />
           {image && (
             <div css={isRtl ? styles.imageRtl : styles.imageLtr}>
               <Image

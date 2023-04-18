@@ -87,6 +87,27 @@ const styles = {
         margin: '0 0 1.5rem 0',
         paddingBottom: '1rem',
       },
+      // '&:div': {
+      //   display: 'flex',
+      //   flexDirection: 'row',
+      //   justifyContent: 'center',
+      // },
+      // '&span': {
+      //   color: palette.BLACK,
+      //   textDecoration: 'none',
+      //   paddingInlineStart: '0.5rem',
+      //   verticalAlign: 'middle',
+      //   '&:visited': {
+      //     color: palette.BLACK,
+      //   },
+      // },
+      // '&:svg': {
+      //   marginInlineStart: '0.5rem',
+      //   width: '1rem',
+      //   height: '1rem',
+      //   verticalAlign: 'middle',
+      //   fill: 'currentcolor',
+      // },
     }),
   link: ({ palette }: Theme) =>
     css({
