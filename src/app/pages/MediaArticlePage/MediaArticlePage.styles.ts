@@ -18,10 +18,10 @@ export default {
         columnGap: '1rem',
       },
     }),
-  latestMediaColumn: ({ mq }: Theme) =>
+  latestMediaColumn: ({ mq, spacings }: Theme) =>
     css({
       gridColumn: '1 / span 12',
-      paddingTop: '2rem',
+      paddingTop: `${spacings.QUADRUPLE}rem`,
       [mq.GROUP_4_MIN_WIDTH]: {
         gridColumn: '9 / span 4',
       },
@@ -44,6 +44,7 @@ export default {
       paddingBottom: `${spacings.FULL}rem`,
       [mq.GROUP_4_MIN_WIDTH]: {
         gridColumn: '1 / span 8',
+        margin: `${spacings.DOUBLE}rem 0`,
         '&:last-child': {
           marginBottom: `${spacings.QUADRUPLE}rem`,
         },
