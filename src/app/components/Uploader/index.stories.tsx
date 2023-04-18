@@ -41,6 +41,6 @@ export default {
   decorators: [withKnobs, withServicesKnob()],
 };
 
-export const LeftToRight = ({ service }: Props) => {
+export const Example = ({ service }: Props) => {
   return <Component blocks={uploader} service={service} />;
 };
