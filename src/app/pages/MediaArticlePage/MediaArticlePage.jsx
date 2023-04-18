@@ -1,7 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import { jsx, useTheme } from '@emotion/react';
@@ -88,6 +88,26 @@ const MediaArticlePage = ({ pageData }) => {
     pageData,
   );
 
+  const GROUP_4_MIN_WIDTH = 1008;
+
+  const useWidthGroup = () => {
+    const [width, setWidth] = useState(0);
+
+    useEffect(() => {
+      const resizeHandler = () => {
+        setWidth(window.innerWidth);
+      };
+      window.addEventListener('resize', resizeHandler);
+      window.addEventListener('load', resizeHandler);
+      return () => {
+        window.removeEventListener('resize', resizeHandler);
+        window.removeEventListener('load', resizeHandler);
+      };
+    }, []);
+
+    return width;
+  };
+
   const componentsToRender = {
     fauxHeadline,
     visuallyHiddenHeadline,
@@ -155,6 +175,8 @@ const MediaArticlePage = ({ pageData }) => {
     filterForBlockType(promoImageBlocks, 'rawImage'),
   );
 
+  const widthGroup = useWidthGroup();
+
   return (
     <div css={styles.pageWrapper}>
       <ATIAnalytics data={pageData} />
@@ -187,20 +209,41 @@ const MediaArticlePage = ({ pageData }) => {
         aboutTags={aboutTags}
         imageLocator={promoImage}
       />
+
       <div css={styles.grid}>
         <main css={styles.mainContent} role="main">
           <Blocks blocks={blocks} componentsToRender={componentsToRender} />
         </main>
-        <SecondaryColumn pageData={pageData} />
-        {showRelatedTopics && topics && (
-          <RelatedTopics
-            css={styles.additionalContent}
-            topics={topics}
-            mobileDivider={false}
-            backgroundColour={GREY_2}
-            tagBackgroundColour={WHITE}
-          />
+
+        {widthGroup >= GROUP_4_MIN_WIDTH ? (
+          <SecondaryColumn pageData={pageData} />
+        ) : (
+          showRelatedTopics &&
+          topics && (
+            <RelatedTopics
+              css={styles.additionalContent}
+              topics={topics}
+              mobileDivider={false}
+              backgroundColour={GREY_2}
+              tagBackgroundColour={WHITE}
+            />
+          )
         )}
+        {widthGroup < GROUP_4_MIN_WIDTH ? (
+          <SecondaryColumn pageData={pageData} />
+        ) : (
+          showRelatedTopics &&
+          topics && (
+            <RelatedTopics
+              css={styles.additionalContent}
+              topics={topics}
+              mobileDivider={false}
+              backgroundColour={GREY_2}
+              tagBackgroundColour={WHITE}
+            />
+          )
+        )}
+
         <RelatedContentSection
           css={styles.additionalContent}
           content={blocks}
