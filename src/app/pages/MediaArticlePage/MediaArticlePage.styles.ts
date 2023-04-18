@@ -6,13 +6,13 @@ export default {
     css({
       backgroundColor: isDarkUi ? palette.GREY_10 : palette.GREY_2,
     }),
-  grid: ({ mq, gridWidths }: Theme) =>
+  grid: ({ mq, gridWidths, spacings }: Theme) =>
     css({
       maxWidth: `${pixelsToRem(gridWidths[1008])}rem`,
       margin: '0 auto',
       display: 'grid',
       gridTemplateColumns: 'repeat(12, 1fr)',
-      paddingBottom: '2rem',
+      paddingBottom: `${spacings.DOUBLE}rem`,
       [mq.GROUP_4_MIN_WIDTH]: {
         padding: '0 1rem',
         columnGap: '1rem',
