@@ -3,6 +3,7 @@ import { getPica } from '#psammead/gel-foundations/src/typography';
 import { render } from '../../../../components/react-testing-library-with-providers';
 import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import Timestamp from '.';
+import { MEDIA_ARTICLE_PAGE } from '../../../../routes/utils/pageTypes';
 
 describe('Timestamp', () => {
   it('should render Timestamp correctly', () => {
@@ -20,7 +21,7 @@ describe('Timestamp', () => {
         7 July 2018
       </Timestamp>,
       {
-        pageType: 'mediaArticle',
+        pageType: MEDIA_ARTICLE_PAGE,
       },
     );
     expect(container).toMatchSnapshot();

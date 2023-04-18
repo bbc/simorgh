@@ -50,7 +50,7 @@ export const RequestContext = React.createContext<RequestContextProps>(
 
 type RequestProviderProps = {
   bbcOrigin?: string | null;
-  derivedPageType?: string | null;
+  derivedPageType: string | null;
   id?: string | null;
   isAmp: boolean;
   isNextJs?: boolean;
