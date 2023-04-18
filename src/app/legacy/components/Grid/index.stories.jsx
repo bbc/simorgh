@@ -1,5 +1,6 @@
 import React from 'react';
 import Grid, { CPSPageGrid as CPSPageGridComponent } from '.';
+import md from './README.md';
 
 const outerGridProps = {
   columns: {
@@ -27,6 +28,14 @@ const gridItemProps = {
 export default {
   Component: Grid,
   title: 'Components/Grid',
+  parameters: {
+    docs: {
+      component: {
+        title: 'Grid',
+      },
+      page: md,
+    },
+  },
 };
 
 export const GridAsMain = () => (
