@@ -108,6 +108,10 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   );
   const recommendationsData = pathOr([], ['recommendations'], pageData);
 
+  const embedBlock = blocks.find(block => block.type === 'embed');
+  const embedProviderName = path(['model', 'provider'], embedBlock);
+  const isUgcUploader = embedProviderName === 'ugc-uploader';
+
   const componentsToRender = {
     visuallyHiddenHeadline,
     headline: headings,
@@ -135,7 +139,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
     timestamp: props =>
       hasByline ? null : <Timestamp {...props} popOut={false} />,
     social: SocialEmbedContainer,
-    embed: Uploader,
+    embed: props => (isUgcUploader ? <Uploader {...props} /> : null),
     group: gist,
     links: props => <ScrollablePromo {...props} />,
     mpu: props =>

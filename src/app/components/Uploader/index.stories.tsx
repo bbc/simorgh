@@ -8,7 +8,7 @@ import ThemeProvider from '../ThemeProvider';
 import { Services } from '../../models/types/global';
 
 import Uploader from '.';
-import { pidginUploaderEmbed } from './fixtures';
+import { uploader } from './fixtures';
 import metadata from './metadata.json';
 
 interface Props {
@@ -42,5 +42,5 @@ export default {
 };
 
 export const LeftToRight = ({ service }: Props) => {
-  return <Component blocks={pidginUploaderEmbed} service={service} />;
+  return <Component blocks={uploader} service={service} />;
 };
