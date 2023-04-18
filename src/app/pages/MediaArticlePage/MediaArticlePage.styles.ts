@@ -12,6 +12,7 @@ export default {
       margin: '0 auto',
       display: 'grid',
       gridTemplateColumns: 'repeat(12, 1fr)',
+      paddingBottom: '2rem',
       [mq.GROUP_4_MIN_WIDTH]: {
         padding: '0 1rem',
         columnGap: '1rem',
