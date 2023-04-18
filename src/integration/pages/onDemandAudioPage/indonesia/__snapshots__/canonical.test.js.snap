@@ -55,13 +55,6 @@ Object {
 
 exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 8`] = `
 Object {
-  "text": "AdChoices / Do Not Sell My Info",
-  "url": "https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/",
-}
-`;
-
-exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 9`] = `
-Object {
   "text": "Baca tentang peraturan baru terkait link eksternal.",
   "url": "https://www.bbc.com/indonesia/institutional/2011/02/000001_links",
 }

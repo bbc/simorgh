@@ -48,13 +48,6 @@ Object {
 
 exports[`Canonical ukrainian/ukraine_in_russian IDX page Footer Anchors should match text and url 7`] = `
 Object {
-  "text": "AdChoices / Do Not Sell My Info",
-  "url": "https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/",
-}
-`;
-
-exports[`Canonical ukrainian/ukraine_in_russian IDX page Footer Anchors should match text and url 8`] = `
-Object {
   "text": "Ознайомтеся з нашими правилами зовнішніх посилань.",
   "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
 }
