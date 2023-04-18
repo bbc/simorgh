@@ -1,4 +1,4 @@
-const pidginUploaderEmbed = [
+const uploader = [
   {
     id: '2488a6c7',
     type: 'aresUploader',
@@ -166,10 +166,10 @@ const pidginUploaderEmbed = [
   },
 ];
 
-const uploaderEmbedWithIncorrectType = [
+const uploaderWithIncorrectType = [
   {
     id: '2488a6c7',
-    type: 'invalid',
+    type: 'aDifferentTypeOfUploader',
     model: {
       openingTime: '',
       closingTime: '',
@@ -334,4 +334,6 @@ const uploaderEmbedWithIncorrectType = [
   },
 ];
 
-export { pidginUploaderEmbed, uploaderEmbedWithIncorrectType };
+const missingAresUploader = undefined;
+
+export { uploader, uploaderWithIncorrectType, missingAresUploader };

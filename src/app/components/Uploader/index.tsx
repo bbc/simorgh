@@ -2,6 +2,7 @@
 /** @jsx jsx */
 import { useContext } from 'react';
 import path from 'ramda/src/path';
+import pathOr from 'ramda/src/pathOr';
 import { jsx } from '@emotion/react';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import Heading from '../Heading';
@@ -11,31 +12,50 @@ import { LeftChevron, RightChevron } from '../icons';
 import styles from './index.styles';
 
 interface UploaderProps {
-  blocks: object[];
+  blocks: object[] | undefined;
 }
+
+type UploaderBlock = {
+  type: 'title' | 'text' | 'link';
+  model: {
+    blocks: object[];
+  };
+};
 
 const Uploader = ({ blocks }: UploaderProps) => {
   const { dir } = useContext(ServiceContext);
   const isRtl = dir === 'rtl';
 
+  if (blocks === undefined) return null;
+
   const type = path([0, 'type'], blocks); // aresUploader
   if (type !== 'aresUploader') return null;
 
-  const uploaderBlocks = path([0, 'model', 'blocks'], blocks);
-
-  const title = path(
-    [0, 'model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
-    uploaderBlocks,
+  const uploaderBlocks = pathOr<UploaderBlock[]>(
+    [],
+    [0, 'model', 'blocks'],
+    blocks,
   );
 
-  const text = path(
-    [1, 'model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
-    uploaderBlocks,
+  const titleBlock = uploaderBlocks.find(block => block.type === 'title');
+  const textBlock = uploaderBlocks.find(block => block.type === 'text');
+  const linkBlock = uploaderBlocks.find(block => block.type === 'link');
+
+  const title = pathOr<string>(
+    '',
+    ['model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
+    titleBlock,
   );
 
-  const linkText = path(
+  const text = pathOr<string>(
+    '',
+    ['model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
+    textBlock,
+  );
+
+  const linkText = pathOr<string>(
+    '',
     [
-      2,
       'model',
       'blocks',
       0,
@@ -48,12 +68,12 @@ const Uploader = ({ blocks }: UploaderProps) => {
       'model',
       'text',
     ],
-    uploaderBlocks,
+    linkBlock,
   );
 
-  const linkAddress = path(
+  const linkAddress = pathOr<string>(
+    '',
     [
-      2,
       'model',
       'blocks',
       0,
@@ -66,22 +86,22 @@ const Uploader = ({ blocks }: UploaderProps) => {
       'model',
       'locator',
     ],
-    uploaderBlocks,
+    linkBlock,
   );
 
-  const id = `${(title as string).replaceAll(' ', '-')}`;
+  const id = `${title.replaceAll(' ', '-')}`;
 
   return (
     <section role="region" aria-labelledby={id} css={styles.container}>
       <div css={styles.card}>
         <Heading level={2} size="paragon" css={styles.heading} id={id}>
-          {title as string}
+          {title}
         </Heading>
-        <Paragraph>{text as string}</Paragraph>
+        <Paragraph>{text}</Paragraph>
         <div css={styles.linkContainer}>
-          <a href={linkAddress as string} css={styles.linkBackground}>
+          <a href={linkAddress} css={styles.linkBackground}>
             <Text size="pica" fontVariant="sansBold" css={styles.link}>
-              {linkText as string}
+              {linkText}
               {isRtl ? (
                 <LeftChevron css={styles.chevron} />
               ) : (
