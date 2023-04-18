@@ -23,7 +23,6 @@ export default {
       paddingTop: '2rem',
       [mq.GROUP_4_MIN_WIDTH]: {
         gridColumn: '9 / span 4',
-        order: '2',
       },
     }),
   mainContent: ({ mq }: Theme) =>
@@ -31,7 +30,6 @@ export default {
       gridColumn: '1 / span 12',
       [mq.GROUP_4_MIN_WIDTH]: {
         gridColumn: '1 / span 8',
-        order: '1',
       },
     }),
   mediaPlayer: ({ spacings }: Theme) =>
@@ -45,7 +43,6 @@ export default {
       paddingBottom: `${spacings.FULL}rem`,
       [mq.GROUP_4_MIN_WIDTH]: {
         gridColumn: '1 / span 8',
-        order: '3',
         '&:last-child': {
           marginBottom: `${spacings.QUADRUPLE}rem`,
         },
