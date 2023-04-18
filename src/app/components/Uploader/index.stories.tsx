@@ -9,6 +9,7 @@ import { Services } from '../../models/types/global';
 
 import Uploader from '.';
 import { pidginUploaderEmbed } from './fixtures';
+import metadata from './metadata.json';
 
 interface Props {
   service: Services;
@@ -32,6 +33,7 @@ export default {
   title: 'New Components/Uploader Embed',
   Component,
   parameters: {
+    metadata,
     backgrounds: {
       default: 'Optimo',
     },

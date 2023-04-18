@@ -1,0 +1,29 @@
+{
+  "alpha": true,
+  "lastUpdated": {
+    "day": 18,
+    "month": "April",
+    "year": 2023
+  },
+  "uxAccessibilityDoc": {
+    "done": true,
+    "reference": {
+      "url": "https://www.figma.com/file/dNAEzRgidlV50FoF10pbb4/MAP---handover?node-id=109%3A7572&t=8huBcqS3fa7mbudx-1",
+      "label": "Screen Reader UX"
+    }
+  },
+  "acceptanceCriteria": {
+    "done": true,
+    "reference": {
+      "url": "https://app.zeplin.io/project/5d4d77b1fcbfc79bf47e0294/screen/637e9cbe5b71957248763d14",
+      "label": "Accessibility Acceptance Criteria"
+    }
+  },
+  "swarm": {
+    "done": false,
+    "reference": {
+      "url": "",
+      "label": "A11y swarm notes"
+    }
+  }
+}
