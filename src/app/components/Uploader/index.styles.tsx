@@ -6,17 +6,19 @@ const styles = {
     css({
       margin: `${spacings.TRIPLE}rem ${spacings.FULL}rem`,
       [mq.GROUP_2_MIN_WIDTH]: {
-        marginLeft: `${spacings.DOUBLE}rem`,
-        marginRight: `${spacings.DOUBLE}rem`,
+        margin: `${spacings.TRIPLE}rem ${spacings.DOUBLE}rem`,
       },
-      [mq.GROUP_4_MIN_WIDTH]: { marginLeft: 0, marginRight: 0 },
+      [mq.GROUP_4_MIN_WIDTH]: {
+        margin: `${spacings.TRIPLE}rem 0`,
+      },
     }),
-  card: ({ spacings, palette }: Theme) =>
+  card: ({ spacings, palette, mq }: Theme) =>
     css({
       backgroundColor: palette.WHITE,
-      paddingTop: `${spacings.DOUBLE}rem`,
-      paddingLeft: `${spacings.DOUBLE}rem`,
-      paddingRight: `${spacings.DOUBLE}rem`,
+      padding: `${spacings.DOUBLE}rem`,
+      [mq.HIGH_CONTRAST]: {
+        border: '0.1875rem solid transparent',
+      },
     }),
   text: () =>
     css({
@@ -29,12 +31,8 @@ const styles = {
     }),
   linkBackground: ({ spacings, palette }: Theme) =>
     css({
-      padding: `${pixelsToRem(11)}rem 
-      ${pixelsToRem(15)}rem 
-      ${pixelsToRem(13)}rem 
-      ${spacings.DOUBLE}rem`,
+      padding: `${pixelsToRem(12)}rem ${spacings.DOUBLE}rem`,
       marginTop: `${spacings.DOUBLE}rem`,
-      marginBottom: `${spacings.DOUBLE}rem`,
       backgroundColor: palette.GREY_10,
       width: 'auto',
       textDecoration: 'none',

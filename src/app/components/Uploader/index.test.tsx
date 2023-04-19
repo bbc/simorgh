@@ -23,9 +23,9 @@ describe('Uploader', () => {
     );
   });
 
-  it('should display the title correctly as an H2', () => {
+  it('should display the title correctly as a Strong element', () => {
     render(<Uploader blocks={uploader} />);
-    expect(screen.getByText('Get involved').nodeName).toBe('H2');
+    expect(screen.getByText('Get involved').nodeName).toBe('STRONG');
   });
 
   it('should display the text correctly as a Paragraph', () => {
