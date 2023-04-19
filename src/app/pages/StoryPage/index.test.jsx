@@ -7,6 +7,7 @@ import deepClone from 'ramda/src/clone';
 import { render } from '@testing-library/react';
 import assocPath from 'ramda/src/assocPath';
 import fetchMock from 'fetch-mock';
+import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 
 // contexts
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -202,11 +203,7 @@ describe('Story Page', () => {
 
   it('should only render firstPublished timestamp for Igbo when lastPublished is less than 1 min later', async () => {
     suppressPropWarnings(['id', 'LinkContents', 'null']);
-    fetchMock.mock('http://localhost/some-cps-sty-path.json', igboPageData);
-    fetchMock.mock('http://localhost/igbo/mostread.json', igboMostReadData);
-    fetchMock.mock(
-      'http://localhost/igbo/sty-secondary-column.json',
-      igboSecondaryColumnData,
+
     fetch.mockResponse(
       JSON.stringify({
         ...igboPageData,
