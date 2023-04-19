@@ -21,14 +21,14 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   }
 }
 
+.emotion-2 {
+  grid-column: 1/span 12;
+}
+
 @media (min-width: 63rem) {
   .emotion-2 {
     grid-column: 1/span 8;
   }
-}
-
-.emotion-2 {
-  grid-column: 1/span 12;
 }
 
 .emotion-3 {
@@ -46,9 +46,15 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   padding-top: 1.5rem;
 }
 
-@media (min-width: 80rem) {
+@media (max-width: 14.9375rem) {
   .emotion-6 {
-    margin-left: 40%;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-6 {
+    margin-left: 0%;
   }
 }
 
@@ -64,15 +70,15 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   }
 }
 
-@media (max-width: 14.9375rem) {
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
   .emotion-6 {
-    margin-left: 0%;
+    margin-left: 20%;
   }
 }
 
-@media (min-width: 15rem) and (max-width: 24.9375rem) {
+@media (min-width: 80rem) {
   .emotion-6 {
-    margin-left: 0%;
+    margin-left: 40%;
   }
 }
 
@@ -132,12 +138,6 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   }
 }
 
-@media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-6 {
-    margin-left: 20%;
-  }
-}
-
 .emotion-8 {
   margin: 0;
   padding-bottom: 1.5rem;
@@ -150,11 +150,6 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   overflow: hidden;
 }
 
-.emotion-12:hover .emotion-18,
-.emotion-12:focus .emotion-18 {
-  background-color: #B80000;
-}
-
 .emotion-12 {
   position: absolute;
   top: 0;
@@ -164,10 +159,9 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   cursor: default;
 }
 
-@media (min-width: 37.5rem) {
-  .emotion-14 {
-    font-size: 0.875rem;
-  }
+.emotion-12:hover .emotion-18,
+.emotion-12:focus .emotion-18 {
+  background-color: #B80000;
 }
 
 .emotion-14 {
@@ -183,6 +177,16 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   color: #FFFFFF;
 }
 
+@media (min-width: 37.5rem) {
+  .emotion-14 {
+    font-size: 0.875rem;
+  }
+}
+
+.no-js .emotion-14 {
+  background-color: rgba(34, 34, 34, 0.75);
+}
+
 @media screen and (-ms-high-contrast: active) {
   .no-js .emotion-14 {
     background-color: transparent;
@@ -191,10 +195,6 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
 
 .no-js .emotion-14 .guidance-message {
   display: none;
-}
-
-.no-js .emotion-14 {
-  background-color: rgba(34, 34, 34, 0.75);
 }
 
 .emotion-16 {
@@ -230,6 +230,10 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   transition: background-color 300ms;
 }
 
+.no-js .emotion-19 {
+  display: none;
+}
+
 .emotion-19:focus-visible::before {
   content: '';
   position: absolute;
@@ -239,10 +243,6 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   bottom: 0;
   box-shadow: 0 0 0 0.1875rem #FFFFFF inset;
   border: 0.1875rem solid #000000;
-}
-
-.no-js .emotion-19 {
-  display: none;
 }
 
 .emotion-23>svg {
@@ -341,6 +341,13 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   }
 }
 
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-35 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
   .emotion-35 {
     padding: 0 1rem;
@@ -427,11 +434,16 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   }
 }
 
-@media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-35 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
+.emotion-38 {
+  font-size: 1.75rem;
+  line-height: 2rem;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #141414;
+  display: block;
+  margin: 0;
+  padding: 2rem 0;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -464,18 +476,6 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   .emotion-38 {
     padding: 1rem 0 2.5rem;
   }
-}
-
-.emotion-38 {
-  font-size: 1.75rem;
-  line-height: 2rem;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  color: #141414;
-  display: block;
-  margin: 0;
-  padding: 2rem 0;
 }
 
 @media (max-width: 14.9375rem) {
@@ -589,6 +589,13 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   padding-bottom: 0.25rem;
 }
 
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-42 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
 @media (min-width: 37.5rem) {
   .emotion-42 {
     font-size: 0.8125rem;
@@ -598,13 +605,6 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
 
 .emotion-42:last-child {
   padding-bottom: 1rem;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-42 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
 }
 
 .emotion-46 {
