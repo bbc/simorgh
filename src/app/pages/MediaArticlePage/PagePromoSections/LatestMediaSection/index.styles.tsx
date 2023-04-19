@@ -9,6 +9,9 @@ const styles = {
       [mq.GROUP_3_ONLY]: {
         margin: '0 1rem',
       },
+      [mq.GROUP_4_MIN_WIDTH]: {
+        margin: '0rem',
+      },
     }),
   latestMediaGridWrapper: ({ mq }: Theme) =>
     css({

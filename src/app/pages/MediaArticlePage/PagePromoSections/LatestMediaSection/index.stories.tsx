@@ -49,6 +49,33 @@ export default {
       default: 'Dark',
       values: [{ name: 'Dark', value: '#141414' }],
     },
+    design: [
+      {
+        name: 'Group 0',
+        type: 'figma',
+        url: 'https://www.figma.com/file/dNAEzRgidlV50FoF10pbb4/MAP---handover?node-id=108-5501&t=C5TuViAaGwjuQr3p-0',
+      },
+      {
+        name: 'Group 1',
+        type: 'figma',
+        url: 'https://www.figma.com/file/dNAEzRgidlV50FoF10pbb4/MAP---handover?node-id=108-5608&t=C5TuViAaGwjuQr3p-0',
+      },
+      {
+        name: 'Group 2',
+        type: 'figma',
+        url: 'https://www.figma.com/file/dNAEzRgidlV50FoF10pbb4/MAP---handover?node-id=108-4478&t=C5TuViAaGwjuQr3p-0',
+      },
+      {
+        name: 'Group 3',
+        type: 'figma',
+        url: 'https://www.figma.com/file/dNAEzRgidlV50FoF10pbb4/MAP---handover?node-id=108-4591&t=C5TuViAaGwjuQr3p-0',
+      },
+      {
+        name: 'Group 4',
+        type: 'figma',
+        url: 'https://www.figma.com/file/dNAEzRgidlV50FoF10pbb4/MAP---handover?node-id=108-4675&t=C5TuViAaGwjuQr3p-0',
+      },
+    ],
   },
   decorators: [withKnobs, withServicesKnob()],
 };

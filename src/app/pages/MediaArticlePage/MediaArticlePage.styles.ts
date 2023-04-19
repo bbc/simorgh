@@ -93,7 +93,6 @@ export default {
 
       [mq.GROUP_4_MIN_WIDTH]: {
         marginBottom: `${spacings.FULL}rem`,
-        padding: `0 ${spacings.DOUBLE}rem ${spacings.DOUBLE}rem ${spacings.DOUBLE}rem`,
       },
     }),
 };
