@@ -36,14 +36,14 @@ const styles = {
     }),
   sectionTitle: ({ mq, spacings }: Theme) =>
     css({
-      marginTop: `0rem`,
-      marginBottom: `0rem`,
+      marginTop: `0`,
+      marginBottom: `0`,
       [mq.GROUP_3_MIN_WIDTH]: {
-        marginTop: '0rem',
+        marginTop: '0',
         marginBottom: `${spacings.HALF}rem`,
       },
       [mq.GROUP_3_ONLY]: {
-        marginTop: '0rem',
+        marginTop: '0',
         marginBottom: `${spacings.DOUBLE}rem`,
       },
     }),
