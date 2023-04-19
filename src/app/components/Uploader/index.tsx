@@ -5,7 +5,6 @@ import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import { jsx } from '@emotion/react';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import Heading from '../Heading';
 import Paragraph from '../Paragraph';
 import Text from '../Text';
 import { LeftChevron, RightChevron } from '../icons';
@@ -94,10 +93,10 @@ const Uploader = ({ blocks }: UploaderProps) => {
   return (
     <section role="region" aria-labelledby={id} css={styles.container}>
       <div css={styles.card}>
-        <Heading level={2} size="paragon" css={styles.heading} id={id}>
+        <Text as="strong" fontVariant="sansBold" size="paragon" id={id}>
           {title}
-        </Heading>
-        <Paragraph>{text}</Paragraph>
+        </Text>
+        <Paragraph css={styles.text}>{text}</Paragraph>
         <div css={styles.linkContainer}>
           <a href={linkAddress} css={styles.linkBackground}>
             <Text size="pica" fontVariant="sansBold" css={styles.link}>
