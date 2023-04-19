@@ -41,7 +41,7 @@ const Component = ({ service, content }: PropsWithChildren<ComponentProps>) => (
 );
 
 export default {
-  title: 'Components/Latest Media Section',
+  title: 'components/OptimoPromos/Latest Media Section',
   Component,
   parameters: {
     metadata,
