@@ -38,6 +38,14 @@ const styles = {
       backgroundColor: palette.GREY_10,
       width: 'auto',
       textDecoration: 'none',
+      '&:hover': {
+        textDecoration: 'underline',
+        color: palette.WHITE,
+      },
+      '&:focus': {
+        textDecoration: 'underline',
+        color: palette.WHITE,
+      },
     }),
   link: ({ palette }: Theme) =>
     css({
