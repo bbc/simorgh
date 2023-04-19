@@ -14,13 +14,13 @@ const styles = {
   card: ({ spacings, palette }: Theme) =>
     css({
       backgroundColor: palette.WHITE,
+      paddingTop: `${spacings.DOUBLE}rem`,
       paddingLeft: `${spacings.DOUBLE}rem`,
       paddingRight: `${spacings.DOUBLE}rem`,
     }),
-  heading: ({ spacings }: Theme) =>
+  text: () =>
     css({
-      paddingTop: `${spacings.DOUBLE}rem`,
-      paddingBottom: `${pixelsToRem(12)}rem`,
+      paddingTop: `${pixelsToRem(12)}rem`,
     }),
   linkContainer: () =>
     css({
