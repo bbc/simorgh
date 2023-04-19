@@ -40,7 +40,7 @@ const LatestMediaItem = ({
         </div>
         <div css={styles.textWrapper}>
           <Promo.Title as="h3" css={styles.promoTitle}>
-            <Promo.Link css={styles.promoLink}>
+            <Promo.Link css={styles.promoLink} className="focusIndicatorInvert">
               <Promo.Content
                 mediaDuration={item.duration}
                 headline={item.title}

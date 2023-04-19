@@ -3,12 +3,12 @@ import { css, Theme } from '@emotion/react';
 const styles = {
   promoWrapper: ({ mq, spacings }: Theme) =>
     css({
-      borderBottom: `${spacings.FULL}rem solid transparent`,
-      borderTop: `${spacings.FULL}rem solid transparent`,
+      marginBottom: `${spacings.FULL}rem`,
+      marginTop: `${spacings.FULL}rem`,
       height: '100%',
       [mq.GROUP_3_ONLY]: {
-        borderBottom: `0rem`,
-        borderTop: `0rem`,
+        marginBottom: `0rem`,
+        marginTop: `0rem`,
       },
     }),
   textWrapper: ({ mq }: Theme) =>
