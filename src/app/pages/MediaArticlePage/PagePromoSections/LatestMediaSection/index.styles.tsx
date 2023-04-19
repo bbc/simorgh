@@ -10,7 +10,7 @@ const styles = {
         margin: '0 1rem',
       },
       [mq.GROUP_4_MIN_WIDTH]: {
-        margin: '0rem',
+        margin: '0',
       },
     }),
   latestMediaGridWrapper: ({ mq }: Theme) =>

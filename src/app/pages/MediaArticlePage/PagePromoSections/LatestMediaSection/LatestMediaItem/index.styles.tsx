@@ -7,8 +7,8 @@ const styles = {
       marginTop: `${spacings.FULL}rem`,
       height: '100%',
       [mq.GROUP_3_ONLY]: {
-        marginBottom: `0rem`,
-        marginTop: `0rem`,
+        marginBottom: `0`,
+        marginTop: `0`,
       },
     }),
   textWrapper: ({ mq }: Theme) =>
