@@ -1,20 +1,12 @@
 import React from 'react';
 import HealthFactors from '.';
-import ThemeProvider from '../../../src/app/components/ThemeProvider';
 import { allCompletedDocs, threeOutstandingActions } from './fixture';
 import metadata from './metadata.json';
 import md from './README.md';
 
-// eslint-disable-next-line react/prop-types
-const HealthFactorsComponent = ({ metadataFixture }) => (
-  <ThemeProvider service="news" variant="default">
-    <HealthFactors metadata={metadataFixture} />
-  </ThemeProvider>
-);
-
 export default {
   title: 'components/HealthFactors/HealthFactorsComponent',
-  component: HealthFactorsComponent,
+  component: HealthFactors,
   parameters: {
     metadata,
     docs: {
@@ -27,13 +19,13 @@ export default {
 };
 
 export const HealthFactorsWithCompleteDocs = () => (
-  <HealthFactorsComponent metadataFixture={allCompletedDocs} />
+  <HealthFactors metadata={allCompletedDocs} />
 );
 
 export const HealthFactorsWithOutstandingDocs = () => (
-  <HealthFactorsComponent metadataFixture={threeOutstandingActions} />
+  <HealthFactors metadataFixture={threeOutstandingActions} />
 );
 
 export const HealthFactorsWithNoData = () => (
-  <HealthFactorsComponent metadataFixture={null} />
+  <HealthFactors metadataFixture={null} />
 );
