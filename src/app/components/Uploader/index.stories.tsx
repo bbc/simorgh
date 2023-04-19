@@ -30,7 +30,7 @@ const Component = ({ service, blocks }: PropsWithChildren<ComponentProps>) => (
 );
 
 export default {
-  title: 'New Components/Uploader Embed',
+  title: 'Components/Uploader Embed',
   Component,
   parameters: {
     metadata,
