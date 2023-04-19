@@ -5,8 +5,8 @@ import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import { PageTypes, Services } from '#app/models/types/global';
 import { AdJsonDataProps, AmpAdSlotProps } from '../../types';
 import {
-  GROUP_3_MAX_WIDTH,
-  GROUP_4_MIN_WIDTH,
+  GROUP_3_MAX_WIDTH_BP,
+  GROUP_4_MIN_WIDTH_BP,
 } from '../../../ThemeProvider/mediaQueries';
 
 const publicServiceList = ['news', 'sport'];
@@ -58,13 +58,13 @@ const slotConfigurations = {
     mobile: {
       width: '320',
       height: '50',
-      media: GROUP_3_MAX_WIDTH,
+      media: `(max-width: ${GROUP_3_MAX_WIDTH_BP}rem)`,
       'data-multi-size': '320x50,300x50',
     },
     desktop: {
       width: '970',
       height: '250',
-      media: GROUP_4_MIN_WIDTH,
+      media: `(min-width: ${GROUP_4_MIN_WIDTH_BP}rem)`,
       'data-multi-size': '970x250,728x90',
     },
   },
