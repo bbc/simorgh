@@ -3,6 +3,7 @@
 import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
+import MostReadContainer from '#containers/MostRead';
 import {
   VisualProminence,
   VisualStyle,
@@ -70,6 +71,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                     link={link}
                     curationLength={curations && curations.length}
                   />
+                  <MostReadContainer />
                 </React.Fragment>
               );
             },
