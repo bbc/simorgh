@@ -29,7 +29,7 @@ const styles = {
       display: 'flex',
       justifyContent: 'start',
     }),
-  linkBackground: ({ spacings, palette }: Theme) =>
+  ctaLink: ({ spacings, palette }: Theme) =>
     css({
       padding: `${pixelsToRem(12)}rem ${spacings.DOUBLE}rem`,
       marginTop: `${spacings.DOUBLE}rem`,
@@ -40,16 +40,13 @@ const styles = {
         textDecoration: 'underline',
         color: palette.WHITE,
       },
-    }),
-  link: ({ palette }: Theme) =>
-    css({
-      color: palette.WHITE,
-    }),
-  chevron: ({ palette }: Theme) =>
-    css({
-      marginInlineStart: `${pixelsToRem(12)}rem`,
-      color: palette.WHITE,
-      fill: 'currentcolor',
+      '& span': {
+        color: palette.WHITE,
+      },
+      '& svg': {
+        marginInlineStart: `${pixelsToRem(12)}rem`,
+        color: palette.WHITE,
+      },
     }),
 };
 export default styles;

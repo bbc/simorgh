@@ -14,13 +14,7 @@ interface CtaLinkProps {
   textColor?: string;
 }
 
-const CtaLink = ({
-  href,
-  linkText,
-  className,
-  backgroundColor,
-  textColor,
-}: CtaLinkProps) => {
+const CtaLink = ({ href, linkText, className }: CtaLinkProps) => {
   const { dir } = useContext(ServiceContext);
   const isRtl = dir === 'rtl';
   return (

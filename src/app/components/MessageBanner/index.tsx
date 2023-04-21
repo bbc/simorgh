@@ -4,8 +4,6 @@ import { jsx } from '@emotion/react';
 import Paragraph from '../Paragraph';
 import Heading from '../Heading';
 import Image from '../Image';
-import Text from '../Text';
-import { LeftChevron, RightChevron } from '../icons';
 import styles from './index.styles';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import CtaLink from '../CtaLink';
@@ -47,26 +45,10 @@ const MessageBanner = ({
           </Paragraph>
         </div>
         <div css={styles.flex}>
-          {/* <a
-            href={link}
-            css={styles.linkBackground}
-            className="focusIndicatorInvert"
-          >
-            <div css={styles.linkAndChevron}>
-              <Text size="pica" fontVariant="sansBold" css={styles.link}>
-                {linkText}
-                {isRtl ? (
-                  <LeftChevron css={styles.chevron} />
-                ) : (
-                  <RightChevron css={styles.chevron} />
-                )}
-              </Text>
-            </div>
-          </a> */}
           <CtaLink
             href={link}
             linkText={linkText}
-            css={styles.linkBackground}
+            css={styles.ctaLink}
             className="focusIndicatorInvert"
           />
           {image && (

@@ -1,13 +1,10 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { useContext } from 'react';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import { jsx } from '@emotion/react';
-import { ServiceContext } from '../../contexts/ServiceContext';
 import Paragraph from '../Paragraph';
 import Text from '../Text';
-import { LeftChevron, RightChevron } from '../icons';
 import styles from './index.styles';
 import CtaLink from '../CtaLink';
 
@@ -23,9 +20,6 @@ type UploaderBlock = {
 };
 
 const Uploader = ({ blocks }: UploaderProps) => {
-  const { dir } = useContext(ServiceContext);
-  const isRtl = dir === 'rtl';
-
   if (!blocks) return null;
 
   const type = path([0, 'type'], blocks); // aresUploader
@@ -99,20 +93,10 @@ const Uploader = ({ blocks }: UploaderProps) => {
         </Text>
         <Paragraph css={styles.text}>{text}</Paragraph>
         <div css={styles.linkContainer}>
-          {/* <a href={linkAddress} css={styles.linkBackground}>
-            <Text size="pica" fontVariant="sansBold" css={styles.link}>
-              {linkText}
-              {isRtl ? (
-                <LeftChevron css={styles.chevron} />
-              ) : (
-                <RightChevron css={styles.chevron} />
-              )}
-            </Text>
-          </a> */}
           <CtaLink
             href={linkAddress}
             linkText={linkText}
-            css={styles.linkBackground}
+            css={styles.ctaLink}
           />
         </div>
       </div>

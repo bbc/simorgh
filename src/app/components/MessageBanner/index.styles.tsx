@@ -64,7 +64,7 @@ const styles = {
       },
       img: { objectPosition: 'top' },
     }),
-  linkBackground: ({ mq, palette }: Theme) =>
+  ctaLink: ({ mq, palette }: Theme) =>
     css({
       padding: '1rem',
       backgroundColor: palette.WHITE,
@@ -87,30 +87,18 @@ const styles = {
         margin: '0 0 1.5rem 0',
         paddingBottom: '1rem',
       },
-    }),
-  link: ({ palette }: Theme) =>
-    css({
-      color: palette.BLACK,
-      textDecoration: 'none',
-      paddingInlineStart: '0.5rem',
-      verticalAlign: 'middle',
-      '&:visited': {
+      '& span': {
+        paddingInlineStart: '0.5rem',
         color: palette.BLACK,
+        '&:visited': {
+          color: palette.BLACK,
+        },
       },
-    }),
-  chevron: () =>
-    css({
-      marginInlineStart: '0.5rem',
-      width: '1rem',
-      height: '1rem',
-      verticalAlign: 'middle',
-      fill: 'currentcolor',
-    }),
-  linkAndChevron: () =>
-    css({
-      display: 'flex',
-      flexDirection: 'row',
-      justifyContent: 'center',
+      '& svg': {
+        marginInlineStart: '0.5rem',
+        width: '1rem',
+        height: '1rem',
+      },
     }),
   flex: ({ mq }: Theme) =>
     css({
