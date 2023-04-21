@@ -30,7 +30,6 @@ import storyPageRecommendationsData from '#data/mundo/recommendations/index.json
 import sportArticlePageJson from '#data/sport/articles/cj80n66ddnko.json';
 
 import { FRONT_PAGE, ERROR_PAGE } from '#app/routes/utils/pageTypes';
-import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import routes from '.';
 import * as fetchPageData from './utils/fetchPageData';
 import {
