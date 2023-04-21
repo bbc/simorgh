@@ -53,7 +53,7 @@ export type TopStoriesOJ = {
   prominence: string;
   id: string;
   type: string;
-}[];
+};
 
 export type FeaturesAnalysisOJ = {
   name: string;
@@ -65,7 +65,7 @@ export type FeaturesAnalysisOJ = {
   assetTypeCode: string;
   timestamp: number;
   type: string;
-}[];
+};
 
 export type Headlines = {
   headline: string;

@@ -19,11 +19,11 @@ type MediaArticlePageProps = {
 };
 
 const SecondaryColumn = ({ pageData }: MediaArticlePageProps) => {
-  const topStoriesContent = path<TopStoriesOJ>(
+  const topStoriesContent = path<TopStoriesOJ[]>(
     ['secondaryColumn', 'topStories'],
     pageData,
   );
-  const featuresContent = path<FeaturesAnalysisOJ>(
+  const featuresContent = path<FeaturesAnalysisOJ[]>(
     ['secondaryColumn', 'features'],
     pageData,
   );
