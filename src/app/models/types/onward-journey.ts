@@ -2,6 +2,7 @@ import { OptimoBlock } from './optimo';
 
 export type OptimoRecommendation = {
   headlines: {
+    seoHeadline?: string;
     promoHeadline: {
       blocks: OptimoBlock[];
     };
@@ -19,19 +20,28 @@ export type OptimoRecommendation = {
     };
   };
   timestamp: number;
+  suitableForSyndication?: boolean;
+  language?: string;
+  passport?: object;
+  id?: string;
+  type?: string;
 };
 
 export type CpsRecommendation = {
   headlines: {
+    shortHeadline?: string;
     headline: string;
-
-    locators: {
-      assetUri: string;
-    };
-    summary: string;
-    timestamp: number;
-    indexImage: IndexImage;
   };
+  locators: {
+    assetUri: string;
+    cpsUrn?: string;
+  };
+  summary: string;
+  timestamp: number;
+  indexImage: IndexImage;
+  cpsType?: string;
+  id?: string;
+  type?: string;
 };
 
 export type Recommendation = OptimoRecommendation | CpsRecommendation;
@@ -109,7 +119,8 @@ export type IndexImage = {
   width: number;
   altText: string;
   copyrightHolder: string;
-  originCode: string;
-  allowSyndication: boolean;
+  originCode?: string;
+  allowSyndication?: boolean;
   type: string;
+  caption?: string;
 };
