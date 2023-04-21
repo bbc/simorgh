@@ -1,7 +1,7 @@
 {
   "alpha": true,
   "lastUpdated": {
-    "day": 12,
+    "day": 21,
     "month": "April",
     "year": 2023
   },
@@ -20,9 +20,9 @@
     }
   },
   "swarm": {
-    "done": false,
+    "done": true,
     "reference": {
-      "url": "",
+      "url": "https://docs.google.com/spreadsheets/d/1wE4KOagK912n4uZ80Oztb2MBC62LsnfPgFeleXMKQMA/edit#gid=588203697",
       "label": "A11y swarm notes"
     }
   }
