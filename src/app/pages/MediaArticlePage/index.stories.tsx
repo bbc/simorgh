@@ -4,17 +4,17 @@ import { withKnobs } from '@storybook/addon-knobs';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { UserContextProvider } from '#contexts/UserContext';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { MEDIA_ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import articleData from '#data/hausa/articles/cw43vy8zdjvo.json';
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import MediaArticlePageComponent from './MediaArticlePage';
 
 const PageWithOptimizely = withOptimizelyProvider(MediaArticlePageComponent);
 const Page = withPageWrapper(PageWithOptimizely);
 
-// eslint-disable-next-line react/prop-types
+// @ts-expect-error - passing in partial data
 const ComponentWithContext = ({ data: { data } }) => {
   return (
     <ToggleContextProvider
@@ -23,12 +23,12 @@ const ComponentWithContext = ({ data: { data } }) => {
         frostedPromo: { enabled: true, value: 1 },
       }}
     >
-      {/* Service set to news to enable most read. Article data is in english */}
       <ServiceContextProvider service="news">
         <RequestContextProvider
           isAmp={false}
           pageType={MEDIA_ARTICLE_PAGE}
           service="news"
+          pathname="/news/articles/c000000000o"
         >
           <UserContextProvider>
             <MemoryRouter>
@@ -37,7 +37,6 @@ const ComponentWithContext = ({ data: { data } }) => {
                   ...data.article,
                   secondaryColumn: data.secondaryData,
                 }}
-                mostReadEndpointOverride="./data/news/mostRead/index.json"
               />
             </MemoryRouter>
           </UserContextProvider>
@@ -54,6 +53,6 @@ export default {
   parameters: { layout: 'fullscreen' },
 };
 
-export const MediaArticlePage = props => (
-  <ComponentWithContext {...props} data={articleData} />
+export const MediaArticlePage = () => (
+  <ComponentWithContext data={articleData} />
 );

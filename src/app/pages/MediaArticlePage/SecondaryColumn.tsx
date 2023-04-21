@@ -9,10 +9,24 @@ import { articleDataPropTypes } from '#models/propTypes/article';
 import FeaturesAnalysis from '#containers/CpsFeaturesAnalysis';
 import TopStoriesSection from './PagePromoSections/TopStoriesSection';
 import styles from './MediaArticlePage.styles';
+import {
+  TopStoriesOJ,
+  FeaturesAnalysisOJ,
+} from '../../models/types/onward-journey';
 
-const SecondaryColumn = ({ pageData }) => {
-  const topStoriesContent = path(['secondaryColumn', 'topStories'], pageData);
-  const featuresContent = path(['secondaryColumn', 'features'], pageData);
+type MediaArticlePageProps = {
+  pageData: typeof articleDataPropTypes;
+};
+
+const SecondaryColumn = ({ pageData }: MediaArticlePageProps) => {
+  const topStoriesContent = path<TopStoriesOJ>(
+    ['secondaryColumn', 'topStories'],
+    pageData,
+  );
+  const featuresContent = path<FeaturesAnalysisOJ>(
+    ['secondaryColumn', 'features'],
+    pageData,
+  );
 
   const {
     palette: { GREY_2 },
@@ -41,10 +55,6 @@ const SecondaryColumn = ({ pageData }) => {
       )}
     </div>
   );
-};
-
-SecondaryColumn.propTypes = {
-  pageData: articleDataPropTypes.isRequired,
 };
 
 export default SecondaryColumn;

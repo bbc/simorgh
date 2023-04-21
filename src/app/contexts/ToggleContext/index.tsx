@@ -12,12 +12,14 @@ import toggleReducer from './reducer';
 const environment = (process.env.SIMORGH_APP_ENV || 'local') as Environments;
 
 type ToggleContextProps = {
-  toggleState: {
-    [key: string]: {
-      enabled: boolean;
-      value?: string;
-    };
-  };
+  toggleState:
+    | {
+        [key: string]: {
+          enabled: boolean;
+          value?: string | number;
+        };
+      }
+    | { _environment: string };
   toggleDispatch: Dispatch<ReducerAction<typeof toggleReducer>>;
 };
 
@@ -26,12 +28,14 @@ const ToggleContext = createContext<ToggleContextProps>(
 );
 
 type ToggleContextProviderProps = {
-  toggles?: {
-    [key: symbol]: {
-      enabled: boolean;
-      value?: string;
-    };
-  };
+  toggles?:
+    | {
+        [key: string]: {
+          enabled: boolean;
+          value?: string | number;
+        };
+      }
+    | { _environment: string };
 };
 
 const ToggleContextProvider = ({

@@ -1,15 +1,17 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { render, waitFor } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import newsMostReadData from '#data/news/mostRead';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { FetchMock } from 'jest-fetch-mock';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import newsMostReadData from '../../../../data/news/mostRead/index.json';
 import MediaArticlePage from './MediaArticlePage';
 import ThemeProvider from '../../components/ThemeProvider';
 import pidginPageData from './fixtureData';
+import { Services } from '../../models/types/global';
 
 jest.mock('../../components/ThemeProvider');
 
@@ -18,12 +20,11 @@ jest.mock('#containers/ChartbeatAnalytics', () => {
   return ChartbeatAnalytics;
 });
 
-const recommendationSettings = {
-  hasStoryRecommendations: true,
-  skipLink: {
-    text: 'Skip recommendations and continue reading',
-    endTextVisuallyHidden: 'End of recommendations',
-  },
+type ContextProps = {
+  service: Services;
+  adsToggledOn?: boolean;
+  mostReadToggledOn?: boolean;
+  showAdsBasedOnLocation?: boolean;
 };
 
 const Context = ({
@@ -32,7 +33,7 @@ const Context = ({
   adsToggledOn = false,
   mostReadToggledOn = true,
   showAdsBasedOnLocation = false,
-} = {}) => (
+}: PropsWithChildren<ContextProps>) => (
   <BrowserRouter>
     <ThemeProvider service={service} variant="default">
       <ToggleContextProvider
@@ -42,9 +43,6 @@ const Context = ({
           },
           ads: {
             enabled: adsToggledOn,
-          },
-          cpsRecommendations: {
-            enabled: true,
           },
         }}
       >
@@ -60,7 +58,7 @@ const Context = ({
         >
           <ServiceContextProvider
             service={service}
-            recommendations={recommendationSettings}
+            // recommendations={recommendationSettings}
           >
             {children}
           </ServiceContextProvider>
@@ -70,16 +68,19 @@ const Context = ({
   </BrowserRouter>
 );
 
+const fetchMock = fetch as FetchMock;
+
 describe('MediaArticlePage', () => {
   beforeEach(() => {
-    fetch.resetMocks();
+    fetchMock.resetMocks();
   });
 
   it('should render a news article correctly', async () => {
-    fetch.mockResponse(JSON.stringify(newsMostReadData));
+    fetchMock.mockResponse(JSON.stringify(newsMostReadData));
 
     const { container } = render(
       <Context service="news">
+        {/* @ts-expect-error - partial pageData being passed */}
         <MediaArticlePage pageData={pidginPageData} />
       </Context>,
     );
@@ -90,10 +91,11 @@ describe('MediaArticlePage', () => {
   });
 
   it('should NOT render mpu or advert leaderboard', async () => {
-    fetch.mockResponse(JSON.stringify(newsMostReadData));
+    fetchMock.mockResponse(JSON.stringify(newsMostReadData));
 
     const { container } = render(
       <Context service="news" adsToggledOn showAdsBasedOnLocation>
+        {/* @ts-expect-error - partial pageData being passed */}
         <MediaArticlePage pageData={pidginPageData} />
       </Context>,
     );

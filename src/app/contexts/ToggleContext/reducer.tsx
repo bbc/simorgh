@@ -1,12 +1,14 @@
 import pathOr from 'ramda/src/pathOr';
 
 type ReducerProps = {
-  toggleState: {
-    [key: string]: {
-      enabled: boolean;
-      value?: string;
-    };
-  };
+  toggleState:
+    | {
+        [key: string]: {
+          enabled: boolean;
+          value?: string | number;
+        };
+      }
+    | { _environment: string };
   action: {
     type: string;
     data: {
