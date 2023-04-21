@@ -18,6 +18,8 @@ type Props = {
 
 const TestComponent = ({ toggle, children }: PropsWithChildren<Props>) => {
   const { toggleState } = useContext(ToggleContext);
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
   const toggleIsEnabled = toggleState[toggle] && toggleState[toggle].enabled;
   if (!toggleIsEnabled) {
     return null;
