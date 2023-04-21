@@ -8,7 +8,7 @@ import { UserContextProvider } from '../contexts/UserContext';
 import { EventTrackingContextProvider } from '../contexts/EventTrackingContext';
 import pageDataFixture from '../../../data/news/articles/c0g992jmmkko.json';
 import ThemeProvider from './ThemeProvider';
-import { PageTypes, Services, Variants } from '../models/types/global';
+import { PageTypes, Services, Toggles, Variants } from '../models/types/global';
 
 jest.mock('./ThemeProvider');
 
@@ -19,7 +19,7 @@ interface Props {
   pageType?: PageTypes;
   pathname?: string;
   service?: Services;
-  toggles?: Record<string, boolean>;
+  toggles?: Toggles;
   showAdsBasedOnLocation?: boolean;
   variant?: Variants;
 }
