@@ -71,12 +71,7 @@ const styles = {
       margin: '0 1rem 1rem 1rem',
       width: '100%',
       textDecoration: 'none',
-      '&:hover': {
-        backgroundColor: '#F6F6F6',
-        textDecoration: 'underline',
-        color: palette.BLACK,
-      },
-      '&:focus': {
+      '&:hover, &:focus': {
         backgroundColor: '#F6F6F6',
         textDecoration: 'underline',
         color: palette.BLACK,
