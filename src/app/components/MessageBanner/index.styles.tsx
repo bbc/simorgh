@@ -70,15 +70,8 @@ const styles = {
       backgroundColor: palette.WHITE,
       margin: '0 1rem 1rem 1rem',
       width: '100%',
-      textDecoration: 'none',
-      '&:hover': {
+      '&:hover, &:focus': {
         backgroundColor: '#F6F6F6',
-        textDecoration: 'underline',
-        color: palette.BLACK,
-      },
-      '&:focus': {
-        backgroundColor: '#F6F6F6',
-        textDecoration: 'underline',
         color: palette.BLACK,
       },
       [mq.GROUP_3_MIN_WIDTH]: {
@@ -94,17 +87,14 @@ const styles = {
           color: palette.BLACK,
         },
       },
-      '& svg': {
-        marginInlineStart: '0.5rem',
-        width: '1rem',
-        height: '1rem',
-      },
     }),
-  linkAndChevron: () =>
+  chevron: () =>
     css({
-      display: 'flex',
-      flexDirection: 'row',
-      justifyContent: 'center',
+      marginInlineStart: '0.5rem',
+      width: '1rem',
+      height: '1rem',
+      verticalAlign: 'middle',
+      fill: 'currentcolor',
     }),
   flex: ({ mq }: Theme) =>
     css({

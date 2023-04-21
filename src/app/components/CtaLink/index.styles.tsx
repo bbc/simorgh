@@ -6,23 +6,18 @@ const styles = {
       textDecoration: 'none',
       '&:hover, &:focus': {
         textDecoration: 'underline',
+        color: 'inherit',
       },
     }),
-  link: () =>
-    css({
-      textDecoration: 'none',
-      verticalAlign: 'middle',
-    }),
-  chevron: () =>
-    css({
-      verticalAlign: 'middle',
-      fill: 'currentcolor',
-    }),
-  linkAndChevron: () =>
+  linkTextWrapper: () =>
     css({
       display: 'flex',
       flexDirection: 'row',
       justifyContent: 'center',
+    }),
+  linkText: () =>
+    css({
+      verticalAlign: 'middle',
     }),
 };
 

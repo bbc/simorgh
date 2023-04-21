@@ -35,18 +35,20 @@ const styles = {
       marginTop: `${spacings.DOUBLE}rem`,
       backgroundColor: palette.GREY_10,
       width: 'auto',
-      textDecoration: 'none',
       '&:hover, &:focus': {
-        textDecoration: 'underline',
         color: palette.WHITE,
       },
       '& span': {
         color: palette.WHITE,
       },
-      '& svg': {
-        marginInlineStart: `${pixelsToRem(12)}rem`,
-        color: palette.WHITE,
-      },
+    }),
+  chevron: () =>
+    css({
+      marginInlineStart: `${pixelsToRem(12)}rem`,
+      width: '1rem',
+      height: '1rem',
+      fill: 'currentcolor',
+      verticalAlign: 'middle',
     }),
 };
 export default styles;

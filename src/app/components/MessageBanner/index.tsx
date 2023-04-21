@@ -5,6 +5,7 @@ import Paragraph from '../Paragraph';
 import Heading from '../Heading';
 import Image from '../Image';
 import styles from './index.styles';
+import { LeftChevron, RightChevron } from '../icons';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import CtaLink from '../CtaLink';
 
@@ -47,10 +48,16 @@ const MessageBanner = ({
         <div css={styles.flex}>
           <CtaLink
             href={link}
-            linkText={linkText}
             css={styles.ctaLink}
             className="focusIndicatorInvert"
-          />
+          >
+            {linkText}
+            {isRtl ? (
+              <LeftChevron css={styles.chevron} />
+            ) : (
+              <RightChevron css={styles.chevron} />
+            )}
+          </CtaLink>
           {image && (
             <div css={isRtl ? styles.imageRtl : styles.imageLtr}>
               <Image
