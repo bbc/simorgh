@@ -10,7 +10,7 @@ describe('Paragraph', () => {
     expect(screen.getByText('Hello World!').nodeName).toBe('P');
   });
 
-  it('should render the correct typography for the arabic service', async () => {
+  it('should render the correct typography for the mundo service', async () => {
     render(<Paragraph>Hello World!</Paragraph>, {
       service: 'mundo',
     });
@@ -26,7 +26,7 @@ describe('Paragraph', () => {
     });
   });
 
-  it('should render the correct typography for the mundo service', async () => {
+  it('should render the correct typography for the arabic service', async () => {
     render(<Paragraph>Hello World!</Paragraph>, {
       service: 'arabic',
     });
@@ -35,7 +35,8 @@ describe('Paragraph', () => {
       color: '#141414',
       fontSize: '0.9375rem',
       lineHeight: '1.5rem',
-      fontFamily: '"BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif',
+      fontFamily:
+        '"BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif',
       fontStyle: 'normal',
       fontWeight: 400,
       margin: 0,

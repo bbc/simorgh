@@ -15,7 +15,6 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
-import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
 import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import Grid, { GelPageGrid } from '#components/Grid';
@@ -34,6 +33,7 @@ import LinkedData from '../../components/LinkedData';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import MetadataContainer from '../../components/Metadata';
 import getPlaceholderImageUrl from '../../routes/utils/getPlaceholderImageUrl';
+import VisuallyHiddenText from '../../components/VisuallyHiddenText';
 
 const getGroups = (zero, one, two, three, four, five) => ({
   group0: zero,

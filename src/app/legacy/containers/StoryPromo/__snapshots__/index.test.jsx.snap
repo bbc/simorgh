@@ -250,7 +250,7 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
   margin: 0;
 }
 
-.emotion-27 {
+.emotion-25 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -262,34 +262,34 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-27 {
+  .emotion-25 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-27 {
+  .emotion-25 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-27 {
+  .emotion-25 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-27 {
+  .emotion-25 {
     display: none;
     visibility: hidden;
   }
 }
 
-.emotion-29 {
+.emotion-27 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #545658;
@@ -300,14 +300,14 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-29 {
+  .emotion-27 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-29 {
+  .emotion-27 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -397,7 +397,7 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
             role="text"
           >
             <span
-              class="emotion-23 emotion-24"
+              class="emotion-23"
             >
               Gee ntị, 
             </span>
@@ -405,7 +405,7 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
               An audio item
             </span>
             <span
-              class="emotion-23 emotion-24"
+              class="emotion-23"
             >
               , Duration 3,12
             </span>
@@ -413,12 +413,12 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
         </a>
       </h3>
       <p
-        class="emotion-27 emotion-28"
+        class="emotion-25 emotion-26"
       >
         Summary text
       </p>
       <time
-        class="emotion-29 emotion-30"
+        class="emotion-27 emotion-28"
         datetime="2019-05-02"
       >
         2 Mee 2019
@@ -684,7 +684,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
   margin: 0;
 }
 
-.emotion-28 {
+.emotion-26 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -696,34 +696,34 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-28 {
+  .emotion-26 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-28 {
+  .emotion-26 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-28 {
+  .emotion-26 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-28 {
+  .emotion-26 {
     display: none;
     visibility: hidden;
   }
 }
 
-.emotion-30 {
+.emotion-28 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #545658;
@@ -734,14 +734,14 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-30 {
+  .emotion-28 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-30 {
+  .emotion-28 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -831,7 +831,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
             role="text"
           >
             <span
-              class="emotion-24 emotion-25"
+              class="emotion-24"
             >
               Gee ntị, 
             </span>
@@ -839,7 +839,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
               An audio item
             </span>
             <span
-              class="emotion-24 emotion-25"
+              class="emotion-24"
             >
               , Duration 3,12
             </span>
@@ -847,12 +847,12 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
         </a>
       </h3>
       <p
-        class="emotion-28 emotion-29"
+        class="emotion-26 emotion-27"
       >
         Summary text
       </p>
       <time
-        class="emotion-30 emotion-31"
+        class="emotion-28 emotion-29"
         datetime="2019-05-02"
       >
         2 Mee 2019
@@ -863,1716 +863,6 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
 `;
 
 exports[`StoryPromo Container should render audio promoType leading on amp 1`] = `
-.emotion-0 {
-  position: relative;
-}
-
-@supports (grid-template-columns: fit-content(200px)) {
-  .emotion-0 {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-column-gap: 0.5rem;
-  }
-
-  @media (min-width: 37.5rem) {
-    .emotion-0 {
-      grid-column-gap: 1rem;
-    }
-  }
-}
-
-.emotion-2 {
-  display: inline-block;
-  vertical-align: top;
-  width: 100%;
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-2 {
-    padding-right: 0.5rem;
-    width: 50%;
-  }
-}
-
-@media (min-width: 63rem) {
-  .emotion-2 {
-    width: 33.33%;
-  }
-}
-
-@supports (grid-template-columns: fit-content(200px)) {
-  .emotion-2 {
-    display: block;
-    width: initial;
-    padding: initial;
-    padding: 0;
-    width: 100%;
-    grid-template-columns: repeat(6, 1fr);
-    grid-column-end: span 6;
-  }
-
-  @media (min-width: 37.5rem) {
-    .emotion-2 {
-      grid-template-columns: repeat(3, 1fr);
-      grid-column-end: span 3;
-    }
-  }
-
-  @media (min-width: 63rem) {
-    .emotion-2 {
-      grid-template-columns: repeat(2, 1fr);
-      grid-column-end: span 2;
-    }
-  }
-}
-
-@media (max-width: 62.9375rem) {
-  .emotion-2>time {
-    padding-bottom: 0.5rem;
-  }
-}
-
-.emotion-4 {
-  color: #222222;
-  margin: 0;
-  padding-bottom: 0.5rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-4 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-4 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-  }
-}
-
-.emotion-6 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-  display: inline-block;
-  overflow-wrap: anywhere;
-}
-
-.emotion-6:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.emotion-6:hover,
-.emotion-6:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-6:visited {
-  color: #6E6E73;
-}
-
-.emotion-8 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
-.emotion-12 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  margin: 0;
-  padding-bottom: 0.5rem;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-12 {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-12 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (max-width: 37.4375rem) {
-  .emotion-12 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@media (min-width: 63rem) {
-  .emotion-12 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-.emotion-14 {
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  color: #545658;
-  display: block;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-14 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-14 {
-    font-size: 0.8125rem;
-    line-height: 1rem;
-  }
-}
-
-.emotion-16 {
-  display: inline-block;
-  vertical-align: top;
-  position: relative;
-  width: 100%;
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-16 {
-    padding-right: 0.5rem;
-    width: 50%;
-  }
-}
-
-@media (min-width: 63rem) {
-  .emotion-16 {
-    width: 66.67%;
-  }
-}
-
-@supports (grid-template-columns: fit-content(200px)) {
-  .emotion-16 {
-    width: initial;
-    padding: 0;
-    grid-template-columns: repeat(6, 1fr);
-    grid-column-end: span 6;
-  }
-
-  @media (min-width: 37.5rem) {
-    .emotion-16 {
-      grid-template-columns: repeat(3, 1fr);
-      grid-column-end: span 3;
-    }
-  }
-
-  @media (min-width: 63rem) {
-    .emotion-16 {
-      grid-template-columns: repeat(4, 1fr);
-      grid-column-end: span 4;
-    }
-  }
-}
-
-.emotion-18 {
-  position: relative;
-}
-
-.emotion-20 {
-  height: 0;
-  overflow: hidden;
-  position: relative;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
-  background-color: #F2F2F2;
-  -webkit-background-position: center center;
-  background-position: center center;
-  background-repeat: no-repeat;
-  -webkit-background-size: 60px 17px;
-  background-size: 60px 17px;
-}
-
-@media (min-width: 25rem) {
-  .emotion-20 {
-    -webkit-background-size: 77px 22px;
-    background-size: 77px 22px;
-  }
-}
-
-@media (min-width: 63rem) {
-  .emotion-20 {
-    -webkit-background-size: 93px 27px;
-    background-size: 93px 27px;
-  }
-}
-
-.emotion-21 {
-  position: absolute;
-  bottom: 0;
-}
-
-.emotion-21>* {
-  height: 2rem;
-  padding: 0.5rem 0.25rem;
-}
-
-.emotion-23 {
-  color: #222222;
-  background-color: #FFFFFF;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  display: block;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-23 {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-23 {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-}
-
-.emotion-25 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
-}
-
-.emotion-27 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
-  color: #222222;
-  fill: currentColor;
-  width: 0.75rem;
-  height: 0.75rem;
-}
-
-.emotion-29 {
-  padding: 0 0.25rem;
-}
-
-<div>
-  <div
-    class="emotion-0 emotion-1"
-    data-e2e="story-promo"
-  >
-    <div
-      class="emotion-2 emotion-3"
-      dir="ltr"
-    >
-      <h3
-        class="emotion-4 emotion-5"
-      >
-        <a
-          aria-labelledby="promo-1"
-          class="focusIndicatorDisplayInlineBlock emotion-6 emotion-7"
-          href="https://www.bbc.co.uk"
-        >
-          <span
-            id="promo-1"
-            role="text"
-          >
-            <span
-              class="emotion-8 emotion-9"
-            >
-              Gee ntị, 
-            </span>
-            <span>
-              An audio item
-            </span>
-            <span
-              class="emotion-8 emotion-9"
-            >
-              , Duration 3,12
-            </span>
-          </span>
-        </a>
-      </h3>
-      <p
-        class="emotion-12 emotion-13"
-      >
-        Summary text
-      </p>
-      <time
-        class="emotion-14 emotion-15"
-        datetime="2019-05-02"
-      >
-        2 Mee 2019
-      </time>
-    </div>
-    <div
-      class="emotion-16 emotion-17"
-      dir="ltr"
-    >
-      <div
-        class="emotion-18 emotion-19"
-      >
-        <div
-          class="emotion-20"
-          style="padding-bottom: 56.25%;"
-        >
-          <amp-img
-            alt="Image Alt text"
-            attribution="Image provider"
-            class="bbc-image"
-            fallback=""
-            height="1152"
-            layout="responsive"
-            sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
-            src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
-            srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg 660w"
-            width="2048"
-          />
-        </div>
-        <div
-          class="emotion-21 emotion-22"
-        >
-          <div
-            aria-hidden="true"
-            class="emotion-23 emotion-24"
-            data-e2e="media-indicator"
-            dir="ltr"
-          >
-            <div
-              class="emotion-25 emotion-26"
-            >
-              <svg
-                aria-hidden="true"
-                class="emotion-27 emotion-28"
-                focusable="false"
-                height="12px"
-                viewBox="0 0 13 12"
-                width="13px"
-              >
-                <path
-                  d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
-                />
-                <path
-                  d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
-                />
-              </svg>
-              <time
-                class="emotion-29 emotion-30"
-                datetime="PT3M12S"
-              >
-                3:12
-              </time>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`StoryPromo Container should render audio promoType top on amp 1`] = `
-.emotion-0 {
-  position: relative;
-}
-
-@supports (grid-template-columns: fit-content(200px)) {
-  .emotion-0 {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-column-gap: 0.5rem;
-  }
-
-  @media (min-width: 37.5rem) {
-    .emotion-0 {
-      grid-column-gap: 1rem;
-    }
-  }
-
-  @media (min-width: 80rem) {
-    .emotion-0 {
-      grid-template-columns: repeat(12, 1fr);
-    }
-  }
-}
-
-.emotion-2 {
-  display: inline-block;
-  vertical-align: top;
-  position: relative;
-  margin-bottom: 0.5rem;
-  width: 100%;
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-2 {
-    width: calc(50% - 0.5rem);
-    margin-bottom: 0;
-  }
-}
-
-@media (min-width: 63rem) {
-  .emotion-2 {
-    width: calc(50% - 0.5rem);
-  }
-}
-
-@supports (grid-template-columns: fit-content(200px)) {
-  .emotion-2 {
-    width: initial;
-    grid-column: 1/span 6;
-  }
-
-  @media (min-width: 37.5rem) and (max-width: 79.9375rem) {
-    .emotion-2 {
-      grid-column: 1/span 3;
-    }
-  }
-}
-
-.emotion-4 {
-  position: relative;
-}
-
-.emotion-6 {
-  height: 0;
-  overflow: hidden;
-  position: relative;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
-  background-color: #F2F2F2;
-  -webkit-background-position: center center;
-  background-position: center center;
-  background-repeat: no-repeat;
-  -webkit-background-size: 60px 17px;
-  background-size: 60px 17px;
-}
-
-@media (min-width: 25rem) {
-  .emotion-6 {
-    -webkit-background-size: 77px 22px;
-    background-size: 77px 22px;
-  }
-}
-
-@media (min-width: 63rem) {
-  .emotion-6 {
-    -webkit-background-size: 93px 27px;
-    background-size: 93px 27px;
-  }
-}
-
-.emotion-7 {
-  position: absolute;
-  bottom: 0;
-}
-
-.emotion-7>* {
-  height: 2rem;
-  padding: 0.5rem 0.25rem;
-}
-
-.emotion-9 {
-  color: #222222;
-  background-color: #FFFFFF;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  display: block;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-9 {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-9 {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-}
-
-.emotion-11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
-}
-
-.emotion-13 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
-  color: #222222;
-  fill: currentColor;
-  width: 0.75rem;
-  height: 0.75rem;
-}
-
-.emotion-15 {
-  padding: 0 0.25rem;
-}
-
-.emotion-17 {
-  display: inline-block;
-  vertical-align: top;
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-17 {
-    width: 50%;
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width: 63rem) {
-  .emotion-17 {
-    width: 50%;
-  }
-}
-
-@supports (grid-template-columns: fit-content(200px)) {
-  .emotion-17 {
-    display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 1/span 6;
-  }
-
-  @media (min-width: 37.5rem) {
-    .emotion-17 {
-      grid-column: 4/span 3;
-    }
-  }
-
-  @media (min-width: 80rem) {
-    .emotion-17 {
-      grid-column: 7/span 6;
-    }
-  }
-}
-
-.emotion-19 {
-  color: #222222;
-  margin: 0;
-  padding-bottom: 0.5rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 1.25rem;
-  line-height: 1.5rem;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-19 {
-    font-size: 1.375rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-19 {
-    font-size: 1.75rem;
-    line-height: 2rem;
-  }
-}
-
-.emotion-21 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-  display: inline-block;
-  overflow-wrap: anywhere;
-}
-
-.emotion-21:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.emotion-21:hover,
-.emotion-21:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-21:visited {
-  color: #6E6E73;
-}
-
-.emotion-23 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
-.emotion-27 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  margin: 0;
-  padding-bottom: 0.5rem;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-27 {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-27 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-27 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-.emotion-29 {
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  color: #545658;
-  display: block;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-29 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-29 {
-    font-size: 0.8125rem;
-    line-height: 1rem;
-  }
-}
-
-<div>
-  <div
-    class="emotion-0 emotion-1"
-    data-e2e="story-promo"
-  >
-    <div
-      class="emotion-2 emotion-3"
-      dir="ltr"
-    >
-      <div
-        class="emotion-4 emotion-5"
-      >
-        <div
-          class="emotion-6"
-          style="padding-bottom: 56.25%;"
-        >
-          <amp-img
-            alt="Image Alt text"
-            attribution="Image provider"
-            class="bbc-image"
-            fallback=""
-            height="1152"
-            layout="responsive"
-            sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
-            src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
-            srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg 660w"
-            width="2048"
-          />
-        </div>
-        <div
-          class="emotion-7 emotion-8"
-        >
-          <div
-            aria-hidden="true"
-            class="emotion-9 emotion-10"
-            data-e2e="media-indicator"
-            dir="ltr"
-          >
-            <div
-              class="emotion-11 emotion-12"
-            >
-              <svg
-                aria-hidden="true"
-                class="emotion-13 emotion-14"
-                focusable="false"
-                height="12px"
-                viewBox="0 0 13 12"
-                width="13px"
-              >
-                <path
-                  d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
-                />
-                <path
-                  d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
-                />
-              </svg>
-              <time
-                class="emotion-15 emotion-16"
-                datetime="PT3M12S"
-              >
-                3:12
-              </time>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="emotion-17 emotion-18"
-      dir="ltr"
-    >
-      <h3
-        class="emotion-19 emotion-20"
-      >
-        <a
-          aria-labelledby="promo-1"
-          class="focusIndicatorDisplayInlineBlock emotion-21 emotion-22"
-          href="https://www.bbc.co.uk"
-        >
-          <span
-            id="promo-1"
-            role="text"
-          >
-            <span
-              class="emotion-23 emotion-24"
-            >
-              Gee ntị, 
-            </span>
-            <span>
-              An audio item
-            </span>
-            <span
-              class="emotion-23 emotion-24"
-            >
-              , Duration 3,12
-            </span>
-          </span>
-        </a>
-      </h3>
-      <p
-        class="emotion-27 emotion-28"
-      >
-        Summary text
-      </p>
-      <time
-        class="emotion-29 emotion-30"
-        datetime="2019-05-02"
-      >
-        2 Mee 2019
-      </time>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`StoryPromo Container should render audio with no duration correctly for amp 1`] = `
-.emotion-0 {
-  position: relative;
-}
-
-@supports (grid-template-columns: fit-content(200px)) {
-  .emotion-0 {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-column-gap: 0.5rem;
-  }
-
-  @media (min-width: 37.5rem) {
-    .emotion-0 {
-      grid-column-gap: 1rem;
-    }
-  }
-
-  @media (min-width: 63rem) {
-    .emotion-0 {
-      display: block;
-    }
-  }
-}
-
-.emotion-2 {
-  display: inline-block;
-  vertical-align: top;
-  position: relative;
-  width: 33.33%;
-}
-
-@media (min-width: 63rem) {
-  .emotion-2 {
-    display: block;
-    width: 100%;
-  }
-}
-
-@supports (grid-template-columns: fit-content(200px)) {
-  .emotion-2 {
-    width: initial;
-    grid-column: 1/span 2;
-  }
-}
-
-.emotion-4 {
-  position: relative;
-}
-
-.emotion-6 {
-  height: 0;
-  overflow: hidden;
-  position: relative;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
-  background-color: #F2F2F2;
-  -webkit-background-position: center center;
-  background-position: center center;
-  background-repeat: no-repeat;
-  -webkit-background-size: 60px 17px;
-  background-size: 60px 17px;
-}
-
-@media (min-width: 25rem) {
-  .emotion-6 {
-    -webkit-background-size: 77px 22px;
-    background-size: 77px 22px;
-  }
-}
-
-@media (min-width: 63rem) {
-  .emotion-6 {
-    -webkit-background-size: 93px 27px;
-    background-size: 93px 27px;
-  }
-}
-
-@media (min-width: 25rem) {
-  .emotion-7 {
-    position: absolute;
-    bottom: 0;
-  }
-}
-
-.emotion-7>* {
-  height: 2rem;
-  padding: 0.5rem 0.25rem;
-}
-
-@media (max-width: 24.9375rem) {
-  .emotion-7>* {
-    height: 1.25rem;
-    padding: 0.25rem 0.25rem 0;
-  }
-}
-
-.emotion-9 {
-  color: #222222;
-  background-color: #FFFFFF;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  display: block;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-9 {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-9 {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-}
-
-.emotion-11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
-}
-
-.emotion-13 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
-  color: #222222;
-  fill: currentColor;
-  width: 0.75rem;
-  height: 0.75rem;
-}
-
-.emotion-15 {
-  display: inline-block;
-  vertical-align: top;
-  width: 66.67%;
-  padding: 0 0.5rem;
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-15 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width: 63rem) {
-  .emotion-15 {
-    display: block;
-    width: 100%;
-    padding: 0.5rem 0;
-  }
-}
-
-@supports (grid-template-columns: fit-content(200px)) {
-  .emotion-15 {
-    display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 3/span 4;
-  }
-
-  @media (min-width: 63rem) {
-    .emotion-15 {
-      padding-top: 0.5rem;
-    }
-  }
-}
-
-.emotion-17 {
-  color: #222222;
-  margin: 0;
-  padding-bottom: 0.5rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-17 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-17 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-.emotion-19 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-  display: inline-block;
-  overflow-wrap: anywhere;
-}
-
-.emotion-19:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.emotion-19:hover,
-.emotion-19:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-19:visited {
-  color: #6E6E73;
-}
-
-.emotion-21 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
-.emotion-23 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  margin: 0;
-  padding-bottom: 0.5rem;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-23 {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-23 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (max-width: 37.4375rem) {
-  .emotion-23 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@media (min-width: 63rem) {
-  .emotion-23 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-.emotion-25 {
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  color: #545658;
-  display: block;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-25 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-25 {
-    font-size: 0.8125rem;
-    line-height: 1rem;
-  }
-}
-
-<div>
-  <div
-    class="emotion-0 emotion-1"
-    data-e2e="story-promo"
-  >
-    <div
-      class="emotion-2 emotion-3"
-      dir="ltr"
-    >
-      <div
-        class="emotion-4 emotion-5"
-      >
-        <div
-          class="emotion-6"
-          style="padding-bottom: 56.25%;"
-        >
-          <amp-img
-            alt="Image Alt text"
-            attribution="Image provider"
-            class="bbc-image"
-            fallback=""
-            height="1152"
-            layout="responsive"
-            sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
-            src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
-            srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg 660w"
-            width="2048"
-          />
-        </div>
-        <div
-          class="emotion-7 emotion-8"
-        >
-          <div
-            aria-hidden="true"
-            class="emotion-9 emotion-10"
-            data-e2e="media-indicator"
-            dir="ltr"
-          >
-            <div
-              class="emotion-11 emotion-12"
-            >
-              <svg
-                aria-hidden="true"
-                class="emotion-13 emotion-14"
-                focusable="false"
-                height="12px"
-                viewBox="0 0 13 12"
-                width="13px"
-              >
-                <path
-                  d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
-                />
-                <path
-                  d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
-                />
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="emotion-15 emotion-16"
-      dir="ltr"
-    >
-      <h3
-        class="emotion-17 emotion-18"
-      >
-        <a
-          aria-labelledby="promo-1"
-          class="focusIndicatorDisplayInlineBlock emotion-19 emotion-20"
-          href="https://www.bbc.co.uk"
-        >
-          <span
-            id="promo-1"
-            role="text"
-          >
-            <span
-              class="emotion-21 emotion-22"
-            >
-              Gee ntị, 
-            </span>
-            <span>
-              An audio item
-            </span>
-          </span>
-        </a>
-      </h3>
-      <p
-        class="emotion-23 emotion-24"
-      >
-        Summary text
-      </p>
-      <time
-        class="emotion-25 emotion-26"
-        datetime="2019-05-02"
-      >
-        2 Mee 2019
-      </time>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`StoryPromo Container should render audio with no duration correctly for canonical 1`] = `
-.emotion-0 {
-  position: relative;
-}
-
-@supports (grid-template-columns: fit-content(200px)) {
-  .emotion-0 {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-column-gap: 0.5rem;
-  }
-
-  @media (min-width: 37.5rem) {
-    .emotion-0 {
-      grid-column-gap: 1rem;
-    }
-  }
-
-  @media (min-width: 63rem) {
-    .emotion-0 {
-      display: block;
-    }
-  }
-}
-
-.emotion-2 {
-  display: inline-block;
-  vertical-align: top;
-  position: relative;
-  width: 33.33%;
-}
-
-@media (min-width: 63rem) {
-  .emotion-2 {
-    display: block;
-    width: 100%;
-  }
-}
-
-@supports (grid-template-columns: fit-content(200px)) {
-  .emotion-2 {
-    width: initial;
-    grid-column: 1/span 2;
-  }
-}
-
-.emotion-4 {
-  position: relative;
-}
-
-.emotion-6 {
-  height: 0;
-  overflow: hidden;
-  position: relative;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
-  background-color: #F2F2F2;
-  -webkit-background-position: center center;
-  background-position: center center;
-  background-repeat: no-repeat;
-  -webkit-background-size: 60px 17px;
-  background-size: 60px 17px;
-}
-
-@media (min-width: 25rem) {
-  .emotion-6 {
-    -webkit-background-size: 77px 22px;
-    background-size: 77px 22px;
-  }
-}
-
-@media (min-width: 63rem) {
-  .emotion-6 {
-    -webkit-background-size: 93px 27px;
-    background-size: 93px 27px;
-  }
-}
-
-.emotion-7 {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-@media (min-width: 25rem) {
-  .emotion-8 {
-    position: absolute;
-    bottom: 0;
-  }
-}
-
-.emotion-8>* {
-  height: 2rem;
-  padding: 0.5rem 0.25rem;
-}
-
-@media (max-width: 24.9375rem) {
-  .emotion-8>* {
-    height: 1.25rem;
-    padding: 0.25rem 0.25rem 0;
-  }
-}
-
-.emotion-10 {
-  color: #222222;
-  background-color: #FFFFFF;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  display: block;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-10 {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-10 {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-}
-
-.emotion-12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
-}
-
-.emotion-14 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
-  color: #222222;
-  fill: currentColor;
-  width: 0.75rem;
-  height: 0.75rem;
-}
-
-.emotion-16 {
-  display: inline-block;
-  vertical-align: top;
-  width: 66.67%;
-  padding: 0 0.5rem;
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-16 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width: 63rem) {
-  .emotion-16 {
-    display: block;
-    width: 100%;
-    padding: 0.5rem 0;
-  }
-}
-
-@supports (grid-template-columns: fit-content(200px)) {
-  .emotion-16 {
-    display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 3/span 4;
-  }
-
-  @media (min-width: 63rem) {
-    .emotion-16 {
-      padding-top: 0.5rem;
-    }
-  }
-}
-
-.emotion-18 {
-  color: #222222;
-  margin: 0;
-  padding-bottom: 0.5rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-18 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-18 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-.emotion-20 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-  display: inline-block;
-  overflow-wrap: anywhere;
-}
-
-.emotion-20:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.emotion-20:hover,
-.emotion-20:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-20:visited {
-  color: #6E6E73;
-}
-
-.emotion-22 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
-.emotion-24 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  margin: 0;
-  padding-bottom: 0.5rem;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-24 {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-24 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (max-width: 37.4375rem) {
-  .emotion-24 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@media (min-width: 63rem) {
-  .emotion-24 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-.emotion-26 {
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  color: #545658;
-  display: block;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-26 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-26 {
-    font-size: 0.8125rem;
-    line-height: 1rem;
-  }
-}
-
-<div>
-  <div
-    class="emotion-0 emotion-1"
-    data-e2e="story-promo"
-  >
-    <div
-      class="emotion-2 emotion-3"
-      dir="ltr"
-    >
-      <div
-        class="emotion-4 emotion-5"
-      >
-        <div
-          class="emotion-6"
-          style="padding-bottom: 56.25%;"
-        >
-          <picture>
-            <img
-              alt="Image Alt text"
-              class="emotion-7"
-              height="1152"
-              loading="lazy"
-              sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
-              src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
-              srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg 660w"
-              width="2048"
-            />
-          </picture>
-        </div>
-        <div
-          class="emotion-8 emotion-9"
-        >
-          <div
-            aria-hidden="true"
-            class="emotion-10 emotion-11"
-            data-e2e="media-indicator"
-            dir="ltr"
-          >
-            <div
-              class="emotion-12 emotion-13"
-            >
-              <svg
-                aria-hidden="true"
-                class="emotion-14 emotion-15"
-                focusable="false"
-                height="12px"
-                viewBox="0 0 13 12"
-                width="13px"
-              >
-                <path
-                  d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
-                />
-                <path
-                  d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
-                />
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="emotion-16 emotion-17"
-      dir="ltr"
-    >
-      <h3
-        class="emotion-18 emotion-19"
-      >
-        <a
-          aria-labelledby="promo-1"
-          class="focusIndicatorDisplayInlineBlock emotion-20 emotion-21"
-          href="https://www.bbc.co.uk"
-        >
-          <span
-            id="promo-1"
-            role="text"
-          >
-            <span
-              class="emotion-22 emotion-23"
-            >
-              Gee ntị, 
-            </span>
-            <span>
-              An audio item
-            </span>
-          </span>
-        </a>
-      </h3>
-      <p
-        class="emotion-24 emotion-25"
-      >
-        Summary text
-      </p>
-      <time
-        class="emotion-26 emotion-27"
-        datetime="2019-05-02"
-      >
-        2 Mee 2019
-      </time>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`StoryPromo Container should render audio with no duration promoType leading on amp 1`] = `
 .emotion-0 {
   position: relative;
 }
@@ -2903,6 +1193,10 @@ exports[`StoryPromo Container should render audio with no duration promoType lea
   height: 0.75rem;
 }
 
+.emotion-27 {
+  padding: 0 0.25rem;
+}
+
 <div>
   <div
     class="emotion-0 emotion-1"
@@ -2925,12 +1219,17 @@ exports[`StoryPromo Container should render audio with no duration promoType lea
             role="text"
           >
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-8"
             >
               Gee ntị, 
             </span>
             <span>
               An audio item
+            </span>
+            <span
+              class="emotion-8"
+            >
+              , Duration 3,12
             </span>
           </span>
         </a>
@@ -2986,6 +1285,1707 @@ exports[`StoryPromo Container should render audio with no duration promoType lea
               <svg
                 aria-hidden="true"
                 class="emotion-25 emotion-26"
+                focusable="false"
+                height="12px"
+                viewBox="0 0 13 12"
+                width="13px"
+              >
+                <path
+                  d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
+                />
+                <path
+                  d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
+                />
+              </svg>
+              <time
+                class="emotion-27 emotion-28"
+                datetime="PT3M12S"
+              >
+                3:12
+              </time>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`StoryPromo Container should render audio promoType top on amp 1`] = `
+.emotion-0 {
+  position: relative;
+}
+
+@supports (grid-template-columns: fit-content(200px)) {
+  .emotion-0 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 0.5rem;
+  }
+
+  @media (min-width: 37.5rem) {
+    .emotion-0 {
+      grid-column-gap: 1rem;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(12, 1fr);
+    }
+  }
+}
+
+.emotion-2 {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    width: calc(50% - 0.5rem);
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-2 {
+    width: calc(50% - 0.5rem);
+  }
+}
+
+@supports (grid-template-columns: fit-content(200px)) {
+  .emotion-2 {
+    width: initial;
+    grid-column: 1/span 6;
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 79.9375rem) {
+    .emotion-2 {
+      grid-column: 1/span 3;
+    }
+  }
+}
+
+.emotion-4 {
+  position: relative;
+}
+
+.emotion-6 {
+  height: 0;
+  overflow: hidden;
+  position: relative;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+  background-color: #F2F2F2;
+  -webkit-background-position: center center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: 60px 17px;
+  background-size: 60px 17px;
+}
+
+@media (min-width: 25rem) {
+  .emotion-6 {
+    -webkit-background-size: 77px 22px;
+    background-size: 77px 22px;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-6 {
+    -webkit-background-size: 93px 27px;
+    background-size: 93px 27px;
+  }
+}
+
+.emotion-7 {
+  position: absolute;
+  bottom: 0;
+}
+
+.emotion-7>* {
+  height: 2rem;
+  padding: 0.5rem 0.25rem;
+}
+
+.emotion-9 {
+  color: #222222;
+  background-color: #FFFFFF;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  display: block;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-9 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-9 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+.emotion-13 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.emotion-15 {
+  padding: 0 0.25rem;
+}
+
+.emotion-17 {
+  display: inline-block;
+  vertical-align: top;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-17 {
+    width: 50%;
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-17 {
+    width: 50%;
+  }
+}
+
+@supports (grid-template-columns: fit-content(200px)) {
+  .emotion-17 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 1/span 6;
+  }
+
+  @media (min-width: 37.5rem) {
+    .emotion-17 {
+      grid-column: 4/span 3;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-17 {
+      grid-column: 7/span 6;
+    }
+  }
+}
+
+.emotion-19 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-19 {
+    font-size: 1.375rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-19 {
+    font-size: 1.75rem;
+    line-height: 2rem;
+  }
+}
+
+.emotion-21 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  display: inline-block;
+  overflow-wrap: anywhere;
+}
+
+.emotion-21:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.emotion-21:hover,
+.emotion-21:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-21:visited {
+  color: #6E6E73;
+}
+
+.emotion-23 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-25 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-25 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-25 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-25 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.emotion-27 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #545658;
+  display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-27 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-27 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1"
+    data-e2e="story-promo"
+  >
+    <div
+      class="emotion-2 emotion-3"
+      dir="ltr"
+    >
+      <div
+        class="emotion-4 emotion-5"
+      >
+        <div
+          class="emotion-6"
+          style="padding-bottom: 56.25%;"
+        >
+          <amp-img
+            alt="Image Alt text"
+            attribution="Image provider"
+            class="bbc-image"
+            fallback=""
+            height="1152"
+            layout="responsive"
+            sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
+            src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
+            srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg 660w"
+            width="2048"
+          />
+        </div>
+        <div
+          class="emotion-7 emotion-8"
+        >
+          <div
+            aria-hidden="true"
+            class="emotion-9 emotion-10"
+            data-e2e="media-indicator"
+            dir="ltr"
+          >
+            <div
+              class="emotion-11 emotion-12"
+            >
+              <svg
+                aria-hidden="true"
+                class="emotion-13 emotion-14"
+                focusable="false"
+                height="12px"
+                viewBox="0 0 13 12"
+                width="13px"
+              >
+                <path
+                  d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
+                />
+                <path
+                  d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
+                />
+              </svg>
+              <time
+                class="emotion-15 emotion-16"
+                datetime="PT3M12S"
+              >
+                3:12
+              </time>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="emotion-17 emotion-18"
+      dir="ltr"
+    >
+      <h3
+        class="emotion-19 emotion-20"
+      >
+        <a
+          aria-labelledby="promo-1"
+          class="focusIndicatorDisplayInlineBlock emotion-21 emotion-22"
+          href="https://www.bbc.co.uk"
+        >
+          <span
+            id="promo-1"
+            role="text"
+          >
+            <span
+              class="emotion-23"
+            >
+              Gee ntị, 
+            </span>
+            <span>
+              An audio item
+            </span>
+            <span
+              class="emotion-23"
+            >
+              , Duration 3,12
+            </span>
+          </span>
+        </a>
+      </h3>
+      <p
+        class="emotion-25 emotion-26"
+      >
+        Summary text
+      </p>
+      <time
+        class="emotion-27 emotion-28"
+        datetime="2019-05-02"
+      >
+        2 Mee 2019
+      </time>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`StoryPromo Container should render audio with no duration correctly for amp 1`] = `
+.emotion-0 {
+  position: relative;
+}
+
+@supports (grid-template-columns: fit-content(200px)) {
+  .emotion-0 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 0.5rem;
+  }
+
+  @media (min-width: 37.5rem) {
+    .emotion-0 {
+      grid-column-gap: 1rem;
+    }
+  }
+
+  @media (min-width: 63rem) {
+    .emotion-0 {
+      display: block;
+    }
+  }
+}
+
+.emotion-2 {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 33.33%;
+}
+
+@media (min-width: 63rem) {
+  .emotion-2 {
+    display: block;
+    width: 100%;
+  }
+}
+
+@supports (grid-template-columns: fit-content(200px)) {
+  .emotion-2 {
+    width: initial;
+    grid-column: 1/span 2;
+  }
+}
+
+.emotion-4 {
+  position: relative;
+}
+
+.emotion-6 {
+  height: 0;
+  overflow: hidden;
+  position: relative;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+  background-color: #F2F2F2;
+  -webkit-background-position: center center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: 60px 17px;
+  background-size: 60px 17px;
+}
+
+@media (min-width: 25rem) {
+  .emotion-6 {
+    -webkit-background-size: 77px 22px;
+    background-size: 77px 22px;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-6 {
+    -webkit-background-size: 93px 27px;
+    background-size: 93px 27px;
+  }
+}
+
+@media (min-width: 25rem) {
+  .emotion-7 {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.emotion-7>* {
+  height: 2rem;
+  padding: 0.5rem 0.25rem;
+}
+
+@media (max-width: 24.9375rem) {
+  .emotion-7>* {
+    height: 1.25rem;
+    padding: 0.25rem 0.25rem 0;
+  }
+}
+
+.emotion-9 {
+  color: #222222;
+  background-color: #FFFFFF;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  display: block;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-9 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-9 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+.emotion-13 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.emotion-15 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-15 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-15 {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+@supports (grid-template-columns: fit-content(200px)) {
+  .emotion-15 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3/span 4;
+  }
+
+  @media (min-width: 63rem) {
+    .emotion-15 {
+      padding-top: 0.5rem;
+    }
+  }
+}
+
+.emotion-17 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-17 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-17 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-19 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  display: inline-block;
+  overflow-wrap: anywhere;
+}
+
+.emotion-19:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.emotion-19:hover,
+.emotion-19:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-19:visited {
+  color: #6E6E73;
+}
+
+.emotion-21 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-22 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-22 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-22 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-22 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-22 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.emotion-24 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #545658;
+  display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-24 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-24 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1"
+    data-e2e="story-promo"
+  >
+    <div
+      class="emotion-2 emotion-3"
+      dir="ltr"
+    >
+      <div
+        class="emotion-4 emotion-5"
+      >
+        <div
+          class="emotion-6"
+          style="padding-bottom: 56.25%;"
+        >
+          <amp-img
+            alt="Image Alt text"
+            attribution="Image provider"
+            class="bbc-image"
+            fallback=""
+            height="1152"
+            layout="responsive"
+            sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
+            src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
+            srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg 660w"
+            width="2048"
+          />
+        </div>
+        <div
+          class="emotion-7 emotion-8"
+        >
+          <div
+            aria-hidden="true"
+            class="emotion-9 emotion-10"
+            data-e2e="media-indicator"
+            dir="ltr"
+          >
+            <div
+              class="emotion-11 emotion-12"
+            >
+              <svg
+                aria-hidden="true"
+                class="emotion-13 emotion-14"
+                focusable="false"
+                height="12px"
+                viewBox="0 0 13 12"
+                width="13px"
+              >
+                <path
+                  d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
+                />
+                <path
+                  d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="emotion-15 emotion-16"
+      dir="ltr"
+    >
+      <h3
+        class="emotion-17 emotion-18"
+      >
+        <a
+          aria-labelledby="promo-1"
+          class="focusIndicatorDisplayInlineBlock emotion-19 emotion-20"
+          href="https://www.bbc.co.uk"
+        >
+          <span
+            id="promo-1"
+            role="text"
+          >
+            <span
+              class="emotion-21"
+            >
+              Gee ntị, 
+            </span>
+            <span>
+              An audio item
+            </span>
+          </span>
+        </a>
+      </h3>
+      <p
+        class="emotion-22 emotion-23"
+      >
+        Summary text
+      </p>
+      <time
+        class="emotion-24 emotion-25"
+        datetime="2019-05-02"
+      >
+        2 Mee 2019
+      </time>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`StoryPromo Container should render audio with no duration correctly for canonical 1`] = `
+.emotion-0 {
+  position: relative;
+}
+
+@supports (grid-template-columns: fit-content(200px)) {
+  .emotion-0 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 0.5rem;
+  }
+
+  @media (min-width: 37.5rem) {
+    .emotion-0 {
+      grid-column-gap: 1rem;
+    }
+  }
+
+  @media (min-width: 63rem) {
+    .emotion-0 {
+      display: block;
+    }
+  }
+}
+
+.emotion-2 {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 33.33%;
+}
+
+@media (min-width: 63rem) {
+  .emotion-2 {
+    display: block;
+    width: 100%;
+  }
+}
+
+@supports (grid-template-columns: fit-content(200px)) {
+  .emotion-2 {
+    width: initial;
+    grid-column: 1/span 2;
+  }
+}
+
+.emotion-4 {
+  position: relative;
+}
+
+.emotion-6 {
+  height: 0;
+  overflow: hidden;
+  position: relative;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+  background-color: #F2F2F2;
+  -webkit-background-position: center center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: 60px 17px;
+  background-size: 60px 17px;
+}
+
+@media (min-width: 25rem) {
+  .emotion-6 {
+    -webkit-background-size: 77px 22px;
+    background-size: 77px 22px;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-6 {
+    -webkit-background-size: 93px 27px;
+    background-size: 93px 27px;
+  }
+}
+
+.emotion-7 {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@media (min-width: 25rem) {
+  .emotion-8 {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.emotion-8>* {
+  height: 2rem;
+  padding: 0.5rem 0.25rem;
+}
+
+@media (max-width: 24.9375rem) {
+  .emotion-8>* {
+    height: 1.25rem;
+    padding: 0.25rem 0.25rem 0;
+  }
+}
+
+.emotion-10 {
+  color: #222222;
+  background-color: #FFFFFF;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  display: block;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-10 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-10 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+.emotion-12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+.emotion-14 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.emotion-16 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-16 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-16 {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+@supports (grid-template-columns: fit-content(200px)) {
+  .emotion-16 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3/span 4;
+  }
+
+  @media (min-width: 63rem) {
+    .emotion-16 {
+      padding-top: 0.5rem;
+    }
+  }
+}
+
+.emotion-18 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-18 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-18 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-20 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  display: inline-block;
+  overflow-wrap: anywhere;
+}
+
+.emotion-20:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.emotion-20:hover,
+.emotion-20:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-20:visited {
+  color: #6E6E73;
+}
+
+.emotion-22 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-23 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-23 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-23 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-23 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-23 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.emotion-25 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #545658;
+  display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-25 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-25 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1"
+    data-e2e="story-promo"
+  >
+    <div
+      class="emotion-2 emotion-3"
+      dir="ltr"
+    >
+      <div
+        class="emotion-4 emotion-5"
+      >
+        <div
+          class="emotion-6"
+          style="padding-bottom: 56.25%;"
+        >
+          <picture>
+            <img
+              alt="Image Alt text"
+              class="emotion-7"
+              height="1152"
+              loading="lazy"
+              sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
+              src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
+              srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg 660w"
+              width="2048"
+            />
+          </picture>
+        </div>
+        <div
+          class="emotion-8 emotion-9"
+        >
+          <div
+            aria-hidden="true"
+            class="emotion-10 emotion-11"
+            data-e2e="media-indicator"
+            dir="ltr"
+          >
+            <div
+              class="emotion-12 emotion-13"
+            >
+              <svg
+                aria-hidden="true"
+                class="emotion-14 emotion-15"
+                focusable="false"
+                height="12px"
+                viewBox="0 0 13 12"
+                width="13px"
+              >
+                <path
+                  d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
+                />
+                <path
+                  d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="emotion-16 emotion-17"
+      dir="ltr"
+    >
+      <h3
+        class="emotion-18 emotion-19"
+      >
+        <a
+          aria-labelledby="promo-1"
+          class="focusIndicatorDisplayInlineBlock emotion-20 emotion-21"
+          href="https://www.bbc.co.uk"
+        >
+          <span
+            id="promo-1"
+            role="text"
+          >
+            <span
+              class="emotion-22"
+            >
+              Gee ntị, 
+            </span>
+            <span>
+              An audio item
+            </span>
+          </span>
+        </a>
+      </h3>
+      <p
+        class="emotion-23 emotion-24"
+      >
+        Summary text
+      </p>
+      <time
+        class="emotion-25 emotion-26"
+        datetime="2019-05-02"
+      >
+        2 Mee 2019
+      </time>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`StoryPromo Container should render audio with no duration promoType leading on amp 1`] = `
+.emotion-0 {
+  position: relative;
+}
+
+@supports (grid-template-columns: fit-content(200px)) {
+  .emotion-0 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 0.5rem;
+  }
+
+  @media (min-width: 37.5rem) {
+    .emotion-0 {
+      grid-column-gap: 1rem;
+    }
+  }
+}
+
+.emotion-2 {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    padding-right: 0.5rem;
+    width: 50%;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-2 {
+    width: 33.33%;
+  }
+}
+
+@supports (grid-template-columns: fit-content(200px)) {
+  .emotion-2 {
+    display: block;
+    width: initial;
+    padding: initial;
+    padding: 0;
+    width: 100%;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-end: span 6;
+  }
+
+  @media (min-width: 37.5rem) {
+    .emotion-2 {
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-end: span 3;
+    }
+  }
+
+  @media (min-width: 63rem) {
+    .emotion-2 {
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-end: span 2;
+    }
+  }
+}
+
+@media (max-width: 62.9375rem) {
+  .emotion-2>time {
+    padding-bottom: 0.5rem;
+  }
+}
+
+.emotion-4 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-4 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-4 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+.emotion-6 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  display: inline-block;
+  overflow-wrap: anywhere;
+}
+
+.emotion-6:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.emotion-6:hover,
+.emotion-6:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-6:visited {
+  color: #6E6E73;
+}
+
+.emotion-8 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-9 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-9 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-9 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-9 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-9 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.emotion-11 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #545658;
+  display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-11 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-11 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+.emotion-13 {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 100%;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-13 {
+    padding-right: 0.5rem;
+    width: 50%;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-13 {
+    width: 66.67%;
+  }
+}
+
+@supports (grid-template-columns: fit-content(200px)) {
+  .emotion-13 {
+    width: initial;
+    padding: 0;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-end: span 6;
+  }
+
+  @media (min-width: 37.5rem) {
+    .emotion-13 {
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-end: span 3;
+    }
+  }
+
+  @media (min-width: 63rem) {
+    .emotion-13 {
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-end: span 4;
+    }
+  }
+}
+
+.emotion-15 {
+  position: relative;
+}
+
+.emotion-17 {
+  height: 0;
+  overflow: hidden;
+  position: relative;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+  background-color: #F2F2F2;
+  -webkit-background-position: center center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: 60px 17px;
+  background-size: 60px 17px;
+}
+
+@media (min-width: 25rem) {
+  .emotion-17 {
+    -webkit-background-size: 77px 22px;
+    background-size: 77px 22px;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-17 {
+    -webkit-background-size: 93px 27px;
+    background-size: 93px 27px;
+  }
+}
+
+.emotion-18 {
+  position: absolute;
+  bottom: 0;
+}
+
+.emotion-18>* {
+  height: 2rem;
+  padding: 0.5rem 0.25rem;
+}
+
+.emotion-20 {
+  color: #222222;
+  background-color: #FFFFFF;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  display: block;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-20 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-20 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+.emotion-22 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+.emotion-24 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1"
+    data-e2e="story-promo"
+  >
+    <div
+      class="emotion-2 emotion-3"
+      dir="ltr"
+    >
+      <h3
+        class="emotion-4 emotion-5"
+      >
+        <a
+          aria-labelledby="promo-1"
+          class="focusIndicatorDisplayInlineBlock emotion-6 emotion-7"
+          href="https://www.bbc.co.uk"
+        >
+          <span
+            id="promo-1"
+            role="text"
+          >
+            <span
+              class="emotion-8"
+            >
+              Gee ntị, 
+            </span>
+            <span>
+              An audio item
+            </span>
+          </span>
+        </a>
+      </h3>
+      <p
+        class="emotion-9 emotion-10"
+      >
+        Summary text
+      </p>
+      <time
+        class="emotion-11 emotion-12"
+        datetime="2019-05-02"
+      >
+        2 Mee 2019
+      </time>
+    </div>
+    <div
+      class="emotion-13 emotion-14"
+      dir="ltr"
+    >
+      <div
+        class="emotion-15 emotion-16"
+      >
+        <div
+          class="emotion-17"
+          style="padding-bottom: 56.25%;"
+        >
+          <amp-img
+            alt="Image Alt text"
+            attribution="Image provider"
+            class="bbc-image"
+            fallback=""
+            height="1152"
+            layout="responsive"
+            sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
+            src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
+            srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg 660w"
+            width="2048"
+          />
+        </div>
+        <div
+          class="emotion-18 emotion-19"
+        >
+          <div
+            aria-hidden="true"
+            class="emotion-20 emotion-21"
+            data-e2e="media-indicator"
+            dir="ltr"
+          >
+            <div
+              class="emotion-22 emotion-23"
+            >
+              <svg
+                aria-hidden="true"
+                class="emotion-24 emotion-25"
                 focusable="false"
                 height="12px"
                 viewBox="0 0 13 12"
@@ -3260,7 +3260,7 @@ exports[`StoryPromo Container should render audio with no duration promoType top
   margin: 0;
 }
 
-.emotion-23 {
+.emotion-22 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -3272,27 +3272,27 @@ exports[`StoryPromo Container should render audio with no duration promoType top
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-23 {
+  .emotion-22 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-23 {
+  .emotion-22 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-23 {
+  .emotion-22 {
     display: none;
     visibility: hidden;
   }
 }
 
-.emotion-25 {
+.emotion-24 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #545658;
@@ -3303,14 +3303,14 @@ exports[`StoryPromo Container should render audio with no duration promoType top
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-25 {
+  .emotion-24 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-25 {
+  .emotion-24 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -3394,7 +3394,7 @@ exports[`StoryPromo Container should render audio with no duration promoType top
             role="text"
           >
             <span
-              class="emotion-21 emotion-22"
+              class="emotion-21"
             >
               Gee ntị, 
             </span>
@@ -3405,12 +3405,12 @@ exports[`StoryPromo Container should render audio with no duration promoType top
         </a>
       </h3>
       <p
-        class="emotion-23 emotion-24"
+        class="emotion-22 emotion-23"
       >
         Summary text
       </p>
       <time
-        class="emotion-25 emotion-26"
+        class="emotion-24 emotion-25"
         datetime="2019-05-02"
       >
         2 Mee 2019
@@ -8193,18 +8193,18 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
   margin: 0;
 }
 
-.emotion-24 {
+.emotion-23 {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
-.emotion-26 {
+.emotion-25 {
   border-top: 1px solid #F2F2F2;
   padding: 0.5rem 0;
 }
 
-.emotion-28 {
+.emotion-27 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -8217,34 +8217,34 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-28 {
+  .emotion-27 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-28 {
+  .emotion-27 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-28:hover,
-.emotion-28:focus {
+.emotion-27:hover,
+.emotion-27:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-28:visited {
+.emotion-27:visited {
   color: #6E6E73;
 }
 
-.emotion-28 svg {
+.emotion-27 svg {
   margin: 0;
 }
 
-.emotion-30 {
+.emotion-29 {
   color: #222222;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -8258,20 +8258,20 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-30 {
+  .emotion-29 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-30 {
+  .emotion-29 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
-.emotion-32 {
+.emotion-31 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8283,7 +8283,7 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
   height: 100%;
 }
 
-.emotion-34 {
+.emotion-33 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -8361,35 +8361,35 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
         data-e2e="index-alsos"
       >
         <h4
-          class="emotion-22 emotion-23"
+          class="emotion-22"
         >
           Ihe ndị ọzọ n'akụkọ a
         </h4>
         <ul
-          class="emotion-24 emotion-25"
+          class="emotion-23 emotion-24"
           role="list"
         >
           <li
-            class="emotion-26 emotion-27"
+            class="emotion-25 emotion-26"
             role="listitem"
           >
             <a
               aria-labelledby="IndexAlsosLink-hausalabarai48916590"
-              class="focusIndicatorDisplayInlineBlock emotion-28 emotion-29"
+              class="focusIndicatorDisplayInlineBlock emotion-27 emotion-28"
               href="/hausa/labarai-48916590"
             >
               <div
                 aria-hidden="true"
-                class="emotion-30 emotion-31"
+                class="emotion-29 emotion-30"
                 data-e2e="media-indicator"
                 dir="ltr"
               >
                 <div
-                  class="emotion-32 emotion-33"
+                  class="emotion-31 emotion-32"
                 >
                   <svg
                     aria-hidden="true"
-                    class="emotion-34 emotion-35"
+                    class="emotion-33 emotion-34"
                     focusable="false"
                     height="12"
                     viewBox="0 0 12 12"
@@ -8416,7 +8416,7 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
                 role="text"
               >
                 <span
-                  class="emotion-22 emotion-23"
+                  class="emotion-22"
                 >
                   Vidio, 
                 </span>
@@ -8427,11 +8427,11 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
             </a>
           </li>
           <li
-            class="emotion-26 emotion-27"
+            class="emotion-25 emotion-26"
             role="listitem"
           >
             <a
-              class="focusIndicatorDisplayInlineBlock emotion-28 emotion-29"
+              class="focusIndicatorDisplayInlineBlock emotion-27 emotion-28"
               href="/hausa/labarai-42837051"
             >
               <span>
@@ -8440,11 +8440,11 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
             </a>
           </li>
           <li
-            class="emotion-26 emotion-27"
+            class="emotion-25 emotion-26"
             role="listitem"
           >
             <a
-              class="focusIndicatorDisplayInlineBlock emotion-28 emotion-29"
+              class="focusIndicatorDisplayInlineBlock emotion-27 emotion-28"
               href="https://www.bbc.com/persian"
             >
               <span>
@@ -13787,7 +13787,7 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
   margin: 0;
 }
 
-.emotion-27 {
+.emotion-25 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -13799,34 +13799,34 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-27 {
+  .emotion-25 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-27 {
+  .emotion-25 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-27 {
+  .emotion-25 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-27 {
+  .emotion-25 {
     display: none;
     visibility: hidden;
   }
 }
 
-.emotion-29 {
+.emotion-27 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #545658;
@@ -13837,14 +13837,14 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-29 {
+  .emotion-27 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-29 {
+  .emotion-27 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -13941,7 +13941,7 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
             role="text"
           >
             <span
-              class="emotion-23 emotion-24"
+              class="emotion-23"
             >
               Vidio, 
             </span>
@@ -13949,7 +13949,7 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
               A video item
             </span>
             <span
-              class="emotion-23 emotion-24"
+              class="emotion-23"
             >
               , Duration 1,33,20
             </span>
@@ -13957,12 +13957,12 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
         </a>
       </h3>
       <p
-        class="emotion-27 emotion-28"
+        class="emotion-25 emotion-26"
       >
         Summary text
       </p>
       <time
-        class="emotion-29 emotion-30"
+        class="emotion-27 emotion-28"
         datetime="2019-05-02"
       >
         2 Mee 2019
@@ -14228,7 +14228,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
   margin: 0;
 }
 
-.emotion-28 {
+.emotion-26 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -14240,34 +14240,34 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-28 {
+  .emotion-26 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-28 {
+  .emotion-26 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-28 {
+  .emotion-26 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-28 {
+  .emotion-26 {
     display: none;
     visibility: hidden;
   }
 }
 
-.emotion-30 {
+.emotion-28 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #545658;
@@ -14278,14 +14278,14 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-30 {
+  .emotion-28 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-30 {
+  .emotion-28 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -14382,7 +14382,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
             role="text"
           >
             <span
-              class="emotion-24 emotion-25"
+              class="emotion-24"
             >
               Vidio, 
             </span>
@@ -14390,7 +14390,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
               A video item
             </span>
             <span
-              class="emotion-24 emotion-25"
+              class="emotion-24"
             >
               , Duration 1,33,20
             </span>
@@ -14398,12 +14398,12 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
         </a>
       </h3>
       <p
-        class="emotion-28 emotion-29"
+        class="emotion-26 emotion-27"
       >
         Summary text
       </p>
       <time
-        class="emotion-30 emotion-31"
+        class="emotion-28 emotion-29"
         datetime="2019-05-02"
       >
         2 Mee 2019
@@ -14551,7 +14551,7 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
   margin: 0;
 }
 
-.emotion-12 {
+.emotion-10 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -14563,34 +14563,34 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-12 {
+  .emotion-10 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-12 {
+  .emotion-10 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-12 {
+  .emotion-10 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-12 {
+  .emotion-10 {
     display: none;
     visibility: hidden;
   }
 }
 
-.emotion-14 {
+.emotion-12 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #545658;
@@ -14601,20 +14601,20 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-14 {
+  .emotion-12 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-14 {
+  .emotion-12 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-16 {
+.emotion-14 {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -14622,20 +14622,20 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-16 {
+  .emotion-14 {
     padding-right: 0.5rem;
     width: 50%;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-16 {
+  .emotion-14 {
     width: 66.67%;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-16 {
+  .emotion-14 {
     width: initial;
     padding: 0;
     grid-template-columns: repeat(6, 1fr);
@@ -14643,25 +14643,25 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-16 {
+    .emotion-14 {
       grid-template-columns: repeat(3, 1fr);
       grid-column-end: span 3;
     }
   }
 
   @media (min-width: 63rem) {
-    .emotion-16 {
+    .emotion-14 {
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
     }
   }
 }
 
-.emotion-18 {
+.emotion-16 {
   position: relative;
 }
 
-.emotion-20 {
+.emotion-18 {
   height: 0;
   overflow: hidden;
   position: relative;
@@ -14675,30 +14675,30 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
 }
 
 @media (min-width: 25rem) {
-  .emotion-20 {
+  .emotion-18 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-20 {
+  .emotion-18 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-.emotion-21 {
+.emotion-19 {
   position: absolute;
   bottom: 0;
 }
 
-.emotion-21>* {
+.emotion-19>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
-.emotion-23 {
+.emotion-21 {
   color: #222222;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -14710,20 +14710,20 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-23 {
+  .emotion-21 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-23 {
+  .emotion-21 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
-.emotion-25 {
+.emotion-23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -14735,7 +14735,7 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
   height: 100%;
 }
 
-.emotion-27 {
+.emotion-25 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -14744,7 +14744,7 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
   height: 0.75rem;
 }
 
-.emotion-29 {
+.emotion-27 {
   padding: 0 0.25rem;
 }
 
@@ -14770,7 +14770,7 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
             role="text"
           >
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-8"
             >
               Vidio, 
             </span>
@@ -14778,7 +14778,7 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
               A video item
             </span>
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-8"
             >
               , Duration 1,33,20
             </span>
@@ -14786,26 +14786,26 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
         </a>
       </h3>
       <p
-        class="emotion-12 emotion-13"
+        class="emotion-10 emotion-11"
       >
         Summary text
       </p>
       <time
-        class="emotion-14 emotion-15"
+        class="emotion-12 emotion-13"
         datetime="2019-05-02"
       >
         2 Mee 2019
       </time>
     </div>
     <div
-      class="emotion-16 emotion-17"
+      class="emotion-14 emotion-15"
       dir="ltr"
     >
       <div
-        class="emotion-18 emotion-19"
+        class="emotion-16 emotion-17"
       >
         <div
-          class="emotion-20"
+          class="emotion-18"
           style="padding-bottom: 56.25%;"
         >
           <amp-img
@@ -14822,20 +14822,20 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
           />
         </div>
         <div
-          class="emotion-21 emotion-22"
+          class="emotion-19 emotion-20"
         >
           <div
             aria-hidden="true"
-            class="emotion-23 emotion-24"
+            class="emotion-21 emotion-22"
             data-e2e="media-indicator"
             dir="ltr"
           >
             <div
-              class="emotion-25 emotion-26"
+              class="emotion-23 emotion-24"
             >
               <svg
                 aria-hidden="true"
-                class="emotion-27 emotion-28"
+                class="emotion-25 emotion-26"
                 focusable="false"
                 height="12"
                 viewBox="0 0 12 12"
@@ -14856,7 +14856,7 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
                 </g>
               </svg>
               <time
-                class="emotion-29 emotion-30"
+                class="emotion-27 emotion-28"
                 datetime="PT1H33M20S"
               >
                 1:33:20
@@ -15127,7 +15127,7 @@ exports[`StoryPromo Container should render video promoType top on amp 1`] = `
   margin: 0;
 }
 
-.emotion-27 {
+.emotion-25 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -15139,27 +15139,27 @@ exports[`StoryPromo Container should render video promoType top on amp 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-27 {
+  .emotion-25 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-27 {
+  .emotion-25 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-27 {
+  .emotion-25 {
     display: none;
     visibility: hidden;
   }
 }
 
-.emotion-29 {
+.emotion-27 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #545658;
@@ -15170,14 +15170,14 @@ exports[`StoryPromo Container should render video promoType top on amp 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-29 {
+  .emotion-27 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-29 {
+  .emotion-27 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -15274,7 +15274,7 @@ exports[`StoryPromo Container should render video promoType top on amp 1`] = `
             role="text"
           >
             <span
-              class="emotion-23 emotion-24"
+              class="emotion-23"
             >
               Vidio, 
             </span>
@@ -15282,7 +15282,7 @@ exports[`StoryPromo Container should render video promoType top on amp 1`] = `
               A video item
             </span>
             <span
-              class="emotion-23 emotion-24"
+              class="emotion-23"
             >
               , Duration 1,33,20
             </span>
@@ -15290,12 +15290,12 @@ exports[`StoryPromo Container should render video promoType top on amp 1`] = `
         </a>
       </h3>
       <p
-        class="emotion-27 emotion-28"
+        class="emotion-25 emotion-26"
       >
         Summary text
       </p>
       <time
-        class="emotion-29 emotion-30"
+        class="emotion-27 emotion-28"
         datetime="2019-05-02"
       >
         2 Mee 2019

@@ -109,7 +109,7 @@ exports[`Brand should render correctly with link not provided 1`] = `
         </g>
       </svg>
       <span
-        class="emotion-6 emotion-7"
+        class="emotion-6"
         id="BrandLink-null"
         role="text"
       >
@@ -275,7 +275,7 @@ exports[`Brand should render correctly with link provided 1`] = `
           </g>
         </svg>
         <span
-          class="emotion-8 emotion-9"
+          class="emotion-8"
           id="BrandLink-null"
           role="text"
         >
@@ -403,7 +403,7 @@ exports[`Brand should render correctly with no service Localised Name 1`] = `
         </g>
       </svg>
       <span
-        class="emotion-6 emotion-7"
+        class="emotion-6"
         id="BrandLink-null"
       >
         BBC News
@@ -524,7 +524,7 @@ exports[`Brand should render correctly with transparent borders 1`] = `
         </g>
       </svg>
       <span
-        class="emotion-6 emotion-7"
+        class="emotion-6"
         id="BrandLink-null"
       >
         BBC News
