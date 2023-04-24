@@ -2,7 +2,12 @@
 /* eslint-disable no-template-curly-in-string */
 /* eslint-disable prefer-template */
 
-const ampAnalyticsJson = ({ baseUrl, pageviewParams }) => ({
+import { AMPATIAnalyticsProps } from '../types';
+
+const ampAnalyticsJson = ({
+  baseUrl,
+  pageviewParams,
+}: AMPATIAnalyticsProps) => ({
   transport: {
     beacon: false,
     xhrpost: false,

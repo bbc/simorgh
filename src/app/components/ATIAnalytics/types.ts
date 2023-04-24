@@ -4,6 +4,10 @@ export interface ATIAnalyticsProps {
   pageviewParams: string;
 }
 
+export interface AMPATIAnalyticsProps extends ATIAnalyticsProps {
+  baseUrl?: string;
+}
+
 export interface ATIEventTrackingProps {
   campaignID?: string;
   componentName: string;

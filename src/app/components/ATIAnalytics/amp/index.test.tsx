@@ -4,9 +4,8 @@ import { act } from 'react-dom/test-utils';
 import AmpATIAnalytics from '.';
 
 describe('Amp ATI Analytics', () => {
-  let container;
-
   const atiBaseUrl = 'https://foobar.com?';
+  let container: HTMLElement;
 
   beforeEach(() => {
     jest.resetModules();
@@ -32,7 +31,7 @@ describe('Amp ATI Analytics', () => {
     ).toEqual(1);
     expect(
       container.querySelector('amp-analytics script[type="application/json"]')
-        .innerHTML,
+        ?.innerHTML,
     ).toMatch(atiBaseUrl);
   });
 });

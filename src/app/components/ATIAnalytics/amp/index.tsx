@@ -1,8 +1,8 @@
 import React from 'react';
-import { string } from 'prop-types';
 import getAmpAnalyticsJson from './ampAnalyticsJson';
+import { ATIAnalyticsProps } from '../types';
 
-const JsonInlinedScript = data => (
+const JsonInlinedScript = (data: unknown) => (
   <script
     type="application/json"
     /* eslint-disable-next-line react/no-danger */
@@ -10,8 +10,9 @@ const JsonInlinedScript = data => (
   />
 );
 
-const AmpATIAnalytics = ({ pageviewParams }) => {
+const AmpATIAnalytics = ({ pageviewParams }: ATIAnalyticsProps) => {
   return (
+    // @ts-expect-error amp attributes not yet supported in TS
     <amp-analytics>
       {JsonInlinedScript(
         getAmpAnalyticsJson({
@@ -19,12 +20,9 @@ const AmpATIAnalytics = ({ pageviewParams }) => {
           pageviewParams,
         }),
       )}
+      {/* @ts-expect-error amp attributes not yet supported in TS */}
     </amp-analytics>
   );
-};
-
-AmpATIAnalytics.propTypes = {
-  pageviewParams: string.isRequired,
 };
 
 export default AmpATIAnalytics;
