@@ -986,17 +986,18 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   text-decoration: underline;
 }
 
-.emotion-189 {
+.emotion-190 {
   color: #FFFFFF;
   margin: 0;
   padding: 1rem 0;
 }
 
-.emotion-189 a {
+
+.emotion-190 a {
   padding: 0;
 }
 
-.emotion-191 {
+.emotion-192 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -1007,8 +1008,8 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   text-decoration: none;
 }
 
-.emotion-191:hover,
-.emotion-191:focus {
+.emotion-192:hover,
+.emotion-192:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
@@ -1656,6 +1657,10 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
           </ul>
           <p
             class="emotion-189 emotion-190"
+            />
+          </ul>
+          <p
+            class="emotion-190 emotion-191"
           >
             <span
               lang="en-GB"
@@ -1666,7 +1671,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
             2023 BBC. The BBC is not responsible for the content of external sites.
              
             <a
-              class="focusIndicatorInvert emotion-191 emotion-160"
+              class="focusIndicatorInvert emotion-192 emotion-163"
               href="https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links"
             >
               Read about our approach to external linking.

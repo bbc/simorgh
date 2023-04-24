@@ -40,7 +40,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 .emotion-2 {
   font-size: 1.25rem;
   line-height: 1.75rem;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #6E6E73;
@@ -165,7 +165,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 .emotion-14 {
   font-size: 1.25rem;
   line-height: 1.75rem;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
   background-color: #FDFDFD;
@@ -367,7 +367,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 1.25rem;
@@ -423,7 +423,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 .emotion-34 {
   font-size: 0.9375rem;
   line-height: 1.375rem;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #3F3F42;
@@ -457,7 +457,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   line-height: 1.25rem;
   color: #545658;
   display: block;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -705,7 +705,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 .emotion-66 {
   color: #222222;
   background-color: #FFFFFF;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.75rem;
@@ -1011,7 +1011,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 0.9375rem;
@@ -1035,7 +1035,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 .emotion-115 {
   font-size: 0.9375rem;
   line-height: 1.375rem;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #3F3F42;
@@ -1160,7 +1160,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 .emotion-230 {
   font-size: 1.25rem;
   line-height: 1.75rem;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
   background-color: #F2F2F2;
@@ -1499,7 +1499,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   color: #5A5A5A;
   font-size: 0.75rem;
   line-height: 1.125rem;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -1548,8 +1548,8 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   flex-grow: 1;
 }
 
-.emotion-256 {
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+.emotion-266 {
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 0.9375rem;
@@ -1572,8 +1572,8 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   }
 }
 
-.emotion-259 {
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+.emotion-270 {
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 0.9375rem;
@@ -1602,7 +1602,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   padding: 0.5rem 0 0 0;
   display: inline-block;
   width: 100%;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.9375rem;
@@ -1623,8 +1623,8 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   }
 }
 
-.emotion-265 {
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+.emotion-278 {
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.875rem;
@@ -1649,8 +1649,8 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   }
 }
 
-.emotion-267 {
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+.emotion-280 {
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.75rem;
@@ -1709,8 +1709,8 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   padding-right: 0.5rem;
 }
 
-.emotion-294 {
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+.emotion-307 {
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 0.9375rem;
@@ -1779,7 +1779,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   padding: 0.5rem 0 0 0;
   display: inline-block;
   width: 100%;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.9375rem;
@@ -1800,8 +1800,8 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   }
 }
 
-.emotion-305 {
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+.emotion-321 {
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.75rem;
@@ -2110,8 +2110,8 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   }
 }
 
-.emotion-542 {
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+.emotion-564 {
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 2rem;
@@ -2151,7 +2151,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 .emotion-546 {
   font-size: 0.9375rem;
   line-height: 1.5rem;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
   position: static;

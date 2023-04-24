@@ -380,7 +380,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 .emotion-12 {
   font-size: 1.5rem;
   line-height: 2rem;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
   color: #141414;
@@ -471,7 +471,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
   margin: 0;
   font-size: 1.25rem;
   line-height: 1.75rem;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -514,7 +514,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 .emotion-19 {
   font-size: 0.9375rem;
   line-height: 1.5rem;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #141414;
@@ -1310,7 +1310,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 .emotion-12 {
   font-size: 1.5rem;
   line-height: 2rem;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
   color: #141414;
@@ -1401,7 +1401,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   margin: 0;
   font-size: 1.25rem;
   line-height: 1.75rem;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -1444,7 +1444,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 .emotion-19 {
   font-size: 0.9375rem;
   line-height: 1.5rem;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #141414;

@@ -192,7 +192,7 @@ exports[`TopicTags should correctly render a single topic tag for persian 1`] = 
 }
 
 .emotion-2 {
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.875rem;
@@ -280,7 +280,7 @@ exports[`TopicTags should correctly render multiple topic tags for arabic 1`] = 
 }
 
 .emotion-2 {
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.875rem;

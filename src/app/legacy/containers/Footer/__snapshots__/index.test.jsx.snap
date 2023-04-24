@@ -312,17 +312,17 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
   text-decoration: underline;
 }
 
-.emotion-50 {
+.emotion-49 {
   color: #FFFFFF;
   margin: 0;
   padding: 1rem 0;
 }
 
-.emotion-50 a {
+.emotion-49 a {
   padding: 0;
 }
 
-.emotion-52 {
+.emotion-51 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -333,8 +333,8 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
   text-decoration: none;
 }
 
-.emotion-52:hover,
-.emotion-52:focus {
+.emotion-51:hover,
+.emotion-51:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
@@ -485,6 +485,10 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
         </ul>
         <p
           class="emotion-50 emotion-51"
+          />
+        </ul>
+        <p
+          class="emotion-49 emotion-50"
         >
           <span
             lang="en-GB"
@@ -495,7 +499,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
           3000 BBC. The BBC is not responsible for the content of external sites.
            
           <a
-            class="focusIndicatorInvert emotion-52 emotion-21"
+            class="focusIndicatorInvert emotion-51 emotion-22"
             href="https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links"
           >
             Read about our approach to external linking.

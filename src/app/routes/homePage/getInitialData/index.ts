@@ -48,15 +48,18 @@ export default async ({
       ...(!isLocal && { agent, optHeaders }),
     });
 
-    const { data } = json;
+    const {
+      data: { title, description, curations },
+    } = json;
 
     return {
       status,
       pageData: {
         id,
-        title: data.title,
+        title,
         pageType,
-        curations: data.curations,
+        curations,
+        description,
       },
     };
   } catch ({ message, status }) {
