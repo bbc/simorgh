@@ -52,7 +52,13 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: ./scripts/installNodeModules.sh
 
-      - name: Build Simorgh
+      - name: Build Simorgh - Express App
+        run: |
+          echo ${GITHUB_REF##*/}
+          yarn build
+
+      - name: Build Simorgh - Next.JS App
+        working-directory: ./ws-nextjs-app
         run: |
           echo ${GITHUB_REF##*/}
           yarn build
