@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { string } from 'prop-types';
-import sendBeacon from '#lib/analyticsUtils/sendBeacon';
+import sendBeacon from '../../../lib/analyticsUtils/sendBeacon';
+import { ATIAnalyticsProps } from '../types';
 
-const getNoJsATIPageViewUrl = atiPageViewUrl =>
+const getNoJsATIPageViewUrl = (atiPageViewUrl: string) =>
   atiPageViewUrl.includes('x8=[simorgh]')
     ? atiPageViewUrl.replace('x8=[simorgh]', 'x8=[simorgh-nojs]')
     : `${atiPageViewUrl}&x8=[simorgh-nojs]`;
 
-const renderNoScriptTrackingPixel = atiPageViewUrl => (
+const renderNoScriptTrackingPixel = (atiPageViewUrl: string) => (
   <noscript>
     <img
       height="1px"
@@ -22,7 +22,7 @@ const renderNoScriptTrackingPixel = atiPageViewUrl => (
   </noscript>
 );
 
-const CanonicalATIAnalytics = ({ pageviewParams }) => {
+const CanonicalATIAnalytics = ({ pageviewParams }: ATIAnalyticsProps) => {
   const [atiPageViewUrl] = useState(
     process.env.SIMORGH_ATI_BASE_URL + pageviewParams,
   );
@@ -32,10 +32,6 @@ const CanonicalATIAnalytics = ({ pageviewParams }) => {
   }, [atiPageViewUrl]);
 
   return renderNoScriptTrackingPixel(atiPageViewUrl);
-};
-
-CanonicalATIAnalytics.propTypes = {
-  pageviewParams: string.isRequired,
 };
 
 export default CanonicalATIAnalytics;

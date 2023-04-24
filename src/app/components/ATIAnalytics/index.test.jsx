@@ -26,7 +26,7 @@ import {
   setWindowValue,
   resetWindowValue,
 } from '#psammead/psammead-test-helpers/src';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ATIAnalytics from '.';
 import * as amp from './amp';
 import * as canonical from './canonical';

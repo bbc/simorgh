@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import React from 'react';
 import { render, act } from '@testing-library/react';
-import * as beacon from '#lib/analyticsUtils/sendBeacon';
+import * as beacon from '../../../lib/analyticsUtils/sendBeacon';
 import CanonicalATIAnalytics from '.';
 
 describe('Canonical ATI Analytics', () => {
@@ -16,6 +17,7 @@ describe('Canonical ATI Analytics', () => {
     const expectedUrl = `${atiBaseUrl}${mockPageviewParams}`;
 
     process.env.SIMORGH_ATI_BASE_URL = atiBaseUrl;
+    // @ts-ignore
     beacon.default = mockSendBeacon;
 
     act(() => {
