@@ -32,7 +32,7 @@ const LatestMediaItem = ({
         <div css={styles.imageWrapper}>
           <Promo.Image
             src={src}
-            altText={item.imageAlt ?? 'media image'}
+            altText={item.imageAlt ?? 'Media image placeholder'}
             width={50}
             height={50}
           />
