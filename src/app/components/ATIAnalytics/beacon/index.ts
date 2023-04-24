@@ -1,5 +1,6 @@
-import sendBeacon from '#lib/analyticsUtils/sendBeacon';
+import sendBeacon from '../../../lib/analyticsUtils/sendBeacon';
 import { buildATIEventTrackUrl } from '../atiUrl';
+import { ATITrackEventProps } from '../types';
 
 export const sendEventBeacon = async ({
   campaignID,
@@ -13,7 +14,7 @@ export const sendEventBeacon = async ({
   type,
   advertiserID,
   url,
-}) => {
+}: ATITrackEventProps) => {
   await sendBeacon(
     buildATIEventTrackUrl({
       campaignID,

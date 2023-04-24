@@ -1,35 +1,31 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import * as sendBeacon from '#lib/analyticsUtils/sendBeacon';
-import * as analyticsUtils from '#lib/analyticsUtils';
+import * as analyticsUtils from '../../../lib/analyticsUtils';
 import { sendEventBeacon } from '.';
 
 const sendBeaconSpy = jest.spyOn(sendBeacon, 'default');
+
+// @ts-ignore
 analyticsUtils.getAtUserId = jest.fn().mockReturnValue('123-456-789');
+// @ts-ignore
 analyticsUtils.getCurrentTime = jest.fn().mockReturnValue('00-00-00');
 
 describe('beacon', () => {
+  const originalATIBaseUrl = process.env.SIMORGH_ATI_BASE_URL;
   const atiBaseUrl = 'https://foobar.com?';
   process.env.SIMORGH_ATI_BASE_URL = atiBaseUrl;
 
-  const componentInfo = {
-    actionLabel: 'creation-label',
-    result: 'https://bbc.com',
-    positioning: {
-      parent: 'container-component',
-      child: 'child',
-    },
-  };
-
   afterEach(() => {
     jest.clearAllMocks();
+    process.env.SIMORGH_ATI_BASE_URL = originalATIBaseUrl;
   });
 
   describe('event', () => {
     it('should call sendBeacon exactly once', () => {
       sendEventBeacon({
         type: 'click',
-        service: 'service',
+        service: 'news',
         componentName: 'component',
-        componentInfo,
         pageIdentifier: 'pageIdentifier',
       });
       expect(sendBeaconSpy).toHaveBeenCalledTimes(1);
