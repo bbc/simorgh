@@ -7,7 +7,7 @@ import Image from '../Image';
 import styles from './index.styles';
 import { LeftChevron, RightChevron } from '../icons';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import CtaLink from '../CtaLink';
+import CallToActionLink from '../CallToActionLink';
 
 interface MessageBannerProps {
   heading: string;
@@ -46,9 +46,9 @@ const MessageBanner = ({
           </Paragraph>
         </div>
         <div css={styles.flex}>
-          <CtaLink
+          <CallToActionLink
             href={link}
-            css={styles.ctaLink}
+            css={styles.callToActionLink}
             className="focusIndicatorInvert"
           >
             {linkText}
@@ -57,7 +57,7 @@ const MessageBanner = ({
             ) : (
               <RightChevron css={styles.chevron} />
             )}
-          </CtaLink>
+          </CallToActionLink>
           {image && (
             <div css={isRtl ? styles.imageRtl : styles.imageLtr}>
               <Image

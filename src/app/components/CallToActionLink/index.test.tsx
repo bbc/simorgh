@@ -1,11 +1,13 @@
 import React from 'react';
 import { render, screen } from '../react-testing-library-with-providers';
-import CtaLink from '.';
+import CallToActionLink from '.';
 
-describe('CTA Link', () => {
+describe('Call To Action Link', () => {
   it('should render children as link text', () => {
     render(
-      <CtaLink href="https://www.bbc.com/send/u94753086">My Link Text</CtaLink>,
+      <CallToActionLink href="https://www.bbc.com/send/u94753086">
+        My Link Text
+      </CallToActionLink>,
     );
     const link = screen.getByText('My Link Text');
     expect(link).toBeInTheDocument();
@@ -13,10 +15,12 @@ describe('CTA Link', () => {
 
   it('should render a link with the correct href', () => {
     render(
-      <CtaLink href="https://www.bbc.com/send/u94753086">My Link Text</CtaLink>,
+      <CallToActionLink href="https://www.bbc.com/send/u94753086">
+        My Link Text
+      </CallToActionLink>,
     );
-    const ctaLink = screen.getByRole('link');
-    expect(ctaLink.getAttribute('href')).toEqual(
+    const link = screen.getByRole('link');
+    expect(link.getAttribute('href')).toEqual(
       'https://www.bbc.com/send/u94753086',
     );
   });

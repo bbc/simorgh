@@ -9,10 +9,11 @@ import Paragraph from '../Paragraph';
 import Text from '../Text';
 import styles from './index.styles';
 import { LeftChevron, RightChevron } from '../icons';
-import CtaLink from '../CtaLink';
+import CallToActionLink from '../CallToActionLink';
+import idSanitiser from '../../lib/utilities/idSanitiser';
 
 interface UploaderProps {
-  blocks: object[] | undefined;
+  blocks?: object[];
 }
 
 type UploaderBlock = {
@@ -89,7 +90,7 @@ const Uploader = ({ blocks }: UploaderProps) => {
     linkBlock,
   );
 
-  const id = `${title.replaceAll(' ', '-')}`;
+  const id = idSanitiser(title);
 
   return (
     <section role="region" aria-labelledby={id} css={styles.container}>
@@ -99,14 +100,14 @@ const Uploader = ({ blocks }: UploaderProps) => {
         </Text>
         <Paragraph css={styles.text}>{text}</Paragraph>
         <div css={styles.linkContainer}>
-          <CtaLink href={linkAddress} css={styles.ctaLink}>
+          <CallToActionLink href={linkAddress} css={styles.callToActionLink}>
             {linkText}
             {isRtl ? (
               <LeftChevron css={styles.chevron} />
             ) : (
               <RightChevron css={styles.chevron} />
             )}
-          </CtaLink>
+          </CallToActionLink>
         </div>
       </div>
     </section>

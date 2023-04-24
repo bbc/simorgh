@@ -64,7 +64,7 @@ const styles = {
       },
       img: { objectPosition: 'top' },
     }),
-  ctaLink: ({ mq, palette }: Theme) =>
+  callToActionLink: ({ mq, palette }: Theme) =>
     css({
       padding: '1rem',
       backgroundColor: palette.WHITE,

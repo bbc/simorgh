@@ -29,7 +29,7 @@ const styles = {
       display: 'flex',
       justifyContent: 'start',
     }),
-  ctaLink: ({ spacings, palette }: Theme) =>
+  callToActionLink: ({ spacings, palette }: Theme) =>
     css({
       padding: `${pixelsToRem(12)}rem ${spacings.DOUBLE}rem`,
       marginTop: `${spacings.DOUBLE}rem`,
@@ -40,11 +40,11 @@ const styles = {
         color: palette.WHITE,
       },
     }),
-  chevron: () =>
+  chevron: ({ spacings }: Theme) =>
     css({
       marginInlineStart: `${pixelsToRem(12)}rem`,
-      width: '1rem',
-      height: '1rem',
+      width: `${spacings.DOUBLE}rem`,
+      height: `${spacings.DOUBLE}rem`,
       fill: 'currentcolor',
       verticalAlign: 'middle',
     }),

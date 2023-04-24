@@ -1,15 +1,15 @@
 /** @jsx jsx */
+import { PropsWithChildren } from 'react';
 import { jsx } from '@emotion/react';
 import Text from '../Text';
 import styles from './index.styles';
+import { CallToActionLinkProps } from './types';
 
-interface CtaLinkProps {
-  href?: string;
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const CtaLink = ({ href, className, children }: CtaLinkProps) => {
+const CallToActionLink = ({
+  href,
+  className,
+  children,
+}: PropsWithChildren<CallToActionLinkProps>) => {
   return (
     <a href={href} className={className} css={styles.linkBackground}>
       <div css={styles.linkTextWrapper}>
@@ -21,4 +21,4 @@ const CtaLink = ({ href, className, children }: CtaLinkProps) => {
   );
 };
 
-export default CtaLink;
+export default CallToActionLink;
