@@ -831,7 +831,7 @@ exports[`should show the expired content message if episode is expired 1`] = `
   height: 100%;
 }
 
-.emotion-11 {
+.emotion-10 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -1416,7 +1416,7 @@ exports[`should show the future content message if episode is not yet available 
   height: 100%;
 }
 
-.emotion-11 {
+.emotion-10 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -2001,7 +2001,7 @@ exports[`should show the future content message if episode is pending 1`] = `
   height: 100%;
 }
 
-.emotion-11 {
+.emotion-10 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;

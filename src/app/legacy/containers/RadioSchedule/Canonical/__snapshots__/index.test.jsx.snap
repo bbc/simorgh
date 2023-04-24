@@ -561,7 +561,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
   margin: 0;
 }
 
-.emotion-41 {
+.emotion-40 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -612,7 +612,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
   }
 }
 
-.emotion-49 {
+.emotion-46 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -638,7 +638,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
   }
 }
 
-.emotion-51 {
+.emotion-48 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -698,7 +698,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
   padding-right: 0.5rem;
 }
 
-.emotion-78 {
+.emotion-75 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -789,7 +789,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
   }
 }
 
-.emotion-92 {
+.emotion-86 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -2003,7 +2003,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
   margin: 0;
 }
 
-.emotion-41 {
+.emotion-40 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -2054,7 +2054,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
   }
 }
 
-.emotion-49 {
+.emotion-46 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -2080,7 +2080,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
   }
 }
 
-.emotion-51 {
+.emotion-48 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -2140,7 +2140,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
   padding-right: 0.5rem;
 }
 
-.emotion-78 {
+.emotion-75 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -2231,7 +2231,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
   }
 }
 
-.emotion-92 {
+.emotion-86 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;

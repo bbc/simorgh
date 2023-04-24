@@ -1674,8 +1674,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
   margin: 0;
 }
 
-
-.emotion-28 {
+.emotion-27 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -1710,7 +1709,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
   }
 }
 
-.emotion-36 {
+.emotion-33 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -1736,7 +1735,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
   }
 }
 
-.emotion-38 {
+.emotion-35 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -1796,8 +1795,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
   padding-right: 0.5rem;
 }
 
-
-.emotion-79 {
+.emotion-73 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -1830,7 +1828,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
   }
 }
 
-.emotion-147 {
+.emotion-138 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -1854,8 +1852,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
   }
 }
 
-
-.emotion-151 {
+.emotion-141 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -1906,7 +1903,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
   }
 }
 
-.emotion-161 {
+.emotion-149 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
