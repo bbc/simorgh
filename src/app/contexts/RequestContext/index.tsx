@@ -12,7 +12,7 @@ import getOriginContext from './getOriginContext';
 import getEnv from './getEnv';
 import getMetaUrls from './getMetaUrls';
 
-type RequestContextProps = {
+export type RequestContextProps = {
   ampLink: string;
   ampUkLink: string;
   ampNonUkLink: string;
