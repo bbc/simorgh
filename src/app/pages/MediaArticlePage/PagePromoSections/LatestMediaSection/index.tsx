@@ -46,7 +46,7 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
 
   const eventTrackingData = {
     block: {
-      componentName: 'latest-media',
+      componentName: 'latest',
     },
   };
   const eventTrackingDataSend = path<TrackingBlock>(
