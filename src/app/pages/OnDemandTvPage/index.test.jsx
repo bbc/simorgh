@@ -83,7 +83,7 @@ describe('OnDemand TV Brand Page ', () => {
     });
 
     const visuallyHiddenHeadline = document.querySelector(
-      'h1[class*="VisuallyHiddenText"]',
+      'h1[class*="visuallyHiddenText"]',
     );
 
     expect(visuallyHiddenHeadline).toBeInTheDocument();
