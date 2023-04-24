@@ -35,10 +35,8 @@ const styles = {
       marginTop: `${spacings.DOUBLE}rem`,
       backgroundColor: palette.GREY_10,
       width: 'auto',
+      color: palette.WHITE,
       '&:hover, &:focus': {
-        color: palette.WHITE,
-      },
-      '& span': {
         color: palette.WHITE,
       },
     }),

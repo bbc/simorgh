@@ -70,6 +70,7 @@ const styles = {
       backgroundColor: palette.WHITE,
       margin: '0 1rem 1rem 1rem',
       width: '100%',
+      color: palette.BLACK,
       '&:hover, &:focus': {
         backgroundColor: '#F6F6F6',
         color: palette.BLACK,
@@ -82,10 +83,6 @@ const styles = {
       },
       '& span': {
         paddingInlineStart: '0.5rem',
-        color: palette.BLACK,
-        '&:visited': {
-          color: palette.BLACK,
-        },
       },
     }),
   chevron: () =>

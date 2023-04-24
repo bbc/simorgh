@@ -18,6 +18,7 @@ const styles = {
   linkText: () =>
     css({
       verticalAlign: 'middle',
+      color: 'inherit',
     }),
 };
 
