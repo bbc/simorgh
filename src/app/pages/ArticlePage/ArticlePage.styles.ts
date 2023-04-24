@@ -40,7 +40,7 @@ export default {
     css({
       paddingBottom: `${spacings.TRIPLE}rem`,
     }),
-  mpuAd: ({ spacings }: Theme) =>
+  adContainer: ({ spacings }: Theme) =>
     css({
       marginBottom: `${spacings.TRIPLE}rem`,
     }),
