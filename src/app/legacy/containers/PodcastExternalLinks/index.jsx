@@ -4,7 +4,6 @@ import { arrayOf, shape, string } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
-import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
@@ -22,6 +21,7 @@ import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import idSanitiser from '#app/lib/utilities/idSanitiser';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import Link from './Link';
+import VisuallyHiddenText from '../../../components/VisuallyHiddenText';
 
 const EN_GB_LANG = 'en-GB';
 

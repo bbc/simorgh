@@ -381,7 +381,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   margin: 0;
 }
 
-.emotion-29 {
+.emotion-28 {
   position: absolute;
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -403,20 +403,20 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-29 {
+  .emotion-28 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-29 {
+  .emotion-28 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-29:focus {
+.emotion-28:focus {
   -webkit-clip-path: none;
   clip-path: none;
   clip: auto;
@@ -427,23 +427,23 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 }
 
 @media (min-width: 25rem) {
-  .emotion-29:focus {
+  .emotion-28:focus {
     top: 0.5rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-29 {
+  .emotion-28 {
     padding: 0.5rem;
   }
 }
 
-.emotion-31 {
+.emotion-30 {
   position: relative;
   background-color: #FFFFFF;
 }
 
-.emotion-31::after {
+.emotion-30::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -452,11 +452,11 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   border-bottom: 0.0625rem solid #E6E8EA;
 }
 
-.emotion-31 .emotion-48::after {
+.emotion-30 .emotion-46::after {
   left: 0;
 }
 
-.emotion-33 {
+.emotion-32 {
   position: relative;
   max-width: 63.4rem;
   margin: 0;
@@ -464,22 +464,22 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-33 {
+  .emotion-32 {
     margin: 0 0.8rem;
   }
 }
 
 @media (min-width: 66rem) {
-  .emotion-33 {
+  .emotion-32 {
     margin: 0 auto;
   }
 }
 
-.emotion-35 {
+.emotion-34 {
   position: relative;
 }
 
-.emotion-37 {
+.emotion-36 {
   position: relative;
   padding: 0;
   margin: 0;
@@ -490,14 +490,14 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   width: 2.75rem;
 }
 
-.emotion-37:hover,
-.emotion-37:focus {
+.emotion-36:hover,
+.emotion-36:focus {
   cursor: pointer;
   box-shadow: inset 0 0 0 0.25rem #FFFFFF;
 }
 
-.emotion-37:hover::after,
-.emotion-37:focus::after {
+.emotion-36:hover::after,
+.emotion-36:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -508,36 +508,36 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-37 {
+  .emotion-36 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width: 20rem) {
-  .emotion-37 {
+  .emotion-36 {
     height: 2.75rem;
     width: 2.75rem;
   }
 }
 
-.emotion-37 svg {
+.emotion-36 svg {
   vertical-align: middle;
 }
 
-.emotion-39 {
+.emotion-38 {
   color: #000000;
   fill: currentColor;
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-39 {
+  .emotion-38 {
     fill: linkText;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-43 {
+  .emotion-41 {
     white-space: nowrap;
     overflow-x: scroll;
     scroll-behavior: auto;
@@ -546,15 +546,15 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
     -ms-overflow-style: none;
   }
 
-  .emotion-43::-webkit-scrollbar {
+  .emotion-41::-webkit-scrollbar {
     display: none;
   }
 
-  .emotion-43:focus-visible {
+  .emotion-41:focus-visible {
     outline: none;
   }
 
-  .emotion-43:focus-visible::after {
+  .emotion-41:focus-visible::after {
     outline: 0.1875rem solid #000000;
     content: '';
     position: absolute;
@@ -562,7 +562,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
     height: 100%;
   }
 
-  .emotion-43:after {
+  .emotion-41:after {
     content: ' ';
     height: 100%;
     width: 3rem;
@@ -580,13 +580,13 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   }
 
   @media (min-width: 25rem) {
-    .emotion-43:after {
+    .emotion-41:after {
       width: 6rem;
     }
   }
 }
 
-.emotion-45 {
+.emotion-43 {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -594,12 +594,12 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-45 {
+  .emotion-43 {
     overflow: hidden;
   }
 }
 
-.emotion-47 {
+.emotion-45 {
   display: inline-block;
   position: relative;
   z-index: 2;
@@ -608,13 +608,13 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-47:last-child {
+  .emotion-45:last-child {
     margin-right: 3rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-47::after {
+  .emotion-45::after {
     content: '';
     position: absolute;
     bottom: -1px;
@@ -624,7 +624,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   }
 }
 
-.emotion-49 {
+.emotion-47 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -640,26 +640,26 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-49 {
+  .emotion-47 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-49 {
+  .emotion-47 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-49 {
+  .emotion-47 {
     padding: 0.75rem 0.5rem;
   }
 }
 
-.emotion-49:hover::after {
+.emotion-47:hover::after {
   content: '';
   position: absolute;
   left: 0;
@@ -668,18 +668,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   border-bottom: 0.25rem solid #B80000;
 }
 
-.emotion-49:focus::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-bottom: 0.25rem solid #B80000;
-  top: 0;
-  border: 0.1875rem solid #000000;
-}
-
-.emotion-49:focus-visible::after {
+.emotion-47:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -690,7 +679,18 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   border: 0.1875rem solid #000000;
 }
 
-.emotion-91 {
+.emotion-47:focus-visible::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+  top: 0;
+  border: 0.1875rem solid #000000;
+}
+
+.emotion-89 {
   background-color: #FFFFFF;
   clear: both;
   overflow: hidden;
@@ -702,37 +702,37 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-91 {
+  .emotion-89 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .emotion-91 {
+  .emotion-89 {
     -webkit-transition: none;
     transition: none;
   }
 }
 
-.emotion-93 {
+.emotion-91 {
   list-style-type: none;
   margin: 0;
   padding: 0 0.5rem;
   border-bottom: 0.0625rem solid #E6E8EA;
 }
 
-.emotion-95 {
+.emotion-93 {
   padding: 0.75rem 0;
   border-bottom: 0.0625rem solid #E6E8EA;
 }
 
-.emotion-95:last-child {
+.emotion-93:last-child {
   padding-bottom: 0.25rem;
   border: 0;
 }
 
-.emotion-97 {
+.emotion-95 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -746,63 +746,63 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-97 {
+  .emotion-95 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-97 {
+  .emotion-95 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-97:hover,
-.emotion-97:focus {
+.emotion-95:hover,
+.emotion-95:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   text-decoration-color: #B80000;
 }
 
-.emotion-139 {
+.emotion-137 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
-.emotion-141 {
+.emotion-139 {
   content-visibility: auto;
   contain-intrinsic-size: 33.125rem;
 }
 
 @media (min-width: 15rem) {
-  .emotion-141 {
+  .emotion-139 {
     contain-intrinsic-size: 26.563rem;
   }
 }
 
 @media (min-width: 20) {
-  .emotion-141 {
+  .emotion-139 {
     contain-intrinsic-size: 23.438rem;
   }
 }
 
 @media (min-width: 25rem) {
-  .emotion-141 {
+  .emotion-139 {
     contain-intrinsic-size: 21.875rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-141 {
+  .emotion-139 {
     contain-intrinsic-size: 17.188rem;
   }
 }
 
-.emotion-144 {
+.emotion-142 {
   background-color: #B80000;
   height: 2.75rem;
   width: 100%;
@@ -813,29 +813,29 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 }
 
 @media (min-width: 25rem) {
-  .emotion-144 {
+  .emotion-142 {
     height: 3.5rem;
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-144 {
+  .emotion-142 {
     height: 4rem;
   }
 }
 
-.emotion-144 svg {
+.emotion-142 svg {
   fill: currentColor;
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-144 svg {
+  .emotion-142 svg {
     fill: linkText;
   }
 }
 
-.emotion-154 {
+.emotion-151 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -845,38 +845,38 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-154 {
+  .emotion-151 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-154 {
+  .emotion-151 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (max-width: 25rem) {
-  .emotion-154 {
+  .emotion-151 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width: 25rem) {
-  .emotion-154 {
+  .emotion-151 {
     padding: 0 1rem;
   }
 }
 
-.emotion-156 {
+.emotion-153 {
   max-width: 63rem;
   margin: 0 auto;
   padding-top: 0.5rem;
 }
 
-.emotion-158 {
+.emotion-155 {
   border-bottom: 0.0625rem solid #3F3F42;
   -webkit-column-count: 4;
   column-count: 4;
@@ -886,14 +886,14 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-158 {
+  .emotion-155 {
     display: grid;
     grid-auto-flow: column;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-158 {
+  .emotion-155 {
     grid-auto-flow: row;
     -webkit-column-count: 1;
     column-count: 1;
@@ -901,7 +901,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 }
 
 @media (min-width: 15rem) and (max-width: 37.4375rem) {
-  .emotion-158 {
+  .emotion-155 {
     grid-column-gap: 0.5rem;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(
@@ -914,7 +914,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-158 {
+  .emotion-155 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(
@@ -927,7 +927,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-158 {
+  .emotion-155 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(
@@ -940,7 +940,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 }
 
 @media (min-width: 80rem) {
-  .emotion-158 {
+  .emotion-155 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(
@@ -952,7 +952,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   }
 }
 
-.emotion-158>li:first-of-type {
+.emotion-155>li:first-of-type {
   border-bottom: 0.0625rem solid #3F3F42;
   padding: 0.5rem 0;
   margin-bottom: 0.5rem;
@@ -962,14 +962,14 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   column-span: all;
 }
 
-.emotion-160 {
+.emotion-157 {
   min-width: 50%;
   -webkit-column-gap: 1rem;
   column-gap: 1rem;
   break-inside: avoid-column;
 }
 
-.emotion-162 {
+.emotion-159 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -980,23 +980,23 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   text-decoration: none;
 }
 
-.emotion-162:hover,
-.emotion-162:focus {
+.emotion-159:hover,
+.emotion-159:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-190 {
+.emotion-187 {
   color: #FFFFFF;
   margin: 0;
   padding: 1rem 0;
 }
 
-.emotion-190 a {
+.emotion-187 a {
   padding: 0;
 }
 
-.emotion-192 {
+.emotion-189 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -1007,8 +1007,8 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   text-decoration: none;
 }
 
-.emotion-192:hover,
-.emotion-192:focus {
+.emotion-189:hover,
+.emotion-189:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
@@ -1117,14 +1117,14 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                 </g>
               </svg>
               <span
-                class="emotion-27 emotion-28"
+                class="emotion-27"
                 id="BrandLink-topPage"
               >
                 BBC News
               </span>
             </a>
             <a
-              class="focusIndicatorRemove emotion-29 emotion-30"
+              class="focusIndicatorRemove emotion-28 emotion-29"
               dir="ltr"
               href="#content"
             >
@@ -1136,25 +1136,25 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
         </div>
       </div>
       <nav
-        class="emotion-31 emotion-32"
+        class="emotion-30 emotion-31"
         dir="ltr"
         role="navigation"
       >
         <div
-          class="emotion-33 emotion-34"
+          class="emotion-32 emotion-33"
         >
           <div
-            class="emotion-35 emotion-36"
+            class="emotion-34 emotion-35"
           >
             <button
               aria-expanded="false"
-              class="focusIndicatorRemove emotion-37 emotion-38"
+              class="focusIndicatorRemove emotion-36 emotion-37"
               dir="ltr"
               type="button"
             >
               <svg
                 aria-hidden="true"
-                class="emotion-39 emotion-40"
+                class="emotion-38 emotion-39"
                 focusable="false"
                 height="2.75rem"
                 viewBox="0 0 44 44"
@@ -1165,147 +1165,147 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                 />
               </svg>
               <span
-                class="emotion-27 emotion-28"
+                class="emotion-27"
               >
                 Sections
               </span>
             </button>
             <div
-              class="emotion-43 emotion-44"
+              class="emotion-41 emotion-42"
               data-e2e="scrollable-nav"
               dir="ltr"
             >
               <ul
-                class="emotion-45 emotion-46"
+                class="emotion-43 emotion-44"
                 role="list"
               >
                 <li
-                  class="emotion-47 emotion-48"
+                  class="emotion-45 emotion-46"
                   dir="ltr"
                   role="listitem"
                 >
                   <a
-                    class="focusIndicatorRemove emotion-49 emotion-50"
+                    class="focusIndicatorRemove emotion-47 emotion-48"
                     href="/news"
                   >
                     Home
                   </a>
                 </li>
                 <li
-                  class="emotion-47 emotion-48"
+                  class="emotion-45 emotion-46"
                   dir="ltr"
                   role="listitem"
                 >
                   <a
-                    class="focusIndicatorRemove emotion-49 emotion-50"
+                    class="focusIndicatorRemove emotion-47 emotion-48"
                     href="/news/uk"
                   >
                     UK
                   </a>
                 </li>
                 <li
-                  class="emotion-47 emotion-48"
+                  class="emotion-45 emotion-46"
                   dir="ltr"
                   role="listitem"
                 >
                   <a
-                    class="focusIndicatorRemove emotion-49 emotion-50"
+                    class="focusIndicatorRemove emotion-47 emotion-48"
                     href="/news/world"
                   >
                     World
                   </a>
                 </li>
                 <li
-                  class="emotion-47 emotion-48"
+                  class="emotion-45 emotion-46"
                   dir="ltr"
                   role="listitem"
                 >
                   <a
-                    class="focusIndicatorRemove emotion-49 emotion-50"
+                    class="focusIndicatorRemove emotion-47 emotion-48"
                     href="/news/business"
                   >
                     Business
                   </a>
                 </li>
                 <li
-                  class="emotion-47 emotion-48"
+                  class="emotion-45 emotion-46"
                   dir="ltr"
                   role="listitem"
                 >
                   <a
-                    class="focusIndicatorRemove emotion-49 emotion-50"
+                    class="focusIndicatorRemove emotion-47 emotion-48"
                     href="/news/politics"
                   >
                     Politics
                   </a>
                 </li>
                 <li
-                  class="emotion-47 emotion-48"
+                  class="emotion-45 emotion-46"
                   dir="ltr"
                   role="listitem"
                 >
                   <a
-                    class="focusIndicatorRemove emotion-49 emotion-50"
+                    class="focusIndicatorRemove emotion-47 emotion-48"
                     href="/news/technology"
                   >
                     Tech
                   </a>
                 </li>
                 <li
-                  class="emotion-47 emotion-48"
+                  class="emotion-45 emotion-46"
                   dir="ltr"
                   role="listitem"
                 >
                   <a
-                    class="focusIndicatorRemove emotion-49 emotion-50"
+                    class="focusIndicatorRemove emotion-47 emotion-48"
                     href="/news/science_and_environment"
                   >
                     Science
                   </a>
                 </li>
                 <li
-                  class="emotion-47 emotion-48"
+                  class="emotion-45 emotion-46"
                   dir="ltr"
                   role="listitem"
                 >
                   <a
-                    class="focusIndicatorRemove emotion-49 emotion-50"
+                    class="focusIndicatorRemove emotion-47 emotion-48"
                     href="/news/health"
                   >
                     Health
                   </a>
                 </li>
                 <li
-                  class="emotion-47 emotion-48"
+                  class="emotion-45 emotion-46"
                   dir="ltr"
                   role="listitem"
                 >
                   <a
-                    class="focusIndicatorRemove emotion-49 emotion-50"
+                    class="focusIndicatorRemove emotion-47 emotion-48"
                     href="/news/education"
                   >
                     Family & Education
                   </a>
                 </li>
                 <li
-                  class="emotion-47 emotion-48"
+                  class="emotion-45 emotion-46"
                   dir="ltr"
                   role="listitem"
                 >
                   <a
-                    class="focusIndicatorRemove emotion-49 emotion-50"
+                    class="focusIndicatorRemove emotion-47 emotion-48"
                     href="/news/entertainment_and_arts"
                   >
                     Entertainment & Arts
                   </a>
                 </li>
                 <li
-                  class="emotion-47 emotion-48"
+                  class="emotion-45 emotion-46"
                   dir="ltr"
                   role="listitem"
                 >
                   <a
-                    class="focusIndicatorRemove emotion-49 emotion-50"
+                    class="focusIndicatorRemove emotion-47 emotion-48"
                     href="/news/stories"
                   >
                     Stories
@@ -1315,21 +1315,21 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
             </div>
           </div>
           <div
-            class="emotion-91 emotion-92"
+            class="emotion-89 emotion-90"
             data-e2e="dropdown-nav"
             height="0"
           >
             <ul
-              class="emotion-93 emotion-94"
+              class="emotion-91 emotion-92"
               role="list"
             >
               <li
-                class="emotion-95 emotion-96"
+                class="emotion-93 emotion-94"
                 role="listitem"
               >
                 <a
                   aria-labelledby="dropdownNavigation-home"
-                  class="emotion-97 emotion-98"
+                  class="emotion-95 emotion-96"
                   href="/news"
                 >
                   <span
@@ -1340,12 +1340,12 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                 </a>
               </li>
               <li
-                class="emotion-95 emotion-96"
+                class="emotion-93 emotion-94"
                 role="listitem"
               >
                 <a
                   aria-labelledby="dropdownNavigation-uk"
-                  class="emotion-97 emotion-98"
+                  class="emotion-95 emotion-96"
                   href="/news/uk"
                 >
                   <span
@@ -1356,12 +1356,12 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                 </a>
               </li>
               <li
-                class="emotion-95 emotion-96"
+                class="emotion-93 emotion-94"
                 role="listitem"
               >
                 <a
                   aria-labelledby="dropdownNavigation-world"
-                  class="emotion-97 emotion-98"
+                  class="emotion-95 emotion-96"
                   href="/news/world"
                 >
                   <span
@@ -1372,12 +1372,12 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                 </a>
               </li>
               <li
-                class="emotion-95 emotion-96"
+                class="emotion-93 emotion-94"
                 role="listitem"
               >
                 <a
                   aria-labelledby="dropdownNavigation-business"
-                  class="emotion-97 emotion-98"
+                  class="emotion-95 emotion-96"
                   href="/news/business"
                 >
                   <span
@@ -1388,12 +1388,12 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                 </a>
               </li>
               <li
-                class="emotion-95 emotion-96"
+                class="emotion-93 emotion-94"
                 role="listitem"
               >
                 <a
                   aria-labelledby="dropdownNavigation-politics"
-                  class="emotion-97 emotion-98"
+                  class="emotion-95 emotion-96"
                   href="/news/politics"
                 >
                   <span
@@ -1404,12 +1404,12 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                 </a>
               </li>
               <li
-                class="emotion-95 emotion-96"
+                class="emotion-93 emotion-94"
                 role="listitem"
               >
                 <a
                   aria-labelledby="dropdownNavigation-tech"
-                  class="emotion-97 emotion-98"
+                  class="emotion-95 emotion-96"
                   href="/news/technology"
                 >
                   <span
@@ -1420,12 +1420,12 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                 </a>
               </li>
               <li
-                class="emotion-95 emotion-96"
+                class="emotion-93 emotion-94"
                 role="listitem"
               >
                 <a
                   aria-labelledby="dropdownNavigation-science"
-                  class="emotion-97 emotion-98"
+                  class="emotion-95 emotion-96"
                   href="/news/science_and_environment"
                 >
                   <span
@@ -1436,12 +1436,12 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                 </a>
               </li>
               <li
-                class="emotion-95 emotion-96"
+                class="emotion-93 emotion-94"
                 role="listitem"
               >
                 <a
                   aria-labelledby="dropdownNavigation-health"
-                  class="emotion-97 emotion-98"
+                  class="emotion-95 emotion-96"
                   href="/news/health"
                 >
                   <span
@@ -1452,12 +1452,12 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                 </a>
               </li>
               <li
-                class="emotion-95 emotion-96"
+                class="emotion-93 emotion-94"
                 role="listitem"
               >
                 <a
                   aria-labelledby="dropdownNavigation-family-&-education"
-                  class="emotion-97 emotion-98"
+                  class="emotion-95 emotion-96"
                   href="/news/education"
                 >
                   <span
@@ -1468,12 +1468,12 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                 </a>
               </li>
               <li
-                class="emotion-95 emotion-96"
+                class="emotion-93 emotion-94"
                 role="listitem"
               >
                 <a
                   aria-labelledby="dropdownNavigation-entertainment-&-arts"
-                  class="emotion-97 emotion-98"
+                  class="emotion-95 emotion-96"
                   href="/news/entertainment_and_arts"
                 >
                   <span
@@ -1484,12 +1484,12 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                 </a>
               </li>
               <li
-                class="emotion-95 emotion-96"
+                class="emotion-93 emotion-94"
                 role="listitem"
               >
                 <a
                   aria-labelledby="dropdownNavigation-stories"
-                  class="emotion-97 emotion-98"
+                  class="emotion-95 emotion-96"
                   href="/news/stories"
                 >
                   <span
@@ -1505,18 +1505,18 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
       </nav>
     </header>
     <div
-      class="emotion-139 emotion-140"
+      class="emotion-137 emotion-138"
     >
       <h2>
         Child element
       </h2>
     </div>
     <footer
-      class="emotion-141 emotion-142"
+      class="emotion-139 emotion-140"
       role="contentinfo"
     >
       <div
-        class="emotion-18 emotion-144 emotion-20"
+        class="emotion-18 emotion-142 emotion-20"
       >
         <div
           class="emotion-21 emotion-22"
@@ -1547,7 +1547,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
               </g>
             </svg>
             <span
-              class="emotion-27 emotion-28"
+              class="emotion-27"
               id="BrandLink-footer"
             >
               BBC News
@@ -1556,98 +1556,98 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
         </div>
       </div>
       <div
-        class="emotion-154 emotion-155"
+        class="emotion-151 emotion-152"
       >
         <div
-          class="emotion-156 emotion-157"
+          class="emotion-153 emotion-154"
         >
           <ul
-            class="emotion-158 emotion-159"
+            class="emotion-155 emotion-156"
             role="list"
           >
             <li
-              class="emotion-160 emotion-161"
+              class="emotion-157 emotion-158"
             >
               <a
-                class="focusIndicatorInvert emotion-162 emotion-163"
+                class="focusIndicatorInvert emotion-159 emotion-160"
                 href="https://www.bbc.com/news/help-41670342"
               >
                 Why you can trust the BBC
               </a>
             </li>
             <li
-              class="emotion-160 emotion-161"
+              class="emotion-157 emotion-158"
               role="listitem"
             >
               <a
-                class="focusIndicatorInvert emotion-162 emotion-163"
+                class="focusIndicatorInvert emotion-159 emotion-160"
                 href="https://www.bbc.com/terms"
               >
                 Terms of Use
               </a>
             </li>
             <li
-              class="emotion-160 emotion-161"
+              class="emotion-157 emotion-158"
               role="listitem"
             >
               <a
-                class="focusIndicatorInvert emotion-162 emotion-163"
+                class="focusIndicatorInvert emotion-159 emotion-160"
                 href="https://www.bbc.co.uk/aboutthebbc/"
               >
                 About the BBC
               </a>
             </li>
             <li
-              class="emotion-160 emotion-161"
+              class="emotion-157 emotion-158"
               role="listitem"
             >
               <a
-                class="focusIndicatorInvert emotion-162 emotion-163"
+                class="focusIndicatorInvert emotion-159 emotion-160"
                 href="https://www.bbc.com/privacy/"
               >
                 Privacy Policy
               </a>
             </li>
             <li
-              class="emotion-160 emotion-161"
+              class="emotion-157 emotion-158"
               role="listitem"
             >
               <a
-                class="focusIndicatorInvert emotion-162 emotion-163"
+                class="focusIndicatorInvert emotion-159 emotion-160"
                 href="https://www.bbc.com/usingthebbc/cookies/"
               >
                 Cookies
               </a>
             </li>
             <li
-              class="emotion-160 emotion-161"
+              class="emotion-157 emotion-158"
               role="listitem"
             >
               <a
-                class="focusIndicatorInvert emotion-162 emotion-163"
+                class="focusIndicatorInvert emotion-159 emotion-160"
                 href="https://www.bbc.com/accessibility/"
               >
                 Accessibility Help
               </a>
             </li>
             <li
-              class="emotion-160 emotion-161"
+              class="emotion-157 emotion-158"
               role="listitem"
             >
               <a
-                class="focusIndicatorInvert emotion-162 emotion-163"
+                class="focusIndicatorInvert emotion-159 emotion-160"
                 href="https://www.bbc.com/contact/"
               >
                 Contact the BBC
               </a>
             </li>
             <li
-              class="emotion-160 emotion-161"
+              class="emotion-157 emotion-158"
               role="listitem"
             />
           </ul>
           <p
-            class="emotion-190 emotion-191"
+            class="emotion-187 emotion-188"
           >
             <span
               lang="en-GB"
@@ -1658,7 +1658,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
             2023 BBC. The BBC is not responsible for the content of external sites.
              
             <a
-              class="focusIndicatorInvert emotion-192 emotion-163"
+              class="focusIndicatorInvert emotion-189 emotion-160"
               href="https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links"
             >
               Read about our approach to external linking.

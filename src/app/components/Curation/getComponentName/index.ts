@@ -12,7 +12,7 @@ export const COMPONENT_NAMES = {
   NOT_SUPPORTED: 'not-supported',
 } as const;
 
-const { NONE, BANNER } = VISUAL_STYLE;
+const { NONE, BANNER, COLLECTION } = VISUAL_STYLE;
 const { MINIMUM, LOW, NORMAL, HIGH, MAXIMUM } = VISUAL_PROMINENCE;
 const {
   MESSAGE_BANNER,
@@ -33,6 +33,7 @@ export default (
     [`${BANNER}_${MAXIMUM}`]: NOT_SUPPORTED,
     [`${NONE}_${NORMAL}`]: SIMPLE_CURATION_GRID,
     [`${NONE}_${HIGH}`]: HIERARCHICAL_CURATION_GRID,
+    [`${COLLECTION}_${HIGH}`]: HIERARCHICAL_CURATION_GRID,
   };
 
   const visualStyleAndProminence = `${visualStyle}_${visualProminence}`;
