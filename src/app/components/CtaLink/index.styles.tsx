@@ -4,9 +4,9 @@ const styles = {
   linkBackground: () =>
     css({
       textDecoration: 'none',
+      color: 'inherit',
       '&:hover, &:focus': {
         textDecoration: 'underline',
-        color: 'inherit',
       },
     }),
   linkTextWrapper: () =>

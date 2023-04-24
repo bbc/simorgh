@@ -35,13 +35,18 @@ describe('Uploader', () => {
     );
   });
 
-  it('should display link text correctly as an Anchor', () => {
+  it('should render a link with the correct link text', () => {
+    render(<Uploader blocks={uploader} />);
+    const ctaLink = screen.getByRole('link');
+    expect(ctaLink.textContent).toEqual('Send form');
+  });
+
+  it('should render a link with the correct href', () => {
     render(<Uploader blocks={uploader} />);
     const ctaLink = screen.getByRole('link');
     expect(ctaLink.getAttribute('href')).toEqual(
       'https://www.bbc.com/send/u94753086',
     );
-    expect(ctaLink.textContent).toEqual('Send form');
   });
 
   it('Should return null when Ares has failed to add an aresUploader block', () => {
