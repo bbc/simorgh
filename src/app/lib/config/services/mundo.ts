@@ -1,9 +1,3 @@
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_GHOST,
-  C_POSTBOX_30,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
 import latinWithDiacritics from '../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/es';
@@ -38,7 +32,6 @@ export const service: DefaultServiceConfig = {
     service: 'mundo',
     serviceName: 'News Mundo',
     languageName: 'Spanish',
-    themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcmundo',
     twitterSite: '@bbcmundo',
     noBylinesPolicy:
@@ -50,13 +43,6 @@ export const service: DefaultServiceConfig = {
     swPath: '/sw.js',
     frontPageTitle: 'Noticias',
     iTunesAppId: 515255747,
-    theming: {
-      brandBackgroundColour: `${C_POSTBOX}`,
-      brandLogoColour: `${C_WHITE}`,
-      brandForegroundColour: `${C_GHOST}`,
-      brandHighlightColour: `${C_WHITE}`,
-      brandBorderColour: `${C_POSTBOX_30}`,
-    },
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
@@ -317,8 +303,8 @@ export const service: DefaultServiceConfig = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-          text: 'AdChoices / Do Not Sell My Info',
+          href: '#',
+          text: 'Do not share or sell my info',
           lang: 'en-GB',
         },
       ],

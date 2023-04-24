@@ -55,13 +55,6 @@ Object {
 
 exports[`Canonical On Demand T V Page Footer Anchors should match text and url 8`] = `
 Object {
-  "text": "AdChoices / Do Not Sell My Info",
-  "url": "https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/",
-}
-`;
-
-exports[`Canonical On Demand T V Page Footer Anchors should match text and url 9`] = `
-Object {
   "text": "Akhri xogta ku saabsan sida aan u abaarno bogagga dibadda.",
   "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
 }
@@ -97,7 +90,7 @@ Object {
 exports[`Canonical On Demand T V Page Header Navigation link should match text and url 4`] = `
 Object {
   "text": "Muuqaal",
-  "url": "/somali/media/video",
+  "url": "/somali/topics/c7pl4k5r9xxt",
 }
 `;
 

@@ -153,7 +153,7 @@ Object {
 exports[`AMP Articles Footer Cookie Settings Button should match text and on handler 1`] = `
 Object {
   "on": "tap:consent.prompt, privacy.hide, cookie.show, AMP.setState({ isManagingSettings: true })",
-  "text": "AdChoices / Do Not Sell My Info",
+  "text": "Do not share or sell my info",
 }
 `;
 
@@ -187,7 +187,7 @@ Object {
 exports[`AMP Articles Header Navigation link should match text and url 4`] = `
 Object {
   "text": "ویدیو",
-  "url": "/persian/media/video",
+  "url": "/persian/topics/c6z7mnr559gt",
 }
 `;
 
@@ -364,7 +364,7 @@ Object {
   "@context": "http://schema.org",
   "@graph": Array [
     Object {
-      "@type": "Article",
+      "@type": "NewsArticle",
       "author": Object {
         "@type": "NewsMediaOrganization",
         "logo": Object {

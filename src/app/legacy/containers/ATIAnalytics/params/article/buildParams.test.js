@@ -82,7 +82,7 @@ describe('buildParams', () => {
   });
 
   describe('buildArticleATIParams', () => {
-    it('should return the right object', () => {
+    it('should return the right article object when no pageType is specified', () => {
       const result = buildArticleATIParams(
         article,
         requestContext,
@@ -90,6 +90,26 @@ describe('buildParams', () => {
       );
       expect(result).toEqual(validURLParams);
     });
+  });
+
+  it('should return the right article object when an article pageType is specified', () => {
+    const result = buildArticleATIParams(
+      article,
+      requestContext,
+      serviceContext,
+      'article',
+    );
+    expect(result).toEqual({ ...validURLParams, contentType: 'article' });
+  });
+
+  it('should return the right media-article object when a mediaArticle pageType is specified', () => {
+    const result = buildArticleATIParams(
+      article,
+      requestContext,
+      serviceContext,
+      'article-sfv',
+    );
+    expect(result).toEqual({ ...validURLParams, contentType: 'article-sfv' });
   });
 
   describe('buildArticleATIUrl', () => {

@@ -1,9 +1,3 @@
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_GHOST,
-  C_POSTBOX_30,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
 import bengali from '../../../components/ThemeProvider/fontScripts/bengali';
 import '#psammead/moment-timezone-include/tz/Asia/Dhaka';
 import '#psammead/psammead-locales/moment/bn';
@@ -38,7 +32,6 @@ export const service: DefaultServiceConfig = {
     service: 'bengali',
     serviceName: 'Bengali',
     languageName: 'Bengali',
-    themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcbangla',
     twitterSite: '@bbcbangla',
     noBylinesPolicy:
@@ -50,13 +43,6 @@ export const service: DefaultServiceConfig = {
     swPath: '/sw.js',
     frontPageTitle:
       'খবর, সর্বশেষ খবর, ব্রেকিং নিউজ | News, latest news, breaking news',
-    theming: {
-      brandBackgroundColour: `${C_POSTBOX}`,
-      brandLogoColour: `${C_WHITE}`,
-      brandForegroundColour: `${C_GHOST}`,
-      brandHighlightColour: `${C_WHITE}`,
-      brandBorderColour: `${C_POSTBOX_30}`,
-    },
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
@@ -262,6 +248,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'প্রধান খবর',
       featuresAnalysisTitle: 'চিঠিপত্র ও মতামত',
+      latestMediaTitle: 'সর্বশেষ',
     },
     mostRead: {
       header: 'সর্বাধিক পঠিত',
@@ -318,8 +305,8 @@ export const service: DefaultServiceConfig = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-          text: 'AdChoices / Do Not Sell My Info',
+          href: '#',
+          text: 'Do not share or sell my info',
           lang: 'en-GB',
         },
       ],

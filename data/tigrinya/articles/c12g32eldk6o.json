@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "3a43e42d",
+              "id": "f4bdc189",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "57e13ff8",
+                    "id": "e724ef7b",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "07b24ba9",
+                          "id": "399b885f",
                           "type": "paragraph",
                           "model": {
                             "text": "መቐለ 70 እንደርታ፡ \"እንታይ ክፍጠር ይኸውን? ብዝብሉ ስግኣታት ተወጢርና ዛዚምናዮ\"",
                             "blocks": [
                               {
-                                "id": "c55b707c",
+                                "id": "b337142b",
                                 "type": "fragment",
                                 "model": {
                                   "text": "መቐለ 70 እንደርታ፡ \"እንታይ ክፍጠር ይኸውን? ብዝብሉ ስግኣታት ተወጢርና ዛዚምናዮ\"",
@@ -56,7 +56,7 @@
               ]
             },
             {
-              "id": "88e77b72",
+              "id": "fc0125cc",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562942994618,
@@ -67,18 +67,18 @@
               ]
             },
             {
-              "id": "72c12e75",
+              "id": "8fb4b685",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "2386bd3a",
+                    "id": "be9b9dea",
                     "type": "paragraph",
                     "model": {
                       "text": "ሙሁራት፡ \"ናይ ፍልጠት ከተማ\" [city of Knowledge] ፣ ዘየምቲ \"ዓይኒ ትግራይ\"፣ ነጋዶ \"ሞተር ቑጠባ\"፣ መናእሰይ ድማ፡ \"ከተማ ፍቕሪ\" ኢሎም ይጽውዑዋ።",
                       "blocks": [
                         {
-                          "id": "a264c235",
+                          "id": "8ce3bd24",
                           "type": "fragment",
                           "model": {
                             "text": "ሙሁራት፡ \"ናይ ፍልጠት ከተማ\" [city of Knowledge] ፣ ዘየምቲ \"ዓይኒ ትግራይ\"፣ ነጋዶ \"ሞተር ቑጠባ\"፣ መናእሰይ ድማ፡ \"ከተማ ፍቕሪ\" ኢሎም ይጽውዑዋ።",
@@ -98,13 +98,13 @@
                     ]
                   },
                   {
-                    "id": "7575e74d",
+                    "id": "f293bb6d",
                     "type": "paragraph",
                     "model": {
                       "text": "እዛ ከተማ፡ ካብ ሰዓታት ድሕሪ ቐትሪ ዝሓለፈ ሰንበት ጀሚሩ ብዝነበረ ፍሉይ ስምዒት ዓወት፣ ደስታ ዘሰነፎ ዕጹው ጉሮሮ ከዚመላ ዘውግሐ፣ ሓጎስ ሓሊፉወን ዝሕንዝሕ ንብዓተን ዘውረዳ አዒንቲ፡ ኮታስ ሕውስው ዝበሉን ንምግላጾም ዝኸብዱን ስምዒታት ክተአንግድ ዘምሰየትን ዝሓደረትን ከተማ መቐለ'ያ።",
                       "blocks": [
                         {
-                          "id": "a8fc8385",
+                          "id": "672165a4",
                           "type": "fragment",
                           "model": {
                             "text": "እዛ ከተማ፡ ካብ ሰዓታት ድሕሪ ቐትሪ ዝሓለፈ ሰንበት ጀሚሩ ብዝነበረ ፍሉይ ስምዒት ዓወት፣ ደስታ ዘሰነፎ ዕጹው ጉሮሮ ከዚመላ ዘውግሐ፣ ሓጎስ ሓሊፉወን ዝሕንዝሕ ንብዓተን ዘውረዳ አዒንቲ፡ ኮታስ ሕውስው ዝበሉን ንምግላጾም ዝኸብዱን ስምዒታት ክተአንግድ ዘምሰየትን ዝሓደረትን ከተማ መቐለ'ያ።",
@@ -124,13 +124,13 @@
                     ]
                   },
                   {
-                    "id": "b66abd23",
+                    "id": "d1507fc4",
                     "type": "paragraph",
                     "model": {
                       "text": "ቅድሚ እዛ ናይ ትማሊ ዝነበራ ሰናብቲ፡ ብሓዘንን ቁጥዐን ተኸቢባ ብትዝታ ተሸሚማ ዝነበረት ከተማ፡ ገና ኣርብዓ መዓልቲ ከይመልኣ ሓዘና ዝድብስ ኣጋጣሚ ክፍጠር'ዩ ኢሉ ዝገመተ ኣይነበረነን እንተተብሃለ ምግናን ኣይክኸውንን።",
                       "blocks": [
                         {
-                          "id": "f7dd3235",
+                          "id": "d902873e",
                           "type": "fragment",
                           "model": {
                             "text": "ቅድሚ እዛ ናይ ትማሊ ዝነበራ ሰናብቲ፡ ብሓዘንን ቁጥዐን ተኸቢባ ብትዝታ ተሸሚማ ዝነበረት ከተማ፡ ገና ኣርብዓ መዓልቲ ከይመልኣ ሓዘና ዝድብስ ኣጋጣሚ ክፍጠር'ዩ ኢሉ ዝገመተ ኣይነበረነን እንተተብሃለ ምግናን ኣይክኸውንን።",
@@ -150,13 +150,13 @@
                     ]
                   },
                   {
-                    "id": "abda8a63",
+                    "id": "7a677c14",
                     "type": "paragraph",
                     "model": {
                       "text": "ኣርማ ብሄራዊ ስምዒት ህዝቢ እታ ከተማን፡ ቅመም ወግዒ መናእሰይን ፖለቲከኛታትን ኮይኑ ዝሓገየ ብስም እታ ከተማ ዝተሰመየ ጋንታ ኩዕሶ እግሪ መቐለ 70 እንደርታ ድማ፡ ደባሲት እቲ ሃንደበታዊ ሓዘን'ዩ።",
                       "blocks": [
                         {
-                          "id": "02343ab9",
+                          "id": "d76b5b76",
                           "type": "fragment",
                           "model": {
                             "text": "ኣርማ ብሄራዊ ስምዒት ህዝቢ እታ ከተማን፡ ቅመም ወግዒ መናእሰይን ፖለቲከኛታትን ኮይኑ ዝሓገየ ብስም እታ ከተማ ዝተሰመየ ጋንታ ኩዕሶ እግሪ መቐለ 70 እንደርታ ድማ፡ ደባሲት እቲ ሃንደበታዊ ሓዘን'ዩ።",
@@ -182,7 +182,7 @@
               ]
             },
             {
-              "id": "ecb63820",
+              "id": "e59af3b6",
               "type": "mpu",
               "model": {},
               "position": [
@@ -190,18 +190,18 @@
               ]
             },
             {
-              "id": "19a1af9a",
+              "id": "7b27ff6e",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "32e2c05e",
+                    "id": "c9a7ed30",
                     "type": "paragraph",
                     "model": {
                       "text": "ሰንበት 30 ሰነ 2011 [ብኣቆጻጽራ ኢትዮጵያ]፡ ኣብ ሰዓታት ድሕሪ ቐትሪ፡ ልዕሊ 60 ሽሕ ዝግመት ህዝቢ፡ 'ካልእ ቦታ የብልካን!' ዝተብሃለ ይመስል ኣብ ስታድየም ትግራይ ዓሪዱ።",
                       "blocks": [
                         {
-                          "id": "4a321ec5",
+                          "id": "14c40c6e",
                           "type": "fragment",
                           "model": {
                             "text": "ሰንበት 30 ሰነ 2011 [ብኣቆጻጽራ ኢትዮጵያ]፡ ኣብ ሰዓታት ድሕሪ ቐትሪ፡ ልዕሊ 60 ሽሕ ዝግመት ህዝቢ፡ 'ካልእ ቦታ የብልካን!' ዝተብሃለ ይመስል ኣብ ስታድየም ትግራይ ዓሪዱ።",
@@ -225,6 +225,16 @@
               "position": [
                 5
               ]
+            },
+            {
+              "id": "373d5bbd",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                6
+              ]
             }
           ]
         }
@@ -232,14 +242,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:c12g32eldk6o",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c12g32eldk6o"
+          "optimoUrn": "urn:bbc:optimo:asset:c12g32eldk6o",
+          "canonicalUrl": "https://www.bbc.com/tigrinya/articles/c12g32eldk6o"
         },
         "type": "article",
         "createdBy": "Tigrinya",
         "language": "ti",
         "firstPublished": 1562942994618,
         "lastPublished": 1562942994618,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:c12g32eldk6o",
           "producer": "Tigrinya",
@@ -250,7 +260,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Tigrinya",
           "taggings": []
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -260,12 +269,9 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "መቐለ 70 እንደርታ፡ \"እንታይ ክፍጠር ይኸውን? ብዝብሉ ስግኣታት ተወጢርና ዛዚምናዮ\""
-        },
-        "images": {},
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -763,7 +769,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T23:05:56.95Z",
+        "generated": "2023-02-18T03:05:56.866Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
         "totalRecords": 20,

@@ -1,5 +1,5 @@
 import LRUCache from 'lru-cache';
-import fetchPageData from './index.js';
+import fetchPageData from '.';
 
 const cacheMaxItems = 400;
 const cacheTTL = 300;

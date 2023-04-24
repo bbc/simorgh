@@ -1,8 +1,8 @@
 import React from 'react';
-import { render } from '@testing-library/react';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
+import { render } from '../../../components/react-testing-library-with-providers';
 import IncludeContainer from '.';
 import * as idt2Amp from './amp/Idt2Amp';
 import * as vjAmp from './amp/VjAmp';

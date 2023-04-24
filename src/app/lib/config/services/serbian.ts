@@ -1,9 +1,3 @@
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_GHOST,
-  C_POSTBOX_30,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
 import latinWithDiacritics from '../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
 import cyrillic from '../../../components/ThemeProvider/fontScripts/cyrillic';
 import '#psammead/moment-timezone-include/tz/GMT';
@@ -23,7 +17,6 @@ const baseServiceConfig = {
   dir: `ltr`,
   service: 'serbian' as Services,
   languageName: 'Serbian',
-  themeColor: `${C_POSTBOX}`,
   twitterCreator: '@bbcnasrpskom',
   twitterSite: '@bbcnasrpskom',
   isTrustProjectParticipant: true,
@@ -34,13 +27,6 @@ const baseServiceConfig = {
   },
   recommendations: {
     hasStoryRecommendations: false,
-  },
-  theming: {
-    brandBackgroundColour: `${C_POSTBOX}`,
-    brandLogoColour: `${C_WHITE}`,
-    brandForegroundColour: `${C_GHOST}`,
-    brandHighlightColour: `${C_WHITE}`,
-    brandBorderColour: `${C_POSTBOX_30}`,
   },
   showAdPlaceholder: false,
   showRelatedTopics: true,
@@ -106,8 +92,8 @@ export const service: SerbianConfig = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-          text: 'AdChoices / Do Not Sell My Info',
+          href: '#',
+          text: 'Do not share or sell my info',
           lang: 'en-GB',
         },
       ],
@@ -147,7 +133,7 @@ export const service: SerbianConfig = {
       },
       {
         title: 'Video',
-        url: '/serbian/lat/media/video',
+        url: '/serbian/lat/topics/c44vyp5g049t',
       },
       {
         title: 'Najpopularnije',
@@ -364,6 +350,7 @@ export const service: SerbianConfig = {
       },
       topStoriesTitle: 'Najvažnije',
       featuresAnalysisTitle: 'Reportaže',
+      latestMediaTitle: 'Najnovije',
     },
   },
   cyr: {
@@ -423,8 +410,8 @@ export const service: SerbianConfig = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-          text: 'AdChoices / Do Not Sell My Info',
+          href: '#',
+          text: 'Do not share or sell my info',
           lang: 'en-GB',
         },
       ],
@@ -464,7 +451,7 @@ export const service: SerbianConfig = {
       },
       {
         title: 'Видео',
-        url: '/serbian/cyr/media/video',
+        url: '/serbian/cyr/topics/crg7kj2ejj2t',
       },
       {
         title: 'Најпопуларније',
@@ -681,6 +668,7 @@ export const service: SerbianConfig = {
       },
       topStoriesTitle: 'Најважније',
       featuresAnalysisTitle: 'Репортаже',
+      latestMediaTitle: 'Најновије',
     },
   },
 };

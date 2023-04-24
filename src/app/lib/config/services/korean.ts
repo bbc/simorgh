@@ -1,9 +1,3 @@
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_GHOST,
-  C_POSTBOX_30,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
 import noAscendersOrDescenders from '../../../components/ThemeProvider/fontScripts/noAscOrDesc';
 import '#psammead/moment-timezone-include/tz/Asia/Seoul';
 import withContext from '../../../contexts/utils/withContext';
@@ -38,7 +32,6 @@ export const service: DefaultServiceConfig = {
     service: 'korean',
     serviceName: 'Korean',
     languageName: 'Korean',
-    themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnews',
     twitterSite: '@bbcnews',
     noBylinesPolicy:
@@ -49,13 +42,6 @@ export const service: DefaultServiceConfig = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: '홈페이지',
-    theming: {
-      brandBackgroundColour: `${C_POSTBOX}`,
-      brandLogoColour: `${C_WHITE}`,
-      brandForegroundColour: `${C_GHOST}`,
-      brandHighlightColour: `${C_WHITE}`,
-      brandBorderColour: `${C_POSTBOX_30}`,
-    },
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
@@ -261,6 +247,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: '주요뉴스',
       featuresAnalysisTitle: '이 시간 이슈',
+      latestMediaTitle: '최신',
     },
     mostRead: {
       header: 'TOP 뉴스',
@@ -317,8 +304,8 @@ export const service: DefaultServiceConfig = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-          text: 'AdChoices / Do Not Sell My Info',
+          href: '#',
+          text: 'Do not share or sell my info',
           lang: 'en-GB',
         },
       ],
@@ -333,6 +320,10 @@ export const service: DefaultServiceConfig = {
       {
         title: '비디오',
         url: '/korean/topics/cnwng7v0e54t',
+      },
+      {
+        title: '라디오',
+        url: '/korean/bbc_korean_radio/programmes/w13xttll',
       },
       {
         title: '다운로드',

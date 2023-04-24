@@ -55,13 +55,6 @@ Object {
 
 exports[`Canonical Feature Index page Footer Anchors should match text and url 8`] = `
 Object {
-  "text": "AdChoices / Do Not Sell My Info",
-  "url": "https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/",
-}
-`;
-
-exports[`Canonical Feature Index page Footer Anchors should match text and url 9`] = `
-Object {
   "text": "Découvrez notre approche en matière de liens externes.",
   "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
 }
@@ -139,7 +132,7 @@ Object {
 exports[`Canonical Feature Index page Header Navigation link should match text and url 10`] = `
 Object {
   "text": "Vidéos",
-  "url": "/afrique/media/video",
+  "url": "/afrique/topics/cz4vn9gyd6rt",
 }
 `;
 

@@ -1,9 +1,3 @@
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_GHOST,
-  C_POSTBOX_30,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
 import cyrillic from '../../../components/ThemeProvider/fontScripts/cyrillic';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/ky';
@@ -38,7 +32,6 @@ export const service: DefaultServiceConfig = {
     service: 'kyrgyz',
     serviceName: 'News Кыргыз КызMATы',
     languageName: 'Kyrgyz',
-    themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbckyrgyz',
     twitterSite: '@bbckyrgyz',
     noBylinesPolicy:
@@ -49,13 +42,6 @@ export const service: DefaultServiceConfig = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Кабарлар, акыркы мүнөттөгү кабарлар, талдоо, видео',
-    theming: {
-      brandBackgroundColour: `${C_POSTBOX}`,
-      brandLogoColour: `${C_WHITE}`,
-      brandForegroundColour: `${C_GHOST}`,
-      brandHighlightColour: `${C_WHITE}`,
-      brandBorderColour: `${C_POSTBOX_30}`,
-    },
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
@@ -235,6 +221,7 @@ export const service: DefaultServiceConfig = {
         duration: 'Узактыгы',
         recentEpisodes: 'Мурдагы берүүлөр',
         podcastExternalLinks: 'Бул подкастты башка платформалардан дагы угуңуз',
+        download: 'Подкастты жүктөп алыңыз',
       },
       socialEmbed: {
         caption: {
@@ -267,6 +254,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'Башкы кабарлар',
       featuresAnalysisTitle: 'Редактордун тандоосу',
+      latestMediaTitle: 'Соңку',
     },
     mostRead: {
       header: 'Эң көп окулгандар',
@@ -317,8 +305,8 @@ export const service: DefaultServiceConfig = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-          text: 'AdChoices / Do Not Sell My Info',
+          href: '#',
+          text: 'Do not share or sell my info',
           lang: 'en-GB',
         },
       ],

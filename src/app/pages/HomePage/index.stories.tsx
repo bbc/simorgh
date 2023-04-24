@@ -2,6 +2,7 @@ import React from 'react';
 
 import { withKnobs } from '@storybook/addon-knobs';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
+import { data as kyrgyzHomePageData } from '#data/kyrgyz/homePage/index.json';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { withServicesKnob } from '../../legacy/psammead/psammead-storybook-helpers/src';
 import ThemeProvider from '../../components/ThemeProvider';
@@ -24,7 +25,7 @@ const Component = ({ service, variant }: Props) => {
           status={200}
           isAmp={false}
           pathname="/kyrgyz"
-          pageData={{ status: 200 }}
+          pageData={kyrgyzHomePageData}
         />
       </ServiceContextProvider>
     </ThemeProvider>

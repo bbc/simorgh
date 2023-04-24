@@ -4,7 +4,7 @@ import { withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import ThemeProvider from '../../../components/ThemeProvider';
-import { C_GREY_2 } from '../../psammead/psammead-styles/src/colours';
+import { GREY_2 } from '../../../components/ThemeProvider/palette';
 
 import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
 import {
@@ -22,7 +22,7 @@ import withContexts from './common/testHelper';
 
 // eslint-disable-next-line react/prop-types
 const BackgroundColorWrapper = ({ children }) => (
-  <div css={css({ backgroundColor: C_GREY_2, padding: 20 })}>{children}</div>
+  <div css={css({ backgroundColor: GREY_2, padding: 20 })}>{children}</div>
 );
 
 const SocialEmbedComponentWithTheme = props => (

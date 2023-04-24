@@ -1,9 +1,8 @@
 import React from 'react';
-import { render } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { render } from '../../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import AVPlayer from '.';
 
@@ -73,10 +72,10 @@ const AVPlayerLiveRadio = (
 );
 
 describe('AVPlayer for On Demand TV', () => {
-  shouldMatchSnapshot(
-    'should match snapshot for canonical AVPlayer',
-    AVPlayerCanonicalODTV,
-  );
+  it('should match snapshot for canonical AVPlayer', () => {
+    const { container } = render(AVPlayerCanonicalODTV);
+    expect(container).toMatchSnapshot();
+  });
 
   it('should render the iframe on canonical', () => {
     render(AVPlayerCanonicalODTV);
@@ -102,10 +101,10 @@ describe('AVPlayer for On Demand TV', () => {
 });
 
 describe('AVPlayer for On Demand Radio', () => {
-  shouldMatchSnapshot(
-    'should match snapshot for AMP AVPlayer',
-    AVPlayerAMPODRadio,
-  );
+  it('should match snapshot for AMP AVPlayer', () => {
+    const { container } = render(AVPlayerAMPODRadio);
+    expect(container).toMatchSnapshot();
+  });
 
   it('should render the iframe on AMP', () => {
     render(AVPlayerAMPODRadio);
@@ -131,10 +130,10 @@ describe('AVPlayer for On Demand Radio', () => {
 });
 
 describe('AVPlayer for Live Radio', () => {
-  shouldMatchSnapshot(
-    'should match snapshot for canonical AVPlayer',
-    AVPlayerLiveRadio,
-  );
+  it('should match snapshot for canonical AVPlayer', () => {
+    const { container } = render(AVPlayerLiveRadio);
+    expect(container).toMatchSnapshot();
+  });
 
   it('should render the iframe on canonical', () => {
     render(AVPlayerLiveRadio);

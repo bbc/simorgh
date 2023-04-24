@@ -8,9 +8,8 @@ import {
   frontPageDataPath,
   frontPageManifestPath,
   frontPageSwPath,
-  homePagePath,
-  homePageManifestPath,
-  homePageSwPath,
+  tipoHomePath,
+  tipoHomeDataPath,
   cpsAssetPagePath,
   cpsAssetPageDataPath,
   podcastEpisodePath,
@@ -26,6 +25,9 @@ import {
   secondaryColumnDataRegexPath,
   recommendationsDataRegex,
 } from './index';
+
+import serviceConfig from '../../../lib/config/services/loadableConfig';
+import { getFrontPageRegex, getHomePageRegex } from './utils/index';
 
 jest.mock('#server/utilities/serviceConfigs', () => ({
   news: {},
@@ -142,7 +144,7 @@ describe('frontPageDataPath', () => {
   shouldNotMatchInvalidRoutes(invalidRoutes, frontPageDataPath);
 });
 
-describe('homePagePath', () => {
+describe('tipoHomePath', () => {
   const validRoutes = [
     '/news/tipohome',
     '/persian/tipohome',
@@ -153,7 +155,7 @@ describe('homePagePath', () => {
     '/news/lat/tipohome.amp',
     '/persian/cyr/tipohome.amp',
   ];
-  shouldMatchValidRoutes(validRoutes, homePagePath);
+  shouldMatchValidRoutes(validRoutes, tipoHomePath);
 
   const invalidRoutes = [
     '/news/tipohome/simp',
@@ -161,7 +163,25 @@ describe('homePagePath', () => {
     '/tipohome/persian',
     '/tipohome/persian.amp',
   ];
-  shouldNotMatchInvalidRoutes(invalidRoutes, homePagePath);
+  shouldNotMatchInvalidRoutes(invalidRoutes, tipoHomePath);
+});
+
+describe('tipoHomeDataPath', () => {
+  const validRoutes = [
+    '/news/tipohome.json',
+    '/kyrgyz/tipohome.json',
+    '/news/cyr/tipohome.json',
+    '/persian/trad/tipohome.json',
+  ];
+  shouldMatchValidRoutes(validRoutes, tipoHomeDataPath);
+
+  const invalidRoutes = [
+    '/news/data/tipohome.json',
+    '/iplayer/tipohome.json',
+    '/news/foobar/tipohome.json',
+    '/persian/nontrad/tipohome.json',
+  ];
+  shouldNotMatchInvalidRoutes(invalidRoutes, tipoHomeDataPath);
 });
 
 describe('articleSwPath', () => {
@@ -219,33 +239,6 @@ describe('frontPageManifestPath', () => {
     '/news/trad/sw.js',
   ];
   shouldNotMatchInvalidRoutes(invalidRoutes, frontPageManifestPath);
-});
-
-describe('homePageSwPath', () => {
-  const validRoutes = ['/news/tipohome/sw.js', '/persian/tipohome/sw.js'];
-  shouldMatchValidRoutes(validRoutes, homePageSwPath);
-
-  const invalidRoutes = [
-    '/news/articles/tipohome/sw.js',
-    '/persian/tipohome/sw',
-    '/persian/simp/tipohome/sw.js',
-  ];
-  shouldNotMatchInvalidRoutes(invalidRoutes, homePageSwPath);
-});
-
-describe('homePageManifestPath', () => {
-  const validRoutes = [
-    '/news/tipohome/manifest.json',
-    '/persian/tipohome/manifest.json',
-  ];
-  shouldMatchValidRoutes(validRoutes, homePageManifestPath);
-
-  const invalidRoutes = [
-    '/news/articles/tipohome/manifest.json',
-    '/hausa/tipohome/manifest',
-    '/hausa/simp/tipohome/manifest.json',
-  ];
-  shouldNotMatchInvalidRoutes(invalidRoutes, homePageManifestPath);
 });
 
 describe('onDemandRadioPath', () => {
@@ -535,4 +528,55 @@ describe('legacyAssetPageDataPath', () => {
     return `${path}.json`;
   });
   shouldNotMatchInvalidRoutes(invalidDataRoutes, legacyAssetPageDataPath);
+});
+
+describe('frontPage -> homePage migration', () => {
+  const services = Object.keys(serviceConfig);
+
+  const homePageServices = ['kyrgyz'];
+  const homePageRoutes = homePageServices.map(service => `/${service}`);
+
+  const originalApplicationEnvironment = process.env.SIMORGH_APP_ENV;
+
+  afterEach(() => {
+    process.env.SIMORGH_APP_ENV = originalApplicationEnvironment;
+  });
+
+  describe.each(['local', 'test'])(
+    `homePage regex on the %s environment`,
+    environment => {
+      process.env.SIMORGH_APP_ENV = environment;
+
+      const homePageRegex = getHomePageRegex(services);
+
+      shouldMatchValidRoutes(homePageRoutes, homePageRegex);
+    },
+  );
+
+  describe.each(['local', 'test'])(
+    `frontPage regex on the %s environment`,
+    environment => {
+      process.env.SIMORGH_APP_ENV = environment;
+
+      const frontPageRegex = getFrontPageRegex(services);
+
+      shouldNotMatchInvalidRoutes(homePageRoutes, frontPageRegex);
+    },
+  );
+
+  describe(`frontPage regex on the live environment`, () => {
+    process.env.SIMORGH_APP_ENV = 'live';
+
+    const frontPageRegex = getFrontPageRegex(services);
+
+    shouldMatchValidRoutes(homePageRoutes, frontPageRegex);
+  });
+
+  describe(`homePage regex on the live environment`, () => {
+    process.env.SIMORGH_APP_ENV = 'live';
+
+    const homePageRegex = getHomePageRegex(services);
+
+    shouldNotMatchInvalidRoutes(homePageRoutes, homePageRegex);
+  });
 });

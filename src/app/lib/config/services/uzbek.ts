@@ -1,9 +1,3 @@
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_GHOST,
-  C_POSTBOX_30,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
 import cyrillic from '../../../components/ThemeProvider/fontScripts/cyrillic';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/uz';
@@ -38,7 +32,6 @@ export const service: DefaultServiceConfig = {
     service: 'uzbek',
     serviceName: 'Uzbek',
     languageName: 'Uzbek',
-    themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcuzbek',
     twitterSite: '@bbcuzbek',
     noBylinesPolicy:
@@ -49,13 +42,6 @@ export const service: DefaultServiceConfig = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Бош саҳифа',
-    theming: {
-      brandBackgroundColour: `${C_POSTBOX}`,
-      brandLogoColour: `${C_WHITE}`,
-      brandForegroundColour: `${C_GHOST}`,
-      brandHighlightColour: `${C_WHITE}`,
-      brandBorderColour: `${C_POSTBOX_30}`,
-    },
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
@@ -265,6 +251,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'Бош мақола',
       featuresAnalysisTitle: 'Муҳаррир танлови',
+      latestMediaTitle: 'Сўнгги',
     },
     mostRead: {
       header: 'Энг кўп ўқилган',
@@ -311,8 +298,8 @@ export const service: DefaultServiceConfig = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-          text: 'AdChoices / Do Not Sell My Info',
+          href: '#',
+          text: 'Do not share or sell my info',
           lang: 'en-GB',
         },
       ],
@@ -349,8 +336,8 @@ export const service: DefaultServiceConfig = {
         url: '/uzbek/topics/cjgn7n7v3yjt',
       },
       {
-        title: 'Видео',
-        url: '/uzbek/media/video',
+        title: 'BBC News O‘zbek TV dasturi',
+        url: '/uzbek/bbc_uzbek_tv/tv_programmes/w13xttqv?limit=4',
       },
     ],
   },

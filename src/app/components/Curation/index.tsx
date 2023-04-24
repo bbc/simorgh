@@ -2,10 +2,10 @@
 import { jsx } from '@emotion/react';
 import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
 import {
-  Curation as CurationProps,
+  CurationProps,
   VISUAL_STYLE,
   VISUAL_PROMINENCE,
-} from '#models/types/promoData';
+} from '#app/models/types/curationData';
 import CurationGrid from './CurationGrid';
 import HierarchicalGrid from './HierarchicalGrid';
 import Subheading from './Subhead';

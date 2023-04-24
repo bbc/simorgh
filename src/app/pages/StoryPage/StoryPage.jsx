@@ -19,7 +19,6 @@ import Grid, { GelPageGrid, GridItemLarge } from '#components/Grid';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
-import LinkedData from '#containers/LinkedData';
 import headings from '#containers/Headings';
 import Disclaimer from '#containers/Disclaimer';
 import Timestamp from '#containers/ArticleTimestamp';
@@ -33,15 +32,13 @@ import FeaturesAnalysis from '#containers/CpsFeaturesAnalysis';
 import MostReadContainer from '#containers/MostRead';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
-import OptimizelyPageViewTracking from '#containers/OptimizelyPageViewTracking';
-import OptimizelyArticleCompleteTracking from '#containers/OptimizelyArticleCompleteTracking';
 import fauxHeadline from '#containers/FauxHeadline';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import CpsTable from '#containers/CpsTable';
 import Byline from '#containers/Byline';
 import CpsSocialEmbedContainer from '#containers/SocialEmbed/Cps';
-import CpsRecommendations from '#containers/CpsRecommendations';
 import { InlinePodcastPromo } from '#containers/PodcastPromo';
+import CpsRecommendations from '#containers/CpsRecommendations';
 
 import {
   getFirstPublished,
@@ -55,6 +52,7 @@ import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
+import LinkedData from '../../components/LinkedData';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import categoryType from './categoryMap/index';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
@@ -105,8 +103,8 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     pageData,
   );
   const featuresInitialData = path(['secondaryColumn', 'features'], pageData);
-  const recommendationsData = path(['recommendations'], pageData);
   const topics = path(['metadata', 'topics'], pageData);
+  const recommendationsData = pathOr([], ['recommendations'], pageData);
 
   const gridColumns = {
     group0: 8,
@@ -337,8 +335,6 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
         >
           <main role="main">
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
-            <OptimizelyArticleCompleteTracking />
-            <OptimizelyPageViewTracking />
           </main>
 
           {showRelatedTopics && topics && (

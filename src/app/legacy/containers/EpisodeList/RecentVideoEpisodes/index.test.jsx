@@ -1,7 +1,6 @@
 import React from 'react';
-import { render } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { render } from '../../../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import RecentVideoEpisodes from '.';
 import { afrique } from './fixtures';
@@ -21,10 +20,12 @@ const RecentVideoEpisodesWithContext = ({ episodes, isAmp = false }) => (
 );
 
 describe('Recent Video Episodes', () => {
-  shouldMatchSnapshot(
-    'should render video episodes correctly',
-    <RecentVideoEpisodesWithContext episodes={afrique} />,
-  );
+  it('should render video episodes correctly', () => {
+    const { container } = render(
+      <RecentVideoEpisodesWithContext episodes={afrique} />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
   it('should render the translated section label', () => {
     const { getByText } = render(

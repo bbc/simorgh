@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "192d09fc",
+              "id": "1304a302",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "1de5a25e",
+                    "id": "4bd55caf",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "871c3af9",
+                          "id": "20c66a6e",
                           "type": "paragraph",
                           "model": {
                             "text": "આ આ પરીક્ષણ લેખની મુખ્ય મથાળા છે",
                             "blocks": [
                               {
-                                "id": "c90c3fa6",
+                                "id": "ec1aa29a",
                                 "type": "fragment",
                                 "model": {
                                   "text": "આ આ પરીક્ષણ લેખની મુખ્ય મથાળા છે",
@@ -56,28 +56,28 @@
               ]
             },
             {
-              "id": "63a48be9",
+              "id": "00b152fb",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "163b3331",
+                    "id": "13344e68",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "c4c4e1a8",
+                          "id": "a33ad98f",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "38f8ece2",
+                                "id": "b3987cb6",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "ક પિરાઇટ બીબીસીની આ પરીક્ષણ છબી, ફ્રાન્સનો નકશો બતાવે છે. છબી પ્રથમ ત્રણ બ્લોક્સની છે અને તેમાં કtionપ્શન છે.",
                                   "blocks": [
                                     {
-                                      "id": "8cb99b1c",
+                                      "id": "983375da",
                                       "type": "fragment",
                                       "model": {
                                         "text": "ક પિરાઇટ બીબીસીની આ પરીક્ષણ છબી, ફ્રાન્સનો નકશો બતાવે છે. છબી પ્રથમ ત્રણ બ્લોક્સની છે અને તેમાં કtionપ્શન છે.",
@@ -116,23 +116,23 @@
                     ]
                   },
                   {
-                    "id": "33f1e88f",
+                    "id": "3d53ba9c",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "45848b6d",
+                          "id": "0b8b7e5a",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "6ab6968d",
+                                "id": "cbb5846d",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "ક પિરાઇટ બીબીસીની આ પરીક્ષણ છબી, ફ્રાન્સનો નકશો બતાવે છે. છબી પ્રથમ ત્રણ બ્લોક્સની છે અને તેમાં કtionપ્શન છે.",
                                   "blocks": [
                                     {
-                                      "id": "52243910",
+                                      "id": "cb39e82a",
                                       "type": "fragment",
                                       "model": {
                                         "text": "ક પિરાઇટ બીબીસીની આ પરીક્ષણ છબી, ફ્રાન્સનો નકશો બતાવે છે. છબી પ્રથમ ત્રણ બ્લોક્સની છે અને તેમાં કtionપ્શન છે.",
@@ -171,7 +171,7 @@
                     ]
                   },
                   {
-                    "id": "50aefe2f",
+                    "id": "4f904652",
                     "type": "rawImage",
                     "model": {
                       "width": 624,
@@ -192,7 +192,7 @@
               ]
             },
             {
-              "id": "eeceb255",
+              "id": "ad172087",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562942802532,
@@ -203,18 +203,18 @@
               ]
             },
             {
-              "id": "756d2843",
+              "id": "603b6653",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "6551a3af",
+                    "id": "1aef7627",
                     "type": "paragraph",
                     "model": {
                       "text": "આ એક ટેક્સ્ટ બ્લ છે, જેમાં બીબીસી હવામાન હોમપેજ પર લિંક શામેલ છે.",
                       "blocks": [
                         {
-                          "id": "8399d2be",
+                          "id": "f20997e0",
                           "type": "fragment",
                           "model": {
                             "text": "આ એક ટેક્સ્ટ બ્લ છે, જેમાં બીબીસી હવામાન હોમપેજ",
@@ -227,13 +227,13 @@
                           ]
                         },
                         {
-                          "id": "be7816f1",
+                          "id": "d217fb0d",
                           "type": "urlLink",
                           "model": {
                             "text": " પર લિંક શામેલ છે",
                             "blocks": [
                               {
-                                "id": "27b5c4c2",
+                                "id": "b9e26584",
                                 "type": "fragment",
                                 "model": {
                                   "text": " પર લિંક શામેલ છે",
@@ -257,7 +257,7 @@
                           ]
                         },
                         {
-                          "id": "51dc3d50",
+                          "id": "65d90262",
                           "type": "fragment",
                           "model": {
                             "text": ".",
@@ -283,29 +283,29 @@
               ]
             },
             {
-              "id": "d1ce6960",
+              "id": "5815241a",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01djw2m",
                 "blocks": [
                   {
-                    "id": "7587276a",
+                    "id": "8ac5eba0",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "357e2c52",
+                          "id": "c76baa49",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "3d32a843",
+                                "id": "1c476747",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "નવા જંકશનથી ચાઇનીઝ સુપરહિગવે વપરાશકર્તાઓ આશ્ચર્યચકિત થયા",
                                   "blocks": [
                                     {
-                                      "id": "fa19fef4",
+                                      "id": "8d48c577",
                                       "type": "fragment",
                                       "model": {
                                         "text": "નવા જંકશનથી ચાઇનીઝ સુપરહિગવે વપરાશકર્તાઓ આશ્ચર્યચકિત થયા",
@@ -344,12 +344,12 @@
                     ]
                   },
                   {
-                    "id": "466b1356",
+                    "id": "a35885de",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "faa95cf1",
+                          "id": "6aa4621b",
                           "blockId": "urn:bbc:ares::clip:p01djw2m",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -394,12 +394,12 @@
                           ]
                         },
                         {
-                          "id": "5603c3b4",
+                          "id": "222aef41",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "608b14b0",
+                                "id": "ed30b79e",
                                 "type": "rawImage",
                                 "model": {
                                   "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01djw9d.jpg",
@@ -434,23 +434,23 @@
               ]
             },
             {
-              "id": "26d00c6c",
+              "id": "59f509bc",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "fe232758",
+                    "id": "60850e00",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "194281e2",
+                          "id": "74465a3f",
                           "type": "paragraph",
                           "model": {
                             "text": "\rઆ એક સબહેડલાઇન છે",
                             "blocks": [
                               {
-                                "id": "ef9cdde9",
+                                "id": "6a146aef",
                                 "type": "fragment",
                                 "model": {
                                   "text": "\rઆ એક સબહેડલાઇન છે",
@@ -485,28 +485,28 @@
               ]
             },
             {
-              "id": "46f61992",
+              "id": "e5f23e6a",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "f054d4ed",
+                    "id": "2e0f296b",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "1f9f2fd0",
+                          "id": "05be4472",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "cc4f4c2d",
+                                "id": "4148810d",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "\rઆ એક સબહેડલાઇન છે",
                                   "blocks": [
                                     {
-                                      "id": "0b0fa5e8",
+                                      "id": "3b98328b",
                                       "type": "fragment",
                                       "model": {
                                         "text": "\rઆ એક સબહેડલાઇન છે",
@@ -545,7 +545,7 @@
                     ]
                   },
                   {
-                    "id": "895514d1",
+                    "id": "66e62f9a",
                     "type": "rawImage",
                     "model": {
                       "width": 800,
@@ -566,18 +566,18 @@
               ]
             },
             {
-              "id": "54506ed0",
+              "id": "79fad5a1",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "239372a2",
+                    "id": "5d7b4456",
                     "type": "paragraph",
                     "model": {
                       "text": "આ પરીક્ષણ લેખ બનાવવામાં આવ્યો છે જેથી આપણે અમારી વેબસાઇટ પર ચલાવી શકીએ.",
                       "blocks": [
                         {
-                          "id": "01379c8e",
+                          "id": "27be5607",
                           "type": "fragment",
                           "model": {
                             "text": "આ પરીક્ષણ લેખ બનાવવામાં આવ્યો છે જેથી આપણે અમારી વેબસાઇટ પર ચલાવી શકીએ.",
@@ -603,11 +603,21 @@
               ]
             },
             {
-              "id": "f9dffda5",
+              "id": "93db73e7",
               "type": "mpu",
               "model": {},
               "position": [
                 9
+              ]
+            },
+            {
+              "id": "f63d5125",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                10
               ]
             }
           ]
@@ -616,14 +626,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:cr5el5kw591o",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cr5el5kw591o"
+          "optimoUrn": "urn:bbc:optimo:asset:cr5el5kw591o",
+          "canonicalUrl": "https://www.bbc.com/gujarati/articles/cr5el5kw591o"
         },
         "type": "article",
         "createdBy": "Gujarati",
         "language": "gu",
         "firstPublished": 1562942802532,
         "lastPublished": 1562942802532,
-        "options": {},
         "analyticsLabels": {
           "producer": "Gujarati",
           "page": "gujarati.articles.cr5el5kw591o.page"
@@ -633,7 +643,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Gujarati",
           "taggings": []
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -651,12 +660,9 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "SacredGames2 : એ ગુજરાતી જેમણે 'સેક્રેડ ગેમ્સ'ના સિમ્બૉલ્સ બનાવ્યા છે"
-        },
-        "images": {},
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -1206,7 +1212,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T22:56:58.074Z",
+        "generated": "2023-02-17T18:11:56.562Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
         "totalRecords": 20,

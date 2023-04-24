@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "e68289a7",
+              "id": "8a2cdfb0",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "a7d8fdb2",
+                    "id": "63549e75",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "28f63b97",
+                          "id": "18a4af8c",
                           "type": "paragraph",
                           "model": {
                             "text": "ဒါကဒီစမ်းသပ်မှုဆောင်းပါး၏ခေါင်းစဉ်ဖြစ်သည်",
                             "blocks": [
                               {
-                                "id": "94bf4da0",
+                                "id": "97a107b0",
                                 "type": "fragment",
                                 "model": {
                                   "text": "ဒါကဒီစမ်းသပ်မှုဆောင်းပါး၏ခေါင်းစဉ်ဖြစ်သည်",
@@ -56,28 +56,28 @@
               ]
             },
             {
-              "id": "c5e61818",
+              "id": "c3218b8a",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "93e4d03a",
+                    "id": "5cbc92d3",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "fc978561",
+                          "id": "1cf780cd",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "f6e7e155",
+                                "id": "9083a0ca",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "ဤစမ်းသပ်မှုပုံသဏ္,ာန်မူပိုင်ဘီဘီစီမူပိုင်သည်ပြင်သစ်မြေပုံကိုပြသည်။ ပုံသည်ပထမလုပ်ကွက် (၃) ခုတွင်တည်ရှိပြီးဤစာတန်းပါရှိသည်။",
                                   "blocks": [
                                     {
-                                      "id": "da364da8",
+                                      "id": "35ae3662",
                                       "type": "fragment",
                                       "model": {
                                         "text": "ဤစမ်းသပ်မှုပုံသဏ္,ာန်မူပိုင်ဘီဘီစီမူပိုင်သည်ပြင်သစ်မြေပုံကိုပြသည်။ ပုံသည်ပထမလုပ်ကွက် (၃) ခုတွင်တည်ရှိပြီးဤစာတန်းပါရှိသည်။",
@@ -116,23 +116,23 @@
                     ]
                   },
                   {
-                    "id": "5562ab58",
+                    "id": "8fadac17",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "6547a0d9",
+                          "id": "a0f6ebf3",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "befc4dc4",
+                                "id": "7c881801",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "ဤစမ်းသပ်မှုပုံသဏ္,ာန်မူပိုင်ဘီဘီစီမူပိုင်သည်ပြင်သစ်မြေပုံကိုပြသည်။ ပုံသည်ပထမလုပ်ကွက် (၃) ခုတွင်တည်ရှိပြီးဤစာတန်းပါရှိသည်။",
                                   "blocks": [
                                     {
-                                      "id": "29bc96da",
+                                      "id": "60999556",
                                       "type": "fragment",
                                       "model": {
                                         "text": "ဤစမ်းသပ်မှုပုံသဏ္,ာန်မူပိုင်ဘီဘီစီမူပိုင်သည်ပြင်သစ်မြေပုံကိုပြသည်။ ပုံသည်ပထမလုပ်ကွက် (၃) ခုတွင်တည်ရှိပြီးဤစာတန်းပါရှိသည်။",
@@ -171,7 +171,7 @@
                     ]
                   },
                   {
-                    "id": "abf772c2",
+                    "id": "75a6a743",
                     "type": "rawImage",
                     "model": {
                       "width": 624,
@@ -192,7 +192,7 @@
               ]
             },
             {
-              "id": "e05eb3d7",
+              "id": "b56245ef",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1574852713454,
@@ -203,24 +203,24 @@
               ]
             },
             {
-              "id": "b776ab09",
+              "id": "ac0fa41b",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "c2ad27eb",
+                    "id": "559b3623",
                     "type": "paragraph",
                     "model": {
                       "text": "ဤသည်မှာ သို့ တစ်ခုပါသောစာသားပိတ်ပင်တားဆီးမှုဖြစ်သည်။",
                       "blocks": [
                         {
-                          "id": "4a42646d",
+                          "id": "ec24e907",
                           "type": "urlLink",
                           "model": {
                             "text": "ဤသည်မှာ သို့",
                             "blocks": [
                               {
-                                "id": "e95cf647",
+                                "id": "03261f2c",
                                 "type": "fragment",
                                 "model": {
                                   "text": "ဤသည်မှာ သို့",
@@ -244,7 +244,7 @@
                           ]
                         },
                         {
-                          "id": "88cbb973",
+                          "id": "3e41bc2c",
                           "type": "fragment",
                           "model": {
                             "text": " တစ်ခုပါသောစာသားပိတ်ပင်တားဆီးမှုဖြစ်သည်။",
@@ -270,29 +270,29 @@
               ]
             },
             {
-              "id": "3e37f054",
+              "id": "8f9dc94e",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01k6msm",
                 "blocks": [
                   {
-                    "id": "bc3ee102",
+                    "id": "157988cb",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "3965bd91",
+                          "id": "ab868449",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "18b8ab2b",
+                                "id": "f2041828",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "ကျွန်ုပ်တို့၏ဝက်ဘ်ဆိုက်တွင်အလိုအလျောက်အဆုံးမှအဆုံးစမ်းသပ်မှုများကို",
                                   "blocks": [
                                     {
-                                      "id": "b646a38c",
+                                      "id": "615985e0",
                                       "type": "fragment",
                                       "model": {
                                         "text": "ကျွန်ုပ်တို့၏ဝက်ဘ်ဆိုက်တွင်အလိုအလျောက်အဆုံးမှအဆုံးစမ်းသပ်မှုများကို",
@@ -331,12 +331,12 @@
                     ]
                   },
                   {
-                    "id": "bbcb65b3",
+                    "id": "f8d57500",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "0e3813b9",
+                          "id": "936cffb5",
                           "blockId": "urn:bbc:ares::clip:p01k6msm",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -382,12 +382,12 @@
                           ]
                         },
                         {
-                          "id": "4b4355ea",
+                          "id": "13fcdc24",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "45c04051",
+                                "id": "de116b9f",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 1920,
@@ -404,23 +404,23 @@
                                 ]
                               },
                               {
-                                "id": "69159ccf",
+                                "id": "518110c5",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "8bae055d",
+                                      "id": "b50db167",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "ebef8d90",
+                                            "id": "e6b08893",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "Ants",
                                               "blocks": [
                                                 {
-                                                  "id": "82547f95",
+                                                  "id": "ef899015",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "Ants",
@@ -488,23 +488,23 @@
               ]
             },
             {
-              "id": "965497c0",
+              "id": "ead9d56c",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "92e3615b",
+                    "id": "8eda83bd",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "9057761a",
+                          "id": "583a7508",
                           "type": "paragraph",
                           "model": {
                             "text": "ဤသည် ပိတ်ပင်တားဆီးမှုဖြစ်ပါတယ်",
                             "blocks": [
                               {
-                                "id": "549783dd",
+                                "id": "3963a735",
                                 "type": "fragment",
                                 "model": {
                                   "text": "ဤသည် ပိတ်ပင်တားဆီးမှုဖြစ်ပါတယ်",
@@ -539,28 +539,28 @@
               ]
             },
             {
-              "id": "3258ff6f",
+              "id": "c05a792e",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "8523e9e7",
+                    "id": "73f1cb6e",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "19e05b3e",
+                          "id": "4fbf8eec",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "cb61af1d",
+                                "id": "74bd1d5b",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "ဤသည် ပိတ်ပင်တားဆီးမှုဖြစ်ပါတယ်",
                                   "blocks": [
                                     {
-                                      "id": "c3fc8b26",
+                                      "id": "a49c7bf4",
                                       "type": "fragment",
                                       "model": {
                                         "text": "ဤသည် ပိတ်ပင်တားဆီးမှုဖြစ်ပါတယ်",
@@ -599,7 +599,7 @@
                     ]
                   },
                   {
-                    "id": "f2ad7ec7",
+                    "id": "4778bd18",
                     "type": "rawImage",
                     "model": {
                       "width": 800,
@@ -620,18 +620,18 @@
               ]
             },
             {
-              "id": "1865dfb7",
+              "id": "39e3700c",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "dc63ee86",
+                    "id": "ca624974",
                     "type": "paragraph",
                     "model": {
                       "text": "ကျွန်ုပ်တို့၏ဝက်ဘ်ဆိုက်တွင်အလိုအလျောက်အဆုံးမှအဆုံးစမ်းသပ်မှုများကိုပြုလုပ်ရန်ဤစမ်းသပ်မှုဆောင်းပါးကိုဖန်တီးထားသည်။",
                       "blocks": [
                         {
-                          "id": "2cd093cd",
+                          "id": "32abb052",
                           "type": "fragment",
                           "model": {
                             "text": "ကျွန်ုပ်တို့၏ဝက်ဘ်ဆိုက်တွင်အလိုအလျောက်အဆုံးမှအဆုံးစမ်းသပ်မှုများကိုပြုလုပ်ရန်ဤစမ်းသပ်မှုဆောင်းပါးကိုဖန်တီးထားသည်။",
@@ -657,11 +657,21 @@
               ]
             },
             {
-              "id": "feb100fb",
+              "id": "687b44a1",
               "type": "mpu",
               "model": {},
               "position": [
                 9
+              ]
+            },
+            {
+              "id": "adaa7a78",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                10
               ]
             }
           ]
@@ -670,14 +680,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:cn0exdy1jzvo",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cn0exdy1jzvo"
+          "optimoUrn": "urn:bbc:optimo:asset:cn0exdy1jzvo",
+          "canonicalUrl": "https://www.bbc.com/burmese/articles/cn0exdy1jzvo"
         },
         "type": "article",
         "createdBy": "Burmese",
         "language": "my",
         "firstPublished": 1574852713454,
         "lastPublished": 1574852713454,
-        "options": {},
         "analyticsLabels": {
           "producer": "Burmese",
           "page": "burmese.articles.cn0exdy1jzvo.page"
@@ -687,7 +697,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Burmese",
           "taggings": []
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -705,26 +714,23 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "ဒါကဒီစမ်းသပ်မှုဆောင်းပါး၏ခေါင်းစဉ်ဖြစ်သည်"
-        },
-        "images": {},
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
       "topStories": [
         {
           "headlines": {
-            "headline": "ဗြိတိသျှ ဘုရင်မ ပါလီမန် ဖွင့်လှစ်"
+            "headline": "ဗြိတိသျှ ဘုရင်မ ပါလီမန် ဖွင့်လှစ်"
           },
           "locators": {
             "assetUri": "/burmese/live/burma-23285674",
             "cpsUrn": "urn:bbc:content:assetUri:burmese/live/burma-23285674",
             "assetId": "23285674"
           },
-          "summary": "သက်တော် ၉ဝ ပြည့်သွားတဲ့ ဗြိတိသျှ ဘုရင်မ ဒုတိယ အဲလဇ္ဇဘက်က လန်ဒန်က ပါလီမန်ကို မေလ ၁၈ ရက်နေ့မှာ ဖွင့်လှစ်ပေးခဲ့ပါတယ်။",
+          "summary": "သက်တော် ၉ဝ ပြည့်သွားတဲ့ ဗြိတိသျှ ဘုရင်မ ဒုတိယ အဲလဇ္ဇဘက်က လန်ဒန်က ပါလီမန်ကို မေလ ၁၈ ရက်နေ့မှာ ဖွင့်လှစ်ပေးခဲ့ပါတယ်။",
           "timestamp": 1586255436000,
           "language": "my",
           "cpsType": "LIV",
@@ -807,8 +813,8 @@
           "type": "cps"
         },
         {
-          "name": "ဗြိတိသျှ ဘုရင်မ ပါလီမန် ဖွင့်လှစ်",
-          "summary": "သက်တော် ၉ဝ ပြည့်သွားတဲ့ ဗြိတိသျှ ဘုရင်မ ဒုတိယ အဲလဇ္ဇဘက်က လန်ဒန်က ပါလီမန်ကို မေလ ၁၈ ရက်နေ့မှာ ဖွင့်လှစ်ပေးခဲ့ပါတယ်။",
+          "name": "ဗြိတိသျှ ဘုရင်မ ပါလီမန် ဖွင့်လှစ်",
+          "summary": "သက်တော် ၉ဝ ပြည့်သွားတဲ့ ဗြိတိသျှ ဘုရင်မ ဒုတိယ အဲလဇ္ဇဘက်က လန်ဒန်က ပါလီမန်ကို မေလ ၁၈ ရက်နေ့မှာ ဖွင့်လှစ်ပေးခဲ့ပါတယ်။",
           "indexImage": {
             "id": "63503483",
             "subType": "index",
@@ -985,7 +991,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T22:51:57.475Z",
+        "generated": "2023-02-17T16:36:57.189Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T11:23:00Z",
         "totalRecords": 20,
@@ -1440,8 +1446,8 @@
             "urn": "urn:bbc:curie:asset:43420884-6d71-744c-9b1a-da7398d0b7d1",
             "promo": {
               "headlines": {
-                "shortHeadline": "သမ္မတ ပုဂံသွားကြည့်",
-                "headline": "သမ္မတ ပုဂံသွားကြည့်"
+                "shortHeadline": "သမ္မတ ပုဂံသွားကြည့်",
+                "headline": "သမ္မတ ပုဂံသွားကြည့်"
               },
               "locators": {
                 "assetUri": "/burmese/burma-23070010",
@@ -1450,7 +1456,7 @@
                 "cpsUrn": "urn:bbc:content:assetUri:burmese/burma-23070010",
                 "curie": "http://www.bbc.co.uk/asset/43420884-6d71-744c-9b1a-da7398d0b7d1"
               },
-              "summary": "ငလျင် အပျက်အစီးတွေကို ကြည့်ရှု စစ်ဆေးဖို့ သမ္မတ ဦးထင်ကျော်နဲ့ အဖွဲ့ ပုဂံကို သွားရောက်ခဲ့ပါတယ်။",
+              "summary": "ငလျင် အပျက်အစီးတွေကို ကြည့်ရှု စစ်ဆေးဖို့ သမ္မတ ဦးထင်ကျော်နဲ့ အဖွဲ့ ပုဂံကို သွားရောက်ခဲ့ပါတယ်။",
               "timestamp": 1472208324000,
               "language": "my",
               "passport": {

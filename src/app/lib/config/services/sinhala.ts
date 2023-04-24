@@ -1,9 +1,3 @@
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_GHOST,
-  C_POSTBOX_30,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
 import sinhalese from '../../../components/ThemeProvider/fontScripts/sinhalese';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/si';
@@ -38,7 +32,6 @@ export const service: DefaultServiceConfig = {
     service: 'sinhala',
     serviceName: 'Sinhala',
     languageName: 'Sinhala',
-    themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcsinhala',
     twitterSite: '@bbcsinhala',
     noBylinesPolicy:
@@ -49,13 +42,6 @@ export const service: DefaultServiceConfig = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'මුල් පිටුව',
-    theming: {
-      brandBackgroundColour: `${C_POSTBOX}`,
-      brandLogoColour: `${C_WHITE}`,
-      brandForegroundColour: `${C_GHOST}`,
-      brandHighlightColour: `${C_WHITE}`,
-      brandBorderColour: `${C_POSTBOX_30}`,
-    },
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
@@ -260,6 +246,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'ප්‍රධාන පුවත',
       featuresAnalysisTitle: 'දැක්ම',
+      latestMediaTitle: 'අලුත්ම',
     },
     mostRead: {
       header: 'වැඩිපුරම කියැවූ',
@@ -306,8 +293,8 @@ export const service: DefaultServiceConfig = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-          text: 'AdChoices / Do Not Sell My Info',
+          href: '#',
+          text: 'Do not share or sell my info',
           lang: 'en-GB',
         },
       ],

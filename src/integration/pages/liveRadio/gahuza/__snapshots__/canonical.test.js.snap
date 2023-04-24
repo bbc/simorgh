@@ -55,13 +55,6 @@ Object {
 
 exports[`Canonical Live Radio Footer Anchors should match text and url 8`] = `
 Object {
-  "text": "AdChoices / Do Not Sell My Info",
-  "url": "https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/",
-}
-`;
-
-exports[`Canonical Live Radio Footer Anchors should match text and url 9`] = `
-Object {
   "text": "Soma ibijanye n'aho duhagaze ku mihora ijana ahandi",
   "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
 }
@@ -111,7 +104,7 @@ Object {
 exports[`Canonical Live Radio Header Navigation link should match text and url 6`] = `
 Object {
   "text": "Amajwi n’amashusho",
-  "url": "/gahuza/media/video",
+  "url": "/gahuza/topics/crldzm936jmt",
 }
 `;
 

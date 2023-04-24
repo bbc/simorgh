@@ -55,13 +55,6 @@ Object {
 
 exports[`Canonical Front Page Footer Anchors should match text and url 8`] = `
 Object {
-  "text": "AdChoices / Do Not Sell My Info",
-  "url": "https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/",
-}
-`;
-
-exports[`Canonical Front Page Footer Anchors should match text and url 9`] = `
-Object {
   "text": "De way wey we de take go external link.",
   "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
 }
@@ -104,7 +97,7 @@ Object {
 exports[`Canonical Front Page Header Navigation link should match text and url 5`] = `
 Object {
   "text": "Video",
-  "url": "/pidgin/media/video",
+  "url": "/pidgin/topics/c3l19z3k1ert",
 }
 `;
 

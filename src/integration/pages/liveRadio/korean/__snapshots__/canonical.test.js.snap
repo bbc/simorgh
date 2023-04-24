@@ -55,13 +55,6 @@ Object {
 
 exports[`Canonical Korean Live Radio Page Footer Anchors should match text and url 8`] = `
 Object {
-  "text": "AdChoices / Do Not Sell My Info",
-  "url": "https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/",
-}
-`;
-
-exports[`Canonical Korean Live Radio Page Footer Anchors should match text and url 9`] = `
-Object {
   "text": "외부 링크에 대한 본사 정책 보기",
   "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
 }
@@ -89,12 +82,19 @@ Object {
 
 exports[`Canonical Korean Live Radio Page Header Navigation link should match text and url 3`] = `
 Object {
+  "text": "라디오",
+  "url": "/korean/bbc_korean_radio/programmes/w13xttll",
+}
+`;
+
+exports[`Canonical Korean Live Radio Page Header Navigation link should match text and url 4`] = `
+Object {
   "text": "다운로드",
   "url": "/korean/downloads",
 }
 `;
 
-exports[`Canonical Korean Live Radio Page Header Navigation link should match text and url 4`] = `
+exports[`Canonical Korean Live Radio Page Header Navigation link should match text and url 5`] = `
 Object {
   "text": "TOP 뉴스",
   "url": "/korean/popular/read",

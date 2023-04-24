@@ -1,10 +1,9 @@
-import { C_METAL, C_EBON } from '#psammead/psammead-styles/src/colours';
 import styled from '@emotion/styled';
 
 // `display: inline-block` has been used to resolve Focus Indicator bug in Firefox high contrast mode.
 const Link = styled.a`
   position: static;
-  color: ${C_EBON};
+  color: ${props => props.theme.palette.EBON};
   text-decoration: none;
   overflow-wrap: anywhere;
   display: inline-block;
@@ -27,7 +26,8 @@ const Link = styled.a`
   }
 
   &:visited {
-    color: ${C_METAL};
+    color: ${({ theme }) =>
+      theme.isDarkUi ? theme.palette.GREY_6 : theme.palette.METAL};
   }
 `;
 

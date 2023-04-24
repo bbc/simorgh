@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "b67d2f1e",
+              "id": "ead780fd",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "ae0c8c39",
+                    "id": "9d40c8d7",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "cc05cb51",
+                          "id": "141156f9",
                           "type": "paragraph",
                           "model": {
                             "text": "Nke a bụ isiokwu nke isiokwu ule a",
                             "blocks": [
                               {
-                                "id": "15c4ea10",
+                                "id": "c71dc84b",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Nke a bụ isiokwu nke isiokwu ule a",
@@ -56,28 +56,28 @@
               ]
             },
             {
-              "id": "2721e69b",
+              "id": "90249017",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "c2609612",
+                    "id": "2ef418e8",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "f008765f",
+                          "id": "cba6d64f",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "6fab644d",
+                                "id": "f2fe23b8",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Foto nnwale a, BBC nwebisiinka, na-egosi maapụ France. Ihe onyonyo a dị na ngalaba atọ nke mbụ nwere isi okwu a.",
                                   "blocks": [
                                     {
-                                      "id": "05a8bac7",
+                                      "id": "04f9c2c1",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Foto nnwale a, BBC nwebisiinka, na-egosi maapụ France. Ihe onyonyo a dị na ngalaba atọ nke mbụ nwere isi okwu a.",
@@ -116,23 +116,23 @@
                     ]
                   },
                   {
-                    "id": "51d940c4",
+                    "id": "742a055d",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "13b9506f",
+                          "id": "dd40fbde",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "6bbed2f2",
+                                "id": "cb420fff",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Maapụ nke France na-egosi Paris na Cognac",
                                   "blocks": [
                                     {
-                                      "id": "3a291d18",
+                                      "id": "c627d366",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Maapụ nke France na-egosi Paris na Cognac",
@@ -171,7 +171,7 @@
                     ]
                   },
                   {
-                    "id": "f1f95afa",
+                    "id": "cc8a3e8b",
                     "type": "rawImage",
                     "model": {
                       "width": 624,
@@ -192,7 +192,7 @@
               ]
             },
             {
-              "id": "7108d447",
+              "id": "93982dcc",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562936759286,
@@ -203,18 +203,18 @@
               ]
             },
             {
-              "id": "e0191615",
+              "id": "ebec40a0",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "caa4ed94",
+                    "id": "ce70cc35",
                     "type": "paragraph",
                     "model": {
                       "text": "Nke a bụ ngọngọ ederede, nke nwere njikọ URL na ebe obibi BBC Weather.",
                       "blocks": [
                         {
-                          "id": "1b0be69d",
+                          "id": "9475daf6",
                           "type": "fragment",
                           "model": {
                             "text": "Nke a bụ ngọngọ ederede, nke nwere njikọ URL na ",
@@ -227,13 +227,13 @@
                           ]
                         },
                         {
-                          "id": "9ae5eb21",
+                          "id": "04b7739e",
                           "type": "urlLink",
                           "model": {
                             "text": "ebe obibi BBC Weather.",
                             "blocks": [
                               {
-                                "id": "1242a431",
+                                "id": "a2b817c9",
                                 "type": "fragment",
                                 "model": {
                                   "text": "ebe obibi BBC Weather.",
@@ -270,29 +270,29 @@
               ]
             },
             {
-              "id": "2f9cdf76",
+              "id": "b9ccad8c",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01k6msm",
                 "blocks": [
                   {
-                    "id": "96035d5a",
+                    "id": "e850e02d",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "7ec46d0d",
+                          "id": "01db21e4",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "ca576304",
+                                "id": "b600b6a9",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Nke a bụ ngọngọ vidiyo nwere vidiyo gbasara ndanda",
                                   "blocks": [
                                     {
-                                      "id": "d6187f9e",
+                                      "id": "632bdc70",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Nke a bụ ngọngọ vidiyo nwere vidiyo gbasara ndanda",
@@ -331,12 +331,12 @@
                     ]
                   },
                   {
-                    "id": "91973fb4",
+                    "id": "f937a33a",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "f316c8fd",
+                          "id": "e6800c93",
                           "blockId": "urn:bbc:ares::clip:p01k6msm",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -382,12 +382,12 @@
                           ]
                         },
                         {
-                          "id": "197b39a4",
+                          "id": "7e4d0178",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "f2ee8ea6",
+                                "id": "e63d97e8",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 1920,
@@ -404,23 +404,23 @@
                                 ]
                               },
                               {
-                                "id": "219a4f53",
+                                "id": "0a0d64d4",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "9fccb84f",
+                                      "id": "a4ff77d4",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "4e584c6c",
+                                            "id": "bdba9a60",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "Ants",
                                               "blocks": [
                                                 {
-                                                  "id": "6da6e4ac",
+                                                  "id": "926d9749",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "Ants",
@@ -488,23 +488,23 @@
               ]
             },
             {
-              "id": "946a60b5",
+              "id": "dfb0081c",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "9ec12c5c",
+                    "id": "021d4b43",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "8723440d",
+                          "id": "0a3af364",
                           "type": "paragraph",
                           "model": {
                             "text": "Nke a bụ ngọngọ nke isiokwu dị n'okpuru",
                             "blocks": [
                               {
-                                "id": "18a1ac69",
+                                "id": "e1c52bb1",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Nke a bụ ngọngọ nke isiokwu dị n'okpuru",
@@ -539,28 +539,28 @@
               ]
             },
             {
-              "id": "7f845245",
+              "id": "71c9eef9",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "cf957cb6",
+                    "id": "098851cc",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "9ecd6ef8",
+                          "id": "3de1bfc4",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "acb92ddf",
+                                "id": "8a1b0465",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Ndị egwuregwu bọọlụ mechara otu egwuregwu\r",
                                   "blocks": [
                                     {
-                                      "id": "86ddcbcd",
+                                      "id": "9ea3a65a",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Ndị egwuregwu bọọlụ mechara otu egwuregwu\r",
@@ -599,7 +599,7 @@
                     ]
                   },
                   {
-                    "id": "ac9b243f",
+                    "id": "92d426fa",
                     "type": "rawImage",
                     "model": {
                       "width": 2048,
@@ -620,18 +620,18 @@
               ]
             },
             {
-              "id": "0924b4e6",
+              "id": "968e3391",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "46417285",
+                    "id": "9978e0e8",
                     "type": "paragraph",
                     "model": {
                       "text": "Edepụtara isiokwu ule a ka anyị wee nwee ike ịme ngwụsị ngwụsị akpaghị aka na weebụsaịtị anyị.",
                       "blocks": [
                         {
-                          "id": "9233e167",
+                          "id": "d65fa6d6",
                           "type": "fragment",
                           "model": {
                             "text": "Edepụtara isiokwu ule a ka anyị wee nwee ike ịme ngwụsị ngwụsị akpaghị aka na weebụsaịtị anyị.",
@@ -657,11 +657,21 @@
               ]
             },
             {
-              "id": "9f70a78b",
+              "id": "6e711752",
               "type": "mpu",
               "model": {},
               "position": [
                 9
+              ]
+            },
+            {
+              "id": "59ac85c2",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                10
               ]
             }
           ]
@@ -670,14 +680,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:cr1lw620ygjo",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cr1lw620ygjo"
+          "optimoUrn": "urn:bbc:optimo:asset:cr1lw620ygjo",
+          "canonicalUrl": "https://www.bbc.com/igbo/articles/cr1lw620ygjo"
         },
         "type": "article",
         "createdBy": "Igbo",
         "language": "ig",
         "firstPublished": 1562936759286,
         "lastPublished": 1569599205836,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:cr1lw620ygjo",
           "producer": "Igbo",
@@ -688,7 +698,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Igbo",
           "taggings": []
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -707,12 +716,9 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "Nke a bụ isiokwu SEO nke isiokwu nnwale a"
-        },
-        "images": {},
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -1363,7 +1369,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T21:12:57.03Z",
+        "generated": "2023-02-17T21:12:57.19Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
         "totalRecords": 20,

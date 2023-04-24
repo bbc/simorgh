@@ -132,6 +132,9 @@ exports[`VJ include container on Amp should render an amp-iframe with an image p
 }
 
 .emotion-2>[overflow] button {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   background-color: #222222;

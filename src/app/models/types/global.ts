@@ -1,3 +1,7 @@
+export type Environments = 'local' | 'test' | 'live';
+
+export type Platforms = 'amp' | 'canonical';
+
 export type SocialEmbedProviders =
   | 'facebook'
   | 'twitter'
@@ -7,6 +11,7 @@ export type SocialEmbedProviders =
 
 export type PageTypes =
   | 'article'
+  | 'mediaArticle'
   | 'frontPage'
   | 'media'
   | 'mostRead'
@@ -14,12 +19,12 @@ export type PageTypes =
   | 'error'
   | 'IDX'
   | 'FIX'
-  | 'MAP'
+  | 'MAP' // CPS MAP page
   | 'STY'
   | 'PGL'
   | 'CSP'
   | 'TOPIC'
-  | 'HOME';
+  | 'home';
 
 export type SerbianService = {
   service: 'serbian';

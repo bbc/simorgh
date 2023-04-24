@@ -1,9 +1,3 @@
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_GHOST,
-  C_POSTBOX_30,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import '#psammead/moment-timezone-include/tz/Africa/Mogadishu';
 import '#psammead/psammead-locales/moment/so';
@@ -38,7 +32,6 @@ export const service: DefaultServiceConfig = {
     service: 'somali',
     serviceName: 'Somali',
     languageName: 'Somali',
-    themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcsomali',
     twitterSite: '@bbcsomali',
     noBylinesPolicy:
@@ -49,13 +42,6 @@ export const service: DefaultServiceConfig = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Somali',
-    theming: {
-      brandBackgroundColour: `${C_POSTBOX}`,
-      brandLogoColour: `${C_WHITE}`,
-      brandForegroundColour: `${C_GHOST}`,
-      brandHighlightColour: `${C_WHITE}`,
-      brandBorderColour: `${C_POSTBOX_30}`,
-    },
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
@@ -270,6 +256,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'Wararka ugu waaweyn',
       featuresAnalysisTitle: 'Xul',
+      latestMediaTitle: 'Arrimhii u danbeeyey',
     },
     mostRead: {
       header: 'Ugu akhris badan',
@@ -322,8 +309,8 @@ export const service: DefaultServiceConfig = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-          text: 'AdChoices / Do Not Sell My Info',
+          href: '#',
+          text: 'Do not share or sell my info',
           lang: 'en-GB',
         },
       ],
@@ -346,7 +333,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'Muuqaal',
-        url: '/somali/media/video',
+        url: '/somali/topics/c7pl4k5r9xxt',
       },
       {
         title: 'Barnaamijyada Idaacadda',

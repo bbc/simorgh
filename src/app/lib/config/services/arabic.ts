@@ -1,9 +1,3 @@
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_GHOST,
-  C_POSTBOX_30,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
 import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
 import '#psammead/psammead-locales/moment/ar';
 import '#psammead/moment-timezone-include/tz/GMT';
@@ -38,7 +32,6 @@ export const service: DefaultServiceConfig = {
     service: 'arabic',
     serviceName: 'Arabic',
     languageName: 'Arabic',
-    themeColor: `${C_POSTBOX}`,
     twitterCreator: '@BBCArabic',
     twitterSite: '@BBCArabic',
     noBylinesPolicy:
@@ -50,26 +43,20 @@ export const service: DefaultServiceConfig = {
     swPath: '/sw.js',
     frontPageTitle: 'الرئيسية',
     iTunesAppId: 558497376,
-    theming: {
-      brandBackgroundColour: `${C_POSTBOX}`,
-      brandLogoColour: `${C_WHITE}`,
-      brandForegroundColour: `${C_GHOST}`,
-      brandHighlightColour: `${C_WHITE}`,
-      brandBorderColour: `${C_POSTBOX_30}`,
-    },
     showAdPlaceholder: true,
     showRelatedTopics: true,
     podcastPromo: {
       title: 'البودكاست',
-      brandTitle: 'تغيير بسيط (A Simple Change)',
-      brandDescription: 'تغيير بسيط: ما علاقة سلة مشترياتك بتغير المناخ؟',
+      brandTitle: 'بي بي سي إكسترا',
+      brandDescription:
+        'بودكاست أسبوعي يقدم  قصصا إنسانية عن العالم العربي وشبابه.',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0c9wp5c.jpg',
-        alt: 'تغيير بسيط',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p09t98w8.jpg',
+        alt: 'بي بي سي إكسترا',
       },
       linkLabel: {
         text: 'الحلقات',
-        href: 'https://www.bbc.com/arabic/podcasts/p0c9wp0l',
+        href: 'https://www.bbc.com/arabic/podcasts/p02pc9qc',
       },
       skipLink: {
         text: 'تخطى %title% وواصل القراءة',
@@ -249,6 +236,7 @@ export const service: DefaultServiceConfig = {
         duration: 'المدة',
         recentEpisodes: 'البرامج السابقة',
         podcastExternalLinks: 'هذا البودكاست متاح عبر',
+        download: 'تحميل الحلقة',
       },
       socialEmbed: {
         caption: {
@@ -338,8 +326,8 @@ export const service: DefaultServiceConfig = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-          text: 'AdChoices / Do Not Sell My Info',
+          href: '#',
+          text: 'Do not share or sell my info',
           lang: 'en-GB',
         },
       ],

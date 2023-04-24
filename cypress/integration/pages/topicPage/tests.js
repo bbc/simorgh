@@ -35,7 +35,7 @@ export default ({ service, pageType, variant }) => {
           method: 'GET',
           url: `https://web-cdn.${
             env === 'live' ? '' : `${env}.`
-          }api.bbci.co.uk/fd/simorgh-bff?page=1&id=${topicId}&service=${service}${appendVariant}`,
+          }api.bbci.co.uk/fd/simorgh-bff?page=1&id=${topicId}&service=${service}${appendVariant}&pageType=topic`,
         };
 
         if (Cypress.env('currentPath').includes('?renderer_env=test')) {
@@ -57,6 +57,7 @@ export default ({ service, pageType, variant }) => {
         });
         cy.log(`topic id ${topicId}`);
       }
+      cy.clearLocalStorage();
     });
 
     describe(`Page content`, () => {
@@ -70,7 +71,7 @@ export default ({ service, pageType, variant }) => {
         // the number of promos in the data from the BFF
         // This is to help find out why sometimes a promo doesn't show on the page
         cy.log(`Number of promos in BFF data${numberOfItems}`);
-        const selector = '[data-testid="topic-promos"] > li';
+        const selector = '[data-testid="topic-promos"]:first > li';
         const promoCount = Cypress.$(selector).length;
         cy.log(`Number of promos on the page${promoCount}`);
 
@@ -84,6 +85,7 @@ export default ({ service, pageType, variant }) => {
 
         // Checks number of items on page
         cy.get('[data-testid="topic-promos"]')
+          .first()
           .children()
           .its('length')
           .should('eq', numberOfItems);
@@ -92,6 +94,7 @@ export default ({ service, pageType, variant }) => {
         cy.log(firstItemHeadline);
         // Goes down into the first item's h2 text and compares to title
         cy.get('[data-testid="topic-promos"]')
+          .first()
           .children()
           .first()
           .within(() => {
@@ -101,6 +104,7 @@ export default ({ service, pageType, variant }) => {
       it('Clicking the first item should navigate to the correct page (goes to live article)', () => {
         // Goes down into the first item's href
         cy.get('[data-testid="topic-promos"]')
+          .first()
           .children()
           .first()
           .within(() => {
@@ -108,30 +112,7 @@ export default ({ service, pageType, variant }) => {
               .should('have.attr', 'href')
               .then($href => {
                 cy.get('a').click();
-                cy.url()
-                  .should('eq', $href)
-                  .then(() => {
-                    cy.window().then(win => {
-                      const jsonData = win.SIMORGH_DATA.pageData;
-
-                      if (jsonData.metadata.locators.cpsUrn) {
-                        cy.log('cps article');
-                        const { shortHeadline } = jsonData.promo.headlines;
-                        expect(shortHeadline).to.equal(firstItemHeadline);
-                      }
-                      if (jsonData.metadata.locators.optimoUrn) {
-                        cy.log('optimo article');
-                        const headline =
-                          jsonData.promo.headlines.promoHeadline.blocks[0].model
-                            .blocks[0].model.text;
-                        cy.log(
-                          jsonData.promo.headlines.promoHeadline.blocks[0].model
-                            .blocks[0].model.text,
-                        );
-                        expect(headline).to.equal(firstItemHeadline);
-                      }
-                    });
-                  });
+                cy.url().should('eq', $href);
               });
           });
       });

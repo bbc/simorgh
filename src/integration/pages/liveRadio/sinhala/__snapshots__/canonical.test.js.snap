@@ -48,13 +48,6 @@ Object {
 
 exports[`Canonical Sinhala Live Radio Page Footer Anchors should match text and url 7`] = `
 Object {
-  "text": "AdChoices / Do Not Sell My Info",
-  "url": "https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/",
-}
-`;
-
-exports[`Canonical Sinhala Live Radio Page Footer Anchors should match text and url 8`] = `
-Object {
   "text": "බාහිර යොමු කෙරෙහි අපගේ ප්‍රවේශය ගැන කියවන්න.",
   "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
 }

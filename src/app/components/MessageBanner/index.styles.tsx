@@ -92,10 +92,6 @@ const styles = {
     css({
       color: palette.BLACK,
       textDecoration: 'none',
-      '&:hover, &:focus': {
-        textDecoration: 'underline',
-        color: palette.BLACK,
-      },
       paddingInlineStart: '0.5rem',
       verticalAlign: 'middle',
       '&:visited': {

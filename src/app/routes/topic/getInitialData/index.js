@@ -3,6 +3,7 @@ import nodeLogger from '#lib/logger.node';
 import pipe from 'ramda/src/pipe';
 import Url from 'url-parse';
 import { getUrlPath } from '#lib/utilities/urlParser';
+import getEnvironment from '#app/routes/utils/getEnvironment';
 import fetchPageData from '../../utils/fetchPageData';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 
@@ -13,11 +14,20 @@ const popId = path => path.split('/').pop();
 
 const getId = pipe(getUrlPath, removeAmp, popId);
 
+const getServiceEnv = pathname => {
+  const url = Url(`https://www.bbc.com${pathname}`, true);
+
+  return url.query.renderer_env || 'live';
+};
+
 export default async ({ getAgent, service, path: pathname, variant, page }) => {
   try {
-    const env = pathname.includes('renderer_env=test') ? 'test' : 'live';
-    const agent = await getAgent();
+    const env = getEnvironment(pathname);
+    const isLocal = !env || env === 'local';
+
+    const agent = isLocal ? null : await getAgent();
     const id = getId(pathname);
+
     const parsedBffUrl = Url(process.env.BFF_PATH).set('query', {
       id,
       service,
@@ -27,10 +37,20 @@ export default async ({ getAgent, service, path: pathname, variant, page }) => {
       ...(page && {
         page,
       }),
+      pageType: 'topic',
     });
-    const optHeaders = { 'ctx-service-env': env };
+
+    const variantPath = variant ? `/${variant}` : '';
+
+    const fetchUrl = isLocal
+      ? Url(`/${service}${variantPath}/topics/${id}`)
+      : parsedBffUrl;
+
+    const serviceEnv = getServiceEnv(pathname);
+    const optHeaders = isLocal ? null : { 'ctx-service-env': serviceEnv };
+
     const { status, json } = await fetchPageData({
-      path: parsedBffUrl.toString(),
+      path: fetchUrl.toString(),
       agent,
       optHeaders,
     });

@@ -1,9 +1,3 @@
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_GHOST,
-  C_POSTBOX_30,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
 import devanagari from '../../../components/ThemeProvider/fontScripts/devanagari';
 import '#psammead/moment-timezone-include/tz/Asia/Kolkata';
 import withContext from '../../../contexts/utils/withContext';
@@ -38,7 +32,6 @@ export const service: DefaultServiceConfig = {
     service: 'telugu',
     serviceName: 'Telugu',
     languageName: 'Telugu',
-    themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnewstelugu',
     twitterSite: '@bbcnewstelugu',
     noBylinesPolicy:
@@ -49,13 +42,6 @@ export const service: DefaultServiceConfig = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'వార్తలు',
-    theming: {
-      brandBackgroundColour: `${C_POSTBOX}`,
-      brandLogoColour: `${C_WHITE}`,
-      brandForegroundColour: `${C_GHOST}`,
-      brandHighlightColour: `${C_WHITE}`,
-      brandBorderColour: `${C_POSTBOX_30}`,
-    },
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
@@ -269,6 +255,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'ముఖ్యమైన కథనాలు',
       featuresAnalysisTitle: 'ఫీచర్లు',
+      latestMediaTitle: 'తాజా వార్తలు',
     },
     mostRead: {
       header: 'ఎక్కువమంది చదివినవి',
@@ -319,8 +306,8 @@ export const service: DefaultServiceConfig = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-          text: 'AdChoices / Do Not Sell My Info',
+          href: '#',
+          text: 'Do not share or sell my info',
           lang: 'en-GB',
         },
       ],

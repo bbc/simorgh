@@ -554,7 +554,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
     outline: none;
   }
 
-  .emotion-43:focus-visible:focus-visible::after {
+  .emotion-43:focus-visible::after {
     outline: 0.1875rem solid #000000;
     content: '';
     position: absolute;
@@ -562,7 +562,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
     height: 100%;
   }
 
-  .emotion-43:focus-visible:after {
+  .emotion-43:after {
     content: ' ';
     height: 100%;
     width: 3rem;
@@ -580,7 +580,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   }
 
   @media (min-width: 25rem) {
-    .emotion-43:focus-visible:after {
+    .emotion-43:after {
       width: 6rem;
     }
   }
@@ -630,7 +630,6 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FDFDFD;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
@@ -987,17 +986,17 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   text-decoration: underline;
 }
 
-.emotion-192 {
+.emotion-190 {
   color: #FFFFFF;
   margin: 0;
   padding: 1rem 0;
 }
 
-.emotion-192 a {
+.emotion-190 a {
   padding: 0;
 }
 
-.emotion-194 {
+.emotion-192 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -1008,8 +1007,8 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   text-decoration: none;
 }
 
-.emotion-194:hover,
-.emotion-194:focus {
+.emotion-192:hover,
+.emotion-192:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
@@ -1645,18 +1644,10 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
             <li
               class="emotion-160 emotion-161"
               role="listitem"
-            >
-              <a
-                class="focusIndicatorInvert emotion-162 emotion-163"
-                href="https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/"
-                lang="en-GB"
-              >
-                AdChoices / Do Not Sell My Info
-              </a>
-            </li>
+            />
           </ul>
           <p
-            class="emotion-192 emotion-193"
+            class="emotion-190 emotion-191"
           >
             <span
               lang="en-GB"
@@ -1667,7 +1658,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
             2023 BBC. The BBC is not responsible for the content of external sites.
              
             <a
-              class="focusIndicatorInvert emotion-194 emotion-163"
+              class="focusIndicatorInvert emotion-192 emotion-163"
               href="https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links"
             >
               Read about our approach to external linking.

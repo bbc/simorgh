@@ -198,7 +198,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
     outline: none;
   }
 
-  .emotion-65:focus-visible:focus-visible::after {
+  .emotion-65:focus-visible::after {
     outline: 0.1875rem solid #000000;
     content: '';
     position: absolute;
@@ -206,7 +206,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
     height: 100%;
   }
 
-  .emotion-65:focus-visible:after {
+  .emotion-65:after {
     content: ' ';
     height: 100%;
     width: 3rem;
@@ -224,7 +224,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   }
 
   @media (min-width: 25rem) {
-    .emotion-65:focus-visible:after {
+    .emotion-65:after {
       width: 6rem;
     }
   }
@@ -281,7 +281,6 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FDFDFD;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
@@ -358,7 +357,6 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FDFDFD;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
@@ -1034,7 +1032,7 @@ exports[`Navigation Container should correctly render amp navigation on non-home
     outline: none;
   }
 
-  .emotion-61:focus-visible:focus-visible::after {
+  .emotion-61:focus-visible::after {
     outline: 0.1875rem solid #000000;
     content: '';
     position: absolute;
@@ -1042,7 +1040,7 @@ exports[`Navigation Container should correctly render amp navigation on non-home
     height: 100%;
   }
 
-  .emotion-61:focus-visible:after {
+  .emotion-61:after {
     content: ' ';
     height: 100%;
     width: 3rem;
@@ -1060,7 +1058,7 @@ exports[`Navigation Container should correctly render amp navigation on non-home
   }
 
   @media (min-width: 25rem) {
-    .emotion-61:focus-visible:after {
+    .emotion-61:after {
       width: 6rem;
     }
   }
@@ -1117,7 +1115,6 @@ exports[`Navigation Container should correctly render amp navigation on non-home
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FDFDFD;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
@@ -1773,7 +1770,7 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
     outline: none;
   }
 
-  .emotion-61:focus-visible:focus-visible::after {
+  .emotion-61:focus-visible::after {
     outline: 0.1875rem solid #000000;
     content: '';
     position: absolute;
@@ -1781,7 +1778,7 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
     height: 100%;
   }
 
-  .emotion-61:focus-visible:after {
+  .emotion-61:after {
     content: ' ';
     height: 100%;
     width: 3rem;
@@ -1799,7 +1796,7 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
   }
 
   @media (min-width: 25rem) {
-    .emotion-61:focus-visible:after {
+    .emotion-61:after {
       width: 6rem;
     }
   }
@@ -1856,7 +1853,6 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FDFDFD;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
@@ -2447,7 +2443,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
     outline: none;
   }
 
-  .emotion-12:focus-visible:focus-visible::after {
+  .emotion-12:focus-visible::after {
     outline: 0.1875rem solid #000000;
     content: '';
     position: absolute;
@@ -2455,7 +2451,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
     height: 100%;
   }
 
-  .emotion-12:focus-visible:after {
+  .emotion-12:after {
     content: ' ';
     height: 100%;
     width: 3rem;
@@ -2473,7 +2469,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   }
 
   @media (min-width: 25rem) {
-    .emotion-12:focus-visible:after {
+    .emotion-12:after {
       width: 6rem;
     }
   }
@@ -2523,7 +2519,6 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FDFDFD;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
@@ -2600,7 +2595,6 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FDFDFD;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
@@ -3262,7 +3256,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
     outline: none;
   }
 
-  .emotion-12:focus-visible:focus-visible::after {
+  .emotion-12:focus-visible::after {
     outline: 0.1875rem solid #000000;
     content: '';
     position: absolute;
@@ -3270,7 +3264,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
     height: 100%;
   }
 
-  .emotion-12:focus-visible:after {
+  .emotion-12:after {
     content: ' ';
     height: 100%;
     width: 3rem;
@@ -3288,7 +3282,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
   }
 
   @media (min-width: 25rem) {
-    .emotion-12:focus-visible:after {
+    .emotion-12:after {
       width: 6rem;
     }
   }
@@ -3338,7 +3332,6 @@ exports[`Navigation Container should correctly render canonical navigation on no
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FDFDFD;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
@@ -3975,7 +3968,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
     outline: none;
   }
 
-  .emotion-12:focus-visible:focus-visible::after {
+  .emotion-12:focus-visible::after {
     outline: 0.1875rem solid #000000;
     content: '';
     position: absolute;
@@ -3983,7 +3976,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
     height: 100%;
   }
 
-  .emotion-12:focus-visible:after {
+  .emotion-12:after {
     content: ' ';
     height: 100%;
     width: 3rem;
@@ -4001,7 +3994,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
   }
 
   @media (min-width: 25rem) {
-    .emotion-12:focus-visible:after {
+    .emotion-12:after {
       width: 6rem;
     }
   }
@@ -4051,7 +4044,6 @@ exports[`Navigation Container should correctly render canonical navigation on no
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FDFDFD;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;

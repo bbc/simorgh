@@ -13,6 +13,7 @@ import { blockContainingText } from '#models/blocks';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import FigureContainer from '.';
+import ThemeProvider from '../../../components/ThemeProvider';
 
 const imageAlt = 'Pauline Clayton';
 const imageHeight = 360;
@@ -163,30 +164,32 @@ const GenerateFixtureData = ({
   type,
   service,
 }) => (
-  <ServiceContextProvider service={service || 'news'}>
-    <RequestContextProvider
-      bbcOrigin="https://www.test.bbc.co.uk"
-      id="c0000000000o"
-      isAmp={platform === 'amp'}
-      pageType={ARTICLE_PAGE}
-      pathname="/pathname"
-      service="news"
-      statusCode={200}
-    >
-      <FigureContainer
-        alt={imageAlt}
-        captionBlock={caption}
-        copyright={copyright}
-        height={height}
-        ratio={imageRatio}
-        src={imageSrc}
-        width={width}
-        type={type}
-        lazyLoad={lazyLoad}
-        showCopyright
-      />
-    </RequestContextProvider>
-  </ServiceContextProvider>
+  <ThemeProvider service={service || 'news'}>
+    <ServiceContextProvider service={service || 'news'}>
+      <RequestContextProvider
+        bbcOrigin="https://www.test.bbc.co.uk"
+        id="c0000000000o"
+        isAmp={platform === 'amp'}
+        pageType={ARTICLE_PAGE}
+        pathname="/pathname"
+        service="news"
+        statusCode={200}
+      >
+        <FigureContainer
+          alt={imageAlt}
+          captionBlock={caption}
+          copyright={copyright}
+          height={height}
+          ratio={imageRatio}
+          src={imageSrc}
+          width={width}
+          type={type}
+          lazyLoad={lazyLoad}
+          showCopyright
+        />
+      </RequestContextProvider>
+    </ServiceContextProvider>
+  </ThemeProvider>
 );
 
 GenerateFixtureData.propTypes = {

@@ -1,9 +1,3 @@
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_GHOST,
-  C_POSTBOX_30,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
 import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
 import 'moment/locale/fa';
 import '#psammead/moment-timezone-include/tz/GMT';
@@ -40,7 +34,6 @@ export const service: DefaultServiceConfig = {
     serviceName: 'Persian',
     languageName: 'Persian',
     altCalendar: jalaali,
-    themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcpersian',
     twitterSite: '@bbcpersian',
     noBylinesPolicy:
@@ -51,27 +44,20 @@ export const service: DefaultServiceConfig = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'صفحه اول',
-    theming: {
-      brandBackgroundColour: `${C_POSTBOX}`,
-      brandLogoColour: `${C_WHITE}`,
-      brandForegroundColour: `${C_GHOST}`,
-      brandHighlightColour: `${C_WHITE}`,
-      brandBorderColour: `${C_POSTBOX_30}`,
-    },
     showAdPlaceholder: true,
     showRelatedTopics: true,
     podcastPromo: {
       title: 'پادکست',
-      brandTitle: 'رادیو فارسی بی‌بی‌سی',
+      brandTitle: 'پرگار',
       brandDescription:
-        'پادکست چشم‌انداز بامدادی رادیو بی‌بی‌سی – دوشنبه ۱۹ اردیبهشت ۱۴۰۱',
+        'برنامه‌ای که در آن مهمانان برنامه به پرسش‌های چالشی مربوط به جامعه امروز پاسخ می‌دهند',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0bq9rkk.jpg',
-        alt: 'پادکست چشم‌انداز بامدادی رادیو بی‌بی‌سی',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg',
+        alt: 'پرگار',
       },
       linkLabel: {
         text: 'پادکست',
-        href: 'https://www.bbc.com/persian/podcasts/p02pc9mc',
+        href: 'https://www.bbc.com/persian/podcasts/p02pc9wf',
       },
       skipLink: {
         text: 'از %title% رد شوید و به خواندن ادامه دهید',
@@ -271,6 +257,7 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'برنامه رادیویی بعدی',
         duration: 'مدت',
         podcastExternalLinks: 'این پادکست در این زمان قابل دسترس است',
+        download: 'دانلود برنامه',
       },
       socialEmbed: {
         caption: {
@@ -303,6 +290,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'مهمترین خبرها',
       featuresAnalysisTitle: 'گزارش و تحلیل',
+      latestMediaTitle: 'تازه ترین',
     },
     mostRead: {
       header: 'پربیننده‌ترین‌ها',
@@ -362,8 +350,8 @@ export const service: DefaultServiceConfig = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-          text: 'AdChoices / Do Not Sell My Info',
+          href: '#',
+          text: 'Do not share or sell my info',
           lang: 'en-GB',
         },
       ],
@@ -385,7 +373,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'ویدیو',
-        url: '/persian/media/video',
+        url: '/persian/topics/c6z7mnr559gt',
       },
       {
         title: 'تلویزیون',

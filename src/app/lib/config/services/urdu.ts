@@ -1,9 +1,3 @@
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_GHOST,
-  C_POSTBOX_30,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
 import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
 import '#psammead/moment-timezone-include/tz/Asia/Karachi';
 import '#psammead/psammead-locales/moment/ur';
@@ -38,7 +32,6 @@ export const service: DefaultServiceConfig = {
     serviceName: 'Urdu',
     languageName: 'Urdu',
     serviceLocalizedName: 'اردو',
-    themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcurdu',
     twitterSite: '@bbcurdu',
     noBylinesPolicy:
@@ -50,13 +43,6 @@ export const service: DefaultServiceConfig = {
     swPath: '/sw.js',
     frontPageTitle:
       'خبریں، تازہ خبریں، بریکنگ نیو | News, latest news, breaking news',
-    theming: {
-      brandBackgroundColour: `${C_POSTBOX}`,
-      brandLogoColour: `${C_WHITE}`,
-      brandForegroundColour: `${C_GHOST}`,
-      brandHighlightColour: `${C_WHITE}`,
-      brandBorderColour: `${C_POSTBOX_30}`,
-    },
     showAdPlaceholder: true,
     showRelatedTopics: true,
     podcastPromo: {
@@ -249,6 +235,7 @@ export const service: DefaultServiceConfig = {
         duration: 'دورانیہ',
         recentEpisodes: 'سابق پروگرام',
         podcastExternalLinks: 'یہ پوڈکاسٹ ان پلیٹفارمز پر بھی دستیاب ہے',
+        download: 'قسط ڈاؤن لوڈ کریں',
       },
       socialEmbed: {
         caption: {
@@ -282,6 +269,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'اہم خبریں',
       featuresAnalysisTitle: 'فیچر اور تجزیے',
+      latestMediaTitle: 'تازہ ترین',
     },
     mostRead: {
       header: 'سب سے زیادہ پڑھی جانے والی',
@@ -334,8 +322,8 @@ export const service: DefaultServiceConfig = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-          text: 'AdChoices / Do Not Sell My Info',
+          href: '#',
+          text: 'Do not share or sell my info',
           lang: 'en-GB',
         },
       ],

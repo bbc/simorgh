@@ -1,6 +1,9 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
-import { render, fireEvent, getByRole } from '@testing-library/react';
+import {
+  render,
+  fireEvent,
+  getByRole,
+} from '../../../../../components/react-testing-library-with-providers';
 import latin from '../../../../../components/ThemeProvider/fontScripts/latin';
 import arabic from '../../../../../components/ThemeProvider/fontScripts/arabic';
 import {
@@ -65,27 +68,31 @@ describe('Canonical', () => {
       expect(menuButton.getAttribute('aria-expanded')).toBe('true');
     });
 
-    shouldMatchSnapshot(
-      'should render correctly',
-      <CanonicalMenuButton
-        announcedText="Menu"
-        onClick={() => {}}
-        isOpen
-        script={latin}
-        dir="ltr"
-      />,
-    );
+    it('should render correctly', () => {
+      const { container } = render(
+        <CanonicalMenuButton
+          announcedText="Menu"
+          onClick={() => {}}
+          isOpen
+          script={latin}
+          dir="ltr"
+        />,
+      );
+      expect(container).toMatchSnapshot();
+    });
 
-    shouldMatchSnapshot(
-      'should render rtl correctly',
-      <CanonicalMenuButton
-        announcedText="Menu"
-        onClick={() => {}}
-        isOpen
-        script={arabic}
-        dir="rtl"
-      />,
-    );
+    it('should render rtl correctly', () => {
+      const { container } = render(
+        <CanonicalMenuButton
+          announcedText="Menu"
+          onClick={() => {}}
+          isOpen
+          script={arabic}
+          dir="rtl"
+        />,
+      );
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('Closed menu button', () => {
@@ -118,60 +125,72 @@ describe('Canonical', () => {
       expect(menuButton.getAttribute('aria-expanded')).toBe('false');
     });
 
-    shouldMatchSnapshot(
-      'should render correctly',
-      <CanonicalMenuButton
-        announcedText="Menu"
-        onClick={() => {}}
-        isOpen={false}
-        script={latin}
-        dir="ltr"
-      />,
-    );
+    it('should render correctly', () => {
+      const { container } = render(
+        <CanonicalMenuButton
+          announcedText="Menu"
+          onClick={() => {}}
+          isOpen={false}
+          script={latin}
+          dir="ltr"
+        />,
+      );
+      expect(container).toMatchSnapshot();
+    });
 
-    shouldMatchSnapshot(
-      'should render rtl correctly',
-      <CanonicalMenuButton
-        announcedText="Menu"
-        onClick={() => {}}
-        isOpen={false}
-        script={arabic}
-        dir="rtl"
-      />,
-    );
+    it('should render rtl correctly', () => {
+      const { container } = render(
+        <CanonicalMenuButton
+          announcedText="Menu"
+          onClick={() => {}}
+          isOpen={false}
+          script={arabic}
+          dir="rtl"
+        />,
+      );
+      expect(container).toMatchSnapshot();
+    });
   });
 });
 
 describe('Dropdown navigation', () => {
-  shouldMatchSnapshot(
-    'should render correctly when closed',
-    <CanonicalDropdown isOpen={false}>{dropdownList}</CanonicalDropdown>,
-  );
+  it('should render correctly when closer', () => {
+    const { container } = render(
+      <CanonicalDropdown isOpen={false}>{dropdownList}</CanonicalDropdown>,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render correctly when open',
-    <CanonicalDropdown isOpen>{dropdownList}</CanonicalDropdown>,
-  );
-});
+  it('should render correctly when open', () => {
+    const { container } = render(
+      <CanonicalDropdown isOpen>{dropdownList}</CanonicalDropdown>,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-describe('AMP Menu Button', () => {
-  shouldMatchSnapshot(
-    'should render correctly',
-    <AmpMenuButton
-      announcedText="Menu"
-      onToggle="other-element.toggleVisibility"
-      script={latin}
-      dir="ltr"
-    />,
-  );
+  describe('AMP Menu Button', () => {
+    it('should render correctly', () => {
+      const { container } = render(
+        <AmpMenuButton
+          announcedText="Menu"
+          onToggle="other-element.toggleVisibility"
+          script={latin}
+          dir="ltr"
+        />,
+      );
+      expect(container).toMatchSnapshot();
+    });
 
-  shouldMatchSnapshot(
-    'should render rtl correctly',
-    <AmpMenuButton
-      announcedText="Menu"
-      onToggle="other-element.toggleVisibility"
-      script={arabic}
-      dir="rtl"
-    />,
-  );
+    it('should render rtl correctly', () => {
+      const { container } = render(
+        <AmpMenuButton
+          announcedText="Menu"
+          onToggle="other-element.toggleVisibility"
+          script={arabic}
+          dir="rtl"
+        />,
+      );
+      expect(container).toMatchSnapshot();
+    });
+  });
 });
