@@ -1,13 +1,15 @@
-import * as genericLabelHelpers from '#lib/analyticsUtils';
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+import * as genericLabelHelpers from '../../../lib/analyticsUtils';
+import { buildATIPageTrackPath, buildATIEventTrackUrl } from '.';
 
-const { buildATIPageTrackPath, buildATIEventTrackUrl } = require('.');
-
+// @ts-ignore
 const mockAndSet = ({ name, source }, response) => {
   source[name] = jest.fn(); // eslint-disable-line no-param-reassign
   source[name].mockImplementation(() => response);
 };
 
-const splitUrl = url => url.replace(/&/g, ',').replace(/\?/g, ',').split(',');
+const splitUrl = (url: string) =>
+  url.replace(/&/g, ',').replace(/\?/g, ',').split(',');
 
 const analyticsUtilFunctions = [
   { name: 'getDestination', source: genericLabelHelpers },
@@ -89,14 +91,16 @@ describe('getThingAttributes', () => {
     'should take in optional props and add them as correct query params',
     ({ props, currentUrl, expectedValues }) => {
       mockAndSet(marketingCampaignFunc, 'sl');
+      // @ts-ignore
       delete window.location;
 
+      // @ts-ignore
       window.location = new URL(currentUrl);
 
       const queryParams = buildATIPageTrackPath(props);
       const queryParamsArray = splitUrl(queryParams);
       expect(queryParamsArray).toHaveLength(expectedValues.length);
-      expectedValues.forEach(value =>
+      expectedValues.forEach((value: string) =>
         expect(queryParamsArray).toContain(value),
       );
     },
@@ -131,7 +135,6 @@ describe('getThingAttributes', () => {
     const queryParams = buildATIPageTrackPath({
       pageTitle: 'pageTitle',
       platform: 'platform',
-      service: 'service',
       statsDestination: 'statsDestination',
     });
 
@@ -192,13 +195,13 @@ describe('buildATIEventTrackUrl', () => {
     jest.resetAllMocks();
   });
 
-  it('should return the right url', () => {
+  it('should return the correct url', () => {
     process.env.SIMORGH_ATI_BASE_URL = 'http://foobar.com?';
     expect(
       buildATIEventTrackUrl({
         pageIdentifier: 'pageIdentifier',
-        service: 'service',
-        platform: 'platform',
+        service: 'news',
+        platform: 'canonical',
         statsDestination: 'statsDestination',
         componentName: 'component',
         type: 'type',

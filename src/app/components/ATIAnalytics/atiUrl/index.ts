@@ -16,7 +16,8 @@ import {
   getCampaignType,
   getATIMarketingString,
   getRSSMarketingString,
-} from '#lib/analyticsUtils';
+} from '../../../lib/analyticsUtils';
+import { ATIEventTrackingProps, ATIPageTrackingProps } from '../types';
 
 /*
  * For AMP pages, certain browser and device values are determined
@@ -43,7 +44,7 @@ export const buildATIPageTrackPath = ({
   categoryName,
   campaigns,
   nationsProducer,
-}) => {
+}: ATIPageTrackingProps) => {
   const href = getHref(platform);
   const referrer = getReferrer(platform, origin, previousPath);
   const campaignType = getCampaignType();
@@ -249,7 +250,7 @@ export const buildATIEventTrackUrl = ({
   type,
   advertiserID,
   url,
-}) => {
+}: ATIEventTrackingProps) => {
   // on AMP, variable substitutions are used in the value and they cannot be
   // encoded: https://github.com/ampproject/amphtml/blob/master/spec/amp-var-substitutions.md
   const disableEncodingDueToAmpSubstitution = platform === 'amp';
