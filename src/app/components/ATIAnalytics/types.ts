@@ -24,22 +24,22 @@ export interface ATIEventTrackingProps {
 
 export interface ATIPageTrackingProps {
   appName?: string;
-  contentId?: string;
+  contentId?: string | null;
   contentType?: string;
-  language?: string;
-  ldpThingIds?: string;
-  ldpThingLabels?: string;
+  language?: string | null;
+  ldpThingIds?: string | null;
+  ldpThingLabels?: string | null;
   pageIdentifier?: string;
-  pageTitle?: string;
+  pageTitle?: string | null;
   producerId?: string;
   libraryVersion?: string;
   platform?: string;
   statsDestination?: string;
-  timePublished?: string;
-  timeUpdated?: string;
+  timePublished?: string | null;
+  timeUpdated?: string | null;
   origin?: string;
-  previousPath?: string;
-  categoryName?: string;
+  previousPath?: string | null;
+  categoryName?: string | null;
   campaigns?: string;
-  nationsProducer?: string;
+  nationsProducer?: string | null;
 }

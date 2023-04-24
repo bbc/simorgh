@@ -10,12 +10,14 @@ import {
   getPromoHeadline,
   getNationsProducer,
 } from '#lib/analyticsUtils/article';
+import { RequestContextProps } from '../../../../contexts/RequestContext';
+import { ServiceConfig } from '../../../../models/types/serviceConfig';
 import { buildATIPageTrackPath } from '../../atiUrl';
 
 export const buildArticleATIParams = (
-  articleData,
-  requestContext,
-  serviceContext,
+  articleData: object,
+  requestContext: RequestContextProps,
+  serviceContext: ServiceConfig,
   pageType = 'article',
 ) => {
   const { platform, isUK, statsDestination, previousPath, origin } =
@@ -48,9 +50,9 @@ export const buildArticleATIParams = (
 };
 
 export const buildArticleATIUrl = (
-  articleData,
-  requestContext,
-  serviceContext,
+  articleData: object,
+  requestContext: RequestContextProps,
+  serviceContext: ServiceConfig,
   pageType = 'article',
 ) => {
   return buildATIPageTrackPath(
