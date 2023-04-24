@@ -71,12 +71,12 @@ const HomePage = ({ pageData }: HomePageProps) => {
                     link={link}
                     curationLength={curations && curations.length}
                   />
-                  <MostReadContainer />
                 </React.Fragment>
               );
             },
           )}
         </div>
+        <MostReadContainer />
       </main>
     </>
   );
