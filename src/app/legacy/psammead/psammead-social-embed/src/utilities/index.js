@@ -58,17 +58,3 @@ export const getCaptionText = ({ pageType, caption, provider }) => {
     textPrefixVisuallyHidden: caption.textPrefixVisuallyHidden,
   };
 };
-
-/**
- * These styles are lifted from #psammead/psammead-visually-hidden-text/src, which we
- * cannot use directly as we require control over _when_ they are applied.
- */
-export const visuallyHiddenStyle = `
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-`;

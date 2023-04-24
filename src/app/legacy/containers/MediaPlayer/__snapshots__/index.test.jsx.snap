@@ -145,7 +145,7 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
   margin: 0;
 }
 
-.emotion-17>svg {
+.emotion-16>svg {
   color: #FFFFFF;
   fill: currentColor;
   height: 1.5rem;
@@ -153,7 +153,7 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
   width: 1.5rem;
 }
 
-.emotion-19 {
+.emotion-18 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -162,12 +162,12 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
   height: 0.75rem;
 }
 
-.emotion-21 {
+.emotion-20 {
   display: block;
   margin-top: 0.5rem;
 }
 
-.emotion-23 {
+.emotion-22 {
   display: block;
   width: 100%;
 }
@@ -202,17 +202,17 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
           class="focusIndicatorRemove emotion-12 emotion-13 emotion-14"
         >
           <span
-            class="emotion-15 emotion-16"
+            class="emotion-15"
           >
             Contains strong language and adult humour. Play video, "Five things ants can teach us about management", Duration 3,11
           </span>
           <div
             aria-hidden="true"
-            class="emotion-17 emotion-18"
+            class="emotion-16 emotion-17"
           >
             <svg
               aria-hidden="true"
-              class="emotion-19 emotion-20"
+              class="emotion-18 emotion-19"
               focusable="false"
               height="12"
               viewBox="0 0 12 12"
@@ -235,7 +235,7 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
           </div>
           <time
             aria-hidden="true"
-            class="emotion-21 emotion-22"
+            class="emotion-20 emotion-21"
             datetime="PT3M11S"
           >
             03:11
@@ -243,7 +243,7 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
         </button>
         <img
           alt=""
-          class="emotion-23 emotion-24"
+          class="emotion-22 emotion-23"
           src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
         />
       </div>
