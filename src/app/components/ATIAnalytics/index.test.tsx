@@ -1,5 +1,5 @@
-import React from 'react';
-import { node, string } from 'prop-types';
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+import React, { PropsWithChildren } from 'react';
 import { render } from '@testing-library/react';
 import { articleDataNews } from '#pages/ArticlePage/fixtureData';
 import mapAssetData from '#pages/MediaAssetPage/fixtureData.json';
@@ -11,6 +11,11 @@ import styUkrainianInRussianAssetData from '#data/ukrainian/cpsAssets/features-r
 import { RequestContextProvider } from '#contexts/RequestContext';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import {
+  isNull,
+  setWindowValue,
+  resetWindowValue,
+} from '#psammead/psammead-test-helpers/src';
+import {
   ARTICLE_PAGE,
   FRONT_PAGE,
   FEATURE_INDEX_PAGE,
@@ -19,25 +24,34 @@ import {
   STORY_PAGE,
   CORRESPONDENT_STORY_PAGE,
   MEDIA_ARTICLE_PAGE,
-} from '#app/routes/utils/pageTypes';
-import {
-  isNull,
-  suppressPropWarnings,
-  setWindowValue,
-  resetWindowValue,
-} from '#psammead/psammead-test-helpers/src';
+} from '../../routes/utils/pageTypes';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ATIAnalytics from '.';
 import * as amp from './amp';
 import * as canonical from './canonical';
+import { PageTypes, Platforms, Services } from '../../models/types/global';
 
+// @ts-ignore
 analyticsUtils.getAtUserId = jest.fn();
+// @ts-ignore
 analyticsUtils.getCurrentTime = jest.fn().mockReturnValue('00-00-00');
+// @ts-ignore
 analyticsUtils.getPublishedDatetime = jest
   .fn()
   .mockReturnValue('1970-01-01T00:00:00.000Z');
 
-const ContextWrap = ({ pageType, platform, children, service }) => (
+interface Props {
+  pageType: PageTypes;
+  platform: Platforms;
+  service: Services;
+}
+
+const ContextWrap = ({
+  pageType,
+  platform,
+  children,
+  service,
+}: PropsWithChildren<Props>) => (
   <ServiceContextProvider service={service}>
     <RequestContextProvider
       bbcOrigin="https://www.test.bbc.co.uk"
@@ -53,13 +67,6 @@ const ContextWrap = ({ pageType, platform, children, service }) => (
   </ServiceContextProvider>
 );
 
-ContextWrap.propTypes = {
-  children: node.isRequired,
-  pageType: string.isRequired,
-  platform: string.isRequired,
-  service: string.isRequired,
-};
-
 describe('ATI Analytics Container', () => {
   beforeEach(() => {
     jest.clearAllMocks();
@@ -68,6 +75,7 @@ describe('ATI Analytics Container', () => {
   describe('pageType article', () => {
     it('should call CanonicalATIAnalytics when platform is canonical', () => {
       const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
+      // @ts-ignore
       canonical.default = mockCanonical;
 
       render(
@@ -89,6 +97,8 @@ describe('ATI Analytics Container', () => {
 
     it('should call AmpATIAnalytics when platform is Amp', () => {
       const mockAmp = jest.fn().mockReturnValue('amp-return-value');
+
+      // @ts-ignore
       amp.default = mockAmp;
 
       render(
@@ -108,6 +118,7 @@ describe('ATI Analytics Container', () => {
   describe('pageType media article', () => {
     it('should call CanonicalATIAnalytics when platform is canonical', () => {
       const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
+      // @ts-ignore
       canonical.default = mockCanonical;
 
       render(
@@ -129,6 +140,8 @@ describe('ATI Analytics Container', () => {
 
     it('should call AmpATIAnalytics when platform is Amp', () => {
       const mockAmp = jest.fn().mockReturnValue('amp-return-value');
+
+      // @ts-ignore
       amp.default = mockAmp;
 
       render(
@@ -155,6 +168,7 @@ describe('ATI Analytics Container', () => {
         href: `https://localhost`,
       });
       const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
+      // @ts-ignore
       canonical.default = mockCanonical;
 
       render(
@@ -172,6 +186,8 @@ describe('ATI Analytics Container', () => {
 
     it('should call AmpATIAnalytics when platform is Amp', () => {
       const mockAmp = jest.fn().mockReturnValue('amp-return-value');
+
+      // @ts-ignore
       amp.default = mockAmp;
 
       render(
@@ -191,6 +207,8 @@ describe('ATI Analytics Container', () => {
   describe('pageType=MAP', () => {
     it('should call CanonicalATIAnalytics when platform is canonical', () => {
       const mockAmp = jest.fn().mockReturnValue('amp-return-value');
+
+      // @ts-ignore
       amp.default = mockAmp;
 
       render(
@@ -214,6 +232,7 @@ describe('ATI Analytics Container', () => {
   describe('pageType=PGL', () => {
     it('should call CanonicalATIAnalytics when platform is canonical', () => {
       const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
+      // @ts-ignore
       canonical.default = mockCanonical;
 
       render(
@@ -235,6 +254,8 @@ describe('ATI Analytics Container', () => {
 
     it('should call AmpATIAnalytics when platform is Amp', () => {
       const mockAmp = jest.fn().mockReturnValue('amp-return-value');
+
+      // @ts-ignore
       amp.default = mockAmp;
 
       render(
@@ -257,7 +278,7 @@ describe('ATI Analytics Container', () => {
 
   describe('pageType=STY', () => {
     it('should call CanonicalATIAnalytics when platform is canonical', () => {
-      const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
+      const mockCanonical = jest.fn().mockReturnValue('canonical-return-value'); // @ts-ignore
       canonical.default = mockCanonical;
 
       render(
@@ -275,6 +296,7 @@ describe('ATI Analytics Container', () => {
 
     it('should call AmpATIAnalytics when platform is Amp', () => {
       const mockAmp = jest.fn().mockReturnValue('amp-return-value');
+      // @ts-ignore
       amp.default = mockAmp;
 
       render(
@@ -292,6 +314,7 @@ describe('ATI Analytics Container', () => {
 
     it('should call AmpATIAnalytics when platform is Amp and pageType is CSP', () => {
       const mockAmp = jest.fn().mockReturnValue('amp-return-value');
+      // @ts-ignore
       amp.default = mockAmp;
 
       render(
@@ -312,7 +335,7 @@ describe('ATI Analytics Container', () => {
     });
 
     it('should return the correct language param when service is Ukrainian and pageData language is Ukrainian on canonical', () => {
-      const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
+      const mockCanonical = jest.fn().mockReturnValue('canonical-return-value'); // @ts-ignore
       canonical.default = mockCanonical;
 
       render(
@@ -334,6 +357,7 @@ describe('ATI Analytics Container', () => {
 
     it('should return the correct language param when service is Ukrainian and pageData language is Ukrainian on Amp', () => {
       const mockAmp = jest.fn().mockReturnValue('amp-return-value');
+      // @ts-ignore
       amp.default = mockAmp;
 
       render(
@@ -350,7 +374,7 @@ describe('ATI Analytics Container', () => {
     });
 
     it('should return the correct language param when service is Ukrainian and pageData language is Russian on canonical', () => {
-      const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
+      const mockCanonical = jest.fn().mockReturnValue('canonical-return-value'); // @ts-ignore
       canonical.default = mockCanonical;
 
       render(
@@ -372,6 +396,7 @@ describe('ATI Analytics Container', () => {
 
     it('should return the correct language param when service is Ukrainian and pageData language is Russian on Amp', () => {
       const mockAmp = jest.fn().mockReturnValue('amp-return-value');
+      // @ts-ignore
       amp.default = mockAmp;
 
       render(
@@ -389,10 +414,9 @@ describe('ATI Analytics Container', () => {
   });
 
   describe('pageType neither article nor frontPage', () => {
-    suppressPropWarnings(['pageType', 'randomvalue']);
     isNull(
       'should render null',
-      <ContextWrap platform="canonical" pageType="randomvalue" service="news">
+      <ContextWrap platform="canonical" pageType="error" service="news">
         <ATIAnalytics data={articleDataNews} />
       </ContextWrap>,
     );
@@ -408,7 +432,7 @@ describe('ATI Analytics Container', () => {
       setWindowValue('location', {
         href: 'https://localhost?at_medium=email&at_emailtype=acquisition&at_creation=my_creation',
       });
-      const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
+      const mockCanonical = jest.fn().mockReturnValue('canonical-return-value'); // @ts-ignore
       canonical.default = mockCanonical;
 
       render(
@@ -427,7 +451,7 @@ describe('ATI Analytics Container', () => {
       setWindowValue('location', {
         href: 'http://localhost?foo=bar',
       });
-      const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
+      const mockCanonical = jest.fn().mockReturnValue('canonical-return-value'); // @ts-ignore
       canonical.default = mockCanonical;
 
       render(
@@ -445,7 +469,7 @@ describe('ATI Analytics Container', () => {
   });
   describe('pageType=FIX', () => {
     it('should call CanonicalATIAnalytics when platform is canonical', () => {
-      const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
+      const mockCanonical = jest.fn().mockReturnValue('canonical-return-value'); // @ts-ignore
       canonical.default = mockCanonical;
 
       render(
@@ -467,6 +491,7 @@ describe('ATI Analytics Container', () => {
 
     it('should call AmpATIAnalytics when platform is Amp', () => {
       const mockAmp = jest.fn().mockReturnValue('amp-return-value');
+      // @ts-ignore
       amp.default = mockAmp;
 
       render(

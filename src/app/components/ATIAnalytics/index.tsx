@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { RequestContext } from '#contexts/RequestContext';
-import { pageDataPropType } from '#models/propTypes/data';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import CanonicalATIAnalytics from './canonical';
 import AmpATIAnalytics from './amp';
@@ -11,52 +10,66 @@ import { buildMostReadATIUrl } from './params/mostReadPage/buildParams';
 import { buildMostWatchedATIUrl } from './params/mostWatchedPage/buildParams';
 import { buildIndexPageATIUrl } from './params/indexPage/buildParams';
 import { buildTopicPageATIUrl } from './params/topicPage/buildParams';
+import {
+  ARTICLE_PAGE,
+  MEDIA_ARTICLE_PAGE,
+  FRONT_PAGE,
+  MEDIA_PAGE,
+  MOST_READ_PAGE,
+  MOST_WATCHED_PAGE,
+  INDEX_PAGE,
+  FEATURE_INDEX_PAGE,
+  TOPIC_PAGE,
+  MEDIA_ASSET_PAGE,
+  PHOTO_GALLERY_PAGE,
+  STORY_PAGE,
+  CORRESPONDENT_STORY_PAGE,
+  ERROR_PAGE,
+  HOME_PAGE,
+} from '../../routes/utils/pageTypes';
 
-const ATIAnalytics = ({ data }) => {
+const ATIAnalytics = ({ data }: { data: unknown }) => {
   const requestContext = useContext(RequestContext);
   const serviceContext = useContext(ServiceContext);
   const { pageType, isAmp } = requestContext;
 
   const pageTypeHandlers = {
-    article: buildArticleATIUrl,
-    mediaArticle: () =>
+    [ARTICLE_PAGE]: buildArticleATIUrl,
+    [MEDIA_ARTICLE_PAGE]: () =>
       buildArticleATIUrl(data, requestContext, serviceContext, 'article-sfv'),
-    frontPage: buildIndexPageATIUrl,
-    media: buildTvRadioATIUrl,
-    mostRead: buildMostReadATIUrl,
-    mostWatched: buildMostWatchedATIUrl,
-    IDX: buildIndexPageATIUrl,
-    FIX: buildIndexPageATIUrl,
-    TOPIC: buildTopicPageATIUrl,
-    MAP: () =>
+    [FRONT_PAGE]: buildIndexPageATIUrl,
+    [MEDIA_PAGE]: buildTvRadioATIUrl,
+    [MOST_READ_PAGE]: buildMostReadATIUrl,
+    [MOST_WATCHED_PAGE]: buildMostWatchedATIUrl,
+    [INDEX_PAGE]: buildIndexPageATIUrl,
+    [FEATURE_INDEX_PAGE]: buildIndexPageATIUrl,
+    [TOPIC_PAGE]: buildTopicPageATIUrl,
+    [MEDIA_ASSET_PAGE]: () =>
       buildCpsAssetPageATIUrl(
         data,
         requestContext,
         serviceContext,
         'article-media-asset',
       ),
-    PGL: () =>
+    [PHOTO_GALLERY_PAGE]: () =>
       buildCpsAssetPageATIUrl(
         data,
         requestContext,
         serviceContext,
         'article-photo-gallery',
       ),
-    STY: () =>
+    [STORY_PAGE]: () =>
       buildCpsAssetPageATIUrl(data, requestContext, serviceContext, 'article'),
-    CSP: () =>
+    [CORRESPONDENT_STORY_PAGE]: () =>
       buildCpsAssetPageATIUrl(
         data,
         requestContext,
         serviceContext,
         'article-correspondent',
       ),
+    [ERROR_PAGE]: () => null,
+    [HOME_PAGE]: () => null,
   };
-
-  const isValidPageType = Object.keys(pageTypeHandlers).includes(pageType);
-  if (!isValidPageType) {
-    return null;
-  }
 
   const pageviewParams = pageTypeHandlers[pageType](
     data,
@@ -64,15 +77,15 @@ const ATIAnalytics = ({ data }) => {
     serviceContext,
   );
 
+  if (!pageviewParams) {
+    return null;
+  }
+
   return isAmp ? (
     <AmpATIAnalytics pageviewParams={pageviewParams} />
   ) : (
     <CanonicalATIAnalytics pageviewParams={pageviewParams} />
   );
-};
-
-ATIAnalytics.propTypes = {
-  data: pageDataPropType.isRequired,
 };
 
 export default ATIAnalytics;
