@@ -57,7 +57,11 @@ const HomePage = ({ pageData }: HomePageProps) => {
               link,
               position,
               visualStyle,
+              mostRead,
             }) => {
+              if (mostRead) {
+                return <MostReadContainer initialData={mostRead} />;
+              }
               return (
                 <React.Fragment key={`${curationId}-${position}`}>
                   <Curation
@@ -76,7 +80,6 @@ const HomePage = ({ pageData }: HomePageProps) => {
             },
           )}
         </div>
-        <MostReadContainer />
       </main>
     </>
   );
