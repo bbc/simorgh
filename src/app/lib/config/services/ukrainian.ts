@@ -313,8 +313,8 @@ const baseServiceConfig = {
       },
       {
         id: 'COOKIE_SETTINGS',
-        href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-        text: 'AdChoices / Do Not Sell My Info',
+        href: '#',
+        text: 'Do not share or sell my info',
         lang: 'en-GB',
       },
     ],
