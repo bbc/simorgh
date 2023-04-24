@@ -81,7 +81,7 @@ exports[`Caption should render with some offscreen text 1`] = `
   >
     This is some Caption text
     <span
-      class="emotion-2 emotion-3"
+      class="emotion-2"
     >
       Some offscreen text
     </span>
@@ -170,7 +170,7 @@ exports[`Caption should render with some offscreen text and arabic script typogr
   >
     هذا هو بعض النص التسمية التوضيحي
     <span
-      class="emotion-2 emotion-3"
+      class="emotion-2"
     >
       Some offscreen text
     </span>

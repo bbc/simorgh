@@ -801,7 +801,7 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
             dir="ltr"
           >
             <span
-              class="emotion-17 emotion-18"
+              class="emotion-17"
             >
               Image caption, 
             </span>
@@ -1158,7 +1158,7 @@ exports[`Image with data should render an image with alt text and offscreen copy
               role="text"
             >
               <span
-                class="emotion-15 emotion-16"
+                class="emotion-15"
               >
                 Image source, 
               </span>
@@ -1514,7 +1514,7 @@ exports[`Image with data should render an image with other originCode - this wou
               role="text"
             >
               <span
-                class="emotion-15 emotion-16"
+                class="emotion-15"
               >
                 Image source, 
               </span>
