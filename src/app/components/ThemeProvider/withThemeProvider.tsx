@@ -274,7 +274,7 @@ const withThemeProvider = ({
 
     const theme = {
       ...themeConfig,
-      isDarkUi: pageType === 'mediaArticle' && !isLive(),
+      isDarkUi: pageType === 'mediaArticle',
     };
 
     return (
