@@ -55,13 +55,6 @@ Object {
 
 exports[`Canonical Korean Live Radio Page Footer Anchors should match text and url 8`] = `
 Object {
-  "text": "AdChoices / Do Not Sell My Info",
-  "url": "https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/",
-}
-`;
-
-exports[`Canonical Korean Live Radio Page Footer Anchors should match text and url 9`] = `
-Object {
   "text": "외부 링크에 대한 본사 정책 보기",
   "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
 }

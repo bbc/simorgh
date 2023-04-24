@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import moment from 'moment-timezone';
 import { shape, bool, string } from 'prop-types';
-import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
 import pathOr from 'ramda/src/pathOr';
 import pick from 'ramda/src/pick';
 import formatDuration from '#lib/utilities/formatDuration';
@@ -9,6 +8,7 @@ import { getHeadline } from '#lib/utilities/getStoryPromoInfo';
 import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import { isPgl, isMap } from '../utilities';
+import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 
 const LinkContents = ({ item, isInline, id }) => {
   const {

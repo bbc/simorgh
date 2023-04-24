@@ -3,7 +3,7 @@ import { jsx } from '@emotion/react';
 import Text from '../../../../src/app/components/Text';
 import { Confirm, Close, ExternalLink, Help } from '../Icons';
 import styles from './index.styles';
-import VisuallyHiddenText from '../../../../src/app/legacy/psammead/psammead-visually-hidden-text/src';
+import VisuallyHiddenText from '../../../../src/app/components/VisuallyHiddenText';
 import idSanitiser from '../../../../src/app/lib/utilities/idSanitiser';
 
 interface SingleDocProps {

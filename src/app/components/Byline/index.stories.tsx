@@ -13,6 +13,7 @@ import Byline from '.';
 import { withServicesKnob } from '../../legacy/psammead/psammead-storybook-helpers/src';
 import ThemeProvider from '../ThemeProvider';
 import { StoryProps } from '../../models/types/storybook';
+import md from './README.md';
 
 interface ComponentProps extends StoryProps {
   fixture: object[];
@@ -34,6 +35,14 @@ const Component = ({
 export default {
   title: 'Components/Byline',
   Component,
+  parameters: {
+    docs: {
+      component: {
+        title: 'Byline',
+      },
+      page: md,
+    },
+  },
   decorators: [withKnobs, withServicesKnob()],
 };
 
