@@ -49,12 +49,12 @@ jest.mock('#containers/ComscoreAnalytics', () => {
   return ComscoreAnalytics;
 });
 
-jest.mock('../../components/Ad', () => {
+jest.mock('#containers/Ad', () => {
   const AdsContainer = () => <div data-testid="sty-ads">STY ADS</div>;
   return AdsContainer;
 });
 
-jest.mock('../../components/Ad/Canonical/CanonicalAdBootstrapJs', () => {
+jest.mock('#containers/Ad/Canonical/CanonicalAdBootstrapJs', () => {
   const CanonicalAdBootstrapJs = ({ adcampaign }) => (
     <div data-testid="adBootstrap" data-adcampaign={adcampaign}>
       bootstrap
