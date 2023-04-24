@@ -29,27 +29,24 @@ const styles = {
       display: 'flex',
       justifyContent: 'start',
     }),
-  linkBackground: ({ spacings, palette }: Theme) =>
+  ctaLink: ({ spacings, palette }: Theme) =>
     css({
       padding: `${pixelsToRem(12)}rem ${spacings.DOUBLE}rem`,
       marginTop: `${spacings.DOUBLE}rem`,
       backgroundColor: palette.GREY_10,
       width: 'auto',
-      textDecoration: 'none',
+      color: palette.WHITE,
       '&:hover, &:focus': {
-        textDecoration: 'underline',
         color: palette.WHITE,
       },
     }),
-  link: ({ palette }: Theme) =>
-    css({
-      color: palette.WHITE,
-    }),
-  chevron: ({ palette }: Theme) =>
+  chevron: () =>
     css({
       marginInlineStart: `${pixelsToRem(12)}rem`,
-      color: palette.WHITE,
+      width: '1rem',
+      height: '1rem',
       fill: 'currentcolor',
+      verticalAlign: 'middle',
     }),
 };
 export default styles;

@@ -7,8 +7,9 @@ import { jsx } from '@emotion/react';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import Paragraph from '../Paragraph';
 import Text from '../Text';
-import { LeftChevron, RightChevron } from '../icons';
 import styles from './index.styles';
+import { LeftChevron, RightChevron } from '../icons';
+import CtaLink from '../CtaLink';
 
 interface UploaderProps {
   blocks: object[] | undefined;
@@ -98,16 +99,14 @@ const Uploader = ({ blocks }: UploaderProps) => {
         </Text>
         <Paragraph css={styles.text}>{text}</Paragraph>
         <div css={styles.linkContainer}>
-          <a href={linkAddress} css={styles.linkBackground}>
-            <Text size="pica" fontVariant="sansBold" css={styles.link}>
-              {linkText}
-              {isRtl ? (
-                <LeftChevron css={styles.chevron} />
-              ) : (
-                <RightChevron css={styles.chevron} />
-              )}
-            </Text>
-          </a>
+          <CtaLink href={linkAddress} css={styles.ctaLink}>
+            {linkText}
+            {isRtl ? (
+              <LeftChevron css={styles.chevron} />
+            ) : (
+              <RightChevron css={styles.chevron} />
+            )}
+          </CtaLink>
         </div>
       </div>
     </section>

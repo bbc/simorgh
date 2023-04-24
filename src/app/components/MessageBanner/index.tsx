@@ -4,10 +4,10 @@ import { jsx } from '@emotion/react';
 import Paragraph from '../Paragraph';
 import Heading from '../Heading';
 import Image from '../Image';
-import Text from '../Text';
-import { LeftChevron, RightChevron } from '../icons';
 import styles from './index.styles';
+import { LeftChevron, RightChevron } from '../icons';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import CtaLink from '../CtaLink';
 
 interface MessageBannerProps {
   heading: string;
@@ -46,22 +46,18 @@ const MessageBanner = ({
           </Paragraph>
         </div>
         <div css={styles.flex}>
-          <a
+          <CtaLink
             href={link}
-            css={styles.linkBackground}
+            css={styles.ctaLink}
             className="focusIndicatorInvert"
           >
-            <div css={styles.linkAndChevron}>
-              <Text size="pica" fontVariant="sansBold" css={styles.link}>
-                {linkText}
-                {isRtl ? (
-                  <LeftChevron css={styles.chevron} />
-                ) : (
-                  <RightChevron css={styles.chevron} />
-                )}
-              </Text>
-            </div>
-          </a>
+            {linkText}
+            {isRtl ? (
+              <LeftChevron css={styles.chevron} />
+            ) : (
+              <RightChevron css={styles.chevron} />
+            )}
+          </CtaLink>
           {image && (
             <div css={isRtl ? styles.imageRtl : styles.imageLtr}>
               <Image
