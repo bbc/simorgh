@@ -1,4 +1,5 @@
 /** @jsx jsx */
+/** @jsxRuntime classic */
 import { jsx } from '@emotion/react';
 import { ComponentPropsWithoutRef } from 'react';
 import styles from './index.styles';
