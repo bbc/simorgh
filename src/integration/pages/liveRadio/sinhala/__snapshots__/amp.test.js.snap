@@ -190,7 +190,7 @@ Object {
 exports[`AMP Sinhala Live Radio Page Footer Cookie Settings Button should match text and on handler 1`] = `
 Object {
   "on": "tap:consent.prompt, privacy.hide, cookie.show, AMP.setState({ isManagingSettings: true })",
-  "text": "AdChoices / Do Not Sell My Info",
+  "text": "Do not share or sell my info",
 }
 `;
 
