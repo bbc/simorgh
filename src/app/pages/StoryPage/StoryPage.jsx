@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { node } from 'prop-types';
 import styled from '@emotion/styled';
-import { css } from '@emotion/react';
 import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
@@ -47,17 +46,20 @@ import {
   getAboutTags,
 } from '#lib/utilities/parseAssetData';
 import Include from '#containers/Include';
+import AdContainer from '#containers/Ad';
+import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
 import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
-import Ad from '../../components/Ad';
-import MPU from '../../components/Ad/MPU';
-import CanonicalAdBootstrapJs from '../../components/Ad/Canonical/CanonicalAdBootstrapJs';
 import LinkedData from '../../components/LinkedData';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import categoryType from './categoryMap/index';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
+
+const MpuContainer = styled(AdContainer)`
+  margin-bottom: ${GEL_SPACING_TRPL};
+`;
 
 const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   const {
@@ -167,10 +169,6 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     showAdsBasedOnLocation,
   ].every(Boolean);
 
-  const mpuStyle = css({
-    marginBottom: `${GEL_SPACING_TRPL}rem`,
-  });
-
   const componentsToRender = {
     fauxHeadline,
     visuallyHiddenHeadline,
@@ -194,8 +192,8 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     include: props => <Include {...props} />,
     social_embed: props => <CpsSocialEmbedContainer {...props} />,
     table: props => <CpsTable {...props} />,
-    mpu: ({ className }) =>
-      isAdsEnabled ? <MPU css={mpuStyle} className={className} /> : null,
+    mpu: props =>
+      isAdsEnabled ? <MpuContainer {...props} slotType="mpu" /> : null,
     wsoj: props => (
       <CpsRecommendations {...props} items={recommendationsData} />
     ),
@@ -323,7 +321,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
       {isAdsEnabled && !isAmp && (
         <CanonicalAdBootstrapJs adcampaign={adcampaign} />
       )}
-      {isAdsEnabled && <Ad slotType="leaderboard" />}
+      {isAdsEnabled && <AdContainer slotType="leaderboard" />}
       <StoryPageGrid
         columns={gridColumns}
         enableGelGutters

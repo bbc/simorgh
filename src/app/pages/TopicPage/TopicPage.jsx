@@ -2,12 +2,12 @@ import React, { useContext } from 'react';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import { shape, arrayOf, string } from 'prop-types';
 import path from 'ramda/src/path';
+import AdContainer from '#containers/Ad';
+import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
 import useToggle from '#hooks/useToggle';
 import { RequestContext } from '#contexts/RequestContext';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import Curation from '#app/components/Curation';
-import Ad from '../../components/Ad';
-import CanonicalAdBootstrapJs from '../../components/Ad/Canonical/CanonicalAdBootstrapJs';
 import LinkedData from '../../components/LinkedData';
 import styles from './index.styles';
 import MetadataContainer from '../../components/Metadata';
@@ -57,7 +57,7 @@ const TopicPage = ({ pageData }) => {
       {adsEnabled && showAdsBasedOnLocation && (
         <>
           <CanonicalAdBootstrapJs />
-          <Ad slotType="leaderboard" />
+          <AdContainer slotType="leaderboard" />
         </>
       )}
       <main css={styles.main}>

@@ -11,16 +11,16 @@ import useToggle from '#hooks/useToggle';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
+import AdContainer from '#containers/Ad';
+import MPUContainer from '#containers/Ad/MPU';
 import IndexPageContainer from '#components/PageLayout/IndexPageContainer';
 import IndexPageSection from '#containers/IndexPageSection';
 import RadioScheduleContainer from '#containers/RadioSchedule';
 import MostReadContainer from '#containers/MostRead';
 import MostReadSection from '#containers/MostRead/section';
 import MostReadSectionLabel from '#containers/MostRead/label';
+import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
 import { NEGATIVE_MARGIN } from '#lib/styles.const';
-import Ad from '../../components/Ad';
-import MPU from '../../components/Ad/MPU';
-import CanonicalAdBootstrapJs from '../../components/Ad/Canonical/CanonicalAdBootstrapJs';
 import MetadataContainer from '../../components/Metadata';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { GHOST } from '../../components/ThemeProvider/palette';
@@ -102,7 +102,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
         hasAmpPage={false}
       />
       <LinkedData type="WebPage" seoTitle={seoTitle} />
-      <Ad slotType="leaderboard" />
+      <AdContainer slotType="leaderboard" />
       <main role="main">
         <VisuallyHiddenText id="content" tabIndex="-1" as="h1">
           {offScreenText}
@@ -118,7 +118,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
                   />
                 )}
               <IndexPageSection group={group} sectionNumber={index} />
-              {group.type === 'top-stories' && <MPU />}
+              {group.type === 'top-stories' && <MPUContainer />}
             </Fragment>
           ))}
           {!hasUsefulLinks && renderMostRead(mostReadEndpointOverride)}

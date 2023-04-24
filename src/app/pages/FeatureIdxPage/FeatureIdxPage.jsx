@@ -9,10 +9,10 @@ import idxPageDataPropTypes from '#models/propTypes/idxPage';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
+import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
 import useToggle from '#hooks/useToggle';
-import CanonicalAdBootstrapJs from '../../components/Ad/Canonical/CanonicalAdBootstrapJs';
-import Ad from '../../components/Ad';
-import MPU from '../../components/Ad/MPU';
+import AdContainer from '#containers/Ad';
+import MPUContainer from '#containers/Ad/MPU';
 import MetadataContainer from '../../components/Metadata';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import LinkedData from '../../components/LinkedData';
@@ -50,7 +50,7 @@ const FeatureIdxPage = ({ pageData }) => {
         openGraphType="website"
       />
       <LinkedData type="WebPage" seoTitle={seoTitle} />
-      <Ad slotType="leaderboard" />
+      <AdContainer slotType="leaderboard" />
       <main role="main">
         <IndexPageContainer>
           <IndexHeading id="content" pageType="fix">
@@ -66,7 +66,7 @@ const FeatureIdxPage = ({ pageData }) => {
                   sectionNumber={index}
                   showAllPromos
                 />
-                {isFirstSection && <MPU />}
+                {isFirstSection && <MPUContainer />}
               </Fragment>
             );
           })}

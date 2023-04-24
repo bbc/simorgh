@@ -28,6 +28,8 @@ import MostReadContainer from '#containers/MostRead';
 import MostReadSection from '#containers/MostRead/section';
 import MostReadSectionLabel from '#containers/MostRead/label';
 import SocialEmbedContainer from '#containers/SocialEmbed';
+import AdContainer from '#containers/Ad';
+import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
 
 import {
   getArticleId,
@@ -45,9 +47,6 @@ import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 import ScrollablePromo from '#components/ScrollablePromo';
 import CpsRecommendations from '#containers/CpsRecommendations';
-import Ad from '../../components/Ad';
-import MPU from '../../components/Ad/MPU';
-import CanonicalAdBootstrapJs from '../../components/Ad/Canonical/CanonicalAdBootstrapJs';
 import LinkedData from '../../components/LinkedData';
 import Byline from '../../components/Byline';
 import {
@@ -137,8 +136,8 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
     social: SocialEmbedContainer,
     group: gist,
     links: props => <ScrollablePromo {...props} />,
-    mpu: ({ className }) =>
-      isAdsEnabled ? <MPU css={styles.mpuAd} className={className} /> : null,
+    mpu: props =>
+      isAdsEnabled ? <AdContainer {...props} slotType="mpu" /> : null,
     wsoj: props => (
       <CpsRecommendations {...props} items={recommendationsData} />
     ),
@@ -216,7 +215,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
       {isAdsEnabled && !isAmp && (
         <CanonicalAdBootstrapJs adcampaign={adcampaign} />
       )}
-      {isAdsEnabled && <Ad slotType="leaderboard" />}
+      {isAdsEnabled && <AdContainer slotType="leaderboard" />}
       <div css={styles.grid}>
         <div css={styles.primaryColumn}>
           <main css={styles.mainContent} role="main">
