@@ -49,7 +49,7 @@ jobs:
           key: node-modules-${{ hashFiles('yarn.lock') }}
 
       - name: Install Node Modules
-        if: steps.cache.outputs.cache-hit != 'true'
+        # if: steps.cache.outputs.cache-hit != 'true'
         run: ./scripts/installNodeModules.sh
 
       - name: Build Simorgh - Express App
