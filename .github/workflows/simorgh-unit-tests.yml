@@ -55,15 +55,11 @@ jobs:
         run: ./scripts/installNodeModules.sh
 
       - name: Build Simorgh - Express App
-        run: |
-          echo ${GITHUB_REF##*/}
-          yarn build
+        run: yarn build
 
       - name: Build Simorgh - Next.JS App
         working-directory: ./ws-nextjs-app
-        run: |
-          echo ${GITHUB_REF##*/}
-          yarn build
+        run: yarn build
 
       - name: Setup Code Climate Test Coverage
         if: ${{ github.event_name == 'push' || github.event.pull_request.head.repo.full_name == 'bbc/simorgh' }} # Only run if PR originates from the Simorgh repo
