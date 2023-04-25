@@ -13,9 +13,17 @@ import TimestampFooter from './TimestampFooter';
 
 const buildImageProperties = image => {
   if (!image) return null;
-  const { width, height, altText, path: url, copyright } = image;
-  const originCode = getOriginCode(url);
-  const locator = getLocator(url);
+  const {
+    width,
+    height,
+    altText,
+    path: cpsPath,
+    locator: optimoPath,
+    originCode: optimoOriginCode,
+    copyright,
+  } = image;
+  const originCode = optimoOriginCode || getOriginCode(cpsPath);
+  const locator = optimoPath || getLocator(cpsPath);
 
   const { primarySrcset, primaryMimeType, fallbackSrcset, fallbackMimeType } =
     createSrcsets({
@@ -59,6 +67,35 @@ const TimestampFooterWithAmp = props => {
   );
 };
 
+const optimoPromoFormatter = props => {
+  return {
+    children: path(
+      [
+        'item',
+        'headlines',
+        'promoHeadline',
+        'blocks',
+        0,
+        'model',
+        'blocks',
+        0,
+        'model',
+        'text',
+      ],
+      props,
+    ),
+    footer: <TimestampFooterWithAmp {...props} />,
+    url: path(['item', 'locators', 'canonicalUrl'], props),
+    image: buildImageProperties(
+      path(
+        ['item', 'images', 'defaultPromoImage', 'blocks', 1, 'model'],
+        props,
+      ),
+    ),
+    eventTrackingData: path(['eventTrackingData', 'block'], props),
+  };
+};
+
 const cpsPromoFormatter = props => ({
   children: path(['item', 'headlines', 'headline'], props),
   footer: <TimestampFooterWithAmp {...props} />,
@@ -76,6 +113,8 @@ const linkPromoFormatter = props => ({
 });
 
 const normalise = props => {
+  if (path(['item', 'type'], props) === 'optimo')
+    return optimoPromoFormatter(props);
   if (hasPath(['item', 'cpsType'], props)) return cpsPromoFormatter(props);
   if (path(['item', 'assetTypeCode'], props) === 'PRO')
     return linkPromoFormatter(props);
