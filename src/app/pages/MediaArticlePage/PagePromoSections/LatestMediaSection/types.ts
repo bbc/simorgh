@@ -1,3 +1,5 @@
+import { EventTrackingData } from '../../types';
+
 export type Media = 'video' | 'audio';
 
 export type LatestMedia = {
@@ -10,14 +12,6 @@ export type LatestMedia = {
   title: string;
   type: Media;
   imageAlt?: string;
-};
-
-export type TrackingBlock = {
-  componentName: string;
-};
-
-export type EventTrackingData = {
-  block: TrackingBlock;
 };
 
 export type LatestMediaItemProp = {

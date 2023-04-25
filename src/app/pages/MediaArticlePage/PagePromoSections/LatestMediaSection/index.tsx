@@ -12,7 +12,8 @@ import SectionLabel from '#psammead/psammead-section-label/src';
 import generatePromoId from '../generatePromoId';
 import LatestMediaItem from './LatestMediaItem';
 import styles from './index.styles';
-import { LatestMedia, TrackingBlock, EventTrackingData } from './types';
+import { LatestMedia } from './types';
+import { EventTrackingData, TrackingBlock } from '../../types';
 
 const renderLatestMediaList = (
   item: LatestMedia,

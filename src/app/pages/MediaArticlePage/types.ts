@@ -15,3 +15,11 @@ export type TimestampProps = {
   minutesTolerance?: number;
   className: string;
 };
+
+export type TrackingBlock = {
+  componentName: string;
+};
+
+export type EventTrackingData = {
+  block: TrackingBlock;
+};
