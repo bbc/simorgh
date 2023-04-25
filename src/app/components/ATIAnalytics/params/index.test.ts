@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import * as analyticsUtils from '#lib/analyticsUtils';
+import * as analyticsUtils from '../../../lib/analyticsUtils';
 import {
   ARTICLE_PAGE,
   FRONT_PAGE,
@@ -9,32 +9,40 @@ import {
   PHOTO_GALLERY_PAGE,
   MEDIA_ARTICLE_PAGE,
   HOME_PAGE,
-} from '#app/routes/utils/pageTypes';
+} from '../../../routes/utils/pageTypes';
 import { buildATIUrl, buildATIEventTrackingParams } from '.';
+import { RequestContextProps } from '../../../contexts/RequestContext';
+import { ServiceConfig } from '../../../models/types/serviceConfig';
+import { PageData } from './types';
 
+// @ts-expect-error - we need to mock these functions to ensure tests are deterministic
 analyticsUtils.getAtUserId = jest.fn();
+// @ts-expect-error - we need to mock these functions to ensure tests are deterministic
 analyticsUtils.getCurrentTime = jest.fn().mockReturnValue('00-00-00');
+// @ts-expect-error - we need to mock these functions to ensure tests are deterministic
 analyticsUtils.getPublishedDatetime = jest
   .fn()
   .mockReturnValue('1970-01-01T00:00:00.000Z');
 
-const requestContext = {
-  platform: 'platform',
-  isUK: 'isUK',
+// @ts-expect-error - only partial data required for testing purposes
+const requestContext: RequestContextProps = {
+  platform: 'canonical',
+  isUK: false,
   statsDestination: 'statsDestination',
   previousPath: 'http://www.example.com',
   origin: 'origin',
   canonicalLink: 'https://www.bbc.com/pidgin/51536047',
 };
 
-const serviceContext = {
+// @ts-expect-error - only partial data required for testing purposes
+const serviceContext: ServiceConfig = {
   atiAnalyticsAppName: 'atiAnalyticsAppName',
   atiAnalyticsProducerId: 'atiAnalyticsProducerId',
-  service: 'service',
+  service: 'pidgin',
   brandName: 'brandName',
 };
 
-const article = {
+const article: PageData = {
   metadata: {
     analyticsLabels: {
       counterName: 'service.page',
@@ -69,7 +77,8 @@ const article = {
     },
   },
 };
-const frontPage = {
+
+const frontPage: PageData = {
   metadata: {
     analyticsLabels: {
       counterName: 'service.page',
@@ -82,14 +91,16 @@ const frontPage = {
     title: 'title',
   },
 };
-const media = {
+
+const media: PageData = {
   id: 'id',
   language: 'language',
   pageIdentifier: 'pageIdentifier',
   pageTitle: 'pageTitle',
   contentType: 'player-live',
 };
-const MAP = {
+
+const MAP: PageData = {
   promo: {
     headlines: {
       headline: 'headline',
@@ -124,7 +135,8 @@ const MAP = {
     },
   },
 };
-const PGL = {
+
+const PGL: PageData = {
   promo: {
     headlines: {
       headline: 'headline',
@@ -147,7 +159,8 @@ const PGL = {
     passport: {},
   },
 };
-const idxPage = {
+
+const idxPage: PageData = {
   metadata: {
     analyticsLabels: {
       counterName: 'service.page.idxpage',
@@ -163,29 +176,29 @@ const idxPage = {
 
 describe('ATIAnalytics params', () => {
   describe('buildATIUrl', () => {
-    it('should return the right article url', () => {
+    it('should return the correct article url', () => {
       const url = buildATIUrl(
         article,
         { ...requestContext, pageType: ARTICLE_PAGE },
         serviceContext,
       );
       expect(url).toMatchInlineSnapshot(
-        `"s=598285&s2=atiAnalyticsProducerId&p=service.articles.%2F%2Fwww.bbc.co.uk.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Aoptimo%3Aasset%3A54321]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http%253A%252F%252Flocalhost%252F]&x6=[originhttp%253A%252F%252Fwww.example.com]&x7=[article]&x8=[simorgh]&x9=[pageTitle]&x10=[scotland]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x13=[thing%2520english%2520label%25201~thing%2520english%2520label%25202]&x14=[thing%2520id%25201~thing%2520id%25202]&x17=[thing%2520english%2520label%25201~thing%2520english%2520label%25202]&ref=originhttp://www.example.com"`,
+        `"s=598285&s2=atiAnalyticsProducerId&p=pidgin.articles.%2F%2Fwww.bbc.co.uk.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Aoptimo%3Aasset%3A54321]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http%253A%252F%252Flocalhost%252F]&x6=[originhttp%253A%252F%252Fwww.example.com]&x7=[article]&x8=[simorgh]&x9=[pageTitle]&x10=[scotland]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x13=[thing%2520english%2520label%25201~thing%2520english%2520label%25202]&x14=[thing%2520id%25201~thing%2520id%25202]&x17=[thing%2520english%2520label%25201~thing%2520english%2520label%25202]&ref=originhttp://www.example.com"`,
       );
     });
 
-    it('should return the right media article url', () => {
+    it('should return the correct media article url', () => {
       const url = buildATIUrl(
         article,
         { ...requestContext, pageType: MEDIA_ARTICLE_PAGE },
         serviceContext,
       );
       expect(url).toMatchInlineSnapshot(
-        `"s=598285&s2=atiAnalyticsProducerId&p=service.articles.%2F%2Fwww.bbc.co.uk.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Aoptimo%3Aasset%3A54321]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http%253A%252F%252Flocalhost%252F]&x6=[originhttp%253A%252F%252Fwww.example.com]&x7=[article-sfv]&x8=[simorgh]&x9=[pageTitle]&x10=[scotland]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x13=[thing%2520english%2520label%25201~thing%2520english%2520label%25202]&x14=[thing%2520id%25201~thing%2520id%25202]&x17=[thing%2520english%2520label%25201~thing%2520english%2520label%25202]&ref=originhttp://www.example.com"`,
+        `"s=598285&s2=atiAnalyticsProducerId&p=pidgin.articles.%2F%2Fwww.bbc.co.uk.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Aoptimo%3Aasset%3A54321]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http%253A%252F%252Flocalhost%252F]&x6=[originhttp%253A%252F%252Fwww.example.com]&x7=[article-sfv]&x8=[simorgh]&x9=[pageTitle]&x10=[scotland]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x13=[thing%2520english%2520label%25201~thing%2520english%2520label%25202]&x14=[thing%2520id%25201~thing%2520id%25202]&x17=[thing%2520english%2520label%25201~thing%2520english%2520label%25202]&ref=originhttp://www.example.com"`,
       );
     });
 
-    it('should return the right frontPage url', () => {
+    it('should return the correct frontPage url', () => {
       const url = buildATIUrl(
         frontPage,
         { ...requestContext, pageType: FRONT_PAGE },
@@ -207,7 +220,7 @@ describe('ATIAnalytics params', () => {
       );
     });
 
-    it('should return the right IDX page url', () => {
+    it('should return the correct IDX page url', () => {
       const url = buildATIUrl(
         idxPage,
         { ...requestContext, pageType: INDEX_PAGE },
@@ -218,7 +231,7 @@ describe('ATIAnalytics params', () => {
       );
     });
 
-    it('should return the right media url', () => {
+    it('should return the correct media url', () => {
       const url = buildATIUrl(
         media,
         { ...requestContext, pageType: MEDIA_PAGE },
@@ -229,7 +242,7 @@ describe('ATIAnalytics params', () => {
       );
     });
 
-    it('should return the right MAP url', () => {
+    it('should return the correct MAP url', () => {
       const url = buildATIUrl(
         MAP,
         { ...requestContext, pageType: MEDIA_ASSET_PAGE },
@@ -240,7 +253,7 @@ describe('ATIAnalytics params', () => {
       );
     });
 
-    it('should return the right PGL url', () => {
+    it('should return the correct PGL url', () => {
       const url = buildATIUrl(
         PGL,
         { ...requestContext, pageType: PHOTO_GALLERY_PAGE },
@@ -256,7 +269,7 @@ describe('ATIAnalytics params', () => {
         article,
         { ...requestContext, pageType: ARTICLE_PAGE },
         serviceContext,
-      );
+      ) as string;
       const params = atiUrl.split('&');
 
       expect(params).toContain('x6=[originhttp%253A%252F%252Fwww.example.com]');
@@ -268,7 +281,7 @@ describe('ATIAnalytics params', () => {
         article,
         { ...requestContext, pageType: ARTICLE_PAGE },
         serviceContext,
-      );
+      ) as string;
       const params = atiUrl.split('&');
 
       expect(params.pop()).toEqual('ref=originhttp://www.example.com');
@@ -279,7 +292,7 @@ describe('ATIAnalytics params', () => {
         article,
         { ...requestContext, pageType: ARTICLE_PAGE, previousPath: '' },
         serviceContext,
-      );
+      ) as string;
       const params = atiUrl.split('&');
 
       expect(params).not.toContain('x6=');
@@ -288,7 +301,7 @@ describe('ATIAnalytics params', () => {
   });
 
   describe('buildATIEventTrackingParams', () => {
-    it('should return the right article params', () => {
+    it('should return the correct article params', () => {
       const params = buildATIEventTrackingParams(
         article,
         { ...requestContext, pageType: ARTICLE_PAGE },
@@ -299,19 +312,19 @@ describe('ATIAnalytics params', () => {
         contentId: 'urn:bbc:optimo:asset:54321',
         contentType: 'article',
         categoryName: 'thing%20english%20label%201~thing%20english%20label%202',
-        isUK: 'isUK',
+        isUK: false,
         language: 'language',
         ldpThingIds: 'thing%20id%201~thing%20id%202',
         ldpThingLabels:
           'thing%20english%20label%201~thing%20english%20label%202',
         origin: 'origin',
-        pageIdentifier: 'service.articles.//www.bbc.co.uk.page',
+        pageIdentifier: 'pidgin.articles.//www.bbc.co.uk.page',
         pageTitle: 'pageTitle',
         libraryVersion: 'simorgh',
-        platform: 'platform',
+        platform: 'canonical',
         previousPath: 'http://www.example.com',
         producerId: 'atiAnalyticsProducerId',
-        service: 'service',
+        service: 'pidgin',
         statsDestination: 'statsDestination',
         timePublished: analyticsUtils.getPublishedDatetime(),
         timeUpdated: analyticsUtils.getPublishedDatetime(),
@@ -319,7 +332,7 @@ describe('ATIAnalytics params', () => {
       });
     });
 
-    it('should return the right media article params', () => {
+    it('should return the correct media article params', () => {
       const params = buildATIEventTrackingParams(
         article,
         { ...requestContext, pageType: MEDIA_ARTICLE_PAGE },
@@ -330,19 +343,19 @@ describe('ATIAnalytics params', () => {
         contentId: 'urn:bbc:optimo:asset:54321',
         contentType: 'article-sfv',
         categoryName: 'thing%20english%20label%201~thing%20english%20label%202',
-        isUK: 'isUK',
+        isUK: false,
         language: 'language',
         ldpThingIds: 'thing%20id%201~thing%20id%202',
         ldpThingLabels:
           'thing%20english%20label%201~thing%20english%20label%202',
         origin: 'origin',
-        pageIdentifier: 'service.articles.//www.bbc.co.uk.page',
+        pageIdentifier: 'pidgin.articles.//www.bbc.co.uk.page',
         pageTitle: 'pageTitle',
         libraryVersion: 'simorgh',
-        platform: 'platform',
+        platform: 'canonical',
         previousPath: 'http://www.example.com',
         producerId: 'atiAnalyticsProducerId',
-        service: 'service',
+        service: 'pidgin',
         statsDestination: 'statsDestination',
         timePublished: analyticsUtils.getPublishedDatetime(),
         timeUpdated: analyticsUtils.getPublishedDatetime(),
@@ -350,7 +363,7 @@ describe('ATIAnalytics params', () => {
       });
     });
 
-    it('should return the right frontPage params', () => {
+    it('should return the correct frontPage params', () => {
       const params = buildATIEventTrackingParams(
         frontPage,
         { ...requestContext, pageType: FRONT_PAGE },
@@ -364,9 +377,9 @@ describe('ATIAnalytics params', () => {
         pageIdentifier: 'service.page',
         pageTitle: 'title - brandName',
         libraryVersion: 'simorgh',
-        platform: 'platform',
+        platform: 'canonical',
         producerId: 'atiAnalyticsProducerId',
-        service: 'service',
+        service: 'pidgin',
         statsDestination: 'statsDestination',
         timePublished: '1970-01-01T00:00:00.000Z',
         timeUpdated: '1970-01-01T00:00:00.000Z',
@@ -387,16 +400,16 @@ describe('ATIAnalytics params', () => {
         pageIdentifier: 'service.page',
         pageTitle: 'title - brandName',
         libraryVersion: 'simorgh',
-        platform: 'platform',
+        platform: 'canonical',
         producerId: 'atiAnalyticsProducerId',
-        service: 'service',
+        service: 'pidgin',
         statsDestination: 'statsDestination',
         timePublished: '1970-01-01T00:00:00.000Z',
         timeUpdated: '1970-01-01T00:00:00.000Z',
       });
     });
 
-    it('should return the right IDX page params', () => {
+    it('should return the correct IDX page params', () => {
       const params = buildATIEventTrackingParams(
         idxPage,
         { ...requestContext, pageType: INDEX_PAGE },
@@ -410,16 +423,16 @@ describe('ATIAnalytics params', () => {
         pageIdentifier: 'service.page.idxpage',
         pageTitle: 'title - brandName',
         libraryVersion: 'simorgh',
-        platform: 'platform',
+        platform: 'canonical',
         producerId: 'atiAnalyticsProducerId',
-        service: 'service',
+        service: 'pidgin',
         statsDestination: 'statsDestination',
         timePublished: '1970-01-01T00:00:00.000Z',
         timeUpdated: '1970-01-01T00:00:00.000Z',
       });
     });
 
-    it('should return the right media params', () => {
+    it('should return the correct media params', () => {
       const params = buildATIEventTrackingParams(
         media,
         { ...requestContext, pageType: MEDIA_PAGE },
@@ -433,14 +446,14 @@ describe('ATIAnalytics params', () => {
         pageIdentifier: 'pageIdentifier',
         pageTitle: 'pageTitle',
         libraryVersion: 'simorgh',
-        platform: 'platform',
+        platform: 'canonical',
         producerId: 'atiAnalyticsProducerId',
-        service: 'service',
+        service: 'pidgin',
         statsDestination: 'statsDestination',
       });
     });
 
-    it('should return the right MAP params', () => {
+    it('should return the correct MAP params', () => {
       const params = buildATIEventTrackingParams(
         MAP,
         { ...requestContext, pageType: MEDIA_ASSET_PAGE },
@@ -461,16 +474,16 @@ describe('ATIAnalytics params', () => {
         pageIdentifier: 'pageIdentifier',
         pageTitle: 'headline - brandName',
         libraryVersion: 'simorgh',
-        platform: 'platform',
+        platform: 'canonical',
         producerId: 'atiAnalyticsProducerId',
-        service: 'service',
+        service: 'pidgin',
         statsDestination: 'statsDestination',
         timePublished: '1970-01-01T00:00:00.000Z',
         timeUpdated: '1970-01-01T00:00:00.000Z',
       });
     });
 
-    it('should return the right PGL params', () => {
+    it('should return the correct PGL params', () => {
       const params = buildATIEventTrackingParams(
         PGL,
         { ...requestContext, pageType: PHOTO_GALLERY_PAGE },
@@ -486,9 +499,9 @@ describe('ATIAnalytics params', () => {
         pageIdentifier: 'pageIdentifier',
         pageTitle: 'headline - brandName',
         libraryVersion: 'simorgh',
-        platform: 'platform',
+        platform: 'canonical',
         producerId: 'atiAnalyticsProducerId',
-        service: 'service',
+        service: 'pidgin',
         statsDestination: 'statsDestination',
         timePublished: '1970-01-01T00:00:00.000Z',
         timeUpdated: '1970-01-01T00:00:00.000Z',
@@ -501,6 +514,7 @@ describe('ATIAnalytics params', () => {
 
       const pageData = null;
       const params = buildATIEventTrackingParams(
+        // @ts-expect-error - pass in null value to ensure error handling working as expected
         pageData,
         { ...requestContext, pageType: PHOTO_GALLERY_PAGE },
         serviceContext,

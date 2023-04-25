@@ -2,17 +2,10 @@ import { LIBRARY_VERSION } from '../../../../lib/analyticsUtils';
 import { RequestContextProps } from '../../../../contexts/RequestContext';
 import { ServiceConfig } from '../../../../models/types/serviceConfig';
 import { buildATIPageTrackPath } from '../../atiUrl';
-
-interface TVRadioPageData {
-  id: string;
-  language: string;
-  pageTitle: string;
-  pageIdentifier: string;
-  contentType: string;
-}
+import { PageData } from '../types';
 
 export const buildTvRadioATIParams = (
-  pageData: TVRadioPageData,
+  pageData: PageData,
   requestContext: RequestContextProps,
   serviceContext: ServiceConfig,
 ) => {
@@ -25,7 +18,7 @@ export const buildTvRadioATIParams = (
   const isLiveRadio = contentType === 'player-live';
 
   const getOnDemandContentId = () => {
-    const guid = id.split('/').pop();
+    const guid = id?.split('/').pop();
     const contentId = `urn:bbc:pips:${guid}`;
     return contentId;
   };
@@ -46,7 +39,7 @@ export const buildTvRadioATIParams = (
 };
 
 export const buildTvRadioATIUrl = (
-  pageData: TVRadioPageData,
+  pageData: PageData,
   requestContext: RequestContextProps,
   serviceContext: ServiceConfig,
 ) => {

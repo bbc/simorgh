@@ -2,13 +2,10 @@ import { LIBRARY_VERSION } from '../../../../lib/analyticsUtils';
 import { RequestContextProps } from '../../../../contexts/RequestContext';
 import { ServiceConfig } from '../../../../models/types/serviceConfig';
 import { buildATIPageTrackPath } from '../../atiUrl';
-
-interface TopicPageData {
-  title: string;
-}
+import { PageData } from '../types';
 
 export const buildTopicPageATIParams = (
-  pageData: TopicPageData,
+  pageData: PageData,
   requestContext: RequestContextProps,
   serviceContext: ServiceConfig,
 ) => {
@@ -32,7 +29,7 @@ export const buildTopicPageATIParams = (
 };
 
 export const buildTopicPageATIUrl = (
-  topicPageData: TopicPageData,
+  topicPageData: PageData,
   requestContext: RequestContextProps,
   serviceContext: ServiceConfig,
 ) =>

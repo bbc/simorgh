@@ -13,9 +13,10 @@ import {
 import { RequestContextProps } from '../../../../contexts/RequestContext';
 import { ServiceConfig } from '../../../../models/types/serviceConfig';
 import { buildATIPageTrackPath } from '../../atiUrl';
+import { PageData } from '../types';
 
 export const buildArticleATIParams = (
-  articleData: object,
+  articleData: PageData,
   requestContext: RequestContextProps,
   serviceContext: ServiceConfig,
   pageType = 'article',
@@ -50,7 +51,7 @@ export const buildArticleATIParams = (
 };
 
 export const buildArticleATIUrl = (
-  articleData: object,
+  articleData: PageData,
   requestContext: RequestContextProps,
   serviceContext: ServiceConfig,
   pageType = 'article',

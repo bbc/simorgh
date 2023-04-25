@@ -8,32 +8,10 @@ import {
 import { buildATIPageTrackPath } from '../../atiUrl';
 import { RequestContextProps } from '../../../../contexts/RequestContext';
 import { ServiceConfig } from '../../../../models/types/serviceConfig';
-
-interface CPSAssetPageData {
-  metadata: {
-    analyticsLabels: {
-      counterName: string;
-    };
-    atiAnalytics: {
-      chapter: string;
-      producerId: string;
-    };
-    language?: string;
-    passport: {
-      campaigns: {
-        campaignId: string;
-        campaignName: string;
-      }[];
-      category: {
-        categoryName: string;
-      };
-    };
-  };
-  promo: object;
-}
+import { PageData } from '../types';
 
 export const buildCpsAssetPageATIParams = (
-  pageData: CPSAssetPageData,
+  pageData: PageData,
   requestContext: RequestContextProps,
   serviceContext: ServiceConfig,
   contentType: string,
