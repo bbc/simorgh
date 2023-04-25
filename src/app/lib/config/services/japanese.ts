@@ -304,10 +304,6 @@ export const service: DefaultServiceConfig = {
         url: '/japanese/60631515',
       },
       {
-        title: 'コロナウイルス',
-        url: '/japanese/52137815',
-      },
-      {
         title: '気候変動',
         url: '/japanese/58771282',
       },
