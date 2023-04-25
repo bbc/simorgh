@@ -59,7 +59,7 @@ storiesOf('Components/Media Player', module)
             ...withDuration,
           }}
           showLoadingImage={boolean('Show loading image', true)}
-          darkMode={boolean('Dark mode', false)}
+          darkPlaceholder={boolean('Dark placeholder', false)}
           title="Media player"
           noJsMessage="Dem no support media player for your device"
           noJsClassName="no-js"

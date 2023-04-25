@@ -144,7 +144,7 @@ const FrostedGlassPromo = ({
       ></ClickableArea>
       <ImageWithPlaceholder
         lazyLoad
-        darkMode={isCanonical}
+        darkPlaceholder={isCanonical}
         {...pick(
           [
             'src',
