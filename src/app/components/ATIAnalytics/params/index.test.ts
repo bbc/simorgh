@@ -13,7 +13,7 @@ import {
 import { buildATIUrl, buildATIEventTrackingParams } from '.';
 import { RequestContextProps } from '../../../contexts/RequestContext';
 import { ServiceConfig } from '../../../models/types/serviceConfig';
-import { PageData } from './types';
+import { PageData } from '../types';
 
 // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
 analyticsUtils.getAtUserId = jest.fn();

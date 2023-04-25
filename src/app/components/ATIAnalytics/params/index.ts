@@ -29,9 +29,8 @@ import {
 } from './topicPage/buildParams';
 import { RequestContextProps } from '../../../contexts/RequestContext';
 import { ServiceConfig } from '../../../models/types/serviceConfig';
-import { PageData } from './types';
+import { PageData, ATIPageTrackingProps } from '../types';
 import { PageTypes } from '../../../models/types/global';
-import { ATIPageTrackingProps } from '../types';
 
 const ARTICLE_MEDIA_ASSET = 'article-media-asset';
 const ARTICLE_PHOTO_GALLERY = 'article-photo-gallery';

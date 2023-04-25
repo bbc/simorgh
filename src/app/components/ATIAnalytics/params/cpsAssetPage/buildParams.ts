@@ -8,7 +8,7 @@ import {
 import { buildATIPageTrackPath } from '../../atiUrl';
 import { RequestContextProps } from '../../../../contexts/RequestContext';
 import { ServiceConfig } from '../../../../models/types/serviceConfig';
-import { PageData } from '../types';
+import { PageData } from '../../types';
 
 export const buildCpsAssetPageATIParams = (
   pageData: PageData,
@@ -24,7 +24,7 @@ export const buildCpsAssetPageATIParams = (
 
   const getChapter1 = (pageIdentifier: string) => {
     if (service === 'news') {
-      return metadata.atiAnalytics?.chapter;
+      return metadata?.atiAnalytics?.chapter;
     }
     const chapter = pageIdentifier.split('.')[1];
     if (['media_asset', 'story'].includes(chapter)) {
@@ -35,7 +35,7 @@ export const buildCpsAssetPageATIParams = (
 
   const getProducer = (defaultProducer: string): string => {
     if (['news', 'sport'].includes(service)) {
-      return metadata.atiAnalytics?.producerId;
+      return metadata?.atiAnalytics?.producerId;
     }
     return defaultProducer;
   };
@@ -57,8 +57,8 @@ export const buildCpsAssetPageATIParams = (
     pageTitle: `${path(['headlines', 'headline'], promo)} - ${brandName}`,
     timePublished: getPublishedDatetime('firstPublished', pageData),
     timeUpdated: getPublishedDatetime('lastPublished', pageData),
-    categoryName: metadata.passport?.category?.categoryName,
-    campaigns: metadata.passport?.campaigns,
+    categoryName: metadata?.passport?.category?.categoryName,
+    campaigns: metadata?.passport?.campaigns,
     ...(ldpThingIds && { ldpThingIds }),
     ...(ldpThingLabels && { ldpThingLabels }),
     producerId,
@@ -70,7 +70,7 @@ export const buildCpsAssetPageATIParams = (
 };
 
 export const buildCpsAssetPageATIUrl = (
-  pageData: CPSAssetPageData,
+  pageData: PageData,
   requestContext: RequestContextProps,
   serviceContext: ServiceConfig,
   contentType: string,

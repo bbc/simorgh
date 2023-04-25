@@ -2,7 +2,7 @@ import { LIBRARY_VERSION } from '../../../../lib/analyticsUtils';
 import { RequestContextProps } from '../../../../contexts/RequestContext';
 import { ServiceConfig } from '../../../../models/types/serviceConfig';
 import { buildATIPageTrackPath } from '../../atiUrl';
-import { PageData } from '../types';
+import { PageData } from '../../types';
 
 export const buildMostReadATIParams = (
   pageData: PageData,

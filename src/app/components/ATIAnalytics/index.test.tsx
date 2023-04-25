@@ -31,11 +31,11 @@ import * as amp from './amp';
 import * as canonical from './canonical';
 import { PageTypes, Platforms, Services } from '../../models/types/global';
 
-// @ts-ignore
+// @ts-expect-error - we need to mock these functions to ensure tests are deterministic
 analyticsUtils.getAtUserId = jest.fn();
-// @ts-ignore
+// @ts-expect-error - we need to mock these functions to ensure tests are deterministic
 analyticsUtils.getCurrentTime = jest.fn().mockReturnValue('00-00-00');
-// @ts-ignore
+// @ts-expect-error - we need to mock these functions to ensure tests are deterministic
 analyticsUtils.getPublishedDatetime = jest
   .fn()
   .mockReturnValue('1970-01-01T00:00:00.000Z');
@@ -75,7 +75,7 @@ describe('ATI Analytics Container', () => {
   describe('pageType article', () => {
     it('should call CanonicalATIAnalytics when platform is canonical', () => {
       const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
-      // @ts-ignore
+      // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       canonical.default = mockCanonical;
 
       render(
@@ -84,6 +84,7 @@ describe('ATI Analytics Container', () => {
           pageType={ARTICLE_PAGE}
           service="news"
         >
+          {/* @ts-expect-error - only partial data required for testing purposes */}
           <ATIAnalytics data={articleDataNews} />
         </ContextWrap>,
       );
@@ -98,11 +99,12 @@ describe('ATI Analytics Container', () => {
     it('should call AmpATIAnalytics when platform is Amp', () => {
       const mockAmp = jest.fn().mockReturnValue('amp-return-value');
 
-      // @ts-ignore
+      // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       amp.default = mockAmp;
 
       render(
         <ContextWrap platform="amp" pageType={ARTICLE_PAGE} service="news">
+          {/* @ts-expect-error - only partial data required for testing purposes */}
           <ATIAnalytics data={articleDataNews} />
         </ContextWrap>,
       );
@@ -118,7 +120,7 @@ describe('ATI Analytics Container', () => {
   describe('pageType media article', () => {
     it('should call CanonicalATIAnalytics when platform is canonical', () => {
       const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
-      // @ts-ignore
+      // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       canonical.default = mockCanonical;
 
       render(
@@ -127,6 +129,7 @@ describe('ATI Analytics Container', () => {
           pageType={MEDIA_ARTICLE_PAGE}
           service="news"
         >
+          {/* @ts-expect-error - only partial data required for testing purposes */}
           <ATIAnalytics data={articleDataNews} />
         </ContextWrap>,
       );
@@ -141,7 +144,7 @@ describe('ATI Analytics Container', () => {
     it('should call AmpATIAnalytics when platform is Amp', () => {
       const mockAmp = jest.fn().mockReturnValue('amp-return-value');
 
-      // @ts-ignore
+      // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       amp.default = mockAmp;
 
       render(
@@ -150,6 +153,7 @@ describe('ATI Analytics Container', () => {
           pageType={MEDIA_ARTICLE_PAGE}
           service="news"
         >
+          {/* @ts-expect-error - only partial data required for testing purposes */}
           <ATIAnalytics data={articleDataNews} />
         </ContextWrap>,
       );
@@ -168,11 +172,12 @@ describe('ATI Analytics Container', () => {
         href: `https://localhost`,
       });
       const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
-      // @ts-ignore
+      // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       canonical.default = mockCanonical;
 
       render(
         <ContextWrap platform="canonical" pageType={FRONT_PAGE} service="news">
+          {/* @ts-expect-error - only partial data required for testing purposes */}
           <ATIAnalytics data={articleDataNews} />
         </ContextWrap>,
       );
@@ -187,11 +192,12 @@ describe('ATI Analytics Container', () => {
     it('should call AmpATIAnalytics when platform is Amp', () => {
       const mockAmp = jest.fn().mockReturnValue('amp-return-value');
 
-      // @ts-ignore
+      // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       amp.default = mockAmp;
 
       render(
         <ContextWrap platform="amp" pageType={FRONT_PAGE} service="news">
+          {/* @ts-expect-error - only partial data required for testing purposes */}
           <ATIAnalytics data={articleDataNews} />
         </ContextWrap>,
       );
@@ -208,7 +214,7 @@ describe('ATI Analytics Container', () => {
     it('should call CanonicalATIAnalytics when platform is canonical', () => {
       const mockAmp = jest.fn().mockReturnValue('amp-return-value');
 
-      // @ts-ignore
+      // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       amp.default = mockAmp;
 
       render(
@@ -217,6 +223,7 @@ describe('ATI Analytics Container', () => {
           pageType={MEDIA_ASSET_PAGE}
           service="pidgin"
         >
+          {/* @ts-expect-error - only partial data required for testing purposes */}
           <ATIAnalytics data={mapAssetData} />
         </ContextWrap>,
       );
@@ -232,7 +239,7 @@ describe('ATI Analytics Container', () => {
   describe('pageType=PGL', () => {
     it('should call CanonicalATIAnalytics when platform is canonical', () => {
       const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
-      // @ts-ignore
+      // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       canonical.default = mockCanonical;
 
       render(
@@ -241,6 +248,7 @@ describe('ATI Analytics Container', () => {
           pageType={PHOTO_GALLERY_PAGE}
           service="azeri"
         >
+          {/* @ts-expect-error - only partial data required for testing purposes */}
           <ATIAnalytics data={pglAssetData} />
         </ContextWrap>,
       );
@@ -255,7 +263,7 @@ describe('ATI Analytics Container', () => {
     it('should call AmpATIAnalytics when platform is Amp', () => {
       const mockAmp = jest.fn().mockReturnValue('amp-return-value');
 
-      // @ts-ignore
+      // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       amp.default = mockAmp;
 
       render(
@@ -264,6 +272,7 @@ describe('ATI Analytics Container', () => {
           pageType={PHOTO_GALLERY_PAGE}
           service="azeri"
         >
+          {/* @ts-expect-error - only partial data required for testing purposes */}
           <ATIAnalytics data={pglAssetData} />
         </ContextWrap>,
       );
@@ -278,11 +287,13 @@ describe('ATI Analytics Container', () => {
 
   describe('pageType=STY', () => {
     it('should call CanonicalATIAnalytics when platform is canonical', () => {
-      const mockCanonical = jest.fn().mockReturnValue('canonical-return-value'); // @ts-ignore
+      const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
+      // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       canonical.default = mockCanonical;
 
       render(
         <ContextWrap platform="canonical" pageType={STORY_PAGE} service="mundo">
+          {/* @ts-expect-error - only partial data required for testing purposes */}
           <ATIAnalytics data={styAssetData} />
         </ContextWrap>,
       );
@@ -296,11 +307,12 @@ describe('ATI Analytics Container', () => {
 
     it('should call AmpATIAnalytics when platform is Amp', () => {
       const mockAmp = jest.fn().mockReturnValue('amp-return-value');
-      // @ts-ignore
+      // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       amp.default = mockAmp;
 
       render(
         <ContextWrap platform="amp" pageType={STORY_PAGE} service="mundo">
+          {/* @ts-expect-error - only partial data required for testing purposes */}
           <ATIAnalytics data={styAssetData} />
         </ContextWrap>,
       );
@@ -314,7 +326,7 @@ describe('ATI Analytics Container', () => {
 
     it('should call AmpATIAnalytics when platform is Amp and pageType is CSP', () => {
       const mockAmp = jest.fn().mockReturnValue('amp-return-value');
-      // @ts-ignore
+      // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       amp.default = mockAmp;
 
       render(
@@ -323,6 +335,7 @@ describe('ATI Analytics Container', () => {
           pageType={CORRESPONDENT_STORY_PAGE}
           service="mundo"
         >
+          {/* @ts-expect-error - only partial data required for testing purposes */}
           <ATIAnalytics data={styAssetData} />
         </ContextWrap>,
       );
@@ -335,7 +348,8 @@ describe('ATI Analytics Container', () => {
     });
 
     it('should return the correct language param when service is Ukrainian and pageData language is Ukrainian on canonical', () => {
-      const mockCanonical = jest.fn().mockReturnValue('canonical-return-value'); // @ts-ignore
+      const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
+      // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       canonical.default = mockCanonical;
 
       render(
@@ -357,7 +371,7 @@ describe('ATI Analytics Container', () => {
 
     it('should return the correct language param when service is Ukrainian and pageData language is Ukrainian on Amp', () => {
       const mockAmp = jest.fn().mockReturnValue('amp-return-value');
-      // @ts-ignore
+      // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       amp.default = mockAmp;
 
       render(
@@ -374,7 +388,8 @@ describe('ATI Analytics Container', () => {
     });
 
     it('should return the correct language param when service is Ukrainian and pageData language is Russian on canonical', () => {
-      const mockCanonical = jest.fn().mockReturnValue('canonical-return-value'); // @ts-ignore
+      const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
+      // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       canonical.default = mockCanonical;
 
       render(
@@ -396,7 +411,7 @@ describe('ATI Analytics Container', () => {
 
     it('should return the correct language param when service is Ukrainian and pageData language is Russian on Amp', () => {
       const mockAmp = jest.fn().mockReturnValue('amp-return-value');
-      // @ts-ignore
+      // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       amp.default = mockAmp;
 
       render(
@@ -407,7 +422,7 @@ describe('ATI Analytics Container', () => {
 
       expect(mockAmp.mock.calls[0][0]).toMatchInlineSnapshot(`
         Object {
-          "pageviewParams": "s=598343&s2=94&p=russian_features%3A%3Aukrainian.russian_features.story.53477115.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=00-00-00&lng=\${browserLanguage}&x2=[amp]&x3=[news-ukrainian]&x4=[ru]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article]&x8=[simorgh]&x9=[%D0%9A%D0%B0%D1%80%D1%82%D0%B0%2520%D0%BD%D0%BE%D0%B2%D1%8B%D1%85%2520%D1%80%D0%B0%D0%B9%D0%BE%D0%BD%D0%BE%D0%B2%2520%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D1%8B%3A%2520%D0%BA%D1%82%D0%BE%2520%D0%B8%2520%D0%BA%D0%BE%D0%B3%D0%BE%2520%D0%BF%D0%BE%D0%B3%D0%BB%D0%BE%D1%82%D0%B8%D0%BB%2520-%2520BBC%2520News%2520%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B0]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x13=[Society~Politics~Ukraine]&x14=[5307a8d9-f620-40f5-92d4-f99c919a6ffa~75612fa6-147c-4a43-97fa-fcf70d9cced3~ee8750ed-a7fb-453f-bfca-2aa8b3fb064c]&x16=[WS%20-%20Update%20me]&x17=[News]&ref=\${documentReferrer}",
+        "pageviewParams": "s=598343&s2=94&p=russian_features%3A%3Aukrainian.russian_features.story.53477115.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=00-00-00&lng=\${browserLanguage}&x2=[amp]&x3=[news-ukrainian]&x4=[ru]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article]&x8=[simorgh]&x9=[%D0%9A%D0%B0%D1%80%D1%82%D0%B0%2520%D0%BD%D0%BE%D0%B2%D1%8B%D1%85%2520%D1%80%D0%B0%D0%B9%D0%BE%D0%BD%D0%BE%D0%B2%2520%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D1%8B%3A%2520%D0%BA%D1%82%D0%BE%2520%D0%B8%2520%D0%BA%D0%BE%D0%B3%D0%BE%2520%D0%BF%D0%BE%D0%B3%D0%BB%D0%BE%D1%82%D0%B8%D0%BB%2520-%2520BBC%2520News%2520%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B0]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x13=[Society~Politics~Ukraine]&x14=[5307a8d9-f620-40f5-92d4-f99c919a6ffa~75612fa6-147c-4a43-97fa-fcf70d9cced3~ee8750ed-a7fb-453f-bfca-2aa8b3fb064c]&x16=[WS%20-%20Update%20me]&x17=[News]&ref=\${documentReferrer}",
         }
       `);
     });
@@ -417,6 +432,7 @@ describe('ATI Analytics Container', () => {
     isNull(
       'should render null',
       <ContextWrap platform="canonical" pageType="error" service="news">
+        {/* @ts-expect-error - only partial data required for testing purposes */}
         <ATIAnalytics data={articleDataNews} />
       </ContextWrap>,
     );
@@ -432,11 +448,13 @@ describe('ATI Analytics Container', () => {
       setWindowValue('location', {
         href: 'https://localhost?at_medium=email&at_emailtype=acquisition&at_creation=my_creation',
       });
-      const mockCanonical = jest.fn().mockReturnValue('canonical-return-value'); // @ts-ignore
+      const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
+      // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       canonical.default = mockCanonical;
 
       render(
         <ContextWrap platform="canonical" pageType={STORY_PAGE} service="mundo">
+          {/* @ts-expect-error - only partial data required for testing purposes */}
           <ATIAnalytics data={styAssetData} />
         </ContextWrap>,
       );
@@ -451,11 +469,13 @@ describe('ATI Analytics Container', () => {
       setWindowValue('location', {
         href: 'http://localhost?foo=bar',
       });
-      const mockCanonical = jest.fn().mockReturnValue('canonical-return-value'); // @ts-ignore
+      const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
+      // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       canonical.default = mockCanonical;
 
       render(
         <ContextWrap platform="canonical" pageType={STORY_PAGE} service="mundo">
+          {/* @ts-expect-error - only partial data required for testing purposes */}
           <ATIAnalytics data={styAssetData} />
         </ContextWrap>,
       );
@@ -469,7 +489,8 @@ describe('ATI Analytics Container', () => {
   });
   describe('pageType=FIX', () => {
     it('should call CanonicalATIAnalytics when platform is canonical', () => {
-      const mockCanonical = jest.fn().mockReturnValue('canonical-return-value'); // @ts-ignore
+      const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
+      // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       canonical.default = mockCanonical;
 
       render(
@@ -478,6 +499,7 @@ describe('ATI Analytics Container', () => {
           pageType={FEATURE_INDEX_PAGE}
           service="afrique"
         >
+          {/* @ts-expect-error - only partial data required for testing purposes */}
           <ATIAnalytics data={fixAssetData} />
         </ContextWrap>,
       );
@@ -491,7 +513,7 @@ describe('ATI Analytics Container', () => {
 
     it('should call AmpATIAnalytics when platform is Amp', () => {
       const mockAmp = jest.fn().mockReturnValue('amp-return-value');
-      // @ts-ignore
+      // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       amp.default = mockAmp;
 
       render(
@@ -500,6 +522,7 @@ describe('ATI Analytics Container', () => {
           pageType={FEATURE_INDEX_PAGE}
           service="afrique"
         >
+          {/* @ts-expect-error - only partial data required for testing purposes */}
           <ATIAnalytics data={fixAssetData} />
         </ContextWrap>,
       );

@@ -1,7 +1,6 @@
 import React, { createContext, PropsWithChildren, useContext } from 'react';
 
 import { RequestContext } from '#contexts/RequestContext';
-import { buildATIEventTrackingParams } from '#containers/ATIAnalytics/params';
 import useToggle from '#hooks/useToggle';
 import {
   ARTICLE_PAGE,
@@ -21,7 +20,9 @@ import {
   HOME_PAGE,
 } from '#app/routes/utils/pageTypes';
 import { PageTypes, Platforms } from '#app/models/types/global';
+import { buildATIEventTrackingParams } from '../../components/ATIAnalytics/params';
 import { ServiceContext } from '../ServiceContext';
+import { ATIPageTrackingProps } from '../../components/ATIAnalytics/types';
 
 type EventTrackingContextProps =
   | {
@@ -95,7 +96,11 @@ export const EventTrackingContextProvider = ({
     requestContext.pageType as CampaignPageTypes,
   );
   const { pageIdentifier, platform, statsDestination } =
-    buildATIEventTrackingParams(pageData, requestContext, serviceContext);
+    buildATIEventTrackingParams(
+      pageData,
+      requestContext,
+      serviceContext,
+    ) as ATIPageTrackingProps;
   const trackingProps = {
     campaignID,
     pageIdentifier,

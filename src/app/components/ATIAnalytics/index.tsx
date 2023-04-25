@@ -27,8 +27,9 @@ import {
   ERROR_PAGE,
   HOME_PAGE,
 } from '../../routes/utils/pageTypes';
+import { ATIProps } from './types';
 
-const ATIAnalytics = ({ data }: { data: unknown }) => {
+const ATIAnalytics = ({ data }: ATIProps) => {
   const requestContext = useContext(RequestContext);
   const serviceContext = useContext(ServiceContext);
   const { pageType, isAmp } = requestContext;

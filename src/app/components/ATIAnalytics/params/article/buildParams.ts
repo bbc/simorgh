@@ -13,7 +13,7 @@ import {
 import { RequestContextProps } from '../../../../contexts/RequestContext';
 import { ServiceConfig } from '../../../../models/types/serviceConfig';
 import { buildATIPageTrackPath } from '../../atiUrl';
-import { PageData } from '../types';
+import { PageData } from '../../types';
 
 export const buildArticleATIParams = (
   articleData: PageData,
