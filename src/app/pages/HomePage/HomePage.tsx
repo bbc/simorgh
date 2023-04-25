@@ -25,7 +25,6 @@ interface HomePageProps {
 
 const HomePage = ({ pageData }: HomePageProps) => {
   const { curations, description } = pageData;
-  console.log(curations);
 
   const { translations, product, serviceLocalizedName, frontPageTitle, lang } =
     useContext(ServiceContext);
