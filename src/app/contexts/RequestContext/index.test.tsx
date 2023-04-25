@@ -69,6 +69,7 @@ const expectedOutput = {
   isUK: true,
   origin: 'origin',
   pageType: input.pageType,
+  derivedPageType: null,
   isAmp: true,
   isNextJs: false,
   platform: 'amp',

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Helmet } from 'react-helmet';
-import { node, shape, bool, number } from 'prop-types';
+import { node, shape, number } from 'prop-types';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import GlobalStyles from '#psammead/psammead-styles/src/global-styles';
@@ -20,11 +20,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: ${({ darkMode }) =>
-    props =>
-      darkMode
-        ? props.theme.palette.MIDNIGHT_BLACK
-        : props.theme.palette.GHOST};
+  background-color: ${({ theme }) => theme.palette.GHOST};
 `;
 
 const Content = styled.div`
@@ -35,7 +31,6 @@ const PageWrapper = ({ children, pageData, status }) => {
   const { service, variant } = useContext(ServiceContext);
   const { isAmp, isNextJs } = useContext(RequestContext);
 
-  const isDarkMode = pathOr(false, ['darkMode'], pageData);
   const scriptSwitchId = pathOr('', ['scriptSwitchId'], pageData);
   const renderScriptSwitch = pathOr(true, ['renderScriptSwitch'], pageData);
   const isErrorPage = [404, 500].includes(status);
@@ -118,7 +113,7 @@ const PageWrapper = ({ children, pageData, status }) => {
         <ManifestContainer />
         <WebVitals pageType={pageType} />
         <GlobalStyles />
-        <Wrapper id="main-wrapper" darkMode={isDarkMode}>
+        <Wrapper id="main-wrapper">
           <HeaderContainer
             scriptSwitchId={scriptSwitchId}
             renderScriptSwitch={renderScriptSwitch}
@@ -133,7 +128,7 @@ const PageWrapper = ({ children, pageData, status }) => {
 
 PageWrapper.propTypes = {
   children: node.isRequired,
-  pageData: shape({ darkMode: bool }),
+  pageData: shape(),
   status: number.isRequired,
 };
 

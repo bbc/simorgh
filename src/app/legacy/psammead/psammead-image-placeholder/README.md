@@ -52,17 +52,17 @@ const WrapperComponent = () => (
 
 ### ImagePlaceholder
 
-| Argument     | Type                                           | Required | Default | Example                |
-| ------------ | ---------------------------------------------- | -------- | ------- | ---------------------- |
-| Ratio        | Number, ratio between height and width         | Yes      | N/A     | 65.625                 |
-| darkMode     | Bool, true (dark) or false (normal)            | No       | false   | false                  |
-| forwardStyle | Styling object that applies additional styling | No       | null    | { background: 'none' } |
+| Argument        | Type                                           | Required | Default | Example                |
+| --------------- | ---------------------------------------------- | -------- | ------- | ---------------------- |
+| Ratio           | Number, ratio between height and width         | Yes      | N/A     | 65.625                 |
+| darkPlaceholder | Bool, true (dark) or false (normal)            | No       | false   | false                  |
+| forwardStyle    | Styling object that applies additional styling | No       | null    | { background: 'none' } |
 
 ### ImagePlaceholderAmp
 
-| Argument | Type                                | Required | Default | Example |
-| -------- | ----------------------------------- | -------- | ------- | ------- |
-| darkMode | Bool, true (dark) or false (normal) | No       | false   | false   |
+| Argument        | Type                                | Required | Default | Example |
+| --------------- | ----------------------------------- | -------- | ------- | ------- |
+| darkPlaceholder | Bool, true (dark) or false (normal) | No       | false   | false   |
 
 ### Accessibility notes
 
