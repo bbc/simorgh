@@ -86,12 +86,30 @@ const optimoPromoFormatter = props => {
     ),
     footer: <TimestampFooterWithAmp {...props} />,
     url: path(['item', 'locators', 'canonicalUrl'], props),
-    image: buildImageProperties(
-      path(
+    image: buildImageProperties({
+      altText: path(
+        [
+          'item',
+          'images',
+          'defaultPromoImage',
+          'blocks',
+          0,
+          'model',
+          'blocks',
+          0,
+          'model',
+          'blocks',
+          0,
+          'model',
+          'text',
+        ],
+        props,
+      ),
+      ...path(
         ['item', 'images', 'defaultPromoImage', 'blocks', 1, 'model'],
         props,
       ),
-    ),
+    }),
     eventTrackingData: path(['eventTrackingData', 'block'], props),
   };
 };
