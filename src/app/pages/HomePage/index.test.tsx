@@ -3,6 +3,7 @@ import { data as kyrgyzHomePageData } from '#data/kyrgyz/homePage/index.json';
 import { Helmet } from 'react-helmet';
 import { render } from '../../components/react-testing-library-with-providers';
 import HomePage from './HomePage';
+import LinkedData from '../../components/LinkedData';
 
 describe('Home Page', () => {
   it('should render a section for each curation', () => {
@@ -67,5 +68,18 @@ describe('Home Page', () => {
       ({ name }) => name === 'description',
     );
     expect(findDescription?.content).toEqual(kyrgyzHomePageData.description);
+  });
+
+  it('should correctly render linked data for home pages', () => {
+    render(<HomePage pageData={kyrgyzHomePageData} />, {
+      service: 'kyrgyz',
+    });
+    const getLinkedDataOutput = () => {
+      return Helmet.peek().scriptTags.map(({ innerHTML }) =>
+        JSON.parse(innerHTML),
+      );
+    };
+
+    expect(getLinkedDataOutput()).toMatchSnapshot();
   });
 });
