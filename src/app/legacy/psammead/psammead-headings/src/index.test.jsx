@@ -3,6 +3,7 @@ import { render } from '../../../../components/react-testing-library-with-provid
 import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import arabic from '../../../../components/ThemeProvider/fontScripts/arabic';
 import { Headline, SubHeading } from './index';
+import { MEDIA_ARTICLE_PAGE } from '../../../../routes/utils/pageTypes';
 
 describe('Headline component', () => {
   it('should render correctly', () => {
@@ -14,11 +15,14 @@ describe('Headline component', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('should render correctly in dark mode', () => {
+  it('should render correctly on page types that support a dark ui', () => {
     const { container } = render(
-      <Headline script={latin} service="news" darkMode>
+      <Headline script={latin} service="news">
         This is my headline.
       </Headline>,
+      {
+        pageType: MEDIA_ARTICLE_PAGE,
+      },
     );
     expect(container).toMatchSnapshot();
   });
@@ -43,11 +47,14 @@ describe('SubHeading component', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('should render correctly in dark mode', () => {
+  it('should render correctly on page types that support a dark ui', () => {
     const { container } = render(
-      <SubHeading script={latin} service="news" darkMode>
+      <SubHeading script={latin} service="news">
         This is a SubHeading
       </SubHeading>,
+      {
+        pageType: MEDIA_ARTICLE_PAGE,
+      },
     );
     expect(container).toMatchSnapshot();
   });
