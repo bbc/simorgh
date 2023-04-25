@@ -6,15 +6,17 @@ import {
 } from '#app/models/types/curationData';
 
 export const COMPONENT_NAMES = {
+  MOST_READ: 'most-read',
   MESSAGE_BANNER: 'message-banner',
   SIMPLE_CURATION_GRID: 'simple-curation-grid',
   HIERARCHICAL_CURATION_GRID: 'hierarchical-curation-grid',
   NOT_SUPPORTED: 'not-supported',
 } as const;
 
-const { NONE, BANNER, COLLECTION } = VISUAL_STYLE;
+const { NONE, BANNER, COLLECTION, RANKED } = VISUAL_STYLE;
 const { MINIMUM, LOW, NORMAL, HIGH, MAXIMUM } = VISUAL_PROMINENCE;
 const {
+  MOST_READ,
   MESSAGE_BANNER,
   SIMPLE_CURATION_GRID,
   HIERARCHICAL_CURATION_GRID,
@@ -34,6 +36,7 @@ export default (
     [`${NONE}_${NORMAL}`]: SIMPLE_CURATION_GRID,
     [`${NONE}_${HIGH}`]: HIERARCHICAL_CURATION_GRID,
     [`${COLLECTION}_${HIGH}`]: HIERARCHICAL_CURATION_GRID,
+    [`${RANKED}_${NORMAL}`]: MOST_READ,
   };
 
   const visualStyleAndProminence = `${visualStyle}_${visualProminence}`;

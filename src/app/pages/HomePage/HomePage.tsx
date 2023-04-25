@@ -3,7 +3,6 @@
 import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
-import MostReadContainer from '#containers/MostRead';
 import {
   VisualProminence,
   VisualStyle,
@@ -26,6 +25,7 @@ interface HomePageProps {
 
 const HomePage = ({ pageData }: HomePageProps) => {
   const { curations, description } = pageData;
+  console.log(curations);
 
   const { translations, product, serviceLocalizedName, frontPageTitle, lang } =
     useContext(ServiceContext);
@@ -59,9 +59,6 @@ const HomePage = ({ pageData }: HomePageProps) => {
               visualStyle,
               mostRead,
             }) => {
-              if (mostRead) {
-                return <MostReadContainer initialData={mostRead} />;
-              }
               return (
                 <React.Fragment key={`${curationId}-${position}`}>
                   <Curation
@@ -74,6 +71,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                     position={position}
                     link={link}
                     curationLength={curations && curations.length}
+                    mostRead={mostRead}
                   />
                 </React.Fragment>
               );

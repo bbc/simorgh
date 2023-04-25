@@ -5,6 +5,7 @@ import {
   VISUAL_STYLE,
   VISUAL_PROMINENCE,
 } from '#app/models/types/curationData';
+import MostReadContainer from '#app/legacy/containers/MostRead';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import CurationGrid from './CurationGrid';
 import HierarchicalGrid from './HierarchicalGrid';
@@ -15,6 +16,7 @@ import MessageBanner from '../MessageBanner';
 const {
   SIMPLE_CURATION_GRID,
   HIERARCHICAL_CURATION_GRID,
+  MOST_READ,
   MESSAGE_BANNER,
   NOT_SUPPORTED,
 } = COMPONENT_NAMES;
@@ -46,9 +48,8 @@ const Curation = ({
   headingLevel = 2,
   position = 0,
   curationLength = 0,
+  mostRead,
 }: CurationProps) => {
-  if (!promos.length) return null;
-
   const componentName = getComponentName(visualStyle, visualProminence);
   const GridComponent = getGridComponent(componentName);
 
@@ -70,6 +71,9 @@ const Curation = ({
           image={promos[0].imageUrl}
         />
       );
+    case MOST_READ:
+      // @ts-expect-error spike ticket
+      return <MostReadContainer initialData={mostRead} />;
     case SIMPLE_CURATION_GRID:
     case HIERARCHICAL_CURATION_GRID:
     default:
