@@ -61,7 +61,7 @@ describe('Latest Media Item', () => {
 
     const img = screen.getByRole('img');
 
-    expect(img.getAttribute('alt')).toEqual('media image');
+    expect(img.getAttribute('alt')).toEqual('Media image placeholder');
   });
 
   it('should render image with alt text when provided', () => {
