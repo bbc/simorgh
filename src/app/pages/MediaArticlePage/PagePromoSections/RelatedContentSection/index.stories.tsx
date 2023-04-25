@@ -25,7 +25,7 @@ const BackGround = styled.div`
 `;
 
 type Props = {
-  content: OptimoBlock;
+  content: OptimoBlock[];
   service?: Services;
 };
 
@@ -54,23 +54,19 @@ export default {
 };
 
 export const ListRelatedContent = () => (
-  // @ts-expect-error - passing partial page data
   <RelatedContentComponent content={RelatedContentList} />
 );
 
 export const ListRelatedContentRtl = () => (
-  // @ts-expect-error - passing partial page data
   <RelatedContentComponent content={RelatedContentListRtl} service="arabic" />
 );
 
 export const SingleRelatedContent = () => (
-  // @ts-expect-error - passing partial page data
   <RelatedContentComponent content={RelatedContentSingleItem} />
 );
 
 export const SingleRelatedContentRtl = () => (
   <RelatedContentComponent
-    // @ts-expect-error - passing partial page data
     content={RelatedContentSingleItemRtl}
     service="arabic"
   />

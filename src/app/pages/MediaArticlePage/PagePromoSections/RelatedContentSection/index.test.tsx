@@ -19,7 +19,7 @@ import { OptimoBlock } from '../../../../models/types/optimo';
 jest.mock('../../../../components/ThemeProvider');
 
 type Props = {
-  fixtureData: OptimoBlock;
+  fixtureData: OptimoBlock[];
   service?: Services;
 };
 
@@ -48,7 +48,6 @@ describe('Optimo Related Content Promo', () => {
 
   it('should render Related Content Ul when given More than one Related Content', () => {
     const { container } = render(
-      // @ts-expect-error - passing partial test data
       <RelatedContentSectionFixture fixtureData={RelatedContentList} />,
     );
     const listItems = screen.getAllByRole('listitem');
@@ -59,7 +58,6 @@ describe('Optimo Related Content Promo', () => {
 
   it('should render custom label text if provided ', () => {
     render(
-      // @ts-expect-error - passing partial test data
       <RelatedContentSectionFixture fixtureData={RelatedContentCustomLabel} />,
     );
     const customLabel = screen.getByText('Related content block');
@@ -70,7 +68,6 @@ describe('Optimo Related Content Promo', () => {
   it('should render a default title if translations are not available', () => {
     render(
       <RelatedContentSectionFixture
-        // @ts-expect-error - passing partial test data
         fixtureData={RelatedContentList}
         service="news"
       />,
@@ -81,14 +78,12 @@ describe('Optimo Related Content Promo', () => {
   });
 
   it('should have a "region" role', () => {
-    // @ts-expect-error - passing partial test data
     render(<RelatedContentSectionFixture fixtureData={RelatedContentList} />);
     const region = screen.getByRole('region');
     expect(region).toBeInTheDocument();
   });
 
   it("should have a section labelled-by the section label's id", () => {
-    // @ts-expect-error - passing partial test data
     render(<RelatedContentSectionFixture fixtureData={RelatedContentList} />);
     const regionLabelId = screen
       .getByRole('region')
@@ -101,7 +96,6 @@ describe('Optimo Related Content Promo', () => {
 
   it('should render RelatedContent component without <ul> and <li> when given single item in collection', () => {
     render(
-      // @ts-expect-error - passing partial test data
       <RelatedContentSectionFixture fixtureData={RelatedContentSingleItem} />,
     );
     const listItems = screen.queryAllByRole('listitem');
@@ -113,7 +107,6 @@ describe('Optimo Related Content Promo', () => {
 
   it('should render Related Content Ul if MPU block is the last block', () => {
     const { container } = render(
-      // @ts-expect-error - passing partial test data
       <RelatedContentSectionFixture fixtureData={RelatedContentListWithMPU} />,
     );
     const listItems = screen.getAllByRole('listitem');
@@ -124,7 +117,6 @@ describe('Optimo Related Content Promo', () => {
 
   it('should render Related Content Ul if WSOJ block is the last block', () => {
     const { container } = render(
-      // @ts-expect-error - passing partial test data
       <RelatedContentSectionFixture fixtureData={RelatedContentListWithWSOJ} />,
     );
     const listItems = screen.getAllByRole('listitem');
@@ -145,7 +137,6 @@ describe('Event Tracking', () => {
     };
     const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
 
-    // @ts-expect-error - passing partial test data
     render(<RelatedContentSectionFixture fixtureData={RelatedContentList} />);
 
     const [
@@ -175,7 +166,6 @@ describe('Event Tracking', () => {
     };
     const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
 
-    // @ts-expect-error - passing partial test data
     render(<RelatedContentSectionFixture fixtureData={RelatedContentList} />);
 
     const [[blockLevelTracking]] = viewTrackerSpy.mock.calls;
@@ -186,7 +176,6 @@ describe('Event Tracking', () => {
   it('should call view tracker once when multiple items are present', () => {
     const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
 
-    // @ts-expect-error - passing partial test data
     render(<RelatedContentSectionFixture fixtureData={RelatedContentList} />);
 
     expect(viewTrackerSpy).toHaveBeenCalledTimes(1);
