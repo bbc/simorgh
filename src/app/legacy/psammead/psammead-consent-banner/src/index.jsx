@@ -167,8 +167,8 @@ const ListItem = styled.li`
       text-decoration: underline;
     }
 
-    // Applies focus indicator black outline.
-    // Overrides dotted Mozilla focus ring applied by Normalize global styles.
+    /* Applies focus indicator black outline.
+       Overrides dotted Mozilla focus ring applied by Normalize global styles. */
     &:focus-visible {
       outline: ${focusIndicatorThickness} solid
         ${props => props.theme.palette.BLACK};

@@ -46,7 +46,7 @@ const StyledParagraph = styled.p`
   margin: 0;
   padding: ${GEL_SPACING_DBL} 0;
 
-  // removes padding which creates touch target from the final "inline" link so the Focus Indicator doesn't obscure other text.
+  /* removes padding which creates touch target from the final inline link so the Focus Indicator doesn't obscure other text. */
   a {
     padding: 0;
   }
