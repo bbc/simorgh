@@ -2,14 +2,14 @@ import {
   getPublishedDatetime,
   LIBRARY_VERSION,
   getThingAttributes,
-} from '#lib/analyticsUtils';
+} from '../../../../lib/analyticsUtils';
 import {
   getLanguage,
   getContentId,
   getPageIdentifier,
   getPromoHeadline,
   getNationsProducer,
-} from '#lib/analyticsUtils/article';
+} from '../../../../lib/analyticsUtils/article';
 import { RequestContextProps } from '../../../../contexts/RequestContext';
 import { ServiceConfig } from '../../../../models/types/serviceConfig';
 import { buildATIPageTrackPath } from '../../atiUrl';

@@ -1,4 +1,7 @@
-import { LIBRARY_VERSION, getPublishedDatetime } from '#lib/analyticsUtils';
+import {
+  LIBRARY_VERSION,
+  getPublishedDatetime,
+} from '../../../../lib/analyticsUtils';
 import {
   getContentId,
   getContentType,

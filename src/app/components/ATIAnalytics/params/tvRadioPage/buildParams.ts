@@ -1,10 +1,20 @@
-import { LIBRARY_VERSION } from '#lib/analyticsUtils';
+import { LIBRARY_VERSION } from '../../../../lib/analyticsUtils';
+import { RequestContextProps } from '../../../../contexts/RequestContext';
+import { ServiceConfig } from '../../../../models/types/serviceConfig';
 import { buildATIPageTrackPath } from '../../atiUrl';
 
+interface TVRadioPageData {
+  id: string;
+  language: string;
+  pageTitle: string;
+  pageIdentifier: string;
+  contentType: string;
+}
+
 export const buildTvRadioATIParams = (
-  pageData,
-  requestContext,
-  serviceContext,
+  pageData: TVRadioPageData,
+  requestContext: RequestContextProps,
+  serviceContext: ServiceConfig,
 ) => {
   const { platform, statsDestination } = requestContext;
   const { atiAnalyticsAppName, atiAnalyticsProducerId, service } =
@@ -16,7 +26,7 @@ export const buildTvRadioATIParams = (
 
   const getOnDemandContentId = () => {
     const guid = id.split('/').pop();
-    const contentId = `urn:bbc:pips:`.concat(guid);
+    const contentId = `urn:bbc:pips:${guid}`;
     return contentId;
   };
 
@@ -36,9 +46,9 @@ export const buildTvRadioATIParams = (
 };
 
 export const buildTvRadioATIUrl = (
-  pageData,
-  requestContext,
-  serviceContext,
+  pageData: TVRadioPageData,
+  requestContext: RequestContextProps,
+  serviceContext: ServiceConfig,
 ) => {
   return buildATIPageTrackPath(
     buildTvRadioATIParams(pageData, requestContext, serviceContext),
