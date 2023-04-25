@@ -17,13 +17,13 @@ const buildImageProperties = image => {
     width,
     height,
     altText,
-    path: cpsPath,
-    locator: optimoPath,
+    path: url,
+    locator: optimoLocator,
     originCode: optimoOriginCode,
     copyright,
   } = image;
-  const originCode = optimoOriginCode || getOriginCode(cpsPath);
-  const locator = optimoPath || getLocator(cpsPath);
+  const originCode = optimoOriginCode || getOriginCode(url);
+  const locator = optimoLocator || getLocator(url);
 
   const { primarySrcset, primaryMimeType, fallbackSrcset, fallbackMimeType } =
     createSrcsets({
@@ -68,6 +68,30 @@ const TimestampFooterWithAmp = props => {
 };
 
 const optimoPromoFormatter = props => {
+  const altText = path(
+    [
+      'item',
+      'images',
+      'defaultPromoImage',
+      'blocks',
+      0,
+      'model',
+      'blocks',
+      0,
+      'model',
+      'blocks',
+      0,
+      'model',
+      'text',
+    ],
+    props,
+  );
+
+  const imageProps = path(
+    ['item', 'images', 'defaultPromoImage', 'blocks', 1, 'model'],
+    props,
+  );
+
   return {
     children: path(
       [
@@ -87,28 +111,9 @@ const optimoPromoFormatter = props => {
     footer: <TimestampFooterWithAmp {...props} />,
     url: path(['item', 'locators', 'canonicalUrl'], props),
     image: buildImageProperties({
-      altText: path(
-        [
-          'item',
-          'images',
-          'defaultPromoImage',
-          'blocks',
-          0,
-          'model',
-          'blocks',
-          0,
-          'model',
-          'blocks',
-          0,
-          'model',
-          'text',
-        ],
-        props,
-      ),
-      ...path(
-        ['item', 'images', 'defaultPromoImage', 'blocks', 1, 'model'],
-        props,
-      ),
+      altText,
+      copyright: imageProps.copyrightHolder,
+      ...imageProps,
     }),
     eventTrackingData: path(['eventTrackingData', 'block'], props),
   };
