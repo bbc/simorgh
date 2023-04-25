@@ -7,13 +7,13 @@ import { MEDIA_TYPES } from '#components/Promo';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import ThemeProvider from '../../ThemeProvider';
 import Promo from '.';
-import { StorybookProps } from '../types';
+import { StoryProps } from '../../../models/types/storybook';
 
 const Wrapper = styled.div`
   max-width: 30rem;
 `;
 
-const Component = ({ service, variant }: StorybookProps) => {
+const Component = ({ service, variant }: StoryProps) => {
   return (
     <ThemeProvider service={service} variant={variant}>
       <ServiceContextProvider service={service} variant={variant}>
@@ -26,7 +26,7 @@ const Component = ({ service, variant }: StorybookProps) => {
 };
 
 // eslint-disable-next-line react/prop-types
-const WithMediaIndicator = ({ service, variant }: StorybookProps) => {
+const WithMediaIndicator = ({ service, variant }: StoryProps) => {
   return (
     <ThemeProvider service={service} variant={variant}>
       <ServiceContextProvider service={service} variant={variant}>
