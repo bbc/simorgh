@@ -69,7 +69,7 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
   const FallbackText = styled.p`
     ${() => getSansRegular(service)}
     ${() => getBodyCopy(script)}
-    // eslint-disable-next-line react/prop-types
+    /* eslint-disable-next-line react/prop-types */
     color: ${SHADOW};
     margin: 0;
   `;

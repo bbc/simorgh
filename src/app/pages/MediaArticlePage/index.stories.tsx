@@ -6,6 +6,9 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { UserContextProvider } from '#contexts/UserContext';
 import { MEDIA_ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import articleData from '#data/hausa/articles/cw43vy8zdjvo.json';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import tamilArticle from '#data/tamil/articles/c84m2jl4dpzo.json';
+import pidginArticle from '#data/pidgin/articles/cw0x29n2pvqo.json';
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
@@ -55,4 +58,12 @@ export default {
 
 export const MediaArticlePage = () => (
   <ComponentWithContext data={articleData} />
+);
+
+export const MediaArticlePageWithLatestMediaImages = props => (
+  <ComponentWithContext {...props} data={pidginArticle} />
+);
+
+export const MediaArticlePageWithSingleLatestMedia = props => (
+  <ComponentWithContext {...props} data={tamilArticle} />
 );

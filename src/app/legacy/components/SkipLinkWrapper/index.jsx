@@ -1,10 +1,11 @@
-import React from 'react';
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
 import { node, string, shape } from 'prop-types';
 import styled from '@emotion/styled';
 import detokenise from '#psammead/psammead-detokeniser/src';
-import { visuallyHiddenTextStyle } from '#psammead/psammead-visually-hidden-text/src';
 import { getSansBold } from '#psammead/psammead-styles/src/font-styles';
 import { GEL_BREVIER } from '#psammead/gel-foundations/src/typography';
+import { visuallyHiddenStyle } from '../../../lib/styles.const';
 
 const BORDER_WIDTH = '0.125rem';
 const GEL_SPACING_PLUS_HALF = `0.75rem`;
@@ -29,12 +30,12 @@ const SkipLink = styled.a`
   z-index: 10;
 
   &:not(:focus):not(:active) {
-    ${visuallyHiddenTextStyle}
+    ${visuallyHiddenStyle}
   }
 `;
 
 const EndText = styled.p`
-  ${visuallyHiddenTextStyle}
+  ${visuallyHiddenStyle}
 `;
 
 const SkipLinkWrapper = ({

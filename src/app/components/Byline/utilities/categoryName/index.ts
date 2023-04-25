@@ -6,9 +6,9 @@ import {
 } from '../../../../models/types/optimo';
 
 export default (
+  isTrustProjectParticipant: boolean,
   taggings: MetadataTaggings = [],
   formats: MetadataFormats = [],
-  isTrustProjectParticipant: boolean,
 ) => {
   const supportedPredicate = taggings.filter(
     tagging =>

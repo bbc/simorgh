@@ -1,56 +1,28 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-
 import path from 'ramda/src/path';
-import { jsx, useTheme } from '@emotion/react';
-
-import { articleDataPropTypes } from '#models/propTypes/article';
-
-import FeaturesAnalysis from '#containers/CpsFeaturesAnalysis';
-import TopStoriesSection from './PagePromoSections/TopStoriesSection';
+import { jsx } from '@emotion/react';
+import { articleDataPropTypes } from '#app/models/propTypes/article';
+import LatestMediaSection from './PagePromoSections/LatestMediaSection';
 import styles from './MediaArticlePage.styles';
-import {
-  TopStoriesOJ,
-  FeaturesAnalysisOJ,
-} from '../../models/types/onward-journey';
+import { LatestMedia } from './PagePromoSections/LatestMediaSection/types';
 
 type MediaArticlePageProps = {
   pageData: typeof articleDataPropTypes;
 };
 
 const SecondaryColumn = ({ pageData }: MediaArticlePageProps) => {
-  const topStoriesContent = path<TopStoriesOJ[]>(
-    ['secondaryColumn', 'topStories'],
+  const latestMediaContent = path<LatestMedia[]>(
+    ['secondaryColumn', 'latestMedia'],
     pageData,
   );
-  const featuresContent = path<FeaturesAnalysisOJ[]>(
-    ['secondaryColumn', 'features'],
-    pageData,
-  );
-
-  const {
-    palette: { GREY_2 },
-  } = useTheme();
-
-  if (!topStoriesContent && !featuresContent) return null;
+  if (!latestMediaContent) return null;
 
   return (
     <div css={styles.secondaryColumn}>
-      {topStoriesContent && (
-        <div
-          css={styles.topStoriesAndFeaturesSection}
-          data-testid="top-stories"
-        >
-          <TopStoriesSection content={topStoriesContent} />
-        </div>
-      )}
-      {featuresContent && (
-        <div css={styles.topStoriesAndFeaturesSection} data-testid="features">
-          <FeaturesAnalysis
-            content={featuresContent}
-            parentColumns={{}}
-            sectionLabelBackground={GREY_2}
-          />
+      {latestMediaContent && (
+        <div data-testid="latest-media" css={styles.responsiveComponentWrapper}>
+          <LatestMediaSection content={latestMediaContent} />
         </div>
       )}
     </div>

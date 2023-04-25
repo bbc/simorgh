@@ -46,55 +46,55 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   margin: 0;
 }
 
-.emotion-6 {
+.emotion-5 {
   padding-top: 1.5rem;
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-7 {
+  .emotion-6 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-7 {
+  .emotion-6 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-7 {
+  .emotion-6 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-7 {
+  .emotion-6 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-7 {
+  .emotion-6 {
     margin-left: 20%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-7 {
+  .emotion-6 {
     margin-left: 40%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-7 {
+  .emotion-6 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-7 {
+    .emotion-6 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -102,7 +102,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-7 {
+    .emotion-6 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -110,7 +110,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-7 {
+    .emotion-6 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -118,7 +118,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-7 {
+    .emotion-6 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
@@ -126,7 +126,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-7 {
+    .emotion-6 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
@@ -134,7 +134,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   }
 
   @media (min-width: 80rem) {
-    .emotion-7 {
+    .emotion-6 {
       grid-template-columns: repeat(10, 1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
@@ -142,19 +142,19 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   }
 }
 
-.emotion-9 {
+.emotion-8 {
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
 }
 
-.emotion-11 {
+.emotion-10 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
 }
 
-.emotion-13 {
+.emotion-12 {
   position: absolute;
   top: 0;
   left: 0;
@@ -163,12 +163,12 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   cursor: default;
 }
 
-.emotion-13:hover .emotion-19,
-.emotion-13:focus .emotion-19 {
+.emotion-12:hover .emotion-18,
+.emotion-12:focus .emotion-18 {
   background-color: #B80000;
 }
 
-.emotion-15 {
+.emotion-14 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -182,31 +182,31 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-15 {
+  .emotion-14 {
     font-size: 0.875rem;
   }
 }
 
-.no-js .emotion-15 {
+.no-js .emotion-14 {
   background-color: rgba(34, 34, 34, 0.75);
 }
 
 @media screen and (-ms-high-contrast: active) {
-  .no-js .emotion-15 {
+  .no-js .emotion-14 {
     background-color: transparent;
   }
 }
 
-.no-js .emotion-15 .guidance-message {
+.no-js .emotion-14 .guidance-message {
   display: none;
 }
 
-.emotion-17 {
+.emotion-16 {
   position: absolute;
   bottom: 0;
 }
 
-.emotion-20 {
+.emotion-19 {
   background-color: #222222;
   border: none;
   color: #FFFFFF;
@@ -227,18 +227,18 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   left: 0;
 }
 
-.emotion-20:hover,
-.emotion-20:focus {
+.emotion-19:hover,
+.emotion-19:focus {
   background-color: #B80000;
   -webkit-transition: background-color 300ms;
   transition: background-color 300ms;
 }
 
-.no-js .emotion-20 {
+.no-js .emotion-19 {
   display: none;
 }
 
-.emotion-20:focus-visible::before {
+.emotion-19:focus-visible::before {
   content: '';
   position: absolute;
   left: 0;
@@ -249,7 +249,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   border: 0.1875rem solid #000000;
 }
 
-.emotion-24>svg {
+.emotion-22>svg {
   color: #FFFFFF;
   fill: currentColor;
   height: 1.5rem;
@@ -257,7 +257,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   width: 1.5rem;
 }
 
-.emotion-26 {
+.emotion-24 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -266,17 +266,17 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   height: 0.75rem;
 }
 
-.emotion-28 {
+.emotion-26 {
   display: block;
   margin-top: 0.5rem;
 }
 
-.emotion-30 {
+.emotion-28 {
   display: block;
   width: 100%;
 }
 
-.emotion-32 {
+.emotion-30 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -293,37 +293,37 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-32 {
+  .emotion-30 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-32 {
+  .emotion-30 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-32 {
+  .emotion-30 {
     width: 100%;
     margin: 0.5rem 0 0;
   }
 }
 
-.emotion-32>p {
+.emotion-30>p {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.emotion-32>p:last-child {
+.emotion-30>p:last-child {
   padding-bottom: 0;
 }
 
 @media (min-width: 25rem) and (max-width: 62.9375rem) {
-  .emotion-32 {
+  .emotion-30 {
     width: calc(100% - 1rem);
     margin-left: 1rem;
     padding-right: 1rem;
@@ -332,61 +332,61 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
 }
 
 @media (min-width: 63rem) {
-  .emotion-32 {
+  .emotion-30 {
     padding-right: 0;
     padding-left: 0.5rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-36 {
+  .emotion-33 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-36 {
+  .emotion-33 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-36 {
+  .emotion-33 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-36 {
+  .emotion-33 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-36 {
+  .emotion-33 {
     margin-left: 16.666666666666668%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-36 {
+  .emotion-33 {
     margin-left: 33.333333333333336%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-36 {
+  .emotion-33 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-36 {
+    .emotion-33 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -395,7 +395,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-36 {
+    .emotion-33 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -404,7 +404,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-36 {
+    .emotion-33 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -413,7 +413,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-36 {
+    .emotion-33 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -422,7 +422,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-36 {
+    .emotion-33 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -430,7 +430,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   }
 
   @media (min-width: 80rem) {
-    .emotion-36 {
+    .emotion-33 {
       grid-template-columns: repeat(12, 1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -438,7 +438,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   }
 }
 
-.emotion-39 {
+.emotion-36 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -451,86 +451,86 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-39 {
+  .emotion-36 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-39 {
+  .emotion-36 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-39 {
+  .emotion-36 {
     padding: 2.5rem 0;
   }
 }
 
 @media (max-width: 62.9375rem) {
-  .emotion-39 {
+  .emotion-36 {
     padding: 0.5rem 0 2rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-39 {
+  .emotion-36 {
     padding: 1rem 0 2.5rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-41 {
+  .emotion-38 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-41 {
+  .emotion-38 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-41 {
+  .emotion-38 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-41 {
+  .emotion-38 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-41 {
+  .emotion-38 {
     margin-left: 20%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-41 {
+  .emotion-38 {
     margin-left: 40%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-41 {
+  .emotion-38 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-41 {
+    .emotion-38 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -539,7 +539,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-41 {
+    .emotion-38 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -548,7 +548,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-41 {
+    .emotion-38 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -557,7 +557,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-41 {
+    .emotion-38 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       padding: 0 1rem;
@@ -566,7 +566,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-41 {
+    .emotion-38 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
@@ -574,7 +574,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   }
 
   @media (min-width: 80rem) {
-    .emotion-41 {
+    .emotion-38 {
       grid-template-columns: repeat(10, 1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
@@ -582,7 +582,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   }
 }
 
-.emotion-43 {
+.emotion-40 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #545658;
@@ -594,24 +594,24 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-43 {
+  .emotion-40 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-43 {
+  .emotion-40 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-43:last-child {
+.emotion-40:last-child {
   padding-bottom: 1rem;
 }
 
-.emotion-47 {
+.emotion-44 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -623,26 +623,26 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-47 {
+  .emotion-44 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-47 {
+  .emotion-44 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-47 {
+  .emotion-44 {
     padding-top: 2rem;
   }
 }
 
-.emotion-51 {
+.emotion-48 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -654,21 +654,21 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-51 {
+  .emotion-48 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-51 {
+  .emotion-48 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-51 {
+  .emotion-48 {
     padding-right: 2.5rem;
   }
 }
@@ -692,53 +692,53 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
           role="main"
         >
           <h1
-            class="emotion-4 emotion-5"
+            class="emotion-4"
             id="content"
             tabindex="-1"
           >
             WS Media (1) -Media above title
           </h1>
           <div
-            class="emotion-6"
+            class="emotion-5"
           >
             <div
-              class="emotion-7 emotion-8"
+              class="emotion-6 emotion-7"
               dir="ltr"
             >
               <figure
-                class="emotion-9 emotion-10"
+                class="emotion-8 emotion-9"
               >
                 <div
-                  class="emotion-11 emotion-12"
+                  class="emotion-10 emotion-11"
                   data-e2e="media-player"
                 >
                   <div
-                    class="emotion-13 emotion-14"
+                    class="emotion-12 emotion-13"
                     data-e2e="media-player__placeholder"
                   >
                     <div
-                      class="emotion-15 emotion-16"
+                      class="emotion-14 emotion-15"
                       data-e2e="media-player__guidance"
                     >
                       <noscript
-                        class="emotion-17 emotion-18"
+                        class="emotion-16 emotion-17"
                       />
                     </div>
                     <button
-                      class="focusIndicatorRemove emotion-19 emotion-20 emotion-21"
+                      class="focusIndicatorRemove emotion-18 emotion-19 emotion-20"
                     >
                       <span
-                        class="emotion-4 emotion-5"
+                        class="emotion-4"
                       >
                         Play video, "BBC launch trailer for We Know Our Place women's sport campaign", Duration 0,54
                       </span>
                       <div
                         aria-hidden="true"
-                        class="emotion-24 emotion-25"
+                        class="emotion-22 emotion-23"
                       >
                         <svg
                           aria-hidden="true"
-                          class="emotion-26 emotion-27"
+                          class="emotion-24 emotion-25"
                           focusable="false"
                           height="12"
                           viewBox="0 0 12 12"
@@ -761,7 +761,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
                       </div>
                       <time
                         aria-hidden="true"
-                        class="emotion-28 emotion-29"
+                        class="emotion-26 emotion-27"
                         datetime="PT54S"
                       >
                         00:54
@@ -769,17 +769,17 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
                     </button>
                     <img
                       alt=""
-                      class="emotion-30 emotion-31"
+                      class="emotion-28 emotion-29"
                       src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01thw3g.jpg"
                     />
                   </div>
                 </div>
                 <figcaption
-                  class="emotion-32 emotion-33"
+                  class="emotion-30 emotion-31"
                   dir="ltr"
                 >
                   <span
-                    class="emotion-4 emotion-5"
+                    class="emotion-4"
                   >
                     Video caption, 
                   </span>
@@ -791,32 +791,32 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
             </div>
           </div>
           <div
-            class="emotion-36 emotion-8"
+            class="emotion-33 emotion-7"
             dir="ltr"
           >
             <strong
-              class="emotion-38 emotion-39 emotion-40"
+              class="emotion-35 emotion-36 emotion-37"
             >
               WS Media (1) -Media above title
             </strong>
           </div>
           <div
-            class="emotion-41 emotion-8"
+            class="emotion-38 emotion-7"
             dir="ltr"
           >
             <time
-              class="emotion-43 emotion-44"
+              class="emotion-40 emotion-41"
               datetime="2023-01-17"
             >
               17 January 2023
             </time>
           </div>
           <div
-            class="emotion-41 emotion-8"
+            class="emotion-38 emotion-7"
             dir="ltr"
           >
             <h2
-              class="emotion-47 emotion-48"
+              class="emotion-44 emotion-45"
               id="Headline"
               tabindex="-1"
             >
@@ -824,11 +824,11 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
             </h2>
           </div>
           <div
-            class="emotion-41 emotion-8"
+            class="emotion-38 emotion-7"
             dir="ltr"
           >
             <p
-              class="emotion-51 emotion-52"
+              class="emotion-48 emotion-49"
               dir="ltr"
             >
               Page Text

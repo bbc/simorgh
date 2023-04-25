@@ -195,7 +195,7 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
       <LinkedData
         showAuthor
         bylineLinkedData={bylineLinkedData}
-        type={categoryName(taggings, formats, isTrustProjectParticipant)}
+        type={categoryName(isTrustProjectParticipant, taggings, formats)}
         seoTitle={headline}
         headline={headline}
         datePublished={firstPublished}

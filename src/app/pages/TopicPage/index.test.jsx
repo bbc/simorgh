@@ -227,16 +227,15 @@ describe('Topic Page', () => {
     });
 
     it('should only render the first summary if there is more than one summary in the curation', () => {
-      const messageBannerCuration =
-        kyrgyzTopicWithMessageBanners.curations.find(
-          ({ visualStyle, visualProminence, summaries }) =>
-            visualProminence === VISUAL_PROMINENCE.NORMAL &&
-            visualStyle === VISUAL_STYLE.BANNER &&
-            summaries.length > 1,
-        );
+      const messageBannerCuration = mundoBannerVariations.curations.find(
+        ({ visualStyle, visualProminence, summaries }) =>
+          visualProminence === VISUAL_PROMINENCE.NORMAL &&
+          visualStyle === VISUAL_STYLE.BANNER &&
+          summaries.length > 1,
+      );
       const { queryAllByRole } = render(
-        <TopicPage pageData={kyrgyzTopicWithMessageBanners} />,
-        getOptionParams({ service: 'kyrgyz', lang: 'ky' }),
+        <TopicPage pageData={mundoBannerVariations} />,
+        getOptionParams({ service: 'mundo', lang: 'es' }),
       );
       const messageBanners = queryAllByRole('region', {
         name: messageBannerCuration.title,
