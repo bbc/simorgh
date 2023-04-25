@@ -1,10 +1,13 @@
 import { LIBRARY_VERSION } from '#lib/analyticsUtils';
+import { RequestContextProps } from '../../../../contexts/RequestContext';
+import { ServiceConfig } from '../../../../models/types/serviceConfig';
 import { buildATIPageTrackPath } from '../../atiUrl';
+import { MostPopularPageData } from '../types';
 
 export const buildMostWatchedATIParams = (
-  pageData,
-  requestContext,
-  serviceContext,
+  pageData: MostPopularPageData,
+  requestContext: RequestContextProps,
+  serviceContext: ServiceConfig,
 ) => {
   const { platform, statsDestination } = requestContext;
   const {
@@ -33,9 +36,9 @@ export const buildMostWatchedATIParams = (
 };
 
 export const buildMostWatchedATIUrl = (
-  pageData,
-  requestContext,
-  serviceContext,
+  pageData: MostPopularPageData,
+  requestContext: RequestContextProps,
+  serviceContext: ServiceConfig,
 ) => {
   return buildATIPageTrackPath(
     buildMostWatchedATIParams(pageData, requestContext, serviceContext),
