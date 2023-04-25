@@ -1,10 +1,17 @@
 import { css, Theme } from '@emotion/react';
 
 export default {
-  singleItemWrapper: ({ spacings }: Theme) =>
+  singleItemWrapper: ({ spacings, mq }: Theme) =>
     css({
       width: '100%',
       margin: `0 -${spacings.FULL}rem`,
+
+      [mq.GROUP_2_MIN_WIDTH]: {
+        width: '50%',
+      },
+      [mq.GROUP_3_MIN_WIDTH]: {
+        width: '33.33%',
+      },
     }),
   relatedContentGrid: ({ spacings }: Theme) =>
     css({
