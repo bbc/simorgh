@@ -362,7 +362,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'ویڈیو',
-        url: '/urdu/media/video',
+        url: '/urdu/topics/c1e0mzr3r2yt',
       },
     ],
   },
