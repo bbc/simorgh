@@ -32,7 +32,7 @@ exports[`should render Copyright with news service context 1`] = `
     role="text"
   >
     <span
-      class="emotion-2 emotion-3"
+      class="emotion-2"
     >
       Image source, 
     </span>
@@ -73,7 +73,7 @@ exports[`should render Copyright with persian service context 1`] = `
     role="text"
   >
     <span
-      class="emotion-2 emotion-3"
+      class="emotion-2"
     >
        ، منبع تصویر
     </span>
