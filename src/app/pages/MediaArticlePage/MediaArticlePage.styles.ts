@@ -86,4 +86,13 @@ export default {
         padding: `${spacings.DOUBLE}rem`,
       },
     }),
+
+  responsiveComponentWrapper: ({ spacings, mq }: Theme) =>
+    css({
+      marginBottom: `${spacings.TRIPLE}rem`,
+
+      [mq.GROUP_4_MIN_WIDTH]: {
+        marginBottom: `${spacings.FULL}rem`,
+      },
+    }),
 };

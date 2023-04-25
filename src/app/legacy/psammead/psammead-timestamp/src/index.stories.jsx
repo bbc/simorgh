@@ -2,10 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
 import { text, select, boolean, withKnobs } from '@storybook/addon-knobs';
 import * as typography from '#psammead/gel-foundations/src/typography';
-import {
-  withServicesKnob,
-  themes,
-} from '#psammead/psammead-storybook-helpers/src';
+import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import notes from '../README.md';
 import Timestamp from '.';
@@ -52,15 +49,6 @@ storiesOf('Components/Timestamp', module)
       </ExampleTimestamp>
     ),
     { notes },
-  )
-  .add(
-    'dark mode',
-    ({ service }) => (
-      <ExampleTimestamp service={service} darkMode>
-        {text('Timestamp Text', '7 July 2018')}
-      </ExampleTimestamp>
-    ),
-    { notes, options: { theme: themes.dark } },
   )
   .add(
     'with "updated" prefix',

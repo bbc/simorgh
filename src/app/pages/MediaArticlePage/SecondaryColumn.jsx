@@ -1,42 +1,20 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-
 import path from 'ramda/src/path';
-import { jsx, useTheme } from '@emotion/react';
-
+import { jsx } from '@emotion/react';
 import { articleDataPropTypes } from '#models/propTypes/article';
-
-import FeaturesAnalysis from '#containers/CpsFeaturesAnalysis';
-import TopStoriesSection from './PagePromoSections/TopStoriesSection';
+import LatestMediaSection from './PagePromoSections/LatestMediaSection';
 import styles from './MediaArticlePage.styles';
 
 const SecondaryColumn = ({ pageData }) => {
-  const topStoriesContent = path(['secondaryColumn', 'topStories'], pageData);
-  const featuresContent = path(['secondaryColumn', 'features'], pageData);
-
-  const {
-    palette: { GREY_2 },
-  } = useTheme();
-
-  if (!topStoriesContent && !featuresContent) return null;
+  const latestMediaContent = path(['secondaryColumn', 'latestMedia'], pageData);
+  if (!latestMediaContent) return null;
 
   return (
     <div css={styles.secondaryColumn}>
-      {topStoriesContent && (
-        <div
-          css={styles.topStoriesAndFeaturesSection}
-          data-testid="top-stories"
-        >
-          <TopStoriesSection content={topStoriesContent} />
-        </div>
-      )}
-      {featuresContent && (
-        <div css={styles.topStoriesAndFeaturesSection} data-testid="features">
-          <FeaturesAnalysis
-            content={featuresContent}
-            parentColumns={{}}
-            sectionLabelBackground={GREY_2}
-          />
+      {latestMediaContent && (
+        <div data-testid="latest-media" css={styles.responsiveComponentWrapper}>
+          <LatestMediaSection content={latestMediaContent} />
         </div>
       )}
     </div>
