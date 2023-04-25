@@ -41,6 +41,7 @@ const WithContexts = Component => {
         >
           <RequestContextProvider
             bbcOrigin={bbcOrigin}
+            derivedPageType={path(['metadata', 'type'], pageData)}
             id={id}
             isAmp={isAmp}
             pageType={pageType}
@@ -67,6 +68,7 @@ const WithContexts = Component => {
 
   WithContextsContainer.propTypes = {
     bbcOrigin: string,
+    derivedPageType: string,
     status: number,
     id: string,
     isAmp: bool.isRequired,
@@ -86,6 +88,7 @@ const WithContexts = Component => {
 
   WithContextsContainer.defaultProps = {
     bbcOrigin: null,
+    derivedPageType: null,
     status: null,
     id: null,
     pageData: null,

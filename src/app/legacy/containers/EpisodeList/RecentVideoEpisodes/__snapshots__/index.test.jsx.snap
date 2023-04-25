@@ -83,7 +83,8 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  background-color: #121212;
+  background-color: #141414;
+  color: #F6F6F6;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;
@@ -399,7 +400,7 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
 .emotion-97 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #545658;
+  color: #E6E8EA;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;

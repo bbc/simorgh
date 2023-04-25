@@ -35,7 +35,7 @@ exports[`Paragraph should render correctly 1`] = `
 </div>
 `;
 
-exports[`Paragraph should render correctly in dark mode 1`] = `
+exports[`Paragraph should render correctly on page types that support a dark ui 1`] = `
 .emotion-0 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
