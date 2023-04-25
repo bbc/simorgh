@@ -342,7 +342,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'Video',
-        url: '/vietnamese/media/video',
+        url: '/vietnamese/topics/cl29j0ekkvdt',
       },
     ],
   },
