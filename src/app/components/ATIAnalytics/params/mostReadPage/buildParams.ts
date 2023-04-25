@@ -1,10 +1,17 @@
 import { LIBRARY_VERSION } from '#lib/analyticsUtils';
+import { RequestContextProps } from '../../../../contexts/RequestContext';
+import { ServiceConfig } from '../../../../models/types/serviceConfig';
 import { buildATIPageTrackPath } from '../../atiUrl';
 
+interface PageData {
+  firstRecordTimeStamp: string;
+  lastRecordTimeStamp: string;
+}
+
 export const buildMostReadATIParams = (
-  pageData,
-  requestContext,
-  serviceContext,
+  pageData: PageData,
+  requestContext: RequestContextProps,
+  serviceContext: ServiceConfig,
 ) => {
   const { platform, statsDestination } = requestContext;
   const {
@@ -33,9 +40,9 @@ export const buildMostReadATIParams = (
 };
 
 export const buildMostReadATIUrl = (
-  pageData,
-  requestContext,
-  serviceContext,
+  pageData: PageData,
+  requestContext: RequestContextProps,
+  serviceContext: ServiceConfig,
 ) => {
   return buildATIPageTrackPath(
     buildMostReadATIParams(pageData, requestContext, serviceContext),

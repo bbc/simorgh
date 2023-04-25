@@ -1,25 +1,32 @@
 import * as analyticsUtils from '#lib/analyticsUtils';
+import { RequestContextProps } from '../../../../contexts/RequestContext';
+import { ServiceConfig } from '../../../../models/types/serviceConfig';
 import { buildMostReadATIParams, buildMostReadATIUrl } from './buildParams';
 
+// @ts-expect-error - we need to mock these functions to ensure tests are deterministic
 analyticsUtils.getAtUserId = jest.fn();
+// @ts-expect-error - we need to mock these functions to ensure tests are deterministic
 analyticsUtils.getCurrentTime = jest.fn().mockReturnValue('00-00-00');
+// @ts-expect-error - we need to mock these functions to ensure tests are deterministic
 analyticsUtils.getPublishedDatetime = jest
   .fn()
   .mockReturnValue('1970-01-01T00:00:00.000Z');
 
-const requestContext = {
-  platform: 'platform',
-  isUK: 'isUK',
+// @ts-expect-error - only partial data required for testing purposes
+const requestContext: RequestContextProps = {
+  platform: 'canonical',
+  isUK: false,
   statsDestination: 'statsDestination',
   previousPath: 'previousPath',
   origin: 'origin',
 };
 
-const serviceContext = {
+const serviceContext: ServiceConfig = {
   atiAnalyticsAppName: 'news-pidgin',
   atiAnalyticsProducerId: '70',
   service: 'pidgin',
   brandName: 'BBC News Pidgin',
+  // @ts-expect-error - only partial data required for testing purposes
   mostRead: { header: 'De one we dem de read well well' },
   lang: 'pcm',
 };
