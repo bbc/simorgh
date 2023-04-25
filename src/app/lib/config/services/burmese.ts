@@ -364,7 +364,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'ဗီဒီယိုများ',
-        url: '/burmese/media/video',
+        url: '/burmese/topics/cj7v92le02qt',
       },
     ],
   },

@@ -379,7 +379,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'वीडियो',
-        url: '/hindi/media/video',
+        url: '/hindi/topics/cw9kv0kpxydt',
       },
       {
         title: 'पॉडकास्ट',
