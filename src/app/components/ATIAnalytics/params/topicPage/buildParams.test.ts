@@ -1,22 +1,29 @@
 import * as analyticsUtils from '#lib/analyticsUtils';
+import { RequestContextProps } from '../../../../contexts/RequestContext';
+import { ServiceConfig } from '../../../../models/types/serviceConfig';
 import { buildTopicPageATIParams, buildTopicPageATIUrl } from './buildParams';
 
+// @ts-expect-error - we need to mock these functions to ensure tests are deterministic
 analyticsUtils.getAtUserId = jest.fn();
+// @ts-expect-error - we need to mock these functions to ensure tests are deterministic
 analyticsUtils.getCurrentTime = jest.fn().mockReturnValue('00-00-00');
+// @ts-expect-error - we need to mock these functions to ensure tests are deterministic
 analyticsUtils.getPublishedDatetime = jest
   .fn()
   .mockReturnValue('1970-01-01T00:00:00.000Z');
 
-const requestContext = {
-  platform: 'platform',
+// @ts-expect-error - only partial data required for testing purposes
+const requestContext: RequestContextProps = {
+  platform: 'canonical',
   statsDestination: 'statsDestination',
   id: 'validId',
 };
 
-const serviceContext = {
+// @ts-expect-error - only partial data required for testing purposes
+const serviceContext: ServiceConfig = {
   atiAnalyticsAppName: 'atiAnalyticsAppName',
   atiAnalyticsProducerId: 'atiAnalyticsProducerId',
-  service: 'service',
+  service: 'pidgin',
   lang: 'pcm',
 };
 
@@ -55,7 +62,7 @@ describe('implementation of buildTopicPageATIParams and buildTopicPageATIUrl', (
       serviceContext,
     );
     expect(result).toMatchInlineSnapshot(
-      `"s=598285&s2=atiAnalyticsProducerId&p=service.topics.validId.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Atipo%3Atopic%3AvalidId]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[pcm]&x5=[http%253A%252F%252Flocalhost%252F]&x7=[index-category]&x8=[simorgh]&x9=[pageTitle]"`,
+      `"s=598285&s2=atiAnalyticsProducerId&p=pidgin.topics.validId.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Atipo%3Atopic%3AvalidId]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[pcm]&x5=[http%253A%252F%252Flocalhost%252F]&x7=[index-category]&x8=[simorgh]&x9=[pageTitle]"`,
     );
   });
 });
