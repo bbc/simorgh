@@ -9,7 +9,6 @@ import { RequestContextProps } from '../../../../contexts/RequestContext';
 import { ServiceConfig } from '../../../../models/types/serviceConfig';
 
 // Mocks
-
 // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
 analyticsUtils.getAtUserId = jest.fn();
 // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
@@ -20,7 +19,6 @@ analyticsUtils.getPublishedDatetime = jest
   .mockReturnValue('1970-01-01T00:00:00.000Z');
 
 // Fixtures
-
 // @ts-expect-error - only partial data required for testing purposes
 const requestContext: RequestContextProps = {
   platform: 'canonical',

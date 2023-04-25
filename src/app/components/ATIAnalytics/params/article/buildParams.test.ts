@@ -4,16 +4,16 @@ import { RequestContextProps } from '../../../../contexts/RequestContext';
 import { ServiceConfig } from '../../../../models/types/serviceConfig';
 import { buildArticleATIParams, buildArticleATIUrl } from './buildParams';
 
-// @ts-ignore
+// @ts-expect-error - we need to mock these functions to ensure tests are deterministic
 analyticsUtils.getAtUserId = jest.fn();
-// @ts-ignore
+// @ts-expect-error - we need to mock these functions to ensure tests are deterministic
 analyticsUtils.getCurrentTime = jest.fn().mockReturnValue('00-00-00');
-// @ts-ignore
+// @ts-expect-error - we need to mock these functions to ensure tests are deterministic
 analyticsUtils.getPublishedDatetime = jest
   .fn()
   .mockReturnValue('1970-01-01T00:00:00.000Z');
 
-// @ts-expect-error - not all request context fields required for purposes of the test
+// @ts-expect-error - only partial data required for testing purposes
 const requestContext: RequestContextProps = {
   platform: 'canonical',
   isUK: false,
@@ -22,7 +22,7 @@ const requestContext: RequestContextProps = {
   origin: 'origin',
 };
 
-// @ts-expect-error - not all service config fields required for purposes of the test
+// @ts-expect-error - only partial data required for testing purposes
 const serviceContext: ServiceConfig = {
   atiAnalyticsAppName: 'atiAnalyticsAppName',
   atiAnalyticsProducerId: 'atiAnalyticsProducerId',

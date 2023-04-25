@@ -25,7 +25,7 @@ export interface ATIEventTrackingProps {
 export interface ATIPageTrackingProps {
   appName?: string;
   contentId?: string | null;
-  contentType?: string;
+  contentType?: string | null;
   language?: string | null;
   ldpThingIds?: string | null;
   ldpThingLabels?: string | null;

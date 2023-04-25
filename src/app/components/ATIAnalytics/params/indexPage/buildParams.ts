@@ -5,13 +5,15 @@ import {
   getLanguage,
   getPageIdentifier,
   getPageTitle,
-} from '#lib/analyticsUtils/indexPage';
+} from '../../../../lib/analyticsUtils/indexPage';
+import { RequestContextProps } from '../../../../contexts/RequestContext';
+import { ServiceConfig } from '../../../../models/types/serviceConfig';
 import { buildATIPageTrackPath } from '../../atiUrl';
 
 export const buildIndexPageATIParams = (
-  indexPageData,
-  requestContext,
-  serviceContext,
+  indexPageData: object,
+  requestContext: RequestContextProps,
+  serviceContext: ServiceConfig,
 ) => {
   const { platform, statsDestination, pageType } = requestContext;
   const { atiAnalyticsAppName, atiAnalyticsProducerId, brandName, service } =
@@ -35,9 +37,9 @@ export const buildIndexPageATIParams = (
 };
 
 export const buildIndexPageATIUrl = (
-  indexPageData,
-  requestContext,
-  serviceContext,
+  indexPageData: object,
+  requestContext: RequestContextProps,
+  serviceContext: ServiceConfig,
 ) => {
   return buildATIPageTrackPath(
     buildIndexPageATIParams(indexPageData, requestContext, serviceContext),
