@@ -86,7 +86,7 @@ exports[`Timestamp should render without a leading zero on the day 1`] = `
   line-height: 1.125rem;
   color: #545658;
   display: block;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   padding-bottom: 0.25rem;

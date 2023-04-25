@@ -6,7 +6,6 @@ import {
 } from '@emotion/react';
 import focusIndicator from './focusIndicator';
 import { RequestContext } from '../../contexts/RequestContext';
-import isLive from '../../lib/utilities/isLive';
 
 import {
   ARCHIVE_BLUE,
@@ -283,7 +282,7 @@ const withThemeProvider = ({
 
     const theme = {
       ...themeConfig,
-      isDarkUi: darkUiPage && !isLive(),
+      isDarkUi: darkUiPage,
     };
 
     return (

@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { string, number, bool } from 'prop-types';
 import styled from '@emotion/styled';
 import { Headline } from '#psammead/psammead-headings/src';
-import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
 import {
   MEDIA_QUERY_TYPOGRAPHY,
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
@@ -14,6 +13,7 @@ import {
   getParagon,
 } from '#psammead/gel-foundations/src/typography';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
+import VisuallyHiddenText from '../../../components/VisuallyHiddenText';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const BrandTitle = styled.span`

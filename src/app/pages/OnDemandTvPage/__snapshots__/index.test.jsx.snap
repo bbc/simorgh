@@ -198,47 +198,47 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
   margin: 0;
 }
 
-.emotion-10 {
+.emotion-9 {
   padding-bottom: 1rem;
 }
 
 @media (min-width: 63rem) {
-  .emotion-10 {
+  .emotion-9 {
     padding-bottom: 1.5rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-10 {
+  .emotion-9 {
     margin: 2.5rem 0 0;
   }
 }
 
 @media (max-width: 62.9375rem) {
-  .emotion-10 {
+  .emotion-9 {
     margin-top: 1rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-10 {
+  .emotion-9 {
     margin: 1rem -1rem 0;
   }
 }
 
 @media (max-width: 24.9375rem) {
-  .emotion-10 {
+  .emotion-9 {
     margin: 0.5rem -0.5rem 0;
   }
 }
 
-.emotion-12 {
+.emotion-11 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
 }
 
-.emotion-14 {
+.emotion-13 {
   z-index: 1;
   border: 0;
   left: 0;
@@ -249,7 +249,7 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
   height: 100%;
 }
 
-.emotion-16 {
+.emotion-15 {
   position: absolute;
   left: 0;
   top: 0;
@@ -257,7 +257,7 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
   height: 100%;
 }
 
-.emotion-18 {
+.emotion-17 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -272,23 +272,23 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
 }
 
 @media (min-width: 25rem) {
-  .emotion-18 {
+  .emotion-17 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-18 {
+  .emotion-17 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-.emotion-21 {
+.emotion-20 {
   font-size: 1.5rem;
   line-height: 2rem;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
   color: #F6F6F6;
@@ -298,38 +298,38 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-21 {
+  .emotion-20 {
     font-size: 1.75rem;
     line-height: 2.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-21 {
+  .emotion-20 {
     font-size: 2.5rem;
     line-height: 3.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-21 {
+  .emotion-20 {
     padding: 2.5rem 0;
   }
 }
 
 @media (max-width: 62.9375rem) {
-  .emotion-21 {
+  .emotion-20 {
     padding: 0.5rem 0;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-21 {
+  .emotion-20 {
     padding: 1rem 0;
   }
 }
 
-.emotion-23 {
+.emotion-22 {
   display: block;
   line-height: 1;
   width: 100%;
@@ -338,107 +338,107 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-23 {
+  .emotion-22 {
     padding-bottom: 1rem;
     word-break: break-word;
     line-height: 1.09;
   }
 }
 
-.emotion-27 {
+.emotion-25 {
   display: inline-block;
   margin: 0;
   font-size: 1.25rem;
   line-height: 1.75rem;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-27 {
+  .emotion-25 {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-27 {
+  .emotion-25 {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 }
 
 @media (max-width: 22.5rem) and (min-width: 15rem) {
-  .emotion-27 {
+  .emotion-25 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-27 {
+  .emotion-25 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-27 {
+  .emotion-25 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-29 {
+  .emotion-27 {
     padding: 0 0.5rem;
     margin-right: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-29 {
+  .emotion-27 {
     padding: 0 0.5rem;
     margin-right: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-29 {
+  .emotion-27 {
     padding: 0 1rem;
     margin-right: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-29 {
+  .emotion-27 {
     padding: 0 1rem;
     margin-right: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-29 {
+  .emotion-27 {
     margin-right: 20%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-29 {
+  .emotion-27 {
     margin-right: 40%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-29 {
+  .emotion-27 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-29 {
+    .emotion-27 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -447,7 +447,7 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-29 {
+    .emotion-27 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -456,7 +456,7 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-29 {
+    .emotion-27 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -465,7 +465,7 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-29 {
+    .emotion-27 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -474,7 +474,7 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-29 {
+    .emotion-27 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
@@ -482,7 +482,7 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
   }
 
   @media (min-width: 80rem) {
-    .emotion-29 {
+    .emotion-27 {
       grid-template-columns: repeat(10, 1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
@@ -490,10 +490,10 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
   }
 }
 
-.emotion-31 {
+.emotion-29 {
   font-size: 0.9375rem;
   line-height: 1.5rem;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #F6F6F6;
@@ -503,21 +503,21 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-31 {
+  .emotion-29 {
     font-size: 1rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-31 {
+  .emotion-29 {
     font-size: 1rem;
     line-height: 1.625rem;
   }
 }
 
 @media (max-width: 62.9375rem) {
-  .emotion-31 {
+  .emotion-29 {
     padding-bottom: 0.5rem;
   }
 }
@@ -540,23 +540,23 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
         dir="rtl"
       >
         <h1
-          class="emotion-7 emotion-8"
+          class="emotion-7"
           id="content"
           tabindex="-1"
         >
           نړۍ دا وخت, ۲۷ می ۲۰۲۰
         </h1>
         <div
-          class="emotion-9 emotion-10 emotion-11"
+          class="emotion-8 emotion-9 emotion-10"
         >
           <div
-            class="emotion-12 emotion-13"
+            class="emotion-11 emotion-12"
             data-e2e="media-player"
           >
             <iframe
               allow="autoplay"
               allowfullscreen=""
-              class="emotion-14 emotion-15"
+              class="emotion-13 emotion-14"
               height="362.953125"
               loading="lazy"
               scrolling="no"
@@ -565,10 +565,10 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
               width="645.25"
             />
             <div
-              class="emotion-16 emotion-17"
+              class="emotion-15 emotion-16"
             >
               <div
-                class="emotion-18 emotion-19"
+                class="emotion-17 emotion-18"
                 data-e2e="image-placeholder"
                 style="padding-bottom: 56.25%;"
               />
@@ -578,31 +578,31 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
         </div>
         <strong
           aria-hidden="true"
-          class=" emotion-20 emotion-21 emotion-22"
+          class=" emotion-19 emotion-20 emotion-21"
         >
           <span
-            class="emotion-23 emotion-24"
+            class="emotion-22 emotion-23"
           >
             نړۍ دا وخت
           </span>
           <span
-            class="emotion-7 emotion-8"
+            class="emotion-7"
           >
             , 
           </span>
           <span
-            class="emotion-27 emotion-28"
+            class="emotion-25 emotion-26"
           >
             ۲۷ می ۲۰۲۰
           </span>
         </strong>
       </div>
       <div
-        class="emotion-29 emotion-4"
+        class="emotion-27 emotion-4"
         dir="rtl"
       >
         <p
-          class="emotion-31 emotion-32"
+          class="emotion-29 emotion-30"
         >
           د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.
         </p>
@@ -810,7 +810,7 @@ exports[`should show the expired content message if episode is expired 1`] = `
   margin: 0;
 }
 
-.emotion-9 {
+.emotion-8 {
   margin: 2.5rem 0 1.5rem;
   padding-top: 56.25%;
   position: relative;
@@ -818,24 +818,24 @@ exports[`should show the expired content message if episode is expired 1`] = `
 }
 
 @media (max-width: 62.9375rem) {
-  .emotion-9 {
+  .emotion-8 {
     margin-top: 1rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-9 {
+  .emotion-8 {
     margin: 1rem -1rem 0;
   }
 }
 
 @media (max-width: 24.9375rem) {
-  .emotion-9 {
+  .emotion-8 {
     margin: 0.5rem -0.5rem 0;
   }
 }
 
-.emotion-11 {
+.emotion-10 {
   position: absolute;
   top: 0;
   left: 0;
@@ -843,8 +843,8 @@ exports[`should show the expired content message if episode is expired 1`] = `
   height: 100%;
 }
 
-.emotion-13 {
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+.emotion-12 {
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.9375rem;
@@ -860,18 +860,18 @@ exports[`should show the expired content message if episode is expired 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-13 {
+  .emotion-12 {
     font-size: 0.875rem;
   }
 }
 
 @media screen and (-ms-high-contrast: active) {
-  .emotion-13 {
+  .emotion-12 {
     background-color: transparent;
   }
 }
 
-.emotion-15 {
+.emotion-14 {
   display: block;
   font-weight: normal;
   bottom: 0;
@@ -880,21 +880,21 @@ exports[`should show the expired content message if episode is expired 1`] = `
 }
 
 @media screen and (-ms-high-contrast: active) {
-  .emotion-15 {
+  .emotion-14 {
     background-color: window;
   }
 }
 
 @media (min-width: 25rem) {
-  .emotion-15 {
+  .emotion-14 {
     padding: 1rem;
   }
 }
 
-.emotion-18 {
+.emotion-17 {
   font-size: 1.5rem;
   line-height: 2rem;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
   color: #F6F6F6;
@@ -904,38 +904,38 @@ exports[`should show the expired content message if episode is expired 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-18 {
+  .emotion-17 {
     font-size: 1.75rem;
     line-height: 2.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-18 {
+  .emotion-17 {
     font-size: 2.5rem;
     line-height: 3.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-18 {
+  .emotion-17 {
     padding: 2.5rem 0;
   }
 }
 
 @media (max-width: 62.9375rem) {
-  .emotion-18 {
+  .emotion-17 {
     padding: 0.5rem 0;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-18 {
+  .emotion-17 {
     padding: 1rem 0;
   }
 }
 
-.emotion-20 {
+.emotion-19 {
   display: block;
   line-height: 1;
   width: 100%;
@@ -944,107 +944,107 @@ exports[`should show the expired content message if episode is expired 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-20 {
+  .emotion-19 {
     padding-bottom: 1rem;
     word-break: break-word;
     line-height: 1.09;
   }
 }
 
-.emotion-24 {
+.emotion-22 {
   display: inline-block;
   margin: 0;
   font-size: 1.25rem;
   line-height: 1.75rem;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-24 {
+  .emotion-22 {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-24 {
+  .emotion-22 {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 }
 
 @media (max-width: 22.5rem) and (min-width: 15rem) {
-  .emotion-24 {
+  .emotion-22 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-24 {
+  .emotion-22 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-24 {
+  .emotion-22 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-26 {
+  .emotion-24 {
     padding: 0 0.5rem;
     margin-right: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-26 {
+  .emotion-24 {
     padding: 0 0.5rem;
     margin-right: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-26 {
+  .emotion-24 {
     padding: 0 1rem;
     margin-right: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-26 {
+  .emotion-24 {
     padding: 0 1rem;
     margin-right: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-26 {
+  .emotion-24 {
     margin-right: 20%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-26 {
+  .emotion-24 {
     margin-right: 40%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-26 {
+  .emotion-24 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-26 {
+    .emotion-24 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -1053,7 +1053,7 @@ exports[`should show the expired content message if episode is expired 1`] = `
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-26 {
+    .emotion-24 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -1062,7 +1062,7 @@ exports[`should show the expired content message if episode is expired 1`] = `
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-26 {
+    .emotion-24 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -1071,7 +1071,7 @@ exports[`should show the expired content message if episode is expired 1`] = `
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-26 {
+    .emotion-24 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -1080,7 +1080,7 @@ exports[`should show the expired content message if episode is expired 1`] = `
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-26 {
+    .emotion-24 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
@@ -1088,7 +1088,7 @@ exports[`should show the expired content message if episode is expired 1`] = `
   }
 
   @media (min-width: 80rem) {
-    .emotion-26 {
+    .emotion-24 {
       grid-template-columns: repeat(10, 1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
@@ -1096,10 +1096,10 @@ exports[`should show the expired content message if episode is expired 1`] = `
   }
 }
 
-.emotion-28 {
+.emotion-26 {
   font-size: 0.9375rem;
   line-height: 1.5rem;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #F6F6F6;
@@ -1109,21 +1109,21 @@ exports[`should show the expired content message if episode is expired 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-28 {
+  .emotion-26 {
     font-size: 1rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-28 {
+  .emotion-26 {
     font-size: 1rem;
     line-height: 1.625rem;
   }
 }
 
 @media (max-width: 62.9375rem) {
-  .emotion-28 {
+  .emotion-26 {
     padding-bottom: 0.5rem;
   }
 }
@@ -1146,23 +1146,23 @@ exports[`should show the expired content message if episode is expired 1`] = `
         dir="rtl"
       >
         <h1
-          class="emotion-7 emotion-8"
+          class="emotion-7"
           id="content"
           tabindex="-1"
         >
           نړۍ دا وخت, ۲۷ می ۲۰۲۰
         </h1>
         <div
-          class="emotion-9 emotion-10"
+          class="emotion-8 emotion-9"
         >
           <div
-            class="emotion-11 emotion-12"
+            class="emotion-10 emotion-11"
           >
             <div
-              class="emotion-13 emotion-14"
+              class="emotion-12 emotion-13"
             >
               <strong
-                class="emotion-15 emotion-16"
+                class="emotion-14 emotion-15"
               >
                 دغه فایل نور د لاسرسي وړ نه دی.
               </strong>
@@ -1171,31 +1171,31 @@ exports[`should show the expired content message if episode is expired 1`] = `
         </div>
         <strong
           aria-hidden="true"
-          class=" emotion-17 emotion-18 emotion-19"
+          class=" emotion-16 emotion-17 emotion-18"
         >
           <span
-            class="emotion-20 emotion-21"
+            class="emotion-19 emotion-20"
           >
             نړۍ دا وخت
           </span>
           <span
-            class="emotion-7 emotion-8"
+            class="emotion-7"
           >
             , 
           </span>
           <span
-            class="emotion-24 emotion-25"
+            class="emotion-22 emotion-23"
           >
             ۲۷ می ۲۰۲۰
           </span>
         </strong>
       </div>
       <div
-        class="emotion-26 emotion-4"
+        class="emotion-24 emotion-4"
         dir="rtl"
       >
         <p
-          class="emotion-28 emotion-29"
+          class="emotion-26 emotion-27"
         >
           د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.
         </p>
@@ -1403,7 +1403,7 @@ exports[`should show the future content message if episode is not yet available 
   margin: 0;
 }
 
-.emotion-9 {
+.emotion-8 {
   margin: 2.5rem 0 1.5rem;
   padding-top: 56.25%;
   position: relative;
@@ -1411,24 +1411,24 @@ exports[`should show the future content message if episode is not yet available 
 }
 
 @media (max-width: 62.9375rem) {
-  .emotion-9 {
+  .emotion-8 {
     margin-top: 1rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-9 {
+  .emotion-8 {
     margin: 1rem -1rem 0;
   }
 }
 
 @media (max-width: 24.9375rem) {
-  .emotion-9 {
+  .emotion-8 {
     margin: 0.5rem -0.5rem 0;
   }
 }
 
-.emotion-11 {
+.emotion-10 {
   position: absolute;
   top: 0;
   left: 0;
@@ -1436,8 +1436,8 @@ exports[`should show the future content message if episode is not yet available 
   height: 100%;
 }
 
-.emotion-13 {
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+.emotion-12 {
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.9375rem;
@@ -1453,18 +1453,18 @@ exports[`should show the future content message if episode is not yet available 
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-13 {
+  .emotion-12 {
     font-size: 0.875rem;
   }
 }
 
 @media screen and (-ms-high-contrast: active) {
-  .emotion-13 {
+  .emotion-12 {
     background-color: transparent;
   }
 }
 
-.emotion-15 {
+.emotion-14 {
   display: block;
   font-weight: normal;
   bottom: 0;
@@ -1473,21 +1473,21 @@ exports[`should show the future content message if episode is not yet available 
 }
 
 @media screen and (-ms-high-contrast: active) {
-  .emotion-15 {
+  .emotion-14 {
     background-color: window;
   }
 }
 
 @media (min-width: 25rem) {
-  .emotion-15 {
+  .emotion-14 {
     padding: 1rem;
   }
 }
 
-.emotion-18 {
+.emotion-17 {
   font-size: 1.5rem;
   line-height: 2rem;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
   color: #F6F6F6;
@@ -1497,38 +1497,38 @@ exports[`should show the future content message if episode is not yet available 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-18 {
+  .emotion-17 {
     font-size: 1.75rem;
     line-height: 2.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-18 {
+  .emotion-17 {
     font-size: 2.5rem;
     line-height: 3.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-18 {
+  .emotion-17 {
     padding: 2.5rem 0;
   }
 }
 
 @media (max-width: 62.9375rem) {
-  .emotion-18 {
+  .emotion-17 {
     padding: 0.5rem 0;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-18 {
+  .emotion-17 {
     padding: 1rem 0;
   }
 }
 
-.emotion-20 {
+.emotion-19 {
   display: block;
   line-height: 1;
   width: 100%;
@@ -1537,107 +1537,107 @@ exports[`should show the future content message if episode is not yet available 
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-20 {
+  .emotion-19 {
     padding-bottom: 1rem;
     word-break: break-word;
     line-height: 1.09;
   }
 }
 
-.emotion-24 {
+.emotion-22 {
   display: inline-block;
   margin: 0;
   font-size: 1.25rem;
   line-height: 1.75rem;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-24 {
+  .emotion-22 {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-24 {
+  .emotion-22 {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 }
 
 @media (max-width: 22.5rem) and (min-width: 15rem) {
-  .emotion-24 {
+  .emotion-22 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-24 {
+  .emotion-22 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-24 {
+  .emotion-22 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-26 {
+  .emotion-24 {
     padding: 0 0.5rem;
     margin-right: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-26 {
+  .emotion-24 {
     padding: 0 0.5rem;
     margin-right: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-26 {
+  .emotion-24 {
     padding: 0 1rem;
     margin-right: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-26 {
+  .emotion-24 {
     padding: 0 1rem;
     margin-right: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-26 {
+  .emotion-24 {
     margin-right: 20%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-26 {
+  .emotion-24 {
     margin-right: 40%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-26 {
+  .emotion-24 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-26 {
+    .emotion-24 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -1646,7 +1646,7 @@ exports[`should show the future content message if episode is not yet available 
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-26 {
+    .emotion-24 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -1655,7 +1655,7 @@ exports[`should show the future content message if episode is not yet available 
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-26 {
+    .emotion-24 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -1664,7 +1664,7 @@ exports[`should show the future content message if episode is not yet available 
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-26 {
+    .emotion-24 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -1673,7 +1673,7 @@ exports[`should show the future content message if episode is not yet available 
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-26 {
+    .emotion-24 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
@@ -1681,7 +1681,7 @@ exports[`should show the future content message if episode is not yet available 
   }
 
   @media (min-width: 80rem) {
-    .emotion-26 {
+    .emotion-24 {
       grid-template-columns: repeat(10, 1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
@@ -1689,10 +1689,10 @@ exports[`should show the future content message if episode is not yet available 
   }
 }
 
-.emotion-28 {
+.emotion-26 {
   font-size: 0.9375rem;
   line-height: 1.5rem;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #F6F6F6;
@@ -1702,21 +1702,21 @@ exports[`should show the future content message if episode is not yet available 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-28 {
+  .emotion-26 {
     font-size: 1rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-28 {
+  .emotion-26 {
     font-size: 1rem;
     line-height: 1.625rem;
   }
 }
 
 @media (max-width: 62.9375rem) {
-  .emotion-28 {
+  .emotion-26 {
     padding-bottom: 0.5rem;
   }
 }
@@ -1739,23 +1739,23 @@ exports[`should show the future content message if episode is not yet available 
         dir="rtl"
       >
         <h1
-          class="emotion-7 emotion-8"
+          class="emotion-7"
           id="content"
           tabindex="-1"
         >
           نړۍ دا وخت, ۲۷ می ۲۰۲۰
         </h1>
         <div
-          class="emotion-9 emotion-10"
+          class="emotion-8 emotion-9"
         >
           <div
-            class="emotion-11 emotion-12"
+            class="emotion-10 emotion-11"
           >
             <div
-              class="emotion-13 emotion-14"
+              class="emotion-12 emotion-13"
             >
               <strong
-                class="emotion-15 emotion-16"
+                class="emotion-14 emotion-15"
               >
                 دغه پروګرام د خپرولو لپاره چمتو نه دی.
               </strong>
@@ -1764,31 +1764,31 @@ exports[`should show the future content message if episode is not yet available 
         </div>
         <strong
           aria-hidden="true"
-          class=" emotion-17 emotion-18 emotion-19"
+          class=" emotion-16 emotion-17 emotion-18"
         >
           <span
-            class="emotion-20 emotion-21"
+            class="emotion-19 emotion-20"
           >
             نړۍ دا وخت
           </span>
           <span
-            class="emotion-7 emotion-8"
+            class="emotion-7"
           >
             , 
           </span>
           <span
-            class="emotion-24 emotion-25"
+            class="emotion-22 emotion-23"
           >
             ۲۷ می ۲۰۲۰
           </span>
         </strong>
       </div>
       <div
-        class="emotion-26 emotion-4"
+        class="emotion-24 emotion-4"
         dir="rtl"
       >
         <p
-          class="emotion-28 emotion-29"
+          class="emotion-26 emotion-27"
         >
           د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.
         </p>
@@ -1996,7 +1996,7 @@ exports[`should show the future content message if episode is pending 1`] = `
   margin: 0;
 }
 
-.emotion-9 {
+.emotion-8 {
   margin: 2.5rem 0 1.5rem;
   padding-top: 56.25%;
   position: relative;
@@ -2004,24 +2004,24 @@ exports[`should show the future content message if episode is pending 1`] = `
 }
 
 @media (max-width: 62.9375rem) {
-  .emotion-9 {
+  .emotion-8 {
     margin-top: 1rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-9 {
+  .emotion-8 {
     margin: 1rem -1rem 0;
   }
 }
 
 @media (max-width: 24.9375rem) {
-  .emotion-9 {
+  .emotion-8 {
     margin: 0.5rem -0.5rem 0;
   }
 }
 
-.emotion-11 {
+.emotion-10 {
   position: absolute;
   top: 0;
   left: 0;
@@ -2029,8 +2029,8 @@ exports[`should show the future content message if episode is pending 1`] = `
   height: 100%;
 }
 
-.emotion-13 {
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+.emotion-12 {
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.9375rem;
@@ -2046,18 +2046,18 @@ exports[`should show the future content message if episode is pending 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-13 {
+  .emotion-12 {
     font-size: 0.875rem;
   }
 }
 
 @media screen and (-ms-high-contrast: active) {
-  .emotion-13 {
+  .emotion-12 {
     background-color: transparent;
   }
 }
 
-.emotion-15 {
+.emotion-14 {
   display: block;
   font-weight: normal;
   bottom: 0;
@@ -2066,21 +2066,21 @@ exports[`should show the future content message if episode is pending 1`] = `
 }
 
 @media screen and (-ms-high-contrast: active) {
-  .emotion-15 {
+  .emotion-14 {
     background-color: window;
   }
 }
 
 @media (min-width: 25rem) {
-  .emotion-15 {
+  .emotion-14 {
     padding: 1rem;
   }
 }
 
-.emotion-18 {
+.emotion-17 {
   font-size: 1.5rem;
   line-height: 2rem;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
   color: #F6F6F6;
@@ -2090,38 +2090,38 @@ exports[`should show the future content message if episode is pending 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-18 {
+  .emotion-17 {
     font-size: 1.75rem;
     line-height: 2.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-18 {
+  .emotion-17 {
     font-size: 2.5rem;
     line-height: 3.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-18 {
+  .emotion-17 {
     padding: 2.5rem 0;
   }
 }
 
 @media (max-width: 62.9375rem) {
-  .emotion-18 {
+  .emotion-17 {
     padding: 0.5rem 0;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-18 {
+  .emotion-17 {
     padding: 1rem 0;
   }
 }
 
-.emotion-20 {
+.emotion-19 {
   display: block;
   line-height: 1;
   width: 100%;
@@ -2130,107 +2130,107 @@ exports[`should show the future content message if episode is pending 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-20 {
+  .emotion-19 {
     padding-bottom: 1rem;
     word-break: break-word;
     line-height: 1.09;
   }
 }
 
-.emotion-24 {
+.emotion-22 {
   display: inline-block;
   margin: 0;
   font-size: 1.25rem;
   line-height: 1.75rem;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-24 {
+  .emotion-22 {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-24 {
+  .emotion-22 {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 }
 
 @media (max-width: 22.5rem) and (min-width: 15rem) {
-  .emotion-24 {
+  .emotion-22 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-24 {
+  .emotion-22 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-24 {
+  .emotion-22 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-26 {
+  .emotion-24 {
     padding: 0 0.5rem;
     margin-right: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-26 {
+  .emotion-24 {
     padding: 0 0.5rem;
     margin-right: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-26 {
+  .emotion-24 {
     padding: 0 1rem;
     margin-right: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-26 {
+  .emotion-24 {
     padding: 0 1rem;
     margin-right: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-26 {
+  .emotion-24 {
     margin-right: 20%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-26 {
+  .emotion-24 {
     margin-right: 40%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-26 {
+  .emotion-24 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-26 {
+    .emotion-24 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -2239,7 +2239,7 @@ exports[`should show the future content message if episode is pending 1`] = `
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-26 {
+    .emotion-24 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -2248,7 +2248,7 @@ exports[`should show the future content message if episode is pending 1`] = `
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-26 {
+    .emotion-24 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -2257,7 +2257,7 @@ exports[`should show the future content message if episode is pending 1`] = `
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-26 {
+    .emotion-24 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -2266,7 +2266,7 @@ exports[`should show the future content message if episode is pending 1`] = `
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-26 {
+    .emotion-24 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
@@ -2274,7 +2274,7 @@ exports[`should show the future content message if episode is pending 1`] = `
   }
 
   @media (min-width: 80rem) {
-    .emotion-26 {
+    .emotion-24 {
       grid-template-columns: repeat(10, 1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
@@ -2282,10 +2282,10 @@ exports[`should show the future content message if episode is pending 1`] = `
   }
 }
 
-.emotion-28 {
+.emotion-26 {
   font-size: 0.9375rem;
   line-height: 1.5rem;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #F6F6F6;
@@ -2295,21 +2295,21 @@ exports[`should show the future content message if episode is pending 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-28 {
+  .emotion-26 {
     font-size: 1rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-28 {
+  .emotion-26 {
     font-size: 1rem;
     line-height: 1.625rem;
   }
 }
 
 @media (max-width: 62.9375rem) {
-  .emotion-28 {
+  .emotion-26 {
     padding-bottom: 0.5rem;
   }
 }
@@ -2332,23 +2332,23 @@ exports[`should show the future content message if episode is pending 1`] = `
         dir="rtl"
       >
         <h1
-          class="emotion-7 emotion-8"
+          class="emotion-7"
           id="content"
           tabindex="-1"
         >
           نړۍ دا وخت, ۲۷ می ۲۰۲۰
         </h1>
         <div
-          class="emotion-9 emotion-10"
+          class="emotion-8 emotion-9"
         >
           <div
-            class="emotion-11 emotion-12"
+            class="emotion-10 emotion-11"
           >
             <div
-              class="emotion-13 emotion-14"
+              class="emotion-12 emotion-13"
             >
               <strong
-                class="emotion-15 emotion-16"
+                class="emotion-14 emotion-15"
               >
                 دغه پروګرام د خپرولو لپاره چمتو نه دی.
               </strong>
@@ -2357,31 +2357,31 @@ exports[`should show the future content message if episode is pending 1`] = `
         </div>
         <strong
           aria-hidden="true"
-          class=" emotion-17 emotion-18 emotion-19"
+          class=" emotion-16 emotion-17 emotion-18"
         >
           <span
-            class="emotion-20 emotion-21"
+            class="emotion-19 emotion-20"
           >
             نړۍ دا وخت
           </span>
           <span
-            class="emotion-7 emotion-8"
+            class="emotion-7"
           >
             , 
           </span>
           <span
-            class="emotion-24 emotion-25"
+            class="emotion-22 emotion-23"
           >
             ۲۷ می ۲۰۲۰
           </span>
         </strong>
       </div>
       <div
-        class="emotion-26 emotion-4"
+        class="emotion-24 emotion-4"
         dir="rtl"
       >
         <p
-          class="emotion-28 emotion-29"
+          class="emotion-26 emotion-27"
         >
           د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.
         </p>
