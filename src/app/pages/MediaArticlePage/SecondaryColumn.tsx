@@ -2,13 +2,12 @@
 /** @jsx jsx */
 import path from 'ramda/src/path';
 import { jsx } from '@emotion/react';
-import { articleDataPropTypes } from '#app/models/propTypes/article';
 import LatestMediaSection from './PagePromoSections/LatestMediaSection';
 import styles from './MediaArticlePage.styles';
 import { LatestMedia } from './PagePromoSections/LatestMediaSection/types';
 
 type MediaArticlePageProps = {
-  pageData: typeof articleDataPropTypes;
+  pageData: object;
 };
 
 const SecondaryColumn = ({ pageData }: MediaArticlePageProps) => {

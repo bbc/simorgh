@@ -56,10 +56,7 @@ const Context = ({
           statusCode={200}
           showAdsBasedOnLocation={showAdsBasedOnLocation}
         >
-          <ServiceContextProvider
-            service={service}
-            // recommendations={recommendationSettings}
-          >
+          <ServiceContextProvider service={service}>
             {children}
           </ServiceContextProvider>
         </RequestContextProvider>
@@ -80,7 +77,6 @@ describe('MediaArticlePage', () => {
 
     const { container } = render(
       <Context service="news">
-        {/* @ts-expect-error - partial pageData being passed */}
         <MediaArticlePage pageData={pidginPageData} />
       </Context>,
     );
@@ -95,7 +91,6 @@ describe('MediaArticlePage', () => {
 
     const { container } = render(
       <Context service="news" adsToggledOn showAdsBasedOnLocation>
-        {/* @ts-expect-error - partial pageData being passed */}
         <MediaArticlePage pageData={pidginPageData} />
       </Context>,
     );

@@ -46,7 +46,7 @@ export type CpsRecommendation = {
 
 export type Recommendation = OptimoRecommendation | CpsRecommendation;
 
-export type TopStoriesOJ = {
+export type TopStoriesOnwardJourney = {
   headlines: Headlines;
   locators: Locators;
   summary: string;
@@ -65,7 +65,7 @@ export type TopStoriesOJ = {
   type: string;
 };
 
-export type FeaturesAnalysisOJ = {
+export type FeaturesAnalysisOnwardJourney = {
   name: string;
   summary: string;
   indexImage: IndexImage;

@@ -7,7 +7,6 @@ import pathOr from 'ramda/src/pathOr';
 import { jsx, useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
 
-import { articleDataPropTypes } from '#models/propTypes/article';
 import ArticleMetadata from '#containers/ArticleMetadata';
 import headings from '#containers/Headings';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
@@ -57,22 +56,11 @@ import RelatedContentSection from './PagePromoSections/RelatedContentSection';
 import SecondaryColumn from './SecondaryColumn';
 
 import styles from './MediaArticlePage.styles';
-
-type MediaArticlePageProps = {
-  pageData: typeof articleDataPropTypes;
-};
-
-type ComponentToRenderProps = {
-  blocks: OptimoBlock[];
-};
-
-type TimestampProps = {
-  firstPublished: number;
-  lastPublished: number;
-  popOut: boolean;
-  minutesTolerance?: number;
-  className: string;
-};
+import {
+  ComponentToRenderProps,
+  MediaArticlePageProps,
+  TimestampProps,
+} from './types';
 
 const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
   const { articleAuthor, isTrustProjectParticipant, showRelatedTopics } =
