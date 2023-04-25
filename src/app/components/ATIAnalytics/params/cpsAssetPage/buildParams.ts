@@ -4,14 +4,39 @@ import {
   getContentId,
   LIBRARY_VERSION,
   getThingAttributes,
-} from '#lib/analyticsUtils';
+} from '../../../../lib/analyticsUtils';
 import { buildATIPageTrackPath } from '../../atiUrl';
+import { RequestContextProps } from '../../../../contexts/RequestContext';
+import { ServiceConfig } from '../../../../models/types/serviceConfig';
+
+interface CPSAssetPageData {
+  metadata: {
+    analyticsLabels: {
+      counterName: string;
+    };
+    atiAnalytics: {
+      chapter: string;
+      producerId: string;
+    };
+    language?: string;
+    passport: {
+      campaigns: {
+        campaignId: string;
+        campaignName: string;
+      }[];
+      category: {
+        categoryName: string;
+      };
+    };
+  };
+  promo: object;
+}
 
 export const buildCpsAssetPageATIParams = (
-  pageData,
-  requestContext,
-  serviceContext,
-  contentType,
+  pageData: CPSAssetPageData,
+  requestContext: RequestContextProps,
+  serviceContext: ServiceConfig,
+  contentType: string,
 ) => {
   const { platform, statsDestination } = requestContext;
   const { atiAnalyticsAppName, atiAnalyticsProducerId, service, brandName } =
@@ -19,9 +44,9 @@ export const buildCpsAssetPageATIParams = (
 
   const { metadata, promo } = pageData;
 
-  const getChapter1 = pageIdentifier => {
+  const getChapter1 = (pageIdentifier: string) => {
     if (service === 'news') {
-      return path(['atiAnalytics', 'chapter'], metadata);
+      return metadata.atiAnalytics?.chapter;
     }
     const chapter = pageIdentifier.split('.')[1];
     if (['media_asset', 'story'].includes(chapter)) {
@@ -30,14 +55,14 @@ export const buildCpsAssetPageATIParams = (
     return chapter;
   };
 
-  const getProducer = defaultProducer => {
+  const getProducer = (defaultProducer: string): string => {
     if (['news', 'sport'].includes(service)) {
-      return path(['atiAnalytics', 'producerId'], metadata);
+      return metadata.atiAnalytics?.producerId;
     }
     return defaultProducer;
   };
 
-  const page = path(['analyticsLabels', 'counterName'], metadata);
+  const page = metadata?.analyticsLabels?.counterName;
   const isValidPage = page && typeof page === 'string' && page.includes('.');
   const chapter1 = isValidPage ? getChapter1(page) : false;
   const producerId = getProducer(atiAnalyticsProducerId);
@@ -48,14 +73,14 @@ export const buildCpsAssetPageATIParams = (
     appName: atiAnalyticsAppName,
     contentId: getContentId(pageData),
     contentType,
-    language: path(['language'], metadata),
+    language: metadata?.language,
     // Example page identifier: embedded_media::pidgin.embedded_media.media_asset.49529724.page
     pageIdentifier: chapter1 ? `${chapter1}::${page}` : page,
     pageTitle: `${path(['headlines', 'headline'], promo)} - ${brandName}`,
     timePublished: getPublishedDatetime('firstPublished', pageData),
     timeUpdated: getPublishedDatetime('lastPublished', pageData),
-    categoryName: path(['passport', 'category', 'categoryName'], metadata),
-    campaigns: path(['passport', 'campaigns'], metadata),
+    categoryName: metadata.passport?.category?.categoryName,
+    campaigns: metadata.passport?.campaigns,
     ...(ldpThingIds && { ldpThingIds }),
     ...(ldpThingLabels && { ldpThingLabels }),
     producerId,
@@ -67,10 +92,10 @@ export const buildCpsAssetPageATIParams = (
 };
 
 export const buildCpsAssetPageATIUrl = (
-  pageData,
-  requestContext,
-  serviceContext,
-  contentType,
+  pageData: CPSAssetPageData,
+  requestContext: RequestContextProps,
+  serviceContext: ServiceConfig,
+  contentType: string,
 ) => {
   return buildATIPageTrackPath(
     buildCpsAssetPageATIParams(

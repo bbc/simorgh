@@ -40,6 +40,6 @@ export interface ATIPageTrackingProps {
   origin?: string;
   previousPath?: string | null;
   categoryName?: string | null;
-  campaigns?: string;
+  campaigns?: { campaignId: string; campaignName: string }[];
   nationsProducer?: string | null;
 }

@@ -5,27 +5,36 @@ import {
   buildCpsAssetPageATIParams,
   buildCpsAssetPageATIUrl,
 } from './buildParams';
+import { RequestContextProps } from '../../../../contexts/RequestContext';
+import { ServiceConfig } from '../../../../models/types/serviceConfig';
 
 // Mocks
+
+// @ts-expect-error - we need to mock these functions to ensure tests are deterministic
 analyticsUtils.getAtUserId = jest.fn();
+// @ts-expect-error - we need to mock these functions to ensure tests are deterministic
 analyticsUtils.getCurrentTime = jest.fn().mockReturnValue('00-00-00');
+// @ts-expect-error - we need to mock these functions to ensure tests are deterministic
 analyticsUtils.getPublishedDatetime = jest
   .fn()
   .mockReturnValue('1970-01-01T00:00:00.000Z');
 
 // Fixtures
-const requestContext = {
-  platform: 'platform',
-  isUK: 'isUK',
+
+// @ts-expect-error - only partial data required for testing purposes
+const requestContext: RequestContextProps = {
+  platform: 'canonical',
+  isUK: true,
   statsDestination: 'statsDestination',
   previousPath: 'previousPath',
   origin: 'origin',
   canonicalLink: 'https://www.bbc.com/pidgin/51536047',
 };
 
-const requestContextLegacy = {
-  platform: 'platform',
-  isUK: 'isUK',
+// @ts-expect-error - only partial data required for testing purposes
+const requestContextLegacy: RequestContextProps = {
+  platform: 'canonical',
+  isUK: true,
   statsDestination: 'statsDestination',
   previousPath: 'previousPath',
   origin: 'origin',
@@ -33,14 +42,16 @@ const requestContextLegacy = {
     'https://www.bbc.com/gahuza/video/2016/01/160108_australia_fire_video',
 };
 
-const serviceContext = {
+// @ts-expect-error - only partial data required for testing purposes
+const serviceContext: ServiceConfig = {
   atiAnalyticsAppName: 'atiAnalyticsAppName',
   atiAnalyticsProducerId: 'atiAnalyticsProducerId',
-  service: 'service',
+  service: 'pidgin',
   brandName: 'Some BBC Brand',
 };
 
-const newsServiceContext = {
+// @ts-expect-error - only partial data required for testing purposes
+const newsServiceContext: ServiceConfig = {
   atiAnalyticsAppName: 'atiAnalyticsAppName',
   atiAnalyticsProducerId: 'atiAnalyticsProducerId',
   service: 'news',
@@ -60,7 +71,7 @@ const expectation = {
   platform: requestContext.platform,
   producerId: serviceContext.atiAnalyticsProducerId,
   statsDestination: requestContext.statsDestination,
-  service: 'service',
+  service: 'pidgin',
   timePublished: analyticsUtils.getPublishedDatetime(),
   timeUpdated: analyticsUtils.getPublishedDatetime(),
   ldpThingLabels: 'Technology~Nigeria',
@@ -78,7 +89,7 @@ const expectationLegacy = {
   platform: requestContextLegacy.platform,
   producerId: serviceContext.atiAnalyticsProducerId,
   statsDestination: requestContextLegacy.statsDestination,
-  service: 'service',
+  service: 'pidgin',
   timePublished: analyticsUtils.getPublishedDatetime(),
   timeUpdated: analyticsUtils.getPublishedDatetime(),
 };
@@ -105,7 +116,7 @@ const newsExpectation = {
 };
 
 describe('buildCpsAssetPageATIParams', () => {
-  it('should return the right object', () => {
+  it('should return the correct object', () => {
     const result = buildCpsAssetPageATIParams(
       payload,
       requestContext,
@@ -135,8 +146,9 @@ describe('buildCpsAssetPageATIParams', () => {
     expect(result).toEqual({ ...expectation, pageIdentifier: 'invalid' });
   });
 
-  it('should return the right object', () => {
+  it('should return the correct object for a legacy asset', () => {
     const result = buildCpsAssetPageATIParams(
+      // @ts-expect-error - only partial data required for testing purposes
       payloadLegacy,
       requestContextLegacy,
       serviceContext,
