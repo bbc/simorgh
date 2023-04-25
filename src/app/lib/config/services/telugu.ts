@@ -322,7 +322,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'వీడియో',
-        url: '/telugu/media/video',
+        url: '/telugu/topics/cl29j0e3e2dt',
       },
       {
         title: 'ఎక్కువ మంది చదివినవి',
