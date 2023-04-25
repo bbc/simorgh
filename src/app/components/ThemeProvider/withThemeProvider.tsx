@@ -278,11 +278,9 @@ const withThemeProvider = ({
   const ThemeProvider: React.FC<Props> = ({ children }) => {
     const { isAmp, pageType, derivedPageType } = useContext(RequestContext);
 
-    const darkUiPage = isDarkUiPage(pageType, derivedPageType);
-
     const theme = {
       ...themeConfig,
-      isDarkUi: darkUiPage,
+      isDarkUi: isDarkUiPage(pageType, derivedPageType),
     };
 
     return (
