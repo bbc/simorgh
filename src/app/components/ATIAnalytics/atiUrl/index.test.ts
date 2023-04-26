@@ -1,8 +1,7 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
 import * as genericLabelHelpers from '../../../lib/analyticsUtils';
 import { buildATIPageTrackPath, buildATIEventTrackUrl } from '.';
 
-// @ts-ignore
+// @ts-expect-error required for testing purposes
 const mockAndSet = ({ name, source }, response) => {
   source[name] = jest.fn(); // eslint-disable-line no-param-reassign
   source[name].mockImplementation(() => response);
@@ -91,10 +90,10 @@ describe('getThingAttributes', () => {
     'should take in optional props and add them as correct query params',
     ({ props, currentUrl, expectedValues }) => {
       mockAndSet(marketingCampaignFunc, 'sl');
-      // @ts-ignore
+      // @ts-expect-error required for testing purposes
       delete window.location;
 
-      // @ts-ignore
+      // @ts-expect-error required for testing purposes
       window.location = new URL(currentUrl);
 
       const queryParams = buildATIPageTrackPath(props);
