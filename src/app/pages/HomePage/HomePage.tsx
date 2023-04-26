@@ -51,6 +51,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
         position: index + 1,
       };
     });
+
   const itemList = {
     itemListElement,
     '@type': 'ItemList',
