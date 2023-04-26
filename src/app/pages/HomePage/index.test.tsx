@@ -3,7 +3,6 @@ import { data as kyrgyzHomePageData } from '#data/kyrgyz/homePage/index.json';
 import { Helmet } from 'react-helmet';
 import { render } from '../../components/react-testing-library-with-providers';
 import HomePage from './HomePage';
-import LinkedData from '../../components/LinkedData';
 
 describe('Home Page', () => {
   it('should render a section for each curation', () => {
