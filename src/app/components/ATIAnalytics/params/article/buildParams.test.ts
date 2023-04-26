@@ -21,6 +21,7 @@ const requestContext: RequestContextProps = {
   statsDestination: 'isUK',
   previousPath: 'previousPath',
   origin: 'origin',
+  service: 'news',
 };
 
 // @ts-expect-error - only partial data required for testing purposes
@@ -96,7 +97,7 @@ describe('buildParams', () => {
         requestContext,
         serviceContext,
       );
-      expect(result).toEqual(expect.objectContaining(validURLParams));
+      expect(result).toEqual(validURLParams);
     });
   });
 
@@ -107,9 +108,7 @@ describe('buildParams', () => {
       serviceContext,
       'article',
     );
-    expect(result).toEqual(
-      expect.objectContaining({ ...validURLParams, contentType: 'article' }),
-    );
+    expect(result).toEqual({ ...validURLParams, contentType: 'article' });
   });
 
   it('should return the right media-article object when a mediaArticle pageType is specified', () => {
@@ -119,12 +118,10 @@ describe('buildParams', () => {
       serviceContext,
       'article-sfv',
     );
-    expect(result).toEqual(
-      expect.objectContaining({
-        ...validURLParams,
-        contentType: 'article-sfv',
-      }),
-    );
+    expect(result).toEqual({
+      ...validURLParams,
+      contentType: 'article-sfv',
+    });
   });
 
   describe('buildArticleATIUrl', () => {
