@@ -58,7 +58,6 @@ const HomePage = ({ pageData }: HomePageProps) => {
     name: brandName,
     numberOfItems: itemListElement.length,
   };
-  console.log(JSON.stringify(itemListElement, null, 2));
   return (
     <>
       <MetadataContainer
