@@ -25,23 +25,39 @@ interface HomePageProps {
 }
 
 const HomePage = ({ pageData }: HomePageProps) => {
-  const { translations, product, serviceLocalizedName, frontPageTitle, lang } =
-    useContext(ServiceContext);
+  const {
+    translations,
+    product,
+    serviceLocalizedName,
+    frontPageTitle,
+    lang,
+    brandName,
+  } = useContext(ServiceContext);
   const { topStoriesTitle, home } = translations;
   const { title, description, curations } = pageData;
 
-  const linkedDataEntities = curations
+  const itemListElement = curations
     .map(({ summaries }) =>
       summaries.map(summary => ({
-        '@type': summary.type,
-        name: summary.title,
-        headline: summary.title,
+        '@context': 'http://schema.org',
+        '@type': 'ListItem',
         url: summary.link,
-        dateCreated: summary.firstPublished,
       })),
     )
-    .flat();
-
+    .flat()
+    .map((listItem, index) => {
+      return {
+        ...listItem,
+        position: index + 1,
+      };
+    });
+  const itemList = {
+    itemListElement,
+    '@type': 'ItemList',
+    name: brandName,
+    numberOfItems: itemListElement.length,
+  };
+  console.log(JSON.stringify(itemListElement, null, 2));
   return (
     <>
       <MetadataContainer
@@ -55,7 +71,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
         type="CollectionPage"
         seoTitle={title}
         headline={title}
-        entities={linkedDataEntities}
+        entities={[itemList]}
       />
       <main css={styles.main}>
         <VisuallyHiddenText id="content" tabIndex={-1} as="h1">
