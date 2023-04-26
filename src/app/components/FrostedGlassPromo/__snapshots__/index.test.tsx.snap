@@ -77,7 +77,7 @@ exports[`Frosted Glass Promo when given props directly 1`] = `
 }
 
 .emotion-7 {
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 0.9375rem;
@@ -232,7 +232,7 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
 }
 
 .emotion-7 {
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 0.9375rem;
@@ -429,7 +429,7 @@ exports[`Frosted Glass Promo when given props for a Link promo 1`] = `
 }
 
 .emotion-7 {
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 0.9375rem;
@@ -626,7 +626,7 @@ exports[`Frosted Glass Promo when given props for a Optimo promo 1`] = `
 }
 
 .emotion-7 {
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 0.9375rem;

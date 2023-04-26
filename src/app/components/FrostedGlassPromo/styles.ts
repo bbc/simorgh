@@ -40,8 +40,9 @@ export default {
     }),
   anchor: ({ fontVariants, spacings, mq }: Theme) =>
     css({
-      ...fontVariants.sansRegular,
+      ...fontVariants.serifRegular,
       fontSize: '0.9375rem',
+      fontWeight: 400,
       lineHeight: 1.33,
       display: 'inline-block',
       textDecoration: 'none',
