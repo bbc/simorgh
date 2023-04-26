@@ -79,8 +79,8 @@ export const service: ChineseConfig = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-          text: 'AdChoices / Do Not Sell My Info',
+          href: '#',
+          text: 'Do not share or sell my info',
           lang: 'en-GB',
         },
       ],
@@ -107,10 +107,6 @@ export const service: ChineseConfig = {
       {
         title: '主页',
         url: '/ukchina/simp',
-      },
-      {
-        title: '视频内容',
-        url: '/ukchina/simp/media/video',
       },
     ],
     scriptLink: {
@@ -343,8 +339,8 @@ export const service: ChineseConfig = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-          text: 'AdChoices / Do Not Sell My Info',
+          href: '#',
+          text: 'Do not share or sell my info',
           lang: 'en-GB',
         },
       ],
@@ -368,10 +364,6 @@ export const service: ChineseConfig = {
       {
         title: '主頁',
         url: '/ukchina/trad',
-      },
-      {
-        title: '視頻內容',
-        url: '/ukchina/trad/media/video',
       },
     ],
     scriptLink: {

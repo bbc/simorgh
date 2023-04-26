@@ -91,8 +91,8 @@ const urls = [
   },
   {
     service: 'kyrgyz',
-    local: '/kyrgyz/tipohome',
-    test: '/kyrgyz/tipohome',
+    local: '/kyrgyz',
+    test: '/kyrgyz',
     live: null,
   },
   {

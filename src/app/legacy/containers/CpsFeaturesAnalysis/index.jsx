@@ -43,20 +43,20 @@ const StoryPromoLiFeatures = styled(StoryPromoLi)`
     padding: 0 0 0.5rem 0;
   }
 
-  &:not(:first-child):not(:last-child) {
-    padding: 0.5rem 0 0.5rem 0;
-  }
-
   &:last-child {
     padding: 0.5rem 0 0 0;
+  }
+
+  &:not(:first-child):not(:last-child) {
+    padding: 0.5rem 0 0.5rem 0;
   }
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     padding: 0;
 
     &:first-child,
-    &:not(:first-child):not(:last-child),
-    &:last-child {
+    &:last-child,
+    &:not(:first-child):not(:last-child) {
       padding: 0;
     }
   }

@@ -2,14 +2,16 @@
 /* @jsxFrag React.Fragment */
 import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
+import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import {
-  CurationData,
   VisualProminence,
   VisualStyle,
-} from '#app/models/types/curationData';
-import Curation from '#app/components/Curation';
+  CurationData,
+} from '../../models/types/curationData';
+import Curation from '../../components/Curation';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import styles from './index.styles';
+import MetadataContainer from '../../components/Metadata';
 
 interface HomePageProps {
   pageData: {
@@ -17,17 +19,33 @@ interface HomePageProps {
     id?: string;
     title: string;
     curations: CurationData[];
+    description: string;
   };
 }
 
 const HomePage = ({ pageData }: HomePageProps) => {
-  const { curations } = pageData;
-  const { translations } = useContext(ServiceContext);
-  const { topStoriesTitle } = translations;
+  const { curations, description } = pageData;
+
+  const { translations, product, serviceLocalizedName, frontPageTitle, lang } =
+    useContext(ServiceContext);
+  const { topStoriesTitle, home } = translations;
 
   return (
     <>
+      <MetadataContainer
+        title={frontPageTitle}
+        lang={lang}
+        description={description}
+        openGraphType="website"
+        hasAmpPage
+      />
       <main css={styles.main}>
+        <VisuallyHiddenText id="content" tabIndex={-1} as="h1">
+          {/* eslint-disable-next-line jsx-a11y/aria-role */}
+          <span role="text">
+            <span lang="en-GB">{product}</span>, {serviceLocalizedName} - {home}
+          </span>
+        </VisuallyHiddenText>
         <div css={styles.inner}>
           {curations.map(
             ({

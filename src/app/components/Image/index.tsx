@@ -57,7 +57,7 @@ const Image = ({
   src,
   width,
 }: PropsWithChildren<Props>) => {
-  const requestContext = useContext(RequestContext);
+  const { pageType } = useContext(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
   const showPlaceholder = placeholder && !isLoaded;
   const hasDimensions = width && height;
@@ -74,12 +74,11 @@ const Image = ({
   const ampImgLayout = hasDimensions ? 'responsive' : 'fill';
   const getImgSrcSet = () => {
     if (!hasFallback) return srcSet;
-    if (requestContext.pageType !== FRONT_PAGE) return fallbackSrcSet;
+    if (pageType !== FRONT_PAGE) return fallbackSrcSet;
     return undefined;
   };
   const getImgSizes = () => {
-    if ((!hasFallback && srcSet) || requestContext.pageType !== FRONT_PAGE)
-      return sizes;
+    if ((!hasFallback && srcSet) || pageType !== FRONT_PAGE) return sizes;
     return undefined;
   };
 
@@ -131,7 +130,7 @@ const Image = ({
           </>
         ) : (
           <ImageWrapper>
-            {hasFallback && requestContext.pageType === FRONT_PAGE && (
+            {hasFallback && pageType === FRONT_PAGE && (
               <>
                 <source srcSet={srcSet} type={mediaType} sizes={sizes} />
                 <source

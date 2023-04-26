@@ -38,7 +38,7 @@ exports[`Fragment with bold attributes should render text wrapped in a bold DOM 
 
 exports[`Fragment with italic attributes in Farsi should render text wrapped in an italic DOM element 1`] = `
 .emotion-0 {
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-family: inherit;
