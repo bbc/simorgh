@@ -8,7 +8,7 @@ import ThemeProvider from '../ThemeProvider';
 import { Services } from '../../models/types/global';
 
 import Uploader from '.';
-import { uploader } from './fixtures';
+import { uploader, uploaderNonLatin, uploaderRTL } from './fixtures';
 import metadata from './metadata.json';
 
 interface Props {
@@ -43,4 +43,12 @@ export default {
 
 export const Example = ({ service }: Props) => {
   return <Component blocks={uploader} service={service} />;
+};
+
+export const BurmeseExample = ({ service }: Props) => {
+  return <Component blocks={uploaderNonLatin} service={service} />;
+};
+
+export const ArabicExample = ({ service }: Props) => {
+  return <Component blocks={uploaderRTL} service={service} />;
 };
