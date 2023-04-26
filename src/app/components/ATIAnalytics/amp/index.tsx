@@ -1,4 +1,6 @@
-import React from 'react';
+/** @jsxRuntime classic */
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
 import getAmpAnalyticsJson from './ampAnalyticsJson';
 import { ATIAnalyticsProps, AMPAnalyticsData } from '../types';
 
@@ -12,7 +14,6 @@ const JsonInlinedScript = (data: AMPAnalyticsData) => (
 
 const AmpATIAnalytics = ({ pageviewParams }: ATIAnalyticsProps) => {
   return (
-    // @ts-expect-error amp attributes not yet supported in TS
     <amp-analytics>
       {JsonInlinedScript(
         getAmpAnalyticsJson({
@@ -20,7 +21,6 @@ const AmpATIAnalytics = ({ pageviewParams }: ATIAnalyticsProps) => {
           pageviewParams,
         }),
       )}
-      {/* @ts-expect-error amp attributes not yet supported in TS */}
     </amp-analytics>
   );
 };
