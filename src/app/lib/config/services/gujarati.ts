@@ -318,7 +318,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'વીડિયો',
-        url: '/gujarati/media/video',
+        url: '/gujarati/topics/cpev7m0rry0t',
       },
       {
         title: 'લોકપ્રિય',

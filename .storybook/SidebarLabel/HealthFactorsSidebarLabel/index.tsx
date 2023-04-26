@@ -1,5 +1,5 @@
-import React from 'react';
-/** @jsx jsx */ import { jsx } from '@emotion/core';
+/** @jsx jsx */
+import { jsx } from '@emotion/core';
 import styles from './index.styles';
 import {
   Recommend,
@@ -8,9 +8,10 @@ import {
 } from '../../DocsDecorator/HealthFactors/Icons';
 import ThemeProvider from '../../../src/app/components/ThemeProvider';
 import { getActionCount } from '../../helpers/healthFactors';
+import { SidebarLabelProps } from '../types';
 import VisuallyHiddenText from '../../../src/app/components/VisuallyHiddenText';
 
-const HealthFactorsSidebarLabel = ({ metadata, name }) => {
+const HealthFactorsSidebarLabel = ({ metadata, name }: SidebarLabelProps) => {
   const actionCount = getActionCount(metadata);
 
   const hasIcon =

@@ -11,13 +11,9 @@ import {
   twoMissingDocs,
   allMissingDocs,
 } from './fixture';
-import HealthFactorsMetadata from '../types';
+import HealthFactorsMetadata, { HealthFactorsProps } from '../types';
 
-const HealthFactorsFixture = ({
-  metadata,
-}: {
-  metadata?: HealthFactorsMetadata;
-}) => (
+const HealthFactorsFixture = ({ metadata }: HealthFactorsProps) => (
   <ThemeProvider service="news" variant="default">
     <HealthFactors metadata={metadata} />
   </ThemeProvider>
@@ -26,7 +22,11 @@ const HealthFactorsFixture = ({
 describe('Storybook HealthFactors Title', () => {
   it('should render the correct title when all docs are provided', async () => {
     await act(async () => {
-      render(<HealthFactorsFixture metadata={allCompletedDocs} />);
+      render(
+        <HealthFactorsFixture
+          metadata={allCompletedDocs as HealthFactorsMetadata}
+        />,
+      );
     });
 
     const title = screen.getByText('Good to show to the audience');
@@ -46,7 +46,11 @@ describe('Storybook HealthFactors Title', () => {
 
   it('should render the correct title when there are one outstanding action', async () => {
     await act(async () => {
-      render(<HealthFactorsFixture metadata={oneOutstandingAction} />);
+      render(
+        <HealthFactorsFixture
+          metadata={oneOutstandingAction as HealthFactorsMetadata}
+        />,
+      );
     });
 
     const title = screen.getByText('One action outstanding');
@@ -56,7 +60,11 @@ describe('Storybook HealthFactors Title', () => {
 
   it('should render the correct title when there are two outstanding action', async () => {
     await act(async () => {
-      render(<HealthFactorsFixture metadata={twoOutstandingActions} />);
+      render(
+        <HealthFactorsFixture
+          metadata={twoOutstandingActions as HealthFactorsMetadata}
+        />,
+      );
     });
 
     const title = screen.getByText('Two actions outstanding');
@@ -66,7 +74,11 @@ describe('Storybook HealthFactors Title', () => {
 
   it('should render the correct title when there are three outstanding action', async () => {
     await act(async () => {
-      render(<HealthFactorsFixture metadata={threeOutstandingActions} />);
+      render(
+        <HealthFactorsFixture
+          metadata={threeOutstandingActions as HealthFactorsMetadata}
+        />,
+      );
     });
 
     const title = screen.getByText('Three actions outstanding');
@@ -78,7 +90,11 @@ describe('Storybook HealthFactors Title', () => {
 describe('Storybook HealthFactors Svg', () => {
   it('should render the correct title Svg when all docs are provided', async () => {
     await act(async () => {
-      render(<HealthFactorsFixture metadata={allCompletedDocs} />);
+      render(
+        <HealthFactorsFixture
+          metadata={allCompletedDocs as HealthFactorsMetadata}
+        />,
+      );
     });
 
     const titleSvg = screen.getByTestId('recommend');
@@ -88,7 +104,11 @@ describe('Storybook HealthFactors Svg', () => {
 
   it('should render the correct title Svg when there are outstanding actions', async () => {
     await act(async () => {
-      render(<HealthFactorsFixture metadata={oneOutstandingAction} />);
+      render(
+        <HealthFactorsFixture
+          metadata={oneOutstandingAction as HealthFactorsMetadata}
+        />,
+      );
     });
 
     const titleSvg = screen.getByTestId('warning');
@@ -110,7 +130,11 @@ describe('Storybook HealthFactors Svg', () => {
 describe('Storybook HealthFactors', () => {
   it('should render the correct number of items when all docs are provided', async () => {
     await act(async () => {
-      render(<HealthFactorsFixture metadata={allCompletedDocs} />);
+      render(
+        <HealthFactorsFixture
+          metadata={allCompletedDocs as HealthFactorsMetadata}
+        />,
+      );
     });
 
     const listItems = screen.getAllByRole('listitem');
@@ -120,7 +144,11 @@ describe('Storybook HealthFactors', () => {
 
   it('should render the correct number of items when one doc is missing', async () => {
     await act(async () => {
-      render(<HealthFactorsFixture metadata={oneMissingDoc} />);
+      render(
+        <HealthFactorsFixture
+          metadata={oneMissingDoc as HealthFactorsMetadata}
+        />,
+      );
     });
 
     const listItems = screen.getAllByRole('listitem');
@@ -130,7 +158,11 @@ describe('Storybook HealthFactors', () => {
 
   it('should render the correct number of items when two docs are missing', async () => {
     await act(async () => {
-      render(<HealthFactorsFixture metadata={twoMissingDocs} />);
+      render(
+        <HealthFactorsFixture
+          metadata={twoMissingDocs as HealthFactorsMetadata}
+        />,
+      );
     });
 
     const listItems = screen.getAllByRole('listitem');
@@ -140,7 +172,11 @@ describe('Storybook HealthFactors', () => {
 
   it('should render the correct number of items when three docs are missing', async () => {
     await act(async () => {
-      render(<HealthFactorsFixture metadata={allMissingDocs} />);
+      render(
+        <HealthFactorsFixture
+          metadata={allMissingDocs as HealthFactorsMetadata}
+        />,
+      );
     });
 
     const listItems = screen.getAllByRole('listitem');
@@ -150,7 +186,11 @@ describe('Storybook HealthFactors', () => {
 
   it('should render the correct time when day, month, and year are valid', async () => {
     await act(async () => {
-      render(<HealthFactorsFixture metadata={allCompletedDocs} />);
+      render(
+        <HealthFactorsFixture
+          metadata={allCompletedDocs as HealthFactorsMetadata}
+        />,
+      );
     });
 
     const time = screen.getByText('Last Updated 1st December 2022');
@@ -160,7 +200,11 @@ describe('Storybook HealthFactors', () => {
 
   it('should render time in a time tag when day, month, and year are valid', async () => {
     await act(async () => {
-      render(<HealthFactorsFixture metadata={allCompletedDocs} />);
+      render(
+        <HealthFactorsFixture
+          metadata={allCompletedDocs as HealthFactorsMetadata}
+        />,
+      );
     });
 
     const time = screen.getByText('Last Updated 1st December 2022');

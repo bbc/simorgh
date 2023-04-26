@@ -273,7 +273,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'ਵੀਡੀਓ',
-        url: '/punjabi/media/video',
+        url: '/punjabi/topics/cx12qmz6jm4t',
       },
       {
         title: 'ਪਾਠਕਾਂ ਦੀ ਪਸੰਦ',

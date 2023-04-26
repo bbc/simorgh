@@ -6,9 +6,9 @@ import { withServicesKnob } from '../../../legacy/psammead/psammead-storybook-he
 import ThemeProvider from '../../ThemeProvider';
 import HierarchicalGrid from './index';
 import pidginPromos from './fixtures';
-import { StorybookProps } from '../types';
+import { StoryProps } from '../../../models/types/storybook';
 
-const Component = ({ service, variant }: StorybookProps) => {
+const Component = ({ service, variant }: StoryProps) => {
   return (
     <ThemeProvider service={service} variant={variant}>
       <ServiceContextProvider service={service} variant={variant}>
