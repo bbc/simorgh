@@ -2,6 +2,7 @@ import csp from 'helmet-csp';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
 import isLiveEnv from '#lib/utilities/isLive';
 import { bbcDomains, advertisingServiceCountryDomains } from './domainLists';
+import path from 'ramda/src/path';
 
 /*
  * On localhost these CSP headers currently only apply on the production build.
@@ -56,6 +57,7 @@ const advertisingDirectives = {
     'https://sb.scorecardresearch.com',
     'https://*.imrworldwide.com',
     'https://cdn.privacy-mgmt.com',
+    'https://*.permutive.com',
     ...advertisingServiceCountryDomains,
   ],
   prefetchSrc: ['https://*.googlesyndication.com'],
@@ -337,7 +339,13 @@ const directives = {
   },
 };
 
-export const generateChildSrc = ({ isAmp }) => (isAmp ? ['blob:'] : ["'self'"]);
+const isAdsEnabled
+  path(['metadata', 'allowAdvertising'], pageData),
+  adsEnabled,
+  showAdsBasedOnLocation,
+].every(Boolean);
+
+export const generateChildSrc = ({ isAmp, isAdsEnabled }) => (isAmp || isAdsEnabled ? ['blob:'] : ["'self'"]);
 
 export const generateConnectSrc = ({ isAmp, isLive }) => {
   if (!isLive && isAmp) return directives.connectSrc.ampNonLive.sort();
