@@ -27,7 +27,7 @@ import RecentAudioEpisodes from '#containers/EpisodeList/RecentAudioEpisodes';
 import FooterTimestamp from '#containers/OnDemandFooterTimestamp';
 import PodcastExternalLinks from '#containers/PodcastExternalLinks';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
-import ATIAnalytics from '#containers/ATIAnalytics';
+import ATIAnalytics from '../../components/ATIAnalytics';
 import MetadataContainer from '../../components/Metadata';
 import LinkedData from '../../components/LinkedData';
 import { ServiceContext } from '../../contexts/ServiceContext';

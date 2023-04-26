@@ -20,7 +20,7 @@ import IndexPageContainer from '#components/PageLayout/IndexPageContainer';
 import IndexHeading from '#containers/IndexHeading';
 import MostWatchedContainer from '#containers/MostWatched';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
-import ATIAnalytics from '#containers/ATIAnalytics';
+import ATIAnalytics from '../../components/ATIAnalytics';
 import MetadataContainer from '../../components/Metadata';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import LinkedData from '../../components/LinkedData';

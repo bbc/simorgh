@@ -16,7 +16,6 @@ import text from '#containers/Text';
 import Image from '#containers/Image';
 import Blocks from '#containers/Blocks';
 import Timestamp from '#containers/ArticleTimestamp';
-import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import ArticleMediaPlayer from '#containers/ArticleMediaPlayer';
@@ -39,6 +38,7 @@ import filterForBlockType from '#lib/utilities/blockHandlers';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 import ScrollablePromo from '#components/ScrollablePromo';
+import ATIAnalytics from '../../components/ATIAnalytics';
 import LinkedData from '../../components/LinkedData';
 import Byline from '../../components/Byline';
 import {

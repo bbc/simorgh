@@ -26,7 +26,6 @@ import CpsAssetMediaPlayer from '#containers/CpsAssetMediaPlayer';
 import Blocks from '#containers/Blocks';
 import CpsRelatedContent from '#containers/CpsRelatedContent';
 import MostWatchedContainer from '#containers/MostWatched';
-import ATIAnalytics from '#containers/ATIAnalytics';
 import fauxHeadline from '#containers/FauxHeadline';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import {
@@ -37,6 +36,7 @@ import {
 import { RequestContext } from '#contexts/RequestContext';
 import { GelPageGrid, GridItemLarge } from '#components/Grid';
 import RelatedTopics from '#containers/RelatedTopics';
+import ATIAnalytics from '../../components/ATIAnalytics';
 import LinkedData from '../../components/LinkedData';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
