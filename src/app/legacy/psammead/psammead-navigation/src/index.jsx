@@ -87,7 +87,7 @@ const StyledLink = styled.a`
       ${props => props.theme.palette.BLACK};
   }
 
-  // Custom focus indicator styling applied to pseudo-element. Global focus indicator styling has been removed.
+  /* Custom focus indicator styling applied to pseudo-element. Global focus indicator styling has been removed. */
   &:focus-visible::after {
     ${ListItemBorder}
     border-bottom: ${GEL_SPACING_HLF} solid ${props =>

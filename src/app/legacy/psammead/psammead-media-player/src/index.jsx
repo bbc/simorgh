@@ -43,7 +43,7 @@ const CanonicalMediaPlayerComponent = ({
   noJsClassName,
   noJsMessage,
   showLoadingImage,
-  darkMode,
+  darkPlaceholder,
   onMediaInitialised,
   onMediaPlaying,
   onMediaPause,
@@ -80,7 +80,7 @@ const CanonicalMediaPlayerComponent = ({
           service={service}
           noJsMessage={noJsMessage}
           showLoadingImage={showLoadingImage}
-          darkMode={darkMode}
+          darkPlaceholder={darkPlaceholder}
           onMediaInitialised={onMediaInitialised}
           onMediaPlaying={onMediaPlaying}
           onMediaPause={onMediaPause}
@@ -150,7 +150,7 @@ CanonicalMediaPlayerComponent.propTypes = {
     guidanceMessage: string,
   }),
   showLoadingImage: bool,
-  darkMode: bool,
+  darkPlaceholder: bool,
   onMediaInitialised: func,
   onMediaPlaying: func,
   onMediaPause: func,
@@ -171,7 +171,7 @@ CanonicalMediaPlayerComponent.defaultProps = {
   noJsClassName: null,
   mediaInfo: {},
   showLoadingImage: false,
-  darkMode: false,
+  darkPlaceholder: false,
   onMediaInitialised: noop,
   onMediaPlaying: noop,
   onMediaPause: noop,

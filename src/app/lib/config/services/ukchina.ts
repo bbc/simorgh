@@ -108,10 +108,6 @@ export const service: ChineseConfig = {
         title: '主页',
         url: '/ukchina/simp',
       },
-      {
-        title: '视频内容',
-        url: '/ukchina/simp/media/video',
-      },
     ],
     scriptLink: {
       text: '繁',
@@ -368,10 +364,6 @@ export const service: ChineseConfig = {
       {
         title: '主頁',
         url: '/ukchina/trad',
-      },
-      {
-        title: '視頻內容',
-        url: '/ukchina/trad/media/video',
       },
     ],
     scriptLink: {

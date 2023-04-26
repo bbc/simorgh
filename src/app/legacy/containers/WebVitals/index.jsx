@@ -2,6 +2,7 @@
 import { useContext } from 'react';
 import useWebVitals from '@bbc/web-vitals';
 import useToggle from '#hooks/useToggle';
+import { string } from 'prop-types';
 
 // Contexts
 import { UserContext } from '#contexts/UserContext';
@@ -39,6 +40,14 @@ const WebVitals = ({ pageType }) => {
 
   useWebVitals(webVitalsConfig);
   return null;
+};
+
+WebVitals.propTypes = {
+  pageType: string,
+};
+
+WebVitals.defaultProps = {
+  pageType: null,
 };
 
 export default WebVitals;
