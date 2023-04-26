@@ -1,13 +1,12 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
 import * as sendBeacon from '#lib/analyticsUtils/sendBeacon';
 import * as analyticsUtils from '../../../lib/analyticsUtils';
 import { sendEventBeacon } from '.';
 
 const sendBeaconSpy = jest.spyOn(sendBeacon, 'default');
 
-// @ts-ignore
+// @ts-expect-error - we need to mock these functions to ensure tests are deterministic
 analyticsUtils.getAtUserId = jest.fn().mockReturnValue('123-456-789');
-// @ts-ignore
+// @ts-expect-error - we need to mock these functions to ensure tests are deterministic
 analyticsUtils.getCurrentTime = jest.fn().mockReturnValue('00-00-00');
 
 describe('beacon', () => {

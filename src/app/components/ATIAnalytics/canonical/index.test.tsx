@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
 import React from 'react';
 import { render, act } from '@testing-library/react';
 import * as beacon from '../../../lib/analyticsUtils/sendBeacon';
@@ -17,7 +16,7 @@ describe('Canonical ATI Analytics', () => {
     const expectedUrl = `${atiBaseUrl}${mockPageviewParams}`;
 
     process.env.SIMORGH_ATI_BASE_URL = atiBaseUrl;
-    // @ts-ignore
+    // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
     beacon.default = mockSendBeacon;
 
     act(() => {

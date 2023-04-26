@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
 import React, { PropsWithChildren } from 'react';
 import { render } from '@testing-library/react';
 import { articleDataNews } from '#pages/ArticlePage/fixtureData';
