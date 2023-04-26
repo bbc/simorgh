@@ -47,7 +47,7 @@ export interface PageData {
 }
 
 export interface ATIAnalyticsProps {
-  pageviewParams?: string;
+  pageviewParams: string;
 }
 
 export interface AMPATIAnalyticsProps extends ATIAnalyticsProps {

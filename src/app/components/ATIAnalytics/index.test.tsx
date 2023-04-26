@@ -223,7 +223,6 @@ describe('ATI Analytics Container', () => {
           pageType={MEDIA_ASSET_PAGE}
           service="pidgin"
         >
-          {/* @ts-expect-error - only partial data required for testing purposes */}
           <ATIAnalytics data={mapAssetData} />
         </ContextWrap>,
       );
@@ -248,7 +247,6 @@ describe('ATI Analytics Container', () => {
           pageType={PHOTO_GALLERY_PAGE}
           service="azeri"
         >
-          {/* @ts-expect-error - only partial data required for testing purposes */}
           <ATIAnalytics data={pglAssetData} />
         </ContextWrap>,
       );
@@ -272,7 +270,6 @@ describe('ATI Analytics Container', () => {
           pageType={PHOTO_GALLERY_PAGE}
           service="azeri"
         >
-          {/* @ts-expect-error - only partial data required for testing purposes */}
           <ATIAnalytics data={pglAssetData} />
         </ContextWrap>,
       );
@@ -293,7 +290,6 @@ describe('ATI Analytics Container', () => {
 
       render(
         <ContextWrap platform="canonical" pageType={STORY_PAGE} service="mundo">
-          {/* @ts-expect-error - only partial data required for testing purposes */}
           <ATIAnalytics data={styAssetData} />
         </ContextWrap>,
       );
@@ -312,7 +308,6 @@ describe('ATI Analytics Container', () => {
 
       render(
         <ContextWrap platform="amp" pageType={STORY_PAGE} service="mundo">
-          {/* @ts-expect-error - only partial data required for testing purposes */}
           <ATIAnalytics data={styAssetData} />
         </ContextWrap>,
       );
@@ -335,7 +330,6 @@ describe('ATI Analytics Container', () => {
           pageType={CORRESPONDENT_STORY_PAGE}
           service="mundo"
         >
-          {/* @ts-expect-error - only partial data required for testing purposes */}
           <ATIAnalytics data={styAssetData} />
         </ContextWrap>,
       );
@@ -358,7 +352,6 @@ describe('ATI Analytics Container', () => {
           pageType={STORY_PAGE}
           service="ukrainian"
         >
-          {/* @ts-expect-error - only partial data required for testing purposes */}
           <ATIAnalytics data={styUkrainianAssetData} />
         </ContextWrap>,
       );
@@ -377,7 +370,6 @@ describe('ATI Analytics Container', () => {
 
       render(
         <ContextWrap platform="amp" pageType={STORY_PAGE} service="ukrainian">
-          {/* @ts-expect-error - only partial data required for testing purposes */}
           <ATIAnalytics data={styUkrainianAssetData} />
         </ContextWrap>,
       );
@@ -400,7 +392,6 @@ describe('ATI Analytics Container', () => {
           pageType={STORY_PAGE}
           service="ukrainian"
         >
-          {/* @ts-expect-error - only partial data required for testing purposes */}
           <ATIAnalytics data={styUkrainianInRussianAssetData} />
         </ContextWrap>,
       );
@@ -419,7 +410,6 @@ describe('ATI Analytics Container', () => {
 
       render(
         <ContextWrap platform="amp" pageType={STORY_PAGE} service="ukrainian">
-          {/* @ts-expect-error - only partial data required for testing purposes */}
           <ATIAnalytics data={styUkrainianInRussianAssetData} />
         </ContextWrap>,
       );
@@ -458,7 +448,6 @@ describe('ATI Analytics Container', () => {
 
       render(
         <ContextWrap platform="canonical" pageType={STORY_PAGE} service="mundo">
-          {/* @ts-expect-error - only partial data required for testing purposes */}
           <ATIAnalytics data={styAssetData} />
         </ContextWrap>,
       );
@@ -479,7 +468,6 @@ describe('ATI Analytics Container', () => {
 
       render(
         <ContextWrap platform="canonical" pageType={STORY_PAGE} service="mundo">
-          {/* @ts-expect-error - only partial data required for testing purposes */}
           <ATIAnalytics data={styAssetData} />
         </ContextWrap>,
       );
