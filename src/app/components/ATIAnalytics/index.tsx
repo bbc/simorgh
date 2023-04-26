@@ -72,11 +72,9 @@ const ATIAnalytics = ({ data }: ATIProps) => {
     [HOME_PAGE]: () => null,
   };
 
-  const pageviewParams = pageTypeHandlers[pageType](
-    data,
-    requestContext,
-    serviceContext,
-  );
+  const buildATIUrl = pageTypeHandlers[pageType];
+
+  const pageviewParams = buildATIUrl(data, requestContext, serviceContext);
 
   if (!pageviewParams) {
     return null;

@@ -35,7 +35,7 @@ export const buildCpsAssetPageATIParams = (
 
   const getProducer = (defaultProducer: string): string => {
     if (['news', 'sport'].includes(service)) {
-      return metadata?.atiAnalytics?.producerId;
+      return metadata?.atiAnalytics?.producerId || defaultProducer;
     }
     return defaultProducer;
   };

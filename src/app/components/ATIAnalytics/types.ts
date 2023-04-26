@@ -1,81 +1,41 @@
 import { Platforms, Services } from '../../models/types/global';
 
 export interface PageData {
-  metadata?:
-    | {
-        analyticsLabels: {
-          counterName: string;
-          contentId: string;
-          // eslint-disable-next-line camelcase
-          nations_producer: string;
-        };
-        locators: { optimoUrn: string };
-        passport: { language: string };
-        tags: {
-          about: {
-            thingId: string;
-            thingLabel: string;
-            thingEnglishLabel: string;
-          }[];
-        };
-        title: string;
-      }
-    | {
-        analyticsLabels: { counterName: string };
-        locators: { curie: string };
-        language: string;
-        title: string;
-      }
-    | {
-        id: string;
-        language: string;
-        analyticsLabels: {
-          counterName: string;
-          pageIdentifier: string;
-          pageTitle: string;
-          contentId: string;
-        };
-        firstPublished: number;
-        lastPublished: number;
-        locators: { curie: string };
-        passport: {
-          category: { categoryId: string; categoryName: string };
-          campaigns: { campaignId: string; campaignName: string }[];
-        };
-      }
-    | {
-        id: string;
-        language: string;
-        analyticsLabels: {
-          counterName: string;
-          pageIdentifier: string;
-          pageTitle: string;
-          contentId: string;
-        };
-        firstPublished: number;
-        lastPublished: number;
-        locators: { curie: string };
-        passport: object;
-      }
-    | {
-        analyticsLabels: { counterName: string };
-        locators: { curie: string };
-        language: string;
-        title: string;
-      }
-    | {
-        atiAnalytics: {
-          producerId: string;
-        };
-      }
-    | {
-        atiAnalytics: {
-          chapter: string;
-        };
-      };
+  metadata?: {
+    analyticsLabels?: {
+      counterName?: string;
+      contentId?: string;
+      // eslint-disable-next-line camelcase
+      nations_producer?: string;
+      pageIdentifier?: string;
+      pageTitle?: string;
+    };
+    atiAnalytics?: {
+      producerId?: string;
+      chapter?: string;
+    };
+    locators?: { optimoUrn?: string; curie?: string };
+    passport?: {
+      category?: { categoryId?: string; categoryName?: string };
+      campaigns?: { campaignId?: string; campaignName?: string }[];
+      language?: string;
+    };
+    tags?: {
+      about?: {
+        thingId?: string;
+        thingLabel?: string;
+        thingEnglishLabel?: string;
+      }[];
+    };
+    id?: string;
+    title?: string;
+    language?: string;
+    firstPublished?: number;
+    lastPublished?: number;
+  };
   promo?:
-    | { headlines: { seoHeadline: string } }
-    | { headlines: { headline: string } };
+    | { headlines?: { seoHeadline?: string } }
+    | { headlines?: { headline?: string } };
   id?: string;
   language?: string;
   pageIdentifier?: string;
@@ -87,7 +47,7 @@ export interface PageData {
 }
 
 export interface ATIAnalyticsProps {
-  pageviewParams: string;
+  pageviewParams?: string;
 }
 
 export interface AMPATIAnalyticsProps extends ATIAnalyticsProps {
@@ -96,14 +56,14 @@ export interface AMPATIAnalyticsProps extends ATIAnalyticsProps {
 
 export interface ATIEventTrackingProps {
   campaignID?: string;
-  componentName: string;
+  componentName?: string;
   format?: string;
-  pageIdentifier: string;
+  pageIdentifier?: string;
   platform?: Platforms;
   producerId?: string;
-  service: Services;
+  service?: Services;
   statsDestination?: string;
-  type: string;
+  type?: string;
   advertiserID?: string;
   url?: string;
 }
@@ -126,7 +86,7 @@ export interface ATIPageTrackingProps {
   origin?: string;
   previousPath?: string | null;
   categoryName?: string | null;
-  campaigns?: { campaignId: string; campaignName: string }[];
+  campaigns?: { campaignId?: string; campaignName?: string }[];
   nationsProducer?: string | null;
 }
 

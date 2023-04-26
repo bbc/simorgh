@@ -146,7 +146,6 @@ describe('buildCpsAssetPageATIParams', () => {
 
   it('should return the correct object for a legacy asset', () => {
     const result = buildCpsAssetPageATIParams(
-      // @ts-expect-error - only partial data required for testing purposes
       payloadLegacy,
       requestContextLegacy,
       serviceContext,

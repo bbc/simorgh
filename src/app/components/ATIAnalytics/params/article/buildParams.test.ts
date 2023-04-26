@@ -2,6 +2,7 @@
 import * as analyticsUtils from '#lib/analyticsUtils';
 import { RequestContextProps } from '../../../../contexts/RequestContext';
 import { ServiceConfig } from '../../../../models/types/serviceConfig';
+import { PageData } from '../../types';
 import { buildArticleATIParams, buildArticleATIUrl } from './buildParams';
 
 // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
@@ -47,7 +48,7 @@ const validURLParams = {
   ...requestContext,
 };
 
-const article = {
+const article: PageData = {
   metadata: {
     analyticsLabels: {
       counterName: 'service.page',
