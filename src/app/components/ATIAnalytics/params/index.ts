@@ -1,4 +1,19 @@
-import * as PAGE_TYPES from '../../../routes/utils/pageTypes';
+import {
+  HOME_PAGE,
+  STORY_PAGE,
+  MEDIA_ASSET_PAGE,
+  CORRESPONDENT_STORY_PAGE,
+  ARTICLE_PAGE,
+  FRONT_PAGE,
+  TOPIC_PAGE,
+  MEDIA_ARTICLE_PAGE,
+  FEATURE_INDEX_PAGE,
+  MOST_READ_PAGE,
+  MOST_WATCHED_PAGE,
+  INDEX_PAGE,
+  PHOTO_GALLERY_PAGE,
+  MEDIA_PAGE,
+} from '../../../routes/utils/pageTypes';
 import {
   buildArticleATIParams,
   buildArticleATIUrl,
@@ -35,23 +50,6 @@ import { PageTypes } from '../../../models/types/global';
 const ARTICLE_MEDIA_ASSET = 'article-media-asset';
 const ARTICLE_PHOTO_GALLERY = 'article-photo-gallery';
 const ARTICLE_CORRESPONDENT_PIECE = 'article-correspondent';
-
-const {
-  HOME_PAGE,
-  STORY_PAGE,
-  MEDIA_ASSET_PAGE,
-  CORRESPONDENT_STORY_PAGE,
-  ARTICLE_PAGE,
-  FRONT_PAGE,
-  TOPIC_PAGE,
-  MEDIA_ARTICLE_PAGE,
-  FEATURE_INDEX_PAGE,
-  MOST_READ_PAGE,
-  MOST_WATCHED_PAGE,
-  INDEX_PAGE,
-  PHOTO_GALLERY_PAGE,
-  MEDIA_PAGE,
-} = PAGE_TYPES;
 
 const pageTypeUrlBuilders = {
   [ARTICLE_PAGE]: buildArticleATIUrl,

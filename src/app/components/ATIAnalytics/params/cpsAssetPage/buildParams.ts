@@ -33,7 +33,7 @@ export const buildCpsAssetPageATIParams = (
     return chapter;
   };
 
-  const getProducer = (defaultProducer: string): string => {
+  const getProducer = (defaultProducer: string) => {
     if (['news', 'sport'].includes(service)) {
       return metadata?.atiAnalytics?.producerId || defaultProducer;
     }
