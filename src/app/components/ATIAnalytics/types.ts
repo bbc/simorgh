@@ -130,8 +130,6 @@ export interface ATIPageTrackingProps {
   nationsProducer?: string | null;
 }
 
-export interface ATIParams extends ATIPageTrackingProps
-
 export interface ATIProps {
   data: PageData;
 }
