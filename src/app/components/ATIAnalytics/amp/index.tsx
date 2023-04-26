@@ -1,8 +1,8 @@
 import React from 'react';
 import getAmpAnalyticsJson from './ampAnalyticsJson';
-import { ATIAnalyticsProps } from '../types';
+import { ATIAnalyticsProps, AMPAnalyticsData } from '../types';
 
-const JsonInlinedScript = (data: unknown) => (
+const JsonInlinedScript = (data: AMPAnalyticsData) => (
   <script
     type="application/json"
     /* eslint-disable-next-line react/no-danger */

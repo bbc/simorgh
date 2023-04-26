@@ -1,5 +1,18 @@
 import { Platforms, Services } from '../../models/types/global';
 
+export interface AMPAnalyticsData {
+  transport: {
+    beacon: boolean;
+    xhrpost: boolean;
+    image: boolean;
+  };
+  requests: {
+    base?: string;
+    pageview: string;
+  };
+  triggers: { trackPageview: { on: string; request: string } };
+}
+
 export interface PageData {
   metadata?: {
     analyticsLabels?: {
@@ -47,11 +60,8 @@ export interface PageData {
 }
 
 export interface ATIAnalyticsProps {
-  pageviewParams: string;
-}
-
-export interface AMPATIAnalyticsProps extends ATIAnalyticsProps {
   baseUrl?: string;
+  pageviewParams: string;
 }
 
 export interface ATIEventTrackingProps {
