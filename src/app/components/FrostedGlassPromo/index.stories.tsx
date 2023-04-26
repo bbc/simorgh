@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import { withKnobs, text, number } from '@storybook/addon-knobs';
 
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
-import ThemeProvider from '../../../components/ThemeProvider';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import ThemeProvider from '../ThemeProvider';
 
 import Promo from '.';
 import {
@@ -13,15 +13,25 @@ import {
   linkPromoFixture,
   cpsNewsPromoFixture,
 } from './fixtures';
+import { StoryProps } from '../../models/types/storybook';
 
-// eslint-disable-next-line react/prop-types
-const Wrappers = ({ service, variant, children }) => {
+const Wrappers = ({
+  service,
+  variant,
+  children,
+}: PropsWithChildren<StoryProps>) => {
   return (
     <ThemeProvider service={service}>
       <ServiceContextProvider service={service} variant={variant}>
-        <RequestContextProvider isAmp={false} service={service}>
+        <RequestContextProvider
+          pageType="article"
+          pathname="/news/articles/c000000000o"
+          isAmp={false}
+          service={service}
+        >
           <ToggleContextProvider
             toggles={{
+              // @ts-expect-error - TODO: fix this
               eventTracking: { enabled: false },
             }}
           >
@@ -33,7 +43,7 @@ const Wrappers = ({ service, variant, children }) => {
   );
 };
 
-const Component = props => {
+const Component = (props: StoryProps) => {
   const imageUrl = text(
     'Image URL',
     'https://ichef.bbci.co.uk/news/976/cpsprodpb/189F/production/_121530360_hi071904982.jpg',
@@ -47,6 +57,7 @@ const Component = props => {
   return (
     <Wrappers {...props}>
       <Promo
+        // @ts-expect-error - passing in partial data
         image={{ src: imageUrl, alt: '', width: 500, height: 250, ratio: 52 }}
         url="#"
         minimumContrast={minimumContrast}
@@ -58,7 +69,7 @@ const Component = props => {
   );
 };
 
-const WithCPSPromoData = props => {
+const WithCPSPromoData = (props: StoryProps) => {
   return (
     <Wrappers {...props}>
       <Promo {...cpsPromoFixture} />
@@ -66,7 +77,7 @@ const WithCPSPromoData = props => {
   );
 };
 
-const WithNewsCPSPromoData = props => {
+const WithNewsCPSPromoData = (props: StoryProps) => {
   return (
     <Wrappers {...props}>
       <Promo {...cpsNewsPromoFixture} />
@@ -74,7 +85,7 @@ const WithNewsCPSPromoData = props => {
   );
 };
 
-const WithLinkPromoData = props => {
+const WithLinkPromoData = (props: StoryProps) => {
   return (
     <Wrappers {...props}>
       <Promo {...linkPromoFixture} />
@@ -83,7 +94,7 @@ const WithLinkPromoData = props => {
 };
 
 export default {
-  title: 'Components/Frosted Glass Promo',
+  title: 'New Components/Frosted Glass Promo',
   Component,
   decorators: [withKnobs, withServicesKnob()],
 };

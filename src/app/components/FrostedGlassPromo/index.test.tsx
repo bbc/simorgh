@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 
 import { RequestContextProvider } from '#contexts/RequestContext';
 
@@ -7,8 +7,10 @@ import { ToggleContextProvider } from '#app/contexts/ToggleContext';
 
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import makeRelativeUrlPath from '#lib/utilities/makeRelativeUrlPath';
-import { render } from '../../../components/react-testing-library-with-providers';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import { render } from '../react-testing-library-with-providers';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import { Services, Variants } from '../../models/types/global';
+
 import {
   promoProps,
   optimoPromoFixture,
@@ -17,9 +19,18 @@ import {
 } from './fixtures';
 
 import Promo from '.';
+import { PromoProps } from './types';
 
-/* eslint-disable react/prop-types */
-const Component = ({ service = 'mundo', variant, ...rest }) => {
+interface Props extends PromoProps {
+  service?: Services;
+  variant?: Variants;
+}
+
+const Component = ({
+  service = 'mundo',
+  variant,
+  ...rest
+}: PropsWithChildren<Props>) => {
   return (
     <ServiceContextProvider service={service} variant={variant}>
       <RequestContextProvider
@@ -30,6 +41,7 @@ const Component = ({ service = 'mundo', variant, ...rest }) => {
       >
         <ToggleContextProvider
           toggles={{
+            // @ts-expect-error - TODO: fix this
             eventTracking: { enabled: false },
           }}
         >
@@ -42,7 +54,9 @@ const Component = ({ service = 'mundo', variant, ...rest }) => {
 
 describe('Frosted Glass Promo', () => {
   it('when given props directly', () => {
-    const { container } = render(<Component {...promoProps} />);
+    const { container } = render(
+      <Component {...(promoProps as unknown as PromoProps)} />,
+    );
     expect(container).toMatchSnapshot();
   });
 
