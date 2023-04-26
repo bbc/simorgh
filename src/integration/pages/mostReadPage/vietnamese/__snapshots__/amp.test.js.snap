@@ -197,7 +197,7 @@ Object {
 exports[`AMP Most Read Page Footer Cookie Settings Button should match text and on handler 1`] = `
 Object {
   "on": "tap:consent.prompt, privacy.hide, cookie.show, AMP.setState({ isManagingSettings: true })",
-  "text": "AdChoices / Do Not Sell My Info",
+  "text": "Do not share or sell my info",
 }
 `;
 
@@ -259,7 +259,7 @@ Object {
 exports[`AMP Most Read Page Header Navigation link should match text and url 8`] = `
 Object {
   "text": "Video",
-  "url": "/vietnamese/media/video",
+  "url": "/vietnamese/topics/cl29j0ekkvdt",
 }
 `;
 

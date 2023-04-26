@@ -22,7 +22,6 @@ const PromoTimestamp = ({ children, serviceDatetimeLocale, className }) => {
       service={service}
       timezone={timezone}
       isRelative={isTenHoursAgo(children)}
-      darkMode
       className={className}
     />
   );

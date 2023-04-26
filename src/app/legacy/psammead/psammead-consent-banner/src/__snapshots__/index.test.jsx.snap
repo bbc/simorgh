@@ -255,7 +255,7 @@ exports[`ConsentBanner should correctly render for ltr service 1`] = `
 
 exports[`ConsentBanner should correctly render for rtl service 1`] = `
 .emotion-0 {
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   background-color: #323232;

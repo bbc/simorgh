@@ -39,7 +39,7 @@ exports[`Index Heading should render correctly with arabic script typography val
 .emotion-0 {
   font-size: 1.25rem;
   line-height: 1.75rem;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #6E6E73;

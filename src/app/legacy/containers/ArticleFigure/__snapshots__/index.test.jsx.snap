@@ -641,50 +641,50 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-12 {
+  .emotion-11 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-12 {
+  .emotion-11 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-12 {
+  .emotion-11 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-12 {
+  .emotion-11 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-12 {
+  .emotion-11 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-12 {
+  .emotion-11 {
     margin-left: 0%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-12 {
+  .emotion-11 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-12 {
+    .emotion-11 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -692,7 +692,7 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-12 {
+    .emotion-11 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -700,7 +700,7 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-12 {
+    .emotion-11 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -708,7 +708,7 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-12 {
+    .emotion-11 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
@@ -716,7 +716,7 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-12 {
+    .emotion-11 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
@@ -724,7 +724,7 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
   }
 
   @media (min-width: 80rem) {
-    .emotion-12 {
+    .emotion-11 {
       grid-template-columns: repeat(10, 1fr);
       grid-column-end: span 10;
       grid-column-start: 1;
@@ -732,7 +732,7 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
   }
 }
 
-.emotion-14 {
+.emotion-13 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -749,37 +749,37 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-14 {
+  .emotion-13 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-14 {
+  .emotion-13 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-14 {
+  .emotion-13 {
     width: 100%;
     margin: 0.5rem 0 0;
   }
 }
 
-.emotion-14>p {
+.emotion-13>p {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.emotion-14>p:last-child {
+.emotion-13>p:last-child {
   padding-bottom: 0;
 }
 
 @media (min-width: 25rem) and (max-width: 62.9375rem) {
-  .emotion-14 {
+  .emotion-13 {
     width: calc(100% - 1rem);
     margin-left: 1rem;
     padding-right: 1rem;
@@ -788,7 +788,7 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
 }
 
 @media (min-width: 63rem) {
-  .emotion-14 {
+  .emotion-13 {
     padding-right: 0;
     padding-left: 0.5rem;
   }
@@ -825,7 +825,7 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
             role="text"
           >
             <span
-              class="emotion-10 emotion-11"
+              class="emotion-10"
             >
               Image source, 
             </span>
@@ -834,15 +834,15 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
         </div>
       </div>
       <div
-        class="emotion-12 emotion-3"
+        class="emotion-11 emotion-3"
         dir="ltr"
       >
         <figcaption
-          class="emotion-14 emotion-15"
+          class="emotion-13 emotion-14"
           dir="ltr"
         >
           <span
-            class="emotion-10 emotion-11"
+            class="emotion-10"
           >
             Image caption, 
           </span>
@@ -1242,7 +1242,7 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
           dir="ltr"
         >
           <span
-            class="emotion-12 emotion-13"
+            class="emotion-12"
           >
             Image caption, 
           </span>
@@ -1605,20 +1605,20 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
   margin: 0;
 }
 
-.emotion-14 {
+.emotion-13 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-14:visited {
+.emotion-13:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.emotion-14:focus,
-.emotion-14:hover {
+.emotion-13:focus,
+.emotion-13:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
@@ -1660,14 +1660,14 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
           dir="ltr"
         >
           <span
-            class="emotion-12 emotion-13"
+            class="emotion-12"
           >
             Image caption, 
           </span>
           <p>
             This is a caption 
             <a
-              class="focusIndicatorReducedWidth emotion-14 emotion-15"
+              class="focusIndicatorReducedWidth emotion-13 emotion-14"
               href="/"
             >
               containing an inline link
@@ -1921,7 +1921,7 @@ exports[`ArticleFigure should render an AMP image with copyright text 1`] = `
             role="text"
           >
             <span
-              class="emotion-10 emotion-11"
+              class="emotion-10"
             >
               Image source, 
             </span>
@@ -2813,50 +2813,50 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-15 {
+  .emotion-14 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-15 {
+  .emotion-14 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-15 {
+  .emotion-14 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-15 {
+  .emotion-14 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-15 {
+  .emotion-14 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-15 {
+  .emotion-14 {
     margin-left: 0%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-15 {
+  .emotion-14 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-15 {
+    .emotion-14 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -2864,7 +2864,7 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-15 {
+    .emotion-14 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -2872,7 +2872,7 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-15 {
+    .emotion-14 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -2880,7 +2880,7 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-15 {
+    .emotion-14 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
@@ -2888,7 +2888,7 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-15 {
+    .emotion-14 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
@@ -2896,7 +2896,7 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
   }
 
   @media (min-width: 80rem) {
-    .emotion-15 {
+    .emotion-14 {
       grid-template-columns: repeat(10, 1fr);
       grid-column-end: span 10;
       grid-column-start: 1;
@@ -2904,7 +2904,7 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
   }
 }
 
-.emotion-17 {
+.emotion-16 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -2921,37 +2921,37 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-17 {
+  .emotion-16 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-17 {
+  .emotion-16 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-17 {
+  .emotion-16 {
     width: 100%;
     margin: 0.5rem 0 0;
   }
 }
 
-.emotion-17>p {
+.emotion-16>p {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.emotion-17>p:last-child {
+.emotion-16>p:last-child {
   padding-bottom: 0;
 }
 
 @media (min-width: 25rem) and (max-width: 62.9375rem) {
-  .emotion-17 {
+  .emotion-16 {
     width: calc(100% - 1rem);
     margin-left: 1rem;
     padding-right: 1rem;
@@ -2960,7 +2960,7 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
 }
 
 @media (min-width: 63rem) {
-  .emotion-17 {
+  .emotion-16 {
     padding-right: 0;
     padding-left: 0.5rem;
   }
@@ -2995,7 +2995,7 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
             role="text"
           >
             <span
-              class="emotion-13 emotion-14"
+              class="emotion-13"
             >
               Image source, 
             </span>
@@ -3004,15 +3004,15 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
         </div>
       </div>
       <div
-        class="emotion-15 emotion-3"
+        class="emotion-14 emotion-3"
         dir="ltr"
       >
         <figcaption
-          class="emotion-17 emotion-18"
+          class="emotion-16 emotion-17"
           dir="ltr"
         >
           <span
-            class="emotion-13 emotion-14"
+            class="emotion-13"
           >
             Image caption, 
           </span>
@@ -3416,7 +3416,7 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
           dir="ltr"
         >
           <span
-            class="emotion-15 emotion-16"
+            class="emotion-15"
           >
             Image caption, 
           </span>
@@ -3785,20 +3785,20 @@ exports[`ArticleFigure should render an image with caption text with inline link
   margin: 0;
 }
 
-.emotion-17 {
+.emotion-16 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-17:visited {
+.emotion-16:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.emotion-17:focus,
-.emotion-17:hover {
+.emotion-16:focus,
+.emotion-16:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
@@ -3838,14 +3838,14 @@ exports[`ArticleFigure should render an image with caption text with inline link
           dir="ltr"
         >
           <span
-            class="emotion-15 emotion-16"
+            class="emotion-15"
           >
             Image caption, 
           </span>
           <p>
             This is a caption 
             <a
-              class="focusIndicatorReducedWidth emotion-17 emotion-18"
+              class="focusIndicatorReducedWidth emotion-16 emotion-17"
               href="/"
             >
               containing an inline link
@@ -4103,7 +4103,7 @@ exports[`ArticleFigure should render an image with copyright text 1`] = `
             role="text"
           >
             <span
-              class="emotion-13 emotion-14"
+              class="emotion-13"
             >
               Image source, 
             </span>
