@@ -25,3 +25,7 @@ export type AmpChartbeatConfig = ChartbeatConfig & { contentType: string };
 export interface AmpChartbeatProps {
   chartbeatConfig: AmpChartbeatConfig;
 }
+
+export interface ChartbeatProps {
+  data: object;
+}
