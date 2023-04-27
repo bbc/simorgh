@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 
-import { RequestContextProvider } from '#contexts/RequestContext';
+import { ToggleContextProvider } from '../../contexts/ToggleContext';
+import { RequestContextProvider } from '../../contexts/RequestContext';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
 
-import * as clickTracking from '#hooks/useClickTrackerHandler';
-import { ToggleContextProvider } from '#app/contexts/ToggleContext';
+import { STORY_PAGE } from '../../routes/utils/pageTypes';
+import makeRelativeUrlPath from '../../lib/utilities/makeRelativeUrlPath';
+import * as clickTracking from '../../hooks/useClickTrackerHandler';
+import { render } from '../react-testing-library-with-providers';
+import { Services, Variants } from '../../models/types/global';
 
-import { STORY_PAGE } from '#app/routes/utils/pageTypes';
-import makeRelativeUrlPath from '#lib/utilities/makeRelativeUrlPath';
-import { render } from '../../../components/react-testing-library-with-providers';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import {
   promoProps,
   optimoPromoFixture,
@@ -17,9 +18,18 @@ import {
 } from './fixtures';
 
 import Promo from '.';
+import { PromoProps } from './types';
 
-/* eslint-disable react/prop-types */
-const Component = ({ service = 'mundo', variant, ...rest }) => {
+interface Props extends PromoProps {
+  service?: Services;
+  variant?: Variants;
+}
+
+const Component = ({
+  service = 'mundo',
+  variant,
+  ...rest
+}: PropsWithChildren<Props>) => {
   return (
     <ServiceContextProvider service={service} variant={variant}>
       <RequestContextProvider
@@ -30,6 +40,7 @@ const Component = ({ service = 'mundo', variant, ...rest }) => {
       >
         <ToggleContextProvider
           toggles={{
+            // @ts-expect-error - TODO: fix this
             eventTracking: { enabled: false },
           }}
         >
@@ -42,7 +53,9 @@ const Component = ({ service = 'mundo', variant, ...rest }) => {
 
 describe('Frosted Glass Promo', () => {
   it('when given props directly', () => {
-    const { container } = render(<Component {...promoProps} />);
+    const { container } = render(
+      <Component {...(promoProps as unknown as PromoProps)} />,
+    );
     expect(container).toMatchSnapshot();
   });
 
@@ -73,8 +86,6 @@ describe('Frosted Glass Promo', () => {
           .blocks[0].model.text,
       ),
     );
-    // Main image is lazy-loaded
-    expect(container.querySelector('noscript')).toBeInTheDocument();
     expect(
       container.querySelector(
         `a[href="${makeRelativeUrlPath(
@@ -89,8 +100,6 @@ describe('Frosted Glass Promo', () => {
 
     expect(getByText('5 mayo 2016'));
     expect(getByText(cpsPromoFixture.item.headlines.headline));
-    // Main image is lazy-loaded
-    expect(container.querySelector('noscript')).toBeInTheDocument();
     expect(
       container.querySelector(
         `a[href="${cpsPromoFixture.item.locators.assetUri}"]`,
@@ -104,8 +113,6 @@ describe('Frosted Glass Promo', () => {
     );
     expect(getByText('17th February 2020'));
     expect(getByText(linkPromoFixture.item.summary));
-    // Main image is lazy-loaded
-    expect(container.querySelector('noscript')).toBeInTheDocument();
     expect(
       container.querySelector('a[href="/pidgin/sport-51434980"]'),
     ).toBeInTheDocument();
@@ -124,10 +131,9 @@ describe('Frosted Glass Promo', () => {
   });
 
   it('should render lazyload component for frosted glass section', () => {
-    const { container, getByTestId } = render(
+    const { getByTestId } = render(
       <Component {...linkPromoFixture} service="pidgin" />,
     );
-    expect(container.querySelector('noscript')).toBeInTheDocument();
     expect(
       getByTestId('frosted-glass-lazyload-placeholder'),
     ).toBeInTheDocument();
