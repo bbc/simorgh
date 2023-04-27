@@ -2,18 +2,18 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import { PropsWithChildren, useContext } from 'react';
-import { RequestContext } from '#contexts/RequestContext';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import hasPath from 'ramda/src/hasPath';
 import pick from 'ramda/src/pick';
 
-import { createSrcsets } from '#lib/utilities/srcSet';
-import getOriginCode from '#lib/utilities/imageSrcHelpers/originCode';
-import getLocator from '#lib/utilities/imageSrcHelpers/locator';
-import buildIChefURL from '#lib/utilities/ichefURL';
+import PromoTimestamp from '../../legacy/components/Promo/timestamp';
+import getOriginCode from '../../lib/utilities/imageSrcHelpers/originCode';
+import getLocator from '../../lib/utilities/imageSrcHelpers/locator';
+import buildIChefURL from '../../lib/utilities/ichefURL';
 
-import PromoTimestamp from '#components/Promo/timestamp';
+import { createSrcsets } from '../../lib/utilities/srcSet';
+import { RequestContext } from '../../contexts/RequestContext';
 
 import styles from './styles';
 import { FormattedPromo, ImageProps, PromoProps } from './types';

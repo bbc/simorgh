@@ -2,9 +2,10 @@ import React, { PropsWithChildren } from 'react';
 import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import { withKnobs, text, number } from '@storybook/addon-knobs';
 
-import { RequestContextProvider } from '#contexts/RequestContext';
-import { ToggleContextProvider } from '#contexts/ToggleContext';
+import { RequestContextProvider } from '../../contexts/RequestContext';
+import { ToggleContextProvider } from '../../contexts/ToggleContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import { StoryProps } from '../../models/types/storybook';
 import ThemeProvider from '../ThemeProvider';
 
 import Promo from '.';
@@ -13,7 +14,6 @@ import {
   linkPromoFixture,
   cpsNewsPromoFixture,
 } from './fixtures';
-import { StoryProps } from '../../models/types/storybook';
 
 const Wrappers = ({
   service,

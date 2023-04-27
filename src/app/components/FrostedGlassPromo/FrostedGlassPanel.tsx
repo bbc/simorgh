@@ -3,7 +3,7 @@
 import { jsx, useTheme } from '@emotion/react';
 import { PropsWithChildren } from 'react';
 
-import useImageColour from '#hooks/useImageColour';
+import useImageColour from '../../hooks/useImageColour';
 
 import styles from './styles';
 

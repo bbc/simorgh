@@ -6,10 +6,10 @@ import React, { PropsWithChildren, useContext } from 'react';
 import pick from 'ramda/src/pick';
 import Lazyload from 'react-lazyload';
 
-import { RequestContext } from '#contexts/RequestContext';
-import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
-import makeRelativeUrlPath from '#lib/utilities/makeRelativeUrlPath';
-import ImageWithPlaceholder from '#containers/ImageWithPlaceholder';
+import ImageWithPlaceholder from '../../legacy/containers/ImageWithPlaceholder';
+import makeRelativeUrlPath from '../../lib/utilities/makeRelativeUrlPath';
+import useClickTrackerHandler from '../../hooks/useClickTrackerHandler';
+import { RequestContext } from '../../contexts/RequestContext';
 
 import FrostedGlassPanel from './FrostedGlassPanel';
 import withData from './withData';
