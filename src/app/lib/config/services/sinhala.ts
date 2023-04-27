@@ -308,11 +308,11 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'ශ්‍රී ලංකා',
-        url: '/sinhala/sri_lanka',
+        url: '/sinhala/topics/cg7267dz901t',
       },
       {
         title: 'ලෝකය',
-        url: '/sinhala/world',
+        url: '/sinhala/topics/c83plvepnq1t',
       },
       {
         title: 'විශේෂාංග',

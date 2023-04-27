@@ -3,6 +3,7 @@ import { render } from '../../../../components/react-testing-library-with-provid
 import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import arabic from '../../../../components/ThemeProvider/fontScripts/arabic';
 import Paragraph from './index';
+import { MEDIA_ARTICLE_PAGE } from '../../../../routes/utils/pageTypes';
 
 describe('Paragraph', () => {
   it('should render correctly', () => {
@@ -14,11 +15,14 @@ describe('Paragraph', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('should render correctly in dark mode', () => {
+  it('should render correctly on page types that support a dark ui', () => {
     const { container } = render(
-      <Paragraph script={latin} service="news" darkMode>
+      <Paragraph script={latin} service="news">
         This is text in a paragraph.
       </Paragraph>,
+      {
+        pageType: MEDIA_ARTICLE_PAGE,
+      },
     );
     expect(container).toMatchSnapshot();
   });

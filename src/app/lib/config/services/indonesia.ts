@@ -349,7 +349,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'Dunia',
-        url: '/indonesia/dunia',
+        url: '/indonesia/topics/cyz8evpl224t',
       },
       {
         title: 'Viral',

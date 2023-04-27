@@ -31,6 +31,7 @@ export type RequestContextProps = {
   } | null;
   origin: string;
   pageType: PageTypes;
+  derivedPageType: string | null;
   pathname: string;
   platform: Platforms;
   previousPath: string | null;
@@ -49,6 +50,7 @@ export const RequestContext = React.createContext<RequestContextProps>(
 
 type RequestProviderProps = {
   bbcOrigin?: string | null;
+  derivedPageType?: string | null;
   id?: string | null;
   isAmp: boolean;
   isNextJs?: boolean;
@@ -69,6 +71,7 @@ type RequestProviderProps = {
 
 export const RequestContextProvider = ({
   bbcOrigin = null,
+  derivedPageType = null,
   children,
   id = null,
   isAmp,
@@ -103,6 +106,7 @@ export const RequestContextProvider = ({
     isUK,
     origin,
     pageType,
+    derivedPageType,
     isAmp,
     isNextJs,
     platform,
