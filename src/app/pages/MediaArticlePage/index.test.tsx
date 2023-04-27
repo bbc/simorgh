@@ -2,10 +2,10 @@
 import React, { PropsWithChildren } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { render, waitFor } from '@testing-library/react';
-import { RequestContextProvider } from '#contexts/RequestContext';
-import { ToggleContextProvider } from '#contexts/ToggleContext';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { FetchMock } from 'jest-fetch-mock';
+import { ARTICLE_PAGE } from '../../routes/utils/pageTypes';
+import { ToggleContextProvider } from '../../contexts/ToggleContext';
+import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import newsMostReadData from '../../../../data/news/mostRead/index.json';
 import MediaArticlePage from './MediaArticlePage';

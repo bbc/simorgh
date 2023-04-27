@@ -5,23 +5,8 @@ import { useContext } from 'react';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import { jsx, useTheme } from '@emotion/react';
-import useToggle from '#hooks/useToggle';
 
-import ArticleMetadata from '#containers/ArticleMetadata';
-import headings from '#containers/Headings';
-import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
-import gist from '#containers/Gist';
-import text from '#containers/Text';
-import Image from '#containers/Image';
-import Blocks from '#containers/Blocks';
-import Timestamp from '#containers/ArticleTimestamp';
-import ATIAnalytics from '#containers/ATIAnalytics';
-import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
-import ComscoreAnalytics from '#containers/ComscoreAnalytics';
-import ArticleMediaPlayer from '#containers/ArticleMediaPlayer';
-import SocialEmbedContainer from '#containers/SocialEmbed';
-import fauxHeadline from '#containers/FauxHeadline';
-
+import useToggle from '../../hooks/useToggle';
 import {
   getArticleId,
   getHeadline,
@@ -32,24 +17,44 @@ import {
   getArticleSection,
   getMentions,
   getLang,
-} from '#lib/utilities/parseAssetData';
-import filterForBlockType from '#lib/utilities/blockHandlers';
-import RelatedTopics from '#containers/RelatedTopics';
-import NielsenAnalytics from '#containers/NielsenAnalytics';
-import ScrollablePromo from '#components/ScrollablePromo';
+} from '../../lib/utilities/parseAssetData';
+import filterForBlockType from '../../lib/utilities/blockHandlers';
+
+import ScrollablePromo from '../../legacy/components/ScrollablePromo';
+
+import headings from '../../legacy/containers/Headings';
+import visuallyHiddenHeadline from '../../legacy/containers/VisuallyHiddenHeadline';
+import gist from '../../legacy/containers/Gist';
+import text from '../../legacy/containers/Text';
+import Image from '../../legacy/containers/Image';
+import Blocks from '../../legacy/containers/Blocks';
+import Timestamp from '../../legacy/containers/ArticleTimestamp';
+import ATIAnalytics from '../../legacy/containers/ATIAnalytics';
+import ChartbeatAnalytics from '../../legacy/containers/ChartbeatAnalytics';
+import ComscoreAnalytics from '../../legacy/containers/ComscoreAnalytics';
+import ArticleMediaPlayer from '../../legacy/containers/ArticleMediaPlayer';
+import SocialEmbedContainer from '../../legacy/containers/SocialEmbed';
+import fauxHeadline from '../../legacy/containers/FauxHeadline';
+import RelatedTopics from '../../legacy/containers/RelatedTopics';
+import NielsenAnalytics from '../../legacy/containers/NielsenAnalytics';
+import ArticleMetadata from '../../legacy/containers/ArticleMetadata';
+
 import {
   OptimoBlock,
   MetadataFormats,
   MetadataTaggings,
   MetadataTopics,
 } from '../../models/types/optimo';
+
 import LinkedData from '../../components/LinkedData';
 import Byline from '../../components/Byline';
+
 import {
   bylineExtractor,
   categoryName,
   getAuthorTwitterHandle,
 } from '../../components/Byline/utilities';
+
 import { ServiceContext } from '../../contexts/ServiceContext';
 import RelatedContentSection from './PagePromoSections/RelatedContentSection';
 
