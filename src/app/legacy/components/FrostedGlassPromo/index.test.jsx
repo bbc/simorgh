@@ -6,9 +6,15 @@ import * as clickTracking from '#hooks/useClickTrackerHandler';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
 
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
+import makeRelativeUrlPath from '#lib/utilities/makeRelativeUrlPath';
 import { render } from '../../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
-import { promoProps, cpsPromoFixture, linkPromoFixture } from './fixtures';
+import {
+  promoProps,
+  optimoPromoFixture,
+  cpsPromoFixture,
+  linkPromoFixture,
+} from './fixtures';
 
 import Promo from '.';
 
@@ -40,6 +46,11 @@ describe('Frosted Glass Promo', () => {
     expect(container).toMatchSnapshot();
   });
 
+  it('when given props for a Optimo promo', () => {
+    const { container } = render(<Component {...optimoPromoFixture} />);
+    expect(container).toMatchSnapshot();
+  });
+
   it('when given props for a CPS promo', () => {
     const { container } = render(<Component {...cpsPromoFixture} />);
     expect(container).toMatchSnapshot();
@@ -48,6 +59,29 @@ describe('Frosted Glass Promo', () => {
   it('when given props for a Link promo', () => {
     const { container } = render(<Component {...linkPromoFixture} />);
     expect(container).toMatchSnapshot();
+  });
+
+  it('should render the appropriate elements - Optimo Promo', () => {
+    const { container, getByText } = render(
+      <Component {...optimoPromoFixture} />,
+    );
+
+    expect(getByText('2 febrero 2023'));
+    expect(
+      getByText(
+        optimoPromoFixture.item.headlines.promoHeadline.blocks[0].model
+          .blocks[0].model.text,
+      ),
+    );
+    // Main image is lazy-loaded
+    expect(container.querySelector('noscript')).toBeInTheDocument();
+    expect(
+      container.querySelector(
+        `a[href="${makeRelativeUrlPath(
+          optimoPromoFixture.item.locators.canonicalUrl,
+        )}"]`,
+      ),
+    ).toBeInTheDocument();
   });
 
   it('should render the appropriate elements - CPS Promo', () => {
