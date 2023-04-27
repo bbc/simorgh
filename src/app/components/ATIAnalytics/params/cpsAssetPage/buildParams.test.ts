@@ -69,8 +69,8 @@ const expectation = {
   producerId: serviceContext.atiAnalyticsProducerId,
   statsDestination: requestContext.statsDestination,
   service: 'pidgin',
-  timePublished: (analyticsUtils.getPublishedDatetime as jest.Mock)(),
-  timeUpdated: (analyticsUtils.getPublishedDatetime as jest.Mock)(),
+  timePublished: analyticsUtils.getPublishedDatetime(),
+  timeUpdated: analyticsUtils.getPublishedDatetime(),
   ldpThingLabels: 'Technology~Nigeria',
   ldpThingIds:
     '31684f19-84d6-41f6-b033-7ae08098572a~3d5d5e30-dd50-4041-96d5-c970b20005b9',
@@ -87,8 +87,8 @@ const expectationLegacy = {
   producerId: serviceContext.atiAnalyticsProducerId,
   statsDestination: requestContextLegacy.statsDestination,
   service: 'pidgin',
-  timePublished: (analyticsUtils.getPublishedDatetime as jest.Mock)(),
-  timeUpdated: (analyticsUtils.getPublishedDatetime as jest.Mock)(),
+  timePublished: analyticsUtils.getPublishedDatetime(),
+  timeUpdated: analyticsUtils.getPublishedDatetime(),
 };
 
 const newsExpectation = {
@@ -105,8 +105,8 @@ const newsExpectation = {
   producerId: 'overrideProducerId',
   statsDestination: requestContext.statsDestination,
   service: 'news',
-  timePublished: (analyticsUtils.getPublishedDatetime as jest.Mock)(),
-  timeUpdated: (analyticsUtils.getPublishedDatetime as jest.Mock)(),
+  timePublished: analyticsUtils.getPublishedDatetime(),
+  timeUpdated: analyticsUtils.getPublishedDatetime(),
   ldpThingLabels: 'Technology~Nigeria',
   ldpThingIds:
     '31684f19-84d6-41f6-b033-7ae08098572a~3d5d5e30-dd50-4041-96d5-c970b20005b9',

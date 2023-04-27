@@ -325,8 +325,8 @@ describe('ATIAnalytics params', () => {
         producerId: 'atiAnalyticsProducerId',
         service: 'pidgin',
         statsDestination: 'statsDestination',
-        timePublished: (analyticsUtils.getPublishedDatetime as jest.Mock)(),
-        timeUpdated: (analyticsUtils.getPublishedDatetime as jest.Mock)(),
+        timePublished: analyticsUtils.getPublishedDatetime(),
+        timeUpdated: analyticsUtils.getPublishedDatetime(),
         nationsProducer: 'scotland',
       });
     });
@@ -356,8 +356,8 @@ describe('ATIAnalytics params', () => {
         producerId: 'atiAnalyticsProducerId',
         service: 'pidgin',
         statsDestination: 'statsDestination',
-        timePublished: (analyticsUtils.getPublishedDatetime as jest.Mock)(),
-        timeUpdated: (analyticsUtils.getPublishedDatetime as jest.Mock)(),
+        timePublished: analyticsUtils.getPublishedDatetime(),
+        timeUpdated: analyticsUtils.getPublishedDatetime(),
         nationsProducer: 'scotland',
       });
     });
