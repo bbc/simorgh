@@ -4,7 +4,6 @@ import { jsx } from '@emotion/react';
 import { PropsWithChildren, useContext } from 'react';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
-import hasPath from 'ramda/src/hasPath';
 import pick from 'ramda/src/pick';
 
 import PromoTimestamp from '../../legacy/components/Promo/timestamp';
@@ -64,6 +63,9 @@ const buildImageProperties = (image?: ImageProps) => {
 
 const TimestampFooterWithAmp = (props: PromoProps) => {
   const { isAmp } = useContext(RequestContext);
+
+  if (!props?.item?.timestamp) return null;
+
   return (
     <PromoTimestamp
       css={theme => [
@@ -72,12 +74,9 @@ const TimestampFooterWithAmp = (props: PromoProps) => {
           color: isAmp ? theme.palette.BLACK : theme.palette.GREY_3,
         },
       ]}
-      serviceDatetimeLocale={path<string>(
-        ['item', 'serviceDatetimeLocale'],
-        props,
-      )}
+      serviceDatetimeLocale={props?.item?.serviceDatetimeLocale}
     >
-      {pathOr<string>('', ['item', 'timestamp'], props)}
+      {props?.item?.timestamp}
     </PromoTimestamp>
   );
 };
@@ -125,39 +124,37 @@ const optimoPromoFormatter = (props: PromoProps): FormattedPromo => {
       props,
     ),
     footer: <TimestampFooterWithAmp {...props} />,
-    url: path(['item', 'locators', 'canonicalUrl'], props),
+    url: props?.item?.locators?.canonicalUrl,
     image: buildImageProperties({
       // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       ...imageProps!,
       altText,
       copyright: imageProps?.copyrightHolder,
     }),
-    eventTrackingData: path(['eventTrackingData', 'block'], props),
+    eventTrackingData: props?.eventTrackingData?.block,
   };
 };
 
 const cpsPromoFormatter = (props: PromoProps): FormattedPromo => ({
-  children: path(['item', 'headlines', 'headline'], props),
+  children: props?.item?.headlines?.headline,
   footer: <TimestampFooterWithAmp {...props} />,
-  url: path(['item', 'locators', 'assetUri'], props),
-  image: buildImageProperties(path(['item', 'indexImage'], props)),
-  eventTrackingData: path(['eventTrackingData', 'block'], props),
+  url: props?.item?.locators?.assetUri,
+  image: buildImageProperties(props?.item?.indexImage),
+  eventTrackingData: props?.eventTrackingData?.block,
 });
 
 const linkPromoFormatter = (props: PromoProps): FormattedPromo => ({
-  children: path(['item', 'name'], props),
+  children: props?.item?.name,
   footer: <TimestampFooterWithAmp {...props} />,
-  url: path(['item', 'uri'], props),
-  image: buildImageProperties(path(['item', 'indexImage'], props)),
-  eventTrackingData: path(['eventTrackingData', 'block'], props),
+  url: props?.item?.uri,
+  image: buildImageProperties(props?.item?.indexImage),
+  eventTrackingData: props?.eventTrackingData?.block,
 });
 
 const normalise = (props: PromoProps): FormattedPromo => {
-  if (path(['item', 'type'], props) === 'optimo')
-    return optimoPromoFormatter(props);
-  if (hasPath(['item', 'cpsType'], props)) return cpsPromoFormatter(props);
-  if (path(['item', 'assetTypeCode'], props) === 'PRO')
-    return linkPromoFormatter(props);
+  if (props.item?.type === 'optimo') return optimoPromoFormatter(props);
+  if (props.item?.cpsType) return cpsPromoFormatter(props);
+  if (props.item?.assetTypeCode === 'PRO') return linkPromoFormatter(props);
   return props as unknown as FormattedPromo;
 };
 

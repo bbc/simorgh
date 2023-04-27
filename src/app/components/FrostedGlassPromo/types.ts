@@ -20,13 +20,23 @@ export type PromoProps = {
       canonicalUrl?: string;
     };
     images?: {
-      defaultPromoImage?: object;
+      defaultPromoImage?: {
+        blocks?: {
+          model: object;
+        }[];
+      };
     };
-    indexImage?: object;
+    indexImage?: ImageProps;
     type?: string;
     cpsType?: string;
     timestamp?: number;
     serviceDatetimeLocale?: string;
+    uri?: string;
+    name?: string;
+    assetTypeCode?: string;
+  };
+  eventTrackingData?: {
+    block?: object;
   };
 };
 
