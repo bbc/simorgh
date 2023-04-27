@@ -20,7 +20,7 @@ export interface CanonicalChartbeatProps {
   chartbeatSource?: string;
 }
 
-export type AmpChartbeatConfig = ChartbeatConfig & { contentType: string };
+export type AmpChartbeatConfig = ChartbeatConfig & { contentType?: string };
 
 export interface AmpChartbeatProps {
   chartbeatConfig: AmpChartbeatConfig;

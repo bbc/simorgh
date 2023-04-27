@@ -41,6 +41,7 @@ const ChartbeatAnalytics = ({ data }: ChartbeatProps) => {
 
   useEffect(() => {
     if (isCanonicalAndEnabled) {
+      // @ts-expect-error ignoring: Argument of type of chartbeatConfig is not assignable to parameter of type SetStateAction<null> -> provides no match for the signature '(prevState: null): null'.
       sendCanonicalChartbeatBeacon(chartbeatConfig);
     }
   }, [data, isCanonicalAndEnabled]); // eslint-disable-line react-hooks/exhaustive-deps

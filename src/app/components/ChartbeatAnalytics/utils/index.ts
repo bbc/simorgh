@@ -267,7 +267,7 @@ export const getConfig = ({
     pageData: data,
     brandName,
     title: pageType === MOST_WATCHED_PAGE ? mostWatchedTitle : mostReadTitle,
-  });
+  }) as string;
   const domain = env !== 'live' ? 'test.bbc.co.uk' : chartbeatDomain;
   const sectionName = path(
     ['relatedContent', 'section', 'name'],
@@ -289,9 +289,10 @@ export const getConfig = ({
     taggings,
   });
   const cookie = getSylphidCookie();
-  const type = getType(pageType);
-  const contentType =
-    pageType === MEDIA_PAGE ? getTvRadioContentType(data) : type;
+  const type = getType(pageType) as string;
+  const contentType = (
+    pageType === MEDIA_PAGE ? getTvRadioContentType(data) : type
+  ) as string;
   const currentPath = onClient() && window.location.pathname;
   return {
     domain,
