@@ -18,7 +18,7 @@ import {
 } from './fixtures';
 
 jest.mock('../../components/ThemeProvider');
-jest.mock('../../legacy/containers/ChartbeatAnalytics', () => {
+jest.mock('../../components/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
 });
