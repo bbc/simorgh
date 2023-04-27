@@ -13,6 +13,7 @@ import {
   INDEX_PAGE,
   PHOTO_GALLERY_PAGE,
   MEDIA_PAGE,
+  ERROR_PAGE,
 } from '../../../routes/utils/pageTypes';
 import {
   buildArticleATIParams,
@@ -104,6 +105,7 @@ const pageTypeUrlBuilders = {
       ARTICLE_CORRESPONDENT_PIECE,
     ),
   [HOME_PAGE]: buildIndexPageATIUrl,
+  [ERROR_PAGE]: () => null,
 };
 
 const pageTypeParamBuilders = {
@@ -161,6 +163,7 @@ const pageTypeParamBuilders = {
   ) =>
     buildCpsAssetPageATIParams(data, requestContext, serviceContext, 'article'),
   [HOME_PAGE]: buildIndexPageATIParams,
+  [ERROR_PAGE]: () => null,
 };
 
 type UrlBuilderFunction = {
@@ -169,7 +172,7 @@ type UrlBuilderFunction = {
     requestContext: RequestContextProps,
     serviceContext: ServiceConfig,
     contentType?: string,
-  ): string;
+  ): string | null;
 };
 
 type ParamBuilderFunction = {
@@ -181,11 +184,13 @@ type ParamBuilderFunction = {
   ): ATIPageTrackingProps;
 };
 
+type PageTypeHandlers = {
+  [key in PageTypes]: UrlBuilderFunction | ParamBuilderFunction;
+};
+
 const createBuilderFactory = (
   requestContext: RequestContextProps,
-  pageTypeHandlers: {
-    [key: string]: UrlBuilderFunction | ParamBuilderFunction;
-  },
+  pageTypeHandlers: PageTypeHandlers,
 ) => {
   const { pageType } = requestContext;
 
