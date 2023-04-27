@@ -6,7 +6,7 @@ import React, { PropsWithChildren, useContext } from 'react';
 import pick from 'ramda/src/pick';
 import Lazyload from 'react-lazyload';
 
-import ImageWithPlaceholder from '../../legacy/containers/ImageWithPlaceholder';
+import IMAGE from '../Image';
 import makeRelativeUrlPath from '../../lib/utilities/makeRelativeUrlPath';
 import useClickTrackerHandler from '../../hooks/useClickTrackerHandler';
 import { RequestContext } from '../../contexts/RequestContext';
@@ -96,9 +96,9 @@ const FrostedGlassPromo = ({
         aria-hidden="true"
         tabIndex={-1}
       />
-      <ImageWithPlaceholder
-        lazyLoad
+      <IMAGE
         darkPlaceholder={isCanonical}
+        lazyLoad
         {...pick(
           [
             'src',
