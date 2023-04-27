@@ -239,7 +239,7 @@ export interface GetConfigProps {
   env: Environments;
   service: Services;
   origin: string;
-  previousPath: string;
+  previousPath: string | null;
   chartbeatDomain: string;
   mostReadTitle?: string;
   mostWatchedTitle?: string;

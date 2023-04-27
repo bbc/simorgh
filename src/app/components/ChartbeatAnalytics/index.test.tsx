@@ -1,7 +1,6 @@
-import React from 'react';
-import { node, string, shape } from 'prop-types';
+import React, { PropsWithChildren } from 'react';
 import { render } from '@testing-library/react';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { ARTICLE_PAGE } from '../../routes/utils/pageTypes';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { ToggleContext } from '../../contexts/ToggleContext';
@@ -10,7 +9,8 @@ import ChartbeatAnalytics from '.';
 import * as testUtils from './utils';
 import * as amp from './amp';
 import { localBaseUrl } from '../../../testHelpers/config';
-import frontPageData from '../../../../../data/news/frontpage';
+import frontPageData from '../../../../data/news/frontpage/index.json';
+import { PageTypes, Platforms } from '../../models/types/global';
 
 const defaultToggleState = {
   chartbeatAnalytics: {
@@ -21,7 +21,25 @@ const defaultToggleState = {
 const mockToggleDispatch = jest.fn();
 const sendCanonicalChartbeatBeacon = jest.fn();
 
-const ContextWrap = ({ pageType, platform, origin, children, toggleState }) => (
+interface Props {
+  pageType: PageTypes;
+  platform: Platforms;
+  origin: string;
+  toggleState?: {
+    chartbeatAnalytics: {
+      enabled: boolean;
+      value?: string;
+    };
+  };
+}
+
+const ContextWrap = ({
+  pageType,
+  platform,
+  origin,
+  children,
+  toggleState = defaultToggleState,
+}: PropsWithChildren<Props>) => (
   <RequestContextProvider
     isAmp={platform === 'amp'}
     pageType={pageType}
@@ -38,6 +56,7 @@ const ContextWrap = ({ pageType, platform, origin, children, toggleState }) => (
         }}
       >
         <UserContext.Provider
+          // @ts-expect-error requires mocking for testing purposes
           value={{
             sendCanonicalChartbeatBeacon,
           }}
@@ -49,22 +68,11 @@ const ContextWrap = ({ pageType, platform, origin, children, toggleState }) => (
   </RequestContextProvider>
 );
 
-ContextWrap.propTypes = {
-  children: node.isRequired,
-  pageType: string.isRequired,
-  origin: string.isRequired,
-  platform: string.isRequired,
-  toggleState: shape({}),
-};
-
-ContextWrap.defaultProps = {
-  toggleState: defaultToggleState,
-};
-
 describe('Charbeats Analytics Container', () => {
   it('should call AmpCharbeatsBeacon when platform is amp and toggle enabled for chartbeat on live', () => {
     process.env.SIMORGH_APP_ENV = 'live';
     const mockAmp = jest.fn().mockReturnValue('amp-return-value');
+    // @ts-expect-error requires mocking for testing purposes
     amp.default = mockAmp;
     const expectedConfig = {
       uid: 50924,
@@ -79,6 +87,7 @@ describe('Charbeats Analytics Container', () => {
     };
 
     const mockGetConfig = jest.fn().mockReturnValue(expectedConfig);
+    // @ts-expect-error requires mocking for testing purposes
     testUtils.getConfig = mockGetConfig;
 
     const toggleState = {
@@ -106,7 +115,7 @@ describe('Charbeats Analytics Container', () => {
     );
     expect(testUtils.getConfig).toHaveBeenCalledTimes(1);
     expect(container.firstChild).not.toBeNull();
-    expect(container.firstChild.textContent).toEqual('amp-return-value');
+    expect(container.firstChild?.textContent).toEqual('amp-return-value');
   });
 
   it('should return null when toggle is disbaled for live', () => {
@@ -147,6 +156,7 @@ describe('Charbeats Analytics Container', () => {
   it('should call sendCanonicalChartbeatBeacon when platform is canonical, and toggle enabled for chartbeat on test', () => {
     process.env.SIMORGH_APP_ENV = 'test';
     const mockAmp = jest.fn().mockReturnValue('amp-return-value');
+    // @ts-expect-error requires mocking for testing purposes
     amp.default = mockAmp;
 
     const expectedConfig = {
@@ -170,6 +180,7 @@ describe('Charbeats Analytics Container', () => {
     };
 
     const mockGetConfig = jest.fn().mockReturnValue(expectedConfig);
+    // @ts-expect-error requires mocking for testing purposes
     testUtils.getConfig = mockGetConfig;
     render(
       <ContextWrap
