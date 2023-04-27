@@ -101,12 +101,14 @@ const Image = ({
         className={className}
         css={theme => [
           styles.wrapper,
-          showPlaceholder && styles.placeholder,
-          {
-            backgroundColor: darkPlaceholder
-              ? theme.palette.SHADOW
-              : theme.palette.LUNAR,
-          },
+          showPlaceholder && [
+            styles.placeholder,
+            {
+              backgroundColor: darkPlaceholder
+                ? theme.palette.SHADOW
+                : theme.palette.LUNAR,
+            },
+          ],
         ]}
         style={{
           paddingBottom: legacyBrowserAspectRatio,
