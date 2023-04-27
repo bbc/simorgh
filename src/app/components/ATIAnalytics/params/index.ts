@@ -194,7 +194,7 @@ const createBuilderFactory = (
 ) => {
   const { pageType } = requestContext;
 
-  return pageTypeHandlers[pageType as PageTypes];
+  return pageTypeHandlers[pageType];
 };
 
 export const buildATIUrl = (
