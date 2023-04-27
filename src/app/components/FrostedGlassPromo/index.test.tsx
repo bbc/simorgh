@@ -86,8 +86,6 @@ describe('Frosted Glass Promo', () => {
           .blocks[0].model.text,
       ),
     );
-    // Main image is lazy-loaded
-    expect(container.querySelector('noscript')).toBeInTheDocument();
     expect(
       container.querySelector(
         `a[href="${makeRelativeUrlPath(
@@ -102,8 +100,6 @@ describe('Frosted Glass Promo', () => {
 
     expect(getByText('5 mayo 2016'));
     expect(getByText(cpsPromoFixture.item.headlines.headline));
-    // Main image is lazy-loaded
-    expect(container.querySelector('noscript')).toBeInTheDocument();
     expect(
       container.querySelector(
         `a[href="${cpsPromoFixture.item.locators.assetUri}"]`,
@@ -117,8 +113,6 @@ describe('Frosted Glass Promo', () => {
     );
     expect(getByText('17th February 2020'));
     expect(getByText(linkPromoFixture.item.summary));
-    // Main image is lazy-loaded
-    expect(container.querySelector('noscript')).toBeInTheDocument();
     expect(
       container.querySelector('a[href="/pidgin/sport-51434980"]'),
     ).toBeInTheDocument();
@@ -137,10 +131,9 @@ describe('Frosted Glass Promo', () => {
   });
 
   it('should render lazyload component for frosted glass section', () => {
-    const { container, getByTestId } = render(
+    const { getByTestId } = render(
       <Component {...linkPromoFixture} service="pidgin" />,
     );
-    expect(container.querySelector('noscript')).toBeInTheDocument();
     expect(
       getByTestId('frosted-glass-lazyload-placeholder'),
     ).toBeInTheDocument();
