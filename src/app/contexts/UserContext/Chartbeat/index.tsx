@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import useToggle from '#hooks/useToggle';
-import CanonicalChartbeatBeacon from '#containers/ChartbeatAnalytics/canonical';
+import CanonicalChartbeatBeacon from '../../../components/ChartbeatAnalytics/canonical';
 import { RequestContext } from '../../RequestContext';
 
 type Props = {
