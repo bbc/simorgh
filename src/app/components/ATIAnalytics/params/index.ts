@@ -51,6 +51,7 @@ import { PageTypes } from '../../../models/types/global';
 const ARTICLE_MEDIA_ASSET = 'article-media-asset';
 const ARTICLE_PHOTO_GALLERY = 'article-photo-gallery';
 const ARTICLE_CORRESPONDENT_PIECE = 'article-correspondent';
+const ARTICLE_SHORT_FORM_VIDEO = 'article-sfv';
 
 const pageTypeUrlBuilders = {
   [ARTICLE_PAGE]: buildArticleATIUrl,
@@ -58,12 +59,19 @@ const pageTypeUrlBuilders = {
     data: PageData,
     requestContext: RequestContextProps,
     serviceContext: ServiceConfig,
-  ) => buildArticleATIUrl(data, requestContext, serviceContext, 'article-sfv'),
+  ) =>
+    buildArticleATIUrl(
+      data,
+      requestContext,
+      serviceContext,
+      ARTICLE_SHORT_FORM_VIDEO,
+    ),
   [STORY_PAGE]: (
     data: PageData,
     requestContext: RequestContextProps,
     serviceContext: ServiceConfig,
-  ) => buildCpsAssetPageATIUrl(data, requestContext, serviceContext, 'article'),
+  ) =>
+    buildCpsAssetPageATIUrl(data, requestContext, serviceContext, ARTICLE_PAGE),
   [FRONT_PAGE]: buildIndexPageATIUrl,
   [MEDIA_PAGE]: buildTvRadioATIUrl,
   [MOST_READ_PAGE]: buildMostReadATIUrl,
@@ -166,26 +174,17 @@ const pageTypeParamBuilders = {
   [ERROR_PAGE]: () => null,
 };
 
-type UrlBuilderFunction = {
+type BuilderFunction = {
   (
     data: PageData,
     requestContext: RequestContextProps,
     serviceContext: ServiceConfig,
     contentType?: string,
-  ): string | null;
-};
-
-type ParamBuilderFunction = {
-  (
-    data: PageData,
-    requestContext: RequestContextProps,
-    serviceContext: ServiceConfig,
-    contentType?: string,
-  ): ATIPageTrackingProps;
+  ): string | ATIPageTrackingProps | null;
 };
 
 type PageTypeHandlers = {
-  [key in PageTypes]: UrlBuilderFunction | ParamBuilderFunction;
+  [key in PageTypes]: BuilderFunction;
 };
 
 const createBuilderFactory = (
