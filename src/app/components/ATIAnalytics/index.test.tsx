@@ -30,12 +30,11 @@ import * as amp from './amp';
 import * as canonical from './canonical';
 import { PageTypes, Platforms, Services } from '../../models/types/global';
 
-// @ts-expect-error - we need to mock these functions to ensure tests are deterministic
-analyticsUtils.getAtUserId = jest.fn();
-// @ts-expect-error - we need to mock these functions to ensure tests are deterministic
-analyticsUtils.getCurrentTime = jest.fn().mockReturnValue('00-00-00');
-// @ts-expect-error - we need to mock these functions to ensure tests are deterministic
-analyticsUtils.getPublishedDatetime = jest
+(analyticsUtils.getAtUserId as jest.Mock) = jest.fn();
+(analyticsUtils.getCurrentTime as jest.Mock) = jest
+  .fn()
+  .mockReturnValue('00-00-00');
+(analyticsUtils.getPublishedDatetime as jest.Mock) = jest
   .fn()
   .mockReturnValue('1970-01-01T00:00:00.000Z');
 

@@ -4,12 +4,11 @@ import { ServiceConfig } from '../../../../models/types/serviceConfig';
 import { PageData } from '../../types';
 import { buildArticleATIParams, buildArticleATIUrl } from './buildParams';
 
-// @ts-expect-error - we need to mock these functions to ensure tests are deterministic
-analyticsUtils.getAtUserId = jest.fn();
-// @ts-expect-error - we need to mock these functions to ensure tests are deterministic
-analyticsUtils.getCurrentTime = jest.fn().mockReturnValue('00-00-00');
-// @ts-expect-error - we need to mock these functions to ensure tests are deterministic
-analyticsUtils.getPublishedDatetime = jest
+(analyticsUtils.getAtUserId as jest.Mock) = jest.fn();
+(analyticsUtils.getCurrentTime as jest.Mock) = jest
+  .fn()
+  .mockReturnValue('00-00-00');
+(analyticsUtils.getPublishedDatetime as jest.Mock) = jest
   .fn()
   .mockReturnValue('1970-01-01T00:00:00.000Z');
 
@@ -40,8 +39,8 @@ const validURLParams = {
   pageIdentifier: 'news.articles.//www.bbc.co.uk.page',
   pageTitle: 'pageTitle',
   producerId: serviceContext.atiAnalyticsProducerId,
-  timePublished: analyticsUtils.getPublishedDatetime(),
-  timeUpdated: analyticsUtils.getPublishedDatetime(),
+  timePublished: (analyticsUtils.getPublishedDatetime as jest.Mock)(),
+  timeUpdated: (analyticsUtils.getPublishedDatetime as jest.Mock)(),
   categoryName: 'thing%20english%20label%201~thing%20english%20label%202',
   libraryVersion: analyticsUtils.LIBRARY_VERSION,
   nationsProducer: 'scotland',

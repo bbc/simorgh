@@ -4,10 +4,12 @@ import { sendEventBeacon } from '.';
 
 const sendBeaconSpy = jest.spyOn(sendBeacon, 'default');
 
-// @ts-expect-error - we need to mock these functions to ensure tests are deterministic
-analyticsUtils.getAtUserId = jest.fn().mockReturnValue('123-456-789');
-// @ts-expect-error - we need to mock these functions to ensure tests are deterministic
-analyticsUtils.getCurrentTime = jest.fn().mockReturnValue('00-00-00');
+(analyticsUtils.getAtUserId as jest.Mock) = jest
+  .fn()
+  .mockReturnValue('123-456-789');
+(analyticsUtils.getCurrentTime as jest.Mock) = jest
+  .fn()
+  .mockReturnValue('00-00-00');
 
 describe('beacon', () => {
   const originalATIBaseUrl = process.env.SIMORGH_ATI_BASE_URL;

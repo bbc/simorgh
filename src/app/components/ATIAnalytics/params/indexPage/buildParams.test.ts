@@ -8,12 +8,11 @@ import { buildIndexPageATIParams, buildIndexPageATIUrl } from './buildParams';
 import { RequestContextProps } from '../../../../contexts/RequestContext';
 import { ServiceConfig } from '../../../../models/types/serviceConfig';
 
-// @ts-expect-error - we need to mock these functions to ensure tests are deterministic
-analyticsUtils.getAtUserId = jest.fn();
-// @ts-expect-error - we need to mock these functions to ensure tests are deterministic
-analyticsUtils.getCurrentTime = jest.fn().mockReturnValue('00-00-00');
-// @ts-expect-error - we need to mock these functions to ensure tests are deterministic
-analyticsUtils.getPublishedDatetime = jest
+(analyticsUtils.getAtUserId as jest.Mock) = jest.fn();
+(analyticsUtils.getCurrentTime as jest.Mock) = jest
+  .fn()
+  .mockReturnValue('00-00-00');
+(analyticsUtils.getPublishedDatetime as jest.Mock) = jest
   .fn()
   .mockReturnValue('1970-01-01T00:00:00.000Z');
 
@@ -40,8 +39,8 @@ const validURLParams = {
   language: 'language',
   pageTitle: 'title - brandName',
   producerId: serviceContext.atiAnalyticsProducerId,
-  timePublished: analyticsUtils.getPublishedDatetime(),
-  timeUpdated: analyticsUtils.getPublishedDatetime(),
+  timePublished: (analyticsUtils.getPublishedDatetime as jest.Mock)(),
+  timeUpdated: (analyticsUtils.getPublishedDatetime as jest.Mock)(),
   libraryVersion: analyticsUtils.LIBRARY_VERSION,
   platform: requestContext.platform,
   service: 'news',
