@@ -1,5 +1,4 @@
 import React, { PropsWithChildren } from 'react';
-
 import { withKnobs } from '@storybook/addon-knobs';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
@@ -21,11 +20,18 @@ interface ComponentProps extends Props {
 
 const Component = ({ service, blocks }: PropsWithChildren<ComponentProps>) => (
   <ThemeProvider service={service}>
-    <ServiceContextProvider service={service}>
-      <ToggleContextProvider>
-        <Uploader blocks={blocks} />
-      </ToggleContextProvider>
-    </ServiceContextProvider>
+    <div
+      style={{
+        backgroundColor: '#f6f6f6',
+        padding: '2rem',
+      }}
+    >
+      <ServiceContextProvider service={service}>
+        <ToggleContextProvider>
+          <Uploader blocks={blocks} />
+        </ToggleContextProvider>
+      </ServiceContextProvider>
+    </div>
   </ThemeProvider>
 );
 
