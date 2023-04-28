@@ -93,7 +93,7 @@ interface SectionsProps {
   pageType: PageTypes;
   producer?: string | null;
   chapter?: string | null;
-  sectionName: string;
+  sectionName?: string;
   categoryName: string;
   mediaPageType: string;
   taggings: Taggings;
@@ -148,7 +148,7 @@ export const buildSections = ({
       return [
         capitalize(service),
         buildSectionItem(service, pageType),
-        buildSectionArr(service, sectionName, pageType),
+        sectionName && buildSectionArr(service, sectionName, pageType),
         buildSectionItem(service, appendCategory(categoryName)),
       ]
         .join(',')
@@ -243,7 +243,7 @@ export interface GetConfigProps {
   chartbeatDomain: string;
   mostReadTitle?: string;
   mostWatchedTitle?: string;
-  sectionName: string;
+  sectionName?: string;
   mediaPageType?: string;
 }
 
