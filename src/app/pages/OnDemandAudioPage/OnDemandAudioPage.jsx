@@ -112,7 +112,7 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
 
   const { isAmp } = useContext(RequestContext);
   const location = useLocation();
-  const { dir, liveRadioOverrides, lang, service, translations, serviceName } =
+  const { dir, liveRadioOverrides, lang, service, translations, brandName } =
     useContext(ServiceContext);
   const oppDir = dir === 'rtl' ? 'ltr' : 'rtl';
 
@@ -138,7 +138,7 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
 
   const hasRecentEpisodes = recentEpisodes && Boolean(recentEpisodes.length);
   const metadataTitle = episodeTitle
-    ? `${episodeTitle} - ${brandTitle} - ${serviceName}`
+    ? `${episodeTitle} - ${brandTitle} - ${brandName}`
     : headline;
 
   const metadataImageProps = is(String, imageUrl)
@@ -154,7 +154,7 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics
         mediaPageType={isPodcast ? 'Podcasts' : 'Radio'}
-        title={metadataTitle}
+        title={headline}
         contentType={pageData?.analyticsLabels?.contentType}
       />
       <ComscoreAnalytics />

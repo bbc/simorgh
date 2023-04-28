@@ -125,7 +125,7 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
     <Wrapper>
       <ChartbeatAnalytics
         mediaPageType="TV"
-        title={metadataTitle}
+        title={headline}
         contentType={pageData?.analyticsLabels?.contentType}
       />
       <ATIAnalytics data={pageData} />
