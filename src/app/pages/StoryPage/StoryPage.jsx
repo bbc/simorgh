@@ -318,6 +318,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
         data={pageData}
         sectionName={pageData?.relatedContent?.section?.name}
         categoryName={pageData?.metadata?.passport?.category?.categoryName}
+        title={title}
       />
       <ComscoreAnalytics />
       <NielsenAnalytics />

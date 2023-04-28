@@ -161,6 +161,7 @@ const MediaArticlePage = ({ pageData }) => {
       <ChartbeatAnalytics
         data={pageData}
         categoryName={pageData?.metadata?.passport?.category?.categoryName}
+        title={headline}
       />
       <ComscoreAnalytics />
       <NielsenAnalytics />

@@ -1,12 +1,8 @@
 import Cookie from 'js-cookie';
-import path from 'ramda/src/path';
-import pathOr from 'ramda/src/pathOr';
 import find from 'ramda/src/find';
 import propSatisfies from 'ramda/src/propSatisfies';
 import includes from 'ramda/src/includes';
 import onClient from '../../../lib/utilities/onClient';
-import { getPromoHeadline } from '../../../lib/analyticsUtils/article';
-import { getPageTitle } from '../../../lib/analyticsUtils/indexPage';
 import { getReferrer } from '../../../lib/analyticsUtils';
 import {
   ARTICLE_PAGE,
@@ -91,8 +87,6 @@ type Taggings = {
 interface SectionsProps {
   service: Services;
   pageType: PageTypes;
-  producer?: string | null;
-  chapter?: string | null;
   sectionName?: string;
   categoryName?: string;
   mediaPageType?: string;
@@ -130,14 +124,11 @@ const getPrimaryMediaType = (taggings?: Taggings) => {
 export const buildSections = ({
   service,
   pageType,
-  producer,
-  chapter,
   sectionName,
   categoryName,
   mediaPageType,
   taggings,
 }: SectionsProps) => {
-  const addProducer = producer && service !== producer;
   const type = getType(pageType, true) as string;
   const appendCategory = (name: string) => `${name}-category`;
 
@@ -158,8 +149,6 @@ export const buildSections = ({
       return [
         capitalize(service),
         ...(mediaPageType ? buildSectionItem(service, mediaPageType) : []),
-        ...(addProducer ? buildSectionArr(service, producer, type) : []),
-        ...(chapter ? buildSectionArr(service, chapter, type) : []),
       ].join(', ');
     case MEDIA_ARTICLE_PAGE:
       return [
@@ -167,75 +156,46 @@ export const buildSections = ({
         ...(pageType
           ? buildSectionItem(service, getPrimaryMediaType(taggings))
           : []),
-        ...(addProducer ? buildSectionArr(service, producer, type) : []),
-        ...(chapter ? buildSectionArr(service, chapter, type) : []),
       ].join(', ');
     default:
       return [
         capitalize(service),
         ...(pageType ? buildSectionItem(service, type) : []),
-        ...(addProducer ? buildSectionArr(service, producer, type) : []),
-        ...(chapter ? buildSectionArr(service, chapter, type) : []),
       ].join(', ');
   }
 };
 
-const getHeadline = path(['promo', 'headlines', 'headline']);
-
 interface GetTitleProps {
   pageType: PageTypes | 'index';
-  pageData?: {
-    title?: string;
-    pageTitle?: string;
-    promo?: {
-      headlines: {
-        headline: string;
-      };
-    };
-  };
+  title: string;
   brandName?: string;
-  title?: string;
 }
 
-export const getTitle = ({
-  pageType,
-  pageData,
-  brandName,
-  title,
-}: GetTitleProps) => {
+export const getTitle = ({ pageType, title, brandName }: GetTitleProps) => {
   switch (pageType) {
     case FRONT_PAGE:
     case INDEX_PAGE:
     case FEATURE_INDEX_PAGE:
+    case MOST_READ_PAGE:
+    case MOST_WATCHED_PAGE:
+    case TOPIC_PAGE:
+    case LIVE_PAGE:
     case 'index':
-      return getPageTitle(pageData, brandName);
+      return `${title} - ${brandName}`;
     case ARTICLE_PAGE:
-      return getPromoHeadline(pageData);
     case MEDIA_ASSET_PAGE:
     case STORY_PAGE:
     case PHOTO_GALLERY_PAGE:
-      return getHeadline(pageData);
     case MEDIA_PAGE:
-      return path(['pageTitle'], pageData);
-    case MOST_READ_PAGE:
-    case MOST_WATCHED_PAGE:
-      return `${title} - ${brandName}`;
-    case TOPIC_PAGE:
-      return `${pageData?.title} - ${brandName}`;
-    case LIVE_PAGE:
-      return `${pageData?.title} - ${brandName}`;
     default:
-      return null;
+      return title;
   }
 };
-
-const getTvRadioContentType = path(['contentType']);
 
 export interface GetConfigProps {
   isAmp: boolean;
   platform: Platforms;
   pageType: PageTypes;
-  data?: object;
   brandName: string;
   env: Environments;
   service: Services;
@@ -247,39 +207,42 @@ export interface GetConfigProps {
   sectionName?: string;
   mediaPageType?: string;
   categoryName?: string;
-  producer?: string;
+  title: string;
+  taggings?: {
+    predicate: string;
+    value: string;
+  }[];
+  contentType?: string;
 }
 
 export const getConfig = ({
   isAmp,
   platform,
   pageType,
-  data,
   brandName,
   env,
   service,
   origin,
   previousPath,
   chartbeatDomain,
-  mostReadTitle,
-  mostWatchedTitle,
-  sectionName,
   mediaPageType,
+  sectionName,
   categoryName,
-  producer,
+  title,
+  taggings,
+  contentType,
 }: GetConfigProps) => {
   const referrer =
     previousPath || isAmp ? getReferrer(platform, origin, previousPath) : null;
 
-  const title = getTitle({
+  const analyticsTitle = getTitle({
     pageType,
-    pageData: data,
     brandName,
-    title: pageType === MOST_WATCHED_PAGE ? mostWatchedTitle : mostReadTitle,
-  }) as string;
+    title,
+  });
+
   const domain = env !== 'live' ? 'test.bbc.co.uk' : chartbeatDomain;
 
-  const taggings = pathOr([], ['metadata', 'passport', 'taggings'], data);
   const sections = buildSections({
     service,
     pageType,
@@ -287,19 +250,19 @@ export const getConfig = ({
     categoryName,
     mediaPageType,
     taggings,
-    producer,
   });
+
   const cookie = getSylphidCookie();
+
   const type = getType(pageType) as string;
-  const contentType = (
-    pageType === MEDIA_PAGE ? getTvRadioContentType(data) : type
-  ) as string;
+
   const currentPath = onClient() && window.location.pathname;
+
   return {
     domain,
     sections,
     uid: chartbeatUID,
-    title,
+    title: analyticsTitle,
     virtualReferrer: referrer,
     ...(isAmp && { contentType }),
     ...(!isAmp && {

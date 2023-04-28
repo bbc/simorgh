@@ -60,6 +60,7 @@ import RelatedContentSection from './PagePromoSections/RelatedContentSection';
 import SecondaryColumn from './SecondaryColumn';
 
 import styles from './ArticlePage.styles';
+import { getPromoHeadline } from '../../lib/analyticsUtils/article';
 
 const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
@@ -185,6 +186,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
       <ATIAnalytics
         data={pageData}
         sectionName={pageData?.relatedContent?.section?.name}
+        title={getPromoHeadline(pageData)}
       />
       <ChartbeatAnalytics data={pageData} />
       <ComscoreAnalytics />

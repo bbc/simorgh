@@ -152,7 +152,11 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
   return (
     <>
       <ATIAnalytics data={pageData} />
-      <ChartbeatAnalytics mediaPageType={isPodcast ? 'Podcasts' : 'Radio'} />
+      <ChartbeatAnalytics
+        mediaPageType={isPodcast ? 'Podcasts' : 'Radio'}
+        title={metadataTitle}
+        contentType={pageData?.analyticsLabels?.contentType}
+      />
       <ComscoreAnalytics />
       <MetadataContainer
         openGraphType="website"

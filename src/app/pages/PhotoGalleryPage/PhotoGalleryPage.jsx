@@ -167,7 +167,7 @@ const PhotoGalleryPage = ({ pageData }) => {
         imageLocator={indexImageLocator}
       />
       <ATIAnalytics data={pageData} />
-      <ChartbeatAnalytics data={pageData} />
+      <ChartbeatAnalytics data={pageData} title={title} />
       <ComscoreAnalytics />
 
       <StyledPhotoGalleryPageGrid as="main" role="main">

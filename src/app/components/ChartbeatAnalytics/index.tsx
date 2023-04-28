@@ -11,7 +11,7 @@ const ChartbeatAnalytics = ({
   data,
   sectionName,
   mediaPageType,
-  producer,
+  title,
 }: ChartbeatProps) => {
   const {
     service,
@@ -42,7 +42,7 @@ const ChartbeatAnalytics = ({
     mostWatchedTitle,
     sectionName,
     mediaPageType,
-    producer,
+    title,
   };
 
   const chartbeatConfig = getConfig(configDependencies);
