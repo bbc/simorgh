@@ -7,7 +7,7 @@ import AmpChartbeatBeacon from './amp';
 import { GetConfigProps, getConfig } from './utils';
 import { ChartbeatProps } from './types';
 
-const ChartbeatAnalytics = ({ data }: ChartbeatProps) => {
+const ChartbeatAnalytics = ({ data, sectionName }: ChartbeatProps) => {
   const {
     service,
     brandName,
@@ -35,6 +35,7 @@ const ChartbeatAnalytics = ({ data }: ChartbeatProps) => {
     previousPath,
     mostReadTitle,
     mostWatchedTitle,
+    sectionName,
   };
 
   const chartbeatConfig = getConfig(configDependencies);

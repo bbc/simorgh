@@ -92,7 +92,10 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
         <CanonicalAdBootstrapJs />
       )}
       <ATIAnalytics data={pageData} />
-      <ChartbeatAnalytics data={pageData} />
+      <ChartbeatAnalytics
+        data={pageData}
+        sectionName={pageData?.relatedContent?.section?.name}
+      />
       <ComscoreAnalytics />
       <MetadataContainer
         title={frontPageTitle}

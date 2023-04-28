@@ -28,4 +28,5 @@ export interface AmpChartbeatProps {
 
 export interface ChartbeatProps {
   data: object;
+  sectionName?: string;
 }

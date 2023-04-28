@@ -43,7 +43,7 @@ const buildSectionArr = (service: Services, value: string, type: string) => [
   ...(type ? [`${capitalize(service)} - ${value} - ${type}`] : []),
 ];
 
-const buildSectionItem = (service: Services | string, type: string) => [
+const buildSectionItem = (service: Services, type: string) => [
   `${capitalize(service)} - ${type}`,
 ];
 
@@ -243,6 +243,8 @@ export interface GetConfigProps {
   chartbeatDomain: string;
   mostReadTitle?: string;
   mostWatchedTitle?: string;
+  sectionName: string;
+  mediaPageType?: string;
 }
 
 export const getConfig = ({
@@ -258,6 +260,8 @@ export const getConfig = ({
   chartbeatDomain,
   mostReadTitle,
   mostWatchedTitle,
+  sectionName,
+  mediaPageType = '',
 }: GetConfigProps) => {
   const referrer =
     previousPath || isAmp ? getReferrer(platform, origin, previousPath) : null;
@@ -269,16 +273,12 @@ export const getConfig = ({
     title: pageType === MOST_WATCHED_PAGE ? mostWatchedTitle : mostReadTitle,
   }) as string;
   const domain = env !== 'live' ? 'test.bbc.co.uk' : chartbeatDomain;
-  const sectionName = path(
-    ['relatedContent', 'section', 'name'],
-    data,
-  ) as string;
   const categoryName = path(
     ['metadata', 'passport', 'category', 'categoryName'],
     data,
   ) as string;
 
-  const mediaPageType = pathOr('', ['metadata', 'type'], data);
+  // const mediaPageType = pathOr('', ['metadata', 'type'], data);
   const taggings = pathOr([], ['metadata', 'passport', 'taggings'], data);
   const sections = buildSections({
     service,

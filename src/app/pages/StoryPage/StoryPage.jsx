@@ -314,7 +314,10 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
         imageLocator={indexImageLocator}
       />
       <ATIAnalytics data={pageData} />
-      <ChartbeatAnalytics data={pageData} />
+      <ChartbeatAnalytics
+        data={pageData}
+        sectionName={pageData?.relatedContent?.section?.name}
+      />
       <ComscoreAnalytics />
       <NielsenAnalytics />
       {/* dotcom and dotcomConfig need to be setup before the main dotcom javascript file is loaded */}

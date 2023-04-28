@@ -178,7 +178,10 @@ const MediaAssetPage = ({ pageData }) => {
 
   return (
     <>
-      <ChartbeatAnalytics data={pageData} />
+      <ChartbeatAnalytics
+        data={pageData}
+        sectionName={pageData?.relatedContent?.section?.name}
+      />
       <ComscoreAnalytics />
       <CpsMetadata
         title={title}
