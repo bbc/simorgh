@@ -346,6 +346,8 @@ exports[`Canonical Front Page Sections should match headline text 18`] = `"بط�
 
 exports[`Canonical Front Page Sections should match headline text 19`] = `"روابط لبي بي سي"`;
 
+exports[`Canonical Front Page Sections should match headline text 20`] = `"روابط لبي بي سي"`;
+
 exports[`Canonical Front Page Useful Links should match text and url 1`] = `"وظائف شاغرة في بي بي سي عربي - /arabic/front_page"`;
 
 exports[`Canonical Front Page Useful Links should match text and url 2`] = `"أكاديمية بي بي سي: اكتشف... تعلم.. .تطور - /arabic/front_page"`;
