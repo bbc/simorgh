@@ -27,13 +27,13 @@ export interface AmpChartbeatProps {
 }
 
 export interface ChartbeatProps {
-  sectionName?: string;
-  mediaPageType?: string;
-  categoryName?: string;
+  sectionName?: string; // required for STY and MAP pages
+  categoryName?: string; // required for STY and MAP pages
+  mediaPageType?: string; // required for Live & On Demand Radio, Podcasts & On Demand TV pages
   title: string;
   taggings?: {
     predicate: string;
     value: string;
-  }[];
-  contentType?: string;
+  }[]; // required for Media Article Pages
+  contentType?: string; // required for Live & On Demand Radio, Podcasts & On Demand TV pages
 }
