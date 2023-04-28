@@ -63,7 +63,7 @@ const TopicPage = ({ pageData }) => {
       <main css={styles.main}>
         <div css={styles.inner}>
           <ATIAnalytics data={pageData} />
-          <ChartbeatAnalytics data={pageData} />
+          <ChartbeatAnalytics />
           <MetadataContainer
             title={activePage >= 2 ? pageTitle : title}
             socialHeadline={title}

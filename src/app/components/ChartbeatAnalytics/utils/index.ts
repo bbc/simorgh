@@ -94,13 +94,14 @@ interface SectionsProps {
   producer?: string | null;
   chapter?: string | null;
   sectionName?: string;
-  categoryName: string;
-  mediaPageType: string;
-  taggings: Taggings;
+  categoryName?: string;
+  mediaPageType?: string;
+  taggings?: Taggings;
 }
 
 const AUDIO_KEY = 'fe1fbc8a-bb44-4bf8-8b12-52e58c6345a4';
 const VIDEO_KEY = 'ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f';
+
 const getPrimaryMediaType = (taggings: Taggings) => {
   const defaultLabel = 'article-sfv';
   // FIND THE primaryMediaType ELEMENT IN THE LIST OF TAGGINGS
@@ -141,15 +142,17 @@ export const buildSections = ({
       return [
         capitalize(service),
         buildSectionItem(service, pageType),
-        sectionName && buildSectionArr(service, sectionName, pageType),
-        buildSectionItem(service, appendCategory(categoryName)),
+        ...(sectionName ? buildSectionArr(service, sectionName, pageType) : []),
+        ...(categoryName
+          ? buildSectionItem(service, appendCategory(categoryName))
+          : []),
       ]
         .join(',')
         .replaceAll(',', ', ');
     case MEDIA_PAGE:
       return [
         capitalize(service),
-        buildSectionItem(service, mediaPageType),
+        ...(mediaPageType ? buildSectionItem(service, mediaPageType) : []),
         ...(addProducer ? buildSectionArr(service, producer, type) : []),
         ...(chapter ? buildSectionArr(service, chapter, type) : []),
       ].join(', ');
@@ -176,7 +179,7 @@ const getHeadline = path(['promo', 'headlines', 'headline']);
 
 interface GetTitleProps {
   pageType: PageTypes | 'index';
-  pageData: {
+  pageData?: {
     title?: string;
     pageTitle?: string;
     promo?: {
@@ -227,7 +230,7 @@ export interface GetConfigProps {
   isAmp: boolean;
   platform: Platforms;
   pageType: PageTypes;
-  data: object;
+  data?: object;
   brandName: string;
   env: Environments;
   service: Services;
@@ -238,6 +241,7 @@ export interface GetConfigProps {
   mostWatchedTitle?: string;
   sectionName?: string;
   mediaPageType?: string;
+  categoryName?: string;
 }
 
 export const getConfig = ({
@@ -254,7 +258,8 @@ export const getConfig = ({
   mostReadTitle,
   mostWatchedTitle,
   sectionName,
-  mediaPageType = '',
+  mediaPageType,
+  categoryName,
 }: GetConfigProps) => {
   const referrer =
     previousPath || isAmp ? getReferrer(platform, origin, previousPath) : null;
@@ -266,10 +271,6 @@ export const getConfig = ({
     title: pageType === MOST_WATCHED_PAGE ? mostWatchedTitle : mostReadTitle,
   }) as string;
   const domain = env !== 'live' ? 'test.bbc.co.uk' : chartbeatDomain;
-  const categoryName = path(
-    ['metadata', 'passport', 'category', 'categoryName'],
-    data,
-  ) as string;
 
   const taggings = pathOr([], ['metadata', 'passport', 'taggings'], data);
   const sections = buildSections({

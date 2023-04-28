@@ -181,6 +181,7 @@ const MediaAssetPage = ({ pageData }) => {
       <ChartbeatAnalytics
         data={pageData}
         sectionName={pageData?.relatedContent?.section?.name}
+        categoryName={pageData?.metadata?.passport?.category?.categoryName}
       />
       <ComscoreAnalytics />
       <CpsMetadata

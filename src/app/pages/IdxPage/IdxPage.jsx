@@ -91,10 +91,7 @@ const IdxPage = ({
   return (
     <>
       <ATIAnalytics data={pageData} />
-      <ChartbeatAnalytics
-        data={pageData}
-        sectionName={pageData?.relatedContent?.section?.name}
-      />
+      <ChartbeatAnalytics data={pageData} />
       <ComscoreAnalytics />
       <MetadataContainer
         title={title}

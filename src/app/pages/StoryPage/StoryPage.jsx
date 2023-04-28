@@ -317,6 +317,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
       <ChartbeatAnalytics
         data={pageData}
         sectionName={pageData?.relatedContent?.section?.name}
+        categoryName={pageData?.metadata?.passport?.category?.categoryName}
       />
       <ComscoreAnalytics />
       <NielsenAnalytics />

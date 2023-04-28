@@ -182,11 +182,11 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
 
   return (
     <div css={styles.pageWrapper}>
-      <ATIAnalytics data={pageData} />
-      <ChartbeatAnalytics
+      <ATIAnalytics
         data={pageData}
         sectionName={pageData?.relatedContent?.section?.name}
       />
+      <ChartbeatAnalytics data={pageData} />
       <ComscoreAnalytics />
       <NielsenAnalytics />
       <ArticleMetadata
