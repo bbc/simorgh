@@ -31,4 +31,5 @@ export interface ChartbeatProps {
   sectionName?: string;
   mediaPageType?: string;
   categoryName?: string;
+  producer?: string;
 }

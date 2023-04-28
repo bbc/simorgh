@@ -247,6 +247,7 @@ export interface GetConfigProps {
   sectionName?: string;
   mediaPageType?: string;
   categoryName?: string;
+  producer?: string;
 }
 
 export const getConfig = ({
@@ -265,6 +266,7 @@ export const getConfig = ({
   sectionName,
   mediaPageType,
   categoryName,
+  producer,
 }: GetConfigProps) => {
   const referrer =
     previousPath || isAmp ? getReferrer(platform, origin, previousPath) : null;
@@ -285,6 +287,7 @@ export const getConfig = ({
     categoryName,
     mediaPageType,
     taggings,
+    producer,
   });
   const cookie = getSylphidCookie();
   const type = getType(pageType) as string;
