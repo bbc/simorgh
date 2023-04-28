@@ -59,7 +59,7 @@ const LiveRadioPage = ({ pageData }) => {
   return (
     <>
       <ATIAnalytics data={pageData} />
-      <ChartbeatAnalytics data={pageData} />
+      <ChartbeatAnalytics data={pageData} mediaPageType="Radio" />
       <ComscoreAnalytics />
       <MetadataContainer
         title={name}

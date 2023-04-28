@@ -135,13 +135,6 @@ export const buildSections = ({
   const type = getType(pageType, true) as string;
   const appendCategory = (name: string) => `${name}-category`;
 
-  const mediaSectionLabel: { [key: string]: string } = {
-    'On Demand Radio': 'Radio',
-    'Live Radio': 'Radio',
-    'On Demand TV': 'TV',
-    Podcast: 'Podcasts',
-  };
-
   switch (pageType) {
     case STORY_PAGE:
     case MEDIA_ASSET_PAGE:
@@ -156,7 +149,7 @@ export const buildSections = ({
     case MEDIA_PAGE:
       return [
         capitalize(service),
-        buildSectionItem(service, mediaSectionLabel[mediaPageType]),
+        buildSectionItem(service, mediaPageType),
         ...(addProducer ? buildSectionArr(service, producer, type) : []),
         ...(chapter ? buildSectionArr(service, chapter, type) : []),
       ].join(', ');
@@ -278,7 +271,6 @@ export const getConfig = ({
     data,
   ) as string;
 
-  // const mediaPageType = pathOr('', ['metadata', 'type'], data);
   const taggings = pathOr([], ['metadata', 'passport', 'taggings'], data);
   const sections = buildSections({
     service,

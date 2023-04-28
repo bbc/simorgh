@@ -7,7 +7,11 @@ import AmpChartbeatBeacon from './amp';
 import { GetConfigProps, getConfig } from './utils';
 import { ChartbeatProps } from './types';
 
-const ChartbeatAnalytics = ({ data, sectionName }: ChartbeatProps) => {
+const ChartbeatAnalytics = ({
+  data,
+  sectionName,
+  mediaPageType,
+}: ChartbeatProps) => {
   const {
     service,
     brandName,
@@ -36,6 +40,7 @@ const ChartbeatAnalytics = ({ data, sectionName }: ChartbeatProps) => {
     mostReadTitle,
     mostWatchedTitle,
     sectionName,
+    mediaPageType,
   };
 
   const chartbeatConfig = getConfig(configDependencies);

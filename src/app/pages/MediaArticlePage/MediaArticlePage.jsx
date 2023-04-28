@@ -158,10 +158,7 @@ const MediaArticlePage = ({ pageData }) => {
   return (
     <div css={styles.pageWrapper}>
       <ATIAnalytics data={pageData} />
-      <ChartbeatAnalytics
-        data={pageData}
-        sectionName={pageData?.relatedContent?.section?.name}
-      />
+      <ChartbeatAnalytics data={pageData} />
       <ComscoreAnalytics />
       <NielsenAnalytics />
       <ArticleMetadata

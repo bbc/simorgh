@@ -123,7 +123,7 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
 
   return (
     <Wrapper>
-      <ChartbeatAnalytics data={pageData} />
+      <ChartbeatAnalytics data={pageData} mediaPageType="TV" />
       <ATIAnalytics data={pageData} />
       <ComscoreAnalytics />
       <MetadataContainer
