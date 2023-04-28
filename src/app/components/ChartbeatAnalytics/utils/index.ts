@@ -202,8 +202,6 @@ export interface GetConfigProps {
   origin: string;
   previousPath: string | null;
   chartbeatDomain: string;
-  mostReadTitle?: string;
-  mostWatchedTitle?: string;
   sectionName?: string;
   mediaPageType?: string;
   categoryName?: string;
@@ -253,8 +251,6 @@ export const getConfig = ({
   });
 
   const cookie = getSylphidCookie();
-
-  const type = getType(pageType) as string;
 
   const currentPath = onClient() && window.location.pathname;
 
