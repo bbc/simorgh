@@ -4,8 +4,6 @@ exports[`Canonical Topic Page A11y I can see the skip to content link 1`] = `"Wa
 
 exports[`Canonical Topic Page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=70&amp;p=pidgin.topics.c95y35941vrt.page&amp;x1=[urn%3Abbc%3Atipo%3Atopic%3Ac95y35941vrt]&amp;x2=[responsive]&amp;x3=[news-pidgin]&amp;x4=[pcm]&amp;x7=[index-category]&amp;x8=[simorgh-nojs]&amp;x9=[Donald%2520Trump]\\"/>"`;
 
-exports[`Canonical Topic Page Analytics Chartbeat 1`] = `"Chartbeat not configured"`;
-
 exports[`Canonical Topic Page Footer Anchors should match text and url 1`] = `
 Object {
   "text": "BBC News, Pidgin",
