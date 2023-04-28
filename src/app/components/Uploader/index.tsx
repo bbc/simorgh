@@ -27,7 +27,7 @@ const Uploader = ({ blocks }: UploaderProps) => {
   const { dir } = useContext(ServiceContext);
   const isRtl = dir === 'rtl';
 
-  if (!blocks) return null;
+  if (!blocks || !blocks.length) return null;
 
   const type = path([0, 'type'], blocks); // aresUploader
   if (type !== 'aresUploader') return null;
