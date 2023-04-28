@@ -3,6 +3,7 @@ import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import { variantSanitiser } from '#lib/utilities/variantHandler';
 import isAmpPath from '#app/routes/utils/isAmpPath';
+import isAppPath from '#app/routes/utils/isAppPath';
 import routes from '#app/routes';
 import fallbackServiceParam from './fallbackServiceParam';
 
@@ -14,6 +15,7 @@ const getRouteProps = url => {
   const params = pathOr({}, ['params'], match);
 
   const amp = path(['amp'], params);
+  const app = path(['app'], params);
   const service = path(['service'], params);
   const variantPath = path(['variant'], params);
   const id = path(['id'], params);
@@ -23,6 +25,7 @@ const getRouteProps = url => {
 
   return {
     isAmp: 'amp' in params ? !!amp : isAmpPath(url),
+    isApp: 'app' in params ? !!app : isAppPath(url),
     service: service || fallbackServiceParam(url),
     variant,
     id,
