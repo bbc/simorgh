@@ -1,6 +1,6 @@
 /**
  * @service pidgin
- * @pathname /pidgin/articles/cvpde7nqj92o
+ * @pathname /pidgin/articles/cw0x29n2pvqo
  */
 
 import runAmpTests from '../ampTests';
