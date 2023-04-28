@@ -241,6 +241,7 @@ describe('Chartbeat utilities', () => {
       ${MOST_WATCHED_PAGE}  | ${'Most Watched Page Title'}  | ${'BBC News Pidgin'} | ${'Most Watched Page Title - BBC News Pidgin'}
       ${TOPIC_PAGE}         | ${'Topic Page Title'}         | ${'BBC News Pidgin'} | ${'Topic Page Title - BBC News Pidgin'}
       ${LIVE_PAGE}          | ${'Live Page Title'}          | ${'BBC News Pidgin'} | ${'Live Page Title - BBC News Pidgin'}
+      ${MEDIA_PAGE}         | ${'Media Page Title'}         | ${'BBC News Pidgin'} | ${'Media Page Title - BBC News Pidgin'}
       ${'index'}            | ${'index Page Title'}         | ${'BBC News Pidgin'} | ${'index Page Title - BBC News Pidgin'}
     `(
       'should return correct title when pageType is $pageType and brandName is $brandName',
@@ -256,7 +257,6 @@ describe('Chartbeat utilities', () => {
       ${MEDIA_ASSET_PAGE}   | ${'MAP Page Title'}           | ${'MAP Page Title'}
       ${ARTICLE_PAGE}       | ${'Article Page Title'}       | ${'Article Page Title'}
       ${MEDIA_ARTICLE_PAGE} | ${'Media Article Page Title'} | ${'Media Article Page Title'}
-      ${MEDIA_PAGE}         | ${'Media Page Title'}         | ${'Media Page Title'}
       ${'unknown'}          | ${'Unknown Page Title'}       | ${'Unknown Page Title'}
     `(
       'should return correct title when pageType is $pageType',
@@ -375,7 +375,7 @@ describe('Chartbeat utilities', () => {
           mediaPageType: 'Radio',
           contentType: 'player-live',
           title: 'Live Radio Page Title',
-          brandName: '',
+          brandName: 'BBC News Korean',
           chartbeatDomain: 'korean.bbc.co.uk',
           env: 'test',
           service: 'korean',
@@ -389,7 +389,7 @@ describe('Chartbeat utilities', () => {
             bbc_hid: 'foobar',
           },
           sections: 'Korean, Korean - Radio',
-          title: 'Live Radio Page Title',
+          title: 'Live Radio Page Title - BBC News Korean',
           contentType: 'player-live',
           uid: 50924,
           virtualReferrer: `\${documentReferrer}`,
@@ -634,7 +634,7 @@ describe('Chartbeat utilities', () => {
         platform: 'amp',
         pageType: MEDIA_PAGE,
         mediaPageType: 'Radio',
-        brandName: '',
+        brandName: 'BBC News Korean',
         contentType: 'player-episode',
         chartbeatDomain: 'korean.bbc.co.uk',
         env: 'live',
@@ -650,7 +650,7 @@ describe('Chartbeat utilities', () => {
           bbc_hid: 'foobar',
         },
         sections: 'Korean, Korean - Radio',
-        title: 'OnDemand Radio Page Title',
+        title: 'OnDemand Radio Page Title - BBC News Korean',
         contentType: 'player-episode',
         uid: 50924,
         virtualReferrer: `\${documentReferrer}`,
@@ -665,7 +665,7 @@ describe('Chartbeat utilities', () => {
         platform: 'amp',
         pageType: MEDIA_PAGE,
         mediaPageType: 'TV',
-        brandName: '',
+        brandName: 'BBC News Korean',
         chartbeatDomain: 'pashto.bbc.co.uk',
         contentType: 'player-episode',
         env: 'live',
@@ -681,7 +681,7 @@ describe('Chartbeat utilities', () => {
           bbc_hid: 'foobar',
         },
         sections: 'Pashto, Pashto - TV',
-        title: 'OnDemand TV Page Title',
+        title: 'OnDemand TV Page Title - BBC News Korean',
         contentType: 'player-episode',
         uid: 50924,
         virtualReferrer: `\${documentReferrer}`,
@@ -696,7 +696,7 @@ describe('Chartbeat utilities', () => {
         platform: 'canonical',
         pageType: MEDIA_PAGE,
         mediaPageType: 'TV',
-        brandName: '',
+        brandName: 'BBC News Korean',
         chartbeatDomain: 'pashto.bbc.co.uk',
         contentType: 'player-episode',
         env: 'live',
@@ -712,7 +712,7 @@ describe('Chartbeat utilities', () => {
           bbc_hid: 'foobar',
         },
         sections: 'Pashto, Pashto - TV',
-        title: 'OnDemand TV Page Title',
+        title: 'OnDemand TV Page Title - BBC News Korean',
         type: 'player-episode',
         uid: 50924,
         virtualReferrer: 'bbc.com/previous-path',
@@ -729,7 +729,7 @@ describe('Chartbeat utilities', () => {
         platform: 'canonical',
         pageType: MEDIA_PAGE,
         mediaPageType: 'Podcasts',
-        brandName: '',
+        brandName: 'BBC News Arabic',
         chartbeatDomain: 'arabic.bbc.co.uk',
         contentType: 'player-episode',
         env: 'live',
@@ -745,7 +745,7 @@ describe('Chartbeat utilities', () => {
           bbc_hid: 'foobar',
         },
         sections: 'Arabic, Arabic - Podcasts',
-        title: 'Podcast Page Title',
+        title: 'Podcast Page Title - BBC News Arabic',
         type: 'player-episode',
         uid: 50924,
         virtualReferrer: 'bbc.com/previous-path',
