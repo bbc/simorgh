@@ -197,6 +197,12 @@ describe('Chartbeat utilities', () => {
         description: 'should return expected section for topic page',
         expected: 'Mundo, Mundo - Topics',
       },
+      {
+        service: 'news',
+        pageType: null,
+        description: 'should not append pageType if not present',
+        expected: 'News',
+      },
     ];
 
     sectionFixtures.forEach(
@@ -226,26 +232,6 @@ describe('Chartbeat utilities', () => {
   });
 
   describe('Chartbeat Title', () => {
-    it('should return correct title when pageType is mostRead', () => {
-      const pageType = MOST_READ_PAGE;
-      const brandName = 'BBC News 코리아';
-      const title = 'TOP 뉴스';
-
-      expect(getTitle({ pageType, brandName, title })).toBe(
-        'TOP 뉴스 - BBC News 코리아',
-      );
-    });
-
-    it('should return correct title when pageType is mostWatched', () => {
-      const pageType = MOST_WATCHED_PAGE;
-      const brandName = 'BBC News Afaan Oromoo';
-      const title = 'Hedduu kan ilaalaman';
-
-      expect(getTitle({ pageType, brandName, title })).toBe(
-        'Hedduu kan ilaalaman - BBC News Afaan Oromoo',
-      );
-    });
-
     test.each`
       pageType              | title                         | brandName            | expected
       ${FRONT_PAGE}         | ${'Front Page Title'}         | ${'BBC News Pidgin'} | ${'Front Page Title - BBC News Pidgin'}
@@ -256,7 +242,6 @@ describe('Chartbeat utilities', () => {
       ${TOPIC_PAGE}         | ${'Topic Page Title'}         | ${'BBC News Pidgin'} | ${'Topic Page Title - BBC News Pidgin'}
       ${LIVE_PAGE}          | ${'Live Page Title'}          | ${'BBC News Pidgin'} | ${'Live Page Title - BBC News Pidgin'}
       ${'index'}            | ${'index Page Title'}         | ${'BBC News Pidgin'} | ${'index Page Title - BBC News Pidgin'}
-      ${MEDIA_PAGE}         | ${'Media Page Title'}         | ${'BBC News Pidgin'} | ${'Media Page Title - BBC News Pidgin'}
     `(
       'should return correct title when pageType is $pageType and brandName is $brandName',
       ({ pageType, title, brandName, expected }) => {
@@ -271,6 +256,8 @@ describe('Chartbeat utilities', () => {
       ${MEDIA_ASSET_PAGE}   | ${'MAP Page Title'}           | ${'MAP Page Title'}
       ${ARTICLE_PAGE}       | ${'Article Page Title'}       | ${'Article Page Title'}
       ${MEDIA_ARTICLE_PAGE} | ${'Media Article Page Title'} | ${'Media Article Page Title'}
+      ${MEDIA_PAGE}         | ${'Media Page Title'}         | ${'Media Page Title'}
+      ${'unknown'}          | ${'Unknown Page Title'}       | ${'Unknown Page Title'}
     `(
       'should return correct title when pageType is $pageType',
       ({ pageType, title, expected }) => {
@@ -292,6 +279,7 @@ describe('Chartbeat utilities', () => {
           service: 'news',
           origin: 'bbc.com',
           previousPath: '/previous-path',
+          contentType: 'New Article',
         };
 
         const expectedConfig = {
@@ -330,7 +318,7 @@ describe('Chartbeat utilities', () => {
           },
           path: '/',
           sections: 'News, News - IDX',
-          title: 'This is an index page title',
+          title: 'This is an index page title - BBC-News',
           type: 'Index',
           uid: 50924,
           useCanonical: true,
@@ -385,6 +373,7 @@ describe('Chartbeat utilities', () => {
           platform: 'amp',
           pageType: MEDIA_PAGE,
           mediaPageType: 'Radio',
+          contentType: 'player-live',
           title: 'Live Radio Page Title',
           brandName: '',
           chartbeatDomain: 'korean.bbc.co.uk',
@@ -478,6 +467,7 @@ describe('Chartbeat utilities', () => {
 
     describe('Chartbeat Media Article Page - article-sfv', () => {
       it("should have 'video' in its identifier when the primary media type is video", () => {
+        // @ts-expect-error testing partial data to ensure behaviour is as expected
         const fixtureData: GetConfigProps = {
           pageType: MEDIA_ARTICLE_PAGE,
           taggings: [
@@ -493,13 +483,6 @@ describe('Chartbeat utilities', () => {
             },
           ],
           service: 'pidgin',
-          isAmp: false,
-          platform: 'canonical',
-          brandName: '',
-          env: 'live',
-          origin: '',
-          previousPath: null,
-          chartbeatDomain: '',
           title: 'Media Article with video Page title',
         };
 
@@ -652,6 +635,7 @@ describe('Chartbeat utilities', () => {
         pageType: MEDIA_PAGE,
         mediaPageType: 'Radio',
         brandName: '',
+        contentType: 'player-episode',
         chartbeatDomain: 'korean.bbc.co.uk',
         env: 'live',
         service: 'korean',
@@ -683,6 +667,7 @@ describe('Chartbeat utilities', () => {
         mediaPageType: 'TV',
         brandName: '',
         chartbeatDomain: 'pashto.bbc.co.uk',
+        contentType: 'player-episode',
         env: 'live',
         service: 'pashto',
         origin: 'bbc.com',
@@ -713,6 +698,7 @@ describe('Chartbeat utilities', () => {
         mediaPageType: 'TV',
         brandName: '',
         chartbeatDomain: 'pashto.bbc.co.uk',
+        contentType: 'player-episode',
         env: 'live',
         service: 'pashto',
         origin: 'bbc.com',
@@ -745,6 +731,7 @@ describe('Chartbeat utilities', () => {
         mediaPageType: 'Podcasts',
         brandName: '',
         chartbeatDomain: 'arabic.bbc.co.uk',
+        contentType: 'player-episode',
         env: 'live',
         service: 'arabic',
         origin: 'bbc.com',
@@ -775,7 +762,7 @@ describe('Chartbeat utilities', () => {
         isAmp: false,
         platform: 'canonical',
         pageType: TOPIC_PAGE,
-        title: 'Topics',
+        title: 'Topics Page Title',
         brandName: 'BBC News Pidgin',
         env: 'test',
         service: 'pidgin',
@@ -791,7 +778,7 @@ describe('Chartbeat utilities', () => {
         path: '/',
         sections: 'Pidgin, Pidgin - Topics',
         type: 'Topics',
-        title: 'Topic Page Title - BBC News Pidgin',
+        title: 'Topics Page Title - BBC News Pidgin',
         uid: 50924,
         useCanonical: true,
         virtualReferrer: 'test.bbc.com/previous-path',
@@ -805,7 +792,7 @@ describe('Chartbeat utilities', () => {
         isAmp: false,
         platform: 'canonical',
         pageType: TOPIC_PAGE,
-        title: 'Topics',
+        title: 'Topics Page Title',
         brandName: 'BBC News Pidgin',
         chartbeatDomain: 'pidgin.bbc.co.uk',
         env: 'live',
@@ -904,7 +891,7 @@ describe('Chartbeat utilities', () => {
         service: 'persian',
         origin: 'test.bbc.com',
         previousPath: '/previous-path',
-        title: 'Index',
+        title: 'This is an index page title',
       };
 
       const expectedConfig = {
@@ -914,7 +901,7 @@ describe('Chartbeat utilities', () => {
         },
         path: '/',
         sections: 'Persian, Persian - IDX',
-        title: 'This is an index page title',
+        title: 'This is an index page title - BBC-Persian',
         type: 'Index',
         uid: 50924,
         useCanonical: true,
@@ -950,7 +937,7 @@ describe('Chartbeat utilities', () => {
         },
         path: '/',
         sections: 'Afrique, Afrique - FIX',
-        title: 'This is a Feature Index page title',
+        title: 'This is a Feature Index page title - BBC-Afique',
         type: 'FIX',
         uid: 50924,
         useCanonical: true,
@@ -986,7 +973,7 @@ describe('Chartbeat utilities', () => {
         },
         path: '/',
         sections: 'Persian, Persian - IDX',
-        title: 'This is an index page title',
+        title: 'This is an index page title - BBC-Persian',
         type: 'Index',
         uid: 50924,
         useCanonical: true,

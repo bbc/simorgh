@@ -254,6 +254,11 @@ export const getConfig = ({
 
   const currentPath = onClient() && window.location.pathname;
 
+  if (!contentType) {
+    // eslint-disable-next-line no-param-reassign
+    contentType = getType(pageType) as string;
+  }
+
   return {
     domain,
     sections,

@@ -315,7 +315,6 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
       />
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics
-        data={pageData}
         sectionName={pageData?.relatedContent?.section?.name}
         categoryName={pageData?.metadata?.passport?.category?.categoryName}
         title={title}

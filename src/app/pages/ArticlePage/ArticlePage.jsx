@@ -183,12 +183,11 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
 
   return (
     <div css={styles.pageWrapper}>
-      <ATIAnalytics
-        data={pageData}
+      <ATIAnalytics data={pageData} />
+      <ChartbeatAnalytics
         sectionName={pageData?.relatedContent?.section?.name}
         title={getPromoHeadline(pageData)}
       />
-      <ChartbeatAnalytics data={pageData} />
       <ComscoreAnalytics />
       <NielsenAnalytics />
       <ArticleMetadata

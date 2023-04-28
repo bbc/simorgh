@@ -27,10 +27,13 @@ export interface AmpChartbeatProps {
 }
 
 export interface ChartbeatProps {
-  data?: object;
   sectionName?: string;
   mediaPageType?: string;
   categoryName?: string;
-  producer?: string;
   title: string;
+  taggings?: {
+    predicate: string;
+    value: string;
+  }[];
+  contentType?: string;
 }

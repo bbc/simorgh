@@ -116,7 +116,7 @@ exports[`AMP On Demand Audio Page Analytics chartbeat 1`] = `
 Object {
   "vars": Object {
     "contentType": "player-episode",
-    "doain": "test.bbc.co.uk",
+    "domain": "test.bbc.co.uk",
     "sections": "Indonesia, Indonesia - Radio",
     "title": "Dunia Pagi Ini - BBC News Indonesia",
     "uid": 50924,

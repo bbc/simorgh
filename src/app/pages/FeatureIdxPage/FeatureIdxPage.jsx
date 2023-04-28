@@ -42,9 +42,9 @@ const FeatureIdxPage = ({ pageData }) => {
       {shouldBootstrapCanonicalAds && <CanonicalAdBootstrapJs />}
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics
-        data={pageData}
         sectionName={pageData?.relatedContent?.section?.name}
         categoryName={pageData?.metadata?.passport?.category?.categoryName}
+        title={title}
       />
       <ComscoreAnalytics />
       <MetadataContainer
