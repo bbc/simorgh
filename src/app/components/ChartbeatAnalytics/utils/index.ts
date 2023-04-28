@@ -102,8 +102,13 @@ interface SectionsProps {
 const AUDIO_KEY = 'fe1fbc8a-bb44-4bf8-8b12-52e58c6345a4';
 const VIDEO_KEY = 'ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f';
 
-const getPrimaryMediaType = (taggings: Taggings) => {
+const getPrimaryMediaType = (taggings?: Taggings) => {
   const defaultLabel = 'article-sfv';
+
+  if (!taggings || taggings.length === 0) {
+    return defaultLabel;
+  }
+
   // FIND THE primaryMediaType ELEMENT IN THE LIST OF TAGGINGS
   const primaryMediaTag = find(
     propSatisfies(includes('primaryMediaType'), 'predicate'),
