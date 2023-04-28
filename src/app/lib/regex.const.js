@@ -1,5 +1,6 @@
 const regexes = {
-  AMP_REGEX: /\.amp$/,
+  AMP_REGEX: /\.ampp$/,
+  APP_REGEX: /\.app$/,
   TLD_REGEX: /(\.com|\.co\.uk)/g,
 };
 
