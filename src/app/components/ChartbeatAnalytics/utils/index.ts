@@ -94,9 +94,9 @@ interface SectionsProps {
   producer?: string | null;
   chapter?: string | null;
   sectionName?: string;
-  categoryName: string;
-  mediaPageType: string;
-  taggings: Taggings;
+  categoryName?: string;
+  mediaPageType?: string;
+  taggings?: Taggings;
 }
 
 const AUDIO_KEY = 'fe1fbc8a-bb44-4bf8-8b12-52e58c6345a4';
@@ -155,19 +155,23 @@ export const buildSections = ({
               pageType,
             )
           : []),
-        buildSectionItem(service, appendCategory(categoryName)),
+        ...(categoryName
+          ? buildSectionItem(service, appendCategory(categoryName))
+          : []),
       ].join(', ');
     case MEDIA_PAGE:
       return [
         capitalize(service),
-        buildSectionItem(service, mediaSectionLabel[mediaPageType]),
+        ...(mediaPageType
+          ? buildSectionItem(service, mediaSectionLabel[mediaPageType])
+          : []),
         ...(addProducer ? buildSectionArr(service, producer, type) : []),
         ...(chapter ? buildSectionArr(service, chapter, type) : []),
       ].join(', ');
     case MEDIA_ARTICLE_PAGE:
       return [
         capitalize(service),
-        ...(pageType
+        ...(taggings
           ? buildSectionItem(service, getPrimaryMediaType(taggings))
           : []),
         ...(addProducer ? buildSectionArr(service, producer, type) : []),
@@ -176,7 +180,7 @@ export const buildSections = ({
     default:
       return [
         capitalize(service),
-        ...(pageType ? buildSectionItem(service, type) : []),
+        ...(type ? buildSectionItem(service, type) : []),
         ...(addProducer ? buildSectionArr(service, producer, type) : []),
         ...(chapter ? buildSectionArr(service, chapter, type) : []),
       ].join(', ');
@@ -273,14 +277,11 @@ export const getConfig = ({
     title: pageType === MOST_WATCHED_PAGE ? mostWatchedTitle : mostReadTitle,
   }) as string;
   const domain = env !== 'live' ? 'test.bbc.co.uk' : chartbeatDomain;
-  const sectionName = path<string>(
-    ['relatedContent', 'section', 'name'],
-    data,
-  ) as string;
-  const categoryName = path(
+  const sectionName = path<string>(['relatedContent', 'section', 'name'], data);
+  const categoryName = path<string>(
     ['metadata', 'passport', 'category', 'categoryName'],
     data,
-  ) as string;
+  );
 
   const mediaPageType = pathOr('', ['metadata', 'type'], data);
   const taggings = pathOr([], ['metadata', 'passport', 'taggings'], data);

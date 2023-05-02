@@ -281,9 +281,7 @@ describe('Chartbeat utilities', () => {
               producer,
               chapter,
               sectionName,
-              // @ts-expect-error allow null values for category name to ensure correct behaviour
               categoryName,
-              // @ts-expect-error allow null values for media page type to ensure correct behaviour
               mediaPageType,
             }),
           ).toBe(expected);
