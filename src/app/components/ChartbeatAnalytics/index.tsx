@@ -48,6 +48,7 @@ const ChartbeatAnalytics = ({
       // @ts-expect-error ignoring: Argument of type of chartbeatConfig is not assignable to parameter of type SetStateAction<null> -> provides no match for the signature '(prevState: null): null'.
       sendCanonicalChartbeatBeacon(chartbeatConfig);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [
     title,
     contentType,
@@ -55,8 +56,6 @@ const ChartbeatAnalytics = ({
     mediaPageType,
     taggings,
     isCanonicalAndEnabled,
-    sendCanonicalChartbeatBeacon,
-    chartbeatConfig,
   ]);
 
   return isAmpAndEnabled ? (
