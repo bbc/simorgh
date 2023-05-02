@@ -4,7 +4,7 @@ import Url from 'url-parse';
 import getEnvironment from '#app/routes/utils/getEnvironment';
 import fetchPageData from '../../utils/fetchPageData';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
-import constructBffUrl from '../../utils/constructBffUrl';
+import constructPageFetchUrl from '../../utils/constructBffUrl';
 
 const logger = nodeLogger(__filename);
 
@@ -21,8 +21,13 @@ export default async ({ getAgent, service, path: pathname, variant, page }) => {
 
     const agent = isLocal ? null : await getAgent();
 
-    const urlParams = { pathname, pageType: 'topic', service, variant, page };
-    const fetchUrl = constructBffUrl(urlParams);
+    const fetchUrl = constructPageFetchUrl({
+      pathname,
+      pageType: 'topic',
+      service,
+      variant,
+      page,
+    });
 
     const serviceEnv = getServiceEnv(pathname);
     const optHeaders = isLocal ? null : { 'ctx-service-env': serviceEnv };

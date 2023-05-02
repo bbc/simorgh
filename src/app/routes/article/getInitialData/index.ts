@@ -5,7 +5,7 @@ import getEnvironment from '#app/routes/utils/getEnvironment';
 import nodeLogger from '../../../lib/logger.node';
 import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
 import fetchPageData from '../../utils/fetchPageData';
-import constructBffUrl from '../../utils/constructBffUrl';
+import constructPageFetchUrl from '../../utils/constructBffUrl';
 import handleError from '../../utils/handleError';
 import { Services, Variants } from '../../../models/types/global';
 import getOnwardsPageData from '../utils/getOnwardsData';
@@ -34,8 +34,13 @@ export default async ({
 
     const agent = !isLocal ? await getAgent() : null;
 
-    const urlParams = { pathname, pageType, service, variant };
-    const fetchUrl = constructBffUrl(urlParams);
+    const fetchUrl = constructPageFetchUrl({
+      pathname,
+      pageType,
+      service,
+      variant,
+    });
+
     const optHeaders = { 'ctx-service-env': env };
 
     // @ts-ignore - Ignore fetchPageData argument types

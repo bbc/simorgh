@@ -3,6 +3,15 @@ import pipe from 'ramda/src/pipe';
 import getEnvironment from '#app/routes/utils/getEnvironment';
 import { getUrlPath } from '../../../lib/utilities/urlParser';
 import handleError from '../handleError';
+import { Services, Variants } from '../../../models/types/global';
+
+interface UrlConstructParams {
+  pathname: string;
+  pageType: 'article' | 'cpsAsset' | 'topic';
+  service: Services;
+  variant?: Variants;
+  page?: string;
+}
 
 const removeAmp = (path: string) => path.split('.')[0];
 const getOptimoId = (path: string) => path.match(/(c[a-zA-Z0-9]{10}o)/)?.[1];
@@ -11,13 +20,13 @@ const getCpsId = (path: string) => path;
 const getId = (pageType: string) =>
   pipe(getUrlPath, removeAmp, pageType === 'cpsAsset' ? getCpsId : getOptimoId);
 
-const constructBffUrl = ({
+const constructPageFetchUrl = ({
   pathname,
   pageType = 'topic',
   service,
   variant,
-  page = {},
-}) => {
+  page,
+}: UrlConstructParams) => {
   const env = getEnvironment(pathname);
   const isLocal = !env || env === 'local';
 
@@ -64,4 +73,4 @@ const constructBffUrl = ({
   return fetchUrl;
 };
 
-export default constructBffUrl;
+export default constructPageFetchUrl;
