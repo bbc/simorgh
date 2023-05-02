@@ -23,9 +23,11 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
   let articlesData;
   describe(`Running testsForAMPOnly for ${service} ${pageType}`, () => {
     before(() => {
-      cy.getPageData(service, pageType, variant).then(({ body }) => {
-        articlesData = body;
-      });
+      cy.getPageData({ service, pageType: 'article', variant }).then(
+        ({ body }) => {
+          articlesData = body;
+        },
+      );
     });
 
     it('should contain an amp-img', () => {

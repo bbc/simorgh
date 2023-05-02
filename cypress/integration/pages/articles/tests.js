@@ -35,9 +35,11 @@ export const testsThatFollowSmokeTestConfig = ({
   let articlesData;
   describe(`Running tests for ${service} ${pageType}`, () => {
     before(() => {
-      cy.getPageData(service, pageType, variant).then(({ body }) => {
-        articlesData = body;
-      });
+      cy.getPageData({ service, pageType: 'article', variant }).then(
+        ({ body }) => {
+          articlesData = body;
+        },
+      );
     });
 
     describe(`Metadata`, () => {

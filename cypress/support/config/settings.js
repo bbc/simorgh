@@ -8927,7 +8927,7 @@ module.exports = () => ({
     name: 'ukrainian',
     font: undefined,
     isWorldService: true,
-    variant: 'ru-UA',
+    variant: 'default',
     pageTypes: {
       idxPage: {
         environments: {

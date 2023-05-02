@@ -85,25 +85,25 @@ Cypress.Commands.add(
 );
 Cypress.Commands.add(
   'getPageData',
-  (service, pageType, variant = 'default', urlOverride) => {
+  ({ service, pageType, variant = 'default', ctxServiceEnv, id }) => {
     const env = Cypress.env('APP_ENV');
     if (env !== 'local') {
-      const articleId =
-        urlOverride || pageType === 'storyPage'
+      ctxServiceEnv = ctxServiceEnv || env;
+      id =
+        id ||
+        (pageType === 'cpsAsset'
           ? Cypress.env('currentPath')
-          : Cypress.env('currentPath').match(/(c[a-zA-Z0-9]{10}o)/)?.[1];
+          : Cypress.env('currentPath').match(/(c[a-zA-Z0-9]{10}(o|t))/)?.[1]);
       const bffUrl = `https://web-cdn.${
         env === 'live' ? '' : `${env}.`
-      }api.bbci.co.uk/fd/simorgh-bff?pageType=${
-        pageType === 'storyPage' ? 'cpsAsset' : 'article'
-      }&id=${articleId}&service=${service}${
-        variant ? `&variant=${variant}` : ''
+      }api.bbci.co.uk/fd/simorgh-bff?pageType=${pageType}&id=${id}&service=${service}${
+        variant !== 'default' ? `&variant=${variant}` : ''
       }`;
       return cy.request({
         url: bffUrl,
-        headers: { 'ctx-service-env': env },
+        headers: { 'ctx-service-env': ctxServiceEnv },
       });
     }
-    return cy.request(`${urlOverride || Cypress.env('currentPath')}.json`);
+    return cy.request(`${Cypress.env('currentPath')}.json`);
   },
 );

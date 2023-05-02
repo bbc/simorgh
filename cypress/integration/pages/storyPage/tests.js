@@ -17,7 +17,7 @@ export const testsThatFollowSmokeTestConfig = ({
 }) => {
   describe(`testsThatFollowSmokeTestConfig to run for ${service} ${pageType}`, () => {
     it('should render a description for the page', () => {
-      cy.getPageData(service, pageType).then(({ body }) => {
+      cy.getPageData({ service, pageType: 'cpsAsset' }).then(({ body }) => {
         const descriptionBlock = (
           Cypress.env('APP_ENV') !== 'local'
             ? body.data.article.content.blocks
@@ -36,7 +36,7 @@ export const testsThatFollowSmokeTestConfig = ({
     });
 
     it('should render paragraph text for the page', () => {
-      cy.getPageData(service, pageType).then(({ body }) => {
+      cy.getPageData({ service, pageType: 'cpsAsset' }).then(({ body }) => {
         const paragraphBlock = (
           Cypress.env('APP_ENV') !== 'local'
             ? body.data.article.content.blocks

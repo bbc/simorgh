@@ -31,19 +31,19 @@ export default ({ service, pageType, variant }) => {
           }
         }
 
-        const requestObject = {
-          method: 'GET',
-          url: `https://web-cdn.${
-            env === 'live' ? '' : `${env}.`
-          }api.bbci.co.uk/fd/simorgh-bff?page=1&id=${topicId}&service=${service}${appendVariant}&pageType=topic`,
-        };
-
-        if (Cypress.env('currentPath').includes('?renderer_env=test')) {
-          requestObject.headers = { 'ctx-service-env': 'test' };
-        }
+        const ctxServEnv = Cypress.env('currentPath').includes(
+          '?renderer_env=test',
+        )
+          ? 'test'
+          : 'live';
 
         // Gets the topic page data for all the tests
-        cy.request(requestObject).then(({ body }) => {
+        cy.getPageData({
+          service,
+          pageType: 'topic',
+          variant: variant,
+          ctxServiceEnv: ctxServEnv,
+        }).then(({ body }) => {
           topicTitle = body.data.title;
           variantTopicId = body.data.variantTopicId;
           pageCount = body.data.pageCount;
@@ -57,7 +57,6 @@ export default ({ service, pageType, variant }) => {
         });
         cy.log(`topic id ${topicId}`);
       }
-      cy.clearLocalStorage();
     });
 
     describe(`Page content`, () => {
