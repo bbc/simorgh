@@ -9,6 +9,8 @@ import {
 import Image from '.';
 import BASE64_PLACEHOLDER_IMAGE from './base64Placeholder';
 
+import { SHADOW } from '../ThemeProvider/palette';
+
 const removeStyles = (el: HTMLElement) => {
   const dom = new JSDOM(el.innerHTML.replace(/class=".+?"/gm, ''));
 
@@ -132,6 +134,15 @@ describe('Image - Canonical', () => {
     const imageEl = screen.getByAltText('Test image alt text');
     expect(imageEl.parentNode?.parentNode).toHaveStyle({
       backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
+    });
+  });
+
+  it('should render a placeholder image when placeholder is true', () => {
+    render(<Fixture darkPlaceholder />);
+    const imageEl = screen.getByAltText('Test image alt text');
+    expect(imageEl.parentNode?.parentNode).toHaveStyle({
+      backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
+      backgroundColor: SHADOW,
     });
   });
 
@@ -312,6 +323,15 @@ describe('Image - AMP pages', () => {
     const imageEl = screen.getAllByAltText('Test image alt text')[0];
     expect(imageEl.parentNode).toHaveStyle({
       backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
+    });
+  });
+
+  it('should render a dark placeholder image when darkPlaceholder is true', () => {
+    render(<Fixture isAmp darkPlaceholder />);
+    const imageEl = screen.getAllByAltText('Test image alt text')[0];
+    expect(imageEl.parentNode).toHaveStyle({
+      backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
+      backgroundColor: SHADOW,
     });
   });
 
