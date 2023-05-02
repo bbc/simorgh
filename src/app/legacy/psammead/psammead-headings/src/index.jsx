@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { shape, string, bool } from 'prop-types';
+import { shape, string } from 'prop-types';
 import {
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
@@ -19,8 +19,8 @@ import {
 export const Headline = styled.h1`
   ${({ script }) => script && getCanon(script)};
   ${({ service }) => getSerifMedium(service)}
-  color: ${({ darkMode, theme }) =>
-    darkMode || theme.isDarkUi ? theme.palette.GREY_2 : theme.palette.GREY_10};
+  color: ${({ theme }) =>
+    theme.isDarkUi ? theme.palette.GREY_2 : theme.palette.GREY_10};
   display: block; /* Explicitly set */
   margin: 0; /* Reset */
   padding: ${GEL_SPACING_QUAD} 0;
@@ -32,18 +32,13 @@ export const Headline = styled.h1`
 Headline.propTypes = {
   script: shape(scriptPropType).isRequired,
   service: string.isRequired,
-  darkMode: bool,
-};
-
-Headline.defaultProps = {
-  darkMode: false,
 };
 
 export const SubHeading = styled.h2`
   ${({ script }) => script && getTrafalgar(script)};
   ${({ service }) => getSansBold(service)}
-  color: ${({ darkMode, theme }) =>
-    darkMode || theme.isDarkUi ? theme.palette.GREY_2 : theme.palette.GREY_10};
+  color: ${({ theme }) =>
+    theme.isDarkUi ? theme.palette.GREY_2 : theme.palette.GREY_10};
   margin: 0; /* Reset */
   padding: ${GEL_SPACING_TRPL} 0;
   ${MEDIA_QUERY_TYPOGRAPHY.LAPTOP_AND_LARGER} {
@@ -54,10 +49,8 @@ export const SubHeading = styled.h2`
 SubHeading.propTypes = {
   script: shape(scriptPropType).isRequired,
   service: string.isRequired,
-  darkMode: bool,
 };
 
 SubHeading.defaultProps = {
-  darkMode: false,
   tabIndex: '-1',
 };

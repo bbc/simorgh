@@ -16,4 +16,13 @@ describe('VisuallyHiddenText', () => {
     );
     expect(container.firstChild).toMatchSnapshot();
   });
+
+  it('should render off screen text for screen readers as an h1 with lang as en-GB', () => {
+    const { container } = render(
+      <VisuallyHiddenText as="h1" lang="en-GB">
+        Some offscreen text
+      </VisuallyHiddenText>,
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
 });

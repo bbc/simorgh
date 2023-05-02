@@ -79,7 +79,8 @@ const helmetFontStyles = {
 /*
  *  BBC REITH QALAM
  */
-const reithQalamFallback = 'Arial, Verdana, Geneva, Helvetica, sans-serif;';
+const reithQalamFallback =
+  '"Times New Roman", Arial, Verdana, Geneva, Helvetica, sans-serif;';
 const reithQalamFontFamily = `font-family: "BBC Reith Qalam", ${reithQalamFallback}`;
 
 const reithQalamStyles = {

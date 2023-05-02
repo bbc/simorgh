@@ -8,7 +8,7 @@ import { UserContextProvider } from '../contexts/UserContext';
 import { EventTrackingContextProvider } from '../contexts/EventTrackingContext';
 import pageDataFixture from '../../../data/news/articles/c0g992jmmkko.json';
 import ThemeProvider from './ThemeProvider';
-import { PageTypes, Services, Variants } from '../models/types/global';
+import { PageTypes, Services, Toggles, Variants } from '../models/types/global';
 
 jest.mock('./ThemeProvider');
 
@@ -17,9 +17,10 @@ interface Props {
   isAmp?: boolean;
   pageData?: object;
   pageType?: PageTypes;
+  derivedPageType?: string | null;
   pathname?: string;
   service?: Services;
-  toggles?: Record<string, boolean>;
+  toggles?: Toggles;
   showAdsBasedOnLocation?: boolean;
   variant?: Variants;
 }
@@ -31,6 +32,7 @@ const AllTheProviders: FC<Props> = ({
   isAmp = false,
   pageData = pageDataFixture,
   pageType = 'article',
+  derivedPageType,
   pathname = '/news/articles/c0g992jmmkko',
   service = 'news',
   toggles = {},
@@ -38,24 +40,27 @@ const AllTheProviders: FC<Props> = ({
   showAdsBasedOnLocation = false,
 }: Props) => {
   return (
-    <ThemeProvider service={service} variant={variant}>
-      <ToggleContextProvider toggles={toggles}>
-        <ServiceContextProvider service={service} variant={variant}>
-          <RequestContextProvider
-            bbcOrigin="https://www.test.bbc.com"
-            pageType={pageType}
-            isAmp={isAmp}
-            service={service}
-            pathname={pathname}
-            showAdsBasedOnLocation={showAdsBasedOnLocation}
-          >
-            <EventTrackingContextProvider pageData={pageData}>
-              <UserContextProvider>{children}</UserContextProvider>
-            </EventTrackingContextProvider>
-          </RequestContextProvider>
-        </ServiceContextProvider>
-      </ToggleContextProvider>
-    </ThemeProvider>
+    <ToggleContextProvider toggles={toggles}>
+      <ServiceContextProvider service={service} variant={variant}>
+        <RequestContextProvider
+          bbcOrigin="https://www.test.bbc.com"
+          pageType={pageType}
+          isAmp={isAmp}
+          service={service}
+          pathname={pathname}
+          derivedPageType={derivedPageType}
+          showAdsBasedOnLocation={showAdsBasedOnLocation}
+        >
+          <EventTrackingContextProvider pageData={pageData}>
+            <UserContextProvider>
+              <ThemeProvider service={service} variant={variant}>
+                {children}
+              </ThemeProvider>
+            </UserContextProvider>
+          </EventTrackingContextProvider>
+        </RequestContextProvider>
+      </ServiceContextProvider>
+    </ToggleContextProvider>
   );
 };
 
@@ -67,6 +72,7 @@ const customRender = (
     isAmp,
     pageData,
     pageType,
+    derivedPageType,
     pathname,
     service,
     toggles,
@@ -80,6 +86,7 @@ const customRender = (
         isAmp={isAmp}
         pageData={pageData}
         pageType={pageType}
+        derivedPageType={derivedPageType}
         pathname={pathname}
         service={service}
         toggles={toggles}

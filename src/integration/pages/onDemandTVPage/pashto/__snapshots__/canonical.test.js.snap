@@ -55,13 +55,6 @@ Object {
 
 exports[`Canonical On Demand T V Page Footer Anchors should match text and url 8`] = `
 Object {
-  "text": "AdChoices / Do Not Sell My Info",
-  "url": "https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/",
-}
-`;
-
-exports[`Canonical On Demand T V Page Footer Anchors should match text and url 9`] = `
-Object {
   "text": "د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره.",
   "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
 }

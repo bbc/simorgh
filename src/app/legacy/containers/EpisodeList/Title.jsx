@@ -7,10 +7,8 @@ import { withEpisodeContext } from './helpers';
 const Title = styled.span`
   ${({ script }) => getPica(script)}
   ${({ service }) => getSansRegular(service)}
-  color: ${({ darkMode }) =>
-    darkMode
-      ? props => props.theme.palette.WHITE
-      : props => props.theme.palette.EBON};
+  color: ${({ theme }) =>
+    theme.isDarkUi ? theme.palette.WHITE : theme.palette.EBON};
   display: inline-block;
   width: 100%;
   font-weight: 700;

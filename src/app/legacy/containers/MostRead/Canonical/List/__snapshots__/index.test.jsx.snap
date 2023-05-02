@@ -5524,7 +5524,7 @@ exports[`MostReadList should render with rtl arabic items with correct dir 1`] =
 }
 
 .emotion-10 {
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 2rem;
@@ -5564,7 +5564,7 @@ exports[`MostReadList should render with rtl arabic items with correct dir 1`] =
 .emotion-14 {
   font-size: 0.9375rem;
   line-height: 1.5rem;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
   position: static;
