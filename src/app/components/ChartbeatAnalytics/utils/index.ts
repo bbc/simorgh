@@ -93,7 +93,7 @@ interface SectionsProps {
   pageType: PageTypes;
   producer?: string | null;
   chapter?: string | null;
-  sectionName: string;
+  sectionName?: string;
   categoryName: string;
   mediaPageType: string;
   taggings: Taggings;
@@ -147,12 +147,14 @@ export const buildSections = ({
     case MEDIA_ASSET_PAGE:
       return [
         capitalize(service),
-        buildSectionItem(service, sectionName),
+        ...(sectionName ? buildSectionItem(service, sectionName) : []),
         buildSectionItem(service, pageType),
-        buildSectionItem(
-          buildSectionItem(service, sectionName).join(', '),
-          pageType,
-        ),
+        ...(sectionName
+          ? buildSectionItem(
+              buildSectionItem(service, sectionName).join(', '),
+              pageType,
+            )
+          : []),
         buildSectionItem(service, appendCategory(categoryName)),
       ].join(', ');
     case MEDIA_PAGE:
@@ -271,7 +273,7 @@ export const getConfig = ({
     title: pageType === MOST_WATCHED_PAGE ? mostWatchedTitle : mostReadTitle,
   }) as string;
   const domain = env !== 'live' ? 'test.bbc.co.uk' : chartbeatDomain;
-  const sectionName = path(
+  const sectionName = path<string>(
     ['relatedContent', 'section', 'name'],
     data,
   ) as string;

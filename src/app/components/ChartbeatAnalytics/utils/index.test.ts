@@ -280,7 +280,6 @@ describe('Chartbeat utilities', () => {
               pageType,
               producer,
               chapter,
-              // @ts-expect-error allow null values for section name to ensure correct behaviour
               sectionName,
               // @ts-expect-error allow null values for category name to ensure correct behaviour
               categoryName,
