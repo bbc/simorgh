@@ -1,6 +1,8 @@
-import React, { useContext } from 'react';
-import { shape, arrayOf, string } from 'prop-types';
-import { useTheme } from '@emotion/react';
+/** @jsxRuntime classic */
+/** @jsx jsx */
+
+import { useContext } from 'react';
+import { jsx, useTheme } from '@emotion/react';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import pathOr from 'ramda/src/pathOr';
 import pathEq from 'ramda/src/pathEq';
@@ -14,23 +16,34 @@ import pipe from 'ramda/src/pipe';
 
 import useViewTracker from '#hooks/useViewTracker';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
-import {
-  RelatedContentGrid,
-  StyledRelatedContentSection,
-  StyledPromoItem,
-  SingleItemWrapper,
-} from './index.styles';
+import styles from './index.styles';
 import generatePromoId from '../generatePromoId';
 import RelatedContentItem from './RelatedContentItem';
+import PromoList from '../../../../legacy/components/OptimoPromos/PromoList';
+import PromoItem from '../../../../legacy/components/OptimoPromos/PromoItem/index.styles';
+import { EventTrackingData } from '../../types';
+import { OptimoBlock } from '../../../../models/types/optimo';
 
 const BLOCKS_TO_IGNORE = ['wsoj', 'mpu'];
 
 const removeCustomBlocks = pipe(
-  filter(block => !BLOCKS_TO_IGNORE.includes(block.type)),
+  filter((block: OptimoBlock) => !BLOCKS_TO_IGNORE.includes(block.type)),
   last,
 );
 
-const renderRelatedContentList = (item, index, eventTrackingData, viewRef) => {
+type RelatedContentListProps = {
+  item: object;
+  index: number;
+  eventTrackingData: EventTrackingData;
+  viewRef: React.Ref<HTMLDivElement>;
+};
+
+const renderRelatedContentList = ({
+  item,
+  index,
+  eventTrackingData,
+  viewRef,
+}: RelatedContentListProps) => {
   const assetUri = pathOr(
     '',
     [
@@ -56,18 +69,18 @@ const renderRelatedContentList = (item, index, eventTrackingData, viewRef) => {
   });
 
   return (
-    <StyledPromoItem key={ariaLabelledBy}>
+    <PromoItem css={styles.promoItem} key={ariaLabelledBy}>
       <RelatedContentItem
         item={item}
         ariaLabelledBy={ariaLabelledBy}
         ref={viewRef}
         eventTrackingData={eventTrackingData}
       />
-    </StyledPromoItem>
+    </PromoItem>
   );
 };
 
-const RelatedContentSection = ({ content }) => {
+const RelatedContentSection = ({ content }: { content: OptimoBlock[] }) => {
   const { translations, script, service } = useContext(ServiceContext);
 
   const {
@@ -80,7 +93,7 @@ const RelatedContentSection = ({ content }) => {
       componentName: 'related-content',
     },
   };
-  const eventTrackingDataSend = path(['block'], eventTrackingData);
+  const eventTrackingDataSend = path<object>(['block'], eventTrackingData);
   const viewRef = useViewTracker(eventTrackingDataSend);
 
   if (!pathEq(['type'], 'relatedContent', blocks)) return null;
@@ -133,11 +146,14 @@ const RelatedContentSection = ({ content }) => {
   });
 
   return (
-    <StyledRelatedContentSection
+    <section
+      css={styles.relatedContentSection}
       aria-labelledby={LABEL_ID}
       role="region"
       data-e2e={LABEL_ID}
     >
+      {/* // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-expect-error - TS inferring props it thinks are required  */}
       <SectionLabel
         labelId={LABEL_ID}
         backgroundColor={GREY_2}
@@ -147,36 +163,28 @@ const RelatedContentSection = ({ content }) => {
         {title}
       </SectionLabel>
       {hasSingleContent ? (
-        <SingleItemWrapper>
+        <div css={styles.singleItemWrapper}>
           <RelatedContentItem
             item={reducedStoryPromoItems[0]}
             ariaLabelledBy={ariaLabelledBy}
             ref={viewRef}
             eventTrackingData={eventTrackingData}
           />
-        </SingleItemWrapper>
+        </div>
       ) : (
-        <RelatedContentGrid>
+        <PromoList css={styles.relatedContentGrid}>
           {reducedStoryPromoItems.map((item, index) =>
-            renderRelatedContentList(item, index, eventTrackingData, viewRef),
+            renderRelatedContentList({
+              item,
+              index,
+              eventTrackingData,
+              viewRef,
+            }),
           )}
-        </RelatedContentGrid>
+        </PromoList>
       )}
-    </StyledRelatedContentSection>
+    </section>
   );
-};
-
-RelatedContentSection.propTypes = {
-  content: shape({
-    type: string,
-    model: shape({
-      blocks: arrayOf(
-        shape({
-          type: string,
-        }),
-      ),
-    }),
-  }).isRequired,
 };
 
 export default RelatedContentSection;

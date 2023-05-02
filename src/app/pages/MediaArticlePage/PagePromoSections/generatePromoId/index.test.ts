@@ -17,7 +17,7 @@ describe('generate Promo Id', () => {
       canonicalUrl,
       uri,
       contentType,
-      promoIndex,
+      index,
       expected,
     }) => {
       expect(
@@ -27,7 +27,7 @@ describe('generate Promo Id', () => {
           canonicalUrl,
           uri,
           contentType,
-          promoIndex,
+          index,
         }),
       ).toEqual(expected);
     },

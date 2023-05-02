@@ -4,15 +4,17 @@ import { useContext } from 'react';
 import { jsx } from '@emotion/react';
 import path from 'ramda/src/path';
 import isEmpty from 'ramda/src/isEmpty';
-import useViewTracker from '#hooks/useViewTracker';
-import { ServiceContext } from '#app/contexts/ServiceContext';
-import PromoItem from '#app/legacy/components/OptimoPromos/PromoItem/index.styles';
-import PromoList from '#app/legacy/components/OptimoPromos/PromoList';
+
 import SectionLabel from '#psammead/psammead-section-label/src';
+import { ServiceContext } from '../../../../contexts/ServiceContext';
+import PromoItem from '../../../../legacy/components/OptimoPromos/PromoItem/index.styles';
+import PromoList from '../../../../legacy/components/OptimoPromos/PromoList';
+import useViewTracker from '../../../../hooks/useViewTracker';
 import generatePromoId from '../generatePromoId';
 import LatestMediaItem from './LatestMediaItem';
 import styles from './index.styles';
-import { LatestMedia, TrackingBlock, EventTrackingData } from './types';
+import { LatestMedia } from './types';
+import { EventTrackingData, TrackingBlock } from '../../types';
 
 const renderLatestMediaList = (
   item: LatestMedia,

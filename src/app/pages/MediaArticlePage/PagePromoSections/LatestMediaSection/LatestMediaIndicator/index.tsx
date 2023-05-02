@@ -2,8 +2,9 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import moment from 'moment';
-import formatDuration from '#app/lib/utilities/formatDuration';
-import Promo from '#components/OptimoPromos';
+
+import Promo from '../../../../../legacy/components/OptimoPromos';
+import formatDuration from '../../../../../lib/utilities/formatDuration';
 import { LatestMediaIndicatorProp } from '../types';
 import styles from './index.styles';
 

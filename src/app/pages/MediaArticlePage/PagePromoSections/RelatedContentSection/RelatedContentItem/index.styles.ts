@@ -1,11 +1,9 @@
 import { css, Theme } from '@emotion/react';
 
-import { BORDER_SPACING } from '../../constants';
-
 export default {
   wrapper: () =>
     css({
-      border: `${BORDER_SPACING} solid transparent`,
+      border: '0.1875rem solid transparent',
       height: '100%',
     }),
   promoTitle: ({ spacings }: Theme) =>
