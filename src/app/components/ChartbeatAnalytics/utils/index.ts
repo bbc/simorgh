@@ -165,9 +165,7 @@ export const buildSections = ({
     case MEDIA_ARTICLE_PAGE:
       return [
         capitalize(service),
-        ...(taggings
-          ? buildSectionItem(service, getPrimaryMediaType(taggings))
-          : []),
+        buildSectionItem(service, getPrimaryMediaType(taggings)),
         ...(addProducer ? buildSectionArr(service, producer, type) : []),
         ...(chapter ? buildSectionArr(service, chapter, type) : []),
       ].join(', ');

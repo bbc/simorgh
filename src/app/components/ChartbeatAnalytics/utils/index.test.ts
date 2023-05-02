@@ -142,12 +142,12 @@ describe('Chartbeat utilities', () => {
 
   interface SectionFixtures {
     service: Services;
-    pageType: PageTypes | 'index' | null;
+    pageType: PageTypes | 'index';
     sectionName?: string;
     categoryName?: string;
     mediaPageType?: string;
-    producer?: string;
-    chapter?: string;
+    producer?: string | null;
+    chapter?: string | null;
     description: string;
     expected: string;
   }
@@ -205,14 +205,6 @@ describe('Chartbeat utilities', () => {
         expected: 'News, News - ART, News - baz, News - baz - ART',
       },
       {
-        service: 'news',
-        producer: 'business',
-        chapter: 'foo',
-        pageType: null,
-        description: 'should not append pageType if not present',
-        expected: 'News, News - business, News - foo',
-      },
-      {
         service: 'afrique',
         sectionName: 'Media',
         categoryName: 'News',
@@ -257,12 +249,6 @@ describe('Chartbeat utilities', () => {
         description: 'should return expected section for topic page',
         expected: 'Mundo, Mundo - Topics',
       },
-      {
-        service: 'news',
-        pageType: null,
-        description: 'should not append pageType if not present',
-        expected: 'News',
-      },
     ];
 
     sectionFixtures.forEach(
@@ -274,16 +260,18 @@ describe('Chartbeat utilities', () => {
         sectionName,
         categoryName,
         mediaPageType,
+        producer,
+        chapter,
       }) => {
         it(description, () => {
           expect(
             buildSections({
               service,
-              // @ts-expect-error allow null values for page type to ensure correct behaviour
+              // @ts-expect-error allows testing of pageType = index
               pageType,
-              // @ts-expect-error allow null values for page type to ensure correct behaviour
+              // @ts-expect-error allows testing of null producer
               producer,
-              // @ts-expect-error allow null values for page type to ensure correct behaviour
+              // @ts-expect-error allows testing of null chapter
               chapter,
               sectionName,
               categoryName,
@@ -420,7 +408,7 @@ describe('Chartbeat utilities', () => {
           },
           path: '/',
           sections:
-            'Afrique, Afrique - MAP, Afrique - Media, Afrique - Media - MAP, Afrique - News-category',
+            'Afrique, Afrique - Media, Afrique - MAP, Afrique - Media - MAP, Afrique - News-category',
           title: 'MAP Page Title',
           type: 'article-media-asset',
           uid: 50924,
