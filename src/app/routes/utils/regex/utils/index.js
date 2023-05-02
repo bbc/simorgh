@@ -3,7 +3,7 @@ import isLive from '#app/lib/utilities/isLive';
 const idRegex = 'c[a-zA-Z0-9]{10}o';
 const ampRegex = '.amp';
 const appRegex = '.app';
-const targetRenderPlatform = `${ampRegex}|${appRegex}`;
+const nonCanonicalArticleRenderPlatform = `${ampRegex}|${appRegex}`;
 const assetUriRegex = '[a-z0-9-_]{0,}[0-9]{8,}';
 const legacyAssetUriRegex = '[a-z0-9-_]{1,}/[a-z0-9-_/]{1,}';
 const variantRegex = '/simp|/trad|/cyr|/lat';
@@ -21,7 +21,7 @@ const getServiceRegex = services => services.join('|');
 
 export const getArticleRegex = services => {
   const serviceRegex = getServiceRegex(services);
-  return `/:service(${serviceRegex})?:discipline(${sportDisciplineRegex})?/:local(${articleLocalRegex})/:id(${idRegex}):variant(${variantRegex})?:targetRenderPlatform(${targetRenderPlatform})?`;
+  return `/:service(${serviceRegex})?:discipline(${sportDisciplineRegex})?/:local(${articleLocalRegex})/:id(${idRegex}):variant(${variantRegex})?:nonCanonicalArticleRenderPlatform(${nonCanonicalArticleRenderPlatform})?`;
 };
 
 export const getArticleSwRegex = services => {
