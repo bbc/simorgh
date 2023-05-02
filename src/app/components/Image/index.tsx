@@ -13,7 +13,7 @@ import styles from './index.styles';
 import { RequestContext } from '../../contexts/RequestContext';
 import { FRONT_PAGE } from '../../routes/utils/pageTypes';
 
-interface Props {
+type Props = {
   alt: string;
   aspectRatio?: [x: number, y: number];
   attribution?: string;
@@ -24,13 +24,14 @@ interface Props {
   isAmp?: boolean;
   lazyLoad?: boolean;
   placeholder?: boolean;
+  darkPlaceholder?: boolean;
   preload?: boolean;
   mediaType?: string;
   srcSet?: string;
   sizes?: string;
   src: string;
   width?: number;
-}
+};
 
 const DEFAULT_ASPECT_RATIO = [16, 9];
 const roundNumber = (num: number) => Math.round(num * 100) / 100;
@@ -50,6 +51,7 @@ const Image = ({
   isAmp = false,
   lazyLoad = false,
   placeholder = true,
+  darkPlaceholder = false,
   preload = false,
   mediaType,
   srcSet,
@@ -97,7 +99,17 @@ const Image = ({
       )}
       <div
         className={className}
-        css={[styles.wrapper, showPlaceholder && styles.placeholder]}
+        css={theme => [
+          styles.wrapper,
+          showPlaceholder && [
+            styles.placeholder,
+            {
+              backgroundColor: darkPlaceholder
+                ? theme.palette.SHADOW
+                : theme.palette.LUNAR,
+            },
+          ],
+        ]}
         style={{
           paddingBottom: legacyBrowserAspectRatio,
         }}
