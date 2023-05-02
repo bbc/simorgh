@@ -23,7 +23,7 @@ const Component = ({ service, blocks }: PropsWithChildren<ComponentProps>) => (
     <div
       style={{
         backgroundColor: '#f6f6f6',
-        padding: '2rem',
+        padding: '1rem',
       }}
     >
       <ServiceContextProvider service={service}>
