@@ -112,7 +112,7 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
 
   const { isAmp } = useContext(RequestContext);
   const location = useLocation();
-  const { dir, liveRadioOverrides, lang, service, translations, brandName } =
+  const { dir, liveRadioOverrides, lang, service, translations, serviceName } =
     useContext(ServiceContext);
   const oppDir = dir === 'rtl' ? 'ltr' : 'rtl';
 
@@ -138,7 +138,7 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
 
   const hasRecentEpisodes = recentEpisodes && Boolean(recentEpisodes.length);
   const metadataTitle = episodeTitle
-    ? `${episodeTitle} - ${brandTitle} - ${brandName}`
+    ? `${episodeTitle} - ${brandTitle} - ${serviceName}`
     : headline;
 
   const metadataImageProps = is(String, imageUrl)
