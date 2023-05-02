@@ -147,12 +147,14 @@ export const buildSections = ({
     case MEDIA_ASSET_PAGE:
       return [
         capitalize(service),
+        buildSectionItem(service, sectionName),
         buildSectionItem(service, pageType),
-        buildSectionArr(service, sectionName, pageType),
+        buildSectionItem(
+          buildSectionItem(service, sectionName).join(', '),
+          pageType,
+        ),
         buildSectionItem(service, appendCategory(categoryName)),
-      ]
-        .join(',')
-        .replaceAll(',', ', ');
+      ].join(', ');
     case MEDIA_PAGE:
       return [
         capitalize(service),

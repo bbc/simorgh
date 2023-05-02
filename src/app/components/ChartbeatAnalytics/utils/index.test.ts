@@ -220,7 +220,7 @@ describe('Chartbeat utilities', () => {
         pageType: MEDIA_ASSET_PAGE,
         description: 'should add section and category to MAPs',
         expected:
-          'Afrique, Afrique - MAP, Afrique - Media, Afrique - Media - MAP, Afrique - News-category',
+          'Afrique, Afrique - Media, Afrique - MAP, Afrique - Media - MAP, Afrique - News-category',
       },
       {
         service: 'korean',
@@ -506,7 +506,7 @@ describe('Chartbeat utilities', () => {
         },
         path: '/',
         sections:
-          'Afrique, Afrique - MAP, Afrique - Media, Afrique - Media - MAP, Afrique - News-category',
+          'Afrique, Afrique - Media, Afrique - MAP, Afrique - Media - MAP, Afrique - News-category',
         title: 'MAP Page Title',
         type: 'article-media-asset',
         uid: 50924,
