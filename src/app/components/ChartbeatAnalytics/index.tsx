@@ -50,11 +50,12 @@ const ChartbeatAnalytics = ({
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [
-    title,
-    contentType,
     sectionName,
+    categoryName,
     mediaPageType,
+    title,
     taggings,
+    contentType,
     isCanonicalAndEnabled,
   ]);
 
