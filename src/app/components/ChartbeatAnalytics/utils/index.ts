@@ -274,10 +274,7 @@ export const getConfig = ({
 
   const currentPath = onClient() && window.location.pathname;
 
-  if (!contentType) {
-    // eslint-disable-next-line no-param-reassign
-    contentType = getType(pageType) as string;
-  }
+  const analyticsContentType = contentType || getType(pageType);
 
   return {
     domain,
@@ -285,9 +282,9 @@ export const getConfig = ({
     uid: chartbeatUID,
     title: analyticsTitle,
     virtualReferrer: referrer,
-    ...(isAmp && { contentType }),
+    ...(isAmp && { contentType: analyticsContentType }),
     ...(!isAmp && {
-      type: contentType,
+      type: analyticsContentType,
       useCanonical,
       path: currentPath,
     }),
