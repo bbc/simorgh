@@ -75,7 +75,7 @@ const HiearchicalGrid = ({ promos, headingLevel }: CurationGridProps) => {
                   src={promo.imageUrl || ''}
                   alt={promo.imageAlt}
                   loading="lazy"
-                  isAmp
+                  isAmp={isAmp}
                 >
                   <Promo.MediaIcon type={promo.type}>
                     {showDuration ? promo.duration : ''}

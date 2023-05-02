@@ -44,7 +44,7 @@ const CurationPromo = ({
 
   return (
     <Promo>
-      <Promo.Image src={imageUrl} alt={imageAlt} lazyLoad={lazy} isAmp>
+      <Promo.Image src={imageUrl} alt={imageAlt} lazyLoad={lazy} isAmp={isAmp}>
         <Promo.MediaIcon type={type}>
           {showDuration ? mediaDuration : ''}
         </Promo.MediaIcon>
