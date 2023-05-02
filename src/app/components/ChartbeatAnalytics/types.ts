@@ -21,7 +21,7 @@ export interface CanonicalChartbeatProps {
 }
 
 export type AmpChartbeatConfig = ChartbeatConfig & {
-  contentType?: string | null;
+  contentType?: string;
 };
 
 export interface AmpChartbeatProps {

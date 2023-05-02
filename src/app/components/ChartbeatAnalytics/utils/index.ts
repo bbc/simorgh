@@ -75,7 +75,7 @@ export const getType = (pageType: PageTypes | 'index', shorthand = false) => {
     case LIVE_PAGE:
       return 'Live';
     default:
-      return null;
+      return pageType;
   }
 };
 
