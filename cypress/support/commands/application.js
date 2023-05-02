@@ -88,20 +88,20 @@ Cypress.Commands.add(
   ({ service, pageType, variant = 'default', ctxServiceEnv, id }) => {
     const env = Cypress.env('APP_ENV');
     if (env !== 'local') {
-      ctxServiceEnv = ctxServiceEnv || env;
-      id =
+      const ctxServEnv = ctxServiceEnv || env;
+      const pageTypeId =
         id ||
         (pageType === 'cpsAsset'
           ? Cypress.env('currentPath')
           : Cypress.env('currentPath').match(/(c[a-zA-Z0-9]{10}(o|t))/)?.[1]);
       const bffUrl = `https://web-cdn.${
         env === 'live' ? '' : `${env}.`
-      }api.bbci.co.uk/fd/simorgh-bff?pageType=${pageType}&id=${id}&service=${service}${
+      }api.bbci.co.uk/fd/simorgh-bff?pageType=${pageType}&id=${pageTypeId}&service=${service}${
         variant !== 'default' ? `&variant=${variant}` : ''
       }`;
       return cy.request({
         url: bffUrl,
-        headers: { 'ctx-service-env': ctxServiceEnv },
+        headers: { 'ctx-service-env': ctxServEnv },
       });
     }
     return cy.request(`${Cypress.env('currentPath')}.json`);
