@@ -72,7 +72,7 @@ const Curation = ({
       return curationLength > 1 && (title || isFirstCuration) ? (
         <section aria-labelledby={id} role="region">
           {isFirstCuration ? (
-            <VisuallyHiddenText id={id}>
+            <VisuallyHiddenText id={id} as="h2">
               {curationSubheading}
             </VisuallyHiddenText>
           ) : (
