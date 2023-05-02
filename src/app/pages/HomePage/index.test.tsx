@@ -68,4 +68,17 @@ describe('Home Page', () => {
     );
     expect(findDescription?.content).toEqual(kyrgyzHomePageData.description);
   });
+
+  it('should correctly render linked data for home pages', () => {
+    render(<HomePage pageData={kyrgyzHomePageData} />, {
+      service: 'kyrgyz',
+    });
+    const getLinkedDataOutput = () => {
+      return Helmet.peek().scriptTags.map(({ innerHTML }) =>
+        JSON.parse(innerHTML),
+      );
+    };
+
+    expect(getLinkedDataOutput()).toMatchSnapshot();
+  });
 });
