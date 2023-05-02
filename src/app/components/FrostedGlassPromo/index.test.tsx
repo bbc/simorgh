@@ -40,7 +40,6 @@ const Component = ({
       >
         <ToggleContextProvider
           toggles={{
-            // @ts-expect-error - TODO: fix this
             eventTracking: { enabled: false },
           }}
         >

@@ -13,6 +13,15 @@ export type SocialEmbedProviders =
 
 export type PageTypes = (typeof PAGE_TYPES)[keyof typeof PAGE_TYPES];
 
+export type Toggles =
+  | {
+      [key: string]: {
+        enabled: boolean;
+        value?: string | number;
+      };
+    }
+  | { _environment: string };
+
 export type SerbianService = {
   service: 'serbian';
   variant: 'cyr' | 'lat';

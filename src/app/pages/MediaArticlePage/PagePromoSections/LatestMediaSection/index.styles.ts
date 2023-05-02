@@ -1,5 +1,5 @@
-import pixelsToRem from '#app/utilities/pixelsToRem';
 import { Theme, css } from '@emotion/react';
+import pixelsToRem from '../../../../utilities/pixelsToRem';
 
 const styles = {
   latestMediaSection: ({ mq, isDarkUi, palette }: Theme) =>

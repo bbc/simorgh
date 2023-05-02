@@ -1,12 +1,8 @@
+import { Toggles } from '#app/models/types/global';
 import pathOr from 'ramda/src/pathOr';
 
 type ReducerProps = {
-  toggleState: {
-    [key: string]: {
-      enabled: boolean;
-      value?: string;
-    };
-  };
+  toggleState: Toggles;
   action: {
     type: string;
     data: {

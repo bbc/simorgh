@@ -5,24 +5,8 @@ import { useContext } from 'react';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import { jsx, useTheme } from '@emotion/react';
-import useToggle from '#hooks/useToggle';
 
-import { articleDataPropTypes } from '#models/propTypes/article';
-import ArticleMetadata from '#containers/ArticleMetadata';
-import headings from '#containers/Headings';
-import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
-import gist from '#containers/Gist';
-import text from '#containers/Text';
-import Image from '#containers/Image';
-import Blocks from '#containers/Blocks';
-import Timestamp from '#containers/ArticleTimestamp';
-import ATIAnalytics from '#containers/ATIAnalytics';
-import ComscoreAnalytics from '#containers/ComscoreAnalytics';
-import ArticleMediaPlayer from '#containers/ArticleMediaPlayer';
-import SocialEmbedContainer from '#containers/SocialEmbed';
-import fauxHeadline from '#containers/FauxHeadline';
-import CpsRecommendations from '#containers/CpsRecommendations';
-
+import useToggle from '../../hooks/useToggle';
 import {
   getArticleId,
   getHeadline,
@@ -33,31 +17,60 @@ import {
   getArticleSection,
   getMentions,
   getLang,
-} from '#lib/utilities/parseAssetData';
-import filterForBlockType from '#lib/utilities/blockHandlers';
-import RelatedTopics from '#containers/RelatedTopics';
-import NielsenAnalytics from '#containers/NielsenAnalytics';
-import ScrollablePromo from '#components/ScrollablePromo';
+} from '../../lib/utilities/parseAssetData';
+import filterForBlockType from '../../lib/utilities/blockHandlers';
+
+import ScrollablePromo from '../../legacy/components/ScrollablePromo';
+
+import headings from '../../legacy/containers/Headings';
+import visuallyHiddenHeadline from '../../legacy/containers/VisuallyHiddenHeadline';
+import gist from '../../legacy/containers/Gist';
+import text from '../../legacy/containers/Text';
+import Image from '../../legacy/containers/Image';
+import Blocks from '../../legacy/containers/Blocks';
+import Timestamp from '../../legacy/containers/ArticleTimestamp';
+import ATIAnalytics from '../../legacy/containers/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
+import ComscoreAnalytics from '../../legacy/containers/ComscoreAnalytics';
+import ArticleMediaPlayer from '../../legacy/containers/ArticleMediaPlayer';
+import SocialEmbedContainer from '../../legacy/containers/SocialEmbed';
+import fauxHeadline from '../../legacy/containers/FauxHeadline';
+import RelatedTopics from '../../legacy/containers/RelatedTopics';
+import NielsenAnalytics from '../../legacy/containers/NielsenAnalytics';
+import ArticleMetadata from '../../legacy/containers/ArticleMetadata';
+
+import {
+  OptimoBlock,
+  MetadataFormats,
+  MetadataTaggings,
+  MetadataTopics,
+} from '../../models/types/optimo';
+
 import LinkedData from '../../components/LinkedData';
 import Byline from '../../components/Byline';
+
 import {
   bylineExtractor,
   categoryName,
   getAuthorTwitterHandle,
 } from '../../components/Byline/utilities';
+
 import { ServiceContext } from '../../contexts/ServiceContext';
 import RelatedContentSection from './PagePromoSections/RelatedContentSection';
 
 import SecondaryColumn from './SecondaryColumn';
 
 import styles from './MediaArticlePage.styles';
+import {
+  ComponentToRenderProps,
+  MediaArticlePageProps,
+  TimestampProps,
+} from './types';
 
-const MediaArticlePage = ({ pageData }) => {
+const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
   const { articleAuthor, isTrustProjectParticipant, showRelatedTopics } =
     useContext(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
-  const recommendationsData = path(['recommendations'], pageData);
 
   const {
     palette: { GREY_2, WHITE },
@@ -68,8 +81,12 @@ const MediaArticlePage = ({ pageData }) => {
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
-  const topics = path(['metadata', 'topics'], pageData);
-  const blocks = pathOr([], ['content', 'model', 'blocks'], pageData);
+  const topics = path<MetadataTopics>(['metadata', 'topics'], pageData);
+  const blocks = pathOr<OptimoBlock[]>(
+    [],
+    ['content', 'model', 'blocks'],
+    pageData,
+  );
 
   const bylineBlock = blocks.find(block => block.type === 'byline');
   const bylineContribBlocks = pathOr([], ['model', 'blocks'], bylineBlock);
@@ -82,8 +99,11 @@ const MediaArticlePage = ({ pageData }) => {
     ? getAuthorTwitterHandle(blocks)
     : null;
 
-  const taggings = path(['metadata', 'passport', 'taggings'], pageData);
-  const formats = path(
+  const taggings = path<MetadataTaggings>(
+    ['metadata', 'passport', 'taggings'],
+    pageData,
+  );
+  const formats = path<MetadataFormats>(
     ['metadata', 'passport', 'predicates', 'formats'],
     pageData,
   );
@@ -93,26 +113,18 @@ const MediaArticlePage = ({ pageData }) => {
     visuallyHiddenHeadline,
     headline: headings,
     subheadline: headings,
-    audio: props => (
-      /**
-       * TODO: Consolate the styling into a single stylesheet for the media player
-       * - The media player needs padding top applied, but is also inheriting styles from other components
-       */
+    audio: (props: ComponentToRenderProps) => (
       <div css={styles.mediaPlayer}>
         <ArticleMediaPlayer {...props} />
       </div>
     ),
-    video: props => (
-      /**
-       * TODO: Consolate the styling into a single stylesheet for the media player
-       * - The media player needs padding top applied, but is also inheriting styles from other components
-       */
+    video: (props: ComponentToRenderProps) => (
       <div css={styles.mediaPlayer}>
         <ArticleMediaPlayer {...props} />
       </div>
     ),
     text,
-    byline: props =>
+    byline: (props: ComponentToRenderProps) =>
       hasByline ? (
         <Byline {...props}>
           <Timestamp
@@ -122,21 +134,18 @@ const MediaArticlePage = ({ pageData }) => {
           />
         </Byline>
       ) : null,
-    image: props => (
+    image: (props: ComponentToRenderProps) => (
       <Image
         {...props}
         sizes="(min-width: 1008px) 760px, 100vw"
         shouldPreload={preloadLeadImageToggle}
       />
     ),
-    timestamp: props =>
+    timestamp: (props: TimestampProps) =>
       hasByline ? null : <Timestamp {...props} popOut={false} />,
     social: SocialEmbedContainer,
     group: gist,
-    links: props => <ScrollablePromo {...props} />,
-    wsoj: props => (
-      <CpsRecommendations {...props} items={recommendationsData} />
-    ),
+    links: (props: ComponentToRenderProps) => <ScrollablePromo {...props} />,
   };
 
   const promoImageBlocks = pathOr(
@@ -145,12 +154,12 @@ const MediaArticlePage = ({ pageData }) => {
     pageData,
   );
 
-  const promoImageAltText = path(
+  const promoImageAltText = path<string>(
     ['model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
     filterForBlockType(promoImageBlocks, 'altText'),
   );
 
-  const promoImage = path(
+  const promoImage = path<string>(
     ['model', 'locator'],
     filterForBlockType(promoImageBlocks, 'rawImage'),
   );
@@ -207,10 +216,6 @@ const MediaArticlePage = ({ pageData }) => {
       </div>
     </div>
   );
-};
-
-MediaArticlePage.propTypes = {
-  pageData: articleDataPropTypes.isRequired,
 };
 
 export default MediaArticlePage;

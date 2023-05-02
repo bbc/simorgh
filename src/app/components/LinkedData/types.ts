@@ -31,5 +31,5 @@ export interface LinkedDataProps {
   aboutTags?: Tag[];
   entities?: object[];
   imageLocator?: string;
-  bylineLinkedData?: BylineLinkedData;
+  bylineLinkedData?: BylineLinkedData | null;
 }
