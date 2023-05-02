@@ -1,7 +1,30 @@
 import { OptimoBlock } from '../../models/types/optimo';
 
 export type MediaArticlePageProps = {
-  pageData: object;
+  pageData: {
+    content: object;
+    metadata: {
+      passport: {
+        language: string;
+        home: string;
+        taggings: { predicate: string; value: string }[];
+        predicates: {
+          infoClass: { value: string; type: string }[];
+          primaryMediaType: { value: string; type: string }[];
+        };
+        category?: {
+          categoryName: string;
+        };
+      };
+      analyticsLabels?: {
+        producer: string;
+      };
+      atiAnalytics?: {
+        chapter: string;
+      };
+    };
+    promo: object;
+  };
 };
 
 export type ComponentToRenderProps = {
