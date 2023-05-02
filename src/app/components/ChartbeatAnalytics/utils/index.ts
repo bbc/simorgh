@@ -39,7 +39,7 @@ const buildSectionArr = (service: Services, value: string, type: string) => [
   ...(type ? [`${capitalize(service)} - ${value} - ${type}`] : []),
 ];
 
-const buildSectionItem = (service: Services, type: string) => [
+const buildSectionItem = (service: Services | string, type: string) => [
   `${capitalize(service)} - ${type}`,
 ];
 
@@ -143,14 +143,18 @@ export const buildSections = ({
     case MEDIA_ASSET_PAGE:
       return [
         capitalize(service),
+        ...(sectionName ? buildSectionItem(service, sectionName) : []),
         buildSectionItem(service, pageType),
-        ...(sectionName ? buildSectionArr(service, sectionName, pageType) : []),
+        ...(sectionName
+          ? buildSectionItem(
+              buildSectionItem(service, sectionName).join(', '),
+              pageType,
+            )
+          : []),
         ...(categoryName
           ? buildSectionItem(service, appendCategory(categoryName))
           : []),
-      ]
-        .join(',')
-        .replaceAll(',', ', ');
+      ].join(', ');
     case MEDIA_PAGE:
       return [
         capitalize(service),
@@ -161,7 +165,7 @@ export const buildSections = ({
     case MEDIA_ARTICLE_PAGE:
       return [
         capitalize(service),
-        ...(pageType
+        ...(taggings
           ? buildSectionItem(service, getPrimaryMediaType(taggings))
           : []),
         ...(addProducer ? buildSectionArr(service, producer, type) : []),
@@ -170,7 +174,7 @@ export const buildSections = ({
     default:
       return [
         capitalize(service),
-        ...(pageType ? buildSectionItem(service, type) : []),
+        ...(type ? buildSectionItem(service, type) : []),
         ...(addProducer ? buildSectionArr(service, producer, type) : []),
         ...(chapter ? buildSectionArr(service, chapter, type) : []),
       ].join(', ');

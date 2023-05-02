@@ -146,6 +146,8 @@ describe('Chartbeat utilities', () => {
     sectionName?: string;
     categoryName?: string;
     mediaPageType?: string;
+    producer?: string;
+    chapter?: string;
     description: string;
     expected: string;
   }
@@ -153,13 +155,71 @@ describe('Chartbeat utilities', () => {
   describe('Chartbeat Sections', () => {
     const sectionFixtures: SectionFixtures[] = [
       {
+        service: 'news',
+        producer: 'wales',
+        chapter: 'election 2017',
+        pageType: ARTICLE_PAGE,
+        description: 'should add chapter and producer to article type',
+        expected:
+          'News, News - ART, News - wales, News - wales - ART, News - election 2017, News - election 2017 - ART',
+      },
+      {
+        service: 'news',
+        producer: 'business',
+        chapter: 'market data',
+        pageType: 'index',
+        description: 'should add chapter and producer to index type',
+        expected:
+          'News, News - IDX, News - business, News - business - IDX, News - market data, News - market data - IDX',
+      },
+      {
+        service: 'persian',
+        producer: null,
+        chapter: null,
+        pageType: ARTICLE_PAGE,
+        description: 'should not add chapter and producer when not present',
+        expected: 'Persian, Persian - ART',
+      },
+      {
+        service: 'news',
+        producer: 'foo',
+        chapter: null,
+        pageType: ARTICLE_PAGE,
+        description: 'should not add chapter when not present',
+        expected: 'News, News - ART, News - foo, News - foo - ART',
+      },
+      {
+        service: 'news',
+        producer: null,
+        chapter: 'bar',
+        pageType: ARTICLE_PAGE,
+        description: 'should not add producer when not present',
+        expected: 'News, News - ART, News - bar, News - bar - ART',
+      },
+      {
+        service: 'news',
+        producer: 'news',
+        chapter: 'baz',
+        pageType: ARTICLE_PAGE,
+        description: 'should not add producer when producer == service',
+        expected: 'News, News - ART, News - baz, News - baz - ART',
+      },
+      {
+        service: 'news',
+        producer: 'business',
+        chapter: 'foo',
+        pageType: null,
+        description: 'should not append pageType if not present',
+        expected: 'News, News - business, News - foo',
+      },
+      {
         service: 'afrique',
         sectionName: 'Media',
         categoryName: 'News',
         pageType: MEDIA_ASSET_PAGE,
         description: 'should add section and category to MAPs',
         expected:
-          'Afrique, Afrique - MAP, Afrique - Media, Afrique - Media - MAP, Afrique - News-category',
+          'Afrique, Afrique - Media, Afrique - MAP, Afrique - Media - MAP, Afrique - News-category',
       },
       {
         service: 'korean',
@@ -221,6 +281,10 @@ describe('Chartbeat utilities', () => {
               service,
               // @ts-expect-error allow null values for page type to ensure correct behaviour
               pageType,
+              // @ts-expect-error allow null values for page type to ensure correct behaviour
+              producer,
+              // @ts-expect-error allow null values for page type to ensure correct behaviour
+              chapter,
               sectionName,
               categoryName,
               mediaPageType,
