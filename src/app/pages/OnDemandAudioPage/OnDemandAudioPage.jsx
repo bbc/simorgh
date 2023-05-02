@@ -155,7 +155,7 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
       <ChartbeatAnalytics
         mediaPageType={isPodcast ? 'Podcasts' : 'Radio'}
         title={headline}
-        contentType={pageData?.analyticsLabels?.contentType}
+        contentType={pageData?.contentType}
       />
       <ComscoreAnalytics />
       <MetadataContainer

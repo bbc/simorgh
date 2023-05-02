@@ -62,7 +62,7 @@ const LiveRadioPage = ({ pageData }) => {
       <ChartbeatAnalytics
         mediaPageType="Radio"
         title={name}
-        contentType={pageData?.analyticsLabels?.contentType}
+        contentType={pageData?.contentType}
       />
       <ComscoreAnalytics />
       <MetadataContainer

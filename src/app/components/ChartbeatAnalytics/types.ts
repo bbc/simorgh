@@ -36,4 +36,6 @@ export interface ChartbeatProps {
     value: string;
   }[]; // required for Media Article Pages
   contentType?: string; // required for Live & On Demand Radio, Podcasts & On Demand TV pages
+  producer?: string; // required for Media Article, STY, MAP, Live & On Demand Radio, Podcasts & On Demand TV pages, if available
+  chapter?: string; // required for Media Article, STY, MAP, Live & On Demand Radio, Podcasts & On Demand TV pages, if available
 }

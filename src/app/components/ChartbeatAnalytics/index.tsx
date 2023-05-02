@@ -14,6 +14,8 @@ const ChartbeatAnalytics = ({
   title,
   taggings,
   contentType,
+  producer,
+  chapter,
 }: ChartbeatProps) => {
   const { service, brandName, chartbeatDomain } = useContext(ServiceContext);
   const { sendCanonicalChartbeatBeacon } = useContext(UserContext);
@@ -39,6 +41,8 @@ const ChartbeatAnalytics = ({
     title,
     taggings,
     contentType,
+    producer,
+    chapter,
   };
 
   const chartbeatConfig = getConfig(configDependencies);

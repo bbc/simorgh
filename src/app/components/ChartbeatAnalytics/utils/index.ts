@@ -91,6 +91,8 @@ interface SectionsProps {
   categoryName?: string;
   mediaPageType?: string;
   taggings?: Taggings;
+  producer?: string;
+  chapter?: string;
 }
 
 const AUDIO_KEY = 'fe1fbc8a-bb44-4bf8-8b12-52e58c6345a4';
@@ -128,7 +130,11 @@ export const buildSections = ({
   categoryName,
   mediaPageType,
   taggings,
+  producer,
+  chapter,
 }: SectionsProps) => {
+  const addProducer =
+    producer && producer.toLowerCase() !== service.toLowerCase();
   const type = getType(pageType, true) as string;
   const appendCategory = (name: string) => `${name}-category`;
 
@@ -149,6 +155,8 @@ export const buildSections = ({
       return [
         capitalize(service),
         ...(mediaPageType ? buildSectionItem(service, mediaPageType) : []),
+        ...(addProducer ? buildSectionArr(service, producer, type) : []),
+        ...(chapter ? buildSectionArr(service, chapter, type) : []),
       ].join(', ');
     case MEDIA_ARTICLE_PAGE:
       return [
@@ -156,11 +164,15 @@ export const buildSections = ({
         ...(pageType
           ? buildSectionItem(service, getPrimaryMediaType(taggings))
           : []),
+        ...(addProducer ? buildSectionArr(service, producer, type) : []),
+        ...(chapter ? buildSectionArr(service, chapter, type) : []),
       ].join(', ');
     default:
       return [
         capitalize(service),
         ...(pageType ? buildSectionItem(service, type) : []),
+        ...(addProducer ? buildSectionArr(service, producer, type) : []),
+        ...(chapter ? buildSectionArr(service, chapter, type) : []),
       ].join(', ');
   }
 };
@@ -211,6 +223,8 @@ export interface GetConfigProps {
     value: string;
   }[];
   contentType?: string;
+  producer?: string;
+  chapter?: string;
 }
 
 export const getConfig = ({
@@ -229,6 +243,8 @@ export const getConfig = ({
   title,
   taggings,
   contentType,
+  producer,
+  chapter,
 }: GetConfigProps) => {
   const referrer =
     previousPath || isAmp ? getReferrer(platform, origin, previousPath) : null;
@@ -248,6 +264,8 @@ export const getConfig = ({
     categoryName,
     mediaPageType,
     taggings,
+    producer,
+    chapter,
   });
 
   const cookie = getSylphidCookie();

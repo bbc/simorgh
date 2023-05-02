@@ -182,6 +182,8 @@ const MediaAssetPage = ({ pageData }) => {
         sectionName={pageData?.relatedContent?.section?.name}
         categoryName={pageData?.metadata?.passport?.category?.categoryName}
         title={title}
+        producer={pageData?.metadata?.analyticsLabels?.producer}
+        chapter={pageData?.metadata?.atiAnalytics?.chapter}
       />
       <ComscoreAnalytics />
       <CpsMetadata

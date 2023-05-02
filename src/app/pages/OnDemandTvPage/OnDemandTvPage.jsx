@@ -126,7 +126,7 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
       <ChartbeatAnalytics
         mediaPageType="TV"
         title={headline}
-        contentType={pageData?.analyticsLabels?.contentType}
+        contentType={pageData?.contentType}
       />
       <ATIAnalytics data={pageData} />
       <ComscoreAnalytics />

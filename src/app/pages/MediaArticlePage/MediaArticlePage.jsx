@@ -162,6 +162,8 @@ const MediaArticlePage = ({ pageData }) => {
         categoryName={pageData?.metadata?.passport?.category?.categoryName}
         title={headline}
         taggings={taggings}
+        producer={pageData?.metadata?.analyticsLabels?.producer}
+        chapter={pageData?.metadata?.atiAnalytics?.chapter}
       />
       <ComscoreAnalytics />
       <NielsenAnalytics />
