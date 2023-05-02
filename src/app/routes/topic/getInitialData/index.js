@@ -4,7 +4,7 @@ import Url from 'url-parse';
 import getEnvironment from '#app/routes/utils/getEnvironment';
 import fetchPageData from '../../utils/fetchPageData';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
-import constructPageFetchUrl from '../../utils/constructBffUrl';
+import constructPageFetchUrl from '../../utils/constructPageFetchUrl';
 
 const logger = nodeLogger(__filename);
 

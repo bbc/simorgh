@@ -7,7 +7,7 @@ import { Services, Variants } from '../../../models/types/global';
 
 interface UrlConstructParams {
   pathname: string;
-  pageType: 'article' | 'cpsAsset' | 'topic';
+  pageType: 'article' | 'cpsAsset' | 'topic' | 'live';
   service: Services;
   variant?: Variants;
   page?: string;
@@ -31,7 +31,8 @@ const constructPageFetchUrl = ({
   const isLocal = !env || env === 'local';
 
   const id = getId(pageType)(pathname);
-  const capitlisedPageType = pageType.charAt(0).toUpperCase();
+  const capitlisedPageType =
+    pageType.charAt(0).toUpperCase() + pageType.slice(1);
 
   if (!id) throw handleError(`${capitlisedPageType} ID is invalid`, 500);
 
@@ -62,11 +63,13 @@ const constructPageFetchUrl = ({
       case 'cpsAsset':
         fetchUrl = Url(id);
         break;
-      default: {
+      case 'topic': {
         const variantPath = variant ? `/${variant}` : '';
         fetchUrl = Url(`/${service}${variantPath}/topics/${id}`);
         break;
       }
+      default:
+        return fetchUrl;
     }
   }
 
