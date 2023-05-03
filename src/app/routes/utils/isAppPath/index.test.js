@@ -9,7 +9,7 @@ describe('isAppPath', () => {
     },
     {
       description:
-        'should return false if path contains ".app" but doesnt end in it',
+        'should return false if path contains ".app" but does not end in it',
       path: '/news/foobar.appfoo',
       expectedIsApp: false,
     },
