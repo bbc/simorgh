@@ -21,7 +21,7 @@ const Player = additionalProps => {
       onMediaEnded={func}
       onMediaPlaylistEnded={func}
       onMediaError={func}
-      darkMode={false}
+      darkPlaceholder={false}
       showLoadingImage={false}
       message="Message"
       {...additionalProps}
@@ -43,7 +43,7 @@ describe('Media Player: Canonical', () => {
       onMediaEnded={func}
       onMediaPlaylistEnded={func}
       onMediaError={func}
-      darkMode={false}
+      darkPlaceholder={false}
       showLoadingImage={false}
       showPlaceholder={false}
       noJsMessage="No JS"

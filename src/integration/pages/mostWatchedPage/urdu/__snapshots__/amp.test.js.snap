@@ -247,8 +247,8 @@ Object {
 
 exports[`AMP Most Watched Page Header Navigation link should match text and url 8`] = `
 Object {
-  "text": "موجودہ صفحہ, ویڈیو",
-  "url": "/urdu/media/video",
+  "text": "ویڈیو",
+  "url": "/urdu/topics/c1e0mzr3r2yt",
 }
 `;
 

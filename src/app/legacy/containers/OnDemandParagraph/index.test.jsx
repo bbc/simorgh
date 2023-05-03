@@ -18,8 +18,12 @@ describe('MediaPageBlocks Paragraph', () => {
 
   it('should render correctly - dark mode', () => {
     const { container } = render(
-      <Paragraph uuid="uuid" idAttr="idAttr" text="Example text" darkMode />,
-      { service: 'news' },
+      <Paragraph uuid="uuid" idAttr="idAttr" text="Example text" />,
+      {
+        service: 'news',
+        pageType: 'media',
+        derivedPageType: 'On Demand TV',
+      },
     );
     expect(container).toMatchSnapshot();
   });
