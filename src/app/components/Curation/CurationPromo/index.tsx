@@ -6,6 +6,7 @@ import formatDuration from '#app/lib/utilities/formatDuration';
 import Promo from '#components/Promo';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 import { ServiceContext } from '../../../contexts/ServiceContext';
+import { RequestContext } from '../../../contexts/RequestContext';
 import { Promo as CurationPromoProps } from '../types';
 
 const CurationPromo = ({
@@ -20,6 +21,7 @@ const CurationPromo = ({
   duration: mediaDuration,
   headingLevel = 2,
 }: CurationPromoProps) => {
+  const { isAmp } = useContext(RequestContext);
   const { translations } = useContext(ServiceContext);
 
   const audioTranslation = path(['media', 'audio'], translations);
@@ -42,7 +44,7 @@ const CurationPromo = ({
 
   return (
     <Promo>
-      <Promo.Image src={imageUrl} alt={imageAlt} lazyLoad={lazy}>
+      <Promo.Image src={imageUrl} alt={imageAlt} lazyLoad={lazy} isAmp={isAmp}>
         <Promo.MediaIcon type={type}>
           {showDuration ? mediaDuration : ''}
         </Promo.MediaIcon>
