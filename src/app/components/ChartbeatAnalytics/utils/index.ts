@@ -25,6 +25,7 @@ import {
   Platforms,
   Services,
 } from '../../../models/types/global';
+import { MetadataTaggings } from '../../../models/types/optimo';
 
 const ID_COOKIE = 'ckns_sylphid';
 
@@ -220,10 +221,7 @@ export interface GetConfigProps {
   mediaPageType?: string;
   categoryName?: string;
   title: string;
-  taggings?: {
-    predicate: string;
-    value: string;
-  }[];
+  taggings?: MetadataTaggings;
   contentType?: string;
   producer?: string;
   chapter?: string;
