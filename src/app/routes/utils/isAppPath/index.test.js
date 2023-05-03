@@ -27,7 +27,7 @@ describe('isAppPath', () => {
     },
     {
       description:
-        'should return true when path ends with .app and has any get params specified',
+        'should return true when path ends with .app and has any query params specified',
       path: '/news/foobar.app?blah=1',
       expectedIsApp: true,
     },
