@@ -29,6 +29,7 @@ import {
   Platforms,
   Services,
 } from '../../../models/types/global';
+import { MetadataTaggings } from '../../../models/types/metadata';
 
 const ID_COOKIE = 'ckns_sylphid';
 
@@ -83,11 +84,6 @@ export const getType = (pageType: PageTypes | 'index', shorthand = false) => {
   }
 };
 
-type Taggings = {
-  predicate: string;
-  value: string;
-}[];
-
 interface SectionsProps {
   service: Services;
   pageType: PageTypes;
@@ -96,12 +92,12 @@ interface SectionsProps {
   sectionName?: string;
   categoryName?: string;
   mediaPageType?: string;
-  taggings?: Taggings;
+  taggings?: MetadataTaggings;
 }
 
 const AUDIO_KEY = 'fe1fbc8a-bb44-4bf8-8b12-52e58c6345a4';
 const VIDEO_KEY = 'ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f';
-const getPrimaryMediaType = (taggings?: Taggings) => {
+const getPrimaryMediaType = (taggings?: MetadataTaggings) => {
   const defaultLabel = 'article-sfv';
 
   // FIND THE primaryMediaType ELEMENT IN THE LIST OF TAGGINGS
