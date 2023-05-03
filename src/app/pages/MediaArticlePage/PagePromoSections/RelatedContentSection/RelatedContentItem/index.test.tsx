@@ -5,18 +5,26 @@ import { ServiceContextProvider } from '../../../../../contexts/ServiceContext';
 import ThemeProvider from '../../../../../components/ThemeProvider';
 import RelatedContentItem from '.';
 import { RelatedContentData } from '../fixture';
+import { Services } from '../../../../../models/types/global';
 
 jest.mock('../../../../../components/ThemeProvider');
 
+type Props = {
+  fixtureData: object;
+  service?: Services;
+};
+
 // eslint-disable-next-line react/prop-types
-const RelatedContentItemFixture = ({ fixtureData, service = 'mundo' }) => (
+const RelatedContentItemFixture = ({
+  fixtureData,
+  service = 'mundo',
+}: Props) => (
   <ThemeProvider service={service} variant="default">
     <ServiceContextProvider service={service}>
       <ToggleContextProvider>
         <RelatedContentItem
           item={fixtureData}
           ariaLabelledBy="RelatedContent"
-          index={0}
         />
       </ToggleContextProvider>
     </ServiceContextProvider>

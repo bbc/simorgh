@@ -2,26 +2,32 @@
 /** @jsx jsx */
 
 import { jsx } from '@emotion/react';
-import { useContext, forwardRef } from 'react';
-import { shape, string } from 'prop-types';
+import { forwardRef } from 'react';
 import path from 'ramda/src/path';
+import pathOr from 'ramda/src/pathOr';
 import { createSrcsets } from '#lib/utilities/srcSet';
 import buildIChefURL from '#app/lib/utilities/ichefURL';
 import Promo from '#components/OptimoPromos';
 import isEmpty from 'ramda/src/isEmpty';
-import { ServiceContext } from '../../../../../contexts/ServiceContext';
 import styles from './index.styles';
+import { EventTrackingData } from '../../../types';
 
-const RelatedContentItem = forwardRef(
-  ({ item, ariaLabelledBy, eventTrackingData }, viewRef) => {
-    const { script } = useContext(ServiceContext);
+type RelatedContentItemProps = {
+  item: object;
+  ariaLabelledBy: string;
+  eventTrackingData?: EventTrackingData;
+};
+
+const RelatedContentItem = forwardRef<HTMLDivElement, RelatedContentItemProps>(
+  ({ item, ariaLabelledBy, eventTrackingData = null }, viewRef) => {
     if (!item || isEmpty(item)) return null;
 
-    const headline = path(
+    const headline = pathOr<string>(
+      '',
       ['model', 'blocks', 1, 'model', 'blocks', 0, 'model', 'text'],
       item,
     );
-    const assetUri = path(
+    const assetUri = path<string>(
       [
         'model',
         'blocks',
@@ -49,7 +55,8 @@ const RelatedContentItem = forwardRef(
       ['model', 'blocks', 0, 'model', 'blocks', 1, 'model', 'originCode'],
       item,
     );
-    const altText = path(
+    const altText = pathOr<string>(
+      '',
       [
         'model',
         'blocks',
@@ -69,12 +76,14 @@ const RelatedContentItem = forwardRef(
       item,
     );
 
-    const width = path(
+    const width = pathOr<number>(
+      0,
       ['model', 'blocks', 0, 'model', 'blocks', 1, 'model', 'width'],
       item,
     );
 
-    const height = path(
+    const height = pathOr<number>(
+      0,
       ['model', 'blocks', 0, 'model', 'blocks', 1, 'model', 'height'],
       item,
     );
@@ -92,7 +101,8 @@ const RelatedContentItem = forwardRef(
       resolution: DEFAULT_IMAGE_RES,
     });
 
-    const timestamp = path(
+    const timestamp = pathOr<string>(
+      '',
       ['model', 'blocks', 2, 'model', 'blocks', 0, 'model', 'timestamp'],
       item,
     );
@@ -120,7 +130,6 @@ const RelatedContentItem = forwardRef(
             <Promo.Title
               css={titleHasContent ? styles.promoTitle : null}
               as={titleTag}
-              script={script}
             >
               <Promo.Link>
                 <Promo.Content headline={headline} />
@@ -135,13 +144,5 @@ const RelatedContentItem = forwardRef(
     );
   },
 );
-
-RelatedContentItem.propTypes = {
-  item: shape({}).isRequired,
-  ariaLabelledBy: string.isRequired,
-  eventTrackingData: shape({ block: shape({ componentName: string }) }),
-};
-
-RelatedContentItem.defaultProps = { eventTrackingData: null };
 
 export default RelatedContentItem;

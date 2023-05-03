@@ -13,11 +13,21 @@ import {
   RelatedContentListWithMPU,
   RelatedContentListWithWSOJ,
 } from './fixture';
+import { Services } from '../../../../models/types/global';
+import { OptimoBlock } from '../../../../models/types/optimo';
 
 jest.mock('../../../../components/ThemeProvider');
 
+type Props = {
+  fixtureData: OptimoBlock[];
+  service?: Services;
+};
+
 // eslint-disable-next-line react/prop-types
-const RelatedContentSectionFixture = ({ fixtureData, service = 'mundo' }) => (
+const RelatedContentSectionFixture = ({
+  fixtureData,
+  service = 'mundo',
+}: Props) => (
   <ThemeProvider service={service} variant="default">
     <ServiceContextProvider service={service}>
       <ToggleContextProvider>
@@ -30,6 +40,7 @@ const RelatedContentSectionFixture = ({ fixtureData, service = 'mundo' }) => (
 describe('Optimo Related Content Promo', () => {
   it('should return null if no data is passed', () => {
     const { container } = render(
+      // @ts-expect-error - testing null fixture data
       <RelatedContentSectionFixture fixtureData={{}} />,
     );
     expect(container).toBeEmptyDOMElement();
