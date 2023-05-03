@@ -7,6 +7,18 @@ import isAppPath from '#app/routes/utils/isAppPath';
 import routes from '#app/routes';
 import fallbackServiceParam from './fallbackServiceParam';
 
+const getNonCanonicalPlatformId = params => {
+  const renderPlatform =
+    path(['amp'], params) ||
+    path(['nonCanonicalArticleRenderPlatform'], params);
+  const supportedPlatforms = {
+    '.amp': { amp: true },
+    '.app': { app: true },
+  };
+
+  return pathOr({}, [renderPlatform], supportedPlatforms);
+};
+
 const getRouteProps = url => {
   const matchedRoutes = matchRoutes(routes, url);
 
@@ -14,8 +26,7 @@ const getRouteProps = url => {
   const match = path([0, 'match'], matchedRoutes);
   const params = pathOr({}, ['params'], match);
 
-  const amp = path(['amp'], params);
-  const app = path(['app'], params);
+  const { amp, app } = getNonCanonicalPlatformId(params);
   const service = path(['service'], params);
   const variantPath = path(['variant'], params);
   const id = path(['id'], params);
@@ -24,8 +35,8 @@ const getRouteProps = url => {
   const errorCode = path(['errorCode'], params);
 
   return {
-    isAmp: 'amp' in params ? !!amp : isAmpPath(url),
-    isApp: 'app' in params ? !!app : isAppPath(url),
+    isAmp: amp || isAmpPath(url),
+    isApp: app || isAppPath(url),
     service: service || fallbackServiceParam(url),
     variant,
     id,
