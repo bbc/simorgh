@@ -115,7 +115,7 @@ describe('helper', () => {
       expect(getType(validAresMetadataBlock)).toEqual('VideoObject');
     });
 
-    it('should return AudioObject based on metadata format is audio', () => {
+    it('should return AudioObject when metadata format is audio', () => {
       expect(getType(validAresMediaLiveAudioBlock)).toEqual('AudioObject');
     });
   });
