@@ -101,12 +101,13 @@ interface SectionsProps {
 
 const AUDIO_KEY = 'fe1fbc8a-bb44-4bf8-8b12-52e58c6345a4';
 const VIDEO_KEY = 'ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f';
-const getPrimaryMediaType = (taggings: Taggings) => {
+const getPrimaryMediaType = (taggings?: Taggings) => {
   const defaultLabel = 'article-sfv';
+
   // FIND THE primaryMediaType ELEMENT IN THE LIST OF TAGGINGS
   const primaryMediaTag = find(
     propSatisfies(includes('primaryMediaType'), 'predicate'),
-    taggings,
+    taggings || [],
   );
 
   if (!primaryMediaTag) {
@@ -171,9 +172,7 @@ export const buildSections = ({
     case MEDIA_ARTICLE_PAGE:
       return [
         capitalize(service),
-        ...(taggings
-          ? buildSectionItem(service, getPrimaryMediaType(taggings))
-          : []),
+        buildSectionItem(service, getPrimaryMediaType(taggings)),
         ...(addProducer ? buildSectionArr(service, producer, type) : []),
         ...(chapter ? buildSectionArr(service, chapter, type) : []),
       ].join(', ');
