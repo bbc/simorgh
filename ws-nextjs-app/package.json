@@ -16,6 +16,6 @@
     "babel-plugin-transform-rename-import": "2.3.0"
   },
   "dependencies": {
-    "next": "13.3.4"
+    "next": "12.3.4"
   }
 }
