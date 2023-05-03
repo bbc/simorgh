@@ -32,7 +32,7 @@ describe('isAppPath', () => {
       expectedIsApp: true,
     },
     {
-      description: 'should return false if path ends in just "amp"',
+      description: 'should return false if path ends in just "app"',
       path: '/news/foobar/app',
       expectedIsApp: false,
     },
