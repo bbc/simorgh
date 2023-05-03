@@ -6640,14 +6640,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:18.2.1":
-  version: 18.2.1
-  resolution: "@types/react@npm:18.2.1"
+"@types/react@npm:18.0.33":
+  version: 18.0.33
+  resolution: "@types/react@npm:18.0.33"
   dependencies:
     "@types/prop-types": "*"
     "@types/scheduler": "*"
     csstype: ^3.0.2
-  checksum: a957e767fa087c7b63274d286d3a6ee2b9ec070159170346995abc5fddcd351a015770eb8452ba7974ded932b379f869b093dbadcbfa786a0a851fb5be581296
+  checksum: 4fbd2b2b6a26378bdfde121081a6406ec2d39e4ba87ea5f6897ab7bb2198713165e6fd703ad4ed7ba1d4f23ef54a4c9f108f3105c7ed8e136411ee6bdebc5669
   languageName: node
   linkType: hard
 
@@ -21772,7 +21772,7 @@ __metadata:
     "@types/jsdom": ^20.0.0
     "@types/loadable__component": 5.13.4
     "@types/ramda": 0.28.15
-    "@types/react": 18.2.1
+    "@types/react": 18.0.33
     "@types/react-dom": 18.2.2
     "@types/react-helmet": 6.1.6
     "@types/react-lazyload": ^3.2.0
