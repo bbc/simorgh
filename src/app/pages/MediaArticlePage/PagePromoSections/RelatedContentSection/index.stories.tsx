@@ -2,9 +2,12 @@ import React from 'react';
 import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import { withKnobs } from '@storybook/addon-knobs';
 import styled from '@emotion/styled';
+import { ToggleContextProvider } from '../../../../contexts/ToggleContext';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
-import { ToggleContextProvider } from '#contexts/ToggleContext';
 import ThemeProvider from '../../../../components/ThemeProvider';
+import { Services } from '../../../../models/types/global';
+import { OptimoBlock } from '../../../../models/types/optimo';
+
 import RelatedContentSection from '.';
 import {
   RelatedContentSingleItem,
@@ -21,17 +24,17 @@ const BackGround = styled.div`
   padding: 2rem;
 `;
 
+type Props = {
+  content: OptimoBlock[];
+  service?: Services;
+};
+
 // eslint-disable-next-line react/prop-types
-const RelatedContentComponent = ({
-  content,
-  service = 'news',
-  script,
-  dir,
-}) => (
+const RelatedContentComponent = ({ content, service = 'news' }: Props) => (
   <ThemeProvider service={service} variant="default">
     <ToggleContextProvider>
       <BackGround>
-        <ServiceContextProvider service={service} script={script} dir={dir}>
+        <ServiceContextProvider service={service}>
           <RelatedContentSection content={content} />
         </ServiceContextProvider>
       </BackGround>
@@ -50,19 +53,19 @@ export default {
   },
 };
 
-export const ListRelatedContent = props => (
+export const ListRelatedContent = () => (
   <RelatedContentComponent content={RelatedContentList} />
 );
 
-export const ListRelatedContentRtl = props => (
+export const ListRelatedContentRtl = () => (
   <RelatedContentComponent content={RelatedContentListRtl} service="arabic" />
 );
 
-export const SingleRelatedContent = props => (
+export const SingleRelatedContent = () => (
   <RelatedContentComponent content={RelatedContentSingleItem} />
 );
 
-export const SingleRelatedContentRtl = props => (
+export const SingleRelatedContentRtl = () => (
   <RelatedContentComponent
     content={RelatedContentSingleItemRtl}
     service="arabic"

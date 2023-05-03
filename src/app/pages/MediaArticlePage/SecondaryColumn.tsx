@@ -2,12 +2,19 @@
 /** @jsx jsx */
 import path from 'ramda/src/path';
 import { jsx } from '@emotion/react';
-import { articleDataPropTypes } from '#models/propTypes/article';
 import LatestMediaSection from './PagePromoSections/LatestMediaSection';
 import styles from './MediaArticlePage.styles';
+import { LatestMedia } from './PagePromoSections/LatestMediaSection/types';
 
-const SecondaryColumn = ({ pageData }) => {
-  const latestMediaContent = path(['secondaryColumn', 'latestMedia'], pageData);
+type MediaArticlePageProps = {
+  pageData: object;
+};
+
+const SecondaryColumn = ({ pageData }: MediaArticlePageProps) => {
+  const latestMediaContent = path<LatestMedia[]>(
+    ['secondaryColumn', 'latestMedia'],
+    pageData,
+  );
   if (!latestMediaContent) return null;
 
   return (
@@ -19,10 +26,6 @@ const SecondaryColumn = ({ pageData }) => {
       )}
     </div>
   );
-};
-
-SecondaryColumn.propTypes = {
-  pageData: articleDataPropTypes.isRequired,
 };
 
 export default SecondaryColumn;
