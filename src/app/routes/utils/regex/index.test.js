@@ -533,7 +533,12 @@ describe('legacyAssetPageDataPath', () => {
 describe('frontPage -> homePage migration', () => {
   const services = Object.keys(serviceConfig);
 
-  const homePageServices = ['kyrgyz'];
+  const servicesWithVariants = ['serbian', 'ukchina', 'zhongwen'];
+
+  const homePageServices = services.filter(
+    service => !servicesWithVariants.includes(service),
+  );
+
   const homePageRoutes = homePageServices.map(service => `/${service}`);
 
   const originalApplicationEnvironment = process.env.SIMORGH_APP_ENV;
