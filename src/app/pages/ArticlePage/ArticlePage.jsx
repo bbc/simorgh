@@ -5,7 +5,8 @@ import { useContext } from 'react';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import propEq from 'ramda/src/propEq';
-import { jsx, useTheme } from '@emotion/react';
+import { jsx, useTheme, keyframes } from '@emotion/react';
+import styled from '@emotion/styled';
 import { string, node } from 'prop-types';
 import useToggle from '#hooks/useToggle';
 
@@ -176,6 +177,34 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
     </MostReadSection>
   );
 
+  const backAnimation = keyframes`
+  0% {
+    background: violet;
+  }
+
+  25% {
+    background: cyan;
+  }
+
+  50% {
+    background: yellow;
+  }
+
+  75% {
+    background: lime;
+  }
+  
+`;
+
+  const Button = styled.button`
+    border: black 0.3rem solid;
+    background: violet;
+    color: black;
+    font-size: 1.5rem;
+    padding: 1rem;
+    animation: ${backAnimation} 1s infinite;
+  `;
+
   MostReadWrapper.propTypes = {
     children: node.isRequired,
   };
@@ -224,6 +253,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
               componentsToRender={componentsToRender}
             />
           </main>
+          <Button> FUN BUTTON </Button>
           {showRelatedTopics && topics && (
             <RelatedTopics
               css={styles.relatedTopics}

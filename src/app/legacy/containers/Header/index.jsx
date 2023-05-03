@@ -5,11 +5,35 @@ import useToggle from '#hooks/useToggle';
 import { string, bool } from 'prop-types';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import styled from '@emotion/styled';
+import { keyframes } from '@emotion/react';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import ScriptLink from './ScriptLink';
 import ConsentBanner from '../ConsentBanner';
 import NavigationContainer from '../Navigation';
 import BrandContainer from '../Brand';
+
+const backAnimation = keyframes`
+0% {
+  color: violet;
+}
+
+25% {
+  color: cyan;
+}
+
+50% {
+  color: yellow;
+}
+
+75% {
+  color: lime;
+}
+`;
+
+const HeaderTitle = styled.h1`
+  animation: ${backAnimation} 1s infinite;
+`;
 
 // eslint-disable-next-line react/prop-types
 const Header = ({ brandRef, borderBottom, skipLink, scriptLink, linkId }) => {
@@ -33,6 +57,7 @@ const Header = ({ brandRef, borderBottom, skipLink, scriptLink, linkId }) => {
   return (
     <div onBlur={handleBannerBlur}>
       {showConsentBanner && <ConsentBanner onDismissFocusRef={brandRef} />}
+      <HeaderTitle>PREVIEW PAGE</HeaderTitle>
       <BrandContainer
         borderBottom={borderBottom}
         skipLink={skipLink}
