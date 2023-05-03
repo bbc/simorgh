@@ -13,6 +13,7 @@
     "start": "next start -p 7081 && NODE_ENV=production"
   },
   "devDependencies": {
+    "@babel/preset-react": "^7.18.6",
     "babel-plugin-transform-rename-import": "2.3.0"
   },
   "dependencies": {
