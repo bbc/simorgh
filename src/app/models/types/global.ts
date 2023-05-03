@@ -26,6 +26,15 @@ export type PageTypes =
   | 'TOPIC'
   | 'home';
 
+export type Toggles =
+  | {
+      [key: string]: {
+        enabled: boolean;
+        value?: string | number;
+      };
+    }
+  | { _environment: string };
+
 export type SerbianService = {
   service: 'serbian';
   variant: 'cyr' | 'lat';

@@ -211,6 +211,7 @@ describe('cspHeader', () => {
         'https://www.googletagservices.com',
         'https://bbc.gscontxt.net',
         'https://*.imrworldwide.com',
+        'https://*.permutive.com',
         'https://cdn.privacy-mgmt.com',
         'https://www.instagram.com',
         'https://sb.scorecardresearch.com',
@@ -236,7 +237,7 @@ describe('cspHeader', () => {
         "'unsafe-inline'",
       ].sort(),
       mediaSrcExpectation: [...bbcDomains].sort(),
-      workerSrcExpectation: ["'self'", '*.bbc.co.uk', '*.bbc.com'],
+      workerSrcExpectation: ['blob:', "'self'", '*.bbc.co.uk', '*.bbc.com'],
       prefetchSrcExpectation: ['https://*.googlesyndication.com'],
     },
     {
@@ -419,6 +420,7 @@ describe('cspHeader', () => {
         'https://bbc.gscontxt.net',
         'https://sb.scorecardresearch.com',
         'https://*.imrworldwide.com',
+        'https://*.permutive.com',
         'https://cdn.privacy-mgmt.com',
         'https://www.tiktok.com',
         'https://lf16-tiktok-web.ttwstatic.com',
@@ -439,7 +441,7 @@ describe('cspHeader', () => {
         "'unsafe-inline'",
       ].sort(),
       mediaSrcExpectation: [...bbcDomains].sort(),
-      workerSrcExpectation: ["'self'", '*.bbc.co.uk', '*.bbc.com'],
+      workerSrcExpectation: ['blob:', "'self'", '*.bbc.co.uk', '*.bbc.com'],
       prefetchSrcExpectation: ['https://*.googlesyndication.com'].sort(),
     },
   ].forEach(

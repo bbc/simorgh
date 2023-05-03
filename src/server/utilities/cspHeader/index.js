@@ -56,6 +56,7 @@ const advertisingDirectives = {
     'https://sb.scorecardresearch.com',
     'https://*.imrworldwide.com',
     'https://cdn.privacy-mgmt.com',
+    'https://*.permutive.com',
     ...advertisingServiceCountryDomains,
   ],
   prefetchSrc: ['https://*.googlesyndication.com'],
@@ -395,7 +396,7 @@ export const generateMediaSrc = ({ isAmp, isLive }) => {
 export const generateWorkerSrc = ({ isAmp }) =>
   isAmp
     ? ['blob:', '*.bbc.co.uk', '*.bbc.com']
-    : ["'self'", '*.bbc.co.uk', '*.bbc.com'];
+    : ['blob:', "'self'", '*.bbc.co.uk', '*.bbc.com'];
 
 export const generatePrefetchSrc = ({ isAmp, isLive }) => {
   if (!isLive && isAmp) return directives.prefetchSrc.ampNonLive.sort();
