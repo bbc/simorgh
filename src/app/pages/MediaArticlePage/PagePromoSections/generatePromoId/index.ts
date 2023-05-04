@@ -1,3 +1,12 @@
+type Props = {
+  sectionType: string;
+  assetUri?: string | null;
+  canonicalUrl?: string;
+  uri?: string | null;
+  contentType?: string;
+  index?: number;
+};
+
 const generatePromoId = ({
   sectionType,
   assetUri,
@@ -5,7 +14,7 @@ const generatePromoId = ({
   uri,
   contentType,
   index = 0,
-}) => {
+}: Props) => {
   const asset = assetUri || uri || canonicalUrl;
   const assetParts = asset
     ? asset.split(/www(.test)?\.bbc\.(co\.uk|com)/)
