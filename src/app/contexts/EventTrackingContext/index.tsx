@@ -22,7 +22,7 @@ import {
 import { PageTypes, Platforms } from '../../models/types/global';
 import { buildATIEventTrackingParams } from '../../components/ATIAnalytics/params';
 import { ServiceContext } from '../ServiceContext';
-import { ATIPageTrackingProps } from '../../components/ATIAnalytics/types';
+import { ATIEventTrackingProps } from '../../components/ATIAnalytics/types';
 
 type EventTrackingContextProps =
   | {
@@ -102,7 +102,7 @@ export const EventTrackingContextProvider = ({
       pageData,
       requestContext,
       serviceContext,
-    ) as ATIPageTrackingProps;
+    ) as ATIEventTrackingProps;
   const trackingProps = {
     campaignID,
     pageIdentifier,
