@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { shape, string, node, bool, oneOf } from 'prop-types';
-import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,
@@ -17,6 +16,7 @@ import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { NAV_BAR_TOP_BOTTOM_SPACING } from './DropdownNavigation';
 import { focusIndicatorThickness } from '../../../../components/ThemeProvider/focusIndicator';
+import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 
 const SPACING_AROUND_NAV_ITEMS = `${NAV_BAR_TOP_BOTTOM_SPACING}rem`; // 12px
 const CURRENT_ITEM_HOVER_BORDER = '0.3125rem'; // 5px
@@ -87,7 +87,7 @@ const StyledLink = styled.a`
       ${props => props.theme.palette.BLACK};
   }
 
-  // Custom focus indicator styling applied to pseudo-element. Global focus indicator styling has been removed.
+  /* Custom focus indicator styling applied to pseudo-element. Global focus indicator styling has been removed. */
   &:focus-visible::after {
     ${ListItemBorder}
     border-bottom: ${GEL_SPACING_HLF} solid ${props =>

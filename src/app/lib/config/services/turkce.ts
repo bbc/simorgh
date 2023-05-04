@@ -53,7 +53,7 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'Reklam',
       },
-      recommendationTitle: 'Önerilen hikayeler',
+      recommendationTitle: 'Önerilen haberler',
       splitRecommendationTitle: 'Daha fazla önerilen hikaye',
       seeAll: 'Hepsini görüntüle',
       home: 'Ana sayfa',
@@ -312,6 +312,10 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Haberler',
         url: '/turkce',
+      },
+      {
+        title: '14 Mayıs Seçimleri',
+        url: '/turkce/topics/cg5mgyyvjd0t',
       },
       {
         title: '6 Şubat Depremi',
