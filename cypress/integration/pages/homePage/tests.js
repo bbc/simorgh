@@ -2,7 +2,7 @@ import HOME_PAGE_CONFIG from '../../../../src/app/routes/homePage/getInitialData
 
 export default ({ service, pageType }) => {
   describe(`Running tests for ${service} ${pageType}`, () => {
-    let articlesData;
+    let homePageData;
     before(() => {
       const env = Cypress.env('APP_ENV');
       cy.getPageData({
@@ -10,7 +10,8 @@ export default ({ service, pageType }) => {
         pageType: 'home',
         id: HOME_PAGE_CONFIG[service][env],
       }).then(({ body }) => {
-        articlesData = body;
+        // eslint-disable-next-line no-unused-vars
+        homePageData = body;
       });
     });
 
