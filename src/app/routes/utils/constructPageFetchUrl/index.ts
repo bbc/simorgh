@@ -46,7 +46,7 @@ const constructPageFetchUrl = ({
   const isLocal = !env || env === 'local';
 
   const id = getId(pageType)(pathname);
-  const capitlisedPageType =
+  const capitalisedPageType =
     pageType.charAt(0).toUpperCase() + pageType.slice(1);
 
   if (!id) throw handleError(`${capitlisedPageType} ID is invalid`, 500);
