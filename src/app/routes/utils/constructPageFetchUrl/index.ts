@@ -70,7 +70,7 @@ const constructPageFetchUrl = ({
 
   if (isLocal) {
     switch (pageType) {
-      case 'article':
+      case PAGE_TYPES.ARTICLE
         fetchUrl = Url(
           `/${service}/articles/${id}${variant ? `/${variant}` : ''}`,
         );
