@@ -85,10 +85,16 @@ Cypress.Commands.add(
 );
 Cypress.Commands.add(
   'getPageData',
-  ({ service, pageType, variant = 'default', ctxServiceEnv, id }) => {
+  ({ service, pageType, variant = 'default', id }) => {
     const env = Cypress.env('APP_ENV');
     if (env !== 'local') {
-      const ctxServEnv = ctxServiceEnv || env;
+      let ctx = null;
+      if (pageType === 'topic') {
+        ctx = Cypress.env('currentPath').includes('?renderer_env=test')
+          ? 'test'
+          : 'live';
+      }
+      const ctxServEnv = ctx || env;
       const pageTypeId =
         id ||
         (pageType === 'cpsAsset'

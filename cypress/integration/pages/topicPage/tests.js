@@ -7,8 +7,6 @@ export default ({ service, pageType, variant }) => {
   let firstItemHeadline;
   let pageCount;
   let numberOfItems;
-  // eslint-disable-next-line no-unused-vars
-  let appendVariant = '';
   let messageBanner;
   const scriptSwitchServices = ['serbian', 'ukchina', 'zhongwen'];
   let otherVariant;
@@ -26,7 +24,6 @@ export default ({ service, pageType, variant }) => {
           .split('?')[0];
 
         if (scriptSwitchServices.includes(service)) {
-          appendVariant = `&variant=${variant}`;
           if (service === 'serbian') {
             otherVariant = variant === 'lat' ? 'cyr' : 'lat';
           }
@@ -35,18 +32,11 @@ export default ({ service, pageType, variant }) => {
           }
         }
 
-        const ctxServiceEnv = Cypress.env('currentPath').includes(
-          '?renderer_env=test',
-        )
-          ? 'test'
-          : 'live';
-
         // Gets the topic page data for all the tests
         cy.getPageData({
           service,
           pageType: 'topic',
           variant,
-          ctxServiceEnv,
         }).then(({ body }) => {
           topicTitle = body.data.title;
           variantTopicId = body.data.variantTopicId;
