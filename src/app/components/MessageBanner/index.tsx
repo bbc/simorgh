@@ -4,10 +4,11 @@ import { jsx } from '@emotion/react';
 import Paragraph from '../Paragraph';
 import Heading from '../Heading';
 import Image from '../Image';
-import Text from '../Text';
-import { LeftChevron, RightChevron } from '../icons';
 import styles from './index.styles';
+import { LeftChevron, RightChevron } from '../icons';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import CallToActionLink from '../CallToActionLink';
+import idSanitiser from '../../lib/utilities/idSanitiser';
 
 interface MessageBannerProps {
   heading: string;
@@ -27,7 +28,7 @@ const MessageBanner = ({
   const { dir } = useContext(ServiceContext);
   const isRtl = dir === 'rtl';
 
-  const id = `message-banner-${heading.replaceAll(' ', '-')}`;
+  const id = `message-banner-${idSanitiser(heading)}`;
 
   return (
     <section
@@ -46,22 +47,18 @@ const MessageBanner = ({
           </Paragraph>
         </div>
         <div css={styles.flex}>
-          <a
+          <CallToActionLink
             href={link}
-            css={styles.linkBackground}
+            css={styles.callToActionLink}
             className="focusIndicatorInvert"
           >
-            <div css={styles.linkAndChevron}>
-              <Text size="pica" fontVariant="sansBold" css={styles.link}>
-                {linkText}
-                {isRtl ? (
-                  <LeftChevron css={styles.chevron} />
-                ) : (
-                  <RightChevron css={styles.chevron} />
-                )}
-              </Text>
-            </div>
-          </a>
+            {linkText}
+            {isRtl ? (
+              <LeftChevron css={styles.chevron} />
+            ) : (
+              <RightChevron css={styles.chevron} />
+            )}
+          </CallToActionLink>
           {image && (
             <div css={isRtl ? styles.imageRtl : styles.imageLtr}>
               <Image

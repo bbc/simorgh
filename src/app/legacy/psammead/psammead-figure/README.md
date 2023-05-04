@@ -30,7 +30,7 @@ import Copyright from '#psammead/psammead-copyright/src';
 import Figure from '#psammead/psammead-figure/src';
 import Image from '#psammead/psammead-image/src';
 import ImagePlaceholder from '#psammead/psammead-image-placeholder/src';
-import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
+import VisuallyHiddenText from '../../../components/VisuallyHiddenText';
 
 const Wrapper = ({ alt, captionText, ratio, src, width }) => (
   <Figure>

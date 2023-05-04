@@ -6,7 +6,6 @@ import {
 } from '@emotion/react';
 import focusIndicator from './focusIndicator';
 import { RequestContext } from '../../contexts/RequestContext';
-import isLive from '../../lib/utilities/isLive';
 
 import {
   ARCHIVE_BLUE,
@@ -123,7 +122,14 @@ import {
 
 import gridWidths from './gridWidths';
 
+import { MEDIA_ARTICLE_PAGE, MEDIA_PAGE } from '../../routes/utils/pageTypes';
 import { BrandPalette, Typography, BrandSVG } from '../../models/types/theming';
+import { PageTypes } from '../../models/types/global';
+
+const isDarkUiPage = (pageType: PageTypes, derivedPageType: string | null) =>
+  pageType === MEDIA_ARTICLE_PAGE ||
+  (pageType === MEDIA_PAGE &&
+    derivedPageType?.toLowerCase() === 'on demand tv');
 
 type Props = {
   children: React.ReactNode;
@@ -270,11 +276,11 @@ const withThemeProvider = ({
   };
 
   const ThemeProvider: React.FC<Props> = ({ children }) => {
-    const { isAmp, pageType } = useContext(RequestContext);
+    const { isAmp, pageType, derivedPageType } = useContext(RequestContext);
 
     const theme = {
       ...themeConfig,
-      isDarkUi: pageType === 'mediaArticle' && !isLive(),
+      isDarkUi: isDarkUiPage(pageType, derivedPageType),
     };
 
     return (

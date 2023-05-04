@@ -25,7 +25,7 @@ storiesOf('Components/Images/ImagePlaceholder', module)
   )
   .add(
     '16x9 dark mode image placeholder',
-    () => <ImagePlaceholder ratio={landscapeImageRatio} darkMode />,
+    () => <ImagePlaceholder ratio={landscapeImageRatio} darkPlaceholder />,
     { notes },
   )
   .add(
@@ -35,7 +35,7 @@ storiesOf('Components/Images/ImagePlaceholder', module)
         <ImagePlaceholder
           forwardStyle={{ background: 'none' }}
           ratio={landscapeImageRatio}
-          darkMode
+          darkPlaceholder
         />
         <ImagePlaceholder ratio={landscapeImageRatio} />
         <ImagePlaceholder ratio={squareImageRatio} />

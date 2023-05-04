@@ -55,13 +55,6 @@ Object {
 
 exports[`Canonical Most Watched Page Footer Anchors should match text and url 8`] = `
 Object {
-  "text": "AdChoices / Do Not Sell My Info",
-  "url": "https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/",
-}
-`;
-
-exports[`Canonical Most Watched Page Footer Anchors should match text and url 9`] = `
-Object {
   "text": "بیرونی لنکس کے بارے میں ہماری پالیسی.",
   "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
 }
@@ -124,8 +117,8 @@ Object {
 
 exports[`Canonical Most Watched Page Header Navigation link should match text and url 8`] = `
 Object {
-  "text": "موجودہ صفحہ, ویڈیو",
-  "url": "/urdu/media/video",
+  "text": "ویڈیو",
+  "url": "/urdu/topics/c1e0mzr3r2yt",
 }
 `;
 

@@ -5,7 +5,7 @@ import {
 import getComponentName, { COMPONENT_NAMES } from '.';
 
 const { MINIMUM, LOW, NORMAL, HIGH, MAXIMUM } = VISUAL_PROMINENCE;
-const { NONE, BANNER } = VISUAL_STYLE;
+const { NONE, BANNER, COLLECTION } = VISUAL_STYLE;
 const {
   MESSAGE_BANNER,
   SIMPLE_CURATION_GRID,
@@ -23,6 +23,7 @@ describe('getComponentName', () => {
     ${BANNER}       | ${MAXIMUM}           | ${NOT_SUPPORTED}
     ${NONE}         | ${NORMAL}            | ${SIMPLE_CURATION_GRID}
     ${NONE}         | ${HIGH}              | ${HIERARCHICAL_CURATION_GRID}
+    ${COLLECTION}   | ${HIGH}              | ${HIERARCHICAL_CURATION_GRID}
     ${'fake-style'} | ${'fake-prominence'} | ${null}
   `(
     'should return $expected when visual style is $visualStyle and visual prominence is $visualProminence',
