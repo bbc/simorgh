@@ -541,6 +541,7 @@ describe('Main page routes', () => {
     const { pageType, getInitialData } = getMatchingRoute(pathname);
     const { status, error } = await getInitialData({
       path: pathname,
+      pageType,
       service: 'pidgin',
       getAgent,
     });
