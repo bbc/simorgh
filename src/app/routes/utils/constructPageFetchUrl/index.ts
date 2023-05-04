@@ -5,9 +5,19 @@ import { getUrlPath } from '../../../lib/utilities/urlParser';
 import handleError from '../handleError';
 import { Services, Variants } from '../../../models/types/global';
 
+const PAGE_TYPES = {
+  ARTICLE: 'article',
+  CPS_ASSET: 'cpsAsset',
+  HOME: 'home',
+  TOPIC: 'topic',
+  LIVE: 'live',
+} as const;
+
+type Keys = keyof typeof PAGE_TYPES;
+type PageTypes = (typeof PAGE_TYPES)[Keys];
 interface UrlConstructParams {
   pathname: string;
-  pageType: 'article' | 'cpsAsset' | 'topic' | 'live';
+  pageType: PageTypes;
   service: Services;
   variant?: Variants;
   page?: string;
@@ -18,14 +28,14 @@ const getArticleId = (path: string) => path.match(/(c[a-zA-Z0-9]{10}o)/)?.[1];
 const getTipoId = (path: string) => path.match(/(c[a-zA-Z0-9]{10}t)/)?.[1];
 const getCpsId = (path: string) => path;
 
-const getId = (pageType: string) => {
+const getId = (pageType: PageTypes) => {
   let getIdFunction;
   switch (pageType) {
-    case PAGE_TYPES.CPS_ASSET
+    case PAGE_TYPES.CPS_ASSET:
       getIdFunction = getCpsId;
       break;
-    case 'topic':
-    case 'live':
+    case PAGE_TYPES.TOPIC:
+    case PAGE_TYPES.LIVE:
       getIdFunction = getTipoId;
       break;
     default:
@@ -49,7 +59,7 @@ const constructPageFetchUrl = ({
   const capitalisedPageType =
     pageType.charAt(0).toUpperCase() + pageType.slice(1);
 
-  if (!id) throw handleError(`${capitlisedPageType} ID is invalid`, 500);
+  if (!id) throw handleError(`${capitalisedPageType} ID is invalid`, 500);
 
   const queryParameters = {
     id,
@@ -70,15 +80,15 @@ const constructPageFetchUrl = ({
 
   if (isLocal) {
     switch (pageType) {
-      case PAGE_TYPES.ARTICLE
+      case PAGE_TYPES.ARTICLE:
         fetchUrl = Url(
           `/${service}/articles/${id}${variant ? `/${variant}` : ''}`,
         );
         break;
-      case 'cpsAsset':
+      case PAGE_TYPES.CPS_ASSET:
         fetchUrl = Url(id);
         break;
-      case 'topic': {
+      case PAGE_TYPES.TOPIC: {
         const variantPath = variant ? `/${variant}` : '';
         fetchUrl = Url(`/${service}${variantPath}/topics/${id}`);
         break;
