@@ -32,7 +32,46 @@ export const getArticleManifestRegex = services => {
   return `/:service(${serviceRegex})/:local(${articleLocalRegex})/manifest.json`;
 };
 
-const frontPageServicesToMigrate = ['kyrgyz'];
+const frontPageServicesToMigrate = [
+  'kyrgyz',
+  'afaanoromoo',
+  'afrique',
+  'amharic',
+  'arabic',
+  'azeri',
+  'bengali',
+  'burmese',
+  'gahuza',
+  'gujarati',
+  'hausa',
+  'hindi',
+  'igbo',
+  'indonesia',
+  'japanese',
+  'korean',
+  'marathi',
+  'mundo',
+  'nepali',
+  'pashto',
+  'persian',
+  'pidgin',
+  'portuguese',
+  'punjabi',
+  'russian',
+  'sinhala',
+  'somali',
+  'swahili',
+  'tamil',
+  'telugu',
+  'thai',
+  'tigrinya',
+  'turkce',
+  'ukrainian',
+  'urdu',
+  'uzbek',
+  'vietnamese',
+  'yoruba',
+];
 
 export const getFrontPageRegex = services => {
   // if environment is not live then filter out and remove kyrgyz from list of services

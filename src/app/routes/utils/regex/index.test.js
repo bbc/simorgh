@@ -1,29 +1,29 @@
 import { matchPath } from 'react-router-dom';
 import {
-  articlePath,
   articleDataPath,
-  articleSwPath,
   articleManifestPath,
-  frontPagePath,
+  articlePath,
+  articleSwPath,
+  cpsAssetPageDataPath,
+  cpsAssetPagePath,
   frontPageDataPath,
   frontPageManifestPath,
+  frontPagePath,
   frontPageSwPath,
-  tipoHomePath,
-  tipoHomeDataPath,
-  cpsAssetPagePath,
-  cpsAssetPageDataPath,
-  podcastEpisodePath,
-  podcastBrandPath,
+  legacyAssetPageDataPath,
+  legacyAssetPagePath,
   liveRadioPath,
-  onDemandRadioPath,
-  onDemandTvPath,
   mostReadDataRegexPath,
   mostWatchedDataPath,
   mostWatchedPagePath,
-  legacyAssetPagePath,
-  legacyAssetPageDataPath,
-  secondaryColumnDataRegexPath,
+  onDemandRadioPath,
+  onDemandTvPath,
+  podcastBrandPath,
+  podcastEpisodePath,
   recommendationsDataRegex,
+  secondaryColumnDataRegexPath,
+  tipoHomeDataPath,
+  tipoHomePath,
 } from './index';
 
 import serviceConfig from '../../../lib/config/services/loadableConfig';
@@ -535,8 +535,20 @@ describe('frontPage -> homePage migration', () => {
 
   const servicesWithVariants = ['serbian', 'ukchina', 'zhongwen'];
 
+  const servicesNotCoveredByWorldService = [
+    'sport',
+    'scotland',
+    'newsround',
+    'news',
+    'naidheachdan',
+    'cymrufyw',
+    'archive',
+  ];
+
   const homePageServices = services.filter(
-    service => !servicesWithVariants.includes(service),
+    service =>
+      !servicesWithVariants.includes(service) &&
+      !servicesNotCoveredByWorldService.includes(service),
   );
 
   const homePageRoutes = homePageServices.map(service => `/${service}`);
