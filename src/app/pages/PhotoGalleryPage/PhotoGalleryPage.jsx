@@ -23,7 +23,6 @@ import Image from '#containers/Image';
 import MediaPlayer from '#containers/CpsAssetMediaPlayer';
 import Blocks from '#containers/Blocks';
 import CpsRelatedContent from '#containers/CpsRelatedContent';
-import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import cpsAssetPagePropTypes from '#models/propTypes/cpsAssetPage';
@@ -36,6 +35,7 @@ import {
   getLastPublished,
 } from '#lib/utilities/parseAssetData';
 import RelatedTopics from '#containers/RelatedTopics';
+import ATIAnalytics from '../../components/ATIAnalytics';
 import LinkedData from '../../components/LinkedData';
 import { ServiceContext } from '../../contexts/ServiceContext';
 

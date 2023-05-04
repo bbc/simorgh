@@ -67,7 +67,7 @@ jest.mock('#containers/ChartbeatAnalytics', () => {
   return () => <div>chartbeat</div>;
 });
 
-jest.mock('#containers/ATIAnalytics/amp', () => {
+jest.mock('../../components/ATIAnalytics/amp', () => {
   return () => <div>Amp ATI analytics</div>;
 });
 
