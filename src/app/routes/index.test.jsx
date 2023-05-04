@@ -16,7 +16,7 @@ import podcastPageJson from '#data/arabic/podcasts/p02pc9qc.json';
 import onDemandRadioPageJson from '#data/indonesia/bbc_indonesian_radio/w172xh267fpn19l.json';
 import onDemandTvPageJson from '#data/pashto/bbc_pashto_tv/tv_programmes/w13xttn4.json';
 import articlePageJson from '#data/persian/articles/c4vlle3q337o.json';
-import frontPageJson from '#data/pidgin/frontpage/index.json';
+import frontPageJson from '#data/serbian/frontpage/lat.json';
 import homePageJson from '#data/kyrgyz/homePage/index.json';
 import mediaAssetPageJson from '#data/yoruba/cpsAssets/media-23256797.json';
 import mostWatchedData from '#data/pidgin/mostWatched/index.json';
@@ -248,22 +248,25 @@ describe('Main page routes', () => {
   });
 
   it('should route to and render a front page', async () => {
-    const pathname = '/pidgin';
-    fetchMock.mock(`http://localhost${pathname}.json`, frontPageJson);
+    const pathname = '/serbian';
+    const variant = 'lat';
+    fetchMock.mock(`http://localhost${pathname}/${variant}.json`, frontPageJson);
 
     const { getInitialData, pageType } = getMatchingRoute(pathname);
     const { pageData } = await getInitialData({
       path: pathname,
-      service: 'pidgin',
+      service: 'serbian',
+      variant,
     });
 
     await renderRouter({
       pathname,
       pageData,
       pageType,
-      service: 'pidgin',
+      service: 'serbian',
+      variant,
     });
-    const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'Yarn Me Tori';
+    const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'Najvažnije';
 
     expect(
       await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
