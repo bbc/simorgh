@@ -1,4 +1,4 @@
-export const COLORS = [
+export const LEGACY = [
   { colorName: 'ARCHIVE_BLUE ', colorCode: '#3A549C' },
   { colorName: 'BLACK ', colorCode: '#000000' },
   { colorName: 'BLUEJAY ', colorCode: '#0F556C' },
@@ -47,4 +47,43 @@ export const COLORS = [
   { colorName: 'STORM ', colorCode: '#404040' },
   { colorName: 'WEATHER_BLUE ', colorCode: '#067EB3' },
   { colorName: 'WHITE ', colorCode: '#FFFFFF' },
+];
+
+export const CROSS_PLATFORM = [
+  { colorName: 'SERVICE_NEUTRAL_CORE', colorCode: '#0071F1' },
+  { colorName: 'SERVICE_NEUTRAL_LIGHT', colorCode: '#3092FF' },
+  { colorName: 'SERVICE_NEUTRAL_DARK', colorCode: '#0064E6' },
+  { colorName: 'LIVE_CORE', colorCode: '#009E9E' },
+  { colorName: 'LIVE_LIGHT', colorCode: '#00CCC7' },
+  { colorName: 'LIVE_DARK', colorCode: '#006666' },
+  { colorName: 'SUCCESS_CORE', colorCode: '#24B300' },
+  { colorName: 'SUCCESS_LIGHT', colorCode: '#49CC29' },
+  { colorName: 'SUCCESS_DARK', colorCode: '#148A00' },
+  { colorName: 'ALERT_CORE', colorCode: '#FFB32B' },
+  { colorName: 'ALERT_LIGHT', colorCode: '#FFCE2B' },
+  { colorName: 'ALERT_DARK', colorCode: '#C8871E' },
+  { colorName: 'ERROR_CORE', colorCode: '#F51A5A' },
+  { colorName: 'ERROR_LIGHT', colorCode: '#FF4060' },
+  { colorName: 'ERROR_DARK', colorCode: '#E4134F' },
+];
+
+export const SERVICE = [
+  { colorName: 'NEWS_CORE', colorCode: '#B80000' },
+  { colorName: 'NEWS_BRIGHT', colorCode: '#EB0000' },
+  { colorName: 'NEWS_LIGHT', colorCode: '#FF453A' },
+];
+
+export const FOUNDATION = [
+  { colorName: 'WHITE', colorCode: '#FFFFFF' },
+  { colorName: 'GREY1', colorCode: '#FEFEFE' },
+  { colorName: 'GREY2', colorCode: '#F6F6F6' },
+  { colorName: 'GREY3', colorCode: '#E6E8EA' },
+  { colorName: 'GREY4', colorCode: '#B0B2B4' },
+  { colorName: 'GREY5', colorCode: '#8A8C8E' },
+  { colorName: 'GREY6', colorCode: '#545658' },
+  { colorName: 'GREY7', colorCode: '#3A3C3E' },
+  { colorName: 'GREY8', colorCode: '#202224' },
+  { colorName: 'GREY9', colorCode: '#141618' },
+  { colorName: 'GREY10', colorCode: '#141414' },
+  { colorName: 'BLACK', colorCode: '#000000' },
 ];
