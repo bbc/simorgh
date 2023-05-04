@@ -88,13 +88,13 @@ Cypress.Commands.add(
   ({ service, pageType, variant = 'default', id }) => {
     const env = Cypress.env('APP_ENV');
     if (env !== 'local') {
-      let ctx = null;
+      let ctxEnv = null;
       if (pageType === 'topic') {
-        ctx = Cypress.env('currentPath').includes('?renderer_env=test')
+        ctxEnv = Cypress.env('currentPath').includes('?renderer_env=test')
           ? 'test'
           : 'live';
       }
-      const ctxServEnv = ctx || env;
+      const ctxServEnv = ctxEnv || env;
       const pageTypeId =
         id ||
         (pageType === 'cpsAsset'
