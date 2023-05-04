@@ -21,7 +21,7 @@ const getCpsId = (path: string) => path;
 const getId = (pageType: string) => {
   let getIdFunction;
   switch (pageType) {
-    case 'cpsAsset':
+    case PAGE_TYPES.CPS_ASSET
       getIdFunction = getCpsId;
       break;
     case 'topic':
