@@ -46,7 +46,7 @@ const StyledPlaceholder = styled.div`
 
   &:hover, &:focus {
     ${StyledPlayButton} {
-      background-color: ${props => props.theme.palette.POSTBOX};
+      background-color: ${props => props.theme.palette.NEWS_CORE};
     }
   }
 `;

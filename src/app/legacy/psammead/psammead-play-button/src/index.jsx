@@ -28,7 +28,7 @@ const Button = styled.button`
 
   &:hover,
   &:focus {
-    background-color: ${props => props.theme.palette.POSTBOX};
+    background-color: ${props => props.theme.palette.NEWS_CORE};
     transition: background-color ${BGC_TRANSITION_DURATION};
   }
 `;

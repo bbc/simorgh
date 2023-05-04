@@ -36,8 +36,8 @@ const SkipLink = styled.a`
   &:hover,
   &:focus {
     span {
-      color: ${props => props.theme.palette.POSTBOX};
-      border-bottom: 2px solid ${props => props.theme.palette.POSTBOX};
+      color: ${props => props.theme.palette.NEWS_CORE};
+      border-bottom: 2px solid ${props => props.theme.palette.NEWS_CORE};
     }
   }
 

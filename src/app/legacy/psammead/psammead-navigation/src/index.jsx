@@ -70,18 +70,18 @@ const StyledLink = styled.a`
   &:hover::after {
     ${ListItemBorder}
     border-bottom: ${GEL_SPACING_HLF} solid ${props =>
-      props.theme.palette.POSTBOX};
+      props.theme.palette.NEWS_CORE};
     ${({ currentLink, theme }) =>
       currentLink &&
       `
-        border-bottom: ${CURRENT_ITEM_HOVER_BORDER} solid ${theme.palette.POSTBOX};
+        border-bottom: ${CURRENT_ITEM_HOVER_BORDER} solid ${theme.palette.NEWS_CORE};
       `}
   }
 
   &:focus::after {
     ${ListItemBorder}
     border-bottom: ${GEL_SPACING_HLF} solid ${props =>
-      props.theme.palette.POSTBOX};
+      props.theme.palette.NEWS_CORE};
     top: 0;
     border: ${focusIndicatorThickness} solid
       ${props => props.theme.palette.BLACK};
@@ -91,7 +91,7 @@ const StyledLink = styled.a`
   &:focus-visible::after {
     ${ListItemBorder}
     border-bottom: ${GEL_SPACING_HLF} solid ${props =>
-      props.theme.palette.POSTBOX};
+      props.theme.palette.NEWS_CORE};
     top: 0;
     border: ${focusIndicatorThickness} solid
       ${props => props.theme.palette.BLACK};
@@ -129,7 +129,7 @@ const StyledSpan = styled.span`
   &::after {
     ${ListItemBorder}
     border-bottom: ${GEL_SPACING_HLF} solid ${props =>
-      props.theme.palette.POSTBOX};
+      props.theme.palette.NEWS_CORE};
   }
 `;
 

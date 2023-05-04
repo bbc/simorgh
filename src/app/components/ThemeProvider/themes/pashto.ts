@@ -1,4 +1,4 @@
-import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
+import { GHOST, WHITE, NEWS_CORE, POSTBOX_30 } from '../palette';
 import arabicScript from '../fontScripts/arabic';
 import { REITH_QALAM_REGULAR, REITH_QALAM_BOLD } from '../fontFaces';
 import reithQalamFontVariants from '../fontVariants/reithQalam';
@@ -7,7 +7,7 @@ import brandSVG from '../chameleonLogos/pashto';
 
 const pashtoTheme = {
   palette: {
-    BRAND_BACKGROUND: POSTBOX,
+    BRAND_BACKGROUND: NEWS_CORE,
     BRAND_LOGO: WHITE,
     BRAND_FOREGROUND: GHOST,
     BRAND_HIGHLIGHT: WHITE,

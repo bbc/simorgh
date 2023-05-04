@@ -9,21 +9,13 @@ export interface BrandPalette {
 interface Palette extends BrandPalette {
   ARCHIVE_BLUE: string;
   BLACK: string;
-  BLUEJAY: string;
-  BLUEJAY_LHT: string;
-  CHALK: string;
-  CLOUD_DARK: string;
   CLOUD_LIGHT: string;
   CONSENT_ACTION: string;
   CONSENT_BACKGROUND: string;
   CONSENT_CONTENT: string;
-  CONSENT_FOCUS: string;
-  DARK_SALTIRE: string;
-  DIM_GREY: string;
   EBON: string;
   GHOST: string;
   GREY_10: string;
-  GREY_11: string;
   GREY_2: string;
   GREY_3: string;
   GREY_4: string;
@@ -32,28 +24,21 @@ interface Palette extends BrandPalette {
   GREY_7: string;
   GREY_8: string;
   KINGFISHER: string;
-  LE_TEAL: string;
   LUNAR: string;
-  LUNAR_LIGHT: string;
   METAL: string;
   MIDNIGHT_BLACK: string;
   NEWSROUND_PURPLE: string;
   NEWSROUND_PURPLE_30: string;
-  OAT_LHT: string;
-  ORBIT_GREY: string;
   PEBBLE: string;
-  PHILIPPINE_GREY: string;
-  POSTBOX: string;
+  NEWS_CORE: string;
   POSTBOX_30: string;
   RHINO: string;
   SHADOW: string;
   SPORT_MIST: string;
   SPORT_SILVER: string;
-  SPORT_YELLOW: string;
+  SPORT_CORE: string;
   SPORT_YELLOW_30: string;
   STONE: string;
-  STORM: string;
-  WEATHER_BLUE: string;
   WHITE: string;
 }
 

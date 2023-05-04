@@ -37,7 +37,7 @@ const styles = {
 
   negative: (theme: Theme) =>
     css({
-      background: `${theme.palette.POSTBOX}`,
+      background: `${theme.palette.NEWS_CORE}`,
       color: `${theme.palette.WHITE}`,
     }),
 

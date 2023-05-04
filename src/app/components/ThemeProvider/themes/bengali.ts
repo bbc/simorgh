@@ -1,4 +1,4 @@
-import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
+import { GHOST, WHITE, NEWS_CORE, POSTBOX_30 } from '../palette';
 import bengaliScript from '../fontScripts/bengali';
 import {
   NOTO_SERIF_BENGALI_BOLD,
@@ -10,7 +10,7 @@ import brandSVG from '../chameleonLogos/bangla';
 
 const bengaliTheme = {
   palette: {
-    BRAND_BACKGROUND: POSTBOX,
+    BRAND_BACKGROUND: NEWS_CORE,
     BRAND_LOGO: WHITE,
     BRAND_FOREGROUND: GHOST,
     BRAND_HIGHLIGHT: WHITE,

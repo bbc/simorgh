@@ -1,4 +1,4 @@
-import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
+import { GHOST, WHITE, NEWS_CORE, POSTBOX_30 } from '../palette';
 import tamilScript from '../fontScripts/tamil';
 import { NOTO_SANS_TAMIL_BOLD, NOTO_SANS_TAMIL_REGULAR } from '../fontFaces';
 import tamilFontVariants from '../fontVariants/tamil';
@@ -7,7 +7,7 @@ import brandSVG from '../chameleonLogos/tamil';
 
 const tamilTheme = {
   palette: {
-    BRAND_BACKGROUND: POSTBOX,
+    BRAND_BACKGROUND: NEWS_CORE,
     BRAND_LOGO: WHITE,
     BRAND_FOREGROUND: GHOST,
     BRAND_HIGHLIGHT: WHITE,

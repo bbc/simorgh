@@ -1,4 +1,4 @@
-import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
+import { GHOST, WHITE, NEWS_CORE, POSTBOX_30 } from '../palette';
 import devanagariScript from '../fontScripts/devanagari';
 import { MALLANNA_REGULAR } from '../fontFaces';
 import teluguFontVariants from '../fontVariants/telugu';
@@ -7,7 +7,7 @@ import brandSVG from '../chameleonLogos/telugu';
 
 const teluguTheme = {
   palette: {
-    BRAND_BACKGROUND: POSTBOX,
+    BRAND_BACKGROUND: NEWS_CORE,
     BRAND_LOGO: WHITE,
     BRAND_FOREGROUND: GHOST,
     BRAND_HIGHLIGHT: WHITE,

@@ -15,7 +15,7 @@ import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 
 const StatusCode = styled.span`
   ${props => (props.script ? getParagon(props.script) : '')}
-  color: ${props => props.theme.palette.POSTBOX};
+  color: ${props => props.theme.palette.NEWS_CORE};
   display: block;
   font-family: ${GEL_FF_REITH_SANS};
   font-weight: 600;

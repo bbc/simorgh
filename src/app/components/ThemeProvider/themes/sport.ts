@@ -1,9 +1,4 @@
-import {
-  SPORT_YELLOW,
-  BLACK,
-  MIDNIGHT_BLACK,
-  SPORT_YELLOW_30,
-} from '../palette';
+import { SPORT_CORE, BLACK, MIDNIGHT_BLACK, SPORT_YELLOW_30 } from '../palette';
 import latinScript from '../fontScripts/latin';
 import {
   REITH_SANS_BOLD,
@@ -17,7 +12,7 @@ import brandSVG from '../chameleonLogos/sport';
 
 const sportTheme = {
   palette: {
-    BRAND_BACKGROUND: SPORT_YELLOW,
+    BRAND_BACKGROUND: SPORT_CORE,
     BRAND_LOGO: BLACK,
     BRAND_FOREGROUND: MIDNIGHT_BLACK,
     BRAND_HIGHLIGHT: SPORT_YELLOW_30,

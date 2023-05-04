@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 const InlineLink = styled.a`
   color: ${({ theme }) =>
     theme.isDarkUi ? theme.palette.GREY_2 : theme.palette.EBON};
-  border-bottom: 1px solid ${props => props.theme.palette.POSTBOX};
+  border-bottom: 1px solid ${props => props.theme.palette.NEWS_CORE};
   text-decoration: none;
 
   &:visited {
@@ -13,8 +13,8 @@ const InlineLink = styled.a`
 
   &:focus,
   &:hover {
-    border-bottom: 2px solid ${props => props.theme.palette.POSTBOX};
-    color: ${props => props.theme.palette.POSTBOX};
+    border-bottom: 2px solid ${props => props.theme.palette.NEWS_CORE};
+    color: ${props => props.theme.palette.NEWS_CORE};
   }
 `;
 

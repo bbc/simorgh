@@ -21,7 +21,7 @@ export const NAV_BAR_TOP_BOTTOM_SPACING = 0.75; // 12px
 
 const getStyles = (dir, theme) => {
   const direction = dir === 'ltr' ? 'left' : 'right';
-  return `border-${direction}: ${GEL_SPACING_HLF} solid ${theme.palette.POSTBOX};
+  return `border-${direction}: ${GEL_SPACING_HLF} solid ${theme.palette.NEWS_CORE};
           padding-${direction}: ${GEL_SPACING};`;
 };
 
@@ -111,7 +111,7 @@ const StyledDropdownLink = styled.a`
   &:hover,
   &:focus {
     text-decoration: underline;
-    text-decoration-color: ${props => props.theme.palette.POSTBOX};
+    text-decoration-color: ${props => props.theme.palette.NEWS_CORE};
   }
 `;
 

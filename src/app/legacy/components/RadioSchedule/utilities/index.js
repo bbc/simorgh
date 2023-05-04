@@ -1,7 +1,7 @@
 import { formatDuration } from '#psammead/psammead-timestamp-container/src/utilities';
 import {
   KINGFISHER,
-  POSTBOX,
+  NEWS_CORE,
   EBON,
   SHADOW,
   WHITE,
@@ -10,7 +10,7 @@ import {
 
 export const programStateConfig = {
   live: {
-    backgroundColor: POSTBOX,
+    backgroundColor: NEWS_CORE,
     headerTextColor: EBON,
     titleColor: SHADOW,
     durationColor: WHITE,

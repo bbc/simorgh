@@ -154,7 +154,7 @@ const playCtaStyles = {
 const PlayCTA = styled.div`
   background-color: ${({ isLive }) =>
     props =>
-      isLive ? props.theme.palette.POSTBOX : props.theme.palette.EBON};
+      isLive ? props.theme.palette.NEWS_CORE : props.theme.palette.EBON};
   border: 0.0625rem solid transparent;
   color: ${props => props.theme.palette.WHITE};
   padding: 0.75rem;

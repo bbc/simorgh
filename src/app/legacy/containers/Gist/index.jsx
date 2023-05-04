@@ -27,7 +27,7 @@ import UnorderedList from '../BulletedList';
 
 const GistWrapper = styled.div`
   color: ${props => props.theme.palette.GREY_6};
-  border-top: ${GEL_SPACING_HLF} solid ${props => props.theme.palette.POSTBOX};
+  border-top: ${GEL_SPACING_HLF} solid ${props => props.theme.palette.NEWS_CORE};
   background-color: ${({ theme }) =>
     theme.isDarkUi ? theme.palette.GREY_3 : theme.palette.WHITE};
   ${({ dir }) =>

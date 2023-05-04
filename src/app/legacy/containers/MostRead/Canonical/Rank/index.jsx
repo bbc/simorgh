@@ -144,7 +144,7 @@ const StyledSpan = styled.span`
   ${({ script, size }) =>
     script && size === 'small' ? getTrafalgar(script) : getFoolscap(script)}
   position: relative;
-  color: ${props => props.theme.palette.POSTBOX};
+  color: ${props => props.theme.palette.NEWS_CORE};
   margin: 0; /* Reset */
   padding: 0;
   /* reduce the letter spacing of Japanese numerals */

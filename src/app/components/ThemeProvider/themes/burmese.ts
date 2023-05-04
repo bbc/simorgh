@@ -1,4 +1,4 @@
-import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
+import { GHOST, WHITE, NEWS_CORE, POSTBOX_30 } from '../palette';
 import burmeseScript from '../fontScripts/burmese';
 import { PADAUK_BOLD, PADAUK_REGULAR } from '../fontFaces';
 import burmeseFontVariants from '../fontVariants/burmese';
@@ -7,7 +7,7 @@ import brandSVG from '../chameleonLogos/burmese';
 
 const burmeseTheme = {
   palette: {
-    BRAND_BACKGROUND: POSTBOX,
+    BRAND_BACKGROUND: NEWS_CORE,
     BRAND_LOGO: WHITE,
     BRAND_FOREGROUND: GHOST,
     BRAND_HIGHLIGHT: WHITE,
