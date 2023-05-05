@@ -1,7 +1,7 @@
 import React from 'react';
-import { MemoryRouter } from 'react-router-dom';
-import { renderRoutes } from 'react-router-config';
 import { matchPath } from 'react-router';
+import { renderRoutes } from 'react-router-config';
+import { MemoryRouter } from 'react-router-dom';
 
 // test helpers
 import fetchMock from 'fetch-mock';
@@ -11,32 +11,32 @@ import defaultToggles from '#lib/config/toggles';
 // components being tested
 
 // mock data
-import liveRadioPageJson from '#data/korean/bbc_korean_radio/liveradio.json';
+import featureIndexPageJson from '#data/afrique/cpsAssets/48465371.json';
 import podcastPageJson from '#data/arabic/podcasts/p02pc9qc.json';
+import legacyMediaAssetPage from '#data/azeri/legacyAssets/multimedia/2012/09/120919_georgia_prison_video.json';
 import onDemandRadioPageJson from '#data/indonesia/bbc_indonesian_radio/w172xh267fpn19l.json';
+import photoGalleryPageJson from '#data/indonesia/cpsAssets/indonesia-41635759.json';
+import liveRadioPageJson from '#data/korean/bbc_korean_radio/liveradio.json';
+import homePageJson from '#data/kyrgyz/homePage/index.json';
+import storyPageJson from '#data/mundo/cpsAssets/noticias-internacional-51266689.json';
+import storyPageRecommendationsData from '#data/mundo/recommendations/index.json';
 import onDemandTvPageJson from '#data/pashto/bbc_pashto_tv/tv_programmes/w13xttn4.json';
 import articlePageJson from '#data/persian/articles/c4vlle3q337o.json';
-import frontPageJson from '#data/serbian/frontpage/lat.json';
-import homePageJson from '#data/kyrgyz/homePage/index.json';
-import mediaAssetPageJson from '#data/yoruba/cpsAssets/media-23256797.json';
-import mostWatchedData from '#data/pidgin/mostWatched/index.json';
-import legacyMediaAssetPage from '#data/azeri/legacyAssets/multimedia/2012/09/120919_georgia_prison_video.json';
-import photoGalleryPageJson from '#data/indonesia/cpsAssets/indonesia-41635759.json';
-import storyPageJson from '#data/mundo/cpsAssets/noticias-internacional-51266689.json';
-import featureIndexPageJson from '#data/afrique/cpsAssets/48465371.json';
 import storyPageMostReadData from '#data/pidgin/mostRead/index.json';
-import indexPageJson from '#data/ukrainian/ukraine_in_russian';
-import storyPageRecommendationsData from '#data/mundo/recommendations/index.json';
+import mostWatchedData from '#data/pidgin/mostWatched/index.json';
+import frontPageJson from '#data/serbian/frontpage/lat.json';
 import sportArticlePageJson from '#data/sport/articles/cj80n66ddnko.json';
+import indexPageJson from '#data/ukrainian/ukraine_in_russian';
+import mediaAssetPageJson from '#data/yoruba/cpsAssets/media-23256797.json';
 
-import { FRONT_PAGE, ERROR_PAGE } from '#app/routes/utils/pageTypes';
+import { ERROR_PAGE, FRONT_PAGE } from '#app/routes/utils/pageTypes';
 import routes from '.';
-import * as fetchPageData from './utils/fetchPageData';
 import {
   act,
   render,
   screen,
 } from '../components/react-testing-library-with-providers';
+import * as fetchPageData from './utils/fetchPageData';
 
 fetchMock.config.fallbackToNetwork = true; // ensures non mocked requests fallback to an actual network request
 
@@ -250,7 +250,10 @@ describe('Main page routes', () => {
   it('should route to and render a front page', async () => {
     const pathname = '/serbian';
     const variant = 'lat';
-    fetchMock.mock(`http://localhost${pathname}/${variant}.json`, frontPageJson);
+    fetchMock.mock(
+      `http://localhost${pathname}/${variant}.json`,
+      frontPageJson,
+    );
 
     const { getInitialData, pageType } = getMatchingRoute(pathname);
     const { pageData } = await getInitialData({
