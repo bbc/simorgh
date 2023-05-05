@@ -121,17 +121,13 @@ describe('frontPagePath', () => {
     '/news/foobar',
     '/news/foobar.amp',
     '/persian',
-    '/persian.amp'
+    '/persian.amp',
   ];
   shouldNotMatchInvalidRoutes(invalidRoutes, frontPagePath);
 });
 
 describe('frontPageDataPath', () => {
-  const validRoutes = [
-    '/news.json',
-    '/serbian/cyr.json',
-    '/ukchina/trad.json',
-  ];
+  const validRoutes = ['/news.json', '/serbian/cyr.json', '/ukchina/trad.json'];
   shouldMatchValidRoutes(validRoutes, frontPageDataPath);
 
   const invalidRoutes = [
