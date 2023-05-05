@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Live Page creates snapshot of the live page 1`] = `
+<div>
+  <main
+    class="css-dqph6i-LivePage"
+  >
+    <h1
+      class="css-15p0p7w-Heading"
+    >
+      Test Next.JS Page
+    </h1>
+    <pre
+      class="css-anbuyo-LivePage"
+    >
+      <h4
+        class="css-1bazyl1-Heading"
+      >
+        Headers
+      </h4>
+      <p>
+        bbc-adverts:
+         
+        <span>
+          false
+        </span>
+      </p>
+    </pre>
+    <pre
+      class="css-anbuyo-LivePage"
+    >
+      {
+  "pageCount": 1,
+  "activePage": 1
+}
+    </pre>
+  </main>
+</div>
+`;

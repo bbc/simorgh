@@ -20,8 +20,8 @@ type ComponentProps = {
     pageCount: number;
     activePage: number;
   };
-  pathname: string;
-  showAdsBasedOnLocation: boolean;
+  pathname?: string;
+  showAdsBasedOnLocation?: boolean;
 };
 
 const LivePage = ({
@@ -30,6 +30,7 @@ const LivePage = ({
   pathname,
   showAdsBasedOnLocation,
 }: ComponentProps) => {
+  console.log('hit');
   const { lang } = useContext(ServiceContext);
   const { pageCount, activePage } = pageData;
 
