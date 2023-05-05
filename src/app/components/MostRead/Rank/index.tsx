@@ -1,30 +1,29 @@
 import React from 'react';
-import { shape, string, oneOf, number, bool } from 'prop-types';
 import styled from '@emotion/styled';
-import {
-  getFoolscap,
-  getTrafalgar,
-} from '#psammead/gel-foundations/src/typography';
-import {
-  Burmese,
-  Bengali,
-  EasternArabic,
-  Nepali,
-  WesternArabic,
-} from '#psammead/psammead-locales/src/numerals';
-import { GEL_SPACING_HLF } from '#psammead/gel-foundations/src/spacings';
-import {
-  GEL_GROUP_5_SCREEN_WIDTH_MIN,
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
-  GEL_GROUP_2_SCREEN_WIDTH_MIN,
-  GEL_GROUP_2_SCREEN_WIDTH_MAX,
-  GEL_GROUP_1_SCREEN_WIDTH_MIN,
-  GEL_GROUP_1_SCREEN_WIDTH_MAX,
-  GEL_GROUP_0_SCREEN_WIDTH_MAX,
-} from '#psammead/gel-foundations/src/breakpoints';
-import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
-import { grid } from '#psammead/psammead-styles/src/detection';
-import { getSerifLight } from '#psammead/psammead-styles/src/font-styles';
+// import {
+//   getFoolscap,
+//   getTrafalgar,
+// } from '#psammead/gel-foundations/src/typography';
+// import {
+//   Burmese,
+//   Bengali,
+//   EasternArabic,
+//   Nepali,
+//   WesternArabic,
+// } from '#psammead/psammead-locales/src/numerals';
+// import { GEL_SPACING_HLF } from '#psammead/gel-foundations/src/spacings';
+// import {
+//   GEL_GROUP_5_SCREEN_WIDTH_MIN,
+//   GEL_GROUP_3_SCREEN_WIDTH_MIN,
+//   GEL_GROUP_2_SCREEN_WIDTH_MIN,
+//   GEL_GROUP_2_SCREEN_WIDTH_MAX,
+//   GEL_GROUP_1_SCREEN_WIDTH_MIN,
+//   GEL_GROUP_1_SCREEN_WIDTH_MAX,
+//   GEL_GROUP_0_SCREEN_WIDTH_MAX,
+// } from '#psammead/gel-foundations/src/breakpoints';
+// import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
+// import { grid } from '#psammead/psammead-styles/src/detection';
+// import { getSerifLight } from '#psammead/psammead-styles/src/font-styles';
 import {
   doubleDigitDefault,
   doubleDigitMedium,
@@ -34,7 +33,7 @@ import {
   singleDigitSmall,
   mediumFontServices,
   smallFontServices,
-} from '../../utilities/rankMinWidth';
+} from '../../../legacy/containers/MostRead/utilities/rankMinWidth';
 
 // For additional spacing for numerals in the right column because of '10' being double digits
 const isOnSecondColumn = ({ listIndex, numberOfItems }, supportsGrid) =>
@@ -172,6 +171,17 @@ const getColumnWrapper = columnWrapper =>
     multiColumn: MultiColumnWrapper,
   }[columnWrapper]);
 
+interface MostReadRankProps {
+  service: string;
+  script: object;
+  listIndex: number;
+  numberOfItems: number;
+  dir: 'rtl' | 'ltr';
+  columnLayout: 'oneColumn' | 'twoColumn' | 'multiColumn';
+  size: 'default' | 'small';
+  // isAmp: Boolean;
+}
+
 const MostReadRank = ({
   service,
   script,
@@ -180,10 +190,10 @@ const MostReadRank = ({
   dir,
   columnLayout,
   size,
-  isAmp,
-}) => {
+}: // isAmp,
+MostReadRankProps) => {
   const numerals = serviceNumerals(service);
-  const rank = isAmp ? listIndex : numerals[listIndex];
+  // const rank = isAmp ? listIndex : numerals[listIndex];
   const RankWrapper = getColumnWrapper(columnLayout);
 
   return (
@@ -199,24 +209,6 @@ const MostReadRank = ({
       </StyledSpan>
     </RankWrapper>
   );
-};
-
-MostReadRank.propTypes = {
-  service: string.isRequired,
-  script: shape(scriptPropType).isRequired,
-  listIndex: number.isRequired,
-  numberOfItems: number.isRequired,
-  dir: oneOf(['rtl', 'ltr']),
-  columnLayout: oneOf(['oneColumn', 'twoColumn', 'multiColumn']),
-  size: oneOf(['default', 'small']),
-  isAmp: bool,
-};
-
-MostReadRank.defaultProps = {
-  dir: 'ltr',
-  columnLayout: 'multiColumn',
-  size: 'default',
-  isAmp: false,
 };
 
 export default MostReadRank;

@@ -3,10 +3,6 @@ import 'isomorphic-fetch';
 import { RequestContext } from '#contexts/RequestContext';
 import nodeLogger from '#lib/logger.node';
 import { shouldRenderLastUpdated } from '#lib/utilities/filterPopularStaleData/isDataStale';
-import {
-  MOST_READ_CLIENT_REQUEST,
-  MOST_READ_FETCH_ERROR,
-} from '#lib/logger.const';
 import useViewTracker from '#hooks/useViewTracker';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import {
@@ -21,16 +17,18 @@ const logger = nodeLogger(__filename);
 
 interface MostReadProps {
   endpoint: string;
-  columnLayout: string;
-  size: string;
-  initialData;
-  wrapper;
-  eventTrackingData;
+  columnLayout: 'oneColumn' | 'twoColumn' | 'multiColumn';
+  size: 'default' | 'small';
+  initialData: object;
+  wrapper: React.ElementType;
+  eventTrackingData: {
+    componentName: string;
+  };
 }
 
 const MostRead = ({
   endpoint,
-  columnLayout,
+  columnLayout = 'multiColumn',
   size,
   initialData,
   wrapper: Wrapper,
@@ -99,24 +97,5 @@ const MostRead = ({
     </Wrapper>
   );
 };
-
-// MostRead.propTypes = {
-//   endpoint: string.isRequired,
-//   columnLayout: oneOf(['oneColumn', 'twoColumn', 'multiColumn']),
-//   size: oneOf(['default', 'small']),
-//   initialData: mostReadShape,
-//   wrapper: elementType,
-//   eventTrackingData: shape({
-//     componentName: string,
-//   }),
-// };
-
-// MostRead.defaultProps = {
-//   columnLayout: 'multiColumn',
-//   size: 'default',
-//   initialData: null,
-//   wrapper: React.Fragment,
-//   eventTrackingData: null,
-// };
 
 export default MostRead;

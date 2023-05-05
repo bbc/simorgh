@@ -88,6 +88,25 @@ const TimestampWrapper = styled.div`
   padding-top: ${GEL_SPACING};
 `;
 
+interface MostReadLinkProps {
+  dir: 'rtl' | 'ltr';
+  service: string;
+  script: object;
+  title: string;
+  href: string;
+  children: React.ReactNode;
+  size: 'default' | 'small';
+  eventTrackingData: {
+    componentName: string;
+  };
+}
+
+interface MostReadItemWrapperProps {
+  children: React.ReactNode;
+  dir: 'rtl' | 'ltr';
+  columnLayout: 'oneColumn' | 'twoColumn' | 'multiColumn';
+}
+
 export const MostReadLink = ({
   dir,
   service,
@@ -97,7 +116,7 @@ export const MostReadLink = ({
   children,
   size,
   eventTrackingData,
-}) => {
+}: MostReadLinkProps) => {
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
 
   return (
@@ -115,26 +134,6 @@ export const MostReadLink = ({
       {children && <TimestampWrapper>{children}</TimestampWrapper>}
     </StyledItem>
   );
-};
-
-MostReadLink.propTypes = {
-  dir: oneOf(['rtl', 'ltr']),
-  service: string.isRequired,
-  script: shape(scriptPropType).isRequired,
-  title: string.isRequired,
-  href: string.isRequired,
-  children: node, // this node will be a timestamp container
-  size: oneOf(['default', 'small']),
-  eventTrackingData: shape({
-    componentName: string,
-  }),
-};
-
-MostReadLink.defaultProps = {
-  dir: 'ltr',
-  children: null,
-  size: 'default',
-  eventTrackingData: null,
 };
 
 const ItemWrapper = styled.div`
@@ -166,14 +165,3 @@ export const MostReadItemWrapper = React.forwardRef(
     </StyledGrid>
   ),
 );
-
-MostReadItemWrapper.propTypes = {
-  children: node.isRequired,
-  dir: oneOf(['rtl', 'ltr']),
-  columnLayout: oneOf(['oneColumn', 'twoColumn', 'multiColumn']),
-};
-
-MostReadItemWrapper.defaultProps = {
-  dir: 'ltr',
-  columnLayout: 'multiColumn',
-};

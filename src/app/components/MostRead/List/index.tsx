@@ -6,7 +6,14 @@ import {
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
 import Grid from '#psammead/psammead-grid/src';
-import { mostReadListGridProps } from '../../utilities/gridProps';
+import { mostReadListGridProps } from '../../../legacy/containers/MostRead/utilities';
+
+interface MostReadListProps {
+  children: React.ReactNode;
+  dir: 'rtl' | 'ltr';
+  columnLayout: 'oneColumn' | 'twoColumn' | 'multiColumn';
+  numberOfItems: number;
+}
 
 const OneColumnGrid = styled(Grid)`
   list-style-type: none;
@@ -42,7 +49,12 @@ const getColumnLayout = columnLayout =>
     multiColumn: MultiColumnGrid,
   }[columnLayout]);
 
-const MostReadList = ({ numberOfItems, dir, columnLayout, children }) => {
+const MostReadList = ({
+  numberOfItems,
+  dir,
+  columnLayout,
+  children,
+}: MostReadListProps) => {
   const MostReadListGrid = getColumnLayout(columnLayout);
 
   return (
@@ -55,18 +67,6 @@ const MostReadList = ({ numberOfItems, dir, columnLayout, children }) => {
       {children}
     </MostReadListGrid>
   );
-};
-
-MostReadList.propTypes = {
-  children: node.isRequired,
-  dir: oneOf(['rtl', 'ltr']),
-  columnLayout: oneOf(['oneColumn', 'twoColumn', 'multiColumn']),
-  numberOfItems: number.isRequired,
-};
-
-MostReadList.defaultProps = {
-  dir: 'ltr',
-  columnLayout: 'multiColumn',
 };
 
 export default MostReadList;
