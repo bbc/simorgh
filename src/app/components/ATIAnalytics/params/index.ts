@@ -53,6 +53,10 @@ const ARTICLE_PHOTO_GALLERY = 'article-photo-gallery';
 const ARTICLE_CORRESPONDENT_PIECE = 'article-correspondent';
 const ARTICLE_SHORT_FORM_VIDEO = 'article-sfv';
 
+const noOp = () => {
+  return {};
+};
+
 const pageTypeUrlBuilders = {
   [ARTICLE_PAGE]: buildArticleATIUrl,
   [MEDIA_ARTICLE_PAGE]: (
@@ -112,8 +116,8 @@ const pageTypeUrlBuilders = {
       serviceContext,
       ARTICLE_CORRESPONDENT_PIECE,
     ),
-  [HOME_PAGE]: buildIndexPageATIUrl,
-  [ERROR_PAGE]: () => null,
+  [HOME_PAGE]: noOp,
+  [ERROR_PAGE]: noOp,
 };
 
 const pageTypeParamBuilders = {
@@ -170,8 +174,8 @@ const pageTypeParamBuilders = {
     serviceContext: ServiceConfig,
   ) =>
     buildCpsAssetPageATIParams(data, requestContext, serviceContext, 'article'),
-  [HOME_PAGE]: buildIndexPageATIParams,
-  [ERROR_PAGE]: () => null,
+  [HOME_PAGE]: noOp,
+  [ERROR_PAGE]: noOp,
 };
 
 type BuilderFunction = {
