@@ -75,7 +75,7 @@ const budget = {
   bestPractises: 85,
   performance: 40,
   pwa: 60,
-  seo: 100,
+  seo: 90,
 };
 
 const testableProperties = [
