@@ -1,9 +1,12 @@
 import React from 'react';
-import { render } from '../../../../../components/react-testing-library-with-providers';
-import latin from '../../../../../components/ThemeProvider/fontScripts/latin';
-import arabic from '../../../../../components/ThemeProvider/fontScripts/arabic';
+import { render } from '../../react-testing-library-with-providers';
+import latin from '../../ThemeProvider/fontScripts/latin';
+import arabic from '../../ThemeProvider/fontScripts/arabic';
 import { MostReadLink, getParentColumns } from '.';
-import { getItem, getItemWrapperArray } from '../../utilities';
+import {
+  getItem,
+  getItemWrapperArray,
+} from '../../../legacy/containers/MostRead/utilities';
 
 describe('MostReadLink', () => {
   const newsItem = getItem({ service: 'news', withTimestamp: true });
