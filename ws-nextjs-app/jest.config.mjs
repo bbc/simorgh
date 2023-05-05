@@ -20,7 +20,7 @@ const config = {
     ...pathsToModuleNameMapper(compilerOptions.paths),
     '^uuid$': require.resolve('uuid'),
   },
-  setupFilesAfterEnv: ['./setupTests.js'],
+  setupFilesAfterEnv: ['./setupTests.ts'],
   snapshotSerializers: ['@emotion/jest/serializer'],
   testEnvironment: 'jest-environment-jsdom',
 };
