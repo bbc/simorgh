@@ -132,7 +132,8 @@
         "curationId": "urn:bbc:tipo:list:905b0f54-c03d-426f-9d3b-cb31f00c0d8f",
         "curationType": "tipo-curation",
         "position": 0,
-        "visualProminence": "HIGH"
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
       },
       {
         "summaries": [

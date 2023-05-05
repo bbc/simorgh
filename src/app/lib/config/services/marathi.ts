@@ -343,7 +343,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'व्हीडिओ',
-        url: '/marathi/media/video',
+        url: '/marathi/topics/cl29j0epz13t',
       },
       {
         title: 'लोकप्रिय',

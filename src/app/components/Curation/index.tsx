@@ -1,16 +1,17 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
 import {
   CurationProps,
   VISUAL_STYLE,
   VISUAL_PROMINENCE,
 } from '#app/models/types/curationData';
+import VisuallyHiddenText from '../VisuallyHiddenText';
 import CurationGrid from './CurationGrid';
 import HierarchicalGrid from './HierarchicalGrid';
 import Subheading from './Subhead';
 import getComponentName, { COMPONENT_NAMES } from './getComponentName';
 import MessageBanner from '../MessageBanner';
+import idSanitiser from '../../lib/utilities/idSanitiser';
 
 const {
   SIMPLE_CURATION_GRID,
@@ -32,10 +33,6 @@ const getGridComponent = (componentName: string | null) => {
   }
 };
 
-const createID = (titleText: string) => {
-  return titleText.replaceAll(' ', '-');
-};
-
 const Curation = ({
   visualStyle = NONE,
   visualProminence = NORMAL,
@@ -53,9 +50,8 @@ const Curation = ({
   const GridComponent = getGridComponent(componentName);
 
   const isFirstCuration = position === 0;
-  const id = createID(title || topStoriesTitle);
-
-  const SubheadingComponent = isFirstCuration ? VisuallyHiddenText : Subheading;
+  const curationSubheading = title || topStoriesTitle;
+  const id = idSanitiser(curationSubheading);
 
   switch (componentName) {
     case NOT_SUPPORTED:
@@ -75,9 +71,15 @@ const Curation = ({
     default:
       return curationLength > 1 && (title || isFirstCuration) ? (
         <section aria-labelledby={id} role="region">
-          <SubheadingComponent as="h2" a11yID={id} id={id} link={link}>
-            {title || topStoriesTitle}
-          </SubheadingComponent>
+          {isFirstCuration ? (
+            <VisuallyHiddenText id={id} as="h2">
+              {curationSubheading}
+            </VisuallyHiddenText>
+          ) : (
+            <Subheading id={id} link={link}>
+              {curationSubheading}
+            </Subheading>
+          )}
           <GridComponent
             promos={promos}
             headingLevel={isFirstCuration ? 3 : headingLevel}
