@@ -5,14 +5,7 @@ import { getUrlPath } from '../../../lib/utilities/urlParser';
 import handleError from '../handleError';
 import { Services, Variants } from '../../../models/types/global';
 import HOME_PAGE_CONFIG from '../../homePage/getInitialData/page-config';
-
-const PAGE_TYPES = {
-  ARTICLE: 'article',
-  CPS_ASSET: 'cpsAsset',
-  HOME: 'home',
-  TOPIC: 'topic',
-  LIVE: 'live',
-} as const;
+import PAGE_TYPES from './page-types';
 
 type Keys = keyof typeof PAGE_TYPES;
 type PageTypes = (typeof PAGE_TYPES)[Keys];
@@ -44,7 +37,9 @@ const getId = (
       break;
     case PAGE_TYPES.HOME:
       getIdFunction = () => {
-        return env !== 'local' ? HOME_PAGE_CONFIG[service][env] : 'tipohome';
+        return env !== 'local'
+          ? HOME_PAGE_CONFIG?.[service]?.[env]
+          : 'tipohome';
       };
       break;
     case PAGE_TYPES.LIVE:
