@@ -3,6 +3,8 @@
 import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
+import ATIAnalytics from '#app/components/ATIAnalytics';
+import { ATIData } from '#app/components/ATIAnalytics/types';
 import {
   VisualProminence,
   VisualStyle,
@@ -58,6 +60,16 @@ const HomePage = ({ pageData }: HomePageProps) => {
     name: brandName,
     numberOfItems: itemListElement.length,
   };
+
+  const atiData: ATIData = {
+    contentId: 'contentId',
+    contentType: 'contentType',
+    pageIdentifier: 'pageIdentifier',
+    pageTitle: 'pageTitle',
+    timePublished: 'timePublished',
+    timeUpdated: 'timeUpdated',
+  };
+
   return (
     <>
       <MetadataContainer
@@ -74,6 +86,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
         entities={[itemList]}
       />
       <main css={styles.main}>
+        <ATIAnalytics atiData={atiData} />
         <VisuallyHiddenText id="content" tabIndex={-1} as="h1">
           {/* eslint-disable-next-line jsx-a11y/aria-role */}
           <span role="text">

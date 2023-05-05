@@ -45,8 +45,9 @@ import {
 } from './topicPage/buildParams';
 import { RequestContextProps } from '../../../contexts/RequestContext';
 import { ServiceConfig } from '../../../models/types/serviceConfig';
-import { PageData, ATIPageTrackingProps } from '../types';
+import { PageData, ATIPageTrackingProps, AtiData } from '../types';
 import { PageTypes } from '../../../models/types/global';
+import { buildPageATIUrl } from './genericPage/buildParams';
 
 const ARTICLE_MEDIA_ASSET = 'article-media-asset';
 const ARTICLE_PHOTO_GALLERY = 'article-photo-gallery';
@@ -202,11 +203,14 @@ const createBuilderFactory = (
 
 export const buildATIUrl = (
   data: PageData,
+  atiData: AtiData,
   requestContext: RequestContextProps,
   serviceContext: ServiceConfig,
 ) => {
+  if (atiData) {
+    return buildPageATIUrl({ atiData, requestContext, serviceContext });
+  }
   const buildUrl = createBuilderFactory(requestContext, pageTypeUrlBuilders);
-
   return buildUrl(data, requestContext, serviceContext);
 };
 

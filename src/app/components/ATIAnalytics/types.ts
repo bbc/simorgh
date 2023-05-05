@@ -1,4 +1,6 @@
 import { Platforms, Services } from '../../models/types/global';
+import { RequestContextProps } from '../../../../contexts/RequestContext';
+import { ServiceConfig } from '../../../../models/types/serviceConfig';
 
 export interface AMPAnalyticsData {
   transport: {
@@ -59,6 +61,21 @@ export interface PageData {
   title?: string;
 }
 
+export interface ATIData {
+  contentId?: string;
+  contentType?: string;
+  pageIdentifier?: string;
+  pageTitle?: string;
+  timePublished?: string;
+  timeUpdated?: string;
+}
+
+export interface ATIContexts {
+  requestContext: RequestContextProps;
+  serviceContext: ServiceConfig;
+  atiData: ATIData;
+}
+
 export interface ATIAnalyticsProps {
   baseUrl?: string;
   pageviewParams: string;
@@ -101,5 +118,8 @@ export interface ATIPageTrackingProps {
 }
 
 export interface ATIProps {
-  data: PageData;
+  data?: PageData;
+  atiData?: ATIData;
+  // take out ati info from pageData, strip it into an atiData object in here
+  // this atiData object then gets its data fields from the bff
 }
