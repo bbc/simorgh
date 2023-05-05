@@ -14,12 +14,14 @@ const createJestConfig = nextJest({
 
 /** @type {import('jest').Config} */
 const config = {
+  displayName: 'Next.JS - Unit Tests',
   modulePaths: ['../'],
   moduleNameMapper: {
     ...pathsToModuleNameMapper(compilerOptions.paths),
     '^uuid$': require.resolve('uuid'),
   },
   setupFilesAfterEnv: ['./setupTests.js'],
+  snapshotSerializers: ['@emotion/jest/serializer'],
   testEnvironment: 'jest-environment-jsdom',
 };
 

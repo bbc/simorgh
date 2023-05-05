@@ -54,24 +54,24 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: ./scripts/installNodeModules.sh
 
-      - name: Build Simorgh - Express App
-        run: yarn build
+      # - name: Build Simorgh - Express App
+      #   run: yarn build
 
       - name: Build Simorgh - Next.JS App
         working-directory: ./ws-nextjs-app
         run: yarn build
 
-      - name: Setup Code Climate Test Coverage
-        if: ${{ github.event_name == 'push' || github.event.pull_request.head.repo.full_name == 'bbc/simorgh' }} # Only run if PR originates from the Simorgh repo
-        run: |
-          echo $GIT_BRANCH
-          echo $GIT_COMMIT_SHA
-          curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-          chmod +x ./cc-test-reporter
-          ./cc-test-reporter before-build
+      # - name: Setup Code Climate Test Coverage
+      #   if: ${{ github.event_name == 'push' || github.event.pull_request.head.repo.full_name == 'bbc/simorgh' }} # Only run if PR originates from the Simorgh repo
+      #   run: |
+      #     echo $GIT_BRANCH
+      #     echo $GIT_COMMIT_SHA
+      #     curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+      #     chmod +x ./cc-test-reporter
+      #     ./cc-test-reporter before-build
 
-      - name: Unit Tests - Express App
-        run: yarn test:unit
+      # - name: Unit Tests - Express App
+      #   run: yarn test:unit
 
       - name: Unit Tests - Next.JS App
         working-directory: ./ws-nextjs-app

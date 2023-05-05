@@ -370,7 +370,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.9.2":
+"@babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.18.3, @babel/runtime@npm:^7.9.2":
   version: 7.21.5
   resolution: "@babel/runtime@npm:7.21.5"
   dependencies:
@@ -423,6 +423,44 @@ __metadata:
   version: 0.2.3
   resolution: "@bcoe/v8-coverage@npm:0.2.3"
   checksum: 850f9305536d0f2bd13e9e0881cb5f02e4f93fad1189f7b2d4bebf694e3206924eadee1068130d43c11b750efcc9405f88a8e42ef098b6d75239c0f047de1a27
+  languageName: node
+  linkType: hard
+
+"@emotion/css-prettifier@npm:^1.1.2":
+  version: 1.1.2
+  resolution: "@emotion/css-prettifier@npm:1.1.2"
+  dependencies:
+    "@emotion/memoize": ^0.8.0
+    stylis: 4.1.4
+  checksum: 393fbd9a1234dea8d4336ca90c78fedb9f345529b21103373c66003ec8f99068ce6b5f0805631ae5e5eec3f8cf3b81bb5858e55ed98b1680d6f499b673822ee7
+  languageName: node
+  linkType: hard
+
+"@emotion/jest@npm:^11.10.8":
+  version: 11.10.8
+  resolution: "@emotion/jest@npm:11.10.8"
+  dependencies:
+    "@babel/runtime": ^7.18.3
+    "@emotion/css-prettifier": ^1.1.2
+    chalk: ^4.1.0
+    specificity: ^0.4.1
+    stylis: 4.1.4
+  peerDependencies:
+    "@types/jest": ^26.0.14 || ^27.0.0 || ^28.0.0 || ^29.0.0
+    enzyme-to-json: ^3.2.1
+  peerDependenciesMeta:
+    "@types/jest":
+      optional: true
+    enzyme-to-json:
+      optional: true
+  checksum: 99251eee87f3fb49e45fea26060e87d381c59818a386b9555742f9fd71af7782897d6d1504fba3aebddca3e80550594774d03213ebd83d9efd3daa2ac1a5e8eb
+  languageName: node
+  linkType: hard
+
+"@emotion/memoize@npm:^0.8.0":
+  version: 0.8.0
+  resolution: "@emotion/memoize@npm:0.8.0"
+  checksum: c87bb110b829edd8e1c13b90a6bc37cebc39af29c7599a1e66a48e06f9bec43e8e53495ba86278cc52e7589549492c8dfdc81d19f4fdec0cee6ba13d2ad2c928
   languageName: node
   linkType: hard
 
@@ -4251,6 +4289,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "simorgh-nextjs@workspace:."
   dependencies:
+    "@emotion/jest": ^11.10.8
     "@testing-library/jest-dom": ^5.16.5
     "@testing-library/react": ^14.0.0
     babel-plugin-transform-rename-import: 2.3.0
@@ -4323,6 +4362,15 @@ __metadata:
   version: 0.6.1
   resolution: "source-map@npm:0.6.1"
   checksum: 59ce8640cf3f3124f64ac289012c2b8bd377c238e316fb323ea22fbfe83da07d81e000071d7242cad7a23cd91c7de98e4df8830ec3f133cb6133a5f6e9f67bc2
+  languageName: node
+  linkType: hard
+
+"specificity@npm:^0.4.1":
+  version: 0.4.1
+  resolution: "specificity@npm:0.4.1"
+  bin:
+    specificity: ./bin/specificity
+  checksum: e558f1098f85aa54a8e90277309ac0d1913c84812c0bd349aa449076aa700964f71ab69f04f5fda9b7898bef9b7da3faa1cad9caedfd3f1a1ebfebedc18604ab
   languageName: node
   linkType: hard
 
@@ -4440,6 +4488,13 @@ __metadata:
     babel-plugin-macros:
       optional: true
   checksum: 61959993915f4b1662a682dbbefb3512de9399cf6901969bcadd26ba5441d2b5ca5c1021b233bbd573da2541b41efb45d56c6f618dbc8d88a381ebc62461fefe
+  languageName: node
+  linkType: hard
+
+"stylis@npm:4.1.4":
+  version: 4.1.4
+  resolution: "stylis@npm:4.1.4"
+  checksum: cd929bd89709def13b47e6c16b11317bf996a09b4e987fc45a235549c3adf49d41531e017d7df511daa095bc9468c923ae9094a934fe9c62440b7351874dafb7
   languageName: node
   linkType: hard
 
