@@ -12,6 +12,7 @@ const createJestConfig = nextJest({
   dir: './',
 });
 
+/** @type {import('jest').Config} */
 const config = {
   modulePaths: ['../'],
   moduleNameMapper: {
