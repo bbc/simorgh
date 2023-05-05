@@ -19,7 +19,7 @@ import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import {
   mostReadListGridProps,
   mostReadItemGridProps,
-} from '../../utilities/gridProps';
+} from '../../../legacy/containers/MostRead/utilities';
 
 export const getParentColumns = columnLayout => {
   if (columnLayout !== 'oneColumn') {
