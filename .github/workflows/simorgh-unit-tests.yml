@@ -74,8 +74,8 @@ jobs:
         run: yarn test:unit
 
       - name: Unit Tests - Next.JS App
-          working-directory: ./ws-nextjs-app
-          run: yarn test
+        working-directory: ./ws-nextjs-app
+        run: yarn test
 
       - name: Report Code Climate Test Coverage
         if: ${{ github.event_name == 'push' || github.event.pull_request.head.repo.full_name == 'bbc/simorgh' }} # Only run if PR originates from the Simorgh repo
