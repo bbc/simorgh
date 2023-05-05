@@ -15,32 +15,9 @@ interface MostReadListProps {
   numberOfItems: number;
 }
 
-const OneColumnGrid = styled(Grid)`
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  grid-auto-flow: column;
-  grid-template-rows: repeat(${props => props.numberOfItems}, auto);
-`;
-
 OneColumnGrid.defaultProps = {
   role: 'list',
 };
-
-const TwoColumnGrid = styled(OneColumnGrid)`
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    grid-template-rows: repeat(
-      ${props => Math.ceil(props.numberOfItems / 2)},
-      auto
-    );
-  }
-`;
-
-const MultiColumnGrid = styled(TwoColumnGrid)`
-  @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
-    grid-auto-flow: row;
-  }
-`;
 
 const getColumnLayout = columnLayout =>
   ({
