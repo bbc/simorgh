@@ -30,10 +30,182 @@ exports[`Live Page creates snapshot of the live page 1`] = `
       class="css-anbuyo-LivePage"
     >
       {
-  "pageCount": 1,
-  "activePage": 1
+  "pageCount": 10,
+  "activePage": 1,
+  "someResponse": {
+    "block": "Its a block"
+  }
 }
     </pre>
+    <nav
+      aria-label="Page"
+      class="css-11q4kt3 esjazwg0"
+      data-testid="topic-pagination"
+      role="navigation"
+    >
+      <div
+        class="css-1dsgs4f esjazwg2"
+        data-testid="topic-pagination-summary"
+        role="text"
+      >
+        <span>
+          Page 
+        </span>
+        <b>
+          1
+        </b>
+        <span>
+           of 
+        </span>
+        <b>
+          10
+        </b>
+        <span />
+      </div>
+      <ul
+        class="css-a0u350 esjazwg1"
+        role="list"
+      >
+        <li
+          class="css-1hg8553 esjazwg3"
+          visibility="ALL"
+        >
+          <a
+            aria-current="page"
+            class="focusIndicatorOutlineBlack css-12u9tu esjazwg5"
+            href="?page=1"
+          >
+            1
+          </a>
+        </li>
+        <li
+          class="css-1hg8553 esjazwg3"
+          visibility="ALL"
+        >
+          <a
+            class="focusIndicatorOutlineBlack css-1mhbyww esjazwg5"
+            href="?page=2"
+          >
+            2
+          </a>
+        </li>
+        <li
+          class="css-70s4kt esjazwg3"
+          visibility="TABLET_UP"
+        >
+          <a
+            class="focusIndicatorOutlineBlack css-1mhbyww esjazwg5"
+            href="?page=3"
+          >
+            3
+          </a>
+        </li>
+        <li
+          class="css-1i91vua esjazwg3"
+          visibility="DESKTOP_ONLY"
+        >
+          <a
+            class="focusIndicatorOutlineBlack css-1mhbyww esjazwg5"
+            href="?page=4"
+          >
+            4
+          </a>
+        </li>
+        <li
+          class="css-1i91vua esjazwg3"
+          visibility="DESKTOP_ONLY"
+        >
+          <a
+            class="focusIndicatorOutlineBlack css-1mhbyww esjazwg5"
+            href="?page=5"
+          >
+            5
+          </a>
+        </li>
+        <li
+          class="css-1i91vua esjazwg3"
+          visibility="DESKTOP_ONLY"
+        >
+          <a
+            class="focusIndicatorOutlineBlack css-1mhbyww esjazwg5"
+            href="?page=6"
+          >
+            6
+          </a>
+        </li>
+        <li
+          class="css-1i91vua esjazwg3"
+          visibility="DESKTOP_ONLY"
+        >
+          <a
+            class="focusIndicatorOutlineBlack css-1mhbyww esjazwg5"
+            href="?page=7"
+          >
+            7
+          </a>
+        </li>
+        <li
+          class="css-i0hhej esjazwg4"
+          data-testid="topic-pagination-ellipsis"
+          role="separator"
+          visibility="ALL"
+        >
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            height="12"
+            viewBox="0 0 32 32"
+            width="12"
+          >
+            <path
+              d="M1.6 18.8h5.8v-5.6H1.6v5.6zm11.5 0h5.8v-5.6h-5.8v5.6zm11.5 0h5.8v-5.6h-5.8v5.6z"
+            />
+          </svg>
+        </li>
+        <li
+          class="css-1hg8553 esjazwg3"
+          visibility="ALL"
+        >
+          <a
+            class="focusIndicatorOutlineBlack css-1mhbyww esjazwg5"
+            href="?page=10"
+          >
+            10
+          </a>
+        </li>
+      </ul>
+      <span
+        class="css-6l5008 esjazwg3"
+        visibility="ALL"
+      >
+        <a
+          aria-labelledby="pagination-next-page"
+          class="focusIndicatorOutlineBlack css-1mhbyww esjazwg5"
+          href="?page=2"
+        >
+          <span
+            id="pagination-next-page"
+          >
+            <span
+              class="css-1okuobo-VisuallyHiddenText"
+            >
+              Next Page
+            </span>
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              height="12"
+              viewBox="0 0 32 32"
+              width="12"
+            >
+              <path
+                d="M21.6 14.3L5.5 31h6.4l14.6-15L11.9 1H5.5l16.1 16.7v-3.4z"
+              />
+            </svg>
+          </span>
+        </a>
+      </span>
+    </nav>
   </main>
 </div>
 `;

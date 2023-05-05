@@ -11,7 +11,7 @@
     "build": "yarn build:local",
     "dev": "yarn setupDevEnv && next dev -p 7081",
     "start": "next start -p 7081 && NODE_ENV=production",
-    "test": "jest --watch"
+    "test": "jest"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.5",

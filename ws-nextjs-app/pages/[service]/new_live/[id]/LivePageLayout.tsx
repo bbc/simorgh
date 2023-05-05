@@ -30,7 +30,6 @@ const LivePage = ({
   pathname,
   showAdsBasedOnLocation,
 }: ComponentProps) => {
-  console.log('hit');
   const { lang } = useContext(ServiceContext);
   const { pageCount, activePage } = pageData;
 

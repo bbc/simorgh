@@ -7,8 +7,11 @@ import {
 import Live from './LivePageLayout';
 
 const mockPageData = {
-  pageCount: 1,
+  pageCount: 10,
   activePage: 1,
+  someResponse: {
+    block: 'Its a block',
+  },
 };
 
 describe('Live Page', () => {
