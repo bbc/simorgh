@@ -18,11 +18,11 @@ const isAboveThreshold = (scoreValue, budgetValue) => {
   return false;
 };
 
-const logRow = (category, scoreValue, budgetValue, result) => ({
+const logRow = (category, scoreValue, budgetValue, isPassing) => ({
   category,
   scoreValue,
   budgetValue,
-  result,
+  status: isPassing ? 'Pass' : 'Fail',
 });
 
 const compareToBudget = (categories, scoreResult, scoreBudget) => {
@@ -48,8 +48,8 @@ const compareToBudget = (categories, scoreResult, scoreBudget) => {
 const readReport = path => {
   console.log('Reading the report');
   const rawdata = fs.readFileSync(path);
-  console.log(rawdata);
   const result = JSON.parse(rawdata);
+  console.log(result.finalUrl);
 
   return result;
 };
@@ -71,7 +71,7 @@ const exitResult = isPassing => {
 const budget = {
   ally: 85,
   bestPractises: 85,
-  seo: 90,
+  seo: 100,
 };
 
 const testableProperties = ['ally', 'bestPractises', 'seo'];
