@@ -7,6 +7,8 @@ const getCategoryScores = data => {
   return {
     ally: categories.accessibility.score * 100,
     bestPractises: categories['best-practices'].score * 100,
+    performance: categories.performance.score * 100,
+    pwa: categories.pwa.score * 100,
     seo: categories.seo.score * 100,
   };
 };
@@ -22,7 +24,7 @@ const logRow = (category, scoreValue, budgetValue, result) => ({
   category,
   scoreValue,
   budgetValue,
-  result,
+  result: result ? 'Pass' : 'Fail',
 });
 
 const compareToBudget = (categories, scoreResult, scoreBudget) => {
@@ -48,8 +50,8 @@ const compareToBudget = (categories, scoreResult, scoreBudget) => {
 const readReport = path => {
   console.log('Reading the report');
   const rawdata = fs.readFileSync(path);
-  console.log(rawdata);
   const result = JSON.parse(rawdata);
+  console.log(result.finalUrl);
 
   return result;
 };
@@ -71,10 +73,18 @@ const exitResult = isPassing => {
 const budget = {
   ally: 85,
   bestPractises: 85,
-  seo: 90,
+  performance: 40,
+  pwa: 60,
+  seo: 100,
 };
 
-const testableProperties = ['ally', 'bestPractises', 'seo'];
+const testableProperties = [
+  'ally',
+  'bestPractises',
+  'seo',
+  'performance',
+  'pwa',
+];
 
 const run = () => {
   const report = readReport('simorgh.report.json');
