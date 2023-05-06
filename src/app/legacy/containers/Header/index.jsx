@@ -11,8 +11,16 @@ import ConsentBanner from '../ConsentBanner';
 import NavigationContainer from '../Navigation';
 import BrandContainer from '../Brand';
 
-// eslint-disable-next-line react/prop-types
-const Header = ({ brandRef, borderBottom, skipLink, scriptLink, linkId }) => {
+const Header = ({
+  /* eslint-disable react/prop-types */
+  brandRef,
+  borderBottom,
+  skipLink,
+  scriptLink,
+  linkId,
+  isApp,
+  /* eslint-enable react/prop-types */
+}) => {
   const [showConsentBanner, setShowConsentBanner] = useState(true);
 
   const handleBannerBlur = event => {
@@ -33,19 +41,21 @@ const Header = ({ brandRef, borderBottom, skipLink, scriptLink, linkId }) => {
   return (
     <div onBlur={handleBannerBlur}>
       {showConsentBanner && <ConsentBanner onDismissFocusRef={brandRef} />}
-      <BrandContainer
-        borderBottom={borderBottom}
-        skipLink={skipLink}
-        scriptLink={scriptLink}
-        brandRef={brandRef}
-        linkId={linkId || 'topPage'}
-      />
+      {!isApp && (
+        <BrandContainer
+          borderBottom={borderBottom}
+          skipLink={skipLink}
+          scriptLink={scriptLink}
+          brandRef={brandRef}
+          linkId={linkId || 'topPage'}
+        />
+      )}
     </div>
   );
 };
 
 const HeaderContainer = ({ scriptSwitchId, renderScriptSwitch }) => {
-  const { pageType, isAmp } = useContext(RequestContext);
+  const { pageType, isAmp, isApp } = useContext(RequestContext);
   const { service, script, translations, dir, scriptLink, lang, serviceLang } =
     useContext(ServiceContext);
   const { skipLinkText } = translations;
@@ -98,9 +108,10 @@ const HeaderContainer = ({ scriptSwitchId, renderScriptSwitch }) => {
               <ScriptLink scriptSwitchId={scriptSwitchId} />
             )
           }
+          isApp={isApp}
         />
       )}
-      {showNav && <NavigationContainer />}
+      {!isApp && showNav && <NavigationContainer />}
     </header>
   );
 };

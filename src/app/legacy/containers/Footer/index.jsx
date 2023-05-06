@@ -38,7 +38,7 @@ const StyledFooter = styled.footer`
 `;
 
 const FooterContainer = () => {
-  const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
+  const { isAmp, isApp, showAdsBasedOnLocation } = useContext(RequestContext);
   const { footer, script, service, serviceLang } = useContext(ServiceContext);
 
   if (!footer) return null;
@@ -48,19 +48,21 @@ const FooterContainer = () => {
   // linkId="footer" is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
 
   return (
-    <StyledFooter role="contentinfo" lang={serviceLang}>
-      <BrandContainer linkId="footer" borderTop />
-      <Footer
-        isAmp={isAmp}
-        showAdsBasedOnLocation={showAdsBasedOnLocation}
-        links={links}
-        copyrightText={getCopyrightText(copyrightText)}
-        externalLink={externalLink}
-        script={script}
-        service={service}
-        trustProjectLink={trustProjectLink}
-      />
-    </StyledFooter>
+    !isApp && (
+      <StyledFooter role="contentinfo" lang={serviceLang}>
+        <BrandContainer linkId="footer" borderTop />
+        <Footer
+          isAmp={isAmp}
+          showAdsBasedOnLocation={showAdsBasedOnLocation}
+          links={links}
+          copyrightText={getCopyrightText(copyrightText)}
+          externalLink={externalLink}
+          script={script}
+          service={service}
+          trustProjectLink={trustProjectLink}
+        />
+      </StyledFooter>
+    )
   );
 };
 
