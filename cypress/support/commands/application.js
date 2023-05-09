@@ -83,3 +83,33 @@ Cypress.Commands.add(
     );
   },
 );
+Cypress.Commands.add(
+  'getPageData',
+  ({ service, pageType, variant = 'default', id }) => {
+    const env = Cypress.env('APP_ENV');
+    if (env !== 'local') {
+      let ctxEnv = null;
+      if (pageType === 'topic') {
+        ctxEnv = Cypress.env('currentPath').includes('?renderer_env=test')
+          ? 'test'
+          : 'live';
+      }
+      const ctxServEnv = ctxEnv || env;
+      const pageTypeId =
+        id ||
+        (pageType === 'cpsAsset'
+          ? Cypress.env('currentPath')
+          : Cypress.env('currentPath').match(/(c[a-zA-Z0-9]{10}(o|t))/)?.[1]);
+      const bffUrl = `https://web-cdn.${
+        env === 'live' ? '' : `${env}.`
+      }api.bbci.co.uk/fd/simorgh-bff?pageType=${pageType}&id=${pageTypeId}&service=${service}${
+        variant !== 'default' ? `&variant=${variant}` : ''
+      }`;
+      return cy.request({
+        url: bffUrl,
+        headers: { 'ctx-service-env': ctxServEnv },
+      });
+    }
+    return cy.request(`${Cypress.env('currentPath')}.json`);
+  },
+);

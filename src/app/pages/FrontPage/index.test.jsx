@@ -67,7 +67,7 @@ jest.mock('uuid', () => {
   };
 });
 
-jest.mock('#containers/ChartbeatAnalytics', () => {
+jest.mock('../../components/ChartbeatAnalytics', () => {
   return () => <div>chartbeat</div>;
 });
 

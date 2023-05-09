@@ -5,7 +5,6 @@ import {
   getBlockData,
   getAllBlocksDataByType,
   getAllSocialBlocksByProviderName,
-  fetchArticlePageData,
 } from './helpers';
 
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
@@ -35,11 +34,14 @@ export const testsThatFollowSmokeTestConfig = ({
 }) => {
   let articlesData;
   describe(`Running tests for ${service} ${pageType}`, () => {
-    before(async () => {
-      articlesData = await fetchArticlePageData(service, variant).then(
-        ({ body }) => body,
+    before(() => {
+      cy.getPageData({ service, pageType: 'article', variant }).then(
+        ({ body }) => {
+          articlesData = body;
+        },
       );
     });
+
     describe(`Metadata`, () => {
       // Here we should only have metadata tests that are unique to articles pages
       it('should have the correct articles metadata', () => {
