@@ -6,21 +6,14 @@ export default service => {
   runCoreCanonicalTests();
   describe.only('Page content', () => {
     const pageData = window.SIMORGH_DATA.pageData;
-    console.log(pageData);
-    // topicTitle = pageData.title;
-    // variantTopicId = pageData.variantTopicId;
-    // pageCount = pageData.pageCount;
+    // console.log(pageData);
     const numberOfItems = pageData.curations.length;
-    console.log(`lenght of curations: ${numberOfItems}`);
+    // console.log(`lenght of curations: ${numberOfItems}`);
     const firstItemHeadline = document.querySelector(
       '[data-testid="topic-promos"] > li  h3 a',
     );
-    console.log(`First headline: ${firstItemHeadline}`);
-    // messageBanner = pageData.curations.find(
-    //   curation =>
-    //     curation.visualProminence === 'NORMAL' &&
-    //     curation.visualStyle === 'BANNER',
-    // );
+    // console.log(`First headline: ${firstItemHeadline}`);
+
     const h1 = document.querySelector('h1');
     const hierarchicalGrid = document.querySelector(
       '[data-testid="hierarchical-grid"]',
@@ -39,9 +32,7 @@ export default service => {
     it('First item in the first curation has the correct headline', () => {
       expect(firstItemHeadline).toBeInTheDocument();
       console.log(firstItemHeadline.textContent);
-      expect(firstItemHeadline.textContent).toBe(
-        //.toEqual(
-        // '13:31 - “Баланы сабады деп аялымды камап салышарын өзүм да билген эмесмин”. Кадамжайда токмоктолгон наристенин атасы',
+      expect(firstItemHeadline.textContent).toEqual(
         '13:31 - “Баланы сабады деп аялымды камап салышарын өзүм да билген эмесмин”. Кадамжайда токмоктолгон наристенин атасы',
       );
     });
