@@ -11,3 +11,9 @@ export const StyledRelatedContentWrapper = styled.div`
   border: ${BORDER_SPACING} solid transparent;
   height: 100%;
 `;
+
+export const StyledRelatedContentWrapperAmp = styled.div`
+  border: ${BORDER_SPACING} solid transparent;
+  height: 100%;
+  width: 75%;
+`;
