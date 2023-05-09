@@ -4710,7 +4710,7 @@ module.exports = () => ({
           },
           test: {
             paths: ['/newsround/23212028'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/newsround/56331357'],
@@ -8927,7 +8927,7 @@ module.exports = () => ({
     name: 'ukrainian',
     font: undefined,
     isWorldService: true,
-    variant: 'ru-UA',
+    variant: 'default',
     pageTypes: {
       idxPage: {
         environments: {
