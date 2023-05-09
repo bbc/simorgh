@@ -1,7 +1,7 @@
 import { css, Theme } from '@emotion/react';
 
 const styles = {
-  body: ({ spacings, palette, fontSizes, fontVariants }: Theme) =>
+  link: ({ spacings, palette, fontSizes, fontVariants }: Theme) =>
     css({
       ...fontSizes.pica,
       ...fontVariants.serifMedium,

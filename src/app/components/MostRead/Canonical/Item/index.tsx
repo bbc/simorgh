@@ -1,5 +1,4 @@
 import React from 'react';
-import { shape, string, oneOf, node } from 'prop-types';
 import styled from '@emotion/styled';
 import {
   getPica,
@@ -16,6 +15,7 @@ import {
 import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
 import Grid from '#psammead/psammead-grid/src';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
+import styles from './index.styles';
 import {
   mostReadListGridProps,
   mostReadItemGridProps,
@@ -27,40 +27,6 @@ export const getParentColumns = columnLayout => {
   }
   return null;
 };
-
-const StyledLink = styled.a`
-  ${({ script }) => script && getPica(script)}
-  ${({ service }) => getSerifMedium(service)}
-
-  position: static;
-  color: ${props => props.theme.palette.EBON};
-  text-decoration: none;
-  margin-bottom: ${GEL_SPACING};
-
-  &:hover,
-  &:focus {
-    text-decoration: underline;
-  }
-
-  &:before {
-    bottom: 0;
-    content: '';
-    left: 0;
-    overflow: hidden;
-    position: absolute;
-    right: 0;
-    top: 0;
-    white-space: nowrap;
-    z-index: 1;
-  }
-
-  ${({ script, size }) =>
-    script &&
-    size !== 'small' &&
-    `@media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-      ${getGreatPrimer(script)}
-    }`}
-`;
 
 const getRankPaddingTop = size => (size === 'small' ? '0.2rem' : '0.375rem');
 const getRankPaddingStart = size =>
@@ -103,6 +69,7 @@ export const MostReadLink = ({
   return (
     <StyledItem dir={dir} size={size}>
       <StyledLink
+        css={styles.link}
         href={href}
         script={script}
         service={service}
