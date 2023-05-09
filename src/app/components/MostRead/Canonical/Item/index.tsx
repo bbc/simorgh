@@ -19,7 +19,7 @@ import styles from './index.styles';
 import {
   mostReadListGridProps,
   mostReadItemGridProps,
-} from '../../../../legacy/containers/MostRead/utilities';
+} from '../../utilities/gridProps';
 
 export const getParentColumns = columnLayout => {
   if (columnLayout !== 'oneColumn') {

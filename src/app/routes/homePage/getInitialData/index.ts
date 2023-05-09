@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import { Agent } from 'https';
 import Url from 'url-parse';
@@ -52,13 +53,63 @@ export default async ({
       data: { title, description, curations },
     } = json;
 
+    // TODO: Move this logic to the BFF
+    const transformedCurations = curations.map(
+      (curation: { mostRead: any }) => {
+        const { mostRead } = curation;
+
+        if (mostRead) {
+          const records = mostRead.records?.map(
+            (record: {
+              id: any;
+              rank: any;
+              promo: {
+                headlines: { headline: any };
+                locators: { assetUri: any };
+                timestamp: any;
+              };
+            }) => {
+              const {
+                id: recordId,
+                rank,
+                promo: {
+                  headlines: { headline },
+                  locators: { assetUri: href },
+                  timestamp,
+                },
+              } = record;
+
+              return {
+                id: recordId,
+                rank,
+                title: headline,
+                href,
+                timestamp,
+              };
+            },
+          );
+
+          return {
+            ...curation,
+            summaries: [],
+            mostRead: {
+              ...mostRead,
+              records,
+            },
+          };
+        }
+
+        return curation;
+      },
+    );
+
     return {
       status,
       pageData: {
         id,
         title,
         pageType,
-        curations,
+        curations: transformedCurations,
         description,
       },
     };
