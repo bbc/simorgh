@@ -1,7 +1,7 @@
 import React from 'react';
-import { render } from '../react-testing-library-with-providers';
-import latin from '../ThemeProvider/fontScripts/latin';
-import LastUpdated from './LastUpdated';
+import { render } from '../../react-testing-library-with-providers';
+import latin from '../../ThemeProvider/fontScripts/latin';
+import LastUpdated from '.';
 
 describe('MostReadCanonical - LastUpdated', () => {
   it('should render LastUpdated correctly', () => {
