@@ -1,16 +1,20 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
-import { canonicalChartbeatPropTypes } from '#models/propTypes/chartbeatAnalytics';
+import { CanonicalChartbeatProps } from '../types';
+import { chartbeatSource as defaultChartbeatSource } from '../utils';
 
-const chartbeatSource = '//static.chartbeat.com/js/chartbeat.js';
-
-const CanonicalChartbeatBeacon = ({ chartbeatConfig }) => {
+const CanonicalChartbeatBeacon = ({
+  chartbeatConfig,
+  chartbeatSource = defaultChartbeatSource,
+}: CanonicalChartbeatProps) => {
   const [firstLoadConfig] = useState(chartbeatConfig);
 
   const hasMounted = useRef(false);
 
   useEffect(() => {
+    // @ts-expect-error chartbeat requires pSUPERFLY object on global window
     if (hasMounted.current && window.pSUPERFLY) {
+      // @ts-expect-error chartbeat requires pSUPERFLY object on global window
       window.pSUPERFLY.virtualPage(chartbeatConfig);
     }
     hasMounted.current = true;
@@ -32,10 +36,6 @@ const CanonicalChartbeatBeacon = ({ chartbeatConfig }) => {
       <script defer type="text/javascript" src={chartbeatSource} />
     </Helmet>
   );
-};
-
-CanonicalChartbeatBeacon.propTypes = {
-  chartbeatConfig: canonicalChartbeatPropTypes.isRequired,
 };
 
 export default CanonicalChartbeatBeacon;
