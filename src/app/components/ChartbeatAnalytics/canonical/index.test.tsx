@@ -1,20 +1,21 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { render, act, waitFor } from '@testing-library/react';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import CanonicalChartbeatAnalytics from '.';
+import { CanonicalChartbeatConfig } from '../types';
 
 describe('CanonicalChartbeatAnalytics', () => {
+  // @ts-expect-error chartbeat requires pSUPERFLY object on global window
   global.pSUPERFLY = {
     virtualPage: jest.fn(),
   };
 
   afterEach(jest.clearAllMocks);
 
-  const pageAConfig = {
+  // @ts-expect-error partial data for testing purposes
+  const pageAConfig: CanonicalChartbeatConfig = {
     domain: 'test-domain',
-    type: 'article',
     sections: 'section1 section2',
-    chartbeatUID: 1111,
     virtualReferrer: null,
     useCanonical: true,
     title: 'Page A',
@@ -47,13 +48,15 @@ describe('CanonicalChartbeatAnalytics', () => {
     },
   };
 
-  shouldMatchSnapshot(
-    'should return the helmet wrapper with the script snippet',
-    <CanonicalChartbeatAnalytics
-      chartbeatConfig={pageAConfig}
-      chartbeatSource="//chartbeat.js"
-    />,
-  );
+  it('should return the helmet wrapper with the script snippet', () => {
+    render(
+      <CanonicalChartbeatAnalytics
+        chartbeatConfig={pageAConfig}
+        chartbeatSource="//chartbeat.js"
+      />,
+    );
+    expect(Helmet.peek().scriptTags).toMatchSnapshot();
+  });
 
   it('should not re-render helment wrapper when config changes to Page B', async () => {
     const { rerender } = render(
@@ -64,7 +67,7 @@ describe('CanonicalChartbeatAnalytics', () => {
     );
 
     await act(async () => {
-      await rerender(
+      rerender(
         <CanonicalChartbeatAnalytics
           chartbeatConfig={pageBConfig.chartbeatConfig}
           chartbeatSource="//chartbeat.js"
@@ -88,13 +91,12 @@ describe('CanonicalChartbeatAnalytics', () => {
     );
 
     await act(async () => {
-      await rerender(
+      rerender(
         <CanonicalChartbeatAnalytics
           chartbeatConfig={{
             domain: 'test-domain',
             type: 'article',
             sections: 'section1 section2',
-            chartbeatUID: 1111,
             useCanonical: true,
             virtualReferrer: '/page-A',
             title: 'Page B',
@@ -107,15 +109,16 @@ describe('CanonicalChartbeatAnalytics', () => {
 
     await act(async () => {
       // unmount
-      await rerender(<div />);
+      rerender(<div />);
     });
 
+    // @ts-expect-error chartbeat requires pSUPERFLY object on global window
     expect(global.pSUPERFLY.virtualPage).toHaveBeenCalled();
+    // @ts-expect-error chartbeat requires pSUPERFLY object on global window
     expect(global.pSUPERFLY.virtualPage).toHaveBeenCalledWith({
       domain: 'test-domain',
       type: 'article',
       sections: 'section1 section2',
-      chartbeatUID: 1111,
       useCanonical: true,
       virtualReferrer: '/page-A',
       title: 'Page B',
@@ -134,7 +137,7 @@ describe('CanonicalChartbeatAnalytics', () => {
 
     // inline link to Page B
     await act(async () => {
-      await rerender(
+      rerender(
         <CanonicalChartbeatAnalytics
           chartbeatConfig={pageBConfig.chartbeatConfig}
           chartbeatSource="//chartbeat.js"
@@ -144,7 +147,7 @@ describe('CanonicalChartbeatAnalytics', () => {
 
     // inline link to Page C
     await act(async () => {
-      await rerender(
+      rerender(
         <CanonicalChartbeatAnalytics
           chartbeatConfig={pageCConfig.chartbeatConfig}
           chartbeatSource="//chartbeat.js"
@@ -154,7 +157,7 @@ describe('CanonicalChartbeatAnalytics', () => {
 
     // press back, return to Page B
     await act(async () => {
-      await rerender(
+      rerender(
         <CanonicalChartbeatAnalytics
           chartbeatConfig={pageBConfig.chartbeatConfig}
           chartbeatSource="//chartbeat.js"
@@ -163,6 +166,7 @@ describe('CanonicalChartbeatAnalytics', () => {
     });
 
     const [[firstCall], [secondCall], [thirdCall]] =
+      // @ts-expect-error chartbeat requires pSUPERFLY object on global window
       global.pSUPERFLY.virtualPage.mock.calls;
 
     expect(firstCall.virtualReferrer).toEqual('/page-A');

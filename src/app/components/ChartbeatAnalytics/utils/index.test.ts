@@ -1,7 +1,7 @@
 import Cookie from 'js-cookie';
-import onClient from '#lib/utilities/onClient';
-import * as articleUtils from '#lib/analyticsUtils/article';
-import * as frontPageUtils from '#lib/analyticsUtils/indexPage';
+import onClient from '../../../lib/utilities/onClient';
+import * as articleUtils from '../../../lib/analyticsUtils/article';
+import * as frontPageUtils from '../../../lib/analyticsUtils/indexPage';
 import {
   ARTICLE_PAGE,
   FRONT_PAGE,
@@ -15,7 +15,7 @@ import {
   STORY_PAGE,
   TOPIC_PAGE,
   MEDIA_ARTICLE_PAGE,
-} from '#app/routes/utils/pageTypes';
+} from '../../../routes/utils/pageTypes';
 import {
   chartbeatUID,
   useCanonical,
@@ -24,12 +24,14 @@ import {
   getType,
   getTitle,
   getConfig,
+  GetConfigProps,
 } from '.';
+import { PageTypes, Services } from '../../../models/types/global';
 
 let isOnClient = false;
 
-jest.mock('../../../../lib/utilities/onClient', () => jest.fn());
-onClient.mockImplementation(() => isOnClient);
+jest.mock('../../../lib/utilities/onClient', () => jest.fn());
+(onClient as jest.Mock).mockImplementation(() => isOnClient);
 
 describe('Chartbeat utilities', () => {
   it('should return the correct chartbeat UID', () => {
@@ -53,7 +55,9 @@ describe('Chartbeat utilities', () => {
     it('should return the contents of the ID cookie when a value is present', () => {
       const expectedCookieValue = 'foobar';
       isOnClient = true;
-      jest.spyOn(Cookie, 'get').mockImplementation(() => expectedCookieValue);
+      (jest.spyOn(Cookie, 'get') as jest.Mock).mockImplementation(
+        () => expectedCookieValue,
+      );
       expect(getSylphidCookie()).toBe(expectedCookieValue);
     });
   });
@@ -125,18 +129,32 @@ describe('Chartbeat utilities', () => {
     types.forEach(
       ({ pageType: rawPageType, expectedDefaultType, expectedShortType }) => {
         it(`Page type ${rawPageType} should return ${expectedDefaultType} as default`, () => {
+          // @ts-expect-error testing null values to ensure behaviour is as expected
           expect(getType(rawPageType)).toBe(expectedDefaultType);
         });
 
         it(`Page type ${rawPageType} should return ${expectedShortType} as shorthand`, () => {
+          // @ts-expect-error testing null values to ensure behaviour is as expected
           expect(getType(rawPageType, true)).toBe(expectedShortType);
         });
       },
     );
   });
 
+  interface SectionFixtures {
+    service: Services;
+    producer?: string | null;
+    chapter?: string | null;
+    pageType: PageTypes | 'index' | null;
+    sectionName?: string;
+    categoryName?: string;
+    mediaPageType?: string;
+    description: string;
+    expected: string;
+  }
+
   describe('Chartbeat Sections', () => {
-    const sectionFixtures = [
+    const sectionFixtures: SectionFixtures[] = [
       {
         service: 'news',
         producer: 'wales',
@@ -258,6 +276,7 @@ describe('Chartbeat utilities', () => {
           expect(
             buildSections({
               service,
+              // @ts-expect-error allow null values for page type to ensure correct behaviour
               pageType,
               producer,
               chapter,
@@ -310,8 +329,10 @@ describe('Chartbeat utilities', () => {
         const mockTitle = jest.fn().mockImplementation(() => pageTitle);
 
         if (pageType === ARTICLE_PAGE) {
+          // @ts-expect-error requires mocking for testing purposes
           articleUtils.getPromoHeadline = mockTitle;
         } else {
+          // @ts-expect-error requires mocking for testing purposes
           frontPageUtils.getPageTitle = mockTitle;
         }
 
@@ -372,7 +393,7 @@ describe('Chartbeat utilities', () => {
   describe('Chartbeat Config', () => {
     isOnClient = true;
     it('should return config for amp pages when page type is article and env is live', () => {
-      const fixtureData = {
+      const fixtureData: GetConfigProps = {
         isAmp: true,
         platform: 'amp',
         pageType: ARTICLE_PAGE,
@@ -401,7 +422,7 @@ describe('Chartbeat utilities', () => {
     });
 
     it('should return config for canonical pages when page type is frontPage and env is not live', () => {
-      const fixtureData = {
+      const fixtureData: GetConfigProps = {
         isAmp: false,
         platform: 'canonical',
         pageType: FRONT_PAGE,
@@ -432,16 +453,19 @@ describe('Chartbeat utilities', () => {
         .fn()
         .mockImplementation(() => 'This is an index page title');
 
+      // @ts-expect-error requires mocking for testing purposes
       frontPageUtils.getPageTitle = mockTitle;
 
       const expectedCookieValue = 'foobar';
-      jest.spyOn(Cookie, 'get').mockImplementation(() => expectedCookieValue);
+      (jest.spyOn(Cookie, 'get') as jest.Mock).mockImplementation(
+        () => expectedCookieValue,
+      );
 
       expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
     });
 
     it('should return config for canonical pages when page type is MAP and env is live', () => {
-      const fixtureData = {
+      const fixtureData: GetConfigProps = {
         isAmp: false,
         platform: 'canonical',
         pageType: MEDIA_ASSET_PAGE,
@@ -491,7 +515,7 @@ describe('Chartbeat utilities', () => {
     });
 
     it('should return config for amp pages when page type is media (live radio) and env is not live', () => {
-      const fixtureData = {
+      const fixtureData: GetConfigProps = {
         isAmp: true,
         platform: 'amp',
         pageType: MEDIA_PAGE,
@@ -524,7 +548,7 @@ describe('Chartbeat utilities', () => {
     });
 
     it('should return config for amp pages when page type is STY and env is live', () => {
-      const fixtureData = {
+      const fixtureData: GetConfigProps = {
         isAmp: true,
         platform: 'amp',
         pageType: STORY_PAGE,
@@ -572,7 +596,7 @@ describe('Chartbeat utilities', () => {
     });
 
     it('should return config for canonical pages when page type is STY and env is not live', () => {
-      const fixtureData = {
+      const fixtureData: GetConfigProps = {
         isAmp: false,
         platform: 'canonical',
         pageType: STORY_PAGE,
@@ -624,7 +648,8 @@ describe('Chartbeat utilities', () => {
 
   describe('Chartbeat Media Article Page - article-sfv', () => {
     it("should have 'video' in its identifier when the primary media type is video", () => {
-      const fixtureData = {
+      // @ts-expect-error testing partial data to ensure behaviour is as expected
+      const fixtureData: GetConfigProps = {
         pageType: MEDIA_ARTICLE_PAGE,
         data: {
           metadata: {
@@ -666,7 +691,8 @@ describe('Chartbeat utilities', () => {
     });
 
     it("should have 'audio' in its identifier when the primary media type is audio", () => {
-      const fixtureData = {
+      // @ts-expect-error testing partial data to ensure behaviour is as expected
+      const fixtureData: GetConfigProps = {
         pageType: MEDIA_ARTICLE_PAGE,
         data: {
           metadata: {
@@ -708,7 +734,8 @@ describe('Chartbeat utilities', () => {
     });
 
     it("should have 'article-sfv' in its identifier when there are no taggings", () => {
-      const fixtureData = {
+      // @ts-expect-error testing partial data to ensure behaviour is as expected
+      const fixtureData: GetConfigProps = {
         pageType: MEDIA_ARTICLE_PAGE,
         data: {
           metadata: {
@@ -736,7 +763,8 @@ describe('Chartbeat utilities', () => {
     });
 
     it("should have 'article-sfv' in its identifier when the primary media type cannot be established", () => {
-      const fixtureData = {
+      // @ts-expect-error testing partial data to ensure behaviour is as expected
+      const fixtureData: GetConfigProps = {
         pageType: MEDIA_ARTICLE_PAGE,
         data: {
           metadata: {
@@ -778,7 +806,8 @@ describe('Chartbeat utilities', () => {
     });
 
     it('should not intefere with regular article page identifiers', () => {
-      const fixtureData = {
+      // @ts-expect-error testing partial data to ensure behaviour is as expected
+      const fixtureData: GetConfigProps = {
         pageType: ARTICLE_PAGE,
         data: {
           metadata: {
@@ -807,7 +836,7 @@ describe('Chartbeat utilities', () => {
   });
 
   it('should return config for amp pages when page type is media (onDemand radio) and env is live', () => {
-    const fixtureData = {
+    const fixtureData: GetConfigProps = {
       isAmp: true,
       platform: 'amp',
       pageType: MEDIA_PAGE,
@@ -840,7 +869,7 @@ describe('Chartbeat utilities', () => {
   });
 
   it('should return config for amp pages when page type is media (onDemand TV) and env is live', () => {
-    const fixtureData = {
+    const fixtureData: GetConfigProps = {
       isAmp: true,
       platform: 'amp',
       pageType: MEDIA_PAGE,
@@ -873,7 +902,7 @@ describe('Chartbeat utilities', () => {
   });
 
   it('should return config for canonical pages when page type is media (onDemand TV) and env is live', () => {
-    const fixtureData = {
+    const fixtureData: GetConfigProps = {
       isAmp: false,
       platform: 'canonical',
       pageType: MEDIA_PAGE,
@@ -908,7 +937,7 @@ describe('Chartbeat utilities', () => {
   });
 
   it('should return config for canonical pages when page type is podcast and env is live', () => {
-    const fixtureData = {
+    const fixtureData: GetConfigProps = {
       isAmp: false,
       platform: 'canonical',
       pageType: MEDIA_PAGE,
@@ -943,7 +972,8 @@ describe('Chartbeat utilities', () => {
   });
 
   it('should return correct canonical config for Topic pages on test', () => {
-    const fixtureData = {
+    // @ts-expect-error testing partial data to ensure behaviour is as expected
+    const fixtureData: GetConfigProps = {
       isAmp: false,
       platform: 'canonical',
       pageType: TOPIC_PAGE,
@@ -976,7 +1006,7 @@ describe('Chartbeat utilities', () => {
   });
 
   it('should return correct canonical config for Topic pages on live', () => {
-    const fixtureData = {
+    const fixtureData: GetConfigProps = {
       isAmp: false,
       platform: 'canonical',
       pageType: TOPIC_PAGE,
@@ -1010,7 +1040,7 @@ describe('Chartbeat utilities', () => {
   });
 
   it('should return config for canonical pages when page type is mostRead and env is not live', () => {
-    const fixtureData = {
+    const fixtureData: GetConfigProps = {
       isAmp: false,
       platform: 'canonical',
       pageType: MOST_READ_PAGE,
@@ -1044,7 +1074,7 @@ describe('Chartbeat utilities', () => {
   });
 
   it('should return config for canonical pages when page type is mostWatched and env is not live', () => {
-    const fixtureData = {
+    const fixtureData: GetConfigProps = {
       isAmp: false,
       platform: 'canonical',
       pageType: MOST_WATCHED_PAGE,
@@ -1078,7 +1108,7 @@ describe('Chartbeat utilities', () => {
   });
 
   it('should return config for canonical pages when page type is IDX and env is not live', () => {
-    const fixtureData = {
+    const fixtureData: GetConfigProps = {
       isAmp: false,
       platform: 'canonical',
       pageType: INDEX_PAGE,
@@ -1109,16 +1139,19 @@ describe('Chartbeat utilities', () => {
       .fn()
       .mockImplementation(() => 'This is an index page title');
 
+    // @ts-expect-error requires mocking for testing purposes
     frontPageUtils.getPageTitle = mockTitle;
 
     const expectedCookieValue = 'foobar';
-    jest.spyOn(Cookie, 'get').mockImplementation(() => expectedCookieValue);
+    (jest.spyOn(Cookie, 'get') as jest.Mock).mockImplementation(
+      () => expectedCookieValue,
+    );
 
     expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
   });
 
   it('should return config for canonical pages when page type is FIX and env is not live', () => {
-    const fixtureData = {
+    const fixtureData: GetConfigProps = {
       isAmp: false,
       platform: 'canonical',
       pageType: FEATURE_INDEX_PAGE,
@@ -1149,16 +1182,19 @@ describe('Chartbeat utilities', () => {
       .fn()
       .mockImplementation(() => 'This is a Feature Index page title');
 
+    // @ts-expect-error requires mocking for testing purposes
     frontPageUtils.getPageTitle = mockTitle;
 
     const expectedCookieValue = 'foobar';
-    jest.spyOn(Cookie, 'get').mockImplementation(() => expectedCookieValue);
+    (jest.spyOn(Cookie, 'get') as jest.Mock).mockImplementation(
+      () => expectedCookieValue,
+    );
 
     expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
   });
 
   it('should return config for canonical pages when page type is IDX and env is not live', () => {
-    const fixtureData = {
+    const fixtureData: GetConfigProps = {
       isAmp: false,
       platform: 'canonical',
       pageType: INDEX_PAGE,
@@ -1189,16 +1225,20 @@ describe('Chartbeat utilities', () => {
       .fn()
       .mockImplementation(() => 'This is an index page title');
 
+    // @ts-expect-error requires mocking for testing purposes
     frontPageUtils.getPageTitle = mockTitle;
 
     const expectedCookieValue = 'foobar';
-    jest.spyOn(Cookie, 'get').mockImplementation(() => expectedCookieValue);
+    (jest.spyOn(Cookie, 'get') as jest.Mock).mockImplementation(
+      () => expectedCookieValue,
+    );
 
     expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
   });
 
   it('should return null for virtualReferrer when there is no previousPath', () => {
-    const fixtureData = {
+    // @ts-expect-error testing partial data to ensure behaviour is as expected
+    const fixtureData: GetConfigProps = {
       isAmp: false,
       platform: 'canonical',
       pageType: FRONT_PAGE,
@@ -1217,7 +1257,8 @@ describe('Chartbeat utilities', () => {
   it('should return null for virtualReferrer when isOnClient is false', () => {
     isOnClient = false;
 
-    const fixtureData = {
+    // @ts-expect-error testing partial data to ensure behaviour is as expected
+    const fixtureData: GetConfigProps = {
       isAmp: false,
       platform: 'canonical',
       pageType: FRONT_PAGE,
