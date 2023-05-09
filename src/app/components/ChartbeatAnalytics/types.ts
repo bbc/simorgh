@@ -1,3 +1,6 @@
+import { Services } from '../../models/types/global';
+import { MetadataTaggings } from '../../models/types/metadata';
+
 type ChartbeatConfig = {
   domain: string;
   sections: string;
@@ -31,13 +34,10 @@ export interface AmpChartbeatProps {
 export interface ChartbeatProps {
   sectionName?: string; // required for STY and MAP pages
   categoryName?: string; // required for STY and MAP pages
-  mediaPageType?: string; // required for Live & On Demand Radio, Podcasts & On Demand TV pages
+  mediaPageType?: 'Radio' | 'TV' | 'Podcasts'; // required for Live & On Demand Radio, Podcasts & On Demand TV pages
   title: string;
-  taggings?: {
-    predicate: string;
-    value: string;
-  }[]; // required for Media Article Pages
-  contentType?: string; // required for Live & On Demand Radio, Podcasts & On Demand TV pages
-  producer?: string; // required for Media Article, STY, MAP, Live & On Demand Radio, Podcasts & On Demand TV pages, if available
+  taggings?: MetadataTaggings; // required for Media Article Pages
+  contentType?: 'player-live' | 'player-episode'; // required for Live & On Demand Radio, Podcasts & On Demand TV pages
+  producer?: Services | string; // required for Media Article, STY, MAP, Live & On Demand Radio, Podcasts & On Demand TV pages, if available
   chapter?: string; // required for Media Article, STY, MAP, Live & On Demand Radio, Podcasts & On Demand TV pages, if available
 }
