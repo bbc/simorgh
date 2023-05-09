@@ -25,9 +25,11 @@ describe('Live Page', () => {
 
   it('creates snapshot of the live page', async () => {
     let container;
-    await act(async () => {
-      container = render(<Live pageData={mockPageData} />).container;
-    });
+
+    await act(
+      // eslint-disable-next-line no-return-assign
+      async () => ({ container } = render(<Live pageData={mockPageData} />)),
+    );
 
     expect(container).toMatchSnapshot();
   });
