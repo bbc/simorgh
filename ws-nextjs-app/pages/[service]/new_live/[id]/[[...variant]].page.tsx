@@ -3,7 +3,6 @@ import { ParsedUrlQuery } from 'querystring';
 import omit from 'ramda/src/omit';
 import applyBasicPageHandlers from '#pages/utils/applyBasicPageHandlers';
 import bffFetch from '#app/routes/topic/getInitialData';
-import getAgent from '#server/utilities/getAgent';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
 import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import nodeLogger from '#lib/logger.node';
@@ -12,6 +11,7 @@ import {
   SERVER_SIDE_RENDER_REQUEST_RECEIVED,
 } from '#app/lib/logger.const';
 import { Services, Variants } from '#models/types/global';
+import getAgent from '../../../../utilities/undiciAgent';
 
 import LivePageLayout from './LivePageLayout';
 
