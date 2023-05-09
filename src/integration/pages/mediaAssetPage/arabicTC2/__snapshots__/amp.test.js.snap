@@ -119,7 +119,7 @@ Object {
   "vars": Object {
     "contentType": "article-media-asset",
     "domain": "test.bbc.co.uk",
-    "sections": "Arabic, Arabic - العالم, Arabic - MAP, Arabic - العالم - MAP, Arabic - undefined-category",
+    "sections": "Arabic, Arabic - العالم, Arabic - MAP, Arabic - العالم - MAP",
     "title": "شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها",
     "uid": 50924,
     "virtualReferrer": "\${documentReferrer}",

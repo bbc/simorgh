@@ -15,7 +15,7 @@ import { Services } from '../../models/types/global';
 
 jest.mock('../../components/ThemeProvider');
 
-jest.mock('#containers/ChartbeatAnalytics', () => {
+jest.mock('../../components/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
 });
