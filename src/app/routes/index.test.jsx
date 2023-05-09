@@ -170,7 +170,7 @@ describe('Main page routes', () => {
   it.each`
     pathname              | description
     ${'/kyrgyz/tipohome'} | ${'tipohome'}
-    ${'/kyrgyz/tipohome'} | ${'home'}
+    ${'/kyrgyz'}          | ${'home'}
   `('should route to and render a $description page', async ({ pathname }) => {
     fetchMock.mock(`http://localhost${pathname}.json`, homePageJson);
 
