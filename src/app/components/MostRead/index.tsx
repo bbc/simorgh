@@ -1,101 +1,79 @@
 import React, { useContext } from 'react';
-import 'isomorphic-fetch';
+import { oneOf, string, elementType, bool } from 'prop-types';
 import { RequestContext } from '#contexts/RequestContext';
-import nodeLogger from '#lib/logger.node';
-import { shouldRenderLastUpdated } from '#lib/utilities/filterPopularStaleData/isDataStale';
-import useViewTracker from '#hooks/useViewTracker';
-import { ServiceContext } from '#app/contexts/ServiceContext';
-import {
-  MostReadLink,
-  MostReadItemWrapper,
-} from '../../legacy/containers/MostRead/Canonical/Item';
-import MostReadList from './Canonical/List';
-import MostReadRank from './Canonical/Rank';
-import LastUpdated from './LastUpdated';
+import useToggle from '#hooks/useToggle';
+import { getMostReadEndpoint } from '#lib/utilities/getUrlHelpers/getMostReadUrls';
+import { ServiceContext } from '../../../contexts/ServiceContext';
+import Canonical from './Canonical';
+import mostReadShape from './utilities/mostReadShape';
+import AmpMostRead from './Amp';
 
-const logger = nodeLogger(__filename);
+const blockLevelEventTrackingData = {
+  componentName: 'most-read',
+};
 
-interface MostReadProps {
-  endpoint: string;
-  columnLayout: 'oneColumn' | 'twoColumn' | 'multiColumn';
-  size: 'default' | 'small';
-  initialData: object;
-  wrapper: React.ElementType;
-  eventTrackingData: {
-    componentName: string;
-  };
-}
+const mostReadAmpPageTypes = ['STY', 'CSP', 'article'];
 
-const MostRead = ({
-  endpoint,
-  columnLayout = 'multiColumn',
-  size,
+const MostReadContainer = ({
+  mostReadEndpointOverride,
   initialData,
-  wrapper: Wrapper,
-  eventTrackingData,
-}: MostReadProps) => {
-  const { isAmp } = useContext(RequestContext);
+  columnLayout,
+  size,
+  wrapper,
+  serverRenderOnAmp,
+}) => {
+  const { variant, isAmp, pageType } = useContext(RequestContext);
   const {
     service,
-    script,
-    dir,
-    datetimeLocale,
-    serviceDatetimeLocale,
-    timezone,
-    mostRead: { lastUpdated, numberOfItems },
+    mostRead: { hasMostRead },
   } = useContext(ServiceContext);
-  const viewRef = useViewTracker(eventTrackingData);
 
-  const locale = serviceDatetimeLocale || datetimeLocale;
+  const { enabled } = useToggle('mostRead');
+
+  const mostReadToggleEnabled = enabled && hasMostRead;
+  const endpoint =
+    mostReadEndpointOverride || getMostReadEndpoint({ service, variant });
+
+  // Do not render most read when a toggle is disabled
+  if (!mostReadToggleEnabled) {
+    return null;
+  }
+
+  // We render amp on ONLY STY, CSP and ARTICLE pages using amp-list.
+  // We also want to render most read on AMP for the "/popular/read" pages
+  if (isAmp && !serverRenderOnAmp && mostReadAmpPageTypes.includes(pageType)) {
+    const mostReadUrl = `${process.env.SIMORGH_MOST_READ_CDN_URL}${endpoint}`;
+    return <AmpMostRead endpoint={mostReadUrl} size={size} wrapper={wrapper} />;
+  }
 
   return (
-    <Wrapper>
-      <MostReadList
-        numberOfItems={items.length}
-        dir={dir}
-        columnLayout={columnLayout}
-      >
-        {items.map((item, i) => (
-          <MostReadItemWrapper
-            dir={dir}
-            key={item.id}
-            columnLayout={columnLayout}
-            ref={viewRef}
-          >
-            <MostReadRank
-              service={service}
-              script={script}
-              listIndex={i + 1}
-              numberOfItems={items.length}
-              dir={dir}
-              columnLayout={columnLayout}
-              size={size}
-            />
-            <MostReadLink
-              dir={dir}
-              service={service}
-              script={script}
-              title={item.title}
-              href={item.href}
-              size={size}
-              eventTrackingData={eventTrackingData}
-            >
-              {shouldRenderLastUpdated(item.timestamp) && (
-                <LastUpdated
-                  prefix={lastUpdated}
-                  script={script}
-                  service={service}
-                  timestamp={item.timestamp}
-                  locale={locale}
-                  timezone={timezone}
-                />
-              )}
-            </MostReadLink>
-          </MostReadItemWrapper>
-        ))}
-      </MostReadList>
-    </Wrapper>
+    <Canonical
+      initialData={initialData}
+      endpoint={endpoint}
+      wrapper={wrapper}
+      columnLayout={columnLayout}
+      size={size}
+      eventTrackingData={blockLevelEventTrackingData}
+    />
   );
 };
 
-export default MostRead;
+MostReadContainer.propTypes = {
+  mostReadEndpointOverride: string,
+  columnLayout: oneOf(['oneColumn', 'twoColumn', 'multiColumn']),
+  size: oneOf(['default', 'small']),
+  initialData: mostReadShape,
+  wrapper: elementType,
+  serverRenderOnAmp: bool,
+};
+
+MostReadContainer.defaultProps = {
+  mostReadEndpointOverride: undefined,
+  columnLayout: 'multiColumn',
+  size: 'default',
+  initialData: undefined,
+  wrapper: undefined,
+  serverRenderOnAmp: false,
+};
+
+export default MostReadContainer;
