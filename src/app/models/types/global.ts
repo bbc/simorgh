@@ -1,3 +1,5 @@
+import * as PAGE_TYPES from '../../routes/utils/pageTypes';
+
 export type Environments = 'local' | 'test' | 'live';
 
 export type Platforms = 'amp' | 'canonical';
@@ -9,22 +11,16 @@ export type SocialEmbedProviders =
   | 'youtube'
   | 'tiktok';
 
-export type PageTypes =
-  | 'article'
-  | 'mediaArticle'
-  | 'frontPage'
-  | 'media'
-  | 'mostRead'
-  | 'mostWatched'
-  | 'error'
-  | 'IDX'
-  | 'FIX'
-  | 'MAP' // CPS MAP page
-  | 'STY'
-  | 'PGL'
-  | 'CSP'
-  | 'TOPIC'
-  | 'home';
+export type PageTypes = (typeof PAGE_TYPES)[keyof typeof PAGE_TYPES];
+
+export type Toggles =
+  | {
+      [key: string]: {
+        enabled: boolean;
+        value?: string | number;
+      };
+    }
+  | { _environment: string };
 
 export type SerbianService = {
   service: 'serbian';

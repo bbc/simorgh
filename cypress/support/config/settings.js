@@ -3609,23 +3609,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/kyrgyz'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/kyrgyz'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/kyrgyz'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: {
         environments: {
           live: {
@@ -4726,7 +4710,7 @@ module.exports = () => ({
           },
           test: {
             paths: ['/newsround/23212028'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/newsround/56331357'],
@@ -5067,7 +5051,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: [
-              '/persian/articles/c7eel0lmr4do',
+              '/persian/articles/crgxnrdl1xvo',
               '/persian/articles/cld9872jgyjo',
             ],
             enabled: true,
@@ -8943,7 +8927,7 @@ module.exports = () => ({
     name: 'ukrainian',
     font: undefined,
     isWorldService: true,
-    variant: 'ru-UA',
+    variant: 'default',
     pageTypes: {
       idxPage: {
         environments: {

@@ -15,7 +15,6 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
-import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
 import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import Grid, { GelPageGrid } from '#components/Grid';
@@ -29,11 +28,16 @@ import AVPlayer from '#containers/AVPlayer';
 import RecentVideoEpisodes from '#containers/EpisodeList/RecentVideoEpisodes';
 import FooterTimestamp from '#containers/OnDemandFooterTimestamp';
 import ATIAnalytics from '#containers/ATIAnalytics';
-import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
+import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import LinkedData from '../../components/LinkedData';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import MetadataContainer from '../../components/Metadata';
 import getPlaceholderImageUrl from '../../routes/utils/getPlaceholderImageUrl';
+import VisuallyHiddenText from '../../components/VisuallyHiddenText';
+
+const Wrapper = styled.div`
+  background-color: ${({ theme }) => theme.palette.GREY_10};
+`;
 
 const getGroups = (zero, one, two, three, four, five) => ({
   group0: zero,
@@ -118,7 +122,7 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
     : headline;
 
   return (
-    <>
+    <Wrapper>
       <ChartbeatAnalytics data={pageData} />
       <ATIAnalytics data={pageData} />
       <ComscoreAnalytics />
@@ -175,7 +179,7 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
               hasBottomPadding={false}
               skin="classic"
               showLoadingImage
-              darkMode
+              darkPlaceholder
             />
           ) : (
             <MediaError skin="video" />
@@ -185,7 +189,6 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
             brandTitle={brandTitle}
             releaseDateTimeStamp={releaseDateTimeStamp}
             episodeTitle={episodeTitle}
-            darkMode
             ariaHidden
           />
         </Grid>
@@ -197,13 +200,9 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
         >
           <OnDemandParagraphContainer
             text={episodeTitle ? mediumSynopsis : shortSynopsis}
-            darkMode
           />
           {episodeTitle && (
-            <FooterTimestamp
-              releaseDateTimeStamp={releaseDateTimeStamp}
-              darkMode
-            />
+            <FooterTimestamp releaseDateTimeStamp={releaseDateTimeStamp} />
           )}
         </Grid>
       </StyledGelPageGrid>
@@ -226,7 +225,7 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
           </Grid>
         </StyledGelPageGrid>
       )}
-    </>
+    </Wrapper>
   );
 };
 

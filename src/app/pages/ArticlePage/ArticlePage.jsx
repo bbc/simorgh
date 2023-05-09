@@ -21,7 +21,6 @@ import Image from '#containers/Image';
 import Blocks from '#containers/Blocks';
 import Timestamp from '#containers/ArticleTimestamp';
 import ATIAnalytics from '#containers/ATIAnalytics';
-import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import articleMediaPlayer from '#containers/ArticleMediaPlayer';
 import MostReadContainer from '#containers/MostRead';
@@ -47,7 +46,9 @@ import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 import ScrollablePromo from '#components/ScrollablePromo';
 import CpsRecommendations from '#containers/CpsRecommendations';
+import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import LinkedData from '../../components/LinkedData';
+import Uploader from '../../components/Uploader';
 import Byline from '../../components/Byline';
 import {
   bylineExtractor,
@@ -107,6 +108,10 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   );
   const recommendationsData = pathOr([], ['recommendations'], pageData);
 
+  const embedBlock = blocks.find(block => block.type === 'embed');
+  const embedProviderName = path(['model', 'provider'], embedBlock);
+  const isUgcUploader = embedProviderName === 'ugc-uploader';
+
   const componentsToRender = {
     visuallyHiddenHeadline,
     headline: headings,
@@ -134,6 +139,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
     timestamp: props =>
       hasByline ? null : <Timestamp {...props} popOut={false} />,
     social: SocialEmbedContainer,
+    embed: props => (isUgcUploader ? <Uploader {...props} /> : null),
     group: gist,
     links: props => <ScrollablePromo {...props} />,
     mpu: props =>
@@ -204,7 +210,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
       <LinkedData
         showAuthor
         bylineLinkedData={bylineLinkedData}
-        type={categoryName(taggings, formats, isTrustProjectParticipant)}
+        type={categoryName(isTrustProjectParticipant, taggings, formats)}
         seoTitle={headline}
         headline={headline}
         datePublished={firstPublished}

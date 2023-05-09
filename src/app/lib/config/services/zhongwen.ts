@@ -100,8 +100,8 @@ export const service: ZhongwenConfig = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-          text: 'AdChoices / Do Not Sell My Info',
+          href: '#',
+          text: 'Do not share or sell my info',
           lang: 'en-GB',
         },
       ],
@@ -145,7 +145,7 @@ export const service: ZhongwenConfig = {
       },
       {
         title: '视频材料',
-        url: '/zhongwen/simp/media/video',
+        url: '/zhongwen/simp/topics/ck5rznle6edt',
       },
       {
         title: 'BBC英伦网',
@@ -393,8 +393,8 @@ export const service: ZhongwenConfig = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-          text: 'AdChoices / Do Not Sell My Info',
+          href: '#',
+          text: 'Do not share or sell my info',
           lang: 'en-GB',
         },
       ],
@@ -438,7 +438,7 @@ export const service: ZhongwenConfig = {
       },
       {
         title: '視頻材料',
-        url: '/zhongwen/trad/media/video',
+        url: '/zhongwen/trad/topics/cgvl47l38e1t',
       },
       {
         title: 'BBC英倫網',

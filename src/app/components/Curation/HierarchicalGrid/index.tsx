@@ -4,13 +4,14 @@ import { useContext } from 'react';
 import { css, jsx, Theme } from '@emotion/react';
 import moment from 'moment';
 import path from 'ramda/src/path';
-import VisuallyHiddenText from '../../../legacy/psammead/psammead-visually-hidden-text/src';
+import VisuallyHiddenText from '../../VisuallyHiddenText';
 import formatDuration from '../../../lib/utilities/formatDuration';
 import Promo from '../../../legacy/components/Promo';
 import { DESKTOP, TABLET, MOBILE, SMALL } from './dataStructures';
 import { styles } from './index.styles';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { CurationGridProps } from '../types';
+import { RequestContext } from '../../../contexts/RequestContext';
 
 const getStyles = (promoCount: number, i: number, mq: Theme['mq']) => {
   return css({
@@ -30,6 +31,7 @@ const getStyles = (promoCount: number, i: number, mq: Theme['mq']) => {
 };
 
 const HiearchicalGrid = ({ promos, headingLevel }: CurationGridProps) => {
+  const { isAmp } = useContext(RequestContext);
   const { translations } = useContext(ServiceContext);
 
   const audioTranslation = path(['media', 'audio'], translations);
@@ -73,6 +75,7 @@ const HiearchicalGrid = ({ promos, headingLevel }: CurationGridProps) => {
                   src={promo.imageUrl || ''}
                   alt={promo.imageAlt}
                   loading="lazy"
+                  isAmp={isAmp}
                 >
                   <Promo.MediaIcon type={promo.type}>
                     {showDuration ? promo.duration : ''}

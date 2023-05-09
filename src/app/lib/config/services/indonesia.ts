@@ -330,8 +330,8 @@ export const service: DefaultServiceConfig = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-          text: 'AdChoices / Do Not Sell My Info',
+          href: '#',
+          text: 'Do not share or sell my info',
           lang: 'en-GB',
         },
       ],
@@ -349,7 +349,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'Dunia',
-        url: '/indonesia/dunia',
+        url: '/indonesia/topics/cyz8evpl224t',
       },
       {
         title: 'Viral',

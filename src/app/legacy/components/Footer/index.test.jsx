@@ -38,8 +38,8 @@ describe('Footer', () => {
       },
       {
         id: 'COOKIE_SETTINGS',
-        href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-        text: 'AdChoices / Do Not Sell My Info',
+        href: '#',
+        text: 'Do not share or sell my info',
         lang: 'en-GB',
       },
     ],
@@ -58,27 +58,27 @@ describe('Footer', () => {
           trustProjectLink={trustProjectLink}
         />,
       );
-      expect(
-        screen.getByText('AdChoices / Do Not Sell My Info'),
-      ).toHaveAttribute('data-testid', 'amp-cookie-settings-button');
+      expect(screen.getByText('Do not share or sell my info')).toHaveAttribute(
+        'data-testid',
+        'amp-cookie-settings-button',
+      );
     });
   });
 
   describe('Canonical', () => {
-    it('should render the cookie settings link as an anchor element', () => {
+    it('should render the "Do not share or sell my info" link as an anchor element when outside of UK', () => {
       render(
         <Footer
           links={links}
           copyrightText={copyrightText}
           externalLink={externalLink}
           trustProjectLink={trustProjectLink}
+          showAdsBasedOnLocation
         />,
       );
-      expect(
-        screen.getByText('AdChoices / Do Not Sell My Info'),
-      ).toHaveAttribute(
+      expect(screen.getByText('Do not share or sell my info')).toHaveAttribute(
         'href',
-        'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+        '#',
       );
     });
   });

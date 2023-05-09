@@ -4,12 +4,10 @@ import path from 'ramda/src/path';
 import findIndex from 'ramda/src/findIndex';
 import styled from '@emotion/styled';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
-import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
 import { frontPageDataPropTypes } from '#models/propTypes/frontPage';
 import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 import ATIAnalytics from '#containers/ATIAnalytics';
-import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import AdContainer from '#containers/Ad';
 import MPUContainer from '#containers/Ad/MPU';
@@ -21,10 +19,12 @@ import MostReadSection from '#containers/MostRead/section';
 import MostReadSectionLabel from '#containers/MostRead/label';
 import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
 import { NEGATIVE_MARGIN } from '#lib/styles.const';
+import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import MetadataContainer from '../../components/Metadata';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { GHOST } from '../../components/ThemeProvider/palette';
 import LinkedData from '../../components/LinkedData';
+import VisuallyHiddenText from '../../components/VisuallyHiddenText';
 
 const FrontPageMostReadSection = styled(MostReadSection)`
   /* To centre page layout for Group 4+ */
