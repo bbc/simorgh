@@ -18,7 +18,7 @@ export interface MostReadRankProps extends MostReadBaseProps {
   script: TypographyScript;
   listIndex: number;
   size: Size;
-  isAmp: boolean;
+  isAmp?: boolean;
 }
 
 export interface MostReadLinkProps {

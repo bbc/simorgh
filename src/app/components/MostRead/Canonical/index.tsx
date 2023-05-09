@@ -1,25 +1,25 @@
 import React, { useContext } from 'react';
-import 'isomorphic-fetch';
-import { RequestContext } from '#contexts/RequestContext';
-import nodeLogger from '#lib/logger.node';
 import { shouldRenderLastUpdated } from '#lib/utilities/filterPopularStaleData/isDataStale';
 import useViewTracker from '#hooks/useViewTracker';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import {
-  MostReadLink,
-  MostReadItemWrapper,
-} from '../../legacy/containers/MostRead/Canonical/Item';
-import MostReadList from './Canonical/List';
-import MostReadRank from './Canonical/Rank';
-import LastUpdated from './Canonical/LastUpdated';
-
-const logger = nodeLogger(__filename);
+import { MostReadLink, MostReadItemWrapper } from './Item';
+import MostReadList from './List';
+import MostReadRank from './Rank';
+import LastUpdated from './LastUpdated';
+import { ColumnLayout, Direction, Size } from '../types';
+import { TypographyScript } from '../../../models/types/theming';
 
 interface MostReadProps {
-  endpoint: string;
-  columnLayout: 'oneColumn' | 'twoColumn' | 'multiColumn';
-  size: 'default' | 'small';
-  initialData: object;
+  columnLayout: ColumnLayout;
+  size: Size;
+  initialData: {
+    records: {
+      id: string;
+      href: string;
+      title: string;
+      timestamp: number;
+    }[];
+  };
   wrapper: React.ElementType;
   eventTrackingData: {
     componentName: string;
@@ -27,14 +27,12 @@ interface MostReadProps {
 }
 
 const MostRead = ({
-  endpoint,
   columnLayout = 'multiColumn',
   size,
   initialData,
   wrapper: Wrapper,
   eventTrackingData,
 }: MostReadProps) => {
-  const { isAmp } = useContext(RequestContext);
   const {
     service,
     script,
@@ -48,11 +46,13 @@ const MostRead = ({
 
   const locale = serviceDatetimeLocale || datetimeLocale;
 
+  const items = initialData.records.slice(0, numberOfItems);
+
   return (
     <Wrapper>
       <MostReadList
         numberOfItems={items.length}
-        dir={dir}
+        dir={dir as Direction}
         columnLayout={columnLayout}
       >
         {items.map((item, i) => (
@@ -64,10 +64,10 @@ const MostRead = ({
           >
             <MostReadRank
               service={service}
-              script={script}
+              script={script as TypographyScript}
               listIndex={i + 1}
               numberOfItems={items.length}
-              dir={dir}
+              dir={dir as Direction}
               columnLayout={columnLayout}
               size={size}
             />
@@ -83,7 +83,7 @@ const MostRead = ({
               {shouldRenderLastUpdated(item.timestamp) && (
                 <LastUpdated
                   prefix={lastUpdated}
-                  script={script}
+                  script={script as TypographyScript}
                   service={service}
                   timestamp={item.timestamp}
                   locale={locale}
