@@ -33,7 +33,6 @@ export const getArticleManifestRegex = services => {
 };
 
 const frontPageServicesToMigrate = [
-  'kyrgyz',
   'afaanoromoo',
   'afrique',
   'amharic',
@@ -49,6 +48,7 @@ const frontPageServicesToMigrate = [
   'indonesia',
   'japanese',
   'korean',
+  'kyrgyz',
   'marathi',
   'mundo',
   'nepali',
