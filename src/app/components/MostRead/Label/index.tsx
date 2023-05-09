@@ -1,22 +1,28 @@
-import React, { useContext } from 'react';
-import { bool, string } from 'prop-types';
-import styled from '@emotion/styled';
-import SectionLabel from '#psammead/psammead-section-label/src';
-import {
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
-  GEL_GROUP_3_SCREEN_WIDTH_MAX,
-} from '#psammead/gel-foundations/src/breakpoints';
-import { GEL_SPACING_DBL } from '#psammead/gel-foundations/src/spacings';
+/** @jsx jsx */
+import { useContext } from 'react';
+import { jsx } from '@emotion/react';
+import styles from './index.styles';
+import SectionLabel from '../../../legacy/psammead/psammead-section-label/src';
 import { GREY_2 } from '../../ThemeProvider/palette';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
-const SectionLabelWithMargin = styled(SectionLabel)`
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-    margin-bottom: ${GEL_SPACING_DBL};
-  }
-`;
+interface MostReadSectionLabelProps {
+  mobileDivider?: boolean;
+  backgroundColor?: string;
+  href?: string;
+  linkText?: string;
+  visuallyHidden?: boolean;
+  overrideHeadingAs?: string;
+}
 
-const MostReadSectionLabel = ({ mobileDivider, backgroundColor }) => {
+const MostReadSectionLabel = ({
+  mobileDivider = true,
+  backgroundColor = GREY_2,
+  href,
+  linkText,
+  visuallyHidden,
+  overrideHeadingAs,
+}: MostReadSectionLabelProps) => {
   const {
     service,
     script,
@@ -24,27 +30,22 @@ const MostReadSectionLabel = ({ mobileDivider, backgroundColor }) => {
     mostRead: { header },
   } = useContext(ServiceContext);
   return (
-    <SectionLabelWithMargin
+    <SectionLabel
+      css={styles.sectionLabel}
       script={script}
       labelId="Most-Read"
       service={service}
       dir={dir}
       mobileDivider={mobileDivider}
       backgroundColor={backgroundColor}
+      href={href}
+      linkText={linkText}
+      visuallyHidden={visuallyHidden}
+      overrideHeadingAs={overrideHeadingAs}
     >
       {header}
-    </SectionLabelWithMargin>
+    </SectionLabel>
   );
-};
-
-MostReadSectionLabel.propTypes = {
-  mobileDivider: bool,
-  backgroundColor: string,
-};
-
-MostReadSectionLabel.defaultProps = {
-  mobileDivider: true,
-  backgroundColor: GREY_2,
 };
 
 export default MostReadSectionLabel;
