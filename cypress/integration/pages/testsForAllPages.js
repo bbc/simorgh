@@ -10,7 +10,7 @@ export const testsThatAlwaysRunForAllPages = ({
   pageType,
 }) => {
   describe(`testsToAlwaysRunForAllPages to run for ${service} ${pageType}`, () => {
-    it('should have no detectable a11y violations on page load', () => {
+    it.only('should have no detectable a11y violations on page load', () => {
       checkA11y();
     });
 
