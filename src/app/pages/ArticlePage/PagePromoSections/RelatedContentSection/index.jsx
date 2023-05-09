@@ -14,10 +14,13 @@ import pipe from 'ramda/src/pipe';
 
 import useViewTracker from '#hooks/useViewTracker';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
+import { RequestContext } from '../../../../contexts/RequestContext';
 import {
   RelatedContentGrid,
+  RelatedContentGridAmp,
   StyledRelatedContentSection,
   StyledPromoItem,
+  StyledPromoItemAmp,
   SingleItemWrapper,
 } from './index.styles';
 import generatePromoId from '../generatePromoId';
@@ -31,6 +34,11 @@ const removeCustomBlocks = pipe(
 );
 
 const renderRelatedContentList = (item, index, eventTrackingData, viewRef) => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const { service } = useContext(ServiceContext);
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const { isAmp } = useContext(RequestContext);
+
   const assetUri = pathOr(
     '',
     [
@@ -55,6 +63,19 @@ const renderRelatedContentList = (item, index, eventTrackingData, viewRef) => {
     index,
   });
 
+  if (isAmp && service === 'naidheachdan') {
+    return (
+      <StyledPromoItemAmp key={ariaLabelledBy}>
+        <RelatedContentItem
+          item={item}
+          ariaLabelledBy={ariaLabelledBy}
+          ref={viewRef}
+          eventTrackingData={eventTrackingData}
+        />
+      </StyledPromoItemAmp>
+    );
+  }
+
   return (
     <StyledPromoItem key={ariaLabelledBy}>
       <RelatedContentItem
@@ -69,6 +90,7 @@ const renderRelatedContentList = (item, index, eventTrackingData, viewRef) => {
 
 const RelatedContentSection = ({ content }) => {
   const { translations, script, service } = useContext(ServiceContext);
+  const { isAmp } = useContext(RequestContext);
 
   const {
     palette: { GREY_2 },
@@ -131,6 +153,41 @@ const RelatedContentSection = ({ content }) => {
     sectionType: 'promo-rel-content',
     assetUri,
   });
+
+  if (isAmp && service === 'naidheachdan') {
+    return (
+      <StyledRelatedContentSection
+        aria-labelledby={LABEL_ID}
+        role="region"
+        data-e2e={LABEL_ID}
+      >
+        <SectionLabel
+          labelId={LABEL_ID}
+          backgroundColor={GREY_2}
+          script={script}
+          service={service}
+        >
+          {title}
+        </SectionLabel>
+        {hasSingleContent ? (
+          <SingleItemWrapper>
+            <RelatedContentItem
+              item={reducedStoryPromoItems[0]}
+              ariaLabelledBy={ariaLabelledBy}
+              ref={viewRef}
+              eventTrackingData={eventTrackingData}
+            />
+          </SingleItemWrapper>
+        ) : (
+          <RelatedContentGridAmp>
+            {reducedStoryPromoItems.map((item, index) =>
+              renderRelatedContentList(item, index, eventTrackingData, viewRef),
+            )}
+          </RelatedContentGridAmp>
+        )}
+      </StyledRelatedContentSection>
+    );
+  }
 
   return (
     <StyledRelatedContentSection
