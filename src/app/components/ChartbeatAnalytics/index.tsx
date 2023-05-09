@@ -1,13 +1,13 @@
 import React, { useContext, useEffect } from 'react';
-import useToggle from '#hooks/useToggle';
-import { UserContext } from '#contexts/UserContext';
-import { RequestContext } from '#contexts/RequestContext';
-import { pageDataPropType } from '#models/propTypes/data';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import useToggle from '../../hooks/useToggle';
+import { UserContext } from '../../contexts/UserContext';
+import { RequestContext } from '../../contexts/RequestContext';
+import { ServiceContext } from '../../contexts/ServiceContext';
 import AmpChartbeatBeacon from './amp';
-import { getConfig } from './utils';
+import { GetConfigProps, getConfig } from './utils';
+import { ChartbeatProps } from './types';
 
-const ChartbeatAnalytics = ({ data }) => {
+const ChartbeatAnalytics = ({ data }: ChartbeatProps) => {
   const {
     service,
     brandName,
@@ -22,7 +22,7 @@ const ChartbeatAnalytics = ({ data }) => {
   const isAmpAndEnabled = isAmp && enabled;
   const isCanonicalAndEnabled = !isAmp && enabled;
 
-  const configDependencies = {
+  const configDependencies: GetConfigProps = {
     isAmp,
     platform,
     pageType,
@@ -41,6 +41,7 @@ const ChartbeatAnalytics = ({ data }) => {
 
   useEffect(() => {
     if (isCanonicalAndEnabled) {
+      // @ts-expect-error ignoring: Argument of type of chartbeatConfig is not assignable to parameter of type SetStateAction<null> -> provides no match for the signature '(prevState: null): null'.
       sendCanonicalChartbeatBeacon(chartbeatConfig);
     }
   }, [data, isCanonicalAndEnabled]); // eslint-disable-line react-hooks/exhaustive-deps
@@ -48,10 +49,6 @@ const ChartbeatAnalytics = ({ data }) => {
   return isAmpAndEnabled ? (
     <AmpChartbeatBeacon chartbeatConfig={chartbeatConfig} />
   ) : null;
-};
-
-ChartbeatAnalytics.propTypes = {
-  data: pageDataPropType.isRequired,
 };
 
 export default ChartbeatAnalytics;

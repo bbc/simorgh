@@ -4,7 +4,7 @@ import { act } from 'react-dom/test-utils';
 import AmpChartbeatAnalytics from '.';
 
 describe('AmpChartbeatAnalytics', () => {
-  let container;
+  let container: HTMLElement;
 
   beforeEach(() => {
     jest.resetModules();
@@ -23,6 +23,7 @@ describe('AmpChartbeatAnalytics', () => {
       idSync: {
         bbc_hid: 'cookie',
       },
+      virtualReferrer: 'amp',
     };
 
     const expectedValue = {
@@ -43,7 +44,7 @@ describe('AmpChartbeatAnalytics', () => {
     ).toEqual(1);
     expect(
       container.querySelector('amp-analytics script[type="application/json"]')
-        .innerHTML,
+        ?.innerHTML,
     ).toMatch(JSON.stringify(expectedValue));
   });
 
@@ -62,6 +63,7 @@ describe('AmpChartbeatAnalytics', () => {
     };
     act(() => {
       ReactDOM.render(
+        // @ts-expect-error testing for missing referrer and cookie
         <AmpChartbeatAnalytics chartbeatConfig={config} />,
         container,
       );
@@ -75,7 +77,7 @@ describe('AmpChartbeatAnalytics', () => {
     ).toEqual(1);
     expect(
       container.querySelector('amp-analytics script[type="application/json"]')
-        .innerHTML,
+        ?.innerHTML,
     ).toMatch(JSON.stringify(expectedValue));
   });
 });
