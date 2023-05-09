@@ -39,9 +39,24 @@ export const StyledPromoItem = styled(PromoItem)`
   }
 `;
 
+export const StyledPromoItemAmp = styled(PromoItem)`
+  display: flex;
+  margin: 0;
+  width: 100%;
+  height: inherit;
+  padding: calc(${GEL_SPACING} - ${BORDER_SPACING});
+`;
+
 export const RelatedContentGrid = styled(PromoList)`
   display: flex;
   flex-wrap: wrap;
+  margin: calc(-${GEL_SPACING} + ${BORDER_SPACING});
+`;
+
+export const RelatedContentGridAmp = styled(PromoList)`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   margin: calc(-${GEL_SPACING} + ${BORDER_SPACING});
 `;
 
