@@ -1,3 +1,4 @@
+import { MetadataTaggings } from '../../models/types/metadata';
 import { OptimoBlock } from '../../models/types/optimo';
 
 export type MediaArticlePageProps = {
@@ -7,7 +8,7 @@ export type MediaArticlePageProps = {
       passport: {
         language: string;
         home: string;
-        taggings: { predicate: string; value: string }[];
+        taggings: MetadataTaggings;
         predicates: {
           infoClass: { value: string; type: string }[];
           primaryMediaType: { value: string; type: string }[];
