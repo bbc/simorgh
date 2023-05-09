@@ -6,22 +6,51 @@ import buildIChefURL from '#app/lib/utilities/ichefURL';
 import Promo from '#components/OptimoPromos';
 import isEmpty from 'ramda/src/isEmpty';
 import { ServiceContext } from '../../../../../contexts/ServiceContext';
-import { TitleWithContent, StyledRelatedContentWrapper } from './index.styles';
+import { RequestContext } from '../../../../../contexts/RequestContext';
+import {
+  TitleWithContent,
+  StyledRelatedContentWrapper,
+  StyledRelatedContentWrapperAmp,
+} from './index.styles';
 
 const RelatedContentItem = forwardRef(
   ({ item, ariaLabelledBy, eventTrackingData }, viewRef) => {
-    const { script } = useContext(ServiceContext);
+    const { script, service } = useContext(ServiceContext);
+    const { isAmp } = useContext(RequestContext);
+
     if (!item || isEmpty(item)) return null;
 
     const headline = path(
       ['model', 'blocks', 1, 'model', 'blocks', 0, 'model', 'text'],
       item,
     );
+
+    const headlineAmp = path(
+      ['model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
+      item,
+    );
+
     const assetUri = path(
       [
         'model',
         'blocks',
         1,
+        'model',
+        'blocks',
+        0,
+        'model',
+        'blocks',
+        0,
+        'model',
+        'locator',
+      ],
+      item,
+    );
+    const assetUriAmp = path(
+      [
+        'model',
+        'blocks',
+        0,
         'model',
         'blocks',
         0,
@@ -99,31 +128,48 @@ const RelatedContentItem = forwardRef(
 
     const Title = titleHasContent ? TitleWithContent : Promo.Title;
 
+    let Wrapper;
+    let uri;
+    if (isAmp && service === 'naidheachdan') {
+      Wrapper = StyledRelatedContentWrapperAmp;
+      uri = assetUriAmp;
+    } else {
+      Wrapper = StyledRelatedContentWrapper;
+      uri = assetUri;
+    }
+
     return (
-      <StyledRelatedContentWrapper ref={viewRef}>
+      <Wrapper ref={viewRef}>
         <Promo
-          to={assetUri}
+          to={uri}
           ariaLabelledBy={ariaLabelledBy}
           eventTrackingData={eventTrackingData}
         >
-          <Promo.Image
-            src={src}
-            altText={altText}
-            srcset={primarySrcset}
-            fallbackSrcset={fallbackSrcset}
-            width={width}
-            height={height}
-          />
+          {locator ? (
+            <Promo.Image
+              isAmp={isAmp}
+              src={src}
+              altText={altText}
+              srcset={primarySrcset}
+              fallbackSrcset={fallbackSrcset}
+              width={width}
+              height={height}
+            />
+          ) : null}
           <Promo.ContentWrapper>
             <Title as={titleTag} script={script}>
               <Promo.Link>
-                <Promo.Content headline={headline} />
+                <Promo.Content
+                  headline={
+                    isAmp && service === 'naidheachdan' ? headlineAmp : headline
+                  }
+                />
               </Promo.Link>
             </Title>
             <Promo.Timestamp>{timestamp}</Promo.Timestamp>
           </Promo.ContentWrapper>
         </Promo>
-      </StyledRelatedContentWrapper>
+      </Wrapper>
     );
   },
 );
