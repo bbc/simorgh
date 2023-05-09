@@ -3,7 +3,7 @@ import pipe from 'ramda/src/pipe';
 import getEnvironment from '#app/routes/utils/getEnvironment';
 import { getUrlPath } from '../../../lib/utilities/urlParser';
 import handleError from '../handleError';
-import { Services, Variants } from '../../../models/types/global';
+import { Services, Variants, Environments } from '../../../models/types/global';
 import HOME_PAGE_CONFIG from '../../homePage/getInitialData/page-config';
 import PAGE_TYPES from './page-types';
 
@@ -22,11 +22,7 @@ const getArticleId = (path: string) => path.match(/(c[a-zA-Z0-9]{10}o)/)?.[1];
 const getCpsId = (path: string) => path;
 const getTipoId = (path: string) => path.match(/(c[a-zA-Z0-9]{10}t)/)?.[1];
 
-const getId = (
-  pageType: PageTypes,
-  service: Services,
-  env: 'test' | 'live' | 'local',
-) => {
+const getId = (pageType: PageTypes, service: Services, env: Environments) => {
   let getIdFunction;
   switch (pageType) {
     case PAGE_TYPES.ARTICLE:
