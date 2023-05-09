@@ -33,7 +33,8 @@ import {
   singleDigitSmall,
   mediumFontServices,
   smallFontServices,
-} from '../../../legacy/containers/MostRead/utilities/rankMinWidth';
+} from '../../../../legacy/containers/MostRead/utilities/rankMinWidth';
+import { MostReadRankProps } from '../../types';
 
 // For additional spacing for numerals in the right column because of '10' being double digits
 const isOnSecondColumn = ({ listIndex, numberOfItems }, supportsGrid) =>
@@ -170,17 +171,6 @@ const getColumnWrapper = columnWrapper =>
     twoColumn: TwoColumnWrapper,
     multiColumn: MultiColumnWrapper,
   }[columnWrapper]);
-
-interface MostReadRankProps {
-  service: string;
-  script: object;
-  listIndex: number;
-  numberOfItems: number;
-  dir: 'rtl' | 'ltr';
-  columnLayout: 'oneColumn' | 'twoColumn' | 'multiColumn';
-  size: 'default' | 'small';
-  // isAmp: Boolean;
-}
 
 const MostReadRank = ({
   service,

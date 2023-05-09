@@ -1,4 +1,4 @@
- import React, { useContext } from 'react';
+import React, { useContext } from 'react';
 import 'isomorphic-fetch';
 import { RequestContext } from '#contexts/RequestContext';
 import nodeLogger from '#lib/logger.node';
@@ -9,8 +9,8 @@ import {
   MostReadLink,
   MostReadItemWrapper,
 } from '../../legacy/containers/MostRead/Canonical/Item';
-import MostReadList from './List';
-import MostReadRank from './Rank';
+import MostReadList from './Canonical/List';
+import MostReadRank from './Canonical/Rank';
 import LastUpdated from './LastUpdated';
 
 const logger = nodeLogger(__filename);
