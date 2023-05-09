@@ -87,6 +87,7 @@ const renderRouter = props =>
       </MemoryRouter>,
       {
         service: props.service,
+        variant: props.variant,
       },
     );
   });
@@ -166,8 +167,11 @@ describe('Main page routes', () => {
     ).toBeInTheDocument();
   });
 
-  it('should route to and render a home page', async () => {
-    const pathname = '/kyrgyz/tipohome';
+  it.each`
+    pathname              | description
+    ${'/kyrgyz/tipohome'} | ${'tipohome'}
+    ${'/kyrgyz/tipohome'} | ${'home'}
+  `('should route to and render a $description page', async ({ pathname }) => {
     fetchMock.mock(`http://localhost${pathname}.json`, homePageJson);
 
     const { getInitialData, pageType } = getMatchingRoute(pathname);
@@ -248,17 +252,16 @@ describe('Main page routes', () => {
   });
 
   it('should route to and render a front page', async () => {
-    const pathname = '/serbian';
+    const service = 'serbian';
     const variant = 'lat';
-    fetchMock.mock(
-      `http://localhost${pathname}/${variant}.json`,
-      frontPageJson,
-    );
+    const pathname = `/${service}/${variant}`;
+
+    fetchMock.mock(`http://localhost${pathname}.json`, frontPageJson);
 
     const { getInitialData, pageType } = getMatchingRoute(pathname);
     const { pageData } = await getInitialData({
       path: pathname,
-      service: 'serbian',
+      service,
       variant,
     });
 
@@ -266,10 +269,11 @@ describe('Main page routes', () => {
       pathname,
       pageData,
       pageType,
-      service: 'serbian',
+      service,
       variant,
     });
-    const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'Najvažnije';
+
+    const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'U toku';
 
     expect(
       await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
