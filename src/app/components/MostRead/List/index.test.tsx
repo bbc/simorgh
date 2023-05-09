@@ -12,7 +12,7 @@ import { getItemWrapperArray } from '../../../legacy/containers/MostRead/utiliti
 describe('MostReadList', () => {
   it('should render with ltr news items with correct dir', () => {
     const { container } = render(
-      <MostReadList numberOfItems={10}>
+      <MostReadList numberOfItems={10} dir="ltr">
         {getItemWrapperArray({
           numberOfItems: 10,
           service: 'news',

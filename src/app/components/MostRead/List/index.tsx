@@ -1,48 +1,35 @@
-import React from 'react';
-import styled from '@emotion/styled';
-import { oneOf, number, node } from 'prop-types';
-import {
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
-  GEL_GROUP_5_SCREEN_WIDTH_MIN,
-} from '#psammead/gel-foundations/src/breakpoints';
-import Grid from '#psammead/psammead-grid/src';
-import { mostReadListGridProps } from '../../../legacy/containers/MostRead/utilities';
+/** @jsx jsx */
+import { PropsWithChildren, FC } from 'react';
+import { jsx } from '@emotion/react';
+import Grid from '../../../legacy/psammead/psammead-grid/src';
+import { mostReadListGridProps } from '../../../legacy/containers/MostRead/utilities/gridProps';
+import styles from './index.styles';
 
 interface MostReadListProps {
-  children: React.ReactNode;
   dir: 'rtl' | 'ltr';
-  columnLayout: 'oneColumn' | 'twoColumn' | 'multiColumn';
+  columnLayout?: 'oneColumn' | 'twoColumn' | 'multiColumn';
   numberOfItems: number;
 }
 
-OneColumnGrid.defaultProps = {
-  role: 'list',
-};
-
-const getColumnLayout = columnLayout =>
-  ({
-    oneColumn: OneColumnGrid,
-    twoColumn: TwoColumnGrid,
-    multiColumn: MultiColumnGrid,
-  }[columnLayout]);
-
-const MostReadList = ({
+const MostReadList: FC<PropsWithChildren<MostReadListProps>> = ({
   numberOfItems,
   dir,
-  columnLayout,
+  columnLayout = 'oneColumn',
   children,
-}: MostReadListProps) => {
-  const MostReadListGrid = getColumnLayout(columnLayout);
-
+}: PropsWithChildren<MostReadListProps>) => {
+  const role = columnLayout === 'oneColumn' ? 'list' : null;
   return (
-    <MostReadListGrid
+    // @ts-expect-error will review and fix this
+    <Grid
+      css={styles[columnLayout]}
       {...mostReadListGridProps(columnLayout)}
       dir={dir}
       numberOfItems={numberOfItems}
       as="ol"
+      role={role}
     >
       {children}
-    </MostReadListGrid>
+    </Grid>
   );
 };
 
