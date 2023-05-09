@@ -49,7 +49,7 @@ const readReport = path => {
   console.log('Reading the report');
   const rawdata = fs.readFileSync(path);
   const result = JSON.parse(rawdata);
-  console.log(result.finalUrl);
+  console.log(result?.finalUrl);
 
   return result;
 };
