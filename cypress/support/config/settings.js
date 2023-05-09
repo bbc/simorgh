@@ -5051,7 +5051,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: [
-              '/persian/articles/c7eel0lmr4do',
+              '/persian/articles/crgxnrdl1xvo',
               '/persian/articles/cld9872jgyjo',
             ],
             enabled: true,
