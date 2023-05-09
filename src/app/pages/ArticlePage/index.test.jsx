@@ -41,14 +41,26 @@ const recommendationSettings = {
   },
 };
 
+const input = {
+  bbcOrigin:"https://www.test.bbc.co.uk",
+  id:"c0000000000o",
+  isAmp: false,
+  pageType: ARTICLE_PAGE,
+  pathname:"/pathname",
+  statusCode: 200,
+};
+
 const Context = ({
   service = 'pidgin',
   children,
   adsToggledOn = false,
   mostReadToggledOn = true,
   showAdsBasedOnLocation = false,
-} = {}) => (
-  <BrowserRouter>
+  isApp = false,
+} = {}) => {
+  const appInput = {...input, service, showAdsBasedOnLocation, isApp};
+
+  return (<BrowserRouter>
     <ThemeProvider service={service} variant="default">
       <ToggleContextProvider
         toggles={{
@@ -63,16 +75,7 @@ const Context = ({
           },
         }}
       >
-        <RequestContextProvider
-          bbcOrigin="https://www.test.bbc.co.uk"
-          id="c0000000000o"
-          isAmp={false}
-          pageType={ARTICLE_PAGE}
-          pathname="/pathname"
-          service={service}
-          statusCode={200}
-          showAdsBasedOnLocation={showAdsBasedOnLocation}
-        >
+        <RequestContextProvider {...appInput}>
           <ServiceContextProvider
             service={service}
             recommendations={recommendationSettings}
@@ -82,8 +85,8 @@ const Context = ({
         </RequestContextProvider>
       </ToggleContextProvider>
     </ThemeProvider>
-  </BrowserRouter>
-);
+  </BrowserRouter>);
+};
 
 beforeEach(() => {
   fetch.resetMocks();
@@ -386,6 +389,26 @@ it('should render the top stories and features when passed', async () => {
 
   expect(getByTestId('top-stories')).toBeInTheDocument();
   expect(getByTestId('features')).toBeInTheDocument();
+});
+
+
+it('should remove the top stories and features sections when isApp is set to true', async () => {
+  const pageDataWithSecondaryColumn = {
+    ...articleDataNews,
+    secondaryColumn: {
+      topStories: [],
+      features: [],
+    },
+  };
+
+  const { container } = render(
+    <Context service="news" isApp>
+      <ArticlePage pageData={pageDataWithSecondaryColumn} />
+    </Context>,
+  );
+
+  expect(container.querySelector(`div[data-testid="top-stories"]`)).toBeNull();
+  expect(container.querySelector(`div[data-testid="features"]`)).toBeNull();
 });
 
 it('should show ads when enabled', async () => {
