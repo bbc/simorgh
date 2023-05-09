@@ -272,7 +272,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/afrique'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/afrique'],
@@ -756,7 +756,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/arabic'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/arabic'],
@@ -767,7 +767,7 @@ module.exports = () => ({
             enabled: false,
           },
         },
-        smoke: false,
+        smoke: true,
       },
       liveRadio: {
         environments: {
@@ -5099,7 +5099,7 @@ module.exports = () => ({
             enabled: false,
           },
         },
-        smoke: false,
+        smoke: true,
       },
       liveRadio: {
         environments: {
@@ -6044,7 +6044,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/russian'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/russian'],
@@ -6055,7 +6055,7 @@ module.exports = () => ({
             enabled: false,
           },
         },
-        smoke: false,
+        smoke: true,
       },
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: {
@@ -7961,7 +7961,7 @@ module.exports = () => ({
             enabled: false,
           },
         },
-        smoke: false,
+        smoke: true,
       },
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
@@ -8158,7 +8158,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/tigrinya'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/tigrinya'],
