@@ -1,7 +1,7 @@
 import React from 'react';
-import { render } from '../../react-testing-library-with-providers';
-import latin from '../../ThemeProvider/fontScripts/latin';
-import arabic from '../../ThemeProvider/fontScripts/arabic';
+import { render } from '../../../react-testing-library-with-providers';
+import latin from '../../../ThemeProvider/fontScripts/latin';
+import arabic from '../../../ThemeProvider/fontScripts/arabic';
 import MostReadRank from '.';
 
 describe('MostReadRank', () => {

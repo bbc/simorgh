@@ -1,13 +1,13 @@
 import React from 'react';
-import { render } from '../../react-testing-library-with-providers';
+import { render } from '../../../react-testing-library-with-providers';
 
-import arabic from '../../ThemeProvider/fontScripts/arabic';
-import bengali from '../../ThemeProvider/fontScripts/bengali';
-import burmese from '../../ThemeProvider/fontScripts/burmese';
-import latin from '../../ThemeProvider/fontScripts/latin';
+import arabic from '../../../ThemeProvider/fontScripts/arabic';
+import bengali from '../../../ThemeProvider/fontScripts/bengali';
+import burmese from '../../../ThemeProvider/fontScripts/burmese';
+import latin from '../../../ThemeProvider/fontScripts/latin';
 
 import MostReadList from '.';
-import { getItemWrapperArray } from '../../../legacy/containers/MostRead/utilities';
+import { getItemWrapperArray } from '../../utilities';
 
 describe('MostReadList', () => {
   it('should render with ltr news items with correct dir', () => {

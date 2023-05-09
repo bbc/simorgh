@@ -19,7 +19,7 @@ import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import {
   mostReadListGridProps,
   mostReadItemGridProps,
-} from '../../../legacy/containers/MostRead/utilities';
+} from '../../../../legacy/containers/MostRead/utilities';
 
 export const getParentColumns = columnLayout => {
   if (columnLayout !== 'oneColumn') {
@@ -87,25 +87,6 @@ const StyledItem = styled.div`
 const TimestampWrapper = styled.div`
   padding-top: ${GEL_SPACING};
 `;
-
-interface MostReadLinkProps {
-  dir: 'rtl' | 'ltr';
-  service: string;
-  script: object;
-  title: string;
-  href: string;
-  children: React.ReactNode;
-  size: 'default' | 'small';
-  eventTrackingData: {
-    componentName: string;
-  };
-}
-
-interface MostReadItemWrapperProps {
-  children: React.ReactNode;
-  dir: 'rtl' | 'ltr';
-  columnLayout: 'oneColumn' | 'twoColumn' | 'multiColumn';
-}
 
 export const MostReadLink = ({
   dir,

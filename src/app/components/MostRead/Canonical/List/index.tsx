@@ -1,22 +1,17 @@
 /** @jsx jsx */
 import { PropsWithChildren, FC } from 'react';
 import { jsx } from '@emotion/react';
-import Grid from '../../../legacy/psammead/psammead-grid/src';
-import { mostReadListGridProps } from '../../../legacy/containers/MostRead/utilities/gridProps';
+import Grid from '../../../../legacy/psammead/psammead-grid/src';
+import { mostReadListGridProps } from '../../../../legacy/containers/MostRead/utilities/gridProps';
 import styles from './index.styles';
+import { MostReadBaseProps } from '../../types';
 
-interface MostReadListProps {
-  dir: 'rtl' | 'ltr';
-  columnLayout?: 'oneColumn' | 'twoColumn' | 'multiColumn';
-  numberOfItems: number;
-}
-
-const MostReadList: FC<PropsWithChildren<MostReadListProps>> = ({
+const MostReadList: FC<PropsWithChildren<MostReadBaseProps>> = ({
   numberOfItems,
-  dir,
-  columnLayout = 'oneColumn',
+  dir = 'ltr',
+  columnLayout = 'multiColumn',
   children,
-}: PropsWithChildren<MostReadListProps>) => {
+}: PropsWithChildren<MostReadBaseProps>) => {
   const role = columnLayout === 'oneColumn' ? 'list' : null;
   return (
     // @ts-expect-error will review and fix this
