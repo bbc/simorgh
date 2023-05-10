@@ -58,11 +58,7 @@ export const MostReadLink = ({
 
   if (size === 'small') {
     itemCss.push(styles.smallPaddingTop);
-    if (dir === 'ltr') {
-      itemCss.push(styles.smallItemLtr);
-    } else {
-      itemCss.push(styles.smallItemRtl);
-    }
+    itemCss.push(dir === 'ltr' ? styles.smallItemLtr : styles.smallItemRtl);
   } else {
     itemCss.push(styles.defaultPaddingTop);
     itemCss.push(styles.defaultItemPadding);
