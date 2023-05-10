@@ -1,4 +1,5 @@
 /** @jsx jsx */
+/* @jsxFrag React.Fragment */
 import { jsx } from '@emotion/react';
 import {
   CurationProps,
@@ -70,12 +71,12 @@ const Curation = ({
       );
     case MOST_READ:
       return (
-        <React.Fragment>
+        <>
           <Subheading id="most-read" link="/kyrgyz/popular/read">
             Most Read
           </Subheading>
           <MostReadCanonical data={mostRead} size="default" />;
-        </React.Fragment>
+        </>
       );
     case SIMPLE_CURATION_GRID:
     case HIERARCHICAL_CURATION_GRID:
