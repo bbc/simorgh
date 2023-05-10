@@ -177,7 +177,13 @@ const RelatedContentSection = ({ content }: { content: OptimoBlock[] }) => {
         {title}
       </SectionLabel>
       {hasSingleContent ? (
-        <div css={[!headlineFirst && styles.singleItemWrapper]}>
+        <div
+          css={[
+            headlineFirst
+              ? styles.singleItemFullWidth
+              : styles.singleItemWrapper,
+          ]}
+        >
           <RelatedContentItem
             item={reducedStoryPromoItems[0]}
             ariaLabelledBy={ariaLabelledBy}
