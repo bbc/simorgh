@@ -180,7 +180,7 @@ const RelatedContentSection = ({ content }: { content: OptimoBlock[] }) => {
         <div
           css={[
             headlineFirst
-              ? styles.singleItemFullWidth
+              ? styles.singleItemWrapperFullWidth
               : styles.singleItemWrapper,
           ]}
         >

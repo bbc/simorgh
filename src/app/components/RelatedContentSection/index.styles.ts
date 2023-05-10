@@ -13,7 +13,7 @@ export default {
         width: '33.33%',
       },
     }),
-  singleItemFullWidth: ({ mq }: Theme) =>
+  singleItemWrapperFullWidth: ({ mq }: Theme) =>
     css({
       width: '100%',
 
