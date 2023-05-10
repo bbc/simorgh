@@ -17,12 +17,22 @@ const mockPageData = {
 };
 
 describe('Live Page', () => {
-  it('renders the live page', async () => {
+  it('should render the live page title', async () => {
     await act(async () => {
       render(<Live pageData={mockPageData} />);
     });
 
     expect(screen.getByText('Test Next.JS Page')).toBeInTheDocument();
+  });
+
+  it('should render the live page description', async () => {
+    await act(async () => {
+      render(<Live pageData={mockPageData} />);
+    });
+
+    expect(
+      screen.getByText('Test Next.JS Page Description'),
+    ).toBeInTheDocument();
   });
 
   it('creates snapshot of the live page', async () => {
