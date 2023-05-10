@@ -5,6 +5,7 @@ import {
   VISUAL_STYLE,
   VISUAL_PROMINENCE,
 } from '#app/models/types/curationData';
+import React from 'react';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import CurationGrid from './CurationGrid';
 import HierarchicalGrid from './HierarchicalGrid';
@@ -12,12 +13,14 @@ import Subheading from './Subhead';
 import getComponentName, { COMPONENT_NAMES } from './getComponentName';
 import MessageBanner from '../MessageBanner';
 import idSanitiser from '../../lib/utilities/idSanitiser';
+import MostReadCanonical from '../MostRead/Canonical';
 
 const {
   SIMPLE_CURATION_GRID,
   HIERARCHICAL_CURATION_GRID,
   MESSAGE_BANNER,
   NOT_SUPPORTED,
+  MOST_READ,
 } = COMPONENT_NAMES;
 
 const { NONE } = VISUAL_STYLE;
@@ -43,9 +46,8 @@ const Curation = ({
   headingLevel = 2,
   position = 0,
   curationLength = 0,
+  mostRead,
 }: CurationProps) => {
-  if (!promos.length) return null;
-
   const componentName = getComponentName(visualStyle, visualProminence);
   const GridComponent = getGridComponent(componentName);
 
@@ -65,6 +67,15 @@ const Curation = ({
           linkText={promos[0].title}
           image={promos[0].imageUrl}
         />
+      );
+    case MOST_READ:
+      return (
+        <React.Fragment>
+          <Subheading id="most-read" link="/kyrgyz/popular/read">
+            Most Read
+          </Subheading>
+          <MostReadCanonical data={mostRead} size="default" />;
+        </React.Fragment>
       );
     case SIMPLE_CURATION_GRID:
     case HIERARCHICAL_CURATION_GRID:

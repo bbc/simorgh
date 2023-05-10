@@ -1,29 +1,29 @@
 import React from 'react';
 import styled from '@emotion/styled';
-// import {
-//   getFoolscap,
-//   getTrafalgar,
-// } from '#psammead/gel-foundations/src/typography';
-// import {
-//   Burmese,
-//   Bengali,
-//   EasternArabic,
-//   Nepali,
-//   WesternArabic,
-// } from '#psammead/psammead-locales/src/numerals';
-// import { GEL_SPACING_HLF } from '#psammead/gel-foundations/src/spacings';
-// import {
-//   GEL_GROUP_5_SCREEN_WIDTH_MIN,
-//   GEL_GROUP_3_SCREEN_WIDTH_MIN,
-//   GEL_GROUP_2_SCREEN_WIDTH_MIN,
-//   GEL_GROUP_2_SCREEN_WIDTH_MAX,
-//   GEL_GROUP_1_SCREEN_WIDTH_MIN,
-//   GEL_GROUP_1_SCREEN_WIDTH_MAX,
-//   GEL_GROUP_0_SCREEN_WIDTH_MAX,
-// } from '#psammead/gel-foundations/src/breakpoints';
-// import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
-// import { grid } from '#psammead/psammead-styles/src/detection';
-// import { getSerifLight } from '#psammead/psammead-styles/src/font-styles';
+import {
+  getFoolscap,
+  getTrafalgar,
+} from '#psammead/gel-foundations/src/typography';
+import {
+  Burmese,
+  Bengali,
+  EasternArabic,
+  Nepali,
+  WesternArabic,
+} from '#psammead/psammead-locales/src/numerals';
+import { GEL_SPACING_HLF } from '#psammead/gel-foundations/src/spacings';
+import {
+  GEL_GROUP_5_SCREEN_WIDTH_MIN,
+  GEL_GROUP_3_SCREEN_WIDTH_MIN,
+  GEL_GROUP_2_SCREEN_WIDTH_MIN,
+  GEL_GROUP_2_SCREEN_WIDTH_MAX,
+  GEL_GROUP_1_SCREEN_WIDTH_MIN,
+  GEL_GROUP_1_SCREEN_WIDTH_MAX,
+  GEL_GROUP_0_SCREEN_WIDTH_MAX,
+} from '#psammead/gel-foundations/src/breakpoints';
+import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
+import { grid } from '#psammead/psammead-styles/src/detection';
+import { getSerifLight } from '#psammead/psammead-styles/src/font-styles';
 import {
   doubleDigitDefault,
   doubleDigitMedium,

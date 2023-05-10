@@ -10,9 +10,9 @@ import { ColumnLayout, Direction, Size } from '../types';
 import { TypographyScript } from '../../../models/types/theming';
 
 interface MostReadProps {
-  columnLayout: ColumnLayout;
+  columnLayout?: ColumnLayout;
   size: Size;
-  initialData: {
+  data?: {
     records: {
       id: string;
       href: string;
@@ -20,8 +20,8 @@ interface MostReadProps {
       timestamp: number;
     }[];
   };
-  wrapper: React.ElementType;
-  eventTrackingData: {
+  wrapper?: React.ElementType;
+  eventTrackingData?: {
     componentName: string;
   };
 }
@@ -29,7 +29,7 @@ interface MostReadProps {
 const MostRead = ({
   columnLayout = 'multiColumn',
   size,
-  initialData,
+  data,
   wrapper: Wrapper,
   eventTrackingData,
 }: MostReadProps) => {
@@ -46,7 +46,13 @@ const MostRead = ({
 
   const locale = serviceDatetimeLocale || datetimeLocale;
 
-  const items = initialData.records.slice(0, numberOfItems);
+  const items = data?.records.slice(0, numberOfItems) || [];
+
+  return (
+    <p>
+      There are {items.length} Most Read items for {service}
+    </p>
+  );
 
   return (
     <Wrapper>
