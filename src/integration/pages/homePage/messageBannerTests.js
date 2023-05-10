@@ -4,11 +4,15 @@ export default () => {
       '[data-testid^="message-banner-"]',
     );
 
-    it('message Banner is displayed', () => {
+    it('Is displayed', () => {
       expect(messagerBanner).toBeInTheDocument();
       expect(messagerBanner).toBeTruthy();
     });
 
-    it('', () => {});
+    it('has a link', () => {
+      expect(messagerBanner.querySelector('a').href).toMatch(
+        'https://www.bbc.com/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=4',
+      );
+    });
   });
 };

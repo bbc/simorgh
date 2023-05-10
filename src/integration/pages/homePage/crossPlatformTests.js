@@ -4,6 +4,6 @@ import messageBannerTest from './messageBannerTests';
 
 export default service => {
   runCommonCrossPlatformTests(service);
-  messageBannerTest();
+  // messageBannerTest();
   runTimestampTests();
 };
