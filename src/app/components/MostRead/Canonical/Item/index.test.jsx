@@ -21,7 +21,7 @@ describe('MostReadLink', () => {
         title={newsItem.title}
       />,
       {
-        seervice: 'pidgin',
+        service: 'pidgin',
         toggles: {
           eventTracking: { enabled: true },
         },
@@ -40,7 +40,7 @@ describe('MostReadLink', () => {
         title={arabicItem.title}
       />,
       {
-        seervice: 'pidgin',
+        service: 'pidgin',
         toggles: {
           eventTracking: { enabled: true },
         },
@@ -60,7 +60,7 @@ describe('MostReadLink', () => {
         {newsItem.timestamp}
       </MostReadLink>,
       {
-        seervice: 'pidgin',
+        service: 'pidgin',
         toggles: {
           eventTracking: { enabled: true },
         },
