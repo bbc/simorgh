@@ -16,7 +16,7 @@ const styles = {
       },
       '&:before': {
         bottom: 0,
-        content: '',
+        content: '""',
         left: 0,
         overflow: 'hidden',
         position: 'absolute',
@@ -27,12 +27,71 @@ const styles = {
       },
     }),
 
-  default: ({ mq, fontSizes }: Theme) =>
+  defaultLink: ({ mq, fontSizes }: Theme) =>
     css({
       [mq.GROUP_2_MIN_WIDTH]: {
         ...fontSizes.greatPrimer,
       },
     }),
+
+  timeStampWrapper: ({ spacings }: Theme) =>
+    css({
+      paddingTop: `${spacings.FULL}rem`,
+    }),
+
+  indexWrapper: () =>
+    css({
+      display: 'flex',
+      flexDirection: 'row',
+      margin: 0,
+      padding: 0,
+    }),
+
+  styledGrid: ({ spacings }: Theme) =>
+    css({
+      position: 'relative',
+      paddingBottom: `${spacings.TRIPLE}rem`,
+    }),
+
+  smallPaddingTop: () =>
+    css({
+      paddingTop: '0.2rem',
+    }),
+
+  defaultPaddingTop: () =>
+    css({
+      paddingTop: '0.375rem',
+    }),
+
+  smallItemLtr: ({ spacings }: Theme) =>
+    css({
+      paddingLeft: `${spacings.HALF}rem`,
+      paddingRight: `${spacings.FULL}rem`,
+    }),
+
+  smallItemRtl: ({ spacings }: Theme) =>
+    css({
+      paddingLeft: `${spacings.FULL}rem`,
+      paddingRight: `${spacings.HALF}rem`,
+    }),
+
+  defaultItemPadding: ({ spacings }: Theme) =>
+    css({
+      paddingLeft: `${spacings.FULL}rem`,
+      paddingRight: `${spacings.FULL}rem`,
+    }),
+
+  // To do
+
+  // gridPaddingLtr: () =>
+  //   css({
+  //     paddingRight: 0,
+  //   }),
+
+  // gridPaddingRtl: () =>
+  //   css({
+  //     paddingLeft: 0,
+  //   }),
 };
 
 export default styles;
