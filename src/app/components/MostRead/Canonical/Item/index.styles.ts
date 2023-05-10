@@ -35,12 +35,12 @@ const styles = {
       },
     }),
 
-  timeStampWrapper: ({ spacings }: Theme) =>
+  timestamp: ({ spacings }: Theme) =>
     css({
       paddingTop: `${spacings.FULL}rem`,
     }),
 
-  indexWrapper: () =>
+  item: () =>
     css({
       display: 'flex',
       flexDirection: 'row',
@@ -48,7 +48,7 @@ const styles = {
       padding: 0,
     }),
 
-  styledGrid: ({ spacings }: Theme) =>
+  grid: ({ spacings }: Theme) =>
     css({
       position: 'relative',
       paddingBottom: `${spacings.TRIPLE}rem`,

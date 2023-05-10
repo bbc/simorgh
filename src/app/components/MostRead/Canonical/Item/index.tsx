@@ -78,7 +78,7 @@ export const MostReadLink = ({
       >
         {title}
       </a>
-      {children && <div css={styles.timeStampWrapper}>{children}</div>}
+      {children && <div css={styles.timestamp}>{children}</div>}
     </div>
   );
 };
@@ -106,7 +106,7 @@ export const MostReadItemWrapper = React.forwardRef(
   ) => (
     // @ts-expect-error will review and fix this
     <Grid
-      css={styles.styledGrid}
+      css={styles.grid}
       {...mostReadItemGridProps(columnLayout)}
       parentColumns={getParentColumns(columnLayout)} // parentColumns is required here because on IE, this component would be rendered before it's parent therefore not receiving the parent's grid columns values so we have to explicitly pass it as a prop here so it works on IE
       dir={dir}
@@ -114,7 +114,7 @@ export const MostReadItemWrapper = React.forwardRef(
       ref={ref}
       role="listitem"
     >
-      <div css={styles.indexWrapper}>{children}</div>
+      <div css={styles.item}>{children}</div>
     </Grid>
   ),
 );
