@@ -17,7 +17,7 @@ const styles = {
       },
       '&:before': {
         bottom: 0,
-        content: '""',
+        content: `''`,
         left: 0,
         overflow: 'hidden',
         position: 'absolute',
