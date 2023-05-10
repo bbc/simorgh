@@ -174,10 +174,11 @@ const assertNon200ResponseCustomMetrics = ({
 const testFrontPages = ({ platform, service, variant, queryString = '' }) => {
   const isAmp = platform === 'amp';
   const isApp = platform === 'app';
-  const extension = {
-    'amp': '.amp',
-    'app': '.app',
-  }[platform] || '';
+  const extension =
+    {
+      amp: '.amp',
+      app: '.app',
+    }[platform] || '';
   const serviceURL = `/${service}${
     variant ? `/${variant}` : ''
   }${extension}${queryString}`;
@@ -283,10 +284,11 @@ const testFrontPages = ({ platform, service, variant, queryString = '' }) => {
 const testArticles = ({ platform, service, variant, queryString = '' }) => {
   const isAmp = platform === 'amp';
   const isApp = platform === 'app';
-  const extension = {
-    'amp': '.amp',
-    'app': '.app',
-  }[platform] || ''; 
+  const extension =
+    {
+      amp: '.amp',
+      app: '.app',
+    }[platform] || '';
 
   describe(`Optimo Article: /${service}/articles/optimoID/${extension}${queryString}`, () => {
     const successDataResponse = {
@@ -400,10 +402,11 @@ const testAssetPages = ({
 }) => {
   const isAmp = platform === 'amp';
   const isApp = platform === 'app';
-  const extension = {
-    'amp': '.amp',
-    'app': '.app',
-  }[platform] || ''; 
+  const extension =
+    {
+      amp: '.amp',
+      app: '.app',
+    }[platform] || '';
 
   describe(`CPS Asset: /${service}/${assetUri}${extension}${queryString}`, () => {
     const successDataResponse = {
@@ -620,10 +623,11 @@ const testTvPages = ({
   describe(`${platform} tv brand page`, () => {
     const isAmp = platform === 'amp';
     const isApp = platform === 'app';
-    const extension = {
-      'amp': '.amp',
-      'app': '.app',
-    }[platform] || ''; 
+    const extension =
+      {
+        amp: '.amp',
+        app: '.app',
+      }[platform] || '';
 
     const successDataResponse = {
       isAmp,
@@ -731,11 +735,12 @@ const testOnDemandTvEpisodePages = ({
   describe(`${platform} tv episode page`, () => {
     const isAmp = platform === 'amp';
     const isApp = platform === 'app';
-    const extension = {
-      'amp': '.amp',
-      'app': '.app',
-    }[platform] || ''; 
-  
+    const extension =
+      {
+        amp: '.amp',
+        app: '.app',
+      }[platform] || '';
+
     const successDataResponse = {
       isAmp,
       data: { some: 'data' },
@@ -1199,8 +1204,11 @@ describe('Server', () => {
     queryString: QUERY_STRING,
   });
   testArticles({ platform: 'app', service: 'yoruba' });
-  testArticles({ platform: 'amp', service: 'yoruba', queryString: QUERY_STRING });
-
+  testArticles({
+    platform: 'amp',
+    service: 'yoruba',
+    queryString: QUERY_STRING,
+  });
 
   testMediaPages({
     platform: 'amp',

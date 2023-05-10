@@ -42,11 +42,11 @@ const recommendationSettings = {
 };
 
 const input = {
-  bbcOrigin:"https://www.test.bbc.co.uk",
-  id:"c0000000000o",
+  bbcOrigin: 'https://www.test.bbc.co.uk',
+  id: 'c0000000000o',
   isAmp: false,
   pageType: ARTICLE_PAGE,
-  pathname:"/pathname",
+  pathname: '/pathname',
   statusCode: 200,
 };
 
@@ -58,34 +58,41 @@ const Context = ({
   showAdsBasedOnLocation = false,
   isApp = false,
 } = {}) => {
-  const appInput = {...input, service, showAdsBasedOnLocation, isApp};
+  const appInput = {
+    ...input,
+    service,
+    showAdsBasedOnLocation,
+    isApp,
+  };
 
-  return (<BrowserRouter>
-    <ThemeProvider service={service} variant="default">
-      <ToggleContextProvider
-        toggles={{
-          mostRead: {
-            enabled: mostReadToggledOn,
-          },
-          ads: {
-            enabled: adsToggledOn,
-          },
-          cpsRecommendations: {
-            enabled: true,
-          },
-        }}
-      >
-        <RequestContextProvider {...appInput}>
-          <ServiceContextProvider
-            service={service}
-            recommendations={recommendationSettings}
-          >
-            {children}
-          </ServiceContextProvider>
-        </RequestContextProvider>
-      </ToggleContextProvider>
-    </ThemeProvider>
-  </BrowserRouter>);
+  return (
+    <BrowserRouter>
+      <ThemeProvider service={service} variant="default">
+        <ToggleContextProvider
+          toggles={{
+            mostRead: {
+              enabled: mostReadToggledOn,
+            },
+            ads: {
+              enabled: adsToggledOn,
+            },
+            cpsRecommendations: {
+              enabled: true,
+            },
+          }}
+        >
+          <RequestContextProvider {...appInput}>
+            <ServiceContextProvider
+              service={service}
+              recommendations={recommendationSettings}
+            >
+              {children}
+            </ServiceContextProvider>
+          </RequestContextProvider>
+        </ToggleContextProvider>
+      </ThemeProvider>
+    </BrowserRouter>
+  );
 };
 
 beforeEach(() => {
@@ -390,7 +397,6 @@ it('should render the top stories and features when passed', async () => {
   expect(getByTestId('top-stories')).toBeInTheDocument();
   expect(getByTestId('features')).toBeInTheDocument();
 });
-
 
 it('should remove the top stories and features sections when isApp is set to true', async () => {
   const pageDataWithSecondaryColumn = {
