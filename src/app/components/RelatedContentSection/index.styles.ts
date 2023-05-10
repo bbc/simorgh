@@ -34,6 +34,14 @@ export default {
         width: '33.33%',
       },
     }),
+  promoItemFullWidth: ({ spacings }: Theme) =>
+    css({
+      display: 'flex',
+      margin: 0,
+      width: '100%',
+      height: 'inherit',
+      padding: `calc(${spacings.FULL}rem - 0.1875rem)`,
+    }),
   relatedContentSection: ({ spacings, mq }: Theme) =>
     css({
       padding: `0 ${spacings.FULL}rem`,

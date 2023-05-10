@@ -15,14 +15,14 @@ import filter from 'ramda/src/filter';
 import pipe from 'ramda/src/pipe';
 
 import useViewTracker from '#hooks/useViewTracker';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
+import { ServiceContext } from '../../contexts/ServiceContext';
 import styles from './index.styles';
-import generatePromoId from '../generatePromoId';
+import generatePromoId from '../../lib/utilities/generatePromoId';
 import RelatedContentItem from './RelatedContentItem';
-import PromoList from '../../../../legacy/components/OptimoPromos/PromoList';
-import PromoItem from '../../../../legacy/components/OptimoPromos/PromoItem/index.styles';
-import { EventTrackingData } from '../../types';
-import { OptimoBlock } from '../../../../models/types/optimo';
+import PromoList from '../../legacy/components/OptimoPromos/PromoList';
+import PromoItem from '../../legacy/components/OptimoPromos/PromoItem/index.styles';
+import { EventTrackingData } from './types';
+import { OptimoBlock } from '../../models/types/optimo';
 
 const BLOCKS_TO_IGNORE = ['wsoj', 'mpu'];
 
@@ -68,8 +68,17 @@ const renderRelatedContentList = ({
     index,
   });
 
+  const headlineFirst = pathOr<string>(
+    '',
+    ['model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
+    item,
+  );
+
   return (
-    <PromoItem css={styles.promoItem} key={ariaLabelledBy}>
+    <PromoItem
+      css={[headlineFirst ? styles.promoItemFullWidth : styles.promoItem]}
+      key={ariaLabelledBy}
+    >
       <RelatedContentItem
         item={item}
         ariaLabelledBy={ariaLabelledBy}
