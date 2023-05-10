@@ -13,6 +13,9 @@
     "start": "next start -p 7081 && NODE_ENV=production",
     "test": "jest --ci --colors"
   },
+  "resolutions": {
+    "@types/react": "18.0.33"
+  },
   "devDependencies": {
     "@emotion/jest": "^11.10.8",
     "@testing-library/jest-dom": "^5.16.5",
