@@ -20,7 +20,8 @@
     "@testing-library/react": "^14.0.0",
     "babel-plugin-transform-rename-import": "2.3.0",
     "jest": "^29.5.0",
-    "jest-environment-jsdom": "^29.5.0"
+    "jest-environment-jsdom": "^29.5.0",
+    "ts-node": "^10.9.1"
   },
   "dependencies": {
     "next": "12.3.4"
