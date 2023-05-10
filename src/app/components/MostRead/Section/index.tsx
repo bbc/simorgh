@@ -1,7 +1,13 @@
-import React from 'react';
-import { node, string } from 'prop-types';
+import React, { PropsWithChildren } from 'react';
 
-const MostReadSection = ({ children, className }) => (
+interface MostReadSectionProps {
+  className?: string;
+}
+
+const MostReadSection = ({
+  children,
+  className = '',
+}: PropsWithChildren<MostReadSectionProps>) => (
   <section
     className={className}
     role="region"
@@ -11,14 +17,5 @@ const MostReadSection = ({ children, className }) => (
     {children}
   </section>
 );
-
-MostReadSection.propTypes = {
-  children: node.isRequired,
-  className: string,
-};
-
-MostReadSection.defaultProps = {
-  className: '',
-};
 
 export default MostReadSection;

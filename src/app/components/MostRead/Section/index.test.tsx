@@ -10,5 +10,6 @@ describe('MostReadSectionLabel assertion', () => {
     const section = container.getElementsByTagName('section')[0];
     expect(section).toHaveAttribute('aria-labelledby', 'Most-Read');
     expect(section).toHaveAttribute('role', 'region');
+    expect(container).toMatchSnapshot();
   });
 });
