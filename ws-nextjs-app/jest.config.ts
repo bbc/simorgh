@@ -13,7 +13,6 @@ const config: import('jest').Config = {
   transform: {
     '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
   },
-  transformIgnorePatterns: ['/node_modules/'],
 };
 
 export default config;
