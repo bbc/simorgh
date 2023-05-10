@@ -29,7 +29,7 @@ const generateCSPHash = ({
       encoding = ${encoding}, 
       base = ${base}`,
     );
-    return null;
+    return undefined;
   }
 };
 

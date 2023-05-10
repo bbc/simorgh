@@ -16,7 +16,7 @@ describe('generateCSPHash', () => {
     expect(result).toEqual(expectedResult);
   });
 
-  it('should return null when script is null', () => {
+  it('should return undefined when script is null', () => {
     const exampleScript = null;
 
     const result = generateCSPHash({
@@ -27,10 +27,10 @@ describe('generateCSPHash', () => {
       base: 'base64',
     });
 
-    expect(result).toEqual(null);
+    expect(result).toEqual(undefined);
   });
 
-  it('should return null when hash is null', () => {
+  it('should return undefined when hash is null', () => {
     const exampleScript = `const somefunction = () => {}`;
 
     const result = generateCSPHash({
@@ -41,7 +41,7 @@ describe('generateCSPHash', () => {
       base: 'base64',
     });
 
-    expect(result).toEqual(null);
+    expect(result).toEqual(undefined);
   });
 
   it('should return hash when encoding is null', () => {
@@ -60,7 +60,7 @@ describe('generateCSPHash', () => {
     expect(result).toEqual(expectedResult);
   });
 
-  it('should return null when base is null', () => {
+  it('should return undefined when base is null', () => {
     const exampleScript = `const somefunction = () => {}`;
 
     const result = generateCSPHash({
@@ -71,6 +71,6 @@ describe('generateCSPHash', () => {
       base: null,
     });
 
-    expect(result).toEqual(null);
+    expect(result).toEqual(undefined);
   });
 });
