@@ -2,7 +2,7 @@ import { GetServerSideProps } from 'next';
 import { ParsedUrlQuery } from 'querystring';
 import omit from 'ramda/src/omit';
 import applyBasicPageHandlers from '#pages/utils/applyBasicPageHandlers';
-import bffFetch from '#app/routes/topic/getInitialData';
+import constructPageFetchUrl from '#app/routes/utils/constructPageFetchUrl';
 import getAgent from '#server/utilities/getAgent';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
 import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
@@ -10,8 +10,11 @@ import nodeLogger from '#lib/logger.node';
 import {
   ROUTING_INFORMATION,
   SERVER_SIDE_RENDER_REQUEST_RECEIVED,
+  BFF_FETCH_ERROR,
 } from '#app/lib/logger.const';
 import { Services, Variants } from '#models/types/global';
+import getEnvironment from '#app/routes/utils/getEnvironment';
+import fetchPageData from '#app/routes/utils/fetchPageData';
 
 import LivePageLayout from './LivePageLayout';
 
@@ -28,6 +31,8 @@ interface PageDataParams extends ParsedUrlQuery {
   renderer_env?: string;
 }
 
+const logger = nodeLogger(__filename);
+
 const getPageData = async ({
   id,
   page,
@@ -35,13 +40,50 @@ const getPageData = async ({
   variant,
   rendererEnv,
 }: PageDataParams) => {
-  const data = await bffFetch({
-    getAgent,
+  const pathname = `${id}${rendererEnv ? `?renderer_env=${rendererEnv}` : ''}`;
+  const livePageUrl = constructPageFetchUrl({
     page,
-    path: `${id}${rendererEnv ? `?renderer_env=${rendererEnv}` : ''}`,
+    pageType: 'live',
+    pathname,
     service,
     variant,
   });
+
+  const env = getEnvironment(pathname);
+  const optHeaders = { 'ctx-service-env': env };
+  const isLocal = !env || env === 'local';
+
+  const agent = !isLocal ? await getAgent() : null;
+
+  let pageStatus;
+  let pageJson;
+  let errorMessage;
+
+  const path = livePageUrl.toString();
+
+  try {
+    // @ts-expect-error Due to jsdoc inference, and no TS within fetchPageData
+    const { status, json } = await fetchPageData({
+      path,
+      agent,
+      optHeaders,
+    });
+    pageStatus = status;
+    pageJson = json;
+  } catch ({ message, status }) {
+    logger.error(BFF_FETCH_ERROR, {
+      service,
+      status,
+      pathname,
+      message,
+    });
+    pageStatus = status;
+    errorMessage = message;
+  }
+
+  const data = pageJson
+    ? { pageData: pageJson.data, status: pageStatus }
+    : { error: errorMessage, status: pageStatus };
 
   const toggles = await getToggles(service);
 
@@ -49,8 +91,6 @@ const getPageData = async ({
 };
 
 export const getServerSideProps: GetServerSideProps = async context => {
-  const logger = nodeLogger(__filename);
-
   const {
     id,
     service,
@@ -74,7 +114,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
     page,
     service,
     variant,
-    rendererEnv: 'live', // TODO: remove hardcoding
+    rendererEnv: 'test', // TODO: remove hardcoding
   });
 
   logger.info(ROUTING_INFORMATION, {
