@@ -27,6 +27,7 @@ const Context = ({ children, service }: LinkedDataWithContext) => (
       bbcOrigin="https://www.test.bbc.com"
       id="c0000000000o"
       isAmp={false}
+      isApp={false}
       pageType={ARTICLE_PAGE}
       pathname="/pathname"
       service="news"
