@@ -26,9 +26,6 @@ module.exports = {
     externalDir: true,
   },
   env: clientEnvVars,
-  compiler: {
-    emotion: true,
-  },
   eslint: {
     ignoreDuringBuilds: true,
   },
