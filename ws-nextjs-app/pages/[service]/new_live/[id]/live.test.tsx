@@ -9,6 +9,8 @@ import Live from './LivePageLayout';
 const mockPageData = {
   pageCount: 10,
   activePage: 1,
+  title: 'Test Next.JS Page',
+  description: 'Test Next.JS Page Description',
   someResponse: {
     block: 'Its a block',
   },
