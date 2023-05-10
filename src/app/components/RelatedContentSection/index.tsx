@@ -31,6 +31,14 @@ const removeCustomBlocks = pipe(
   last,
 );
 
+const isHeadlineFirst = (item: object) => {
+  return !!pathOr<string>(
+    '',
+    ['model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
+    item,
+  );
+};
+
 type RelatedContentListProps = {
   item: object;
   index: number;
@@ -68,11 +76,7 @@ const renderRelatedContentList = ({
     index,
   });
 
-  const headlineFirst = pathOr<string>(
-    '',
-    ['model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
-    item,
-  );
+  const headlineFirst = isHeadlineFirst(item);
 
   return (
     <PromoItem
@@ -130,6 +134,7 @@ const RelatedContentSection = ({ content }: { content: OptimoBlock[] }) => {
   const reducedStoryPromoItems = slice(0, 6, storyPromoItems);
 
   const hasSingleContent = reducedStoryPromoItems.length === 1;
+  const headlineFirst = isHeadlineFirst(reducedStoryPromoItems[0]);
 
   const assetUri = pathOr(
     '',
@@ -172,7 +177,7 @@ const RelatedContentSection = ({ content }: { content: OptimoBlock[] }) => {
         {title}
       </SectionLabel>
       {hasSingleContent ? (
-        <div css={styles.singleItemWrapper}>
+        <div css={[!headlineFirst && styles.singleItemWrapper]}>
           <RelatedContentItem
             item={reducedStoryPromoItems[0]}
             ariaLabelledBy={ariaLabelledBy}
