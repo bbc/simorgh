@@ -1,11 +1,13 @@
 import React from 'react';
 import Timestamp from '#psammead/psammead-timestamp-container/src';
+import { Services } from '#app/models/types/global';
+import { TypographyScript } from '#app/models/types/theming';
 
 interface LastUpdatedProps {
   locale: string;
   prefix: string;
-  script: object;
-  service: string;
+  script: TypographyScript;
+  service: Services;
   timestamp: number;
   timezone: string;
 }

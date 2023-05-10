@@ -38,7 +38,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
 
   const itemListElement = curations
     .map(({ summaries }) =>
-      summaries.map(summary => ({
+      summaries?.map(summary => ({
         '@context': 'http://schema.org',
         '@type': 'ListItem',
         url: summary.link,
@@ -58,6 +58,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
     name: brandName,
     numberOfItems: itemListElement.length,
   };
+
   return (
     <>
       <MetadataContainer
@@ -90,6 +91,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
               link,
               position,
               visualStyle,
+              mostRead,
             }) => {
               return (
                 <React.Fragment key={`${curationId}-${position}`}>
@@ -97,12 +99,13 @@ const HomePage = ({ pageData }: HomePageProps) => {
                     headingLevel={curationTitle ? 3 : 2}
                     visualStyle={visualStyle as VisualStyle}
                     visualProminence={visualProminence as VisualProminence}
-                    promos={summaries}
+                    promos={summaries || []}
                     title={curationTitle}
                     topStoriesTitle={topStoriesTitle}
                     position={position}
                     link={link}
                     curationLength={curations && curations.length}
+                    mostRead={mostRead}
                   />
                 </React.Fragment>
               );

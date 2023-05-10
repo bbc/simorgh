@@ -30,20 +30,25 @@ export type VisualStyle = keyof typeof VISUAL_STYLE;
 
 export type VisualProminence = keyof typeof VISUAL_PROMINENCE;
 
+interface MostRead {
+  records: { id: string; href: string; title: string; timestamp: number }[];
+}
+
 export interface CurationProps {
   visualStyle: VisualStyle;
   visualProminence: VisualProminence;
-  promos: Summary[];
+  promos?: Summary[];
   title?: string;
   link?: string;
   headingLevel?: number;
   position?: number;
   topStoriesTitle?: string;
   curationLength?: number;
+  mostRead?: MostRead;
 }
 
 export interface CurationData {
-  summaries: Summary[];
+  summaries?: Summary[];
   visualStyle?: VisualStyle | string;
   visualProminence: VisualProminence | string;
   curationId: string;
@@ -53,4 +58,5 @@ export interface CurationData {
   activePage?: number;
   pageCount?: number;
   curationType?: string;
+  mostRead?: MostRead;
 }
