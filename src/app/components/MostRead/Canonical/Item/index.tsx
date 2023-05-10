@@ -54,6 +54,7 @@ export const MostReadLink = ({
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
 
   const itemCss = [];
+  itemCss.push(dir === 'ltr' ? styles.gridPaddingLtr : styles.gridPaddingRtl);
 
   if (size === 'small') {
     itemCss.push(styles.smallPaddingTop);
@@ -65,11 +66,6 @@ export const MostReadLink = ({
   } else {
     itemCss.push(styles.defaultPaddingTop);
     itemCss.push(styles.defaultItemPadding);
-    // if (dir === 'ltr') {
-    //   itemCss.push(styles.defaultItemLtr)
-    // } else {
-    //   itemCss.push(styles.defaultDirRtl)
-    // }
   }
 
   return (
