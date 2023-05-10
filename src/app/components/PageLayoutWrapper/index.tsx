@@ -31,8 +31,8 @@ const PageLayoutWrapper = ({
   pageData,
   status,
 }: PropsWithChildren<Props>) => {
-  const { service, variant } = useContext(ServiceContext);
-  const { isAmp, isNextJs } = useContext(RequestContext);
+  const { service } = useContext(ServiceContext);
+  const { isAmp, isNextJs, variant } = useContext(RequestContext);
 
   const scriptSwitchId = pathOr('', ['scriptSwitchId'], pageData);
   const renderScriptSwitch = pathOr(true, ['renderScriptSwitch'], pageData);

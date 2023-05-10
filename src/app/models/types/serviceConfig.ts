@@ -5,7 +5,6 @@ import {
   ChineseService,
   ZhongwenService,
   UkrainianService,
-  Variants,
 } from './global';
 import { Translations } from './translations';
 
@@ -104,7 +103,6 @@ export type ServiceConfig = {
       [key: string]: string;
     };
   };
-  variant: Variants;
 };
 
 export type PodcastPromo = {
