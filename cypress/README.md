@@ -43,8 +43,6 @@ Use the scripts from Simorgh's [package.json](https://github.com/bbc/simorgh/blo
 
 ## Beyond this suite of tests
 
-We have one other cypress test suite for E2Es of 3rd party systems, the success of those tests may or may not be partially dependent on the simorgh application but they definitely include systems we use in a live environment and may break irrespective of the stability of this application. This is in the repo root under [3rdPartyCypress/](https://github.com/bbc/simorgh/blob/latest/3rdPartyCypress).
-
 We have a really custom way our approaching our E2E tests with a [comprehensive README.md](https://github.com/bbc/simorgh/blob/latest/cypress/integration/README.md).
 
 We also have [a very limited Puppeteer test suite](https://github.com/bbc/simorgh/tree/latest/puppeteer) for when we go beyond Cypress' functional limits.
