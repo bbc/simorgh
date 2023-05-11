@@ -10,12 +10,12 @@ import buildIChefURL from '#app/lib/utilities/ichefURL';
 import Promo from '#components/OptimoPromos';
 import isEmpty from 'ramda/src/isEmpty';
 import styles from './index.styles';
-import { EventTrackingData } from '../../../models/types/eventTracking';
+import { EventTrackingBlock } from '../../../models/types/eventTracking';
 
 type RelatedContentItemProps = {
   item: object;
   ariaLabelledBy: string;
-  eventTrackingData?: EventTrackingData;
+  eventTrackingData?: EventTrackingBlock;
 };
 
 const RelatedContentItem = forwardRef<HTMLDivElement, RelatedContentItemProps>(

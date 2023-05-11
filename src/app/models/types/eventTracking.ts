@@ -1,7 +1,9 @@
-export type TrackingBlock = {
+export type EventTrackingMetadata = {
   componentName: string;
 };
 
-export type EventTrackingData = {
-  block: TrackingBlock;
+export type EventTrackingBlock = {
+  block: {
+    componentName: EventTrackingMetadata['componentName'];
+  };
 };

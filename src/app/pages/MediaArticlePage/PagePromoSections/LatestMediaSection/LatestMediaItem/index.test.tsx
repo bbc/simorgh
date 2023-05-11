@@ -6,7 +6,7 @@ import {
 
 import LatestMediaItem from '.';
 import PromoContext from '../../../../../legacy/components/OptimoPromos/PromoContext';
-import { EventTrackingData } from '../../../../../models/types/eventTracking';
+import { EventTrackingBlock } from '../../../../../models/types/eventTracking';
 import { LatestMedia, Media } from '../types';
 
 interface FixtureProps {
@@ -34,7 +34,7 @@ const Fixture = ({ mediaType, imageAlt }: FixtureProps) => {
         item={item}
         ariaLabelledBy="promo-item"
         ref={() => Promise.resolve()}
-        eventTrackingData={{} as EventTrackingData}
+        eventTrackingData={{} as EventTrackingBlock}
       />
     </PromoContext.Provider>
   );

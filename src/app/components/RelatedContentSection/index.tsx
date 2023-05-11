@@ -21,7 +21,7 @@ import generatePromoId from '../../lib/utilities/generatePromoId';
 import RelatedContentItem from './RelatedContentItem';
 import PromoList from '../../legacy/components/OptimoPromos/PromoList';
 import PromoItem from '../../legacy/components/OptimoPromos/PromoItem/index.styles';
-import { EventTrackingData } from '../../models/types/eventTracking';
+import { EventTrackingBlock } from '../../models/types/eventTracking';
 import { OptimoBlock } from '../../models/types/optimo';
 
 const BLOCKS_TO_IGNORE = ['wsoj', 'mpu'];
@@ -42,7 +42,7 @@ const isHeadlineFirst = (item: object) => {
 type RelatedContentListProps = {
   item: object;
   index: number;
-  eventTrackingData: EventTrackingData;
+  eventTrackingData: EventTrackingBlock;
   viewRef: React.Ref<HTMLDivElement>;
 };
 
@@ -80,7 +80,7 @@ const renderRelatedContentList = ({
 
   return (
     <PromoItem
-      css={[headlineFirst ? styles.promoItemFullWidth : styles.promoItem]}
+      css={headlineFirst ? styles.promoItemFullWidth : styles.promoItem}
       key={ariaLabelledBy}
     >
       <RelatedContentItem
@@ -178,11 +178,11 @@ const RelatedContentSection = ({ content }: { content: OptimoBlock[] }) => {
       </SectionLabel>
       {hasSingleContent ? (
         <div
-          css={[
+          css={
             headlineFirst
               ? styles.singleItemWrapperFullWidth
-              : styles.singleItemWrapper,
-          ]}
+              : styles.singleItemWrapper
+          }
         >
           <RelatedContentItem
             item={reducedStoryPromoItems[0]}

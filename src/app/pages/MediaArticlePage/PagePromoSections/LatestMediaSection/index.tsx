@@ -14,15 +14,12 @@ import generatePromoId from '../../../../lib/utilities/generatePromoId';
 import LatestMediaItem from './LatestMediaItem';
 import styles from './index.styles';
 import { LatestMedia } from './types';
-import {
-  EventTrackingData,
-  TrackingBlock,
-} from '../../../../models/types/eventTracking';
+import { EventTrackingBlock } from '../../../../models/types/eventTracking';
 
 const renderLatestMediaList = (
   item: LatestMedia,
   index: number,
-  eventTrackingData: EventTrackingData,
+  eventTrackingData: EventTrackingBlock,
   viewRef: () => Promise<void>,
 ) => {
   const ariaLabelledBy = generatePromoId({
@@ -54,7 +51,7 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
       componentName: 'latest',
     },
   };
-  const eventTrackingDataSend = path<TrackingBlock>(
+  const eventTrackingDataSend = path<EventTrackingBlock>(
     ['block'],
     eventTrackingData,
   );
