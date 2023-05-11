@@ -5,7 +5,7 @@
 */
 export const GEL_SPACING_HLF = `0.25rem`; // 4px
 export const GEL_SPACING = `0.5rem`; // 8px
-export const GEL_SPACING_HLF_TRPL = '0.75rem'; // 12 px
+export const GEL_SPACING_HLF_TRPL = '0.75rem'; // 12px
 export const GEL_SPACING_DBL = `1rem`; // 16px
 export const GEL_SPACING_TRPL = `1.5rem`; // 24px
 export const GEL_SPACING_QUAD = `2rem`; // 32px
