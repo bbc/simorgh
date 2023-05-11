@@ -6,8 +6,6 @@ const styles = {
     margin: 0,
     padding: 0,
     gridAutoFlow: 'column',
-    // gridTemplateRows: repeat(${props => props.numberOfItems}, auto);
-    // look at fixing line 10
   }),
 
   twoColumn: ({ mq }: Theme) =>
@@ -24,5 +22,8 @@ const styles = {
       },
     }),
 };
+
+export const oneColumnGridTemplateRows = (numberOfItems: number) =>
+  css({ gridTemplateRows: `repeat(${numberOfItems}, auto)` });
 
 export default styles;
