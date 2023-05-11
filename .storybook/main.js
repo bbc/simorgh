@@ -18,6 +18,7 @@ module.exports = {
     '../src/app/legacy/containers/**/*.stories.@(t|j)sx',
     '../src/app/components/**/*.stories.@(t|j)sx',
     '../src/app/pages/**/*.stories.@(t|j)sx',
+    '../ws-nextjs-app/**/*.stories.tsx',
     './DocsDecorator/**/*.stories.@(t|j)sx',
     './SidebarLabel/**/*.stories.@(t|j)sx',
   ],
