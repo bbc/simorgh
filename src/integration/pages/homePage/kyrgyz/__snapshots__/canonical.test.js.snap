@@ -108,6 +108,11 @@ Object {
 
 exports[`Canonical Home Page Main heading should match text 1`] = `"BBC News, Кыргыз КызMATы - Башталгыч бет"`;
 
+exports[`Canonical Home Page Page content First item in the first curation is the correct headline 1`] = `
+"13:31 - “Баланы сабады деп аялымды камап салышарын өзүм да билген эмесмин”. Кадамжайда токмоктолгон наристенин атасы
+"
+`;
+
 exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 1`] = `
 Object {
   "sizes": null,
@@ -744,3 +749,5 @@ Object {
   "text": "2 февраль 2023",
 }
 `;
+
+exports[`Canonical Home Page messageBanner has a link 1`] = `"https://www.bbc.com/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=4"`;

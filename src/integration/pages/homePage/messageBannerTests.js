@@ -10,9 +10,7 @@ export default () => {
     });
 
     it('has a link', () => {
-      expect(messagerBanner.querySelector('a').href).toMatch(
-        'https://www.bbc.com/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=4',
-      );
+      expect(messagerBanner.querySelector('a').href).toMatchSnapshot();
     });
   });
 };
