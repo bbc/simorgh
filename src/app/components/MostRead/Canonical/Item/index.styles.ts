@@ -1,4 +1,5 @@
 import { css, Theme } from '@emotion/react';
+import { grid } from '../../../../legacy/psammead/psammead-styles/src/detection';
 
 const styles = {
   link: ({ spacings, palette, fontSizes, fontVariants }: Theme) =>
@@ -16,7 +17,7 @@ const styles = {
       },
       '&:before': {
         bottom: 0,
-        content: '""',
+        content: `''`,
         left: 0,
         overflow: 'hidden',
         position: 'absolute',
@@ -34,12 +35,12 @@ const styles = {
       },
     }),
 
-  timeStampWrapper: ({ spacings }: Theme) =>
+  timestamp: ({ spacings }: Theme) =>
     css({
       paddingTop: `${spacings.FULL}rem`,
     }),
 
-  indexWrapper: () =>
+  item: () =>
     css({
       display: 'flex',
       flexDirection: 'row',
@@ -47,7 +48,7 @@ const styles = {
       padding: 0,
     }),
 
-  styledGrid: ({ spacings }: Theme) =>
+  grid: ({ spacings }: Theme) =>
     css({
       position: 'relative',
       paddingBottom: `${spacings.TRIPLE}rem`,
@@ -81,17 +82,19 @@ const styles = {
       paddingRight: `${spacings.FULL}rem`,
     }),
 
-  // To do
+  gridPaddingLtr: () =>
+    css({
+      [`@supports (${grid})`]: {
+        paddingRight: 0,
+      },
+    }),
 
-  // gridPaddingLtr: () =>
-  //   css({
-  //     paddingRight: 0,
-  //   }),
-
-  // gridPaddingRtl: () =>
-  //   css({
-  //     paddingLeft: 0,
-  //   }),
+  gridPaddingRtl: () =>
+    css({
+      [`@supports (${grid})`]: {
+        paddingLeft: 0,
+      },
+    }),
 };
 
 export default styles;

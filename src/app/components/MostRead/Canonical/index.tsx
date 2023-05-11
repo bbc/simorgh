@@ -48,39 +48,36 @@ const MostRead = ({
 
   const items = data?.records.slice(0, numberOfItems) || [];
 
-  return (
-    <p>
-      There are {items.length} Most Read items for {service}
-    </p>
-  );
+  const direction = dir as Direction;
+  const fontScript = script as TypographyScript;
 
   return (
-    <Wrapper>
+    <>
       <MostReadList
         numberOfItems={items.length}
-        dir={dir as Direction}
+        dir={direction}
         columnLayout={columnLayout}
       >
         {items.map((item, i) => (
           <MostReadItemWrapper
-            dir={dir}
+            dir={direction}
             key={item.id}
             columnLayout={columnLayout}
             ref={viewRef}
           >
             <MostReadRank
               service={service}
-              script={script as TypographyScript}
+              script={fontScript}
               listIndex={i + 1}
               numberOfItems={items.length}
-              dir={dir as Direction}
+              dir={direction}
               columnLayout={columnLayout}
               size={size}
             />
             <MostReadLink
-              dir={dir}
+              dir={direction}
               service={service}
-              script={script}
+              script={fontScript}
               title={item.title}
               href={item.href}
               size={size}
@@ -89,7 +86,7 @@ const MostRead = ({
               {shouldRenderLastUpdated(item.timestamp) && (
                 <LastUpdated
                   prefix={lastUpdated}
-                  script={script as TypographyScript}
+                  script={fontScript}
                   service={service}
                   timestamp={item.timestamp}
                   locale={locale}
@@ -100,7 +97,7 @@ const MostRead = ({
           </MostReadItemWrapper>
         ))}
       </MostReadList>
-    </Wrapper>
+    </>
   );
 };
 

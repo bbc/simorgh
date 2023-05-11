@@ -33,7 +33,7 @@ export interface MostReadLinkProps {
   title: string;
   href: string;
   size: Size;
-  eventTrackingData: {
+  eventTrackingData?: {
     componentName: string;
   };
 }

@@ -180,10 +180,10 @@ const MostReadRank = ({
   dir,
   columnLayout,
   size,
-}: // isAmp,
-MostReadRankProps) => {
+  isAmp,
+}: MostReadRankProps) => {
   const numerals = serviceNumerals(service);
-  // const rank = isAmp ? listIndex : numerals[listIndex];
+  const rank = isAmp ? listIndex : numerals[listIndex];
   const RankWrapper = getColumnWrapper(columnLayout);
 
   return (

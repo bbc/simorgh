@@ -54,22 +54,14 @@ export const MostReadLink = ({
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
 
   const itemCss = [];
+  itemCss.push(dir === 'ltr' ? styles.gridPaddingLtr : styles.gridPaddingRtl);
 
   if (size === 'small') {
     itemCss.push(styles.smallPaddingTop);
-    if (dir === 'ltr') {
-      itemCss.push(styles.smallItemLtr);
-    } else {
-      itemCss.push(styles.smallItemRtl);
-    }
+    itemCss.push(dir === 'ltr' ? styles.smallItemLtr : styles.smallItemRtl);
   } else {
     itemCss.push(styles.defaultPaddingTop);
     itemCss.push(styles.defaultItemPadding);
-    // if (dir === 'ltr') {
-    //   itemCss.push(styles.defaultItemLtr)
-    // } else {
-    //   itemCss.push(styles.defaultDirRtl)
-    // }
   }
 
   return (
@@ -82,7 +74,7 @@ export const MostReadLink = ({
       >
         {title}
       </a>
-      {children && <div css={styles.timeStampWrapper}>{children}</div>}
+      {children && <div css={styles.timestamp}>{children}</div>}
     </div>
   );
 };
@@ -110,7 +102,7 @@ export const MostReadItemWrapper = React.forwardRef(
   ) => (
     // @ts-expect-error will review and fix this
     <Grid
-      css={styles.styledGrid}
+      css={styles.grid}
       {...mostReadItemGridProps(columnLayout)}
       parentColumns={getParentColumns(columnLayout)} // parentColumns is required here because on IE, this component would be rendered before it's parent therefore not receiving the parent's grid columns values so we have to explicitly pass it as a prop here so it works on IE
       dir={dir}
@@ -118,7 +110,7 @@ export const MostReadItemWrapper = React.forwardRef(
       ref={ref}
       role="listitem"
     >
-      <div css={styles.indexWrapper}>{children}</div>
+      <div css={styles.item}>{children}</div>
     </Grid>
   ),
 );
