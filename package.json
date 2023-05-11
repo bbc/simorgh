@@ -10,7 +10,6 @@
   ],
   "resolutions": {
     "@optimizely/js-sdk-utils": "0.4.0",
-    "@types/react": "18.2.6",
     "winston@3.8.2": "patch:winston@npm:3.8.2#.yarn/patches/winston-npm-3.8.2-2035e9cac4.patch",
     "stylelint-config-recommended": "5.0.0"
   },
