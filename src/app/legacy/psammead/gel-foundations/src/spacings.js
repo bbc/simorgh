@@ -3,15 +3,15 @@
     Assumes 16px is set as the default font-size.
     This is changeable in the user's browser settings, as the html font-size is 100%
 */
-export const GEL_SPACING_HLF = `0.25rem`;
-export const GEL_SPACING = `0.5rem`;
-export const GEL_SPACING_HLF_TRPL = '0.75rem';
+export const GEL_SPACING_HLF = `0.25rem`; // 4px
+export const GEL_SPACING = `0.5rem`; // 8px
+export const GEL_SPACING_HLF_TRPL = '0.75rem'; // 12 px
 export const GEL_SPACING_DBL = `1rem`; // 16px
-export const GEL_SPACING_TRPL = `1.5rem`;
+export const GEL_SPACING_TRPL = `1.5rem`; // 24px
 export const GEL_SPACING_QUAD = `2rem`; // 32px
-export const GEL_SPACING_QUIN = `2.5rem`;
+export const GEL_SPACING_QUIN = `2.5rem`; // 40px
 export const GEL_SPACING_SEXT = `3rem`; // 48px
-export const GEL_SPACING_SEPT = `3.5rem`;
+export const GEL_SPACING_SEPT = `3.5rem`; // 56px
 
 /*
     GEL Grid

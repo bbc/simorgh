@@ -13,6 +13,11 @@ export interface MostReadBaseProps {
   numberOfItems: number;
 }
 
+export interface MostReadItemProps {
+  dir?: Direction;
+  columnLayout: ColumnLayout;
+}
+
 export interface MostReadRankProps extends MostReadBaseProps {
   service: Services;
   script: TypographyScript;
@@ -28,7 +33,7 @@ export interface MostReadLinkProps {
   title: string;
   href: string;
   size: Size;
-  eventTrackingData: {
+  eventTrackingData?: {
     componentName: string;
   };
 }
