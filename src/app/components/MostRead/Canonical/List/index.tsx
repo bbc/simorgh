@@ -1,12 +1,12 @@
 /** @jsx jsx */
-import { PropsWithChildren, FC } from 'react';
+import { PropsWithChildren } from 'react';
 import { jsx } from '@emotion/react';
 import Grid from '../../../../legacy/psammead/psammead-grid/src';
 import { mostReadListGridProps } from '../../../../legacy/containers/MostRead/utilities/gridProps';
 import styles from './index.styles';
 import { MostReadBaseProps } from '../../types';
 
-const MostReadList: FC<PropsWithChildren<MostReadBaseProps>> = ({
+const MostReadList = ({
   numberOfItems,
   dir = 'ltr',
   columnLayout = 'multiColumn',
