@@ -1,42 +1,45 @@
-import React, { useContext } from 'react';
+/** @jsxRuntime classic */
+/** @jsx jsx */
+/* @jsxFrag React.Fragment */
+
+import React, { PropsWithChildren, useContext } from 'react';
+import { jsx } from '@emotion/react';
 import { Helmet } from 'react-helmet';
-import { node, shape, number } from 'prop-types';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
+
 import GlobalStyles from '#psammead/psammead-styles/src/global-styles';
-import styled from '@emotion/styled';
-import WebVitals from '#containers/WebVitals';
-import HeaderContainer from '#containers/Header';
-import FooterContainer from '#containers/Footer';
-import ManifestContainer from '#containers/Manifest';
-import ServiceWorkerContainer from '#containers/ServiceWorker';
-import { ServiceContext } from '../contexts/ServiceContext';
-import { RequestContext } from '../contexts/RequestContext';
-import ThemeProvider from '../components/ThemeProvider';
-import fontFacesLazy from '../components/ThemeProvider/fontFacesLazy';
+import WebVitals from '../../legacy/containers/WebVitals';
+import HeaderContainer from '../../legacy/containers/Header';
+import FooterContainer from '../../legacy/containers/Footer';
+import ManifestContainer from '../../legacy/containers/Manifest';
+import ServiceWorkerContainer from '../../legacy/containers/ServiceWorker';
+import { ServiceContext } from '../../contexts/ServiceContext';
+import { RequestContext } from '../../contexts/RequestContext';
+import ThemeProvider from '../ThemeProvider';
+import fontFacesLazy from '../ThemeProvider/fontFacesLazy';
 
-const Wrapper = styled.div`
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: ${({ theme }) => theme.palette.GHOST};
-`;
+import styles from './index.styles';
 
-const Content = styled.div`
-  flex-grow: 1;
-`;
+type Props = {
+  pageData: object;
+  status: number;
+};
 
-const PageWrapper = ({ children, pageData, status }) => {
-  const { service, variant } = useContext(ServiceContext);
-  const { isAmp, isNextJs } = useContext(RequestContext);
+const PageLayoutWrapper = ({
+  children,
+  pageData,
+  status,
+}: PropsWithChildren<Props>) => {
+  const { service } = useContext(ServiceContext);
+  const { isAmp, isNextJs, variant } = useContext(RequestContext);
 
   const scriptSwitchId = pathOr('', ['scriptSwitchId'], pageData);
   const renderScriptSwitch = pathOr(true, ['renderScriptSwitch'], pageData);
   const isErrorPage = [404, 500].includes(status);
   const pageType = isErrorPage
     ? 'WS-ERROR-PAGE'
-    : path(['metadata', 'type'], pageData);
+    : path<string>(['metadata', 'type'], pageData);
 
   const serviceFonts = fontFacesLazy(service);
   const fontJs =
@@ -113,27 +116,17 @@ const PageWrapper = ({ children, pageData, status }) => {
         <ManifestContainer />
         <WebVitals pageType={pageType} />
         <GlobalStyles />
-        <Wrapper id="main-wrapper">
+        <div id="main-wrapper" css={styles.wrapper}>
           <HeaderContainer
             scriptSwitchId={scriptSwitchId}
             renderScriptSwitch={renderScriptSwitch}
           />
-          <Content>{children}</Content>
+          <div css={styles.content}>{children}</div>
           <FooterContainer />
-        </Wrapper>
+        </div>
       </ThemeProvider>
     </>
   );
 };
 
-PageWrapper.propTypes = {
-  children: node.isRequired,
-  pageData: shape(),
-  status: number.isRequired,
-};
-
-PageWrapper.defaultProps = {
-  pageData: {},
-};
-
-export default PageWrapper;
+export default PageLayoutWrapper;
