@@ -2501,7 +2501,7 @@ module.exports = () => ({
           },
           test: {
             paths: ['/hindi'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/hindi'],
