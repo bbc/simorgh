@@ -1018,7 +1018,7 @@ describe('Server', () => {
 
     describe('for front pages', () => {
       it('should respond with JSON', async () => {
-        const { body } = await makeRequest('/persian.json');
+        const { body } = await makeRequest('/serbian/cyr.json');
         expect(body).toEqual(
           expect.objectContaining({ content: expect.any(Object) }),
         );
