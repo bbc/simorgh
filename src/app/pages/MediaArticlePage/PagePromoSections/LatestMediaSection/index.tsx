@@ -14,7 +14,10 @@ import generatePromoId from '../../../../lib/utilities/generatePromoId';
 import LatestMediaItem from './LatestMediaItem';
 import styles from './index.styles';
 import { LatestMedia } from './types';
-import { EventTrackingData, TrackingBlock } from '../../types';
+import {
+  EventTrackingData,
+  TrackingBlock,
+} from '../../../../models/types/eventTracking';
 
 const renderLatestMediaList = (
   item: LatestMedia,

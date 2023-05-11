@@ -1,3 +1,8 @@
+import {
+  EventTrackingData,
+  TrackingBlock,
+} from '../../models/types/eventTracking';
+
 export type ImageProps = {
   width: number;
   height: number;
@@ -35,9 +40,7 @@ export type PromoProps = {
     name?: string;
     assetTypeCode?: string;
   };
-  eventTrackingData?: {
-    block?: object;
-  };
+  eventTrackingData?: EventTrackingData;
 };
 
 export type FormattedPromo = {
@@ -45,5 +48,5 @@ export type FormattedPromo = {
   image: object | null;
   url?: string;
   footer: JSX.Element;
-  eventTrackingData?: object;
+  eventTrackingData?: TrackingBlock;
 };

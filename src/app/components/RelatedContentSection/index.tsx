@@ -21,7 +21,7 @@ import generatePromoId from '../../lib/utilities/generatePromoId';
 import RelatedContentItem from './RelatedContentItem';
 import PromoList from '../../legacy/components/OptimoPromos/PromoList';
 import PromoItem from '../../legacy/components/OptimoPromos/PromoItem/index.styles';
-import { EventTrackingData } from './types';
+import { EventTrackingData } from '../../models/types/eventTracking';
 import { OptimoBlock } from '../../models/types/optimo';
 
 const BLOCKS_TO_IGNORE = ['wsoj', 'mpu'];

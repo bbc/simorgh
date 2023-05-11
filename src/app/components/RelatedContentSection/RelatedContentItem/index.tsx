@@ -10,7 +10,7 @@ import buildIChefURL from '#app/lib/utilities/ichefURL';
 import Promo from '#components/OptimoPromos';
 import isEmpty from 'ramda/src/isEmpty';
 import styles from './index.styles';
-import { EventTrackingData } from '../types';
+import { EventTrackingData } from '../../../models/types/eventTracking';
 
 type RelatedContentItemProps = {
   item: object;

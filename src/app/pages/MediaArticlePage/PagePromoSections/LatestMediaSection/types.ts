@@ -1,4 +1,4 @@
-import { EventTrackingData } from '../../types';
+import { EventTrackingData } from '../../../../models/types/eventTracking';
 
 export type Media = 'video' | 'audio';
 
