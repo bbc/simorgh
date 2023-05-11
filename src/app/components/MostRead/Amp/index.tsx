@@ -1,16 +1,13 @@
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
 import React, { useContext } from 'react';
-import { useTheme } from '@emotion/react';
 import { Helmet } from 'react-helmet';
-import { string, oneOf, elementType } from 'prop-types';
-import styled from '@emotion/styled';
 import {
   AMP_LIST_JS,
   AMP_MUSTACHE_JS,
   AMP_SCRIPT_JS,
 } from '#psammead/psammead-assets/src/amp-boilerplate';
-import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import pathOr from 'ramda/src/pathOr';
-import { getBodyCopy } from '#psammead/gel-foundations/src/typography';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { MostReadItemWrapper, MostReadLink } from '../Canonical/Item';
 import MostReadRank, { serviceNumerals } from '../Canonical/Rank';
@@ -18,6 +15,7 @@ import generateCSPHash from '../utilities/generateCSPHash';
 import { Services } from '../../../models/types/global';
 import { Size, Direction } from '../types';
 import { TypographyScript } from '../../../models/types/theming';
+import styles from './index.styles';
 
 const rankTranslationScript = (endpoint: string, service: Services) => {
   const translation = serviceNumerals(service);
@@ -55,15 +53,15 @@ const rankTranslationScript = (endpoint: string, service: Services) => {
 };
 
 interface AmpMostReadProps {
-  endpoint: string;
-  size: Size;
-  wrapper: React.ElementType;
+  endpoint?: string;
+  size?: Size;
+  wrapper?: React.ElementType;
 }
 
 const AmpMostRead = ({
-  endpoint,
-  size,
-  wrapper: Wrapper,
+  endpoint = '',
+  size = 'default',
+  wrapper: Wrapper = React.Fragment,
 }: AmpMostReadProps) => {
   const {
     service,
@@ -74,18 +72,6 @@ const AmpMostRead = ({
   } = useContext(ServiceContext);
 
   const onlyinnerscript = rankTranslationScript(endpoint, service);
-
-  const {
-    palette: { SHADOW },
-  } = useTheme();
-
-  const FallbackText = styled.p`
-    ${() => getSansRegular(service)}
-    ${() => getBodyCopy(script)}
-    /* eslint-disable-next-line react/prop-types */
-    color: ${SHADOW};
-    margin: 0;
-  `;
 
   const fallbackText = pathOr(
     'Content is not available',
@@ -132,9 +118,9 @@ const AmpMostRead = ({
           width="300"
           height="50"
         >
-          <FallbackText fallback="" service={service} script={script}>
+          <p css={styles.paragraph} fallback="">
             {fallbackText}
-          </FallbackText>
+          </p>
 
           <template type="amp-mustache">
             <MostReadItemWrapper dir={direction} columnLayout="oneColumn">
@@ -162,18 +148,6 @@ const AmpMostRead = ({
       </Wrapper>
     </amp-script>
   );
-};
-
-AmpMostRead.propTypes = {
-  endpoint: string,
-  size: oneOf(['default', 'small']),
-  wrapper: elementType,
-};
-
-AmpMostRead.defaultProps = {
-  endpoint: '',
-  size: 'default',
-  wrapper: React.Fragment,
 };
 
 export default AmpMostRead;

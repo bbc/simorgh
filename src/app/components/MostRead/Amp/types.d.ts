@@ -11,8 +11,18 @@ declare namespace JSX {
     width: string;
     height: string;
   }
+
+  interface ParagraphProps extends React.HTMLAttributes<HTMLParagraphElement> {
+    fallback: string;
+  }
+
+  interface TemplateProps extends React.HTMLAttributes<HTMLTemplateElement> {
+    type: string;
+  }
   interface IntrinsicElements {
     'amp-script': React.PropsWithChildren<ScriptHTMLAttributesHTMLScriptElement>;
     'amp-list': React.PropsWithChildren<AmpListProps>;
+    template: TemplateProps;
+    p: ParagraphProps;
   }
 }
