@@ -1,5 +1,5 @@
-import { Services } from '#app/models/types/global';
-import { TypographyScript } from '#app/models/types/theming';
+import { Services } from '../../models/types/global';
+import { TypographyScript } from '../../models/types/theming';
 
 export type Direction = 'rtl' | 'ltr';
 
