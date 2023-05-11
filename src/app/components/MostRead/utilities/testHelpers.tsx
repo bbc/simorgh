@@ -9,7 +9,7 @@ import { MostReadItemWrapper, MostReadLink } from '../Canonical/Item';
 import MostReadRank from '../Canonical/Rank';
 import { Services } from '../../../models/types/global';
 import { TypographyScript } from '../../../models/types/theming';
-import { MostReadBaseProps, Size } from '../types';
+import { Direction, MostReadBaseProps, Size } from '../types';
 
 const lastUpdated = ({
   script,
@@ -64,11 +64,12 @@ export const getItem = ({
 };
 
 interface GetItemWrapperArrayProps extends MostReadBaseProps {
+  dir: Direction;
   withTimestamp?: boolean;
   listIndex?: number;
   service: Services;
   script: TypographyScript;
-  size?: Size;
+  size: Size;
   isAmp?: boolean;
 }
 
