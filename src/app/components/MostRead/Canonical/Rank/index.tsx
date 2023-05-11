@@ -1,6 +1,4 @@
 /** @jsx jsx */
-import React from 'react';
-import styled from '@emotion/styled';
 import { jsx } from '@emotion/react';
 import {
   Burmese,
@@ -8,41 +6,16 @@ import {
   EasternArabic,
   Nepali,
   WesternArabic,
-} from '#psammead/psammead-locales/src/numerals';
-import { GEL_GROUP_5_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
+} from '../../../../legacy/psammead/psammead-locales/src/numerals';
+import { Services } from '../../../../models/types/global';
 import { ColumnLayout, MostReadRankProps, Size } from '../../types';
-import styles, { getOneColumnStyles, getTwoColumnStyles } from './index.styles';
-import { Services } from '#app/models/types/global';
+import styles, {
+  getMultiColumnStyles,
+  getOneColumnStyles,
+  getTwoColumnStyles,
+} from './index.styles';
 
-// For additional spacing for numerals in the right column because of '10' being double digits
-const isOnSecondColumn = ({ listIndex, numberOfItems }, supportsGrid) =>
-  supportsGrid ? listIndex > Math.ceil(numberOfItems / 2) : listIndex % 2 === 0;
-
-const listHasDoubleDigits = numberOfItems => numberOfItems > 9;
-
-// This checks whether the 2nd column contains a double digit value
-const columnIncludesDoubleDigits = (props, supportsGrid) =>
-  isOnSecondColumn(props, supportsGrid) &&
-  listHasDoubleDigits(props.numberOfItems);
-
-// Ensures the 5th and 10th rank aligns with each other
-const isFiveOrTen = ({ listIndex, service, numberOfItems }) => {
-  return listIndex === 5 || listIndex === 10
-    ? getRankMinWidth({ service, numberOfItems }).group5WithFiveColumns
-    : getRankMinWidth({ service, numberOfItems }).group5;
-};
-
-const MultiColumnWrapper = styled(TwoColumnWrapper)`
-  /* 5 columns of items at viewport 1280px and above */
-  @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
-    min-width: ${props =>
-      listHasDoubleDigits(props.numberOfItems)
-        ? isFiveOrTen(props)
-        : getRankMinWidth(props).group5};
-  }
-`;
-
-export const serviceNumerals = service => {
+export const serviceNumerals = (service: Services) => {
   const servicesNonWesternNumerals = {
     bengali: Bengali,
     burmese: Burmese,
@@ -50,9 +23,8 @@ export const serviceNumerals = service => {
     pashto: EasternArabic,
     persian: EasternArabic,
   };
-  return servicesNonWesternNumerals[service]
-    ? servicesNonWesternNumerals[service]
-    : WesternArabic;
+  // @ts-expect-error Only a subset of services have non-western numerals
+  return servicesNonWesternNumerals[service] || WesternArabic;
 };
 
 interface ColumnStylesProps {
@@ -78,7 +50,12 @@ const getColumnStyles = ({
       service,
       size,
     }),
-    multiColumn: MultiColumnWrapper,
+    multiColumn: getMultiColumnStyles({
+      listIndex,
+      numberOfItems,
+      service,
+      size,
+    }),
   }[columnLayout]);
 
 const MostReadRank = ({

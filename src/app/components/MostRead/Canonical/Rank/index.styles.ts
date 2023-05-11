@@ -14,6 +14,7 @@ import {
   GROUP_1_ONLY,
   GROUP_2_ONLY,
   GROUP_3_MIN_WIDTH,
+  GROUP_5_MIN_WIDTH,
 } from '../../../ThemeProvider/mediaQueries';
 import { Services } from '../../../../models/types/global';
 import { Size } from '../../types';
@@ -224,5 +225,40 @@ const getTwoColumnStyles = ({
   ];
 };
 
+// Ensures the 5th and 10th rank aligns with each other
+const isFiveOrTen = ({
+  listIndex,
+  service,
+  numberOfItems,
+  size,
+}: TwoColumnStyleProps) => {
+  return listIndex === 5 || listIndex === 10
+    ? getRankMinWidth({ service, numberOfItems, size }).group5WithFiveColumns
+    : getRankMinWidth({ service, numberOfItems, size }).group5;
+};
+
+const getMultiColumnStyles = ({
+  listIndex,
+  numberOfItems,
+  service,
+  size,
+}: TwoColumnStyleProps) => {
+  return [
+    getTwoColumnStyles({
+      listIndex,
+      numberOfItems,
+      service,
+      size,
+    }),
+    css({
+      [GROUP_5_MIN_WIDTH]: {
+        minWidth: listHasDoubleDigits(numberOfItems)
+          ? isFiveOrTen({ listIndex, service, numberOfItems, size })
+          : getRankMinWidth({ service, numberOfItems, size }).group5,
+      },
+    }),
+  ];
+};
+
 export default styles;
-export { getOneColumnStyles, getTwoColumnStyles };
+export { getOneColumnStyles, getTwoColumnStyles, getMultiColumnStyles };
