@@ -21,7 +21,7 @@ export interface MostReadItemProps {
 export interface MostReadRankProps extends MostReadBaseProps {
   service: Services;
   script: TypographyScript;
-  listIndex: number;
+  listIndex: string;
   size: Size;
   isAmp?: boolean;
 }
