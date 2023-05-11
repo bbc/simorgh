@@ -28,7 +28,7 @@ import ThemeProvider from '../../components/ThemeProvider';
 
 jest.mock('../../components/ThemeProvider');
 
-jest.mock('#containers/ChartbeatAnalytics', () => {
+jest.mock('../../components/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
 });

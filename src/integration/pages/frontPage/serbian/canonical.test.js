@@ -1,6 +1,6 @@
 /**
- * @service pidgin
- * @pathname /pidgin
+ * @service serbian
+ * @pathname /serbian/lat
  */
 
 import runCanonicalTests from '../canonicalTests';
