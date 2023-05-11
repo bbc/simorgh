@@ -1,78 +1,228 @@
 import { css, Theme } from '@emotion/react';
+import {
+  singleDigitDefault,
+  singleDigitMedium,
+  singleDigitSmall,
+  doubleDigitDefault,
+  doubleDigitMedium,
+  doubleDigitSmall,
+  smallFontServices,
+  mediumFontServices,
+} from '../../utilities/rankMinWidth';
+import {
+  GROUP_0_MAX_WIDTH,
+  GROUP_1_ONLY,
+  GROUP_2_ONLY,
+  GROUP_3_MIN_WIDTH,
+} from '../../../ThemeProvider/mediaQueries';
+import { Services } from '../../../../models/types/global';
+import { Size } from '../../types';
+import { grid } from '../../../../legacy/psammead/psammead-styles/src/detection';
 
 const styles = {
-  body: ({ mq, fontSizes, fontVariants }: Theme) =>
-    oneColumnWrapper({
-      [mq.GROUP_0_MAX_WIDTH]: {},
+  styledSpan: ({ palette, fontVariants }: Theme) =>
+    css({
+      position: 'relative',
+      color: palette.POSTBOX,
+      margin: 0,
+      padding: 0,
+      ...fontVariants.serifLight,
+    }),
+
+  smallFont: ({ fontSizes }: Theme) =>
+    css({
+      ...fontSizes.trafalgar,
+    }),
+
+  defaultFont: ({ fontSizes }: Theme) =>
+    css({
+      ...fontSizes.foolscap,
+    }),
+
+  japaneseLetterSpacing: ({ spacings }: Theme) =>
+    css({
+      letterSpacing: `-${spacings.HALF}rem`,
     }),
 };
 
-const OneColumnWrapper = styled.div`
-  @media (max-width: ${GEL_GROUP_0_SCREEN_WIDTH_MAX}) {
-    min-width: ${props =>
-      listHasDoubleDigits(props.numberOfItems)
-        ? getRankMinWidth(props).group0WithOneColumn
-        : getRankMinWidth(props).group0};
-  }
-  @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
-    min-width: ${props =>
-      listHasDoubleDigits(props.numberOfItems)
-        ? getRankMinWidth(props).group1WithOneColumn
-        : getRankMinWidth(props).group1};
-  }
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
-    min-width: ${props =>
-      listHasDoubleDigits(props.numberOfItems)
-        ? getRankMinWidth(props).group2WithOneColumn
-        : getRankMinWidth(props).group2};
-  }
+interface OneColumnStylesProps {
+  numberOfItems: number;
+  service: Services;
+  size: Size;
+}
 
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    min-width: ${props =>
-      listHasDoubleDigits(props.numberOfItems)
-        ? getRankMinWidth(props).group3WithOneColumn
-        : getRankMinWidth(props).group3};
-  }
-`;
+const listHasDoubleDigits = numberOfItems => numberOfItems > 9;
 
-const TwoColumnWrapper = styled(OneColumnWrapper)`
-  /* 2 columns of items at viewport 1007px and above */
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    min-width: ${props =>
-      columnIncludesDoubleDigits(props, false)
-        ? getRankMinWidth(props).group3WithTwoColumns
-        : getRankMinWidth(props).group3};
-  }
-  /* different number order for when css grid is supported  */
-  @supports (${grid}) {
-    @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-      min-width: ${props =>
-        columnIncludesDoubleDigits(props, true)
-          ? getRankMinWidth(props).group3WithTwoColumns
-          : getRankMinWidth(props).group3};
-    }
-  }
-`;
+const getRankMinWidth = ({
+  service,
+  numberOfItems,
+  size,
+}: OneColumnStylesProps) => {
+  const singleDigitMinWidth = {
+    default: singleDigitDefault(size),
+    medium: singleDigitMedium,
+    small: singleDigitSmall,
+  };
 
-const MultiColumnWrapper = styled(TwoColumnWrapper)`
-  /* 5 columns of items at viewport 1280px and above */
-  @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
-    min-width: ${props =>
-      listHasDoubleDigits(props.numberOfItems)
-        ? isFiveOrTen(props)
-        : getRankMinWidth(props).group5};
-  }
-`;
+  const doubleDigitMinWidth = {
+    default: doubleDigitDefault(size),
+    medium: doubleDigitMedium(size),
+    small: doubleDigitSmall,
+  };
 
-const StyledSpan = styled.span`
-  ${({ service }) => getSerifLight(service)}
-  ${({ script, size }) =>
-    script && size === 'small' ? getTrafalgar(script) : getFoolscap(script)}
-  position: relative;
-  color: ${props => props.theme.palette.POSTBOX};
-  margin: 0; /* Reset */
-  padding: 0;
-  /* reduce the letter spacing of Japanese numerals */
-  ${({ service }) =>
-    service === 'japanese' && `letter-spacing: -${GEL_SPACING_HLF}`}
-`;
+  const rankMinWidth = listHasDoubleDigits(numberOfItems)
+    ? doubleDigitMinWidth
+    : singleDigitMinWidth;
+
+  if (mediumFontServices.includes(service)) {
+    return rankMinWidth.medium;
+  }
+  if (smallFontServices.includes(service)) {
+    return rankMinWidth.small;
+  }
+  return rankMinWidth.default;
+};
+
+const getMinWidthGroup0 = ({
+  numberOfItems,
+  service,
+  size,
+}: OneColumnStylesProps) => {
+  return listHasDoubleDigits(numberOfItems)
+    ? getRankMinWidth({ numberOfItems, service, size }).group0WithOneColumn
+    : getRankMinWidth({ numberOfItems, service, size }).group0;
+};
+
+const getMinWidthGroup1 = ({
+  numberOfItems,
+  service,
+  size,
+}: OneColumnStylesProps) => {
+  return listHasDoubleDigits(numberOfItems)
+    ? getRankMinWidth({ numberOfItems, service, size }).group1WithOneColumn
+    : getRankMinWidth({ numberOfItems, service, size }).group1;
+};
+
+const getMinWidthGroup2 = ({
+  numberOfItems,
+  service,
+  size,
+}: OneColumnStylesProps) => {
+  return listHasDoubleDigits(numberOfItems)
+    ? getRankMinWidth({ numberOfItems, service, size }).group2WithOneColumn
+    : getRankMinWidth({ numberOfItems, service, size }).group2;
+};
+
+const getMinWidthGroup3 = ({
+  numberOfItems,
+  service,
+  size,
+}: OneColumnStylesProps) => {
+  return listHasDoubleDigits(numberOfItems)
+    ? getRankMinWidth({ numberOfItems, service, size }).group3WithOneColumn
+    : getRankMinWidth({ numberOfItems, service, size }).group3;
+};
+
+const getOneColumnStyles = ({
+  numberOfItems,
+  service,
+  size,
+}: OneColumnStylesProps) => {
+  return css({
+    [GROUP_0_MAX_WIDTH]: {
+      minWidth: getMinWidthGroup0({ numberOfItems, service, size }),
+    },
+    [GROUP_1_ONLY]: {
+      minWidth: getMinWidthGroup1({ numberOfItems, service, size }),
+    },
+    [GROUP_2_ONLY]: {
+      minWidth: getMinWidthGroup2({ numberOfItems, service, size }),
+    },
+    [GROUP_3_MIN_WIDTH]: {
+      minWidth: getMinWidthGroup3({ numberOfItems, service, size }),
+    },
+  });
+};
+
+// Not a great name for these props but will change later/ this interface may be unnecessary
+interface Props {
+  listIndex: number;
+  numberOfItems: number;
+  supportsGrid: boolean;
+}
+
+interface Group3TwoColumnProps extends Props {
+  service: Services;
+  size: Size;
+}
+
+interface TwoColumnStyleProps extends OneColumnStylesProps {
+  listIndex: number;
+}
+
+const isOnSecondColumn = ({ listIndex, numberOfItems, supportsGrid }: Props) =>
+  supportsGrid ? listIndex > Math.ceil(numberOfItems / 2) : listIndex % 2 === 0;
+
+// This checks whether the 2nd column contains a double digit value
+const columnIncludesDoubleDigits = ({
+  listIndex,
+  numberOfItems,
+  supportsGrid,
+}: Props) =>
+  isOnSecondColumn({
+    listIndex,
+    numberOfItems,
+    supportsGrid,
+  }) && listHasDoubleDigits(numberOfItems);
+
+const getGroup3WithTwoColumns = ({
+  listIndex,
+  numberOfItems,
+  supportsGrid,
+  service,
+  size,
+}: Group3TwoColumnProps) => {
+  return columnIncludesDoubleDigits({
+    listIndex,
+    numberOfItems,
+    supportsGrid,
+  })
+    ? getRankMinWidth({ numberOfItems, service, size }).group3WithTwoColumns
+    : getRankMinWidth({ numberOfItems, service, size }).group3;
+};
+
+const getTwoColumnStyles = ({
+  listIndex,
+  numberOfItems,
+  service,
+  size,
+}: TwoColumnStyleProps) => {
+  return [
+    getOneColumnStyles({ numberOfItems, service, size }),
+    css({
+      [GROUP_3_MIN_WIDTH]: {
+        minWidth: getGroup3WithTwoColumns({
+          listIndex,
+          numberOfItems,
+          supportsGrid: false,
+          service,
+          size,
+        }),
+      },
+      [`@supports (${grid})`]: {
+        [GROUP_3_MIN_WIDTH]: {
+          minWidth: getGroup3WithTwoColumns({
+            listIndex,
+            numberOfItems,
+            supportsGrid: true,
+            service,
+            size,
+          }),
+        },
+      },
+    }),
+  ];
+};
+
+export default styles;
+export { getOneColumnStyles, getTwoColumnStyles };
