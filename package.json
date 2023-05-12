@@ -9,6 +9,7 @@
     "./cypress/**/*.*"
   ],
   "resolutions": {
+    "@babel/types": "7.21.5",
     "@optimizely/js-sdk-utils": "0.4.0",
     "winston@3.8.2": "patch:winston@npm:3.8.2#.yarn/patches/winston-npm-3.8.2-2035e9cac4.patch",
     "stylelint-config-recommended": "5.0.0"
@@ -125,6 +126,7 @@
     "@babel/preset-react": "7.18.6",
     "@babel/preset-typescript": "7.21.4",
     "@babel/runtime": "7.21.0",
+    "@babel/types": "^7.21.5",
     "@cypress/webpack-preprocessor": "^5.17.0",
     "@emotion/babel-plugin": "11.10.6",
     "@emotion/babel-preset-css-prop": "11.10.0",
