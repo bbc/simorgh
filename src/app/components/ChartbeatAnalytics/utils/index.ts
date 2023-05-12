@@ -83,12 +83,12 @@ export const getType = (pageType: PageTypes | 'index', shorthand = false) => {
 interface SectionsProps {
   service: Services;
   pageType: PageTypes;
+  producer?: string;
+  chapter?: string;
   sectionName?: string;
   categoryName?: string;
   mediaPageType?: string;
   taggings?: MetadataTaggings;
-  producer?: string;
-  chapter?: string;
 }
 
 const AUDIO_KEY = 'fe1fbc8a-bb44-4bf8-8b12-52e58c6345a4';
