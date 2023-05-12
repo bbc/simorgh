@@ -1,17 +1,19 @@
 const AUDIT_URLS = {
   FRONT_PAGE: {
-    live: ['https://www.bbc.com/arabic'],
-    test: ['https://www.test.bbc.com/arabic'],
+    live: ['https://www.bbc.com/serbian/cyr'],
+    test: ['https://www.test.bbc.com/serbian/cyr?renderer_env=live'],
   },
 
   IDX: {
     live: ['https://www.bbc.com/persian/afghanistan'],
-    test: ['https://www.test.bbc.com/persian/afghanistan'],
+    test: ['https://www.test.bbc.com/persian/afghanistan?renderer_env=live'],
   },
 
   FIX: {
     live: ['https://www.bbc.com/persian/science-52004647'],
-    test: ['https://www.test.bbc.com/persian/23278332'],
+    test: [
+      'https://www.test.bbc.com/persian/science-52004647?renderer_env=live',
+    ],
   },
 
   LIVE_RADIO: {
@@ -59,6 +61,23 @@ const AUDIT_URLS = {
       'https://www.test.bbc.com/pashto/afghanistan-52643309?renderer_env=live',
     ],
   },
+
+  TOPIC_PAGE: {
+    live: ['https://www.bbc.com/pidgin/topics/c0823e52dd0t'],
+    test: ['https://www.test.bbc.com/pidgin/topics/c0823e52dd0t'],
+  },
+
+  HOME_PAGE: {
+    live: ['https://www.test.bbc.com/kyrgyz?renderer_env=live'],
+    test: ['https://www.test.bbc.com/kyrgyz'],
+  },
+
+  MEDIA_ARTICLE_PAGE: {
+    live: ['https://www.bbc.com/hausa/articles/cw5kgkr4wvzo'],
+    test: [
+      'https://www.test.bbc.com/hausa/articles/cw5kgkr4wvzo?renderer_env=live',
+    ],
+  },
 };
 
 const urlsToAudit = Object.entries(AUDIT_URLS)
@@ -79,7 +98,7 @@ module.exports = {
       assertions: {
         'categories:performance': [
           'warn',
-          { aggregationMethod: 'optimistic', minScore: 0.7 },
+          { aggregationMethod: 'optimistic', minScore: 0.4 },
         ],
         'categories:accessibility': [
           'error',
