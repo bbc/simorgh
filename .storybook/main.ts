@@ -5,17 +5,17 @@ import { webpackDirAlias } from '../dirAlias';
 const config: StorybookConfig = {
   staticDirs: ['./static'],
   stories: [
-    // '../docs/**/*.stories.mdx',
-    // '../src/**/*.stories.mdx',
-    // '../AdHocCypress/**/*.stories.mdx',
-    // '../3rdPartyCypress/**/*.stories.mdx',
+    '../docs/**/*.stories.mdx',
+    '../src/**/*.stories.mdx',
+    '../AdHocCypress/**/*.stories.mdx',
+    '../3rdPartyCypress/**/*.stories.mdx',
     '../src/app/legacy/components/**/*.stories.@(t|j)sx',
     '../src/app/legacy/containers/**/*.stories.@(t|j)sx',
     '../src/app/components/**/*.stories.@(t|j)sx',
     '../src/app/pages/**/*.stories.@(t|j)sx',
     // '../ws-nextjs-app/**/*.stories.tsx',
-    // './DocsDecorator/**/*.stories.@(t|j)sx',
-    // './SidebarLabel/**/*.stories.@(t|j)sx',
+    './DocsDecorator/**/*.stories.@(t|j)sx',
+    './SidebarLabel/**/*.stories.@(t|j)sx',
   ],
   addons: [
     '@storybook/addon-knobs',
@@ -24,7 +24,7 @@ const config: StorybookConfig = {
     '@storybook/addon-viewport',
     '@storybook/addon-controls',
     '@storybook/addon-toolbars',
-    // 'storybook-addon-designs',
+    'storybook-addon-designs',
     './SidebarLabel/preset.cjs',
     {
       name: '@storybook/addon-docs',
@@ -73,6 +73,10 @@ const config: StorybookConfig = {
     options: {
       builder: { lazyCompilation: false },
     },
+  },
+  docs: {
+    autodocs: true,
+    defaultName: 'Docs',
   },
 };
 

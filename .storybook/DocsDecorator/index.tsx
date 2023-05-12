@@ -12,19 +12,17 @@ interface DocsDecoratorProps {
 }
 
 const DocsDecorator = ({ context, children }: DocsDecoratorProps) => {
-  const title = path(
-    ['parameters', 'docs', 'component', 'title'],
+  const title = path<string>(
+    ['primaryStory', 'parameters', 'docs', 'component', 'title'],
     context,
-  ) as string;
+  );
 
   const metadata = path(
-    ['parameters', 'metadata'],
+    ['primaryStory', 'parameters', 'metadata'],
     context,
   ) as HealthFactorsMetadata;
 
   return (
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore: type children not assignable.
     <DocsContainer context={context}>
       {!isExempt(context) && (
         <ThemeProvider service="news" variant="default">
