@@ -506,7 +506,7 @@ const preview: Preview = {
     passArgsFirst: false,
     options: {
       panelPosition: 'right',
-      sidebarAnimcations: true,
+      sidebarAnimations: true,
       theme,
     },
     docs: {
@@ -573,7 +573,7 @@ const preview: Preview = {
         </>
       );
     },
-    (story, context) => (
+    (Story, context) => (
       <ThemeProvider service={context.globals.service.service}>
         <ToggleContextProvider toggles={{}}>
           <ServiceContextProvider
@@ -581,7 +581,9 @@ const preview: Preview = {
             variant={context.globals.service.variant}
           >
             <EventTrackingContextProvider pageData={pageDataFixture}>
-              <UserContextProvider>{story(context)}</UserContextProvider>
+              <UserContextProvider>
+                <Story />
+              </UserContextProvider>
             </EventTrackingContextProvider>
           </ServiceContextProvider>
         </ToggleContextProvider>

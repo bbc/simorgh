@@ -13,12 +13,12 @@ interface DocsDecoratorProps {
 
 const DocsDecorator = ({ context, children }: DocsDecoratorProps) => {
   const title = path<string>(
-    ['primaryStory', 'parameters', 'docs', 'component', 'title'],
+    ['attachedCSFFile', 'meta', 'parameters', 'docs', 'component', 'title'],
     context,
   );
 
   const metadata = path(
-    ['primaryStory', 'parameters', 'metadata'],
+    ['attachedCSFFile', 'meta', 'parameters', 'metadata'],
     context,
   ) as HealthFactorsMetadata;
 
