@@ -20,42 +20,16 @@ import { Services } from '../../../../models/types/global';
 import { Size } from '../../types';
 import { grid } from '../../../../legacy/psammead/psammead-styles/src/detection';
 
-const styles = {
-  span: ({ palette, fontVariants }: Theme) =>
-    css({
-      position: 'relative',
-      color: palette.POSTBOX,
-      margin: 0,
-      padding: 0,
-      ...fontVariants.serifLight,
-    }),
-
-  smallFont: ({ fontSizes }: Theme) =>
-    css({
-      ...fontSizes.trafalgar,
-    }),
-
-  defaultFont: ({ fontSizes }: Theme) =>
-    css({
-      ...fontSizes.foolscap,
-    }),
-
-  japaneseLetterSpacing: ({ spacings }: Theme) =>
-    css({
-      letterSpacing: `-${spacings.HALF}rem`,
-    }),
-};
-
 /**
  * Interface Definitions
  */
-interface OneColumnCssProps {
+interface OneColumnProps {
   numberOfItems: number;
   service: Services;
   size: Size;
 }
 
-interface RankMinWidthProps extends OneColumnCssProps {}
+type RankMinWidthProps = OneColumnProps;
 
 interface HelperFunctionProps {
   listIndex: number;
@@ -68,7 +42,7 @@ interface Group3TwoColumnProps extends HelperFunctionProps {
   size: Size;
 }
 
-interface MultiColumnCssProps extends OneColumnCssProps {
+interface MultiColumnProps extends OneColumnProps {
   listIndex: number;
 }
 
@@ -132,7 +106,7 @@ const isFiveOrTen = ({
   service,
   numberOfItems,
   size,
-}: MultiColumnCssProps) => {
+}: MultiColumnProps) => {
   return listIndex === 5 || listIndex === 10
     ? getRankMinWidth({ service, numberOfItems, size }).group5WithFiveColumns
     : getRankMinWidth({ service, numberOfItems, size }).group5;
@@ -157,11 +131,33 @@ const getGroup3WithTwoColumns = ({
 /**
  * Style Definitions
  */
-const getOneColumnCss = ({
-  numberOfItems,
-  service,
-  size,
-}: OneColumnCssProps) => {
+const styles = {
+  span: ({ palette, fontVariants }: Theme) =>
+    css({
+      ...fontVariants.serifLight,
+      position: 'relative',
+      color: palette.POSTBOX,
+      margin: 0,
+      padding: 0,
+    }),
+
+  smallFont: ({ fontSizes }: Theme) =>
+    css({
+      ...fontSizes.trafalgar,
+    }),
+
+  defaultFont: ({ fontSizes }: Theme) =>
+    css({
+      ...fontSizes.foolscap,
+    }),
+
+  japaneseLetterSpacing: ({ spacings }: Theme) =>
+    css({
+      letterSpacing: `-${spacings.HALF}rem`,
+    }),
+};
+
+const getOneColumnCss = ({ numberOfItems, service, size }: OneColumnProps) => {
   return css({
     [GROUP_0_MAX_WIDTH]: {
       minWidth: listHasDoubleDigits(numberOfItems)
@@ -191,7 +187,7 @@ const getTwoColumnCss = ({
   numberOfItems,
   service,
   size,
-}: MultiColumnCssProps) => {
+}: MultiColumnProps) => {
   return [
     getOneColumnCss({ numberOfItems, service, size }),
     css({
@@ -224,7 +220,7 @@ const getMultiColumnCss = ({
   numberOfItems,
   service,
   size,
-}: MultiColumnCssProps) => {
+}: MultiColumnProps) => {
   return [
     getTwoColumnCss({
       listIndex,
