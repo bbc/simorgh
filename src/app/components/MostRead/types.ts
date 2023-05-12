@@ -1,5 +1,4 @@
 import { Services } from '../../models/types/global';
-import { TypographyScript } from '../../models/types/theming';
 
 export type Direction = 'rtl' | 'ltr';
 
@@ -28,7 +27,6 @@ export interface MostReadRankProps extends MostReadBaseProps {
 export interface MostReadLinkProps {
   dir: Direction;
   service: Services;
-  script: TypographyScript;
   title: string;
   href: string;
   size: Size;
