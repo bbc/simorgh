@@ -41,7 +41,7 @@ const RelatedContentComponent = ({
 );
 
 export default {
-  title: 'components/OptimoPromos/OptimoRelatedContent',
+  title: 'components/OptimoPromos/OptimoRelatedContentArticlePage',
   RelatedContentComponent,
   decorators: [withKnobs, withServicesKnob()],
   parameters: {
