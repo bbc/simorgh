@@ -14,6 +14,7 @@ describe('MostReadList', () => {
           size: 'default',
         })}
       </MostReadList>,
+      { service: 'news' },
     );
     expect(container).toMatchSnapshot();
   });
@@ -28,6 +29,7 @@ describe('MostReadList', () => {
           size: 'default',
         })}
       </MostReadList>,
+      { service: 'persian' },
     );
     expect(container).toMatchSnapshot();
   });
@@ -42,6 +44,7 @@ describe('MostReadList', () => {
           size: 'default',
         })}
       </MostReadList>,
+      { service: 'bengali' },
     );
     expect(container).toMatchSnapshot();
   });
@@ -56,6 +59,7 @@ describe('MostReadList', () => {
           size: 'default',
         })}
       </MostReadList>,
+      { service: 'burmese' },
     );
     expect(container).toMatchSnapshot();
   });
@@ -70,6 +74,7 @@ describe('MostReadList', () => {
           size: 'default',
         })}
       </MostReadList>,
+      { service: 'news' },
     );
     expect(container).toMatchSnapshot();
   });
@@ -84,6 +89,7 @@ describe('MostReadList', () => {
           size: 'default',
         })}
       </MostReadList>,
+      { service: 'news' },
     );
     expect(container).toMatchSnapshot();
   });
@@ -98,6 +104,7 @@ describe('MostReadList', () => {
           size: 'default',
         })}
       </MostReadList>,
+      { service: 'news' },
     );
     expect(container).toMatchSnapshot();
   });
