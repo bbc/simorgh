@@ -87,6 +87,16 @@ Cypress.Commands.add(
   'getPageData',
   ({ service, pageType, variant = 'default', id }) => {
     const env = Cypress.env('APP_ENV');
+    if (env === 'localNext') {
+      const bffUrl = `https://web-cdn.test.api.bbci.co.uk/fd/simorgh-bff?pageType=${pageType}&id=${id}&service=${service}${
+        variant !== 'default' ? `&variant=${variant}` : ''
+      }`;
+      return cy.request({
+        url: bffUrl,
+        headers: { 'ctx-service-env': 'test' },
+      });
+    }
+
     if (env !== 'local') {
       let ctxEnv = null;
       if (pageType === 'topic') {
