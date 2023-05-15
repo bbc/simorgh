@@ -16,7 +16,6 @@ export default ({ service, pageType, variant }) => {
       cy.log(Cypress.env('currentPath'));
       cy.log(service);
       const env = Cypress.env('APP_ENV');
-      // if (env !== 'local') {
       // eslint-disable-next-line prefer-destructuring
       topicId = Cypress.env('currentPath').split('topics/').pop().split('?')[0];
 
@@ -47,7 +46,6 @@ export default ({ service, pageType, variant }) => {
         );
       });
       cy.log(`topic id ${topicId}`);
-      // }
     });
 
     describe(`Page content`, () => {
