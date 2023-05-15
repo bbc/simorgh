@@ -7,6 +7,6 @@
     "declaration": false,
     "jsx": "preserve"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "next.config.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "next.config.js", "integration/IntegrationTestEnvironment.js"],
   "exclude": ["node_modules", "build", "src/app/legacy/**/*"]
 }
