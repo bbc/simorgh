@@ -6,20 +6,14 @@ import { MostReadLink, MostReadItemWrapper } from './Item';
 import MostReadList from './List';
 import MostReadRank from './Rank';
 import LastUpdated from './LastUpdated';
-import { ColumnLayout, Direction, Size } from '../types';
+import { ColumnLayout, Direction, MostReadData, Size } from '../types';
 import { TypographyScript } from '../../../models/types/theming';
+import getMostReadItems from '../utilities/getMostReadItems';
 
 interface MostReadProps {
   columnLayout?: ColumnLayout;
   size: Size;
-  data?: {
-    records: {
-      id: string;
-      href: string;
-      title: string;
-      timestamp: number;
-    }[];
-  };
+  data: MostReadData;
   wrapper?: React.ElementType;
   eventTrackingData?: {
     componentName: string;
@@ -40,13 +34,13 @@ const MostRead = ({
     datetimeLocale,
     serviceDatetimeLocale,
     timezone,
-    mostRead: { lastUpdated, numberOfItems },
+    mostRead: { lastUpdated, numberOfItems = 5 },
   } = useContext(ServiceContext);
   const viewRef = useViewTracker(eventTrackingData);
 
   const locale = serviceDatetimeLocale || datetimeLocale;
 
-  const items = data?.records.slice(0, numberOfItems) || [];
+  const items = getMostReadItems({ data, numberOfItems, service }) || [];
 
   const direction = dir as Direction;
   const fontScript = script as TypographyScript;
@@ -58,42 +52,46 @@ const MostRead = ({
         dir={direction}
         columnLayout={columnLayout}
       >
-        {items.map((item, i) => (
-          <MostReadItemWrapper
-            dir={direction}
-            key={item.id}
-            columnLayout={columnLayout}
-            ref={viewRef}
-          >
-            <MostReadRank
-              service={service}
-              listIndex={i + 1}
-              numberOfItems={items.length}
-              dir={direction}
-              columnLayout={columnLayout}
-              size={size}
-            />
-            <MostReadLink
-              dir={direction}
-              service={service}
-              title={item.title}
-              href={item.href}
-              size={size}
-              eventTrackingData={eventTrackingData}
-            >
-              {shouldRenderLastUpdated(item.timestamp) && (
-                <LastUpdated
-                  prefix={lastUpdated}
-                  script={fontScript}
+        {items.map(
+          ({ id, timestamp, title, href }, i) =>
+            title &&
+            href && (
+              <MostReadItemWrapper
+                dir={direction}
+                key={id}
+                columnLayout={columnLayout}
+                ref={viewRef}
+              >
+                <MostReadRank
                   service={service}
-                  timestamp={item.timestamp}
-                  locale={locale}
-                  timezone={timezone}
+                  listIndex={i + 1}
+                  numberOfItems={items.length}
+                  dir={direction}
+                  columnLayout={columnLayout}
+                  size={size}
                 />
-              )}
-            </MostReadLink>
-          </MostReadItemWrapper>
-        ))}
+                <MostReadLink
+                  dir={direction}
+                  service={service}
+                  title={title}
+                  href={href}
+                  size={size}
+                  eventTrackingData={eventTrackingData}
+                >
+                  {shouldRenderLastUpdated(timestamp) && timestamp && (
+                    <LastUpdated
+                      prefix={lastUpdated}
+                      script={fontScript}
+                      service={service}
+                      timestamp={timestamp}
+                      locale={locale}
+                      timezone={timezone}
+                    />
+                  )}
+                </MostReadLink>
+              </MostReadItemWrapper>
+            ),
+        )}
       </MostReadList>
     </Wrapper>
   );
