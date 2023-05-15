@@ -4,15 +4,15 @@ import { MostReadLink, getParentColumns } from '.';
 import { getItem, getItemWrapperArray } from '../../utilities/testHelpers';
 
 describe('MostReadLink', () => {
-  const newsItem = getItem({ service: 'news', withTimestamp: true });
-  const arabicItem = getItem({ service: 'arabic', withTimestamp: false });
+  const pidginItem = getItem({ service: 'pidgin', withTimestamp: true });
+  const persianItem = getItem({ service: 'persian' });
 
   it('should render ltr correctly', () => {
     const { container } = render(
       <MostReadLink
-        href={newsItem.href}
-        service="news"
-        title={newsItem.title}
+        href={pidginItem.href}
+        service="pidgin"
+        title={pidginItem.title}
         dir="ltr"
         size="default"
       />,
@@ -30,13 +30,13 @@ describe('MostReadLink', () => {
     const { container } = render(
       <MostReadLink
         dir="rtl"
-        href={arabicItem.href}
+        href={persianItem.href}
         service="persian"
-        title={arabicItem.title}
+        title={persianItem.title}
         size="default"
       />,
       {
-        service: 'pidgin',
+        service: 'persian',
         toggles: {
           eventTracking: { enabled: true },
         },
@@ -48,13 +48,13 @@ describe('MostReadLink', () => {
   it('should render with last updated date correctly', () => {
     const { container } = render(
       <MostReadLink
-        href={newsItem.href}
-        service="news"
-        title={newsItem.title}
+        href={pidginItem.href}
+        service="pidgin"
+        title={pidginItem.title}
         dir="ltr"
         size="default"
       >
-        {newsItem.timestamp}
+        {pidginItem.timestamp}
       </MostReadLink>,
       {
         service: 'pidgin',
@@ -72,7 +72,7 @@ describe('MostReadItemWrapper', () => {
     const { container } = render(
       getItemWrapperArray({
         numberOfItems: 10,
-        service: 'news',
+        service: 'pidgin',
         dir: 'ltr',
         size: 'default',
       }),
