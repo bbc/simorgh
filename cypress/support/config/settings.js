@@ -3686,8 +3686,8 @@ module.exports = () => ({
             enabled: true,
           },
           local: {
-            paths: [],
-            enabled: false,
+            paths: ['/kyrgyz/topics/cvpv9djp9qqt'],
+            enabled: true,
           },
         },
         smoke: false,
@@ -4118,7 +4118,23 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: ['/mundo/topics/c1en6xwmpkvt'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -5188,7 +5204,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: ['/persian/topics/cyy2zqnqn67t'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -5463,7 +5495,10 @@ module.exports = () => ({
             enabled: true,
           },
           local: {
-            paths: ['/pidgin/topics/cnq68qvkjp1t'], // DO NOT ENABLE
+            paths: [
+              '/pidgin/topics/cnq68qvkjp1t',
+              '/pidgin/topics/c95y35941vrt',
+            ], // DO NOT ENABLE
             enabled: false,
           },
         },
@@ -7559,7 +7594,10 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: undefined,
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {

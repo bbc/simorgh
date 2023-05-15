@@ -16,41 +16,38 @@ export default ({ service, pageType, variant }) => {
       cy.log(Cypress.env('currentPath'));
       cy.log(service);
       const env = Cypress.env('APP_ENV');
-      if (env !== 'local') {
-        // eslint-disable-next-line prefer-destructuring
-        topicId = Cypress.env('currentPath')
-          .split('topics/')
-          .pop()
-          .split('?')[0];
+      // if (env !== 'local') {
+      // eslint-disable-next-line prefer-destructuring
+      topicId = Cypress.env('currentPath').split('topics/').pop().split('?')[0];
 
-        if (scriptSwitchServices.includes(service)) {
-          if (service === 'serbian') {
-            otherVariant = variant === 'lat' ? 'cyr' : 'lat';
-          }
-          if (service === 'ukchina' || service === 'zhongwen') {
-            otherVariant = variant === 'simp' ? 'trad' : 'simp';
-          }
+      if (scriptSwitchServices.includes(service)) {
+        if (service === 'serbian') {
+          otherVariant = variant === 'lat' ? 'cyr' : 'lat';
         }
-
-        // Gets the topic page data for all the tests
-        cy.getPageData({
-          service,
-          pageType: 'topic',
-          variant,
-        }).then(({ body }) => {
-          topicTitle = body.data.title;
-          variantTopicId = body.data.variantTopicId;
-          pageCount = body.data.pageCount;
-          numberOfItems = body.data.curations[0].summaries.length;
-          firstItemHeadline = body.data.curations[0].summaries[0].title;
-          messageBanner = body.data.curations.find(
-            curation =>
-              curation.visualProminence === 'NORMAL' &&
-              curation.visualStyle === 'BANNER',
-          );
-        });
-        cy.log(`topic id ${topicId}`);
+        if (service === 'ukchina' || service === 'zhongwen') {
+          otherVariant = variant === 'simp' ? 'trad' : 'simp';
+        }
       }
+
+      // Gets the topic page data for all the tests
+      cy.getPageData({
+        service,
+        pageType: 'topic',
+        variant,
+      }).then(({ body }) => {
+        topicTitle = body.data.title;
+        variantTopicId = body.data.variantTopicId;
+        pageCount = body.data.pageCount;
+        numberOfItems = body.data.curations[0].summaries.length;
+        firstItemHeadline = body.data.curations[0].summaries[0].title;
+        messageBanner = body.data.curations.find(
+          curation =>
+            curation.visualProminence === 'NORMAL' &&
+            curation.visualStyle === 'BANNER',
+        );
+      });
+      cy.log(`topic id ${topicId}`);
+      // }
     });
 
     describe(`Page content`, () => {
