@@ -78,6 +78,17 @@ const AUDIT_URLS = {
       'https://www.test.bbc.com/hausa/articles/cw5kgkr4wvzo?renderer_env=live',
     ],
   },
+
+  PODCAST_PAGE: {
+    live: [
+      'https://www.bbc.com/marathi/podcasts/p09431p4', // Podcast Brand
+      'https://www.bbc.com/marathi/podcasts/p09431p4/p0fmsqt5', // Podcast Episode
+    ],
+    test: [
+      'https://www.test.bbc.com/marathi/podcasts/p09431p4', // Podcast Brand
+      'https://www.test.bbc.com/marathi/podcasts/p09431p4/p0fmsqt5', // Podcast Episode
+    ],
+  },
 };
 
 const urlsToAudit = Object.entries(AUDIT_URLS)
