@@ -39,3 +39,10 @@ jobs:
         with:
           build: yarn build
           start: yarn start
+      - name: Run Simorgh NextJS E2Es
+        uses: cypress-io/github-action@v5
+        with:
+          config-file: ws-nextjs-app/cypress.json
+          working-directory: ws-nextjs-app
+          build: yarn build
+          start: yarn start
