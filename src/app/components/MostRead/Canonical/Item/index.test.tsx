@@ -3,8 +3,6 @@ import { render } from '../../../react-testing-library-with-providers';
 import { MostReadLink, getParentColumns } from '.';
 import { getItem, getItemWrapperArray } from '../../utilities/testHelpers';
 
-const size = 'default';
-
 describe('MostReadLink', () => {
   const newsItem = getItem({ service: 'news', withTimestamp: true });
   const arabicItem = getItem({ service: 'arabic', withTimestamp: false });
@@ -16,7 +14,7 @@ describe('MostReadLink', () => {
         service="news"
         title={newsItem.title}
         dir="ltr"
-        size={size}
+        size="default"
       />,
       {
         service: 'pidgin',
@@ -35,7 +33,7 @@ describe('MostReadLink', () => {
         href={arabicItem.href}
         service="persian"
         title={arabicItem.title}
-        size={size}
+        size="default"
       />,
       {
         service: 'pidgin',
@@ -54,7 +52,7 @@ describe('MostReadLink', () => {
         service="news"
         title={newsItem.title}
         dir="ltr"
-        size={size}
+        size="default"
       >
         {newsItem.timestamp}
       </MostReadLink>,
@@ -76,7 +74,7 @@ describe('MostReadItemWrapper', () => {
         numberOfItems: 10,
         service: 'news',
         dir: 'ltr',
-        size,
+        size: 'default',
       }),
     );
     expect(container).toMatchSnapshot();
@@ -88,7 +86,7 @@ describe('MostReadItemWrapper', () => {
         numberOfItems: 10,
         service: 'persian',
         dir: 'rtl',
-        size,
+        size: 'default',
       }),
     );
     expect(container).toMatchSnapshot();
@@ -96,7 +94,7 @@ describe('MostReadItemWrapper', () => {
 
   describe('getParentColumns helper method', () => {
     it('should return null when columnLayout is oneColumn', () => {
-      expect(getParentColumns('oneColumn')).toEqual(null);
+      expect(getParentColumns('oneColumn')).toBeNull();
     });
 
     it('should return a value when columnLayout is not oneColumn', () => {
