@@ -5216,7 +5216,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/persian/topics/cyy2zqnqn67t'],
-            enabled: false,
+            enabled: true,
           },
         },
         smoke: false,
@@ -5495,10 +5495,7 @@ module.exports = () => ({
             enabled: true,
           },
           local: {
-            paths: [
-              '/pidgin/topics/cnq68qvkjp1t',
-              '/pidgin/topics/c95y35941vrt',
-            ], // DO NOT ENABLE
+            paths: ['/pidgin/topics/c95y35941vrt'],
             enabled: false,
           },
         },

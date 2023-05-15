@@ -15,8 +15,7 @@ export default ({ service, pageType, variant }) => {
     beforeEach(() => {
       cy.log(Cypress.env('currentPath'));
       cy.log(service);
-      // eslint-disable-next-line prefer-destructuring
-      topicId = Cypress.env('currentPath').split('topics/').pop().split('?')[0];
+      [topicId] = Cypress.env('currentPath').split('topics/').pop().split('?');
 
       if (scriptSwitchServices.includes(service)) {
         if (service === 'serbian') {
