@@ -1,24 +1,22 @@
 import React from 'react';
 import { render } from '../../../react-testing-library-with-providers';
-import latin from '../../../ThemeProvider/fontScripts/latin';
-import arabic from '../../../ThemeProvider/fontScripts/arabic';
 import { MostReadLink, getParentColumns } from '.';
-import {
-  getItem,
-  getItemWrapperArray,
-} from '../../../../legacy/containers/MostRead/utilities';
+import { getItem, getItemWrapperArray } from '../../utilities/testHelpers';
+
+const size = 'default';
 
 describe('MostReadLink', () => {
   const newsItem = getItem({ service: 'news', withTimestamp: true });
-  const arabicItem = getItem({ service: 'arabic' });
+  const arabicItem = getItem({ service: 'arabic', withTimestamp: false });
 
   it('should render ltr correctly', () => {
     const { container } = render(
       <MostReadLink
         href={newsItem.href}
         service="news"
-        script={latin}
         title={newsItem.title}
+        dir="ltr"
+        size={size}
       />,
       {
         service: 'pidgin',
@@ -36,8 +34,8 @@ describe('MostReadLink', () => {
         dir="rtl"
         href={arabicItem.href}
         service="persian"
-        script={arabic}
         title={arabicItem.title}
+        size={size}
       />,
       {
         service: 'pidgin',
@@ -54,8 +52,9 @@ describe('MostReadLink', () => {
       <MostReadLink
         href={newsItem.href}
         service="news"
-        script={latin}
         title={newsItem.title}
+        dir="ltr"
+        size={size}
       >
         {newsItem.timestamp}
       </MostReadLink>,
@@ -76,7 +75,8 @@ describe('MostReadItemWrapper', () => {
       getItemWrapperArray({
         numberOfItems: 10,
         service: 'news',
-        script: latin,
+        dir: 'ltr',
+        size,
       }),
     );
     expect(container).toMatchSnapshot();
@@ -87,8 +87,8 @@ describe('MostReadItemWrapper', () => {
       getItemWrapperArray({
         numberOfItems: 10,
         service: 'persian',
-        script: arabic,
         dir: 'rtl',
+        size,
       }),
     );
     expect(container).toMatchSnapshot();
@@ -97,6 +97,10 @@ describe('MostReadItemWrapper', () => {
   describe('getParentColumns helper method', () => {
     it('should return null when columnLayout is oneColumn', () => {
       expect(getParentColumns('oneColumn')).toEqual(null);
+    });
+
+    it('should return a value when columnLayout is not oneColumn', () => {
+      expect(getParentColumns('twoColumn')).not.toBeNull();
     });
   });
 });

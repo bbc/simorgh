@@ -9,7 +9,7 @@ import { MostReadItemWrapper, MostReadLink } from '../Canonical/Item';
 import MostReadRank from '../Canonical/Rank';
 import { Services } from '../../../models/types/global';
 import { TypographyScript } from '../../../models/types/theming';
-import { MostReadBaseProps, Size } from '../types';
+import { Direction, MostReadBaseProps, Size } from '../types';
 
 const lastUpdated = ({
   script,
@@ -49,7 +49,7 @@ export const getItem = ({
   withTimestamp: boolean;
 }) => {
   const baseUrl = 'https://www.bbc.com';
-  // @ts-expect-error Not planning to add text variant objects for non-used services
+  // @ts-expect-error Text variants not required for non world service languages
   const { text, articlePath } = TEXT_VARIANTS[service];
   const timestamp = withTimestamp
     ? lastUpdated({ script: latin, service })
@@ -64,21 +64,20 @@ export const getItem = ({
 };
 
 interface GetItemWrapperArrayProps extends MostReadBaseProps {
+  dir: Direction;
   withTimestamp?: boolean;
   listIndex?: number;
   service: Services;
-  script: TypographyScript;
-  size?: Size;
+  size: Size;
   isAmp?: boolean;
 }
 
 export const getItemWrapperArray = ({
   numberOfItems,
   service,
-  script,
   dir,
   withTimestamp = false,
-  columnLayout,
+  columnLayout = 'oneColumn',
   size,
   isAmp = false,
 }: GetItemWrapperArrayProps) => {
@@ -86,11 +85,9 @@ export const getItemWrapperArray = ({
   const item = getItem({ service, withTimestamp });
   for (let i = 1; i <= numberOfItems; i += 1) {
     itemWrapperArray.push(
-      // @ts-expect-error will review and fix this
       <MostReadItemWrapper dir={dir} key={i} columnLayout={columnLayout}>
         <MostReadRank
           service={service}
-          script={script}
           listIndex={i}
           numberOfItems={numberOfItems}
           dir={dir}
@@ -102,7 +99,6 @@ export const getItemWrapperArray = ({
           dir={dir}
           href={item.href}
           service={service}
-          script={script}
           title={item.title}
           size={size}
         >

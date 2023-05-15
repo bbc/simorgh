@@ -1,4 +1,6 @@
-const mostReadListGridProps = columnLayout => ({
+import { ColumnLayout } from '../types';
+
+const mostReadListGridProps = (columnLayout: ColumnLayout) => ({
   enableGelGutters: true,
   enableGelMargins: true,
   columns: {
@@ -23,7 +25,7 @@ const mostReadListGridProps = columnLayout => ({
   },
 });
 
-const mostReadItemGridProps = columnLayout => ({
+const mostReadItemGridProps = (columnLayout: ColumnLayout) => ({
   item: true,
   columns: {
     group0: 6,

@@ -7,41 +7,19 @@ import {
   mostReadListGridProps,
   mostReadItemGridProps,
 } from '../../utilities/gridProps';
-import { MostReadItemProps, MostReadLinkProps } from '../../types';
+import {
+  ColumnLayout,
+  MostReadItemProps,
+  MostReadLinkProps,
+} from '../../types';
 import Grid from '../../../../legacy/components/Grid';
 
-export const getParentColumns = (columnLayout: string) => {
+export const getParentColumns = (columnLayout: ColumnLayout) => {
   if (columnLayout !== 'oneColumn') {
     return mostReadListGridProps(columnLayout).columns;
   }
   return null;
 };
-
-// const getRankPaddingTop = size => (size === 'small' ? '0.2rem' : '0.375rem');
-// const getRankPaddingStart = size =>
-//   size === 'small' ? GEL_SPACING : GEL_SPACING_DBL;
-
-// const StyledItem = styled.div`
-//   padding-top: ${({ size }) => getRankPaddingTop(size)};
-
-// ${({ dir, size }) =>
-//   dir === 'ltr'
-//     ? `padding-left: ${getRankPaddingStart(size)};`
-//     : `padding-right: ${getRankPaddingStart(size)};`}
-
-// ${({ dir }) =>
-//   dir === 'ltr'
-//     ? `padding-right: ${GEL_SPACING_DBL};`
-//     : `padding-left: ${GEL_SPACING_DBL};`}
-
-//   @supports (${grid}) {
-//     ${({ dir }) => (dir === 'ltr' ? 'padding-right: 0;' : 'padding-left: 0;')}
-//   }
-// `;
-
-// const TimestampWrapper = styled.div`
-//   padding-top: ${GEL_SPACING};
-// `;
 
 export const MostReadLink = ({
   dir,
@@ -78,22 +56,6 @@ export const MostReadLink = ({
     </div>
   );
 };
-
-// const ItemWrapper = styled.div`
-//   display: flex;
-//   flex-direction: row;
-//   margin: 0;
-//   padding: 0;
-// `;
-
-// const StyledGrid = styled(Grid)`
-//   position: relative;
-//   padding-bottom: ${GEL_SPACING_TRPL};
-// `;
-
-// StyledGrid.defaultProps = {
-//   role: 'listitem',
-// };
 
 export const MostReadItemWrapper = React.forwardRef(
   (

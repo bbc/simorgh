@@ -1,18 +1,18 @@
 import React from 'react';
 import { render } from '../../../react-testing-library-with-providers';
-import latin from '../../../ThemeProvider/fontScripts/latin';
-import arabic from '../../../ThemeProvider/fontScripts/arabic';
 import MostReadRank from '.';
+
+const size = 'default';
 
 describe('MostReadRank', () => {
   it('should render ltr correctly', () => {
     const { container } = render(
       <MostReadRank
         service="news"
-        script={latin}
         listIndex={1}
         numberOfItems={5}
         dir="ltr"
+        size={size}
       />,
     );
     expect(container).toMatchSnapshot();
@@ -22,10 +22,10 @@ describe('MostReadRank', () => {
     const { container } = render(
       <MostReadRank
         service="news"
-        script={latin}
         listIndex={10}
         numberOfItems={10}
         dir="ltr"
+        size={size}
       />,
     );
     expect(container).toMatchSnapshot();
@@ -35,10 +35,10 @@ describe('MostReadRank', () => {
     const { container } = render(
       <MostReadRank
         service="persian"
-        script={arabic}
         listIndex={1}
         numberOfItems={5}
         dir="rtl"
+        size={size}
       />,
     );
     expect(container).toMatchSnapshot();
@@ -48,10 +48,10 @@ describe('MostReadRank', () => {
     const { container } = render(
       <MostReadRank
         service="persian"
-        script={arabic}
         listIndex={10}
         numberOfItems={10}
         dir="rtl"
+        size={size}
       />,
     );
     expect(container).toMatchSnapshot();

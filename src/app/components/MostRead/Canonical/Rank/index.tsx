@@ -10,9 +10,9 @@ import {
 import { Services } from '../../../../models/types/global';
 import { ColumnLayout, MostReadRankProps, Size } from '../../types';
 import styles, {
-  getMultiColumnStyles,
-  getOneColumnStyles,
-  getTwoColumnStyles,
+  getOneColumnCss,
+  getTwoColumnCss,
+  getMultiColumnCss,
 } from './index.styles';
 
 export const serviceNumerals = (service: Services) => {
@@ -27,7 +27,7 @@ export const serviceNumerals = (service: Services) => {
   return servicesNonWesternNumerals[service] || WesternArabic;
 };
 
-interface ColumnStylesProps {
+interface ColumnCssProps {
   listIndex: number;
   numberOfItems: number;
   service: Services;
@@ -35,22 +35,22 @@ interface ColumnStylesProps {
   columnLayout: ColumnLayout;
 }
 
-const getColumnStyles = ({
+const getColumnCss = ({
   columnLayout,
   numberOfItems,
   service,
   size,
   listIndex,
-}: ColumnStylesProps) =>
+}: ColumnCssProps) =>
   ({
-    oneColumn: getOneColumnStyles({ numberOfItems, service, size }),
-    twoColumn: getTwoColumnStyles({
+    oneColumn: getOneColumnCss({ numberOfItems, service, size }),
+    twoColumn: getTwoColumnCss({
       listIndex,
       numberOfItems,
       service,
       size,
     }),
-    multiColumn: getMultiColumnStyles({
+    multiColumn: getMultiColumnCss({
       listIndex,
       numberOfItems,
       service,
@@ -68,7 +68,7 @@ const MostReadRank = ({
 }: MostReadRankProps) => {
   const numerals = serviceNumerals(service);
   const rank = isAmp ? listIndex : numerals[listIndex];
-  const columnStyles = getColumnStyles({
+  const columnCss = getColumnCss({
     columnLayout,
     numberOfItems,
     service,
@@ -77,10 +77,10 @@ const MostReadRank = ({
   });
 
   return (
-    <div css={columnStyles}>
+    <div css={columnCss}>
       <span
         css={[
-          styles.styledSpan,
+          styles.span,
           size === 'small' ? styles.smallFont : styles.defaultFont,
           service === 'japanese' && styles.japaneseLetterSpacing,
         ]}
