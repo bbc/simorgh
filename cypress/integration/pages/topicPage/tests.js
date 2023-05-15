@@ -15,7 +15,6 @@ export default ({ service, pageType, variant }) => {
     beforeEach(() => {
       cy.log(Cypress.env('currentPath'));
       cy.log(service);
-      const env = Cypress.env('APP_ENV');
       // eslint-disable-next-line prefer-destructuring
       topicId = Cypress.env('currentPath').split('topics/').pop().split('?')[0];
 
