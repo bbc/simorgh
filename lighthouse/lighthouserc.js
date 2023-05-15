@@ -67,7 +67,7 @@ const AUDIT_URLS = {
     test: ['https://www.test.bbc.com/pidgin/topics/c0823e52dd0t'],
   },
 
-  HOME_PAGE: {
+  TIPO_HOME_PAGE: {
     live: ['https://www.test.bbc.com/kyrgyz?renderer_env=live'],
     test: ['https://www.test.bbc.com/kyrgyz'],
   },
