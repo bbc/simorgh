@@ -43,7 +43,7 @@ export const MostReadLink = ({
   }
 
   return (
-    <div css={itemCss}>
+    <div css={itemCss} dir={dir}>
       <a
         css={[styles.link, size === 'default' && styles.defaultLink]}
         href={href}

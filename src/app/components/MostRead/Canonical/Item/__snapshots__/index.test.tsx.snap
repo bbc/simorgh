@@ -1609,12 +1609,12 @@ exports[`MostReadLink should render ltr correctly 1`] = `
   }
 }
 
-.emotion-2 {
+.emotion-1 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -1623,26 +1623,26 @@ exports[`MostReadLink should render ltr correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-2 {
+  .emotion-1 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-2 {
+  .emotion-1 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-2:hover,
-.emotion-2:focus {
+.emotion-1:hover,
+.emotion-1:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-2:before {
+.emotion-1:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -1655,20 +1655,20 @@ exports[`MostReadLink should render ltr correctly 1`] = `
 }
 
 @media (min-width: 25rem) {
-  .emotion-2 {
+  .emotion-1 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 
   @media (min-width: 20rem) and (max-width: 37.4375rem) {
-    .emotion-2 {
+    .emotion-1 {
       font-size: 1.125rem;
       line-height: 1.375rem;
     }
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-2 {
+    .emotion-1 {
       font-size: 1.25rem;
       line-height: 1.5rem;
     }
@@ -1677,11 +1677,11 @@ exports[`MostReadLink should render ltr correctly 1`] = `
 
 <div>
   <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     dir="ltr"
   >
     <a
-      class="focusIndicatorDisplayTableCell emotion-2 emotion-3"
+      class="focusIndicatorDisplayTableCell emotion-1"
       href="https://www.bbc.com/pidgin/articles/cwl08rd38l6o"
     >
       Tins you need to know about Babcock University
