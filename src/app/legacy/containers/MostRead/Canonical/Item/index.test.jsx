@@ -6,19 +6,19 @@ import { MostReadLink, getParentColumns } from '.';
 import { getItem, getItemWrapperArray } from '../../utilities';
 
 describe('MostReadLink', () => {
-  const newsItem = getItem({ service: 'news', withTimestamp: true });
-  const arabicItem = getItem({ service: 'arabic' });
+  const pidginItem = getItem({ service: 'pidgin', withTimestamp: true });
+  const persianItem = getItem({ service: 'persian' });
 
   it('should render ltr correctly', () => {
     const { container } = render(
       <MostReadLink
-        href={newsItem.href}
-        service="news"
+        href={pidginItem.href}
+        service="pidgin"
         script={latin}
-        title={newsItem.title}
+        title={pidginItem.title}
       />,
       {
-        seervice: 'pidgin',
+        service: 'pidgin',
         toggles: {
           eventTracking: { enabled: true },
         },
@@ -31,13 +31,13 @@ describe('MostReadLink', () => {
     const { container } = render(
       <MostReadLink
         dir="rtl"
-        href={arabicItem.href}
+        href={persianItem.href}
         service="persian"
         script={arabic}
-        title={arabicItem.title}
+        title={persianItem.title}
       />,
       {
-        seervice: 'pidgin',
+        service: 'persian',
         toggles: {
           eventTracking: { enabled: true },
         },
@@ -49,15 +49,15 @@ describe('MostReadLink', () => {
   it('should render with last updated date correctly', () => {
     const { container } = render(
       <MostReadLink
-        href={newsItem.href}
-        service="news"
+        href={pidginItem.href}
+        service="pidgin"
         script={latin}
-        title={newsItem.title}
+        title={pidginItem.title}
       >
-        {newsItem.timestamp}
+        {pidginItem.timestamp}
       </MostReadLink>,
       {
-        seervice: 'pidgin',
+        service: 'pidgin',
         toggles: {
           eventTracking: { enabled: true },
         },
@@ -72,7 +72,7 @@ describe('MostReadItemWrapper', () => {
     const { container } = render(
       getItemWrapperArray({
         numberOfItems: 10,
-        service: 'news',
+        service: 'pidgin',
         script: latin,
       }),
     );

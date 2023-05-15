@@ -161,8 +161,8 @@ exports[`MostReadItemWrapper should render ltr correctly with 10 items 1`] = `
 }
 
 .emotion-7 {
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 300;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
   font-style: normal;
   font-size: 2rem;
   line-height: 2.25rem;
@@ -201,8 +201,8 @@ exports[`MostReadItemWrapper should render ltr correctly with 10 items 1`] = `
 .emotion-11 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
   font-style: normal;
   position: static;
   color: #222222;
@@ -509,9 +509,9 @@ exports[`MostReadItemWrapper should render ltr correctly with 10 items 1`] = `
       >
         <a
           class="focusIndicatorDisplayTableCell emotion-11 emotion-12"
-          href="https://www.bbc.com/news/articles/cn7k01xp8kxo"
+          href="https://www.bbc.com/pidgin/articles/cwl08rd38l6o"
         >
-          Could a computer ever create better art than a human?
+          Tins you need to know about Babcock University
         </a>
       </div>
     </div>
@@ -540,9 +540,9 @@ exports[`MostReadItemWrapper should render ltr correctly with 10 items 1`] = `
       >
         <a
           class="focusIndicatorDisplayTableCell emotion-11 emotion-12"
-          href="https://www.bbc.com/news/articles/cn7k01xp8kxo"
+          href="https://www.bbc.com/pidgin/articles/cwl08rd38l6o"
         >
-          Could a computer ever create better art than a human?
+          Tins you need to know about Babcock University
         </a>
       </div>
     </div>
@@ -571,9 +571,9 @@ exports[`MostReadItemWrapper should render ltr correctly with 10 items 1`] = `
       >
         <a
           class="focusIndicatorDisplayTableCell emotion-11 emotion-12"
-          href="https://www.bbc.com/news/articles/cn7k01xp8kxo"
+          href="https://www.bbc.com/pidgin/articles/cwl08rd38l6o"
         >
-          Could a computer ever create better art than a human?
+          Tins you need to know about Babcock University
         </a>
       </div>
     </div>
@@ -602,9 +602,9 @@ exports[`MostReadItemWrapper should render ltr correctly with 10 items 1`] = `
       >
         <a
           class="focusIndicatorDisplayTableCell emotion-11 emotion-12"
-          href="https://www.bbc.com/news/articles/cn7k01xp8kxo"
+          href="https://www.bbc.com/pidgin/articles/cwl08rd38l6o"
         >
-          Could a computer ever create better art than a human?
+          Tins you need to know about Babcock University
         </a>
       </div>
     </div>
@@ -633,9 +633,9 @@ exports[`MostReadItemWrapper should render ltr correctly with 10 items 1`] = `
       >
         <a
           class="focusIndicatorDisplayTableCell emotion-11 emotion-12"
-          href="https://www.bbc.com/news/articles/cn7k01xp8kxo"
+          href="https://www.bbc.com/pidgin/articles/cwl08rd38l6o"
         >
-          Could a computer ever create better art than a human?
+          Tins you need to know about Babcock University
         </a>
       </div>
     </div>
@@ -664,9 +664,9 @@ exports[`MostReadItemWrapper should render ltr correctly with 10 items 1`] = `
       >
         <a
           class="focusIndicatorDisplayTableCell emotion-11 emotion-12"
-          href="https://www.bbc.com/news/articles/cn7k01xp8kxo"
+          href="https://www.bbc.com/pidgin/articles/cwl08rd38l6o"
         >
-          Could a computer ever create better art than a human?
+          Tins you need to know about Babcock University
         </a>
       </div>
     </div>
@@ -695,9 +695,9 @@ exports[`MostReadItemWrapper should render ltr correctly with 10 items 1`] = `
       >
         <a
           class="focusIndicatorDisplayTableCell emotion-11 emotion-12"
-          href="https://www.bbc.com/news/articles/cn7k01xp8kxo"
+          href="https://www.bbc.com/pidgin/articles/cwl08rd38l6o"
         >
-          Could a computer ever create better art than a human?
+          Tins you need to know about Babcock University
         </a>
       </div>
     </div>
@@ -726,9 +726,9 @@ exports[`MostReadItemWrapper should render ltr correctly with 10 items 1`] = `
       >
         <a
           class="focusIndicatorDisplayTableCell emotion-11 emotion-12"
-          href="https://www.bbc.com/news/articles/cn7k01xp8kxo"
+          href="https://www.bbc.com/pidgin/articles/cwl08rd38l6o"
         >
-          Could a computer ever create better art than a human?
+          Tins you need to know about Babcock University
         </a>
       </div>
     </div>
@@ -757,9 +757,9 @@ exports[`MostReadItemWrapper should render ltr correctly with 10 items 1`] = `
       >
         <a
           class="focusIndicatorDisplayTableCell emotion-11 emotion-12"
-          href="https://www.bbc.com/news/articles/cn7k01xp8kxo"
+          href="https://www.bbc.com/pidgin/articles/cwl08rd38l6o"
         >
-          Could a computer ever create better art than a human?
+          Tins you need to know about Babcock University
         </a>
       </div>
     </div>
@@ -788,9 +788,9 @@ exports[`MostReadItemWrapper should render ltr correctly with 10 items 1`] = `
       >
         <a
           class="focusIndicatorDisplayTableCell emotion-11 emotion-12"
-          href="https://www.bbc.com/news/articles/cn7k01xp8kxo"
+          href="https://www.bbc.com/pidgin/articles/cwl08rd38l6o"
         >
-          Could a computer ever create better art than a human?
+          Tins you need to know about Babcock University
         </a>
       </div>
     </div>
@@ -1612,8 +1612,8 @@ exports[`MostReadLink should render ltr correctly 1`] = `
 .emotion-2 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
   font-style: normal;
   position: static;
   color: #222222;
@@ -1682,9 +1682,9 @@ exports[`MostReadLink should render ltr correctly 1`] = `
   >
     <a
       class="focusIndicatorDisplayTableCell emotion-2 emotion-3"
-      href="https://www.bbc.com/news/articles/cn7k01xp8kxo"
+      href="https://www.bbc.com/pidgin/articles/cwl08rd38l6o"
     >
-      Could a computer ever create better art than a human?
+      Tins you need to know about Babcock University
     </a>
   </div>
 </div>
@@ -1776,9 +1776,9 @@ exports[`MostReadLink should render rtl correctly 1`] = `
   >
     <a
       class="focusIndicatorDisplayTableCell emotion-2 emotion-3"
-      href="https://www.bbc.com/arabic/articles/c1er5mjnznzo"
+      href="https://www.bbc.com/persian/articles/cej3lzd5e0go"
     >
-      لماذا يخجل البعض من اسم قريته في مصر؟
+      در این جشنواره برای نخستین بار از کارگران افغانستان در شهر تهران تقدیر شد
     </a>
   </div>
 </div>
@@ -1800,8 +1800,8 @@ exports[`MostReadLink should render with last updated date correctly 1`] = `
 .emotion-2 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
   font-style: normal;
   position: static;
   color: #222222;
@@ -1872,7 +1872,7 @@ exports[`MostReadLink should render with last updated date correctly 1`] = `
   line-height: 1.125rem;
   color: #545658;
   display: block;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -1898,9 +1898,9 @@ exports[`MostReadLink should render with last updated date correctly 1`] = `
   >
     <a
       class="focusIndicatorDisplayTableCell emotion-2 emotion-3"
-      href="https://www.bbc.com/news/articles/cn7k01xp8kxo"
+      href="https://www.bbc.com/pidgin/articles/cwl08rd38l6o"
     >
-      Could a computer ever create better art than a human?
+      Tins you need to know about Babcock University
     </a>
     <div
       class="emotion-4 emotion-5"
