@@ -10,7 +10,7 @@ import IdxPageWithContext from './testHelpers';
 const mostReadEndpoint = '/data/persian/mostRead/index.json';
 const radioScheduleEndpoint = '/data/persian/bbc_dari_radio/schedule.json';
 
-jest.mock('#containers/ChartbeatAnalytics', () => {
+jest.mock('../../components/ChartbeatAnalytics', () => {
   return () => <div>chartbeat</div>;
 });
 

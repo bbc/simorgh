@@ -30,7 +30,7 @@ import Image from '../../legacy/containers/Image';
 import Blocks from '../../legacy/containers/Blocks';
 import Timestamp from '../../legacy/containers/ArticleTimestamp';
 import ATIAnalytics from '../../legacy/containers/ATIAnalytics';
-import ChartbeatAnalytics from '../../legacy/containers/ChartbeatAnalytics';
+import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import ComscoreAnalytics from '../../legacy/containers/ComscoreAnalytics';
 import ArticleMediaPlayer from '../../legacy/containers/ArticleMediaPlayer';
 import SocialEmbedContainer from '../../legacy/containers/SocialEmbed';
@@ -39,12 +39,12 @@ import RelatedTopics from '../../legacy/containers/RelatedTopics';
 import NielsenAnalytics from '../../legacy/containers/NielsenAnalytics';
 import ArticleMetadata from '../../legacy/containers/ArticleMetadata';
 
+import { OptimoBlock } from '../../models/types/optimo';
 import {
-  OptimoBlock,
   MetadataFormats,
   MetadataTaggings,
   MetadataTopics,
-} from '../../models/types/optimo';
+} from '../../models/types/metadata';
 
 import LinkedData from '../../components/LinkedData';
 import Byline from '../../components/Byline';
