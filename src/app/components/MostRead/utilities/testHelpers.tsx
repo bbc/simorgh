@@ -46,7 +46,7 @@ export const getItem = ({
   withTimestamp = false,
 }: {
   service: Services;
-  withTimestamp: boolean;
+  withTimestamp?: boolean;
 }) => {
   const baseUrl = 'https://www.bbc.com';
   // @ts-expect-error Text variants not required for non world service languages

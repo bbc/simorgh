@@ -3,20 +3,18 @@ import { render } from '../../../react-testing-library-with-providers';
 import { MostReadLink, getParentColumns } from '.';
 import { getItem, getItemWrapperArray } from '../../utilities/testHelpers';
 
-const size = 'default';
-
 describe('MostReadLink', () => {
-  const newsItem = getItem({ service: 'news', withTimestamp: true });
-  const arabicItem = getItem({ service: 'arabic', withTimestamp: false });
+  const pidginItem = getItem({ service: 'pidgin', withTimestamp: true });
+  const persianItem = getItem({ service: 'persian' });
 
   it('should render ltr correctly', () => {
     const { container } = render(
       <MostReadLink
-        href={newsItem.href}
-        service="news"
-        title={newsItem.title}
+        href={pidginItem.href}
+        service="pidgin"
+        title={pidginItem.title}
         dir="ltr"
-        size={size}
+        size="default"
       />,
       {
         service: 'pidgin',
@@ -32,13 +30,13 @@ describe('MostReadLink', () => {
     const { container } = render(
       <MostReadLink
         dir="rtl"
-        href={arabicItem.href}
+        href={persianItem.href}
         service="persian"
-        title={arabicItem.title}
-        size={size}
+        title={persianItem.title}
+        size="default"
       />,
       {
-        service: 'pidgin',
+        service: 'persian',
         toggles: {
           eventTracking: { enabled: true },
         },
@@ -50,13 +48,13 @@ describe('MostReadLink', () => {
   it('should render with last updated date correctly', () => {
     const { container } = render(
       <MostReadLink
-        href={newsItem.href}
-        service="news"
-        title={newsItem.title}
+        href={pidginItem.href}
+        service="pidgin"
+        title={pidginItem.title}
         dir="ltr"
-        size={size}
+        size="default"
       >
-        {newsItem.timestamp}
+        {pidginItem.timestamp}
       </MostReadLink>,
       {
         service: 'pidgin',
@@ -74,9 +72,9 @@ describe('MostReadItemWrapper', () => {
     const { container } = render(
       getItemWrapperArray({
         numberOfItems: 10,
-        service: 'news',
+        service: 'pidgin',
         dir: 'ltr',
-        size,
+        size: 'default',
       }),
     );
     expect(container).toMatchSnapshot();
@@ -88,7 +86,7 @@ describe('MostReadItemWrapper', () => {
         numberOfItems: 10,
         service: 'persian',
         dir: 'rtl',
-        size,
+        size: 'default',
       }),
     );
     expect(container).toMatchSnapshot();
@@ -96,7 +94,7 @@ describe('MostReadItemWrapper', () => {
 
   describe('getParentColumns helper method', () => {
     it('should return null when columnLayout is oneColumn', () => {
-      expect(getParentColumns('oneColumn')).toEqual(null);
+      expect(getParentColumns('oneColumn')).toBeNull();
     });
 
     it('should return a value when columnLayout is not oneColumn', () => {

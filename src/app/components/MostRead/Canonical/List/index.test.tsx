@@ -1,28 +1,17 @@
 import React from 'react';
 import { render } from '../../../react-testing-library-with-providers';
-
-import arabic from '../../../ThemeProvider/fontScripts/arabic';
-import bengali from '../../../ThemeProvider/fontScripts/bengali';
-import burmese from '../../../ThemeProvider/fontScripts/burmese';
-import latin from '../../../ThemeProvider/fontScripts/latin';
-
 import MostReadList from '.';
 import { getItemWrapperArray } from '../../utilities/testHelpers';
-
-const size = 'default';
-const ltr = 'ltr';
-const rtl = 'rtl';
 
 describe('MostReadList', () => {
   it('should render with ltr news items with correct dir', () => {
     const { container } = render(
-      <MostReadList numberOfItems={10} dir={ltr}>
+      <MostReadList numberOfItems={10} dir="ltr">
         {getItemWrapperArray({
           numberOfItems: 10,
           service: 'news',
-          script: latin,
-          dir: ltr,
-          size,
+          dir: 'ltr',
+          size: 'default',
         })}
       </MostReadList>,
     );
@@ -31,13 +20,12 @@ describe('MostReadList', () => {
 
   it('should render with rtl arabic items with correct dir', () => {
     const { container } = render(
-      <MostReadList numberOfItems={10} dir={rtl}>
+      <MostReadList numberOfItems={10} dir="rtl">
         {getItemWrapperArray({
           numberOfItems: 10,
           service: 'persian',
-          script: arabic,
-          dir: rtl,
-          size,
+          dir: 'rtl',
+          size: 'default',
         })}
       </MostReadList>,
     );
@@ -50,9 +38,8 @@ describe('MostReadList', () => {
         {getItemWrapperArray({
           numberOfItems: 10,
           service: 'bengali',
-          script: bengali,
-          dir: ltr,
-          size,
+          dir: 'ltr',
+          size: 'default',
         })}
       </MostReadList>,
     );
@@ -65,9 +52,8 @@ describe('MostReadList', () => {
         {getItemWrapperArray({
           numberOfItems: 10,
           service: 'burmese',
-          script: burmese,
-          dir: ltr,
-          size,
+          dir: 'ltr',
+          size: 'default',
         })}
       </MostReadList>,
     );
@@ -80,9 +66,8 @@ describe('MostReadList', () => {
         {getItemWrapperArray({
           numberOfItems: 10,
           service: 'news',
-          script: latin,
-          dir: ltr,
-          size,
+          dir: 'ltr',
+          size: 'default',
         })}
       </MostReadList>,
     );
@@ -95,9 +80,8 @@ describe('MostReadList', () => {
         {getItemWrapperArray({
           numberOfItems: 10,
           service: 'news',
-          script: latin,
-          dir: ltr,
-          size,
+          dir: 'ltr',
+          size: 'default',
         })}
       </MostReadList>,
     );
@@ -110,9 +94,8 @@ describe('MostReadList', () => {
         {getItemWrapperArray({
           numberOfItems: 10,
           service: 'news',
-          script: latin,
-          dir: ltr,
-          size,
+          dir: 'ltr',
+          size: 'default',
         })}
       </MostReadList>,
     );
