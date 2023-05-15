@@ -76,6 +76,7 @@ describe('MostReadItemWrapper', () => {
         dir: 'ltr',
         size: 'default',
       }),
+      { service: 'pidgin' },
     );
     expect(container).toMatchSnapshot();
   });
@@ -88,6 +89,7 @@ describe('MostReadItemWrapper', () => {
         dir: 'rtl',
         size: 'default',
       }),
+      { service: 'persian' },
     );
     expect(container).toMatchSnapshot();
   });
