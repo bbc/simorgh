@@ -10,7 +10,7 @@ const logger = nodeLogger(__filename);
 const filterPopularStaleData = ({
   data,
   isAmp,
-  path = '',
+  path = undefined,
   service,
   popularType,
 }) => {
