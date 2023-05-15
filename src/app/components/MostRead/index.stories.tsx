@@ -1,14 +1,14 @@
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
-import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
-import { RequestContextProvider } from '#contexts/RequestContext';
+import { withServicesKnob } from '../../legacy/psammead/psammead-storybook-helpers/src';
+import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
-import { ToggleContextProvider } from '#contexts/ToggleContext';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-import MostReadContainer from '.';
-import ThemeProvider from '../../components/ThemeProvider';
+import { ToggleContextProvider } from '../../contexts/ToggleContext';
+import { ARTICLE_PAGE } from '../../routes/utils/pageTypes';
+import ThemeProvider from '../ThemeProvider';
 import { Services } from '../../models/types/global';
 import { StoryProps } from '../../models/types/storybook';
+import MostReadContainer from '../../legacy/containers/MostRead';
 
 const staticMostReadURL = (service: Services, variant: string) =>
   variant !== 'default'
