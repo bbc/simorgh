@@ -40,6 +40,19 @@ const config = {
     alwaysCheckForFallback: false,
     togglesUrl: 'https://config.test.api.bbci.co.uk/',
   },
+  localNext: {
+    baseUrl: 'http://localhost:7081',
+    dataUrl: 'http://localhost:7081',
+    assetUrl: 'http://localhost:7081',
+    assetOrigin: 'http://localhost:7081',
+    atiUrl: 'https://logws1363.ati-host.net?',
+    chartbeatEnabled: true,
+    avEmbedBaseUrlCanonical: 'https://www.test.bbc.com',
+    avEmbedBaseUrlAmp: 'https://polling.test.bbc.co.uk',
+    standaloneErrorPages: true,
+    alwaysCheckForFallback: false,
+    togglesUrl: 'https://config.test.api.bbci.co.uk/',
+  },
 };
 
 const geoLocate = (conf, isUk = false) => {
