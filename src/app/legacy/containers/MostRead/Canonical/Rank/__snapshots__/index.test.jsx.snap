@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MostReadRank should render as expected when dir=ltr, service=japanese, script=arabic, listIndex=1, numberOfItems=5, size=default, columnLayout=oneColumn 1`] = `
+exports[`MostReadRank should render as expected when dir=ltr, service=japanese, script=noAscOrDesc, listIndex=1, numberOfItems=5, size=default, columnLayout=oneColumn 1`] = `
 @media (max-width: 14.9375rem) {
   .emotion-0 {
     min-width: 1.5rem;
