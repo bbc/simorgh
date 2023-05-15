@@ -34,6 +34,7 @@ describe('MostReadRank', () => {
           size={size}
           columnLayout={columnLayout}
         />,
+        { service },
       );
       expect(container).toMatchSnapshot();
     },
