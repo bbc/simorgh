@@ -75,7 +75,7 @@ const Curation = ({
           <Subheading id="most-read" link="/kyrgyz/popular/read">
             Most Read
           </Subheading>
-          <MostRead data={mostRead} size="default" />
+          <MostRead data={mostRead} columnLayout="twoColumn" />
         </>
       );
     case SIMPLE_CURATION_GRID:
