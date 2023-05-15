@@ -1,12 +1,15 @@
 import React, { useContext } from 'react';
-import { oneOf, string, elementType, bool } from 'prop-types';
 import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
-import { getMostReadEndpoint } from '#lib/utilities/getUrlHelpers/getMostReadUrls';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import { ServiceContext } from '../../contexts/ServiceContext';
 import Canonical from './Canonical';
-import mostReadShape from './utilities/mostReadShape';
 import AmpMostRead from './Amp';
+import {
+  ColumnLayout,
+  CPSMostReadRecord,
+  OptimoMostReadRecord,
+  Size,
+} from './types';
 
 const blockLevelEventTrackingData = {
   componentName: 'most-read',
@@ -14,25 +17,35 @@ const blockLevelEventTrackingData = {
 
 const mostReadAmpPageTypes = ['STY', 'CSP', 'article'];
 
-const MostReadContainer = ({
-  mostReadEndpointOverride,
+export interface InitialData {
+  lastRecordTimeStamp: string;
+  records: CPSMostReadRecord | OptimoMostReadRecord;
+}
+interface MostReadProps {
+  initialData?: InitialData;
+  columnLayout?: ColumnLayout;
+  size?: Size;
+  wrapper?: React.ElementType;
+  serverRenderOnAmp?: boolean;
+  endpoint?: string;
+}
+
+const MostRead = ({
   initialData,
-  columnLayout,
-  size,
+  columnLayout = 'multiColumn',
+  size = 'default',
   wrapper,
-  serverRenderOnAmp,
-}) => {
-  const { variant, isAmp, pageType } = useContext(RequestContext);
+  serverRenderOnAmp = false,
+  endpoint,
+}: MostReadProps) => {
+  const { isAmp, pageType } = useContext(RequestContext);
   const {
-    service,
     mostRead: { hasMostRead },
   } = useContext(ServiceContext);
 
   const { enabled } = useToggle('mostRead');
 
   const mostReadToggleEnabled = enabled && hasMostRead;
-  const endpoint =
-    mostReadEndpointOverride || getMostReadEndpoint({ service, variant });
 
   // Do not render most read when a toggle is disabled
   if (!mostReadToggleEnabled) {
@@ -48,8 +61,7 @@ const MostReadContainer = ({
 
   return (
     <Canonical
-      initialData={initialData}
-      endpoint={endpoint}
+      initialData={initialData as InitialData}
       wrapper={wrapper}
       columnLayout={columnLayout}
       size={size}
@@ -58,22 +70,4 @@ const MostReadContainer = ({
   );
 };
 
-MostReadContainer.propTypes = {
-  mostReadEndpointOverride: string,
-  columnLayout: oneOf(['oneColumn', 'twoColumn', 'multiColumn']),
-  size: oneOf(['default', 'small']),
-  initialData: mostReadShape,
-  wrapper: elementType,
-  serverRenderOnAmp: bool,
-};
-
-MostReadContainer.defaultProps = {
-  mostReadEndpointOverride: undefined,
-  columnLayout: 'multiColumn',
-  size: 'default',
-  initialData: undefined,
-  wrapper: undefined,
-  serverRenderOnAmp: false,
-};
-
-export default MostReadContainer;
+export default MostRead;
