@@ -48,55 +48,6 @@ export default async ({
       data: { title, description, curations },
     } = json;
 
-    // TODO: Move this logic to the BFF
-    const transformedCurations = curations.map(
-      (curation: { mostRead: any }) => {
-        const { mostRead } = curation;
-
-        if (mostRead) {
-          const records = mostRead.records?.map(
-            (record: {
-              id: any;
-              rank: any;
-              promo: {
-                headlines: { headline: any };
-                locators: { assetUri: any };
-                timestamp: any;
-              };
-            }) => {
-              const {
-                id: recordId,
-                rank,
-                promo: {
-                  headlines: { headline },
-                  locators: { assetUri: href },
-                  timestamp,
-                },
-              } = record;
-
-              return {
-                id: recordId,
-                rank,
-                title: headline,
-                href,
-                timestamp,
-              };
-            },
-          );
-
-          return {
-            ...curation,
-            summaries: [],
-            mostRead: {
-              ...mostRead,
-              records,
-            },
-          };
-        }
-
-        return curation;
-      },
-    );
     const id = isLocal ? null : HOME_PAGE_CONFIG[service][env];
 
     return {
@@ -105,7 +56,7 @@ export default async ({
         id,
         title,
         pageType,
-        curations: transformedCurations,
+        curations,
         description,
       },
     };

@@ -34,3 +34,47 @@ export interface MostReadLinkProps {
     componentName: string;
   };
 }
+
+type ArticleSource = 'cps' | 'optimo';
+
+export interface CPSMostReadRecord {
+  id: string;
+  promo: {
+    timestamp: number;
+    type?: ArticleSource;
+    headlines: {
+      shortHeadline: string;
+    };
+    locators: {
+      assetUri: string;
+    };
+  };
+}
+
+export interface OptimoMostReadRecord {
+  id: string;
+  promo: {
+    timestamp: number;
+    type?: ArticleSource;
+    locators: {
+      canonicalUrl: string;
+    };
+  };
+  headlines: {
+    promoHeadline: {
+      blocks: {
+        model: {
+          blocks: { model: { text: string } }[];
+        };
+      }[];
+    };
+  };
+}
+
+export interface MostReadData {
+  lastRecordTimeStamp: string;
+  firstRecordTimeStamp?: string;
+  generated?: string;
+  totalRecords?: number;
+  records: (OptimoMostReadRecord | CPSMostReadRecord)[];
+}
