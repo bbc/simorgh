@@ -1,7 +1,6 @@
 /**
- * @service arabic
- * @pathname /arabic
- * @displayAds true
+ * @service serbian
+ * @pathname /serbian/lat
  */
 
 import runCanonicalTests from '../canonicalTests';

@@ -1,4 +1,3 @@
-/** @jsxRuntime classic */
 /** @jsx jsx */
 
 import React, { useContext } from 'react';
@@ -20,8 +19,8 @@ type ComponentProps = {
     pageCount: number;
     activePage: number;
   };
-  pathname: string;
-  showAdsBasedOnLocation: boolean;
+  pathname?: string;
+  showAdsBasedOnLocation?: boolean;
 };
 
 const LivePage = ({
