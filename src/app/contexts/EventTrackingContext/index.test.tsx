@@ -39,6 +39,7 @@ const Wrapper = ({
     bbcOrigin="https://www.test.bbc.com"
     pageType={pageType}
     isAmp={false}
+    isApp={false}
     service="pidgin"
     pathname="/pidgin/tori-51745682"
   >
