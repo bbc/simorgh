@@ -892,9 +892,40 @@
         "visualProminence": "NORMAL"
       },
       {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "Kyrgyzstanda soz erkindigi buzuluuda",
+            "firstPublished": "2016-11-07T08:16:20.000Z",
+            "link": "https://www.bbc.com/kyrgyz/world-23089413",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/17324/test/_63521059_0362cabb-9d4d-4a6f-b538-2b314913c31a.jpg",
+            "description": "Soz erkindigin chektoo turaluu jiyin ottu",
+            "imageAlt": "ыаыаыаыаы",
+            "id": "82567d2d-eb50-b644-b9a4-6523bd62bf2c"
+          },
+          {
+            "type": "article",
+            "title": "Үй-бүлөдөгү зомбулуктан эң көп аялдар жабыркайт",
+            "firstPublished": "2016-11-03T14:43:31.000Z",
+            "link": "https://www.bbc.com/kyrgyz/kyrgyzstan-23088783",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/06A6/test/_63520710_23088783.jpg",
+            "description": "Үй-бүлөдөгү зомбулуктан эң көп аялдар жабыркайт",
+            "imageAlt": "Family Violence",
+            "id": "3ab470b8-18c1-4c37-ae2c-9f0177c60845"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:5d434896-f075-40ae-93f5-e35aa6f8b851",
+        "curationType": "tipo-curation",
+        "position": 16,
+        "title": "Curation 17",
+        "visualProminence": "NORMAL"
+      },
+      {
         "curationId": "urn:bbc:onward-journeys:most:read?=site=News",
         "curationType": "most-popular",
-        "position": 16,
+        "position": 17,
         "title": "Most Read",
         "visualProminence": "NORMAL",
         "visualStyle": "RANKED",
@@ -1975,37 +2006,6 @@
             }
           ]
         }
-      },
-      {
-        "summaries": [
-          {
-            "type": "article",
-            "title": "Kyrgyzstanda soz erkindigi buzuluuda",
-            "firstPublished": "2016-11-07T08:16:20.000Z",
-            "link": "https://www.bbc.com/kyrgyz/world-23089413",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/17324/test/_63521059_0362cabb-9d4d-4a6f-b538-2b314913c31a.jpg",
-            "description": "Soz erkindigin chektoo turaluu jiyin ottu",
-            "imageAlt": "ыаыаыаыаы",
-            "id": "82567d2d-eb50-b644-b9a4-6523bd62bf2c"
-          },
-          {
-            "type": "article",
-            "title": "Үй-бүлөдөгү зомбулуктан эң көп аялдар жабыркайт",
-            "firstPublished": "2016-11-03T14:43:31.000Z",
-            "link": "https://www.bbc.com/kyrgyz/kyrgyzstan-23088783",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/06A6/test/_63520710_23088783.jpg",
-            "description": "Үй-бүлөдөгү зомбулуктан эң көп аялдар жабыркайт",
-            "imageAlt": "Family Violence",
-            "id": "3ab470b8-18c1-4c37-ae2c-9f0177c60845"
-          }
-        ],
-        "activePage": 1,
-        "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:5d434896-f075-40ae-93f5-e35aa6f8b851",
-        "curationType": "tipo-curation",
-        "position": 17,
-        "title": "Curation 17",
-        "visualProminence": "NORMAL"
       },
       {
         "summaries": [

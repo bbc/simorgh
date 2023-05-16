@@ -14,7 +14,6 @@ interface MostReadProps {
   columnLayout?: ColumnLayout;
   size: Size;
   data: MostReadData;
-  wrapper?: React.ElementType;
   eventTrackingData?: {
     componentName: string;
   };
@@ -24,7 +23,6 @@ const MostRead = ({
   columnLayout = 'multiColumn',
   size,
   data,
-  wrapper: Wrapper = React.Fragment,
   eventTrackingData,
 }: MostReadProps) => {
   const {
@@ -46,54 +44,52 @@ const MostRead = ({
   const fontScript = script as TypographyScript;
 
   return (
-    <Wrapper>
-      <MostReadList
-        numberOfItems={items.length}
-        dir={direction}
-        columnLayout={columnLayout}
-      >
-        {items.map(
-          ({ id, timestamp, title, href }, i) =>
-            title &&
-            href && (
-              <MostReadItemWrapper
+    <MostReadList
+      numberOfItems={items.length}
+      dir={direction}
+      columnLayout={columnLayout}
+    >
+      {items.map(
+        ({ id, timestamp, title, href }, i) =>
+          title &&
+          href && (
+            <MostReadItemWrapper
+              dir={direction}
+              key={id}
+              columnLayout={columnLayout}
+              ref={viewRef}
+            >
+              <MostReadRank
+                service={service}
+                listIndex={i + 1}
+                numberOfItems={items.length}
                 dir={direction}
-                key={id}
                 columnLayout={columnLayout}
-                ref={viewRef}
+                size={size}
+              />
+              <MostReadLink
+                dir={direction}
+                service={service}
+                title={title}
+                href={href}
+                size={size}
+                eventTrackingData={eventTrackingData}
               >
-                <MostReadRank
-                  service={service}
-                  listIndex={i + 1}
-                  numberOfItems={items.length}
-                  dir={direction}
-                  columnLayout={columnLayout}
-                  size={size}
-                />
-                <MostReadLink
-                  dir={direction}
-                  service={service}
-                  title={title}
-                  href={href}
-                  size={size}
-                  eventTrackingData={eventTrackingData}
-                >
-                  {shouldRenderLastUpdated(timestamp) && timestamp && (
-                    <LastUpdated
-                      prefix={lastUpdated}
-                      script={fontScript}
-                      service={service}
-                      timestamp={timestamp}
-                      locale={locale}
-                      timezone={timezone}
-                    />
-                  )}
-                </MostReadLink>
-              </MostReadItemWrapper>
-            ),
-        )}
-      </MostReadList>
-    </Wrapper>
+                {shouldRenderLastUpdated(timestamp) && timestamp && (
+                  <LastUpdated
+                    prefix={lastUpdated}
+                    script={fontScript}
+                    service={service}
+                    timestamp={timestamp}
+                    locale={locale}
+                    timezone={timezone}
+                  />
+                )}
+              </MostReadLink>
+            </MostReadItemWrapper>
+          ),
+      )}
+    </MostReadList>
   );
 };
 

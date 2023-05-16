@@ -54,14 +54,9 @@ const rankTranslationScript = (endpoint: string, service: Services) => {
 interface AmpMostReadProps {
   endpoint?: string;
   size?: Size;
-  wrapper?: React.ElementType;
 }
 
-const AmpMostRead = ({
-  endpoint = '',
-  size = 'default',
-  wrapper: Wrapper = React.Fragment,
-}: AmpMostReadProps) => {
+const AmpMostRead = ({ endpoint = '', size = 'default' }: AmpMostReadProps) => {
   const {
     service,
     dir,
@@ -81,66 +76,64 @@ const AmpMostRead = ({
 
   return (
     <amp-script id="dataFunctions" script="local-script">
-      <Wrapper>
-        <Helmet
-          script={[
-            {
-              id: 'local-script',
-              type: 'text/plain',
-              target: 'amp-script',
-              innerHTML: onlyinnerscript,
-            },
-          ]}
+      <Helmet
+        script={[
+          {
+            id: 'local-script',
+            type: 'text/plain',
+            target: 'amp-script',
+            innerHTML: onlyinnerscript,
+          },
+        ]}
+      />
+      <Helmet>
+        {/* Import required amp scripts for most read */}
+        {AMP_LIST_JS}
+        {AMP_MUSTACHE_JS}
+        {AMP_SCRIPT_JS}
+        <meta
+          name="amp-script-src"
+          content={generateCSPHash({
+            script: onlyinnerscript,
+            sha: 'sha384',
+            encoding: 'utf8',
+            base: 'base64',
+          })}
         />
-        <Helmet>
-          {/* Import required amp scripts for most read */}
-          {AMP_LIST_JS}
-          {AMP_MUSTACHE_JS}
-          {AMP_SCRIPT_JS}
-          <meta
-            name="amp-script-src"
-            content={generateCSPHash({
-              script: onlyinnerscript,
-              sha: 'sha384',
-              encoding: 'utf8',
-              base: 'base64',
-            })}
-          />
-        </Helmet>
-        <amp-list
-          src="amp-script:dataFunctions.getRemoteData"
-          items="records"
-          max-items={numberOfItems}
-          layout="responsive"
-          width="300"
-          height="50"
-        >
-          <p css={styles.paragraph} fallback="">
-            {fallbackText}
-          </p>
+      </Helmet>
+      <amp-list
+        src="amp-script:dataFunctions.getRemoteData"
+        items="records"
+        max-items={numberOfItems}
+        layout="responsive"
+        width="300"
+        height="50"
+      >
+        <p css={styles.paragraph} fallback="">
+          {fallbackText}
+        </p>
 
-          <template type="amp-mustache">
-            <MostReadItemWrapper dir={direction} columnLayout="oneColumn">
-              <MostReadRank
-                service={service}
-                numberOfItems={numberOfItems}
-                listIndex="{{rankTranslation}}"
-                dir={direction}
-                columnLayout="oneColumn"
-                size={size}
-                isAmp
-              />
-              <MostReadLink
-                dir={direction}
-                service={service}
-                title="{{promo.headlines.shortHeadline}}"
-                href="{{promo.locators.assetUri}}"
-                size={size}
-              />
-            </MostReadItemWrapper>
-          </template>
-        </amp-list>
-      </Wrapper>
+        <template type="amp-mustache">
+          <MostReadItemWrapper dir={direction} columnLayout="oneColumn">
+            <MostReadRank
+              service={service}
+              numberOfItems={numberOfItems}
+              listIndex="{{rankTranslation}}"
+              dir={direction}
+              columnLayout="oneColumn"
+              size={size}
+              isAmp
+            />
+            <MostReadLink
+              dir={direction}
+              service={service}
+              title="{{promo.headlines.shortHeadline}}"
+              href="{{promo.locators.assetUri}}"
+              size={size}
+            />
+          </MostReadItemWrapper>
+        </template>
+      </amp-list>
     </amp-script>
   );
 };
