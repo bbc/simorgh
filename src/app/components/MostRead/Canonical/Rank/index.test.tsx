@@ -22,6 +22,7 @@ describe('MostReadRank', () => {
     ${'rtl'} | ${'persian'}  | ${1}      | ${5}          | ${'small'}   | ${'oneColumn'}
     ${'rtl'} | ${'persian'}  | ${10}     | ${10}         | ${'small'}   | ${'oneColumn'}
     ${'ltr'} | ${'japanese'} | ${1}      | ${5}          | ${'default'} | ${'oneColumn'}
+    ${'ltr'} | ${'bengali'}  | ${1}      | ${5}          | ${'default'} | ${'oneColumn'}
   `(
     'should render as expected when dir=$dir, service=$service, listIndex=$listIndex, numberOfItems=$numberOfItems, size=$size, columnLayout=$columnLayout',
     ({ dir, service, listIndex, numberOfItems, size, columnLayout }) => {
