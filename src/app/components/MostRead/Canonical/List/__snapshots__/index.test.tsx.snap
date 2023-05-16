@@ -5283,7 +5283,7 @@ exports[`MostReadList should render with ltr news items with correct dir 1`] = `
 </div>
 `;
 
-exports[`MostReadList should render with rtl arabic items with correct dir 1`] = `
+exports[`MostReadList should render with rtl persian items with correct dir with multi columns 1`] = `
 .emotion-1 {
   list-style-type: none;
   margin: 0;

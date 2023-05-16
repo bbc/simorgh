@@ -7,7 +7,7 @@ export type Size = 'default' | 'small';
 export type ColumnLayout = 'oneColumn' | 'twoColumn' | 'multiColumn';
 
 export interface MostReadBaseProps {
-  dir: Direction;
+  dir?: Direction;
   columnLayout?: ColumnLayout;
   numberOfItems: number;
 }
