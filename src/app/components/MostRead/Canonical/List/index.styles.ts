@@ -23,7 +23,13 @@ const styles = {
     }),
 };
 
-export const oneColumnGridTemplateRows = (numberOfItems: number) =>
+export const gridTemplateRows = (numberOfItems: number) =>
   css({ gridTemplateRows: `repeat(${numberOfItems}, auto)` });
+
+export const multiColumnGridTemplateRows = (numberOfItems: number) => {
+  css({
+    gridTemplateRows: `repeat(${Math.ceil(numberOfItems / 2)}, auto)`,
+  });
+};
 
 export default styles;

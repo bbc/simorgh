@@ -19,7 +19,6 @@ interface MostReadProps {
   data?: MostReadData;
   columnLayout?: ColumnLayout;
   size?: Size;
-  serverRenderOnAmp?: boolean;
   endpoint?: string;
   mobileDivider?: boolean;
   backgroundColour?: string;
@@ -29,9 +28,8 @@ const MostRead = ({
   data,
   columnLayout = 'multiColumn',
   size = 'default',
-  serverRenderOnAmp = false,
   endpoint,
-  mobileDivider,
+  mobileDivider = false,
   backgroundColour = WHITE,
 }: MostReadProps) => {
   const { isAmp, pageType } = useContext(RequestContext);
@@ -50,7 +48,7 @@ const MostRead = ({
 
   // We render amp on ONLY STY, CSP and ARTICLE pages using amp-list.
   const AmpMostRead = () =>
-    !serverRenderOnAmp && mostReadAmpPageTypes.includes(pageType) ? (
+    mostReadAmpPageTypes.includes(pageType) ? (
       <MostReadSection>
         <MostReadSectionLabel
           mobileDivider={mobileDivider}
