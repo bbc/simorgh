@@ -1,8 +1,8 @@
 import pathOr from 'ramda/src/pathOr';
 import take from 'ramda/src/take';
 import { v4 as uuid } from 'uuid';
-import fixture from '#data/pidgin/frontpage';
 import rtlFixture from '#data/urdu/frontpage';
+import fixture from '#data/pidgin/frontpage';
 
 const getFixtureData = dir => (dir === 'ltr' ? fixture : rtlFixture);
 
