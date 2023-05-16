@@ -1,21 +1,25 @@
 import React from 'react';
-import fetchMock from 'fetch-mock';
-import { RequestContextProvider } from '#contexts/RequestContext';
+import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ToggleContextProvider } from '../../contexts/ToggleContext';
 import pidginMostReadData from '../../../../data/pidgin/mostRead/index.json';
 import serbianLatMostReadData from '../../../../data/serbian/mostRead/lat.json';
-import { getMostReadEndpoint } from '../../lib/utilities/getUrlHelpers/getMostReadUrls';
 import {
   FRONT_PAGE,
   STORY_PAGE,
   ARTICLE_PAGE,
   CORRESPONDENT_STORY_PAGE,
-} from '#app/routes/utils/pageTypes';
+  HOME_PAGE,
+} from '../../routes/utils/pageTypes';
 import { render, act } from '../react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import MostRead from '.';
-import { setFreshPromoTimestamp } from './utilities/testHelpers';
-import { PageTypes, Services, Variants } from '#app/models/types/global';
+import { PageTypes, Services, Variants } from '../../models/types/global';
+import Canonical from './Canonical';
+import Amp from './Amp';
+import { MostReadData } from './types';
+
+jest.mock('./Canonical');
+jest.mock('./Amp');
 
 interface MostReadProps {
   isAmp: boolean;
@@ -24,6 +28,7 @@ interface MostReadProps {
   mostReadToggle: boolean;
   serverRenderOnAmp: boolean;
   pageType?: PageTypes;
+  data?: MostReadData;
 }
 
 const MostReadWithContext = ({
@@ -32,7 +37,8 @@ const MostReadWithContext = ({
   variant = null,
   mostReadToggle,
   serverRenderOnAmp,
-  pageType = FRONT_PAGE,
+  pageType = HOME_PAGE,
+  data,
 }: MostReadProps) => (
   <ToggleContextProvider
     toggles={{
@@ -51,27 +57,27 @@ const MostReadWithContext = ({
       variant={variant}
     >
       <ServiceContextProvider service={service} variant={variant}>
-        <MostRead serverRenderOnAmp={serverRenderOnAmp} />
+        <MostRead serverRenderOnAmp={serverRenderOnAmp} data={data} />
       </ServiceContextProvider>
     </RequestContextProvider>
   </ToggleContextProvider>
 );
 
-const shouldRenderMostRead = (container?: HTMLElement) =>
-  expect(container?.querySelector('ol')).toBeInTheDocument();
+const shouldRenderMostRead = () => expect(Canonical).toHaveBeenCalled();
 
-const shouldNotRenderMostRead = (container?: HTMLElement) =>
-  expect(container?.querySelector('ol')).not.toBeInTheDocument();
+const shouldNotRenderMostRead = () => expect(Canonical).not.toHaveBeenCalled();
 
-const shouldRenderMostReadAmp = (container?: HTMLElement) =>
-  expect(container?.querySelector('amp-script')).toBeInTheDocument();
-const shouldNotRenderMostReadAmp = (container?: HTMLElement) =>
-  expect(container?.querySelector('amp-script')).not.toBeInTheDocument();
+const shouldRenderMostReadAmp = () => expect(Amp).toHaveBeenCalled();
+
+const shouldNotRenderMostReadAmp = () => expect(Amp).not.toHaveBeenCalled();
 
 describe('MostRead', () => {
   beforeEach(() => {
-    fetchMock.restore();
+    jest.resetAllMocks();
+    jest.clearAllMocks();
+    jest.restoreAllMocks();
   });
+
   describe('Canonical', () => {
     [
       {
@@ -81,7 +87,7 @@ describe('MostRead', () => {
         isAmp: false,
         variant: null,
         renderExpectation: shouldRenderMostRead,
-        dataResponse: setFreshPromoTimestamp(pidginMostReadData),
+        dataResponse: pidginMostReadData,
         serverRenderOnAmp: false,
       },
       {
@@ -91,7 +97,7 @@ describe('MostRead', () => {
         isAmp: false,
         variant: 'lat',
         renderExpectation: shouldRenderMostRead,
-        dataResponse: setFreshPromoTimestamp(serbianLatMostReadData),
+        dataResponse: serbianLatMostReadData,
         serverRenderOnAmp: false,
       },
       {
@@ -101,12 +107,12 @@ describe('MostRead', () => {
         isAmp: false,
         variant: null,
         renderExpectation: shouldNotRenderMostRead,
-        dataResponse: setFreshPromoTimestamp(pidginMostReadData),
+        dataResponse: pidginMostReadData,
         serverRenderOnAmp: false,
       },
       {
-        description: 'should not render most read for archive',
-        service: 'archive',
+        description: 'should not render most read when data is null',
+        service: 'pidgin',
         mostReadToggle: true,
         isAmp: false,
         variant: null,
@@ -116,13 +122,13 @@ describe('MostRead', () => {
       },
       {
         description:
-          'should render most read on amp pages when initialData is passed and serverRenderOnAmp is true',
+          'should render most read when initialData is passed and serverRenderOnAmp is true',
         service: 'pidgin',
         mostReadToggle: true,
         isAmp: true,
         variant: null,
         renderExpectation: shouldRenderMostRead,
-        dataResponse: setFreshPromoTimestamp(pidginMostReadData),
+        dataResponse: pidginMostReadData,
         serverRenderOnAmp: true,
       },
     ].forEach(
@@ -137,26 +143,21 @@ describe('MostRead', () => {
         serverRenderOnAmp,
       }) => {
         it(description, async () => {
-          fetchMock.mock(
-            getMostReadEndpoint({ service, variant }),
-            // @ts-expect-error some responses are null
-            dataResponse,
-          );
-
-          let container;
           await act(async () => {
-            container = render(
+            render(
               <MostReadWithContext
                 service={service as Services}
                 mostReadToggle={mostReadToggle}
                 isAmp={isAmp}
                 variant={variant as Variants}
                 serverRenderOnAmp={serverRenderOnAmp}
+                // @ts-expect-error some responses are null
+                data={dataResponse}
               />,
-            ).container;
+            );
           });
 
-          renderExpectation(container);
+          renderExpectation();
         });
       },
     );
@@ -223,6 +224,16 @@ describe('MostRead', () => {
         renderExpectation: shouldNotRenderMostReadAmp,
         serverRenderOnAmp: false,
         pageType: FRONT_PAGE,
+      },
+      {
+        description: 'should not render most read amp on home page',
+        service: 'mundo',
+        mostReadToggle: true,
+        isAmp: true,
+        variant: null,
+        renderExpectation: shouldRenderMostReadAmp,
+        serverRenderOnAmp: false,
+        pageType: HOME_PAGE,
       },
       {
         description:
