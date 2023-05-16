@@ -3,7 +3,6 @@ export default ({ service, pageType }) => {
     // eslint-disable-next-line no-unused-vars
     let livePageData;
     before(() => {
-      const env = Cypress.env('APP_ENV');
       cy.getPageData({
         service,
         pageType: 'live',

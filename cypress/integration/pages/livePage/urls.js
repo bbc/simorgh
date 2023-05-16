@@ -1,7 +1,7 @@
 const urls = [
   {
     service: 'pidgin',
-    localNext: '/pidgin/new_live/c7p765ynk9qt',
+    localNext: null,
     test: '/pidgin/new_live/c7p765ynk9qt',
     live: null,
   },
