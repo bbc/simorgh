@@ -116,6 +116,11 @@ export const StoryPage1ColumnSmall = ({ service, variant }: Props) => (
   />
 );
 
-export const Japanese1ColumnDefault = ({ variant }: Props) => (
-  <Component service="japanese" columnLayout="oneColumn" variant={variant} />
+export const Japanese1ColumnDefault = ({ variant, size }: Props) => (
+  <Component
+    service="japanese"
+    columnLayout="oneColumn"
+    variant={variant}
+    size={size}
+  />
 );
