@@ -9,16 +9,33 @@ import {
 } from '../../utilities/gridProps';
 import {
   ColumnLayout,
+  Direction,
   MostReadItemProps,
   MostReadLinkProps,
+  Size,
 } from '../../types';
 import Grid from '../../../../legacy/components/Grid';
 
 export const getParentColumns = (columnLayout: ColumnLayout) => {
-  if (columnLayout !== 'oneColumn') {
-    return mostReadListGridProps(columnLayout).columns;
+  return columnLayout !== 'oneColumn'
+    ? mostReadListGridProps(columnLayout).columns
+    : null;
+};
+
+const getItemCss = ({ dir, size }: { dir: Direction; size: Size }) => {
+  const itemCss = [];
+
+  if (size === 'small') {
+    itemCss.push(styles.smallPaddingTop);
+    itemCss.push(dir === 'ltr' ? styles.smallItemLtr : styles.smallItemRtl);
+  } else {
+    itemCss.push(styles.defaultPaddingTop);
+    itemCss.push(styles.defaultItemPadding);
   }
-  return null;
+
+  itemCss.push(dir === 'ltr' ? styles.gridPaddingLtr : styles.gridPaddingRtl);
+
+  return itemCss;
 };
 
 export const MostReadLink = ({
@@ -31,19 +48,8 @@ export const MostReadLink = ({
 }: PropsWithChildren<MostReadLinkProps>) => {
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
 
-  const itemCss = [];
-  itemCss.push(dir === 'ltr' ? styles.gridPaddingLtr : styles.gridPaddingRtl);
-
-  if (size === 'small') {
-    itemCss.push(styles.smallPaddingTop);
-    itemCss.push(dir === 'ltr' ? styles.smallItemLtr : styles.smallItemRtl);
-  } else {
-    itemCss.push(styles.defaultPaddingTop);
-    itemCss.push(styles.defaultItemPadding);
-  }
-
   return (
-    <div css={itemCss} dir={dir}>
+    <div css={getItemCss({ dir, size })} dir={dir}>
       <a
         css={[styles.link, size === 'default' && styles.defaultLink]}
         href={href}
