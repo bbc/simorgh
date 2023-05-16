@@ -7,6 +7,7 @@ import Amp from './Amp';
 import { ColumnLayout, Size, MostReadData } from './types';
 import MostReadSection from './Section';
 import MostReadSectionLabel from './Label';
+import { WHITE } from '../ThemeProvider/palette';
 
 const blockLevelEventTrackingData = {
   componentName: 'most-read',
@@ -21,6 +22,7 @@ interface MostReadProps {
   serverRenderOnAmp?: boolean;
   endpoint?: string;
   mobileDivider?: boolean;
+  backgroundColour?: string;
 }
 
 const MostRead = ({
@@ -30,6 +32,7 @@ const MostRead = ({
   serverRenderOnAmp = false,
   endpoint,
   mobileDivider,
+  backgroundColour = WHITE,
 }: MostReadProps) => {
   const { isAmp, pageType } = useContext(RequestContext);
   const {
@@ -49,7 +52,10 @@ const MostRead = ({
   const AmpMostRead = () =>
     !serverRenderOnAmp && mostReadAmpPageTypes.includes(pageType) ? (
       <MostReadSection>
-        <MostReadSectionLabel mobileDivider={mobileDivider} />
+        <MostReadSectionLabel
+          mobileDivider={mobileDivider}
+          backgroundColor={backgroundColour}
+        />
         <Amp
           endpoint={`${process.env.SIMORGH_MOST_READ_CDN_URL}${endpoint}`}
           size={size}
@@ -61,7 +67,10 @@ const MostRead = ({
   const CanonicalMostRead = () =>
     data ? (
       <MostReadSection>
-        <MostReadSectionLabel mobileDivider={mobileDivider} />
+        <MostReadSectionLabel
+          mobileDivider={mobileDivider}
+          backgroundColor={backgroundColour}
+        />
         <Canonical
           data={data}
           columnLayout={columnLayout}
