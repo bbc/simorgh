@@ -14,7 +14,7 @@ import Subheading from './Subhead';
 import getComponentName, { COMPONENT_NAMES } from './getComponentName';
 import MessageBanner from '../MessageBanner';
 import idSanitiser from '../../lib/utilities/idSanitiser';
-import MostReadCanonical from '../MostRead/Canonical';
+import MostRead from '../MostRead';
 
 const {
   SIMPLE_CURATION_GRID,
@@ -75,7 +75,7 @@ const Curation = ({
           <Subheading id="most-read" link="/kyrgyz/popular/read">
             Most Read
           </Subheading>
-          <MostReadCanonical data={mostRead} size="default" />;
+          <MostRead data={mostRead} columnLayout="twoColumn" />
         </>
       );
     case SIMPLE_CURATION_GRID:

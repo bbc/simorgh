@@ -3,13 +3,8 @@ import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import Canonical from './Canonical';
-import AmpMostRead from './Amp';
-import {
-  ColumnLayout,
-  CPSMostReadRecord,
-  OptimoMostReadRecord,
-  Size,
-} from './types';
+import Amp from './Amp';
+import { ColumnLayout, Size, MostReadData } from './types';
 
 const blockLevelEventTrackingData = {
   componentName: 'most-read',
@@ -17,12 +12,8 @@ const blockLevelEventTrackingData = {
 
 const mostReadAmpPageTypes = ['STY', 'CSP', 'article'];
 
-export interface InitialData {
-  lastRecordTimeStamp: string;
-  records: CPSMostReadRecord | OptimoMostReadRecord;
-}
 interface MostReadProps {
-  initialData?: InitialData;
+  data?: MostReadData;
   columnLayout?: ColumnLayout;
   size?: Size;
   wrapper?: React.ElementType;
@@ -31,7 +22,7 @@ interface MostReadProps {
 }
 
 const MostRead = ({
-  initialData,
+  data,
   columnLayout = 'multiColumn',
   size = 'default',
   wrapper,
@@ -56,12 +47,17 @@ const MostRead = ({
   // We also want to render most read on AMP for the "/popular/read" pages
   if (isAmp && !serverRenderOnAmp && mostReadAmpPageTypes.includes(pageType)) {
     const mostReadUrl = `${process.env.SIMORGH_MOST_READ_CDN_URL}${endpoint}`;
-    return <AmpMostRead endpoint={mostReadUrl} size={size} wrapper={wrapper} />;
+    return <Amp endpoint={mostReadUrl} size={size} wrapper={wrapper} />;
+  }
+
+  // Do not render the component on canonical if data is null
+  if (!data) {
+    return null;
   }
 
   return (
     <Canonical
-      initialData={initialData as InitialData}
+      data={data}
       wrapper={wrapper}
       columnLayout={columnLayout}
       size={size}
