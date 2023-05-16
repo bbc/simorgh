@@ -57,6 +57,7 @@ describe('MostReadList', () => {
           service: 'news',
           dir: 'ltr',
           size: 'default',
+          columnLayout: 'oneColumn',
         })}
       </MostReadList>,
       { service: 'news' },
@@ -72,6 +73,7 @@ describe('MostReadList', () => {
           service: 'news',
           dir: 'ltr',
           size: 'default',
+          columnLayout: 'twoColumn',
         })}
       </MostReadList>,
       { service: 'news' },
@@ -87,6 +89,7 @@ describe('MostReadList', () => {
           service: 'news',
           dir: 'ltr',
           size: 'default',
+          columnLayout: 'multiColumn',
         })}
       </MostReadList>,
       { service: 'news' },
