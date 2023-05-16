@@ -14,7 +14,6 @@ import MostReadRank, { serviceNumerals } from '../Canonical/Rank';
 import generateCSPHash from '../utilities/generateCSPHash';
 import { Services } from '../../../models/types/global';
 import { Size, Direction } from '../types';
-import { TypographyScript } from '../../../models/types/theming';
 import styles from './index.styles';
 
 const rankTranslationScript = (endpoint: string, service: Services) => {
@@ -65,7 +64,6 @@ const AmpMostRead = ({
 }: AmpMostReadProps) => {
   const {
     service,
-    script,
     dir,
     mostRead: { numberOfItems },
     translations,
@@ -80,7 +78,6 @@ const AmpMostRead = ({
   );
 
   const direction = dir as Direction;
-  const fontScript = script as TypographyScript;
 
   return (
     <amp-script id="dataFunctions" script="local-script">
@@ -126,7 +123,6 @@ const AmpMostRead = ({
             <MostReadItemWrapper dir={direction} columnLayout="oneColumn">
               <MostReadRank
                 service={service}
-                script={fontScript}
                 numberOfItems={numberOfItems}
                 listIndex="{{rankTranslation}}"
                 dir={direction}
@@ -137,7 +133,6 @@ const AmpMostRead = ({
               <MostReadLink
                 dir={direction}
                 service={service}
-                script={fontScript}
                 title="{{promo.headlines.shortHeadline}}"
                 href="{{promo.locators.assetUri}}"
                 size={size}
