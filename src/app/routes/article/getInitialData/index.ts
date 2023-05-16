@@ -1,28 +1,17 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import { Agent } from 'https';
-import Url from 'url-parse';
 import getAdditionalPageData from '#app/routes/cpsAsset/utils/getAdditionalPageData';
 import getEnvironment from '#app/routes/utils/getEnvironment';
 import nodeLogger from '../../../lib/logger.node';
-import { getUrlPath } from '../../../lib/utilities/urlParser';
 import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
 import fetchPageData from '../../utils/fetchPageData';
+import constructPageFetchUrl from '../../utils/constructPageFetchUrl';
+import handleError from '../../utils/handleError';
 import { Services, Variants } from '../../../models/types/global';
 import getOnwardsPageData from '../utils/getOnwardsData';
 import { advertisingAllowed, isSfv } from '../utils/paramChecks';
 
 const logger = nodeLogger(__filename);
-
-interface BFFError extends Error {
-  status: number;
-}
-
-const handleError = (message: string, status: number) => {
-  const error = new Error(message) as BFFError;
-  error.status = status;
-
-  return error;
-};
 
 type Props = {
   getAgent: () => Promise<Agent>;
@@ -47,23 +36,15 @@ export default async ({
 
     const agent = !isLocal ? await getAgent() : null;
 
-    let fetchUrl = Url(process.env.BFF_PATH as string).set('query', {
-      id: pathname,
-      service,
-      ...(variant && {
-        variant,
-      }),
+    const fetchUrl = constructPageFetchUrl({
+      pathname,
       pageType,
-      ...(isCaf && {
-        isCaf,
-      }),
+      service,
+      variant,
+      isCaf,
     });
 
     const optHeaders = { 'ctx-service-env': env };
-
-    if (isLocal) {
-      fetchUrl = Url(getUrlPath(pathname));
-    }
 
     // @ts-ignore - Ignore fetchPageData argument types
     // eslint-disable-next-line prefer-const
