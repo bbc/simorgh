@@ -15,7 +15,6 @@ const MostReadList = ({
   columnLayout = 'multiColumn',
   children,
 }: PropsWithChildren<MostReadBaseProps>) => {
-  const role = columnLayout === 'oneColumn' ? 'list' : null;
   return (
     // @ts-expect-error: Legacy grid expects `children` to be passed as props. However, due to coding best practices, we must nest children between the opening and closing tags
     <Grid
@@ -29,7 +28,7 @@ const MostReadList = ({
       dir={dir}
       numberOfItems={numberOfItems}
       as="ol"
-      role={role}
+      role="list"
     >
       {children}
     </Grid>
