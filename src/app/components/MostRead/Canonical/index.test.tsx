@@ -7,7 +7,7 @@ import ukrainianMostReadData from '../../../../../data/ukrainian/mostRead/index.
 import { ToggleContextProvider } from '../../../contexts/ToggleContext';
 import * as viewTracking from '../../../hooks/useViewTracker';
 import * as clickTracking from '../../../hooks/useClickTrackerHandler';
-import { render, act } from '../../react-testing-library-with-providers';
+import { render } from '../../react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import CanonicalMostRead from '.';
 import { Services } from '../../../models/types/global';
