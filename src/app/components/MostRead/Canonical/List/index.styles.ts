@@ -1,4 +1,5 @@
 import { css, Theme } from '@emotion/react';
+import { GROUP_3_MIN_WIDTH } from '../../../ThemeProvider/mediaQueries';
 
 const styles = {
   oneColumn: css({
@@ -8,12 +9,7 @@ const styles = {
     gridAutoFlow: 'column',
   }),
 
-  twoColumn: ({ mq }: Theme) =>
-    css({
-      [mq.GROUP_3_MIN_WIDTH]: {
-        gridTemplateRows: 'auto',
-      },
-    }),
+  twoColumn: css({}),
 
   multiColumn: ({ mq }: Theme) =>
     css({
@@ -28,7 +24,9 @@ export const gridTemplateRows = (numberOfItems: number) =>
 
 export const multiColumnGridTemplateRows = (numberOfItems: number) => {
   css({
-    gridTemplateRows: `repeat(${Math.ceil(numberOfItems / 2)}, auto)`,
+    [GROUP_3_MIN_WIDTH]: {
+      gridTemplateRows: `repeat(${Math.ceil(numberOfItems / 2)}, auto)`,
+    },
   });
 };
 
