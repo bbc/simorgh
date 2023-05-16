@@ -43,7 +43,7 @@ export const MostReadLink = ({
   }
 
   return (
-    <div css={itemCss}>
+    <div css={itemCss} dir={dir}>
       <a
         css={[styles.link, size === 'default' && styles.defaultLink]}
         href={href}
@@ -62,7 +62,7 @@ export const MostReadItemWrapper = React.forwardRef(
     { dir, children, columnLayout }: PropsWithChildren<MostReadItemProps>,
     ref,
   ) => (
-    // @ts-expect-error will review and fix this
+    // @ts-expect-error: Legacy grid expects `children` to be passed as props. However, due to coding best practices, we must nest children between the opening and closing tags
     <Grid
       css={styles.grid}
       {...mostReadItemGridProps(columnLayout)}

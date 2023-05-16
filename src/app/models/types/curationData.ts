@@ -1,3 +1,5 @@
+import { MostReadData } from '../../components/MostRead/types';
+
 export interface Summary {
   imageUrl?: string;
   link?: string;
@@ -30,10 +32,6 @@ export type VisualStyle = keyof typeof VISUAL_STYLE;
 
 export type VisualProminence = keyof typeof VISUAL_PROMINENCE;
 
-interface MostRead {
-  records: { id: string; href: string; title: string; timestamp: number }[];
-}
-
 export interface CurationProps {
   visualStyle: VisualStyle;
   visualProminence: VisualProminence;
@@ -44,7 +42,7 @@ export interface CurationProps {
   position?: number;
   topStoriesTitle?: string;
   curationLength?: number;
-  mostRead?: MostRead;
+  mostRead?: MostReadData;
 }
 
 export interface CurationData {
@@ -58,5 +56,5 @@ export interface CurationData {
   activePage?: number;
   pageCount?: number;
   curationType?: string;
-  mostRead?: MostRead;
+  mostRead?: MostReadData;
 }

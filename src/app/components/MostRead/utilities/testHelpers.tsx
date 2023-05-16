@@ -1,15 +1,14 @@
-/* eslint-disable react/prop-types */
 import React, { PropsWithChildren } from 'react';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import { TEXT_VARIANTS } from '#psammead/psammead-storybook-helpers/src';
-import Timestamp from '#psammead/psammead-timestamp/src';
+import { TEXT_VARIANTS } from '../../../legacy/psammead/psammead-storybook-helpers/src';
+import Timestamp from '../../../legacy/psammead/psammead-timestamp/src';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import latin from '../../ThemeProvider/fontScripts/latin';
 import { MostReadItemWrapper, MostReadLink } from '../Canonical/Item';
 import MostReadRank from '../Canonical/Rank';
 import { Services } from '../../../models/types/global';
 import { TypographyScript } from '../../../models/types/theming';
-import { Direction, MostReadBaseProps, Size } from '../types';
+import { Direction, MostReadBaseProps, MostReadData, Size } from '../types';
 
 const lastUpdated = ({
   script,
@@ -46,7 +45,7 @@ export const getItem = ({
   withTimestamp = false,
 }: {
   service: Services;
-  withTimestamp: boolean;
+  withTimestamp?: boolean;
 }) => {
   const baseUrl = 'https://www.bbc.com';
   // @ts-expect-error Text variants not required for non world service languages
@@ -108,4 +107,36 @@ export const getItemWrapperArray = ({
     );
   }
   return <WithContexts>{itemWrapperArray}</WithContexts>;
+};
+
+export const setStalePromoTimestamp = (mostReadData: MostReadData) => {
+  const oldTimestamp = 864691200; // 27/05/1997
+  const updatedMostReadData = { ...mostReadData };
+
+  // set first promo to have an old timestamp
+  updatedMostReadData.records[0].promo.timestamp = oldTimestamp;
+
+  return updatedMostReadData;
+};
+
+export const setFreshPromoTimestamp = (mostReadData: MostReadData) => {
+  const freshDate = new Date();
+  const updatedMostReadData = { ...mostReadData };
+  const { records } = updatedMostReadData;
+
+  // Updates first 10 promos to have a fresh date
+  for (let i = 0; i < 10; i += 1) {
+    if (records[i]) {
+      updatedMostReadData.records[i].promo.timestamp = freshDate.getTime();
+    }
+  }
+
+  return updatedMostReadData;
+};
+
+export const setStaleLastRecordTimeStamp = (mostReadData: MostReadData) => {
+  const updatedMostReadData = { ...mostReadData };
+  updatedMostReadData.lastRecordTimeStamp = '2019-11-06T16:28:00Z';
+
+  return updatedMostReadData;
 };

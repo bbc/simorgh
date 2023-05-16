@@ -1,4 +1,4 @@
-import { getType } from '#containers/ChartbeatAnalytics/utils';
+import { getType } from '../../../../../components/ChartbeatAnalytics/utils';
 import {
   mediaPlayerMetadata,
   getThumbnailUri,

@@ -78,8 +78,8 @@ const styles = {
 
   defaultItemPadding: ({ spacings }: Theme) =>
     css({
-      paddingLeft: `${spacings.FULL}rem`,
-      paddingRight: `${spacings.FULL}rem`,
+      paddingLeft: `${spacings.DOUBLE}rem`,
+      paddingRight: `${spacings.DOUBLE}rem`,
     }),
 
   gridPaddingLtr: () =>

@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import { Agent } from 'https';
-import Url from 'url-parse';
 import getEnvironment from '#app/routes/utils/getEnvironment';
 import nodeLogger from '../../../lib/logger.node';
 import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
 import fetchPageData from '../../utils/fetchPageData';
+import constructPageFetchUrl from '../../utils/constructPageFetchUrl';
 import { Services } from '../../../models/types/global';
 import HOME_PAGE_CONFIG from './page-config';
 
@@ -15,7 +15,7 @@ type Props = {
   getAgent: () => Promise<Agent>;
   service: Services;
   path: string;
-  pageType: string;
+  pageType: 'home';
 };
 
 export default async ({
@@ -29,17 +29,12 @@ export default async ({
     const isLocal = !env || env === 'local';
 
     const agent = isLocal ? null : await getAgent();
-    const id = isLocal ? null : HOME_PAGE_CONFIG[service][env];
 
-    let fetchUrl = Url(process.env.BFF_PATH as string).set('query', {
-      id,
-      service,
+    const fetchUrl = constructPageFetchUrl({
+      pathname,
       pageType,
+      service,
     });
-
-    if (isLocal) {
-      fetchUrl = Url(`/${service}/tipohome`);
-    }
 
     const optHeaders = { 'ctx-service-env': env };
 
@@ -53,55 +48,7 @@ export default async ({
       data: { title, description, curations },
     } = json;
 
-    // TODO: Move this logic to the BFF
-    const transformedCurations = curations.map(
-      (curation: { mostRead: any }) => {
-        const { mostRead } = curation;
-
-        if (mostRead) {
-          const records = mostRead.records?.map(
-            (record: {
-              id: any;
-              rank: any;
-              promo: {
-                headlines: { headline: any };
-                locators: { assetUri: any };
-                timestamp: any;
-              };
-            }) => {
-              const {
-                id: recordId,
-                rank,
-                promo: {
-                  headlines: { headline },
-                  locators: { assetUri: href },
-                  timestamp,
-                },
-              } = record;
-
-              return {
-                id: recordId,
-                rank,
-                title: headline,
-                href,
-                timestamp,
-              };
-            },
-          );
-
-          return {
-            ...curation,
-            summaries: [],
-            mostRead: {
-              ...mostRead,
-              records,
-            },
-          };
-        }
-
-        return curation;
-      },
-    );
+    const id = isLocal ? null : HOME_PAGE_CONFIG[service][env];
 
     return {
       status,
@@ -109,7 +56,7 @@ export default async ({
         id,
         title,
         pageType,
-        curations: transformedCurations,
+        curations,
         description,
       },
     };
