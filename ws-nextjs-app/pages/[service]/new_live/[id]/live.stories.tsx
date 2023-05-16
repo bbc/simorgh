@@ -5,6 +5,8 @@ import Live from './LivePageLayout';
 const mockPageData = {
   pageCount: 10,
   activePage: 1,
+  title: 'Live Page Title',
+  description: 'Live page description',
   someResponse: {
     block: 'Its a block',
   },
