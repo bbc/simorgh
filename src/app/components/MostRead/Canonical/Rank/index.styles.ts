@@ -43,7 +43,7 @@ interface Group3TwoColumnProps extends HelperFunctionProps {
 }
 
 interface MultiColumnProps extends OneColumnProps {
-  listIndex: number;
+  listIndex: number | string;
 }
 
 /**
