@@ -28,7 +28,7 @@ export const serviceNumerals = (service: Services) => {
 };
 
 interface ColumnCssProps {
-  listIndex: number;
+  listIndex: number | string;
   numberOfItems: number;
   service: Services;
   size: Size;
@@ -65,6 +65,7 @@ const MostReadRank = ({
   columnLayout = 'multiColumn',
   size,
   isAmp,
+  dir,
 }: MostReadRankProps) => {
   const numerals = serviceNumerals(service);
   const rank = isAmp ? listIndex : numerals[listIndex];
@@ -77,7 +78,7 @@ const MostReadRank = ({
   });
 
   return (
-    <div css={columnCss}>
+    <div css={columnCss} dir={dir}>
       <span
         css={[
           styles.span,
