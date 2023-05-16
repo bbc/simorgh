@@ -74,9 +74,9 @@ interface GetItemWrapperArrayProps extends MostReadBaseProps {
 export const getItemWrapperArray = ({
   numberOfItems,
   service,
-  dir,
+  dir = 'ltr',
   withTimestamp = false,
-  columnLayout = 'oneColumn',
+  columnLayout = 'multiColumn',
   size,
   isAmp = false,
 }: GetItemWrapperArrayProps) => {
