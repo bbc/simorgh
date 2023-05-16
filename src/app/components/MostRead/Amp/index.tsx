@@ -52,11 +52,11 @@ const rankTranslationScript = (endpoint: string, service: Services) => {
 };
 
 interface AmpMostReadProps {
-  endpoint?: string;
+  endpoint: string;
   size?: Size;
 }
 
-const AmpMostRead = ({ endpoint = '', size = 'default' }: AmpMostReadProps) => {
+const AmpMostRead = ({ endpoint, size = 'default' }: AmpMostReadProps) => {
   const {
     service,
     dir,

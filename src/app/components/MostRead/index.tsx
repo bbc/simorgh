@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
+import { getMostReadEndpoint } from '#app/lib/utilities/getUrlHelpers/getMostReadUrls';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import Canonical from './Canonical';
 import Amp from './Amp';
@@ -19,7 +20,6 @@ interface MostReadProps {
   data?: MostReadData;
   columnLayout?: ColumnLayout;
   size?: Size;
-  endpoint?: string;
   mobileDivider?: boolean;
   backgroundColour?: string;
 }
@@ -28,12 +28,12 @@ const MostRead = ({
   data,
   columnLayout = 'multiColumn',
   size = 'default',
-  endpoint,
   mobileDivider = false,
   backgroundColour = WHITE,
 }: MostReadProps) => {
-  const { isAmp, pageType } = useContext(RequestContext);
+  const { isAmp, pageType, variant } = useContext(RequestContext);
   const {
+    service,
     mostRead: { hasMostRead },
   } = useContext(ServiceContext);
 
@@ -45,6 +45,11 @@ const MostRead = ({
   if (!mostReadToggleEnabled) {
     return null;
   }
+
+  const endpoint = getMostReadEndpoint({
+    service,
+    variant,
+  });
 
   // We render amp on ONLY STY, CSP and ARTICLE pages using amp-list.
   const AmpMostRead = () =>
