@@ -26,6 +26,7 @@ export default defineConfig({
       return config;
     },
     env: {
+      isNext: true,
       live: {
         baseUrl: 'https://www.bbc.com',
       },
