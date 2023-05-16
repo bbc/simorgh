@@ -1,36 +1,19 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 import fetchMock from 'fetch-mock';
-import { ToggleContextProvider } from '#contexts/ToggleContext';
-import { STORY_PAGE } from '#app/routes/utils/pageTypes';
-import {
-  render,
-  act,
-} from '../../../components/react-testing-library-with-providers';
+import mundo from '#app/lib/config/services/mundo';
+import { render, act } from '../../react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import AmpMostRead from '.';
+import { Services } from '../../../models/types/global';
+import mundoMostReadResponse from '../../../../../data/mundo/mostRead/index.json';
 
-const MostReadAmpWithContext = ({
-  service,
-  endpoint,
-  initialData,
-  wrapper,
-  pageLang,
-  eventTrackingData,
-}) => (
-  <ServiceContextProvider service={service} pageLang={pageLang}>
-    <ToggleContextProvider
-      toggles={{
-        eventTracking: { enabled: true },
-      }}
-    >
-      <AmpMostRead
-        endpoint={endpoint}
-        initialData={initialData}
-        wrapper={wrapper}
-        eventTrackingData={eventTrackingData}
-      />
-    </ToggleContextProvider>
+interface MostReadAmpWithContextProps {
+  service: Services;
+}
+
+const MostReadAmpWithContext = ({ service }: MostReadAmpWithContextProps) => (
+  <ServiceContextProvider service={service}>
+    <AmpMostRead />
   </ServiceContextProvider>
 );
 
@@ -40,19 +23,29 @@ describe('AmpMostRead', () => {
   });
 
   // Testing is done in cypress as jest dom does not support/run web workers which run the amp-scripts.
+
+  it('should render as expected', async () => {
+    fetchMock.mock('localhost:7080/mundo/mostread.json', mundoMostReadResponse);
+
+    const { container } = render(<MostReadAmpWithContext service="mundo" />, {
+      service: 'mundo',
+    });
+
+    await act(async () => {
+      expect(
+        container.querySelector('amp-script amp-list li'),
+      ).toBeInTheDocument();
+      expect(container).toMatchSnapshot();
+    });
+  });
+
   it('should render fallback when fetch fails to load', async () => {
     fetchMock.mock('localhost:7080/mundo/mostread.json', {
       throws: 'failed fetch',
     });
 
     const { container, getByText } = render(
-      <MostReadAmpWithContext
-        service="mundo"
-        mostReadToggle
-        isAmp
-        variant={null}
-        pageType={STORY_PAGE}
-      />,
+      <MostReadAmpWithContext service="mundo" />,
     );
 
     await act(async () => {
@@ -76,13 +69,7 @@ describe('AmpMostRead', () => {
     });
 
     const { container, getByText } = render(
-      <MostReadAmpWithContext
-        service="mundo"
-        mostReadToggle
-        isAmp
-        variant={null}
-        pageType={STORY_PAGE}
-      />,
+      <MostReadAmpWithContext service="mundo" />,
     );
 
     await act(async () => {
@@ -105,13 +92,7 @@ describe('AmpMostRead', () => {
     });
 
     const { container, getByText } = render(
-      <MostReadAmpWithContext
-        service="mundo"
-        mostReadToggle
-        isAmp
-        variant={null}
-        pageType={STORY_PAGE}
-      />,
+      <MostReadAmpWithContext service="mundo" />,
     );
 
     await act(async () => {

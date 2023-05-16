@@ -10,7 +10,7 @@ const blockLevelEventTrackingData = {
   componentName: 'most-read',
 };
 
-const mostReadAmpPageTypes = ['STY', 'CSP', 'article'];
+const mostReadAmpPageTypes = ['STY', 'CSP', 'article', 'home'];
 
 interface MostReadProps {
   data?: MostReadData;
