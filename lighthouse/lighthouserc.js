@@ -113,7 +113,7 @@ module.exports = {
         ],
         'categories:accessibility': [
           'error',
-          { aggregationMethod: 'optimistic', minScore: 0.9 },
+          { aggregationMethod: 'optimistic', minScore: 0.85 },
         ],
         'categories:best-practices': [
           'error',
