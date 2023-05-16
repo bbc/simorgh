@@ -29,7 +29,7 @@ const MostRead = ({
   columnLayout = 'multiColumn',
   size = 'default',
   endpoint,
-  mobileDivider,
+  mobileDivider = false,
   backgroundColour = WHITE,
 }: MostReadProps) => {
   const { isAmp, pageType } = useContext(RequestContext);
