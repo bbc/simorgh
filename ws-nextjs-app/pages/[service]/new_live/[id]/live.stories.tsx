@@ -1,6 +1,7 @@
 import React from 'react';
 import PageLayoutWrapper from '#app/components/PageLayoutWrapper';
 import Live from './LivePageLayout';
+import postFixture from '../../../../fixtures/postFixture.json';
 
 const mockPageData = {
   pageCount: 10,
@@ -10,6 +11,7 @@ const mockPageData = {
   someResponse: {
     block: 'Its a block',
   },
+  posts: postFixture,
 };
 
 const Component = () => (
