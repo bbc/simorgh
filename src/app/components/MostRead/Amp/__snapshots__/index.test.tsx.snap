@@ -252,6 +252,7 @@ exports[`AmpMostRead should render as expected 1`] = `
           >
             <div
               class="emotion-4"
+              dir="ltr"
             >
               <span
                 class="emotion-5"
