@@ -58,56 +58,25 @@ export default {
   decorators: [withKnobs, withServicesKnob({ defaultService: 'pidgin' })],
 };
 
-export const HomePage2ColumnsDefault = ({ service, variant, size }: Props) => (
+export const HomePage2Columns = ({ service, variant }: Props) => (
   <Component
     service={service}
     variant={variant}
-    size={size}
+    size="default"
     columnLayout="twoColumn"
   />
 );
 
-export const ArticlePage5ColumnsDefault = ({
-  service,
-  variant,
-  size,
-}: Props) => (
+export const ArticlePage5Columns = ({ service, variant }: Props) => (
   <Component
     service={service}
     variant={variant}
-    size={size}
+    size="default"
     columnLayout="multiColumn"
   />
 );
 
-export const StoryPage1ColumnDefault = ({ service, variant, size }: Props) => (
-  <Component
-    service={service}
-    variant={variant}
-    size={size}
-    columnLayout="oneColumn"
-  />
-);
-
-export const HomePage2ColumnsSmall = ({ service, variant }: Props) => (
-  <Component
-    service={service}
-    variant={variant}
-    size="small"
-    columnLayout="twoColumn"
-  />
-);
-
-export const ArticlePage5ColumnsSmall = ({ service, variant }: Props) => (
-  <Component
-    service={service}
-    variant={variant}
-    size="small"
-    columnLayout="multiColumn"
-  />
-);
-
-export const StoryPage1ColumnSmall = ({ service, variant }: Props) => (
+export const StoryPage1Column = ({ service, variant }: Props) => (
   <Component
     service={service}
     variant={variant}
@@ -116,11 +85,20 @@ export const StoryPage1ColumnSmall = ({ service, variant }: Props) => (
   />
 );
 
-export const Japanese1ColumnDefault = ({ variant, size }: Props) => (
+export const Japanese1Column = ({ variant }: Props) => (
   <Component
     service="japanese"
     columnLayout="oneColumn"
     variant={variant}
-    size={size}
+    size="default"
+  />
+);
+
+export const Arabic1Column = ({ variant }: Props) => (
+  <Component
+    service="arabic"
+    columnLayout="oneColumn"
+    variant={variant}
+    size="default"
   />
 );
