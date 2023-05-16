@@ -9,18 +9,30 @@ import Live from './LivePageLayout';
 const mockPageData = {
   pageCount: 10,
   activePage: 1,
+  title: 'Test Next.JS Page',
+  description: 'Test Next.JS Page Description',
   someResponse: {
     block: 'Its a block',
   },
 };
 
 describe('Live Page', () => {
-  it('renders the live page', async () => {
+  it('should render the live page title', async () => {
     await act(async () => {
       render(<Live pageData={mockPageData} />);
     });
 
     expect(screen.getByText('Test Next.JS Page')).toBeInTheDocument();
+  });
+
+  it('should render the live page description', async () => {
+    await act(async () => {
+      render(<Live pageData={mockPageData} />);
+    });
+
+    expect(
+      screen.getByText('Test Next.JS Page Description'),
+    ).toBeInTheDocument();
   });
 
   it('creates snapshot of the live page', async () => {
