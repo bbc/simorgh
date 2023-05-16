@@ -70,14 +70,7 @@ const Curation = ({
         />
       );
     case MOST_READ:
-      return (
-        <>
-          <Subheading id="most-read" link="/kyrgyz/popular/read">
-            Most Read
-          </Subheading>
-          <MostRead data={mostRead} columnLayout="twoColumn" />
-        </>
-      );
+      return <MostRead data={mostRead} columnLayout="twoColumn" />;
     case SIMPLE_CURATION_GRID:
     case HIERARCHICAL_CURATION_GRID:
     default:
