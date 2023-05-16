@@ -15,6 +15,7 @@ interface UrlConstructParams {
   service: Services;
   variant?: Variants;
   page?: string;
+  isCaf?: boolean;
 }
 
 const removeAmp = (path: string) => path.split('.')[0];
@@ -55,6 +56,7 @@ const constructPageFetchUrl = ({
   service,
   variant,
   page,
+  isCaf,
 }: UrlConstructParams) => {
   const env = getEnvironment(pathname);
   const isLocal = !env || env === 'local';
@@ -75,6 +77,9 @@ const constructPageFetchUrl = ({
     ...(page && {
       page,
     }),
+    ...(isCaf && {
+      isCaf,
+    }),
   };
 
   let fetchUrl = Url(process.env.BFF_PATH as string).set(
@@ -90,7 +95,7 @@ const constructPageFetchUrl = ({
         );
         break;
       case PAGE_TYPES.CPS_ASSET:
-        fetchUrl = Url(id);
+        fetchUrl = Url(id as string);
         break;
       case PAGE_TYPES.HOME:
         fetchUrl = Url(`/${service}/${id}`);
