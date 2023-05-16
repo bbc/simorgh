@@ -1,22 +1,23 @@
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
 import React, { useContext } from 'react';
-import { useTheme } from '@emotion/react';
 import { Helmet } from 'react-helmet';
-import { string, oneOf, elementType } from 'prop-types';
-import styled from '@emotion/styled';
 import {
   AMP_LIST_JS,
   AMP_MUSTACHE_JS,
   AMP_SCRIPT_JS,
 } from '#psammead/psammead-assets/src/amp-boilerplate';
-import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import pathOr from 'ramda/src/pathOr';
-import { getBodyCopy } from '#psammead/gel-foundations/src/typography';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { MostReadItemWrapper, MostReadLink } from '../Canonical/Item';
 import MostReadRank, { serviceNumerals } from '../Canonical/Rank';
-import generateCSPHash from '../utilities/generateCPSHash';
+import generateCSPHash from '../utilities/generateCSPHash';
+import { Services } from '../../../models/types/global';
+import { Size, Direction } from '../types';
+import { TypographyScript } from '../../../models/types/theming';
+import styles from './index.styles';
 
-const rankTranslationScript = (endpoint, service) => {
+const rankTranslationScript = (endpoint: string, service: Services) => {
   const translation = serviceNumerals(service);
   return `
   const translations = ${JSON.stringify(translation)}
@@ -51,7 +52,17 @@ const rankTranslationScript = (endpoint, service) => {
     exportFunction('getRemoteData', getRemoteData);`;
 };
 
-const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
+interface AmpMostReadProps {
+  endpoint?: string;
+  size?: Size;
+  wrapper?: React.ElementType;
+}
+
+const AmpMostRead = ({
+  endpoint = '',
+  size = 'default',
+  wrapper: Wrapper = React.Fragment,
+}: AmpMostReadProps) => {
   const {
     service,
     script,
@@ -62,23 +73,14 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
 
   const onlyinnerscript = rankTranslationScript(endpoint, service);
 
-  const {
-    palette: { SHADOW },
-  } = useTheme();
-
-  const FallbackText = styled.p`
-    ${() => getSansRegular(service)}
-    ${() => getBodyCopy(script)}
-    /* eslint-disable-next-line react/prop-types */
-    color: ${SHADOW};
-    margin: 0;
-  `;
-
   const fallbackText = pathOr(
     'Content is not available',
     ['socialEmbed', 'fallback', 'text'],
     translations,
   );
+
+  const direction = dir as Direction;
+  const fontScript = script as TypographyScript;
 
   return (
     <amp-script id="dataFunctions" script="local-script">
@@ -100,12 +102,12 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
           {AMP_SCRIPT_JS}
           <meta
             name="amp-script-src"
-            content={generateCSPHash(
-              onlyinnerscript,
-              'sha384',
-              'utf8',
-              'base64',
-            )}
+            content={generateCSPHash({
+              script: onlyinnerscript,
+              sha: 'sha384',
+              encoding: 'utf8',
+              base: 'base64',
+            })}
           />
         </Helmet>
         <amp-list
@@ -116,26 +118,26 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
           width="300"
           height="50"
         >
-          <FallbackText fallback="" service={service} script={script}>
+          <p css={styles.paragraph} fallback="">
             {fallbackText}
-          </FallbackText>
+          </p>
 
           <template type="amp-mustache">
-            <MostReadItemWrapper dir={dir} columnLayout="oneColumn">
+            <MostReadItemWrapper dir={direction} columnLayout="oneColumn">
               <MostReadRank
                 service={service}
-                script={script}
+                script={fontScript}
                 numberOfItems={numberOfItems}
                 listIndex="{{rankTranslation}}"
-                dir={dir}
+                dir={direction}
                 columnLayout="oneColumn"
                 size={size}
                 isAmp
               />
               <MostReadLink
-                dir={dir}
+                dir={direction}
                 service={service}
-                script={script}
+                script={fontScript}
                 title="{{promo.headlines.shortHeadline}}"
                 href="{{promo.locators.assetUri}}"
                 size={size}
@@ -146,18 +148,6 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
       </Wrapper>
     </amp-script>
   );
-};
-
-AmpMostRead.propTypes = {
-  endpoint: string,
-  size: oneOf(['default', 'small']),
-  wrapper: elementType,
-};
-
-AmpMostRead.defaultProps = {
-  endpoint: '',
-  size: 'default',
-  wrapper: React.Fragment,
 };
 
 export default AmpMostRead;

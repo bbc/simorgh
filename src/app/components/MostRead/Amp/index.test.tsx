@@ -6,8 +6,8 @@ import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import {
   render,
   act,
-} from '../../../../components/react-testing-library-with-providers';
-import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
+} from '../../../components/react-testing-library-with-providers';
+import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import AmpMostRead from '.';
 
 const MostReadAmpWithContext = ({
