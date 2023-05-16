@@ -1,5 +1,70 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`MostReadRank should render as expected when dir=ltr, service=bengali, listIndex=1, numberOfItems=5, size=default, columnLayout=oneColumn 1`] = `
+@media (max-width: 14.9375rem) {
+  .emotion-0 {
+    min-width: 1rem;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-0 {
+    min-width: 1rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    min-width: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    min-width: 1.5rem;
+  }
+}
+
+.emotion-1 {
+  font-family: "Noto Serif Bengali",Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  position: relative;
+  color: #B80000;
+  margin: 0;
+  padding: 0;
+  font-size: 2rem;
+  line-height: 2.25rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-1 {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-1 {
+    font-size: 3.1875rem;
+    line-height: 3.75rem;
+  }
+}
+
+<div>
+  <div
+    class="emotion-0"
+    dir="ltr"
+  >
+    <span
+      class="emotion-1"
+    >
+      ১
+    </span>
+  </div>
+</div>
+`;
+
 exports[`MostReadRank should render as expected when dir=ltr, service=japanese, listIndex=1, numberOfItems=5, size=default, columnLayout=oneColumn 1`] = `
 @media (max-width: 14.9375rem) {
   .emotion-0 {
@@ -25,28 +90,28 @@ exports[`MostReadRank should render as expected when dir=ltr, service=japanese, 
   }
 }
 
-.emotion-2 {
+.emotion-1 {
   font-family: "Hiragino Kaku Gothic Pro","ﾋﾗギﾉ角ゴPro W3","MS PGothic","MS UI Gothic",Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
-  font-size: 2rem;
-  line-height: 2.25rem;
+  font-weight: 400;
   position: relative;
   color: #B80000;
   margin: 0;
   padding: 0;
+  font-size: 2rem;
+  line-height: 2.25rem;
   letter-spacing: -0.25rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-2 {
+  .emotion-1 {
     font-size: 2.5rem;
     line-height: 2.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-2 {
+  .emotion-1 {
     font-size: 3.5rem;
     line-height: 3.75rem;
   }
@@ -54,11 +119,11 @@ exports[`MostReadRank should render as expected when dir=ltr, service=japanese, 
 
 <div>
   <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     dir="ltr"
   >
     <span
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     >
       1
     </span>
@@ -111,27 +176,27 @@ exports[`MostReadRank should render as expected when dir=ltr, service=pidgin, li
   }
 }
 
-.emotion-2 {
+.emotion-1 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
-  font-size: 2rem;
-  line-height: 2.25rem;
+  font-weight: 400;
   position: relative;
   color: #B80000;
   margin: 0;
   padding: 0;
+  font-size: 2rem;
+  line-height: 2.25rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-2 {
+  .emotion-1 {
     font-size: 2.5rem;
     line-height: 2.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-2 {
+  .emotion-1 {
     font-size: 3.5rem;
     line-height: 3.75rem;
   }
@@ -139,11 +204,11 @@ exports[`MostReadRank should render as expected when dir=ltr, service=pidgin, li
 
 <div>
   <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     dir="ltr"
   >
     <span
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     >
       1
     </span>
@@ -176,27 +241,27 @@ exports[`MostReadRank should render as expected when dir=ltr, service=pidgin, li
   }
 }
 
-.emotion-2 {
+.emotion-1 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
-  font-size: 2rem;
-  line-height: 2.25rem;
+  font-weight: 400;
   position: relative;
   color: #B80000;
   margin: 0;
   padding: 0;
+  font-size: 2rem;
+  line-height: 2.25rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-2 {
+  .emotion-1 {
     font-size: 2.5rem;
     line-height: 2.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-2 {
+  .emotion-1 {
     font-size: 3.5rem;
     line-height: 3.75rem;
   }
@@ -204,11 +269,11 @@ exports[`MostReadRank should render as expected when dir=ltr, service=pidgin, li
 
 <div>
   <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     dir="ltr"
   >
     <span
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     >
       1
     </span>
@@ -255,27 +320,27 @@ exports[`MostReadRank should render as expected when dir=ltr, service=pidgin, li
   }
 }
 
-.emotion-2 {
+.emotion-1 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
-  font-size: 2rem;
-  line-height: 2.25rem;
+  font-weight: 400;
   position: relative;
   color: #B80000;
   margin: 0;
   padding: 0;
+  font-size: 2rem;
+  line-height: 2.25rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-2 {
+  .emotion-1 {
     font-size: 2.5rem;
     line-height: 2.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-2 {
+  .emotion-1 {
     font-size: 3.5rem;
     line-height: 3.75rem;
   }
@@ -283,11 +348,11 @@ exports[`MostReadRank should render as expected when dir=ltr, service=pidgin, li
 
 <div>
   <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     dir="ltr"
   >
     <span
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     >
       1
     </span>
@@ -320,27 +385,27 @@ exports[`MostReadRank should render as expected when dir=ltr, service=pidgin, li
   }
 }
 
-.emotion-2 {
+.emotion-1 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
-  font-size: 1.25rem;
-  line-height: 1.5rem;
+  font-weight: 400;
   position: relative;
   color: #B80000;
   margin: 0;
   padding: 0;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-2 {
+  .emotion-1 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-2 {
+  .emotion-1 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
@@ -348,11 +413,11 @@ exports[`MostReadRank should render as expected when dir=ltr, service=pidgin, li
 
 <div>
   <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     dir="ltr"
   >
     <span
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     >
       1
     </span>
@@ -405,27 +470,27 @@ exports[`MostReadRank should render as expected when dir=ltr, service=pidgin, li
   }
 }
 
-.emotion-2 {
+.emotion-1 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
-  font-size: 2rem;
-  line-height: 2.25rem;
+  font-weight: 400;
   position: relative;
   color: #B80000;
   margin: 0;
   padding: 0;
+  font-size: 2rem;
+  line-height: 2.25rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-2 {
+  .emotion-1 {
     font-size: 2.5rem;
     line-height: 2.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-2 {
+  .emotion-1 {
     font-size: 3.5rem;
     line-height: 3.75rem;
   }
@@ -433,11 +498,11 @@ exports[`MostReadRank should render as expected when dir=ltr, service=pidgin, li
 
 <div>
   <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     dir="ltr"
   >
     <span
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     >
       10
     </span>
@@ -470,27 +535,27 @@ exports[`MostReadRank should render as expected when dir=ltr, service=pidgin, li
   }
 }
 
-.emotion-2 {
+.emotion-1 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
-  font-size: 2rem;
-  line-height: 2.25rem;
+  font-weight: 400;
   position: relative;
   color: #B80000;
   margin: 0;
   padding: 0;
+  font-size: 2rem;
+  line-height: 2.25rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-2 {
+  .emotion-1 {
     font-size: 2.5rem;
     line-height: 2.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-2 {
+  .emotion-1 {
     font-size: 3.5rem;
     line-height: 3.75rem;
   }
@@ -498,11 +563,11 @@ exports[`MostReadRank should render as expected when dir=ltr, service=pidgin, li
 
 <div>
   <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     dir="ltr"
   >
     <span
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     >
       10
     </span>
@@ -549,27 +614,27 @@ exports[`MostReadRank should render as expected when dir=ltr, service=pidgin, li
   }
 }
 
-.emotion-2 {
+.emotion-1 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
-  font-size: 2rem;
-  line-height: 2.25rem;
+  font-weight: 400;
   position: relative;
   color: #B80000;
   margin: 0;
   padding: 0;
+  font-size: 2rem;
+  line-height: 2.25rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-2 {
+  .emotion-1 {
     font-size: 2.5rem;
     line-height: 2.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-2 {
+  .emotion-1 {
     font-size: 3.5rem;
     line-height: 3.75rem;
   }
@@ -577,11 +642,11 @@ exports[`MostReadRank should render as expected when dir=ltr, service=pidgin, li
 
 <div>
   <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     dir="ltr"
   >
     <span
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     >
       10
     </span>
@@ -614,27 +679,27 @@ exports[`MostReadRank should render as expected when dir=ltr, service=pidgin, li
   }
 }
 
-.emotion-2 {
+.emotion-1 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
-  font-size: 1.25rem;
-  line-height: 1.5rem;
+  font-weight: 400;
   position: relative;
   color: #B80000;
   margin: 0;
   padding: 0;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-2 {
+  .emotion-1 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-2 {
+  .emotion-1 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
@@ -642,11 +707,11 @@ exports[`MostReadRank should render as expected when dir=ltr, service=pidgin, li
 
 <div>
   <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     dir="ltr"
   >
     <span
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     >
       10
     </span>
@@ -699,27 +764,27 @@ exports[`MostReadRank should render as expected when dir=rtl, service=persian, l
   }
 }
 
-.emotion-2 {
+.emotion-1 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
-  font-size: 2rem;
-  line-height: 2.25rem;
+  font-weight: 400;
   position: relative;
   color: #B80000;
   margin: 0;
   padding: 0;
+  font-size: 2rem;
+  line-height: 2.25rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-2 {
+  .emotion-1 {
     font-size: 2.5rem;
     line-height: 2.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-2 {
+  .emotion-1 {
     font-size: 3.5rem;
     line-height: 3.75rem;
   }
@@ -727,11 +792,11 @@ exports[`MostReadRank should render as expected when dir=rtl, service=persian, l
 
 <div>
   <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     dir="rtl"
   >
     <span
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     >
       ۱
     </span>
@@ -764,27 +829,27 @@ exports[`MostReadRank should render as expected when dir=rtl, service=persian, l
   }
 }
 
-.emotion-2 {
+.emotion-1 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
-  font-size: 2rem;
-  line-height: 2.25rem;
+  font-weight: 400;
   position: relative;
   color: #B80000;
   margin: 0;
   padding: 0;
+  font-size: 2rem;
+  line-height: 2.25rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-2 {
+  .emotion-1 {
     font-size: 2.5rem;
     line-height: 2.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-2 {
+  .emotion-1 {
     font-size: 3.5rem;
     line-height: 3.75rem;
   }
@@ -792,11 +857,11 @@ exports[`MostReadRank should render as expected when dir=rtl, service=persian, l
 
 <div>
   <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     dir="rtl"
   >
     <span
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     >
       ۱
     </span>
@@ -843,27 +908,27 @@ exports[`MostReadRank should render as expected when dir=rtl, service=persian, l
   }
 }
 
-.emotion-2 {
+.emotion-1 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
-  font-size: 2rem;
-  line-height: 2.25rem;
+  font-weight: 400;
   position: relative;
   color: #B80000;
   margin: 0;
   padding: 0;
+  font-size: 2rem;
+  line-height: 2.25rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-2 {
+  .emotion-1 {
     font-size: 2.5rem;
     line-height: 2.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-2 {
+  .emotion-1 {
     font-size: 3.5rem;
     line-height: 3.75rem;
   }
@@ -871,11 +936,11 @@ exports[`MostReadRank should render as expected when dir=rtl, service=persian, l
 
 <div>
   <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     dir="rtl"
   >
     <span
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     >
       ۱
     </span>
@@ -908,27 +973,27 @@ exports[`MostReadRank should render as expected when dir=rtl, service=persian, l
   }
 }
 
-.emotion-2 {
+.emotion-1 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+  font-weight: 400;
   position: relative;
   color: #B80000;
   margin: 0;
   padding: 0;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-2 {
+  .emotion-1 {
     font-size: 1.5rem;
     line-height: 2.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-2 {
+  .emotion-1 {
     font-size: 2rem;
     line-height: 2.625rem;
   }
@@ -936,11 +1001,11 @@ exports[`MostReadRank should render as expected when dir=rtl, service=persian, l
 
 <div>
   <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     dir="rtl"
   >
     <span
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     >
       ۱
     </span>
@@ -993,27 +1058,27 @@ exports[`MostReadRank should render as expected when dir=rtl, service=persian, l
   }
 }
 
-.emotion-2 {
+.emotion-1 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
-  font-size: 2rem;
-  line-height: 2.25rem;
+  font-weight: 400;
   position: relative;
   color: #B80000;
   margin: 0;
   padding: 0;
+  font-size: 2rem;
+  line-height: 2.25rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-2 {
+  .emotion-1 {
     font-size: 2.5rem;
     line-height: 2.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-2 {
+  .emotion-1 {
     font-size: 3.5rem;
     line-height: 3.75rem;
   }
@@ -1021,11 +1086,11 @@ exports[`MostReadRank should render as expected when dir=rtl, service=persian, l
 
 <div>
   <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     dir="rtl"
   >
     <span
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     >
       ۱۰
     </span>
@@ -1058,27 +1123,27 @@ exports[`MostReadRank should render as expected when dir=rtl, service=persian, l
   }
 }
 
-.emotion-2 {
+.emotion-1 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
-  font-size: 2rem;
-  line-height: 2.25rem;
+  font-weight: 400;
   position: relative;
   color: #B80000;
   margin: 0;
   padding: 0;
+  font-size: 2rem;
+  line-height: 2.25rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-2 {
+  .emotion-1 {
     font-size: 2.5rem;
     line-height: 2.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-2 {
+  .emotion-1 {
     font-size: 3.5rem;
     line-height: 3.75rem;
   }
@@ -1086,11 +1151,11 @@ exports[`MostReadRank should render as expected when dir=rtl, service=persian, l
 
 <div>
   <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     dir="rtl"
   >
     <span
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     >
       ۱۰
     </span>
@@ -1137,27 +1202,27 @@ exports[`MostReadRank should render as expected when dir=rtl, service=persian, l
   }
 }
 
-.emotion-2 {
+.emotion-1 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
-  font-size: 2rem;
-  line-height: 2.25rem;
+  font-weight: 400;
   position: relative;
   color: #B80000;
   margin: 0;
   padding: 0;
+  font-size: 2rem;
+  line-height: 2.25rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-2 {
+  .emotion-1 {
     font-size: 2.5rem;
     line-height: 2.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-2 {
+  .emotion-1 {
     font-size: 3.5rem;
     line-height: 3.75rem;
   }
@@ -1165,11 +1230,11 @@ exports[`MostReadRank should render as expected when dir=rtl, service=persian, l
 
 <div>
   <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     dir="rtl"
   >
     <span
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     >
       ۱۰
     </span>
@@ -1202,27 +1267,27 @@ exports[`MostReadRank should render as expected when dir=rtl, service=persian, l
   }
 }
 
-.emotion-2 {
+.emotion-1 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+  font-weight: 400;
   position: relative;
   color: #B80000;
   margin: 0;
   padding: 0;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-2 {
+  .emotion-1 {
     font-size: 1.5rem;
     line-height: 2.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-2 {
+  .emotion-1 {
     font-size: 2rem;
     line-height: 2.625rem;
   }
@@ -1230,11 +1295,11 @@ exports[`MostReadRank should render as expected when dir=rtl, service=persian, l
 
 <div>
   <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     dir="rtl"
   >
     <span
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     >
       ۱۰
     </span>

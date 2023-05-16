@@ -1,5 +1,70 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`MostReadRank should render as expected when dir=ltr, service=bengali, script=bengali, listIndex=1, numberOfItems=5, size=default, columnLayout=oneColumn 1`] = `
+@media (max-width: 14.9375rem) {
+  .emotion-0 {
+    min-width: 1rem;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-0 {
+    min-width: 1rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    min-width: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    min-width: 1.5rem;
+  }
+}
+
+.emotion-2 {
+  font-family: "Noto Serif Bengali",Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+  line-height: 2.25rem;
+  position: relative;
+  color: #B80000;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-2 {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    font-size: 3.1875rem;
+    line-height: 3.75rem;
+  }
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1"
+    dir="ltr"
+  >
+    <span
+      class="emotion-2 emotion-3"
+    >
+      ১
+    </span>
+  </div>
+</div>
+`;
+
 exports[`MostReadRank should render as expected when dir=ltr, service=japanese, script=noAscOrDesc, listIndex=1, numberOfItems=5, size=default, columnLayout=oneColumn 1`] = `
 @media (max-width: 14.9375rem) {
   .emotion-0 {
