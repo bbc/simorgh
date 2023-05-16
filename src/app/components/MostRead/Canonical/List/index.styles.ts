@@ -11,13 +11,16 @@ export const oneColumn = css({
   gridAutoFlow: 'column',
 });
 
-export const twoColumn = oneColumn;
+export const twoColumn = css({ ...oneColumn });
 
-export const multiColumn = css({
-  [GROUP_5_MIN_WIDTH]: {
-    gridAutoFlow: 'row',
+export const multiColumn = css([
+  twoColumn,
+  {
+    [GROUP_5_MIN_WIDTH]: {
+      gridAutoFlow: 'row',
+    },
   },
-});
+]);
 
 export const gridTemplateRows = (numberOfItems: number) =>
   css({ gridTemplateRows: `repeat(${numberOfItems}, auto)` });
