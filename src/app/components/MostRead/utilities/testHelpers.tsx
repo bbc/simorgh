@@ -63,7 +63,7 @@ export const getItem = ({
 };
 
 interface GetItemWrapperArrayProps extends MostReadBaseProps {
-  dir: Direction;
+  dir?: Direction;
   withTimestamp?: boolean;
   listIndex?: number;
   service: Services;
