@@ -22022,7 +22022,7 @@ __metadata:
     stylelint: 13.13.1
     stylelint-config-recommended: 7.0.0
     supertest: 6.3.3
-    terser-webpack-plugin: 5.3.7
+    terser-webpack-plugin: 5.3.8
     timemachine: 0.3.2
     ts-jest: 26.5.6
     ts-loader: 9.4.2
@@ -23172,15 +23172,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"terser-webpack-plugin@npm:5.3.7":
-  version: 5.3.7
-  resolution: "terser-webpack-plugin@npm:5.3.7"
+"terser-webpack-plugin@npm:5.3.8, terser-webpack-plugin@npm:^5.3.7":
+  version: 5.3.8
+  resolution: "terser-webpack-plugin@npm:5.3.8"
   dependencies:
     "@jridgewell/trace-mapping": ^0.3.17
     jest-worker: ^27.4.5
     schema-utils: ^3.1.1
     serialize-javascript: ^6.0.1
-    terser: ^5.16.5
+    terser: ^5.16.8
   peerDependencies:
     webpack: ^5.1.0
   peerDependenciesMeta:
@@ -23190,7 +23190,7 @@ __metadata:
       optional: true
     uglify-js:
       optional: true
-  checksum: 095e699fdeeb553cdf2c6f75f983949271b396d9c201d7ae9fc633c45c1c1ad14c7257ef9d51ccc62213dd3e97f875870ba31550f6d4f1b6674f2615562da7f7
+  checksum: 0ffc2a1949b1fd60ef9c815c4629b9817656db612bb58c5db96e3b04204c86afd142b115392e48733364edc7bf95131f54c10174c05f046ba8f2adead6b06c3c
   languageName: node
   linkType: hard
 
@@ -23254,28 +23254,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"terser-webpack-plugin@npm:^5.3.7":
-  version: 5.3.8
-  resolution: "terser-webpack-plugin@npm:5.3.8"
-  dependencies:
-    "@jridgewell/trace-mapping": ^0.3.17
-    jest-worker: ^27.4.5
-    schema-utils: ^3.1.1
-    serialize-javascript: ^6.0.1
-    terser: ^5.16.8
-  peerDependencies:
-    webpack: ^5.1.0
-  peerDependenciesMeta:
-    "@swc/core":
-      optional: true
-    esbuild:
-      optional: true
-    uglify-js:
-      optional: true
-  checksum: 0ffc2a1949b1fd60ef9c815c4629b9817656db612bb58c5db96e3b04204c86afd142b115392e48733364edc7bf95131f54c10174c05f046ba8f2adead6b06c3c
-  languageName: node
-  linkType: hard
-
 "terser@npm:^4.1.2, terser@npm:^4.6.3":
   version: 4.8.1
   resolution: "terser@npm:4.8.1"
@@ -23300,20 +23278,6 @@ __metadata:
   bin:
     terser: bin/terser
   checksum: 9880a1e0956983a1ce5de204ea35121c0009fa41d582a6904ae850e1953a1a2cc021168439565280c5a8eee67c85a874175627e24989b046c7a72589b81c3979
-  languageName: node
-  linkType: hard
-
-"terser@npm:^5.16.5":
-  version: 5.16.8
-  resolution: "terser@npm:5.16.8"
-  dependencies:
-    "@jridgewell/source-map": ^0.3.2
-    acorn: ^8.5.0
-    commander: ^2.20.0
-    source-map-support: ~0.5.20
-  bin:
-    terser: bin/terser
-  checksum: f4a3ef4848a71f74f637c009395cf5a28660b56237fb8f13532cecfb24d6263e2dfbc1a511a11a94568988898f79cdcbecb9a4d8e104db35a0bea9639b70a325
   languageName: node
   linkType: hard
 
