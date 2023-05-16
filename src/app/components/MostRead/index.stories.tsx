@@ -23,7 +23,7 @@ interface Props extends StoryProps {
 const Component = ({
   service,
   variant,
-  columnLayout = 'twoColumn',
+  columnLayout = 'multiColumn',
   size = 'default',
 }: Props) => (
   <ThemeProvider service={service} variant={variant}>
