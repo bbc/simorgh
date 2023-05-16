@@ -26,7 +26,6 @@ interface MostReadProps {
   service: Services;
   variant: Variants | null;
   mostReadToggle: boolean;
-  serverRenderOnAmp: boolean;
   pageType?: PageTypes;
   data?: MostReadData;
 }
@@ -36,7 +35,6 @@ const MostReadWithContext = ({
   service,
   variant = null,
   mostReadToggle,
-  serverRenderOnAmp,
   pageType = HOME_PAGE,
   data,
 }: MostReadProps) => (
@@ -57,7 +55,7 @@ const MostReadWithContext = ({
       variant={variant}
     >
       <ServiceContextProvider service={service} variant={variant}>
-        <MostRead serverRenderOnAmp={serverRenderOnAmp} data={data} />
+        <MostRead data={data} />
       </ServiceContextProvider>
     </RequestContextProvider>
   </ToggleContextProvider>
@@ -88,7 +86,6 @@ describe('MostRead', () => {
         variant: null,
         renderExpectation: shouldRenderMostRead,
         dataResponse: pidginMostReadData,
-        serverRenderOnAmp: false,
       },
       {
         description: 'should render most read for serbian lat with toggles on',
@@ -98,7 +95,6 @@ describe('MostRead', () => {
         variant: 'lat',
         renderExpectation: shouldRenderMostRead,
         dataResponse: serbianLatMostReadData,
-        serverRenderOnAmp: false,
       },
       {
         description: 'should not render most read for pidgin with toggles off',
@@ -108,7 +104,6 @@ describe('MostRead', () => {
         variant: null,
         renderExpectation: shouldNotRenderMostRead,
         dataResponse: pidginMostReadData,
-        serverRenderOnAmp: false,
       },
       {
         description: 'should not render most read when data is null',
@@ -118,18 +113,6 @@ describe('MostRead', () => {
         variant: null,
         renderExpectation: shouldNotRenderMostRead,
         dataResponse: null,
-        serverRenderOnAmp: false,
-      },
-      {
-        description:
-          'should render most read when initialData is passed and serverRenderOnAmp is true',
-        service: 'pidgin',
-        mostReadToggle: true,
-        isAmp: true,
-        variant: null,
-        renderExpectation: shouldRenderMostRead,
-        dataResponse: pidginMostReadData,
-        serverRenderOnAmp: true,
       },
     ].forEach(
       ({
@@ -140,7 +123,6 @@ describe('MostRead', () => {
         variant,
         renderExpectation,
         dataResponse,
-        serverRenderOnAmp,
       }) => {
         it(description, async () => {
           await act(async () => {
@@ -150,7 +132,6 @@ describe('MostRead', () => {
                 mostReadToggle={mostReadToggle}
                 isAmp={isAmp}
                 variant={variant as Variants}
-                serverRenderOnAmp={serverRenderOnAmp}
                 // @ts-expect-error some responses are null
                 data={dataResponse}
               />,
@@ -172,7 +153,7 @@ describe('MostRead', () => {
         isAmp: true,
         variant: null,
         renderExpectation: shouldRenderMostReadAmp,
-        serverRenderOnAmp: false,
+
         pageType: STORY_PAGE,
       },
       {
@@ -182,7 +163,7 @@ describe('MostRead', () => {
         isAmp: true,
         variant: null,
         renderExpectation: shouldRenderMostReadAmp,
-        serverRenderOnAmp: false,
+
         pageType: ARTICLE_PAGE,
       },
       {
@@ -192,7 +173,7 @@ describe('MostRead', () => {
         isAmp: true,
         variant: null,
         renderExpectation: shouldRenderMostReadAmp,
-        serverRenderOnAmp: false,
+
         pageType: STORY_PAGE,
       },
       {
@@ -202,7 +183,7 @@ describe('MostRead', () => {
         isAmp: true,
         variant: null,
         renderExpectation: shouldRenderMostReadAmp,
-        serverRenderOnAmp: false,
+
         pageType: ARTICLE_PAGE,
       },
       {
@@ -212,7 +193,7 @@ describe('MostRead', () => {
         isAmp: true,
         variant: null,
         renderExpectation: shouldRenderMostReadAmp,
-        serverRenderOnAmp: false,
+
         pageType: CORRESPONDENT_STORY_PAGE,
       },
       {
@@ -222,7 +203,7 @@ describe('MostRead', () => {
         isAmp: true,
         variant: null,
         renderExpectation: shouldNotRenderMostReadAmp,
-        serverRenderOnAmp: false,
+
         pageType: FRONT_PAGE,
       },
       {
@@ -232,19 +213,8 @@ describe('MostRead', () => {
         isAmp: true,
         variant: null,
         renderExpectation: shouldRenderMostReadAmp,
-        serverRenderOnAmp: false,
+
         pageType: HOME_PAGE,
-      },
-      {
-        description:
-          'should not render most read amp if serverRenderOnAmp is true',
-        service: 'mundo',
-        mostReadToggle: true,
-        isAmp: true,
-        variant: null,
-        renderExpectation: shouldNotRenderMostReadAmp,
-        serverRenderOnAmp: true,
-        pageType: STORY_PAGE,
       },
     ].forEach(
       ({
@@ -254,25 +224,22 @@ describe('MostRead', () => {
         isAmp,
         variant,
         renderExpectation,
-        serverRenderOnAmp,
         pageType,
       }) => {
         it(description, async () => {
-          let container;
           await act(async () => {
-            container = render(
+            render(
               <MostReadWithContext
                 service={service as Services}
                 mostReadToggle={mostReadToggle}
                 isAmp={isAmp}
                 variant={variant}
-                serverRenderOnAmp={serverRenderOnAmp}
                 pageType={pageType}
               />,
-            ).container;
+            );
           });
 
-          renderExpectation(container);
+          renderExpectation();
         });
       },
     );
