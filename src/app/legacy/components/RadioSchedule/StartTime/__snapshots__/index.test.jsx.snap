@@ -32,7 +32,6 @@ exports[`StartTime should render LTR correctly 1`] = `
 
 @media screen and (forced-colors: active) {
   .emotion-2>svg {
-    padding-right: 0.25rem;
     fill: canvasText;
   }
 }
@@ -188,7 +187,6 @@ exports[`StartTime should render RTL correctly 1`] = `
 
 @media screen and (forced-colors: active) {
   .emotion-2>svg {
-    padding-left: 0.25rem;
     fill: canvasText;
   }
 }
