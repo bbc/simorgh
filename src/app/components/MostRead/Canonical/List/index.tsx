@@ -1,12 +1,12 @@
 /** @jsx jsx */
-import { PropsWithChildren, FC } from 'react';
+import { PropsWithChildren } from 'react';
 import { jsx } from '@emotion/react';
 import Grid from '../../../../legacy/psammead/psammead-grid/src';
 import { mostReadListGridProps } from '../../../../legacy/containers/MostRead/utilities/gridProps';
-import styles from './index.styles';
+import styles, { oneColumnGridTemplateRows } from './index.styles';
 import { MostReadBaseProps } from '../../types';
 
-const MostReadList: FC<PropsWithChildren<MostReadBaseProps>> = ({
+const MostReadList = ({
   numberOfItems,
   dir = 'ltr',
   columnLayout = 'multiColumn',
@@ -16,7 +16,11 @@ const MostReadList: FC<PropsWithChildren<MostReadBaseProps>> = ({
   return (
     // @ts-expect-error will review and fix this
     <Grid
-      css={styles[columnLayout]}
+      css={[
+        styles[columnLayout],
+        columnLayout === 'oneColumn' &&
+          oneColumnGridTemplateRows(numberOfItems),
+      ]}
       {...mostReadListGridProps(columnLayout)}
       dir={dir}
       numberOfItems={numberOfItems}

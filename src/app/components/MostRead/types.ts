@@ -1,5 +1,4 @@
-import { Services } from '#app/models/types/global';
-import { TypographyScript } from '#app/models/types/theming';
+import { Services } from '../../models/types/global';
 
 export type Direction = 'rtl' | 'ltr';
 
@@ -20,8 +19,7 @@ export interface MostReadItemProps {
 
 export interface MostReadRankProps extends MostReadBaseProps {
   service: Services;
-  script: TypographyScript;
-  listIndex: string;
+  listIndex: number;
   size: Size;
   isAmp?: boolean;
 }
@@ -29,7 +27,6 @@ export interface MostReadRankProps extends MostReadBaseProps {
 export interface MostReadLinkProps {
   dir: Direction;
   service: Services;
-  script: TypographyScript;
   title: string;
   href: string;
   size: Size;

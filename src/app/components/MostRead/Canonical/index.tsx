@@ -30,7 +30,7 @@ const MostRead = ({
   columnLayout = 'multiColumn',
   size,
   data,
-  wrapper: Wrapper,
+  wrapper: Wrapper = React.Fragment,
   eventTrackingData,
 }: MostReadProps) => {
   const {
@@ -52,7 +52,7 @@ const MostRead = ({
   const fontScript = script as TypographyScript;
 
   return (
-    <>
+    <Wrapper>
       <MostReadList
         numberOfItems={items.length}
         dir={direction}
@@ -67,7 +67,6 @@ const MostRead = ({
           >
             <MostReadRank
               service={service}
-              script={fontScript}
               listIndex={i + 1}
               numberOfItems={items.length}
               dir={direction}
@@ -77,7 +76,6 @@ const MostRead = ({
             <MostReadLink
               dir={direction}
               service={service}
-              script={fontScript}
               title={item.title}
               href={item.href}
               size={size}
@@ -97,7 +95,7 @@ const MostRead = ({
           </MostReadItemWrapper>
         ))}
       </MostReadList>
-    </>
+    </Wrapper>
   );
 };
 
