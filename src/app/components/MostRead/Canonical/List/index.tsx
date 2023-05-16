@@ -3,10 +3,7 @@ import { PropsWithChildren } from 'react';
 import { jsx } from '@emotion/react';
 import Grid from '../../../../legacy/psammead/psammead-grid/src';
 import { mostReadListGridProps } from '../../../../legacy/containers/MostRead/utilities/gridProps';
-import styles, {
-  gridTemplateRows,
-  multiColumnGridTemplateRows,
-} from './index.styles';
+import * as styles from './index.styles';
 import { MostReadBaseProps } from '../../types';
 
 const MostReadList = ({
@@ -20,9 +17,9 @@ const MostReadList = ({
     <Grid
       css={[
         styles[columnLayout],
-        gridTemplateRows(numberOfItems),
+        styles.gridTemplateRows(numberOfItems),
         columnLayout !== 'oneColumn' &&
-          multiColumnGridTemplateRows(numberOfItems),
+          styles.multiColumnGridTemplateRows(numberOfItems),
       ]}
       {...mostReadListGridProps(columnLayout)}
       dir={dir}
