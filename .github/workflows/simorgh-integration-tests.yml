@@ -40,7 +40,6 @@ jobs:
           key: node-modules-${{ hashFiles('yarn.lock', 'ws-nextjs-app/yarn.lock') }}
 
       - name: Install Node Modules
-        if: steps.cache.outputs.cache-hit != 'true'
         run: ./scripts/installNodeModules.sh
 
       - name: Integration Tests
