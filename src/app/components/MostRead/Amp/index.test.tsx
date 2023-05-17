@@ -1,6 +1,5 @@
 import React from 'react';
 import fetchMock from 'fetch-mock';
-import mundo from '#app/lib/config/services/mundo';
 import { render, act } from '../../react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import AmpMostRead from '.';
@@ -13,7 +12,7 @@ interface MostReadAmpWithContextProps {
 
 const MostReadAmpWithContext = ({ service }: MostReadAmpWithContextProps) => (
   <ServiceContextProvider service={service}>
-    <AmpMostRead />
+    <AmpMostRead endpoint="/mundo/mostread.json" />
   </ServiceContextProvider>
 );
 

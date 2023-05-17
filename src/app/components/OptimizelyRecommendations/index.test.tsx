@@ -69,6 +69,7 @@ const renderContainer = (service: Services, pageData: ArticlePageType) => {
       <RequestContextProvider
         bbcOrigin="https://www.test.bbc.co.uk"
         isAmp={false}
+        isApp={false}
         pageType={STORY_PAGE}
         pathname="/service/085965"
         service={service}

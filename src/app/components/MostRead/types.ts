@@ -40,13 +40,16 @@ type ArticleSource = 'cps' | 'optimo';
 export interface CPSMostReadRecord {
   id: string;
   promo: {
-    timestamp: number;
-    type?: ArticleSource;
-    headlines: {
-      shortHeadline: string;
+    timestamp?: number;
+    type?: ArticleSource | string;
+    headlines?: {
+      shortHeadline?: string;
+      headline?: string;
     };
-    locators: {
-      assetUri: string;
+    locators?: {
+      assetUri?: string;
+      cpsUrn?: string;
+      curie?: string;
     };
   };
 }
@@ -54,19 +57,21 @@ export interface CPSMostReadRecord {
 export interface OptimoMostReadRecord {
   id: string;
   promo: {
-    timestamp: number;
-    type?: ArticleSource;
-    locators: {
-      canonicalUrl: string;
+    timestamp?: number;
+    type?: ArticleSource | string;
+    locators?: {
+      canonicalUrl?: string;
+      optimoUrn?: string;
     };
-  };
-  headlines: {
-    promoHeadline: {
-      blocks: {
-        model: {
-          blocks: { model: { text: string } }[];
-        };
-      }[];
+    headlines?: {
+      seoHeadline?: string;
+      promoHeadline?: {
+        blocks: {
+          model: {
+            blocks: { model: { text: string } }[];
+          };
+        }[];
+      };
     };
   };
 }
@@ -76,5 +81,5 @@ export interface MostReadData {
   firstRecordTimeStamp?: string;
   generated?: string;
   totalRecords?: number;
-  records: (OptimoMostReadRecord | CPSMostReadRecord)[];
+  records: (Partial<OptimoMostReadRecord> | Partial<CPSMostReadRecord>)[];
 }
