@@ -4,6 +4,10 @@ import pathOr from 'ramda/src/pathOr';
 import { OptimoBlock } from '#models/types/optimo';
 import Heading from '#app/components/Heading';
 import Text from '#app/components/Text';
+import headings from '#app/legacy/containers/Headings';
+import Blocks from '#app/legacy/containers/Blocks';
+import text from '#app/legacy/containers/Text';
+import unorderedList from '#app/legacy/containers/BulletedList';
 
 /* Helpers */
 
@@ -23,18 +27,24 @@ const getHeadlineOrSubheadline = path([
 /* End Helpers */
 
 const PostHeadings = ({ headerBlocks }) => {
-  const headline: string = headerBlocks
-    .filter((block: any) => block.type === 'headline')
-    .map((item: any) => getHeadlineOrSubheadline(item));
+  // const headline: string = headerBlocks
+  //   .filter((block: any) => block.type === 'headline')
+  //   .map((item: any) => getHeadlineOrSubheadline(item));
 
-  const subheadline: string = headerBlocks
-    .filter((block: any) => block.type === 'subheadline')
-    .map((item: any) => getHeadlineOrSubheadline(item));
+  // const subheadline: string = headerBlocks
+  //   .filter((block: any) => block.type === 'subheadline')
+  //   .map((item: any) => getHeadlineOrSubheadline(item));
+
+  const componentsToRender = {
+    headline: headings,
+    subheadline: headings,
+  };
 
   return (
     <div>
-      <Heading level={2}>{headline}</Heading>
-      <Heading level={3}>{subheadline}</Heading>
+      {/* <Heading level={2}>{headline}</Heading>
+      <Heading level={3}>{subheadline}</Heading> */}
+      <Blocks blocks={headerBlocks} componentsToRender={componentsToRender} />
     </div>
   );
 };
