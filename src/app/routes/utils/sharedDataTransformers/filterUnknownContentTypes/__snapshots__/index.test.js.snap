@@ -1577,6 +1577,84 @@ Object {
       Object {
         "items": Array [
           Object {
+            "cpsType": "STY",
+            "headlines": Object {
+              "headline": "อดีตแนวร่วม กปปส. อัด ประวิตร-ดอน ฐานค้าน ฟรีวีซ่า อินเดีย-จีน",
+            },
+            "id": "urn:bbc:ares::asset:thai/thailand-49393978",
+            "imageThumbnail": Object {
+              "altText": "ไทย นักท่องเที่ยว จีน อินเดีย",
+              "copyrightHolder": "Wasawat Lukharang/bbc thai",
+              "height": 180,
+              "href": "http://c.files.bbci.co.uk/38D2/production/_108364541_29978099625_0654dde287_h.jpg",
+              "id": "108364541",
+              "path": "/cpsprodpb/38D2/production/_108364541_29978099625_0654dde287_h.jpg",
+              "subType": "index-thumbnail",
+              "width": 320,
+            },
+            "indexImage": Object {
+              "altText": "ไทย นักท่องเที่ยว จีน อินเดีย",
+              "copyrightHolder": "Wasawat Lukharang/bbc thai",
+              "height": 900,
+              "href": "http://c.files.bbci.co.uk/16770/production/_108361029_29978099625_0654dde287_h.jpg",
+              "id": "108361029",
+              "path": "/cpsprodpb/16770/production/_108361029_29978099625_0654dde287_h.jpg",
+              "subType": "index",
+              "width": 1600,
+            },
+            "locators": Object {
+              "assetUri": "/thai/thailand-49393978",
+              "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-49393978",
+            },
+            "options": Object {
+              "isBreakingNews": false,
+              "isFactCheck": false,
+            },
+            "passport": Object {
+              "campaigns": Array [
+                Object {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective",
+                },
+              ],
+              "category": Object {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News",
+              },
+            },
+            "prominence": "standard",
+            "relatedItems": Array [
+              Object {
+                "cpsType": "STY",
+                "headlines": Object {
+                  "headline": "ทำอย่างไรให้ได้เงินเที่ยวฟรี 1,000 บาท จากรัฐบาล",
+                },
+                "id": "urn:bbc:ares::asset:thai/49371889",
+                "locators": Object {
+                  "assetUri": "/thai/49371889",
+                  "cpsUrn": "urn:bbc:content:assetUri:/thai/49371889",
+                },
+                "summary": "แจกเงินให้เที่ยว คือหนึ่งในมาตรการกระตุ้นเศรษฐกิจวงเงิน 3.16 แสนล้านบาทของรัฐบาล",
+                "timestamp": 1565959041000,
+                "type": "cps",
+              },
+            ],
+            "summary": "รมต. อย่างน้อย 2 คนไม่เห็นด้วยกับการปล่อย “ฟรีวีซ่า” ให้นักท่องเที่ยวจีน-อินเดีย",
+            "timestamp": 1566208304000,
+            "type": "cps",
+          },
+        ],
+        "maxRelatedLinks": 4,
+        "semanticGroupName": "Top story",
+        "strapline": Object {
+          "name": "ข่าวเด่น",
+        },
+        "title": "Top story",
+        "type": "top-story",
+      },
+      Object {
+        "items": Array [
+          Object {
             "byline": Object {
               "name": "شہزاد ملک  ",
               "persons": Array [
