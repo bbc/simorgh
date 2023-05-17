@@ -21,8 +21,8 @@ jobs:
     env:
       CI: true
       LOG_LEVEL: 'error'
-      BFF_PATH: 'https://fabl.api.bbci.co.uk/module/simorgh-bff'
-
+      BFF_PATH: 'https://web-cdn.test.api.bbci.co.uk/fd/simorgh-bff/simorgh-bff'
+      
     steps:
       - uses: actions/checkout@v3
 
