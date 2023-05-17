@@ -2,69 +2,38 @@ import React from 'react';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import { OptimoBlock } from '#models/types/optimo';
-import Heading from '#app/components/Heading';
 import Text from '#app/components/Text';
 import headings from '#app/legacy/containers/Headings';
 import Blocks from '#app/legacy/containers/Blocks';
-import text from '#app/legacy/containers/Text';
-import unorderedList from '#app/legacy/containers/BulletedList';
+import paragraph from '#app/legacy/containers/Paragraph';
 
-/* Helpers */
-
-const getContent = path(['model', 'text']);
-
-const getHeadlineOrSubheadline = path([
-  'model',
-  'blocks',
-  0,
-  'model',
-  'blocks',
-  0,
-  'model',
-  'text',
-]);
-
-/* End Helpers */
-
-const PostHeadings = ({ headerBlocks }) => {
-  // const headline: string = headerBlocks
-  //   .filter((block: any) => block.type === 'headline')
-  //   .map((item: any) => getHeadlineOrSubheadline(item));
-
-  // const subheadline: string = headerBlocks
-  //   .filter((block: any) => block.type === 'subheadline')
-  //   .map((item: any) => getHeadlineOrSubheadline(item));
-
+const PostHeadings = ({ headerBlocks }: any) => {
   const componentsToRender = {
     headline: headings,
     subheadline: headings,
   };
 
   return (
-    <div>
-      {/* <Heading level={2}>{headline}</Heading>
-      <Heading level={3}>{subheadline}</Heading> */}
-      <Blocks blocks={headerBlocks} componentsToRender={componentsToRender} />
-    </div>
+    <Blocks blocks={headerBlocks} componentsToRender={componentsToRender} />
   );
 };
 
-const PostContent = ({ contentBlocks }) => {
-  const extractParagraphContent: any = contentBlocks
-    .filter(block => block.type === 'paragraph')
-    .map((item: any) => getContent(item));
-
+const PostContent = ({ contentBlocks }: any) => {
+  // Unsure how to render UL/OL
   const nonParagraphBlocks: any = contentBlocks.filter(
-    block => block.type !== 'paragraph',
+    (block: any) => block.type !== 'paragraph',
   );
-
   const nonParagraphBlocksToString: any = nonParagraphBlocks.map((item: any) =>
     JSON.stringify(nonParagraphBlocks, null, 2),
   );
 
+  const componentsToRender = {
+    paragraph,
+  };
+
   return (
     <div>
-      <Text as="p">{extractParagraphContent}</Text>
+      <Blocks blocks={contentBlocks} componentsToRender={componentsToRender} />
       <Text as="p">{nonParagraphBlocksToString}</Text>
     </div>
   );
