@@ -348,4 +348,19 @@ describe(`Script Link`, () => {
     );
     expect(container).toBeEmptyDOMElement();
   });
+
+  it('should not render when app is Next.JS', () => {
+    const { container } = withRouter(
+      <ScriptLinkContainerWithContext
+        requestContext={{
+          variant: 'lat',
+          env: 'test',
+          isNextJs: true,
+        }}
+      />,
+      frontPagePath,
+      '/serbian/lat',
+    );
+    expect(container).toBeEmptyDOMElement();
+  });
 });
