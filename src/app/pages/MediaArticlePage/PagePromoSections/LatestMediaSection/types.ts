@@ -1,4 +1,4 @@
-import { EventTrackingData } from '../../types';
+import { EventTrackingBlock } from '../../../../models/types/eventTracking';
 
 export type Media = 'video' | 'audio';
 
@@ -18,7 +18,7 @@ export type LatestMediaItemProp = {
   item: LatestMedia;
   ariaLabelledBy: string;
   ref: () => Promise<void>;
-  eventTrackingData: EventTrackingData;
+  eventTrackingData: EventTrackingBlock;
 };
 
 export type ImageProp = {
