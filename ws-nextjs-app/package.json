@@ -11,8 +11,9 @@
     "build": "yarn build:local",
     "dev": "yarn setupDevEnv && next dev -p 7081",
     "start": "next start -p 7081 && NODE_ENV=production",
+    "stop": "../scripts/killApp.sh",
     "test": "jest --ci --colors --selectProjects='Unit Tests'",
-    "test:integration": "jest --ci --colors --selectProjects='Integration Tests - Canonical' 'Integration Tests - AMP'"
+    "test:integration": "jest --ci --colors --selectProjects='Integration Tests - Canonical' 'Integration Tests - AMP' -u"
   },
   "devDependencies": {
     "@babel/preset-react": "^7.18.6",

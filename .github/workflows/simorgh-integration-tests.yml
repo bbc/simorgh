@@ -45,3 +45,6 @@ jobs:
 
       - name: Integration Tests
         run: yarn test:integration:ci
+
+      - name: Integration Tests - Next
+        run: yarn test:integration --nextJS
