@@ -20,12 +20,7 @@ interface Props extends StoryProps {
   size?: 'default' | 'small';
 }
 
-const Component = ({
-  service,
-  variant,
-  columnLayout = 'twoColumn',
-  size = 'default',
-}: Props) => (
+const Component = ({ service, variant, columnLayout, size }: Props) => (
   <ThemeProvider service={service} variant={variant}>
     <ToggleContextProvider>
       <RequestContextProvider
@@ -94,9 +89,9 @@ export const Japanese1Column = ({ variant }: Props) => (
   />
 );
 
-export const Arabic1Column = ({ variant }: Props) => (
+export const Persian1Column = ({ variant }: Props) => (
   <Component
-    service="arabic"
+    service="persian"
     columnLayout="oneColumn"
     variant={variant}
     size="default"
