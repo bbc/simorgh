@@ -50,7 +50,7 @@ const fetchPageData = async ({
   });
 
   const cachedResponse = !isLocal() && cache?.get(url);
-
+  console.log('CHECK', url);
   if (cachedResponse) {
     logger.info(DATA_RESPONSE_FROM_CACHE, {
       data: url,
@@ -78,7 +78,16 @@ const fetchPageData = async ({
 
   try {
     const startHrTime = canDetermineFetchTime ? process.hrtime() : [0, 0];
-    const response = await fetch(url, fetchOptions);
+    const response = await fetch(
+      'https://web-cdn.test.api.bbci.co.uk/fd/simorgh-bff?id=c7p765ynk9qt&service=pidgin&pageType=live',
+      {
+        headers: {
+          'ctx-service-env': 'test',
+          'ctx-pers-env': 'test',
+          'ctx-debug': 0,
+        },
+      },
+    );
     const { status } = response;
 
     if (shouldLogFetchTime && canDetermineFetchTime) {
