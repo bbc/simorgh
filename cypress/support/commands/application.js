@@ -93,8 +93,8 @@ export const testResponseCodeAndTypeRetry = ({
 
 export const getPageData = ({ service, pageType, variant = 'default', id }) => {
   const env = Cypress.env('APP_ENV');
-  const isNext = Cypress.env('isNext');
-  if (isNext) {
+  const isNextJs = Cypress.env('isNextJs');
+  if (isNextJs) {
     const bffUrl = `https://web-cdn.test.api.bbci.co.uk/fd/simorgh-bff?pageType=${pageType}&id=${id}&service=${service}${
       variant !== 'default' ? `&variant=${variant}` : ''
     }`;
