@@ -7,6 +7,7 @@ import runHeaderTests from '../headerTests';
 
 describe('Canonical', () => {
   describe(pageType, () => {
+    console.log('PAGETYPE', pageType);
     runHeaderTests();
   });
 });
