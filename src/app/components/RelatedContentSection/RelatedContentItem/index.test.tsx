@@ -1,13 +1,13 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import { ServiceContextProvider } from '../../../../../contexts/ServiceContext';
-import ThemeProvider from '../../../../../components/ThemeProvider';
+import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import ThemeProvider from '../../ThemeProvider';
 import RelatedContentItem from '.';
 import { RelatedContentData } from '../fixture';
-import { Services } from '../../../../../models/types/global';
+import { Services } from '../../../models/types/global';
 
-jest.mock('../../../../../components/ThemeProvider');
+jest.mock('../../ThemeProvider');
 
 type Props = {
   fixtureData: object;

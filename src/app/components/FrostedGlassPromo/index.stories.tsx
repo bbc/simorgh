@@ -27,6 +27,7 @@ const Wrappers = ({
           pageType="article"
           pathname="/news/articles/c000000000o"
           isAmp={false}
+          isApp={false}
           service={service}
         >
           <ToggleContextProvider

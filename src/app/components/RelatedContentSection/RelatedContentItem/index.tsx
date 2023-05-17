@@ -10,24 +10,51 @@ import buildIChefURL from '#app/lib/utilities/ichefURL';
 import Promo from '#components/OptimoPromos';
 import isEmpty from 'ramda/src/isEmpty';
 import styles from './index.styles';
-import { EventTrackingData } from '../../../types';
+import { EventTrackingBlock } from '../../../models/types/eventTracking';
 
 type RelatedContentItemProps = {
   item: object;
   ariaLabelledBy: string;
-  eventTrackingData?: EventTrackingData;
+  eventTrackingData?: EventTrackingBlock;
 };
 
 const RelatedContentItem = forwardRef<HTMLDivElement, RelatedContentItemProps>(
   ({ item, ariaLabelledBy, eventTrackingData = null }, viewRef) => {
     if (!item || isEmpty(item)) return null;
 
-    const headline = pathOr<string>(
+    const headlineFirst = pathOr<string>(
+      '',
+      ['model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
+      item,
+    );
+    const headlineSecond = pathOr<string>(
       '',
       ['model', 'blocks', 1, 'model', 'blocks', 0, 'model', 'text'],
       item,
     );
-    const assetUri = path<string>(
+
+    const headline = headlineFirst || headlineSecond;
+
+    const assetUriFirst = pathOr<string>(
+      '',
+      [
+        'model',
+        'blocks',
+        0,
+        'model',
+        'blocks',
+        0,
+        'model',
+        'blocks',
+        0,
+        'model',
+        'locator',
+      ],
+      item,
+    );
+
+    const assetUriSecond = pathOr<string>(
+      '',
       [
         'model',
         'blocks',
@@ -43,6 +70,8 @@ const RelatedContentItem = forwardRef<HTMLDivElement, RelatedContentItemProps>(
       ],
       item,
     );
+
+    const assetUri = assetUriFirst || assetUriSecond;
 
     const DEFAULT_IMAGE_RES = 660;
     const imageResolutions = [70, 95, 144, 183, 240, 320, 660];
@@ -112,20 +141,25 @@ const RelatedContentItem = forwardRef<HTMLDivElement, RelatedContentItemProps>(
     const titleHasContent = titleTag === 'h3';
 
     return (
-      <div css={styles.wrapper} ref={viewRef}>
+      <div
+        css={[styles.wrapper, headlineFirst && styles.promoFullWidth]}
+        ref={viewRef}
+      >
         <Promo
           to={assetUri}
           ariaLabelledBy={ariaLabelledBy}
           eventTrackingData={eventTrackingData}
         >
-          <Promo.Image
-            src={src}
-            altText={altText}
-            srcset={primarySrcset}
-            fallbackSrcset={fallbackSrcset}
-            width={width}
-            height={height}
-          />
+          {locator ? (
+            <Promo.Image
+              src={src}
+              altText={altText}
+              srcset={primarySrcset}
+              fallbackSrcset={fallbackSrcset}
+              width={width}
+              height={height}
+            />
+          ) : null}
           <Promo.ContentWrapper>
             <Promo.Title
               css={titleHasContent ? styles.promoTitle : null}
