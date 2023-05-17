@@ -28,6 +28,7 @@ const faultTolerantDomFetch = ({ url, runScripts, headers }) =>
           html,
           runScripts ? { runScripts: 'dangerously' } : {},
         );
+        console.log('CHECK URL', html);
         console.log('CHECK', html);
         resolve(dom);
       } catch (error) {
