@@ -54,21 +54,21 @@ export default {
   decorators: [withKnobs, withServicesKnob({ defaultService: 'pidgin' })],
 };
 
-export const HomePage2Columns = ({ service, variant }: Props) => (
-  <Component
-    service={service}
-    variant={variant}
-    size="default"
-    columnLayout="twoColumn"
-  />
-);
-
 export const ArticlePage5Columns = ({ service, variant }: Props) => (
   <Component
     service={service}
     variant={variant}
     size="default"
     columnLayout="multiColumn"
+  />
+);
+
+export const HomePage2Columns = ({ service, variant }: Props) => (
+  <Component
+    service={service}
+    variant={variant}
+    size="default"
+    columnLayout="twoColumn"
   />
 );
 
