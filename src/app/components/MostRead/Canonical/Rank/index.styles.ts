@@ -85,10 +85,10 @@ const isOnSecondColumn = ({
   listIndex,
   numberOfItems,
   supportsGrid,
-}: HelperFunctionProps) =>
-  supportsGrid
-    ? listIndex > Math.ceil(numberOfItems / 2)
-    : (listIndex as number) % 2 === 0;
+}: HelperFunctionProps) => {
+  const index = listIndex as number;
+  return supportsGrid ? index > Math.ceil(numberOfItems / 2) : index % 2 === 0;
+};
 
 // This checks whether the 2nd column contains a double digit value
 const columnIncludesDoubleDigits = ({

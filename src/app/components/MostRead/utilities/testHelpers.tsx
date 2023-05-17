@@ -128,8 +128,9 @@ export const setFreshPromoTimestamp = (mostReadData: MostReadData) => {
 
   // Updates first 10 promos to have a fresh date
   for (let i = 0; i < 10; i += 1) {
-    if (records[i] && records[i].promo) {
-      records[i].promo.timestamp = freshDate.getTime();
+    const { promo } = records[i];
+    if (promo) {
+      promo.timestamp = freshDate.getTime();
     }
   }
 
