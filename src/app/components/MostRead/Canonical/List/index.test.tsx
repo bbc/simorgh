@@ -4,7 +4,21 @@ import MostReadList from '.';
 import { getItemWrapperArray } from '../../utilities/testHelpers';
 
 describe('MostReadList', () => {
-  it('should render with rtl persian items with correct dir with multi columns', () => {
+  it('should render with ltr news items with correct dir', () => {
+    const { container } = render(
+      <MostReadList numberOfItems={10}>
+        {getItemWrapperArray({
+          numberOfItems: 10,
+          service: 'news',
+          size: 'default',
+        })}
+      </MostReadList>,
+      { service: 'news' },
+    );
+    expect(container).toMatchSnapshot();
+  });
+
+  it('should render with rtl persian items with correct dir', () => {
     const { container } = render(
       <MostReadList numberOfItems={10} dir="rtl">
         {getItemWrapperArray({
