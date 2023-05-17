@@ -27,7 +27,11 @@ if (window.SIMORGH_DATA.path === window.location.pathname) {
       hydrateRoot(
         root,
         <CacheProvider value={cache}>
-          <ClientApp data={data} routes={routes} />
+          <ClientApp
+            location={window.location.pathname}
+            data={data}
+            routes={routes}
+          />
         </CacheProvider>,
       );
     },

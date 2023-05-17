@@ -1,7 +1,7 @@
 import React from 'react';
 import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import { withKnobs } from '@storybook/addon-knobs';
-import { MemoryRouter } from 'react-router';
+import { MemoryRouter } from 'react-router-dom';
 
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
@@ -22,7 +22,11 @@ import ThemeProvider from '../../components/ThemeProvider';
 const TopicPage = withPageWrapper(Page);
 
 // eslint-disable-next-line react/prop-types
-const Component = ({ service, variant = 'default', fixture = defaultTopic }) => {
+const Component = ({
+  service,
+  variant = 'default',
+  fixture = defaultTopic,
+}) => {
   return (
     <ThemeProvider service={service} variant={variant}>
       <ToggleContextProvider
@@ -70,21 +74,41 @@ export default {
 export const Example = Component;
 
 export const MundoWithBannerVariations = props => (
-  <Component service={'mundo'} {...props} fixture={mundoTopicWithMessageBannerVariations} />
+  <Component
+    service={'mundo'}
+    {...props}
+    fixture={mundoTopicWithMessageBannerVariations}
+  />
 );
 
 export const KyrgyzWithMessageBanners = props => (
-  <Component service={'kyrgyz'} {...props} fixture={kyrgyzTopicWithMessageBanners} />
+  <Component
+    service={'kyrgyz'}
+    {...props}
+    fixture={kyrgyzTopicWithMessageBanners}
+  />
 );
 
 export const PersianWithMessageBanners = props => (
-  <Component service={'persian'} {...props} fixture={persianTopicWithMessageBanners} />
+  <Component
+    service={'persian'}
+    {...props}
+    fixture={persianTopicWithMessageBanners}
+  />
 );
 
 export const ArabicWithMessageBanners = props => (
-  <Component service={'arabic'} {...props} fixture={arabicTopicWithMessageBanners} />
+  <Component
+    service={'arabic'}
+    {...props}
+    fixture={arabicTopicWithMessageBanners}
+  />
 );
 
 export const TamilWithMessageBanners = props => (
-  <Component service={'tamil'} {...props} fixture={tamilTopicWithMessageBanners} />
+  <Component
+    service={'tamil'}
+    {...props}
+    fixture={tamilTopicWithMessageBanners}
+  />
 );

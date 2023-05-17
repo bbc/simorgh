@@ -15,10 +15,7 @@ export class ClientApp extends React.Component {
   render() {
     return (
       <BrowserRouter {...this.props}>
-        <App
-          location={window.location.pathname}
-          initialData={this.props.data}
-        />
+        <App location={this.props.location} initialData={this.props.data} />
       </BrowserRouter>
     );
   }
