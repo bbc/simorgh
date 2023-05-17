@@ -42,6 +42,7 @@ const ContextWrap = ({
 }: PropsWithChildren<Props>) => (
   <RequestContextProvider
     isAmp={platform === 'amp'}
+    isApp={false}
     pageType={pageType}
     service="news"
     statusCode={200}
