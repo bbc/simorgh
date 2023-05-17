@@ -25,9 +25,15 @@ const mapToState = ({ pathname, initialData, routeProps, toggles }) => {
   ]);
 };
 
-export const App = ({ initialData, bbcOrigin, location }) => {
+export const App = ({ initialData, bbcOrigin }) => {
+  const {
+    path: location,
+    showAdsBasedOnLocation,
+    toggles,
+    mvtExperiments,
+  } = initialData;
+
   const routeProps = getRouteProps(location);
-  const { showAdsBasedOnLocation, toggles, mvtExperiments } = initialData;
 
   const state = mapToState({
     pathname: location,
