@@ -44,7 +44,7 @@ jobs:
         run: ./scripts/installNodeModules.sh
 
       - name: TEST
-      run: echo HELLO $BFF_PATH
+        run: echo HELLO $BFF_PATH
 
       - name: Integration Tests - Next
         run: yarn test:integration --nextJS
