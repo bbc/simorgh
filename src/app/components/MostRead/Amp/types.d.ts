@@ -13,7 +13,7 @@ declare namespace JSX {
   }
 
   interface ParagraphProps extends React.HTMLAttributes<HTMLParagraphElement> {
-    fallback: string;
+    fallback?: string;
   }
 
   interface TemplateProps extends React.HTMLAttributes<HTMLTemplateElement> {

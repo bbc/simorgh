@@ -114,7 +114,9 @@ export const setStalePromoTimestamp = (mostReadData: MostReadData) => {
   const updatedMostReadData = { ...mostReadData };
 
   // set first promo to have an old timestamp
-  updatedMostReadData.records[0].promo.timestamp = oldTimestamp;
+  if (updatedMostReadData.records[0].promo) {
+    updatedMostReadData.records[0].promo.timestamp = oldTimestamp;
+  }
 
   return updatedMostReadData;
 };
@@ -126,8 +128,8 @@ export const setFreshPromoTimestamp = (mostReadData: MostReadData) => {
 
   // Updates first 10 promos to have a fresh date
   for (let i = 0; i < 10; i += 1) {
-    if (records[i]) {
-      updatedMostReadData.records[i].promo.timestamp = freshDate.getTime();
+    if (records[i] && records[i].promo) {
+      records[i].promo.timestamp = freshDate.getTime();
     }
   }
 
