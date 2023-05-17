@@ -2,11 +2,11 @@ import React from 'react';
 import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import { withKnobs } from '@storybook/addon-knobs';
 import styled from '@emotion/styled';
-import { ToggleContextProvider } from '../../../../contexts/ToggleContext';
-import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
-import ThemeProvider from '../../../../components/ThemeProvider';
-import { Services } from '../../../../models/types/global';
-import { OptimoBlock } from '../../../../models/types/optimo';
+import { ToggleContextProvider } from '../../contexts/ToggleContext';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import ThemeProvider from '../ThemeProvider';
+import { Services } from '../../models/types/global';
+import { OptimoBlock } from '../../models/types/optimo';
 
 import RelatedContentSection from '.';
 import {
