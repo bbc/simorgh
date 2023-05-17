@@ -44,8 +44,6 @@ const Curation = ({
   position = 0,
   curationLength = 0,
 }: CurationProps) => {
-  if (!promos.length) return null;
-
   const componentName = getComponentName(visualStyle, visualProminence);
   const GridComponent = getGridComponent(componentName);
 
