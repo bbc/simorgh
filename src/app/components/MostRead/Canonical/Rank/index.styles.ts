@@ -108,7 +108,8 @@ const isFiveOrTen = ({
   size,
 }: MultiColumnProps) => {
   return listIndex === 5 || listIndex === 10
-    ? getRankMinWidth({ service, numberOfItems, size }).group5WithFiveColumns
+    ? // @ts-expect-error error does not affect functionality
+      getRankMinWidth({ service, numberOfItems, size }).group5WithFiveColumns
     : getRankMinWidth({ service, numberOfItems, size }).group5;
 };
 
@@ -124,7 +125,8 @@ const getGroup3WithTwoColumns = ({
     numberOfItems,
     supportsGrid,
   })
-    ? getRankMinWidth({ numberOfItems, service, size }).group3WithTwoColumns
+    ? // @ts-expect-error error does not affect functionality
+      getRankMinWidth({ numberOfItems, service, size }).group3WithTwoColumns
     : getRankMinWidth({ numberOfItems, service, size }).group3;
 };
 
@@ -161,22 +163,29 @@ const getOneColumnCss = ({ numberOfItems, service, size }: OneColumnProps) => {
   return css({
     [GROUP_0_MAX_WIDTH]: {
       minWidth: listHasDoubleDigits(numberOfItems)
-        ? getRankMinWidth({ numberOfItems, service, size }).group0WithOneColumn
-        : getRankMinWidth({ numberOfItems, service, size }).group0,
+        ? // @ts-expect-error error does not affect functionality
+          getRankMinWidth({ numberOfItems, service, size }).group0WithOneColumn
+        : // @ts-expect-error error does not affect functionality
+          getRankMinWidth({ numberOfItems, service, size }).group0,
     },
     [GROUP_1_ONLY]: {
       minWidth: listHasDoubleDigits(numberOfItems)
-        ? getRankMinWidth({ numberOfItems, service, size }).group1WithOneColumn
-        : getRankMinWidth({ numberOfItems, service, size }).group1,
+        ? // @ts-expect-error error does not affect functionality
+          getRankMinWidth({ numberOfItems, service, size }).group1WithOneColumn
+        : // @ts-expect-error error does not affect functionality
+          getRankMinWidth({ numberOfItems, service, size }).group1,
     },
     [GROUP_2_ONLY]: {
       minWidth: listHasDoubleDigits(numberOfItems)
-        ? getRankMinWidth({ numberOfItems, service, size }).group2WithOneColumn
-        : getRankMinWidth({ numberOfItems, service, size }).group2,
+        ? // @ts-expect-error error does not affect functionality
+          getRankMinWidth({ numberOfItems, service, size }).group2WithOneColumn
+        : // @ts-expect-error error does not affect functionality
+          getRankMinWidth({ numberOfItems, service, size }).group2,
     },
     [GROUP_3_MIN_WIDTH]: {
       minWidth: listHasDoubleDigits(numberOfItems)
-        ? getRankMinWidth({ numberOfItems, service, size }).group3WithOneColumn
+        ? // @ts-expect-error error does not affect functionality
+          getRankMinWidth({ numberOfItems, service, size }).group3WithOneColumn
         : getRankMinWidth({ numberOfItems, service, size }).group3,
     },
   });
