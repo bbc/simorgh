@@ -1,5 +1,5 @@
 import React from 'react';
-import { withKnobs, select } from '@storybook/addon-knobs';
+import { withKnobs } from '@storybook/addon-knobs';
 import ThemeProvider from '../ThemeProvider';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { Services } from '../../models/types/global';
@@ -20,7 +20,12 @@ interface Props extends StoryProps {
   size?: 'default' | 'small';
 }
 
-const Component = ({ service, variant, columnLayout, size }: Props) => (
+const Component = ({
+  service,
+  variant,
+  columnLayout = 'multiColumn',
+  size = 'default',
+}: Props) => (
   <ThemeProvider service={service} variant={variant}>
     <ToggleContextProvider>
       <RequestContextProvider
@@ -35,12 +40,8 @@ const Component = ({ service, variant, columnLayout, size }: Props) => (
         <ServiceContextProvider service={service} variant={variant}>
           <MostReadContainer
             mostReadEndpointOverride={staticMostReadURL(service, variant)}
-            size={select('Size', ['default', 'small'], size)}
-            columnLayout={select(
-              'Column Layout',
-              ['oneColumn', 'twoColumn', 'multiColumn'],
-              columnLayout,
-            )}
+            size={size}
+            columnLayout={columnLayout}
           />
         </ServiceContextProvider>
       </RequestContextProvider>
@@ -55,21 +56,11 @@ export default {
 };
 
 export const ArticlePage5Columns = ({ service, variant }: Props) => (
-  <Component
-    service={service}
-    variant={variant}
-    size="default"
-    columnLayout="multiColumn"
-  />
+  <Component service={service} variant={variant} />
 );
 
-export const HomePage2Columns = ({ service, variant }: Props) => (
-  <Component
-    service={service}
-    variant={variant}
-    size="default"
-    columnLayout="twoColumn"
-  />
+export const Ltr2Columns = ({ service, variant }: Props) => (
+  <Component service={service} variant={variant} columnLayout="twoColumn" />
 );
 
 export const StoryPage1Column = ({ service, variant }: Props) => (
@@ -82,19 +73,9 @@ export const StoryPage1Column = ({ service, variant }: Props) => (
 );
 
 export const Japanese1Column = ({ variant }: Props) => (
-  <Component
-    service="japanese"
-    columnLayout="oneColumn"
-    variant={variant}
-    size="default"
-  />
+  <Component service="japanese" columnLayout="oneColumn" variant={variant} />
 );
 
-export const Persian1Column = ({ variant }: Props) => (
-  <Component
-    service="persian"
-    columnLayout="oneColumn"
-    variant={variant}
-    size="default"
-  />
+export const Rtl2Columns = ({ variant }: Props) => (
+  <Component service="persian" columnLayout="twoColumn" variant={variant} />
 );
