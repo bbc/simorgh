@@ -21,6 +21,7 @@ const WithContexts = Component => {
       id,
       service,
       isAmp,
+      isApp,
       pageType,
       pathname,
       previousPath,
@@ -44,6 +45,7 @@ const WithContexts = Component => {
             derivedPageType={path(['metadata', 'type'], pageData)}
             id={id}
             isAmp={isAmp}
+            isApp={isApp}
             pageType={pageType}
             service={service}
             statusCode={status}
@@ -72,6 +74,7 @@ const WithContexts = Component => {
     status: number,
     id: string,
     isAmp: bool.isRequired,
+    isApp: bool.isRequired,
     pageData: pageDataPropType,
     pageType: string.isRequired,
     pathname: string.isRequired,

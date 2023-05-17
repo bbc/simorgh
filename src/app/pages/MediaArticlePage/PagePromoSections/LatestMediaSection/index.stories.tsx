@@ -26,6 +26,7 @@ interface ComponentProps extends Props {
 const Component = ({ service, content }: PropsWithChildren<ComponentProps>) => (
   <RequestContextProvider
     isAmp={false}
+    isApp={false}
     pageType={MEDIA_ARTICLE_PAGE}
     service={service}
     pathname=""

@@ -25,6 +25,7 @@ const Component = ({ service, variant, columnLayout, size }: Props) => (
     <ToggleContextProvider>
       <RequestContextProvider
         isAmp={false}
+        isApp={false}
         pageType={ARTICLE_PAGE}
         service={service}
         statusCode={200}

@@ -84,6 +84,7 @@ const MetadataWithContext = ({
       bbcOrigin={bbcOrigin}
       id={id}
       isAmp={platform === 'amp'}
+      isApp={false}
       pageType={pageType}
       pathname={pathname}
       service={service}
