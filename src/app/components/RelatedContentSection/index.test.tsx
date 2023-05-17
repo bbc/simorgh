@@ -3,8 +3,8 @@ import { render, screen } from '@testing-library/react';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 import * as viewTracking from '#hooks/useViewTracker';
-import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
-import ThemeProvider from '../../../../components/ThemeProvider';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import ThemeProvider from '../ThemeProvider';
 import RelatedContentSection from '.';
 import {
   RelatedContentList,
@@ -13,11 +13,21 @@ import {
   RelatedContentListWithMPU,
   RelatedContentListWithWSOJ,
 } from './fixture';
+import { Services } from '../../models/types/global';
+import { OptimoBlock } from '../../models/types/optimo';
 
-jest.mock('../../../../components/ThemeProvider');
+jest.mock('../ThemeProvider');
+
+type Props = {
+  fixtureData: OptimoBlock[];
+  service?: Services;
+};
 
 // eslint-disable-next-line react/prop-types
-const RelatedContentSectionFixture = ({ fixtureData, service = 'mundo' }) => (
+const RelatedContentSectionFixture = ({
+  fixtureData,
+  service = 'mundo',
+}: Props) => (
   <ThemeProvider service={service} variant="default">
     <ServiceContextProvider service={service}>
       <ToggleContextProvider>
@@ -30,6 +40,7 @@ const RelatedContentSectionFixture = ({ fixtureData, service = 'mundo' }) => (
 describe('Optimo Related Content Promo', () => {
   it('should return null if no data is passed', () => {
     const { container } = render(
+      // @ts-expect-error - testing null fixture data
       <RelatedContentSectionFixture fixtureData={{}} />,
     );
     expect(container).toBeEmptyDOMElement();
