@@ -15,7 +15,10 @@ export class ClientApp extends React.Component {
   render() {
     return (
       <BrowserRouter {...this.props}>
-        <App initialData={this.props.data} />
+        <App
+          location={window.location.pathname}
+          initialData={this.props.data}
+        />
       </BrowserRouter>
     );
   }
@@ -23,6 +26,10 @@ export class ClientApp extends React.Component {
 
 export const ServerApp = props => (
   <StaticRouter {...props}>
-    <App initialData={props.data} bbcOrigin={props.bbcOrigin} />
+    <App
+      location={props.location}
+      initialData={props.data}
+      bbcOrigin={props.bbcOrigin}
+    />
   </StaticRouter>
 );

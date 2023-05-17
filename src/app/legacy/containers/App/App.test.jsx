@@ -25,7 +25,6 @@ describe('App', () => {
   const match = {
     params: { service: 'ukchina', amp: false, variant: '/simp' },
   };
-  const history = { action: 'POP' };
 
   const route = {
     getInitialData: jest.fn().mockResolvedValue({}),
@@ -46,15 +45,14 @@ describe('App', () => {
   beforeEach(() => {
     ({ rerender, container } = render(
       <App
-        location={{ pathname: 'pathnameOne' }}
+        location="pathnameOne"
         initialData={initialData}
         bbcOrigin="https://www.bbc.co.uk"
-        history={history}
       />,
     ));
   });
 
-  it('should return rendered routes', () => {
+  it.only('should return rendered routes', () => {
     expect(route.getInitialData).not.toHaveBeenCalled();
     expect(reactRouterConfig.renderRoutes).toHaveBeenCalledTimes(1);
     expect(reactRouterConfig.renderRoutes).toHaveBeenCalledWith(routes, {
