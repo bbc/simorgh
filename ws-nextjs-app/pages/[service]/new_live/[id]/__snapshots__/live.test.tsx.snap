@@ -31,6 +31,29 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 }
 
 .emotion-2 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@media (min-width: 20rem) {
+  .emotion-2 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-3 {
   white-space: pre-wrap;
   max-height: 50vh;
   overflow: auto;
@@ -39,17 +62,17 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   border-radius: 0.75rem;
 }
 
-.emotion-2>h4 {
+.emotion-3>h4 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   margin-bottom: 0.625rem;
 }
 
-.emotion-2>p {
+.emotion-3>p {
   margin: 0.25rem 0;
 }
 
-.emotion-3 {
+.emotion-4 {
   color: #141414;
   font-size: 1.125rem;
   line-height: 1.375rem;
@@ -60,26 +83,26 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 }
 
 @media (min-width: 20rem) {
-  .emotion-3 {
+  .emotion-4 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-3 {
+  .emotion-4 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
-.emotion-5 {
+.emotion-6 {
   display: block;
   margin: 0 auto 2.5rem auto;
   text-align: center;
 }
 
-.emotion-6 {
+.emotion-7 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -88,19 +111,19 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   margin: 0 1.375rem;
 }
 
-.emotion-6 b {
+.emotion-7 b {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
 }
 
 @media (min-width: 25rem) {
-  .emotion-6 {
+  .emotion-7 {
     display: none;
   }
 }
 
-.emotion-7 {
+.emotion-8 {
   display: inline-block;
   list-style: none;
   padding: 0;
@@ -111,12 +134,12 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 }
 
 @media (max-width: 24.9375rem) {
-  .emotion-7 {
+  .emotion-8 {
     display: none;
   }
 }
 
-.emotion-8 {
+.emotion-9 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -128,7 +151,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   margin: 0 0.125rem;
 }
 
-.emotion-8 svg {
+.emotion-9 svg {
   fill: currentColor;
   width: 1rem;
   height: 1rem;
@@ -137,12 +160,12 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-8 svg {
+  .emotion-9 svg {
     fill: linkText;
   }
 }
 
-.emotion-9 {
+.emotion-10 {
   display: block;
   color: #141414;
   -webkit-text-decoration: none;
@@ -153,14 +176,14 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   border-bottom: 0.25rem #B80000 solid;
 }
 
-.emotion-9:hover,
-.emotion-9:focus {
+.emotion-10:hover,
+.emotion-10:focus {
   padding: 0;
   border: 0.0625rem #B80000 solid;
   border-bottom-width: 0.25rem;
 }
 
-.emotion-11 {
+.emotion-12 {
   display: block;
   color: #141414;
   -webkit-text-decoration: none;
@@ -170,13 +193,13 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   padding: 0.0625rem;
 }
 
-.emotion-11:hover,
-.emotion-11:focus {
+.emotion-12:hover,
+.emotion-12:focus {
   padding: 0;
   border: 0.0625rem #B80000 solid;
 }
 
-.emotion-12 {
+.emotion-13 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -189,12 +212,12 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-12 {
+  .emotion-13 {
     display: inline-block;
   }
 }
 
-.emotion-12 svg {
+.emotion-13 svg {
   fill: currentColor;
   width: 1rem;
   height: 1rem;
@@ -203,12 +226,12 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-12 svg {
+  .emotion-13 svg {
     fill: linkText;
   }
 }
 
-.emotion-14 {
+.emotion-15 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -221,12 +244,12 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 }
 
 @media (min-width: 63rem) {
-  .emotion-14 {
+  .emotion-15 {
     display: inline-block;
   }
 }
 
-.emotion-14 svg {
+.emotion-15 svg {
   fill: currentColor;
   width: 1rem;
   height: 1rem;
@@ -235,12 +258,12 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-14 svg {
+  .emotion-15 svg {
     fill: linkText;
   }
 }
 
-.emotion-22 {
+.emotion-23 {
   display: inline-block;
   width: 2.75rem;
   height: 2.75rem;
@@ -250,7 +273,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   color: #8A8C8E;
 }
 
-.emotion-22 svg {
+.emotion-23 svg {
   fill: currentColor;
   width: 1rem;
   height: 1rem;
@@ -259,18 +282,18 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-22 svg {
+  .emotion-23 svg {
     fill: linkText;
   }
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-22 svg {
+  .emotion-23 svg {
     fill: canvasText;
   }
 }
 
-.emotion-25 {
+.emotion-26 {
   display: inline-block;
   width: 2.75rem;
   height: 2.75rem;
@@ -279,7 +302,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   margin: 0 0.125rem;
 }
 
-.emotion-25 svg {
+.emotion-26 svg {
   fill: currentColor;
   width: 1rem;
   height: 1rem;
@@ -288,12 +311,12 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-25 svg {
+  .emotion-26 svg {
     fill: linkText;
   }
 }
 
-.emotion-27 {
+.emotion-28 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -313,11 +336,16 @@ exports[`Live Page creates snapshot of the live page 1`] = `
     >
       Test Next.JS Page
     </h1>
-    <pre
+    <p
       class="emotion-2"
     >
+      Test Next.JS Page Description
+    </p>
+    <pre
+      class="emotion-3"
+    >
       <h4
-        class="emotion-3"
+        class="emotion-4"
       >
         Headers
       </h4>
@@ -330,11 +358,13 @@ exports[`Live Page creates snapshot of the live page 1`] = `
       </p>
     </pre>
     <pre
-      class="emotion-2"
+      class="emotion-3"
     >
       {
   "pageCount": 10,
   "activePage": 1,
+  "title": "Test Next.JS Page",
+  "description": "Test Next.JS Page Description",
   "someResponse": {
     "block": "Its a block"
   }
@@ -342,12 +372,12 @@ exports[`Live Page creates snapshot of the live page 1`] = `
     </pre>
     <nav
       aria-label="Page"
-      class="emotion-5"
+      class="emotion-6"
       data-testid="topic-pagination"
       role="navigation"
     >
       <div
-        class="emotion-6"
+        class="emotion-7"
         data-testid="topic-pagination-summary"
         role="text"
       >
@@ -366,89 +396,89 @@ exports[`Live Page creates snapshot of the live page 1`] = `
         <span />
       </div>
       <ul
-        class="emotion-7"
+        class="emotion-8"
         role="list"
       >
         <li
-          class="emotion-8"
+          class="emotion-9"
           visibility="ALL"
         >
           <a
             aria-current="page"
-            class="focusIndicatorOutlineBlack emotion-9"
+            class="focusIndicatorOutlineBlack emotion-10"
             href="?page=1"
           >
             1
           </a>
         </li>
         <li
-          class="emotion-8"
+          class="emotion-9"
           visibility="ALL"
         >
           <a
-            class="focusIndicatorOutlineBlack emotion-11"
+            class="focusIndicatorOutlineBlack emotion-12"
             href="?page=2"
           >
             2
           </a>
         </li>
         <li
-          class="emotion-12"
+          class="emotion-13"
           visibility="TABLET_UP"
         >
           <a
-            class="focusIndicatorOutlineBlack emotion-11"
+            class="focusIndicatorOutlineBlack emotion-12"
             href="?page=3"
           >
             3
           </a>
         </li>
         <li
-          class="emotion-14"
+          class="emotion-15"
           visibility="DESKTOP_ONLY"
         >
           <a
-            class="focusIndicatorOutlineBlack emotion-11"
+            class="focusIndicatorOutlineBlack emotion-12"
             href="?page=4"
           >
             4
           </a>
         </li>
         <li
-          class="emotion-14"
+          class="emotion-15"
           visibility="DESKTOP_ONLY"
         >
           <a
-            class="focusIndicatorOutlineBlack emotion-11"
+            class="focusIndicatorOutlineBlack emotion-12"
             href="?page=5"
           >
             5
           </a>
         </li>
         <li
-          class="emotion-14"
+          class="emotion-15"
           visibility="DESKTOP_ONLY"
         >
           <a
-            class="focusIndicatorOutlineBlack emotion-11"
+            class="focusIndicatorOutlineBlack emotion-12"
             href="?page=6"
           >
             6
           </a>
         </li>
         <li
-          class="emotion-14"
+          class="emotion-15"
           visibility="DESKTOP_ONLY"
         >
           <a
-            class="focusIndicatorOutlineBlack emotion-11"
+            class="focusIndicatorOutlineBlack emotion-12"
             href="?page=7"
           >
             7
           </a>
         </li>
         <li
-          class="emotion-22"
+          class="emotion-23"
           data-testid="topic-pagination-ellipsis"
           role="separator"
           visibility="ALL"
@@ -466,11 +496,11 @@ exports[`Live Page creates snapshot of the live page 1`] = `
           </svg>
         </li>
         <li
-          class="emotion-8"
+          class="emotion-9"
           visibility="ALL"
         >
           <a
-            class="focusIndicatorOutlineBlack emotion-11"
+            class="focusIndicatorOutlineBlack emotion-12"
             href="?page=10"
           >
             10
@@ -478,19 +508,19 @@ exports[`Live Page creates snapshot of the live page 1`] = `
         </li>
       </ul>
       <span
-        class="emotion-25"
+        class="emotion-26"
         visibility="ALL"
       >
         <a
           aria-labelledby="pagination-next-page"
-          class="focusIndicatorOutlineBlack emotion-11"
+          class="focusIndicatorOutlineBlack emotion-12"
           href="?page=2"
         >
           <span
             id="pagination-next-page"
           >
             <span
-              class="emotion-27"
+              class="emotion-28"
             >
               Next Page
             </span>

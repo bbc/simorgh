@@ -6,6 +6,10 @@ export default {
       border: '0.1875rem solid transparent',
       height: '100%',
     }),
+  promoFullWidth: () =>
+    css({
+      width: '100%',
+    }),
   promoTitle: ({ spacings }: Theme) =>
     css({
       paddingBottom: `${spacings.FULL}rem`,
