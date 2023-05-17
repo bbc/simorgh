@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MostReadItemWrapper should render ltr correctly with 10 items 1`] = `
-.emotion-1 {
+.emotion-0 {
   position: relative;
   padding-bottom: 1.5rem;
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-1 {
+  .emotion-0 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -15,7 +15,7 @@ exports[`MostReadItemWrapper should render ltr correctly with 10 items 1`] = `
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-1 {
+  .emotion-0 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -23,7 +23,7 @@ exports[`MostReadItemWrapper should render ltr correctly with 10 items 1`] = `
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-1 {
+  .emotion-0 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -31,7 +31,7 @@ exports[`MostReadItemWrapper should render ltr correctly with 10 items 1`] = `
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-1 {
+  .emotion-0 {
     width: calc(50%);
     display: inline-block;
     vertical-align: top;
@@ -39,7 +39,7 @@ exports[`MostReadItemWrapper should render ltr correctly with 10 items 1`] = `
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-1 {
+  .emotion-0 {
     width: calc(50%);
     display: inline-block;
     vertical-align: top;
@@ -47,7 +47,7 @@ exports[`MostReadItemWrapper should render ltr correctly with 10 items 1`] = `
 }
 
 @media (min-width: 80rem) {
-  .emotion-1 {
+  .emotion-0 {
     width: calc(20%);
     display: inline-block;
     vertical-align: top;
@@ -55,56 +55,56 @@ exports[`MostReadItemWrapper should render ltr correctly with 10 items 1`] = `
 }
 
 @supports (display: grid) {
-  .emotion-1 {
+  .emotion-0 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-1 {
+    .emotion-0 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-1 {
+    .emotion-0 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-1 {
+    .emotion-0 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-1 {
+    .emotion-0 {
       grid-template-columns: repeat(3, 1fr);
       grid-column-end: span 3;
     }
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-1 {
+    .emotion-0 {
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
     }
   }
 
   @media (min-width: 80rem) {
-    .emotion-1 {
+    .emotion-0 {
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
     }
   }
 }
 
-.emotion-3 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -117,93 +117,93 @@ exports[`MostReadItemWrapper should render ltr correctly with 10 items 1`] = `
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-5 {
+  .emotion-3 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-5 {
+  .emotion-3 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-5 {
+  .emotion-3 {
     min-width: 3rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-5 {
+  .emotion-3 {
     min-width: 4rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-5 {
+  .emotion-3 {
     min-width: 2rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-5 {
+    .emotion-3 {
       min-width: 2rem;
     }
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-5 {
+  .emotion-3 {
     min-width: 2rem;
   }
 }
 
-.emotion-7 {
+.emotion-4 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
-  font-size: 2rem;
-  line-height: 2.25rem;
+  font-weight: 400;
   position: relative;
   color: #B80000;
   margin: 0;
   padding: 0;
+  font-size: 2rem;
+  line-height: 2.25rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-7 {
+  .emotion-4 {
     font-size: 2.5rem;
     line-height: 2.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-7 {
+  .emotion-4 {
     font-size: 3.5rem;
     line-height: 3.75rem;
   }
 }
 
-.emotion-9 {
+.emotion-5 {
   padding-top: 0.375rem;
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-9 {
+  .emotion-5 {
     padding-right: 0;
   }
 }
 
-.emotion-11 {
+.emotion-6 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -212,26 +212,26 @@ exports[`MostReadItemWrapper should render ltr correctly with 10 items 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-11 {
+  .emotion-6 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-11 {
+  .emotion-6 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-11:hover,
-.emotion-11:focus {
+.emotion-6:hover,
+.emotion-6:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-11:before {
+.emotion-6:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -244,20 +244,20 @@ exports[`MostReadItemWrapper should render ltr correctly with 10 items 1`] = `
 }
 
 @media (min-width: 25rem) {
-  .emotion-11 {
+  .emotion-6 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 
   @media (min-width: 20rem) and (max-width: 37.4375rem) {
-    .emotion-11 {
+    .emotion-6 {
       font-size: 1.125rem;
       line-height: 1.375rem;
     }
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-11 {
+    .emotion-6 {
       font-size: 1.25rem;
       line-height: 1.5rem;
     }
@@ -265,250 +265,250 @@ exports[`MostReadItemWrapper should render ltr correctly with 10 items 1`] = `
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-18 {
+  .emotion-10 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-18 {
+  .emotion-10 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-18 {
+  .emotion-10 {
     min-width: 3rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-18 {
+  .emotion-10 {
     min-width: 4rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-18 {
+  .emotion-10 {
     min-width: 4rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-18 {
+    .emotion-10 {
       min-width: 2rem;
     }
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-18 {
+  .emotion-10 {
     min-width: 2rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-57 {
+  .emotion-31 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-57 {
+  .emotion-31 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-57 {
+  .emotion-31 {
     min-width: 3rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-57 {
+  .emotion-31 {
     min-width: 4rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-57 {
+  .emotion-31 {
     min-width: 2rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-57 {
+    .emotion-31 {
       min-width: 2rem;
     }
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-57 {
+  .emotion-31 {
     min-width: 4rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-70 {
+  .emotion-38 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-70 {
+  .emotion-38 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-70 {
+  .emotion-38 {
     min-width: 3rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-70 {
+  .emotion-38 {
     min-width: 4rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-70 {
+  .emotion-38 {
     min-width: 4rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-70 {
+    .emotion-38 {
       min-width: 4rem;
     }
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-70 {
+  .emotion-38 {
     min-width: 2rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-83 {
+  .emotion-45 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-83 {
+  .emotion-45 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-83 {
+  .emotion-45 {
     min-width: 3rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-83 {
+  .emotion-45 {
     min-width: 4rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-83 {
+  .emotion-45 {
     min-width: 2rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-83 {
+    .emotion-45 {
       min-width: 4rem;
     }
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-83 {
+  .emotion-45 {
     min-width: 2rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-122 {
+  .emotion-66 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-122 {
+  .emotion-66 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-122 {
+  .emotion-66 {
     min-width: 3rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-122 {
+  .emotion-66 {
     min-width: 4rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-122 {
+  .emotion-66 {
     min-width: 4rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-122 {
+    .emotion-66 {
       min-width: 4rem;
     }
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-122 {
+  .emotion-66 {
     min-width: 4rem;
   }
 }
 
 <div>
   <li
-    class="emotion-0 emotion-1 emotion-2"
+    class="emotion-0 emotion-1"
     dir="ltr"
     role="listitem"
   >
     <div
-      class="emotion-3 emotion-4"
+      class="emotion-2"
     >
       <div
-        class="emotion-5 emotion-6"
+        class="emotion-3"
         dir="ltr"
       >
         <span
-          class="emotion-7 emotion-8"
+          class="emotion-4"
         >
           1
         </span>
       </div>
       <div
-        class="emotion-9 emotion-10"
+        class="emotion-5"
         dir="ltr"
       >
         <a
-          class="focusIndicatorDisplayTableCell emotion-11 emotion-12"
+          class="focusIndicatorDisplayTableCell emotion-6"
           href="https://www.bbc.com/pidgin/articles/cwl08rd38l6o"
         >
           Tins you need to know about Babcock University
@@ -517,29 +517,29 @@ exports[`MostReadItemWrapper should render ltr correctly with 10 items 1`] = `
     </div>
   </li>
   <li
-    class="emotion-0 emotion-1 emotion-2"
+    class="emotion-0 emotion-1"
     dir="ltr"
     role="listitem"
   >
     <div
-      class="emotion-3 emotion-4"
+      class="emotion-2"
     >
       <div
-        class="emotion-18 emotion-6"
+        class="emotion-10"
         dir="ltr"
       >
         <span
-          class="emotion-7 emotion-8"
+          class="emotion-4"
         >
           2
         </span>
       </div>
       <div
-        class="emotion-9 emotion-10"
+        class="emotion-5"
         dir="ltr"
       >
         <a
-          class="focusIndicatorDisplayTableCell emotion-11 emotion-12"
+          class="focusIndicatorDisplayTableCell emotion-6"
           href="https://www.bbc.com/pidgin/articles/cwl08rd38l6o"
         >
           Tins you need to know about Babcock University
@@ -548,29 +548,29 @@ exports[`MostReadItemWrapper should render ltr correctly with 10 items 1`] = `
     </div>
   </li>
   <li
-    class="emotion-0 emotion-1 emotion-2"
+    class="emotion-0 emotion-1"
     dir="ltr"
     role="listitem"
   >
     <div
-      class="emotion-3 emotion-4"
+      class="emotion-2"
     >
       <div
-        class="emotion-5 emotion-6"
+        class="emotion-3"
         dir="ltr"
       >
         <span
-          class="emotion-7 emotion-8"
+          class="emotion-4"
         >
           3
         </span>
       </div>
       <div
-        class="emotion-9 emotion-10"
+        class="emotion-5"
         dir="ltr"
       >
         <a
-          class="focusIndicatorDisplayTableCell emotion-11 emotion-12"
+          class="focusIndicatorDisplayTableCell emotion-6"
           href="https://www.bbc.com/pidgin/articles/cwl08rd38l6o"
         >
           Tins you need to know about Babcock University
@@ -579,29 +579,29 @@ exports[`MostReadItemWrapper should render ltr correctly with 10 items 1`] = `
     </div>
   </li>
   <li
-    class="emotion-0 emotion-1 emotion-2"
+    class="emotion-0 emotion-1"
     dir="ltr"
     role="listitem"
   >
     <div
-      class="emotion-3 emotion-4"
+      class="emotion-2"
     >
       <div
-        class="emotion-18 emotion-6"
+        class="emotion-10"
         dir="ltr"
       >
         <span
-          class="emotion-7 emotion-8"
+          class="emotion-4"
         >
           4
         </span>
       </div>
       <div
-        class="emotion-9 emotion-10"
+        class="emotion-5"
         dir="ltr"
       >
         <a
-          class="focusIndicatorDisplayTableCell emotion-11 emotion-12"
+          class="focusIndicatorDisplayTableCell emotion-6"
           href="https://www.bbc.com/pidgin/articles/cwl08rd38l6o"
         >
           Tins you need to know about Babcock University
@@ -610,29 +610,29 @@ exports[`MostReadItemWrapper should render ltr correctly with 10 items 1`] = `
     </div>
   </li>
   <li
-    class="emotion-0 emotion-1 emotion-2"
+    class="emotion-0 emotion-1"
     dir="ltr"
     role="listitem"
   >
     <div
-      class="emotion-3 emotion-4"
+      class="emotion-2"
     >
       <div
-        class="emotion-57 emotion-6"
+        class="emotion-31"
         dir="ltr"
       >
         <span
-          class="emotion-7 emotion-8"
+          class="emotion-4"
         >
           5
         </span>
       </div>
       <div
-        class="emotion-9 emotion-10"
+        class="emotion-5"
         dir="ltr"
       >
         <a
-          class="focusIndicatorDisplayTableCell emotion-11 emotion-12"
+          class="focusIndicatorDisplayTableCell emotion-6"
           href="https://www.bbc.com/pidgin/articles/cwl08rd38l6o"
         >
           Tins you need to know about Babcock University
@@ -641,29 +641,29 @@ exports[`MostReadItemWrapper should render ltr correctly with 10 items 1`] = `
     </div>
   </li>
   <li
-    class="emotion-0 emotion-1 emotion-2"
+    class="emotion-0 emotion-1"
     dir="ltr"
     role="listitem"
   >
     <div
-      class="emotion-3 emotion-4"
+      class="emotion-2"
     >
       <div
-        class="emotion-70 emotion-6"
+        class="emotion-38"
         dir="ltr"
       >
         <span
-          class="emotion-7 emotion-8"
+          class="emotion-4"
         >
           6
         </span>
       </div>
       <div
-        class="emotion-9 emotion-10"
+        class="emotion-5"
         dir="ltr"
       >
         <a
-          class="focusIndicatorDisplayTableCell emotion-11 emotion-12"
+          class="focusIndicatorDisplayTableCell emotion-6"
           href="https://www.bbc.com/pidgin/articles/cwl08rd38l6o"
         >
           Tins you need to know about Babcock University
@@ -672,29 +672,29 @@ exports[`MostReadItemWrapper should render ltr correctly with 10 items 1`] = `
     </div>
   </li>
   <li
-    class="emotion-0 emotion-1 emotion-2"
+    class="emotion-0 emotion-1"
     dir="ltr"
     role="listitem"
   >
     <div
-      class="emotion-3 emotion-4"
+      class="emotion-2"
     >
       <div
-        class="emotion-83 emotion-6"
+        class="emotion-45"
         dir="ltr"
       >
         <span
-          class="emotion-7 emotion-8"
+          class="emotion-4"
         >
           7
         </span>
       </div>
       <div
-        class="emotion-9 emotion-10"
+        class="emotion-5"
         dir="ltr"
       >
         <a
-          class="focusIndicatorDisplayTableCell emotion-11 emotion-12"
+          class="focusIndicatorDisplayTableCell emotion-6"
           href="https://www.bbc.com/pidgin/articles/cwl08rd38l6o"
         >
           Tins you need to know about Babcock University
@@ -703,29 +703,29 @@ exports[`MostReadItemWrapper should render ltr correctly with 10 items 1`] = `
     </div>
   </li>
   <li
-    class="emotion-0 emotion-1 emotion-2"
+    class="emotion-0 emotion-1"
     dir="ltr"
     role="listitem"
   >
     <div
-      class="emotion-3 emotion-4"
+      class="emotion-2"
     >
       <div
-        class="emotion-70 emotion-6"
+        class="emotion-38"
         dir="ltr"
       >
         <span
-          class="emotion-7 emotion-8"
+          class="emotion-4"
         >
           8
         </span>
       </div>
       <div
-        class="emotion-9 emotion-10"
+        class="emotion-5"
         dir="ltr"
       >
         <a
-          class="focusIndicatorDisplayTableCell emotion-11 emotion-12"
+          class="focusIndicatorDisplayTableCell emotion-6"
           href="https://www.bbc.com/pidgin/articles/cwl08rd38l6o"
         >
           Tins you need to know about Babcock University
@@ -734,29 +734,29 @@ exports[`MostReadItemWrapper should render ltr correctly with 10 items 1`] = `
     </div>
   </li>
   <li
-    class="emotion-0 emotion-1 emotion-2"
+    class="emotion-0 emotion-1"
     dir="ltr"
     role="listitem"
   >
     <div
-      class="emotion-3 emotion-4"
+      class="emotion-2"
     >
       <div
-        class="emotion-83 emotion-6"
+        class="emotion-45"
         dir="ltr"
       >
         <span
-          class="emotion-7 emotion-8"
+          class="emotion-4"
         >
           9
         </span>
       </div>
       <div
-        class="emotion-9 emotion-10"
+        class="emotion-5"
         dir="ltr"
       >
         <a
-          class="focusIndicatorDisplayTableCell emotion-11 emotion-12"
+          class="focusIndicatorDisplayTableCell emotion-6"
           href="https://www.bbc.com/pidgin/articles/cwl08rd38l6o"
         >
           Tins you need to know about Babcock University
@@ -765,29 +765,29 @@ exports[`MostReadItemWrapper should render ltr correctly with 10 items 1`] = `
     </div>
   </li>
   <li
-    class="emotion-0 emotion-1 emotion-2"
+    class="emotion-0 emotion-1"
     dir="ltr"
     role="listitem"
   >
     <div
-      class="emotion-3 emotion-4"
+      class="emotion-2"
     >
       <div
-        class="emotion-122 emotion-6"
+        class="emotion-66"
         dir="ltr"
       >
         <span
-          class="emotion-7 emotion-8"
+          class="emotion-4"
         >
           10
         </span>
       </div>
       <div
-        class="emotion-9 emotion-10"
+        class="emotion-5"
         dir="ltr"
       >
         <a
-          class="focusIndicatorDisplayTableCell emotion-11 emotion-12"
+          class="focusIndicatorDisplayTableCell emotion-6"
           href="https://www.bbc.com/pidgin/articles/cwl08rd38l6o"
         >
           Tins you need to know about Babcock University
@@ -799,13 +799,13 @@ exports[`MostReadItemWrapper should render ltr correctly with 10 items 1`] = `
 `;
 
 exports[`MostReadItemWrapper should render rtl correctly with 10 items 1`] = `
-.emotion-1 {
+.emotion-0 {
   position: relative;
   padding-bottom: 1.5rem;
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-1 {
+  .emotion-0 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -813,7 +813,7 @@ exports[`MostReadItemWrapper should render rtl correctly with 10 items 1`] = `
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-1 {
+  .emotion-0 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -821,7 +821,7 @@ exports[`MostReadItemWrapper should render rtl correctly with 10 items 1`] = `
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-1 {
+  .emotion-0 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -829,7 +829,7 @@ exports[`MostReadItemWrapper should render rtl correctly with 10 items 1`] = `
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-1 {
+  .emotion-0 {
     width: calc(50%);
     display: inline-block;
     vertical-align: top;
@@ -837,7 +837,7 @@ exports[`MostReadItemWrapper should render rtl correctly with 10 items 1`] = `
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-1 {
+  .emotion-0 {
     width: calc(50%);
     display: inline-block;
     vertical-align: top;
@@ -845,7 +845,7 @@ exports[`MostReadItemWrapper should render rtl correctly with 10 items 1`] = `
 }
 
 @media (min-width: 80rem) {
-  .emotion-1 {
+  .emotion-0 {
     width: calc(20%);
     display: inline-block;
     vertical-align: top;
@@ -853,56 +853,56 @@ exports[`MostReadItemWrapper should render rtl correctly with 10 items 1`] = `
 }
 
 @supports (display: grid) {
-  .emotion-1 {
+  .emotion-0 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-1 {
+    .emotion-0 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-1 {
+    .emotion-0 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-1 {
+    .emotion-0 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-1 {
+    .emotion-0 {
       grid-template-columns: repeat(3, 1fr);
       grid-column-end: span 3;
     }
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-1 {
+    .emotion-0 {
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
     }
   }
 
   @media (min-width: 80rem) {
-    .emotion-1 {
+    .emotion-0 {
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
     }
   }
 }
 
-.emotion-3 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -915,93 +915,93 @@ exports[`MostReadItemWrapper should render rtl correctly with 10 items 1`] = `
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-5 {
+  .emotion-3 {
     min-width: 1rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-5 {
+  .emotion-3 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-5 {
+  .emotion-3 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-5 {
+  .emotion-3 {
     min-width: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-5 {
+  .emotion-3 {
     min-width: 1.5rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-5 {
+    .emotion-3 {
       min-width: 1.5rem;
     }
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-5 {
+  .emotion-3 {
     min-width: 1.5rem;
   }
 }
 
-.emotion-7 {
+.emotion-4 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
-  font-size: 2rem;
-  line-height: 2.25rem;
+  font-weight: 400;
   position: relative;
   color: #B80000;
   margin: 0;
   padding: 0;
+  font-size: 2rem;
+  line-height: 2.25rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-7 {
+  .emotion-4 {
     font-size: 2.5rem;
     line-height: 2.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-7 {
+  .emotion-4 {
     font-size: 3.5rem;
     line-height: 3.75rem;
   }
 }
 
-.emotion-9 {
+.emotion-5 {
   padding-top: 0.375rem;
-  padding-right: 1rem;
   padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-9 {
+  .emotion-5 {
     padding-left: 0;
   }
 }
 
-.emotion-11 {
+.emotion-6 {
   font-size: 0.9375rem;
   line-height: 1.5rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -1010,26 +1010,26 @@ exports[`MostReadItemWrapper should render rtl correctly with 10 items 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-11 {
+  .emotion-6 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-11 {
+  .emotion-6 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
-.emotion-11:hover,
-.emotion-11:focus {
+.emotion-6:hover,
+.emotion-6:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-11:before {
+.emotion-6:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -1042,20 +1042,20 @@ exports[`MostReadItemWrapper should render rtl correctly with 10 items 1`] = `
 }
 
 @media (min-width: 25rem) {
-  .emotion-11 {
+  .emotion-6 {
     font-size: 1.125rem;
     line-height: 1.625rem;
   }
 
   @media (min-width: 20rem) and (max-width: 37.4375rem) {
-    .emotion-11 {
+    .emotion-6 {
       font-size: 1.125rem;
       line-height: 1.625rem;
     }
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-11 {
+    .emotion-6 {
       font-size: 1.25rem;
       line-height: 1.75rem;
     }
@@ -1063,250 +1063,250 @@ exports[`MostReadItemWrapper should render rtl correctly with 10 items 1`] = `
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-18 {
+  .emotion-10 {
     min-width: 1rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-18 {
+  .emotion-10 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-18 {
+  .emotion-10 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-18 {
+  .emotion-10 {
     min-width: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-18 {
+  .emotion-10 {
     min-width: 2rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-18 {
+    .emotion-10 {
       min-width: 1.5rem;
     }
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-18 {
+  .emotion-10 {
     min-width: 1.5rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-57 {
+  .emotion-31 {
     min-width: 1rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-57 {
+  .emotion-31 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-57 {
+  .emotion-31 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-57 {
+  .emotion-31 {
     min-width: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-57 {
+  .emotion-31 {
     min-width: 1.5rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-57 {
+    .emotion-31 {
       min-width: 1.5rem;
     }
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-57 {
+  .emotion-31 {
     min-width: 2rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-70 {
+  .emotion-38 {
     min-width: 1rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-70 {
+  .emotion-38 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-70 {
+  .emotion-38 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-70 {
+  .emotion-38 {
     min-width: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-70 {
+  .emotion-38 {
     min-width: 2rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-70 {
+    .emotion-38 {
       min-width: 2rem;
     }
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-70 {
+  .emotion-38 {
     min-width: 1.5rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-83 {
+  .emotion-45 {
     min-width: 1rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-83 {
+  .emotion-45 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-83 {
+  .emotion-45 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-83 {
+  .emotion-45 {
     min-width: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-83 {
+  .emotion-45 {
     min-width: 1.5rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-83 {
+    .emotion-45 {
       min-width: 2rem;
     }
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-83 {
+  .emotion-45 {
     min-width: 1.5rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-122 {
+  .emotion-66 {
     min-width: 1rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-122 {
+  .emotion-66 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-122 {
+  .emotion-66 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-122 {
+  .emotion-66 {
     min-width: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-122 {
+  .emotion-66 {
     min-width: 2rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-122 {
+    .emotion-66 {
       min-width: 2rem;
     }
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-122 {
+  .emotion-66 {
     min-width: 2rem;
   }
 }
 
 <div>
   <li
-    class="emotion-0 emotion-1 emotion-2"
+    class="emotion-0 emotion-1"
     dir="rtl"
     role="listitem"
   >
     <div
-      class="emotion-3 emotion-4"
+      class="emotion-2"
     >
       <div
-        class="emotion-5 emotion-6"
+        class="emotion-3"
         dir="rtl"
       >
         <span
-          class="emotion-7 emotion-8"
+          class="emotion-4"
         >
           ۱
         </span>
       </div>
       <div
-        class="emotion-9 emotion-10"
+        class="emotion-5"
         dir="rtl"
       >
         <a
-          class="focusIndicatorDisplayTableCell emotion-11 emotion-12"
+          class="focusIndicatorDisplayTableCell emotion-6"
           href="https://www.bbc.com/persian/articles/cej3lzd5e0go"
         >
           در این جشنواره برای نخستین بار از کارگران افغانستان در شهر تهران تقدیر شد
@@ -1315,29 +1315,29 @@ exports[`MostReadItemWrapper should render rtl correctly with 10 items 1`] = `
     </div>
   </li>
   <li
-    class="emotion-0 emotion-1 emotion-2"
+    class="emotion-0 emotion-1"
     dir="rtl"
     role="listitem"
   >
     <div
-      class="emotion-3 emotion-4"
+      class="emotion-2"
     >
       <div
-        class="emotion-18 emotion-6"
+        class="emotion-10"
         dir="rtl"
       >
         <span
-          class="emotion-7 emotion-8"
+          class="emotion-4"
         >
           ۲
         </span>
       </div>
       <div
-        class="emotion-9 emotion-10"
+        class="emotion-5"
         dir="rtl"
       >
         <a
-          class="focusIndicatorDisplayTableCell emotion-11 emotion-12"
+          class="focusIndicatorDisplayTableCell emotion-6"
           href="https://www.bbc.com/persian/articles/cej3lzd5e0go"
         >
           در این جشنواره برای نخستین بار از کارگران افغانستان در شهر تهران تقدیر شد
@@ -1346,29 +1346,29 @@ exports[`MostReadItemWrapper should render rtl correctly with 10 items 1`] = `
     </div>
   </li>
   <li
-    class="emotion-0 emotion-1 emotion-2"
+    class="emotion-0 emotion-1"
     dir="rtl"
     role="listitem"
   >
     <div
-      class="emotion-3 emotion-4"
+      class="emotion-2"
     >
       <div
-        class="emotion-5 emotion-6"
+        class="emotion-3"
         dir="rtl"
       >
         <span
-          class="emotion-7 emotion-8"
+          class="emotion-4"
         >
           ۳
         </span>
       </div>
       <div
-        class="emotion-9 emotion-10"
+        class="emotion-5"
         dir="rtl"
       >
         <a
-          class="focusIndicatorDisplayTableCell emotion-11 emotion-12"
+          class="focusIndicatorDisplayTableCell emotion-6"
           href="https://www.bbc.com/persian/articles/cej3lzd5e0go"
         >
           در این جشنواره برای نخستین بار از کارگران افغانستان در شهر تهران تقدیر شد
@@ -1377,29 +1377,29 @@ exports[`MostReadItemWrapper should render rtl correctly with 10 items 1`] = `
     </div>
   </li>
   <li
-    class="emotion-0 emotion-1 emotion-2"
+    class="emotion-0 emotion-1"
     dir="rtl"
     role="listitem"
   >
     <div
-      class="emotion-3 emotion-4"
+      class="emotion-2"
     >
       <div
-        class="emotion-18 emotion-6"
+        class="emotion-10"
         dir="rtl"
       >
         <span
-          class="emotion-7 emotion-8"
+          class="emotion-4"
         >
           ۴
         </span>
       </div>
       <div
-        class="emotion-9 emotion-10"
+        class="emotion-5"
         dir="rtl"
       >
         <a
-          class="focusIndicatorDisplayTableCell emotion-11 emotion-12"
+          class="focusIndicatorDisplayTableCell emotion-6"
           href="https://www.bbc.com/persian/articles/cej3lzd5e0go"
         >
           در این جشنواره برای نخستین بار از کارگران افغانستان در شهر تهران تقدیر شد
@@ -1408,29 +1408,29 @@ exports[`MostReadItemWrapper should render rtl correctly with 10 items 1`] = `
     </div>
   </li>
   <li
-    class="emotion-0 emotion-1 emotion-2"
+    class="emotion-0 emotion-1"
     dir="rtl"
     role="listitem"
   >
     <div
-      class="emotion-3 emotion-4"
+      class="emotion-2"
     >
       <div
-        class="emotion-57 emotion-6"
+        class="emotion-31"
         dir="rtl"
       >
         <span
-          class="emotion-7 emotion-8"
+          class="emotion-4"
         >
           ۵
         </span>
       </div>
       <div
-        class="emotion-9 emotion-10"
+        class="emotion-5"
         dir="rtl"
       >
         <a
-          class="focusIndicatorDisplayTableCell emotion-11 emotion-12"
+          class="focusIndicatorDisplayTableCell emotion-6"
           href="https://www.bbc.com/persian/articles/cej3lzd5e0go"
         >
           در این جشنواره برای نخستین بار از کارگران افغانستان در شهر تهران تقدیر شد
@@ -1439,29 +1439,29 @@ exports[`MostReadItemWrapper should render rtl correctly with 10 items 1`] = `
     </div>
   </li>
   <li
-    class="emotion-0 emotion-1 emotion-2"
+    class="emotion-0 emotion-1"
     dir="rtl"
     role="listitem"
   >
     <div
-      class="emotion-3 emotion-4"
+      class="emotion-2"
     >
       <div
-        class="emotion-70 emotion-6"
+        class="emotion-38"
         dir="rtl"
       >
         <span
-          class="emotion-7 emotion-8"
+          class="emotion-4"
         >
           ۶
         </span>
       </div>
       <div
-        class="emotion-9 emotion-10"
+        class="emotion-5"
         dir="rtl"
       >
         <a
-          class="focusIndicatorDisplayTableCell emotion-11 emotion-12"
+          class="focusIndicatorDisplayTableCell emotion-6"
           href="https://www.bbc.com/persian/articles/cej3lzd5e0go"
         >
           در این جشنواره برای نخستین بار از کارگران افغانستان در شهر تهران تقدیر شد
@@ -1470,29 +1470,29 @@ exports[`MostReadItemWrapper should render rtl correctly with 10 items 1`] = `
     </div>
   </li>
   <li
-    class="emotion-0 emotion-1 emotion-2"
+    class="emotion-0 emotion-1"
     dir="rtl"
     role="listitem"
   >
     <div
-      class="emotion-3 emotion-4"
+      class="emotion-2"
     >
       <div
-        class="emotion-83 emotion-6"
+        class="emotion-45"
         dir="rtl"
       >
         <span
-          class="emotion-7 emotion-8"
+          class="emotion-4"
         >
           ۷
         </span>
       </div>
       <div
-        class="emotion-9 emotion-10"
+        class="emotion-5"
         dir="rtl"
       >
         <a
-          class="focusIndicatorDisplayTableCell emotion-11 emotion-12"
+          class="focusIndicatorDisplayTableCell emotion-6"
           href="https://www.bbc.com/persian/articles/cej3lzd5e0go"
         >
           در این جشنواره برای نخستین بار از کارگران افغانستان در شهر تهران تقدیر شد
@@ -1501,29 +1501,29 @@ exports[`MostReadItemWrapper should render rtl correctly with 10 items 1`] = `
     </div>
   </li>
   <li
-    class="emotion-0 emotion-1 emotion-2"
+    class="emotion-0 emotion-1"
     dir="rtl"
     role="listitem"
   >
     <div
-      class="emotion-3 emotion-4"
+      class="emotion-2"
     >
       <div
-        class="emotion-70 emotion-6"
+        class="emotion-38"
         dir="rtl"
       >
         <span
-          class="emotion-7 emotion-8"
+          class="emotion-4"
         >
           ۸
         </span>
       </div>
       <div
-        class="emotion-9 emotion-10"
+        class="emotion-5"
         dir="rtl"
       >
         <a
-          class="focusIndicatorDisplayTableCell emotion-11 emotion-12"
+          class="focusIndicatorDisplayTableCell emotion-6"
           href="https://www.bbc.com/persian/articles/cej3lzd5e0go"
         >
           در این جشنواره برای نخستین بار از کارگران افغانستان در شهر تهران تقدیر شد
@@ -1532,29 +1532,29 @@ exports[`MostReadItemWrapper should render rtl correctly with 10 items 1`] = `
     </div>
   </li>
   <li
-    class="emotion-0 emotion-1 emotion-2"
+    class="emotion-0 emotion-1"
     dir="rtl"
     role="listitem"
   >
     <div
-      class="emotion-3 emotion-4"
+      class="emotion-2"
     >
       <div
-        class="emotion-83 emotion-6"
+        class="emotion-45"
         dir="rtl"
       >
         <span
-          class="emotion-7 emotion-8"
+          class="emotion-4"
         >
           ۹
         </span>
       </div>
       <div
-        class="emotion-9 emotion-10"
+        class="emotion-5"
         dir="rtl"
       >
         <a
-          class="focusIndicatorDisplayTableCell emotion-11 emotion-12"
+          class="focusIndicatorDisplayTableCell emotion-6"
           href="https://www.bbc.com/persian/articles/cej3lzd5e0go"
         >
           در این جشنواره برای نخستین بار از کارگران افغانستان در شهر تهران تقدیر شد
@@ -1563,29 +1563,29 @@ exports[`MostReadItemWrapper should render rtl correctly with 10 items 1`] = `
     </div>
   </li>
   <li
-    class="emotion-0 emotion-1 emotion-2"
+    class="emotion-0 emotion-1"
     dir="rtl"
     role="listitem"
   >
     <div
-      class="emotion-3 emotion-4"
+      class="emotion-2"
     >
       <div
-        class="emotion-122 emotion-6"
+        class="emotion-66"
         dir="rtl"
       >
         <span
-          class="emotion-7 emotion-8"
+          class="emotion-4"
         >
           ۱۰
         </span>
       </div>
       <div
-        class="emotion-9 emotion-10"
+        class="emotion-5"
         dir="rtl"
       >
         <a
-          class="focusIndicatorDisplayTableCell emotion-11 emotion-12"
+          class="focusIndicatorDisplayTableCell emotion-6"
           href="https://www.bbc.com/persian/articles/cej3lzd5e0go"
         >
           در این جشنواره برای نخستین بار از کارگران افغانستان در شهر تهران تقدیر شد
