@@ -243,10 +243,12 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
         </div>
         {!isApp && <SecondaryColumn pageData={pageData} />}
       </div>
-      <MostReadContainer
-        mostReadEndpointOverride={mostReadEndpointOverride}
-        wrapper={MostReadWrapper}
-      />
+      {!isApp && (
+        <MostReadContainer
+          mostReadEndpointOverride={mostReadEndpointOverride}
+          wrapper={MostReadWrapper}
+        />
+      )}
     </div>
   );
 };
