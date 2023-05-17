@@ -33,7 +33,7 @@ export type VisualProminence = keyof typeof VISUAL_PROMINENCE;
 export interface CurationProps {
   visualStyle: VisualStyle;
   visualProminence: VisualProminence;
-  promos: Summary[];
+  promos?: Summary[];
   title?: string;
   link?: string;
   headingLevel?: number;
@@ -43,7 +43,7 @@ export interface CurationProps {
 }
 
 export interface CurationData {
-  summaries: Summary[];
+  summaries?: Summary[];
   visualStyle?: VisualStyle | string;
   visualProminence: VisualProminence | string;
   curationId: string;
@@ -53,4 +53,5 @@ export interface CurationData {
   activePage?: number;
   pageCount?: number;
   curationType?: string;
+  mostRead?: object;
 }
