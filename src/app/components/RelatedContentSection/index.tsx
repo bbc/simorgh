@@ -15,14 +15,14 @@ import filter from 'ramda/src/filter';
 import pipe from 'ramda/src/pipe';
 
 import useViewTracker from '#hooks/useViewTracker';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
+import { ServiceContext } from '../../contexts/ServiceContext';
 import styles from './index.styles';
-import generatePromoId from '../generatePromoId';
+import generatePromoId from '../../lib/utilities/generatePromoId';
 import RelatedContentItem from './RelatedContentItem';
-import PromoList from '../../../../legacy/components/OptimoPromos/PromoList';
-import PromoItem from '../../../../legacy/components/OptimoPromos/PromoItem/index.styles';
-import { EventTrackingData } from '../../types';
-import { OptimoBlock } from '../../../../models/types/optimo';
+import PromoList from '../../legacy/components/OptimoPromos/PromoList';
+import PromoItem from '../../legacy/components/OptimoPromos/PromoItem/index.styles';
+import { EventTrackingBlock } from '../../models/types/eventTracking';
+import { OptimoBlock } from '../../models/types/optimo';
 
 const BLOCKS_TO_IGNORE = ['wsoj', 'mpu'];
 
@@ -31,10 +31,18 @@ const removeCustomBlocks = pipe(
   last,
 );
 
+const isHeadlineFirst = (item: object) => {
+  return !!pathOr<string>(
+    '',
+    ['model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
+    item,
+  );
+};
+
 type RelatedContentListProps = {
   item: object;
   index: number;
-  eventTrackingData: EventTrackingData;
+  eventTrackingData: EventTrackingBlock;
   viewRef: React.Ref<HTMLDivElement>;
 };
 
@@ -68,8 +76,13 @@ const renderRelatedContentList = ({
     index,
   });
 
+  const headlineFirst = isHeadlineFirst(item);
+
   return (
-    <PromoItem css={styles.promoItem} key={ariaLabelledBy}>
+    <PromoItem
+      css={headlineFirst ? styles.promoItemFullWidth : styles.promoItem}
+      key={ariaLabelledBy}
+    >
       <RelatedContentItem
         item={item}
         ariaLabelledBy={ariaLabelledBy}
@@ -121,6 +134,7 @@ const RelatedContentSection = ({ content }: { content: OptimoBlock[] }) => {
   const reducedStoryPromoItems = slice(0, 6, storyPromoItems);
 
   const hasSingleContent = reducedStoryPromoItems.length === 1;
+  const headlineFirst = isHeadlineFirst(reducedStoryPromoItems[0]);
 
   const assetUri = pathOr(
     '',
@@ -163,7 +177,13 @@ const RelatedContentSection = ({ content }: { content: OptimoBlock[] }) => {
         {title}
       </SectionLabel>
       {hasSingleContent ? (
-        <div css={styles.singleItemWrapper}>
+        <div
+          css={
+            headlineFirst
+              ? styles.singleItemWrapperFullWidth
+              : styles.singleItemWrapper
+          }
+        >
           <RelatedContentItem
             item={reducedStoryPromoItems[0]}
             ariaLabelledBy={ariaLabelledBy}

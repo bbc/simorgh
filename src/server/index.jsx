@@ -194,6 +194,7 @@ server.get(
       const {
         service,
         isAmp,
+        isApp,
         route: { getInitialData, pageType },
         variant,
       } = getRouteProps(urlPath);
@@ -243,6 +244,7 @@ server.get(
           bbcOrigin,
           data,
           isAmp,
+          isApp,
           routes,
           service,
           url,
@@ -268,6 +270,7 @@ server.get(
           bbcOrigin,
           data: { error: true, status },
           isAmp,
+          isApp,
           routes,
           service,
           url,

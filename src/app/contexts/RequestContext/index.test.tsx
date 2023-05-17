@@ -124,6 +124,27 @@ describe('RequestContext', () => {
     expect(React.useContext).toHaveReturnedWith(expectedOutput);
   });
 
+  it('should return expected values for app requests', () => {
+    const appInput = {
+      ...input,
+      isAmp: false,
+      isApp: true,
+    };
+
+    render(
+      <RequestContextProvider {...appInput}>
+        <Component />
+      </RequestContextProvider>,
+    );
+
+    expect(React.useContext).toHaveReturnedWith({
+      ...expectedOutput,
+      isAmp: false,
+      isApp: true,
+      platform: 'canonical',
+    });
+  });
+
   describe('platform', () => {
     it('should be "amp" when isAmp is true', () => {
       render(
@@ -149,6 +170,21 @@ describe('RequestContext', () => {
       expect(React.useContext).toHaveReturnedWith({
         ...expectedOutput,
         isAmp: false,
+        platform: 'canonical',
+      });
+    });
+
+    it('should be "canonical" when isAmp is false and isApp is true', () => {
+      render(
+        <RequestContextProvider {...input} isAmp={false} isApp>
+          <Component />
+        </RequestContextProvider>,
+      );
+
+      expect(React.useContext).toHaveReturnedWith({
+        ...expectedOutput,
+        isAmp: false,
+        isApp: true,
         platform: 'canonical',
       });
     });
