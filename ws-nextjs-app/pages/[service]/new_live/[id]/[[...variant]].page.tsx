@@ -53,14 +53,14 @@ const getPageData = async ({
   const optHeaders = { 'ctx-service-env': env };
   const isLocal = !env || env === 'local';
 
-  const agent =  null;
+  const agent = null;
 
   let pageStatus;
   let pageJson;
   let errorMessage;
 
   const path = livePageUrl.toString();
-  console.log('ENV', optHeaders);
+
   try {
     // @ts-expect-error Due to jsdoc inference, and no TS within fetchPageData
     const { status, json } = await fetchPageData({
