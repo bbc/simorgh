@@ -2,8 +2,12 @@
 
 export default () => {
   //runHeaderTests();
-  console.log('CHECK');
-  it('test', () => {
-    expect(true).toBe(true);
+  it('I can see the branding', () => {
+    console.log(document);
+    const logo = document.querySelector('header svg');
+
+    expect(logo).toBeInTheDocument();
+    expect(logo.parentNode.textContent).toBeTruthy();
+    expect(logo.parentNode.textContent).toMatchSnapshot();
   });
 };
