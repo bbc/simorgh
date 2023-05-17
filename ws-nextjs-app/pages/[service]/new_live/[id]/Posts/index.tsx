@@ -1,15 +1,11 @@
 import React from 'react';
 import path from 'ramda/src/path';
+import pathOr from 'ramda/src/pathOr';
+import { OptimoBlock } from '#models/types/optimo';
+import Heading from '#app/components/Heading';
+import Text from '#app/components/Text';
 
-// const PostContent = ({ postContentBlock }: any) => {
-//   const postContent = getPostContent(postContentBlock);
-// };
-
-export const getPostResults = path(['data', 'results']);
-
-const getHeaderBlocks = path(['header', 'model', 'blocks']);
-
-const getContentBlocks = path(['content', 'model', 'blocks']);
+/* Helpers */
 
 const getContent = path(['model', 'text']);
 
@@ -24,55 +20,79 @@ const getHeadlineOrSubheadline = path([
   'text',
 ]);
 
-const PostItem = ({ postItem }: any) => {
-  const headerBlocks: any = getHeaderBlocks(postItem);
+/* End Helpers */
 
-  const headlineBlocks: any = headerBlocks.filter(
-    block => block.type === 'headline',
+const PostHeadings = ({ headerBlocks }) => {
+  const headline: string = headerBlocks
+    .filter((block: any) => block.type === 'headline')
+    .map((item: any) => getHeadlineOrSubheadline(item));
+
+  const subheadline: string = headerBlocks
+    .filter((block: any) => block.type === 'subheadline')
+    .map((item: any) => getHeadlineOrSubheadline(item));
+
+  return (
+    <div>
+      <Heading level={2}>{headline}</Heading>
+      <Heading level={3}>{subheadline}</Heading>
+    </div>
+  );
+};
+
+const PostContent = ({ contentBlocks }) => {
+  const extractParagraphContent: any = contentBlocks
+    .filter(block => block.type === 'paragraph')
+    .map((item: any) => getContent(item));
+
+  const nonParagraphBlocks: any = contentBlocks.filter(
+    block => block.type !== 'paragraph',
   );
 
-  const extractHeadline = headlineBlocks.map(item =>
-    getHeadlineOrSubheadline(item),
-  );
-
-  const subheadlineBlocks: any = headerBlocks.filter(
-    block => block.type === 'subheadline',
-  );
-
-  const extractSubheadline = subheadlineBlocks.map((item: any) =>
-    getHeadlineOrSubheadline(item),
-  );
-
-  const contentBlocks: any = getContentBlocks(postItem);
-
-  const paragraphBlocks: any = contentBlocks.filter(
-    block => block.type === 'paragraph',
-  );
-
-  const extractParagraphContent = paragraphBlocks.map((item: any) =>
-    getContent(item),
+  const nonParagraphBlocksToString: any = nonParagraphBlocks.map((item: any) =>
+    JSON.stringify(nonParagraphBlocks, null, 2),
   );
 
   return (
-    <li>
-      <h1>{extractHeadline}</h1>
-      <h2>{extractSubheadline}</h2>
-      <p>{extractParagraphContent}</p>
-    </li>
+    <div>
+      <Text as="p">{extractParagraphContent}</Text>
+      <Text as="p">{nonParagraphBlocksToString}</Text>
+    </div>
+  );
+};
+
+const PostItem = ({ postItem }: any) => {
+  const headerBlocks = pathOr<OptimoBlock[]>(
+    [],
+    ['header', 'model', 'blocks'],
+    postItem,
+  );
+
+  const contentBlocks = pathOr<OptimoBlock[]>(
+    [],
+    ['content', 'model', 'blocks'],
+    postItem,
+  );
+
+  return (
+    <div>
+      <PostHeadings headerBlocks={headerBlocks} />
+      <PostContent contentBlocks={contentBlocks} />
+      <hr />
+    </div>
   );
 };
 
 const PostsList = ({ postsData }: any) => {
-  const postResults: any = getPostResults(postsData);
+  const postResults: any = path(['data', 'results'], postsData);
 
   if (!postResults) return null;
 
   return (
-    <ul>
-      {postResults.map(item => (
+    <div>
+      {postResults.map((item: []) => (
         <PostItem postItem={item} />
       ))}
-    </ul>
+    </div>
   );
 };
 
