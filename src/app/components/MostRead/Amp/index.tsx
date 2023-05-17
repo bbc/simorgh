@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { Helmet } from 'react-helmet';
 import {
   AMP_LIST_JS,

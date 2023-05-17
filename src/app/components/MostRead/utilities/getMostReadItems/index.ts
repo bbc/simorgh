@@ -1,13 +1,10 @@
 import pathOr from 'ramda/src/pathOr';
-import nodeLogger from '#lib/logger.node';
 import { Services } from '../../../../models/types/global';
 import {
   OptimoMostReadRecord,
   CPSMostReadRecord,
   MostReadData,
 } from '../../types';
-
-const logger = nodeLogger(__filename);
 
 const getOptimoItemData = (record: OptimoMostReadRecord) => {
   const optimoHeadline = pathOr(
