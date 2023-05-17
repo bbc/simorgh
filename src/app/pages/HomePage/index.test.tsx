@@ -5,13 +5,18 @@ import { render } from '../../components/react-testing-library-with-providers';
 import HomePage from './HomePage';
 
 describe('Home Page', () => {
-  it('should render a section for each curation', () => {
+  it('should render a section for each curation with summaries', () => {
     const { container } = render(<HomePage pageData={kyrgyzHomePageData} />, {
       service: 'kyrgyz',
     });
+
+    const curationsWithSummaries = kyrgyzHomePageData.curations.filter(
+      ({ summaries }) => summaries && summaries?.length > 0,
+    );
+
     expect(container).not.toBeEmptyDOMElement();
     expect(container.getElementsByTagName('section').length).toEqual(
-      kyrgyzHomePageData.curations.length,
+      curationsWithSummaries.length,
     );
   });
 
