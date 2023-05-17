@@ -14,6 +14,7 @@ describe('App', () => {
   let rerender;
   const timeOnServer = 1582534951721;
   const initialData = {
+    path: 'pathnameOne',
     pageData: 'Some initial data',
     timeOnServer,
     showAdsBasedOnLocation: false,
@@ -44,11 +45,7 @@ describe('App', () => {
 
   beforeEach(() => {
     ({ rerender, container } = render(
-      <App
-        location="pathnameOne"
-        initialData={initialData}
-        bbcOrigin="https://www.bbc.co.uk"
-      />,
+      <App initialData={initialData} bbcOrigin="https://www.bbc.co.uk" />,
     ));
   });
 

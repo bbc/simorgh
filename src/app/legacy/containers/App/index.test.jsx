@@ -9,25 +9,15 @@ jest.mock('react-router-dom', () => ({
 }));
 jest.mock('./App', () => jest.fn(() => <>Mocked App component</>));
 
-const renderClientApp = () =>
-  render(<ClientApp location="/" data="someData!" />);
+const renderClientApp = () => render(<ClientApp data="someData!" />);
 
 const renderServerApp = () =>
-  render(
-    <ServerApp
-      location="/"
-      data="somePassedData"
-      bbcOrigin="https://www.bbc.com"
-    />,
-  );
+  render(<ServerApp data="somePassedData" bbcOrigin="https://www.bbc.com" />);
 
 describe('ClientApp', () => {
   it('App should be called with the correct props', () => {
     renderClientApp();
-    expect(App).toHaveBeenCalledWith(
-      { initialData: 'someData!', location: '/' },
-      {},
-    );
+    expect(App).toHaveBeenCalledWith({ initialData: 'someData!' }, {});
   });
 
   it('BrowserRouter should be called with the correct props', () => {
@@ -38,7 +28,6 @@ describe('ClientApp', () => {
       {
         children: expect.anything(),
         data: 'someData!',
-        location: '/',
       },
       {},
     );
@@ -67,7 +56,6 @@ describe('ServerApp', () => {
       {
         initialData: 'somePassedData',
         bbcOrigin: 'https://www.bbc.com',
-        location: '/',
       },
       {},
     );
@@ -82,7 +70,6 @@ describe('ServerApp', () => {
         children: expect.anything(),
         data: 'somePassedData',
         bbcOrigin: 'https://www.bbc.com',
-        location: '/',
       },
       {},
     );
