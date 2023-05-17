@@ -20,7 +20,9 @@ const getNonCanonicalPlatformId = params => {
 };
 
 const getRouteProps = url => {
-  const matchedRoutes = matchRoutes(routes, url);
+  const urlWithoutQueryParams = url.split('?')[0];
+
+  const matchedRoutes = matchRoutes(routes, urlWithoutQueryParams);
 
   const route = path([0, 'route'], matchedRoutes);
   const match = path([0, 'match'], matchedRoutes);

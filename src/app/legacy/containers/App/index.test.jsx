@@ -9,7 +9,8 @@ jest.mock('react-router-dom', () => ({
 }));
 jest.mock('./App', () => jest.fn(() => <>Mocked App component</>));
 
-const renderClientApp = () => render(<ClientApp data="someData!" />);
+const renderClientApp = () =>
+  render(<ClientApp location="/" data="someData!" />);
 
 const renderServerApp = () =>
   render(
@@ -37,6 +38,7 @@ describe('ClientApp', () => {
       {
         children: expect.anything(),
         data: 'someData!',
+        location: '/',
       },
       {},
     );
