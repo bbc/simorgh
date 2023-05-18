@@ -56,9 +56,5 @@ export interface CurationData {
   activePage?: number;
   pageCount?: number;
   curationType?: string;
-<<<<<<< HEAD
   mostRead?: MostReadData;
-=======
-  mostRead?: object;
->>>>>>> 819a54453a80c7da7c98fa156e07fc2d11056ff4
 }
