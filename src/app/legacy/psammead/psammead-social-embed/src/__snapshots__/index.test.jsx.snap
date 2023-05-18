@@ -249,7 +249,7 @@ exports[`AmpSocialEmbed should render correctly for Facebook 1`] = `
   font-weight: 700;
 }
 
-@media (min-width: 20rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-5 {
     font-size: 1.125rem;
     line-height: 1.375rem;
@@ -274,7 +274,7 @@ exports[`AmpSocialEmbed should render correctly for Facebook 1`] = `
   margin: 1rem 0;
 }
 
-@media (min-width: 20rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-6 {
     font-size: 1rem;
     line-height: 1.375rem;
@@ -320,7 +320,7 @@ exports[`AmpSocialEmbed should render correctly for Facebook 1`] = `
   cursor: pointer;
 }
 
-@media (min-width: 20rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-7 {
     font-size: 1rem;
     line-height: 1.25rem;
@@ -521,7 +521,7 @@ exports[`AmpSocialEmbed should render correctly for Instagram 1`] = `
   font-weight: 700;
 }
 
-@media (min-width: 20rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-5 {
     font-size: 1.125rem;
     line-height: 1.375rem;
@@ -546,7 +546,7 @@ exports[`AmpSocialEmbed should render correctly for Instagram 1`] = `
   margin: 1rem 0;
 }
 
-@media (min-width: 20rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-6 {
     font-size: 1rem;
     line-height: 1.375rem;
@@ -592,7 +592,7 @@ exports[`AmpSocialEmbed should render correctly for Instagram 1`] = `
   cursor: pointer;
 }
 
-@media (min-width: 20rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-7 {
     font-size: 1rem;
     line-height: 1.25rem;
@@ -794,7 +794,7 @@ exports[`AmpSocialEmbed should render correctly for Twitter 1`] = `
   font-weight: 700;
 }
 
-@media (min-width: 20rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-5 {
     font-size: 1.125rem;
     line-height: 1.375rem;
@@ -819,7 +819,7 @@ exports[`AmpSocialEmbed should render correctly for Twitter 1`] = `
   margin: 1rem 0;
 }
 
-@media (min-width: 20rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-6 {
     font-size: 1rem;
     line-height: 1.375rem;
@@ -865,7 +865,7 @@ exports[`AmpSocialEmbed should render correctly for Twitter 1`] = `
   cursor: pointer;
 }
 
-@media (min-width: 20rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-7 {
     font-size: 1rem;
     line-height: 1.25rem;
@@ -1071,7 +1071,7 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
   font-weight: 700;
 }
 
-@media (min-width: 20rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-7 {
     font-size: 1.125rem;
     line-height: 1.375rem;
@@ -1096,7 +1096,7 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
   margin: 1rem 0;
 }
 
-@media (min-width: 20rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-8 {
     font-size: 1rem;
     line-height: 1.375rem;
@@ -1142,7 +1142,7 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
   cursor: pointer;
 }
 
-@media (min-width: 20rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-9 {
     font-size: 1rem;
     line-height: 1.25rem;
