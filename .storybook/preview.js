@@ -14,6 +14,7 @@ import { ToggleContextProvider } from '../src/app/contexts/ToggleContext';
 import { UserContextProvider } from '../src/app/contexts/UserContext';
 import { EventTrackingContextProvider } from '../src/app/contexts/EventTrackingContext';
 import pageDataFixture from '../data/news/articles/c0g992jmmkko.json';
+import { light } from './theme';
 
 const REITH_SERIF_REGULAR = {
   '@font-face': {
@@ -318,12 +319,6 @@ addDecorator(story => {
   );
 });
 
-const theme = create({
-  base: 'light',
-  brandTitle: 'BBC Simorgh',
-  brandUrl: 'https://github.com/bbc/simorgh',
-});
-
 export const globalTypes = {
   service: {
     name: 'service',
@@ -576,7 +571,7 @@ export const parameters = {
   options: {
     panelPosition: 'right',
     sidebarAnimcations: true,
-    theme,
+    theme: light,
   },
   docs: {
     container: ({ context, children }) => DocsDecorator({ context, children }),
