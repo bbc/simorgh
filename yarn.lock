@@ -6375,13 +6375,13 @@ __metadata:
   linkType: hard
 
 "@types/jsdom@npm:^20.0.0":
-  version: 20.0.0
-  resolution: "@types/jsdom@npm:20.0.0"
+  version: 20.0.1
+  resolution: "@types/jsdom@npm:20.0.1"
   dependencies:
     "@types/node": "*"
     "@types/tough-cookie": "*"
     parse5: ^7.0.0
-  checksum: 13e67d31347e02d46ec6a23919b3ce39d86136665922a2a6cb977e216a2f46c22d2f025d0586a64ab492ebaa5f43da669b6f173a5a8cfd3e3bb7c9d19b6cfa9e
+  checksum: d55402c5256ef451f93a6e3d3881f98339fe73a5ac2030588df056d6835df8367b5a857b48d27528289057e26dcdd3f502edc00cb877c79174cb3a4c7f2198c1
   languageName: node
   linkType: hard
 
@@ -9816,20 +9816,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chrome-launcher@npm:0.15.1":
-  version: 0.15.1
-  resolution: "chrome-launcher@npm:0.15.1"
-  dependencies:
-    "@types/node": "*"
-    escape-string-regexp: ^4.0.0
-    is-wsl: ^2.2.0
-    lighthouse-logger: ^1.0.0
-  bin:
-    print-chrome-path: bin/print-chrome-path.js
-  checksum: b534221b831afc59a0058a1f8406a77d7b4a592342785418e2ef97099b073609b0ca0e4be39d1ed842aa2b64b02ab5ccb45166eada9a37b775c757fb201d7fa5
-  languageName: node
-  linkType: hard
-
 "chrome-trace-event@npm:^1.0.2":
   version: 1.0.3
   resolution: "chrome-trace-event@npm:1.0.3"
@@ -10929,7 +10915,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debug@npm:2.6.9, debug@npm:^2.2.0, debug@npm:^2.3.3, debug@npm:^2.6.0, debug@npm:^2.6.9":
+"debug@npm:2.6.9, debug@npm:^2.2.0, debug@npm:^2.3.3, debug@npm:^2.6.0":
   version: 2.6.9
   resolution: "debug@npm:2.6.9"
   dependencies:
@@ -16767,16 +16753,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lighthouse-logger@npm:^1.0.0":
-  version: 1.3.0
-  resolution: "lighthouse-logger@npm:1.3.0"
-  dependencies:
-    debug: ^2.6.9
-    marky: ^1.2.2
-  checksum: 82655f1862779dc5a917de62567a23dbf47bbde9a53abbdd4d72b2cf80d6c2595bc84de7ef836c94c76a2e4e3f3ec613a2e1ec021367959d397aeb5aae97a7cb
-  languageName: node
-  linkType: hard
-
 "lines-and-columns@npm:^1.1.6":
   version: 1.2.4
   resolution: "lines-and-columns@npm:1.2.4"
@@ -17337,13 +17313,6 @@ __metadata:
   version: 1.0.4
   resolution: "markdown-escapes@npm:1.0.4"
   checksum: 6833a93d72d3f70a500658872312c6fa8015c20cc835a85ae6901fa232683fbc6ed7118ebe920fea7c80039a560f339c026597d96eee0e9de602a36921804997
-  languageName: node
-  linkType: hard
-
-"marky@npm:^1.2.2":
-  version: 1.2.3
-  resolution: "marky@npm:1.2.3"
-  checksum: 886cc7da3a2f9bbf1a7cf9bd8c05f5a968af6cc7ca47a5d443408f2c50ade12b0c627247586967e4e377f069740396a226cc7a483e0eb7904b14386db1b22774
   languageName: node
   linkType: hard
 
@@ -17996,16 +17965,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"moment-timezone@npm:0.5.37":
-  version: 0.5.37
-  resolution: "moment-timezone@npm:0.5.37"
+"moment-timezone@npm:0.5.43":
+  version: 0.5.43
+  resolution: "moment-timezone@npm:0.5.43"
   dependencies:
-    moment: ">= 2.9.0"
-  checksum: b3fc24848a396ee3801331a4b5511591df0e22241e59f55200a475603f23a8429f01887294c7a0c005dae25b8e4bef20472fbc875ff20080f26fded066559f1a
+    moment: ^2.29.4
+  checksum: 8075c897ed8a044f992ef26fe8cdbcad80caf974251db424cae157473cca03be2830de8c74d99341b76edae59f148c9d9d19c1c1d9363259085688ec1cf508d0
   languageName: node
   linkType: hard
 
-"moment@npm:2.29.4, moment@npm:>= 2.9.0":
+"moment@npm:2.29.4, moment@npm:^2.29.4":
   version: 2.29.4
   resolution: "moment@npm:2.29.4"
   checksum: 0ec3f9c2bcba38dc2451b1daed5daded747f17610b92427bebe1d08d48d8b7bdd8d9197500b072d14e326dd0ccf3e326b9e3d07c5895d3d49e39b6803b76e80e
@@ -18236,6 +18205,20 @@ __metadata:
   dependencies:
     minimatch: ^3.0.2
   checksum: 29de9560e52cdac8d3f794d38d782f6799e13d4d11aaf96d3da8c28458e1c5e33bb5f8edfb42dc34172ec5516c50c5b8850c9e1526542616757a969267263328
+  languageName: node
+  linkType: hard
+
+"node-fetch@npm:2.6.11":
+  version: 2.6.11
+  resolution: "node-fetch@npm:2.6.11"
+  dependencies:
+    whatwg-url: ^5.0.0
+  peerDependencies:
+    encoding: ^0.1.0
+  peerDependenciesMeta:
+    encoding:
+      optional: true
+  checksum: 249d0666a9497553384d46b5ab296ba223521ac88fed4d8a17d6ee6c2efb0fc890f3e8091cafe7f9fba8151a5b8d925db2671543b3409a56c3cd522b468b47b3
   languageName: node
   linkType: hard
 
@@ -21942,7 +21925,6 @@ __metadata:
     brotli-webpack-plugin: 1.1.0
     chalk: 4.1.2
     chromatic: 6.17.4
-    chrome-launcher: 0.15.1
     cli-table: 0.3.11
     compression: 1.7.4
     compression-webpack-plugin: 9.2.0
@@ -21992,9 +21974,9 @@ __metadata:
     mocha: 9.2.2
     mocha-junit-reporter: 2.2.0
     moment: 2.29.4
-    moment-timezone: 0.5.37
+    moment-timezone: 0.5.43
     morgan: 1.10.0
-    node-fetch: 2.6.7
+    node-fetch: 2.6.11
     npm-run-all: 4.1.5
     ora: 5.4.1
     path-to-regexp: 6.2.1
