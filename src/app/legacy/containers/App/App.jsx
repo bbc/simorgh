@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { renderRoutes } from 'react-router-config';
 import pick from 'ramda/src/pick';
 import mergeAll from 'ramda/src/mergeAll';
@@ -35,15 +36,20 @@ export const App = ({ initialData, bbcOrigin }) => {
 
   const routeProps = getRouteProps(location);
 
-  const state = mapToState({
-    pathname: location,
-    initialData,
-    routeProps,
-    toggles,
-  });
+  const [state] = useState(
+    mapToState({
+      pathname: location,
+      initialData,
+      routeProps,
+      toggles,
+    }),
+  );
+
+  const routeHasChanged = state.pathname !== location;
 
   return renderRoutes(routes, {
     ...state,
+    loading: routeHasChanged,
     bbcOrigin,
     showAdsBasedOnLocation,
     mvtExperiments,
