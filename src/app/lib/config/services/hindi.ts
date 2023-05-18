@@ -47,16 +47,16 @@ export const service: DefaultServiceConfig = {
     showRelatedTopics: true,
     podcastPromo: {
       title: 'पॉडकास्ट',
-      brandTitle: 'दिनभर: पूरा दिन,पूरी ख़बर (Dinbhar)',
+      brandTitle: 'छोटी उम्र बड़ी ज़िंदगी',
       brandDescription:
-        'देश और दुनिया की बड़ी ख़बरें और उनका विश्लेषण करता समसामयिक विषयों का कार्यक्रम.',
+        'उन चमकते सितारों की कहानी जिन्हें दुनिया अभी और देखना और सुनना चाहती थी.',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/448xn/p09ds7cb.jpg',
-        alt: 'दिनभर: पूरा दिन,पूरी ख़बर',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0fmrcw1.jpg',
+        alt: 'छोटी उम्र बड़ी ज़िंदगी',
       },
       linkLabel: {
         text: 'दिनभर: पूरा दिन,पूरी ख़बर',
-        href: 'https://www.bbc.com/hindi/podcasts/p09ds7zx',
+        href: 'https://www.bbc.com/hindi/podcasts/p0fmrg25',
       },
       skipLink: {
         text: 'छोड़कर %title% आगे बढ़ें',
