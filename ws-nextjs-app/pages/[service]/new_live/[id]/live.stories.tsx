@@ -1,7 +1,7 @@
 import React from 'react';
 import PageLayoutWrapper from '#app/components/PageLayoutWrapper';
+import postFixture from '#data/pidgin/posts/postFixture.json';
 import Live from './LivePageLayout';
-import postFixture from '../../../../fixtures/postFixture.json';
 
 const mockPageData = {
   pageCount: 10,
