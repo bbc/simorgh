@@ -7,14 +7,17 @@ import AmpChartbeatBeacon from './amp';
 import { GetConfigProps, getConfig } from './utils';
 import { ChartbeatProps } from './types';
 
-const ChartbeatAnalytics = ({ data }: ChartbeatProps) => {
-  const {
-    service,
-    brandName,
-    chartbeatDomain,
-    mostRead: { header: mostReadTitle },
-    mostWatched: { header: mostWatchedTitle },
-  } = useContext(ServiceContext);
+const ChartbeatAnalytics = ({
+  sectionName,
+  categoryName,
+  mediaPageType,
+  title,
+  taggings,
+  contentType,
+  producer,
+  chapter,
+}: ChartbeatProps) => {
+  const { service, brandName, chartbeatDomain } = useContext(ServiceContext);
   const { sendCanonicalChartbeatBeacon } = useContext(UserContext);
   const { enabled } = useToggle('chartbeatAnalytics');
   const { env, isAmp, platform, pageType, previousPath, origin } =
@@ -26,15 +29,20 @@ const ChartbeatAnalytics = ({ data }: ChartbeatProps) => {
     isAmp,
     platform,
     pageType,
-    data,
     brandName,
     chartbeatDomain,
     env,
     service,
     origin,
     previousPath,
-    mostReadTitle,
-    mostWatchedTitle,
+    sectionName,
+    categoryName,
+    mediaPageType,
+    title,
+    taggings,
+    contentType,
+    producer,
+    chapter,
   };
 
   const chartbeatConfig = getConfig(configDependencies);
@@ -44,7 +52,16 @@ const ChartbeatAnalytics = ({ data }: ChartbeatProps) => {
       // @ts-expect-error ignoring: Argument of type of chartbeatConfig is not assignable to parameter of type SetStateAction<null> -> provides no match for the signature '(prevState: null): null'.
       sendCanonicalChartbeatBeacon(chartbeatConfig);
     }
-  }, [data, isCanonicalAndEnabled]); // eslint-disable-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [
+    sectionName,
+    categoryName,
+    mediaPageType,
+    title,
+    taggings,
+    contentType,
+    isCanonicalAndEnabled,
+  ]);
 
   return isAmpAndEnabled ? (
     <AmpChartbeatBeacon chartbeatConfig={chartbeatConfig} />
