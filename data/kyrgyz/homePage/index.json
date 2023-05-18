@@ -502,6 +502,17 @@
         "summaries": [
           {
             "type": "audio",
+            "duration": "PT3M12S",
+            "title": "Би-Би-Си дүрбүсүндө",
+            "firstPublished": "",
+            "link": "https://www.bbc.com/kyrgyz/podcasts/p0c80v81/p0fnb85d",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0c80xlp.jpg",
+            "description": "Британия Украинага 250 км алыс учкан Storm Shadow ракеталарын берет",
+            "imageAlt": "",
+            "id": "p0fnb85d"
+          },
+          {
+            "type": "audio",
             "duration": "PT4M48S",
             "title": "Би-Би-Си дүрбүсүндө",
             "firstPublished": "",
@@ -532,17 +543,6 @@
             "description": "Жапониядагы G7 жыйыны: башкы тема – дүйнөлүк тартип",
             "imageAlt": "",
             "id": "p0fhj7qw"
-          },
-          {
-            "type": "audio",
-            "duration": "PT4M38S",
-            "title": "Би-Би-Си дүрбүсүндө",
-            "firstPublished": "",
-            "link": "https://www.bbc.com/kyrgyz/podcasts/p0c80v81/p0fgn15k",
-            "imageUrl": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0c80xlp.jpg",
-            "description": "Кыргыз-өзбек чек арасынын өзгөргөн картасы: Кыргызстан  Google’ га кайрылат",
-            "imageAlt": "",
-            "id": "p0fgn15k"
           }
         ],
         "activePage": 1,
@@ -892,46 +892,15 @@
         "visualProminence": "NORMAL"
       },
       {
-        "summaries": [
-          {
-            "type": "article",
-            "title": "Kyrgyzstanda soz erkindigi buzuluuda",
-            "firstPublished": "2016-11-07T08:16:20.000Z",
-            "link": "https://www.bbc.com/kyrgyz/world-23089413",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/17324/test/_63521059_0362cabb-9d4d-4a6f-b538-2b314913c31a.jpg",
-            "description": "Soz erkindigin chektoo turaluu jiyin ottu",
-            "imageAlt": "ыаыаыаыаы",
-            "id": "82567d2d-eb50-b644-b9a4-6523bd62bf2c"
-          },
-          {
-            "type": "article",
-            "title": "Үй-бүлөдөгү зомбулуктан эң көп аялдар жабыркайт",
-            "firstPublished": "2016-11-03T14:43:31.000Z",
-            "link": "https://www.bbc.com/kyrgyz/kyrgyzstan-23088783",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/06A6/test/_63520710_23088783.jpg",
-            "description": "Үй-бүлөдөгү зомбулуктан эң көп аялдар жабыркайт",
-            "imageAlt": "Family Violence",
-            "id": "3ab470b8-18c1-4c37-ae2c-9f0177c60845"
-          }
-        ],
-        "activePage": 1,
-        "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:5d434896-f075-40ae-93f5-e35aa6f8b851",
-        "curationType": "tipo-curation",
-        "position": 16,
-        "title": "Curation 17",
-        "visualProminence": "NORMAL"
-      },
-      {
         "curationId": "urn:bbc:onward-journeys:most:read?=site=News",
         "curationType": "most-popular",
-        "position": 17,
+        "position": 16,
         "title": "Most Read",
         "visualProminence": "NORMAL",
         "visualStyle": "RANKED",
         "link": "https://www.bbc.com/kyrgyz/popular/read",
         "mostRead": {
-          "generated": "2023-05-09T16:57:57.184Z",
+          "generated": "2023-05-17T09:57:57.949Z",
           "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
           "firstRecordTimeStamp": "2021-05-04T05:53:00Z",
           "totalRecords": 20,
@@ -1319,9 +1288,7 @@
                           "core:Place",
                           "core:Thing"
                         ],
-                        "thingSameAs": [
-                          "http://sws.geonames.org/2635167/"
-                        ],
+                        "thingSameAs": ["http://sws.geonames.org/2635167/"],
                         "thingEnglishLabel": "United Kingdom",
                         "type": "about"
                       },
@@ -1337,9 +1304,7 @@
                           "tagging:TagConcept",
                           "core:Thing"
                         ],
-                        "thingSameAs": [
-                          "http://dbpedia.org/resource/Music"
-                        ],
+                        "thingSameAs": ["http://dbpedia.org/resource/Music"],
                         "thingEnglishLabel": "Music",
                         "type": "about"
                       }
@@ -1350,10 +1315,7 @@
                         "thingLabel": "News report",
                         "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                         "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                        "thingType": [
-                          "tagging:TagConcept",
-                          "tagging:Format"
-                        ],
+                        "thingType": ["tagging:TagConcept", "tagging:Format"],
                         "thingSameAs": [],
                         "thingEnglishLabel": "Report",
                         "thingPreferredLabel": "Report",
@@ -1498,9 +1460,7 @@
                           "core:Place",
                           "core:Thing"
                         ],
-                        "thingSameAs": [
-                          "http://sws.geonames.org/2635167/"
-                        ],
+                        "thingSameAs": ["http://sws.geonames.org/2635167/"],
                         "thingEnglishLabel": "United Kingdom",
                         "type": "about"
                       },
@@ -1529,10 +1489,7 @@
                         "thingLabel": "News report",
                         "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                         "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                        "thingType": [
-                          "tagging:TagConcept",
-                          "tagging:Format"
-                        ],
+                        "thingType": ["tagging:TagConcept", "tagging:Format"],
                         "thingSameAs": [],
                         "thingEnglishLabel": "Report",
                         "thingPreferredLabel": "Report",
@@ -1632,9 +1589,7 @@
                           "core:Place",
                           "core:Thing"
                         ],
-                        "thingSameAs": [
-                          "http://sws.geonames.org/2635167/"
-                        ],
+                        "thingSameAs": ["http://sws.geonames.org/2635167/"],
                         "thingEnglishLabel": "United Kingdom",
                         "type": "about"
                       }
@@ -1645,10 +1600,7 @@
                         "thingLabel": "News report",
                         "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                         "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                        "thingType": [
-                          "tagging:TagConcept",
-                          "tagging:Format"
-                        ],
+                        "thingType": ["tagging:TagConcept", "tagging:Format"],
                         "thingSameAs": [],
                         "thingEnglishLabel": "Report",
                         "thingPreferredLabel": "Report",
@@ -2008,55 +1960,26 @@
         }
       },
       {
-        "summaries": [
-          {
-            "type": "link",
-            "title": "BBC News Russian",
-            "firstPublished": "",
-            "link": "http://www.bbc.com/russian",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/160c/test/96297a80-a308-11ed-9015-6935ab4fa6ca.png",
-            "description": "",
-            "imageAlt": "BBC Russian",
-            "id": "http%3A%2F%2Fwww.bbc.com%2Frussian"
-          },
-          {
-            "type": "link",
-            "title": "BBC Azeri",
-            "firstPublished": "",
-            "link": "http://www.bbc.com/azeri",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/9f48/test/b6866400-a308-11ed-9015-6935ab4fa6ca.png",
-            "description": "",
-            "imageAlt": "BBC Azeri",
-            "id": "http%3A%2F%2Fwww.bbc.com%2Fazeri"
-          },
-          {
-            "type": "link",
-            "title": "BBC Uzbek",
-            "firstPublished": "",
-            "link": "http://www.bbc.com/uzbek",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/6adf/test/eb7c2140-a308-11ed-9015-6935ab4fa6ca.png",
-            "description": "",
-            "imageAlt": "BBC Uzbek",
-            "id": "http%3A%2F%2Fwww.bbc.com%2Fuzbek"
-          },
-          {
-            "type": "link",
-            "title": "BBC Turkish",
-            "firstPublished": "",
-            "link": "http://www.bbc.com/turkce",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/593b/test/010c4d50-a309-11ed-9015-6935ab4fa6ca.png",
-            "description": "",
-            "imageAlt": "BBC Turkce",
-            "id": "http%3A%2F%2Fwww.bbc.com%2Fturkce"
-          }
-        ],
+        "summaries": [],
         "activePage": 1,
         "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:04e600ed-76ff-4c71-be9f-86fac52bf8c0",
-        "curationType": "tipo-curation",
+        "curationId": "urn:bbc:vivo:curation:72aebc73-4f20-4801-8301-f889faa9b240",
+        "curationType": "vivo-stream",
+        "position": 17,
+        "title": "Vivo feed limitation to 4 Feed/Low",
+        "visualProminence": "LOW",
+        "visualStyle": "FEED"
+      },
+      {
+        "summaries": [],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:vivo:curation:00414d81-401f-4e61-bbe7-ccd9dc813877",
+        "curationType": "vivo-stream",
         "position": 18,
-        "title": "Curation 18",
-        "visualProminence": "NORMAL"
+        "title": "Vivo feed limitation to 8 Feed/Normal",
+        "visualProminence": "NORMAL",
+        "visualStyle": "FEED"
       }
     ]
   },
