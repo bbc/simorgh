@@ -6,17 +6,24 @@ import headings from '#app/legacy/containers/Headings';
 import Blocks from '#app/legacy/containers/Blocks';
 import paragraph from '#app/legacy/containers/Paragraph';
 import Text from '#app/components/Text';
+import { Post, StreamResponse } from './post.d';
 
 // temporary solution to render LI/ OL blocks.
-const unorderedList = ({ blocks }: any) => {
-  const listItems: any = blocks.map((item: any) =>
-    path(['model', 'blocks', 0, 'model', 'text'], item),
-  );
+const unorderedList = ({ blocks }: { blocks: OptimoBlock[] }) => {
+  const listItems: (string | null)[] = blocks
+    .map(item =>
+      pathOr<string | null>(
+        null,
+        ['model', 'blocks', 0, 'model', 'text'],
+        item,
+      ),
+    )
+    .filter(text => typeof text === 'string');
 
   return (
     <Text>
       <ul>
-        {listItems.map((item: any) => (
+        {listItems.map(item => (
           <li>{item}</li>
         ))}
       </ul>
@@ -24,7 +31,7 @@ const unorderedList = ({ blocks }: any) => {
   );
 };
 
-const PostHeadings = ({ headerBlocks }: any) => {
+const PostHeadings = ({ headerBlocks }: { headerBlocks: OptimoBlock[] }) => {
   const componentsToRender = {
     headline: headings,
     subheadline: headings,
@@ -35,7 +42,7 @@ const PostHeadings = ({ headerBlocks }: any) => {
   );
 };
 
-const PostContent = ({ contentBlocks }: any) => {
+const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
   const componentsToRender = {
     paragraph,
     unorderedList,
@@ -49,7 +56,7 @@ const PostContent = ({ contentBlocks }: any) => {
   );
 };
 
-const PostItem = ({ postItem }: any) => {
+const PostItem = ({ postItem }: { postItem: Post }) => {
   const headerBlocks = pathOr<OptimoBlock[]>(
     [],
     ['header', 'model', 'blocks'],
@@ -71,14 +78,14 @@ const PostItem = ({ postItem }: any) => {
   );
 };
 
-const PostsList = ({ postsData }: any) => {
-  const postResults: any = path(['data', 'results'], postsData);
+const PostsList = ({ postData }: { postData: StreamResponse }) => {
+  const postResults = path<[]>(['data', 'results'], postData);
 
   if (!postResults) return null;
 
   return (
     <div>
-      {postResults.map((item: []) => (
+      {postResults.map((item: Post) => (
         <PostItem postItem={item} />
       ))}
     </div>

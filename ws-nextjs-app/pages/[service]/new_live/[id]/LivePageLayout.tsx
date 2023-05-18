@@ -12,6 +12,7 @@ import LinkedDataContainer from '../../../../../src/app/components/LinkedData';
 import PostsList from './Posts/index';
 
 import styles from './styles';
+import { StreamResponse } from './Posts/post.d';
 
 const logger = nodeLogger(__filename);
 
@@ -22,7 +23,7 @@ type ComponentProps = {
     activePage: number;
     title?: string;
     description?: string;
-    posts: object;
+    posts: StreamResponse;
   };
   pathname?: string;
   showAdsBasedOnLocation?: boolean;
@@ -56,7 +57,7 @@ const LivePage = ({
         <Heading level={1}>{title}</Heading>
         {/* Text as="p" used as placeholder. Awaiting screen reader UX and UX */}
         <Text as="p">{description}</Text>
-        <PostsList postsData={posts} />
+        <PostsList postData={posts} />
         {/* <pre css={styles.code}>{JSON.stringify(post, null, 2)}</pre> */}
         <pre css={styles.code}>
           <Heading level={4}>Headers</Heading>
