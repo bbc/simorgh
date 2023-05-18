@@ -246,7 +246,6 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
 
 @media screen and (forced-colors: active) {
   .emotion-10>svg {
-    padding-right: 0.25rem;
     fill: canvasText;
   }
 }
@@ -1492,7 +1491,6 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
 
 @media screen and (forced-colors: active) {
   .emotion-10>svg {
-    padding-left: 0.25rem;
     fill: canvasText;
   }
 }
