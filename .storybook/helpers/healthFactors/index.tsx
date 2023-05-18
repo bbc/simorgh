@@ -21,7 +21,6 @@ export const isExempt = context => {
     'simorgh structure',
     'cypress',
     'coding standards',
-    'new components',
   ];
 
   const kind = path(['kind'], context) as string;
