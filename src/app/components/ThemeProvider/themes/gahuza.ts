@@ -1,4 +1,4 @@
-import { GHOST, WHITE, NEWS_CORE, POSTBOX_30 } from '../palette';
+import { GHOST, WHITE, NEWS_CORE } from '../palette';
 import latinScript from '../fontScripts/latin';
 import helmetFontVariants from '../fontVariants/helmet';
 import withThemeProvider from '../withThemeProvider';
@@ -8,9 +8,6 @@ const gahuzaTheme = {
   palette: {
     BRAND_BACKGROUND: NEWS_CORE,
     BRAND_LOGO: WHITE,
-    BRAND_FOREGROUND: GHOST,
-    BRAND_HIGHLIGHT: WHITE,
-    BRAND_BORDER: POSTBOX_30,
   },
   typography: {
     script: latinScript,

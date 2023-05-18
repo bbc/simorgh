@@ -1,9 +1,6 @@
 export interface BrandPalette {
   BRAND_BACKGROUND: string;
   BRAND_LOGO: string;
-  BRAND_FOREGROUND: string;
-  BRAND_HIGHLIGHT: string;
-  BRAND_BORDER: string;
 }
 
 interface Palette extends BrandPalette {
@@ -31,13 +28,11 @@ interface Palette extends BrandPalette {
   NEWSROUND_PURPLE_30: string;
   PEBBLE: string;
   NEWS_CORE: string;
-  POSTBOX_30: string;
   RHINO: string;
   SHADOW: string;
   SPORT_MIST: string;
   SPORT_SILVER: string;
   SPORT_CORE: string;
-  SPORT_YELLOW_30: string;
   STONE: string;
   WHITE: string;
 }

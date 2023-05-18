@@ -29,16 +29,13 @@ import {
   METAL,
   MIDNIGHT_BLACK,
   NEWSROUND_PURPLE,
-  NEWSROUND_PURPLE_30,
   PEBBLE,
   NEWS_CORE,
-  POSTBOX_30,
   RHINO,
   SHADOW,
   SPORT_MIST,
   SPORT_SILVER,
   SPORT_CORE,
-  SPORT_YELLOW_30,
   STONE,
   WHITE,
 } from './palette';
@@ -130,13 +127,7 @@ const withThemeProvider = ({
   brandSVG: BrandSVG;
 }) => {
   const { fontVariants, fontFaces, script } = typography;
-  const {
-    BRAND_BACKGROUND,
-    BRAND_LOGO,
-    BRAND_FOREGROUND,
-    BRAND_HIGHLIGHT,
-    BRAND_BORDER,
-  } = brandPalette;
+  const { BRAND_BACKGROUND, BRAND_LOGO } = brandPalette;
   const themeConfig: Theme = {
     fontSizes: {
       atlas: getAtlasSize(script),
@@ -213,23 +204,17 @@ const withThemeProvider = ({
       METAL,
       MIDNIGHT_BLACK,
       NEWSROUND_PURPLE,
-      NEWSROUND_PURPLE_30,
       PEBBLE,
       NEWS_CORE,
-      POSTBOX_30,
       RHINO,
       SHADOW,
       SPORT_MIST,
       SPORT_SILVER,
       SPORT_CORE,
-      SPORT_YELLOW_30,
       STONE,
       WHITE,
       BRAND_BACKGROUND,
       BRAND_LOGO,
-      BRAND_FOREGROUND,
-      BRAND_HIGHLIGHT,
-      BRAND_BORDER,
     },
     spacings: {
       HALF,

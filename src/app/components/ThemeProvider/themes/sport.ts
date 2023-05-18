@@ -1,4 +1,4 @@
-import { SPORT_CORE, BLACK, MIDNIGHT_BLACK, SPORT_YELLOW_30 } from '../palette';
+import { SPORT_CORE, BLACK, MIDNIGHT_BLACK } from '../palette';
 import latinScript from '../fontScripts/latin';
 import {
   REITH_SANS_BOLD,
@@ -14,9 +14,6 @@ const sportTheme = {
   palette: {
     BRAND_BACKGROUND: SPORT_CORE,
     BRAND_LOGO: BLACK,
-    BRAND_FOREGROUND: MIDNIGHT_BLACK,
-    BRAND_HIGHLIGHT: SPORT_YELLOW_30,
-    BRAND_BORDER: BLACK,
   },
   typography: {
     script: latinScript,
