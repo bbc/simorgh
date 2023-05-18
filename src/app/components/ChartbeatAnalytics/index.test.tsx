@@ -104,7 +104,10 @@ describe('Charbeats Analytics Container', () => {
         origin="bbc.com"
         toggleState={toggleState}
       >
-        <ChartbeatAnalytics data={frontPageData} />
+        <ChartbeatAnalytics
+          title={frontPageData?.metadata?.title}
+          sectionName={frontPageData?.relatedContent?.section?.name}
+        />
       </ContextWrap>,
     );
     expect(mockAmp).toHaveBeenCalledTimes(1);
@@ -132,7 +135,10 @@ describe('Charbeats Analytics Container', () => {
         origin="bbc.com"
         toggleState={toggleState}
       >
-        <ChartbeatAnalytics data={frontPageData} />
+        <ChartbeatAnalytics
+          title={frontPageData?.metadata?.title}
+          sectionName={frontPageData?.relatedContent?.section?.name}
+        />
       </ContextWrap>,
     );
 
@@ -147,7 +153,10 @@ describe('Charbeats Analytics Container', () => {
         pageType={ARTICLE_PAGE}
         origin={localBaseUrl}
       >
-        <ChartbeatAnalytics data={frontPageData} />
+        <ChartbeatAnalytics
+          title={frontPageData?.metadata?.title}
+          sectionName={frontPageData?.relatedContent?.section?.name}
+        />
       </ContextWrap>,
     );
 
@@ -190,7 +199,10 @@ describe('Charbeats Analytics Container', () => {
         origin="test.bbc.com"
         toggleState={toggleState}
       >
-        <ChartbeatAnalytics data={frontPageData} />
+        <ChartbeatAnalytics
+          title={frontPageData?.metadata?.title}
+          sectionName={frontPageData?.relatedContent?.section?.name}
+        />
       </ContextWrap>,
     );
 
