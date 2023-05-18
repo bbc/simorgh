@@ -1,7 +1,7 @@
 import { create } from '@storybook/theming/create';
 import logo from './logo.svg';
 
-export const light = create({
+export default create({
   base: 'light',
 
   colorPrimary: '#B80000',

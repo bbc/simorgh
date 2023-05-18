@@ -14,7 +14,7 @@ import { ToggleContextProvider } from '../src/app/contexts/ToggleContext';
 import { UserContextProvider } from '../src/app/contexts/UserContext';
 import { EventTrackingContextProvider } from '../src/app/contexts/EventTrackingContext';
 import pageDataFixture from '../data/news/articles/c0g992jmmkko.json';
-import { light } from './theme';
+import theme from './theme';
 
 const REITH_SERIF_REGULAR = {
   '@font-face': {
@@ -571,7 +571,7 @@ export const parameters = {
   options: {
     panelPosition: 'right',
     sidebarAnimcations: true,
-    theme: light,
+    theme: theme,
   },
   docs: {
     container: ({ context, children }) => DocsDecorator({ context, children }),
