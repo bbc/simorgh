@@ -57,14 +57,15 @@ import {
   getAuthorTwitterHandle,
 } from '../../components/Byline/utilities';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import RelatedContentSection from './PagePromoSections/RelatedContentSection';
+import RelatedContentSection from '../../components/RelatedContentSection';
 
 import SecondaryColumn from './SecondaryColumn';
 
 import styles from './ArticlePage.styles';
+import { getPromoHeadline } from '../../lib/analyticsUtils/article';
 
 const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
-  const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
+  const { isAmp, isApp, showAdsBasedOnLocation } = useContext(RequestContext);
   const { articleAuthor, isTrustProjectParticipant, showRelatedTopics } =
     useContext(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
@@ -191,7 +192,10 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   return (
     <div css={styles.pageWrapper}>
       <ATIAnalytics data={pageData} />
-      <ChartbeatAnalytics data={pageData} />
+      <ChartbeatAnalytics
+        sectionName={pageData?.relatedContent?.section?.name}
+        title={getPromoHeadline(pageData)}
+      />
       <ComscoreAnalytics />
       <NielsenAnalytics />
       <ArticleMetadata
@@ -243,7 +247,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
           )}
           <RelatedContentSection content={blocks} />
         </div>
-        <SecondaryColumn pageData={pageData} />
+        {!isApp && <SecondaryColumn pageData={pageData} />}
       </div>
       <MostReadContainer
         mostReadEndpointOverride={mostReadEndpointOverride}

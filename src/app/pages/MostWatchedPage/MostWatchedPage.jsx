@@ -103,7 +103,7 @@ const MostWatchedPage = ({ pageData }) => {
       />
       <ATIAnalytics data={pageData} />
       <LinkedData type="WebPage" seoTitle={header} />
-      <ChartbeatAnalytics data={pageData} />
+      <ChartbeatAnalytics title={header} />
       <main role="main" data-e2e="most-watched">
         <StyledIndexPageContainer>
           <MostWatchedWrapper>

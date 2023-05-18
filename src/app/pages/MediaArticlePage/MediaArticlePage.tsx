@@ -56,7 +56,7 @@ import {
 } from '../../components/Byline/utilities';
 
 import { ServiceContext } from '../../contexts/ServiceContext';
-import RelatedContentSection from './PagePromoSections/RelatedContentSection';
+import RelatedContentSection from '../../components/RelatedContentSection';
 
 import SecondaryColumn from './SecondaryColumn';
 
@@ -167,7 +167,13 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
   return (
     <div css={styles.pageWrapper}>
       <ATIAnalytics data={pageData} />
-      <ChartbeatAnalytics data={pageData} />
+      <ChartbeatAnalytics
+        categoryName={pageData?.metadata?.passport?.category?.categoryName}
+        title={headline}
+        taggings={taggings}
+        producer={pageData?.metadata?.analyticsLabels?.producer}
+        chapter={pageData?.metadata?.atiAnalytics?.chapter}
+      />
       <ComscoreAnalytics />
       <NielsenAnalytics />
       <ArticleMetadata

@@ -28,6 +28,7 @@ const ComponentWithContext = ({ data: { data } }) => {
       <ServiceContextProvider service="news">
         <RequestContextProvider
           isAmp={false}
+          isApp={false}
           pageType={MEDIA_ARTICLE_PAGE}
           service="news"
           pathname="/news/articles/c000000000o"

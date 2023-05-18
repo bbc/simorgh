@@ -20,7 +20,7 @@ import {
   StyledPromoItem,
   SingleItemWrapper,
 } from './index.styles';
-import generatePromoId from '../generatePromoId';
+import generatePromoId from '../../../../lib/utilities/generatePromoId';
 import RelatedContentItem from './RelatedContentItem';
 
 const BLOCKS_TO_IGNORE = ['wsoj', 'mpu'];
