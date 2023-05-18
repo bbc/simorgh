@@ -570,7 +570,7 @@ export const parameters = {
   options: {
     panelPosition: 'right',
     sidebarAnimcations: true,
-    theme: theme,
+    theme,
   },
   docs: {
     container: ({ context, children }) => DocsDecorator({ context, children }),
