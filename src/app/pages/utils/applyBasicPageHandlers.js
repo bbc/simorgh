@@ -3,7 +3,6 @@ import withContexts from '#containers/PageHandlers/withContexts';
 import withRUM from '#containers/PageHandlers/withRUM';
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 import withError from '#containers/PageHandlers/withError';
-import withLoading from '#containers/PageHandlers/withLoading';
 import withData from '#containers/PageHandlers/withData';
 import withVariant from '#containers/PageHandlers/withVariant';
 import withHashChangeHandler from '#containers/PageHandlers/withHashChangeHandler';
@@ -14,7 +13,6 @@ export default ({ addVariantHandling } = defaultValue) =>
   pipe(
     withData,
     withError,
-    withLoading,
     withPageWrapper,
     withContexts,
     withRUM,
