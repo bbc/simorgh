@@ -420,7 +420,6 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
 
 @media screen and (forced-colors: active) {
   .emotion-25>svg {
-    padding-left: 0.25rem;
     fill: canvasText;
   }
 }
@@ -1862,7 +1861,6 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
 
 @media screen and (forced-colors: active) {
   .emotion-25>svg {
-    padding-left: 0.25rem;
     fill: canvasText;
   }
 }
