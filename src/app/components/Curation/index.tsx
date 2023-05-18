@@ -72,7 +72,9 @@ const Curation = ({
     case SIMPLE_CURATION_GRID:
     case HIERARCHICAL_CURATION_GRID:
     default:
-      return curationLength > 1 && (title || isFirstCuration) ? (
+      return curationLength > 1 &&
+        promos.length > 0 &&
+        (title || isFirstCuration) ? (
         <section aria-labelledby={id} role="region">
           {isFirstCuration ? (
             <VisuallyHiddenText id={id} as="h2">
