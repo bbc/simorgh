@@ -2,10 +2,27 @@ import React from 'react';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import { OptimoBlock } from '#models/types/optimo';
-import Text from '#app/components/Text';
 import headings from '#app/legacy/containers/Headings';
 import Blocks from '#app/legacy/containers/Blocks';
 import paragraph from '#app/legacy/containers/Paragraph';
+import Text from '#app/components/Text';
+
+// temporary solution to render LI/ OL blocks.
+const unorderedList = ({ blocks }: any) => {
+  const listItems: any = blocks.map((item: any) =>
+    path(['model', 'blocks', 0, 'model', 'text'], item),
+  );
+
+  return (
+    <Text>
+      <ul>
+        {listItems.map((item: any) => (
+          <li>{item}</li>
+        ))}
+      </ul>
+    </Text>
+  );
+};
 
 const PostHeadings = ({ headerBlocks }: any) => {
   const componentsToRender = {
@@ -19,22 +36,15 @@ const PostHeadings = ({ headerBlocks }: any) => {
 };
 
 const PostContent = ({ contentBlocks }: any) => {
-  // Unsure how to render UL/OL
-  const nonParagraphBlocks: any = contentBlocks.filter(
-    (block: any) => block.type !== 'paragraph',
-  );
-  const nonParagraphBlocksToString: any = nonParagraphBlocks.map((item: any) =>
-    JSON.stringify(nonParagraphBlocks, null, 2),
-  );
-
   const componentsToRender = {
     paragraph,
+    unorderedList,
+    orderedList: unorderedList,
   };
 
   return (
     <div>
       <Blocks blocks={contentBlocks} componentsToRender={componentsToRender} />
-      <Text as="p">{nonParagraphBlocksToString}</Text>
     </div>
   );
 };
