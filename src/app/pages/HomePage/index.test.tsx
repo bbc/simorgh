@@ -14,7 +14,8 @@ describe('Home Page', () => {
     });
 
     const curationsWithSummaries = kyrgyzHomePageData.curations.filter(
-      ({ summaries }) => summaries && summaries?.length > 0,
+      ({ summaries, mostRead }) =>
+        (summaries && summaries?.length > 0) || mostRead,
     );
 
     expect(container).not.toBeEmptyDOMElement();
