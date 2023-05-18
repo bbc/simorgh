@@ -167,7 +167,13 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
   return (
     <div css={styles.pageWrapper}>
       <ATIAnalytics data={pageData} />
-      <ChartbeatAnalytics data={pageData} />
+      <ChartbeatAnalytics
+        categoryName={pageData?.metadata?.passport?.category?.categoryName}
+        title={headline}
+        taggings={taggings}
+        producer={pageData?.metadata?.analyticsLabels?.producer}
+        chapter={pageData?.metadata?.atiAnalytics?.chapter}
+      />
       <ComscoreAnalytics />
       <NielsenAnalytics />
       <ArticleMetadata
