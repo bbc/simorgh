@@ -28,24 +28,24 @@ const mapToState = ({ pathname, initialData, routeProps, toggles }) => {
 
 export const App = ({ initialData, bbcOrigin }) => {
   const {
-    path: location,
+    path: pathname,
     showAdsBasedOnLocation,
     toggles,
     mvtExperiments,
   } = initialData;
 
-  const routeProps = getRouteProps(location);
+  const routeProps = getRouteProps(pathname);
 
   const [state] = useState(
     mapToState({
-      pathname: location,
+      pathname,
       initialData,
       routeProps,
       toggles,
     }),
   );
 
-  const routeHasChanged = state.pathname !== location;
+  const routeHasChanged = state.pathname !== pathname;
 
   return renderRoutes(routes, {
     ...state,
