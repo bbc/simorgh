@@ -8,6 +8,9 @@ describe('Home Page', () => {
   it('should render a section for each curation with summaries', () => {
     const { container } = render(<HomePage pageData={kyrgyzHomePageData} />, {
       service: 'kyrgyz',
+      toggles: {
+        mostRead: { enabled: true },
+      },
     });
 
     const curationsWithSummaries = kyrgyzHomePageData.curations.filter(
