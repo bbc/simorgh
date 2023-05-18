@@ -171,7 +171,6 @@
     "brotli-webpack-plugin": "1.1.0",
     "chalk": "4.1.2",
     "chromatic": "6.17.4",
-    "chrome-launcher": "0.15.2",
     "cli-table": "0.3.11",
     "compression-webpack-plugin": "9.2.0",
     "copy-webpack-plugin": "9.1.0",
