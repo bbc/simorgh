@@ -552,25 +552,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/css-prettifier@npm:^1.1.2":
-  version: 1.1.2
-  resolution: "@emotion/css-prettifier@npm:1.1.2"
+"@emotion/css-prettifier@npm:^1.1.3":
+  version: 1.1.3
+  resolution: "@emotion/css-prettifier@npm:1.1.3"
   dependencies:
-    "@emotion/memoize": ^0.8.0
-    stylis: 4.1.4
-  checksum: 393fbd9a1234dea8d4336ca90c78fedb9f345529b21103373c66003ec8f99068ce6b5f0805631ae5e5eec3f8cf3b81bb5858e55ed98b1680d6f499b673822ee7
+    "@emotion/memoize": ^0.8.1
+    stylis: 4.2.0
+  checksum: 082e27ea5ace0a54080a1073fdabc62711cbc94e4d966a4fc67aded9148c39a8c07f2757d26a32bddced94794433ee4555bea8471fe6c0eb2409698e12582e7b
   languageName: node
   linkType: hard
 
-"@emotion/jest@npm:^11.10.8":
-  version: 11.10.8
-  resolution: "@emotion/jest@npm:11.10.8"
+"@emotion/jest@npm:^11.11.0":
+  version: 11.11.0
+  resolution: "@emotion/jest@npm:11.11.0"
   dependencies:
     "@babel/runtime": ^7.18.3
-    "@emotion/css-prettifier": ^1.1.2
+    "@emotion/css-prettifier": ^1.1.3
     chalk: ^4.1.0
     specificity: ^0.4.1
-    stylis: 4.1.4
+    stylis: 4.2.0
   peerDependencies:
     "@types/jest": ^26.0.14 || ^27.0.0 || ^28.0.0 || ^29.0.0
     enzyme-to-json: ^3.2.1
@@ -579,14 +579,14 @@ __metadata:
       optional: true
     enzyme-to-json:
       optional: true
-  checksum: 99251eee87f3fb49e45fea26060e87d381c59818a386b9555742f9fd71af7782897d6d1504fba3aebddca3e80550594774d03213ebd83d9efd3daa2ac1a5e8eb
+  checksum: ae39af8f6952d77515a5066629ecaad97acffaa5fc32fc3479fc65dde341d730c740642454966c1a3bf5d7453e9cbd898d73c3950b9c3ff24e0a4c9be84e6fa0
   languageName: node
   linkType: hard
 
-"@emotion/memoize@npm:^0.8.0":
-  version: 0.8.0
-  resolution: "@emotion/memoize@npm:0.8.0"
-  checksum: c87bb110b829edd8e1c13b90a6bc37cebc39af29c7599a1e66a48e06f9bec43e8e53495ba86278cc52e7589549492c8dfdc81d19f4fdec0cee6ba13d2ad2c928
+"@emotion/memoize@npm:^0.8.1":
+  version: 0.8.1
+  resolution: "@emotion/memoize@npm:0.8.1"
+  checksum: a19cc01a29fcc97514948eaab4dc34d8272e934466ed87c07f157887406bc318000c69ae6f813a9001c6a225364df04249842a50e692ef7a9873335fbcc141b0
   languageName: node
   linkType: hard
 
@@ -5559,7 +5559,7 @@ __metadata:
   resolution: "simorgh-nextjs@workspace:."
   dependencies:
     "@babel/preset-react": ^7.18.6
-    "@emotion/jest": ^11.10.8
+    "@emotion/jest": ^11.11.0
     "@testing-library/jest-dom": ^5.16.5
     "@testing-library/react": ^14.0.0
     babel-plugin-transform-rename-import: 2.3.0
@@ -5892,10 +5892,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylis@npm:4.1.4":
-  version: 4.1.4
-  resolution: "stylis@npm:4.1.4"
-  checksum: cd929bd89709def13b47e6c16b11317bf996a09b4e987fc45a235549c3adf49d41531e017d7df511daa095bc9468c923ae9094a934fe9c62440b7351874dafb7
+"stylis@npm:4.2.0":
+  version: 4.2.0
+  resolution: "stylis@npm:4.2.0"
+  checksum: 0eb6cc1b866dc17a6037d0a82ac7fa877eba6a757443e79e7c4f35bacedbf6421fadcab4363b39667b43355cbaaa570a3cde850f776498e5450f32ed2f9b7584
   languageName: node
   linkType: hard
 
