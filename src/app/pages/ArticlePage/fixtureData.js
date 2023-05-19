@@ -52,6 +52,7 @@ const articleDataBuilder = (
     },
     analyticsLabels: {
       contentId: 'urn:bbc:optimo:c0000000001o',
+      page: 'news.articles.c0000000001o.page',
     },
     type: 'article',
     createdBy,
