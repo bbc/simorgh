@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import { Agent } from 'https';
 import getEnvironment from '#app/routes/utils/getEnvironment';
