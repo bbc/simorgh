@@ -60,7 +60,7 @@ export default function App({ Component, pageProps }: Props) {
     toggles,
     variant,
   } = pageProps;
-  console.log('pageProps', pageProps);
+
   return (
     <ToggleContextProvider toggles={toggles}>
       <ServiceContextProvider
@@ -87,11 +87,11 @@ export default function App({ Component, pageProps }: Props) {
           <EventTrackingContextProvider pageData={pageData}>
             <UserContextProvider>
               <PageWrapper pageData={pageData} status={status}>
-                {/* {status === 200 ? ( */}
-                <Component {...pageProps} />
-                {/* ) : (
+                {status === 200 ? (
+                  <Component {...pageProps} />
+                ) : (
                   <ErrorPage errorCode={status} />
-                )} */}
+                )}
               </PageWrapper>
             </UserContextProvider>
           </EventTrackingContextProvider>
