@@ -379,7 +379,7 @@ it('should render a news article without headline correctly', async () => {
     expect(container).toMatchSnapshot();
   });
 });
-src/app/pages/ArticlePage/index.test.jsx
+
 it('should render the top stories and features when passed', async () => {
   const pageDataWithSecondaryColumn = {
     ...articleDataNews,
