@@ -1,12 +1,12 @@
 import React from 'react';
-import path from 'ramda/src/path';
+
 import pathOr from 'ramda/src/pathOr';
 import { OptimoBlock } from '#models/types/optimo';
 import headings from '#app/legacy/containers/Headings';
 import Blocks from '#app/legacy/containers/Blocks';
 import paragraph from '#app/legacy/containers/Paragraph';
 import Text from '#app/components/Text';
-import { Post, StreamResponse } from './post.d';
+import { CleanedArray, Post, StreamResponse } from './post.d';
 
 // temporary solution to render LI/ OL blocks.
 const unorderedList = ({ blocks }: { blocks: OptimoBlock[] }) => {
@@ -79,13 +79,13 @@ const PostItem = ({ postItem }: { postItem: Post }) => {
 };
 
 const PostsList = ({ postData }: { postData: StreamResponse }) => {
-  const postResults = path<[]>(['data', 'results'], postData);
+  const { results: postResults } = postData?.data;
 
   if (!postResults) return null;
 
   return (
     <div>
-      {postResults.map((item: Post) => (
+      {(postResults as Post[]).map((item: Post) => (
         <PostItem postItem={item} />
       ))}
     </div>
