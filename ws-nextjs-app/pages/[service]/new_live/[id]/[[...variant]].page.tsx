@@ -52,9 +52,9 @@ const getPageData = async ({
   const env = getEnvironment(pathname);
   const optHeaders = { 'ctx-service-env': env };
   const isLocal = !env || env === 'local';
-  const localCertsNeeded = !isLocal || !!process.env.INTEGRATION;
+  const ignoreCerts = isLocal || process.env.INTEGRATION === 'true';
 
-  const agent = localCertsNeeded ? await getAgent() : null;
+  const agent = ignoreCerts ? null : await getAgent();
 
   let pageStatus;
   let pageJson;
