@@ -9,36 +9,28 @@ const {
 describe('getPageIdentifier', () => {
   const goodData = {
     metadata: {
-      locators: {
-        optimoUrn: 'prefix1:prefix2:prefix3:desiredValue',
+      analyticsLabels: {
+        page: 'service.articles.desiredValue.page',
       },
     },
   };
 
   const badData = {
     metadata: {
-      locators: {
-        unknownUrn: 'prefix1:prefix2:prefix3:missedValue',
-      },
+      analyticsLabels: {},
     },
   };
 
   it('should construct page identifier', () => {
-    const optimoUrn = getPageIdentifier('service', goodData);
+    const pageIdentifier = getPageIdentifier(goodData);
 
-    expect(optimoUrn).toEqual('service.articles.desiredValue.page');
+    expect(pageIdentifier).toEqual('service.articles.desiredValue.page');
   });
 
-  it('should use "unknown" if optimo id is unknown', () => {
-    const optimoUrn = getPageIdentifier('service', badData);
+  it('should return null if metadata.analyticsLabels.page does not exist', () => {
+    const pageIdentifier = getPageIdentifier(badData);
 
-    expect(optimoUrn).toEqual('service.articles.unknown.page');
-  });
-
-  it('should use null if service is null', () => {
-    const optimoUrn = getPageIdentifier(null, goodData);
-
-    expect(optimoUrn).toEqual('null.articles.desiredValue.page');
+    expect(pageIdentifier).toEqual(null);
   });
 });
 
