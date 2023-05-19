@@ -12,6 +12,8 @@ import {
   BFF_FETCH_ERROR,
 } from '#app/lib/logger.const';
 import { Services, Variants } from '#models/types/global';
+import { FetchError } from '#models/types/fetch';
+
 import getEnvironment from '#app/routes/utils/getEnvironment';
 import fetchPageData from '#app/routes/utils/fetchPageData';
 
@@ -66,7 +68,7 @@ const getPageData = async ({
     pageStatus = status;
     pageJson = json;
   } catch (error: unknown) {
-    const { message, status } = error as Error & { status: number };
+    const { message, status } = error as FetchError;
 
     logger.error(BFF_FETCH_ERROR, {
       service,
