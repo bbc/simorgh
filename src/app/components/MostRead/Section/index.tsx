@@ -13,6 +13,7 @@ const MostReadSection = ({
     role="region"
     aria-labelledby="Most-Read"
     data-e2e="most-read"
+    data-testid="most-read"
   >
     {children}
   </section>
