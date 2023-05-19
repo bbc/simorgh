@@ -90,7 +90,7 @@ export default function App({ Component, pageProps }: Props) {
                 {status === 200 ? (
                   <Component {...pageProps} />
                 ) : (
-                  <ErrorPage errorCode={status} />
+                  <ErrorPage errorCode={status || 500} />
                 )}
               </PageWrapper>
             </UserContextProvider>
