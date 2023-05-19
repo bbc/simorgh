@@ -37,7 +37,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
   const { title, description, curations } = pageData;
 
   const itemListElement = curations
-    .map(({ summaries }) =>
+    .map(({ summaries = [] }) =>
       summaries.map(summary => ({
         '@context': 'http://schema.org',
         '@type': 'ListItem',

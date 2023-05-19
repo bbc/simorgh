@@ -48,16 +48,16 @@ export const service: DefaultServiceConfig = {
     showRelatedTopics: true,
     podcastPromo: {
       title: 'پادکست',
-      brandTitle: 'پرگار',
+      brandTitle: 'صفحه ۲',
       brandDescription:
-        'برنامه‌ای که در آن مهمانان برنامه به پرسش‌های چالشی مربوط به جامعه امروز پاسخ می‌دهند',
+        'در این برنامه با صاحب‌نظران درباره مسائل سیاسی و اجتماعی روز گفت‌ و‌ گو می‌کنیم.',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p02swnpg.jpg',
-        alt: 'پرگار',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p069d2yl.jpg',
+        alt: 'صفحه ۲',
       },
       linkLabel: {
         text: 'پادکست',
-        href: 'https://www.bbc.com/persian/podcasts/p02pc9wf',
+        href: 'https://www.bbc.com/persian/podcasts/p05gyy09',
       },
       skipLink: {
         text: 'از %title% رد شوید و به خواندن ادامه دهید',
