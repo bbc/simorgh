@@ -379,7 +379,7 @@ it('should render a news article without headline correctly', async () => {
     expect(container).toMatchSnapshot();
   });
 });
-
+src/app/pages/ArticlePage/index.test.jsx
 it('should render the top stories and features when passed', async () => {
   const pageDataWithSecondaryColumn = {
     ...articleDataNews,
@@ -415,6 +415,23 @@ it('should remove the top stories and features sections when isApp is set to tru
 
   expect(container.querySelector(`div[data-testid="top-stories"]`)).toBeNull();
   expect(container.querySelector(`div[data-testid="features"]`)).toBeNull();
+});
+
+it('should remove the most read section ', async () => {
+  fetch.mockResponse(JSON.stringify(pidginMostReadData));
+
+  const { container } = render(
+    <Context service="pidgin" isApp>
+      <ArticlePage pageData={articleDataPidgin} />
+    </Context>,
+  );
+
+  await waitFor(() => {
+    const mostReadSection = container.querySelector('#Most-Read');
+    expect(mostReadSection).toBeNull();
+  });
+
+  expect(container).toMatchSnapshot();
 });
 
 it('should show ads when enabled', async () => {
