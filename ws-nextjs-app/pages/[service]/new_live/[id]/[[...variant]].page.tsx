@@ -1,7 +1,6 @@
 import { GetServerSideProps } from 'next';
 import { ParsedUrlQuery } from 'querystring';
 import omit from 'ramda/src/omit';
-import applyBasicPageHandlers from '#pages/utils/applyBasicPageHandlers';
 import constructPageFetchUrl from '#app/routes/utils/constructPageFetchUrl';
 import getAgent from '#server/utilities/getAgent';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
@@ -17,10 +16,6 @@ import getEnvironment from '#app/routes/utils/getEnvironment';
 import fetchPageData from '#app/routes/utils/fetchPageData';
 
 import LivePageLayout from './LivePageLayout';
-
-export default applyBasicPageHandlers({
-  addVariantHandling: true,
-})(LivePageLayout);
 
 interface PageDataParams extends ParsedUrlQuery {
   id: string;
@@ -70,7 +65,9 @@ const getPageData = async ({
     });
     pageStatus = status;
     pageJson = json;
-  } catch ({ message, status }) {
+  } catch (error: unknown) {
+    const { message, status } = error as Error & { status: number };
+
     logger.error(BFF_FETCH_ERROR, {
       service,
       status,
@@ -126,6 +123,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
   return {
     props: {
       bbcOrigin: reqHeaders['bbc-origin'] || null,
+      error: data?.error || null,
       id,
       isAmp: false,
       isNextJs: true,
@@ -142,3 +140,5 @@ export const getServerSideProps: GetServerSideProps = async context => {
     },
   };
 };
+
+export default LivePageLayout;
