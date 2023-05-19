@@ -4,6 +4,7 @@ import {
   screen,
   act,
 } from '#app/components/react-testing-library-with-providers';
+import postFixture from '#data/pidgin/posts/postFixture.json';
 import Live from './LivePageLayout';
 
 const mockPageData = {
@@ -14,6 +15,7 @@ const mockPageData = {
   someResponse: {
     block: 'Its a block',
   },
+  posts: postFixture,
 };
 
 describe('Live Page', () => {
@@ -33,6 +35,18 @@ describe('Live Page', () => {
     expect(
       screen.getByText('Test Next.JS Page Description'),
     ).toBeInTheDocument();
+  });
+
+  it('should render the posts', async () => {
+    await act(async () => {
+      render(<Live pageData={mockPageData} />);
+    });
+
+    expect(screen.getAllByText('Breaking news')[0]).toBeInTheDocument();
+    expect(screen.getByText('Published 6.07pm Tues 9th')).toBeInTheDocument();
+    expect(screen.getByText('Timestamp test')).toBeInTheDocument();
+    expect(screen.getByText('Another post')).toBeInTheDocument();
+    expect(screen.getByText('Another post sub headline')).toBeInTheDocument();
   });
 
   it('creates snapshot of the live page', async () => {

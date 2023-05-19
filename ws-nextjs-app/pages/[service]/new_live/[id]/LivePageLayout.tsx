@@ -58,7 +58,6 @@ const LivePage = ({
         {/* Text as="p" used as placeholder. Awaiting screen reader UX and UX */}
         <Text as="p">{description}</Text>
         <PostsList postData={posts} />
-        {/* <pre css={styles.code}>{JSON.stringify(post, null, 2)}</pre> */}
         <pre css={styles.code}>
           <Heading level={4}>Headers</Heading>
           {bbcOrigin && (
