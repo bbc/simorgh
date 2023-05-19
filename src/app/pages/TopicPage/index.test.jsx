@@ -19,8 +19,8 @@ import {
 
 jest.mock('../../components/ThemeProvider');
 jest.mock('../../components/ChartbeatAnalytics', () => {
-  const ChartBeatAnalytics = () => <div>Chartbeat Analytics</div>;
-  return ChartBeatAnalytics;
+  const ChartbeatAnalytics = () => <div>Chartbeat Analytics</div>;
+  return ChartbeatAnalytics;
 });
 
 const getOptionParams = ({
