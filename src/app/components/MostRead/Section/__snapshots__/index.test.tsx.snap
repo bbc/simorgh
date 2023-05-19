@@ -6,6 +6,7 @@ exports[`MostReadSectionLabel assertion should render most-read section with cor
     aria-labelledby="Most-Read"
     class=""
     data-e2e="most-read"
+    data-testid="most-read"
     role="region"
   >
     Some child content
