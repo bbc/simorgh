@@ -30,8 +30,6 @@ interface Page {
   total: number;
 }
 
-export const EmptyArray = type => [] as type[];
-
 export interface Post {
   typeCode?: string | null;
   header: { model: { blocks: OptimoBlock[] } };
