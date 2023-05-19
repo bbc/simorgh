@@ -16,12 +16,12 @@ import ArticlePageComponent from './ArticlePage';
 const PageWithOptimizely = withOptimizelyProvider(ArticlePageComponent);
 const Page = withPageWrapper(PageWithOptimizely);
 
-// eslint-disable-next-line react/prop-types
 const ComponentWithContext = ({ data: { data } }) => {
   return (
     <ToggleContextProvider
       toggles={{
         eventTracking: { enabled: true },
+        mostRead: { enabled: true },
         frostedPromo: { enabled: true, value: 1 },
       }}
     >

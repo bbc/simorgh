@@ -41,7 +41,11 @@ const FeatureIdxPage = ({ pageData }) => {
       {/* dotcom and dotcomConfig need to be setup before the main dotcom javascript file is loaded */}
       {shouldBootstrapCanonicalAds && <CanonicalAdBootstrapJs />}
       <ATIAnalytics data={pageData} />
-      <ChartbeatAnalytics data={pageData} />
+      <ChartbeatAnalytics
+        sectionName={pageData?.relatedContent?.section?.name}
+        categoryName={pageData?.metadata?.passport?.category?.categoryName}
+        title={title}
+      />
       <ComscoreAnalytics />
       <MetadataContainer
         title={title}
