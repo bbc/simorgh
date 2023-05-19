@@ -5,7 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { render, act } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import pidginFrontPageData from '#data/pidgin/frontpage/index-light';
+import serbianFrontPageData from '#data/serbian/frontpage/lat.json';
 import pidginMostReadData from '#data/pidgin/mostRead';
 import getInitialData from '#app/routes/frontPage/getInitialData';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
@@ -132,7 +132,7 @@ describe('Front Page', () => {
     it('should render visually hidden text as h1', async () => {
       fetchMock.mock(
         'http://localhost/some-front-page-path.json',
-        JSON.stringify(pidginFrontPageData),
+        JSON.stringify(serbianFrontPageData),
       );
       const { pageData } = await getInitialData({
         path: 'some-front-page-path',
@@ -169,7 +169,7 @@ describe('Front Page', () => {
     it('should render front page sections', async () => {
       fetchMock.mock(
         'http://localhost/some-front-page-path.json',
-        JSON.stringify(pidginFrontPageData),
+        JSON.stringify(serbianFrontPageData),
       );
       fetchMock.mock(
         '/pidgin/mostread.json',
@@ -188,7 +188,7 @@ describe('Front Page', () => {
       });
 
       const sections = container.querySelectorAll('section');
-      expect(sections).toHaveLength(3);
+      expect(sections).toHaveLength(8);
       sections.forEach(section => {
         expect(section.getAttribute('role')).toEqual('region');
       });
