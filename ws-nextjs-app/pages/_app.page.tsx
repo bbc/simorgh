@@ -11,6 +11,7 @@ import {
   Services,
   Toggles,
   Variants,
+  MvtExperiment,
 } from '../../src/app/models/types/global';
 import PageWrapper from '../../src/app/components/PageLayoutWrapper';
 
@@ -21,11 +22,7 @@ interface Props extends AppProps {
     isAmp: boolean;
     isApp?: boolean;
     isNextJs: boolean;
-    mvtExperiments: {
-      experimentName: string;
-      variation: string;
-      type: 'experiment' | 'feature';
-    } | null;
+    mvtExperiments: MvtExperiment[] | null;
     pageData: object;
     pageLang?: string;
     pageType: PageTypes;
@@ -36,7 +33,7 @@ interface Props extends AppProps {
     status: number;
     timeOnServer?: number;
     toggles: Toggles;
-    variant: Variants;
+    variant?: Variants;
   };
 }
 
