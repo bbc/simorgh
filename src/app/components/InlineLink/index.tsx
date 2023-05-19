@@ -3,7 +3,7 @@
 import { useContext, FC, HTMLAttributes } from 'react';
 import { jsx, Theme } from '@emotion/react';
 import Url from 'url-parse';
-import { Link as ClientSideLink } from 'react-router-dom';
+import { Link as ClientSideLink, LinkProps } from 'react-router-dom';
 import { pathToRegexp } from 'path-to-regexp';
 
 import { FontVariant, GelFontSize } from '../../models/types/theming';
@@ -61,7 +61,7 @@ const InlineLink: FC<Props> = ({
       size && fontSizes[size],
       fontVariant && fontVariants[fontVariant],
     ],
-    ...htmlAttributes,
+    ...(htmlAttributes as LinkProps),
   };
 
   if (allowCSR) {
