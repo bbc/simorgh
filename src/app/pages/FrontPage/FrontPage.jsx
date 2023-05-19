@@ -92,7 +92,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
         <CanonicalAdBootstrapJs />
       )}
       <ATIAnalytics data={pageData} />
-      <ChartbeatAnalytics data={pageData} />
+      <ChartbeatAnalytics title={pageData?.metadata?.title} />
       <ComscoreAnalytics />
       <MetadataContainer
         title={frontPageTitle}
@@ -110,7 +110,8 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
         <IndexPageContainer>
           {groups.map((group, index) => (
             <Fragment key={group.title}>
-              {group.type === 'useful-links' && renderMostRead()}
+              {group.type === 'useful-links' &&
+                renderMostRead(mostReadEndpointOverride)}
               {radioScheduleData &&
                 radioSchedulePosition === group.semanticGroupName && (
                   <StyledRadioScheduleContainer

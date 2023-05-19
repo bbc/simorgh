@@ -93,7 +93,7 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
   return (
     <>
       <ATIAnalytics data={pageData} />
-      <ChartbeatAnalytics data={pageData} />
+      <ChartbeatAnalytics title={header} />
       <ComscoreAnalytics />
       <MetadataContainer
         title={header}

@@ -4,6 +4,7 @@ import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
 import Pagination from '#pages/TopicPage/Pagination';
 import Heading from '#app/components/Heading';
+import Text from '#app/components/Text';
 import { ServiceContext } from '#contexts/ServiceContext';
 import nodeLogger from '#lib/logger.node';
 import MetadataContainer from '../../../../../src/app/components/Metadata';
@@ -18,6 +19,8 @@ type ComponentProps = {
   pageData: {
     pageCount: number;
     activePage: number;
+    title?: string;
+    description?: string;
   };
   pathname?: string;
   showAdsBasedOnLocation?: boolean;
@@ -30,7 +33,7 @@ const LivePage = ({
   showAdsBasedOnLocation,
 }: ComponentProps) => {
   const { lang } = useContext(ServiceContext);
-  const { pageCount, activePage } = pageData;
+  const { pageCount, activePage, title, description } = pageData;
 
   // TODO: Remove after testing
   logger.info('nextjs_client_render', {
@@ -48,7 +51,9 @@ const LivePage = ({
       />
       <LinkedDataContainer type="CollectionPage" seoTitle="Test Live Page" />
       <main css={styles.wrapper}>
-        <Heading level={1}>Test Next.JS Page</Heading>
+        <Heading level={1}>{title}</Heading>
+        {/* Text as="p" used as placeholder. Awaiting screen reader UX and UX */}
+        <Text as="p">{description}</Text>
         <pre css={styles.code}>
           <Heading level={4}>Headers</Heading>
           {bbcOrigin && (

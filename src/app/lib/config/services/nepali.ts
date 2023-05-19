@@ -316,10 +316,6 @@ export const service: DefaultServiceConfig = {
         url: '/nepali',
       },
       {
-        title: 'नेपाल निर्वाचन २०७९',
-        url: '/nepali/topics/cp2d78r6qppt',
-      },
-      {
         title: 'पछिल्लो कार्यक्रम',
         url: '/nepali/media-54029171',
       },
