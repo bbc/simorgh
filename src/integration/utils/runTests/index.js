@@ -60,7 +60,7 @@ const runExpressTests = () =>
   });
 
 const runNextJSTests = () =>
-  spawn('yarn', ['test:integration'], {
+  spawn('yarn', ['test:integration', ...getJestArgs()], {
     stdio: 'inherit',
   });
 
