@@ -4,7 +4,7 @@ import { compilerOptions } from '../tsconfig.json';
 
 const canonicalIntegrationTests = {
   displayName: 'Integration Tests - Canonical',
-  testEnvironment: './integration/IntegrationTestEnvironment',
+  testEnvironment: './integration/IntegrationTestEnvironment.ts',
   testEnvironmentOptions: {
     platform: 'canonical',
   },
@@ -12,12 +12,12 @@ const canonicalIntegrationTests = {
   transform: {
     '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
   },
-  testMatch: ['**/integration/!(utils)/**/*[^.amp].test.js'],
+  testMatch: ['**/integration/!(utils)/**/*[^.amp].test.ts'],
 } as Config.InitialProjectOptions;
 
 const ampIntegrationTests = {
   displayName: 'Integration Tests - AMP',
-  testEnvironment: './integration/IntegrationTestEnvironment',
+  testEnvironment: './integration/IntegrationTestEnvironment.ts',
   testEnvironmentOptions: {
     platform: 'amp',
   },
@@ -25,7 +25,7 @@ const ampIntegrationTests = {
   transform: {
     '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
   },
-  testMatch: ['**/integration/!(utils)/**/*[^.canonical].test.js'],
+  testMatch: ['**/integration/!(utils)/**/amp.test.ts'],
 } as Config.InitialProjectOptions;
 
 const unitTests = {

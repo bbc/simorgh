@@ -1,11 +1,25 @@
 /* eslint-disable no-console */
-const JsDomEnvironment = require('jest-environment-jsdom').TestEnvironment;
-const getPageTypeFromTestPath = require('../../src/integration/utils/getPageTypeFromTestPath');
-const camelCaseToText = require('../../src/integration/utils/camelCaseToText');
-const fetchDom = require('../../src/integration/utils/fetchDom');
+import { TestEnvironment } from 'jest-environment-jsdom';
+import type {
+  JestEnvironmentConfig,
+  EnvironmentContext,
+} from '@jest/environment';
+import getPageTypeFromTestPath from '../../src/integration/utils/getPageTypeFromTestPath';
+import camelCaseToText from '../../src/integration/utils/camelCaseToText';
+import fetchDom from '../../src/integration/utils/fetchDom';
 
-class CustomTestEnvirnoment extends JsDomEnvironment {
-  constructor(config, context) {
+class CustomTestEnvirnoment extends TestEnvironment {
+  pageType: string;
+
+  service: string | string[];
+
+  runScripts: boolean;
+
+  displayAds: boolean;
+
+  url: string;
+
+  constructor(config: JestEnvironmentConfig, context: EnvironmentContext) {
     super(config, context);
     const { platform } = config.projectConfig.testEnvironmentOptions;
     const {

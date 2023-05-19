@@ -3,10 +3,10 @@
  * @pathname /pidgin/new_live/c7p765ynk9qt
  */
 
-import runHeaderTests from '../headerTests';
+import runAmpTests from '../ampTests';
 
-describe('Canonical', () => {
+describe('AMP', () => {
   describe(pageType, () => {
-    runHeaderTests();
+    runAmpTests();
   });
 });

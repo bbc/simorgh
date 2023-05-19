@@ -54,7 +54,7 @@ const startApp = () => {
   });
 };
 
-const runReactTests = () =>
+const runExpressTests = () =>
   spawn('jest', [filesToTest, '--runInBand', '--colors', ...getJestArgs()], {
     stdio: 'inherit',
   });
@@ -66,7 +66,7 @@ const runNextJSTests = () =>
 
 const runTests = () =>
   new Promise((resolve, reject) => {
-    const child = argv.nextJS ? runNextJSTests() : runReactTests();
+    const child = argv.nextJS ? runNextJSTests() : runExpressTests();
 
     child.on('exit', code => {
       if (code === 1) {
