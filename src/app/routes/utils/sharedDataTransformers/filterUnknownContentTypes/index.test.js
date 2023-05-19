@@ -1,5 +1,5 @@
-import azeriFixtureData from '#data/azeri/frontpage/index.json';
-import igboFixtureData from '#data/igbo/frontpage/index.json';
+import serbianFixtureData from '#data/serbian/frontpage/lat.json';
+import urduFixtureData from '#data/urdu/frontpage/index.json';
 import {
   PHOTO_GALLERY_PAGE,
   MEDIA_ASSET_PAGE,
@@ -382,7 +382,7 @@ describe('filterUnknownContentTypes', () => {
     });
 
     it('should handle "real" data', () => {
-      expect(filterUnknownContentTypes(igboFixtureData)).toMatchSnapshot();
+      expect(filterUnknownContentTypes(urduFixtureData)).toMatchSnapshot();
     });
   });
 
@@ -558,7 +558,7 @@ describe('filterUnknownContentTypes', () => {
     });
 
     it('should handle "real" data', () => {
-      expect(filterUnknownContentTypes(azeriFixtureData)).toMatchSnapshot();
+      expect(filterUnknownContentTypes(serbianFixtureData)).toMatchSnapshot();
     });
   });
 
