@@ -14,10 +14,8 @@ export const getOptimoId = articleData => {
   return optimoUrn ? optimoUrn.split(':').pop() : 'unknown';
 };
 
-export const getPageIdentifier = (service, articleData) => {
-  const optimoId = getOptimoId(articleData);
-  return `${service}.articles.${optimoId}.page`;
-};
+export const getPageIdentifier = articleData =>
+  pathOr(null, ['metadata', 'analyticsLabels', 'page'], articleData);
 
 export const getLanguage = articleData =>
   pathOr(null, ['metadata', 'passport', 'language'], articleData);

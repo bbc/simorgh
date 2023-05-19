@@ -30,7 +30,7 @@ export const buildArticleATIParams = (
     language: getLanguage(articleData),
     ldpThingIds: getThingAttributes('thingId', articleData),
     ldpThingLabels: getThingAttributes('thingEnglishLabel', articleData),
-    pageIdentifier: getPageIdentifier(service, articleData),
+    pageIdentifier: getPageIdentifier(articleData),
     pageTitle: getPromoHeadline(articleData),
     producerId: atiAnalyticsProducerId,
     timePublished: getPublishedDatetime('firstPublished', articleData),
