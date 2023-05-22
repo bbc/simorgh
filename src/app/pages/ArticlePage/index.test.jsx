@@ -25,6 +25,7 @@ import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ArticlePage from './ArticlePage';
 import ThemeProvider from '../../components/ThemeProvider';
+import { suppressPropWarnings } from '../../legacy/psammead/psammead-test-helpers/src';
 
 jest.mock('../../components/ThemeProvider');
 
@@ -445,6 +446,8 @@ it('should show ads when enabled', async () => {
 });
 
 it('should render WSOJ recommendations when passed', async () => {
+  suppressPropWarnings(['optimizely', 'ForwardRef', 'null']);
+
   const pageDataWithSecondaryColumn = {
     ...articleDataNews,
     recommendations: sampleRecommendations,
