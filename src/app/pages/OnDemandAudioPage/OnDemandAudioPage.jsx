@@ -26,8 +26,8 @@ import RadioScheduleContainer from '#containers/RadioSchedule';
 import RecentAudioEpisodes from '#containers/EpisodeList/RecentAudioEpisodes';
 import FooterTimestamp from '#containers/OnDemandFooterTimestamp';
 import PodcastExternalLinks from '#containers/PodcastExternalLinks';
-import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import ATIAnalytics from '#containers/ATIAnalytics';
+import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import MetadataContainer from '../../components/Metadata';
 import LinkedData from '../../components/LinkedData';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -152,7 +152,11 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
   return (
     <>
       <ATIAnalytics data={pageData} />
-      <ChartbeatAnalytics data={pageData} />
+      <ChartbeatAnalytics
+        mediaPageType={isPodcast ? 'Podcasts' : 'Radio'}
+        title={headline}
+        contentType={pageData?.contentType}
+      />
       <ComscoreAnalytics />
       <MetadataContainer
         openGraphType="website"

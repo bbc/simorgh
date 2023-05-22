@@ -39,7 +39,7 @@ fetchMock.config.overwriteRoutes = false; // http://www.wheresrhys.co.uk/fetch-m
 
 jest.mock('../../components/ThemeProvider');
 
-jest.mock('#containers/ChartbeatAnalytics', () => {
+jest.mock('../../components/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
 });

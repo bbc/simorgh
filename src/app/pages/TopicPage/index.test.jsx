@@ -19,8 +19,8 @@ import {
 } from './fixtures';
 
 jest.mock('../../components/ThemeProvider');
-jest.mock('../../legacy/containers/ChartbeatAnalytics', () => {
-  const ChartbeatAnalytics = () => <div>chartbeat</div>;
+jest.mock('../../components/ChartbeatAnalytics', () => {
+  const ChartbeatAnalytics = () => <div>Chartbeat Analytics</div>;
   return ChartbeatAnalytics;
 });
 
@@ -248,6 +248,17 @@ describe('Topic Page', () => {
         name: messageBannerCuration.title,
       });
       expect(messageBanners).toHaveLength(1);
+    });
+  });
+
+  describe('Analytics', () => {
+    it('should render a Chartbeat component', () => {
+      const { getByText } = render(
+        <TopicPage pageData={amharicSingleItem} />,
+        getOptionParams({ service: 'amharic', lang: 'am' }),
+      );
+
+      expect(getByText('Chartbeat Analytics')).toBeInTheDocument();
     });
   });
 });

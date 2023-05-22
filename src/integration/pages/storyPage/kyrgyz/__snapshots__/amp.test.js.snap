@@ -119,7 +119,7 @@ Object {
   "vars": Object {
     "contentType": "STY",
     "domain": "test.bbc.co.uk",
-    "sections": "Kyrgyz, Kyrgyz - Башталгыч бет, Kyrgyz - STY, Kyrgyz - Башталгыч бет - STY, Kyrgyz - undefined-category",
+    "sections": "Kyrgyz, Kyrgyz - Башталгыч бет, Kyrgyz - STY, Kyrgyz - Башталгыч бет - STY",
     "title": "Test STY for social embeds",
     "uid": 50924,
     "virtualReferrer": "\${documentReferrer}",

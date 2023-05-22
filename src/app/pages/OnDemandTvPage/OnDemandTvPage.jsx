@@ -28,7 +28,7 @@ import AVPlayer from '#containers/AVPlayer';
 import RecentVideoEpisodes from '#containers/EpisodeList/RecentVideoEpisodes';
 import FooterTimestamp from '#containers/OnDemandFooterTimestamp';
 import ATIAnalytics from '#containers/ATIAnalytics';
-import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
+import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import LinkedData from '../../components/LinkedData';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import MetadataContainer from '../../components/Metadata';
@@ -123,7 +123,11 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
 
   return (
     <Wrapper>
-      <ChartbeatAnalytics data={pageData} />
+      <ChartbeatAnalytics
+        mediaPageType="TV"
+        title={headline}
+        contentType={pageData?.contentType}
+      />
       <ATIAnalytics data={pageData} />
       <ComscoreAnalytics />
       <MetadataContainer
