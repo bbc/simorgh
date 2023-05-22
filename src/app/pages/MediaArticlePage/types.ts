@@ -1,7 +1,31 @@
+import { MetadataTaggings } from '../../models/types/metadata';
 import { OptimoBlock } from '../../models/types/optimo';
 
 export type MediaArticlePageProps = {
-  pageData: object;
+  pageData: {
+    content: object;
+    metadata: {
+      passport: {
+        language: string;
+        home: string;
+        taggings: MetadataTaggings;
+        predicates: {
+          infoClass: { value: string; type: string }[];
+          primaryMediaType: { value: string; type: string }[];
+        };
+        category?: {
+          categoryName: string;
+        };
+      };
+      analyticsLabels?: {
+        producer: string;
+      };
+      atiAnalytics?: {
+        chapter: string;
+      };
+    };
+    promo: object;
+  };
 };
 
 export type ComponentToRenderProps = {
@@ -14,12 +38,4 @@ export type TimestampProps = {
   popOut: boolean;
   minutesTolerance?: number;
   className: string;
-};
-
-export type TrackingBlock = {
-  componentName: string;
-};
-
-export type EventTrackingData = {
-  block: TrackingBlock;
 };

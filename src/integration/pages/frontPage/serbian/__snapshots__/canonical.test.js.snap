@@ -285,6 +285,8 @@ exports[`Canonical Front Page Sections should match headline text 5`] = `"Ako st
 
 exports[`Canonical Front Page Sections should match headline text 6`] = `"Najgledanije"`;
 
+exports[`Canonical Front Page Sections should match headline text 7`] = `"2018 World Cup"`;
+
 exports[`Story Promo Headline should match text 1`] = `"Video, LAT - Sarajevo - „Neka ljubi ko god koga hoće\\", Trajanje 2,15"`;
 
 exports[`Story Promo Image should match image 1`] = `
