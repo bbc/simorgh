@@ -1,6 +1,22 @@
 import { Services } from '../../../../models/types/global';
 import { serviceNumerals } from '../../Canonical/Rank';
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export const getInnerScript = (_data?: object) => `
+    if (data.items.length === 0) {
+      throw new Error('Empty records from mostread endpoint');
+    }
+
+    data.items.map((item, index) => {
+      return {
+        ...item,
+        rankTranslation: translations[index + 1],
+      };
+    });
+
+    return data;
+  `;
+
 export default ({
   endpoint,
   service,
@@ -8,37 +24,25 @@ export default ({
   endpoint: string;
   service: Services;
 }) => {
-  const translation = serviceNumerals(service);
+  // @ts-expect-error only a subset of services need to override the default service numerals
+  const translations = serviceNumerals[service];
+
+  const innerscript = getInnerScript();
 
   return `
-  const translations = ${JSON.stringify(translation)}
-  const getRemoteData = async () => {
-    try{
-      const response = await fetch("${endpoint}");
-      const data = await response.json();
+  const translations = JSON.stringify(${translations});
+  try {
+    const response = await fetch("${endpoint}");
+    const data = await response.json();
 
-      if(data.records.length === 0){
-        throw new Error("Empty records from mostread endpoint");
-      }
+    ${innerscript}
 
-      data.records.forEach((item, index) => {
-        item.rankTranslation = translations[index+1];
-
-        if (!item.promo.headlines.shortHeadline) {
-          item.promo.headlines.shortHeadline = item.promo.headlines.seoHeadline;
-        }
-
-        if(!item.promo.locators.assetUri) {
-          item.promo.locators.assetUri = item.promo.locators.canonicalUrl;
-        }
-
-      });
-
-      return data;
-    } catch(error){
-      console.warn(error);
-      return [];
-    }
+    return data;
+  } catch (error) {
+    console.warn(error);
+    return [];
   }
-    exportFunction('getRemoteData', getRemoteData);`;
+
+  exportFunction('getRemoteData', getRemoteData);
+  `;
 };
