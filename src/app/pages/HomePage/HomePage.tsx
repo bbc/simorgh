@@ -13,7 +13,6 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import styles from './index.styles';
 import MetadataContainer from '../../components/Metadata';
 import LinkedData from '../../components/LinkedData';
-import getListItems from '../../lib/seoUtils/getListItems';
 import getItemList from '../../lib/seoUtils/getItemList';
 
 interface HomePageProps {
