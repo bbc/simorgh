@@ -37,6 +37,7 @@ import {
   screen,
 } from '../components/react-testing-library-with-providers';
 import * as fetchPageData from './utils/fetchPageData';
+import { suppressPropWarnings } from '../legacy/psammead/psammead-test-helpers/src';
 
 fetchMock.config.fallbackToNetwork = true; // ensures non mocked requests fallback to an actual network request
 
@@ -79,6 +80,7 @@ const renderRouter = props =>
       <MemoryRouter initialEntries={[props.pathname]}>
         {renderRoutes(routes, {
           bbcOrigin: 'https://www.bbc.com',
+          isApp: false,
           isAmp: false,
           status: props.status || 200,
           toggles: defaultToggles.local,
@@ -399,6 +401,8 @@ describe('Main page routes', () => {
   });
 
   it('should route to and render a story page', async () => {
+    suppressPropWarnings(['optimizely', 'ForwardRef', 'null']);
+
     const pathname = '/mundo/noticias-internacional-51266689';
     fetch.mockResponse(
       JSON.stringify({
