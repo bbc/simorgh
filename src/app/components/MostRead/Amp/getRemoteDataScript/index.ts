@@ -1,9 +1,9 @@
 import { Services } from '../../../../models/types/global';
 import { serviceNumerals } from '../../Canonical/Rank';
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export const getInnerScript = (_data?: object) => `
-    if (data.items.length === 0) {
+export const getInnerScript = () => {
+  return `
+    if (!data.items || (data.items && data.items.length === 0)) {
       throw new Error('Empty records from mostread endpoint');
     }
 
@@ -13,9 +13,8 @@ export const getInnerScript = (_data?: object) => `
         rankTranslation: translations[index + 1],
       };
     });
-
-    return data;
   `;
+};
 
 export default ({
   endpoint,
@@ -31,6 +30,7 @@ export default ({
 
   return `
   const translations = JSON.stringify(${translations});
+
   try {
     const response = await fetch("${endpoint}");
     const data = await response.json();
