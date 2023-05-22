@@ -68,7 +68,7 @@ const AmpMostRead = ({ endpoint, size = 'default' }: AmpMostReadProps) => {
       </Helmet>
       <amp-list
         src="amp-script:dataFunctions.getRemoteData"
-        items="records"
+        items="items"
         max-items={numberOfItems}
         layout="responsive"
         width="300"

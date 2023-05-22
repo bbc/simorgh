@@ -227,7 +227,7 @@ exports[`AmpMostRead should render as expected 1`] = `
   >
     <amp-list
       height="50"
-      items="records"
+      items="items"
       layout="responsive"
       max-items="10"
       src="amp-script:dataFunctions.getRemoteData"
