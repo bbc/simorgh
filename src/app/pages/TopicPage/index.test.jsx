@@ -43,7 +43,6 @@ const getOptionParams = ({
 });
 
 describe('Topic Page', () => {
-  suppressPropWarnings(['useLargeImages', 'undefined']);
   suppressPropWarnings(['type', 'article']);
   suppressPropWarnings(['children', 'string']);
   suppressPropWarnings(['position', 'undefined']);

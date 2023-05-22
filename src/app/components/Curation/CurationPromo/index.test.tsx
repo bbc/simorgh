@@ -29,7 +29,6 @@ describe('Curation Promo', () => {
   suppressPropWarnings(['children', 'string']);
   suppressPropWarnings(['id', 'undefined']);
   suppressPropWarnings(['type', 'article']);
-  suppressPropWarnings(['useLargeImages', 'undefined']);
 
   it('should use formatted duration when a valid duration is provided', () => {
     const container = render(

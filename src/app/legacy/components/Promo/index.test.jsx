@@ -38,8 +38,6 @@ const FixtureProgrammes = ({ useLargeImages = false }) => (
 
 describe('Promo component - Image', () => {
   it('should render image using correct resolution and no large image on desktop', () => {
-    suppressPropWarnings(['useLargeImages', 'undefined']);
-
     render(<Fixture />);
     const imageEl = screen.getByAltText('Test image alt text');
     expect(imageEl).toHaveAttribute(

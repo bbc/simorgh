@@ -30,7 +30,6 @@ const components = {
 
 describe('Curation', () => {
   suppressPropWarnings(['type', 'link']);
-  suppressPropWarnings(['useLargeImages', 'undefined']);
   suppressPropWarnings(['children', 'string']);
   suppressPropWarnings(['type', 'article']);
 
