@@ -16,27 +16,16 @@ import TopicImage from './TopicImage';
 import TopicTitle from './TopicTitle';
 import TopicDescription from './TopicDescription';
 import Pagination from './Pagination';
+import getItemList from '../../lib/seoUtils/getItemList';
 
 const TopicPage = ({ pageData }) => {
-  const { lang, translations } = useContext(ServiceContext);
+  const { lang, translations, brandName } = useContext(ServiceContext);
   const { title, description, imageData, curations, pageCount, activePage } =
     pageData;
 
   const { enabled: adsEnabled } = useToggle('ads');
   const { showAdsBasedOnLocation } = useContext(RequestContext);
   const topStoriesTitle = path(['topStoriesTitle'], translations);
-
-  const linkedDataEntities = curations
-    .map(({ summaries }) =>
-      summaries.map(summary => ({
-        '@type': summary.type,
-        name: summary.title,
-        headline: summary.title,
-        url: summary.link,
-        dateCreated: summary.firstPublished,
-      })),
-    )
-    .flat();
 
   const { pageXOfY, previousPage, nextPage, page } = {
     pageXOfY: 'Page {x} of {y}',
@@ -51,6 +40,8 @@ const TopicPage = ({ pageData }) => {
     .replace('{y}', pageCount);
 
   const pageTitle = `${title}, ${translatedPage}`;
+
+  const itemList = getItemList({ curations, name: brandName });
 
   return (
     <>
@@ -76,7 +67,7 @@ const TopicPage = ({ pageData }) => {
             type="CollectionPage"
             seoTitle={title}
             headline={title}
-            entities={linkedDataEntities}
+            entities={[itemList]}
           />
           <div css={styles.title}>
             <div css={styles.inline}>
