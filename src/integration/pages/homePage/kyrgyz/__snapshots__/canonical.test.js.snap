@@ -700,3 +700,12 @@ Object {
 `;
 
 exports[`Canonical Home Page messageBanner has a link 1`] = `"https://www.bbc.com/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=4"`;
+
+exports[`Canonical Home Page mostRead has a link 1`] = `
+<a
+  class="focusIndicatorDisplayTableCell bbc-1ae90qw-link-defaultLink"
+  href="/kyrgyz/world-23090100"
+>
+  АКШ: жаңы президент ким экенин аныктаган штаттар кайсылар?
+</a>
+`;
