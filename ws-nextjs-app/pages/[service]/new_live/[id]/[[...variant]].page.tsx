@@ -3,7 +3,7 @@ import { ParsedUrlQuery } from 'querystring';
 import omit from 'ramda/src/omit';
 import applyBasicPageHandlers from '#pages/utils/applyBasicPageHandlers';
 import constructPageFetchUrl from '#app/routes/utils/constructPageFetchUrl';
-import getAgent from '#server/utilities/getAgent';
+// import getAgent from '#server/utilities/getAgent';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
 import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import nodeLogger from '#lib/logger.node';
