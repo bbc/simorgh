@@ -16,6 +16,7 @@ import {
   mundoMultipleCurations,
   amharicOnlyTitle,
 } from './fixtures';
+import { Helmet } from 'react-helmet';
 
 jest.mock('../../components/ThemeProvider');
 jest.mock('../../components/ChartbeatAnalytics', () => {
@@ -252,6 +253,20 @@ describe('Topic Page', () => {
       );
 
       expect(getByText('Chartbeat Analytics')).toBeInTheDocument();
+    });
+  });
+
+  describe('SEO', () => {
+    it('should correctly render linked data', () => {
+      render(<TopicPage pageData={pidginMultipleItems} />, getOptionParams());
+
+      const getLinkedDataOutput = () => {
+        return Helmet.peek().scriptTags.map(({ innerHTML }) =>
+          JSON.parse(innerHTML),
+        );
+      };
+
+      expect(getLinkedDataOutput()).toMatchSnapshot();
     });
   });
 });
