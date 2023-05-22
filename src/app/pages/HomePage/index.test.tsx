@@ -3,8 +3,11 @@ import { data as kyrgyzHomePageData } from '#data/kyrgyz/homePage/index.json';
 import { Helmet } from 'react-helmet';
 import { render } from '../../components/react-testing-library-with-providers';
 import HomePage from './HomePage';
+import { suppressPropWarnings } from '../../legacy/psammead/psammead-test-helpers/src';
 
 describe('Home Page', () => {
+  suppressPropWarnings(['children', 'string']);
+
   it('should render a section for each curation with summaries', () => {
     const { container } = render(<HomePage pageData={kyrgyzHomePageData} />, {
       service: 'kyrgyz',
