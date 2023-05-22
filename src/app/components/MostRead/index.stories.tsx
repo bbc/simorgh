@@ -59,15 +59,6 @@ export const HomePage2Columns = ({ service, variant }: Props) => (
   />
 );
 
-export const ArticlePage5Columns = ({ service, variant }: Props) => (
-  <Component
-    service={service}
-    variant={variant}
-    size="default"
-    columnLayout="multiColumn"
-  />
-);
-
 export const StoryPage1Column = ({ service, variant }: Props) => (
   <Component
     service={service}
