@@ -26,6 +26,10 @@ type Props = {
       type: string;
     };
     pageType?: string;
+    pageCount?: number;
+    activePage?: number;
+    title?: string;
+    description?: string;
   };
   status: number;
 };
