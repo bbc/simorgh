@@ -20,12 +20,7 @@ interface Props extends StoryProps {
   size?: 'default' | 'small';
 }
 
-const Component = ({
-  service,
-  variant,
-  columnLayout = 'multiColumn',
-  size = 'default',
-}: Props) => (
+const Component = ({ service, variant, columnLayout, size }: Props) => (
   <ThemeProvider service={service} variant={variant}>
     <ToggleContextProvider>
       <RequestContextProvider
@@ -55,12 +50,22 @@ export default {
   decorators: [withKnobs, withServicesKnob({ defaultService: 'pidgin' })],
 };
 
-export const ArticlePage5Columns = ({ service, variant }: Props) => (
-  <Component service={service} variant={variant} />
+export const HomePage2Columns = ({ service, variant }: Props) => (
+  <Component
+    service={service}
+    variant={variant}
+    size="default"
+    columnLayout="twoColumn"
+  />
 );
 
-export const Ltr2Columns = ({ service, variant }: Props) => (
-  <Component service={service} variant={variant} columnLayout="twoColumn" />
+export const ArticlePage5Columns = ({ service, variant }: Props) => (
+  <Component
+    service={service}
+    variant={variant}
+    size="default"
+    columnLayout="multiColumn"
+  />
 );
 
 export const StoryPage1Column = ({ service, variant }: Props) => (
@@ -73,9 +78,19 @@ export const StoryPage1Column = ({ service, variant }: Props) => (
 );
 
 export const Japanese1Column = ({ variant }: Props) => (
-  <Component service="japanese" columnLayout="oneColumn" variant={variant} />
+  <Component
+    service="japanese"
+    columnLayout="oneColumn"
+    variant={variant}
+    size="default"
+  />
 );
 
-export const Rtl2Columns = ({ variant }: Props) => (
-  <Component service="persian" columnLayout="twoColumn" variant={variant} />
+export const Persian1Column = ({ variant }: Props) => (
+  <Component
+    service="persian"
+    columnLayout="oneColumn"
+    variant={variant}
+    size="default"
+  />
 );
