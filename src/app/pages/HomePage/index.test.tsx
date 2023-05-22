@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet';
 import { render } from '../../components/react-testing-library-with-providers';
 import HomePage from './HomePage';
 
-jest.mock('../../components/ThemeProvider');
 jest.mock('../../components/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>Chartbeat Analytics</div>;
   return ChartbeatAnalytics;
