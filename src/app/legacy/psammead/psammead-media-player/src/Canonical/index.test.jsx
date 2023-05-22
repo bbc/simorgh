@@ -27,7 +27,7 @@ describe('Media Player: Canonical', () => {
   suppressPropWarnings(['noJsMessage', 'undefined']);
   suppressPropWarnings(['showPlaceholder', 'undefined']);
   suppressPropWarnings(['showLoadingImage', 'undefined']);
-  suppressPropWarnings(['darkMode', 'undefined']);
+  suppressPropWarnings(['darkPlaceholder', 'undefined']);
   suppressPropWarnings(['onMediaInitialised', 'undefined']);
   suppressPropWarnings(['onMediaPlaying', 'undefined']);
   suppressPropWarnings(['onMediaEnded', 'undefined']);
