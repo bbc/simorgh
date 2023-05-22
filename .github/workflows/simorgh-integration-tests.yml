@@ -22,7 +22,7 @@ jobs:
       CI: true
       LOG_LEVEL: 'error'
       BFF_PATH: 'https://web-cdn.test.api.bbci.co.uk/fd/simorgh-bff/simorgh-bff'
-      INT: true
+      INTEGRATION_TEST_BUILD: true
       
     steps:
       - uses: actions/checkout@v3
