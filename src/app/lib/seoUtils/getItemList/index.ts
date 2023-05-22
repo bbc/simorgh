@@ -1,19 +1,19 @@
 import { CurationData } from '../../../models/types/curationData';
+import getListItems from '../getListItems';
 
-export default (curations: CurationData[]) => {
-  return curations
-    .map(({ summaries = [] }) =>
-      summaries.map(({ link }) => ({
-        '@context': 'http://schema.org',
-        '@type': 'ListItem',
-        url: link,
-      })),
-    )
-    .flat()
-    .map((listItem, index) => {
-      return {
-        ...listItem,
-        position: index + 1,
-      };
-    });
+export default ({
+  curations,
+  name,
+}: {
+  curations: CurationData[];
+  name: string;
+}) => {
+  const listItems = getListItems(curations);
+
+  return {
+    itemListElement: listItems,
+    '@type': 'ItemList',
+    name,
+    numberOfItems: listItems.length,
+  };
 };

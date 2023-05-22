@@ -1,55 +1,46 @@
 import getItemList from '.';
-import { VISUAL_PROMINENCE } from '../../../models/types/curationData';
-
-const baseCurations = [
-  {
-    curationId: 'a',
-    curationType: 'tipo-curation',
-    visualProminence: VISUAL_PROMINENCE.NORMAL,
-    position: 1,
-  },
-  {
-    curationId: 'b',
-    curationType: 'tipo-curation',
-    visualProminence: VISUAL_PROMINENCE.HIGH,
-    position: 2,
-  },
-];
+import { baseCurations, curationsWithSummaries } from '../testHelpers';
 
 describe('SEO Utils | getItemList', () => {
-  it('should convert curations into an ItemList', () => {
-    const curations = baseCurations.map((curation, index) => {
-      return {
-        ...curation,
-        summaries: [
-          {
-            title: `Title ${index}`,
-            type: `Type ${index}`,
-            link: `https://www.bbc.com/mundo/${index}`,
+  it('should convert curations into an ItemList object with ListItems', () => {
+    expect(
+      getItemList({
+        curations: curationsWithSummaries,
+        name: 'BBC News Mundo',
+      }),
+    ).toMatchInlineSnapshot(`
+      Object {
+        "@type": "ItemList",
+        "itemListElement": Array [
+          Object {
+            "@context": "http://schema.org",
+            "@type": "ListItem",
+            "position": 1,
+            "url": "https://www.bbc.com/mundo/0",
+          },
+          Object {
+            "@context": "http://schema.org",
+            "@type": "ListItem",
+            "position": 2,
+            "url": "https://www.bbc.com/mundo/1",
           },
         ],
-      };
-    });
-
-    expect(getItemList(curations)).toMatchInlineSnapshot(`
-      Array [
-        Object {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 1,
-          "url": "https://www.bbc.com/mundo/0",
-        },
-        Object {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 2,
-          "url": "https://www.bbc.com/mundo/1",
-        },
-      ]
+        "name": "BBC News Mundo",
+        "numberOfItems": 2,
+      }
     `);
   });
 
-  it('should return an empty list if there are no summaries in the curation', () => {
-    expect(getItemList(baseCurations)).toHaveLength(0);
+  it('should return an ItemList object with no ListItems if curation has no summaries', () => {
+    const expected = {
+      '@type': 'ItemList',
+      name: 'BBC News Pidgin',
+      itemListElement: [],
+      numberOfItems: 0,
+    };
+
+    expect(
+      getItemList({ curations: baseCurations, name: 'BBC News Pidgin' }),
+    ).toStrictEqual(expected);
   });
 });
