@@ -29,12 +29,10 @@ const components = {
 };
 
 describe('Curation', () => {
-  suppressPropWarnings(['type', 'link']);
   suppressPropWarnings(['children', 'string']);
-  suppressPropWarnings(['type', 'article']);
 
   it.each(Object.entries(components))(
-    `should render a $testId component`,
+    `should render a %s component`,
     // testId is the key in the components object above
     (testId, { visualStyle, visualProminence, promos }) => {
       const { getByTestId } = render(

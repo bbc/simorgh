@@ -6,7 +6,6 @@ import mediaFixture from './mediaFixtures';
 import HierarchicalGrid from '.';
 
 describe('Hierarchical Grid Curation', () => {
-  suppressPropWarnings(['type', 'article']);
   suppressPropWarnings(['children', 'string']);
 
   const headingLevel = 2;
