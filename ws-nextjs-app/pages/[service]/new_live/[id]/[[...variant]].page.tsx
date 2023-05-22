@@ -54,7 +54,7 @@ const getPageData = async ({
   const isLocal = !env || env === 'local';
 
   let agent = null;
-  if (process.env.INT) {
+  if (!process.env.INT) {
     agent = !isLocal ? await getAgent() : null;
   }
 
