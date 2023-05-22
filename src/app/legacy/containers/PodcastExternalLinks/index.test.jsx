@@ -3,7 +3,6 @@ import React from 'react';
 import * as viewTracking from '#hooks/useViewTracker';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
-import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import { render } from '../../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import PodcastExternalLinks from '.';
@@ -45,8 +44,6 @@ const links = [
 ];
 
 describe('PodcastExternalLinks', () => {
-  suppressPropWarnings(['aria.aria-labelledby', 'undefined']);
-
   it('Should render external links', () => {
     const { container } = render(<Component links={links} />);
     expect(container).toMatchSnapshot();
