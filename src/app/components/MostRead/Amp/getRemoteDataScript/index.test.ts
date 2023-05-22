@@ -1,10 +1,11 @@
 /* eslint-disable no-eval */
-import { getInnerScript } from '.';
+import { omit } from 'ramda';
+import { transformData } from '.';
 import { WesternArabic } from '../../../../legacy/psammead/psammead-locales/src/numerals';
 import pidginMostRead from '../../../../../../data/pidgin/mostRead/index.json';
 
 describe('getRemoteDataScript', () => {
-  it('getInnerScript should append rankTranslation to each item', async () => {
+  it('transformData should append rankTranslation to each item', async () => {
     const data = {
       ...pidginMostRead,
       items: pidginMostRead.records.slice(0, 10),
@@ -13,22 +14,23 @@ describe('getRemoteDataScript', () => {
 
     const translations = WesternArabic;
 
-    const response = eval(getInnerScript());
+    eval(transformData());
 
-    response.forEach((item: { rankTranslation: number }, index: number) => {
+    data.items.forEach((item: object, index: number) => {
       expect(item).toHaveProperty('rankTranslation');
+      // @ts-expect-error required for testing purposes
       expect(item.rankTranslation).toBe(translations[index + 1]);
     });
   });
 
-  it('getInnerScript should throw an error if there are no items in the data response', async () => {
-    const data = pidginMostRead;
+  it('transformData should throw an error if there are no items in the data response', async () => {
+    const data = omit(['records'], pidginMostRead);
     expect(data).not.toHaveProperty('items');
 
     const translations = WesternArabic;
     expect(translations).toBeDefined();
 
-    expect(() => eval(getInnerScript())).toThrowError(
+    expect(() => eval(transformData())).toThrowError(
       'Empty records from mostread endpoint',
     );
   });
