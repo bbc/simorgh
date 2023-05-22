@@ -46,7 +46,7 @@ const startApp = () => {
   return new Promise(resolve => {
     const child = exec(
       `yarn ${
-        isDev ? 'dev' : 'dev'
+        isDev ? 'dev' : 'start'
       } & ./node_modules/.bin/wait-on -t 20000 http://localhost:${portNumber}/status`,
     );
 
