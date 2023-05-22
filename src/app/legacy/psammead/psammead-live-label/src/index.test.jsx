@@ -1,6 +1,5 @@
 import React from 'react';
 import { render } from '../../../../components/react-testing-library-with-providers';
-import arabic from '../../../../components/ThemeProvider/fontScripts/arabic';
 import LiveLabel from './index';
 
 describe('LiveLabel', () => {
@@ -27,7 +26,8 @@ describe('LiveLabel', () => {
 
   it('should correctly render for RTL service', () => {
     const { container } = render(
-      <LiveLabel service={arabic} dir="rtl" ariaHidden offScreenText="Live" />,
+      <LiveLabel service="arabic" dir="rtl" ariaHidden offScreenText="Live" />,
+      { service: 'arabic' },
     );
     expect(container).toMatchSnapshot();
   });
