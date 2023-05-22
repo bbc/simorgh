@@ -28,7 +28,7 @@ const TopStoriesItemFixture = ({ fixtureData, service = 'news' }) => (
 );
 
 describe('Optimo Top Stories Promo Item', () => {
-  suppressPropWarnings(['service', 'undefined']);
+  suppressPropWarnings(['service', 'LiveLabel', 'undefined']);
 
   it('should render Related Content when given appropriate data', () => {
     render(<TopStoriesItemFixture fixtureData={topStoriesItem} />);
