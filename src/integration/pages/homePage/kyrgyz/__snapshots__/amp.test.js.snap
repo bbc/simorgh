@@ -799,5 +799,3 @@ Object {
 `;
 
 exports[`AMP Home Page messageBanner has a link 1`] = `"https://www.bbc.com/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=4"`;
-
-exports[`AMP Home Page mostRead has a link 1`] = `null`;

@@ -701,11 +701,37 @@ Object {
 
 exports[`Canonical Home Page messageBanner has a link 1`] = `"https://www.bbc.com/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=4"`;
 
-exports[`Canonical Home Page mostRead has a link 1`] = `
-<a
-  class="focusIndicatorDisplayTableCell bbc-1ae90qw-link-defaultLink"
-  href="/kyrgyz/world-23090100"
->
-  АКШ: жаңы президент ким экенин аныктаган штаттар кайсылар?
-</a>
+exports[`Canonical Home Page mostRead has multiple items 1`] = `
+Object {
+  "text": "АКШ: жаңы президент ким экенин аныктаган штаттар кайсылар?",
+  "url": "/kyrgyz/world-23090100",
+}
+`;
+
+exports[`Canonical Home Page mostRead has multiple items 2`] = `
+Object {
+  "text": "Kyrgyzstanda soz erkindigi buzuluuda",
+  "url": "/kyrgyz/world-23089413",
+}
+`;
+
+exports[`Canonical Home Page mostRead has multiple items 3`] = `
+Object {
+  "text": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 36",
+  "url": "/kyrgyz/kyrgyzstan-23087515",
+}
+`;
+
+exports[`Canonical Home Page mostRead has multiple items 4`] = `
+Object {
+  "text": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 34",
+  "url": "/kyrgyz/kyrgyzstan-23087513",
+}
+`;
+
+exports[`Canonical Home Page mostRead has multiple items 5`] = `
+Object {
+  "text": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 35",
+  "url": "/kyrgyz/kyrgyzstan-23087514",
+}
 `;
