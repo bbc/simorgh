@@ -603,6 +603,7 @@ describe('Article page routes', () => {
   const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
   it('should route to and render an article page', async () => {
     suppressPropWarnings(['pageData.promo.id', 'SecondaryColumn', 'undefined']);
+    suppressPropWarnings(['pageData.promo.id', 'ArticlePage', 'undefined']);
 
     const pathname = '/persian/articles/c4vlle3q337o';
 
