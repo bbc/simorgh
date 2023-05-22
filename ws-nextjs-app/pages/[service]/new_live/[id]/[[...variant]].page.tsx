@@ -50,7 +50,7 @@ const getPageData = async ({
   });
 
   const env = getEnvironment(pathname);
-  const optHeaders = { 'ctx-service-env': env };
+  const optHeaders = { 'ctx-service-env': 'test' };
   const isLocal = !env || env === 'local';
 
   const agent = !isLocal ? await getAgent() : null;
