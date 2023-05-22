@@ -4,7 +4,6 @@ import {
   articleDataPersian,
 } from '#pages/ArticlePage/fixtureData';
 import serbianFrontPageData from '#data/serbian/frontpage/lat.json';
-import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import WithData from '.';
 import { render } from '../../../../components/react-testing-library-with-providers';
 
@@ -23,45 +22,41 @@ describe('withData HOC', () => {
 
   const noDataProps = {
     status: 500,
-    location: '',
+    location: {},
   };
 
   const noAssetData = {
     status: 200,
-    location: '',
+    location: {},
   };
 
   const non200StatusProps = {
     pageData: articleDataNews,
     status: 157,
-    location: '',
+    location: {},
   };
 
   const validNewsProps = {
     pageData: articleDataNews,
     status: 200,
     service: 'news',
-    location: '',
+    location: {},
   };
 
   const validPersianProps = {
     pageData: articleDataPersian,
     status: 200,
     service: 'news',
-    location: '',
+    location: {},
   };
 
   const validFrontPagesProps = {
     pageData: serbianFrontPageData,
     status: 200,
-    location: '',
+    location: {},
   };
 
   describe('with no data', () => {
-    suppressPropWarnings([
-      '`location` of type `string` supplied to `DataContainer`, expected `object`',
-    ]);
-
     it('should return the errorMain component and 500 status', () => {
       const { container } = render(<WithDataHOC {...noDataProps} />);
 
@@ -70,7 +65,6 @@ describe('withData HOC', () => {
   });
 
   describe('with missing pageData', () => {
-    suppressPropWarnings(['data.pageData', 'undefined']);
     it('should return the errorMain component', () => {
       const { container } = render(<WithDataHOC {...noAssetData} />);
       expect(container).toMatchSnapshot();
