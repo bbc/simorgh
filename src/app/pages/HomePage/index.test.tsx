@@ -6,7 +6,7 @@ import HomePage from './HomePage';
 import { suppressPropWarnings } from '../../legacy/psammead/psammead-test-helpers/src';
 
 describe('Home Page', () => {
-  suppressPropWarnings(['children', 'string']);
+  suppressPropWarnings(['children', 'string', 'MediaIcon']);
 
   it('should render a section for each curation with summaries', () => {
     const { container } = render(<HomePage pageData={kyrgyzHomePageData} />, {

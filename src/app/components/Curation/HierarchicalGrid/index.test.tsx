@@ -6,7 +6,7 @@ import mediaFixture from './mediaFixtures';
 import HierarchicalGrid from '.';
 
 describe('Hierarchical Grid Curation', () => {
-  suppressPropWarnings(['children', 'string']);
+  suppressPropWarnings(['children', 'string', 'MediaIcon']);
 
   const headingLevel = 2;
   it('renders twelve promos when twelve items are provided', async () => {

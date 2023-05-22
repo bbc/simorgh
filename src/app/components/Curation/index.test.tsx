@@ -29,7 +29,7 @@ const components = {
 };
 
 describe('Curation', () => {
-  suppressPropWarnings(['children', 'string']);
+  suppressPropWarnings(['children', 'string', 'MediaIcon']);
 
   it.each(Object.entries(components))(
     `should render a %s component`,

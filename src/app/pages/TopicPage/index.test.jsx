@@ -43,10 +43,7 @@ const getOptionParams = ({
 });
 
 describe('Topic Page', () => {
-  suppressPropWarnings(['type', 'article']);
-  suppressPropWarnings(['children', 'string']);
-  suppressPropWarnings(['position', 'undefined']);
-  suppressPropWarnings(['description', 'MetadataContainer']);
+  suppressPropWarnings(['children', 'string', 'MediaIcon']);
 
   it('should not render an unordered list when there is only one promo', () => {
     const { queryByRole } = render(
