@@ -4,7 +4,7 @@ import { withKnobs } from '@storybook/addon-knobs';
 import pathOr from 'ramda/src/pathOr';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import fixture from '#data/igbo/frontpage';
+import fixture from '#data/serbian/frontpage/lat.json';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 import BulletinContainer from '.';
 import ampDecorator from '../../../../../.storybook/helpers/ampDecorator';
