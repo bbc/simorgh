@@ -197,6 +197,7 @@ export const service: DefaultServiceConfig = {
       header: 'Most read',
       lastUpdated: 'Last updated:',
       hasMostRead: false,
+      numberOfItems: 10,
     },
     mostWatched: {
       header: 'Most watched',
