@@ -50,7 +50,6 @@ const components = {
   },
 };
 
-
 interface TestProps {
   visualStyle: VisualStyle;
   visualProminence: VisualProminence;
