@@ -1,4 +1,3 @@
-import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import React, { PropsWithChildren } from 'react';
 
 import { ToggleContextProvider } from '../../contexts/ToggleContext';
@@ -53,8 +52,6 @@ const Component = ({
 };
 
 describe('Frosted Glass Promo', () => {
-  suppressPropWarnings(['image.height', 'undefined']);
-
   it('when given props directly', () => {
     const { container } = render(
       <Component {...(promoProps as unknown as PromoProps)} />,
