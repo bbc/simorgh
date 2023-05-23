@@ -33,4 +33,6 @@ export default {
   decorators: [withKnobs, withServicesKnob()],
 };
 
-export const Example = Component;
+export const Kyrgyz = ({ variant }: StoryProps) => (
+  <Component service="kyrgyz" variant={variant} />
+);
