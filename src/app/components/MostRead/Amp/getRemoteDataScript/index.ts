@@ -3,9 +3,9 @@ import { serviceNumerals } from '../../Canonical/Rank';
 
 export const transformData = () => {
   return `
-    data.items = data.records;
+    data.items = data.records || [];
 
-    if (!data.items || (data.items && data.items.length === 0)) {
+    if (data.items.length === 0) {
       throw new Error('Empty records from mostread endpoint');
     }
 
