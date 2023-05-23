@@ -14,6 +14,7 @@ import styles from './index.styles';
 import MetadataContainer from '../../components/Metadata';
 import LinkedData from '../../components/LinkedData';
 import getItemList from '../../lib/seoUtils/getItemList';
+import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 
 interface HomePageProps {
   pageData: {
@@ -41,6 +42,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
 
   return (
     <>
+      <ChartbeatAnalytics title={title} />
       <MetadataContainer
         title={frontPageTitle}
         lang={lang}
