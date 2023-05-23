@@ -94,6 +94,19 @@ Object {
 }
 `;
 
+exports[`AMP Home Page Analytics chartbeat 1`] = `
+Object {
+  "vars": Object {
+    "contentType": "home",
+    "domain": "test.bbc.co.uk",
+    "sections": "Kyrgyz, Kyrgyz - home",
+    "title": "BBC News Кыргыз Кызматы -1",
+    "uid": 50924,
+    "virtualReferrer": "\${documentReferrer}",
+  },
+}
+`;
+
 exports[`AMP Home Page Footer Anchors should match text and url 1`] = `
 Object {
   "text": "BBC News, Кыргыз КызMATы",
