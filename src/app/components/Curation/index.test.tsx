@@ -1,4 +1,5 @@
 import React from 'react';
+import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import fixture from '../../../../data/pidgin/topics/c95y35941vrt.json';
 import mundoFixture from '../../../../data/mundo/topics/c1en6xwmpkvt.json';
 import kyrgyzHomePage from '../../../../data/kyrgyz/homePage/index.json';
@@ -12,9 +13,6 @@ import {
   VisualProminence,
   Summary,
 } from '../../models/types/curationData';
-import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
-import { render } from '../react-testing-library-with-providers';
-import Curation from '.';
 import { MostReadData } from '../MostRead/types';
 
 jest.mock('../ThemeProvider');
