@@ -54,6 +54,7 @@ const ContextWrap = ({
     <RequestContextProvider
       bbcOrigin="https://www.test.bbc.co.uk"
       id="c0000000000o"
+      isApp={false}
       isAmp={platform === 'amp'}
       pageType={pageType}
       service={service}
