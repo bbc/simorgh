@@ -26,8 +26,7 @@ const Fixture = ({ lazy, type = 'article', duration }: FixtureProps) => (
 );
 
 describe('Curation Promo', () => {
-  suppressPropWarnings(['children', 'string']);
-  suppressPropWarnings(['id', 'undefined']);
+  suppressPropWarnings(['children', 'string', 'MediaIcon']);
 
   it('should use formatted duration when a valid duration is provided', () => {
     const container = render(
