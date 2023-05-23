@@ -587,6 +587,6 @@ export const parameters = {
     ],
   },
   chromatic: {
-    delay: 500,
+    delay: 10000,
   },
 };
