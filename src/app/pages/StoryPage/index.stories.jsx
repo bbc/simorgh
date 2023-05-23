@@ -80,7 +80,6 @@ const Component = ({ pageData, service }) => (
 export default {
   Component,
   title: 'Pages/Story Page',
-  parameters: { chromatic: { disable: true } },
   decorators: [
     withKnobs,
     story => <WithTimeMachine>{story()}</WithTimeMachine>,
