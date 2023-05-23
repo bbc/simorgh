@@ -21,7 +21,7 @@ const TopStoriesSectionFixture = ({ fixtureData, service = 'mundo' }) => (
 );
 
 describe('Optimo Top Stories Promo', () => {
-  suppressPropWarnings(['service', 'undefined']);
+  suppressPropWarnings(['service', 'LiveLabel', 'undefined']);
 
   it('should return null if no data is passed', () => {
     const { container } = render(<TopStoriesSectionFixture fixtureData={[]} />);
