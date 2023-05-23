@@ -377,8 +377,9 @@ describe('CanonicalSocialEmbed', () => {
 });
 
 describe('AmpSocialEmbed', () => {
-  suppressPropWarnings(['id', 'undefined']);
-  suppressPropWarnings(['source', 'null']);
+  suppressPropWarnings(['id', 'AmpSocialEmbed', 'undefined']);
+  suppressPropWarnings(['source', 'Facebook', 'null']);
+  suppressPropWarnings(['text', 'CaptionWrapper', 'undefined']);
 
   Object.values(fixtures).forEach(fixture => {
     const { source: provider, id, embed } = fixture;
