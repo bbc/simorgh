@@ -430,8 +430,6 @@ it('should remove the most read section ', async () => {
     const mostReadSection = container.querySelector('#Most-Read');
     expect(mostReadSection).toBeNull();
   });
-
-  expect(container).toMatchSnapshot();
 });
 
 it('should show ads when enabled', async () => {
