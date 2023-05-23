@@ -3,7 +3,7 @@ import isEmpty from 'ramda/src/isEmpty';
 import {
   MetadataFormats,
   MetadataTaggings,
-} from '../../../../models/types/optimo';
+} from '../../../../models/types/metadata';
 
 export default (
   isTrustProjectParticipant: boolean,

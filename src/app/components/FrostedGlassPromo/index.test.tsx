@@ -34,6 +34,7 @@ const Component = ({
     <ServiceContextProvider service={service} variant={variant}>
       <RequestContextProvider
         isAmp={false}
+        isApp={false}
         service={service}
         pathname="/"
         pageType={STORY_PAGE}

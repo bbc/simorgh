@@ -22,8 +22,8 @@ import MostReadSectionLabel from '#containers/MostRead/label';
 import RadioScheduleContainer from '#containers/RadioSchedule';
 import IndexPageSection from '#containers/IndexPageSection';
 import idxPageDataPropTypes from '#models/propTypes/idxPage';
-import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
+import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import MetadataContainer from '../../components/Metadata';
@@ -91,7 +91,7 @@ const IdxPage = ({
   return (
     <>
       <ATIAnalytics data={pageData} />
-      <ChartbeatAnalytics data={pageData} />
+      <ChartbeatAnalytics title={title} />
       <ComscoreAnalytics />
       <MetadataContainer
         title={title}

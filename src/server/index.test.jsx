@@ -72,6 +72,7 @@ const mockRouteProps = ({
   id,
   service,
   isAmp,
+  isApp,
   dataResponse,
   responseType,
   variant,
@@ -87,6 +88,7 @@ const mockRouteProps = ({
 
   getRouteProps.mockReturnValue({
     isAmp,
+    isApp,
     service,
     variant,
     route: { getInitialData, pageType },
@@ -106,7 +108,7 @@ const makeRequest = async requestPath => request(server).get(requestPath);
 const QUERY_STRING = '?param=test&query=1';
 
 const testRenderedData =
-  ({ url, service, isAmp, successDataResponse, variant }) =>
+  ({ url, service, isAmp, isApp, successDataResponse, variant }) =>
   async () => {
     const { text, status } = await makeRequest(url);
 
@@ -134,6 +136,7 @@ const testRenderedData =
       bbcOrigin: undefined,
       data: successDataResponse,
       isAmp,
+      isApp,
       service,
       routes,
       url,
@@ -170,7 +173,12 @@ const assertNon200ResponseCustomMetrics = ({
 
 const testFrontPages = ({ platform, service, variant, queryString = '' }) => {
   const isAmp = platform === 'amp';
-  const extension = isAmp ? '.amp' : '';
+  const isApp = platform === 'app';
+  const extension =
+    {
+      amp: '.amp',
+      app: '.app',
+    }[platform] || '';
   const serviceURL = `/${service}${
     variant ? `/${variant}` : ''
   }${extension}${queryString}`;
@@ -198,6 +206,7 @@ const testFrontPages = ({ platform, service, variant, queryString = '' }) => {
           mockRouteProps({
             service,
             isAmp,
+            isApp,
             dataResponse: successDataResponse,
             variant,
           });
@@ -207,6 +216,7 @@ const testFrontPages = ({ platform, service, variant, queryString = '' }) => {
           url: serviceURL,
           service,
           isAmp,
+          isApp,
           successDataResponse,
           variant,
         };
@@ -220,6 +230,7 @@ const testFrontPages = ({ platform, service, variant, queryString = '' }) => {
           mockRouteProps({
             service,
             isAmp,
+            isApp,
             dataResponse: notFoundDataResponse,
             variant,
             pageType,
@@ -248,6 +259,7 @@ const testFrontPages = ({ platform, service, variant, queryString = '' }) => {
         mockRouteProps({
           service,
           isAmp,
+          isApp,
           dataResponse: Error('Error!'),
           responseType: 'reject',
           variant,
@@ -271,7 +283,12 @@ const testFrontPages = ({ platform, service, variant, queryString = '' }) => {
 
 const testArticles = ({ platform, service, variant, queryString = '' }) => {
   const isAmp = platform === 'amp';
-  const extension = isAmp ? '.amp' : '';
+  const isApp = platform === 'app';
+  const extension =
+    {
+      amp: '.amp',
+      app: '.app',
+    }[platform] || '';
 
   describe(`Optimo Article: /${service}/articles/optimoID/${extension}${queryString}`, () => {
     const successDataResponse = {
@@ -298,6 +315,7 @@ const testArticles = ({ platform, service, variant, queryString = '' }) => {
             id,
             service,
             isAmp,
+            isApp,
             dataResponse: successDataResponse,
             variant,
           });
@@ -307,6 +325,7 @@ const testArticles = ({ platform, service, variant, queryString = '' }) => {
           url: articleURL,
           service,
           isAmp,
+          isApp,
           successDataResponse,
           variant,
         };
@@ -322,6 +341,7 @@ const testArticles = ({ platform, service, variant, queryString = '' }) => {
             id,
             service,
             isAmp,
+            isApp,
             dataResponse: notFoundDataResponse,
             variant,
             pageType,
@@ -351,6 +371,7 @@ const testArticles = ({ platform, service, variant, queryString = '' }) => {
           id,
           service,
           isAmp,
+          isApp,
           dataResponse: Error('Error!'),
           responseType: 'reject',
           variant,
@@ -380,7 +401,12 @@ const testAssetPages = ({
   queryString = '',
 }) => {
   const isAmp = platform === 'amp';
-  const extension = isAmp ? '.amp' : '';
+  const isApp = platform === 'app';
+  const extension =
+    {
+      amp: '.amp',
+      app: '.app',
+    }[platform] || '';
 
   describe(`CPS Asset: /${service}/${assetUri}${extension}${queryString}`, () => {
     const successDataResponse = {
@@ -406,6 +432,7 @@ const testAssetPages = ({
             assetUri,
             service,
             isAmp,
+            isApp,
             dataResponse: successDataResponse,
             variant,
           });
@@ -415,6 +442,7 @@ const testAssetPages = ({
           url: articleURL,
           service,
           isAmp,
+          isApp,
           successDataResponse,
           variant,
         };
@@ -430,6 +458,7 @@ const testAssetPages = ({
             assetUri,
             service,
             isAmp,
+            isApp,
             dataResponse: notFoundDataResponse,
             variant,
             pageType,
@@ -460,6 +489,7 @@ const testAssetPages = ({
           assetUri,
           service,
           isAmp,
+          isApp,
           dataResponse: Error('Error!'),
           responseType: 'reject',
           variant,
@@ -592,6 +622,13 @@ const testTvPages = ({
 }) => {
   describe(`${platform} tv brand page`, () => {
     const isAmp = platform === 'amp';
+    const isApp = platform === 'app';
+    const extension =
+      {
+        amp: '.amp',
+        app: '.app',
+      }[platform] || '';
+
     const successDataResponse = {
       isAmp,
       data: { some: 'data' },
@@ -606,7 +643,6 @@ const testTvPages = ({
       status: 404,
     };
 
-    const extension = isAmp ? '.amp' : '';
     const mediaPageURL = `/${service}/${serviceId}/${brandEpisode}/${mediaId}${extension}${queryString}`;
 
     describe('Successful render', () => {
@@ -615,6 +651,7 @@ const testTvPages = ({
           mockRouteProps({
             service,
             isAmp,
+            isApp,
             dataResponse: successDataResponse,
           });
         });
@@ -623,6 +660,7 @@ const testTvPages = ({
           url: mediaPageURL,
           service,
           isAmp,
+          isApp,
           successDataResponse,
         };
 
@@ -637,6 +675,7 @@ const testTvPages = ({
         mockRouteProps({
           service,
           isAmp,
+          isApp,
           dataResponse: notFoundDataResponse,
           pageType,
         });
@@ -664,6 +703,7 @@ const testTvPages = ({
         mockRouteProps({
           service,
           isAmp,
+          isApp,
           dataResponse: Error('Error!'),
           responseType: 'reject',
           pageType,
@@ -694,6 +734,13 @@ const testOnDemandTvEpisodePages = ({
 }) => {
   describe(`${platform} tv episode page`, () => {
     const isAmp = platform === 'amp';
+    const isApp = platform === 'app';
+    const extension =
+      {
+        amp: '.amp',
+        app: '.app',
+      }[platform] || '';
+
     const successDataResponse = {
       isAmp,
       data: { some: 'data' },
@@ -708,7 +755,6 @@ const testOnDemandTvEpisodePages = ({
       status: 404,
     };
 
-    const extension = isAmp ? '.amp' : '';
     const mediaPageURL = `/${service}/${serviceId}/${brandEpisode}/${mediaId}${extension}${queryString}`;
 
     describe('Successful render', () => {
@@ -717,6 +763,7 @@ const testOnDemandTvEpisodePages = ({
           mockRouteProps({
             service,
             isAmp,
+            isApp,
             dataResponse: successDataResponse,
           });
         });
@@ -725,6 +772,7 @@ const testOnDemandTvEpisodePages = ({
           url: mediaPageURL,
           service,
           isAmp,
+          isApp,
           successDataResponse,
         };
 
@@ -739,6 +787,7 @@ const testOnDemandTvEpisodePages = ({
         mockRouteProps({
           service,
           isAmp,
+          isApp,
           dataResponse: notFoundDataResponse,
           pageType,
         });
@@ -766,6 +815,7 @@ const testOnDemandTvEpisodePages = ({
         mockRouteProps({
           service,
           isAmp,
+          isApp,
           dataResponse: Error('Error!'),
           responseType: 'reject',
           pageType,
@@ -968,7 +1018,7 @@ describe('Server', () => {
 
     describe('for front pages', () => {
       it('should respond with JSON', async () => {
-        const { body } = await makeRequest('/persian.json');
+        const { body } = await makeRequest('/serbian/cyr.json');
         expect(body).toEqual(
           expect.objectContaining({ content: expect.any(Object) }),
         );
@@ -1151,6 +1201,12 @@ describe('Server', () => {
     platform: 'canonical',
     service: 'zhongwen',
     variant: 'simp',
+    queryString: QUERY_STRING,
+  });
+  testArticles({ platform: 'app', service: 'yoruba' });
+  testArticles({
+    platform: 'amp',
+    service: 'yoruba',
     queryString: QUERY_STRING,
   });
 
