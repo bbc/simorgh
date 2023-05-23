@@ -9,6 +9,7 @@ import { ColumnLayout, Size, MostReadData } from './types';
 import MostReadSection from './Section';
 import MostReadSectionLabel from './Label';
 import { WHITE } from '../ThemeProvider/palette';
+import isLocal from '../../lib/utilities/isLocal';
 
 const blockLevelEventTrackingData = {
   componentName: 'most-read',
@@ -46,9 +47,13 @@ const MostRead = ({
     return null;
   }
 
+  // If not in local environment, use the BFF, otherwise use fixture data
+  const isBff = !isLocal();
+
   const endpoint = getMostReadEndpoint({
     service,
     variant,
+    isBff,
   });
 
   // We render amp on ONLY STY, CSP and ARTICLE pages using amp-list.
