@@ -14993,12 +14993,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hello@1.0.0, hello@workspace:Hello":
-  version: 0.0.0-use.local
-  resolution: "hello@workspace:Hello"
-  languageName: unknown
-  linkType: soft
-
 "helmet-csp@npm:3.4.0":
   version: 3.4.0
   resolution: "helmet-csp@npm:3.4.0"
@@ -23321,7 +23315,6 @@ __metadata:
     "@testing-library/react": ^14.0.0
     babel-plugin-transform-rename-import: 2.3.0
     cypress: ^12.12.0
-    hello: 1.0.0
     jest: ^29.5.0
     jest-environment-jsdom: ^29.5.0
     next: 12.3.4
