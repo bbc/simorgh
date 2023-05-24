@@ -55,7 +55,7 @@ const ARTICLE_CORRESPONDENT_PIECE = 'article-correspondent';
 const ARTICLE_SHORT_FORM_VIDEO = 'article-sfv';
 
 const noOp = () => {
-  return {};
+  return null;
 };
 
 const pageTypeUrlBuilders = {
