@@ -13,10 +13,14 @@ describe('Home Page', () => {
   it('should render a section for each curation with summaries', () => {
     const { container } = render(<HomePage pageData={kyrgyzHomePageData} />, {
       service: 'kyrgyz',
+      toggles: {
+        mostRead: { enabled: true },
+      },
     });
 
     const curationsWithSummaries = kyrgyzHomePageData.curations.filter(
-      ({ summaries }) => summaries && summaries?.length > 0,
+      ({ summaries, mostRead }) =>
+        (summaries && summaries?.length > 0) || mostRead,
     );
 
     expect(container).not.toBeEmptyDOMElement();

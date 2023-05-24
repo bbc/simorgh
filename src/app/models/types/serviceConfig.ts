@@ -126,7 +126,7 @@ export type PodcastPromo = {
 export interface MostRead {
   header: string;
   lastUpdated: string;
-  numberOfItems?: number;
+  numberOfItems: number;
   hasMostRead: boolean;
   onIdxPage?: boolean;
 }
