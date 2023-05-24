@@ -1,5 +1,5 @@
 import React from 'react';
-import { withKnobs, select } from '@storybook/addon-knobs';
+import { withKnobs } from '@storybook/addon-knobs';
 import ThemeProvider from '../ThemeProvider';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { Services } from '../../models/types/global';
@@ -35,12 +35,8 @@ const Component = ({ service, variant, columnLayout, size }: Props) => (
         <ServiceContextProvider service={service} variant={variant}>
           <MostReadContainer
             mostReadEndpointOverride={staticMostReadURL(service, variant)}
-            size={select('Size', ['default', 'small'], size)}
-            columnLayout={select(
-              'Column Layout',
-              ['oneColumn', 'twoColumn', 'multiColumn'],
-              columnLayout,
-            )}
+            size={size}
+            columnLayout={columnLayout}
           />
         </ServiceContextProvider>
       </RequestContextProvider>
@@ -60,15 +56,6 @@ export const HomePage2Columns = ({ service, variant }: Props) => (
     variant={variant}
     size="default"
     columnLayout="twoColumn"
-  />
-);
-
-export const ArticlePage5Columns = ({ service, variant }: Props) => (
-  <Component
-    service={service}
-    variant={variant}
-    size="default"
-    columnLayout="multiColumn"
   />
 );
 
