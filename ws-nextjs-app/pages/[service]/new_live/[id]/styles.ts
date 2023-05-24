@@ -1,5 +1,5 @@
 import { css } from '@emotion/react';
-import pixelsToRem from '../../../../../src/app/utilities/pixelsToRem';
+import pixelsToRem from 'simorgh/src/app/utilities/pixelsToRem';
 
 export default {
   wrapper: () =>

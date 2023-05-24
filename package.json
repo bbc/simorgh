@@ -14,6 +14,11 @@
     "winston@3.8.2": "patch:winston@npm:3.8.2#.yarn/patches/winston-npm-3.8.2-2035e9cac4.patch",
     "stylelint-config-recommended": "5.0.0"
   },
+  "workspaces": {
+    "packages": [
+      "ws-nextjs-app"
+    ]
+  },
   "scripts": {
     "type-check": "tsc",
     "amp:validate": "wait-on -t 20000 http://localhost:7080/status && node ./scripts/ampHtmlValidator/cli.js",
