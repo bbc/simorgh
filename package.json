@@ -17,6 +17,9 @@
   "workspaces": {
     "packages": [
       "ws-nextjs-app"
+    ],
+    "nohoist": [
+      "jest/**"
     ]
   },
   "scripts": {
