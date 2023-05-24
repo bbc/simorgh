@@ -9,6 +9,8 @@ import {
   PHOTO_GALLERY_PAGE,
   MEDIA_ARTICLE_PAGE,
   HOME_PAGE,
+  ERROR_PAGE,
+  LIVE_PAGE,
 } from '../../../routes/utils/pageTypes';
 import { buildATIUrl, buildATIEventTrackingParams } from '.';
 import { RequestContextProps } from '../../../contexts/RequestContext';
@@ -208,15 +210,6 @@ describe('ATIAnalytics params', () => {
       );
     });
 
-    it('should return the correct homePage url', () => {
-      const url = buildATIUrl(
-        frontPage,
-        { ...requestContext, pageType: HOME_PAGE },
-        serviceContext,
-      );
-      expect(url).toMatchInlineSnapshot(`null`);
-    });
-
     it('should return the correct IDX page url', () => {
       const url = buildATIUrl(
         idxPage,
@@ -295,6 +288,18 @@ describe('ATIAnalytics params', () => {
       expect(params).not.toContain('x6=');
       expect(params).not.toContain('ref=');
     });
+
+    it.each([HOME_PAGE, ERROR_PAGE, LIVE_PAGE])(
+      'should return null because %s page type is not supported',
+      pageType => {
+        const url = buildATIUrl(
+          {},
+          { ...requestContext, pageType },
+          serviceContext,
+        );
+        expect(url).toBeNull();
+      },
+    );
   });
 
   describe('buildATIEventTrackingParams', () => {
