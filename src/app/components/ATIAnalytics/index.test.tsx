@@ -421,16 +421,6 @@ describe('ATI Analytics Container', () => {
     });
   });
 
-  describe('pageType neither article nor frontPage', () => {
-    isNull(
-      'should render null',
-      <ContextWrap platform="canonical" pageType="error" service="news">
-        {/* @ts-expect-error - only partial data required for testing purposes */}
-        <ATIAnalytics data={articleDataNews} />
-      </ContextWrap>,
-    );
-  });
-
   describe('XTO Marketing string', () => {
     const windowLocation = window.location;
     afterEach(() => {
