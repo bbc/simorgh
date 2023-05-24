@@ -388,29 +388,6 @@ describe('ATIAnalytics params', () => {
       });
     });
 
-    it('should return the correct homePage params', () => {
-      const params = buildATIEventTrackingParams(
-        frontPage,
-        { ...requestContext, pageType: HOME_PAGE },
-        serviceContext,
-      );
-      expect(params).toEqual({
-        appName: 'atiAnalyticsAppName',
-        contentId: 'urn:bbc:cps:00000000-0000-0000-0000-000000000000',
-        contentType: 'index-home',
-        language: 'language',
-        pageIdentifier: 'service.page',
-        pageTitle: 'title - brandName',
-        libraryVersion: 'simorgh',
-        platform: 'canonical',
-        producerId: 'atiAnalyticsProducerId',
-        service: 'pidgin',
-        statsDestination: 'statsDestination',
-        timePublished: '1970-01-01T00:00:00.000Z',
-        timeUpdated: '1970-01-01T00:00:00.000Z',
-      });
-    });
-
     it('should return the correct IDX page params', () => {
       const params = buildATIEventTrackingParams(
         idxPage,
@@ -509,6 +486,19 @@ describe('ATIAnalytics params', () => {
         timeUpdated: '1970-01-01T00:00:00.000Z',
       });
     });
+
+    it.each([ERROR_PAGE, HOME_PAGE, LIVE_PAGE])(
+      'should return null because %s page type is not supported',
+      pageType => {
+        const params = buildATIEventTrackingParams(
+          {},
+          { ...requestContext, pageType },
+          serviceContext,
+        );
+
+        expect(params).toBeNull();
+      },
+    );
 
     it('should not throw exception and return empty object if no pageData is passed in', () => {
       const { error } = console;
