@@ -10,7 +10,6 @@ import styUkrainianInRussianAssetData from '#data/ukrainian/cpsAssets/features-r
 import { RequestContextProvider } from '#contexts/RequestContext';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import {
-  isNull,
   setWindowValue,
   resetWindowValue,
 } from '#psammead/psammead-test-helpers/src';
