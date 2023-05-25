@@ -290,14 +290,14 @@ describe('ATIAnalytics params', () => {
     });
 
     it.each([HOME_PAGE, ERROR_PAGE, LIVE_PAGE])(
-      'should return null because %s page type is not supported',
+      'should return empty object {} because %s page type is not supported',
       pageType => {
         const url = buildATIUrl(
           {},
           { ...requestContext, pageType },
           serviceContext,
         );
-        expect(url).toBeNull();
+        expect(url).toBe({});
       },
     );
   });
@@ -488,7 +488,7 @@ describe('ATIAnalytics params', () => {
     });
 
     it.each([ERROR_PAGE, HOME_PAGE, LIVE_PAGE])(
-      'should return null because %s page type is not supported',
+      'should return empty object {} because %s page type is not supported',
       pageType => {
         const params = buildATIEventTrackingParams(
           {},
@@ -496,7 +496,7 @@ describe('ATIAnalytics params', () => {
           serviceContext,
         );
 
-        expect(params).toBeNull();
+        expect(params).toBe({});
       },
     );
 
