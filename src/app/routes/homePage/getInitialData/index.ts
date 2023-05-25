@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { Agent } from 'https';
 import getEnvironment from '#app/routes/utils/getEnvironment';
 import nodeLogger from '../../../lib/logger.node';
@@ -38,7 +36,7 @@ export default async ({
 
     const optHeaders = { 'ctx-service-env': env };
 
-    // @ts-ignore - Ignore fetchPageData argument types
+    // @ts-expect-error - Ignore fetchPageData argument types
     const { status, json } = await fetchPageData({
       path: fetchUrl.toString(),
       ...(!isLocal && { agent, optHeaders }),

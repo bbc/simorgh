@@ -3,7 +3,6 @@ import '#psammead/psammead-locales/moment/en-gb';
 import '#psammead/moment-timezone-include/tz/Europe/London';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
-// import { number } from '@storybook/addon-knobs';
 
 export const service: DefaultServiceConfig = {
   default: {
