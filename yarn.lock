@@ -6169,7 +6169,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"acorn-import-assertions@npm:^1.7.6":
+"acorn-import-assertions@npm:^1.7.6, acorn-import-assertions@npm:^1.9.0":
   version: 1.9.0
   resolution: "acorn-import-assertions@npm:1.9.0"
   peerDependencies:
@@ -10039,9 +10039,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.4.284":
-  version: 1.4.405
-  resolution: "electron-to-chromium@npm:1.4.405"
-  checksum: d1cf421eaf63dbd5481bcc4296a94e5db5cf831bdc5cbdad283b4b0d53d8fd87254b64fa6cda88f1cb4789eab012f078c1eed4cbb01c5a34bd0ce657dcfe08c8
+  version: 1.4.407
+  resolution: "electron-to-chromium@npm:1.4.407"
+  checksum: 44619c189c082953c0d12454c38aaf9c2e0226bbe4bcc2b6aef70fb5f655fd9e4e9630e2fedb256ec972327225f610ef5ddcc299c4f7f436a45ed48d1b8367f9
   languageName: node
   linkType: hard
 
@@ -10167,7 +10167,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"enhanced-resolve@npm:^5.0.0, enhanced-resolve@npm:^5.14.0":
+"enhanced-resolve@npm:^5.0.0, enhanced-resolve@npm:^5.14.0, enhanced-resolve@npm:^5.14.1":
   version: 5.14.1
   resolution: "enhanced-resolve@npm:5.14.1"
   dependencies:
@@ -23401,8 +23401,8 @@ __metadata:
   linkType: hard
 
 "webpack@npm:>=4.43.0 <6.0.0, webpack@npm:^5.9.0":
-  version: 5.83.1
-  resolution: "webpack@npm:5.83.1"
+  version: 5.84.0
+  resolution: "webpack@npm:5.84.0"
   dependencies:
     "@types/eslint-scope": ^3.7.3
     "@types/estree": ^1.0.0
@@ -23410,10 +23410,10 @@ __metadata:
     "@webassemblyjs/wasm-edit": ^1.11.5
     "@webassemblyjs/wasm-parser": ^1.11.5
     acorn: ^8.7.1
-    acorn-import-assertions: ^1.7.6
+    acorn-import-assertions: ^1.9.0
     browserslist: ^4.14.5
     chrome-trace-event: ^1.0.2
-    enhanced-resolve: ^5.14.0
+    enhanced-resolve: ^5.14.1
     es-module-lexer: ^1.2.1
     eslint-scope: 5.1.1
     events: ^3.2.0
@@ -23433,7 +23433,7 @@ __metadata:
       optional: true
   bin:
     webpack: bin/webpack.js
-  checksum: 219d5ef50380bc0fd3702ed17feddf13819d8173b78f7a5b857dc74ac177e63d1f79c050792754411cc088bbc02e0971b989efddadbb8e393cf27d64c0ad9ff8
+  checksum: 5837983d81d55edf621317f23de3a7ae49bbf24c9f8605beeba35ea62be5cc4b3b63ace0ec9785912b9ffe70fd969e613597fae21b2334a3913054c41189ef75
   languageName: node
   linkType: hard
 
