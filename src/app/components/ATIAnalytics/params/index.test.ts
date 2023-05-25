@@ -297,7 +297,7 @@ describe('ATIAnalytics params', () => {
           { ...requestContext, pageType },
           serviceContext,
         );
-        expect(url).toBe({});
+        expect(url).toStrictEqual({});
       },
     );
   });
@@ -496,7 +496,7 @@ describe('ATIAnalytics params', () => {
           serviceContext,
         );
 
-        expect(params).toBe({});
+        expect(params).toStrictEqual({});
       },
     );
 
