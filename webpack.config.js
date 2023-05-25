@@ -46,6 +46,8 @@ const getBaseConfig = BUNDLE_TYPE => ({
       }),
       'safe-buffer': path.resolve(__dirname, 'node_modules/safe-buffer'),
     },
+
+    modules: ['node_modules'],
   },
   devServer: {
     devMiddleware: {
