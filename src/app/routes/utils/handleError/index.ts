@@ -1,9 +1,7 @@
-interface BFFError extends Error {
-  status: number;
-}
+import { FetchError } from '../../../models/types/fetch';
 
 const handleError = (message: string, status: number) => {
-  const error = new Error(message) as BFFError;
+  const error = new Error(message) as FetchError;
   error.status = status;
 
   return error;
