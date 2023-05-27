@@ -9,20 +9,19 @@ const ColorCard = ({ colorName, colorCode }) => {
         size="bodyCopy"
         fontVariant="sansRegular"
         role="text"
-        css={[
-          styles.color,
-          {
-            '::before': {
-              background: `${colorCode}`,
-            },
-          },
-        ]}
+        css={[styles.color(colorCode)]}
       >
-        <Text size="bodyCopy" fontVariant="sansRegular" as="strong">
-          {colorName}
+        <Text
+          size="bodyCopy"
+          fontVariant="sansRegular"
+          as="strong"
+          css={[styles.text]}
+        >
+          {colorName.toLowerCase()}
         </Text>
-        <br />
-        {colorCode}
+        <Text size="bodyCopy" fontVariant="sansRegular" css={[styles.text]}>
+          {colorCode}
+        </Text>
       </Text>
     </div>
   );

@@ -3,7 +3,6 @@
 import React, { useEffect } from 'react';
 import { Global } from '@emotion/react';
 import { addDecorator } from '@storybook/react';
-import { create } from '@storybook/theming';
 import isChromatic from 'chromatic';
 import { forceVisible } from 'react-lazyload';
 import GlobalStyles from '../src/app/legacy/psammead/psammead-styles/src/global-styles';
@@ -14,7 +13,6 @@ import { ToggleContextProvider } from '../src/app/contexts/ToggleContext';
 import { UserContextProvider } from '../src/app/contexts/UserContext';
 import { EventTrackingContextProvider } from '../src/app/contexts/EventTrackingContext';
 import pageDataFixture from '../data/news/articles/c0g992jmmkko.json';
-import { light } from './theme';
 
 const REITH_SERIF_REGULAR = {
   '@font-face': {
@@ -565,7 +563,6 @@ export const parameters = {
   options: {
     panelPosition: 'right',
     sidebarAnimcations: true,
-    theme: light,
   },
   docs: {
     container: ({ context, children }) => DocsDecorator({ context, children }),
