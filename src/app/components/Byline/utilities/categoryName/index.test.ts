@@ -8,9 +8,9 @@ import {
 describe('categoryName', () => {
   it('should return NewsArticle when a service is not a Trust Project participant', () => {
     const schemaDotOrgType = categoryName(
+      false,
       passportTaggings,
       passportPredicatesFormats,
-      false,
     );
 
     expect(schemaDotOrgType).toEqual('NewsArticle');
@@ -22,36 +22,32 @@ describe('categoryName', () => {
     taggingsWithoutCreativeFormat.shift();
 
     const schemaDotOrgType = categoryName(
+      true,
       taggingsWithoutCreativeFormat,
       passportPredicatesFormats,
-      true,
     );
 
     expect(schemaDotOrgType).toEqual('NewsArticle');
   });
 
   it('should return NewsArticle when there is more than one passport predicates formats', () => {
-    const schemaDotOrgType = categoryName(
-      passportTaggings,
-      [
-        {
-          value:
-            'http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id',
-          thingLabel: 'News report',
-          thingUri:
-            'http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id',
-          thingId: '46c0517d-9927-4d1a-9954-8c63a3f7a888',
-          thingType: ['tagging:TagConcept', 'tagging:Format'],
-          thingSameAs: [],
-          thingEnglishLabel: 'Report',
-          thingPreferredLabel: 'Report',
-          thingLabelLanguage: 'es',
-          type: 'formats',
-        },
-        ...passportPredicatesFormats,
-      ],
-      true,
-    );
+    const schemaDotOrgType = categoryName(true, passportTaggings, [
+      {
+        value:
+          'http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id',
+        thingLabel: 'News report',
+        thingUri:
+          'http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id',
+        thingId: '46c0517d-9927-4d1a-9954-8c63a3f7a888',
+        thingType: ['tagging:TagConcept', 'tagging:Format'],
+        thingSameAs: [],
+        thingEnglishLabel: 'Report',
+        thingPreferredLabel: 'Report',
+        thingLabelLanguage: 'es',
+        type: 'formats',
+      },
+      ...passportPredicatesFormats,
+    ]);
 
     expect(schemaDotOrgType).toEqual('NewsArticle');
   });
@@ -60,9 +56,9 @@ describe('categoryName', () => {
     'should return NewsArticle when taggings are not present',
     taggings => {
       const schemaDotOrgType = categoryName(
+        true,
         taggings,
         passportPredicatesFormats,
-        true,
       );
 
       expect(schemaDotOrgType).toEqual('NewsArticle');
@@ -73,9 +69,9 @@ describe('categoryName', () => {
     'should return NewsArticle when predicates formats are not present',
     predicatesFormats => {
       const schemaDotOrgType = categoryName(
+        true,
         passportTaggings,
         predicatesFormats,
-        true,
       );
 
       expect(schemaDotOrgType).toEqual('NewsArticle');
@@ -136,7 +132,7 @@ describe('categoryName', () => {
         },
       ];
 
-      const schemaDotOrgType = categoryName(testTaggings, testFormats, true);
+      const schemaDotOrgType = categoryName(true, testTaggings, testFormats);
 
       expect(schemaDotOrgType).toEqual(expectedSchemaDotOrgType);
     },

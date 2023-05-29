@@ -19,8 +19,8 @@ import Grid, { GelPageGrid } from '#components/Grid';
 import IndexPageContainer from '#components/PageLayout/IndexPageContainer';
 import IndexHeading from '#containers/IndexHeading';
 import MostWatchedContainer from '#containers/MostWatched';
-import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import ATIAnalytics from '#containers/ATIAnalytics';
+import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import MetadataContainer from '../../components/Metadata';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import LinkedData from '../../components/LinkedData';
@@ -103,7 +103,7 @@ const MostWatchedPage = ({ pageData }) => {
       />
       <ATIAnalytics data={pageData} />
       <LinkedData type="WebPage" seoTitle={header} />
-      <ChartbeatAnalytics data={pageData} />
+      <ChartbeatAnalytics title={header} />
       <main role="main" data-e2e="most-watched">
         <StyledIndexPageContainer>
           <MostWatchedWrapper>

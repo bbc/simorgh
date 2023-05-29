@@ -21,7 +21,6 @@ import Image from '#containers/Image';
 import Blocks from '#containers/Blocks';
 import Timestamp from '#containers/ArticleTimestamp';
 import ATIAnalytics from '#containers/ATIAnalytics';
-import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import articleMediaPlayer from '#containers/ArticleMediaPlayer';
 import MostReadContainer from '#containers/MostRead';
@@ -47,7 +46,9 @@ import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 import ScrollablePromo from '#components/ScrollablePromo';
 import CpsRecommendations from '#containers/CpsRecommendations';
+import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import LinkedData from '../../components/LinkedData';
+import Uploader from '../../components/Uploader';
 import Byline from '../../components/Byline';
 import {
   bylineExtractor,
@@ -55,14 +56,15 @@ import {
   getAuthorTwitterHandle,
 } from '../../components/Byline/utilities';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import RelatedContentSection from './PagePromoSections/RelatedContentSection';
+import RelatedContentSection from '../../components/RelatedContentSection';
 
 import SecondaryColumn from './SecondaryColumn';
 
 import styles from './ArticlePage.styles';
+import { getPromoHeadline } from '../../lib/analyticsUtils/article';
 
 const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
-  const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
+  const { isAmp, isApp, showAdsBasedOnLocation } = useContext(RequestContext);
   const { articleAuthor, isTrustProjectParticipant, showRelatedTopics } =
     useContext(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
@@ -107,6 +109,10 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   );
   const recommendationsData = pathOr([], ['recommendations'], pageData);
 
+  const embedBlock = blocks.find(block => block.type === 'embed');
+  const embedProviderName = path(['model', 'provider'], embedBlock);
+  const isUgcUploader = embedProviderName === 'ugc-uploader';
+
   const componentsToRender = {
     visuallyHiddenHeadline,
     headline: headings,
@@ -134,6 +140,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
     timestamp: props =>
       hasByline ? null : <Timestamp {...props} popOut={false} />,
     social: SocialEmbedContainer,
+    embed: props => (isUgcUploader ? <Uploader {...props} /> : null),
     group: gist,
     links: props => <ScrollablePromo {...props} />,
     mpu: props =>
@@ -183,7 +190,10 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   return (
     <div css={styles.pageWrapper}>
       <ATIAnalytics data={pageData} />
-      <ChartbeatAnalytics data={pageData} />
+      <ChartbeatAnalytics
+        sectionName={pageData?.relatedContent?.section?.name}
+        title={getPromoHeadline(pageData)}
+      />
       <ComscoreAnalytics />
       <NielsenAnalytics />
       <ArticleMetadata
@@ -204,7 +214,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
       <LinkedData
         showAuthor
         bylineLinkedData={bylineLinkedData}
-        type={categoryName(taggings, formats, isTrustProjectParticipant)}
+        type={categoryName(isTrustProjectParticipant, taggings, formats)}
         seoTitle={headline}
         headline={headline}
         datePublished={firstPublished}
@@ -235,12 +245,14 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
           )}
           <RelatedContentSection content={blocks} />
         </div>
-        <SecondaryColumn pageData={pageData} />
+        {!isApp && <SecondaryColumn pageData={pageData} />}
       </div>
-      <MostReadContainer
-        mostReadEndpointOverride={mostReadEndpointOverride}
-        wrapper={MostReadWrapper}
-      />
+      {!isApp && (
+        <MostReadContainer
+          mostReadEndpointOverride={mostReadEndpointOverride}
+          wrapper={MostReadWrapper}
+        />
+      )}
     </div>
   );
 };

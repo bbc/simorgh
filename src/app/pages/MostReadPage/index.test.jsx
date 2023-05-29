@@ -14,7 +14,7 @@ fetch.mockResponse(JSON.stringify(pidginMostReadData));
 
 analyticsUtils.getAtUserId = jest.fn();
 
-jest.mock('../../legacy/containers/ChartbeatAnalytics', () => {
+jest.mock('../../components/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
 });

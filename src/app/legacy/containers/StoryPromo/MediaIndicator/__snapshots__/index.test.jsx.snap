@@ -434,7 +434,7 @@ exports[`Story Promo Media Indicator should render video indicator correctly whe
 .emotion-0 {
   color: #222222;
   background-color: #FFFFFF;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.75rem;

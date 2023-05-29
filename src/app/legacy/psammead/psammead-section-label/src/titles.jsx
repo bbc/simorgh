@@ -74,7 +74,9 @@ const titleMargins = `
 const Title = styled.span`
   ${({ script }) => script && getDoublePica(script)};
   ${({ service }) => getSansBold(service)}
-  background-color: ${props => props.backgroundColor};
+  background-color: ${({ backgroundColor, theme }) =>
+    theme.isDarkUi ? theme.palette.GREY_10 : backgroundColor};
+  color: ${({ theme }) => theme.isDarkUi && theme.palette.GREY_2};
   ${titleMargins};
   ${paddingDir}: ${GEL_SPACING};
 

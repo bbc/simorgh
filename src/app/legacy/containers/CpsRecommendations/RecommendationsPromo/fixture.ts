@@ -1,4 +1,9 @@
-export const cpsRecommendation = {
+import {
+  CpsRecommendation,
+  OptimoRecommendation,
+} from '../../../../models/types/onwardJourney';
+
+export const cpsRecommendation: CpsRecommendation = {
   headlines: {
     shortHeadline: 'Meet boys who dey convert cassava to electricity',
     headline: 'Meet boys who dey convert cassava to electricity',
@@ -28,7 +33,7 @@ export const cpsRecommendation = {
   type: 'cps',
 };
 
-export const optimoRecommendation = {
+export const optimoRecommendation: OptimoRecommendation = {
   locators: {
     optimoUrn: 'urn:bbc:optimo:asset:crg7rvwrxdlo',
     canonicalUrl: 'https://www.bbc.com/turkce/articles/crg7rvwrxdlo',

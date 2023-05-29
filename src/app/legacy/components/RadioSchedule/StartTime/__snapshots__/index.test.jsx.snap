@@ -32,7 +32,6 @@ exports[`StartTime should render LTR correctly 1`] = `
 
 @media screen and (forced-colors: active) {
   .emotion-2>svg {
-    padding-right: 0.25rem;
     fill: canvasText;
   }
 }
@@ -188,7 +187,6 @@ exports[`StartTime should render RTL correctly 1`] = `
 
 @media screen and (forced-colors: active) {
   .emotion-2>svg {
-    padding-left: 0.25rem;
     fill: canvasText;
   }
 }
@@ -221,7 +219,7 @@ exports[`StartTime should render RTL correctly 1`] = `
   color: #5A5A5A;
   font-size: 0.75rem;
   line-height: 1.125rem;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -253,7 +251,7 @@ exports[`StartTime should render RTL correctly 1`] = `
   line-height: 1.25rem;
   color: #545658;
   display: block;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
 }

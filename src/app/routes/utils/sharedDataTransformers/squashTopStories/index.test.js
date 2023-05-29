@@ -1,5 +1,5 @@
-import fixtureDataFormatOne from '#data/thai/frontpage/index.json';
-import fixtureDataFormatTwo from '#data/igbo/frontpage/index.json';
+import fixtureDataFormatOne from '#data/serbian/frontpage/lat.json';
+import fixtureDataFormatTwo from '#data/urdu/frontpage/index.json';
 import applySquashTopstories from '.';
 
 describe('Topstories rules', () => {

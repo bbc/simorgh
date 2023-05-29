@@ -42,14 +42,14 @@ exports[`Headline component should render correctly 1`] = `
 </div>
 `;
 
-exports[`Headline component should render correctly in dark mode 1`] = `
+exports[`Headline component should render correctly on page types that support a dark ui 1`] = `
 .emotion-0 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-style: normal;
-  color: #F2F2F2;
+  color: #F6F6F6;
   display: block;
   margin: 0;
   padding: 2rem 0;
@@ -88,7 +88,7 @@ exports[`Headline component should render correctly with arabic script typograph
 .emotion-0 {
   font-size: 1.5rem;
   line-height: 2rem;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
   color: #141414;
@@ -168,14 +168,14 @@ exports[`SubHeading component should render correctly 1`] = `
 </div>
 `;
 
-exports[`SubHeading component should render correctly in dark mode 1`] = `
+exports[`SubHeading component should render correctly on page types that support a dark ui 1`] = `
 .emotion-0 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  color: #F2F2F2;
+  color: #F6F6F6;
   margin: 0;
   padding: 1.5rem 0;
 }

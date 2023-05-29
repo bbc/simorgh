@@ -1,7 +1,12 @@
-import React from 'react';
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
 import styles from './index.styles';
 
-export const Confirm = ({ className }: { className?: string }) => (
+interface SVGProps {
+  className?: string;
+}
+
+export const Confirm = ({ className }: SVGProps) => (
   <svg
     data-testid="confirm"
     viewBox="0 0 32 32"
@@ -16,7 +21,7 @@ export const Confirm = ({ className }: { className?: string }) => (
   </svg>
 );
 
-export const Close = ({ className }: { className?: string }) => (
+export const Close = ({ className }: SVGProps) => (
   <svg
     data-testid="close"
     viewBox="0 0 32 32"
@@ -31,7 +36,7 @@ export const Close = ({ className }: { className?: string }) => (
   </svg>
 );
 
-export const ExternalLink = ({ className }: { className?: string }) => (
+export const ExternalLink = ({ className }: SVGProps) => (
   <svg
     data-testid="external-link"
     viewBox="0 0 32 32"
@@ -46,7 +51,7 @@ export const ExternalLink = ({ className }: { className?: string }) => (
   </svg>
 );
 
-export const Help = ({ className }: { className?: string }) => (
+export const Help = ({ className }: SVGProps) => (
   <svg
     data-testid="help"
     viewBox="0 0 32 32"
@@ -61,7 +66,7 @@ export const Help = ({ className }: { className?: string }) => (
   </svg>
 );
 
-export const Warning = ({ className }: { className?: string }) => (
+export const Warning = ({ className }: SVGProps) => (
   <svg
     data-testid="warning"
     viewBox="0 0 32 32"
@@ -82,7 +87,7 @@ export const Warning = ({ className }: { className?: string }) => (
   </svg>
 );
 
-export const Recommend = ({ className }: { className?: string }) => (
+export const Recommend = ({ className }: SVGProps) => (
   <svg
     data-testid="recommend"
     viewBox="0 0 32 32"
@@ -103,7 +108,7 @@ export const Recommend = ({ className }: { className?: string }) => (
   </svg>
 );
 
-export const Activity = ({ className }: { className?: string }) => (
+export const Activity = ({ className }: SVGProps) => (
   <svg
     data-testid="activity"
     viewBox="0 0 32 32"

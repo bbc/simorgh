@@ -48,10 +48,8 @@ const StyledAnchor = styled.a`
   }
   &:visited {
     [class*='--visited'] {
-      color: ${({ darkMode }) =>
-        darkMode
-          ? props => props.theme.palette.STONE
-          : props => props.theme.palette.METAL};
+      color: ${({ theme }) =>
+        theme.isDarkUi ? theme.palette.STONE : theme.palette.METAL};
     }
   }
 `;

@@ -1,10 +1,13 @@
 import path from 'ramda/src/path';
 import hasPath from 'ramda/src/hasPath';
-import { RecommendationsPromo } from '../../../../../models/types/recommendations';
 import getOriginCode from '../../../../../lib/utilities/imageSrcHelpers/originCode';
 import getLocator from '../../../../../lib/utilities/imageSrcHelpers/locator';
+import {
+  OptimoRecommendation,
+  Recommendation,
+} from '../../../../../models/types/onwardJourney';
 
-const extractPromoData = ({ promo }: { promo: RecommendationsPromo }) => {
+const extractPromoData = ({ promo }: { promo: Recommendation | null }) => {
   if (!promo) return null;
 
   if (hasPath(['indexImage'], promo)) {
@@ -25,7 +28,7 @@ const extractPromoData = ({ promo }: { promo: RecommendationsPromo }) => {
   }
 
   const optimoImageBlocks = path<
-    RecommendationsPromo['images']['defaultPromoImage']['blocks']
+    OptimoRecommendation['images']['defaultPromoImage']['blocks']
   >(['images', 'defaultPromoImage', 'blocks'], promo);
 
   const optimoImage = optimoImageBlocks?.find(

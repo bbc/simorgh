@@ -1,5 +1,9 @@
+import isLive from '#app/lib/utilities/isLive';
+
 const idRegex = 'c[a-zA-Z0-9]{10}o';
 const ampRegex = '.amp';
+const appRegex = '.app';
+const nonCanonicalArticleRenderPlatform = `${ampRegex}|${appRegex}`;
 const assetUriRegex = '[a-z0-9-_]{0,}[0-9]{8,}';
 const legacyAssetUriRegex = '[a-z0-9-_]{1,}/[a-z0-9-_/]{1,}';
 const variantRegex = '/simp|/trad|/cyr|/lat';
@@ -17,7 +21,7 @@ const getServiceRegex = services => services.join('|');
 
 export const getArticleRegex = services => {
   const serviceRegex = getServiceRegex(services);
-  return `/:service(${serviceRegex})?:discipline(${sportDisciplineRegex})?/:local(${articleLocalRegex})/:id(${idRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
+  return `/:service(${serviceRegex})?:discipline(${sportDisciplineRegex})?/:local(${articleLocalRegex})/:id(${idRegex}):variant(${variantRegex})?:nonCanonicalArticleRenderPlatform(${nonCanonicalArticleRenderPlatform})?`;
 };
 
 export const getArticleSwRegex = services => {
@@ -30,14 +34,70 @@ export const getArticleManifestRegex = services => {
   return `/:service(${serviceRegex})/:local(${articleLocalRegex})/manifest.json`;
 };
 
+const frontPageServicesToMigrate = [
+  'afaanoromoo',
+  'afrique',
+  'amharic',
+  'arabic',
+  'azeri',
+  'bengali',
+  'burmese',
+  'gahuza',
+  'gujarati',
+  'hausa',
+  'hindi',
+  'igbo',
+  'indonesia',
+  'japanese',
+  'korean',
+  'kyrgyz',
+  'marathi',
+  'mundo',
+  'nepali',
+  'pashto',
+  'persian',
+  'pidgin',
+  'portuguese',
+  'punjabi',
+  'russian',
+  'sinhala',
+  'somali',
+  'swahili',
+  'tamil',
+  'telugu',
+  'thai',
+  'tigrinya',
+  'turkce',
+  'ukrainian',
+  'urdu',
+  'uzbek',
+  'vietnamese',
+  'yoruba',
+];
+
 export const getFrontPageRegex = services => {
-  const serviceRegex = getServiceRegex(services);
+  // if environment is not live then filter out and remove kyrgyz from list of services
+  let frontPageServices = services;
+  if (!isLive()) {
+    frontPageServices = services.filter(
+      service => !frontPageServicesToMigrate.includes(service),
+    );
+  }
+  const serviceRegex = getServiceRegex(frontPageServices);
   return `/:service(${serviceRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
 };
 
-export const getHomePageRegex = services => {
+export const getTipoHomeRegex = services => {
   const serviceRegex = getServiceRegex(services);
   return `/:service(${serviceRegex}):variant(${variantRegex})?/tipohome:amp(${ampRegex})?`;
+};
+
+// eslint-disable-next-line consistent-return
+export const getHomePageRegex = () => {
+  if (!isLive()) {
+    const homePageServiceRegex = getServiceRegex(frontPageServicesToMigrate);
+    return `/:service(${homePageServiceRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
+  }
 };
 
 export const getSwRegex = services => {
@@ -48,16 +108,6 @@ export const getSwRegex = services => {
 export const getManifestRegex = services => {
   const serviceRegex = getServiceRegex(services);
   return `/:service(${serviceRegex})/manifest.json`;
-};
-
-export const getHomePageSwRegex = services => {
-  const serviceRegex = getServiceRegex(services);
-  return `/:service(${serviceRegex})/tipohome/sw.js`;
-};
-
-export const getHomePageManifestRegex = services => {
-  const serviceRegex = getServiceRegex(services);
-  return `/:service(${serviceRegex})/tipohome/manifest.json`;
 };
 
 export const getCpsAssetRegex = services => {

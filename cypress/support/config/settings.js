@@ -51,7 +51,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/afaanoromoo'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -276,11 +276,11 @@ module.exports = () => ({
           },
           test: {
             paths: ['/afrique'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/afrique'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -536,7 +536,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/amharic'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -760,11 +760,11 @@ module.exports = () => ({
           },
           test: {
             paths: ['/arabic'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/arabic'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: true,
@@ -1020,7 +1020,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/azeri'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -1214,7 +1214,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/bengali'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -1446,7 +1446,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/burmese'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -1786,7 +1786,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/gahuza'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -2026,7 +2026,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/gujarati'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -2242,7 +2242,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/hausa'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -2501,11 +2501,11 @@ module.exports = () => ({
           },
           test: {
             paths: ['/hindi'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/hindi'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -2770,7 +2770,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/igbo'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -2959,7 +2959,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/indonesia'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -3201,7 +3201,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/japanese'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -3390,7 +3390,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/korean'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -3609,23 +3609,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/kyrgyz'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/kyrgyz'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/kyrgyz'],
-            enabled: true,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: {
         environments: {
           live: {
@@ -3893,7 +3877,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/marathi'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -4122,11 +4106,11 @@ module.exports = () => ({
           },
           test: {
             paths: ['/mundo'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/mundo'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -4417,7 +4401,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/nepali'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -4814,7 +4798,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/pashto'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -5067,7 +5051,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: [
-              '/persian/articles/c7eel0lmr4do',
+              '/persian/articles/crgxnrdl1xvo',
               '/persian/articles/cld9872jgyjo',
             ],
             enabled: true,
@@ -5108,11 +5092,11 @@ module.exports = () => ({
           },
           test: {
             paths: ['/persian'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/persian'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: true,
@@ -5473,7 +5457,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/pidgin'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -5676,11 +5660,11 @@ module.exports = () => ({
           },
           test: {
             paths: ['/portuguese'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/portuguese'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -5898,7 +5882,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/punjabi'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -6083,11 +6067,11 @@ module.exports = () => ({
           },
           test: {
             paths: ['/russian'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/russian'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: true,
@@ -6753,7 +6737,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/sinhala'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -6945,7 +6929,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/somali'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -7268,7 +7252,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/swahili'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -7524,7 +7508,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/tamil'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -7780,7 +7764,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/telugu'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -7993,7 +7977,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/thai'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: true,
@@ -8197,11 +8181,11 @@ module.exports = () => ({
           },
           test: {
             paths: ['/tigrinya'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/tigrinya'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -8428,7 +8412,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/turkce'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -8962,7 +8946,7 @@ module.exports = () => ({
     name: 'ukrainian',
     font: undefined,
     isWorldService: true,
-    variant: 'ru-UA',
+    variant: 'default',
     pageTypes: {
       idxPage: {
         environments: {
@@ -9083,7 +9067,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/ukrainian'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -9307,7 +9291,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/urdu'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -9563,7 +9547,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/uzbek'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -9823,7 +9807,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/vietnamese'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -10017,7 +10001,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/yoruba'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
