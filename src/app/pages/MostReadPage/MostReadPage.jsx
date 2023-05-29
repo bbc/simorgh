@@ -15,11 +15,11 @@ import {
 import MostReadContainer from '#containers/MostRead';
 import mostReadShape from '#containers/MostRead/utilities/mostReadShape';
 import ATIAnalytics from '#containers/ATIAnalytics';
-import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import Grid, { GelPageGrid } from '#components/Grid';
 import IndexPageContainer from '#components/PageLayout/IndexPageContainer';
 import IndexHeading from '#containers/IndexHeading';
+import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import MetadataContainer from '../../components/Metadata';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import LinkedData from '../../components/LinkedData';
@@ -93,7 +93,7 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
   return (
     <>
       <ATIAnalytics data={pageData} />
-      <ChartbeatAnalytics data={pageData} />
+      <ChartbeatAnalytics title={header} />
       <ComscoreAnalytics />
       <MetadataContainer
         title={header}

@@ -190,7 +190,7 @@ Object {
 exports[`AMP Sinhala Live Radio Page Footer Cookie Settings Button should match text and on handler 1`] = `
 Object {
   "on": "tap:consent.prompt, privacy.hide, cookie.show, AMP.setState({ isManagingSettings: true })",
-  "text": "AdChoices / Do Not Sell My Info",
+  "text": "Do not share or sell my info",
 }
 `;
 
@@ -210,14 +210,14 @@ Object {
 exports[`AMP Sinhala Live Radio Page Header Navigation link should match text and url 2`] = `
 Object {
   "text": "ශ්‍රී ලංකා",
-  "url": "/sinhala/sri_lanka",
+  "url": "/sinhala/topics/cg7267dz901t",
 }
 `;
 
 exports[`AMP Sinhala Live Radio Page Header Navigation link should match text and url 3`] = `
 Object {
   "text": "ලෝකය",
-  "url": "/sinhala/world",
+  "url": "/sinhala/topics/c83plvepnq1t",
 }
 `;
 

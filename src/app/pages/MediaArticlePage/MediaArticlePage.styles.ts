@@ -2,9 +2,9 @@ import { css, Theme } from '@emotion/react';
 import pixelsToRem from '../../utilities/pixelsToRem';
 
 export default {
-  pageWrapper: ({ palette }: Theme) =>
+  pageWrapper: ({ palette, isDarkUi }: Theme) =>
     css({
-      backgroundColor: palette.GREY_2,
+      backgroundColor: isDarkUi ? palette.GREY_10 : palette.GREY_2,
     }),
   grid: ({ mq, gridWidths }: Theme) =>
     css({
@@ -84,6 +84,15 @@ export default {
       [mq.GROUP_4_MIN_WIDTH]: {
         marginBottom: `${spacings.FULL}rem`,
         padding: `${spacings.DOUBLE}rem`,
+      },
+    }),
+
+  responsiveComponentWrapper: ({ spacings, mq }: Theme) =>
+    css({
+      marginBottom: `${spacings.TRIPLE}rem`,
+
+      [mq.GROUP_4_MIN_WIDTH]: {
+        marginBottom: `${spacings.FULL}rem`,
       },
     }),
 };

@@ -119,7 +119,7 @@ Object {
   "vars": Object {
     "contentType": "STY",
     "domain": "test.bbc.co.uk",
-    "sections": "Kyrgyz, Kyrgyz - Башталгыч бет, Kyrgyz - STY, Kyrgyz - Башталгыч бет - STY, Kyrgyz - undefined-category",
+    "sections": "Kyrgyz, Kyrgyz - Башталгыч бет, Kyrgyz - STY, Kyrgyz - Башталгыч бет - STY",
     "title": "Test STY for social embeds",
     "uid": 50924,
     "virtualReferrer": "\${documentReferrer}",
@@ -197,7 +197,7 @@ Object {
 exports[`AMP Story Page Footer Cookie Settings Button should match text and on handler 1`] = `
 Object {
   "on": "tap:consent.prompt, privacy.hide, cookie.show, AMP.setState({ isManagingSettings: true })",
-  "text": "AdChoices / Do Not Sell My Info",
+  "text": "Do not share or sell my info",
 }
 `;
 

@@ -1839,54 +1839,6 @@ exports[`MostReadList should render with ltr news items with a max of one column
   padding-bottom: 1.5rem;
 }
 
-@media (max-width: 14.9375rem) {
-  .emotion-4 {
-    width: calc(100%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-4 {
-    width: calc(100%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-4 {
-    width: calc(100%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-4 {
-    width: calc(50%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-4 {
-    width: calc(50%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-4 {
-    width: calc(20%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
 @supports (display: grid) {
   .emotion-4 {
     display: block;
@@ -1917,22 +1869,22 @@ exports[`MostReadList should render with ltr news items with a max of one column
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
     .emotion-4 {
-      grid-template-columns: repeat(3, 1fr);
-      grid-column-end: span 3;
+      grid-template-columns: repeat(1, 1fr);
+      grid-column-end: span 1;
     }
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
     .emotion-4 {
-      grid-template-columns: repeat(4, 1fr);
-      grid-column-end: span 4;
+      grid-template-columns: repeat(1, 1fr);
+      grid-column-end: span 1;
     }
   }
 
   @media (min-width: 80rem) {
     .emotion-4 {
-      grid-template-columns: repeat(4, 1fr);
-      grid-column-end: span 4;
+      grid-template-columns: repeat(1, 1fr);
+      grid-column-end: span 1;
     }
   }
 }
@@ -1970,26 +1922,6 @@ exports[`MostReadList should render with ltr news items with a max of one column
 @media (min-width: 37.5rem) {
   .emotion-8 {
     min-width: 4rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-8 {
-    min-width: 2rem;
-  }
-}
-
-@supports (grid-template-columns: fit-content(200px)) {
-  @media (min-width: 37.5rem) {
-    .emotion-8 {
-      min-width: 2rem;
-    }
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-8 {
-    min-width: 2rem;
   }
 }
 
@@ -2097,226 +2029,6 @@ exports[`MostReadList should render with ltr news items with a max of one column
   }
 }
 
-@media (max-width: 14.9375rem) {
-  .emotion-21 {
-    min-width: 2.5rem;
-  }
-}
-
-@media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-21 {
-    min-width: 2.5rem;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-21 {
-    min-width: 3rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-21 {
-    min-width: 4rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-21 {
-    min-width: 4rem;
-  }
-}
-
-@supports (grid-template-columns: fit-content(200px)) {
-  @media (min-width: 37.5rem) {
-    .emotion-21 {
-      min-width: 2rem;
-    }
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-21 {
-    min-width: 2rem;
-  }
-}
-
-@media (max-width: 14.9375rem) {
-  .emotion-60 {
-    min-width: 2.5rem;
-  }
-}
-
-@media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-60 {
-    min-width: 2.5rem;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-60 {
-    min-width: 3rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-60 {
-    min-width: 4rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-60 {
-    min-width: 2rem;
-  }
-}
-
-@supports (grid-template-columns: fit-content(200px)) {
-  @media (min-width: 37.5rem) {
-    .emotion-60 {
-      min-width: 2rem;
-    }
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-60 {
-    min-width: 4rem;
-  }
-}
-
-@media (max-width: 14.9375rem) {
-  .emotion-73 {
-    min-width: 2.5rem;
-  }
-}
-
-@media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-73 {
-    min-width: 2.5rem;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-73 {
-    min-width: 3rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-73 {
-    min-width: 4rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-73 {
-    min-width: 4rem;
-  }
-}
-
-@supports (grid-template-columns: fit-content(200px)) {
-  @media (min-width: 37.5rem) {
-    .emotion-73 {
-      min-width: 4rem;
-    }
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-73 {
-    min-width: 2rem;
-  }
-}
-
-@media (max-width: 14.9375rem) {
-  .emotion-86 {
-    min-width: 2.5rem;
-  }
-}
-
-@media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-86 {
-    min-width: 2.5rem;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-86 {
-    min-width: 3rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-86 {
-    min-width: 4rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-86 {
-    min-width: 2rem;
-  }
-}
-
-@supports (grid-template-columns: fit-content(200px)) {
-  @media (min-width: 37.5rem) {
-    .emotion-86 {
-      min-width: 4rem;
-    }
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-86 {
-    min-width: 2rem;
-  }
-}
-
-@media (max-width: 14.9375rem) {
-  .emotion-125 {
-    min-width: 2.5rem;
-  }
-}
-
-@media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-125 {
-    min-width: 2.5rem;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-125 {
-    min-width: 3rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-125 {
-    min-width: 4rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-125 {
-    min-width: 4rem;
-  }
-}
-
-@supports (grid-template-columns: fit-content(200px)) {
-  @media (min-width: 37.5rem) {
-    .emotion-125 {
-      min-width: 4rem;
-    }
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-125 {
-    min-width: 4rem;
-  }
-}
-
 <div>
   <ol
     class="emotion-0 emotion-1 emotion-2"
@@ -2363,7 +2075,7 @@ exports[`MostReadList should render with ltr news items with a max of one column
         class="emotion-6 emotion-7"
       >
         <div
-          class="emotion-21 emotion-9"
+          class="emotion-8 emotion-9"
           dir="ltr"
         >
           <span
@@ -2425,7 +2137,7 @@ exports[`MostReadList should render with ltr news items with a max of one column
         class="emotion-6 emotion-7"
       >
         <div
-          class="emotion-21 emotion-9"
+          class="emotion-8 emotion-9"
           dir="ltr"
         >
           <span
@@ -2456,7 +2168,7 @@ exports[`MostReadList should render with ltr news items with a max of one column
         class="emotion-6 emotion-7"
       >
         <div
-          class="emotion-60 emotion-9"
+          class="emotion-8 emotion-9"
           dir="ltr"
         >
           <span
@@ -2487,7 +2199,7 @@ exports[`MostReadList should render with ltr news items with a max of one column
         class="emotion-6 emotion-7"
       >
         <div
-          class="emotion-73 emotion-9"
+          class="emotion-8 emotion-9"
           dir="ltr"
         >
           <span
@@ -2518,7 +2230,7 @@ exports[`MostReadList should render with ltr news items with a max of one column
         class="emotion-6 emotion-7"
       >
         <div
-          class="emotion-86 emotion-9"
+          class="emotion-8 emotion-9"
           dir="ltr"
         >
           <span
@@ -2549,7 +2261,7 @@ exports[`MostReadList should render with ltr news items with a max of one column
         class="emotion-6 emotion-7"
       >
         <div
-          class="emotion-73 emotion-9"
+          class="emotion-8 emotion-9"
           dir="ltr"
         >
           <span
@@ -2580,7 +2292,7 @@ exports[`MostReadList should render with ltr news items with a max of one column
         class="emotion-6 emotion-7"
       >
         <div
-          class="emotion-86 emotion-9"
+          class="emotion-8 emotion-9"
           dir="ltr"
         >
           <span
@@ -2611,7 +2323,7 @@ exports[`MostReadList should render with ltr news items with a max of one column
         class="emotion-6 emotion-7"
       >
         <div
-          class="emotion-125 emotion-9"
+          class="emotion-8 emotion-9"
           dir="ltr"
         >
           <span
@@ -2759,7 +2471,7 @@ exports[`MostReadList should render with ltr news items with a max of two column
 
 @media (min-width: 80rem) {
   .emotion-4 {
-    width: calc(20%);
+    width: calc(50%);
     display: inline-block;
     vertical-align: top;
   }
@@ -2862,12 +2574,6 @@ exports[`MostReadList should render with ltr news items with a max of two column
     .emotion-8 {
       min-width: 2rem;
     }
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-8 {
-    min-width: 2rem;
   }
 }
 
@@ -3013,56 +2719,6 @@ exports[`MostReadList should render with ltr news items with a max of two column
   }
 }
 
-@media (min-width: 80rem) {
-  .emotion-21 {
-    min-width: 2rem;
-  }
-}
-
-@media (max-width: 14.9375rem) {
-  .emotion-60 {
-    min-width: 2.5rem;
-  }
-}
-
-@media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-60 {
-    min-width: 2.5rem;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-60 {
-    min-width: 3rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-60 {
-    min-width: 4rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-60 {
-    min-width: 2rem;
-  }
-}
-
-@supports (grid-template-columns: fit-content(200px)) {
-  @media (min-width: 37.5rem) {
-    .emotion-60 {
-      min-width: 2rem;
-    }
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-60 {
-    min-width: 4rem;
-  }
-}
-
 @media (max-width: 14.9375rem) {
   .emotion-73 {
     min-width: 2.5rem;
@@ -3101,12 +2757,6 @@ exports[`MostReadList should render with ltr news items with a max of two column
   }
 }
 
-@media (min-width: 80rem) {
-  .emotion-73 {
-    min-width: 2rem;
-  }
-}
-
 @media (max-width: 14.9375rem) {
   .emotion-86 {
     min-width: 2.5rem;
@@ -3142,56 +2792,6 @@ exports[`MostReadList should render with ltr news items with a max of two column
     .emotion-86 {
       min-width: 4rem;
     }
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-86 {
-    min-width: 2rem;
-  }
-}
-
-@media (max-width: 14.9375rem) {
-  .emotion-125 {
-    min-width: 2.5rem;
-  }
-}
-
-@media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-125 {
-    min-width: 2.5rem;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-125 {
-    min-width: 3rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-125 {
-    min-width: 4rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-125 {
-    min-width: 4rem;
-  }
-}
-
-@supports (grid-template-columns: fit-content(200px)) {
-  @media (min-width: 37.5rem) {
-    .emotion-125 {
-      min-width: 4rem;
-    }
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-125 {
-    min-width: 4rem;
   }
 }
 
@@ -3334,7 +2934,7 @@ exports[`MostReadList should render with ltr news items with a max of two column
         class="emotion-6 emotion-7"
       >
         <div
-          class="emotion-60 emotion-9"
+          class="emotion-8 emotion-9"
           dir="ltr"
         >
           <span
@@ -3489,7 +3089,7 @@ exports[`MostReadList should render with ltr news items with a max of two column
         class="emotion-6 emotion-7"
       >
         <div
-          class="emotion-125 emotion-9"
+          class="emotion-73 emotion-9"
           dir="ltr"
         >
           <span
@@ -5524,7 +5124,7 @@ exports[`MostReadList should render with rtl arabic items with correct dir 1`] =
 }
 
 .emotion-10 {
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 2rem;
@@ -5564,7 +5164,7 @@ exports[`MostReadList should render with rtl arabic items with correct dir 1`] =
 .emotion-14 {
   font-size: 0.9375rem;
   line-height: 1.5rem;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
   position: static;

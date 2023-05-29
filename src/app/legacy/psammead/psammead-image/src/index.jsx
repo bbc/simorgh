@@ -46,11 +46,11 @@ export const Img = props => {
     ...otherProps
   } = props;
 
-  const requestContext = useContext(RequestContext);
+  const { pageType } = useContext(RequestContext);
 
   return (
     <>
-      {requestContext.pageType === FRONT_PAGE && (
+      {pageType === FRONT_PAGE && (
         <StyledPicture onLoad={onLoad}>
           {srcset && (
             <source srcSet={srcset} type={primaryMimeType} sizes={sizes} />
@@ -65,7 +65,7 @@ export const Img = props => {
           <StyledImg src={src} {...otherProps} />
         </StyledPicture>
       )}
-      {requestContext.pageType !== FRONT_PAGE && (
+      {pageType !== FRONT_PAGE && (
         <StyledImg
           sizes={sizes}
           srcSet={fallbackSrcset}

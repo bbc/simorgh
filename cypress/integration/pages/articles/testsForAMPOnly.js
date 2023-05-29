@@ -1,10 +1,6 @@
 import path from 'ramda/src/path';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
-import {
-  getBlockData,
-  getVideoEmbedUrl,
-  fetchArticlePageData,
-} from './helpers';
+import { getBlockData, getVideoEmbedUrl } from './helpers';
 import config from '../../../support/config/services';
 import { serviceNumerals } from '../../../../src/app/legacy/containers/MostRead/Canonical/Rank';
 
@@ -26,11 +22,14 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
 }) => {
   let articlesData;
   describe(`Running testsForAMPOnly for ${service} ${pageType}`, () => {
-    before(async () => {
-      articlesData = await fetchArticlePageData(service, variant).then(
-        ({ body }) => body,
+    before(() => {
+      cy.getPageData({ service, pageType: 'article', variant }).then(
+        ({ body }) => {
+          articlesData = body;
+        },
       );
     });
+
     it('should contain an amp-img', () => {
       if (serviceHasFigure(service)) {
         cy.get('figure')

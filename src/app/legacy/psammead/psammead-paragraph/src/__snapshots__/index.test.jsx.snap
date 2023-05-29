@@ -35,14 +35,14 @@ exports[`Paragraph should render correctly 1`] = `
 </div>
 `;
 
-exports[`Paragraph should render correctly in dark mode 1`] = `
+exports[`Paragraph should render correctly on page types that support a dark ui 1`] = `
 .emotion-0 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #F2F2F2;
+  color: #F6F6F6;
   padding-bottom: 1.5rem;
   margin: 0;
 }
@@ -74,7 +74,7 @@ exports[`Paragraph should render correctly with arabic script typography values 
 .emotion-0 {
   font-size: 0.9375rem;
   line-height: 1.5rem;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #141414;

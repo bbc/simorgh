@@ -48,13 +48,6 @@ Object {
 
 exports[`Canonical Sinhala Live Radio Page Footer Anchors should match text and url 7`] = `
 Object {
-  "text": "AdChoices / Do Not Sell My Info",
-  "url": "https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/",
-}
-`;
-
-exports[`Canonical Sinhala Live Radio Page Footer Anchors should match text and url 8`] = `
-Object {
   "text": "බාහිර යොමු කෙරෙහි අපගේ ප්‍රවේශය ගැන කියවන්න.",
   "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
 }
@@ -76,14 +69,14 @@ Object {
 exports[`Canonical Sinhala Live Radio Page Header Navigation link should match text and url 2`] = `
 Object {
   "text": "ශ්‍රී ලංකා",
-  "url": "/sinhala/sri_lanka",
+  "url": "/sinhala/topics/cg7267dz901t",
 }
 `;
 
 exports[`Canonical Sinhala Live Radio Page Header Navigation link should match text and url 3`] = `
 Object {
   "text": "ලෝකය",
-  "url": "/sinhala/world",
+  "url": "/sinhala/topics/c83plvepnq1t",
 }
 `;
 

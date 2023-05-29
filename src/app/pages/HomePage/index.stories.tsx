@@ -6,15 +6,10 @@ import { data as kyrgyzHomePageData } from '#data/kyrgyz/homePage/index.json';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { withServicesKnob } from '../../legacy/psammead/psammead-storybook-helpers/src';
 import ThemeProvider from '../../components/ThemeProvider';
-import { Services, Variants } from '../../models/types/global';
+import { StoryProps } from '../../models/types/storybook';
 import HomePage from '.';
 
-interface Props {
-  service: Services;
-  variant: Variants;
-}
-
-const Component = ({ service, variant }: Props) => {
+const Component = ({ service, variant }: StoryProps) => {
   return (
     <ThemeProvider service={service} variant={variant}>
       <ServiceContextProvider service={service} variant={variant}>
@@ -38,4 +33,6 @@ export default {
   decorators: [withKnobs, withServicesKnob()],
 };
 
-export const Example = Component;
+export const Kyrgyz = ({ variant }: StoryProps) => (
+  <Component service="kyrgyz" variant={variant} />
+);

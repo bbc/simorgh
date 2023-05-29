@@ -197,7 +197,7 @@ Object {
 exports[`AMP Feature Index page Footer Cookie Settings Button should match text and on handler 1`] = `
 Object {
   "on": "tap:consent.prompt, privacy.hide, cookie.show, AMP.setState({ isManagingSettings: true })",
-  "text": "AdChoices / Do Not Sell My Info",
+  "text": "Do not share or sell my info",
 }
 `;
 
@@ -259,7 +259,7 @@ Object {
 exports[`AMP Feature Index page Header Navigation link should match text and url 8`] = `
 Object {
   "text": "ویڈیو",
-  "url": "/urdu/media/video",
+  "url": "/urdu/topics/c1e0mzr3r2yt",
 }
 `;
 

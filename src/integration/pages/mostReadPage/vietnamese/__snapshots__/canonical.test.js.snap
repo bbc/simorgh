@@ -55,13 +55,6 @@ Object {
 
 exports[`Canonical Most Read Page Footer Anchors should match text and url 8`] = `
 Object {
-  "text": "AdChoices / Do Not Sell My Info",
-  "url": "https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/",
-}
-`;
-
-exports[`Canonical Most Read Page Footer Anchors should match text and url 9`] = `
-Object {
   "text": "Tìm hiểu cách chúng tôi tiếp cận việc dẫn tới trang ngoài",
   "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
 }
@@ -125,7 +118,7 @@ Object {
 exports[`Canonical Most Read Page Header Navigation link should match text and url 8`] = `
 Object {
   "text": "Video",
-  "url": "/vietnamese/media/video",
+  "url": "/vietnamese/topics/cl29j0ekkvdt",
 }
 `;
 

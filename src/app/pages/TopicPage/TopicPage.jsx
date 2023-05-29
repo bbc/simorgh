@@ -6,8 +6,8 @@ import AdContainer from '#containers/Ad';
 import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
 import useToggle from '#hooks/useToggle';
 import { RequestContext } from '#contexts/RequestContext';
-import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import Curation from '#app/components/Curation';
+import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import LinkedData from '../../components/LinkedData';
 import styles from './index.styles';
 import MetadataContainer from '../../components/Metadata';
@@ -63,7 +63,7 @@ const TopicPage = ({ pageData }) => {
       <main css={styles.main}>
         <div css={styles.inner}>
           <ATIAnalytics data={pageData} />
-          <ChartbeatAnalytics data={pageData} />
+          <ChartbeatAnalytics title={title} />
           <MetadataContainer
             title={activePage >= 2 ? pageTitle : title}
             socialHeadline={title}

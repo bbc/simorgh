@@ -13,7 +13,7 @@ import styles from './index.styles';
 import { RequestContext } from '../../contexts/RequestContext';
 import { FRONT_PAGE } from '../../routes/utils/pageTypes';
 
-interface Props {
+type Props = {
   alt: string;
   aspectRatio?: [x: number, y: number];
   attribution?: string;
@@ -24,13 +24,14 @@ interface Props {
   isAmp?: boolean;
   lazyLoad?: boolean;
   placeholder?: boolean;
+  darkPlaceholder?: boolean;
   preload?: boolean;
   mediaType?: string;
   srcSet?: string;
   sizes?: string;
   src: string;
   width?: number;
-}
+};
 
 const DEFAULT_ASPECT_RATIO = [16, 9];
 const roundNumber = (num: number) => Math.round(num * 100) / 100;
@@ -50,6 +51,7 @@ const Image = ({
   isAmp = false,
   lazyLoad = false,
   placeholder = true,
+  darkPlaceholder = false,
   preload = false,
   mediaType,
   srcSet,
@@ -57,7 +59,7 @@ const Image = ({
   src,
   width,
 }: PropsWithChildren<Props>) => {
-  const requestContext = useContext(RequestContext);
+  const { pageType } = useContext(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
   const showPlaceholder = placeholder && !isLoaded;
   const hasDimensions = width && height;
@@ -74,12 +76,11 @@ const Image = ({
   const ampImgLayout = hasDimensions ? 'responsive' : 'fill';
   const getImgSrcSet = () => {
     if (!hasFallback) return srcSet;
-    if (requestContext.pageType !== FRONT_PAGE) return fallbackSrcSet;
+    if (pageType !== FRONT_PAGE) return fallbackSrcSet;
     return undefined;
   };
   const getImgSizes = () => {
-    if ((!hasFallback && srcSet) || requestContext.pageType !== FRONT_PAGE)
-      return sizes;
+    if ((!hasFallback && srcSet) || pageType !== FRONT_PAGE) return sizes;
     return undefined;
   };
 
@@ -98,7 +99,17 @@ const Image = ({
       )}
       <div
         className={className}
-        css={[styles.wrapper, showPlaceholder && styles.placeholder]}
+        css={theme => [
+          styles.wrapper,
+          showPlaceholder && [
+            styles.placeholder,
+            {
+              backgroundColor: darkPlaceholder
+                ? theme.palette.SHADOW
+                : theme.palette.LUNAR,
+            },
+          ],
+        ]}
         style={{
           paddingBottom: legacyBrowserAspectRatio,
         }}
@@ -131,7 +142,7 @@ const Image = ({
           </>
         ) : (
           <ImageWrapper>
-            {hasFallback && requestContext.pageType === FRONT_PAGE && (
+            {hasFallback && pageType === FRONT_PAGE && (
               <>
                 <source srcSet={srcSet} type={mediaType} sizes={sizes} />
                 <source

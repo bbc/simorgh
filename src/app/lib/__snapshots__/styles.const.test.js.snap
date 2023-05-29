@@ -13,3 +13,15 @@ exports[`Styles NEGATIVE_MARGIN should match text 1`] = `
     margin: 1.5rem -1rem 0;
   }"
 `;
+
+exports[`Styles visuallyHiddenStyle should match text 1`] = `
+"
+clip-path: inset(100%);
+clip: rect(1px, 1px, 1px, 1px);
+height: 1px;
+overflow: hidden;
+position: absolute;
+width: 1px;
+margin: 0;
+"
+`;

@@ -1,16 +1,31 @@
 import React from 'react';
 import { data as kyrgyzHomePageData } from '#data/kyrgyz/homePage/index.json';
+import { Helmet } from 'react-helmet';
 import { render } from '../../components/react-testing-library-with-providers';
 import HomePage from './HomePage';
 
+jest.mock('../../components/ChartbeatAnalytics', () => {
+  const ChartbeatAnalytics = () => <div>Chartbeat Analytics</div>;
+  return ChartbeatAnalytics;
+});
+
 describe('Home Page', () => {
-  it('should render a section for each curation', () => {
+  it('should render a section for each curation with summaries', () => {
     const { container } = render(<HomePage pageData={kyrgyzHomePageData} />, {
       service: 'kyrgyz',
+      toggles: {
+        mostRead: { enabled: true },
+      },
     });
+
+    const curationsWithSummaries = kyrgyzHomePageData.curations.filter(
+      ({ summaries, mostRead }) =>
+        (summaries && summaries?.length > 0) || mostRead,
+    );
+
     expect(container).not.toBeEmptyDOMElement();
     expect(container.getElementsByTagName('section').length).toEqual(
-      kyrgyzHomePageData.curations.length,
+      curationsWithSummaries.length,
     );
   });
 
@@ -46,5 +61,48 @@ describe('Home Page', () => {
     const langSpan = span?.querySelector('span');
     expect(langSpan?.getAttribute('lang')).toEqual('en-GB');
     expect(langSpan?.textContent).toEqual('BBC News');
+  });
+
+  it('should have a metadata title', () => {
+    render(<HomePage pageData={kyrgyzHomePageData} />, {
+      service: 'kyrgyz',
+    });
+    expect(Helmet.peek().title).toEqual(
+      'Кабарлар, акыркы мүнөттөгү кабарлар, талдоо, видео - BBC News Кыргыз Кызматы',
+    );
+  });
+
+  it('should have a metadata description', () => {
+    render(<HomePage pageData={kyrgyzHomePageData} />, {
+      service: 'kyrgyz',
+    });
+    const helmetContent = Helmet.peek();
+    const findDescription = helmetContent.metaTags.find(
+      ({ name }) => name === 'description',
+    );
+    expect(findDescription?.content).toEqual(kyrgyzHomePageData.description);
+  });
+
+  it('should correctly render linked data for home pages', () => {
+    render(<HomePage pageData={kyrgyzHomePageData} />, {
+      service: 'kyrgyz',
+    });
+    const getLinkedDataOutput = () => {
+      return Helmet.peek().scriptTags.map(({ innerHTML }) =>
+        JSON.parse(innerHTML),
+      );
+    };
+
+    expect(getLinkedDataOutput()).toMatchSnapshot();
+  });
+
+  describe('Analytics', () => {
+    it('should render a Chartbeat component', () => {
+      const { getByText } = render(<HomePage pageData={kyrgyzHomePageData} />, {
+        service: 'kyrgyz',
+      });
+
+      expect(getByText('Chartbeat Analytics')).toBeInTheDocument();
+    });
   });
 });
