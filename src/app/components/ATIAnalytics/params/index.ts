@@ -46,7 +46,7 @@ import {
 } from './topicPage/buildParams';
 import { RequestContextProps } from '../../../contexts/RequestContext';
 import { ServiceConfig } from '../../../models/types/serviceConfig';
-import { PageData, ATIPageTrackingProps, AtiData } from '../types';
+import { PageData, ATIPageTrackingProps, ATIData } from '../types';
 import { PageTypes } from '../../../models/types/global';
 import { buildPageATIUrl } from './genericPage/buildParams';
 
@@ -206,7 +206,7 @@ const createBuilderFactory = (
 
 export const buildATIUrl = (
   data: PageData,
-  atiData: AtiData,
+  atiData: ATIData,
   requestContext: RequestContextProps,
   serviceContext: ServiceConfig,
 ) => {
