@@ -14,6 +14,7 @@ import {
   PHOTO_GALLERY_PAGE,
   MEDIA_PAGE,
   ERROR_PAGE,
+  LIVE_PAGE,
 } from '../../../routes/utils/pageTypes';
 import {
   buildArticleATIParams,
@@ -119,6 +120,7 @@ const pageTypeUrlBuilders = {
     ),
   [HOME_PAGE]: noOp,
   [ERROR_PAGE]: noOp,
+  [LIVE_PAGE]: noOp,
 };
 
 const pageTypeParamBuilders = {
@@ -177,6 +179,7 @@ const pageTypeParamBuilders = {
     buildCpsAssetPageATIParams(data, requestContext, serviceContext, 'article'),
   [HOME_PAGE]: noOp,
   [ERROR_PAGE]: noOp,
+  [LIVE_PAGE]: noOp,
 };
 
 type BuilderFunction = {

@@ -15,6 +15,7 @@ jest.mock('./ThemeProvider');
 interface Props {
   children: JSX.Element | JSX.Element[];
   isAmp?: boolean;
+  isApp?: boolean;
   pageData?: object;
   pageType?: PageTypes;
   derivedPageType?: string | null;
@@ -30,6 +31,7 @@ interface Props {
 const AllTheProviders: FC<Props> = ({
   children,
   isAmp = false,
+  isApp = false,
   pageData = pageDataFixture,
   pageType = 'article',
   derivedPageType,
@@ -46,6 +48,7 @@ const AllTheProviders: FC<Props> = ({
           bbcOrigin="https://www.test.bbc.com"
           pageType={pageType}
           isAmp={isAmp}
+          isApp={isApp}
           service={service}
           pathname={pathname}
           derivedPageType={derivedPageType}
@@ -70,6 +73,7 @@ const customRender = (
 ) => {
   const {
     isAmp,
+    isApp,
     pageData,
     pageType,
     derivedPageType,
@@ -84,6 +88,7 @@ const customRender = (
     wrapper: ({ children }) => (
       <AllTheProviders
         isAmp={isAmp}
+        isApp={isApp}
         pageData={pageData}
         pageType={pageType}
         derivedPageType={derivedPageType}

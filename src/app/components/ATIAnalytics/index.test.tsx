@@ -10,7 +10,6 @@ import styUkrainianInRussianAssetData from '#data/ukrainian/cpsAssets/features-r
 import { RequestContextProvider } from '#contexts/RequestContext';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import {
-  isNull,
   setWindowValue,
   resetWindowValue,
 } from '#psammead/psammead-test-helpers/src';
@@ -54,6 +53,7 @@ const ContextWrap = ({
     <RequestContextProvider
       bbcOrigin="https://www.test.bbc.co.uk"
       id="c0000000000o"
+      isApp={false}
       isAmp={platform === 'amp'}
       pageType={pageType}
       service={service}
@@ -418,16 +418,6 @@ describe('ATI Analytics Container', () => {
         }
       `);
     });
-  });
-
-  describe('pageType neither article nor frontPage', () => {
-    isNull(
-      'should render null',
-      <ContextWrap platform="canonical" pageType="error" service="news">
-        {/* @ts-expect-error - only partial data required for testing purposes */}
-        <ATIAnalytics data={articleDataNews} />
-      </ContextWrap>,
-    );
   });
 
   describe('XTO Marketing string', () => {

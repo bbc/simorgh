@@ -24,6 +24,7 @@ export interface PageData {
       nations_producer?: string;
       pageIdentifier?: string;
       pageTitle?: string;
+      producer?: string;
     };
     atiAnalytics?: {
       producerId?: string;

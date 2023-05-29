@@ -23,7 +23,6 @@ import Image from '#containers/Image';
 import MediaPlayer from '#containers/CpsAssetMediaPlayer';
 import Blocks from '#containers/Blocks';
 import CpsRelatedContent from '#containers/CpsRelatedContent';
-import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import cpsAssetPagePropTypes from '#models/propTypes/cpsAssetPage';
 import fauxHeadline from '#containers/FauxHeadline';
@@ -36,6 +35,7 @@ import {
 } from '#lib/utilities/parseAssetData';
 import RelatedTopics from '#containers/RelatedTopics';
 import ATIAnalytics from '../../components/ATIAnalytics';
+import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import LinkedData from '../../components/LinkedData';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
@@ -167,7 +167,7 @@ const PhotoGalleryPage = ({ pageData }) => {
         imageLocator={indexImageLocator}
       />
       <ATIAnalytics data={pageData} />
-      <ChartbeatAnalytics data={pageData} />
+      <ChartbeatAnalytics title={title} />
       <ComscoreAnalytics />
 
       <StyledPhotoGalleryPageGrid as="main" role="main">

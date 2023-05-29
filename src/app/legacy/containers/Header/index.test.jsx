@@ -240,5 +240,27 @@ describe(`Header`, () => {
         expect(container).not.toContainElement(reject);
       });
     });
+
+    it('should remove the site branding when isApp is set to true', () => {
+      HeaderContainerWithContext({
+        renderOptions: {
+          isApp: true,
+        },
+      });
+
+      expect(
+        document.querySelector(`header[role='banner'] div div:nth-of-type(2)`),
+      ).toBeNull();
+    });
+
+    it('should remove the nav when isApp is set to true', () => {
+      HeaderContainerWithContext({
+        renderOptions: {
+          isApp: true,
+        },
+      });
+
+      expect(document.querySelector(`header[role='banner'] nav`)).toBeNull();
+    });
   });
 });

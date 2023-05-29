@@ -1,29 +1,29 @@
 import { matchPath } from 'react-router-dom';
 import {
-  articlePath,
   articleDataPath,
-  articleSwPath,
   articleManifestPath,
-  frontPagePath,
+  articlePath,
+  articleSwPath,
+  cpsAssetPageDataPath,
+  cpsAssetPagePath,
   frontPageDataPath,
   frontPageManifestPath,
+  frontPagePath,
   frontPageSwPath,
-  tipoHomePath,
-  tipoHomeDataPath,
-  cpsAssetPagePath,
-  cpsAssetPageDataPath,
-  podcastEpisodePath,
-  podcastBrandPath,
+  legacyAssetPageDataPath,
+  legacyAssetPagePath,
   liveRadioPath,
-  onDemandRadioPath,
-  onDemandTvPath,
   mostReadDataRegexPath,
   mostWatchedDataPath,
   mostWatchedPagePath,
-  legacyAssetPagePath,
-  legacyAssetPageDataPath,
-  secondaryColumnDataRegexPath,
+  onDemandRadioPath,
+  onDemandTvPath,
+  podcastBrandPath,
+  podcastEpisodePath,
   recommendationsDataRegex,
+  secondaryColumnDataRegexPath,
+  tipoHomeDataPath,
+  tipoHomePath,
 } from './index';
 
 import serviceConfig from '../../../lib/config/services/loadableConfig';
@@ -106,13 +106,11 @@ describe('articleDataPath', () => {
 describe('frontPagePath', () => {
   const validRoutes = [
     '/news',
-    '/persian',
     '/news.amp',
-    '/persian.amp',
-    '/news/simp',
-    '/persian/trad',
-    '/news/lat.amp',
-    '/persian/cyr.amp',
+    '/ukchina/simp',
+    '/ukchina/trad',
+    '/serbian/lat.amp',
+    '/serbian/cyr.amp',
   ];
   shouldMatchValidRoutes(validRoutes, frontPagePath);
 
@@ -122,17 +120,14 @@ describe('frontPagePath', () => {
     '/iplayer',
     '/news/foobar',
     '/news/foobar.amp',
+    '/persian',
+    '/persian.amp',
   ];
   shouldNotMatchInvalidRoutes(invalidRoutes, frontPagePath);
 });
 
 describe('frontPageDataPath', () => {
-  const validRoutes = [
-    '/news.json',
-    '/persian.json',
-    '/news/cyr.json',
-    '/persian/trad.json',
-  ];
+  const validRoutes = ['/news.json', '/serbian/cyr.json', '/ukchina/trad.json'];
   shouldMatchValidRoutes(validRoutes, frontPageDataPath);
 
   const invalidRoutes = [
@@ -140,6 +135,7 @@ describe('frontPageDataPath', () => {
     '/iplayer.json',
     '/news/foobar.json',
     '/persian/.json',
+    '/persian.json',
   ];
   shouldNotMatchInvalidRoutes(invalidRoutes, frontPageDataPath);
 });
@@ -533,7 +529,24 @@ describe('legacyAssetPageDataPath', () => {
 describe('frontPage -> homePage migration', () => {
   const services = Object.keys(serviceConfig);
 
-  const homePageServices = ['kyrgyz'];
+  const servicesWithVariants = ['serbian', 'ukchina', 'zhongwen'];
+
+  const servicesNotCoveredByWorldService = [
+    'sport',
+    'scotland',
+    'newsround',
+    'news',
+    'naidheachdan',
+    'cymrufyw',
+    'archive',
+  ];
+
+  const homePageServices = services.filter(
+    service =>
+      !servicesWithVariants.includes(service) &&
+      !servicesNotCoveredByWorldService.includes(service),
+  );
+
   const homePageRoutes = homePageServices.map(service => `/${service}`);
 
   const originalApplicationEnvironment = process.env.SIMORGH_APP_ENV;

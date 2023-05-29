@@ -15,6 +15,7 @@ import FrostedGlassPanel from './FrostedGlassPanel';
 import withData from './withData';
 
 import styles from './styles';
+import { EventTrackingBlock } from '../../models/types/eventTracking';
 
 const PANEL_OFFSET = 250;
 
@@ -33,7 +34,7 @@ type FrostedGlassPromoProps = {
   };
   footer: React.ReactNode | null;
   url: string;
-  eventTrackingData: object | null;
+  eventTrackingData: EventTrackingBlock | null;
   index: number;
   minimumContrast: number;
   paletteSize: number;
