@@ -19,6 +19,7 @@ describe('MostReadList', () => {
           script: latin,
         })}
       </MostReadList>,
+      { service: 'news' },
     );
     expect(container).toMatchSnapshot();
   });
@@ -33,6 +34,7 @@ describe('MostReadList', () => {
           dir: 'rtl',
         })}
       </MostReadList>,
+      { service: 'persian' },
     );
     expect(container).toMatchSnapshot();
   });
@@ -46,6 +48,7 @@ describe('MostReadList', () => {
           script: bengali,
         })}
       </MostReadList>,
+      { service: 'bengali' },
     );
     expect(container).toMatchSnapshot();
   });
@@ -59,6 +62,7 @@ describe('MostReadList', () => {
           script: burmese,
         })}
       </MostReadList>,
+      { service: 'burmese' },
     );
     expect(container).toMatchSnapshot();
   });
@@ -70,8 +74,10 @@ describe('MostReadList', () => {
           numberOfItems: 10,
           service: 'news',
           script: latin,
+          columnLayout: 'oneColumn',
         })}
       </MostReadList>,
+      { service: 'news' },
     );
     expect(container).toMatchSnapshot();
   });
@@ -83,8 +89,10 @@ describe('MostReadList', () => {
           numberOfItems: 10,
           service: 'news',
           script: latin,
+          columnLayout: 'twoColumn',
         })}
       </MostReadList>,
+      { service: 'news' },
     );
     expect(container).toMatchSnapshot();
   });
@@ -96,8 +104,10 @@ describe('MostReadList', () => {
           numberOfItems: 10,
           service: 'news',
           script: latin,
+          columnLayout: 'multiColumn',
         })}
       </MostReadList>,
+      { service: 'news' },
     );
     expect(container).toMatchSnapshot();
   });

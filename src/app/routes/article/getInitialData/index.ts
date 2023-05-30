@@ -10,6 +10,7 @@ import handleError from '../../utils/handleError';
 import { Services, Variants } from '../../../models/types/global';
 import getOnwardsPageData from '../utils/getOnwardsData';
 import { advertisingAllowed, isSfv } from '../utils/paramChecks';
+import { FetchError } from '../../../models/types/fetch';
 
 const logger = nodeLogger(__filename);
 
@@ -105,7 +106,9 @@ export default async ({
         ...(wsojData && wsojData),
       },
     };
-  } catch ({ message, status }) {
+  } catch (error: unknown) {
+    const { message, status } = error as FetchError;
+
     logger.error(BFF_FETCH_ERROR, {
       service,
       status,

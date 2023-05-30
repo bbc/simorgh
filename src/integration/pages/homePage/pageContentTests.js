@@ -1,6 +1,4 @@
 export default ({ pageData }) => {
-  console.log({ pageData });
-
   describe('Page content', () => {
     const firstItemHeadline = document.querySelector(
       '[data-testid="topic-promos"] > li  h3 a',
@@ -22,7 +20,8 @@ export default ({ pageData }) => {
 
   it('should render the correct number of curations', () => {
     const curationsWithSummaries = pageData.curations.filter(
-      ({ summaries }) => summaries?.length > 0,
+      ({ summaries, mostRead }) =>
+        (summaries && summaries?.length > 0) || mostRead,
     );
 
     const numberOfcurations = document.querySelectorAll('main h2').length;

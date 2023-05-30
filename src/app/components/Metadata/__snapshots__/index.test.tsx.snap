@@ -2061,92 +2061,92 @@ Object {
   "defer": true,
   "encode": true,
   "htmlAttributes": Object {
-    "dir": "ltr",
-    "lang": "ig",
+    "dir": "rtl",
+    "lang": "ur",
   },
   "linkTags": Array [
     Object {
-      "href": "https://www.bbc.com/igbo",
+      "href": "https://www.bbc.com/urdu",
       "rel": "canonical",
     },
     Object {
-      "href": "https://www.bbc.com/igbo",
-      "hrefLang": "ig",
+      "href": "https://www.bbc.com/urdu",
+      "hrefLang": "ur",
       "rel": "alternate",
     },
     Object {
-      "href": "https://www.bbc.com/igbo.amp",
+      "href": "https://www.bbc.com/urdu.amp",
       "rel": "amphtml",
     },
     Object {
-      "href": "http://localhost:7080/igbo/images/icons/icon-192x192.png",
+      "href": "http://localhost:7080/urdu/images/icons/icon-192x192.png",
       "rel": "apple-touch-icon",
     },
     Object {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/igbo/images/icons/icon-72x72.png",
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/icons/icon-72x72.png",
       "rel": "apple-touch-icon",
       "sizes": "72x72",
     },
     Object {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/igbo/images/icons/icon-96x96.png",
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/icons/icon-96x96.png",
       "rel": "apple-touch-icon",
       "sizes": "96x96",
     },
     Object {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/igbo/images/icons/icon-128x128.png",
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/icons/icon-128x128.png",
       "rel": "apple-touch-icon",
       "sizes": "128x128",
     },
     Object {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/igbo/images/icons/icon-144x144.png",
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/icons/icon-144x144.png",
       "rel": "apple-touch-icon",
       "sizes": "144x144",
     },
     Object {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/igbo/images/icons/icon-152x152.png",
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/icons/icon-152x152.png",
       "rel": "apple-touch-icon",
       "sizes": "152x152",
     },
     Object {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/igbo/images/icons/icon-180x180.png",
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/icons/icon-180x180.png",
       "rel": "apple-touch-icon",
       "sizes": "180x180",
     },
     Object {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/igbo/images/icons/icon-192x192.png",
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/icons/icon-192x192.png",
       "rel": "apple-touch-icon",
       "sizes": "192x192",
     },
     Object {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/igbo/images/icons/icon-384x384.png",
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/icons/icon-384x384.png",
       "rel": "apple-touch-icon",
       "sizes": "384x384",
     },
     Object {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/igbo/images/icons/icon-512x512.png",
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/icons/icon-512x512.png",
       "rel": "apple-touch-icon",
       "sizes": "512x512",
     },
     Object {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/igbo/images/icons/icon-72x72.png",
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/icons/icon-72x72.png",
       "rel": "icon",
       "sizes": "72x72",
       "type": "image/png",
     },
     Object {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/igbo/images/icons/icon-96x96.png",
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/icons/icon-96x96.png",
       "rel": "icon",
       "sizes": "96x96",
       "type": "image/png",
     },
     Object {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/igbo/images/icons/icon-192x192.png",
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/icons/icon-192x192.png",
       "rel": "icon",
       "sizes": "192x192",
       "type": "image/png",
     },
     Object {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/igbo/images/icons/icon-512x512.png",
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/icons/icon-512x512.png",
       "rel": "apple-touch-startup-image",
     },
     Object {
@@ -2176,15 +2176,15 @@ Object {
       "name": "viewport",
     },
     Object {
-      "content": "BBC News Ìgbò",
+      "content": "BBC News اردو",
       "name": "apple-mobile-web-app-title",
     },
     Object {
-      "content": "BBC News Ìgbò",
+      "content": "BBC News اردو",
       "name": "application-name",
     },
     Object {
-      "content": "BBC News Igbo na-agbasa akụkọ sị Naịjirịa, Afịrịka na mba ụwa niile... Ihe na-eme ugbua gbasara akụkọ, egwuregwu, ihe nkiri na ihe na-ewu ewu... BBC Nkeji.",
+      "content": "تازہ ترین خبروں، ویڈیوز اور آڈیوز کے لیے بی بی سی اردو پر آئیے۔ بی بی سی اردو دنیا بھر کی خبروں کے حصول کے لیے ایک قابلِ اعتماد ویب سائٹ ہے۔",
       "name": "description",
     },
     Object {
@@ -2200,31 +2200,31 @@ Object {
       "name": "msapplication-TileColor",
     },
     Object {
-      "content": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/igbo/images/icons/icon-144x144.png",
+      "content": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/icons/icon-144x144.png",
       "name": "msapplication-TileImage",
     },
     Object {
-      "content": "BBC News Igbo na-agbasa akụkọ sị Naịjirịa, Afịrịka na mba ụwa niile... Ihe na-eme ugbua gbasara akụkọ, egwuregwu, ihe nkiri na ihe na-ewu ewu... BBC Nkeji.",
+      "content": "تازہ ترین خبروں، ویڈیوز اور آڈیوز کے لیے بی بی سی اردو پر آئیے۔ بی بی سی اردو دنیا بھر کی خبروں کے حصول کے لیے ایک قابلِ اعتماد ویب سائٹ ہے۔",
       "property": "og:description",
     },
     Object {
-      "content": "https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png",
+      "content": "https://news.files.bbci.co.uk/ws/img/logos/og/urdu.png",
       "property": "og:image",
     },
     Object {
-      "content": "BBC News Ìgbò",
+      "content": "BBC News اردو",
       "property": "og:image:alt",
     },
     Object {
-      "content": "ig",
+      "content": "ur",
       "property": "og:locale",
     },
     Object {
-      "content": "BBC News Ìgbò",
+      "content": "BBC News اردو",
       "property": "og:site_name",
     },
     Object {
-      "content": "Ogbako - BBC News Ìgbò",
+      "content": "خبریں، تازہ خبریں، بریکنگ نیو | News, latest news, breaking news - BBC News اردو",
       "property": "og:title",
     },
     Object {
@@ -2232,7 +2232,7 @@ Object {
       "property": "og:type",
     },
     Object {
-      "content": "https://www.bbc.com/igbo",
+      "content": "https://www.bbc.com/urdu",
       "property": "og:url",
     },
     Object {
@@ -2240,31 +2240,31 @@ Object {
       "name": "twitter:card",
     },
     Object {
-      "content": "@BBCNews",
+      "content": "@bbcurdu",
       "name": "twitter:creator",
     },
     Object {
-      "content": "BBC News Igbo na-agbasa akụkọ sị Naịjirịa, Afịrịka na mba ụwa niile... Ihe na-eme ugbua gbasara akụkọ, egwuregwu, ihe nkiri na ihe na-ewu ewu... BBC Nkeji.",
+      "content": "تازہ ترین خبروں، ویڈیوز اور آڈیوز کے لیے بی بی سی اردو پر آئیے۔ بی بی سی اردو دنیا بھر کی خبروں کے حصول کے لیے ایک قابلِ اعتماد ویب سائٹ ہے۔",
       "name": "twitter:description",
     },
     Object {
-      "content": "BBC News Ìgbò",
+      "content": "BBC News اردو",
       "name": "twitter:image:alt",
     },
     Object {
-      "content": "https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png",
+      "content": "https://news.files.bbci.co.uk/ws/img/logos/og/urdu.png",
       "name": "twitter:image:src",
     },
     Object {
-      "content": "@BBCNews",
+      "content": "@bbcurdu",
       "name": "twitter:site",
     },
     Object {
-      "content": "Ogbako - BBC News Ìgbò",
+      "content": "خبریں، تازہ خبریں، بریکنگ نیو | News, latest news, breaking news - BBC News اردو",
       "name": "twitter:title",
     },
     Object {
-      "content": "https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion/igbo",
+      "content": "https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion/urdu",
       "http-equiv": "onion-location",
     },
   ],
@@ -2272,7 +2272,7 @@ Object {
   "onChangeClientState": [Function],
   "scriptTags": Array [],
   "styleTags": Array [],
-  "title": "Ogbako - BBC News Ìgbò",
+  "title": "خبریں، تازہ خبریں، بریکنگ نیو | News, latest news, breaking news - BBC News اردو",
   "titleAttributes": Object {},
 }
 `;
