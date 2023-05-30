@@ -6,7 +6,7 @@ import headings from '#app/legacy/containers/Headings';
 import Blocks from '#app/legacy/containers/Blocks';
 import paragraph from '#app/legacy/containers/Paragraph';
 import Text from '#app/components/Text';
-import { Post, StreamResponse } from './post.d';
+import { Post, StreamResponse } from './types';
 
 // temporary solution to render LI/ OL blocks.
 const unorderedList = ({ blocks }: { blocks: OptimoBlock[] }) => {
@@ -19,6 +19,8 @@ const unorderedList = ({ blocks }: { blocks: OptimoBlock[] }) => {
       ),
     )
     .filter(text => typeof text === 'string');
+
+  if (listItems.length === 0) return null;
 
   return (
     <Text>
@@ -85,7 +87,7 @@ const PostsList = ({ postData }: { postData: StreamResponse }) => {
 
   return (
     <div>
-      {(postResults as Post[]).map((item: Post) => (
+      {postResults.map(item => (
         <PostItem postItem={item} />
       ))}
     </div>

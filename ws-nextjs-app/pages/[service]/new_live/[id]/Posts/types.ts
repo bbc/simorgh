@@ -53,7 +53,7 @@ export interface Post {
 
 export interface StreamResponse {
   data: {
-    results: (Post | null)[];
+    results: Post[] | null;
     page?: Page | null;
   };
 }
