@@ -1,9 +1,5 @@
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
-import {
-  getBlockByType,
-  getBlockData,
-  getVideoEmbedUrl,
-} from '../articles/helpers';
+import { getBlockData, getVideoEmbedUrl } from '../articles/helpers';
 
 export default ({ service, pageType, variant }) => {
   describe(`AMP only test for ${service} ${pageType}`, () => {
