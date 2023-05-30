@@ -5409,25 +5409,6 @@ module.exports = () => ({
         },
         smoke: true,
       },
-      mediaArticlePage: {
-        environments: {
-          live: {
-            paths: ['/pidgin/articles/cgwk9w4zlg8o'],
-            enabled: false,
-          },
-          test: {
-            paths: [
-              '/pidgin/articles/cvpde7nqj92o'
-            ],
-            enabled: false,
-          },
-          local: {
-            paths: ['/pidgin/articles/cvpde7nqj92o'],
-            enabled: false,
-          },
-        },
-        smoke: true,
-      },
       errorPage404: {
         environments: {
           live: {
