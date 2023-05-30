@@ -25,8 +25,9 @@ const unorderedList = ({ blocks }: { blocks: OptimoBlock[] }) => {
   return (
     <Text>
       <ul>
-        {listItems.map(item => (
-          <li>{item}</li>
+        {listItems.map((item, index) => (
+          // eslint-disable-next-line react/no-array-index-key
+          <li key={index}>{item}</li>
         ))}
       </ul>
     </Text>
@@ -88,7 +89,7 @@ const PostsList = ({ postData }: { postData: StreamResponse }) => {
   return (
     <div>
       {postResults.map(item => (
-        <PostItem postItem={item} />
+        <PostItem key={item.urn} postItem={item} />
       ))}
     </div>
   );
