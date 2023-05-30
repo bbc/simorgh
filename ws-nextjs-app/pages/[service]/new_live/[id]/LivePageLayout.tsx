@@ -7,6 +7,9 @@ import Heading from '#app/components/Heading';
 import Text from '#app/components/Text';
 import { ServiceContext } from '#contexts/ServiceContext';
 import nodeLogger from '#lib/logger.node';
+import LegacyText from '#app/legacy/containers/Text';
+import LegacyHeading from '#app/legacy/containers/Headings';
+import Blocks from '#app/legacy/containers/Blocks';
 import MetadataContainer from '../../../../../src/app/components/Metadata';
 import LinkedDataContainer from '../../../../../src/app/components/LinkedData';
 
@@ -21,6 +24,7 @@ type ComponentProps = {
     activePage: number;
     title?: string;
     description?: string;
+    summaryPoints: { content: object | null };
   };
   pathname?: string;
   showAdsBasedOnLocation?: boolean;
@@ -33,12 +37,34 @@ const LivePage = ({
   showAdsBasedOnLocation,
 }: ComponentProps) => {
   const { lang } = useContext(ServiceContext);
-  const { pageCount, activePage, title, description } = pageData;
+  const {
+    pageCount,
+    activePage,
+    title,
+    description,
+    summaryPoints: { content: summaryContent },
+  } = pageData;
 
   // TODO: Remove after testing
   logger.info('nextjs_client_render', {
     url: pathname,
   });
+
+  // Temp solution for rendering Summary
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const Summary = ({ summaryBlocks }: any) => {
+    if (!summaryBlocks) return null;
+    const componentsToRender = { subheadline: LegacyHeading, text: LegacyText };
+
+    return (
+      <>
+        <Blocks
+          blocks={summaryBlocks}
+          componentsToRender={componentsToRender}
+        />
+      </>
+    );
+  };
 
   return (
     <>
@@ -54,6 +80,8 @@ const LivePage = ({
         <Heading level={1}>{title}</Heading>
         {/* Text as="p" used as placeholder. Awaiting screen reader UX and UX */}
         <Text as="p">{description}</Text>
+        {/* @ts-expect-error Optimo type nested hell, text doesn't exist on model */}
+        <Summary summaryBlocks={summaryContent?.model.blocks} />
         <pre css={styles.code}>
           <Heading level={4}>Headers</Heading>
           {bbcOrigin && (
