@@ -205,16 +205,18 @@ const createBuilderFactory = (
 };
 
 export const buildATIUrl = (
-  data: PageData,
-  atiData: ATIData,
   requestContext: RequestContextProps,
   serviceContext: ServiceConfig,
+  data: PageData = {},
+  atiData: ATIData = {},
 ) => {
-  if (atiData) {
-    return buildPageATIUrl({ atiData, requestContext, serviceContext });
-  }
-  const buildUrl = createBuilderFactory(requestContext, pageTypeUrlBuilders);
-  return buildUrl(data, requestContext, serviceContext);
+  return atiData
+    ? buildPageATIUrl({ atiData, requestContext, serviceContext })
+    : createBuilderFactory(requestContext, pageTypeUrlBuilders)(
+        data,
+        requestContext,
+        serviceContext,
+      );
 };
 
 export const buildATIEventTrackingParams = (
