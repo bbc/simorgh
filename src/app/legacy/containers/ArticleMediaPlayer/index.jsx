@@ -9,6 +9,7 @@ import MediaPlayerContainer from '../MediaPlayer';
 
 const pageTypeMap = {
   article: 'articles',
+  mediaArticle: 'articles',
   STY: 'cps',
 };
 
