@@ -30,6 +30,7 @@ const ComponentWithContext = ({ data: { data } }) => {
         <RequestContextProvider
           isAmp={false}
           pageType={ARTICLE_PAGE}
+          pathname="/news/articles/c0000000001o"
           service="news"
         >
           <UserContextProvider>
