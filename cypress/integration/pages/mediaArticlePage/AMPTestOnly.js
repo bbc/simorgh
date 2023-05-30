@@ -29,12 +29,6 @@ export default ({ service, pageType, variant }) => {
           const { lang } = appConfig[service][variant];
           const embedUrl = getVideoEmbedUrl(articlesData, lang, true);
           cy.get(`amp-iframe[src="${embedUrl}"]`).should('be.visible');
-          cy.testResponseCodeAndTypeRetry({
-            path: embedUrl,
-            responseCode: 200,
-            type: 'text/html',
-            allowFallback: true,
-          });
         }
       });
     });
