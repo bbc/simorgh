@@ -1,14 +1,5 @@
-export default ({ service, pageType, variant }) => {
+export default ({ service, pageType }) => {
   describe(`Canonical only test for ${service} ${pageType}`, () => {
-    let mediaArticleData;
-    before(() => {
-      cy.getPageData({ service, pageType: 'article', variant }).then(
-        response => {
-          mediaArticleData = response.body;
-          // console.log(JSON.stringify(mediaArticleData));
-        },
-      );
-    });
     describe(`Chartbeat analytics`, () => {
       it('should have a script with src value set to chartbeat source', () => {
         cy.hasScriptWithChartbeatSrc();
@@ -48,11 +39,8 @@ export default ({ service, pageType, variant }) => {
           .should('be.visible')
           .should('have.css', 'top', '0px')
           .within(() => {
-            cy.get('button')
-              .click()
-              .then(() => {
-                cy.get(`iframe`).should('be.visible');
-              });
+            cy.get('button').click();
+            cy.get(`iframe`).should('be.visible');
           });
       });
     });

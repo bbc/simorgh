@@ -7,7 +7,6 @@ export default ({ service, pageType, variant }) => {
       cy.getPageData({ service, pageType: 'article', variant }).then(
         response => {
           mediaArticleData = response.body;
-          // console.log(JSON.stringify(mediaArticleData));
         },
       );
     });
