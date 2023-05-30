@@ -1,5 +1,5 @@
 import { GetServerSideProps } from 'next';
-import { Services, Variants } from 'simorgh/src/app/models/types/global';
+import { Services, Variants } from '../../../src/app/models/types/global';
 
 // This route does nothing other than return a 404 status code for other routes not yet supported in the Next.JS app
 export default function CatchAll() {

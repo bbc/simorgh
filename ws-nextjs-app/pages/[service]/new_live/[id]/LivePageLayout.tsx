@@ -7,8 +7,8 @@ import Heading from '#app/components/Heading';
 import Text from '#app/components/Text';
 import { ServiceContext } from '#contexts/ServiceContext';
 import nodeLogger from '#lib/logger.node';
-import MetadataContainer from 'simorgh/src/app/components/Metadata';
-import LinkedDataContainer from 'simorgh/src/app/components/LinkedData';
+import MetadataContainer from '../../../../../src/app/components/Metadata';
+import LinkedDataContainer from '../../../../../src/app/components/LinkedData';
 
 import styles from './styles';
 
