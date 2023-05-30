@@ -4,14 +4,23 @@ import { Helmet } from 'react-helmet';
 import { render } from '../../components/react-testing-library-with-providers';
 import HomePage from './HomePage';
 
+jest.mock('../../components/ChartbeatAnalytics', () => {
+  const ChartbeatAnalytics = () => <div>Chartbeat Analytics</div>;
+  return ChartbeatAnalytics;
+});
+
 describe('Home Page', () => {
   it('should render a section for each curation with summaries', () => {
     const { container } = render(<HomePage pageData={kyrgyzHomePageData} />, {
       service: 'kyrgyz',
+      toggles: {
+        mostRead: { enabled: true },
+      },
     });
 
     const curationsWithSummaries = kyrgyzHomePageData.curations.filter(
-      ({ summaries }) => summaries && summaries?.length > 0,
+      ({ summaries, mostRead }) =>
+        (summaries && summaries?.length > 0) || mostRead,
     );
 
     expect(container).not.toBeEmptyDOMElement();
@@ -85,5 +94,15 @@ describe('Home Page', () => {
     };
 
     expect(getLinkedDataOutput()).toMatchSnapshot();
+  });
+
+  describe('Analytics', () => {
+    it('should render a Chartbeat component', () => {
+      const { getByText } = render(<HomePage pageData={kyrgyzHomePageData} />, {
+        service: 'kyrgyz',
+      });
+
+      expect(getByText('Chartbeat Analytics')).toBeInTheDocument();
+    });
   });
 });

@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { Agent } from 'https';
 import getEnvironment from '#app/routes/utils/getEnvironment';
 import nodeLogger from '../../../lib/logger.node';
@@ -7,6 +6,7 @@ import fetchPageData from '../../utils/fetchPageData';
 import constructPageFetchUrl from '../../utils/constructPageFetchUrl';
 import { Services } from '../../../models/types/global';
 import HOME_PAGE_CONFIG from './page-config';
+import { FetchError } from '../../../models/types/fetch';
 
 const logger = nodeLogger(__filename);
 
@@ -37,7 +37,7 @@ export default async ({
 
     const optHeaders = { 'ctx-service-env': env };
 
-    // @ts-ignore - Ignore fetchPageData argument types
+    // @ts-expect-error - Ignore fetchPageData argument types
     const { status, json } = await fetchPageData({
       path: fetchUrl.toString(),
       ...(!isLocal && { agent, optHeaders }),
@@ -59,7 +59,9 @@ export default async ({
         description,
       },
     };
-  } catch ({ message, status }) {
+  } catch (error: unknown) {
+    const { message, status } = error as FetchError;
+
     logger.error(BFF_FETCH_ERROR, {
       service,
       status,
