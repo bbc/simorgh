@@ -417,6 +417,21 @@ it('should remove the top stories and features sections when isApp is set to tru
   expect(container.querySelector(`div[data-testid="features"]`)).toBeNull();
 });
 
+it('should remove the most read section ', async () => {
+  fetch.mockResponse(JSON.stringify(pidginMostReadData));
+
+  const { container } = render(
+    <Context service="pidgin" isApp>
+      <ArticlePage pageData={articleDataPidgin} />
+    </Context>,
+  );
+
+  await waitFor(() => {
+    const mostReadSection = container.querySelector('#Most-Read');
+    expect(mostReadSection).toBeNull();
+  });
+});
+
 it('should show ads when enabled', async () => {
   [
     [true, true],

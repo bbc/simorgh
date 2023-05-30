@@ -5,6 +5,7 @@ import {
   PageTypes,
   Services,
   Variants,
+  MvtExperiment,
 } from '#app/models/types/global';
 import getStatsDestination from './getStatsDestination';
 import getStatsPageIdentifier from './getStatsPageIdentifier';
@@ -25,11 +26,7 @@ type RequestContextProps = {
   isApp: boolean;
   isNextJs: boolean;
   isUK: boolean;
-  mvtExperiments: {
-    experimentName: string;
-    variation: string;
-    type: 'experiment' | 'feature';
-  } | null;
+  mvtExperiments?: MvtExperiment[] | null;
   origin: string;
   pageType: PageTypes;
   derivedPageType: string | null;
@@ -63,11 +60,7 @@ type RequestProviderProps = {
   showAdsBasedOnLocation?: boolean;
   statusCode?: number | null;
   timeOnServer?: number | null;
-  mvtExperiments?: {
-    experimentName: string;
-    variation: string;
-    type: 'experiment' | 'feature';
-  } | null;
+  mvtExperiments?: MvtExperiment[] | null;
   variant?: Variants | null;
 };
 

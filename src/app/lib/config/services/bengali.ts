@@ -320,6 +320,30 @@ export const service: DefaultServiceConfig = {
         url: '/bengali',
       },
       {
+        title: 'বিশ্ব',
+        url: '/bengali/topics/c907347rezkt',
+      },
+      {
+        title: 'রাজনীতি',
+        url: '/bengali/topics/cqywj91rkg6t',
+      },
+      {
+        title: 'অর্থনীতি',
+        url: '/bengali/topics/cjgn7233zk5t',
+      },
+      {
+        title: 'স্বাস্থ্য',
+        url: '/bengali/topics/cg7265yyxn1t',
+      },
+      {
+        title: 'খেলা',
+        url: '/bengali/topics/cdr56g57y01t',
+      },
+      {
+        title: 'প্রযুক্তি',
+        url: '/bengali/topics/c8y94k95v52t',
+      },
+      {
         title: 'ভিডিও',
         url: '/bengali/topics/cxy7jg418e7t',
       },
