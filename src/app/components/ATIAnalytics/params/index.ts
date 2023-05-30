@@ -1,3 +1,5 @@
+import isEmpty from 'ramda/src/isEmpty';
+
 import {
   HOME_PAGE,
   STORY_PAGE,
@@ -210,7 +212,7 @@ export const buildATIUrl = (
   data: PageData = {},
   atiData: ATIData = {},
 ) => {
-  return atiData
+  return !isEmpty(atiData)
     ? buildPageATIUrl({ atiData, requestContext, serviceContext })
     : createBuilderFactory(requestContext, pageTypeUrlBuilders)(
         data,
