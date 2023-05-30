@@ -15,6 +15,16 @@ const mockPageData = {
   someResponse: {
     block: 'Its a block',
   },
+};
+
+const mockPageDataWithPosts = {
+  pageCount: 10,
+  activePage: 1,
+  title: 'Test Next.JS Page',
+  description: 'Test Next.JS Page Description',
+  someResponse: {
+    block: 'Its a block',
+  },
   posts: postFixture,
 };
 
@@ -37,9 +47,9 @@ describe('Live Page', () => {
     ).toBeInTheDocument();
   });
 
-  it('should render the posts', async () => {
+  it('should render a live page with posts', async () => {
     await act(async () => {
-      render(<Live pageData={mockPageData} />);
+      render(<Live pageData={mockPageDataWithPosts} />);
     });
 
     expect(screen.getAllByText('Breaking news')[0]).toBeInTheDocument();
@@ -54,7 +64,8 @@ describe('Live Page', () => {
 
     await act(
       // eslint-disable-next-line no-return-assign
-      async () => ({ container } = render(<Live pageData={mockPageData} />)),
+      async () =>
+        ({ container } = render(<Live pageData={mockPageDataWithPosts} />)),
     );
 
     expect(container).toMatchSnapshot();
