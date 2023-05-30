@@ -44,7 +44,7 @@ const getId =
         getIdFunction = () => null;
         break;
     }
-    return pipe(getUrlPath, removeAmp, getIdFunction);
+    return pipe(getUrlPath, removeAmp, getIdFunction)(pathname);
   };
 
 const constructPageFetchUrl = ({
