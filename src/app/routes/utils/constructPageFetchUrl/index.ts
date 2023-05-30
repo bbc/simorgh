@@ -19,36 +19,33 @@ interface UrlConstructParams {
 }
 
 const removeAmp = (path: string) => path.split('.')[0];
-const getArticleId = (path: string) => path.match(/(c[a-zA-Z0-9]{10}o)/)?.[1];
-const getCpsId = (path: string) => path;
 const getTipoId = (path: string) => path.match(/(c[a-zA-Z0-9]{10}t)/)?.[1];
 
-const getId = (pageType: PageTypes, service: Services, env: Environments) => {
-  let getIdFunction;
-  switch (pageType) {
-    case PAGE_TYPES.ARTICLE:
-      getIdFunction = getArticleId;
-      break;
-    case PAGE_TYPES.CPS_ASSET:
-      getIdFunction = getCpsId;
-      break;
-    case PAGE_TYPES.HOME:
-      getIdFunction = () => {
-        return env !== 'local'
-          ? HOME_PAGE_CONFIG?.[service]?.[env]
-          : 'tipohome';
-      };
-      break;
-    case PAGE_TYPES.LIVE:
-    case PAGE_TYPES.TOPIC:
-      getIdFunction = getTipoId;
-      break;
-    default:
-      getIdFunction = () => null;
-      break;
-  }
-  return pipe(getUrlPath, removeAmp, getIdFunction);
-};
+const getId =
+  (pageType: PageTypes, service: Services, env: Environments) =>
+  (pathname: string) => {
+    let getIdFunction;
+    switch (pageType) {
+      case PAGE_TYPES.ARTICLE:
+      case PAGE_TYPES.CPS_ASSET:
+        return pathname;
+      case PAGE_TYPES.HOME:
+        getIdFunction = () => {
+          return env !== 'local'
+            ? HOME_PAGE_CONFIG?.[service]?.[env]
+            : 'tipohome';
+        };
+        break;
+      case PAGE_TYPES.LIVE:
+      case PAGE_TYPES.TOPIC:
+        getIdFunction = getTipoId;
+        break;
+      default:
+        getIdFunction = () => null;
+        break;
+    }
+    return pipe(getUrlPath, removeAmp, getIdFunction);
+  };
 
 const constructPageFetchUrl = ({
   pathname,
@@ -90,10 +87,6 @@ const constructPageFetchUrl = ({
   if (isLocal) {
     switch (pageType) {
       case PAGE_TYPES.ARTICLE:
-        fetchUrl = Url(
-          `/${service}/articles/${id}${variant ? `/${variant}` : ''}`,
-        );
-        break;
       case PAGE_TYPES.CPS_ASSET:
         fetchUrl = Url(id as string);
         break;
