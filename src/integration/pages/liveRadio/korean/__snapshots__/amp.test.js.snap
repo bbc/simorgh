@@ -197,7 +197,7 @@ Object {
 exports[`AMP Korean Live Radio Page Footer Cookie Settings Button should match text and on handler 1`] = `
 Object {
   "on": "tap:consent.prompt, privacy.hide, cookie.show, AMP.setState({ isManagingSettings: true })",
-  "text": "AdChoices / Do Not Sell My Info",
+  "text": "Do not share or sell my info",
 }
 `;
 
@@ -223,12 +223,19 @@ Object {
 
 exports[`AMP Korean Live Radio Page Header Navigation link should match text and url 3`] = `
 Object {
+  "text": "라디오",
+  "url": "/korean/bbc_korean_radio/programmes/w13xttll",
+}
+`;
+
+exports[`AMP Korean Live Radio Page Header Navigation link should match text and url 4`] = `
+Object {
   "text": "다운로드",
   "url": "/korean/downloads",
 }
 `;
 
-exports[`AMP Korean Live Radio Page Header Navigation link should match text and url 4`] = `
+exports[`AMP Korean Live Radio Page Header Navigation link should match text and url 5`] = `
 Object {
   "text": "TOP 뉴스",
   "url": "/korean/popular/read",

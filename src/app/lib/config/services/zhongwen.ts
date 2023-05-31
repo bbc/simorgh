@@ -100,8 +100,8 @@ export const service: ZhongwenConfig = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-          text: 'AdChoices / Do Not Sell My Info',
+          href: '#',
+          text: 'Do not share or sell my info',
           lang: 'en-GB',
         },
       ],
@@ -145,7 +145,7 @@ export const service: ZhongwenConfig = {
       },
       {
         title: '视频材料',
-        url: '/zhongwen/simp/media/video',
+        url: '/zhongwen/simp/topics/ck5rznle6edt',
       },
       {
         title: 'BBC英伦网',
@@ -335,7 +335,7 @@ export const service: ZhongwenConfig = {
         },
         consentBanner: {
           heading: `允许[social_media_site]内容`,
-          body: `此文包含[social_media_site}提供的内容。由于这些内容会使用曲奇或小甜饼等科技，我们在加载任何内容前会寻求您的认可。  您可能在给与许可前愿意阅读[social_media_site][link]小甜饼政策[/link]和[link]隐私政策[/link]。 希望阅读上述内容，请点击“接受并继续”。`,
+          body: `此文包含[social_media_site]提供的内容。由于这些内容会使用曲奇或小甜饼等科技，我们在加载任何内容前会寻求您的认可。  您可能在给与许可前愿意阅读[social_media_site][link]小甜饼政策[/link]和[link]隐私政策[/link]。 希望阅读上述内容，请点击“接受并继续”。`,
         },
       },
       include: {
@@ -345,6 +345,7 @@ export const service: ZhongwenConfig = {
       },
       topStoriesTitle: '头条新闻',
       featuresAnalysisTitle: '特别推荐',
+      latestMediaTitle: '最新',
     },
   },
   trad: {
@@ -392,8 +393,8 @@ export const service: ZhongwenConfig = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-          text: 'AdChoices / Do Not Sell My Info',
+          href: '#',
+          text: 'Do not share or sell my info',
           lang: 'en-GB',
         },
       ],
@@ -437,7 +438,7 @@ export const service: ZhongwenConfig = {
       },
       {
         title: '視頻材料',
-        url: '/zhongwen/trad/media/video',
+        url: '/zhongwen/trad/topics/cgvl47l38e1t',
       },
       {
         title: 'BBC英倫網',
@@ -627,7 +628,7 @@ export const service: ZhongwenConfig = {
         },
         consentBanner: {
           heading: `允許[social_media_site]内容`,
-          body: `此文包含[social_media_site}提供的内容。由於這些内容會使用曲奇或小甜餅等科技，我們在加載任何内容前會尋求您的認可。  您可能在給予許可前希望閲讀[social_media_site][link]曲奇政策[/link]和[link]隱私政策[/link]。希望閲讀上述内容，請點擊“接受並繼續”。`,
+          body: `此文包含[social_media_site]提供的内容。由於這些内容會使用曲奇或小甜餅等科技，我們在加載任何内容前會尋求您的認可。  您可能在給予許可前希望閲讀[social_media_site][link]曲奇政策[/link]和[link]隱私政策[/link]。希望閲讀上述内容，請點擊“接受並繼續”。`,
         },
       },
       include: {
@@ -637,6 +638,7 @@ export const service: ZhongwenConfig = {
       },
       topStoriesTitle: '頭條新聞',
       featuresAnalysisTitle: '特別推薦',
+      latestMediaTitle: '最新',
     },
   },
 };

@@ -32,8 +32,10 @@ jobs:
         id: cache
         uses: actions/cache@v3
         with:
-          path: node_modules
-          key: node-modules-${{ hashFiles('yarn.lock') }}
+          path: |
+            node_modules
+            ws-nextjs-app/node_modules
+          key: node-modules-${{ hashFiles('yarn.lock', 'ws-nextjs-app/yarn.lock') }}
 
       - name: Install Node Modules
         if: steps.cache.outputs.cache-hit != 'true'
@@ -47,7 +49,7 @@ jobs:
             const storybookBranch = '${{ github.event.pull_request.head.ref }}'.toLowerCase().replaceAll(/[/.]/g, '-').trim('-').substring(0, 37);
             const storybookPermalink = `https://${storybookBranch}--5d28eb3fe163f6002046d6fa.chromatic.com`;
             core.setOutput('STORYBOOK_PERMALINK', storybookPermalink);
-      
+
       - name: Publish Storybook Branch Permalink
         if: github.event.pull_request.head.repo.full_name == 'bbc/simorgh' # Only run when not on a fork
         run: |

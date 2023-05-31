@@ -23,10 +23,8 @@ ${
 const DateTimeDuration = styled.span`
   ${({ script }) => getBrevier(script)}
   ${({ service }) => getSansRegular(service)}
-  color: ${({ darkMode }) =>
-    darkMode
-      ? props => props.theme.palette.PEBBLE
-      : props => props.theme.palette.METAL};
+  color: ${({ theme }) =>
+    theme.isDarkUi ? theme.palette.PEBBLE : theme.palette.METAL};
   ${({ hasBorder, dir }) => hasBorder && borderStyling(dir)}
 `;
 

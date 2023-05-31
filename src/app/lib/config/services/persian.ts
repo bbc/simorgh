@@ -48,16 +48,16 @@ export const service: DefaultServiceConfig = {
     showRelatedTopics: true,
     podcastPromo: {
       title: 'پادکست',
-      brandTitle: 'رادیو فارسی بی‌بی‌سی',
+      brandTitle: 'صفحه ۲',
       brandDescription:
-        'پادکست چشم‌انداز بامدادی رادیو بی‌بی‌سی – دوشنبه ۱۹ اردیبهشت ۱۴۰۱',
+        'در این برنامه با صاحب‌نظران درباره مسائل سیاسی و اجتماعی روز گفت‌ و‌ گو می‌کنیم.',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0bq9rkk.jpg',
-        alt: 'پادکست چشم‌انداز بامدادی رادیو بی‌بی‌سی',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p069d2yl.jpg',
+        alt: 'صفحه ۲',
       },
       linkLabel: {
         text: 'پادکست',
-        href: 'https://www.bbc.com/persian/podcasts/p02pc9mc',
+        href: 'https://www.bbc.com/persian/podcasts/p05gyy09',
       },
       skipLink: {
         text: 'از %title% رد شوید و به خواندن ادامه دهید',
@@ -290,6 +290,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'مهمترین خبرها',
       featuresAnalysisTitle: 'گزارش و تحلیل',
+      latestMediaTitle: 'تازه ترین',
     },
     mostRead: {
       header: 'پربیننده‌ترین‌ها',
@@ -349,8 +350,8 @@ export const service: DefaultServiceConfig = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-          text: 'AdChoices / Do Not Sell My Info',
+          href: '#',
+          text: 'Do not share or sell my info',
           lang: 'en-GB',
         },
       ],
@@ -372,7 +373,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'ویدیو',
-        url: '/persian/media/video',
+        url: '/persian/topics/c6z7mnr559gt',
       },
       {
         title: 'تلویزیون',

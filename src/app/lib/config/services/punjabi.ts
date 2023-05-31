@@ -247,6 +247,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'ਤਾਜ਼ਾ ਘਟਨਾਕ੍ਰਮ',
       featuresAnalysisTitle: 'ਦ੍ਰਿਸ਼ਟੀਕੋਣ',
+      latestMediaTitle: 'ਬਿਲਕੁਲ ਨਵਾਂ',
     },
     mostRead: {
       header: 'ਸਭ ਤੋਂ ਵੱਧ ਪੜ੍ਹਿਆ ਗਿਆ',
@@ -272,7 +273,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'ਵੀਡੀਓ',
-        url: '/punjabi/media/video',
+        url: '/punjabi/topics/cx12qmz6jm4t',
       },
       {
         title: 'ਪਾਠਕਾਂ ਦੀ ਪਸੰਦ',
@@ -319,8 +320,8 @@ export const service: DefaultServiceConfig = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-          text: 'AdChoices / Do Not Sell My Info',
+          href: '#',
+          text: 'Do not share or sell my info',
           lang: 'en-GB',
         },
       ],

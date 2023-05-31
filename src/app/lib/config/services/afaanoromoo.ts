@@ -252,6 +252,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'Isin hin darbiin',
       featuresAnalysisTitle: `Maaltu haasa'ama?`,
+      latestMediaTitle: 'Haaraa',
     },
     mostRead: {
       header: "Baay'ee kan dubbifame",
@@ -304,8 +305,8 @@ export const service: DefaultServiceConfig = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-          text: 'AdChoices / Do Not Sell My Info',
+          href: '#',
+          text: 'Do not share or sell my info',
           lang: 'en-GB',
         },
       ],

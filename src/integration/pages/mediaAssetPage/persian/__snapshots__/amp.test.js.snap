@@ -119,7 +119,7 @@ Object {
   "vars": Object {
     "contentType": "article-media-asset",
     "domain": "test.bbc.co.uk",
-    "sections": "Persian, Persian - صفحه ایران, Persian - MAP, Persian - صفحه ایران - MAP, Persian - undefined-category",
+    "sections": "Persian, Persian - صفحه ایران, Persian - MAP, Persian - صفحه ایران - MAP",
     "title": "Trump long headline",
     "uid": 50924,
     "virtualReferrer": "\${documentReferrer}",
@@ -197,7 +197,7 @@ Object {
 exports[`AMP Media Asset Page Footer Cookie Settings Button should match text and on handler 1`] = `
 Object {
   "on": "tap:consent.prompt, privacy.hide, cookie.show, AMP.setState({ isManagingSettings: true })",
-  "text": "AdChoices / Do Not Sell My Info",
+  "text": "Do not share or sell my info",
 }
 `;
 
@@ -231,7 +231,7 @@ Object {
 exports[`AMP Media Asset Page Header Navigation link should match text and url 4`] = `
 Object {
   "text": "ویدیو",
-  "url": "/persian/media/video",
+  "url": "/persian/topics/c6z7mnr559gt",
 }
 `;
 

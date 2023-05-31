@@ -38,10 +38,10 @@ const StyledFooter = styled.footer`
 `;
 
 const FooterContainer = () => {
-  const { isAmp } = useContext(RequestContext);
+  const { isAmp, isApp, showAdsBasedOnLocation } = useContext(RequestContext);
   const { footer, script, service, serviceLang } = useContext(ServiceContext);
 
-  if (!footer) return null;
+  if (isApp || !footer) return null;
 
   const { externalLink, links, copyrightText, trustProjectLink } = footer;
 
@@ -52,6 +52,7 @@ const FooterContainer = () => {
       <BrandContainer linkId="footer" borderTop />
       <Footer
         isAmp={isAmp}
+        showAdsBasedOnLocation={showAdsBasedOnLocation}
         links={links}
         copyrightText={getCopyrightText(copyrightText)}
         externalLink={externalLink}

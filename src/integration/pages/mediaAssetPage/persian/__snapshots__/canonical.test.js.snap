@@ -55,13 +55,6 @@ Object {
 
 exports[`Canonical Media Asset Page Footer Anchors should match text and url 8`] = `
 Object {
-  "text": "AdChoices / Do Not Sell My Info",
-  "url": "https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/",
-}
-`;
-
-exports[`Canonical Media Asset Page Footer Anchors should match text and url 9`] = `
-Object {
   "text": "سیاست ما درباره لینک دادن به سایت های دیگر.",
   "url": "https://www.bbc.com/persian/institutional/2011/04/000001_links",
 }
@@ -97,7 +90,7 @@ Object {
 exports[`Canonical Media Asset Page Header Navigation link should match text and url 4`] = `
 Object {
   "text": "ویدیو",
-  "url": "/persian/media/video",
+  "url": "/persian/topics/c6z7mnr559gt",
 }
 `;
 

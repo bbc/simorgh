@@ -269,6 +269,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'اہم خبریں',
       featuresAnalysisTitle: 'فیچر اور تجزیے',
+      latestMediaTitle: 'تازہ ترین',
     },
     mostRead: {
       header: 'سب سے زیادہ پڑھی جانے والی',
@@ -321,8 +322,8 @@ export const service: DefaultServiceConfig = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-          text: 'AdChoices / Do Not Sell My Info',
+          href: '#',
+          text: 'Do not share or sell my info',
           lang: 'en-GB',
         },
       ],
@@ -361,7 +362,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'ویڈیو',
-        url: '/urdu/media/video',
+        url: '/urdu/topics/c1e0mzr3r2yt',
       },
     ],
   },

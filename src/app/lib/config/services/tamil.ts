@@ -265,6 +265,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'முக்கிய செய்திகள்',
       featuresAnalysisTitle: 'சிறப்புச் செய்திகள்',
+      latestMediaTitle: 'மிகச் சமீபத்தியது',
     },
     mostRead: {
       header: 'அதிகம் படிக்கப்பட்டது',
@@ -319,8 +320,8 @@ export const service: DefaultServiceConfig = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-          text: 'AdChoices / Do Not Sell My Info',
+          href: '#',
+          text: 'Do not share or sell my info',
           lang: 'en-GB',
         },
       ],

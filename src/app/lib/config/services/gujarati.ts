@@ -252,6 +252,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'નવાજૂની',
       featuresAnalysisTitle: 'બીબીસી વિશેષ',
+      latestMediaTitle: 'લેટેસ્ટ',
     },
     mostRead: {
       header: 'સૌથી વધારે વંચાયેલા સમાચાર',
@@ -302,8 +303,8 @@ export const service: DefaultServiceConfig = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-          text: 'AdChoices / Do Not Sell My Info',
+          href: '#',
+          text: 'Do not share or sell my info',
           lang: 'en-GB',
         },
       ],
@@ -316,20 +317,32 @@ export const service: DefaultServiceConfig = {
         url: '/gujarati',
       },
       {
-        title: 'વીડિયો',
-        url: '/gujarati/media/video',
-      },
-      {
-        title: 'લોકપ્રિય',
-        url: '/gujarati/popular/read',
+        title: 'ગુજરાત',
+        url: '/gujarati/topics/cz74kjn4j5wt',
       },
       {
         title: 'ભારત',
         url: '/gujarati/topics/c06gq3993v3t',
       },
       {
-        title: 'આંતરરાષ્ટ્રીય',
+        title: 'વિદેશ',
         url: '/gujarati/topics/c83plvezd90t',
+      },
+      {
+        title: 'સ્પોર્ટ્સ',
+        url: '/gujarati/topics/c404vn5qxq9t',
+      },
+      {
+        title: 'વીડિયો',
+        url: '/gujarati/topics/cpev7m0rry0t',
+      },
+      {
+        title: 'મૅગેઝિન',
+        url: '/gujarati/topics/c89lm5l6w4pt',
+      },
+      {
+        title: 'લોકપ્રિય',
+        url: '/gujarati/popular/read',
       },
     ],
   },

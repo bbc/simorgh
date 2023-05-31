@@ -15,13 +15,11 @@ import pathOr from 'ramda/src/pathOr';
 import last from 'ramda/src/last';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
-import LinkedData from '#containers/LinkedData';
 import disclaimer from '#containers/Disclaimer';
 import headings from '#containers/Headings';
 import Timestamp from '#containers/ArticleTimestamp';
 import text from '#containers/Text';
 import Image from '#containers/Image';
-import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import CpsAssetMediaPlayer from '#containers/CpsAssetMediaPlayer';
 import Blocks from '#containers/Blocks';
@@ -38,6 +36,8 @@ import {
 import { RequestContext } from '#contexts/RequestContext';
 import { GelPageGrid, GridItemLarge } from '#components/Grid';
 import RelatedTopics from '#containers/RelatedTopics';
+import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
+import LinkedData from '../../components/LinkedData';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 import MediaMessage from './MediaMessage';
@@ -178,7 +178,13 @@ const MediaAssetPage = ({ pageData }) => {
 
   return (
     <>
-      <ChartbeatAnalytics data={pageData} />
+      <ChartbeatAnalytics
+        sectionName={pageData?.relatedContent?.section?.name}
+        categoryName={pageData?.metadata?.passport?.category?.categoryName}
+        title={title}
+        producer={pageData?.metadata?.analyticsLabels?.producer}
+        chapter={pageData?.metadata?.atiAnalytics?.chapter}
+      />
       <ComscoreAnalytics />
       <CpsMetadata
         title={title}

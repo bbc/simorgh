@@ -17,7 +17,6 @@ import StyledRadioHeadingContainer from '#containers/OnDemandHeading/StyledRadio
 import OnDemandParagraphContainer from '#containers/OnDemandParagraph';
 import AVPlayer from '#containers/AVPlayer';
 import EpisodeImage from '#containers/OnDemandImage';
-import LinkedData from '#containers/LinkedData';
 import getMediaId from '#lib/utilities/getMediaId';
 import getMasterbrand from '#lib/utilities/getMasterbrand';
 import getEmbedUrl, {
@@ -27,9 +26,10 @@ import RadioScheduleContainer from '#containers/RadioSchedule';
 import RecentAudioEpisodes from '#containers/EpisodeList/RecentAudioEpisodes';
 import FooterTimestamp from '#containers/OnDemandFooterTimestamp';
 import PodcastExternalLinks from '#containers/PodcastExternalLinks';
-import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import ATIAnalytics from '#containers/ATIAnalytics';
-import MetadataContainer from '#containers/Metadata';
+import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
+import MetadataContainer from '../../components/Metadata';
+import LinkedData from '../../components/LinkedData';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
 const SKIP_LINK_ANCHOR_ID = 'content';
@@ -152,7 +152,11 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
   return (
     <>
       <ATIAnalytics data={pageData} />
-      <ChartbeatAnalytics data={pageData} />
+      <ChartbeatAnalytics
+        mediaPageType={isPodcast ? 'Podcasts' : 'Radio'}
+        title={headline}
+        contentType={pageData?.contentType}
+      />
       <ComscoreAnalytics />
       <MetadataContainer
         openGraphType="website"

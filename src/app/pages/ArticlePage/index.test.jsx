@@ -22,48 +22,16 @@ import {
   singleTextBlock,
 } from '#models/blocks/index';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-import {
-  OptimizelyExperiment,
-  OptimizelyProvider,
-} from '@optimizely/react-sdk';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ArticlePage from './ArticlePage';
 import ThemeProvider from '../../components/ThemeProvider';
 
 jest.mock('../../components/ThemeProvider');
 
-jest.mock('#containers/ChartbeatAnalytics', () => {
+jest.mock('../../components/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
 });
-
-jest.mock('@optimizely/react-sdk', () => {
-  const actualModules = jest.requireActual('@optimizely/react-sdk');
-  return {
-    __esModule: true,
-    ...actualModules,
-    OptimizelyExperiment: jest.fn(),
-  };
-});
-
-jest.mock('#containers/OptimizelyPageViewTracking', () => {
-  const OptimizelyPageViewTracking = () => null;
-  return OptimizelyPageViewTracking;
-});
-
-jest.mock('#containers/OptimizelyArticleCompleteTracking', () => {
-  const OptimizelyArticleCompleteTracking = () => null;
-  return OptimizelyArticleCompleteTracking;
-});
-
-const optimizely = {
-  onReady: jest.fn(() => Promise.resolve()),
-  track: jest.fn(),
-  user: {
-    attributes: {},
-  },
-  close: jest.fn(),
-};
 
 const recommendationSettings = {
   hasStoryRecommendations: true,
@@ -73,51 +41,59 @@ const recommendationSettings = {
   },
 };
 
+const input = {
+  bbcOrigin: 'https://www.test.bbc.co.uk',
+  id: 'c0000000000o',
+  isAmp: false,
+  pageType: ARTICLE_PAGE,
+  pathname: '/pathname',
+  statusCode: 200,
+};
+
 const Context = ({
   service = 'pidgin',
   children,
   adsToggledOn = false,
   mostReadToggledOn = true,
   showAdsBasedOnLocation = false,
-} = {}) => (
-  <BrowserRouter>
-    <ThemeProvider service={service} variant="default">
-      <ToggleContextProvider
-        toggles={{
-          mostRead: {
-            enabled: mostReadToggledOn,
-          },
-          ads: {
-            enabled: adsToggledOn,
-          },
-          cpsRecommendations: {
-            enabled: true,
-          },
-        }}
-      >
-        <RequestContextProvider
-          bbcOrigin="https://www.test.bbc.co.uk"
-          id="c0000000000o"
-          isAmp={false}
-          pageType={ARTICLE_PAGE}
-          pathname="/pathname"
-          service={service}
-          statusCode={200}
-          showAdsBasedOnLocation={showAdsBasedOnLocation}
+  isApp = false,
+} = {}) => {
+  const appInput = {
+    ...input,
+    service,
+    showAdsBasedOnLocation,
+    isApp,
+  };
+
+  return (
+    <BrowserRouter>
+      <ThemeProvider service={service} variant="default">
+        <ToggleContextProvider
+          toggles={{
+            mostRead: {
+              enabled: mostReadToggledOn,
+            },
+            ads: {
+              enabled: adsToggledOn,
+            },
+            cpsRecommendations: {
+              enabled: true,
+            },
+          }}
         >
-          <ServiceContextProvider
-            service={service}
-            recommendations={recommendationSettings}
-          >
-            <OptimizelyProvider optimizely={optimizely} isServerSide>
+          <RequestContextProvider {...appInput}>
+            <ServiceContextProvider
+              service={service}
+              recommendations={recommendationSettings}
+            >
               {children}
-            </OptimizelyProvider>
-          </ServiceContextProvider>
-        </RequestContextProvider>
-      </ToggleContextProvider>
-    </ThemeProvider>
-  </BrowserRouter>
-);
+            </ServiceContextProvider>
+          </RequestContextProvider>
+        </ToggleContextProvider>
+      </ThemeProvider>
+    </BrowserRouter>
+  );
+};
 
 beforeEach(() => {
   fetch.resetMocks();
@@ -422,6 +398,40 @@ it('should render the top stories and features when passed', async () => {
   expect(getByTestId('features')).toBeInTheDocument();
 });
 
+it('should remove the top stories and features sections when isApp is set to true', async () => {
+  const pageDataWithSecondaryColumn = {
+    ...articleDataNews,
+    secondaryColumn: {
+      topStories: [],
+      features: [],
+    },
+  };
+
+  const { container } = render(
+    <Context service="news" isApp>
+      <ArticlePage pageData={pageDataWithSecondaryColumn} />
+    </Context>,
+  );
+
+  expect(container.querySelector(`div[data-testid="top-stories"]`)).toBeNull();
+  expect(container.querySelector(`div[data-testid="features"]`)).toBeNull();
+});
+
+it('should remove the most read section ', async () => {
+  fetch.mockResponse(JSON.stringify(pidginMostReadData));
+
+  const { container } = render(
+    <Context service="pidgin" isApp>
+      <ArticlePage pageData={articleDataPidgin} />
+    </Context>,
+  );
+
+  await waitFor(() => {
+    const mostReadSection = container.querySelector('#Most-Read');
+    expect(mostReadSection).toBeNull();
+  });
+});
+
 it('should show ads when enabled', async () => {
   [
     [true, true],
@@ -454,19 +464,6 @@ it('should render WSOJ recommendations when passed', async () => {
     ...articleDataNews,
     recommendations: sampleRecommendations,
   };
-
-  OptimizelyExperiment.mockImplementation(props => {
-    const { children } = props;
-
-    const variation = 'control';
-
-    if (children != null && typeof children === 'function') {
-      return <>{children(variation, true, false)}</>;
-    }
-
-    return null;
-  });
-
   const { getByText } = render(
     <Context service="turkce">
       <ArticlePage pageData={pageDataWithSecondaryColumn} />

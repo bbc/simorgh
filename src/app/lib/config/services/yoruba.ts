@@ -237,6 +237,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'Ìròyìn tó ṣe kókó',
       featuresAnalysisTitle: 'Ìwádìí kíkún lóríi kókó ìròyìn ',
+      latestMediaTitle: 'Èyí tí ó ṣẹ̀ṣẹ̀dé',
     },
     mostRead: {
       header: 'Èyítí A Ń Kà Jùlọ',
@@ -287,8 +288,8 @@ export const service: DefaultServiceConfig = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-          text: 'AdChoices / Do Not Sell My Info',
+          href: '#',
+          text: 'Do not share or sell my info',
           lang: 'en-GB',
         },
       ],

@@ -251,6 +251,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'Бош мақола',
       featuresAnalysisTitle: 'Муҳаррир танлови',
+      latestMediaTitle: 'Сўнгги',
     },
     mostRead: {
       header: 'Энг кўп ўқилган',
@@ -297,8 +298,8 @@ export const service: DefaultServiceConfig = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-          text: 'AdChoices / Do Not Sell My Info',
+          href: '#',
+          text: 'Do not share or sell my info',
           lang: 'en-GB',
         },
       ],
@@ -335,8 +336,8 @@ export const service: DefaultServiceConfig = {
         url: '/uzbek/topics/cjgn7n7v3yjt',
       },
       {
-        title: 'Видео',
-        url: '/uzbek/media/video',
+        title: 'BBC News O‘zbek TV dasturi',
+        url: '/uzbek/bbc_uzbek_tv/tv_programmes/w13xttqv?limit=4',
       },
     ],
   },

@@ -49,7 +49,7 @@ export const service: DefaultServiceConfig = {
       title: 'البودكاست',
       brandTitle: 'بي بي سي إكسترا',
       brandDescription:
-        'بي بي سي إكسترا بودكاست يناقش كل أمور حياتنا اليومية، يأتيكم ثلاثة أيام أسبوعياً',
+        'بودكاست أسبوعي يقدم  قصصا إنسانية عن العالم العربي وشبابه.',
       image: {
         src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p09t98w8.jpg',
         alt: 'بي بي سي إكسترا',
@@ -326,8 +326,8 @@ export const service: DefaultServiceConfig = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-          text: 'AdChoices / Do Not Sell My Info',
+          href: '#',
+          text: 'Do not share or sell my info',
           lang: 'en-GB',
         },
       ],

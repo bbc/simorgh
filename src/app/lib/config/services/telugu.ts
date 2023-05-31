@@ -255,6 +255,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'ముఖ్యమైన కథనాలు',
       featuresAnalysisTitle: 'ఫీచర్లు',
+      latestMediaTitle: 'తాజా వార్తలు',
     },
     mostRead: {
       header: 'ఎక్కువమంది చదివినవి',
@@ -305,8 +306,8 @@ export const service: DefaultServiceConfig = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-          text: 'AdChoices / Do Not Sell My Info',
+          href: '#',
+          text: 'Do not share or sell my info',
           lang: 'en-GB',
         },
       ],
@@ -321,7 +322,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'వీడియో',
-        url: '/telugu/media/video',
+        url: '/telugu/topics/cl29j0e3e2dt',
       },
       {
         title: 'ఎక్కువ మంది చదివినవి',

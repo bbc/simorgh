@@ -37,13 +37,21 @@ const optHeaders = { 'ctx-service-env': 'live' };
 describe('get initial data for topic', () => {
   const agent = { ca: 'ca', key: 'key' };
   const getAgent = jest.fn(() => agent);
+  const originalApplicationEnvironment = process.env.SIMORGH_APP_ENV;
+
+  beforeEach(() => {
+    process.env.SIMORGH_APP_ENV = 'live';
+  });
+
   afterEach(() => {
     jest.clearAllMocks();
+    process.env.SIMORGH_APP_ENV = originalApplicationEnvironment;
   });
+
   it('should return the correct topic data', async () => {
     fetch.mockResponse(JSON.stringify(topicJSON));
     const { pageData } = await getInitialData({
-      path: 'mock-topic-path',
+      path: 'pidgin/topics/c0000000000t',
       getAgent,
       service: 'pidgin',
     });
@@ -74,7 +82,7 @@ describe('get initial data for topic', () => {
     );
     fetch.mockResponse(JSON.stringify(topicJSONWithoutDescription));
     const { pageData } = await getInitialData({
-      path: 'mock-topic-path',
+      path: 'pidgin/topics/c0000000000t',
       getAgent,
       service: 'pidgin',
     });
@@ -90,7 +98,7 @@ describe('get initial data for topic', () => {
     );
     fetch.mockResponse(JSON.stringify(topicJSONWithoutDescription));
     const { pageData } = await getInitialData({
-      path: 'mock-topic-path',
+      path: 'pidgin/topics/c0000000000t',
       getAgent,
       service: 'pidgin',
     });
@@ -102,13 +110,13 @@ describe('get initial data for topic', () => {
     fetch.mockResponse(JSON.stringify(topicJSON));
     const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
     await getInitialData({
-      path: 'pidgin/topics/54321',
+      path: 'pidgin/topics/c0000000000t',
       getAgent,
       service: 'pidgin',
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
-      path: 'https://mock-bff-path/?id=54321&service=pidgin&pageType=topic',
+      path: 'https://mock-bff-path/?id=c0000000000t&service=pidgin&pageType=topic',
       agent,
       optHeaders,
     });
@@ -118,14 +126,14 @@ describe('get initial data for topic', () => {
     fetch.mockResponse(JSON.stringify(topicJSON));
     const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
     await getInitialData({
-      path: 'serbian/cyr/topics/54321',
+      path: 'serbian/cyr/topics/c0000000000t',
       getAgent,
       service: 'serbian',
       variant: 'cyr',
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
-      path: 'https://mock-bff-path/?id=54321&service=serbian&variant=cyr&pageType=topic',
+      path: 'https://mock-bff-path/?id=c0000000000t&service=serbian&pageType=topic&variant=cyr',
       agent,
       optHeaders,
     });
@@ -135,13 +143,13 @@ describe('get initial data for topic', () => {
     fetch.mockResponse(JSON.stringify(topicJSON));
     const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
     await getInitialData({
-      path: 'pidgin/topics/54321.amp',
+      path: 'pidgin/topics/c0000000000t.amp',
       getAgent,
       service: 'pidgin',
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
-      path: 'https://mock-bff-path/?id=54321&service=pidgin&pageType=topic',
+      path: 'https://mock-bff-path/?id=c0000000000t&service=pidgin&pageType=topic',
       agent,
       optHeaders,
     });
@@ -151,13 +159,13 @@ describe('get initial data for topic', () => {
     fetch.mockResponse(JSON.stringify(topicJSON));
     const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
     await getInitialData({
-      path: 'pidgin/topics/54321?foo=bar',
+      path: 'pidgin/topics/c0000000000t?foo=bar',
       getAgent,
       service: 'pidgin',
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
-      path: 'https://mock-bff-path/?id=54321&service=pidgin&pageType=topic',
+      path: 'https://mock-bff-path/?id=c0000000000t&service=pidgin&pageType=topic',
       agent,
       optHeaders,
     });
@@ -167,15 +175,32 @@ describe('get initial data for topic', () => {
     fetch.mockResponse(JSON.stringify(topicJSON));
     const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
     await getInitialData({
-      path: 'pidgin/topics/54321.amp?foo=bar',
+      path: 'pidgin/topics/c0000000000t.amp?foo=bar',
       getAgent,
       service: 'pidgin',
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
-      path: 'https://mock-bff-path/?id=54321&service=pidgin&pageType=topic',
+      path: 'https://mock-bff-path/?id=c0000000000t&service=pidgin&pageType=topic',
       agent,
       optHeaders,
+    });
+  });
+
+  it('should request local data on local environment', async () => {
+    process.env.SIMORGH_APP_ENV = 'local';
+    fetch.mockResponse(JSON.stringify(topicJSON));
+    const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
+    await getInitialData({
+      path: 'pidgin/topics/c0000000000t',
+      getAgent,
+      service: 'pidgin',
+    });
+
+    expect(fetchDataSpy).toHaveBeenCalledWith({
+      path: 'http://localhost/pidgin/topics/c0000000000t',
+      agent: null,
+      optHeaders: null,
     });
   });
 
@@ -183,7 +208,7 @@ describe('get initial data for topic', () => {
     fetch.mockResponse(JSON.stringify(topicJSON));
     const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
     await getInitialData({
-      path: 'pidgin/topics/54321.?renderer_env=test',
+      path: 'pidgin/topics/c0000000000t?renderer_env=test',
       getAgent,
       service: 'pidgin',
     });
@@ -191,9 +216,26 @@ describe('get initial data for topic', () => {
     const testHeader = { 'ctx-service-env': 'test' };
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
-      path: 'https://mock-bff-path/?id=54321&service=pidgin&pageType=topic',
+      path: 'https://mock-bff-path/?id=c0000000000t&service=pidgin&pageType=topic',
       agent,
       optHeaders: testHeader,
+    });
+  });
+
+  it('should request live data when renderer_env is set to live', async () => {
+    process.env.SIMORGH_APP_ENV = 'test';
+    fetch.mockResponse(JSON.stringify(topicJSON));
+    const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
+    await getInitialData({
+      path: 'pidgin/topics/c0000000000t?renderer_env=live',
+      getAgent,
+      service: 'pidgin',
+    });
+
+    expect(fetchDataSpy).toHaveBeenCalledWith({
+      path: 'https://mock-bff-path/?id=c0000000000t&service=pidgin&pageType=topic',
+      agent,
+      optHeaders,
     });
   });
 
@@ -201,14 +243,14 @@ describe('get initial data for topic', () => {
     fetch.mockResponse(JSON.stringify(topicJSON));
     const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
     await getInitialData({
-      path: 'pidgin/topics/54321',
+      path: 'pidgin/topics/c0000000000t',
       getAgent,
       service: 'pidgin',
       page: 20,
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
-      path: 'https://mock-bff-path/?id=54321&service=pidgin&page=20&pageType=topic',
+      path: 'https://mock-bff-path/?id=c0000000000t&service=pidgin&pageType=topic&page=20',
       agent,
       optHeaders,
     });

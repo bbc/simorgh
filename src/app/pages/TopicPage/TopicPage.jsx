@@ -2,15 +2,15 @@ import React, { useContext } from 'react';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import { shape, arrayOf, string } from 'prop-types';
 import path from 'ramda/src/path';
-import MetadataContainer from '#containers/Metadata';
-import LinkedData from '#containers/LinkedData';
 import AdContainer from '#containers/Ad';
 import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
 import useToggle from '#hooks/useToggle';
 import { RequestContext } from '#contexts/RequestContext';
-import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import Curation from '#app/components/Curation';
+import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
+import LinkedData from '../../components/LinkedData';
 import styles from './index.styles';
+import MetadataContainer from '../../components/Metadata';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import TopicImage from './TopicImage';
 import TopicTitle from './TopicTitle';
@@ -63,7 +63,7 @@ const TopicPage = ({ pageData }) => {
       <main css={styles.main}>
         <div css={styles.inner}>
           <ATIAnalytics data={pageData} />
-          <ChartbeatAnalytics data={pageData} />
+          <ChartbeatAnalytics title={title} />
           <MetadataContainer
             title={activePage >= 2 ? pageTitle : title}
             socialHeadline={title}

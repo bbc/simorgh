@@ -248,6 +248,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'প্রধান খবর',
       featuresAnalysisTitle: 'চিঠিপত্র ও মতামত',
+      latestMediaTitle: 'সর্বশেষ',
     },
     mostRead: {
       header: 'সর্বাধিক পঠিত',
@@ -304,8 +305,8 @@ export const service: DefaultServiceConfig = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-          text: 'AdChoices / Do Not Sell My Info',
+          href: '#',
+          text: 'Do not share or sell my info',
           lang: 'en-GB',
         },
       ],
@@ -317,6 +318,30 @@ export const service: DefaultServiceConfig = {
       {
         title: 'মূলপাতা',
         url: '/bengali',
+      },
+      {
+        title: 'বিশ্ব',
+        url: '/bengali/topics/c907347rezkt',
+      },
+      {
+        title: 'রাজনীতি',
+        url: '/bengali/topics/cqywj91rkg6t',
+      },
+      {
+        title: 'অর্থনীতি',
+        url: '/bengali/topics/cjgn7233zk5t',
+      },
+      {
+        title: 'স্বাস্থ্য',
+        url: '/bengali/topics/cg7265yyxn1t',
+      },
+      {
+        title: 'খেলা',
+        url: '/bengali/topics/cdr56g57y01t',
+      },
+      {
+        title: 'প্রযুক্তি',
+        url: '/bengali/topics/c8y94k95v52t',
       },
       {
         title: 'ভিডিও',
