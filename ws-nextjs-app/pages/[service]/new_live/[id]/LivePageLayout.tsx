@@ -23,7 +23,7 @@ type ComponentProps = {
     activePage: number;
     title?: string;
     description?: string;
-    summaryPoints: { content: { model: { blocks: [object] } } | null };
+    summaryPoints: { content: { model: { blocks: object[] } } | null };
   };
   pathname?: string;
   showAdsBasedOnLocation?: boolean;
