@@ -1,5 +1,4 @@
 import React from 'react';
-import { data as kyrgyzHomePageData } from '#data/kyrgyz/homePage/index.json';
 import { render } from '../react-testing-library-with-providers';
 import PageLayoutWrapper from '.';
 

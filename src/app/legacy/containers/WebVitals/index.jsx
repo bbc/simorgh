@@ -21,10 +21,11 @@ const WebVitals = ({ pageType }) => {
   const wsPageType = pageType
     ? `WS-${pageType.replace(/\s+/g, '-').toUpperCase()}`
     : null;
-
   if (!wsPageType) {
     // eslint-disable-next-line no-console
-    console.warn('Web Vitals warning: No page type to report.');
+    console.warn(
+      'Web Vitals wsPageTypewsPageTypewsPageTypewsPageTypewarning: No page type to report.',
+    );
   }
 
   const webVitalsConfig = {
