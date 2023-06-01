@@ -60,7 +60,7 @@ exports[`InlineLinkContainer external link accessibility should be explicitly ma
 </div>
 `;
 
-exports[`InlineLinkContainer internal link not matching SPA route should render correctly 1`] = `
+exports[`InlineLinkContainer internal link route should render correctly 1`] = `
 .emotion-0 {
   color: #222222;
   border-bottom: 1px solid #B80000;
@@ -87,64 +87,6 @@ exports[`InlineLinkContainer internal link not matching SPA route should render 
     <b>
       This is bold text for a link
     </b>
-  </a>
-</div>
-`;
-
-exports[`InlineLinkContainer link matching routes for SPA should render correctly 1`] = `
-.emotion-0 {
-  color: #222222;
-  border-bottom: 1px solid #B80000;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0:visited {
-  color: #6E6E73;
-  border-bottom: 1px solid #6E6E73;
-}
-
-.emotion-0:focus,
-.emotion-0:hover {
-  border-bottom: 2px solid #B80000;
-  color: #B80000;
-}
-
-<div>
-  <a
-    class="focusIndicatorReducedWidth emotion-0 emotion-1"
-    href="/news/articles/c0g992jmmkko"
-  >
-    This is text for an internal link
-  </a>
-</div>
-`;
-
-exports[`InlineLinkContainer link matching routes for SPA should render correctly for TEST environment 1`] = `
-.emotion-0 {
-  color: #222222;
-  border-bottom: 1px solid #B80000;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0:visited {
-  color: #6E6E73;
-  border-bottom: 1px solid #6E6E73;
-}
-
-.emotion-0:focus,
-.emotion-0:hover {
-  border-bottom: 2px solid #B80000;
-  color: #B80000;
-}
-
-<div>
-  <a
-    class="focusIndicatorReducedWidth emotion-0 emotion-1"
-    href="/news/articles/c0g992jmmkko"
-  >
-    This is text for an internal link
   </a>
 </div>
 `;
