@@ -9,7 +9,6 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import styles from './index.styles';
 
 interface Props extends HTMLAttributes<HTMLElement> {
-  allowCSR?: boolean;
   className?: string;
   fontVariant?: FontVariant;
   size?: GelFontSize;
