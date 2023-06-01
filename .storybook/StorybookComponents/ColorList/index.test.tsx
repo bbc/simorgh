@@ -6,12 +6,12 @@ import { LEGACY } from '../../../docs/User-Experience/colours';
 
 const ColorListFixture = () => (
   <ThemeProvider service="news" variant="default">
-    <ColorList COLORS={LEGACY} listName="test list" />
+    <ColorList Colors={LEGACY} />
   </ThemeProvider>
 );
 
 describe('Color List', () => {
-  it('should render a list when more than one COLOR is in the list', async () => {
+  it('should render a unordered list when more than one Color is in the list', async () => {
     await act(async () => {
       render(<ColorListFixture />);
     });

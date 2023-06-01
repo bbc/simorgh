@@ -1,13 +1,30 @@
 import React from 'react';
 import styles from './index.styles';
 import ColorCard from './ColorCard';
-import SkipLinkWrapper from '../../../src/app/legacy/components/SkipLinkWrapper';
+import isEmpty from 'ramda/src/isEmpty';
 
-const ColorList = ({ COLORS }) => {
-  const terms = { '%colour_bar%': 'Colour Bar' };
-  return (
+interface Props {
+  Colors: {
+    colorName: string;
+    colorCode: string;
+  }[];
+}
+
+const ColorList = ({ Colors }: Props) => {
+  if (!Colors || isEmpty(Colors)) {
+    return null;
+  }
+
+  const isSingleColor: Boolean = Colors.length === 1;
+
+  return isSingleColor ? (
+    <ColorCard
+      colorName={Colors[0].colorName}
+      colorCode={Colors[0].colorCode}
+    ></ColorCard>
+  ) : (
     <ul css={styles.colorGrid} role="list">
-      {COLORS.map((item, index) => {
+      {Colors.map((item, index) => {
         return (
           <li key={index}>
             <ColorCard

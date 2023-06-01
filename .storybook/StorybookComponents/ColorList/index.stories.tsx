@@ -7,4 +7,4 @@ export default {
   component: ColorList,
 };
 
-export const colorCardWhite = () => <ColorList COLORS={LEGACY} />;
+export const colorCardWhite = () => <ColorList Colors={LEGACY} />;

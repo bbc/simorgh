@@ -1,6 +1,5 @@
 import { css, Theme } from '@emotion/react';
 
-// Border uses grey-5
 const styles = {
   colorGrid: {
     display: 'grid',

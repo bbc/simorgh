@@ -1,8 +1,12 @@
 import { css, Theme } from '@emotion/react';
+import pixelsToRem from '../../../../src/app/utilities/pixelsToRem';
 
-// Border uses grey-5
 const styles = {
-  wrapper: { padding: '0.5rem', border: '1px solid black' },
+  wrapper: ({ spacings, palette }: Theme) =>
+    css({
+      padding: `${spacings.FULL}rem`,
+      border: `${pixelsToRem(1)}rem solid ${palette.GREY_5}`,
+    }),
 
   color:
     colorCode =>
