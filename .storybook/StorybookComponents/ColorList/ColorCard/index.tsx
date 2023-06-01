@@ -8,8 +8,9 @@ const ColorCard = ({ colorName, colorCode }) => {
       <Text
         size="bodyCopy"
         fontVariant="sansRegular"
-        role="text"
         css={[styles.color(colorCode)]}
+        // eslint-disable-next-line jsx-a11y/aria-role
+        role="text"
       >
         <Text
           size="bodyCopy"

@@ -1,7 +1,7 @@
 import React from 'react';
+import isEmpty from 'ramda/src/isEmpty';
 import styles from './index.styles';
 import ColorCard from './ColorCard';
-import isEmpty from 'ramda/src/isEmpty';
 
 interface Props {
   Colors: {
@@ -15,22 +15,19 @@ const ColorList = ({ Colors }: Props) => {
     return null;
   }
 
-  const isSingleColor: Boolean = Colors.length === 1;
+  const isSingleColor: boolean = Colors.length === 1;
 
   return isSingleColor ? (
     <ColorCard
       colorName={Colors[0].colorName}
       colorCode={Colors[0].colorCode}
-    ></ColorCard>
+    />
   ) : (
     <ul css={styles.colorGrid} role="list">
-      {Colors.map((item, index) => {
+      {Colors.map(item => {
         return (
-          <li key={index}>
-            <ColorCard
-              colorName={item.colorName}
-              colorCode={item.colorCode}
-            ></ColorCard>
+          <li key={item.colorName}>
+            <ColorCard colorName={item.colorName} colorCode={item.colorCode} />
           </li>
         );
       })}

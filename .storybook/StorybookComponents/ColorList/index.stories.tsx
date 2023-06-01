@@ -1,6 +1,6 @@
 import React from 'react';
 import { LEGACY } from '../../../docs/User-Experience/colours';
-import ColorList from './';
+import ColorList from '.';
 
 export default {
   title: 'storybook components/ColorCard',
