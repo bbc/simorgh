@@ -15,6 +15,9 @@ const mockPageData = {
   someResponse: {
     block: 'Its a block',
   },
+  liveTextStream: {
+    content: postFixture,
+  },
 };
 
 const mockPageDataWithPosts = {
@@ -25,7 +28,9 @@ const mockPageDataWithPosts = {
   someResponse: {
     block: 'Its a block',
   },
-  posts: postFixture,
+  liveTextStream: {
+    content: postFixture,
+  },
 };
 
 describe('Live Page', () => {
