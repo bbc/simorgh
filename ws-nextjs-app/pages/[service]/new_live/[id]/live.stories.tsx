@@ -1,5 +1,6 @@
 import React from 'react';
 import PageLayoutWrapper from '#app/components/PageLayoutWrapper';
+import postFixture from '#data/pidgin/posts/postFixture.json';
 import Live from './LivePageLayout';
 
 const mockPageData = {
@@ -10,6 +11,7 @@ const mockPageData = {
   someResponse: {
     block: 'Its a block',
   },
+  posts: postFixture,
 };
 
 const Component = () => (

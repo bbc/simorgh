@@ -28,41 +28,7 @@ const InlineLinkContext = ({ locator, isExternal, blocks, onClick }) => (
 );
 
 describe('InlineLinkContainer', () => {
-  describe('link matching routes for SPA', () => {
-    it('should render correctly', () => {
-      const { container } = render(
-        /*
-      for the value it would bring, it is much simpler to wrap a react-router Link in a Router, rather than mock a Router or pass some mocked context.
-    */
-        <StaticRouter>
-          <InlineLinkContainer
-            locator="https://www.bbc.com/news/articles/c0g992jmmkko"
-            blocks={[fragmentBlock('This is text for an internal link')]}
-            isExternal={false}
-          />
-        </StaticRouter>,
-      );
-      expect(container).toMatchSnapshot();
-    });
-
-    it('should render correctly for TEST environment', () => {
-      const { container } = render(
-        /*
-      for the value it would bring, it is much simpler to wrap a react-router Link in a Router, rather than mock a Router or pass some mocked context.
-    */
-        <StaticRouter>
-          <InlineLinkContainer
-            locator="https://www.test.bbc.com/news/articles/c0g992jmmkko"
-            blocks={[fragmentBlock('This is text for an internal link')]}
-            isExternal={false}
-          />
-        </StaticRouter>,
-      );
-      expect(container).toMatchSnapshot();
-    });
-  });
-
-  describe('internal link not matching SPA route', () => {
+  describe('internal link route', () => {
     it('should render correctly', () => {
       const { container } = render(
         <InlineLinkContainer

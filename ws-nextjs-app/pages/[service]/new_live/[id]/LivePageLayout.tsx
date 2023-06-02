@@ -9,8 +9,10 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import nodeLogger from '#lib/logger.node';
 import MetadataContainer from '../../../../../src/app/components/Metadata';
 import LinkedDataContainer from '../../../../../src/app/components/LinkedData';
+import PostsList from './Posts/index';
 
 import styles from './styles';
+import { StreamResponse } from './Posts/types';
 
 const logger = nodeLogger(__filename);
 
@@ -21,6 +23,7 @@ type ComponentProps = {
     activePage: number;
     title?: string;
     description?: string;
+    posts?: StreamResponse;
   };
   pathname?: string;
   showAdsBasedOnLocation?: boolean;
@@ -33,7 +36,7 @@ const LivePage = ({
   showAdsBasedOnLocation,
 }: ComponentProps) => {
   const { lang } = useContext(ServiceContext);
-  const { pageCount, activePage, title, description } = pageData;
+  const { pageCount, activePage, title, description, posts } = pageData;
 
   // TODO: Remove after testing
   logger.info('nextjs_client_render', {
@@ -54,6 +57,7 @@ const LivePage = ({
         <Heading level={1}>{title}</Heading>
         {/* Text as="p" used as placeholder. Awaiting screen reader UX and UX */}
         <Text as="p">{description}</Text>
+        {posts && <PostsList postData={posts} />}
         <pre css={styles.code}>
           <Heading level={4}>Headers</Heading>
           {bbcOrigin && (
