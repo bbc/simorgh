@@ -8,10 +8,12 @@ const mockPageData = {
   activePage: 1,
   title: 'Live Page Title',
   description: 'Live page description',
+  liveTextStream: {
+    content: postFixture,
+  },
   someResponse: {
     block: 'Its a block',
   },
-  posts: postFixture,
 };
 
 const Component = () => (

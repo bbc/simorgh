@@ -23,7 +23,7 @@ type ComponentProps = {
     activePage: number;
     title?: string;
     description?: string;
-    posts?: StreamResponse;
+    liveTextStream: { content: StreamResponse | null };
   };
   pathname?: string;
   showAdsBasedOnLocation?: boolean;
@@ -36,7 +36,8 @@ const LivePage = ({
   showAdsBasedOnLocation,
 }: ComponentProps) => {
   const { lang } = useContext(ServiceContext);
-  const { pageCount, activePage, title, description, posts } = pageData;
+  const { pageCount, activePage, title, description, liveTextStream } =
+    pageData;
 
   // TODO: Remove after testing
   logger.info('nextjs_client_render', {
@@ -57,7 +58,9 @@ const LivePage = ({
         <Heading level={1}>{title}</Heading>
         {/* Text as="p" used as placeholder. Awaiting screen reader UX and UX */}
         <Text as="p">{description}</Text>
-        {posts && <PostsList postData={posts} />}
+        {liveTextStream.content && (
+          <PostsList postData={liveTextStream.content} />
+        )}
         <pre css={styles.code}>
           <Heading level={4}>Headers</Heading>
           {bbcOrigin && (
