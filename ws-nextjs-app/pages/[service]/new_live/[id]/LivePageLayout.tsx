@@ -11,8 +11,10 @@ import LegacyText from '#app/legacy/containers/Text';
 import Blocks from '#app/legacy/containers/Blocks';
 import MetadataContainer from '../../../../../src/app/components/Metadata';
 import LinkedDataContainer from '../../../../../src/app/components/LinkedData';
+import PostsList from './Posts/index';
 
 import styles from './styles';
+import { StreamResponse } from './Posts/types';
 
 const logger = nodeLogger(__filename);
 
@@ -24,6 +26,7 @@ type ComponentProps = {
     title?: string;
     description?: string;
     summaryPoints: { content: { model: { blocks: object[] } } | null };
+    posts?: StreamResponse;
   };
   pathname?: string;
   showAdsBasedOnLocation?: boolean;
@@ -41,6 +44,7 @@ const LivePage = ({
     activePage,
     title,
     description,
+    posts,
     summaryPoints: { content: summaryContent },
   } = pageData;
 
@@ -81,6 +85,7 @@ const LivePage = ({
         {/* Text as="p" used as placeholder. Awaiting screen reader UX and UX */}
         <Text as="p">{description}</Text>
         <Summary summaryBlocks={summaryContent?.model.blocks} />
+        {posts && <PostsList postData={posts} />}
         <pre css={styles.code}>
           <Heading level={4}>Headers</Heading>
           {bbcOrigin && (
