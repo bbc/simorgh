@@ -7,6 +7,6 @@
     "declaration": false,
     "jsx": "preserve"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "next.config.js"],
-  "exclude": ["node_modules", "build", "src/app/legacy/**/*", "cypress"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "next.config.js", "integration/IntegrationTestEnvironment.ts"],
+  "exclude": ["node_modules", "build", "src/app/legacy/**/*",  "cypress"]
 }
