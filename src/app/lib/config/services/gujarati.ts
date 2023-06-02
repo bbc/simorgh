@@ -317,20 +317,32 @@ export const service: DefaultServiceConfig = {
         url: '/gujarati',
       },
       {
-        title: 'વીડિયો',
-        url: '/gujarati/topics/cpev7m0rry0t',
-      },
-      {
-        title: 'લોકપ્રિય',
-        url: '/gujarati/popular/read',
+        title: 'ગુજરાત',
+        url: '/gujarati/topics/cz74kjn4j5wt',
       },
       {
         title: 'ભારત',
         url: '/gujarati/topics/c06gq3993v3t',
       },
       {
-        title: 'આંતરરાષ્ટ્રીય',
+        title: 'વિદેશ',
         url: '/gujarati/topics/c83plvezd90t',
+      },
+      {
+        title: 'સ્પોર્ટ્સ',
+        url: '/gujarati/topics/c404vn5qxq9t',
+      },
+      {
+        title: 'વીડિયો',
+        url: '/gujarati/topics/cpev7m0rry0t',
+      },
+      {
+        title: 'મૅગેઝિન',
+        url: '/gujarati/topics/c89lm5l6w4pt',
+      },
+      {
+        title: 'લોકપ્રિય',
+        url: '/gujarati/popular/read',
       },
     ],
   },
