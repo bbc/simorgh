@@ -16,7 +16,7 @@ const mockPageData = {
     block: 'Its a block',
   },
   liveTextStream: {
-    content: postFixture,
+    content: null,
   },
 };
 
