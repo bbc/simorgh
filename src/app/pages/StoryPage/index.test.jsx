@@ -4,7 +4,7 @@ import { StaticRouter } from 'react-router-dom';
 import deepClone from 'ramda/src/clone';
 
 // test helpers
-import { render } from '@testing-library/react';
+import { render, act } from '@testing-library/react';
 import assocPath from 'ramda/src/assocPath';
 import fetchMock from 'fetch-mock';
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
@@ -193,9 +193,10 @@ describe('Story Page', () => {
         pageType,
       });
 
-      const { container } = render(
-        <Page pageData={pageData} service="pidgin" />,
-      );
+      let container;
+      await act(async () => {
+        ({ container } = render(<Page pageData={pageData} service="pidgin" />));
+      });
 
       expect(container).toMatchSnapshot();
     });
@@ -220,7 +221,10 @@ describe('Story Page', () => {
       pageType,
     });
 
-    const { getByText } = render(<Page pageData={pageData} service="igbo" />);
+    let getByText;
+    await act(async () => {
+      ({ getByText } = render(<Page pageData={pageData} service="igbo" />));
+    });
     expect(getByText('23 Ọktọba 2019')).toBeInTheDocument();
   });
 
@@ -247,12 +251,19 @@ describe('Story Page', () => {
       pageData,
     );
 
-    const { asFragment } = render(
-      <Page pageData={pageDataWithHiddenTimestamp} service="pidgin" />,
-    );
+    let asFragment;
+
+    await act(async () => {
+      asFragment = render(
+        <Page pageData={pageDataWithHiddenTimestamp} service="pidgin" />,
+      );
+    });
 
     expect(document.querySelector('main time')).toBeNull();
-    expect(asFragment()).toMatchSnapshot();
+    expect(asFragment).toMatchSnapshot();
+
+    expect(document.querySelector('main time')).toBeNull();
+    expect(asFragment).toMatchSnapshot();
   });
 
   it('should render correctly when the secondary column data is not available', async () => {
@@ -270,9 +281,11 @@ describe('Story Page', () => {
       service: 'pidgin',
       pageType,
     });
+    let container;
 
-    const { container } = render(<Page pageData={pageData} service="pidgin" />);
-
+    await act(async () => {
+      ({ container } = render(<Page pageData={pageData} service="pidgin" />));
+    });
     expect(container).toMatchSnapshot();
   });
 
@@ -292,9 +305,9 @@ describe('Story Page', () => {
       service: 'ukrainian',
       pageType,
     });
-
-    render(<Page pageData={pageData} service="ukrainian" />);
-
+    await act(async () => {
+      render(<Page pageData={pageData} service="ukrainian" />);
+    });
     const secondaryColumn = document.querySelector(
       'div[class*="SecondaryColumn"]',
     );
@@ -332,16 +345,17 @@ describe('Story Page', () => {
         service: 'pidgin',
         pageType,
       });
-
-      const { queryByTestId } = render(
-        <Page
-          pageData={pageData}
-          service="pidgin"
-          toggles={toggles}
-          showAdsBasedOnLocation={showAdsBasedOnLocation}
-        />,
-      );
-
+      let queryByTestId;
+      await act(async () => {
+        ({ queryByTestId } = render(
+          <Page
+            pageData={pageData}
+            service="pidgin"
+            toggles={toggles}
+            showAdsBasedOnLocation={showAdsBasedOnLocation}
+          />,
+        ));
+      });
       const storyPageAds = queryByTestId('sty-ads');
       expect(storyPageAds).not.toBeInTheDocument();
       const adBootstrap = queryByTestId('adBootstrap');
@@ -373,16 +387,17 @@ describe('Story Page', () => {
       service: 'pidgin',
       pageType,
     });
-
-    const { queryByTestId } = render(
-      <Page
-        pageData={pageData}
-        service="pidgin"
-        toggles={toggles}
-        showAdsBasedOnLocation
-      />,
-    );
-
+    let queryByTestId;
+    await act(async () => {
+      ({ queryByTestId } = render(
+        <Page
+          pageData={pageData}
+          service="pidgin"
+          toggles={toggles}
+          showAdsBasedOnLocation
+        />,
+      ));
+    });
     const storyPageAds = queryByTestId('sty-ads');
     expect(storyPageAds).not.toBeInTheDocument();
     const adBootstrap = queryByTestId('adBootstrap');
@@ -411,16 +426,17 @@ describe('Story Page', () => {
       service: 'pidgin',
       pageType,
     });
-
-    const { queryByTestId } = render(
-      <Page
-        pageData={pageData}
-        service="pidgin"
-        toggles={toggles}
-        showAdsBasedOnLocation={false}
-      />,
-    );
-
+    let queryByTestId;
+    await act(async () => {
+      ({ queryByTestId } = render(
+        <Page
+          pageData={pageData}
+          service="pidgin"
+          toggles={toggles}
+          showAdsBasedOnLocation={false}
+        />,
+      ));
+    });
     const storyPageAds = queryByTestId('sty-ads');
     expect(storyPageAds).not.toBeInTheDocument();
     const adBootstrap = queryByTestId('adBootstrap');
@@ -449,16 +465,19 @@ describe('Story Page', () => {
       service: 'pidgin',
       pageType,
     });
+    let getByTestId;
+    let getAllByTestId;
 
-    const { getByTestId, getAllByTestId } = render(
-      <Page
-        pageData={pageData}
-        service="pidgin"
-        toggles={toggles}
-        showAdsBasedOnLocation
-      />,
-    );
-
+    await act(async () => {
+      ({ getByTestId, getAllByTestId } = render(
+        <Page
+          pageData={pageData}
+          service="pidgin"
+          toggles={toggles}
+          showAdsBasedOnLocation
+        />,
+      ));
+    });
     const storyPageAds = getAllByTestId('sty-ads');
     // render ads container twice for leaderboard and mpu
     expect(storyPageAds).toHaveLength(2);
@@ -491,16 +510,18 @@ describe('Story Page', () => {
       service: 'gahuza',
       pageType,
     });
+    let getByTestId;
 
-    const { getByTestId } = render(
-      <Page
-        pageData={pageData}
-        service="gahuza"
-        toggles={toggles}
-        showAdsBasedOnLocation
-      />,
-    );
-
+    await act(async () => {
+      ({ getByTestId } = render(
+        <Page
+          pageData={pageData}
+          service="gahuza"
+          toggles={toggles}
+          showAdsBasedOnLocation
+        />,
+      ));
+    });
     const adBootstrap = getByTestId('adBootstrap');
     expect(adBootstrap).toBeInTheDocument();
     expect(adBootstrap).toHaveAttribute('data-adcampaign', 'royalwedding');
@@ -528,16 +549,17 @@ describe('Story Page', () => {
       service: 'pidgin',
       pageType,
     });
-
-    const { getByTestId } = render(
-      <Page
-        pageData={pageData}
-        service="pidgin"
-        toggles={toggles}
-        showAdsBasedOnLocation
-      />,
-    );
-
+    let getByTestId;
+    await act(async () => {
+      ({ getByTestId } = render(
+        <Page
+          pageData={pageData}
+          service="pidgin"
+          toggles={toggles}
+          showAdsBasedOnLocation
+        />,
+      ));
+    });
     const adBootstrap = getByTestId('adBootstrap');
     expect(adBootstrap).toBeInTheDocument();
     expect(adBootstrap).not.toHaveAttribute('data-adcampaign');
@@ -565,17 +587,19 @@ describe('Story Page', () => {
       service: 'pidgin',
       pageType,
     });
+    let queryByTestId;
 
-    const { queryByTestId } = render(
-      <Page
-        pageData={pageData}
-        service="pidgin"
-        toggles={toggles}
-        showAdsBasedOnLocation
-        isAmp
-      />,
-    );
-
+    await act(async () => {
+      ({ queryByTestId } = render(
+        <Page
+          pageData={pageData}
+          service="pidgin"
+          toggles={toggles}
+          showAdsBasedOnLocation
+          isAmp
+        />,
+      ));
+    });
     const adBootstrap = queryByTestId('adBootstrap');
     expect(adBootstrap).not.toBeInTheDocument();
   });
@@ -603,15 +627,17 @@ describe('Story Page', () => {
       pageType,
     });
 
-    const { getAllByRole } = render(
-      <Page
-        pageData={pageData}
-        service="russian"
-        toggles={toggles}
-        showAdsBasedOnLocation
-      />,
-    );
-
+    let getAllByRole;
+    await act(async () => {
+      ({ getAllByRole } = render(
+        <Page
+          pageData={pageData}
+          service="russian"
+          toggles={toggles}
+          showAdsBasedOnLocation
+        />,
+      ));
+    });
     const regions = getAllByRole('region');
     expect(regions.length).toEqual(4);
 
@@ -643,16 +669,17 @@ describe('Story Page', () => {
       service: 'russian',
       pageType,
     });
-
-    const { getAllByRole } = render(
-      <Page
-        pageData={pageData}
-        service="russian"
-        toggles={toggles}
-        showAdsBasedOnLocation
-      />,
-    );
-
+    let getAllByRole;
+    await act(async () => {
+      ({ getAllByRole } = render(
+        <Page
+          pageData={pageData}
+          service="russian"
+          toggles={toggles}
+          showAdsBasedOnLocation
+        />,
+      ));
+    });
     const regions = getAllByRole('region');
     expect(regions.length).toEqual(3);
 
