@@ -44,8 +44,8 @@ const PageLayoutWrapper = ({
 
   const scriptSwitchId = pathOr('', ['scriptSwitchId'], pageData);
   const renderScriptSwitch = pathOr(true, ['renderScriptSwitch'], pageData);
-  const isErrorPage = [404, 500].includes(status);
 
+  const isErrorPage = ![200].includes(status) || !status;
   const cpsPageType = pageData?.metadata?.type;
   const otherPageType = pageData?.pageType;
 
@@ -124,7 +124,7 @@ const PageLayoutWrapper = ({
       <ThemeProvider service={service} variant={variant}>
         {!isNextJs && <ServiceWorkerContainer />}
         <ManifestContainer />
-        <WebVitals pageType={pageType} />
+        {!isErrorPage && pageType && <WebVitals pageType={pageType} />}
         <GlobalStyles />
         <div id="main-wrapper" css={styles.wrapper}>
           <HeaderContainer

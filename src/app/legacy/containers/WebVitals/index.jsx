@@ -21,7 +21,7 @@ const WebVitals = ({ pageType }) => {
   const wsPageType = pageType
     ? `WS-${pageType.replace(/\s+/g, '-').toUpperCase()}`
     : null;
-    console.warn('PAGETYPE PRESENT');
+
   if (!wsPageType) {
     // eslint-disable-next-line no-console
     console.warn('Web Vitals warning: No page type to report.');
