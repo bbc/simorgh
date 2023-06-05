@@ -10,7 +10,7 @@ const ATIAnalytics = ({ data, atiData }: ATIProps) => {
   const requestContext = useContext(RequestContext);
   const serviceContext = useContext(ServiceContext);
   const { isAmp } = requestContext;
-
+  console.log('ati dataaaa FROM ATI COMPONENT..', JSON.stringify(atiData));
   const pageviewParams = buildATIUrl(
     requestContext,
     serviceContext,

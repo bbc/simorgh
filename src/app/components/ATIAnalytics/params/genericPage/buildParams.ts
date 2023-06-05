@@ -11,21 +11,22 @@ export const buildPageATIParams = ({
   const { atiAnalyticsAppName, atiAnalyticsProducerId, service, lang } =
     serviceContext;
   const {
-    contentId,
-    contentType,
-    pageIdentifier,
-    pageTitle,
-    timePublished,
-    timeUpdated,
-  } = atiData.analytics;
-  console.log('THIS IS THE ATI ANALYTICS:...', atiData.analytics);
+    analytics: {
+      contentId,
+      contentType,
+      pageIdentifier,
+      timePublished,
+      timeUpdated,
+    },
+    title,
+  } = atiData;
   return {
     appName: atiAnalyticsAppName,
     contentId,
     producerId: atiAnalyticsProducerId,
     contentType,
     pageIdentifier,
-    pageTitle,
+    title,
     platform,
     statsDestination,
     service,

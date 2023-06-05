@@ -210,9 +210,10 @@ export const buildATIUrl = (
   requestContext: RequestContextProps,
   serviceContext: ServiceConfig,
   data: PageData = {},
-  atiData: ATIData = {},
+  atiData: ATIData = { analytics: {}, title: '' },
 ) => {
-  return !isEmpty(atiData)
+  console.log('ati dataaaa', JSON.stringify(atiData));
+  return !isEmpty(atiData.analytics)
     ? buildPageATIUrl({ atiData, requestContext, serviceContext })
     : createBuilderFactory(requestContext, pageTypeUrlBuilders)(
         data,

@@ -62,7 +62,8 @@ const HomePage = ({ pageData }: HomePageProps) => {
     name: brandName,
     numberOfItems: itemListElement.length,
   };
-
+  console.log('META DATAAA', JSON.stringify(metadata));
+  console.log('PAGE DATAAA', JSON.stringify(pageData));
   return (
     <>
       <ChartbeatAnalytics title={title} />
@@ -80,7 +81,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
         entities={[itemList]}
       />
       <main css={styles.main}>
-        <ATIAnalytics atiData={metadata} />
+        <ATIAnalytics atiData={{ ...metadata, title }} />
         <VisuallyHiddenText id="content" tabIndex={-1} as="h1">
           {/* eslint-disable-next-line jsx-a11y/aria-role */}
           <span role="text">
