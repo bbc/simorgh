@@ -63,11 +63,11 @@ jest.mock('uuid', () => {
     },
   };
 });
-jest.mock('#containers/ChartbeatAnalytics', () => {
+jest.mock('../../components/ChartbeatAnalytics', () => {
   return () => <div>chartbeat</div>;
 });
 
-jest.mock('#containers/ATIAnalytics/amp', () => {
+jest.mock('../../components/ATIAnalytics/amp', () => {
   return () => <div>Amp ATI analytics</div>;
 });
 

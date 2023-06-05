@@ -34,7 +34,7 @@ jest.mock('@optimizely/react-sdk', () => {
 });
 
 // 005_brasil_recommendations_experiment
-jest.mock('#containers/ATIAnalytics/beacon', () => {
+jest.mock('../ATIAnalytics/beacon', () => {
   return {
     __esModule: true,
     default: jest.fn(),
@@ -69,6 +69,7 @@ const renderContainer = (service: Services, pageData: ArticlePageType) => {
       <RequestContextProvider
         bbcOrigin="https://www.test.bbc.co.uk"
         isAmp={false}
+        isApp={false}
         pageType={STORY_PAGE}
         pathname="/service/085965"
         service={service}

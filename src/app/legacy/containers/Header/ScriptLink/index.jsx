@@ -7,6 +7,7 @@ import ScriptLink from '#psammead/psammead-script-link/src';
 import { UserContext } from '#contexts/UserContext';
 import useToggle from '#hooks/useToggle';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
+import { RequestContext } from '../../../../contexts/RequestContext';
 
 export const getVariantHref = ({
   path,
@@ -34,6 +35,7 @@ export const getVariantHref = ({
         ...pathParams,
         variant: `/${variant}`,
         amp: undefined, // we don't want to link to AMP pages directly
+        nonCanonicalArticleRenderPlatform: undefined, // we don't want to link to AMP (.amp) or APP (.app) for the Optimo article route
       },
       {
         encode: value => value,
@@ -47,13 +49,16 @@ export const getVariantHref = ({
 const ScriptLinkContainer = ({ scriptSwitchId }) => {
   const { setPreferredVariantCookie } = useContext(UserContext);
   const { service, script, scriptLink } = useContext(ServiceContext);
+  const { isNextJs } = useContext(RequestContext);
   const { enabled: scriptLinkEnabled } = useToggle('scriptLink');
   const { enabled: variantCookieEnabled } = useToggle('variantCookie');
-  const { path, params } = useRouteMatch();
 
-  if (!scriptLinkEnabled) {
-    return null;
-  }
+  // TODO: Next.JS doesn't support `react-router-dom` hooks, so we need to
+  // revisit this to support both Express and Next.JS in the future.
+  if (!scriptLinkEnabled || isNextJs) return null;
+
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const { path, params } = useRouteMatch();
 
   const { text, variant } = scriptLink;
 

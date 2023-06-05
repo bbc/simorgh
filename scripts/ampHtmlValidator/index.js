@@ -7,7 +7,6 @@ const environment = 'local';
 const isSmoke = true;
 const baseUrl = 'http://localhost:7080';
 const pageTypes = [
-  'frontPage',
   'articles',
   'liveRadio',
   'photoGalleryPage',
