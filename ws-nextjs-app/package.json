@@ -21,7 +21,9 @@
     "test:e2e:interactive": "yarn stop && yarn build && run-p --race start cypress:interactive -- --e2e"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-export-default-from": "7.18.10",
     "@babel/preset-react": "^7.18.6",
+    "@emotion/babel-plugin": "11.11.0",
     "@emotion/jest": "^11.11.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
@@ -33,7 +35,35 @@
     "ts-node": "^10.9.1"
   },
   "dependencies": {
+    "@bbc/web-vitals": "1.2.0",
+    "@emotion/cache": "11.11.0",
+    "@emotion/react": "11.11.0",
+    "@emotion/server": "11.11.0",
+    "@emotion/styled": "11.11.0",
+    "@loadable/component": "5.15.3",
+    "@optimizely/react-sdk": "2.9.2",
+    "aws-embedded-metrics": "2.0.6",
+    "core-js": "3.30.2",
+    "dotenv": "16.0.3",
+    "intersection-observer": "0.12.2",
+    "isomorphic-fetch": "3.0.0",
+    "jalaali-js": "1.2.6",
+    "js-cookie": "3.0.5",
+    "lru-cache": "7.7.1",
+    "mkdirp": "1.0.4",
+    "moment": "2.29.4",
+    "moment-timezone": "0.5.43",
     "next": "13.4.1",
-    "undici": "^5.22.0"
+    "path-to-regexp": "6.2.1",
+    "ramda": "0.28.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-helmet": "6.1.0",
+    "react-lazyload": "3.2.0",
+    "react-router-dom": "5.3.4",
+    "undici": "^5.22.0",
+    "url-parse": "1.5.10",
+    "uuid": "8.3.2",
+    "winston": "3.8.2"
   }
 }
