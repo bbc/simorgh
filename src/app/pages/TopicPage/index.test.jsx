@@ -6,6 +6,7 @@ import {
   VISUAL_PROMINENCE,
   VISUAL_STYLE,
 } from '#app/models/types/curationData';
+import { Helmet } from 'react-helmet';
 import { TOPIC_PAGE } from '../../routes/utils/pageTypes';
 import { render } from '../../components/react-testing-library-with-providers';
 import TopicPage from './TopicPage';
@@ -16,7 +17,6 @@ import {
   mundoMultipleCurations,
   amharicOnlyTitle,
 } from './fixtures';
-import { Helmet } from 'react-helmet';
 
 jest.mock('../../components/ThemeProvider');
 jest.mock('../../components/ChartbeatAnalytics', () => {
