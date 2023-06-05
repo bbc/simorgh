@@ -62,6 +62,7 @@ const MostRead = ({
 
   // We render amp on ONLY STY, CSP and ARTICLE pages using amp-list.
   const AmpMostRead = () =>
+    // @ts-expect-error not all page types are supported for most read on amp
     mostReadAmpPageTypes.includes(pageType) ? (
       <MostReadSection>
         <MostReadSectionLabel
