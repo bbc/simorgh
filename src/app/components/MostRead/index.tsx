@@ -9,12 +9,21 @@ import { ColumnLayout, Size, MostReadData } from './types';
 import MostReadSection from './Section';
 import MostReadSectionLabel from './Label';
 import { WHITE } from '../ThemeProvider/palette';
+import {
+  STORY_PAGE,
+  CORRESPONDENT_STORY_PAGE,
+  ARTICLE_PAGE,
+} from '../../routes/utils/pageTypes';
 
 const blockLevelEventTrackingData = {
   componentName: 'most-read',
 };
 
-const mostReadAmpPageTypes = ['STY', 'CSP', 'article', 'home'];
+const mostReadAmpPageTypes = [
+  STORY_PAGE,
+  CORRESPONDENT_STORY_PAGE,
+  ARTICLE_PAGE,
+];
 
 interface MostReadProps {
   data?: MostReadData;
