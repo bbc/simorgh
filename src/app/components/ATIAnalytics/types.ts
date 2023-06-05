@@ -63,12 +63,14 @@ export interface PageData {
 }
 
 export interface ATIData {
-  contentId?: string;
-  contentType?: string;
-  pageIdentifier?: string;
-  pageTitle?: string;
-  timePublished?: string;
-  timeUpdated?: string;
+  analytics: {
+    contentId?: string;
+    contentType?: string;
+    pageIdentifier?: string;
+    pageTitle?: string;
+    timePublished?: string;
+    timeUpdated?: string;
+  };
 }
 
 export interface ATIContexts {
@@ -121,6 +123,4 @@ export interface ATIPageTrackingProps {
 export interface ATIProps {
   data?: PageData;
   atiData?: ATIData;
-  // take out ati info from pageData, strip it into an atiData object in here
-  // this atiData object then gets its data fields from the bff
 }

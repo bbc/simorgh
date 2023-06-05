@@ -17,7 +17,8 @@ export const buildPageATIParams = ({
     pageTitle,
     timePublished,
     timeUpdated,
-  } = atiData;
+  } = atiData.analytics;
+  console.log('THIS IS THE ATI ANALYTICS:...', atiData.analytics);
   return {
     appName: atiAnalyticsAppName,
     contentId,

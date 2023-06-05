@@ -24,6 +24,7 @@ interface HomePageProps {
     title: string;
     curations: CurationData[];
     description: string;
+    metadata: ATIData;
   };
 }
 
@@ -37,7 +38,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
     brandName,
   } = useContext(ServiceContext);
   const { topStoriesTitle, home } = translations;
-  const { title, description, curations } = pageData;
+  const { title, description, curations, metadata } = pageData;
 
   const itemListElement = curations
     .map(({ summaries = [] }) =>
@@ -62,15 +63,6 @@ const HomePage = ({ pageData }: HomePageProps) => {
     numberOfItems: itemListElement.length,
   };
 
-  const atiData: ATIData = {
-    contentId: 'contentId',
-    contentType: 'contentType',
-    pageIdentifier: 'pageIdentifier',
-    pageTitle: 'pageTitle',
-    timePublished: 'timePublished',
-    timeUpdated: 'timeUpdated',
-  };
-
   return (
     <>
       <ChartbeatAnalytics title={title} />
@@ -88,7 +80,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
         entities={[itemList]}
       />
       <main css={styles.main}>
-        <ATIAnalytics atiData={atiData} />
+        <ATIAnalytics atiData={metadata} />
         <VisuallyHiddenText id="content" tabIndex={-1} as="h1">
           {/* eslint-disable-next-line jsx-a11y/aria-role */}
           <span role="text">
