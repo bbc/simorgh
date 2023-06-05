@@ -42,6 +42,11 @@ export default {
   title: 'Containers/Most Read',
   Component,
   decorators: [withKnobs, withServicesKnob({ defaultService: 'pidgin' })],
+  parameters: {
+    chromatic: {
+      viewports: [1280],
+    },
+  },
 };
 
 export const FrontPage2Columns = props => (
