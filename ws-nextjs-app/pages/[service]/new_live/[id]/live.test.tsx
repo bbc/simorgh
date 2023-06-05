@@ -4,14 +4,14 @@ import {
   screen,
   act,
 } from '#app/components/react-testing-library-with-providers';
+import liveFixture from '#data/pidgin/livePage/c7p765ynk9qt.json';
 import postFixture from '#data/pidgin/posts/postFixture.json';
 import Live from './LivePageLayout';
 
 const mockPageData = {
+  ...liveFixture.data,
   pageCount: 10,
   activePage: 1,
-  title: 'Test Next.JS Page',
-  description: 'Test Next.JS Page Description',
   someResponse: {
     block: 'Its a block',
   },
@@ -21,10 +21,7 @@ const mockPageData = {
 };
 
 const mockPageDataWithPosts = {
-  pageCount: 10,
-  activePage: 1,
-  title: 'Test Next.JS Page',
-  description: 'Test Next.JS Page Description',
+  ...liveFixture.data,
   someResponse: {
     block: 'Its a block',
   },
@@ -39,7 +36,7 @@ describe('Live Page', () => {
       render(<Live pageData={mockPageData} />);
     });
 
-    expect(screen.getByText('Test Next.JS Page')).toBeInTheDocument();
+    expect(screen.getByText('Pidgin test 2')).toBeInTheDocument();
   });
 
   it('should render the live page description', async () => {
@@ -48,8 +45,16 @@ describe('Live Page', () => {
     });
 
     expect(
-      screen.getByText('Test Next.JS Page Description'),
+      screen.getByText('Pidgin test 2 - the description'),
     ).toBeInTheDocument();
+  });
+
+  it('should render the live page summary', async () => {
+    await act(async () => {
+      render(<Live pageData={mockPageData} />);
+    });
+
+    expect(screen.getByText('I am the summary box')).toBeInTheDocument();
   });
 
   it('should render a live page with posts', async () => {
