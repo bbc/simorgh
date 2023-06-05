@@ -1,6 +1,4 @@
 export default ({ pageData }) => {
-  console.log({ pageData });
-
   describe('Page content', () => {
     const firstItemHeadline = document.querySelector(
       '[data-testid="topic-promos"] > li  h3 a',

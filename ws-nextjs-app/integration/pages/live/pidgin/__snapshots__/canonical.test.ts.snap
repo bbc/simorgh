@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical Live Header I can see the branding 1`] = `".css-1jefi8v{box-sizing:content-box;color:#FFFFFF;fill:currentColor;height:1.25rem;}@media (min-width: 25rem){.css-1jefi8v{height:1.5rem;}}@media (min-width: 37.5rem){.css-1jefi8v{height:1.875rem;}}@media screen and (-ms-high-contrast: active),print{.css-1jefi8v{fill:windowText;}}.css-m04vo2{-webkit-clip-path:inset(100%);clip-path:inset(100%);clip:rect(1px, 1px, 1px, 1px);height:1px;overflow:hidden;position:absolute;width:1px;margin:0;}BBC News, Pidgin"`;
+
+exports[`Canonical Live Header Navigation link should match text and url 1`] = `
+{
+  "text": "Home",
+  "url": "/pidgin",
+}
+`;
+
+exports[`Canonical Live Header Navigation link should match text and url 2`] = `
+{
+  "text": "Nigeria",
+  "url": "/pidgin/topics/c2dwqd1zr92t",
+}
+`;
+
+exports[`Canonical Live Header Navigation link should match text and url 3`] = `
+{
+  "text": "Africa",
+  "url": "/pidgin/topics/c404v061z85t",
+}
+`;
+
+exports[`Canonical Live Header Navigation link should match text and url 4`] = `
+{
+  "text": "World",
+  "url": "/pidgin/topics/c0823e52dd0t",
+}
+`;
+
+exports[`Canonical Live Header Navigation link should match text and url 5`] = `
+{
+  "text": "Video",
+  "url": "/pidgin/topics/c3l19z3k1ert",
+}
+`;
+
+exports[`Canonical Live Header Navigation link should match text and url 6`] = `
+{
+  "text": "Sport",
+  "url": "/pidgin/topics/cjgn7gv77vrt",
+}
+`;
+
+exports[`Canonical Live Header Navigation link should match text and url 7`] = `
+{
+  "text": "Entertainment",
+  "url": "/pidgin/topics/cqywjyzk2vyt",
+}
+`;
+
+exports[`Canonical Live Header Navigation link should match text and url 8`] = `
+{
+  "text": "Most popular",
+  "url": "/pidgin/popular/read",
+}
+`;
