@@ -53,6 +53,11 @@ export default {
   title: 'New Components/Most Read',
   Component,
   decorators: [withKnobs, withServicesKnob({ defaultService: 'pidgin' })],
+  parameters: {
+    chromatic: {
+      viewports: [1280],
+    },
+  },
 };
 
 export const ArticlePage5Columns = ({ service, variant }: Props) => (
