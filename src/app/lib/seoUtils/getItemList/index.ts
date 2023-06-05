@@ -1,5 +1,4 @@
 import { CurationData } from '../../../models/types/curationData';
-import getListItems from '../getListItems';
 
 export default ({
   curations,
@@ -8,12 +7,26 @@ export default ({
   curations: CurationData[];
   name: string;
 }) => {
-  const listItems = getListItems(curations);
+  const itemListElement = curations
+    .map(({ summaries = [] }) =>
+      summaries.map(({ link }) => ({
+        '@context': 'http://schema.org',
+        '@type': 'ListItem',
+        url: link,
+      })),
+    )
+    .flat()
+    .map((listItem, index) => {
+      return {
+        ...listItem,
+        position: index + 1,
+      };
+    });
 
   return {
-    itemListElement: listItems,
+    itemListElement,
     '@type': 'ItemList',
     name,
-    numberOfItems: listItems.length,
+    numberOfItems: itemListElement.length,
   };
 };
