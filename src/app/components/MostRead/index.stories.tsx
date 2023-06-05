@@ -60,11 +60,7 @@ export const ArticlePage5Columns = ({ service, variant }: Props) => (
 );
 
 export const HomePage2Columns = ({ service, variant }: Props) => (
-  <Component
-    service={service}
-    variant={variant}
-    columnLayout="twoColumn"
-  />
+  <Component service={service} variant={variant} columnLayout="twoColumn" />
 );
 
 export const StoryPage1Column = ({ service, variant }: Props) => (
@@ -81,9 +77,5 @@ export const Japanese1Column = ({ variant }: Props) => (
 );
 
 export const Persian1Column = ({ variant }: Props) => (
-  <Component
-    service="persian"
-    variant={variant}
-    columnLayout="oneColumn"
-  />
+  <Component service="persian" variant={variant} columnLayout="oneColumn" />
 );
