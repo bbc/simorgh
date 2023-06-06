@@ -8,7 +8,6 @@ import MostReadRank from './Rank';
 import LastUpdated from './LastUpdated';
 import { ColumnLayout, Direction, MostReadData, Size } from '../types';
 import { TypographyScript } from '../../../models/types/theming';
-import getMostReadItems from '../utilities/getMostReadItems';
 
 interface MostReadProps {
   columnLayout?: ColumnLayout;
@@ -38,7 +37,7 @@ const MostRead = ({
 
   const locale = serviceDatetimeLocale || datetimeLocale;
 
-  const items = getMostReadItems({ data, numberOfItems, service }) || [];
+  const items = data.items.slice(0, numberOfItems);
 
   const direction = dir as Direction;
   const fontScript = script as TypographyScript;
