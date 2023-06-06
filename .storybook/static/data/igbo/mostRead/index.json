@@ -232,15 +232,15 @@
       "urn": "urn:bbc:curie:asset:b09595ca-c3d0-074c-8bdb-bac3ab429eda",
       "promo": {
         "headlines": {
-          "shortHeadline": "Nne ụmụaka atọ ụlọ aja dagburu n'GREY_8yi amabeghị na ha nwụrụ",
-          "headline": "Nne ụmụaka atọ ụlọ aja dagburu n'GREY_8yi amabeghị na ha nwụrụ"
+          "shortHeadline": "Nne ụmụaka atọ ụlọ aja dagburu n'Ebonyi amabeghị na ha nwụrụ",
+          "headline": "Nne ụmụaka atọ ụlọ aja dagburu n'Ebonyi amabeghị na ha nwụrụ"
         },
         "locators": {
           "assetUri": "/igbo/afirika-50294336",
           "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-50294336",
           "curie": "http://www.bbc.co.uk/asset/b09595ca-c3d0-074c-8bdb-bac3ab429eda"
         },
-        "summary": "Nne ụmụ aka atọ ụlọ dagburu n'GREY_8yi steeti ka nọ na-agbata ọnwụ na ndụ n'ụlọ ọgwụgwọ n'GREY_8yi.",
+        "summary": "Nne ụmụ aka atọ ụlọ dagburu n'Ebonyi steeti ka nọ na-agbata ọnwụ na ndụ n'ụlọ ọgwụgwọ n'Ebonyi.",
         "timestamp": 1572887294545,
         "passport": {
           "category": {
@@ -1810,15 +1810,15 @@
       "urn": "urn:bbc:curie:asset:acab4ffd-78be-d446-afe8-64ecf57ccdfb",
       "promo": {
         "headlines": {
-          "shortHeadline": "E nyela GREY_8yi Steeti ikike ịrụ ọdọụgbọelu nke ha",
-          "headline": "GREY_8yi Airport Project: E nyela GREY_8yi Steeti ikike ịrụ ọdọụgbọelu nke ha"
+          "shortHeadline": "E nyela Ebonyi Steeti ikike ịrụ ọdọụgbọelu nke ha",
+          "headline": "Ebonyi Airport Project: E nyela Ebonyi Steeti ikike ịrụ ọdọụgbọelu nke ha"
         },
         "locators": {
           "assetUri": "/igbo/afirika-49615334",
           "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-49615334",
           "curie": "http://www.bbc.co.uk/asset/acab4ffd-78be-d446-afe8-64ecf57ccdfb"
         },
-        "summary": "Mịnịsta na-ahụ maka ụgbọelu bụ Hadi Sirika enyela gọvanọ Umahi ikike ịrụ ọdọụgbọelu n'GREY_8yi Steeti.",
+        "summary": "Mịnịsta na-ahụ maka ụgbọelu bụ Hadi Sirika enyela gọvanọ Umahi ikike ịrụ ọdọụgbọelu n'Ebonyi Steeti.",
         "timestamp": 1573058118175,
         "passport": {
           "category": {
@@ -1839,7 +1839,7 @@
           "path": "/cpsprodpb/57B7/production/_108655422_umahiplane.jpg",
           "height": 549,
           "width": 976,
-          "altText": "Gọvanọ Dave Umahi rịọrọ ka e nye ya ikike ịrụ ọdọụgbọelu n'GREY_8yi Steeti",
+          "altText": "Gọvanọ Dave Umahi rịọrọ ka e nye ya ikike ịrụ ọdọụgbọelu n'Ebonyi Steeti",
           "copyrightHolder": "Dave Umahi/Getty Images"
         },
         "id": "urn:bbc:ares::asset:igbo/afirika-49615334"
@@ -2395,15 +2395,15 @@
       "urn": "urn:bbc:curie:asset:4f495bcd-ef76-6842-beb0-3c160ba922a6",
       "promo": {
         "headlines": {
-          "shortHeadline": "Ndi Ugwu asaala Gọv Umahi okwu maka ebubo iwakpo ụmụnwaanyị GREY_8yi",
-          "headline": "Umahi vs Fulani herdsmen : Ndi Ugwu asaala Govanọ Umahi ebubo iwakpo ụmụnwaanyị GREY_8yi"
+          "shortHeadline": "Ndi Ugwu asaala Gọv Umahi okwu maka ebubo iwakpo ụmụnwaanyị Ebonyi",
+          "headline": "Umahi vs Fulani herdsmen : Ndi Ugwu asaala Govanọ Umahi ebubo iwakpo ụmụnwaanyị Ebonyi"
         },
         "locators": {
           "assetUri": "/igbo/media-48509916",
           "cpsUrn": "urn:bbc:content:assetUri:igbo/media-48509916",
           "curie": "http://www.bbc.co.uk/asset/4f495bcd-ef76-6842-beb0-3c160ba922a6"
         },
-        "summary": "Ndi ndu ndị Ugwu bi n'GREY_8yi ekwuola na ha na ndị GREY_8yi Steeti na ebi n’udo kemgbe uwa .",
+        "summary": "Ndi ndu ndị Ugwu bi n'Ebonyi ekwuola na ha na ndị Ebonyi Steeti na ebi n’udo kemgbe uwa .",
         "timestamp": 1560513089905,
         "passport": {},
         "indexImage": {
@@ -2414,7 +2414,7 @@
           "height": 549,
           "width": 976,
           "altText": "Dave Umahi",
-          "copyrightHolder": "GREY_8YI GOVERNMENT"
+          "copyrightHolder": "EBONYI GOVERNMENT"
         },
         "id": "urn:bbc:ares::asset:igbo/media-48509916"
       }
