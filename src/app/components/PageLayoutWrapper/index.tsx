@@ -46,7 +46,7 @@ const PageLayoutWrapper = ({
   const renderScriptSwitch = pathOr(true, ['renderScriptSwitch'], pageData);
 
   const isErrorPage = ![200].includes(status) || !status;
-  const cpsPageType = pageData?.metadata?.type;
+  const metadataType = pageData?.metadata?.type;
   const otherPageType = pageData?.pageType;
   const pageType = cpsPageType || otherPageType;
   console.log('pageType in pageLayoutWrapper', pageType);
