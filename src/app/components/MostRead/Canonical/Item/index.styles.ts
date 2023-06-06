@@ -8,7 +8,7 @@ const styles = {
       ...fontVariants.serifMedium,
 
       position: 'static',
-      color: palette.EBON,
+      color: palette.GREY_8,
       textDecoration: 'none',
       marginBottom: `${spacings.FULL}rem`,
 
