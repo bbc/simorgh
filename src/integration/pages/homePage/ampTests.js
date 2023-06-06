@@ -11,7 +11,7 @@ export default ({ service, pageData }) => {
   runCoreAmpTests();
   runAmpAnalyticsTests();
 
-  it('should render the correct number of curations', () => {
+  it('should render the correct number of curations, excluding most read', () => {
     const curationsWithSummaries = pageData.curations.filter(
       ({ summaries }) => summaries && summaries?.length > 0,
     );
