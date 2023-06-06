@@ -62,8 +62,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
     name: brandName,
     numberOfItems: itemListElement.length,
   };
-  console.log('META DATAAA', JSON.stringify(metadata));
-  console.log('PAGE DATAAA', JSON.stringify(pageData));
+
   return (
     <>
       <ChartbeatAnalytics title={title} />

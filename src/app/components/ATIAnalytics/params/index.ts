@@ -212,7 +212,6 @@ export const buildATIUrl = (
   data: PageData = {},
   atiData: ATIData = { analytics: {}, title: '' },
 ) => {
-  console.log('ati dataaaa', JSON.stringify(atiData));
   return !isEmpty(atiData.analytics)
     ? buildPageATIUrl({ atiData, requestContext, serviceContext })
     : createBuilderFactory(requestContext, pageTypeUrlBuilders)(
