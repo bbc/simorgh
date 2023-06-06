@@ -80,13 +80,11 @@ export interface MostReadData {
   generated?: string;
   lastRecordTimeStamp: string;
   firstRecordTimeStamp?: string;
-  items: [
-    {
-      id: string;
-      rank: number;
-      href: string;
-      title: string;
-      timestamp: number;
-    },
-  ];
+  items: {
+    id: string;
+    rank: number;
+    href: string;
+    title: string;
+    timestamp: number;
+  }[];
 }
