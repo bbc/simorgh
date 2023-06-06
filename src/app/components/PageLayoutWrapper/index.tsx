@@ -25,11 +25,6 @@ type Props = {
     metadata?: {
       type: string;
     };
-    pageType?: string;
-    pageCount?: number;
-    activePage?: number;
-    title?: string;
-    description?: string;
   };
   status: number;
 };
@@ -40,15 +35,19 @@ const PageLayoutWrapper = ({
   status,
 }: PropsWithChildren<Props>) => {
   const { service } = useContext(ServiceContext);
-  const { isAmp, isNextJs, variant } = useContext(RequestContext);
+  const {
+    isAmp,
+    isNextJs,
+    variant,
+    pageType: fallbackPageType,
+  } = useContext(RequestContext);
 
   const scriptSwitchId = pathOr('', ['scriptSwitchId'], pageData);
   const renderScriptSwitch = pathOr(true, ['renderScriptSwitch'], pageData);
 
   const isErrorPage = ![200].includes(status) || !status;
   const metadataType = pageData?.metadata?.type;
-  const otherPageType = pageData?.pageType;
-  const pageType = metadataType || otherPageType;
+  const pageType = metadataType || fallbackPageType;
   console.log('pageType in pageLayoutWrapper', pageType);
   const serviceFonts = fontFacesLazy(service);
   const fontJs =
