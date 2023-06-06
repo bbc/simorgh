@@ -1,5 +1,3 @@
-import isEmpty from 'ramda/src/isEmpty';
-
 import {
   HOME_PAGE,
   STORY_PAGE,
@@ -209,16 +207,22 @@ const createBuilderFactory = (
 export const buildATIUrl = (
   requestContext: RequestContextProps,
   serviceContext: ServiceConfig,
-  data: PageData = {},
-  atiData: ATIData = { analytics: {}, title: '' },
+  data?: PageData,
+  atiData?: ATIData,
 ) => {
-  return !isEmpty(atiData.analytics)
-    ? buildPageATIUrl({ atiData, requestContext, serviceContext })
-    : createBuilderFactory(requestContext, pageTypeUrlBuilders)(
-        data,
-        requestContext,
-        serviceContext,
-      );
+  if (atiData) {
+    return buildPageATIUrl({ atiData, requestContext, serviceContext });
+  }
+
+  if (data) {
+    return createBuilderFactory(requestContext, pageTypeUrlBuilders)(
+      data,
+      requestContext,
+      serviceContext,
+    );
+  }
+
+  return null;
 };
 
 export const buildATIEventTrackingParams = (
