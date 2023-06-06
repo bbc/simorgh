@@ -23,7 +23,7 @@ import styles from './index.styles';
 type Props = {
   pageData: {
     metadata?: {
-      type: string;
+      type?: string;
     };
   };
   status: number;
