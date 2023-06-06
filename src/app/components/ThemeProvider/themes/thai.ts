@@ -1,4 +1,4 @@
-import { GREY_1, WHITE, NEWS_CORE } from '../palette';
+import { WHITE, NEWS_CORE } from '../palette';
 import thaiScript from '../fontScripts/thai';
 import thaiFontVariants from '../fontVariants/thai';
 import withThemeProvider from '../withThemeProvider';

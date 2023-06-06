@@ -1,4 +1,4 @@
-import { GREY_1, WHITE, NEWS_CORE } from '../palette';
+import { WHITE, NEWS_CORE } from '../palette';
 import sinhaleseScript from '../fontScripts/sinhalese';
 import {
   NOTO_SERIF_SINHALA_BOLD,

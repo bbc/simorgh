@@ -1,4 +1,4 @@
-import { GREY_1, WHITE, NEWS_CORE } from '../palette';
+import { WHITE, NEWS_CORE } from '../palette';
 import devanagariScript from '../fontScripts/devanagari';
 import { MALLANNA_REGULAR } from '../fontFaces';
 import teluguFontVariants from '../fontVariants/telugu';

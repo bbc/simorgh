@@ -1,4 +1,4 @@
-import { GREY_1, WHITE, NEWS_CORE } from '../palette';
+import { WHITE, NEWS_CORE } from '../palette';
 import bengaliScript from '../fontScripts/bengali';
 import {
   NOTO_SERIF_BENGALI_BOLD,

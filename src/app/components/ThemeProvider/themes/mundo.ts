@@ -1,4 +1,4 @@
-import { GREY_1, WHITE, NEWS_CORE } from '../palette';
+import { WHITE, NEWS_CORE } from '../palette';
 import latinWithDiacriticsScript from '../fontScripts/latinWithDiacritics';
 import {
   REITH_SANS_BOLD,

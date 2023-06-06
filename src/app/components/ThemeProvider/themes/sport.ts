@@ -1,4 +1,4 @@
-import { SPORT_CORE, BLACK, GREY_10 } from '../palette';
+import { SPORT_CORE, BLACK } from '../palette';
 import latinScript from '../fontScripts/latin';
 import {
   REITH_SANS_BOLD,

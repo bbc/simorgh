@@ -1,4 +1,4 @@
-import { GREY_1, WHITE, NEWS_CORE } from '../palette';
+import { WHITE, NEWS_CORE } from '../palette';
 import noAscOrDescScript from '../fontScripts/noAscOrDesc';
 import {
   NOTO_SANS_ETHIOPIC_BOLD,

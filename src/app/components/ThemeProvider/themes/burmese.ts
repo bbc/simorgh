@@ -1,4 +1,4 @@
-import { GREY_1, WHITE, NEWS_CORE } from '../palette';
+import { WHITE, NEWS_CORE } from '../palette';
 import burmeseScript from '../fontScripts/burmese';
 import { PADAUK_BOLD, PADAUK_REGULAR } from '../fontFaces';
 import burmeseFontVariants from '../fontVariants/burmese';
