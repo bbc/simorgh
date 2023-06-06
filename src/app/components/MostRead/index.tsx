@@ -14,12 +14,13 @@ import {
   CORRESPONDENT_STORY_PAGE,
   ARTICLE_PAGE,
 } from '../../routes/utils/pageTypes';
+import { PageTypes } from '../../models/types/global';
 
 const blockLevelEventTrackingData = {
   componentName: 'most-read',
 };
 
-const mostReadAmpPageTypes = [
+const mostReadAmpPageTypes: PageTypes[] = [
   STORY_PAGE,
   CORRESPONDENT_STORY_PAGE,
   ARTICLE_PAGE,
@@ -62,7 +63,6 @@ const MostRead = ({
 
   // We render amp on ONLY STY, CSP and ARTICLE pages using amp-list.
   const AmpMostRead = () =>
-    // @ts-expect-error not all page types are supported for most read on amp
     mostReadAmpPageTypes.includes(pageType) ? (
       <MostReadSection>
         <MostReadSectionLabel
