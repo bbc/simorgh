@@ -731,7 +731,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
   font-weight: 700;
   font-style: normal;
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   margin-bottom: 0.5rem;
@@ -3212,7 +3212,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
   font-weight: 700;
   font-style: normal;
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   margin-bottom: 0.5rem;

@@ -135,7 +135,7 @@ describe('InlineLink', () => {
     );
 
     expect(screen.getByText('Hello World!')).toHaveStyle({
-      color: '#222222',
+      color: '#202224',
       'font-size': `${expected}rem`,
     });
   });
@@ -159,7 +159,7 @@ describe('InlineLink', () => {
       );
 
       expect(screen.getByText('Hello World!')).toHaveStyle({
-        color: '#222222',
+        color: '#202224',
         'font-style': fontStyle,
         'font-weight': fontWeight,
       });

@@ -2,7 +2,7 @@
 
 exports[`AmpMostRead should render as expected 1`] = `
 .emotion-0 {
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
@@ -161,7 +161,7 @@ exports[`AmpMostRead should render as expected 1`] = `
   font-style: normal;
   font-weight: 500;
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   margin-bottom: 0.5rem;

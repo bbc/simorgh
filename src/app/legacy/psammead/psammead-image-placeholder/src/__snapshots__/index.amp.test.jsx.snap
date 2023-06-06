@@ -2,7 +2,7 @@
 
 exports[`ImagePlaceholderAmp should render dark mode version correctly 1`] = `
 .emotion-0 {
-  background-color: #3F3F42;
+  background-color: #3A3C3E;
 }
 
 <div>
@@ -69,7 +69,7 @@ exports[`ImagePlaceholderAmp should render dark mode version correctly 1`] = `
 
 exports[`ImagePlaceholderAmp should render normal version correctly 1`] = `
 .emotion-0 {
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 <div>

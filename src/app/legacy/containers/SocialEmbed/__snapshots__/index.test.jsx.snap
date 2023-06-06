@@ -118,7 +118,7 @@ exports[`SocialEmbedContainer AMP should match snapshot 1`] = `
   font-size: 0.875rem;
   line-height: 1rem;
   background-color: #FFFFFF;
-  border: 0.125rem solid #222222;
+  border: 0.125rem solid #202224;
   display: block;
   left: 0;
   line-height: 1;
@@ -143,7 +143,7 @@ exports[`SocialEmbedContainer AMP should match snapshot 1`] = `
 }
 
 .emotion-6 span {
-  color: #222222;
+  color: #202224;
 }
 
 .emotion-6:hover span,
@@ -542,7 +542,7 @@ exports[`SocialEmbedContainer Canonical should render a Facebook Post block and 
   font-size: 0.875rem;
   line-height: 1rem;
   background-color: #FFFFFF;
-  border: 0.125rem solid #222222;
+  border: 0.125rem solid #202224;
   display: block;
   left: 0;
   line-height: 1;
@@ -567,7 +567,7 @@ exports[`SocialEmbedContainer Canonical should render a Facebook Post block and 
 }
 
 .emotion-6 span {
-  color: #222222;
+  color: #202224;
 }
 
 .emotion-6:hover span,
@@ -869,7 +869,7 @@ exports[`SocialEmbedContainer Canonical should render a Facebook Video block and
   font-size: 0.875rem;
   line-height: 1rem;
   background-color: #FFFFFF;
-  border: 0.125rem solid #222222;
+  border: 0.125rem solid #202224;
   display: block;
   left: 0;
   line-height: 1;
@@ -894,7 +894,7 @@ exports[`SocialEmbedContainer Canonical should render a Facebook Video block and
 }
 
 .emotion-6 span {
-  color: #222222;
+  color: #202224;
 }
 
 .emotion-6:hover span,
@@ -1193,7 +1193,7 @@ exports[`SocialEmbedContainer Canonical should render a TikTok block and unmount
   font-size: 0.875rem;
   line-height: 1rem;
   background-color: #FFFFFF;
-  border: 0.125rem solid #222222;
+  border: 0.125rem solid #202224;
   display: block;
   left: 0;
   line-height: 1;
@@ -1218,7 +1218,7 @@ exports[`SocialEmbedContainer Canonical should render a TikTok block and unmount
 }
 
 .emotion-6 span {
-  color: #222222;
+  color: #202224;
 }
 
 .emotion-6:hover span,
@@ -1617,7 +1617,7 @@ exports[`SocialEmbedContainer Canonical should render a Twitter block and unmoun
   font-size: 0.875rem;
   line-height: 1rem;
   background-color: #FFFFFF;
-  border: 0.125rem solid #222222;
+  border: 0.125rem solid #202224;
   display: block;
   left: 0;
   line-height: 1;
@@ -1642,7 +1642,7 @@ exports[`SocialEmbedContainer Canonical should render a Twitter block and unmoun
 }
 
 .emotion-6 span {
-  color: #222222;
+  color: #202224;
 }
 
 .emotion-6:hover span,
@@ -1919,7 +1919,7 @@ exports[`SocialEmbedContainer Canonical should render a YouTube block and unmoun
   font-size: 0.875rem;
   line-height: 1rem;
   background-color: #FFFFFF;
-  border: 0.125rem solid #222222;
+  border: 0.125rem solid #202224;
   display: block;
   left: 0;
   line-height: 1;
@@ -1944,7 +1944,7 @@ exports[`SocialEmbedContainer Canonical should render a YouTube block and unmoun
 }
 
 .emotion-6 span {
-  color: #222222;
+  color: #202224;
 }
 
 .emotion-6:hover span,
@@ -2343,7 +2343,7 @@ exports[`SocialEmbedContainer Canonical should render an Instagram block and unm
   font-size: 0.875rem;
   line-height: 1rem;
   background-color: #FFFFFF;
-  border: 0.125rem solid #222222;
+  border: 0.125rem solid #202224;
   display: block;
   left: 0;
   line-height: 1;
@@ -2368,7 +2368,7 @@ exports[`SocialEmbedContainer Canonical should render an Instagram block and unm
 }
 
 .emotion-6 span {
-  color: #222222;
+  color: #202224;
 }
 
 .emotion-6:hover span,

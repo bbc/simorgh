@@ -5,7 +5,7 @@ exports[`ImagePlaceholder should render dark mode version correctly 1`] = `
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #3F3F42;
+  background-color: #3A3C3E;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
@@ -43,7 +43,7 @@ exports[`ImagePlaceholder should render landscape images correctly 1`] = `
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
@@ -81,7 +81,7 @@ exports[`ImagePlaceholder should render portrait images correctly 1`] = `
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
@@ -119,7 +119,7 @@ exports[`ImagePlaceholder should render square images correctly 1`] = `
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;

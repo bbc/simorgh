@@ -36,12 +36,12 @@ exports[`ConsentBanner should correctly render for ltr service 1`] = `
   color: #F6A21D;
   -webkit-text-decoration: none;
   text-decoration: none;
-  border-bottom: solid 0.0625rem #AEAEB5;
+  border-bottom: solid 0.0625rem #B0B2B4;
 }
 
 .emotion-2 a:focus,
 .emotion-2 a:hover {
-  color: #222222;
+  color: #202224;
   background-color: #F6A21D;
 }
 
@@ -156,9 +156,9 @@ exports[`ConsentBanner should correctly render for ltr service 1`] = `
   line-height: 1.125rem;
   width: 100%;
   min-height: 2.75rem;
-  color: #222222;
+  color: #202224;
   font-weight: bold;
-  background-color: #FDFDFD;
+  background-color: #FEFEFE;
   border: solid 0.0625rem transparent;
   margin: 0;
   cursor: pointer;
@@ -180,7 +180,7 @@ exports[`ConsentBanner should correctly render for ltr service 1`] = `
 
 .emotion-8 button:focus,
 .emotion-8 button:hover {
-  color: #222222;
+  color: #202224;
   background-color: #F6A21D;
 }
 
@@ -289,12 +289,12 @@ exports[`ConsentBanner should correctly render for rtl service 1`] = `
   color: #F6A21D;
   -webkit-text-decoration: none;
   text-decoration: none;
-  border-bottom: solid 0.0625rem #AEAEB5;
+  border-bottom: solid 0.0625rem #B0B2B4;
 }
 
 .emotion-2 a:focus,
 .emotion-2 a:hover {
-  color: #222222;
+  color: #202224;
   background-color: #F6A21D;
 }
 
@@ -409,9 +409,9 @@ exports[`ConsentBanner should correctly render for rtl service 1`] = `
   line-height: 1.375rem;
   width: 100%;
   min-height: 2.75rem;
-  color: #222222;
+  color: #202224;
   font-weight: bold;
-  background-color: #FDFDFD;
+  background-color: #FEFEFE;
   border: solid 0.0625rem transparent;
   margin: 0;
   cursor: pointer;
@@ -433,7 +433,7 @@ exports[`ConsentBanner should correctly render for rtl service 1`] = `
 
 .emotion-8 button:focus,
 .emotion-8 button:hover {
-  color: #222222;
+  color: #202224;
   background-color: #F6A21D;
 }
 
@@ -542,12 +542,12 @@ exports[`ConsentBanner with hidden attribute on wrapper should correctly render 
   color: #F6A21D;
   -webkit-text-decoration: none;
   text-decoration: none;
-  border-bottom: solid 0.0625rem #AEAEB5;
+  border-bottom: solid 0.0625rem #B0B2B4;
 }
 
 .emotion-2 a:focus,
 .emotion-2 a:hover {
-  color: #222222;
+  color: #202224;
   background-color: #F6A21D;
 }
 
@@ -662,9 +662,9 @@ exports[`ConsentBanner with hidden attribute on wrapper should correctly render 
   line-height: 1.125rem;
   width: 100%;
   min-height: 2.75rem;
-  color: #222222;
+  color: #202224;
   font-weight: bold;
-  background-color: #FDFDFD;
+  background-color: #FEFEFE;
   border: solid 0.0625rem transparent;
   margin: 0;
   cursor: pointer;
@@ -686,7 +686,7 @@ exports[`ConsentBanner with hidden attribute on wrapper should correctly render 
 
 .emotion-8 button:focus,
 .emotion-8 button:hover {
-  color: #222222;
+  color: #202224;
   background-color: #F6A21D;
 }
 

@@ -120,7 +120,7 @@ exports[`VJ include container on Amp should render an amp-iframe with an image p
 
 .emotion-2>[overflow]::after {
   background-color: #fff;
-  border-top: 0.125rem solid #222222;
+  border-top: 0.125rem solid #202224;
   content: '';
   display: block;
   height: 50%;
@@ -137,7 +137,7 @@ exports[`VJ include container on Amp should render an amp-iframe with an image p
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
-  background-color: #222222;
+  background-color: #202224;
   border: 0.0625rem solid transparent;
   color: #fff;
   cursor: pointer;

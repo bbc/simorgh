@@ -260,7 +260,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
@@ -709,7 +709,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
 }
 
 .emotion-52 {
-  color: #222222;
+  color: #202224;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -863,8 +863,8 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   content: ' ';
   position: absolute;
   border-width: 1rem;
-  border: 0.1875rem solid #3F3F42;
-  background-color: #3F3F42;
+  border: 0.1875rem solid #3A3C3E;
+  background-color: #3A3C3E;
   border-radius: 50%;
   left: -1rem;
 }
@@ -1808,7 +1808,7 @@ exports[`Media Asset Page should render component 1`] = `
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
@@ -2416,8 +2416,8 @@ exports[`Media Asset Page should render component 1`] = `
   content: ' ';
   position: absolute;
   border-width: 1rem;
-  border: 0.1875rem solid #3F3F42;
-  background-color: #3F3F42;
+  border: 0.1875rem solid #3A3C3E;
+  background-color: #3A3C3E;
   border-radius: 50%;
   left: -1rem;
 }
@@ -2427,7 +2427,7 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 .emotion-61 {
-  color: #222222;
+  color: #202224;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3141,7 +3141,7 @@ exports[`Media Asset Page should render component 1`] = `
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  background-color: #FDFDFD;
+  background-color: #FEFEFE;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;
@@ -3249,7 +3249,7 @@ exports[`Media Asset Page should render component 1`] = `
 
 @media (max-width: 62.9375rem) {
   .emotion-240 {
-    border-bottom: 0.0625rem solid #F2F2F2;
+    border-bottom: 0.0625rem solid #F6F6F6;
   }
 }
 
@@ -3285,7 +3285,7 @@ exports[`Media Asset Page should render component 1`] = `
 
 @media (min-width: 63rem) {
   .emotion-240 {
-    border-bottom: 0.0625rem solid #F2F2F2;
+    border-bottom: 0.0625rem solid #F6F6F6;
     padding: 1rem 0 1rem;
   }
 }
@@ -3405,7 +3405,7 @@ exports[`Media Asset Page should render component 1`] = `
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 @media (min-width: 25rem) {
@@ -3484,7 +3484,7 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 .emotion-255 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -3510,7 +3510,7 @@ exports[`Media Asset Page should render component 1`] = `
 
 .emotion-257 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -3565,7 +3565,7 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 .emotion-297 {
-  color: #222222;
+  color: #202224;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -3604,7 +3604,7 @@ exports[`Media Asset Page should render component 1`] = `
 .emotion-301 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 1rem;
   height: 0.8125rem;
@@ -3613,7 +3613,7 @@ exports[`Media Asset Page should render component 1`] = `
 .emotion-330 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;

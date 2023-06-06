@@ -80,7 +80,7 @@ exports[`Expected use should render correctly with a single tag 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  background-color: #FDFDFD;
+  background-color: #FEFEFE;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;
@@ -172,10 +172,10 @@ exports[`Expected use should render correctly with a single tag 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #222222;
+  color: #202224;
 }
 
 .emotion-15 a:hover,
@@ -314,7 +314,7 @@ exports[`Expected use should render correctly with multiple tags 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  background-color: #FDFDFD;
+  background-color: #FEFEFE;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;
@@ -407,10 +407,10 @@ exports[`Expected use should render correctly with multiple tags 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #222222;
+  color: #202224;
 }
 
 .emotion-15 a:hover,

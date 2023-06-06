@@ -513,7 +513,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 .emotion-17 {
-  color: #3F3F42;
+  color: #3A3C3E;
 }
 
 .emotion-19 {
@@ -771,7 +771,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
@@ -1112,7 +1112,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 .emotion-46 {
-  color: #222222;
+  color: #202224;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1274,8 +1274,8 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   content: ' ';
   position: absolute;
   border-width: 1rem;
-  border: 0.1875rem solid #3F3F42;
-  background-color: #3F3F42;
+  border: 0.1875rem solid #3A3C3E;
+  background-color: #3A3C3E;
   border-radius: 50%;
   left: -1rem;
 }
@@ -1659,7 +1659,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  background-color: #FDFDFD;
+  background-color: #FEFEFE;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;
@@ -1710,7 +1710,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (max-width: 62.9375rem) {
   .emotion-197 {
-    border-bottom: 0.0625rem solid #F2F2F2;
+    border-bottom: 0.0625rem solid #F6F6F6;
   }
 }
 
@@ -1820,7 +1820,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 .emotion-203 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1847,7 +1847,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 .emotion-205 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -1911,7 +1911,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 .emotion-227 {
-  color: #222222;
+  color: #202224;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -1952,7 +1952,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 .emotion-231 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -2260,7 +2260,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   font-weight: 700;
   font-style: normal;
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   margin-bottom: 0.5rem;
@@ -4118,7 +4118,7 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 .emotion-17 {
-  color: #3F3F42;
+  color: #3A3C3E;
 }
 
 .emotion-19 {
@@ -4517,7 +4517,7 @@ exports[`Story Page should render correctly when the secondary column data is no
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
@@ -4858,7 +4858,7 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 .emotion-51 {
-  color: #222222;
+  color: #202224;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -5020,8 +5020,8 @@ exports[`Story Page should render correctly when the secondary column data is no
   content: ' ';
   position: absolute;
   border-width: 1rem;
-  border: 0.1875rem solid #3F3F42;
-  background-color: #3F3F42;
+  border: 0.1875rem solid #3A3C3E;
+  background-color: #3A3C3E;
   border-radius: 50%;
   left: -1rem;
 }
@@ -5381,7 +5381,7 @@ exports[`Story Page should render correctly when the secondary column data is no
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  background-color: #FDFDFD;
+  background-color: #FEFEFE;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;
@@ -5621,7 +5621,7 @@ exports[`Story Page should render correctly when the secondary column data is no
   font-weight: 700;
   font-style: normal;
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   margin-bottom: 0.5rem;
@@ -7220,7 +7220,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 .emotion-17 {
-  color: #3F3F42;
+  color: #3A3C3E;
 }
 
 .emotion-19 {
@@ -7619,7 +7619,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
@@ -7960,7 +7960,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 .emotion-51 {
-  color: #222222;
+  color: #202224;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -8122,8 +8122,8 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   content: ' ';
   position: absolute;
   border-width: 1rem;
-  border: 0.1875rem solid #3F3F42;
-  background-color: #3F3F42;
+  border: 0.1875rem solid #3A3C3E;
+  background-color: #3A3C3E;
   border-radius: 50%;
   left: -1rem;
 }
@@ -8507,7 +8507,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  background-color: #FDFDFD;
+  background-color: #FEFEFE;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;
@@ -8558,7 +8558,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (max-width: 62.9375rem) {
   .emotion-198 {
-    border-bottom: 0.0625rem solid #F2F2F2;
+    border-bottom: 0.0625rem solid #F6F6F6;
   }
 }
 
@@ -8668,7 +8668,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 .emotion-204 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -8695,7 +8695,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 .emotion-206 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -9051,7 +9051,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   font-weight: 700;
   font-style: normal;
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   margin-bottom: 0.5rem;

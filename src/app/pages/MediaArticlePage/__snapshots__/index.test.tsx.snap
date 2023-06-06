@@ -207,7 +207,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
 }
 
 .emotion-19 {
-  background-color: #222222;
+  background-color: #202224;
   border: none;
   color: #FFFFFF;
   cursor: pointer;
@@ -260,7 +260,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
 .emotion-24 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;

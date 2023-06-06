@@ -261,7 +261,7 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #3F3F42;
+  background-color: #3A3C3E;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;

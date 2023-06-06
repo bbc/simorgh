@@ -8,7 +8,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
 
 @media (max-width: 37.4375rem) {
   .emotion-0.si-nav-open {
-    background-color: #222222;
+    background-color: #202224;
   }
 }
 
@@ -847,7 +847,7 @@ exports[`Navigation Container should correctly render amp navigation on non-home
 
 @media (max-width: 37.4375rem) {
   .emotion-0.si-nav-open {
-    background-color: #222222;
+    background-color: #202224;
   }
 }
 
@@ -1585,7 +1585,7 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
 
 @media (max-width: 37.4375rem) {
   .emotion-0.si-nav-open {
-    background-color: #222222;
+    background-color: #202224;
   }
 }
 

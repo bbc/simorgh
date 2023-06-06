@@ -205,7 +205,7 @@ exports[`MostReadItemWrapper should render ltr correctly with 10 items 1`] = `
   font-weight: 700;
   font-style: normal;
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   margin-bottom: 0.5rem;
@@ -1003,7 +1003,7 @@ exports[`MostReadItemWrapper should render rtl correctly with 10 items 1`] = `
   font-weight: 700;
   font-style: normal;
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   margin-bottom: 0.5rem;
@@ -1616,7 +1616,7 @@ exports[`MostReadLink should render ltr correctly 1`] = `
   font-weight: 700;
   font-style: normal;
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   margin-bottom: 0.5rem;
@@ -1710,7 +1710,7 @@ exports[`MostReadLink should render rtl correctly 1`] = `
   font-weight: 700;
   font-style: normal;
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   margin-bottom: 0.5rem;
@@ -1804,7 +1804,7 @@ exports[`MostReadLink should render with last updated date correctly 1`] = `
   font-weight: 700;
   font-style: normal;
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   margin-bottom: 0.5rem;

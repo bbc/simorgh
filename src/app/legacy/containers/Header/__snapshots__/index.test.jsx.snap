@@ -44,12 +44,12 @@ exports[`Header Snapshots should render correctly for WS frontpage 1`] = `
   color: #F6A21D;
   -webkit-text-decoration: none;
   text-decoration: none;
-  border-bottom: solid 0.0625rem #AEAEB5;
+  border-bottom: solid 0.0625rem #B0B2B4;
 }
 
 .emotion-4 a:focus,
 .emotion-4 a:hover {
-  color: #222222;
+  color: #202224;
   background-color: #F6A21D;
 }
 
@@ -192,9 +192,9 @@ exports[`Header Snapshots should render correctly for WS frontpage 1`] = `
   line-height: 1.125rem;
   width: 100%;
   min-height: 2.75rem;
-  color: #222222;
+  color: #202224;
   font-weight: bold;
-  background-color: #FDFDFD;
+  background-color: #FEFEFE;
   border: solid 0.0625rem transparent;
   margin: 0;
   cursor: pointer;
@@ -216,7 +216,7 @@ exports[`Header Snapshots should render correctly for WS frontpage 1`] = `
 
 .emotion-12 button:focus,
 .emotion-12 button:hover {
-  color: #222222;
+  color: #202224;
   background-color: #F6A21D;
 }
 
@@ -1277,12 +1277,12 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   color: #F6A21D;
   -webkit-text-decoration: none;
   text-decoration: none;
-  border-bottom: solid 0.0625rem #AEAEB5;
+  border-bottom: solid 0.0625rem #B0B2B4;
 }
 
 .emotion-4 a:focus,
 .emotion-4 a:hover {
-  color: #222222;
+  color: #202224;
   background-color: #F6A21D;
 }
 
@@ -1425,9 +1425,9 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   line-height: 1.125rem;
   width: 100%;
   min-height: 2.75rem;
-  color: #222222;
+  color: #202224;
   font-weight: bold;
-  background-color: #FDFDFD;
+  background-color: #FEFEFE;
   border: solid 0.0625rem transparent;
   margin: 0;
   cursor: pointer;
@@ -1449,7 +1449,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
 
 .emotion-12 button:focus,
 .emotion-12 button:hover {
-  color: #222222;
+  color: #202224;
   background-color: #F6A21D;
 }
 
@@ -2510,12 +2510,12 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   color: #F6A21D;
   -webkit-text-decoration: none;
   text-decoration: none;
-  border-bottom: solid 0.0625rem #AEAEB5;
+  border-bottom: solid 0.0625rem #B0B2B4;
 }
 
 .emotion-4 a:focus,
 .emotion-4 a:hover {
-  color: #222222;
+  color: #202224;
   background-color: #F6A21D;
 }
 
@@ -2658,9 +2658,9 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   line-height: 1.125rem;
   width: 100%;
   min-height: 2.75rem;
-  color: #222222;
+  color: #202224;
   font-weight: bold;
-  background-color: #FDFDFD;
+  background-color: #FEFEFE;
   border: solid 0.0625rem transparent;
   margin: 0;
   cursor: pointer;
@@ -2682,7 +2682,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
 
 .emotion-12 button:focus,
 .emotion-12 button:hover {
-  color: #222222;
+  color: #202224;
   background-color: #F6A21D;
 }
 

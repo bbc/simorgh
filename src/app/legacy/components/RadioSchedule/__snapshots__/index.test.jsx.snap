@@ -239,7 +239,7 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
 }
 
 .emotion-10>svg {
-  color: #5A5A5A;
+  color: #545658;
   margin: 0;
   overflow: visible;
 }
@@ -253,7 +253,7 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
 .emotion-12 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.725rem;
   height: 0.725rem;
@@ -275,7 +275,7 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
 }
 
 .emotion-14>time {
-  color: #5A5A5A;
+  color: #545658;
   font-size: 0.75rem;
   line-height: 1rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -299,7 +299,7 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
 
 .emotion-14::after {
   content: '';
-  border-top: 0.0625rem solid #AEAEB5;
+  border-top: 0.0625rem solid #B0B2B4;
   top: 1rem;
   margin-left: 0.625rem;
   width: 100%;
@@ -357,7 +357,7 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
-  color: #222222;
+  color: #202224;
   margin: 0;
 }
 
@@ -377,7 +377,7 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
 
 .emotion-24 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -437,7 +437,7 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
 }
 
 .emotion-30 {
-  color: #3F3F42;
+  color: #3A3C3E;
   padding: 0.5rem 0 0 0;
   display: inline-block;
   width: 100%;
@@ -538,7 +538,7 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
 .emotion-39 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -555,7 +555,7 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
   font-size: 0.75rem;
   line-height: 1rem;
   padding: 0.5rem;
-  background-color: #222222;
+  background-color: #202224;
   outline: 0.0625rem solid transparent;
   color: #FFFFFF;
 }
@@ -1484,7 +1484,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
 }
 
 .emotion-10>svg {
-  color: #5A5A5A;
+  color: #545658;
   margin: 0;
   overflow: visible;
 }
@@ -1498,7 +1498,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
 .emotion-12 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.725rem;
   height: 0.725rem;
@@ -1520,7 +1520,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
 }
 
 .emotion-14>time {
-  color: #5A5A5A;
+  color: #545658;
   font-size: 0.75rem;
   line-height: 1.125rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -1544,7 +1544,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
 
 .emotion-14::after {
   content: '';
-  border-top: 0.0625rem solid #AEAEB5;
+  border-top: 0.0625rem solid #B0B2B4;
   top: 1.0625rem;
   margin-right: 0.625rem;
   width: 100%;
@@ -1602,7 +1602,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.5rem;
-  color: #222222;
+  color: #202224;
   margin: 0;
 }
 
@@ -1622,7 +1622,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
 
 .emotion-24 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -1682,7 +1682,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
 }
 
 .emotion-30 {
-  color: #3F3F42;
+  color: #3A3C3E;
   padding: 0.5rem 0 0 0;
   display: inline-block;
   width: 100%;
@@ -1783,7 +1783,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
 .emotion-39 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -1800,7 +1800,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
   font-size: 0.75rem;
   line-height: 1.125rem;
   padding: 0.5rem;
-  background-color: #222222;
+  background-color: #202224;
   outline: 0.0625rem solid transparent;
   color: #FFFFFF;
 }

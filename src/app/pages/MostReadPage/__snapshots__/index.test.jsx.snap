@@ -468,7 +468,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   font-weight: 700;
   font-style: normal;
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   margin-bottom: 0.5rem;

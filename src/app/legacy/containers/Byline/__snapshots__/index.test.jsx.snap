@@ -140,7 +140,7 @@ exports[`Byline should render correctly for STY pages with name and title 1`] = 
 }
 
 .emotion-6 {
-  color: #3F3F42;
+  color: #3A3C3E;
 }
 
 .emotion-8 {

@@ -76,7 +76,7 @@ exports[`SectionLabel With bar When hideSectionHeader is true should add styling
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  background-color: #FDFDFD;
+  background-color: #FEFEFE;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;
@@ -211,7 +211,7 @@ exports[`SectionLabel With bar With heading overriden should render a span eleme
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  background-color: #FDFDFD;
+  background-color: #FEFEFE;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;
@@ -303,7 +303,7 @@ exports[`SectionLabel With bar With linking title should render correctly 1`] = 
 }
 
 .emotion-4 {
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -358,7 +358,7 @@ exports[`SectionLabel With bar With linking title should render correctly 1`] = 
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  background-color: #FDFDFD;
+  background-color: #FEFEFE;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;
@@ -404,8 +404,8 @@ exports[`SectionLabel With bar With linking title should render correctly 1`] = 
   font-weight: 700;
   font-style: normal;
   margin: 1rem 0;
-  color: #222222;
-  background-color: #FDFDFD;
+  color: #202224;
+  background-color: #FEFEFE;
   white-space: nowrap;
   padding-left: 1rem;
   display: -webkit-box;
@@ -504,7 +504,7 @@ exports[`SectionLabel With bar With linking title should render correctly with a
 }
 
 .emotion-4 {
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -559,7 +559,7 @@ exports[`SectionLabel With bar With linking title should render correctly with a
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
-  background-color: #FDFDFD;
+  background-color: #FEFEFE;
   margin: 1rem 0;
   padding-left: 0.5rem;
   display: -webkit-box;
@@ -605,8 +605,8 @@ exports[`SectionLabel With bar With linking title should render correctly with a
   font-weight: 700;
   font-style: normal;
   margin: 1rem 0;
-  color: #222222;
-  background-color: #FDFDFD;
+  color: #202224;
+  background-color: #FEFEFE;
   white-space: nowrap;
   padding-right: 1rem;
   display: -webkit-box;
@@ -705,7 +705,7 @@ exports[`SectionLabel With bar With linking title should render correctly with e
 }
 
 .emotion-4 {
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -760,7 +760,7 @@ exports[`SectionLabel With bar With linking title should render correctly with e
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  background-color: #FDFDFD;
+  background-color: #FEFEFE;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;
@@ -806,8 +806,8 @@ exports[`SectionLabel With bar With linking title should render correctly with e
   font-weight: 700;
   font-style: normal;
   margin: 1rem 0;
-  color: #222222;
-  background-color: #FDFDFD;
+  color: #202224;
+  background-color: #FEFEFE;
   white-space: nowrap;
   padding-left: 1rem;
   display: -webkit-box;
@@ -906,7 +906,7 @@ exports[`SectionLabel With bar With linking title should render correctly with e
 }
 
 .emotion-4 {
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -961,7 +961,7 @@ exports[`SectionLabel With bar With linking title should render correctly with e
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  background-color: #FDFDFD;
+  background-color: #FEFEFE;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;
@@ -1007,8 +1007,8 @@ exports[`SectionLabel With bar With linking title should render correctly with e
   font-weight: 700;
   font-style: normal;
   margin: 1rem 0;
-  color: #222222;
-  background-color: #FDFDFD;
+  color: #202224;
+  background-color: #FEFEFE;
   white-space: nowrap;
   padding-left: 1rem;
   display: -webkit-box;
@@ -1156,7 +1156,7 @@ exports[`SectionLabel With bar With plain title should render correctly with ara
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
-  background-color: #FDFDFD;
+  background-color: #FEFEFE;
   margin: 1rem 0;
   padding-left: 0.5rem;
   display: -webkit-box;
@@ -1291,7 +1291,7 @@ exports[`SectionLabel With bar With plain title should render correctly with exp
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  background-color: #FDFDFD;
+  background-color: #FEFEFE;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;
@@ -1426,7 +1426,7 @@ exports[`SectionLabel With bar With plain title should render correctly with exp
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  background-color: #FDFDFD;
+  background-color: #FEFEFE;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;
@@ -1561,7 +1561,7 @@ exports[`SectionLabel With bar With plain title should render correctly with mob
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  background-color: #FDFDFD;
+  background-color: #FEFEFE;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;
@@ -1653,7 +1653,7 @@ exports[`SectionLabel With bar Without bar With linking title should render corr
 }
 
 .emotion-4 {
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -1708,7 +1708,7 @@ exports[`SectionLabel With bar Without bar With linking title should render corr
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  background-color: #FDFDFD;
+  background-color: #FEFEFE;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;
@@ -1754,8 +1754,8 @@ exports[`SectionLabel With bar Without bar With linking title should render corr
   font-weight: 700;
   font-style: normal;
   margin: 1rem 0;
-  color: #222222;
-  background-color: #FDFDFD;
+  color: #202224;
+  background-color: #FEFEFE;
   white-space: nowrap;
   padding-left: 1rem;
   display: -webkit-box;
@@ -1854,7 +1854,7 @@ exports[`SectionLabel With bar Without bar With linking title should render corr
 }
 
 .emotion-4 {
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -1909,7 +1909,7 @@ exports[`SectionLabel With bar Without bar With linking title should render corr
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
-  background-color: #FDFDFD;
+  background-color: #FEFEFE;
   margin: 1rem 0;
   padding-left: 0.5rem;
   display: -webkit-box;
@@ -1955,8 +1955,8 @@ exports[`SectionLabel With bar Without bar With linking title should render corr
   font-weight: 700;
   font-style: normal;
   margin: 1rem 0;
-  color: #222222;
-  background-color: #FDFDFD;
+  color: #202224;
+  background-color: #FEFEFE;
   white-space: nowrap;
   padding-right: 1rem;
   display: -webkit-box;
@@ -2055,7 +2055,7 @@ exports[`SectionLabel With bar Without bar With linking title should render corr
 }
 
 .emotion-4 {
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -2110,7 +2110,7 @@ exports[`SectionLabel With bar Without bar With linking title should render corr
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  background-color: #FDFDFD;
+  background-color: #FEFEFE;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;
@@ -2156,8 +2156,8 @@ exports[`SectionLabel With bar Without bar With linking title should render corr
   font-weight: 700;
   font-style: normal;
   margin: 1rem 0;
-  color: #222222;
-  background-color: #FDFDFD;
+  color: #202224;
+  background-color: #FEFEFE;
   white-space: nowrap;
   padding-left: 1rem;
   display: -webkit-box;
@@ -2299,7 +2299,7 @@ exports[`SectionLabel With bar Without bar With plain title should render correc
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  background-color: #FDFDFD;
+  background-color: #FEFEFE;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;
@@ -2434,7 +2434,7 @@ exports[`SectionLabel With bar Without bar With plain title should render correc
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
-  background-color: #FDFDFD;
+  background-color: #FEFEFE;
   margin: 1rem 0;
   padding-left: 0.5rem;
   display: -webkit-box;
@@ -2569,7 +2569,7 @@ exports[`SectionLabel With bar Without bar With plain title should render correc
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  background-color: #FDFDFD;
+  background-color: #FEFEFE;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;

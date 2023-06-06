@@ -53,7 +53,7 @@ exports[`AMP Ads Snapshots should correctly render an AMP leaderboard ad 1`] = `
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #5A5A5A;
+  color: #545658;
   -webkit-text-decoration: none;
   text-decoration: none;
   text-transform: uppercase;
@@ -190,7 +190,7 @@ exports[`AMP Ads Snapshots should correctly render an AMP mpu ad 1`] = `
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #5A5A5A;
+  color: #545658;
   -webkit-text-decoration: none;
   text-decoration: none;
   text-transform: uppercase;

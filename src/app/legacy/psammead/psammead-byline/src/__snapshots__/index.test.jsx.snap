@@ -50,7 +50,7 @@ exports[`Byline should render correctly 1`] = `
 }
 
 .emotion-6 {
-  color: #3F3F42;
+  color: #3A3C3E;
 }
 
 .emotion-8 {
@@ -127,7 +127,7 @@ exports[`Byline should render correctly without an avatar 1`] = `
 }
 
 .emotion-4 {
-  color: #3F3F42;
+  color: #3A3C3E;
 }
 
 .emotion-6 {

@@ -46,7 +46,7 @@ describe('CpsTable', () => {
     const cell = getByText('Men').closest('th');
 
     expect(cell).toBeInTheDocument();
-    expect(cell).toHaveStyle('background: #f7f7f5;');
+    expect(cell).toHaveStyle('background: #f6f6f6;');
   });
 
   it('should render body cells as a td without a background colour', () => {
@@ -54,7 +54,7 @@ describe('CpsTable', () => {
     const cell = getByText('Joe Root').closest('td');
 
     expect(cell).toBeInTheDocument();
-    expect(cell).not.toHaveStyle('background: #f7f7f5;');
+    expect(cell).not.toHaveStyle('background: #f6f6f6;');
   });
 
   it.each(fixtures)('should match snapshot - fixture %#', fixture => {

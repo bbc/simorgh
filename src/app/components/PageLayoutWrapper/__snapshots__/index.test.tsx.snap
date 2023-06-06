@@ -13,7 +13,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  background-color: #FDFDFD;
+  background-color: #FEFEFE;
 }
 
 .emotion-1 {
@@ -59,12 +59,12 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
   color: #F6A21D;
   -webkit-text-decoration: none;
   text-decoration: none;
-  border-bottom: solid 0.0625rem #AEAEB5;
+  border-bottom: solid 0.0625rem #B0B2B4;
 }
 
 .emotion-5 a:focus,
 .emotion-5 a:hover {
-  color: #222222;
+  color: #202224;
   background-color: #F6A21D;
 }
 
@@ -207,9 +207,9 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
   line-height: 1.125rem;
   width: 100%;
   min-height: 2.75rem;
-  color: #222222;
+  color: #202224;
   font-weight: bold;
-  background-color: #FDFDFD;
+  background-color: #FEFEFE;
   border: solid 0.0625rem transparent;
   margin: 0;
   cursor: pointer;
@@ -231,7 +231,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
 
 .emotion-13 button:focus,
 .emotion-13 button:hover {
-  color: #222222;
+  color: #202224;
   background-color: #F6A21D;
 }
 
@@ -513,7 +513,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  background-color: #222222;
+  background-color: #202224;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -549,7 +549,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
 }
 
 .emotion-46 {
-  border-bottom: 0.0625rem solid #3F3F42;
+  border-bottom: 0.0625rem solid #3A3C3E;
   -webkit-column-count: 4;
   column-count: 4;
   margin: 0;
@@ -625,7 +625,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
 }
 
 .emotion-46>li:first-of-type {
-  border-bottom: 0.0625rem solid #3F3F42;
+  border-bottom: 0.0625rem solid #3A3C3E;
   padding: 0.5rem 0;
   margin-bottom: 0.5rem;
   grid-column: 1/-1;

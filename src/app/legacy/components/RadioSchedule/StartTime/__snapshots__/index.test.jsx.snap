@@ -25,7 +25,7 @@ exports[`StartTime should render LTR correctly 1`] = `
 }
 
 .emotion-2>svg {
-  color: #5A5A5A;
+  color: #545658;
   margin: 0;
   overflow: visible;
 }
@@ -39,7 +39,7 @@ exports[`StartTime should render LTR correctly 1`] = `
 .emotion-4 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.725rem;
   height: 0.725rem;
@@ -61,7 +61,7 @@ exports[`StartTime should render LTR correctly 1`] = `
 }
 
 .emotion-6>time {
-  color: #5A5A5A;
+  color: #545658;
   font-size: 0.75rem;
   line-height: 1rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -85,7 +85,7 @@ exports[`StartTime should render LTR correctly 1`] = `
 
 .emotion-6::after {
   content: '';
-  border-top: 0.0625rem solid #AEAEB5;
+  border-top: 0.0625rem solid #B0B2B4;
   top: 1rem;
   margin-left: 0.625rem;
   width: 100%;
@@ -180,7 +180,7 @@ exports[`StartTime should render RTL correctly 1`] = `
 }
 
 .emotion-2>svg {
-  color: #5A5A5A;
+  color: #545658;
   margin: 0;
   overflow: visible;
 }
@@ -194,7 +194,7 @@ exports[`StartTime should render RTL correctly 1`] = `
 .emotion-4 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.725rem;
   height: 0.725rem;
@@ -216,7 +216,7 @@ exports[`StartTime should render RTL correctly 1`] = `
 }
 
 .emotion-6>time {
-  color: #5A5A5A;
+  color: #545658;
   font-size: 0.75rem;
   line-height: 1.125rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -240,7 +240,7 @@ exports[`StartTime should render RTL correctly 1`] = `
 
 .emotion-6::after {
   content: '';
-  border-top: 0.0625rem solid #AEAEB5;
+  border-top: 0.0625rem solid #B0B2B4;
   top: 1.0625rem;
   margin-right: 0.625rem;
   width: 100%;

@@ -11,7 +11,7 @@ exports[`Media Player: AMP Entry renders a landscape container with an amp-ifram
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
@@ -72,7 +72,7 @@ exports[`Media Player: AMP Entry renders a portrait container with amp-iframe an
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
@@ -139,7 +139,7 @@ exports[`Media Player: AMP Entry renders the audio skin 1`] = `
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
@@ -236,7 +236,7 @@ exports[`Media Player: Canonical Entry renders a landscape container with a plac
 }
 
 .emotion-9 {
-  background-color: #222222;
+  background-color: #202224;
   border: none;
   color: #FFFFFF;
   cursor: pointer;
@@ -296,7 +296,7 @@ exports[`Media Player: Canonical Entry renders a landscape container with a plac
 .emotion-14 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -455,7 +455,7 @@ exports[`Media Player: Canonical Entry renders a placeholder image with guidance
 }
 
 .emotion-11 {
-  background-color: #222222;
+  background-color: #202224;
   border: none;
   color: #FFFFFF;
   cursor: pointer;
@@ -515,7 +515,7 @@ exports[`Media Player: Canonical Entry renders a placeholder image with guidance
 .emotion-16 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -654,7 +654,7 @@ exports[`Media Player: Canonical Entry renders a portrait container with a place
 }
 
 .emotion-9 {
-  background-color: #222222;
+  background-color: #202224;
   border: none;
   color: #FFFFFF;
   cursor: pointer;
@@ -714,7 +714,7 @@ exports[`Media Player: Canonical Entry renders a portrait container with a place
 .emotion-14 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -968,7 +968,7 @@ exports[`Media Player: Canonical Entry renders with no-js styles when noJsClassN
 }
 
 .emotion-11 {
-  background-color: #222222;
+  background-color: #202224;
   border: none;
   color: #FFFFFF;
   cursor: pointer;
@@ -1032,7 +1032,7 @@ exports[`Media Player: Canonical Entry renders with no-js styles when noJsClassN
 .emotion-16 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -1154,7 +1154,7 @@ exports[`Media Player: Canonical Entry shows a loading image before the player i
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;

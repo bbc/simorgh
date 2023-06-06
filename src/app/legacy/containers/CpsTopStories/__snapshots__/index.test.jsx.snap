@@ -276,7 +276,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  background-color: #FDFDFD;
+  background-color: #FEFEFE;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;
@@ -327,7 +327,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
 
 @media (max-width: 62.9375rem) {
   .emotion-19 {
-    border-bottom: 0.0625rem solid #F2F2F2;
+    border-bottom: 0.0625rem solid #F6F6F6;
   }
 }
 
@@ -437,7 +437,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
 }
 
 .emotion-25 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -464,7 +464,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
 
 .emotion-27 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -908,7 +908,7 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  background-color: #FDFDFD;
+  background-color: #FEFEFE;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;
@@ -1035,7 +1035,7 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
 }
 
 .emotion-23 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1062,7 +1062,7 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
 
 .emotion-25 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;

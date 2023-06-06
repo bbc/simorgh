@@ -19,7 +19,7 @@ exports[`CpsTable should match snapshot - fixture 0 1`] = `
 }
 
 .emotion-2:hover {
-  background-color: #F7F7F5;
+  background-color: #F6F6F6;
 }
 
 .emotion-4 {
@@ -29,7 +29,7 @@ exports[`CpsTable should match snapshot - fixture 0 1`] = `
   padding-left: 0.5rem;
   vertical-align: middle;
   text-align: left;
-  background: #F7F7F5;
+  background: #F6F6F6;
 }
 
 .emotion-4 p {
@@ -347,7 +347,7 @@ exports[`CpsTable should match snapshot - fixture 1 1`] = `
 }
 
 .emotion-2:hover {
-  background-color: #F7F7F5;
+  background-color: #F6F6F6;
 }
 
 .emotion-4 {
@@ -357,7 +357,7 @@ exports[`CpsTable should match snapshot - fixture 1 1`] = `
   padding-left: 0.5rem;
   vertical-align: middle;
   text-align: left;
-  background: #F7F7F5;
+  background: #F6F6F6;
 }
 
 .emotion-4 p {
@@ -675,7 +675,7 @@ exports[`CpsTable should match snapshot - fixture 2 1`] = `
 }
 
 .emotion-2:hover {
-  background-color: #F7F7F5;
+  background-color: #F6F6F6;
 }
 
 .emotion-4 {
@@ -685,7 +685,7 @@ exports[`CpsTable should match snapshot - fixture 2 1`] = `
   padding-left: 0.5rem;
   vertical-align: middle;
   text-align: left;
-  background: #F7F7F5;
+  background: #F6F6F6;
 }
 
 .emotion-4 p {

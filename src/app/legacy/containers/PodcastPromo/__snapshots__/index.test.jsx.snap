@@ -3,7 +3,7 @@
 exports[`Inline Should render correctly 1`] = `
 .emotion-0 {
   float: right;
-  background: #F2F2F2;
+  background: #F6F6F6;
   margin: 1.5rem 0;
   height: auto;
 }
@@ -28,7 +28,7 @@ exports[`Inline Should render correctly 1`] = `
 }
 
 .emotion-3 {
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   padding: 1rem;
   padding: 1rem 0.5rem 0.5rem 0.5rem;
 }
@@ -44,8 +44,8 @@ exports[`Inline Should render correctly 1`] = `
   font-size: 0.875rem;
   line-height: 1rem;
   background-color: #FFFFFF;
-  border: 0.125rem solid #222222;
-  color: #222222;
+  border: 0.125rem solid #202224;
+  color: #202224;
   display: block;
   left: 0;
   line-height: 1;
@@ -91,7 +91,7 @@ exports[`Inline Should render correctly 1`] = `
   font-weight: 400;
   font-style: normal;
   display: inline;
-  color: #222222;
+  color: #202224;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -127,7 +127,7 @@ exports[`Inline Should render correctly 1`] = `
 .emotion-13 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 1rem;
   height: 1rem;
@@ -135,7 +135,7 @@ exports[`Inline Should render correctly 1`] = `
 
 .emotion-15 {
   position: relative;
-  background-color: #FDFDFD;
+  background-color: #FEFEFE;
   display: block;
 }
 
@@ -208,7 +208,7 @@ exports[`Inline Should render correctly 1`] = `
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
@@ -264,7 +264,7 @@ exports[`Inline Should render correctly 1`] = `
 }
 
 .emotion-23 {
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.9375rem;
@@ -468,7 +468,7 @@ exports[`Inline Should render correctly 1`] = `
 .emotion-31 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 1rem;
   height: 1rem;
@@ -620,7 +620,7 @@ exports[`SecondaryColumn Should render correctly 1`] = `
 }
 
 .emotion-2 {
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   padding: 1rem;
 }
 
@@ -635,7 +635,7 @@ exports[`SecondaryColumn Should render correctly 1`] = `
   font-weight: 400;
   font-style: normal;
   display: inline;
-  color: #222222;
+  color: #202224;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -671,7 +671,7 @@ exports[`SecondaryColumn Should render correctly 1`] = `
 .emotion-8 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 1rem;
   height: 1rem;
@@ -679,12 +679,12 @@ exports[`SecondaryColumn Should render correctly 1`] = `
 
 .emotion-10 {
   position: relative;
-  background-color: #FDFDFD;
+  background-color: #FEFEFE;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  box-shadow: 0 0 0.3125rem 0.3125rem #22222208;
+  box-shadow: 0 0 0.3125rem 0.3125rem #20222408;
 }
 
 @media (min-width: 63rem) {
@@ -746,7 +746,7 @@ exports[`SecondaryColumn Should render correctly 1`] = `
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
@@ -797,7 +797,7 @@ exports[`SecondaryColumn Should render correctly 1`] = `
   font-style: normal;
   margin-top: 0;
   margin-bottom: 0.5rem;
-  color: #222222;
+  color: #202224;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -815,7 +815,7 @@ exports[`SecondaryColumn Should render correctly 1`] = `
 }
 
 .emotion-20 {
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -908,7 +908,7 @@ exports[`SecondaryColumn Should render correctly 1`] = `
 .emotion-26 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 1rem;
   height: 1rem;

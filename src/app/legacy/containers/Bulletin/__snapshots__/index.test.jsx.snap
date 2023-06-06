@@ -3,11 +3,11 @@
 exports[`Bulletin Container snapshots should render a Live Radio bulletin correctly 1`] = `
 .emotion-0 {
   position: relative;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-column-gap: 1rem;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 .emotion-2 {
@@ -46,7 +46,7 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
@@ -97,7 +97,7 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
 }
 
 .emotion-8 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -131,7 +131,7 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
 
 .emotion-10 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -181,7 +181,7 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
 }
 
 .emotion-15 {
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding: 0 0.5rem 1rem;
   font-size: 0.9375rem;
@@ -283,7 +283,7 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
 .emotion-21 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -385,7 +385,7 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
 exports[`Bulletin Container snapshots should render a Live TV bulletin correctly 1`] = `
 .emotion-0 {
   position: relative;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-column-gap: 1rem;
@@ -433,7 +433,7 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
@@ -484,7 +484,7 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
 }
 
 .emotion-8 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -516,7 +516,7 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
 
 .emotion-10 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -566,7 +566,7 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
 }
 
 .emotion-15 {
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding: 0 0.5rem 1rem;
   font-size: 0.9375rem;
@@ -668,7 +668,7 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
 .emotion-21 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -777,11 +777,11 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
 exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1`] = `
 .emotion-0 {
   position: relative;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-column-gap: 1rem;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 .emotion-2 {
@@ -820,7 +820,7 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
@@ -871,7 +871,7 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
 }
 
 .emotion-8 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -905,7 +905,7 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
 
 .emotion-10 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -946,7 +946,7 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
 }
 
 .emotion-13 {
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding: 0 0.5rem 1rem;
   font-size: 0.9375rem;
@@ -977,7 +977,7 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
 }
 
 .emotion-15 {
-  background-color: #222222;
+  background-color: #202224;
   border: 0.0625rem solid transparent;
   color: #FFFFFF;
   padding: 0.75rem;
@@ -1048,7 +1048,7 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
 .emotion-19 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -1144,7 +1144,7 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
 exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] = `
 .emotion-0 {
   position: relative;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-column-gap: 1rem;
@@ -1192,7 +1192,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
@@ -1243,7 +1243,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
 }
 
 .emotion-8 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1275,7 +1275,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
 
 .emotion-10 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -1316,7 +1316,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
 }
 
 .emotion-13 {
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding: 0 0.5rem 1rem;
   font-size: 0.9375rem;
@@ -1348,7 +1348,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
 }
 
 .emotion-15 {
-  background-color: #222222;
+  background-color: #202224;
   border: 0.0625rem solid transparent;
   color: #FFFFFF;
   padding: 0.75rem;
@@ -1418,7 +1418,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
 .emotion-19 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -1521,7 +1521,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
 exports[`Bulletin Container snapshots should render a TV bulletin with lang attribute 1`] = `
 .emotion-0 {
   position: relative;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-column-gap: 1rem;
@@ -1569,7 +1569,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin with lang attr
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
@@ -1620,7 +1620,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin with lang attr
 }
 
 .emotion-8 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -1652,7 +1652,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin with lang attr
 
 .emotion-10 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -1693,7 +1693,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin with lang attr
 }
 
 .emotion-13 {
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding: 0 0.5rem 1rem;
   font-size: 0.9375rem;
@@ -1725,7 +1725,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin with lang attr
 }
 
 .emotion-15 {
-  background-color: #222222;
+  background-color: #202224;
   border: 0.0625rem solid transparent;
   color: #FFFFFF;
   padding: 0.75rem;
@@ -1795,7 +1795,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin with lang attr
 .emotion-19 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;

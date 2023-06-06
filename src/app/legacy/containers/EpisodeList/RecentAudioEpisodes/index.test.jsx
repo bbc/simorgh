@@ -296,7 +296,7 @@ describe('RecentAudioEpisodes', () => {
     const spanEl = getByText('17 November 2020');
     const style = window.getComputedStyle(spanEl);
 
-    expect(style.borderLeft).toBe('0.0625rem solid #AEAEB5');
+    expect(style.borderLeft).toBe('0.0625rem solid #B0B2B4');
     expect(style.borderRight).toBe('');
   });
 

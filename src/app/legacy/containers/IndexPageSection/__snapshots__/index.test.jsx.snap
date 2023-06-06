@@ -90,7 +90,7 @@ HTMLCollection [
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  background-color: #FDFDFD;
+  background-color: #FEFEFE;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;
@@ -210,7 +210,7 @@ HTMLCollection [
 
 @media (max-width: 62.9375rem) {
   .emotion-18 {
-    border-bottom: 0.0625rem solid #F2F2F2;
+    border-bottom: 0.0625rem solid #F6F6F6;
   }
 }
 
@@ -420,7 +420,7 @@ HTMLCollection [
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 @media (min-width: 25rem) {
@@ -493,7 +493,7 @@ HTMLCollection [
 }
 
 .emotion-32 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -519,7 +519,7 @@ HTMLCollection [
 
 .emotion-34 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -555,7 +555,7 @@ HTMLCollection [
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -611,7 +611,7 @@ HTMLCollection [
 
 @media (max-width: 62.9375rem) {
   .emotion-41 {
-    border-bottom: 0.0625rem solid #F2F2F2;
+    border-bottom: 0.0625rem solid #F6F6F6;
   }
 }
 
@@ -850,7 +850,7 @@ HTMLCollection [
 }
 
 .emotion-55 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -880,7 +880,7 @@ HTMLCollection [
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -1391,7 +1391,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  background-color: #FDFDFD;
+  background-color: #FEFEFE;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;
@@ -1511,7 +1511,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 
 @media (max-width: 62.9375rem) {
   .emotion-18 {
-    border-bottom: 0.0625rem solid #F2F2F2;
+    border-bottom: 0.0625rem solid #F6F6F6;
   }
 }
 
@@ -1721,7 +1721,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 @media (min-width: 25rem) {
@@ -1794,7 +1794,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 }
 
 .emotion-32 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -1820,7 +1820,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 
 .emotion-34 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -1856,7 +1856,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -1912,7 +1912,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 
 @media (max-width: 62.9375rem) {
   .emotion-41 {
-    border-bottom: 0.0625rem solid #F2F2F2;
+    border-bottom: 0.0625rem solid #F6F6F6;
   }
 }
 
@@ -2151,7 +2151,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 }
 
 .emotion-55 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -2181,7 +2181,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -2686,7 +2686,7 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  background-color: #FDFDFD;
+  background-color: #FEFEFE;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;
@@ -2794,7 +2794,7 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
 
 @media (max-width: 62.9375rem) {
   .emotion-16 {
-    border-bottom: 0.0625rem solid #F2F2F2;
+    border-bottom: 0.0625rem solid #F6F6F6;
   }
 }
 
@@ -3002,7 +3002,7 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
 }
 
 .emotion-22 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -3028,7 +3028,7 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
 
 .emotion-24 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -3064,7 +3064,7 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -3178,7 +3178,7 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 @media (min-width: 25rem) {
@@ -3217,7 +3217,7 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
 
 @media (max-width: 62.9375rem) {
   .emotion-39 {
-    border-bottom: 0.0625rem solid #F2F2F2;
+    border-bottom: 0.0625rem solid #F6F6F6;
   }
 }
 
@@ -3456,7 +3456,7 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
 }
 
 .emotion-53 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -3746,7 +3746,7 @@ exports[`IndexPageSection Container snapshots should render with only one item 1
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  background-color: #FDFDFD;
+  background-color: #FEFEFE;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;
@@ -3869,7 +3869,7 @@ exports[`IndexPageSection Container snapshots should render with only one item 1
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 @media (min-width: 25rem) {
@@ -3942,7 +3942,7 @@ exports[`IndexPageSection Container snapshots should render with only one item 1
 }
 
 .emotion-26 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -3968,7 +3968,7 @@ exports[`IndexPageSection Container snapshots should render with only one item 1
 
 .emotion-28 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -4004,7 +4004,7 @@ exports[`IndexPageSection Container snapshots should render with only one item 1
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -4235,7 +4235,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  background-color: #FDFDFD;
+  background-color: #FEFEFE;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;
@@ -4343,7 +4343,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
 
 @media (max-width: 62.9375rem) {
   .emotion-16 {
-    border-bottom: 0.0625rem solid #F2F2F2;
+    border-bottom: 0.0625rem solid #F6F6F6;
   }
 }
 
@@ -4553,7 +4553,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 @media (min-width: 25rem) {
@@ -4626,7 +4626,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
 }
 
 .emotion-30 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -4652,7 +4652,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
 
 .emotion-32 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -4688,7 +4688,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -4744,7 +4744,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
 
 @media (max-width: 62.9375rem) {
   .emotion-39 {
-    border-bottom: 0.0625rem solid #F2F2F2;
+    border-bottom: 0.0625rem solid #F6F6F6;
   }
 }
 
@@ -4983,7 +4983,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
 }
 
 .emotion-53 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -5013,7 +5013,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
