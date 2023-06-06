@@ -1,6 +1,6 @@
 import { string, shape, arrayOf, number, oneOfType } from 'prop-types';
 
-const cpsMostReadRecord = {
+export const cpsMostReadRecord = {
   id: string.isRequired,
   promo: shape({
     timestamp: number.isRequired,
@@ -13,7 +13,7 @@ const cpsMostReadRecord = {
   }),
 };
 
-const optimoMostReadRecord = {
+export const optimoMostReadRecord = {
   id: string.isRequired,
   timestamp: number.isRequired,
   locators: shape({

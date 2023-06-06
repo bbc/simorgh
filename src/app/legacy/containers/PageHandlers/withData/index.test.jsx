@@ -3,7 +3,7 @@ import {
   articleDataNews,
   articleDataPersian,
 } from '#pages/ArticlePage/fixtureData';
-import frontPageDataPidgin from '#data/pidgin/frontpage';
+import serbianFrontPageData from '#data/serbian/frontpage/lat.json';
 import {
   shouldMatchSnapshot,
   suppressPropWarnings,
@@ -54,7 +54,7 @@ describe('withData HOC', () => {
   };
 
   const validFrontPagesProps = {
-    pageData: frontPageDataPidgin,
+    pageData: serbianFrontPageData,
     status: 200,
     location: '',
   };

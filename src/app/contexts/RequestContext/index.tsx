@@ -5,6 +5,7 @@ import {
   PageTypes,
   Services,
   Variants,
+  MvtExperiment,
 } from '#app/models/types/global';
 import getStatsDestination from './getStatsDestination';
 import getStatsPageIdentifier from './getStatsPageIdentifier';
@@ -12,7 +13,7 @@ import getOriginContext from './getOriginContext';
 import getEnv from './getEnv';
 import getMetaUrls from './getMetaUrls';
 
-type RequestContextProps = {
+export type RequestContextProps = {
   ampLink: string;
   ampUkLink: string;
   ampNonUkLink: string;
@@ -22,13 +23,10 @@ type RequestContextProps = {
   env: Environments;
   id: string | null;
   isAmp: boolean;
+  isApp: boolean;
   isNextJs: boolean;
   isUK: boolean;
-  mvtExperiments: {
-    experimentName: string;
-    variation: string;
-    type: 'experiment' | 'feature';
-  } | null;
+  mvtExperiments?: MvtExperiment[] | null;
   origin: string;
   pageType: PageTypes;
   derivedPageType: string | null;
@@ -53,6 +51,7 @@ type RequestProviderProps = {
   derivedPageType?: string | null;
   id?: string | null;
   isAmp: boolean;
+  isApp: boolean;
   isNextJs?: boolean;
   pageType: PageTypes;
   pathname: string;
@@ -61,11 +60,7 @@ type RequestProviderProps = {
   showAdsBasedOnLocation?: boolean;
   statusCode?: number | null;
   timeOnServer?: number | null;
-  mvtExperiments?: {
-    experimentName: string;
-    variation: string;
-    type: 'experiment' | 'feature';
-  } | null;
+  mvtExperiments?: MvtExperiment[] | null;
   variant?: Variants | null;
 };
 
@@ -75,6 +70,7 @@ export const RequestContextProvider = ({
   children,
   id = null,
   isAmp,
+  isApp,
   isNextJs = false,
   mvtExperiments = null,
   pageType,
@@ -108,6 +104,7 @@ export const RequestContextProvider = ({
     pageType,
     derivedPageType,
     isAmp,
+    isApp,
     isNextJs,
     platform,
     statsDestination,

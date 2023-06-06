@@ -12,12 +12,14 @@ import Subheading from './Subhead';
 import getComponentName, { COMPONENT_NAMES } from './getComponentName';
 import MessageBanner from '../MessageBanner';
 import idSanitiser from '../../lib/utilities/idSanitiser';
+import MostRead from '../MostRead';
 
 const {
   SIMPLE_CURATION_GRID,
   HIERARCHICAL_CURATION_GRID,
   MESSAGE_BANNER,
   NOT_SUPPORTED,
+  MOST_READ,
 } = COMPONENT_NAMES;
 
 const { NONE } = VISUAL_STYLE;
@@ -43,9 +45,8 @@ const Curation = ({
   headingLevel = 2,
   position = 0,
   curationLength = 0,
+  mostRead,
 }: CurationProps) => {
-  if (!promos.length) return null;
-
   const componentName = getComponentName(visualStyle, visualProminence);
   const GridComponent = getGridComponent(componentName);
 
@@ -66,10 +67,14 @@ const Curation = ({
           image={promos[0].imageUrl}
         />
       );
+    case MOST_READ:
+      return <MostRead data={mostRead} columnLayout="twoColumn" />;
     case SIMPLE_CURATION_GRID:
     case HIERARCHICAL_CURATION_GRID:
     default:
-      return curationLength > 1 && (title || isFirstCuration) ? (
+      return curationLength > 1 &&
+        promos.length > 0 &&
+        (title || isFirstCuration) ? (
         <section aria-labelledby={id} role="region">
           {isFirstCuration ? (
             <VisuallyHiddenText id={id} as="h2">

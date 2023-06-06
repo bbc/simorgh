@@ -41,49 +41,59 @@ const recommendationSettings = {
   },
 };
 
+const input = {
+  bbcOrigin: 'https://www.test.bbc.co.uk',
+  id: 'c0000000000o',
+  isAmp: false,
+  pageType: ARTICLE_PAGE,
+  pathname: '/pathname',
+  statusCode: 200,
+};
+
 const Context = ({
   service = 'pidgin',
   children,
   adsToggledOn = false,
   mostReadToggledOn = true,
   showAdsBasedOnLocation = false,
-} = {}) => (
-  <BrowserRouter>
-    <ThemeProvider service={service} variant="default">
-      <ToggleContextProvider
-        toggles={{
-          mostRead: {
-            enabled: mostReadToggledOn,
-          },
-          ads: {
-            enabled: adsToggledOn,
-          },
-          cpsRecommendations: {
-            enabled: true,
-          },
-        }}
-      >
-        <RequestContextProvider
-          bbcOrigin="https://www.test.bbc.co.uk"
-          id="c0000000000o"
-          isAmp={false}
-          pageType={ARTICLE_PAGE}
-          pathname="/pathname"
-          service={service}
-          statusCode={200}
-          showAdsBasedOnLocation={showAdsBasedOnLocation}
+  isApp = false,
+} = {}) => {
+  const appInput = {
+    ...input,
+    service,
+    showAdsBasedOnLocation,
+    isApp,
+  };
+
+  return (
+    <BrowserRouter>
+      <ThemeProvider service={service} variant="default">
+        <ToggleContextProvider
+          toggles={{
+            mostRead: {
+              enabled: mostReadToggledOn,
+            },
+            ads: {
+              enabled: adsToggledOn,
+            },
+            cpsRecommendations: {
+              enabled: true,
+            },
+          }}
         >
-          <ServiceContextProvider
-            service={service}
-            recommendations={recommendationSettings}
-          >
-            {children}
-          </ServiceContextProvider>
-        </RequestContextProvider>
-      </ToggleContextProvider>
-    </ThemeProvider>
-  </BrowserRouter>
-);
+          <RequestContextProvider {...appInput}>
+            <ServiceContextProvider
+              service={service}
+              recommendations={recommendationSettings}
+            >
+              {children}
+            </ServiceContextProvider>
+          </RequestContextProvider>
+        </ToggleContextProvider>
+      </ThemeProvider>
+    </BrowserRouter>
+  );
+};
 
 beforeEach(() => {
   fetch.resetMocks();
@@ -386,6 +396,40 @@ it('should render the top stories and features when passed', async () => {
 
   expect(getByTestId('top-stories')).toBeInTheDocument();
   expect(getByTestId('features')).toBeInTheDocument();
+});
+
+it('should remove the top stories and features sections when isApp is set to true', async () => {
+  const pageDataWithSecondaryColumn = {
+    ...articleDataNews,
+    secondaryColumn: {
+      topStories: [],
+      features: [],
+    },
+  };
+
+  const { container } = render(
+    <Context service="news" isApp>
+      <ArticlePage pageData={pageDataWithSecondaryColumn} />
+    </Context>,
+  );
+
+  expect(container.querySelector(`div[data-testid="top-stories"]`)).toBeNull();
+  expect(container.querySelector(`div[data-testid="features"]`)).toBeNull();
+});
+
+it('should remove the most read section ', async () => {
+  fetch.mockResponse(JSON.stringify(pidginMostReadData));
+
+  const { container } = render(
+    <Context service="pidgin" isApp>
+      <ArticlePage pageData={articleDataPidgin} />
+    </Context>,
+  );
+
+  await waitFor(() => {
+    const mostReadSection = container.querySelector('#Most-Read');
+    expect(mostReadSection).toBeNull();
+  });
 });
 
 it('should show ads when enabled', async () => {

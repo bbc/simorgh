@@ -29,7 +29,6 @@ import CpsRelatedContent from '#containers/CpsRelatedContent';
 import TopStories from '#containers/CpsTopStories';
 import FeaturesAnalysis from '#containers/CpsFeaturesAnalysis';
 import MostReadContainer from '#containers/MostRead';
-import ATIAnalytics from '#containers/ATIAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import fauxHeadline from '#containers/FauxHeadline';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
@@ -51,6 +50,7 @@ import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
+import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import LinkedData from '../../components/LinkedData';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -314,7 +314,13 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
         imageLocator={indexImageLocator}
       />
       <ATIAnalytics data={pageData} />
-      <ChartbeatAnalytics data={pageData} />
+      <ChartbeatAnalytics
+        sectionName={pageData?.relatedContent?.section?.name}
+        categoryName={pageData?.metadata?.passport?.category?.categoryName}
+        title={title}
+        producer={pageData?.metadata?.analyticsLabels?.producer}
+        chapter={pageData?.metadata?.atiAnalytics?.chapter}
+      />
       <ComscoreAnalytics />
       <NielsenAnalytics />
       {/* dotcom and dotcomConfig need to be setup before the main dotcom javascript file is loaded */}

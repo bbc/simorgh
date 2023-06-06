@@ -50,6 +50,7 @@ const Context = ({
           bbcOrigin="https://www.test.bbc.co.uk"
           id="c0000000000o"
           isAmp={false}
+          isApp={false}
           pageType={ARTICLE_PAGE}
           pathname="/pathname"
           service={service}
