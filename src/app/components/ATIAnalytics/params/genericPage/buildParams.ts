@@ -18,7 +18,7 @@ export const buildPageATIParams = ({
       timePublished,
       timeUpdated,
     },
-    title,
+    title: pageTitle,
   } = atiData;
   return {
     appName: atiAnalyticsAppName,
@@ -26,7 +26,7 @@ export const buildPageATIParams = ({
     producerId: atiAnalyticsProducerId,
     contentType,
     pageIdentifier,
-    title,
+    pageTitle,
     platform,
     statsDestination,
     service,

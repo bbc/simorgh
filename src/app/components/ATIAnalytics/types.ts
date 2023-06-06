@@ -62,7 +62,6 @@ export interface PageData {
   title?: string;
 }
 
-// analytics key - should it be optional? Doing so breaks buildParams.ts corresponding file
 export interface ATIData {
   analytics: {
     contentId?: string;
