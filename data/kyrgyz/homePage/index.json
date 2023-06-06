@@ -1288,9 +1288,7 @@
                           "core:Place",
                           "core:Thing"
                         ],
-                        "thingSameAs": [
-                          "http://sws.geonames.org/2635167/"
-                        ],
+                        "thingSameAs": ["http://sws.geonames.org/2635167/"],
                         "thingEnglishLabel": "United Kingdom",
                         "type": "about"
                       },
@@ -1306,9 +1304,7 @@
                           "tagging:TagConcept",
                           "core:Thing"
                         ],
-                        "thingSameAs": [
-                          "http://dbpedia.org/resource/Music"
-                        ],
+                        "thingSameAs": ["http://dbpedia.org/resource/Music"],
                         "thingEnglishLabel": "Music",
                         "type": "about"
                       }
@@ -1319,10 +1315,7 @@
                         "thingLabel": "News report",
                         "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                         "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                        "thingType": [
-                          "tagging:TagConcept",
-                          "tagging:Format"
-                        ],
+                        "thingType": ["tagging:TagConcept", "tagging:Format"],
                         "thingSameAs": [],
                         "thingEnglishLabel": "Report",
                         "thingPreferredLabel": "Report",
@@ -1467,9 +1460,7 @@
                           "core:Place",
                           "core:Thing"
                         ],
-                        "thingSameAs": [
-                          "http://sws.geonames.org/2635167/"
-                        ],
+                        "thingSameAs": ["http://sws.geonames.org/2635167/"],
                         "thingEnglishLabel": "United Kingdom",
                         "type": "about"
                       },
@@ -1498,10 +1489,7 @@
                         "thingLabel": "News report",
                         "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                         "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                        "thingType": [
-                          "tagging:TagConcept",
-                          "tagging:Format"
-                        ],
+                        "thingType": ["tagging:TagConcept", "tagging:Format"],
                         "thingSameAs": [],
                         "thingEnglishLabel": "Report",
                         "thingPreferredLabel": "Report",
@@ -1601,9 +1589,7 @@
                           "core:Place",
                           "core:Thing"
                         ],
-                        "thingSameAs": [
-                          "http://sws.geonames.org/2635167/"
-                        ],
+                        "thingSameAs": ["http://sws.geonames.org/2635167/"],
                         "thingEnglishLabel": "United Kingdom",
                         "type": "about"
                       }
@@ -1614,10 +1600,7 @@
                         "thingLabel": "News report",
                         "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                         "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                        "thingType": [
-                          "tagging:TagConcept",
-                          "tagging:Format"
-                        ],
+                        "thingType": ["tagging:TagConcept", "tagging:Format"],
                         "thingSameAs": [],
                         "thingEnglishLabel": "Report",
                         "thingPreferredLabel": "Report",
