@@ -20,7 +20,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: ${({ theme }) => theme.palette.GHOST};
+  background-color: ${({ theme }) => theme.palette.GREY_1};
 `;
 
 const Content = styled.div`

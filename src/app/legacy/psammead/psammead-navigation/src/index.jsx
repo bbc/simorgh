@@ -238,13 +238,13 @@ const StyledNav = styled.nav`
   position: relative;
   background-color: ${({ isOpen }) =>
     props =>
-      isOpen ? props.theme.palette.EBON : props.theme.palette.WHITE};
+      isOpen ? props.theme.palette.GREY_8 : props.theme.palette.WHITE};
   ${({ ampOpenClass, theme }) =>
     ampOpenClass &&
     `
       &.${ampOpenClass} {
         @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
-          background-color: ${theme.palette.EBON};
+          background-color: ${theme.palette.GREY_8};
         }
       }
     `}

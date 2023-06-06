@@ -68,7 +68,7 @@ const ImageWithPlaceholder = ({
   const isImgJpg = imgType === 'jpg' || imgType === 'jpeg';
 
   const {
-    palette: { GHOST },
+    palette: { GREY_1 },
   } = useTheme();
 
   return (
@@ -99,7 +99,7 @@ const ImageWithPlaceholder = ({
             fallbackSrcset={fallbackSrcset}
             height={height}
             width={width}
-            style={!isImgJpg ? { backgroundColor: GHOST } : null}
+            style={!isImgJpg ? { backgroundColor: GREY_1 } : null}
             {...(preload && { 'data-hero': true })}
           />
         ) : (

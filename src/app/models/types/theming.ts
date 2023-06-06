@@ -10,8 +10,7 @@ interface Palette extends BrandPalette {
   CONSENT_ACTION: string;
   CONSENT_BACKGROUND: string;
   CONSENT_CONTENT: string;
-  EBON: string;
-  GHOST: string;
+  GREY_1: string;
   GREY_10: string;
   GREY_2: string;
   GREY_3: string;
@@ -21,16 +20,9 @@ interface Palette extends BrandPalette {
   GREY_7: string;
   GREY_8: string;
   KINGFISHER: string;
-  LUNAR: string;
   METAL: string;
-  MIDNIGHT_BLACK: string;
   NEWSROUND_PURPLE: string;
-  NEWSROUND_PURPLE_30: string;
-  PEBBLE: string;
   NEWS_CORE: string;
-  RHINO: string;
-  SHADOW: string;
-  SPORT_MIST: string;
   SPORT_SILVER: string;
   SPORT_CORE: string;
   STONE: string;

@@ -48,7 +48,7 @@ const Wrapper = styled.aside`
 const ThirdPartyLinksTitle = styled.h2`
   ${({ script }) => getGreatPrimer(script)}
   ${({ service }) => getSansRegular(service)}
-  color: ${props => props.theme.palette.SHADOW};
+  color: ${props => props.theme.palette.GREY_7};
   margin: 0;
   margin-top: 1rem;
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {

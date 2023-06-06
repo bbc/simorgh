@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 const CardLink = styled.a`
-  color: ${props => props.theme.palette.EBON};
+  color: ${props => props.theme.palette.GREY_8};
   text-decoration: none;
   :before {
     position: absolute;

@@ -8,7 +8,7 @@ import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
 
 const StyledMediaIndicator = styled.div`
-  color: ${props => props.theme.palette.EBON};
+  color: ${props => props.theme.palette.GREY_8};
   background-color: ${props => props.theme.palette.WHITE};
   ${({ service }) => getSansRegular(service)}
   ${({ script }) => script && getMinion(script)};

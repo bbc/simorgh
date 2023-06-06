@@ -442,13 +442,13 @@ const methods = [
 
 const Table = styled.table`
   margin: ${GEL_SPACING_DBL};
-  border: 1px solid ${props => props.theme.palette.PEBBLE};
+  border: 1px solid ${props => props.theme.palette.GREY_4};
   font-family: ${GEL_FF_REITH_SANS};
 
   & td,
   th {
     padding: ${GEL_SPACING_HLF} ${GEL_SPACING};
-    border: 1px solid ${props => props.theme.palette.PEBBLE};
+    border: 1px solid ${props => props.theme.palette.GREY_4};
   }
 `;
 

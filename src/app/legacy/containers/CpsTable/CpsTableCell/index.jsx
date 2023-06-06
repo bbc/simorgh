@@ -18,7 +18,7 @@ const StyledTd = styled.td`
 
   ${({ isHeaderCell }) =>
     props =>
-      isHeaderCell && `background: ${props.theme.palette.SPORT_MIST};`}
+      isHeaderCell && `background: ${props.theme.palette.GREY_2};`}
 
   & p {
     padding-bottom: 0;

@@ -20,7 +20,7 @@ const getRowCount = (children, columns) =>
 export const UsefulLink = styled.a`
   ${({ script }) => script && getPica(script)};
   ${({ service }) => service && getSerifMedium(service)};
-  color: ${props => props.theme.palette.EBON};
+  color: ${props => props.theme.palette.GREY_8};
   text-decoration: none;
   &:hover,
   &:focus {

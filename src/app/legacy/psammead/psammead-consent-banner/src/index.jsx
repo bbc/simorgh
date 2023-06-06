@@ -37,7 +37,7 @@ const transparentBorderHeight = '0.0625rem';
 const hoverFocusStyles = ({ theme }) => `
   &:focus,
   &:hover {
-    color: ${theme.palette.EBON};
+    color: ${theme.palette.GREY_8};
     background-color: ${theme.palette.CONSENT_ACTION};
   }
 `;
@@ -68,7 +68,7 @@ const CenterWrapper = styled.div`
   a {
     color: ${props => props.theme.palette.CONSENT_ACTION};
     text-decoration: none;
-    border-bottom: solid 0.0625rem ${props => props.theme.palette.PEBBLE};
+    border-bottom: solid 0.0625rem ${props => props.theme.palette.GREY_4};
 
     ${hoverFocusStyles}
   }
@@ -155,9 +155,9 @@ const ListItem = styled.li`
     ${({ script }) => script && getLongPrimer(script)};
     width: 100%;
     min-height: 2.75rem;
-    color: ${props => props.theme.palette.EBON};
+    color: ${props => props.theme.palette.GREY_8};
     font-weight: bold;
-    background-color: ${props => props.theme.palette.GHOST};
+    background-color: ${props => props.theme.palette.GREY_1};
     border: solid ${transparentBorderHeight} transparent;
     margin: 0;
     cursor: pointer;

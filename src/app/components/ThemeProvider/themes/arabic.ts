@@ -1,4 +1,4 @@
-import { GHOST, WHITE, NEWS_CORE } from '../palette';
+import { GREY_1, WHITE, NEWS_CORE } from '../palette';
 import arabicScript from '../fontScripts/arabic';
 import { REITH_QALAM_BOLD, REITH_QALAM_REGULAR } from '../fontFaces';
 import reithQalamFontVariants from '../fontVariants/reithQalam';

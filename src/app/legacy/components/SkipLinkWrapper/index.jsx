@@ -18,8 +18,8 @@ const SkipLink = styled.a`
   ${({ service }) => getSansBold(service)}
   ${GEL_BREVIER}
   background-color: ${props => props.theme.palette.WHITE};
-  border: ${BORDER_WIDTH} solid ${props => props.theme.palette.EBON};
-  color: ${props => props.theme.palette.EBON};
+  border: ${BORDER_WIDTH} solid ${props => props.theme.palette.GREY_8};
+  color: ${props => props.theme.palette.GREY_8};
   display: block;
   left: 0;
   line-height: 1;

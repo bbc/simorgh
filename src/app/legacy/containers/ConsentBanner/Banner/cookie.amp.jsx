@@ -96,13 +96,13 @@ const StyledLink = styled(Link)`
   text-decoration: none;
 
   span {
-    border-bottom: ${props => props.theme.palette.PEBBLE} solid ${BORDER_WIDTH};
+    border-bottom: ${props => props.theme.palette.GREY_4} solid ${BORDER_WIDTH};
   }
 
   &:hover,
   &:focus {
     background-color: ${props => props.theme.palette.CONSENT_ACTION};
-    color: ${props => props.theme.palette.EBON};
+    color: ${props => props.theme.palette.GREY_8};
 
     span {
       border-bottom: transparent solid ${BORDER_WIDTH_TRANSPARENT};
@@ -139,9 +139,9 @@ const OptionsItem = styled.li`
   button {
     ${({ service }) => getSansBold(service)}
     ${({ script }) => getLongPrimer(script)}
-    background: ${props => props.theme.palette.GHOST};
+    background: ${props => props.theme.palette.GREY_1};
     border: none;
-    color: ${props => props.theme.palette.EBON};
+    color: ${props => props.theme.palette.GREY_8};
     cursor: pointer;
     display: block;
     height: 100%;
@@ -152,7 +152,7 @@ const OptionsItem = styled.li`
     &:hover,
     &:focus {
       background-color: ${props => props.theme.palette.CONSENT_ACTION};
-      color: ${props => props.theme.palette.EBON};
+      color: ${props => props.theme.palette.GREY_8};
       text-decoration: underline;
     }
   }

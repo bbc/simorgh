@@ -10,7 +10,7 @@ const Heading = styled.h2`
   ${({ script }) => getGreatPrimer(script)}
   ${({ service }) => getSansRegular(service)}
   display: inline;
-  color: ${props => props.theme.palette.EBON};
+  color: ${props => props.theme.palette.GREY_8};
 
   > svg {
     margin-left: 0;

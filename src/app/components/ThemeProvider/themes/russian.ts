@@ -1,4 +1,4 @@
-import { GHOST, WHITE, NEWS_CORE } from '../palette';
+import { GREY_1, WHITE, NEWS_CORE } from '../palette';
 import cyrillicScript from '../fontScripts/cyrillic';
 import {
   REITH_SANS_BOLD,

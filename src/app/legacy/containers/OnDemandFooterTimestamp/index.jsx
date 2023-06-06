@@ -18,7 +18,7 @@ const Wrapper = styled.time`
   ${({ script }) => script && getLongPrimer(script)}
   ${({ service }) => getSansRegular(service)}
   color: ${({ theme }) =>
-    theme.isDarkUi ? theme.palette.PEBBLE : theme.palette.METAL};
+    theme.isDarkUi ? theme.palette.GREY_4 : theme.palette.METAL};
   display: inline-block;
 
   ${({ theme }) => !theme.isDarkUi && smallScreenMargin}

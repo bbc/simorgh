@@ -24,7 +24,7 @@ const AmpImgPlaceholderContainer = ({
   return (
     <div
       css={({ palette }) => ({
-        backgroundColor: `${darkPlaceholder ? palette.SHADOW : palette.LUNAR}`,
+        backgroundColor: `${darkPlaceholder ? palette.GREY_7 : palette.GREY_2}`,
       })}
       fallback={fallback}
       placeholder={placeholder}

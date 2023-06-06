@@ -144,24 +144,24 @@ The available colours. Click on any colour to see the colour in https://color-he
 - [`CONSENT_ACTION`](https://www.color-hex.com/color/F6A21D)
 - [`CONSENT_BACKGROUND`](https://www.color-hex.com/color/323232)
 - [`CONSENT_CONTENT`](https://www.color-hex.com/color/BEBEBE)
-- [`EBON`](https://www.color-hex.com/color/222222)
-- [`GHOST`](https://www.color-hex.com/color/FDFDFD)
+- [`GREY_8`](https://www.color-hex.com/color/222222)
+- [`GREY_1`](https://www.color-hex.com/color/FDFDFD)
 - [`GREY_10`](https://www.color-hex.com/color/141414)
 - [`GREY_2`](https://www.color-hex.com/color/F6F6F6)
 - [`GREY_3`](https://www.color-hex.com/color/E6E8EA)
 - [`GREY_6`](https://www.color-hex.com/color/545658)
 - [`GREY_8`](https://www.color-hex.com/color/202224)
 - [`KINGFISHER`](https://www.color-hex.com/color/11708C)
-- [`LUNAR`](https://www.color-hex.com/color/F2F2F2)
+- [`GREY_2`](https://www.color-hex.com/color/F2F2F2)
 - [`METAL`](https://www.color-hex.com/color/6E6E73)
-- [`MIDNIGHT_BLACK`](https://www.color-hex.com/color/121212)
+- [`GREY_10`](https://www.color-hex.com/color/121212)
 - [`NEWSROUND_PURPLE`](https://www.color-hex.com/color/6C22D6)
 - [`NEWSROUND_PURPLE_30`](https://www.color-hex.com/color/9159A8)
-- [`PEBBLE`](https://www.color-hex.com/color/AEAEB5)
+- [`GREY_4`](https://www.color-hex.com/color/AEAEB5)
 - [`NEWS_CORE`](https://www.color-hex.com/color/B80000)
-- [`RHINO`](https://www.color-hex.com/color/5A5A5A)
-- [`SHADOW`](https://www.color-hex.com/color/3F3F42)
-- [`SPORT_MIST`](https://www.color-hex.com/color/F7F7F5)
+- [`GREY_6`](https://www.color-hex.com/color/5A5A5A)
+- [`GREY_7`](https://www.color-hex.com/color/3F3F42)
+- [`GREY_2`](https://www.color-hex.com/color/F7F7F5)
 - [`SPORT_SILVER`](https://www.color-hex.com/color/DBDBDB)
 - [`SPORT_CORE`](https://www.color-hex.com/color/FFD230)
 - [`STONE`](https://www.color-hex.com/color/D5D0CD)
@@ -177,10 +177,10 @@ You can use `palette` like this:
 ```tsx
 <div
   css={({ palette }) => ({
-    backgroundColor: palette.LUNAR_LIGHT,
+    backgroundColor: palette.GREY_2_LIGHT,
   })}
 >
-  This is a div with a background-colour of #f8f8f8 (LUNAR_LIGHT).
+  This is a div with a background-colour of #f8f8f8 (GREY_2_LIGHT).
 </div>
 ```
 

@@ -36,10 +36,10 @@ const styles = {
     css({
       color: palette.GREY_2,
       [mq.GROUP_2_ONLY]: {
-        color: palette.EBON,
+        color: palette.GREY_8,
       },
       [mq.GROUP_3_ONLY]: {
-        color: palette.EBON,
+        color: palette.GREY_8,
       },
     }),
   promoMediaIndicator: ({ palette, mq }: Theme) =>
@@ -48,10 +48,10 @@ const styles = {
         color: palette.GREY_2,
         fill: 'currentColor',
         [mq.GROUP_2_ONLY]: {
-          color: palette.EBON,
+          color: palette.GREY_8,
         },
         [mq.GROUP_3_ONLY]: {
-          color: palette.EBON,
+          color: palette.GREY_8,
         },
       },
     }),

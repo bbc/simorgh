@@ -135,9 +135,9 @@ describe('CpsOnwardJourney', () => {
 
   it.each`
     expectation                             | sectionLabelOverrideAs | sectionLabelBar | sectionLabelBackground
-    ${'element as strong'}                  | ${'strong'}            | ${true}         | ${props => props.theme.palette.GHOST}
-    ${'without bar under section label'}    | ${null}                | ${false}        | ${props => props.theme.palette.GHOST}
-    ${'with alternative background colour'} | ${null}                | ${true}         | ${props => props.theme.palette.EBON}
+    ${'element as strong'}                  | ${'strong'}            | ${true}         | ${props => props.theme.palette.GREY_1}
+    ${'without bar under section label'}    | ${null}                | ${false}        | ${props => props.theme.palette.GREY_1}
+    ${'with alternative background colour'} | ${null}                | ${true}         | ${props => props.theme.palette.GREY_8}
   `(
     'renders section label with $expectation',
     ({ sectionLabelOverrideAs, sectionLabelBar, sectionLabelBackground }) => {

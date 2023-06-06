@@ -17,7 +17,7 @@ export const TYPES = {
 
 const Wrapper = styled.div`
   padding: ${GEL_SPACING_HLF};
-  color: ${props => props.theme.palette.EBON};
+  color: ${props => props.theme.palette.GREY_8};
   background-color: ${props => props.theme.palette.WHITE};
   ${({ service }) => getSansRegular(service)}
   ${({ script }) => script && getMinion(script)};

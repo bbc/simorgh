@@ -3,13 +3,13 @@ import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/brea
 
 const Card = styled.div`
   position: relative;
-  background-color: ${props => props.theme.palette.GHOST};
+  background-color: ${props => props.theme.palette.GREY_1};
   ${({ inlinePromo }) => (inlinePromo ? 'display: block;' : 'display: flex;')}
   ${({ inlinePromo }) =>
     props =>
       inlinePromo
         ? ''
-        : `box-shadow: 0 0 0.3125rem 0.3125rem ${props.theme.palette.EBON}08;`}
+        : `box-shadow: 0 0 0.3125rem 0.3125rem ${props.theme.palette.GREY_8}08;`}
 
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     display: block;

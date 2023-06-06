@@ -33,7 +33,7 @@ const GEL_GROUP_1_WIDTH_360PX = '22.5rem';
 
 const ResponsivePodcastPromoWrapper = styled.div`
   ${({ dir }) => (dir === 'ltr' ? 'float: right;' : 'float: left;')}
-  background: ${props => props.theme.palette.LUNAR};
+  background: ${props => props.theme.palette.GREY_2};
   margin: ${GEL_SPACING_TRPL} 0;
   height: auto;
 

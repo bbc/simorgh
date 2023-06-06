@@ -18,7 +18,7 @@ const StyledIndexAlsos = styled.div`
 `;
 
 const StyledIndexAlso = styled.div`
-  border-top: 1px solid ${props => props.theme.palette.LUNAR};
+  border-top: 1px solid ${props => props.theme.palette.GREY_2};
   padding: ${GEL_SPACING} 0;
 `;
 
@@ -32,7 +32,7 @@ const StyledIndexAlsosUl = styled.ul`
 const StyledIndexAlsosLink = styled.a`
   ${({ script }) => script && getBrevier(script)};
   ${({ service }) => getSerifMedium(service)}
-  color: ${props => props.theme.palette.EBON};
+  color: ${props => props.theme.palette.GREY_8};
   text-decoration: none;
   display: inline-block;
 

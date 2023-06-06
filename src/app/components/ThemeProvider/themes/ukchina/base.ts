@@ -1,4 +1,4 @@
-import { GHOST, WHITE, NEWS_CORE } from '../../palette';
+import { GREY_1, WHITE, NEWS_CORE } from '../../palette';
 import noAscOrDescScript from '../../fontScripts/noAscOrDesc';
 import chineseFontVariants from '../../fontVariants/chinese';
 import brandSVG from '../../chameleonLogos/zhongwen';

@@ -30,26 +30,12 @@ export const STONE = '#D5D0CD'; // Similar to #E6E8EA with similarity 519
 export const ARCHIVE_BLUE = '#3A549C'; // Similar to #545658 with dissimilarity 714 (Need documentation)
 export const NEWSROUND_PURPLE = '#6C22D6'; // No similarity, best is #545658 with 3515 score
 
-// All very similar to new colours
-export const EBON = '#222222'; // Extremely similar to #202224 with dissimilarity 2 <----
-export const GHOST = '#FDFDFD'; // Extremely similar to FEFEFE with dissimilarity 1 <----
-export const PEBBLE = '#AEAEB5'; // Extremely similar to #B0B2B4 with similarity of 11 <----
-export const RHINO = '#5A5A5A'; // Extremely similar to #545658 with similarity 21 <----
-export const SHADOW = '#3F3F42'; // Extremely similar to #3A3C3E with similarity 15 <----
-export const SPORT_MIST = '#F7F7F5'; // Extremely similar to #F6F6F6 with similarity 1 <----
-export const MIDNIGHT_BLACK = '#121212'; // Similar to #141414 with dissimilarity of 4 <----
-export const LUNAR = '#F2F2F2'; // Extremely similar to #F6F6F6 with dissimilarity of 16 <----
-
 // _________________________________________________________________________ New Colours
 // service
 // The secondary colours are very different from what we are currently using
-export const NEWS_CORE = '#B80000'; // Used
-export const NEWS_BRIGHT = '#EB0000'; // Not used
-export const NEWS_LIGHT = '#FF453A'; // Not used
+export const NEWS_CORE = '#B80000';
 
-export const SPORT_CORE = 'FFD230'; // Used
-export const SPORT_LIGHT = 'FFD53C'; // Not used
-export const SPORT_DARK = '387B12'; // Not used
+export const SPORT_CORE = 'FFD230';
 
 // Where is archive? What is archive?
 

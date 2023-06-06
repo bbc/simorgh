@@ -41,7 +41,7 @@ const LabelComponent = styled.strong`
   ${({ script }) => script && getDoublePica(script)};
   ${({ service }) => getSansRegular(service)}
   margin-bottom: ${GEL_SPACING_DBL};
-  color: ${props => props.theme.palette.SHADOW};
+  color: ${props => props.theme.palette.GREY_7};
 
   ${({ dir }) =>
     `

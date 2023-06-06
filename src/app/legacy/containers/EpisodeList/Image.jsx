@@ -35,7 +35,7 @@ const Wrapper = styled.div`
 `;
 
 const PlayWrapper = withEpisodeContext(styled.div`
-  background-color: ${props => props.theme.palette.EBON};
+  background-color: ${props => props.theme.palette.GREY_8};
   padding: ${GEL_SPACING_HLF};
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     padding: ${GEL_SPACING};

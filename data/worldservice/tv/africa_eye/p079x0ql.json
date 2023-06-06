@@ -20,7 +20,7 @@
     "ownership": {
       "service": {
         "type": null,
-        "id": "bbc_webonly",
+        "id": "bbc_wGREY_8ly",
         "key": "",
         "title": "BBC"
       }
@@ -58,9 +58,7 @@
         "canonical": 1,
         "pid": "p079x0qq",
         "duration": 686,
-        "types": [
-          "Original version"
-        ]
+        "types": ["Original version"]
       }
     ],
     "links": [],

@@ -31,7 +31,7 @@ import Grid, { GridWrapper, GridItemLarge } from '#components/Grid';
 import { MOST_WATCHED_PAGE } from '#app/routes/utils/pageTypes';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import SkipLinkWrapper from '../../components/SkipLinkWrapper';
-import { GHOST } from '../../../components/ThemeProvider/palette';
+import { GREY_1 } from '../../../components/ThemeProvider/palette';
 
 const LargeGridColumns = {
   group0: 1,
@@ -281,7 +281,7 @@ CpsOnwardJourney.defaultProps = {
   parentColumns: null,
   sectionLabelOverrideAs: null,
   sectionLabelBar: true,
-  sectionLabelBackground: GHOST,
+  sectionLabelBackground: GREY_1,
   skipLink: null,
   eventTrackingData: null,
 };

@@ -22,7 +22,7 @@ import { NEGATIVE_MARGIN } from '#lib/styles.const';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import MetadataContainer from '../../components/Metadata';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import { GHOST } from '../../components/ThemeProvider/palette';
+import { GREY_1 } from '../../components/ThemeProvider/palette';
 import LinkedData from '../../components/LinkedData';
 import VisuallyHiddenText from '../../components/VisuallyHiddenText';
 
@@ -41,7 +41,7 @@ const StyledRadioScheduleContainer = styled(RadioScheduleContainer)`
 
 const MostReadWrapper = ({ children }) => (
   <FrontPageMostReadSection>
-    <MostReadSectionLabel backgroundColor={GHOST} />
+    <MostReadSectionLabel backgroundColor={GREY_1} />
     {children}
   </FrontPageMostReadSection>
 );

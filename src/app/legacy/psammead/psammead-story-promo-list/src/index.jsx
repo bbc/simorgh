@@ -10,7 +10,7 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
-import { LUNAR } from '../../../../components/ThemeProvider/palette';
+import { GREY_2 } from '../../../../components/ThemeProvider/palette';
 
 const promoListPropTypes = {
   children: node.isRequired,
@@ -26,7 +26,7 @@ export const StoryPromoLiBase = styled.li`
     border &&
     `
     @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-      border-bottom: 0.0625rem solid ${LUNAR};
+      border-bottom: 0.0625rem solid ${GREY_2};
     }
   `}
 

@@ -21,9 +21,9 @@ const BORDER_WEIGHT = '0.0625rem';
 const Wrapper = styled.div`
   ${({ service }) => getSansRegular(service)}
   ${GEL_BODY_COPY}
-  border: ${BORDER_WEIGHT} solid ${props => props.theme.palette.PEBBLE};
+  border: ${BORDER_WEIGHT} solid ${props => props.theme.palette.GREY_4};
   border-radius: ${GEL_SPACING};
-  color: ${props => props.theme.palette.SHADOW};
+  color: ${props => props.theme.palette.GREY_7};
   padding: ${GEL_SPACING_DBL};
 
   p {
@@ -38,7 +38,7 @@ const Wrapper = styled.div`
 
   a {
     ${({ service }) => getSansBold(service)}
-    color: ${props => props.theme.palette.EBON};
+    color: ${props => props.theme.palette.GREY_8};
     text-decoration: none;
 
     &:visited {

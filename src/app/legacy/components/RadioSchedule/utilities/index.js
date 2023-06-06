@@ -2,8 +2,8 @@ import { formatDuration } from '#psammead/psammead-timestamp-container/src/utili
 import {
   KINGFISHER,
   NEWS_CORE,
-  EBON,
-  SHADOW,
+  GREY_8,
+  GREY_7,
   WHITE,
   METAL,
 } from '../../../../components/ThemeProvider/palette';
@@ -11,8 +11,8 @@ import {
 export const programStateConfig = {
   live: {
     backgroundColor: NEWS_CORE,
-    headerTextColor: EBON,
-    titleColor: SHADOW,
+    headerTextColor: GREY_8,
+    titleColor: GREY_7,
     durationColor: WHITE,
   },
   next: {
@@ -22,9 +22,9 @@ export const programStateConfig = {
     durationColor: KINGFISHER,
   },
   onDemand: {
-    backgroundColor: EBON,
-    headerTextColor: EBON,
-    titleColor: SHADOW,
+    backgroundColor: GREY_8,
+    headerTextColor: GREY_8,
+    titleColor: GREY_7,
     durationColor: WHITE,
   },
 };

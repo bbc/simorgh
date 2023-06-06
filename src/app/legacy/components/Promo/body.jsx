@@ -6,7 +6,7 @@ import { getBodyCopy } from '#psammead/gel-foundations/src/typography';
 const P = styled.p`
   ${({ service }) => getSansRegular(service)}
   ${({ script }) => getBodyCopy(script)}
-  color: ${props => props.theme.palette.EBON}
+  color: ${props => props.theme.palette.GREY_8}
 `;
 
 export default P;

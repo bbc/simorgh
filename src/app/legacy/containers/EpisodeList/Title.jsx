@@ -8,7 +8,7 @@ const Title = styled.span`
   ${({ script }) => getPica(script)}
   ${({ service }) => getSansRegular(service)}
   color: ${({ theme }) =>
-    theme.isDarkUi ? theme.palette.WHITE : theme.palette.EBON};
+    theme.isDarkUi ? theme.palette.WHITE : theme.palette.GREY_8};
   display: inline-block;
   width: 100%;
   font-weight: 700;

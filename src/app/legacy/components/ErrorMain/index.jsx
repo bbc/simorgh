@@ -25,7 +25,7 @@ const StatusCode = styled.span`
 const Heading = styled.h1`
   ${({ script }) => script && getCanon(script)}
   ${({ service }) => getSerifMedium(service)}
-  color: ${props => props.theme.palette.SHADOW};
+  color: ${props => props.theme.palette.GREY_7};
   margin-top: 0;
 `;
 

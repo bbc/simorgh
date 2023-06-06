@@ -1,4 +1,4 @@
-import { GHOST, WHITE, NEWS_CORE } from '../palette';
+import { GREY_1, WHITE, NEWS_CORE } from '../palette';
 import devanagariScript from '../fontScripts/devanagari';
 import hindiFontVariants from '../fontVariants/hindi';
 import withThemeProvider from '../withThemeProvider';

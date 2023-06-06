@@ -39,7 +39,7 @@ const Person = styled.ul`
 `;
 
 const Name = styled.li`
-  color: ${props => props.theme.palette.SHADOW};
+  color: ${props => props.theme.palette.GREY_7};
 `;
 const Title = styled.li`
   color: ${props => props.theme.palette.METAL};

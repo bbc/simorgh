@@ -19,7 +19,7 @@ const coreAttrs = {
 const CoreIcon = styled.svg`
   vertical-align: middle;
   margin: 0 ${GEL_SPACING_HLF};
-  color: ${props => props.theme.palette.EBON};
+  color: ${props => props.theme.palette.GREY_8};
   fill: currentColor;
 `;
 

@@ -1,4 +1,4 @@
-import { GHOST, WHITE, NEWS_CORE } from '../palette';
+import { GREY_1, WHITE, NEWS_CORE } from '../palette';
 import gurmukhiScript from '../fontScripts/gurmukhi';
 import punjabiFontVariants from '../fontVariants/punjabi';
 import withThemeProvider from '../withThemeProvider';

@@ -9,7 +9,7 @@ const Link = styled.a`
   ${({ service }) => getSansBold(service)}
   ${({ dir }) =>
     dir === 'rtl' ? 'padding-left: 1rem;' : 'padding-right: 1rem;'}
-  color: ${props => props.theme.palette.EBON};
+  color: ${props => props.theme.palette.GREY_8};
   text-decoration: none;
   display: inline-block;
   margin: 0.1875rem 0;

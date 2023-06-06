@@ -5,7 +5,7 @@ const styles = {
   componentHealthContainer: (theme: Theme) =>
     css({
       margin: `${theme.spacings.FULL}rem 0`,
-      border: `0.0625rem solid ${theme.palette.SHADOW}`,
+      border: `0.0625rem solid ${theme.palette.GREY_7}`,
     }),
 
   titleContainer: {
@@ -25,7 +25,7 @@ const styles = {
   date: (theme: Theme) =>
     css({
       alignSelf: 'flex-end',
-      color: theme.palette.SHADOW,
+      color: theme.palette.GREY_7,
     }),
 
   icon: { height: '100%', width: `100%` },
@@ -39,12 +39,12 @@ const styles = {
 
   title: (theme: Theme) =>
     css({
-      color: theme.palette.SHADOW,
+      color: theme.palette.GREY_7,
     }),
 
   actionIcon: (theme: Theme) =>
     css({
-      color: theme.palette.SHADOW,
+      color: theme.palette.GREY_7,
     }),
 
   warningIcon: {

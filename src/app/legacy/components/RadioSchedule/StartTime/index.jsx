@@ -22,7 +22,7 @@ const StyledClock = styled.span`
       ? `padding-right: ${GEL_SPACING_HLF};`
       : `padding-left: ${GEL_SPACING_HLF};`}
   > svg {
-    color: ${props => props.theme.palette.RHINO};
+    color: ${props => props.theme.palette.GREY_6};
     margin: 0;
     overflow: visible;
     @media screen and (forced-colors: active) {
@@ -50,14 +50,14 @@ const StyledTimestamp = styled.span`
   width: 100%;
 
   > time {
-    color: ${props => props.theme.palette.RHINO};
+    color: ${props => props.theme.palette.GREY_6};
     ${({ script }) => script && getMinion(script)}
     ${({ service }) => service && getSansRegular(service)}
   }
 
   &::after {
     content: '';
-    border-top: 0.0625rem solid ${props => props.theme.palette.PEBBLE};
+    border-top: 0.0625rem solid ${props => props.theme.palette.GREY_4};
     top: ${({ script }) => 0.5 + script.minion.groupA.lineHeight / 2 / 16}rem;
     ${({ dir }) =>
       dir === 'ltr' ? `margin-left: 0.625rem;` : `margin-right: 0.625rem;`}

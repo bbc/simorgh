@@ -77,15 +77,15 @@ import styled from '@emotion/styled';
 import useImageAnalyser from './';
 
 const MyElement = styled.div`
-  color: ${props => props.theme.palette.EBON};
+  color: ${props => props.theme.palette.GREY_8};
   background: ${props => props.background.hex};
 `;
 
 const MyComponent = () => {
   const options = {
     minimumContrast: 7,
-    contrastColour: ${props => props.theme.palette.EBON},
-    fallbackColour: ${props => props.theme.palette.GHOST},
+    contrastColour: ${props => props.theme.palette.GREY_8},
+    fallbackColour: ${props => props.theme.palette.GREY_1},
   };
   const { colour } = useImageAnalyser(
     'http://placekitten.com/200/300',

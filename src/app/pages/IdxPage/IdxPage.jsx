@@ -27,7 +27,7 @@ import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import MetadataContainer from '../../components/Metadata';
-import { GHOST } from '../../components/ThemeProvider/palette';
+import { GREY_1 } from '../../components/ThemeProvider/palette';
 import LinkedData from '../../components/LinkedData';
 
 const IdxMostReadSection = styled(MostReadSection)`
@@ -55,7 +55,7 @@ const StyledRadioScheduleContainer = styled(RadioScheduleContainer)`
 
 const MostReadWrapper = ({ children }) => (
   <IdxMostReadSection>
-    <MostReadSectionLabel backgroundColor={GHOST} />
+    <MostReadSectionLabel backgroundColor={GREY_1} />
     {children}
   </IdxMostReadSection>
 );
