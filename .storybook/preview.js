@@ -3,7 +3,6 @@
 import React, { useEffect } from 'react';
 import { Global } from '@emotion/react';
 import { addDecorator } from '@storybook/react';
-import { create } from '@storybook/theming';
 import isChromatic from 'chromatic';
 import { forceVisible } from 'react-lazyload';
 import GlobalStyles from '../src/app/legacy/psammead/psammead-styles/src/global-styles';
@@ -318,12 +317,6 @@ addDecorator(story => {
   );
 });
 
-const theme = create({
-  base: 'light',
-  brandTitle: 'BBC Simorgh',
-  brandUrl: 'https://github.com/bbc/simorgh',
-});
-
 export const globalTypes = {
   service: {
     name: 'service',
@@ -576,7 +569,6 @@ export const parameters = {
   options: {
     panelPosition: 'right',
     sidebarAnimcations: true,
-    theme,
   },
   docs: {
     container: ({ context, children }) => DocsDecorator({ context, children }),

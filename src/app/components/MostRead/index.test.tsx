@@ -217,7 +217,7 @@ describe('MostRead', () => {
         mostReadToggle: true,
         isAmp: true,
         variant: null,
-        renderExpectation: shouldRenderMostReadAmp,
+        renderExpectation: shouldNotRenderMostReadAmp,
 
         pageType: HOME_PAGE,
       },

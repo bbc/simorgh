@@ -29,7 +29,7 @@ import text from '../../legacy/containers/Text';
 import Image from '../../legacy/containers/Image';
 import Blocks from '../../legacy/containers/Blocks';
 import Timestamp from '../../legacy/containers/ArticleTimestamp';
-import ATIAnalytics from '../../legacy/containers/ATIAnalytics';
+import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import ComscoreAnalytics from '../../legacy/containers/ComscoreAnalytics';
 import ArticleMediaPlayer from '../../legacy/containers/ArticleMediaPlayer';

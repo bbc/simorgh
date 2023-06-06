@@ -3,10 +3,10 @@ import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import prop from 'ramda/src/prop';
 
-import { sendEventBeacon } from '#containers/ATIAnalytics/beacon';
-import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
-import useTrackingToggle from '#hooks/useTrackingToggle';
-import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
+import { sendEventBeacon } from '../../components/ATIAnalytics/beacon';
+import { EventTrackingContext } from '../../contexts/EventTrackingContext';
+import useTrackingToggle from '../useTrackingToggle';
+import OPTIMIZELY_CONFIG from '../../lib/config/optimizely';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
 const EVENT_TYPE = 'view';
