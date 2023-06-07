@@ -22,13 +22,14 @@ const PRIVACY_BANNER_TEXT =
   "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.";
 const COOKIE_BANNER_TEXT = 'Let us know you agree to cookies';
 
-const renderFixture = () =>
+const renderFixture = ({ isApp = false } = {}) =>
   render(
     <RequestContextProvider
       bbcOrigin="https://www.test.bbc.co.uk"
       id="c0000000000o"
       pageType="article"
       isAmp={false}
+      isApp={isApp}
       service="news"
       statusCode={200}
       pathname="/pathname"
@@ -122,6 +123,16 @@ describe('Canonical Consent Banner', () => {
     const agreeButtonEl = screen.queryByText('Yes, I agree');
 
     fireEvent.click(agreeButtonEl);
+
+    const cookieBannerHeadingEl = screen.queryByText(COOKIE_BANNER_TEXT);
+    const privacyBannerHeadingEl = screen.queryByText(PRIVACY_BANNER_TEXT);
+
+    expect(cookieBannerHeadingEl).not.toBeInTheDocument();
+    expect(privacyBannerHeadingEl).not.toBeInTheDocument();
+  });
+
+  it('should render no banners when it is APP version', async () => {
+    renderFixture({ isApp: true });
 
     const cookieBannerHeadingEl = screen.queryByText(COOKIE_BANNER_TEXT);
     const privacyBannerHeadingEl = screen.queryByText(PRIVACY_BANNER_TEXT);

@@ -1,12 +1,15 @@
 import React, { useContext } from 'react';
 import { oneOfType, func, shape, any } from 'prop-types';
 
+import { RequestContext } from '#contexts/RequestContext';
 import { UserContext } from '#contexts/UserContext';
 import Banner from './Banner/index.canonical';
 import useConsentBanners from './useConsentBanners';
 
 const Canonical = ({ onDismissFocusRef }) => {
+  const { isApp } = useContext(RequestContext);
   const { updateCookiePolicy } = useContext(UserContext);
+
   const {
     showPrivacyBanner,
     showCookieBanner,
@@ -14,6 +17,8 @@ const Canonical = ({ onDismissFocusRef }) => {
     handleCookieBannerAccepted,
     handleCookieBannerRejected,
   } = useConsentBanners();
+
+  if (isApp) return null;
 
   return (
     <>
