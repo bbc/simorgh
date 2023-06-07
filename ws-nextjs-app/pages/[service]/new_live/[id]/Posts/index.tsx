@@ -84,7 +84,7 @@ const PostItem = ({ postItem }: { postItem: Post }) => {
 const PostsList = ({ postData }: { postData: StreamResponse }) => {
   const { results: postResults } = postData?.data;
 
-  if (!postResults) return null;
+  if (postResults.length === 0) return null;
 
   return (
     <div>
