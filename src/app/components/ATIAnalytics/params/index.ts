@@ -49,7 +49,12 @@ import {
 } from './topicPage/buildParams';
 import { RequestContextProps } from '../../../contexts/RequestContext';
 import { ServiceConfig } from '../../../models/types/serviceConfig';
-import { PageData, ATIPageTrackingProps, ATIData } from '../types';
+import {
+  HomePageProps,
+  PageData,
+  ATIPageTrackingProps,
+  ATIData,
+} from '../types';
 import { PageTypes } from '../../../models/types/global';
 
 const ARTICLE_MEDIA_ASSET = 'article-media-asset';
@@ -228,7 +233,7 @@ export const buildATIUrl = (
 };
 
 export const buildATIEventTrackingParams = (
-  data: PageData,
+  data: PageData | HomePageProps,
   requestContext: RequestContextProps,
   serviceContext: ServiceConfig,
 ) => {
