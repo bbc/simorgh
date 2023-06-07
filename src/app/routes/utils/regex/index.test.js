@@ -541,13 +541,20 @@ describe('frontPage -> homePage migration', () => {
     'archive',
   ];
 
-  const homePageServices = services.filter(
-    service =>
-      !servicesWithVariants.includes(service) &&
-      !servicesNotCoveredByWorldService.includes(service),
+  const migratedServices = ['kyrgyz'];
+
+  const worldServices = services.filter(
+    service => !servicesNotCoveredByWorldService.includes(service),
   );
 
-  const homePageRoutes = homePageServices.map(service => `/${service}`);
+  const servicesWithVariantsRoutes = servicesWithVariants.map(
+    service => `/${service}`);
+
+  const worldServiceRoutes = worldServices.map(service => `/${service}`);
+
+  const migratedWorldServiceRoutes = migratedServices.map(
+    service => `/${service}`,
+  );
 
   const originalApplicationEnvironment = process.env.SIMORGH_APP_ENV;
 
@@ -562,7 +569,7 @@ describe('frontPage -> homePage migration', () => {
 
       const homePageRegex = getHomePageRegex(services);
 
-      shouldMatchValidRoutes(homePageRoutes, homePageRegex);
+      shouldMatchValidRoutes(worldServiceRoutes, homePageRegex);
     },
   );
 
@@ -573,23 +580,55 @@ describe('frontPage -> homePage migration', () => {
 
       const frontPageRegex = getFrontPageRegex(services);
 
-      shouldNotMatchInvalidRoutes(homePageRoutes, frontPageRegex);
+      shouldNotMatchInvalidRoutes(worldServiceRoutes, frontPageRegex);
+    },
+  );
+
+  describe.each(['local', 'test', 'live'])(
+    `homePage regex on the %s environment for services with variants`,
+    environment => {
+      process.env.SIMORGH_APP_ENV = environment;
+
+      const homePageRegex = getHomePageRegex(services);
+
+      shouldNotMatchInvalidRoutes(servicesWithVariantsRoutes, homePageRegex);
+    },
+  );
+
+  describe.each(['local', 'test', 'live'])(
+    `frontPage regex on the %s environment for services with variants`,
+    environment => {
+      process.env.SIMORGH_APP_ENV = environment;
+
+      const frontPageRegex = getFrontPageRegex(services);
+
+      shouldMatchValidRoutes(servicesWithVariantsRoutes, frontPageRegex);
     },
   );
 
   describe(`frontPage regex on the live environment`, () => {
     process.env.SIMORGH_APP_ENV = 'live';
 
-    const frontPageRegex = getFrontPageRegex(services);
+    const liveFrontPageServices = worldServices.filter(
+      service => !migratedServices.includes(service),
+    );
 
-    shouldMatchValidRoutes(homePageRoutes, frontPageRegex);
+    const liveFrontPageRoutes = liveFrontPageServices.map(
+      service => `/${service}`,
+    );
+
+    const frontPageRegex = getFrontPageRegex(liveFrontPageServices);
+
+    shouldMatchValidRoutes(liveFrontPageRoutes, frontPageRegex);
   });
 
   describe(`homePage regex on the live environment`, () => {
     process.env.SIMORGH_APP_ENV = 'live';
 
-    const homePageRegex = getHomePageRegex(services);
+    const homePageRegex = getHomePageRegex(migratedServices);
 
-    shouldNotMatchInvalidRoutes(homePageRoutes, homePageRegex);
+    console.log(homePageRegex);
+
+    shouldMatchValidRoutes(migratedWorldServiceRoutes, homePageRegex);
   });
 });
