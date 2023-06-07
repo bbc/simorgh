@@ -1,3 +1,5 @@
+import pathOr from 'ramda/src/pathOr';
+
 import {
   HOME_PAGE,
   STORY_PAGE,
@@ -28,6 +30,7 @@ import {
   buildCpsAssetPageATIParams,
   buildCpsAssetPageATIUrl,
 } from './cpsAssetPage/buildParams';
+import { buildPageATIUrl, buildPageATIParams } from './genericPage/buildParams';
 import {
   buildMostReadATIParams,
   buildMostReadATIUrl,
@@ -48,7 +51,6 @@ import { RequestContextProps } from '../../../contexts/RequestContext';
 import { ServiceConfig } from '../../../models/types/serviceConfig';
 import { PageData, ATIPageTrackingProps, ATIData } from '../types';
 import { PageTypes } from '../../../models/types/global';
-import { buildPageATIUrl } from './genericPage/buildParams';
 
 const ARTICLE_MEDIA_ASSET = 'article-media-asset';
 const ARTICLE_PHOTO_GALLERY = 'article-photo-gallery';
@@ -231,6 +233,16 @@ export const buildATIEventTrackingParams = (
   serviceContext: ServiceConfig,
 ) => {
   try {
+    const atiData = pathOr(null, ['pageData', 'metadata'], data);
+
+    if (atiData) {
+      return buildPageATIParams({
+        atiData,
+        requestContext,
+        serviceContext,
+      });
+    }
+
     const buildParams = createBuilderFactory(
       requestContext,
       pageTypeParamBuilders,
