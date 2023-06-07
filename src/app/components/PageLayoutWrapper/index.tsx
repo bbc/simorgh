@@ -48,7 +48,6 @@ const PageLayoutWrapper = ({
   const isErrorPage = ![200].includes(status) || !status;
   const metadataType = pageData?.metadata?.type;
   const pageType = metadataType || fallbackPageType;
-  console.log('pageType in pageLayoutWrapper', pageType);
   const serviceFonts = fontFacesLazy(service);
   const fontJs =
     isAmp || !serviceFonts.length || process.env.JEST_WORKER_ID !== undefined
