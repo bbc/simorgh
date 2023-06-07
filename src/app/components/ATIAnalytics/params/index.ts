@@ -253,7 +253,7 @@ export const buildATIEventTrackingParams = (
       pageTypeParamBuilders,
     );
 
-    return buildParams(data, requestContext, serviceContext);
+    return buildParams(data as PageData, requestContext, serviceContext);
   } catch (error: unknown) {
     const { message } = error as Error;
 
