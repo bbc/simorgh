@@ -10,7 +10,7 @@ export interface HomePageProps {
     title: string;
     curations: CurationData[];
     description: string;
-    metadata: ATIData;
+    metadata: Pick<ATIData, 'analytics'>;
   };
 }
 
