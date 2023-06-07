@@ -18,7 +18,6 @@ const Header = ({
   skipLink,
   scriptLink,
   linkId,
-  isApp,
   /* eslint-enable react/prop-types */
 }) => {
   const [showConsentBanner, setShowConsentBanner] = useState(true);
@@ -41,15 +40,13 @@ const Header = ({
   return (
     <div onBlur={handleBannerBlur}>
       {showConsentBanner && <ConsentBanner onDismissFocusRef={brandRef} />}
-      {!isApp && (
-        <BrandContainer
-          borderBottom={borderBottom}
-          skipLink={skipLink}
-          scriptLink={scriptLink}
-          brandRef={brandRef}
-          linkId={linkId || 'topPage'}
-        />
-      )}
+      <BrandContainer
+        borderBottom={borderBottom}
+        skipLink={skipLink}
+        scriptLink={scriptLink}
+        brandRef={brandRef}
+        linkId={linkId || 'topPage'}
+      />
     </div>
   );
 };
@@ -87,6 +84,8 @@ const HeaderContainer = ({ scriptSwitchId, renderScriptSwitch }) => {
 
   const shouldRenderScriptSwitch = scriptLink && renderScriptSwitch;
 
+  if (isApp) return null;
+
   return (
     <header role="banner" lang={serviceLang}>
       {isAmp ? (
@@ -108,10 +107,9 @@ const HeaderContainer = ({ scriptSwitchId, renderScriptSwitch }) => {
               <ScriptLink scriptSwitchId={scriptSwitchId} />
             )
           }
-          isApp={isApp}
         />
       )}
-      {!isApp && showNav && <NavigationContainer />}
+      {showNav && <NavigationContainer />}
     </header>
   );
 };
