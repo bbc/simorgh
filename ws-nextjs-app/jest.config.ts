@@ -13,7 +13,7 @@ const canonicalIntegrationTests = {
     '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
   },
   testMatch: ['**/integration/!(utils)/**/*[^.amp].test.ts'],
-} as Config.InitialProjectOptions;
+} satisfies Config.InitialProjectOptions;
 
 const ampIntegrationTests = {
   displayName: 'Integration Tests - AMP',
@@ -26,7 +26,7 @@ const ampIntegrationTests = {
     '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
   },
   testMatch: ['**/integration/!(utils)/**/amp.test.ts'],
-} as Config.InitialProjectOptions;
+} satisfies Config.InitialProjectOptions;
 
 const unitTests = {
   displayName: 'Unit Tests',
@@ -34,6 +34,7 @@ const unitTests = {
   moduleNameMapper: {
     ...pathsToModuleNameMapper(compilerOptions.paths),
     '^uuid$': require.resolve('uuid'),
+    '^react$': require.resolve('react'),
   },
   setupFilesAfterEnv: ['./setupTests.ts'],
   snapshotSerializers: ['@emotion/jest/serializer'],
@@ -46,7 +47,7 @@ const unitTests = {
     '**/?(*.)+(spec|test).{js,jsx,ts,tsx}',
     '!**/integration/!(utils)/**/*',
   ],
-} as Config.InitialProjectOptions;
+} satisfies Config.InitialProjectOptions;
 
 const config: import('jest').Config = {
   projects: [unitTests, canonicalIntegrationTests, ampIntegrationTests],
