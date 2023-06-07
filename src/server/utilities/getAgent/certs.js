@@ -11,7 +11,7 @@ const getCert = async () => {
   const caPath = process.env.CA_PATH || '/etc/pki/tls/certs/ca-bundle.crt';
   const certChainPath =
     process.env.CERT_CHAIN_PATH || '/etc/pki/tls/certs/client.crt';
-  const keyPath = process.KEY_PATH || '/etc/pki/tls/private/client.key';
+  const keyPath = process.env.KEY_PATH || '/etc/pki/tls/private/client.key';
 
   try {
     const [ca, certChain, key] = await loadFiles({
