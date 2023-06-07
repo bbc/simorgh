@@ -1,43 +1,18 @@
-// legacy
-//  https://latest--5d28eb3fe163f6002046d6fa.chromatic.com/?path=/story/containers-consent-banner--canonical&globals=service.service:afrique Orange
-// https://latest--5d28eb5ee163f6002046d6fb.chromatic.com/?path=/story/components-consentbanner--default Orange
-export const CONSENT_ACTION = '#F6A21D'; // Similar to #FFB32B with dissimilarity of 216
+// Legacy
+export const CONSENT_ACTION = '#F6A21D';
+export const CONSENT_BACKGROUND = '#323232';
+export const CONSENT_CONTENT = '#BEBEBE';
+export const KINGFISHER = '#11708C';
+export const CLOUD_LIGHT = '#BABABA';
+export const SPORT_SILVER = '#DBDBDB';
+export const METAL = '#6E6E73';
+export const STONE = '#D5D0CD';
 
-// Same as above, dark grey background
-export const CONSENT_BACKGROUND = '#323232'; // Very similar to #3A3C3E with dissimilarity of 94
-
-// Same as above, Grey Text
-export const CONSENT_CONTENT = '#BEBEBE'; // Very similar to #B0B2B4 with dissimilarity of 155
-
-// Teal in https://latest--5d28eb3fe163f6002046d6fa.chromatic.com/?path=/story/containers-radio-schedule-radio-schedule--radio-schedule&globals=service.service:afrique&knob-Select%20a%20service=arabic
-export const KINGFISHER = '#11708C'; // Similar to #006666 with dissimilarity 305
-
-// Grey Scale
-
-// All borders in https://latest--5d28eb3fe163f6002046d6fa.chromatic.com/?path=/story/containers-podcast-external-links-podcast-external-links--podcast-external-links
-// background of psammead story (not Relevant)
-// https://latest--5d28eb3fe163f6002046d6fa.chromatic.com/?path=/story/containers-episode-list-audio--multiple-items&globals=service.service:afrique Border
-export const CLOUD_LIGHT = '#BABABA'; // Very similar to #B0B2B4 with dissimilarity of 72
-// Used in https://latest--5d28eb3fe163f6002046d6fa.chromatic.com/?path=/story/containers-cps-table--table
-export const SPORT_SILVER = '#DBDBDB'; // Similar to #E6E8EA with similarity 161 (Need documentation)
-
-// Dark grey used in too many places...
-export const METAL = '#6E6E73'; // Similar to #545658 with dissimilarity 623
-// light grey in episode list dark mode? https://latest--5d28eb3fe163f6002046d6fa.chromatic.com/?path=/story/containers-episode-list-video--multiple-items&globals=service.service:afrique;service.variant:!undefined;backgrounds.value:transparent&knob-Select%20a%20service=pashto
-export const STONE = '#D5D0CD'; // Similar to #E6E8EA with similarity 519
-
-// Used in service banner
-export const ARCHIVE_BLUE = '#3A549C'; // Similar to #545658 with dissimilarity 714 (Need documentation)
-export const NEWSROUND_PURPLE = '#6C22D6'; // No similarity, best is #545658 with 3515 score
-
-// _________________________________________________________________________ New Colours
 // service
-// The secondary colours are very different from what we are currently using
 export const NEWS_CORE = '#B80000';
-
 export const SPORT_CORE = 'FFD230';
-
-// Where is archive? What is archive?
+export const ARCHIVE_BLUE = '#3A549C';
+export const NEWSROUND_PURPLE = '#6C22D6';
 
 // foundation
 export const WHITE = '#FFFFFF';
