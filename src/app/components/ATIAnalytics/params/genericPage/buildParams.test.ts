@@ -32,12 +32,12 @@ const atiData = {
     contentType: 'index-home',
     pageIdentifier: 'kyrgyz.page',
   },
-  title: 'BBC News Кыргыз Кызматы -1',
+  title: 'pageTitle',
 };
 
-const validTopicPageURLParams = {
+const validPageURLParams = {
   appName: serviceContext.atiAnalyticsAppName,
-  contentId: `urn:bbc:tipo:topic:${requestContext.id}`,
+  contentId: atiData.analytics.contentId,
   producerId: serviceContext.atiAnalyticsProducerId,
   contentType: atiData.analytics.contentType,
   pageIdentifier: atiData.analytics.pageIdentifier,
@@ -49,23 +49,23 @@ const validTopicPageURLParams = {
   language: serviceContext.lang,
 };
 
-describe('implementation of buildTopicPageATIParams and buildTopicPageATIUrl', () => {
-  it('should return the correct object for topic page', () => {
+describe('implementation of buildPageATIParams and buildPageATIUrl', () => {
+  it('should return the correct object for the page given the ATI configuration', () => {
     const result = buildPageATIParams({
       atiData,
       requestContext,
       serviceContext,
     });
-    expect(result).toEqual(validTopicPageURLParams);
+    expect(result).toEqual(validPageURLParams);
   });
-  it('should return the correct url for topic page', () => {
+  it('should return the correct url for a page given the ATI configuration', () => {
     const result = buildPageATIUrl({
       atiData,
       requestContext,
       serviceContext,
     });
     expect(result).toMatchInlineSnapshot(
-      `"s=598285&s2=atiAnalyticsProducerId&p=pidgin.topics.validId.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Atipo%3Atopic%3AvalidId]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[pcm]&x5=[http%253A%252F%252Flocalhost%252F]&x7=[index-category]&x8=[simorgh]&x9=[pageTitle]"`,
+      `"s=598285&s2=atiAnalyticsProducerId&p=kyrgyz.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Atipo%3Atopic%3Acm7682qz7v1t]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[pcm]&x5=[http%253A%252F%252Flocalhost%252F]&x7=[index-home]&x8=[simorgh]&x9=[pageTitle]"`,
     );
   });
 });
