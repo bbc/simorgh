@@ -1,6 +1,6 @@
 import { Platforms, Services } from '../../models/types/global';
-import { RequestContextProps } from '../../../../contexts/RequestContext';
-import { ServiceConfig } from '../../../../models/types/serviceConfig';
+import { RequestContextProps } from '../../contexts/RequestContext';
+import { ServiceConfig } from '../../models/types/serviceConfig';
 
 export interface AMPAnalyticsData {
   transport: {
