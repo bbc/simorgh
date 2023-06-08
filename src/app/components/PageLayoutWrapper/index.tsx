@@ -46,10 +46,7 @@ const PageLayoutWrapper = ({
   const renderScriptSwitch = pathOr(true, ['renderScriptSwitch'], pageData);
 
   const isErrorPage = ![200].includes(status) || !status;
-  const cpsPageType = pageData?.metadata?.type;
-  const otherPageType = pageData?.pageType;
-
-  const pageType = isErrorPage ? 'WS-ERROR-PAGE' : cpsPageType || otherPageType;
+  const pageType = pageData?.metadata?.type;
 
   const serviceFonts = fontFacesLazy(service);
   const fontJs =
@@ -124,7 +121,7 @@ const PageLayoutWrapper = ({
       <ThemeProvider service={service} variant={variant}>
         {!isNextJs && <ServiceWorkerContainer />}
         <ManifestContainer />
-        {!isErrorPage && pageType && <WebVitals pageType={pageType} />}
+        {!isErrorPage && <WebVitals pageType={pageType} />}
         <GlobalStyles />
         <div id="main-wrapper" css={styles.wrapper}>
           <HeaderContainer
