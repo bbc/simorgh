@@ -1,6 +1,7 @@
+/* * @jsxRuntime classic */
 /** @jsx jsx */
 
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { jsx } from '@emotion/react';
 import Pagination from '#pages/TopicPage/Pagination';
 import Heading from '#app/components/Heading';
@@ -11,7 +12,7 @@ import LegacyText from '#app/legacy/containers/Text';
 import Blocks from '#app/legacy/containers/Blocks';
 import MetadataContainer from '../../../../../src/app/components/Metadata';
 import LinkedDataContainer from '../../../../../src/app/components/LinkedData';
-import PostsList from './Posts/index';
+import PostsList from './Posts';
 
 import styles from './styles';
 import { StreamResponse } from './Posts/types';
@@ -19,7 +20,6 @@ import { StreamResponse } from './Posts/types';
 const logger = nodeLogger(__filename);
 
 type ComponentProps = {
-  bbcOrigin?: string;
   pageData: {
     pageCount: number;
     activePage: number;
@@ -29,16 +29,11 @@ type ComponentProps = {
     liveTextStream: { content: StreamResponse | null };
   };
   pathname?: string;
-  showAdsBasedOnLocation?: boolean;
 };
 
-const LivePage = ({
-  bbcOrigin,
-  pageData,
-  pathname,
-  showAdsBasedOnLocation,
-}: ComponentProps) => {
+const LivePage = ({ pageData, pathname }: ComponentProps) => {
   const { lang } = useContext(ServiceContext);
+
   const {
     pageCount,
     activePage,
@@ -60,18 +55,18 @@ const LivePage = ({
     const componentsToRender = { text: LegacyText };
 
     return (
-      <>
+      <div css={styles.summary}>
         <Heading level={2}>Summary</Heading>
         <Blocks
           blocks={summaryBlocks}
           componentsToRender={componentsToRender}
         />
-      </>
+      </div>
     );
   };
 
   return (
-    <>
+    <div css={styles.background}>
       <MetadataContainer
         title="Test Live Page"
         lang={lang}
@@ -88,19 +83,6 @@ const LivePage = ({
         {liveTextStream.content && (
           <PostsList postData={liveTextStream.content} />
         )}
-        <pre css={styles.code}>
-          <Heading level={4}>Headers</Heading>
-          {bbcOrigin && (
-            <p>
-              bbc-origin: <span>{bbcOrigin}</span>
-            </p>
-          )}
-          <p>
-            bbc-adverts:{' '}
-            <span>{showAdsBasedOnLocation ? 'true' : 'false'}</span>
-          </p>
-        </pre>
-        <pre css={styles.code}>{JSON.stringify(pageData, null, 2)}</pre>
         <Pagination
           activePage={activePage}
           pageCount={pageCount}
@@ -110,7 +92,7 @@ const LivePage = ({
           page="Page"
         />
       </main>
-    </>
+    </div>
   );
 };
 

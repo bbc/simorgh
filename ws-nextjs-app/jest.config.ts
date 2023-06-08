@@ -35,6 +35,7 @@ const unitTests = {
     ...pathsToModuleNameMapper(compilerOptions.paths),
     '^uuid$': require.resolve('uuid'),
     '^react$': require.resolve('react'),
+    '^@emotion/react$': require.resolve('@emotion/react'),
   },
   setupFilesAfterEnv: ['./setupTests.ts'],
   snapshotSerializers: ['@emotion/jest/serializer'],

@@ -10,6 +10,7 @@ const assetPrefix =
   clientEnvVars.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN +
   clientEnvVars.SIMORGH_PUBLIC_STATIC_ASSETS_PATH;
 
+/** @type {import('next').NextConfig} */
 module.exports = {
   reactStrictMode: true,
   distDir: 'build',
@@ -41,6 +42,11 @@ module.exports = {
     config.resolve.fallback = {
       ...config.resolve.fallback,
       fs: false,
+    };
+
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@emotion/react': require.resolve('@emotion/react'),
     };
 
     config.plugins.push(

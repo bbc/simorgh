@@ -1,4 +1,6 @@
-import React from 'react';
+/** @jsx jsx */
+
+import { jsx } from '@emotion/react';
 
 import pathOr from 'ramda/src/pathOr';
 import { OptimoBlock } from '#models/types/optimo';
@@ -7,6 +9,8 @@ import Blocks from '#app/legacy/containers/Blocks';
 import paragraph from '#app/legacy/containers/Paragraph';
 import Text from '#app/components/Text';
 import { Post, StreamResponse } from './types';
+
+import styles from './styles';
 
 // temporary solution to render LI/ OL blocks.
 const unorderedList = ({ blocks }: { blocks: OptimoBlock[] }) => {
@@ -73,10 +77,9 @@ const PostItem = ({ postItem }: { postItem: Post }) => {
   );
 
   return (
-    <div>
+    <div css={styles.postItem}>
       <PostHeadings headerBlocks={headerBlocks} />
       <PostContent contentBlocks={contentBlocks} />
-      <hr />
     </div>
   );
 };
