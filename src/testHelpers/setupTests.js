@@ -8,6 +8,7 @@ const REACT_DUPLICATE_KEYS = 'Encountered two children with the same key';
 const REACT_DOM_RENDER = 'ReactDOM.render is no longer supported in React 18';
 const REACT_STATE_UPDATES_WRAPPED_IN_ACT =
   'When testing, code that causes React state updates should be wrapped into act';
+const WEB_VITALS_NO_PAGE_TYPE = 'Web Vitals: No page type to report';
 
 const REACT_ERRORS = [
   REACT_FAILED_PROP_TYPE,
@@ -15,6 +16,7 @@ const REACT_ERRORS = [
   REACT_DUPLICATE_KEYS,
   REACT_DOM_RENDER,
   REACT_STATE_UPDATES_WRAPPED_IN_ACT,
+  WEB_VITALS_NO_PAGE_TYPE,
 ];
 
 // Warnings
