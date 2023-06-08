@@ -5,6 +5,7 @@ import chalk from 'chalk';
 const REACT_FAILED_PROP_TYPE = 'Failed prop';
 const REACT_NO_KEYS = 'Each child in a list should have a unique "key" prop';
 const REACT_DUPLICATE_KEYS = 'Encountered two children with the same key';
+const REACT_DOM_RENDER = 'ReactDOM.render is no longer supported in React 18';
 
 // Warnings
 const REACT_PSEUDO_CLASS_FIRST_CHILD = 'The pseudo class ":first-child"';
@@ -16,6 +17,7 @@ const REACT_ERRORS = [
   REACT_FAILED_PROP_TYPE,
   REACT_NO_KEYS,
   REACT_DUPLICATE_KEYS,
+  REACT_DOM_RENDER,
 ];
 
 const REACT_SUPPRESSED_WARNINGS = [
