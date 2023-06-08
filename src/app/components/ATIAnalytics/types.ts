@@ -85,7 +85,7 @@ export interface ATIData {
   title: string;
 }
 
-export interface ATIContexts {
+export interface ATIDataWithContexts {
   requestContext: RequestContextProps;
   serviceContext: ServiceConfig;
   atiData: ATIData;

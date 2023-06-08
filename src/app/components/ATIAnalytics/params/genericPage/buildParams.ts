@@ -1,12 +1,12 @@
 import { LIBRARY_VERSION } from '../../../../lib/analyticsUtils';
 import { buildATIPageTrackPath } from '../../atiUrl';
-import { ATIContexts } from '../../types';
+import { ATIDataWithContexts } from '../../types';
 
 export const buildPageATIParams = ({
   atiData,
   requestContext,
   serviceContext,
-}: ATIContexts) => {
+}: ATIDataWithContexts) => {
   const { platform, statsDestination } = requestContext;
   const { atiAnalyticsAppName, atiAnalyticsProducerId, service, lang } =
     serviceContext;
@@ -41,7 +41,7 @@ export const buildPageATIUrl = ({
   atiData,
   requestContext,
   serviceContext,
-}: ATIContexts) =>
+}: ATIDataWithContexts) =>
   buildATIPageTrackPath(
     buildPageATIParams({ atiData, requestContext, serviceContext }),
   );
