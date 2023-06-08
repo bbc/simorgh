@@ -1,9 +1,12 @@
 import '@testing-library/jest-dom/extend-expect';
 import chalk from 'chalk';
 
+// Errors
 const REACT_FAILED_PROP_TYPE = 'Failed prop';
 const REACT_NO_KEYS = 'Each child in a list should have a unique "key" prop';
 const REACT_DUPLICATE_KEYS = 'Encountered two children with the same key';
+
+// Warnings
 const REACT_PSEUDO_CLASS_FIRST_CHILD = 'The pseudo class ":first-child"';
 const REACT_PSEUDO_CLASS_NTH_CHILD = 'The pseudo class ":nth-child"';
 const REACT_UNMATCHED_GET = 'Unmatched GET to';
