@@ -8,7 +8,7 @@ describe('PageLayoutWrapper', () => {
   it('should render default page wrapper with children', async () => {
     const { container } = render(
       <PageLayoutWrapper
-        pageData={{ pageType: 'STY', metadata: { type: 'STY' } }}
+        pageData={{ metadata: { type: 'test-page-type' } }}
         status={200}
       >
         <h2>Child element</h2>
