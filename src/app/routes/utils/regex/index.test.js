@@ -28,7 +28,6 @@ import {
 
 import serviceConfig from '../../../lib/config/services/loadableConfig';
 import { getFrontPageRegex, getHomePageRegex } from './utils/index';
-import { filter } from 'ramda';
 
 jest.mock('#server/utilities/serviceConfigs', () => ({
   news: {},
@@ -543,7 +542,6 @@ describe('frontPage -> homePage migration', () => {
   const worldServices = services.filter(
     service => !servicesNotCoveredByWorldService.includes(service),
   );
-  const worldServiceRoutes = worldServices.map(service => `/${service}`);
 
   const servicesWithVariants = ['serbian', 'ukchina', 'zhongwen'];
   const servicesWithVariantsRoutes = servicesWithVariants.map(
@@ -556,6 +554,14 @@ describe('frontPage -> homePage migration', () => {
 
   const migratedServices = ['kyrgyz'];
   const migratedWorldServiceRoutes = migratedServices.map(
+    service => `/${service}`,
+  );
+
+  const liveFrontPageServices = worldServices.filter(
+    service => !migratedServices.includes(service),
+  );
+
+  const liveFrontPageRoutes = liveFrontPageServices.map(
     service => `/${service}`,
   );
 
@@ -572,7 +578,9 @@ describe('frontPage -> homePage migration', () => {
 
       const homePageRegex = getHomePageRegex(services);
 
-      shouldMatchValidRoutes(worldServiceRoutes, homePageRegex);
+      shouldMatchValidRoutes(servicesWithoutVariantsRoutes, homePageRegex);
+
+      shouldNotMatchInvalidRoutes(servicesWithVariantsRoutes, homePageRegex);
     },
   );
 
@@ -592,29 +600,10 @@ describe('frontPage -> homePage migration', () => {
     },
   );
 
-  describe.each(['local', 'test', 'live'])(
-    `homePage regex on the %s environment for services with variants`,
-    environment => {
-      process.env.SIMORGH_APP_ENV = environment;
-
-      const homePageRegex = getHomePageRegex(services);
-
-      shouldNotMatchInvalidRoutes(servicesWithVariantsRoutes, homePageRegex);
-    },
-  );
-
   describe(`frontPage regex on the live environment`, () => {
     process.env.SIMORGH_APP_ENV = 'live';
 
-    const liveFrontPageServices = worldServices.filter(
-      service => !migratedServices.includes(service),
-    );
-
-    const liveFrontPageRoutes = liveFrontPageServices.map(
-      service => `/${service}`,
-    );
-
-    const frontPageRegex = getFrontPageRegex(liveFrontPageServices);
+    const frontPageRegex = getFrontPageRegex(services);
 
     shouldMatchValidRoutes(liveFrontPageRoutes, frontPageRegex);
 
@@ -624,10 +613,10 @@ describe('frontPage -> homePage migration', () => {
   describe(`homePage regex on the live environment`, () => {
     process.env.SIMORGH_APP_ENV = 'live';
 
-    const homePageRegex = getHomePageRegex(migratedServices);
-
-    console.log(homePageRegex);
+    const homePageRegex = getHomePageRegex(services);
 
     shouldMatchValidRoutes(migratedWorldServiceRoutes, homePageRegex);
+
+    shouldNotMatchInvalidRoutes(liveFrontPageRoutes, homePageRegex);
   });
 });

@@ -58,12 +58,17 @@ export const getTipoHomeRegex = services => {
   return `/:service(${serviceRegex}):variant(${variantRegex})?/tipohome:amp(${ampRegex})?`;
 };
 
-// eslint-disable-next-line consistent-return
-export const getHomePageRegex = () => {
-  if (!isLive()) {
-    const homePageServiceRegex = getServiceRegex([]);
-    return `/:service(${homePageServiceRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
+export const getHomePageRegex = services => {
+  let homePages = services;
+  if (isLive()) {
+    homePages = services.filter(service => homePageServices.includes(service));
+  } else {
+    homePages = services.filter(
+      service => !servicesWithVariants.includes(service),
+    );
   }
+  const homePageServiceRegex = getServiceRegex(homePages);
+  return `/:service(${homePageServiceRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
 };
 
 export const getSwRegex = services => {
