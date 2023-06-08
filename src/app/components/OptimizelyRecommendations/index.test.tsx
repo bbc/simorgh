@@ -35,7 +35,7 @@ jest.mock('@optimizely/react-sdk', () => {
 });
 
 // 005_brasil_recommendations_experiment
-jest.mock('#containers/ATIAnalytics/beacon', () => {
+jest.mock('../ATIAnalytics/beacon', () => {
   return {
     __esModule: true,
     default: jest.fn(),
