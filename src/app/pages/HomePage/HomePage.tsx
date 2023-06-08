@@ -4,7 +4,12 @@ import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import ATIAnalytics from '../../components/ATIAnalytics';
-import { VisualProminence, VisualStyle } from '../../models/types/curationData';
+import {
+  CurationData,
+  VisualProminence,
+  VisualStyle,
+} from '../../models/types/curationData';
+import { ATIData } from '../../components/ATIAnalytics/types';
 import Curation from '../../components/Curation';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import styles from './index.styles';
@@ -12,7 +17,17 @@ import MetadataContainer from '../../components/Metadata';
 import LinkedData from '../../components/LinkedData';
 import getItemList from '../../lib/seoUtils/getItemList';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
-import { HomePageProps } from '../../components/ATIAnalytics/types';
+
+export interface HomePageProps {
+  pageData: {
+    pageType: string;
+    id?: string;
+    title: string;
+    curations: CurationData[];
+    description: string;
+    metadata: Pick<ATIData, 'analytics'>;
+  };
+}
 
 const HomePage = ({ pageData }: HomePageProps) => {
   const {

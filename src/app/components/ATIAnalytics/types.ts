@@ -1,18 +1,6 @@
 import { Platforms, Services } from '../../models/types/global';
 import { RequestContextProps } from '../../contexts/RequestContext';
 import { ServiceConfig } from '../../models/types/serviceConfig';
-import { CurationData } from '../../models/types/curationData';
-
-export interface HomePageProps {
-  pageData: {
-    pageType: string;
-    id?: string;
-    title: string;
-    curations: CurationData[];
-    description: string;
-    metadata: Pick<ATIData, 'analytics'>;
-  };
-}
 
 export interface AMPAnalyticsData {
   transport: {
