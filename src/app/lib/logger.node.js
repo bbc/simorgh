@@ -17,7 +17,7 @@ const {
 const LOG_LEVEL = process.env.LOG_LEVEL || 'info';
 const LOG_FILE = 'app.log';
 const LOG_DIR = process.env.LOG_DIR || 'log';
-const LOG_TO_CONSOLE = process.env.LOG_TO_CONSOLE || 'false';
+const LOG_TO_CONSOLE = process.env.LOG_TO_CONSOLE === 'true';
 
 const createLogDirectory = (dirName = 'log') => {
   if (!fs.existsSync(dirName)) {
@@ -71,7 +71,7 @@ const fileLogger = createLogger({
   ),
   transports: [
     // handle a lot of traffic, so we only enable console output in some environments
-    ...(LOG_TO_CONSOLE === 'true'
+    ...(LOG_TO_CONSOLE
       ? [new transports.Console(loggerOptions.console)]
       : [new transports.File(loggerOptions.file)]),
   ],
