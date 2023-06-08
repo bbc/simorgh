@@ -543,27 +543,23 @@ describe('frontPage -> homePage migration', () => {
     service => !servicesNotCoveredByWorldService.includes(service),
   );
 
+  const serviceToRoute = service => `/${service}`;
+
   const servicesWithVariants = ['serbian', 'ukchina', 'zhongwen'];
-  const servicesWithVariantsRoutes = servicesWithVariants.map(
-    service => `/${service}`,
-  );
+  const servicesWithVariantsRoutes = servicesWithVariants.map(serviceToRoute);
 
   const servicesWithoutVariantsRoutes = worldServices
     .filter(service => !servicesWithVariants.includes(service))
-    .map(service => `/${service}`);
+    .map(serviceToRoute);
 
   const migratedServices = ['kyrgyz'];
-  const migratedWorldServiceRoutes = migratedServices.map(
-    service => `/${service}`,
-  );
+  const migratedWorldServiceRoutes = migratedServices.map(serviceToRoute);
 
   const liveFrontPageServices = worldServices.filter(
     service => !migratedServices.includes(service),
   );
 
-  const liveFrontPageRoutes = liveFrontPageServices.map(
-    service => `/${service}`,
-  );
+  const liveFrontPageRoutes = liveFrontPageServices.map(serviceToRoute);
 
   const originalApplicationEnvironment = process.env.SIMORGH_APP_ENV;
 
