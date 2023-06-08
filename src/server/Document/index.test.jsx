@@ -71,6 +71,7 @@ describe('Render Document', () => {
         data: { test: 'data' },
         helmet: undefined,
         isAmp: false,
+        isApp: false,
         legacyScripts: '__mock_script_elements__',
         modernScripts: '__mock_script_elements__',
         links: '__mock_link_elements__',
