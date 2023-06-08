@@ -3,7 +3,7 @@
 import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
-import ATIAnalytics from '#app/components/ATIAnalytics';
+import ATIAnalytics from '../../components/ATIAnalytics';
 import { VisualProminence, VisualStyle } from '../../models/types/curationData';
 import Curation from '../../components/Curation';
 import { ServiceContext } from '../../contexts/ServiceContext';
