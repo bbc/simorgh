@@ -1,27 +1,20 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { act } from 'react-dom/test-utils';
+import { render } from '../../react-testing-library-with-providers';
 import AmpATIAnalytics from '.';
 
 describe('Amp ATI Analytics', () => {
   const atiBaseUrl = 'https://foobar.com?';
-  let container: HTMLElement;
 
   beforeEach(() => {
     jest.resetModules();
-    container = document.createElement('div');
-    document.body.appendChild(container);
   });
 
   it('creates an AMP analytics container with required parameters', () => {
     process.env.SIMORGH_ATI_BASE_URL = atiBaseUrl;
 
-    act(() => {
-      ReactDOM.render(
-        <AmpATIAnalytics pageviewParams="key1=value1&key2=value2" />,
-        container,
-      );
-    });
+    const { container } = render(
+      <AmpATIAnalytics pageviewParams="key1=value1&key2=value2" />,
+    );
 
     expect(container.querySelectorAll('amp-analytics').length).toEqual(1);
     expect(
