@@ -268,12 +268,6 @@ const REITH_QALAM_BOLD = {
   },
 };
 
-const theme = create({
-  base: 'light',
-  brandTitle: 'BBC Simorgh',
-  brandUrl: 'https://github.com/bbc/simorgh',
-});
-
 const preview: Preview = {
   globalTypes: {
     service: {
@@ -507,7 +501,6 @@ const preview: Preview = {
     options: {
       panelPosition: 'right',
       sidebarAnimations: true,
-      theme,
     },
     docs: {
       container: ({ context, children }) =>

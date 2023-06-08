@@ -1196,7 +1196,6 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 
 @media screen and (forced-colors: active) {
   .emotion-47>svg {
-    padding-right: 0.25rem;
     fill: canvasText;
   }
 }

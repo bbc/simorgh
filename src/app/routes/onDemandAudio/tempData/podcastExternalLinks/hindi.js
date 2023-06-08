@@ -207,6 +207,37 @@ const externalLinks = {
         linkType: 'gaana',
       },
     ],
+    p0frdsxv: [
+      {
+        linkText: 'Spotify',
+        linkUrl: 'https://open.spotify.com/show/0ngLvRDYAqCCp9j6Frs0uo',
+        linkType: 'spotify',
+      },
+      {
+        linkText: 'Apple',
+        linkUrl:
+          'https://podcasts.apple.com/us/podcast/%E0%A4%95%E0%A4%B2-%E0%A4%95-%E0%A4%95-%E0%A4%B8-%E0%A4%A5-%E0%A4%AE-%E0%A4%88-%E0%A4%87-%E0%A4%A1-%E0%A4%AF%E0%A4%A8-%E0%A4%B2-%E0%A4%87%E0%A4%AB/id1690364464',
+        linkType: 'apple',
+      },
+    ],
+    p0fmrg25: [
+      {
+        linkText: 'Spotify',
+        linkUrl: 'https://open.spotify.com/show/5SaqjHgniLJIlPKGum79ia',
+        linkType: 'spotify',
+      },
+      {
+        linkText: 'Apple',
+        linkUrl:
+          'https://podcasts.apple.com/us/podcast/%E0%A4%9B-%E0%A4%9F-%E0%A4%89%E0%A4%AE-%E0%A4%B0-%E0%A4%AC%E0%A4%A1-%E0%A4%9C-%E0%A4%A6%E0%A4%97/id1687504309',
+        linkType: 'apple',
+      },
+      {
+        linkText: 'Gaana',
+        linkUrl: 'https://gaana.com/podcast/-season-1-2023-153',
+        linkType: 'gaana',
+      },
+    ],
   },
 };
 

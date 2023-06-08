@@ -6,6 +6,7 @@ import {
   VISUAL_PROMINENCE,
   VISUAL_STYLE,
 } from '#app/models/types/curationData';
+import { Helmet } from 'react-helmet';
 import { TOPIC_PAGE } from '../../routes/utils/pageTypes';
 import { render } from '../../components/react-testing-library-with-providers';
 import TopicPage from './TopicPage';
@@ -19,7 +20,7 @@ import {
 
 jest.mock('../../components/ThemeProvider');
 jest.mock('../../components/ChartbeatAnalytics', () => {
-  const ChartbeatAnalytics = () => <div>chartbeat</div>;
+  const ChartbeatAnalytics = () => <div>Chartbeat Analytics</div>;
   return ChartbeatAnalytics;
 });
 
@@ -241,6 +242,31 @@ describe('Topic Page', () => {
         name: messageBannerCuration.title,
       });
       expect(messageBanners).toHaveLength(1);
+    });
+  });
+
+  describe('Analytics', () => {
+    it('should render a Chartbeat component', () => {
+      const { getByText } = render(
+        <TopicPage pageData={amharicSingleItem} />,
+        getOptionParams({ service: 'amharic', lang: 'am' }),
+      );
+
+      expect(getByText('Chartbeat Analytics')).toBeInTheDocument();
+    });
+  });
+
+  describe('SEO', () => {
+    it('should correctly render linked data', () => {
+      render(<TopicPage pageData={pidginMultipleItems} />, getOptionParams());
+
+      const getLinkedDataOutput = () => {
+        return Helmet.peek().scriptTags.map(({ innerHTML }) =>
+          JSON.parse(innerHTML),
+        );
+      };
+
+      expect(getLinkedDataOutput()).toMatchSnapshot();
     });
   });
 });
