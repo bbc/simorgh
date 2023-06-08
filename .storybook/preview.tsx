@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { Global } from '@emotion/react';
-import { create } from '@storybook/theming';
 import isChromatic from 'chromatic';
 import { forceVisible } from 'react-lazyload';
 import GlobalStyles from '../src/app/legacy/psammead/psammead-styles/src/global-styles';
