@@ -1,7 +1,6 @@
 /* eslint-disable global-require */
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { act } from 'react-dom/test-utils';
+import { render } from '../../../components/react-testing-library-with-providers';
 
 let AmpContainer;
 let container;
@@ -20,12 +19,7 @@ describe('Amp Consent Banner Container', () => {
   beforeEach(() => {
     AmpContainer = require('./index.amp').default;
 
-    container = document.createElement('div');
-    document.body.appendChild(container);
-
-    act(() => {
-      ReactDOM.render(<AmpContainer />, container);
-    });
+    ({ container } = render(<AmpContainer />));
   });
 
   afterEach(() => {
