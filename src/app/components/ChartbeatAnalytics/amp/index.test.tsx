@@ -1,15 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { act } from 'react-dom/test-utils';
+import { render } from '../../react-testing-library-with-providers';
 import AmpChartbeatAnalytics from '.';
 
 describe('AmpChartbeatAnalytics', () => {
-  let container: HTMLElement;
-
   beforeEach(() => {
     jest.resetModules();
-    container = document.createElement('div');
-    document.body.appendChild(container);
   });
 
   it('renders with appropriate props', () => {
@@ -29,12 +24,10 @@ describe('AmpChartbeatAnalytics', () => {
     const expectedValue = {
       vars: config,
     };
-    act(() => {
-      ReactDOM.render(
-        <AmpChartbeatAnalytics chartbeatConfig={config} />,
-        container,
-      );
-    });
+
+    const { container } = render(
+      <AmpChartbeatAnalytics chartbeatConfig={config} />,
+    );
 
     expect(container.querySelectorAll('amp-analytics').length).toEqual(1);
     expect(
@@ -61,13 +54,11 @@ describe('AmpChartbeatAnalytics', () => {
     const expectedValue = {
       vars: config,
     };
-    act(() => {
-      ReactDOM.render(
-        // @ts-expect-error testing for missing referrer and cookie
-        <AmpChartbeatAnalytics chartbeatConfig={config} />,
-        container,
-      );
-    });
+
+    const { container } = render(
+      // @ts-expect-error testing for missing referrer and cookie
+      <AmpChartbeatAnalytics chartbeatConfig={config} />,
+    );
 
     expect(container.querySelectorAll('amp-analytics').length).toEqual(1);
     expect(
