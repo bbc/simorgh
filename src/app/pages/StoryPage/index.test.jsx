@@ -260,7 +260,7 @@ describe('Story Page', () => {
     });
 
     expect(document.querySelector('main time')).toBeNull();
-    expect(asFragment).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
 
     expect(document.querySelector('main time')).toBeNull();
     expect(asFragment).toMatchSnapshot();
