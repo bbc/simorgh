@@ -262,8 +262,6 @@ describe('Story Page', () => {
     expect(document.querySelector('main time')).toBeNull();
     expect(asFragment()).toMatchSnapshot();
 
-    expect(document.querySelector('main time')).toBeNull();
-    expect(asFragment).toMatchSnapshot();
   });
 
   it('should render correctly when the secondary column data is not available', async () => {
