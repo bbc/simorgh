@@ -25,7 +25,7 @@ module.exports = {
   experimental: {
     externalDir: true,
   },
-  env: clientEnvVars,
+  env: { ...clientEnvVars, LOG_TO_CONSOLE: 'true' },
   eslint: {
     ignoreDuringBuilds: true,
   },
