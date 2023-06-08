@@ -1,5 +1,3 @@
-import pathOr from 'ramda/src/pathOr';
-
 import {
   HOME_PAGE,
   STORY_PAGE,
