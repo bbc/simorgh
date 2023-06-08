@@ -105,8 +105,6 @@ describe('articleDataPath', () => {
 
 describe('frontPagePath', () => {
   const validRoutes = [
-    '/news',
-    '/news.amp',
     '/ukchina/simp',
     '/ukchina/trad',
     '/serbian/lat.amp',
@@ -120,14 +118,14 @@ describe('frontPagePath', () => {
     '/iplayer',
     '/news/foobar',
     '/news/foobar.amp',
-    '/persian',
-    '/persian.amp',
+    '/kyrgyz',
+    '/kyrgyz.amp',
   ];
   shouldNotMatchInvalidRoutes(invalidRoutes, frontPagePath);
 });
 
 describe('frontPageDataPath', () => {
-  const validRoutes = ['/news.json', '/serbian/cyr.json', '/ukchina/trad.json'];
+  const validRoutes = ['/serbian/cyr.json', '/ukchina/trad.json'];
   shouldMatchValidRoutes(validRoutes, frontPageDataPath);
 
   const invalidRoutes = [
