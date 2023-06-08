@@ -97,6 +97,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
+  const mostReadInitialData = path(['mostRead'], pageData);
   const topStoriesInitialData = path(
     ['secondaryColumn', 'topStories'],
     pageData,
@@ -383,6 +384,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
               columnLayout="oneColumn"
               size="small"
               wrapper={MostReadWrapper}
+              initialData={mostReadInitialData}
             />
           </ComponentWrapper>
         </GridSecondaryColumn>
