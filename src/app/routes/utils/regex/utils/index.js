@@ -34,60 +34,19 @@ export const getArticleManifestRegex = services => {
   return `/:service(${serviceRegex})/:local(${articleLocalRegex})/manifest.json`;
 };
 
-const frontPageServices = [
-  'afaanoromoo',
-  'afrique',
-  'amharic',
-  'arabic',
-  'azeri',
-  'bengali',
-  'burmese',
-  'gahuza',
-  'gujarati',
-  'hausa',
-  'hindi',
-  'igbo',
-  'indonesia',
-  'japanese',
-  'korean',
-  'marathi',
-  'mundo',
-  'nepali',
-  'pashto',
-  'persian',
-  'pidgin',
-  'portuguese',
-  'punjabi',
-  'russian',
-  'sinhala',
-  'somali',
-  'swahili',
-  'tamil',
-  'telugu',
-  'thai',
-  'tigrinya',
-  'turkce',
-  'ukrainian',
-  'urdu',
-  'uzbek',
-  'vietnamese',
-  'yoruba',
-];
+const homePageServices = ['kyrgyz'];
 
-const homePageServices = [
-  'kyrgyz'
-];
+const servicesWithVariants = ['serbian', 'ukchina', 'zhongwen'];
 
 export const getFrontPageRegex = services => {
-  // if environment is not live then filter out and remove kyrgyz from list of services
   let frontPages = services;
   if (isLive()) {
-    frontPages = services.filter(service =>
-      frontPageServices.includes(service),
+    frontPages = services.filter(
+      service => !homePageServices.includes(service),
     );
   } else {
-    frontPages = services.filter(
-      service => !frontPageServices.includes(service),
+    frontPages = services.filter(service =>
+      servicesWithVariants.includes(service),
     );
   }
   const serviceRegex = getServiceRegex(frontPages);
@@ -102,7 +61,7 @@ export const getTipoHomeRegex = services => {
 // eslint-disable-next-line consistent-return
 export const getHomePageRegex = () => {
   if (!isLive()) {
-    const homePageServiceRegex = getServiceRegex(frontPageServices);
+    const homePageServiceRegex = getServiceRegex([]);
     return `/:service(${homePageServiceRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
   }
 };
