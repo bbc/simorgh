@@ -176,7 +176,7 @@ const idxPage: PageData = {
   },
 };
 
-const homePage: ATIData = {
+const homePageAnalyticsData: ATIData = {
   analytics: {
     contentId: 'urn:bbc:tipo:topic:cm7682qz7v1t',
     contentType: 'index-home',
@@ -269,7 +269,7 @@ describe('ATIAnalytics params', () => {
         { ...requestContext, pageType: HOME_PAGE },
         serviceContext,
         undefined,
-        homePage,
+        homePageAnalyticsData,
       );
       expect(url).toMatchInlineSnapshot(
         `"s=598285&s2=atiAnalyticsProducerId&p=kyrgyz.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Atipo%3Atopic%3Acm7682qz7v1t]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[pcm]&x5=[http%253A%252F%252Flocalhost%252F]&x7=[index-home]&x8=[simorgh]&x9=[pageTitle]"`,
@@ -510,40 +510,39 @@ describe('ATIAnalytics params', () => {
     });
 
     it('should return the correct Homepage params', () => {
+      const { analytics } = homePageAnalyticsData;
       const homePageData = {
-        pageData: {
-          metadata: homePage,
-          pageType: 'home',
-          title: 'pageTitle',
-          curations: [
-            {
-              summaries: [
-                {
-                  type: 'article',
-                  title:
-                    '“Баланы сабады деп аялымды камап салышарын өзүм да билген эмесмин”. Кадамжайда токмоктолгон наристенин атасы 3\r',
-                  firstPublished: '2023-02-02T10:06:57.156Z',
-                  link: 'https://www.bbc.com/kyrgyz/articles/cemg3359nwro',
-                  imageUrl:
-                    'https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg',
-                  description: '',
-                  imageAlt: 'test',
-                  id: 'cemg3359nwro',
-                },
-              ],
-              activePage: 1,
-              pageCount: 1,
-              curationId:
-                'urn:bbc:tipo:list:524cf34b-cac2-4ce2-ac64-53eb70019202',
-              curationType: 'tipo-curation',
-              position: 1,
-              title: 'Редактордун тандоосу',
-              visualProminence: 'HIGH',
-              visualStyle: 'COLLECTION',
-            },
-          ],
-          description: 'Hello I am a description!',
-        },
+        metadata: { analytics },
+        title: 'pageTitle',
+        pageType: 'home',
+        curations: [
+          {
+            summaries: [
+              {
+                type: 'article',
+                title:
+                  '“Баланы сабады деп аялымды камап салышарын өзүм да билген эмесмин”. Кадамжайда токмоктолгон наристенин атасы 3\r',
+                firstPublished: '2023-02-02T10:06:57.156Z',
+                link: 'https://www.bbc.com/kyrgyz/articles/cemg3359nwro',
+                imageUrl:
+                  'https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg',
+                description: '',
+                imageAlt: 'test',
+                id: 'cemg3359nwro',
+              },
+            ],
+            activePage: 1,
+            pageCount: 1,
+            curationId:
+              'urn:bbc:tipo:list:524cf34b-cac2-4ce2-ac64-53eb70019202',
+            curationType: 'tipo-curation',
+            position: 1,
+            title: 'Редактордун тандоосу',
+            visualProminence: 'HIGH',
+            visualStyle: 'COLLECTION',
+          },
+        ],
+        description: 'Hello I am a description!',
       };
       const params = buildATIEventTrackingParams(
         homePageData,

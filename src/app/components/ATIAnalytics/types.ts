@@ -3,17 +3,6 @@ import { RequestContextProps } from '../../contexts/RequestContext';
 import { ServiceConfig } from '../../models/types/serviceConfig';
 import { CurationData } from '../../models/types/curationData';
 
-export interface HomePageProps {
-  pageData: {
-    pageType: string;
-    id?: string;
-    title: string;
-    curations: CurationData[];
-    description: string;
-    metadata: Pick<ATIData, 'analytics'>;
-  };
-}
-
 export interface AMPAnalyticsData {
   transport: {
     beacon: boolean;
@@ -72,6 +61,15 @@ export interface PageData {
   lastRecordTimeStamp?: string;
   contentType?: string;
   title?: string;
+}
+
+export interface HomePageData {
+  pageType: string;
+  id?: string;
+  title: string;
+  curations: CurationData[];
+  description: string;
+  metadata: Pick<ATIData, 'analytics'>;
 }
 
 export interface ATIData {

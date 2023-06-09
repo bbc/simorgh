@@ -1,4 +1,5 @@
 import pathOr from 'ramda/src/pathOr';
+import isEmpty from 'ramda/src/isEmpty';
 
 import {
   HOME_PAGE,
@@ -50,8 +51,8 @@ import {
 import { RequestContextProps } from '../../../contexts/RequestContext';
 import { ServiceConfig } from '../../../models/types/serviceConfig';
 import {
-  HomePageProps,
   PageData,
+  HomePageData,
   ATIPageTrackingProps,
   ATIData,
 } from '../types';
@@ -233,16 +234,17 @@ export const buildATIUrl = (
 };
 
 export const buildATIEventTrackingParams = (
-  data: PageData | HomePageProps,
+  data: PageData | HomePageData,
   requestContext: RequestContextProps,
   serviceContext: ServiceConfig,
 ) => {
   try {
-    const atiData = pathOr(null, ['pageData', 'metadata'], data);
+    const analytics = pathOr({}, ['metadata', 'analytics'], data);
+    const title = pathOr('', ['title'], data);
 
-    if (atiData) {
+    if (!isEmpty(analytics)) {
       return buildPageATIParams({
-        atiData,
+        atiData: { analytics, title },
         requestContext,
         serviceContext,
       });
