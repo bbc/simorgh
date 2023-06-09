@@ -1,11 +1,12 @@
 import React from 'react';
-import { oneOf, string } from 'prop-types';
-import {
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
-  GEL_GROUP_3_SCREEN_WIDTH_MAX,
-} from '#psammead/gel-foundations/src/breakpoints';
 import isLive from '#lib/utilities/isLive';
-import { STORY_PAGE } from '#app/routes/utils/pageTypes';
+import { STORY_PAGE } from '../../../../routes/utils/pageTypes';
+import { PageTypes, Services } from '../../../../models/types/global';
+import { SlotType } from '../../types';
+import {
+  GROUP_3_MAX_WIDTH_BP,
+  GROUP_4_MIN_WIDTH_BP,
+} from '../../../ThemeProvider/mediaQueries';
 
 const publicServiceList = ['news', 'sport'];
 
@@ -14,12 +15,12 @@ const publicServiceDataSlot = () =>
     ? '/4817/bbccom.live.site.amp.news'
     : '/4817/bbccom.test.site.amp.news';
 
-const worldServiceDataSlot = service =>
+const worldServiceDataSlot = (service: Services) =>
   isLive()
     ? `/4817/bbcworldservice.live.site.${service}`
     : '/4817/bbccom.test.site.amp.news';
 
-export const getDataSlot = service => {
+export const getDataSlot = (service: Services) => {
   const isPublicService = publicServiceList.includes(service);
 
   if (isPublicService) {
@@ -29,7 +30,17 @@ export const getDataSlot = service => {
   return worldServiceDataSlot(service);
 };
 
-const constructAdJsonData = ({ service, slotType, assetType }) => ({
+interface AdJsonDataProps {
+  service: Services;
+  slotType: SlotType;
+  assetType: string;
+}
+
+const constructAdJsonData = ({
+  service,
+  slotType,
+  assetType,
+}: AdJsonDataProps) => ({
   targeting: {
     slot: slotType,
     asset_type: assetType,
@@ -37,7 +48,7 @@ const constructAdJsonData = ({ service, slotType, assetType }) => ({
   },
 });
 
-const defaultAmpAdProps = service => ({
+const defaultAmpAdProps = (service: Services) => ({
   'data-block-on-consent': 'default',
   'data-npa-on-unknown-consent': 'true',
   type: 'doubleclick',
@@ -47,18 +58,31 @@ const defaultAmpAdProps = service => ({
   'data-multi-size-validation': 'false',
 });
 
-const slotConfigurations = {
+type Device = 'mobile' | 'desktop';
+
+interface DeviceSettings {
+  width: string;
+  height: string;
+  media?: string;
+  'data-multi-size': string;
+}
+
+const slotConfigurations: {
+  [slot in SlotType]: {
+    [device in Device]?: DeviceSettings;
+  };
+} = {
   leaderboard: {
     mobile: {
       width: '320',
       height: '50',
-      media: `(max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX})`,
+      media: `(max-width: ${GROUP_3_MAX_WIDTH_BP}rem)`,
       'data-multi-size': '320x50,300x50',
     },
     desktop: {
       width: '970',
       height: '250',
-      media: `(min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN})`,
+      media: `(min-width: ${GROUP_4_MIN_WIDTH_BP}rem)`,
       'data-multi-size': '970x250,728x90',
     },
   },
@@ -71,10 +95,16 @@ const slotConfigurations = {
   },
 };
 
-export const getAssetType = pageType =>
+export const getAssetType = (pageType: PageTypes) =>
   pageType === STORY_PAGE ? 'story' : 'index';
 
-const AdSlot = ({ service, slotType, pageType }) => {
+interface AdSlotProps {
+  service: Services;
+  slotType: SlotType;
+  pageType: PageTypes;
+}
+
+const AdSlot = ({ service, slotType, pageType }: AdSlotProps) => {
   const { mobile, desktop } = slotConfigurations[slotType];
   const assetType = getAssetType(pageType);
   const targetingJson = JSON.stringify(
@@ -99,12 +129,6 @@ const AdSlot = ({ service, slotType, pageType }) => {
       )}
     </>
   );
-};
-
-AdSlot.propTypes = {
-  service: string.isRequired,
-  slotType: oneOf(['leaderboard', 'mpu']).isRequired,
-  pageType: string.isRequired,
 };
 
 export default AdSlot;
