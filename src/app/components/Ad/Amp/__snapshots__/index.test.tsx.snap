@@ -7,17 +7,17 @@ exports[`AMP Ads Snapshots should correctly render an AMP leaderboard ad 1`] = `
   visibility: hidden;
 }
 
-.emotion-2 {
+.emotion-1 {
   background-color: #E6E8EA;
 }
 
-.emotion-4 {
+.emotion-2 {
   display: none;
   visibility: hidden;
 }
 
 @media (min-width: 20rem) {
-  .emotion-4 {
+  .emotion-2 {
     min-height: 5.1875rem;
     display: -webkit-box;
     display: -webkit-flex;
@@ -36,23 +36,23 @@ exports[`AMP Ads Snapshots should correctly render an AMP leaderboard ad 1`] = `
 }
 
 @media (min-width: 63rem) {
-  .emotion-4 {
+  .emotion-2 {
     min-height: 18.6875rem;
     padding: 1.5rem 0;
   }
 }
 
-.emotion-6 {
+.emotion-3 {
   margin: 0 auto;
   text-align: center;
 }
 
-.emotion-8 {
+.emotion-4 {
   font-size: 0.75rem;
   line-height: 1rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #5A5A5A;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -63,20 +63,20 @@ exports[`AMP Ads Snapshots should correctly render an AMP leaderboard ad 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-8 {
+  .emotion-4 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-8 {
+  .emotion-4 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
-.emotion-8:hover {
+.emotion-4:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
@@ -85,23 +85,23 @@ exports[`AMP Ads Snapshots should correctly render an AMP leaderboard ad 1`] = `
   <div
     amp-access="toggles.ads.enabled"
     amp-access-hide="true"
-    class="emotion-0 emotion-1"
+    class="emotion-0"
   >
     <section
       aria-hidden="true"
       aria-label="Publicités"
-      class="emotion-2 emotion-3"
+      class="emotion-1"
       data-e2e="advertisement"
       role="region"
     >
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-2"
       >
         <div
-          class="emotion-6 emotion-7"
+          class="emotion-3"
         >
           <a
-            class="emotion-8 emotion-9"
+            class="emotion-4"
             dir="ltr"
             href="https://www.bbc.com/usingthebbc/cookies/"
             tabindex="-1"
@@ -150,20 +150,20 @@ exports[`AMP Ads Snapshots should correctly render an AMP mpu ad 1`] = `
   visibility: hidden;
 }
 
-.emotion-2 {
+.emotion-1 {
   background-color: #E6E8EA;
 }
 
-.emotion-4 {
+.emotion-2 {
   display: none;
   visibility: hidden;
   padding: 0;
 }
 
 @media (min-width: 18.75rem) {
-  .emotion-4 {
+  .emotion-2 {
     min-height: 17.6875rem;
-    padding:padding: 1rem 0 0.5rem 0;
+    padding: 1rem 0 0.5rem 0;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -179,17 +179,17 @@ exports[`AMP Ads Snapshots should correctly render an AMP mpu ad 1`] = `
   }
 }
 
-.emotion-6 {
+.emotion-3 {
   margin: 0 auto;
   text-align: center;
 }
 
-.emotion-8 {
+.emotion-4 {
   font-size: 0.75rem;
   line-height: 1rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #5A5A5A;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -200,20 +200,20 @@ exports[`AMP Ads Snapshots should correctly render an AMP mpu ad 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-8 {
+  .emotion-4 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-8 {
+  .emotion-4 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
-.emotion-8:hover {
+.emotion-4:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
@@ -222,23 +222,23 @@ exports[`AMP Ads Snapshots should correctly render an AMP mpu ad 1`] = `
   <div
     amp-access="toggles.ads.enabled"
     amp-access-hide="true"
-    class="emotion-0 emotion-1"
+    class="emotion-0"
   >
     <section
       aria-hidden="true"
       aria-label="Publicités 2"
-      class="emotion-2 emotion-3"
+      class="emotion-1"
       data-e2e="advertisement"
       role="region"
     >
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-2"
       >
         <div
-          class="emotion-6 emotion-7"
+          class="emotion-3"
         >
           <a
-            class="emotion-8 emotion-9"
+            class="emotion-4"
             dir="ltr"
             href="https://www.bbc.com/usingthebbc/cookies/"
             tabindex="-1"
