@@ -2,11 +2,12 @@ import React from 'react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 import AmpAd, { AMP_ACCESS_FETCH } from './index';
-import { render } from '../../../../components/react-testing-library-with-providers';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
-import latinDiacritics from '../../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
+import { render } from '../../react-testing-library-with-providers';
+import { ServiceContext } from '../../../contexts/ServiceContext';
+import latinDiacritics from '../../ThemeProvider/fontScripts/latinWithDiacritics';
+import { SlotType } from '../types';
 
-const adJsonAttributes = slotType => ({
+const adJsonAttributes = (slotType: SlotType) => ({
   targeting: {
     slot: slotType,
     asset_type: 'index',
@@ -20,10 +21,11 @@ const adTranslations = {
   },
 };
 
-const adWithContext = (slotType, showAdPlaceholder = false) => (
+const adWithContext = (slotType: SlotType, showAdPlaceholder = false) => (
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.com"
     isAmp
+    isApp={false}
     pageType={FRONT_PAGE}
     service="afrique"
     pathname="/"
@@ -33,6 +35,7 @@ const adWithContext = (slotType, showAdPlaceholder = false) => (
         service: 'afrique',
         dir: 'ltr',
         script: latinDiacritics,
+        // @ts-expect-error partial data required for testing
         translations: adTranslations,
         showAdPlaceholder,
       }}
@@ -43,22 +46,28 @@ const adWithContext = (slotType, showAdPlaceholder = false) => (
 );
 
 describe('AMP Ads', () => {
+  const originalConfigUrl = process.env.SIMORGH_CONFIG_URL;
+
   beforeAll(() => {
     process.env.SIMORGH_CONFIG_URL = 'https://mock-toggles-endpoint.bbc.co.uk';
   });
 
   afterAll(() => {
-    delete process.env.SIMORGH_CONFIG_URL;
+    process.env.SIMORGH_CONFIG_URL = originalConfigUrl;
   });
 
   describe('Snapshots', () => {
     it('should correctly render an AMP leaderboard ad', () => {
-      const { container } = render(adWithContext('leaderboard'));
+      const { container } = render(adWithContext('leaderboard'), {
+        service: 'afrique',
+      });
       expect(container).toMatchSnapshot();
     });
 
     it('should correctly render an AMP mpu ad', () => {
-      const { container } = render(adWithContext('mpu'));
+      const { container } = render(adWithContext('mpu'), {
+        service: 'afrique',
+      });
       expect(container).toMatchSnapshot();
     });
   });
