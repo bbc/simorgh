@@ -5,7 +5,7 @@ import { jsx } from '@emotion/react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import { VisualProminence, VisualStyle } from '../../models/types/curationData';
-import { HomePageData } from '../../components/ATIAnalytics/types'; 
+import { HomePageData } from '../../components/ATIAnalytics/types';
 import Curation from '../../components/Curation';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import styles from './index.styles';
