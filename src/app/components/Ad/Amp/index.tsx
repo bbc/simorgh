@@ -16,7 +16,7 @@ import AdSlot from './AdSlot';
 import { Direction, PageTypes, Services } from '../../../models/types/global';
 import styles from './index.styles';
 import adStyles from '../utilities/adSlot.styles';
-import { AdProps, SlotType } from '../types';
+import { AdProps, SLOT_TYPES, SlotType } from '../types';
 
 const AMP_ACCESS_DATA = (endpoint: string) => ({
   authorization: endpoint,
@@ -91,7 +91,11 @@ const AdWithoutPlaceholder = ({
         aria-hidden="true"
       >
         <div
-          css={slotType === 'mpu' ? adStyles.ampMpu : adStyles.ampLeaderboard}
+          css={
+            slotType === SLOT_TYPES.MPU
+              ? adStyles.ampMpu
+              : adStyles.ampLeaderboard
+          }
         >
           <div css={styles.wrapper}>
             <AdContent
@@ -124,7 +128,13 @@ const AdWithPlaceholder = ({
       data-e2e="advertisement"
       aria-hidden="true"
     >
-      <div css={slotType === 'mpu' ? adStyles.ampMpu : adStyles.ampLeaderboard}>
+      <div
+        css={
+          slotType === SLOT_TYPES.MPU
+            ? adStyles.ampMpu
+            : adStyles.ampLeaderboard
+        }
+      >
         <div css={styles.wrapper}>
           <div
             css={styles.display}
