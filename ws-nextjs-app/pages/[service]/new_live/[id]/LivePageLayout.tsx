@@ -26,7 +26,7 @@ type ComponentProps = {
     title?: string;
     description?: string;
     summaryPoints: { content: { model: { blocks: object[] } } | null };
-    posts?: StreamResponse;
+    liveTextStream: { content: StreamResponse | null };
   };
   pathname?: string;
   showAdsBasedOnLocation?: boolean;
@@ -44,8 +44,8 @@ const LivePage = ({
     activePage,
     title,
     description,
-    posts,
     summaryPoints: { content: summaryContent },
+    liveTextStream,
   } = pageData;
 
   // TODO: Remove after testing
@@ -85,7 +85,9 @@ const LivePage = ({
         {/* Text as="p" used as placeholder. Awaiting screen reader UX and UX */}
         <Text as="p">{description}</Text>
         <Summary summaryBlocks={summaryContent?.model.blocks} />
-        {posts && <PostsList postData={posts} />}
+        {liveTextStream.content && (
+          <PostsList postData={liveTextStream.content} />
+        )}
         <pre css={styles.code}>
           <Heading level={4}>Headers</Heading>
           {bbcOrigin && (
