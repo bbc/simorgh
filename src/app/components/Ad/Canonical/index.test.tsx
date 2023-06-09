@@ -1,19 +1,25 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { RequestContext } from '#contexts/RequestContext';
+import { RequestContext, RequestContextProps } from '#contexts/RequestContext';
 import isLive from '#lib/utilities/isLive';
-import { render } from '../../../../components/react-testing-library-with-providers';
+import { render } from '../../react-testing-library-with-providers';
 import CanonicalAd, { getBootstrapSrc } from '.';
+import { SlotType } from '../types';
 
 const defaultRequestContextData = {
   showAdsBasedOnLocation: true,
 };
 
-/* eslint-disable react/prop-types */
+interface CanonicalAdWithContextProps {
+  slotType: SlotType;
+  requestContext?: RequestContextProps;
+}
+
 const CanonicalAdWithContext = ({
   slotType,
+  // @ts-expect-error require partial data for testing purposes
   requestContext = defaultRequestContextData,
-}) => (
+}: CanonicalAdWithContextProps) => (
   <BrowserRouter>
     <RequestContext.Provider value={requestContext}>
       <CanonicalAd slotType={slotType} />
@@ -23,6 +29,7 @@ const CanonicalAdWithContext = ({
 
 describe('CanonicalAds Ads', () => {
   beforeEach(() => {
+    // @ts-expect-error  dotcom is added to the window object by BBC Ads script
     window.dotcom = {
       bootstrap: jest.fn(),
       cmd: { push: jest.fn() },
@@ -30,6 +37,7 @@ describe('CanonicalAds Ads', () => {
   });
 
   afterEach(() => {
+    // @ts-expect-error  dotcom is added to the window object by BBC Ads script
     window.dotcom = undefined;
   });
 
@@ -42,6 +50,7 @@ describe('CanonicalAds Ads', () => {
       const { container } = render(
         <CanonicalAdWithContext
           slotType="leaderboard"
+          // @ts-expect-error require partial data for testing purposes
           requestContext={requestContext}
         />,
       );
@@ -65,7 +74,9 @@ describe('CanonicalAds Ads', () => {
   });
 });
 
-jest.mock('#lib/utilities/isLive', () => jest.fn());
+jest.mock('../../../lib/utilities/isLive', () =>
+  jest.fn().mockImplementation(() => false),
+);
 
 describe('getBootstrapSrc', () => {
   it('should return live script when on live environment', () => {
