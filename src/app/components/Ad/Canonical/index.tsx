@@ -5,18 +5,17 @@ import { jsx } from '@emotion/react';
 import React, { useEffect, useContext } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import { oneOf, string } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import { RequestContext } from '#contexts/RequestContext';
 import isLive from '#lib/utilities/isLive';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
-import { styles as adStyles } from '../utilities/adSlot.styles';
+import adStyles from '../utilities/adSlot.styles';
 import styles from './index.styles';
-import { CanonicalAdProps, SLOT_TYPES, SlotType } from '../types';
+import { AdProps, SLOT_TYPES } from '../types';
 
-export const getBootstrapSrc = (queryString, useLegacy = false) => {
+export const getBootstrapSrc = (queryString: string, useLegacy = false) => {
   const adsTestScript =
     'https://gn-web-assets.api.bbc.com/ngas/latest/test/dotcom-bootstrap.js';
   const adsLegacyTestScript =
@@ -36,7 +35,7 @@ export const getBootstrapSrc = (queryString, useLegacy = false) => {
   return useLegacy ? adsLegacyTestScript : adsTestScript;
 };
 
-const CanonicalAd = ({ slotType, className }: CanonicalAdProps) => {
+const CanonicalAd = ({ slotType, className }: AdProps) => {
   const { showAdsBasedOnLocation } = useContext(RequestContext);
   const location = useLocation();
   const queryString = location.search;
