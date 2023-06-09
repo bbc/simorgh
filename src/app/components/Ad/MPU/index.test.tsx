@@ -1,7 +1,7 @@
 import React from 'react';
-import { render, act } from '../../../react-testing-library-with-providers';
+import { StaticRouter } from 'react-router-dom';
+import { render, act } from '../../react-testing-library-with-providers';
 import MPU from '.';
-import { StaticRouter } from 'react-router';
 
 const toggles = {
   ads: {
