@@ -12,8 +12,8 @@ import { ServiceContext } from '../../../contexts/ServiceContext';
 import { MostReadItemWrapper, MostReadLink } from '../Canonical/Item';
 import MostReadRank, { serviceNumerals } from '../Canonical/Rank';
 import generateCSPHash from '../utilities/generateCSPHash';
-import { Services } from '../../../models/types/global';
-import { Size, Direction } from '../types';
+import { Services, Direction } from '../../../models/types/global';
+import { Size } from '../types';
 import styles from './index.styles';
 
 const rankTranslationScript = (endpoint: string, service: Services) => {
