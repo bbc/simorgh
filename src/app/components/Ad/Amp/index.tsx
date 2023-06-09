@@ -1,6 +1,8 @@
+/** @jsxRuntime classic */
+/** @jsx jsx */
+/* @jsxFrag React.Fragment */
+import { jsx } from '@emotion/react';
 import React, { useContext } from 'react';
-import { oneOf } from 'prop-types';
-import styled from '@emotion/styled';
 import { Helmet } from 'react-helmet';
 import pathOr from 'ramda/src/pathOr';
 import { RequestContext } from '#contexts/RequestContext';
@@ -8,61 +10,19 @@ import {
   AMP_ACCESS_JS,
   AMP_ADS_JS,
 } from '#psammead/psammead-assets/src/amp-boilerplate';
-import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
-import { getMinion } from '#psammead/gel-foundations/src/typography';
-import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
 import AdSlot from './AdSlot';
+import styles, {
+  AdSection,
+  DisplayWrapper,
+  StyledWrapper,
+} from './index.styles';
+import { Services } from '../../../models/types/global';
+import { AdProps } from '../types';
+import adSlotStyles from '../utilities/adSlot.styles';
 
-// styled-components removes non-standard attributes (such as AMP attributes) on
-// server rendering. spreading props like this allows us to add AMP attributes
-// to the element.
-const AccessDiv = props => <div {...props} />;
-
-const AdSection = styled.section`
-  background-color: ${props => props.theme.palette.GREY_3};
-`;
-
-const AdContainer = styled.div`
-  ${({ slotType }) =>
-    slotType === 'mpu' ? ampMpuStyles : ampLeaderboardStyles}
-`;
-
-const StyledWrapper = styled.div`
-  margin: 0 auto; /* To centre page layout for Group 4+ */
-  text-align: center;
-`;
-
-// amp-geo adds geo group classes to the body of the document depending on
-// the user's location. It removes the `amp-geo-pending` class when geolocation
-// data is available.
-// setting display: none ensures ad requests within this component are not made.
-const DisplayWrapper = styled(AccessDiv)`
-  .amp-geo-pending &,
-  .amp-geo-group-gbOrUnknown & {
-    display: none;
-    visibility: hidden;
-  }
-`;
-
-const StyledLink = styled.a`
-  ${({ script }) => script && getMinion(script)}
-  ${({ service }) => getSansRegular(service)}
-  color: ${props => props.theme.palette.RHINO};
-  text-decoration: none;
-  text-transform: uppercase;
-  display: block;
-  padding: ${GEL_SPACING} 0;
-
-  text-align: ${({ dir }) => (dir === 'ltr' ? `right` : `left`)};
-
-  &:hover {
-    text-decoration: underline;
-  }
-`;
-
-const AMP_ACCESS_DATA = endpoint => ({
+const AMP_ACCESS_DATA = (endpoint: string) => ({
   authorization: endpoint,
   noPingback: true,
   authorizationFallbackResponse: {
@@ -72,7 +32,7 @@ const AMP_ACCESS_DATA = endpoint => ({
 
 const LABEL_LINK = 'https://www.bbc.com/usingthebbc/cookies/';
 
-export const AMP_ACCESS_FETCH = service => {
+export const AMP_ACCESS_FETCH = (service: Services) => {
   const togglesEndpoint = `${process.env.SIMORGH_CONFIG_URL}?application=simorgh&service=${service}`;
 
   return (
@@ -82,28 +42,45 @@ export const AMP_ACCESS_FETCH = service => {
   );
 };
 
-const AdContent = props => {
-  // eslint-disable-next-line react/prop-types
-  const { script, service, dir, label, slotType, pageType } = props;
+interface AdContentProps {
+  dir: Direction;
+  label: string;
+  ariaLabel?: string;
+  slotType: SlotType;
+  pageType: PageTypes;
+  service: Services;
+}
+
+const AdContent = ({
+  service,
+  dir,
+  label,
+  slotType,
+  pageType,
+}: AdContentProps) => {
   return (
     <>
-      <StyledLink
-        href={LABEL_LINK}
-        script={script}
-        service={service}
+      <a
+        css={[styles.link, { textAlign: dir === 'ltr' ? 'right' : 'left' }]}
         dir={dir}
-        tabIndex="-1"
+        href={LABEL_LINK}
+        tabIndex={-1}
       >
         {label}
-      </StyledLink>
+      </a>
       <AdSlot service={service} slotType={slotType} pageType={pageType} />
     </>
   );
 };
 
-const AdWithoutPlaceholder = props => {
-  // eslint-disable-next-line react/prop-types
-  const { ariaLabel, slotType } = props;
+const AdWithoutPlaceholder = ({
+  dir,
+  label,
+  slotType,
+  pageType,
+  service,
+  ariaLabel,
+}: AdContentProps) => {
   return (
     <DisplayWrapper amp-access="toggles.ads.enabled" amp-access-hide="true">
       <AdSection
@@ -112,19 +89,36 @@ const AdWithoutPlaceholder = props => {
         data-e2e="advertisement"
         aria-hidden="true"
       >
-        <AdContainer slotType={slotType}>
+        <div
+          css={
+            slotType === 'mpu'
+              ? adSlotStyles.ampMpu
+              : adSlotStyles.ampLeaderboard
+          }
+        >
           <StyledWrapper>
-            <AdContent {...props} />
+            <AdContent
+              dir={dir}
+              label={label}
+              pageType={pageType}
+              service={service}
+              slotType={slotType}
+            />
           </StyledWrapper>
-        </AdContainer>
+        </div>
       </AdSection>
     </DisplayWrapper>
   );
 };
 
-const AdWithPlaceholder = props => {
-  // eslint-disable-next-line react/prop-types
-  const { ariaLabel, slotType } = props;
+const AdWithPlaceholder = ({
+  dir,
+  label,
+  slotType,
+  pageType,
+  service,
+  ariaLabel,
+}: AdContentProps) => {
   return (
     <AdSection
       aria-label={ariaLabel}
@@ -132,22 +126,32 @@ const AdWithPlaceholder = props => {
       data-e2e="advertisement"
       aria-hidden="true"
     >
-      <AdContainer slotType={slotType}>
+      <div
+        css={
+          slotType === 'mpu' ? adSlotStyles.ampMpu : adSlotStyles.ampLeaderboard
+        }
+      >
         <StyledWrapper>
           <DisplayWrapper
             amp-access="toggles.ads.enabled"
             amp-access-hide="true"
           >
-            <AdContent {...props} />
+            <AdContent
+              dir={dir}
+              label={label}
+              pageType={pageType}
+              service={service}
+              slotType={slotType}
+            />
           </DisplayWrapper>
         </StyledWrapper>
-      </AdContainer>
+      </div>
     </AdSection>
   );
 };
 
-const AmpAd = ({ slotType }) => {
-  const { translations, dir, script, service, showAdPlaceholder } =
+const AmpAd = ({ slotType }: AdProps) => {
+  const { translations, dir, service, showAdPlaceholder } =
     useContext(ServiceContext);
   const { pageType } = useContext(RequestContext);
   const label = pathOr(
@@ -168,7 +172,6 @@ const AmpAd = ({ slotType }) => {
       </Helmet>
       <Advert
         service={service}
-        script={script}
         dir={dir}
         label={label}
         pageType={pageType}
@@ -177,10 +180,6 @@ const AmpAd = ({ slotType }) => {
       />
     </>
   );
-};
-
-AmpAd.propTypes = {
-  slotType: oneOf(['leaderboard', 'mpu']).isRequired,
 };
 
 export default AmpAd;

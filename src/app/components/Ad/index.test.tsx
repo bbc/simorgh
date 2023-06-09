@@ -3,13 +3,12 @@ import { BrowserRouter } from 'react-router-dom';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
-import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
-import { render } from '../../../components/react-testing-library-with-providers';
-import latinDiacritics from '../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
+import { render } from '../react-testing-library-with-providers';
+import latinDiacritics from '../ThemeProvider/fontScripts/latinWithDiacritics';
 import {
   ServiceContext,
   ServiceContextProvider,
-} from '../../../contexts/ServiceContext';
+} from '../../contexts/ServiceContext';
 
 import AdContainer from './index';
 
@@ -25,10 +24,12 @@ const context = {
 };
 
 describe('Ad Container', () => {
-  suppressPropWarnings(['isAmp', 'RequestContextProvider']);
+  const originalConfigUrl = process.env.SIMORGH_CONFIG_URL;
+
   beforeAll(() => {
     process.env.SIMORGH_CONFIG_URL = 'https://mock-toggles-endpoint.bbc.co.uk';
 
+    // @ts-expect-error dotcom is added to the window object by BBC Ads script
     window.dotcom = {
       bootstrap: jest.fn(),
       cmd: { push: jest.fn() },
@@ -36,7 +37,8 @@ describe('Ad Container', () => {
   });
 
   afterAll(() => {
-    delete process.env.SIMORGH_CONFIG_URL;
+    process.env.SIMORGH_CONFIG_URL = originalConfigUrl;
+    // @ts-expect-error dotcom is added to the window object by BBC Ads script
     window.dotcom = undefined;
   });
 
@@ -67,6 +69,7 @@ describe('Ad Container', () => {
               bbcOrigin="https://www.test.bbc.co.uk"
               id="c0000000000o"
               isAmp
+              isApp={false}
               pageType={FRONT_PAGE}
               service="mundo"
               statusCode={200}
@@ -85,12 +88,14 @@ describe('Ad Container', () => {
       it('should correctly render an mpu ad', () => {
         const { container } = render(
           <ServiceContext.Provider
+            // @ts-expect-error require partial data for testing purposes
             value={{ showAdPlaceholder: false, ...context }}
           >
             <RequestContextProvider
               bbcOrigin="https://www.test.bbc.co.uk"
               id="c0000000000o"
               isAmp
+              isApp={false}
               pageType={FRONT_PAGE}
               service="mundo"
               statusCode={200}
@@ -109,12 +114,14 @@ describe('Ad Container', () => {
       it('should render a leaderboard ad with placeholder when showAdPlaceholder in service config is true', () => {
         const { container } = render(
           <ServiceContext.Provider
+            // @ts-expect-error require partial data for testing purposes
             value={{ showAdPlaceholder: true, ...context }}
           >
             <RequestContextProvider
               bbcOrigin="https://www.test.bbc.co.uk"
               id="c0000000000o"
               isAmp
+              isApp={false}
               pageType={FRONT_PAGE}
               service="mundo"
               statusCode={200}
@@ -133,12 +140,14 @@ describe('Ad Container', () => {
       it('should render a leaderboard ad without a placeholder when showAdPlaceholder in service config is false', () => {
         const { container } = render(
           <ServiceContext.Provider
+            // @ts-expect-error require partial data for testing purposes
             value={{ showAdPlaceholder: false, ...context }}
           >
             <RequestContextProvider
               bbcOrigin="https://www.test.bbc.co.uk"
               id="c0000000000o"
               isAmp
+              isApp={false}
               pageType={FRONT_PAGE}
               service="mundo"
               statusCode={200}
@@ -163,6 +172,7 @@ describe('Ad Container', () => {
               bbcOrigin="https://www.test.bbc.co.uk"
               id="c0000000000o"
               isAmp={false}
+              isApp={false}
               pageType={FRONT_PAGE}
               service="mundo"
               statusCode={200}
@@ -187,6 +197,7 @@ describe('Ad Container', () => {
               bbcOrigin="https://www.test.bbc.co.uk"
               id="c0000000000o"
               isAmp={false}
+              isApp={false}
               pageType={FRONT_PAGE}
               service="mundo"
               statusCode={200}
@@ -225,12 +236,14 @@ describe('Ad Container', () => {
     describe('should return null for AMP', () => {
       const { container } = render(
         <ServiceContext.Provider
+          // @ts-expect-error require partial data for testing purposes
           value={{ showAdPlaceholder: true, ...context }}
         >
           <RequestContextProvider
             bbcOrigin="https://www.test.bbc.co.uk"
             id="c0000000000o"
             isAmp
+            isApp={false}
             pageType={FRONT_PAGE}
             service="mundo"
             statusCode={200}
@@ -251,6 +264,8 @@ describe('Ad Container', () => {
         <ServiceContext.Provider value={context}>
           <RequestContextProvider
             bbcOrigin="https://www.test.bbc.co.uk"
+            isAmp={false}
+            isApp={false}
             id="c0000000000o"
             pageType={FRONT_PAGE}
             service="mundo"

@@ -42,17 +42,17 @@ exports[`Ad Container Snapshots AMP should correctly render a leaderboard ad 1`]
   }
 }
 
-.emotion-6 {
+.emotion-5 {
   margin: 0 auto;
   text-align: center;
 }
 
-.emotion-8 {
+.emotion-7 {
   font-size: 0.75rem;
   line-height: 1rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #5A5A5A;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -63,20 +63,20 @@ exports[`Ad Container Snapshots AMP should correctly render a leaderboard ad 1`]
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-8 {
+  .emotion-7 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-8 {
+  .emotion-7 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
-.emotion-8:hover {
+.emotion-7:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
@@ -95,13 +95,13 @@ exports[`Ad Container Snapshots AMP should correctly render a leaderboard ad 1`]
       role="region"
     >
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-4"
       >
         <div
-          class="emotion-6 emotion-7"
+          class="emotion-5 emotion-6"
         >
           <a
-            class="emotion-8 emotion-9"
+            class="emotion-7"
             dir="ltr"
             href="https://www.bbc.com/usingthebbc/cookies/"
             tabindex="-1"
@@ -163,7 +163,7 @@ exports[`Ad Container Snapshots AMP should correctly render an mpu ad 1`] = `
 @media (min-width: 18.75rem) {
   .emotion-4 {
     min-height: 17.6875rem;
-    padding:padding: 1rem 0 0.5rem 0;
+    padding: 1rem 0 0.5rem 0;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -179,17 +179,17 @@ exports[`Ad Container Snapshots AMP should correctly render an mpu ad 1`] = `
   }
 }
 
-.emotion-6 {
+.emotion-5 {
   margin: 0 auto;
   text-align: center;
 }
 
-.emotion-8 {
+.emotion-7 {
   font-size: 0.75rem;
   line-height: 1rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #5A5A5A;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -200,20 +200,20 @@ exports[`Ad Container Snapshots AMP should correctly render an mpu ad 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-8 {
+  .emotion-7 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-8 {
+  .emotion-7 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
-.emotion-8:hover {
+.emotion-7:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
@@ -232,13 +232,13 @@ exports[`Ad Container Snapshots AMP should correctly render an mpu ad 1`] = `
       role="region"
     >
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-4"
       >
         <div
-          class="emotion-6 emotion-7"
+          class="emotion-5 emotion-6"
         >
           <a
-            class="emotion-8 emotion-9"
+            class="emotion-7"
             dir="ltr"
             href="https://www.bbc.com/usingthebbc/cookies/"
             tabindex="-1"
@@ -301,23 +301,23 @@ exports[`Ad Container Snapshots AMP should render a leaderboard ad with placehol
   }
 }
 
-.emotion-4 {
+.emotion-3 {
   margin: 0 auto;
   text-align: center;
 }
 
-.amp-geo-pending .emotion-6,
-.amp-geo-group-gbOrUnknown .emotion-6 {
+.amp-geo-pending .emotion-5,
+.amp-geo-group-gbOrUnknown .emotion-5 {
   display: none;
   visibility: hidden;
 }
 
-.emotion-8 {
+.emotion-7 {
   font-size: 0.75rem;
   line-height: 1rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #5A5A5A;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -328,20 +328,20 @@ exports[`Ad Container Snapshots AMP should render a leaderboard ad with placehol
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-8 {
+  .emotion-7 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-8 {
+  .emotion-7 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
-.emotion-8:hover {
+.emotion-7:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
@@ -355,18 +355,18 @@ exports[`Ad Container Snapshots AMP should render a leaderboard ad with placehol
     role="region"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-2"
     >
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-3 emotion-4"
       >
         <div
           amp-access="toggles.ads.enabled"
           amp-access-hide="true"
-          class="emotion-6 emotion-7"
+          class="emotion-5 emotion-6"
         >
           <a
-            class="emotion-8 emotion-9"
+            class="emotion-7"
             dir="ltr"
             href="https://www.bbc.com/usingthebbc/cookies/"
             tabindex="-1"
@@ -450,17 +450,17 @@ exports[`Ad Container Snapshots AMP should render a leaderboard ad without a pla
   }
 }
 
-.emotion-6 {
+.emotion-5 {
   margin: 0 auto;
   text-align: center;
 }
 
-.emotion-8 {
+.emotion-7 {
   font-size: 0.75rem;
   line-height: 1rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #5A5A5A;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -471,20 +471,20 @@ exports[`Ad Container Snapshots AMP should render a leaderboard ad without a pla
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-8 {
+  .emotion-7 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-8 {
+  .emotion-7 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
-.emotion-8:hover {
+.emotion-7:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
@@ -503,13 +503,13 @@ exports[`Ad Container Snapshots AMP should render a leaderboard ad without a pla
       role="region"
     >
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-4"
       >
         <div
-          class="emotion-6 emotion-7"
+          class="emotion-5 emotion-6"
         >
           <a
-            class="emotion-8 emotion-9"
+            class="emotion-7"
             dir="ltr"
             href="https://www.bbc.com/usingthebbc/cookies/"
             tabindex="-1"
@@ -606,7 +606,7 @@ exports[`Ad Container Snapshots Canonical should correctly render a leaderboard 
   <section
     aria-hidden="true"
     aria-label="Publicidad"
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     data-e2e="advertisement"
     role="region"
   >
@@ -660,7 +660,7 @@ exports[`Ad Container Snapshots Canonical should correctly render an mpu ad 1`] 
   <section
     aria-hidden="true"
     aria-label="Publicidad 2"
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     data-e2e="advertisement"
     role="region"
   >
