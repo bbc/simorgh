@@ -1,3 +1,5 @@
+import { css } from '@emotion/react';
+
 import {
   GROUP_1_MAX_WIDTH,
   GROUP_2_MIN_WIDTH,
@@ -21,6 +23,18 @@ export const NEGATIVE_MARGIN = `${GROUP_1_MAX_WIDTH} {
   ${GROUP_3_MIN_WIDTH} {
     margin: ${TRIPLE}rem -${MARGIN_ABOVE_400PX} 0;
 }`;
+
+export const NegativeMargin = css({
+  [GROUP_1_MAX_WIDTH]: {
+    /* To remove GEL Margins */
+    margin: `${QUADRUPLE}rem -${MARGIN_BELOW_400PX} 0`,
+    padding: `0 ${MARGIN_BELOW_400PX}`,
+  },
+  [GROUP_2_MIN_WIDTH]: {
+    margin: `${QUADRUPLE}rem -${MARGIN_ABOVE_400PX} 0`,
+  },
+  [GROUP_3_MIN_WIDTH]: { margin: `${TRIPLE}rem -${MARGIN_ABOVE_400PX} 0` },
+});
 
 /**
  * These styles are lifted from #psammead/psammead-visually-hidden-text/src

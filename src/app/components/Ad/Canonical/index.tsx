@@ -1,20 +1,20 @@
+/** @jsxRuntime classic */
+/** @jsx jsx */
+/* @jsxFrag React.Fragment */
+import { jsx } from '@emotion/react';
 import React, { useEffect, useContext } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { oneOf, string } from 'prop-types';
-import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
 import { RequestContext } from '#contexts/RequestContext';
 import isLive from '#lib/utilities/isLive';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
-import { leaderboardStyles, mpuStyles } from '../utilities/adSlotStyles';
-
-const AdContainer = styled.section`
-  background-color: ${props => props.theme.palette.GREY_3};
-  ${({ slotType }) => (slotType === 'mpu' ? mpuStyles : leaderboardStyles)}
-`;
+import { styles as adStyles } from '../utilities/adSlot.styles';
+import styles from './index.styles';
+import { CanonicalAdProps, SLOT_TYPES, SlotType } from '../types';
 
 export const getBootstrapSrc = (queryString, useLegacy = false) => {
   const adsTestScript =
@@ -36,7 +36,7 @@ export const getBootstrapSrc = (queryString, useLegacy = false) => {
   return useLegacy ? adsLegacyTestScript : adsTestScript;
 };
 
-const CanonicalAd = ({ slotType, className }) => {
+const CanonicalAd = ({ slotType, className }: CanonicalAdProps) => {
   const { showAdsBasedOnLocation } = useContext(RequestContext);
   const location = useLocation();
   const queryString = location.search;
@@ -46,18 +46,24 @@ const CanonicalAd = ({ slotType, className }) => {
     ['ads', 'advertisementLabel'],
     translations,
   );
-  const ariaLabel = getAdsAriaLabel(label, dir, slotType);
+  const ariaLabel = getAdsAriaLabel({ label, dir, slotType });
 
   useEffect(() => {
+    // @ts-expect-error  dotcom is added to the window object by BBC Ads script
     if (window.dotcom) {
+      // @ts-expect-error  dotcom is added to the window object by BBC Ads script
       window.dotcom.cmd.push(() => {
+        // @ts-expect-error  dotcom is added to the window object by BBC Ads script
         window.dotcom.ads.registerSlot(slotType);
       });
     }
 
     return () => {
+      // @ts-expect-error  dotcom is added to the window object by BBC Ads script
       if (window.dotcom) {
+        // @ts-expect-error  dotcom is added to the window object by BBC Ads script
         window.dotcom.cmd.push(() => {
+          // @ts-expect-error  dotcom is added to the window object by BBC Ads script
           window.dotcom.ads.destroySlot(slotType);
         });
       }
@@ -77,8 +83,13 @@ const CanonicalAd = ({ slotType, className }) => {
         <script noModule src={getBootstrapSrc(queryString, true)} async />
       </Helmet>
 
-      <AdContainer
-        slotType={slotType}
+      <section
+        css={[
+          styles.section,
+          slotType === SLOT_TYPES.LEADERBOARD
+            ? adStyles.leaderboard
+            : adStyles.mpu,
+        ]}
         aria-label={ariaLabel}
         aria-hidden="true"
         role="region"
@@ -86,18 +97,9 @@ const CanonicalAd = ({ slotType, className }) => {
         className={className}
       >
         <div id={`dotcom-${slotType}`} className="dotcom-ad" />
-      </AdContainer>
+      </section>
     </>
   );
-};
-
-CanonicalAd.propTypes = {
-  slotType: oneOf(['leaderboard', 'mpu']).isRequired,
-  className: string,
-};
-
-CanonicalAd.defaultProps = {
-  className: null,
 };
 
 export default CanonicalAd;

@@ -11,10 +11,9 @@ import {
 import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
 import { getMinion } from '#psammead/gel-foundations/src/typography';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
 import AdSlot from './AdSlot';
-import { ampLeaderboardStyles, ampMpuStyles } from '../utilities/adSlotStyles';
 
 // styled-components removes non-standard attributes (such as AMP attributes) on
 // server rendering. spreading props like this allows us to add AMP attributes
@@ -156,7 +155,7 @@ const AmpAd = ({ slotType }) => {
     ['ads', 'advertisementLabel'],
     translations,
   );
-  const ariaLabel = getAdsAriaLabel(label, dir, slotType);
+  const ariaLabel = getAdsAriaLabel({ label, dir, slotType });
 
   const Advert = showAdPlaceholder ? AdWithPlaceholder : AdWithoutPlaceholder;
 

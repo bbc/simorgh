@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
-import { oneOf, string } from 'prop-types';
 import useToggle from '#hooks/useToggle';
 import { RequestContext } from '#contexts/RequestContext';
 import AmpAd from './Amp';
 import CanonicalAd from './Canonical';
+import { AdProps } from './types';
 
-const AdContainer = ({ slotType, className }) => {
+const AdContainer = ({ slotType, className }: AdProps) => {
   const { isAmp } = useContext(RequestContext);
   const { enabled: adsEnabled } = useToggle('ads');
 
@@ -14,16 +14,8 @@ const AdContainer = ({ slotType, className }) => {
   }
 
   const Ad = isAmp ? AmpAd : CanonicalAd;
+
   return <Ad slotType={slotType} className={className} />;
-};
-
-AdContainer.propTypes = {
-  slotType: oneOf(['leaderboard', 'mpu']).isRequired,
-  className: string,
-};
-
-AdContainer.defaultProps = {
-  className: null,
 };
 
 export default AdContainer;

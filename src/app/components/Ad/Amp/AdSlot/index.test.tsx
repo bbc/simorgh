@@ -1,6 +1,6 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
-import AdSlot, { getDataSlot, getAssetType } from './AdSlot';
+import AdSlot, { getDataSlot, getAssetType } from '.';
 
 describe('getAssetType', () => {
   it('should return an asset type of story given a pageType of STY', () => {

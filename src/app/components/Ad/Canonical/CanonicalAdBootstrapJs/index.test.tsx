@@ -1,21 +1,19 @@
 import React from 'react';
-import { render, act, waitFor } from '@testing-library/react';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
-import CanonicalAdBootstrapJs from './CanonicalAdBootstrapJs';
+import { Helmet } from 'react-helmet';
+import {
+  render,
+  act,
+  waitFor,
+} from '../../../react-testing-library-with-providers';
+import CanonicalAdBootstrapJs from '.';
 
 describe('CanonicalAds Ads', () => {
-  beforeEach(() => {
-    document.querySelectorAll('head script').forEach(script => {
-      script.parentNode.removeChild(script);
-    });
-    delete window.dotcomConfig;
-    delete window.dotcom;
-  });
   describe('Snapshots', () => {
-    shouldMatchSnapshot(
-      'should push dotcom bootstrap and configuration to a head script',
-      <CanonicalAdBootstrapJs />,
-    );
+    it('should push dotcom bootstrap and configuration to a head script', () => {
+      render(<CanonicalAdBootstrapJs />);
+
+      expect(Helmet.peek().scriptTags[0]).toMatchSnapshot();
+    });
   });
 
   describe('Assertions', () => {
@@ -25,6 +23,7 @@ describe('CanonicalAds Ads', () => {
       });
 
       await waitFor(() => {
+        // @ts-expect-error dotcomConfig is added to the window object by BBC Ads script
         expect(window.dotcomConfig).toEqual({
           pageAds: true,
           playerAds: false,
@@ -38,6 +37,7 @@ describe('CanonicalAds Ads', () => {
       });
 
       await waitFor(() => {
+        // @ts-expect-error dotcomConfig is added to the window object by BBC Ads script
         expect(window.dotcomConfig).toEqual({
           adcampaign: 'a-campaign',
           pageAds: true,
