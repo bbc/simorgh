@@ -54,7 +54,7 @@ export default async ({
       pageData: {
         id,
         title,
-        metadata,
+        metadata: { ...metadata, type: pageType },
         curations,
         description,
       },
