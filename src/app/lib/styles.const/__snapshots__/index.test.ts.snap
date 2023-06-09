@@ -11,7 +11,7 @@ exports[`Styles NEGATIVE_MARGIN should match text 1`] = `
   }
   @media (min-width: 37.5rem) {
     margin: 1.5rem -1rem 0;
-  }"
+}"
 `;
 
 exports[`Styles visuallyHiddenStyle should match text 1`] = `
