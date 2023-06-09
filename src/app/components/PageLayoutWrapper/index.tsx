@@ -41,7 +41,7 @@ const PageLayoutWrapper = ({
   const renderScriptSwitch = pathOr(true, ['renderScriptSwitch'], pageData);
 
   const isErrorPage = ![200].includes(status) || !status;
-  const pageType = pageData.metadata.type;
+  const pageType = pageData?.metadata?.type;
   const serviceFonts = fontFacesLazy(service);
   const fontJs =
     isAmp || !serviceFonts.length || process.env.JEST_WORKER_ID !== undefined
