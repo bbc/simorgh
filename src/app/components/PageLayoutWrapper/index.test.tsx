@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { render } from '../react-testing-library-with-providers';
 import PageLayoutWrapper from '.';
 
@@ -7,7 +8,7 @@ global.performance.getEntriesByName = jest.fn(() => []);
 describe('PageLayoutWrapper', () => {
   it('should render default page wrapper with children', async () => {
     const { container } = render(
-      <PageLayoutWrapper pageData={{}} status={200}>
+      <PageLayoutWrapper pageData={{ metadata: { type: 'home' } }} status={200}>
         <h2>Child element</h2>
       </PageLayoutWrapper>,
     );
