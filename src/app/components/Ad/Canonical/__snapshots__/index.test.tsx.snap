@@ -42,7 +42,7 @@ exports[`CanonicalAds Ads Snapshots should correctly render a Canonical mpu ad w
   <section
     aria-hidden="true"
     aria-label="Advertisement 2"
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     data-e2e="advertisement"
     role="region"
   >
@@ -109,7 +109,7 @@ exports[`CanonicalAds Ads Snapshots should correctly render an Canonical leaderb
   <section
     aria-hidden="true"
     aria-label="Advertisement"
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     data-e2e="advertisement"
     role="region"
   >
