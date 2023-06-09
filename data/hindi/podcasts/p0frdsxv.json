@@ -1,0 +1,146 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares:ws_media:brand:bbc_hindi_radio/p0frdsxv",
+    "locators": {
+      "pid": "p0frdv64",
+      "brandPid": "p0frdsxv"
+    },
+    "type": "WSRADIO",
+    "createdBy": "bbc_hindi_radio",
+    "language": "hi",
+    "lastUpdated": 1686047214347,
+    "firstPublished": 1685529380000,
+    "lastPublished": 1685529380000,
+    "timestamp": 1685529380000,
+    "options": {},
+    "analyticsLabels": {
+      "pageTitle": "कल्कि के साथ माई इंडियन लाइफ़ - BBC News हिंदी",
+      "pageIdentifier": "hindi.bbc_hindi_radio.podcasts.programmes.p0frdsxv.page",
+      "producerId": "52",
+      "contentType": "player-episode",
+      "producer": "HINDI"
+    },
+    "passport": {
+      "home": "",
+      "taggings": []
+    },
+    "tags": {},
+    "version": "v1.4.24",
+    "blockTypes": ["media"],
+    "title": "कल्कि के साथ माई इंडियन लाइफ़",
+    "releaseDateTimeStamp": 1685491200000
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p0frdv64",
+        "subType": "episode",
+        "format": "Audio",
+        "title": "",
+        "synopses": {
+          "short": "21वीं सदी के हिंदुस्तानी नौजवानों की अनोखी कहानियां.",
+          "medium": "21वीं सदी के हिंदुस्तानी नौजवानों की अनोखी कहानियां.",
+          "long": "21 वीं सदी के हिंदुस्तानी नौजवानों की अनोखी कहानियां. ये कहानियां उन हिंदुस्तानियों की हैं जिन्होंने जिंदगी की अफ़रा-तफ़री में अपने अपने रास्ते खुद तालाशे हैं. ये कहानियां हैं उनकी  महत्वाकांक्षाओं और उनके साहस की."
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0frdtbp.jpg",
+        "embedding": false,
+        "advertising": false,
+        "versions": [
+          {
+            "versionId": "p0frdtm6",
+            "types": ["Podcast"],
+            "duration": 199,
+            "durationISO8601": "PT3M19S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true,
+              "world": false
+            },
+            "availableFrom": 1685529240000,
+            "availabilityStatus": "available"
+          }
+        ],
+        "availability": "available",
+        "smpKind": "radioProgramme",
+        "episodeTitle": "कल्कि के साथ माई इंडियन लाइफ़",
+        "type": "media"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "headline": "कल्कि के साथ माई इंडियन लाइफ़"
+    },
+    "locators": {
+      "pid": "p0frdv64",
+      "brandPid": "p0frdsxv"
+    },
+    "media": {
+      "id": "p0frdv64",
+      "subType": "episode",
+      "format": "Audio",
+      "title": "",
+      "synopses": {
+        "short": "21वीं सदी के हिंदुस्तानी नौजवानों की अनोखी कहानियां.",
+        "medium": "21वीं सदी के हिंदुस्तानी नौजवानों की अनोखी कहानियां.",
+        "long": "21 वीं सदी के हिंदुस्तानी नौजवानों की अनोखी कहानियां. ये कहानियां उन हिंदुस्तानियों की हैं जिन्होंने जिंदगी की अफ़रा-तफ़री में अपने अपने रास्ते खुद तालाशे हैं. ये कहानियां हैं उनकी  महत्वाकांक्षाओं और उनके साहस की."
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0frdtbp.jpg",
+      "embedding": false,
+      "advertising": false,
+      "versions": [
+        {
+          "versionId": "p0frdtm6",
+          "types": ["Podcast"],
+          "duration": 199,
+          "durationISO8601": "PT3M19S",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": true,
+            "nonUk": true,
+            "world": false
+          },
+          "availableFrom": 1685529240000,
+          "availabilityStatus": "available"
+        }
+      ],
+      "availability": "available",
+      "smpKind": "radioProgramme",
+      "episodeTitle": "कल्कि के साथ माई इंडियन लाइफ़",
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "",
+      "subType": "index",
+      "href": "ichef.bbci.co.uk/images/ic/$recipe/p0frdtbp.jpg",
+      "path": "ichef.bbci.co.uk/images/ic/$recipe/p0frdtbp.jpg",
+      "height": 0,
+      "width": 0,
+      "altText": null,
+      "copyrightHolder": null,
+      "type": "image"
+    },
+    "releaseDateTimestamp": 1685491200000,
+    "brand": {
+      "pid": "p0frdsxv",
+      "title": "कल्कि के साथ माई इंडियन लाइफ़"
+    },
+    "id": "urn:bbc:ares:ws_media:page:bbc_hindi_radio/p0frdv64",
+    "type": "ws_radio"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Hindi",
+      "uri": "/hindi",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "other-episode",
+        "promos": []
+      }
+    ]
+  }
+}

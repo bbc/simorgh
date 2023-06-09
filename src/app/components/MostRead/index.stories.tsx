@@ -20,7 +20,12 @@ interface Props extends StoryProps {
   size?: 'default' | 'small';
 }
 
-const Component = ({ service, variant, columnLayout, size }: Props) => (
+const Component = ({
+  service,
+  variant,
+  columnLayout = 'multiColumn',
+  size = 'default',
+}: Props) => (
   <ThemeProvider service={service} variant={variant}>
     <ToggleContextProvider>
       <RequestContextProvider
@@ -48,15 +53,19 @@ export default {
   title: 'New Components/Most Read',
   Component,
   decorators: [withKnobs, withServicesKnob({ defaultService: 'pidgin' })],
+  parameters: {
+    chromatic: {
+      viewports: [1280],
+    },
+  },
 };
 
+export const ArticlePage5Columns = ({ service, variant }: Props) => (
+  <Component service={service} variant={variant} />
+);
+
 export const HomePage2Columns = ({ service, variant }: Props) => (
-  <Component
-    service={service}
-    variant={variant}
-    size="default"
-    columnLayout="twoColumn"
-  />
+  <Component service={service} variant={variant} columnLayout="twoColumn" />
 );
 
 export const StoryPage1Column = ({ service, variant }: Props) => (
@@ -69,19 +78,9 @@ export const StoryPage1Column = ({ service, variant }: Props) => (
 );
 
 export const Japanese1Column = ({ variant }: Props) => (
-  <Component
-    service="japanese"
-    columnLayout="oneColumn"
-    variant={variant}
-    size="default"
-  />
+  <Component service="japanese" variant={variant} columnLayout="oneColumn" />
 );
 
 export const Persian1Column = ({ variant }: Props) => (
-  <Component
-    service="persian"
-    columnLayout="oneColumn"
-    variant={variant}
-    size="default"
-  />
+  <Component service="persian" variant={variant} columnLayout="oneColumn" />
 );
