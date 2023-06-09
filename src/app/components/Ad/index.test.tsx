@@ -63,6 +63,7 @@ describe('Ad Container', () => {
       it('should correctly render a leaderboard ad', () => {
         const { container } = render(
           <ServiceContext.Provider
+            // @ts-expect-error require partial data for testing purposes
             value={{ showAdPlaceholder: false, ...context }}
           >
             <RequestContextProvider
@@ -261,6 +262,7 @@ describe('Ad Container', () => {
 
     describe('should return null for canonical', () => {
       const { container } = render(
+        // @ts-expect-error require partial data for testing purposes
         <ServiceContext.Provider value={context}>
           <RequestContextProvider
             bbcOrigin="https://www.test.bbc.co.uk"
