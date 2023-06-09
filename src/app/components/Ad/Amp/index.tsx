@@ -13,14 +13,10 @@ import {
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
 import AdSlot from './AdSlot';
-import styles, {
-  AdSection,
-  DisplayWrapper,
-  StyledWrapper,
-} from './index.styles';
-import { Services } from '../../../models/types/global';
-import { AdProps } from '../types';
-import adSlotStyles from '../utilities/adSlot.styles';
+import { Direction, PageTypes, Services } from '../../../models/types/global';
+import styles from './index.styles';
+import adStyles from '../utilities/adSlot.styles';
+import { AdProps, SlotType } from '../types';
 
 const AMP_ACCESS_DATA = (endpoint: string) => ({
   authorization: endpoint,
@@ -52,11 +48,11 @@ interface AdContentProps {
 }
 
 const AdContent = ({
-  service,
   dir,
   label,
   slotType,
   pageType,
+  service,
 }: AdContentProps) => {
   return (
     <>
@@ -82,21 +78,22 @@ const AdWithoutPlaceholder = ({
   ariaLabel,
 }: AdContentProps) => {
   return (
-    <DisplayWrapper amp-access="toggles.ads.enabled" amp-access-hide="true">
-      <AdSection
+    <div
+      css={styles.display}
+      amp-access="toggles.ads.enabled"
+      amp-access-hide="true"
+    >
+      <section
+        css={styles.section}
         aria-label={ariaLabel}
         role="region"
         data-e2e="advertisement"
         aria-hidden="true"
       >
         <div
-          css={
-            slotType === 'mpu'
-              ? adSlotStyles.ampMpu
-              : adSlotStyles.ampLeaderboard
-          }
+          css={slotType === 'mpu' ? adStyles.ampMpu : adStyles.ampLeaderboard}
         >
-          <StyledWrapper>
+          <div css={styles.wrapper}>
             <AdContent
               dir={dir}
               label={label}
@@ -104,35 +101,33 @@ const AdWithoutPlaceholder = ({
               service={service}
               slotType={slotType}
             />
-          </StyledWrapper>
+          </div>
         </div>
-      </AdSection>
-    </DisplayWrapper>
+      </section>
+    </div>
   );
 };
 
 const AdWithPlaceholder = ({
   dir,
   label,
+  ariaLabel,
   slotType,
   pageType,
   service,
-  ariaLabel,
 }: AdContentProps) => {
   return (
-    <AdSection
+    <section
+      css={styles.section}
       aria-label={ariaLabel}
       role="region"
       data-e2e="advertisement"
       aria-hidden="true"
     >
-      <div
-        css={
-          slotType === 'mpu' ? adSlotStyles.ampMpu : adSlotStyles.ampLeaderboard
-        }
-      >
-        <StyledWrapper>
-          <DisplayWrapper
+      <div css={slotType === 'mpu' ? adStyles.ampMpu : adStyles.ampLeaderboard}>
+        <div css={styles.wrapper}>
+          <div
+            css={styles.display}
             amp-access="toggles.ads.enabled"
             amp-access-hide="true"
           >
@@ -143,22 +138,24 @@ const AdWithPlaceholder = ({
               service={service}
               slotType={slotType}
             />
-          </DisplayWrapper>
-        </StyledWrapper>
+          </div>
+        </div>
       </div>
-    </AdSection>
+    </section>
   );
 };
 
 const AmpAd = ({ slotType }: AdProps) => {
   const { translations, dir, service, showAdPlaceholder } =
     useContext(ServiceContext);
+
   const { pageType } = useContext(RequestContext);
   const label = pathOr(
     'Advertisement',
     ['ads', 'advertisementLabel'],
     translations,
   );
+
   const ariaLabel = getAdsAriaLabel({ label, dir, slotType });
 
   const Advert = showAdPlaceholder ? AdWithPlaceholder : AdWithoutPlaceholder;
