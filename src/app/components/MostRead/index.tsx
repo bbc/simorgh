@@ -52,12 +52,12 @@ const MostRead = ({
 
   const mostReadToggleEnabled = enabled && hasMostRead;
 
-  if (isLive()) {
+  // Do not render most read when a toggle is disabled
+  if (!mostReadToggleEnabled) {
     return null;
   }
 
-  // Do not render most read when a toggle is disabled
-  if (!mostReadToggleEnabled) {
+  if (isLive()) {
     return null;
   }
 
