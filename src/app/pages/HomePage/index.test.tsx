@@ -19,6 +19,7 @@ describe('Home Page', () => {
     });
 
     const curationsWithSummaries = kyrgyzHomePageData.curations.filter(
+      // @ts-expect-error homepage may not contain mostRead data
       ({ summaries, mostRead }) =>
         (summaries && summaries?.length > 0) || mostRead,
     );
