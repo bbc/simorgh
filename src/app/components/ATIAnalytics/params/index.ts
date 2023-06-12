@@ -1,3 +1,6 @@
+import pathOr from 'ramda/src/pathOr';
+import isEmpty from 'ramda/src/isEmpty';
+
 import {
   HOME_PAGE,
   STORY_PAGE,
@@ -28,6 +31,7 @@ import {
   buildCpsAssetPageATIParams,
   buildCpsAssetPageATIUrl,
 } from './cpsAssetPage/buildParams';
+import { buildPageATIUrl, buildPageATIParams } from './genericPage/buildParams';
 import {
   buildMostReadATIParams,
   buildMostReadATIUrl,
@@ -46,7 +50,12 @@ import {
 } from './topicPage/buildParams';
 import { RequestContextProps } from '../../../contexts/RequestContext';
 import { ServiceConfig } from '../../../models/types/serviceConfig';
-import { PageData, ATIPageTrackingProps } from '../types';
+import {
+  PageData,
+  HomePageData,
+  ATIPageTrackingProps,
+  ATIData,
+} from '../types';
 import { PageTypes } from '../../../models/types/global';
 
 const ARTICLE_MEDIA_ASSET = 'article-media-asset';
@@ -204,27 +213,49 @@ const createBuilderFactory = (
 };
 
 export const buildATIUrl = (
-  data: PageData,
   requestContext: RequestContextProps,
   serviceContext: ServiceConfig,
+  data?: PageData,
+  atiData?: ATIData,
 ) => {
-  const buildUrl = createBuilderFactory(requestContext, pageTypeUrlBuilders);
+  if (atiData) {
+    return buildPageATIUrl({ atiData, requestContext, serviceContext });
+  }
 
-  return buildUrl(data, requestContext, serviceContext);
+  if (data) {
+    return createBuilderFactory(requestContext, pageTypeUrlBuilders)(
+      data,
+      requestContext,
+      serviceContext,
+    );
+  }
+
+  return null;
 };
 
 export const buildATIEventTrackingParams = (
-  data: PageData,
+  data: PageData | HomePageData,
   requestContext: RequestContextProps,
   serviceContext: ServiceConfig,
 ) => {
   try {
+    const analytics = pathOr({}, ['metadata', 'analytics'], data);
+    const title = pathOr('', ['title'], data);
+
+    if (!isEmpty(analytics)) {
+      return buildPageATIParams({
+        atiData: { analytics, title },
+        requestContext,
+        serviceContext,
+      });
+    }
+
     const buildParams = createBuilderFactory(
       requestContext,
       pageTypeParamBuilders,
     );
 
-    return buildParams(data, requestContext, serviceContext);
+    return buildParams(data as PageData, requestContext, serviceContext);
   } catch (error: unknown) {
     const { message } = error as Error;
 
