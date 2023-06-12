@@ -250,6 +250,10 @@ describe('MostRead', () => {
   describe('Presence on live environment', () => {
     const originalEnvironment = process.env.SIMORGH_APP_ENV;
 
+    const toggles = {
+      mostRead: { enabled: true },
+    };
+
     afterEach(() => {
       process.env.SIMORGH_APP_ENV = originalEnvironment;
     });
@@ -260,6 +264,7 @@ describe('MostRead', () => {
       // if isLive is true, DO NOT show most read component
       const { container } = render(
         <MostRead data={pidginMostReadData.data} columnLayout="twoColumn" />,
+        { toggles },
       );
 
       expect(container).toBeEmptyDOMElement();
@@ -272,8 +277,8 @@ describe('MostRead', () => {
       // if isLive is false, show most read component
       const { container } = render(
         <MostRead data={pidginMostReadData.data} columnLayout="twoColumn" />,
+        { toggles },
       );
-      console.log(container);
       expect(container).not.toBeEmptyDOMElement();
       expect(isLive()).toBe(false);
     });
