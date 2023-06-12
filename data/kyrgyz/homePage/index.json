@@ -1,407 +1,248 @@
 {
   "data": {
-    "title": "BBC News Кыргыз Кызматы - Top title from Tipo in the details section",
-    "description": "Hello I am a description! I was added in the \"Description\" field from the Details section in Tipo",
+    "title": "Кабарлар, акыркы мүнөттөгү кабарлар, талдоо, видео - BBC News Кыргыз Кызматы",
+    "description": "Дүйнөлүк кабарлар, саясат, экономика, спорт, Кыргызстандагы урунттуу окуялар, аналитика, жаңылыктар, соңку кабарлар, маектер. Би-Би-Си Кыргыз кызматынын сайтынан окуңуз.",
     "pageType": "home",
     "curations": [
       {
         "summaries": [
           {
-            "type": "audio",
-            "title": "Headline  edited in promo itself test May 2023",
-            "firstPublished": "2023-03-06T13:10:39.425Z",
-            "link": "https://www.test.bbc.com/kyrgyz/articles/c1ldk6kl66wo",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/1575/test/0167c910-f8a3-11ed-bbce-5b0f68ecdb7b.png",
-            "description": "Summary edited in promo itself  test May 2023",
-            "imageAlt": "Image edited in promo itself test May 2023",
-            "id": "c1ldk6kl66wo"
+            "type": "article",
+            "title": "Жөө качып чыккан орус учкучу: \"Мен кылмышкер болгум келген жок\"",
+            "firstPublished": "2023-06-12T01:56:40.000Z",
+            "link": "https://www.bbc.com/kyrgyz/world-65874666",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/48AE/production/_130060681_mishov1.png",
+            "description": "Лейтенант Дмитрий Мишов рюкзагын көтөрүп, токой жиреген жүрүш менен Литвага жетип, баш паанек алды.",
+            "imageAlt": "Russian helicopter pilot Dmitry Mishov",
+            "id": "d6283527-768e-4772-bcdb-9ec15d9081a8"
           },
           {
             "type": "article",
-            "title": "“Баланы сабады деп аялымды камап салышарын өзүм да билген эмесмин”. Кадамжайда токмоктолгон наристенин атасы 2\r",
-            "firstPublished": "2023-02-02T10:06:00.977Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/cy0pvvd9jvpo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg",
-            "description": "",
-            "imageAlt": "test",
-            "id": "cy0pvvd9jvpo"
+            "title": "Кахов ГЭСинде жардыруу болгон - NORSAR изилдөө борбору",
+            "firstPublished": "2023-06-09T10:20:34.000Z",
+            "link": "https://www.bbc.com/kyrgyz/world-65821843",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/175A2/production/_130005659_mediaitem130005658.jpg",
+            "description": "Соңку бир нече саатта Кахов ГЭсинин дамбаcынын жарылышына Россия жоопкерчилик тартат деген версияны тастыктаган эки маанилүү далил табылды.",
+            "imageAlt": "Кахов ГЭСинин дамбасынын спутниктен турталгын сүрөтү. 7-июнь 2023-ж.",
+            "id": "0f57005f-01d0-433d-a2ab-b0d238a182c0"
           },
           {
             "type": "article",
-            "title": "“Баланы сабады деп аялымды камап салышарын өзүм да билген эмесмин”. Кадамжайда токмоктолгон наристенин атасы 3\r",
-            "firstPublished": "2023-02-02T10:06:57.156Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/cemg3359nwro",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg",
-            "description": "",
-            "imageAlt": "test",
-            "id": "cemg3359nwro"
+            "title": "Кыргыз-казак өткөрмө бекеттери: жүк ташуучуну эзген эски ыкма",
+            "firstPublished": "2023-06-09T12:02:27.290Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/cedzvl3vzl3o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/e4b1/live/504e6e80-06c7-11ee-b4f9-7f741d5189e1.jpg",
+            "description": "Июнь айы башталгандан бери кыргыз-казак чек арасындагы айрым өткөрмө бекетеринде оор жүк ташуучу унаалардын тыгыны кайрадан пайда болду. Бул тууралуу маалыматты Кыргызстандын Чек ара кызматы дагы ырастады. ",
+            "imageAlt": "Кыргыз-казак чек арасындагы оор жүк ташуучу унаалар тыгыны",
+            "id": "cedzvl3vzl3o"
           },
           {
             "type": "article",
-            "title": "“Баланы сабады деп аялымды камап салышарын өзүм да билген эмесмин”. Кадамжайда токмоктолгон наристенин атасы 4\r",
-            "firstPublished": "2023-02-02T10:07:37.729Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/cp56zz9mg01o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg",
-            "description": "",
-            "imageAlt": "test",
-            "id": "cp56zz9mg01o"
+            "title": "\"Менин өлкөм жок, үй-бүлөм гана бар\". Румынияга качкан украин дезертирлери",
+            "firstPublished": "2023-06-09T02:19:01.000Z",
+            "link": "https://www.bbc.com/kyrgyz/world-65817637",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/42CB/production/_129999071_capture.jpg",
+            "description": "Украинада армиядан качкандар Румыния менен чек араны кесип өтүп баратканда көп кыйынчылык тартып, тоо арасындагы тобокелдикке башын байлоодо.",
+            "imageAlt": "Romanian border with Ukraine",
+            "id": "77dc2bcd-6f91-4899-b52b-77b1a18d0d15"
           },
           {
             "type": "article",
-            "title": "“Баланы сабады деп аялымды камап салышарын өзүм да билген эмесмин”. Кадамжайда токмоктолгон наристенин атасы 5\r",
-            "firstPublished": "2023-02-02T10:08:28.652Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/cnk299l1mdgo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg",
-            "description": "",
-            "imageAlt": "test",
-            "id": "cnk299l1mdgo"
+            "title": "Бийликти басып алуу аракетиби же атайын кызматтын эскертүүсүбү?",
+            "firstPublished": "2023-06-08T10:53:36.362Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/cxrgelq0gg4o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/178e/live/ba29cd30-05e7-11ee-aa08-4727df20b680.jpg",
+            "description": "Кыргызстанда отуздан ашуун адамдын бийликти басып алууга даярдык көргөн делип УКМКга жеткирилиши апта башындагы эң чоң окуялардын бири болуп калды. ",
+            "imageAlt": "Атайын кызмат сурактан кийин беш адамга оор айып менен кылмыш ишин козгоду. ",
+            "id": "cxrgelq0gg4o"
           },
           {
             "type": "article",
-            "title": "“Баланы сабады деп аялымды камап салышарын өзүм да билген эмесмин”. Кадамжайда токмоктолгон наристенин атасы 6\r",
-            "firstPublished": "2023-02-02T10:09:07.061Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/c2qz889lr6do",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg",
-            "description": "",
-            "imageAlt": "test",
-            "id": "c2qz889lr6do"
+            "title": "\"Ууру тойгончо жеп...\". Соттордун ставкасы жана актануусу",
+            "firstPublished": "2023-06-08T02:05:06.079Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/c8vy4jy53nmo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/bf68/live/73b180b0-0596-11ee-a566-9f23330f2174.jpg",
+            "description": "Соттолгон адамдарды шарттуу түрдө мөөнөтүнөн мурда бошотуп жатканда судьялар олчойгон пара алып жатканы жөнүндө депутаттын билдирүүсү сот тармагындагы көп жылдан бери келаткан көйгөйдү кайра козгоду.  Аламүдүн райондук сотунун басма сөз кызматы актанып жооп кайтарды. Эл өкүлүнүн айтымында, соттордогу коррупцияны депутаттык комиссия түзүп иликтебесе болбойт.  ",
+            "imageAlt": "Соттордогу коррупция ",
+            "id": "c8vy4jy53nmo"
           },
           {
             "type": "article",
-            "title": "“Баланы сабады деп аялымды камап салышарын өзүм да билген эмесмин”. Кадамжайда токмоктолгон наристенин атасы 7\r",
-            "firstPublished": "2023-02-02T10:09:45.580Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/cy0z22ny3jwo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg",
-            "description": "",
-            "imageAlt": "test",
-            "id": "cy0z22ny3jwo"
+            "title": "Катар эмиринин сапары: катар-катар документке кол коюлду",
+            "firstPublished": "2023-06-07T14:15:10.593Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/cxe5xyz42d7o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/68c6/live/37090a20-053c-11ee-aa08-4727df20b680.jpg",
+            "description": "Катардын эмири Шейх Тамим бин Хамад Аль Тани алгачкы жолу мамлекеттик сапар менен Бишкекке келип кетти. Серепчилер Катар эмиринин сапары кыргыз тарап үчүн Жакынкы Чыгыштан инвестор тартууга чоң мүмкүнчүлүк деп жатышат.",
+            "imageAlt": "Кыргызстандын президенти Садыр Жапаров менен Катар эмири Шейх Тамим бин Хамад Аль Тани",
+            "id": "cxe5xyz42d7o"
           },
           {
             "type": "article",
-            "title": "“Баланы сабады деп аялымды камап салышарын өзүм да билген эмесмин”. Кадамжайда токмоктолгон наристенин атасы 8\r",
-            "firstPublished": "2023-02-02T10:10:40.111Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/c0n933z8qnyo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg",
-            "description": "",
-            "imageAlt": "test",
-            "id": "c0n933z8qnyo"
+            "title": "Сууну кантип үнөмдөйбүз? ",
+            "firstPublished": "2023-06-07T13:04:01.497Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/c9wjypkdyreo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/c06b/live/b1a85f60-0523-11ee-aa08-4727df20b680.jpg",
+            "description": "Бишкектеги таза суу тартыштыгы Жогорку Кеңеште бүгүн дагы көтөрүлдү. Депутаттар Дастан Бекешов, Улан Примов жана Максатбек Сарбагышев бул тууралуу шаар мэринин маалымат беришин талап кылышты. ",
+            "imageAlt": "Таза суу тартыштыгы",
+            "id": "c9wjypkdyreo"
           },
           {
             "type": "article",
-            "title": "“Баланы сабады деп аялымды камап салышарын өзүм да билген эмесмин”. Кадамжайда токмоктолгон наристенин атасы 9\r",
-            "firstPublished": "2023-02-02T10:11:19.977Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/cndr228x0y4o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg",
-            "description": "",
-            "imageAlt": "test",
-            "id": "cndr228x0y4o"
+            "title": "Адахан Мадумаров камалса эмне болот?",
+            "firstPublished": "2023-06-07T02:01:39.160Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/c038l1gl2lgo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/4e57/live/7253c1c0-045f-11ee-aa08-4727df20b680.jpg",
+            "description": "Кыргыз парламентиндеги оппозициялык фракция \"Бүтүн Кыргызстандын” лидери  оор беренелер менен кылмыш жоопкерчилигине тартылышы мүмкүн. Адахан Мадумаровго Кылмыш-жаза кодексинин “Кылмышка даярдык көрүү”, “Жапырт башаламандык”, “Бийликти күч менен басып алуу” жана “Бийликтен аша чабуу”  беренелери боюнча айып коюлуп  жатат. Жогорку Кеңеште түзүлгөн депутаттык комиссия Баш прокуратуранын сунушунун негиздүүлүгүн кароого киришти.",
+            "imageAlt": "Адахан Мадумаров ",
+            "id": "c038l1gl2lgo"
           },
           {
             "type": "article",
-            "title": "“Баланы сабады деп аялымды камап салышарын өзүм да билген эмесмин”. Кадамжайда токмоктолгон наристенин атасы 10\r",
-            "firstPublished": "2023-02-02T10:11:56.211Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/cx9exxrn6wlo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg",
-            "description": "",
-            "imageAlt": "test",
-            "id": "cx9exxrn6wlo"
+            "title": "Кахов ГЭСи талкаланды, Херсондо эвакуация башталды",
+            "firstPublished": "2023-06-06T10:56:09.000Z",
+            "link": "https://www.bbc.com/kyrgyz/world-65821839",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/910A/production/_130003173_screenshot-17.png",
+            "description": "Кахов ГЭСи толугу менен талкаланды жана аны калыбына келтирүү мүмкүн эмес,- деп билдирди Украинанын \"Укргидроэнерго\" компаниясы. ГЭСтин кыйрашына байланыштуу Украина менен Орусия бири-бирин айыптоодо.",
+            "imageAlt": "гэс",
+            "id": "55552fd3-840e-4015-802d-11770afc197e"
           },
           {
             "type": "article",
-            "title": "“Баланы сабады деп аялымды камап салышарын өзүм да билген эмесмин”. Кадамжайда токмоктолгон наристенин атасы 11\r",
-            "firstPublished": "2023-02-02T10:13:18.938Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/c12pxxzkzjdo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg",
-            "description": "",
-            "imageAlt": "test",
-            "id": "c12pxxzkzjdo"
+            "title": "\"Бийликти күч менен басып алууга аракет\". УКМК уюшкан топту кармады",
+            "firstPublished": "2023-06-06T04:35:43.167Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/cv2q8ng7540o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/bfc8/live/13510f70-0423-11ee-aa08-4727df20b680.jpg",
+            "description": "Кыргызстандын Улуттук коопсуздук боюнча мамлекеттик комитети \"бийликти күч менен басып алуу максатында массалык баш аламандыктарды жана баш ийбөөчүлүк акцияларын уюштурууну пландаган адамдар\" кармалганын билдирди. 5-июндагы атайын операция убагында отуздан ашык адам кармалып, анын ичинде бийликти басып алууну көздөгөндөрдүн негизги уюштуруучусу жана идеялык шыктандыруучусу катары \"Элдик Кеңеш\" саясий партиясынын төрагасы менен анын негизги шериктери күнөөсүн мойнуна алышканы кабарланды. ",
+            "imageAlt": "Спецоперация",
+            "id": "cv2q8ng7540o"
           },
           {
             "type": "article",
-            "title": "“Баланы сабады деп аялымды камап салышарын өзүм да билген эмесмин”. Кадамжайда токмоктолгон наристенин атасы 12\r",
-            "firstPublished": "2023-02-02T10:13:50.742Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/c4xljjkewl1o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg",
-            "description": "",
-            "imageAlt": "test",
-            "id": "c4xljjkewl1o"
+            "title": "Россияга Украинадан басып кирген согушкерлер кимдер?",
+            "firstPublished": "2023-06-06T03:14:32.000Z",
+            "link": "https://www.bbc.com/kyrgyz/world-65817636",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/CA0C/production/_129842715_16b92fae7df5e12bc3a97f6190fd954161879d440_258_1080_6071000x563.jpg",
+            "description": "Россия Украина тараптан чек араны кесип өткөн эки куралдуу топтун чабуулунун мизин майтарып артка кууганын билдирүүдө.",
+            "imageAlt": "Members of Russian Volunteer Corps pose for a picture atop an armoured vehicle at Graivoron border crossing in Kozinka, Belgorod region, Russia, in this handout picture released on May 23, 2023",
+            "id": "9137f8b2-4e34-4dbc-a4b4-56b3ba7fe5a0"
           }
         ],
         "activePage": 1,
         "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:905b0f54-c03d-426f-9d3b-cb31f00c0d8f",
+        "curationId": "urn:bbc:tipo:list:3c9c4d52-f74b-4ae3-a867-0f5473e1847d",
         "curationType": "tipo-curation",
         "position": 0,
         "visualProminence": "HIGH",
         "visualStyle": "COLLECTION"
       },
       {
-        "curationId": "urn:bbc:onward-journeys:most:read?=site=News",
-        "curationType": "most-popular",
-        "position": 1,
-        "title": "Most Read feed",
-        "visualProminence": "NORMAL",
-        "additionalText": {
-          "plainText": "This is a Most Read curation to test our implementation 18 May 2023"
-        },
-        "visualStyle": "RANKED",
-        "link": "https://www.bbc.com/kyrgyz/popular/read",
-        "mostRead": {
-          "generated": "2023-06-05T09:42:58.094Z",
-          "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
-          "firstRecordTimeStamp": "2021-05-04T05:53:00Z",
-          "items": [
-            {
-              "id": "cd68f2bc-efd5-a043-9500-a3891a13353b",
-              "rank": 1,
-              "title": "АКШ: жаңы президент ким экенин аныктаган штаттар кайсылар?",
-              "href": "/kyrgyz/world-23090100",
-              "timestamp": 1478663803000
-            },
-            {
-              "id": "82567d2d-eb50-b644-b9a4-6523bd62bf2c",
-              "rank": 2,
-              "title": "Kyrgyzstanda soz erkindigi buzuluuda",
-              "href": "/kyrgyz/world-23089413",
-              "timestamp": 1478506660000
-            },
-            {
-              "id": "5ac26713-7ec6-824f-a179-53f95a372408",
-              "rank": 3,
-              "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 36",
-              "href": "/kyrgyz/kyrgyzstan-23087515",
-              "timestamp": 1477898731000
-            },
-            {
-              "id": "429a5345-bc55-5947-b11b-19ae662817a5",
-              "rank": 4,
-              "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 34",
-              "href": "/kyrgyz/kyrgyzstan-23087513",
-              "timestamp": 1477898586000
-            },
-            {
-              "id": "a1445694-7c18-5547-928e-97f5f454bebe",
-              "rank": 5,
-              "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 35",
-              "href": "/kyrgyz/kyrgyzstan-23087514",
-              "timestamp": 1477898591000
-            },
-            {
-              "id": "f8e5c9d1-877b-a142-805f-e435cdf9e99c",
-              "rank": 6,
-              "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 10",
-              "href": "/kyrgyz/sapar-tv-23087494",
-              "timestamp": 1477850970000
-            },
-            {
-              "id": "08c8102e-c7e2-7b49-a38c-cb31312984a0",
-              "rank": 7,
-              "title": "ට්‍රම්ප්ට අලුත් ආරක්‍ෂක උපදේශකයෙක්",
-              "href": "/kyrgyz/23103391",
-              "timestamp": 1487940772000
-            },
-            {
-              "id": "87ba62ed-5442-ef47-94c4-312e65400d4f",
-              "rank": 8,
-              "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 21",
-              "href": "/kyrgyz/media-23087507",
-              "timestamp": 1477898550000
-            },
-            {
-              "id": "91d192e9-38dd-4f44-882b-c724bb41331f",
-              "rank": 9,
-              "title": "Мирзиёевнинг илк давлат сафари Қозоғистон",
-              "href": "/kyrgyz/23103378",
-              "timestamp": 1569397958000
-            },
-            {
-              "id": "731b4ac3-ed79-b34d-93b0-64d1693c92e8",
-              "rank": 10,
-              "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 41",
-              "href": "/kyrgyz/kyrgyzstan-23087520",
-              "timestamp": 1477898715000
-            },
-            {
-              "id": "53a3f3b0-45bf-5d41-ac4c-9fc485dae11b",
-              "rank": 11,
-              "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 32",
-              "href": "/kyrgyz/kyrgyzstan-23087511",
-              "timestamp": 1477899573000
-            },
-            {
-              "id": "3ab470b8-18c1-4c37-ae2c-9f0177c60845",
-              "rank": 12,
-              "title": "Үй-бүлөдөгү зомбулуктан эң көп аялдар жабыркайт",
-              "href": "/kyrgyz/kyrgyzstan-23088783",
-              "timestamp": 1478184211000
-            },
-            {
-              "id": "42fadb3a-fb0a-c549-b83d-da4243588a34",
-              "rank": 13,
-              "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 11",
-              "href": "/kyrgyz/blog-23087495",
-              "timestamp": 1477850987000
-            },
-            {
-              "id": "99e5af12-a546-cd4c-885a-694a637a69b2",
-              "rank": 14,
-              "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 14",
-              "href": "/kyrgyz/institutional-23087498",
-              "timestamp": 1477851087000
-            },
-            {
-              "id": "7e65aff4-c3b1-5d41-aede-777d8cd755a3",
-              "rank": 15,
-              "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 08",
-              "href": "/kyrgyz/world-23087493",
-              "timestamp": 1477850702000
-            },
-            {
-              "id": "d9d4314d-5936-8c49-96fb-4f072339c527",
-              "rank": 16,
-              "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 03",
-              "href": "/kyrgyz/entertainment-23087489",
-              "timestamp": 1477850376000
-            },
-            {
-              "id": "175bd205-8b6e-4548-a24a-1b984c16e790",
-              "rank": 17,
-              "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 44",
-              "href": "/kyrgyz/kyrgyzstan-23087523",
-              "timestamp": 1477898702000
-            },
-            {
-              "id": "dd71b59e-ce18-2347-8eb5-43e9393a1f27",
-              "rank": 18,
-              "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 48",
-              "href": "/kyrgyz/kyrgyzstan-23087528",
-              "timestamp": 1477898672000
-            },
-            {
-              "id": "30d42ae7-a72f-574a-88f2-392a2dfe7c52",
-              "rank": 19,
-              "title": "Түштүк Корея президенти кечирим сурады",
-              "href": "/kyrgyz/kyrgyzstan-23089035",
-              "timestamp": 1478260541000
-            },
-            {
-              "id": "11dd0fa3-7b4f-174b-9234-ac1d59d04a34",
-              "rank": 20,
-              "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 32",
-              "href": "/kyrgyz/kyrgyzstan-23087510",
-              "timestamp": 1477898574000
-            }
-          ]
-        }
-      },
-      {
         "summaries": [
           {
             "type": "article",
-            "title": "“Баланы сабады деп аялымды камап салышарын өзүм да билген эмесмин”. Кадамжайда токмоктолгон наристенин атасы 3\r",
-            "firstPublished": "2023-02-02T10:06:57.156Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/cemg3359nwro",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg",
-            "description": "",
-            "imageAlt": "test",
-            "id": "cemg3359nwro"
+            "title": "Украинадагы согуш: көмүскөдө калган \"кара кагаздар\"  ",
+            "firstPublished": "2023-05-29T02:31:14.834Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/c1v0w07ez6zo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/e3f8/live/f31c23d0-fb70-11ed-92cc-b3a9bf1f67e9.jpg",
+            "description": "Украинанын Бахмут шаарын алдык деп жаткан жеке менчик аскер компаниянын ээси Евгений Пригожин айыгышкан салгылашта алар 20 миң аскерин жоготконун, анын жарымы абактан келгендер экенин билдирди. Украина болсо Бахмут үчүн күрөш уланып жатканын, азырынча шаарды сырттан көзөмөлдөө алар үчүн ыңгайлуу болорун айтууда. ",
+            "imageAlt": "Пригожин айткан 20 миң жалданма жоокердин арасында Борбор Азия өлкөлөрүнүн жарандары дагы бар",
+            "id": "c1v0w07ez6zo"
           },
           {
             "type": "article",
-            "title": "“Баланы сабады деп аялымды камап салышарын өзүм да билген эмесмин”. Кадамжайда токмоктолгон наристенин атасы 2\r",
-            "firstPublished": "2023-02-02T10:06:00.977Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/cy0pvvd9jvpo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg",
-            "description": "",
-            "imageAlt": "test",
-            "id": "cy0pvvd9jvpo"
+            "title": "Деколонизация: казак маданиятын кайра жаратууга умтулган казак жаштары ",
+            "firstPublished": "2023-05-26T03:13:53.067Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/cyeyz9338lko",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/b2e9/live/ee964660-f927-11ed-92cc-b3a9bf1f67e9.jpg",
+            "description": "Россиянын Украинага басып кириши менен Борбор Азия өлкөлөрүндө “деколонизация” деген сөз көбүрөөк айтыла баштады. Жаш муундар негизинен Советтер Союзу тууралуу ностальгиядан алыс жана орус тилине караганда улуттук тилге жана өз маданиятына кызыгуусу көбүрөөк.",
+            "imageAlt": "Саягүл Бирлесбек казак тилин, маданиятын тааныткандардын бири",
+            "id": "cyeyz9338lko"
           },
           {
             "type": "article",
-            "title": "Article tagged with Trump",
-            "firstPublished": "2023-03-06T13:10:39.425Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/c1ldk6kl66wo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/81e4/test/a035c580-bc1f-11ed-a129-59679bbc34c6.jpg",
-            "description": "summary of article",
-            "imageAlt": "test",
-            "id": "c1ldk6kl66wo"
+            "title": "БУУ: Афганистан - аялдарга дүйнөдөгү эң катаал өлкө",
+            "firstPublished": "2023-03-09T04:01:56.000Z",
+            "link": "https://www.bbc.com/kyrgyz/world-64898163",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/15DA9/production/_128931598_mediaitem128931597.jpg",
+            "description": "БУУ талибдер башкарып турган Афганистан аялдарга дүйнөдөгү эң катаал өлкө болуп калды деп билдирди. Талибан бийликке келген он сегиз айдан бери аялдар иш жүзүндө үйүндө камалып отурат.",
+            "imageAlt": "Гуманитардык жардамга кезекке турган афган аялдары",
+            "id": "b4de47af-ac5f-4014-9746-d4ee608823a7"
           },
           {
             "type": "article",
-            "title": "Холокостту эскерүү күнү: Унутулган цыган курмандыктары эстеликтерди сактап калуу үчүн күрөшүүдө 4",
-            "firstPublished": "2023-02-02T11:41:09.361Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/cmel5j6wwk2o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/fedf/test/679106e0-a2ed-11ed-9015-6935ab4fa6ca.jpg",
-            "description": "",
-            "imageAlt": "test",
-            "id": "cmel5j6wwk2o"
+            "title": "Дарыгер: Өспүрүм эне башканы эмес, өзүн да карай албай калат...",
+            "firstPublished": "2023-03-08T06:02:51.587Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/c840zn3q730o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1527/live/ec200c60-bd75-11ed-a9bc-7599d87091be.jpg",
+            "description": "Биз бүгүн өспүрүм кезинде турмушка чыгып, жаш тайынан эне болуп, бир топ мезгил жолдошунун зомбулугуна чыдап, кийин өз алдынча жашоону тандаган Мээримди кепке тарттык. ",
+            "imageAlt": "Иллюстративдик сүрөт",
+            "id": "c840zn3q730o"
           },
           {
             "type": "article",
-            "title": "Холокостту эскерүү күнү: Унутулган цыган курмандыктары эстеликтерди сактап калуу үчүн күрөшүүдө 5",
-            "firstPublished": "2023-02-02T11:41:54.105Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/cd0x1jwnw66o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/fedf/test/679106e0-a2ed-11ed-9015-6935ab4fa6ca.jpg",
-            "description": "",
-            "imageAlt": "test",
-            "id": "cd0x1jwnw66o"
+            "title": "Жаа атуу спорту- ден соолук үчүн да абдан пайдалуу",
+            "firstPublished": "2023-03-07T09:58:31.188Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/ce4y3g0gy5qo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1812/live/303b3410-bccc-11ed-a9bc-7599d87091be.jpg",
+            "description": "Кыргыздар байыртан эле жаа атуунун чебери болгон. Салттуу жаа атуу Көчмөндөр оюндарынын программасына киргени менен Кыргызстанда  олимпиадалык же классикалык жаа атуу спортуна соңку жылдары гана көңүл бурулууда. Жаа атуу спорту, анын ден соолукка пайдасы, бул спорттун келечеги жана көйгөйлөрү туурасында жаа атуу  федерациянын президенти, Улуттук олимпиада комитетинин  вице-президенти, \"Билимкана\" фондунун директору Эльнура Осмоналиева айтып берди.",
+            "imageAlt": "Эльнура Осмоналиева окуучулары менен",
+            "id": "ce4y3g0gy5qo"
           },
           {
             "type": "article",
-            "title": "Холокостту эскерүү күнү: Унутулган цыган курмандыктары эстеликтерди сактап калуу үчүн күрөшүүдө 6",
-            "firstPublished": "2023-02-02T11:42:38.776Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/c65eglnzz1vo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/fedf/test/679106e0-a2ed-11ed-9015-6935ab4fa6ca.jpg",
-            "description": "",
-            "imageAlt": "test",
-            "id": "c65eglnzz1vo"
+            "title": "Түркиядагы шайлоо: Оппозиция Эрдогандын жалгыз атаандашы катары Кылычдароглуну тандады",
+            "firstPublished": "2023-03-07T04:56:23.755Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/ck5yknld107o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/f6fa/live/79324e90-bca1-11ed-a9bc-7599d87091be.jpg",
+            "description": "Түркиянын көп учурларда жиктелип кала берчү оппозициялык партиялары 2023-жылы май айындагы президенттик шайлоодо азыркы мамлекет башчы Режеп Тайып Эрдоганга каршы таймаша турган бирдиктүү талапкер катары Кемал Кылычдароглуну тандоого жетишти.",
+            "imageAlt": "Республикалык Элдик партиянын (ЖХПнын) жетекчиси Кемал Кылычдароглу",
+            "id": "ck5yknld107o"
           },
           {
             "type": "article",
-            "title": "Холокостту эскерүү күнү: Унутулган цыган курмандыктары эстеликтерди сактап калуу үчүн күрөшүүдө 7",
-            "firstPublished": "2023-02-02T11:43:14.865Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/cj2r5lzp6k0o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/fedf/test/679106e0-a2ed-11ed-9015-6935ab4fa6ca.jpg",
-            "description": "",
-            "imageAlt": "test",
-            "id": "cj2r5lzp6k0o"
+            "title": "\"Техас штаты бизди аз жерден өлтүрүп кое жаздады\". Аборттон чыккан чыр",
+            "firstPublished": "2023-03-08T05:49:22.000Z",
+            "link": "https://www.bbc.com/kyrgyz/world-64884946",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/115E2/production/_128883117_zargarian.jpg",
+            "description": "АКШнын Техас штатында ден соолугуна коркунуч келип турганына карабай, боюнан алдырууга уруксат берилбеди деген доо арыз менен беш аял сотко кайрылды.",
+            "imageAlt": "Anna Zargarian – one of five plaintiffs",
+            "id": "7fdcb9cf-83b7-4c43-8673-67f5a0b1f1d1"
           },
           {
             "type": "article",
-            "title": "Холокостту эскерүү күнү: Унутулган цыган курмандыктары эстеликтерди сактап калуу үчүн күрөшүүдө 8",
-            "firstPublished": "2023-02-02T11:43:47.440Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/c2qz8l2zn5eo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/fedf/test/679106e0-a2ed-11ed-9015-6935ab4fa6ca.jpg",
-            "description": "",
-            "imageAlt": "test",
-            "id": "c2qz8l2zn5eo"
+            "title": "Каракөл чакан ГЭСине инвестор тандоодогу күдүк жагдайлар ",
+            "firstPublished": "2023-03-07T07:00:35.840Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/cnd2jpdejlro",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/bb11/live/38fbc680-bc0b-11ed-b12d-85c2ddb36276.jpg",
+            "description": "Кыргызстандын Энергетика министрлиги Каракөл чакан ГЭСин курууга инвесторлорду тандоонун эң кызуу учуруна келди. Бул долбоорду ишке ашырууга “77 Insaat”, Жапониянын “Muroo Systems Co” жана жергиликтүү \"Жагалмай\" деп аталган компания ат салышууда. ",
+            "imageAlt": "\"Каракөл\" ГЭСин Токтогул районундагы Кара-Суу дарыясында куруу пландалууда.",
+            "id": "cnd2jpdejlro"
           },
           {
             "type": "article",
-            "title": "Холокостту эскерүү күнү: Унутулган цыган курмандыктары эстеликтерди сактап калуу үчүн күрөшүүдө 9",
-            "firstPublished": "2023-02-02T11:44:19.096Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/cm18pzwq691o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/fedf/test/679106e0-a2ed-11ed-9015-6935ab4fa6ca.jpg",
-            "description": "",
-            "imageAlt": "test",
-            "id": "cm18pzwq691o"
+            "title": "Жер мунапысы: Ак-Ордодогу элди үч көтөргөн окуя ",
+            "firstPublished": "2023-03-07T03:00:55.978Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/cevy9p548dyo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/fd02/live/ba12e4b0-bbf7-11ed-89f4-f3657d2bfa3b.jpg",
+            "description": "Бишкектеги Ак-Ордо жаңы конушунда үйү түрттүрүлүп, төрт баласы менен көчөдө калган келиндин окуясы президенттин жеке көзөмөлүнө алынды. 5 -мартта Садыр Жапаров баш калкалар жери жок калган Марал Шаболотовага барып жолукту. ",
+            "imageAlt": "Президенттин Ак-Ордо жаңы конушуна сапары",
+            "id": "cevy9p548dyo"
           },
           {
             "type": "article",
-            "title": "Холокостту эскерүү күнү: Унутулган цыган курмандыктары эстеликтерди сактап калуу үчүн күрөшүүдө 10",
-            "firstPublished": "2023-02-02T11:45:03.037Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/cr89pqv3el2o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/fedf/test/679106e0-a2ed-11ed-9015-6935ab4fa6ca.jpg",
-            "description": "",
-            "imageAlt": "test",
-            "id": "cr89pqv3el2o"
+            "title": "Эмнеге Кытайдын көп кыз-келиндери эне болуудан жаа бою качууда?",
+            "firstPublished": "2023-03-07T02:31:19.000Z",
+            "link": "https://www.bbc.com/kyrgyz/world-64858726",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/398D/production/_128633741_whatsubject.jpg",
+            "description": "Жаңы изилдөөлөргө караганда Кытайда бир гана балалуу болууну же таптакыр бала көргүсү келбеген кыз-келиндер көбөйүүдө. Би-Би-Си үч кытай аял менен үй-бүлө темасында сүйлөшүп келди.",
+            "imageAlt": "In China, the number of existing children among women has dropped from 1.63 in 2019 to 1.19 in 2022.",
+            "id": "344fc30c-5322-495a-bd44-b8f02b1f0c0b"
           }
         ],
         "activePage": 1,
         "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:524cf34b-cac2-4ce2-ac64-53eb70019202",
+        "curationId": "urn:bbc:tipo:list:f8f62d3f-ee09-4e5c-9229-fe1f1991bee6",
         "curationType": "tipo-curation",
-        "position": 2,
+        "position": 1,
         "title": "Редактордун тандоосу",
         "visualProminence": "HIGH",
         "visualStyle": "COLLECTION"
@@ -410,207 +251,114 @@
         "summaries": [
           {
             "type": "article",
-            "title": "Кыргыз-өзбек алакаcы: сандар жана фактылар",
-            "firstPublished": "2023-02-06T13:36:00.218Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/cr9p5rw62j7o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/9c84/test/00e66a00-a623-11ed-9015-6935ab4fa6ca.jpg",
-            "description": "Өзбекстандын президенти Шавкат Мирзиёев 26-27-январь күндөрү Кыргызстанга мамлекеттик сапар менен келет.",
-            "imageAlt": "test",
-            "id": "cr9p5rw62j7o"
+            "title": "Кыргыз-казак өткөрмө бекеттери: жүк ташуучуну эзген эски ыкма",
+            "firstPublished": "2023-06-09T12:02:27.290Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/cedzvl3vzl3o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/e4b1/live/504e6e80-06c7-11ee-b4f9-7f741d5189e1.jpg",
+            "description": "Июнь айы башталгандан бери кыргыз-казак чек арасындагы айрым өткөрмө бекетеринде оор жүк ташуучу унаалардын тыгыны кайрадан пайда болду. Бул тууралуу маалыматты Кыргызстандын Чек ара кызматы дагы ырастады. ",
+            "imageAlt": "Кыргыз-казак чек арасындагы оор жүк ташуучу унаалар тыгыны",
+            "id": "cedzvl3vzl3o"
           },
           {
             "type": "article",
-            "title": "Кыргыз-өзбек алакаcы: сандар жана фактылар 2",
-            "firstPublished": "2023-02-06T13:37:11.912Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/cnk23wye4kyo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/9c84/test/00e66a00-a623-11ed-9015-6935ab4fa6ca.jpg",
-            "description": "Өзбекстандын президенти Шавкат Мирзиёев 26-27-январь күндөрү Кыргызстанга мамлекеттик сапар менен келет.",
-            "imageAlt": "test",
-            "id": "cnk23wye4kyo"
+            "title": "Бийликти басып алуу аракетиби же атайын кызматтын эскертүүсүбү?",
+            "firstPublished": "2023-06-08T10:53:36.362Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/cxrgelq0gg4o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/178e/live/ba29cd30-05e7-11ee-aa08-4727df20b680.jpg",
+            "description": "Кыргызстанда отуздан ашуун адамдын бийликти басып алууга даярдык көргөн делип УКМКга жеткирилиши апта башындагы эң чоң окуялардын бири болуп калды. ",
+            "imageAlt": "Атайын кызмат сурактан кийин беш адамга оор айып менен кылмыш ишин козгоду. ",
+            "id": "cxrgelq0gg4o"
           },
           {
             "type": "article",
-            "title": "Кыргыз-өзбек алакаcы: сандар жана фактылар 3",
-            "firstPublished": "2023-02-06T13:37:48.118Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/c0n89302mwdo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/9c84/test/00e66a00-a623-11ed-9015-6935ab4fa6ca.jpg",
-            "description": "Өзбекстандын президенти Шавкат Мирзиёев 26-27-январь күндөрү Кыргызстанга мамлекеттик сапар менен келет.",
-            "imageAlt": "test",
-            "id": "c0n89302mwdo"
+            "title": "\"Ууру тойгончо жеп...\". Соттордун ставкасы жана актануусу",
+            "firstPublished": "2023-06-08T02:05:06.079Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/c8vy4jy53nmo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/bf68/live/73b180b0-0596-11ee-a566-9f23330f2174.jpg",
+            "description": "Соттолгон адамдарды шарттуу түрдө мөөнөтүнөн мурда бошотуп жатканда судьялар олчойгон пара алып жатканы жөнүндө депутаттын билдирүүсү сот тармагындагы көп жылдан бери келаткан көйгөйдү кайра козгоду.  Аламүдүн райондук сотунун басма сөз кызматы актанып жооп кайтарды. Эл өкүлүнүн айтымында, соттордогу коррупцияны депутаттык комиссия түзүп иликтебесе болбойт.  ",
+            "imageAlt": "Соттордогу коррупция ",
+            "id": "c8vy4jy53nmo"
           },
           {
             "type": "article",
-            "title": "Кыргыз-өзбек алакаcы: сандар жана фактылар 4",
-            "firstPublished": "2023-02-06T13:38:21.709Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/clygdvn0vepo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/9c84/test/00e66a00-a623-11ed-9015-6935ab4fa6ca.jpg",
-            "description": "Өзбекстандын президенти Шавкат Мирзиёев 26-27-январь күндөрү Кыргызстанга мамлекеттик сапар менен келет.",
-            "imageAlt": "test",
-            "id": "clygdvn0vepo"
+            "title": "Катар эмиринин сапары: катар-катар документке кол коюлду",
+            "firstPublished": "2023-06-07T14:15:10.593Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/cxe5xyz42d7o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/68c6/live/37090a20-053c-11ee-aa08-4727df20b680.jpg",
+            "description": "Катардын эмири Шейх Тамим бин Хамад Аль Тани алгачкы жолу мамлекеттик сапар менен Бишкекке келип кетти. Серепчилер Катар эмиринин сапары кыргыз тарап үчүн Жакынкы Чыгыштан инвестор тартууга чоң мүмкүнчүлүк деп жатышат.",
+            "imageAlt": "Кыргызстандын президенти Садыр Жапаров менен Катар эмири Шейх Тамим бин Хамад Аль Тани",
+            "id": "cxe5xyz42d7o"
           },
           {
             "type": "article",
-            "title": "Кыргыз-өзбек алакаcы: сандар жана фактылар 5",
-            "firstPublished": "2023-02-06T13:38:53.193Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/c0n2glkxx13o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/9c84/test/00e66a00-a623-11ed-9015-6935ab4fa6ca.jpg",
-            "description": "Өзбекстандын президенти Шавкат Мирзиёев 26-27-январь күндөрү Кыргызстанга мамлекеттик сапар менен келет.",
-            "imageAlt": "test",
-            "id": "c0n2glkxx13o"
+            "title": "Сууну кантип үнөмдөйбүз? ",
+            "firstPublished": "2023-06-07T13:04:01.497Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/c9wjypkdyreo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/c06b/live/b1a85f60-0523-11ee-aa08-4727df20b680.jpg",
+            "description": "Бишкектеги таза суу тартыштыгы Жогорку Кеңеште бүгүн дагы көтөрүлдү. Депутаттар Дастан Бекешов, Улан Примов жана Максатбек Сарбагышев бул тууралуу шаар мэринин маалымат беришин талап кылышты. ",
+            "imageAlt": "Таза суу тартыштыгы",
+            "id": "c9wjypkdyreo"
           },
           {
             "type": "article",
-            "title": "Кыргыз-өзбек алакаcы: сандар жана фактылар 6",
-            "firstPublished": "2023-02-06T13:39:22.009Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/c85pqkmwkw5o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/9c84/test/00e66a00-a623-11ed-9015-6935ab4fa6ca.jpg",
-            "description": "Өзбекстандын президенти Шавкат Мирзиёев 26-27-январь күндөрү Кыргызстанга мамлекеттик сапар менен келет.",
-            "imageAlt": "test",
-            "id": "c85pqkmwkw5o"
+            "title": "Адахан Мадумаров камалса эмне болот?",
+            "firstPublished": "2023-06-07T02:01:39.160Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/c038l1gl2lgo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/4e57/live/7253c1c0-045f-11ee-aa08-4727df20b680.jpg",
+            "description": "Кыргыз парламентиндеги оппозициялык фракция \"Бүтүн Кыргызстандын” лидери  оор беренелер менен кылмыш жоопкерчилигине тартылышы мүмкүн. Адахан Мадумаровго Кылмыш-жаза кодексинин “Кылмышка даярдык көрүү”, “Жапырт башаламандык”, “Бийликти күч менен басып алуу” жана “Бийликтен аша чабуу”  беренелери боюнча айып коюлуп  жатат. Жогорку Кеңеште түзүлгөн депутаттык комиссия Баш прокуратуранын сунушунун негиздүүлүгүн кароого киришти.",
+            "imageAlt": "Адахан Мадумаров ",
+            "id": "c038l1gl2lgo"
           },
           {
             "type": "article",
-            "title": "Кыргыз-өзбек алакаcы: сандар жана фактылар 7",
-            "firstPublished": "2023-02-06T13:39:55.607Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/c85pqkmz8e2o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/9c84/test/00e66a00-a623-11ed-9015-6935ab4fa6ca.jpg",
-            "description": "Өзбекстандын президенти Шавкат Мирзиёев 26-27-январь күндөрү Кыргызстанга мамлекеттик сапар менен келет.",
-            "imageAlt": "test",
-            "id": "c85pqkmz8e2o"
+            "title": "\"Бийликти күч менен басып алууга аракет\". УКМК уюшкан топту кармады",
+            "firstPublished": "2023-06-06T04:35:43.167Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/cv2q8ng7540o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/bfc8/live/13510f70-0423-11ee-aa08-4727df20b680.jpg",
+            "description": "Кыргызстандын Улуттук коопсуздук боюнча мамлекеттик комитети \"бийликти күч менен басып алуу максатында массалык баш аламандыктарды жана баш ийбөөчүлүк акцияларын уюштурууну пландаган адамдар\" кармалганын билдирди. 5-июндагы атайын операция убагында отуздан ашык адам кармалып, анын ичинде бийликти басып алууну көздөгөндөрдүн негизги уюштуруучусу жана идеялык шыктандыруучусу катары \"Элдик Кеңеш\" саясий партиясынын төрагасы менен анын негизги шериктери күнөөсүн мойнуна алышканы кабарланды. ",
+            "imageAlt": "Спецоперация",
+            "id": "cv2q8ng7540o"
           },
           {
             "type": "article",
-            "title": "Кыргыз-өзбек алакаcы: сандар жана фактылар 8",
-            "firstPublished": "2023-02-06T13:40:23.909Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/ck42g152vl6o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/9c84/test/00e66a00-a623-11ed-9015-6935ab4fa6ca.jpg",
-            "description": "Өзбекстандын президенти Шавкат Мирзиёев 26-27-январь күндөрү Кыргызстанга мамлекеттик сапар менен келет.",
-            "imageAlt": "test",
-            "id": "ck42g152vl6o"
+            "title": "“Мынчалык болгон эмес”: Бишкектеги таза суу тартыштыгы ",
+            "firstPublished": "2023-06-06T03:05:22.553Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/ck59zwk6ep2o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/29f2/live/61be99d0-038c-11ee-aa08-4727df20b680.jpg",
+            "description": "Соңку жылдары Кыргызстандын борбору Бишкекте жана Чүйдүн айрым райондорунда жаз келери менен кургакчылык жана суу тартыштыгы көйгөйү чыгууда. ",
+            "imageAlt": "Бишкекте таза суу тартыш болууда",
+            "id": "ck59zwk6ep2o"
           }
         ],
         "activePage": 1,
-        "pageCount": 1,
+        "pageCount": 13,
         "link": "https://www.bbc.com/kyrgyz/topics/cz74kjpyk07t",
-        "curationId": "urn:bbc:tipo:list:4991ab89-0967-4653-9760-f3e133896a46",
-        "curationType": "tipo-curation",
-        "position": 3,
+        "curationId": "urn:bbc:vivo:curation:fdc013ae-83b5-44a4-8f6c-2eca7b8cac04",
+        "curationType": "vivo-stream",
+        "position": 2,
         "title": "Кыргызстан",
         "visualProminence": "NORMAL",
-        "visualStyle": "COLLECTION"
-      },
-      {
-        "summaries": [
-          {
-            "type": "article",
-            "title": "Кытайдын жаңы ачык саясаты. Си Цзиньпин саясий багытын өзгөрттү",
-            "firstPublished": "2023-02-06T13:45:17.207Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/c6x9vjk8zy2o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/1ce1/test/49d62d80-a624-11ed-9015-6935ab4fa6ca.jpg",
-            "description": "Кытайда кайрадан чоң өзгөрүүлөр орун алууда. КЭРдин төрагасы Си Цзиньпин бир нече жылга созулган катаал саясий нуктан кайра баш тартууда. ",
-            "imageAlt": "test",
-            "id": "c6x9vjk8zy2o"
-          },
-          {
-            "type": "article",
-            "title": "Кытайдын жаңы ачык саясаты. Си Цзиньпин саясий багытын өзгөрттү 2",
-            "firstPublished": "2023-02-06T13:47:06.980Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/cw1kzjme384o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/1ce1/test/49d62d80-a624-11ed-9015-6935ab4fa6ca.jpg",
-            "description": "Кытайда кайрадан чоң өзгөрүүлөр орун алууда. КЭРдин төрагасы Си Цзиньпин бир нече жылга созулган катаал саясий нуктан кайра баш тартууда. ",
-            "imageAlt": "test",
-            "id": "cw1kzjme384o"
-          },
-          {
-            "type": "article",
-            "title": "Кытайдын жаңы ачык саясаты. Си Цзиньпин саясий багытын өзгөрттү 3",
-            "firstPublished": "2023-02-06T13:47:34.717Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/c3d1vyrdx21o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/1ce1/test/49d62d80-a624-11ed-9015-6935ab4fa6ca.jpg",
-            "description": "Кытайда кайрадан чоң өзгөрүүлөр орун алууда. КЭРдин төрагасы Си Цзиньпин бир нече жылга созулган катаал саясий нуктан кайра баш тартууда. ",
-            "imageAlt": "test",
-            "id": "c3d1vyrdx21o"
-          },
-          {
-            "type": "article",
-            "title": "Кытайдын жаңы ачык саясаты. Си Цзиньпин саясий багытын өзгөрттү 4",
-            "firstPublished": "2023-02-06T13:48:04.311Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/c86jzl31jm5o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/1ce1/test/49d62d80-a624-11ed-9015-6935ab4fa6ca.jpg",
-            "description": "Кытайда кайрадан чоң өзгөрүүлөр орун алууда. КЭРдин төрагасы Си Цзиньпин бир нече жылга созулган катаал саясий нуктан кайра баш тартууда. ",
-            "imageAlt": "test",
-            "id": "c86jzl31jm5o"
-          },
-          {
-            "type": "article",
-            "title": "Кытайдын жаңы ачык саясаты. Си Цзиньпин саясий багытын өзгөрттү 5",
-            "firstPublished": "2023-02-06T13:48:35.778Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/cp567nq7kx6o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/1ce1/test/49d62d80-a624-11ed-9015-6935ab4fa6ca.jpg",
-            "description": "Кытайда кайрадан чоң өзгөрүүлөр орун алууда. КЭРдин төрагасы Си Цзиньпин бир нече жылга созулган катаал саясий нуктан кайра баш тартууда. ",
-            "imageAlt": "test",
-            "id": "cp567nq7kx6o"
-          },
-          {
-            "type": "article",
-            "title": "Кытайдын жаңы ачык саясаты. Си Цзиньпин саясий багытын өзгөрттү 6",
-            "firstPublished": "2023-02-06T13:49:01.557Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/cv748vmk2pno",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/1ce1/test/49d62d80-a624-11ed-9015-6935ab4fa6ca.jpg",
-            "description": "Кытайда кайрадан чоң өзгөрүүлөр орун алууда. КЭРдин төрагасы Си Цзиньпин бир нече жылга созулган катаал саясий нуктан кайра баш тартууда. ",
-            "imageAlt": "test",
-            "id": "cv748vmk2pno"
-          },
-          {
-            "type": "article",
-            "title": "Кытайдын жаңы ачык саясаты. Си Цзиньпин саясий багытын өзгөрттү 7",
-            "firstPublished": "2023-02-06T13:49:31.970Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/ck9yxzvv7deo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/1ce1/test/49d62d80-a624-11ed-9015-6935ab4fa6ca.jpg",
-            "description": "Кытайда кайрадан чоң өзгөрүүлөр орун алууда. КЭРдин төрагасы Си Цзиньпин бир нече жылга созулган катаал саясий нуктан кайра баш тартууда. ",
-            "imageAlt": "test",
-            "id": "ck9yxzvv7deo"
-          },
-          {
-            "type": "article",
-            "title": "Кытайдын жаңы ачык саясаты. Си Цзиньпин саясий багытын өзгөрттү 8",
-            "firstPublished": "2023-02-06T13:50:08.108Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/c380rxlx2z9o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/1ce1/test/49d62d80-a624-11ed-9015-6935ab4fa6ca.jpg",
-            "description": "Кытайда кайрадан чоң өзгөрүүлөр орун алууда. КЭРдин төрагасы Си Цзиньпин бир нече жылга созулган катаал саясий нуктан кайра баш тартууда. ",
-            "imageAlt": "test",
-            "id": "c380rxlx2z9o"
-          }
-        ],
-        "activePage": 1,
-        "pageCount": 1,
-        "link": "https://www.bbc.com/kyrgyz/topics/ck2l9z012nkt",
-        "curationId": "urn:bbc:tipo:list:d4ec3c0c-1aa7-445e-9ef2-59d341b41038",
-        "curationType": "tipo-curation",
-        "position": 4,
-        "title": "Дүйнө",
-        "visualProminence": "NORMAL",
-        "visualStyle": "COLLECTION"
+        "visualStyle": "FEED"
       },
       {
         "summaries": [
           {
             "type": "link",
-            "title": "Би-Би-Си ТВ жаңылыктары",
+            "title": "Көрүү үчүн басыңыз",
             "firstPublished": "",
             "link": "https://www.bbc.com/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=4",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/0af7/test/5a5151c0-a3aa-11ed-9015-6935ab4fa6ca.png",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/853b/live/385c2b40-bcf4-11ed-a9bc-7599d87091be.png",
             "description": "Би-Би-Си Кыргыз кызматынын эл аралык жаңылыктарын көрүңүз.",
-            "imageAlt": "Microphone",
+            "imageAlt": "BBC microphone",
             "id": "https%3A%2F%2Fwww.bbc.com%2Fkyrgyz%2Fbbc_kyrgyz_tv%2Ftv_programmes%2Fw13xttqx%3Flimit%3D4"
           }
         ],
         "activePage": 1,
         "pageCount": 1,
         "link": "https://www.bbc.com/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=4",
-        "curationId": "urn:bbc:tipo:list:d296b66f-a9d7-4a2f-bea4-7a9d253368c5",
+        "curationId": "urn:bbc:tipo:list:7885e48d-3662-46e4-92e8-c54f3daf96ff",
         "curationType": "tipo-curation",
-        "position": 5,
+        "position": 3,
         "title": "Би-Би-Си ТВ жаңылыктары",
         "visualProminence": "NORMAL",
         "visualStyle": "BANNER"
@@ -619,43 +367,94 @@
         "summaries": [
           {
             "type": "article",
-            "title": "Холокостту эскерүү күнү: Унутулган цыган курмандыктары эстеликтерди сактап калуу үчүн күрөшүүдө",
-            "firstPublished": "2023-02-07T14:51:20.980Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/cr91pzee4dro",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/ae4d/test/a12d7570-a6f6-11ed-9015-6935ab4fa6ca.jpg",
-            "description": "\"Эмне үчүн бизди жок кылгысы келди? Бизге эмнеге кыргын салышты?\" - деп суроо салат 83 жаштагы \"цыган Холокостунан\" аман калган Хинта Георге.",
-            "imageAlt": "test",
-            "id": "cr91pzee4dro"
+            "title": "Кыргыз-казак өткөрмө бекеттери: жүк ташуучуну эзген эски ыкма",
+            "firstPublished": "2023-06-09T12:02:27.290Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/cedzvl3vzl3o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/e4b1/live/504e6e80-06c7-11ee-b4f9-7f741d5189e1.jpg",
+            "description": "Июнь айы башталгандан бери кыргыз-казак чек арасындагы айрым өткөрмө бекетеринде оор жүк ташуучу унаалардын тыгыны кайрадан пайда болду. Бул тууралуу маалыматты Кыргызстандын Чек ара кызматы дагы ырастады. ",
+            "imageAlt": "Кыргыз-казак чек арасындагы оор жүк ташуучу унаалар тыгыны",
+            "id": "cedzvl3vzl3o"
           },
           {
             "type": "article",
-            "title": "Холокостту эскерүү күнү: Унутулган цыган курмандыктары эстеликтерди сактап калуу үчүн күрөшүүдө 2",
-            "firstPublished": "2023-02-07T14:52:16.175Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/cd0nevdy25vo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/ae4d/test/a12d7570-a6f6-11ed-9015-6935ab4fa6ca.jpg",
-            "description": "\"Эмне үчүн бизди жок кылгысы келди? Бизге эмнеге кыргын салышты?\" - деп суроо салат 83 жаштагы \"цыган Холокостунан\" аман калган Хинта Георге.",
-            "imageAlt": "test",
-            "id": "cd0nevdy25vo"
+            "title": "\"Менин өлкөм жок, үй-бүлөм гана бар\". Румынияга качкан украин дезертирлери",
+            "firstPublished": "2023-06-09T02:19:01.000Z",
+            "link": "https://www.bbc.com/kyrgyz/world-65817637",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/42CB/production/_129999071_capture.jpg",
+            "description": "Украинада армиядан качкандар Румыния менен чек араны кесип өтүп баратканда көп кыйынчылык тартып, тоо арасындагы тобокелдикке башын байлоодо.",
+            "imageAlt": "Romanian border with Ukraine",
+            "id": "77dc2bcd-6f91-4899-b52b-77b1a18d0d15"
           },
           {
             "type": "article",
-            "title": "Холокостту эскерүү күнү: Унутулган цыган курмандыктары эстеликтерди сактап калуу үчүн күрөшүүдө 3",
-            "firstPublished": "2023-02-07T14:52:44.188Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/czmnz5184jeo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/ae4d/test/a12d7570-a6f6-11ed-9015-6935ab4fa6ca.jpg",
-            "description": "\"Эмне үчүн бизди жок кылгысы келди? Бизге эмнеге кыргын салышты?\" - деп суроо салат 83 жаштагы \"цыган Холокостунан\" аман калган Хинта Георге.",
-            "imageAlt": "test",
-            "id": "czmnz5184jeo"
+            "title": "Катар эмиринин сапары: катар-катар документке кол коюлду",
+            "firstPublished": "2023-06-07T14:15:10.593Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/cxe5xyz42d7o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/68c6/live/37090a20-053c-11ee-aa08-4727df20b680.jpg",
+            "description": "Катардын эмири Шейх Тамим бин Хамад Аль Тани алгачкы жолу мамлекеттик сапар менен Бишкекке келип кетти. Серепчилер Катар эмиринин сапары кыргыз тарап үчүн Жакынкы Чыгыштан инвестор тартууга чоң мүмкүнчүлүк деп жатышат.",
+            "imageAlt": "Кыргызстандын президенти Садыр Жапаров менен Катар эмири Шейх Тамим бин Хамад Аль Тани",
+            "id": "cxe5xyz42d7o"
+          },
+          {
+            "type": "article",
+            "title": "Кахов ГЭСи талкаланды, Херсондо эвакуация башталды",
+            "firstPublished": "2023-06-06T10:56:09.000Z",
+            "link": "https://www.bbc.com/kyrgyz/world-65821839",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/910A/production/_130003173_screenshot-17.png",
+            "description": "Кахов ГЭСи толугу менен талкаланды жана аны калыбына келтирүү мүмкүн эмес,- деп билдирди Украинанын \"Укргидроэнерго\" компаниясы. ГЭСтин кыйрашына байланыштуу Украина менен Орусия бири-бирин айыптоодо.",
+            "imageAlt": "гэс",
+            "id": "55552fd3-840e-4015-802d-11770afc197e"
+          },
+          {
+            "type": "article",
+            "title": "Россияга Украинадан басып кирген согушкерлер кимдер?",
+            "firstPublished": "2023-06-06T03:14:32.000Z",
+            "link": "https://www.bbc.com/kyrgyz/world-65817636",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/CA0C/production/_129842715_16b92fae7df5e12bc3a97f6190fd954161879d440_258_1080_6071000x563.jpg",
+            "description": "Россия Украина тараптан чек араны кесип өткөн эки куралдуу топтун чабуулунун мизин майтарып артка кууганын билдирүүдө.",
+            "imageAlt": "Members of Russian Volunteer Corps pose for a picture atop an armoured vehicle at Graivoron border crossing in Kozinka, Belgorod region, Russia, in this handout picture released on May 23, 2023",
+            "id": "9137f8b2-4e34-4dbc-a4b4-56b3ba7fe5a0"
+          },
+          {
+            "type": "article",
+            "title": "Борбор Азия-ЕБ: Геосаясий курч кырдаалдагы экинчи саммит",
+            "firstPublished": "2023-06-02T04:12:12.197Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/ceqx0vvj8yeo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/415b/live/74a83f80-0132-11ee-88e2-2b311f243286.jpg",
+            "description": "Кыргызстандын курорт шаары Чолпон-Атада \"Евробиримдик-Борбор Азия\" экинчи саммити башталууда. Бул саммит Украинадагы согуш кайнап, бул региондогу өлкөлөрдүн эң башкы саясий союздашы жана соода өнөгү Россияга эл аралык санкциялар салынып, геосаясий кырдаал курчуган учурда өтүп жатат. ",
+            "imageAlt": "ЕС_ЦА",
+            "id": "ceqx0vvj8yeo"
+          },
+          {
+            "type": "article",
+            "title": "Балык, сүт, колбаса, экспорт болбой калбаса...",
+            "firstPublished": "2023-06-01T02:52:10.609Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/c25p82x01zko",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1661/live/24279cc0-f9eb-11ed-92cc-b3a9bf1f67e9.jpg",
+            "description": "Кыргызстандагы агро-өндүрүшчүлөр буга чейин Россияга экспорттолуп келген сүт үчүн альтернативдик рынок издөө керектигин айтып, кыргыз өкмөтүнө кайрылган. ",
+            "imageAlt": "Кыргызстандын сүтү ЕАЭБдин техникалык талаптарына жооп берет",
+            "id": "c25p82x01zko"
+          },
+          {
+            "type": "article",
+            "title": "Украинадагы согуш: кош жарандыгы бар мигранттар аскерден кача албай калат  ",
+            "firstPublished": "2023-06-02T03:10:19.049Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/cg6ny40y4n4o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/bd7d/live/ffb02310-ffaa-11ed-92cc-b3a9bf1f67e9.jpg",
+            "description": "Россиянын Мамлекеттик думасында коммунисттер партиясынын өкүлү Михаил Матвеев кош жарандыгы бар мигранттарды да аскерге чакырууну караган мыйзам долбоорун даярдап жатканын билдирди. \nМихаил Матвеев документ кабыл алынып калса, ал борборазиялык жана кавказдык эле эмес, бардык мигранттарга тийиштүү болорун айтып жатат.   ",
+            "imageAlt": "Иллюстрациялык сүрөт",
+            "id": "cg6ny40y4n4o"
           }
         ],
         "activePage": 1,
-        "pageCount": 1,
-        "link": "https://www.bbc.com/kyrgyz/topics/czp8pjrkgp0t",
-        "curationId": "urn:bbc:tipo:list:1bd01bb2-78c3-4189-8961-2c5395d1ee13",
-        "curationType": "tipo-curation",
-        "position": 6,
-        "title": "Журнал",
-        "visualProminence": "HIGH"
+        "pageCount": 15,
+        "link": "https://www.bbc.com/kyrgyz/topics/ck2l9z012nkt",
+        "curationId": "urn:bbc:vivo:curation:ca9c579d-061d-408a-a0a8-d62d3e872b67",
+        "curationType": "vivo-stream",
+        "position": 4,
+        "title": "Дүйнө",
+        "visualProminence": "NORMAL",
+        "visualStyle": "FEED"
       },
       {
         "summaries": [
@@ -706,128 +505,132 @@
         ],
         "activePage": 1,
         "pageCount": 1,
-        "link": "https://www.bbc.com/kyrgyz/podcasts/p0c80v81/p0dwnqrb",
+        "link": "https://www.bbc.com/kyrgyz/podcasts/p0c80v81",
         "curationId": "urn:bbc:programmes:available-episodes:p0c80v81",
         "curationType": "available-episodes",
-        "position": 7,
-        "title": "Видео жана Подкасттар",
-        "visualProminence": "NORMAL",
-        "visualStyle": "FEED"
-      },
-      {
-        "summaries": [
-          {
-            "type": "video",
-            "duration": "PT30S",
-            "title": "\"Сапар\": Дүйнөнү өзгөрткөн айымдар",
-            "firstPublished": "2023-02-02T11:56:17.767Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/c6rgpy2y00qo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/566e/test/6a6de0b0-a2f0-11ed-b0be-cf2bcb458493.png",
-            "description": "",
-            "imageAlt": "test",
-            "id": "c6rgpy2y00qo"
-          },
-          {
-            "type": "video",
-            "duration": "PT30S",
-            "title": "\"Сапар\": Дүйнөнү өзгөрткөн айымдар 2",
-            "firstPublished": "2023-02-02T11:56:49.913Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/cd0nz6e5lj0o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/566e/test/6a6de0b0-a2f0-11ed-b0be-cf2bcb458493.png",
-            "description": "",
-            "imageAlt": "test",
-            "id": "cd0nz6e5lj0o"
-          },
-          {
-            "type": "video",
-            "duration": "PT30S",
-            "title": "\"Сапар\": Дүйнөнү өзгөрткөн айымдар 3",
-            "firstPublished": "2023-02-02T11:57:11.013Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/cle6ylr495ko",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/566e/test/6a6de0b0-a2f0-11ed-b0be-cf2bcb458493.png",
-            "description": "",
-            "imageAlt": "test",
-            "id": "cle6ylr495ko"
-          },
-          {
-            "type": "video",
-            "duration": "PT30S",
-            "title": "\"Сапар\": Дүйнөнү өзгөрткөн айымдар 4",
-            "firstPublished": "2023-02-02T11:57:24.839Z",
-            "link": "https://www.bbc.com/kyrgyz/articles/cd0qkxer6rko",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/566e/test/6a6de0b0-a2f0-11ed-b0be-cf2bcb458493.png",
-            "description": "",
-            "imageAlt": "test",
-            "id": "cd0qkxer6rko"
-          }
-        ],
-        "activePage": 1,
-        "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:c8c07db7-0a13-4e50-b41d-135d8f761949",
-        "curationType": "tipo-curation",
-        "position": 8,
-        "title": "Би-Би-Си \"САПАР\"",
-        "visualProminence": "NORMAL",
-        "visualStyle": "COLLECTION"
-      },
-      {
-        "summaries": [
-          {
-            "type": "article",
-            "title": "Kyrgyzstanda soz erkindigi buzuluuda",
-            "firstPublished": "2016-11-07T08:16:20.000Z",
-            "link": "https://www.bbc.com/kyrgyz/world-23089413",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/17324/test/_63521059_0362cabb-9d4d-4a6f-b538-2b314913c31a.jpg",
-            "description": "Soz erkindigin chektoo turaluu jiyin ottu",
-            "imageAlt": "ыаыаыаыаы",
-            "id": "82567d2d-eb50-b644-b9a4-6523bd62bf2c"
-          },
-          {
-            "type": "article",
-            "title": "Үй-бүлөдөгү зомбулуктан эң көп аялдар жабыркайт",
-            "firstPublished": "2016-11-03T14:43:31.000Z",
-            "link": "https://www.bbc.com/kyrgyz/kyrgyzstan-23088783",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/06A6/test/_63520710_23088783.jpg",
-            "description": "Үй-бүлөдөгү зомбулуктан эң көп аялдар жабыркайт",
-            "imageAlt": "Family Violence",
-            "id": "3ab470b8-18c1-4c37-ae2c-9f0177c60845"
-          }
-        ],
-        "activePage": 1,
-        "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:5d434896-f075-40ae-93f5-e35aa6f8b851",
-        "curationType": "tipo-curation",
-        "position": 9,
-        "title": "Test curation kyrgyz created 27/03/23",
-        "visualProminence": "NORMAL",
-        "visualStyle": "COLLECTION"
-      },
-      {
-        "summaries": [],
-        "activePage": 1,
-        "pageCount": 1,
-        "curationId": "urn:bbc:vivo:curation:72aebc73-4f20-4801-8301-f889faa9b240",
-        "curationType": "vivo-stream",
-        "position": 11,
-        "title": "Vivo feed limitation to 4 Feed/Low",
+        "position": 5,
+        "title": "Подкасттар",
         "visualProminence": "LOW",
         "visualStyle": "FEED"
       },
       {
-        "summaries": [],
+        "summaries": [
+          {
+            "type": "article",
+            "title": "Туугандарын боздотуп кетти. Сегиз өмүрдү алган каргашалуу каршы тилке...",
+            "firstPublished": "2023-05-31T03:01:16.884Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/cnk19d1p7e8o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/6f69/live/65f03ab0-ff5c-11ed-92cc-b3a9bf1f67e9.jpg",
+            "description": "Токмок шаарын айланып өтчү жолдогу үрөй учурган кырсыкта сегиз киши курман болду. Алардын бешөө бир үй-бүлө мүчөлөрү болгон. Бул окуя жол коопсуздугу темасын кайрадан козгоп, маселени кабыргасынан койду. ",
+            "imageAlt": "“Хонда Одиссей” үлгүсүндөгү унаа кырсыкка учурады",
+            "id": "cnk19d1p7e8o"
+          },
+          {
+            "type": "article",
+            "title": "\"Сайгондогу жазалоо\". Вьетнам согушунун символу",
+            "firstPublished": "2023-03-29T01:22:56.000Z",
+            "link": "https://www.bbc.com/kyrgyz/world-65084303",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/8B93/production/_99813753_d65ebabb-f85d-481f-8017-3eb8b164e6dd.jpg",
+            "description": "1975-жылы 30-апрелде Вьетнамдын Элдик армиясы Сайгонду ээлеп алган. Вьетнамдагы 20 жылдык согуш аяктап, кызыл террор башталган. Түштүк Вьетнам Түндүк Вьетнамга кошулган. Америкалык фотожурналист Эдди Адамс Вьетнам согушу учурундагы ырайымсыздыкты тарткан сүрөттөрү менен атагы чыккан.",
+            "imageAlt": "walking Lem down the street",
+            "id": "567d3742-e6e0-4f14-a9ab-0b2970de1ba5"
+          },
+          {
+            "type": "article",
+            "title": "Астронавттар космосто кандай азыктарды жана кантип жейт?",
+            "firstPublished": "2023-03-27T02:12:22.000Z",
+            "link": "https://www.bbc.com/kyrgyz/world-65084300",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/799A/production/_129003113_space4.jpg",
+            "description": "НАСА акыркы элүү жылда Айга кайра кайтуу мүдөөсүн жүзөгө ашыруу үчүн керек болчу жаңы скафандрдын бет ачаарын уюштурду. Калайыкта болсо далай кишилердин кызыгуусун бир маселе жаратууда: деги космос мейкиндигинде тиричилик кандайча уюштурулат жана калкып учуп жүрүүчү азык-түлүктү жеш оңойго турабы?",
+            "imageAlt": "An Astronaut with a Cup of Beer and Hamburger",
+            "id": "6473d972-b07f-48c4-90b8-2828b17d60ca"
+          },
+          {
+            "type": "article",
+            "title": "Орозо убагында кантип күч-кубат топтош керек?",
+            "firstPublished": "2023-03-23T02:17:08.000Z",
+            "link": "https://www.bbc.com/kyrgyz/world-65047838",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/A929/production/_129050334_gettyimages-1463138182.jpg",
+            "description": "Ислам динин туткан жамааттарда орозо кармалчу ыйык рамазан айы ушул аптанын бейшемби күнү – 2023-жылдын 23-мартында башталат (Сауд Арабстандын Айды көргөн расмий өкүлдөрү ушул күндү жарыялашты). Рамазан айында дене тарбия көнүгүүлөрү менен тамактанууну кантип айкалыштырууга мүмкүн? Эмесе, адистердин пикирин угууга кеттик!",
+            "imageAlt": "A woman working out in a gym",
+            "id": "4d1fddf6-5f2d-4774-b517-684e480c9440"
+          },
+          {
+            "type": "article",
+            "title": "\"Манастын руху\": Өзбекстандагы кыргыздардын өркөнү жана өксүгү",
+            "firstPublished": "2023-03-13T07:35:19.033Z",
+            "link": "https://www.bbc.com/kyrgyz/articles/c4n7d8l7znno",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/f5c7/live/2fa71060-c16c-11ed-a8a1-5f588e671922.jpg",
+            "description": "Өзбекстандагы этникалык кыргыздар жашаган \"Манас\" айылына барган Кыргызстандын Министрлер кабинетинин  төрагасы Акылбек Жапаров бул жакта кыргыздардын жашоо шартын жакшыртууга соңку убакта өкмөт тарабынан жакшы шарттар көрүлүп жатканына кубанып жаткан чакта, кыргыздардын саны өспөй, кайра азайып баратканы, кыргыз тилдүү мектептердин, класстардын кыскарып жатканына алардын өздөрү да анча кабатыр эмес экени байкалат.     ",
+            "imageAlt": "Акылбек Жапаров Манас айылы",
+            "id": "c4n7d8l7znno"
+          }
+        ],
         "activePage": 1,
         "pageCount": 1,
-        "curationId": "urn:bbc:vivo:curation:00414d81-401f-4e61-bbe7-ccd9dc813877",
+        "link": "https://www.bbc.com/kyrgyz/topics/czp8pjrkgp0t",
+        "curationId": "urn:bbc:vivo:curation:f5919ba2-38c3-4711-904a-2d9b90a009b4",
         "curationType": "vivo-stream",
-        "position": 12,
-        "title": "Vivo feed limitation to 8 Feed/Normal",
-        "visualProminence": "NORMAL",
-        "visualStyle": "FEED"
+        "position": 6,
+        "title": "Журнал",
+        "visualProminence": "NORMAL"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "BBC News Русская служба",
+            "firstPublished": "2023-06-12T08:41:37.000Z",
+            "link": "https://www.bbc.com/russian/news-65877253",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/cff8/live/50f3bff0-091c-11ee-b5af-25e80c61c11a.png",
+            "description": "На 87-м году жизни умер Сильвио Берлускони, бывший премьер-министр Италии.",
+            "imageAlt": "BBC News Russian",
+            "id": "af8aec60-3ff7-46ca-b2d2-125082c35310"
+          },
+          {
+            "type": "article",
+            "title": "BBC News Azərbaycanca",
+            "firstPublished": "2023-06-10T08:37:49.000Z",
+            "link": "https://www.bbc.com/azeri/region-65865450",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/ddfa/live/79ea5a40-091c-11ee-b5af-25e80c61c11a.png",
+            "description": "Bu gün Ukrayna ordusunun əks-hücum nəticəsində ələ keçirdiyi bir neçə kənddə şadyanalıq etdiyi görüntülər yayılıb. Bu yazıda, həmçinin BBC müxbiri Paul Adams Ukraynanın cənubunda hərbi baxımdan vacib olan vəziyyəti təhlil edir.",
+            "imageAlt": "BBC News Azerbaijean",
+            "id": "fe4c336e-2a26-4764-86c3-d55a9c34d902"
+          },
+          {
+            "type": "article",
+            "title": "BBC News Türkçe",
+            "firstPublished": "2023-06-12T01:34:13.000Z",
+            "link": "https://www.bbc.com/turkce/live/haberler-turkiye-65874715",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/f932/live/a29e6d50-091c-11ee-b5af-25e80c61c11a.png",
+            "description": "Tutukluluğu devam eden Thodex'in kurucusu Faruk Fatih Özer, dolandırıcılık yapıldığı gerekçesiyle açılan davada 21 sanık ile birlikte ilk kez hakim karşısına çıktı. 21 sanık hakkında 12 bin 164'er yıldan 40 bin 562'şer yıla kadar hapis cezası isteniyor. Özer, “Medyada ve iddianamede yer alan iddialar asılsızdır. Ben kimseyi dolandırmadım. Bana kumpas yapıldı. Ben bir şirket kurmuştum ve şirketim hacklendi\" dedi. Gelişmeler canlı anlatım sayfamızda.",
+            "imageAlt": "BBC News Türkçe",
+            "id": "a8abee2b-dff0-4254-b0b8-160dd82bf374"
+          },
+          {
+            "type": "article",
+            "title": "BBC News O‘zbek",
+            "firstPublished": "2023-06-12T10:32:19.000Z",
+            "link": "https://www.bbc.com/uzbek/world-65878025",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/4758/live/d4d16110-091c-11ee-b5af-25e80c61c11a.png",
+            "description": "Афғонистон расмийлари кўкнори етиштиришга қарши ўзлари чиқарган қарорни қандай бажармоқда? Тадқиқот кутилмаган натижаларни кўрсатди.",
+            "imageAlt": "BBC News O‘zbek",
+            "id": "7d9665d6-ba24-4e98-9c34-1f3e9552a276"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:f5bc486d-7a76-4af5-9c0f-bdd28f04817d",
+        "curationType": "tipo-curation",
+        "position": 7,
+        "title": "Тектеш сайттар",
+        "visualProminence": "LOW",
+        "visualStyle": "COLLECTION"
       }
     ],
     "metadata": {
       "analytics": {
-        "contentId": "urn:bbc:tipo:topic:cm7682qz7v1t",
+        "contentId": "urn:bbc:tipo:topic:crg7kj2e52nt",
         "contentType": "index-home",
         "pageIdentifier": "kyrgyz.page"
       }
