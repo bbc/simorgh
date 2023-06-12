@@ -16,7 +16,7 @@ const styles = {
     css({
       margin: `${spacings.TRIPLE}rem 0`,
       [mq.GROUP_2_MIN_WIDTH]: {
-        margin: `${spacings.QUADRUPLE} 0`,
+        margin: `${spacings.QUADRUPLE}rem 0`,
       },
       [mq.GROUP_3_MIN_WIDTH]: {
         margin: `${spacings.SEXTUPLE}rem 0`,
