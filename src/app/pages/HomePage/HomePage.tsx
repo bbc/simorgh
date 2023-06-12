@@ -56,36 +56,38 @@ const HomePage = ({ pageData }: HomePageProps) => {
             <span lang="en-GB">{product}</span>, {serviceLocalizedName} - {home}
           </span>
         </VisuallyHiddenText>
-        <div css={styles.inner}>
-          {curations.map(
-            ({
-              visualProminence,
-              summaries,
-              curationId,
-              title: curationTitle,
-              link,
-              position,
-              visualStyle,
-              mostRead,
-            }) => {
-              return (
-                <React.Fragment key={`${curationId}-${position}`}>
-                  <Curation
-                    headingLevel={curationTitle ? 3 : 2}
-                    visualStyle={visualStyle as VisualStyle}
-                    visualProminence={visualProminence as VisualProminence}
-                    promos={summaries || []}
-                    title={curationTitle}
-                    topStoriesTitle={topStoriesTitle}
-                    position={position}
-                    link={link}
-                    curationLength={curations && curations.length}
-                    mostRead={mostRead}
-                  />
-                </React.Fragment>
-              );
-            },
-          )}
+        <div css={styles.content}>
+          <div css={styles.inner}>
+            {curations.map(
+              ({
+                visualProminence,
+                summaries,
+                curationId,
+                title: curationTitle,
+                link,
+                position,
+                visualStyle,
+                mostRead,
+              }) => {
+                return (
+                  <React.Fragment key={`${curationId}-${position}`}>
+                    <Curation
+                      headingLevel={curationTitle ? 3 : 2}
+                      visualStyle={visualStyle as VisualStyle}
+                      visualProminence={visualProminence as VisualProminence}
+                      promos={summaries || []}
+                      title={curationTitle}
+                      topStoriesTitle={topStoriesTitle}
+                      position={position}
+                      link={link}
+                      curationLength={curations && curations.length}
+                      mostRead={mostRead}
+                    />
+                  </React.Fragment>
+                );
+              },
+            )}
+          </div>
         </div>
       </main>
     </>
