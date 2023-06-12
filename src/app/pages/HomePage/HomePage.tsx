@@ -56,8 +56,8 @@ const HomePage = ({ pageData }: HomePageProps) => {
             <span lang="en-GB">{product}</span>, {serviceLocalizedName} - {home}
           </span>
         </VisuallyHiddenText>
-        <div css={styles.content}>
-          <div css={styles.inner}>
+        <div css={styles.inner}>
+          <div css={styles.curations}>
             {curations.map(
               ({
                 visualProminence,
