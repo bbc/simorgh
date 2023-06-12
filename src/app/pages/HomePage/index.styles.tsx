@@ -12,7 +12,7 @@ const styles = {
     maxWidth: '63rem',
     margin: '0 auto',
   }),
-  curations: ({ spacings, mq }: Theme) =>
+  margins: ({ spacings, mq }: Theme) =>
     css({
       [mq.GROUP_0_MAX_WIDTH]: {
         margin: `${spacings.TRIPLE}rem 0`,
