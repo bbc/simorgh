@@ -57,7 +57,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
           </span>
         </VisuallyHiddenText>
         <div css={styles.inner}>
-          <div css={styles.curations}>
+          <div css={styles.margins}>
             {curations.map(
               ({
                 visualProminence,
