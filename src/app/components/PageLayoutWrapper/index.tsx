@@ -115,7 +115,7 @@ const PageLayoutWrapper = ({
       <ThemeProvider service={service} variant={variant}>
         {!isNextJs && <ServiceWorkerContainer />}
         <ManifestContainer />
-        {!isErrorPage && pageData && <WebVitals pageType={pageType} />}
+        {!isErrorPage && <WebVitals pageType={pageType} />}
         <GlobalStyles />
         <div id="main-wrapper" css={styles.wrapper}>
           <HeaderContainer
