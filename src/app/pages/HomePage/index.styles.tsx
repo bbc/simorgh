@@ -14,15 +14,17 @@ const styles = {
   }),
   curations: ({ spacings, mq }: Theme) =>
     css({
-      margin: `${spacings.TRIPLE}rem 0`,
-      [mq.GROUP_2_MIN_WIDTH]: {
-        margin: `${spacings.QUADRUPLE} 0`,
+      [mq.GROUP_0_MAX_WIDTH]: {
+        margin: `${spacings.TRIPLE}rem 0`,
       },
-      [mq.GROUP_3_MIN_WIDTH]: {
+      [mq.GROUP_2_MAX_WIDTH]: {
+        margin: `${spacings.QUADRUPLE}rem 0`,
+      },
+      [mq.GROUP_3_ONLY]: {
         margin: `${spacings.SEXTUPLE}rem 0`,
       },
       [mq.GROUP_4_MIN_WIDTH]: {
-        margin: `${spacings.QUINTUPLE}rem 0 ${spacings.SEXTUPLE}rem 0`,
+        margin: `${spacings.QUINTUPLE}rem 0`,
       },
     }),
 };
