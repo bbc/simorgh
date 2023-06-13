@@ -493,7 +493,14 @@
         "title": "Viidiyoo",
         "visualProminence": "NORMAL"
       }
-    ]
+    ],
+    "metadata": {
+      "analytics": {
+        "contentId": "urn:bbc:tipo:topic:c93v2kkzl24t",
+        "contentType": "index-home",
+        "pageIdentifier": "afaanoromoo.page"
+      }
+    }
   },
   "contentType": "application/json; charset=utf-8",
   "dataSource": "Data is from Live Tipo"
