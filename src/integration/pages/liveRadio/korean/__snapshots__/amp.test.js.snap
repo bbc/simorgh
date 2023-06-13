@@ -155,28 +155,28 @@ Object {
 exports[`AMP Korean Live Radio Page Footer Anchors should match text and url 3`] = `
 Object {
   "text": "이용 약관",
-  "url": "https://www.bbc.co.uk/usingthebbc/terms/",
+  "url": "https://www.bbc.com/usingthebbc/terms/",
 }
 `;
 
 exports[`AMP Korean Live Radio Page Footer Anchors should match text and url 4`] = `
 Object {
   "text": "BBC 소개",
-  "url": "https://www.bbc.co.uk/aboutthebbc",
+  "url": "https://www.bbc.com/aboutthebbc",
 }
 `;
 
 exports[`AMP Korean Live Radio Page Footer Anchors should match text and url 5`] = `
 Object {
   "text": "개인정보취급방침",
-  "url": "https://www.bbc.co.uk/usingthebbc/privacy/",
+  "url": "https://www.bbc.com/usingthebbc/privacy/",
 }
 `;
 
 exports[`AMP Korean Live Radio Page Footer Anchors should match text and url 6`] = `
 Object {
   "text": "쿠키정책",
-  "url": "https://www.bbc.co.uk/usingthebbc/cookies/",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
 }
 `;
 
@@ -190,7 +190,7 @@ Object {
 exports[`AMP Korean Live Radio Page Footer Anchors should match text and url 8`] = `
 Object {
   "text": "외부 링크에 대한 본사 정책 보기",
-  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
+  "url": "https://www.bbc.com/editorialguidelines/guidance/feeds-and-links",
 }
 `;
 

@@ -176,7 +176,7 @@ Object {
 exports[`AMP Most Read Page Footer Anchors should match text and url 6`] = `
 Object {
   "text": "Cookie",
-  "url": "https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
 }
 `;
 
@@ -190,7 +190,7 @@ Object {
 exports[`AMP Most Read Page Footer Anchors should match text and url 8`] = `
 Object {
   "text": "Tìm hiểu cách chúng tôi tiếp cận việc dẫn tới trang ngoài",
-  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
+  "url": "https://www.bbc.com/editorialguidelines/guidance/feeds-and-links",
 }
 `;
 
