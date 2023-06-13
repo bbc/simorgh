@@ -15,7 +15,7 @@ import {
 import { buildATIUrl, buildATIEventTrackingParams } from '.';
 import { RequestContextProps } from '../../../contexts/RequestContext';
 import { ServiceConfig } from '../../../models/types/serviceConfig';
-import { PageData } from '../types';
+import { ATIData, PageData } from '../types';
 
 (analyticsUtils.getAtUserId as jest.Mock) = jest.fn();
 (analyticsUtils.getCurrentTime as jest.Mock) = jest
@@ -41,6 +41,7 @@ const serviceContext: ServiceConfig = {
   atiAnalyticsProducerId: 'atiAnalyticsProducerId',
   service: 'pidgin',
   brandName: 'brandName',
+  lang: 'pcm',
 };
 
 const article: PageData = {
@@ -175,13 +176,22 @@ const idxPage: PageData = {
   },
 };
 
+const homePageAnalyticsData: ATIData = {
+  analytics: {
+    contentId: 'urn:bbc:tipo:topic:cm7682qz7v1t',
+    contentType: 'index-home',
+    pageIdentifier: 'kyrgyz.page',
+  },
+  title: 'pageTitle',
+};
+
 describe('ATIAnalytics params', () => {
   describe('buildATIUrl', () => {
     it('should return the correct article url', () => {
       const url = buildATIUrl(
-        article,
         { ...requestContext, pageType: ARTICLE_PAGE },
         serviceContext,
+        article,
       );
       expect(url).toMatchInlineSnapshot(
         `"s=598285&s2=atiAnalyticsProducerId&p=pidgin.articles.%2F%2Fwww.bbc.co.uk.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Aoptimo%3Aasset%3A54321]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http%253A%252F%252Flocalhost%252F]&x6=[originhttp%253A%252F%252Fwww.example.com]&x7=[article]&x8=[simorgh]&x9=[pageTitle]&x10=[scotland]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x13=[thing%2520english%2520label%25201~thing%2520english%2520label%25202]&x14=[thing%2520id%25201~thing%2520id%25202]&x17=[thing%2520english%2520label%25201~thing%2520english%2520label%25202]&ref=originhttp://www.example.com"`,
@@ -190,9 +200,9 @@ describe('ATIAnalytics params', () => {
 
     it('should return the correct media article url', () => {
       const url = buildATIUrl(
-        article,
         { ...requestContext, pageType: MEDIA_ARTICLE_PAGE },
         serviceContext,
+        article,
       );
       expect(url).toMatchInlineSnapshot(
         `"s=598285&s2=atiAnalyticsProducerId&p=pidgin.articles.%2F%2Fwww.bbc.co.uk.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Aoptimo%3Aasset%3A54321]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http%253A%252F%252Flocalhost%252F]&x6=[originhttp%253A%252F%252Fwww.example.com]&x7=[article-sfv]&x8=[simorgh]&x9=[pageTitle]&x10=[scotland]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x13=[thing%2520english%2520label%25201~thing%2520english%2520label%25202]&x14=[thing%2520id%25201~thing%2520id%25202]&x17=[thing%2520english%2520label%25201~thing%2520english%2520label%25202]&ref=originhttp://www.example.com"`,
@@ -201,9 +211,9 @@ describe('ATIAnalytics params', () => {
 
     it('should return the correct frontPage url', () => {
       const url = buildATIUrl(
-        frontPage,
         { ...requestContext, pageType: FRONT_PAGE },
         serviceContext,
+        frontPage,
       );
       expect(url).toMatchInlineSnapshot(
         `"s=598285&s2=atiAnalyticsProducerId&p=service.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Acps%3A00000000-0000-0000-0000-000000000000]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http%253A%252F%252Flocalhost%252F]&x7=[index-home]&x8=[simorgh]&x9=[title%2520-%2520brandName]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]"`,
@@ -212,9 +222,9 @@ describe('ATIAnalytics params', () => {
 
     it('should return the correct IDX page url', () => {
       const url = buildATIUrl(
-        idxPage,
         { ...requestContext, pageType: INDEX_PAGE },
         serviceContext,
+        idxPage,
       );
       expect(url).toMatchInlineSnapshot(
         `"s=598285&s2=atiAnalyticsProducerId&p=service.page.idxpage&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Acps%3A00000000-0000-0000-0000-000000000000]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http%253A%252F%252Flocalhost%252F]&x7=[index-section]&x8=[simorgh]&x9=[title%2520-%2520brandName]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]"`,
@@ -223,9 +233,9 @@ describe('ATIAnalytics params', () => {
 
     it('should return the correct media url', () => {
       const url = buildATIUrl(
-        media,
         { ...requestContext, pageType: MEDIA_PAGE },
         serviceContext,
+        media,
       );
       expect(url).toMatchInlineSnapshot(
         `"s=598285&s2=atiAnalyticsProducerId&p=pageIdentifier&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[id]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http%253A%252F%252Flocalhost%252F]&x7=[player-live]&x8=[simorgh]&x9=[pageTitle]"`,
@@ -234,9 +244,9 @@ describe('ATIAnalytics params', () => {
 
     it('should return the correct MAP url', () => {
       const url = buildATIUrl(
-        MAP,
         { ...requestContext, pageType: MEDIA_ASSET_PAGE },
         serviceContext,
+        MAP,
       );
       expect(url).toMatchInlineSnapshot(
         `"s=598285&s2=atiAnalyticsProducerId&p=pageIdentifier&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Acps%3A4d36f80b-8711-0b4e-8da0-ef76ae8ac470]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http%253A%252F%252Flocalhost%252F]&x7=[article-media-asset]&x8=[simorgh]&x9=[headline%2520-%2520brandName]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x16=[WS%20-%20Inspire%20me]&x17=[News]"`,
@@ -245,20 +255,32 @@ describe('ATIAnalytics params', () => {
 
     it('should return the correct PGL url', () => {
       const url = buildATIUrl(
-        PGL,
         { ...requestContext, pageType: PHOTO_GALLERY_PAGE },
         serviceContext,
+        PGL,
       );
       expect(url).toMatchInlineSnapshot(
         `"s=598285&s2=atiAnalyticsProducerId&p=pageIdentifier&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Acps%3A4d36f80b-8711-0b4e-8da0-ef76ae8ac470]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http%253A%252F%252Flocalhost%252F]&x7=[article-photo-gallery]&x8=[simorgh]&x9=[headline%2520-%2520brandName]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]"`,
       );
     });
 
+    it('should return the correct Homepage url', () => {
+      const url = buildATIUrl(
+        { ...requestContext, pageType: HOME_PAGE },
+        serviceContext,
+        undefined,
+        homePageAnalyticsData,
+      );
+      expect(url).toMatchInlineSnapshot(
+        `"s=598285&s2=atiAnalyticsProducerId&p=kyrgyz.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Atipo%3Atopic%3Acm7682qz7v1t]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[pcm]&x5=[http%253A%252F%252Flocalhost%252F]&x7=[index-home]&x8=[simorgh]&x9=[pageTitle]"`,
+      );
+    });
+
     it('should have both ref parameter and x6 referrer url parameter, if referrer url exists', () => {
       const atiUrl = buildATIUrl(
-        article,
         { ...requestContext, pageType: ARTICLE_PAGE },
         serviceContext,
+        article,
       ) as string;
       const params = atiUrl.split('&');
 
@@ -268,9 +290,9 @@ describe('ATIAnalytics params', () => {
 
     it('should have ref parameter as the last parameter, if referrer url exists', () => {
       const atiUrl = buildATIUrl(
-        article,
         { ...requestContext, pageType: ARTICLE_PAGE },
         serviceContext,
+        article,
       ) as string;
       const params = atiUrl.split('&');
 
@@ -279,9 +301,9 @@ describe('ATIAnalytics params', () => {
 
     it('should not have ref and x6 parameters, if referrer url does not exist', () => {
       const atiUrl = buildATIUrl(
-        article,
         { ...requestContext, pageType: ARTICLE_PAGE, previousPath: '' },
         serviceContext,
+        article,
       ) as string;
       const params = atiUrl.split('&');
 
@@ -293,9 +315,9 @@ describe('ATIAnalytics params', () => {
       'should return empty object {} because %s page type is not supported',
       pageType => {
         const url = buildATIUrl(
-          {},
           { ...requestContext, pageType },
           serviceContext,
+          {},
         );
         expect(url).toStrictEqual({});
       },
@@ -484,6 +506,63 @@ describe('ATIAnalytics params', () => {
         statsDestination: 'statsDestination',
         timePublished: '1970-01-01T00:00:00.000Z',
         timeUpdated: '1970-01-01T00:00:00.000Z',
+      });
+    });
+
+    it('should return the correct Homepage params', () => {
+      const { analytics } = homePageAnalyticsData;
+      const homePageData = {
+        metadata: { analytics },
+        title: 'pageTitle',
+        pageType: 'home',
+        curations: [
+          {
+            summaries: [
+              {
+                type: 'article',
+                title:
+                  '“Баланы сабады деп аялымды камап салышарын өзүм да билген эмесмин”. Кадамжайда токмоктолгон наристенин атасы 3\r',
+                firstPublished: '2023-02-02T10:06:57.156Z',
+                link: 'https://www.bbc.com/kyrgyz/articles/cemg3359nwro',
+                imageUrl:
+                  'https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg',
+                description: '',
+                imageAlt: 'test',
+                id: 'cemg3359nwro',
+              },
+            ],
+            activePage: 1,
+            pageCount: 1,
+            curationId:
+              'urn:bbc:tipo:list:524cf34b-cac2-4ce2-ac64-53eb70019202',
+            curationType: 'tipo-curation',
+            position: 1,
+            title: 'Редактордун тандоосу',
+            visualProminence: 'HIGH',
+            visualStyle: 'COLLECTION',
+          },
+        ],
+        description: 'Hello I am a description!',
+      };
+      const params = buildATIEventTrackingParams(
+        homePageData,
+        { ...requestContext, pageType: HOME_PAGE },
+        serviceContext,
+      );
+      expect(params).toEqual({
+        appName: 'atiAnalyticsAppName',
+        categoryName: undefined,
+        campaigns: undefined,
+        contentId: 'urn:bbc:tipo:topic:cm7682qz7v1t',
+        contentType: 'index-home',
+        language: 'pcm',
+        pageIdentifier: 'kyrgyz.page',
+        pageTitle: 'pageTitle',
+        libraryVersion: 'simorgh',
+        platform: 'canonical',
+        producerId: 'atiAnalyticsProducerId',
+        service: 'pidgin',
+        statsDestination: 'statsDestination',
       });
     });
 

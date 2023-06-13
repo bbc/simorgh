@@ -6210,7 +6210,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/scotland/articles/cm49v4x1r9lo'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/scotland/articles/czwj5l0n210o'],
