@@ -94,6 +94,39 @@ Object {
 }
 `;
 
+exports[`AMP Home Page Analytics ATI 1`] = `
+Object {
+  "requests": Object {
+    "base": "https://logws1363.ati-host.net?",
+    "pageview": "\${base}s=598343&s2=58&p=kyrgyz.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn%3Abbc%3Atipo%3Atopic%3Acm7682qz7v1t]&x2=[amp]&x3=[news-kyrgyz]&x4=[ky]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[index-home]&x8=[simorgh]&x9=[BBC%2520News%2520%D0%9A%D1%8B%D1%80%D0%B3%D1%8B%D0%B7%2520%D0%9A%D1%8B%D0%B7%D0%BC%D0%B0%D1%82%D1%8B%2520-%2520Top%2520title%2520from%2520Tipo%2520in%2520the%2520details%2520section]&ref=\${documentReferrer}",
+  },
+  "transport": Object {
+    "beacon": false,
+    "image": true,
+    "xhrpost": false,
+  },
+  "triggers": Object {
+    "trackPageview": Object {
+      "on": "visible",
+      "request": "pageview",
+    },
+  },
+}
+`;
+
+exports[`AMP Home Page Analytics chartbeat 1`] = `
+Object {
+  "vars": Object {
+    "contentType": "home",
+    "domain": "test.bbc.co.uk",
+    "sections": "Kyrgyz, Kyrgyz - home",
+    "title": "BBC News Кыргыз Кызматы - Top title from Tipo in the details section",
+    "uid": 50924,
+    "virtualReferrer": "\${documentReferrer}",
+  },
+}
+`;
+
 exports[`AMP Home Page Footer Anchors should match text and url 1`] = `
 Object {
   "text": "BBC News, Кыргыз КызMATы",
@@ -207,7 +240,7 @@ Object {
 
 exports[`AMP Home Page Main heading should match text 1`] = `"BBC News, Кыргыз КызMATы - Башталгыч бет"`;
 
-exports[`AMP Home Page Page content First item in the first curation is the correct headline 1`] = `"Article tagged with Trump"`;
+exports[`AMP Home Page Page content First item in the first curation is the correct headline 1`] = `"Аудио, Headline  edited in promo itself test May 2023"`;
 
 exports[`AMP Home Page SEO Apple Touch Icon should match attributes 1`] = `
 Object {
@@ -295,7 +328,7 @@ Object {
   "@graph": Array [
     Object {
       "@type": "CollectionPage",
-      "headline": "BBC News Кыргыз Кызматы -1",
+      "headline": "BBC News Кыргыз Кызматы - Top title from Tipo in the details section",
       "image": Object {
         "@type": "ImageObject",
         "height": 576,
@@ -310,7 +343,7 @@ Object {
       "mainEntityOfPage": Object {
         "@id": "http://localhost:7080/kyrgyz",
         "@type": "WebPage",
-        "name": "BBC News Кыргыз Кызматы -1",
+        "name": "BBC News Кыргыз Кызматы - Top title from Tipo in the details section",
       },
       "publisher": Object {
         "@type": "NewsMediaOrganization",
@@ -333,7 +366,7 @@ Object {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 1,
-          "url": "https://www.bbc.com/kyrgyz/articles/c1ldk6kl66wo",
+          "url": "https://www.test.bbc.com/kyrgyz/articles/c1ldk6kl66wo",
         },
         Object {
           "@context": "http://schema.org",
@@ -585,25 +618,25 @@ Object {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 43,
-          "url": "https://www.bbc.com/kyrgyz/podcasts/p0c80v81/p0fnb85d",
+          "url": "https://www.bbc.com/kyrgyz/podcasts/p0c80v81/p0fpqkrq",
         },
         Object {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 44,
-          "url": "https://www.bbc.com/kyrgyz/podcasts/p0c80v81/p0fkxv40",
+          "url": "https://www.bbc.com/kyrgyz/podcasts/p0c80v81/p0fnzmkf",
         },
         Object {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 45,
-          "url": "https://www.bbc.com/kyrgyz/podcasts/p0c80v81/p0fks7df",
+          "url": "https://www.bbc.com/kyrgyz/podcasts/p0c80v81/p0fnb85d",
         },
         Object {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 46,
-          "url": "https://www.bbc.com/kyrgyz/podcasts/p0c80v81/p0fhj7qw",
+          "url": "https://www.bbc.com/kyrgyz/podcasts/p0c80v81/p0fkxv40",
         },
         Object {
           "@context": "http://schema.org",
@@ -641,123 +674,15 @@ Object {
           "position": 52,
           "url": "https://www.bbc.com/kyrgyz/kyrgyzstan-23088783",
         },
-        Object {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 53,
-          "url": "https://www.bbc.com/kyrgyz/world-23089413",
-        },
-        Object {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 54,
-          "url": "https://www.bbc.com/kyrgyz/kyrgyzstan-23088783",
-        },
-        Object {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 55,
-          "url": "http://www.bbc.com/russian",
-        },
-        Object {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 56,
-          "url": "http://www.bbc.com/azeri",
-        },
-        Object {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 57,
-          "url": "http://www.bbc.com/uzbek",
-        },
-        Object {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 58,
-          "url": "http://www.bbc.com/turkce",
-        },
-        Object {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 59,
-          "url": "https://www.bbc.com/kyrgyz/world-23089413",
-        },
-        Object {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 60,
-          "url": "https://www.bbc.com/kyrgyz/kyrgyzstan-23088783",
-        },
-        Object {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 61,
-          "url": "http://www.bbc.com/russian",
-        },
-        Object {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 62,
-          "url": "http://www.bbc.com/azeri",
-        },
-        Object {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 63,
-          "url": "http://www.bbc.com/uzbek",
-        },
-        Object {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 64,
-          "url": "http://www.bbc.com/turkce",
-        },
-        Object {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 65,
-          "url": "https://www.bbc.com/kyrgyz/world-23089413",
-        },
-        Object {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 66,
-          "url": "https://www.bbc.com/kyrgyz/kyrgyzstan-23088783",
-        },
-        Object {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 67,
-          "url": "http://www.bbc.com/russian",
-        },
-        Object {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 68,
-          "url": "http://www.bbc.com/azeri",
-        },
-        Object {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 69,
-          "url": "http://www.bbc.com/uzbek",
-        },
-        Object {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 70,
-          "url": "http://www.bbc.com/turkce",
-        },
       ],
       "name": "BBC News Кыргыз Кызматы",
-      "numberOfItems": 70,
+      "numberOfItems": 52,
     },
   ],
 }
 `;
 
-exports[`AMP Home Page SEO OG description 1`] = `"Hello I am a description!"`;
+exports[`AMP Home Page SEO OG description 1`] = `"Hello I am a description! I was added in the \\"Description\\" field from the Details section in Tipo"`;
 
 exports[`AMP Home Page SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png"`;
 
@@ -781,7 +706,7 @@ exports[`AMP Home Page SEO Twitter card 1`] = `"summary_large_image"`;
 
 exports[`AMP Home Page SEO Twitter creator 1`] = `"@bbckyrgyz"`;
 
-exports[`AMP Home Page SEO Twitter description 1`] = `"Hello I am a description!"`;
+exports[`AMP Home Page SEO Twitter description 1`] = `"Hello I am a description! I was added in the \\"Description\\" field from the Details section in Tipo"`;
 
 exports[`AMP Home Page SEO Twitter image alt 1`] = `"BBC News Кыргыз КызMATы"`;
 

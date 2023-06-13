@@ -6,6 +6,7 @@ import fetchPageData from '../../utils/fetchPageData';
 import constructPageFetchUrl from '../../utils/constructPageFetchUrl';
 import { Services } from '../../../models/types/global';
 import HOME_PAGE_CONFIG from './page-config';
+import { FetchError } from '../../../models/types/fetch';
 
 const logger = nodeLogger(__filename);
 
@@ -43,7 +44,7 @@ export default async ({
     });
 
     const {
-      data: { title, description, curations },
+      data: { title, description, curations, metadata },
     } = json;
 
     const id = isLocal ? null : HOME_PAGE_CONFIG[service][env];
@@ -56,9 +57,12 @@ export default async ({
         pageType,
         curations,
         description,
+        metadata,
       },
     };
-  } catch ({ message, status }) {
+  } catch (error: unknown) {
+    const { message, status } = error as FetchError;
+
     logger.error(BFF_FETCH_ERROR, {
       service,
       status,

@@ -1,7 +1,7 @@
 import HOME_PAGE_CONFIG from '../../../../src/app/routes/homePage/getInitialData/page-config';
 
 export default ({ service, pageType }) => {
-  describe(`Running tests for ${service} ${pageType}`, () => {
+  describe(`Running home page tests for ${service} ${pageType}`, () => {
     // eslint-disable-next-line no-unused-vars
     let homePageData;
     before(() => {
@@ -20,6 +20,15 @@ export default ({ service, pageType }) => {
         'contain',
         'Hi, I am a Home Page component',
       );
+    });
+
+    describe(`Chartbeat analytics`, () => {
+      it('should have a script with src value set to chartbeat source', () => {
+        cy.hasScriptWithChartbeatSrc();
+      });
+      it('should have chartbeat config set to window object', () => {
+        cy.hasGlobalChartbeatConfig();
+      });
     });
   });
 };
