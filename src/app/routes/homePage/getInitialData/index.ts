@@ -54,10 +54,9 @@ export default async ({
       pageData: {
         id,
         title,
-        pageType,
+        metadata: { ...metadata, type: pageType },
         curations,
         description,
-        metadata,
       },
     };
   } catch (error: unknown) {
