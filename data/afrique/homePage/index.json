@@ -1009,7 +1009,14 @@
         "title": "Nos partenaires",
         "visualProminence": "NORMAL"
       }
-    ]
+    ],
+    "metadata": {
+      "analytics": {
+        "contentId": "urn:bbc:tipo:topic:cjln1ww62p1t",
+        "contentType": "index-home",
+        "pageIdentifier": "afrique.page"
+      }
+    }
   },
   "contentType": "application/json; charset=utf-8",
   "dataSource": "data is from TIPO live home page"
