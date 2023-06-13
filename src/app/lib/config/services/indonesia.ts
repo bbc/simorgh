@@ -321,7 +321,7 @@ export const service: DefaultServiceConfig = {
           text: 'Kebijakan tentang Privasi',
         },
         {
-          href: 'https://www.bbc.co.uk/usingthebbc/cookies/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/',
           text: 'Cookies',
         },
         {
