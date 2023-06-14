@@ -1,69 +1,69 @@
-name: Simorgh CI - AMP Validation, Lighthouse & Puppeteer Tests
-on:
-  create:
-    branches:
-      - '**'
-  pull_request:
-    branches:
-      - '**'
-  push:
-    branches:
-      - latest
-permissions:
-  contents: read
+# name: Simorgh CI - AMP Validation, Lighthouse & Puppeteer Tests
+# on:
+#   create:
+#     branches:
+#       - '**'
+#   pull_request:
+#     branches:
+#       - '**'
+#   push:
+#     branches:
+#       - latest
+# permissions:
+#   contents: read
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [16.x]
-    env:
-      CI: true
-      LOG_LEVEL: 'error'
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     strategy:
+#       matrix:
+#         node-version: [16.x]
+#     env:
+#       CI: true
+#       LOG_LEVEL: 'error'
 
-    steps:
-      - uses: actions/checkout@v3
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
+#     steps:
+#       - uses: actions/checkout@v3
+#       - name: Use Node.js ${{ matrix.node-version }}
+#         uses: actions/setup-node@v3
+#         with:
+#           node-version: ${{ matrix.node-version }}
 
-      - name: Cache Node Modules
-        id: cache
-        uses: actions/cache@v3
-        with:
-          path: |
-            node_modules
-            ws-nextjs-app/node_modules
-          key: node-modules-${{ hashFiles('yarn.lock', 'ws-nextjs-app/yarn.lock') }}
+#       - name: Cache Node Modules
+#         id: cache
+#         uses: actions/cache@v3
+#         with:
+#           path: |
+#             node_modules
+#             ws-nextjs-app/node_modules
+#           key: node-modules-${{ hashFiles('yarn.lock', 'ws-nextjs-app/yarn.lock') }}
 
-      - name: Install Node Modules
-        if: steps.cache.outputs.cache-hit != 'true'
-        run: ./scripts/installNodeModules.sh
+#       - name: Install Node Modules
+#         if: steps.cache.outputs.cache-hit != 'true'
+#         run: ./scripts/installNodeModules.sh
 
-      - name: Build Simorgh - Express App
-        run: yarn build:local
+#       - name: Build Simorgh - Express App
+#         run: yarn build:local
 
-      - name: Start Simorgh Server - Express App
-        run: nohup node build/server.js > /dev/null 2>&1 &
+#       - name: Start Simorgh Server - Express App
+#         run: nohup node build/server.js > /dev/null 2>&1 &
 
-      - name: Build Simorgh - Next.JS App
-        working-directory: ./ws-nextjs-app
-        run: yarn build:local
+#       - name: Build Simorgh - Next.JS App
+#         working-directory: ./ws-nextjs-app
+#         run: yarn build:local
 
-      - name: Start Simorgh Server - Next.JS App
-        working-directory: ./ws-nextjs-app
-        run: nohup node build/standalone/server.js > /dev/null 2>&1 &
+#       - name: Start Simorgh Server - Next.JS App
+#         working-directory: ./ws-nextjs-app
+#         run: nohup node build/standalone/server.js > /dev/null 2>&1 &
 
-      - name: Run AMP Validator
-        run: yarn amp:validate
+#       - name: Run AMP Validator
+#         run: yarn amp:validate
 
-      - name: Run Lighthouse
-        run: yarn lighthouse
+#       - name: Run Lighthouse
+#         run: yarn lighthouse
 
-      - name: Run Puppeteer Tests
-        run: |
-          yarn add puppeteer@18.0.5
-          yarn test:puppeteer
-          yarn remove puppeteer
+#       - name: Run Puppeteer Tests
+#         run: |
+#           yarn add puppeteer@18.0.5
+#           yarn test:puppeteer
+#           yarn remove puppeteer

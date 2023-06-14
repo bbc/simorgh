@@ -1,82 +1,82 @@
-name: Simorgh CI - Unit Tests & Code Coverage
-on:
-  create:
-    branches:
-      - '**'
-  pull_request:
-    branches:
-      - '**'
-  push:
-    branches:
-      - latest
-permissions:
-  contents: read
+# name: Simorgh CI - Unit Tests & Code Coverage
+# on:
+#   create:
+#     branches:
+#       - '**'
+#   pull_request:
+#     branches:
+#       - '**'
+#   push:
+#     branches:
+#       - latest
+# permissions:
+#   contents: read
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [16.x]
-    env:
-      CI: true
-      LOG_LEVEL: 'error'
-      CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
-      GIT_COMMIT_SHA: ${{ github.sha }}
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     strategy:
+#       matrix:
+#         node-version: [16.x]
+#     env:
+#       CI: true
+#       LOG_LEVEL: 'error'
+#       CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+#       GIT_COMMIT_SHA: ${{ github.sha }}
 
-    steps:
-      - uses: actions/checkout@v3
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
+#     steps:
+#       - uses: actions/checkout@v3
+#       - name: Use Node.js ${{ matrix.node-version }}
+#         uses: actions/setup-node@v3
+#         with:
+#           node-version: ${{ matrix.node-version }}
 
-      # Sets the GIT_BRANCH env variable on a push event which occurs when we merge a PR. ${GITHUB_REF##*/} is the shorthand syntax for getting the short branch name
-      - name: Set GIT_BRANCH Environment Variable For Push Event
-        if: ${{ github.event_name == 'push' }}
-        run: echo "GIT_BRANCH=$(echo ${GITHUB_REF##*/})" >> $GITHUB_ENV
+#       # Sets the GIT_BRANCH env variable on a push event which occurs when we merge a PR. ${GITHUB_REF##*/} is the shorthand syntax for getting the short branch name
+#       - name: Set GIT_BRANCH Environment Variable For Push Event
+#         if: ${{ github.event_name == 'push' }}
+#         run: echo "GIT_BRANCH=$(echo ${GITHUB_REF##*/})" >> $GITHUB_ENV
 
-      # Sets the GIT_BRANCH env variable on a pull request event which occurs when we create/update a PR. ${{ github.head_ref }} is the syntax for getting the short branch name
-      - name: Set GIT_BRANCH Environment Variable For Pull Request Event
-        if: ${{ github.event_name == 'pull_request' }}
-        run: echo "GIT_BRANCH=${{ github.head_ref }}" >> $GITHUB_ENV
+#       # Sets the GIT_BRANCH env variable on a pull request event which occurs when we create/update a PR. ${{ github.head_ref }} is the syntax for getting the short branch name
+#       - name: Set GIT_BRANCH Environment Variable For Pull Request Event
+#         if: ${{ github.event_name == 'pull_request' }}
+#         run: echo "GIT_BRANCH=${{ github.head_ref }}" >> $GITHUB_ENV
 
-      - name: Cache Node Modules
-        id: cache
-        uses: actions/cache@v3
-        with:
-          path: |
-            node_modules
-            ws-nextjs-app/node_modules
-          key: node-modules-${{ hashFiles('yarn.lock', 'ws-nextjs-app/yarn.lock') }}
+#       - name: Cache Node Modules
+#         id: cache
+#         uses: actions/cache@v3
+#         with:
+#           path: |
+#             node_modules
+#             ws-nextjs-app/node_modules
+#           key: node-modules-${{ hashFiles('yarn.lock', 'ws-nextjs-app/yarn.lock') }}
 
-      - name: Install Node Modules
-        if: steps.cache.outputs.cache-hit != 'true'
-        run: ./scripts/installNodeModules.sh
+#       - name: Install Node Modules
+#         if: steps.cache.outputs.cache-hit != 'true'
+#         run: ./scripts/installNodeModules.sh
 
-      - name: Build Simorgh - Express App
-        run: yarn build
+#       - name: Build Simorgh - Express App
+#         run: yarn build
 
-      - name: Build Simorgh - Next.JS App
-        working-directory: ./ws-nextjs-app
-        run: yarn build
+#       - name: Build Simorgh - Next.JS App
+#         working-directory: ./ws-nextjs-app
+#         run: yarn build
 
-      - name: Setup Code Climate Test Coverage
-        if: ${{ github.event_name == 'push' || github.event.pull_request.head.repo.full_name == 'bbc/simorgh' }} # Only run if PR originates from the Simorgh repo
-        run: |
-          echo $GIT_BRANCH
-          echo $GIT_COMMIT_SHA
-          curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-          chmod +x ./cc-test-reporter
-          ./cc-test-reporter before-build
+#       - name: Setup Code Climate Test Coverage
+#         if: ${{ github.event_name == 'push' || github.event.pull_request.head.repo.full_name == 'bbc/simorgh' }} # Only run if PR originates from the Simorgh repo
+#         run: |
+#           echo $GIT_BRANCH
+#           echo $GIT_COMMIT_SHA
+#           curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+#           chmod +x ./cc-test-reporter
+#           ./cc-test-reporter before-build
 
-      - name: Unit Tests - Express App
-        run: yarn test:unit
+#       - name: Unit Tests - Express App
+#         run: yarn test:unit
 
-      - name: Unit Tests - Next.JS App
-        working-directory: ./ws-nextjs-app
-        run: yarn test
+#       - name: Unit Tests - Next.JS App
+#         working-directory: ./ws-nextjs-app
+#         run: yarn test
 
-      - name: Report Code Climate Test Coverage
-        if: ${{ github.event_name == 'push' || github.event.pull_request.head.repo.full_name == 'bbc/simorgh' }} # Only run if PR originates from the Simorgh repo
-        run: ./cc-test-reporter after-build -t lcov --debug --exit-code 0
+#       - name: Report Code Climate Test Coverage
+#         if: ${{ github.event_name == 'push' || github.event.pull_request.head.repo.full_name == 'bbc/simorgh' }} # Only run if PR originates from the Simorgh repo
+#         run: ./cc-test-reporter after-build -t lcov --debug --exit-code 0

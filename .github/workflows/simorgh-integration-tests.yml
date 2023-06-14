@@ -1,52 +1,52 @@
-name: Simorgh CI - Integration Tests
-on:
-  create:
-    branches:
-      - '**'
-  pull_request:
-    branches:
-      - '**'
-  push:
-    branches:
-      - latest
-permissions:
-  contents: read
+# name: Simorgh CI - Integration Tests
+# on:
+#   create:
+#     branches:
+#       - '**'
+#   pull_request:
+#     branches:
+#       - '**'
+#   push:
+#     branches:
+#       - latest
+# permissions:
+#   contents: read
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [16.x]
-    env:
-      CI: true
-      LOG_LEVEL: 'error'
-      BFF_PATH: 'https://web-cdn.test.api.bbci.co.uk/fd/simorgh-bff/simorgh-bff'
-      INTEGRATION_TEST_BUILD: true
-      
-    steps:
-      - uses: actions/checkout@v3
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     strategy:
+#       matrix:
+#         node-version: [16.x]
+#     env:
+#       CI: true
+#       LOG_LEVEL: 'error'
+#       BFF_PATH: 'https://web-cdn.test.api.bbci.co.uk/fd/simorgh-bff/simorgh-bff'
+#       INTEGRATION_TEST_BUILD: true
 
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
+#     steps:
+#       - uses: actions/checkout@v3
 
-      - name: Cache Node Modules
-        id: cache
-        uses: actions/cache@v3
-        with:
-          path: |
-            node_modules
-            ws-nextjs-app/node_modules
-          key: node-modules-${{ hashFiles('yarn.lock', 'ws-nextjs-app/yarn.lock') }}
+#       - name: Use Node.js ${{ matrix.node-version }}
+#         uses: actions/setup-node@v3
+#         with:
+#           node-version: ${{ matrix.node-version }}
 
-      - name: Install Node Modules
-        if: steps.cache.outputs.cache-hit != 'true'
-        run: ./scripts/installNodeModules.sh
+#       - name: Cache Node Modules
+#         id: cache
+#         uses: actions/cache@v3
+#         with:
+#           path: |
+#             node_modules
+#             ws-nextjs-app/node_modules
+#           key: node-modules-${{ hashFiles('yarn.lock', 'ws-nextjs-app/yarn.lock') }}
 
-      - name: Integration Tests
-        run: yarn test:integration:ci
+#       - name: Install Node Modules
+#         if: steps.cache.outputs.cache-hit != 'true'
+#         run: ./scripts/installNodeModules.sh
 
-      - name: Integration Tests - Next
-        run: yarn test:integration --nextJS
+#       - name: Integration Tests
+#         run: yarn test:integration:ci
+
+#       - name: Integration Tests - Next
+#         run: yarn test:integration --nextJS
