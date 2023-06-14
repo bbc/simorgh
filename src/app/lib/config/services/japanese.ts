@@ -260,7 +260,7 @@ export const service: DefaultServiceConfig = {
         text: 'BBCニュースが信頼できる理由',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/japanese/help-33991539',
+        href: 'https://www.bbc.com/japanese/help-33991539',
         text: '本サイトの外部リンク方針はこちら',
       },
       links: [
@@ -277,7 +277,7 @@ export const service: DefaultServiceConfig = {
           text: '個人情報取り扱い方針',
         },
         {
-          href: 'https://www.bbc.co.uk/usingthebbc/cookies/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/',
           text: 'クッキー',
         },
         {

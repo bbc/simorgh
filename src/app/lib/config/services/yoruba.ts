@@ -262,24 +262,24 @@ export const service: DefaultServiceConfig = {
         text: 'Ìdí tí ẹ fi le è nígbàagbọ́ nínú ìròyìn BBC',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/feeds-and-links',
         text: 'Ọwọ́ tí a fi mú ìbáṣepọ̀ ti ìta.',
       },
       links: [
         {
-          href: 'https://www.bbc.co.uk/usingthebbc/terms/',
+          href: 'https://www.bbc.com/usingthebbc/terms/',
           text: 'Ìlànà Lílò',
         },
         {
-          href: 'https://www.bbc.co.uk/aboutthebbc',
+          href: 'https://www.bbc.com/aboutthebbc',
           text: 'Nípa BBC',
         },
         {
-          href: 'https://www.bbc.co.uk/usingthebbc/privacy/',
+          href: 'https://www.bbc.com/usingthebbc/privacy/',
           text: 'Òfin Àṣírí',
         },
         {
-          href: 'https://www.bbc.co.uk/usingthebbc/cookies/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/',
           text: 'Cookies',
         },
         {

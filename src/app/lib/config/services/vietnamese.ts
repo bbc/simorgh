@@ -276,7 +276,7 @@ export const service: DefaultServiceConfig = {
         text: 'Tại sao bạn có thể tin tưởng BBC News',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/feeds-and-links',
         text: 'Tìm hiểu cách chúng tôi tiếp cận việc dẫn tới trang ngoài',
       },
       links: [
@@ -293,7 +293,7 @@ export const service: DefaultServiceConfig = {
           text: 'Chính sách riêng tư',
         },
         {
-          href: 'https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html',
+          href: 'https://www.bbc.com/usingthebbc/cookies/',
           text: 'Cookie',
         },
         {
