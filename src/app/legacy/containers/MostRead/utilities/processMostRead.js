@@ -71,7 +71,7 @@ const mostReadItems = ({ data, isAmp, numberOfItems, service }) => {
 
   const records = pathOr([], ['records'], filteredData);
 
-  const items = data.items?.slice(0, numberOfItems) || [];
+  const items = data.items || [];
   // eslint-disable-next-line no-restricted-syntax
   for (const record of records) {
     const mostReadItemData =
