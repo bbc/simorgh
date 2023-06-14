@@ -45,6 +45,5 @@ jobs:
         uses: cypress-io/github-action@v5.8.1
         with:
           working-directory: ws-nextjs-app
-          run: yarn install
           build: yarn build
           start: yarn start
