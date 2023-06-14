@@ -16,6 +16,7 @@ import { RequestContext } from '../../contexts/RequestContext';
 
 import styles from './styles';
 import { FormattedPromo, ImageProps, PromoProps } from './types';
+import { OptimoBlock } from '../../models/types/optimo';
 
 const buildImageProperties = (image?: ImageProps) => {
   if (!image) return null;
@@ -82,30 +83,21 @@ const TimestampFooterWithAmp = (props: PromoProps) => {
 };
 
 const optimoPromoFormatter = (props: PromoProps): FormattedPromo => {
-  const altText = pathOr<string>(
-    '',
-    [
-      'item',
-      'images',
-      'defaultPromoImage',
-      'blocks',
-      0,
-      'model',
-      'blocks',
-      0,
-      'model',
-      'blocks',
-      0,
-      'model',
-      'text',
-    ],
+  const defaultPromoImage = pathOr<OptimoBlock[]>(
+    [],
+    ['item', 'images', 'defaultPromoImage', 'blocks'],
     props,
   );
 
-  const imageProps = path<ImageProps>(
-    ['item', 'images', 'defaultPromoImage', 'blocks', 1, 'model'],
-    props,
-  );
+  const altText: string = defaultPromoImage?.find(
+    block => block.type === 'altText',
+    // @ts-expect-error - Optimo nested block structure
+  )?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
+
+  // @ts-expect-error - We don't have types for specific Optimo blocks yet
+  const imageMetadata: ImageProps = defaultPromoImage.find(
+    block => block.type === 'rawImage',
+  ).model;
 
   return {
     children: path<string>(
@@ -126,10 +118,9 @@ const optimoPromoFormatter = (props: PromoProps): FormattedPromo => {
     footer: <TimestampFooterWithAmp {...props} />,
     url: props?.item?.locators?.canonicalUrl,
     image: buildImageProperties({
-      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-      ...imageProps!,
+      ...imageMetadata,
       altText,
-      copyright: imageProps?.copyrightHolder,
+      copyright: imageMetadata?.copyrightHolder,
     }),
     eventTrackingData: props?.eventTrackingData?.block,
   };
