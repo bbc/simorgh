@@ -165,7 +165,7 @@ Object {
 exports[`AMP Most Watched Page Footer Anchors should match text and url 6`] = `
 Object {
   "text": "کوکیز",
-  "url": "https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
 }
 `;
 
@@ -179,7 +179,7 @@ Object {
 exports[`AMP Most Watched Page Footer Anchors should match text and url 8`] = `
 Object {
   "text": "بیرونی لنکس کے بارے میں ہماری پالیسی.",
-  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
+  "url": "https://www.bbc.com/editorialguidelines/guidance/feeds-and-links",
 }
 `;
 
