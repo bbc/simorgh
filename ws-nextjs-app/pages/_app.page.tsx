@@ -83,6 +83,7 @@ export default function App({ Component, pageProps }: Props) {
         >
           <EventTrackingContextProvider pageData={pageData}>
             <UserContextProvider>
+              {/* @ts-expect-error pageData requires metadata.type to be set to page type i.e. LIVE, but pageData is currently declared as an object */}
               <PageWrapper pageData={pageData} status={status}>
                 {status === 200 ? (
                   <Component {...pageProps} />
