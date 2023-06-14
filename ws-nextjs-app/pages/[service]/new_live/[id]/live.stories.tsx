@@ -17,6 +17,7 @@ const mockPageData = {
 };
 
 const Component = () => (
+  // @ts-expect-error partial data required for storybook
   <PageLayoutWrapper pageData={mockPageData} status={200}>
     <Live pageData={mockPageData} />
   </PageLayoutWrapper>
