@@ -278,24 +278,24 @@ export const service: DefaultServiceConfig = {
         text: 'BBC News를 신뢰할 수 있는 이유',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/feeds-and-links',
         text: '외부 링크에 대한 본사 정책 보기',
       },
       links: [
         {
-          href: 'https://www.bbc.co.uk/usingthebbc/terms/',
+          href: 'https://www.bbc.com/usingthebbc/terms/',
           text: '이용 약관',
         },
         {
-          href: 'https://www.bbc.co.uk/aboutthebbc',
+          href: 'https://www.bbc.com/aboutthebbc',
           text: 'BBC 소개',
         },
         {
-          href: 'https://www.bbc.co.uk/usingthebbc/privacy/',
+          href: 'https://www.bbc.com/usingthebbc/privacy/',
           text: '개인정보취급방침',
         },
         {
-          href: 'https://www.bbc.co.uk/usingthebbc/cookies/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/',
           text: '쿠키정책',
         },
         {

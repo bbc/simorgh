@@ -361,7 +361,14 @@
           "title": "Eré Ìdárayá",
           "visualProminence": "NORMAL"
         }
-      ]
+      ],
+      "metadata": {
+        "analytics": {
+          "contentId": "urn:bbc:tipo:topic:cw95pllwv8rt",
+          "contentType": "index-home",
+          "pageIdentifier": "yoruba.page"
+        }
+      }
     },
     "contentType": "application/json; charset=utf-8",
     "dataSource": "Data is from live TIPO"

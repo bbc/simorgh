@@ -341,7 +341,7 @@ export const service: DefaultServiceConfig = {
           text: 'سیاست حفظ حریم خصوصی',
         },
         {
-          href: 'https://www.bbc.co.uk/usingthebbc/cookies/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/',
           text: 'کوکی ها',
         },
         {
@@ -364,10 +364,6 @@ export const service: DefaultServiceConfig = {
         url: '/persian',
       },
       {
-        title: 'اعتراضات ایران',
-        url: '/persian/topics/c5j85v96d92t',
-      },
-      {
         title: 'پخش زنده',
         url: '/persian/media-49522521',
       },
@@ -378,10 +374,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'تلویزیون',
         url: '/persian/tv-and-radio-37434377',
-      },
-      {
-        title: 'رادیو',
-        url: '/persian/tv-and-radio-37434376',
       },
       {
         title: 'ايران',
@@ -414,6 +406,10 @@ export const service: DefaultServiceConfig = {
       {
         title: 'ناظران می‌گویند',
         url: '/persian/blogs-54099951',
+      },
+      {
+        title: 'رادیو',
+        url: '/persian/tv-and-radio-37434376',
       },
     ],
   },

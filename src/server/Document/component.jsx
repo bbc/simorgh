@@ -16,6 +16,7 @@ const Document = ({
   data,
   helmet,
   isAmp,
+  isApp,
   modernScripts,
   legacyScripts,
   links,
@@ -46,6 +47,7 @@ const Document = ({
   return (
     <html lang="en-GB" {...noJsHtmlAttrs} {...htmlAttrs}>
       <head>
+        {isApp && <meta name="robots" content="noindex" />}
         {meta}
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         {title}

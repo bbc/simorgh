@@ -7,6 +7,7 @@ import useConsentBanners from './useConsentBanners';
 
 const Canonical = ({ onDismissFocusRef }) => {
   const { updateCookiePolicy } = useContext(UserContext);
+
   const {
     showPrivacyBanner,
     showCookieBanner,
