@@ -3,8 +3,6 @@ import { serviceNumerals } from '../../Canonical/Rank';
 
 export const transformData = () => {
   return `
-    data.items = data.records || [];
-
     if (data.items.length === 0) {
       throw new Error('Empty records from mostread endpoint');
     }
@@ -28,7 +26,7 @@ export default ({
   const getRemoteData = async () => {
     try {
       const response = await fetch("${endpoint}");
-      const data = await response.json();
+      const { data } = await response.json();
 
       ${transformData()}
       

@@ -1,16 +1,11 @@
 /* eslint-disable no-eval */
-import { omit } from 'ramda';
 import { transformData } from '.';
 import { WesternArabic } from '../../../../legacy/psammead/psammead-locales/src/numerals';
-import pidginMostRead from '../../../../../../data/pidgin/mostRead/index.json';
+import { data as pidginMostRead } from '../../../../../../data/pidgin/mostRead/pidgin.json';
 
 describe('getRemoteDataScript', () => {
   it('transformData should append rankTranslation to each item', async () => {
-    const data = {
-      ...pidginMostRead,
-      items: pidginMostRead.records.slice(0, 10),
-    };
-    expect(data).toHaveProperty('items');
+    const data = pidginMostRead;
 
     const translations = WesternArabic;
 
@@ -23,9 +18,9 @@ describe('getRemoteDataScript', () => {
     });
   });
 
-  it('transformData should throw an error if there are no items in the data response', async () => {
-    const data = omit(['records'], pidginMostRead);
-    expect(data).not.toHaveProperty('items');
+  it('transformData should throw an error if there are empty items in the data response', async () => {
+    const data = { ...pidginMostRead, items: [] };
+    expect(data.items).toHaveLength(0);
 
     const translations = WesternArabic;
     expect(translations).toBeDefined();
