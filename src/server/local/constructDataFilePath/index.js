@@ -12,9 +12,11 @@ export default ({
   let dataPath;
 
   switch (pageType) {
+    case 'mostRead':
+      dataPath = `${variant || service}.json`;
+      break;
     case 'frontpage':
     case 'homePage':
-    case 'mostRead':
     case 'mostWatched':
     case 'secondaryColumn':
     case 'recommendations':
