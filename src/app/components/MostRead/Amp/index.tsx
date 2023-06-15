@@ -92,8 +92,8 @@ const AmpMostRead = ({ endpoint, size = 'default' }: AmpMostReadProps) => {
             <MostReadLink
               dir={direction}
               service={service}
-              title="{{promo.headlines.shortHeadline}}"
-              href="{{promo.locators.assetUri}}"
+              title="{{title}}"
+              href="{{href}}"
               size={size}
             />
           </MostReadItemWrapper>
