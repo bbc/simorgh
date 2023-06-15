@@ -1,5 +1,7 @@
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
+import metadata from './metadata.json';
+import md from './README.md';
 import ThemeProvider from '../ThemeProvider';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { Services } from '../../models/types/global';
@@ -56,6 +58,10 @@ export default {
   parameters: {
     chromatic: {
       viewports: [1280],
+    },
+    metadata,
+    docs: {
+      md,
     },
   },
 };
