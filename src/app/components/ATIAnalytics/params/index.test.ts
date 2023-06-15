@@ -271,9 +271,28 @@ describe('ATIAnalytics params', () => {
         undefined,
         homePageAnalyticsData,
       );
-      expect(url).toMatchInlineSnapshot(
-        `"s=598285&s2=atiAnalyticsProducerId&p=kyrgyz.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Atipo%3Atopic%3Acm7682qz7v1t]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[pcm]&x5=[http%253A%252F%252Flocalhost%252F]&x7=[index-home]&x8=[simorgh]&x9=[pageTitle]"`,
-      );
+
+      const parsedATIURLParams = new URLSearchParams(url as string);
+
+      const expectedATIURLParams = [
+        ['s', '598285'],
+        ['s2', 'atiAnalyticsProducerId'],
+        ['p', 'kyrgyz.page'],
+        ['r', '0x0x24x24'],
+        ['re', '1024x768'],
+        ['hl', '00-00-00'],
+        ['lng', 'en-US'],
+        ['x1', '[urn:bbc:tipo:topic:cm7682qz7v1t]'],
+        ['x2', '[responsive]'],
+        ['x3', '[atiAnalyticsAppName]'],
+        ['x4', '[pcm]'],
+        ['x5', '[http%3A%2F%2Flocalhost%2F]'],
+        ['x7', '[index-home]'],
+        ['x8', '[simorgh]'],
+        ['x9', '[pageTitle]'],
+      ];
+
+      expect([...parsedATIURLParams]).toEqual(expectedATIURLParams);
     });
 
     it('should have both ref parameter and x6 referrer url parameter, if referrer url exists', () => {
