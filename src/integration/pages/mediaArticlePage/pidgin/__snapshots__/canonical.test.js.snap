@@ -21,28 +21,28 @@ Object {
 exports[`Canonical Media Article Page Footer Anchors should match text and url 3`] = `
 Object {
   "text": "How dem dey take use am",
-  "url": "https://www.bbc.co.uk/usingthebbc/terms/",
+  "url": "https://www.bbc.com/usingthebbc/terms/",
 }
 `;
 
 exports[`Canonical Media Article Page Footer Anchors should match text and url 4`] = `
 Object {
   "text": "As e concern BBC",
-  "url": "https://www.bbc.co.uk/aboutthebbc",
+  "url": "https://www.bbc.com/aboutthebbc",
 }
 `;
 
 exports[`Canonical Media Article Page Footer Anchors should match text and url 5`] = `
 Object {
   "text": "Privacy Policy",
-  "url": "https://www.bbc.co.uk/usingthebbc/privacy/",
+  "url": "https://www.bbc.com/usingthebbc/privacy/",
 }
 `;
 
 exports[`Canonical Media Article Page Footer Anchors should match text and url 6`] = `
 Object {
   "text": "Cookies",
-  "url": "https://www.bbc.co.uk/usingthebbc/cookies/",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
 }
 `;
 
@@ -56,7 +56,7 @@ Object {
 exports[`Canonical Media Article Page Footer Anchors should match text and url 8`] = `
 Object {
   "text": "De way wey we de take go external link.",
-  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
+  "url": "https://www.bbc.com/editorialguidelines/guidance/feeds-and-links",
 }
 `;
 
