@@ -176,7 +176,7 @@ Object {
 exports[`AMP persian/afghanistan IDX page Footer Anchors should match text and url 6`] = `
 Object {
   "text": "کوکی ها",
-  "url": "https://www.bbc.co.uk/usingthebbc/cookies/",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
 }
 `;
 
