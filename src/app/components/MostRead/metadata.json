@@ -6,7 +6,7 @@
     "year": 2023
   },
   "uxAccessibilityDoc": {
-    "done": true,
+    "done": false,
     "reference": {
       "url": "",
       "label": "Screen Reader UX"
@@ -20,7 +20,7 @@
     }
   },
   "swarm": {
-    "done": true,
+    "done": false,
     "reference": {
       "url": "",
       "label": "A11y swarm notes"
