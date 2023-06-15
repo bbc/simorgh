@@ -69,7 +69,7 @@ const AUDIT_URLS = {
 
   TIPO_HOME_PAGE: {
     live: ['https://www.test.bbc.com/kyrgyz?renderer_env=live'],
-    test: ['https://www.test.bbc.com/kyrgyz'],
+    test: ['https://www.bbc.com/kyrgyz'],
   },
 
   MEDIA_ARTICLE_PAGE: {
