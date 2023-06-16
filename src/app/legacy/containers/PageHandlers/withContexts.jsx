@@ -33,6 +33,11 @@ const WithContexts = Component => {
       isNextJs,
     } = props;
 
+    const {
+      metadata: { analytics },
+      title,
+    } = pageData;
+
     return (
       <ToggleContextProvider toggles={toggles}>
         <ServiceContextProvider
@@ -57,11 +62,19 @@ const WithContexts = Component => {
             mvtExperiments={mvtExperiments}
             isNextJs={isNextJs}
           >
-            <EventTrackingContextProvider pageData={pageData}>
-              <UserContextProvider>
-                <Component {...props} />
-              </UserContextProvider>
-            </EventTrackingContextProvider>
+            {analytics ? (
+              <EventTrackingContextProvider atiData={{ analytics, title }}>
+                <UserContextProvider>
+                  <Component {...props} />
+                </UserContextProvider>
+              </EventTrackingContextProvider>
+            ) : (
+              <EventTrackingContextProvider pageData={pageData}>
+                <UserContextProvider>
+                  <Component {...props} />
+                </UserContextProvider>
+              </EventTrackingContextProvider>
+            )}
           </RequestContextProvider>
         </ServiceContextProvider>
       </ToggleContextProvider>

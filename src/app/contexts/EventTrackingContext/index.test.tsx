@@ -5,7 +5,7 @@ import { render, screen } from '@testing-library/react';
 
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import { STORY_PAGE } from '#app/routes/utils/pageTypes';
+import { STORY_PAGE, HOME_PAGE } from '#app/routes/utils/pageTypes';
 import { PageTypes } from '#app/models/types/global';
 import { ServiceContextProvider } from '../ServiceContext';
 import { EventTrackingContextProvider, EventTrackingContext } from '.';
@@ -85,6 +85,47 @@ describe('Expected use', () => {
       pageIdentifier: 'news::pidgin.news.story.51745682.page',
       platform: 'canonical',
       producerId: '70',
+      statsDestination: 'WS_NEWS_LANGUAGES_TEST',
+    });
+  });
+
+  it('should provide tracking data to all child components using the ATI metadata block', () => {
+    const atiData = {
+      analytics: {
+        contentId: 'urn:bbc:tipo:topic:cm7682qz7v1t',
+        contentType: 'index-home',
+        pageIdentifier: 'kyrgyz.page',
+      },
+      title: 'pageTitle',
+    };
+
+    render(
+      <RequestContextProvider
+        bbcOrigin="https://www.test.bbc.com"
+        pageType={HOME_PAGE}
+        isAmp={false}
+        isApp={false}
+        service="kyrgyz"
+        pathname="/kyrgyz"
+      >
+        <ServiceContextProvider service="kyrgyz">
+          <ToggleContextProvider toggles={defaultToggles}>
+            <EventTrackingContextProvider atiData={atiData}>
+              <TestComponent />
+            </EventTrackingContextProvider>
+          </ToggleContextProvider>
+        </ServiceContextProvider>
+      </RequestContextProvider>,
+    );
+
+    const testEl = screen.getByTestId('test-component');
+    const trackingData = JSON.parse(testEl.textContent as string);
+
+    expect(trackingData).toEqual({
+      campaignID: 'index-home',
+      pageIdentifier: 'kyrgyz.page',
+      platform: 'canonical',
+      producerId: '58',
       statsDestination: 'WS_NEWS_LANGUAGES_TEST',
     });
   });

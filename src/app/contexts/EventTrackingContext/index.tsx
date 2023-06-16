@@ -22,7 +22,10 @@ import {
 import { PageTypes, Platforms } from '../../models/types/global';
 import { buildATIEventTrackingParams } from '../../components/ATIAnalytics/params';
 import { ServiceContext } from '../ServiceContext';
-import { ATIEventTrackingProps } from '../../components/ATIAnalytics/types';
+import {
+  ATIData,
+  ATIEventTrackingProps,
+} from '../../components/ATIAnalytics/types';
 
 type EventTrackingContextProps =
   | {
@@ -73,11 +76,13 @@ const NO_TRACKING_PROPS = {};
 
 type EventTrackingProviderProps = {
   pageData?: object | null;
+  atiData?: ATIData;
 };
 
 export const EventTrackingContextProvider = ({
   children,
   pageData = null,
+  atiData,
 }: PropsWithChildren<EventTrackingProviderProps>) => {
   const requestContext = useContext(RequestContext);
   const { isNextJs, pageType } = requestContext;
@@ -88,7 +93,7 @@ export const EventTrackingContextProvider = ({
   const { enabled: eventTrackingIsEnabled } = useToggle('eventTracking');
 
   // TODO: Enable event tracking for NextJS pages
-  if (!eventTrackingIsEnabled || !pageData || isNextJs) {
+  if (!eventTrackingIsEnabled || ((!pageData || !atiData) && isNextJs)) {
     return (
       <EventTrackingContext.Provider value={NO_TRACKING_PROPS}>
         {children}
@@ -99,9 +104,10 @@ export const EventTrackingContextProvider = ({
   const campaignID = getCampaignID(pageType as CampaignPageTypes);
   const { pageIdentifier, platform, statsDestination } =
     buildATIEventTrackingParams(
-      pageData,
       requestContext,
       serviceContext,
+      pageData,
+      atiData,
     ) as ATIEventTrackingProps;
   const trackingProps = {
     campaignID,

@@ -346,9 +346,9 @@ describe('ATIAnalytics params', () => {
   describe('buildATIEventTrackingParams', () => {
     it('should return the correct article params', () => {
       const params = buildATIEventTrackingParams(
-        article,
         { ...requestContext, pageType: ARTICLE_PAGE },
         serviceContext,
+        article,
       );
       expect(params).toEqual({
         appName: 'atiAnalyticsAppName',
@@ -377,9 +377,9 @@ describe('ATIAnalytics params', () => {
 
     it('should return the correct media article params', () => {
       const params = buildATIEventTrackingParams(
-        article,
         { ...requestContext, pageType: MEDIA_ARTICLE_PAGE },
         serviceContext,
+        article,
       );
       expect(params).toEqual({
         appName: 'atiAnalyticsAppName',
@@ -408,9 +408,9 @@ describe('ATIAnalytics params', () => {
 
     it('should return the correct frontPage params', () => {
       const params = buildATIEventTrackingParams(
-        frontPage,
         { ...requestContext, pageType: FRONT_PAGE },
         serviceContext,
+        frontPage,
       );
       expect(params).toEqual({
         appName: 'atiAnalyticsAppName',
@@ -431,9 +431,9 @@ describe('ATIAnalytics params', () => {
 
     it('should return the correct IDX page params', () => {
       const params = buildATIEventTrackingParams(
-        idxPage,
         { ...requestContext, pageType: INDEX_PAGE },
         serviceContext,
+        idxPage,
       );
       expect(params).toEqual({
         appName: 'atiAnalyticsAppName',
@@ -454,9 +454,9 @@ describe('ATIAnalytics params', () => {
 
     it('should return the correct media params', () => {
       const params = buildATIEventTrackingParams(
-        media,
         { ...requestContext, pageType: MEDIA_PAGE },
         serviceContext,
+        media,
       );
       expect(params).toEqual({
         appName: 'atiAnalyticsAppName',
@@ -475,9 +475,9 @@ describe('ATIAnalytics params', () => {
 
     it('should return the correct MAP params', () => {
       const params = buildATIEventTrackingParams(
-        MAP,
         { ...requestContext, pageType: MEDIA_ASSET_PAGE },
         serviceContext,
+        MAP,
       );
       expect(params).toEqual({
         appName: 'atiAnalyticsAppName',
@@ -505,9 +505,9 @@ describe('ATIAnalytics params', () => {
 
     it('should return the correct PGL params', () => {
       const params = buildATIEventTrackingParams(
-        PGL,
         { ...requestContext, pageType: PHOTO_GALLERY_PAGE },
         serviceContext,
+        PGL,
       );
       expect(params).toEqual({
         appName: 'atiAnalyticsAppName',
@@ -530,43 +530,15 @@ describe('ATIAnalytics params', () => {
 
     it('should return the correct Homepage params', () => {
       const { analytics } = homePageAnalyticsData;
-      const homePageData = {
-        metadata: { analytics },
+      const homePageATIMetadata = {
+        analytics,
         title: 'pageTitle',
-        pageType: 'home',
-        curations: [
-          {
-            summaries: [
-              {
-                type: 'article',
-                title:
-                  '“Баланы сабады деп аялымды камап салышарын өзүм да билген эмесмин”. Кадамжайда токмоктолгон наристенин атасы 3\r',
-                firstPublished: '2023-02-02T10:06:57.156Z',
-                link: 'https://www.bbc.com/kyrgyz/articles/cemg3359nwro',
-                imageUrl:
-                  'https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg',
-                description: '',
-                imageAlt: 'test',
-                id: 'cemg3359nwro',
-              },
-            ],
-            activePage: 1,
-            pageCount: 1,
-            curationId:
-              'urn:bbc:tipo:list:524cf34b-cac2-4ce2-ac64-53eb70019202',
-            curationType: 'tipo-curation',
-            position: 1,
-            title: 'Редактордун тандоосу',
-            visualProminence: 'HIGH',
-            visualStyle: 'COLLECTION',
-          },
-        ],
-        description: 'Hello I am a description!',
       };
       const params = buildATIEventTrackingParams(
-        homePageData,
         { ...requestContext, pageType: HOME_PAGE },
         serviceContext,
+        undefined,
+        homePageATIMetadata,
       );
       expect(params).toEqual({
         appName: 'atiAnalyticsAppName',
@@ -589,9 +561,9 @@ describe('ATIAnalytics params', () => {
       'should return empty object {} because %s page type is not supported',
       pageType => {
         const params = buildATIEventTrackingParams(
-          {},
           { ...requestContext, pageType },
           serviceContext,
+          {},
         );
 
         expect(params).toStrictEqual({});
@@ -604,10 +576,10 @@ describe('ATIAnalytics params', () => {
 
       const pageData = null;
       const params = buildATIEventTrackingParams(
-        // @ts-expect-error - pass in null value to ensure error handling working as expected
-        pageData,
         { ...requestContext, pageType: PHOTO_GALLERY_PAGE },
         serviceContext,
+        // @ts-expect-error - pass in null value to ensure error handling working as expected
+        pageData,
       );
 
       expect(params).toEqual({});
