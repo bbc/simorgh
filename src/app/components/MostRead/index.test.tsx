@@ -258,16 +258,16 @@ describe('MostRead', () => {
       process.env.SIMORGH_APP_ENV = originalEnvironment;
     });
 
-    it('should not render a most read component when the environment is live', () => {
+    it('should render a most read component when the environment is live', () => {
       process.env.SIMORGH_APP_ENV = 'live';
 
-      // if isLive is true, DO NOT show most read component
+      // if isLive is true, show most read component
       const { container } = render(
         <MostRead data={pidginMostReadData.data} columnLayout="twoColumn" />,
         { toggles },
       );
 
-      expect(container).toBeEmptyDOMElement();
+      expect(container).not.toBeEmptyDOMElement();
       expect(isLive()).toBe(true);
     });
 
