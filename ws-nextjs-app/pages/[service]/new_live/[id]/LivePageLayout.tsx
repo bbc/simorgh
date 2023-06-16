@@ -4,7 +4,6 @@ import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
 import Pagination from '#pages/TopicPage/Pagination';
 import Heading from '#app/components/Heading';
-import Text from '#app/components/Text';
 import { ServiceContext } from '#contexts/ServiceContext';
 import nodeLogger from '#lib/logger.node';
 import LegacyText from '#app/legacy/containers/Text';
@@ -12,6 +11,7 @@ import Blocks from '#app/legacy/containers/Blocks';
 import MetadataContainer from '../../../../../src/app/components/Metadata';
 import LinkedDataContainer from '../../../../../src/app/components/LinkedData';
 import PostsList from './Posts/index';
+import Header from './Header/index';
 
 import styles from './styles';
 import { StreamResponse } from './Posts/types';
@@ -23,7 +23,7 @@ type ComponentProps = {
   pageData: {
     pageCount: number;
     activePage: number;
-    title?: string;
+    title: string;
     description?: string;
     summaryPoints: { content: { model: { blocks: object[] } } | null };
     liveTextStream: { content: StreamResponse | null };
@@ -81,9 +81,7 @@ const LivePage = ({
       />
       <LinkedDataContainer type="CollectionPage" seoTitle="Test Live Page" />
       <main css={styles.wrapper}>
-        <Heading level={1}>{title}</Heading>
-        {/* Text as="p" used as placeholder. Awaiting screen reader UX and UX */}
-        <Text as="p">{description}</Text>
+        <Header title={title} description={description} />
         <Summary summaryBlocks={summaryContent?.model.blocks} />
         {liveTextStream.content && (
           <PostsList postData={liveTextStream.content} />
