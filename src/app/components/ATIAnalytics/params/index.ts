@@ -47,7 +47,11 @@ import {
 } from './topicPage/buildParams';
 import { RequestContextProps } from '../../../contexts/RequestContext';
 import { ServiceConfig } from '../../../models/types/serviceConfig';
-import { PageData, ATIPageTrackingProps, ATIData } from '../types';
+import {
+  PageData,
+  ATIPageTrackingProps,
+  ATIConfigurationDetailsProviders,
+} from '../types';
 import { PageTypes } from '../../../models/types/global';
 
 const ARTICLE_MEDIA_ASSET = 'article-media-asset';
@@ -204,12 +208,12 @@ const createBuilderFactory = (
   return pageTypeHandlers[pageType];
 };
 
-export const buildATIUrl = (
-  requestContext: RequestContextProps,
-  serviceContext: ServiceConfig,
-  data?: PageData,
-  atiData?: ATIData,
-) => {
+export const buildATIUrl = ({
+  requestContext,
+  serviceContext,
+  data,
+  atiData,
+}: ATIConfigurationDetailsProviders) => {
   if (atiData) {
     return buildPageATIUrl({ atiData, requestContext, serviceContext });
   }
@@ -225,12 +229,12 @@ export const buildATIUrl = (
   return null;
 };
 
-export const buildATIEventTrackingParams = (
-  requestContext: RequestContextProps,
-  serviceContext: ServiceConfig,
-  data?: PageData,
-  atiData?: ATIData,
-) => {
+export const buildATIEventTrackingParams = ({
+  requestContext,
+  serviceContext,
+  data,
+  atiData,
+}: ATIConfigurationDetailsProviders) => {
   try {
     if (atiData) {
       return buildPageATIParams({

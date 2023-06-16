@@ -79,6 +79,13 @@ export interface ATIDataWithContexts {
   atiData: ATIData;
 }
 
+export interface ATIConfigurationDetailsProviders {
+  requestContext: RequestContextProps;
+  serviceContext: ServiceConfig;
+  data?: PageData;
+  atiData?: ATIData;
+}
+
 export interface ATIAnalyticsProps {
   baseUrl?: string;
   pageviewParams: string;

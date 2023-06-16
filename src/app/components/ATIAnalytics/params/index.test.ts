@@ -188,89 +188,88 @@ const homePageAnalyticsData: ATIData = {
 describe('ATIAnalytics params', () => {
   describe('buildATIUrl', () => {
     it('should return the correct article url', () => {
-      const url = buildATIUrl(
-        { ...requestContext, pageType: ARTICLE_PAGE },
+      const url = buildATIUrl({
+        requestContext: { ...requestContext, pageType: ARTICLE_PAGE },
+        data: article,
         serviceContext,
-        article,
-      );
+      });
       expect(url).toMatchInlineSnapshot(
         `"s=598285&s2=atiAnalyticsProducerId&p=pidgin.articles.%2F%2Fwww.bbc.co.uk.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Aoptimo%3Aasset%3A54321]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http%253A%252F%252Flocalhost%252F]&x6=[originhttp%253A%252F%252Fwww.example.com]&x7=[article]&x8=[simorgh]&x9=[pageTitle]&x10=[scotland]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x13=[thing%2520english%2520label%25201~thing%2520english%2520label%25202]&x14=[thing%2520id%25201~thing%2520id%25202]&x17=[thing%2520english%2520label%25201~thing%2520english%2520label%25202]&ref=originhttp://www.example.com"`,
       );
     });
 
     it('should return the correct media article url', () => {
-      const url = buildATIUrl(
-        { ...requestContext, pageType: MEDIA_ARTICLE_PAGE },
+      const url = buildATIUrl({
+        requestContext: { ...requestContext, pageType: MEDIA_ARTICLE_PAGE },
+        data: article,
         serviceContext,
-        article,
-      );
+      });
       expect(url).toMatchInlineSnapshot(
         `"s=598285&s2=atiAnalyticsProducerId&p=pidgin.articles.%2F%2Fwww.bbc.co.uk.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Aoptimo%3Aasset%3A54321]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http%253A%252F%252Flocalhost%252F]&x6=[originhttp%253A%252F%252Fwww.example.com]&x7=[article-sfv]&x8=[simorgh]&x9=[pageTitle]&x10=[scotland]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x13=[thing%2520english%2520label%25201~thing%2520english%2520label%25202]&x14=[thing%2520id%25201~thing%2520id%25202]&x17=[thing%2520english%2520label%25201~thing%2520english%2520label%25202]&ref=originhttp://www.example.com"`,
       );
     });
 
     it('should return the correct frontPage url', () => {
-      const url = buildATIUrl(
-        { ...requestContext, pageType: FRONT_PAGE },
+      const url = buildATIUrl({
+        requestContext: { ...requestContext, pageType: FRONT_PAGE },
+        data: frontPage,
         serviceContext,
-        frontPage,
-      );
+      });
       expect(url).toMatchInlineSnapshot(
         `"s=598285&s2=atiAnalyticsProducerId&p=service.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Acps%3A00000000-0000-0000-0000-000000000000]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http%253A%252F%252Flocalhost%252F]&x7=[index-home]&x8=[simorgh]&x9=[title%2520-%2520brandName]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]"`,
       );
     });
 
     it('should return the correct IDX page url', () => {
-      const url = buildATIUrl(
-        { ...requestContext, pageType: INDEX_PAGE },
+      const url = buildATIUrl({
+        requestContext: { ...requestContext, pageType: INDEX_PAGE },
+        data: idxPage,
         serviceContext,
-        idxPage,
-      );
+      });
       expect(url).toMatchInlineSnapshot(
         `"s=598285&s2=atiAnalyticsProducerId&p=service.page.idxpage&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Acps%3A00000000-0000-0000-0000-000000000000]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http%253A%252F%252Flocalhost%252F]&x7=[index-section]&x8=[simorgh]&x9=[title%2520-%2520brandName]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]"`,
       );
     });
 
     it('should return the correct media url', () => {
-      const url = buildATIUrl(
-        { ...requestContext, pageType: MEDIA_PAGE },
+      const url = buildATIUrl({
+        requestContext: { ...requestContext, pageType: MEDIA_PAGE },
+        data: media,
         serviceContext,
-        media,
-      );
+      });
       expect(url).toMatchInlineSnapshot(
         `"s=598285&s2=atiAnalyticsProducerId&p=pageIdentifier&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[id]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http%253A%252F%252Flocalhost%252F]&x7=[player-live]&x8=[simorgh]&x9=[pageTitle]"`,
       );
     });
 
     it('should return the correct MAP url', () => {
-      const url = buildATIUrl(
-        { ...requestContext, pageType: MEDIA_ASSET_PAGE },
+      const url = buildATIUrl({
+        requestContext: { ...requestContext, pageType: MEDIA_ASSET_PAGE },
+        data: MAP,
         serviceContext,
-        MAP,
-      );
+      });
       expect(url).toMatchInlineSnapshot(
         `"s=598285&s2=atiAnalyticsProducerId&p=pageIdentifier&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Acps%3A4d36f80b-8711-0b4e-8da0-ef76ae8ac470]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http%253A%252F%252Flocalhost%252F]&x7=[article-media-asset]&x8=[simorgh]&x9=[headline%2520-%2520brandName]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x16=[WS%20-%20Inspire%20me]&x17=[News]"`,
       );
     });
 
     it('should return the correct PGL url', () => {
-      const url = buildATIUrl(
-        { ...requestContext, pageType: PHOTO_GALLERY_PAGE },
+      const url = buildATIUrl({
+        requestContext: { ...requestContext, pageType: PHOTO_GALLERY_PAGE },
+        data: PGL,
         serviceContext,
-        PGL,
-      );
+      });
       expect(url).toMatchInlineSnapshot(
         `"s=598285&s2=atiAnalyticsProducerId&p=pageIdentifier&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Acps%3A4d36f80b-8711-0b4e-8da0-ef76ae8ac470]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http%253A%252F%252Flocalhost%252F]&x7=[article-photo-gallery]&x8=[simorgh]&x9=[headline%2520-%2520brandName]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]"`,
       );
     });
 
     it('should return the correct Homepage url', () => {
-      const url = buildATIUrl(
-        { ...requestContext, pageType: HOME_PAGE },
+      const url = buildATIUrl({
+        requestContext: { ...requestContext, pageType: HOME_PAGE },
+        atiData: homePageAnalyticsData,
         serviceContext,
-        undefined,
-        homePageAnalyticsData,
-      );
+      });
 
       const parsedATIURLParams = new URLSearchParams(url as string);
 
@@ -296,11 +295,11 @@ describe('ATIAnalytics params', () => {
     });
 
     it('should have both ref parameter and x6 referrer url parameter, if referrer url exists', () => {
-      const atiUrl = buildATIUrl(
-        { ...requestContext, pageType: ARTICLE_PAGE },
+      const atiUrl = buildATIUrl({
+        requestContext: { ...requestContext, pageType: ARTICLE_PAGE },
+        data: article,
         serviceContext,
-        article,
-      ) as string;
+      }) as string;
       const params = atiUrl.split('&');
 
       expect(params).toContain('x6=[originhttp%253A%252F%252Fwww.example.com]');
@@ -308,22 +307,22 @@ describe('ATIAnalytics params', () => {
     });
 
     it('should have ref parameter as the last parameter, if referrer url exists', () => {
-      const atiUrl = buildATIUrl(
-        { ...requestContext, pageType: ARTICLE_PAGE },
+      const atiUrl = buildATIUrl({
+        requestContext: { ...requestContext, pageType: ARTICLE_PAGE },
+        data: article,
         serviceContext,
-        article,
-      ) as string;
+      }) as string;
       const params = atiUrl.split('&');
 
       expect(params.pop()).toEqual('ref=originhttp://www.example.com');
     });
 
     it('should not have ref and x6 parameters, if referrer url does not exist', () => {
-      const atiUrl = buildATIUrl(
-        { ...requestContext, pageType: ARTICLE_PAGE, previousPath: '' },
+      const atiUrl = buildATIUrl({
+        requestContext: { ...requestContext, pageType: ARTICLE_PAGE, previousPath: '' },
+        data: article,
         serviceContext,
-        article,
-      ) as string;
+      }) as string;
       const params = atiUrl.split('&');
 
       expect(params).not.toContain('x6=');
@@ -333,11 +332,11 @@ describe('ATIAnalytics params', () => {
     it.each([HOME_PAGE, ERROR_PAGE, LIVE_PAGE])(
       'should return empty object {} because %s page type is not supported',
       pageType => {
-        const url = buildATIUrl(
-          { ...requestContext, pageType },
+        const url = buildATIUrl({
+          requestContext: { ...requestContext, pageType },
+          data: {},
           serviceContext,
-          {},
-        );
+        });
         expect(url).toStrictEqual({});
       },
     );
@@ -345,11 +344,11 @@ describe('ATIAnalytics params', () => {
 
   describe('buildATIEventTrackingParams', () => {
     it('should return the correct article params', () => {
-      const params = buildATIEventTrackingParams(
-        { ...requestContext, pageType: ARTICLE_PAGE },
+      const params = buildATIEventTrackingParams({
+        requestContext: { ...requestContext, pageType: ARTICLE_PAGE },
+        data: article,
         serviceContext,
-        article,
-      );
+      });
       expect(params).toEqual({
         appName: 'atiAnalyticsAppName',
         contentId: 'urn:bbc:optimo:asset:54321',
@@ -376,11 +375,11 @@ describe('ATIAnalytics params', () => {
     });
 
     it('should return the correct media article params', () => {
-      const params = buildATIEventTrackingParams(
-        { ...requestContext, pageType: MEDIA_ARTICLE_PAGE },
+      const params = buildATIEventTrackingParams({
+        requestContext: { ...requestContext, pageType: MEDIA_ARTICLE_PAGE },
+        data: article,
         serviceContext,
-        article,
-      );
+      });
       expect(params).toEqual({
         appName: 'atiAnalyticsAppName',
         contentId: 'urn:bbc:optimo:asset:54321',
@@ -407,11 +406,11 @@ describe('ATIAnalytics params', () => {
     });
 
     it('should return the correct frontPage params', () => {
-      const params = buildATIEventTrackingParams(
-        { ...requestContext, pageType: FRONT_PAGE },
+      const params = buildATIEventTrackingParams({
+        requestContext: { ...requestContext, pageType: FRONT_PAGE },
+        data: frontPage,
         serviceContext,
-        frontPage,
-      );
+      });
       expect(params).toEqual({
         appName: 'atiAnalyticsAppName',
         contentId: 'urn:bbc:cps:00000000-0000-0000-0000-000000000000',
@@ -430,11 +429,11 @@ describe('ATIAnalytics params', () => {
     });
 
     it('should return the correct IDX page params', () => {
-      const params = buildATIEventTrackingParams(
-        { ...requestContext, pageType: INDEX_PAGE },
+      const params = buildATIEventTrackingParams({
+        requestContext: { ...requestContext, pageType: INDEX_PAGE },
+        data: idxPage,
         serviceContext,
-        idxPage,
-      );
+      });
       expect(params).toEqual({
         appName: 'atiAnalyticsAppName',
         contentId: 'urn:bbc:cps:00000000-0000-0000-0000-000000000000',
@@ -453,11 +452,11 @@ describe('ATIAnalytics params', () => {
     });
 
     it('should return the correct media params', () => {
-      const params = buildATIEventTrackingParams(
-        { ...requestContext, pageType: MEDIA_PAGE },
+      const params = buildATIEventTrackingParams({
+        requestContext: { ...requestContext, pageType: MEDIA_PAGE },
+        data: media,
         serviceContext,
-        media,
-      );
+      });
       expect(params).toEqual({
         appName: 'atiAnalyticsAppName',
         contentId: 'id',
@@ -474,11 +473,11 @@ describe('ATIAnalytics params', () => {
     });
 
     it('should return the correct MAP params', () => {
-      const params = buildATIEventTrackingParams(
-        { ...requestContext, pageType: MEDIA_ASSET_PAGE },
+      const params = buildATIEventTrackingParams({
+        requestContext: { ...requestContext, pageType: MEDIA_ASSET_PAGE },
+        data: MAP,
         serviceContext,
-        MAP,
-      );
+      });
       expect(params).toEqual({
         appName: 'atiAnalyticsAppName',
         categoryName: 'News',
@@ -504,11 +503,11 @@ describe('ATIAnalytics params', () => {
     });
 
     it('should return the correct PGL params', () => {
-      const params = buildATIEventTrackingParams(
-        { ...requestContext, pageType: PHOTO_GALLERY_PAGE },
+      const params = buildATIEventTrackingParams({
+        requestContext: { ...requestContext, pageType: PHOTO_GALLERY_PAGE },
+        data: PGL,
         serviceContext,
-        PGL,
-      );
+      });
       expect(params).toEqual({
         appName: 'atiAnalyticsAppName',
         categoryName: undefined,
@@ -534,12 +533,11 @@ describe('ATIAnalytics params', () => {
         analytics,
         title: 'pageTitle',
       };
-      const params = buildATIEventTrackingParams(
-        { ...requestContext, pageType: HOME_PAGE },
+      const params = buildATIEventTrackingParams({
+        requestContext: { ...requestContext, pageType: HOME_PAGE },
+        atiData: homePageATIMetadata,
         serviceContext,
-        undefined,
-        homePageATIMetadata,
-      );
+      });
       expect(params).toEqual({
         appName: 'atiAnalyticsAppName',
         categoryName: undefined,
@@ -560,11 +558,11 @@ describe('ATIAnalytics params', () => {
     it.each([ERROR_PAGE, HOME_PAGE, LIVE_PAGE])(
       'should return empty object {} because %s page type is not supported',
       pageType => {
-        const params = buildATIEventTrackingParams(
-          { ...requestContext, pageType },
+        const params = buildATIEventTrackingParams({
+          requestContext: { ...requestContext, pageType },
+          data: {},
           serviceContext,
-          {},
-        );
+        });
 
         expect(params).toStrictEqual({});
       },
@@ -575,12 +573,12 @@ describe('ATIAnalytics params', () => {
       console.error = jest.fn();
 
       const pageData = null;
-      const params = buildATIEventTrackingParams(
-        { ...requestContext, pageType: PHOTO_GALLERY_PAGE },
-        serviceContext,
+      const params = buildATIEventTrackingParams({
+        requestContext: { ...requestContext, pageType: PHOTO_GALLERY_PAGE },
         // @ts-expect-error - pass in null value to ensure error handling working as expected
-        pageData,
-      );
+        data: pageData,
+        serviceContext,
+      });
 
       expect(params).toEqual({});
       expect(console.error).toHaveBeenCalledWith(
