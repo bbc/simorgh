@@ -1,7 +1,6 @@
 import { Platforms, Services } from '../../models/types/global';
 import { RequestContextProps } from '../../contexts/RequestContext';
 import { ServiceConfig } from '../../models/types/serviceConfig';
-import { CurationData } from '../../models/types/curationData';
 
 export interface AMPAnalyticsData {
   transport: {
@@ -61,15 +60,6 @@ export interface PageData {
   lastRecordTimeStamp?: string;
   contentType?: string;
   title?: string;
-}
-
-export interface HomePageData {
-  pageType: string;
-  id?: string;
-  title: string;
-  curations: CurationData[];
-  description: string;
-  metadata: Pick<ATIData, 'analytics'>;
 }
 
 export interface ATIData {
