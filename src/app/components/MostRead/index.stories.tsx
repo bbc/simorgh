@@ -61,7 +61,7 @@ export default {
     },
     metadata,
     docs: {
-      md,
+      page: md,
     },
   },
 };
