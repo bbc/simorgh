@@ -15,6 +15,7 @@ export const EBON = '#222222';
 export const GHOST = '#FDFDFD';
 export const GREY_10 = '#141414';
 export const GREY_11 = '#BABABA';
+export const GREY_1 = '#FEFEFE';
 export const GREY_2 = '#F6F6F6';
 export const GREY_3 = '#E6E8EA';
 export const GREY_4 = '#B0B2B4';
