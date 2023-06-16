@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 import { getMostReadEndpoint } from '#app/lib/utilities/getUrlHelpers/getMostReadUrls';
-import isLive from '#app/lib/utilities/isLive';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import Canonical from './Canonical';
 import Amp from './Amp';
@@ -54,10 +53,6 @@ const MostRead = ({
 
   // Do not render most read when a toggle is disabled
   if (!mostReadToggleEnabled) {
-    return null;
-  }
-
-  if (isLive()) {
     return null;
   }
 
