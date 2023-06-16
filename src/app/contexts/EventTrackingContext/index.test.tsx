@@ -18,6 +18,7 @@ const defaultToggles = {
 };
 
 type Props = {
+  isNextJs?: boolean;
   pageData?: object | null;
   pageType?: PageTypes;
   toggles?: {
@@ -31,6 +32,7 @@ type Props = {
 // eslint-disable-next-line react/prop-types
 const Wrapper = ({
   children,
+  isNextJs = false,
   pageData = fixtureData,
   pageType = STORY_PAGE,
   toggles = defaultToggles,
@@ -40,6 +42,7 @@ const Wrapper = ({
     pageType={pageType}
     isAmp={false}
     isApp={false}
+    isNextJs={isNextJs}
     service="pidgin"
     pathname="/pidgin/tori-51745682"
   >
@@ -139,6 +142,100 @@ describe('Expected use', () => {
 
     render(
       <Wrapper toggles={eventTrackingToggle}>
+        <TestComponent />
+      </Wrapper>,
+    );
+
+    const testEl = screen.getByTestId('test-component');
+    const trackingData = JSON.parse(testEl.textContent as string);
+
+    expect(trackingData).toEqual({});
+  });
+
+  it('should provide an empty object if pageData and atiData are missing and eventTracking toggle is disabled', () => {
+    const eventTrackingToggle = {
+      eventTracking: {
+        enabled: false,
+      },
+    };
+
+    render(
+      <Wrapper pageData={null} toggles={eventTrackingToggle}>
+        <TestComponent />
+      </Wrapper>,
+    );
+
+    const testEl = screen.getByTestId('test-component');
+    const trackingData = JSON.parse(testEl.textContent as string);
+
+    expect(trackingData).toEqual({});
+  });
+
+  it('should provide an empty object for NextJS pages if pageData is missing', () => {
+    render(
+      <Wrapper pageData={null} isNextJs>
+        <TestComponent />
+      </Wrapper>,
+    );
+
+    const testEl = screen.getByTestId('test-component');
+    const trackingData = JSON.parse(testEl.textContent as string);
+
+    expect(trackingData).toEqual({});
+  });
+
+  it('should provide an empty object for NextJS pages if pageData is provided', () => {
+    render(
+      <Wrapper isNextJs>
+        <TestComponent />
+      </Wrapper>,
+    );
+
+    const testEl = screen.getByTestId('test-component');
+    const trackingData = JSON.parse(testEl.textContent as string);
+
+    expect(trackingData).toEqual({});
+  });
+
+  it('should provide an empty object for NextJS pages if atiData is provided', () => {
+    const atiData = {
+      analytics: {
+        contentId: 'urn:bbc:tipo:topic:cm7682qz7v1t',
+        contentType: 'index-home',
+        pageIdentifier: 'kyrgyz.page',
+      },
+      title: 'pageTitle',
+    };
+
+    render(
+      <RequestContextProvider
+        bbcOrigin="https://www.test.bbc.com"
+        pageType={HOME_PAGE}
+        isAmp={false}
+        isApp={false}
+        isNextJs
+        service="kyrgyz"
+        pathname="/kyrgyz"
+      >
+        <ServiceContextProvider service="kyrgyz">
+          <ToggleContextProvider toggles={defaultToggles}>
+            <EventTrackingContextProvider atiData={atiData}>
+              <TestComponent />
+            </EventTrackingContextProvider>
+          </ToggleContextProvider>
+        </ServiceContextProvider>
+      </RequestContextProvider>,
+    );
+
+    const testEl = screen.getByTestId('test-component');
+    const trackingData = JSON.parse(testEl.textContent as string);
+
+    expect(trackingData).toEqual({});
+  });
+
+  it('should provide an empty object if pageData and atiData are missing - 1', () => {
+    render(
+      <Wrapper pageData={null}>
         <TestComponent />
       </Wrapper>,
     );
