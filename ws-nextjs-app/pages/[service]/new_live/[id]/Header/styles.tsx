@@ -8,14 +8,15 @@ export default {
       margin: '0 auto',
       display: 'grid',
       gridTemplateColumns: 'repeat(12, 1fr)',
-      paddingInlineStart: `${pixelsToRem(8)}rem`,
+      padding: `0 ${pixelsToRem(8)}rem`,
 
       [mq.GROUP_2_MIN_WIDTH]: {
-        paddingInlineStart: `${pixelsToRem(16)}rem`,
+        padding: `0 ${pixelsToRem(16)}rem`,
       },
 
       [mq.GROUP_4_MIN_WIDTH]: {
         paddingInlineStart: `${pixelsToRem(32)}rem`,
+        paddingInlineEnd: `${pixelsToRem(16)}rem`,
         columnGap: '1rem',
       },
     }),
@@ -30,9 +31,11 @@ export default {
   textColumn: ({ mq }: Theme) =>
     css({
       gridColumn: '1 / span 12',
+      marginBottom: `${pixelsToRem(16)}rem`,
 
       [mq.GROUP_4_MIN_WIDTH]: {
         gridColumn: '5 / span 8',
+        marginBottom: `${pixelsToRem(32)}rem`,
       },
     }),
   title: ({ palette, mq }: Theme) =>
@@ -43,14 +46,11 @@ export default {
         marginTop: `${pixelsToRem(24)}rem`,
       },
     }),
-  description: ({ palette, mq }: Theme) =>
+  description: ({ palette }: Theme) =>
     css({
       color: palette.GREY_2,
-      marginBottom: `${pixelsToRem(16)}rem`,
-      [mq.GROUP_4_MIN_WIDTH]: {
-        marginTop: `${pixelsToRem(16)}rem`,
-        marginBottom: `${pixelsToRem(32)}rem`, // to change once timestamp is added
-      },
+      margin: 0,
+      marginTop: `${pixelsToRem(16)}rem`,
     }),
   backgroundColor: ({ palette }: Theme) =>
     css({

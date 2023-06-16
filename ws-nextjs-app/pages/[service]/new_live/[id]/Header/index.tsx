@@ -36,9 +36,11 @@ const Header = ({
           >
             {title}
           </Heading>
-          <Text as="p" css={styles.description}>
-            {description}
-          </Text>
+          {description && (
+            <Text as="p" css={styles.description}>
+              {description}
+            </Text>
+          )}
         </div>
       </div>
     </div>

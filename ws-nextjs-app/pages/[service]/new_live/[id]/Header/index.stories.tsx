@@ -35,7 +35,7 @@ export default {
 
 export const TitleOnly = ({ service, variant }: StoryProps) => (
   <Component
-    title="I am a title"
+    title="Prince Harry's hacking case against Mirror back in court"
     description=""
     service={service}
     variant={variant}
@@ -43,8 +43,8 @@ export const TitleOnly = ({ service, variant }: StoryProps) => (
 );
 export const TitleAndDescription = ({ service, variant }: StoryProps) => (
   <Component
-    title="I am a title"
-    description="I am a description"
+    title="An kai wa jirgin kwashe yan Turkiyya hari a Sudan"
+    description="Wannan shaft ne da ke kawo muku laqbarai daga sassan duniya daban-daban"
     service={service}
     variant={variant}
   />
