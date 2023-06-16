@@ -80,33 +80,35 @@ const LivePage = ({
         hasAmpPage={false}
       />
       <LinkedDataContainer type="CollectionPage" seoTitle="Test Live Page" />
-      <main css={styles.wrapper}>
+      <main>
         <Header title={title} description={description} />
-        <Summary summaryBlocks={summaryContent?.model.blocks} />
-        {liveTextStream.content && (
-          <PostsList postData={liveTextStream.content} />
-        )}
-        <pre css={styles.code}>
-          <Heading level={4}>Headers</Heading>
-          {bbcOrigin && (
-            <p>
-              bbc-origin: <span>{bbcOrigin}</span>
-            </p>
+        <div css={styles.wrapper}>
+          <Summary summaryBlocks={summaryContent?.model.blocks} />
+          {liveTextStream.content && (
+            <PostsList postData={liveTextStream.content} />
           )}
-          <p>
-            bbc-adverts:{' '}
-            <span>{showAdsBasedOnLocation ? 'true' : 'false'}</span>
-          </p>
-        </pre>
-        <pre css={styles.code}>{JSON.stringify(pageData, null, 2)}</pre>
-        <Pagination
-          activePage={activePage}
-          pageCount={pageCount}
-          pageXOfY="Page {x} of {y}"
-          previousPage="Previous Page"
-          nextPage="Next Page"
-          page="Page"
-        />
+          <pre css={styles.code}>
+            <Heading level={4}>Headers</Heading>
+            {bbcOrigin && (
+              <p>
+                bbc-origin: <span>{bbcOrigin}</span>
+              </p>
+            )}
+            <p>
+              bbc-adverts:{' '}
+              <span>{showAdsBasedOnLocation ? 'true' : 'false'}</span>
+            </p>
+          </pre>
+          <pre css={styles.code}>{JSON.stringify(pageData, null, 2)}</pre>
+          <Pagination
+            activePage={activePage}
+            pageCount={pageCount}
+            pageXOfY="Page {x} of {y}"
+            previousPage="Previous Page"
+            nextPage="Next Page"
+            page="Page"
+          />
+        </div>
       </main>
     </>
   );
