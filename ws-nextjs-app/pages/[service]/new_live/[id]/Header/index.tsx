@@ -15,16 +15,16 @@ const Header = ({
   return (
     <div css={styles.backgroundColor}>
       <div css={styles.grid}>
-        {/* Holding styles and text for live label */}
         <div css={styles.labelColumn}>
-          {/* <Text
+          {/* Holding styles and text for live label */}
+          <Text
             css={styles.placeholderStyles}
             as="p"
             size="trafalgar"
-            fontVariant="sansRegular"
+            fontVariant="sansBold"
           >
-            Placeholder
-          </Text> */}
+            PLACEHOLDER
+          </Text>
         </div>
         <div css={styles.textColumn}>
           <Heading
