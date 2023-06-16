@@ -4,7 +4,7 @@ This component renders a collection of most read articles to a news page so that
 
 The component uses a [MostReadData](https://github.com/bbc/simorgh/blob/c4d38ae16587f29306d1109ea19bd55205c5709b/src/app/components/MostRead/types.ts#L79-L90) type, containing a simplified version of data which is passed in and used to render the information on the page. This data contains an items array with the following fields: id, rank, title, href, and timestamp.
 
-It also uses [ColumnLayout](https://github.com/bbc/simorgh/blob/c4d38ae16587f29306d1109ea19bd55205c5709b/src/app/components/MostRead/types.ts#L7) type which determines how many columns the component is spread across: `oneColumn`, `twoColumn` or `multiColumn`.
+It also uses a [ColumnLayout](https://github.com/bbc/simorgh/blob/c4d38ae16587f29306d1109ea19bd55205c5709b/src/app/components/MostRead/types.ts#L7) type that determines how many columns the component is spread across: `oneColumn`, `twoColumn` or `multiColumn`.
 
 ## Props
 
