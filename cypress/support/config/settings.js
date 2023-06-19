@@ -378,20 +378,7 @@ module.exports = () => ({
         smoke: false,
       },
       mostWatchedPage: {
-        environments: {
-          live: {
-            paths: ['/afrique/media/video'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/afrique/media/video'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/afrique/media/video'],
-            enabled: false,
-          },
-        },
+        environments: undefined,
         smoke: false,
       },
       photoGalleryPage: {
