@@ -255,24 +255,24 @@ export const service: DefaultServiceConfig = {
         text: 'ስለምንታይ ንቢቢሲ ክትኣምንዎ ከም እትኽእሉ',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/feeds-and-links',
         text: 'ብዛዕባ ምስ ናይ ደገ መርበባት እንገብሮ መላግቦታት ዘለና ኣረኣእያ ንምርዳእ ኣንብቡ።',
       },
       links: [
         {
-          href: 'https://www.bbc.co.uk/usingthebbc/terms/',
+          href: 'https://www.bbc.com/usingthebbc/terms/',
           text: 'ውዕል ተጠቃምነት',
         },
         {
-          href: 'https://www.bbc.co.uk/aboutthebbc',
+          href: 'https://www.bbc.com/aboutthebbc',
           text: 'ብዛዕባ ቢቢሲ',
         },
         {
-          href: 'https://www.bbc.co.uk/usingthebbc/privacy/',
+          href: 'https://www.bbc.com/usingthebbc/privacy/',
           text: 'ናይ ስቱርነት ፖሊሲ',
         },
         {
-          href: 'https://www.bbc.co.uk/usingthebbc/cookies/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/',
           text: 'ኩኪስ',
         },
         {
