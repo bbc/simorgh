@@ -44,8 +44,8 @@ import {
   getAboutTags,
 } from '#lib/utilities/parseAssetData';
 import Include from '#containers/Include';
-import AdContainer from '#containers/Ad';
-import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
+import AdContainer from '../../components/Ad';
+import CanonicalAdBootstrapJs from '../../components/Ad/Canonical/CanonicalAdBootstrapJs';
 import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 import RelatedTopics from '#containers/RelatedTopics';

@@ -127,7 +127,7 @@ jest.mock('#containers/PageHandlers/withContexts', () => Component => {
   );
 });
 
-jest.mock('#containers/Ad/Canonical/CanonicalAdBootstrapJs', () => {
+jest.mock('../../components/Ad/Canonical/CanonicalAdBootstrapJs', () => {
   const CanonicalAdBootstrapJs = () => (
     <div data-testid="adBootstrap">bootstrap</div>
   );
