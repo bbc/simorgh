@@ -3,7 +3,7 @@ import fetchMock from 'fetch-mock';
 import arabicMostReadData from '../../../../../data/arabic/mostRead/index.json';
 import pidginMostReadData from '../../../../../data/pidgin/mostRead/index.json';
 import kyrgyzMostReadData from '../../../../../data/kyrgyz/mostRead/index.json';
-import { data as ukrainianMostReadData } from '../../../../../data/ukrainian/mostRead/ukrainian.json';
+import ukrainianMostReadData from '../../../../../data/ukrainian/mostRead/index.json';
 import { ToggleContextProvider } from '../../../contexts/ToggleContext';
 import * as viewTracking from '../../../hooks/useViewTracker';
 import * as clickTracking from '../../../hooks/useClickTrackerHandler';
