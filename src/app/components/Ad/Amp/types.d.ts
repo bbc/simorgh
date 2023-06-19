@@ -19,11 +19,6 @@ declare namespace JSX {
     json: string;
   }
 
-  interface DivProps extends React.HTMLAttributes<HTMLDivElement> {
-    'amp-access'?: string;
-    'amp-access-hide'?: string;
-  }
-
   interface IntrinsicElements {
     'amp-ad': AmpAd;
     div: DivProps;
