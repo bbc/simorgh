@@ -30,7 +30,7 @@ const CurationGrid = ({ promos, headingLevel }: CurationGridProps) => {
           })}
         </ul>
       ) : (
-        <div css={styles.item} key={firstPromo.id}>
+        <div css={styles.item}>
           <CurationPromo {...firstPromo} />
         </div>
       )}
