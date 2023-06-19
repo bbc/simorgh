@@ -4,7 +4,7 @@ import '#psammead/psammead-locales/moment/uk';
 import withContext from '../../../contexts/utils/withContext';
 import { mainTranslations as russianMainTranslations } from './russian';
 import { UkrainianConfig } from '../../../models/types/serviceConfig';
-import { Services } from '../../../models/types/global';
+import { Direction, Services } from '../../../models/types/global';
 
 const secondaryColumnTranslations = {
   topStoriesTitle: 'Головне',
