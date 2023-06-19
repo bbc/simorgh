@@ -2,7 +2,7 @@ import React from 'react';
 import isLive from '#app/lib/utilities/isLive';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ToggleContextProvider } from '../../contexts/ToggleContext';
-import pidginMostReadData from '../../../../data/pidgin/mostRead/pidgin.json';
+import pidginMostReadData from '../../../../data/pidgin/mostRead/index.json';
 import serbianLatMostReadData from '../../../../data/serbian/mostRead/lat.json';
 import {
   FRONT_PAGE,
@@ -263,7 +263,7 @@ describe('MostRead', () => {
 
       // if isLive is true, DO NOT show most read component
       const { container } = render(
-        <MostRead data={pidginMostReadData.data} columnLayout="twoColumn" />,
+        <MostRead data={pidginMostReadData} columnLayout="twoColumn" />,
         { toggles },
       );
 
@@ -276,7 +276,7 @@ describe('MostRead', () => {
 
       // if isLive is false, show most read component
       const { container } = render(
-        <MostRead data={pidginMostReadData.data} columnLayout="twoColumn" />,
+        <MostRead data={pidginMostReadData} columnLayout="twoColumn" />,
         { toggles },
       );
       expect(container).not.toBeEmptyDOMElement();
