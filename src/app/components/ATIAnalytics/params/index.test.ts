@@ -319,7 +319,11 @@ describe('ATIAnalytics params', () => {
 
     it('should not have ref and x6 parameters, if referrer url does not exist', () => {
       const atiUrl = buildATIUrl({
-        requestContext: { ...requestContext, pageType: ARTICLE_PAGE, previousPath: '' },
+        requestContext: {
+          ...requestContext,
+          pageType: ARTICLE_PAGE,
+          previousPath: '',
+        },
         data: article,
         serviceContext,
       }) as string;

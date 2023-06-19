@@ -6,7 +6,8 @@ import { render, screen } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { STORY_PAGE, HOME_PAGE } from '#app/routes/utils/pageTypes';
-import { PageTypes } from '#app/models/types/global';
+import { PageTypes, Services } from '#app/models/types/global';
+import { PageData, ATIData } from '../../components/ATIAnalytics/types';
 import { ServiceContextProvider } from '../ServiceContext';
 import { EventTrackingContextProvider, EventTrackingContext } from '.';
 import fixtureData from './fixtureData.json';
@@ -17,10 +18,22 @@ const defaultToggles = {
   },
 };
 
+const defaultATIData = {
+  analytics: {
+    contentId: 'urn:bbc:tipo:topic:cm7682qz7v1t',
+    contentType: 'index-home',
+    pageIdentifier: 'kyrgyz.page',
+  },
+  title: 'pageTitle',
+};
+
 type Props = {
   isNextJs?: boolean;
-  pageData?: object | null;
+  atiData?: ATIData;
+  pageData?: PageData;
   pageType?: PageTypes;
+  pathname?: string;
+  service?: Services;
   toggles?: {
     [key: string]: {
       enabled: boolean;
@@ -32,9 +45,12 @@ type Props = {
 // eslint-disable-next-line react/prop-types
 const Wrapper = ({
   children,
+  atiData,
+  pageData,
   isNextJs = false,
-  pageData = fixtureData,
   pageType = STORY_PAGE,
+  pathname = '/pidgin/tori-51745682',
+  service = 'pidgin',
   toggles = defaultToggles,
 }: PropsWithChildren<Props>) => (
   <RequestContextProvider
@@ -43,14 +59,20 @@ const Wrapper = ({
     isAmp={false}
     isApp={false}
     isNextJs={isNextJs}
-    service="pidgin"
-    pathname="/pidgin/tori-51745682"
+    service={service}
+    pathname={pathname}
   >
-    <ServiceContextProvider service="pidgin">
+    <ServiceContextProvider service={service}>
       <ToggleContextProvider toggles={toggles}>
-        <EventTrackingContextProvider pageData={pageData}>
-          {children}
-        </EventTrackingContextProvider>
+        {atiData ? (
+          <EventTrackingContextProvider atiData={atiData}>
+            {children}
+          </EventTrackingContextProvider>
+        ) : (
+          <EventTrackingContextProvider pageData={pageData}>
+            {children}
+          </EventTrackingContextProvider>
+        )}
       </ToggleContextProvider>
     </ServiceContextProvider>
   </RequestContextProvider>
@@ -75,7 +97,7 @@ const TestComponent = () => {
 describe('Expected use', () => {
   it('should provide tracking data to all child components', () => {
     render(
-      <Wrapper>
+      <Wrapper pageData={fixtureData}>
         <TestComponent />
       </Wrapper>,
     );
@@ -93,32 +115,15 @@ describe('Expected use', () => {
   });
 
   it('should provide tracking data to all child components using the ATI metadata block', () => {
-    const atiData = {
-      analytics: {
-        contentId: 'urn:bbc:tipo:topic:cm7682qz7v1t',
-        contentType: 'index-home',
-        pageIdentifier: 'kyrgyz.page',
-      },
-      title: 'pageTitle',
-    };
-
     render(
-      <RequestContextProvider
-        bbcOrigin="https://www.test.bbc.com"
+      <Wrapper
+        atiData={defaultATIData}
         pageType={HOME_PAGE}
-        isAmp={false}
-        isApp={false}
-        service="kyrgyz"
         pathname="/kyrgyz"
+        service="kyrgyz"
       >
-        <ServiceContextProvider service="kyrgyz">
-          <ToggleContextProvider toggles={defaultToggles}>
-            <EventTrackingContextProvider atiData={atiData}>
-              <TestComponent />
-            </EventTrackingContextProvider>
-          </ToggleContextProvider>
-        </ServiceContextProvider>
-      </RequestContextProvider>,
+        <TestComponent />
+      </Wrapper>,
     );
 
     const testEl = screen.getByTestId('test-component');
@@ -141,7 +146,7 @@ describe('Expected use', () => {
     };
 
     render(
-      <Wrapper toggles={eventTrackingToggle}>
+      <Wrapper pageData={fixtureData} toggles={eventTrackingToggle}>
         <TestComponent />
       </Wrapper>,
     );
@@ -160,7 +165,7 @@ describe('Expected use', () => {
     };
 
     render(
-      <Wrapper pageData={null} toggles={eventTrackingToggle}>
+      <Wrapper toggles={eventTrackingToggle}>
         <TestComponent />
       </Wrapper>,
     );
@@ -171,20 +176,7 @@ describe('Expected use', () => {
     expect(trackingData).toEqual({});
   });
 
-  it('should provide an empty object for NextJS pages if pageData is missing', () => {
-    render(
-      <Wrapper pageData={null} isNextJs>
-        <TestComponent />
-      </Wrapper>,
-    );
-
-    const testEl = screen.getByTestId('test-component');
-    const trackingData = JSON.parse(testEl.textContent as string);
-
-    expect(trackingData).toEqual({});
-  });
-
-  it('should provide an empty object for NextJS pages if pageData is provided', () => {
+  it('should provide an empty object for NextJS pages if pageData and atiData are missing', () => {
     render(
       <Wrapper isNextJs>
         <TestComponent />
@@ -197,34 +189,30 @@ describe('Expected use', () => {
     expect(trackingData).toEqual({});
   });
 
-  it('should provide an empty object for NextJS pages if atiData is provided', () => {
-    const atiData = {
-      analytics: {
-        contentId: 'urn:bbc:tipo:topic:cm7682qz7v1t',
-        contentType: 'index-home',
-        pageIdentifier: 'kyrgyz.page',
-      },
-      title: 'pageTitle',
-    };
-
+  it('should provide an empty object for NextJS pages if pageData is provided', () => {
     render(
-      <RequestContextProvider
-        bbcOrigin="https://www.test.bbc.com"
+      <Wrapper pageData={fixtureData} isNextJs>
+        <TestComponent />
+      </Wrapper>,
+    );
+
+    const testEl = screen.getByTestId('test-component');
+    const trackingData = JSON.parse(testEl.textContent as string);
+
+    expect(trackingData).toEqual({});
+  });
+
+  it('should provide an empty object for NextJS pages if atiData is provided', () => {
+    render(
+      <Wrapper
+        atiData={defaultATIData}
         pageType={HOME_PAGE}
-        isAmp={false}
-        isApp={false}
-        isNextJs
-        service="kyrgyz"
         pathname="/kyrgyz"
+        service="kyrgyz"
+        isNextJs
       >
-        <ServiceContextProvider service="kyrgyz">
-          <ToggleContextProvider toggles={defaultToggles}>
-            <EventTrackingContextProvider atiData={atiData}>
-              <TestComponent />
-            </EventTrackingContextProvider>
-          </ToggleContextProvider>
-        </ServiceContextProvider>
-      </RequestContextProvider>,
+        <TestComponent />
+      </Wrapper>,
     );
 
     const testEl = screen.getByTestId('test-component');
@@ -235,7 +223,7 @@ describe('Expected use', () => {
 
   it('should provide an empty object if pageData and atiData are missing - 1', () => {
     render(
-      <Wrapper pageData={null}>
+      <Wrapper>
         <TestComponent />
       </Wrapper>,
     );
@@ -253,7 +241,7 @@ describe('Error handling', () => {
 
     try {
       render(
-        <Wrapper pageData={null}>
+        <Wrapper>
           <TestComponent />
         </Wrapper>,
       );
@@ -275,7 +263,7 @@ describe('Error handling', () => {
     try {
       render(
         // @ts-expect-error - testing handling of a page type that does not exist
-        <Wrapper pageType="funky-page-type">
+        <Wrapper pageData={fixtureData} pageType="funky-page-type">
           <TestComponent />
         </Wrapper>,
       );
