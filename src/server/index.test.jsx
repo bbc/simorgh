@@ -126,6 +126,7 @@ const testRenderedData =
         data={successDataResponse}
         helmet={{ head: 'tags' }}
         isAmp={isAmp}
+        isApp={isApp}
         legacyScripts="__mock_script_elements__"
         modernScripts="__mock_script_elements__"
         links="__mock_link_elements__"

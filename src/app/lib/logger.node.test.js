@@ -178,7 +178,7 @@ describe('Logger node - for the server', () => {
           });
           expect(winston.createLogger).toHaveBeenCalledWith({
             format: 'Combine Mock',
-            transports: [{}, {}],
+            transports: [{}],
           });
         });
       });

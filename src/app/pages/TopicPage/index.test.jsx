@@ -6,6 +6,7 @@ import {
   VISUAL_PROMINENCE,
   VISUAL_STYLE,
 } from '#app/models/types/curationData';
+import { Helmet } from 'react-helmet';
 import { TOPIC_PAGE } from '../../routes/utils/pageTypes';
 import { render } from '../../components/react-testing-library-with-providers';
 import TopicPage from './TopicPage';
@@ -252,6 +253,20 @@ describe('Topic Page', () => {
       );
 
       expect(getByText('Chartbeat Analytics')).toBeInTheDocument();
+    });
+  });
+
+  describe('SEO', () => {
+    it('should correctly render linked data', () => {
+      render(<TopicPage pageData={pidginMultipleItems} />, getOptionParams());
+
+      const getLinkedDataOutput = () => {
+        return Helmet.peek().scriptTags.map(({ innerHTML }) =>
+          JSON.parse(innerHTML),
+        );
+      };
+
+      expect(getLinkedDataOutput()).toMatchSnapshot();
     });
   });
 });
