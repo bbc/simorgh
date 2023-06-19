@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 import { shape, arrayOf, string } from 'prop-types';
 import path from 'ramda/src/path';
-import AdContainer from '#containers/Ad';
-import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
 import useToggle from '#hooks/useToggle';
 import { RequestContext } from '#contexts/RequestContext';
 import Curation from '#app/components/Curation';
+import CanonicalAdBootstrapJs from '../../components/Ad/Canonical/CanonicalAdBootstrapJs';
+import AdContainer from '../../components/Ad';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import LinkedData from '../../components/LinkedData';
