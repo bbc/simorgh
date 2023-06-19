@@ -3,7 +3,7 @@ import '#psammead/moment-timezone-include/tz/GMT';
 import 'moment/locale/zh-cn';
 import withContext from '../../../contexts/utils/withContext';
 import { ZhongwenConfig } from '../../../models/types/serviceConfig';
-import { Services } from '../../../models/types/global';
+import { Direction, Services } from '../../../models/types/global';
 
 const baseServiceConfig = {
   articleAuthor: `https://www.facebook.com/bbcworldservice/`,
@@ -17,7 +17,7 @@ const baseServiceConfig = {
   serviceLocalizedName: '中文',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/zhongwen.png',
   defaultImageAltText: 'BBC News 中文',
-  dir: `ltr`,
+  dir: 'ltr' as Direction,
   datetimeLocale: `zh-cn`,
   service: 'zhongwen' as Services,
   serviceName: 'News 中文',

@@ -17,7 +17,7 @@ const baseServiceConfig = {
   serviceLocalizedName: '英伦网',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/ukchina.png',
   defaultImageAltText: 'BBC 英伦网',
-  dir: `ltr`,
+  dir: 'ltr' as Direction,
   datetimeLocale: `zh-cn`,
   service: 'ukchina' as Services,
   serviceName: 'UK China',

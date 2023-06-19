@@ -5,7 +5,7 @@ import '#psammead/psammead-locales/moment/sr-cyrl';
 import '#psammead/psammead-locales/moment/sr';
 import withContext from '../../../contexts/utils/withContext';
 import { SerbianConfig } from '../../../models/types/serviceConfig';
-import { Services } from '../../../models/types/global';
+import { Direction, Services } from '../../../models/types/global';
 
 const baseServiceConfig = {
   articleAuthor: 'https://www.facebook.com/bbcnews',
@@ -14,7 +14,7 @@ const baseServiceConfig = {
   chartbeatDomain: 'serbian.bbc.co.uk',
   product: 'BBC News',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png',
-  dir: `ltr`,
+  dir: 'ltr' as Direction,
   service: 'serbian' as Services,
   languageName: 'Serbian',
   twitterCreator: '@bbcnasrpskom',
