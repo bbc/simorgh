@@ -1,5 +1,4 @@
 import React from 'react';
-import isLive from '#app/lib/utilities/isLive';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ToggleContextProvider } from '../../contexts/ToggleContext';
 import pidginMostReadData from '../../../../data/pidgin/mostRead/pidgin.json';
@@ -245,42 +244,5 @@ describe('MostRead', () => {
         });
       },
     );
-  });
-
-  describe('Presence on live environment', () => {
-    const originalEnvironment = process.env.SIMORGH_APP_ENV;
-
-    const toggles = {
-      mostRead: { enabled: true },
-    };
-
-    afterEach(() => {
-      process.env.SIMORGH_APP_ENV = originalEnvironment;
-    });
-
-    it('should render a most read component when the environment is live', () => {
-      process.env.SIMORGH_APP_ENV = 'live';
-
-      // if isLive is true, show most read component
-      const { container } = render(
-        <MostRead data={pidginMostReadData.data} columnLayout="twoColumn" />,
-        { toggles },
-      );
-
-      expect(container).not.toBeEmptyDOMElement();
-      expect(isLive()).toBe(true);
-    });
-
-    it('should render a most read component when the environment is not live', () => {
-      process.env.SIMORGH_APP_ENV = 'non-live';
-
-      // if isLive is false, show most read component
-      const { container } = render(
-        <MostRead data={pidginMostReadData.data} columnLayout="twoColumn" />,
-        { toggles },
-      );
-      expect(container).not.toBeEmptyDOMElement();
-      expect(isLive()).toBe(false);
-    });
   });
 });
