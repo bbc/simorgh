@@ -2,7 +2,7 @@ import React from 'react';
 import fetchMock from 'fetch-mock';
 import arabicMostReadData from '../../../../../data/arabic/mostRead/index.json';
 import { data as pidginMostReadData } from '../../../../../data/pidgin/mostRead/pidgin.json';
-import { data as kyrgyzMostReadData } from '../../../../../data/kyrgyz/mostRead/kyrgyz.json';
+import kyrgyzMostReadData from '../../../../../data/kyrgyz/mostRead/index.json';
 import { data as ukrainianMostReadData } from '../../../../../data/ukrainian/mostRead/ukrainian.json';
 import { ToggleContextProvider } from '../../../contexts/ToggleContext';
 import * as viewTracking from '../../../hooks/useViewTracker';
