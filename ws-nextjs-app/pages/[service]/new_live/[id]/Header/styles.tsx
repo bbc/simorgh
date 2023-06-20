@@ -2,67 +2,69 @@ import { css, Theme } from '@emotion/react';
 import pixelsToRem from '../../../../../../src/app/utilities/pixelsToRem';
 
 export default {
-  grid: ({ mq, gridWidths }: Theme) =>
+  backgroundColor: ({ palette }: Theme) =>
+    css({
+      backgroundColor: palette.GREY_10,
+    }),
+  outerGrid: ({ mq, gridWidths }: Theme) =>
     css({
       maxWidth: `${pixelsToRem(gridWidths[1280])}rem`,
       margin: '0 auto',
       display: 'grid',
       gridTemplateColumns: 'repeat(12, 1fr)',
-      padding: `0 ${pixelsToRem(8)}rem`,
+      padding: `${pixelsToRem(16)}rem ${pixelsToRem(8)}rem`,
 
       [mq.GROUP_2_MIN_WIDTH]: {
-        padding: `0 ${pixelsToRem(16)}rem`,
+        padding: `${pixelsToRem(16)}rem`,
       },
 
       [mq.GROUP_4_MIN_WIDTH]: {
         paddingInlineStart: `${pixelsToRem(32)}rem`,
         paddingInlineEnd: `${pixelsToRem(16)}rem`,
+        paddingTop: `${pixelsToRem(24)}rem`,
+        paddingBottom: `${pixelsToRem(32)}rem`,
         columnGap: '1rem',
       },
     }),
-  labelColumn: ({ mq }: Theme) =>
+  innerGrid: ({ mq }: Theme) =>
     css({
-      gridColumn: '1 / span 12',
-
+      display: 'grid',
+      gridTemplateColumns: 'repeat(12, 1fr)',
       [mq.GROUP_4_MIN_WIDTH]: {
-        gridColumn: '1 / span 3',
+        columnGap: '1rem',
       },
     }),
-  textColumn: ({ mq }: Theme) =>
+  heading: () =>
     css({
       gridColumn: '1 / span 12',
-      marginBottom: `${pixelsToRem(16)}rem`,
-
+    }),
+  label: ({ mq }: Theme) =>
+    css({
+      color: '#00ccc7',
+      gridColumn: '1 / span 12',
       [mq.GROUP_4_MIN_WIDTH]: {
-        gridColumn: '5 / span 8',
-        marginBottom: `${pixelsToRem(32)}rem`,
+        gridColumn: '1 / span 3',
       },
     }),
   title: ({ palette, mq }: Theme) =>
     css({
       color: palette.GREY_1,
+      gridColumn: '1 / span 12',
       marginTop: `${pixelsToRem(16)}rem`,
       [mq.GROUP_4_MIN_WIDTH]: {
-        marginTop: `${pixelsToRem(24)}rem`,
+        marginTop: 0,
+        gridColumn: '5 / span 8',
       },
     }),
-  description: ({ palette }: Theme) =>
+
+  description: ({ palette, mq }: Theme) =>
     css({
       color: palette.GREY_2,
+      gridColumn: '1 / span 12',
       margin: 0,
       marginTop: `${pixelsToRem(16)}rem`,
-    }),
-  backgroundColor: ({ palette }: Theme) =>
-    css({
-      backgroundColor: palette.GREY_10,
-    }),
-  placeholderStyles: ({ mq }: Theme) =>
-    css({
-      color: '#00ccc7',
-      marginTop: `${pixelsToRem(16)}rem`,
-      marginBottom: 0,
       [mq.GROUP_4_MIN_WIDTH]: {
-        marginTop: `${pixelsToRem(24)}rem`,
+        gridColumn: '5 / span 8',
       },
     }),
 };

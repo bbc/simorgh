@@ -3,6 +3,7 @@
 import { jsx } from '@emotion/react';
 import Heading from '#app/components/Heading';
 import Text from '#app/components/Text';
+import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import styles from './styles';
 
 const Header = ({
@@ -14,34 +15,28 @@ const Header = ({
 }) => {
   return (
     <div css={styles.backgroundColor}>
-      <div css={styles.grid}>
-        <div css={styles.labelColumn}>
-          {/* Holding styles and text for live label */}
-          <Text
-            css={styles.placeholderStyles}
-            as="p"
-            size="trafalgar"
-            fontVariant="sansBold"
-          >
-            PLACEHOLDER
+      <div css={styles.outerGrid}>
+        <Heading
+          size="trafalgar"
+          level={1}
+          css={styles.heading}
+          id="content"
+          tabIndex={-1}
+        >
+          {/* role="text" is required to correct a text splitting bug on iOS VoiceOver. */}
+          {/* eslint-disable-next-line jsx-a11y/aria-role */}
+          <span role="text" css={styles.innerGrid}>
+            {/* Holding styles and text for live label */}
+            <span css={styles.label}>PLACEHOLDER</span>
+            <VisuallyHiddenText>, </VisuallyHiddenText>
+            <span css={styles.title}>{title}</span>
+          </span>
+        </Heading>
+        {description && (
+          <Text as="p" css={styles.description}>
+            {description}
           </Text>
-        </div>
-        <div css={styles.textColumn}>
-          <Heading
-            size="trafalgar"
-            fontVariant="sansBold"
-            level={1}
-            css={styles.title}
-            id="content"
-          >
-            {title}
-          </Heading>
-          {description && (
-            <Text as="p" css={styles.description}>
-              {description}
-            </Text>
-          )}
-        </div>
+        )}
       </div>
     </div>
   );
