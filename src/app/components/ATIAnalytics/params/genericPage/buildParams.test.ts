@@ -68,26 +68,28 @@ describe('implementation of buildPageATIParams and buildPageATIUrl', () => {
       serviceContext,
     });
 
-    const parsedATIURLParams = new URLSearchParams(url as string);
+    const parsedATIURLParams = Object.fromEntries(
+      new URLSearchParams(url as string),
+    );
 
-    const expectedATIURLParams = [
-      ['s', '598285'],
-      ['s2', 'atiAnalyticsProducerId'],
-      ['p', 'kyrgyz.page'],
-      ['r', '0x0x24x24'],
-      ['re', '1024x768'],
-      ['hl', '00-00-00'],
-      ['lng', 'en-US'],
-      ['x1', '[urn:bbc:tipo:topic:cm7682qz7v1t]'],
-      ['x2', '[responsive]'],
-      ['x3', '[atiAnalyticsAppName]'],
-      ['x4', '[pcm]'],
-      ['x5', '[http%3A%2F%2Flocalhost%2F]'],
-      ['x7', '[index-home]'],
-      ['x8', '[simorgh]'],
-      ['x9', '[pageTitle]'],
-    ];
+    const expectedATIURLParams = {
+      s: '598285',
+      s2: 'atiAnalyticsProducerId',
+      p: 'kyrgyz.page',
+      r: '0x0x24x24',
+      re: '1024x768',
+      hl: '00-00-00',
+      lng: 'en-US',
+      x1: '[urn:bbc:tipo:topic:cm7682qz7v1t]',
+      x2: '[responsive]',
+      x3: '[atiAnalyticsAppName]',
+      x4: '[pcm]',
+      x5: '[http%3A%2F%2Flocalhost%2F]',
+      x7: '[index-home]',
+      x8: '[simorgh]',
+      x9: '[pageTitle]',
+    };
 
-    expect([...parsedATIURLParams]).toEqual(expectedATIURLParams);
+    expect(parsedATIURLParams).toEqual(expectedATIURLParams);
   });
 });
