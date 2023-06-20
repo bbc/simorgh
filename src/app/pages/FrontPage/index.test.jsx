@@ -6,7 +6,7 @@ import { render, act } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import serbianFrontPageData from '#data/serbian/frontpage/lat.json';
-import pidginMostReadData from '#data/pidgin/mostRead';
+import pidginMostReadData from '#data/pidgin/mostRead/index.json';
 import getInitialData from '#app/routes/frontPage/getInitialData';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
