@@ -4,7 +4,7 @@ import { render, act } from '../../react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import AmpMostRead from '.';
 import { Services } from '../../../models/types/global';
-import mundoMostReadResponse from '../../../../../data/mundo/mostRead/index.json';
+import { data as mundoMostReadResponse } from '../../../../../data/mundo/mostRead/mundo.json';
 
 interface MostReadAmpWithContextProps {
   service: Services;
@@ -45,6 +45,9 @@ describe('AmpMostRead', () => {
 
     const { container, getByText } = render(
       <MostReadAmpWithContext service="mundo" />,
+      {
+        service: 'mundo',
+      },
     );
 
     await act(async () => {
@@ -58,17 +61,19 @@ describe('AmpMostRead', () => {
     });
   });
 
-  it('should render fallback when fetch records are empty', async () => {
+  it('should render fallback when items are empty', async () => {
     fetchMock.mock('localhost:7080/mundo/mostread.json', {
       generated: '2022-05-03T14:44:35.496Z',
       lastRecordTimeStamp: '2022-05-03T14:42:00Z',
       firstRecordTimeStamp: '2022-05-03T14:27:00Z',
-      totalRecords: 20,
-      records: [],
+      items: [],
     });
 
     const { container, getByText } = render(
       <MostReadAmpWithContext service="mundo" />,
+      {
+        service: 'mundo',
+      },
     );
 
     await act(async () => {
@@ -82,16 +87,18 @@ describe('AmpMostRead', () => {
     });
   });
 
-  it('should render fallback when fetch records is undefined', async () => {
+  it('should render fallback when items are undefined', async () => {
     fetchMock.mock('localhost:7080/mundo/mostread.json', {
       generated: '2022-05-03T14:44:35.496Z',
       lastRecordTimeStamp: '2022-05-03T14:42:00Z',
       firstRecordTimeStamp: '2022-05-03T14:27:00Z',
-      totalRecords: 20,
     });
 
     const { container, getByText } = render(
       <MostReadAmpWithContext service="mundo" />,
+      {
+        service: 'mundo',
+      },
     );
 
     await act(async () => {
