@@ -87,8 +87,6 @@ export default async ({
       },
     };
 
-    console.table({ response });
-
     return response;
   } catch (error: unknown) {
     const { message, status } = error as FetchError;
