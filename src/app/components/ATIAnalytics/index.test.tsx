@@ -479,7 +479,6 @@ describe('ATI Analytics Container', () => {
           pageType={FEATURE_INDEX_PAGE}
           service="afrique"
         >
-          {/* @ts-expect-error - only partial data required for testing purposes */}
           <ATIAnalytics data={fixAssetData} />
         </ContextWrap>,
       );
@@ -502,7 +501,6 @@ describe('ATI Analytics Container', () => {
           pageType={FEATURE_INDEX_PAGE}
           service="afrique"
         >
-          {/* @ts-expect-error - only partial data required for testing purposes */}
           <ATIAnalytics data={fixAssetData} />
         </ContextWrap>,
       );
