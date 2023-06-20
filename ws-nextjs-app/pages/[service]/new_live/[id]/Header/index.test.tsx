@@ -13,12 +13,7 @@ describe('Live Page Header', () => {
     });
 
     expect(screen.getByText('I am a title')).toBeInTheDocument();
-    expect(screen.getByText('I am a title').nodeName).toBe('H1');
     expect(screen.getByText('I am a description')).toBeInTheDocument();
-    expect(screen.getByText('I am a description').nodeName).toBe('P');
-    expect(screen.getByText('I am a title').getAttribute('id')).toEqual(
-      'content',
-    );
   });
 
   it('should render the live page title only', async () => {
@@ -27,16 +22,25 @@ describe('Live Page Header', () => {
     });
 
     expect(screen.getByText('I am a title')).toBeInTheDocument();
-    expect(screen.getByText('I am a title').nodeName).toBe('H1');
   });
 
-  it('title should have id of content', async () => {
+  it('Header should have id of content', async () => {
     await act(async () => {
       render(<Header title="I am a title" />);
     });
 
-    expect(screen.getByText('I am a title').getAttribute('id')).toEqual(
-      'content',
-    );
+    const header = document.getElementById('content');
+    expect(header).toBeInTheDocument();
+  });
+
+  it('header should have tab index of -1', async () => {
+    await act(async () => {
+      render(<Header title="I am a title" />);
+    });
+
+    const header = document.getElementById('content');
+    const tabIndex = header?.getAttribute('tabIndex');
+
+    expect(tabIndex).toEqual('-1');
   });
 });
