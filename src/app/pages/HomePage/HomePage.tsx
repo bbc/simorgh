@@ -20,12 +20,11 @@ import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 
 export interface HomePageProps {
   pageData: {
-    pageType: string;
     id?: string;
     title: string;
     curations: CurationData[];
     description: string;
-    metadata: Pick<ATIData, 'analytics'>;
+    metadata: Pick<ATIData, 'analytics'> & { type: string };
   };
 }
 
