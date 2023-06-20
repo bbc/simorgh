@@ -8,11 +8,11 @@ import {
 } from '#lib/logger.const';
 import * as viewTracking from '#hooks/useViewTracker';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
-import arabicMostReadData from './fixtures/arabic-most-read-legacy.json';
-import pidginMostReadData from './fixtures/pidgin-most-read-legacy.json';
-import nepaliMostReadData from './fixtures/nepali-most-read-legacy.json';
-import kyrgyzMostReadData from './fixtures/kyrgyz-most-read-legacy.json';
-import ukrainianMostReadData from './fixtures/ukrainian-most-read-legacy.json';
+import arabicMostReadData from '../fixtureData/arabic-most-read-legacy.json';
+import pidginMostReadData from '../fixtureData/pidgin-most-read-legacy.json';
+import nepaliMostReadData from '../fixtureData/nepali-most-read-legacy.json';
+import kyrgyzMostReadData from '../fixtureData/kyrgyz-most-read-legacy.json';
+import ukrainianMostReadData from '../fixtureData/ukrainian-most-read-legacy.json';
 import {
   render,
   act,
