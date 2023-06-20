@@ -58,19 +58,14 @@ const WithContexts = Component => {
             mvtExperiments={mvtExperiments}
             isNextJs={isNextJs}
           >
-            {analytics ? (
-              <EventTrackingContextProvider atiData={{ analytics, title }}>
-                <UserContextProvider>
-                  <Component {...props} />
-                </UserContextProvider>
-              </EventTrackingContextProvider>
-            ) : (
-              <EventTrackingContextProvider data={pageData}>
-                <UserContextProvider>
-                  <Component {...props} />
-                </UserContextProvider>
-              </EventTrackingContextProvider>
-            )}
+            <EventTrackingContextProvider
+              atiData={{ analytics, title }}
+              data={pageData}
+            >
+              <UserContextProvider>
+                <Component {...props} />
+              </UserContextProvider>
+            </EventTrackingContextProvider>
           </RequestContextProvider>
         </ServiceContextProvider>
       </ToggleContextProvider>

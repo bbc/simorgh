@@ -64,15 +64,9 @@ const Wrapper = ({
   >
     <ServiceContextProvider service={service}>
       <ToggleContextProvider toggles={toggles}>
-        {atiData ? (
-          <EventTrackingContextProvider atiData={atiData}>
-            {children}
-          </EventTrackingContextProvider>
-        ) : (
-          <EventTrackingContextProvider data={pageData}>
-            {children}
-          </EventTrackingContextProvider>
-        )}
+        <EventTrackingContextProvider atiData={atiData} data={pageData}>
+          {children}
+        </EventTrackingContextProvider>
       </ToggleContextProvider>
     </ServiceContextProvider>
   </RequestContextProvider>
@@ -224,6 +218,24 @@ describe('Expected use', () => {
   it('should provide an empty object if pageData and atiData are missing - 1', () => {
     render(
       <Wrapper>
+        <TestComponent />
+      </Wrapper>,
+    );
+
+    const testEl = screen.getByTestId('test-component');
+    const trackingData = JSON.parse(testEl.textContent as string);
+
+    expect(trackingData).toEqual({});
+  });
+
+  it('should provide an empty object if atiData properties are undefined', () => {
+    render(
+      <Wrapper
+        atiData={{
+          analytics: undefined,
+          title: undefined,
+        }}
+      >
         <TestComponent />
       </Wrapper>,
     );

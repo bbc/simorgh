@@ -63,14 +63,14 @@ export interface PageData {
 }
 
 export interface ATIData {
-  analytics: {
+  analytics?: {
     contentId?: string;
     contentType?: string;
     pageIdentifier?: string;
     timePublished?: string;
     timeUpdated?: string;
   };
-  title: string;
+  title?: string;
 }
 
 export interface ATIDataWithContexts {
