@@ -18,9 +18,13 @@ import { PageTypes, Services, Variants } from '../../models/types/global';
 import Canonical from './Canonical';
 import Amp from './Amp';
 import { MostReadData } from './types';
+import isLocal from '../../lib/utilities/isLocal';
 
 jest.mock('./Canonical');
 jest.mock('./Amp');
+jest.mock('../../lib/utilities/isLocal', () =>
+  jest.fn().mockImplementation(() => true),
+);
 
 interface MostReadProps {
   isAmp: boolean;
@@ -245,6 +249,39 @@ describe('MostRead', () => {
         });
       },
     );
+
+    describe('endpoint', () => {
+      it.each`
+        service      | variant  | isLocalEnv | endpoint
+        ${'pidgin'}  | ${null}  | ${true}    | ${'/pidgin/mostread.json'}
+        ${'pidgin'}  | ${null}  | ${false}   | ${'/fd/simorgh-bff?pageType=mostRead&service=pidgin'}
+        ${'serbian'} | ${'cyr'} | ${true}    | ${'/serbian/mostread/cyr.json'}
+        ${'serbian'} | ${'cyr'} | ${false}   | ${'/fd/simorgh-bff?pageType=mostRead&service=serbian&variant=cyr'}
+      `(
+        'should be $endpoint when service is $service, variant is $variant and isLocalEnv is $isLocalEnv',
+        async ({ service, variant, isLocalEnv, endpoint }) => {
+          (isLocal as jest.Mock).mockImplementationOnce(() => isLocalEnv);
+
+          render(
+            <MostReadWithContext
+              service={service}
+              mostReadToggle
+              isAmp
+              variant={variant}
+              pageType={STORY_PAGE}
+              data={pidginMostReadData}
+            />,
+          );
+
+          expect(Amp).toHaveBeenCalledWith(
+            expect.objectContaining({
+              endpoint: expect.stringContaining(endpoint),
+            }),
+            {},
+          );
+        },
+      );
+    });
   });
 
   describe('Presence on live environment', () => {
