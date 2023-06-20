@@ -1,8 +1,7 @@
 import React from 'react';
-import isLive from '#app/lib/utilities/isLive';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ToggleContextProvider } from '../../contexts/ToggleContext';
-import pidginMostReadData from '../../../../data/pidgin/mostRead/pidgin.json';
+import { data as pidginMostReadData } from '../../../../data/pidgin/mostRead/pidgin.json';
 import serbianLatMostReadData from '../../../../data/serbian/mostRead/lat.json';
 import {
   FRONT_PAGE,
@@ -18,9 +17,13 @@ import { PageTypes, Services, Variants } from '../../models/types/global';
 import Canonical from './Canonical';
 import Amp from './Amp';
 import { MostReadData } from './types';
+import isLocal from '../../lib/utilities/isLocal';
 
 jest.mock('./Canonical');
 jest.mock('./Amp');
+jest.mock('../../lib/utilities/isLocal', () =>
+  jest.fn().mockImplementation(() => true),
+);
 
 interface MostReadProps {
   isAmp: boolean;
@@ -245,42 +248,38 @@ describe('MostRead', () => {
         });
       },
     );
-  });
 
-  describe('Presence on live environment', () => {
-    const originalEnvironment = process.env.SIMORGH_APP_ENV;
+    describe('endpoint', () => {
+      it.each`
+        service      | variant  | isLocalEnv | endpoint
+        ${'pidgin'}  | ${null}  | ${true}    | ${'/pidgin/mostread.json'}
+        ${'pidgin'}  | ${null}  | ${false}   | ${'/fd/simorgh-bff?pageType=mostRead&service=pidgin'}
+        ${'serbian'} | ${'cyr'} | ${true}    | ${'/serbian/mostread/cyr.json'}
+        ${'serbian'} | ${'cyr'} | ${false}   | ${'/fd/simorgh-bff?pageType=mostRead&service=serbian&variant=cyr'}
+      `(
+        'should be $endpoint when service is $service, variant is $variant and isLocalEnv is $isLocalEnv',
+        async ({ service, variant, isLocalEnv, endpoint }) => {
+          (isLocal as jest.Mock).mockImplementationOnce(() => isLocalEnv);
 
-    const toggles = {
-      mostRead: { enabled: true },
-    };
+          render(
+            <MostReadWithContext
+              service={service}
+              mostReadToggle
+              isAmp
+              variant={variant}
+              pageType={STORY_PAGE}
+              data={pidginMostReadData}
+            />,
+          );
 
-    afterEach(() => {
-      process.env.SIMORGH_APP_ENV = originalEnvironment;
-    });
-
-    it('should not render a most read component when the environment is live', () => {
-      process.env.SIMORGH_APP_ENV = 'live';
-
-      // if isLive is true, DO NOT show most read component
-      const { container } = render(
-        <MostRead data={pidginMostReadData.data} columnLayout="twoColumn" />,
-        { toggles },
+          expect(Amp).toHaveBeenCalledWith(
+            expect.objectContaining({
+              endpoint: expect.stringContaining(endpoint),
+            }),
+            {},
+          );
+        },
       );
-
-      expect(container).toBeEmptyDOMElement();
-      expect(isLive()).toBe(true);
-    });
-
-    it('should render a most read component when the environment is not live', () => {
-      process.env.SIMORGH_APP_ENV = 'non-live';
-
-      // if isLive is false, show most read component
-      const { container } = render(
-        <MostRead data={pidginMostReadData.data} columnLayout="twoColumn" />,
-        { toggles },
-      );
-      expect(container).not.toBeEmptyDOMElement();
-      expect(isLive()).toBe(false);
     });
   });
 });
