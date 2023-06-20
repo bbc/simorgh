@@ -51,33 +51,6 @@ export default async ({
       ...(!isLocal && { agent, optHeaders }),
     });
 
-    // Ensure all local CPS fixture and test data is in the correct format
-    if (isLocal && pageType === 'cpsAsset') {
-      const secondaryData = await getAdditionalPageData({
-        pageData: json,
-        service,
-        variant,
-        env,
-      });
-
-      json = {
-        data: {
-          article: json,
-          // Checks for data mocked in tests, or data from fixture data
-          secondaryData: json?.secondaryData ?? {
-            topStories: secondaryData?.secondaryColumn?.topStories,
-            features: secondaryData?.secondaryColumn?.features,
-            mostRead: secondaryData?.mostRead,
-            mostWatched: secondaryData?.mostWatched,
-          },
-        },
-      };
-    }
-
-    if (!json?.data?.article) {
-      throw handleError('Article data is malformed', 500);
-    }
-
     const {
       data: { article, secondaryData },
     } = json;
@@ -98,14 +71,25 @@ export default async ({
       logger.error('Recommendations JSON malformed', error);
     }
 
-    return {
+    const { topStories, features, mostRead, mostWatched } = secondaryData;
+
+    const response = {
       status,
       pageData: {
         ...article,
-        secondaryColumn: secondaryData,
+        secondaryColumn: {
+          topStories,
+          features,
+        },
+        mostRead,
+        mostWatched,
         ...(wsojData && wsojData),
       },
     };
+
+    console.table({ response });
+
+    return response;
   } catch (error: unknown) {
     const { message, status } = error as FetchError;
 
