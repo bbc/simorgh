@@ -72,8 +72,6 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     showRelatedTopics,
   } = useContext(ServiceContext);
 
-  console.log({ serviceLang });
-
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
   const title = path(['promo', 'headlines', 'headline'], pageData);
   const shortHeadline = path(['promo', 'headlines', 'shortHeadline'], pageData);
