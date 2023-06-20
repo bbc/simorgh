@@ -68,7 +68,7 @@ const WithContexts = Component => {
                 </UserContextProvider>
               </EventTrackingContextProvider>
             ) : (
-              <EventTrackingContextProvider pageData={pageData}>
+              <EventTrackingContextProvider data={pageData}>
                 <UserContextProvider>
                   <Component {...props} />
                 </UserContextProvider>

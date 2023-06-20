@@ -69,7 +69,7 @@ const Wrapper = ({
             {children}
           </EventTrackingContextProvider>
         ) : (
-          <EventTrackingContextProvider pageData={pageData}>
+          <EventTrackingContextProvider data={pageData}>
             {children}
           </EventTrackingContextProvider>
         )}
