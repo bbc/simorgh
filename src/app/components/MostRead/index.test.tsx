@@ -260,8 +260,7 @@ describe('MostRead', () => {
       `(
         'should be $endpoint when service is $service, variant is $variant and isLocalEnv is $isLocalEnv',
         async ({ service, variant, isLocalEnv, endpoint }) => {
-          // @ts-expect-error need to mock isLocal function for testing purposes
-          isLocal.mockImplementationOnce(() => isLocalEnv);
+          (isLocal as jest.Mock).mockImplementationOnce(() => isLocalEnv);
 
           render(
             <MostReadWithContext
