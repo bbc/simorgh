@@ -31,18 +31,6 @@ const pageTypeUrls = async (
     case STORY_PAGE:
     case CORRESPONDENT_STORY_PAGE:
       return [
-        (await hasMostRead(service, variant))
-          ? {
-              name: 'mostRead',
-              path: getMostReadEndpoint({ service, variant }).replace(
-                '.json',
-                '',
-              ),
-              assetUri,
-              api: 'mostread',
-              apiContext: 'secondary_data',
-            }
-          : null,
         {
           name: 'secondaryColumn',
           path: getSecondaryColumnUrl({ service, variant }),
