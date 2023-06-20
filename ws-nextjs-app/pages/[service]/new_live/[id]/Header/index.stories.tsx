@@ -6,6 +6,7 @@ import { withServicesKnob } from '../../../../../../src/app/legacy/psammead/psam
 import ThemeProvider from '../../../../../../src/app/components/ThemeProvider';
 import Header from '.';
 import { StoryProps } from '../../../../../../src/app/models/types/storybook';
+import metadata from './metadata.json';
 
 interface ComponentProps extends StoryProps {
   title: string;
@@ -30,6 +31,16 @@ const Component = ({
 export default {
   title: 'New Components/LivePageHeader',
   Component,
+  parameters: {
+    metadata,
+    design: [
+      {
+        name: 'Group 0',
+        type: 'figma',
+        url: 'https://www.figma.com/file/ozHsWG5R9tETw6lBOU740V/Live-mvp-header---handover?type=design&node-id=95-266',
+      },
+    ],
+  },
   decorators: [withKnobs, withServicesKnob()],
 };
 
