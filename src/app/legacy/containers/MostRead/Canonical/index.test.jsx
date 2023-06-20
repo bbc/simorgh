@@ -1,11 +1,6 @@
 import React from 'react';
 import fetchMock from 'fetch-mock';
 import nodeLogger from '#testHelpers/loggerMock';
-import arabicMostReadData from '#data/arabic/mostRead';
-import pidginMostReadData from '#data/pidgin/mostRead';
-import nepaliMostReadData from '#data/nepali/mostRead';
-import kyrgyzMostReadData from '#data/kyrgyz/mostRead';
-import ukrainianMostReadData from '#data/ukrainian/mostRead';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import {
   MOST_READ_CLIENT_REQUEST,
@@ -13,6 +8,11 @@ import {
 } from '#lib/logger.const';
 import * as viewTracking from '#hooks/useViewTracker';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
+import arabicMostReadData from './fixtures/arabic-most-read-legacy.json';
+import pidginMostReadData from './fixtures/pidgin-most-read-legacy.json';
+import nepaliMostReadData from './fixtures/nepali-most-read-legacy.json';
+import kyrgyzMostReadData from './fixtures/kyrgyz-most-read-legacy.json';
+import ukrainianMostReadData from './fixtures/ukrainian-most-read-legacy.json';
 import {
   render,
   act,
@@ -24,6 +24,11 @@ import {
   setFreshPromoTimestamp,
   setStaleLastRecordTimeStamp,
 } from '../utilities/testHelpers';
+import isLive from '../../../../lib/utilities/isLive';
+
+jest.mock('../../../../lib/utilities/isLive', () =>
+  jest.fn().mockImplementation(() => false),
+);
 
 /* eslint-disable react/prop-types */
 const MostReadCanonicalWithContext = ({
@@ -221,7 +226,9 @@ describe('MostReadContainerCanonical', () => {
     expect(container.querySelector('h1').textContent).toEqual('Most Read');
   });
 
-  it(`should not render most read when lastRecordTimeStamp is not fresh`, async () => {
+  it(`should not render most read when lastRecordTimeStamp is not fresh on live environment`, async () => {
+    isLive.mockImplementationOnce(() => true);
+
     fetchMock.mock(
       `www.test.bbc.com/arabic/mostread.json`,
       setStaleLastRecordTimeStamp(arabicMostReadData),
