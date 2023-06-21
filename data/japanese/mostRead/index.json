@@ -1,147 +1,149 @@
 {
-  "generated": "2023-06-19T14:57:30.278Z",
-  "lastRecordTimeStamp": "2023-06-19T14:55:00Z",
-  "firstRecordTimeStamp": "2023-06-19T14:40:00Z",
-  "items": [
-    {
-      "id": "a49f095c-b76c-4d1a-a254-b2c0f8ce1586",
-      "rank": 1,
-      "title": "イタリア政府、タイヤ大手ピレリの経営権を中国が握るのを阻止",
-      "href": "/japanese/65948508",
-      "timestamp": 1687161170000
-    },
-    {
-      "id": "eaf53da0-a0ef-4761-a815-dcdac4b949bc",
-      "rank": 2,
-      "title": "フランスで異例のM5超の地震　数百の建物が破損",
-      "href": "/japanese/65942008",
-      "timestamp": 1687056072000
-    },
-    {
-      "id": "da252f81-2c78-442e-b5ee-3cf3f59bf4e4",
-      "rank": 3,
-      "title": "棺の中で「生き返った」女性、1週間後に死亡　エクアドル",
-      "href": "/japanese/65947216",
-      "timestamp": 1687149199000
-    },
-    {
-      "id": "91d75052-d00a-47db-bde0-38a42a30a578",
-      "rank": 4,
-      "title": "「ウクライナでの戦争は終わらせなくては」　南アフリカ大統領がプーチン氏に伝える",
-      "href": "/japanese/65942100",
-      "timestamp": 1687057600000
-    },
-    {
-      "id": "21d18d60-38df-44f4-9376-96c4e144884c",
-      "rank": 5,
-      "title": "独ノイシュヴァンシュタイン城近くで女性が谷に突き落とされ死亡　アメリカ人の男を逮捕",
-      "href": "/japanese/65924548",
-      "timestamp": 1686881800000
-    },
-    {
-      "id": "f31aa8f7-39e0-499d-8fcd-24c8aa6e1e9a",
-      "rank": 6,
-      "title": "痴漢動画を売るサイトの裏を暴く……BBC独自調査　日本と中国で　",
-      "href": "/japanese/features-and-analysis-65817476",
-      "timestamp": 1686186007000
-    },
-    {
-      "id": "abcea674-3957-4342-b4cb-48aa1c571355",
-      "rank": 7,
-      "title": "ポーランドのプライドパレードに数万人が参加　解散総選挙を前に",
-      "href": "/japanese/65942106",
-      "timestamp": 1687061723000
-    },
-    {
-      "id": "15f3a90f-a48b-42ca-99ad-6b2bed190e48",
-      "rank": 8,
-      "title": "ダム決壊の避難場所、ロシアが砲撃か　ウクライナが非難",
-      "href": "/japanese/65852494",
-      "timestamp": 1686289182000
-    },
-    {
-      "id": "6d84ffc1-16c5-46a5-a9ce-ba081671f795",
-      "rank": 9,
-      "title": "「死んだ」女性、棺の中で呼吸　本人の通夜",
-      "href": "/japanese/65886575",
-      "timestamp": 1686619725000
-    },
-    {
-      "id": "2cc2a533-c557-43f4-915f-2f09964234b5",
-      "rank": 10,
-      "title": "【解説】 中国と台湾の関係、すごく分かりやすく説明",
-      "href": "/japanese/features-and-analysis-62403702",
-      "timestamp": 1659574689000
-    },
-    {
-      "id": "06c2f750-9a30-4a29-a689-03d211ca9ba5",
-      "rank": 11,
-      "title": "ロックダウン下で英保守党がパーティー、新動画が浮上　閣僚が陳謝",
-      "href": "/japanese/65947134",
-      "timestamp": 1687152327000
-    },
-    {
-      "id": "62a5dd4e-cf05-402f-b826-cd945c1529fb",
-      "rank": 12,
-      "title": "米国務長官が5年ぶり中国訪問、外相と「率直な」会談行う＝米国務省",
-      "href": "/japanese/65936895",
-      "timestamp": 1687141736000
-    },
-    {
-      "id": "54231b39-a998-4507-8b86-8b132b0485cc",
-      "rank": 13,
-      "title": "ウクライナ反転攻勢の前線ルポ　奪還した集落に住人の姿なし　",
-      "href": "/japanese/features-and-analysis-65899805",
-      "timestamp": 1686713961000
-    },
-    {
-      "id": "2878d1cd-d6c3-f346-b2b6-6e2196875c72",
-      "rank": 14,
-      "title": "強姦は日常的、生理は止まり……北朝鮮の女性兵たち",
-      "href": "/japanese/features-and-analysis-42077034",
-      "timestamp": 1511335212000
-    },
-    {
-      "id": "b585de13-0d75-0e48-a5f3-c3a8956b1088",
-      "rank": 15,
-      "title": "【解説】 新型ウイルスには２度感染する？　免疫についていま分かっていること",
-      "href": "/japanese/features-and-analysis-52451012",
-      "timestamp": 1588057992000
-    },
-    {
-      "id": "927dfa71-40c7-4db5-aada-b80fb608c283",
-      "rank": 16,
-      "title": "ビヨンセが原因でスウェーデンのインフレ率上昇？　コンサートでホテル料金などが高騰",
-      "href": "/japanese/65911796",
-      "timestamp": 1686803223000
-    },
-    {
-      "id": "86a13b3c-1cde-4891-8baa-5ccb488e8bfc",
-      "rank": 17,
-      "title": "オーストリアのプライドパレード、襲撃計画容疑で3人逮捕　ナイフなど押収",
-      "href": "/japanese/65947219",
-      "timestamp": 1687155764000
-    },
-    {
-      "id": "70eeb101-fc31-46d1-8928-243c6b31a519",
-      "rank": 18,
-      "title": "「パーティーゲート」でジョンソン氏の弁護費用に公費、約4400万円の返還求める声",
-      "href": "/japanese/65924653",
-      "timestamp": 1686887786000
-    },
-    {
-      "id": "5f9dba23-65fe-4b4d-b2c2-f9e1764412d6",
-      "rank": 19,
-      "title": "テニスのナダル選手、全仏を欠場　来季で引退の意向を表明",
-      "href": "/japanese/65643182",
-      "timestamp": 1684466189000
-    },
-    {
-      "id": "3a65bb59-0d2a-4b0c-b3d5-21a4f0ce2c4b",
-      "rank": 20,
-      "title": "ジョン・レノンさん死去40年　「あの日そこにいた」BBC記者が振り返る",
-      "href": "/japanese/features-and-analysis-55226059",
-      "timestamp": 1607408782000
-    }
-  ]
+  "data": {
+    "generated": "2023-06-19T14:57:30.278Z",
+    "lastRecordTimeStamp": "2023-06-19T14:55:00Z",
+    "firstRecordTimeStamp": "2023-06-19T14:40:00Z",
+    "items": [
+      {
+        "id": "a49f095c-b76c-4d1a-a254-b2c0f8ce1586",
+        "rank": 1,
+        "title": "イタリア政府、タイヤ大手ピレリの経営権を中国が握るのを阻止",
+        "href": "/japanese/65948508",
+        "timestamp": 1687161170000
+      },
+      {
+        "id": "eaf53da0-a0ef-4761-a815-dcdac4b949bc",
+        "rank": 2,
+        "title": "フランスで異例のM5超の地震　数百の建物が破損",
+        "href": "/japanese/65942008",
+        "timestamp": 1687056072000
+      },
+      {
+        "id": "da252f81-2c78-442e-b5ee-3cf3f59bf4e4",
+        "rank": 3,
+        "title": "棺の中で「生き返った」女性、1週間後に死亡　エクアドル",
+        "href": "/japanese/65947216",
+        "timestamp": 1687149199000
+      },
+      {
+        "id": "91d75052-d00a-47db-bde0-38a42a30a578",
+        "rank": 4,
+        "title": "「ウクライナでの戦争は終わらせなくては」　南アフリカ大統領がプーチン氏に伝える",
+        "href": "/japanese/65942100",
+        "timestamp": 1687057600000
+      },
+      {
+        "id": "21d18d60-38df-44f4-9376-96c4e144884c",
+        "rank": 5,
+        "title": "独ノイシュヴァンシュタイン城近くで女性が谷に突き落とされ死亡　アメリカ人の男を逮捕",
+        "href": "/japanese/65924548",
+        "timestamp": 1686881800000
+      },
+      {
+        "id": "f31aa8f7-39e0-499d-8fcd-24c8aa6e1e9a",
+        "rank": 6,
+        "title": "痴漢動画を売るサイトの裏を暴く……BBC独自調査　日本と中国で　",
+        "href": "/japanese/features-and-analysis-65817476",
+        "timestamp": 1686186007000
+      },
+      {
+        "id": "abcea674-3957-4342-b4cb-48aa1c571355",
+        "rank": 7,
+        "title": "ポーランドのプライドパレードに数万人が参加　解散総選挙を前に",
+        "href": "/japanese/65942106",
+        "timestamp": 1687061723000
+      },
+      {
+        "id": "15f3a90f-a48b-42ca-99ad-6b2bed190e48",
+        "rank": 8,
+        "title": "ダム決壊の避難場所、ロシアが砲撃か　ウクライナが非難",
+        "href": "/japanese/65852494",
+        "timestamp": 1686289182000
+      },
+      {
+        "id": "6d84ffc1-16c5-46a5-a9ce-ba081671f795",
+        "rank": 9,
+        "title": "「死んだ」女性、棺の中で呼吸　本人の通夜",
+        "href": "/japanese/65886575",
+        "timestamp": 1686619725000
+      },
+      {
+        "id": "2cc2a533-c557-43f4-915f-2f09964234b5",
+        "rank": 10,
+        "title": "【解説】 中国と台湾の関係、すごく分かりやすく説明",
+        "href": "/japanese/features-and-analysis-62403702",
+        "timestamp": 1659574689000
+      },
+      {
+        "id": "06c2f750-9a30-4a29-a689-03d211ca9ba5",
+        "rank": 11,
+        "title": "ロックダウン下で英保守党がパーティー、新動画が浮上　閣僚が陳謝",
+        "href": "/japanese/65947134",
+        "timestamp": 1687152327000
+      },
+      {
+        "id": "62a5dd4e-cf05-402f-b826-cd945c1529fb",
+        "rank": 12,
+        "title": "米国務長官が5年ぶり中国訪問、外相と「率直な」会談行う＝米国務省",
+        "href": "/japanese/65936895",
+        "timestamp": 1687141736000
+      },
+      {
+        "id": "54231b39-a998-4507-8b86-8b132b0485cc",
+        "rank": 13,
+        "title": "ウクライナ反転攻勢の前線ルポ　奪還した集落に住人の姿なし　",
+        "href": "/japanese/features-and-analysis-65899805",
+        "timestamp": 1686713961000
+      },
+      {
+        "id": "2878d1cd-d6c3-f346-b2b6-6e2196875c72",
+        "rank": 14,
+        "title": "強姦は日常的、生理は止まり……北朝鮮の女性兵たち",
+        "href": "/japanese/features-and-analysis-42077034",
+        "timestamp": 1511335212000
+      },
+      {
+        "id": "b585de13-0d75-0e48-a5f3-c3a8956b1088",
+        "rank": 15,
+        "title": "【解説】 新型ウイルスには２度感染する？　免疫についていま分かっていること",
+        "href": "/japanese/features-and-analysis-52451012",
+        "timestamp": 1588057992000
+      },
+      {
+        "id": "927dfa71-40c7-4db5-aada-b80fb608c283",
+        "rank": 16,
+        "title": "ビヨンセが原因でスウェーデンのインフレ率上昇？　コンサートでホテル料金などが高騰",
+        "href": "/japanese/65911796",
+        "timestamp": 1686803223000
+      },
+      {
+        "id": "86a13b3c-1cde-4891-8baa-5ccb488e8bfc",
+        "rank": 17,
+        "title": "オーストリアのプライドパレード、襲撃計画容疑で3人逮捕　ナイフなど押収",
+        "href": "/japanese/65947219",
+        "timestamp": 1687155764000
+      },
+      {
+        "id": "70eeb101-fc31-46d1-8928-243c6b31a519",
+        "rank": 18,
+        "title": "「パーティーゲート」でジョンソン氏の弁護費用に公費、約4400万円の返還求める声",
+        "href": "/japanese/65924653",
+        "timestamp": 1686887786000
+      },
+      {
+        "id": "5f9dba23-65fe-4b4d-b2c2-f9e1764412d6",
+        "rank": 19,
+        "title": "テニスのナダル選手、全仏を欠場　来季で引退の意向を表明",
+        "href": "/japanese/65643182",
+        "timestamp": 1684466189000
+      },
+      {
+        "id": "3a65bb59-0d2a-4b0c-b3d5-21a4f0ce2c4b",
+        "rank": 20,
+        "title": "ジョン・レノンさん死去40年　「あの日そこにいた」BBC記者が振り返る",
+        "href": "/japanese/features-and-analysis-55226059",
+        "timestamp": 1607408782000
+      }
+    ]
+  }
 }
