@@ -1,147 +1,149 @@
 {
-  "generated": "2023-06-19T15:11:23.222Z",
-  "lastRecordTimeStamp": "2023-06-19T15:08:00Z",
-  "firstRecordTimeStamp": "2023-06-19T14:53:00Z",
-  "items": [
-    {
-      "id": "9a4005c6-328b-4c7d-992c-bf14ad5290cd",
-      "rank": 1,
-      "title": "Наступ: як українські бійці беруть штурмом окопи росіян. Репортаж ВВС з передової",
-      "href": "/ukrainian/features-65951862",
-      "timestamp": 1687180066000
-    },
-    {
-      "id": "c23d4448-33a2-4e44-8492-5626715c78c8",
-      "rank": 2,
-      "title": "Україна може виграти війну, але втратити після цього свій шанс - The Times",
-      "href": "/ukrainian/press-review-65947898",
-      "timestamp": 1687156345000
-    },
-    {
-      "id": "b1bdd930-8e91-41f1-8d32-53196e87919e",
-      "rank": 3,
-      "title": "Візит держсекретаря Блінкена до Китаю. Що з цього Україні",
-      "href": "/ukrainian/news-65949103",
-      "timestamp": 1687181480000
-    },
-    {
-      "id": "4ed96f37-fa61-4ee7-9b12-c82450b36627",
-      "rank": 4,
-      "title": "Чому Україна може зробити паузу у наступі",
-      "href": "/ukrainian/news-65947900",
-      "timestamp": 1687162993000
-    },
-    {
-      "id": "6569bbab-96f5-4d25-9ae0-adc7d17d3243",
-      "rank": 5,
-      "title": "\"Хірург експериментував наді мною і зруйнував моє життя\"",
-      "href": "/ukrainian/features-65930224",
-      "timestamp": 1686933881000
-    },
-    {
-      "id": "eb587fa4-0802-40ef-8183-f8141f9900ba",
-      "rank": 6,
-      "title": "Найгучніше в Австралії зникнення дівчинки. Чому родина просить переглянути справу 50 років по тому",
-      "href": "/ukrainian/features-65913851",
-      "timestamp": 1686829557000
-    },
-    {
-      "id": "urn:bbc:optimo:asset:ce41yd58j3xo",
-      "rank": 7,
-      "title": "Всередині Північної Кореї: \"Ми застрягли тут в очікуванні смерті\"",
-      "href": "https://www.bbc.com/ukrainian/articles/ce41yd58j3xo",
-      "timestamp": 1687068506214
-    },
-    {
-      "id": "831e2c56-fcfa-4374-b1fd-1155a6ca00f4",
-      "rank": 8,
-      "title": "\"Деколонізація мислення\". Як вторгнення в Україну спонукало казахів боротися за свою мову",
-      "href": "/ukrainian/features-65944990",
-      "timestamp": 1687097391000
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cw4vlgq2nd2o",
-      "rank": 9,
-      "title": "Путін про наступ ЗСУ: шансів немає. Що ще він сказав про війну і Зеленського  ",
-      "href": "https://www.bbc.com/ukrainian/articles/cw4vlgq2nd2o",
-      "timestamp": 1686929251024
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cp4kyerg1z9o",
-      "rank": 10,
-      "title": "\"Мені сказали, що син загинув. А потім він подзвонив\". У Росії почався суд над \"азовцями\"",
-      "href": "https://www.bbc.com/ukrainian/articles/cp4kyerg1z9o",
-      "timestamp": 1686890696850
-    },
-    {
-      "id": "8f2d3a60-908a-5547-932b-fe7af350bf9b",
-      "rank": 11,
-      "title": "Маловідомий винахідник, який ймовірно врятував ваше життя",
-      "href": "/ukrainian/features-49096195",
-      "timestamp": 1564029662000
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cek13p8jzpvo",
-      "rank": 12,
-      "title": "МДМА. Як наркотик позбавив чоловіка радикальних поглядів",
-      "href": "https://www.bbc.com/ukrainian/articles/cek13p8jzpvo",
-      "timestamp": 1687097590819
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c4n4p5pv878o",
-      "rank": 13,
-      "title": "Африканці в гостях у Зеленського та Путіна. Що зміниться для України",
-      "href": "https://www.bbc.com/ukrainian/articles/c4n4p5pv878o",
-      "timestamp": 1687086547294
-    },
-    {
-      "id": "a5c49a33-e988-4691-89f1-ef522936ec90",
-      "rank": 14,
-      "title": "Padam Padam! Кайлі Міноуг повернулася з новим хітом, який б'є рекорди",
-      "href": "/ukrainian/news-65939798",
-      "timestamp": 1687007964000
-    },
-    {
-      "id": "ea5c9a11-bb14-480b-a6f4-0a270a063b0f",
-      "rank": 15,
-      "title": "Релігійний наставник 15 років ґвалтував школярок. Суд відправив його у психлікарню",
-      "href": "/ukrainian/news-63558782",
-      "timestamp": 1667917882000
-    },
-    {
-      "id": "c0e866fe-8e4a-4063-961e-072af5622ce2",
-      "rank": 16,
-      "title": "Як колір купальника може врятувати життя вам та вашій дитині",
-      "href": "/ukrainian/vert-fut-65930232",
-      "timestamp": 1687005178000
-    },
-    {
-      "id": "7d14047c-c941-4775-a6f1-10d558ec0aeb",
-      "rank": 17,
-      "title": "\"Досі сяє\". У Німеччині знайшли меч, викуваний понад 3000 років тому",
-      "href": "/ukrainian/news-65938387",
-      "timestamp": 1686998364000
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cmm0znq3ml5o",
-      "rank": 18,
-      "title": "\"Перший після Бога, в хорошому сенсі\". Як генерал Залужний став тим, ким він є ",
-      "href": "https://www.bbc.com/ukrainian/articles/cmm0znq3ml5o",
-      "timestamp": 1686720235528
-    },
-    {
-      "id": "fe1b4106-48a2-4efb-a939-5e73386e3f44",
-      "rank": 19,
-      "title": "\"Виснажлива війна, ціна якої буде високою\". Як на Заході оцінюють наступ України",
-      "href": "/ukrainian/features-65912203",
-      "timestamp": 1686808723000
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cedzjwz1zewo",
-      "rank": 20,
-      "title": "ВВС побувала у звільненому під час контрнаступу селі. Що ми там побачили",
-      "href": "https://www.bbc.com/ukrainian/articles/cedzjwz1zewo",
-      "timestamp": 1686734506316
-    }
-  ]
+  "data": {
+    "generated": "2023-06-19T15:11:23.222Z",
+    "lastRecordTimeStamp": "2023-06-19T15:08:00Z",
+    "firstRecordTimeStamp": "2023-06-19T14:53:00Z",
+    "items": [
+      {
+        "id": "9a4005c6-328b-4c7d-992c-bf14ad5290cd",
+        "rank": 1,
+        "title": "Наступ: як українські бійці беруть штурмом окопи росіян. Репортаж ВВС з передової",
+        "href": "/ukrainian/features-65951862",
+        "timestamp": 1687180066000
+      },
+      {
+        "id": "c23d4448-33a2-4e44-8492-5626715c78c8",
+        "rank": 2,
+        "title": "Україна може виграти війну, але втратити після цього свій шанс - The Times",
+        "href": "/ukrainian/press-review-65947898",
+        "timestamp": 1687156345000
+      },
+      {
+        "id": "b1bdd930-8e91-41f1-8d32-53196e87919e",
+        "rank": 3,
+        "title": "Візит держсекретаря Блінкена до Китаю. Що з цього Україні",
+        "href": "/ukrainian/news-65949103",
+        "timestamp": 1687181480000
+      },
+      {
+        "id": "4ed96f37-fa61-4ee7-9b12-c82450b36627",
+        "rank": 4,
+        "title": "Чому Україна може зробити паузу у наступі",
+        "href": "/ukrainian/news-65947900",
+        "timestamp": 1687162993000
+      },
+      {
+        "id": "6569bbab-96f5-4d25-9ae0-adc7d17d3243",
+        "rank": 5,
+        "title": "\"Хірург експериментував наді мною і зруйнував моє життя\"",
+        "href": "/ukrainian/features-65930224",
+        "timestamp": 1686933881000
+      },
+      {
+        "id": "eb587fa4-0802-40ef-8183-f8141f9900ba",
+        "rank": 6,
+        "title": "Найгучніше в Австралії зникнення дівчинки. Чому родина просить переглянути справу 50 років по тому",
+        "href": "/ukrainian/features-65913851",
+        "timestamp": 1686829557000
+      },
+      {
+        "id": "urn:bbc:optimo:asset:ce41yd58j3xo",
+        "rank": 7,
+        "title": "Всередині Північної Кореї: \"Ми застрягли тут в очікуванні смерті\"",
+        "href": "https://www.bbc.com/ukrainian/articles/ce41yd58j3xo",
+        "timestamp": 1687068506214
+      },
+      {
+        "id": "831e2c56-fcfa-4374-b1fd-1155a6ca00f4",
+        "rank": 8,
+        "title": "\"Деколонізація мислення\". Як вторгнення в Україну спонукало казахів боротися за свою мову",
+        "href": "/ukrainian/features-65944990",
+        "timestamp": 1687097391000
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cw4vlgq2nd2o",
+        "rank": 9,
+        "title": "Путін про наступ ЗСУ: шансів немає. Що ще він сказав про війну і Зеленського  ",
+        "href": "https://www.bbc.com/ukrainian/articles/cw4vlgq2nd2o",
+        "timestamp": 1686929251024
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cp4kyerg1z9o",
+        "rank": 10,
+        "title": "\"Мені сказали, що син загинув. А потім він подзвонив\". У Росії почався суд над \"азовцями\"",
+        "href": "https://www.bbc.com/ukrainian/articles/cp4kyerg1z9o",
+        "timestamp": 1686890696850
+      },
+      {
+        "id": "8f2d3a60-908a-5547-932b-fe7af350bf9b",
+        "rank": 11,
+        "title": "Маловідомий винахідник, який ймовірно врятував ваше життя",
+        "href": "/ukrainian/features-49096195",
+        "timestamp": 1564029662000
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cek13p8jzpvo",
+        "rank": 12,
+        "title": "МДМА. Як наркотик позбавив чоловіка радикальних поглядів",
+        "href": "https://www.bbc.com/ukrainian/articles/cek13p8jzpvo",
+        "timestamp": 1687097590819
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c4n4p5pv878o",
+        "rank": 13,
+        "title": "Африканці в гостях у Зеленського та Путіна. Що зміниться для України",
+        "href": "https://www.bbc.com/ukrainian/articles/c4n4p5pv878o",
+        "timestamp": 1687086547294
+      },
+      {
+        "id": "a5c49a33-e988-4691-89f1-ef522936ec90",
+        "rank": 14,
+        "title": "Padam Padam! Кайлі Міноуг повернулася з новим хітом, який б'є рекорди",
+        "href": "/ukrainian/news-65939798",
+        "timestamp": 1687007964000
+      },
+      {
+        "id": "ea5c9a11-bb14-480b-a6f4-0a270a063b0f",
+        "rank": 15,
+        "title": "Релігійний наставник 15 років ґвалтував школярок. Суд відправив його у психлікарню",
+        "href": "/ukrainian/news-63558782",
+        "timestamp": 1667917882000
+      },
+      {
+        "id": "c0e866fe-8e4a-4063-961e-072af5622ce2",
+        "rank": 16,
+        "title": "Як колір купальника може врятувати життя вам та вашій дитині",
+        "href": "/ukrainian/vert-fut-65930232",
+        "timestamp": 1687005178000
+      },
+      {
+        "id": "7d14047c-c941-4775-a6f1-10d558ec0aeb",
+        "rank": 17,
+        "title": "\"Досі сяє\". У Німеччині знайшли меч, викуваний понад 3000 років тому",
+        "href": "/ukrainian/news-65938387",
+        "timestamp": 1686998364000
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cmm0znq3ml5o",
+        "rank": 18,
+        "title": "\"Перший після Бога, в хорошому сенсі\". Як генерал Залужний став тим, ким він є ",
+        "href": "https://www.bbc.com/ukrainian/articles/cmm0znq3ml5o",
+        "timestamp": 1686720235528
+      },
+      {
+        "id": "fe1b4106-48a2-4efb-a939-5e73386e3f44",
+        "rank": 19,
+        "title": "\"Виснажлива війна, ціна якої буде високою\". Як на Заході оцінюють наступ України",
+        "href": "/ukrainian/features-65912203",
+        "timestamp": 1686808723000
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cedzjwz1zewo",
+        "rank": 20,
+        "title": "ВВС побувала у звільненому під час контрнаступу селі. Що ми там побачили",
+        "href": "https://www.bbc.com/ukrainian/articles/cedzjwz1zewo",
+        "timestamp": 1686734506316
+      }
+    ]
+  }
 }

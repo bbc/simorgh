@@ -1,147 +1,149 @@
 {
-  "generated": "2023-06-19T14:58:49.656Z",
-  "lastRecordTimeStamp": "2023-06-19T14:55:00Z",
-  "firstRecordTimeStamp": "2023-06-19T08:55:00Z",
-  "items": [
-    {
-      "id": "urn:bbc:optimo:asset:cjqzkjgl1d3o",
-      "rank": 1,
-      "title": "Табытта кайра  тирилген эквадордук аял",
-      "href": "https://www.bbc.com/kyrgyz/articles/cjqzkjgl1d3o",
-      "timestamp": 1687139708235
-    },
-    {
-      "id": "b0f7f093-c002-3b4b-a594-c91004c94bea",
-      "rank": 2,
-      "title": "Ичеги эмнеге экинчи мээ деп аталат? Ичеги тууралуу таң калтырган алты факты",
-      "href": "/kyrgyz/magazine-45738765",
-      "timestamp": 1538624209000
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cd14rqz1p55o",
-      "rank": 3,
-      "title": "Кытай-Кыргызстан-Өзбекстан темир жолу: ТЭО дээрлик даяр ",
-      "href": "https://www.bbc.com/kyrgyz/articles/cd14rqz1p55o",
-      "timestamp": 1687150291556
-    },
-    {
-      "id": "urn:bbc:optimo:asset:crgzz44785no",
-      "rank": 4,
-      "title": "Украинанын контр чабуулу: сегизинчи кыштак бошотулду",
-      "href": "https://www.bbc.com/kyrgyz/articles/crgzz44785no",
-      "timestamp": 1687173128833
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c6p367y5z50o",
-      "rank": 5,
-      "title": "Кыйырга кеткен кыргыз сүтү",
-      "href": "https://www.bbc.com/kyrgyz/articles/c6p367y5z50o",
-      "timestamp": 1686821657905
-    },
-    {
-      "id": "0b47c5ab-37c5-454e-9b97-80f2de32ec49",
-      "rank": 6,
-      "title": "Эволюция тууралуу Дарвинден миң жыл мурун жазган мусулман окумуштуусу",
-      "href": "/kyrgyz/entertainment-47454377",
-      "timestamp": 1551853439000
-    },
-    {
-      "id": "a5b30972-ed50-cb46-85a3-ca7176923354",
-      "rank": 7,
-      "title": "Аң-сезимдүү эң байыркы адам качан пайда болгон?",
-      "href": "/kyrgyz/world-40248016",
-      "timestamp": 1497262417000
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c169n2278p4o",
-      "rank": 8,
-      "title": "\"Олуттуу коркунуч\". Бейөкмөт уюмдарды беймаза кылган долбоор ",
-      "href": "https://www.bbc.com/kyrgyz/articles/c169n2278p4o",
-      "timestamp": 1686895464507
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cd18ym47n8zo",
-      "rank": 9,
-      "title": "\"Сирияга барбай эле койгула\":  реабилитация бүттү, алдыда - интеграция",
-      "href": "https://www.bbc.com/kyrgyz/articles/cd18ym47n8zo",
-      "timestamp": 1686807737644
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cjejlj7ejndo",
-      "rank": 10,
-      "title": "\"Нервный болуп калгам\". Журналистке кол көтөргөн ишкердин жазасы кандай болот? ",
-      "href": "https://www.bbc.com/kyrgyz/articles/cjejlj7ejndo",
-      "timestamp": 1686887810198
-    },
-    {
-      "id": "3edd2cc8-d46d-47b7-9450-e32ef053460c",
-      "rank": 11,
-      "title": "Согуштун жүзү: Украинада курман болгон орус аскеринин бейнеси кандай өзгөрдү?",
-      "href": "/kyrgyz/world-65924515",
-      "timestamp": 1686893633000
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c6pln9p8npeo",
-      "rank": 12,
-      "title": "\"Кулдай садага чабылып\". Борбор Азиянын мигранттары Бахмутка кантип барып жатат? ",
-      "href": "https://www.bbc.com/kyrgyz/articles/c6pln9p8npeo",
-      "timestamp": 1686805393619
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cyx4l9y69weo",
-      "rank": 13,
-      "title": "Фото: Айдалган манаптардын такталып бүтө элек тарыхы",
-      "href": "https://www.bbc.com/kyrgyz/articles/cyx4l9y69weo",
-      "timestamp": 1644913245974
-    },
-    {
-      "id": "87e4bf4f-1b65-43ce-b129-6abe05ad56be",
-      "rank": 14,
-      "title": "Болот хандын Борбордук Азиянын тагдырын аныктаган саясий эрдиги",
-      "href": "/kyrgyz/blog-54823269",
-      "timestamp": 1604567305000
-    },
-    {
-      "id": "d786f163-31c6-a040-8646-1b6e71400a5d",
-      "rank": 15,
-      "title": "Гапыр Мадаминов: Ата-эне окумайын, бала окубайт",
-      "href": "/kyrgyz/kyrgyzstan-41524390",
-      "timestamp": 1507279487000
-    },
-    {
-      "id": "c201ed35-538e-ce4d-9f30-de7f3ea4c6f8",
-      "rank": 16,
-      "title": "Кылым карыткан сүрөттөр: Сергей Прокудин Борбор Азияда",
-      "href": "/kyrgyz/entertainment-45365328",
-      "timestamp": 1535691470000
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c41knv20gk7o",
-      "rank": 17,
-      "title": "Күн сайын пайдаланган кайсы азык-түлүктөр жетишсиз боло баштайт?",
-      "href": "https://www.bbc.com/kyrgyz/articles/c41knv20gk7o",
-      "timestamp": 1634128502799
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cpgx4k72wv4o",
-      "rank": 18,
-      "title": "Facebook компаниясынын базар наркы  $1 триллиндон  ашты",
-      "href": "https://www.bbc.com/kyrgyz/articles/cpgx4k72wv4o",
-      "timestamp": 1625115584553
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cp67l0ey84lo",
-      "rank": 19,
-      "title": "Путиндин сүйгөнү делген Алина Кабаева ким?",
-      "href": "https://www.bbc.com/kyrgyz/articles/cp67l0ey84lo",
-      "timestamp": 1652165189289
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cl04epydlxeo",
-      "rank": 20,
-      "title": "Бала ким менен укташы керек? Коляска керекпи? Ата-энелердин мифтерин талдайбыз",
-      "href": "https://www.bbc.com/kyrgyz/articles/cl04epydlxeo",
-      "timestamp": 1640402808586
-    }
-  ]
+  "data": {
+    "generated": "2023-06-19T14:58:49.656Z",
+    "lastRecordTimeStamp": "2023-06-19T14:55:00Z",
+    "firstRecordTimeStamp": "2023-06-19T08:55:00Z",
+    "items": [
+      {
+        "id": "urn:bbc:optimo:asset:cjqzkjgl1d3o",
+        "rank": 1,
+        "title": "Табытта кайра  тирилген эквадордук аял",
+        "href": "https://www.bbc.com/kyrgyz/articles/cjqzkjgl1d3o",
+        "timestamp": 1687139708235
+      },
+      {
+        "id": "b0f7f093-c002-3b4b-a594-c91004c94bea",
+        "rank": 2,
+        "title": "Ичеги эмнеге экинчи мээ деп аталат? Ичеги тууралуу таң калтырган алты факты",
+        "href": "/kyrgyz/magazine-45738765",
+        "timestamp": 1538624209000
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cd14rqz1p55o",
+        "rank": 3,
+        "title": "Кытай-Кыргызстан-Өзбекстан темир жолу: ТЭО дээрлик даяр ",
+        "href": "https://www.bbc.com/kyrgyz/articles/cd14rqz1p55o",
+        "timestamp": 1687150291556
+      },
+      {
+        "id": "urn:bbc:optimo:asset:crgzz44785no",
+        "rank": 4,
+        "title": "Украинанын контр чабуулу: сегизинчи кыштак бошотулду",
+        "href": "https://www.bbc.com/kyrgyz/articles/crgzz44785no",
+        "timestamp": 1687173128833
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c6p367y5z50o",
+        "rank": 5,
+        "title": "Кыйырга кеткен кыргыз сүтү",
+        "href": "https://www.bbc.com/kyrgyz/articles/c6p367y5z50o",
+        "timestamp": 1686821657905
+      },
+      {
+        "id": "0b47c5ab-37c5-454e-9b97-80f2de32ec49",
+        "rank": 6,
+        "title": "Эволюция тууралуу Дарвинден миң жыл мурун жазган мусулман окумуштуусу",
+        "href": "/kyrgyz/entertainment-47454377",
+        "timestamp": 1551853439000
+      },
+      {
+        "id": "a5b30972-ed50-cb46-85a3-ca7176923354",
+        "rank": 7,
+        "title": "Аң-сезимдүү эң байыркы адам качан пайда болгон?",
+        "href": "/kyrgyz/world-40248016",
+        "timestamp": 1497262417000
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c169n2278p4o",
+        "rank": 8,
+        "title": "\"Олуттуу коркунуч\". Бейөкмөт уюмдарды беймаза кылган долбоор ",
+        "href": "https://www.bbc.com/kyrgyz/articles/c169n2278p4o",
+        "timestamp": 1686895464507
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cd18ym47n8zo",
+        "rank": 9,
+        "title": "\"Сирияга барбай эле койгула\":  реабилитация бүттү, алдыда - интеграция",
+        "href": "https://www.bbc.com/kyrgyz/articles/cd18ym47n8zo",
+        "timestamp": 1686807737644
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cjejlj7ejndo",
+        "rank": 10,
+        "title": "\"Нервный болуп калгам\". Журналистке кол көтөргөн ишкердин жазасы кандай болот? ",
+        "href": "https://www.bbc.com/kyrgyz/articles/cjejlj7ejndo",
+        "timestamp": 1686887810198
+      },
+      {
+        "id": "3edd2cc8-d46d-47b7-9450-e32ef053460c",
+        "rank": 11,
+        "title": "Согуштун жүзү: Украинада курман болгон орус аскеринин бейнеси кандай өзгөрдү?",
+        "href": "/kyrgyz/world-65924515",
+        "timestamp": 1686893633000
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c6pln9p8npeo",
+        "rank": 12,
+        "title": "\"Кулдай садага чабылып\". Борбор Азиянын мигранттары Бахмутка кантип барып жатат? ",
+        "href": "https://www.bbc.com/kyrgyz/articles/c6pln9p8npeo",
+        "timestamp": 1686805393619
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cyx4l9y69weo",
+        "rank": 13,
+        "title": "Фото: Айдалган манаптардын такталып бүтө элек тарыхы",
+        "href": "https://www.bbc.com/kyrgyz/articles/cyx4l9y69weo",
+        "timestamp": 1644913245974
+      },
+      {
+        "id": "87e4bf4f-1b65-43ce-b129-6abe05ad56be",
+        "rank": 14,
+        "title": "Болот хандын Борбордук Азиянын тагдырын аныктаган саясий эрдиги",
+        "href": "/kyrgyz/blog-54823269",
+        "timestamp": 1604567305000
+      },
+      {
+        "id": "d786f163-31c6-a040-8646-1b6e71400a5d",
+        "rank": 15,
+        "title": "Гапыр Мадаминов: Ата-эне окумайын, бала окубайт",
+        "href": "/kyrgyz/kyrgyzstan-41524390",
+        "timestamp": 1507279487000
+      },
+      {
+        "id": "c201ed35-538e-ce4d-9f30-de7f3ea4c6f8",
+        "rank": 16,
+        "title": "Кылым карыткан сүрөттөр: Сергей Прокудин Борбор Азияда",
+        "href": "/kyrgyz/entertainment-45365328",
+        "timestamp": 1535691470000
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c41knv20gk7o",
+        "rank": 17,
+        "title": "Күн сайын пайдаланган кайсы азык-түлүктөр жетишсиз боло баштайт?",
+        "href": "https://www.bbc.com/kyrgyz/articles/c41knv20gk7o",
+        "timestamp": 1634128502799
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cpgx4k72wv4o",
+        "rank": 18,
+        "title": "Facebook компаниясынын базар наркы  $1 триллиндон  ашты",
+        "href": "https://www.bbc.com/kyrgyz/articles/cpgx4k72wv4o",
+        "timestamp": 1625115584553
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cp67l0ey84lo",
+        "rank": 19,
+        "title": "Путиндин сүйгөнү делген Алина Кабаева ким?",
+        "href": "https://www.bbc.com/kyrgyz/articles/cp67l0ey84lo",
+        "timestamp": 1652165189289
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cl04epydlxeo",
+        "rank": 20,
+        "title": "Бала ким менен укташы керек? Коляска керекпи? Ата-энелердин мифтерин талдайбыз",
+        "href": "https://www.bbc.com/kyrgyz/articles/cl04epydlxeo",
+        "timestamp": 1640402808586
+      }
+    ]
+  }
 }

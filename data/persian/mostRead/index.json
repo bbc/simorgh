@@ -1,147 +1,149 @@
 {
-  "generated": "2023-06-19T15:02:25.166Z",
-  "lastRecordTimeStamp": "2023-06-19T14:59:00Z",
-  "firstRecordTimeStamp": "2023-06-19T14:44:00Z",
-  "items": [
-    {
-      "id": "urn:bbc:optimo:asset:c4n9j7rx27lo",
-      "rank": 1,
-      "title": "ایران در آستانه بحران بنزین؛ تابستانی دشوار برای دولت رئیسی در پیش است",
-      "href": "https://www.bbc.com/persian/articles/c4n9j7rx27lo",
-      "timestamp": 1687166940497
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cm58lxneyrvo",
-      "rank": 2,
-      "title": "پرونده حمید نوری؛ وکلای مدافع: نوری فریب خورد",
-      "href": "https://www.bbc.com/persian/articles/cm58lxneyrvo",
-      "timestamp": 1687186050229
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cx7e0eexdeeo",
-      "rank": 3,
-      "title": "اما رادوکانو: گاهی آرزو می‌کنم که ای کاش قهرمان اوپن آمریکا نمی‌شدم",
-      "href": "https://www.bbc.com/persian/articles/cx7e0eexdeeo",
-      "timestamp": 1687153548786
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cqe0045zrpdo",
-      "rank": 4,
-      "title": "ملی‌پوش سابق هلند برای چاقو زدن به فامیلش به ۱۸ ماه حبس محکوم شد",
-      "href": "https://www.bbc.com/persian/articles/cqe0045zrpdo",
-      "timestamp": 1687176764164
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cjmyylvr1nvo",
-      "rank": 5,
-      "title": "وزیر خارجه آمریکا در پکن؛ شی: پیشرفت‌هایی در روابط حاصل شده است، بلینکن: رقابت نباید بدل به دشمنی شود",
-      "href": "https://www.bbc.com/persian/articles/cjmyylvr1nvo",
-      "timestamp": 1687177697668
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cyxgqq1796qo",
-      "rank": 6,
-      "title": "سگم سرطان پستان مرا تشخیص داد",
-      "href": "https://www.bbc.com/persian/articles/cyxgqq1796qo",
-      "timestamp": 1687116062499
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cydg800g89yo",
-      "rank": 7,
-      "title": "لوح ۲۸۰۰ ساله از ایتالیا به عراق بازگردانده شد",
-      "href": "https://www.bbc.com/persian/articles/cydg800g89yo",
-      "timestamp": 1687131319810
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cgr664ezld5o",
-      "rank": 8,
-      "title": "نمایندگان کشورها و نهادها در اجلاس سازمان ملل خواستار پایان یافتن سیاست‌های تبعیض‌آمیز طالبان علیه زنان شدند",
-      "href": "https://www.bbc.com/persian/articles/cgr664ezld5o",
-      "timestamp": 1687181307203
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c9wj7ejl17po",
-      "rank": 9,
-      "title": "چرا موبایل داغ می‌کند و چطور آن را خنک نگه داریم؟",
-      "href": "https://www.bbc.com/persian/articles/c9wj7ejl17po",
-      "timestamp": 1687071702645
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c6plvgyz614o",
-      "rank": 10,
-      "title": "هشتگ «داستان_ما_یکیست» در چهلمین سالگرد اعدام ۱۰ زن بهائی در شیراز",
-      "href": "https://www.bbc.com/persian/articles/c6plvgyz614o",
-      "timestamp": 1687096028728
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c1698e29lgeo",
-      "rank": 11,
-      "title": "جهان خودرو؛ فن‌آوری‌های آینده بنز برای ماشینی که از گذشته الهام گرفته است",
-      "href": "https://www.bbc.com/persian/articles/c1698e29lgeo",
-      "timestamp": 1687106809323
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cn42evqgvmpo",
-      "rank": 12,
-      "title": "احتمال محکومیت الکسی ناوالنی، منتقد سرشناس پوتین به ده‌ها سال زندان با اتهامات جدید",
-      "href": "https://www.bbc.com/persian/articles/cn42evqgvmpo",
-      "timestamp": 1687161488039
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cnd9g0g6724o",
-      "rank": 13,
-      "title": "سه فلسطینی در حمله نیروهای اسرائیلی به اردوگاه جنین کشته شدند",
-      "href": "https://www.bbc.com/persian/articles/cnd9g0g6724o",
-      "timestamp": 1687172290396
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cv2kdjwlgx1o",
-      "rank": 14,
-      "title": "استعفای مقام شهرداری بروکسل به خاطر میزبانی از علیرضا زاکانی در مجمع شهرداران",
-      "href": "https://www.bbc.com/persian/articles/cv2kdjwlgx1o",
-      "timestamp": 1687108657454
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c721d9yyz4no",
-      "rank": 15,
-      "title": "آدم‌ربایی و شکنجه در مرز ایران و ترکیه؛ «نترس بهت تجاوز نمی‌کنیم، فقط فیلم می‌گیریم»",
-      "href": "https://www.bbc.com/persian/articles/c721d9yyz4no",
-      "timestamp": 1686747986799
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cw8ln16w7z1o",
-      "rank": 16,
-      "title": "زنی که هفته پیش با ضربه زدن به تابوتش زنده ماند، این هفته درگذشت",
-      "href": "https://www.bbc.com/persian/articles/cw8ln16w7z1o",
-      "timestamp": 1687105907701
-    },
-    {
-      "id": "af1d94b4-e9cf-4cf1-96af-e5bff320c4db",
-      "rank": 17,
-      "title": "«مردم دیگر علاقه‌ای به خواندن اخبار ناراحت‌کننده و منفی ندارند»",
-      "href": "/persian/world-features-65913302",
-      "timestamp": 1686821679000
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cxw3jrxg1djo",
-      "rank": 18,
-      "title": "همزمان با سقوط محبوبیت، نخست‌وزیر ارمنستان  برای صلح با ترکیه و جمهوری آذربایجان تابوشکنی می‌کند",
-      "href": "https://www.bbc.com/persian/articles/cxw3jrxg1djo",
-      "timestamp": 1686974382503
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cn0k6xykjn1o",
-      "rank": 19,
-      "title": "ایران چطور از قدرت نرم در استان دیرالزور سوریه استفاده می‌کند؟",
-      "href": "https://www.bbc.com/persian/articles/cn0k6xykjn1o",
-      "timestamp": 1686974401039
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c2v852z010jo",
-      "rank": 20,
-      "title": "مخالفت نتانیاهو با تفاهم احتمالی میان ایران و آمریکا",
-      "href": "https://www.bbc.com/persian/articles/c2v852z010jo",
-      "timestamp": 1687123884935
-    }
-  ]
+  "data": {
+    "generated": "2023-06-19T15:02:25.166Z",
+    "lastRecordTimeStamp": "2023-06-19T14:59:00Z",
+    "firstRecordTimeStamp": "2023-06-19T14:44:00Z",
+    "items": [
+      {
+        "id": "urn:bbc:optimo:asset:c4n9j7rx27lo",
+        "rank": 1,
+        "title": "ایران در آستانه بحران بنزین؛ تابستانی دشوار برای دولت رئیسی در پیش است",
+        "href": "https://www.bbc.com/persian/articles/c4n9j7rx27lo",
+        "timestamp": 1687166940497
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cm58lxneyrvo",
+        "rank": 2,
+        "title": "پرونده حمید نوری؛ وکلای مدافع: نوری فریب خورد",
+        "href": "https://www.bbc.com/persian/articles/cm58lxneyrvo",
+        "timestamp": 1687186050229
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cx7e0eexdeeo",
+        "rank": 3,
+        "title": "اما رادوکانو: گاهی آرزو می‌کنم که ای کاش قهرمان اوپن آمریکا نمی‌شدم",
+        "href": "https://www.bbc.com/persian/articles/cx7e0eexdeeo",
+        "timestamp": 1687153548786
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cqe0045zrpdo",
+        "rank": 4,
+        "title": "ملی‌پوش سابق هلند برای چاقو زدن به فامیلش به ۱۸ ماه حبس محکوم شد",
+        "href": "https://www.bbc.com/persian/articles/cqe0045zrpdo",
+        "timestamp": 1687176764164
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cjmyylvr1nvo",
+        "rank": 5,
+        "title": "وزیر خارجه آمریکا در پکن؛ شی: پیشرفت‌هایی در روابط حاصل شده است، بلینکن: رقابت نباید بدل به دشمنی شود",
+        "href": "https://www.bbc.com/persian/articles/cjmyylvr1nvo",
+        "timestamp": 1687177697668
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cyxgqq1796qo",
+        "rank": 6,
+        "title": "سگم سرطان پستان مرا تشخیص داد",
+        "href": "https://www.bbc.com/persian/articles/cyxgqq1796qo",
+        "timestamp": 1687116062499
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cydg800g89yo",
+        "rank": 7,
+        "title": "لوح ۲۸۰۰ ساله از ایتالیا به عراق بازگردانده شد",
+        "href": "https://www.bbc.com/persian/articles/cydg800g89yo",
+        "timestamp": 1687131319810
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cgr664ezld5o",
+        "rank": 8,
+        "title": "نمایندگان کشورها و نهادها در اجلاس سازمان ملل خواستار پایان یافتن سیاست‌های تبعیض‌آمیز طالبان علیه زنان شدند",
+        "href": "https://www.bbc.com/persian/articles/cgr664ezld5o",
+        "timestamp": 1687181307203
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c9wj7ejl17po",
+        "rank": 9,
+        "title": "چرا موبایل داغ می‌کند و چطور آن را خنک نگه داریم؟",
+        "href": "https://www.bbc.com/persian/articles/c9wj7ejl17po",
+        "timestamp": 1687071702645
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c6plvgyz614o",
+        "rank": 10,
+        "title": "هشتگ «داستان_ما_یکیست» در چهلمین سالگرد اعدام ۱۰ زن بهائی در شیراز",
+        "href": "https://www.bbc.com/persian/articles/c6plvgyz614o",
+        "timestamp": 1687096028728
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c1698e29lgeo",
+        "rank": 11,
+        "title": "جهان خودرو؛ فن‌آوری‌های آینده بنز برای ماشینی که از گذشته الهام گرفته است",
+        "href": "https://www.bbc.com/persian/articles/c1698e29lgeo",
+        "timestamp": 1687106809323
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cn42evqgvmpo",
+        "rank": 12,
+        "title": "احتمال محکومیت الکسی ناوالنی، منتقد سرشناس پوتین به ده‌ها سال زندان با اتهامات جدید",
+        "href": "https://www.bbc.com/persian/articles/cn42evqgvmpo",
+        "timestamp": 1687161488039
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cnd9g0g6724o",
+        "rank": 13,
+        "title": "سه فلسطینی در حمله نیروهای اسرائیلی به اردوگاه جنین کشته شدند",
+        "href": "https://www.bbc.com/persian/articles/cnd9g0g6724o",
+        "timestamp": 1687172290396
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cv2kdjwlgx1o",
+        "rank": 14,
+        "title": "استعفای مقام شهرداری بروکسل به خاطر میزبانی از علیرضا زاکانی در مجمع شهرداران",
+        "href": "https://www.bbc.com/persian/articles/cv2kdjwlgx1o",
+        "timestamp": 1687108657454
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c721d9yyz4no",
+        "rank": 15,
+        "title": "آدم‌ربایی و شکنجه در مرز ایران و ترکیه؛ «نترس بهت تجاوز نمی‌کنیم، فقط فیلم می‌گیریم»",
+        "href": "https://www.bbc.com/persian/articles/c721d9yyz4no",
+        "timestamp": 1686747986799
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cw8ln16w7z1o",
+        "rank": 16,
+        "title": "زنی که هفته پیش با ضربه زدن به تابوتش زنده ماند، این هفته درگذشت",
+        "href": "https://www.bbc.com/persian/articles/cw8ln16w7z1o",
+        "timestamp": 1687105907701
+      },
+      {
+        "id": "af1d94b4-e9cf-4cf1-96af-e5bff320c4db",
+        "rank": 17,
+        "title": "«مردم دیگر علاقه‌ای به خواندن اخبار ناراحت‌کننده و منفی ندارند»",
+        "href": "/persian/world-features-65913302",
+        "timestamp": 1686821679000
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cxw3jrxg1djo",
+        "rank": 18,
+        "title": "همزمان با سقوط محبوبیت، نخست‌وزیر ارمنستان  برای صلح با ترکیه و جمهوری آذربایجان تابوشکنی می‌کند",
+        "href": "https://www.bbc.com/persian/articles/cxw3jrxg1djo",
+        "timestamp": 1686974382503
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cn0k6xykjn1o",
+        "rank": 19,
+        "title": "ایران چطور از قدرت نرم در استان دیرالزور سوریه استفاده می‌کند؟",
+        "href": "https://www.bbc.com/persian/articles/cn0k6xykjn1o",
+        "timestamp": 1686974401039
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c2v852z010jo",
+        "rank": 20,
+        "title": "مخالفت نتانیاهو با تفاهم احتمالی میان ایران و آمریکا",
+        "href": "https://www.bbc.com/persian/articles/c2v852z010jo",
+        "timestamp": 1687123884935
+      }
+    ]
+  }
 }
