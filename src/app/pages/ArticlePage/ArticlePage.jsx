@@ -43,6 +43,7 @@ import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 import ScrollablePromo from '#components/ScrollablePromo';
 import CpsRecommendations from '#containers/CpsRecommendations';
+import { GREY_2 } from '#app/components/ThemeProvider/palette';
 import MostRead from '../../components/MostRead';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
@@ -243,7 +244,7 @@ const ArticlePage = ({ pageData }) => {
             data={mostReadInitialData}
             columnLayout="multiColumn"
             size="default"
-            backgroundColour="GREY_2"
+            headingBackgroundColour={GREY_2}
           />
         </MostReadSection>
       )}
