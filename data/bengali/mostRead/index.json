@@ -1,147 +1,149 @@
 {
-  "generated": "2023-06-19T14:51:21.515Z",
-  "lastRecordTimeStamp": "2023-06-19T14:48:00Z",
-  "firstRecordTimeStamp": "2023-06-19T14:18:00Z",
-  "items": [
-    {
-      "id": "urn:bbc:optimo:asset:c98eegrxgy5o",
-      "rank": 1,
-      "title": "বৃদ্ধ বয়সে বাবা হওয়ার ঝুঁকি কী কী",
-      "href": "https://www.bbc.com/bengali/articles/c98eegrxgy5o",
-      "timestamp": 1687184786871
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c3g11kpzevro",
-      "rank": 2,
-      "title": "রাশিয়াকে 'প্রাণঘাতী সহায়তা' দেবে না চীন, বললেন ব্লিঙ্কেন",
-      "href": "https://www.bbc.com/bengali/articles/c3g11kpzevro",
-      "timestamp": 1687177954066
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c3g0ppx1wexo",
-      "rank": 3,
-      "title": "'ডিপ ফেক' পর্নের শিকার  মেয়েদের জীবন কীভাবে ভেঙে খানখান হচ্ছে",
-      "href": "https://www.bbc.com/bengali/articles/c3g0ppx1wexo",
-      "timestamp": 1687154723041
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cpr4117w03qo",
-      "rank": 4,
-      "title": "পুরুষ যখন বাবা হন তখন তার শরীর ও মস্তিষ্কে কী ধরনের পরিবর্তন ঘটে",
-      "href": "https://www.bbc.com/bengali/articles/cpr4117w03qo",
-      "timestamp": 1687139335499
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cjqzk89w5j0o",
-      "rank": 5,
-      "title": "'জাতীয় পার্টির কন্ঠে নির্বাচন বর্জনের সুর'",
-      "href": "https://www.bbc.com/bengali/articles/cjqzk89w5j0o",
-      "timestamp": 1687141714472
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cpr44z538q4o",
-      "rank": 6,
-      "title": "রোগীদের গোপনীয়তা রক্ষায় বাংলাদেশে কী ব্যবস্থা আছে?",
-      "href": "https://www.bbc.com/bengali/articles/cpr44z538q4o",
-      "timestamp": 1687178945430
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c84wrj7vj90o",
-      "rank": 7,
-      "title": "তাইওয়ান নিয়ে মার্কিন পররাষ্ট্রমন্ত্রী ব্লিঙ্কেনকে যে বার্তা দিলো চীন",
-      "href": "https://www.bbc.com/bengali/articles/c84wrj7vj90o",
-      "timestamp": 1687168646658
-    },
-    {
-      "id": "c804b6a7-a88f-a04d-8641-7f8f0a6721f8",
-      "rank": 8,
-      "title": "করোনাভাইরাস: যতসব ভুল ধারণা- কি বলছে ডব্লিউএইচও",
-      "href": "/bengali/news-52049521",
-      "timestamp": 1585222978000
-    },
-    {
-      "id": "urn:bbc:optimo:asset:crg3xd7gy9eo",
-      "rank": 9,
-      "title": "ডিজিটাল ব্যাংক চালু হবে বাংলাদেশে - শাখা, এটিএম ও চেকবই থাকবে না",
-      "href": "https://www.bbc.com/bengali/articles/crg3xd7gy9eo",
-      "timestamp": 1687053919441
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c13vpp75vm6o",
-      "rank": 10,
-      "title": "আর্টিফিশিয়াল ইন্টেলিজেন্সের কারণে যারা ইতোমধ্যেই চাকরি হারিয়েছেন",
-      "href": "https://www.bbc.com/bengali/articles/c13vpp75vm6o",
-      "timestamp": 1687096304266
-    },
-    {
-      "id": "1849031a-be73-a842-9699-4f3effaaafeb",
-      "rank": 11,
-      "title": "করোনাভাইরাস নিয়ে আপনার যা জানা প্রয়োজন",
-      "href": "/bengali/news-51257048",
-      "timestamp": 1609743703000
-    },
-    {
-      "id": "704c2f36-d42c-2e4c-985a-7945e2f8991d",
-      "rank": 12,
-      "title": "বয়ঃসন্ধিকাল যেভাবে বুঝবেন, যে আচরণ করবেন",
-      "href": "/bengali/news-51080976",
-      "timestamp": 1578825379000
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c4n6j9egnpjo",
-      "rank": 13,
-      "title": "ঋণের  সুদহারের সীমা তুলে দিয়ে নতুন মুদ্রানীতি ঘোষণা",
-      "href": "https://www.bbc.com/bengali/articles/c4n6j9egnpjo",
-      "timestamp": 1687086309893
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c3gp77kwmp3o",
-      "rank": 14,
-      "title": "‘হিংসাদীর্ণ মণিপুরের হাল এখন সিরিয়া বা লেবাননের মতো’",
-      "href": "https://www.bbc.com/bengali/articles/c3gp77kwmp3o",
-      "timestamp": 1687092678477
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cw0x86eyp67o",
-      "rank": 15,
-      "title": "সৌদি সমর্থিত শোধনাগারের বিরুদ্ধে অবস্থান ভারতীয়দের",
-      "href": "https://www.bbc.com/bengali/articles/cw0x86eyp67o",
-      "timestamp": 1687083663020
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cglen52ymr4o",
-      "rank": 16,
-      "title": "পৃথিবীর ভেতরে কীভাবে লুকিয়ে আছে এভারেস্টের চেয়েও চারগুণ উঁচু পর্বত",
-      "href": "https://www.bbc.com/bengali/articles/cglen52ymr4o",
-      "timestamp": 1687012433366
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cw4v5gdgynko",
-      "rank": 17,
-      "title": "'চীনা মুদ্রায় রূপপুর প্রকল্পের ঋণ পরিশোধ করা নিয়ে বিপাকে বাংলাদেশ'",
-      "href": "https://www.bbc.com/bengali/articles/cw4v5gdgynko",
-      "timestamp": 1687055816192
-    },
-    {
-      "id": "2a9544a1-8dfb-4827-9a19-f3711ae0d6ba",
-      "rank": 18,
-      "title": "বাংলাদেশের স্বাধীনতা: ১৯৪৭ থেকে ১৯৭১ পর্যন্ত গুরুত্বপূর্ণ ঘটনাবলী",
-      "href": "/bengali/news-56562959",
-      "timestamp": 1617097522000
-    },
-    {
-      "id": "980ec90f-ee15-6c44-a521-990bb39af8b5",
-      "rank": 19,
-      "title": "স্বাস্থ্য ভালো রাখার কয়েকটি সহজ উপায়",
-      "href": "/bengali/news-46707921",
-      "timestamp": 1546051976000
-    },
-    {
-      "id": "465a6021-e912-5b40-ba48-4f5b1bcb6a55",
-      "rank": 20,
-      "title": "শরীরে রোগ প্রতিরোধ ক্ষমতা বাড়ানোর কার্যকরী উপায়",
-      "href": "/bengali/news-49151613",
-      "timestamp": 1564394232000
-    }
-  ]
+  "data": {
+    "generated": "2023-06-19T14:51:21.515Z",
+    "lastRecordTimeStamp": "2023-06-19T14:48:00Z",
+    "firstRecordTimeStamp": "2023-06-19T14:18:00Z",
+    "items": [
+      {
+        "id": "urn:bbc:optimo:asset:c98eegrxgy5o",
+        "rank": 1,
+        "title": "বৃদ্ধ বয়সে বাবা হওয়ার ঝুঁকি কী কী",
+        "href": "https://www.bbc.com/bengali/articles/c98eegrxgy5o",
+        "timestamp": 1687184786871
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c3g11kpzevro",
+        "rank": 2,
+        "title": "রাশিয়াকে 'প্রাণঘাতী সহায়তা' দেবে না চীন, বললেন ব্লিঙ্কেন",
+        "href": "https://www.bbc.com/bengali/articles/c3g11kpzevro",
+        "timestamp": 1687177954066
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c3g0ppx1wexo",
+        "rank": 3,
+        "title": "'ডিপ ফেক' পর্নের শিকার  মেয়েদের জীবন কীভাবে ভেঙে খানখান হচ্ছে",
+        "href": "https://www.bbc.com/bengali/articles/c3g0ppx1wexo",
+        "timestamp": 1687154723041
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cpr4117w03qo",
+        "rank": 4,
+        "title": "পুরুষ যখন বাবা হন তখন তার শরীর ও মস্তিষ্কে কী ধরনের পরিবর্তন ঘটে",
+        "href": "https://www.bbc.com/bengali/articles/cpr4117w03qo",
+        "timestamp": 1687139335499
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cjqzk89w5j0o",
+        "rank": 5,
+        "title": "'জাতীয় পার্টির কন্ঠে নির্বাচন বর্জনের সুর'",
+        "href": "https://www.bbc.com/bengali/articles/cjqzk89w5j0o",
+        "timestamp": 1687141714472
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cpr44z538q4o",
+        "rank": 6,
+        "title": "রোগীদের গোপনীয়তা রক্ষায় বাংলাদেশে কী ব্যবস্থা আছে?",
+        "href": "https://www.bbc.com/bengali/articles/cpr44z538q4o",
+        "timestamp": 1687178945430
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c84wrj7vj90o",
+        "rank": 7,
+        "title": "তাইওয়ান নিয়ে মার্কিন পররাষ্ট্রমন্ত্রী ব্লিঙ্কেনকে যে বার্তা দিলো চীন",
+        "href": "https://www.bbc.com/bengali/articles/c84wrj7vj90o",
+        "timestamp": 1687168646658
+      },
+      {
+        "id": "c804b6a7-a88f-a04d-8641-7f8f0a6721f8",
+        "rank": 8,
+        "title": "করোনাভাইরাস: যতসব ভুল ধারণা- কি বলছে ডব্লিউএইচও",
+        "href": "/bengali/news-52049521",
+        "timestamp": 1585222978000
+      },
+      {
+        "id": "urn:bbc:optimo:asset:crg3xd7gy9eo",
+        "rank": 9,
+        "title": "ডিজিটাল ব্যাংক চালু হবে বাংলাদেশে - শাখা, এটিএম ও চেকবই থাকবে না",
+        "href": "https://www.bbc.com/bengali/articles/crg3xd7gy9eo",
+        "timestamp": 1687053919441
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c13vpp75vm6o",
+        "rank": 10,
+        "title": "আর্টিফিশিয়াল ইন্টেলিজেন্সের কারণে যারা ইতোমধ্যেই চাকরি হারিয়েছেন",
+        "href": "https://www.bbc.com/bengali/articles/c13vpp75vm6o",
+        "timestamp": 1687096304266
+      },
+      {
+        "id": "1849031a-be73-a842-9699-4f3effaaafeb",
+        "rank": 11,
+        "title": "করোনাভাইরাস নিয়ে আপনার যা জানা প্রয়োজন",
+        "href": "/bengali/news-51257048",
+        "timestamp": 1609743703000
+      },
+      {
+        "id": "704c2f36-d42c-2e4c-985a-7945e2f8991d",
+        "rank": 12,
+        "title": "বয়ঃসন্ধিকাল যেভাবে বুঝবেন, যে আচরণ করবেন",
+        "href": "/bengali/news-51080976",
+        "timestamp": 1578825379000
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c4n6j9egnpjo",
+        "rank": 13,
+        "title": "ঋণের  সুদহারের সীমা তুলে দিয়ে নতুন মুদ্রানীতি ঘোষণা",
+        "href": "https://www.bbc.com/bengali/articles/c4n6j9egnpjo",
+        "timestamp": 1687086309893
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c3gp77kwmp3o",
+        "rank": 14,
+        "title": "‘হিংসাদীর্ণ মণিপুরের হাল এখন সিরিয়া বা লেবাননের মতো’",
+        "href": "https://www.bbc.com/bengali/articles/c3gp77kwmp3o",
+        "timestamp": 1687092678477
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cw0x86eyp67o",
+        "rank": 15,
+        "title": "সৌদি সমর্থিত শোধনাগারের বিরুদ্ধে অবস্থান ভারতীয়দের",
+        "href": "https://www.bbc.com/bengali/articles/cw0x86eyp67o",
+        "timestamp": 1687083663020
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cglen52ymr4o",
+        "rank": 16,
+        "title": "পৃথিবীর ভেতরে কীভাবে লুকিয়ে আছে এভারেস্টের চেয়েও চারগুণ উঁচু পর্বত",
+        "href": "https://www.bbc.com/bengali/articles/cglen52ymr4o",
+        "timestamp": 1687012433366
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cw4v5gdgynko",
+        "rank": 17,
+        "title": "'চীনা মুদ্রায় রূপপুর প্রকল্পের ঋণ পরিশোধ করা নিয়ে বিপাকে বাংলাদেশ'",
+        "href": "https://www.bbc.com/bengali/articles/cw4v5gdgynko",
+        "timestamp": 1687055816192
+      },
+      {
+        "id": "2a9544a1-8dfb-4827-9a19-f3711ae0d6ba",
+        "rank": 18,
+        "title": "বাংলাদেশের স্বাধীনতা: ১৯৪৭ থেকে ১৯৭১ পর্যন্ত গুরুত্বপূর্ণ ঘটনাবলী",
+        "href": "/bengali/news-56562959",
+        "timestamp": 1617097522000
+      },
+      {
+        "id": "980ec90f-ee15-6c44-a521-990bb39af8b5",
+        "rank": 19,
+        "title": "স্বাস্থ্য ভালো রাখার কয়েকটি সহজ উপায়",
+        "href": "/bengali/news-46707921",
+        "timestamp": 1546051976000
+      },
+      {
+        "id": "465a6021-e912-5b40-ba48-4f5b1bcb6a55",
+        "rank": 20,
+        "title": "শরীরে রোগ প্রতিরোধ ক্ষমতা বাড়ানোর কার্যকরী উপায়",
+        "href": "/bengali/news-49151613",
+        "timestamp": 1564394232000
+      }
+    ]
+  }
 }

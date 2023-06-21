@@ -1,147 +1,149 @@
 {
-  "generated": "2023-06-19T14:48:19.798Z",
-  "lastRecordTimeStamp": "2023-06-19T14:45:00Z",
-  "firstRecordTimeStamp": "2023-06-19T13:45:00Z",
-  "items": [
-    {
-      "id": "urn:bbc:optimo:asset:cqqk2lgrzelo",
-      "rank": 1,
-      "title": "Les bienfaits du néré pour la santé ",
-      "href": "https://www.bbc.com/afrique/articles/cqqk2lgrzelo",
-      "timestamp": 1686847379086
-    },
-    {
-      "id": "df8eca14-b8c4-4fe6-8306-8a64ac2c81cd",
-      "rank": 2,
-      "title": "À l'intérieur d'un village ukrainien qui vient d'être libéré des forces russes",
-      "href": "/afrique/monde-65904070",
-      "timestamp": 1687021916000
-    },
-    {
-      "id": "urn:bbc:optimo:asset:clkxv7x1g79o",
-      "rank": 3,
-      "title": "Le Sénégalais qui s'est donné pour mission de planter cinq millions d'arbres",
-      "href": "https://www.bbc.com/afrique/articles/clkxv7x1g79o",
-      "timestamp": 1672309727969
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cy977ggegvlo",
-      "rank": 4,
-      "title": "Pourquoi le Mali demande un retrait \"sans délai\" de la Minusma",
-      "href": "https://www.bbc.com/afrique/articles/cy977ggegvlo",
-      "timestamp": 1687182432268
-    },
-    {
-      "id": "1bcc5ec0-c4f7-4c89-97c6-4b89338aa35d",
-      "rank": 5,
-      "title": "Pourquoi le Japon redéfinit-il le viol ?",
-      "href": "/afrique/monde-65867581",
-      "timestamp": 1687089693000
-    },
-    {
-      "id": "d524b6fd-0528-4aa6-a935-6510e8512f93",
-      "rank": 6,
-      "title": "Comment apprendre aux pilotes ukrainiens à piloter des F-16",
-      "href": "/afrique/monde-65934685",
-      "timestamp": 1687169120000
-    },
-    {
-      "id": "e3dbd5c0-368a-364e-8151-f50d7bb4d56e",
-      "rank": 7,
-      "title": "'J'ai été violée à 14 ans, et la vidéo a fini sur un site porno'",
-      "href": "/afrique/monde-51446420",
-      "timestamp": 1585152911000
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c28pmeezrgko",
-      "rank": 8,
-      "title": "Attaque d'une école en Ouganda : \"Des chants évangéliques puis des cris\"",
-      "href": "https://www.bbc.com/afrique/articles/c28pmeezrgko",
-      "timestamp": 1687176648459
-    },
-    {
-      "id": "c0ddbb21-e2d1-408a-9e27-b574f48595ad",
-      "rank": 9,
-      "title": "Le franc succès entrepreneurial de la styliste et actrice Ndèye Bineta Lèye",
-      "href": "/afrique/region-63727642",
-      "timestamp": 1671381000000
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c2l4nvkgwk9o",
-      "rank": 10,
-      "title": "Quels sont les enjeux du référendum constitutionnel au Mali ?",
-      "href": "https://www.bbc.com/afrique/articles/c2l4nvkgwk9o",
-      "timestamp": 1686920230826
-    },
-    {
-      "id": "7685deca-9074-4c89-9ba2-507c560c60c6",
-      "rank": 11,
-      "title": "\"Je veux que mon histoire mette en lumière les cheveux afro-texturés\"",
-      "href": "/afrique/region-63528355",
-      "timestamp": 1668353343000
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cydge2ev7dpo",
-      "rank": 12,
-      "title": "Les mystérieuses chaînes de montagnes qui se trouvent dans les profondeurs de la Terre",
-      "href": "https://www.bbc.com/afrique/articles/cydge2ev7dpo",
-      "timestamp": 1686585588125
-    },
-    {
-      "id": "87048428-d3d9-42dc-b40f-364c98bd1534",
-      "rank": 13,
-      "title": "Qui succèdera au milliardaire George Soros ?",
-      "href": "/afrique/monde-65904405",
-      "timestamp": 1687110518000
-    },
-    {
-      "id": "86790234-83f2-4249-9ee9-a984984deb70",
-      "rank": 14,
-      "title": "Comment des enfants ont survécu 40 jours dans la jungle colombienne",
-      "href": "/afrique/region-65904411",
-      "timestamp": 1686935660000
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c0wvznxyrd9o",
-      "rank": 15,
-      "title": "Le sexe est-il vraiment un sport national en Suède ? Vérification ",
-      "href": "https://www.bbc.com/afrique/articles/c0wvznxyrd9o",
-      "timestamp": 1686226332030
-    },
-    {
-      "id": "fa57f4d1-0384-4f7f-a442-44d6ce4f118f",
-      "rank": 16,
-      "title": "Le seul endroit au monde où l'on peut manger de la viande cultivée en laboratoire",
-      "href": "/afrique/monde-65905964",
-      "timestamp": 1687080445000
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c2ene0g52rlo",
-      "rank": 17,
-      "title": "Les 5 principaux avantages du moringa pour la santé ",
-      "href": "https://www.bbc.com/afrique/articles/c2ene0g52rlo",
-      "timestamp": 1658162354256
-    },
-    {
-      "id": "acefe87f-fcea-462d-a673-c56f927847ba",
-      "rank": 18,
-      "title": "Des satellites révèlent les défenses russes avant un assaut majeur",
-      "href": "/afrique/monde-65685618",
-      "timestamp": 1684917002000
-    },
-    {
-      "id": "ffcb1671-1c52-2147-b0e9-7805d9c382eb",
-      "rank": 19,
-      "title": "Ces femmes dont la nuit de noces s'est transformée en cauchemar",
-      "href": "/afrique/monde-50220876",
-      "timestamp": 1572445388000
-    },
-    {
-      "id": "7ed1fafb-c65e-4ec3-bb2f-1288f4b93d53",
-      "rank": 20,
-      "title": "L'homme à l'origine de la contre-offensive ukrainienne tant attendue",
-      "href": "/afrique/monde-65905956",
-      "timestamp": 1686813753000
-    }
-  ]
+  "data": {
+    "generated": "2023-06-19T14:48:19.798Z",
+    "lastRecordTimeStamp": "2023-06-19T14:45:00Z",
+    "firstRecordTimeStamp": "2023-06-19T13:45:00Z",
+    "items": [
+      {
+        "id": "urn:bbc:optimo:asset:cqqk2lgrzelo",
+        "rank": 1,
+        "title": "Les bienfaits du néré pour la santé ",
+        "href": "https://www.bbc.com/afrique/articles/cqqk2lgrzelo",
+        "timestamp": 1686847379086
+      },
+      {
+        "id": "df8eca14-b8c4-4fe6-8306-8a64ac2c81cd",
+        "rank": 2,
+        "title": "À l'intérieur d'un village ukrainien qui vient d'être libéré des forces russes",
+        "href": "/afrique/monde-65904070",
+        "timestamp": 1687021916000
+      },
+      {
+        "id": "urn:bbc:optimo:asset:clkxv7x1g79o",
+        "rank": 3,
+        "title": "Le Sénégalais qui s'est donné pour mission de planter cinq millions d'arbres",
+        "href": "https://www.bbc.com/afrique/articles/clkxv7x1g79o",
+        "timestamp": 1672309727969
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cy977ggegvlo",
+        "rank": 4,
+        "title": "Pourquoi le Mali demande un retrait \"sans délai\" de la Minusma",
+        "href": "https://www.bbc.com/afrique/articles/cy977ggegvlo",
+        "timestamp": 1687182432268
+      },
+      {
+        "id": "1bcc5ec0-c4f7-4c89-97c6-4b89338aa35d",
+        "rank": 5,
+        "title": "Pourquoi le Japon redéfinit-il le viol ?",
+        "href": "/afrique/monde-65867581",
+        "timestamp": 1687089693000
+      },
+      {
+        "id": "d524b6fd-0528-4aa6-a935-6510e8512f93",
+        "rank": 6,
+        "title": "Comment apprendre aux pilotes ukrainiens à piloter des F-16",
+        "href": "/afrique/monde-65934685",
+        "timestamp": 1687169120000
+      },
+      {
+        "id": "e3dbd5c0-368a-364e-8151-f50d7bb4d56e",
+        "rank": 7,
+        "title": "'J'ai été violée à 14 ans, et la vidéo a fini sur un site porno'",
+        "href": "/afrique/monde-51446420",
+        "timestamp": 1585152911000
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c28pmeezrgko",
+        "rank": 8,
+        "title": "Attaque d'une école en Ouganda : \"Des chants évangéliques puis des cris\"",
+        "href": "https://www.bbc.com/afrique/articles/c28pmeezrgko",
+        "timestamp": 1687176648459
+      },
+      {
+        "id": "c0ddbb21-e2d1-408a-9e27-b574f48595ad",
+        "rank": 9,
+        "title": "Le franc succès entrepreneurial de la styliste et actrice Ndèye Bineta Lèye",
+        "href": "/afrique/region-63727642",
+        "timestamp": 1671381000000
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c2l4nvkgwk9o",
+        "rank": 10,
+        "title": "Quels sont les enjeux du référendum constitutionnel au Mali ?",
+        "href": "https://www.bbc.com/afrique/articles/c2l4nvkgwk9o",
+        "timestamp": 1686920230826
+      },
+      {
+        "id": "7685deca-9074-4c89-9ba2-507c560c60c6",
+        "rank": 11,
+        "title": "\"Je veux que mon histoire mette en lumière les cheveux afro-texturés\"",
+        "href": "/afrique/region-63528355",
+        "timestamp": 1668353343000
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cydge2ev7dpo",
+        "rank": 12,
+        "title": "Les mystérieuses chaînes de montagnes qui se trouvent dans les profondeurs de la Terre",
+        "href": "https://www.bbc.com/afrique/articles/cydge2ev7dpo",
+        "timestamp": 1686585588125
+      },
+      {
+        "id": "87048428-d3d9-42dc-b40f-364c98bd1534",
+        "rank": 13,
+        "title": "Qui succèdera au milliardaire George Soros ?",
+        "href": "/afrique/monde-65904405",
+        "timestamp": 1687110518000
+      },
+      {
+        "id": "86790234-83f2-4249-9ee9-a984984deb70",
+        "rank": 14,
+        "title": "Comment des enfants ont survécu 40 jours dans la jungle colombienne",
+        "href": "/afrique/region-65904411",
+        "timestamp": 1686935660000
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c0wvznxyrd9o",
+        "rank": 15,
+        "title": "Le sexe est-il vraiment un sport national en Suède ? Vérification ",
+        "href": "https://www.bbc.com/afrique/articles/c0wvznxyrd9o",
+        "timestamp": 1686226332030
+      },
+      {
+        "id": "fa57f4d1-0384-4f7f-a442-44d6ce4f118f",
+        "rank": 16,
+        "title": "Le seul endroit au monde où l'on peut manger de la viande cultivée en laboratoire",
+        "href": "/afrique/monde-65905964",
+        "timestamp": 1687080445000
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c2ene0g52rlo",
+        "rank": 17,
+        "title": "Les 5 principaux avantages du moringa pour la santé ",
+        "href": "https://www.bbc.com/afrique/articles/c2ene0g52rlo",
+        "timestamp": 1658162354256
+      },
+      {
+        "id": "acefe87f-fcea-462d-a673-c56f927847ba",
+        "rank": 18,
+        "title": "Des satellites révèlent les défenses russes avant un assaut majeur",
+        "href": "/afrique/monde-65685618",
+        "timestamp": 1684917002000
+      },
+      {
+        "id": "ffcb1671-1c52-2147-b0e9-7805d9c382eb",
+        "rank": 19,
+        "title": "Ces femmes dont la nuit de noces s'est transformée en cauchemar",
+        "href": "/afrique/monde-50220876",
+        "timestamp": 1572445388000
+      },
+      {
+        "id": "7ed1fafb-c65e-4ec3-bb2f-1288f4b93d53",
+        "rank": 20,
+        "title": "L'homme à l'origine de la contre-offensive ukrainienne tant attendue",
+        "href": "/afrique/monde-65905956",
+        "timestamp": 1686813753000
+      }
+    ]
+  }
 }

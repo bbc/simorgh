@@ -1,147 +1,149 @@
 {
-  "generated": "2023-06-19T14:53:30.371Z",
-  "lastRecordTimeStamp": "2023-06-19T14:50:00Z",
-  "firstRecordTimeStamp": "2023-06-19T12:50:00Z",
-  "items": [
-    {
-      "id": "8a594b13-c0e6-4277-9557-951db79f8e8b",
-      "rank": 1,
-      "title": "BBC, 북한 내부 주민과의 독점 '비밀 인터뷰' 어떻게 가능했나",
-      "href": "/korean/international-65925100",
-      "timestamp": 1686899282000
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cq5q3vqyln2o",
-      "rank": 2,
-      "title": "BTS의 데뷔 10주년을 즐긴 세계 각국 '아미'들",
-      "href": "https://www.bbc.com/korean/articles/cq5q3vqyln2o",
-      "timestamp": 1687148544296
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cw4vpy0v7k7o",
-      "rank": 3,
-      "title": "장례식 도중 관 속에서 깨어난 여성… 결국 일주일 만에 다시 사망",
-      "href": "https://www.bbc.com/korean/articles/cw4vpy0v7k7o",
-      "timestamp": 1687167497510
-    },
-    {
-      "id": "51f25eef-9dd6-460b-ad74-ee9253f94d5e",
-      "rank": 4,
-      "title": "목선 타고 넘어온 탈북 가족, '북한 식량난 악화에 인육 취식 소문'",
-      "href": "/korean/news-65857970",
-      "timestamp": 1686630167000
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cqe0zy2egdvo",
-      "rank": 5,
-      "title": "사용후핵연료를 10만 년 묻어둔다는 핀란드의 계획",
-      "href": "https://www.bbc.com/korean/articles/cqe0zy2egdvo",
-      "timestamp": 1687051235323
-    },
-    {
-      "id": "57f79544-289a-48aa-8864-92303a556cc6",
-      "rank": 6,
-      "title": "원전 오염수는 왜 위험한 것일까?",
-      "href": "/korean/news-56672262",
-      "timestamp": 1618302607000
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cn3e4v9lmvro",
-      "rank": 7,
-      "title": "북한 내부 주민과의 BBC 독점 비밀 인터뷰 '식량 부족해 이웃들 굶어 죽어'",
-      "href": "https://www.bbc.com/korean/articles/cn3e4v9lmvro",
-      "timestamp": 1686798159882
-    },
-    {
-      "id": "urn:bbc:optimo:asset:crgkj1qyp71o",
-      "rank": 8,
-      "title": "별이 빛나는 밤부터 밀밭까지: 반 고흐의 가장 어두운 상징",
-      "href": "https://www.bbc.com/korean/articles/crgkj1qyp71o",
-      "timestamp": 1686969098889
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c6pv0p603lwo",
-      "rank": 9,
-      "title": "찰스 3세 국왕의 첫 공식 생일 행사에 영국 왕실 총출동",
-      "href": "https://www.bbc.com/korean/articles/c6pv0p603lwo",
-      "timestamp": 1687161391296
-    },
-    {
-      "id": "e00c6cc8-b8f7-4754-a206-b4ec8d05e366",
-      "rank": 10,
-      "title": "코로나19 확진자는 언제까지 전염력이 있나?",
-      "href": "/korean/features-60034967",
-      "timestamp": 1642727775000
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c4nk20me4z1o",
-      "rank": 11,
-      "title": "러시아 사망자 수는 실제 얼마나 될까",
-      "href": "https://www.bbc.com/korean/articles/c4nk20me4z1o",
-      "timestamp": 1686905301457
-    },
-    {
-      "id": "3ebf48bc-8263-4b73-bc4a-2b92b6f29e04",
-      "rank": 12,
-      "title": "미국 국무장관, 5년만의 방중...이번에 주목해야 할 3가지",
-      "href": "/korean/news-65941992",
-      "timestamp": 1687076094000
-    },
-    {
-      "id": "urn:bbc:optimo:asset:clk4p0yv723o",
-      "rank": 13,
-      "title": "사상 최초 ‘기후 재앙 마지노선 1.5℃, 돌파 가능성 크다’ 경고 나와",
-      "href": "https://www.bbc.com/korean/articles/clk4p0yv723o",
-      "timestamp": 1684384404722
-    },
-    {
-      "id": "744842af-37a5-437f-863b-86ea53282069",
-      "rank": 14,
-      "title": "환경 우려 부르는 패스트 패션... 해결책은?",
-      "href": "/korean/international-61864499",
-      "timestamp": 1656204889000
-    },
-    {
-      "id": "60525e31-c77c-4f16-810d-d33fd0552f32",
-      "rank": 15,
-      "title": "곤두박질치는 엔화 가치… 무슨 일이 벌어지고 있나?",
-      "href": "/korean/international-63423044",
-      "timestamp": 1666930197000
-    },
-    {
-      "id": "9d396643-655d-4548-8f45-8593f992cf4f",
-      "rank": 16,
-      "title": "'내 월급 빼고 다 오른다'...물가 상승의 원인은?",
-      "href": "/korean/news-61779593",
-      "timestamp": 1655341017000
-    },
-    {
-      "id": "79e27947-5e4f-ab44-9b97-5dd490aed6a5",
-      "rank": 17,
-      "title": "'제 아들이 포경수술 후, 스스로 목숨을 끊었습니다'",
-      "href": "/korean/48001335",
-      "timestamp": 1555813809000
-    },
-    {
-      "id": "52b4edca-5b57-4f4b-86ee-281789703169",
-      "rank": 18,
-      "title": "일본이 오염수 '해양 방류' 카드를 버리지 못하는 이유",
-      "href": "/korean/news-54703434",
-      "timestamp": 1603789409000
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c87yj2pzyp4o",
-      "rank": 19,
-      "title": "튀르키예: 지진 발생 지역은 어디며, 인명피해가 큰 이유는?",
-      "href": "https://www.bbc.com/korean/articles/c87yj2pzyp4o",
-      "timestamp": 1675736863419
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c0dpx9m2neyo",
-      "rank": 20,
-      "title": "러시아 전사자 묘지를 조사해 알게 된 사실",
-      "href": "https://www.bbc.com/korean/articles/c0dpx9m2neyo",
-      "timestamp": 1687062533368
-    }
-  ]
+  "data": {
+    "generated": "2023-06-19T14:53:30.371Z",
+    "lastRecordTimeStamp": "2023-06-19T14:50:00Z",
+    "firstRecordTimeStamp": "2023-06-19T12:50:00Z",
+    "items": [
+      {
+        "id": "8a594b13-c0e6-4277-9557-951db79f8e8b",
+        "rank": 1,
+        "title": "BBC, 북한 내부 주민과의 독점 '비밀 인터뷰' 어떻게 가능했나",
+        "href": "/korean/international-65925100",
+        "timestamp": 1686899282000
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cq5q3vqyln2o",
+        "rank": 2,
+        "title": "BTS의 데뷔 10주년을 즐긴 세계 각국 '아미'들",
+        "href": "https://www.bbc.com/korean/articles/cq5q3vqyln2o",
+        "timestamp": 1687148544296
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cw4vpy0v7k7o",
+        "rank": 3,
+        "title": "장례식 도중 관 속에서 깨어난 여성… 결국 일주일 만에 다시 사망",
+        "href": "https://www.bbc.com/korean/articles/cw4vpy0v7k7o",
+        "timestamp": 1687167497510
+      },
+      {
+        "id": "51f25eef-9dd6-460b-ad74-ee9253f94d5e",
+        "rank": 4,
+        "title": "목선 타고 넘어온 탈북 가족, '북한 식량난 악화에 인육 취식 소문'",
+        "href": "/korean/news-65857970",
+        "timestamp": 1686630167000
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cqe0zy2egdvo",
+        "rank": 5,
+        "title": "사용후핵연료를 10만 년 묻어둔다는 핀란드의 계획",
+        "href": "https://www.bbc.com/korean/articles/cqe0zy2egdvo",
+        "timestamp": 1687051235323
+      },
+      {
+        "id": "57f79544-289a-48aa-8864-92303a556cc6",
+        "rank": 6,
+        "title": "원전 오염수는 왜 위험한 것일까?",
+        "href": "/korean/news-56672262",
+        "timestamp": 1618302607000
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cn3e4v9lmvro",
+        "rank": 7,
+        "title": "북한 내부 주민과의 BBC 독점 비밀 인터뷰 '식량 부족해 이웃들 굶어 죽어'",
+        "href": "https://www.bbc.com/korean/articles/cn3e4v9lmvro",
+        "timestamp": 1686798159882
+      },
+      {
+        "id": "urn:bbc:optimo:asset:crgkj1qyp71o",
+        "rank": 8,
+        "title": "별이 빛나는 밤부터 밀밭까지: 반 고흐의 가장 어두운 상징",
+        "href": "https://www.bbc.com/korean/articles/crgkj1qyp71o",
+        "timestamp": 1686969098889
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c6pv0p603lwo",
+        "rank": 9,
+        "title": "찰스 3세 국왕의 첫 공식 생일 행사에 영국 왕실 총출동",
+        "href": "https://www.bbc.com/korean/articles/c6pv0p603lwo",
+        "timestamp": 1687161391296
+      },
+      {
+        "id": "e00c6cc8-b8f7-4754-a206-b4ec8d05e366",
+        "rank": 10,
+        "title": "코로나19 확진자는 언제까지 전염력이 있나?",
+        "href": "/korean/features-60034967",
+        "timestamp": 1642727775000
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c4nk20me4z1o",
+        "rank": 11,
+        "title": "러시아 사망자 수는 실제 얼마나 될까",
+        "href": "https://www.bbc.com/korean/articles/c4nk20me4z1o",
+        "timestamp": 1686905301457
+      },
+      {
+        "id": "3ebf48bc-8263-4b73-bc4a-2b92b6f29e04",
+        "rank": 12,
+        "title": "미국 국무장관, 5년만의 방중...이번에 주목해야 할 3가지",
+        "href": "/korean/news-65941992",
+        "timestamp": 1687076094000
+      },
+      {
+        "id": "urn:bbc:optimo:asset:clk4p0yv723o",
+        "rank": 13,
+        "title": "사상 최초 ‘기후 재앙 마지노선 1.5℃, 돌파 가능성 크다’ 경고 나와",
+        "href": "https://www.bbc.com/korean/articles/clk4p0yv723o",
+        "timestamp": 1684384404722
+      },
+      {
+        "id": "744842af-37a5-437f-863b-86ea53282069",
+        "rank": 14,
+        "title": "환경 우려 부르는 패스트 패션... 해결책은?",
+        "href": "/korean/international-61864499",
+        "timestamp": 1656204889000
+      },
+      {
+        "id": "60525e31-c77c-4f16-810d-d33fd0552f32",
+        "rank": 15,
+        "title": "곤두박질치는 엔화 가치… 무슨 일이 벌어지고 있나?",
+        "href": "/korean/international-63423044",
+        "timestamp": 1666930197000
+      },
+      {
+        "id": "9d396643-655d-4548-8f45-8593f992cf4f",
+        "rank": 16,
+        "title": "'내 월급 빼고 다 오른다'...물가 상승의 원인은?",
+        "href": "/korean/news-61779593",
+        "timestamp": 1655341017000
+      },
+      {
+        "id": "79e27947-5e4f-ab44-9b97-5dd490aed6a5",
+        "rank": 17,
+        "title": "'제 아들이 포경수술 후, 스스로 목숨을 끊었습니다'",
+        "href": "/korean/48001335",
+        "timestamp": 1555813809000
+      },
+      {
+        "id": "52b4edca-5b57-4f4b-86ee-281789703169",
+        "rank": 18,
+        "title": "일본이 오염수 '해양 방류' 카드를 버리지 못하는 이유",
+        "href": "/korean/news-54703434",
+        "timestamp": 1603789409000
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c87yj2pzyp4o",
+        "rank": 19,
+        "title": "튀르키예: 지진 발생 지역은 어디며, 인명피해가 큰 이유는?",
+        "href": "https://www.bbc.com/korean/articles/c87yj2pzyp4o",
+        "timestamp": 1675736863419
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c0dpx9m2neyo",
+        "rank": 20,
+        "title": "러시아 전사자 묘지를 조사해 알게 된 사실",
+        "href": "https://www.bbc.com/korean/articles/c0dpx9m2neyo",
+        "timestamp": 1687062533368
+      }
+    ]
+  }
 }

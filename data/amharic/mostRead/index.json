@@ -1,147 +1,149 @@
 {
-  "generated": "2023-06-19T14:49:19.112Z",
-  "lastRecordTimeStamp": "2023-06-19T14:47:00Z",
-  "firstRecordTimeStamp": "2023-06-19T12:47:00Z",
-  "items": [
-    {
-      "id": "urn:bbc:optimo:asset:cpv4xxnr99zo",
-      "rank": 1,
-      "title": "ኮሎኔል ደመቀ ዘውዱ ስለወልቃይት የወደፊት ዕጣ እና ስለሚቀርብባቸው ክስ ምን ይላሉ?",
-      "href": "https://www.bbc.com/amharic/articles/cpv4xxnr99zo",
-      "timestamp": 1687148368929
-    },
-    {
-      "id": "urn:bbc:optimo:asset:crgll5renmro",
-      "rank": 2,
-      "title": "ዩኬ ኢትዮጵያን ጨምሮ 65 አገራትን ተጠቃሚ የሚያደርግ አዲስ የንግድ ማዕቀፍ ይፋ አደረገች",
-      "href": "https://www.bbc.com/amharic/articles/crgll5renmro",
-      "timestamp": 1687171994617
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c8vyrvqmzngo",
-      "rank": 3,
-      "title": "ኡጋንዳ፡ “ተማሪዎቹ በአክራሪዎቹ ከመገደላቸው በፊት የወንጌል መዝሙር እየዘመሩ ነበር”",
-      "href": "https://www.bbc.com/amharic/articles/c8vyrvqmzngo",
-      "timestamp": 1687159422301
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c9e73zky35yo",
-      "rank": 4,
-      "title": "ከቀናት በፊት አልሞትኩም ብለው ሬሳ ሳጥን ያንኳኩት ኢኳዶሯዊት ‘የእውነት’ ሞቱ ",
-      "href": "https://www.bbc.com/amharic/articles/c9e73zky35yo",
-      "timestamp": 1687150900608
-    },
-    {
-      "id": "urn:bbc:optimo:asset:ce9wx6p514lo",
-      "rank": 5,
-      "title": "ጣሊያን ግዙፉን የጎም ፋብሪካ በቻይና መንግሥት ለተያዘ ኩባንያ አልሸጥም አለች",
-      "href": "https://www.bbc.com/amharic/articles/ce9wx6p514lo",
-      "timestamp": 1687152325010
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c84wrz2mmllo",
-      "rank": 6,
-      "title": "ብሊንከን ከቻይናው አቻቸው ጋር ‘ግልጽነት የተሞላበት’ ንግግር አድርገዋል ተባለ",
-      "href": "https://www.bbc.com/amharic/articles/c84wrz2mmllo",
-      "timestamp": 1687150977512
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c1d8p90n4vgo",
-      "rank": 7,
-      "title": "“ወደ ኋላ የተመለስኩት ለትዝታችን፣ ወደፊት የሄድኩት ደግሞ ለብላቴናው ስንቅ ለመሆን ነው”- ወግዳይት",
-      "href": "https://www.bbc.com/amharic/articles/c1d8p90n4vgo",
-      "timestamp": 1687064473493
-    },
-    {
-      "id": "urn:bbc:optimo:asset:ck59yney0jlo",
-      "rank": 8,
-      "title": "የዩክሬንን የመልሶ ማጥቃት ዘመቻን እየመሩ ያሉት ቁልፍ ሰው",
-      "href": "https://www.bbc.com/amharic/articles/ck59yney0jlo",
-      "timestamp": 1687064502041
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cz9gr6jrj8lo",
-      "rank": 9,
-      "title": "ስፔን ክሮሺያን በመርታት የአውሮፓ ኔሽንስ ሊግ ዋንጫን አነሳች",
-      "href": "https://www.bbc.com/amharic/articles/cz9gr6jrj8lo",
-      "timestamp": 1687151215876
-    },
-    {
-      "id": "urn:bbc:optimo:asset:ce7669zj1jyo",
-      "rank": 10,
-      "title": "በኤሌክትሪክ ኃይል እጥረት ምክንያት በውሃ ጥም የሚሰቃዩት የደቡብ አፍሪካ ከተሞች",
-      "href": "https://www.bbc.com/amharic/articles/ce7669zj1jyo",
-      "timestamp": 1687182624440
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c88x3dpvrx5o",
-      "rank": 11,
-      "title": "የብራዚል ተጫዋቾች ዘረኝነትን በመቃወም ሙሉ ጥቁር የሆነ መለያ ለብሰው ሜዳ ገቡ",
-      "href": "https://www.bbc.com/amharic/articles/c88x3dpvrx5o",
-      "timestamp": 1687077442154
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c997v1l0kvro",
-      "rank": 12,
-      "title": "የደቡብ አፍሪካው ፕሬዝዳንት ራማፎሳ የዩክሬን ጦርነት ማብቃት አለበት ሲሉ ለፑቲን ተናገሩ",
-      "href": "https://www.bbc.com/amharic/articles/c997v1l0kvro",
-      "timestamp": 1687069744435
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cw8ld5z31y5o",
-      "rank": 13,
-      "title": "የአፍሪካ መሪዎች በዩክሬን እና በሩሲያ መካከል ሰላም እንዲመጣ ያስችሉ ይሆን?",
-      "href": "https://www.bbc.com/amharic/articles/cw8ld5z31y5o",
-      "timestamp": 1686977545486
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c1r9d0dl7xlo",
-      "rank": 14,
-      "title": "ዩኒቨርሲቲዎችን ወደ ራስ ገዝነት መቀየር ለምን አስፈለገ?",
-      "href": "https://www.bbc.com/amharic/articles/c1r9d0dl7xlo",
-      "timestamp": 1686977229141
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c3g7470r91qo",
-      "rank": 15,
-      "title": "ቢዮንሴ ስዊድን ውስጥ ለተፈጠረው የዋጋ ግሽበት ምክንያት ሆናለች ተብላ ተወቀሰች",
-      "href": "https://www.bbc.com/amharic/articles/c3g7470r91qo",
-      "timestamp": 1686803769862
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c2xkd56nd5zo",
-      "rank": 16,
-      "title": "“አሰሪዬ ሠራተኛዋን ገድላት ስመለከት ራሴን ሳትኩ”- ሕይወት ከአረብ አገር ስደት በኋላ",
-      "href": "https://www.bbc.com/amharic/articles/c2xkd56nd5zo",
-      "timestamp": 1686888913559
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c8094jdjpr4o",
-      "rank": 17,
-      "title": "‘የምጽአት ቀንን ሽሽት’ ኢትዮጵያ ገብተው የነበሩት ኡጋንዳውያን ወደ አገራቸው ተመለሱ",
-      "href": "https://www.bbc.com/amharic/articles/c8094jdjpr4o",
-      "timestamp": 1686671601772
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c6pl9ngd935o",
-      "rank": 18,
-      "title": "አርቴታ ወደ ፒኤስጂ? ፒክፈርድ ወደ ዩናይትድ?ቼልሲስ ስንት ተጫዋቾችን ሊያስፈርም ቋምጧል?",
-      "href": "https://www.bbc.com/amharic/articles/c6pl9ngd935o",
-      "timestamp": 1687077791528
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cp69y227244o",
-      "rank": 19,
-      "title": "የሱዳን ጦርነት፡ በካርቱም የአየር ጥቃት ሕጻናትን ጨምሮ 17 ሰዎች ተገደሉ",
-      "href": "https://www.bbc.com/amharic/articles/cp69y227244o",
-      "timestamp": 1687071281773
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cld3l3vw7n7o",
-      "rank": 20,
-      "title": "በ2016 ረቂቅ በጀት ላይ የምጣኔ ሃብት ባለሙያዎች ዕይታ",
-      "href": "https://www.bbc.com/amharic/articles/cld3l3vw7n7o",
-      "timestamp": 1686716187216
-    }
-  ]
+  "data": {
+    "generated": "2023-06-19T14:49:19.112Z",
+    "lastRecordTimeStamp": "2023-06-19T14:47:00Z",
+    "firstRecordTimeStamp": "2023-06-19T12:47:00Z",
+    "items": [
+      {
+        "id": "urn:bbc:optimo:asset:cpv4xxnr99zo",
+        "rank": 1,
+        "title": "ኮሎኔል ደመቀ ዘውዱ ስለወልቃይት የወደፊት ዕጣ እና ስለሚቀርብባቸው ክስ ምን ይላሉ?",
+        "href": "https://www.bbc.com/amharic/articles/cpv4xxnr99zo",
+        "timestamp": 1687148368929
+      },
+      {
+        "id": "urn:bbc:optimo:asset:crgll5renmro",
+        "rank": 2,
+        "title": "ዩኬ ኢትዮጵያን ጨምሮ 65 አገራትን ተጠቃሚ የሚያደርግ አዲስ የንግድ ማዕቀፍ ይፋ አደረገች",
+        "href": "https://www.bbc.com/amharic/articles/crgll5renmro",
+        "timestamp": 1687171994617
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c8vyrvqmzngo",
+        "rank": 3,
+        "title": "ኡጋንዳ፡ “ተማሪዎቹ በአክራሪዎቹ ከመገደላቸው በፊት የወንጌል መዝሙር እየዘመሩ ነበር”",
+        "href": "https://www.bbc.com/amharic/articles/c8vyrvqmzngo",
+        "timestamp": 1687159422301
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c9e73zky35yo",
+        "rank": 4,
+        "title": "ከቀናት በፊት አልሞትኩም ብለው ሬሳ ሳጥን ያንኳኩት ኢኳዶሯዊት ‘የእውነት’ ሞቱ ",
+        "href": "https://www.bbc.com/amharic/articles/c9e73zky35yo",
+        "timestamp": 1687150900608
+      },
+      {
+        "id": "urn:bbc:optimo:asset:ce9wx6p514lo",
+        "rank": 5,
+        "title": "ጣሊያን ግዙፉን የጎም ፋብሪካ በቻይና መንግሥት ለተያዘ ኩባንያ አልሸጥም አለች",
+        "href": "https://www.bbc.com/amharic/articles/ce9wx6p514lo",
+        "timestamp": 1687152325010
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c84wrz2mmllo",
+        "rank": 6,
+        "title": "ብሊንከን ከቻይናው አቻቸው ጋር ‘ግልጽነት የተሞላበት’ ንግግር አድርገዋል ተባለ",
+        "href": "https://www.bbc.com/amharic/articles/c84wrz2mmllo",
+        "timestamp": 1687150977512
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c1d8p90n4vgo",
+        "rank": 7,
+        "title": "“ወደ ኋላ የተመለስኩት ለትዝታችን፣ ወደፊት የሄድኩት ደግሞ ለብላቴናው ስንቅ ለመሆን ነው”- ወግዳይት",
+        "href": "https://www.bbc.com/amharic/articles/c1d8p90n4vgo",
+        "timestamp": 1687064473493
+      },
+      {
+        "id": "urn:bbc:optimo:asset:ck59yney0jlo",
+        "rank": 8,
+        "title": "የዩክሬንን የመልሶ ማጥቃት ዘመቻን እየመሩ ያሉት ቁልፍ ሰው",
+        "href": "https://www.bbc.com/amharic/articles/ck59yney0jlo",
+        "timestamp": 1687064502041
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cz9gr6jrj8lo",
+        "rank": 9,
+        "title": "ስፔን ክሮሺያን በመርታት የአውሮፓ ኔሽንስ ሊግ ዋንጫን አነሳች",
+        "href": "https://www.bbc.com/amharic/articles/cz9gr6jrj8lo",
+        "timestamp": 1687151215876
+      },
+      {
+        "id": "urn:bbc:optimo:asset:ce7669zj1jyo",
+        "rank": 10,
+        "title": "በኤሌክትሪክ ኃይል እጥረት ምክንያት በውሃ ጥም የሚሰቃዩት የደቡብ አፍሪካ ከተሞች",
+        "href": "https://www.bbc.com/amharic/articles/ce7669zj1jyo",
+        "timestamp": 1687182624440
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c88x3dpvrx5o",
+        "rank": 11,
+        "title": "የብራዚል ተጫዋቾች ዘረኝነትን በመቃወም ሙሉ ጥቁር የሆነ መለያ ለብሰው ሜዳ ገቡ",
+        "href": "https://www.bbc.com/amharic/articles/c88x3dpvrx5o",
+        "timestamp": 1687077442154
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c997v1l0kvro",
+        "rank": 12,
+        "title": "የደቡብ አፍሪካው ፕሬዝዳንት ራማፎሳ የዩክሬን ጦርነት ማብቃት አለበት ሲሉ ለፑቲን ተናገሩ",
+        "href": "https://www.bbc.com/amharic/articles/c997v1l0kvro",
+        "timestamp": 1687069744435
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cw8ld5z31y5o",
+        "rank": 13,
+        "title": "የአፍሪካ መሪዎች በዩክሬን እና በሩሲያ መካከል ሰላም እንዲመጣ ያስችሉ ይሆን?",
+        "href": "https://www.bbc.com/amharic/articles/cw8ld5z31y5o",
+        "timestamp": 1686977545486
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c1r9d0dl7xlo",
+        "rank": 14,
+        "title": "ዩኒቨርሲቲዎችን ወደ ራስ ገዝነት መቀየር ለምን አስፈለገ?",
+        "href": "https://www.bbc.com/amharic/articles/c1r9d0dl7xlo",
+        "timestamp": 1686977229141
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c3g7470r91qo",
+        "rank": 15,
+        "title": "ቢዮንሴ ስዊድን ውስጥ ለተፈጠረው የዋጋ ግሽበት ምክንያት ሆናለች ተብላ ተወቀሰች",
+        "href": "https://www.bbc.com/amharic/articles/c3g7470r91qo",
+        "timestamp": 1686803769862
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c2xkd56nd5zo",
+        "rank": 16,
+        "title": "“አሰሪዬ ሠራተኛዋን ገድላት ስመለከት ራሴን ሳትኩ”- ሕይወት ከአረብ አገር ስደት በኋላ",
+        "href": "https://www.bbc.com/amharic/articles/c2xkd56nd5zo",
+        "timestamp": 1686888913559
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c8094jdjpr4o",
+        "rank": 17,
+        "title": "‘የምጽአት ቀንን ሽሽት’ ኢትዮጵያ ገብተው የነበሩት ኡጋንዳውያን ወደ አገራቸው ተመለሱ",
+        "href": "https://www.bbc.com/amharic/articles/c8094jdjpr4o",
+        "timestamp": 1686671601772
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c6pl9ngd935o",
+        "rank": 18,
+        "title": "አርቴታ ወደ ፒኤስጂ? ፒክፈርድ ወደ ዩናይትድ?ቼልሲስ ስንት ተጫዋቾችን ሊያስፈርም ቋምጧል?",
+        "href": "https://www.bbc.com/amharic/articles/c6pl9ngd935o",
+        "timestamp": 1687077791528
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cp69y227244o",
+        "rank": 19,
+        "title": "የሱዳን ጦርነት፡ በካርቱም የአየር ጥቃት ሕጻናትን ጨምሮ 17 ሰዎች ተገደሉ",
+        "href": "https://www.bbc.com/amharic/articles/cp69y227244o",
+        "timestamp": 1687071281773
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cld3l3vw7n7o",
+        "rank": 20,
+        "title": "በ2016 ረቂቅ በጀት ላይ የምጣኔ ሃብት ባለሙያዎች ዕይታ",
+        "href": "https://www.bbc.com/amharic/articles/cld3l3vw7n7o",
+        "timestamp": 1686716187216
+      }
+    ]
+  }
 }
