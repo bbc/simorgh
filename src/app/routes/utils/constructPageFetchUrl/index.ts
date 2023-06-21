@@ -82,7 +82,7 @@ const constructPageFetchUrl = ({
     queryParameters,
   );
 
-  if (false) {
+  if (isLocal) {
     switch (pageType) {
       case PAGE_TYPES.ARTICLE:
         fetchUrl = Url(
