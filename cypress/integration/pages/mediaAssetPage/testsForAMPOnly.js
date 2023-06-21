@@ -28,7 +28,7 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
 
       const language = appConfig[config[service].name][variant].lang;
 
-      it.only('should render an iframe with a valid URL', () => {
+      it('should render an iframe with a valid URL', () => {
         if (!`${Cypress.env('currentPath')}`.includes('/russian/av/')) {
           if (hasMedia(jsonData)) {
             const embedUrl = getEmbedUrl(jsonData, language, true);
