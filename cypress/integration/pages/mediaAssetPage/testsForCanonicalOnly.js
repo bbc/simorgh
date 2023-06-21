@@ -23,25 +23,27 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
 
       it('should render an iframe with a valid URL', () => {
         if (!`${Cypress.env('currentPath')}`.includes('/russian/av/')) {
-          cy.request(`${Cypress.env('currentPath')}.json`).then(
-            ({ body: jsonData }) => {
-              if (hasMedia(jsonData)) {
-                const embedUrl = getEmbedUrl(jsonData, language);
-                cy.log(embedUrl);
-                cy.get(`iframe[src*="${embedUrl}"]`).should('be.visible');
-                cy.testResponseCodeAndTypeRetry({
-                  path: embedUrl,
-                  responseCode: 200,
-                  type: 'text/html',
-                  allowFallback: true,
-                });
-              } else {
-                cy.log(
-                  `No media on ${pageType} for ${Cypress.env('currentPath')}`,
-                );
-              }
-            },
-          );
+          cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
+            const {
+              data: { article: jsonData },
+            } = body;
+
+            if (hasMedia(jsonData)) {
+              const embedUrl = getEmbedUrl(jsonData, language);
+              cy.log(embedUrl);
+              cy.get(`iframe[src*="${embedUrl}"]`).should('be.visible');
+              cy.testResponseCodeAndTypeRetry({
+                path: embedUrl,
+                responseCode: 200,
+                type: 'text/html',
+                allowFallback: true,
+              });
+            } else {
+              cy.log(
+                `No media on ${pageType} for ${Cypress.env('currentPath')}`,
+              );
+            }
+          });
         } else {
           cy.log('skipped test for cps russian map');
         }
