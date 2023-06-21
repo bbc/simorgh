@@ -32,7 +32,7 @@ const GEL_GROUP_1_WIDTH_320PX = '20rem';
 const GEL_GROUP_1_WIDTH_360PX = '22.5rem';
 
 const ResponsivePodcastPromoWrapper = styled.div`
-  ${({ dir }) => (dir === 'ltr' ? 'float: right;' : 'float: left;')}
+  ${({ dir }) => (dir === 'ltr' ? 'float: left;' : 'float: right;')}
   background: ${props => props.theme.palette.LUNAR};
   margin: ${GEL_SPACING_TRPL} 0;
   height: auto;
@@ -47,7 +47,9 @@ const ResponsivePodcastPromoWrapper = styled.div`
   }
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    margin: ${GEL_SPACING_TRPL} ${GEL_SPACING_DBL};
+    margin: 0rem ${GEL_SPACING_DBL};
+    margin-right: ${({ dir }) => (dir === 'ltr' ? GEL_SPACING_DBL : '0rem')};
+    margin-left: ${({ dir }) => (dir === 'ltr' ? '0rem' : GEL_SPACING_DBL)};
   }
 `;
 
@@ -119,7 +121,7 @@ const StyledCardLink = styled(PromoComponent.Card.Link)`
   }
 `;
 
-const Promo = () => {
+const Promo = props => {
   const { podcastPromo, script, service, dir } = useContext(ServiceContext);
 
   const {
@@ -158,7 +160,7 @@ const Promo = () => {
   };
 
   return (
-    <ResponsivePodcastPromoWrapper ref={viewTrackerRef} dir={dir}>
+    <ResponsivePodcastPromoWrapper ref={viewTrackerRef} dir={dir} {...props}>
       <StyledPromoComponent
         script={script}
         service={service}
