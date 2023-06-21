@@ -24,9 +24,7 @@ describe('IdxPage - Persian', () => {
 
     await act(async () => {
       container = render(
-        <IdxPageWithContext
-          pageData={persianAfghanistanIdxData.data.article}
-        />,
+        <IdxPageWithContext pageData={persianAfghanistanIdxData} />,
       ).container;
     });
   });
