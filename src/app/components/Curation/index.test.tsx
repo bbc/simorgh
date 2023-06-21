@@ -2,7 +2,7 @@ import React from 'react';
 import fixture from '../../../../data/pidgin/topics/c95y35941vrt.json';
 import mundoFixture from '../../../../data/mundo/topics/c1en6xwmpkvt.json';
 import kyrgyzHomePage from '../../../../data/kyrgyz/homePage/index.json';
-import kyrgyzMostRead from '../../../../data/kyrgyz/mostRead/index.json';
+import { data as kyrgyzMostRead } from '../../../../data/kyrgyz/mostRead/index.json';
 import { render } from '../react-testing-library-with-providers';
 import Curation from '.';
 import {

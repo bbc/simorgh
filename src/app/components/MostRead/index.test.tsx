@@ -1,7 +1,7 @@
 import React from 'react';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ToggleContextProvider } from '../../contexts/ToggleContext';
-import pidginMostReadData from '../../../../data/pidgin/mostRead/index.json';
+import { data as pidginMostReadData } from '../../../../data/pidgin/mostRead/index.json';
 import serbianLatMostReadData from '../../../../data/serbian/mostRead/lat.json';
 import {
   FRONT_PAGE,
