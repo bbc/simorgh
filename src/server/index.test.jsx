@@ -896,13 +896,13 @@ describe('Server', () => {
     it('should serve a file for valid service paths with variants', async () => {
       const { body } = await makeRequest('/zhongwen/mostread/trad.json');
       expect(body).toEqual(
-        expect.objectContaining({ records: expect.any(Object) }),
+        expect.objectContaining({ items: expect.any(Object) }),
       );
     });
     it('should serve a file for valid service paths without variants', async () => {
-      const { body } = await makeRequest('/news/mostread.json');
+      const { body } = await makeRequest('/pidgin/mostread.json');
       expect(body).toEqual(
-        expect.objectContaining({ records: expect.any(Object) }),
+        expect.objectContaining({ items: expect.any(Object) }),
       );
     });
     it('should respond with a 500 for non-existing services', async () => {
