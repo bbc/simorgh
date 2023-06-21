@@ -1116,7 +1116,7 @@ describe('Server', () => {
     describe('for cps asset pages', () => {
       it('should respond with JSON', async () => {
         const { body } = await makeRequest('/pidgin/tori-49450859.json');
-        expect(body).toEqual(
+        expect(body.data.article).toEqual(
           expect.objectContaining({ content: expect.any(Object) }),
         );
       });
@@ -1135,7 +1135,7 @@ describe('Server', () => {
         const { body } = await makeRequest(
           '/hausa/multimedia/2012/07/120712_click.json',
         );
-        expect(body).toEqual(
+        expect(body.data.article).toEqual(
           expect.objectContaining({ content: expect.any(Object) }),
         );
       });
