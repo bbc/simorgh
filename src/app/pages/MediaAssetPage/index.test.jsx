@@ -113,7 +113,9 @@ const escapedText = text => {
     'gi',
   );
 
-  return text.replace(replacementsRegex, match => textReplacements[match]);
+  return text
+    .replace(replacementsRegex, match => textReplacements[match])
+    .trim();
 };
 
 const getBlockTextAtIndex = (index, originalPageData) => {
