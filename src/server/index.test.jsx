@@ -895,13 +895,13 @@ describe('Server', () => {
   describe('Most Read json', () => {
     it('should serve a file for valid service paths with variants', async () => {
       const { body } = await makeRequest('/zhongwen/mostread/trad.json');
-      expect(body).toEqual(
+      expect(body.data).toEqual(
         expect.objectContaining({ items: expect.any(Object) }),
       );
     });
     it('should serve a file for valid service paths without variants', async () => {
       const { body } = await makeRequest('/pidgin/mostread.json');
-      expect(body).toEqual(
+      expect(body.data).toEqual(
         expect.objectContaining({ items: expect.any(Object) }),
       );
     });
