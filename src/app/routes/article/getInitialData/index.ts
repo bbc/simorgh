@@ -50,13 +50,10 @@ export default async ({
       ...(!isLocal && { agent, optHeaders }),
     });
 
-<<<<<<< HEAD
-=======
     if (!json?.data?.article) {
       throw handleError('Article data is malformed', 500);
     }
 
->>>>>>> 3501ee93e62522f03445fff832454b8b20057e28
     const {
       data: { article, secondaryData },
     } = json;
