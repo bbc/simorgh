@@ -72,11 +72,13 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 .emotion-4 {
   color: #00ccc7;
   grid-column: 1/span 12;
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 63rem) {
   .emotion-4 {
     grid-column: 1/span 3;
+    margin-bottom: 0;
   }
 }
 
@@ -94,12 +96,10 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 .emotion-6 {
   color: #FEFEFE;
   grid-column: 1/span 12;
-  margin-top: 1rem;
 }
 
 @media (min-width: 63rem) {
   .emotion-6 {
-    margin-top: 0;
     grid-column: 5/span 8;
   }
 }
@@ -722,14 +722,16 @@ exports[`Live Page creates snapshot of the live page 1`] = `
             role="text"
           >
             <span
+              aria-hidden="true"
               class="emotion-4"
             >
-              PLACEHOLDER
+              LIVE
             </span>
             <span
               class="emotion-5"
+              lang="en-GB"
             >
-              , 
+              Live, 
             </span>
             <span
               class="emotion-6"
@@ -1640,6 +1642,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
       "contentId": "urn:bbc:tipo:topic:c7p765ynk9qt"
     }
   },
+  "isLive": true,
   "summaryPoints": {
     "id": "urn:bbc:optimo:asset:c5x3899j84ro",
     "content": {

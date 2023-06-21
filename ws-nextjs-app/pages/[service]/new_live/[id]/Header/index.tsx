@@ -32,7 +32,7 @@ const Header = ({
               <span css={styles.label} aria-hidden="true">
                 LIVE
               </span>
-              <VisuallyHiddenText>Live, </VisuallyHiddenText>
+              <VisuallyHiddenText lang="en-GB">Live, </VisuallyHiddenText>
               <span css={styles.title}>{title}</span>
             </span>
           ) : (
