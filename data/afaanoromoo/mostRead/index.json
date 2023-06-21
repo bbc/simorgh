@@ -1,147 +1,149 @@
 {
-  "generated": "2023-06-19T14:52:20.864Z",
-  "lastRecordTimeStamp": "2023-06-19T14:49:00Z",
-  "firstRecordTimeStamp": "2023-06-19T12:49:00Z",
-  "items": [
-    {
-      "id": "urn:bbc:optimo:asset:c4n4wnn0x0po",
-      "rank": 1,
-      "title": "Barattuun waggaa 14 magaala Hawaasaatii butamte torbeen booda Yirgaalamii argamte",
-      "href": "https://www.bbc.com/afaanoromoo/articles/c4n4wnn0x0po",
-      "timestamp": 1687162893360
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cjr2ppy1e9po",
-      "rank": 2,
-      "title": "Koloneel Dammaqaan dhimma egeree Walqaayitii fi himannaa sarbama mirgaa irratti dhiyaaturratti maal jedhan?",
-      "href": "https://www.bbc.com/afaanoromoo/articles/cjr2ppy1e9po",
-      "timestamp": 1687147844812
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cxxwgnxyj8po",
-      "rank": 3,
-      "title": "Kooriyaa Kaabaa biyya daangaa cufaa lammiileen beelaan keessatti du’aa jiran\r",
-      "href": "https://www.bbc.com/afaanoromoo/articles/cxxwgnxyj8po",
-      "timestamp": 1687148162975
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c6pl9yd17nvo",
-      "rank": 4,
-      "title": "Dubartiin sirna awwalchaa ishee irratti dammaqxe torban tokko booda duute",
-      "href": "https://www.bbc.com/afaanoromoo/articles/c6pl9yd17nvo",
-      "timestamp": 1687151778043
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cjqzz27nzplo",
-      "rank": 5,
-      "title": "Harargetti waraabessi lubbuu namaa tokko dabarsuun, namoota 4 madeesse",
-      "href": "https://www.bbc.com/afaanoromoo/articles/cjqzz27nzplo",
-      "timestamp": 1687182018826
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cqvq0nq6vveo",
-      "rank": 6,
-      "title": "Ispeen waancaa Liigii biyyoota Awurooppaa mo'attee Luukaa Moodrich onnee cabsite",
-      "href": "https://www.bbc.com/afaanoromoo/articles/cqvq0nq6vveo",
-      "timestamp": 1687156848956
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c3gppl4nj9vo",
-      "rank": 7,
-      "title": "UK'n sagantaa daldalaa haaraa Itoophiyaa dabalatee biyyoota 65 fayyadu ifa goote",
-      "href": "https://www.bbc.com/afaanoromoo/articles/c3gppl4nj9vo",
-      "timestamp": 1687181911992
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cml113yjry4o",
-      "rank": 8,
-      "title": "Marii qondaaltota olaanoo mootummaa US fi Chaayinaa irratti dhimmi Taayiwaan ijoo dubbii ta'e",
-      "href": "https://www.bbc.com/afaanoromoo/articles/cml113yjry4o",
-      "timestamp": 1687167582801
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cv2my127l2no",
-      "rank": 9,
-      "title": "Itoophiyaa dabalatee dubartoota biyyoota Afriikaa furdinaaf qoricha asimii fayyadaman",
-      "href": "https://www.bbc.com/afaanoromoo/articles/cv2my127l2no",
-      "timestamp": 1687065372746
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c873ynz7dg8o",
-      "rank": 10,
-      "title": "Magaalaa Finfinneetti Qamar Yusuufiifi Taaddalaa Gammachuu maaltu mudate?",
-      "href": "https://www.bbc.com/afaanoromoo/articles/c873ynz7dg8o",
-      "timestamp": 1686852509270
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cqvq8v0zv71o",
-      "rank": 11,
-      "title": "'Isheen na qacaratte hojjettuushee ajjeestee yeroon argu ofin wallaale' - Jireenya biyya Arabaa",
-      "href": "https://www.bbc.com/afaanoromoo/articles/cqvq8v0zv71o",
-      "timestamp": 1686889559242
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cd1kww53erzo",
-      "rank": 12,
-      "title": "Haleellaa mana barnootaa Yugaandaa: 'Faaruun battalumatti gara iyyaatti geeddarame'  ",
-      "href": "https://www.bbc.com/afaanoromoo/articles/cd1kww53erzo",
-      "timestamp": 1687150287776
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c51j88j62ero",
-      "rank": 13,
-      "title": "Moojootti namoonni lukkuu gurraacha qalanii awwaalaa turan qabaman",
-      "href": "https://www.bbc.com/afaanoromoo/articles/c51j88j62ero",
-      "timestamp": 1686938059404
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c7251pl17kjo",
-      "rank": 14,
-      "title": "Dhimmoota ijoo marii nagaarratti mootummaafi humnoota Tigraay waldhabsiisuu danda’an",
-      "href": "https://www.bbc.com/afaanoromoo/articles/c7251pl17kjo",
-      "timestamp": 1667021132890
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c19p0wvl07yo",
-      "rank": 15,
-      "title": "Waancaa Addunyaa 2022 irratti arrabsoon 20,000 ol miidiyaa hawaasummaa irratti maxxaanfamaniiru - Fifa",
-      "href": "https://www.bbc.com/afaanoromoo/articles/c19p0wvl07yo",
-      "timestamp": 1687085745632
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c045v8xg004o",
-      "rank": 16,
-      "title": "Namni dheerinaan beekamu Awwaluu Buxxuulaa mana hidhaatti dhukkubsatee yaala dhabe - Maatii",
-      "href": "https://www.bbc.com/afaanoromoo/articles/c045v8xg004o",
-      "timestamp": 1686979187181
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c13e4e62v2no",
-      "rank": 17,
-      "title": "Dorgommii ICT sa'aatii saddeetiif tureerratti hirmaannee 3ffaa baane - Barataa Naa'ol Taaddasaa",
-      "href": "https://www.bbc.com/afaanoromoo/articles/c13e4e62v2no",
-      "timestamp": 1686889564239
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cw4vl7yvw7xo",
-      "rank": 18,
-      "title": "Warri Lixaa xiyyaara waraanaa Yukireeniif kennaniyyuu balaliisuun qormaata ta'e",
-      "href": "https://www.bbc.com/afaanoromoo/articles/cw4vl7yvw7xo",
-      "timestamp": 1687066114062
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cpv4nve2p4wo",
-      "rank": 19,
-      "title": "Taateewwan badhaasa aartii Gumaa Awwaard baranaa ijoo dubbii taasisan",
-      "href": "https://www.bbc.com/afaanoromoo/articles/cpv4nve2p4wo",
-      "timestamp": 1686563080424
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cyxpkjxdn87o",
-      "rank": 20,
-      "title": "Ramafoosaan waraanni Yukireen dirqama dhaabachuu qaba jechuun Pireezidant Putiinitti himan",
-      "href": "https://www.bbc.com/afaanoromoo/articles/cyxpkjxdn87o",
-      "timestamp": 1687071985668
-    }
-  ]
+  "data": {
+    "generated": "2023-06-19T14:52:20.864Z",
+    "lastRecordTimeStamp": "2023-06-19T14:49:00Z",
+    "firstRecordTimeStamp": "2023-06-19T12:49:00Z",
+    "items": [
+      {
+        "id": "urn:bbc:optimo:asset:c4n4wnn0x0po",
+        "rank": 1,
+        "title": "Barattuun waggaa 14 magaala Hawaasaatii butamte torbeen booda Yirgaalamii argamte",
+        "href": "https://www.bbc.com/afaanoromoo/articles/c4n4wnn0x0po",
+        "timestamp": 1687162893360
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cjr2ppy1e9po",
+        "rank": 2,
+        "title": "Koloneel Dammaqaan dhimma egeree Walqaayitii fi himannaa sarbama mirgaa irratti dhiyaaturratti maal jedhan?",
+        "href": "https://www.bbc.com/afaanoromoo/articles/cjr2ppy1e9po",
+        "timestamp": 1687147844812
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cxxwgnxyj8po",
+        "rank": 3,
+        "title": "Kooriyaa Kaabaa biyya daangaa cufaa lammiileen beelaan keessatti du’aa jiran\r",
+        "href": "https://www.bbc.com/afaanoromoo/articles/cxxwgnxyj8po",
+        "timestamp": 1687148162975
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c6pl9yd17nvo",
+        "rank": 4,
+        "title": "Dubartiin sirna awwalchaa ishee irratti dammaqxe torban tokko booda duute",
+        "href": "https://www.bbc.com/afaanoromoo/articles/c6pl9yd17nvo",
+        "timestamp": 1687151778043
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cjqzz27nzplo",
+        "rank": 5,
+        "title": "Harargetti waraabessi lubbuu namaa tokko dabarsuun, namoota 4 madeesse",
+        "href": "https://www.bbc.com/afaanoromoo/articles/cjqzz27nzplo",
+        "timestamp": 1687182018826
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cqvq0nq6vveo",
+        "rank": 6,
+        "title": "Ispeen waancaa Liigii biyyoota Awurooppaa mo'attee Luukaa Moodrich onnee cabsite",
+        "href": "https://www.bbc.com/afaanoromoo/articles/cqvq0nq6vveo",
+        "timestamp": 1687156848956
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c3gppl4nj9vo",
+        "rank": 7,
+        "title": "UK'n sagantaa daldalaa haaraa Itoophiyaa dabalatee biyyoota 65 fayyadu ifa goote",
+        "href": "https://www.bbc.com/afaanoromoo/articles/c3gppl4nj9vo",
+        "timestamp": 1687181911992
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cml113yjry4o",
+        "rank": 8,
+        "title": "Marii qondaaltota olaanoo mootummaa US fi Chaayinaa irratti dhimmi Taayiwaan ijoo dubbii ta'e",
+        "href": "https://www.bbc.com/afaanoromoo/articles/cml113yjry4o",
+        "timestamp": 1687167582801
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cv2my127l2no",
+        "rank": 9,
+        "title": "Itoophiyaa dabalatee dubartoota biyyoota Afriikaa furdinaaf qoricha asimii fayyadaman",
+        "href": "https://www.bbc.com/afaanoromoo/articles/cv2my127l2no",
+        "timestamp": 1687065372746
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c873ynz7dg8o",
+        "rank": 10,
+        "title": "Magaalaa Finfinneetti Qamar Yusuufiifi Taaddalaa Gammachuu maaltu mudate?",
+        "href": "https://www.bbc.com/afaanoromoo/articles/c873ynz7dg8o",
+        "timestamp": 1686852509270
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cqvq8v0zv71o",
+        "rank": 11,
+        "title": "'Isheen na qacaratte hojjettuushee ajjeestee yeroon argu ofin wallaale' - Jireenya biyya Arabaa",
+        "href": "https://www.bbc.com/afaanoromoo/articles/cqvq8v0zv71o",
+        "timestamp": 1686889559242
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cd1kww53erzo",
+        "rank": 12,
+        "title": "Haleellaa mana barnootaa Yugaandaa: 'Faaruun battalumatti gara iyyaatti geeddarame'  ",
+        "href": "https://www.bbc.com/afaanoromoo/articles/cd1kww53erzo",
+        "timestamp": 1687150287776
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c51j88j62ero",
+        "rank": 13,
+        "title": "Moojootti namoonni lukkuu gurraacha qalanii awwaalaa turan qabaman",
+        "href": "https://www.bbc.com/afaanoromoo/articles/c51j88j62ero",
+        "timestamp": 1686938059404
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c7251pl17kjo",
+        "rank": 14,
+        "title": "Dhimmoota ijoo marii nagaarratti mootummaafi humnoota Tigraay waldhabsiisuu danda’an",
+        "href": "https://www.bbc.com/afaanoromoo/articles/c7251pl17kjo",
+        "timestamp": 1667021132890
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c19p0wvl07yo",
+        "rank": 15,
+        "title": "Waancaa Addunyaa 2022 irratti arrabsoon 20,000 ol miidiyaa hawaasummaa irratti maxxaanfamaniiru - Fifa",
+        "href": "https://www.bbc.com/afaanoromoo/articles/c19p0wvl07yo",
+        "timestamp": 1687085745632
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c045v8xg004o",
+        "rank": 16,
+        "title": "Namni dheerinaan beekamu Awwaluu Buxxuulaa mana hidhaatti dhukkubsatee yaala dhabe - Maatii",
+        "href": "https://www.bbc.com/afaanoromoo/articles/c045v8xg004o",
+        "timestamp": 1686979187181
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c13e4e62v2no",
+        "rank": 17,
+        "title": "Dorgommii ICT sa'aatii saddeetiif tureerratti hirmaannee 3ffaa baane - Barataa Naa'ol Taaddasaa",
+        "href": "https://www.bbc.com/afaanoromoo/articles/c13e4e62v2no",
+        "timestamp": 1686889564239
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cw4vl7yvw7xo",
+        "rank": 18,
+        "title": "Warri Lixaa xiyyaara waraanaa Yukireeniif kennaniyyuu balaliisuun qormaata ta'e",
+        "href": "https://www.bbc.com/afaanoromoo/articles/cw4vl7yvw7xo",
+        "timestamp": 1687066114062
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cpv4nve2p4wo",
+        "rank": 19,
+        "title": "Taateewwan badhaasa aartii Gumaa Awwaard baranaa ijoo dubbii taasisan",
+        "href": "https://www.bbc.com/afaanoromoo/articles/cpv4nve2p4wo",
+        "timestamp": 1686563080424
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cyxpkjxdn87o",
+        "rank": 20,
+        "title": "Ramafoosaan waraanni Yukireen dirqama dhaabachuu qaba jechuun Pireezidant Putiinitti himan",
+        "href": "https://www.bbc.com/afaanoromoo/articles/cyxpkjxdn87o",
+        "timestamp": 1687071985668
+      }
+    ]
+  }
 }
