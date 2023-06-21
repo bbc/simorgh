@@ -2,6 +2,7 @@
   "data": {
     "title": "BBC News Кыргыз Кызматы - Top title from Tipo in the details section",
     "description": "Hello I am a description! I was added in the \"Description\" field from the Details section in Tipo",
+    "pageType": "home",
     "curations": [
       {
         "summaries": [
@@ -829,8 +830,7 @@
         "contentId": "urn:bbc:tipo:topic:cm7682qz7v1t",
         "contentType": "index-home",
         "pageIdentifier": "kyrgyz.page"
-      },
-      "type": "home"
+      }
     }
   },
   "contentType": "application/json; charset=utf-8"
