@@ -1,147 +1,149 @@
 {
-  "generated": "2023-06-19T15:14:29.624Z",
-  "lastRecordTimeStamp": "2023-06-19T15:12:00Z",
-  "firstRecordTimeStamp": "2023-06-19T14:57:00Z",
-  "items": [
-    {
-      "id": "5e13b2bb-f942-4ef2-919c-38441ea0f805",
-      "rank": 1,
-      "title": "Vụ hai đồn công an ở Đắk Lắk bị tấn công: 'Tức nước vỡ bờ vì mâu thuẫn đất đai và tôn giáo'?",
-      "href": "/vietnamese/vietnam-65886929",
-      "timestamp": 1687170515000
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cyxgg4vqkr6o",
-      "rank": 2,
-      "title": "Chủ tịch Tập Cận Bình tiếp đón Ngoại trưởng Hoa Kỳ Antony Blinken",
-      "href": "https://www.bbc.com/vietnamese/articles/cyxgg4vqkr6o",
-      "timestamp": 1687170343964
-    },
-    {
-      "id": "urn:bbc:optimo:asset:crgddly302lo",
-      "rank": 3,
-      "title": "Bamboo Airways thua lỗ nhưng có đổi dàn lãnh đạo tại kỳ họp cổ đông tới?",
-      "href": "https://www.bbc.com/vietnamese/articles/crgddly302lo",
-      "timestamp": 1687184999997
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c72m8pvmz5qo",
-      "rank": 4,
-      "title": "Trung Quốc có lập căn cứ do thám Mỹ ở Cuba hay không? ",
-      "href": "https://www.bbc.com/vietnamese/articles/c72m8pvmz5qo",
-      "timestamp": 1687153266670
-    },
-    {
-      "id": "c84faaf0-dcc4-4094-8aef-a143b5857a5a",
-      "rank": 5,
-      "title": "Việt Nam: Công tác quản trị ngôn luận chưa khoa học",
-      "href": "/vietnamese/forum-65949668",
-      "timestamp": 1687165692000
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cll095l9jn4o",
-      "rank": 6,
-      "title": "Việt Nam: Thiếu điện bộc lộ hạn chế về cơ cấu và bộ máy quan liêu?",
-      "href": "https://www.bbc.com/vietnamese/articles/cll095l9jn4o",
-      "timestamp": 1687086289269
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c6p3nx6ylego",
-      "rank": 7,
-      "title": "45 người bị bắt: Thêm tin và ý kiến về vụ hai đồn công an ở Đắk Lắk bị tấn công",
-      "href": "https://www.bbc.com/vietnamese/articles/c6p3nx6ylego",
-      "timestamp": 1686712583909
-    },
-    {
-      "id": "763c0987-a944-4194-a303-4e6adeb8e620",
-      "rank": 8,
-      "title": "Trịnh Văn Quyết bị khởi tố thêm tội 'lừa đảo'",
-      "href": "/vietnamese/business-62678279",
-      "timestamp": 1661434355000
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cjk8zx3yygmo",
-      "rank": 9,
-      "title": "Người Việt kêu cứu từ 'bẫy lừa đảo' ở Myanmar",
-      "href": "https://www.bbc.com/vietnamese/articles/cjk8zx3yygmo",
-      "timestamp": 1687082211964
-    },
-    {
-      "id": "9ca1e5a3-4c8f-c043-a751-8c098cf7fbed",
-      "rank": 10,
-      "title": "Bạo lực gia đình: 'Vợ tôi hãm hiếp tôi 10 năm'",
-      "href": "/vietnamese/world-52698761",
-      "timestamp": 1589903727000
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cpr41g9g87xo",
-      "rank": 11,
-      "title": "Myanmar: Người trẻ đối mặt với ước mơ tan vỡ khi phải sống lưu vong",
-      "href": "https://www.bbc.com/vietnamese/articles/cpr41g9g87xo",
-      "timestamp": 1687150803114
-    },
-    {
-      "id": "a07a18f2-3719-4936-b961-ad65faffff7a",
-      "rank": 12,
-      "title": "Người Bắc Hàn kể chuyện hàng xóm chết đói",
-      "href": "/vietnamese/world-65886925",
-      "timestamp": 1686812577000
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cl4dz18k164o",
-      "rank": 13,
-      "title": "Ngoại trưởng Mỹ Blinken công du Trung Quốc: Ba ưu tiên chính trong nghị trình",
-      "href": "https://www.bbc.com/vietnamese/articles/cl4dz18k164o",
-      "timestamp": 1687059125060
-    },
-    {
-      "id": "0309fb5d-695c-4eba-94f9-d157fb8854bb",
-      "rank": 14,
-      "title": "Tìm hiểu câu chuyện linh mục Công giáo VN 'tham gia bộ máy chính quyền'",
-      "href": "/vietnamese/vietnam-65262688",
-      "timestamp": 1681730074000
-    },
-    {
-      "id": "urn:bbc:optimo:asset:crg7njvx88eo",
-      "rank": 15,
-      "title": "Vì sao Nhật Bản định nghĩa lại thế nào là hiếp dâm?",
-      "href": "https://www.bbc.com/vietnamese/articles/crg7njvx88eo",
-      "timestamp": 1686208968694
-    },
-    {
-      "id": "f21a7805-86ec-4097-9eb8-6da75c0483db",
-      "rank": 16,
-      "title": "Chủ tịch Bamboo Airways 'tự tin về đường bay thẳng Việt - Anh'",
-      "href": "/vietnamese/vietnam-59151904",
-      "timestamp": 1635952088000
-    },
-    {
-      "id": "b4f44f6c-7af8-11e4-89b9-b1bb3db9bd6e",
-      "rank": 17,
-      "title": "'Sex and the City' nửa kín nửa hở ở VN",
-      "href": "/vietnamese/forum/2014/12/141203_vn_distorting_sex_and_the_city",
-      "timestamp": 1417621979000
-    },
-    {
-      "id": "7b0b5bce-1d7e-4647-a9ba-b65bbf735e9a",
-      "rank": 18,
-      "title": "Một số điều mới ở Hội thảo về Biển Đông ở Paris",
-      "href": "/vietnamese/vietnam-65907100",
-      "timestamp": 1686834133000
-    },
-    {
-      "id": "365abecc-758d-5b44-be60-fc90ca06dc94",
-      "rank": 19,
-      "title": "Tìm thấy phim 'nô lệ tình dục' cho lính Nhật",
-      "href": "/vietnamese/world-40555654",
-      "timestamp": 1499700447000
-    },
-    {
-      "id": "20be6c83-bbc7-4d8f-b33a-f0c0ba8a94d8",
-      "rank": 20,
-      "title": "Cô dâu Việt ở Trung Quốc bị hỏi: 'Bên mày còn gái không, tao muốn lấy một đứa'",
-      "href": "/vietnamese/vietnam-61656478",
-      "timestamp": 1654497580000
-    }
-  ]
+  "data": {
+    "generated": "2023-06-19T15:14:29.624Z",
+    "lastRecordTimeStamp": "2023-06-19T15:12:00Z",
+    "firstRecordTimeStamp": "2023-06-19T14:57:00Z",
+    "items": [
+      {
+        "id": "5e13b2bb-f942-4ef2-919c-38441ea0f805",
+        "rank": 1,
+        "title": "Vụ hai đồn công an ở Đắk Lắk bị tấn công: 'Tức nước vỡ bờ vì mâu thuẫn đất đai và tôn giáo'?",
+        "href": "/vietnamese/vietnam-65886929",
+        "timestamp": 1687170515000
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cyxgg4vqkr6o",
+        "rank": 2,
+        "title": "Chủ tịch Tập Cận Bình tiếp đón Ngoại trưởng Hoa Kỳ Antony Blinken",
+        "href": "https://www.bbc.com/vietnamese/articles/cyxgg4vqkr6o",
+        "timestamp": 1687170343964
+      },
+      {
+        "id": "urn:bbc:optimo:asset:crgddly302lo",
+        "rank": 3,
+        "title": "Bamboo Airways thua lỗ nhưng có đổi dàn lãnh đạo tại kỳ họp cổ đông tới?",
+        "href": "https://www.bbc.com/vietnamese/articles/crgddly302lo",
+        "timestamp": 1687184999997
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c72m8pvmz5qo",
+        "rank": 4,
+        "title": "Trung Quốc có lập căn cứ do thám Mỹ ở Cuba hay không? ",
+        "href": "https://www.bbc.com/vietnamese/articles/c72m8pvmz5qo",
+        "timestamp": 1687153266670
+      },
+      {
+        "id": "c84faaf0-dcc4-4094-8aef-a143b5857a5a",
+        "rank": 5,
+        "title": "Việt Nam: Công tác quản trị ngôn luận chưa khoa học",
+        "href": "/vietnamese/forum-65949668",
+        "timestamp": 1687165692000
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cll095l9jn4o",
+        "rank": 6,
+        "title": "Việt Nam: Thiếu điện bộc lộ hạn chế về cơ cấu và bộ máy quan liêu?",
+        "href": "https://www.bbc.com/vietnamese/articles/cll095l9jn4o",
+        "timestamp": 1687086289269
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c6p3nx6ylego",
+        "rank": 7,
+        "title": "45 người bị bắt: Thêm tin và ý kiến về vụ hai đồn công an ở Đắk Lắk bị tấn công",
+        "href": "https://www.bbc.com/vietnamese/articles/c6p3nx6ylego",
+        "timestamp": 1686712583909
+      },
+      {
+        "id": "763c0987-a944-4194-a303-4e6adeb8e620",
+        "rank": 8,
+        "title": "Trịnh Văn Quyết bị khởi tố thêm tội 'lừa đảo'",
+        "href": "/vietnamese/business-62678279",
+        "timestamp": 1661434355000
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cjk8zx3yygmo",
+        "rank": 9,
+        "title": "Người Việt kêu cứu từ 'bẫy lừa đảo' ở Myanmar",
+        "href": "https://www.bbc.com/vietnamese/articles/cjk8zx3yygmo",
+        "timestamp": 1687082211964
+      },
+      {
+        "id": "9ca1e5a3-4c8f-c043-a751-8c098cf7fbed",
+        "rank": 10,
+        "title": "Bạo lực gia đình: 'Vợ tôi hãm hiếp tôi 10 năm'",
+        "href": "/vietnamese/world-52698761",
+        "timestamp": 1589903727000
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cpr41g9g87xo",
+        "rank": 11,
+        "title": "Myanmar: Người trẻ đối mặt với ước mơ tan vỡ khi phải sống lưu vong",
+        "href": "https://www.bbc.com/vietnamese/articles/cpr41g9g87xo",
+        "timestamp": 1687150803114
+      },
+      {
+        "id": "a07a18f2-3719-4936-b961-ad65faffff7a",
+        "rank": 12,
+        "title": "Người Bắc Hàn kể chuyện hàng xóm chết đói",
+        "href": "/vietnamese/world-65886925",
+        "timestamp": 1686812577000
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cl4dz18k164o",
+        "rank": 13,
+        "title": "Ngoại trưởng Mỹ Blinken công du Trung Quốc: Ba ưu tiên chính trong nghị trình",
+        "href": "https://www.bbc.com/vietnamese/articles/cl4dz18k164o",
+        "timestamp": 1687059125060
+      },
+      {
+        "id": "0309fb5d-695c-4eba-94f9-d157fb8854bb",
+        "rank": 14,
+        "title": "Tìm hiểu câu chuyện linh mục Công giáo VN 'tham gia bộ máy chính quyền'",
+        "href": "/vietnamese/vietnam-65262688",
+        "timestamp": 1681730074000
+      },
+      {
+        "id": "urn:bbc:optimo:asset:crg7njvx88eo",
+        "rank": 15,
+        "title": "Vì sao Nhật Bản định nghĩa lại thế nào là hiếp dâm?",
+        "href": "https://www.bbc.com/vietnamese/articles/crg7njvx88eo",
+        "timestamp": 1686208968694
+      },
+      {
+        "id": "f21a7805-86ec-4097-9eb8-6da75c0483db",
+        "rank": 16,
+        "title": "Chủ tịch Bamboo Airways 'tự tin về đường bay thẳng Việt - Anh'",
+        "href": "/vietnamese/vietnam-59151904",
+        "timestamp": 1635952088000
+      },
+      {
+        "id": "b4f44f6c-7af8-11e4-89b9-b1bb3db9bd6e",
+        "rank": 17,
+        "title": "'Sex and the City' nửa kín nửa hở ở VN",
+        "href": "/vietnamese/forum/2014/12/141203_vn_distorting_sex_and_the_city",
+        "timestamp": 1417621979000
+      },
+      {
+        "id": "7b0b5bce-1d7e-4647-a9ba-b65bbf735e9a",
+        "rank": 18,
+        "title": "Một số điều mới ở Hội thảo về Biển Đông ở Paris",
+        "href": "/vietnamese/vietnam-65907100",
+        "timestamp": 1686834133000
+      },
+      {
+        "id": "365abecc-758d-5b44-be60-fc90ca06dc94",
+        "rank": 19,
+        "title": "Tìm thấy phim 'nô lệ tình dục' cho lính Nhật",
+        "href": "/vietnamese/world-40555654",
+        "timestamp": 1499700447000
+      },
+      {
+        "id": "20be6c83-bbc7-4d8f-b33a-f0c0ba8a94d8",
+        "rank": 20,
+        "title": "Cô dâu Việt ở Trung Quốc bị hỏi: 'Bên mày còn gái không, tao muốn lấy một đứa'",
+        "href": "/vietnamese/vietnam-61656478",
+        "timestamp": 1654497580000
+      }
+    ]
+  }
 }
