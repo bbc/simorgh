@@ -1,147 +1,149 @@
 {
-  "generated": "2023-06-19T15:14:35.416Z",
-  "lastRecordTimeStamp": "2023-06-19T15:12:00Z",
-  "firstRecordTimeStamp": "2023-06-19T13:12:00Z",
-  "items": [
-    {
-      "id": "urn:bbc:optimo:asset:cz788gr97z0o",
-      "rank": 1,
-      "title": "Torí ìfẹ́ àwọn ìbejì ni mo ṣe kọ̀ láti sọ ohunkóhun láti ọjọ́ yìí - Damola Olatunji",
-      "href": "https://www.bbc.com/yoruba/articles/cz788gr97z0o",
-      "timestamp": 1687174847582
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cv2142kvp41o",
-      "rank": 2,
-      "title": "Ẹ gbà mí, mílíọ̀nù mẹ́ta ni mo bá nínú akoto ìjọba - Gómìnà tuntun, Dare gbarata",
-      "href": "https://www.bbc.com/yoruba/articles/cv2142kvp41o",
-      "timestamp": 1687156673570
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c4npkgln3xgo",
-      "rank": 3,
-      "title": "CBN gbẹ́sẹ̀ kúrò lórí gbèdéke iye \"dollar\" tóo lè kó sínú akoto owó ilẹ̀ òkèrè rẹ",
-      "href": "https://www.bbc.com/yoruba/articles/c4npkgln3xgo",
-      "timestamp": 1687172208863
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c89l4l35ydqo",
-      "rank": 4,
-      "title": "Irọ́ ni wọ́n ń pa lórí ayélujára, ìgbésẹ̀ Sanwo-Olu kò kan ẹ̀yà Igbo ní Alaba - Ohanaeze Ndigbo",
-      "href": "https://www.bbc.com/yoruba/articles/c89l4l35ydqo",
-      "timestamp": 1687174394411
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c9e7gdm1er4o",
-      "rank": 5,
-      "title": "'Lásìkò tí àwọn akẹ́kọ̀ọ́ ń kọrin ìyìn kí wọ́n tó sùn ni àwọn agbéṣùmọ̀mí dáná sun wọ́n'",
-      "href": "https://www.bbc.com/yoruba/articles/c9e7gdm1er4o",
-      "timestamp": 1687174287614
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c88x31v4259o",
-      "rank": 6,
-      "title": "‘Omijé gba ojú mi kan’, Davido ń dárò ní àyájọ́ ‘Father’s Day’",
-      "href": "https://www.bbc.com/yoruba/articles/c88x31v4259o",
-      "timestamp": 1687102155815
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cv21qd2gv4go",
-      "rank": 7,
-      "title": "Ramon Adedoyin gbé àkọtun ìgbésẹ̀ lórí ìdájọ́ ikú tílé ẹjọ́ dá fun lórí ikú Timothy Adegoke",
-      "href": "https://www.bbc.com/yoruba/articles/cv21qd2gv4go",
-      "timestamp": 1686907833716
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cll018nlj17o",
-      "rank": 8,
-      "title": "Àwọn olóṣèlú alátẹnujẹ kan fẹ́ lo àìlera Akeredolu fi ja ìpínlẹ̀ Ondo lólè – Amúgbálẹ́gbẹ́ fún gómìnà Akeredolu",
-      "href": "https://www.bbc.com/yoruba/articles/cll018nlj17o",
-      "timestamp": 1687110726938
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c6pdl2xnnp6o",
-      "rank": 9,
-      "title": "Mo ṣèpàdé pẹ̀lú àwọn olùdásílẹ̀ Boko Haram, wọ́n sì sọ ìdí tí wọ́n fi dá a sílẹ̀ fún mi - Obasanjo",
-      "href": "https://www.bbc.com/yoruba/articles/c6pdl2xnnp6o",
-      "timestamp": 1687016221115
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c84wmm1xjk8o",
-      "rank": 10,
-      "title": "'Tinubu yóò ṣẹ àwọn èèyàn kan tó bá fẹ́ ṣàṣeyọrí'",
-      "href": "https://www.bbc.com/yoruba/articles/c84wmm1xjk8o",
-      "timestamp": 1686986838775
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cy64561y71do",
-      "rank": 11,
-      "title": "Kò sí ọba kankan nílẹ̀ Yorùbá tó le fọwọ́ sọ̀yà pé Ifá ló yan òun – Oluwo",
-      "href": "https://www.bbc.com/yoruba/articles/cy64561y71do",
-      "timestamp": 1687010254086
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cn0keeg80vzo",
-      "rank": 12,
-      "title": "Àwọn olórí orílẹ̀ èdè Adúláwọ̀ rawọ́ ẹ̀bẹ̀ sí Russia àti Ukraine láti dáwọ́ ogun dúró",
-      "href": "https://www.bbc.com/yoruba/articles/cn0keeg80vzo",
-      "timestamp": 1687089105630
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cxrg0ynx35yo",
-      "rank": 13,
-      "title": "Àwọn ọmọ Naijiria fún Ààrẹ Bola Tinubu lórúkọ tuntun nítorí àwọn ìgbésẹ̀ tó ń gbé",
-      "href": "https://www.bbc.com/yoruba/articles/cxrg0ynx35yo",
-      "timestamp": 1686924135791
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c8vy7zmyvq2o",
-      "rank": 14,
-      "title": "Ọwọ́ ọlọ́pàá tẹ lárìnlọọ̀dù tó jẹ́ agbódegbà fáwọn adigunjalè tó pa bàbá, fipa bá ọmọ rẹ̀ méjì lòpọ̀ ",
-      "href": "https://www.bbc.com/yoruba/articles/c8vy7zmyvq2o",
-      "timestamp": 1687002533373
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c4n7nnz16r1o",
-      "rank": 15,
-      "title": " Ṣé èmí tí ẹ rí yìí jọ ẹni burúkú tàbí Jàǹdùkú?- Auxilliary ",
-      "href": "https://www.bbc.com/yoruba/articles/c4n7nnz16r1o",
-      "timestamp": 1685610734498
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cv214nrzk5ro",
-      "rank": 16,
-      "title": "Iṣẹ́ olùkọ́ kò lówó lórí àmọ́ ó ní ipa púpọ̀ ju iṣẹ́ tíátà lọ fún mi - Saka",
-      "href": "https://www.bbc.com/yoruba/articles/cv214nrzk5ro",
-      "timestamp": 1687082771284
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c1d3v17yze4o",
-      "rank": 17,
-      "title": "CBN wọ́gilé ìwé ẹ̀rí iléeṣé bánkì alábọ́dé 132",
-      "href": "https://www.bbc.com/yoruba/articles/c1d3v17yze4o",
-      "timestamp": 1684921159482
-    },
-    {
-      "id": "fe25c844-21e5-442e-84fe-49f686522245",
-      "rank": 18,
-      "title": "Gbàgbé ẹ! Ìjọba kò lè yọwọ nínú fifi ọba jẹ láéláé- Oba Tejuosho",
-      "href": "/yoruba/afrika-57820834",
-      "timestamp": 1626247504000
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cjl9ydj9yzno",
-      "rank": 19,
-      "title": "Wo ipa tí áṣẹ CBN fún àwọn báńkì olókoòwò láti ta dọ́là ní iye tó wù wọ́n yóò ní lórí rẹ ",
-      "href": "https://www.bbc.com/yoruba/articles/cjl9ydj9yzno",
-      "timestamp": 1686820469006
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c89lyejd882o",
-      "rank": 20,
-      "title": "Ọlọ́kadà tó fi ipá bá aláboyún oṣù mẹ́jọ lòpọ̀ dèrò àtìmọ́lé",
-      "href": "https://www.bbc.com/yoruba/articles/c89lyejd882o",
-      "timestamp": 1686988680403
-    }
-  ]
+  "data": {
+    "generated": "2023-06-19T15:14:35.416Z",
+    "lastRecordTimeStamp": "2023-06-19T15:12:00Z",
+    "firstRecordTimeStamp": "2023-06-19T13:12:00Z",
+    "items": [
+      {
+        "id": "urn:bbc:optimo:asset:cz788gr97z0o",
+        "rank": 1,
+        "title": "Torí ìfẹ́ àwọn ìbejì ni mo ṣe kọ̀ láti sọ ohunkóhun láti ọjọ́ yìí - Damola Olatunji",
+        "href": "https://www.bbc.com/yoruba/articles/cz788gr97z0o",
+        "timestamp": 1687174847582
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cv2142kvp41o",
+        "rank": 2,
+        "title": "Ẹ gbà mí, mílíọ̀nù mẹ́ta ni mo bá nínú akoto ìjọba - Gómìnà tuntun, Dare gbarata",
+        "href": "https://www.bbc.com/yoruba/articles/cv2142kvp41o",
+        "timestamp": 1687156673570
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c4npkgln3xgo",
+        "rank": 3,
+        "title": "CBN gbẹ́sẹ̀ kúrò lórí gbèdéke iye \"dollar\" tóo lè kó sínú akoto owó ilẹ̀ òkèrè rẹ",
+        "href": "https://www.bbc.com/yoruba/articles/c4npkgln3xgo",
+        "timestamp": 1687172208863
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c89l4l35ydqo",
+        "rank": 4,
+        "title": "Irọ́ ni wọ́n ń pa lórí ayélujára, ìgbésẹ̀ Sanwo-Olu kò kan ẹ̀yà Igbo ní Alaba - Ohanaeze Ndigbo",
+        "href": "https://www.bbc.com/yoruba/articles/c89l4l35ydqo",
+        "timestamp": 1687174394411
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c9e7gdm1er4o",
+        "rank": 5,
+        "title": "'Lásìkò tí àwọn akẹ́kọ̀ọ́ ń kọrin ìyìn kí wọ́n tó sùn ni àwọn agbéṣùmọ̀mí dáná sun wọ́n'",
+        "href": "https://www.bbc.com/yoruba/articles/c9e7gdm1er4o",
+        "timestamp": 1687174287614
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c88x31v4259o",
+        "rank": 6,
+        "title": "‘Omijé gba ojú mi kan’, Davido ń dárò ní àyájọ́ ‘Father’s Day’",
+        "href": "https://www.bbc.com/yoruba/articles/c88x31v4259o",
+        "timestamp": 1687102155815
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cv21qd2gv4go",
+        "rank": 7,
+        "title": "Ramon Adedoyin gbé àkọtun ìgbésẹ̀ lórí ìdájọ́ ikú tílé ẹjọ́ dá fun lórí ikú Timothy Adegoke",
+        "href": "https://www.bbc.com/yoruba/articles/cv21qd2gv4go",
+        "timestamp": 1686907833716
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cll018nlj17o",
+        "rank": 8,
+        "title": "Àwọn olóṣèlú alátẹnujẹ kan fẹ́ lo àìlera Akeredolu fi ja ìpínlẹ̀ Ondo lólè – Amúgbálẹ́gbẹ́ fún gómìnà Akeredolu",
+        "href": "https://www.bbc.com/yoruba/articles/cll018nlj17o",
+        "timestamp": 1687110726938
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c6pdl2xnnp6o",
+        "rank": 9,
+        "title": "Mo ṣèpàdé pẹ̀lú àwọn olùdásílẹ̀ Boko Haram, wọ́n sì sọ ìdí tí wọ́n fi dá a sílẹ̀ fún mi - Obasanjo",
+        "href": "https://www.bbc.com/yoruba/articles/c6pdl2xnnp6o",
+        "timestamp": 1687016221115
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c84wmm1xjk8o",
+        "rank": 10,
+        "title": "'Tinubu yóò ṣẹ àwọn èèyàn kan tó bá fẹ́ ṣàṣeyọrí'",
+        "href": "https://www.bbc.com/yoruba/articles/c84wmm1xjk8o",
+        "timestamp": 1686986838775
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cy64561y71do",
+        "rank": 11,
+        "title": "Kò sí ọba kankan nílẹ̀ Yorùbá tó le fọwọ́ sọ̀yà pé Ifá ló yan òun – Oluwo",
+        "href": "https://www.bbc.com/yoruba/articles/cy64561y71do",
+        "timestamp": 1687010254086
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cn0keeg80vzo",
+        "rank": 12,
+        "title": "Àwọn olórí orílẹ̀ èdè Adúláwọ̀ rawọ́ ẹ̀bẹ̀ sí Russia àti Ukraine láti dáwọ́ ogun dúró",
+        "href": "https://www.bbc.com/yoruba/articles/cn0keeg80vzo",
+        "timestamp": 1687089105630
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cxrg0ynx35yo",
+        "rank": 13,
+        "title": "Àwọn ọmọ Naijiria fún Ààrẹ Bola Tinubu lórúkọ tuntun nítorí àwọn ìgbésẹ̀ tó ń gbé",
+        "href": "https://www.bbc.com/yoruba/articles/cxrg0ynx35yo",
+        "timestamp": 1686924135791
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c8vy7zmyvq2o",
+        "rank": 14,
+        "title": "Ọwọ́ ọlọ́pàá tẹ lárìnlọọ̀dù tó jẹ́ agbódegbà fáwọn adigunjalè tó pa bàbá, fipa bá ọmọ rẹ̀ méjì lòpọ̀ ",
+        "href": "https://www.bbc.com/yoruba/articles/c8vy7zmyvq2o",
+        "timestamp": 1687002533373
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c4n7nnz16r1o",
+        "rank": 15,
+        "title": " Ṣé èmí tí ẹ rí yìí jọ ẹni burúkú tàbí Jàǹdùkú?- Auxilliary ",
+        "href": "https://www.bbc.com/yoruba/articles/c4n7nnz16r1o",
+        "timestamp": 1685610734498
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cv214nrzk5ro",
+        "rank": 16,
+        "title": "Iṣẹ́ olùkọ́ kò lówó lórí àmọ́ ó ní ipa púpọ̀ ju iṣẹ́ tíátà lọ fún mi - Saka",
+        "href": "https://www.bbc.com/yoruba/articles/cv214nrzk5ro",
+        "timestamp": 1687082771284
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c1d3v17yze4o",
+        "rank": 17,
+        "title": "CBN wọ́gilé ìwé ẹ̀rí iléeṣé bánkì alábọ́dé 132",
+        "href": "https://www.bbc.com/yoruba/articles/c1d3v17yze4o",
+        "timestamp": 1684921159482
+      },
+      {
+        "id": "fe25c844-21e5-442e-84fe-49f686522245",
+        "rank": 18,
+        "title": "Gbàgbé ẹ! Ìjọba kò lè yọwọ nínú fifi ọba jẹ láéláé- Oba Tejuosho",
+        "href": "/yoruba/afrika-57820834",
+        "timestamp": 1626247504000
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cjl9ydj9yzno",
+        "rank": 19,
+        "title": "Wo ipa tí áṣẹ CBN fún àwọn báńkì olókoòwò láti ta dọ́là ní iye tó wù wọ́n yóò ní lórí rẹ ",
+        "href": "https://www.bbc.com/yoruba/articles/cjl9ydj9yzno",
+        "timestamp": 1686820469006
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c89lyejd882o",
+        "rank": 20,
+        "title": "Ọlọ́kadà tó fi ipá bá aláboyún oṣù mẹ́jọ lòpọ̀ dèrò àtìmọ́lé",
+        "href": "https://www.bbc.com/yoruba/articles/c89lyejd882o",
+        "timestamp": 1686988680403
+      }
+    ]
+  }
 }

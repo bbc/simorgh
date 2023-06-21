@@ -1,147 +1,149 @@
 {
-  "generated": "2023-06-19T15:10:23.705Z",
-  "lastRecordTimeStamp": "2023-06-19T15:07:00Z",
-  "firstRecordTimeStamp": "2023-06-19T14:52:00Z",
-  "items": [
-    {
-      "id": "urn:bbc:optimo:asset:c90wwqz44xvo",
-      "rank": 1,
-      "title": "Titanik'in enkazını turistlere gösteren deniz aracı Atlas Okyanusu'nda kayboldu ",
-      "href": "https://www.bbc.com/turkce/articles/c90wwqz44xvo",
-      "timestamp": 1687185386054
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c045v12g4ego",
-      "rank": 2,
-      "title": "Yer altından çekilen su miktarı Dünya'nın dönüş eksenini kaydırdı",
-      "href": "https://www.bbc.com/turkce/articles/c045v12g4ego",
-      "timestamp": 1687072762961
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c72vvl7v7k7o",
-      "rank": 3,
-      "title": "İtalya’dan lastik devi Pirelli üzerindeki Çin kontrolüne fren ",
-      "href": "https://www.bbc.com/turkce/articles/c72vvl7v7k7o",
-      "timestamp": 1687168236158
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c84wwyz3w38o",
-      "rank": 4,
-      "title": "Graeme Souness 'kelebek hastalığıyla' mücadele için 1 milyon sterlin bağış toplama amacıyla Manş Denizi'ni yüzerek geçti",
-      "href": "https://www.bbc.com/turkce/articles/c84wwyz3w38o",
-      "timestamp": 1687184690893
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cqe0915g88vo",
-      "rank": 5,
-      "title": "BioNTech'e Covid aşısının iddia edilen yan etkileri nedeniyle Almanya'da açılan davanın ilk duruşması ertelendi",
-      "href": "https://www.bbc.com/turkce/articles/cqe0915g88vo",
-      "timestamp": 1686561405298
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c25p82qveg8o",
-      "rank": 6,
-      "title": "Trump'ın porno yıldızına yaptığı 'sus payı' ödemesiyle ilgili dava 2024 Mart'ında görülmeye başlanacak",
-      "href": "https://www.bbc.com/turkce/articles/c25p82qveg8o",
-      "timestamp": 1684905077827
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cpv4q3pex0zo",
-      "rank": 7,
-      "title": "Güney Kore’de LGBT onur festivalini engellemek isteyen zabıtalar polisle çatıştı",
-      "href": "https://www.bbc.com/turkce/articles/cpv4q3pex0zo",
-      "timestamp": 1687015149087
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cjejj4el27qo",
-      "rank": 8,
-      "title": "AYM, Yargıtay Başsavcılığı'nın HDP'ye hazine yardımına bloke konulması talebini reddetti ",
-      "href": "https://www.bbc.com/turkce/articles/cjejj4el27qo",
-      "timestamp": 1687184225645
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cp0ze71rr0qo",
-      "rank": 9,
-      "title": "İsveç: Rusya’nın saldırma ihtimalini göz ardı edemeyiz",
-      "href": "https://www.bbc.com/turkce/articles/cp0ze71rr0qo",
-      "timestamp": 1687133853806
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cp0zjgg28m5o",
-      "rank": 10,
-      "title": "Şanlıurfa'da bir medresede ölü bulunan 12 yaşındaki Abdülbaki Dakak hakkında neler biliniyor?",
-      "href": "https://www.bbc.com/turkce/articles/cp0zjgg28m5o",
-      "timestamp": 1687003650974
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c2je1yyp2neo",
-      "rank": 11,
-      "title": "BBC, tekne faciasıyla ilgili Yunan yetkililerin şüpheli ifadelerini tespit etti",
-      "href": "https://www.bbc.com/turkce/articles/c2je1yyp2neo",
-      "timestamp": 1687131772364
-    },
-    {
-      "id": "fc66dce8-c2cc-7b4d-9da1-082fb0129088",
-      "rank": 12,
-      "title": "Titanik enkazının bir kısmı okyanusun 3,8 km derinliğinde yok oluyor",
-      "href": "/turkce/haberler-dunya-49427204",
-      "timestamp": 1566402997000
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cz9gn3w61x0o",
-      "rank": 13,
-      "title": "İstanbul'da Trans Onur Yürüyüşü'ne müdahale edildi",
-      "href": "https://www.bbc.com/turkce/articles/cz9gn3w61x0o",
-      "timestamp": 1687146289090
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c4n4zqd8qnqo",
-      "rank": 14,
-      "title": "İleri yaşta baba olmanın riskleri neler? ",
-      "href": "https://www.bbc.com/turkce/articles/c4n4zqd8qnqo",
-      "timestamp": 1687072801654
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cpdk78nex8po",
-      "rank": 15,
-      "title": "Gazeteci Sinan Aygül'e saldırı: Tatvan Belediyesi'nin çalışanı ve polis memuru tutuklandı",
-      "href": "https://www.bbc.com/turkce/articles/cpdk78nex8po",
-      "timestamp": 1687180671470
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cq5q3xnq114o",
-      "rank": 16,
-      "title": "Katar ve BAE, 6 yıl sonra karşılıklı olarak büyükelçiliklerini yeniden açtı",
-      "href": "https://www.bbc.com/turkce/articles/cq5q3xnq114o",
-      "timestamp": 1687170025505
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cxedjkyj284o",
-      "rank": 17,
-      "title": "Türkiye'de asgari ücret diğer Avrupa ülkelerine kıyasla nasıl değişti, 'Ayda 500 dolar' sözü tutulabilir mi?",
-      "href": "https://www.bbc.com/turkce/articles/cxedjkyj284o",
-      "timestamp": 1687168580225
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cpv4xg7w7z2o",
-      "rank": 18,
-      "title": "Blinken: ABD ve Çin ikili ilişkilerini sorumlu şekilde yönetmeli",
-      "href": "https://www.bbc.com/turkce/articles/cpv4xg7w7z2o",
-      "timestamp": 1687175280051
-    },
-    {
-      "id": "d450dbc5-56ac-42a6-9bc7-8306337a3c7e",
-      "rank": 19,
-      "title": "Kardak krizinin 25. yılı: Türkiye ve Yunanistan nasıl savaşın eşiğine geldi?",
-      "href": "/turkce/haberler-dunya-55882481",
-      "timestamp": 1612148304000
-    },
-    {
-      "id": "675d1988-4275-47b8-96bf-dfa3caf0df13",
-      "rank": 20,
-      "title": "Susurluk skandalı nedir, 3 Kasım 1996'daki trafik kazasının ardından neler yaşandı?",
-      "href": "/turkce/haberler-turkiye-57230730",
-      "timestamp": 1667468338000
-    }
-  ]
+  "data": {
+    "generated": "2023-06-19T15:10:23.705Z",
+    "lastRecordTimeStamp": "2023-06-19T15:07:00Z",
+    "firstRecordTimeStamp": "2023-06-19T14:52:00Z",
+    "items": [
+      {
+        "id": "urn:bbc:optimo:asset:c90wwqz44xvo",
+        "rank": 1,
+        "title": "Titanik'in enkazını turistlere gösteren deniz aracı Atlas Okyanusu'nda kayboldu ",
+        "href": "https://www.bbc.com/turkce/articles/c90wwqz44xvo",
+        "timestamp": 1687185386054
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c045v12g4ego",
+        "rank": 2,
+        "title": "Yer altından çekilen su miktarı Dünya'nın dönüş eksenini kaydırdı",
+        "href": "https://www.bbc.com/turkce/articles/c045v12g4ego",
+        "timestamp": 1687072762961
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c72vvl7v7k7o",
+        "rank": 3,
+        "title": "İtalya’dan lastik devi Pirelli üzerindeki Çin kontrolüne fren ",
+        "href": "https://www.bbc.com/turkce/articles/c72vvl7v7k7o",
+        "timestamp": 1687168236158
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c84wwyz3w38o",
+        "rank": 4,
+        "title": "Graeme Souness 'kelebek hastalığıyla' mücadele için 1 milyon sterlin bağış toplama amacıyla Manş Denizi'ni yüzerek geçti",
+        "href": "https://www.bbc.com/turkce/articles/c84wwyz3w38o",
+        "timestamp": 1687184690893
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cqe0915g88vo",
+        "rank": 5,
+        "title": "BioNTech'e Covid aşısının iddia edilen yan etkileri nedeniyle Almanya'da açılan davanın ilk duruşması ertelendi",
+        "href": "https://www.bbc.com/turkce/articles/cqe0915g88vo",
+        "timestamp": 1686561405298
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c25p82qveg8o",
+        "rank": 6,
+        "title": "Trump'ın porno yıldızına yaptığı 'sus payı' ödemesiyle ilgili dava 2024 Mart'ında görülmeye başlanacak",
+        "href": "https://www.bbc.com/turkce/articles/c25p82qveg8o",
+        "timestamp": 1684905077827
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cpv4q3pex0zo",
+        "rank": 7,
+        "title": "Güney Kore’de LGBT onur festivalini engellemek isteyen zabıtalar polisle çatıştı",
+        "href": "https://www.bbc.com/turkce/articles/cpv4q3pex0zo",
+        "timestamp": 1687015149087
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cjejj4el27qo",
+        "rank": 8,
+        "title": "AYM, Yargıtay Başsavcılığı'nın HDP'ye hazine yardımına bloke konulması talebini reddetti ",
+        "href": "https://www.bbc.com/turkce/articles/cjejj4el27qo",
+        "timestamp": 1687184225645
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cp0ze71rr0qo",
+        "rank": 9,
+        "title": "İsveç: Rusya’nın saldırma ihtimalini göz ardı edemeyiz",
+        "href": "https://www.bbc.com/turkce/articles/cp0ze71rr0qo",
+        "timestamp": 1687133853806
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cp0zjgg28m5o",
+        "rank": 10,
+        "title": "Şanlıurfa'da bir medresede ölü bulunan 12 yaşındaki Abdülbaki Dakak hakkında neler biliniyor?",
+        "href": "https://www.bbc.com/turkce/articles/cp0zjgg28m5o",
+        "timestamp": 1687003650974
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c2je1yyp2neo",
+        "rank": 11,
+        "title": "BBC, tekne faciasıyla ilgili Yunan yetkililerin şüpheli ifadelerini tespit etti",
+        "href": "https://www.bbc.com/turkce/articles/c2je1yyp2neo",
+        "timestamp": 1687131772364
+      },
+      {
+        "id": "fc66dce8-c2cc-7b4d-9da1-082fb0129088",
+        "rank": 12,
+        "title": "Titanik enkazının bir kısmı okyanusun 3,8 km derinliğinde yok oluyor",
+        "href": "/turkce/haberler-dunya-49427204",
+        "timestamp": 1566402997000
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cz9gn3w61x0o",
+        "rank": 13,
+        "title": "İstanbul'da Trans Onur Yürüyüşü'ne müdahale edildi",
+        "href": "https://www.bbc.com/turkce/articles/cz9gn3w61x0o",
+        "timestamp": 1687146289090
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c4n4zqd8qnqo",
+        "rank": 14,
+        "title": "İleri yaşta baba olmanın riskleri neler? ",
+        "href": "https://www.bbc.com/turkce/articles/c4n4zqd8qnqo",
+        "timestamp": 1687072801654
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cpdk78nex8po",
+        "rank": 15,
+        "title": "Gazeteci Sinan Aygül'e saldırı: Tatvan Belediyesi'nin çalışanı ve polis memuru tutuklandı",
+        "href": "https://www.bbc.com/turkce/articles/cpdk78nex8po",
+        "timestamp": 1687180671470
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cq5q3xnq114o",
+        "rank": 16,
+        "title": "Katar ve BAE, 6 yıl sonra karşılıklı olarak büyükelçiliklerini yeniden açtı",
+        "href": "https://www.bbc.com/turkce/articles/cq5q3xnq114o",
+        "timestamp": 1687170025505
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cxedjkyj284o",
+        "rank": 17,
+        "title": "Türkiye'de asgari ücret diğer Avrupa ülkelerine kıyasla nasıl değişti, 'Ayda 500 dolar' sözü tutulabilir mi?",
+        "href": "https://www.bbc.com/turkce/articles/cxedjkyj284o",
+        "timestamp": 1687168580225
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cpv4xg7w7z2o",
+        "rank": 18,
+        "title": "Blinken: ABD ve Çin ikili ilişkilerini sorumlu şekilde yönetmeli",
+        "href": "https://www.bbc.com/turkce/articles/cpv4xg7w7z2o",
+        "timestamp": 1687175280051
+      },
+      {
+        "id": "d450dbc5-56ac-42a6-9bc7-8306337a3c7e",
+        "rank": 19,
+        "title": "Kardak krizinin 25. yılı: Türkiye ve Yunanistan nasıl savaşın eşiğine geldi?",
+        "href": "/turkce/haberler-dunya-55882481",
+        "timestamp": 1612148304000
+      },
+      {
+        "id": "675d1988-4275-47b8-96bf-dfa3caf0df13",
+        "rank": 20,
+        "title": "Susurluk skandalı nedir, 3 Kasım 1996'daki trafik kazasının ardından neler yaşandı?",
+        "href": "/turkce/haberler-turkiye-57230730",
+        "timestamp": 1667468338000
+      }
+    ]
+  }
 }

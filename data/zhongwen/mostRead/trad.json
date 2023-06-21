@@ -1,147 +1,149 @@
 {
-  "generated": "2023-06-19T15:15:48.987Z",
-  "lastRecordTimeStamp": "2023-06-19T15:13:00Z",
-  "firstRecordTimeStamp": "2023-06-19T14:58:00Z",
-  "items": [
-    {
-      "id": "5775d44d-208f-44c1-833e-dff2351549f8",
-      "rank": 1,
-      "title": "習近平會晤布林肯　促「讓中美關係穩下來好起來」",
-      "href": "/zhongwen/trad/chinese-news-65950568",
-      "timestamp": 1687181935000
-    },
-    {
-      "id": "49ac5238-e847-4823-9f92-87ba852ce4c9",
-      "rank": 2,
-      "title": "台灣新北市幼兒園「疑遭餵藥」案 為何引發全台家長恐慌",
-      "href": "/zhongwen/trad/chinese-news-65888554",
-      "timestamp": 1686705524000
-    },
-    {
-      "id": "db3ab51a-51c4-446d-8e3e-35f9d580a25a",
-      "rank": 3,
-      "title": "#MeToo五週年：究竟改變了什麼？",
-      "href": "/zhongwen/trad/world-63256653",
-      "timestamp": 1665833373000
-    },
-    {
-      "id": "892243bc-6f8f-4e31-8684-d68ceaae07d3",
-      "rank": 4,
-      "title": "新冠疫情下的朝鮮：「我們被困住等死」",
-      "href": "/zhongwen/trad/world-65943004",
-      "timestamp": 1687083419000
-    },
-    {
-      "id": "b4960f6c-e158-4e9d-9744-bb0d24d446fe",
-      "rank": 5,
-      "title": "六月節：美國最新聯邦節日的百年歷程",
-      "href": "/zhongwen/trad/57526674",
-      "timestamp": 1624273983000
-    },
-    {
-      "id": "37db8daa-d769-4578-bb8b-f7745fd093ee",
-      "rank": 6,
-      "title": "美國國務卿布林肯終於將訪問北京 美中雙方各自盤算的政治收獲是什麼",
-      "href": "/zhongwen/trad/chinese-news-65926522",
-      "timestamp": 1686974184000
-    },
-    {
-      "id": "3321945d-b718-45fb-9c1f-34926719dc07",
-      "rank": 7,
-      "title": "美國為何要終結中國的「發展中國家」地位",
-      "href": "/zhongwen/trad/chinese-news-65915282",
-      "timestamp": 1686880027000
-    },
-    {
-      "id": "aeda2528-b4be-433d-b024-f80ac462e185",
-      "rank": 8,
-      "title": "新冠病毒：長期嗅覺失靈可能給你帶來的六個影響",
-      "href": "/zhongwen/trad/science-61810533",
-      "timestamp": 1655380174000
-    },
-    {
-      "id": "6c9b0a22-c8b6-4b38-97a6-89fbf982309c",
-      "rank": 9,
-      "title": "日本百萬噸福島核廢水排放在即 你會喝一罐產自那裏的桃汁嗎？",
-      "href": "/zhongwen/trad/world-65107965",
-      "timestamp": 1680068470000
-    },
-    {
-      "id": "753f9b03-366e-a84c-bce1-7d564156706f",
-      "rank": 10,
-      "title": "美國少女遭強姦視頻分享到色情網站拒絶下架",
-      "href": "/zhongwen/trad/world-51444740",
-      "timestamp": 1581772820000
-    },
-    {
-      "id": "cbcce930-4709-4718-8154-840997d18b04",
-      "rank": 11,
-      "title": "BBC調查希臘偷渡船海難：新曝光數據與希臘海岸衛隊證詞相左",
-      "href": "/zhongwen/trad/world-65947436",
-      "timestamp": 1687166740000
-    },
-    {
-      "id": "6f906d7a-2b45-446b-86c7-f0cc68fc9f04",
-      "rank": 12,
-      "title": "新冠後遺症：什麼原因導致「長新冠」和其他幾個關鍵問題",
-      "href": "/zhongwen/trad/science-59967378",
-      "timestamp": 1649073265000
-    },
-    {
-      "id": "8b3e1d13-1038-4bf6-b63f-154dfc48f776",
-      "rank": 13,
-      "title": "走進泰國曼谷的「大麻天堂」",
-      "href": "/zhongwen/trad/world-65522913",
-      "timestamp": 1683539241000
-    },
-    {
-      "id": "7b27be4e-acce-4805-94a2-9e424596f60d",
-      "rank": 14,
-      "title": "日本福島核電站事故10週年：當年發生了什麼？",
-      "href": "/zhongwen/trad/world-56344583",
-      "timestamp": 1615373577000
-    },
-    {
-      "id": "d29c41e9-ae7b-4784-9006-dbb19a573cbf",
-      "rank": 15,
-      "title": "美國太空總署召開UFO公開聽證會，揭示了這五件事",
-      "href": "/zhongwen/trad/science-65773693",
-      "timestamp": 1685602366000
-    },
-    {
-      "id": "8b763365-4867-4759-a197-a804464209d3",
-      "rank": 16,
-      "title": "如果你一直還沒有感染新冠 可能不僅僅是因為運氣好",
-      "href": "/zhongwen/trad/science-61722469",
-      "timestamp": 1654776148000
-    },
-    {
-      "id": "835102b8-e0eb-11e3-a292-e7b13db9bd6e",
-      "rank": 17,
-      "title": "台捷運隨機殺人兇手＂從小即想做大事＂",
-      "href": "/zhongwen/trad/china/2014/05/140521_tw_metrokilling_byjames",
-      "timestamp": 1400678768000
-    },
-    {
-      "id": "54fdd87d-69bc-4fc3-af16-0172d17f074b",
-      "rank": 18,
-      "title": "新冠病毒檢測：如何識別用可樂或果汁做出來的假陽性結果",
-      "href": "/zhongwen/trad/57693905",
-      "timestamp": 1625663103000
-    },
-    {
-      "id": "4846cd88-f75b-4514-9018-20a6c802b7b9",
-      "rank": 19,
-      "title": "抓住「最後一縷陽光」 讓身心充分受益",
-      "href": "/zhongwen/trad/science-58492398",
-      "timestamp": 1631194087000
-    },
-    {
-      "id": "364e5cfb-4648-4da8-965b-c3c0bba42520",
-      "rank": 20,
-      "title": "拜登政府出「烏龍」，美中關係「回暖」再蒙陰影",
-      "href": "/zhongwen/trad/world-65705268",
-      "timestamp": 1685065279000
-    }
-  ]
+  "data": {
+    "generated": "2023-06-19T15:15:48.987Z",
+    "lastRecordTimeStamp": "2023-06-19T15:13:00Z",
+    "firstRecordTimeStamp": "2023-06-19T14:58:00Z",
+    "items": [
+      {
+        "id": "5775d44d-208f-44c1-833e-dff2351549f8",
+        "rank": 1,
+        "title": "習近平會晤布林肯　促「讓中美關係穩下來好起來」",
+        "href": "/zhongwen/trad/chinese-news-65950568",
+        "timestamp": 1687181935000
+      },
+      {
+        "id": "49ac5238-e847-4823-9f92-87ba852ce4c9",
+        "rank": 2,
+        "title": "台灣新北市幼兒園「疑遭餵藥」案 為何引發全台家長恐慌",
+        "href": "/zhongwen/trad/chinese-news-65888554",
+        "timestamp": 1686705524000
+      },
+      {
+        "id": "db3ab51a-51c4-446d-8e3e-35f9d580a25a",
+        "rank": 3,
+        "title": "#MeToo五週年：究竟改變了什麼？",
+        "href": "/zhongwen/trad/world-63256653",
+        "timestamp": 1665833373000
+      },
+      {
+        "id": "892243bc-6f8f-4e31-8684-d68ceaae07d3",
+        "rank": 4,
+        "title": "新冠疫情下的朝鮮：「我們被困住等死」",
+        "href": "/zhongwen/trad/world-65943004",
+        "timestamp": 1687083419000
+      },
+      {
+        "id": "b4960f6c-e158-4e9d-9744-bb0d24d446fe",
+        "rank": 5,
+        "title": "六月節：美國最新聯邦節日的百年歷程",
+        "href": "/zhongwen/trad/57526674",
+        "timestamp": 1624273983000
+      },
+      {
+        "id": "37db8daa-d769-4578-bb8b-f7745fd093ee",
+        "rank": 6,
+        "title": "美國國務卿布林肯終於將訪問北京 美中雙方各自盤算的政治收獲是什麼",
+        "href": "/zhongwen/trad/chinese-news-65926522",
+        "timestamp": 1686974184000
+      },
+      {
+        "id": "3321945d-b718-45fb-9c1f-34926719dc07",
+        "rank": 7,
+        "title": "美國為何要終結中國的「發展中國家」地位",
+        "href": "/zhongwen/trad/chinese-news-65915282",
+        "timestamp": 1686880027000
+      },
+      {
+        "id": "aeda2528-b4be-433d-b024-f80ac462e185",
+        "rank": 8,
+        "title": "新冠病毒：長期嗅覺失靈可能給你帶來的六個影響",
+        "href": "/zhongwen/trad/science-61810533",
+        "timestamp": 1655380174000
+      },
+      {
+        "id": "6c9b0a22-c8b6-4b38-97a6-89fbf982309c",
+        "rank": 9,
+        "title": "日本百萬噸福島核廢水排放在即 你會喝一罐產自那裏的桃汁嗎？",
+        "href": "/zhongwen/trad/world-65107965",
+        "timestamp": 1680068470000
+      },
+      {
+        "id": "753f9b03-366e-a84c-bce1-7d564156706f",
+        "rank": 10,
+        "title": "美國少女遭強姦視頻分享到色情網站拒絶下架",
+        "href": "/zhongwen/trad/world-51444740",
+        "timestamp": 1581772820000
+      },
+      {
+        "id": "cbcce930-4709-4718-8154-840997d18b04",
+        "rank": 11,
+        "title": "BBC調查希臘偷渡船海難：新曝光數據與希臘海岸衛隊證詞相左",
+        "href": "/zhongwen/trad/world-65947436",
+        "timestamp": 1687166740000
+      },
+      {
+        "id": "6f906d7a-2b45-446b-86c7-f0cc68fc9f04",
+        "rank": 12,
+        "title": "新冠後遺症：什麼原因導致「長新冠」和其他幾個關鍵問題",
+        "href": "/zhongwen/trad/science-59967378",
+        "timestamp": 1649073265000
+      },
+      {
+        "id": "8b3e1d13-1038-4bf6-b63f-154dfc48f776",
+        "rank": 13,
+        "title": "走進泰國曼谷的「大麻天堂」",
+        "href": "/zhongwen/trad/world-65522913",
+        "timestamp": 1683539241000
+      },
+      {
+        "id": "7b27be4e-acce-4805-94a2-9e424596f60d",
+        "rank": 14,
+        "title": "日本福島核電站事故10週年：當年發生了什麼？",
+        "href": "/zhongwen/trad/world-56344583",
+        "timestamp": 1615373577000
+      },
+      {
+        "id": "d29c41e9-ae7b-4784-9006-dbb19a573cbf",
+        "rank": 15,
+        "title": "美國太空總署召開UFO公開聽證會，揭示了這五件事",
+        "href": "/zhongwen/trad/science-65773693",
+        "timestamp": 1685602366000
+      },
+      {
+        "id": "8b763365-4867-4759-a197-a804464209d3",
+        "rank": 16,
+        "title": "如果你一直還沒有感染新冠 可能不僅僅是因為運氣好",
+        "href": "/zhongwen/trad/science-61722469",
+        "timestamp": 1654776148000
+      },
+      {
+        "id": "835102b8-e0eb-11e3-a292-e7b13db9bd6e",
+        "rank": 17,
+        "title": "台捷運隨機殺人兇手＂從小即想做大事＂",
+        "href": "/zhongwen/trad/china/2014/05/140521_tw_metrokilling_byjames",
+        "timestamp": 1400678768000
+      },
+      {
+        "id": "54fdd87d-69bc-4fc3-af16-0172d17f074b",
+        "rank": 18,
+        "title": "新冠病毒檢測：如何識別用可樂或果汁做出來的假陽性結果",
+        "href": "/zhongwen/trad/57693905",
+        "timestamp": 1625663103000
+      },
+      {
+        "id": "4846cd88-f75b-4514-9018-20a6c802b7b9",
+        "rank": 19,
+        "title": "抓住「最後一縷陽光」 讓身心充分受益",
+        "href": "/zhongwen/trad/science-58492398",
+        "timestamp": 1631194087000
+      },
+      {
+        "id": "364e5cfb-4648-4da8-965b-c3c0bba42520",
+        "rank": 20,
+        "title": "拜登政府出「烏龍」，美中關係「回暖」再蒙陰影",
+        "href": "/zhongwen/trad/world-65705268",
+        "timestamp": 1685065279000
+      }
+    ]
+  }
 }

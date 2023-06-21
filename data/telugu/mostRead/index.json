@@ -1,147 +1,149 @@
 {
-  "generated": "2023-06-19T15:10:21.665Z",
-  "lastRecordTimeStamp": "2023-06-19T15:07:00Z",
-  "firstRecordTimeStamp": "2023-06-19T13:07:00Z",
-  "items": [
-    {
-      "id": "urn:bbc:optimo:asset:cjrq14k0090o",
-      "rank": 1,
-      "title": "ఆస్ట్రేలియాలో చైనాను దాటేసిన ఇండియన్లు, ఎందుకిలా  పెరుగుతున్నారంటే...",
-      "href": "https://www.bbc.com/telugu/articles/cjrq14k0090o",
-      "timestamp": 1687171518848
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c9e7705l5e7o",
-      "rank": 2,
-      "title": "ఆదిపురుష్ - అవతార్ : ‘మోషన్ క్యాప్చర్ టెక్నాలజీ’ అంటే ఏంటి, ఇది ఎలా పనిచేస్తుంది?",
-      "href": "https://www.bbc.com/telugu/articles/c9e7705l5e7o",
-      "timestamp": 1687179866601
-    },
-    {
-      "id": "be4eccdc-1537-4a79-8a84-0c49b1232575",
-      "rank": 3,
-      "title": "స్వస్తిక: హిట్లర్ హిందూ మత చిహ్నాన్ని తన పార్టీ గుర్తుగా ఎందుకు ఎంచుకున్నారు?",
-      "href": "/telugu/international-59213023",
-      "timestamp": 1636449789000
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c72x0x25kwzo",
-      "rank": 4,
-      "title": "మెస్సాలినా: శృంగారంలో వేశ్యలతో పోటీపడి అపఖ్యాతి పాలైన రోమ్ సామ్రాజ్ఞి",
-      "href": "https://www.bbc.com/telugu/articles/c72x0x25kwzo",
-      "timestamp": 1687159558692
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c3g7n1v7zypo",
-      "rank": 5,
-      "title": "మోదీ పాలనలో భారతదేశం అప్పు రూ. 100 లక్షల కోట్లు పెరిగిందా... కాంగ్రెస్ ఆరోపణలో నిజం ఎంత? ",
-      "href": "https://www.bbc.com/telugu/articles/c3g7n1v7zypo",
-      "timestamp": 1686792877369
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cpw66vep3ylo",
-      "rank": 6,
-      "title": "పూరీ: రథోత్సవానికి ముందు దేవుడికి జ్వరం, 15 రోజులు దర్శనాలు లేవ్!",
-      "href": "https://www.bbc.com/telugu/articles/cpw66vep3ylo",
-      "timestamp": 1687183557434
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cg6nr30dn4go",
-      "rank": 7,
-      "title": "ఆంధ్రప్రదేశ్: కరెంటు బిల్లులో ఈ చార్జీలు ఏంటి... వీటిని ఎందుకు వసూలు చేస్తున్నారు?",
-      "href": "https://www.bbc.com/telugu/articles/cg6nr30dn4go",
-      "timestamp": 1686659269825
-    },
-    {
-      "id": "8dcb886f-50b9-6542-bd51-7cf3de88d57f",
-      "rank": 8,
-      "title": "బుల్లెట్ ప్రూఫ్ జాకెట్ ఇచ్చిన రాజీవ్ గాంధీని చంపించిన ఎల్టీటీఈ ప్రభాకరన్",
-      "href": "/telugu/international-46374581",
-      "timestamp": 1543472172000
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cjrq17nx2r1o",
-      "rank": 9,
-      "title": "ఆదిపురుష్: వివాదాలు, ట్రోలింగ్‌, బ్యాన్ చేయాలనే డిమాండ్ల నడుమ రెండు రోజుల్లో రూ. 240 కోట్ల కలెక్షన్స్... కారణం ఏంటి?",
-      "href": "https://www.bbc.com/telugu/articles/cjrq17nx2r1o",
-      "timestamp": 1687153694515
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cpr41jy2gx2o",
-      "rank": 10,
-      "title": "ఆంధ్ర మెడికల్ కాలేజీ‌కి వందేళ్లు: వైద్యరంగంలో కాకలు తీరిన డాక్టర్లు చదివింది విశాఖపట్నంలోని ఈ కాలేజ్‌లోనే",
-      "href": "https://www.bbc.com/telugu/articles/cpr41jy2gx2o",
-      "timestamp": 1687057418770
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cpw6972l02xo",
-      "rank": 11,
-      "title": "ఈ కాలు నాదే, ఆ కాలూ నాదే అని కాలు మీద కాలు వేసుకుని కూర్చుంటే ఏమవుతుందో తెలుసా?",
-      "href": "https://www.bbc.com/telugu/articles/cpw6972l02xo",
-      "timestamp": 1687077775387
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c90wdkvkwego",
-      "rank": 12,
-      "title": "ఫాదర్స్ డే ఇలా మొదలైంది: తల్లిలా పెంచిన తండ్రి కోసం కూతురు ప్రారంభించిన వేడుక",
-      "href": "https://www.bbc.com/telugu/articles/c90wdkvkwego",
-      "timestamp": 1687075441167
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cjk8jdzx38ro",
-      "rank": 13,
-      "title": "టైటానిక్ లాగా సముద్రంలో మునిగిపోయిన నౌకలెన్ని... వాటిలోని సంపద ఎంత?",
-      "href": "https://www.bbc.com/telugu/articles/cjk8jdzx38ro",
-      "timestamp": 1686725390221
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cz78rnklj4do",
-      "rank": 14,
-      "title": "ఆంధ్రప్రదేశ్‌‌‌లో కరెంటు బిల్లుల మోత: గతంలో అద్దెకు ఉన్నవారు వాడిన విద్యుత్‌కు ఇప్పుడు మీతో ప్రభుత్వం బిల్లు కట్టించుకుంటోందా?",
-      "href": "https://www.bbc.com/telugu/articles/cz78rnklj4do",
-      "timestamp": 1686797013074
-    },
-    {
-      "id": "b3ee0aaa-58d9-476e-a356-70458c7bd7ff",
-      "rank": 15,
-      "title": "భారత్ అనే పేరు ఎలా వచ్చింది... ఈ పేరు వెనుక దాగిన నీరు, నిప్పుల కథేంటి?",
-      "href": "/telugu/india-52951187",
-      "timestamp": 1591503615000
-    },
-    {
-      "id": "d541a8fa-c6ad-724e-9ad8-425724683977",
-      "rank": 16,
-      "title": "‘సెక్స్ గురువు' ఓషో రజనీష్ గురించి ఆయన బాడీగార్డు చెప్పిన 'రహస్యాలు'",
-      "href": "/telugu/international-44359554",
-      "timestamp": 1528295257000
-    },
-    {
-      "id": "ddb00c8f-13c5-dc49-9ce8-8f3752fd0a32",
-      "rank": 17,
-      "title": "1971లో భారత్‌పై పాకిస్తాన్ దాడి చేయబోతోందన్న విషయం RAW కి ముందే ఎలా తెలిసింది?",
-      "href": "/telugu/india-44693055",
-      "timestamp": 1551524654000
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cx9pnp442e4o",
-      "rank": 18,
-      "title": "గల్వాన్: దేశం కోసం ప్రాణాలు కోల్పోయిన సైనికుడి కుటుంబం అంతులేని నిరీక్షణ",
-      "href": "https://www.bbc.com/telugu/articles/cx9pnp442e4o",
-      "timestamp": 1687139612849
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c2xkr21k463o",
-      "rank": 19,
-      "title": "చిత్తూరు: నిరుడు కేజీ రూ.70 పలికిన తోతాపురి మామిడిని రైతులు ఇప్పుడు రూ.10కే అమ్మాల్సి వస్తోంది? దీని వెనక ఎవరున్నారు?",
-      "href": "https://www.bbc.com/telugu/articles/c2xkr21k463o",
-      "timestamp": 1686708417966
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c045pyynylgo",
-      "rank": 20,
-      "title": "ఉత్తరాఖండ్ వరదలు: ‘నా భార్య నా కళ్ల ముందే నదిలో కొట్టుకుపోయింది...’",
-      "href": "https://www.bbc.com/telugu/articles/c045pyynylgo",
-      "timestamp": 1686884588321
-    }
-  ]
+  "data": {
+    "generated": "2023-06-19T15:10:21.665Z",
+    "lastRecordTimeStamp": "2023-06-19T15:07:00Z",
+    "firstRecordTimeStamp": "2023-06-19T13:07:00Z",
+    "items": [
+      {
+        "id": "urn:bbc:optimo:asset:cjrq14k0090o",
+        "rank": 1,
+        "title": "ఆస్ట్రేలియాలో చైనాను దాటేసిన ఇండియన్లు, ఎందుకిలా  పెరుగుతున్నారంటే...",
+        "href": "https://www.bbc.com/telugu/articles/cjrq14k0090o",
+        "timestamp": 1687171518848
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c9e7705l5e7o",
+        "rank": 2,
+        "title": "ఆదిపురుష్ - అవతార్ : ‘మోషన్ క్యాప్చర్ టెక్నాలజీ’ అంటే ఏంటి, ఇది ఎలా పనిచేస్తుంది?",
+        "href": "https://www.bbc.com/telugu/articles/c9e7705l5e7o",
+        "timestamp": 1687179866601
+      },
+      {
+        "id": "be4eccdc-1537-4a79-8a84-0c49b1232575",
+        "rank": 3,
+        "title": "స్వస్తిక: హిట్లర్ హిందూ మత చిహ్నాన్ని తన పార్టీ గుర్తుగా ఎందుకు ఎంచుకున్నారు?",
+        "href": "/telugu/international-59213023",
+        "timestamp": 1636449789000
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c72x0x25kwzo",
+        "rank": 4,
+        "title": "మెస్సాలినా: శృంగారంలో వేశ్యలతో పోటీపడి అపఖ్యాతి పాలైన రోమ్ సామ్రాజ్ఞి",
+        "href": "https://www.bbc.com/telugu/articles/c72x0x25kwzo",
+        "timestamp": 1687159558692
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c3g7n1v7zypo",
+        "rank": 5,
+        "title": "మోదీ పాలనలో భారతదేశం అప్పు రూ. 100 లక్షల కోట్లు పెరిగిందా... కాంగ్రెస్ ఆరోపణలో నిజం ఎంత? ",
+        "href": "https://www.bbc.com/telugu/articles/c3g7n1v7zypo",
+        "timestamp": 1686792877369
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cpw66vep3ylo",
+        "rank": 6,
+        "title": "పూరీ: రథోత్సవానికి ముందు దేవుడికి జ్వరం, 15 రోజులు దర్శనాలు లేవ్!",
+        "href": "https://www.bbc.com/telugu/articles/cpw66vep3ylo",
+        "timestamp": 1687183557434
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cg6nr30dn4go",
+        "rank": 7,
+        "title": "ఆంధ్రప్రదేశ్: కరెంటు బిల్లులో ఈ చార్జీలు ఏంటి... వీటిని ఎందుకు వసూలు చేస్తున్నారు?",
+        "href": "https://www.bbc.com/telugu/articles/cg6nr30dn4go",
+        "timestamp": 1686659269825
+      },
+      {
+        "id": "8dcb886f-50b9-6542-bd51-7cf3de88d57f",
+        "rank": 8,
+        "title": "బుల్లెట్ ప్రూఫ్ జాకెట్ ఇచ్చిన రాజీవ్ గాంధీని చంపించిన ఎల్టీటీఈ ప్రభాకరన్",
+        "href": "/telugu/international-46374581",
+        "timestamp": 1543472172000
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cjrq17nx2r1o",
+        "rank": 9,
+        "title": "ఆదిపురుష్: వివాదాలు, ట్రోలింగ్‌, బ్యాన్ చేయాలనే డిమాండ్ల నడుమ రెండు రోజుల్లో రూ. 240 కోట్ల కలెక్షన్స్... కారణం ఏంటి?",
+        "href": "https://www.bbc.com/telugu/articles/cjrq17nx2r1o",
+        "timestamp": 1687153694515
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cpr41jy2gx2o",
+        "rank": 10,
+        "title": "ఆంధ్ర మెడికల్ కాలేజీ‌కి వందేళ్లు: వైద్యరంగంలో కాకలు తీరిన డాక్టర్లు చదివింది విశాఖపట్నంలోని ఈ కాలేజ్‌లోనే",
+        "href": "https://www.bbc.com/telugu/articles/cpr41jy2gx2o",
+        "timestamp": 1687057418770
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cpw6972l02xo",
+        "rank": 11,
+        "title": "ఈ కాలు నాదే, ఆ కాలూ నాదే అని కాలు మీద కాలు వేసుకుని కూర్చుంటే ఏమవుతుందో తెలుసా?",
+        "href": "https://www.bbc.com/telugu/articles/cpw6972l02xo",
+        "timestamp": 1687077775387
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c90wdkvkwego",
+        "rank": 12,
+        "title": "ఫాదర్స్ డే ఇలా మొదలైంది: తల్లిలా పెంచిన తండ్రి కోసం కూతురు ప్రారంభించిన వేడుక",
+        "href": "https://www.bbc.com/telugu/articles/c90wdkvkwego",
+        "timestamp": 1687075441167
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cjk8jdzx38ro",
+        "rank": 13,
+        "title": "టైటానిక్ లాగా సముద్రంలో మునిగిపోయిన నౌకలెన్ని... వాటిలోని సంపద ఎంత?",
+        "href": "https://www.bbc.com/telugu/articles/cjk8jdzx38ro",
+        "timestamp": 1686725390221
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cz78rnklj4do",
+        "rank": 14,
+        "title": "ఆంధ్రప్రదేశ్‌‌‌లో కరెంటు బిల్లుల మోత: గతంలో అద్దెకు ఉన్నవారు వాడిన విద్యుత్‌కు ఇప్పుడు మీతో ప్రభుత్వం బిల్లు కట్టించుకుంటోందా?",
+        "href": "https://www.bbc.com/telugu/articles/cz78rnklj4do",
+        "timestamp": 1686797013074
+      },
+      {
+        "id": "b3ee0aaa-58d9-476e-a356-70458c7bd7ff",
+        "rank": 15,
+        "title": "భారత్ అనే పేరు ఎలా వచ్చింది... ఈ పేరు వెనుక దాగిన నీరు, నిప్పుల కథేంటి?",
+        "href": "/telugu/india-52951187",
+        "timestamp": 1591503615000
+      },
+      {
+        "id": "d541a8fa-c6ad-724e-9ad8-425724683977",
+        "rank": 16,
+        "title": "‘సెక్స్ గురువు' ఓషో రజనీష్ గురించి ఆయన బాడీగార్డు చెప్పిన 'రహస్యాలు'",
+        "href": "/telugu/international-44359554",
+        "timestamp": 1528295257000
+      },
+      {
+        "id": "ddb00c8f-13c5-dc49-9ce8-8f3752fd0a32",
+        "rank": 17,
+        "title": "1971లో భారత్‌పై పాకిస్తాన్ దాడి చేయబోతోందన్న విషయం RAW కి ముందే ఎలా తెలిసింది?",
+        "href": "/telugu/india-44693055",
+        "timestamp": 1551524654000
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cx9pnp442e4o",
+        "rank": 18,
+        "title": "గల్వాన్: దేశం కోసం ప్రాణాలు కోల్పోయిన సైనికుడి కుటుంబం అంతులేని నిరీక్షణ",
+        "href": "https://www.bbc.com/telugu/articles/cx9pnp442e4o",
+        "timestamp": 1687139612849
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c2xkr21k463o",
+        "rank": 19,
+        "title": "చిత్తూరు: నిరుడు కేజీ రూ.70 పలికిన తోతాపురి మామిడిని రైతులు ఇప్పుడు రూ.10కే అమ్మాల్సి వస్తోంది? దీని వెనక ఎవరున్నారు?",
+        "href": "https://www.bbc.com/telugu/articles/c2xkr21k463o",
+        "timestamp": 1686708417966
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c045pyynylgo",
+        "rank": 20,
+        "title": "ఉత్తరాఖండ్ వరదలు: ‘నా భార్య నా కళ్ల ముందే నదిలో కొట్టుకుపోయింది...’",
+        "href": "https://www.bbc.com/telugu/articles/c045pyynylgo",
+        "timestamp": 1686884588321
+      }
+    ]
+  }
 }

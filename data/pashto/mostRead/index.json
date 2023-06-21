@@ -1,147 +1,149 @@
 {
-  "generated": "2023-06-19T15:01:44.264Z",
-  "lastRecordTimeStamp": "2023-06-19T14:59:00Z",
-  "firstRecordTimeStamp": "2023-06-19T14:29:00Z",
-  "items": [
-    {
-      "id": "d27ff554-0cde-4209-80d2-c8ccb8852176",
-      "rank": 1,
-      "title": "د جاپان ځانګړي استازي له طالبانو د \"ښځو تحصیل\" په اړه مالومات غوښتي",
-      "href": "/pashto/afghanistan-65951372",
-      "timestamp": 1687174946000
-    },
-    {
-      "id": "126e496d-bfa8-4062-b9d3-beec1d8a71ff",
-      "rank": 2,
-      "title": "د چین ولسمشر سره د امریکا د بهرنیو چارو وزیر نا اعلان شوې ليدنه",
-      "href": "/pashto/world-65952277",
-      "timestamp": 1687184805000
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cz9gn9nxz04o",
-      "rank": 3,
-      "title": "پاکستاني ځواکونو د پښتون ژغورنې غورځنګ مخکښ غړی علي وزیر نیولی دی",
-      "href": "https://www.bbc.com/pashto/articles/cz9gn9nxz04o",
-      "timestamp": 1687155514587
-    },
-    {
-      "id": "7070591d-7ef1-4d72-b56d-dc9b9f8ea33a",
-      "rank": 4,
-      "title": "لوېديځه غاړه کې پر یوه کمپ د اسرائیلو برید دری فلسطینیان وژلي او تر ۳۰ ډېر ټپیان دي",
-      "href": "/pashto/world-65952276",
-      "timestamp": 1687175064000
-    },
-    {
-      "id": "be321089-f25e-4cad-ba04-6f96646891d4",
-      "rank": 5,
-      "title": "سپي څنګه د یوې ښځې د تي سرطان په مالومولو کې مرسته کړې؟",
-      "href": "/pashto/65944438",
-      "timestamp": 1687090936000
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c3gz4kxgk8ro",
-      "rank": 6,
-      "title": "کرېکټ؛ افغانستان د یو ورځنیو سیالیو او نړیوال جام لپاره لوبغاړي اعلان کړل چې نوې څېرې هم پکې دي",
-      "href": "https://www.bbc.com/pashto/articles/c3gz4kxgk8ro",
-      "timestamp": 1687084112050
-    },
-    {
-      "id": "64e1d51d-73da-4924-a182-592dcffd404e",
-      "rank": 7,
-      "title": "د پوتین لوی منتقد الکسي ناوالنې ښايي لسیزې په زندان کې پاتې شي",
-      "href": "/pashto/65949752",
-      "timestamp": 1687165459000
-    },
-    {
-      "id": "40f8b6e2-db54-4c88-ad59-3d494570f2f5",
-      "rank": 8,
-      "title": "د ایران په ختیځو پولو کې له یوې \"وسله والې ډلې\" سره د ایراني ځواکونو نښته",
-      "href": "/pashto/65945466",
-      "timestamp": 1687101463000
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c1d834je44lo",
-      "rank": 9,
-      "title": "عراق له ایټالیا ورګرځول شوې ۲۸۰۰ کاله لرغونې ډبرینه لیکدړه نندارې ته ایښې ",
-      "href": "https://www.bbc.com/pashto/articles/c1d834je44lo",
-      "timestamp": 1687149859786
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cjrq1kq1p78o",
-      "rank": 10,
-      "title": "مجاهد: امریکایۍ 'سیګار' اداره د طالبانو حکومت خلاف تبلیغات کوي ",
-      "href": "https://www.bbc.com/pashto/articles/cjrq1kq1p78o",
-      "timestamp": 1687136346973
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c72317l5qeno",
-      "rank": 11,
-      "title": "د چین په پولي واحد له روسیې د تېلو پېرل پاکستان سره څه مرسته کوي؟",
-      "href": "https://www.bbc.com/pashto/articles/c72317l5qeno",
-      "timestamp": 1687066255881
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cz9grgelz2po",
-      "rank": 12,
-      "title": "کرېکټ: د امریکا په ګډون د لسو هېوادونو تر منځ راتلونکي نړیوال جام ته د غوراوي سیالۍ پیل شوې",
-      "href": "https://www.bbc.com/pashto/articles/cz9grgelz2po",
-      "timestamp": 1687100838301
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cge14kzrqzno",
-      "rank": 13,
-      "title": "د اسراییل لومړی وزیر: د ایران او امریکا ترمنځ د هر ډول احتمالي هوکړې مخالف یو",
-      "href": "https://www.bbc.com/pashto/articles/cge14kzrqzno",
-      "timestamp": 1687130603646
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c4nvqgz569eo",
-      "rank": 14,
-      "title": "سویزرلنډ کې د ۷۰ کسانو کلی څنګه د میلیونونو ټنو خاورو او شګو له لاندې کېدو وژغورل شو؟",
-      "href": "https://www.bbc.com/pashto/articles/c4nvqgz569eo",
-      "timestamp": 1687082129758
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c3g0pq9jdkpo",
-      "rank": 15,
-      "title": "جګړو پر مهال د جنسي تاوتریخوالي د له منځه وړلو نړیواله ورځ",
-      "href": "https://www.bbc.com/pashto/articles/c3g0pq9jdkpo",
-      "timestamp": 1687139903911
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c80d18vw9nyo",
-      "rank": 16,
-      "title": "'د انګلستان هوټلونو کې مېشتو کډوالو ماشومانو ته کافي خواړه نه رسېږي'",
-      "href": "https://www.bbc.com/pashto/articles/c80d18vw9nyo",
-      "timestamp": 1687058054377
-    },
-    {
-      "id": "ebf636aa-950f-0b42-943a-5cd2868ac9ff",
-      "rank": 17,
-      "title": "د بدن او ذهن د روغتیا پنځه اسانه لارې",
-      "href": "/pashto/science-and-technology-46713713",
-      "timestamp": 1546137186000
-    },
-    {
-      "id": "e21b30ad-e3e8-4cd9-b29c-5893a8d77002",
-      "rank": 18,
-      "title": "افغانستان کې د ګوزڼ تازه پېښه ثبت شوې",
-      "href": "/pashto/afghanistan-65944572",
-      "timestamp": 1687107229000
-    },
-    {
-      "id": "df0eb12d-07f7-44dd-9e23-f60ea1534b4f",
-      "rank": 19,
-      "title": "قذافي له عرب قامپالۍ تر افريقايي سوچ، بيا ترمرګه، يو بدلېدونکی ناثابت مشر",
-      "href": "/pashto/world-61056555",
-      "timestamp": 1649567701000
-    },
-    {
-      "id": "8f2baf3c-c21d-4521-8257-4ba6bdd2c812",
-      "rank": 20,
-      "title": "د افغانستان جګړې په اړه نوی امریکايي فلم \"تړون\"",
-      "href": "/pashto/arts-and-literature-65928717",
-      "timestamp": 1686930861000
-    }
-  ]
+  "data": {
+    "generated": "2023-06-19T15:01:44.264Z",
+    "lastRecordTimeStamp": "2023-06-19T14:59:00Z",
+    "firstRecordTimeStamp": "2023-06-19T14:29:00Z",
+    "items": [
+      {
+        "id": "d27ff554-0cde-4209-80d2-c8ccb8852176",
+        "rank": 1,
+        "title": "د جاپان ځانګړي استازي له طالبانو د \"ښځو تحصیل\" په اړه مالومات غوښتي",
+        "href": "/pashto/afghanistan-65951372",
+        "timestamp": 1687174946000
+      },
+      {
+        "id": "126e496d-bfa8-4062-b9d3-beec1d8a71ff",
+        "rank": 2,
+        "title": "د چین ولسمشر سره د امریکا د بهرنیو چارو وزیر نا اعلان شوې ليدنه",
+        "href": "/pashto/world-65952277",
+        "timestamp": 1687184805000
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cz9gn9nxz04o",
+        "rank": 3,
+        "title": "پاکستاني ځواکونو د پښتون ژغورنې غورځنګ مخکښ غړی علي وزیر نیولی دی",
+        "href": "https://www.bbc.com/pashto/articles/cz9gn9nxz04o",
+        "timestamp": 1687155514587
+      },
+      {
+        "id": "7070591d-7ef1-4d72-b56d-dc9b9f8ea33a",
+        "rank": 4,
+        "title": "لوېديځه غاړه کې پر یوه کمپ د اسرائیلو برید دری فلسطینیان وژلي او تر ۳۰ ډېر ټپیان دي",
+        "href": "/pashto/world-65952276",
+        "timestamp": 1687175064000
+      },
+      {
+        "id": "be321089-f25e-4cad-ba04-6f96646891d4",
+        "rank": 5,
+        "title": "سپي څنګه د یوې ښځې د تي سرطان په مالومولو کې مرسته کړې؟",
+        "href": "/pashto/65944438",
+        "timestamp": 1687090936000
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c3gz4kxgk8ro",
+        "rank": 6,
+        "title": "کرېکټ؛ افغانستان د یو ورځنیو سیالیو او نړیوال جام لپاره لوبغاړي اعلان کړل چې نوې څېرې هم پکې دي",
+        "href": "https://www.bbc.com/pashto/articles/c3gz4kxgk8ro",
+        "timestamp": 1687084112050
+      },
+      {
+        "id": "64e1d51d-73da-4924-a182-592dcffd404e",
+        "rank": 7,
+        "title": "د پوتین لوی منتقد الکسي ناوالنې ښايي لسیزې په زندان کې پاتې شي",
+        "href": "/pashto/65949752",
+        "timestamp": 1687165459000
+      },
+      {
+        "id": "40f8b6e2-db54-4c88-ad59-3d494570f2f5",
+        "rank": 8,
+        "title": "د ایران په ختیځو پولو کې له یوې \"وسله والې ډلې\" سره د ایراني ځواکونو نښته",
+        "href": "/pashto/65945466",
+        "timestamp": 1687101463000
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c1d834je44lo",
+        "rank": 9,
+        "title": "عراق له ایټالیا ورګرځول شوې ۲۸۰۰ کاله لرغونې ډبرینه لیکدړه نندارې ته ایښې ",
+        "href": "https://www.bbc.com/pashto/articles/c1d834je44lo",
+        "timestamp": 1687149859786
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cjrq1kq1p78o",
+        "rank": 10,
+        "title": "مجاهد: امریکایۍ 'سیګار' اداره د طالبانو حکومت خلاف تبلیغات کوي ",
+        "href": "https://www.bbc.com/pashto/articles/cjrq1kq1p78o",
+        "timestamp": 1687136346973
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c72317l5qeno",
+        "rank": 11,
+        "title": "د چین په پولي واحد له روسیې د تېلو پېرل پاکستان سره څه مرسته کوي؟",
+        "href": "https://www.bbc.com/pashto/articles/c72317l5qeno",
+        "timestamp": 1687066255881
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cz9grgelz2po",
+        "rank": 12,
+        "title": "کرېکټ: د امریکا په ګډون د لسو هېوادونو تر منځ راتلونکي نړیوال جام ته د غوراوي سیالۍ پیل شوې",
+        "href": "https://www.bbc.com/pashto/articles/cz9grgelz2po",
+        "timestamp": 1687100838301
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cge14kzrqzno",
+        "rank": 13,
+        "title": "د اسراییل لومړی وزیر: د ایران او امریکا ترمنځ د هر ډول احتمالي هوکړې مخالف یو",
+        "href": "https://www.bbc.com/pashto/articles/cge14kzrqzno",
+        "timestamp": 1687130603646
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c4nvqgz569eo",
+        "rank": 14,
+        "title": "سویزرلنډ کې د ۷۰ کسانو کلی څنګه د میلیونونو ټنو خاورو او شګو له لاندې کېدو وژغورل شو؟",
+        "href": "https://www.bbc.com/pashto/articles/c4nvqgz569eo",
+        "timestamp": 1687082129758
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c3g0pq9jdkpo",
+        "rank": 15,
+        "title": "جګړو پر مهال د جنسي تاوتریخوالي د له منځه وړلو نړیواله ورځ",
+        "href": "https://www.bbc.com/pashto/articles/c3g0pq9jdkpo",
+        "timestamp": 1687139903911
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c80d18vw9nyo",
+        "rank": 16,
+        "title": "'د انګلستان هوټلونو کې مېشتو کډوالو ماشومانو ته کافي خواړه نه رسېږي'",
+        "href": "https://www.bbc.com/pashto/articles/c80d18vw9nyo",
+        "timestamp": 1687058054377
+      },
+      {
+        "id": "ebf636aa-950f-0b42-943a-5cd2868ac9ff",
+        "rank": 17,
+        "title": "د بدن او ذهن د روغتیا پنځه اسانه لارې",
+        "href": "/pashto/science-and-technology-46713713",
+        "timestamp": 1546137186000
+      },
+      {
+        "id": "e21b30ad-e3e8-4cd9-b29c-5893a8d77002",
+        "rank": 18,
+        "title": "افغانستان کې د ګوزڼ تازه پېښه ثبت شوې",
+        "href": "/pashto/afghanistan-65944572",
+        "timestamp": 1687107229000
+      },
+      {
+        "id": "df0eb12d-07f7-44dd-9e23-f60ea1534b4f",
+        "rank": 19,
+        "title": "قذافي له عرب قامپالۍ تر افريقايي سوچ، بيا ترمرګه، يو بدلېدونکی ناثابت مشر",
+        "href": "/pashto/world-61056555",
+        "timestamp": 1649567701000
+      },
+      {
+        "id": "8f2baf3c-c21d-4521-8257-4ba6bdd2c812",
+        "rank": 20,
+        "title": "د افغانستان جګړې په اړه نوی امریکايي فلم \"تړون\"",
+        "href": "/pashto/arts-and-literature-65928717",
+        "timestamp": 1686930861000
+      }
+    ]
+  }
 }

@@ -1,147 +1,149 @@
 {
-  "generated": "2023-06-19T15:06:39.517Z",
-  "lastRecordTimeStamp": "2023-06-19T15:03:00Z",
-  "firstRecordTimeStamp": "2023-06-19T13:03:00Z",
-  "items": [
-    {
-      "id": "urn:bbc:optimo:asset:cg3nx03nyngo",
-      "rank": 1,
-      "title": "ኮሎኔል ደመቀ ዘውዱ፡ ብዛዕባ ምዕራብ ትግራይን ዝቐረበሉ ክስን እንታይ ይብል?",
-      "href": "https://www.bbc.com/tigrinya/articles/cg3nx03nyngo",
-      "timestamp": 1687155563932
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cw0p7xk9z9zo",
-      "rank": 2,
-      "title": "ንዕሸላት ምሕቛን ዘለዎ ሳዕቤን ክሳዕ ክንደይ እዩ ከቢድ?",
-      "href": "https://www.bbc.com/tigrinya/articles/cw0p7xk9z9zo",
-      "timestamp": 1687170106693
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cy755ed9zwno",
-      "rank": 3,
-      "title": "'ክቡር ጸሓፊ፡ ርክብ ቻይናን ኣመሪካን ኣብ ምርግጋእ ዝያዳ ክትሰርሕ ተስፋ እገብር' ",
-      "href": "https://www.bbc.com/tigrinya/articles/cy755ed9zwno",
-      "timestamp": 1687172338684
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c2e6l4qnp1do",
-      "rank": 4,
-      "title": "ቅልውላው ሱዳን፡ ድሕሪ ሓድሽ ውዕል ምቍራጽ ተዅሲ ተዛማዲ ህድኣት ሰፊኑ",
-      "href": "https://www.bbc.com/tigrinya/articles/c2e6l4qnp1do",
-      "timestamp": 1687167275274
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c88x3825n07o",
-      "rank": 5,
-      "title": "ብዛዕባ'ታ ስደተኛታት ሒዛ ዝጠሓለት ጃልባ ዝተረኽበ መርትዖታት እንታይ እዩ?",
-      "href": "https://www.bbc.com/tigrinya/articles/c88x3825n07o",
-      "timestamp": 1687158965320
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cn42erv6259o",
-      "rank": 6,
-      "title": "ብራዚላውያን ተጻወትቲ፡ ‘ዓሌትነት’ ንምቅዋም፡ ፀሊም ማልያ ተኸዲኖም ናብ ሜዳ ኣትዮም",
-      "href": "https://www.bbc.com/tigrinya/articles/cn42erv6259o",
-      "timestamp": 1687088947743
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cx054lyw170o",
-      "rank": 7,
-      "title": "ኣንቶኒ ብሊንከን ኣዘራራቢ ዝዀነ ዑደት ንምክያድ በይጂን ኣትዩ",
-      "href": "https://www.bbc.com/tigrinya/articles/cx054lyw170o",
-      "timestamp": 1687070731693
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cj517q6mq88o",
-      "rank": 8,
-      "title": "መራሕቲ ኣፍሪቃ ኣብ መንጐ ሩስያን ዩክረይንን ሰላም ከስፍኑ ይኽእሉ 'ዶ?",
-      "href": "https://www.bbc.com/tigrinya/articles/cj517q6mq88o",
-      "timestamp": 1686985527206
-    },
-    {
-      "id": "urn:bbc:optimo:asset:ce9w7xg1e52o",
-      "rank": 9,
-      "title": "ማራቶን ኣስመራ 2023፡ 'ኣብ ንኡስ ዕድመኻ'ውን ታሪኽ ክትሰርሕ ትኽእል ኢኻ'",
-      "href": "https://www.bbc.com/tigrinya/articles/ce9w7xg1e52o",
-      "timestamp": 1686649798262
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cxrgdppqx97o",
-      "rank": 10,
-      "title": "'ኲናት ዩክረይን ደው ክብል ኣለዎ’ - ፕረዚደንት ደቡብ ኣፍሪቃ ",
-      "href": "https://www.bbc.com/tigrinya/articles/cxrgdppqx97o",
-      "timestamp": 1687080870407
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c0xedxp2y6wo",
-      "rank": 11,
-      "title": "ኣብ ቀብረን ተንሲአን ክበሃላ ዝቐነያ ሰበይቲ እንደገና 'ናይ ሓቂ ዓሪፈን'",
-      "href": "https://www.bbc.com/tigrinya/articles/c0xedxp2y6wo",
-      "timestamp": 1687157259105
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cd1n60rv0e8o",
-      "rank": 12,
-      "title": "ናብራ ዓዲ ዓረብ፡ 'ኣስራሒተይ ንሰራሕተኛኣ ክትቀትላ ምስ ረኣኹ ኣእምሮይ ስሒተ'",
-      "href": "https://www.bbc.com/tigrinya/articles/cd1n60rv0e8o",
-      "timestamp": 1686899348183
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cd15r1g78p8o",
-      "rank": 13,
-      "title": "መጥቃዕቲ ቤት ትምህርቲ ዩጋንዳ፡ 'መዝሙር ወንጌል ናብ ብኽያት ተቐይሩ'",
-      "href": "https://www.bbc.com/tigrinya/articles/cd15r1g78p8o",
-      "timestamp": 1687163291193
-    },
-    {
-      "id": "urn:bbc:optimo:asset:czvpwzedplqo",
-      "rank": 14,
-      "title": "ኣብ ዩጋንዳ ቁፅሪ ኣቦነቶም ከረጋግፁ ዝደልዩ ደቂተባዕትዮ ከም ዝወሰኸ ተገሊፁ",
-      "href": "https://www.bbc.com/tigrinya/articles/czvpwzedplqo",
-      "timestamp": 1686993865603
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cd16rjx2651o",
-      "rank": 15,
-      "title": "ግዝኣታዊ ሓድነት ሩስያ ምስዝትንከፍ ኒዩኩለር ክጥቀመሉ ከምዝኾነ ፑቲን ተዛሪቡ",
-      "href": "https://www.bbc.com/tigrinya/articles/cd16rjx2651o",
-      "timestamp": 1686984506067
-    },
-    {
-      "id": "urn:bbc:optimo:asset:ck591djw6y5o",
-      "rank": 16,
-      "title": "ኣብ ፈረንሳ: ምንቅጥቃጥ ምድሪ ገዛውቲ፣ ኣብያተ ክርስትያንን ኣብያተ ትምህርትን ኣዕንዩ",
-      "href": "https://www.bbc.com/tigrinya/articles/ck591djw6y5o",
-      "timestamp": 1687070841817
-    },
-    {
-      "id": "urn:bbc:optimo:asset:czr0nwr4xkno",
-      "rank": 17,
-      "title": "ዝረኸቦ 436 ሽሕ ዶላር ንዋናኡ ብምምላሱ ኣዝማዱ ዘጉሃየ  ሰራሕተኛ መገዲ ኣየር ኢትዮጵያ",
-      "href": "https://www.bbc.com/tigrinya/articles/czr0nwr4xkno",
-      "timestamp": 1686380996857
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c51qel9mze9o",
-      "rank": 18,
-      "title": "‘ህወሓት’ ዝብል መጸውዒ ክወርስ ዝንቀሳቐስ ዘሎ ኣካል መን እዩ ?",
-      "href": "https://www.bbc.com/tigrinya/articles/c51qel9mze9o",
-      "timestamp": 1686897082373
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c0j57yj8vy1o",
-      "rank": 19,
-      "title": "ኣብ ቤት-ትምህርቲ ብዝተፈፀመ መጥቃዕቲ 40 ሰባት ተቐቲሎም",
-      "href": "https://www.bbc.com/tigrinya/articles/c0j57yj8vy1o",
-      "timestamp": 1686995778745
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cl5zjqeljw0o",
-      "rank": 20,
-      "title": "‘ስእልኹም ሰልክዩና’ - መስሓቕ ስእልታት እንስሳ ዘገዳም ",
-      "href": "https://www.bbc.com/tigrinya/articles/cl5zjqeljw0o",
-      "timestamp": 1686903130525
-    }
-  ]
+  "data": {
+    "generated": "2023-06-19T15:06:39.517Z",
+    "lastRecordTimeStamp": "2023-06-19T15:03:00Z",
+    "firstRecordTimeStamp": "2023-06-19T13:03:00Z",
+    "items": [
+      {
+        "id": "urn:bbc:optimo:asset:cg3nx03nyngo",
+        "rank": 1,
+        "title": "ኮሎኔል ደመቀ ዘውዱ፡ ብዛዕባ ምዕራብ ትግራይን ዝቐረበሉ ክስን እንታይ ይብል?",
+        "href": "https://www.bbc.com/tigrinya/articles/cg3nx03nyngo",
+        "timestamp": 1687155563932
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cw0p7xk9z9zo",
+        "rank": 2,
+        "title": "ንዕሸላት ምሕቛን ዘለዎ ሳዕቤን ክሳዕ ክንደይ እዩ ከቢድ?",
+        "href": "https://www.bbc.com/tigrinya/articles/cw0p7xk9z9zo",
+        "timestamp": 1687170106693
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cy755ed9zwno",
+        "rank": 3,
+        "title": "'ክቡር ጸሓፊ፡ ርክብ ቻይናን ኣመሪካን ኣብ ምርግጋእ ዝያዳ ክትሰርሕ ተስፋ እገብር' ",
+        "href": "https://www.bbc.com/tigrinya/articles/cy755ed9zwno",
+        "timestamp": 1687172338684
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c2e6l4qnp1do",
+        "rank": 4,
+        "title": "ቅልውላው ሱዳን፡ ድሕሪ ሓድሽ ውዕል ምቍራጽ ተዅሲ ተዛማዲ ህድኣት ሰፊኑ",
+        "href": "https://www.bbc.com/tigrinya/articles/c2e6l4qnp1do",
+        "timestamp": 1687167275274
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c88x3825n07o",
+        "rank": 5,
+        "title": "ብዛዕባ'ታ ስደተኛታት ሒዛ ዝጠሓለት ጃልባ ዝተረኽበ መርትዖታት እንታይ እዩ?",
+        "href": "https://www.bbc.com/tigrinya/articles/c88x3825n07o",
+        "timestamp": 1687158965320
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cn42erv6259o",
+        "rank": 6,
+        "title": "ብራዚላውያን ተጻወትቲ፡ ‘ዓሌትነት’ ንምቅዋም፡ ፀሊም ማልያ ተኸዲኖም ናብ ሜዳ ኣትዮም",
+        "href": "https://www.bbc.com/tigrinya/articles/cn42erv6259o",
+        "timestamp": 1687088947743
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cx054lyw170o",
+        "rank": 7,
+        "title": "ኣንቶኒ ብሊንከን ኣዘራራቢ ዝዀነ ዑደት ንምክያድ በይጂን ኣትዩ",
+        "href": "https://www.bbc.com/tigrinya/articles/cx054lyw170o",
+        "timestamp": 1687070731693
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cj517q6mq88o",
+        "rank": 8,
+        "title": "መራሕቲ ኣፍሪቃ ኣብ መንጐ ሩስያን ዩክረይንን ሰላም ከስፍኑ ይኽእሉ 'ዶ?",
+        "href": "https://www.bbc.com/tigrinya/articles/cj517q6mq88o",
+        "timestamp": 1686985527206
+      },
+      {
+        "id": "urn:bbc:optimo:asset:ce9w7xg1e52o",
+        "rank": 9,
+        "title": "ማራቶን ኣስመራ 2023፡ 'ኣብ ንኡስ ዕድመኻ'ውን ታሪኽ ክትሰርሕ ትኽእል ኢኻ'",
+        "href": "https://www.bbc.com/tigrinya/articles/ce9w7xg1e52o",
+        "timestamp": 1686649798262
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cxrgdppqx97o",
+        "rank": 10,
+        "title": "'ኲናት ዩክረይን ደው ክብል ኣለዎ’ - ፕረዚደንት ደቡብ ኣፍሪቃ ",
+        "href": "https://www.bbc.com/tigrinya/articles/cxrgdppqx97o",
+        "timestamp": 1687080870407
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c0xedxp2y6wo",
+        "rank": 11,
+        "title": "ኣብ ቀብረን ተንሲአን ክበሃላ ዝቐነያ ሰበይቲ እንደገና 'ናይ ሓቂ ዓሪፈን'",
+        "href": "https://www.bbc.com/tigrinya/articles/c0xedxp2y6wo",
+        "timestamp": 1687157259105
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cd1n60rv0e8o",
+        "rank": 12,
+        "title": "ናብራ ዓዲ ዓረብ፡ 'ኣስራሒተይ ንሰራሕተኛኣ ክትቀትላ ምስ ረኣኹ ኣእምሮይ ስሒተ'",
+        "href": "https://www.bbc.com/tigrinya/articles/cd1n60rv0e8o",
+        "timestamp": 1686899348183
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cd15r1g78p8o",
+        "rank": 13,
+        "title": "መጥቃዕቲ ቤት ትምህርቲ ዩጋንዳ፡ 'መዝሙር ወንጌል ናብ ብኽያት ተቐይሩ'",
+        "href": "https://www.bbc.com/tigrinya/articles/cd15r1g78p8o",
+        "timestamp": 1687163291193
+      },
+      {
+        "id": "urn:bbc:optimo:asset:czvpwzedplqo",
+        "rank": 14,
+        "title": "ኣብ ዩጋንዳ ቁፅሪ ኣቦነቶም ከረጋግፁ ዝደልዩ ደቂተባዕትዮ ከም ዝወሰኸ ተገሊፁ",
+        "href": "https://www.bbc.com/tigrinya/articles/czvpwzedplqo",
+        "timestamp": 1686993865603
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cd16rjx2651o",
+        "rank": 15,
+        "title": "ግዝኣታዊ ሓድነት ሩስያ ምስዝትንከፍ ኒዩኩለር ክጥቀመሉ ከምዝኾነ ፑቲን ተዛሪቡ",
+        "href": "https://www.bbc.com/tigrinya/articles/cd16rjx2651o",
+        "timestamp": 1686984506067
+      },
+      {
+        "id": "urn:bbc:optimo:asset:ck591djw6y5o",
+        "rank": 16,
+        "title": "ኣብ ፈረንሳ: ምንቅጥቃጥ ምድሪ ገዛውቲ፣ ኣብያተ ክርስትያንን ኣብያተ ትምህርትን ኣዕንዩ",
+        "href": "https://www.bbc.com/tigrinya/articles/ck591djw6y5o",
+        "timestamp": 1687070841817
+      },
+      {
+        "id": "urn:bbc:optimo:asset:czr0nwr4xkno",
+        "rank": 17,
+        "title": "ዝረኸቦ 436 ሽሕ ዶላር ንዋናኡ ብምምላሱ ኣዝማዱ ዘጉሃየ  ሰራሕተኛ መገዲ ኣየር ኢትዮጵያ",
+        "href": "https://www.bbc.com/tigrinya/articles/czr0nwr4xkno",
+        "timestamp": 1686380996857
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c51qel9mze9o",
+        "rank": 18,
+        "title": "‘ህወሓት’ ዝብል መጸውዒ ክወርስ ዝንቀሳቐስ ዘሎ ኣካል መን እዩ ?",
+        "href": "https://www.bbc.com/tigrinya/articles/c51qel9mze9o",
+        "timestamp": 1686897082373
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c0j57yj8vy1o",
+        "rank": 19,
+        "title": "ኣብ ቤት-ትምህርቲ ብዝተፈፀመ መጥቃዕቲ 40 ሰባት ተቐቲሎም",
+        "href": "https://www.bbc.com/tigrinya/articles/c0j57yj8vy1o",
+        "timestamp": 1686995778745
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cl5zjqeljw0o",
+        "rank": 20,
+        "title": "‘ስእልኹም ሰልክዩና’ - መስሓቕ ስእልታት እንስሳ ዘገዳም ",
+        "href": "https://www.bbc.com/tigrinya/articles/cl5zjqeljw0o",
+        "timestamp": 1686903130525
+      }
+    ]
+  }
 }

@@ -1,147 +1,149 @@
 {
-  "generated": "2023-06-19T15:10:22.841Z",
-  "lastRecordTimeStamp": "2023-06-19T15:07:00Z",
-  "firstRecordTimeStamp": "2023-06-19T14:52:00Z",
-  "items": [
-    {
-      "id": "urn:bbc:optimo:asset:c3g79jd8qj1o",
-      "rank": 1,
-      "title": "ผลเลือกตั้ง 2566 : กกต. ประกาศรับรอง ส.ส. ครบทั้งสภา 500 คน",
-      "href": "https://www.bbc.com/thai/articles/c3g79jd8qj1o",
-      "timestamp": 1687165036555
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cj7r0de29djo",
-      "rank": 2,
-      "title": "เป็นไปได้ไหมที่โลกของเราอยู่ในหลุมดำ ?",
-      "href": "https://www.bbc.com/thai/articles/cj7r0de29djo",
-      "timestamp": 1687160111387
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c8481ddnypvo",
-      "rank": 3,
-      "title": "เมื่อสหรัฐฯ วางแผน “หยุดโลก” ไม่ให้หมุนชั่วขณะ ",
-      "href": "https://www.bbc.com/thai/articles/c8481ddnypvo",
-      "timestamp": 1687084626763
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cx9pq000ygko",
-      "rank": 4,
-      "title": "\"หยก\" เด็กหญิงวัย 15 ปี ผู้ตั้งคำถามถึง \"อนาคตทางการศึกษา\" ในวันที่ตามหามารดาไม่พบ",
-      "href": "https://www.bbc.com/thai/articles/cx9pq000ygko",
-      "timestamp": 1687139773758
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c97ndrpmgeeo",
-      "rank": 5,
-      "title": "ดาวแคระขาวตกผลึกจนแก่นชั้นในกลายเป็นเพชร",
-      "href": "https://www.bbc.com/thai/articles/c97ndrpmgeeo",
-      "timestamp": 1686981364814
-    },
-    {
-      "id": "fa8003fb-d14a-4f7e-8dd8-0bbfe0f926e4",
-      "rank": 6,
-      "title": "\"เราถูกพรากสิทธิเสรีภาพมากเกินไปแล้ว กับแค่การตั้งคำถาม\"",
-      "href": "/thai/thailand-62108959",
-      "timestamp": 1657511344000
-    },
-    {
-      "id": "02868a66-2c64-4f58-b63e-5f287e5b42b6",
-      "rank": 7,
-      "title": "พระบรมราโชวาทในหลวง ร.10 ว่าด้วย กฎหมาย ความยุติธรรม และโควิด",
-      "href": "/thai/thailand-62319420",
-      "timestamp": 1658943513000
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cx054222vzpo",
-      "rank": 8,
-      "title": "เมียนมา : รัฐบาลรักษาการไทยเชิญชาติอาเซียนหารือปมเมียนมา \"ผิดกาลเทศะ\" หรือแค่ \"จังหวะนรก\"",
-      "href": "https://www.bbc.com/thai/articles/cx054222vzpo",
-      "timestamp": 1687171775377
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cjqzlq2g0nno",
-      "rank": 9,
-      "title": "“หยก” ผู้ต้องหา ม.112 วัย 15 ปี ถูกไล่ออก โรงเรียนชี้แจง เพราะไม่มีสถานะนักเรียน-ไม่ปฏิบัติตามระเบียบ",
-      "href": "https://www.bbc.com/thai/articles/cjqzlq2g0nno",
-      "timestamp": 1686794280766
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c1d34xlzvrlo",
-      "rank": 10,
-      "title": "เลือกตั้ง 2566 : กกต. รายงานผลเลือกตั้งอย่างเป็นทางการ ก.ก. เหลือ 151 ส.ส. ส่วน ปชป. ได้เพิ่มเป็น 25 ส่งจุรินทร์ผ่านคุณสมบัติเป็นนายกฯ",
-      "href": "https://www.bbc.com/thai/articles/c1d34xlzvrlo",
-      "timestamp": 1685010092573
-    },
-    {
-      "id": "c6fa93b5-f6f9-734c-afa0-f871cf524a9e",
-      "rank": 11,
-      "title": "ไฟไหม้มหาวิหารนอเทรอดาม อายุ 850 ปี กลางกรุงปารีส",
-      "href": "/thai/international-47940254",
-      "timestamp": 1555353300000
-    },
-    {
-      "id": "urn:bbc:optimo:asset:clwgdenqlvpo",
-      "rank": 12,
-      "title": "คนไม่มีศาสนาในอังกฤษกำลังเพิ่มขึ้น แล้วไทยเป็นอย่างไร",
-      "href": "https://www.bbc.com/thai/articles/clwgdenqlvpo",
-      "timestamp": 1670325922261
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cw5gqp6z1v7o",
-      "rank": 13,
-      "title": "หญิงชาวเอกวาดอร์ ผู้ “ตายแล้วฟื้น” กลางงานศพของตัวเอง เสียชีวิตแล้ว",
-      "href": "https://www.bbc.com/thai/articles/cw5gqp6z1v7o",
-      "timestamp": 1687163625304
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cv211352492o",
-      "rank": 14,
-      "title": "“มวลชน” กับ “นายกฯ เสมือน” หนึ่งเดือนหลังเลือกตั้ง พิธา ลิ้มเจริญรัตน์ ไปไหน พบใครบ้าง ",
-      "href": "https://www.bbc.com/thai/articles/cv211352492o",
-      "timestamp": 1687173902536
-    },
-    {
-      "id": "urn:bbc:optimo:asset:ckml6828k7ro",
-      "rank": 15,
-      "title": "ค้นพบ “ฟอสฟอรัส” สารให้กำเนิดชีวิตบนดวงจันทร์เอนเซลาดัส",
-      "href": "https://www.bbc.com/thai/articles/ckml6828k7ro",
-      "timestamp": 1686892309090
-    },
-    {
-      "id": "de72e572-49d0-49f4-9d33-a367820fe2fc",
-      "rank": 16,
-      "title": "เกิดอะไรขึ้นที่ฟุกุชิมะ เมื่อ 10 ปีก่อน",
-      "href": "/thai/international-56344107",
-      "timestamp": 1615436209000
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cz90py4lj61o",
-      "rank": 17,
-      "title": "ครอบครองบุหรี่ไฟฟ้าผิดกฎหมายหรือไม่ ถ้าตำรวจไทยเจอต้องทำอย่างไร",
-      "href": "https://www.bbc.com/thai/articles/cz90py4lj61o",
-      "timestamp": 1675221604489
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cw4vlqxngp5o",
-      "rank": 18,
-      "title": "ไทยเชิญอาเซียนหารือกับเมียนมา 18 มิ.ย. แต่บางประเทศยังไม่ทราบเรื่อง ",
-      "href": "https://www.bbc.com/thai/articles/cw4vlqxngp5o",
-      "timestamp": 1686989511509
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cq5g7zj19lpo",
-      "rank": 19,
-      "title": "เปิดโรงกลั่นสุรา “สังเวียน” ที่ยังต้องผลิตแบบ “ดึกดำบรรพ์” จากกฎหมายที่ก้าวไม่ทันโลก",
-      "href": "https://www.bbc.com/thai/articles/cq5g7zj19lpo",
-      "timestamp": 1686454459292
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cmjvzp50z5do",
-      "rank": 20,
-      "title": "กระดูกมนุษย์ถ้ำในลาวชี้ คนอพยพจากแอฟริกาสู่เอเชียเร็วกว่าที่คาดไว้",
-      "href": "https://www.bbc.com/thai/articles/cmjvzp50z5do",
-      "timestamp": 1686994182637
-    }
-  ]
+  "data": {
+    "generated": "2023-06-19T15:10:22.841Z",
+    "lastRecordTimeStamp": "2023-06-19T15:07:00Z",
+    "firstRecordTimeStamp": "2023-06-19T14:52:00Z",
+    "items": [
+      {
+        "id": "urn:bbc:optimo:asset:c3g79jd8qj1o",
+        "rank": 1,
+        "title": "ผลเลือกตั้ง 2566 : กกต. ประกาศรับรอง ส.ส. ครบทั้งสภา 500 คน",
+        "href": "https://www.bbc.com/thai/articles/c3g79jd8qj1o",
+        "timestamp": 1687165036555
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cj7r0de29djo",
+        "rank": 2,
+        "title": "เป็นไปได้ไหมที่โลกของเราอยู่ในหลุมดำ ?",
+        "href": "https://www.bbc.com/thai/articles/cj7r0de29djo",
+        "timestamp": 1687160111387
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c8481ddnypvo",
+        "rank": 3,
+        "title": "เมื่อสหรัฐฯ วางแผน “หยุดโลก” ไม่ให้หมุนชั่วขณะ ",
+        "href": "https://www.bbc.com/thai/articles/c8481ddnypvo",
+        "timestamp": 1687084626763
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cx9pq000ygko",
+        "rank": 4,
+        "title": "\"หยก\" เด็กหญิงวัย 15 ปี ผู้ตั้งคำถามถึง \"อนาคตทางการศึกษา\" ในวันที่ตามหามารดาไม่พบ",
+        "href": "https://www.bbc.com/thai/articles/cx9pq000ygko",
+        "timestamp": 1687139773758
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c97ndrpmgeeo",
+        "rank": 5,
+        "title": "ดาวแคระขาวตกผลึกจนแก่นชั้นในกลายเป็นเพชร",
+        "href": "https://www.bbc.com/thai/articles/c97ndrpmgeeo",
+        "timestamp": 1686981364814
+      },
+      {
+        "id": "fa8003fb-d14a-4f7e-8dd8-0bbfe0f926e4",
+        "rank": 6,
+        "title": "\"เราถูกพรากสิทธิเสรีภาพมากเกินไปแล้ว กับแค่การตั้งคำถาม\"",
+        "href": "/thai/thailand-62108959",
+        "timestamp": 1657511344000
+      },
+      {
+        "id": "02868a66-2c64-4f58-b63e-5f287e5b42b6",
+        "rank": 7,
+        "title": "พระบรมราโชวาทในหลวง ร.10 ว่าด้วย กฎหมาย ความยุติธรรม และโควิด",
+        "href": "/thai/thailand-62319420",
+        "timestamp": 1658943513000
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cx054222vzpo",
+        "rank": 8,
+        "title": "เมียนมา : รัฐบาลรักษาการไทยเชิญชาติอาเซียนหารือปมเมียนมา \"ผิดกาลเทศะ\" หรือแค่ \"จังหวะนรก\"",
+        "href": "https://www.bbc.com/thai/articles/cx054222vzpo",
+        "timestamp": 1687171775377
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cjqzlq2g0nno",
+        "rank": 9,
+        "title": "“หยก” ผู้ต้องหา ม.112 วัย 15 ปี ถูกไล่ออก โรงเรียนชี้แจง เพราะไม่มีสถานะนักเรียน-ไม่ปฏิบัติตามระเบียบ",
+        "href": "https://www.bbc.com/thai/articles/cjqzlq2g0nno",
+        "timestamp": 1686794280766
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c1d34xlzvrlo",
+        "rank": 10,
+        "title": "เลือกตั้ง 2566 : กกต. รายงานผลเลือกตั้งอย่างเป็นทางการ ก.ก. เหลือ 151 ส.ส. ส่วน ปชป. ได้เพิ่มเป็น 25 ส่งจุรินทร์ผ่านคุณสมบัติเป็นนายกฯ",
+        "href": "https://www.bbc.com/thai/articles/c1d34xlzvrlo",
+        "timestamp": 1685010092573
+      },
+      {
+        "id": "c6fa93b5-f6f9-734c-afa0-f871cf524a9e",
+        "rank": 11,
+        "title": "ไฟไหม้มหาวิหารนอเทรอดาม อายุ 850 ปี กลางกรุงปารีส",
+        "href": "/thai/international-47940254",
+        "timestamp": 1555353300000
+      },
+      {
+        "id": "urn:bbc:optimo:asset:clwgdenqlvpo",
+        "rank": 12,
+        "title": "คนไม่มีศาสนาในอังกฤษกำลังเพิ่มขึ้น แล้วไทยเป็นอย่างไร",
+        "href": "https://www.bbc.com/thai/articles/clwgdenqlvpo",
+        "timestamp": 1670325922261
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cw5gqp6z1v7o",
+        "rank": 13,
+        "title": "หญิงชาวเอกวาดอร์ ผู้ “ตายแล้วฟื้น” กลางงานศพของตัวเอง เสียชีวิตแล้ว",
+        "href": "https://www.bbc.com/thai/articles/cw5gqp6z1v7o",
+        "timestamp": 1687163625304
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cv211352492o",
+        "rank": 14,
+        "title": "“มวลชน” กับ “นายกฯ เสมือน” หนึ่งเดือนหลังเลือกตั้ง พิธา ลิ้มเจริญรัตน์ ไปไหน พบใครบ้าง ",
+        "href": "https://www.bbc.com/thai/articles/cv211352492o",
+        "timestamp": 1687173902536
+      },
+      {
+        "id": "urn:bbc:optimo:asset:ckml6828k7ro",
+        "rank": 15,
+        "title": "ค้นพบ “ฟอสฟอรัส” สารให้กำเนิดชีวิตบนดวงจันทร์เอนเซลาดัส",
+        "href": "https://www.bbc.com/thai/articles/ckml6828k7ro",
+        "timestamp": 1686892309090
+      },
+      {
+        "id": "de72e572-49d0-49f4-9d33-a367820fe2fc",
+        "rank": 16,
+        "title": "เกิดอะไรขึ้นที่ฟุกุชิมะ เมื่อ 10 ปีก่อน",
+        "href": "/thai/international-56344107",
+        "timestamp": 1615436209000
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cz90py4lj61o",
+        "rank": 17,
+        "title": "ครอบครองบุหรี่ไฟฟ้าผิดกฎหมายหรือไม่ ถ้าตำรวจไทยเจอต้องทำอย่างไร",
+        "href": "https://www.bbc.com/thai/articles/cz90py4lj61o",
+        "timestamp": 1675221604489
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cw4vlqxngp5o",
+        "rank": 18,
+        "title": "ไทยเชิญอาเซียนหารือกับเมียนมา 18 มิ.ย. แต่บางประเทศยังไม่ทราบเรื่อง ",
+        "href": "https://www.bbc.com/thai/articles/cw4vlqxngp5o",
+        "timestamp": 1686989511509
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cq5g7zj19lpo",
+        "rank": 19,
+        "title": "เปิดโรงกลั่นสุรา “สังเวียน” ที่ยังต้องผลิตแบบ “ดึกดำบรรพ์” จากกฎหมายที่ก้าวไม่ทันโลก",
+        "href": "https://www.bbc.com/thai/articles/cq5g7zj19lpo",
+        "timestamp": 1686454459292
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cmjvzp50z5do",
+        "rank": 20,
+        "title": "กระดูกมนุษย์ถ้ำในลาวชี้ คนอพยพจากแอฟริกาสู่เอเชียเร็วกว่าที่คาดไว้",
+        "href": "https://www.bbc.com/thai/articles/cmjvzp50z5do",
+        "timestamp": 1686994182637
+      }
+    ]
+  }
 }

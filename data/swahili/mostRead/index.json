@@ -1,147 +1,149 @@
 {
-  "generated": "2023-06-19T15:06:32.404Z",
-  "lastRecordTimeStamp": "2023-06-19T15:03:00Z",
-  "firstRecordTimeStamp": "2023-06-19T14:03:00Z",
-  "items": [
-    {
-      "id": "urn:bbc:optimo:asset:c90wdeje2g9o",
-      "rank": 1,
-      "title": "Tetesi za soka Ulaya Jumatatu 19.06.2023",
-      "href": "https://www.bbc.com/swahili/articles/c90wdeje2g9o",
-      "timestamp": 1687143644570
-    },
-    {
-      "id": "urn:bbc:optimo:asset:czknnm157mlo",
-      "rank": 2,
-      "title": "Vita vya Ukraine: BBC iko mstari wa mbele huku Ukraine ikishambulia mahandaki ya Urusi",
-      "href": "https://www.bbc.com/swahili/articles/czknnm157mlo",
-      "timestamp": 1687180850916
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c723z11kngxo",
-      "rank": 3,
-      "title": "Tetesi za soka Ulaya Jumapili 18.06.2023",
-      "href": "https://www.bbc.com/swahili/articles/c723z11kngxo",
-      "timestamp": 1687064389239
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cw0x1z7zgxzo",
-      "rank": 4,
-      "title": "Shambulio la shule Uganda: 'Nyimbo za Injili zilikatizwa  na mayowe'",
-      "href": "https://www.bbc.com/swahili/articles/cw0x1z7zgxzo",
-      "timestamp": 1687145996130
-    },
-    {
-      "id": "11a741f1-56a8-46d7-a552-7ffaa1ba61f7",
-      "rank": 5,
-      "title": "Fahamu 'bomu' hili linaloweza kulipuka nyumbani na vifaa vingine hatari vinavyotumiwa kila siku",
-      "href": "/swahili/habari-58071478",
-      "timestamp": 1627986051000
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c14x92jlqpeo",
-      "rank": 6,
-      "title": "Tetesi za soka Ulaya Jumamosi 17.06.2023",
-      "href": "https://www.bbc.com/swahili/articles/c14x92jlqpeo",
-      "timestamp": 1686977310455
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cx8dpd830pqo",
-      "rank": 7,
-      "title": "Mwanamke aaga dunia siku chache baada ya kupatikana akiwa hai katika jeneza",
-      "href": "https://www.bbc.com/swahili/articles/cx8dpd830pqo",
-      "timestamp": 1687100213926
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cjl99klr6peo",
-      "rank": 8,
-      "title": "Alex Soros: Mfahamu mrithi wa utajiri wa bilionea George Soros",
-      "href": "https://www.bbc.com/swahili/articles/cjl99klr6peo",
-      "timestamp": 1687185403639
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cv28mre4433o",
-      "rank": 9,
-      "title": "Mabomba ya maji yakauka Afrika Kusini kutokana na uhaba wa umeme",
-      "href": "https://www.bbc.com/swahili/articles/cv28mre4433o",
-      "timestamp": 1687147940871
-    },
-    {
-      "id": "urn:bbc:optimo:asset:crg35wgp7jjo",
-      "rank": 10,
-      "title": "Kwa nini simu yako inapata joto na jinsi ya kuizuia?",
-      "href": "https://www.bbc.com/swahili/articles/crg35wgp7jjo",
-      "timestamp": 1686923757377
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c0k901v1vnxo",
-      "rank": 11,
-      "title": "Manchester City: Kwanini ushindi wa mataji matatu unazusha maswali na pongezi?",
-      "href": "https://www.bbc.com/swahili/articles/c0k901v1vnxo",
-      "timestamp": 1687079449641
-    },
-    {
-      "id": "2580fa65-4957-4f88-ad0f-709b942f57f1",
-      "rank": 12,
-      "title": "Ni makundi gani ya waasi yanayotafuta kuishambulia Uganda?",
-      "href": "/swahili/habari-59059510",
-      "timestamp": 1686990610000
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cjq7e2jnp8go",
-      "rank": 13,
-      "title": "Vita vya Ukraine: Makombora ya Patriot ya Marekani yataifariji Kyiv na kuikasirisha Moscow",
-      "href": "https://www.bbc.com/swahili/articles/cjq7e2jnp8go",
-      "timestamp": 1671627268451
-    },
-    {
-      "id": "897b5814-36e6-40d9-85d8-89e22971e1e8",
-      "rank": 14,
-      "title": "Ni nini kinachosababisha shida ya mkojo kwa wanaume na jinsi ya kuitibu",
-      "href": "/swahili/habari-57579967",
-      "timestamp": 1624505223000
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cpr4vzepwveo",
-      "rank": 15,
-      "title": "Kylian Mbappe: Je mshambuliaji huyu hatari anaelekea Manchester United au Real Madrid?",
-      "href": "https://www.bbc.com/swahili/articles/cpr4vzepwveo",
-      "timestamp": 1686731584109
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cl4d6mjxz4lo",
-      "rank": 16,
-      "title": "Baba ampata mpenzi aliyemuua binti yake miaka 26 baadaye: Alitumia mbinu gani?",
-      "href": "https://www.bbc.com/swahili/articles/cl4d6mjxz4lo",
-      "timestamp": 1687000688625
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c0dwwxdkwzmo",
-      "rank": 17,
-      "title": "Usafiri wa Anga: 'Ghostflights' ni nini? kwanini ndege hizi huzunguka tupu?",
-      "href": "https://www.bbc.com/swahili/articles/c0dwwxdkwzmo",
-      "timestamp": 1667288767610
-    },
-    {
-      "id": "832dca17-192f-9249-8a7e-5dcb097e7347",
-      "rank": 18,
-      "title": "Video ya kwanza ya wanawake watumwa wa ngono yatolewa",
-      "href": "/swahili/habari-40554246",
-      "timestamp": 1499672416000
-    },
-    {
-      "id": "urn:bbc:optimo:asset:czd4ej8j3q8o",
-      "rank": 19,
-      "title": "Kwa nini China inachimba kisima chenye kina cha kilomita 11 ardhini?",
-      "href": "https://www.bbc.com/swahili/articles/czd4ej8j3q8o",
-      "timestamp": 1686052108234
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c03kwdr5p0lo",
-      "rank": 20,
-      "title": "Bawasiri 'haemorrhoids' ni nini?, unawezaje kugundua ugonjwa huu?",
-      "href": "https://www.bbc.com/swahili/articles/c03kwdr5p0lo",
-      "timestamp": 1678878175098
-    }
-  ]
+  "data": {
+    "generated": "2023-06-19T15:06:32.404Z",
+    "lastRecordTimeStamp": "2023-06-19T15:03:00Z",
+    "firstRecordTimeStamp": "2023-06-19T14:03:00Z",
+    "items": [
+      {
+        "id": "urn:bbc:optimo:asset:c90wdeje2g9o",
+        "rank": 1,
+        "title": "Tetesi za soka Ulaya Jumatatu 19.06.2023",
+        "href": "https://www.bbc.com/swahili/articles/c90wdeje2g9o",
+        "timestamp": 1687143644570
+      },
+      {
+        "id": "urn:bbc:optimo:asset:czknnm157mlo",
+        "rank": 2,
+        "title": "Vita vya Ukraine: BBC iko mstari wa mbele huku Ukraine ikishambulia mahandaki ya Urusi",
+        "href": "https://www.bbc.com/swahili/articles/czknnm157mlo",
+        "timestamp": 1687180850916
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c723z11kngxo",
+        "rank": 3,
+        "title": "Tetesi za soka Ulaya Jumapili 18.06.2023",
+        "href": "https://www.bbc.com/swahili/articles/c723z11kngxo",
+        "timestamp": 1687064389239
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cw0x1z7zgxzo",
+        "rank": 4,
+        "title": "Shambulio la shule Uganda: 'Nyimbo za Injili zilikatizwa  na mayowe'",
+        "href": "https://www.bbc.com/swahili/articles/cw0x1z7zgxzo",
+        "timestamp": 1687145996130
+      },
+      {
+        "id": "11a741f1-56a8-46d7-a552-7ffaa1ba61f7",
+        "rank": 5,
+        "title": "Fahamu 'bomu' hili linaloweza kulipuka nyumbani na vifaa vingine hatari vinavyotumiwa kila siku",
+        "href": "/swahili/habari-58071478",
+        "timestamp": 1627986051000
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c14x92jlqpeo",
+        "rank": 6,
+        "title": "Tetesi za soka Ulaya Jumamosi 17.06.2023",
+        "href": "https://www.bbc.com/swahili/articles/c14x92jlqpeo",
+        "timestamp": 1686977310455
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cx8dpd830pqo",
+        "rank": 7,
+        "title": "Mwanamke aaga dunia siku chache baada ya kupatikana akiwa hai katika jeneza",
+        "href": "https://www.bbc.com/swahili/articles/cx8dpd830pqo",
+        "timestamp": 1687100213926
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cjl99klr6peo",
+        "rank": 8,
+        "title": "Alex Soros: Mfahamu mrithi wa utajiri wa bilionea George Soros",
+        "href": "https://www.bbc.com/swahili/articles/cjl99klr6peo",
+        "timestamp": 1687185403639
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cv28mre4433o",
+        "rank": 9,
+        "title": "Mabomba ya maji yakauka Afrika Kusini kutokana na uhaba wa umeme",
+        "href": "https://www.bbc.com/swahili/articles/cv28mre4433o",
+        "timestamp": 1687147940871
+      },
+      {
+        "id": "urn:bbc:optimo:asset:crg35wgp7jjo",
+        "rank": 10,
+        "title": "Kwa nini simu yako inapata joto na jinsi ya kuizuia?",
+        "href": "https://www.bbc.com/swahili/articles/crg35wgp7jjo",
+        "timestamp": 1686923757377
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c0k901v1vnxo",
+        "rank": 11,
+        "title": "Manchester City: Kwanini ushindi wa mataji matatu unazusha maswali na pongezi?",
+        "href": "https://www.bbc.com/swahili/articles/c0k901v1vnxo",
+        "timestamp": 1687079449641
+      },
+      {
+        "id": "2580fa65-4957-4f88-ad0f-709b942f57f1",
+        "rank": 12,
+        "title": "Ni makundi gani ya waasi yanayotafuta kuishambulia Uganda?",
+        "href": "/swahili/habari-59059510",
+        "timestamp": 1686990610000
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cjq7e2jnp8go",
+        "rank": 13,
+        "title": "Vita vya Ukraine: Makombora ya Patriot ya Marekani yataifariji Kyiv na kuikasirisha Moscow",
+        "href": "https://www.bbc.com/swahili/articles/cjq7e2jnp8go",
+        "timestamp": 1671627268451
+      },
+      {
+        "id": "897b5814-36e6-40d9-85d8-89e22971e1e8",
+        "rank": 14,
+        "title": "Ni nini kinachosababisha shida ya mkojo kwa wanaume na jinsi ya kuitibu",
+        "href": "/swahili/habari-57579967",
+        "timestamp": 1624505223000
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cpr4vzepwveo",
+        "rank": 15,
+        "title": "Kylian Mbappe: Je mshambuliaji huyu hatari anaelekea Manchester United au Real Madrid?",
+        "href": "https://www.bbc.com/swahili/articles/cpr4vzepwveo",
+        "timestamp": 1686731584109
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cl4d6mjxz4lo",
+        "rank": 16,
+        "title": "Baba ampata mpenzi aliyemuua binti yake miaka 26 baadaye: Alitumia mbinu gani?",
+        "href": "https://www.bbc.com/swahili/articles/cl4d6mjxz4lo",
+        "timestamp": 1687000688625
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c0dwwxdkwzmo",
+        "rank": 17,
+        "title": "Usafiri wa Anga: 'Ghostflights' ni nini? kwanini ndege hizi huzunguka tupu?",
+        "href": "https://www.bbc.com/swahili/articles/c0dwwxdkwzmo",
+        "timestamp": 1667288767610
+      },
+      {
+        "id": "832dca17-192f-9249-8a7e-5dcb097e7347",
+        "rank": 18,
+        "title": "Video ya kwanza ya wanawake watumwa wa ngono yatolewa",
+        "href": "/swahili/habari-40554246",
+        "timestamp": 1499672416000
+      },
+      {
+        "id": "urn:bbc:optimo:asset:czd4ej8j3q8o",
+        "rank": 19,
+        "title": "Kwa nini China inachimba kisima chenye kina cha kilomita 11 ardhini?",
+        "href": "https://www.bbc.com/swahili/articles/czd4ej8j3q8o",
+        "timestamp": 1686052108234
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c03kwdr5p0lo",
+        "rank": 20,
+        "title": "Bawasiri 'haemorrhoids' ni nini?, unawezaje kugundua ugonjwa huu?",
+        "href": "https://www.bbc.com/swahili/articles/c03kwdr5p0lo",
+        "timestamp": 1678878175098
+      }
+    ]
+  }
 }
