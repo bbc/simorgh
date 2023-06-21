@@ -32,7 +32,7 @@ interface MostReadProps {
   columnLayout?: ColumnLayout;
   size?: Size;
   mobileDivider?: boolean;
-  backgroundColour?: string;
+  headingBackgroundColour?: string;
 }
 
 const MostRead = ({
@@ -40,7 +40,7 @@ const MostRead = ({
   columnLayout = 'multiColumn',
   size = 'default',
   mobileDivider = false,
-  backgroundColour = WHITE,
+  headingBackgroundColour = WHITE,
 }: MostReadProps) => {
   const { isAmp, pageType, variant } = useContext(RequestContext);
   const {
@@ -72,7 +72,7 @@ const MostRead = ({
       <MostReadSection>
         <MostReadSectionLabel
           mobileDivider={mobileDivider}
-          backgroundColor={backgroundColour}
+          backgroundColor={headingBackgroundColour}
         />
         <Amp
           endpoint={`${process.env.SIMORGH_MOST_READ_CDN_URL}${endpoint}`}
@@ -87,7 +87,7 @@ const MostRead = ({
       <MostReadSection>
         <MostReadSectionLabel
           mobileDivider={mobileDivider}
-          backgroundColor={backgroundColour}
+          backgroundColor={headingBackgroundColour}
         />
         <Canonical
           data={data}
