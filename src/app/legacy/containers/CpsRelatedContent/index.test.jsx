@@ -5,7 +5,7 @@ import path from 'ramda/src/path';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 
-import pidginPageData from '#data/pidgin/cpsAssets/tori-49450859';
+import pidginPageData from '#data/pidgin/cpsAssets/tori-49450859.json';
 
 import getInitialData from '#app/routes/cpsAsset/getInitialData';
 import { MEDIA_ASSET_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
@@ -17,7 +17,10 @@ import CpsRelatedContent from '.';
 
 jest.mock('../../../components/ThemeProvider');
 
-const promos = path(['relatedContent', 'groups', 0, 'promos'], pidginPageData);
+const promos = path(
+  ['relatedContent', 'groups', 0, 'promos'],
+  pidginPageData.data.article,
+);
 
 // eslint-disable-next-line react/prop-types
 const renderRelatedContent = ({
@@ -86,27 +89,7 @@ describe('CpsRelatedContent', () => {
   });
 
   it('should render timestamps in milliseconds when page data has timestamps in seconds', async () => {
-    const initialPromo = [
-      {
-        ...promos[0],
-        timestamp: 1234567890,
-      },
-    ];
-
-    fetch.mockResponse(
-      JSON.stringify({
-        ...pidginPageData,
-        relatedContent: {
-          groups: [
-            {
-              type: 'see-alsos',
-              promos: initialPromo,
-            },
-          ],
-        },
-      }),
-    );
-
+    fetch.mockResponse(JSON.stringify({ ...pidginPageData }));
     const { pageData } = await getInitialData({
       path: 'some-cps-path',
       service: 'pidgin',
@@ -116,6 +99,8 @@ describe('CpsRelatedContent', () => {
       ['relatedContent', 'groups', 0, 'promos'],
       pageData,
     );
+
+    transformedPromos[0].timestamp = 1234567890;
 
     const { getByText } = renderRelatedContent({
       content: transformedPromos,
