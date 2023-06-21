@@ -1,147 +1,149 @@
 {
-  "generated": "2023-06-19T14:53:24.551Z",
-  "lastRecordTimeStamp": "2023-06-19T14:50:00Z",
-  "firstRecordTimeStamp": "2023-06-19T12:50:00Z",
-  "items": [
-    {
-      "id": "urn:bbc:optimo:asset:clj1gydp67no",
-      "rank": 1,
-      "title": "Inkuru yo ku rugerero: Sgt wa Ukraine uyoboye urugamba yambaye ‘casque’ y’umuhungu we waruguyeho",
-      "href": "https://www.bbc.com/gahuza/articles/clj1gydp67no",
-      "timestamp": 1687164389801
-    },
-    {
-      "id": "urn:bbc:optimo:asset:ckvzkvq8w90o",
-      "rank": 2,
-      "title": "Ibihe bishya mu mubano: Imyitozo ihuriweho y’ingabo z’u Burundi, u Rwanda, Uganda, Kenya na Tanzania",
-      "href": "https://www.bbc.com/gahuza/articles/ckvzkvq8w90o",
-      "timestamp": 1687154186557
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cqqkkr71155o",
-      "rank": 3,
-      "title": "Artificial Intelligence: Ni iki? Ikora ite? Ifasha iki? Ni izihe mpungenge iteje? ",
-      "href": "https://www.bbc.com/gahuza/articles/cqqkkr71155o",
-      "timestamp": 1687182315180
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cn3eelm13r7o",
-      "rank": 4,
-      "title": "Ayavugwa mw’igura n’igurishwa ry’abakinyi: Partey, Havertz, Mbappe, Palhinha, Scamacca, Walker",
-      "href": "https://www.bbc.com/gahuza/articles/cn3eelm13r7o",
-      "timestamp": 1687171277157
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c1w43xgwxyyo",
-      "rank": 5,
-      "title": "Uganda: Uko ‘Indirimbo z’Imana zahagaritswe n’imiborogo’ y'abanyeshuri batewe",
-      "href": "https://www.bbc.com/gahuza/articles/c1w43xgwxyyo",
-      "timestamp": 1687148402664
-    },
-    {
-      "id": "urn:bbc:optimo:asset:clexlz63v8jo",
-      "rank": 6,
-      "title": "Wa mugore wakomanze ku isanduku bagiye kumuhamba, ubu yapfuye  ",
-      "href": "https://www.bbc.com/gahuza/articles/clexlz63v8jo",
-      "timestamp": 1687111394020
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cjqzkwk5x9xo",
-      "rank": 7,
-      "title": "Perezida w'Afurika y'Epfo yabwiye Putin ko intambara igomba kurangira",
-      "href": "https://www.bbc.com/gahuza/articles/cjqzkwk5x9xo",
-      "timestamp": 1687060146428
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cd1w2d3nkrgo",
-      "rank": 8,
-      "title": "Abanyeshuri babarirwa muri mirongo biciwe mu gitero ku ishuri muri Uganda ",
-      "href": "https://www.bbc.com/gahuza/articles/cd1w2d3nkrgo",
-      "timestamp": 1687066560039
-    },
-    {
-      "id": "urn:bbc:optimo:asset:crgd488e3rno",
-      "rank": 9,
-      "title": "Menya Valery Zaluzhny, intwazangabo iyoboye igitero ca Ukraine co kwivuna umwansi",
-      "href": "https://www.bbc.com/gahuza/articles/crgd488e3rno",
-      "timestamp": 1686817325528
-    },
-    {
-      "id": "urn:bbc:optimo:asset:crgdqzxx5qxo",
-      "rank": 10,
-      "title": "Menya uno mugabo yazungurutse ibihugu vyose kw’isi atinjiye mu ndege ",
-      "href": "https://www.bbc.com/gahuza/articles/crgdqzxx5qxo",
-      "timestamp": 1686915683763
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c723dn88rm6o",
-      "rank": 11,
-      "title": "Imyaka itatu atwara Uburundi: Amaze gushika kuki? – Ikiganiro cihariye Prezida Ndayishimiye yagiranye na BBC",
-      "href": "https://www.bbc.com/gahuza/articles/c723dn88rm6o",
-      "timestamp": 1686910421406
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cnk10wx2q89o",
-      "rank": 12,
-      "title": "Amapfa yo muri Espagne yatumye flamingos zijya kuba ahandi",
-      "href": "https://www.bbc.com/gahuza/articles/cnk10wx2q89o",
-      "timestamp": 1687084052932
-    },
-    {
-      "id": "urn:bbc:optimo:asset:ckrmy0r941eo",
-      "rank": 13,
-      "title": "DR Congo yasabye Urukiko Mpuzamahanga guperereza ku byaha by’inyeshyamba muri Kivu ya Ruguru",
-      "href": "https://www.bbc.com/gahuza/articles/ckrmy0r941eo",
-      "timestamp": 1686900620268
-    },
-    {
-      "id": "urn:bbc:optimo:asset:cld3kl10ywyo",
-      "rank": 14,
-      "title": "Blinken yatangiye ibiganiro n'abategetsi mu ruzinduko i Beijing",
-      "href": "https://www.bbc.com/gahuza/articles/cld3kl10ywyo",
-      "timestamp": 1687074906337
-    },
-    {
-      "id": "urn:bbc:optimo:asset:ck7d3jprnkyo",
-      "rank": 15,
-      "title": "Ibitero bya Ukraine: Bizasaba iki ngo igitero cyabo kigere ku ntego? ",
-      "href": "https://www.bbc.com/gahuza/articles/ck7d3jprnkyo",
-      "timestamp": 1686639504039
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c0j5ekg0154o",
-      "rank": 16,
-      "title": "Kujya ku butaka bw’umwanzi kugarura umwana wanjye watwawe ",
-      "href": "https://www.bbc.com/gahuza/articles/c0j5ekg0154o",
-      "timestamp": 1685522480321
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c3gpr2wlgx8o",
-      "rank": 17,
-      "title": "Putin yemeje ko intwaro kirimbuzi za mbere zageze muri Belarus",
-      "href": "https://www.bbc.com/gahuza/articles/c3gpr2wlgx8o",
-      "timestamp": 1686980593575
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c0k90nkvvqdo",
-      "rank": 18,
-      "title": "Abategetsi ba Africa muri gariyamoshi ijya i Kyiv, na Moscow, gushaka amahoro ",
-      "href": "https://www.bbc.com/gahuza/articles/c0k90nkvvqdo",
-      "timestamp": 1686895479271
-    },
-    {
-      "id": "urn:bbc:optimo:asset:c723d04g3rlo",
-      "rank": 19,
-      "title": "Mali irasaba ubutumwa bwo kubungabunga amahoro bwa MINUSMA kuhava",
-      "href": "https://www.bbc.com/gahuza/articles/c723d04g3rlo",
-      "timestamp": 1686994728510
-    },
-    {
-      "id": "02495ce1-228f-534d-825e-20e2a8e30463",
-      "rank": 20,
-      "title": "Ibintu bitanu umuntu wese ufite igitsina gore akwiye kumenya",
-      "href": "/gahuza/50343091",
-      "timestamp": 1671169107000
-    }
-  ]
+  "data": {
+    "generated": "2023-06-19T14:53:24.551Z",
+    "lastRecordTimeStamp": "2023-06-19T14:50:00Z",
+    "firstRecordTimeStamp": "2023-06-19T12:50:00Z",
+    "items": [
+      {
+        "id": "urn:bbc:optimo:asset:clj1gydp67no",
+        "rank": 1,
+        "title": "Inkuru yo ku rugerero: Sgt wa Ukraine uyoboye urugamba yambaye ‘casque’ y’umuhungu we waruguyeho",
+        "href": "https://www.bbc.com/gahuza/articles/clj1gydp67no",
+        "timestamp": 1687164389801
+      },
+      {
+        "id": "urn:bbc:optimo:asset:ckvzkvq8w90o",
+        "rank": 2,
+        "title": "Ibihe bishya mu mubano: Imyitozo ihuriweho y’ingabo z’u Burundi, u Rwanda, Uganda, Kenya na Tanzania",
+        "href": "https://www.bbc.com/gahuza/articles/ckvzkvq8w90o",
+        "timestamp": 1687154186557
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cqqkkr71155o",
+        "rank": 3,
+        "title": "Artificial Intelligence: Ni iki? Ikora ite? Ifasha iki? Ni izihe mpungenge iteje? ",
+        "href": "https://www.bbc.com/gahuza/articles/cqqkkr71155o",
+        "timestamp": 1687182315180
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cn3eelm13r7o",
+        "rank": 4,
+        "title": "Ayavugwa mw’igura n’igurishwa ry’abakinyi: Partey, Havertz, Mbappe, Palhinha, Scamacca, Walker",
+        "href": "https://www.bbc.com/gahuza/articles/cn3eelm13r7o",
+        "timestamp": 1687171277157
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c1w43xgwxyyo",
+        "rank": 5,
+        "title": "Uganda: Uko ‘Indirimbo z’Imana zahagaritswe n’imiborogo’ y'abanyeshuri batewe",
+        "href": "https://www.bbc.com/gahuza/articles/c1w43xgwxyyo",
+        "timestamp": 1687148402664
+      },
+      {
+        "id": "urn:bbc:optimo:asset:clexlz63v8jo",
+        "rank": 6,
+        "title": "Wa mugore wakomanze ku isanduku bagiye kumuhamba, ubu yapfuye  ",
+        "href": "https://www.bbc.com/gahuza/articles/clexlz63v8jo",
+        "timestamp": 1687111394020
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cjqzkwk5x9xo",
+        "rank": 7,
+        "title": "Perezida w'Afurika y'Epfo yabwiye Putin ko intambara igomba kurangira",
+        "href": "https://www.bbc.com/gahuza/articles/cjqzkwk5x9xo",
+        "timestamp": 1687060146428
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cd1w2d3nkrgo",
+        "rank": 8,
+        "title": "Abanyeshuri babarirwa muri mirongo biciwe mu gitero ku ishuri muri Uganda ",
+        "href": "https://www.bbc.com/gahuza/articles/cd1w2d3nkrgo",
+        "timestamp": 1687066560039
+      },
+      {
+        "id": "urn:bbc:optimo:asset:crgd488e3rno",
+        "rank": 9,
+        "title": "Menya Valery Zaluzhny, intwazangabo iyoboye igitero ca Ukraine co kwivuna umwansi",
+        "href": "https://www.bbc.com/gahuza/articles/crgd488e3rno",
+        "timestamp": 1686817325528
+      },
+      {
+        "id": "urn:bbc:optimo:asset:crgdqzxx5qxo",
+        "rank": 10,
+        "title": "Menya uno mugabo yazungurutse ibihugu vyose kw’isi atinjiye mu ndege ",
+        "href": "https://www.bbc.com/gahuza/articles/crgdqzxx5qxo",
+        "timestamp": 1686915683763
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c723dn88rm6o",
+        "rank": 11,
+        "title": "Imyaka itatu atwara Uburundi: Amaze gushika kuki? – Ikiganiro cihariye Prezida Ndayishimiye yagiranye na BBC",
+        "href": "https://www.bbc.com/gahuza/articles/c723dn88rm6o",
+        "timestamp": 1686910421406
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cnk10wx2q89o",
+        "rank": 12,
+        "title": "Amapfa yo muri Espagne yatumye flamingos zijya kuba ahandi",
+        "href": "https://www.bbc.com/gahuza/articles/cnk10wx2q89o",
+        "timestamp": 1687084052932
+      },
+      {
+        "id": "urn:bbc:optimo:asset:ckrmy0r941eo",
+        "rank": 13,
+        "title": "DR Congo yasabye Urukiko Mpuzamahanga guperereza ku byaha by’inyeshyamba muri Kivu ya Ruguru",
+        "href": "https://www.bbc.com/gahuza/articles/ckrmy0r941eo",
+        "timestamp": 1686900620268
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cld3kl10ywyo",
+        "rank": 14,
+        "title": "Blinken yatangiye ibiganiro n'abategetsi mu ruzinduko i Beijing",
+        "href": "https://www.bbc.com/gahuza/articles/cld3kl10ywyo",
+        "timestamp": 1687074906337
+      },
+      {
+        "id": "urn:bbc:optimo:asset:ck7d3jprnkyo",
+        "rank": 15,
+        "title": "Ibitero bya Ukraine: Bizasaba iki ngo igitero cyabo kigere ku ntego? ",
+        "href": "https://www.bbc.com/gahuza/articles/ck7d3jprnkyo",
+        "timestamp": 1686639504039
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c0j5ekg0154o",
+        "rank": 16,
+        "title": "Kujya ku butaka bw’umwanzi kugarura umwana wanjye watwawe ",
+        "href": "https://www.bbc.com/gahuza/articles/c0j5ekg0154o",
+        "timestamp": 1685522480321
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c3gpr2wlgx8o",
+        "rank": 17,
+        "title": "Putin yemeje ko intwaro kirimbuzi za mbere zageze muri Belarus",
+        "href": "https://www.bbc.com/gahuza/articles/c3gpr2wlgx8o",
+        "timestamp": 1686980593575
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c0k90nkvvqdo",
+        "rank": 18,
+        "title": "Abategetsi ba Africa muri gariyamoshi ijya i Kyiv, na Moscow, gushaka amahoro ",
+        "href": "https://www.bbc.com/gahuza/articles/c0k90nkvvqdo",
+        "timestamp": 1686895479271
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c723d04g3rlo",
+        "rank": 19,
+        "title": "Mali irasaba ubutumwa bwo kubungabunga amahoro bwa MINUSMA kuhava",
+        "href": "https://www.bbc.com/gahuza/articles/c723d04g3rlo",
+        "timestamp": 1686994728510
+      },
+      {
+        "id": "02495ce1-228f-534d-825e-20e2a8e30463",
+        "rank": 20,
+        "title": "Ibintu bitanu umuntu wese ufite igitsina gore akwiye kumenya",
+        "href": "/gahuza/50343091",
+        "timestamp": 1671169107000
+      }
+    ]
+  }
 }
