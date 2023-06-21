@@ -8,7 +8,7 @@ import pathOr from 'ramda/src/pathOr';
 import assocPath from 'ramda/src/assocPath';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import mapPageData from '#data/pidgin/cpsAssets/23248703';
+import mapPageData from '#data/pidgin/cpsAssets/23248703.json';
 import uzbekPageData from '#data/uzbek/cpsAssets/sport-23248721';
 import mostWatchedData from '#data/pidgin/mostWatched/index.json';
 import igboPageData from '#data/igbo/cpsAssets/afirika-23252735';

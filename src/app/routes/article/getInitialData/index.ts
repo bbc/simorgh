@@ -9,6 +9,7 @@ import { Services, Variants } from '../../../models/types/global';
 import getOnwardsPageData from '../utils/getOnwardsData';
 import { advertisingAllowed, isSfv } from '../utils/paramChecks';
 import { FetchError } from '../../../models/types/fetch';
+import handleError from '../../utils/handleError';
 
 const logger = nodeLogger(__filename);
 
@@ -48,6 +49,10 @@ export default async ({
       path: fetchUrl.toString(),
       ...(!isLocal && { agent, optHeaders }),
     });
+
+    if (!json?.data?.article) {
+      throw handleError('Article data is malformed', 500);
+    }
 
     const {
       data: { article, secondaryData },
