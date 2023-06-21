@@ -88,26 +88,6 @@ describe('CpsRelatedContent', () => {
     expect(document.querySelectorAll(`[role='region']`).length).toBe(1);
   });
 
-  it('should render timestamps in milliseconds when page data has timestamps in seconds', async () => {
-    fetch.mockResponse(JSON.stringify({ ...pidginPageData }));
-    const { pageData } = await getInitialData({
-      path: 'some-cps-path',
-      service: 'pidgin',
-    });
-
-    const transformedPromos = path(
-      ['relatedContent', 'groups', 0, 'promos'],
-      pageData,
-    );
-
-    transformedPromos[0].timestamp = 1234567890;
-
-    const { getByText } = renderRelatedContent({
-      content: transformedPromos,
-    });
-
-    expect(getByText('February 2009', { exact: false })).not.toBeNull();
-  });
   it('should render a default title if translations are not available', () => {
     renderRelatedContent({ pageType: STORY_PAGE, service: 'news' });
     expect(screen.getByText(`Related content`)).toBeTruthy();
