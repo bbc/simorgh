@@ -33,7 +33,7 @@ export default async ({
     const env = getEnvironment(pathname);
     const isLocal = !env || env === 'local';
 
-    const agent = !isLocal ? await getAgent() : null;
+    const agent = true ? await getAgent() : null;
 
     const fetchUrl = constructPageFetchUrl({
       pathname,
@@ -42,13 +42,13 @@ export default async ({
       variant,
     });
 
-    const optHeaders = { 'ctx-service-env': env };
+    const optHeaders = { 'ctx-service-env': 'test' };
 
     // @ts-ignore - Ignore fetchPageData argument types
     // eslint-disable-next-line prefer-const
     let { status, json } = await fetchPageData({
       path: fetchUrl.toString(),
-      ...(!isLocal && { agent, optHeaders }),
+      optHeaders,
     });
 
     // Ensure all local CPS fixture and test data is in the correct format
