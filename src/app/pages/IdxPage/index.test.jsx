@@ -2,9 +2,9 @@ import React from 'react';
 import { render, act } from '@testing-library/react';
 import fetchMock from 'fetch-mock';
 import dariRadioScheduleData from '#data/persian/bbc_dari_radio/schedule.json';
-import persianAfghanistanIdxData from '#data/persian/afghanistan';
+import persianAfghanistanIdxData from '#data/persian/afghanistan/index.json';
 import ukraineInRussianIdxData from '#data/ukrainian/ukraine_in_russian';
-import persianMostReadData from '#data/persian/mostRead';
+import { data as persianMostReadData } from '#data/persian/mostRead/index.json';
 import IdxPageWithContext from './testHelpers';
 
 const mostReadEndpoint = '/data/persian/mostRead/index.json';
@@ -24,7 +24,9 @@ describe('IdxPage - Persian', () => {
 
     await act(async () => {
       container = render(
-        <IdxPageWithContext pageData={persianAfghanistanIdxData} />,
+        <IdxPageWithContext
+          pageData={persianAfghanistanIdxData.data.article}
+        />,
       ).container;
     });
   });
