@@ -3,44 +3,71 @@ import {
   render,
   screen,
   act,
+  waitFor,
 } from '#app/components/react-testing-library-with-providers';
 import Header from './index';
 
 describe('Live Page Header', () => {
-  it('should render the live page title and description', async () => {
-    await act(async () => {
-      render(<Header title="I am a title" description="I am a description" />);
+  describe('title and description', () => {
+    it('should render a title and description are provided', async () => {
+      await act(async () => {
+        render(
+          <Header
+            title="I am a title"
+            description="I am a description"
+            isLive
+          />,
+        );
+      });
+
+      expect(screen.getByText('I am a title')).toBeInTheDocument();
+      expect(screen.getByText('I am a description')).toBeInTheDocument();
     });
 
-    expect(screen.getByText('I am a title')).toBeInTheDocument();
-    expect(screen.getByText('I am a description')).toBeInTheDocument();
+    it('should render a title if only a title is provided', async () => {
+      await act(async () => {
+        render(<Header title="I am a title" isLive />);
+      });
+
+      expect(screen.getByText('I am a title')).toBeInTheDocument();
+    });
   });
+  describe('live label', () => {
+    it('should render if the liveLabel flag is true', async () => {
+      await act(async () => {
+        render(<Header title="I am a title" isLive />);
+      });
 
-  it('should render the live page title only', async () => {
-    await act(async () => {
-      render(<Header title="I am a title" />);
+      expect(screen.getByText('Live')).toBeInTheDocument();
     });
 
-    expect(screen.getByText('I am a title')).toBeInTheDocument();
+    it('should not render if the liveLabel flag is false', async () => {
+      render(<Header title="I am a title" isLive={false} />);
+
+      await waitFor(() => {
+        expect(document.querySelectorAll('span').length).toBe(2);
+      });
+    });
   });
+  describe('a11y', () => {
+    it('should have id of content', async () => {
+      await act(async () => {
+        render(<Header title="I am a title" isLive />);
+      });
 
-  it('Header should have id of content', async () => {
-    await act(async () => {
-      render(<Header title="I am a title" />);
+      const header = document.getElementById('content');
+      expect(header).toBeInTheDocument();
     });
 
-    const header = document.getElementById('content');
-    expect(header).toBeInTheDocument();
-  });
+    it('should have tab index of -1', async () => {
+      await act(async () => {
+        render(<Header title="I am a title" isLive />);
+      });
 
-  it('header should have tab index of -1', async () => {
-    await act(async () => {
-      render(<Header title="I am a title" />);
+      const header = document.getElementById('content');
+      const tabIndex = header?.getAttribute('tabIndex');
+
+      expect(tabIndex).toEqual('-1');
     });
-
-    const header = document.getElementById('content');
-    const tabIndex = header?.getAttribute('tabIndex');
-
-    expect(tabIndex).toEqual('-1');
   });
 });

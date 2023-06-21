@@ -25,6 +25,7 @@ type ComponentProps = {
     activePage: number;
     title: string;
     description?: string;
+    isLive: boolean;
     summaryPoints: { content: { model: { blocks: object[] } } | null };
     liveTextStream: { content: StreamResponse | null };
   };
@@ -44,6 +45,7 @@ const LivePage = ({
     activePage,
     title,
     description,
+    isLive,
     summaryPoints: { content: summaryContent },
     liveTextStream,
   } = pageData;
@@ -81,7 +83,7 @@ const LivePage = ({
       />
       <LinkedDataContainer type="CollectionPage" seoTitle="Test Live Page" />
       <main>
-        <Header title={title} description={description} />
+        <Header isLive={isLive} title={title} description={description} />
         <div css={styles.wrapper}>
           <Summary summaryBlocks={summaryContent?.model.blocks} />
           {liveTextStream.content && (
