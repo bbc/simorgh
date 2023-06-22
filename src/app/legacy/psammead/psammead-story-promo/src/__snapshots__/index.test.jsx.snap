@@ -71,7 +71,7 @@ exports[`StoryPromo - Leading Story should render correctly 1`] = `
 }
 
 .emotion-4 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -97,7 +97,7 @@ exports[`StoryPromo - Leading Story should render correctly 1`] = `
 
 .emotion-6 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -132,7 +132,7 @@ exports[`StoryPromo - Leading Story should render correctly 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -327,7 +327,7 @@ exports[`StoryPromo - Leading Story should render with Media Indicator correctly
 }
 
 .emotion-4 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -353,7 +353,7 @@ exports[`StoryPromo - Leading Story should render with Media Indicator correctly
 
 .emotion-6 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -388,7 +388,7 @@ exports[`StoryPromo - Leading Story should render with Media Indicator correctly
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -479,7 +479,7 @@ exports[`StoryPromo - Leading Story should render with Media Indicator correctly
 }
 
 .emotion-16 {
-  color: #222222;
+  color: #202224;
   background-color: #FFFFFF;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -518,7 +518,7 @@ exports[`StoryPromo - Leading Story should render with Media Indicator correctly
 .emotion-20 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -717,7 +717,7 @@ exports[`StoryPromo - Top Story should render correctly 1`] = `
 }
 
 .emotion-8 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -743,7 +743,7 @@ exports[`StoryPromo - Top Story should render correctly 1`] = `
 
 .emotion-10 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -778,7 +778,7 @@ exports[`StoryPromo - Top Story should render correctly 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -922,7 +922,7 @@ exports[`StoryPromo - Top Story should render with Media Indicator correctly 1`]
 }
 
 .emotion-8 {
-  color: #222222;
+  color: #202224;
   background-color: #FFFFFF;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -961,7 +961,7 @@ exports[`StoryPromo - Top Story should render with Media Indicator correctly 1`]
 .emotion-12 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -1011,7 +1011,7 @@ exports[`StoryPromo - Top Story should render with Media Indicator correctly 1`]
 }
 
 .emotion-18 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -1037,7 +1037,7 @@ exports[`StoryPromo - Top Story should render with Media Indicator correctly 1`]
 
 .emotion-20 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -1072,7 +1072,7 @@ exports[`StoryPromo - Top Story should render with Media Indicator correctly 1`]
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -1287,7 +1287,7 @@ exports[`StoryPromo - Top Story should render with multiple Index Alsos correctl
 }
 
 .emotion-8 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -1313,7 +1313,7 @@ exports[`StoryPromo - Top Story should render with multiple Index Alsos correctl
 
 .emotion-10 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -1348,7 +1348,7 @@ exports[`StoryPromo - Top Story should render with multiple Index Alsos correctl
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -1398,7 +1398,7 @@ exports[`StoryPromo - Top Story should render with multiple Index Alsos correctl
 }
 
 .emotion-19 {
-  border-top: 1px solid #F2F2F2;
+  border-top: 1px solid #F6F6F6;
   padding: 0.5rem 0;
 }
 
@@ -1408,7 +1408,7 @@ exports[`StoryPromo - Top Story should render with multiple Index Alsos correctl
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-style: normal;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline-block;
@@ -1443,7 +1443,7 @@ exports[`StoryPromo - Top Story should render with multiple Index Alsos correctl
 }
 
 .emotion-23 {
-  color: #222222;
+  color: #202224;
   background-color: #FFFFFF;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -1484,7 +1484,7 @@ exports[`StoryPromo - Top Story should render with multiple Index Alsos correctl
 .emotion-27 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -1722,7 +1722,7 @@ exports[`StoryPromo - Top Story should render with one Index Also correctly 1`] 
 }
 
 .emotion-8 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -1748,7 +1748,7 @@ exports[`StoryPromo - Top Story should render with one Index Also correctly 1`] 
 
 .emotion-10 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -1783,7 +1783,7 @@ exports[`StoryPromo - Top Story should render with one Index Also correctly 1`] 
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -1827,7 +1827,7 @@ exports[`StoryPromo - Top Story should render with one Index Also correctly 1`] 
 }
 
 .emotion-17 {
-  border-top: 1px solid #F2F2F2;
+  border-top: 1px solid #F6F6F6;
   padding: 0.5rem 0;
 }
 
@@ -1837,7 +1837,7 @@ exports[`StoryPromo - Top Story should render with one Index Also correctly 1`] 
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-style: normal;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline-block;
@@ -1872,7 +1872,7 @@ exports[`StoryPromo - Top Story should render with one Index Also correctly 1`] 
 }
 
 .emotion-21 {
-  color: #222222;
+  color: #202224;
   background-color: #FFFFFF;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -1913,7 +1913,7 @@ exports[`StoryPromo - Top Story should render with one Index Also correctly 1`] 
 .emotion-25 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -2116,7 +2116,7 @@ exports[`StoryPromo should render Live promo correctly 1`] = `
 }
 
 .emotion-8 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -2142,7 +2142,7 @@ exports[`StoryPromo should render Live promo correctly 1`] = `
 
 .emotion-10 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -2197,7 +2197,7 @@ exports[`StoryPromo should render Live promo correctly 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -2378,7 +2378,7 @@ exports[`StoryPromo should render a RTL Live promo correctly 1`] = `
 }
 
 .emotion-8 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -2404,7 +2404,7 @@ exports[`StoryPromo should render a RTL Live promo correctly 1`] = `
 
 .emotion-10 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -2459,7 +2459,7 @@ exports[`StoryPromo should render a RTL Live promo correctly 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -2640,7 +2640,7 @@ exports[`StoryPromo should render correctly 1`] = `
 }
 
 .emotion-8 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -2666,7 +2666,7 @@ exports[`StoryPromo should render correctly 1`] = `
 
 .emotion-10 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -2701,7 +2701,7 @@ exports[`StoryPromo should render correctly 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -2848,7 +2848,7 @@ exports[`StoryPromo with Media Indicator should render a RTL promo with media in
 }
 
 .emotion-8 {
-  color: #222222;
+  color: #202224;
   background-color: #FFFFFF;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
@@ -2887,7 +2887,7 @@ exports[`StoryPromo with Media Indicator should render a RTL promo with media in
 .emotion-12 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -2934,7 +2934,7 @@ exports[`StoryPromo with Media Indicator should render a RTL promo with media in
 }
 
 .emotion-18 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -2960,7 +2960,7 @@ exports[`StoryPromo with Media Indicator should render a RTL promo with media in
 
 .emotion-20 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -2995,7 +2995,7 @@ exports[`StoryPromo with Media Indicator should render a RTL promo with media in
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -3184,7 +3184,7 @@ exports[`StoryPromo with Media Indicator should render correctly 1`] = `
 }
 
 .emotion-8 {
-  color: #222222;
+  color: #202224;
   background-color: #FFFFFF;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -3223,7 +3223,7 @@ exports[`StoryPromo with Media Indicator should render correctly 1`] = `
 .emotion-12 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -3270,7 +3270,7 @@ exports[`StoryPromo with Media Indicator should render correctly 1`] = `
 }
 
 .emotion-18 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -3296,7 +3296,7 @@ exports[`StoryPromo with Media Indicator should render correctly 1`] = `
 
 .emotion-20 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -3331,7 +3331,7 @@ exports[`StoryPromo with Media Indicator should render correctly 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }

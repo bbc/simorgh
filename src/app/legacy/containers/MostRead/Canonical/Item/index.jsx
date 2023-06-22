@@ -33,7 +33,7 @@ const StyledLink = styled.a`
   ${({ service }) => getSerifMedium(service)}
 
   position: static;
-  color: ${props => props.theme.palette.EBON};
+  color: ${props => props.theme.palette.GREY_8};
   text-decoration: none;
   margin-bottom: ${GEL_SPACING};
 

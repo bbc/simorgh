@@ -160,7 +160,7 @@ exports[`ArticleFigure should render a lazyloaded image when lazyLoad set to tru
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
@@ -374,7 +374,7 @@ exports[`ArticleFigure should render an AMP image with alt text 1`] = `
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
@@ -591,7 +591,7 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
@@ -1016,7 +1016,7 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
@@ -1416,7 +1416,7 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
@@ -1606,7 +1606,7 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
 }
 
 .emotion-13 {
-  color: #222222;
+  color: #202224;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1841,7 +1841,7 @@ exports[`ArticleFigure should render an AMP image with copyright text 1`] = `
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
@@ -2094,7 +2094,7 @@ exports[`ArticleFigure should render an image and caption for a portrait with ne
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
@@ -2315,7 +2315,7 @@ exports[`ArticleFigure should render an image and caption for a square with nest
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
@@ -2536,7 +2536,7 @@ exports[`ArticleFigure should render an image with alt text 1`] = `
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
@@ -2757,7 +2757,7 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
@@ -3186,7 +3186,7 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
@@ -3590,7 +3590,7 @@ exports[`ArticleFigure should render an image with caption text with inline link
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
@@ -3786,7 +3786,7 @@ exports[`ArticleFigure should render an image with caption text with inline link
 }
 
 .emotion-16 {
-  color: #222222;
+  color: #202224;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -4019,7 +4019,7 @@ exports[`ArticleFigure should render an image with copyright text 1`] = `
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;

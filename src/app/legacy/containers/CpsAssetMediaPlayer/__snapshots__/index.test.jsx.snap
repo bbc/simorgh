@@ -138,7 +138,7 @@ exports[`MediaPlayer should render the amp legacy media player 1`] = `
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
@@ -335,7 +335,7 @@ exports[`MediaPlayer should render the amp player 1`] = `
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;

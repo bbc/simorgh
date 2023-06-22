@@ -205,7 +205,7 @@ exports[`RecommendationsPromoList it renders a list of Story Promos wrapped in G
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;

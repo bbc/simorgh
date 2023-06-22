@@ -19,7 +19,7 @@ const SkipLink = styled.a`
   ${({ service }) => getSansRegular(service)}
   ${GEL_BREVIER}
   background-color: ${props => props.theme.palette.WHITE};
-  border: ${BORDER_WEIGHT} solid ${props => props.theme.palette.EBON};
+  border: ${BORDER_WEIGHT} solid ${props => props.theme.palette.GREY_8};
   display: block;
   left: 0;
   line-height: 1;
@@ -30,14 +30,14 @@ const SkipLink = styled.a`
   z-index: 10;
 
   span {
-    color: ${props => props.theme.palette.EBON};
+    color: ${props => props.theme.palette.GREY_8};
   }
 
   &:hover,
   &:focus {
     span {
-      color: ${props => props.theme.palette.POSTBOX};
-      border-bottom: 2px solid ${props => props.theme.palette.POSTBOX};
+      color: ${props => props.theme.palette.NEWS_CORE};
+      border-bottom: 2px solid ${props => props.theme.palette.NEWS_CORE};
     }
   }
 

@@ -19,7 +19,7 @@ const styles = {
         color: palette.GREY_10,
       },
       'a: hover, a:focus': {
-        color: palette.POSTBOX,
+        color: palette.NEWS_CORE,
         span: {
           textDecoration: 'underline',
         },

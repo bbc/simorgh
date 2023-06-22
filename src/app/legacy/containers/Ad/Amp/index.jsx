@@ -50,7 +50,7 @@ const DisplayWrapper = styled(AccessDiv)`
 const StyledLink = styled.a`
   ${({ script }) => script && getMinion(script)}
   ${({ service }) => getSansRegular(service)}
-  color: ${props => props.theme.palette.RHINO};
+  color: ${props => props.theme.palette.GREY_6};
   text-decoration: none;
   text-transform: uppercase;
   display: block;

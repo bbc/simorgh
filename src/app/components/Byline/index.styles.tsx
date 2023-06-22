@@ -24,7 +24,7 @@ export default {
 
   twitterText: ({ palette }: Theme) =>
     css({
-      color: palette.POSTBOX,
+      color: palette.NEWS_CORE,
       display: 'inline-block',
       verticalAlign: 'middle',
     }),
@@ -44,7 +44,7 @@ export default {
     css({
       verticalAlign: 'middle',
       margin: `0 ${spacings.HALF}rem`,
-      color: palette.POSTBOX,
+      color: palette.NEWS_CORE,
       fill: 'currentcolor',
       width: `${spacings.FULL}rem`,
       height: `${spacings.FULL}rem`,
@@ -84,14 +84,14 @@ export default {
 
   locationText: ({ palette, isDarkUi }: Theme) =>
     css({
-      color: isDarkUi ? palette.GREY_2 : palette.SHADOW,
+      color: isDarkUi ? palette.GREY_2 : palette.GREY_7,
       display: 'block',
       paddingTop: ` ${pixelsToRem(4)}rem`,
     }),
 
   reportingFromText: ({ palette, isDarkUi }: Theme) =>
     css({
-      color: isDarkUi ? palette.GREY_2 : palette.SHADOW,
+      color: isDarkUi ? palette.GREY_2 : palette.GREY_7,
     }),
 
   timestampLineBreak: ({ palette, spacings }: Theme) =>

@@ -10,7 +10,7 @@ import {
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
 } from '#psammead/gel-foundations/src/spacings';
-import { GHOST } from '#app/components/ThemeProvider/palette';
+import { GREY_1 } from '#app/components/ThemeProvider/palette';
 import { PlainTitle, LinkTitle } from './titles';
 
 const SectionLabelWrapper = styled.div`
@@ -97,7 +97,7 @@ SectionLabel.defaultProps = {
   href: null,
   linkText: null,
   visuallyHidden: false,
-  backgroundColor: GHOST,
+  backgroundColor: GREY_1,
   overrideHeadingAs: null,
 };
 

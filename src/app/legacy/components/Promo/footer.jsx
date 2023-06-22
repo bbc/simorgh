@@ -6,7 +6,7 @@ import { getBrevier } from '#psammead/gel-foundations/src/typography';
 const Footer = styled.footer`
   ${({ service }) => getSansRegular(service)}
   ${({ script }) => getBrevier(script)}
-  color: ${props => props.theme.palette.RHINO}
+  color: ${props => props.theme.palette.GREY_6}
 `;
 
 export default Footer;

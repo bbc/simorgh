@@ -1,30 +1,30 @@
 import { formatDuration } from '#psammead/psammead-timestamp-container/src/utilities';
 import {
-  KINGFISHER,
-  POSTBOX,
-  EBON,
-  SHADOW,
+  LIVE_DARK,
+  NEWS_CORE,
+  GREY_8,
+  GREY_7,
   WHITE,
   METAL,
 } from '../../../../components/ThemeProvider/palette';
 
 export const programStateConfig = {
   live: {
-    backgroundColor: POSTBOX,
-    headerTextColor: EBON,
-    titleColor: SHADOW,
+    backgroundColor: NEWS_CORE,
+    headerTextColor: GREY_8,
+    titleColor: GREY_7,
     durationColor: WHITE,
   },
   next: {
     backgroundColor: WHITE,
     headerTextColor: METAL,
     titleColor: METAL,
-    durationColor: KINGFISHER,
+    durationColor: LIVE_DARK,
   },
   onDemand: {
-    backgroundColor: EBON,
-    headerTextColor: EBON,
-    titleColor: SHADOW,
+    backgroundColor: GREY_8,
+    headerTextColor: GREY_8,
+    titleColor: GREY_7,
     durationColor: WHITE,
   },
 };

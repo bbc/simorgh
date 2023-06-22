@@ -9,7 +9,7 @@ exports[`StoryPromo list base should render correctly 1`] = `
 
 @media (max-width: 62.9375rem) {
   .emotion-2 {
-    border-bottom: 0.0625rem solid #F2F2F2;
+    border-bottom: 0.0625rem solid #F6F6F6;
   }
 }
 
@@ -103,7 +103,7 @@ exports[`StoryPromo list base should render correctly 1`] = `
 }
 
 .emotion-12 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -133,7 +133,7 @@ exports[`StoryPromo list base should render correctly 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -312,7 +312,7 @@ exports[`StoryPromo list base should render correctly without border 1`] = `
 }
 
 .emotion-12 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -342,7 +342,7 @@ exports[`StoryPromo list base should render correctly without border 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -437,7 +437,7 @@ exports[`StoryPromo list should render correctly 1`] = `
 
 @media (max-width: 62.9375rem) {
   .emotion-2 {
-    border-bottom: 0.0625rem solid #F2F2F2;
+    border-bottom: 0.0625rem solid #F6F6F6;
   }
 }
 
@@ -557,7 +557,7 @@ exports[`StoryPromo list should render correctly 1`] = `
 }
 
 .emotion-12 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -587,7 +587,7 @@ exports[`StoryPromo list should render correctly 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -795,7 +795,7 @@ exports[`StoryPromo list should render correctly without border 1`] = `
 }
 
 .emotion-12 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -825,7 +825,7 @@ exports[`StoryPromo list should render correctly without border 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }

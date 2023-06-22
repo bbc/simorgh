@@ -63,14 +63,14 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
   const onlyinnerscript = rankTranslationScript(endpoint, service);
 
   const {
-    palette: { SHADOW },
+    palette: { GREY_7 },
   } = useTheme();
 
   const FallbackText = styled.p`
     ${() => getSansRegular(service)}
     ${() => getBodyCopy(script)}
     /* eslint-disable-next-line react/prop-types */
-    color: ${SHADOW};
+    color: ${GREY_7};
     margin: 0;
   `;
 

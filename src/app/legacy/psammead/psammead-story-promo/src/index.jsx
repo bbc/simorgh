@@ -122,7 +122,7 @@ const headlineTypography = script => ({
 });
 
 export const Headline = styled.h3`
-  color: ${props => props.theme.palette.EBON};
+  color: ${props => props.theme.palette.GREY_8};
   margin: 0; /* Reset */
   padding-bottom: ${GEL_SPACING};
   ${({ service }) => getSerifMedium(service)}
@@ -172,7 +172,7 @@ const summaryStyles = {
 export const Summary = styled.p`
   ${({ script }) => script && getLongPrimer(script)};
   ${({ service }) => getSansRegular(service)}
-  color: ${props => props.theme.palette.SHADOW};
+  color: ${props => props.theme.palette.GREY_7};
   margin: 0; /* Reset */
   padding-bottom: ${GEL_SPACING};
 
@@ -196,7 +196,7 @@ Summary.defaultProps = {
 // `display: inline-block` has been used to resolve Focus Indicator bug in Firefox high contrast mode.
 export const Link = styled.a`
   position: static;
-  color: ${props => props.theme.palette.EBON};
+  color: ${props => props.theme.palette.GREY_8};
   text-decoration: none;
   overflow-wrap: break-word;
   display: inline-block;

@@ -1,4 +1,4 @@
-import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
+import { WHITE, NEWS_CORE } from '../palette';
 import noAscOrDescScript from '../fontScripts/noAscOrDesc';
 import {
   NOTO_SANS_ETHIOPIC_BOLD,
@@ -10,11 +10,8 @@ import brandSVG from '../chameleonLogos/amharic';
 
 const amharicTheme = {
   palette: {
-    BRAND_BACKGROUND: POSTBOX,
+    BRAND_BACKGROUND: NEWS_CORE,
     BRAND_LOGO: WHITE,
-    BRAND_FOREGROUND: GHOST,
-    BRAND_HIGHLIGHT: WHITE,
-    BRAND_BORDER: POSTBOX_30,
   },
   typography: {
     script: noAscOrDescScript,

@@ -22,7 +22,7 @@ const withPodcastContext = Component => props =>
   );
 
 const Wrapper = styled.section`
-  background-color: ${props => props.theme.palette.LUNAR};
+  background-color: ${props => props.theme.palette.GREY_2};
   padding: ${GEL_SPACING_DBL};
 `;
 

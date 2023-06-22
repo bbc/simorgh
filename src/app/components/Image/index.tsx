@@ -105,8 +105,8 @@ const Image = ({
             styles.placeholder,
             {
               backgroundColor: darkPlaceholder
-                ? theme.palette.SHADOW
-                : theme.palette.LUNAR,
+                ? theme.palette.GREY_7
+                : theme.palette.GREY_2,
             },
           ],
         ]}

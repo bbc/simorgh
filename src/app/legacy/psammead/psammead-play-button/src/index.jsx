@@ -14,7 +14,7 @@ const GEL_SPACING_DEC = '5rem';
 const BGC_TRANSITION_DURATION = '300ms';
 
 const Button = styled.button`
-  background-color: ${props => props.theme.palette.EBON};
+  background-color: ${props => props.theme.palette.GREY_8};
   border: none;
   color: ${props => props.theme.palette.WHITE};
   cursor: pointer;
@@ -28,7 +28,7 @@ const Button = styled.button`
 
   &:hover,
   &:focus {
-    background-color: ${props => props.theme.palette.POSTBOX};
+    background-color: ${props => props.theme.palette.NEWS_CORE};
     transition: background-color ${BGC_TRANSITION_DURATION};
   }
 `;

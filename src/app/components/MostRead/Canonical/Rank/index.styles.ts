@@ -140,7 +140,7 @@ const styles = {
     css({
       ...fontVariants.serifLight,
       position: 'relative',
-      color: palette.POSTBOX,
+      color: palette.NEWS_CORE,
       margin: 0,
       padding: 0,
     }),

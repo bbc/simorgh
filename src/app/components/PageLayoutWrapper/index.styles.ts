@@ -7,7 +7,7 @@ export default {
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'space-between',
-      backgroundColor: palette.GHOST,
+      backgroundColor: palette.GREY_1,
     }),
   content: css({
     flexGrow: 1,

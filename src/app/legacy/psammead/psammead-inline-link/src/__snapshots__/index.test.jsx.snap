@@ -2,7 +2,7 @@
 
 exports[`InlineLink should render correctly 1`] = `
 .emotion-0 {
-  color: #222222;
+  color: #202224;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;

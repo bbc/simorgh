@@ -9,7 +9,7 @@ import CpsTableCell from '../CpsTableCell';
 
 const StyledTr = styled.tr`
   &:hover {
-    background-color: ${props => props.theme.palette.SPORT_MIST};
+    background-color: ${props => props.theme.palette.GREY_2};
   }
 `;
 

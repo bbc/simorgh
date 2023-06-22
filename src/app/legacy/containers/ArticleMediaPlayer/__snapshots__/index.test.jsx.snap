@@ -109,7 +109,7 @@ exports[`MediaPlayer Calls the amp media player 1`] = `
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
@@ -352,7 +352,7 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
 }
 
 .emotion-15 {
-  background-color: #222222;
+  background-color: #202224;
   border: none;
   color: #FFFFFF;
   cursor: pointer;
@@ -416,7 +416,7 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
 .emotion-20 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;

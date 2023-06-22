@@ -24,7 +24,7 @@ import List from './List';
 const SitewideLinksWrapper = styled.div`
   ${({ script }) => script && getBrevier(script)}
   ${({ service }) => service && getSansRegular(service)}
-  background-color: ${props => props.theme.palette.EBON};
+  background-color: ${props => props.theme.palette.GREY_8};
 
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     padding: 0 ${GEL_MARGIN_BELOW_400PX};

@@ -7,7 +7,7 @@ import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 
 const StyledSpan = styled.span`
   ${({ service }) => getSansBold(service)}
-  color: ${props => props.theme.palette.POSTBOX};
+  color: ${props => props.theme.palette.NEWS_CORE};
   display: inline-block;
   ${({ dir }) =>
     dir === 'rtl'

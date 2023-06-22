@@ -12,11 +12,11 @@ ${
     ? `  
     padding-left: ${GEL_SPACING};
     margin-left: ${GEL_SPACING};
-    border-left: 0.0625rem solid ${props.theme.palette.PEBBLE};`
+    border-left: 0.0625rem solid ${props.theme.palette.GREY_4};`
     : `
     padding-right: ${GEL_SPACING};
     margin-right: ${GEL_SPACING};
-    border-right: 0.0625rem solid ${props.theme.palette.PEBBLE};`
+    border-right: 0.0625rem solid ${props.theme.palette.GREY_4};`
 }
 `;
 
@@ -24,7 +24,7 @@ const DateTimeDuration = styled.span`
   ${({ script }) => getBrevier(script)}
   ${({ service }) => getSansRegular(service)}
   color: ${({ theme }) =>
-    theme.isDarkUi ? theme.palette.PEBBLE : theme.palette.METAL};
+    theme.isDarkUi ? theme.palette.GREY_4 : theme.palette.METAL};
   ${({ hasBorder, dir }) => hasBorder && borderStyling(dir)}
 `;
 

@@ -356,7 +356,7 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
 
 @media (max-width: 62.9375rem) {
   .emotion-17 {
-    border-bottom: 0.0625rem solid #F2F2F2;
+    border-bottom: 0.0625rem solid #F6F6F6;
   }
 }
 
@@ -392,7 +392,7 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
 
 @media (min-width: 63rem) {
   .emotion-17 {
-    border-bottom: 0.0625rem solid #F2F2F2;
+    border-bottom: 0.0625rem solid #F6F6F6;
     padding: 1rem 0 1rem;
   }
 }
@@ -512,7 +512,7 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 @media (min-width: 25rem) {
@@ -555,7 +555,7 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
 }
 
 .emotion-30 {
-  color: #222222;
+  color: #202224;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -594,7 +594,7 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
 .emotion-34 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -637,7 +637,7 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
 }
 
 .emotion-38 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -663,7 +663,7 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
 
 .emotion-40 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;

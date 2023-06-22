@@ -39,7 +39,7 @@ describe('Latest Media Indicator', () => {
       .emotion-0 {
         vertical-align: middle;
         margin: 0 0.25rem;
-        color: #222222;
+        color: #202224;
         fill: currentColor;
         width: 0.75rem;
         height: 0.75rem;
@@ -79,7 +79,7 @@ describe('Latest Media Indicator', () => {
       .emotion-0 {
         vertical-align: middle;
         margin: 0 0.25rem;
-        color: #222222;
+        color: #202224;
         fill: currentColor;
         width: 0.75rem;
         height: 0.75rem;

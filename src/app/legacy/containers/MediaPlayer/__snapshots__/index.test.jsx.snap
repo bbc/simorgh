@@ -92,7 +92,7 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
 }
 
 .emotion-13 {
-  background-color: #222222;
+  background-color: #202224;
   border: none;
   color: #FFFFFF;
   cursor: pointer;
@@ -156,7 +156,7 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
 .emotion-18 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -317,7 +317,7 @@ exports[`MediaPlayer Renders the AMP player when platform is AMP 1`] = `
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;

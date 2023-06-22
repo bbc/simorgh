@@ -21,7 +21,9 @@ const StyledImagePlaceholder = styled.div`
   overflow: hidden;
   background-color: ${({ darkPlaceholder }) =>
     props =>
-      darkPlaceholder ? props.theme.palette.SHADOW : props.theme.palette.LUNAR};
+      darkPlaceholder
+        ? props.theme.palette.GREY_7
+        : props.theme.palette.GREY_2};
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 60px 17px;

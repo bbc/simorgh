@@ -54,10 +54,10 @@ exports[`TopicTags should correctly render a single topic tag for burmese 1`] = 
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #222222;
+  color: #202224;
 }
 
 .emotion-2 a:hover,
@@ -141,10 +141,10 @@ exports[`TopicTags should correctly render a single topic tag for news 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #222222;
+  color: #202224;
 }
 
 .emotion-2 a:hover,
@@ -228,10 +228,10 @@ exports[`TopicTags should correctly render a single topic tag for persian 1`] = 
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #222222;
+  color: #202224;
 }
 
 .emotion-2 a:hover,
@@ -316,10 +316,10 @@ exports[`TopicTags should correctly render multiple topic tags for arabic 1`] = 
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #222222;
+  color: #202224;
 }
 
 .emotion-2 a:hover,
@@ -432,10 +432,10 @@ exports[`TopicTags should correctly render multiple topic tags for news 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #222222;
+  color: #202224;
 }
 
 .emotion-2 a:hover,

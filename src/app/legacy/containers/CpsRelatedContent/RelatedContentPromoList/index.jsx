@@ -15,7 +15,7 @@ import StoryPromo from '../../StoryPromo';
 
 const MediaStoryPromoLi = styled(StoryPromoLi)`
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    border-bottom: 0.0625rem solid ${props => props.theme.palette.LUNAR};
+    border-bottom: 0.0625rem solid ${props => props.theme.palette.GREY_2};
     padding: ${GEL_SPACING_DBL} 0 ${GEL_SPACING_DBL};
   }
 `;

@@ -37,7 +37,7 @@ const styles = {
 
   negative: (theme: Theme) =>
     css({
-      background: `${theme.palette.POSTBOX}`,
+      background: `${theme.palette.NEWS_CORE}`,
       color: `${theme.palette.WHITE}`,
     }),
 
@@ -45,7 +45,7 @@ const styles = {
     css({
       padding: 0,
       borderRadius: 0,
-      color: theme.palette.SHADOW,
+      color: theme.palette.GREY_7,
     }),
 
   sidebarColumn: () =>
@@ -56,7 +56,7 @@ const styles = {
 
   sidebarText: (theme: Theme) =>
     css({
-      color: theme.palette.SHADOW,
+      color: theme.palette.GREY_7,
     }),
 
   documentationLink: () =>

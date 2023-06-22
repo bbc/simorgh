@@ -31,8 +31,8 @@ export default {
         },
 
         '&:hover, &:focus': {
-          color: palette.POSTBOX,
-          borderBottom: `${pixelsToRem(2)}rem solid ${palette.POSTBOX}`,
+          color: palette.NEWS_CORE,
+          borderBottom: `${pixelsToRem(2)}rem solid ${palette.NEWS_CORE}`,
         },
       },
     }),
@@ -41,16 +41,16 @@ export default {
     css({
       backgroundColor: isDarkUi ? palette.GREY_3 : palette.WHITE,
       border: `${pixelsToRem(1)}rem solid ${
-        isDarkUi ? palette.GREY_10 : palette.PHILIPPINE_GREY
+        isDarkUi ? palette.GREY_10 : palette.GREY_5
       }`,
       borderRadius: 0,
       padding: `${spacings.FULL}rem`,
       cursor: 'pointer',
 
       '&:hover, &:focus': {
-        backgroundColor: palette.POSTBOX,
+        backgroundColor: palette.NEWS_CORE,
         color: palette.WHITE,
-        border: `${pixelsToRem(1)}rem solid ${palette.POSTBOX}`,
+        border: `${pixelsToRem(1)}rem solid ${palette.NEWS_CORE}`,
         textDecoration: 'underline',
       },
 

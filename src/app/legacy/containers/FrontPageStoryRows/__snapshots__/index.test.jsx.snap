@@ -7,7 +7,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
 
 @media (max-width: 62.9375rem) {
   .emotion-1 {
-    border-bottom: 0.0625rem solid #F2F2F2;
+    border-bottom: 0.0625rem solid #F6F6F6;
   }
 }
 
@@ -93,11 +93,11 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
 
 .emotion-3 {
   position: relative;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-column-gap: 1rem;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 .emotion-5 {
@@ -136,7 +136,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
@@ -187,7 +187,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
 }
 
 .emotion-11 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding: 0.5rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -221,7 +221,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
 
 .emotion-13 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -262,7 +262,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
 }
 
 .emotion-16 {
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding: 0 0.5rem 1rem;
   font-size: 0.9375rem;
@@ -293,7 +293,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
 }
 
 .emotion-18 {
-  background-color: #222222;
+  background-color: #202224;
   border: 0.0625rem solid transparent;
   color: #FFFFFF;
   padding: 0.75rem;
@@ -364,7 +364,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
 .emotion-22 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -376,7 +376,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
 
 @media (max-width: 62.9375rem) {
   .emotion-25 {
-    border-bottom: 0.0625rem solid #F2F2F2;
+    border-bottom: 0.0625rem solid #F6F6F6;
   }
 }
 
@@ -519,7 +519,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 @media (min-width: 25rem) {
@@ -562,7 +562,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
 }
 
 .emotion-37 {
-  color: #222222;
+  color: #202224;
   background-color: #FFFFFF;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
@@ -601,7 +601,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
 .emotion-41 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -644,7 +644,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
 }
 
 .emotion-45 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -670,7 +670,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
 
 .emotion-47 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -706,7 +706,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -974,7 +974,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
 
 @media (max-width: 62.9375rem) {
   .emotion-1 {
-    border-bottom: 0.0625rem solid #F2F2F2;
+    border-bottom: 0.0625rem solid #F6F6F6;
   }
 }
 
@@ -1128,7 +1128,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
 }
 
 .emotion-7 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -1154,7 +1154,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
 
 .emotion-9 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -1265,7 +1265,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 @media (min-width: 25rem) {
@@ -1304,7 +1304,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
 
 @media (max-width: 62.9375rem) {
   .emotion-22 {
-    border-bottom: 0.0625rem solid #F2F2F2;
+    border-bottom: 0.0625rem solid #F6F6F6;
   }
 }
 
@@ -1453,7 +1453,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
 }
 
 .emotion-34 {
-  color: #222222;
+  color: #202224;
   background-color: #FFFFFF;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -1492,7 +1492,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
 .emotion-38 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -1535,7 +1535,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
 }
 
 .emotion-42 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -1565,7 +1565,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -1787,7 +1787,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
 
 @media (max-width: 62.9375rem) {
   .emotion-1 {
-    border-bottom: 0.0625rem solid #F2F2F2;
+    border-bottom: 0.0625rem solid #F6F6F6;
   }
 }
 
@@ -1873,11 +1873,11 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
 
 .emotion-3 {
   position: relative;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-column-gap: 1rem;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 .emotion-5 {
@@ -1916,7 +1916,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
@@ -1967,7 +1967,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
 }
 
 .emotion-11 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding: 0.5rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -2001,7 +2001,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
 
 .emotion-13 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -2042,7 +2042,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
 }
 
 .emotion-16 {
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding: 0 0.5rem 1rem;
   font-size: 0.9375rem;
@@ -2073,7 +2073,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
 }
 
 .emotion-18 {
-  background-color: #222222;
+  background-color: #202224;
   border: 0.0625rem solid transparent;
   color: #FFFFFF;
   padding: 0.75rem;
@@ -2144,7 +2144,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
 .emotion-22 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -2209,7 +2209,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 @media (min-width: 25rem) {
@@ -2252,7 +2252,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
 }
 
 .emotion-37 {
-  color: #222222;
+  color: #202224;
   background-color: #FFFFFF;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
@@ -2291,7 +2291,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
 .emotion-41 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -2334,7 +2334,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
 }
 
 .emotion-45 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -2360,7 +2360,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
 
 .emotion-47 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -2396,7 +2396,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -2820,7 +2820,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
 
 @media (max-width: 62.9375rem) {
   .emotion-1 {
-    border-bottom: 0.0625rem solid #F2F2F2;
+    border-bottom: 0.0625rem solid #F6F6F6;
   }
 }
 
@@ -2963,7 +2963,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 @media (min-width: 25rem) {
@@ -3042,7 +3042,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
 }
 
 .emotion-15 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -3068,7 +3068,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
 
 .emotion-17 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -3123,7 +3123,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
 }
 
 .emotion-34 {
-  color: #222222;
+  color: #202224;
   background-color: #FFFFFF;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -3162,7 +3162,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
 .emotion-38 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -3174,7 +3174,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -3542,7 +3542,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
 
 @media (max-width: 62.9375rem) {
   .emotion-1 {
-    border-bottom: 0.0625rem solid #F2F2F2;
+    border-bottom: 0.0625rem solid #F6F6F6;
   }
 }
 
@@ -3628,11 +3628,11 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
 
 .emotion-3 {
   position: relative;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-column-gap: 1rem;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 .emotion-5 {
@@ -3671,7 +3671,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
@@ -3722,7 +3722,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
 }
 
 .emotion-11 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding: 0.5rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -3756,7 +3756,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
 
 .emotion-13 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -3797,7 +3797,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
 }
 
 .emotion-16 {
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding: 0 0.5rem 1rem;
   font-size: 0.9375rem;
@@ -3828,7 +3828,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
 }
 
 .emotion-18 {
-  background-color: #222222;
+  background-color: #202224;
   border: 0.0625rem solid transparent;
   color: #FFFFFF;
   padding: 0.75rem;
@@ -3899,7 +3899,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
 .emotion-22 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -3981,7 +3981,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
 }
 
 .emotion-31 {
-  color: #222222;
+  color: #202224;
   background-color: #FFFFFF;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
@@ -4022,14 +4022,14 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
 .emotion-35 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
 }
 
 .emotion-37 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -4056,7 +4056,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
 
 .emotion-39 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -4434,7 +4434,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
 
 @media (max-width: 62.9375rem) {
   .emotion-1 {
-    border-bottom: 0.0625rem solid #F2F2F2;
+    border-bottom: 0.0625rem solid #F6F6F6;
   }
 }
 
@@ -4594,7 +4594,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
 }
 
 .emotion-7 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -4621,7 +4621,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
 
 .emotion-9 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -4676,7 +4676,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
 }
 
 .emotion-20 {
-  color: #222222;
+  color: #202224;
   background-color: #FFFFFF;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -4717,7 +4717,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
 .emotion-24 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -4988,7 +4988,7 @@ exports[`FrontPageStoryRows Container - snapshots TopRow - rtl 1`] = `
 
 @media (max-width: 62.9375rem) {
   .emotion-1 {
-    border-bottom: 0.0625rem solid #F2F2F2;
+    border-bottom: 0.0625rem solid #F6F6F6;
   }
 }
 
@@ -5074,11 +5074,11 @@ exports[`FrontPageStoryRows Container - snapshots TopRow - rtl 1`] = `
 
 .emotion-3 {
   position: relative;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-column-gap: 1rem;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 .emotion-5 {
@@ -5117,7 +5117,7 @@ exports[`FrontPageStoryRows Container - snapshots TopRow - rtl 1`] = `
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
@@ -5168,7 +5168,7 @@ exports[`FrontPageStoryRows Container - snapshots TopRow - rtl 1`] = `
 }
 
 .emotion-11 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding: 0.5rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -5202,7 +5202,7 @@ exports[`FrontPageStoryRows Container - snapshots TopRow - rtl 1`] = `
 
 .emotion-13 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -5243,7 +5243,7 @@ exports[`FrontPageStoryRows Container - snapshots TopRow - rtl 1`] = `
 }
 
 .emotion-16 {
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding: 0 0.5rem 1rem;
   font-size: 0.9375rem;
@@ -5274,7 +5274,7 @@ exports[`FrontPageStoryRows Container - snapshots TopRow - rtl 1`] = `
 }
 
 .emotion-18 {
-  background-color: #222222;
+  background-color: #202224;
   border: 0.0625rem solid transparent;
   color: #FFFFFF;
   padding: 0.75rem;
@@ -5345,7 +5345,7 @@ exports[`FrontPageStoryRows Container - snapshots TopRow - rtl 1`] = `
 .emotion-22 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -5450,7 +5450,7 @@ exports[`FrontPageStoryRows Container - snapshots TopRow 1`] = `
 
 @media (max-width: 62.9375rem) {
   .emotion-1 {
-    border-bottom: 0.0625rem solid #F2F2F2;
+    border-bottom: 0.0625rem solid #F6F6F6;
   }
 }
 
@@ -5606,7 +5606,7 @@ exports[`FrontPageStoryRows Container - snapshots TopRow 1`] = `
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 @media (min-width: 25rem) {
@@ -5679,7 +5679,7 @@ exports[`FrontPageStoryRows Container - snapshots TopRow 1`] = `
 }
 
 .emotion-15 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -5705,7 +5705,7 @@ exports[`FrontPageStoryRows Container - snapshots TopRow 1`] = `
 
 .emotion-17 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;

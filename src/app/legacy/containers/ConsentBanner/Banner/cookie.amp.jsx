@@ -47,7 +47,7 @@ const COMMON_HEADING_STYLES = `
 
 const Wrapper = styled.div`
   ${({ service }) => getSansRegular(service)}
-  background-color: ${props => props.theme.palette.CONSENT_BACKGROUND};
+  background-color: ${props => props.theme.palette.GREY_10};
   border: ${BORDER_WIDTH_TRANSPARENT} solid transparent;
   max-height: ${BANNER_MAX_HEIGHT};
 `;
@@ -80,7 +80,7 @@ const Heading = styled.h3`
 
 const Paragraph = styled.p`
   ${({ script }) => getBodyCopy(script)}
-  color: ${props => props.theme.palette.CONSENT_CONTENT};
+  color: ${props => props.theme.palette.GREY_2};
   margin-top: ${GEL_SPACING_DBL};
   margin-bottom: ${GEL_SPACING_DBL};
 `;
@@ -92,17 +92,17 @@ const Link = ({ text, href, className }) => (
 );
 
 const StyledLink = styled(Link)`
-  color: ${props => props.theme.palette.CONSENT_ACTION};
+  color: ${props => props.theme.palette.ALERT_LIGHT};
   text-decoration: none;
 
   span {
-    border-bottom: ${props => props.theme.palette.PEBBLE} solid ${BORDER_WIDTH};
+    border-bottom: ${props => props.theme.palette.GREY_4} solid ${BORDER_WIDTH};
   }
 
   &:hover,
   &:focus {
-    background-color: ${props => props.theme.palette.CONSENT_ACTION};
-    color: ${props => props.theme.palette.EBON};
+    background-color: ${props => props.theme.palette.ALERT_LIGHT};
+    color: ${props => props.theme.palette.GREY_8};
 
     span {
       border-bottom: transparent solid ${BORDER_WIDTH_TRANSPARENT};
@@ -139,9 +139,9 @@ const OptionsItem = styled.li`
   button {
     ${({ service }) => getSansBold(service)}
     ${({ script }) => getLongPrimer(script)}
-    background: ${props => props.theme.palette.GHOST};
+    background: ${props => props.theme.palette.GREY_1};
     border: none;
-    color: ${props => props.theme.palette.EBON};
+    color: ${props => props.theme.palette.GREY_8};
     cursor: pointer;
     display: block;
     height: 100%;
@@ -151,16 +151,16 @@ const OptionsItem = styled.li`
 
     &:hover,
     &:focus {
-      background-color: ${props => props.theme.palette.CONSENT_ACTION};
-      color: ${props => props.theme.palette.EBON};
+      background-color: ${props => props.theme.palette.ALERT_LIGHT};
+      color: ${props => props.theme.palette.GREY_8};
       text-decoration: underline;
     }
   }
 
   button[on='tap:AMP.setState({ isManagingSettings: true })'] {
     background: none;
-    border: ${BORDER_WIDTH} solid ${props => props.theme.palette.CONSENT_ACTION};
-    color: ${props => props.theme.palette.CONSENT_ACTION};
+    border: ${BORDER_WIDTH} solid ${props => props.theme.palette.ALERT_LIGHT};
+    color: ${props => props.theme.palette.ALERT_LIGHT};
   }
 `;
 

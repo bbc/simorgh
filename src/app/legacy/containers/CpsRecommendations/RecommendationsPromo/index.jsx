@@ -28,7 +28,7 @@ const StyledPromoWrapper = styled.div`
   margin-top: ${GEL_SPACING};
   background-color: ${props =>
     props.isArticlePage
-      ? props.theme.palette.GHOST
+      ? props.theme.palette.GREY_1
       : props.theme.palette.GREY_2};
 `;
 

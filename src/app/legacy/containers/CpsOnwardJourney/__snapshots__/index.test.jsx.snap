@@ -758,7 +758,7 @@ exports[`CpsOnwardJourney renders section label with element as strong 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  background-color: #FDFDFD;
+  background-color: #FEFEFE;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;
@@ -1132,7 +1132,7 @@ exports[`CpsOnwardJourney renders section label with with alternative background
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  background-color: #222222;
+  background-color: #202224;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;
@@ -1506,7 +1506,7 @@ exports[`CpsOnwardJourney renders section label with without bar under section l
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  background-color: #FDFDFD;
+  background-color: #FEFEFE;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;
@@ -1809,8 +1809,8 @@ exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
   font-size: 0.875rem;
   line-height: 1rem;
   background-color: #FFFFFF;
-  border: 0.125rem solid #222222;
-  color: #222222;
+  border: 0.125rem solid #202224;
+  color: #202224;
   display: block;
   left: 0;
   line-height: 1;
@@ -1927,7 +1927,7 @@ exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  background-color: #FDFDFD;
+  background-color: #FEFEFE;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;
@@ -2274,8 +2274,8 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
   font-size: 0.875rem;
   line-height: 1rem;
   background-color: #FFFFFF;
-  border: 0.125rem solid #222222;
-  color: #222222;
+  border: 0.125rem solid #202224;
+  color: #202224;
   display: block;
   left: 0;
   line-height: 1;
@@ -2392,7 +2392,7 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  background-color: #FDFDFD;
+  background-color: #FEFEFE;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;

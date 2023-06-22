@@ -60,7 +60,7 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 @media (min-width: 25rem) {
@@ -97,7 +97,7 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
 }
 
 .emotion-9 {
-  color: #222222;
+  color: #202224;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -136,7 +136,7 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
 .emotion-13 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -183,7 +183,7 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
 }
 
 .emotion-19 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -209,7 +209,7 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
 
 .emotion-21 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -256,7 +256,7 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -488,7 +488,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 @media (min-width: 25rem) {
@@ -531,7 +531,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
 }
 
 .emotion-10 {
-  color: #222222;
+  color: #202224;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -570,7 +570,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
 .emotion-14 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -617,7 +617,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
 }
 
 .emotion-20 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -643,7 +643,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
 
 .emotion-22 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -690,7 +690,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -933,7 +933,7 @@ exports[`StoryPromo Container should render audio promoType leading on amp 1`] =
 }
 
 .emotion-4 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -959,7 +959,7 @@ exports[`StoryPromo Container should render audio promoType leading on amp 1`] =
 
 .emotion-6 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -1006,7 +1006,7 @@ exports[`StoryPromo Container should render audio promoType leading on amp 1`] =
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -1120,7 +1120,7 @@ exports[`StoryPromo Container should render audio promoType leading on amp 1`] =
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 @media (min-width: 25rem) {
@@ -1148,7 +1148,7 @@ exports[`StoryPromo Container should render audio promoType leading on amp 1`] =
 }
 
 .emotion-21 {
-  color: #222222;
+  color: #202224;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -1187,7 +1187,7 @@ exports[`StoryPromo Container should render audio promoType leading on amp 1`] =
 .emotion-25 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -1385,7 +1385,7 @@ exports[`StoryPromo Container should render audio promoType top on amp 1`] = `
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 @media (min-width: 25rem) {
@@ -1413,7 +1413,7 @@ exports[`StoryPromo Container should render audio promoType top on amp 1`] = `
 }
 
 .emotion-9 {
-  color: #222222;
+  color: #202224;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -1452,7 +1452,7 @@ exports[`StoryPromo Container should render audio promoType top on amp 1`] = `
 .emotion-13 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -1502,7 +1502,7 @@ exports[`StoryPromo Container should render audio promoType top on amp 1`] = `
 }
 
 .emotion-19 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1528,7 +1528,7 @@ exports[`StoryPromo Container should render audio promoType top on amp 1`] = `
 
 .emotion-21 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -1575,7 +1575,7 @@ exports[`StoryPromo Container should render audio promoType top on amp 1`] = `
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -1800,7 +1800,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 @media (min-width: 25rem) {
@@ -1837,7 +1837,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
 }
 
 .emotion-9 {
-  color: #222222;
+  color: #202224;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -1876,7 +1876,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
 .emotion-13 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -1919,7 +1919,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
 }
 
 .emotion-17 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1945,7 +1945,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
 
 .emotion-19 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -1992,7 +1992,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -2213,7 +2213,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 @media (min-width: 25rem) {
@@ -2256,7 +2256,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
 }
 
 .emotion-10 {
-  color: #222222;
+  color: #202224;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -2295,7 +2295,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
 .emotion-14 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -2338,7 +2338,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
 }
 
 .emotion-18 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -2364,7 +2364,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
 
 .emotion-20 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -2411,7 +2411,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -2643,7 +2643,7 @@ exports[`StoryPromo Container should render audio with no duration promoType lea
 }
 
 .emotion-4 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -2669,7 +2669,7 @@ exports[`StoryPromo Container should render audio with no duration promoType lea
 
 .emotion-6 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -2716,7 +2716,7 @@ exports[`StoryPromo Container should render audio with no duration promoType lea
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -2830,7 +2830,7 @@ exports[`StoryPromo Container should render audio with no duration promoType lea
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 @media (min-width: 25rem) {
@@ -2858,7 +2858,7 @@ exports[`StoryPromo Container should render audio with no duration promoType lea
 }
 
 .emotion-20 {
-  color: #222222;
+  color: #202224;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -2897,7 +2897,7 @@ exports[`StoryPromo Container should render audio with no duration promoType lea
 .emotion-24 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -3080,7 +3080,7 @@ exports[`StoryPromo Container should render audio with no duration promoType top
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 @media (min-width: 25rem) {
@@ -3108,7 +3108,7 @@ exports[`StoryPromo Container should render audio with no duration promoType top
 }
 
 .emotion-9 {
-  color: #222222;
+  color: #202224;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -3147,7 +3147,7 @@ exports[`StoryPromo Container should render audio with no duration promoType top
 .emotion-13 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -3193,7 +3193,7 @@ exports[`StoryPromo Container should render audio with no duration promoType top
 }
 
 .emotion-17 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -3219,7 +3219,7 @@ exports[`StoryPromo Container should render audio with no duration promoType top
 
 .emotion-19 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -3266,7 +3266,7 @@ exports[`StoryPromo Container should render audio with no duration promoType top
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -3480,7 +3480,7 @@ exports[`StoryPromo Container should render featureLink correctly for amp 1`] = 
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 @media (min-width: 25rem) {
@@ -3553,7 +3553,7 @@ exports[`StoryPromo Container should render featureLink correctly for amp 1`] = 
 }
 
 .emotion-11 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -3579,7 +3579,7 @@ exports[`StoryPromo Container should render featureLink correctly for amp 1`] = 
 
 .emotion-13 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -3615,7 +3615,7 @@ exports[`StoryPromo Container should render featureLink correctly for amp 1`] = 
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -3801,7 +3801,7 @@ exports[`StoryPromo Container should render featureLink correctly for canonical 
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 @media (min-width: 25rem) {
@@ -3880,7 +3880,7 @@ exports[`StoryPromo Container should render featureLink correctly for canonical 
 }
 
 .emotion-12 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -3906,7 +3906,7 @@ exports[`StoryPromo Container should render featureLink correctly for canonical 
 
 .emotion-14 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -3942,7 +3942,7 @@ exports[`StoryPromo Container should render featureLink correctly for canonical 
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -4139,7 +4139,7 @@ exports[`StoryPromo Container should render featureLink promoType leading on amp
 }
 
 .emotion-4 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -4165,7 +4165,7 @@ exports[`StoryPromo Container should render featureLink promoType leading on amp
 
 .emotion-6 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -4201,7 +4201,7 @@ exports[`StoryPromo Container should render featureLink promoType leading on amp
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -4315,7 +4315,7 @@ exports[`StoryPromo Container should render featureLink promoType leading on amp
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 @media (min-width: 25rem) {
@@ -4484,7 +4484,7 @@ exports[`StoryPromo Container should render featureLink promoType top on amp 1`]
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 @media (min-width: 25rem) {
@@ -4551,7 +4551,7 @@ exports[`StoryPromo Container should render featureLink promoType top on amp 1`]
 }
 
 .emotion-11 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -4577,7 +4577,7 @@ exports[`StoryPromo Container should render featureLink promoType top on amp 1`]
 
 .emotion-13 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -4613,7 +4613,7 @@ exports[`StoryPromo Container should render featureLink promoType top on amp 1`]
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -4811,7 +4811,7 @@ exports[`StoryPromo Container should render full width promos correctly for amp 
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 @media (min-width: 25rem) {
@@ -4878,7 +4878,7 @@ exports[`StoryPromo Container should render full width promos correctly for amp 
 }
 
 .emotion-12 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -4904,7 +4904,7 @@ exports[`StoryPromo Container should render full width promos correctly for amp 
 
 .emotion-14 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -4940,7 +4940,7 @@ exports[`StoryPromo Container should render full width promos correctly for amp 
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -5138,7 +5138,7 @@ exports[`StoryPromo Container should render full width promos correctly for cano
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 @media (min-width: 25rem) {
@@ -5211,7 +5211,7 @@ exports[`StoryPromo Container should render full width promos correctly for cano
 }
 
 .emotion-13 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -5237,7 +5237,7 @@ exports[`StoryPromo Container should render full width promos correctly for cano
 
 .emotion-15 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -5273,7 +5273,7 @@ exports[`StoryPromo Container should render full width promos correctly for cano
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -5446,7 +5446,7 @@ exports[`StoryPromo Container should render item without an image correctly for 
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
@@ -5526,7 +5526,7 @@ exports[`StoryPromo Container should render item without an image correctly for 
 }
 
 .emotion-12 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -5552,7 +5552,7 @@ exports[`StoryPromo Container should render item without an image correctly for 
 
 .emotion-14 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -5588,7 +5588,7 @@ exports[`StoryPromo Container should render item without an image correctly for 
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -5756,7 +5756,7 @@ exports[`StoryPromo Container should render item without an image correctly for 
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
@@ -5836,7 +5836,7 @@ exports[`StoryPromo Container should render item without an image correctly for 
 }
 
 .emotion-12 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -5862,7 +5862,7 @@ exports[`StoryPromo Container should render item without an image correctly for 
 
 .emotion-14 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -5898,7 +5898,7 @@ exports[`StoryPromo Container should render item without an image correctly for 
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -6083,7 +6083,7 @@ exports[`StoryPromo Container should render item without an image promoType lead
 }
 
 .emotion-4 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -6109,7 +6109,7 @@ exports[`StoryPromo Container should render item without an image promoType lead
 
 .emotion-6 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -6145,7 +6145,7 @@ exports[`StoryPromo Container should render item without an image promoType lead
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -6253,7 +6253,7 @@ exports[`StoryPromo Container should render item without an image promoType lead
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
@@ -6411,7 +6411,7 @@ exports[`StoryPromo Container should render item without an image promoType top 
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
@@ -6485,7 +6485,7 @@ exports[`StoryPromo Container should render item without an image promoType top 
 }
 
 .emotion-12 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -6511,7 +6511,7 @@ exports[`StoryPromo Container should render item without an image promoType top 
 
 .emotion-14 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -6547,7 +6547,7 @@ exports[`StoryPromo Container should render item without an image promoType top 
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -6714,7 +6714,7 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 @media (min-width: 25rem) {
@@ -6787,7 +6787,7 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
 }
 
 .emotion-11 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -6813,7 +6813,7 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
 
 .emotion-13 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -6858,7 +6858,7 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -7023,7 +7023,7 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 @media (min-width: 25rem) {
@@ -7102,7 +7102,7 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
 }
 
 .emotion-12 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -7128,7 +7128,7 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
 
 .emotion-14 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -7173,7 +7173,7 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -7349,7 +7349,7 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
 }
 
 .emotion-4 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -7375,7 +7375,7 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
 
 .emotion-6 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -7420,7 +7420,7 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -7510,7 +7510,7 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 @media (min-width: 25rem) {
@@ -7682,7 +7682,7 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 @media (min-width: 25rem) {
@@ -7749,7 +7749,7 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
 }
 
 .emotion-11 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -7775,7 +7775,7 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
 
 .emotion-13 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -7820,7 +7820,7 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -7991,7 +7991,7 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 @media (min-width: 25rem) {
@@ -8064,7 +8064,7 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
 }
 
 .emotion-12 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -8090,7 +8090,7 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
 
 .emotion-14 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -8126,7 +8126,7 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -8200,7 +8200,7 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
 }
 
 .emotion-25 {
-  border-top: 1px solid #F2F2F2;
+  border-top: 1px solid #F6F6F6;
   padding: 0.5rem 0;
 }
 
@@ -8210,7 +8210,7 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline-block;
@@ -8245,7 +8245,7 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
 }
 
 .emotion-29 {
-  color: #222222;
+  color: #202224;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -8286,7 +8286,7 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
 .emotion-33 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -8513,7 +8513,7 @@ exports[`StoryPromo Container should render podcastLink correctly for amp 1`] = 
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
@@ -8593,7 +8593,7 @@ exports[`StoryPromo Container should render podcastLink correctly for amp 1`] = 
 }
 
 .emotion-12 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -8619,7 +8619,7 @@ exports[`StoryPromo Container should render podcastLink correctly for amp 1`] = 
 
 .emotion-14 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -8655,7 +8655,7 @@ exports[`StoryPromo Container should render podcastLink correctly for amp 1`] = 
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -8793,7 +8793,7 @@ exports[`StoryPromo Container should render podcastLink correctly for canonical 
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
@@ -8873,7 +8873,7 @@ exports[`StoryPromo Container should render podcastLink correctly for canonical 
 }
 
 .emotion-12 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -8899,7 +8899,7 @@ exports[`StoryPromo Container should render podcastLink correctly for canonical 
 
 .emotion-14 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -8935,7 +8935,7 @@ exports[`StoryPromo Container should render podcastLink correctly for canonical 
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -9090,7 +9090,7 @@ exports[`StoryPromo Container should render podcastLink promoType leading on amp
 }
 
 .emotion-4 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -9116,7 +9116,7 @@ exports[`StoryPromo Container should render podcastLink promoType leading on amp
 
 .emotion-6 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -9152,7 +9152,7 @@ exports[`StoryPromo Container should render podcastLink promoType leading on amp
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -9236,7 +9236,7 @@ exports[`StoryPromo Container should render podcastLink promoType leading on amp
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
@@ -9388,7 +9388,7 @@ exports[`StoryPromo Container should render podcastLink promoType top on amp 1`]
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
@@ -9462,7 +9462,7 @@ exports[`StoryPromo Container should render podcastLink promoType top on amp 1`]
 }
 
 .emotion-12 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -9488,7 +9488,7 @@ exports[`StoryPromo Container should render podcastLink promoType top on amp 1`]
 
 .emotion-14 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -9524,7 +9524,7 @@ exports[`StoryPromo Container should render podcastLink promoType top on amp 1`]
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -9661,7 +9661,7 @@ exports[`StoryPromo Container should render standard correctly for amp 1`] = `
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 @media (min-width: 25rem) {
@@ -9734,7 +9734,7 @@ exports[`StoryPromo Container should render standard correctly for amp 1`] = `
 }
 
 .emotion-11 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -9760,7 +9760,7 @@ exports[`StoryPromo Container should render standard correctly for amp 1`] = `
 
 .emotion-13 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -9796,7 +9796,7 @@ exports[`StoryPromo Container should render standard correctly for amp 1`] = `
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -9982,7 +9982,7 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 @media (min-width: 25rem) {
@@ -10061,7 +10061,7 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
 }
 
 .emotion-12 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -10087,7 +10087,7 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
 
 .emotion-14 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -10123,7 +10123,7 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -10320,7 +10320,7 @@ exports[`StoryPromo Container should render standard promoType leading on amp 1`
 }
 
 .emotion-4 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -10346,7 +10346,7 @@ exports[`StoryPromo Container should render standard promoType leading on amp 1`
 
 .emotion-6 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -10382,7 +10382,7 @@ exports[`StoryPromo Container should render standard promoType leading on amp 1`
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -10496,7 +10496,7 @@ exports[`StoryPromo Container should render standard promoType leading on amp 1`
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 @media (min-width: 25rem) {
@@ -10665,7 +10665,7 @@ exports[`StoryPromo Container should render standard promoType top on amp 1`] = 
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 @media (min-width: 25rem) {
@@ -10732,7 +10732,7 @@ exports[`StoryPromo Container should render standard promoType top on amp 1`] = 
 }
 
 .emotion-11 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -10758,7 +10758,7 @@ exports[`StoryPromo Container should render standard promoType top on amp 1`] = 
 
 .emotion-13 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -10794,7 +10794,7 @@ exports[`StoryPromo Container should render standard promoType top on amp 1`] = 
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -10973,7 +10973,7 @@ exports[`StoryPromo Container should render standardLink correctly for amp 1`] =
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 @media (min-width: 25rem) {
@@ -11046,7 +11046,7 @@ exports[`StoryPromo Container should render standardLink correctly for amp 1`] =
 }
 
 .emotion-11 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -11072,7 +11072,7 @@ exports[`StoryPromo Container should render standardLink correctly for amp 1`] =
 
 .emotion-13 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -11108,7 +11108,7 @@ exports[`StoryPromo Container should render standardLink correctly for amp 1`] =
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -11294,7 +11294,7 @@ exports[`StoryPromo Container should render standardLink correctly for canonical
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 @media (min-width: 25rem) {
@@ -11373,7 +11373,7 @@ exports[`StoryPromo Container should render standardLink correctly for canonical
 }
 
 .emotion-12 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -11399,7 +11399,7 @@ exports[`StoryPromo Container should render standardLink correctly for canonical
 
 .emotion-14 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -11435,7 +11435,7 @@ exports[`StoryPromo Container should render standardLink correctly for canonical
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -11632,7 +11632,7 @@ exports[`StoryPromo Container should render standardLink promoType leading on am
 }
 
 .emotion-4 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -11658,7 +11658,7 @@ exports[`StoryPromo Container should render standardLink promoType leading on am
 
 .emotion-6 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -11694,7 +11694,7 @@ exports[`StoryPromo Container should render standardLink promoType leading on am
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -11808,7 +11808,7 @@ exports[`StoryPromo Container should render standardLink promoType leading on am
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 @media (min-width: 25rem) {
@@ -11977,7 +11977,7 @@ exports[`StoryPromo Container should render standardLink promoType top on amp 1`
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 @media (min-width: 25rem) {
@@ -12044,7 +12044,7 @@ exports[`StoryPromo Container should render standardLink promoType top on amp 1`
 }
 
 .emotion-11 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -12070,7 +12070,7 @@ exports[`StoryPromo Container should render standardLink promoType top on amp 1`
 
 .emotion-13 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -12106,7 +12106,7 @@ exports[`StoryPromo Container should render standardLink promoType top on amp 1`
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -12285,7 +12285,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary correctly f
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 @media (min-width: 25rem) {
@@ -12358,7 +12358,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary correctly f
 }
 
 .emotion-11 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -12384,7 +12384,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary correctly f
 
 .emotion-13 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -12420,7 +12420,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary correctly f
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -12606,7 +12606,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary correctly f
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 @media (min-width: 25rem) {
@@ -12685,7 +12685,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary correctly f
 }
 
 .emotion-12 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -12711,7 +12711,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary correctly f
 
 .emotion-14 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -12747,7 +12747,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary correctly f
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -12944,7 +12944,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary promoType l
 }
 
 .emotion-4 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -12970,7 +12970,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary promoType l
 
 .emotion-6 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -13006,7 +13006,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary promoType l
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -13120,7 +13120,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary promoType l
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 @media (min-width: 25rem) {
@@ -13289,7 +13289,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary promoType t
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 @media (min-width: 25rem) {
@@ -13356,7 +13356,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary promoType t
 }
 
 .emotion-11 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -13382,7 +13382,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary promoType t
 
 .emotion-13 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -13418,7 +13418,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary promoType t
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -13597,7 +13597,7 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 @media (min-width: 25rem) {
@@ -13634,7 +13634,7 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
 }
 
 .emotion-9 {
-  color: #222222;
+  color: #202224;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -13673,7 +13673,7 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
 .emotion-13 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -13720,7 +13720,7 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
 }
 
 .emotion-19 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -13746,7 +13746,7 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
 
 .emotion-21 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -13793,7 +13793,7 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -14032,7 +14032,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 @media (min-width: 25rem) {
@@ -14075,7 +14075,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
 }
 
 .emotion-10 {
-  color: #222222;
+  color: #202224;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -14114,7 +14114,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
 .emotion-14 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -14161,7 +14161,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
 }
 
 .emotion-20 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -14187,7 +14187,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
 
 .emotion-22 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -14234,7 +14234,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -14484,7 +14484,7 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
 }
 
 .emotion-4 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -14510,7 +14510,7 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
 
 .emotion-6 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -14557,7 +14557,7 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -14671,7 +14671,7 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 @media (min-width: 25rem) {
@@ -14699,7 +14699,7 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
 }
 
 .emotion-21 {
-  color: #222222;
+  color: #202224;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -14738,7 +14738,7 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
 .emotion-25 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -14943,7 +14943,7 @@ exports[`StoryPromo Container should render video promoType top on amp 1`] = `
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 @media (min-width: 25rem) {
@@ -14971,7 +14971,7 @@ exports[`StoryPromo Container should render video promoType top on amp 1`] = `
 }
 
 .emotion-9 {
-  color: #222222;
+  color: #202224;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -15010,7 +15010,7 @@ exports[`StoryPromo Container should render video promoType top on amp 1`] = `
 .emotion-13 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -15060,7 +15060,7 @@ exports[`StoryPromo Container should render video promoType top on amp 1`] = `
 }
 
 .emotion-19 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -15086,7 +15086,7 @@ exports[`StoryPromo Container should render video promoType top on amp 1`] = `
 
 .emotion-21 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -15133,7 +15133,7 @@ exports[`StoryPromo Container should render video promoType top on amp 1`] = `
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }

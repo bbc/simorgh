@@ -168,7 +168,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
-  background-color: #FDFDFD;
+  background-color: #FEFEFE;
   margin: 1rem 0;
   padding-left: 0.5rem;
   display: -webkit-box;
@@ -291,7 +291,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 @media (min-width: 25rem) {
@@ -364,7 +364,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 .emotion-30 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -390,7 +390,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 
 .emotion-32 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -426,7 +426,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -564,7 +564,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 
 @media (max-width: 62.9375rem) {
   .emotion-54 {
-    border-bottom: 0.0625rem solid #F2F2F2;
+    border-bottom: 0.0625rem solid #F6F6F6;
   }
 }
 
@@ -703,7 +703,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 .emotion-66 {
-  color: #222222;
+  color: #202224;
   background-color: #FFFFFF;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
@@ -742,7 +742,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 .emotion-70 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -769,7 +769,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 
 @media (max-width: 62.9375rem) {
   .emotion-87 {
-    border-bottom: 0.0625rem solid #F2F2F2;
+    border-bottom: 0.0625rem solid #F6F6F6;
   }
 }
 
@@ -1008,7 +1008,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 .emotion-109 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -1038,7 +1038,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -1072,7 +1072,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 .emotion-219 {
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   padding: 0 1rem;
   content-visibility: auto;
   contain-intrinsic-size: 59.375rem;
@@ -1163,7 +1163,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   margin: 1rem 0;
   padding-left: 0.5rem;
   display: -webkit-box;
@@ -1459,7 +1459,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 .emotion-244>svg {
-  color: #5A5A5A;
+  color: #545658;
   margin: 0;
   overflow: visible;
 }
@@ -1473,7 +1473,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 .emotion-246 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.725rem;
   height: 0.725rem;
@@ -1495,7 +1495,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 .emotion-248>time {
-  color: #5A5A5A;
+  color: #545658;
   font-size: 0.75rem;
   line-height: 1.125rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -1519,7 +1519,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 
 .emotion-248::after {
   content: '';
-  border-top: 0.0625rem solid #AEAEB5;
+  border-top: 0.0625rem solid #B0B2B4;
   top: 1.0625rem;
   margin-right: 0.625rem;
   width: 100%;
@@ -1577,7 +1577,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.5rem;
-  color: #11708C;
+  color: #006666;
   display: inline-block;
   margin-left: 0.5rem;
 }
@@ -1657,7 +1657,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   padding: 0.5rem;
   background-color: #FFFFFF;
   outline: 0.0625rem solid transparent;
-  color: #11708C;
+  color: #006666;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1682,7 +1682,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 .emotion-269>svg {
-  color: #11708C;
+  color: #006666;
   fill: currentColor;
   width: 1.0625rem;
   height: 0.75rem;
@@ -1698,7 +1698,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 .emotion-271 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -1714,7 +1714,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.5rem;
-  color: #222222;
+  color: #202224;
   margin: 0;
 }
 
@@ -1734,7 +1734,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 
 .emotion-296 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -1774,7 +1774,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 .emotion-300 {
-  color: #3F3F42;
+  color: #3A3C3E;
   padding: 0.5rem 0 0 0;
   display: inline-block;
   width: 100%;
@@ -1806,7 +1806,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   font-size: 0.75rem;
   line-height: 1.125rem;
   padding: 0.5rem;
-  background-color: #222222;
+  background-color: #202224;
   outline: 0.0625rem solid transparent;
   color: #FFFFFF;
 }
@@ -2154,7 +2154,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   font-weight: 700;
   font-style: normal;
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   margin-bottom: 0.5rem;
@@ -4663,7 +4663,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  background-color: #FDFDFD;
+  background-color: #FEFEFE;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;
@@ -4786,7 +4786,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 @media (min-width: 25rem) {
@@ -4859,7 +4859,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 .emotion-30 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -4885,7 +4885,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 
 .emotion-32 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -4921,7 +4921,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -4989,7 +4989,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 .emotion-41 {
-  border-top: 1px solid #F2F2F2;
+  border-top: 1px solid #F6F6F6;
   padding: 0.5rem 0;
 }
 
@@ -4999,7 +4999,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline-block;
@@ -5053,7 +5053,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 .emotion-51 {
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -5071,8 +5071,8 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   font-weight: 700;
   font-style: normal;
   margin: 1rem 0;
-  color: #222222;
-  background-color: #FDFDFD;
+  color: #202224;
+  background-color: #FEFEFE;
   white-space: nowrap;
   padding-left: 1rem;
   display: -webkit-box;
@@ -5174,7 +5174,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 
 @media (max-width: 62.9375rem) {
   .emotion-65 {
-    border-bottom: 0.0625rem solid #F2F2F2;
+    border-bottom: 0.0625rem solid #F6F6F6;
   }
 }
 
@@ -5382,7 +5382,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 .emotion-71 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -5412,7 +5412,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -5494,7 +5494,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 
 @media (max-width: 62.9375rem) {
   .emotion-88 {
-    border-bottom: 0.0625rem solid #F2F2F2;
+    border-bottom: 0.0625rem solid #F6F6F6;
   }
 }
 
@@ -5733,7 +5733,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 .emotion-102 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -5763,7 +5763,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 
 @media (max-width: 62.9375rem) {
   .emotion-375 {
-    border-bottom: 0.0625rem solid #F2F2F2;
+    border-bottom: 0.0625rem solid #F6F6F6;
   }
 }
 

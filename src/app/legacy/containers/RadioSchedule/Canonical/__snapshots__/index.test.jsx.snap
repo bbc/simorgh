@@ -2,7 +2,7 @@
 
 exports[`Canonical RadioSchedule With initial data renders correctly for a service 1`] = `
 .emotion-0 {
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   padding: 0 1rem;
   content-visibility: auto;
   contain-intrinsic-size: 59.375rem;
@@ -117,7 +117,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   margin: 1rem 0;
   padding-left: 0.5rem;
   display: -webkit-box;
@@ -413,7 +413,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
 }
 
 .emotion-25>svg {
-  color: #5A5A5A;
+  color: #545658;
   margin: 0;
   overflow: visible;
 }
@@ -427,7 +427,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
 .emotion-27 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.725rem;
   height: 0.725rem;
@@ -449,7 +449,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
 }
 
 .emotion-29>time {
-  color: #5A5A5A;
+  color: #545658;
   font-size: 0.75rem;
   line-height: 1.125rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -473,7 +473,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
 
 .emotion-29::after {
   content: '';
-  border-top: 0.0625rem solid #AEAEB5;
+  border-top: 0.0625rem solid #B0B2B4;
   top: 1.0625rem;
   margin-right: 0.625rem;
   width: 100%;
@@ -566,7 +566,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.5rem;
-  color: #11708C;
+  color: #006666;
   display: inline-block;
   margin-left: 0.5rem;
 }
@@ -646,7 +646,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
   padding: 0.5rem;
   background-color: #FFFFFF;
   outline: 0.0625rem solid transparent;
-  color: #11708C;
+  color: #006666;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -671,7 +671,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
 }
 
 .emotion-50>svg {
-  color: #11708C;
+  color: #006666;
   fill: currentColor;
   width: 1.0625rem;
   height: 0.75rem;
@@ -687,7 +687,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
 .emotion-52 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -703,7 +703,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.5rem;
-  color: #222222;
+  color: #202224;
   margin: 0;
 }
 
@@ -723,7 +723,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
 
 .emotion-77 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -763,7 +763,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
 }
 
 .emotion-81 {
-  color: #3F3F42;
+  color: #3A3C3E;
   padding: 0.5rem 0 0 0;
   display: inline-block;
   width: 100%;
@@ -795,7 +795,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
   font-size: 0.75rem;
   line-height: 1.125rem;
   padding: 0.5rem;
-  background-color: #222222;
+  background-color: #202224;
   outline: 0.0625rem solid transparent;
   color: #FFFFFF;
 }
@@ -841,7 +841,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -1443,7 +1443,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
 
 exports[`Canonical RadioSchedule Without initial data renders correctly for a service with a radio schedule and page frequency URL 1`] = `
 .emotion-0 {
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   padding: 0 1rem;
   content-visibility: auto;
   contain-intrinsic-size: 59.375rem;
@@ -1558,7 +1558,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   margin: 1rem 0;
   padding-left: 0.5rem;
   display: -webkit-box;
@@ -1854,7 +1854,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
 }
 
 .emotion-25>svg {
-  color: #5A5A5A;
+  color: #545658;
   margin: 0;
   overflow: visible;
 }
@@ -1868,7 +1868,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
 .emotion-27 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.725rem;
   height: 0.725rem;
@@ -1890,7 +1890,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
 }
 
 .emotion-29>time {
-  color: #5A5A5A;
+  color: #545658;
   font-size: 0.75rem;
   line-height: 1.125rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -1914,7 +1914,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
 
 .emotion-29::after {
   content: '';
-  border-top: 0.0625rem solid #AEAEB5;
+  border-top: 0.0625rem solid #B0B2B4;
   top: 1.0625rem;
   margin-right: 0.625rem;
   width: 100%;
@@ -2007,7 +2007,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.5rem;
-  color: #11708C;
+  color: #006666;
   display: inline-block;
   margin-left: 0.5rem;
 }
@@ -2087,7 +2087,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
   padding: 0.5rem;
   background-color: #FFFFFF;
   outline: 0.0625rem solid transparent;
-  color: #11708C;
+  color: #006666;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -2112,7 +2112,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
 }
 
 .emotion-50>svg {
-  color: #11708C;
+  color: #006666;
   fill: currentColor;
   width: 1.0625rem;
   height: 0.75rem;
@@ -2128,7 +2128,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
 .emotion-52 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -2144,7 +2144,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.5rem;
-  color: #222222;
+  color: #202224;
   margin: 0;
 }
 
@@ -2164,7 +2164,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
 
 .emotion-77 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -2204,7 +2204,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
 }
 
 .emotion-81 {
-  color: #3F3F42;
+  color: #3A3C3E;
   padding: 0.5rem 0 0 0;
   display: inline-block;
   width: 100%;
@@ -2236,7 +2236,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
   font-size: 0.75rem;
   line-height: 1.125rem;
   padding: 0.5rem;
-  background-color: #222222;
+  background-color: #202224;
   outline: 0.0625rem solid transparent;
   color: #FFFFFF;
 }
@@ -2282,7 +2282,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
 }

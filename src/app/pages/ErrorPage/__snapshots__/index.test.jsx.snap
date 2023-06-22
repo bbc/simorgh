@@ -207,7 +207,7 @@ exports[`ErrorPage should correctly render for 404 1`] = `
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin-top: 0;
 }
 
@@ -252,7 +252,7 @@ exports[`ErrorPage should correctly render for 404 1`] = `
 }
 
 .emotion-19 {
-  color: #222222;
+  color: #202224;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -537,7 +537,7 @@ exports[`ErrorPage should correctly render for 404 for persian 1`] = `
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin-top: 0;
 }
 
@@ -582,7 +582,7 @@ exports[`ErrorPage should correctly render for 404 for persian 1`] = `
 }
 
 .emotion-19 {
-  color: #222222;
+  color: #202224;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -868,7 +868,7 @@ exports[`ErrorPage should correctly render for 500 1`] = `
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin-top: 0;
 }
 
@@ -913,7 +913,7 @@ exports[`ErrorPage should correctly render for 500 1`] = `
 }
 
 .emotion-17 {
-  color: #222222;
+  color: #202224;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1193,7 +1193,7 @@ exports[`ErrorPage should correctly render for 500 for persian 1`] = `
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin-top: 0;
 }
 
@@ -1238,7 +1238,7 @@ exports[`ErrorPage should correctly render for 500 for persian 1`] = `
 }
 
 .emotion-17 {
-  color: #222222;
+  color: #202224;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1519,7 +1519,7 @@ exports[`ErrorPage should correctly render for other status code 1`] = `
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin-top: 0;
 }
 
@@ -1564,7 +1564,7 @@ exports[`ErrorPage should correctly render for other status code 1`] = `
 }
 
 .emotion-17 {
-  color: #222222;
+  color: #202224;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;

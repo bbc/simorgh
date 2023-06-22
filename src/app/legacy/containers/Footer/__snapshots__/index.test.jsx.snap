@@ -167,7 +167,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  background-color: #222222;
+  background-color: #202224;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -203,7 +203,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
 }
 
 .emotion-16 {
-  border-bottom: 0.0625rem solid #3F3F42;
+  border-bottom: 0.0625rem solid #3A3C3E;
   -webkit-column-count: 4;
   column-count: 4;
   margin: 0;
@@ -279,7 +279,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
 }
 
 .emotion-16>li:first-of-type {
-  border-bottom: 0.0625rem solid #3F3F42;
+  border-bottom: 0.0625rem solid #3A3C3E;
   padding: 0.5rem 0;
   margin-bottom: 0.5rem;
   grid-column: 1/-1;

@@ -41,7 +41,7 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
 }
 
 .emotion-7 {
-  background-color: #222222;
+  background-color: #202224;
   border: none;
   color: #FFFFFF;
   cursor: pointer;
@@ -89,7 +89,7 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
 .emotion-12 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -237,7 +237,7 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
 }
 
 .emotion-9 {
-  background-color: #222222;
+  background-color: #202224;
   border: none;
   color: #FFFFFF;
   cursor: pointer;
@@ -285,7 +285,7 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
 .emotion-14 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -413,7 +413,7 @@ exports[`Media Player: Placeholder should render a video placeholder without dur
 }
 
 .emotion-7 {
-  background-color: #222222;
+  background-color: #202224;
   border: none;
   color: #FFFFFF;
   cursor: pointer;
@@ -460,7 +460,7 @@ exports[`Media Player: Placeholder should render a video placeholder without dur
 .emotion-12 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -570,7 +570,7 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
 }
 
 .emotion-7 {
-  background-color: #222222;
+  background-color: #202224;
   border: none;
   color: #FFFFFF;
   cursor: pointer;
@@ -618,7 +618,7 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
 .emotion-12 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -733,7 +733,7 @@ exports[`Media Player: Placeholder should render an audio placeholder without du
 }
 
 .emotion-7 {
-  background-color: #222222;
+  background-color: #202224;
   border: none;
   color: #FFFFFF;
   cursor: pointer;
@@ -780,7 +780,7 @@ exports[`Media Player: Placeholder should render an audio placeholder without du
 .emotion-12 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -922,7 +922,7 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
 }
 
 .emotion-9 {
-  background-color: #222222;
+  background-color: #202224;
   border: none;
   color: #FFFFFF;
   cursor: pointer;
@@ -974,7 +974,7 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
 .emotion-14 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;

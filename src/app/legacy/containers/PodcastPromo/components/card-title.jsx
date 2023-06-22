@@ -8,7 +8,7 @@ const CardTitle = styled.h3`
   ${({ service }) => getSerifMedium(service)}
   margin-top: 0;
   margin-bottom: ${GEL_SPACING};
-  color: ${props => props.theme.palette.EBON};
+  color: ${props => props.theme.palette.GREY_8};
 `;
 
 export default CardTitle;

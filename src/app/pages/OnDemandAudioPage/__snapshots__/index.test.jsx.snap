@@ -670,7 +670,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
@@ -857,7 +857,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
                 height="256"
                 layout="responsive"
                 src="https://ichef.bbci.co.uk/images/ic/256x256/p08b23c8.png"
-                style="background-color: rgb(253, 253, 253);"
+                style="background-color: rgb(254, 254, 254);"
                 width="256"
               />
             </div>
@@ -1600,7 +1600,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
@@ -2515,7 +2515,7 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
@@ -3369,7 +3369,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;

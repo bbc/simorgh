@@ -109,11 +109,11 @@ const A = styled.a`
       isActive
         ? `
         padding: 0.0625rem 0.625rem 0 0.625rem;
-        border-bottom: 0.25rem ${props.theme.palette.POSTBOX} solid;
+        border-bottom: 0.25rem ${props.theme.palette.NEWS_CORE} solid;
         &:hover,
         &:focus {
          padding: 0;
-         border: 0.0625rem ${props.theme.palette.POSTBOX} solid;
+         border: 0.0625rem ${props.theme.palette.NEWS_CORE} solid;
          border-bottom-width: 0.25rem;
        }
       `
@@ -122,7 +122,7 @@ const A = styled.a`
        &:hover,
        &:focus {
          padding: 0;
-         border: 0.0625rem ${props.theme.palette.POSTBOX} solid;
+         border: 0.0625rem ${props.theme.palette.NEWS_CORE} solid;
        }`}
 `;
 

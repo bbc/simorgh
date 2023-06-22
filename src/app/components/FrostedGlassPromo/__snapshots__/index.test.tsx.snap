@@ -44,7 +44,7 @@ exports[`Frosted Glass Promo when given props directly 1`] = `
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #3F3F42;
+  background-color: #3A3C3E;
 }
 
 @media (min-width: 25rem) {
@@ -202,7 +202,7 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #3F3F42;
+  background-color: #3A3C3E;
 }
 
 @media (min-width: 25rem) {
@@ -404,7 +404,7 @@ exports[`Frosted Glass Promo when given props for a Link promo 1`] = `
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #3F3F42;
+  background-color: #3A3C3E;
 }
 
 @media (min-width: 25rem) {
@@ -606,7 +606,7 @@ exports[`Frosted Glass Promo when given props for a Optimo promo 1`] = `
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #3F3F42;
+  background-color: #3A3C3E;
 }
 
 @media (min-width: 25rem) {

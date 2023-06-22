@@ -9,7 +9,7 @@ import {
 import Image from '.';
 import BASE64_PLACEHOLDER_IMAGE from './base64Placeholder';
 
-import { SHADOW } from '../ThemeProvider/palette';
+import { GREY_7 } from '../ThemeProvider/palette';
 
 const removeStyles = (el: HTMLElement) => {
   const dom = new JSDOM(el.innerHTML.replace(/class=".+?"/gm, ''));
@@ -142,7 +142,7 @@ describe('Image - Canonical', () => {
     const imageEl = screen.getByAltText('Test image alt text');
     expect(imageEl.parentNode?.parentNode).toHaveStyle({
       backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
-      backgroundColor: SHADOW,
+      backgroundColor: GREY_7,
     });
   });
 
@@ -331,7 +331,7 @@ describe('Image - AMP pages', () => {
     const imageEl = screen.getAllByAltText('Test image alt text')[0];
     expect(imageEl.parentNode).toHaveStyle({
       backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
-      backgroundColor: SHADOW,
+      backgroundColor: GREY_7,
     });
   });
 

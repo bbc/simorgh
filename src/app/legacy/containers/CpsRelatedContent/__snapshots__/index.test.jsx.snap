@@ -276,7 +276,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  background-color: #FDFDFD;
+  background-color: #FEFEFE;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;
@@ -384,7 +384,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
 
 @media (max-width: 62.9375rem) {
   .emotion-21 {
-    border-bottom: 0.0625rem solid #F2F2F2;
+    border-bottom: 0.0625rem solid #F6F6F6;
   }
 }
 
@@ -527,7 +527,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 @media (min-width: 25rem) {
@@ -606,7 +606,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
 }
 
 .emotion-35 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -632,7 +632,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
 
 .emotion-37 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -1205,7 +1205,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  background-color: #FDFDFD;
+  background-color: #FEFEFE;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;
@@ -1372,7 +1372,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 @media (min-width: 25rem) {
@@ -1451,7 +1451,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
 }
 
 .emotion-33 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1477,7 +1477,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
 
 .emotion-35 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -1513,7 +1513,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }

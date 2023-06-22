@@ -320,7 +320,7 @@ exports[`Navigation should render correctly when ampOpenClass prop is provided 1
 
 @media (max-width: 37.4375rem) {
   .emotion-0.is-open {
-    background-color: #222222;
+    background-color: #202224;
   }
 }
 
@@ -633,7 +633,7 @@ exports[`Navigation should render correctly when ampOpenClass prop is provided 1
 exports[`Navigation should render correctly when isOpen is true 1`] = `
 .emotion-0 {
   position: relative;
-  background-color: #222222;
+  background-color: #202224;
 }
 
 .emotion-0::after {

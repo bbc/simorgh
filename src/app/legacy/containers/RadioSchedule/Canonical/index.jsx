@@ -31,7 +31,7 @@ import radioSchedulesShape from '../utilities/radioScheduleShape';
 const logger = webLogger();
 
 const RadioScheduleSection = styled.section`
-  background-color: ${props => props.theme.palette.LUNAR};
+  background-color: ${props => props.theme.palette.GREY_2};
   padding: 0 ${GEL_MARGIN_ABOVE_400PX};
   content-visibility: auto;
   contain-intrinsic-size: 59.375rem;
@@ -83,7 +83,7 @@ const RadioScheduleSectionLabel = styled(SectionLabel)`
 const RadioFrequencyLink = styled.a`
   ${({ script }) => script && getLongPrimer(script)}
   ${({ service }) => service && getSansRegular(service)}
-  color: ${props => props.theme.palette.EBON};
+  color: ${props => props.theme.palette.GREY_8};
   text-decoration: none;
 
   &:hover,
@@ -112,7 +112,7 @@ const CanonicalRadioSchedule = ({ initialData, endpoint, lang, className }) => {
     radioScheduleConfig;
 
   const {
-    palette: { LUNAR },
+    palette: { GREY_2 },
   } = useTheme();
 
   useEffect(() => {
@@ -171,7 +171,7 @@ const CanonicalRadioSchedule = ({ initialData, endpoint, lang, className }) => {
         service={service}
         dir={dir}
         bar={false}
-        backgroundColor={LUNAR}
+        backgroundColor={GREY_2}
       >
         {header}
       </RadioScheduleSectionLabel>

@@ -31,7 +31,7 @@ const RecommendationsWrapper = styled.div`
   background-color: ${props =>
     props.isArticlePage
       ? props.theme.palette.GREY_2
-      : props.theme.palette.GHOST};
+      : props.theme.palette.GREY_1};
   margin: ${GEL_SPACING_TRPL} 0;
   padding: ${GEL_SPACING_DBL} ${GEL_SPACING};
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
@@ -65,7 +65,7 @@ const CpsRecommendations = ({ items }) => {
     'aria-labelledby': labelId,
   };
   const {
-    palette: { GREY_2, GHOST },
+    palette: { GREY_2, GREY_1 },
   } = useTheme();
 
   const { hasStoryRecommendations } = recommendations;
@@ -112,7 +112,7 @@ const CpsRecommendations = ({ items }) => {
                 mobileDivider={false}
                 overrideHeadingAs="strong"
                 bar={false}
-                backgroundColor={isArticlePage ? GREY_2 : GHOST}
+                backgroundColor={isArticlePage ? GREY_2 : GREY_1}
               >
                 {title}
               </LabelComponent>

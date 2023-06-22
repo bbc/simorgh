@@ -118,7 +118,7 @@ exports[`CpsSocialEmbedContainer AMP should render correctly 1`] = `
   font-size: 0.875rem;
   line-height: 1rem;
   background-color: #FFFFFF;
-  border: 0.125rem solid #222222;
+  border: 0.125rem solid #202224;
   display: block;
   left: 0;
   line-height: 1;
@@ -143,7 +143,7 @@ exports[`CpsSocialEmbedContainer AMP should render correctly 1`] = `
 }
 
 .emotion-6 span {
-  color: #222222;
+  color: #202224;
 }
 
 .emotion-6:hover span,
@@ -504,7 +504,7 @@ exports[`CpsSocialEmbedContainer Canonical should render and unmount correctly 1
   font-size: 0.875rem;
   line-height: 1rem;
   background-color: #FFFFFF;
-  border: 0.125rem solid #222222;
+  border: 0.125rem solid #202224;
   display: block;
   left: 0;
   line-height: 1;
@@ -529,7 +529,7 @@ exports[`CpsSocialEmbedContainer Canonical should render and unmount correctly 1
 }
 
 .emotion-6 span {
-  color: #222222;
+  color: #202224;
 }
 
 .emotion-6:hover span,
@@ -750,7 +750,7 @@ exports[`CpsSocialEmbedContainer Canonical should render correctly without an em
   font-size: 0.875rem;
   line-height: 1rem;
   background-color: #FFFFFF;
-  border: 0.125rem solid #222222;
+  border: 0.125rem solid #202224;
   display: block;
   left: 0;
   line-height: 1;
@@ -775,7 +775,7 @@ exports[`CpsSocialEmbedContainer Canonical should render correctly without an em
 }
 
 .emotion-6 span {
-  color: #222222;
+  color: #202224;
 }
 
 .emotion-6:hover span,
@@ -801,9 +801,9 @@ exports[`CpsSocialEmbedContainer Canonical should render correctly without an em
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
-  border: 0.0625rem solid #AEAEB5;
+  border: 0.0625rem solid #B0B2B4;
   border-radius: 0.5rem;
-  color: #3F3F42;
+  color: #3A3C3E;
   padding: 1rem;
 }
 
@@ -828,7 +828,7 @@ exports[`CpsSocialEmbedContainer Canonical should render correctly without an em
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
 }

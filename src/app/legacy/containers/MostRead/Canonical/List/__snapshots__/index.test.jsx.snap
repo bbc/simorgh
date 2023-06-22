@@ -285,7 +285,7 @@ exports[`MostReadList should render with ltr bengali items with correct dir 1`] 
   font-weight: 700;
   font-style: normal;
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   margin-bottom: 0.5rem;
@@ -1169,7 +1169,7 @@ exports[`MostReadList should render with ltr burmese items with correct dir 1`] 
   font-weight: 700;
   font-style: normal;
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   margin-bottom: 0.5rem;
@@ -1970,7 +1970,7 @@ exports[`MostReadList should render with ltr news items with a max of one column
   font-weight: 500;
   font-style: normal;
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   margin-bottom: 0.5rem;
@@ -2622,7 +2622,7 @@ exports[`MostReadList should render with ltr news items with a max of two column
   font-weight: 500;
   font-style: normal;
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   margin-bottom: 0.5rem;
@@ -3400,7 +3400,7 @@ exports[`MostReadList should render with ltr news items with a multi column layo
   font-weight: 500;
   font-style: normal;
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   margin-bottom: 0.5rem;
@@ -4284,7 +4284,7 @@ exports[`MostReadList should render with ltr news items with correct dir 1`] = `
   font-weight: 500;
   font-style: normal;
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   margin-bottom: 0.5rem;
@@ -5168,7 +5168,7 @@ exports[`MostReadList should render with rtl arabic items with correct dir 1`] =
   font-weight: 700;
   font-style: normal;
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   margin-bottom: 0.5rem;

@@ -117,7 +117,7 @@ exports[`RelatedContentPromo it renders a Story Promo wrapped in a Grid componen
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
 }
 
 @media (min-width: 25rem) {
@@ -196,7 +196,7 @@ exports[`RelatedContentPromo it renders a Story Promo wrapped in a Grid componen
 }
 
 .emotion-14 {
-  color: #222222;
+  color: #202224;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -222,7 +222,7 @@ exports[`RelatedContentPromo it renders a Story Promo wrapped in a Grid componen
 
 .emotion-16 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -258,7 +258,7 @@ exports[`RelatedContentPromo it renders a Story Promo wrapped in a Grid componen
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #3A3C3E;
   margin: 0;
   padding-bottom: 0.5rem;
 }

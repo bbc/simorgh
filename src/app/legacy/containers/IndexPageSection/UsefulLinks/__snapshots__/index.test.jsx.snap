@@ -78,7 +78,7 @@ exports[`Useful links should render multiple correctly 1`] = `
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-style: normal;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -195,7 +195,7 @@ exports[`Useful links should render one correctly 1`] = `
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-style: normal;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
 }

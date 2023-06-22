@@ -13,7 +13,7 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  background-color: #323232;
+  background-color: #141414;
   border-top: solid 0.0625rem transparent;
 }
 
@@ -41,16 +41,16 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
 }
 
 .emotion-4 a {
-  color: #F6A21D;
+  color: #FFCE2B;
   -webkit-text-decoration: none;
   text-decoration: none;
-  border-bottom: solid 0.0625rem #AEAEB5;
+  border-bottom: solid 0.0625rem #B0B2B4;
 }
 
 .emotion-4 a:focus,
 .emotion-4 a:hover {
-  color: #222222;
-  background-color: #F6A21D;
+  color: #202224;
+  background-color: #FFCE2B;
 }
 
 .emotion-4 a:hover,
@@ -90,7 +90,7 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
   line-height: 1.25rem;
   margin-top: 1rem;
   margin-bottom: 1.5rem;
-  color: #BEBEBE;
+  color: #F6F6F6;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -127,7 +127,7 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  color: #F6A21D;
+  color: #FFCE2B;
   font-weight: 600;
   padding: 0;
   margin: 0;
@@ -192,9 +192,9 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
   line-height: 1.125rem;
   width: 100%;
   min-height: 2.75rem;
-  color: #222222;
+  color: #202224;
   font-weight: bold;
-  background-color: #FDFDFD;
+  background-color: #FEFEFE;
   border: solid 0.0625rem transparent;
   margin: 0;
   cursor: pointer;
@@ -216,8 +216,8 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
 
 .emotion-12 button:focus,
 .emotion-12 button:hover {
-  color: #222222;
-  background-color: #F6A21D;
+  color: #202224;
+  background-color: #FFCE2B;
 }
 
 .emotion-12 button:hover,
@@ -317,7 +317,7 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
-  background-color: #323232;
+  background-color: #141414;
   border-top: solid 0.0625rem transparent;
 }
 
@@ -345,16 +345,16 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
 }
 
 .emotion-4 a {
-  color: #F6A21D;
+  color: #FFCE2B;
   -webkit-text-decoration: none;
   text-decoration: none;
-  border-bottom: solid 0.0625rem #AEAEB5;
+  border-bottom: solid 0.0625rem #B0B2B4;
 }
 
 .emotion-4 a:focus,
 .emotion-4 a:hover {
-  color: #222222;
-  background-color: #F6A21D;
+  color: #202224;
+  background-color: #FFCE2B;
 }
 
 .emotion-4 a:hover,
@@ -394,7 +394,7 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
   line-height: 1.5rem;
   margin-top: 1rem;
   margin-bottom: 1.5rem;
-  color: #BEBEBE;
+  color: #F6F6F6;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -431,7 +431,7 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  color: #F6A21D;
+  color: #FFCE2B;
   font-weight: 600;
   padding: 0;
   margin: 0;
@@ -496,9 +496,9 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
   line-height: 1.375rem;
   width: 100%;
   min-height: 2.75rem;
-  color: #222222;
+  color: #202224;
   font-weight: bold;
-  background-color: #FDFDFD;
+  background-color: #FEFEFE;
   border: solid 0.0625rem transparent;
   margin: 0;
   cursor: pointer;
@@ -520,8 +520,8 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
 
 .emotion-12 button:focus,
 .emotion-12 button:hover {
-  color: #222222;
-  background-color: #F6A21D;
+  color: #202224;
+  background-color: #FFCE2B;
 }
 
 .emotion-12 button:hover,
@@ -621,7 +621,7 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  background-color: #323232;
+  background-color: #141414;
   border-top: solid 0.0625rem transparent;
 }
 
@@ -649,16 +649,16 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
 }
 
 .emotion-4 a {
-  color: #F6A21D;
+  color: #FFCE2B;
   -webkit-text-decoration: none;
   text-decoration: none;
-  border-bottom: solid 0.0625rem #AEAEB5;
+  border-bottom: solid 0.0625rem #B0B2B4;
 }
 
 .emotion-4 a:focus,
 .emotion-4 a:hover {
-  color: #222222;
-  background-color: #F6A21D;
+  color: #202224;
+  background-color: #FFCE2B;
 }
 
 .emotion-4 a:hover,
@@ -698,7 +698,7 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
   line-height: 1.25rem;
   margin-top: 1rem;
   margin-bottom: 1.5rem;
-  color: #BEBEBE;
+  color: #F6F6F6;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -735,7 +735,7 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  color: #F6A21D;
+  color: #FFCE2B;
   font-weight: 600;
   padding: 0;
   margin: 0;
@@ -800,9 +800,9 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
   line-height: 1.125rem;
   width: 100%;
   min-height: 2.75rem;
-  color: #222222;
+  color: #202224;
   font-weight: bold;
-  background-color: #FDFDFD;
+  background-color: #FEFEFE;
   border: solid 0.0625rem transparent;
   margin: 0;
   cursor: pointer;
@@ -824,8 +824,8 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
 
 .emotion-12 button:focus,
 .emotion-12 button:hover {
-  color: #222222;
-  background-color: #F6A21D;
+  color: #202224;
+  background-color: #FFCE2B;
 }
 
 .emotion-12 button:hover,
@@ -918,7 +918,7 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
-  background-color: #323232;
+  background-color: #141414;
   border-top: solid 0.0625rem transparent;
 }
 
@@ -946,16 +946,16 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
 }
 
 .emotion-4 a {
-  color: #F6A21D;
+  color: #FFCE2B;
   -webkit-text-decoration: none;
   text-decoration: none;
-  border-bottom: solid 0.0625rem #AEAEB5;
+  border-bottom: solid 0.0625rem #B0B2B4;
 }
 
 .emotion-4 a:focus,
 .emotion-4 a:hover {
-  color: #222222;
-  background-color: #F6A21D;
+  color: #202224;
+  background-color: #FFCE2B;
 }
 
 .emotion-4 a:hover,
@@ -995,7 +995,7 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
   line-height: 1.5rem;
   margin-top: 1rem;
   margin-bottom: 1.5rem;
-  color: #BEBEBE;
+  color: #F6F6F6;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1032,7 +1032,7 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  color: #F6A21D;
+  color: #FFCE2B;
   font-weight: 600;
   padding: 0;
   margin: 0;
@@ -1097,9 +1097,9 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
   line-height: 1.375rem;
   width: 100%;
   min-height: 2.75rem;
-  color: #222222;
+  color: #202224;
   font-weight: bold;
-  background-color: #FDFDFD;
+  background-color: #FEFEFE;
   border: solid 0.0625rem transparent;
   margin: 0;
   cursor: pointer;
@@ -1121,8 +1121,8 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
 
 .emotion-12 button:focus,
 .emotion-12 button:hover {
-  color: #222222;
-  background-color: #F6A21D;
+  color: #202224;
+  background-color: #FFCE2B;
 }
 
 .emotion-12 button:hover,

@@ -28,7 +28,7 @@ import TextGridItem from './TextStyles';
 
 const bulletinWrapperStyles = ({ theme }) => `
   position: relative;
-  background-color: ${theme.palette.LUNAR};
+  background-color: ${theme.palette.GREY_2};
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-column-gap: ${`${theme.spacings.DOUBLE}rem`};
@@ -36,7 +36,7 @@ const bulletinWrapperStyles = ({ theme }) => `
 
 const RadioBulletinWrapper = styled.div`
   ${bulletinWrapperStyles};
-  background-color: ${props => props.theme.palette.LUNAR};
+  background-color: ${props => props.theme.palette.GREY_2};
 `;
 
 const TVBulletinWrapper = styled.div`
@@ -47,7 +47,7 @@ const TVBulletinWrapper = styled.div`
 `;
 
 const headingStyles = ({ service, theme }) => `
-  color: ${theme.palette.EBON};
+  color: ${theme.palette.GREY_8};
   margin: 0; /* Reset */
   padding: ${GEL_SPACING};
   ${service && getSerifMedium(service)}
@@ -107,7 +107,7 @@ const bulletinSummaryStyles = {
 };
 
 const BulletinSummary = styled.p`
-  color: ${props => props.theme.palette.SHADOW};
+  color: ${props => props.theme.palette.GREY_7};
   margin: 0; /* Reset */
   padding: 0 ${GEL_SPACING} ${GEL_SPACING_DBL};
   ${({ script }) => script && getLongPrimer(script)}
@@ -154,7 +154,7 @@ const playCtaStyles = {
 const PlayCTA = styled.div`
   background-color: ${({ isLive }) =>
     props =>
-      isLive ? props.theme.palette.POSTBOX : props.theme.palette.EBON};
+      isLive ? props.theme.palette.NEWS_CORE : props.theme.palette.GREY_8};
   border: 0.0625rem solid transparent;
   color: ${props => props.theme.palette.WHITE};
   padding: 0.75rem;

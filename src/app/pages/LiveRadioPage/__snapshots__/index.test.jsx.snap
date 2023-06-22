@@ -320,7 +320,7 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
@@ -778,7 +778,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 }
 
 .emotion-22 {
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   padding: 0 1rem;
   content-visibility: auto;
   contain-intrinsic-size: 59.375rem;
@@ -893,7 +893,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;
@@ -1189,7 +1189,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 }
 
 .emotion-47>svg {
-  color: #5A5A5A;
+  color: #545658;
   margin: 0;
   overflow: visible;
 }
@@ -1203,7 +1203,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 .emotion-49 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.725rem;
   height: 0.725rem;
@@ -1225,7 +1225,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 }
 
 .emotion-51>time {
-  color: #5A5A5A;
+  color: #545658;
   font-size: 0.75rem;
   line-height: 1rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1249,7 +1249,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 
 .emotion-51::after {
   content: '';
-  border-top: 0.0625rem solid #AEAEB5;
+  border-top: 0.0625rem solid #B0B2B4;
   top: 1rem;
   margin-left: 0.625rem;
   width: 100%;
@@ -1307,7 +1307,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
-  color: #222222;
+  color: #202224;
   margin: 0;
 }
 
@@ -1327,7 +1327,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 
 .emotion-61 {
   position: static;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -1378,7 +1378,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 }
 
 .emotion-65 {
-  color: #3F3F42;
+  color: #3A3C3E;
   padding: 0.5rem 0 0 0;
   display: inline-block;
   width: 100%;
@@ -1436,7 +1436,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   font-size: 0.75rem;
   line-height: 1rem;
   padding: 0.5rem;
-  background-color: #222222;
+  background-color: #202224;
   outline: 0.0625rem solid transparent;
   color: #FFFFFF;
 }
@@ -1479,7 +1479,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 .emotion-74 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -1519,7 +1519,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
-  color: #11708C;
+  color: #006666;
   display: inline-block;
   margin-right: 0.5rem;
 }
@@ -1573,7 +1573,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   padding: 0.5rem;
   background-color: #FFFFFF;
   outline: 0.0625rem solid transparent;
-  color: #11708C;
+  color: #006666;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1598,7 +1598,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 }
 
 .emotion-186>svg {
-  color: #11708C;
+  color: #006666;
   fill: currentColor;
   width: 1.0625rem;
   height: 0.75rem;

@@ -2,7 +2,7 @@
 
 exports[`Story Promo Media Indicator should render a photo gallery item correctly 1`] = `
 .emotion-0 {
-  color: #222222;
+  color: #202224;
   background-color: #FFFFFF;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -41,7 +41,7 @@ exports[`Story Promo Media Indicator should render a photo gallery item correctl
 .emotion-4 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 1rem;
   height: 0.8125rem;
@@ -81,7 +81,7 @@ exports[`Story Promo Media Indicator should render a photo gallery item correctl
 
 exports[`Story Promo Media Indicator should render a video item correctly 1`] = `
 .emotion-0 {
-  color: #222222;
+  color: #202224;
   background-color: #FFFFFF;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -120,7 +120,7 @@ exports[`Story Promo Media Indicator should render a video item correctly 1`] = 
 .emotion-4 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -175,7 +175,7 @@ exports[`Story Promo Media Indicator should render a video item correctly 1`] = 
 
 exports[`Story Promo Media Indicator should render an audio item correctly 1`] = `
 .emotion-0 {
-  color: #222222;
+  color: #202224;
   background-color: #FFFFFF;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -214,7 +214,7 @@ exports[`Story Promo Media Indicator should render an audio item correctly 1`] =
 .emotion-4 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -262,7 +262,7 @@ exports[`Story Promo Media Indicator should render an audio item correctly 1`] =
 
 exports[`Story Promo Media Indicator should render correctly even without duration 1`] = `
 .emotion-0 {
-  color: #222222;
+  color: #202224;
   background-color: #FFFFFF;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -301,7 +301,7 @@ exports[`Story Promo Media Indicator should render correctly even without durati
 .emotion-4 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -346,7 +346,7 @@ exports[`Story Promo Media Indicator should render correctly even without durati
 
 exports[`Story Promo Media Indicator should render video indicator correctly when inline 1`] = `
 .emotion-0 {
-  color: #222222;
+  color: #202224;
   background-color: #FFFFFF;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -387,7 +387,7 @@ exports[`Story Promo Media Indicator should render video indicator correctly whe
 .emotion-4 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -432,7 +432,7 @@ exports[`Story Promo Media Indicator should render video indicator correctly whe
 
 exports[`Story Promo Media Indicator should render video indicator correctly when inline on RTL 1`] = `
 .emotion-0 {
-  color: #222222;
+  color: #202224;
   background-color: #FFFFFF;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
@@ -473,7 +473,7 @@ exports[`Story Promo Media Indicator should render video indicator correctly whe
 .emotion-4 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;

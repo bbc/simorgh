@@ -43,7 +43,7 @@ const RecentVideoEpisodes = ({ masterBrand, episodes }) => {
   const { isAmp, variant } = useContext(RequestContext);
 
   const {
-    palette: { MIDNIGHT_BLACK },
+    palette: { GREY_10 },
   } = useTheme();
 
   if (!episodes.length) return null;
@@ -79,7 +79,7 @@ const RecentVideoEpisodes = ({ masterBrand, episodes }) => {
         script={script}
         service={service}
         dir={dir}
-        backgroundColor={MIDNIGHT_BLACK}
+        backgroundColor={GREY_10}
         labelId="recent-episodes"
       >
         {recentEpisodesTranslation}

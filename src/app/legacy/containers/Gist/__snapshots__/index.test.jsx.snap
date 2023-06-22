@@ -339,7 +339,7 @@ exports[`Gist should render the gist with multiple list items 1`] = `
 }
 
 .emotion-20 {
-  color: #222222;
+  color: #202224;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;

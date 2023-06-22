@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 import { string, shape, node, func } from 'prop-types';
 import styled from '@emotion/styled';
-import { LUNAR } from '#app/components/ThemeProvider/palette';
+import { GREY_2 } from '#app/components/ThemeProvider/palette';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,
@@ -49,7 +49,7 @@ const SingleTopicTagItem = styled.div`
       theme.isDarkUi ? theme.palette.GREY_7 : backgroundColour};
     text-decoration: none;
     color: ${({ theme }) =>
-      theme.isDarkUi ? theme.palette.GREY_2 : theme.palette.EBON};
+      theme.isDarkUi ? theme.palette.GREY_2 : theme.palette.GREY_8};
 
     &:hover,
     &:focus {
@@ -129,5 +129,5 @@ TopicTags.propTypes = {
 
 TopicTags.defaultProps = {
   children: [],
-  tagBackgroundColour: LUNAR,
+  tagBackgroundColour: GREY_2,
 };

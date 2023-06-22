@@ -25,12 +25,12 @@ const FILL_VIEWPORT_STYLES = `
 const StyledEmbedError = styled.div`
   ${({ service }) => getSansRegular(service)}
   ${GEL_BODY_COPY};
-  background-color: ${props => props.theme.palette.LUNAR};
+  background-color: ${props => props.theme.palette.GREY_2};
   background-image: url(data:image/svg+xml;base64,${BBC_BLOCKS});
   background-position: center ${GEL_SPACING_TRPL};
   background-repeat: no-repeat;
   background-size: ${BBC_BLOCKS_WIDTH};
-  color: ${props => props.theme.palette.SHADOW};
+  color: ${props => props.theme.palette.GREY_7};
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -49,7 +49,7 @@ const StyledErrorMessage = styled.div`
 
   a {
     ${({ service }) => getSansBold(service)}
-    color: ${props => props.theme.palette.EBON};
+    color: ${props => props.theme.palette.GREY_8};
     display: block;
     margin-top: ${GEL_SPACING};
     text-decoration: none;

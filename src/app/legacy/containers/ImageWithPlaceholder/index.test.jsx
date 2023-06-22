@@ -1,5 +1,5 @@
 import React from 'react';
-import { GHOST } from '../../../components/ThemeProvider/palette';
+import { GREY_1 } from '../../../components/ThemeProvider/palette';
 import {
   render,
   waitFor,
@@ -63,7 +63,7 @@ describe('ImageWithPlaceholder', () => {
 
     await waitFor(() => {
       expect(document.querySelector('amp-img')).toHaveStyle({
-        backgroundColor: `${GHOST}`,
+        backgroundColor: `${GREY_1}`,
       });
     });
   });
@@ -73,7 +73,7 @@ describe('ImageWithPlaceholder', () => {
 
     await waitFor(() => {
       expect(document.querySelector('amp-img')).not.toHaveStyle({
-        backgroundColor: `${GHOST}`,
+        backgroundColor: `${GREY_1}`,
       });
     });
   });

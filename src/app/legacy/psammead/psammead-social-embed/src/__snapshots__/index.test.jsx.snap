@@ -12,7 +12,7 @@ exports[`AmpSocialEmbed should render a notice when the provider is unsupported 
   font-size: 0.875rem;
   line-height: 1rem;
   background-color: #FFFFFF;
-  border: 0.125rem solid #222222;
+  border: 0.125rem solid #202224;
   display: block;
   left: 0;
   line-height: 1;
@@ -37,7 +37,7 @@ exports[`AmpSocialEmbed should render a notice when the provider is unsupported 
 }
 
 .emotion-2 span {
-  color: #222222;
+  color: #202224;
 }
 
 .emotion-2:hover span,
@@ -63,9 +63,9 @@ exports[`AmpSocialEmbed should render a notice when the provider is unsupported 
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
-  border: 0.0625rem solid #AEAEB5;
+  border: 0.0625rem solid #B0B2B4;
   border-radius: 0.5rem;
-  color: #3F3F42;
+  color: #3A3C3E;
   padding: 1rem;
 }
 
@@ -90,7 +90,7 @@ exports[`AmpSocialEmbed should render a notice when the provider is unsupported 
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -174,7 +174,7 @@ exports[`AmpSocialEmbed should render correctly for Facebook 1`] = `
   font-size: 0.875rem;
   line-height: 1rem;
   background-color: #FFFFFF;
-  border: 0.125rem solid #222222;
+  border: 0.125rem solid #202224;
   display: block;
   left: 0;
   line-height: 1;
@@ -199,7 +199,7 @@ exports[`AmpSocialEmbed should render correctly for Facebook 1`] = `
 }
 
 .emotion-2 span {
-  color: #222222;
+  color: #202224;
 }
 
 .emotion-2:hover span,
@@ -446,7 +446,7 @@ exports[`AmpSocialEmbed should render correctly for Instagram 1`] = `
   font-size: 0.875rem;
   line-height: 1rem;
   background-color: #FFFFFF;
-  border: 0.125rem solid #222222;
+  border: 0.125rem solid #202224;
   display: block;
   left: 0;
   line-height: 1;
@@ -471,7 +471,7 @@ exports[`AmpSocialEmbed should render correctly for Instagram 1`] = `
 }
 
 .emotion-2 span {
-  color: #222222;
+  color: #202224;
 }
 
 .emotion-2:hover span,
@@ -719,7 +719,7 @@ exports[`AmpSocialEmbed should render correctly for Twitter 1`] = `
   font-size: 0.875rem;
   line-height: 1rem;
   background-color: #FFFFFF;
-  border: 0.125rem solid #222222;
+  border: 0.125rem solid #202224;
   display: block;
   left: 0;
   line-height: 1;
@@ -744,7 +744,7 @@ exports[`AmpSocialEmbed should render correctly for Twitter 1`] = `
 }
 
 .emotion-2 span {
-  color: #222222;
+  color: #202224;
 }
 
 .emotion-2:hover span,
@@ -991,7 +991,7 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
   font-size: 0.875rem;
   line-height: 1rem;
   background-color: #FFFFFF;
-  border: 0.125rem solid #222222;
+  border: 0.125rem solid #202224;
   display: block;
   left: 0;
   line-height: 1;
@@ -1016,7 +1016,7 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
 }
 
 .emotion-2 span {
-  color: #222222;
+  color: #202224;
 }
 
 .emotion-2:hover span,
@@ -1312,7 +1312,7 @@ exports[`CanonicalSocialEmbed Instagram should render correctly for Instagram 1`
   font-size: 0.875rem;
   line-height: 1rem;
   background-color: #FFFFFF;
-  border: 0.125rem solid #222222;
+  border: 0.125rem solid #202224;
   display: block;
   left: 0;
   line-height: 1;
@@ -1337,7 +1337,7 @@ exports[`CanonicalSocialEmbed Instagram should render correctly for Instagram 1`
 }
 
 .emotion-2 span {
-  color: #222222;
+  color: #202224;
 }
 
 .emotion-2:hover span,
@@ -1590,7 +1590,7 @@ exports[`CanonicalSocialEmbed Twitter should render correctly for Twitter 1`] = 
   font-size: 0.875rem;
   line-height: 1rem;
   background-color: #FFFFFF;
-  border: 0.125rem solid #222222;
+  border: 0.125rem solid #202224;
   display: block;
   left: 0;
   line-height: 1;
@@ -1615,7 +1615,7 @@ exports[`CanonicalSocialEmbed Twitter should render correctly for Twitter 1`] = 
 }
 
 .emotion-2 span {
-  color: #222222;
+  color: #202224;
 }
 
 .emotion-2:hover span,
@@ -1721,7 +1721,7 @@ exports[`CanonicalSocialEmbed YouTube should render correctly for YouTube 1`] = 
   font-size: 0.875rem;
   line-height: 1rem;
   background-color: #FFFFFF;
-  border: 0.125rem solid #222222;
+  border: 0.125rem solid #202224;
   display: block;
   left: 0;
   line-height: 1;
@@ -1746,7 +1746,7 @@ exports[`CanonicalSocialEmbed YouTube should render correctly for YouTube 1`] = 
 }
 
 .emotion-2 span {
-  color: #222222;
+  color: #202224;
 }
 
 .emotion-2:hover span,
@@ -1895,7 +1895,7 @@ exports[`CanonicalSocialEmbed should render a notice when the provider is unsupp
   font-size: 0.875rem;
   line-height: 1rem;
   background-color: #FFFFFF;
-  border: 0.125rem solid #222222;
+  border: 0.125rem solid #202224;
   display: block;
   left: 0;
   line-height: 1;
@@ -1920,7 +1920,7 @@ exports[`CanonicalSocialEmbed should render a notice when the provider is unsupp
 }
 
 .emotion-2 span {
-  color: #222222;
+  color: #202224;
 }
 
 .emotion-2:hover span,
@@ -1946,9 +1946,9 @@ exports[`CanonicalSocialEmbed should render a notice when the provider is unsupp
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
-  border: 0.0625rem solid #AEAEB5;
+  border: 0.0625rem solid #B0B2B4;
   border-radius: 0.5rem;
-  color: #3F3F42;
+  color: #3A3C3E;
   padding: 1rem;
 }
 
@@ -1973,7 +1973,7 @@ exports[`CanonicalSocialEmbed should render a notice when the provider is unsupp
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -2058,7 +2058,7 @@ exports[`CanonicalSocialEmbed should render a notice when there is no oEmbed res
   font-size: 0.875rem;
   line-height: 1rem;
   background-color: #FFFFFF;
-  border: 0.125rem solid #222222;
+  border: 0.125rem solid #202224;
   display: block;
   left: 0;
   line-height: 1;
@@ -2083,7 +2083,7 @@ exports[`CanonicalSocialEmbed should render a notice when there is no oEmbed res
 }
 
 .emotion-2 span {
-  color: #222222;
+  color: #202224;
 }
 
 .emotion-2:hover span,
@@ -2109,9 +2109,9 @@ exports[`CanonicalSocialEmbed should render a notice when there is no oEmbed res
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
-  border: 0.0625rem solid #AEAEB5;
+  border: 0.0625rem solid #B0B2B4;
   border-radius: 0.5rem;
-  color: #3F3F42;
+  color: #3A3C3E;
   padding: 1rem;
 }
 
@@ -2136,7 +2136,7 @@ exports[`CanonicalSocialEmbed should render a notice when there is no oEmbed res
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  color: #222222;
+  color: #202224;
   -webkit-text-decoration: none;
   text-decoration: none;
 }

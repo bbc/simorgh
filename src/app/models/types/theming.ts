@@ -1,59 +1,27 @@
 export interface BrandPalette {
   BRAND_BACKGROUND: string;
   BRAND_LOGO: string;
-  BRAND_FOREGROUND: string;
-  BRAND_HIGHLIGHT: string;
-  BRAND_BORDER: string;
 }
 
 interface Palette extends BrandPalette {
   ARCHIVE_BLUE: string;
   BLACK: string;
-  BLUEJAY: string;
-  BLUEJAY_LHT: string;
-  CHALK: string;
-  CLOUD_DARK: string;
-  CLOUD_LIGHT: string;
-  CONSENT_ACTION: string;
-  CONSENT_BACKGROUND: string;
-  CONSENT_CONTENT: string;
-  CONSENT_FOCUS: string;
-  DARK_SALTIRE: string;
-  DIM_GREY: string;
-  EBON: string;
-  GHOST: string;
+  ALERT_LIGHT: string;
+  GREY_1: string;
   GREY_10: string;
-  GREY_11: string;
   GREY_2: string;
-  GREY_3: string;
   GREY_4: string;
   GREY_5: string;
   GREY_6: string;
   GREY_7: string;
   GREY_8: string;
-  KINGFISHER: string;
-  LE_TEAL: string;
-  LUNAR: string;
-  LUNAR_LIGHT: string;
+  LIVE_DARK: string;
   METAL: string;
-  MIDNIGHT_BLACK: string;
   NEWSROUND_PURPLE: string;
-  NEWSROUND_PURPLE_30: string;
-  OAT_LHT: string;
-  ORBIT_GREY: string;
-  PEBBLE: string;
-  PHILIPPINE_GREY: string;
-  POSTBOX: string;
-  POSTBOX_30: string;
-  RHINO: string;
-  SHADOW: string;
-  SPORT_MIST: string;
-  SPORT_SILVER: string;
-  SPORT_YELLOW: string;
-  SPORT_YELLOW_30: string;
+  NEWS_CORE: string;
+  GREY_3: string;
+  SPORT_CORE: string;
   STONE: string;
-  STORM: string;
-  WEATHER_BLUE: string;
   WHITE: string;
 }
 

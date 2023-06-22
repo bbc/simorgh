@@ -167,7 +167,7 @@ exports[`Media Player: Canonical Entry should render a landscape container with 
 }
 
 .emotion-9 {
-  background-color: #222222;
+  background-color: #202224;
   border: none;
   color: #FFFFFF;
   cursor: pointer;
@@ -215,7 +215,7 @@ exports[`Media Player: Canonical Entry should render a landscape container with 
 .emotion-14 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -374,7 +374,7 @@ exports[`Media Player: Canonical Entry should render a placeholder image with gu
 }
 
 .emotion-11 {
-  background-color: #222222;
+  background-color: #202224;
   border: none;
   color: #FFFFFF;
   cursor: pointer;
@@ -422,7 +422,7 @@ exports[`Media Player: Canonical Entry should render a placeholder image with gu
 .emotion-16 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -561,7 +561,7 @@ exports[`Media Player: Canonical Entry should render a portrait container with a
 }
 
 .emotion-9 {
-  background-color: #222222;
+  background-color: #202224;
   border: none;
   color: #FFFFFF;
   cursor: pointer;
@@ -609,7 +609,7 @@ exports[`Media Player: Canonical Entry should render a portrait container with a
 .emotion-14 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -863,7 +863,7 @@ exports[`Media Player: Canonical Entry should render with no-js styles when noJs
 }
 
 .emotion-11 {
-  background-color: #222222;
+  background-color: #202224;
   border: none;
   color: #FFFFFF;
   cursor: pointer;
@@ -915,7 +915,7 @@ exports[`Media Player: Canonical Entry should render with no-js styles when noJs
 .emotion-16 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  color: #222222;
+  color: #202224;
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
@@ -1037,7 +1037,7 @@ exports[`Media Player: Canonical Entry should show a loading image before the pl
   position: relative;
   height: 0;
   overflow: hidden;
-  background-color: #F2F2F2;
+  background-color: #F6F6F6;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;

@@ -40,7 +40,7 @@ const StyledAnchor = styled.a`
     .rounded-play-button__ring,
     .rounded-play-button__inner {
       fill: currentColor;
-      color: ${props => props.theme.palette.POSTBOX};
+      color: ${props => props.theme.palette.NEWS_CORE};
     }
     .rounded-play-button__triangle {
       fill: transparent;

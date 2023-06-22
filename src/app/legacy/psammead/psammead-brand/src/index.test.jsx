@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import ScriptLink from '#psammead/psammead-script-link/src';
-import { POSTBOX, WHITE } from '../../../../components/ThemeProvider/palette';
+import { NEWS_CORE, WHITE } from '../../../../components/ThemeProvider/palette';
 import { render } from '../../../../components/react-testing-library-with-providers';
 import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import Brand from '.';
@@ -30,7 +30,7 @@ describe('Brand', () => {
         minWidth={180}
         svg={svg}
         url="https://www.bbc.co.uk/news"
-        backgroundColour={POSTBOX}
+        backgroundColour={NEWS_CORE}
         logoColour={WHITE}
       />,
     );
@@ -46,7 +46,7 @@ describe('Brand', () => {
         svgHeight={24}
         maxWidth={280}
         minWidth={180}
-        backgroundColour={POSTBOX}
+        backgroundColour={NEWS_CORE}
         logoColour={WHITE}
       />,
     );
@@ -61,7 +61,7 @@ describe('Brand', () => {
         svgHeight={24}
         maxWidth={280}
         minWidth={180}
-        backgroundColour={POSTBOX}
+        backgroundColour={NEWS_CORE}
         logoColour={WHITE}
       />,
     );
@@ -78,7 +78,7 @@ describe('Brand', () => {
         minWidth={180}
         borderTop
         borderBottom
-        backgroundColour={POSTBOX}
+        backgroundColour={NEWS_CORE}
         logoColour={WHITE}
       />,
     );
@@ -96,7 +96,7 @@ describe('Brand', () => {
           minWidth={180}
           svg={svg}
           url="https://www.bbc.co.uk/news"
-          backgroundColour={POSTBOX}
+          backgroundColour={NEWS_CORE}
           logoColour={WHITE}
         />,
       );
@@ -115,7 +115,7 @@ describe('Brand', () => {
           minWidth={180}
           svg={svg}
           url="https://www.bbc.co.uk/news"
-          backgroundColour={POSTBOX}
+          backgroundColour={NEWS_CORE}
           logoColour={WHITE}
         />,
       );
@@ -132,7 +132,7 @@ describe('Brand', () => {
           minWidth={180}
           svg={svg}
           url="https://www.bbc.co.uk/news"
-          backgroundColour={POSTBOX}
+          backgroundColour={NEWS_CORE}
           logoColour={WHITE}
           data-brand="header"
         />,
@@ -159,7 +159,7 @@ describe('Brand', () => {
             minWidth={180}
             svg={svg}
             url="https://www.bbc.co.uk/news"
-            backgroundColour={POSTBOX}
+            backgroundColour={NEWS_CORE}
             logoColour={WHITE}
             data-brand="header"
             ref={brandRef}
@@ -185,7 +185,7 @@ describe('Brand', () => {
           minWidth={180}
           borderTop
           borderBottom
-          backgroundColour={POSTBOX}
+          backgroundColour={NEWS_CORE}
           logoColour={WHITE}
           linkId="brandLink"
         />,
@@ -220,7 +220,7 @@ describe('Brand', () => {
           minWidth={180}
           svg={svg}
           url="https://www.bbc.co.uk/news"
-          backgroundColour={POSTBOX}
+          backgroundColour={NEWS_CORE}
           logoColour={WHITE}
           skipLink={skipLink}
           data-brand="header"
