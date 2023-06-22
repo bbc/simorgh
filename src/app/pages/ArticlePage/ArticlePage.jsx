@@ -22,7 +22,6 @@ import Blocks from '#containers/Blocks';
 import Timestamp from '#containers/ArticleTimestamp';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import articleMediaPlayer from '#containers/ArticleMediaPlayer';
-import MostReadSection from '#containers/MostRead/section';
 import SocialEmbedContainer from '#containers/SocialEmbed';
 import AdContainer from '#containers/Ad';
 import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
@@ -112,7 +111,7 @@ const ArticlePage = ({ pageData }) => {
   const embedProviderName = path(['model', 'provider'], embedBlock);
   const isUgcUploader = embedProviderName === 'ugc-uploader';
 
-  const mostReadInitialData = path(['secondaryColumn', 'mostRead'], pageData);
+  const { mostRead: mostReadInitialData } = pageData;
 
   const componentsToRender = {
     visuallyHiddenHeadline,
@@ -238,14 +237,15 @@ const ArticlePage = ({ pageData }) => {
         {!isApp && <SecondaryColumn pageData={pageData} />}
       </div>
       {!isApp && (
-        <MostReadSection css={styles.mostReadSection}>
+        <div css={styles.mostReadSection}>
           <MostRead
             data={mostReadInitialData}
             columnLayout="multiColumn"
             size="default"
             headingBackgroundColour={GREY_2}
+            mobileDivider={showRelatedTopics && topics}
           />
-        </MostReadSection>
+        </div>
       )}
     </div>
   );
