@@ -19,12 +19,12 @@ interface Props {
   isApp?: boolean;
   pageData?: object;
   atiData?: {
-    analytics: {
-      contentId: string;
-      contentType: string;
-      pageIdentifier: string;
+    analytics?: {
+      contentId?: string;
+      contentType?: string;
+      pageIdentifier?: string;
     };
-    title: string;
+    title?: string;
   };
   pageType?: PageTypes;
   derivedPageType?: string | null;

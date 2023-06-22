@@ -107,7 +107,6 @@ describe('Expected use', () => {
 
     const testEl = screen.getByTestId('test-component');
     const trackingData = JSON.parse(testEl.textContent as string);
-    console.log('THE DATA IS...', trackingData);
 
     expect(trackingData).toEqual({
       campaignID: 'article-sty',
