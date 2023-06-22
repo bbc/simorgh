@@ -121,7 +121,7 @@ const StyledCardLink = styled(PromoComponent.Card.Link)`
   }
 `;
 
-const Promo = props => {
+const Promo = () => {
   const { podcastPromo, script, service, dir } = useContext(ServiceContext);
 
   const {
@@ -160,7 +160,7 @@ const Promo = props => {
   };
 
   return (
-    <ResponsivePodcastPromoWrapper ref={viewTrackerRef} dir={dir} {...props}>
+    <ResponsivePodcastPromoWrapper ref={viewTrackerRef} dir={dir}>
       <StyledPromoComponent
         script={script}
         service={service}
