@@ -1,7 +1,10 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-console */
 import React, { PropsWithChildren, useContext } from 'react';
-import { render, screen } from '@testing-library/react';
+import {
+  render,
+  screen,
+} from '../../components/react-testing-library-with-providers';
 
 import { RequestContextProvider } from '../RequestContext';
 import { ToggleContextProvider } from '../ToggleContext';
@@ -90,18 +93,25 @@ const TestComponent = () => {
 
 describe('Expected use', () => {
   it('should provide tracking data to all child components', () => {
-    render(
-      <Wrapper pageData={fixtureData}>
-        <TestComponent />
-      </Wrapper>,
-    );
+    render(<TestComponent />, {
+      pageData: fixtureData,
+      service: 'pidgin',
+      toggles: {
+        eventTracking: {
+          enabled: true,
+        },
+      },
+      pageType: 'STY',
+      pathname: '/pidgin/tori-51745682',
+    });
 
     const testEl = screen.getByTestId('test-component');
     const trackingData = JSON.parse(testEl.textContent as string);
+    console.log('THE DATA IS...', trackingData);
 
     expect(trackingData).toEqual({
       campaignID: 'article-sty',
-      pageIdentifier: 'news::pidgin.news.story.51745682.page',
+      pageIdentifier: 'kyrgyz.page',
       platform: 'canonical',
       producerId: '70',
       statsDestination: 'WS_NEWS_LANGUAGES_TEST',
@@ -109,16 +119,17 @@ describe('Expected use', () => {
   });
 
   it('should provide tracking data to all child components using the ATI metadata block', () => {
-    render(
-      <Wrapper
-        atiData={defaultATIData}
-        pageType={HOME_PAGE}
-        pathname="/kyrgyz"
-        service="kyrgyz"
-      >
-        <TestComponent />
-      </Wrapper>,
-    );
+    render(<TestComponent />, {
+      atiData: defaultATIData,
+      pageType: HOME_PAGE,
+      pathname: '/kyrgyz',
+      service: 'kyrgyz',
+      toggles: {
+        eventTracking: {
+          enabled: true,
+        },
+      },
+    });
 
     const testEl = screen.getByTestId('test-component');
     const trackingData = JSON.parse(testEl.textContent as string);
@@ -139,11 +150,10 @@ describe('Expected use', () => {
       },
     };
 
-    render(
-      <Wrapper pageData={fixtureData} toggles={eventTrackingToggle}>
-        <TestComponent />
-      </Wrapper>,
-    );
+    render(<TestComponent />, {
+      pageData: fixtureData,
+      toggles: eventTrackingToggle,
+    });
 
     const testEl = screen.getByTestId('test-component');
     const trackingData = JSON.parse(testEl.textContent as string);
@@ -158,11 +168,9 @@ describe('Expected use', () => {
       },
     };
 
-    render(
-      <Wrapper toggles={eventTrackingToggle}>
-        <TestComponent />
-      </Wrapper>,
-    );
+    render(<TestComponent />, {
+      toggles: eventTrackingToggle,
+    });
 
     const testEl = screen.getByTestId('test-component');
     const trackingData = JSON.parse(testEl.textContent as string);
@@ -171,11 +179,9 @@ describe('Expected use', () => {
   });
 
   it('should provide an empty object for NextJS pages if pageData and atiData are missing', () => {
-    render(
-      <Wrapper isNextJs>
-        <TestComponent />
-      </Wrapper>,
-    );
+    render(<TestComponent />, {
+      isNextJs: true,
+    });
 
     const testEl = screen.getByTestId('test-component');
     const trackingData = JSON.parse(testEl.textContent as string);
@@ -184,11 +190,10 @@ describe('Expected use', () => {
   });
 
   it('should provide an empty object for NextJS pages if pageData is provided', () => {
-    render(
-      <Wrapper pageData={fixtureData} isNextJs>
-        <TestComponent />
-      </Wrapper>,
-    );
+    render(<TestComponent />, {
+      isNextJs: true,
+      pageData: fixtureData,
+    });
 
     const testEl = screen.getByTestId('test-component');
     const trackingData = JSON.parse(testEl.textContent as string);
@@ -197,17 +202,13 @@ describe('Expected use', () => {
   });
 
   it('should provide an empty object for NextJS pages if atiData is provided', () => {
-    render(
-      <Wrapper
-        atiData={defaultATIData}
-        pageType={HOME_PAGE}
-        pathname="/kyrgyz"
-        service="kyrgyz"
-        isNextJs
-      >
-        <TestComponent />
-      </Wrapper>,
-    );
+    render(<TestComponent />, {
+      isNextJs: true,
+      atiData: defaultATIData,
+      pageType: HOME_PAGE,
+      pathname: '/kyrgyz',
+      service: 'kyrgyz',
+    });
 
     const testEl = screen.getByTestId('test-component');
     const trackingData = JSON.parse(testEl.textContent as string);
@@ -216,11 +217,7 @@ describe('Expected use', () => {
   });
 
   it('should provide an empty object if pageData and atiData are missing - 1', () => {
-    render(
-      <Wrapper>
-        <TestComponent />
-      </Wrapper>,
-    );
+    render(<TestComponent />);
 
     const testEl = screen.getByTestId('test-component');
     const trackingData = JSON.parse(testEl.textContent as string);
@@ -229,16 +226,12 @@ describe('Expected use', () => {
   });
 
   it('should provide an empty object if atiData properties are undefined', () => {
-    render(
-      <Wrapper
-        atiData={{
-          analytics: undefined,
-          title: undefined,
-        }}
-      >
-        <TestComponent />
-      </Wrapper>,
-    );
+    render(<TestComponent />, {
+      atiData: {
+        analytics: undefined,
+        title: undefined,
+      },
+    });
 
     const testEl = screen.getByTestId('test-component');
     const trackingData = JSON.parse(testEl.textContent as string);
@@ -252,11 +245,7 @@ describe('Error handling', () => {
     let errorMessage;
 
     try {
-      render(
-        <Wrapper>
-          <TestComponent />
-        </Wrapper>,
-      );
+      render(<TestComponent />);
     } catch ({ message }) {
       errorMessage = message;
     }
@@ -296,3 +285,5 @@ describe('Error handling', () => {
     expect(global.fetch).not.toHaveBeenCalled();
   });
 });
+
+export default defaultATIData;
