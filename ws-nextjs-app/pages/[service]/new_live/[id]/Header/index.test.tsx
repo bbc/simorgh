@@ -9,13 +9,13 @@ import Header from './index';
 
 describe('Live Page Header', () => {
   describe('title and description', () => {
-    it('should render a title and description are provided', async () => {
+    it('should render a title and description when provided', async () => {
       await act(async () => {
         render(
           <Header
             title="I am a title"
             description="I am a description"
-            isLive
+            showLiveLabel
           />,
         );
       });
@@ -26,7 +26,7 @@ describe('Live Page Header', () => {
 
     it('should render a title if only a title is provided', async () => {
       await act(async () => {
-        render(<Header title="I am a title" isLive />);
+        render(<Header title="I am a title" showLiveLabel />);
       });
 
       expect(screen.getByText('I am a title')).toBeInTheDocument();
@@ -35,14 +35,14 @@ describe('Live Page Header', () => {
   describe('live label', () => {
     it('should render if the liveLabel flag is true', async () => {
       await act(async () => {
-        render(<Header title="I am a title" isLive />);
+        render(<Header title="I am a title" showLiveLabel />);
       });
 
       expect(screen.getByText('LIVE')).toBeInTheDocument();
     });
 
     it('should not render if the liveLabel flag is false', async () => {
-      render(<Header title="I am a title" isLive={false} />);
+      render(<Header title="I am a title" showLiveLabel={false} />);
 
       await waitFor(() => {
         expect(document.querySelectorAll('span').length).toBe(2);
@@ -52,7 +52,7 @@ describe('Live Page Header', () => {
   describe('a11y', () => {
     it('should have id of content', async () => {
       await act(async () => {
-        render(<Header title="I am a title" isLive />);
+        render(<Header title="I am a title" showLiveLabel />);
       });
 
       const header = document.getElementById('content');
@@ -61,7 +61,7 @@ describe('Live Page Header', () => {
 
     it('should have tab index of -1', async () => {
       await act(async () => {
-        render(<Header title="I am a title" isLive />);
+        render(<Header title="I am a title" showLiveLabel />);
       });
 
       const header = document.getElementById('content');

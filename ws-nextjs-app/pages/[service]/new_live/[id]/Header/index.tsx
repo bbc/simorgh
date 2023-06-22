@@ -7,11 +7,11 @@ import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import styles from './styles';
 
 const Header = ({
-  isLive,
+  showLiveLabel,
   title,
   description,
 }: {
-  isLive: boolean;
+  showLiveLabel: boolean;
   title: string;
   description?: string;
 }) => {
@@ -28,7 +28,7 @@ const Header = ({
           {/* role="text" is required to correct a text splitting bug on iOS VoiceOver. */}
           {/*  eslint-disable-next-line jsx-a11y/aria-role */}
           <span role="text" css={styles.innerGrid}>
-            {isLive ? (
+            {showLiveLabel ? (
               <>
                 <span css={styles.label} aria-hidden="true">
                   LIVE

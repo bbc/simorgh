@@ -11,7 +11,7 @@ import metadata from './metadata.json';
 interface ComponentProps extends StoryProps {
   title: string;
   description?: string;
-  isLive: boolean;
+  showLiveLabel: boolean;
 }
 
 const Component = ({
@@ -19,12 +19,16 @@ const Component = ({
   variant,
   title,
   description,
-  isLive,
+  showLiveLabel,
 }: ComponentProps) => {
   return (
     <ThemeProvider service={service} variant={variant}>
       <ServiceContextProvider service={service} variant={variant}>
-        <Header isLive={isLive} title={title} description={description} />
+        <Header
+          showLiveLabel={showLiveLabel}
+          title={title}
+          description={description}
+        />
       </ServiceContextProvider>
     </ThemeProvider>
   );
@@ -50,7 +54,7 @@ export const TitleOnlyWithLiveLabel = ({ service, variant }: StoryProps) => (
   <Component
     title="Prince Harry's hacking case against Mirror back in court"
     description=""
-    isLive
+    showLiveLabel
     service={service}
     variant={variant}
   />
@@ -62,7 +66,7 @@ export const TitleAndDescriptionWithLiveLabel = ({
   <Component
     title="An kai wa jirgin kwashe yan Turkiyya hari a Sudan"
     description="Wannan shaft ne da ke kawo muku laqbarai daga sassan duniya daban-daban"
-    isLive
+    showLiveLabel
     service={service}
     variant={variant}
   />
@@ -71,7 +75,7 @@ export const RightToLeftWithLiveLabel = ({ service, variant }: StoryProps) => (
   <Component
     title="نااہلی کی مدت میں ترمیم: ’نواز شریف کی قیادت میں اسی سال ترقی کا سفر دوبارہ شروع ہوگا‘"
     description="سینیٹ نے الیکشن ایکٹ میں ترمیم کا بل کثرت رائے سے منظور کیا ہے جس کے مطابق جہاں آئین میں نااہلی کی مدت کا تعین نہیں وہاں نااہلی پانچ سال سے زیادہ نہیں ہو گی۔ وزیر داخلہ رانا ثنا اللہ کا کہنا ہے کہ نواز شریف کی قیادت میں 'اسی سال ترقی کا سفر دوبارہ شروع ہوگا۔' جبکہ سینیٹ میں اپوزیشن لیڈر شہزاد وسیم نے اسے 'ایک فرد سے متعلق قانون سازی' قرار دیا ہے۔"
-    isLive
+    showLiveLabel
     service={service}
     variant={variant}
   />
@@ -81,7 +85,7 @@ export const TitleOnlyWithoutLiveLabel = ({ service, variant }: StoryProps) => (
   <Component
     title="Prince Harry's hacking case against Mirror back in court"
     description=""
-    isLive={false}
+    showLiveLabel={false}
     service={service}
     variant={variant}
   />
@@ -93,7 +97,7 @@ export const TitleAndDescriptionWithoutLiveLabel = ({
   <Component
     title="An kai wa jirgin kwashe yan Turkiyya hari a Sudan"
     description="Wannan shaft ne da ke kawo muku laqbarai daga sassan duniya daban-daban"
-    isLive={false}
+    showLiveLabel={false}
     service={service}
     variant={variant}
   />
@@ -105,7 +109,7 @@ export const RightToLeftWithoutLiveLabel = ({
   <Component
     title="نااہلی کی مدت میں ترمیم: ’نواز شریف کی قیادت میں اسی سال ترقی کا سفر دوبارہ شروع ہوگا‘"
     description="سینیٹ نے الیکشن ایکٹ میں ترمیم کا بل کثرت رائے سے منظور کیا ہے جس کے مطابق جہاں آئین میں نااہلی کی مدت کا تعین نہیں وہاں نااہلی پانچ سال سے زیادہ نہیں ہو گی۔ وزیر داخلہ رانا ثنا اللہ کا کہنا ہے کہ نواز شریف کی قیادت میں 'اسی سال ترقی کا سفر دوبارہ شروع ہوگا۔' جبکہ سینیٹ میں اپوزیشن لیڈر شہزاد وسیم نے اسے 'ایک فرد سے متعلق قانون سازی' قرار دیا ہے۔"
-    isLive={false}
+    showLiveLabel={false}
     service={service}
     variant={variant}
   />

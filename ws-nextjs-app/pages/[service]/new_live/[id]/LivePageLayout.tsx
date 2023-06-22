@@ -83,7 +83,11 @@ const LivePage = ({
       />
       <LinkedDataContainer type="CollectionPage" seoTitle="Test Live Page" />
       <main>
-        <Header isLive={isLive} title={title} description={description} />
+        <Header
+          showLiveLabel={isLive}
+          title={title}
+          description={description}
+        />
         <div css={styles.wrapper}>
           <Summary summaryBlocks={summaryContent?.model.blocks} />
           {liveTextStream.content && (
