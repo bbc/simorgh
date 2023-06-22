@@ -1,266 +1,539 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:uzbek/sport-23248721",
-    "locators": {
-      "assetUri": "/uzbek/sport-23248721",
-      "cpsUrn": "urn:bbc:content:assetUri:uzbek/sport-23248721",
-      "curie": "http://www.bbc.co.uk/asset/3c6b649a-696c-ea42-8610-5cc80ecacae8",
-      "assetId": "23248721"
-    },
-    "type": "MAP",
-    "createdBy": "uzbek-v6",
-    "language": "uz-Cyrl",
-    "lastUpdated": 1588337994631,
-    "firstPublished": 1568390606000,
-    "lastPublished": 1568390606000,
-    "timestamp": 1568390606000,
-    "options": {
-      "isIgorSeoTagsEnabled": false,
-      "includeComments": false,
-      "allowRightHandSide": true,
-      "isFactCheck": false,
-      "allowDateStamp": true,
-      "suitableForSyndication": true,
-      "hasNewsTracker": false,
-      "allowRelatedStoriesBox": true,
-      "isKeyContent": false,
-      "allowHeadline": true,
-      "allowAdvertising": true,
-      "hasContentWarning": false,
-      "isBreakingNews": false,
-      "allowPrintingSharingLinks": true
-    },
-    "analyticsLabels": {
-      "cps_asset_type": "map",
-      "counterName": "uzbek.sport.media_asset.23248721.page",
-      "cps_asset_id": "23248721"
-    },
-    "passport": { "taggings": [] },
-    "tags": {},
-    "version": "v1.2.1",
-    "blockTypes": ["version", "paragraph", "list", "image"],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "63501300",
-        "subType": "primary",
-        "format": "audio",
-        "externalId": "bbc_world_service_west_africa",
-        "duration": "PT0S",
-        "caption": "",
-        "image": {
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:uzbek/sport-23248721",
+        "locators": {
+          "assetUri": "/uzbek/sport-23248721",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:3c6b649a-696c-ea42-8610-5cc80ecacae8",
+          "assetId": "23248721",
+          "cpsUrn": "urn:bbc:content:assetUri:uzbek/sport-23248721",
+          "curie": "http://www.bbc.co.uk/asset/3c6b649a-696c-ea42-8610-5cc80ecacae8"
+        },
+        "type": "MAP",
+        "createdBy": "uzbek-v6",
+        "language": "uz-Cyrl",
+        "lastUpdated": 1687177225955,
+        "firstPublished": 1568390606000,
+        "lastPublished": 1568390606000,
+        "timestamp": 1568390606000,
+        "options": {
+          "isIgorSeoTagsEnabled": false,
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "isFactCheck": false,
+          "allowDateStamp": true,
+          "suitableForSyndication": true,
+          "hasNewsTracker": false,
+          "allowRelatedStoriesBox": true,
+          "isKeyContent": false,
+          "allowHeadline": true,
+          "allowAdvertising": true,
+          "hasContentWarning": false,
+          "isBreakingNews": false,
+          "allowPrintingSharingLinks": true
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "counterName": "uzbek.sport.media_asset.23248721.page",
+          "cps_asset_id": "23248721",
+          "contentId": "urn:bbc:cps:curie:asset:3c6b649a-696c-ea42-8610-5cc80ecacae8"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Uzbek",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.28",
+        "blockTypes": [
+          "version",
+          "paragraph",
+          "list",
+          "image"
+        ],
+        "includeComments": false,
+        "atiAnalytics": {
+          "producerName": "UZBEK",
+          "producerId": "96"
+        },
+        "readTime": 1,
+        "siteUri": "/uzbek",
+        "mediaType": "audio",
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false
+      },
+      "content": {
+        "blocks": [
+          {
+            "id": "63501300",
+            "subType": "primary",
+            "format": "audio",
+            "externalId": "bbc_world_service_west_africa",
+            "duration": "PT0S",
+            "caption": "",
+            "image": {
+              "id": "63501300",
+              "subType": "thumbnail",
+              "href": "http://b.files.bbci.co.uk/9F08/test/_63721704_testimage.jpg",
+              "path": "/cpsdevpb/9F08/test/_63721704_testimage.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "test",
+              "copyrightHolder": "AFP",
+              "allowSyndication": true,
+              "type": "image"
+            },
+            "embedding": false,
+            "available": true,
+            "live": true,
+            "type": "version"
+          },
+          {
+            "text": "Ўзбек деҳқонининг косаси нега оқармайди",
+            "role": "introduction",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "<bold>Ўзбек деҳқонининг косаси нега оқармайди</bold><bold> heading</bold>",
+            "markupType": "candy_xml",
+            "type": "paragraph"
+          },
+          {
+            "text": "<bold><italic>Ўзбек деҳқонининг косаси нега оқармайди</italic></bold><bold><italic> heading</italic></bold>",
+            "markupType": "candy_xml",
+            "type": "paragraph"
+          },
+          {
+            "text": "<bold>Ўзбек деҳқонининг косаси нега оқармайди</bold><bold> crosshead </bold>",
+            "markupType": "candy_xml",
+            "type": "paragraph"
+          },
+          {
+            "text": "Шу йил апрел ойида Ўзбекистон Президенти Ислом <link><caption>Каримов ўзининг</caption><url href=\"https://bbc.com/uzbek\" platform=\"highweb\"/></link> Москвага сафари мобайнида Россияга Туркия каби мамлакатлардан келмай қолган қишлоқ хўжалик маҳсулотлари ўрнини Ўзбекистон қоплаб беришга тайёр эканлигини айтганди.",
+            "markupType": "candy_xml",
+            "type": "paragraph"
+          },
+          {
+            "text": "Шу вақтгача ҳам ўзбекистонлик деҳқонлар ўз маҳсулотларини хорижга олиб <bold>чиқишда турли муаммоларга юз тутиб</bold> келишган, апрель ойида президент қарори билан &quot;Ўзагроэкспорт&quot; мева-сабзавот маҳсулотларини экспорт қилиш билан шуғулланадиган ташқи савдо компанияси ҳам ташкил қилинди.",
+            "markupType": "candy_xml",
+            "type": "paragraph"
+          },
+          {
+            "text": "Ўз мева-сабзавотини Россияга олиб чиқишда бу компания ёрдамига умид қилган боғбонларнинг гилослари бузила бошлагани ҳақидаги хабарлар ҳам тарқалди..",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Ҳозирда Ўзбекистонда айни пишиқчилик ва етиштирилган маҳсулот учун кенгроқ бозор топиш масаласи яна долзарб турар экан, мамлакат раҳбарининг сўзларидан сўнг вазият нақадар ўзгарган?",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Би-би-си билан суҳбатда иқтисодий таҳлилчи Анвар Ҳусаиновнинг айтишича, юқори минбардан айтилган сўзларга қарамай, қишлоқ хўжалиги маҳсулотларини хорижга, жумладан Россия бозорига олиб чиқишда ҳануз кўплаб муаммолар мавжуд.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "&quot;Албатта ўтган йилларга қараганда маҳсулотлар экспорти анча кўпайган. Россиядан юк машиналари келиб, тўғридан-тўғри деҳқонлардан нақд пулга ",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "numbered": false,
+            "items": [
+              {
+                "text": "Ўзбек деҳқонининг косаси нега оқармайди",
+                "markupType": "plain_text",
+                "type": "listItem"
+              },
+              {
+                "text": "Ўзбек деҳқонининг косаси нега оқармайди",
+                "markupType": "plain_text",
+                "type": "listItem"
+              },
+              {
+                "text": "<bold>Ўзбек деҳқонининг косаси нега оқармайди</bold>",
+                "markupType": "candy_xml",
+                "type": "listItem"
+              },
+              {
+                "text": "Ўзбек деҳқонининг косаси нега оқармайди",
+                "markupType": "plain_text",
+                "type": "listItem"
+              }
+            ],
+            "type": "list"
+          },
+          {
+            "numbered": false,
+            "items": [
+              {
+                "text": "<link><caption>Ўзбек деҳқонининг косаси нега оқармайди</caption><altText>Ўзбек деҳқонининг косаси нега оқармайди</altText><url href=\"https://bbc.com/uzbek\" platform=\"highweb\"/></link>",
+                "markupType": "candy_xml",
+                "type": "listItem"
+              },
+              {
+                "text": "<link><caption>Ўзбек деҳқонининг косаси нега оқармайди</caption><altText>Ўзбек деҳқонининг косаси нега оқармайди</altText><url href=\"https://bbc.com/uzbek\" platform=\"highweb\"/></link>",
+                "markupType": "candy_xml",
+                "type": "listItem"
+              },
+              {
+                "text": "<link><caption>Ўзбек деҳқонининг косаси нега оқармайди</caption><altText>Ўзбек деҳқонининг косаси нега оқармайди</altText><url href=\"https://bbc.com/uzbek\" platform=\"highweb\"/></link>",
+                "markupType": "candy_xml",
+                "type": "listItem"
+              },
+              {
+                "text": "<link><caption>Ўзбек деҳқонининг косаси нега оқармайди</caption><altText>Ўзбек деҳқонининг косаси нега оқармайди</altText><url href=\"https://bbc.com/uzbek\" platform=\"highweb\"/></link>",
+                "markupType": "candy_xml",
+                "type": "listItem"
+              }
+            ],
+            "type": "list"
+          },
+          {
+            "id": "63721704",
+            "subType": "body",
+            "href": "http://b.files.bbci.co.uk/9F08/test/_63721704_testimage.jpg",
+            "path": "/cpsdevpb/9F08/test/_63721704_testimage.jpg",
+            "height": 360,
+            "width": 640,
+            "altText": "test",
+            "copyrightHolder": "AFP",
+            "positionHint": "full-width",
+            "allowSyndication": true,
+            "type": "image"
+          },
+          {
+            "text": "Ўзбек деҳқонининг косаси нега оқармайди transmission info ",
+            "role": "transmission-info",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Ўзбек деҳқонининг косаси нега оқармайди footer ",
+            "role": "footer",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          }
+        ]
+      },
+      "promo": {
+        "headlines": {
+          "shortHeadline": "WSMEDIA TEST - Ўзбек деҳқонининг косаси нега оқармайди",
+          "headline": "Ўзбек деҳқонининг косаси нега оқармайдиshort"
+        },
+        "locators": {
+          "assetUri": "/uzbek/sport-23248721",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:3c6b649a-696c-ea42-8610-5cc80ecacae8",
+          "assetId": "23248721",
+          "cpsUrn": "urn:bbc:content:assetUri:uzbek/sport-23248721",
+          "curie": "http://www.bbc.co.uk/asset/3c6b649a-696c-ea42-8610-5cc80ecacae8"
+        },
+        "summary": "Ўзбек деҳқонининг косаси нега оқармайди",
+        "timestamp": 1568390606000,
+        "language": "uz-Cyrl",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Uzbek",
+          "taggings": []
+        },
+        "media": {
           "id": "63501300",
-          "subType": "thumbnail",
-          "href": "http://b.files.bbci.co.uk/9F08/test/_63721704_testimage.jpg",
-          "path": "/cpsdevpb/9F08/test/_63721704_testimage.jpg",
-          "height": 360,
-          "width": 640,
-          "altText": "test",
-          "copyrightHolder": "AFP",
+          "subType": "primary",
+          "format": "audio",
+          "externalId": "bbc_world_service_west_africa",
+          "duration": "PT0S",
+          "caption": "",
+          "image": {
+            "id": "63501300",
+            "subType": "thumbnail",
+            "href": "http://b.files.bbci.co.uk/9F08/test/_63721704_testimage.jpg",
+            "path": "/cpsdevpb/9F08/test/_63721704_testimage.jpg",
+            "height": 360,
+            "width": 640,
+            "altText": "test",
+            "copyrightHolder": "AFP",
+            "allowSyndication": true,
+            "type": "image"
+          },
+          "embedding": false,
+          "available": true,
+          "live": true,
+          "type": "version"
+        },
+        "indexImage": {
+          "id": "63721703",
+          "subType": "index",
+          "href": "http://b.files.bbci.co.uk/77F8/test/_63721703_p01kx435.jpg",
+          "path": "/cpsdevpb/77F8/test/_63721703_p01kx435.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "connectionAltText",
+          "copyrightHolder": "BBC",
+          "allowSyndication": true,
           "type": "image"
         },
-        "embedding": false,
-        "available": true,
-        "live": true,
-        "type": "version"
+        "id": "urn:bbc:ares::asset:uzbek/sport-23248721",
+        "type": "cps"
       },
-      {
-        "text": "Ўзбек деҳқонининг косаси нега оқармайди",
-        "role": "introduction",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "<bold>Ўзбек деҳқонининг косаси нега оқармайди</bold><bold> heading</bold>",
-        "markupType": "candy_xml",
-        "type": "paragraph"
-      },
-      {
-        "text": "<bold><italic>Ўзбек деҳқонининг косаси нега оқармайди</italic></bold><bold><italic> heading</italic></bold>",
-        "markupType": "candy_xml",
-        "type": "paragraph"
-      },
-      {
-        "text": "<bold>Ўзбек деҳқонининг косаси нега оқармайди</bold><bold> crosshead </bold>",
-        "markupType": "candy_xml",
-        "type": "paragraph"
-      },
-      {
-        "text": "Шу йил апрел ойида Ўзбекистон Президенти Ислом <link><caption>Каримов ўзининг</caption><url href=\"https://bbc.com/uzbek\" platform=\"highweb\"/></link> Москвага сафари мобайнида Россияга Туркия каби мамлакатлардан келмай қолган қишлоқ хўжалик маҳсулотлари ўрнини Ўзбекистон қоплаб беришга тайёр эканлигини айтганди.",
-        "markupType": "candy_xml",
-        "type": "paragraph"
-      },
-      {
-        "text": "Шу вақтгача ҳам ўзбекистонлик деҳқонлар ўз маҳсулотларини хорижга олиб <bold>чиқишда турли муаммоларга юз тутиб</bold> келишган, апрель ойида президент қарори билан &quot;Ўзагроэкспорт&quot; мева-сабзавот маҳсулотларини экспорт қилиш билан шуғулланадиган ташқи савдо компанияси ҳам ташкил қилинди.",
-        "markupType": "candy_xml",
-        "type": "paragraph"
-      },
-      {
-        "text": "Ўз мева-сабзавотини Россияга олиб чиқишда бу компания ёрдамига умид қилган боғбонларнинг гилослари бузила бошлагани ҳақидаги хабарлар ҳам тарқалди..",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Ҳозирда Ўзбекистонда айни пишиқчилик ва етиштирилган маҳсулот учун кенгроқ бозор топиш масаласи яна долзарб турар экан, мамлакат раҳбарининг сўзларидан сўнг вазият нақадар ўзгарган?",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Би-би-си билан суҳбатда иқтисодий таҳлилчи Анвар Ҳусаиновнинг айтишича, юқори минбардан айтилган сўзларга қарамай, қишлоқ хўжалиги маҳсулотларини хорижга, жумладан Россия бозорига олиб чиқишда ҳануз кўплаб муаммолар мавжуд.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "&quot;Албатта ўтган йилларга қараганда маҳсулотлар экспорти анча кўпайган. Россиядан юк машиналари келиб, тўғридан-тўғри деҳқонлардан нақд пулга ",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "numbered": false,
-        "items": [
-          {
-            "text": "Ўзбек деҳқонининг косаси нега оқармайди",
-            "markupType": "plain_text",
-            "type": "listItem"
-          },
-          {
-            "text": "Ўзбек деҳқонининг косаси нега оқармайди",
-            "markupType": "plain_text",
-            "type": "listItem"
-          },
-          {
-            "text": "<bold>Ўзбек деҳқонининг косаси нега оқармайди</bold>",
-            "markupType": "candy_xml",
-            "type": "listItem"
-          },
-          {
-            "text": "Ўзбек деҳқонининг косаси нега оқармайди",
-            "markupType": "plain_text",
-            "type": "listItem"
-          }
-        ],
-        "type": "list"
-      },
-      {
-        "numbered": false,
-        "items": [
-          {
-            "text": "<link><caption>Ўзбек деҳқонининг косаси нега оқармайди</caption><altText>Ўзбек деҳқонининг косаси нега оқармайди</altText><url href=\"https://bbc.com/uzbek\" platform=\"highweb\"/></link>",
-            "markupType": "candy_xml",
-            "type": "listItem"
-          },
-          {
-            "text": "<link><caption>Ўзбек деҳқонининг косаси нега оқармайди</caption><altText>Ўзбек деҳқонининг косаси нега оқармайди</altText><url href=\"https://bbc.com/uzbek\" platform=\"highweb\"/></link>",
-            "markupType": "candy_xml",
-            "type": "listItem"
-          },
-          {
-            "text": "<link><caption>Ўзбек деҳқонининг косаси нега оқармайди</caption><altText>Ўзбек деҳқонининг косаси нега оқармайди</altText><url href=\"https://bbc.com/uzbek\" platform=\"highweb\"/></link>",
-            "markupType": "candy_xml",
-            "type": "listItem"
-          },
-          {
-            "text": "<link><caption>Ўзбек деҳқонининг косаси нега оқармайди</caption><altText>Ўзбек деҳқонининг косаси нега оқармайди</altText><url href=\"https://bbc.com/uzbek\" platform=\"highweb\"/></link>",
-            "markupType": "candy_xml",
-            "type": "listItem"
-          }
-        ],
-        "type": "list"
-      },
-      {
-        "id": "63721704",
-        "subType": "body",
-        "href": "http://b.files.bbci.co.uk/9F08/test/_63721704_testimage.jpg",
-        "path": "/cpsdevpb/9F08/test/_63721704_testimage.jpg",
-        "height": 360,
-        "width": 640,
-        "altText": "test",
-        "copyrightHolder": "AFP",
-        "positionHint": "full-width",
-        "type": "image"
-      },
-      {
-        "text": "Ўзбек деҳқонининг косаси нега оқармайди transmission info ",
-        "role": "transmission-info",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Ўзбек деҳқонининг косаси нега оқармайди footer ",
-        "role": "footer",
-        "markupType": "plain_text",
-        "type": "paragraph"
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Спорт",
+          "uri": "/uzbek/sport",
+          "urlIdentifier": "/uzbek/sport",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "Ўзбек тилидаги янгиликлар",
+          "uri": "/uzbek",
+          "urlIdentifier": "/uzbek",
+          "type": "simple"
+        },
+        "groups": []
       }
-    ]
+    },
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-06-21T12:42:57.939Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T03:53:00Z",
+        "totalRecords": 4,
+        "records": [
+          {
+            "id": "7ddd3054-31c8-0b46-af41-661f5dda0709",
+            "rank": 1,
+            "count": 6010,
+            "urn": "urn:bbc:curie:asset:7ddd3054-31c8-0b46-af41-661f5dda0709",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "test Uzbek Latin video",
+                "headline": "test Uzbek Latin video"
+              },
+              "locators": {
+                "assetUri": "/uzbek/lotin-23051989",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:7ddd3054-31c8-0b46-af41-661f5dda0709",
+                "assetId": "23051989",
+                "cpsUrn": "urn:bbc:content:assetUri:uzbek/lotin-23051989",
+                "curie": "http://www.bbc.co.uk/asset/7ddd3054-31c8-0b46-af41-661f5dda0709"
+              },
+              "summary": "test Uzbek Latin video",
+              "timestamp": 1465910821000,
+              "language": "uz-Latn",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Uzbek",
+                "taggings": []
+              },
+              "media": {
+                "id": "23034846",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p012vc7h",
+                "entityType": "Clip",
+                "caption": "brasil short Bebê é resgatado de escombros após terremoto no Jãpao",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63481008",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/13892/test/_63481008_p012vchb.jpg",
+                "path": "/cpsdevpb/13892/test/_63481008_p012vchb.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "test brasil video áéíóú âêîôû àèìòù",
+                "copyrightHolder": "BBC Brasília",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:uzbek/lotin-23051989",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "031ecf7c-ced8-7e4f-9e75-ad22c8e6b54b",
+            "rank": 2,
+            "count": 5865,
+            "urn": "urn:bbc:curie:asset:031ecf7c-ced8-7e4f-9e75-ad22c8e6b54b",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "BBCning 60 lahzalik videoyangiliklari",
+                "headline": "16 iyun kuni jahonda yuz bergan muhim voqealar sharhi Latin."
+              },
+              "locators": {
+                "assetUri": "/uzbek/lotin-23053619",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:031ecf7c-ced8-7e4f-9e75-ad22c8e6b54b",
+                "assetId": "23053619",
+                "cpsUrn": "urn:bbc:content:assetUri:uzbek/lotin-23053619",
+                "curie": "http://www.bbc.co.uk/asset/031ecf7c-ced8-7e4f-9e75-ad22c8e6b54b"
+              },
+              "summary": "Ha, bugun Angliyaga qarshi maydonga tushajak yulduzi Garet Beyl sharafiga Uelsning shimoliy Bala shahri ma‘muriyati xuddi shunga qaror qilibdi.",
+              "timestamp": 1466177546000,
+              "language": "uz-Latn",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Uzbek",
+                "taggings": []
+              },
+              "media": {
+                "id": "23053620",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p0140vnz",
+                "entityType": "Clip",
+                "caption": "16 iyun kuni jahonda yuz bergan muhim voqealar sharhi Latin.",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63490936",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/F9A5/test/_63490936_p0140w5x.jpg",
+                "path": "/cpsdevpb/F9A5/test/_63490936_p0140w5x.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "BBCning 60 lahzalik videoyangiliklari",
+                "caption": "BBCning 60 lahzalik videoyangiliklari",
+                "copyrightHolder": "Alamy",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:uzbek/lotin-23053619",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "d1bef766-a8c0-834e-bfbc-b9c0ca2f04e4",
+            "rank": 3,
+            "count": 5766,
+            "urn": "urn:bbc:curie:asset:d1bef766-a8c0-834e-bfbc-b9c0ca2f04e4",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Ўзбекистон, Коронавирус: Мирзиёев Хитой усулини қўлламоқчи - O`zbekiston",
+                "headline": "Ўзбекистон, Коронавирус: Мирзиёев Хитой усулини қўлламоқчи - O`zbekiston"
+              },
+              "locators": {
+                "assetUri": "/uzbek/world-23053613",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:d1bef766-a8c0-834e-bfbc-b9c0ca2f04e4",
+                "assetId": "23053613",
+                "cpsUrn": "urn:bbc:content:assetUri:uzbek/world-23053613",
+                "curie": "http://www.bbc.co.uk/asset/d1bef766-a8c0-834e-bfbc-b9c0ca2f04e4"
+              },
+              "summary": "Ўзбекистон, Коронавирус: Мирзиёев Хитой усулини қўлламоқчи - O`zbekiston",
+              "timestamp": 1466593972000,
+              "language": "uz-Cyrl",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Uzbek",
+                "taggings": []
+              },
+              "media": {
+                "id": "p01qjbpq",
+                "subType": "clip",
+                "format": "video",
+                "title": "koala",
+                "synopses": {
+                  "short": "koajaa",
+                  "long": "koala ijm aus",
+                  "medium": "australia"
+                },
+                "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01qjbvt.jpg",
+                "embedding": true,
+                "advertising": false,
+                "caption": "nnnnn",
+                "versions": [
+                  {
+                    "versionId": "p01qjbvb",
+                    "types": [
+                      "Editorial"
+                    ],
+                    "duration": 15,
+                    "durationISO8601": "PT15S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1582890367000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "63490864",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/B6D9/test/_63490864_p0140swc.jpg",
+                "path": "/cpsdevpb/B6D9/test/_63490864_p0140swc.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Америкада 2 яшар болани тимсоҳ тортиб кетди",
+                "copyrightHolder": "Alamy",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:uzbek/world-23053613",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "6cfd1bfe-3787-8143-a3cf-422f0739b070",
+            "rank": 4,
+            "count": 1549,
+            "urn": "urn:bbc:curie:asset:6cfd1bfe-3787-8143-a3cf-422f0739b070",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "test Uzbek Cyrillic video",
+                "headline": "test Uzbek Cyrillic video"
+              },
+              "locators": {
+                "assetUri": "/uzbek/uzbekistan-23051985",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:6cfd1bfe-3787-8143-a3cf-422f0739b070",
+                "assetId": "23051985",
+                "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-23051985",
+                "curie": "http://www.bbc.co.uk/asset/6cfd1bfe-3787-8143-a3cf-422f0739b070"
+              },
+              "summary": "test Uzbek Cyrillic video",
+              "timestamp": 1465910632000,
+              "language": "uz-Cyrl",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Uzbek",
+                "taggings": []
+              },
+              "media": {
+                "id": "23034846",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p012vc7h",
+                "entityType": "Clip",
+                "caption": "brasil short Bebê é resgatado de escombros após terremoto no Jãpao",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63481008",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/13892/test/_63481008_p012vchb.jpg",
+                "path": "/cpsdevpb/13892/test/_63481008_p012vchb.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "test brasil video áéíóú âêîôû àèìòù",
+                "copyrightHolder": "BBC Brasília",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:uzbek/uzbekistan-23051985",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "WSMEDIA TEST - Ўзбек деҳқонининг косаси нега оқармайди",
-      "headline": "Ўзбек деҳқонининг косаси нега оқармайдиshort"
-    },
-    "locators": {
-      "assetUri": "/uzbek/sport-23248721",
-      "cpsUrn": "urn:bbc:content:assetUri:uzbek/sport-23248721",
-      "curie": "http://www.bbc.co.uk/asset/3c6b649a-696c-ea42-8610-5cc80ecacae8",
-      "assetId": "23248721"
-    },
-    "summary": "Ўзбек деҳқонининг косаси нега оқармайди",
-    "timestamp": 1573487977500,
-    "passport": {
-      "taggings": []
-    },
-    "media": {
-      "id": "63501300",
-      "subType": "primary",
-      "format": "audio",
-      "externalId": "bbc_world_service_west_africa",
-      "duration": "PT0S",
-      "caption": "",
-      "image": {
-        "id": "63501300",
-        "subType": "thumbnail",
-        "href": "http://b.files.bbci.co.uk/9F08/test/_63721704_testimage.jpg",
-        "path": "/cpsdevpb/9F08/test/_63721704_testimage.jpg",
-        "height": 360,
-        "width": 640,
-        "altText": "test",
-        "copyrightHolder": "AFP",
-        "type": "image"
-      },
-      "embedding": false,
-      "available": true,
-      "live": true,
-      "type": "version"
-    },
-    "indexImage": {
-      "id": "63721703",
-      "subType": "index",
-      "href": "http://b.files.bbci.co.uk/77F8/test/_63721703_p01kx435.jpg",
-      "path": "/cpsdevpb/77F8/test/_63721703_p01kx435.jpg",
-      "height": 576,
-      "width": 1024,
-      "altText": "connectionAltText",
-      "copyrightHolder": "BBC",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:uzbek/sport-23248721",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "Спорт",
-      "uri": "/uzbek/sport",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "Ўзбек тилидаги янгиликлар",
-      "uri": "/uzbek",
-      "type": "simple"
-    },
-    "groups": []
-  }
+  "contentType": "application/json; charset=utf-8"
 }

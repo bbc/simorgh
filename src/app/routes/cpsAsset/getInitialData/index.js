@@ -121,7 +121,7 @@ export default async ({
     });
 
     const { mostWatched } = processMostWatched({
-      data: secondaryColumn,
+      data: article,
       service,
       path: derivedPath,
       toggles,
