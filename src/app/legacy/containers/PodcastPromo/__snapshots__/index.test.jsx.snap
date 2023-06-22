@@ -2,7 +2,7 @@
 
 exports[`Inline Should render correctly 1`] = `
 .emotion-0 {
-  float: right;
+  float: left;
   background: #F2F2F2;
   margin: 1.5rem 0;
   height: auto;
@@ -15,26 +15,45 @@ exports[`Inline Should render correctly 1`] = `
   }
 }
 
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    margin: 0rem 1rem;
+    margin-right: 1rem;
+    margin-left: 0rem;
+  }
+}
+
 @media (min-width: 16.25rem) {
   .emotion-0 {
     margin: 1.5rem 0.5rem;
   }
 }
 
-@media (min-width: 37.5rem) {
-  .emotion-0 {
-    margin: 1.5rem 1rem;
-  }
-}
-
 .emotion-3 {
-  background-color: #F2F2F2;
+  background-color: #FDFDFD;
   padding: 1rem;
   padding: 1rem 0.5rem 0.5rem 0.5rem;
 }
 
 .emotion-5 {
   position: relative;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-7 {
+    font-size: 0.8125rem;
+  }
+}
+
+.emotion-7:not(:focus):not(:active) {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
 }
 
 .emotion-7 {
@@ -63,23 +82,6 @@ exports[`Inline Should render correctly 1`] = `
   }
 }
 
-@media (min-width: 37.5rem) {
-  .emotion-7 {
-    font-size: 0.8125rem;
-  }
-}
-
-.emotion-7:not(:focus):not(:active) {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
 .emotion-9 {
   margin: 0 0 1rem;
 }
@@ -92,13 +94,6 @@ exports[`Inline Should render correctly 1`] = `
   font-style: normal;
   display: inline;
   color: #222222;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-11 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
 }
 
 @media (min-width: 37.5rem) {
@@ -121,6 +116,13 @@ exports[`Inline Should render correctly 1`] = `
 @media screen and (forced-colors: active) {
   .emotion-11>svg {
     fill: canvasText;
+  }
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-11 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
   }
 }
 
@@ -150,15 +152,6 @@ exports[`Inline Should render correctly 1`] = `
   text-decoration: underline;
 }
 
-.emotion-17 {
-  margin: 0.5rem 0 0.5rem 0.5rem;
-  display: none;
-  display: inline-block;
-  width: 100%;
-  margin: 0;
-  padding: 0.5rem;
-}
-
 @media (min-width: 20rem) {
   .emotion-17 {
     display: block;
@@ -183,13 +176,13 @@ exports[`Inline Should render correctly 1`] = `
   }
 }
 
-@media (min-width: 37.5rem) {
-  .emotion-17 {
-    -webkit-flex-basis: 11.125rem;
-    -ms-flex-preferred-size: 11.125rem;
-    flex-basis: 11.125rem;
-    margin: 0;
-  }
+.emotion-17 {
+  margin: 0.5rem 0 0.5rem 0.5rem;
+  display: none;
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+  padding: 0.5rem;
 }
 
 @media (min-width: 63rem) {
@@ -201,6 +194,15 @@ exports[`Inline Should render correctly 1`] = `
 @media (max-width: 14.9375rem) {
   .emotion-17 {
     display: none;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-17 {
+    -webkit-flex-basis: 11.125rem;
+    -ms-flex-preferred-size: 11.125rem;
+    flex-basis: 11.125rem;
+    margin: 0;
   }
 }
 
@@ -263,6 +265,13 @@ exports[`Inline Should render correctly 1`] = `
   }
 }
 
+@media (min-width: 37.5rem) {
+  .emotion-23 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
 .emotion-23 {
   color: #222222;
   -webkit-text-decoration: none;
@@ -273,17 +282,6 @@ exports[`Inline Should render correctly 1`] = `
   font-weight: 500;
   font-style: normal;
   display: block;
-}
-
-.emotion-23:before {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  content: '';
-  overflow: hidden;
-  z-index: 1;
 }
 
 .emotion-23:visited .podcast-promo--visited {
@@ -298,13 +296,6 @@ exports[`Inline Should render correctly 1`] = `
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-23 {
     font-size: 0.9375rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-23 {
-    font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
@@ -328,6 +319,17 @@ exports[`Inline Should render correctly 1`] = `
       line-height: 1.25rem;
     }
   }
+}
+
+.emotion-23:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: '';
+  overflow: hidden;
+  z-index: 1;
 }
 
 .emotion-26 {
@@ -620,12 +622,18 @@ exports[`SecondaryColumn Should render correctly 1`] = `
 }
 
 .emotion-2 {
-  background-color: #F2F2F2;
+  background-color: #FDFDFD;
   padding: 1rem;
 }
 
 .emotion-4 {
   margin: 0 0 1rem;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-6>svg {
+    fill: canvasText;
+  }
 }
 
 .emotion-6 {
@@ -645,13 +653,6 @@ exports[`SecondaryColumn Should render correctly 1`] = `
   }
 }
 
-@media (min-width: 37.5rem) {
-  .emotion-6 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
 .emotion-6>svg {
   margin-left: 0;
   width: 1.375rem;
@@ -662,9 +663,10 @@ exports[`SecondaryColumn Should render correctly 1`] = `
   right: 0.1875rem;
 }
 
-@media screen and (forced-colors: active) {
-  .emotion-6>svg {
-    fill: canvasText;
+@media (min-width: 37.5rem) {
+  .emotion-6 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -698,11 +700,6 @@ exports[`SecondaryColumn Should render correctly 1`] = `
   text-decoration: underline;
 }
 
-.emotion-12 {
-  margin: 0.5rem 0 0.5rem 0.5rem;
-  display: none;
-}
-
 @media (min-width: 20rem) {
   .emotion-12 {
     display: block;
@@ -719,11 +716,9 @@ exports[`SecondaryColumn Should render correctly 1`] = `
   }
 }
 
-@media (min-width: 25rem) {
+@media (min-width: 63rem) {
   .emotion-12 {
-    -webkit-flex-basis: 6.8125rem;
-    -ms-flex-preferred-size: 6.8125rem;
-    flex-basis: 6.8125rem;
+    margin: 0;
   }
 }
 
@@ -736,10 +731,17 @@ exports[`SecondaryColumn Should render correctly 1`] = `
   }
 }
 
-@media (min-width: 63rem) {
+@media (min-width: 25rem) {
   .emotion-12 {
-    margin: 0;
+    -webkit-flex-basis: 6.8125rem;
+    -ms-flex-preferred-size: 6.8125rem;
+    flex-basis: 6.8125rem;
   }
+}
+
+.emotion-12 {
+  margin: 0.5rem 0 0.5rem 0.5rem;
+  display: none;
 }
 
 .emotion-14 {
@@ -865,6 +867,12 @@ exports[`SecondaryColumn Should render correctly 1`] = `
   }
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-24>svg {
+    fill: canvasText;
+  }
+}
+
 .emotion-24 {
   display: inline;
   font-size: 0.9375rem;
@@ -897,12 +905,6 @@ exports[`SecondaryColumn Should render correctly 1`] = `
   position: relative;
   bottom: 0.125rem;
   right: 0.1875rem;
-}
-
-@media screen and (forced-colors: active) {
-  .emotion-24>svg {
-    fill: canvasText;
-  }
 }
 
 .emotion-26 {
