@@ -70,7 +70,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 }
 
 .emotion-4 {
-  color: #00ccc7;
+  color: #00CCC7;
   grid-column: 1/span 12;
   margin-bottom: 1rem;
 }

@@ -38,9 +38,9 @@ export default {
     css({
       gridColumn: '1 / span 12',
     }),
-  label: ({ mq }: Theme) =>
+  label: ({ palette, mq }: Theme) =>
     css({
-      color: '#00ccc7',
+      color: palette.LIVE_LIGHT,
       gridColumn: '1 / span 12',
       marginBottom: `${pixelsToRem(16)}rem`,
       [mq.GROUP_4_MIN_WIDTH]: {
