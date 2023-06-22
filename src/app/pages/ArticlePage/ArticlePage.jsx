@@ -237,15 +237,14 @@ const ArticlePage = ({ pageData }) => {
         {!isApp && <SecondaryColumn pageData={pageData} />}
       </div>
       {!isApp && (
-        <div css={styles.mostReadSection}>
-          <MostRead
-            data={mostReadInitialData}
-            columnLayout="multiColumn"
-            size="default"
-            headingBackgroundColour={GREY_2}
-            mobileDivider={showRelatedTopics && topics}
-          />
-        </div>
+        <MostRead
+          css={styles.mostReadSection}
+          data={mostReadInitialData}
+          columnLayout="multiColumn"
+          size="default"
+          headingBackgroundColour={GREY_2}
+          mobileDivider={showRelatedTopics && topics}
+        />
       )}
     </div>
   );

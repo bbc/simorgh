@@ -33,6 +33,7 @@ interface MostReadProps {
   size?: Size;
   mobileDivider?: boolean;
   headingBackgroundColour?: string;
+  className?: string;
 }
 
 const MostRead = ({
@@ -41,6 +42,7 @@ const MostRead = ({
   size = 'default',
   mobileDivider = false,
   headingBackgroundColour = WHITE,
+  className,
 }: MostReadProps) => {
   const { isAmp, pageType, variant } = useContext(RequestContext);
   const {
@@ -84,7 +86,7 @@ const MostRead = ({
   // Do not render on Canonical if data is not provided
   const CanonicalMostRead = () =>
     data ? (
-      <MostReadSection>
+      <MostReadSection className={className}>
         <MostReadSectionLabel
           mobileDivider={mobileDivider}
           backgroundColor={headingBackgroundColour}
