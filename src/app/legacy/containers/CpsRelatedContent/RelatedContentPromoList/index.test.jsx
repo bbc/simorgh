@@ -1,12 +1,12 @@
 import React from 'react';
 import path from 'ramda/src/path';
-import { data as pidginPageData } from '#data/pidgin/cpsAssets/tori-49450859';
+import pidginPageData from '#data/pidgin/cpsAssets/tori-49450859';
 import { render } from '../../../../components/react-testing-library-with-providers';
 import RelatedContentPromoList from './index';
 
 const promoItems = path(
-  ['article', 'relatedContent', 'groups', 0, 'promos'],
-  pidginPageData,
+  ['relatedContent', 'groups', 0, 'promos'],
+  pidginPageData.data.article,
 );
 
 describe('RelatedContentPromoList', () => {

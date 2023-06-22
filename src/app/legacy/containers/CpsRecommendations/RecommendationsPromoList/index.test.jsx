@@ -1,6 +1,6 @@
 import React from 'react';
 import path from 'ramda/src/path';
-import { data as pidginPageData } from '#data/pidgin/cpsAssets/tori-49450859';
+import pidginPageData from '#data/pidgin/cpsAssets/tori-49450859';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 import * as viewTracking from '#hooks/useViewTracker';
@@ -11,8 +11,8 @@ import RecommendationsPromoList from './index';
 process.env.SIMORGH_BASE_URL = 'http://bbc.com';
 
 const promoItems = path(
-  ['article', 'relatedContent', 'groups', 0, 'promos'],
-  pidginPageData,
+  ['relatedContent', 'groups', 0, 'promos'],
+  pidginPageData.data.article,
 );
 
 const Fixture = () => (
