@@ -350,9 +350,9 @@ it('should not show the timestamp when allowDateStamp is false', async () => {
 
 it('should not show the iframe when available is false', async () => {
   const uzbekDataExpiredLivestream = assocPath(
-    ['data', 'article', 'content', 'blocks', 0, 'available'],
+    ['content', 'blocks', 0, 'available'],
     false,
-    uzbekPageData,
+    uzbekPageData.data.article,
   );
 
   const { pageData: pageDataWithExpiredLiveStream } = await mockInitialData({
@@ -368,9 +368,9 @@ it('should not show the iframe when available is false', async () => {
 
 it('should show the media message when available is false', async () => {
   const uzbekDataExpiredLivestream = assocPath(
-    ['data', 'article', 'content', 'blocks', 0, 'available'],
+    ['content', 'blocks', 0, 'available'],
     false,
-    uzbekPageData,
+    uzbekPageData.data.article,
   );
 
   const { pageData: pageDataWithExpiredLiveStream } = await mockInitialData({
@@ -389,12 +389,12 @@ it('should show the media message when available is false', async () => {
 });
 
 it('should show the media message when there is no media block', async () => {
-  const blocks = pathOr(
+  const blocks = pathOr([], ['content', 'blocks'], uzbekPageData.data.article);
+  const blockTypes = pathOr(
     [],
-    ['data', 'article', 'content', 'blocks'],
-    uzbekPageData,
+    ['metadata', 'blockTypes'],
+    uzbekPageData.data.article,
   );
-  const blockTypes = pathOr([], ['metadata', 'blockTypes'], uzbekPageData);
   const uzbekDataWithNoMediaBlock = assocPath(
     ['data', 'article', 'content', 'blocks'],
     blocks.filter(block => block.type !== 'version'),
