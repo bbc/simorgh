@@ -277,7 +277,7 @@ it('should render a rtl article (persian) with most read correctly', async () =>
   const { container } = render(
     <Context service="persian">
       <ArticlePage
-        pageData={{ ...articleDataPersian, mostRead: pidginMostReadData }}
+        pageData={{ ...articleDataPersian, mostRead: persianMostReadData }}
       />
     </Context>,
   );

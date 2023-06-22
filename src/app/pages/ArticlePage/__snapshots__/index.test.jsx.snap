@@ -3396,34 +3396,6 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
   }
 }
 
-.emotion-95 {
-  padding-top: 0.5rem;
-}
-
-.emotion-96 {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  color: #545658;
-  display: block;
-  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-96 {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-96 {
-    font-size: 0.8125rem;
-    line-height: 1.25rem;
-  }
-}
-
 <div>
   <div
     class="emotion-0"
@@ -3527,9 +3499,9 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
             >
               <a
                 class="focusIndicatorDisplayTableCell emotion-31"
-                href="https://www.bbc.com/pidgin/articles/cz5kkgv41v0o"
+                href="https://www.bbc.com/persian/articles/c4n9j7rx27lo"
               >
-                Teams wey qualify for Afcon 2023 and how things stand for each group
+                ایران در آستانه بحران بنزین؛ تابستانی دشوار برای دولت رئیسی در پیش است
               </a>
             </div>
           </div>
@@ -3558,9 +3530,9 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
             >
               <a
                 class="focusIndicatorDisplayTableCell emotion-31"
-                href="https://www.bbc.com/pidgin/articles/czd44wvly0qo"
+                href="https://www.bbc.com/persian/articles/cm58lxneyrvo"
               >
-                'We dey hear gospel songs den screaming' - Woman tok of Uganda school attack 
+                پرونده حمید نوری؛ وکلای مدافع: نوری فریب خورد
               </a>
             </div>
           </div>
@@ -3589,9 +3561,9 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
             >
               <a
                 class="focusIndicatorDisplayTableCell emotion-31"
-                href="https://www.bbc.com/pidgin/articles/cgr6g81j2g8o"
+                href="https://www.bbc.com/persian/articles/cx7e0eexdeeo"
               >
-                Super Eagles qualify for Nations Cup afta beating Sierra Leone for Monrovia
+                اما رادوکانو: گاهی آرزو می‌کنم که ای کاش قهرمان اوپن آمریکا نمی‌شدم
               </a>
             </div>
           </div>
@@ -3620,9 +3592,9 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
             >
               <a
                 class="focusIndicatorDisplayTableCell emotion-31"
-                href="https://www.bbc.com/pidgin/articles/cx047w4gxqzo"
+                href="https://www.bbc.com/persian/articles/cqe0045zrpdo"
               >
-                Forbes top ten list of highest paid athletes for 2023 and wetin dem earn
+                ملی‌پوش سابق هلند برای چاقو زدن به فامیلش به ۱۸ ماه حبس محکوم شد
               </a>
             </div>
           </div>
@@ -3651,9 +3623,9 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
             >
               <a
                 class="focusIndicatorDisplayTableCell emotion-31"
-                href="/pidgin/65817572"
+                href="https://www.bbc.com/persian/articles/cjmyylvr1nvo"
               >
-                Tins to sabi about 2023 Sierra Leone general election
+                وزیر خارجه آمریکا در پکن؛ شی: پیشرفت‌هایی در روابط حاصل شده است، بلینکن: رقابت نباید بدل به دشمنی شود
               </a>
             </div>
           </div>
@@ -3682,9 +3654,9 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
             >
               <a
                 class="focusIndicatorDisplayTableCell emotion-31"
-                href="https://www.bbc.com/pidgin/articles/cv21n0qzvv6o"
+                href="https://www.bbc.com/persian/articles/cyxgqq1796qo"
               >
-                CBN move to allow naira trade more freely against di dollar - Wetin e mean? 
+                سگم سرطان پستان مرا تشخیص داد
               </a>
             </div>
           </div>
@@ -3713,9 +3685,9 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
             >
               <a
                 class="focusIndicatorDisplayTableCell emotion-31"
-                href="https://www.bbc.com/pidgin/articles/cd1k74e9pl1o"
+                href="https://www.bbc.com/persian/articles/cydg800g89yo"
               >
-                'We go flush out bad eggs for passport offices' - Acting Comptroller General Immigration 
+                لوح ۲۸۰۰ ساله از ایتالیا به عراق بازگردانده شد
               </a>
             </div>
           </div>
@@ -3744,9 +3716,9 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
             >
               <a
                 class="focusIndicatorDisplayTableCell emotion-31"
-                href="https://www.bbc.com/pidgin/articles/cnd9g0p5p2lo"
+                href="https://www.bbc.com/persian/articles/cgr664ezld5o"
               >
-                South Africa taps don dry finish on top electricity kasala
+                نمایندگان کشورها و نهادها در اجلاس سازمان ملل خواستار پایان یافتن سیاست‌های تبعیض‌آمیز طالبان علیه زنان شدند
               </a>
             </div>
           </div>
@@ -3775,9 +3747,9 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
             >
               <a
                 class="focusIndicatorDisplayTableCell emotion-31"
-                href="/pidgin/tori-65926540"
+                href="https://www.bbc.com/persian/articles/c9wj7ejl17po"
               >
-                Sharp-sharp facts about President Bola Tinubu special advisers
+                چرا موبایل داغ می‌کند و چطور آن را خنک نگه داریم؟
               </a>
             </div>
           </div>
@@ -3806,20 +3778,10 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
             >
               <a
                 class="focusIndicatorDisplayTableCell emotion-31"
-                href="https://www.bbc.com/pidgin/articles/c0d81l304xdo"
+                href="https://www.bbc.com/persian/articles/c6plvgyz614o"
               >
-                Easter date, Workers day, Salah date plus oda public holidays for 2023
+                هشتگ «داستان_ما_یکیست» در چهلمین سالگرد اعدام ۱۰ زن بهائی در شیراز
               </a>
-              <div
-                class="emotion-95"
-              >
-                <time
-                  class="emotion-96 emotion-97"
-                  datetime="2022-12-31"
-                >
-                  به روز شده در ۳۱ دسامبر ۲۰۲۲
-                </time>
-              </div>
             </div>
           </div>
         </li>
