@@ -97,7 +97,7 @@ const wrapper = ({ pageData, children, toggles = defaultToggles }) => (
   >
     <ServiceContextProvider service="pidgin">
       <ToggleContextProvider toggles={toggles}>
-        <EventTrackingContextProvider pageData={pageData}>
+        <EventTrackingContextProvider data={pageData}>
           {children}
         </EventTrackingContextProvider>
       </ToggleContextProvider>
