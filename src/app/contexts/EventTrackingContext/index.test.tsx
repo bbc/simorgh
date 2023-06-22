@@ -262,7 +262,7 @@ describe('Error handling', () => {
 
     try {
       render(
-        // @ts-expect-error - testing handling of a page type that does not exist
+        // @ts-expect-error - testing handling of a page type that doesn't exist
         <Wrapper pageData={fixtureData} pageType="funky-page-type">
           <TestComponent />
         </Wrapper>,
