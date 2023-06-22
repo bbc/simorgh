@@ -3,7 +3,7 @@ const urls = [
     service: 'kyrgyz',
     local: '/kyrgyz',
     test: '/kyrgyz',
-    live: null,
+    live: '/kyrgyz',
   },
 ];
 

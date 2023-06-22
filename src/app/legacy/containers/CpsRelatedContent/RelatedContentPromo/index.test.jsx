@@ -9,7 +9,10 @@ import RelatedContentPromo from '.';
 
 jest.mock('../../../../components/ThemeProvider');
 
-const promos = path(['relatedContent', 'groups', 0, 'promos'], pidginPageData);
+const promos = path(
+  ['relatedContent', 'groups', 0, 'promos'],
+  pidginPageData.data.article,
+);
 
 describe('RelatedContentPromo', () => {
   shouldMatchSnapshot(
