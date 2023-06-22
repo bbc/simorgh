@@ -350,9 +350,9 @@ it('should not show the timestamp when allowDateStamp is false', async () => {
 
 it('should not show the iframe when available is false', async () => {
   const uzbekDataExpiredLivestream = assocPath(
-    ['content', 'blocks', 0, 'available'],
+    ['data', 'article', 'content', 'blocks', 0, 'available'],
     false,
-    uzbekPageData.data.article,
+    uzbekPageData,
   );
 
   const { pageData: pageDataWithExpiredLiveStream } = await mockInitialData({
@@ -368,9 +368,9 @@ it('should not show the iframe when available is false', async () => {
 
 it('should show the media message when available is false', async () => {
   const uzbekDataExpiredLivestream = assocPath(
-    ['content', 'blocks', 0, 'available'],
+    ['data', 'article', 'content', 'blocks', 0, 'available'],
     false,
-    uzbekPageData.data.article,
+    uzbekPageData,
   );
 
   const { pageData: pageDataWithExpiredLiveStream } = await mockInitialData({
