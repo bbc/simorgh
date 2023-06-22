@@ -1,5 +1,5 @@
 /** @jsx jsx */
-
+import React from 'react';
 import { jsx } from '@emotion/react';
 import Heading from '#app/components/Heading';
 import Text from '#app/components/Text';
@@ -26,21 +26,18 @@ const Header = ({
           tabIndex={-1}
         >
           {/* role="text" is required to correct a text splitting bug on iOS VoiceOver. */}
-          {isLive ? (
-            // eslint-disable-next-line jsx-a11y/aria-role
-            <span role="text" css={styles.innerGrid}>
-              <span css={styles.label} aria-hidden="true">
-                LIVE
-              </span>
-              <VisuallyHiddenText lang="en-GB">Live, </VisuallyHiddenText>
-              <span css={styles.title}>{title}</span>
-            </span>
-          ) : (
-            // eslint-disable-next-line jsx-a11y/aria-role
-            <span role="text" css={styles.innerGrid}>
-              <span css={styles.title}>{title}</span>
-            </span>
-          )}
+          {/*  eslint-disable-next-line jsx-a11y/aria-role */}
+          <span role="text" css={styles.innerGrid}>
+            {isLive ? (
+              <>
+                <span css={styles.label} aria-hidden="true">
+                  LIVE
+                </span>
+                <VisuallyHiddenText lang="en-GB">Live, </VisuallyHiddenText>
+              </>
+            ) : null}
+            <span css={styles.title}>{title}</span>
+          </span>
         </Heading>
         {description && (
           <Text as="p" css={styles.description}>
