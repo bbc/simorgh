@@ -34,6 +34,7 @@ interface Props {
   showAdsBasedOnLocation?: boolean;
   variant?: Variants;
   isNextJs?: boolean;
+  pageLang?: string;
 }
 
 const AllTheProviders: FC<Props> = ({
@@ -48,12 +49,17 @@ const AllTheProviders: FC<Props> = ({
   service = 'news',
   toggles = {},
   variant = 'default',
+  pageLang = undefined,
   showAdsBasedOnLocation = false,
   isNextJs = false,
 }: Props) => {
   return (
     <ToggleContextProvider toggles={toggles}>
-      <ServiceContextProvider service={service} variant={variant}>
+      <ServiceContextProvider
+        service={service}
+        variant={variant}
+        pageLang={pageLang}
+      >
         <RequestContextProvider
           bbcOrigin="https://www.test.bbc.com"
           pageType={pageType}
@@ -95,6 +101,7 @@ const customRender = (
     variant,
     showAdsBasedOnLocation,
     isNextJs,
+    pageLang,
   } = options || {};
 
   return render(ui, {
@@ -112,6 +119,7 @@ const customRender = (
         variant={variant}
         showAdsBasedOnLocation={showAdsBasedOnLocation}
         isNextJs={isNextJs}
+        pageLang={pageLang}
       >
         {children}
       </AllTheProviders>
