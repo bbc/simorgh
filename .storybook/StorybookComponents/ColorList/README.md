@@ -4,9 +4,9 @@ A List of Colour Cards used in storybook's colours palette documentation. At the
 
 ## Props
 
-| Name   | type                                          | Description                                                                   |
-| ------ | --------------------------------------------- | ----------------------------------------------------------------------------- |
-| Colors | `ts{colorName: string; colorCode: string;}[]` | List of colours object with UX/variable name colour and hexadecimal of colour |
+| Name   | type                                          | Description                                                        |
+| ------ | --------------------------------------------- | ------------------------------------------------------------------ |
+| Colors | `ts{colorName: string; colorCode: string;}[]` | List of colours object with UX/variable name and hexadecimal value |
 
 ## Usage
 
