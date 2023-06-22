@@ -169,6 +169,8 @@ describe('Expected use', () => {
 
     render(<TestComponent />, {
       toggles: eventTrackingToggle,
+      pageData: undefined,
+      atiData: undefined,
     });
 
     const testEl = screen.getByTestId('test-component');
@@ -216,7 +218,11 @@ describe('Expected use', () => {
   });
 
   it('should provide an empty object if pageData and atiData are missing - 1', () => {
-    render(<TestComponent />);
+    render(<TestComponent />, {
+      toggles: defaultToggles,
+      pageData: undefined,
+      atiData: undefined,
+    });
 
     const testEl = screen.getByTestId('test-component');
     const trackingData = JSON.parse(testEl.textContent as string);
