@@ -790,11 +790,231 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
   }
 }
 
-.emotion-40 {
+@media (max-width: 14.9375rem) {
+  .emotion-45 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-45 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-45 {
+    min-width: 3rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-45 {
+    min-width: 4rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-45 {
+    min-width: 4rem;
+  }
+}
+
+@supports (grid-template-columns: fit-content(200px)) {
+  @media (min-width: 37.5rem) {
+    .emotion-45 {
+      min-width: 2rem;
+    }
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-45 {
+    min-width: 2rem;
+  }
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-84 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-84 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-84 {
+    min-width: 3rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-84 {
+    min-width: 4rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-84 {
+    min-width: 2rem;
+  }
+}
+
+@supports (grid-template-columns: fit-content(200px)) {
+  @media (min-width: 37.5rem) {
+    .emotion-84 {
+      min-width: 2rem;
+    }
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-84 {
+    min-width: 4rem;
+  }
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-97 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-97 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-97 {
+    min-width: 3rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-97 {
+    min-width: 4rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-97 {
+    min-width: 4rem;
+  }
+}
+
+@supports (grid-template-columns: fit-content(200px)) {
+  @media (min-width: 37.5rem) {
+    .emotion-97 {
+      min-width: 4rem;
+    }
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-97 {
+    min-width: 2rem;
+  }
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-110 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-110 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-110 {
+    min-width: 3rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-110 {
+    min-width: 4rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-110 {
+    min-width: 2rem;
+  }
+}
+
+@supports (grid-template-columns: fit-content(200px)) {
+  @media (min-width: 37.5rem) {
+    .emotion-110 {
+      min-width: 4rem;
+    }
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-110 {
+    min-width: 2rem;
+  }
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-149 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-149 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-149 {
+    min-width: 3rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-149 {
+    min-width: 4rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-149 {
+    min-width: 4rem;
+  }
+}
+
+@supports (grid-template-columns: fit-content(200px)) {
+  @media (min-width: 37.5rem) {
+    .emotion-149 {
+      min-width: 4rem;
+    }
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-149 {
+    min-width: 4rem;
+  }
+}
+
+.emotion-157 {
   padding-top: 0.5rem;
 }
 
-.emotion-42 {
+.emotion-159 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #545658;
@@ -805,236 +1025,16 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-42 {
+  .emotion-159 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-42 {
+  .emotion-159 {
     font-size: 0.8125rem;
     line-height: 1rem;
-  }
-}
-
-@media (max-width: 14.9375rem) {
-  .emotion-49 {
-    min-width: 2.5rem;
-  }
-}
-
-@media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-49 {
-    min-width: 2.5rem;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-49 {
-    min-width: 3rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-49 {
-    min-width: 4rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-49 {
-    min-width: 4rem;
-  }
-}
-
-@supports (grid-template-columns: fit-content(200px)) {
-  @media (min-width: 37.5rem) {
-    .emotion-49 {
-      min-width: 2rem;
-    }
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-49 {
-    min-width: 2rem;
-  }
-}
-
-@media (max-width: 14.9375rem) {
-  .emotion-100 {
-    min-width: 2.5rem;
-  }
-}
-
-@media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-100 {
-    min-width: 2.5rem;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-100 {
-    min-width: 3rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-100 {
-    min-width: 4rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-100 {
-    min-width: 2rem;
-  }
-}
-
-@supports (grid-template-columns: fit-content(200px)) {
-  @media (min-width: 37.5rem) {
-    .emotion-100 {
-      min-width: 2rem;
-    }
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-100 {
-    min-width: 4rem;
-  }
-}
-
-@media (max-width: 14.9375rem) {
-  .emotion-117 {
-    min-width: 2.5rem;
-  }
-}
-
-@media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-117 {
-    min-width: 2.5rem;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-117 {
-    min-width: 3rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-117 {
-    min-width: 4rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-117 {
-    min-width: 4rem;
-  }
-}
-
-@supports (grid-template-columns: fit-content(200px)) {
-  @media (min-width: 37.5rem) {
-    .emotion-117 {
-      min-width: 4rem;
-    }
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-117 {
-    min-width: 2rem;
-  }
-}
-
-@media (max-width: 14.9375rem) {
-  .emotion-134 {
-    min-width: 2.5rem;
-  }
-}
-
-@media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-134 {
-    min-width: 2.5rem;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-134 {
-    min-width: 3rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-134 {
-    min-width: 4rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-134 {
-    min-width: 2rem;
-  }
-}
-
-@supports (grid-template-columns: fit-content(200px)) {
-  @media (min-width: 37.5rem) {
-    .emotion-134 {
-      min-width: 4rem;
-    }
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-134 {
-    min-width: 2rem;
-  }
-}
-
-@media (max-width: 14.9375rem) {
-  .emotion-185 {
-    min-width: 2.5rem;
-  }
-}
-
-@media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-185 {
-    min-width: 2.5rem;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-185 {
-    min-width: 3rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-185 {
-    min-width: 4rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-185 {
-    min-width: 4rem;
-  }
-}
-
-@supports (grid-template-columns: fit-content(200px)) {
-  @media (min-width: 37.5rem) {
-    .emotion-185 {
-      min-width: 4rem;
-    }
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-185 {
-    min-width: 4rem;
   }
 }
 
@@ -1140,20 +1140,10 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
             >
               <a
                 class="focusIndicatorDisplayTableCell emotion-38 emotion-39"
-                href="/pidgin/tori-46729879"
+                href="https://www.bbc.com/pidgin/articles/cz5kkgv41v0o"
               >
-                Public Holidays wey go happun for 2019
+                Teams wey qualify for Afcon 2023 and how things stand for each group
               </a>
-              <div
-                class="emotion-40 emotion-41"
-              >
-                <time
-                  class="emotion-42 emotion-43"
-                  datetime="2019-05-21"
-                >
-                  De one we dem update for: 21st May 2019
-                </time>
-              </div>
             </div>
           </div>
         </li>
@@ -1166,7 +1156,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
             class="emotion-30 emotion-31"
           >
             <div
-              class="emotion-49 emotion-33"
+              class="emotion-45 emotion-33"
               dir="ltr"
             >
               <span
@@ -1181,20 +1171,10 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
             >
               <a
                 class="focusIndicatorDisplayTableCell emotion-38 emotion-39"
-                href="/pidgin/tori-50304653"
+                href="https://www.bbc.com/pidgin/articles/czd44wvly0qo"
               >
-                Liberia banks don run out of money
+                'We dey hear gospel songs den screaming' - Woman tok of Uganda school attack 
               </a>
-              <div
-                class="emotion-40 emotion-41"
-              >
-                <time
-                  class="emotion-42 emotion-43"
-                  datetime="2019-11-05"
-                >
-                  De one we dem update for: 5th November 2019
-                </time>
-              </div>
             </div>
           </div>
         </li>
@@ -1222,20 +1202,10 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
             >
               <a
                 class="focusIndicatorDisplayTableCell emotion-38 emotion-39"
-                href="/pidgin/tori-50298882"
+                href="https://www.bbc.com/pidgin/articles/cgr6g81j2g8o"
               >
-                Why Oscars disqualify Genevieve Nnaji 'Lionheart' film
+                Super Eagles qualify for Nations Cup afta beating Sierra Leone for Monrovia
               </a>
-              <div
-                class="emotion-40 emotion-41"
-              >
-                <time
-                  class="emotion-42 emotion-43"
-                  datetime="2019-11-05"
-                >
-                  De one we dem update for: 5th November 2019
-                </time>
-              </div>
             </div>
           </div>
         </li>
@@ -1248,7 +1218,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
             class="emotion-30 emotion-31"
           >
             <div
-              class="emotion-49 emotion-33"
+              class="emotion-45 emotion-33"
               dir="ltr"
             >
               <span
@@ -1263,20 +1233,10 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
             >
               <a
                 class="focusIndicatorDisplayTableCell emotion-38 emotion-39"
-                href="/pidgin/tori-50315150"
+                href="https://www.bbc.com/pidgin/articles/cx047w4gxqzo"
               >
-                Ghana opposition NDC list 51 family and friends inside Akufo-Addo govment
+                Forbes top ten list of highest paid athletes for 2023 and wetin dem earn
               </a>
-              <div
-                class="emotion-40 emotion-41"
-              >
-                <time
-                  class="emotion-42 emotion-43"
-                  datetime="2019-11-06"
-                >
-                  De one we dem update for: 6th November 2019
-                </time>
-              </div>
             </div>
           </div>
         </li>
@@ -1289,7 +1249,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
             class="emotion-30 emotion-31"
           >
             <div
-              class="emotion-100 emotion-33"
+              class="emotion-84 emotion-33"
               dir="ltr"
             >
               <span
@@ -1304,20 +1264,10 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
             >
               <a
                 class="focusIndicatorDisplayTableCell emotion-38 emotion-39"
-                href="/pidgin/tori-50315157"
+                href="/pidgin/65817572"
               >
-                How Balogun market fire kill Policeman for Lagos
+                Tins to sabi about 2023 Sierra Leone general election
               </a>
-              <div
-                class="emotion-40 emotion-41"
-              >
-                <time
-                  class="emotion-42 emotion-43"
-                  datetime="2019-11-06"
-                >
-                  De one we dem update for: 6th November 2019
-                </time>
-              </div>
             </div>
           </div>
         </li>
@@ -1330,7 +1280,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
             class="emotion-30 emotion-31"
           >
             <div
-              class="emotion-117 emotion-33"
+              class="emotion-97 emotion-33"
               dir="ltr"
             >
               <span
@@ -1345,20 +1295,10 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
             >
               <a
                 class="focusIndicatorDisplayTableCell emotion-38 emotion-39"
-                href="/pidgin/tori-50093818"
+                href="https://www.bbc.com/pidgin/articles/cv21n0qzvv6o"
               >
-                Labour, FG finally agree minimum wage salary adjustment
+                CBN move to allow naira trade more freely against di dollar - Wetin e mean? 
               </a>
-              <div
-                class="emotion-40 emotion-41"
-              >
-                <time
-                  class="emotion-42 emotion-43"
-                  datetime="2019-10-18"
-                >
-                  De one we dem update for: 18th October 2019
-                </time>
-              </div>
             </div>
           </div>
         </li>
@@ -1371,7 +1311,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
             class="emotion-30 emotion-31"
           >
             <div
-              class="emotion-134 emotion-33"
+              class="emotion-110 emotion-33"
               dir="ltr"
             >
               <span
@@ -1386,20 +1326,10 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
             >
               <a
                 class="focusIndicatorDisplayTableCell emotion-38 emotion-39"
-                href="/pidgin/tori-50187218"
+                href="https://www.bbc.com/pidgin/articles/cd1k74e9pl1o"
               >
-                Naira Marley na 'Bad Influence'?
+                'We go flush out bad eggs for passport offices' - Acting Comptroller General Immigration 
               </a>
-              <div
-                class="emotion-40 emotion-41"
-              >
-                <time
-                  class="emotion-42 emotion-43"
-                  datetime="2019-10-25"
-                >
-                  De one we dem update for: 25th October 2019
-                </time>
-              </div>
             </div>
           </div>
         </li>
@@ -1412,7 +1342,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
             class="emotion-30 emotion-31"
           >
             <div
-              class="emotion-117 emotion-33"
+              class="emotion-97 emotion-33"
               dir="ltr"
             >
               <span
@@ -1427,20 +1357,10 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
             >
               <a
                 class="focusIndicatorDisplayTableCell emotion-38 emotion-39"
-                href="/pidgin/tori-48347911"
+                href="https://www.bbc.com/pidgin/articles/cnd9g0p5p2lo"
               >
-                Tins you suppose know about Naira Marley
+                South Africa taps don dry finish on top electricity kasala
               </a>
-              <div
-                class="emotion-40 emotion-41"
-              >
-                <time
-                  class="emotion-42 emotion-43"
-                  datetime="2019-05-23"
-                >
-                  De one we dem update for: 23rd May 2019
-                </time>
-              </div>
             </div>
           </div>
         </li>
@@ -1453,7 +1373,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
             class="emotion-30 emotion-31"
           >
             <div
-              class="emotion-134 emotion-33"
+              class="emotion-110 emotion-33"
               dir="ltr"
             >
               <span
@@ -1468,20 +1388,10 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
             >
               <a
                 class="focusIndicatorDisplayTableCell emotion-38 emotion-39"
-                href="/pidgin/sport-50312710"
+                href="/pidgin/tori-65926540"
               >
-                Golden Eaglets crash out of Fifa U17 World Cup
+                Sharp-sharp facts about President Bola Tinubu special advisers
               </a>
-              <div
-                class="emotion-40 emotion-41"
-              >
-                <time
-                  class="emotion-42 emotion-43"
-                  datetime="2019-11-06"
-                >
-                  De one we dem update for: 6th November 2019
-                </time>
-              </div>
             </div>
           </div>
         </li>
@@ -1494,7 +1404,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
             class="emotion-30 emotion-31"
           >
             <div
-              class="emotion-185 emotion-33"
+              class="emotion-149 emotion-33"
               dir="ltr"
             >
               <span
@@ -1509,18 +1419,18 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
             >
               <a
                 class="focusIndicatorDisplayTableCell emotion-38 emotion-39"
-                href="/pidgin/tori-42945173"
+                href="https://www.bbc.com/pidgin/articles/c0d81l304xdo"
               >
-                Tiger nut drink fit wake up your sex drive - Nutritionist
+                Easter date, Workers day, Salah date plus oda public holidays for 2023
               </a>
               <div
-                class="emotion-40 emotion-41"
+                class="emotion-157 emotion-158"
               >
                 <time
-                  class="emotion-42 emotion-43"
-                  datetime="2019-05-21"
+                  class="emotion-159 emotion-160"
+                  datetime="2022-12-31"
                 >
-                  De one we dem update for: 21st May 2019
+                  De one we dem update for: 31st December 2022
                 </time>
               </div>
             </div>
@@ -3271,250 +3181,222 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
   }
 }
 
-.emotion-40 {
-  padding-top: 0.5rem;
-}
-
-.emotion-42 {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  color: #545658;
-  display: block;
-  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-42 {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-42 {
-    font-size: 0.8125rem;
-    line-height: 1.25rem;
-  }
-}
-
 @media (max-width: 14.9375rem) {
-  .emotion-49 {
+  .emotion-45 {
     min-width: 1rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-49 {
+  .emotion-45 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-49 {
+  .emotion-45 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-49 {
+  .emotion-45 {
     min-width: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-49 {
+  .emotion-45 {
     min-width: 2rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-49 {
+    .emotion-45 {
       min-width: 1.5rem;
     }
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-49 {
+  .emotion-45 {
     min-width: 1.5rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-100 {
+  .emotion-84 {
     min-width: 1rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-100 {
+  .emotion-84 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-100 {
+  .emotion-84 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-100 {
+  .emotion-84 {
     min-width: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-100 {
+  .emotion-84 {
     min-width: 1.5rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-100 {
+    .emotion-84 {
       min-width: 1.5rem;
     }
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-100 {
+  .emotion-84 {
     min-width: 2rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-117 {
+  .emotion-97 {
     min-width: 1rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-117 {
+  .emotion-97 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-117 {
+  .emotion-97 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-117 {
+  .emotion-97 {
     min-width: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-117 {
+  .emotion-97 {
     min-width: 2rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-117 {
+    .emotion-97 {
       min-width: 2rem;
     }
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-117 {
+  .emotion-97 {
     min-width: 1.5rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-134 {
+  .emotion-110 {
     min-width: 1rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-134 {
+  .emotion-110 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-134 {
+  .emotion-110 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-134 {
+  .emotion-110 {
     min-width: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-134 {
+  .emotion-110 {
     min-width: 1.5rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-134 {
+    .emotion-110 {
       min-width: 2rem;
     }
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-134 {
+  .emotion-110 {
     min-width: 1.5rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-185 {
+  .emotion-149 {
     min-width: 1rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-185 {
+  .emotion-149 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-185 {
+  .emotion-149 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-185 {
+  .emotion-149 {
     min-width: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-185 {
+  .emotion-149 {
     min-width: 2rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-185 {
+    .emotion-149 {
       min-width: 2rem;
     }
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-185 {
+  .emotion-149 {
     min-width: 2rem;
   }
 }
@@ -3621,20 +3503,10 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
             >
               <a
                 class="focusIndicatorDisplayTableCell emotion-38 emotion-39"
-                href="/persian/world-50317704"
+                href="https://www.bbc.com/persian/articles/c4n9j7rx27lo"
               >
-                توافق با جدایی‌طلبان یمن؛ ایران اعتراض کرد، سازمان ملل استقبال
+                ایران در آستانه بحران بنزین؛ تابستانی دشوار برای دولت رئیسی در پیش است
               </a>
-              <div
-                class="emotion-40 emotion-41"
-              >
-                <time
-                  class="emotion-42 emotion-43"
-                  datetime="2019-11-06"
-                >
-                  به روز شده در ۶ نوامبر ۲۰۱۹
-                </time>
-              </div>
             </div>
           </div>
         </li>
@@ -3647,7 +3519,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
             class="emotion-30 emotion-31"
           >
             <div
-              class="emotion-49 emotion-33"
+              class="emotion-45 emotion-33"
               dir="rtl"
             >
               <span
@@ -3662,20 +3534,10 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
             >
               <a
                 class="focusIndicatorDisplayTableCell emotion-38 emotion-39"
-                href="/persian/iran-50319870"
+                href="https://www.bbc.com/persian/articles/cm58lxneyrvo"
               >
-                فراخوان آذری جهرمی برای مناظره اینستاگرامی - زرآبادی: در مجلس مناظره کنیم
+                پرونده حمید نوری؛ وکلای مدافع: نوری فریب خورد
               </a>
-              <div
-                class="emotion-40 emotion-41"
-              >
-                <time
-                  class="emotion-42 emotion-43"
-                  datetime="2019-11-06"
-                >
-                  به روز شده در ۶ نوامبر ۲۰۱۹
-                </time>
-              </div>
             </div>
           </div>
         </li>
@@ -3703,20 +3565,10 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
             >
               <a
                 class="focusIndicatorDisplayTableCell emotion-38 emotion-39"
-                href="/persian/world-50320610"
+                href="https://www.bbc.com/persian/articles/cx7e0eexdeeo"
               >
-                ترکیه: همسر ابوبکر بغدادی را 'دستگیر کردیم'
+                اما رادوکانو: گاهی آرزو می‌کنم که ای کاش قهرمان اوپن آمریکا نمی‌شدم
               </a>
-              <div
-                class="emotion-40 emotion-41"
-              >
-                <time
-                  class="emotion-42 emotion-43"
-                  datetime="2019-11-06"
-                >
-                  به روز شده در ۶ نوامبر ۲۰۱۹
-                </time>
-              </div>
             </div>
           </div>
         </li>
@@ -3729,7 +3581,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
             class="emotion-30 emotion-31"
           >
             <div
-              class="emotion-49 emotion-33"
+              class="emotion-45 emotion-33"
               dir="rtl"
             >
               <span
@@ -3744,20 +3596,10 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
             >
               <a
                 class="focusIndicatorDisplayTableCell emotion-38 emotion-39"
-                href="/persian/world-50316456"
+                href="https://www.bbc.com/persian/articles/cqe0045zrpdo"
               >
-                غنی سازی مجدد در فردو: مکرون اقدام ایران را 'عمیقا مایه نگرانی' خواند
+                ملی‌پوش سابق هلند برای چاقو زدن به فامیلش به ۱۸ ماه حبس محکوم شد
               </a>
-              <div
-                class="emotion-40 emotion-41"
-              >
-                <time
-                  class="emotion-42 emotion-43"
-                  datetime="2019-11-06"
-                >
-                  به روز شده در ۶ نوامبر ۲۰۱۹
-                </time>
-              </div>
             </div>
           </div>
         </li>
@@ -3770,7 +3612,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
             class="emotion-30 emotion-31"
           >
             <div
-              class="emotion-100 emotion-33"
+              class="emotion-84 emotion-33"
               dir="rtl"
             >
               <span
@@ -3785,20 +3627,10 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
             >
               <a
                 class="focusIndicatorDisplayTableCell emotion-38 emotion-39"
-                href="/persian/magazine-50249226"
+                href="https://www.bbc.com/persian/articles/cjmyylvr1nvo"
               >
-                دوازده دلیل حکمرانی حشرات: سوسک می‌تواند دو هفته بدون سر زنده بماند
+                وزیر خارجه آمریکا در پکن؛ شی: پیشرفت‌هایی در روابط حاصل شده است، بلینکن: رقابت نباید بدل به دشمنی شود
               </a>
-              <div
-                class="emotion-40 emotion-41"
-              >
-                <time
-                  class="emotion-42 emotion-43"
-                  datetime="2019-11-06"
-                >
-                  به روز شده در ۶ نوامبر ۲۰۱۹
-                </time>
-              </div>
             </div>
           </div>
         </li>
@@ -3811,7 +3643,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
             class="emotion-30 emotion-31"
           >
             <div
-              class="emotion-117 emotion-33"
+              class="emotion-97 emotion-33"
               dir="rtl"
             >
               <span
@@ -3826,20 +3658,10 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
             >
               <a
                 class="focusIndicatorDisplayTableCell emotion-38 emotion-39"
-                href="/persian/world-50317700"
+                href="https://www.bbc.com/persian/articles/cyxgqq1796qo"
               >
-                انتخابات ایالتی آمریکا؛ دموکرات‌ها از جمهوری‌خواهان پیش افتادند
+                سگم سرطان پستان مرا تشخیص داد
               </a>
-              <div
-                class="emotion-40 emotion-41"
-              >
-                <time
-                  class="emotion-42 emotion-43"
-                  datetime="2019-11-06"
-                >
-                  به روز شده در ۶ نوامبر ۲۰۱۹
-                </time>
-              </div>
             </div>
           </div>
         </li>
@@ -3852,7 +3674,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
             class="emotion-30 emotion-31"
           >
             <div
-              class="emotion-134 emotion-33"
+              class="emotion-110 emotion-33"
               dir="rtl"
             >
               <span
@@ -3867,20 +3689,10 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
             >
               <a
                 class="focusIndicatorDisplayTableCell emotion-38 emotion-39"
-                href="/persian/sport-50322486"
+                href="https://www.bbc.com/persian/articles/cydg800g89yo"
               >
-                عراق اردن را به عنوان میزبان بازی با ایران معرفی کرد
+                لوح ۲۸۰۰ ساله از ایتالیا به عراق بازگردانده شد
               </a>
-              <div
-                class="emotion-40 emotion-41"
-              >
-                <time
-                  class="emotion-42 emotion-43"
-                  datetime="2019-11-06"
-                >
-                  به روز شده در ۶ نوامبر ۲۰۱۹
-                </time>
-              </div>
             </div>
           </div>
         </li>
@@ -3893,7 +3705,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
             class="emotion-30 emotion-31"
           >
             <div
-              class="emotion-117 emotion-33"
+              class="emotion-97 emotion-33"
               dir="rtl"
             >
               <span
@@ -3908,20 +3720,10 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
             >
               <a
                 class="focusIndicatorDisplayTableCell emotion-38 emotion-39"
-                href="/persian/iran-features-50310665"
+                href="https://www.bbc.com/persian/articles/cgr664ezld5o"
               >
-                آیا تهران بازی هسته ای را به هم می‌زند؟
+                نمایندگان کشورها و نهادها در اجلاس سازمان ملل خواستار پایان یافتن سیاست‌های تبعیض‌آمیز طالبان علیه زنان شدند
               </a>
-              <div
-                class="emotion-40 emotion-41"
-              >
-                <time
-                  class="emotion-42 emotion-43"
-                  datetime="2019-11-06"
-                >
-                  به روز شده در ۶ نوامبر ۲۰۱۹
-                </time>
-              </div>
             </div>
           </div>
         </li>
@@ -3934,7 +3736,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
             class="emotion-30 emotion-31"
           >
             <div
-              class="emotion-134 emotion-33"
+              class="emotion-110 emotion-33"
               dir="rtl"
             >
               <span
@@ -3949,20 +3751,10 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
             >
               <a
                 class="focusIndicatorDisplayTableCell emotion-38 emotion-39"
-                href="/persian/world-50316450"
+                href="https://www.bbc.com/persian/articles/c9wj7ejl17po"
               >
-                آمریکا: دو ایرانی اتهام جمع‌آوری اطلاعات علیه سازمان مجاهدین در خاک آمریکا را پذیرفتند
+                چرا موبایل داغ می‌کند و چطور آن را خنک نگه داریم؟
               </a>
-              <div
-                class="emotion-40 emotion-41"
-              >
-                <time
-                  class="emotion-42 emotion-43"
-                  datetime="2019-11-06"
-                >
-                  به روز شده در ۶ نوامبر ۲۰۱۹
-                </time>
-              </div>
             </div>
           </div>
         </li>
@@ -3975,7 +3767,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
             class="emotion-30 emotion-31"
           >
             <div
-              class="emotion-185 emotion-33"
+              class="emotion-149 emotion-33"
               dir="rtl"
             >
               <span
@@ -3990,20 +3782,10 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
             >
               <a
                 class="focusIndicatorDisplayTableCell emotion-38 emotion-39"
-                href="/persian/sport-50318030"
+                href="https://www.bbc.com/persian/articles/c6plvgyz614o"
               >
-                فوتبال ایران و عراق؛ ایران: امن است بازی می‌کنیم، فیفا: ناامن است بازی نکنید
+                هشتگ «داستان_ما_یکیست» در چهلمین سالگرد اعدام ۱۰ زن بهائی در شیراز
               </a>
-              <div
-                class="emotion-40 emotion-41"
-              >
-                <time
-                  class="emotion-42 emotion-43"
-                  datetime="2019-11-06"
-                >
-                  به روز شده در ۶ نوامبر ۲۰۱۹
-                </time>
-              </div>
             </div>
           </div>
         </li>

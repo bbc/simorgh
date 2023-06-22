@@ -537,7 +537,14 @@ Object {
         ],
         "semanticGroupName": "Cluster 1",
         "strapline": Object {
+          "links": Object {
+            "desktop": "/serbian/lat/popular/read",
+            "enhancedmobile": "/serbian/lat/popular/read",
+            "highweb": "/serbian/lat/popular/read",
+            "mobile": "/serbian/lat/popular/read",
+          },
           "name": "U toku",
+          "type": "LINK",
         },
         "title": "Cluster 1",
         "type": "responsive-cluster",
@@ -1345,8 +1352,47 @@ Object {
         "type": "featured-site-top-stories",
       },
       Object {
-        "items": Array [],
+        "items": Array [
+          Object {
+            "assetTypeCode": "PRO",
+            "contentType": "Guide",
+            "name": "Kontaktirajte nas 1",
+            "type": "link",
+            "uri": "/serbian/lat/popular/read",
+          },
+          Object {
+            "assetTypeCode": "PRO",
+            "contentType": "Guide",
+            "name": "Kontaktirajte nas 2",
+            "type": "link",
+            "uri": "/serbian/lat/popular/read",
+          },
+          Object {
+            "assetTypeCode": "PRO",
+            "contentType": "Guide",
+            "name": "Kontaktirajte nas 3",
+            "type": "link",
+            "uri": "/serbian/lat/popular/read",
+          },
+          Object {
+            "assetTypeCode": "PRO",
+            "contentType": "Guide",
+            "name": "Kontaktirajte nas 4",
+            "type": "link",
+            "uri": "/serbian/lat/popular/read",
+          },
+          Object {
+            "assetTypeCode": "PRO",
+            "contentType": "Guide",
+            "name": "Kontaktirajte nas 5",
+            "type": "link",
+            "uri": "/serbian/lat/popular/read",
+          },
+        ],
         "semanticGroupName": "Useful links",
+        "strapline": Object {
+          "name": "Korisni linkovi",
+        },
         "title": "Useful links",
         "type": "useful-links",
       },
