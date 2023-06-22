@@ -60,7 +60,7 @@ const AllTheProviders: FC<Props> = ({
           derivedPageType={derivedPageType}
           showAdsBasedOnLocation={showAdsBasedOnLocation}
         >
-          <EventTrackingContextProvider pageData={pageData}>
+          <EventTrackingContextProvider data={pageData}>
             <UserContextProvider>
               <ThemeProvider service={service} variant={variant}>
                 {children}
