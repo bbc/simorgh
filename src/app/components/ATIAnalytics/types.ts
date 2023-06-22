@@ -51,7 +51,8 @@ export interface PageData {
   };
   promo?:
     | { headlines?: { seoHeadline?: string } }
-    | { headlines?: { headline?: string } };
+    | { headlines?: { headline?: string } }
+    | { subType: string; name: string; uri: string; id: string; type: string };
   id?: string;
   language?: string;
   pageIdentifier?: string;

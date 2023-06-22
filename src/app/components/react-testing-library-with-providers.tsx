@@ -24,6 +24,7 @@ interface Props {
   toggles?: Toggles;
   showAdsBasedOnLocation?: boolean;
   variant?: Variants;
+  pageLang?: string;
 }
 
 // Uses a custom render so consumers don't need to wrap test fixtures in context and theme providers in every test suite
@@ -39,11 +40,16 @@ const AllTheProviders: FC<Props> = ({
   service = 'news',
   toggles = {},
   variant = 'default',
+  pageLang = undefined,
   showAdsBasedOnLocation = false,
 }: Props) => {
   return (
     <ToggleContextProvider toggles={toggles}>
-      <ServiceContextProvider service={service} variant={variant}>
+      <ServiceContextProvider
+        service={service}
+        variant={variant}
+        pageLang={pageLang}
+      >
         <RequestContextProvider
           bbcOrigin="https://www.test.bbc.com"
           pageType={pageType}
@@ -82,6 +88,7 @@ const customRender = (
     toggles,
     variant,
     showAdsBasedOnLocation,
+    pageLang,
   } = options || {};
 
   return render(ui, {
@@ -97,6 +104,7 @@ const customRender = (
         toggles={toggles}
         variant={variant}
         showAdsBasedOnLocation={showAdsBasedOnLocation}
+        pageLang={pageLang}
       >
         {children}
       </AllTheProviders>
