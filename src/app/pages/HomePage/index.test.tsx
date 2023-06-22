@@ -9,9 +9,19 @@ jest.mock('../../components/ChartbeatAnalytics', () => {
   return ChartbeatAnalytics;
 });
 
+const homePageData = {
+  title: kyrgyzHomePageData.title,
+  description: kyrgyzHomePageData.description,
+  curations: kyrgyzHomePageData.curations,
+  metadata: {
+    ...kyrgyzHomePageData.metadata,
+    type: 'home',
+  },
+};
+
 describe('Home Page', () => {
   it('should render a section for each curation with summaries', () => {
-    const { container } = render(<HomePage pageData={kyrgyzHomePageData} />, {
+    const { container } = render(<HomePage pageData={homePageData} />, {
       service: 'kyrgyz',
       toggles: {
         mostRead: { enabled: true },
@@ -30,7 +40,7 @@ describe('Home Page', () => {
   });
 
   it('should apply provided margin size to the main element', () => {
-    const { getByRole } = render(<HomePage pageData={kyrgyzHomePageData} />, {
+    const { getByRole } = render(<HomePage pageData={homePageData} />, {
       service: 'kyrgyz',
     });
     expect(getByRole('main')).toHaveStyle({
@@ -39,7 +49,7 @@ describe('Home Page', () => {
   });
 
   it('should have visually hidden text with the localised product, service - home as the H1', () => {
-    const { container } = render(<HomePage pageData={kyrgyzHomePageData} />, {
+    const { container } = render(<HomePage pageData={homePageData} />, {
       service: 'kyrgyz',
     });
 
@@ -64,7 +74,7 @@ describe('Home Page', () => {
   });
 
   it('should have a metadata title', () => {
-    render(<HomePage pageData={kyrgyzHomePageData} />, {
+    render(<HomePage pageData={homePageData} />, {
       service: 'kyrgyz',
     });
     expect(Helmet.peek().title).toEqual(
@@ -73,7 +83,7 @@ describe('Home Page', () => {
   });
 
   it('should have a metadata description', () => {
-    render(<HomePage pageData={kyrgyzHomePageData} />, {
+    render(<HomePage pageData={homePageData} />, {
       service: 'kyrgyz',
     });
     const helmetContent = Helmet.peek();
@@ -84,7 +94,7 @@ describe('Home Page', () => {
   });
 
   it('should correctly render linked data for home pages', () => {
-    render(<HomePage pageData={kyrgyzHomePageData} />, {
+    render(<HomePage pageData={homePageData} />, {
       service: 'kyrgyz',
     });
     const getLinkedDataOutput = () => {
@@ -98,7 +108,7 @@ describe('Home Page', () => {
 
   describe('Analytics', () => {
     it('should render a Chartbeat component', () => {
-      const { getByText } = render(<HomePage pageData={kyrgyzHomePageData} />, {
+      const { getByText } = render(<HomePage pageData={homePageData} />, {
         service: 'kyrgyz',
       });
 
