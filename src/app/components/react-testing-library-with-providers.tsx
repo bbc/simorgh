@@ -33,7 +33,7 @@ interface Props {
   toggles?: Toggles;
   showAdsBasedOnLocation?: boolean;
   variant?: Variants;
-  isNextJs?: boolean; // Add the isNextJs prop
+  isNextJs?: boolean;
 }
 
 const AllTheProviders: FC<Props> = ({
@@ -49,7 +49,7 @@ const AllTheProviders: FC<Props> = ({
   toggles = {},
   variant = 'default',
   showAdsBasedOnLocation = false,
-  isNextJs = false, // Assign the isNextJs prop a default value
+  isNextJs = false,
 }: Props) => {
   return (
     <ToggleContextProvider toggles={toggles}>
@@ -59,7 +59,7 @@ const AllTheProviders: FC<Props> = ({
           pageType={pageType}
           isAmp={isAmp}
           isApp={isApp}
-          isNextJs={isNextJs} // Pass the isNextJs prop to the RequestContextProvider
+          isNextJs={isNextJs}
           service={service}
           pathname={pathname}
           derivedPageType={derivedPageType}
@@ -94,7 +94,7 @@ const customRender = (
     toggles,
     variant,
     showAdsBasedOnLocation,
-    isNextJs, // Add the isNextJs prop
+    isNextJs,
   } = options || {};
 
   return render(ui, {
@@ -111,7 +111,7 @@ const customRender = (
         toggles={toggles}
         variant={variant}
         showAdsBasedOnLocation={showAdsBasedOnLocation}
-        isNextJs={isNextJs} // Pass the isNextJs prop to the AllTheProviders component
+        isNextJs={isNextJs}
       >
         {children}
       </AllTheProviders>
