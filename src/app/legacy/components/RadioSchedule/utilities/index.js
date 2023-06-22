@@ -1,6 +1,6 @@
 import { formatDuration } from '#psammead/psammead-timestamp-container/src/utilities';
 import {
-  KINGFISHER,
+  LIVE_DARK,
   NEWS_CORE,
   GREY_8,
   GREY_7,
@@ -19,7 +19,7 @@ export const programStateConfig = {
     backgroundColor: WHITE,
     headerTextColor: METAL,
     titleColor: METAL,
-    durationColor: KINGFISHER,
+    durationColor: LIVE_DARK,
   },
   onDemand: {
     backgroundColor: GREY_8,

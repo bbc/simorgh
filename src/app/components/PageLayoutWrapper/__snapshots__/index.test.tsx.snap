@@ -28,7 +28,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  background-color: #323232;
+  background-color: #141414;
   border-top: solid 0.0625rem transparent;
 }
 
@@ -56,7 +56,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
 }
 
 .emotion-5 a {
-  color: #F6A21D;
+  color: #FFCE2B;
   -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: solid 0.0625rem #B0B2B4;
@@ -65,7 +65,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
 .emotion-5 a:focus,
 .emotion-5 a:hover {
   color: #202224;
-  background-color: #F6A21D;
+  background-color: #FFCE2B;
 }
 
 .emotion-5 a:hover,
@@ -105,7 +105,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
   line-height: 1.25rem;
   margin-top: 1rem;
   margin-bottom: 1.5rem;
-  color: #BEBEBE;
+  color: #F6F6F6;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -142,7 +142,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  color: #F6A21D;
+  color: #FFCE2B;
   font-weight: 600;
   padding: 0;
   margin: 0;
@@ -232,7 +232,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
 .emotion-13 button:focus,
 .emotion-13 button:hover {
   color: #202224;
-  background-color: #F6A21D;
+  background-color: #FFCE2B;
 }
 
 .emotion-13 button:hover,

@@ -9,7 +9,7 @@ import Blocks from '../../Blocks';
 import Text from '../../Text';
 
 const StyledTd = styled.td`
-  border-bottom: 1px solid ${props => props.theme.palette.SPORT_SILVER};
+  border-bottom: 1px solid ${props => props.theme.palette.GREY_3};
   padding-top: ${GEL_SPACING};
   padding-bottom: ${GEL_SPACING};
   padding-left: ${GEL_SPACING};

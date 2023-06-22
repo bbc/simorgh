@@ -1,10 +1,4 @@
 // Legacy
-export const CONSENT_ACTION = '#F6A21D';
-export const CONSENT_BACKGROUND = '#323232';
-export const CONSENT_CONTENT = '#BEBEBE';
-export const KINGFISHER = '#11708C';
-export const CLOUD_LIGHT = '#BABABA';
-export const SPORT_SILVER = '#DBDBDB';
 export const METAL = '#6E6E73';
 export const STONE = '#D5D0CD';
 

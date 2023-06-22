@@ -146,7 +146,7 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
 }
 
 .emotion-15:not(:last-child) {
-  border-bottom: 1px #BABABA solid;
+  border-bottom: 1px #B0B2B4 solid;
 }
 
 .emotion-17 {

@@ -6,24 +6,20 @@ export interface BrandPalette {
 interface Palette extends BrandPalette {
   ARCHIVE_BLUE: string;
   BLACK: string;
-  CLOUD_LIGHT: string;
-  CONSENT_ACTION: string;
-  CONSENT_BACKGROUND: string;
-  CONSENT_CONTENT: string;
+  ALERT_LIGHT: string;
   GREY_1: string;
   GREY_10: string;
   GREY_2: string;
-  GREY_3: string;
   GREY_4: string;
   GREY_5: string;
   GREY_6: string;
   GREY_7: string;
   GREY_8: string;
-  KINGFISHER: string;
+  LIVE_DARK: string;
   METAL: string;
   NEWSROUND_PURPLE: string;
   NEWS_CORE: string;
-  SPORT_SILVER: string;
+  GREY_3: string;
   SPORT_CORE: string;
   STONE: string;
   WHITE: string;

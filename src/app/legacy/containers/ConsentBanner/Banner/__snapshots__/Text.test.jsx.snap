@@ -6,7 +6,7 @@ exports[`Consent Banner Text should correctly render banner text in the UK 1`] =
   line-height: 1.25rem;
   margin-top: 1rem;
   margin-bottom: 1.5rem;
-  color: #BEBEBE;
+  color: #F6F6F6;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -45,7 +45,7 @@ exports[`Consent Banner Text should correctly render banner text outside the UK 
   line-height: 1.25rem;
   margin-top: 1rem;
   margin-bottom: 1.5rem;
-  color: #BEBEBE;
+  color: #F6F6F6;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -84,7 +84,7 @@ exports[`Consent Banner Text should correctly render banner text with a link in 
   line-height: 1.25rem;
   margin-top: 1rem;
   margin-bottom: 1.5rem;
-  color: #BEBEBE;
+  color: #F6F6F6;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -130,7 +130,7 @@ exports[`Consent Banner Text should correctly render banner text with a link out
   line-height: 1.25rem;
   margin-top: 1rem;
   margin-bottom: 1.5rem;
-  color: #BEBEBE;
+  color: #F6F6F6;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {

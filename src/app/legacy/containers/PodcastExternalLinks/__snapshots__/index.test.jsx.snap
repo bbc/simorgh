@@ -2,8 +2,8 @@
 
 exports[`PodcastExternalLinks Should render external links 1`] = `
 .emotion-0 {
-  border-top: 0.0625rem #BABABA solid;
-  border-bottom: 0.0625rem #BABABA solid;
+  border-top: 0.0625rem #B0B2B4 solid;
+  border-bottom: 0.0625rem #B0B2B4 solid;
   margin: 0;
   padding: 0;
   margin-bottom: 0.5rem;
@@ -66,7 +66,7 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
 
 .emotion-6:not(:first-of-type)>a>span {
   padding-left: 1rem;
-  border-left: 0.0625rem #BABABA solid;
+  border-left: 0.0625rem #B0B2B4 solid;
 }
 
 .emotion-8 {

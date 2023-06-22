@@ -29,7 +29,7 @@ const StyledEpisodeListItem = styled.li`
     padding-bottom: 0;
   }
   &:not(:last-child) {
-    border-bottom: 1px ${props => props.theme.palette.CLOUD_LIGHT} solid;
+    border-bottom: 1px ${props => props.theme.palette.GREY_4} solid;
   }
 `;
 

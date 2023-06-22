@@ -47,7 +47,7 @@ const COMMON_HEADING_STYLES = `
 
 const Wrapper = styled.div`
   ${({ service }) => getSansRegular(service)}
-  background-color: ${props => props.theme.palette.CONSENT_BACKGROUND};
+  background-color: ${props => props.theme.palette.GREY_10};
   border: ${BORDER_WIDTH_TRANSPARENT} solid transparent;
   max-height: ${BANNER_MAX_HEIGHT};
 `;
@@ -80,7 +80,7 @@ const Heading = styled.h3`
 
 const Paragraph = styled.p`
   ${({ script }) => getBodyCopy(script)}
-  color: ${props => props.theme.palette.CONSENT_CONTENT};
+  color: ${props => props.theme.palette.GREY_2};
   margin-top: ${GEL_SPACING_DBL};
   margin-bottom: ${GEL_SPACING_DBL};
 `;
@@ -92,7 +92,7 @@ const Link = ({ text, href, className }) => (
 );
 
 const StyledLink = styled(Link)`
-  color: ${props => props.theme.palette.CONSENT_ACTION};
+  color: ${props => props.theme.palette.ALERT_LIGHT};
   text-decoration: none;
 
   span {
@@ -101,7 +101,7 @@ const StyledLink = styled(Link)`
 
   &:hover,
   &:focus {
-    background-color: ${props => props.theme.palette.CONSENT_ACTION};
+    background-color: ${props => props.theme.palette.ALERT_LIGHT};
     color: ${props => props.theme.palette.GREY_8};
 
     span {
@@ -151,7 +151,7 @@ const OptionsItem = styled.li`
 
     &:hover,
     &:focus {
-      background-color: ${props => props.theme.palette.CONSENT_ACTION};
+      background-color: ${props => props.theme.palette.ALERT_LIGHT};
       color: ${props => props.theme.palette.GREY_8};
       text-decoration: underline;
     }
@@ -159,8 +159,8 @@ const OptionsItem = styled.li`
 
   button[on='tap:AMP.setState({ isManagingSettings: true })'] {
     background: none;
-    border: ${BORDER_WIDTH} solid ${props => props.theme.palette.CONSENT_ACTION};
-    color: ${props => props.theme.palette.CONSENT_ACTION};
+    border: ${BORDER_WIDTH} solid ${props => props.theme.palette.ALERT_LIGHT};
+    color: ${props => props.theme.palette.ALERT_LIGHT};
   }
 `;
 

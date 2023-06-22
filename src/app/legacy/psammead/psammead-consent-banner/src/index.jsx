@@ -38,13 +38,13 @@ const hoverFocusStyles = ({ theme }) => `
   &:focus,
   &:hover {
     color: ${theme.palette.GREY_8};
-    background-color: ${theme.palette.CONSENT_ACTION};
+    background-color: ${theme.palette.ALERT_LIGHT};
   }
 `;
 
 const Wrapper = styled.div`
   ${({ service }) => getSansRegular(service)}
-  background-color: ${props => props.theme.palette.CONSENT_BACKGROUND};
+  background-color: ${props => props.theme.palette.GREY_10};
   border-top: solid ${transparentBorderHeight} transparent;
 
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
@@ -66,7 +66,7 @@ const CenterWrapper = styled.div`
   margin: 0 auto;
 
   a {
-    color: ${props => props.theme.palette.CONSENT_ACTION};
+    color: ${props => props.theme.palette.ALERT_LIGHT};
     text-decoration: none;
     border-bottom: solid 0.0625rem ${props => props.theme.palette.GREY_4};
 
@@ -109,7 +109,7 @@ const Options = styled.ul`
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: ${props => props.theme.palette.CONSENT_ACTION};
+  color: ${props => props.theme.palette.ALERT_LIGHT};
   font-weight: 600;
   padding: 0;
   margin: 0;
@@ -138,7 +138,7 @@ export const ConsentBannerText = styled.p`
   ${({ script }) => script && getBodyCopy(script)};
   margin-top: ${GEL_SPACING_DBL};
   margin-bottom: ${GEL_SPACING_TRPL};
-  color: ${props => props.theme.palette.CONSENT_CONTENT};
+  color: ${props => props.theme.palette.GREY_2};
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     margin-top: ${GEL_SPACING_TRPL};

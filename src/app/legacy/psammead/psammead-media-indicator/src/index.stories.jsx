@@ -10,7 +10,7 @@ import MediaIndicator from './index';
 
 // To ensure the white box in the media indicator is visible.
 const Page = styled.div`
-  background: ${props => props.theme.palette.CLOUD_LIGHT};
+  background: ${props => props.theme.palette.GREY_4};
   height: 100vh;
 `;
 

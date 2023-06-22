@@ -35,8 +35,8 @@ const ExternalLinkTextLangs = {
 };
 
 const Wrapper = styled.aside`
-  border-top: 0.0625rem ${props => props.theme.palette.CLOUD_LIGHT} solid;
-  border-bottom: 0.0625rem ${props => props.theme.palette.CLOUD_LIGHT} solid;
+  border-top: 0.0625rem ${props => props.theme.palette.GREY_4} solid;
+  border-bottom: 0.0625rem ${props => props.theme.palette.GREY_4} solid;
   margin: 0;
   padding: 0;
   margin-bottom: ${GEL_SPACING};
@@ -75,10 +75,10 @@ const StyledListItem = styled.li`
         dir === 'rtl'
           ? `
       padding-right: 1rem;
-      border-right: 0.0625rem ${props.theme.palette.CLOUD_LIGHT} solid;`
+      border-right: 0.0625rem ${props.theme.palette.GREY_4} solid;`
           : `
       padding-left: 1rem;
-      border-left: 0.0625rem ${props.theme.palette.CLOUD_LIGHT} solid;
+      border-left: 0.0625rem ${props.theme.palette.GREY_4} solid;
       `}
   }
 `;

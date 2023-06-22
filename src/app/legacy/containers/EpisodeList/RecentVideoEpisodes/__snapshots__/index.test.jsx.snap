@@ -143,7 +143,7 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
 }
 
 .emotion-13:not(:last-child) {
-  border-bottom: 1px #BABABA solid;
+  border-bottom: 1px #B0B2B4 solid;
 }
 
 .emotion-15 {
