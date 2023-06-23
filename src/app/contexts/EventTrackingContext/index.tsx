@@ -95,11 +95,6 @@ export const EventTrackingContextProvider = ({
 
   // TODO: Enable event tracking for NextJS pages
   if (!eventTrackingIsEnabled || (!data && !atiData?.analytics) || isNextJs) {
-    console.log('I GET HERE....');
-    console.log('EVENT TRACKING IS ENABLED', eventTrackingIsEnabled);
-    console.log('EVENT TRACKING IS NOT ENABLED', !eventTrackingIsEnabled);
-    console.log('THIS IS DATA..', data);
-    console.log('THIS IS DATA..', atiData);
     return (
       <EventTrackingContext.Provider value={NO_TRACKING_PROPS}>
         {children}
