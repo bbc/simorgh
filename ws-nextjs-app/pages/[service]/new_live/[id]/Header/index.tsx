@@ -36,11 +36,21 @@ const Header = ({
                 <VisuallyHiddenText lang="en-GB">Live, </VisuallyHiddenText>
               </>
             ) : null}
-            <span css={styles.title}>{title}</span>
+            <span
+              css={[styles.title, showLiveLabel && styles.layoutWithLiveLabel]}
+            >
+              {title}
+            </span>
           </span>
         </Heading>
         {description && (
-          <Text as="p" css={styles.description}>
+          <Text
+            as="p"
+            css={[
+              styles.description,
+              showLiveLabel && styles.layoutWithLiveLabel,
+            ]}
+          >
             {description}
           </Text>
         )}

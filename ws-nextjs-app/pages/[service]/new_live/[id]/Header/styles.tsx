@@ -48,21 +48,22 @@ export default {
         marginBottom: 0,
       },
     }),
-  title: ({ palette, mq }: Theme) =>
+  title: ({ palette }: Theme) =>
     css({
       color: palette.GREY_1,
       gridColumn: '1 / span 12',
-      [mq.GROUP_4_MIN_WIDTH]: {
-        gridColumn: '5 / span 8',
-      },
     }),
 
-  description: ({ palette, mq }: Theme) =>
+  description: ({ palette }: Theme) =>
     css({
       color: palette.GREY_2,
       gridColumn: '1 / span 12',
       margin: 0,
       marginTop: `${pixelsToRem(16)}rem`,
+    }),
+
+  layoutWithLiveLabel: ({ mq }: Theme) =>
+    css({
       [mq.GROUP_4_MIN_WIDTH]: {
         gridColumn: '5 / span 8',
       },
