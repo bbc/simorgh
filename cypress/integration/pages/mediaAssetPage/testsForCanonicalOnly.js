@@ -23,8 +23,12 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
 
       it('should render an iframe with a valid URL', () => {
         if (!`${Cypress.env('currentPath')}`.includes('/russian/av/')) {
-          cy.request(`${Cypress.env('currentPath')}.json`).then(
-            ({ body: jsonData }) => {
+          cy.getPageData({ service, pageType: 'cpsAsset', variant }).then(
+            ({ body }) => {
+              const {
+                data: { article: jsonData },
+              } = body;
+
               if (hasMedia(jsonData)) {
                 const embedUrl = getEmbedUrl(jsonData, language);
                 cy.log(embedUrl);
