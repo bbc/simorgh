@@ -1,18 +1,13 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-console */
-import React, { PropsWithChildren, useContext } from 'react';
+import React, { useContext } from 'react';
 import {
   render,
   screen,
 } from '../../components/react-testing-library-with-providers';
 
-import { RequestContextProvider } from '../RequestContext';
-import { ToggleContextProvider } from '../ToggleContext';
 import { STORY_PAGE, HOME_PAGE } from '../../routes/utils/pageTypes';
-import { PageTypes, Services } from '../../models/types/global';
-import { PageData, ATIData } from '../../components/ATIAnalytics/types';
-import { ServiceContextProvider } from '../ServiceContext';
-import { EventTrackingContextProvider, EventTrackingContext } from '.';
+import { EventTrackingContext } from '.';
 import fixtureData from './fixtureData.json';
 
 const defaultToggles = {
@@ -29,51 +24,6 @@ const defaultATIData = {
   },
   title: 'pageTitle',
 };
-
-type Props = {
-  isNextJs?: boolean;
-  atiData?: ATIData;
-  pageData?: PageData;
-  pageType?: PageTypes;
-  pathname?: string;
-  service?: Services;
-  toggles?: {
-    [key: string]: {
-      enabled: boolean;
-      value?: string;
-    };
-  };
-};
-
-// eslint-disable-next-line react/prop-types
-const Wrapper = ({
-  children,
-  atiData,
-  pageData,
-  isNextJs = false,
-  pageType = STORY_PAGE,
-  pathname = '/pidgin/tori-51745682',
-  service = 'pidgin',
-  toggles = defaultToggles,
-}: PropsWithChildren<Props>) => (
-  <RequestContextProvider
-    bbcOrigin="https://www.test.bbc.com"
-    pageType={pageType}
-    isAmp={false}
-    isApp={false}
-    isNextJs={isNextJs}
-    service={service}
-    pathname={pathname}
-  >
-    <ServiceContextProvider service={service}>
-      <ToggleContextProvider toggles={toggles}>
-        <EventTrackingContextProvider atiData={atiData} data={pageData}>
-          {children}
-        </EventTrackingContextProvider>
-      </ToggleContextProvider>
-    </ServiceContextProvider>
-  </RequestContextProvider>
-);
 
 const { error } = console;
 
@@ -96,12 +46,8 @@ describe('Expected use', () => {
     render(<TestComponent />, {
       pageData: fixtureData,
       service: 'pidgin',
-      toggles: {
-        eventTracking: {
-          enabled: true,
-        },
-      },
-      pageType: 'STY',
+      toggles: defaultToggles,
+      pageType: STORY_PAGE,
       pathname: '/pidgin/tori-51745682',
     });
 
@@ -110,7 +56,7 @@ describe('Expected use', () => {
 
     expect(trackingData).toEqual({
       campaignID: 'article-sty',
-      pageIdentifier: 'kyrgyz.page',
+      pageIdentifier: 'news::pidgin.news.story.51745682.page',
       platform: 'canonical',
       producerId: '70',
       statsDestination: 'WS_NEWS_LANGUAGES_TEST',
@@ -123,11 +69,7 @@ describe('Expected use', () => {
       pageType: HOME_PAGE,
       pathname: '/kyrgyz',
       service: 'kyrgyz',
-      toggles: {
-        eventTracking: {
-          enabled: true,
-        },
-      },
+      toggles: defaultToggles,
     });
 
     const testEl = screen.getByTestId('test-component');
@@ -169,8 +111,6 @@ describe('Expected use', () => {
 
     render(<TestComponent />, {
       toggles: eventTrackingToggle,
-      pageData: undefined,
-      atiData: undefined,
     });
 
     const testEl = screen.getByTestId('test-component');
@@ -220,8 +160,6 @@ describe('Expected use', () => {
   it('should provide an empty object if pageData and atiData are missing - 1', () => {
     render(<TestComponent />, {
       toggles: defaultToggles,
-      pageData: undefined,
-      atiData: undefined,
     });
 
     const testEl = screen.getByTestId('test-component');
@@ -236,6 +174,7 @@ describe('Expected use', () => {
         analytics: undefined,
         title: undefined,
       },
+      toggles: defaultToggles,
     });
 
     const testEl = screen.getByTestId('test-component');
@@ -250,7 +189,12 @@ describe('Error handling', () => {
     let errorMessage;
 
     try {
-      render(<TestComponent />);
+      render(<TestComponent />, {
+        pageType: STORY_PAGE,
+        pathname: '/pidgin/tori-51745682',
+        service: 'pidgin',
+        toggles: defaultToggles,
+      });
     } catch ({ message }) {
       errorMessage = message;
     }
@@ -265,14 +209,13 @@ describe('Error handling', () => {
 
   it('should not provide tracking props when there is no page type campaign ID', async () => {
     let errorMessage;
-
     try {
-      render(
+      render(<TestComponent />, {
+        pageData: fixtureData,
         // @ts-expect-error - testing handling of a page type that doesn't exist
-        <Wrapper pageData={fixtureData} pageType="funky-page-type">
-          <TestComponent />
-        </Wrapper>,
-      );
+        pageType: 'funky-page-type',
+        toggles: defaultToggles,
+      });
     } catch ({ message }) {
       errorMessage = message;
     }
