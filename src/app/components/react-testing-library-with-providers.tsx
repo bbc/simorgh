@@ -6,8 +6,6 @@ import { RequestContextProvider } from '../contexts/RequestContext';
 import { ToggleContextProvider } from '../contexts/ToggleContext';
 import { UserContextProvider } from '../contexts/UserContext';
 import { EventTrackingContextProvider } from '../contexts/EventTrackingContext';
-import pageDataFixture from '../../../data/news/articles/c0g992jmmkko.json';
-import defaultATIData from '../contexts/EventTrackingContext/index.test';
 import ThemeProvider from './ThemeProvider';
 import { PageTypes, Services, Toggles, Variants } from '../models/types/global';
 
@@ -39,10 +37,10 @@ interface Props {
 
 const AllTheProviders: FC<Props> = ({
   children,
+  pageData,
+  atiData,
   isAmp = false,
   isApp = false,
-  pageData = pageDataFixture,
-  atiData = defaultATIData,
   pageType = 'article',
   derivedPageType,
   pathname = '/news/articles/c0g992jmmkko',
