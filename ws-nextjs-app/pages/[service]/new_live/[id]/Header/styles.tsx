@@ -19,7 +19,7 @@ export default {
       },
 
       [mq.GROUP_4_MIN_WIDTH]: {
-        paddingInlineStart: `${pixelsToRem(32)}rem`,
+        paddingInlineStart: `${pixelsToRem(16)}rem`,
         paddingInlineEnd: `${pixelsToRem(16)}rem`,
         paddingTop: `${pixelsToRem(24)}rem`,
         paddingBottom: `${pixelsToRem(32)}rem`,
@@ -44,6 +44,7 @@ export default {
       gridColumn: '1 / span 12',
       marginBottom: `${pixelsToRem(16)}rem`,
       [mq.GROUP_4_MIN_WIDTH]: {
+        paddingInlineStart: `${pixelsToRem(16)}rem`,
         gridColumn: '1 / span 3',
         marginBottom: 0,
       },
