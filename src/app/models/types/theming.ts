@@ -34,6 +34,7 @@ interface Palette extends BrandPalette {
   GREY_8: string;
   KINGFISHER: string;
   LE_TEAL: string;
+  LIVE_LIGHT: string;
   LUNAR: string;
   LUNAR_LIGHT: string;
   METAL: string;

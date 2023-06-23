@@ -1,5 +1,5 @@
 /** @jsx jsx */
-
+import React from 'react';
 import { jsx } from '@emotion/react';
 import Heading from '#app/components/Heading';
 import Text from '#app/components/Text';
@@ -7,9 +7,11 @@ import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import styles from './styles';
 
 const Header = ({
+  showLiveLabel,
   title,
   description,
 }: {
+  showLiveLabel: boolean;
   title: string;
   description?: string;
 }) => {
@@ -24,11 +26,16 @@ const Header = ({
           tabIndex={-1}
         >
           {/* role="text" is required to correct a text splitting bug on iOS VoiceOver. */}
-          {/* eslint-disable-next-line jsx-a11y/aria-role */}
+          {/*  eslint-disable-next-line jsx-a11y/aria-role */}
           <span role="text" css={styles.innerGrid}>
-            {/* Holding styles and text for live label */}
-            <span css={styles.label}>PLACEHOLDER</span>
-            <VisuallyHiddenText>, </VisuallyHiddenText>
+            {showLiveLabel ? (
+              <>
+                <span css={styles.label} aria-hidden="true">
+                  LIVE
+                </span>
+                <VisuallyHiddenText lang="en-GB">Live, </VisuallyHiddenText>
+              </>
+            ) : null}
             <span css={styles.title}>{title}</span>
           </span>
         </Heading>

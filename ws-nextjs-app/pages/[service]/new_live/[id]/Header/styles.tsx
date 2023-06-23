@@ -38,21 +38,21 @@ export default {
     css({
       gridColumn: '1 / span 12',
     }),
-  label: ({ mq }: Theme) =>
+  label: ({ palette, mq }: Theme) =>
     css({
-      color: '#00ccc7',
+      color: palette.LIVE_LIGHT,
       gridColumn: '1 / span 12',
+      marginBottom: `${pixelsToRem(16)}rem`,
       [mq.GROUP_4_MIN_WIDTH]: {
         gridColumn: '1 / span 3',
+        marginBottom: 0,
       },
     }),
   title: ({ palette, mq }: Theme) =>
     css({
       color: palette.GREY_1,
       gridColumn: '1 / span 12',
-      marginTop: `${pixelsToRem(16)}rem`,
       [mq.GROUP_4_MIN_WIDTH]: {
-        marginTop: 0,
         gridColumn: '5 / span 8',
       },
     }),
