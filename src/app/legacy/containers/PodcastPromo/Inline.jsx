@@ -7,15 +7,12 @@ import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
   GEL_SPACING_HLF_TRPL,
-  GEL_SPACING_QUAD,
   GEL_SPACING_QUIN,
 } from '#psammead/gel-foundations/src/spacings';
 import {
   GEL_GROUP_0_SCREEN_WIDTH_MAX,
   GEL_GROUP_1_SCREEN_WIDTH_MIN,
-  GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
 import {
   getPica,
@@ -40,37 +37,19 @@ const GEL_GROUP_1_WIDTH_320PX = '20rem';
 const GEL_GROUP_1_WIDTH_360PX = '22.5rem';
 
 const ResponsivePodcastPromoWrapper = styled.div`
-  ${({ dir }) => (dir === 'ltr' ? 'float: left;' : 'float: right;')}
+  ${({ dir }) => (dir === 'ltr' ? 'float: right;' : 'float: left;')}
 
-  margin: ${GEL_SPACING_DBL} ${GEL_SPACING};
+  margin: 0rem ${GEL_SPACING} ${GEL_SPACING_TRPL} ${GEL_SPACING};
   height: auto;
 
   @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
     width: 45%;
-    margin: ${GEL_SPACING_HLF} ${GEL_SPACING};
+    margin: ${GEL_SPACING} ${GEL_SPACING};
   }
 
   @media (min-width: ${GEL_GROUP_1_WIDTH_260PX}) {
-    margin-top: ${GEL_SPACING_HLF};
-    margin-bottom: ${GEL_SPACING};
-    margin-right: ${({ dir }) =>
-      dir === 'ltr' ? GEL_SPACING_DBL : GEL_SPACING};
-    margin-left: ${({ dir }) =>
-      dir === 'ltr' ? GEL_SPACING : GEL_SPACING_DBL};
-  }
-
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    margin-right: ${({ dir }) =>
-      dir === 'ltr' ? GEL_SPACING_DBL : GEL_SPACING_TRPL};
-    margin-left: ${({ dir }) =>
-      dir === 'ltr' ? GEL_SPACING_DBL : GEL_SPACING_DBL};
-  }
-
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    margin-top: ${GEL_SPACING_HLF};
-    margin-bottom: ${GEL_SPACING_HLF_TRPL};
-    margin-right: ${({ dir }) => (dir === 'ltr' ? GEL_SPACING_TRPL : '0rem')};
-    margin-left: ${({ dir }) => (dir === 'ltr' ? '0rem' : GEL_SPACING_TRPL)};
+    margin: ${GEL_SPACING_HLF} ${GEL_SPACING_DBL} ${GEL_SPACING_TRPL}
+      ${GEL_SPACING_DBL};
   }
 `;
 
