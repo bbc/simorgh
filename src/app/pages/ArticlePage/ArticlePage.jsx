@@ -147,8 +147,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
     wsoj: props => (
       <CpsRecommendations {...props} items={recommendationsData} />
     ),
-    podcastPromo:
-      podcastPromoEnabled && (props => <InlinePodcastPromo {...props} />),
+    podcastPromo: podcastPromoEnabled && (() => <InlinePodcastPromo />),
   };
 
   const visuallyHiddenBlock = {

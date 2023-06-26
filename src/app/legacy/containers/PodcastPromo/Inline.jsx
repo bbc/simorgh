@@ -6,11 +6,16 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
+  GEL_SPACING_QUIN,
+  GEL_SPACING_HLF_TRPL,
+  GEL_SPACING_SEXT,
 } from '#psammead/gel-foundations/src/spacings';
 import {
   GEL_GROUP_0_SCREEN_WIDTH_MAX,
   GEL_GROUP_1_SCREEN_WIDTH_MIN,
+  GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
 import {
   getPica,
@@ -23,6 +28,7 @@ import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 
 import ImageWithPlaceholder from '#containers/ImageWithPlaceholder';
 import SkipLinkWrapper from '#components/SkipLinkWrapper';
+import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import PromoComponent from './components';
 import getPromo from './shared';
@@ -33,37 +39,49 @@ const GEL_GROUP_1_WIDTH_360PX = '22.5rem';
 
 const ResponsivePodcastPromoWrapper = styled.div`
   ${({ dir }) => (dir === 'ltr' ? 'float: left;' : 'float: right;')}
-  background: ${props => props.theme.palette.LUNAR};
-  margin: ${GEL_SPACING_TRPL} 0;
+
+  margin: ${GEL_SPACING_DBL} ${GEL_SPACING};
   height: auto;
 
   @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
     width: 45%;
-    margin: ${GEL_SPACING_TRPL} ${GEL_SPACING_HLF};
+    margin: ${GEL_SPACING_HLF} ${GEL_SPACING};
   }
 
   @media (min-width: ${GEL_GROUP_1_WIDTH_260PX}) {
-    margin: ${GEL_SPACING_TRPL} ${GEL_SPACING};
+    margin-top: ${GEL_SPACING_HLF};
+    margin-bottom: ${GEL_SPACING};
+    margin-right: ${({ dir }) =>
+      dir === 'ltr' ? GEL_SPACING_DBL : GEL_SPACING};
+    margin-left: ${({ dir }) =>
+      dir === 'ltr' ? GEL_SPACING : GEL_SPACING_DBL};
   }
 
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    margin: 0rem ${GEL_SPACING_DBL};
-    margin-right: ${({ dir }) => (dir === 'ltr' ? GEL_SPACING_DBL : '0rem')};
-    margin-left: ${({ dir }) => (dir === 'ltr' ? '0rem' : GEL_SPACING_DBL)};
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    margin-right: ${({ dir }) =>
+      dir === 'ltr' ? GEL_SPACING_DBL : GEL_SPACING_TRPL};
+    margin-left: ${({ dir }) =>
+      dir === 'ltr' ? GEL_SPACING_DBL : GEL_SPACING_DBL};
+  }
+
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    margin-top: ${GEL_SPACING_HLF};
+    margin-bottom: ${GEL_SPACING_HLF_TRPL};
+    margin-right: ${({ dir }) => (dir === 'ltr' ? GEL_SPACING_TRPL : '0rem')};
+    margin-left: ${({ dir }) => (dir === 'ltr' ? '0rem' : GEL_SPACING_TRPL)};
   }
 `;
 
 const StyledPromoComponent = styled(PromoComponent)`
-  padding: ${GEL_SPACING_DBL} ${GEL_SPACING} ${GEL_SPACING} ${GEL_SPACING};
+  padding: 0rem;
 `;
 
 const StyledImageWrapper = styled(PromoComponent.Card.ImageWrapper)`
-  display: inline-block;
+  display: block;
   width: 100%;
-  margin: 0;
-  padding: ${GEL_SPACING};
-
-  @media (max-width: ${GEL_GROUP_0_SCREEN_WIDTH_MAX}) {
+  margin: 0rem;
+  padding: 0rem;
+  @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
     display: none;
   }
 `;
@@ -74,7 +92,7 @@ const StyledCardContentWrapper = styled(PromoComponent.Card.Content)`
   }
 
   @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
-    padding: 0 ${GEL_SPACING} ${GEL_SPACING} ${GEL_SPACING};
+    padding: 0 ${GEL_SPACING_DBL} ${GEL_SPACING_DBL} ${GEL_SPACING_DBL};
   }
 `;
 
@@ -115,9 +133,54 @@ const StyledCardLink = styled(PromoComponent.Card.Link)`
   ${({ script }) => getLongPrimer(script)}
   ${({ service }) => getSerifMedium(service)}
   display: block;
-
+  margin-top: ${GEL_SPACING_DBL};
+  @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
+    margin-top: 0rem;
+  }
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     ${({ script }) => getPica(script)}
+  }
+`;
+
+const StyledPodcastIconWrapper = styled.div`
+  position: absolute;
+  float: bottom;
+  transform: translateY(-100%);
+  background-color: white;
+  height: ${GEL_SPACING_QUIN};
+  width: ${GEL_SPACING_QUIN};
+  display: flex;
+  align-items: center;
+
+  @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
+    position: relative;
+    transform: translateY(${GEL_SPACING});
+    margin: ${GEL_SPACING} ${GEL_SPACING};
+    background-color: pink;
+  }
+
+  @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
+    background-color: green;
+  }
+
+  @media (min-width: 318px) {
+    background-color: pink;
+  }
+
+  @media (min-width: ${GEL_GROUP_1_WIDTH_260PX}) {
+    background-color: blue;
+  }
+
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    background-color: yellow;
+  }
+
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    background-color: red;
+  }
+
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    background-color: cyan;
   }
 `;
 
@@ -174,9 +237,6 @@ const Promo = () => {
           endTextVisuallyHidden={endTextVisuallyHidden}
           service={service}
         >
-          <PromoComponent.Title id="podcast-promo" dir={dir} as="strong">
-            {podcastPromoTitle}
-          </PromoComponent.Title>
           <PromoComponent.Card inlinePromo>
             <StyledImageWrapper>
               <ImageWithPlaceholder
@@ -191,6 +251,9 @@ const Promo = () => {
                 lazyLoad
               />
             </StyledImageWrapper>
+            <StyledPodcastIconWrapper className="podcastIconWrapper">
+              {mediaIcons.podcast}
+            </StyledPodcastIconWrapper>
             <StyledCardContentWrapper>
               <StyledCardLink
                 href={url}

@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING_DBL,
+  GEL_SPACING_TRPL,
 } from '#psammead/gel-foundations/src/spacings';
 
 const defaultAttrs = {
@@ -41,6 +42,11 @@ const GuidanceIcon = styled(MediaIcon)`
 const PodcastIcon = styled(MediaIcon)`
   width: ${GEL_SPACING_DBL};
   height: ${GEL_SPACING_DBL};
+  .podcastIconWrapper & {
+    width: ${GEL_SPACING_TRPL};
+    height: ${GEL_SPACING_TRPL};
+    margin: auto;
+  }
 `;
 
 const SeriesStackIcon = styled(MediaIcon)`
