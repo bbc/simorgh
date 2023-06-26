@@ -48,6 +48,7 @@ import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
+import { GHOST } from '#app/components/ThemeProvider/palette';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import LinkedData from '../../components/LinkedData';
@@ -239,10 +240,10 @@ const StoryPage = ({ pageData }) => {
     }
   `;
 
-  // const ComponentWrapper = styled.div`
-  //   margin-bottom: ${GEL_SPACING_TRPL};
-  //   padding: ${GEL_SPACING_DBL};
-  // `;
+  const ComponentWrapper = styled.div`
+    margin-bottom: ${GEL_SPACING_TRPL};
+    padding: ${GEL_SPACING_DBL};
+  `;
 
   /**
    * this should be the defacto wrapper for OJs
@@ -347,11 +348,15 @@ const StoryPage = ({ pageData }) => {
               />
             </ResponsiveComponentWrapper>
           )}
-          <MostRead
-            data={mostReadInitialData}
-            columnLayout="oneColumn"
-            size="small"
-          />
+          <ComponentWrapper>
+            <MostRead
+              data={mostReadInitialData}
+              columnLayout="oneColumn"
+              size="small"
+              headingBackgroundColour={GHOST}
+              mobileDivider={showRelatedTopics && topics}
+            />
+          </ComponentWrapper>
         </GridSecondaryColumn>
       </StoryPageGrid>
     </>
