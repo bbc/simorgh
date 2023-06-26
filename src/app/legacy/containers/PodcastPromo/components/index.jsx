@@ -1,11 +1,9 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import styled from '@emotion/styled';
 import { string, shape, arrayOf, element } from 'prop-types';
 import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import { GEL_SPACING_DBL } from '#psammead/gel-foundations/src/spacings';
 
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-import { RequestContext } from '#app/contexts/RequestContext';
 import Title from './title';
 import Card from './card';
 import CardContent from './card-content';
@@ -24,21 +22,15 @@ const withPodcastContext = Component => props =>
   );
 
 const Wrapper = styled.section`
-  background-color: ${props =>
-    props.isOptimo ? props.theme.palette.GHOST : props.theme.palette.LUNAR};
+  background-color: ${props => props.theme.palette.LUNAR};
   padding: ${GEL_SPACING_DBL};
 `;
 
-const PodcastPromo = ({ script, service, children, ...props }) => {
-  const { pageType } = useContext(RequestContext);
-  return (
-    <PodcastContext.Provider value={{ script, service }}>
-      <Wrapper {...props} isOptimo={pageType === ARTICLE_PAGE}>
-        {children}
-      </Wrapper>
-    </PodcastContext.Provider>
-  );
-};
+const PodcastPromo = ({ script, service, children, ...props }) => (
+  <PodcastContext.Provider value={{ script, service }}>
+    <Wrapper {...props}>{children}</Wrapper>
+  </PodcastContext.Provider>
+);
 
 PodcastPromo.Title = withPodcastContext(Title);
 PodcastPromo.Card = Card;

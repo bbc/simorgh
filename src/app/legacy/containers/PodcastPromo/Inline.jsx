@@ -6,9 +6,9 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
-  GEL_SPACING_QUIN,
   GEL_SPACING_HLF_TRPL,
-  GEL_SPACING_SEXT,
+  GEL_SPACING_QUAD,
+  GEL_SPACING_QUIN,
 } from '#psammead/gel-foundations/src/spacings';
 import {
   GEL_GROUP_0_SCREEN_WIDTH_MAX,
@@ -29,6 +29,8 @@ import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import ImageWithPlaceholder from '#containers/ImageWithPlaceholder';
 import SkipLinkWrapper from '#components/SkipLinkWrapper';
 import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { RequestContext } from '#app/contexts/RequestContext';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import PromoComponent from './components';
 import getPromo from './shared';
@@ -92,17 +94,29 @@ const StyledCardContentWrapper = styled(PromoComponent.Card.Content)`
   }
 
   @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
+    padding: 0 ${GEL_SPACING_HLF_TRPL} ${GEL_SPACING_HLF_TRPL}
+      ${GEL_SPACING_HLF_TRPL};
+  }
+
+  @media (min-width: ${GEL_GROUP_1_WIDTH_260PX}) {
     padding: 0 ${GEL_SPACING_DBL} ${GEL_SPACING_DBL} ${GEL_SPACING_DBL};
   }
 `;
 
 const StyledCardDescriptionWrapper = styled(PromoComponent.Card.Description)`
-  margin: ${GEL_SPACING} 0;
+  margin: ${GEL_SPACING_HLF_TRPL} 0;
   overflow-wrap: break-word;
+  color: ${props => props.theme.palette.GREY_10};
+  @media (min-width: ${GEL_GROUP_1_WIDTH_260PX}) {
+    margin: ${GEL_SPACING_DBL} 0;
+  }
 `;
 
 const StyledEpisodeTextWrapper = styled(PromoComponent.Card.EpisodesText)`
   ${({ script }) => getBrevier(script)}
+
+  color: ${props => props.theme.palette.GREY_10};
+
   @media (max-width: ${GEL_GROUP_0_SCREEN_WIDTH_MAX}) {
     margin: 0 ${GEL_SPACING_HLF};
   }
@@ -133,9 +147,18 @@ const StyledCardLink = styled(PromoComponent.Card.Link)`
   ${({ script }) => getLongPrimer(script)}
   ${({ service }) => getSerifMedium(service)}
   display: block;
-  margin-top: ${GEL_SPACING_DBL};
+  margin-top: ${GEL_SPACING_HLF_TRPL};
+  color: ${props => props.theme.palette.GREY_10};
+  &:visited {
+    .podcast-promo--visited {
+      color: ${props => props.theme.palette.GREY_6};
+    }
+  }
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
     margin-top: 0rem;
+  }
+  @media (min-width: ${GEL_GROUP_1_WIDTH_260PX}) {
+    margin-top: ${GEL_SPACING_DBL};
   }
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     ${({ script }) => getPica(script)}
@@ -146,47 +169,22 @@ const StyledPodcastIconWrapper = styled.div`
   position: absolute;
   float: bottom;
   transform: translateY(-100%);
-  background-color: white;
-  height: ${GEL_SPACING_QUIN};
-  width: ${GEL_SPACING_QUIN};
+  background-color: ${props =>
+    props.isOptimo ? props.theme.palette.WHITE : props.theme.palette.GREY_2};
   display: flex;
   align-items: center;
-
+  padding: ${GEL_SPACING} ${GEL_SPACING};
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
     position: relative;
-    transform: translateY(${GEL_SPACING});
-    margin: ${GEL_SPACING} ${GEL_SPACING};
-    background-color: pink;
-  }
-
-  @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
-    background-color: green;
-  }
-
-  @media (min-width: 318px) {
-    background-color: pink;
-  }
-
-  @media (min-width: ${GEL_GROUP_1_WIDTH_260PX}) {
-    background-color: blue;
-  }
-
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    background-color: yellow;
-  }
-
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    background-color: red;
-  }
-
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    background-color: cyan;
+    transform: translateY(${GEL_SPACING_HLF_TRPL});
+    margin: ${GEL_SPACING_HLF_TRPL} ${GEL_SPACING};
+    width: ${GEL_SPACING_QUIN};
   }
 `;
 
 const Promo = () => {
   const { podcastPromo, script, service, dir } = useContext(ServiceContext);
-
+  const { pageType } = useContext(RequestContext);
   const {
     podcastPromoTitle,
     podcastBrandTitle,
@@ -221,7 +219,6 @@ const Promo = () => {
   const terms = {
     '%title%': podcastPromoTitle,
   };
-
   return (
     <ResponsivePodcastPromoWrapper ref={viewTrackerRef} dir={dir}>
       <StyledPromoComponent
@@ -237,7 +234,7 @@ const Promo = () => {
           endTextVisuallyHidden={endTextVisuallyHidden}
           service={service}
         >
-          <PromoComponent.Card inlinePromo>
+          <PromoComponent.Card inlinePromo isOptimo={pageType === ARTICLE_PAGE}>
             <StyledImageWrapper>
               <ImageWithPlaceholder
                 src={imgSrc}
@@ -251,7 +248,10 @@ const Promo = () => {
                 lazyLoad
               />
             </StyledImageWrapper>
-            <StyledPodcastIconWrapper className="podcastIconWrapper">
+            <StyledPodcastIconWrapper
+              className="podcastIconWrapper"
+              isOptimo={pageType === ARTICLE_PAGE}
+            >
               {mediaIcons.podcast}
             </StyledPodcastIconWrapper>
             <StyledCardContentWrapper>
