@@ -14,9 +14,9 @@ import {
   promoSample,
   sampleRecommendations,
 } from '#pages/ArticlePage/fixtureData';
-import newsMostReadData from '#data/news/mostRead';
-import persianMostReadData from '#data/persian/mostRead';
-import pidginMostReadData from '#data/pidgin/mostRead';
+import newsMostReadData from '#data/news/mostRead/index.json';
+import { data as persianMostReadData } from '#data/persian/mostRead/index.json';
+import { data as pidginMostReadData } from '#data/pidgin/mostRead/index.json';
 import {
   textBlock,
   blockContainingText,

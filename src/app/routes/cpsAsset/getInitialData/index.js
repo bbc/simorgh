@@ -120,27 +120,32 @@ export default async ({
       pageType: 'cpsAsset',
     });
 
-    const processedAdditionalData = processMostWatched({
-      data: secondaryColumn,
+    const { mostWatched } = processMostWatched({
+      data: article,
       service,
       path: derivedPath,
       toggles,
       page: pageType,
     });
 
-    return {
+    const { topStories, features } = secondaryColumn;
+    const { mostRead } = article;
+
+    const response = {
       status,
       pageData: {
         ...(await transformJson(article, pathname, toggles)),
         secondaryColumn: {
-          topStories: processedAdditionalData.topStories,
-          features: processedAdditionalData.features,
+          topStories,
+          features,
         },
-        mostRead: processedAdditionalData.mostRead,
-        mostWatched: processedAdditionalData.mostWatched,
+        mostRead,
+        mostWatched,
         recommendations,
       },
     };
+
+    return response;
   } catch ({ message, status = getErrorStatusCode() }) {
     return { error: message, status };
   }

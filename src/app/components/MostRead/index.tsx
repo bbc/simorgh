@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 import { getMostReadEndpoint } from '#app/lib/utilities/getUrlHelpers/getMostReadUrls';
-import isLive from '#app/lib/utilities/isLive';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import Canonical from './Canonical';
 import Amp from './Amp';
@@ -10,6 +9,7 @@ import { ColumnLayout, Size, MostReadData } from './types';
 import MostReadSection from './Section';
 import MostReadSectionLabel from './Label';
 import { WHITE } from '../ThemeProvider/palette';
+import isLocal from '../../lib/utilities/isLocal';
 import {
   STORY_PAGE,
   CORRESPONDENT_STORY_PAGE,
@@ -57,13 +57,13 @@ const MostRead = ({
     return null;
   }
 
-  if (isLive()) {
-    return null;
-  }
+  // If not in local environment, use the BFF, otherwise use fixture data
+  const isBff = !isLocal();
 
   const endpoint = getMostReadEndpoint({
     service,
     variant,
+    isBff,
   });
 
   // We render amp on ONLY STY, CSP and ARTICLE pages using amp-list.

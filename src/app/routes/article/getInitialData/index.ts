@@ -1,16 +1,15 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import { Agent } from 'https';
-import getAdditionalPageData from '#app/routes/cpsAsset/utils/getAdditionalPageData';
 import getEnvironment from '#app/routes/utils/getEnvironment';
 import nodeLogger from '../../../lib/logger.node';
 import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
 import fetchPageData from '../../utils/fetchPageData';
 import constructPageFetchUrl from '../../utils/constructPageFetchUrl';
-import handleError from '../../utils/handleError';
 import { Services, Variants } from '../../../models/types/global';
 import getOnwardsPageData from '../utils/getOnwardsData';
 import { advertisingAllowed, isSfv } from '../utils/paramChecks';
 import { FetchError } from '../../../models/types/fetch';
+import handleError from '../../utils/handleError';
 
 const logger = nodeLogger(__filename);
 
@@ -51,29 +50,6 @@ export default async ({
       ...(!isLocal && { agent, optHeaders }),
     });
 
-    // Ensure all local CPS fixture and test data is in the correct format
-    if (isLocal && pageType === 'cpsAsset') {
-      const secondaryData = await getAdditionalPageData({
-        pageData: json,
-        service,
-        variant,
-        env,
-      });
-
-      json = {
-        data: {
-          article: json,
-          // Checks for data mocked in tests, or data from fixture data
-          secondaryData: json?.secondaryData ?? {
-            topStories: secondaryData?.secondaryColumn?.topStories,
-            features: secondaryData?.secondaryColumn?.features,
-            mostRead: secondaryData?.mostRead,
-            mostWatched: secondaryData?.mostWatched,
-          },
-        },
-      };
-    }
-
     if (!json?.data?.article) {
       throw handleError('Article data is malformed', 500);
     }
@@ -98,14 +74,23 @@ export default async ({
       logger.error('Recommendations JSON malformed', error);
     }
 
-    return {
+    const { topStories, features, mostRead, mostWatched } = secondaryData;
+
+    const response = {
       status,
       pageData: {
         ...article,
-        secondaryColumn: secondaryData,
+        secondaryColumn: {
+          topStories,
+          features,
+        },
+        mostRead,
+        mostWatched,
         ...(wsojData && wsojData),
       },
     };
+
+    return response;
   } catch (error: unknown) {
     const { message, status } = error as FetchError;
 

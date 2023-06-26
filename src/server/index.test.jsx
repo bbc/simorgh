@@ -895,14 +895,14 @@ describe('Server', () => {
   describe('Most Read json', () => {
     it('should serve a file for valid service paths with variants', async () => {
       const { body } = await makeRequest('/zhongwen/mostread/trad.json');
-      expect(body).toEqual(
-        expect.objectContaining({ records: expect.any(Object) }),
+      expect(body.data).toEqual(
+        expect.objectContaining({ items: expect.any(Object) }),
       );
     });
     it('should serve a file for valid service paths without variants', async () => {
-      const { body } = await makeRequest('/news/mostread.json');
-      expect(body).toEqual(
-        expect.objectContaining({ records: expect.any(Object) }),
+      const { body } = await makeRequest('/pidgin/mostread.json');
+      expect(body.data).toEqual(
+        expect.objectContaining({ items: expect.any(Object) }),
       );
     });
     it('should respond with a 500 for non-existing services', async () => {
@@ -1116,7 +1116,7 @@ describe('Server', () => {
     describe('for cps asset pages', () => {
       it('should respond with JSON', async () => {
         const { body } = await makeRequest('/pidgin/tori-49450859.json');
-        expect(body).toEqual(
+        expect(body.data.article).toEqual(
           expect.objectContaining({ content: expect.any(Object) }),
         );
       });
@@ -1135,7 +1135,7 @@ describe('Server', () => {
         const { body } = await makeRequest(
           '/hausa/multimedia/2012/07/120712_click.json',
         );
-        expect(body).toEqual(
+        expect(body.data.article).toEqual(
           expect.objectContaining({ content: expect.any(Object) }),
         );
       });
