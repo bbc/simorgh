@@ -1,5 +1,5 @@
-import mostReadJson from '#data/pidgin/mostRead';
 import { MOST_READ_PAGE } from '#app/routes/utils/pageTypes';
+import { data as mostReadJson } from '../../../../../data/pidgin/mostRead/index.json';
 import getInitialData from '.';
 
 fetch.mockResponse(JSON.stringify(mostReadJson));
@@ -11,13 +11,13 @@ it('should return essential data for a page to render', async () => {
     pageType: MOST_READ_PAGE,
   });
 
-  expect(pageData.lastRecordTimeStamp).toEqual('2030-01-01T17:00:00Z');
+  expect(pageData.lastRecordTimeStamp).toEqual('2023-06-19T15:03:00Z');
   expect(pageData.metadata.type).toEqual('mostRead');
-  expect(pageData.records[0].promo.timestamp).toEqual(1558434642016);
-  expect(pageData.records[0].promo.headlines.shortHeadline).toEqual(
-    'Public Holidays wey go happun for 2019',
+  expect(pageData.items[0].timestamp).toEqual(1687171616901);
+  expect(pageData.items[0].title).toEqual(
+    'Teams wey qualify for Afcon 2023 and how things stand for each group',
   );
-  expect(pageData.records[0].promo.locators.assetUri).toEqual(
-    '/pidgin/tori-46729879',
+  expect(pageData.items[0].href).toEqual(
+    'https://www.bbc.com/pidgin/articles/cz5kkgv41v0o',
   );
 });

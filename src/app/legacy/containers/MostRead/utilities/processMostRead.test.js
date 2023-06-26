@@ -1,12 +1,17 @@
 import nodeLogger from '#testHelpers/loggerMock';
-import pidginData from '#data/pidgin/mostRead';
-import kyrgyzData from '#data/kyrgyz/mostRead';
 import {
   MOST_READ_DATA_INCOMPLETE,
   MOST_READ_STALE_DATA,
 } from '#lib/logger.const';
+import pidginData from '../fixtureData/pidgin-most-read-legacy.json';
+import kyrgyzData from '../fixtureData/kyrgyz-most-read-legacy.json';
 import { setStaleLastRecordTimeStamp } from './testHelpers';
 import processMostRead from './processMostRead';
+import isLive from '../../../../lib/utilities/isLive';
+
+jest.mock('../../../../lib/utilities/isLive', () =>
+  jest.fn().mockImplementation(() => false),
+);
 
 const expectedPidginData = [
   {
@@ -178,6 +183,10 @@ const kyrgyzDataWithInvalidPromo = invalidPromo => {
 };
 
 describe('processMostRead', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
   [
     {
       description: 'should return expected filtered CPS data',
@@ -195,17 +204,19 @@ describe('processMostRead', () => {
     },
     {
       description:
-        'should return null when last record CPS time stamp is stale',
+        'should return null when last record CPS time stamp is stale on live environment',
       data: setStaleLastRecordTimeStamp(pidginData),
       expectedReturn: null,
       service: 'pidgin',
+      isLiveEnv: true,
     },
     {
       description:
-        'should return null when last record Optimo time stamp is stale',
+        'should return null when last record Optimo time stamp is stale on live environment',
       data: setStaleLastRecordTimeStamp(kyrgyzData),
       expectedReturn: null,
       service: 'kyrgyz',
+      isLiveEnv: true,
     },
     {
       description: 'should return null when no data is passed',
@@ -233,13 +244,23 @@ describe('processMostRead', () => {
       expectedReturn: expectedKyrgyzData,
       service: 'kyrgyz',
     },
-  ].forEach(({ description, data, numberOfItems, expectedReturn, service }) => {
-    it(description, () => {
-      expect(processMostRead({ data, numberOfItems, service })).toEqual(
-        expectedReturn,
-      );
-    });
-  });
+  ].forEach(
+    ({
+      description,
+      data,
+      numberOfItems,
+      expectedReturn,
+      service,
+      isLiveEnv = false,
+    }) => {
+      it(description, () => {
+        isLive.mockImplementationOnce(() => isLiveEnv);
+        expect(processMostRead({ data, numberOfItems, service })).toEqual(
+          expectedReturn,
+        );
+      });
+    },
+  );
 
   describe('Logging', () => {
     beforeEach(() => {
@@ -283,7 +304,9 @@ describe('processMostRead', () => {
       },
     );
 
-    it('should log MOST_READ_STALE_DATA when lastRecordTimestamp is greater than 60min', () => {
+    it('should log MOST_READ_STALE_DATA when lastRecordTimestamp is greater than 60min on live environment', () => {
+      isLive.mockImplementationOnce(() => true);
+
       processMostRead({
         data: setStaleLastRecordTimeStamp(pidginData),
         numberOfItems: 10,

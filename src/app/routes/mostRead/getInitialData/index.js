@@ -10,9 +10,11 @@ export default async ({ service, variant, pageType }) => {
       pageType,
     });
 
+    const data = json?.data || json;
+
     return {
       status,
-      pageData: { ...json, metadata: { type: 'mostRead' } },
+      pageData: { ...data, metadata: { type: 'mostRead' } },
     };
   } catch ({ message, status = getErrorStatusCode() }) {
     return { error: message, status };

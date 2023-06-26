@@ -5462,123 +5462,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 }
 
 .emotion-218 {
-  display: inline-block;
-  vertical-align: top;
-  width: 66.67%;
-  padding: 0 0.5rem;
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-218 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width: 63rem) {
-  .emotion-218 {
-    display: block;
-    width: 100%;
-    padding: 0.5rem 0;
-  }
-}
-
-@supports (grid-template-columns: fit-content(200px)) {
-  .emotion-218 {
-    display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 3/span 4;
-  }
-
-  @media (min-width: 63rem) {
-    .emotion-218 {
-      padding-top: 0.5rem;
-    }
-  }
-}
-
-.emotion-220 {
-  color: #222222;
-  margin: 0;
-  padding-bottom: 0.5rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-220 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-220 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-.emotion-222 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-  display: inline-block;
-  overflow-wrap: anywhere;
-}
-
-.emotion-222:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.emotion-222:hover,
-.emotion-222:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-222:visited {
-  color: #6E6E73;
-}
-
-.emotion-224 {
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  color: #545658;
-  display: block;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-224 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-224 {
-    font-size: 0.8125rem;
-    line-height: 1rem;
-  }
-}
-
-.emotion-239 {
   color: #222222;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -5590,20 +5473,20 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-239 {
+  .emotion-218 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-239 {
+  .emotion-218 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
-.emotion-241 {
+.emotion-220 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5615,7 +5498,133 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   height: 100%;
 }
 
-.emotion-243 {
+.emotion-222 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.emotion-224 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-224 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-224 {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+@supports (grid-template-columns: fit-content(200px)) {
+  .emotion-224 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3/span 4;
+  }
+
+  @media (min-width: 63rem) {
+    .emotion-224 {
+      padding-top: 0.5rem;
+    }
+  }
+}
+
+.emotion-226 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-226 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-226 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-228 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  display: inline-block;
+  overflow-wrap: anywhere;
+}
+
+.emotion-228:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.emotion-228:hover,
+.emotion-228:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-228:visited {
+  color: #6E6E73;
+}
+
+.emotion-231 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #545658;
+  display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-231 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-231 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+.emotion-250 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -6319,25 +6328,64 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                         </div>
                         <div
                           class="emotion-216 emotion-217"
-                        />
+                        >
+                          <div
+                            aria-hidden="true"
+                            class="emotion-218 emotion-219"
+                            data-e2e="media-indicator"
+                            dir="ltr"
+                          >
+                            <div
+                              class="emotion-220 emotion-221"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="emotion-222 emotion-223"
+                                focusable="false"
+                                height="12"
+                                viewBox="0 0 12 12"
+                                width="12"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <g
+                                  fill="none"
+                                  fill-rule="evenodd"
+                                >
+                                  <path
+                                    d="M.5.6h12v12H.5z"
+                                  />
+                                  <path
+                                    d="M2.144.96v11.28l8.712-5.64z"
+                                    fill="currentColor"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                     <div
-                      class="emotion-218 emotion-219"
+                      class="emotion-224 emotion-225"
                       dir="ltr"
                     >
                       <h3
-                        class="emotion-220 emotion-221"
+                        class="emotion-226 emotion-227"
                       >
                         <a
                           aria-labelledby="promo-rel-content-pidginmedia45132087-1"
-                          class="focusIndicatorDisplayInlineBlock emotion-222 emotion-223"
+                          class="focusIndicatorDisplayInlineBlock emotion-228 emotion-229"
                           href="/pidgin/media-45132087"
                         >
                           <span
                             id="promo-rel-content-pidginmedia45132087-1"
                             role="text"
                           >
+                            <span
+                              class="emotion-34"
+                            >
+                              Video, 
+                            </span>
                             <span>
                               Bole na correct Port Harcourt food.
                             </span>
@@ -6345,7 +6393,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                         </a>
                       </h3>
                       <time
-                        class="emotion-224 emotion-12"
+                        class="emotion-231 emotion-12"
                         datetime="2018-08-09"
                       >
                         9th August 2018
@@ -6378,16 +6426,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                         >
                           <div
                             aria-hidden="true"
-                            class="emotion-239 emotion-240"
+                            class="emotion-218 emotion-219"
                             data-e2e="media-indicator"
                             dir="ltr"
                           >
                             <div
-                              class="emotion-241 emotion-242"
+                              class="emotion-220 emotion-221"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="emotion-243 emotion-244"
+                                class="emotion-250 emotion-251"
                                 focusable="false"
                                 height="13px"
                                 viewBox="0 0 32 26"
@@ -6408,15 +6456,15 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                       </div>
                     </div>
                     <div
-                      class="emotion-218 emotion-219"
+                      class="emotion-224 emotion-225"
                       dir="ltr"
                     >
                       <h3
-                        class="emotion-220 emotion-221"
+                        class="emotion-226 emotion-227"
                       >
                         <a
                           aria-labelledby="promo-rel-content-pidgintori45242255-2"
-                          class="focusIndicatorDisplayInlineBlock emotion-222 emotion-223"
+                          class="focusIndicatorDisplayInlineBlock emotion-228 emotion-229"
                           href="/pidgin/tori-45242255"
                         >
                           <span
@@ -6435,7 +6483,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                         </a>
                       </h3>
                       <time
-                        class="emotion-224 emotion-12"
+                        class="emotion-231 emotion-12"
                         datetime="2018-08-19"
                       >
                         19th August 2018
@@ -9854,6 +9902,52 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   }
 }
 
+.emotion-510 {
+  color: #222222;
+  background-color: #FFFFFF;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  display: block;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-510 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-510 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+.emotion-512 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+.emotion-514 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
 <div>
   <div
     id="ContextsContainer"
@@ -11567,7 +11661,41 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         </div>
                         <div
                           class="emotion-403 emotion-404"
-                        />
+                        >
+                          <div
+                            aria-hidden="true"
+                            class="emotion-510 emotion-511"
+                            data-e2e="media-indicator"
+                            dir="ltr"
+                          >
+                            <div
+                              class="emotion-512 emotion-513"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="emotion-514 emotion-515"
+                                focusable="false"
+                                height="12"
+                                viewBox="0 0 12 12"
+                                width="12"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <g
+                                  fill="none"
+                                  fill-rule="evenodd"
+                                >
+                                  <path
+                                    d="M.5.6h12v12H.5z"
+                                  />
+                                  <path
+                                    d="M2.144.96v11.28l8.712-5.64z"
+                                    fill="currentColor"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                     <div
@@ -11586,6 +11714,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                             id="promo-rel-content-azeriazerbaijan37691096-6"
                             role="text"
                           >
+                            <span
+                              class="emotion-32"
+                            >
+                              Video, 
+                            </span>
                             <span>
                               Bakı sakinləri müstəqillik barədə danışır
                             </span>

@@ -168,7 +168,10 @@ describe('Main page routes', () => {
     ${'/kyrgyz/tipohome'} | ${'tipohome'}
     ${'/kyrgyz'}          | ${'home'}
   `('should route to and render a $description page', async ({ pathname }) => {
-    homePageJson.data.metadata = { type: 'home' };
+    homePageJson.data.metadata = {
+      type: 'home',
+      ...homePageJson.data.metadata,
+    };
     fetchMock.mock(`http://localhost${pathname}.json`, homePageJson);
 
     const { getInitialData, pageType } = getMatchingRoute(pathname);

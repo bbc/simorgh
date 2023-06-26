@@ -568,7 +568,14 @@
           }
         ],
         "strapline": {
-          "name": "U toku"
+          "name": "U toku",
+          "type": "LINK",
+          "links": {
+            "highweb": "/serbian/lat/popular/read",
+            "desktop": "/serbian/lat/popular/read",
+            "mobile": "/serbian/lat/popular/read",
+            "enhancedmobile": "/serbian/lat/popular/read"
+          }
         },
         "semanticGroupName": "Cluster 1"
       },
@@ -1367,26 +1374,44 @@
         "title": "Useful links",
         "items": [
           {
-            "headlines": {
-              "headline": "Kontaktirajte BBC News na srpskom",
-              "overtyped": "Kontaktirajte nas"
-            },
-            "locators": {
-              "assetUri": "/serbian/lat/institutional-43543431",
-              "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/institutional-43543431"
-            },
-            "summary": "Kontaktirajte BBC News na srpskom",
-            "timestamp": 1522063228000,
-            "cpsType": "STY",
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "overtypedSummary": "Kontaktirajte nas",
-            "id": "urn:bbc:ares::asset:serbian/lat/institutional-43543431",
-            "type": "cps"
+            "name": "Kontaktirajte nas 1",
+            "uri": "/serbian/lat/popular/read",
+            "contentType": "Guide",
+            "assetTypeCode": "PRO",
+            "type": "link"
+          },
+          {
+            "name": "Kontaktirajte nas 2",
+            "uri": "/serbian/lat/popular/read",
+            "contentType": "Guide",
+            "assetTypeCode": "PRO",
+            "type": "link"
+          },
+          {
+            "name": "Kontaktirajte nas 3",
+            "uri": "/serbian/lat/popular/read",
+            "contentType": "Guide",
+            "assetTypeCode": "PRO",
+            "type": "link"
+          },
+          {
+            "name": "Kontaktirajte nas 4",
+            "uri": "/serbian/lat/popular/read",
+            "contentType": "Guide",
+            "assetTypeCode": "PRO",
+            "type": "link"
+          },
+          {
+            "name": "Kontaktirajte nas 5",
+            "uri": "/serbian/lat/popular/read",
+            "contentType": "Guide",
+            "assetTypeCode": "PRO",
+            "type": "link"
           }
         ],
+        "strapline": {
+          "name": "Korisni linkovi"
+        },
         "semanticGroupName": "Useful links"
       },
       {
