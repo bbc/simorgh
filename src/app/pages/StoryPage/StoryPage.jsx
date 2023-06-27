@@ -55,6 +55,7 @@ import LinkedData from '../../components/LinkedData';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import categoryType from './categoryMap/index';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
+import styles from './StoryPage.styles';
 
 const MpuContainer = styled(AdContainer)`
   margin-bottom: ${GEL_SPACING_TRPL};
@@ -350,6 +351,7 @@ const StoryPage = ({ pageData }) => {
           )}
           <ComponentWrapper>
             <MostRead
+              css={styles.mostReadSection}
               data={mostReadInitialData}
               columnLayout="oneColumn"
               size="small"
