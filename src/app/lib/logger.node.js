@@ -30,7 +30,11 @@ const logLocation = path.join(LOG_DIR, LOG_FILE);
 const consoleLogFormat = printf(data => {
   const logMessage = { ...data.metadata, ...data.message };
 
-  return `${data.timestamp} ${data.level} ${JSON.stringify(logMessage)}`;
+  const platform = process.env.NEXTJS ? 'NEXTJS' : 'EXPRESS';
+
+  return `${data.timestamp} ${data.level} ${platform} ${JSON.stringify(
+    logMessage,
+  )}`;
 });
 
 const loggerOptions = {
