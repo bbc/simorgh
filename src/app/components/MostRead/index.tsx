@@ -32,8 +32,7 @@ interface MostReadProps {
   columnLayout?: ColumnLayout;
   size?: Size;
   mobileDivider?: boolean;
-  headingBackgroundColour?: string;
-  className?: string;
+  backgroundColour?: string;
 }
 
 const MostRead = ({
@@ -41,8 +40,7 @@ const MostRead = ({
   columnLayout = 'multiColumn',
   size = 'default',
   mobileDivider = false,
-  headingBackgroundColour = WHITE,
-  className,
+  backgroundColour = WHITE,
 }: MostReadProps) => {
   const { isAmp, pageType, variant } = useContext(RequestContext);
   const {
@@ -68,28 +66,13 @@ const MostRead = ({
     isBff,
   });
 
-  // We render amp on ONLY STY, CSP and ARTICLE pages using amp-list.
-  const AmpMostRead = () =>
-    mostReadAmpPageTypes.includes(pageType) ? (
-      <MostReadSection>
-        <MostReadSectionLabel
-          mobileDivider={mobileDivider}
-          backgroundColor={headingBackgroundColour}
-        />
-        <Amp
-          endpoint={`${process.env.SIMORGH_MOST_READ_CDN_URL}${endpoint}`}
-          size={size}
-        />
-      </MostReadSection>
-    ) : null;
-
   // Do not render on Canonical if data is not provided
   const CanonicalMostRead = () =>
     data ? (
-      <MostReadSection className={className}>
+      <MostReadSection>
         <MostReadSectionLabel
           mobileDivider={mobileDivider}
-          backgroundColor={headingBackgroundColour}
+          backgroundColor={backgroundColour}
         />
         <Canonical
           data={data}
@@ -99,6 +82,26 @@ const MostRead = ({
         />
       </MostReadSection>
     ) : null;
+
+  // We render amp on ONLY STY, CSP and ARTICLE pages using amp-list.
+  let AmpMostRead = () =>
+    mostReadAmpPageTypes.includes(pageType) ? (
+      <MostReadSection>
+        <MostReadSectionLabel
+          mobileDivider={mobileDivider}
+          backgroundColor={backgroundColour}
+        />
+        <Amp
+          endpoint={`${process.env.SIMORGH_MOST_READ_CDN_URL}${endpoint}`}
+          size={size}
+        />
+      </MostReadSection>
+    ) : null;
+
+  // If render
+  if (isAmp && renderComponentOnAmp) {
+    AmpMostRead = CanonicalMostRead;
+  }
 
   return isAmp ? <AmpMostRead /> : <CanonicalMostRead />;
 };
