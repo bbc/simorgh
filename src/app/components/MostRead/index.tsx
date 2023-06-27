@@ -98,7 +98,11 @@ const MostRead = ({
       </MostReadSection>
     ) : null;
 
-  // If render
+  /**
+   * If renderComponentOnAmp is true, then use the canonical version of the component instead of the AMP version.
+   *
+   * This is to prevent double fetching of most read data.
+   */
   if (isAmp && renderComponentOnAmp) {
     AmpMostRead = CanonicalMostRead;
   }
