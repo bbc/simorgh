@@ -20,19 +20,33 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
   }
 }
 
+.emotion-2 {
+  grid-column: 1/span 12;
+  padding-bottom: 2rem;
+}
+
 @media (min-width: 63rem) {
   .emotion-2 {
     grid-column: 1/span 8;
   }
 }
 
-.emotion-2 {
-  grid-column: 1/span 12;
-  padding-bottom: 2rem;
-}
-
 .emotion-3 {
   padding-bottom: 1.5rem;
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-4 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-4 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
@@ -49,10 +63,9 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
   }
 }
 
-@media (max-width: 14.9375rem) {
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
   .emotion-4 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
+    margin-left: 16.666666666666668%;
   }
 }
 
@@ -122,19 +135,6 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
   }
 }
 
-@media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-4 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-4 {
-    margin-left: 16.666666666666668%;
-  }
-}
-
 .emotion-6 {
   font-size: 1.75rem;
   line-height: 2rem;
@@ -148,6 +148,20 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
   overflow-wrap: anywhere;
 }
 
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-6 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-6 {
+    font-size: 2.75rem;
+    line-height: 3rem;
+  }
+}
+
 @media (min-width: 37.5rem) {
   .emotion-6 {
     padding: 2.5rem 0;
@@ -158,17 +172,43 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
   outline: none;
 }
 
-@media (min-width: 37.5rem) {
-  .emotion-6 {
-    font-size: 2.75rem;
-    line-height: 3rem;
+@media (max-width: 14.9375rem) {
+  .emotion-8 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
   }
 }
 
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-6 {
-    font-size: 2rem;
-    line-height: 2.25rem;
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-8 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-8 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-8 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-8 {
+    margin-left: 20%;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-8 {
+    margin-left: 40%;
   }
 }
 
@@ -232,59 +272,6 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
   }
 }
 
-@media (min-width: 80rem) {
-  .emotion-8 {
-    margin-left: 40%;
-  }
-}
-
-@media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-8 {
-    margin-left: 20%;
-  }
-}
-
-@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-8 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-8 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (max-width: 14.9375rem) {
-  .emotion-8 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-8 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width: 63rem) {
-  .emotion-10 {
-    padding-right: 2.5rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-10 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
 .emotion-10 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -303,11 +290,23 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
   }
 }
 
-@media (min-width: 80rem) {
+@media (min-width: 37.5rem) {
+  .emotion-10 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-10 {
+    padding-right: 2.5rem;
+  }
+}
+
+@media (max-width: 24.9375rem) {
   .emotion-12 {
-    margin: 0 auto;
-    padding: 0 1rem 1.5rem;
-    max-width: 80rem;
+    margin: 0 0.5rem;
+    padding-bottom: 1.5rem;
   }
 }
 
@@ -320,17 +319,18 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
   }
 }
 
-@media (max-width: 24.9375rem) {
-  .emotion-12 {
-    margin: 0 0.5rem;
-    padding-bottom: 1.5rem;
-  }
-}
-
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
   .emotion-12 {
     margin: 0 1rem;
     padding-bottom: 2.5rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-12 {
+    margin: 0 auto;
+    padding: 0 1rem 1.5rem;
+    max-width: 80rem;
   }
 }
 
@@ -402,32 +402,6 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
   }
 }
 
-@media (min-width: 37.5rem) {
-  .emotion-21 {
-    padding-right: 1rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-21 {
-    margin: 0;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-21 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-21 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
 .emotion-21 {
   font-size: 1.125rem;
   line-height: 1.375rem;
@@ -447,15 +421,29 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
   align-items: center;
 }
 
-@media (min-width: 80rem) {
-  .emotion-23 {
-    grid-auto-flow: row;
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-21 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-23 {
-    grid-template-rows: repeat(5, auto);
+  .emotion-21 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-21 {
+    margin: 0;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-21 {
+    padding-right: 1rem;
   }
 }
 
@@ -525,6 +513,63 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
 }
 
 @media (min-width: 80rem) {
+  .emotion-23 {
+    grid-auto-flow: row;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-23 {
+    grid-template-rows: repeat(5, auto);
+  }
+}
+
+.emotion-25 {
+  position: relative;
+  padding-bottom: 1.5rem;
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-25 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-25 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-25 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-25 {
+    width: calc(50%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-25 {
+    width: calc(50%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width: 80rem) {
   .emotion-25 {
     width: calc(20%);
     display: inline-block;
@@ -579,51 +624,6 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
     }
-  }
-}
-
-@media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-25 {
-    width: calc(50%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-25 {
-    width: calc(50%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-25 {
-    width: calc(100%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (max-width: 14.9375rem) {
-  .emotion-25 {
-    width: calc(100%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-.emotion-25 {
-  position: relative;
-  padding-bottom: 1.5rem;
-}
-
-@media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-25 {
-    width: calc(100%);
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
@@ -709,16 +709,29 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
   }
 }
 
+.emotion-30 {
+  padding-top: 0.375rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 @supports (grid-template-columns: fit-content(200px)) {
   .emotion-30 {
     padding-right: 0;
   }
 }
 
-.emotion-30 {
-  padding-top: 0.375rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+.emotion-31 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -774,19 +787,6 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
   }
 }
 
-.emotion-31 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  margin-bottom: 0.5rem;
-}
-
 @media (max-width: 14.9375rem) {
   .emotion-35 {
     min-width: 2.5rem;
@@ -811,6 +811,12 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
   }
 }
 
+@media (min-width: 37.5rem) {
+  .emotion-35 {
+    min-width: 4rem;
+  }
+}
+
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
     .emotion-35 {
@@ -822,12 +828,6 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
 @media (min-width: 80rem) {
   .emotion-35 {
     min-width: 2rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-35 {
-    min-width: 4rem;
   }
 }
 
@@ -919,6 +919,12 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
   }
 }
 
+@media (max-width: 14.9375rem) {
+  .emotion-70 {
+    min-width: 2.5rem;
+  }
+}
+
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
   .emotion-70 {
     min-width: 2.5rem;
@@ -954,12 +960,6 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
 @media (min-width: 80rem) {
   .emotion-70 {
     min-width: 2rem;
-  }
-}
-
-@media (max-width: 14.9375rem) {
-  .emotion-70 {
-    min-width: 2.5rem;
   }
 }
 
@@ -1460,15 +1460,15 @@ exports[`should render a news article correctly 1`] = `
   }
 }
 
+.emotion-2 {
+  grid-column: 1/span 12;
+  padding-bottom: 2rem;
+}
+
 @media (min-width: 63rem) {
   .emotion-2 {
     grid-column: 1/span 8;
   }
-}
-
-.emotion-2 {
-  grid-column: 1/span 12;
-  padding-bottom: 2rem;
 }
 
 .emotion-3 {
@@ -1485,6 +1485,13 @@ exports[`should render a news article correctly 1`] = `
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
   .emotion-4 {
     padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-4 {
+    padding: 0 1rem;
     margin-left: 0%;
   }
 }
@@ -1568,13 +1575,6 @@ exports[`should render a news article correctly 1`] = `
   }
 }
 
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-4 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
 .emotion-6 {
   font-size: 1.75rem;
   line-height: 2rem;
@@ -1612,9 +1612,10 @@ exports[`should render a news article correctly 1`] = `
   outline: none;
 }
 
-@media (min-width: 80rem) {
+@media (max-width: 14.9375rem) {
   .emotion-8 {
-    margin-left: 40%;
+    padding: 0 0.5rem;
+    margin-left: 0%;
   }
 }
 
@@ -1645,10 +1646,9 @@ exports[`should render a news article correctly 1`] = `
   }
 }
 
-@media (max-width: 14.9375rem) {
+@media (min-width: 80rem) {
   .emotion-8 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
+    margin-left: 40%;
   }
 }
 
@@ -1796,19 +1796,19 @@ exports[`should render a news article with headline in the middle correctly 1`] 
   background-color: #F6F6F6;
 }
 
+.emotion-1 {
+  max-width: 63rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
 @media (min-width: 63rem) {
   .emotion-1 {
     padding: 0 1rem;
     -webkit-column-gap: 1rem;
     column-gap: 1rem;
   }
-}
-
-.emotion-1 {
-  max-width: 63rem;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
 }
 
 .emotion-2 {
@@ -1837,33 +1837,14 @@ exports[`should render a news article with headline in the middle correctly 1`] 
   margin: 0;
 }
 
-@media (min-width: 15rem) and (max-width: 24.9375rem) {
+@media (max-width: 14.9375rem) {
   .emotion-5 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
-@media (min-width: 80rem) {
-  .emotion-5 {
-    margin-left: 40%;
-  }
-}
-
-@media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-5 {
-    margin-left: 20%;
-  }
-}
-
-@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-5 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (max-width: 14.9375rem) {
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
   .emotion-5 {
     padding: 0 0.5rem;
     margin-left: 0%;
@@ -1874,6 +1855,25 @@ exports[`should render a news article with headline in the middle correctly 1`] 
   .emotion-5 {
     padding: 0 1rem;
     margin-left: 0%;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-5 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-5 {
+    margin-left: 20%;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-5 {
+    margin-left: 40%;
   }
 }
 
@@ -1937,12 +1937,6 @@ exports[`should render a news article with headline in the middle correctly 1`] 
   }
 }
 
-@media (min-width: 63rem) {
-  .emotion-7 {
-    padding-right: 2.5rem;
-  }
-}
-
 .emotion-7 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -1968,10 +1962,43 @@ exports[`should render a news article with headline in the middle correctly 1`] 
   }
 }
 
+@media (min-width: 63rem) {
+  .emotion-7 {
+    padding-right: 2.5rem;
+  }
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-9 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
   .emotion-9 {
     padding: 0 0.5rem;
     margin-left: 0%;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-9 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-9 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-9 {
+    margin-left: 16.666666666666668%;
   }
 }
 
@@ -2041,50 +2068,6 @@ exports[`should render a news article with headline in the middle correctly 1`] 
   }
 }
 
-@media (max-width: 14.9375rem) {
-  .emotion-9 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-9 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-9 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-9 {
-    margin-left: 16.666666666666668%;
-  }
-}
-
-.emotion-11:focus {
-  outline: none;
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-11 {
-    padding: 2.5rem 0;
-  }
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-11 {
-    font-size: 2rem;
-    line-height: 2.25rem;
-  }
-}
-
 .emotion-11 {
   font-size: 1.75rem;
   line-height: 2rem;
@@ -2098,11 +2081,28 @@ exports[`should render a news article with headline in the middle correctly 1`] 
   overflow-wrap: anywhere;
 }
 
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-11 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
 @media (min-width: 37.5rem) {
   .emotion-11 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-11 {
+    padding: 2.5rem 0;
+  }
+}
+
+.emotion-11:focus {
+  outline: none;
 }
 
 <div>
@@ -2174,19 +2174,19 @@ exports[`should render a news article without headline correctly 1`] = `
   background-color: #F6F6F6;
 }
 
+.emotion-1 {
+  max-width: 63rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
 @media (min-width: 63rem) {
   .emotion-1 {
     padding: 0 1rem;
     -webkit-column-gap: 1rem;
     column-gap: 1rem;
   }
-}
-
-.emotion-1 {
-  max-width: 63rem;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
 }
 
 .emotion-2 {
@@ -2213,6 +2213,46 @@ exports[`should render a news article without headline correctly 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-5 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-5 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-5 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-5 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-5 {
+    margin-left: 20%;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-5 {
+    margin-left: 40%;
+  }
 }
 
 @supports (display: grid) {
@@ -2272,46 +2312,6 @@ exports[`should render a news article without headline correctly 1`] = `
       grid-column-end: span 10;
       grid-column-start: 5;
     }
-  }
-}
-
-@media (max-width: 14.9375rem) {
-  .emotion-5 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-5 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-5 {
-    margin-left: 20%;
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-5 {
-    margin-left: 40%;
-  }
-}
-
-@media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-5 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-5 {
-    padding: 0 1rem;
-    margin-left: 0%;
   }
 }
 
@@ -2409,15 +2409,15 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
   }
 }
 
+.emotion-2 {
+  grid-column: 1/span 12;
+  padding-bottom: 2rem;
+}
+
 @media (min-width: 63rem) {
   .emotion-2 {
     grid-column: 1/span 8;
   }
-}
-
-.emotion-2 {
-  grid-column: 1/span 12;
-  padding-bottom: 2rem;
 }
 
 .emotion-3 {
@@ -2561,6 +2561,20 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
   outline: none;
 }
 
+@media (max-width: 14.9375rem) {
+  .emotion-8 {
+    padding: 0 0.5rem;
+    margin-right: 0%;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-8 {
+    padding: 0 0.5rem;
+    margin-right: 0%;
+  }
+}
+
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
   .emotion-8 {
     padding: 0 1rem;
@@ -2572,6 +2586,18 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
   .emotion-8 {
     padding: 0 1rem;
     margin-right: 0%;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-8 {
+    margin-right: 20%;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-8 {
+    margin-right: 40%;
   }
 }
 
@@ -2635,32 +2661,6 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
   }
 }
 
-@media (min-width: 80rem) {
-  .emotion-8 {
-    margin-right: 40%;
-  }
-}
-
-@media (max-width: 14.9375rem) {
-  .emotion-8 {
-    padding: 0 0.5rem;
-    margin-right: 0%;
-  }
-}
-
-@media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-8 {
-    padding: 0 0.5rem;
-    margin-right: 0%;
-  }
-}
-
-@media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-8 {
-    margin-right: 20%;
-  }
-}
-
 .emotion-10 {
   font-size: 0.9375rem;
   line-height: 1.5rem;
@@ -2692,11 +2692,10 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
   }
 }
 
-@media (min-width: 80rem) {
+@media (max-width: 24.9375rem) {
   .emotion-12 {
-    margin: 0 auto;
-    padding: 0 1rem 1.5rem;
-    max-width: 80rem;
+    margin: 0 0.5rem;
+    padding-bottom: 1.5rem;
   }
 }
 
@@ -2709,13 +2708,6 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
   }
 }
 
-@media (max-width: 24.9375rem) {
-  .emotion-12 {
-    margin: 0 0.5rem;
-    padding-bottom: 1.5rem;
-  }
-}
-
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
   .emotion-12 {
     margin: 0 1rem;
@@ -2723,15 +2715,11 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
   }
 }
 
-@media (min-width: 37.5rem) {
-  .emotion-13 {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-13 {
-    margin-bottom: 1rem;
+@media (min-width: 80rem) {
+  .emotion-12 {
+    margin: 0 auto;
+    padding: 0 1rem 1.5rem;
+    max-width: 80rem;
   }
 }
 
@@ -2742,9 +2730,21 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
   margin-top: 2rem;
 }
 
+@media (min-width: 37.5rem) {
+  .emotion-13 {
+    margin-top: 1.5rem;
+  }
+}
+
 @media (min-width: 63rem) {
   .emotion-13 {
     margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-13 {
+    margin-bottom: 1rem;
   }
 }
 
@@ -2791,6 +2791,25 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
   }
 }
 
+.emotion-21 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  background-color: #F6F6F6;
+  margin: 1rem 0;
+  padding-left: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-21 {
     font-size: 1.25rem;
@@ -2809,25 +2828,6 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
   .emotion-21 {
     margin: 0;
   }
-}
-
-.emotion-21 {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  background-color: #F6F6F6;
-  margin: 1rem 0;
-  padding-left: 0.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 @media (min-width: 37.5rem) {
@@ -3028,6 +3028,12 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
   padding: 0;
 }
 
+@media (max-width: 14.9375rem) {
+  .emotion-28 {
+    min-width: 1rem;
+  }
+}
+
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
   .emotion-28 {
     min-width: 1.5rem;
@@ -3066,19 +3072,6 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
   }
 }
 
-@media (max-width: 14.9375rem) {
-  .emotion-28 {
-    min-width: 1rem;
-  }
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-29 {
-    font-size: 2.5rem;
-    line-height: 2.75rem;
-  }
-}
-
 .emotion-29 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-style: normal;
@@ -3089,6 +3082,13 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
   padding: 0;
   font-size: 2rem;
   line-height: 2.25rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-29 {
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+  }
 }
 
 @media (min-width: 37.5rem) {
@@ -3108,6 +3108,19 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
   .emotion-30 {
     padding-left: 0;
   }
+}
+
+.emotion-31 {
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -3140,19 +3153,6 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
   top: 0;
   white-space: nowrap;
   z-index: 1;
-}
-
-.emotion-31 {
-  font-size: 0.9375rem;
-  line-height: 1.5rem;
-  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  margin-bottom: 0.5rem;
 }
 
 @media (min-width: 25rem) {
@@ -3264,6 +3264,12 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
   }
 }
 
+@media (max-width: 14.9375rem) {
+  .emotion-63 {
+    min-width: 1rem;
+  }
+}
+
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
   .emotion-63 {
     min-width: 1.5rem;
@@ -3299,12 +3305,6 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
 @media (min-width: 80rem) {
   .emotion-63 {
     min-width: 1.5rem;
-  }
-}
-
-@media (max-width: 14.9375rem) {
-  .emotion-63 {
-    min-width: 1rem;
   }
 }
 
