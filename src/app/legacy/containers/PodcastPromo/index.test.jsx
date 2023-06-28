@@ -70,6 +70,12 @@ describe('Inline', () => {
     expect(getByRole('region')).toBeInTheDocument();
   });
 
+  it('should render podcast in a strong element', () => {
+    const { getByText } = render(<PromoWithContext inline />);
+
+    expect(getByText(brandTitle).closest('strong')).toBeInTheDocument();
+  });
+
   it('should contain a link to skip to end of podcast component', () => {
     const { container } = render(<PromoWithContext inline />);
 
