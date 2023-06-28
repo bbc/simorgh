@@ -44,7 +44,7 @@ const ResponsivePodcastPromoWrapper = styled.div`
 
   @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
     width: 45%;
-    margin: ${GEL_SPACING} ${GEL_SPACING};
+    margin: ${GEL_SPACING} ${GEL_SPACING} ${GEL_SPACING_TRPL} ${GEL_SPACING};
   }
 
   @media (min-width: ${GEL_GROUP_1_WIDTH_260PX}) {
