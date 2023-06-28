@@ -18,6 +18,7 @@ import {
   getPica,
   getBrevier,
   getLongPrimer,
+  getGreatPrimer,
 } from '#psammead/gel-foundations/src/typography';
 import { getSerifMedium } from '#psammead/psammead-styles/src/font-styles';
 import useViewTracker from '#hooks/useViewTracker';
@@ -83,6 +84,7 @@ const StyledCardContentWrapper = styled(PromoComponent.Card.Content)`
 `;
 
 const StyledCardDescriptionWrapper = styled(PromoComponent.Card.Description)`
+  ${({ script }) => getBrevier(script)}
   margin: ${GEL_SPACING_HLF_TRPL} 0;
   overflow-wrap: break-word;
   color: ${props => props.theme.palette.GREY_10};
@@ -123,7 +125,7 @@ const StyledEpisodeTextWrapper = styled(PromoComponent.Card.EpisodesText)`
 `;
 
 const StyledCardLink = styled(PromoComponent.Card.Link)`
-  ${({ script }) => getLongPrimer(script)}
+  ${({ script }) => getGreatPrimer(script)}
   ${({ service }) => getSerifMedium(service)}
   display: block;
   margin-top: ${GEL_SPACING_HLF_TRPL};
@@ -234,17 +236,22 @@ const Promo = () => {
               {mediaIcons.podcast}
             </StyledPodcastIconWrapper>
             <StyledCardContentWrapper>
-              <StyledCardLink
-                href={url}
-                onClick={clickTrackerRef}
-                script={script}
-                service={service}
-              >
-                <span className="podcast-promo--hover podcast-promo--focus podcast-promo--visited">
-                  {podcastBrandTitle}
-                </span>
-              </StyledCardLink>
-              <StyledCardDescriptionWrapper>
+              <strong>
+                <StyledCardLink
+                  href={url}
+                  onClick={clickTrackerRef}
+                  script={script}
+                  service={service}
+                >
+                  <span
+                    id="podcast-promo"
+                    className="podcast-promo--hover podcast-promo--focus podcast-promo--visited"
+                  >
+                    {podcastBrandTitle}
+                  </span>
+                </StyledCardLink>
+              </strong>
+              <StyledCardDescriptionWrapper script={script}>
                 {description}
               </StyledCardDescriptionWrapper>
               <StyledEpisodeTextWrapper dir={dir} script={script}>
