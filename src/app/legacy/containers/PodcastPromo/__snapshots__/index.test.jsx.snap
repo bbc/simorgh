@@ -30,6 +30,26 @@ exports[`Inline Should render correctly 1`] = `
   position: relative;
 }
 
+.emotion-7 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  background-color: #FFFFFF;
+  border: 0.125rem solid #222222;
+  color: #222222;
+  display: block;
+  left: 0;
+  line-height: 1;
+  padding: 0.75rem;
+  position: absolute;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  top: 0;
+  z-index: 10;
+}
+
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-7 {
     line-height: 1.125rem;
@@ -53,26 +73,6 @@ exports[`Inline Should render correctly 1`] = `
   margin: 0;
 }
 
-.emotion-7 {
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  background-color: #FFFFFF;
-  border: 0.125rem solid #222222;
-  color: #222222;
-  display: block;
-  left: 0;
-  line-height: 1;
-  padding: 0.75rem;
-  position: absolute;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  top: 0;
-  z-index: 10;
-}
-
 .emotion-9 {
   position: relative;
   background-color: #FFFFFF;
@@ -88,6 +88,15 @@ exports[`Inline Should render correctly 1`] = `
 .emotion-9:hover .podcast-promo--hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
+}
+
+.emotion-11 {
+  margin: 0.5rem 0 0.5rem 0.5rem;
+  display: none;
+  display: block;
+  width: 100%;
+  margin: 0rem;
+  padding: 0rem;
 }
 
 @media (min-width: 20rem) {
@@ -135,22 +144,6 @@ exports[`Inline Should render correctly 1`] = `
   }
 }
 
-.emotion-11 {
-  margin: 0.5rem 0 0.5rem 0.5rem;
-  display: none;
-  display: block;
-  width: 100%;
-  margin: 0rem;
-  padding: 0rem;
-}
-
-@media (min-width: 25rem) {
-  .emotion-13 {
-    -webkit-background-size: 77px 22px;
-    background-size: 77px 22px;
-  }
-}
-
 .emotion-13 {
   position: relative;
   height: 0;
@@ -165,22 +158,17 @@ exports[`Inline Should render correctly 1`] = `
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
+@media (min-width: 25rem) {
+  .emotion-13 {
+    -webkit-background-size: 77px 22px;
+    background-size: 77px 22px;
+  }
+}
+
 @media (min-width: 63rem) {
   .emotion-13 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
-  }
-}
-
-@media (max-width: 15rem) {
-  .emotion-15 {
-    position: relative;
-    -webkit-transform: translateY(0.75rem);
-    -moz-transform: translateY(0.75rem);
-    -ms-transform: translateY(0.75rem);
-    transform: translateY(0.75rem);
-    margin: 0.75rem 0.5rem;
-    width: 2.5rem;
   }
 }
 
@@ -203,6 +191,27 @@ exports[`Inline Should render correctly 1`] = `
   padding: 0.5rem 0.5rem;
 }
 
+@media (max-width: 15rem) {
+  .emotion-15 {
+    position: relative;
+    -webkit-transform: translateY(0.75rem);
+    -moz-transform: translateY(0.75rem);
+    -ms-transform: translateY(0.75rem);
+    transform: translateY(0.75rem);
+    margin: 0.75rem 0.5rem;
+    width: 2.5rem;
+  }
+}
+
+.emotion-17 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 1rem;
+  height: 1rem;
+}
+
 .podcastIconWrapper .emotion-17 {
   width: 2rem;
   height: 2rem;
@@ -216,20 +225,17 @@ exports[`Inline Should render correctly 1`] = `
   }
 }
 
-.emotion-17 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
-  color: #222222;
-  fill: currentColor;
-  width: 1rem;
-  height: 1rem;
-}
-
 .emotion-19 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   padding: 0.5rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-19 {
+    padding: 0.5rem 1rem;
+  }
 }
 
 @media (min-width: 63rem) {
@@ -253,12 +259,6 @@ exports[`Inline Should render correctly 1`] = `
 @media (min-width: 16.25rem) {
   .emotion-19 {
     padding: 0 1rem 1rem 1rem;
-  }
-}
-
-@media (min-width: 25rem) {
-  .emotion-19 {
-    padding: 0.5rem 1rem;
   }
 }
 
@@ -363,6 +363,13 @@ exports[`Inline Should render correctly 1`] = `
   color: #141414;
 }
 
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-24 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
 @media (min-width: 37.5rem) {
   .emotion-24 {
     font-size: 0.875rem;
@@ -387,13 +394,6 @@ exports[`Inline Should render correctly 1`] = `
 @media (min-width: 16.25rem) {
   .emotion-24 {
     margin: 1rem 0;
-  }
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-24 {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
   }
 }
 
@@ -665,13 +665,6 @@ exports[`SecondaryColumn Should render correctly 1`] = `
   margin: 0 0 1rem;
 }
 
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-6 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
 .emotion-6 {
   font-size: 1.125rem;
   line-height: 1.375rem;
@@ -680,6 +673,13 @@ exports[`SecondaryColumn Should render correctly 1`] = `
   font-style: normal;
   display: inline;
   color: #222222;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-6 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
 }
 
 @media (min-width: 37.5rem) {
@@ -705,13 +705,6 @@ exports[`SecondaryColumn Should render correctly 1`] = `
   }
 }
 
-@media (max-width: 16.25rem) {
-  .podcastIconWrapper .emotion-8 {
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-}
-
 .emotion-8 {
   vertical-align: middle;
   margin: 0 0.25rem;
@@ -725,6 +718,13 @@ exports[`SecondaryColumn Should render correctly 1`] = `
   width: 2rem;
   height: 2rem;
   margin: auto;
+}
+
+@media (max-width: 16.25rem) {
+  .podcastIconWrapper .emotion-8 {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
 }
 
 .emotion-10 {
@@ -748,20 +748,6 @@ exports[`SecondaryColumn Should render correctly 1`] = `
   text-decoration: underline;
 }
 
-@media (min-width: 63rem) {
-  .emotion-12 {
-    margin: 0;
-  }
-}
-
-@media (min-width: 25rem) {
-  .emotion-12 {
-    -webkit-flex-basis: 6.8125rem;
-    -ms-flex-preferred-size: 6.8125rem;
-    flex-basis: 6.8125rem;
-  }
-}
-
 .emotion-12 {
   margin: 0.5rem 0 0.5rem 0.5rem;
   display: none;
@@ -783,11 +769,25 @@ exports[`SecondaryColumn Should render correctly 1`] = `
   }
 }
 
+@media (min-width: 25rem) {
+  .emotion-12 {
+    -webkit-flex-basis: 6.8125rem;
+    -ms-flex-preferred-size: 6.8125rem;
+    flex-basis: 6.8125rem;
+  }
+}
+
 @media (min-width: 37.5rem) {
   .emotion-12 {
     -webkit-flex-basis: 11.125rem;
     -ms-flex-preferred-size: 11.125rem;
     flex-basis: 11.125rem;
+    margin: 0;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-12 {
     margin: 0;
   }
 }
@@ -820,10 +820,11 @@ exports[`SecondaryColumn Should render correctly 1`] = `
   }
 }
 
-@media (min-width: 63rem) {
-  .emotion-16 {
-    padding: 1rem;
-  }
+.emotion-16 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 0.5rem;
 }
 
 @media (min-width: 25rem) {
@@ -832,11 +833,10 @@ exports[`SecondaryColumn Should render correctly 1`] = `
   }
 }
 
-.emotion-16 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  padding: 0.5rem;
+@media (min-width: 63rem) {
+  .emotion-16 {
+    padding: 1rem;
+  }
 }
 
 .emotion-18 {
@@ -864,6 +864,12 @@ exports[`SecondaryColumn Should render correctly 1`] = `
   }
 }
 
+.emotion-20 {
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 .emotion-20:before {
   position: absolute;
   top: 0;
@@ -877,12 +883,6 @@ exports[`SecondaryColumn Should render correctly 1`] = `
 
 .emotion-20:visited .podcast-promo--visited {
   color: #6E6E73;
-}
-
-.emotion-20 {
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 .emotion-20:focus .podcast-promo--focus {
@@ -912,12 +912,6 @@ exports[`SecondaryColumn Should render correctly 1`] = `
   .emotion-22 {
     font-size: 0.875rem;
     line-height: 1.125rem;
-  }
-}
-
-@media screen and (forced-colors: active) {
-  .emotion-24>svg {
-    fill: canvasText;
   }
 }
 
@@ -953,6 +947,12 @@ exports[`SecondaryColumn Should render correctly 1`] = `
   position: relative;
   bottom: 0.125rem;
   right: 0.1875rem;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-24>svg {
+    fill: canvasText;
+  }
 }
 
 .emotion-26 {
