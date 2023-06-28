@@ -38,8 +38,8 @@ const ComponentWithContext = ({ data: { data } }) => {
                 pageData={{
                   ...data.article,
                   secondaryColumn: data.secondaryData,
+                  mostRead: data.secondaryData.mostRead,
                 }}
-                mostReadEndpointOverride="./data/news/mostRead/index.json"
               />
             </MemoryRouter>
           </UserContextProvider>
