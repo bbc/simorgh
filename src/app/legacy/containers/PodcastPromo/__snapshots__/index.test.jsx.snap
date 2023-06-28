@@ -30,6 +30,26 @@ exports[`Inline Should render correctly 1`] = `
   position: relative;
 }
 
+.emotion-7 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  background-color: #FFFFFF;
+  border: 0.125rem solid #222222;
+  color: #222222;
+  display: block;
+  left: 0;
+  line-height: 1;
+  padding: 0.75rem;
+  position: absolute;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  top: 0;
+  z-index: 10;
+}
+
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-7 {
     line-height: 1.125rem;
@@ -53,26 +73,6 @@ exports[`Inline Should render correctly 1`] = `
   margin: 0;
 }
 
-.emotion-7 {
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  background-color: #FFFFFF;
-  border: 0.125rem solid #222222;
-  color: #222222;
-  display: block;
-  left: 0;
-  line-height: 1;
-  padding: 0.75rem;
-  position: absolute;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  top: 0;
-  z-index: 10;
-}
-
 .emotion-9 {
   position: relative;
   background-color: #FFFFFF;
@@ -88,6 +88,15 @@ exports[`Inline Should render correctly 1`] = `
 .emotion-9:hover .podcast-promo--hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
+}
+
+.emotion-11 {
+  margin: 0.5rem 0 0.5rem 0.5rem;
+  display: none;
+  display: block;
+  width: 100%;
+  margin: 0rem;
+  padding: 0rem;
 }
 
 @media (min-width: 20rem) {
@@ -114,13 +123,13 @@ exports[`Inline Should render correctly 1`] = `
   }
 }
 
-.emotion-11 {
-  margin: 0.5rem 0 0.5rem 0.5rem;
-  display: none;
-  display: block;
-  width: 100%;
-  margin: 0rem;
-  padding: 0rem;
+@media (min-width: 37.5rem) {
+  .emotion-11 {
+    -webkit-flex-basis: 11.125rem;
+    -ms-flex-preferred-size: 11.125rem;
+    flex-basis: 11.125rem;
+    margin: 0;
+  }
 }
 
 @media (min-width: 63rem) {
@@ -132,15 +141,6 @@ exports[`Inline Should render correctly 1`] = `
 @media (max-width: 15rem) {
   .emotion-11 {
     display: none;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-11 {
-    -webkit-flex-basis: 11.125rem;
-    -ms-flex-preferred-size: 11.125rem;
-    flex-basis: 11.125rem;
-    margin: 0;
   }
 }
 
@@ -262,13 +262,6 @@ exports[`Inline Should render correctly 1`] = `
   }
 }
 
-@media (min-width: 37.5rem) {
-  .emotion-21 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
 .emotion-21 {
   color: #222222;
   -webkit-text-decoration: none;
@@ -283,6 +276,17 @@ exports[`Inline Should render correctly 1`] = `
   color: #141414;
 }
 
+.emotion-21:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: '';
+  overflow: hidden;
+  z-index: 1;
+}
+
 .emotion-21:visited .podcast-promo--visited {
   color: #6E6E73;
 }
@@ -295,6 +299,13 @@ exports[`Inline Should render correctly 1`] = `
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-21 {
     font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-21 {
+    font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
@@ -336,17 +347,6 @@ exports[`Inline Should render correctly 1`] = `
   }
 }
 
-.emotion-21:before {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  content: '';
-  overflow: hidden;
-  z-index: 1;
-}
-
 .emotion-24 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
@@ -381,12 +381,6 @@ exports[`Inline Should render correctly 1`] = `
   }
 }
 
-@media (max-width: 14.9375rem) {
-  .emotion-27 {
-    margin: 0 0.25rem;
-  }
-}
-
 .emotion-27 {
   display: inline;
   font-size: 0.9375rem;
@@ -398,6 +392,13 @@ exports[`Inline Should render correctly 1`] = `
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #141414;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-27 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
 }
 
 @media (min-width: 37.5rem) {
@@ -437,10 +438,9 @@ exports[`Inline Should render correctly 1`] = `
   }
 }
 
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
+@media (max-width: 14.9375rem) {
   .emotion-27 {
-    font-size: 1rem;
-    line-height: 1.25rem;
+    margin: 0 0.25rem;
   }
 }
 
@@ -646,13 +646,6 @@ exports[`SecondaryColumn Should render correctly 1`] = `
   margin: 0 0 1rem;
 }
 
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-6 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
 .emotion-6 {
   font-size: 1.125rem;
   line-height: 1.375rem;
@@ -661,6 +654,13 @@ exports[`SecondaryColumn Should render correctly 1`] = `
   font-style: normal;
   display: inline;
   color: #222222;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-6 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
 }
 
 @media (min-width: 37.5rem) {
@@ -686,13 +686,6 @@ exports[`SecondaryColumn Should render correctly 1`] = `
   }
 }
 
-@media (max-width: 16.25rem) {
-  .podcastIconWrapper .emotion-8 {
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-}
-
 .emotion-8 {
   vertical-align: middle;
   margin: 0 0.25rem;
@@ -706,6 +699,13 @@ exports[`SecondaryColumn Should render correctly 1`] = `
   width: 2rem;
   height: 2rem;
   margin: auto;
+}
+
+@media (max-width: 16.25rem) {
+  .podcastIconWrapper .emotion-8 {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
 }
 
 .emotion-10 {
@@ -729,20 +729,6 @@ exports[`SecondaryColumn Should render correctly 1`] = `
   text-decoration: underline;
 }
 
-@media (min-width: 63rem) {
-  .emotion-12 {
-    margin: 0;
-  }
-}
-
-@media (min-width: 25rem) {
-  .emotion-12 {
-    -webkit-flex-basis: 6.8125rem;
-    -ms-flex-preferred-size: 6.8125rem;
-    flex-basis: 6.8125rem;
-  }
-}
-
 .emotion-12 {
   margin: 0.5rem 0 0.5rem 0.5rem;
   display: none;
@@ -764,11 +750,25 @@ exports[`SecondaryColumn Should render correctly 1`] = `
   }
 }
 
+@media (min-width: 25rem) {
+  .emotion-12 {
+    -webkit-flex-basis: 6.8125rem;
+    -ms-flex-preferred-size: 6.8125rem;
+    flex-basis: 6.8125rem;
+  }
+}
+
 @media (min-width: 37.5rem) {
   .emotion-12 {
     -webkit-flex-basis: 11.125rem;
     -ms-flex-preferred-size: 11.125rem;
     flex-basis: 11.125rem;
+    margin: 0;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-12 {
     margin: 0;
   }
 }
@@ -801,10 +801,11 @@ exports[`SecondaryColumn Should render correctly 1`] = `
   }
 }
 
-@media (min-width: 63rem) {
-  .emotion-16 {
-    padding: 1rem;
-  }
+.emotion-16 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 0.5rem;
 }
 
 @media (min-width: 25rem) {
@@ -813,11 +814,10 @@ exports[`SecondaryColumn Should render correctly 1`] = `
   }
 }
 
-.emotion-16 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  padding: 0.5rem;
+@media (min-width: 63rem) {
+  .emotion-16 {
+    padding: 1rem;
+  }
 }
 
 .emotion-18 {
@@ -845,6 +845,12 @@ exports[`SecondaryColumn Should render correctly 1`] = `
   }
 }
 
+.emotion-20 {
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 .emotion-20:before {
   position: absolute;
   top: 0;
@@ -858,12 +864,6 @@ exports[`SecondaryColumn Should render correctly 1`] = `
 
 .emotion-20:visited .podcast-promo--visited {
   color: #6E6E73;
-}
-
-.emotion-20 {
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 .emotion-20:focus .podcast-promo--focus {
@@ -893,12 +893,6 @@ exports[`SecondaryColumn Should render correctly 1`] = `
   .emotion-22 {
     font-size: 0.875rem;
     line-height: 1.125rem;
-  }
-}
-
-@media screen and (forced-colors: active) {
-  .emotion-24>svg {
-    fill: canvasText;
   }
 }
 
@@ -934,6 +928,12 @@ exports[`SecondaryColumn Should render correctly 1`] = `
   position: relative;
   bottom: 0.125rem;
   right: 0.1875rem;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-24>svg {
+    fill: canvasText;
+  }
 }
 
 .emotion-26 {
