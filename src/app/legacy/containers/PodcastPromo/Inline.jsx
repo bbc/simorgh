@@ -40,17 +40,16 @@ const GEL_GROUP_1_WIDTH_360PX = '22.5rem';
 const ResponsivePodcastPromoWrapper = styled.div`
   ${({ dir }) => (dir === 'ltr' ? 'float: right;' : 'float: left;')}
 
-  margin: 0rem ${GEL_SPACING} ${GEL_SPACING_TRPL} ${GEL_SPACING};
+  margin: 0rem  ${GEL_SPACING} ${GEL_SPACING_TRPL};
   height: auto;
 
   @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
     width: 45%;
-    margin: ${GEL_SPACING} ${GEL_SPACING} ${GEL_SPACING_TRPL} ${GEL_SPACING};
+    margin: ${GEL_SPACING} ${GEL_SPACING} ${GEL_SPACING_TRPL};
   }
 
   @media (min-width: ${GEL_GROUP_1_WIDTH_260PX}) {
-    margin: ${GEL_SPACING_HLF} ${GEL_SPACING_DBL} ${GEL_SPACING_TRPL}
-      ${GEL_SPACING_DBL};
+    margin: ${GEL_SPACING_HLF} ${GEL_SPACING_DBL} ${GEL_SPACING_TRPL};
   }
 `;
 
@@ -74,8 +73,7 @@ const StyledCardContentWrapper = styled(PromoComponent.Card.Content)`
   }
 
   @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
-    padding: 0 ${GEL_SPACING_HLF_TRPL} ${GEL_SPACING_HLF_TRPL}
-      ${GEL_SPACING_HLF_TRPL};
+    padding: 0 ${GEL_SPACING_HLF_TRPL} ${GEL_SPACING_HLF_TRPL};
   }
 
   @media (min-width: ${GEL_GROUP_1_WIDTH_260PX}) {
