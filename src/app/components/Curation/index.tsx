@@ -13,6 +13,7 @@ import getComponentName, { COMPONENT_NAMES } from './getComponentName';
 import MessageBanner from '../MessageBanner';
 import idSanitiser from '../../lib/utilities/idSanitiser';
 import MostRead from '../MostRead';
+import { GHOST } from '../ThemeProvider/palette';
 
 const {
   SIMPLE_CURATION_GRID,
@@ -68,7 +69,13 @@ const Curation = ({
         />
       );
     case MOST_READ:
-      return <MostRead data={mostRead} columnLayout="twoColumn" />;
+      return (
+        <MostRead
+          data={mostRead}
+          columnLayout="twoColumn"
+          headingBackgroundColour={GHOST}
+        />
+      );
     case SIMPLE_CURATION_GRID:
     case HIERARCHICAL_CURATION_GRID:
     default:

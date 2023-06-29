@@ -17,7 +17,7 @@ export const buildPageATIParams = ({
       pageIdentifier,
       timePublished,
       timeUpdated,
-    },
+    } = {},
     title: pageTitle,
   } = atiData;
   return {
