@@ -27,33 +27,19 @@
                                   "text": "Бул сыноо макалада сөздүү кабарында",
                                   "attributes": []
                                 },
-                                "position": [
-                                  1,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [1, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            1,
-                            1,
-                            1
-                          ]
+                          "position": [1, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      1,
-                      1
-                    ]
+                    "position": [1, 1]
                   }
                 ]
               },
-              "position": [
-                1
-              ]
+              "position": [1]
             },
             {
               "id": "199f8816",
@@ -83,37 +69,19 @@
                                         "text": "Бул сынак сүрөтүнүн, укук Би-Би-Си, France картасын көрсөтүп турат. Сүрөт алгачкы үч блоктон турат жана бул жазууну бар.",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        2,
-                                        1,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [2, 1, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  2,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [2, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            2,
-                            1,
-                            1
-                          ]
+                          "position": [2, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      2,
-                      1
-                    ]
+                    "position": [2, 1]
                   },
                   {
                     "id": "014fc52f",
@@ -138,37 +106,19 @@
                                         "text": "Бул сынак сүрөтүнүн, укук Би-Би-Си, France картасын көрсөтүп турат. Сүрөт алгачкы үч блоктон турат жана бул жазууну бар.",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        2,
-                                        2,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [2, 2, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  2,
-                                  2,
-                                  1,
-                                  1
-                                ]
+                                "position": [2, 2, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            2,
-                            2,
-                            1
-                          ]
+                          "position": [2, 2, 1]
                         }
                       ]
                     },
-                    "position": [
-                      2,
-                      2
-                    ]
+                    "position": [2, 2]
                   },
                   {
                     "id": "7d7ff9dc",
@@ -180,16 +130,11 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "BBC"
                     },
-                    "position": [
-                      2,
-                      3
-                    ]
+                    "position": [2, 3]
                   }
                 ]
               },
-              "position": [
-                2
-              ]
+              "position": [2]
             },
             {
               "id": "794c82b0",
@@ -198,9 +143,7 @@
                 "firstPublished": 1562941862686,
                 "lastPublished": 1562941862686
               },
-              "position": [
-                3
-              ]
+              "position": [3]
             },
             {
               "id": "d14ea738",
@@ -220,11 +163,7 @@
                             "text": "Бул ",
                             "attributes": []
                           },
-                          "position": [
-                            4,
-                            1,
-                            1
-                          ]
+                          "position": [4, 1, 1]
                         },
                         {
                           "id": "e548ea28",
@@ -239,22 +178,13 @@
                                   "text": "Би-Би-Си ырайы башкы",
                                   "attributes": []
                                 },
-                                "position": [
-                                  4,
-                                  1,
-                                  2,
-                                  1
-                                ]
+                                "position": [4, 1, 2, 1]
                               }
                             ],
                             "locator": "https://www.bbc.co.uk/weather",
                             "isExternal": false
                           },
-                          "position": [
-                            4,
-                            1,
-                            2
-                          ]
+                          "position": [4, 1, 2]
                         },
                         {
                           "id": "be9ccec6",
@@ -263,24 +193,15 @@
                             "text": " бир нускага шилтемени камтыган текст бөлүгү болуп саналат.",
                             "attributes": []
                           },
-                          "position": [
-                            4,
-                            1,
-                            3
-                          ]
+                          "position": [4, 1, 3]
                         }
                       ]
                     },
-                    "position": [
-                      4,
-                      1
-                    ]
+                    "position": [4, 1]
                   }
                 ]
               },
-              "position": [
-                4
-              ]
+              "position": [4]
             },
             {
               "id": "2c2bc192",
@@ -311,37 +232,19 @@
                                         "text": "Египет салуулар: зомбулук Каир тыныгуу менен копт сөөк",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        5,
-                                        1,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [5, 1, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  5,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [5, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            5,
-                            1,
-                            1
-                          ]
+                          "position": [5, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      5,
-                      1
-                    ]
+                    "position": [5, 1]
                   },
                   {
                     "id": "76d96011",
@@ -368,9 +271,7 @@
                             "versions": [
                               {
                                 "versionId": "p019dx68",
-                                "types": [
-                                  "Original"
-                                ],
+                                "types": ["Original"],
                                 "duration": 45,
                                 "durationISO8601": "PT45S",
                                 "warnings": {},
@@ -386,11 +287,7 @@
                             },
                             "smpKind": "programme"
                           },
-                          "position": [
-                            5,
-                            2,
-                            1
-                          ]
+                          "position": [5, 2, 1]
                         },
                         {
                           "id": "b1067066",
@@ -404,33 +301,19 @@
                                   "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p019dxfg.jpg",
                                   "originCode": "mpv"
                                 },
-                                "position": [
-                                  5,
-                                  2,
-                                  2,
-                                  1
-                                ]
+                                "position": [5, 2, 2, 1]
                               }
                             ]
                           },
-                          "position": [
-                            5,
-                            2,
-                            2
-                          ]
+                          "position": [5, 2, 2]
                         }
                       ]
                     },
-                    "position": [
-                      5,
-                      2
-                    ]
+                    "position": [5, 2]
                   }
                 ]
               },
-              "position": [
-                5
-              ]
+              "position": [5]
             },
             {
               "id": "10b0168f",
@@ -455,33 +338,19 @@
                                   "text": "Бул subheadline болуп саналат",
                                   "attributes": []
                                 },
-                                "position": [
-                                  6,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [6, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            6,
-                            1,
-                            1
-                          ]
+                          "position": [6, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      6,
-                      1
-                    ]
+                    "position": [6, 1]
                   }
                 ]
               },
-              "position": [
-                6
-              ]
+              "position": [6]
             },
             {
               "id": "6d2ed6c0",
@@ -511,37 +380,19 @@
                                         "text": "Бул subheadline болуп саналат",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        7,
-                                        1,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [7, 1, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  7,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [7, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            7,
-                            1,
-                            1
-                          ]
+                          "position": [7, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      7,
-                      1
-                    ]
+                    "position": [7, 1]
                   },
                   {
                     "id": "cd0f45f5",
@@ -553,16 +404,11 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "Getty Images"
                     },
-                    "position": [
-                      7,
-                      2
-                    ]
+                    "position": [7, 2]
                   }
                 ]
               },
-              "position": [
-                7
-              ]
+              "position": [7]
             },
             {
               "id": "db389137",
@@ -582,32 +428,21 @@
                             "text": "Бул сыноо макалада айтылгандай, биз сайтында сыноолорду алышы үчүн жаратылган.",
                             "attributes": []
                           },
-                          "position": [
-                            8,
-                            1,
-                            1
-                          ]
+                          "position": [8, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      8,
-                      1
-                    ]
+                    "position": [8, 1]
                   }
                 ]
               },
-              "position": [
-                8
-              ]
+              "position": [8]
             },
             {
               "id": "89ffad44",
               "type": "mpu",
               "model": {},
-              "position": [
-                9
-              ]
+              "position": [9]
             },
             {
               "id": "992b1976",
@@ -615,9 +450,7 @@
               "model": {
                 "type": "recommendations"
               },
-              "position": [
-                10
-              ]
+              "position": [10]
             }
           ]
         }
@@ -1214,1078 +1047,149 @@
         }
       ],
       "mostRead": {
-        "generated": "2023-02-18T02:57:58.312Z",
+        "generated": "2023-06-19T14:27:56.971Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T05:53:00Z",
-        "totalRecords": 20,
-        "records": [
+        "items": [
           {
             "id": "cd68f2bc-efd5-a043-9500-a3891a13353b",
             "rank": 1,
-            "count": 9989,
-            "urn": "urn:bbc:curie:asset:cd68f2bc-efd5-a043-9500-a3891a13353b",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "АКШ: жаңы президент ким экенин аныктаган штаттар кайсылар?",
-                "headline": "АКШ: жаңы президент ким экенин аныктаган штаттар кайсылар?"
-              },
-              "locators": {
-                "assetUri": "/kyrgyz/world-23090100",
-                "curieCpsUrn": "urn:bbc:cps:curie:asset:cd68f2bc-efd5-a043-9500-a3891a13353b",
-                "assetId": "23090100",
-                "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-23090100",
-                "curie": "http://www.bbc.co.uk/asset/cd68f2bc-efd5-a043-9500-a3891a13353b"
-              },
-              "summary": "Шейшембиде Америка кошмо штаттары өлкөнүн жаңы президентин тандап алуу үчүн добуш беришет.",
-              "timestamp": 1478663803000,
-              "language": "ky",
-              "passport": {
-                "home": "http://www.bbc.co.uk/ontologies/passport/home/Kyrgyz",
-                "taggings": []
-              },
-              "indexImage": {
-                "id": "63521576",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/107B8/test/_63521576_66f7fe9f-1076-402a-988b-6e515cbb6b4b.jpg",
-                "path": "/cpsdevpb/107B8/test/_63521576_66f7fe9f-1076-402a-988b-6e515cbb6b4b.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "Trump",
-                "caption": "Trump",
-                "copyrightHolder": "Getty Images",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:kyrgyz/world-23090100",
-              "type": "cps"
-            }
+            "title": "АКШ: жаңы президент ким экенин аныктаган штаттар кайсылар?",
+            "href": "/kyrgyz/world-23090100",
+            "timestamp": 1478663803000
           },
           {
             "id": "82567d2d-eb50-b644-b9a4-6523bd62bf2c",
             "rank": 2,
-            "count": 9561,
-            "urn": "urn:bbc:curie:asset:82567d2d-eb50-b644-b9a4-6523bd62bf2c",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Kyrgyzstanda soz erkindigi buzuluuda",
-                "headline": "Kyrgyzstanda soz erkindigi buzuluuda"
-              },
-              "locators": {
-                "assetUri": "/kyrgyz/world-23089413",
-                "curieCpsUrn": "urn:bbc:cps:curie:asset:82567d2d-eb50-b644-b9a4-6523bd62bf2c",
-                "assetId": "23089413",
-                "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-23089413",
-                "curie": "http://www.bbc.co.uk/asset/82567d2d-eb50-b644-b9a4-6523bd62bf2c"
-              },
-              "summary": "Soz erkindigin chektoo turaluu jiyin ottu",
-              "timestamp": 1478506660000,
-              "language": "ky",
-              "byline": {
-                "name": "uluk adanbaev",
-                "title": "editor",
-                "persons": [
-                  {
-                    "name": "uluk adanbaev",
-                    "function": "editor"
-                  }
-                ]
-              },
-              "passport": {
-                "home": "http://www.bbc.co.uk/ontologies/passport/home/Kyrgyz",
-                "taggings": []
-              },
-              "indexImage": {
-                "id": "63521059",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/17324/test/_63521059_0362cabb-9d4d-4a6f-b538-2b314913c31a.jpg",
-                "path": "/cpsdevpb/17324/test/_63521059_0362cabb-9d4d-4a6f-b538-2b314913c31a.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "ыаыаыаыаы",
-                "caption": "аыаыаы",
-                "copyrightHolder": "Getty Images",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:kyrgyz/world-23089413",
-              "type": "cps"
-            }
+            "title": "Kyrgyzstanda soz erkindigi buzuluuda",
+            "href": "/kyrgyz/world-23089413",
+            "timestamp": 1478506660000
           },
           {
             "id": "5ac26713-7ec6-824f-a179-53f95a372408",
             "rank": 3,
-            "count": 8916,
-            "urn": "urn:bbc:curie:asset:5ac26713-7ec6-824f-a179-53f95a372408",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 36",
-                "headline": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 36"
-              },
-              "locators": {
-                "assetUri": "/kyrgyz/kyrgyzstan-23087515",
-                "curieCpsUrn": "urn:bbc:cps:curie:asset:5ac26713-7ec6-824f-a179-53f95a372408",
-                "assetId": "23087515",
-                "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-23087515",
-                "curie": "http://www.bbc.co.uk/asset/5ac26713-7ec6-824f-a179-53f95a372408"
-              },
-              "summary": "Ушул аптанын башында Кыргызстан акыркы он жылдан бери биринчи жолу Өзбекстандын расмий делегациясын кабыл алды.",
-              "timestamp": 1477898731000,
-              "language": "ky",
-              "passport": {
-                "home": "http://www.bbc.co.uk/ontologies/passport/home/Kyrgyz",
-                "taggings": []
-              },
-              "indexImage": {
-                "id": "63486487",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/13284/test/_63486487_63486486.jpg",
-                "path": "/cpsdevpb/13284/test/_63486487_63486486.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "Өзбекстандын",
-                "caption": "Өзбекстандын",
-                "copyrightHolder": "Getty Images",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:kyrgyz/kyrgyzstan-23087515",
-              "type": "cps"
-            }
+            "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 36",
+            "href": "/kyrgyz/kyrgyzstan-23087515",
+            "timestamp": 1477898731000
           },
           {
             "id": "429a5345-bc55-5947-b11b-19ae662817a5",
             "rank": 4,
-            "count": 8033,
-            "urn": "urn:bbc:curie:asset:429a5345-bc55-5947-b11b-19ae662817a5",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 34",
-                "headline": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 34"
-              },
-              "locators": {
-                "assetUri": "/kyrgyz/kyrgyzstan-23087513",
-                "curieCpsUrn": "urn:bbc:cps:curie:asset:429a5345-bc55-5947-b11b-19ae662817a5",
-                "assetId": "23087513",
-                "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-23087513",
-                "curie": "http://www.bbc.co.uk/asset/429a5345-bc55-5947-b11b-19ae662817a5"
-              },
-              "summary": "Ушул аптанын башында Кыргызстан акыркы он жылдан бери биринчи жолу Өзбекстандын расмий делегациясын кабыл алды.",
-              "timestamp": 1477898586000,
-              "language": "ky",
-              "passport": {
-                "home": "http://www.bbc.co.uk/ontologies/passport/home/Kyrgyz",
-                "taggings": []
-              },
-              "indexImage": {
-                "id": "63486487",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/13284/test/_63486487_63486486.jpg",
-                "path": "/cpsdevpb/13284/test/_63486487_63486486.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "Өзбекстандын",
-                "caption": "Өзбекстандын",
-                "copyrightHolder": "Getty Images",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:kyrgyz/kyrgyzstan-23087513",
-              "type": "cps"
-            }
+            "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 34",
+            "href": "/kyrgyz/kyrgyzstan-23087513",
+            "timestamp": 1477898586000
           },
           {
             "id": "a1445694-7c18-5547-928e-97f5f454bebe",
             "rank": 5,
-            "count": 7744,
-            "urn": "urn:bbc:curie:asset:a1445694-7c18-5547-928e-97f5f454bebe",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 35",
-                "headline": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 35"
-              },
-              "locators": {
-                "assetUri": "/kyrgyz/kyrgyzstan-23087514",
-                "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-23087514",
-                "curie": "http://www.bbc.co.uk/asset/a1445694-7c18-5547-928e-97f5f454bebe",
-                "assetId": "23087514"
-              },
-              "summary": "Ушул аптанын башында Кыргызстан акыркы он жылдан бери биринчи жолу Өзбекстандын расмий делегациясын кабыл алды.",
-              "timestamp": 1477898591000,
-              "language": "ky",
-              "indexImage": {
-                "id": "63486487",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/13284/test/_63486487_63486486.jpg",
-                "path": "/cpsdevpb/13284/test/_63486487_63486486.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "Өзбекстандын",
-                "caption": "Өзбекстандын",
-                "copyrightHolder": "Getty Images",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:kyrgyz/kyrgyzstan-23087514",
-              "type": "cps"
-            }
+            "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 35",
+            "href": "/kyrgyz/kyrgyzstan-23087514",
+            "timestamp": 1477898591000
           },
           {
             "id": "f8e5c9d1-877b-a142-805f-e435cdf9e99c",
             "rank": 6,
-            "count": 7723,
-            "urn": "urn:bbc:curie:asset:f8e5c9d1-877b-a142-805f-e435cdf9e99c",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 10",
-                "headline": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 10"
-              },
-              "locators": {
-                "assetUri": "/kyrgyz/sapar-tv-23087494",
-                "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/sapar-tv-23087494",
-                "curie": "http://www.bbc.co.uk/asset/f8e5c9d1-877b-a142-805f-e435cdf9e99c",
-                "assetId": "23087494"
-              },
-              "summary": "Ушул аптанын башында Кыргызстан акыркы он жылдан бери биринчи жолу Өзбекстандын расмий делегациясын кабыл алды.",
-              "timestamp": 1477850970000,
-              "language": "ky",
-              "indexImage": {
-                "id": "63486487",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/13284/test/_63486487_63486486.jpg",
-                "path": "/cpsdevpb/13284/test/_63486487_63486486.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "Өзбекстандын",
-                "caption": "Өзбекстандын",
-                "copyrightHolder": "Getty Images",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:kyrgyz/sapar-tv-23087494",
-              "type": "cps"
-            }
+            "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 10",
+            "href": "/kyrgyz/sapar-tv-23087494",
+            "timestamp": 1477850970000
           },
           {
             "id": "08c8102e-c7e2-7b49-a38c-cb31312984a0",
             "rank": 7,
-            "count": 7387,
-            "urn": "urn:bbc:curie:asset:08c8102e-c7e2-7b49-a38c-cb31312984a0",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "ට්‍රම්ප්ට අලුත් ආරක්‍ෂක උපදේශකයෙක්",
-                "headline": "උපදේශක තනතුරට අලුතින් නම්කෙරුණු ලුතිනන් ජෙනරාල් මැක්මාස්ටර් ඉරාකයේ ද සේවය කර ඇත."
-              },
-              "locators": {
-                "assetUri": "/kyrgyz/23103391",
-                "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/23103391",
-                "curie": "http://www.bbc.co.uk/asset/08c8102e-c7e2-7b49-a38c-cb31312984a0",
-                "assetId": "23103391"
-              },
-              "summary": "ජනාධිපති ඩොනල්ඩ් ට්‍රම්ප් විසින් ඇමරිකාවේ ජාතික ආරක්‍ෂක උපදේශක තනතුරට ලුතිනන් ජෙනරාල් එච් ආර් මැක්මාස්ටර් නම්කරනු ලැබීය.",
-              "timestamp": 1487940772000,
-              "language": "ky",
-              "indexImage": {
-                "id": "63529744",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/AEF8/test/_63529744_000112401-1.jpg",
-                "path": "/cpsdevpb/AEF8/test/_63529744_000112401-1.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "ලුතිනන් ජෙනරාල් එච් ආර් මැක්මාස්ටර් නම්කරනු ලැබීය.",
-                "caption": "ලුතිනන් ජෙනරාල් මයිකල් ෆ්ලින්ට සති තුනක් අවෑමෙන් ඉල්ලා අස්වීමට සිදු විය.",
-                "copyrightHolder": "BBC",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:kyrgyz/23103391",
-              "type": "cps"
-            }
+            "title": "ට්‍රම්ප්ට අලුත් ආරක්‍ෂක උපදේශකයෙක්",
+            "href": "/kyrgyz/23103391",
+            "timestamp": 1487940772000
           },
           {
             "id": "87ba62ed-5442-ef47-94c4-312e65400d4f",
             "rank": 8,
-            "count": 6876,
-            "urn": "urn:bbc:curie:asset:87ba62ed-5442-ef47-94c4-312e65400d4f",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 21",
-                "headline": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 21"
-              },
-              "locators": {
-                "assetUri": "/kyrgyz/media-23087507",
-                "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/media-23087507",
-                "curie": "http://www.bbc.co.uk/asset/87ba62ed-5442-ef47-94c4-312e65400d4f",
-                "assetId": "23087507"
-              },
-              "summary": "Ушул аптанын башында Кыргызстан акыркы он жылдан бери биринчи жолу Өзбекстандын расмий делегациясын кабыл алды.",
-              "timestamp": 1477898550000,
-              "language": "ky",
-              "indexImage": {
-                "id": "63486487",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/13284/test/_63486487_63486486.jpg",
-                "path": "/cpsdevpb/13284/test/_63486487_63486486.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "Өзбекстандын",
-                "caption": "Өзбекстандын",
-                "copyrightHolder": "Getty Images",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:kyrgyz/media-23087507",
-              "type": "cps"
-            }
+            "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 21",
+            "href": "/kyrgyz/media-23087507",
+            "timestamp": 1477898550000
           },
           {
             "id": "91d192e9-38dd-4f44-882b-c724bb41331f",
             "rank": 9,
-            "count": 6794,
-            "urn": "urn:bbc:curie:asset:91d192e9-38dd-4f44-882b-c724bb41331f",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Мирзиёевнинг илк давлат сафари Қозоғистон",
-                "headline": "Мирзиёевнинг илк давлат сафари Қозоғистонга бўлади"
-              },
-              "locators": {
-                "assetUri": "/kyrgyz/23103378",
-                "curieCpsUrn": "urn:bbc:cps:curie:asset:91d192e9-38dd-4f44-882b-c724bb41331f",
-                "assetId": "23103378",
-                "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/23103378",
-                "curie": "http://www.bbc.co.uk/asset/91d192e9-38dd-4f44-882b-c724bb41331f"
-              },
-              "summary": "Ўзбекистон президентининг илк давлат сафари билан март ойида Қозоғистонга боради. Бу ҳақида Ўзбекистон ва Қозоғистон ўртасидаги ҳамкорлик бўйича тузилган ҳукуматлараро комиссиянинг Тошкентдаги мажлисида эълон қилинди.",
-              "timestamp": 1569397958000,
-              "language": "ky",
-              "passport": {
-                "category": {
-                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                  "categoryName": "News"
-                },
-                "language": "ky",
-                "home": "http://www.bbc.co.uk/ontologies/passport/home/Kyrgyz",
-                "locator": "urn:bbc:cps:curie:asset:91d192e9-38dd-4f44-882b-c724bb41331f",
-                "availability": "AVAILABLE",
-                "taggings": [
-                  {
-                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-                    "value": "http://www.bbc.co.uk/things/2e91364c-5c77-4660-b76e-d76202785e64#id"
-                  },
-                  {
-                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-                    "value": "http://www.bbc.co.uk/things/de648736-7268-454c-a7b1-dbff416f2865#id"
-                  },
-                  {
-                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
-                    "value": "http://www.bbc.co.uk/things/7acac0af-8436-4cc9-899c-056ce64ba56a#id"
-                  },
-                  {
-                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
-                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
-                  },
-                  {
-                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
-                    "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
-                  }
-                ],
-                "schemaVersion": "1.3.0",
-                "publishedState": "PUBLISHED",
-                "predicates": {
-                  "about": [
-                    {
-                      "value": "http://www.bbc.co.uk/things/2e91364c-5c77-4660-b76e-d76202785e64#id",
-                      "thingLabel": "Улуу Британия",
-                      "thingUri": "http://www.bbc.co.uk/things/2e91364c-5c77-4660-b76e-d76202785e64#id",
-                      "thingId": "2e91364c-5c77-4660-b76e-d76202785e64",
-                      "thingType": [
-                        "tagging:TagConcept",
-                        "core:Place",
-                        "core:Thing"
-                      ],
-                      "thingSameAs": [
-                        "http://sws.geonames.org/2635167/"
-                      ],
-                      "thingEnglishLabel": "United Kingdom",
-                      "type": "about"
-                    },
-                    {
-                      "value": "http://www.bbc.co.uk/things/de648736-7268-454c-a7b1-dbff416f2865#id",
-                      "thingLabel": "Музыка",
-                      "thingUri": "http://www.bbc.co.uk/things/de648736-7268-454c-a7b1-dbff416f2865#id",
-                      "thingId": "de648736-7268-454c-a7b1-dbff416f2865",
-                      "thingType": [
-                        "core:Theme",
-                        "tagging:Genre",
-                        "tagging:AmbiguousTerm",
-                        "tagging:TagConcept",
-                        "core:Thing"
-                      ],
-                      "thingSameAs": [
-                        "http://dbpedia.org/resource/Music"
-                      ],
-                      "thingEnglishLabel": "Music",
-                      "type": "about"
-                    }
-                  ],
-                  "formats": [
-                    {
-                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
-                      "thingLabel": "News report",
-                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
-                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": [
-                        "tagging:TagConcept",
-                        "tagging:Format"
-                      ],
-                      "thingSameAs": [],
-                      "thingEnglishLabel": "Report",
-                      "thingPreferredLabel": "Report",
-                      "thingLabelLanguage": "ky",
-                      "type": "formats"
-                    }
-                  ],
-                  "contributor": [
-                    {
-                      "value": "http://www.bbc.co.uk/things/7acac0af-8436-4cc9-899c-056ce64ba56a#id",
-                      "type": "contributor"
-                    }
-                  ],
-                  "primaryMediaType": [
-                    {
-                      "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id",
-                      "type": "primaryMediaType"
-                    }
-                  ]
-                }
-              },
-              "indexImage": {
-                "id": "63529676",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/1086C/test/_63529676_000141412-1.jpg",
-                "path": "/cpsdevpb/1086C/test/_63529676_000141412-1.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "Mirsiyoywv Rossiya o'rniga Qozogintonni tanladi",
-                "caption": "Mirsiyoyev Rossiya o'rniga Qozogintonni tanladi",
-                "copyrightHolder": "AP",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:kyrgyz/23103378",
-              "type": "cps"
-            }
+            "title": "Мирзиёевнинг илк давлат сафари Қозоғистон",
+            "href": "/kyrgyz/23103378",
+            "timestamp": 1569397958000
           },
           {
             "id": "731b4ac3-ed79-b34d-93b0-64d1693c92e8",
             "rank": 10,
-            "count": 6751,
-            "urn": "urn:bbc:curie:asset:731b4ac3-ed79-b34d-93b0-64d1693c92e8",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 41",
-                "headline": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 41"
-              },
-              "locators": {
-                "assetUri": "/kyrgyz/kyrgyzstan-23087520",
-                "curieCpsUrn": "urn:bbc:cps:curie:asset:731b4ac3-ed79-b34d-93b0-64d1693c92e8",
-                "assetId": "23087520",
-                "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-23087520",
-                "curie": "http://www.bbc.co.uk/asset/731b4ac3-ed79-b34d-93b0-64d1693c92e8"
-              },
-              "summary": "Ушул аптанын башында Кыргызстан акыркы он жылдан бери биринчи жолу Өзбекстандын расмий делегациясын кабыл алды.",
-              "timestamp": 1477898715000,
-              "language": "ky",
-              "passport": {
-                "home": "http://www.bbc.co.uk/ontologies/passport/home/Kyrgyz",
-                "taggings": []
-              },
-              "indexImage": {
-                "id": "63486487",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/13284/test/_63486487_63486486.jpg",
-                "path": "/cpsdevpb/13284/test/_63486487_63486486.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "Өзбекстандын",
-                "caption": "Өзбекстандын",
-                "copyrightHolder": "Getty Images",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:kyrgyz/kyrgyzstan-23087520",
-              "type": "cps"
-            }
+            "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 41",
+            "href": "/kyrgyz/kyrgyzstan-23087520",
+            "timestamp": 1477898715000
           },
           {
             "id": "53a3f3b0-45bf-5d41-ac4c-9fc485dae11b",
             "rank": 11,
-            "count": 6160,
-            "urn": "urn:bbc:curie:asset:53a3f3b0-45bf-5d41-ac4c-9fc485dae11b",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 32",
-                "headline": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 32"
-              },
-              "locators": {
-                "assetUri": "/kyrgyz/kyrgyzstan-23087511",
-                "curieCpsUrn": "urn:bbc:cps:curie:asset:53a3f3b0-45bf-5d41-ac4c-9fc485dae11b",
-                "assetId": "23087511",
-                "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-23087511",
-                "curie": "http://www.bbc.co.uk/asset/53a3f3b0-45bf-5d41-ac4c-9fc485dae11b"
-              },
-              "summary": "Ушул аптанын башында Кыргызстан акыркы он жылдан бери биринчи жолу Өзбекстандын расмий делегациясын кабыл алды.",
-              "timestamp": 1477899573000,
-              "language": "ky",
-              "passport": {
-                "category": {
-                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                  "categoryName": "News"
-                },
-                "language": "ky",
-                "home": "http://www.bbc.co.uk/ontologies/passport/home/Kyrgyz",
-                "locator": "urn:bbc:cps:curie:asset:53a3f3b0-45bf-5d41-ac4c-9fc485dae11b",
-                "availability": "AVAILABLE",
-                "taggings": [
-                  {
-                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-                    "value": "http://www.bbc.co.uk/things/2e91364c-5c77-4660-b76e-d76202785e64#id"
-                  },
-                  {
-                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
-                    "value": "http://www.bbc.co.uk/things/7acac0af-8436-4cc9-899c-056ce64ba56a#id"
-                  },
-                  {
-                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-                    "value": "http://www.bbc.co.uk/things/c7c7fcfe-5246-434e-9422-cdc925fe3a79#id"
-                  },
-                  {
-                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
-                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
-                  },
-                  {
-                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
-                    "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
-                  }
-                ],
-                "schemaVersion": "1.3.0",
-                "publishedState": "PUBLISHED",
-                "predicates": {
-                  "about": [
-                    {
-                      "value": "http://www.bbc.co.uk/things/2e91364c-5c77-4660-b76e-d76202785e64#id",
-                      "thingLabel": "Улуу Британия",
-                      "thingUri": "http://www.bbc.co.uk/things/2e91364c-5c77-4660-b76e-d76202785e64#id",
-                      "thingId": "2e91364c-5c77-4660-b76e-d76202785e64",
-                      "thingType": [
-                        "tagging:TagConcept",
-                        "core:Place",
-                        "core:Thing"
-                      ],
-                      "thingSameAs": [
-                        "http://sws.geonames.org/2635167/"
-                      ],
-                      "thingEnglishLabel": "United Kingdom",
-                      "type": "about"
-                    },
-                    {
-                      "value": "http://www.bbc.co.uk/things/c7c7fcfe-5246-434e-9422-cdc925fe3a79#id",
-                      "thingLabel": "Дональд Трамп",
-                      "thingUri": "http://www.bbc.co.uk/things/c7c7fcfe-5246-434e-9422-cdc925fe3a79#id",
-                      "thingId": "c7c7fcfe-5246-434e-9422-cdc925fe3a79",
-                      "thingType": [
-                        "core:Person",
-                        "tagging:TagConcept",
-                        "core:Thing",
-                        "tagging:Agent",
-                        "tagging:AmbiguousTerm"
-                      ],
-                      "thingSameAs": [
-                        "http://dbpedia.org/resource/Donald_Trump"
-                      ],
-                      "thingEnglishLabel": "Donald Trump",
-                      "type": "about"
-                    }
-                  ],
-                  "formats": [
-                    {
-                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
-                      "thingLabel": "News report",
-                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
-                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": [
-                        "tagging:TagConcept",
-                        "tagging:Format"
-                      ],
-                      "thingSameAs": [],
-                      "thingEnglishLabel": "Report",
-                      "thingPreferredLabel": "Report",
-                      "thingLabelLanguage": "ky",
-                      "type": "formats"
-                    }
-                  ],
-                  "contributor": [
-                    {
-                      "value": "http://www.bbc.co.uk/things/7acac0af-8436-4cc9-899c-056ce64ba56a#id",
-                      "type": "contributor"
-                    }
-                  ],
-                  "primaryMediaType": [
-                    {
-                      "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id",
-                      "type": "primaryMediaType"
-                    }
-                  ]
-                }
-              },
-              "indexImage": {
-                "id": "63486487",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/13284/test/_63486487_63486486.jpg",
-                "path": "/cpsdevpb/13284/test/_63486487_63486486.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "Өзбекстандын",
-                "caption": "Өзбекстандын",
-                "copyrightHolder": "Getty Images",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:kyrgyz/kyrgyzstan-23087511",
-              "type": "cps"
-            }
+            "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 32",
+            "href": "/kyrgyz/kyrgyzstan-23087511",
+            "timestamp": 1477899573000
           },
           {
             "id": "3ab470b8-18c1-4c37-ae2c-9f0177c60845",
             "rank": 12,
-            "count": 5997,
-            "urn": "urn:bbc:curie:asset:3ab470b8-18c1-4c37-ae2c-9f0177c60845",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Үй-бүлөдөгү зомбулуктан эң көп аялдар жабыркайт",
-                "headline": "Үй-бүлөдөгү зомбулуктан эң көп аялдар жабыркайт"
-              },
-              "locators": {
-                "assetUri": "/kyrgyz/kyrgyzstan-23088783",
-                "curieCpsUrn": "urn:bbc:cps:curie:asset:3ab470b8-18c1-4c37-ae2c-9f0177c60845",
-                "assetId": "23088783",
-                "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-23088783",
-                "curie": "http://www.bbc.co.uk/asset/3ab470b8-18c1-4c37-ae2c-9f0177c60845"
-              },
-              "summary": "Үй-бүлөдөгү зомбулуктан эң көп аялдар жабыркайт",
-              "timestamp": 1478184211000,
-              "language": "ky",
-              "passport": {
-                "category": {
-                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                  "categoryName": "News"
-                },
-                "language": "ky",
-                "home": "http://www.bbc.co.uk/ontologies/passport/home/Kyrgyz",
-                "locator": "urn:bbc:cps:curie:asset:3ab470b8-18c1-4c37-ae2c-9f0177c60845",
-                "availability": "AVAILABLE",
-                "taggings": [
-                  {
-                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
-                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
-                  },
-                  {
-                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-                    "value": "http://www.bbc.co.uk/things/2e91364c-5c77-4660-b76e-d76202785e64#id"
-                  },
-                  {
-                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
-                    "value": "http://www.bbc.co.uk/things/7acac0af-8436-4cc9-899c-056ce64ba56a#id"
-                  },
-                  {
-                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
-                    "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
-                  }
-                ],
-                "schemaVersion": "1.3.0",
-                "publishedState": "PUBLISHED",
-                "predicates": {
-                  "about": [
-                    {
-                      "value": "http://www.bbc.co.uk/things/2e91364c-5c77-4660-b76e-d76202785e64#id",
-                      "thingLabel": "Улуу Британия",
-                      "thingUri": "http://www.bbc.co.uk/things/2e91364c-5c77-4660-b76e-d76202785e64#id",
-                      "thingId": "2e91364c-5c77-4660-b76e-d76202785e64",
-                      "thingType": [
-                        "tagging:TagConcept",
-                        "core:Place",
-                        "core:Thing"
-                      ],
-                      "thingSameAs": [
-                        "http://sws.geonames.org/2635167/"
-                      ],
-                      "thingEnglishLabel": "United Kingdom",
-                      "type": "about"
-                    }
-                  ],
-                  "formats": [
-                    {
-                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
-                      "thingLabel": "News report",
-                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
-                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": [
-                        "tagging:TagConcept",
-                        "tagging:Format"
-                      ],
-                      "thingSameAs": [],
-                      "thingEnglishLabel": "Report",
-                      "thingPreferredLabel": "Report",
-                      "thingLabelLanguage": "ky",
-                      "type": "formats"
-                    }
-                  ],
-                  "contributor": [
-                    {
-                      "value": "http://www.bbc.co.uk/things/7acac0af-8436-4cc9-899c-056ce64ba56a#id",
-                      "type": "contributor"
-                    }
-                  ],
-                  "primaryMediaType": [
-                    {
-                      "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id",
-                      "type": "primaryMediaType"
-                    }
-                  ]
-                }
-              },
-              "indexImage": {
-                "id": "63520710",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/06A6/test/_63520710_23088783.jpg",
-                "path": "/cpsdevpb/06A6/test/_63520710_23088783.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "Family Violence",
-                "caption": "Family Violence",
-                "copyrightHolder": "BBC",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:kyrgyz/kyrgyzstan-23088783",
-              "type": "cps"
-            }
+            "title": "Үй-бүлөдөгү зомбулуктан эң көп аялдар жабыркайт",
+            "href": "/kyrgyz/kyrgyzstan-23088783",
+            "timestamp": 1478184211000
           },
           {
             "id": "42fadb3a-fb0a-c549-b83d-da4243588a34",
             "rank": 13,
-            "count": 5915,
-            "urn": "urn:bbc:curie:asset:42fadb3a-fb0a-c549-b83d-da4243588a34",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 11",
-                "headline": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 11"
-              },
-              "locators": {
-                "assetUri": "/kyrgyz/blog-23087495",
-                "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/blog-23087495",
-                "curie": "http://www.bbc.co.uk/asset/42fadb3a-fb0a-c549-b83d-da4243588a34",
-                "assetId": "23087495"
-              },
-              "summary": "Ушул аптанын башында Кыргызстан акыркы он жылдан бери биринчи жолу Өзбекстандын расмий делегациясын кабыл алды.",
-              "timestamp": 1477850987000,
-              "language": "ky",
-              "indexImage": {
-                "id": "63486487",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/13284/test/_63486487_63486486.jpg",
-                "path": "/cpsdevpb/13284/test/_63486487_63486486.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "Өзбекстандын",
-                "caption": "Өзбекстандын",
-                "copyrightHolder": "Getty Images",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:kyrgyz/blog-23087495",
-              "type": "cps"
-            }
+            "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 11",
+            "href": "/kyrgyz/blog-23087495",
+            "timestamp": 1477850987000
           },
           {
             "id": "99e5af12-a546-cd4c-885a-694a637a69b2",
             "rank": 14,
-            "count": 4873,
-            "urn": "urn:bbc:curie:asset:99e5af12-a546-cd4c-885a-694a637a69b2",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 14",
-                "headline": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 14"
-              },
-              "locators": {
-                "assetUri": "/kyrgyz/institutional-23087498",
-                "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/institutional-23087498",
-                "curie": "http://www.bbc.co.uk/asset/99e5af12-a546-cd4c-885a-694a637a69b2",
-                "assetId": "23087498"
-              },
-              "summary": "Ушул аптанын башында Кыргызстан акыркы он жылдан бери биринчи жолу Өзбекстандын расмий делегациясын кабыл алды.",
-              "timestamp": 1477851087000,
-              "language": "ky",
-              "indexImage": {
-                "id": "63486487",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/13284/test/_63486487_63486486.jpg",
-                "path": "/cpsdevpb/13284/test/_63486487_63486486.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "Өзбекстандын",
-                "caption": "Өзбекстандын",
-                "copyrightHolder": "Getty Images",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:kyrgyz/institutional-23087498",
-              "type": "cps"
-            }
+            "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 14",
+            "href": "/kyrgyz/institutional-23087498",
+            "timestamp": 1477851087000
           },
           {
             "id": "7e65aff4-c3b1-5d41-aede-777d8cd755a3",
             "rank": 15,
-            "count": 3099,
-            "urn": "urn:bbc:curie:asset:7e65aff4-c3b1-5d41-aede-777d8cd755a3",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 08",
-                "headline": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 08"
-              },
-              "locators": {
-                "assetUri": "/kyrgyz/world-23087493",
-                "curieCpsUrn": "urn:bbc:cps:curie:asset:7e65aff4-c3b1-5d41-aede-777d8cd755a3",
-                "assetId": "23087493",
-                "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-23087493",
-                "curie": "http://www.bbc.co.uk/asset/7e65aff4-c3b1-5d41-aede-777d8cd755a3"
-              },
-              "summary": "Ушул аптанын башында Кыргызстан акыркы он жылдан бери биринчи жолу Өзбекстандын расмий делегациясын кабыл алды.",
-              "timestamp": 1477850702000,
-              "language": "ky",
-              "passport": {
-                "home": "http://www.bbc.co.uk/ontologies/passport/home/Kyrgyz",
-                "taggings": []
-              },
-              "indexImage": {
-                "id": "63486487",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/13284/test/_63486487_63486486.jpg",
-                "path": "/cpsdevpb/13284/test/_63486487_63486486.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "Өзбекстандын",
-                "caption": "Өзбекстандын",
-                "copyrightHolder": "Getty Images",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:kyrgyz/world-23087493",
-              "type": "cps"
-            }
+            "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 08",
+            "href": "/kyrgyz/world-23087493",
+            "timestamp": 1477850702000
           },
           {
             "id": "d9d4314d-5936-8c49-96fb-4f072339c527",
             "rank": 16,
-            "count": 2999,
-            "urn": "urn:bbc:curie:asset:d9d4314d-5936-8c49-96fb-4f072339c527",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 03",
-                "headline": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 03"
-              },
-              "locators": {
-                "assetUri": "/kyrgyz/entertainment-23087489",
-                "curieCpsUrn": "urn:bbc:cps:curie:asset:d9d4314d-5936-8c49-96fb-4f072339c527",
-                "assetId": "23087489",
-                "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/entertainment-23087489",
-                "curie": "http://www.bbc.co.uk/asset/d9d4314d-5936-8c49-96fb-4f072339c527"
-              },
-              "summary": "Ушул аптанын башында Кыргызстан акыркы он жылдан бери биринчи жолу Өзбекстандын расмий делегациясын кабыл алды.",
-              "timestamp": 1477850376000,
-              "language": "ky",
-              "passport": {
-                "home": "http://www.bbc.co.uk/ontologies/passport/home/Kyrgyz",
-                "taggings": []
-              },
-              "indexImage": {
-                "id": "63486487",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/13284/test/_63486487_63486486.jpg",
-                "path": "/cpsdevpb/13284/test/_63486487_63486486.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "Өзбекстандын",
-                "caption": "Өзбекстандын",
-                "copyrightHolder": "Getty Images",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:kyrgyz/entertainment-23087489",
-              "type": "cps"
-            }
+            "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 03",
+            "href": "/kyrgyz/entertainment-23087489",
+            "timestamp": 1477850376000
           },
           {
             "id": "175bd205-8b6e-4548-a24a-1b984c16e790",
             "rank": 17,
-            "count": 2649,
-            "urn": "urn:bbc:curie:asset:175bd205-8b6e-4548-a24a-1b984c16e790",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 44",
-                "headline": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 44"
-              },
-              "locators": {
-                "assetUri": "/kyrgyz/kyrgyzstan-23087523",
-                "curieCpsUrn": "urn:bbc:cps:curie:asset:175bd205-8b6e-4548-a24a-1b984c16e790",
-                "assetId": "23087523",
-                "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-23087523",
-                "curie": "http://www.bbc.co.uk/asset/175bd205-8b6e-4548-a24a-1b984c16e790"
-              },
-              "summary": "Ушул аптанын башында Кыргызстан акыркы он жылдан бери биринчи жолу Өзбекстандын расмий делегациясын кабыл алды.",
-              "timestamp": 1477898702000,
-              "language": "ky",
-              "passport": {
-                "home": "http://www.bbc.co.uk/ontologies/passport/home/Kyrgyz",
-                "taggings": []
-              },
-              "indexImage": {
-                "id": "63486487",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/13284/test/_63486487_63486486.jpg",
-                "path": "/cpsdevpb/13284/test/_63486487_63486486.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "Өзбекстандын",
-                "caption": "Өзбекстандын",
-                "copyrightHolder": "Getty Images",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:kyrgyz/kyrgyzstan-23087523",
-              "type": "cps"
-            }
+            "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 44",
+            "href": "/kyrgyz/kyrgyzstan-23087523",
+            "timestamp": 1477898702000
           },
           {
             "id": "dd71b59e-ce18-2347-8eb5-43e9393a1f27",
             "rank": 18,
-            "count": 1789,
-            "urn": "urn:bbc:curie:asset:dd71b59e-ce18-2347-8eb5-43e9393a1f27",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 48",
-                "headline": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 48"
-              },
-              "locators": {
-                "assetUri": "/kyrgyz/kyrgyzstan-23087528",
-                "curieCpsUrn": "urn:bbc:cps:curie:asset:dd71b59e-ce18-2347-8eb5-43e9393a1f27",
-                "assetId": "23087528",
-                "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-23087528",
-                "curie": "http://www.bbc.co.uk/asset/dd71b59e-ce18-2347-8eb5-43e9393a1f27"
-              },
-              "summary": "Ушул аптанын башында Кыргызстан акыркы он жылдан бери биринчи жолу Өзбекстандын расмий делегациясын кабыл алды.",
-              "timestamp": 1477898672000,
-              "language": "ky",
-              "passport": {
-                "home": "http://www.bbc.co.uk/ontologies/passport/home/Kyrgyz",
-                "taggings": []
-              },
-              "indexImage": {
-                "id": "63486487",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/13284/test/_63486487_63486486.jpg",
-                "path": "/cpsdevpb/13284/test/_63486487_63486486.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "Өзбекстандын",
-                "caption": "Өзбекстандын",
-                "copyrightHolder": "Getty Images",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:kyrgyz/kyrgyzstan-23087528",
-              "type": "cps"
-            }
+            "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 48",
+            "href": "/kyrgyz/kyrgyzstan-23087528",
+            "timestamp": 1477898672000
           },
           {
             "id": "30d42ae7-a72f-574a-88f2-392a2dfe7c52",
             "rank": 19,
-            "count": 1765,
-            "urn": "urn:bbc:curie:asset:30d42ae7-a72f-574a-88f2-392a2dfe7c52",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Түштүк Корея президенти кечирим сурады",
-                "headline": "Түштүк Корея президенти кечирим сурады"
-              },
-              "locators": {
-                "assetUri": "/kyrgyz/kyrgyzstan-23089035",
-                "curieCpsUrn": "urn:bbc:cps:curie:asset:30d42ae7-a72f-574a-88f2-392a2dfe7c52",
-                "assetId": "23089035",
-                "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-23089035",
-                "curie": "http://www.bbc.co.uk/asset/30d42ae7-a72f-574a-88f2-392a2dfe7c52"
-              },
-              "summary": "Түштүк Корея президенти Пак Кын Хе өз курбусу үчүн эл алдында кечирим сурады. Анын курбусу мамлекетти башкарууга таасир эткен жана бул үчүн акча алып турган деп шектелүүдө.",
-              "timestamp": 1478260541000,
-              "language": "ky",
-              "passport": {
-                "home": "http://www.bbc.co.uk/ontologies/passport/home/Kyrgyz",
-                "taggings": []
-              },
-              "indexImage": {
-                "id": "63521501",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/2910/test/_63521501_54a192f3-1f8a-4e68-8700-a3db89d9c586.jpg",
-                "path": "/cpsdevpb/2910/test/_63521501_54a192f3-1f8a-4e68-8700-a3db89d9c586.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "cvvvbbbbnnnmm",
-                "copyrightHolder": "BBC",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:kyrgyz/kyrgyzstan-23089035",
-              "type": "cps"
-            }
+            "title": "Түштүк Корея президенти кечирим сурады",
+            "href": "/kyrgyz/kyrgyzstan-23089035",
+            "timestamp": 1478260541000
           },
           {
             "id": "11dd0fa3-7b4f-174b-9234-ac1d59d04a34",
             "rank": 20,
-            "count": 1335,
-            "urn": "urn:bbc:curie:asset:11dd0fa3-7b4f-174b-9234-ac1d59d04a34",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 32",
-                "headline": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 32"
-              },
-              "locators": {
-                "assetUri": "/kyrgyz/kyrgyzstan-23087510",
-                "curieCpsUrn": "urn:bbc:cps:curie:asset:11dd0fa3-7b4f-174b-9234-ac1d59d04a34",
-                "assetId": "23087510",
-                "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-23087510",
-                "curie": "http://www.bbc.co.uk/asset/11dd0fa3-7b4f-174b-9234-ac1d59d04a34"
-              },
-              "summary": "Ушул аптанын башында Кыргызстан акыркы он жылдан бери биринчи жолу Өзбекстандын расмий делегациясын кабыл алды.",
-              "timestamp": 1477898574000,
-              "language": "ky",
-              "passport": {
-                "home": "http://www.bbc.co.uk/ontologies/passport/home/Kyrgyz",
-                "taggings": []
-              },
-              "indexImage": {
-                "id": "63486487",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/13284/test/_63486487_63486486.jpg",
-                "path": "/cpsdevpb/13284/test/_63486487_63486486.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "Өзбекстандын",
-                "caption": "Өзбекстандын",
-                "copyrightHolder": "Getty Images",
-                "originCode": "cpsdevpb",
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:kyrgyz/kyrgyzstan-23087510",
-              "type": "cps"
-            }
+            "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 32",
+            "href": "/kyrgyz/kyrgyzstan-23087510",
+            "timestamp": 1477898574000
           }
         ]
       }
