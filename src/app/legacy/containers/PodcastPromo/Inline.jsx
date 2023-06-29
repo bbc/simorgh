@@ -77,7 +77,7 @@ const StyledCardContentWrapper = styled(PromoComponent.Card.Content)`
   }
 
   @media (min-width: ${GEL_GROUP_1_WIDTH_260PX}) {
-    padding: 0 ${GEL_SPACING_DBL} ${GEL_SPACING_DBL} ${GEL_SPACING_DBL};
+    padding: 0 ${GEL_SPACING_DBL} ${GEL_SPACING_DBL};
   }
 `;
 
