@@ -1,12 +1,15 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import { Agent } from 'https';
+import pipe from 'ramda/src/pipe';
+import pathOr from 'ramda/src/pathOr';
 import getEnvironment from '#app/routes/utils/getEnvironment';
 import nodeLogger from '../../../lib/logger.node';
 import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
 import fetchPageData from '../../utils/fetchPageData';
 import constructPageFetchUrl from '../../utils/constructPageFetchUrl';
-import { Services, Variants } from '../../../models/types/global';
+import { Services, Toggles, Variants } from '../../../models/types/global';
 import getOnwardsPageData from '../utils/getOnwardsData';
+import augmentWithDisclaimer from '../../cpsAsset/getInitialData/augmentWithDisclaimer';
 import { advertisingAllowed, isSfv } from '../utils/paramChecks';
 import { FetchError } from '../../../models/types/fetch';
 import handleError from '../../utils/handleError';
@@ -19,6 +22,20 @@ type Props = {
   path: string;
   pageType: 'article' | 'cpsAsset';
   variant?: Variants;
+  toggles: Toggles;
+};
+
+// TO REFACTOR
+const processOptimoBlocks = (toggles: any) =>
+  pipe(augmentWithDisclaimer(toggles));
+
+// TO REFACTOR
+const transformJson = async (json: any, toggles: any) => {
+  try {
+    return processOptimoBlocks(toggles)(json);
+  } catch (e) {
+    return json;
+  }
 };
 
 export default async ({
@@ -27,6 +44,7 @@ export default async ({
   pageType,
   path: pathname,
   variant,
+  toggles,
 }: Props) => {
   try {
     const env = getEnvironment(pathname);
@@ -79,7 +97,7 @@ export default async ({
     const response = {
       status,
       pageData: {
-        ...article,
+        ...(await transformJson(article, toggles)),
         secondaryColumn: {
           topStories,
           features,
@@ -89,6 +107,10 @@ export default async ({
         ...(wsojData && wsojData),
       },
     };
+
+    // const data = response.pageData;
+    // const newBlocks = pathOr([], ['content', 'model', 'blocks'], data);
+    // console.log('newBlocks', newBlocks);
 
     return response;
   } catch (error: unknown) {
