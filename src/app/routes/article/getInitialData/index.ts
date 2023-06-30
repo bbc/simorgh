@@ -27,7 +27,7 @@ type Props = {
 
 // TO REFACTOR
 const processOptimoBlocks = (toggles: any) =>
-  pipe(augmentWithDisclaimer(toggles));
+  pipe(augmentWithDisclaimer(toggles, 0));
 
 // TO REFACTOR
 const transformJson = async (json: any, toggles: any) => {
