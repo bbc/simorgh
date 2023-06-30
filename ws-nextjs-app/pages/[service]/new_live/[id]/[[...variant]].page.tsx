@@ -7,7 +7,6 @@ import getToggles from '#app/lib/utilities/getToggles/withCache';
 import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import nodeLogger from '#lib/logger.node';
 import {
-  ROUTING_INFORMATION,
   SERVER_SIDE_RENDER_REQUEST_RECEIVED,
   BFF_FETCH_ERROR,
 } from '#app/lib/logger.const';
@@ -117,10 +116,11 @@ export const getServerSideProps: GetServerSideProps = async context => {
     rendererEnv: 'test', // TODO: remove hardcoding
   });
 
-  logger.info(ROUTING_INFORMATION, {
+  logger.error('LOG_TEST_PREVIEW', {
     url: context.resolvedUrl,
     status: data.status,
     pageType: LIVE_PAGE,
+    message: 'LOGGER TEST PREVIEW NEXT_JS',
   });
 
   return {
@@ -136,7 +136,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
       pathname: context.resolvedUrl,
       service,
       showAdsBasedOnLocation: reqHeaders['bbc-adverts'] === 'true' || false,
-      status: data.status,
+      status: 500,
       timeOnServer: Date.now(), // TODO: check if needed?
       toggles,
       variant: variant?.[0] || null,

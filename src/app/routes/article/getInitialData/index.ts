@@ -21,84 +21,17 @@ type Props = {
   variant?: Variants;
 };
 
-export default async ({
-  getAgent,
-  service,
-  pageType,
-  path: pathname,
-  variant,
-}: Props) => {
+export default async ({ service, path: pathname }: Props) => {
   try {
-    const env = getEnvironment(pathname);
-    const isLocal = !env || env === 'local';
-
-    const agent = !isLocal ? await getAgent() : null;
-
-    const fetchUrl = constructPageFetchUrl({
-      pathname,
-      pageType,
-      service,
-      variant,
-    });
-
-    const optHeaders = { 'ctx-service-env': env };
-
-    // @ts-ignore - Ignore fetchPageData argument types
-    // eslint-disable-next-line prefer-const
-    let { status, json } = await fetchPageData({
-      path: fetchUrl.toString(),
-      ...(!isLocal && { agent, optHeaders }),
-    });
-
-    if (!json?.data?.article) {
-      throw handleError('Article data is malformed', 500);
-    }
-
-    const {
-      data: { article, secondaryData },
-    } = json;
-
-    const isAdvertising = advertisingAllowed(pageType, article);
-    const isArticleSfv = isSfv(article);
-    let wsojData = [];
-    try {
-      wsojData = await getOnwardsPageData({
-        pathname,
-        service,
-        variant,
-        isAdvertising,
-        isArticleSfv,
-        agent,
-      });
-    } catch (error) {
-      logger.error('Recommendations JSON malformed', error);
-    }
-
-    const { topStories, features, mostRead, mostWatched } = secondaryData;
-
-    const response = {
-      status,
-      pageData: {
-        ...article,
-        secondaryColumn: {
-          topStories,
-          features,
-        },
-        mostRead,
-        mostWatched,
-        ...(wsojData && wsojData),
-      },
-    };
-
-    return response;
+    throw handleError('LOGGER TEST EXPRESS', 500);
   } catch (error: unknown) {
     const { message, status } = error as FetchError;
 
-    logger.error(BFF_FETCH_ERROR, {
+    logger.error('LOGGER TEST EXPRESS 1', {
       service,
       status,
       pathname,
-      message,
+      message: 'LOGGER_TEST_EXPRESS 2',
     });
     return { error: message, status };
   }
