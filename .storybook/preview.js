@@ -320,14 +320,9 @@ addDecorator(story => {
 export const globalTypes = {
   service: {
     name: 'service',
-    // Text that will be shown on icon hover
     description: 'Global service',
     defaultValue: { service: 'news', variant: 'default' },
     toolbar: {
-      /**
-       * You can check all available icons by this link:
-       * https://storybook.js.org/docs/riot/workflows/faq#what-icons-are-available-for-my-toolbar-or-my-addon
-       */
       icon: 'globe',
       items: [
         {
@@ -539,7 +534,6 @@ export const globalTypes = {
           title: 'ukrainian-ru-UA',
         },
       ],
-      // Should "Container size" be shown, or just the "circlehollow" icon
       dynamicTitle: true,
     },
   },
