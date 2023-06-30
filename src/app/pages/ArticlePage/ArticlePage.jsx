@@ -8,6 +8,7 @@ import propEq from 'ramda/src/propEq';
 import { jsx, useTheme } from '@emotion/react';
 import { string } from 'prop-types';
 import useToggle from '#hooks/useToggle';
+import Disclaimer from '#containers/Disclaimer';
 
 import { singleTextBlock } from '#app/models/blocks';
 import { articleDataPropTypes } from '#models/propTypes/article';
@@ -147,6 +148,9 @@ const ArticlePage = ({ pageData }) => {
       isAdsEnabled ? <AdContainer {...props} slotType="mpu" /> : null,
     wsoj: props => (
       <CpsRecommendations {...props} items={recommendationsData} />
+    ),
+    disclaimer: props => (
+      <Disclaimer {...props} increasePaddingOnDesktop={false} />
     ),
   };
 
