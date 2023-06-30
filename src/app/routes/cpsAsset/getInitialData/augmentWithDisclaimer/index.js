@@ -31,19 +31,3 @@ const augmentWithDisclaimer = (toggles, positionFromTimestamp) => pageData =>
     : pageData;
 
 export default augmentWithDisclaimer;
-
-// const getDisclaimerInsertionPoint = pageData =>
-//   getBlocks(pageData).findIndex(block => block.type === 'timestamp') + 1;
-
-// const insertDisclaimer = pageData =>
-//   setBlocks(
-//     insert(
-//       getDisclaimerInsertionPoint(pageData),
-//       disclaimerBlock,
-//       getBlocks(pageData),
-//     ),
-//     pageData,
-//   );
-
-// export default toggles => pageData =>
-//   isDisclaimerToggledOn(toggles) ? insertDisclaimer(pageData) : pageData;

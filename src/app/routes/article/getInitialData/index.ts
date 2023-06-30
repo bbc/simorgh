@@ -1,7 +1,5 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import { Agent } from 'https';
-import pipe from 'ramda/src/pipe';
-import pathOr from 'ramda/src/pathOr';
 import getEnvironment from '#app/routes/utils/getEnvironment';
 import nodeLogger from '../../../lib/logger.node';
 import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
@@ -25,16 +23,11 @@ type Props = {
   toggles: Toggles;
 };
 
-// TO REFACTOR
-const processOptimoBlocks = (toggles: any) =>
-  pipe(augmentWithDisclaimer(toggles, 0));
-
-// TO REFACTOR
-const transformJson = async (json: any, toggles: any) => {
+const addDisclaimer = async (pageData: any, toggles: any) => {
   try {
-    return processOptimoBlocks(toggles)(json);
+    return augmentWithDisclaimer(toggles, 0)(pageData);
   } catch (e) {
-    return json;
+    return pageData;
   }
 };
 
@@ -97,7 +90,7 @@ export default async ({
     const response = {
       status,
       pageData: {
-        ...(await transformJson(article, toggles)),
+        ...(await addDisclaimer(article, toggles)),
         secondaryColumn: {
           topStories,
           features,
@@ -107,10 +100,6 @@ export default async ({
         ...(wsojData && wsojData),
       },
     };
-
-    // const data = response.pageData;
-    // const newBlocks = pathOr([], ['content', 'model', 'blocks'], data);
-    // console.log('newBlocks', newBlocks);
 
     return response;
   } catch (error: unknown) {
