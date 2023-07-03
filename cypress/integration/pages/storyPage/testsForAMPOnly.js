@@ -8,7 +8,7 @@ export const testsThatAlwaysRunForAMPOnly = ({
   pageType,
   variant,
 }) => {
-  describe(`testsToAlwaysRunForAMPOnly to run for ${service} ${pageType}`, () => {
+  describe(`Running testsToAlwaysRunForAMPOnly for ${service} ${pageType}`, () => {
     it('If there is a table in the json, display it on the page', () => {
       if (service === 'sport') {
         cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
@@ -77,15 +77,16 @@ export const testsThatAlwaysRunForAMPOnly = ({
           const expectedMostReadItems =
             appConfig[config[service].name][variant].mostRead.numberOfItems;
           cy.get('[data-e2e="most-read"]').scrollIntoView();
-          cy.get('[data-e2e="most-read"] > amp-list div')
-            .children('li')
-            .should('have.length', expectedMostReadItems);
+          cy.get('[data-e2e="most-read"] li').should(
+            'have.length',
+            expectedMostReadItems,
+          );
         });
 
         it(`should show numerals used for the corresponding ${service} service`, () => {
           const expectedMostReadRank = serviceNumerals(service);
           cy.get('[data-e2e="most-read"]').scrollIntoView();
-          cy.get('[data-e2e="most-read"] > amp-list div')
+          cy.get('[data-e2e="most-read"] > amp-script > amp-list div')
             .find('li span')
             .each(($el, index) => {
               expect($el.text()).equal(expectedMostReadRank[index + 1]);
@@ -94,7 +95,7 @@ export const testsThatAlwaysRunForAMPOnly = ({
 
         it(`Most read list should contain hrefs`, () => {
           cy.get('[data-e2e="most-read"]').scrollIntoView();
-          cy.get('[data-e2e="most-read"] > amp-list div')
+          cy.get('[data-e2e="most-read"] > amp-script > amp-list div')
             .next()
             .within(() => {
               cy.get('a').should('have.attr', 'href');
