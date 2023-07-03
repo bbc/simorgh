@@ -43,6 +43,7 @@ const MostRead = ({
   size = 'default',
   mobileDivider = false,
   headingBackgroundColour = WHITE,
+  className,
   renderCanonicalOnAmp = false,
 }: MostReadProps) => {
   const { isAmp, pageType, variant } = useContext(RequestContext);
@@ -69,10 +70,25 @@ const MostRead = ({
     isBff,
   });
 
+  // We render amp on ONLY STY, CSP and ARTICLE pages using amp-list.
+  let AmpMostRead = () =>
+    mostReadAmpPageTypes.includes(pageType) ? (
+      <MostReadSection className={className}>
+        <MostReadSectionLabel
+          mobileDivider={mobileDivider}
+          backgroundColor={headingBackgroundColour}
+        />
+        <Amp
+          endpoint={`${process.env.SIMORGH_MOST_READ_CDN_URL}${endpoint}`}
+          size={size}
+        />
+      </MostReadSection>
+    ) : null;
+
   // Do not render on Canonical if data is not provided
   const CanonicalMostRead = () =>
     data ? (
-      <MostReadSection>
+      <MostReadSection className={className}>
         <MostReadSectionLabel
           mobileDivider={mobileDivider}
           backgroundColor={headingBackgroundColour}
@@ -82,21 +98,6 @@ const MostRead = ({
           columnLayout={columnLayout}
           size={size}
           eventTrackingData={blockLevelEventTrackingData}
-        />
-      </MostReadSection>
-    ) : null;
-
-  // We render amp on ONLY STY, CSP and ARTICLE pages using amp-list.
-  let AmpMostRead = () =>
-    mostReadAmpPageTypes.includes(pageType) ? (
-      <MostReadSection>
-        <MostReadSectionLabel
-          mobileDivider={mobileDivider}
-          backgroundColor={headingBackgroundColour}
-        />
-        <Amp
-          endpoint={`${process.env.SIMORGH_MOST_READ_CDN_URL}${endpoint}`}
-          size={size}
         />
       </MostReadSection>
     ) : null;

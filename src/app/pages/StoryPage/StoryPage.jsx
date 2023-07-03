@@ -26,7 +26,6 @@ import Blocks from '#containers/Blocks';
 import CpsRelatedContent from '#containers/CpsRelatedContent';
 import TopStories from '#containers/CpsTopStories';
 import FeaturesAnalysis from '#containers/CpsFeaturesAnalysis';
-import MostRead from '#app/components/MostRead';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import fauxHeadline from '#containers/FauxHeadline';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
@@ -48,13 +47,15 @@ import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
-import { GHOST } from '#app/components/ThemeProvider/palette';
+import { GHOST } from '../../components/ThemeProvider/palette';
+import MostRead from '../../components/MostRead';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import LinkedData from '../../components/LinkedData';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import categoryType from './categoryMap/index';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
+import styles from './StoryPage.styles';
 
 const MpuContainer = styled(AdContainer)`
   margin-bottom: ${GEL_SPACING_TRPL};
@@ -62,7 +63,6 @@ const MpuContainer = styled(AdContainer)`
 
 const StoryPage = ({ pageData }) => {
   const { serviceLang, lang, showRelatedTopics } = useContext(ServiceContext);
-  // console.log(pageData);
 
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
   const title = path(['promo', 'headlines', 'headline'], pageData);
@@ -350,6 +350,7 @@ const StoryPage = ({ pageData }) => {
           )}
           <ComponentWrapper>
             <MostRead
+              css={styles.mostReadSection}
               data={mostReadInitialData}
               columnLayout="oneColumn"
               size="small"

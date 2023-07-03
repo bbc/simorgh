@@ -6,7 +6,6 @@ import { RequestContextProvider } from '../contexts/RequestContext';
 import { ToggleContextProvider } from '../contexts/ToggleContext';
 import { UserContextProvider } from '../contexts/UserContext';
 import { EventTrackingContextProvider } from '../contexts/EventTrackingContext';
-import pageDataFixture from '../../../data/news/articles/c0g992jmmkko.json';
 import ThemeProvider from './ThemeProvider';
 import { PageTypes, Services, Toggles, Variants } from '../models/types/global';
 
@@ -17,6 +16,14 @@ interface Props {
   isAmp?: boolean;
   isApp?: boolean;
   pageData?: object;
+  atiData?: {
+    analytics?: {
+      contentId?: string;
+      contentType?: string;
+      pageIdentifier?: string;
+    };
+    title?: string;
+  };
   pageType?: PageTypes;
   derivedPageType?: string | null;
   pathname?: string;
@@ -24,16 +31,16 @@ interface Props {
   toggles?: Toggles;
   showAdsBasedOnLocation?: boolean;
   variant?: Variants;
+  isNextJs?: boolean;
   pageLang?: string;
 }
 
-// Uses a custom render so consumers don't need to wrap test fixtures in context and theme providers in every test suite
-// https://testing-library.com/docs/react-testing-library/setup/#custom-render
 const AllTheProviders: FC<Props> = ({
   children,
+  pageData,
+  atiData,
   isAmp = false,
   isApp = false,
-  pageData = pageDataFixture,
   pageType = 'article',
   derivedPageType,
   pathname = '/news/articles/c0g992jmmkko',
@@ -42,6 +49,7 @@ const AllTheProviders: FC<Props> = ({
   variant = 'default',
   pageLang = undefined,
   showAdsBasedOnLocation = false,
+  isNextJs = false,
 }: Props) => {
   return (
     <ToggleContextProvider toggles={toggles}>
@@ -55,12 +63,13 @@ const AllTheProviders: FC<Props> = ({
           pageType={pageType}
           isAmp={isAmp}
           isApp={isApp}
+          isNextJs={isNextJs}
           service={service}
           pathname={pathname}
           derivedPageType={derivedPageType}
           showAdsBasedOnLocation={showAdsBasedOnLocation}
         >
-          <EventTrackingContextProvider data={pageData}>
+          <EventTrackingContextProvider data={pageData} atiData={atiData}>
             <UserContextProvider>
               <ThemeProvider service={service} variant={variant}>
                 {children}
@@ -82,12 +91,14 @@ const customRender = (
     isApp,
     pageData,
     pageType,
+    atiData,
     derivedPageType,
     pathname,
     service,
     toggles,
     variant,
     showAdsBasedOnLocation,
+    isNextJs,
     pageLang,
   } = options || {};
 
@@ -97,6 +108,7 @@ const customRender = (
         isAmp={isAmp}
         isApp={isApp}
         pageData={pageData}
+        atiData={atiData}
         pageType={pageType}
         derivedPageType={derivedPageType}
         pathname={pathname}
@@ -104,6 +116,7 @@ const customRender = (
         toggles={toggles}
         variant={variant}
         showAdsBasedOnLocation={showAdsBasedOnLocation}
+        isNextJs={isNextJs}
         pageLang={pageLang}
       >
         {children}
