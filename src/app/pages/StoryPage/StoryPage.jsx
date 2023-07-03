@@ -26,7 +26,6 @@ import Blocks from '#containers/Blocks';
 import CpsRelatedContent from '#containers/CpsRelatedContent';
 import TopStories from '#containers/CpsTopStories';
 import FeaturesAnalysis from '#containers/CpsFeaturesAnalysis';
-import MostRead from '#app/components/MostRead';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import fauxHeadline from '#containers/FauxHeadline';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
@@ -48,12 +47,15 @@ import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
+import { GHOST } from '../../components/ThemeProvider/palette';
+import MostRead from '../../components/MostRead';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import LinkedData from '../../components/LinkedData';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import categoryType from './categoryMap/index';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
+import styles from './StoryPage.styles';
 
 const MpuContainer = styled(AdContainer)`
   margin-bottom: ${GEL_SPACING_TRPL};
@@ -61,7 +63,6 @@ const MpuContainer = styled(AdContainer)`
 
 const StoryPage = ({ pageData }) => {
   const { serviceLang, lang, showRelatedTopics } = useContext(ServiceContext);
-  // console.log(pageData);
 
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
   const title = path(['promo', 'headlines', 'headline'], pageData);
@@ -239,10 +240,10 @@ const StoryPage = ({ pageData }) => {
     }
   `;
 
-  // const ComponentWrapper = styled.div`
-  //   margin-bottom: ${GEL_SPACING_TRPL};
-  //   padding: ${GEL_SPACING_DBL};
-  // `;
+  const ComponentWrapper = styled.div`
+    margin-bottom: ${GEL_SPACING_TRPL};
+    padding: ${GEL_SPACING_DBL};
+  `;
 
   /**
    * this should be the defacto wrapper for OJs
@@ -347,11 +348,16 @@ const StoryPage = ({ pageData }) => {
               />
             </ResponsiveComponentWrapper>
           )}
-          <MostRead
-            data={mostReadInitialData}
-            columnLayout="oneColumn"
-            size="small"
-          />
+          <ComponentWrapper>
+            <MostRead
+              css={styles.mostReadSection}
+              data={mostReadInitialData}
+              columnLayout="oneColumn"
+              size="small"
+              headingBackgroundColour={GHOST}
+              mobileDivider={showRelatedTopics && topics}
+            />
+          </ComponentWrapper>
         </GridSecondaryColumn>
       </StoryPageGrid>
     </>

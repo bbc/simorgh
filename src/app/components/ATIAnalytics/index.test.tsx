@@ -4,7 +4,7 @@ import { articleDataNews } from '#pages/ArticlePage/fixtureData';
 import mapAssetData from '#pages/MediaAssetPage/fixtureData.json';
 import pglAssetData from '#pages/PhotoGalleryPage/fixtureData.json';
 import styAssetData from '#pages/StoryPage/fixtureData/mundo.json';
-import fixAssetData from '#data/afrique/cpsAssets/48465371.json';
+import { data as fixData } from '#data/afrique/cpsAssets/48465371.json';
 import styUkrainianAssetData from '#data/ukrainian/cpsAssets/news-53561143.json';
 import styUkrainianInRussianAssetData from '#data/ukrainian/cpsAssets/features-russian-53477115.json';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -28,6 +28,8 @@ import ATIAnalytics from '.';
 import * as amp from './amp';
 import * as canonical from './canonical';
 import { PageTypes, Platforms, Services } from '../../models/types/global';
+
+const { article: fixAssetData } = fixData;
 
 (analyticsUtils.getAtUserId as jest.Mock) = jest.fn();
 (analyticsUtils.getCurrentTime as jest.Mock) = jest
@@ -479,7 +481,6 @@ describe('ATI Analytics Container', () => {
           pageType={FEATURE_INDEX_PAGE}
           service="afrique"
         >
-          {/* @ts-expect-error - only partial data required for testing purposes */}
           <ATIAnalytics data={fixAssetData} />
         </ContextWrap>,
       );
@@ -502,7 +503,6 @@ describe('ATI Analytics Container', () => {
           pageType={FEATURE_INDEX_PAGE}
           service="afrique"
         >
-          {/* @ts-expect-error - only partial data required for testing purposes */}
           <ATIAnalytics data={fixAssetData} />
         </ContextWrap>,
       );

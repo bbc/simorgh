@@ -32,7 +32,8 @@ interface MostReadProps {
   columnLayout?: ColumnLayout;
   size?: Size;
   mobileDivider?: boolean;
-  backgroundColour?: string;
+  headingBackgroundColour?: string;
+  className?: string;
 }
 
 const MostRead = ({
@@ -40,7 +41,8 @@ const MostRead = ({
   columnLayout = 'multiColumn',
   size = 'default',
   mobileDivider = false,
-  backgroundColour = WHITE,
+  headingBackgroundColour = WHITE,
+  className,
 }: MostReadProps) => {
   const { isAmp, pageType, variant } = useContext(RequestContext);
   const {
@@ -69,10 +71,10 @@ const MostRead = ({
   // We render amp on ONLY STY, CSP and ARTICLE pages using amp-list.
   const AmpMostRead = () =>
     mostReadAmpPageTypes.includes(pageType) ? (
-      <MostReadSection>
+      <MostReadSection className={className}>
         <MostReadSectionLabel
           mobileDivider={mobileDivider}
-          backgroundColor={backgroundColour}
+          backgroundColor={headingBackgroundColour}
         />
         <Amp
           endpoint={`${process.env.SIMORGH_MOST_READ_CDN_URL}${endpoint}`}
@@ -84,10 +86,10 @@ const MostRead = ({
   // Do not render on Canonical if data is not provided
   const CanonicalMostRead = () =>
     data ? (
-      <MostReadSection>
+      <MostReadSection className={className}>
         <MostReadSectionLabel
           mobileDivider={mobileDivider}
-          backgroundColor={backgroundColour}
+          backgroundColor={headingBackgroundColour}
         />
         <Canonical
           data={data}
