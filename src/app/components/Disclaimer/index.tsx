@@ -16,6 +16,14 @@ type Props = {
   increasePaddingOnDesktop?: boolean;
 };
 
+type Disclaimer =
+  | string
+  | {
+      text: string;
+      url: string;
+      isExternal: boolean;
+    };
+
 const DisclaimerComponent = ({
   increasePaddingOnDesktop,
 }: PropsWithChildren<Props>) => {
@@ -44,19 +52,19 @@ const DisclaimerComponent = ({
       >
         <Paragraph css={styles.inner} size="longPrimer" fontVariant="sansLight">
           {disclaimer &&
-            Object.values(disclaimer).map((para, index) => {
-              const linkText: string = path(['text'], para);
-              const linkUrl: string = path(['url'], para);
-              const paraAsString: string = para;
+            Object.values(disclaimer).map(para => {
+              const linkText: string | undefined = path(['text'], para);
+              const linkUrl: string | undefined = path(['url'], para);
+              const paraAsString: Disclaimer = para;
               return linkUrl ? (
                 <InlineLink
                   css={styles.inlineLink}
-                  key={linkText}
-                  text={linkText}
-                  to={linkUrl}
+                  key={linkText as string}
+                  text={linkText as string}
+                  to={linkUrl as string}
                 />
               ) : (
-                paraAsString
+                (paraAsString as string)
               );
             })}
         </Paragraph>
