@@ -17,7 +17,6 @@ import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOpti
 import CpsMetadata from '#containers/CpsMetadata';
 import headings from '#containers/Headings';
 import Timestamp from '#containers/ArticleTimestamp';
-import disclaimer from '#containers/Disclaimer';
 import text from '#containers/Text';
 import Image from '#containers/Image';
 import MediaPlayer from '#containers/CpsAssetMediaPlayer';
@@ -38,6 +37,7 @@ import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import LinkedData from '../../components/LinkedData';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import disclaimer from '../../components/Disclaimer';
 
 const PhotoGalleryPageGrid = ({ children, ...props }) => (
   <GelPageGrid

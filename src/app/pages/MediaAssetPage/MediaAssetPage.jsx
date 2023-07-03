@@ -15,7 +15,6 @@ import pathOr from 'ramda/src/pathOr';
 import last from 'ramda/src/last';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
-import disclaimer from '#containers/Disclaimer';
 import headings from '#containers/Headings';
 import Timestamp from '#containers/ArticleTimestamp';
 import text from '#containers/Text';
@@ -41,6 +40,7 @@ import LinkedData from '../../components/LinkedData';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 import MediaMessage from './MediaMessage';
+import disclaimer from '../../components/Disclaimer';
 
 const StyledTimestamp = styled(Timestamp)`
   @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
