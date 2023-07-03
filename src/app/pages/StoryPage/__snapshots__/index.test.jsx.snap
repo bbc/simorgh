@@ -2063,11 +2063,11 @@ exports[`Story Page should render correctly when the secondary column data is no
   z-index: 1;
 }
 
-.emotion-266 {
+.emotion-224 {
   padding-top: 0.5rem;
 }
 
-.emotion-267 {
+.emotion-225 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #545658;
@@ -2078,14 +2078,14 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-267 {
+  .emotion-225 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-267 {
+  .emotion-225 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -2812,6 +2812,16 @@ exports[`Story Page should render correctly when the secondary column data is no
                             >
                               Forbes top ten list of highest paid athletes for 2023 and wetin dem earn
                             </a>
+                            <div
+                              class="emotion-224"
+                            >
+                              <time
+                                class="emotion-225 emotion-25"
+                                datetime="2023-05-03"
+                              >
+                                De one we dem update for: 3rd May 2023
+                              </time>
+                            </div>
                           </div>
                         </div>
                       </li>
@@ -2999,10 +3009,10 @@ exports[`Story Page should render correctly when the secondary column data is no
                               Easter date, Workers day, Salah date plus oda public holidays for 2023
                             </a>
                             <div
-                              class="emotion-266"
+                              class="emotion-224"
                             >
                               <time
-                                class="emotion-267 emotion-25"
+                                class="emotion-225 emotion-25"
                                 datetime="2022-12-31"
                               >
                                 De one we dem update for: 31st December 2022
