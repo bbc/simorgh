@@ -1,21 +1,24 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import React, { useContext } from 'react';
-import { bool } from 'prop-types';
+import { useContext, PropsWithChildren } from 'react';
+import useToggle from '#hooks/useToggle';
+import { ServiceContext } from '#contexts/ServiceContext';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import isEmpty from 'ramda/src/isEmpty';
-import { GridItemLarge } from '#components/Grid';
-
-import useToggle from '#hooks/useToggle';
-import { ServiceContext } from '#contexts/ServiceContext';
+import Paragraph from '../Paragraph';
 import InlineLink from '../InlineLink';
 import styles from './index.styles';
 
-const DisclaimerComponent = ({ increasePaddingOnDesktop }) => {
-  const { service, script, disclaimer, translations } =
-    useContext(ServiceContext);
+type Props = {
+  increasePaddingOnDesktop?: boolean;
+};
+
+const DisclaimerComponent = ({
+  increasePaddingOnDesktop = true,
+}: PropsWithChildren<Props>) => {
+  const { disclaimer, translations } = useContext(ServiceContext);
   const { enabled } = useToggle('disclaimer');
 
   const shouldShow = enabled && disclaimer && !isEmpty(disclaimer);
@@ -29,50 +32,33 @@ const DisclaimerComponent = ({ increasePaddingOnDesktop }) => {
   );
 
   return (
-    <GridItemLarge>
-      <section
-        css={styles.infoBanner}
-        service={service}
-        script={script}
-        increasePaddingOnDesktop={increasePaddingOnDesktop}
-        role="region"
-        aria-label={infoBannerLabelTranslation}
-      >
-        <p css={styles.infoBanner}>
-          {disclaimer &&
-            Object.values(disclaimer).map((para, index) => {
-              const linkText = path(['text'], para);
-              const linkUrl = path(['url'], para);
-              const isExternalLink = path(['isExternal'], para);
-              return linkUrl ? (
-                <InlineLink
-                  key={linkText}
-                  locator={linkUrl}
-                  blocks={[
-                    {
-                      id: `infoBannerLink-${index}`,
-                      type: 'fragment',
-                      model: { text: linkText, attributes: [] },
-                    },
-                  ]}
-                  isExternal={isExternalLink}
-                />
-              ) : (
-                para
-              );
-            })}
-        </p>
-      </section>
-    </GridItemLarge>
+    <section
+      css={[
+        styles.infoBanner,
+        increasePaddingOnDesktop && styles.increasePaddingOnDesktop,
+      ]}
+      role="region"
+      aria-label={infoBannerLabelTranslation}
+    >
+      <Paragraph css={styles.inner} size="longPrimer" fontVariant="sansLight">
+        {disclaimer &&
+          Object.values(disclaimer).map((para, index) => {
+            const linkText: string = path(['text'], para);
+            const linkUrl: string = path(['url'], para);
+            const paraAsString: string = para;
+            return linkUrl ? (
+              <InlineLink
+                id={`infoBannerLink-${index}`}
+                text={linkText}
+                to={linkUrl}
+              />
+            ) : (
+              paraAsString
+            );
+          })}
+      </Paragraph>
+    </section>
   );
-};
-
-DisclaimerComponent.propTypes = {
-  increasePaddingOnDesktop: bool,
-};
-
-DisclaimerComponent.defaultProps = {
-  increasePaddingOnDesktop: true,
 };
 
 export default DisclaimerComponent;

@@ -8,7 +8,6 @@ import propEq from 'ramda/src/propEq';
 import { jsx, useTheme } from '@emotion/react';
 import { string } from 'prop-types';
 import useToggle from '#hooks/useToggle';
-import Disclaimer from '#containers/Disclaimer';
 
 import { singleTextBlock } from '#app/models/blocks';
 import { articleDataPropTypes } from '#models/propTypes/article';
@@ -56,6 +55,7 @@ import {
 } from '../../components/Byline/utilities';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import RelatedContentSection from '../../components/RelatedContentSection';
+import Disclaimer from '../../components/Disclaimer';
 
 import SecondaryColumn from './SecondaryColumn';
 
