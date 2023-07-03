@@ -1,4 +1,5 @@
 {
+  "data": {
   "generated": "2023-06-19T15:17:53.633Z",
   "lastRecordTimeStamp": "2023-06-19T15:15:00Z",
   "firstRecordTimeStamp": "2023-06-19T15:00:00Z",
@@ -144,4 +145,5 @@
       "timestamp": 1452782023000
     }
   ]
+}
 }
