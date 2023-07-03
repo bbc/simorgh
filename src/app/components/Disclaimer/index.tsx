@@ -51,7 +51,7 @@ const DisclaimerComponent = ({
               return linkUrl ? (
                 <InlineLink
                   css={styles.inlineLink}
-                  id={`infoBannerLink-${index}`}
+                  key={linkText}
                   text={linkText}
                   to={linkUrl}
                 />

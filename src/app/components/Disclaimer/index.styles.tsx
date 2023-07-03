@@ -10,12 +10,12 @@ export default {
       background: palette.GREY_3,
       color: palette.GREY_10,
       marginBottom: `${spacings.TRIPLE}rem`,
-      marginTop: `${spacings.FULL}rem`,
+      // marginTop: `${spacings.FULL}rem`,
       padding: `${spacings.DOUBLE}rem`,
       [mq.GROUP_3_MAX_WIDTH]: { lineHeight: 1.4 },
       [mq.GROUP_4_MIN_WIDTH]: {
         marginBottom: `${spacings.QUADRUPLE}rem`,
-        marginTop: `${spacings.DOUBLE}rem`,
+        // marginTop: `${spacings.DOUBLE}rem`,
       },
     }),
 

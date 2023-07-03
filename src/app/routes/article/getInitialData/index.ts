@@ -20,7 +20,7 @@ type Props = {
   path: string;
   pageType: 'article' | 'cpsAsset';
   variant?: Variants;
-  toggles: Toggles;
+  toggles?: Toggles;
 };
 
 const addDisclaimer = async (pageData: any, toggles: any) => {
