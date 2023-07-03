@@ -175,7 +175,7 @@
     "babel-plugin-dynamic-import-node": "2.3.3",
     "babel-plugin-transform-react-remove-prop-types": "0.4.24",
     "brotli-webpack-plugin": "1.1.0",
-    "chalk": "4.1.2",
+    "chalk": "5.2.0",
     "chromatic": "6.17.4",
     "cli-table": "0.3.11",
     "compression-webpack-plugin": "9.2.0",
