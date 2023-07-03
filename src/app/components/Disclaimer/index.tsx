@@ -4,6 +4,7 @@ import { jsx } from '@emotion/react';
 import { useContext, PropsWithChildren } from 'react';
 import useToggle from '#hooks/useToggle';
 import { ServiceContext } from '#contexts/ServiceContext';
+import { GridItemLarge } from '#components/Grid';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import isEmpty from 'ramda/src/isEmpty';
@@ -16,7 +17,7 @@ type Props = {
 };
 
 const DisclaimerComponent = ({
-  increasePaddingOnDesktop = true,
+  increasePaddingOnDesktop,
 }: PropsWithChildren<Props>) => {
   const { disclaimer, translations } = useContext(ServiceContext);
   const { enabled } = useToggle('disclaimer');
@@ -32,32 +33,35 @@ const DisclaimerComponent = ({
   );
 
   return (
-    <section
-      css={[
-        styles.infoBanner,
-        increasePaddingOnDesktop && styles.increasePaddingOnDesktop,
-      ]}
-      role="region"
-      aria-label={infoBannerLabelTranslation}
-    >
-      <Paragraph css={styles.inner} size="longPrimer" fontVariant="sansLight">
-        {disclaimer &&
-          Object.values(disclaimer).map((para, index) => {
-            const linkText: string = path(['text'], para);
-            const linkUrl: string = path(['url'], para);
-            const paraAsString: string = para;
-            return linkUrl ? (
-              <InlineLink
-                id={`infoBannerLink-${index}`}
-                text={linkText}
-                to={linkUrl}
-              />
-            ) : (
-              paraAsString
-            );
-          })}
-      </Paragraph>
-    </section>
+    <GridItemLarge>
+      <section
+        css={[
+          styles.infoBanner,
+          increasePaddingOnDesktop && styles.increasePaddingOnDesktop,
+        ]}
+        role="region"
+        aria-label={infoBannerLabelTranslation}
+      >
+        <Paragraph css={styles.inner} size="longPrimer" fontVariant="sansLight">
+          {disclaimer &&
+            Object.values(disclaimer).map((para, index) => {
+              const linkText: string = path(['text'], para);
+              const linkUrl: string = path(['url'], para);
+              const paraAsString: string = para;
+              return linkUrl ? (
+                <InlineLink
+                  css={styles.inlineLink}
+                  id={`infoBannerLink-${index}`}
+                  text={linkText}
+                  to={linkUrl}
+                />
+              ) : (
+                paraAsString
+              );
+            })}
+        </Paragraph>
+      </section>
+    </GridItemLarge>
   );
 };
 
