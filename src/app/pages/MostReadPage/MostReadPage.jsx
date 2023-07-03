@@ -18,7 +18,6 @@ import Grid, { GelPageGrid } from '#components/Grid';
 import IndexPageContainer from '#components/PageLayout/IndexPageContainer';
 import IndexHeading from '#containers/IndexHeading';
 import MostRead from '../../components/MostRead';
-import VisuallyHiddenText from '../../components/VisuallyHiddenText';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import MetadataContainer from '../../components/Metadata';
@@ -48,12 +47,8 @@ const MostReadPage = ({ pageData }) => {
 
   const MostReadWrapper = ({ children }) => (
     <>
-      <VisuallyHiddenText id="content" tabIndex={-1} as="h1">
-        {/* eslint-disable-next-line jsx-a11y/aria-role */}
-        <span role="text">
-          <IndexHeading id="content">{header}</IndexHeading>
-        </span>
-      </VisuallyHiddenText>
+      <IndexHeading id="content">{header}</IndexHeading>
+
       <MarginWrapper>
         <GelPageGrid
           columns={{
@@ -111,7 +106,13 @@ const MostReadPage = ({ pageData }) => {
       <main role="main" data-e2e="most-read">
         <IndexPageContainer>
           <MostReadWrapper>
-            <MostRead data={pageData} columnLayout="oneColumn" size="default" />
+            <MostRead
+              visuallyHiddenHeader
+              data={pageData}
+              columnLayout="oneColumn"
+              size="default"
+              renderCanonicalOnAmp
+            />
           </MostReadWrapper>
         </IndexPageContainer>
       </main>
