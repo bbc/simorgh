@@ -24,7 +24,10 @@ export default ({ service, variant }) => {
     cy.get('[data-e2e="most-read"]').scrollIntoView();
     cy.get('[data-e2e="most-read"]').within(() => {
       cy.get('a').each($el => {
-        cy.wrap($el).should('have.attr', 'href').should('not.be.empty');
+        cy.wrap($el)
+          .should('not.be.empty') // ensures that the link has text
+          .should('have.attr', 'href')
+          .should('not.be.empty'); // ensures that the href is not empty
       });
     });
   });
