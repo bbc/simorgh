@@ -1,243 +1,707 @@
 {
-  "content": {
-    "blocks": [
-      {
-        "altText": "Бег в упряжке - это прежде всего игра, ведь собака не получает немедленного вознаграждения",
-        "caption": "Бег в упряжке - это прежде всего игра, ведь собака не получает немедленного вознаграждения",
-        "copyrightHolder": "Getty Images",
-        "height": 549,
-        "href": "http://b.files.bbci.co.uk/61FB/test/_63738052__111923538_gettyimages-645263470.jpg",
-        "id": "63738052",
-        "path": "/cpsdevpb/61FB/test/_63738052__111923538_gettyimages-645263470.jpg",
-        "positionHint": "full-width",
-        "subType": "body",
-        "type": "image",
-        "width": 976
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:ukrainian/news-russian-23333960",
+        "locators": {
+          "assetUri": "/ukrainian/news-russian-23333960",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:d19f66fe-8b1b-4413-b360-a2f1cc53e160",
+          "assetId": "23333960",
+          "cpsUrn": "urn:bbc:content:assetUri:ukrainian/news-russian-23333960",
+          "curie": "http://www.bbc.co.uk/asset/d19f66fe-8b1b-4413-b360-a2f1cc53e160"
+        },
+        "type": "STY",
+        "createdBy": "ukrainian-v6",
+        "language": "ru",
+        "lastUpdated": 1666090342665,
+        "firstPublished": 1595581985000,
+        "lastPublished": 1595581985000,
+        "timestamp": 1595581985000,
+        "options": {
+          "isIgorSeoTagsEnabled": false,
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "isFactCheck": false,
+          "allowDateStamp": true,
+          "suitableForSyndication": true,
+          "hasNewsTracker": false,
+          "allowRelatedStoriesBox": true,
+          "isKeyContent": false,
+          "allowHeadline": true,
+          "allowAdvertising": true,
+          "hasContentWarning": false,
+          "isBreakingNews": false,
+          "allowPrintingSharingLinks": true
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "sty",
+          "counterName": "ukrainian.ukraine_in_russian.story.23333960.page",
+          "cps_asset_id": "23333960",
+          "contentId": "urn:bbc:cps:curie:asset:d19f66fe-8b1b-4413-b360-a2f1cc53e160"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Ukrainian",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.8",
+        "blockTypes": [
+          "image",
+          "paragraph",
+          "social_embed",
+          "list",
+          "include",
+          "media"
+        ],
+        "includeComments": false,
+        "atiAnalytics": {
+          "producerName": "UKRAINIAN",
+          "producerId": "94"
+        },
+        "readTime": 1,
+        "siteUri": "/ukrainian",
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false
       },
-      {
-        "markupType": "plain_text",
-        "role": "introduction",
-        "text": "В 1925 году в крохотном городке Ном на краю Аляски разгорелась эпидемия дифтерии. Чтобы доставить жителям спасительную сыворотку, 20 командам ездовых собак пришлось преодолеть более 1000 километров по снегу и льду.",
-        "type": "paragraph"
-      },
-      {
-        "markupType": "plain_text",
-        "text": "Говорят, собака - наш лучший друг. Но иногда она - и наш спаситель.",
-        "type": "paragraph"
-      },
-      {
-        "markupType": "plain_text",
-        "text": "Из всех собак, принявших участие в эстафете по доставке сыворотки жителям Нома, особо отличились две - сибирские хаски по имени Балто и Того.",
-        "type": "paragraph"
-      },
-      {
-        "href": "https://twitter.com/bbcukrainian/status/1284454744178790400?s=20",
-        "id": "1284454744178790400",
-        "source": "twitter",
-        "type": "social_embed"
-      },
-      {
-        "markupType": "plain_text",
-        "text": "Сегодня собаки этой породы соревнуются в увлекательных гонках на санях, превосходя в физической выносливости многих выдающихся атлетов-людей.",
-        "type": "paragraph"
-      },
-      {
-        "altText": "Игривость, близкий контакт с человеком и отсутствие агрессии - черты, приобретенные хаски в результате вековой селекции",
-        "caption": "Игривость, близкий контакт с человеком и отсутствие агрессии - черты, приобретенные хаски в результате вековой селекции",
-        "copyrightHolder": "Getty Images",
-        "height": 549,
-        "href": "http://b.files.bbci.co.uk/1254B/test/_63738057__111923677_gettyimages-645262664.jpg",
-        "id": "63738057",
-        "path": "/cpsdevpb/1254B/test/_63738057__111923677_gettyimages-645262664.jpg",
-        "positionHint": "full-width",
-        "subType": "body",
-        "type": "image",
-        "width": 976
-      },
-      {
-        "markupType": "plain_text",
-        "text": "Как им это удается?",
-        "type": "paragraph"
-      },
-      {
-        "items": [
+      "content": {
+        "blocks": [
           {
-            "markupType": "candy_xml",
-            "text": "<link><caption>Собаки, обувь и пальто: что нужно дезинфицировать во времена коронавируса?</caption><altText>Собаки, обувь и пальто: что нужно дезинфицировать во времена коронавируса?</altText><url href=\"https://www.bbc.com/ukrainian/features-russian-52171582\" platform=\"highweb\"/></link>",
-            "type": "listItem"
+            "id": "63738052",
+            "subType": "body",
+            "href": "http://b.files.bbci.co.uk/61FB/test/_63738052__111923538_gettyimages-645263470.jpg",
+            "path": "/cpsdevpb/61FB/test/_63738052__111923538_gettyimages-645263470.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Бег в упряжке - это прежде всего игра, ведь собака не получает немедленного вознаграждения",
+            "caption": "Бег в упряжке - это прежде всего игра, ведь собака не получает немедленного вознаграждения",
+            "copyrightHolder": "Getty Images",
+            "positionHint": "full-width",
+            "originCode": "cpsdevpb",
+            "type": "image"
           },
           {
-            "markupType": "candy_xml",
-            "text": "<link><caption>Собаки могут &quot;предвидеть&quot; приступ эпилепсии у человека</caption><altText>Собаки могут &quot;предвидеть&quot; приступ эпилепсии у человека</altText><url href=\"https://www.bbc.com/ukrainian/news-russian-47746156\" platform=\"highweb\"/></link>",
-            "type": "listItem"
-          }
-        ],
-        "numbered": false,
-        "type": "list"
-      },
-      {
-        "markupType": "plain_text",
-        "text": "Хаски привез из Сибири торговец мехом Уильям Гусак в начале XX века, когда на северо-западе Канады в Юконе бушевала &quot;золотая лихорадка&quot;. Гусака поразила порода этих ездовых собак, которыми пользовались чукчи.",
-        "type": "paragraph"
-      },
-      {
-        "href": "/include/vjamericas/176-eclipse-lookup/mundo/app?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-werty/venta-app_eclipse-mundo_bjd2w.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-werty/venta-app_eclipse-mundo_bjd2w.png",
-        "platform": "highweb",
-        "required": false,
-        "title": "Visual journalism include",
-        "type": "include"
-      },
-      {
-        "markupType": "plain_text",
-        "text": "Хаски привез из Сибири торговец мехом Уильям Гусак в начале XX века, когда на северо-западе Канады в Юконе бушевала &quot;золотая лихорадка&quot;. Гусака поразила порода этих ездовых собак, которыми пользовались чукчи.",
-        "type": "paragraph"
-      },
-      {
-        "advertising": true,
-        "caption": "They may be tiny, but us humans could learn a thing or two from ants.",
-        "embedding": true,
-        "format": "video",
-        "id": "p01k6msm",
-        "imageCopyright": "BBC",
-        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
-        "subType": "clip",
-        "synopses": {
-          "short": "They may be tiny, but us humans could learn a thing or two from ants."
-        },
-        "title": "Five things ants can teach us about management",
-        "type": "media",
-        "versions": [
+            "text": "В 1925 году в крохотном городке Ном на краю Аляски разгорелась эпидемия дифтерии. Чтобы доставить жителям спасительную сыворотку, 20 командам ездовых собак пришлось преодолеть более 1000 километров по снегу и льду.",
+            "role": "introduction",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
           {
-            "availableFrom": 1540218932000,
-            "availableTerritories": {
-              "nonUk": true,
-              "uk": true
+            "text": "Говорят, собака - наш лучший друг. Но иногда она - и наш спаситель.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Из всех собак, принявших участие в эстафете по доставке сыворотки жителям Нома, особо отличились две - сибирские хаски по имени Балто и Того.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "href": "https://twitter.com/bbcukrainian/status/1284454744178790400?s=20",
+            "source": "twitter",
+            "embed": {
+              "oembed": {
+                "version": "1.0",
+                "author_name": "BBC News Україна (RU)",
+                "author_url": "https://twitter.com/bbcukrainian",
+                "provider_name": "Twitter",
+                "provider_url": "https://twitter.com",
+                "url": "https://twitter.com/bbcukrainian/status/1284454744178790400",
+                "html": "<blockquote class=\"twitter-tweet\"><p lang=\"ru\" dir=\"ltr\">Новые районы Украины. Полный список <a href=\"https://t.co/0NEvsy3krR\">https://t.co/0NEvsy3krR</a></p>&mdash; BBC News Україна (RU) (@bbcukrainian) <a href=\"https://twitter.com/bbcukrainian/status/1284454744178790400?ref_src=twsrc%5Etfw\">July 18, 2020</a></blockquote>\n",
+                "width": 550
+              },
+              "fallback_image": {
+                "fallback_image_width": 465,
+                "fallback_image_height": 575,
+                "alt_text": "Twitter post by BBC News Україна (RU): Новые районы Украины. Полный список "
+              }
             },
-            "duration": 191,
-            "durationISO8601": "PT3M11S",
-            "types": [
-              "Original"
+            "id": "1284454744178790400",
+            "type": "social_embed"
+          },
+          {
+            "text": "Сегодня собаки этой породы соревнуются в увлекательных гонках на санях, превосходя в физической выносливости многих выдающихся атлетов-людей.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "id": "63738057",
+            "subType": "body",
+            "href": "http://b.files.bbci.co.uk/1254B/test/_63738057__111923677_gettyimages-645262664.jpg",
+            "path": "/cpsdevpb/1254B/test/_63738057__111923677_gettyimages-645262664.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Игривость, близкий контакт с человеком и отсутствие агрессии - черты, приобретенные хаски в результате вековой селекции",
+            "caption": "Игривость, близкий контакт с человеком и отсутствие агрессии - черты, приобретенные хаски в результате вековой селекции",
+            "copyrightHolder": "Getty Images",
+            "positionHint": "full-width",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          {
+            "text": "Как им это удается?",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "numbered": false,
+            "items": [
+              {
+                "text": "<link><caption>Собаки, обувь и пальто: что нужно дезинфицировать во времена коронавируса?</caption><altText>Собаки, обувь и пальто: что нужно дезинфицировать во времена коронавируса?</altText><url href=\"https://www.bbc.com/ukrainian/features-russian-52171582\" platform=\"highweb\"/></link>",
+                "markupType": "candy_xml",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/ukrainian/features-russian-52171582",
+                "type": "listItem"
+              },
+              {
+                "text": "<link><caption>Собаки могут &quot;предвидеть&quot; приступ эпилепсии у человека</caption><altText>Собаки могут &quot;предвидеть&quot; приступ эпилепсии у человека</altText><url href=\"https://www.bbc.com/ukrainian/news-russian-47746156\" platform=\"highweb\"/></link>",
+                "markupType": "candy_xml",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/ukrainian/news-russian-47746156",
+                "type": "listItem"
+              }
             ],
-            "versionId": "p01k6msp",
-            "warnings": {
-              "long": "Contains strong language and adult humour.",
-              "short": "Contains strong language and adult humour."
-            }
+            "type": "list"
+          },
+          {
+            "text": "Хаски привез из Сибири торговец мехом Уильям Гусак в начале XX века, когда на северо-западе Канады в Юконе бушевала &quot;золотая лихорадка&quot;. Гусака поразила порода этих ездовых собак, которыми пользовались чукчи.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "required": false,
+            "title": "Visual journalism include",
+            "href": "/include/vjamericas/176-eclipse-lookup/mundo/app?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-werty/venta-app_eclipse-mundo_bjd2w.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-werty/venta-app_eclipse-mundo_bjd2w.png",
+            "platform": "highweb",
+            "type": "include"
+          },
+          {
+            "text": "Хаски привез из Сибири торговец мехом Уильям Гусак в начале XX века, когда на северо-западе Канады в Юконе бушевала &quot;золотая лихорадка&quot;. Гусака поразила порода этих ездовых собак, которыми пользовались чукчи.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "id": "p01k6msm",
+            "subType": "clip",
+            "format": "video",
+            "title": "Five things ants can teach us about management",
+            "synopses": {
+              "short": "They may be tiny, but us humans could learn a thing or two from ants."
+            },
+            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+            "embedding": true,
+            "advertising": true,
+            "caption": "They may be tiny, but us humans could learn a thing or two from ants.",
+            "versions": [
+              {
+                "versionId": "p01k6msp",
+                "types": [
+                  "Original"
+                ],
+                "duration": 191,
+                "durationISO8601": "PT3M11S",
+                "warnings": {
+                  "short": "Contains strong language and adult humour.",
+                  "long": "Contains strong language and adult humour."
+                },
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
+                },
+                "availableFrom": 1540218932000
+              }
+            ],
+            "imageCopyright": "BBC",
+            "smpKind": "programme",
+            "type": "media"
+          },
+          {
+            "text": "Хаски привез из Сибири торговец мехом Уильям Гусак в начале XX века, когда на северо-западе Канады в Юконе бушевала &quot;золотая лихорадка&quot;. Гусака поразила порода этих ездовых собак, которыми пользовались чукчи.",
+            "markupType": "plain_text",
+            "type": "paragraph"
           }
         ]
       },
-      {
-        "markupType": "plain_text",
-        "text": "Хаски привез из Сибири торговец мехом Уильям Гусак в начале XX века, когда на северо-западе Канады в Юконе бушевала &quot;золотая лихорадка&quot;. Гусака поразила порода этих ездовых собак, которыми пользовались чукчи.",
-        "type": "paragraph"
-      }
-    ]
-  },
-  "metadata": {
-    "analyticsLabels": {
-      "counterName": "ukrainian.ukraine_in_russian.story.23333960.page",
-      "cps_asset_id": "23333960",
-      "cps_asset_type": "sty"
-    },
-    "atiAnalytics": {
-      "producerId": "94",
-      "producerName": "UKRAINIAN"
-    },
-    "blockTypes": [
-      "image",
-      "paragraph",
-      "social_embed",
-      "list",
-      "include",
-      "media"
-    ],
-    "createdBy": "ukrainian-v6",
-    "firstPublished": 1595581985000,
-    "id": "urn:bbc:ares::asset:ukrainian/news-russian-23333960",
-    "includeComments": false,
-    "language": "ru",
-    "lastPublished": 1595581985000,
-    "lastUpdated": 1595590887785,
-    "locators": {
-      "assetId": "23333960",
-      "assetUri": "/ukrainian/news-russian-23333960",
-      "cpsUrn": "urn:bbc:content:assetUri:ukrainian/news-russian-23333960",
-      "curie": "http://www.bbc.co.uk/asset/d19f66fe-8b1b-4413-b360-a2f1cc53e160"
-    },
-    "options": {
-      "allowAdvertising": true,
-      "allowDateStamp": true,
-      "allowHeadline": true,
-      "allowPrintingSharingLinks": true,
-      "allowRelatedStoriesBox": true,
-      "allowRightHandSide": true,
-      "hasContentWarning": false,
-      "hasNewsTracker": false,
-      "includeComments": false,
-      "isBreakingNews": false,
-      "isFactCheck": false,
-      "isIgorSeoTagsEnabled": false,
-      "isKeyContent": false,
-      "suitableForSyndication": true
-    },
-    "tags": {},
-    "timestamp": 1595581985000,
-    "type": "STY",
-    "version": "v1.3.2"
-  },
-  "promo": {
-    "headlines": {
-      "headline": "Test for Russian lang Ukrainian stories",
-      "shortHeadline": "Test for Russian lang Ukrainian stories"
-    },
-    "id": "urn:bbc:ares::asset:ukrainian/news-russian-23333960",
-    "indexImage": {
-      "altText": "Бег в упряжке - это прежде всего игра, ведь собака не получает немедленного вознаграждения",
-      "caption": "Бег в упряжке - это прежде всего игра, ведь собака не получает немедленного вознаграждения",
-      "copyrightHolder": "Getty Images",
-      "height": 549,
-      "href": "http://b.files.bbci.co.uk/FE3B/test/_63738056__111923538_gettyimages-645263470.jpg",
-      "id": "63738056",
-      "path": "/cpsdevpb/FE3B/test/_63738056__111923538_gettyimages-645263470.jpg",
-      "subType": "index",
-      "type": "image",
-      "width": 976
-    },
-    "language": "ru",
-    "locators": {
-      "assetId": "23333960",
-      "assetUri": "/ukrainian/news-russian-23333960",
-      "cpsUrn": "urn:bbc:content:assetUri:ukrainian/news-russian-23333960",
-      "curie": "http://www.bbc.co.uk/asset/d19f66fe-8b1b-4413-b360-a2f1cc53e160"
-    },
-    "summary": "Test for Russian lang Ukrainian stories",
-    "timestamp": 1595581985000,
-    "type": "cps"
-  },
-  "relatedContent": {
-    "groups": [
-      {
-        "promos": [
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Говорят, собака",
+          "headline": "Говорят, собака"
+        },
+        "locators": {
+          "assetUri": "/ukrainian/news-russian-23333960",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:d19f66fe-8b1b-4413-b360-a2f1cc53e160",
+          "assetId": "23333960",
+          "cpsUrn": "urn:bbc:content:assetUri:ukrainian/news-russian-23333960",
+          "curie": "http://www.bbc.co.uk/asset/d19f66fe-8b1b-4413-b360-a2f1cc53e160"
+        },
+        "summary": "Говорят, собака Говорят, собака",
+        "timestamp": 1595581985000,
+        "language": "ru",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Ukrainian",
+          "taggings": []
+        },
+        "indexImage": {
+          "id": "63738056",
+          "subType": "index",
+          "href": "http://b.files.bbci.co.uk/FE3B/test/_63738056__111923538_gettyimages-645263470.jpg",
+          "path": "/cpsdevpb/FE3B/test/_63738056__111923538_gettyimages-645263470.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Бег в упряжке - это прежде всего игра, ведь собака не получает немедленного вознаграждения",
+          "caption": "Бег в упряжке - это прежде всего игра, ведь собака не получает немедленного вознаграждения",
+          "copyrightHolder": "Getty Images",
+          "originCode": "cpsdevpb",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:ukrainian/news-russian-23333960",
+        "type": "cps"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "РУС",
+          "uri": "/ukrainian/ukraine_in_russian",
+          "urlIdentifier": "/ukrainian/ukraine_in_russian",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBC Україна",
+          "uri": "/ukrainian",
+          "urlIdentifier": "/ukrainian",
+          "type": "simple"
+        },
+        "groups": [
           {
-            "name": "Собаки могут \"предвидеть\" приступ эпилепсии у человека",
-            "type": "link",
-            "uri": "https://www.bbc.com/ukrainian/news-russian-47746156"
+            "type": "related-urls",
+            "promos": [
+              {
+                "name": "Собаки могут \"предвидеть\" приступ эпилепсии у человека",
+                "uri": "https://www.bbc.com/ukrainian/news-russian-47746156",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/ukrainian/news-russian-47746156",
+                "type": "link"
+              }
+            ]
           }
-        ],
-        "type": "related-urls"
+        ]
       }
-    ],
-    "section": {
-      "name": "РУС",
-      "subType": "index",
-      "type": "simple",
-      "uri": "/ukrainian/ukraine_in_russian"
     },
-    "site": {
-      "name": "BBC Україна",
-      "subType": "site",
-      "type": "simple",
-      "uri": "/ukrainian"
+    "secondaryData": {
+      "topStories": [
+        {
+          "headlines": {
+            "headline": "Мексика: з-під завалів школи намагаються врятувати вцілілих"
+          },
+          "locators": {
+            "assetUri": "/ukrainian/23154182",
+            "cpsUrn": "urn:bbc:content:assetUri:ukrainian/23154182",
+            "curie": "http://www.bbc.co.uk/asset/b54eb953-28db-9249-b69b-c51e061ef94b",
+            "assetId": "23154182"
+          },
+          "summary": "Землетрус у Мексиці забрав щонайменше 230 життів. За повідомленнями, під уламками можуть бути троє людей.",
+          "timestamp": 1505990167000,
+          "language": "uk",
+          "passport": {
+            "category": {
+              "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+              "categoryName": "News"
+            },
+            "taggings": []
+          },
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63593107",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/111FB/test/_63593107_000053668-1.jpg",
+            "path": "/cpsdevpb/111FB/test/_63593107_000053668-1.jpg",
+            "height": 351,
+            "width": 624,
+            "altText": "Віж землетрусу у Мехіко постраждали кілька сотень людей",
+            "caption": "Віж землетрусу у Мехіко постраждали кілька сотень людей",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63593086",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/109C7/test/_63593086_000053668-1.jpg",
+            "path": "/cpsdevpb/109C7/test/_63593086_000053668-1.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Віж землетрусу у Мехіко постраждали кілька сотень людей",
+            "caption": "Віж землетрусу у Мехіко постраждали кілька сотень людей",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "prominence": "standard",
+          "section": {
+            "subType": "IDX",
+            "name": "Новини",
+            "uri": "/ukrainian/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:ukrainian/23154182",
+          "type": "cps"
+        }
+      ],
+      "features": [
+        {
+          "headlines": {
+            "headline": "Коронавірус: як живе Україна на карантині (Ukrainian Test)"
+          },
+          "locators": {
+            "assetUri": "/ukrainian/other-news-23279018",
+            "cpsUrn": "urn:bbc:content:assetUri:ukrainian/other-news-23279018",
+            "curie": "http://www.bbc.co.uk/asset/2af9a514-a7c6-5647-a7f3-786b5b71555a",
+            "assetId": "23279018"
+          },
+          "summary": "Коронавірус: як живе Україна на карантині (Ukrainian Test)",
+          "timestamp": 1585041417000,
+          "language": "uk",
+          "cpsType": "MAP",
+          "media": {
+            "id": "p01k6msm",
+            "subType": "clip",
+            "format": "video",
+            "title": "Five things ants can teach us about management",
+            "synopses": {
+              "short": "They may be tiny, but us humans could learn a thing or two from ants."
+            },
+            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+            "embedding": true,
+            "advertising": true,
+            "caption": "They may be tiny, but us humans could learn a thing or two from ants.",
+            "versions": [
+              {
+                "versionId": "p01k6msp",
+                "types": [
+                  "Original"
+                ],
+                "duration": 191,
+                "durationISO8601": "PT3M11S",
+                "warnings": {
+                  "short": "Contains strong language and adult humour.",
+                  "long": "Contains strong language and adult humour."
+                },
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
+                },
+                "availableFrom": 1540218932000
+              }
+            ],
+            "imageCopyright": "BBC",
+            "smpKind": "programme",
+            "type": "media"
+          },
+          "indexImage": {
+            "id": "63519926",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/F60F/test/_63519926_p016cr26.jpg",
+            "path": "/cpsdevpb/F60F/test/_63519926_p016cr26.jpg",
+            "height": 576,
+            "width": 1024,
+            "altText": "цуу уйцу єждґячсю",
+            "copyrightHolder": "Magnum Photos",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63519928",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/1442F/test/_63519928_p016cr26.jpg",
+            "path": "/cpsdevpb/1442F/test/_63519928_p016cr26.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "цуу уйцу єждґячсю",
+            "copyrightHolder": "Magnum Photos",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "id": "urn:bbc:ares::asset:ukrainian/other-news-23279018",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Чому росіяни віддали б голоси за Трампа? (Russian TEST)",
+            "overtyped": "Чому росіяни віддали б голоси за Трампа? (Russian) "
+          },
+          "locators": {
+            "assetUri": "/ukrainian/world-23087423",
+            "cpsUrn": "urn:bbc:content:assetUri:ukrainian/world-23087423",
+            "curie": "http://www.bbc.co.uk/asset/e346fdd6-fbe7-7145-80a3-88ae47d62342",
+            "assetId": "23087423"
+          },
+          "summary": "Росія - єдина країна \"Великої двадцятки\", окрім самих США, в якій на майбутніх президентських виборах у Сполучених Штатах проголосували б не за Гіларі Клінтон.",
+          "timestamp": 1477664959000,
+          "language": "ru",
+          "passport": {
+            "category": {
+              "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+              "categoryName": "News"
+            },
+            "taggings": []
+          },
+          "cpsType": "MAP",
+          "media": {
+            "id": "p01k6msm",
+            "subType": "clip",
+            "format": "video",
+            "title": "Five things ants can teach us about management",
+            "synopses": {
+              "short": "They may be tiny, but us humans could learn a thing or two from ants."
+            },
+            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+            "embedding": true,
+            "advertising": true,
+            "caption": "They may be tiny, but us humans could learn a thing or two from ants.",
+            "versions": [
+              {
+                "versionId": "p01k6msp",
+                "types": [
+                  "Original"
+                ],
+                "duration": 191,
+                "durationISO8601": "PT3M11S",
+                "warnings": {
+                  "short": "Contains strong language and adult humour.",
+                  "long": "Contains strong language and adult humour."
+                },
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
+                },
+                "availableFrom": 1540218932000
+              }
+            ],
+            "imageCopyright": "BBC",
+            "smpKind": "programme",
+            "type": "media"
+          },
+          "indexImage": {
+            "id": "63519926",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/F60F/test/_63519926_p016cr26.jpg",
+            "path": "/cpsdevpb/F60F/test/_63519926_p016cr26.jpg",
+            "height": 576,
+            "width": 1024,
+            "altText": "цуу уйцу єждґячсю",
+            "copyrightHolder": "Magnum Photos",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63519928",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/1442F/test/_63519928_p016cr26.jpg",
+            "path": "/cpsdevpb/1442F/test/_63519928_p016cr26.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "цуу уйцу єждґячсю",
+            "copyrightHolder": "Magnum Photos",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "id": "urn:bbc:ares::asset:ukrainian/world-23087423",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Аскерлерге үй салуу үчүн атайын бир ишкананын курулушу көп суроолорду жараткан. 16"
+          },
+          "locators": {
+            "assetUri": "/kyrgyz/institutional-23086365",
+            "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/institutional-23086365",
+            "curie": "http://www.bbc.co.uk/asset/ce33ab05-ea32-d248-b6fa-45ff9c8656b6",
+            "assetId": "23086365"
+          },
+          "summary": "Аскерлерге үй салуу үчүн атайын бир ишкананын курулушу көп суроолорду жараткан.",
+          "timestamp": 1477314790000,
+          "language": "ky",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63517259",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/17427/test/_63517259_thumb_antalya_wow_topkapi_palace_hotel_s_00_wowto_500.jpg",
+            "path": "/cpsdevpb/17427/test/_63517259_thumb_antalya_wow_topkapi_palace_hotel_s_00_wowto_500.jpg",
+            "height": 261,
+            "width": 464,
+            "altText": "ецщ",
+            "caption": "щту",
+            "copyrightHolder": "Test",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "site": {
+            "subType": "site",
+            "name": "BBC Кыргыз",
+            "uri": "/kyrgyz",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:kyrgyz/institutional-23086365",
+          "type": "cps"
+        }
+      ],
+      "mostRead": {
+        "generated": "2023-06-20T13:40:59.814Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T11:38:00Z",
+        "items": [
+          {
+            "id": "0abbb5ad-38a5-cf4d-9fb5-0fb125c2dd81",
+            "rank": 1,
+            "title": "Аскерлерге үй салуу үчүн атайын бир ишкананын курулушу көп суроолорду жараткан. 17",
+            "href": "/kyrgyz/institutional-23086366",
+            "timestamp": 1477314801000
+          },
+          {
+            "id": "103a111c-48e4-3744-a8bd-1e763224686a",
+            "rank": 2,
+            "title": "Польша обвинила российских диспетчеров в гибели Ту-154",
+            "href": "/ukrainian/23111899",
+            "timestamp": 1491218421000
+          },
+          {
+            "id": "c6e7e1b9-a13d-c044-87f7-c51a45ffa5ca",
+            "rank": 3,
+            "title": "Аскерлерге үй салуу үчүн атайын бир ишкананын курулушу көп суроолорду жараткан. 29",
+            "href": "/kyrgyz/institutional-23086398",
+            "timestamp": 1477315169000
+          },
+          {
+            "id": "f8752fee-9fa5-c740-82b6-37ef5019e9cf",
+            "rank": 4,
+            "title": "US ends visa-free travel for Cubans",
+            "href": "/ukrainian/23097804",
+            "timestamp": 1484310089000
+          },
+          {
+            "id": "442ae7a8-2060-404e-8316-e6835d27bd43",
+            "rank": 5,
+            "title": "Аскерлерге үй салуу үчүн атайын бир ишкананын курулушу көп суроолорду жараткан. 32a",
+            "href": "/kyrgyz/institutional-23096872",
+            "timestamp": 1482500478000
+          },
+          {
+            "id": "ff1bb26f-2ebb-b848-ae21-584da3351d51",
+            "rank": 6,
+            "title": "Аскерлерге үй салуу үчүн атайын бир ишкананын курулушу көп суроолорду жараткан. 32b",
+            "href": "/kyrgyz/institutional-23096873",
+            "timestamp": 1482500489000
+          },
+          {
+            "id": "0e96f312-76b0-824a-bba8-b52c72834027",
+            "rank": 7,
+            "title": "Аскерлерге үй салуу үчүн атайын бир ишкананын курулушу көп суроолорду жараткан. 13",
+            "href": "/kyrgyz/institutional-23086362",
+            "timestamp": 1477314754000
+          },
+          {
+            "id": "0fbb5268-cdc6-fc46-b053-5bdde5108c87",
+            "rank": 8,
+            "title": "Аскерлерге үй салуу үчүн атайын бир ишкананын курулушу көп суроолорду жараткан. 15",
+            "href": "/kyrgyz/institutional-23086364",
+            "timestamp": 1477314778000
+          },
+          {
+            "id": "23422e9d-084c-1242-89d1-867cfa26446f",
+            "rank": 9,
+            "title": "Аскерлерге үй салуу үчүн атайын бир ишкананын курулушу көп суроолорду жараткан. 4",
+            "href": "/kyrgyz/institutional-23086333",
+            "timestamp": 1477313793000
+          },
+          {
+            "id": "ce33ab05-ea32-d248-b6fa-45ff9c8656b6",
+            "rank": 10,
+            "title": "Аскерлерге үй салуу үчүн атайын бир ишкананын курулушу көп суроолорду жараткан. 16",
+            "href": "/kyrgyz/institutional-23086365",
+            "timestamp": 1477314790000
+          },
+          {
+            "id": "bdec416f-2664-ca45-97a3-2e60c979b9a8",
+            "rank": 11,
+            "title": "Аскерлерге үй салуу үчүн атайын бир ишкананын курулушу көп суроолорду жараткан. 1",
+            "href": "/kyrgyz/institutional-23086330",
+            "timestamp": 1477313619000
+          },
+          {
+            "id": "b54eb953-28db-9249-b69b-c51e061ef94b",
+            "rank": 12,
+            "title": "Мексика: з-під завалів школи намагаються врятувати вцілілих",
+            "href": "/ukrainian/23154182",
+            "timestamp": 1505990167000
+          },
+          {
+            "id": "2ba5ef55-b7cf-f348-86ad-c3bae2e363cd",
+            "rank": 13,
+            "title": "Богдан Гаврилишин: радник, якого не почули",
+            "href": "/ukrainian/23086476",
+            "timestamp": 1477324188000
+          },
+          {
+            "id": "775c5c35-b23e-7b4c-b3d8-b253cef07eee",
+            "rank": 14,
+            "title": "Аскерлерге үй салуу үчүн атайын бир ишкананын курулушу көп суроолорду жараткан. 31",
+            "href": "/kyrgyz/institutional-23086400",
+            "timestamp": 1477315244000
+          },
+          {
+            "id": "d1c70fc4-a794-1741-9388-9470b18bddd8",
+            "rank": 15,
+            "title": "Аскерлерге үй салуу үчүн атайын бир ишкананын курулушу көп суроолорду жараткан. 22",
+            "href": "/kyrgyz/institutional-23086391",
+            "timestamp": 1477314863000
+          },
+          {
+            "id": "0bce4036-2309-7a46-ae6a-90a5c101c061",
+            "rank": 16,
+            "title": "Аскерлерге үй салуу үчүн атайын бир ишкананын курулушу көп суроолорду жараткан. 7",
+            "href": "/kyrgyz/institutional-23086336",
+            "timestamp": 1477313826000
+          },
+          {
+            "id": "6b33ae5d-85c7-1840-be3c-ea6dabf370fe",
+            "rank": 17,
+            "title": "Аскерлерге үй салуу үчүн атайын бир ишкананын курулушу көп суроолорду жараткан. 26",
+            "href": "/kyrgyz/institutional-23086395",
+            "timestamp": 1477315136000
+          },
+          {
+            "id": "23589344-fa96-7b4e-8e1c-f5285ea34720",
+            "rank": 18,
+            "title": "Аскерлерге үй салуу үчүн атайын бир ишкананын курулушу көп суроолорду жараткан. 20",
+            "href": "/kyrgyz/institutional-23086389",
+            "timestamp": 1477314833000
+          },
+          {
+            "id": "324d5299-1d07-0247-8e64-9275d436c40c",
+            "rank": 19,
+            "title": "Аскерлерге үй салуу үчүн атайын бир ишкананын курулушу көп суроолорду жараткан. 32",
+            "href": "/kyrgyz/institutional-23086401",
+            "timestamp": 1477315254000
+          },
+          {
+            "id": "e79b790a-1df5-6443-8428-54632defa4e6",
+            "rank": 20,
+            "title": "Аскерлерге үй салуу үчүн атайын бир ишкананын курулушу көп суроолорду жараткан. 9",
+            "href": "/kyrgyz/institutional-23086338",
+            "timestamp": 1477314080000
+          }
+        ]
+      },
+      "mostWatched": null
     }
-  }
+  },
+  "contentType": "application/json; charset=utf-8"
 }
