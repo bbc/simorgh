@@ -2,6 +2,7 @@ import React from 'react';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ToggleContextProvider } from '../../contexts/ToggleContext';
 import { data as pidginMostReadData } from '../../../../data/pidgin/mostRead/index.json';
+import { data as mundoMostReadData } from '../../../../data/mundo/mostRead/index.json';
 import serbianLatMostReadData from '../../../../data/serbian/mostRead/lat.json';
 import {
   FRONT_PAGE,
@@ -105,6 +106,19 @@ describe('MostRead', () => {
         dataResponse: serbianLatMostReadData,
       },
       {
+        description:
+          'should render most read canonical when renderCanonicalOnAmp is true',
+        service: 'mundo',
+        mostReadToggle: true,
+        isAmp: true,
+        variant: null,
+        renderCanonicalOnAmp: true,
+        renderExpectation: shouldRenderMostRead,
+        dataResponse: mundoMostReadData,
+
+        pageType: MOST_READ_PAGE,
+      },
+      {
         description: 'should not render most read for pidgin with toggles off',
         service: 'pidgin',
         mostReadToggle: false,
@@ -129,6 +143,7 @@ describe('MostRead', () => {
         mostReadToggle,
         isAmp,
         variant,
+        renderCanonicalOnAmp,
         renderExpectation,
         dataResponse,
       }) => {
@@ -140,6 +155,7 @@ describe('MostRead', () => {
                 mostReadToggle={mostReadToggle}
                 isAmp={isAmp}
                 variant={variant as Variants}
+                renderCanonicalOnAmp={renderCanonicalOnAmp}
                 // @ts-expect-error some responses are null
                 data={dataResponse}
               />,
