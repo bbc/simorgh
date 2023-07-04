@@ -11,6 +11,7 @@ export default {
       color: palette.GREY_10,
       marginBottom: `${spacings.TRIPLE}rem`,
       padding: `${spacings.DOUBLE}rem`,
+      border: `${pixelsToRem(3)}rem solid transparent`,
       [mq.GROUP_3_MAX_WIDTH]: { lineHeight: 1.4 },
       [mq.GROUP_4_MIN_WIDTH]: {
         marginBottom: `${spacings.QUADRUPLE}rem`,

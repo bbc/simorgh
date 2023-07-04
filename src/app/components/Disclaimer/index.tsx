@@ -68,6 +68,7 @@ const DisclaimerComponent = ({
               const paraAsString: Disclaimer = para;
               return linkUrl ? (
                 <InlineLink
+                  className="focusIndicatorReducedWidth"
                   css={styles.inlineLink}
                   key={linkText as string}
                   text={linkText as string}
