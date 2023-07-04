@@ -63,17 +63,17 @@ export const testsThatAlwaysRunForAMPOnly = ({
       }
     });
 
-    describe('Most Read Component', () => {
-      /* These cypress tests are needed as unit tests cannot be run on the jsdom.
-       * web workers (which run on amp pages) do not run on the virtual dom.
-       */
+    /* Most Read Component
+     * These cypress tests are needed as unit tests cannot be run on the jsdom.
+     *
+     * web workers (which run on amp pages) do not run on the virtual dom.
+     */
 
-      const skipServices = ['scotland', 'sport', 'newsround'];
+    const skipServices = ['scotland', 'sport', 'newsround'];
 
-      if (!skipServices.includes(service)) {
-        mostReadAssertions({ service, variant });
-      }
-    });
+    if (!skipServices.includes(service)) {
+      mostReadAssertions({ service, variant });
+    }
   });
 };
 
