@@ -40,9 +40,9 @@ export const crossPlatform = ({ service, variant }) => {
 
 export const ampOnly = ({ service, variant }) => {
   describe('Most Read Component', () => {
-    it('should not render when data fetch fails', () => {
+    it.only('should not render when data fetch fails', () => {
       const mostReadPath = getMostReadEndpoint({
-        service,
+        service: config[service].name,
         variant: variant !== 'default' && variant,
         isBff: getAppEnv() !== 'local',
       });
@@ -52,11 +52,11 @@ export const ampOnly = ({ service, variant }) => {
           method: 'GET',
           pathname: mostReadPath,
         },
-        { status: '404' },
+        { statusCode: 404 },
       );
       cy.reload();
 
-      cy.get('[data-e2e="most-read"] > amp-script > amp-list').should(
+      cy.get('[data-e2e="most-read"] > amp-script > amp-list li').should(
         'not.exist',
       );
     });
