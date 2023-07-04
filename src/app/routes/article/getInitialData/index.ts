@@ -23,7 +23,8 @@ type Props = {
   toggles?: Toggles;
 };
 
-const addDisclaimer = async (pageData: any, toggles: any) => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const addDisclaimer = async (pageData: any, toggles: Toggles | undefined) => {
   try {
     return augmentWithDisclaimer(toggles, 0)(pageData);
   } catch (e) {
