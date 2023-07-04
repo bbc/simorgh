@@ -1,6 +1,6 @@
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import { getBlockData, getVideoEmbedUrl } from './helpers';
-import mostReadAssertions from '../mostReadPage/mostReadAssertions';
+import { ampOnly as mostReadAssertions } from '../mostReadPage/mostReadAssertions';
 
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
 const serviceHasFigure = service =>

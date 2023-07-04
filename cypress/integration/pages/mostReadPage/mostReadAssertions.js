@@ -1,8 +1,10 @@
 import { serviceNumerals } from '../../../../src/app/legacy/containers/MostRead/Canonical/Rank';
 import config from '../../../support/config/services';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
+import { getMostReadEndpoint } from '../../../../src/app/lib/utilities/getUrlHelpers/getMostReadUrls';
+import getAppEnv from '../../../support/helpers/getAppEnv';
 
-export default ({ service, variant }) => {
+export const crossPlatform = ({ service, variant }) => {
   const {
     mostRead: { numberOfItems },
   } = appConfig[config[service].name][variant];
@@ -22,7 +24,7 @@ export default ({ service, variant }) => {
         });
     });
 
-    it(`should contain hrefs that are not empty`, () => {
+    it(`should have links with href and title`, () => {
       cy.get('[data-e2e="most-read"]').scrollIntoView();
       cy.get('[data-e2e="most-read"]').within(() => {
         cy.get('a').each($el => {
@@ -32,6 +34,31 @@ export default ({ service, variant }) => {
             .should('not.be.empty'); // ensures that the href is not empty
         });
       });
+    });
+  });
+};
+
+export const ampOnly = ({ service, variant }) => {
+  describe('Most Read Component', () => {
+    it('should not render when data fetch fails', () => {
+      const mostReadPath = getMostReadEndpoint({
+        service,
+        variant: variant !== 'default' && variant,
+        isBff: getAppEnv() !== 'local',
+      });
+
+      cy.intercept(
+        {
+          method: 'GET',
+          pathname: mostReadPath,
+        },
+        { status: '404' },
+      );
+      cy.reload();
+
+      cy.get('[data-e2e="most-read"] > amp-script > amp-list').should(
+        'not.exist',
+      );
     });
   });
 };

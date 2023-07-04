@@ -1,5 +1,5 @@
 import runAMPAdsTests from '../../../support/helpers/adsTests/testsForAMPOnly';
-import mostReadAssertions from '../mostReadPage/mostReadAssertions';
+import { ampOnly as mostReadAssertions } from '../mostReadPage/mostReadAssertions';
 
 export const testsThatAlwaysRunForAMPOnly = ({
   service,
