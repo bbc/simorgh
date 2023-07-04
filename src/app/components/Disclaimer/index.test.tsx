@@ -1,7 +1,7 @@
 import React from 'react';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { ServiceContext } from '#contexts/ServiceContext';
-import { render } from '../react-testing-library-with-providers';
+import { render, screen } from '../react-testing-library-with-providers';
 import DisclaimerComponent from '.';
 
 const DISCLAIMER_FIXTURE = {
@@ -39,6 +39,7 @@ const renderComponent = (
         },
       }}
     >
+      {/* @ts-expect-error - to diagnose */}
       <ServiceContext.Provider value={{ disclaimer, externalLinkText }}>
         <DisclaimerComponent />
       </ServiceContext.Provider>
@@ -46,8 +47,11 @@ const renderComponent = (
   );
 describe('Disclaimer Component', () => {
   it('should render a section with role region', () => {
-    const { getByRole } = renderComponent();
-    expect(getByRole('region', { container: 'section' })).toBeInTheDocument();
+    const { container } = renderComponent();
+    const region = screen.getByRole('region');
+    expect(region).toBeInTheDocument();
+    const section = container.querySelector('section');
+    expect(section).toBeInTheDocument();
   });
   it('should render disclaimer text correctly', () => {
     const { getByText } = renderComponent();
@@ -69,10 +73,12 @@ describe('Disclaimer Component', () => {
     expect(container).toBeEmptyDOMElement();
   });
   it('should not render when disclaimer is null', () => {
+    // @ts-expect-error - not expecting null
     const { container } = renderComponent({ enabled: true }, null);
     expect(container).toBeEmptyDOMElement();
   });
   it('should not render when disclaimer is empty object', () => {
+    // @ts-expect-error - not expecting empty object
     const { container } = renderComponent({ enabled: true }, {});
     expect(container).toBeEmptyDOMElement();
   });
