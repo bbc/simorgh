@@ -10,11 +10,11 @@ import LegacyText from '#app/legacy/containers/Text';
 import Blocks from '#app/legacy/containers/Blocks';
 import MetadataContainer from '../../../../../src/app/components/Metadata';
 import LinkedDataContainer from '../../../../../src/app/components/LinkedData';
-import PostsList from './Posts/index';
+import Stream from './Stream/index';
 import Header from './Header/index';
 
 import styles from './styles';
-import { StreamResponse } from './Posts/types';
+import { StreamResponse } from './Post/types';
 
 const logger = nodeLogger(__filename);
 
@@ -88,32 +88,34 @@ const LivePage = ({
           title={title}
           description={description}
         />
-        <div css={styles.wrapper}>
-          <Summary summaryBlocks={summaryContent?.model.blocks} />
-          {liveTextStream.content && (
-            <PostsList postData={liveTextStream.content} />
-          )}
-          <pre css={styles.code}>
-            <Heading level={4}>Headers</Heading>
-            {bbcOrigin && (
+        <div css={styles.outerGrid}>
+          <div css={styles.leftSection}>
+            <Summary summaryBlocks={summaryContent?.model.blocks} />
+          </div>
+          <div css={styles.rightSection}>
+            <Stream streamContent={liveTextStream.content} />
+            <pre css={styles.code}>
+              <Heading level={4}>Headers</Heading>
+              {bbcOrigin && (
+                <p>
+                  bbc-origin: <span>{bbcOrigin}</span>
+                </p>
+              )}
               <p>
-                bbc-origin: <span>{bbcOrigin}</span>
+                bbc-adverts:{' '}
+                <span>{showAdsBasedOnLocation ? 'true' : 'false'}</span>
               </p>
-            )}
-            <p>
-              bbc-adverts:{' '}
-              <span>{showAdsBasedOnLocation ? 'true' : 'false'}</span>
-            </p>
-          </pre>
-          <pre css={styles.code}>{JSON.stringify(pageData, null, 2)}</pre>
-          <Pagination
-            activePage={activePage}
-            pageCount={pageCount}
-            pageXOfY="Page {x} of {y}"
-            previousPage="Previous Page"
-            nextPage="Next Page"
-            page="Page"
-          />
+            </pre>
+            <pre css={styles.code}>{JSON.stringify(pageData, null, 2)}</pre>
+            <Pagination
+              activePage={activePage}
+              pageCount={pageCount}
+              pageXOfY="Page {x} of {y}"
+              previousPage="Previous Page"
+              nextPage="Next Page"
+              page="Page"
+            />
+          </div>
         </div>
       </main>
     </>
