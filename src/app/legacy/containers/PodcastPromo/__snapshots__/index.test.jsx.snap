@@ -3,7 +3,7 @@
 exports[`Inline Should render correctly 1`] = `
 .emotion-0 {
   float: right;
-  margin: 0rem 0.5rem 1.5rem;
+  margin: 0 0.5rem 1.5rem;
   height: auto;
 }
 
@@ -23,7 +23,7 @@ exports[`Inline Should render correctly 1`] = `
 .emotion-3 {
   background-color: #F2F2F2;
   padding: 1rem;
-  padding: 0rem;
+  padding: 0;
 }
 
 .emotion-5 {
@@ -95,8 +95,8 @@ exports[`Inline Should render correctly 1`] = `
   display: none;
   display: block;
   width: 100%;
-  margin: 0rem;
-  padding: 0rem;
+  margin: 0;
+  padding: 0;
 }
 
 @media (min-width: 20rem) {
@@ -316,7 +316,7 @@ exports[`Inline Should render correctly 1`] = `
 
 @media (max-width: 15rem) {
   .emotion-21 {
-    margin-top: 0rem;
+    margin-top: 0;
   }
 }
 
