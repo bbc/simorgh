@@ -40,7 +40,7 @@ const GEL_GROUP_1_WIDTH_360PX = '22.5rem';
 const ResponsivePodcastPromoWrapper = styled.div`
   ${({ dir }) => (dir === 'ltr' ? 'float: right;' : 'float: left;')}
 
-  margin: 0rem  ${GEL_SPACING} ${GEL_SPACING_TRPL};
+  margin: 0  ${GEL_SPACING} ${GEL_SPACING_TRPL};
   height: auto;
 
   @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
@@ -54,14 +54,14 @@ const ResponsivePodcastPromoWrapper = styled.div`
 `;
 
 const StyledPromoComponent = styled(PromoComponent)`
-  padding: 0rem;
+  padding: 0;
 `;
 
 const StyledImageWrapper = styled(PromoComponent.Card.ImageWrapper)`
   display: block;
   width: 100%;
-  margin: 0rem;
-  padding: 0rem;
+  margin: 0;
+  padding: 0;
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
     display: none;
   }
@@ -134,7 +134,7 @@ const StyledCardLink = styled(PromoComponent.Card.Link)`
     }
   }
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
-    margin-top: 0rem;
+    margin-top: 0;
   }
   @media (min-width: ${GEL_GROUP_1_WIDTH_260PX}) {
     margin-top: ${GEL_SPACING_DBL};
