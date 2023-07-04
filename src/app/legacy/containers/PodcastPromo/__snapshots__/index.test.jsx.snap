@@ -26,6 +26,12 @@ exports[`Inline Should render correctly 1`] = `
   padding: 0;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-3 {
+    border: 0.1875rem solid transparent;
+  }
+}
+
 .emotion-5 {
   position: relative;
 }
