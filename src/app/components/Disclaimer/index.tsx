@@ -18,14 +18,6 @@ type Props = {
   increasePaddingOnDesktop?: boolean;
 };
 
-type Disclaimer =
-  | string
-  | {
-      text: string;
-      url: string;
-      isExternal: boolean;
-    };
-
 const DisclaimerComponent = ({
   increasePaddingOnDesktop,
 }: PropsWithChildren<Props>) => {
@@ -65,7 +57,6 @@ const DisclaimerComponent = ({
             Object.values(disclaimer).map(para => {
               const linkText: string | undefined = path(['text'], para);
               const linkUrl: string | undefined = path(['url'], para);
-              const paraAsString: Disclaimer = para;
               return linkUrl ? (
                 <InlineLink
                   className="focusIndicatorReducedWidth"
@@ -75,7 +66,7 @@ const DisclaimerComponent = ({
                   to={linkUrl as string}
                 />
               ) : (
-                (paraAsString as string)
+                (para as string)
               );
             })}
         </Paragraph>
