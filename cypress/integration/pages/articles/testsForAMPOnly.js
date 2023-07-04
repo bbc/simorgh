@@ -1,7 +1,5 @@
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import { getBlockData, getVideoEmbedUrl } from './helpers';
-import config from '../../../support/config/services';
-import { serviceNumerals } from '../../../../src/app/legacy/containers/MostRead/Canonical/Rank';
 import mostReadAssertions from '../mostReadPage/mostReadAssertions';
 
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
