@@ -35,7 +35,7 @@ interface MostReadProps {
   headingBackgroundColour?: string;
   className?: string;
   renderCanonicalOnAmp?: boolean;
-  visuallyHiddenHeader?: boolean;
+  overrideHeadingAs?: string;
 }
 
 const MostRead = ({
@@ -46,7 +46,7 @@ const MostRead = ({
   headingBackgroundColour = WHITE,
   className = '',
   renderCanonicalOnAmp = false,
-  visuallyHiddenHeader = false,
+  overrideHeadingAs = '',
 }: MostReadProps) => {
   const { isAmp, pageType, variant } = useContext(RequestContext);
   const {
@@ -77,7 +77,7 @@ const MostRead = ({
     mostReadAmpPageTypes.includes(pageType) ? (
       <MostReadSection className={className}>
         <MostReadSectionLabel
-          visuallyHidden={visuallyHiddenHeader}
+          overrideHeadingAs={overrideHeadingAs}
           mobileDivider={mobileDivider}
           backgroundColor={headingBackgroundColour}
         />
@@ -93,7 +93,7 @@ const MostRead = ({
     data ? (
       <MostReadSection className={className}>
         <MostReadSectionLabel
-          visuallyHidden={visuallyHiddenHeader}
+          overrideHeadingAs={overrideHeadingAs}
           mobileDivider={mobileDivider}
           backgroundColor={headingBackgroundColour}
         />
