@@ -1,7 +1,5 @@
-import appConfig from '../../../../src/server/utilities/serviceConfigs';
-import config from '../../../support/config/services';
 import runAMPAdsTests from '../../../support/helpers/adsTests/testsForAMPOnly';
-import { serviceNumerals } from '../../../../src/app/legacy/containers/MostRead/Canonical/Rank';
+import mostReadAssertions from '../mostReadPage/mostReadAssertions';
 
 export const testsThatAlwaysRunForAMPOnly = ({
   service,
@@ -73,34 +71,7 @@ export const testsThatAlwaysRunForAMPOnly = ({
       const skipServices = ['scotland', 'sport', 'newsround'];
 
       if (!skipServices.includes(service)) {
-        it(`should show the correct number of items for ${service}\`s ${pageType}`, () => {
-          const expectedMostReadItems =
-            appConfig[config[service].name][variant].mostRead.numberOfItems;
-          cy.get('[data-e2e="most-read"]').scrollIntoView();
-          cy.get('[data-e2e="most-read"] li').should(
-            'have.length',
-            expectedMostReadItems,
-          );
-        });
-
-        it(`should show numerals used for the corresponding ${service} service`, () => {
-          const expectedMostReadRank = serviceNumerals(service);
-          cy.get('[data-e2e="most-read"]').scrollIntoView();
-          cy.get('[data-e2e="most-read"] > amp-script > amp-list div')
-            .find('li span')
-            .each(($el, index) => {
-              expect($el.text()).equal(expectedMostReadRank[index + 1]);
-            });
-        });
-
-        it(`Most read list should contain hrefs`, () => {
-          cy.get('[data-e2e="most-read"]').scrollIntoView();
-          cy.get('[data-e2e="most-read"] > amp-script > amp-list div')
-            .next()
-            .within(() => {
-              cy.get('a').should('have.attr', 'href');
-            });
-        });
+        mostReadAssertions({ service, variant });
       }
     });
   });

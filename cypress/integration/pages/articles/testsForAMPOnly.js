@@ -2,6 +2,7 @@ import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import { getBlockData, getVideoEmbedUrl } from './helpers';
 import config from '../../../support/config/services';
 import { serviceNumerals } from '../../../../src/app/legacy/containers/MostRead/Canonical/Rank';
+import mostReadAssertions from '../mostReadPage/mostReadAssertions';
 
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
 const serviceHasFigure = service =>
@@ -72,43 +73,11 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
       /* These cypress tests are needed as unit tests cannot be run on the jsdom.
        * web workers (which run on amp pages) do not run on the virtual dom.
        */
-      before(() => {
-        cy.getToggles(config[service].name);
-      });
 
       const skipServices = ['scotland', 'sport', 'newsround'];
 
       if (!skipServices.includes(service)) {
-        it(`should show the correct number of items for ${service}\`s ${pageType}`, () => {
-          const expectedMostReadItems =
-            appConfig[config[service].name][variant].mostRead.numberOfItems;
-          cy.get('[data-e2e="most-read"]').scrollIntoView();
-          cy.get('[data-e2e="most-read"] li').should(
-            'have.length',
-            expectedMostReadItems,
-          );
-        });
-
-        it(`should show numerals used for the corresponding ${service} service`, () => {
-          const expectedMostReadRank = serviceNumerals(service);
-          cy.get('[data-e2e="most-read"]').scrollIntoView();
-          cy.get('[data-e2e="most-read"] > amp-script > amp-list div')
-            .find('li span')
-            .each(($el, index) => {
-              expect($el.text()).equal(expectedMostReadRank[index + 1]);
-            });
-        });
-
-        it(`Most read list should contain hrefs that are not empty`, () => {
-          cy.get('[data-e2e="most-read"]').scrollIntoView();
-          cy.get('[data-e2e="most-read"] > amp-script > amp-list div')
-            .next()
-            .within(() => {
-              cy.get('a').each($el => {
-                cy.wrap($el).should('have.attr', 'href').should('not.be.empty');
-              });
-            });
-        });
+        mostReadAssertions({ service, variant });
       }
     });
   });
