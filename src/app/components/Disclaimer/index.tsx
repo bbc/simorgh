@@ -4,10 +4,12 @@ import { jsx } from '@emotion/react';
 import { useContext, PropsWithChildren } from 'react';
 import useToggle from '#hooks/useToggle';
 import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
 import { GridItemLarge } from '#components/Grid';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import isEmpty from 'ramda/src/isEmpty';
+import { ARTICLE_PAGE } from '../../routes/utils/pageTypes';
 import Paragraph from '../Paragraph';
 import InlineLink from '../InlineLink';
 import styles from './index.styles';
@@ -28,6 +30,7 @@ const DisclaimerComponent = ({
   increasePaddingOnDesktop,
 }: PropsWithChildren<Props>) => {
   const { disclaimer, translations } = useContext(ServiceContext);
+  const { pageType } = useContext(RequestContext);
   const { enabled } = useToggle('disclaimer');
 
   const shouldShow = enabled && disclaimer && !isEmpty(disclaimer);
@@ -50,7 +53,14 @@ const DisclaimerComponent = ({
         role="region"
         aria-label={infoBannerLabelTranslation}
       >
-        <Paragraph css={styles.inner} size="longPrimer" fontVariant="sansLight">
+        <Paragraph
+          css={[
+            styles.inner,
+            pageType === ARTICLE_PAGE && styles.increaseTopMargin,
+          ]}
+          size="longPrimer"
+          fontVariant="sansLight"
+        >
           {disclaimer &&
             Object.values(disclaimer).map(para => {
               const linkText: string | undefined = path(['text'], para);
