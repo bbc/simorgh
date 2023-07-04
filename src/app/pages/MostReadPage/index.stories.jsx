@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import pidginMostReadData from '../../../../data/pidgin/mostRead/index.json';
-import zhongwenSimpData from '../../../../data/zhongwen/mostRead/simp.json';
-import japaneseMostReadData from '../../../../data/japanese/mostRead/index.json';
-import persianMostReadData from '../../../../data/persian/mostRead/index.json';
-import bengaliMostReadData from '../../../../data/bengali/mostRead/index.json';
+import { data as pidginMostReadData } from '../../../../data/pidgin/mostRead/index.json';
+import { data as zhongwenSimpData } from '../../../../data/zhongwen/mostRead/simp.json';
+import { data as japaneseMostReadData } from '../../../../data/japanese/mostRead/index.json';
+import { data as persianMostReadData } from '../../../../data/persian/mostRead/index.json';
+import { data as bengaliMostReadData } from '../../../../data/bengali/mostRead/index.json';
 import { MOST_READ_PAGE } from '#app/routes/utils/pageTypes';
 import MostReadPage from '.';
 
@@ -28,25 +28,21 @@ export default {
 };
 
 export const Pidgin = () => (
-  <Component service="pidgin" pageData={pidginMostReadData.data} />
+  <Component service="pidgin" pageData={pidginMostReadData} />
 );
 
 export const ZhongwenSimple = () => (
-  <Component
-    service="zhongwen"
-    variant="simp"
-    pageData={zhongwenSimpData.data}
-  />
+  <Component service="zhongwen" variant="simp" pageData={zhongwenSimpData} />
 );
 
 export const Japanese = () => (
-  <Component service="japanese" pageData={japaneseMostReadData.data} />
+  <Component service="japanese" pageData={japaneseMostReadData} />
 );
 
 export const Persian = () => (
-  <Component service="persian" pageData={persianMostReadData.data} />
+  <Component service="persian" pageData={persianMostReadData} />
 );
 
 export const Bengali = () => (
-  <Component service="bengali" pageData={bengaliMostReadData.data} />
+  <Component service="bengali" pageData={bengaliMostReadData} />
 );
