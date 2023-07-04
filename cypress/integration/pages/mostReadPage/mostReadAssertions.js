@@ -7,7 +7,7 @@ import getAppEnv from '../../../support/helpers/getAppEnv';
 export const crossPlatform = ({ service, variant }) => {
   const {
     mostRead: { numberOfItems },
-  } = appConfig[config[service].name][variant];
+  } = appConfig[config[service].name || service][variant];
 
   describe('Most Read Component', () => {
     it(`should render ${numberOfItems} items`, () => {
@@ -42,7 +42,7 @@ export const ampOnly = ({ service, variant }) => {
   describe('Most Read Component', () => {
     it.only('should not render when data fetch fails', () => {
       const mostReadPath = getMostReadEndpoint({
-        service: config[service].name,
+        service: config[service].name || service,
         variant: variant !== 'default' && variant,
         isBff: getAppEnv() !== 'local',
       });
