@@ -29,6 +29,7 @@ import SkipLinkWrapper from '#components/SkipLinkWrapper';
 import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { RequestContext } from '#app/contexts/RequestContext';
+import { HIGH_CONTRAST } from '#app/components/ThemeProvider/mediaQueries';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import PromoComponent from './components';
 import getPromo from './shared';
@@ -55,6 +56,9 @@ const ResponsivePodcastPromoWrapper = styled.div`
 
 const StyledPromoComponent = styled(PromoComponent)`
   padding: 0;
+  ${HIGH_CONTRAST} {
+    border: 0.1875rem solid transparent;
+  }
 `;
 
 const StyledImageWrapper = styled(PromoComponent.Card.ImageWrapper)`
@@ -195,9 +199,11 @@ const Promo = () => {
     podcastPromo,
   );
 
+  // Skip podcast promotion
   const terms = {
     '%title%': podcastPromoTitle,
   };
+
   return (
     <ResponsivePodcastPromoWrapper ref={viewTrackerRef} dir={dir}>
       <StyledPromoComponent
@@ -221,8 +227,8 @@ const Promo = () => {
                 primaryMimeType={primaryMimeType}
                 sizes={sizes}
                 alt={alt}
-                height={1}
-                width={1}
+                height={100}
+                width={100}
                 ratio={100}
                 lazyLoad
               />
