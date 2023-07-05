@@ -16,14 +16,12 @@ describe('Get initial data from front page', () => {
   });
 
   it('should return data for a page without radio schedules to render', async () => {
-    fetchMock.mock(
-      'http://localhost/mock-frontpage-path.json',
-      frontPageJsonSerbian,
-    );
+    fetchMock.mock('begin:http://localhost/serbian/lat/', frontPageJsonSerbian);
 
     const { pageData } = await getInitialData({
-      path: 'mock-frontpage-path',
-      service: 'hausa',
+      path: '/serbian/lat',
+      service: 'serbian',
+      variant: 'lat',
       pageType,
     });
 
@@ -36,18 +34,16 @@ describe('Get initial data from front page', () => {
   });
 
   it('should return data to render a front page with radio schedules', async () => {
+    fetchMock.mock('begin:http://localhost/serbian/lat/', frontPageJsonSerbian);
     fetchMock.mock(
-      'http://localhost/mock-frontpage-path.json',
-      frontPageJsonSerbian,
-    );
-    fetchMock.mock(
-      'http://localhost/hausa/bbc_hausa_radio/schedule.json',
+      'http://localhost/serbian/bbc_serbian_radio/schedule.json',
       radioScheduleJson,
     );
 
     const { pageData } = await getInitialData({
-      path: 'mock-frontpage-path',
-      service: 'hausa',
+      path: '/serbian/lat',
+      service: 'serbian',
+      variant: 'lat',
       pageType,
       toggles: {
         frontPageRadioSchedule: {
@@ -68,18 +64,16 @@ describe('Get initial data from front page', () => {
   });
 
   it('should return data for service with radio schedules, but without radio schedules on front page', async () => {
+    fetchMock.mock('begin:http://localhost/serbian/lat/', frontPageJsonSerbian);
     fetchMock.mock(
-      'http://localhost/mock-frontpage-path.json',
-      frontPageJsonSerbian,
-    );
-    fetchMock.mock(
-      'http://localhost/hausa/bbc_hausa_radio/schedule.json',
+      'http://localhost/serbian/bbc_serbian_radio/schedule.json',
       radioScheduleJson,
     );
 
     const { pageData } = await getInitialData({
-      path: 'mock-frontpage-path',
-      service: 'hausa',
+      path: '/serbian/lat',
+      service: 'serbian',
+      variant: 'lat',
       pageType,
       toggles: {
         frontPageRadioSchedule: {
@@ -99,17 +93,16 @@ describe('Get initial data from front page', () => {
   });
 
   it('should return page data for misconfigured service without radio schedules, but with radio schedules on front page', async () => {
+    fetchMock.mock('begin:http://localhost/serbian/lat/', frontPageJsonSerbian);
     fetchMock.mock(
-      'http://localhost/mock-frontpage-path.json',
-      frontPageJsonSerbian,
-    );
-    fetchMock.mock(
-      'http://localhost/hausa/bbc_hausa_radio/schedule.json',
+      'http://localhost/serbian/bbc_serbian_radio/schedule.json',
       null,
     );
+
     const { pageData } = await getInitialData({
-      path: 'mock-frontpage-path',
-      service: 'hausa',
+      path: '/serbian/lat',
+      service: 'serbian',
+      variant: 'lat',
       pageType,
       toggles: {
         frontPageRadioSchedule: {

@@ -7,6 +7,8 @@ import { Services, Variants, Environments } from '../../../models/types/global';
 import HOME_PAGE_CONFIG from '../../homePage/getInitialData/page-config';
 import PAGE_TYPES from './page-types';
 
+const { ARTICLE, CPS_ASSET, TOPIC, HOME, LIVE } = PAGE_TYPES;
+
 type Keys = keyof typeof PAGE_TYPES;
 type PageTypes = (typeof PAGE_TYPES)[Keys];
 interface UrlConstructParams {
@@ -20,26 +22,48 @@ interface UrlConstructParams {
 const removeAmp = (path: string) => path.split('.')[0];
 const getArticleId = (path: string) => path.match(/(c[a-zA-Z0-9]{10}o)/)?.[1];
 const getCpsId = (path: string) => path;
+const getFrontPageId = (path: string) => `${path}/front_page`;
 const getTipoId = (path: string) => path.match(/(c[a-zA-Z0-9]{10}t)/)?.[1];
 
-const getId = (pageType: PageTypes, service: Services, env: Environments) => {
+const isFrontPage = ({
+  path,
+  service,
+  variant,
+}: {
+  path: string;
+  service: Services;
+  variant?: Variants;
+}) => (variant ? path === `/${service}/${variant}` : path === `/${service}`);
+
+interface GetIdProps {
+  pageType: PageTypes;
+  service: Services;
+  variant?: Variants;
+  env: Environments;
+}
+
+const getId = ({ pageType, service, variant, env }: GetIdProps) => {
   let getIdFunction;
   switch (pageType) {
-    case PAGE_TYPES.ARTICLE:
+    case ARTICLE:
       getIdFunction = getArticleId;
       break;
-    case PAGE_TYPES.CPS_ASSET:
-      getIdFunction = getCpsId;
+    case CPS_ASSET:
+      getIdFunction = (path: string) => {
+        return env !== 'local' && isFrontPage({ path, service, variant })
+          ? getFrontPageId(path)
+          : getCpsId(path);
+      };
       break;
-    case PAGE_TYPES.HOME:
+    case HOME:
       getIdFunction = () => {
         return env !== 'local'
           ? HOME_PAGE_CONFIG?.[service]?.[env]
           : 'tipohome';
       };
       break;
-    case PAGE_TYPES.LIVE:
-    case PAGE_TYPES.TOPIC:
+    case LIVE:
+    case TOPIC:
       getIdFunction = getTipoId;
       break;
     default:
@@ -59,7 +83,7 @@ const constructPageFetchUrl = ({
   const env = getEnvironment(pathname);
   const isLocal = !env || env === 'local';
 
-  const id = getId(pageType, service, env)(pathname);
+  const id = getId({ pageType, service, env, variant })(pathname);
   const capitalisedPageType =
     pageType.charAt(0).toUpperCase() + pageType.slice(1);
 
@@ -84,18 +108,18 @@ const constructPageFetchUrl = ({
 
   if (isLocal) {
     switch (pageType) {
-      case PAGE_TYPES.ARTICLE:
+      case ARTICLE:
         fetchUrl = Url(
           `/${service}/articles/${id}${variant ? `/${variant}` : ''}`,
         );
         break;
-      case PAGE_TYPES.CPS_ASSET:
+      case CPS_ASSET:
         fetchUrl = Url(id);
         break;
-      case PAGE_TYPES.HOME:
+      case HOME:
         fetchUrl = Url(`/${service}/${id}`);
         break;
-      case PAGE_TYPES.TOPIC: {
+      case TOPIC: {
         const variantPath = variant ? `/${variant}` : '';
         fetchUrl = Url(`/${service}${variantPath}/topics/${id}`);
         break;
