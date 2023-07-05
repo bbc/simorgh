@@ -60,9 +60,7 @@ export const ampOnly = ({ service, variant }) => {
       );
       cy.reload();
 
-      cy.get('[data-e2e="most-read"] > amp-script > amp-list li').should(
-        'not.exist',
-      );
+      cy.get('[data-e2e="most-read"] li').should('not.exist');
     });
   });
 };
