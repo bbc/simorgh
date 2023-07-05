@@ -15,7 +15,25 @@ const getPromoFixtures = dir =>
     .filter(item => pathOr(null, ['assetTypeCode'], item) === 'PRO')
     .map(item => ({ id: uuid(), ...item }));
 
-const getNumberPromoFixtures = (dir, number = 1) =>
-  take(number, getPromoFixtures(dir));
+const getNumberPromoFixtures = (dir, number = 1) => {
+  const promoFixtures = getPromoFixtures(dir);
+
+  if (promoFixtures.length < number) {
+    const [promo] = promoFixtures;
+
+    let i = 1;
+    while (i <= number) {
+      promoFixtures.push({
+        ...promo,
+        name: `${promo.name} ${i + 1}`,
+        summary: `${promo.summary} ${i + 1}`,
+        id: uuid(),
+      });
+      i += 1;
+    }
+  }
+
+  return take(number, promoFixtures);
+};
 
 export default getNumberPromoFixtures;
