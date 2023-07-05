@@ -5,7 +5,8 @@ import { getMostReadEndpoint } from '../../../../src/app/lib/utilities/getUrlHel
 import getAppEnv from '../../../support/helpers/getAppEnv';
 
 export const crossPlatform = ({ service, variant }) => {
-  const serviceID = config[service].name || service;
+  const serviceID = config[service]?.name || service;
+
   const {
     mostRead: { numberOfItems },
   } = appConfig[serviceID][variant];
@@ -42,7 +43,7 @@ export const crossPlatform = ({ service, variant }) => {
 export const ampOnly = ({ service, variant }) => {
   describe('Most Read Component', () => {
     it('should not render when data fetch fails', () => {
-      const serviceID = config[service].name || service;
+      const serviceID = config[service]?.name || service;
 
       const mostReadPath = getMostReadEndpoint({
         service: serviceID,
