@@ -1,5 +1,4 @@
 import constructPageFetchUrl from '.';
-import { FRONT_PAGE } from '../pageTypes';
 import PAGE_TYPES from './page-types';
 
 const { ARTICLE, CPS_ASSET, HOME, LIVE, TOPIC } = PAGE_TYPES;
