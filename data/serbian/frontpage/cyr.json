@@ -32,7 +32,8 @@
           "responsive-inspire",
           "responsive-in-depth",
           "special-reports",
-          "featured-site-top-stories"
+          "featured-site-top-stories",
+          "useful-links"
         ],
         "title": "Почетна страна",
         "summary": "ББЦ на српском нуди ексклузиван садржај - аналитичко, истраживачкo и непристрасно извештавање у текстовима и видео прилозима прилагођеним и друштвеним мрежама.",
@@ -1935,6 +1936,51 @@
               }
             ],
             "semanticGroupName": "Frequency info"
+          },
+          {
+            "type": "useful-links",
+            "title": "Useful links",
+            "items": [
+              {
+                "name": "Kontaktirajte nas 1",
+                "uri": "/serbian/lat/popular/read",
+                "contentType": "Guide",
+                "assetTypeCode": "PRO",
+                "type": "link"
+              },
+              {
+                "name": "Kontaktirajte nas 2",
+                "uri": "/serbian/lat/popular/read",
+                "contentType": "Guide",
+                "assetTypeCode": "PRO",
+                "type": "link"
+              },
+              {
+                "name": "Kontaktirajte nas 3",
+                "uri": "/serbian/lat/popular/read",
+                "contentType": "Guide",
+                "assetTypeCode": "PRO",
+                "type": "link"
+              },
+              {
+                "name": "Kontaktirajte nas 4",
+                "uri": "/serbian/lat/popular/read",
+                "contentType": "Guide",
+                "assetTypeCode": "PRO",
+                "type": "link"
+              },
+              {
+                "name": "Kontaktirajte nas 5",
+                "uri": "/serbian/lat/popular/read",
+                "contentType": "Guide",
+                "assetTypeCode": "PRO",
+                "type": "link"
+              }
+            ],
+            "strapline": {
+              "name": "Korisni linkovi"
+            },
+            "semanticGroupName": "Useful links"
           }
         ]
       },
