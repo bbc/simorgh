@@ -71,12 +71,7 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
      * These cypress tests are needed as unit tests cannot be run on the jsdom.
      * web workers (which run on amp pages) do not run on the virtual dom.
      */
-
-    const skipServices = ['scotland', 'sport', 'newsround'];
-
-    if (!skipServices.includes(service)) {
-      mostReadAssertions({ service, variant });
-    }
+    mostReadAssertions({ service, variant });
   });
 };
 // For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.

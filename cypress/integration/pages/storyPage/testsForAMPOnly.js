@@ -68,12 +68,7 @@ export const testsThatAlwaysRunForAMPOnly = ({
      *
      * web workers (which run on amp pages) do not run on the virtual dom.
      */
-
-    const skipServices = ['scotland', 'sport', 'newsround'];
-
-    if (!skipServices.includes(service)) {
-      mostReadAssertions({ service, variant });
-    }
+    mostReadAssertions({ service, variant });
   });
 };
 
