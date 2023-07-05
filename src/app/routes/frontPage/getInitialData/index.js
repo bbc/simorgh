@@ -77,7 +77,6 @@ export default async ({
       },
     };
   } catch ({ message, status = getErrorStatusCode() }) {
-    console.error({ status, message });
     return { error: message, status };
   }
 };
