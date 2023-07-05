@@ -25,24 +25,24 @@ export default {
         margin: '0.25rem 0',
       },
     }),
-  outerGrid: ({ mq, gridWidths }: Theme) =>
+  outerGrid: ({ mq, gridWidths, spacings }: Theme) =>
     css({
       maxWidth: `${pixelsToRem(gridWidths[1280])}rem`,
       margin: '0 auto',
       display: 'grid',
       gridTemplateColumns: 'repeat(12, 1fr)',
-      padding: `${pixelsToRem(16)}rem ${pixelsToRem(8)}rem`,
+      padding: `${spacings.FULL}rem ${spacings.FULL}rem`,
 
       [mq.GROUP_2_MIN_WIDTH]: {
-        padding: `${pixelsToRem(16)}rem`,
+        padding: `${spacings.DOUBLE}rem`,
       },
 
       [mq.GROUP_4_MIN_WIDTH]: {
-        paddingInlineStart: `${pixelsToRem(16)}rem`,
-        paddingInlineEnd: `${pixelsToRem(16)}rem`,
-        paddingTop: `${pixelsToRem(24)}rem`,
-        paddingBottom: `${pixelsToRem(32)}rem`,
-        columnGap: '1rem',
+        paddingInlineStart: `${spacings.DOUBLE}rem`,
+        paddingInlineEnd: `${spacings.DOUBLE}rem`,
+        paddingTop: `${spacings.FULL}rem`,
+        paddingBottom: `${spacings.QUADRUPLE}rem`,
+        columnGap: `${spacings.DOUBLE}rem`,
       },
     }),
   leftSection: ({ mq }: Theme) =>
