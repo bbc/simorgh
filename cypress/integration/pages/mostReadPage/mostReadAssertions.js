@@ -13,6 +13,7 @@ export const crossPlatform = ({ service, variant }) => {
 
   describe('Most Read Component', () => {
     it(`should render ${numberOfItems} items`, () => {
+      cy.get('[data-e2e="most-read"]').scrollIntoView();
       cy.get('[data-e2e="most-read"] li').should('have.length', numberOfItems);
     });
 
@@ -60,6 +61,7 @@ export const ampOnly = ({ service, variant }) => {
       );
       cy.reload();
 
+      cy.get('[data-e2e="most-read"]').scrollIntoView();
       cy.get('[data-e2e="most-read"] li').should('not.exist');
     });
   });
