@@ -105,8 +105,8 @@ describe('Charbeats Analytics Container', () => {
         toggleState={toggleState}
       >
         <ChartbeatAnalytics
-          title={frontPageData?.metadata?.title}
-          sectionName={frontPageData?.relatedContent?.section?.name}
+          title={frontPageData?.article?.metadata?.title}
+          sectionName={frontPageData?.article?.relatedContent?.section?.name}
         />
       </ContextWrap>,
     );
@@ -136,8 +136,8 @@ describe('Charbeats Analytics Container', () => {
         toggleState={toggleState}
       >
         <ChartbeatAnalytics
-          title={frontPageData?.metadata?.title}
-          sectionName={frontPageData?.relatedContent?.section?.name}
+          title={frontPageData?.article?.metadata?.title}
+          sectionName={frontPageData?.article?.relatedContent?.section?.name}
         />
       </ContextWrap>,
     );
@@ -154,8 +154,8 @@ describe('Charbeats Analytics Container', () => {
         origin={localBaseUrl}
       >
         <ChartbeatAnalytics
-          title={frontPageData?.metadata?.title}
-          sectionName={frontPageData?.relatedContent?.section?.name}
+          title={frontPageData?.article?.metadata?.title}
+          sectionName={frontPageData?.article?.relatedContent?.section?.name}
         />
       </ContextWrap>,
     );
@@ -200,8 +200,8 @@ describe('Charbeats Analytics Container', () => {
         toggleState={toggleState}
       >
         <ChartbeatAnalytics
-          title={frontPageData?.metadata?.title}
-          sectionName={frontPageData?.relatedContent?.section?.name}
+          title={frontPageData?.article?.metadata?.title}
+          sectionName={frontPageData?.article?.relatedContent?.section?.name}
         />
       </ContextWrap>,
     );
