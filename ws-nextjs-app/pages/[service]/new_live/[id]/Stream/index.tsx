@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import Heading from '#app/components/Heading';
+import Paragraph from '#app/components/Paragraph';
 import { StreamResponse } from '../Post/types';
 import Post from '../Post';
 import styles from './styles';
@@ -17,8 +18,10 @@ const Stream = ({
 
   return (
     <div>
-      <Heading level={2}>Live Reporting</Heading>
-      <p>By a random dude</p>
+      <Heading css={styles.heading} level={2}>
+        Live Reporting
+      </Heading>
+      <Paragraph css={styles.subHeading}>By a random dude</Paragraph>
       <ol css={styles.unorderedList}>
         {streamResults.map(post => (
           <li key={post.urn} css={styles.list}>
