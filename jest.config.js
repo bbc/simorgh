@@ -6,7 +6,12 @@ const unitTests = {
   setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
   moduleNameMapper: jestDirAlias,
   snapshotSerializers: ['@emotion/jest/serializer'],
-  transform: {},
+  transform: {
+    '^.+\\.js$': 'babel-jest',
+    '^.+\\.jsx$': 'babel-jest',
+    '^.+\\.ts$': 'babel-jest',
+    '^.+\\.tsx$': 'babel-jest',
+  },
   displayName: 'Unit Tests',
   collectCoverageFrom: [
     '**/(src|scripts)/**/*.{js,jsx,ts,tsx}',
