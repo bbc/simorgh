@@ -5,9 +5,10 @@ import { getMostReadEndpoint } from '../../../../src/app/lib/utilities/getUrlHel
 import getAppEnv from '../../../support/helpers/getAppEnv';
 
 export const crossPlatform = ({ service, variant }) => {
+  const serviceID = config[service].name || service;
   const {
     mostRead: { numberOfItems },
-  } = appConfig[config[service].name || service][variant];
+  } = appConfig[serviceID][variant];
 
   describe('Most Read Component', () => {
     it(`should render ${numberOfItems} items`, () => {
@@ -15,7 +16,7 @@ export const crossPlatform = ({ service, variant }) => {
     });
 
     it(`should show correct numerals`, () => {
-      const expectedMostReadRank = serviceNumerals(service);
+      const expectedMostReadRank = serviceNumerals(serviceID);
       cy.get('[data-e2e="most-read"]').scrollIntoView();
       cy.get('[data-e2e="most-read"]')
         .find('li span')
@@ -40,9 +41,11 @@ export const crossPlatform = ({ service, variant }) => {
 
 export const ampOnly = ({ service, variant }) => {
   describe('Most Read Component', () => {
-    it.only('should not render when data fetch fails', () => {
+    it('should not render when data fetch fails', () => {
+      const serviceID = config[service].name || service;
+
       const mostReadPath = getMostReadEndpoint({
-        service: config[service].name || service,
+        service: serviceID,
         variant: variant !== 'default' && variant,
         isBff: getAppEnv() !== 'local',
       });
