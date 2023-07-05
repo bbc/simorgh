@@ -16,15 +16,20 @@ const Stream = ({
 
   if (streamResults.length === 0) return null;
 
+  if (streamResults.length === 1) {
+    const post = streamResults[0];
+    return <Post post={post} />;
+  }
+
   return (
     <div>
       <Heading css={styles.heading} level={2}>
         Live Reporting
       </Heading>
       <Paragraph css={styles.subHeading}>By a random dude</Paragraph>
-      <ol css={styles.unorderedList}>
+      <ol css={styles.orderedList}>
         {streamResults.map(post => (
-          <li key={post.urn} css={styles.list}>
+          <li key={post.urn} css={styles.listItem}>
             <Post post={post} />
           </li>
         ))}

@@ -2,11 +2,11 @@ import { Theme, css } from '@emotion/react';
 // import pixelsToRem from '#app/utilities/pixelsToRem';
 
 export default {
-  list: () =>
+  listItem: () =>
     css({
       listStyleType: 'none',
     }),
-  unorderedList: () =>
+  orderedList: () =>
     css({
       marginBlock: 0,
       paddingInline: 0,
