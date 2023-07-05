@@ -1,8 +1,11 @@
 import pathOr from 'ramda/src/pathOr';
 import take from 'ramda/src/take';
 import { v4 as uuid } from 'uuid';
-import fixture from '#data/serbian/frontpage/lat';
-import rtlFixture from '#data/urdu/frontpage';
+import { data as serbianFrontPageData } from '#data/serbian/frontpage/lat';
+import { data as urduFrontPageData } from '#data/urdu/frontpage';
+
+const { article: fixture } = serbianFrontPageData;
+const { article: rtlFixture } = urduFrontPageData;
 
 const getFixtureData = dir => (dir === 'ltr' ? fixture : rtlFixture);
 
