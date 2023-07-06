@@ -104,7 +104,7 @@ const MostReadPage = ({ pageData }) => {
         <IndexPageContainer>
           <MostReadWrapper>
             <MostRead
-              headingAttributes={{ id: 'content', tabindex: '-1' }}
+              headingAttributes={{ id: 'content', tabIndex: '-1' }}
               overrideHeadingAs="h1"
               data={pageData}
               columnLayout="oneColumn"

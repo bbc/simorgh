@@ -114,7 +114,7 @@ SectionLabel.propTypes = {
   visuallyHidden: bool,
   backgroundColor: string,
   overrideHeadingAs: oneOf([null, 'strong']),
-  headingAttributes: shape({ id: string, tabindex: string }),
+  headingAttributes: shape({ id: string, tabIndex: string }),
 };
 
 export default SectionLabel;

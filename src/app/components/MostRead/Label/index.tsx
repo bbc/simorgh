@@ -13,7 +13,7 @@ interface MostReadSectionLabelProps {
   linkText?: string;
   visuallyHidden?: boolean;
   overrideHeadingAs?: string;
-  headingAttributes?: { id: string; tabindex: string };
+  headingAttributes?: { id: string; tabIndex: string };
 }
 
 const MostReadSectionLabel = ({

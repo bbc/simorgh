@@ -36,7 +36,7 @@ interface MostReadProps {
   className?: string;
   renderCanonicalOnAmp?: boolean;
   overrideHeadingAs?: string;
-  headingAttributes?: { id: string; tabindex: string };
+  headingAttributes?: { id: string; tabIndex: string };
 }
 
 const MostRead = ({
