@@ -188,6 +188,11 @@ describe('Feature Idx Page', () => {
     });
 
     describe('Ads', () => {
+      const originalAppEnv = process.env.SIMORGH_APP_ENV;
+      afterEach(() => {
+        process.env.SIMORGH_APP_ENV = originalAppEnv;
+      });
+
       it.each`
         adsEnabled | showAdsBasedOnLocation | scenario
         ${false}   | ${true}                | ${'ads feature toggle is not enabled'}

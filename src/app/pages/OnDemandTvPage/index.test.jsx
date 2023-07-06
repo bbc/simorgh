@@ -70,8 +70,12 @@ jest.mock('../../components/ChartbeatAnalytics', () => {
 const { env } = process;
 
 describe('OnDemand TV Brand Page ', () => {
+  const originalAppEnv = process.env.SIMORGH_APP_ENV;
   beforeEach(() => {
     process.env = { ...env };
+  });
+  afterEach(() => {
+    process.env.SIMORGH_APP_ENV = originalAppEnv;
   });
 
   it('a11y - should render a visually hidden headline', async () => {

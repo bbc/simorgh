@@ -56,13 +56,13 @@ beforeEach(() => {
     bootstrap: jest.fn(),
     cmd: { push: jest.fn() },
   };
-  delete process.env.SIMORGH_APP_ENV;
 });
 
 afterEach(() => {
   jest.clearAllMocks();
   fetchMock.restore();
   window.dotcom = undefined;
+  delete process.env.SIMORGH_APP_ENV;
 });
 
 const getMatchingRoute = pathname =>

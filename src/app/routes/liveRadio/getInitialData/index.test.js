@@ -9,8 +9,11 @@ const spy = jest.spyOn(fetchPageData, 'default');
 jest.mock('../../utils/getConfig', () => jest.fn());
 
 describe('Get initial data for live radio', () => {
+  const originalAppEnv = process.env.SIMORGH_APP_ENV;
+
   afterEach(() => {
     process.env = { ...env };
+    process.env.SIMORGH_APP_ENV = originalAppEnv;
     jest.clearAllMocks();
   });
 
