@@ -525,6 +525,11 @@ describe('legacyAssetPageDataPath', () => {
 });
 
 describe('frontPage -> homePage migration', () => {
+  const originalApplicationEnvironment = process.env.SIMORGH_APP_ENV;
+  afterEach(() => {
+    process.env.SIMORGH_APP_ENV = originalApplicationEnvironment;
+  });
+
   const services = Object.keys(serviceConfig);
 
   const servicesNotCoveredByWorldService = [
@@ -558,12 +563,6 @@ describe('frontPage -> homePage migration', () => {
   );
 
   const liveFrontPageRoutes = liveFrontPageServices.map(serviceToRoute);
-
-  const originalApplicationEnvironment = process.env.SIMORGH_APP_ENV;
-
-  afterEach(() => {
-    process.env.SIMORGH_APP_ENV = originalApplicationEnvironment;
-  });
 
   describe.each(['local', 'test'])(
     `homePage regex on the %s environment`,

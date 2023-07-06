@@ -70,6 +70,11 @@ const ContextWrap = ({
 );
 
 describe('Charbeats Analytics Container', () => {
+  const originalAppEnv = process.env.SIMORGH_APP_ENV;
+  afterEach(() => {
+    process.env.SIMORGH_APP_ENV = originalAppEnv;
+  });
+
   it('should call AmpCharbeatsBeacon when platform is amp and toggle enabled for chartbeat on live', () => {
     process.env.SIMORGH_APP_ENV = 'live';
     const mockAmp = jest.fn().mockReturnValue('amp-return-value');
