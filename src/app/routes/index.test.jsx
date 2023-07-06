@@ -260,7 +260,11 @@ describe('Main page routes', () => {
     const variant = 'lat';
     const pathname = `/${service}/${variant}`;
 
-    fetchMock.mock(`http://localhost${pathname}.json`, frontPageJson);
+    fetch.mockResponse(
+      JSON.stringify({
+        ...frontPageJson,
+      }),
+    );
 
     const { getInitialData, pageType } = getMatchingRoute(pathname);
     const { pageData } = await getInitialData({
@@ -277,7 +281,7 @@ describe('Main page routes', () => {
       variant,
     });
 
-    const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'U toku';
+    const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'Top Stories';
 
     expect(
       await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
