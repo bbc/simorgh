@@ -2,27 +2,27 @@
   "data": {
     "article": {
       "metadata": {
-        "id": "urn:bbc:ares::index:serbian/cyr/front_page/mobile/domestic",
+        "id": "urn:bbc:ares::index:serbian/lat/front_page/mobile/domestic",
         "locators": {
-          "assetUri": "/serbian/cyr/front_page",
-          "curieCpsUrn": "urn:bbc:cps:curie:asset:5be5c72e-2538-caaf-e050-17ac2b8cd8a1/desktop/domestic",
+          "assetUri": "/serbian/lat/front_page",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:5be5c72e-2538-caaf-e050-17ac2b8cd8a2/desktop/domestic",
           "assetId": "23159045",
-          "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/front_page",
-          "curie": "http://www.bbc.co.uk/asset/5be5c72e-2538-caaf-e050-17ac2b8cd8a1/desktop/domestic"
+          "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/front_page",
+          "curie": "http://www.bbc.co.uk/asset/5be5c72e-2538-caaf-e050-17ac2b8cd8a2/desktop/domestic"
         },
         "type": "IDX",
         "createdBy": "serbian-v6",
-        "language": "sr-Cyrl",
-        "lastUpdated": 1662049970942,
+        "language": "sr-Latn",
+        "lastUpdated": 1662050009552,
         "firstPublished": 1508421988000,
-        "lastPublished": 1662049968000,
+        "lastPublished": 1662050004000,
         "timestamp": 1662049966000,
         "options": { "allowAdvertising": true },
         "analyticsLabels": {
           "cps_asset_type": "idx",
-          "counterName": "serbiancyr.page",
+          "counterName": "serbianlat.page",
           "cps_asset_id": "23159045",
-          "contentId": "urn:bbc:cps:curie:asset:5be5c72e-2538-caaf-e050-17ac2b8cd8a1"
+          "contentId": "urn:bbc:cps:curie:asset:5be5c72e-2538-caaf-e050-17ac2b8cd8a2"
         },
         "tags": {},
         "version": "v1.4.7",
@@ -35,8 +35,8 @@
           "featured-site-top-stories",
           "useful-links"
         ],
-        "title": "Почетна страна",
-        "summary": "ББЦ на српском нуди ексклузиван садржај - аналитичко, истраживачкo и непристрасно извештавање у текстовима и видео прилозима прилагођеним и друштвеним мрежама.",
+        "title": "Početna strana",
+        "summary": "BBC na srpskom nudi ekskluzivan sadržaj - analitičko, istraživačko i nepristrasno izveštavanje u tekstovima i video prilozima prilagođenim i društvenim mrežama.",
         "atiAnalytics": { "producerName": "SERBIAN", "producerId": "81" }
       },
       "content": {
@@ -67,18 +67,18 @@
               },
               {
                 "headlines": {
-                  "headline": "Улична уметност: „Доносим експлозију боја у јавни простор“ MAP TEST 1"
+                  "headline": "Ulična umetnost: „Donosim eksploziju boja u javni prostor“ MAP TEST 1"
                 },
                 "locators": {
-                  "assetUri": "/serbian/cyr/23279016",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:281f815b-b6dc-e240-87ec-2fdcc6fe401f",
+                  "assetUri": "/serbian/lat/23279016",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:281f815b-b6dc-e240-87ec-2fdcc6fe4010",
                   "assetId": "23279016",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/23279016",
-                  "curie": "http://www.bbc.co.uk/asset/281f815b-b6dc-e240-87ec-2fdcc6fe401f"
+                  "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/23279016",
+                  "curie": "http://www.bbc.co.uk/asset/281f815b-b6dc-e240-87ec-2fdcc6fe4010"
                 },
-                "summary": "Улична уметност: „Доносим експлозију боја у јавни простор“ MAP TEST 1",
+                "summary": "Ulična umetnost: „Donosim eksploziju boja u javni prostor“ MAP TEST 1",
                 "timestamp": 1585040745000,
-                "language": "sr-Cyrl",
+                "language": "sr-Latn",
                 "cpsType": "MAP",
                 "media": {
                   "id": "p01qjbpq",
@@ -124,25 +124,25 @@
                 "prominence": "standard",
                 "section": {
                   "subType": "IDX",
-                  "name": "Почетна страна",
-                  "uri": "/serbian/cyr/front_page",
+                  "name": "Početna strana",
+                  "uri": "/serbian/lat/front_page",
                   "type": "simple"
                 },
-                "id": "urn:bbc:ares::asset:serbian/cyr/23279016",
+                "id": "urn:bbc:ares::asset:serbian/lat/23279016",
                 "type": "cps"
               },
               {
                 "headlines": { "headline": "Serbia MAP test" },
                 "locators": {
-                  "assetUri": "/serbian/cyr/srbija-23278974",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:00f43a6d-42bb-7a4c-995c-44462411e646",
+                  "assetUri": "/serbian/lat/srbija-23278974",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:00f43a6d-42bb-7a4c-995c-44462411e647",
                   "assetId": "23278974",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/srbija-23278974",
-                  "curie": "http://www.bbc.co.uk/asset/00f43a6d-42bb-7a4c-995c-44462411e646"
+                  "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/srbija-23278974",
+                  "curie": "http://www.bbc.co.uk/asset/00f43a6d-42bb-7a4c-995c-44462411e647"
                 },
                 "summary": "test",
                 "timestamp": 1585040685000,
-                "language": "sr-Cyrl",
+                "language": "sr-Latn",
                 "cpsType": "MAP",
                 "media": {
                   "id": "p01n6y6z",
@@ -184,7 +184,7 @@
                 },
                 "options": { "isBreakingNews": false, "isFactCheck": false },
                 "prominence": "standard",
-                "id": "urn:bbc:ares::asset:serbian/cyr/srbija-23278974",
+                "id": "urn:bbc:ares::asset:serbian/lat/srbija-23278974",
                 "type": "cps"
               },
               {
@@ -192,15 +192,15 @@
                   "headline": "Beba panda odmara nakon prvog javnog nastupa"
                 },
                 "locators": {
-                  "assetUri": "/serbian/cyr/23180965",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:151206d3-aff2-e949-976c-e9acb326ab44",
+                  "assetUri": "/serbian/lat/23180965",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:151206d3-aff2-e949-976c-e9acb326ab45",
                   "assetId": "23180965",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/23180965",
-                  "curie": "http://www.bbc.co.uk/asset/151206d3-aff2-e949-976c-e9acb326ab44"
+                  "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/23180965",
+                  "curie": "http://www.bbc.co.uk/asset/151206d3-aff2-e949-976c-e9acb326ab45"
                 },
                 "summary": "Juang Meng danas ima deset kilograma i jednu obavezu manje",
                 "timestamp": 1516029046000,
-                "language": "sr-Cyrl",
+                "language": "sr-Latn",
                 "passport": {
                   "category": {
                     "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -226,25 +226,25 @@
                 "prominence": "standard",
                 "section": {
                   "subType": "IDX",
-                  "name": "Почетна страна",
-                  "uri": "/serbian/cyr/front_page",
+                  "name": "Početna strana",
+                  "uri": "/serbian/lat/front_page",
                   "type": "simple"
                 },
-                "id": "urn:bbc:ares::asset:serbian/cyr/23180965",
+                "id": "urn:bbc:ares::asset:serbian/lat/23180965",
                 "type": "cps"
               },
               {
-                "headlines": { "headline": "Православни Божић у свету" },
+                "headlines": { "headline": "Pravoslavni Božić u svetu" },
                 "locators": {
-                  "assetUri": "/serbian/cyr/23181025",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:91d1ed9d-78a1-0d48-ac45-25218323f1f6",
+                  "assetUri": "/serbian/lat/23181025",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:91d1ed9d-78a1-0d48-ac45-25218323f1f7",
                   "assetId": "23181025",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/23181025",
-                  "curie": "http://www.bbc.co.uk/asset/91d1ed9d-78a1-0d48-ac45-25218323f1f6"
+                  "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/23181025",
+                  "curie": "http://www.bbc.co.uk/asset/91d1ed9d-78a1-0d48-ac45-25218323f1f7"
                 },
-                "summary": "Стотине хиљада православних хришћана прославило верски празник",
+                "summary": "Stotine hiljada pravoslavnih hrišćana proslavilo verski praznik",
                 "timestamp": 1516027760000,
-                "language": "sr-Cyrl",
+                "language": "sr-Latn",
                 "cpsType": "STY",
                 "indexImage": {
                   "id": "63647099",
@@ -263,11 +263,11 @@
                 "prominence": "standard",
                 "section": {
                   "subType": "IDX",
-                  "name": "Почетна страна",
-                  "uri": "/serbian/cyr/front_page",
+                  "name": "Početna strana",
+                  "uri": "/serbian/lat/front_page",
                   "type": "simple"
                 },
-                "id": "urn:bbc:ares::asset:serbian/cyr/23181025",
+                "id": "urn:bbc:ares::asset:serbian/lat/23181025",
                 "type": "cps"
               }
             ],
@@ -280,18 +280,18 @@
             "items": [
               {
                 "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 15"
+                  "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 15"
                 },
                 "locators": {
-                  "assetUri": "/serbian/cyr/media-23169612",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:c6bb4a52-3ea8-9f4a-a849-974dd8795a46",
+                  "assetUri": "/serbian/lat/media-23169612",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:c6bb4a52-3ea8-9f4a-a849-974dd8795a47",
                   "assetId": "23169612",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169612",
-                  "curie": "http://www.bbc.co.uk/asset/c6bb4a52-3ea8-9f4a-a849-974dd8795a46"
+                  "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169612",
+                  "curie": "http://www.bbc.co.uk/asset/c6bb4a52-3ea8-9f4a-a849-974dd8795a47"
                 },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
+                "summary": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju",
                 "timestamp": 1512404913000,
-                "language": "sr-Cyrl",
+                "language": "sr-Latn",
                 "cpsType": "STY",
                 "indexImage": {
                   "id": "63603672",
@@ -300,8 +300,8 @@
                   "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 351,
                   "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "originCode": "cpsdevpb",
                   "type": "image"
@@ -313,29 +313,29 @@
                   "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 180,
                   "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "type": "image"
                 },
                 "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169612",
+                "id": "urn:bbc:ares::asset:serbian/lat/media-23169612",
                 "type": "cps"
               },
               {
                 "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 16"
+                  "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 16"
                 },
                 "locators": {
-                  "assetUri": "/serbian/cyr/media-23169613",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:60b74371-1d58-1547-9137-28d0647fbde0",
+                  "assetUri": "/serbian/lat/media-23169613",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:60b74371-1d58-1547-9137-28d0647fbde1",
                   "assetId": "23169613",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169613",
-                  "curie": "http://www.bbc.co.uk/asset/60b74371-1d58-1547-9137-28d0647fbde0"
+                  "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169613",
+                  "curie": "http://www.bbc.co.uk/asset/60b74371-1d58-1547-9137-28d0647fbde1"
                 },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
+                "summary": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju",
                 "timestamp": 1512404932000,
-                "language": "sr-Cyrl",
+                "language": "sr-Latn",
                 "cpsType": "STY",
                 "indexImage": {
                   "id": "63603672",
@@ -344,8 +344,8 @@
                   "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 351,
                   "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "originCode": "cpsdevpb",
                   "type": "image"
@@ -357,29 +357,29 @@
                   "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 180,
                   "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "type": "image"
                 },
                 "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169613",
+                "id": "urn:bbc:ares::asset:serbian/lat/media-23169613",
                 "type": "cps"
               },
               {
                 "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 17"
+                  "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 17"
                 },
                 "locators": {
-                  "assetUri": "/serbian/cyr/media-23169614",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:76ddfd93-f5bb-9f40-8181-857965827959",
+                  "assetUri": "/serbian/lat/media-23169614",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:76ddfd93-f5bb-9f40-8181-85796582795a",
                   "assetId": "23169614",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169614",
-                  "curie": "http://www.bbc.co.uk/asset/76ddfd93-f5bb-9f40-8181-857965827959"
+                  "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169614",
+                  "curie": "http://www.bbc.co.uk/asset/76ddfd93-f5bb-9f40-8181-85796582795a"
                 },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
+                "summary": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju",
                 "timestamp": 1512404944000,
-                "language": "sr-Cyrl",
+                "language": "sr-Latn",
                 "cpsType": "STY",
                 "indexImage": {
                   "id": "63603672",
@@ -388,8 +388,8 @@
                   "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 351,
                   "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "originCode": "cpsdevpb",
                   "type": "image"
@@ -401,29 +401,29 @@
                   "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 180,
                   "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "type": "image"
                 },
                 "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169614",
+                "id": "urn:bbc:ares::asset:serbian/lat/media-23169614",
                 "type": "cps"
               },
               {
                 "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 18"
+                  "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 18"
                 },
                 "locators": {
-                  "assetUri": "/serbian/cyr/media-23169615",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:925b9e5c-3059-f240-87ff-e69f979774d6",
+                  "assetUri": "/serbian/lat/media-23169615",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:925b9e5c-3059-f240-87ff-e69f979774d7",
                   "assetId": "23169615",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169615",
-                  "curie": "http://www.bbc.co.uk/asset/925b9e5c-3059-f240-87ff-e69f979774d6"
+                  "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169615",
+                  "curie": "http://www.bbc.co.uk/asset/925b9e5c-3059-f240-87ff-e69f979774d7"
                 },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
+                "summary": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju",
                 "timestamp": 1512404955000,
-                "language": "sr-Cyrl",
+                "language": "sr-Latn",
                 "cpsType": "STY",
                 "indexImage": {
                   "id": "63603672",
@@ -432,8 +432,8 @@
                   "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 351,
                   "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "originCode": "cpsdevpb",
                   "type": "image"
@@ -445,13 +445,13 @@
                   "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 180,
                   "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "type": "image"
                 },
                 "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169615",
+                "id": "urn:bbc:ares::asset:serbian/lat/media-23169615",
                 "type": "cps"
               }
             ],
@@ -464,18 +464,18 @@
             "items": [
               {
                 "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 25"
+                  "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 25"
                 },
                 "locators": {
-                  "assetUri": "/serbian/cyr/media-23169622",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:46e86861-26ec-1e49-afb1-00896f661441",
+                  "assetUri": "/serbian/lat/media-23169622",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:46e86861-26ec-1e49-afb1-00896f661442",
                   "assetId": "23169622",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169622",
-                  "curie": "http://www.bbc.co.uk/asset/46e86861-26ec-1e49-afb1-00896f661441"
+                  "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169622",
+                  "curie": "http://www.bbc.co.uk/asset/46e86861-26ec-1e49-afb1-00896f661442"
                 },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
+                "summary": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju",
                 "timestamp": 1512405043000,
-                "language": "sr-Cyrl",
+                "language": "sr-Latn",
                 "cpsType": "STY",
                 "indexImage": {
                   "id": "63603672",
@@ -484,8 +484,8 @@
                   "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 351,
                   "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "originCode": "cpsdevpb",
                   "type": "image"
@@ -497,29 +497,29 @@
                   "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 180,
                   "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "type": "image"
                 },
                 "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169622",
+                "id": "urn:bbc:ares::asset:serbian/lat/media-23169622",
                 "type": "cps"
               },
               {
                 "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 26"
+                  "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 26"
                 },
                 "locators": {
-                  "assetUri": "/serbian/cyr/media-23169623",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:bed59bb0-13e8-d441-9ac2-70d58ab92378",
+                  "assetUri": "/serbian/lat/media-23169623",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:bed59bb0-13e8-d441-9ac2-70d58ab92379",
                   "assetId": "23169623",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169623",
-                  "curie": "http://www.bbc.co.uk/asset/bed59bb0-13e8-d441-9ac2-70d58ab92378"
+                  "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169623",
+                  "curie": "http://www.bbc.co.uk/asset/bed59bb0-13e8-d441-9ac2-70d58ab92379"
                 },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
+                "summary": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju",
                 "timestamp": 1512405053000,
-                "language": "sr-Cyrl",
+                "language": "sr-Latn",
                 "cpsType": "STY",
                 "indexImage": {
                   "id": "63603672",
@@ -528,8 +528,8 @@
                   "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 351,
                   "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "originCode": "cpsdevpb",
                   "type": "image"
@@ -541,29 +541,29 @@
                   "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 180,
                   "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "type": "image"
                 },
                 "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169623",
+                "id": "urn:bbc:ares::asset:serbian/lat/media-23169623",
                 "type": "cps"
               },
               {
                 "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 27"
+                  "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 27"
                 },
                 "locators": {
-                  "assetUri": "/serbian/cyr/media-23169624",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:9fdff7d7-a6c9-4840-b79f-d111bbb7a4e0",
+                  "assetUri": "/serbian/lat/media-23169624",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:9fdff7d7-a6c9-4840-b79f-d111bbb7a4e1",
                   "assetId": "23169624",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169624",
-                  "curie": "http://www.bbc.co.uk/asset/9fdff7d7-a6c9-4840-b79f-d111bbb7a4e0"
+                  "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169624",
+                  "curie": "http://www.bbc.co.uk/asset/9fdff7d7-a6c9-4840-b79f-d111bbb7a4e1"
                 },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
+                "summary": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju",
                 "timestamp": 1512405063000,
-                "language": "sr-Cyrl",
+                "language": "sr-Latn",
                 "cpsType": "STY",
                 "indexImage": {
                   "id": "63603672",
@@ -572,8 +572,8 @@
                   "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 351,
                   "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "originCode": "cpsdevpb",
                   "type": "image"
@@ -585,29 +585,29 @@
                   "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 180,
                   "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "type": "image"
                 },
                 "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169624",
+                "id": "urn:bbc:ares::asset:serbian/lat/media-23169624",
                 "type": "cps"
               },
               {
                 "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 28"
+                  "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 28"
                 },
                 "locators": {
-                  "assetUri": "/serbian/cyr/media-23169625",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:419ff24e-4687-3741-a1d4-7d8c6a023b57",
+                  "assetUri": "/serbian/lat/media-23169625",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:419ff24e-4687-3741-a1d4-7d8c6a023b58",
                   "assetId": "23169625",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169625",
-                  "curie": "http://www.bbc.co.uk/asset/419ff24e-4687-3741-a1d4-7d8c6a023b57"
+                  "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169625",
+                  "curie": "http://www.bbc.co.uk/asset/419ff24e-4687-3741-a1d4-7d8c6a023b58"
                 },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
+                "summary": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju",
                 "timestamp": 1512405074000,
-                "language": "sr-Cyrl",
+                "language": "sr-Latn",
                 "cpsType": "STY",
                 "indexImage": {
                   "id": "63603672",
@@ -616,8 +616,8 @@
                   "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 351,
                   "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "originCode": "cpsdevpb",
                   "type": "image"
@@ -629,29 +629,29 @@
                   "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 180,
                   "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "type": "image"
                 },
                 "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169625",
+                "id": "urn:bbc:ares::asset:serbian/lat/media-23169625",
                 "type": "cps"
               },
               {
                 "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 29"
+                  "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 29"
                 },
                 "locators": {
-                  "assetUri": "/serbian/cyr/media-23169626",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:1849c8f5-dac1-294b-a0b5-823b119b1e6d",
+                  "assetUri": "/serbian/lat/media-23169626",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:1849c8f5-dac1-294b-a0b5-823b119b1e6e",
                   "assetId": "23169626",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169626",
-                  "curie": "http://www.bbc.co.uk/asset/1849c8f5-dac1-294b-a0b5-823b119b1e6d"
+                  "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169626",
+                  "curie": "http://www.bbc.co.uk/asset/1849c8f5-dac1-294b-a0b5-823b119b1e6e"
                 },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
+                "summary": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju",
                 "timestamp": 1512405084000,
-                "language": "sr-Cyrl",
+                "language": "sr-Latn",
                 "cpsType": "STY",
                 "indexImage": {
                   "id": "63603672",
@@ -660,8 +660,8 @@
                   "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 351,
                   "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "originCode": "cpsdevpb",
                   "type": "image"
@@ -673,29 +673,29 @@
                   "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 180,
                   "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "type": "image"
                 },
                 "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169626",
+                "id": "urn:bbc:ares::asset:serbian/lat/media-23169626",
                 "type": "cps"
               },
               {
                 "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 30"
+                  "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 30"
                 },
                 "locators": {
-                  "assetUri": "/serbian/cyr/media-23169627",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:ab3b3ff1-1cf3-1f43-b7b1-5779c8c60f21",
+                  "assetUri": "/serbian/lat/media-23169627",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:ab3b3ff1-1cf3-1f43-b7b1-5779c8c60f22",
                   "assetId": "23169627",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169627",
-                  "curie": "http://www.bbc.co.uk/asset/ab3b3ff1-1cf3-1f43-b7b1-5779c8c60f21"
+                  "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169627",
+                  "curie": "http://www.bbc.co.uk/asset/ab3b3ff1-1cf3-1f43-b7b1-5779c8c60f22"
                 },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
+                "summary": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju",
                 "timestamp": 1512405102000,
-                "language": "sr-Cyrl",
+                "language": "sr-Latn",
                 "cpsType": "STY",
                 "indexImage": {
                   "id": "63603672",
@@ -704,8 +704,8 @@
                   "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 351,
                   "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "originCode": "cpsdevpb",
                   "type": "image"
@@ -717,13 +717,13 @@
                   "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 180,
                   "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "type": "image"
                 },
                 "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169627",
+                "id": "urn:bbc:ares::asset:serbian/lat/media-23169627",
                 "type": "cps"
               }
             ],
@@ -736,18 +736,18 @@
             "items": [
               {
                 "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 31"
+                  "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 31"
                 },
                 "locators": {
-                  "assetUri": "/serbian/cyr/media-23169628",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:dc35d343-6b9d-0e41-888c-fa036f1d4a61",
+                  "assetUri": "/serbian/lat/media-23169628",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:dc35d343-6b9d-0e41-888c-fa036f1d4a62",
                   "assetId": "23169628",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169628",
-                  "curie": "http://www.bbc.co.uk/asset/dc35d343-6b9d-0e41-888c-fa036f1d4a61"
+                  "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169628",
+                  "curie": "http://www.bbc.co.uk/asset/dc35d343-6b9d-0e41-888c-fa036f1d4a62"
                 },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
+                "summary": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju",
                 "timestamp": 1512405111000,
-                "language": "sr-Cyrl",
+                "language": "sr-Latn",
                 "cpsType": "STY",
                 "indexImage": {
                   "id": "63603672",
@@ -756,8 +756,8 @@
                   "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 351,
                   "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "originCode": "cpsdevpb",
                   "type": "image"
@@ -769,29 +769,29 @@
                   "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 180,
                   "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "type": "image"
                 },
                 "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169628",
+                "id": "urn:bbc:ares::asset:serbian/lat/media-23169628",
                 "type": "cps"
               },
               {
                 "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 32"
+                  "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 32"
                 },
                 "locators": {
-                  "assetUri": "/serbian/cyr/media-23169629",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:aa00d55a-de84-c24f-82fa-8e203b76d0c4",
+                  "assetUri": "/serbian/lat/media-23169629",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:aa00d55a-de84-c24f-82fa-8e203b76d0c5",
                   "assetId": "23169629",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169629",
-                  "curie": "http://www.bbc.co.uk/asset/aa00d55a-de84-c24f-82fa-8e203b76d0c4"
+                  "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169629",
+                  "curie": "http://www.bbc.co.uk/asset/aa00d55a-de84-c24f-82fa-8e203b76d0c5"
                 },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
+                "summary": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju",
                 "timestamp": 1512405121000,
-                "language": "sr-Cyrl",
+                "language": "sr-Latn",
                 "cpsType": "STY",
                 "indexImage": {
                   "id": "63603672",
@@ -800,8 +800,8 @@
                   "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 351,
                   "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "originCode": "cpsdevpb",
                   "type": "image"
@@ -813,29 +813,29 @@
                   "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 180,
                   "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "type": "image"
                 },
                 "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169629",
+                "id": "urn:bbc:ares::asset:serbian/lat/media-23169629",
                 "type": "cps"
               },
               {
                 "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 33"
+                  "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 33"
                 },
                 "locators": {
-                  "assetUri": "/serbian/cyr/media-23169630",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:8f52c324-d00c-f944-b299-f8f13c542b63",
+                  "assetUri": "/serbian/lat/media-23169630",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:8f52c324-d00c-f944-b299-f8f13c542b64",
                   "assetId": "23169630",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169630",
-                  "curie": "http://www.bbc.co.uk/asset/8f52c324-d00c-f944-b299-f8f13c542b63"
+                  "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169630",
+                  "curie": "http://www.bbc.co.uk/asset/8f52c324-d00c-f944-b299-f8f13c542b64"
                 },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
+                "summary": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju",
                 "timestamp": 1512405132000,
-                "language": "sr-Cyrl",
+                "language": "sr-Latn",
                 "cpsType": "STY",
                 "indexImage": {
                   "id": "63603672",
@@ -844,8 +844,8 @@
                   "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 351,
                   "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "originCode": "cpsdevpb",
                   "type": "image"
@@ -857,29 +857,29 @@
                   "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 180,
                   "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "type": "image"
                 },
                 "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169630",
+                "id": "urn:bbc:ares::asset:serbian/lat/media-23169630",
                 "type": "cps"
               },
               {
                 "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 34"
+                  "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 34"
                 },
                 "locators": {
-                  "assetUri": "/serbian/cyr/media-23169631",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:60898e52-4a3e-aa44-88f5-861644dde52d",
+                  "assetUri": "/serbian/lat/media-23169631",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:60898e52-4a3e-aa44-88f5-861644dde52e",
                   "assetId": "23169631",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169631",
-                  "curie": "http://www.bbc.co.uk/asset/60898e52-4a3e-aa44-88f5-861644dde52d"
+                  "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169631",
+                  "curie": "http://www.bbc.co.uk/asset/60898e52-4a3e-aa44-88f5-861644dde52e"
                 },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
+                "summary": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju",
                 "timestamp": 1512405146000,
-                "language": "sr-Cyrl",
+                "language": "sr-Latn",
                 "cpsType": "STY",
                 "indexImage": {
                   "id": "63603672",
@@ -888,8 +888,8 @@
                   "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 351,
                   "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "originCode": "cpsdevpb",
                   "type": "image"
@@ -901,29 +901,29 @@
                   "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 180,
                   "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "type": "image"
                 },
                 "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169631",
+                "id": "urn:bbc:ares::asset:serbian/lat/media-23169631",
                 "type": "cps"
               },
               {
                 "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 35"
+                  "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 35"
                 },
                 "locators": {
-                  "assetUri": "/serbian/cyr/media-23169632",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:1a8ff619-0767-5e4e-bff8-f665407588a1",
+                  "assetUri": "/serbian/lat/media-23169632",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:1a8ff619-0767-5e4e-bff8-f665407588a2",
                   "assetId": "23169632",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169632",
-                  "curie": "http://www.bbc.co.uk/asset/1a8ff619-0767-5e4e-bff8-f665407588a1"
+                  "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169632",
+                  "curie": "http://www.bbc.co.uk/asset/1a8ff619-0767-5e4e-bff8-f665407588a2"
                 },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
+                "summary": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju",
                 "timestamp": 1512405155000,
-                "language": "sr-Cyrl",
+                "language": "sr-Latn",
                 "cpsType": "STY",
                 "indexImage": {
                   "id": "63603672",
@@ -932,8 +932,8 @@
                   "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 351,
                   "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "originCode": "cpsdevpb",
                   "type": "image"
@@ -945,29 +945,29 @@
                   "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 180,
                   "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "type": "image"
                 },
                 "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169632",
+                "id": "urn:bbc:ares::asset:serbian/lat/media-23169632",
                 "type": "cps"
               },
               {
                 "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 36"
+                  "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 36"
                 },
                 "locators": {
-                  "assetUri": "/serbian/cyr/media-23169633",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:8ec20548-be66-3545-8d55-9d3378dd4874",
+                  "assetUri": "/serbian/lat/media-23169633",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:8ec20548-be66-3545-8d55-9d3378dd4875",
                   "assetId": "23169633",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169633",
-                  "curie": "http://www.bbc.co.uk/asset/8ec20548-be66-3545-8d55-9d3378dd4874"
+                  "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169633",
+                  "curie": "http://www.bbc.co.uk/asset/8ec20548-be66-3545-8d55-9d3378dd4875"
                 },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
+                "summary": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju",
                 "timestamp": 1512405163000,
-                "language": "sr-Cyrl",
+                "language": "sr-Latn",
                 "cpsType": "STY",
                 "indexImage": {
                   "id": "63603672",
@@ -976,8 +976,8 @@
                   "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 351,
                   "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "originCode": "cpsdevpb",
                   "type": "image"
@@ -989,26 +989,17 @@
                   "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 180,
                   "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "type": "image"
                 },
                 "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169633",
+                "id": "urn:bbc:ares::asset:serbian/lat/media-23169633",
                 "type": "cps"
               }
             ],
-            "strapline": {
-              "name": "In case you missed it",
-              "type": "LINK",
-              "links": {
-                "highweb": "/serbian/lat/popular/read",
-                "desktop": "/serbian/lat/popular/read",
-                "mobile": "/serbian/lat/popular/read",
-                "enhancedmobile": "/serbian/lat/popular/read"
-              }
-            },
+            "strapline": { "name": "In case you missed it" },
             "semanticGroupName": "Section 3"
           },
           {
@@ -1017,18 +1008,18 @@
             "items": [
               {
                 "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 11"
+                  "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 11"
                 },
                 "locators": {
-                  "assetUri": "/serbian/cyr/media-23169608",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:7dcb9041-b854-1c49-beae-9cbfc39f7ad7",
+                  "assetUri": "/serbian/lat/media-23169608",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:7dcb9041-b854-1c49-beae-9cbfc39f7ad8",
                   "assetId": "23169608",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169608",
-                  "curie": "http://www.bbc.co.uk/asset/7dcb9041-b854-1c49-beae-9cbfc39f7ad7"
+                  "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169608",
+                  "curie": "http://www.bbc.co.uk/asset/7dcb9041-b854-1c49-beae-9cbfc39f7ad8"
                 },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
+                "summary": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju",
                 "timestamp": 1520349658000,
-                "language": "sr-Cyrl",
+                "language": "sr-Latn",
                 "passport": {
                   "category": {
                     "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Interactive",
@@ -1044,8 +1035,8 @@
                   "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 351,
                   "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "originCode": "cpsdevpb",
                   "type": "image"
@@ -1057,29 +1048,29 @@
                   "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 180,
                   "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "type": "image"
                 },
                 "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169608",
+                "id": "urn:bbc:ares::asset:serbian/lat/media-23169608",
                 "type": "cps"
               },
               {
                 "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 12"
+                  "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 12"
                 },
                 "locators": {
-                  "assetUri": "/serbian/cyr/media-23169609",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:bb8e8b05-c110-c24f-ace7-8070aa8840ba",
+                  "assetUri": "/serbian/lat/media-23169609",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:bb8e8b05-c110-c24f-ace7-8070aa8840bb",
                   "assetId": "23169609",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169609",
-                  "curie": "http://www.bbc.co.uk/asset/bb8e8b05-c110-c24f-ace7-8070aa8840ba"
+                  "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169609",
+                  "curie": "http://www.bbc.co.uk/asset/bb8e8b05-c110-c24f-ace7-8070aa8840bb"
                 },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
+                "summary": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju",
                 "timestamp": 1512404843000,
-                "language": "sr-Cyrl",
+                "language": "sr-Latn",
                 "cpsType": "STY",
                 "indexImage": {
                   "id": "63603672",
@@ -1088,8 +1079,8 @@
                   "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 351,
                   "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "originCode": "cpsdevpb",
                   "type": "image"
@@ -1101,29 +1092,29 @@
                   "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 180,
                   "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "type": "image"
                 },
                 "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169609",
+                "id": "urn:bbc:ares::asset:serbian/lat/media-23169609",
                 "type": "cps"
               },
               {
                 "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 13"
+                  "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 13"
                 },
                 "locators": {
-                  "assetUri": "/serbian/cyr/media-23169610",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:9dc640ae-90d1-c349-81a6-8e743c631c7e",
+                  "assetUri": "/serbian/lat/media-23169610",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:9dc640ae-90d1-c349-81a6-8e743c631c7f",
                   "assetId": "23169610",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169610",
-                  "curie": "http://www.bbc.co.uk/asset/9dc640ae-90d1-c349-81a6-8e743c631c7e"
+                  "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169610",
+                  "curie": "http://www.bbc.co.uk/asset/9dc640ae-90d1-c349-81a6-8e743c631c7f"
                 },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
+                "summary": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju",
                 "timestamp": 1512404855000,
-                "language": "sr-Cyrl",
+                "language": "sr-Latn",
                 "cpsType": "STY",
                 "indexImage": {
                   "id": "63603672",
@@ -1132,8 +1123,8 @@
                   "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 351,
                   "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "originCode": "cpsdevpb",
                   "type": "image"
@@ -1145,29 +1136,29 @@
                   "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 180,
                   "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "type": "image"
                 },
                 "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169610",
+                "id": "urn:bbc:ares::asset:serbian/lat/media-23169610",
                 "type": "cps"
               },
               {
                 "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 14"
+                  "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 14"
                 },
                 "locators": {
-                  "assetUri": "/serbian/cyr/media-23169611",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:f6c242ea-6464-ec40-9b65-d63720333563",
+                  "assetUri": "/serbian/lat/media-23169611",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:f6c242ea-6464-ec40-9b65-d63720333564",
                   "assetId": "23169611",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169611",
-                  "curie": "http://www.bbc.co.uk/asset/f6c242ea-6464-ec40-9b65-d63720333563"
+                  "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169611",
+                  "curie": "http://www.bbc.co.uk/asset/f6c242ea-6464-ec40-9b65-d63720333564"
                 },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
+                "summary": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju",
                 "timestamp": 1512404866000,
-                "language": "sr-Cyrl",
+                "language": "sr-Latn",
                 "cpsType": "STY",
                 "indexImage": {
                   "id": "63603672",
@@ -1176,8 +1167,8 @@
                   "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 351,
                   "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "originCode": "cpsdevpb",
                   "type": "image"
@@ -1189,13 +1180,13 @@
                   "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 180,
                   "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "type": "image"
                 },
                 "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169611",
+                "id": "urn:bbc:ares::asset:serbian/lat/media-23169611",
                 "type": "cps"
               }
             ],
@@ -1207,18 +1198,18 @@
             "items": [
               {
                 "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 19"
+                  "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 19"
                 },
                 "locators": {
-                  "assetUri": "/serbian/cyr/media-23169616",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:6f98837f-a378-a14b-b8b0-e098ddcaee97",
+                  "assetUri": "/serbian/lat/media-23169616",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:6f98837f-a378-a14b-b8b0-e098ddcaee98",
                   "assetId": "23169616",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169616",
-                  "curie": "http://www.bbc.co.uk/asset/6f98837f-a378-a14b-b8b0-e098ddcaee97"
+                  "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169616",
+                  "curie": "http://www.bbc.co.uk/asset/6f98837f-a378-a14b-b8b0-e098ddcaee98"
                 },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
+                "summary": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju",
                 "timestamp": 1512404963000,
-                "language": "sr-Cyrl",
+                "language": "sr-Latn",
                 "cpsType": "STY",
                 "indexImage": {
                   "id": "63603672",
@@ -1227,8 +1218,8 @@
                   "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 351,
                   "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "originCode": "cpsdevpb",
                   "type": "image"
@@ -1240,29 +1231,29 @@
                   "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 180,
                   "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "type": "image"
                 },
                 "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169616",
+                "id": "urn:bbc:ares::asset:serbian/lat/media-23169616",
                 "type": "cps"
               },
               {
                 "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 20"
+                  "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 20"
                 },
                 "locators": {
-                  "assetUri": "/serbian/cyr/media-23169617",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:0bf6ef6e-d769-3346-81dd-7026b7f56ac0",
+                  "assetUri": "/serbian/lat/media-23169617",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:0bf6ef6e-d769-3346-81dd-7026b7f56ac1",
                   "assetId": "23169617",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169617",
-                  "curie": "http://www.bbc.co.uk/asset/0bf6ef6e-d769-3346-81dd-7026b7f56ac0"
+                  "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169617",
+                  "curie": "http://www.bbc.co.uk/asset/0bf6ef6e-d769-3346-81dd-7026b7f56ac1"
                 },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
+                "summary": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju",
                 "timestamp": 1512404973000,
-                "language": "sr-Cyrl",
+                "language": "sr-Latn",
                 "cpsType": "STY",
                 "indexImage": {
                   "id": "63603672",
@@ -1271,8 +1262,8 @@
                   "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 351,
                   "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "originCode": "cpsdevpb",
                   "type": "image"
@@ -1284,29 +1275,29 @@
                   "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 180,
                   "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "type": "image"
                 },
                 "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169617",
+                "id": "urn:bbc:ares::asset:serbian/lat/media-23169617",
                 "type": "cps"
               },
               {
                 "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 21"
+                  "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 21"
                 },
                 "locators": {
-                  "assetUri": "/serbian/cyr/media-23169618",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:fae15535-6ec3-2e4c-ad18-808dc16f8bed",
+                  "assetUri": "/serbian/lat/media-23169618",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:fae15535-6ec3-2e4c-ad18-808dc16f8bee",
                   "assetId": "23169618",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169618",
-                  "curie": "http://www.bbc.co.uk/asset/fae15535-6ec3-2e4c-ad18-808dc16f8bed"
+                  "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169618",
+                  "curie": "http://www.bbc.co.uk/asset/fae15535-6ec3-2e4c-ad18-808dc16f8bee"
                 },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
+                "summary": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju",
                 "timestamp": 1512404993000,
-                "language": "sr-Cyrl",
+                "language": "sr-Latn",
                 "cpsType": "STY",
                 "indexImage": {
                   "id": "63603672",
@@ -1315,8 +1306,8 @@
                   "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 351,
                   "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "originCode": "cpsdevpb",
                   "type": "image"
@@ -1328,29 +1319,29 @@
                   "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 180,
                   "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "type": "image"
                 },
                 "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169618",
+                "id": "urn:bbc:ares::asset:serbian/lat/media-23169618",
                 "type": "cps"
               },
               {
                 "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 22"
+                  "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 22"
                 },
                 "locators": {
-                  "assetUri": "/serbian/cyr/media-23169619",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:5f470c43-78fc-dc47-a396-b35b3f9bcfa5",
+                  "assetUri": "/serbian/lat/media-23169619",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:5f470c43-78fc-dc47-a396-b35b3f9bcfa6",
                   "assetId": "23169619",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169619",
-                  "curie": "http://www.bbc.co.uk/asset/5f470c43-78fc-dc47-a396-b35b3f9bcfa5"
+                  "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169619",
+                  "curie": "http://www.bbc.co.uk/asset/5f470c43-78fc-dc47-a396-b35b3f9bcfa6"
                 },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
+                "summary": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju",
                 "timestamp": 1512405001000,
-                "language": "sr-Cyrl",
+                "language": "sr-Latn",
                 "cpsType": "STY",
                 "indexImage": {
                   "id": "63603672",
@@ -1359,8 +1350,8 @@
                   "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 351,
                   "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "originCode": "cpsdevpb",
                   "type": "image"
@@ -1372,29 +1363,29 @@
                   "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 180,
                   "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "type": "image"
                 },
                 "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169619",
+                "id": "urn:bbc:ares::asset:serbian/lat/media-23169619",
                 "type": "cps"
               },
               {
                 "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 23"
+                  "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 23"
                 },
                 "locators": {
-                  "assetUri": "/serbian/cyr/media-23169620",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:581e9c63-b91d-8640-b366-be6f3587e45d",
+                  "assetUri": "/serbian/lat/media-23169620",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:581e9c63-b91d-8640-b366-be6f3587e45e",
                   "assetId": "23169620",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169620",
-                  "curie": "http://www.bbc.co.uk/asset/581e9c63-b91d-8640-b366-be6f3587e45d"
+                  "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169620",
+                  "curie": "http://www.bbc.co.uk/asset/581e9c63-b91d-8640-b366-be6f3587e45e"
                 },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
+                "summary": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju",
                 "timestamp": 1512405014000,
-                "language": "sr-Cyrl",
+                "language": "sr-Latn",
                 "cpsType": "STY",
                 "indexImage": {
                   "id": "63603672",
@@ -1403,8 +1394,8 @@
                   "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 351,
                   "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "originCode": "cpsdevpb",
                   "type": "image"
@@ -1416,29 +1407,29 @@
                   "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 180,
                   "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "type": "image"
                 },
                 "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169620",
+                "id": "urn:bbc:ares::asset:serbian/lat/media-23169620",
                 "type": "cps"
               },
               {
                 "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 24"
+                  "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 24"
                 },
                 "locators": {
-                  "assetUri": "/serbian/cyr/media-23169621",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:e9a2d913-2aaf-d748-8f16-4fc62bc02a96",
+                  "assetUri": "/serbian/lat/media-23169621",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:e9a2d913-2aaf-d748-8f16-4fc62bc02a97",
                   "assetId": "23169621",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169621",
-                  "curie": "http://www.bbc.co.uk/asset/e9a2d913-2aaf-d748-8f16-4fc62bc02a96"
+                  "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169621",
+                  "curie": "http://www.bbc.co.uk/asset/e9a2d913-2aaf-d748-8f16-4fc62bc02a97"
                 },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
+                "summary": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju",
                 "timestamp": 1512405031000,
-                "language": "sr-Cyrl",
+                "language": "sr-Latn",
                 "cpsType": "STY",
                 "indexImage": {
                   "id": "63603672",
@@ -1447,8 +1438,8 @@
                   "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 351,
                   "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "originCode": "cpsdevpb",
                   "type": "image"
@@ -1460,29 +1451,29 @@
                   "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 180,
                   "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "type": "image"
                 },
                 "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169621",
+                "id": "urn:bbc:ares::asset:serbian/lat/media-23169621",
                 "type": "cps"
               },
               {
                 "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 2"
+                  "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 2"
                 },
                 "locators": {
-                  "assetUri": "/serbian/cyr/media-23169489",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:eca68bfa-610a-c04b-b184-bf37a0b6d9d1",
+                  "assetUri": "/serbian/lat/media-23169489",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:eca68bfa-610a-c04b-b184-bf37a0b6d9d2",
                   "assetId": "23169489",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169489",
-                  "curie": "http://www.bbc.co.uk/asset/eca68bfa-610a-c04b-b184-bf37a0b6d9d1"
+                  "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169489",
+                  "curie": "http://www.bbc.co.uk/asset/eca68bfa-610a-c04b-b184-bf37a0b6d9d2"
                 },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
+                "summary": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju",
                 "timestamp": 1512404387000,
-                "language": "sr-Cyrl",
+                "language": "sr-Latn",
                 "cpsType": "STY",
                 "indexImage": {
                   "id": "63603672",
@@ -1491,8 +1482,8 @@
                   "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 351,
                   "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "originCode": "cpsdevpb",
                   "type": "image"
@@ -1504,29 +1495,29 @@
                   "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 180,
                   "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "type": "image"
                 },
                 "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169489",
+                "id": "urn:bbc:ares::asset:serbian/lat/media-23169489",
                 "type": "cps"
               },
               {
                 "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 3"
+                  "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 3"
                 },
                 "locators": {
-                  "assetUri": "/serbian/cyr/media-23169490",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:1f097a89-47d5-424d-a097-622de49e2b94",
+                  "assetUri": "/serbian/lat/media-23169490",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:1f097a89-47d5-424d-a097-622de49e2b95",
                   "assetId": "23169490",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169490",
-                  "curie": "http://www.bbc.co.uk/asset/1f097a89-47d5-424d-a097-622de49e2b94"
+                  "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169490",
+                  "curie": "http://www.bbc.co.uk/asset/1f097a89-47d5-424d-a097-622de49e2b95"
                 },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
+                "summary": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju",
                 "timestamp": 1512404400000,
-                "language": "sr-Cyrl",
+                "language": "sr-Latn",
                 "cpsType": "STY",
                 "indexImage": {
                   "id": "63603672",
@@ -1535,8 +1526,8 @@
                   "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 351,
                   "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "originCode": "cpsdevpb",
                   "type": "image"
@@ -1548,29 +1539,29 @@
                   "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 180,
                   "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "type": "image"
                 },
                 "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169490",
+                "id": "urn:bbc:ares::asset:serbian/lat/media-23169490",
                 "type": "cps"
               },
               {
                 "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 4"
+                  "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 4"
                 },
                 "locators": {
-                  "assetUri": "/serbian/cyr/media-23169491",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:8d82b668-7eed-2c4b-b088-3c9877aad22d",
+                  "assetUri": "/serbian/lat/media-23169491",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:8d82b668-7eed-2c4b-b088-3c9877aad22e",
                   "assetId": "23169491",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169491",
-                  "curie": "http://www.bbc.co.uk/asset/8d82b668-7eed-2c4b-b088-3c9877aad22d"
+                  "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169491",
+                  "curie": "http://www.bbc.co.uk/asset/8d82b668-7eed-2c4b-b088-3c9877aad22e"
                 },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
+                "summary": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju",
                 "timestamp": 1512404431000,
-                "language": "sr-Cyrl",
+                "language": "sr-Latn",
                 "cpsType": "STY",
                 "indexImage": {
                   "id": "63603672",
@@ -1579,8 +1570,8 @@
                   "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 351,
                   "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "originCode": "cpsdevpb",
                   "type": "image"
@@ -1592,29 +1583,29 @@
                   "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 180,
                   "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "type": "image"
                 },
                 "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169491",
+                "id": "urn:bbc:ares::asset:serbian/lat/media-23169491",
                 "type": "cps"
               },
               {
                 "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 5"
+                  "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 5"
                 },
                 "locators": {
-                  "assetUri": "/serbian/cyr/media-23169492",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:5246c7d9-500c-df4a-8aac-bed3ab682b3b",
+                  "assetUri": "/serbian/lat/media-23169492",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:5246c7d9-500c-df4a-8aac-bed3ab682b3c",
                   "assetId": "23169492",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169492",
-                  "curie": "http://www.bbc.co.uk/asset/5246c7d9-500c-df4a-8aac-bed3ab682b3b"
+                  "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169492",
+                  "curie": "http://www.bbc.co.uk/asset/5246c7d9-500c-df4a-8aac-bed3ab682b3c"
                 },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
+                "summary": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju",
                 "timestamp": 1512404628000,
-                "language": "sr-Cyrl",
+                "language": "sr-Latn",
                 "cpsType": "STY",
                 "indexImage": {
                   "id": "63603672",
@@ -1623,8 +1614,8 @@
                   "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 351,
                   "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "originCode": "cpsdevpb",
                   "type": "image"
@@ -1636,29 +1627,29 @@
                   "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 180,
                   "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "type": "image"
                 },
                 "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169492",
+                "id": "urn:bbc:ares::asset:serbian/lat/media-23169492",
                 "type": "cps"
               },
               {
                 "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 6"
+                  "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 6"
                 },
                 "locators": {
-                  "assetUri": "/serbian/cyr/media-23169493",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:05a64eb2-12b3-1742-b149-6cd4b050b571",
+                  "assetUri": "/serbian/lat/media-23169493",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:05a64eb2-12b3-1742-b149-6cd4b050b572",
                   "assetId": "23169493",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169493",
-                  "curie": "http://www.bbc.co.uk/asset/05a64eb2-12b3-1742-b149-6cd4b050b571"
+                  "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169493",
+                  "curie": "http://www.bbc.co.uk/asset/05a64eb2-12b3-1742-b149-6cd4b050b572"
                 },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
+                "summary": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju",
                 "timestamp": 1512404639000,
-                "language": "sr-Cyrl",
+                "language": "sr-Latn",
                 "cpsType": "STY",
                 "indexImage": {
                   "id": "63603672",
@@ -1667,8 +1658,8 @@
                   "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 351,
                   "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "originCode": "cpsdevpb",
                   "type": "image"
@@ -1680,29 +1671,29 @@
                   "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 180,
                   "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "type": "image"
                 },
                 "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169493",
+                "id": "urn:bbc:ares::asset:serbian/lat/media-23169493",
                 "type": "cps"
               },
               {
                 "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 7"
+                  "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 7"
                 },
                 "locators": {
-                  "assetUri": "/serbian/cyr/media-23169494",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:42765cca-a2ef-0742-8f78-f24c59d78cae",
+                  "assetUri": "/serbian/lat/media-23169494",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:42765cca-a2ef-0742-8f78-f24c59d78caf",
                   "assetId": "23169494",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169494",
-                  "curie": "http://www.bbc.co.uk/asset/42765cca-a2ef-0742-8f78-f24c59d78cae"
+                  "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169494",
+                  "curie": "http://www.bbc.co.uk/asset/42765cca-a2ef-0742-8f78-f24c59d78caf"
                 },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
+                "summary": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju",
                 "timestamp": 1512404649000,
-                "language": "sr-Cyrl",
+                "language": "sr-Latn",
                 "cpsType": "STY",
                 "indexImage": {
                   "id": "63603672",
@@ -1711,8 +1702,8 @@
                   "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 351,
                   "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "originCode": "cpsdevpb",
                   "type": "image"
@@ -1724,29 +1715,29 @@
                   "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 180,
                   "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "type": "image"
                 },
                 "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169494",
+                "id": "urn:bbc:ares::asset:serbian/lat/media-23169494",
                 "type": "cps"
               },
               {
                 "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 8"
+                  "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 8"
                 },
                 "locators": {
-                  "assetUri": "/serbian/cyr/media-23169495",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:82cc4275-a7b5-6d4a-a6ff-59c592c2ba46",
+                  "assetUri": "/serbian/lat/media-23169495",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:82cc4275-a7b5-6d4a-a6ff-59c592c2ba47",
                   "assetId": "23169495",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169495",
-                  "curie": "http://www.bbc.co.uk/asset/82cc4275-a7b5-6d4a-a6ff-59c592c2ba46"
+                  "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169495",
+                  "curie": "http://www.bbc.co.uk/asset/82cc4275-a7b5-6d4a-a6ff-59c592c2ba47"
                 },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
+                "summary": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju",
                 "timestamp": 1512404728000,
-                "language": "sr-Cyrl",
+                "language": "sr-Latn",
                 "cpsType": "STY",
                 "indexImage": {
                   "id": "63603672",
@@ -1755,8 +1746,8 @@
                   "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 351,
                   "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "originCode": "cpsdevpb",
                   "type": "image"
@@ -1768,29 +1759,29 @@
                   "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 180,
                   "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "type": "image"
                 },
                 "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169495",
+                "id": "urn:bbc:ares::asset:serbian/lat/media-23169495",
                 "type": "cps"
               },
               {
                 "headlines": {
-                  "headline": "По старом или новом календару, она не касни"
+                  "headline": "Po starom ili novom kalendaru, ona ne kasni"
                 },
                 "locators": {
-                  "assetUri": "/serbian/cyr/23180995",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:7c1fcd16-be90-9c4f-a745-67fa76656c94",
+                  "assetUri": "/serbian/lat/23180995",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:7c1fcd16-be90-9c4f-a745-67fa76656c95",
                   "assetId": "23180995",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/23180995",
-                  "curie": "http://www.bbc.co.uk/asset/7c1fcd16-be90-9c4f-a745-67fa76656c94"
+                  "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/23180995",
+                  "curie": "http://www.bbc.co.uk/asset/7c1fcd16-be90-9c4f-a745-67fa76656c95"
                 },
-                "summary": "Нова година по старом календару прослављена је уз ватромет, маскембал и плес",
+                "summary": "Nova godina po starom kalendaru proslavljena je uz vatromet, maskembal i ples",
                 "timestamp": 1516026891000,
-                "language": "sr-Cyrl",
+                "language": "sr-Latn",
                 "cpsType": "STY",
                 "indexImage": {
                   "id": "63647003",
@@ -1800,7 +1791,7 @@
                   "height": 549,
                   "width": 976,
                   "altText": "-",
-                  "caption": "Украјинци Нову годину по старом календару дочекују под маскама",
+                  "caption": "Ukrajinci Novu godinu po starom kalendaru dočekuju pod maskama",
                   "copyrightHolder": "EPA",
                   "originCode": "cpsdevpb",
                   "type": "image"
@@ -1808,12 +1799,12 @@
                 "options": { "isBreakingNews": false, "isFactCheck": false },
                 "section": {
                   "subType": "IDX",
-                  "name": "Почетна страна",
-                  "uri": "/serbian/cyr/front_page",
+                  "name": "Početna strana",
+                  "uri": "/serbian/lat/front_page",
                   "type": "simple"
                 },
-                "overtypedSummary": "Нова година по старом календару прослављена је уз ватромет, маскембал и плес",
-                "id": "urn:bbc:ares::asset:serbian/cyr/23180995",
+                "overtypedSummary": "Nova godina po starom kalendaru proslavljena je uz vatromet, maskembal i ples",
+                "id": "urn:bbc:ares::asset:serbian/lat/23180995",
                 "type": "cps"
               },
               {
@@ -1850,18 +1841,18 @@
               },
               {
                 "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 9"
+                  "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 9"
                 },
                 "locators": {
-                  "assetUri": "/serbian/cyr/media-23169496",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:e4d48c23-b886-6741-92e7-f6b15dcc54d7",
+                  "assetUri": "/serbian/lat/media-23169496",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:e4d48c23-b886-6741-92e7-f6b15dcc54d8",
                   "assetId": "23169496",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169496",
-                  "curie": "http://www.bbc.co.uk/asset/e4d48c23-b886-6741-92e7-f6b15dcc54d7"
+                  "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169496",
+                  "curie": "http://www.bbc.co.uk/asset/e4d48c23-b886-6741-92e7-f6b15dcc54d8"
                 },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
+                "summary": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju",
                 "timestamp": 1512404810000,
-                "language": "sr-Cyrl",
+                "language": "sr-Latn",
                 "cpsType": "STY",
                 "indexImage": {
                   "id": "63603672",
@@ -1870,8 +1861,8 @@
                   "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 351,
                   "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "originCode": "cpsdevpb",
                   "type": "image"
@@ -1883,29 +1874,29 @@
                   "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 180,
                   "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "type": "image"
                 },
                 "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169496",
+                "id": "urn:bbc:ares::asset:serbian/lat/media-23169496",
                 "type": "cps"
               },
               {
                 "headlines": {
-                  "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 10"
+                  "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 10"
                 },
                 "locators": {
-                  "assetUri": "/serbian/cyr/media-23169607",
-                  "curieCpsUrn": "urn:bbc:cps:curie:asset:7e947ab1-4150-b34f-aa35-e902c58cf16e",
+                  "assetUri": "/serbian/lat/media-23169607",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:7e947ab1-4150-b34f-aa35-e902c58cf16f",
                   "assetId": "23169607",
-                  "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169607",
-                  "curie": "http://www.bbc.co.uk/asset/7e947ab1-4150-b34f-aa35-e902c58cf16e"
+                  "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169607",
+                  "curie": "http://www.bbc.co.uk/asset/7e947ab1-4150-b34f-aa35-e902c58cf16f"
                 },
-                "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
+                "summary": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju",
                 "timestamp": 1512404823000,
-                "language": "sr-Cyrl",
+                "language": "sr-Latn",
                 "passport": {
                   "category": {
                     "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1921,8 +1912,8 @@
                   "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 351,
                   "width": 624,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "originCode": "cpsdevpb",
                   "type": "image"
@@ -1934,13 +1925,13 @@
                   "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
                   "height": 180,
                   "width": 320,
-                  "altText": "Крушевца",
-                  "caption": "Крушевца",
+                  "altText": "Kruševca",
+                  "caption": "Kruševca",
                   "copyrightHolder": "BBC",
                   "type": "image"
                 },
                 "options": { "isBreakingNews": false, "isFactCheck": false },
-                "id": "urn:bbc:ares::asset:serbian/cyr/media-23169607",
+                "id": "urn:bbc:ares::asset:serbian/lat/media-23169607",
                 "type": "cps"
               }
             ],
@@ -1995,24 +1986,24 @@
       },
       "promo": {
         "subType": "IDX",
-        "name": "Почетна страна",
-        "uri": "/serbian/cyr/front_page",
-        "id": "urn:bbc:ares::index:serbian/cyr/front_page/desktop/domestic",
+        "name": "Početna strana",
+        "uri": "/serbian/lat/front_page",
+        "id": "urn:bbc:ares::index:serbian/lat/front_page/desktop/domestic",
         "type": "simple"
       },
       "relatedContent": {
         "section": {
           "subType": "index",
-          "name": "Почетна страна",
-          "uri": "/serbian/cyr/front_page",
-          "urlIdentifier": "/serbian/cyr/front_page",
+          "name": "Početna strana",
+          "uri": "/serbian/lat/front_page",
+          "urlIdentifier": "/serbian/lat/front_page",
           "type": "simple"
         },
         "site": {
           "subType": "site",
           "name": "BBC News na srpskom",
-          "uri": "/serbian/cyr",
-          "urlIdentifier": "/serbian/cyr",
+          "uri": "/serbian/lat",
+          "urlIdentifier": "/serbian/lat",
           "type": "simple"
         },
         "groups": []
