@@ -93,8 +93,13 @@ const getAvailableEpisode = assocPath(
 );
 
 describe('OnDemand Radio Page ', () => {
+  const originalAppEnv = process.env.SIMORGH_APP_ENV;
   beforeEach(() => {
     process.env = { ...env };
+  });
+
+  afterEach(() => {
+    process.env.SIMORGH_APP_ENV = originalAppEnv;
   });
 
   it('should match snapshot for Canonical', async () => {
