@@ -9,8 +9,8 @@ import LegacyText from '#app/legacy/containers/Text';
 import Blocks from '#app/legacy/containers/Blocks';
 import MetadataContainer from '../../../../../src/app/components/Metadata';
 import LinkedDataContainer from '../../../../../src/app/components/LinkedData';
-import Stream from './Stream/index';
-import Header from './Header/index';
+import Stream from './Stream';
+import Header from './Header';
 
 import styles from './styles';
 import { StreamResponse } from './Post/types';
