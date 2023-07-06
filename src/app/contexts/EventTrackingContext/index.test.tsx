@@ -17,12 +17,12 @@ const defaultToggles = {
 };
 
 const defaultATIData = {
-  analytics: {
+  atiAnalytics: {
     contentId: 'urn:bbc:tipo:topic:cm7682qz7v1t',
     contentType: 'index-home',
     pageIdentifier: 'kyrgyz.page',
+    pageTitle: 'pageTitle',
   },
-  title: 'pageTitle',
 };
 
 const { error } = console;
@@ -171,8 +171,7 @@ describe('Expected use', () => {
   it('should provide an empty object if atiData properties are undefined', () => {
     render(<TestComponent />, {
       atiData: {
-        analytics: undefined,
-        title: undefined,
+        atiAnalytics: undefined,
       },
       toggles: defaultToggles,
     });
