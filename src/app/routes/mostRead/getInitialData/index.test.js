@@ -1,12 +1,12 @@
 import { MOST_READ_PAGE } from '#app/routes/utils/pageTypes';
-import { data as mostReadJson } from '../../../../../data/pidgin/mostRead/index.json';
+import mostReadJson from '../../../../../data/pidgin/mostRead/index.json';
 import getInitialData from '.';
 
 fetch.mockResponse(JSON.stringify(mostReadJson));
 
 it('should return essential data for a page to render', async () => {
   const { pageData } = await getInitialData({
-    path: 'mock-frontpage-path',
+    path: '/pidgin/popular/read',
     service: 'pidgin',
     pageType: MOST_READ_PAGE,
   });
