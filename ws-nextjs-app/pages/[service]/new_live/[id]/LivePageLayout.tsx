@@ -20,8 +20,6 @@ const logger = nodeLogger(__filename);
 type ComponentProps = {
   bbcOrigin?: string;
   pageData: {
-    pageCount: number;
-    activePage: number;
     title: string;
     description?: string;
     isLive: boolean;
@@ -40,8 +38,6 @@ const LivePage = ({
 }: ComponentProps) => {
   const { lang } = useContext(ServiceContext);
   const {
-    pageCount,
-    activePage,
     title,
     description,
     isLive,
