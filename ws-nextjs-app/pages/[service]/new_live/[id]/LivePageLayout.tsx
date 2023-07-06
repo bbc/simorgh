@@ -2,7 +2,6 @@
 
 import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
-import Pagination from '#pages/TopicPage/Pagination';
 import Heading from '#app/components/Heading';
 import { ServiceContext } from '#contexts/ServiceContext';
 import nodeLogger from '#lib/logger.node';
@@ -107,14 +106,6 @@ const LivePage = ({
               </p>
             </pre>
             <pre css={styles.code}>{JSON.stringify(pageData, null, 2)}</pre>
-            <Pagination
-              activePage={activePage}
-              pageCount={pageCount}
-              pageXOfY="Page {x} of {y}"
-              previousPage="Previous Page"
-              nextPage="Next Page"
-              page="Page"
-            />
           </div>
         </div>
       </main>
