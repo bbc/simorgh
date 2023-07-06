@@ -36,6 +36,7 @@ interface MostReadProps {
   className?: string;
   renderCanonicalOnAmp?: boolean;
   overrideHeadingAs?: string;
+  headingAttributes?: { id: string; tabindex: string };
 }
 
 const MostRead = ({
@@ -47,6 +48,7 @@ const MostRead = ({
   className = '',
   renderCanonicalOnAmp = false,
   overrideHeadingAs = '',
+  headingAttributes,
 }: MostReadProps) => {
   const { isAmp, pageType, variant } = useContext(RequestContext);
   const {
@@ -80,6 +82,7 @@ const MostRead = ({
           overrideHeadingAs={overrideHeadingAs}
           mobileDivider={mobileDivider}
           backgroundColor={headingBackgroundColour}
+          headingAttributes={headingAttributes}
         />
         <Amp
           endpoint={`${process.env.SIMORGH_MOST_READ_CDN_URL}${endpoint}`}
@@ -96,6 +99,7 @@ const MostRead = ({
           overrideHeadingAs={overrideHeadingAs}
           mobileDivider={mobileDivider}
           backgroundColor={headingBackgroundColour}
+          headingAttributes={headingAttributes}
         />
         <Canonical
           data={data}

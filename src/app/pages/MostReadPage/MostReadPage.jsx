@@ -100,11 +100,12 @@ const MostReadPage = ({ pageData }) => {
         openGraphType="website"
       />
       <LinkedData type="WebPage" seoTitle={header} />
-      <main role="main" data-e2e="most-read">
+      <main role="main">
         <IndexPageContainer>
           <MostReadWrapper>
             <MostRead
-              overrideHeadingAs="H1"
+              headingAttributes={{ id: 'content', tabindex: '-1' }}
+              overrideHeadingAs="h1"
               data={pageData}
               columnLayout="oneColumn"
               size="default"
