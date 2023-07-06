@@ -74,6 +74,7 @@ export default async ({
         ...transformJson(json?.data?.article),
         radioScheduleData: json?.radioScheduleData,
         radioSchedulePosition,
+        mostRead: json?.data?.secondaryData?.mostRead,
       },
     };
   } catch ({ message, status = getErrorStatusCode() }) {
