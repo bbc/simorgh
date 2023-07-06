@@ -66,10 +66,7 @@ const Component = ({ pageData, service }) => (
             pageType={STORY_PAGE}
             bbcOrigin="https://www.test.bbc.com"
           >
-            <Page
-              pageData={pageData}
-              mostReadEndpointOverride="./data/mundo/mostRead/index.json"
-            />
+            <Page pageData={pageData} />
           </RequestContextProvider>
         </UserContextProvider>
       </ServiceContextProvider>
