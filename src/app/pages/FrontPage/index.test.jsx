@@ -139,15 +139,16 @@ describe('Front Page', () => {
   describe('Assertions', () => {
     it('should render visually hidden text as h1', async () => {
       fetchMock.mock(
-        'http://localhost/some-front-page-path.json',
+        'begin:http://localhost/serbian/lat',
         JSON.stringify(serbianFrontPageData),
       );
       const { pageData } = await getInitialData({
-        path: 'some-front-page-path',
-        service: 'pidgin',
+        path: '/serbian/lat',
+        service: 'serbian',
+        variant: 'lat',
       });
       fetchMock.mock(
-        ' /pidgin/mostread.json',
+        '/pidgin/mostread.json',
         JSON.stringify(pidginMostReadData),
       );
 
@@ -176,7 +177,7 @@ describe('Front Page', () => {
 
     it('should render front page sections', async () => {
       fetchMock.mock(
-        'http://localhost/some-front-page-path.json',
+        'begin:http://localhost/serbian/lat',
         JSON.stringify(serbianFrontPageData),
       );
       fetchMock.mock(
@@ -184,8 +185,9 @@ describe('Front Page', () => {
         JSON.stringify(pidginMostReadData),
       );
       const { pageData } = await getInitialData({
-        path: 'some-front-page-path',
-        service: 'pidgin',
+        path: '/serbian/lat',
+        service: 'serbian',
+        variant: 'lat',
       });
 
       let container;
@@ -196,7 +198,7 @@ describe('Front Page', () => {
       });
 
       const sections = container.querySelectorAll('section');
-      expect(sections).toHaveLength(9);
+      expect(sections).toHaveLength(6);
       sections.forEach(section => {
         expect(section.getAttribute('role')).toEqual('region');
       });
