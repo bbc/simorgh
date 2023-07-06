@@ -24,7 +24,7 @@ export interface HomePageProps {
     title: string;
     curations: CurationData[];
     description: string;
-    metadata: Pick<ATIData, 'analytics'> & { type: string };
+    metadata: Pick<ATIData, 'atiAnalytics'> & { type: string };
   };
 }
 
@@ -59,7 +59,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
         entities={[itemList]}
       />
       <main css={styles.main}>
-        <ATIAnalytics atiData={{ ...metadata, title }} />
+        <ATIAnalytics atiData={metadata} />
         <VisuallyHiddenText id="content" tabIndex={-1} as="h1">
           {/* eslint-disable-next-line jsx-a11y/aria-role */}
           <span role="text">
