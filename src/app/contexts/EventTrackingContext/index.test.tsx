@@ -168,9 +168,7 @@ describe('Expected use', () => {
 
   it('should provide an empty object if atiData properties are undefined', () => {
     render(<TestComponent />, {
-      atiData: {
-        atiAnalytics: undefined,
-      },
+      atiData: undefined,
       toggles: defaultToggles,
     });
 
