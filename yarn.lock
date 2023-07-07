@@ -3577,6 +3577,73 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@prefresh/babel-plugin@npm:0.5.0":
+  version: 0.5.0
+  resolution: "@prefresh/babel-plugin@npm:0.5.0"
+  checksum: 6cbe85226ff7797d631d2ae71b49292b96a297da2b7f6c5effb97fee7cf7e1b85b105b66836c1640fa1a96a0a5ea8d590d4d2a448834b412eea6cbc67c5cf2bc
+  languageName: node
+  linkType: hard
+
+"@prefresh/core@npm:^1.3.3, @prefresh/core@npm:^1.5.0":
+  version: 1.5.1
+  resolution: "@prefresh/core@npm:1.5.1"
+  peerDependencies:
+    preact: ^10.0.0
+  checksum: aa7efe65c9a53db31e5300864abaa84eb4b3a051810e47b55c742795cd5c36001de6d074a2a937819ab0f883790f473f0df268c154223649f5e7ed001996030c
+  languageName: node
+  linkType: hard
+
+"@prefresh/next@npm:^1.4.6":
+  version: 1.7.0
+  resolution: "@prefresh/next@npm:1.7.0"
+  dependencies:
+    "@prefresh/babel-plugin": 0.5.0
+    "@prefresh/core": ^1.5.0
+    "@prefresh/utils": ^1.2.0
+    "@prefresh/webpack": ^4.0.0
+  peerDependencies:
+    next: ^9.4.0 || ^10.0.0 || ^11.0.0 || ^12.0.0
+    preact: ^10.4.0
+    webpack: ^4.0.0 || ^5.0.0
+  checksum: 0de10c59a480fb8411eb0bf3f160b1be88d66098ea000427c8d51f7b39d893b9259cb3f659d4d3af171483b9e5c65a1b398f90f374d7e5b4ac80ae9cc6e2b300
+  languageName: node
+  linkType: hard
+
+"@prefresh/utils@npm:^1.1.2, @prefresh/utils@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "@prefresh/utils@npm:1.2.0"
+  checksum: 003bb710a6d5ca5e4886a29eb7245332d4f605a90de4eb7b77df35884a842c29143f827f6aa088e69cc2ea07f70d89148d4a730f56549640425177e24d14a60e
+  languageName: node
+  linkType: hard
+
+"@prefresh/webpack@npm:^3.3.0":
+  version: 3.3.4
+  resolution: "@prefresh/webpack@npm:3.3.4"
+  dependencies:
+    "@prefresh/core": ^1.3.3
+    "@prefresh/utils": ^1.1.2
+  peerDependencies:
+    "@prefresh/babel-plugin": ^0.4.0
+    preact: ^10.4.0
+    webpack: ^4.0.0 || ^5.0.0
+  checksum: 49d2184856f7c3335d339b3cff52c85b9524c6b215c120f701bfc7053781adea8db8908f158a756a9234af09acedff101fd087f4adcda367b38ca6403a9e5442
+  languageName: node
+  linkType: hard
+
+"@prefresh/webpack@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "@prefresh/webpack@npm:4.0.0"
+  dependencies:
+    "@prefresh/core": ^1.5.0
+    "@prefresh/utils": ^1.2.0
+  peerDependencies:
+    "@prefresh/babel-plugin": ^0.5.0
+    preact: ^10.4.0
+    webpack: ^4.0.0 || ^5.0.0
+  checksum: d7e564a8e0a874da298b643449bbe34146c80d3eeeb6e05efed589eb12acad7a53e107c12052b9964bf0aef37c2da3e14c6c2588ce1e46fa64f9d0b315896d04
+  languageName: node
+  linkType: hard
+
 "@sideway/address@npm:^4.1.3":
   version: 4.1.4
   resolution: "@sideway/address@npm:4.1.4"
@@ -17032,6 +17099,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"module-alias@npm:^2.0.0":
+  version: 2.2.3
+  resolution: "module-alias@npm:2.2.3"
+  checksum: 6169187f69de8dcf8af8fab4d9e53ada6338a43f7670d38d0b27a089c28f9eb18d85a6fd46f11b54c63079a68449b85d071d7db0ac067f9f7faedbcd6231456d
+  languageName: node
+  linkType: hard
+
 "moment-timezone@npm:0.5.43":
   version: 0.5.43
   resolution: "moment-timezone@npm:0.5.43"
@@ -17237,6 +17311,21 @@ __metadata:
   version: 2.1.1
   resolution: "nested-error-stacks@npm:2.1.1"
   checksum: 5f452fad75db8480b4db584e1602894ff5977f8bf3d2822f7ba5cb7be80e89adf1fffa34dada3347ef313a4288850b4486eb0635b315c32bdfb505577e8880e3
+  languageName: node
+  linkType: hard
+
+"next-plugin-preact@npm:^3.0.7":
+  version: 3.0.7
+  resolution: "next-plugin-preact@npm:3.0.7"
+  dependencies:
+    "@prefresh/next": ^1.4.6
+    "@prefresh/webpack": ^3.3.0
+    module-alias: ^2.0.0
+  peerDependencies:
+    preact: ">=10"
+    preact-render-to-string: ">=5"
+    preact-ssr-prepass: ">=1"
+  checksum: f272e851483794b92ec6b757a19e17dd13df7eb6156b562fd7071f7f1e9a59127e0f78b07245d91ab580ce36cc3c7a695f81cb383a52345d98bb995f7ae1d9f8
   languageName: node
   linkType: hard
 
@@ -18780,6 +18869,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"preact-render-to-string@npm:^6.1.0":
+  version: 6.1.0
+  resolution: "preact-render-to-string@npm:6.1.0"
+  dependencies:
+    pretty-format: ^3.8.0
+  peerDependencies:
+    preact: ">=10"
+  checksum: 2bf62e90d14b391bf20a16442ceaec252c94cf9dd22ec27e9aa7ce92ff4339c299a025ae804d5237867c398c6609aeee282bbc269a15ecf28be4923491fb9f55
+  languageName: node
+  linkType: hard
+
+"preact@npm:^10.15.1":
+  version: 10.15.1
+  resolution: "preact@npm:10.15.1"
+  checksum: dabad11843b19b40b11846a25ff0b1fc4bc58268909e01a7faddb341a40983d24fbe7d44ad6e2c5d35e43091963af616800552fec9af44dd0a2f0f698d1bba1f
+  languageName: node
+  linkType: hard
+
 "prebuild-install@npm:^5.3.3":
   version: 5.3.6
   resolution: "prebuild-install@npm:5.3.6"
@@ -18904,6 +19011,13 @@ __metadata:
     ansi-styles: ^5.0.0
     react-is: ^18.0.0
   checksum: 4065356b558e6db25b4d41a01efb386935a6c06a0c9c104ef5ce59f2f476b8210edb8b3949b386e60ada0a6dc5ebcb2e6ccddc8c64dfd1a9943c3c3a9e7eaf89
+  languageName: node
+  linkType: hard
+
+"pretty-format@npm:^3.8.0":
+  version: 3.8.0
+  resolution: "pretty-format@npm:3.8.0"
+  checksum: 21a114d43ef06978f8f7f6212be4649b0b094f05d9b30e14e37550bf35c8ca24d8adbca9e5adc4cc15d9eaf7a1e7a30478a4dc37b30982bfdf0292a5b385484c
   languageName: node
   linkType: hard
 
@@ -19372,6 +19486,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-dom@npm:@preact/compat@latest, react@npm:@preact/compat@latest":
+  version: 17.1.2
+  resolution: "@preact/compat@npm:17.1.2"
+  peerDependencies:
+    preact: "*"
+  checksum: 512b0f149fc11e36c5980c4173c696d17b2b4e78f500ca44fde9c688a1d58b835b70c91161d6d5d903e5d46b4649fc73b28151f43d7cdf91ec2825b24e8cdf7b
+  languageName: node
+  linkType: hard
+
 "react-element-to-jsx-string@npm:^14.3.4":
   version: 14.3.4
   resolution: "react-element-to-jsx-string@npm:14.3.4"
@@ -19571,6 +19694,15 @@ __metadata:
     shallowequal: ^1.1.0
     throttle-debounce: ^3.0.1
   checksum: 97cb852c24bbd50acb310da89df564e0d069415f6635676dae3d3bdc583ece88090c0f2ee88a6b0dc36d2793af4a11e83bf6bbb41b86225dd0cf338e8f7e8552
+  languageName: node
+  linkType: hard
+
+"react-ssr-prepass@npm:preact-ssr-prepass@latest":
+  version: 1.2.0
+  resolution: "preact-ssr-prepass@npm:1.2.0"
+  peerDependencies:
+    preact: ">=10 || ^10.0.0-beta.0 || ^10.0.0-alpha.0"
+  checksum: 5c27122cb5e0838d25ffc8be4e63641c9ce7637a9e210d32852be609bee74cb68f79601089270b08812e45f779f81a316fb8a7e6ebb27a3b1493b17c36df41f6
   languageName: node
   linkType: hard
 
@@ -20773,7 +20905,13 @@ __metadata:
     jest: ^29.5.0
     jest-environment-jsdom: ^29.5.0
     next: 12.3.4
+    next-plugin-preact: ^3.0.7
     npm-run-all: ^4.1.5
+    preact: ^10.15.1
+    preact-render-to-string: ^6.1.0
+    react: "npm:@preact/compat@latest"
+    react-dom: "npm:@preact/compat@latest"
+    react-ssr-prepass: "npm:preact-ssr-prepass@latest"
     ts-node: ^10.9.1
   languageName: unknown
   linkType: soft

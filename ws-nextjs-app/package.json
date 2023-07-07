@@ -36,6 +36,12 @@
     "ts-node": "^10.9.1"
   },
   "dependencies": {
-    "next": "12.3.4"
+    "next": "12.3.4",
+    "next-plugin-preact": "^3.0.7",
+    "preact": "^10.15.1",
+    "preact-render-to-string": "^6.1.0",
+    "react": "npm:@preact/compat@latest",
+    "react-dom": "npm:@preact/compat@latest",
+    "react-ssr-prepass": "npm:preact-ssr-prepass@latest"
   }
 }
