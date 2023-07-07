@@ -17,12 +17,10 @@ interface Props {
   isApp?: boolean;
   pageData?: object;
   atiData?: {
-    atiAnalytics?: {
-      contentId?: string;
-      contentType?: string;
-      pageIdentifier?: string;
-      pageTitle?: string;
-    };
+    contentId?: string;
+    contentType?: string;
+    pageIdentifier?: string;
+    pageTitle?: string;
   };
   pageType?: PageTypes;
   derivedPageType?: string | null;

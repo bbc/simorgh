@@ -94,11 +94,7 @@ export const EventTrackingContextProvider = ({
   const { enabled: eventTrackingIsEnabled } = useToggle('eventTracking');
 
   // TODO: Enable event tracking for NextJS pages
-  if (
-    !eventTrackingIsEnabled ||
-    (!data && !atiData?.atiAnalytics) ||
-    isNextJs
-  ) {
+  if (!eventTrackingIsEnabled || (!data && !atiData) || isNextJs) {
     return (
       <EventTrackingContext.Provider value={NO_TRACKING_PROPS}>
         {children}

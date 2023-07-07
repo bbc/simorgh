@@ -17,12 +17,10 @@ const defaultToggles = {
 };
 
 const defaultATIData = {
-  atiAnalytics: {
-    contentId: 'urn:bbc:tipo:topic:cm7682qz7v1t',
-    contentType: 'index-home',
-    pageIdentifier: 'kyrgyz.page',
-    pageTitle: 'pageTitle',
-  },
+  contentId: 'urn:bbc:tipo:topic:cm7682qz7v1t',
+  contentType: 'index-home',
+  pageIdentifier: 'kyrgyz.page',
+  pageTitle: 'pageTitle',
 };
 
 const { error } = console;

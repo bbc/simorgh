@@ -64,14 +64,12 @@ export interface PageData {
 }
 
 export interface ATIData {
-  atiAnalytics?: {
-    contentId?: string;
-    contentType?: string;
-    pageIdentifier?: string;
-    timePublished?: string;
-    timeUpdated?: string;
-    pageTitle?: string;
-  };
+  contentId?: string;
+  contentType?: string;
+  pageIdentifier?: string;
+  timePublished?: string;
+  timeUpdated?: string;
+  pageTitle?: string;
 }
 
 export interface ATIDataWithContexts {

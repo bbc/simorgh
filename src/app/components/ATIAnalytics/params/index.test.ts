@@ -177,12 +177,10 @@ const idxPage: PageData = {
 };
 
 const homePageAnalyticsData: ATIData = {
-  atiAnalytics: {
-    contentId: 'urn:bbc:tipo:topic:cm7682qz7v1t',
-    contentType: 'index-home',
-    pageIdentifier: 'kyrgyz.page',
-    pageTitle: 'pageTitle',
-  },
+  contentId: 'urn:bbc:tipo:topic:cm7682qz7v1t',
+  contentType: 'index-home',
+  pageIdentifier: 'kyrgyz.page',
+  pageTitle: 'pageTitle',
 };
 
 describe('ATIAnalytics params', () => {
@@ -534,14 +532,9 @@ describe('ATIAnalytics params', () => {
     });
 
     it('should return the correct Homepage params', () => {
-      const { atiAnalytics } = homePageAnalyticsData;
-      const homePageATIMetadata = {
-        atiAnalytics,
-        title: 'pageTitle',
-      };
       const params = buildATIEventTrackingParams({
         requestContext: { ...requestContext, pageType: HOME_PAGE },
-        atiData: homePageATIMetadata,
+        atiData: homePageAnalyticsData,
         serviceContext,
       });
       expect(params).toEqual({
