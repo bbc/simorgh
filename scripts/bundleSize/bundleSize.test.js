@@ -1,13 +1,17 @@
-// import { createRequire } from 'module';
-// const require = createRequire(import.meta.url);
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
 import ora from 'ora';
 import chalk from 'chalk';
 import { readdirSync, statSync } from 'fs';
 import stripAnsi from 'strip-ansi';
+import { jest } from '@jest/globals'
 
-jest.mock('./pageTypeBundleExtractor');
+jest.unstable_mockModule('./pageTypeBundleExtractor', () => ({
+  execSync: jest.fn(),
+  // etc.
+}));
 jest.mock('ora');
-jest.mock('chalk', () => ({
+jest.unstable_mockModule('chalk', () => ({
   red: a => a,
   green: a => a,
   blue: a => a,
@@ -20,7 +24,7 @@ jest.mock('../../cypress/support/config/services', () => ({
   service2: {},
 }));
 jest.mock('fs');
-jest.mock('./bundleSizeConfig', () => ({
+jest.unstable_mockModule('./bundleSizeConfig', () => ({
   MIN_SIZE: 632,
   MAX_SIZE: 728,
 }));

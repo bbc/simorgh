@@ -1,19 +1,20 @@
 import fetch from 'jest-fetch-mock';
 import path from 'path';
 import { TextEncoder, TextDecoder } from 'util';
+import { jest } from '@jest/globals'
+import * as url from 'url';
+const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 
-global.TextEncoder = TextEncoder;
-global.TextDecoder = TextDecoder;
+globalThis.TextEncoder = TextEncoder;
+globalThis.TextDecoder = TextDecoder;
 
 // etc
 /*
  * Mock to avoid async behaviour in tests
  */
-jest.unstable_mockModule('#contexts/ServiceContext', () => ({
-  execSync: jest.fn(),
-}));
-const { execSync } = await import('node:child_process');
-global.Cypress = {
+jest.mock('#contexts/ServiceContext');
+
+globalThis.Cypress = {
   env: jest.fn(),
 };
 
@@ -26,8 +27,8 @@ window.matchMedia = jest.fn().mockImplementation(query => {
   };
 });
 
-global.fetch = fetch;
-global.document.domain = 'www.bbc.com';
+globalThis.fetch = fetch;
+globalThis.document.domain = 'www.bbc.com';
 
 process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN = 'http://localhost:7080';
 process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH = '/';

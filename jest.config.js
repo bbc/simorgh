@@ -4,7 +4,10 @@ const unitTests = {
   preset: 'ts-jest',
   setupFiles: ['./src/testHelpers/jest-setup.js'],
   setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
-  moduleNameMapper: jestDirAlias,
+  moduleNameMapper: {
+    ...jestDirAlias,
+    '#(.*)': '<rootDir>/node_modules/$1',
+  },
   snapshotSerializers: ['@emotion/jest/serializer'],
   transform: {},
   displayName: 'Unit Tests',
@@ -57,5 +60,4 @@ module.exports = {
     ],
   ],
   timers: 'modern',
-  requireConfigFile: false,
 };
