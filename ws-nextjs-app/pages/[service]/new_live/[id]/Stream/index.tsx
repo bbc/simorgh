@@ -28,7 +28,7 @@ const Stream = ({
       {hasSinglePost ? (
         <Post post={streamResults[0]} />
       ) : (
-        <ol css={styles.orderedList}>
+        <ol role="list" css={styles.orderedList}>
           {streamResults.map(post => (
             <li key={post.urn} css={styles.listItem}>
               <Post post={post} />

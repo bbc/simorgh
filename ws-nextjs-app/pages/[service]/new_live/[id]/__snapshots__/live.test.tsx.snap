@@ -167,7 +167,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 }
 
 .emotion-9 {
-  grid-column: 12;
+  grid-column: 1/13;
 }
 
 @media (min-width: 63rem) {
@@ -348,7 +348,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 }
 
 .emotion-15 {
-  grid-column: 12;
+  grid-column: 1/13;
 }
 
 @media (min-width: 63rem) {
@@ -913,6 +913,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
           </p>
           <ol
             class="emotion-18"
+            role="list"
           >
             <li
               class="emotion-19"
