@@ -2,6 +2,7 @@
 const dotenv = require('dotenv');
 const MomentTimezoneInclude = require('../src/app/legacy/psammead/moment-timezone-include/src');
 const { getClientEnvVars } = require('../src/clientEnvVars');
+const withPreact = require('next-plugin-preact');
 
 const DOT_ENV_CONFIG = dotenv.config();
 const clientEnvVars = getClientEnvVars(DOT_ENV_CONFIG, { stringify: false });
@@ -10,7 +11,7 @@ const assetPrefix =
   clientEnvVars.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN +
   clientEnvVars.SIMORGH_PUBLIC_STATIC_ASSETS_PATH;
 
-module.exports = {
+module.exports = withPreact({
   reactStrictMode: true,
   distDir: 'build',
   output: 'standalone',
@@ -66,4 +67,4 @@ module.exports = {
 
     return config;
   },
-};
+});
