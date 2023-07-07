@@ -1,12 +1,12 @@
-const chalk = require('chalk');
+import { red } from 'chalk';
 
-module.exports = ({ service, pageType, size, adjective }) =>
+export default ({ service, pageType, size, adjective }) =>
   [
-    chalk.red('Bundle size for'),
-    chalk.red.bold(`${service} ${pageType}`),
-    chalk.red(`is too ${adjective} at`),
-    chalk.red.bold(`${size} kB.`),
-    chalk.red(
+    red('Bundle size for'),
+    red.bold(`${service} ${pageType}`),
+    red(`is too ${adjective} at`),
+    red.bold(`${size} kB.`),
+    red(
       "Please update thresholds in './scripts/bundleSize/bundleSizeConfig.js'",
     ),
   ].join(' ');

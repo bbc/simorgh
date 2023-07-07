@@ -1,18 +1,18 @@
 #! /usr/bin/env node
 /* eslint-disable no-console */
 
-const ora = require('ora');
-const chalk = require('chalk');
-const Table = require('cli-table');
-const sortByBundlesTotalAscending = require('./sortByBundlesTotalAscending');
-const getAverageBundleSize = require('./getAverageBundleSize');
-const createConsoleError = require('./createConsoleError');
-const {
+import ora from 'ora';
+import { green, bold, cyan } from 'chalk';
+import Table from 'cli-table';
+import sortByBundlesTotalAscending from './sortByBundlesTotalAscending.js';
+import getAverageBundleSize from './getAverageBundleSize.js';
+import createConsoleError from './createConsoleError.js';
+import {
   getPageBundleData,
   getServiceConfigBundleData,
   getServiceThemeBundleData,
-} = require('./getBundleData');
-const { MIN_SIZE, MAX_SIZE } = require('./bundleSizeConfig');
+} from './getBundleData.js';
+import { MIN_SIZE, MAX_SIZE } from './bundleSizeConfig.js';
 
 const bundleType = process.env.bundleType || 'modern';
 const serviceConfigBundleData = sortByBundlesTotalAscending(
@@ -170,51 +170,41 @@ servicePageSummaryTable.push(
   },
 );
 
-const styledBundleTypeTitle = chalk.green(bundleType.toUpperCase());
+const styledBundleTypeTitle = green(bundleType.toUpperCase());
 const spinner = ora({
   text: 'Analysing bundles...',
   color: 'magenta',
 });
 spinner.start();
-console.log(chalk.bold('\n\nResults'));
+console.log(bold('\n\nResults'));
 
-console.log(
-  chalk.bold(`\n${styledBundleTypeTitle} service config bundle sizes\n`),
-);
+console.log(bold(`\n${styledBundleTypeTitle} service config bundle sizes\n`));
 console.log(serviceConfigBundlesTable.toString());
 console.log(
-  chalk.bold(
-    `\n\n${styledBundleTypeTitle} service config bundle sizes summary\n`,
-  ),
+  bold(`\n\n${styledBundleTypeTitle} service config bundle sizes summary\n`),
 );
 console.log(serviceSummaryTable.toString());
 
-console.log(
-  chalk.bold(`\n${styledBundleTypeTitle} service theme bundle sizes\n`),
-);
+console.log(bold(`\n${styledBundleTypeTitle} service theme bundle sizes\n`));
 console.log(serviceThemeBundlesTable.toString());
 console.log(
-  chalk.bold(
-    `\n\n${styledBundleTypeTitle} service theme bundle sizes summary\n`,
-  ),
+  bold(`\n\n${styledBundleTypeTitle} service theme bundle sizes summary\n`),
 );
 console.log(serviceThemeSummaryTable.toString());
 
-console.log(
-  chalk.bold(`\n\n${styledBundleTypeTitle} page type bundle sizes\n`),
-);
+console.log(bold(`\n\n${styledBundleTypeTitle} page type bundle sizes\n`));
 console.log(pageBundlesTable.toString());
 
 console.log(
   [
-    chalk.bold(`\n\n${styledBundleTypeTitle} page bundle sizes summary`),
-    chalk.cyan.bold('(excludes service bundle)\n'),
+    bold(`\n\n${styledBundleTypeTitle} page bundle sizes summary`),
+    cyan.bold('(excludes service bundle)\n'),
   ].join(' '),
 );
 console.log(pageSummaryTable.toString());
 
 console.log(
-  chalk.bold(
+  bold(
     `\n\n${styledBundleTypeTitle} service config & theme + page bundle sizes summary\n`,
   ),
 );

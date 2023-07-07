@@ -1,3 +1,5 @@
+// import { createRequire } from 'module';
+// const require = createRequire(import.meta.url);
 import ora from 'ora';
 import chalk from 'chalk';
 import { readdirSync, statSync } from 'fs';

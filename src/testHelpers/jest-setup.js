@@ -5,11 +5,14 @@ import { TextEncoder, TextDecoder } from 'util';
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 
+// etc
 /*
  * Mock to avoid async behaviour in tests
  */
-jest.mock('#contexts/ServiceContext');
-
+jest.unstable_mockModule('#contexts/ServiceContext', () => ({
+  execSync: jest.fn(),
+}));
+const { execSync } = await import('node:child_process');
 global.Cypress = {
   env: jest.fn(),
 };
