@@ -47,7 +47,7 @@ export default {
     }),
   leftSection: ({ mq }: Theme) =>
     css({
-      gridColumn: '12',
+      gridColumn: '1 / 13',
 
       [mq.GROUP_4_MIN_WIDTH]: {
         gridColumn: '1 / 5',
@@ -55,7 +55,7 @@ export default {
     }),
   rightSection: ({ mq }: Theme) =>
     css({
-      gridColumn: '12',
+      gridColumn: '1 / 13',
 
       [mq.GROUP_4_MIN_WIDTH]: {
         gridColumn: '5 / 13',
