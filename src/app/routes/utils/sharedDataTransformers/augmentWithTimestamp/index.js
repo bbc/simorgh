@@ -1,9 +1,9 @@
 /* eslint-disable no-use-before-define */
-import pathOr from 'ramda/src/pathOr';
-import insert from 'ramda/src/insert';
-import path from 'ramda/src/path';
-import pathEq from 'ramda/src/pathEq';
-import assocPath from 'ramda/src/assocPath';
+import pathOr from 'ramda/src/pathOr.js';
+import insert from 'ramda/src/insert.js';
+import path from 'ramda/src/path.js';
+import pathEq from 'ramda/src/pathEq.js';
+import assocPath from 'ramda/src/assocPath.js';
 import deepClone from '../../jsonClone';
 
 const augmentWithTimestamp = jsonRaw => {

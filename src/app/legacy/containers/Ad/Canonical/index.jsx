@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { oneOf, string } from 'prop-types';
 import styled from '@emotion/styled';
-import pathOr from 'ramda/src/pathOr';
+import pathOr from 'ramda/src/pathOr.js';
 import { RequestContext } from '#contexts/RequestContext';
 import isLive from '#lib/utilities/isLive';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';

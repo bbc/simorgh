@@ -5,7 +5,7 @@
 import React, { PropsWithChildren, useContext } from 'react';
 import { jsx } from '@emotion/react';
 import { Helmet } from 'react-helmet';
-import pathOr from 'ramda/src/pathOr';
+import pathOr from 'ramda/src/pathOr.js';
 
 import GlobalStyles from '#psammead/psammead-styles/src/global-styles';
 import WebVitals from '../../legacy/containers/WebVitals';

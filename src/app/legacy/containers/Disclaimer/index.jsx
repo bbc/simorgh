@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { bool } from 'prop-types';
-import path from 'ramda/src/path';
-import pathOr from 'ramda/src/pathOr';
+import path from 'ramda/src/path.js';
+import pathOr from 'ramda/src/pathOr.js';
 import styled from '@emotion/styled';
 import { getSansLight } from '#psammead/psammead-styles/src/font-styles';
 import { getLongPrimer } from '#psammead/gel-foundations/src/typography';
@@ -17,7 +17,7 @@ import {
 import { GridItemLarge } from '#components/Grid';
 
 import useToggle from '#hooks/useToggle';
-import isEmpty from 'ramda/src/isEmpty';
+import isEmpty from 'ramda/src/isEmpty.js';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import InlineLink from '../InlineLink';
 

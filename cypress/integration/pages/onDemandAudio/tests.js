@@ -1,6 +1,6 @@
 /* eslint-disable cypress/no-unnecessary-waiting */
 /* eslint-disable consistent-return */
-import path from 'ramda/src/path';
+import path from 'ramda/src/path.js';
 import {
   isAvailable,
   overrideRendererOnTest,

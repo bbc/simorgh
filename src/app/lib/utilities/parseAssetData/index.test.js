@@ -1,4 +1,4 @@
-import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
+import mergeDeepLeft from 'ramda/src/mergeDeepLeft.js';
 import { articleDataNews } from '#pages/ArticlePage/fixtureData';
 import {
   getHeadline,

@@ -1,6 +1,6 @@
 import React from 'react';
 import { string } from 'prop-types';
-import omit from 'ramda/src/omit';
+import omit from 'ramda/src/omit.js';
 import styled from '@emotion/styled';
 import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
 import { getMinion } from '#psammead/gel-foundations/src/typography';

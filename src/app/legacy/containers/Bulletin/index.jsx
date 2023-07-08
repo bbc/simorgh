@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import pathOr from 'ramda/src/pathOr';
+import pathOr from 'ramda/src/pathOr.js';
 import { shape, bool, oneOfType } from 'prop-types';
 import Bulletin from '#psammead/psammead-bulletin/src';
 import { createSrcsets } from '#lib/utilities/srcSet';

@@ -1,5 +1,5 @@
 /* eslint-disable cypress/no-unnecessary-waiting */
-import path from 'ramda/src/path';
+import path from 'ramda/src/path.js';
 import runCanonicalAdsTests from '../../../support/helpers/adsTests/testsForCanonicalOnly';
 
 // For testing important features that differ between services, e.g. Timestamps.

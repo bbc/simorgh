@@ -1,6 +1,6 @@
 /* eslint-disable prefer-destructuring */
-import path from 'ramda/src/path';
-import splitAt from 'ramda/src/splitAt';
+import path from 'ramda/src/path.js';
+import splitAt from 'ramda/src/splitAt.js';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import deepClone from '../../../utils/jsonClone';
 import { getNthCpsParagraphIndex } from '../helpers';

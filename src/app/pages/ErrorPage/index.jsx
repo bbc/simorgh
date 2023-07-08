@@ -1,4 +1,4 @@
-import pipe from 'ramda/src/pipe';
+import pipe from 'ramda/src/pipe.js';
 import withContexts from '#containers/PageHandlers/withContexts';
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 import withLoading from '#containers/PageHandlers/withLoading';

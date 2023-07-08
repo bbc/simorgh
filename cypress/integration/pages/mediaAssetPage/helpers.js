@@ -1,4 +1,4 @@
-import paths from 'ramda/src/paths';
+import paths from 'ramda/src/paths.js';
 import envConfig from '../../../support/config/envs';
 
 export const hasMedia = jsonData => {

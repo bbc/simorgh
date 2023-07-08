@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import moment from 'moment-timezone';
 import { shape, bool, string } from 'prop-types';
-import pathOr from 'ramda/src/pathOr';
-import pick from 'ramda/src/pick';
+import pathOr from 'ramda/src/pathOr.js';
+import pick from 'ramda/src/pick.js';
 import formatDuration from '#lib/utilities/formatDuration';
 import { getHeadline } from '#lib/utilities/getStoryPromoInfo';
 import { storyItem } from '#models/propTypes/storyItem';

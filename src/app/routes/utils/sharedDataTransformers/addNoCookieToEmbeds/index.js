@@ -1,5 +1,5 @@
-import path from 'ramda/src/path';
-import assocPath from 'ramda/src/assocPath';
+import path from 'ramda/src/path.js';
+import assocPath from 'ramda/src/assocPath.js';
 
 const noCookieYoutube = ({ embedHtml, embedProvider }) => {
   if (!embedHtml) return embedHtml;

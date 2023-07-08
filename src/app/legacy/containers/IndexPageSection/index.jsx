@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { bool, shape, number } from 'prop-types';
 import styled from '@emotion/styled';
 import makeRelativeUrlPath from '#lib/utilities/makeRelativeUrlPath';
-import pathOr from 'ramda/src/pathOr';
+import pathOr from 'ramda/src/pathOr.js';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,

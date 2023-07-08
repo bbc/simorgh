@@ -2,9 +2,9 @@
 /** @jsx jsx */
 
 import { useContext } from 'react';
-import path from 'ramda/src/path';
-import pathOr from 'ramda/src/pathOr';
-import propEq from 'ramda/src/propEq';
+import path from 'ramda/src/path.js';
+import pathOr from 'ramda/src/pathOr.js';
+import propEq from 'ramda/src/propEq.js';
 import { jsx, useTheme } from '@emotion/react';
 import { string } from 'prop-types';
 import useToggle from '#hooks/useToggle';

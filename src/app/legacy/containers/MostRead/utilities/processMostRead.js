@@ -1,4 +1,4 @@
-import pathOr from 'ramda/src/pathOr';
+import pathOr from 'ramda/src/pathOr.js';
 import nodeLogger from '#lib/logger.node';
 import filterPopularStaleData from '#app/lib/utilities/filterPopularStaleData';
 import { MOST_READ_DATA_INCOMPLETE } from '#lib/logger.const';

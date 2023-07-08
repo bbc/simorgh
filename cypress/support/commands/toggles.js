@@ -1,5 +1,5 @@
-import memoizeWith from 'ramda/src/memoizeWith';
-import identity from 'ramda/src/identity';
+import memoizeWith from 'ramda/src/memoizeWith.js';
+import identity from 'ramda/src/identity.js';
 import envConfig from '../config/envs';
 
 Cypress.Commands.add(

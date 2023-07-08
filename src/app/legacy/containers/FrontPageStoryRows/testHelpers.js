@@ -1,5 +1,5 @@
-import pathOr from 'ramda/src/pathOr';
-import take from 'ramda/src/take';
+import pathOr from 'ramda/src/pathOr.js';
+import take from 'ramda/src/take.js';
 import { v4 as uuid } from 'uuid';
 import fixture from '#data/serbian/frontpage/lat';
 import rtlFixture from '#data/urdu/frontpage';

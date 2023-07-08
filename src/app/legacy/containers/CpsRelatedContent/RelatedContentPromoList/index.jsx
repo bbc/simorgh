@@ -1,5 +1,5 @@
 import React from 'react';
-import path from 'ramda/src/path';
+import path from 'ramda/src/path.js';
 import { arrayOf, bool, shape, string } from 'prop-types';
 import styled from '@emotion/styled';
 import {

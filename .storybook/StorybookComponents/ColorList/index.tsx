@@ -1,5 +1,5 @@
 import React from 'react';
-import isEmpty from 'ramda/src/isEmpty';
+import isEmpty from 'ramda/src/isEmpty.js';
 import styles from './index.styles';
 import ColorCard from './ColorCard';
 

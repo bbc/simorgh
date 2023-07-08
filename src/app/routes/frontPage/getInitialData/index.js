@@ -1,5 +1,5 @@
-import pipe from 'ramda/src/pipe';
-import path from 'ramda/src/path';
+import pipe from 'ramda/src/pipe.js';
+import path from 'ramda/src/path.js';
 import fetchPageData from '#app/routes/utils/fetchPageData';
 import withRadioSchedule from '#app/routes/utils/withRadioSchedule';
 import filterUnknownContentTypes from '#app/routes/utils/sharedDataTransformers/filterUnknownContentTypes';
