@@ -36,7 +36,6 @@ describe('Episode Availability', () => {
   });
 
   describe('getEpisodeAvailability', () => {
-
     const testAvailability = pipe(
       availability =>
         assocPath(
