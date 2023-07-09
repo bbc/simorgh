@@ -57,6 +57,7 @@
     "test:unit:watch": "yarn test:unit -- --watch",
     "test:unit:updatesnapshots": "jest --updateSnapshot --env=jsdom --coverage --colors --testPathIgnorePatterns=\"src/integration\" \"puppeteer\" \"ws-nextjs-app\"",
     "test:integration": "node src/integration/utils/runTests/index.js",
+    "test:integration:updatesnapshots": "node src/integration/utils/runTests/index.js  --updateSnapshot",
     "test:integration:ci": "JEST_SILENT_REPORTER_DOTS=true yarn test:integration -- --ci --onlyRunTests --reporters=jest-silent-reporter",
     "test:linkey": "node scripts/linkeySetup.js && jest src/app/lib/config/services/*.test.js --verbose true; yarn test:linkey:cleanup",
     "test:linkey:cleanup": "find src/app/lib/config/services -type f -name '*.test.js' -delete",
