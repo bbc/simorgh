@@ -1,4 +1,4 @@
-import path from 'ramda/src/path.js';
+const path = require('ramda/src/path.js');
 
 global.Cypress = { env: () => {} }; // Fake Cypress.env
 const services = require('../config/services');
