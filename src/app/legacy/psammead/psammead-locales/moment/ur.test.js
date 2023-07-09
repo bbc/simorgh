@@ -13,10 +13,6 @@ const months =
   );
 
 test('parse', () => {
-  const test =
-    'جنوری_فروری_مار چ_اپريل_مئ_جون_جولائی_اگست_ستمبر_اکتوبر_نومبر_دسمبر'.split(
-      '_'
-    );
   function equalTest(input, mmm, i) {
     assert.equal(
       moment(input, mmm).month(),
