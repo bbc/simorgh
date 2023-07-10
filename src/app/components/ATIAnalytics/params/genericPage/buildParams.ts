@@ -14,9 +14,9 @@ export const buildPageATIParams = ({
     contentId,
     contentType,
     pageIdentifier,
+    pageTitle,
     timePublished,
     timeUpdated,
-    pageTitle,
   } = atiData;
 
   return {
