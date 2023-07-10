@@ -1,4 +1,4 @@
-import path from 'ramda/src/path';
+import path from 'ramda/src/path.js';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import config from '../../../support/config/services';
 import runAMPAdsTests from '../../../support/helpers/adsTests/testsForAMPOnly';

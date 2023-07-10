@@ -1,5 +1,5 @@
 import React from 'react';
-import path from 'ramda/src/path';
+import path from 'ramda/src/path.js';
 import { Helmet } from 'react-helmet';
 import { select } from '@storybook/addon-knobs';
 import TEXT_VARIANTS from './text-variants';

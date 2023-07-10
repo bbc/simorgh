@@ -1,6 +1,6 @@
-import path from 'ramda/src/path';
-import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
-import pipe from 'ramda/src/pipe';
+import path from 'ramda/src/path.js';
+import mergeDeepLeft from 'ramda/src/mergeDeepLeft.js';
+import pipe from 'ramda/src/pipe.js';
 
 // ARES sometimes reports timestamps in seconds; sometimes in milliseconds
 // This standardises that by assuming any timestamp before 1973 needs converted to ms

@@ -4,15 +4,15 @@
 import { useContext } from 'react';
 import { jsx, useTheme } from '@emotion/react';
 import SectionLabel from '#psammead/psammead-section-label/src';
-import pathOr from 'ramda/src/pathOr';
-import pathEq from 'ramda/src/pathEq';
-import path from 'ramda/src/path';
-import tail from 'ramda/src/tail';
-import slice from 'ramda/src/slice';
-import identity from 'ramda/src/identity';
-import last from 'ramda/src/last';
-import filter from 'ramda/src/filter';
-import pipe from 'ramda/src/pipe';
+import pathOr from 'ramda/src/pathOr.js';
+import pathEq from 'ramda/src/pathEq.js';
+import path from 'ramda/src/path.js';
+import tail from 'ramda/src/tail.js';
+import slice from 'ramda/src/slice.js';
+import identity from 'ramda/src/identity.js';
+import last from 'ramda/src/last.js';
+import filter from 'ramda/src/filter.js';
+import pipe from 'ramda/src/pipe.js';
 
 import useViewTracker from '#hooks/useViewTracker';
 import { ServiceContext } from '../../contexts/ServiceContext';

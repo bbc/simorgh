@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { arrayOf, shape, number, bool, string } from 'prop-types';
-import pathOr from 'ramda/src/pathOr';
+import pathOr from 'ramda/src/pathOr.js';
 import styled from '@emotion/styled';
 import { GEL_SPACING_DBL } from '#psammead/gel-foundations/src/spacings';
 import { storyItem } from '#models/propTypes/storyItem';

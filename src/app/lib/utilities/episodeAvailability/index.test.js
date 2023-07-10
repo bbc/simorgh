@@ -1,5 +1,5 @@
-import assocPath from 'ramda/src/assocPath';
-import pipe from 'ramda/src/pipe';
+import assocPath from 'ramda/src/assocPath.js';
+import pipe from 'ramda/src/pipe.js';
 import loggerMock from '#testHelpers/loggerMock';
 import {
   EPISODE_EXPIRED,
@@ -36,10 +36,6 @@ describe('Episode Availability', () => {
   });
 
   describe('getEpisodeAvailability', () => {
-    afterEach(() => {
-      jest.clearAllMocks();
-    });
-
     const testAvailability = pipe(
       availability =>
         assocPath(
@@ -52,6 +48,7 @@ describe('Episode Availability', () => {
 
     describe('episode has availability: available', () => {
       expect(testAvailability('available')).toEqual('available');
+      jest.clearAllMocks();
     });
 
     describe('episode has availability: notAvailable', () => {
@@ -60,6 +57,7 @@ describe('Episode Availability', () => {
         url: 'pashto/bbc_pashto_radio/w3ct0lz1',
         availability: 'notAvailable',
       });
+      jest.clearAllMocks();
     });
 
     describe('episode has availability: pending', () => {
@@ -68,6 +66,7 @@ describe('Episode Availability', () => {
         url: 'pashto/bbc_pashto_radio/w3ct0lz1',
         availability: 'pending',
       });
+      jest.clearAllMocks();
     });
 
     describe('episode has availability: future', () => {
@@ -76,6 +75,7 @@ describe('Episode Availability', () => {
         url: 'pashto/bbc_pashto_radio/w3ct0lz1',
         availability: 'future',
       });
+      jest.clearAllMocks();
     });
 
     describe('episode has availability: junk-value', () => {
@@ -87,6 +87,7 @@ describe('Episode Availability', () => {
           availability: 'junk-value',
         },
       );
+      jest.clearAllMocks();
     });
 
     describe('episode has availability: null', () => {
@@ -98,6 +99,7 @@ describe('Episode Availability', () => {
           availability: null,
         },
       );
+      jest.clearAllMocks();
     });
   });
 });

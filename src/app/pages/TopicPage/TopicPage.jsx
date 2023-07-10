@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { shape, arrayOf, string } from 'prop-types';
-import path from 'ramda/src/path';
+import path from 'ramda/src/path.js';
 import AdContainer from '#containers/Ad';
 import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
 import useToggle from '#hooks/useToggle';

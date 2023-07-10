@@ -1,5 +1,5 @@
 import React from 'react';
-import pathOr from 'ramda/src/pathOr';
+import pathOr from 'ramda/src/pathOr.js';
 import { ArticlePage, ErrorPage, MediaArticlePage } from '#pages';
 import { articlePath } from '#app/routes/utils/regex';
 import {

@@ -1,5 +1,5 @@
-import assocPath from 'ramda/src/assocPath';
-import pipe from 'ramda/src/pipe';
+import assocPath from 'ramda/src/assocPath.js';
+import pipe from 'ramda/src/pipe.js';
 import loggerMock from '#testHelpers/loggerMock';
 import convertMedia from '.';
 import { CPSMediaBlock, optimoVideoBlock } from './fixtures';

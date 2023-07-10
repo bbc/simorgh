@@ -1,4 +1,4 @@
-import pathOr from 'ramda/src/pathOr';
+import pathOr from 'ramda/src/pathOr.js';
 
 export const servicesWithVariants = {
   // the first element in the array is the default variant

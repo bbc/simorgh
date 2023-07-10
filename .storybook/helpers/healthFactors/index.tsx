@@ -1,5 +1,5 @@
-import path from 'ramda/src/path';
-import count from 'ramda/src/count';
+import path from 'ramda/src/path.js';
+import count from 'ramda/src/count.js';
 
 export const getActionCount = metadata => {
   const uxAccessibility = path(['uxAccessibilityDoc'], metadata);

@@ -1,5 +1,5 @@
 import Url from 'url-parse';
-import pipe from 'ramda/src/pipe';
+import pipe from 'ramda/src/pipe.js';
 import getEnvironment from '#app/routes/utils/getEnvironment';
 import { getUrlPath } from '../../../lib/utilities/urlParser';
 import handleError from '../handleError';

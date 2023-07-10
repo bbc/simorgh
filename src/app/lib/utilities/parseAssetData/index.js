@@ -1,4 +1,4 @@
-import path from 'ramda/src/path';
+import path from 'ramda/src/path.js';
 
 const getISOStringDate = date => new Date(date).toISOString();
 

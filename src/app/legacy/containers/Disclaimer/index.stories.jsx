@@ -2,7 +2,7 @@ import React from 'react';
 import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import { withKnobs } from '@storybook/addon-knobs';
 import { ServiceContext } from '../../../contexts/ServiceContext';
-import pathOr from 'ramda/src/pathOr';
+import pathOr from 'ramda/src/pathOr.js';
 
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import DisclaimerComponent from '.';

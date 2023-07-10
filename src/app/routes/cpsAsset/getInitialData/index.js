@@ -1,5 +1,5 @@
-import pipe from 'ramda/src/pipe';
-import path from 'ramda/src/path';
+import pipe from 'ramda/src/pipe.js';
+import path from 'ramda/src/path.js';
 import {
   MEDIA_ASSET_PAGE,
   STORY_PAGE,

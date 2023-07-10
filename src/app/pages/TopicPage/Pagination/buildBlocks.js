@@ -1,5 +1,5 @@
-import pipe from 'ramda/src/pipe';
-import clone from 'ramda/src/clone';
+import pipe from 'ramda/src/pipe.js';
+import clone from 'ramda/src/clone.js';
 import findNClosestIndices from '#lib/utilities/findNClosestIndicies';
 
 export const TYPE = {

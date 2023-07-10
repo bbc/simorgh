@@ -1,4 +1,4 @@
-import deepClone from 'ramda/src/clone';
+import deepClone from 'ramda/src/clone.js';
 import applyTimestampRules from '.';
 
 const paragraphBlock = {

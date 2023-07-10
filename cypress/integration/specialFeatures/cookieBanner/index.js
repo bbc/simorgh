@@ -1,4 +1,4 @@
-import ramdaPath from 'ramda/src/path';
+import ramdaPath from 'ramda/src/path.js';
 import config from '../../../support/config/services';
 import describeForEuOnly from '../../../support/helpers/describeForEuOnly';
 import visitPage from '../../../support/helpers/visitPage';

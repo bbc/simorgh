@@ -1,5 +1,5 @@
 import React from 'react';
-import path from 'ramda/src/path';
+import path from 'ramda/src/path.js';
 import pidginPageData from '#data/pidgin/cpsAssets/tori-49450859';
 import { render } from '../../../../components/react-testing-library-with-providers';
 import RelatedContentPromoList from './index';

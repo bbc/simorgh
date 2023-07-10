@@ -1,5 +1,5 @@
-import pathOr from 'ramda/src/pathOr';
-import pipe from 'ramda/src/pipe';
+import pathOr from 'ramda/src/pathOr.js';
+import pipe from 'ramda/src/pipe.js';
 import fetchPageData from '#app/routes/utils/fetchPageData';
 import filterUnknownContentTypes from '#app/routes/utils/sharedDataTransformers/filterUnknownContentTypes';
 import filterEmptyGroupItems from '#app/routes/utils/sharedDataTransformers/filterEmptyGroupItems';

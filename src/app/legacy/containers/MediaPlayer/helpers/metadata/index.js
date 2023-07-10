@@ -1,6 +1,6 @@
-import path from 'ramda/src/path';
-import pathOr from 'ramda/src/pathOr';
-import paths from 'ramda/src/paths';
+import path from 'ramda/src/path.js';
+import pathOr from 'ramda/src/pathOr.js';
+import paths from 'ramda/src/paths.js';
 
 const DEFAULT_IMAGE_RES = '1024x576';
 

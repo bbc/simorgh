@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import InlineLink from '#psammead/psammead-inline-link/src';
-import pathOr from 'ramda/src/pathOr';
+import pathOr from 'ramda/src/pathOr.js';
 import { inlineLinkModelPropTypes } from '#models/propTypes/inlineLink';
 import makeRelativeUrlPath from '#lib/utilities/makeRelativeUrlPath';
 import { ServiceContext } from '../../../contexts/ServiceContext';

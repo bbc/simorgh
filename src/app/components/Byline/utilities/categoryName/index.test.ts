@@ -1,4 +1,4 @@
-import clone from 'ramda/src/clone';
+import clone from 'ramda/src/clone.js';
 import categoryName from '.';
 import {
   passportTaggings,

@@ -1,4 +1,4 @@
-import assocPath from 'ramda/src/assocPath';
+import assocPath from 'ramda/src/assocPath.js';
 import { data as legacyMAPData } from '#data/hausa/legacyAssets/multimedia/2012/07/120712_click';
 import transformer from '.';
 

@@ -1,7 +1,7 @@
 import React, { useContext, forwardRef } from 'react';
 import { shape, string } from 'prop-types';
-import pathOr from 'ramda/src/pathOr';
-import isEmpty from 'ramda/src/isEmpty';
+import pathOr from 'ramda/src/pathOr.js';
+import isEmpty from 'ramda/src/isEmpty.js';
 import { storyItem } from '#models/propTypes/storyItem';
 import { getIsLive } from '#lib/utilities/getStoryPromoInfo';
 import Promo from '#components/OptimoPromos';

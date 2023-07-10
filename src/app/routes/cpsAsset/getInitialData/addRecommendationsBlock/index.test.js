@@ -1,4 +1,4 @@
-import deepClone from 'ramda/src/clone';
+import deepClone from 'ramda/src/clone.js';
 import addRecommendationsBlock from '.';
 
 const styInput = {

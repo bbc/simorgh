@@ -1,7 +1,7 @@
 import React, { useState, memo } from 'react';
 import styled from '@emotion/styled';
 import { string, bool, oneOf, shape, func, arrayOf } from 'prop-types';
-import equals from 'ramda/src/equals';
+import equals from 'ramda/src/equals.js';
 import {
   GEL_SPACING_DBL,
   GEL_SPACING_QUAD,

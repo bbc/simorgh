@@ -1,5 +1,5 @@
 import React from 'react';
-import pathOr from 'ramda/src/pathOr';
+import pathOr from 'ramda/src/pathOr.js';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import serbianData from '#data/serbian/frontpage/lat.json';

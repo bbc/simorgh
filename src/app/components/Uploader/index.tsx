@@ -1,8 +1,8 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { useContext } from 'react';
-import path from 'ramda/src/path';
-import pathOr from 'ramda/src/pathOr';
+import path from 'ramda/src/path.js';
+import pathOr from 'ramda/src/pathOr.js';
 import { jsx } from '@emotion/react';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import Paragraph from '../Paragraph';

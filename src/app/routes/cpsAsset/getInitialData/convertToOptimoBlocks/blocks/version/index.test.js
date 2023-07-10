@@ -1,5 +1,5 @@
-import set from 'ramda/src/set';
-import lensPath from 'ramda/src/lensPath';
+import set from 'ramda/src/set.js';
+import lensPath from 'ramda/src/lensPath.js';
 import convertMedia from '.';
 import { CPSVersionBlock, optimoVersionBlock } from './fixtures';
 

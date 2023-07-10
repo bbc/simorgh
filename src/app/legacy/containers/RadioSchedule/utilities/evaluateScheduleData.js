@@ -1,6 +1,6 @@
-import findLastIndex from 'ramda/src/findLastIndex';
-import propSatisfies from 'ramda/src/propSatisfies';
-import path from 'ramda/src/path';
+import findLastIndex from 'ramda/src/findLastIndex.js';
+import propSatisfies from 'ramda/src/propSatisfies.js';
+import path from 'ramda/src/path.js';
 
 export const getLastProgramIndex = ({ schedules, currentTime }) => {
   return findLastIndex(
