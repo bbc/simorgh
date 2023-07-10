@@ -82,3 +82,12 @@ export const ArticlePageWithPodcastPromo = props => (
     podcastEnabled
   />
 );
+
+export const ArticlePageWithPodcastPromoRightToLeft = props => (
+  <ComponentWithContext
+    {...props}
+    data={articleDataWithPodcastPromo}
+    service="arabic"
+    podcastEnabled
+  />
+);

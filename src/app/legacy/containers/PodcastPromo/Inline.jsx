@@ -12,7 +12,10 @@ import {
 import {
   GEL_GROUP_0_SCREEN_WIDTH_MAX,
   GEL_GROUP_1_SCREEN_WIDTH_MIN,
+  GEL_GROUP_2_SCREEN_WIDTH_MAX,
+  GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
 import {
   getPica,
@@ -38,8 +41,10 @@ const GEL_GROUP_1_WIDTH_260PX = '16.25rem';
 const GEL_GROUP_1_WIDTH_320PX = '20rem';
 const GEL_GROUP_1_WIDTH_360PX = '22.5rem';
 
+const standardMargin = `${GEL_SPACING_HLF} ${GEL_SPACING_DBL} ${GEL_SPACING_TRPL}`;
+
 const ResponsivePodcastPromoWrapper = styled.div`
-  ${({ dir }) => (dir === 'ltr' ? 'float: right;' : 'float: left;')}
+  ${({ dir }) => (dir === 'ltr' ? 'float: left;' : 'float: right;')}
 
   margin: 0  ${GEL_SPACING} ${GEL_SPACING_TRPL};
   height: auto;
@@ -50,7 +55,14 @@ const ResponsivePodcastPromoWrapper = styled.div`
   }
 
   @media (min-width: ${GEL_GROUP_1_WIDTH_260PX}) {
-    margin: ${GEL_SPACING_HLF} ${GEL_SPACING_DBL} ${GEL_SPACING_TRPL};
+    margin: ${standardMargin};
+    margin-left: ${({ dir }) =>
+      dir === 'ltr' ? GEL_SPACING_DBL : GEL_SPACING_DBL};
+  }
+
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    margin: ${standardMargin};
+    margin-left: ${({ dir }) => (dir === 'ltr' ? '0' : GEL_SPACING_DBL)};
   }
 `;
 
