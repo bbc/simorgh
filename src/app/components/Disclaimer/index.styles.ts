@@ -8,6 +8,7 @@ export default {
   inner: ({ palette, spacings, mq }: Theme) =>
     css({
       background: palette.GREY_3,
+      display: 'block',
       color: palette.GREY_10,
       marginBottom: `${spacings.TRIPLE}rem`,
       padding: `${spacings.DOUBLE}rem`,
@@ -37,7 +38,6 @@ export default {
     css({
       color: palette.GREY_10,
       borderBottom: `${pixelsToRem(1)}rem solid ${palette.GREY_10}`,
-      textDecoration: 'none',
       '&:visited': {
         color: palette.GREY_6,
         borderBottom: `${pixelsToRem(1)}rem solid ${palette.GREY_6}`,

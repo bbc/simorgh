@@ -40,7 +40,7 @@ import LinkedData from '../../components/LinkedData';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 import MediaMessage from './MediaMessage';
-import disclaimer from '../../components/Disclaimer';
+import Disclaimer from '../../components/Disclaimer';
 
 const StyledTimestamp = styled(Timestamp)`
   @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
@@ -161,7 +161,7 @@ const MediaAssetPage = ({ pageData }) => {
       />
     ),
     unavailableMedia: MediaMessage,
-    disclaimer,
+    disclaimer: props => <Disclaimer {...props} />,
   };
 
   const StyledMediaAssetPageGrid = styled(MediaAssetPageGrid)`

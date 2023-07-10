@@ -37,7 +37,7 @@ import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import LinkedData from '../../components/LinkedData';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import disclaimer from '../../components/Disclaimer';
+import Disclaimer from '../../components/Disclaimer';
 
 const PhotoGalleryPageGrid = ({ children, ...props }) => (
   <GelPageGrid
@@ -121,7 +121,7 @@ const PhotoGalleryPage = ({ pageData }) => {
       ) : null,
     video: props => <MediaPlayer {...props} assetUri={assetUri} />,
     version: props => <MediaPlayer {...props} assetUri={assetUri} />,
-    disclaimer,
+    disclaimer: props => <Disclaimer {...props} />,
   };
 
   const StyledPhotoGalleryPageGrid = styled(PhotoGalleryPageGrid)`

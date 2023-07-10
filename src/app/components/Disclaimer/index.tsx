@@ -2,21 +2,25 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import { useContext, PropsWithChildren } from 'react';
-import useToggle from '#hooks/useToggle';
-import { ServiceContext } from '#contexts/ServiceContext';
-import { RequestContext } from '#contexts/RequestContext';
-import { GridItemLarge } from '#components/Grid';
-import path from 'ramda/src/path';
-import pathOr from 'ramda/src/pathOr';
 import isEmpty from 'ramda/src/isEmpty';
+import { GridItemLarge } from '../../legacy/components/Grid';
+import { ServiceContext } from '../../contexts/ServiceContext';
+import { RequestContext } from '../../contexts/RequestContext';
+import useToggle from '../../hooks/useToggle';
 import { ARTICLE_PAGE } from '../../routes/utils/pageTypes';
-import Paragraph from '../Paragraph';
+import Text from '../Text';
 import InlineLink from '../InlineLink';
 import styles from './index.styles';
 
 type Props = {
   increasePaddingOnDesktop?: boolean;
 };
+
+interface Disclaimer {
+  text: string;
+  url: string;
+  isExternal: boolean;
+}
 
 const DisclaimerComponent = ({
   increasePaddingOnDesktop,
@@ -29,11 +33,8 @@ const DisclaimerComponent = ({
 
   if (!shouldShow) return null;
 
-  const infoBannerLabelTranslation = pathOr(
-    'Information',
-    ['infoBannerLabel'],
-    translations,
-  );
+  const infoBannerLabelTranslation =
+    translations?.infoBannerLabel || 'Information';
 
   return (
     <GridItemLarge>
@@ -45,31 +46,32 @@ const DisclaimerComponent = ({
         role="region"
         aria-label={infoBannerLabelTranslation}
       >
-        <Paragraph
+        <Text
           css={[
             styles.inner,
             pageType === ARTICLE_PAGE && styles.increaseTopMargin,
           ]}
           size="longPrimer"
-          fontVariant="sansLight"
+          fontVariant="sansRegular"
+          as="strong"
         >
           {disclaimer &&
             Object.values(disclaimer).map(para => {
-              const linkText: string | undefined = path(['text'], para);
-              const linkUrl: string | undefined = path(['url'], para);
+              const linkText: string = (para as Disclaimer).text;
+              const linkUrl: string = (para as Disclaimer).url;
               return linkUrl ? (
                 <InlineLink
                   className="focusIndicatorReducedWidth"
                   css={styles.inlineLink}
-                  key={linkText as string}
-                  text={linkText as string}
-                  to={linkUrl as string}
+                  key={linkText}
+                  text={linkText}
+                  to={linkUrl}
                 />
               ) : (
                 (para as string)
               );
             })}
-        </Paragraph>
+        </Text>
       </section>
     </GridItemLarge>
   );
