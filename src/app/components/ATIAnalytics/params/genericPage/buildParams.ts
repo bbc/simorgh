@@ -22,17 +22,17 @@ export const buildPageATIParams = ({
   return {
     appName: atiAnalyticsAppName,
     contentId,
-    producerId: atiAnalyticsProducerId,
     contentType,
+    language: lang,
+    libraryVersion: LIBRARY_VERSION,
     pageIdentifier,
+    pageTitle,
     platform,
-    statsDestination,
+    producerId: atiAnalyticsProducerId,
     service,
+    statsDestination,
     timePublished,
     timeUpdated,
-    pageTitle,
-    libraryVersion: LIBRARY_VERSION,
-    language: lang,
   };
 };
 
