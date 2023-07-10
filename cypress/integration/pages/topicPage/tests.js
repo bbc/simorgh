@@ -165,7 +165,9 @@ export default ({ service, pageType, variant }) => {
             .click();
 
           cy.url().should('include', '?page=2');
-          cy.get('[data-testid="topic-promos"] li');
+          cy.get('[data-testid="curation-grid-normal"]')
+            .should('have.class', 'promo-image')
+            .and('have.class', 'promo-text');
         } else {
           cy.log('No pagination as there is only one page');
         }
