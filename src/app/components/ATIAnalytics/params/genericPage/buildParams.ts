@@ -18,16 +18,7 @@ export const buildPageATIParams = ({
     timeUpdated,
     pageTitle,
   } = atiData;
-  // const {
-  //   atiAnalytics: {
-  //     contentId,
-  //     contentType,
-  //     pageIdentifier,
-  //     timePublished,
-  //     timeUpdated,
-  //     pageTitle,
-  //   } = {},
-  // } = atiData;
+
   return {
     appName: atiAnalyticsAppName,
     contentId,
