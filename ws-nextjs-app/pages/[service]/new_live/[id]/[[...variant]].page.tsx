@@ -17,6 +17,7 @@ import { FetchError } from '#models/types/fetch';
 import getEnvironment from '#app/routes/utils/getEnvironment';
 import fetchPageData from '#app/routes/utils/fetchPageData';
 
+import handleError from '#app/routes/utils/handleError';
 import LivePageLayout from './LivePageLayout';
 
 interface PageDataParams extends ParsedUrlQuery {
@@ -108,6 +109,17 @@ export const getServerSideProps: GetServerSideProps = async context => {
       reqHeaders,
     ),
   });
+
+  try {
+    throw handleError('TEST THROW ERROR', 500);
+  } catch (error) {
+    logger.error(BFF_FETCH_ERROR, {
+      service,
+      status: 500,
+      pathname: '/test/path',
+      message: 'HEllo World?',
+    });
+  }
 
   const { data, toggles } = await getPageData({
     id,
