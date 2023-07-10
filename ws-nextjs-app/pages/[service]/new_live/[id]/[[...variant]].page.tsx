@@ -109,16 +109,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
     ),
   });
 
-  try {
-    throw handleError('TEST THROW ERROR', 500);
-  } catch (error) {
-    logger.error(BFF_FETCH_ERROR, {
-      service,
-      status: 500,
-      pathname: '/test/path',
-      message: 'HEllo World?',
-    });
-  }
+  throw handleError('TEST THROW ERROR', 500);
 
   const { data, toggles } = await getPageData({
     id,
