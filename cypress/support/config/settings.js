@@ -1008,23 +1008,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/azeri'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/azeri'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/azeri'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
