@@ -20,8 +20,8 @@ describe('dgkhsdkg', () => {
     });
 
     console.log('###########################');
-    console.log('PAGE DATA', JSON.stringify(pageData));
-    console.log('ENV', process.env.SIMORGH_APP_ENV);
+    console.log('PAGE DATA', JSON.stringify(mostReadJson));
+    // console.log('ENV', process.env.SIMORGH_APP_ENV);
     console.log('###########################');
 
     expect(pageData.lastRecordTimeStamp).toEqual('2023-06-19T15:03:00Z');
