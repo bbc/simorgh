@@ -4,10 +4,6 @@ import getInitialData from '.';
 
 fetch.mockResponse(JSON.stringify(mostReadJson));
 
-beforeEach(() => {
-  delete process.env.SIMORGH_APP_ENV;
-});
-
 it('should return essential data for a page to render', async () => {
   const { pageData } = await getInitialData({
     path: '/pidgin/popular/read',

@@ -21,9 +21,11 @@ const pageTypesToSkip = [
 ];
 
 routes
-  .beforeEach(delete process.env.SIMORGH_APP_ENV)
   .filter(route => !pageTypesToSkip.includes(route.pageType))
   .forEach(({ getInitialData, pageType }) => {
+    beforeEach(() => {
+      delete process.env.SIMORGH_APP_ENV;
+    });
     it(`${pageType} - should handle Ares 404`, async () => {
       global.fetch.mockResponseOnce(JSON.stringify({}), { status: 404 });
 
