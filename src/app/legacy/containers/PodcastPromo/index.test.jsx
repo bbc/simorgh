@@ -96,7 +96,9 @@ describe('Inline', () => {
       />,
     );
 
-    expect(getByText(`Skip ${title} and continue reading`)).toBeInTheDocument();
+    expect(
+      getByText(`Skip podcast promotion and continue reading`),
+    ).toBeInTheDocument();
   });
 
   it('should render the title text in a <a> element', () => {

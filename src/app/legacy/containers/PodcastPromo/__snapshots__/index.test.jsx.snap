@@ -17,14 +17,13 @@ exports[`Inline Should render correctly 1`] = `
 @media (min-width: 16.25rem) {
   .emotion-0 {
     margin: 0.25rem 1rem 1.5rem;
-    margin-left: 1rem;
   }
 }
 
 @media (min-width: 63rem) {
   .emotion-0 {
-    margin: 0.25rem 1rem 1.5rem;
-    margin-left: 1rem;
+    margin-inline: 1rem 0;
+    direction: ltr;
   }
 }
 
@@ -324,7 +323,7 @@ exports[`Inline Should render correctly 1`] = `
   }
 }
 
-.emotion-21:visited .podcast-promo--visited {
+.emotion-21:visited {
   color: #545658;
 }
 
