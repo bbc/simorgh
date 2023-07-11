@@ -2,7 +2,7 @@
 
 exports[`Inline Should render correctly 1`] = `
 .emotion-0 {
-  float: left;
+  float: right;
   margin: 0 0.5rem 1.5rem;
   height: auto;
 }
@@ -24,7 +24,7 @@ exports[`Inline Should render correctly 1`] = `
 @media (min-width: 63rem) {
   .emotion-0 {
     margin: 0.25rem 1rem 1.5rem;
-    margin-left: 0;
+    margin-left: 1rem;
   }
 }
 
