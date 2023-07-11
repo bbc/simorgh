@@ -184,6 +184,22 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 }
 
+.emotion-9 {
+  grid-column: 1/13;
+}
+
+@media (min-width: 63rem) {
+  .emotion-9 {
+    grid-column: 1/5;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-9 {
+    grid-column: 1/4;
+  }
+}
+
 .emotion-10 {
   color: #141414;
   font-size: 1.25rem;
@@ -353,6 +369,22 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 
 .emotion-13 {
   margin-bottom: 1rem;
+}
+
+.emotion-15 {
+  grid-column: 1/13;
+}
+
+@media (min-width: 63rem) {
+  .emotion-15 {
+    grid-column: 5/13;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-15 {
+    grid-column: 4/13;
+  }
 }
 
 .emotion-16 {
@@ -912,7 +944,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
         </div>
       </div>
       <div
-        class="emotion-9"
+        class="emotion-15"
       >
         <div>
           <h2
