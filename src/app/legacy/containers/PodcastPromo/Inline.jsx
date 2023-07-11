@@ -202,8 +202,8 @@ const Promo = () => {
 
   const { text, endTextVisuallyHidden } = pathOr(
     {
-      text: 'Skip %title% and continue reading',
-      endTextVisuallyHidden: 'End of %title%',
+      text: 'Skip podcast promotion and continue reading',
+      endTextVisuallyHidden: 'End of podcast promotion',
     },
     ['skipLink'],
     podcastPromo,
