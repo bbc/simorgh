@@ -1,5 +1,5 @@
 import getConfig from '#app/routes/utils/getConfig';
-import path from 'ramda/src/path';
+import path from 'ramda/src/path.js';
 
 const hasArticleRecommendations = async (
   service: string,

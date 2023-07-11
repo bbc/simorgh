@@ -1,4 +1,4 @@
-import pathOr from 'ramda/src/pathOr';
+import pathOr from 'ramda/src/pathOr.js';
 import nodeLogger from '#lib/logger.node';
 import { PODCAST_SERVICE_MISSING } from '#lib/logger.const';
 

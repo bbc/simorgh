@@ -1,4 +1,4 @@
-import path from 'ramda/src/path';
+import path from 'ramda/src/path.js';
 import pglNoCpsPromos from '#data/arabic/cpsAssets/art-and-culture-38260491.json';
 import { data as styWithNoCpsPromoData } from '#data/igbo/cpsAssets/afirika-23252735.json';
 import { data as pglWithNoRelatedContentData } from '#data/pidgin/cpsAssets/sport-23252855.json';

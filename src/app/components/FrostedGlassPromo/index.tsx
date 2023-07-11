@@ -3,7 +3,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import React, { PropsWithChildren, useContext } from 'react';
-import pick from 'ramda/src/pick';
+import pick from 'ramda/src/pick.js';
 import Lazyload from 'react-lazyload';
 
 import IMAGE from '../Image';

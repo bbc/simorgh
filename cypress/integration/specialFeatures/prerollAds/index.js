@@ -1,4 +1,4 @@
-import path from 'ramda/src/path';
+import path from 'ramda/src/path.js';
 import getAppEnv from '../../../support/helpers/getAppEnv';
 import { mapsWithPreroll, mapsWithoutPreroll } from './config';
 

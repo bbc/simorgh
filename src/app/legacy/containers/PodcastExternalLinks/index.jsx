@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/aria-role */
 import React, { useContext } from 'react';
 import { arrayOf, shape, string } from 'prop-types';
-import pathOr from 'ramda/src/pathOr';
+import pathOr from 'ramda/src/pathOr.js';
 import styled from '@emotion/styled';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import {

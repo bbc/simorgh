@@ -9,7 +9,7 @@ import {
   AMP_SCRIPT_JS,
 } from '#psammead/psammead-assets/src/amp-boilerplate';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
-import pathOr from 'ramda/src/pathOr';
+import pathOr from 'ramda/src/pathOr.js';
 import { getBodyCopy } from '#psammead/gel-foundations/src/typography';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import { MostReadItemWrapper, MostReadLink } from '../Canonical/Item';

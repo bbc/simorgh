@@ -1,5 +1,5 @@
-import path from 'ramda/src/path';
-import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
+import path from 'ramda/src/path.js';
+import mergeDeepLeft from 'ramda/src/mergeDeepLeft.js';
 
 import addIdsToItems from '../addIdsToItems';
 

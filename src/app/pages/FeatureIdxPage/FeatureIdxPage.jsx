@@ -1,6 +1,6 @@
 import React, { useContext, Fragment } from 'react';
-import path from 'ramda/src/path';
-import pathOr from 'ramda/src/pathOr';
+import path from 'ramda/src/path.js';
+import pathOr from 'ramda/src/pathOr.js';
 import { RequestContext } from '#contexts/RequestContext';
 import IndexHeading from '#containers/IndexHeading';
 import IndexPageContainer from '#components/PageLayout/IndexPageContainer';

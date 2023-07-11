@@ -2,8 +2,8 @@
 /** @jsx jsx */
 import { useContext } from 'react';
 import { jsx } from '@emotion/react';
-import path from 'ramda/src/path';
-import isEmpty from 'ramda/src/isEmpty';
+import path from 'ramda/src/path.js';
+import isEmpty from 'ramda/src/isEmpty.js';
 
 import SectionLabel from '#psammead/psammead-section-label/src';
 import { ServiceContext } from '../../../../contexts/ServiceContext';

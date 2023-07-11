@@ -1,4 +1,4 @@
-import path from 'ramda/src/path';
+import path from 'ramda/src/path.js';
 
 // positions a block after the headline block
 export const insertBlockAfterHeadline = (targetBlock, blocks) => {

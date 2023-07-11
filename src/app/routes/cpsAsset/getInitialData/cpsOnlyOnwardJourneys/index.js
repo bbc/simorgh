@@ -1,4 +1,4 @@
-import path from 'ramda/src/path';
+import path from 'ramda/src/path.js';
 
 const cpsOnlyOnwardJourneys = json => {
   const groups = path(['relatedContent', 'groups'], json);

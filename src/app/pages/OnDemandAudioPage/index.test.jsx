@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import assocPath from 'ramda/src/assocPath';
+import assocPath from 'ramda/src/assocPath.js';
 import { StaticRouter } from 'react-router-dom';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import pashtoPageData from '#data/pashto/bbc_pashto_radio/w3ct0lz1';

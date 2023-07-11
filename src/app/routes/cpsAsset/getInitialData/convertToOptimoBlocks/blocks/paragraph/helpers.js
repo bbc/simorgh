@@ -1,5 +1,5 @@
 /* eslint-disable import/prefer-default-export */
-import path from 'ramda/src/path';
+import path from 'ramda/src/path.js';
 
 const boldWrap = text => `<bold>${text}</bold>`;
 

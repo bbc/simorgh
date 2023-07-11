@@ -1,6 +1,6 @@
 import { Agent } from 'https';
-import path from 'ramda/src/path';
-import isEmpty from 'ramda/src/isEmpty';
+import path from 'ramda/src/path.js';
+import isEmpty from 'ramda/src/isEmpty.js';
 
 import { DATA_FETCH_ERROR } from '#lib/logger.const';
 import getRecommendationsUrl from '#app/lib/utilities/getUrlHelpers/getRecommendationsUrl';

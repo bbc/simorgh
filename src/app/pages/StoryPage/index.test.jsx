@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { StaticRouter } from 'react-router-dom';
-import deepClone from 'ramda/src/clone';
+import deepClone from 'ramda/src/clone.js';
 
 // test helpers
-import assocPath from 'ramda/src/assocPath';
+import assocPath from 'ramda/src/assocPath.js';
 import fetchMock from 'fetch-mock';
 
 // components to test

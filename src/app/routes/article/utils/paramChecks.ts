@@ -1,4 +1,4 @@
-import pathOr from 'ramda/src/pathOr';
+import pathOr from 'ramda/src/pathOr.js';
 import { InferProps } from 'prop-types';
 import { articleDataPropTypes } from '../../../models/propTypes/article';
 

@@ -1,4 +1,4 @@
-import pathOr from 'ramda/src/pathOr';
+import pathOr from 'ramda/src/pathOr.js';
 
 const getCPSAssetType = pageData =>
   pathOr(null, ['metadata', 'type'], pageData);

@@ -1,4 +1,4 @@
-import path from 'ramda/src/path';
+import path from 'ramda/src/path.js';
 import config from '../../../support/config/services';
 
 export default ({ service, pageType, variant }) => {

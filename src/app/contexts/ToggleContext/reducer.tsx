@@ -1,5 +1,5 @@
 import { Toggles } from '#app/models/types/global';
-import pathOr from 'ramda/src/pathOr';
+import pathOr from 'ramda/src/pathOr.js';
 
 type ReducerProps = {
   toggleState: Toggles;

@@ -1,5 +1,5 @@
-import pathOr from 'ramda/src/pathOr';
-import path from 'ramda/src/path';
+import pathOr from 'ramda/src/pathOr.js';
+import path from 'ramda/src/path.js';
 import { singleTextBlock } from '#app/models/blocks';
 import { PHOTO_GALLERY_PAGE } from '#app/routes/utils/pageTypes';
 import deepClone from '../../../utils/jsonClone';

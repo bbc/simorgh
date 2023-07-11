@@ -1,7 +1,7 @@
 import express from 'express';
 import compression from 'compression';
-import ramdaPath from 'ramda/src/path';
-import omit from 'ramda/src/omit';
+import ramdaPath from 'ramda/src/path.js';
+import omit from 'ramda/src/omit.js';
 // not part of react-helmet
 import helmet from 'helmet';
 import routes from '#app/routes';

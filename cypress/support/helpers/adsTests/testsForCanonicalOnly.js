@@ -1,4 +1,4 @@
-import path from 'ramda/src/path';
+import path from 'ramda/src/path.js';
 import config from '../../config/services';
 import envConfig from '../../config/envs';
 
