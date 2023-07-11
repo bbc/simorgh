@@ -7,9 +7,9 @@ describe('dgkhsdkg', () => {
     delete process.env.SIMORGH_APP_ENV;
   });
 
-  fetch.mockResponse(JSON.stringify(mostReadJson));
-
   it('should return essential data for a page to render', async () => {
+    fetch.mockResponse(JSON.stringify(mostReadJson));
+
     const { pageData } = await getInitialData({
       path: '/pidgin/popular/read',
       service: 'pidgin',
