@@ -79,8 +79,14 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   .emotion-4 {
     -webkit-padding-start: 1rem;
     padding-inline-start: 1rem;
-    grid-column: 1/span 3;
+    grid-column: 1/span 4;
     margin-bottom: 0;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-4 {
+    grid-column: 1/span 3;
   }
 }
 
@@ -103,6 +109,12 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 @media (min-width: 63rem) {
   .emotion-6 {
     grid-column: 5/span 8;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-6 {
+    grid-column: 4/span 9;
   }
 }
 
@@ -136,6 +148,12 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 @media (min-width: 63rem) {
   .emotion-7 {
     grid-column: 5/span 8;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-7 {
+    grid-column: 4/span 9;
   }
 }
 
