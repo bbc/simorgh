@@ -44,7 +44,7 @@ const GEL_GROUP_1_WIDTH_360PX = '22.5rem';
 const standardMargin = `${GEL_SPACING_HLF} ${GEL_SPACING_DBL} ${GEL_SPACING_TRPL}`;
 
 const ResponsivePodcastPromoWrapper = styled.div`
-  ${({ dir }) => (dir === 'ltr' ? 'float: left;' : 'float: right;')}
+  ${({ dir }) => (dir === 'rtl' ? 'float: left;' : 'float: right;')}
 
   margin: 0  ${GEL_SPACING} ${GEL_SPACING_TRPL};
   height: auto;
@@ -57,12 +57,12 @@ const ResponsivePodcastPromoWrapper = styled.div`
   @media (min-width: ${GEL_GROUP_1_WIDTH_260PX}) {
     margin: ${standardMargin};
     margin-left: ${({ dir }) =>
-      dir === 'ltr' ? GEL_SPACING_DBL : GEL_SPACING_DBL};
+      dir === 'rtl' ? GEL_SPACING_DBL : GEL_SPACING_DBL};
   }
 
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     margin: ${standardMargin};
-    margin-left: ${({ dir }) => (dir === 'ltr' ? '0' : GEL_SPACING_DBL)};
+    margin-left: ${({ dir }) => (dir === 'rtl' ? '0' : GEL_SPACING_DBL)};
   }
 `;
 
