@@ -1,5 +1,5 @@
-import { getPageBundleData } from './getBundleData';
-import { pages } from './pages';
+import { getPageBundleData } from './getBundleData.js';
+import { pages } from './pages.js';
 
 jest.mock('./pageTypeBundleExtractor');
 jest.mock('fs', () => ({

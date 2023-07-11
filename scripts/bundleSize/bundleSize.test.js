@@ -1,3 +1,4 @@
+/* eslint-disable import/extensions */
 import ora from 'ora';
 import chalk from 'chalk';
 import { readdirSync, statSync } from 'fs';
@@ -19,8 +20,8 @@ jest.mock('../../cypress/support/config/services', () => ({
 }));
 jest.mock('fs');
 jest.mock('./bundleSizeConfig', () => ({
-  MIN_SIZE: 632,
-  MAX_SIZE: 728,
+  MIN_SIZE: 490,
+  MAX_SIZE: 583,
 }));
 
 const setUpFSMocks = (service1FileSize, service2FileSize) => {
@@ -29,8 +30,6 @@ const setUpFSMocks = (service1FileSize, service2FileSize) => {
       'modern.main-12345.js',
       'modern.service1-12345.12345.js',
       'modern.service2-12345.12345.js',
-      'modern.themes-service1.12345.js',
-      'modern.themes-service2.12345.js',
       'modern.1111-lib-1111.js',
       'modern.commons-1111.js',
       'modern.commons-2222.js',
@@ -98,7 +97,7 @@ describe('bundleSize', () => {
       let didThrow = false;
       jest.isolateModules(() => {
         try {
-          require('.'); // eslint-disable-line global-require
+          require('./index.js'); // eslint-disable-line global-require
         } catch (e) {
           didThrow = true;
         }
@@ -109,7 +108,7 @@ describe('bundleSize', () => {
     it('should use ora to show loading and success states', () => {
       jest.isolateModules(() => {
         try {
-          require('.'); // eslint-disable-line global-require
+          require('./index.js'); // eslint-disable-line global-require
         } catch (e) {
           // silence error
         }
@@ -125,7 +124,7 @@ describe('bundleSize', () => {
     it('should log a summary of bundle sizes', () => {
       jest.isolateModules(() => {
         try {
-          require('.'); // eslint-disable-line global-require
+          require('./index.js'); // eslint-disable-line global-require
         } catch (e) {
           // silence error
         }
@@ -142,7 +141,7 @@ describe('bundleSize', () => {
         "
 
         Results
-        MODERN service config bundle sizes
+        MODERN service bundle sizes
         ┌──────────────┬─────────────────────────────────┬────────────────────┬─────────────────┐
         │ Service name │ bundles                         │ Total size (Bytes) │ Total size (kB) │
         ├──────────────┼─────────────────────────────────┼────────────────────┼─────────────────┤
@@ -151,24 +150,7 @@ describe('bundleSize', () => {
         │ service2     │ service2-12345.12345.js (146kB) │ 150000             │ 146             │
         └──────────────┴─────────────────────────────────┴────────────────────┴─────────────────┘
 
-        MODERN service config bundle sizes summary
-        ┌─────────────────────────────────┬─────┐
-        │ Smallest total bundle size (kB) │ 142 │
-        ├─────────────────────────────────┼─────┤
-        │ Largest total bundle size (kB)  │ 146 │
-        ├─────────────────────────────────┼─────┤
-        │ Average total bundle size (kB)  │ 144 │
-        └─────────────────────────────────┴─────┘
-        MODERN service theme bundle sizes
-        ┌──────────────┬──────────────────────────────────┬────────────────────┬─────────────────┐
-        │ Service name │ bundles                          │ Total size (Bytes) │ Total size (kB) │
-        ├──────────────┼──────────────────────────────────┼────────────────────┼─────────────────┤
-        │ service1     │ themes-service1.12345.js (142kB) │ 145000             │ 142             │
-        ├──────────────┼──────────────────────────────────┼────────────────────┼─────────────────┤
-        │ service2     │ themes-service2.12345.js (146kB) │ 150000             │ 146             │
-        └──────────────┴──────────────────────────────────┴────────────────────┴─────────────────┘
-
-        MODERN service theme bundle sizes summary
+        MODERN service bundle sizes summary
         ┌─────────────────────────────────┬─────┐
         │ Smallest total bundle size (kB) │ 142 │
         ├─────────────────────────────────┼─────┤
@@ -235,11 +217,11 @@ describe('bundleSize', () => {
         │ Average total bundle size (kB)  │ 403 │
         └─────────────────────────────────┴─────┘
 
-        MODERN service config & theme + page bundle sizes summary
+        MODERN service + page bundle sizes summary
         ┌────────────────────────────────────────────────────────────────────┬─────┐
-        │ Smallest total bundle size (kB) (smallest service + smallest page) │ 637 │
+        │ Smallest total bundle size (kB) (smallest service + smallest page) │ 495 │
         ├────────────────────────────────────────────────────────────────────┼─────┤
-        │ Largest total bundle size (kB) (largest service + largest page)    │ 723 │
+        │ Largest total bundle size (kB) (largest service + largest page)    │ 577 │
         └────────────────────────────────────────────────────────────────────┴─────┘"
       `);
     });
@@ -252,7 +234,7 @@ describe('bundleSize', () => {
       let didThrow = false;
       jest.isolateModules(() => {
         try {
-          require('.'); // eslint-disable-line global-require
+          require('./index.js'); // eslint-disable-line global-require
         } catch (e) {
           didThrow = true;
         }
@@ -263,7 +245,7 @@ describe('bundleSize', () => {
     it('should use ora to show loading and failure states', () => {
       jest.isolateModules(() => {
         try {
-          require('.'); // eslint-disable-line global-require
+          require('./index.js'); // eslint-disable-line global-require
         } catch (e) {
           // silence error
         }
@@ -279,14 +261,14 @@ describe('bundleSize', () => {
     it('should log an error telling dev how to update thresholds', () => {
       jest.isolateModules(() => {
         try {
-          require('.'); // eslint-disable-line global-require
+          require('./index.js'); // eslint-disable-line global-require
         } catch (e) {
           // silence error
         }
       });
 
       expect(global.console.error).toHaveBeenCalledWith(
-        "Bundle size for service1 FrontPage is too small at 357 kB. Please update thresholds in './scripts/bundleSize/bundleSizeConfig.js'",
+        "Bundle size for service1 FrontPage is too small at 355 kB. Please update thresholds in './scripts/bundleSize/bundleSizeConfig.js'",
       );
     });
   });
@@ -298,7 +280,7 @@ describe('bundleSize', () => {
       let didThrow = false;
       jest.isolateModules(() => {
         try {
-          require('.'); // eslint-disable-line global-require
+          require('./index.js'); // eslint-disable-line global-require
         } catch (e) {
           didThrow = true;
         }
@@ -309,7 +291,7 @@ describe('bundleSize', () => {
     it('should use ora to show loading and failure states', () => {
       jest.isolateModules(() => {
         try {
-          require('.'); // eslint-disable-line global-require
+          require('./index.js'); // eslint-disable-line global-require
         } catch (e) {
           // silence error
         }
@@ -325,14 +307,14 @@ describe('bundleSize', () => {
     it('should log an error telling dev how to update thresholds', () => {
       jest.isolateModules(() => {
         try {
-          require('.'); // eslint-disable-line global-require
+          require('./index.js'); // eslint-disable-line global-require
         } catch (e) {
           // silence error
         }
       });
 
       expect(global.console.error).toHaveBeenCalledWith(
-        "Bundle size for service2 MostWatchedPage is too large at 753 kB. Please update thresholds in './scripts/bundleSize/bundleSizeConfig.js'",
+        "Bundle size for service2 MostWatchedPage is too large at 592 kB. Please update thresholds in './scripts/bundleSize/bundleSizeConfig.js'",
       );
     });
   });
