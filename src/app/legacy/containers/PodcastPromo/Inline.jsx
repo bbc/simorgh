@@ -39,8 +39,6 @@ const GEL_GROUP_1_WIDTH_260PX = '16.25rem';
 const GEL_GROUP_1_WIDTH_320PX = '20rem';
 const GEL_GROUP_1_WIDTH_360PX = '22.5rem';
 
-const standardMargin = `${GEL_SPACING_HLF} ${GEL_SPACING_DBL} ${GEL_SPACING_TRPL}`;
-
 const ResponsivePodcastPromoWrapper = styled.div`
   ${({ dir }) => (dir === 'rtl' ? 'float: left;' : 'float: right;')}
 
@@ -53,14 +51,12 @@ const ResponsivePodcastPromoWrapper = styled.div`
   }
 
   @media (min-width: ${GEL_GROUP_1_WIDTH_260PX}) {
-    margin: ${standardMargin};
-    margin-left: ${({ dir }) =>
-      dir === 'rtl' ? GEL_SPACING_DBL : GEL_SPACING_DBL};
+    margin: ${GEL_SPACING_HLF} ${GEL_SPACING_DBL} ${GEL_SPACING_TRPL};
   }
 
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    margin: ${standardMargin};
-    margin-left: ${({ dir }) => (dir === 'rtl' ? '0' : GEL_SPACING_DBL)};
+    margin-inline: ${GEL_SPACING_DBL} 0;
+    direction: ${({ dir }) => dir};
   }
 `;
 
@@ -143,9 +139,7 @@ const StyledCardLink = styled(PromoComponent.Card.Link)`
   margin-top: ${GEL_SPACING_HLF_TRPL};
   color: ${props => props.theme.palette.GREY_10};
   &:visited {
-    .podcast-promo--visited {
-      color: ${props => props.theme.palette.GREY_6};
-    }
+    color: ${props => props.theme.palette.GREY_6};
   }
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
     margin-top: 0;
