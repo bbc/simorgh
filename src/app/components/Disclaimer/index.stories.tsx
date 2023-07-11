@@ -7,6 +7,7 @@ import { StoryProps } from '../../models/types/storybook';
 
 import metadata from './metadata.json';
 import DisclaimerComponent from '.';
+import md from './README.md';
 
 const Component = ({ service, variant }: StoryProps) => {
   return (
@@ -27,11 +28,16 @@ const Component = ({ service, variant }: StoryProps) => {
 };
 
 export default {
-  title: 'Components/Disclaimer',
+  title: 'New Components/Disclaimer',
   Component,
   parameters: {
     metadata,
-    chromatic: { disable: true },
+    docs: {
+      component: {
+        title: 'Disclaimer',
+      },
+      page: md,
+    },
   },
 };
 
