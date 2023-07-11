@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   /** Size limit for all bundles used by each service (kB)
    *
    * `MIN_SIZE` should be the value of "Smallest total bundle size (kB) (smallest service + smallest page)" &
