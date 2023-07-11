@@ -2,6 +2,10 @@ import { MOST_READ_PAGE } from '#app/routes/utils/pageTypes';
 import mostReadJson from '../../../../../data/pidgin/mostRead/index.json';
 import getInitialData from '.';
 
+beforeEach(() => {
+  delete process.env.SIMORGH_APP_ENV;
+});
+
 fetch.mockResponse(JSON.stringify(mostReadJson));
 
 it('should return essential data for a page to render', async () => {
