@@ -20,6 +20,10 @@ const pageTypesToSkip = [
   'cpsAsset',
 ];
 
+beforeEach(() => {
+  delete process.env.SIMORGH_APP_ENV;
+});
+
 routes
   .filter(route => !pageTypesToSkip.includes(route.pageType))
   .forEach(({ getInitialData, pageType }) => {

@@ -139,6 +139,7 @@ describe('Feature Idx Page', () => {
 
   beforeEach(async () => {
     fetch.mockResponse(JSON.stringify(urduPageData));
+    delete process.env.SIMORGH_APP_ENV;
 
     ({ pageData } = await getInitialData({
       path: 'some-feature-idx-page-path',
