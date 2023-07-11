@@ -20,11 +20,8 @@ const pageTypesToSkip = [
   'cpsAsset',
 ];
 
-beforeEach(() => {
-  delete process.env.SIMORGH_APP_ENV;
-});
-
 routes
+  .beforeEach(delete process.env.SIMORGH_APP_ENV)
   .filter(route => !pageTypesToSkip.includes(route.pageType))
   .forEach(({ getInitialData, pageType }) => {
     it(`${pageType} - should handle Ares 404`, async () => {
