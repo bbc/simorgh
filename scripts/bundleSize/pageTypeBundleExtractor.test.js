@@ -1,6 +1,7 @@
 import { extractBundlesForPageType } from './pageTypeBundleExtractor.js';
+import { jest } from '@jest/globals';
 
-jest.mock(
+jest.unstable_mockModule(
   '../../reports/modern.webpackBundleReport.json',
   () => ({
     namedChunkGroups: {
