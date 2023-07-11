@@ -1418,23 +1418,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/burmese'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/burmese'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/burmese'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: {
         environments: {
           live: {
