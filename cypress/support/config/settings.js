@@ -5433,17 +5433,11 @@ module.exports = () => ({
       topicPage: {
         environments: {
           live: {
-            paths: [
-              '/pidgin/topics/c95y35941vrt',
-              '/pidgin/topics/cnq68qvkjp1t', // One page only
-            ],
+            paths: ['/pidgin/topics/c95y35941vrt'],
             enabled: true,
           },
           test: {
-            paths: [
-              '/pidgin/topics/cqywjyzk2vyt',
-              '/pidgin/topics/cnq68qvkjp1t', // One page only
-            ],
+            paths: ['/pidgin/topics/cqywjyzk2vyt'],
             enabled: true,
           },
           local: {
