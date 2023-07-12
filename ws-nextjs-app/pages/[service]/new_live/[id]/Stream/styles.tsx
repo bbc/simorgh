@@ -10,10 +10,11 @@ export default {
       marginBlock: 0,
       paddingInline: 0,
     }),
-  heading: ({ mq, spacings }: Theme) =>
+  heading: ({ mq, spacings, fontSizes }: Theme) =>
     css({
       padding: `${spacings.DOUBLE}rem 0 ${spacings.DOUBLE}rem`,
       [mq.GROUP_3_MIN_WIDTH]: {
+        ...fontSizes.doublePica,
         padding: `${spacings.TRIPLE}rem 0 ${spacings.DOUBLE}rem`,
       },
     }),
