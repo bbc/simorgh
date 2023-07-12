@@ -41,6 +41,7 @@ describe('Front Page - Get Initial Data', () => {
 
   afterEach(() => {
     jest.clearAllMocks();
+    fetchMock.restore();
   });
 
   it('should request local fixture data when the app env is local', async () => {
