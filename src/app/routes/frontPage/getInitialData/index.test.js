@@ -12,12 +12,15 @@ jest.mock('../../utils/getConfig', () => jest.fn());
 describe('Get initial data from front page', () => {
   beforeEach(() => {
     process.env.SIMORGH_BASE_URL = 'http://localhost';
+    fetchMock.mock('begin:http://localhost/serbian/lat', frontPageJsonSerbian);
+  });
+
+  afterEach(() => {
+    jest.clearAllMocks();
     fetchMock.restore();
   });
 
   it('should return data for a page without radio schedules to render', async () => {
-    fetchMock.mock('begin:http://localhost/serbian/lat/', frontPageJsonSerbian);
-
     const { pageData } = await getInitialData({
       path: '/serbian/lat',
       service: 'serbian',
@@ -34,7 +37,6 @@ describe('Get initial data from front page', () => {
   });
 
   it('should return data to render a front page with radio schedules', async () => {
-    fetchMock.mock('begin:http://localhost/serbian/lat/', frontPageJsonSerbian);
     fetchMock.mock(
       'http://localhost/serbian/bbc_serbian_radio/schedule.json',
       radioScheduleJson,
@@ -64,7 +66,6 @@ describe('Get initial data from front page', () => {
   });
 
   it('should return data for service with radio schedules, but without radio schedules on front page', async () => {
-    fetchMock.mock('begin:http://localhost/serbian/lat/', frontPageJsonSerbian);
     fetchMock.mock(
       'http://localhost/serbian/bbc_serbian_radio/schedule.json',
       radioScheduleJson,
@@ -93,7 +94,6 @@ describe('Get initial data from front page', () => {
   });
 
   it('should return page data for misconfigured service without radio schedules, but with radio schedules on front page', async () => {
-    fetchMock.mock('begin:http://localhost/serbian/lat/', frontPageJsonSerbian);
     fetchMock.mock(
       'http://localhost/serbian/bbc_serbian_radio/schedule.json',
       null,
