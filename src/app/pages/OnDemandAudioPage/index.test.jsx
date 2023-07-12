@@ -97,10 +97,6 @@ describe('OnDemand Radio Page ', () => {
     process.env = { ...env };
   });
 
-  afterEach(() => {
-    delete process.env.SIMORGH_APP_ENV;
-  });
-
   it('should match snapshot for Canonical', async () => {
     const pashtoPageDataWithAvailableEpisode =
       getAvailableEpisode(pashtoPageData);

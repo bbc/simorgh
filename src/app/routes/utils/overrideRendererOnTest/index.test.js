@@ -3,11 +3,8 @@ import overrideRendererOnTest, { addOverrideQuery } from '.';
 const { env } = process;
 
 describe('overrideRendererOnTest', () => {
-  const originalAppEnv = process.env.SIMORGH_APP_ENV;
-
   afterEach(() => {
     process.env = { ...env };
-    process.env.SIMORGH_APP_ENV = originalAppEnv;
   });
 
   it('should add override query to full url', () => {

@@ -31,7 +31,6 @@ const bffArticleJson = {
 
 describe('Articles - BFF Fetching', () => {
   afterEach(() => {
-    delete process.env.SIMORGH_APP_ENV;
     jest.clearAllMocks();
   });
 

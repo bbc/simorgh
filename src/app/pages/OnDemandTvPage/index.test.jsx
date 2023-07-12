@@ -73,9 +73,6 @@ describe('OnDemand TV Brand Page ', () => {
   beforeEach(() => {
     process.env = { ...env };
   });
-  afterEach(() => {
-    delete process.env.SIMORGH_APP_ENV;
-  });
 
   it('a11y - should render a visually hidden headline', async () => {
     fetch.mockResponse(JSON.stringify(pashtoPageData));

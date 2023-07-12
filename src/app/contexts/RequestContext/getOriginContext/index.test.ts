@@ -11,7 +11,6 @@ describe('getOriginContext', () => {
   });
   afterEach(() => {
     resetWindowValue('location', windowLocation);
-    delete process.env.SIMORGH_APP_ENV;
   });
 
   const tests = [
