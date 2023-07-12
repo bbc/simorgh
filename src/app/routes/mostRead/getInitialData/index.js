@@ -27,9 +27,7 @@ export default async ({ service, variant, pageType, path: pathname }) => {
       ...(!isLocal() && { agent, optHeaders }),
     });
 
-    console.log('###########################');
-    console.log('STRINGIFY JSON', JSON.stringify(json));
-    console.log('###########################');
+    console.log({ json });
 
     if (!json?.data) {
       throw handleError('Most Read data is malformed', 500);

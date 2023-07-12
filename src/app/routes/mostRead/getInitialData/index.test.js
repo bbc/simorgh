@@ -4,24 +4,24 @@ import getInitialData from '.';
 
 describe('dgkhsdkg', () => {
   beforeEach(() => {
-    jest.clearAllMocks();
-
     delete process.env.SIMORGH_APP_ENV;
+  });
+
+  afterEach(() => {
+    jest.clearAllMocks();
   });
 
   it('should return essential data for a page to render', async () => {
     fetch.mockResponse(JSON.stringify(mostReadJson));
 
-    const { pageData } = await getInitialData({
+    const response = await getInitialData({
       path: '/pidgin/popular/read',
       service: 'pidgin',
       pageType: MOST_READ_PAGE,
     });
 
-    console.log('###########################');
-    console.log('PAGE DATA', JSON.stringify(mostReadJson));
-    // console.log('ENV', process.env.SIMORGH_APP_ENV);
-    console.log('###########################');
+    console.log({ response });
+    const { pageData } = response;
 
     expect(pageData.lastRecordTimeStamp).toEqual('2023-06-19T15:03:00Z');
     expect(pageData.metadata.type).toEqual('mostRead');
