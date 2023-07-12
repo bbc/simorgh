@@ -180,7 +180,6 @@ const Promo = () => {
     alt,
     url,
     label,
-    showPromo,
     eventTrackingData,
     sizes,
     srcset,
@@ -189,10 +188,6 @@ const Promo = () => {
 
   const viewTrackerRef = useViewTracker(eventTrackingData);
   const clickTrackerRef = useClickTrackerHandler(eventTrackingData);
-
-  if (!showPromo) {
-    return null;
-  }
 
   const { text, endTextVisuallyHidden } = pathOr(
     {
@@ -207,7 +202,7 @@ const Promo = () => {
   const terms = {
     '%title%': podcastPromoTitle,
   };
-
+  console.log('CHECK');
   return (
     <ResponsivePodcastPromoWrapper ref={viewTrackerRef} dir={dir}>
       <StyledPromoComponent

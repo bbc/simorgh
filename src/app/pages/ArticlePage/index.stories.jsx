@@ -4,7 +4,7 @@ import { withKnobs } from '@storybook/addon-knobs';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { UserContextProvider } from '#contexts/UserContext';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import articleData from '#data/news/articles/c0g992jmmkko.json';
 import articleDataWithRelatedContent from '#data/afrique/articles/c7yn6nznljdo.json';
@@ -13,14 +13,42 @@ import articleDataWithPodcastPromo from '#data/russian/articles/c61q94n3rm3o.jso
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
 import ArticlePageComponent from './ArticlePage';
+import latin from '#app/components/ThemeProvider/fontScripts/latin';
+import { service } from '#app/lib/config/services/news';
 
 const PageWithOptimizely = withOptimizelyProvider(ArticlePageComponent);
 const Page = withPageWrapper(PageWithOptimizely);
+
+const serviceContextMock = {
+  ...service.default,
+  service: 'news',
+  script: latin,
+  dir: 'ltr',
+  podcastPromo: {
+    title: 'Podcast',
+    brandTitle: 'Sounds of the 90s with Fearne Cotton',
+    brandDescription:
+      'Join Fearne for a nostalgia drenched celebration of the best music and pop culture from the 90s.',
+    image: {
+      src: 'https://ichef.bbci.co.uk/images/ic/400x400/p098vtc3.jpg',
+      alt: 'Picture of Spice Girls',
+    },
+    linkLabel: {
+      href: 'https://www.bbc.co.uk/sounds/brand/m000gkf5',
+      text: 'Episodes',
+    },
+    skipLink: {
+      text: 'Skip podcast and continue reading',
+      endTextVisuallyHidden: 'End of story podcast',
+    },
+  },
+};
 
 const ComponentWithContext = ({
   data: { data },
   service = 'news',
   podcastEnabled = false,
+  value,
 }) => {
   return (
     <ToggleContextProvider
@@ -32,7 +60,7 @@ const ComponentWithContext = ({
       }}
     >
       {/* Service set to news to enable most read. Article data is in english */}
-      <ServiceContextProvider service={service}>
+      <ServiceContext.Provider value={serviceContextMock}>
         <RequestContextProvider
           isAmp={false}
           pageType={ARTICLE_PAGE}
@@ -50,7 +78,7 @@ const ComponentWithContext = ({
             </MemoryRouter>
           </UserContextProvider>
         </RequestContextProvider>
-      </ServiceContextProvider>
+      </ServiceContext.Provider>
     </ToggleContextProvider>
   );
 };
@@ -62,28 +90,7 @@ export default {
   parameters: { layout: 'fullscreen' },
 };
 
-export const ArticlePage = props => (
-  <ComponentWithContext {...props} data={articleData} />
-);
-
-export const ArticlePageWithRelatedContent = props => (
-  <ComponentWithContext {...props} data={articleDataWithRelatedContent} />
-);
-
-export const ArticlePageWithSingleRelatedContent = props => (
-  <ComponentWithContext {...props} data={articleDataWithSingleRelatedContent} />
-);
-
-export const ArticlePageWithPodcastPromo = props => (
-  <ComponentWithContext
-    {...props}
-    data={articleDataWithPodcastPromo}
-    service="russian"
-    podcastEnabled
-  />
-);
-
-export const ArticlePageWithPodcastPromoRightToLeft = props => (
+export const ArticlePageWithPodcastNews = props => (
   <ComponentWithContext
     {...props}
     data={articleDataWithPodcastPromo}
