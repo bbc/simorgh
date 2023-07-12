@@ -84,10 +84,10 @@ const LivePage = ({
           description={description}
         />
         <div css={styles.outerGrid}>
-          <div css={styles.leftSection}>
+          <div css={styles.firstSection}>
             <Summary summaryBlocks={summaryContent?.model.blocks} />
           </div>
-          <div css={styles.rightSection}>
+          <div css={styles.secondSection}>
             <Stream streamContent={liveTextStream.content} />
             <pre css={styles.code}>
               <Heading level={4}>Headers</Heading>
