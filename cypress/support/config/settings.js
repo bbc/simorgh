@@ -1,4 +1,4 @@
-module.exports = () => ({
+export default () => ({
   afaanoromoo: {
     name: 'afaanoromoo',
     font: undefined,
