@@ -256,6 +256,7 @@ describe('Main page routes', () => {
   });
 
   it('should route to and render a front page', async () => {
+    process.env.SIMORGH_APP_ENV = 'local';
     const service = 'serbian';
     const variant = 'lat';
     const pathname = `/${service}/${variant}`;
