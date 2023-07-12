@@ -30,9 +30,8 @@ const bffArticleJson = {
 };
 
 describe('Articles - BFF Fetching', () => {
-  const originalAppEnv = process.env.SIMORGH_APP_ENV;
   afterEach(() => {
-    process.env.SIMORGH_APP_ENV = originalAppEnv;
+    delete process.env.SIMORGH_APP_ENV;
     jest.clearAllMocks();
   });
 
