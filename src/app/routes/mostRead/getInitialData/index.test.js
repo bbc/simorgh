@@ -1,18 +1,163 @@
 import { MOST_READ_PAGE } from '#app/routes/utils/pageTypes';
+import * as fetchPageData from '../../utils/fetchPageData';
 import mostReadJson from '../../../../../data/pidgin/mostRead/index.json';
 import getInitialData from '.';
 
-describe('dgkhsdkg', () => {
-  beforeEach(() => {
-    delete process.env.SIMORGH_APP_ENV;
-  });
+process.env.BFF_PATH = 'https://mock-bff-path';
 
+const agent = { cert: 'cert', ca: 'ca', key: 'key' };
+jest.mock('#server/utilities/getAgent', () =>
+  jest.fn(() => Promise.resolve(agent)),
+);
+
+const bffMostReadPageJson = {
+  data: {
+    generated: '',
+    lastRecordTimeStamp: '',
+    firstRecordTimeStamp: '',
+    items: [],
+  },
+};
+
+describe('MostReadPage - BFF Fetching', () => {
   afterEach(() => {
     jest.clearAllMocks();
   });
 
+  it('should request local fixture data when the app env is "local"', async () => {
+    process.env.SIMORGH_APP_ENV = 'local';
+
+    const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
+    fetchDataSpy.mockImplementation(() =>
+      Promise.resolve({
+        status: 200,
+        json: JSON.stringify(bffMostReadPageJson),
+      }),
+    );
+
+    await getInitialData({
+      path: '/pidgin/popular/read',
+      service: 'pidgin',
+      pageType: 'mostRead',
+    });
+
+    expect(fetchDataSpy).toHaveBeenCalledWith({
+      path: 'http://localhost/pidgin/mostread',
+    });
+  });
+
+  it('should request BFF data when the app env is "test"', async () => {
+    process.env.SIMORGH_APP_ENV = 'test';
+
+    const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
+    fetchDataSpy.mockImplementation(() =>
+      Promise.resolve({
+        status: 200,
+        json: JSON.stringify(bffMostReadPageJson),
+      }),
+    );
+
+    await getInitialData({
+      path: '/pidgin/popular/read',
+      service: 'pidgin',
+      pageType: 'mostRead',
+    });
+
+    expect(fetchDataSpy).toHaveBeenCalledWith({
+      path: 'https://mock-bff-path/?id=mostRead&service=pidgin&pageType=mostRead',
+      agent,
+      optHeaders: {
+        'ctx-service-env': 'test',
+      },
+    });
+  });
+
+  it('should request BFF data when the app env is "live"', async () => {
+    process.env.SIMORGH_APP_ENV = 'live';
+
+    const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
+    fetchDataSpy.mockImplementation(() =>
+      Promise.resolve({
+        status: 200,
+        json: JSON.stringify(bffMostReadPageJson),
+      }),
+    );
+
+    await getInitialData({
+      path: '/pidgin/popular/read',
+      service: 'pidgin',
+      pageType: 'mostRead',
+    });
+
+    expect(fetchDataSpy).toHaveBeenCalledWith({
+      path: 'https://mock-bff-path/?id=mostRead&service=pidgin&pageType=mostRead',
+      agent,
+      optHeaders: {
+        'ctx-service-env': 'live',
+      },
+    });
+  });
+
+  it('should request BFF data if "renderer_env=test" is supplied in the path, ignoring the app env', async () => {
+    process.env.SIMORGH_APP_ENV = 'local';
+
+    const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
+    fetchDataSpy.mockImplementation(() =>
+      Promise.resolve({
+        status: 200,
+        json: JSON.stringify(bffMostReadPageJson),
+      }),
+    );
+
+    await getInitialData({
+      path: '/pidgin/popular/read?renderer_env=test',
+      service: 'pidgin',
+      pageType: 'mostRead',
+    });
+
+    expect(fetchDataSpy).toHaveBeenCalledWith({
+      path: 'https://mock-bff-path/?id=mostRead&service=pidgin&pageType=mostRead',
+      agent,
+      optHeaders: {
+        'ctx-service-env': 'test',
+      },
+    });
+  });
+
+  it('should request BFF data if "renderer_env=live" is supplied in the path, ignoring the app env', async () => {
+    process.env.SIMORGH_APP_ENV = 'local';
+
+    const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
+    fetchDataSpy.mockImplementation(() =>
+      Promise.resolve({
+        status: 200,
+        json: JSON.stringify(bffMostReadPageJson),
+      }),
+    );
+
+    await getInitialData({
+      path: '/pidgin/popular/read?renderer_env=live',
+      service: 'pidgin',
+      pageType: 'mostRead',
+    });
+
+    expect(fetchDataSpy).toHaveBeenCalledWith({
+      path: 'https://mock-bff-path/?id=mostRead&service=pidgin&pageType=mostRead',
+      agent,
+      optHeaders: {
+        'ctx-service-env': 'live',
+      },
+    });
+  });
+
   it('should return essential data for a page to render', async () => {
-    fetch.mockResponse(JSON.stringify(mostReadJson));
+    const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
+    fetchDataSpy.mockImplementation(() =>
+      Promise.resolve({
+        status: 200,
+        json: mostReadJson,
+      }),
+    );
 
     const response = await getInitialData({
       path: '/pidgin/popular/read',
@@ -20,7 +165,6 @@ describe('dgkhsdkg', () => {
       pageType: MOST_READ_PAGE,
     });
 
-    console.log({ response });
     const { pageData } = response;
 
     expect(pageData.lastRecordTimeStamp).toEqual('2023-06-19T15:03:00Z');
