@@ -7,8 +7,8 @@ import fetchPageData from '../../utils/fetchPageData';
 import constructPageFetchUrl from '../../utils/constructPageFetchUrl';
 import { Services, Toggles, Variants } from '../../../models/types/global';
 import getOnwardsPageData from '../utils/getOnwardsData';
-import augmentWithDisclaimer from '../../cpsAsset/getInitialData/augmentWithDisclaimer';
 import { advertisingAllowed, isSfv } from '../utils/paramChecks';
+import addDisclaimer from '../utils/addDisclaimer';
 import { FetchError } from '../../../models/types/fetch';
 import handleError from '../../utils/handleError';
 
@@ -21,15 +21,6 @@ type Props = {
   pageType: 'article' | 'cpsAsset';
   variant?: Variants;
   toggles?: Toggles;
-};
-
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const addDisclaimer = async (pageData: any, toggles: Toggles | undefined) => {
-  try {
-    return augmentWithDisclaimer(toggles, 0)(pageData);
-  } catch (e) {
-    return pageData;
-  }
 };
 
 export default async ({
@@ -91,7 +82,7 @@ export default async ({
     const response = {
       status,
       pageData: {
-        ...(await addDisclaimer(article, toggles)),
+        ...(await addDisclaimer(article, toggles, isArticleSfv)),
         secondaryColumn: {
           topStories,
           features,
