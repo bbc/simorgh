@@ -24,6 +24,11 @@ describe('ddsjkghkjdg', () => {
   beforeEach(() => {
     delete process.env.SIMORGH_APP_ENV;
   });
+
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
   routes
     .filter(route => !pageTypesToSkip.includes(route.pageType))
     .forEach(({ getInitialData, pageType }) => {

@@ -4,9 +4,8 @@ import getInitialData from '.';
 
 describe('dgkhsdkg', () => {
   beforeEach(() => {
-    jest.resetAllMocks();
     jest.clearAllMocks();
-    jest.restoreAllMocks();
+
     delete process.env.SIMORGH_APP_ENV;
   });
 
