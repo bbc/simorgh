@@ -25,7 +25,8 @@ const insertDisclaimer = (pageData, positionFromTimestamp) =>
     pageData,
   );
 
-export default (toggles, positionFromTimestamp) => pageData =>
-  isDisclaimerToggledOn(toggles)
-    ? insertDisclaimer(pageData, positionFromTimestamp)
-    : pageData;
+export default ({ toggles, positionFromTimestamp }) =>
+  pageData =>
+    isDisclaimerToggledOn(toggles)
+      ? insertDisclaimer(pageData, positionFromTimestamp)
+      : pageData;
