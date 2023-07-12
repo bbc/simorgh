@@ -299,8 +299,8 @@ export const service: DefaultServiceConfig = {
         href: 'https://www.bbc.com/russian/media-47937790',
       },
       skipLink: {
-        text: 'Пропустить Подкаст и продолжить чтение.',
-        endTextVisuallyHidden: 'Конец истории Подкаст',
+        text: 'Пропустить Реклама подкастов и продолжить чтение.',
+        endTextVisuallyHidden: 'Конец истории Реклама подкастов',
       },
     },
     disclaimer: {
