@@ -3,6 +3,8 @@ import {
   TOPIC_PAGE,
   ARTICLE_PAGE,
   HOME_PAGE,
+  FRONT_PAGE,
+  INDEX_PAGE,
 } from '#app/routes/utils/pageTypes';
 import routes from './index';
 
@@ -18,6 +20,8 @@ const pageTypesToSkip = [
   ARTICLE_PAGE,
   HOME_PAGE,
   'cpsAsset',
+  FRONT_PAGE,
+  INDEX_PAGE,
 ];
 
 routes
