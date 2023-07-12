@@ -2012,7 +2012,153 @@
     "secondaryData": {
       "topStories": null,
       "features": null,
-      "mostRead": null,
+      "mostRead": {
+        "generated": "2023-07-12T11:06:56.791Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
+        "items": [
+          {
+            "id": "bed59bb0-13e8-d441-9ac2-70d58ab92379",
+            "rank": 1,
+            "title": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 26",
+            "href": "/serbian/lat/media-23169623",
+            "timestamp": 1512405053000
+          },
+          {
+            "id": "c893a22a-b367-e743-90ec-737606624e7b",
+            "rank": 2,
+            "title": "test, please ignore",
+            "href": "/serbian/lat/23200492",
+            "timestamp": 1526475595000
+          },
+          {
+            "id": "05a64eb2-12b3-1742-b149-6cd4b050b572",
+            "rank": 3,
+            "title": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 6",
+            "href": "/serbian/lat/media-23169493",
+            "timestamp": 1512404639000
+          },
+          {
+            "id": "1849c8f5-dac1-294b-a0b5-823b119b1e6e",
+            "rank": 4,
+            "title": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 29",
+            "href": "/serbian/lat/media-23169626",
+            "timestamp": 1512405084000
+          },
+          {
+            "id": "5bae7009-f4cc-884b-b23b-5e9f99c9990e",
+            "rank": 5,
+            "title": "Otvorene ZOI 2014",
+            "href": "/serbian/lat/23181035",
+            "timestamp": 1516029545000
+          },
+          {
+            "id": "9fdff7d7-a6c9-4840-b79f-d111bbb7a4e1",
+            "rank": 6,
+            "title": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 27",
+            "href": "/serbian/lat/media-23169624",
+            "timestamp": 1512405063000
+          },
+          {
+            "id": "82cc4275-a7b5-6d4a-a6ff-59c592c2ba47",
+            "rank": 7,
+            "title": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 8",
+            "href": "/serbian/lat/media-23169495",
+            "timestamp": 1512404728000
+          },
+          {
+            "id": "42765cca-a2ef-0742-8f78-f24c59d78caf",
+            "rank": 8,
+            "title": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 7",
+            "href": "/serbian/lat/media-23169494",
+            "timestamp": 1512404649000
+          },
+          {
+            "id": "7dcb9041-b854-1c49-beae-9cbfc39f7ad8",
+            "rank": 9,
+            "title": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 11",
+            "href": "/serbian/lat/media-23169608",
+            "timestamp": 1520349658000
+          },
+          {
+            "id": "151206d3-aff2-e949-976c-e9acb326ab45",
+            "rank": 10,
+            "title": "Beba panda odmara nakon prvog javnog nastupa",
+            "href": "/serbian/lat/23180965",
+            "timestamp": 1516029046000
+          },
+          {
+            "id": "06d605b3-4b6d-7e41-b35c-91b6c934dca4",
+            "rank": 11,
+            "title": "CES 2018 nove tehnologije",
+            "href": "/serbian/lat/23180985",
+            "timestamp": 1516027253000
+          },
+          {
+            "id": "60b74371-1d58-1547-9137-28d0647fbde1",
+            "rank": 12,
+            "title": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 16",
+            "href": "/serbian/lat/media-23169613",
+            "timestamp": 1512404932000
+          },
+          {
+            "id": "6f98837f-a378-a14b-b8b0-e098ddcaee98",
+            "rank": 13,
+            "title": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 19",
+            "href": "/serbian/lat/media-23169616",
+            "timestamp": 1512404963000
+          },
+          {
+            "id": "dc35d343-6b9d-0e41-888c-fa036f1d4a62",
+            "rank": 14,
+            "title": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 31",
+            "href": "/serbian/lat/media-23169628",
+            "timestamp": 1512405111000
+          },
+          {
+            "id": "fae15535-6ec3-2e4c-ad18-808dc16f8bee",
+            "rank": 15,
+            "title": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 21",
+            "href": "/serbian/lat/media-23169618",
+            "timestamp": 1512404993000
+          },
+          {
+            "id": "76ddfd93-f5bb-9f40-8181-85796582795a",
+            "rank": 16,
+            "title": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 17",
+            "href": "/serbian/lat/media-23169614",
+            "timestamp": 1512404944000
+          },
+          {
+            "id": "925b9e5c-3059-f240-87ff-e69f979774d7",
+            "rank": 17,
+            "title": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 18",
+            "href": "/serbian/lat/media-23169615",
+            "timestamp": 1512404955000
+          },
+          {
+            "id": "f6c242ea-6464-ec40-9b65-d63720333564",
+            "rank": 18,
+            "title": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 14",
+            "href": "/serbian/lat/media-23169611",
+            "timestamp": 1512404866000
+          },
+          {
+            "id": "1a8ff619-0767-5e4e-bff8-f665407588a2",
+            "rank": 19,
+            "title": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 35",
+            "href": "/serbian/lat/media-23169632",
+            "timestamp": 1512405155000
+          },
+          {
+            "id": "8ec20548-be66-3545-8d55-9d3378dd4875",
+            "rank": 20,
+            "title": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 36",
+            "href": "/serbian/lat/media-23169633",
+            "timestamp": 1512405163000
+          }
+        ]
+      },
       "mostWatched": null
     }
   },

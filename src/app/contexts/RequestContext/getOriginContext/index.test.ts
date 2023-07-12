@@ -6,14 +6,11 @@ import {
 const windowLocation = window.location;
 
 describe('getOriginContext', () => {
-  const originalAppEnv = process.env.SIMORGH_APP_ENV;
-
   beforeEach(() => {
     process.env.SIMORGH_APP_ENV = 'test';
   });
   afterEach(() => {
     resetWindowValue('location', windowLocation);
-    process.env.SIMORGH_APP_ENV = originalAppEnv;
   });
 
   const tests = [
