@@ -2,7 +2,7 @@ import { getPageBundleData } from './getBundleData.js';
 import { pages } from './pages.js';
 
 jest.mock('./pageTypeBundleExtractor');
-jest.mock('fs', () => ({
+jest.unstable_mockModule('fs', () => ({
   readdirSync: () => [
     'modern.ArticlePage-31ecd969.31473c35.js',
     'modern.FrontPage-31ecd969.bbf7a07e.js',
