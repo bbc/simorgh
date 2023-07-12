@@ -556,7 +556,7 @@ exports[`Inline Should render correctly 1`] = `
           class="emotion-7 emotion-8"
           href="#end-of-podcasts"
         >
-          Пропустить Подкаст и продолжить чтение.
+          Пропустить Реклама подкастов и продолжить чтение.
         </a>
         <div
           class="emotion-9 emotion-10"
@@ -647,7 +647,7 @@ exports[`Inline Should render correctly 1`] = `
           id="end-of-podcasts"
           tabindex="-1"
         >
-          Конец истории Подкаст
+          Конец истории Реклама подкастов
         </p>
       </div>
     </section>
