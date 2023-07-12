@@ -3,6 +3,8 @@ import ora from 'ora';
 import chalk from 'chalk';
 import { readdirSync, statSync } from 'fs';
 import stripAnsi from 'strip-ansi';
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
 
 jest.mock('./pageTypeBundleExtractor');
 jest.mock('ora');
@@ -19,7 +21,7 @@ jest.mock('../../cypress/support/config/services', () => ({
   service2: {},
 }));
 jest.mock('fs');
-jest.mock('./bundleSizeConfig', () => ({
+jest.unstable_mockModule('./bundleSizeConfig', () => ({
   MIN_SIZE: 490,
   MAX_SIZE: 583,
 }));
