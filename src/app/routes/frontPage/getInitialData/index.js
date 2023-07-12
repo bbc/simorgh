@@ -9,11 +9,14 @@ import addIdsToGroups from '#app/routes/utils/sharedDataTransformers/addIdsToGro
 import filterGroupsWithoutStraplines from '#app/routes/utils/sharedDataTransformers/filterGroupsWithoutStraplines';
 import constructPageFetchUrl from '#app/routes/utils/constructPageFetchUrl';
 import PAGE_TYPES from '#app/routes/utils/constructPageFetchUrl/page-types';
-import isLocal from '#app/lib/utilities/isLocal';
 import getAgent from '#server/utilities/getAgent';
 import getEnvironment from '#app/routes/utils/getEnvironment';
 import handleError from '#app/routes/utils/handleError';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
+import nodeLogger from '../../../lib/logger.node';
+import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
+
+const logger = nodeLogger(__filename);
 
 const { CPS_ASSET } = PAGE_TYPES;
 
@@ -35,7 +38,10 @@ export default async ({
   pageType,
   toggles,
 }) => {
-  const agent = isLocal() ? null : await getAgent();
+  const env = getEnvironment(pathname);
+  const isLocal = !env || env === 'local';
+
+  const agent = !isLocal ? await getAgent() : null;
 
   const fetchUrl = constructPageFetchUrl({
     pathname,
@@ -49,7 +55,7 @@ export default async ({
   try {
     const pageDataPromise = fetchPageData({
       path: fetchUrl.toString(),
-      ...(!isLocal() && { agent, optHeaders }),
+      ...(!isLocal && { agent, optHeaders }),
       pageType,
     });
 
@@ -78,6 +84,13 @@ export default async ({
       },
     };
   } catch ({ message, status = getErrorStatusCode() }) {
+    logger.error(BFF_FETCH_ERROR, {
+      service,
+      status,
+      pathname,
+      message,
+    });
+
     return { error: message, status };
   }
 };
