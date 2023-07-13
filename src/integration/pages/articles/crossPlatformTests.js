@@ -9,5 +9,8 @@ export default service => {
   runCommonCrossPlatformTests(service);
   runTimestampTests();
   runImageTests();
-  runMostReadTests();
+
+  if (service !== 'scotland') {
+    runMostReadTests();
+  }
 };
