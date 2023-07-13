@@ -1,11 +1,14 @@
 import Url from 'url-parse';
 import pipe from 'ramda/src/pipe';
 import getEnvironment from '#app/routes/utils/getEnvironment';
+import { getMostReadEndpoint } from '#app/lib/utilities/getUrlHelpers/getMostReadUrls';
 import { getUrlPath } from '../../../lib/utilities/urlParser';
 import handleError from '../handleError';
 import { Services, Variants, Environments } from '../../../models/types/global';
 import HOME_PAGE_CONFIG from '../../homePage/getInitialData/page-config';
 import PAGE_TYPES from './page-types';
+
+const { ARTICLE, CPS_ASSET, HOME, LIVE, MOST_READ, TOPIC } = PAGE_TYPES;
 
 type Keys = keyof typeof PAGE_TYPES;
 type PageTypes = (typeof PAGE_TYPES)[Keys];
@@ -25,21 +28,24 @@ const getTipoId = (path: string) => path.match(/(c[a-zA-Z0-9]{10}t)/)?.[1];
 const getId = (pageType: PageTypes, service: Services, env: Environments) => {
   let getIdFunction;
   switch (pageType) {
-    case PAGE_TYPES.ARTICLE:
+    case ARTICLE:
       getIdFunction = getArticleId;
       break;
-    case PAGE_TYPES.CPS_ASSET:
+    case CPS_ASSET:
       getIdFunction = getCpsId;
       break;
-    case PAGE_TYPES.HOME:
+    case HOME:
       getIdFunction = () => {
         return env !== 'local'
           ? HOME_PAGE_CONFIG?.[service]?.[env]
           : 'tipohome';
       };
       break;
-    case PAGE_TYPES.LIVE:
-    case PAGE_TYPES.TOPIC:
+    case MOST_READ:
+      getIdFunction = () => pageType;
+      break;
+    case LIVE:
+    case TOPIC:
       getIdFunction = getTipoId;
       break;
     default:
@@ -84,18 +90,21 @@ const constructPageFetchUrl = ({
 
   if (isLocal) {
     switch (pageType) {
-      case PAGE_TYPES.ARTICLE:
+      case ARTICLE:
         fetchUrl = Url(
           `/${service}/articles/${id}${variant ? `/${variant}` : ''}`,
         );
         break;
-      case PAGE_TYPES.CPS_ASSET:
+      case CPS_ASSET:
         fetchUrl = Url(id);
         break;
-      case PAGE_TYPES.HOME:
+      case HOME:
         fetchUrl = Url(`/${service}/${id}`);
         break;
-      case PAGE_TYPES.TOPIC: {
+      case MOST_READ:
+        fetchUrl = Url(getMostReadEndpoint({ service, variant }).split('.')[0]);
+        break;
+      case TOPIC: {
         const variantPath = variant ? `/${variant}` : '';
         fetchUrl = Url(`/${service}${variantPath}/topics/${id}`);
         break;
