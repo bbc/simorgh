@@ -19,7 +19,7 @@ const LOG_LEVEL = process.env.LOG_LEVEL || 'info';
 const LOG_FILE = 'app.log';
 const LOG_DIR = process.env.LOG_DIR || 'log';
 const LOG_TO_CONSOLE = process.env.LOG_TO_CONSOLE === 'true';
-const platform = process.env.NEXTJS ? 'NEXTJS' : 'EXPRESS';
+const PLATFORM = process.env.NEXTJS ? 'NEXTJS' : 'EXPRESS';
 
 const createLogDirectory = (dirName = 'log') => {
   if (!fs.existsSync(dirName)) {
@@ -41,7 +41,6 @@ const loggerOptions = {
     handleExceptions: true,
     humanReadableUnhandledException: true,
     level: LOG_LEVEL,
-    label: platform,
     maxFiles: 5,
     maxsize: 104857600, // 100MB
     tailable: true,
@@ -68,7 +67,7 @@ const fileLogger = createLogger({
     timestamp({ format: 'YYYY-MM-DD HH:mm:ss.SSS' }),
 
     label({
-      label: platform,
+      label: PLATFORM,
     }),
 
     // creates a metadata object, that uses our custom formatting
