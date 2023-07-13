@@ -1,13 +1,13 @@
 export default () => {
-  describe('mostRead', () => {
-    const mostRead = document.querySelector(`[data-testid^="most-read"]`);
+  describe('Most Read', () => {
+    const mostRead = document.querySelector(`[data-e2e="most-read"]`);
 
-    it('Is displayed', () => {
+    it('is displayed', () => {
       expect(mostRead).toBeInTheDocument();
       expect(mostRead).toBeTruthy();
     });
 
-    it('has multiple items', () => {
+    it('has item with rank', () => {
       const mostReadLinks = mostRead.querySelectorAll('a');
 
       mostReadLinks.forEach(link => {
