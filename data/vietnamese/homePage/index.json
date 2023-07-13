@@ -47,10 +47,11 @@
       }
     ],
     "metadata": {
-      "analytics": {
+      "atiAnalytics": {
         "contentId": "urn:bbc:tipo:topic:c93v2kk9r7lt",
         "contentType": "index-home",
-        "pageIdentifier": "vietnamese.page"
+        "pageIdentifier": "vietnamese.page",
+        "pageTitle": "BBC News Tiếng Việt"
       }
     }
   },
