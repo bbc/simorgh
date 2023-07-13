@@ -1,32 +1,79 @@
 /* eslint-disable import/extensions */
-import ora from 'ora';
-import chalk from 'chalk';
-import { readdirSync, statSync } from 'fs';
-import stripAnsi from 'strip-ansi';
+
 import { createRequire } from 'module';
+
+import stripAnsi from 'strip-ansi';
+import { jest } from '@jest/globals';
 const require = createRequire(import.meta.url);
 
-jest.mock('./pageTypeBundleExtractor');
-jest.mock('ora');
-jest.mock('chalk', () => ({
-  red: a => a,
-  green: a => a,
-  blue: a => a,
-  yellow: a => a,
-  cyan: { bold: b => b },
-  bold: a => a,
+// let ora;
+
+// import(/* webpackChunkName: "ora" */ 'ora').then(oraModule => {
+//   ora = oraModule.default || oraModule;
+// });
+// import(/* webpackChunkName: "fs" */ 'fs').then(fsModule => {
+//   fs = fsModule.default || fsModule;
+//   readdirSync = fsModule.readdirSync;
+//   statSync = fsModule.statSync;
+// });
+// import(/* webpackChunkName: "chalk" */ 'chalk').then(chalkModule => {
+//   chalk = chalkModule.default || chalkModule;
+// });
+jest.unstable_mockModule('./pageTypeBundleExtractor', () => ({
+  execSync: jest.fn(),
 }));
-jest.mock('../../cypress/support/config/services', () => ({
+jest.unstable_mockModule('ora', () => ({
+  mockReturnValue: jest.fn(),
+}));
+// const { mockReturnValue } = await import('ora');
+// jest.unstable_mockModule('chalk', () => ({
+//   red: jest.fn().mockReturnThis(),
+//   green: jest.fn().mockReturnThis(),
+//   blue: jest.fn().mockReturnThis(),
+//   yellow: jest.fn().mockReturnThis(),
+//   cyan: { bold: jest.fn().mockReturnThis() },
+//   bold: jest.fn().mockReturnThis(),
+// }));
+
+jest.unstable_mockModule('../../cypress/support/config/services', () => ({
   service1: {},
   service2: {},
 }));
-jest.mock('fs');
+
 jest.unstable_mockModule('./bundleSizeConfig', () => ({
   MIN_SIZE: 490,
   MAX_SIZE: 583,
 }));
+// jest.unstable_mockModule('fs', () => ({
+//   readdirSync: jest.fn(),
+//   statSync: jest.fn(),
+// }));
 
-const setUpFSMocks = (service1FileSize, service2FileSize) => {
+// jest.mock('fs', () => {
+//   return {
+//     default: {
+//       readdirSync: jest.fn(),
+//     },
+//   };
+// });
+const fs = jest.createMockFromModule('fs');
+fs.readdirSync = jest.fn();
+fs.statSync = jest.fn();
+
+const ora = jest.createMockFromModule('ora');
+ora.start = jest.fn();
+ora.succeed = jest.fn();
+ora.fail = jest.fn();
+
+const chalk = jest.createMockFromModule('chalk');
+chalk.red = jest.fn();
+chalk.green = jest.fn();
+chalk.blue = jest.fn();
+chalk.yellow = jest.fn();
+chalk.cyan = { bold: jest.fn() };
+chalk.bold = jest.fn();
+
+function setUpFSMocks(service1FileSize, service2FileSize) {
   beforeEach(() => {
     const bundles = [
       'modern.main-12345.js',
@@ -40,7 +87,7 @@ const setUpFSMocks = (service1FileSize, service2FileSize) => {
       'modern.shared-2222.js',
       'modern.framework-1111.js',
     ];
-    readdirSync.mockReturnValue(bundles);
+    fs.readdirSync.mockReturnValue(bundles);
 
     const filePatternToSizeMap = {
       service1: service1FileSize,
@@ -52,14 +99,14 @@ const setUpFSMocks = (service1FileSize, service2FileSize) => {
       framework: 100000,
       Page: 20000,
     };
-    statSync.mockImplementation(filePath => {
+    fs.statSync.mockImplementation(filePath => {
       const filePattern = Object.keys(filePatternToSizeMap).find(key =>
         filePath.includes(key),
       );
       return { size: filePatternToSizeMap[filePattern] };
     });
   });
-};
+}
 
 describe('bundleSize', () => {
   const originalConsoleLog = global.console.log;
@@ -70,16 +117,16 @@ describe('bundleSize', () => {
   let fail;
 
   beforeAll(() => {
-    start = jest.fn();
-    succeed = jest.fn();
-    fail = jest.fn();
+    // start = jest.fn();
+    // succeed = jest.fn();
+    // fail = jest.fn();
 
-    ora.mockReturnValue({
-      start,
-      succeed,
-      fail,
-    });
-    chalk.red.bold = a => a;
+    // ora.mockReturnValue({
+    //   start,
+    //   succeed,
+    //   fail,
+    // });
+    // chalk.red.bold = a => a;
 
     global.console.log = jest.fn();
     global.console.error = jest.fn();
@@ -97,10 +144,12 @@ describe('bundleSize', () => {
 
     it('should not throw an error', () => {
       let didThrow = false;
-      jest.isolateModules(() => {
+      jest.isolateModules(async () => {
         try {
-          require('./index.js'); // eslint-disable-line global-require
+          const bundleSize = await import('./index.js');
+          bundleSize();
         } catch (e) {
+          console.debug('ERROR BEANS 2', e);
           didThrow = true;
         }
       });
@@ -108,9 +157,10 @@ describe('bundleSize', () => {
     });
 
     it('should use ora to show loading and success states', () => {
-      jest.isolateModules(() => {
+      jest.isolateModules(async () => {
         try {
-          require('./index.js'); // eslint-disable-line global-require
+          const bundleSize = await import('./index.js');
+          bundleSize();
         } catch (e) {
           // silence error
         }
@@ -119,16 +169,17 @@ describe('bundleSize', () => {
       expect(ora).toHaveBeenCalledWith(
         expect.objectContaining({ text: 'Analysing bundles...' }),
       );
-      expect(start).toHaveBeenCalled();
-      expect(succeed).toHaveBeenCalledWith('All bundle sizes are good!');
+      expect(ora.start).toHaveBeenCalled();
+      expect(ora.succeed).toHaveBeenCalledWith('All bundle sizes are good!');
     });
 
     it('should log a summary of bundle sizes', () => {
-      jest.isolateModules(() => {
+      jest.isolateModules(async () => {
         try {
-          require('./index.js'); // eslint-disable-line global-require
+          const bundleSize = await import('./index.js');
+          bundleSize();
         } catch (e) {
-          // silence error
+          console.debug('DAMN BEANS', e);
         }
       });
 
@@ -234,9 +285,10 @@ describe('bundleSize', () => {
 
     it('should throw an error', () => {
       let didThrow = false;
-      jest.isolateModules(() => {
+      jest.isolateModules(async () => {
         try {
-          require('./index.js'); // eslint-disable-line global-require
+          const bundleSize = await import('./index.js');
+          bundleSize();
         } catch (e) {
           didThrow = true;
         }
@@ -245,9 +297,10 @@ describe('bundleSize', () => {
     });
 
     it('should use ora to show loading and failure states', () => {
-      jest.isolateModules(() => {
+      jest.isolateModules(async () => {
         try {
-          require('./index.js'); // eslint-disable-line global-require
+          const bundleSize = await import('./index.js');
+          bundleSize();
         } catch (e) {
           // silence error
         }
@@ -256,14 +309,15 @@ describe('bundleSize', () => {
       expect(ora).toHaveBeenCalledWith(
         expect.objectContaining({ text: 'Analysing bundles...' }),
       );
-      expect(start).toHaveBeenCalled();
-      expect(fail).toHaveBeenCalledWith('Issues with service bundles: ');
+      expect(ora.start).toHaveBeenCalled();
+      expect(ora.fail).toHaveBeenCalledWith('Issues with service bundles: ');
     });
 
     it('should log an error telling dev how to update thresholds', () => {
-      jest.isolateModules(() => {
+      jest.isolateModules(async () => {
         try {
-          require('./index.js'); // eslint-disable-line global-require
+          const bundleSize = await import('./index.js');
+          bundleSize();
         } catch (e) {
           // silence error
         }
@@ -280,9 +334,10 @@ describe('bundleSize', () => {
 
     it('should throw an error', () => {
       let didThrow = false;
-      jest.isolateModules(() => {
+      jest.isolateModules(async () => {
         try {
-          require('./index.js'); // eslint-disable-line global-require
+          const bundleSize = await import('./index.js');
+          bundleSize();
         } catch (e) {
           didThrow = true;
         }
@@ -291,9 +346,10 @@ describe('bundleSize', () => {
     });
 
     it('should use ora to show loading and failure states', () => {
-      jest.isolateModules(() => {
+      jest.isolateModules(async () => {
         try {
-          require('./index.js'); // eslint-disable-line global-require
+          const bundleSize = await import('./index.js');
+          bundleSize();
         } catch (e) {
           // silence error
         }
@@ -302,14 +358,15 @@ describe('bundleSize', () => {
       expect(ora).toHaveBeenCalledWith(
         expect.objectContaining({ text: 'Analysing bundles...' }),
       );
-      expect(start).toHaveBeenCalled();
-      expect(fail).toHaveBeenCalledWith('Issues with service bundles: ');
+      expect(ora.start).toHaveBeenCalled();
+      expect(ora.fail).toHaveBeenCalledWith('Issues with service bundles: ');
     });
 
     it('should log an error telling dev how to update thresholds', () => {
-      jest.isolateModules(() => {
+      jest.isolateModules(async () => {
         try {
-          require('./index.js'); // eslint-disable-line global-require
+          const bundleSize = await import('./index.js');
+          bundleSize();
         } catch (e) {
           // silence error
         }
