@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import { Agent } from 'https';
+import omit from 'ramda/src/omit';
 import getEnvironment from '#app/routes/utils/getEnvironment';
 import nodeLogger from '../../../lib/logger.node';
 import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
@@ -74,16 +75,14 @@ export default async ({
       logger.error('Recommendations JSON malformed', error);
     }
 
-    const { topStories, features, mostRead, mostWatched } = secondaryData;
+    const { mostRead, mostWatched } = secondaryData;
+    const secondaryColumn = omit(['mostRead', 'mostWatched'], secondaryData);
 
     const response = {
       status,
       pageData: {
         ...article,
-        secondaryColumn: {
-          topStories,
-          features,
-        },
+        secondaryColumn,
         mostRead,
         mostWatched,
         ...(wsojData && wsojData),
