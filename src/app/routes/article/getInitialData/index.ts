@@ -75,14 +75,18 @@ export default async ({
       logger.error('Recommendations JSON malformed', error);
     }
 
-    const { mostRead, mostWatched } = secondaryData;
-    const secondaryColumn = omit(['mostRead', 'mostWatched'], secondaryData);
+    const { mostRead, mostWatched, topStories, features, latestMedia } =
+      secondaryData;
 
     const response = {
       status,
       pageData: {
         ...article,
-        secondaryColumn,
+        secondaryColumn: {
+          topStories,
+          features,
+          latestMedia,
+        },
         mostRead,
         mostWatched,
         ...(wsojData && wsojData),
