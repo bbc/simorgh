@@ -91,10 +91,11 @@
       }
     ],
     "metadata": {
-      "analytics": {
+      "atiAnalytics": {
         "contentId": "urn:bbc:tipo:topic:c15er11z5g9t",
         "contentType": "index-home",
-        "pageIdentifier": "pashto.page"
+        "pageIdentifier": "pashto.page",
+        "pageTitle": "کور پاڼه - BBC News پښتو"
       }
     }
   },

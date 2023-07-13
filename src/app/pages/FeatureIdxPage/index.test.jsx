@@ -138,7 +138,8 @@ describe('Feature Idx Page', () => {
   let pageData;
 
   beforeEach(async () => {
-    fetch.mockResponse(JSON.stringify({ ...urduPageData }));
+    fetch.mockResponse(JSON.stringify(urduPageData));
+    delete process.env.SIMORGH_APP_ENV;
 
     ({ pageData } = await getInitialData({
       path: '/urdu/science-51314202',

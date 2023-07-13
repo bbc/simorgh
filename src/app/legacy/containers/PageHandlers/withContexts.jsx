@@ -32,7 +32,7 @@ const WithContexts = Component => {
       isNextJs,
     } = props;
 
-    const { title, metadata: analytics } = pageData ?? {};
+    const { metadata: { atiAnalytics } = {} } = pageData ?? {};
 
     return (
       <ToggleContextProvider toggles={toggles}>
@@ -59,7 +59,7 @@ const WithContexts = Component => {
             isNextJs={isNextJs}
           >
             <EventTrackingContextProvider
-              atiData={{ analytics, title }}
+              atiData={atiAnalytics}
               data={pageData}
             >
               <UserContextProvider>

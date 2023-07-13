@@ -27,14 +27,11 @@ const serviceContext: ServiceConfig = {
 };
 
 const atiData = {
-  analytics: {
-    contentId: 'urn:bbc:tipo:topic:cm7682qz7v1t',
-    contentType: 'index-home',
-    pageIdentifier: 'kyrgyz.page',
-  },
-  title: 'pageTitle',
+  contentId: 'urn:bbc:tipo:topic:cm7682qz7v1t',
+  contentType: 'index-home',
+  pageIdentifier: 'kyrgyz.page',
+  pageTitle: 'pageTitle',
 };
-
 // timePublished and timeUpdated are not returned via BFF implementation so set to undefined in test
 const validPageURLParams = {
   appName: 'atiAnalyticsAppName',

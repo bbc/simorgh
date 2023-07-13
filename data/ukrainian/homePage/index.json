@@ -47,10 +47,11 @@
       }
     ],
     "metadata": {
-      "analytics": {
+      "atiAnalytics": {
         "contentId": "urn:bbc:tipo:topic:cl13j7792ljt",
         "contentType": "index-home",
-        "pageIdentifier": "ukrainian.page"
+        "pageIdentifier": "ukrainian.page",
+        "pageTitle": "BBC News Україна"
       }
     }
   },

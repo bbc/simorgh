@@ -45,20 +45,26 @@ export default {
         columnGap: `${spacings.DOUBLE}rem`,
       },
     }),
-  leftSection: ({ mq }: Theme) =>
+  firstSection: ({ mq }: Theme) =>
     css({
       gridColumn: '1 / 13',
 
       [mq.GROUP_4_MIN_WIDTH]: {
         gridColumn: '1 / 5',
       },
+      [mq.GROUP_5_MIN_WIDTH]: {
+        gridColumn: '1 / 4',
+      },
     }),
-  rightSection: ({ mq }: Theme) =>
+  secondSection: ({ mq }: Theme) =>
     css({
       gridColumn: '1 / 13',
 
       [mq.GROUP_4_MIN_WIDTH]: {
         gridColumn: '5 / 13',
+      },
+      [mq.GROUP_5_MIN_WIDTH]: {
+        gridColumn: '4 / 13',
       },
     }),
 };
