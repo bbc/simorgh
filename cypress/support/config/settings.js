@@ -1008,23 +1008,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/azeri'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/azeri'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/azeri'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
@@ -1434,23 +1418,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/burmese'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/burmese'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/burmese'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: {
         environments: {
           live: {
@@ -5449,17 +5417,11 @@ module.exports = () => ({
       topicPage: {
         environments: {
           live: {
-            paths: [
-              '/pidgin/topics/c95y35941vrt',
-              '/pidgin/topics/cnq68qvkjp1t', // One page only
-            ],
+            paths: ['/pidgin/topics/c95y35941vrt'],
             enabled: true,
           },
           test: {
-            paths: [
-              '/pidgin/topics/cqywjyzk2vyt',
-              '/pidgin/topics/cnq68qvkjp1t', // One page only
-            ],
+            paths: ['/pidgin/topics/cqywjyzk2vyt'],
             enabled: true,
           },
           local: {
