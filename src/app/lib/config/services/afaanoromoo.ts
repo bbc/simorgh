@@ -279,12 +279,12 @@ export const service: DefaultServiceConfig = {
         text: 'BBC News maaliif amanuu dandeessa',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/feeds-and-links',
         text: 'Gara geessituu alaatti akkaataa itti hojjennu dubbisi.',
       },
       links: [
         {
-          href: 'https://www.bbc.co.uk/usingthebbc/terms/',
+          href: 'https://www.bbc.com/usingthebbc/terms/',
           text: 'Haala itti fayyadamaa',
         },
         {
@@ -292,7 +292,7 @@ export const service: DefaultServiceConfig = {
           text: "Waa'ee BBC",
         },
         {
-          href: 'https://www.bbc.co.uk/usingthebbc/privacy/',
+          href: 'https://www.bbc.com/usingthebbc/privacy/',
           text: 'Imaammata mateenyaa',
         },
         {

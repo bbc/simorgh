@@ -94,7 +94,7 @@ export const testsThatAlwaysRunForAMPOnly = ({
                   appConfig[config[service].name][variant].mostRead
                     .numberOfItems;
                 cy.get('[data-e2e="most-read"]').scrollIntoView();
-                cy.get('[data-e2e="most-read"] > amp-list div')
+                cy.get('[data-e2e="most-read"] > amp-script > amp-list div')
                   .children('li')
                   .should('have.length', expectedMostReadItems);
               }
@@ -113,7 +113,7 @@ export const testsThatAlwaysRunForAMPOnly = ({
               if (mostReadIsEnabled && mostReadRecords >= 5) {
                 const expectedMostReadRank = serviceNumerals(service);
                 cy.get('[data-e2e="most-read"]').scrollIntoView();
-                cy.get('[data-e2e="most-read"] > amp-list div')
+                cy.get('[data-e2e="most-read"] > amp-script > amp-list div')
                   .find('li span')
                   .each(($el, index) => {
                     expect($el.text()).equal(expectedMostReadRank[index + 1]);
@@ -133,7 +133,7 @@ export const testsThatAlwaysRunForAMPOnly = ({
               );
               if (mostReadIsEnabled && mostReadRecords >= 5) {
                 cy.get('[data-e2e="most-read"]').scrollIntoView();
-                cy.get('[data-e2e="most-read"] > amp-list div')
+                cy.get('[data-e2e="most-read"] > amp-script > amp-list div')
                   .next()
                   .within(() => {
                     cy.get('a').should('have.attr', 'href');

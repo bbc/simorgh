@@ -11,12 +11,12 @@ const ATIAnalytics = ({ data, atiData }: ATIProps) => {
   const serviceContext = useContext(ServiceContext);
   const { isAmp } = requestContext;
 
-  const pageviewParams = buildATIUrl(
+  const pageviewParams = buildATIUrl({
     requestContext,
     serviceContext,
     data,
     atiData,
-  ) as string;
+  }) as string;
 
   if (!pageviewParams) {
     return null;

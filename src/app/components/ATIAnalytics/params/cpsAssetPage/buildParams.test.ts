@@ -1,5 +1,5 @@
 import * as analyticsUtils from '#lib/analyticsUtils';
-import payload from '#data/pidgin/cpsAssets/tori-49450859.json';
+import { data as cpsMapData } from '#data/pidgin/cpsAssets/tori-49450859.json';
 import payloadLegacy from '#data/gahuza/legacyAssets/video/2016/01/160108_australia_fire_video.json';
 import {
   buildCpsAssetPageATIParams,
@@ -7,6 +7,8 @@ import {
 } from './buildParams';
 import { RequestContextProps } from '../../../../contexts/RequestContext';
 import { ServiceConfig } from '../../../../models/types/serviceConfig';
+
+const { article: payload } = cpsMapData;
 
 // Mocks
 (analyticsUtils.getAtUserId as jest.Mock) = jest.fn();

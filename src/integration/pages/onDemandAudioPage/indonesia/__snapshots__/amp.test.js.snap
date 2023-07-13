@@ -176,7 +176,7 @@ Object {
 exports[`AMP On Demand Audio Page Footer Anchors should match text and url 6`] = `
 Object {
   "text": "Cookies",
-  "url": "https://www.bbc.co.uk/usingthebbc/cookies/",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
 }
 `;
 

@@ -1185,30 +1185,6 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
 }
 
 .emotion-11 {
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  color: #545658;
-  display: block;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-11 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-11 {
-    font-size: 0.8125rem;
-    line-height: 1rem;
-  }
-}
-
-.emotion-13 {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -1216,20 +1192,20 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-13 {
+  .emotion-11 {
     padding-right: 0.5rem;
     width: 50%;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-13 {
+  .emotion-11 {
     width: 66.67%;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-13 {
+  .emotion-11 {
     width: initial;
     padding: 0;
     grid-template-columns: repeat(6, 1fr);
@@ -1237,182 +1213,177 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-13 {
+    .emotion-11 {
       grid-template-columns: repeat(3, 1fr);
       grid-column-end: span 3;
     }
   }
 
   @media (min-width: 63rem) {
-    .emotion-13 {
+    .emotion-11 {
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
     }
   }
 }
 
-.emotion-15 {
+.emotion-13 {
   position: relative;
 }
 
-.emotion-17 {
+.emotion-15 {
+  position: relative;
   height: 0;
   overflow: hidden;
-  position: relative;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+  background-color: #F2F2F2;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  width: 100%;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
 @media (min-width: 25rem) {
-  .emotion-17 {
+  .emotion-15 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-17 {
+  .emotion-15 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-.emotion-18 {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-.emotion-19 {
+.emotion-17 {
   position: absolute;
   bottom: 0;
 }
 
-.emotion-19>* {
+.emotion-17>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
-.emotion-22 {
+.emotion-20 {
   padding: 0.5rem 0 1rem;
 }
 
 @media (max-width: 62.9375rem) {
-  .emotion-22 {
+  .emotion-20 {
     border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 
-.emotion-22:last-child {
+.emotion-20:last-child {
   border: none;
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-22 {
+  .emotion-20 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-22 {
+  .emotion-20 {
     padding: 0 0 1.5rem;
   }
 }
 
-.emotion-22:first-child {
+.emotion-20:first-child {
   padding-top: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-22:first-child {
+  .emotion-20:first-child {
     padding-top: 1rem;
   }
 }
 
-.emotion-22:last-child {
+.emotion-20:last-child {
   padding-bottom: 0;
 }
 
 @supports (display: grid) {
-  .emotion-22 {
+  .emotion-20 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-22 {
+    .emotion-20 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-22 {
+    .emotion-20 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-22 {
+    .emotion-20 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-22 {
+    .emotion-20 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-22 {
+    .emotion-20 {
       grid-template-columns: repeat(2, 1fr);
       grid-column-end: span 2;
     }
   }
 
   @media (min-width: 80rem) {
-    .emotion-22 {
+    .emotion-20 {
       grid-template-columns: repeat(2, 1fr);
       grid-column-end: span 2;
     }
   }
 }
 
-.emotion-24 {
+.emotion-22 {
   position: relative;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-24 {
+  .emotion-22 {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-column-gap: 0.5rem;
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-24 {
+    .emotion-22 {
       grid-column-gap: 1rem;
     }
   }
 
   @media (min-width: 63rem) {
-    .emotion-24 {
+    .emotion-22 {
       display: block;
     }
   }
 }
 
-.emotion-26 {
+.emotion-24 {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -1420,85 +1391,39 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
 }
 
 @media (min-width: 63rem) {
-  .emotion-26 {
+  .emotion-24 {
     display: block;
     width: 100%;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-26 {
+  .emotion-24 {
     width: initial;
     grid-column: 1/span 2;
   }
 }
 
 @media (min-width: 25rem) {
-  .emotion-32 {
+  .emotion-30 {
     position: absolute;
     bottom: 0;
   }
 }
 
-.emotion-32>* {
+.emotion-30>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
 @media (max-width: 24.9375rem) {
-  .emotion-32>* {
+  .emotion-30>* {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
-.emotion-34 {
-  color: #222222;
-  background-color: #FFFFFF;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  display: block;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-34 {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-34 {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-}
-
-.emotion-36 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
-}
-
-.emotion-38 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
-  color: #222222;
-  fill: currentColor;
-  width: 0.75rem;
-  height: 0.75rem;
-}
-
-.emotion-40 {
+.emotion-32 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
@@ -1506,13 +1431,13 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-40 {
+  .emotion-32 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-40 {
+  .emotion-32 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -1520,7 +1445,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-40 {
+  .emotion-32 {
     display: block;
     width: initial;
     padding: initial;
@@ -1528,13 +1453,13 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
   }
 
   @media (min-width: 63rem) {
-    .emotion-40 {
+    .emotion-32 {
       padding-top: 0.5rem;
     }
   }
 }
 
-.emotion-42 {
+.emotion-34 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -1546,55 +1471,16 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-42 {
+  .emotion-34 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-42 {
+  .emotion-34 {
     font-size: 1rem;
     line-height: 1.25rem;
-  }
-}
-
-.emotion-46 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  margin: 0;
-  padding-bottom: 0.5rem;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-46 {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-46 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (max-width: 37.4375rem) {
-  .emotion-46 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@media (min-width: 63rem) {
-  .emotion-46 {
-    display: none;
-    visibility: hidden;
   }
 }
 
@@ -1611,169 +1497,85 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
         class="emotion-5 emotion-6"
         dir="ltr"
       >
-        <h3
+        <div
           class="emotion-7 emotion-8"
         >
           <a
-            aria-labelledby="promo-serbianlatsport44416820-text-1"
+            aria-labelledby="promo-serbianlatpopularread-guide-1"
             class="focusIndicatorDisplayInlineBlock emotion-9 emotion-10"
-            href="/serbian/lat/sport-44416820"
+            href="/serbian/lat/popular/read"
           >
             <span
-              id="promo-serbianlatsport44416820-text-1"
+              id="promo-serbianlatpopularread-guide-1"
             >
-              Sarajevo - Neka ljubi ko god koga hoće
+              Kontaktirajte nas 1
             </span>
           </a>
-        </h3>
-        <time
-          class="emotion-11 emotion-12"
-          datetime="2018-06-14"
-        >
-          14 June 2018
-        </time>
+        </div>
       </div>
       <div
-        class="emotion-13 emotion-14"
+        class="emotion-11 emotion-12"
         dir="ltr"
       >
         <div
-          class="emotion-15 emotion-16"
+          class="emotion-13 emotion-14"
         >
           <div
-            class="emotion-17"
+            class="emotion-15 emotion-16"
+            data-e2e="image-placeholder"
             style="padding-bottom: 56.25%;"
-          >
-            <picture>
-              <source
-                sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
-                srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 660w"
-                type="image/webp"
-              />
-              <source
-                sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
-                srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 660w"
-                type="image/jpeg"
-              />
-              <img
-                alt="Messi, Iwobi, Ronaldo"
-                class="emotion-18"
-                height="549"
-                loading="lazy"
-                src="https://ichef.bbci.co.uk/news/660/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg"
-                width="976"
-              />
-            </picture>
-          </div>
+          />
           <div
-            class="emotion-19 emotion-20"
+            class="emotion-17 emotion-18"
           />
         </div>
       </div>
     </div>
   </li>
   <li
-    class="emotion-0 emotion-22 emotion-2"
+    class="emotion-0 emotion-20 emotion-2"
     dir="ltr"
   >
     <div
-      class="emotion-24 emotion-4"
+      class="emotion-22 emotion-4"
       data-e2e="story-promo"
     >
       <div
-        class="emotion-26 emotion-14"
+        class="emotion-24 emotion-12"
         dir="ltr"
       >
         <div
-          class="emotion-15 emotion-16"
+          class="emotion-13 emotion-14"
         >
           <div
-            class="emotion-17"
+            class="emotion-15 emotion-16"
+            data-e2e="image-placeholder"
             style="padding-bottom: 56.25%;"
-          >
-            <picture>
-              <source
-                sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
-                srcset="https://ichef.bbci.co.uk/news/70/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 320w, https://ichef.bbci.co.uk/news/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 660w"
-                type="image/webp"
-              />
-              <source
-                sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
-                srcset="https://ichef.bbci.co.uk/news/70/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 660w"
-                type="image/jpeg"
-              />
-              <img
-                alt="A lone Koala perches in a eucalyptus tree"
-                class="emotion-18"
-                height="549"
-                loading="lazy"
-                src="https://ichef.bbci.co.uk/news/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg"
-                width="976"
-              />
-            </picture>
-          </div>
+          />
           <div
-            class="emotion-32 emotion-20"
-          >
-            <div
-              aria-hidden="true"
-              class="emotion-34 emotion-35"
-              data-e2e="media-indicator"
-              dir="ltr"
-            >
-              <div
-                class="emotion-36 emotion-37"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="emotion-38 emotion-39"
-                  focusable="false"
-                  height="12px"
-                  viewBox="0 0 13 12"
-                  width="13px"
-                >
-                  <path
-                    d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
-                  />
-                  <path
-                    d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
+            class="emotion-30 emotion-18"
+          />
         </div>
       </div>
       <div
-        class="emotion-40 emotion-6"
+        class="emotion-32 emotion-6"
         dir="ltr"
       >
-        <h3
-          class="emotion-42 emotion-8"
+        <div
+          class="emotion-34 emotion-8"
         >
           <a
-            aria-labelledby="promo-serbianlat-audio-1"
+            aria-labelledby="promo-serbianlatpopularread-guide-1"
             class="focusIndicatorDisplayInlineBlock emotion-9 emotion-10"
-            href="/serbian/lat"
+            href="/serbian/lat/popular/read"
           >
             <span
-              id="promo-serbianlat-audio-1"
+              id="promo-serbianlatpopularread-guide-1"
             >
-              Audio promo
+              Kontaktirajte nas 2
             </span>
           </a>
-        </h3>
-        <p
-          class="emotion-46 emotion-47"
-        >
-          Summary
-        </p>
-        <time
-          class="emotion-11 emotion-12"
-          datetime="2019-08-06"
-        >
-          6 August 2019
-        </time>
+        </div>
       </div>
     </div>
   </li>
@@ -2954,16 +2756,17 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
 }
 
 .emotion-9 {
+  position: relative;
   height: 0;
   overflow: hidden;
-  position: relative;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+  background-color: #F2F2F2;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  width: 100%;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
 @media (min-width: 25rem) {
@@ -2978,12 +2781,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
-}
-
-.emotion-10 {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
 }
 
 @media (min-width: 25rem) {
@@ -3098,115 +2895,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
   color: #6E6E73;
 }
 
-.emotion-19 {
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  color: #545658;
-  display: block;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-19 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-19 {
-    font-size: 0.8125rem;
-    line-height: 1rem;
-  }
-}
-
-.emotion-34 {
-  color: #222222;
-  background-color: #FFFFFF;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  display: block;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-34 {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-34 {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-}
-
-.emotion-36 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
-}
-
-.emotion-38 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
-  color: #222222;
-  fill: currentColor;
-  width: 0.75rem;
-  height: 0.75rem;
-}
-
-.emotion-46 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  margin: 0;
-  padding-bottom: 0.5rem;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-46 {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-46 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (max-width: 37.4375rem) {
-  .emotion-46 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@media (min-width: 63rem) {
-  .emotion-46 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
 <div>
   <li
     class="emotion-0 emotion-1 emotion-2"
@@ -3224,30 +2912,10 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
           class="emotion-7 emotion-8"
         >
           <div
-            class="emotion-9"
+            class="emotion-9 emotion-10"
+            data-e2e="image-placeholder"
             style="padding-bottom: 56.25%;"
-          >
-            <picture>
-              <source
-                sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
-                srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 660w"
-                type="image/webp"
-              />
-              <source
-                sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
-                srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 660w"
-                type="image/jpeg"
-              />
-              <img
-                alt="Messi, Iwobi, Ronaldo"
-                class="emotion-10"
-                height="549"
-                loading="lazy"
-                src="https://ichef.bbci.co.uk/news/660/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg"
-                width="976"
-              />
-            </picture>
-          </div>
+          />
           <div
             class="emotion-11 emotion-12"
           />
@@ -3257,27 +2925,21 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
         class="emotion-13 emotion-14"
         dir="ltr"
       >
-        <h3
+        <div
           class="emotion-15 emotion-16"
         >
           <a
-            aria-labelledby="promo-serbianlatsport44416820-text-1"
+            aria-labelledby="promo-serbianlatpopularread-guide-1"
             class="focusIndicatorDisplayInlineBlock emotion-17 emotion-18"
-            href="/serbian/lat/sport-44416820"
+            href="/serbian/lat/popular/read"
           >
             <span
-              id="promo-serbianlatsport44416820-text-1"
+              id="promo-serbianlatpopularread-guide-1"
             >
-              Sarajevo - Neka ljubi ko god koga hoće
+              Kontaktirajte nas 1
             </span>
           </a>
-        </h3>
-        <time
-          class="emotion-19 emotion-20"
-          datetime="2018-06-14"
-        >
-          14 June 2018
-        </time>
+        </div>
       </div>
     </div>
   </li>
@@ -3297,92 +2959,34 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
           class="emotion-7 emotion-8"
         >
           <div
-            class="emotion-9"
+            class="emotion-9 emotion-10"
+            data-e2e="image-placeholder"
             style="padding-bottom: 56.25%;"
-          >
-            <picture>
-              <source
-                sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
-                srcset="https://ichef.bbci.co.uk/news/70/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 320w, https://ichef.bbci.co.uk/news/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 660w"
-                type="image/webp"
-              />
-              <source
-                sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
-                srcset="https://ichef.bbci.co.uk/news/70/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 660w"
-                type="image/jpeg"
-              />
-              <img
-                alt="A lone Koala perches in a eucalyptus tree"
-                class="emotion-10"
-                height="549"
-                loading="lazy"
-                src="https://ichef.bbci.co.uk/news/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg"
-                width="976"
-              />
-            </picture>
-          </div>
+          />
           <div
             class="emotion-11 emotion-12"
-          >
-            <div
-              aria-hidden="true"
-              class="emotion-34 emotion-35"
-              data-e2e="media-indicator"
-              dir="ltr"
-            >
-              <div
-                class="emotion-36 emotion-37"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="emotion-38 emotion-39"
-                  focusable="false"
-                  height="12px"
-                  viewBox="0 0 13 12"
-                  width="13px"
-                >
-                  <path
-                    d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
-                  />
-                  <path
-                    d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
+          />
         </div>
       </div>
       <div
         class="emotion-13 emotion-14"
         dir="ltr"
       >
-        <h3
+        <div
           class="emotion-15 emotion-16"
         >
           <a
-            aria-labelledby="promo-serbianlat-audio-2"
+            aria-labelledby="promo-serbianlatpopularread-guide-2"
             class="focusIndicatorDisplayInlineBlock emotion-17 emotion-18"
-            href="/serbian/lat"
+            href="/serbian/lat/popular/read"
           >
             <span
-              id="promo-serbianlat-audio-2"
+              id="promo-serbianlatpopularread-guide-2"
             >
-              Audio promo
+              Kontaktirajte nas 2
             </span>
           </a>
-        </h3>
-        <p
-          class="emotion-46 emotion-47"
-        >
-          Summary
-        </p>
-        <time
-          class="emotion-19 emotion-20"
-          datetime="2019-08-06"
-        >
-          6 August 2019
-        </time>
+        </div>
       </div>
     </div>
   </li>
@@ -3402,30 +3006,10 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
           class="emotion-7 emotion-8"
         >
           <div
-            class="emotion-9"
+            class="emotion-9 emotion-10"
+            data-e2e="image-placeholder"
             style="padding-bottom: 56.25%;"
-          >
-            <picture>
-              <source
-                sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
-                srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg.webp 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg.webp 660w"
-                type="image/webp"
-              />
-              <source
-                sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
-                srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg 660w"
-                type="image/jpeg"
-              />
-              <img
-                alt="Rashidi"
-                class="emotion-10"
-                height="549"
-                loading="lazy"
-                src="https://ichef.bbci.co.uk/news/660/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg"
-                width="976"
-              />
-            </picture>
-          </div>
+          />
           <div
             class="emotion-11 emotion-12"
           />
@@ -3435,27 +3019,21 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
         class="emotion-13 emotion-14"
         dir="ltr"
       >
-        <h3
+        <div
           class="emotion-15 emotion-16"
         >
           <a
-            aria-labelledby="promo-serbianlatsport44439411-text-3"
+            aria-labelledby="promo-serbianlatpopularread-guide-3"
             class="focusIndicatorDisplayInlineBlock emotion-17 emotion-18"
-            href="/serbian/lat/sport-44439411"
+            href="/serbian/lat/popular/read"
           >
             <span
-              id="promo-serbianlatsport44439411-text-3"
+              id="promo-serbianlatpopularread-guide-3"
             >
-              Početna strana
+              Kontaktirajte nas 3
             </span>
           </a>
-        </h3>
-        <time
-          class="emotion-19 emotion-20"
-          datetime="2018-06-14"
-        >
-          14 June 2018
-        </time>
+        </div>
       </div>
     </div>
   </li>
@@ -3475,30 +3053,10 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
           class="emotion-7 emotion-8"
         >
           <div
-            class="emotion-9"
+            class="emotion-9 emotion-10"
+            data-e2e="image-placeholder"
             style="padding-bottom: 56.25%;"
-          >
-            <picture>
-              <source
-                sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
-                srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png.webp 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png.webp 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png.webp 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png.webp 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png.webp 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png.webp 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png.webp 660w"
-                type="image/webp"
-              />
-              <source
-                sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
-                srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png 660w"
-                type="image/png"
-              />
-              <img
-                alt="all-time African XI promo image"
-                class="emotion-10"
-                height="549"
-                loading="lazy"
-                src="https://ichef.bbci.co.uk/news/660/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png"
-                width="976"
-              />
-            </picture>
-          </div>
+          />
           <div
             class="emotion-11 emotion-12"
           />
@@ -3508,27 +3066,21 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
         class="emotion-13 emotion-14"
         dir="ltr"
       >
-        <h3
+        <div
           class="emotion-15 emotion-16"
         >
           <a
-            aria-labelledby="promo-serbianlatsport44425543-text-4"
+            aria-labelledby="promo-serbianlatpopularread-guide-4"
             class="focusIndicatorDisplayInlineBlock emotion-17 emotion-18"
-            href="/serbian/lat/sport-44425543"
+            href="/serbian/lat/popular/read"
           >
             <span
-              id="promo-serbianlatsport44425543-text-4"
+              id="promo-serbianlatpopularread-guide-4"
             >
-              Početna strana
+              Kontaktirajte nas 4
             </span>
           </a>
-        </h3>
-        <time
-          class="emotion-19 emotion-20"
-          datetime="2018-06-14"
-        >
-          14 June 2018
-        </time>
+        </div>
       </div>
     </div>
   </li>
@@ -4651,156 +4203,84 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
   color: #6E6E73;
 }
 
-.emotion-11 {
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  color: #545658;
-  display: block;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-11 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-11 {
-    font-size: 0.8125rem;
-    line-height: 1rem;
-  }
-}
-
-.emotion-20 {
-  color: #222222;
-  background-color: #FFFFFF;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  display: inline-block;
-  vertical-align: middle;
-  padding-right: 0.5rem;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-20 {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-20 {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-}
-
-.emotion-22 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
-}
-
-.emotion-24 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
-  color: #222222;
-  fill: currentColor;
-  width: 0.75rem;
-  height: 0.75rem;
-}
-
-.emotion-33 {
+.emotion-23 {
   padding: 0.5rem 0 1rem;
 }
 
-.emotion-33:last-child {
+.emotion-23:last-child {
   border: none;
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-33 {
+  .emotion-23 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-33 {
+  .emotion-23 {
     padding: 0 0 1.5rem;
   }
 }
 
-.emotion-33:first-child {
+.emotion-23:first-child {
   padding-top: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-33:first-child {
+  .emotion-23:first-child {
     padding-top: 1rem;
   }
 }
 
-.emotion-33:last-child {
+.emotion-23:last-child {
   padding-bottom: 0;
 }
 
 @supports (display: grid) {
-  .emotion-33 {
+  .emotion-23 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-33 {
+    .emotion-23 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-33 {
+    .emotion-23 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-33 {
+    .emotion-23 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-33 {
+    .emotion-23 {
       grid-template-columns: repeat(3, 1fr);
       grid-column-end: span 3;
     }
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-33 {
+    .emotion-23 {
       grid-template-columns: repeat(2, 1fr);
       grid-column-end: span 2;
     }
   }
 
   @media (min-width: 80rem) {
-    .emotion-33 {
+    .emotion-23 {
       grid-template-columns: repeat(2, 1fr);
       grid-column-end: span 2;
     }
@@ -4820,27 +4300,21 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
         class="emotion-5 emotion-6"
         dir="ltr"
       >
-        <h3
+        <div
           class="emotion-7 emotion-8"
         >
           <a
-            aria-labelledby="promo-serbianlatsport44416820-text-1"
+            aria-labelledby="promo-serbianlatpopularread-guide-1"
             class="focusIndicatorDisplayInlineBlock emotion-9 emotion-10"
-            href="/serbian/lat/sport-44416820"
+            href="/serbian/lat/popular/read"
           >
             <span
-              id="promo-serbianlatsport44416820-text-1"
+              id="promo-serbianlatpopularread-guide-1"
             >
-              Sarajevo - Neka ljubi ko god koga hoće
+              Kontaktirajte nas 1
             </span>
           </a>
-        </h3>
-        <time
-          class="emotion-11 emotion-12"
-          datetime="2018-06-14"
-        >
-          14 June 2018
-        </time>
+        </div>
       </div>
     </div>
   </li>
@@ -4857,57 +4331,25 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
         dir="ltr"
       >
         <div
-          aria-hidden="true"
-          class="emotion-20 emotion-21"
-          data-e2e="media-indicator"
-          dir="ltr"
-        >
-          <div
-            class="emotion-22 emotion-23"
-          >
-            <svg
-              aria-hidden="true"
-              class="emotion-24 emotion-25"
-              focusable="false"
-              height="12px"
-              viewBox="0 0 13 12"
-              width="13px"
-            >
-              <path
-                d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
-              />
-              <path
-                d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
-              />
-            </svg>
-          </div>
-        </div>
-        <h3
           class="emotion-7 emotion-8"
         >
           <a
-            aria-labelledby="promo-serbianlat-audio-2"
+            aria-labelledby="promo-serbianlatpopularread-guide-2"
             class="focusIndicatorDisplayInlineBlock emotion-9 emotion-10"
-            href="/serbian/lat"
+            href="/serbian/lat/popular/read"
           >
             <span
-              id="promo-serbianlat-audio-2"
+              id="promo-serbianlatpopularread-guide-2"
             >
-              Audio promo
+              Kontaktirajte nas 2
             </span>
           </a>
-        </h3>
-        <time
-          class="emotion-11 emotion-12"
-          datetime="2019-08-06"
-        >
-          6 August 2019
-        </time>
+        </div>
       </div>
     </div>
   </li>
   <li
-    class="emotion-0 emotion-33 emotion-2"
+    class="emotion-0 emotion-23 emotion-2"
     dir="ltr"
   >
     <div
@@ -4918,27 +4360,21 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
         class="emotion-5 emotion-6"
         dir="ltr"
       >
-        <h3
+        <div
           class="emotion-7 emotion-8"
         >
           <a
-            aria-labelledby="promo-serbianlatsport44439411-text-3"
+            aria-labelledby="promo-serbianlatpopularread-guide-3"
             class="focusIndicatorDisplayInlineBlock emotion-9 emotion-10"
-            href="/serbian/lat/sport-44439411"
+            href="/serbian/lat/popular/read"
           >
             <span
-              id="promo-serbianlatsport44439411-text-3"
+              id="promo-serbianlatpopularread-guide-3"
             >
-              Početna strana
+              Kontaktirajte nas 3
             </span>
           </a>
-        </h3>
-        <time
-          class="emotion-11 emotion-12"
-          datetime="2018-06-14"
-        >
-          14 June 2018
-        </time>
+        </div>
       </div>
     </div>
   </li>
@@ -4954,27 +4390,21 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
         class="emotion-5 emotion-6"
         dir="ltr"
       >
-        <h3
+        <div
           class="emotion-7 emotion-8"
         >
           <a
-            aria-labelledby="promo-serbianlatsport44425543-text-4"
+            aria-labelledby="promo-serbianlatpopularread-guide-4"
             class="focusIndicatorDisplayInlineBlock emotion-9 emotion-10"
-            href="/serbian/lat/sport-44425543"
+            href="/serbian/lat/popular/read"
           >
             <span
-              id="promo-serbianlatsport44425543-text-4"
+              id="promo-serbianlatpopularread-guide-4"
             >
-              Početna strana
+              Kontaktirajte nas 4
             </span>
           </a>
-        </h3>
-        <time
-          class="emotion-11 emotion-12"
-          datetime="2018-06-14"
-        >
-          14 June 2018
-        </time>
+        </div>
       </div>
     </div>
   </li>
@@ -5597,16 +5027,17 @@ exports[`FrontPageStoryRows Container - snapshots TopRow 1`] = `
 }
 
 .emotion-9 {
+  position: relative;
   height: 0;
   overflow: hidden;
-  position: relative;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+  background-color: #F2F2F2;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  background-color: #F2F2F2;
+  width: 100%;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
 @media (min-width: 25rem) {
@@ -5621,12 +5052,6 @@ exports[`FrontPageStoryRows Container - snapshots TopRow 1`] = `
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
-}
-
-.emotion-10 {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
 }
 
 .emotion-11 {
@@ -5735,30 +5160,6 @@ exports[`FrontPageStoryRows Container - snapshots TopRow 1`] = `
   color: #6E6E73;
 }
 
-.emotion-19 {
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  color: #545658;
-  display: block;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-19 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-19 {
-    font-size: 0.8125rem;
-    line-height: 1rem;
-  }
-}
-
 <div>
   <li
     class="emotion-0 emotion-1 emotion-2"
@@ -5776,30 +5177,10 @@ exports[`FrontPageStoryRows Container - snapshots TopRow 1`] = `
           class="emotion-7 emotion-8"
         >
           <div
-            class="emotion-9"
+            class="emotion-9 emotion-10"
+            data-e2e="image-placeholder"
             style="padding-bottom: 56.25%;"
-          >
-            <picture>
-              <source
-                sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
-                srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 660w"
-                type="image/webp"
-              />
-              <source
-                sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
-                srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 660w"
-                type="image/jpeg"
-              />
-              <img
-                alt="Messi, Iwobi, Ronaldo"
-                class="emotion-10"
-                height="549"
-                loading="lazy"
-                src="https://ichef.bbci.co.uk/news/660/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg"
-                width="976"
-              />
-            </picture>
-          </div>
+          />
           <div
             class="emotion-11 emotion-12"
           />
@@ -5809,27 +5190,21 @@ exports[`FrontPageStoryRows Container - snapshots TopRow 1`] = `
         class="emotion-13 emotion-14"
         dir="ltr"
       >
-        <h3
+        <div
           class="emotion-15 emotion-16"
         >
           <a
-            aria-labelledby="promo-serbianlatsport44416820-text-1"
+            aria-labelledby="promo-serbianlatpopularread-guide-1"
             class="focusIndicatorDisplayInlineBlock emotion-17 emotion-18"
-            href="/serbian/lat/sport-44416820"
+            href="/serbian/lat/popular/read"
           >
             <span
-              id="promo-serbianlatsport44416820-text-1"
+              id="promo-serbianlatpopularread-guide-1"
             >
-              Sarajevo - Neka ljubi ko god koga hoće
+              Kontaktirajte nas 1
             </span>
           </a>
-        </h3>
-        <time
-          class="emotion-19 emotion-20"
-          datetime="2018-06-14"
-        >
-          14 June 2018
-        </time>
+        </div>
       </div>
     </div>
   </li>

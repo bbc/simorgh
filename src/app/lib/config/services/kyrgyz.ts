@@ -279,7 +279,7 @@ export const service: DefaultServiceConfig = {
         text: 'Эмнеге BBC News ишенсе болот?',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/feeds-and-links',
         text: 'Башка интернет сайттардын мазмуну боюнча биздин позиция.',
       },
       links: [
@@ -296,7 +296,7 @@ export const service: DefaultServiceConfig = {
           text: 'Купуялык',
         },
         {
-          href: 'https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html',
+          href: 'https://www.bbc.com/usingthebbc/cookies/',
           text: 'Cookies',
         },
         {

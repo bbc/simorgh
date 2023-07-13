@@ -275,7 +275,7 @@ exports[`Canonical Front Page SEO Twitter title 1`] = `"Glavna stranica - BBC Ne
 
 exports[`Canonical Front Page Sections should match headline text 1`] = `"Najvažnije"`;
 
-exports[`Canonical Front Page Sections should match headline text 2`] = `"U toku"`;
+exports[`Canonical Front Page Sections should match headline text 2`] = `"U tokuPogledajte sve"`;
 
 exports[`Canonical Front Page Sections should match headline text 3`] = `"Saznanja "`;
 
@@ -285,7 +285,19 @@ exports[`Canonical Front Page Sections should match headline text 5`] = `"Ako st
 
 exports[`Canonical Front Page Sections should match headline text 6`] = `"Najgledanije"`;
 
-exports[`Canonical Front Page Sections should match headline text 7`] = `"2018 World Cup"`;
+exports[`Canonical Front Page Sections should match headline text 7`] = `"Korisni linkovi"`;
+
+exports[`Canonical Front Page Sections should match headline text 8`] = `"2018 World Cup"`;
+
+exports[`Canonical Front Page Useful Links should match text and url 1`] = `"Kontaktirajte nas 1 - /serbian/lat/popular/read"`;
+
+exports[`Canonical Front Page Useful Links should match text and url 2`] = `"Kontaktirajte nas 2 - /serbian/lat/popular/read"`;
+
+exports[`Canonical Front Page Useful Links should match text and url 3`] = `"Kontaktirajte nas 3 - /serbian/lat/popular/read"`;
+
+exports[`Canonical Front Page Useful Links should match text and url 4`] = `"Kontaktirajte nas 4 - /serbian/lat/popular/read"`;
+
+exports[`Canonical Front Page Useful Links should match text and url 5`] = `"Kontaktirajte nas 5 - /serbian/lat/popular/read"`;
 
 exports[`Story Promo Headline should match text 1`] = `"Video, LAT - Sarajevo - „Neka ljubi ko god koga hoće\\", Trajanje 2,15"`;
 

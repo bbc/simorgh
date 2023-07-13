@@ -11,29 +11,28 @@ export const buildPageATIParams = ({
   const { atiAnalyticsAppName, atiAnalyticsProducerId, service, lang } =
     serviceContext;
   const {
-    analytics: {
-      contentId,
-      contentType,
-      pageIdentifier,
-      timePublished,
-      timeUpdated,
-    },
-    title: pageTitle,
-  } = atiData;
-  return {
-    appName: atiAnalyticsAppName,
     contentId,
-    producerId: atiAnalyticsProducerId,
     contentType,
     pageIdentifier,
     pageTitle,
-    platform,
-    statsDestination,
-    service,
     timePublished,
     timeUpdated,
-    libraryVersion: LIBRARY_VERSION,
+  } = atiData;
+
+  return {
+    appName: atiAnalyticsAppName,
+    contentId,
+    contentType,
     language: lang,
+    libraryVersion: LIBRARY_VERSION,
+    pageIdentifier,
+    pageTitle,
+    platform,
+    producerId: atiAnalyticsProducerId,
+    service,
+    statsDestination,
+    timePublished,
+    timeUpdated,
   };
 };
 
