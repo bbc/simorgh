@@ -74,7 +74,7 @@ export default async ({
       logger.error('Recommendations JSON malformed', error);
     }
 
-    const { mostRead, mostWatched, topStories, features, latestMedia } =
+    const { topStories, features, latestMedia, mostRead, mostWatched } =
       secondaryData;
 
     const response = {
