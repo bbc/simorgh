@@ -6,34 +6,164 @@ import stripAnsi from 'strip-ansi';
 import { jest } from '@jest/globals';
 const require = createRequire(import.meta.url);
 
-// let ora;
-
-// import(/* webpackChunkName: "ora" */ 'ora').then(oraModule => {
-//   ora = oraModule.default || oraModule;
-// });
-// import(/* webpackChunkName: "fs" */ 'fs').then(fsModule => {
-//   fs = fsModule.default || fsModule;
-//   readdirSync = fsModule.readdirSync;
-//   statSync = fsModule.statSync;
-// });
-// import(/* webpackChunkName: "chalk" */ 'chalk').then(chalkModule => {
-//   chalk = chalkModule.default || chalkModule;
-// });
 jest.unstable_mockModule('./pageTypeBundleExtractor', () => ({
-  execSync: jest.fn(),
+  extractBundlesForPageType: pageType => {
+    if (pageType === 'ArticlePage') {
+      return [
+        'modern.ArticlePage-31ecd969.31473c35.js',
+        'modern.commons-1111.js',
+        'modern.commons-2222.js',
+        'modern.1111-lib-1111.js',
+        'modern.shared-1111.js',
+        'modern.shared-3333.js',
+      ];
+    }
+    if (pageType === 'StoryPage') {
+      return [
+        'modern.StoryPage-31ecd969.ca0d676d.js',
+        'modern.commons-1111.js',
+        'modern.commons-2222.js',
+        'modern.1111-lib-1111.js',
+        'modern.shared-1111.js',
+        'modern.shared-2222.js',
+      ];
+    }
+    if (pageType === 'FrontPage') {
+      return [
+        'modern.FrontPage-31ecd969.bbf7a07e.js',
+        'modern.commons-1111.js',
+        'modern.commons-2222.js',
+        'modern.1111-lib-1111.js',
+        'modern.shared-1111.js',
+      ];
+    }
+    if (pageType === 'HomePage') {
+      return [
+        'modern.HomePage-31ecd969.0d59dc5c.js',
+        'modern.commons-1111.js',
+        'modern.commons-2222.js',
+        'modern.1111-lib-1111.js',
+        'modern.shared-1111.js',
+      ];
+    }
+    if (pageType === 'IdxPage') {
+      return [
+        'modern.IdxPage-31ecd969.68b77555.js',
+        'modern.commons-1111.js',
+        'modern.commons-2222.js',
+        'modern.1111-lib-1111.js',
+        'modern.shared-1111.js',
+        'modern.shared-2222.js',
+        'modern.shared-3333.js',
+      ];
+    }
+    if (pageType === 'LiveRadioPage') {
+      return [
+        'modern.LiveRadioPage-31ecd969.64772a90.js',
+        'modern.commons-1111.js',
+        'modern.commons-2222.js',
+        'modern.1111-lib-1111.js',
+        'modern.shared-1111.js',
+        'modern.shared-2222.js',
+        'modern.shared-3333.js',
+      ];
+    }
+    if (pageType === 'MediaAssetPage') {
+      return [
+        'modern.MediaAssetPage-88a3c260.b7ec8c9c.js',
+        'modern.commons-1111.js',
+        'modern.commons-2222.js',
+        'modern.1111-lib-1111.js',
+        'modern.3333-lib-2222.js',
+        'modern.shared-1111.js',
+      ];
+    }
+    if (pageType === 'MostReadPage') {
+      return [
+        'modern.MostReadPage-31ecd969.7484ff05.js',
+        'modern.commons-1111.js',
+        'modern.commons-2222.js',
+        'modern.1111-lib-1111.js',
+        'modern.shared-1111.js',
+        'modern.shared-2222.js',
+        'modern.shared-3333.js',
+      ];
+    }
+    if (pageType === 'MostWatchedPage') {
+      return [
+        'modern.MostWatchedPage-31ecd969.7484ff05.js',
+        'modern.commons-1111.js',
+        'modern.commons-2222.js',
+        'modern.1111-lib-1111.js',
+        'modern.shared-1111.js',
+        'modern.shared-2222.js',
+        'modern.shared-3333.js',
+      ];
+    }
+    if (pageType === 'OnDemandAudioPage') {
+      return [
+        'modern.OnDemandAudioPage-31ecd969.ec6af2d0.js',
+        'modern.commons-1111.js',
+        'modern.commons-2222.js',
+        'modern.1111-lib-1111.js',
+        'modern.shared-2222.js',
+        'modern.shared-3333.js',
+      ];
+    }
+    if (pageType === 'OnDemandTvPage') {
+      return [
+        'modern.OnDemandTvPage-31ecd969.de41ab7f.js',
+        'modern.commons-1111.js',
+        'modern.1111-lib-1111.js',
+        'modern.3333-lib-2222.js',
+        'modern.shared-1111.js',
+      ];
+    }
+    if (pageType === 'PhotoGalleryPage') {
+      return [
+        'modern.PhotoGalleryPage-e94df663.a733283a.js',
+        'modern.commons-1111.js',
+        'modern.commons-2222.js',
+        'modern.1111-lib-1111.js',
+        'modern.shared-1111.js',
+        'modern.shared-3333.js',
+      ];
+    }
+    if (pageType === 'ErrorPage') {
+      return [
+        'modern.ErrorPage-31ecd969.31473c35.js',
+        'modern.commons-1111.js',
+        'modern.commons-2222.js',
+        'modern.1111-lib-1111.js',
+        'modern.shared-1111.js',
+        'modern.shared-2222.js',
+        'modern.shared-3333.js',
+      ];
+    }
+    if (pageType === 'IdxPage') {
+      return [
+        'modern.IdxPage-31ecd969.31473c35.js',
+        'modern.commons-1111.js',
+        'modern.commons-2222.js',
+        'modern.1111-lib-1111.js',
+        'modern.3333-lib-2222.js',
+        'modern.shared-1111.js',
+      ];
+    }
+    if (pageType === 'FeatureIdxPage') {
+      return [
+        'modern.FeatureIdxPage-31ecd969.31473c35.js',
+        'modern.commons-1111.js',
+        'modern.commons-2222.js',
+        'modern.1111-lib-1111.js',
+        'modern.3333-lib-2222.js',
+        'modern.shared-1111.js',
+      ];
+    }
+
+    throw Error(`page type ${pageType} not mocked`);
+  },
 }));
-jest.unstable_mockModule('ora', () => ({
-  mockReturnValue: jest.fn(),
-}));
-// const { mockReturnValue } = await import('ora');
-// jest.unstable_mockModule('chalk', () => ({
-//   red: jest.fn().mockReturnThis(),
-//   green: jest.fn().mockReturnThis(),
-//   blue: jest.fn().mockReturnThis(),
-//   yellow: jest.fn().mockReturnThis(),
-//   cyan: { bold: jest.fn().mockReturnThis() },
-//   bold: jest.fn().mockReturnThis(),
-// }));
 
 jest.unstable_mockModule('../../cypress/support/config/services', () => ({
   service1: {},
@@ -56,6 +186,11 @@ jest.unstable_mockModule('./bundleSizeConfig', () => ({
 //     },
 //   };
 // });
+// const pageTypeBundleExtractor = jest.createMockFromModule(
+//   './pageTypeBundleExtractor',
+// );
+// pageTypeBundleExtractor.extractBundlesForPageType = jest.fn();
+
 const fs = jest.createMockFromModule('fs');
 fs.readdirSync = jest.fn();
 fs.statSync = jest.fn();
@@ -73,8 +208,9 @@ chalk.yellow = jest.fn();
 chalk.cyan = { bold: jest.fn() };
 chalk.bold = jest.fn();
 
-function setUpFSMocks(service1FileSize, service2FileSize) {
+const setUpFSMocks = (service1FileSize, service2FileSize) => {
   beforeEach(() => {
+    console.debug('LALALA BEANS', fs.statSync);
     const bundles = [
       'modern.main-12345.js',
       'modern.service1-12345.12345.js',
@@ -99,14 +235,9 @@ function setUpFSMocks(service1FileSize, service2FileSize) {
       framework: 100000,
       Page: 20000,
     };
-    fs.statSync.mockImplementation(filePath => {
-      const filePattern = Object.keys(filePatternToSizeMap).find(key =>
-        filePath.includes(key),
-      );
-      return { size: filePatternToSizeMap[filePattern] };
-    });
+    fs.statSync.mockReturnValue({ size: 12345 });
   });
-}
+};
 
 describe('bundleSize', () => {
   const originalConsoleLog = global.console.log;
@@ -147,7 +278,7 @@ describe('bundleSize', () => {
       jest.isolateModules(async () => {
         try {
           const bundleSize = await import('./index.js');
-          bundleSize();
+          bundleSize.default();
         } catch (e) {
           console.debug('ERROR BEANS 2', e);
           didThrow = true;

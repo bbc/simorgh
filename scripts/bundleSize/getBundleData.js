@@ -1,21 +1,21 @@
 /* eslint-disable no-underscore-dangle */
 /* eslint-disable import/extensions */
-import { statSync, readdirSync } from 'fs';
+import fs from 'fs';
 import { extractBundlesForPageType } from './pageTypeBundleExtractor.js';
-import cypressServiceConfigs from '../../cypress/support/config/services.js';
+import serviceConfigs from '../../src/app/lib/config/services/loadableConfig.ts';
 import { pages } from './pages.js';
 
 // need fake Cypress in global scope to require service configs:
 global.Cypress = { env: () => ({}) };
 const bundleType = process.env.bundleType || 'modern';
 
-const services = Object.keys(cypressServiceConfigs);
+const services = Object.keys(serviceConfigs);
 
-const getFileSize = filePath => statSync(filePath).size;
+const getFileSize = filePath => fs.statSync(filePath).size;
 
-const jsFiles = readdirSync('build/public/static/js').filter(fileName =>
-  fileName.endsWith('.js'),
-);
+const jsFiles = fs
+  .readdirSync('build/public/static/js')
+  .filter(fileName => fileName.endsWith('.js'));
 
 const getBundlesData = bundles =>
   bundles.map(name => {

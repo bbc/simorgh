@@ -1,4 +1,4 @@
-const extractBundlesForPageType = pageType => {
+export const extractBundlesForPageType = pageType => {
   if (pageType === 'ArticlePage') {
     return [
       'modern.ArticlePage-31ecd969.31473c35.js',
@@ -154,5 +154,3 @@ const extractBundlesForPageType = pageType => {
 
   throw Error(`page type ${pageType} not mocked`);
 };
-
-exports.extractBundlesForPageType = extractBundlesForPageType;
