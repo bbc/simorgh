@@ -305,12 +305,12 @@ describe('Articles - BFF Fetching', () => {
       }),
     );
 
-    const { pageData } = await getInitialData({
+    const { pageData } = (await getInitialData({
       path: '/kyrgyz/articles/c0000000000o',
       getAgent,
       service: 'kyrgyz',
       pageType: 'article',
-    });
+    })) as { pageData: Record<string, unknown> };
 
     expect(pageData).toHaveProperty('content');
     expect(pageData).toHaveProperty('metadata');
