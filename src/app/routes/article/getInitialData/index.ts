@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import { Agent } from 'https';
-import omit from 'ramda/src/omit';
 import getEnvironment from '#app/routes/utils/getEnvironment';
 import nodeLogger from '../../../lib/logger.node';
 import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
