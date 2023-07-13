@@ -47,10 +47,11 @@
       }
     ],
     "metadata": {
-      "analytics": {
+      "atiAnalytics": {
         "contentId": "urn:bbc:tipo:topic:cjln1ww9v13t",
         "contentType": "index-home",
-        "pageIdentifier": "thai.page"
+        "pageIdentifier": "thai.page",
+        "pageTitle": "ข่าว ข่าววันนี้ ข่าวล่าสุด วีดีโอ - BBC News ไทย"
       }
     }
   },

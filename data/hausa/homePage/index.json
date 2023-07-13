@@ -495,10 +495,11 @@
       }
     ],
     "metadata": {
-      "analytics": {
+      "atiAnalytics": {
         "contentId": "urn:bbc:tipo:topic:cvp5j11g223t",
         "contentType": "index-home",
-        "pageIdentifier": "hausa.page"
+        "pageIdentifier": "hausa.page",
+        "pageTitle": "BBC News Hausa"
       }
     }
   },

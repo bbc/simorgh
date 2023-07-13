@@ -48,10 +48,11 @@
       }
     ],
     "metadata": {
-      "analytics": {
+      "atiAnalytics": {
         "contentId": "urn:bbc:tipo:topic:cp54eww9emgt",
         "contentType": "index-home",
-        "pageIdentifier": "telugu.page"
+        "pageIdentifier": "telugu.page",
+        "pageTitle": "BBC News తెలుగు"
       }
     }
   },
