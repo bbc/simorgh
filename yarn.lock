@@ -8170,7 +8170,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"busboy@npm:1.6.0":
+"busboy@npm:1.6.0, busboy@npm:^1.6.0":
   version: 1.6.0
   resolution: "busboy@npm:1.6.0"
   dependencies:
@@ -20895,6 +20895,7 @@ __metadata:
     ts-jest: 26.5.6
     ts-loader: 9.4.2
     typescript: 4.9.5
+    undici: ^5.22.1
     url-parse: 1.5.10
     uuid: 8.3.2
     wait-on: 6.0.1
@@ -22774,6 +22775,15 @@ __metadata:
     has-symbols: ^1.0.3
     which-boxed-primitive: ^1.0.2
   checksum: b7a1cf5862b5e4b5deb091672ffa579aa274f648410009c81cca63fed3b62b610c4f3b773f912ce545bb4e31edc3138975b5bc777fc6e4817dca51affb6380e9
+  languageName: node
+  linkType: hard
+
+"undici@npm:^5.22.1":
+  version: 5.22.1
+  resolution: "undici@npm:5.22.1"
+  dependencies:
+    busboy: ^1.6.0
+  checksum: 048a3365f622be44fb319316cedfaa241c59cf7f3368ae7667a12323447e1822e8cc3d00f6956c852d1478a6fde1cbbe753f49e05f2fdaed229693e716ebaf35
   languageName: node
   linkType: hard
 
