@@ -17,7 +17,7 @@ describe('Hierarchical Grid Curation', () => {
       title: 'Wetin happun for January 6 one year ago?',
       type: 'article',
       firstPublished: '2022-01-06T19:00:29.000Z',
-      lastPublished: '2023-09-07T19:00:29.000Z',
+      lastPublished: '2023-12-09T20:56:29.000Z',
       link: 'https://www.bbc.com/pidgin/tori-59901959',
       imageUrl:
         'https://ichef.bbci.co.uk/news/{width}/cpsprodpb/DE3A/production/_122609865_january6timelinewetinhappunforjanuary6oneyearago.jpg',
@@ -74,10 +74,10 @@ describe('Hierarchical Grid Curation', () => {
 
   it('should render the last published date', async () => {
     const { getByText } = render(<HierarchicalGrid promos={mediaFixture} />, {
-      service: 'pidgin',
+      service: 'mundo',
     });
 
-    expect(getByText('7 september 2023')).toBeInTheDocument();
+    expect(getByText('29 julio 2023')).toBeInTheDocument();
   });
 
   it('should use role text when using nested spans', async () => {
