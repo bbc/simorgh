@@ -200,13 +200,16 @@ ora.start = jest.fn();
 ora.succeed = jest.fn();
 ora.fail = jest.fn();
 
-const chalk = jest.createMockFromModule('chalk');
-chalk.red = jest.fn();
-chalk.green = jest.fn();
-chalk.blue = jest.fn();
-chalk.yellow = jest.fn();
-chalk.cyan = { bold: jest.fn() };
-chalk.bold = jest.fn();
+jest.unstable_mockModule('chalk', () => ({
+  default: {
+    red: jest.fn(),
+    green: jest.fn(),
+    blue: jest.fn(),
+    yellow: jest.fn(),
+    cyan: { bold: jest.fn() },
+    bold: jest.fn()
+  }
+}));
 
 const setUpFSMocks = (service1FileSize, service2FileSize) => {
   beforeEach(() => {
