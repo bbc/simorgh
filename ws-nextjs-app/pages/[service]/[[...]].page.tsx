@@ -16,7 +16,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
   const { headers: reqHeaders } = context.req;
 
-  context.res.statusCode = 404;
+  context.res.statusCode = 500;
 
   return {
     props: {
