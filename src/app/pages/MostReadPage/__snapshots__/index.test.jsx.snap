@@ -37,75 +37,30 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   }
 }
 
-.emotion-2 {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #6E6E73;
-  margin: 0;
-  padding-bottom: 1.5rem;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-2 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-2 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-  }
-}
-
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
   .emotion-2 {
-    padding: 1.5rem 0 0.5rem;
-  }
-}
-
-@media (min-width: 63rem) {
-  .emotion-2 {
-    padding: 1.5rem 0 0;
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-2 {
-    width: 100%;
-    margin: 0 auto;
-    max-width: 80rem;
-  }
-}
-
-@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-4 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-4 {
+  .emotion-2 {
     margin-top: 2rem;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-4 {
+  .emotion-2 {
     margin-top: 2rem;
   }
 }
 
-.emotion-7 {
+.emotion-5 {
   width: 100%;
 }
 
 @supports (display: grid) {
-  .emotion-7 {
+  .emotion-5 {
     display: grid;
     position: initial;
     width: initial;
@@ -113,7 +68,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-7 {
+    .emotion-5 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -121,7 +76,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-7 {
+    .emotion-5 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -129,7 +84,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-7 {
+    .emotion-5 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -137,7 +92,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-7 {
+    .emotion-5 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -145,7 +100,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-7 {
+    .emotion-5 {
       grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -153,7 +108,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   }
 
   @media (min-width: 80rem) {
-    .emotion-7 {
+    .emotion-5 {
       grid-template-columns: repeat(20, 1fr);
       grid-column-end: span 20;
       grid-column-gap: 1rem;
@@ -162,64 +117,64 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-7 {
+  .emotion-5 {
     margin: 0 auto;
     max-width: 63rem;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-7 {
+  .emotion-5 {
     margin: 0 auto;
     max-width: 80rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-9 {
+  .emotion-7 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-9 {
+  .emotion-7 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-9 {
+  .emotion-7 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-9 {
+  .emotion-7 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-9 {
+  .emotion-7 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-9 {
+  .emotion-7 {
     margin-left: 18.181818181818183%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-9 {
+  .emotion-7 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-9 {
+    .emotion-7 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -227,7 +182,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-9 {
+    .emotion-7 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -235,7 +190,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-9 {
+    .emotion-7 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -243,7 +198,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-9 {
+    .emotion-7 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -251,7 +206,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-9 {
+    .emotion-7 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -259,7 +214,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   }
 
   @media (min-width: 80rem) {
-    .emotion-9 {
+    .emotion-7 {
       grid-template-columns: repeat(11, 1fr);
       grid-column-end: span 11;
       grid-column-start: 3;
@@ -267,7 +222,120 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   }
 }
 
-.emotion-12 {
+.emotion-9 {
+  position: relative;
+  z-index: 0;
+  color: #141414;
+  margin-top: 2rem;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-9 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-9 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-9 {
+    margin-bottom: 1rem;
+  }
+}
+
+.emotion-11 {
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-flow: row nowrap;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-15 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+.emotion-17 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  background-color: #FFFFFF;
+  margin: 1rem 0;
+  padding-right: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-17 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-17 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-17 {
+    margin: 0;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-17 {
+    padding-right: 1rem;
+  }
+}
+
+.emotion-19 {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -276,7 +344,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
 }
 
 @supports (display: grid) {
-  .emotion-12 {
+  .emotion-19 {
     display: grid;
     position: initial;
     width: initial;
@@ -284,7 +352,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-12 {
+    .emotion-19 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -292,7 +360,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-12 {
+    .emotion-19 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -300,7 +368,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-12 {
+    .emotion-19 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -308,7 +376,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-12 {
+    .emotion-19 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -316,7 +384,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-12 {
+    .emotion-19 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -324,7 +392,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   }
 
   @media (min-width: 80rem) {
-    .emotion-12 {
+    .emotion-19 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -332,62 +400,62 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   }
 }
 
-.emotion-15 {
+.emotion-21 {
   position: relative;
   padding-bottom: 1.5rem;
 }
 
 @supports (display: grid) {
-  .emotion-15 {
+  .emotion-21 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-15 {
+    .emotion-21 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-15 {
+    .emotion-21 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-15 {
+    .emotion-21 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-15 {
+    .emotion-21 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
     }
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-15 {
+    .emotion-21 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
     }
   }
 
   @media (min-width: 80rem) {
-    .emotion-15 {
+    .emotion-21 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
     }
   }
 }
 
-.emotion-17 {
+.emotion-23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -400,73 +468,73 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-19 {
+  .emotion-24 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-19 {
+  .emotion-24 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-19 {
+  .emotion-24 {
     min-width: 3rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-19 {
+  .emotion-24 {
     min-width: 4rem;
   }
 }
 
-.emotion-21 {
+.emotion-25 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
-  font-size: 2rem;
-  line-height: 2.25rem;
+  font-weight: 400;
   position: relative;
   color: #B80000;
   margin: 0;
   padding: 0;
+  font-size: 2rem;
+  line-height: 2.25rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-21 {
+  .emotion-25 {
     font-size: 2.5rem;
     line-height: 2.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-21 {
+  .emotion-25 {
     font-size: 3.5rem;
     line-height: 3.75rem;
   }
 }
 
-.emotion-23 {
+.emotion-26 {
   padding-top: 0.375rem;
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-23 {
+  .emotion-26 {
     padding-right: 0;
   }
 }
 
-.emotion-25 {
+.emotion-27 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -475,26 +543,26 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-25 {
+  .emotion-27 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-25 {
+  .emotion-27 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-25:hover,
-.emotion-25:focus {
+.emotion-27:hover,
+.emotion-27:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-25:before {
+.emotion-27:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -507,31 +575,31 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
 }
 
 @media (min-width: 25rem) {
-  .emotion-25 {
+  .emotion-27 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 
   @media (min-width: 20rem) and (max-width: 37.4375rem) {
-    .emotion-25 {
+    .emotion-27 {
       font-size: 1.125rem;
       line-height: 1.375rem;
     }
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-25 {
+    .emotion-27 {
       font-size: 1.25rem;
       line-height: 1.5rem;
     }
   }
 }
 
-.emotion-66 {
+.emotion-49 {
   padding-top: 0.5rem;
 }
 
-.emotion-68 {
+.emotion-50 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #545658;
@@ -542,14 +610,14 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-68 {
+  .emotion-50 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-68 {
+  .emotion-50 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -561,367 +629,391 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
     chartbeat
   </div>
   <main
-    data-e2e="most-read"
     role="main"
   >
     <div
       class="emotion-0 emotion-1"
     >
-      <h1
-        class="emotion-2 emotion-3"
-        dir="ltr"
-        id="content"
-        tabindex="-1"
-      >
-        De one we dem de read well well
-      </h1>
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-2 emotion-3"
       >
         <div
-          class="emotion-6 emotion-7 emotion-8"
+          class="emotion-4 emotion-5 emotion-6"
           dir="ltr"
         >
           <div
-            class="emotion-9 emotion-8"
+            class="emotion-7 emotion-6"
             dir="ltr"
           >
-            <ol
-              class="emotion-11 emotion-12 emotion-8"
-              dir="ltr"
-              role="list"
+            <section
+              aria-labelledby="Most-Read"
+              class=""
+              data-e2e="most-read"
+              data-testid="most-read"
+              role="region"
             >
-              <li
-                class="emotion-14 emotion-15 emotion-8"
-                dir="ltr"
-                role="listitem"
+              <div
+                class="emotion-9 emotion-10"
               >
-                <div
-                  class="emotion-17 emotion-18"
+                <h1
+                  class="emotion-11 emotion-12"
+                  id="content"
+                  tabindex="-1"
                 >
-                  <div
-                    class="emotion-19 emotion-20"
-                    dir="ltr"
+                  <span
+                    class="emotion-13 emotion-14"
                   >
                     <span
-                      class="emotion-21 emotion-22"
+                      class="emotion-15 emotion-16"
                     >
-                      1
-                    </span>
-                  </div>
-                  <div
-                    class="emotion-23 emotion-24"
-                    dir="ltr"
-                  >
-                    <a
-                      class="focusIndicatorDisplayTableCell emotion-25 emotion-26"
-                      href="https://www.bbc.com/pidgin/articles/cz5kkgv41v0o"
-                    >
-                      Teams wey qualify for Afcon 2023 and how things stand for each group
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li
-                class="emotion-14 emotion-15 emotion-8"
-                dir="ltr"
-                role="listitem"
-              >
-                <div
-                  class="emotion-17 emotion-18"
-                >
-                  <div
-                    class="emotion-19 emotion-20"
-                    dir="ltr"
-                  >
-                    <span
-                      class="emotion-21 emotion-22"
-                    >
-                      2
-                    </span>
-                  </div>
-                  <div
-                    class="emotion-23 emotion-24"
-                    dir="ltr"
-                  >
-                    <a
-                      class="focusIndicatorDisplayTableCell emotion-25 emotion-26"
-                      href="https://www.bbc.com/pidgin/articles/czd44wvly0qo"
-                    >
-                      'We dey hear gospel songs den screaming' - Woman tok of Uganda school attack 
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li
-                class="emotion-14 emotion-15 emotion-8"
-                dir="ltr"
-                role="listitem"
-              >
-                <div
-                  class="emotion-17 emotion-18"
-                >
-                  <div
-                    class="emotion-19 emotion-20"
-                    dir="ltr"
-                  >
-                    <span
-                      class="emotion-21 emotion-22"
-                    >
-                      3
-                    </span>
-                  </div>
-                  <div
-                    class="emotion-23 emotion-24"
-                    dir="ltr"
-                  >
-                    <a
-                      class="focusIndicatorDisplayTableCell emotion-25 emotion-26"
-                      href="https://www.bbc.com/pidgin/articles/cgr6g81j2g8o"
-                    >
-                      Super Eagles qualify for Nations Cup afta beating Sierra Leone for Monrovia
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li
-                class="emotion-14 emotion-15 emotion-8"
-                dir="ltr"
-                role="listitem"
-              >
-                <div
-                  class="emotion-17 emotion-18"
-                >
-                  <div
-                    class="emotion-19 emotion-20"
-                    dir="ltr"
-                  >
-                    <span
-                      class="emotion-21 emotion-22"
-                    >
-                      4
-                    </span>
-                  </div>
-                  <div
-                    class="emotion-23 emotion-24"
-                    dir="ltr"
-                  >
-                    <a
-                      class="focusIndicatorDisplayTableCell emotion-25 emotion-26"
-                      href="https://www.bbc.com/pidgin/articles/cx047w4gxqzo"
-                    >
-                      Forbes top ten list of highest paid athletes for 2023 and wetin dem earn
-                    </a>
-                    <div
-                      class="emotion-66 emotion-67"
-                    >
-                      <time
-                        class="emotion-68 emotion-69"
-                        datetime="2023-05-03"
+                      <span
+                        class="emotion-17 emotion-18"
+                        dir="ltr"
+                        id="Most-Read"
                       >
-                        De one we dem update for: 3rd May 2023
-                      </time>
+                        De one we dem de read well well
+                      </span>
+                    </span>
+                  </span>
+                </h1>
+              </div>
+              <ol
+                class="emotion-19 emotion-6"
+                dir="ltr"
+                role="list"
+              >
+                <li
+                  class="emotion-21 emotion-6"
+                  dir="ltr"
+                  role="listitem"
+                >
+                  <div
+                    class="emotion-23"
+                  >
+                    <div
+                      class="emotion-24"
+                      dir="ltr"
+                    >
+                      <span
+                        class="emotion-25"
+                      >
+                        1
+                      </span>
+                    </div>
+                    <div
+                      class="emotion-26"
+                      dir="ltr"
+                    >
+                      <a
+                        class="focusIndicatorDisplayTableCell emotion-27"
+                        href="https://www.bbc.com/pidgin/articles/cz5kkgv41v0o"
+                      >
+                        Teams wey qualify for Afcon 2023 and how things stand for each group
+                      </a>
                     </div>
                   </div>
-                </div>
-              </li>
-              <li
-                class="emotion-14 emotion-15 emotion-8"
-                dir="ltr"
-                role="listitem"
-              >
-                <div
-                  class="emotion-17 emotion-18"
+                </li>
+                <li
+                  class="emotion-21 emotion-6"
+                  dir="ltr"
+                  role="listitem"
                 >
                   <div
-                    class="emotion-19 emotion-20"
-                    dir="ltr"
+                    class="emotion-23"
                   >
-                    <span
-                      class="emotion-21 emotion-22"
-                    >
-                      5
-                    </span>
-                  </div>
-                  <div
-                    class="emotion-23 emotion-24"
-                    dir="ltr"
-                  >
-                    <a
-                      class="focusIndicatorDisplayTableCell emotion-25 emotion-26"
-                      href="/pidgin/65817572"
-                    >
-                      Tins to sabi about 2023 Sierra Leone general election
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li
-                class="emotion-14 emotion-15 emotion-8"
-                dir="ltr"
-                role="listitem"
-              >
-                <div
-                  class="emotion-17 emotion-18"
-                >
-                  <div
-                    class="emotion-19 emotion-20"
-                    dir="ltr"
-                  >
-                    <span
-                      class="emotion-21 emotion-22"
-                    >
-                      6
-                    </span>
-                  </div>
-                  <div
-                    class="emotion-23 emotion-24"
-                    dir="ltr"
-                  >
-                    <a
-                      class="focusIndicatorDisplayTableCell emotion-25 emotion-26"
-                      href="https://www.bbc.com/pidgin/articles/cv21n0qzvv6o"
-                    >
-                      CBN move to allow naira trade more freely against di dollar - Wetin e mean? 
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li
-                class="emotion-14 emotion-15 emotion-8"
-                dir="ltr"
-                role="listitem"
-              >
-                <div
-                  class="emotion-17 emotion-18"
-                >
-                  <div
-                    class="emotion-19 emotion-20"
-                    dir="ltr"
-                  >
-                    <span
-                      class="emotion-21 emotion-22"
-                    >
-                      7
-                    </span>
-                  </div>
-                  <div
-                    class="emotion-23 emotion-24"
-                    dir="ltr"
-                  >
-                    <a
-                      class="focusIndicatorDisplayTableCell emotion-25 emotion-26"
-                      href="https://www.bbc.com/pidgin/articles/cd1k74e9pl1o"
-                    >
-                      'We go flush out bad eggs for passport offices' - Acting Comptroller General Immigration 
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li
-                class="emotion-14 emotion-15 emotion-8"
-                dir="ltr"
-                role="listitem"
-              >
-                <div
-                  class="emotion-17 emotion-18"
-                >
-                  <div
-                    class="emotion-19 emotion-20"
-                    dir="ltr"
-                  >
-                    <span
-                      class="emotion-21 emotion-22"
-                    >
-                      8
-                    </span>
-                  </div>
-                  <div
-                    class="emotion-23 emotion-24"
-                    dir="ltr"
-                  >
-                    <a
-                      class="focusIndicatorDisplayTableCell emotion-25 emotion-26"
-                      href="https://www.bbc.com/pidgin/articles/cnd9g0p5p2lo"
-                    >
-                      South Africa taps don dry finish on top electricity kasala
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li
-                class="emotion-14 emotion-15 emotion-8"
-                dir="ltr"
-                role="listitem"
-              >
-                <div
-                  class="emotion-17 emotion-18"
-                >
-                  <div
-                    class="emotion-19 emotion-20"
-                    dir="ltr"
-                  >
-                    <span
-                      class="emotion-21 emotion-22"
-                    >
-                      9
-                    </span>
-                  </div>
-                  <div
-                    class="emotion-23 emotion-24"
-                    dir="ltr"
-                  >
-                    <a
-                      class="focusIndicatorDisplayTableCell emotion-25 emotion-26"
-                      href="/pidgin/tori-65926540"
-                    >
-                      Sharp-sharp facts about President Bola Tinubu special advisers
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li
-                class="emotion-14 emotion-15 emotion-8"
-                dir="ltr"
-                role="listitem"
-              >
-                <div
-                  class="emotion-17 emotion-18"
-                >
-                  <div
-                    class="emotion-19 emotion-20"
-                    dir="ltr"
-                  >
-                    <span
-                      class="emotion-21 emotion-22"
-                    >
-                      10
-                    </span>
-                  </div>
-                  <div
-                    class="emotion-23 emotion-24"
-                    dir="ltr"
-                  >
-                    <a
-                      class="focusIndicatorDisplayTableCell emotion-25 emotion-26"
-                      href="https://www.bbc.com/pidgin/articles/c0d81l304xdo"
-                    >
-                      Easter date, Workers day, Salah date plus oda public holidays for 2023
-                    </a>
                     <div
-                      class="emotion-66 emotion-67"
+                      class="emotion-24"
+                      dir="ltr"
                     >
-                      <time
-                        class="emotion-68 emotion-69"
-                        datetime="2022-12-31"
+                      <span
+                        class="emotion-25"
                       >
-                        De one we dem update for: 31st December 2022
-                      </time>
+                        2
+                      </span>
+                    </div>
+                    <div
+                      class="emotion-26"
+                      dir="ltr"
+                    >
+                      <a
+                        class="focusIndicatorDisplayTableCell emotion-27"
+                        href="https://www.bbc.com/pidgin/articles/czd44wvly0qo"
+                      >
+                        'We dey hear gospel songs den screaming' - Woman tok of Uganda school attack 
+                      </a>
                     </div>
                   </div>
-                </div>
-              </li>
-            </ol>
+                </li>
+                <li
+                  class="emotion-21 emotion-6"
+                  dir="ltr"
+                  role="listitem"
+                >
+                  <div
+                    class="emotion-23"
+                  >
+                    <div
+                      class="emotion-24"
+                      dir="ltr"
+                    >
+                      <span
+                        class="emotion-25"
+                      >
+                        3
+                      </span>
+                    </div>
+                    <div
+                      class="emotion-26"
+                      dir="ltr"
+                    >
+                      <a
+                        class="focusIndicatorDisplayTableCell emotion-27"
+                        href="https://www.bbc.com/pidgin/articles/cgr6g81j2g8o"
+                      >
+                        Super Eagles qualify for Nations Cup afta beating Sierra Leone for Monrovia
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="emotion-21 emotion-6"
+                  dir="ltr"
+                  role="listitem"
+                >
+                  <div
+                    class="emotion-23"
+                  >
+                    <div
+                      class="emotion-24"
+                      dir="ltr"
+                    >
+                      <span
+                        class="emotion-25"
+                      >
+                        4
+                      </span>
+                    </div>
+                    <div
+                      class="emotion-26"
+                      dir="ltr"
+                    >
+                      <a
+                        class="focusIndicatorDisplayTableCell emotion-27"
+                        href="https://www.bbc.com/pidgin/articles/cx047w4gxqzo"
+                      >
+                        Forbes top ten list of highest paid athletes for 2023 and wetin dem earn
+                      </a>
+                      <div
+                        class="emotion-49"
+                      >
+                        <time
+                          class="emotion-50 emotion-51"
+                          datetime="2023-05-03"
+                        >
+                          De one we dem update for: 3rd May 2023
+                        </time>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="emotion-21 emotion-6"
+                  dir="ltr"
+                  role="listitem"
+                >
+                  <div
+                    class="emotion-23"
+                  >
+                    <div
+                      class="emotion-24"
+                      dir="ltr"
+                    >
+                      <span
+                        class="emotion-25"
+                      >
+                        5
+                      </span>
+                    </div>
+                    <div
+                      class="emotion-26"
+                      dir="ltr"
+                    >
+                      <a
+                        class="focusIndicatorDisplayTableCell emotion-27"
+                        href="/pidgin/65817572"
+                      >
+                        Tins to sabi about 2023 Sierra Leone general election
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="emotion-21 emotion-6"
+                  dir="ltr"
+                  role="listitem"
+                >
+                  <div
+                    class="emotion-23"
+                  >
+                    <div
+                      class="emotion-24"
+                      dir="ltr"
+                    >
+                      <span
+                        class="emotion-25"
+                      >
+                        6
+                      </span>
+                    </div>
+                    <div
+                      class="emotion-26"
+                      dir="ltr"
+                    >
+                      <a
+                        class="focusIndicatorDisplayTableCell emotion-27"
+                        href="https://www.bbc.com/pidgin/articles/cv21n0qzvv6o"
+                      >
+                        CBN move to allow naira trade more freely against di dollar - Wetin e mean? 
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="emotion-21 emotion-6"
+                  dir="ltr"
+                  role="listitem"
+                >
+                  <div
+                    class="emotion-23"
+                  >
+                    <div
+                      class="emotion-24"
+                      dir="ltr"
+                    >
+                      <span
+                        class="emotion-25"
+                      >
+                        7
+                      </span>
+                    </div>
+                    <div
+                      class="emotion-26"
+                      dir="ltr"
+                    >
+                      <a
+                        class="focusIndicatorDisplayTableCell emotion-27"
+                        href="https://www.bbc.com/pidgin/articles/cd1k74e9pl1o"
+                      >
+                        'We go flush out bad eggs for passport offices' - Acting Comptroller General Immigration 
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="emotion-21 emotion-6"
+                  dir="ltr"
+                  role="listitem"
+                >
+                  <div
+                    class="emotion-23"
+                  >
+                    <div
+                      class="emotion-24"
+                      dir="ltr"
+                    >
+                      <span
+                        class="emotion-25"
+                      >
+                        8
+                      </span>
+                    </div>
+                    <div
+                      class="emotion-26"
+                      dir="ltr"
+                    >
+                      <a
+                        class="focusIndicatorDisplayTableCell emotion-27"
+                        href="https://www.bbc.com/pidgin/articles/cnd9g0p5p2lo"
+                      >
+                        South Africa taps don dry finish on top electricity kasala
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="emotion-21 emotion-6"
+                  dir="ltr"
+                  role="listitem"
+                >
+                  <div
+                    class="emotion-23"
+                  >
+                    <div
+                      class="emotion-24"
+                      dir="ltr"
+                    >
+                      <span
+                        class="emotion-25"
+                      >
+                        9
+                      </span>
+                    </div>
+                    <div
+                      class="emotion-26"
+                      dir="ltr"
+                    >
+                      <a
+                        class="focusIndicatorDisplayTableCell emotion-27"
+                        href="/pidgin/tori-65926540"
+                      >
+                        Sharp-sharp facts about President Bola Tinubu special advisers
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="emotion-21 emotion-6"
+                  dir="ltr"
+                  role="listitem"
+                >
+                  <div
+                    class="emotion-23"
+                  >
+                    <div
+                      class="emotion-24"
+                      dir="ltr"
+                    >
+                      <span
+                        class="emotion-25"
+                      >
+                        10
+                      </span>
+                    </div>
+                    <div
+                      class="emotion-26"
+                      dir="ltr"
+                    >
+                      <a
+                        class="focusIndicatorDisplayTableCell emotion-27"
+                        href="https://www.bbc.com/pidgin/articles/c0d81l304xdo"
+                      >
+                        Easter date, Workers day, Salah date plus oda public holidays for 2023
+                      </a>
+                      <div
+                        class="emotion-49"
+                      >
+                        <time
+                          class="emotion-50 emotion-51"
+                          datetime="2022-12-31"
+                        >
+                          De one we dem update for: 31st December 2022
+                        </time>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ol>
+            </section>
           </div>
         </div>
       </div>
