@@ -1,13 +1,14 @@
 import Url from 'url-parse';
 import pipe from 'ramda/src/pipe';
 import getEnvironment from '#app/routes/utils/getEnvironment';
+import { getMostReadEndpoint } from '#app/lib/utilities/getUrlHelpers/getMostReadUrls';
 import { getUrlPath } from '../../../lib/utilities/urlParser';
 import handleError from '../handleError';
 import { Services, Variants, Environments } from '../../../models/types/global';
 import HOME_PAGE_CONFIG from '../../homePage/getInitialData/page-config';
 import PAGE_TYPES from './page-types';
 
-const { ARTICLE, CPS_ASSET, TOPIC, HOME, LIVE } = PAGE_TYPES;
+const { ARTICLE, CPS_ASSET, HOME, LIVE, MOST_READ, TOPIC } = PAGE_TYPES;
 
 type Keys = keyof typeof PAGE_TYPES;
 type PageTypes = (typeof PAGE_TYPES)[Keys];
@@ -61,6 +62,9 @@ const getId = ({ pageType, service, variant, env }: GetIdProps) => {
           ? HOME_PAGE_CONFIG?.[service]?.[env]
           : 'tipohome';
       };
+      break;
+    case MOST_READ:
+      getIdFunction = () => pageType;
       break;
     case LIVE:
     case TOPIC:
@@ -118,6 +122,9 @@ const constructPageFetchUrl = ({
         break;
       case HOME:
         fetchUrl = Url(`/${service}/${id}`);
+        break;
+      case MOST_READ:
+        fetchUrl = Url(getMostReadEndpoint({ service, variant }).split('.')[0]);
         break;
       case TOPIC: {
         const variantPath = variant ? `/${variant}` : '';

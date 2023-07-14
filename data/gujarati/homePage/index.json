@@ -90,10 +90,11 @@
       }
     ],
     "metadata": {
-      "analytics": {
+      "atiAnalytics": {
         "contentId": "urn:bbc:tipo:topic:cnnmzrr14w9t",
         "contentType": "index-home",
-        "pageIdentifier": "gujarati.page"
+        "pageIdentifier": "gujarati.page",
+        "pageTitle": "સમાચાર - BBC News ગુજરાતી"
       }
     }
   },

@@ -230,7 +230,7 @@ describe('Front Page - Get Initial Data', () => {
         }),
       );
       fetchMock.mock(
-        'end:/serbian/bbc_serbian_radio/schedule.json',
+        '/serbian/bbc_serbian_radio/schedule.json',
         radioScheduleJson,
       );
 

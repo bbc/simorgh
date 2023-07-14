@@ -279,7 +279,9 @@ exports[`Canonical Front Page Sections should match headline text 3`] = `"Zaniml
 
 exports[`Canonical Front Page Sections should match headline text 4`] = `"In case you missed it"`;
 
-exports[`Canonical Front Page Sections should match headline text 5`] = `"Korisni linkovi"`;
+exports[`Canonical Front Page Sections should match headline text 5`] = `"Najčitanije"`;
+
+exports[`Canonical Front Page Sections should match headline text 6`] = `"Korisni linkovi"`;
 
 exports[`Canonical Front Page Useful Links should match text and url 1`] = `"Kontaktirajte nas 1 - /serbian/lat/popular/read"`;
 

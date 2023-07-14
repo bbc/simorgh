@@ -5,6 +5,7 @@ import {
   HOME_PAGE,
   FRONT_PAGE,
   INDEX_PAGE,
+  MOST_READ_PAGE,
 } from '#app/routes/utils/pageTypes';
 import routes from './index';
 
@@ -22,6 +23,7 @@ const pageTypesToSkip = [
   'cpsAsset',
   FRONT_PAGE,
   INDEX_PAGE,
+  MOST_READ_PAGE,
 ];
 
 routes
