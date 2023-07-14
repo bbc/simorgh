@@ -26,6 +26,11 @@ export default ({
   const getRemoteData = async () => {
     try {
       const response = await fetch("${endpoint}");
+
+      if (!response.ok) {
+        throw Error('Unable to fetch most read data for ${service}')
+      }
+
       const { data } = await response.json();
 
       ${transformData()}
