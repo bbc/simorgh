@@ -178,14 +178,17 @@ jest.unstable_mockModule('fs', () => ({
   }
 }));
 
+const start = jest.fn();
+const succeed = jest.fn();
+const fail = jest.fn();
+
 jest.unstable_mockModule('ora', () => ({
-  default: {
-    text: jest.fn(),
-    start: jest.fn(),
-    succeed: jest.fn(),
-    fail: jest.fn(),
-  }
-}))
+  default: jest.fn({
+    start,
+    succeed,
+    fail
+  })
+}));
 
 jest.unstable_mockModule('chalk', () => ({
   default: {
@@ -235,20 +238,14 @@ const setUpFSMocks = (service1FileSize, service2FileSize) => {
   });
 };
 
+const oraImport = await import('ora');
+const ora = oraImport.default;
+
 describe('bundleSize', () => {
   const originalConsoleLog = global.console.log;
   const originalConsoleError = global.console.error;
 
-  let ora;
-  let start;
-  let succeed;
-  let fail;
-
   beforeAll(async () => {
-    ora = await import('ora');
-    start = ora.default.start;
-    succeed = ora.default.succeed;
-    fail = ora.default.fail;
     // chalk.red.bold = a => a;
 
     global.console.log = jest.fn();
@@ -272,7 +269,6 @@ describe('bundleSize', () => {
           const { default: bundleSize } = await import('./index.js');
           bundleSize();
         } catch (e) {
-          console.debug('ERROR BEANS 2', e);
           didThrow = true;
         }
       });
@@ -285,15 +281,15 @@ describe('bundleSize', () => {
           const { default: bundleSize } = await import('./index.js');
           bundleSize();
         } catch (e) {
+          console.debug('ERROR BEANS 2', e);
           // silence error
         }
+        expect(ora).toHaveBeenCalledWith(
+          expect.objectContaining({ text: 'Analysing bundles...' }),
+        );
+        expect(start).toHaveBeenCalled();
+        expect(succeed).toHaveBeenCalledWith('All bundle sizes are good!');
       });
-
-      expect(ora).toHaveBeenCalledWith(
-        expect.objectContaining({ default: { text: 'Analysing bundles...' } }),
-      );
-      expect(start).toHaveBeenCalled();
-      expect(succeed).toHaveBeenCalledWith('All bundle sizes are good!');
     });
 
     it('should log a summary of bundle sizes', () => {
@@ -430,7 +426,7 @@ describe('bundleSize', () => {
       });
 
       expect(ora).toHaveBeenCalledWith(
-        expect.objectContaining({ default: { text: 'Analysing bundles...' } }),
+        expect.objectContaining({ text: 'Analysing bundles...' }),
       );
       expect(start).toHaveBeenCalled();
       expect(fail).toHaveBeenCalledWith('Issues with service bundles: ');
@@ -479,7 +475,7 @@ describe('bundleSize', () => {
       });
 
       expect(ora).toHaveBeenCalledWith(
-        expect.objectContaining({ default: { text: 'Analysing bundles...' } }),
+        expect.objectContaining({ text: 'Analysing bundles...' }),
       );
       expect(start).toHaveBeenCalled();
       expect(fail).toHaveBeenCalledWith('Issues with service bundles: ');
