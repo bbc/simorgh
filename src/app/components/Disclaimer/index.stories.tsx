@@ -44,3 +44,7 @@ export default {
 export const Disclaimer = ({ variant }: StoryProps) => (
   <Component service="russian" variant={variant} />
 );
+
+export const DisclaimerForA11ySwarm = ({ variant }: StoryProps) => (
+  <Component service="pidgin" variant={variant} />
+);
