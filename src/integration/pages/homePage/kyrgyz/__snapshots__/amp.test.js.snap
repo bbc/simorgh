@@ -718,8 +718,8 @@ exports[`AMP Home Page SEO Twitter title 1`] = `"Кабарлар, акыркы 
 
 exports[`AMP Home Page Timestamp should match text and date 1`] = `
 Object {
-  "date": "2023-03-06",
-  "text": "6 март 2023",
+  "date": "PT5M52S",
+  "text": "5:52",
 }
 `;
 
