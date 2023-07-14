@@ -19,6 +19,7 @@
     "**/pages/**/helper.js",
     "**/pages/**/helpers.js",
     "**/pages/**/getErrorPath.js",
+    "**/pages/**/mostReadAssertions.js",
     "**/123PlaygroundForTests/**",
     "**/specialFeatures/utilities/**",
     "**/specialFeatures/**/testsForAMPOnly.js",

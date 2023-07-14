@@ -263,6 +263,34 @@ Object {
 }
 `;
 
+exports[`AMP Media Article Page Latest Media should match text and url 1`] = `
+Object {
+  "text": "Video, How to vote for Nigeria general election, Duration 1,46",
+  "url": "/pidgin/tori-64758904",
+}
+`;
+
+exports[`AMP Media Article Page Latest Media should match text and url 2`] = `
+Object {
+  "text": "Video, Wetin e take to win election for Nigeria, Duration 3,59",
+  "url": "/pidgin/64626014",
+}
+`;
+
+exports[`AMP Media Article Page Latest Media should match text and url 3`] = `
+Object {
+  "text": "Video, Tins you go do during election wey go land you for INEC hot soup, Duration 1,33",
+  "url": "/pidgin/tori-64534844",
+}
+`;
+
+exports[`AMP Media Article Page Latest Media should match text and url 4`] = `
+Object {
+  "text": "Video, 'We dey good to go for dis election' - INEC Boss, Duration 6,17",
+  "url": "/pidgin/articles/cw0x29n2pvqo",
+}
+`;
+
 exports[`AMP Media Article Page Main heading should match text 1`] = `"'We dey good to go for dis election' - INEC Boss"`;
 
 exports[`AMP Media Article Page Related Content should match text and url 1`] = `
