@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
-import { string, node } from 'prop-types';
+import { node } from 'prop-types';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
@@ -12,12 +12,11 @@ import {
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
 } from '#psammead/gel-foundations/src/spacings';
-import MostReadContainer from '#containers/MostRead';
 import mostReadShape from '#containers/MostRead/utilities/mostReadShape';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import Grid, { GelPageGrid } from '#components/Grid';
 import IndexPageContainer from '#components/PageLayout/IndexPageContainer';
-import IndexHeading from '#containers/IndexHeading';
+import MostRead from '../../components/MostRead';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import MetadataContainer from '../../components/Metadata';
@@ -38,7 +37,7 @@ const MarginWrapper = styled.div`
   }
 `;
 
-const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
+const MostReadPage = ({ pageData }) => {
   const {
     brandName,
     lang,
@@ -47,7 +46,6 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
 
   const MostReadWrapper = ({ children }) => (
     <>
-      <IndexHeading id="content">{header}</IndexHeading>
       <MarginWrapper>
         <GelPageGrid
           columns={{
@@ -102,15 +100,18 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
         openGraphType="website"
       />
       <LinkedData type="WebPage" seoTitle={header} />
-      <main role="main" data-e2e="most-read">
+      <main role="main">
         <IndexPageContainer>
-          <MostReadContainer
-            mostReadEndpointOverride={mostReadEndpointOverride}
-            wrapper={MostReadWrapper}
-            columnLayout="oneColumn"
-            initialData={pageData}
-            serverRenderOnAmp
-          />
+          <MostReadWrapper>
+            <MostRead
+              headingAttributes={{ id: 'content', tabIndex: '-1' }}
+              overrideHeadingAs="h1"
+              data={pageData}
+              columnLayout="oneColumn"
+              size="default"
+              renderCanonicalOnAmp
+            />
+          </MostReadWrapper>
         </IndexPageContainer>
       </main>
     </>
@@ -118,9 +119,5 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
 };
 MostReadPage.propTypes = {
   pageData: mostReadShape.isRequired,
-  mostReadEndpointOverride: string,
-};
-MostReadPage.defaultProps = {
-  mostReadEndpointOverride: null,
 };
 export default MostReadPage;
