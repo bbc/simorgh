@@ -102,7 +102,7 @@ const MostReadPage = ({ pageData }) => {
         openGraphType="website"
       />
       <LinkedData type="WebPage" seoTitle={header} />
-      <main role="main">
+      <main role="main" data-e2e="most-read">
         <IndexPageContainer>
           <MostReadWrapper>
             <Canonical
