@@ -259,15 +259,6 @@ export const service: DefaultServiceConfig = {
     radioSchedule: {
       hasRadioSchedule: false,
     },
-    disclaimer: {
-      para1: 'Subscribe to our newsletter ”',
-      para2: {
-        text: 'Context',
-        url: 'https://www.bbc.com/russian/resources/idt-b34bb7dd-f094-4722-92eb-cf7aff8cc1bc',
-        isExternal: false,
-      },
-      para3: '”: it will help you understand the events.',
-    },
     recommendations: {
       hasStoryRecommendations: true,
       skipLink: {
