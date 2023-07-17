@@ -2,7 +2,7 @@ import React, { Fragment, useContext } from 'react';
 import path from 'ramda/src/path';
 import findIndex from 'ramda/src/findIndex';
 import styled from '@emotion/styled';
-import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
+// import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
 import { frontPageDataPropTypes } from '#models/propTypes/frontPage';
 import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
@@ -12,7 +12,7 @@ import MPUContainer from '#containers/Ad/MPU';
 import IndexPageContainer from '#components/PageLayout/IndexPageContainer';
 import IndexPageSection from '#containers/IndexPageSection';
 import RadioScheduleContainer from '#containers/RadioSchedule';
-import MostReadSection from '#containers/MostRead/section';
+// import MostReadSection from '#containers/MostRead/section';
 import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
 import { NEGATIVE_MARGIN } from '#lib/styles.const';
 import MostRead from '#app/components/MostRead';
@@ -24,14 +24,14 @@ import { GHOST } from '../../components/ThemeProvider/palette';
 import LinkedData from '../../components/LinkedData';
 import VisuallyHiddenText from '../../components/VisuallyHiddenText';
 
-const FrontPageMostReadSection = styled(MostReadSection)`
-  /* To centre page layout for Group 4+ */
-  margin: 0 auto;
-  width: 100%; /* Needed for IE11 */
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
-  }
-`;
+// const FrontPageMostReadSection = styled(MostReadSection)`
+//   /* To centre page layout for Group 4+ */
+//   margin: 0 auto;
+//   width: 100%; /* Needed for IE11 */
+//   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+//     max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
+//   }
+// `;
 
 const StyledRadioScheduleContainer = styled(RadioScheduleContainer)`
   ${NEGATIVE_MARGIN}
@@ -55,14 +55,14 @@ const FrontPage = ({ pageData }) => {
   const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
 
   const renderMostRead = () => (
-    <FrontPageMostReadSection>
-      <MostRead
-        data={mostReadInitialData}
-        columnLayout="twoColumn"
-        size="default"
-        headingBackgroundColour={GHOST}
-      />
-    </FrontPageMostReadSection>
+    // <FrontPageMostReadSection>
+    <MostRead
+      data={mostReadInitialData}
+      columnLayout="twoColumn"
+      size="default"
+      headingBackgroundColour={GHOST}
+    />
+    // </FrontPageMostReadSection>
   );
 
   const offScreenText = (
