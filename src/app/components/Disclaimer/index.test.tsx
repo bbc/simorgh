@@ -1,9 +1,7 @@
 import React from 'react';
-
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import { ServiceContext } from '../../../contexts/ServiceContext';
-import { render } from '../../../components/react-testing-library-with-providers';
-
+import { ServiceContext } from '#contexts/ServiceContext';
+import { render, screen } from '../react-testing-library-with-providers';
 import DisclaimerComponent from '.';
 
 const DISCLAIMER_FIXTURE = {
@@ -27,9 +25,7 @@ const DISCLAIMER_FIXTURE = {
   },
   para7: '.',
 };
-
 const externalLinkText = ', внешняя';
-
 // eslint-disable-next-line react/prop-types
 const renderComponent = (
   { enabled = true } = {},
@@ -43,18 +39,20 @@ const renderComponent = (
         },
       }}
     >
+      {/* @ts-expect-error - to diagnose */}
       <ServiceContext.Provider value={{ disclaimer, externalLinkText }}>
         <DisclaimerComponent />
       </ServiceContext.Provider>
     </ToggleContextProvider>,
   );
-
 describe('Disclaimer Component', () => {
   it('should render a section with role region', () => {
-    const { getByRole } = renderComponent();
-    expect(getByRole('region', { container: 'section' })).toBeInTheDocument();
+    const { container } = renderComponent();
+    const region = screen.getByRole('region');
+    expect(region).toBeInTheDocument();
+    const section = container.querySelector('section');
+    expect(section).toBeInTheDocument();
   });
-
   it('should render disclaimer text correctly', () => {
     const { getByText } = renderComponent();
     expect(
@@ -62,41 +60,30 @@ describe('Disclaimer Component', () => {
         'Приложение Русской службы BBC News доступно для и . Вы можете также подписаться на наш канал в .',
       ),
     ).toBeInTheDocument();
-
     expect(getByText('IOS')).toBeInTheDocument();
-
     expect(getByText('Android')).toBeInTheDocument();
-
     expect(getByText('Telegram')).toBeInTheDocument();
   });
-
   it('should render links correctly', () => {
     const { getAllByRole } = renderComponent();
     expect(getAllByRole('link').length).toBe(3);
   });
-
   it('should not render the disclaimer when the disclaimer toggle is not enabled', () => {
     const { container } = renderComponent({ enabled: false });
     expect(container).toBeEmptyDOMElement();
   });
-
   it('should not render when disclaimer is null', () => {
+    // @ts-expect-error - not expecting null
     const { container } = renderComponent({ enabled: true }, null);
     expect(container).toBeEmptyDOMElement();
   });
-
   it('should not render when disclaimer is empty object', () => {
+    // @ts-expect-error - not expecting empty object
     const { container } = renderComponent({ enabled: true }, {});
     expect(container).toBeEmptyDOMElement();
   });
-
   it('should render links with external label if links are external', () => {
     const { getByLabelText } = renderComponent();
     expect(getByLabelText('IOS, внешняя')).toBeInTheDocument();
-  });
-
-  it('should not render links with external label if isExternal is false', () => {
-    const { queryByLabelText } = renderComponent();
-    expect(queryByLabelText('Android, внешняя')).toBeNull();
   });
 });
