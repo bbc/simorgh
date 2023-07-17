@@ -79,8 +79,14 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   .emotion-4 {
     -webkit-padding-start: 1rem;
     padding-inline-start: 1rem;
-    grid-column: 1/span 3;
+    grid-column: 1/span 4;
     margin-bottom: 0;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-4 {
+    grid-column: 1/span 3;
   }
 }
 
@@ -103,6 +109,12 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 @media (min-width: 63rem) {
   .emotion-6 {
     grid-column: 5/span 8;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-6 {
+    grid-column: 4/span 9;
   }
 }
 
@@ -139,12 +151,56 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 }
 
+@media (min-width: 80rem) {
+  .emotion-7 {
+    grid-column: 4/span 9;
+  }
+}
+
 .emotion-8 {
-  max-width: 63rem;
-  margin: 1.25rem auto;
+  max-width: 80rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  padding: 0.5rem 0.5rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-8 {
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-8 {
+    -webkit-padding-start: 1rem;
+    padding-inline-start: 1rem;
+    -webkit-padding-end: 1rem;
+    padding-inline-end: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 2rem;
+    -webkit-column-gap: 1rem;
+    column-gap: 1rem;
+  }
 }
 
 .emotion-9 {
+  grid-column: 1/13;
+}
+
+@media (min-width: 63rem) {
+  .emotion-9 {
+    grid-column: 1/5;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-9 {
+    grid-column: 1/4;
+  }
+}
+
+.emotion-10 {
   color: #141414;
   font-size: 1.25rem;
   line-height: 1.5rem;
@@ -155,72 +211,72 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-9 {
+  .emotion-10 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-9 {
+  .emotion-10 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
-.emotion-10 {
+.emotion-11 {
   margin-bottom: 1.5rem;
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-10 {
+  .emotion-11 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-10 {
+  .emotion-11 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-10 {
+  .emotion-11 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-10 {
+  .emotion-11 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-10 {
+  .emotion-11 {
     margin-left: 20%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-10 {
+  .emotion-11 {
     margin-left: 40%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-10 {
+  .emotion-11 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-10 {
+    .emotion-11 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -229,7 +285,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-10 {
+    .emotion-11 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -238,7 +294,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-10 {
+    .emotion-11 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -247,7 +303,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-10 {
+    .emotion-11 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       padding: 0 1rem;
@@ -256,7 +312,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-10 {
+    .emotion-11 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
@@ -264,7 +320,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 
   @media (min-width: 80rem) {
-    .emotion-10 {
+    .emotion-11 {
       grid-template-columns: repeat(10, 1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
@@ -272,7 +328,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 }
 
-.emotion-11 {
+.emotion-12 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -283,24 +339,24 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-11 {
+  .emotion-12 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-11 {
+  .emotion-12 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
-.emotion-11>li {
+.emotion-12>li {
   position: relative;
 }
 
-.emotion-11>li::before {
+.emotion-12>li::before {
   top: 0.5rem;
   content: ' ';
   position: absolute;
@@ -311,59 +367,162 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   left: -1rem;
 }
 
-.emotion-12 {
+.emotion-13 {
   margin-bottom: 1rem;
 }
 
+.emotion-15 {
+  grid-column: 1/13;
+}
+
+@media (min-width: 63rem) {
+  .emotion-15 {
+    grid-column: 5/13;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-15 {
+    grid-column: 4/13;
+  }
+}
+
+.emotion-16 {
+  color: #141414;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  margin: 0;
+  padding: 1rem 0 1rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-16 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-16 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-16 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+    padding: 1.5rem 0 1rem;
+  }
+
+  @media (min-width: 20rem) and (max-width: 37.4375rem) {
+    .emotion-16 {
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+    }
+  }
+
+  @media (min-width: 37.5rem) {
+    .emotion-16 {
+      font-size: 1.5rem;
+      line-height: 1.75rem;
+    }
+  }
+}
+
+.emotion-17 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0;
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-17 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-17 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-17 {
+    padding-bottom: 1.5rem;
+  }
+}
+
+.emotion-18 {
+  margin-block: 0;
+  padding-inline: 0;
+}
+
+.emotion-19 {
+  list-style-type: none;
+}
+
 @media (max-width: 14.9375rem) {
-  .emotion-14 {
+  .emotion-20 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-14 {
+  .emotion-20 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-14 {
+  .emotion-20 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-14 {
+  .emotion-20 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-14 {
+  .emotion-20 {
     margin-left: 16.666666666666668%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-14 {
+  .emotion-20 {
     margin-left: 33.333333333333336%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-14 {
+  .emotion-20 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-14 {
+    .emotion-20 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -372,7 +531,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-14 {
+    .emotion-20 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -381,7 +540,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-14 {
+    .emotion-20 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -390,7 +549,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-14 {
+    .emotion-20 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -399,7 +558,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-14 {
+    .emotion-20 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -407,7 +566,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 
   @media (min-width: 80rem) {
-    .emotion-14 {
+    .emotion-20 {
       grid-template-columns: repeat(12, 1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -415,7 +574,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 }
 
-.emotion-15 {
+.emotion-21 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -429,78 +588,78 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-15 {
+  .emotion-21 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-15 {
+  .emotion-21 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-15 {
+  .emotion-21 {
     padding: 2.5rem 0;
   }
 }
 
-.emotion-15:focus {
+.emotion-21:focus {
   outline: none;
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-16 {
+  .emotion-22 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-16 {
+  .emotion-22 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-16 {
+  .emotion-22 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-16 {
+  .emotion-22 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-16 {
+  .emotion-22 {
     margin-left: 20%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-16 {
+  .emotion-22 {
     margin-left: 40%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-16 {
+  .emotion-22 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-16 {
+    .emotion-22 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -509,7 +668,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-16 {
+    .emotion-22 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -518,7 +677,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-16 {
+    .emotion-22 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -527,7 +686,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-16 {
+    .emotion-22 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       padding: 0 1rem;
@@ -536,7 +695,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-16 {
+    .emotion-22 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
@@ -544,7 +703,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 
   @media (min-width: 80rem) {
-    .emotion-16 {
+    .emotion-22 {
       grid-template-columns: repeat(10, 1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
@@ -552,7 +711,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 }
 
-.emotion-17 {
+.emotion-23 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -564,26 +723,26 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-17 {
+  .emotion-23 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-17 {
+  .emotion-23 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-17 {
+  .emotion-23 {
     padding-right: 2.5rem;
   }
 }
 
-.emotion-25 {
+.emotion-33 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -595,26 +754,26 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-25 {
+  .emotion-33 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-25 {
+  .emotion-33 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-25 {
+  .emotion-33 {
     padding-top: 2rem;
   }
 }
 
-.emotion-28 {
+.emotion-36 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: italic;
@@ -622,7 +781,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   font-weight: inherit;
 }
 
-.emotion-29 {
+.emotion-37 {
   color: #141414;
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -632,38 +791,38 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-29 {
+  .emotion-37 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-29 {
+  .emotion-37 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-37 {
+.emotion-45 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-37:visited {
+.emotion-45:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.emotion-37:focus,
-.emotion-37:hover {
+.emotion-45:focus,
+.emotion-45:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
 
-.emotion-44 {
+.emotion-53 {
   white-space: pre-wrap;
   max-height: 50vh;
   overflow: auto;
@@ -672,17 +831,17 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   border-radius: 0.75rem;
 }
 
-.emotion-44>h4 {
+.emotion-53>h4 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   margin-bottom: 0.625rem;
 }
 
-.emotion-44>p {
+.emotion-53>p {
   margin: 0.25rem 0;
 }
 
-.emotion-45 {
+.emotion-54 {
   color: #141414;
   font-size: 1.125rem;
   line-height: 1.375rem;
@@ -693,14 +852,14 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-45 {
+  .emotion-54 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-45 {
+  .emotion-54 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
@@ -752,264 +911,294 @@ exports[`Live Page creates snapshot of the live page 1`] = `
     <div
       class="emotion-8"
     >
-      <h2
+      <div
         class="emotion-9"
       >
-        Summary
-      </h2>
-      <div
-        class="emotion-10"
-        dir="ltr"
-      >
-        <ul
+        <h2
+          class="emotion-10"
+        >
+          Summary
+        </h2>
+        <div
           class="emotion-11"
           dir="ltr"
-          role="list"
         >
-          <li
+          <ul
             class="emotion-12"
-            role="listitem"
-          >
-            I am the summary box
-          </li>
-          <li
-            class="emotion-12"
-            role="listitem"
-          >
-            I need to include bulletpoints
-          </li>
-        </ul>
-      </div>
-      <div>
-        <div>
-          <div
-            class="emotion-14"
             dir="ltr"
+            role="list"
           >
-            <h1
-              class="emotion-15"
-              id="content"
-              tabindex="-1"
+            <li
+              class="emotion-13"
+              role="listitem"
             >
-              Breaking news
-            </h1>
-          </div>
-          <div>
-            <div
-              class="emotion-16"
-              dir="ltr"
+              I am the summary box
+            </li>
+            <li
+              class="emotion-13"
+              role="listitem"
             >
-              <p
-                class="emotion-17"
-                dir="ltr"
-              >
-                Breaking news
-              </p>
-            </div>
-          </div>
-          <hr />
-        </div>
-        <div>
-          <div
-            class="emotion-14"
-            dir="ltr"
-          >
-            <h1
-              class="emotion-15"
-              id="content"
-              tabindex="-1"
-            >
-              Published 6.07pm Tues 9th
-            </h1>
-          </div>
-          <div>
-            <div
-              class="emotion-16"
-              dir="ltr"
-            >
-              <p
-                class="emotion-17"
-                dir="ltr"
-              >
-                Timestamp test
-              </p>
-            </div>
-          </div>
-          <hr />
-        </div>
-        <div>
-          <div
-            class="emotion-14"
-            dir="ltr"
-          >
-            <h1
-              class="emotion-15"
-              id="content"
-              tabindex="-1"
-            >
-              Another post
-            </h1>
-          </div>
-          <div
-            class="emotion-16"
-            dir="ltr"
-          >
-            <h2
-              class="emotion-25"
-              id="Another-post-sub-headline"
-              tabindex="-1"
-            >
-              Another post sub headline
-            </h2>
-          </div>
-          <div>
-            <div
-              class="emotion-16"
-              dir="ltr"
-            >
-              <p
-                class="emotion-17"
-                dir="ltr"
-              >
-                <b>
-                  Another 
-                </b>
-                <i
-                  class="emotion-28"
-                >
-                  short form text
-                </i>
-              </p>
-            </div>
-            <span
-              class="emotion-29"
-            >
-              <ul>
-                <li>
-                  one
-                </li>
-                <li>
-                  two
-                </li>
-                <li>
-                  three
-                </li>
-              </ul>
-            </span>
-            <div
-              class="emotion-16"
-              dir="ltr"
-            >
-              <p
-                class="emotion-17"
-                dir="ltr"
-              />
-            </div>
-            <span
-              class="emotion-29"
-            >
-              <ul>
-                <li>
-                  Bullet 1
-                </li>
-                <li>
-                  Bullet 2
-                </li>
-                <li>
-                  Bullet 3
-                </li>
-              </ul>
-            </span>
-            <div
-              class="emotion-16"
-              dir="ltr"
-            >
-              <p
-                class="emotion-17"
-                dir="ltr"
-              />
-            </div>
-            <div
-              class="emotion-16"
-              dir="ltr"
-            >
-              <p
-                class="emotion-17"
-                dir="ltr"
-              >
-                Here is a 
-                <a
-                  class="focusIndicatorReducedWidth emotion-37"
-                  href="/new/pidgin"
-                >
-                  Link
-                </a>
-              </p>
-            </div>
-          </div>
-          <hr />
-        </div>
-        <div>
-          <div
-            class="emotion-14"
-            dir="ltr"
-          >
-            <h1
-              class="emotion-15"
-              id="content"
-              tabindex="-1"
-            >
-              Post headline
-            </h1>
-          </div>
-          <div
-            class="emotion-16"
-            dir="ltr"
-          >
-            <h2
-              class="emotion-25"
-              id="Post-sub-headline"
-              tabindex="-1"
-            >
-              Post sub headline
-            </h2>
-          </div>
-          <div>
-            <div
-              class="emotion-16"
-              dir="ltr"
-            >
-              <p
-                class="emotion-17"
-                dir="ltr"
-              >
-                Some short form text
-              </p>
-            </div>
-          </div>
-          <hr />
+              I need to include bulletpoints
+            </li>
+          </ul>
         </div>
       </div>
-      <pre
-        class="emotion-44"
+      <div
+        class="emotion-15"
       >
-        <h4
-          class="emotion-45"
+        <div>
+          <h2
+            class="emotion-16"
+          >
+            Live Reporting
+          </h2>
+          <p
+            class="emotion-17"
+          >
+            By a random dude
+          </p>
+          <ol
+            class="emotion-18"
+            role="list"
+          >
+            <li
+              class="emotion-19"
+            >
+              <div
+                class="emotion-20"
+                dir="ltr"
+              >
+                <h1
+                  class="emotion-21"
+                  id="content"
+                  tabindex="-1"
+                >
+                  Breaking news
+                </h1>
+              </div>
+              <div>
+                <div
+                  class="emotion-22"
+                  dir="ltr"
+                >
+                  <p
+                    class="emotion-23"
+                    dir="ltr"
+                  >
+                    Breaking news
+                  </p>
+                </div>
+              </div>
+              <hr />
+            </li>
+            <li
+              class="emotion-19"
+            >
+              <div
+                class="emotion-20"
+                dir="ltr"
+              >
+                <h1
+                  class="emotion-21"
+                  id="content"
+                  tabindex="-1"
+                >
+                  Published 6.07pm Tues 9th
+                </h1>
+              </div>
+              <div>
+                <div
+                  class="emotion-22"
+                  dir="ltr"
+                >
+                  <p
+                    class="emotion-23"
+                    dir="ltr"
+                  >
+                    Timestamp test
+                  </p>
+                </div>
+              </div>
+              <hr />
+            </li>
+            <li
+              class="emotion-19"
+            >
+              <div
+                class="emotion-20"
+                dir="ltr"
+              >
+                <h1
+                  class="emotion-21"
+                  id="content"
+                  tabindex="-1"
+                >
+                  Another post
+                </h1>
+              </div>
+              <div
+                class="emotion-22"
+                dir="ltr"
+              >
+                <h2
+                  class="emotion-33"
+                  id="Another-post-sub-headline"
+                  tabindex="-1"
+                >
+                  Another post sub headline
+                </h2>
+              </div>
+              <div>
+                <div
+                  class="emotion-22"
+                  dir="ltr"
+                >
+                  <p
+                    class="emotion-23"
+                    dir="ltr"
+                  >
+                    <b>
+                      Another 
+                    </b>
+                    <i
+                      class="emotion-36"
+                    >
+                      short form text
+                    </i>
+                  </p>
+                </div>
+                <span
+                  class="emotion-37"
+                >
+                  <ul>
+                    <li>
+                      one
+                    </li>
+                    <li>
+                      two
+                    </li>
+                    <li>
+                      three
+                    </li>
+                  </ul>
+                </span>
+                <div
+                  class="emotion-22"
+                  dir="ltr"
+                >
+                  <p
+                    class="emotion-23"
+                    dir="ltr"
+                  />
+                </div>
+                <span
+                  class="emotion-37"
+                >
+                  <ul>
+                    <li>
+                      Bullet 1
+                    </li>
+                    <li>
+                      Bullet 2
+                    </li>
+                    <li>
+                      Bullet 3
+                    </li>
+                  </ul>
+                </span>
+                <div
+                  class="emotion-22"
+                  dir="ltr"
+                >
+                  <p
+                    class="emotion-23"
+                    dir="ltr"
+                  />
+                </div>
+                <div
+                  class="emotion-22"
+                  dir="ltr"
+                >
+                  <p
+                    class="emotion-23"
+                    dir="ltr"
+                  >
+                    Here is a 
+                    <a
+                      class="focusIndicatorReducedWidth emotion-45"
+                      href="/new/pidgin"
+                    >
+                      Link
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <hr />
+            </li>
+            <li
+              class="emotion-19"
+            >
+              <div
+                class="emotion-20"
+                dir="ltr"
+              >
+                <h1
+                  class="emotion-21"
+                  id="content"
+                  tabindex="-1"
+                >
+                  Post headline
+                </h1>
+              </div>
+              <div
+                class="emotion-22"
+                dir="ltr"
+              >
+                <h2
+                  class="emotion-33"
+                  id="Post-sub-headline"
+                  tabindex="-1"
+                >
+                  Post sub headline
+                </h2>
+              </div>
+              <div>
+                <div
+                  class="emotion-22"
+                  dir="ltr"
+                >
+                  <p
+                    class="emotion-23"
+                    dir="ltr"
+                  >
+                    Some short form text
+                  </p>
+                </div>
+              </div>
+              <hr />
+            </li>
+          </ol>
+        </div>
+        <pre
+          class="emotion-53"
         >
-          Headers
-        </h4>
-        <p>
-          bbc-adverts:
-           
-          <span>
-            false
-          </span>
-        </p>
-      </pre>
-      <pre
-        class="emotion-44"
-      >
-        {
+          <h4
+            class="emotion-54"
+          >
+            Headers
+          </h4>
+          <p>
+            bbc-adverts:
+             
+            <span>
+              false
+            </span>
+          </p>
+        </pre>
+        <pre
+          class="emotion-53"
+        >
+          {
   "title": "Pidgin test 2",
   "description": "Pidgin test 2 - the description",
   "language": "pcm",
@@ -1716,7 +1905,8 @@ exports[`Live Page creates snapshot of the live page 1`] = `
     "block": "Its a block"
   }
 }
-      </pre>
+        </pre>
+      </div>
     </div>
   </main>
 </div>

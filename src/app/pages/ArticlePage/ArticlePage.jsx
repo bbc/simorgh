@@ -55,6 +55,7 @@ import {
 } from '../../components/Byline/utilities';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import RelatedContentSection from '../../components/RelatedContentSection';
+import Disclaimer from '../../components/Disclaimer';
 
 import SecondaryColumn from './SecondaryColumn';
 
@@ -147,6 +148,9 @@ const ArticlePage = ({ pageData }) => {
       isAdsEnabled ? <AdContainer {...props} slotType="mpu" /> : null,
     wsoj: props => (
       <CpsRecommendations {...props} items={recommendationsData} />
+    ),
+    disclaimer: props => (
+      <Disclaimer {...props} increasePaddingOnDesktop={false} />
     ),
   };
 

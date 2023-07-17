@@ -2,24 +2,23 @@ import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
 import metadata from './metadata.json';
 import md from './README.md';
+import MostRead from '.';
+import { data as defaultData } from '../../../../data/pidgin/mostRead/index.json';
+import { data as japaneseData } from '../../../../data/japanese/mostRead/index.json';
+import { data as persianData } from '../../../../data/persian/mostRead/index.json';
 import ThemeProvider from '../ThemeProvider';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
-import { Services } from '../../models/types/global';
 import { StoryProps } from '../../models/types/storybook';
-import MostReadContainer from '../../legacy/containers/MostRead';
 import { withServicesKnob } from '../../legacy/psammead/psammead-storybook-helpers/src';
 import { ToggleContextProvider } from '../../contexts/ToggleContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ARTICLE_PAGE } from '../../routes/utils/pageTypes';
-
-const staticMostReadURL = (service: Services, variant: string) =>
-  variant !== 'default'
-    ? `./data/${service}/mostRead/${variant}.json`
-    : `./data/${service}/mostRead/index.json`;
+import { ColumnLayout, MostReadData, Size } from './types';
 
 interface Props extends StoryProps {
-  columnLayout?: 'oneColumn' | 'twoColumn' | 'multiColumn';
-  size?: 'default' | 'small';
+  columnLayout?: ColumnLayout;
+  size?: Size;
+  data: MostReadData;
 }
 
 const Component = ({
@@ -27,6 +26,7 @@ const Component = ({
   variant,
   columnLayout = 'multiColumn',
   size = 'default',
+  data,
 }: Props) => (
   <ThemeProvider service={service} variant={variant}>
     <ToggleContextProvider>
@@ -40,11 +40,7 @@ const Component = ({
         variant={variant}
       >
         <ServiceContextProvider service={service} variant={variant}>
-          <MostReadContainer
-            mostReadEndpointOverride={staticMostReadURL(service, variant)}
-            size={size}
-            columnLayout={columnLayout}
-          />
+          <MostRead data={data} size={size} columnLayout={columnLayout} />
         </ServiceContextProvider>
       </RequestContextProvider>
     </ToggleContextProvider>
@@ -67,11 +63,16 @@ export default {
 };
 
 export const ArticlePage5Columns = ({ service, variant }: Props) => (
-  <Component service={service} variant={variant} />
+  <Component service={service} variant={variant} data={defaultData} />
 );
 
 export const HomePage2Columns = ({ service, variant }: Props) => (
-  <Component service={service} variant={variant} columnLayout="twoColumn" />
+  <Component
+    service={service}
+    variant={variant}
+    columnLayout="twoColumn"
+    data={defaultData}
+  />
 );
 
 export const StoryPage1Column = ({ service, variant }: Props) => (
@@ -80,13 +81,24 @@ export const StoryPage1Column = ({ service, variant }: Props) => (
     variant={variant}
     size="small"
     columnLayout="oneColumn"
+    data={defaultData}
   />
 );
 
 export const Japanese1Column = ({ variant }: Props) => (
-  <Component service="japanese" variant={variant} columnLayout="oneColumn" />
+  <Component
+    service="japanese"
+    variant={variant}
+    columnLayout="oneColumn"
+    data={japaneseData}
+  />
 );
 
 export const Persian1Column = ({ variant }: Props) => (
-  <Component service="persian" variant={variant} columnLayout="oneColumn" />
+  <Component
+    service="persian"
+    variant={variant}
+    columnLayout="oneColumn"
+    data={persianData}
+  />
 );

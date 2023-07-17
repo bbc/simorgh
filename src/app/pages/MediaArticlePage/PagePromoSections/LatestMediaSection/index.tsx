@@ -88,6 +88,7 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
         overrideHeadingAs={null}
         visuallyHidden={false}
         css={styles.sectionTitle}
+        headingAttributes={null}
       >
         {translations.latestMediaTitle ?? 'Latest'}
       </SectionLabel>

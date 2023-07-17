@@ -24,7 +24,10 @@ export interface HomePageProps {
     title: string;
     curations: CurationData[];
     description: string;
-    metadata: Pick<ATIData, 'analytics'> & { type: string };
+    metadata: {
+      atiAnalytics: ATIData;
+      type: string;
+    };
   };
 }
 
@@ -38,7 +41,12 @@ const HomePage = ({ pageData }: HomePageProps) => {
     brandName,
   } = useContext(ServiceContext);
   const { topStoriesTitle, home } = translations;
-  const { title, description, curations, metadata } = pageData;
+  const {
+    title,
+    description,
+    curations,
+    metadata: { atiAnalytics },
+  } = pageData;
 
   const itemList = getItemList({ curations, name: brandName });
 
@@ -59,7 +67,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
         entities={[itemList]}
       />
       <main css={styles.main}>
-        <ATIAnalytics atiData={{ ...metadata, title }} />
+        <ATIAnalytics atiData={atiAnalytics} />
         <VisuallyHiddenText id="content" tabIndex={-1} as="h1">
           {/* eslint-disable-next-line jsx-a11y/aria-role */}
           <span role="text">
