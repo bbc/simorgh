@@ -1,6 +1,6 @@
 {
   "lastUpdated": {
-    "day": 10,
+    "day": 17,
     "month": "July",
     "year": 2023
   },
@@ -19,9 +19,9 @@
     }
   },
   "swarm": {
-    "done": false,
+    "done": true,
     "reference": {
-      "url": "",
+      "url": "https://docs.google.com/spreadsheets/d/1C_-uuO3T7msh3A3r6qJLowTs5APXc7TmM_XwXuiWH7M/edit?usp=sharing",
       "label": "A11y swarm notes"
     }
   }
