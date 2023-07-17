@@ -302,10 +302,11 @@
       }
     ],
     "metadata": {
-      "analytics": {
+      "atiAnalytics": {
         "contentId": "urn:bbc:tipo:topic:cx35pee66wwt",
         "contentType": "index-home",
-        "pageIdentifier": "azeri.page"
+        "pageIdentifier": "azeri.page",
+        "pageTitle": "BBC News Azərbaycanca"
       }
     }
   },

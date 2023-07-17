@@ -1,43 +1,21 @@
 import config from '../../../support/config/services';
-import getPaths from '../../../support/helpers/getPaths';
-import serviceHasPageType from '../../../support/helpers/serviceHasPageType';
 import testsForCanonicalOnly from './testsForCanonicalOnly';
 import crossPlatformTests from './tests';
 import visitPage from '../../../support/helpers/visitPage';
+import getAppEnv from '../../../support/helpers/getAppEnv';
 
 const pageType = 'mostReadPage';
-Object.keys(config)
-  .filter(service => serviceHasPageType(service, pageType))
-  .forEach(serviceId => {
-    // eslint-disable-next-line prefer-const
-    let { variant, name: service } = config[serviceId];
-    if (variant !== 'default') {
-      const capitalisedVariant =
-        variant.charAt(0).toUpperCase() + variant.slice(1);
-      service += capitalisedVariant;
-    }
-    const paths = getPaths(serviceId, pageType);
-    paths.forEach(currentPath => {
-      describe(`${pageType} - ${currentPath}`, () => {
-        before(() => {
-          Cypress.env('currentPath', currentPath);
-          visitPage(currentPath, pageType);
-        });
-        crossPlatformTests({
-          service,
-          pageType,
-          variant,
-        });
-        testsForCanonicalOnly({
-          service,
-          pageType,
-          variant,
-        });
-      });
-    });
-    paths
-      .map(path => `${path}.amp`)
-      .forEach(currentPath => {
+
+Object.values(config).forEach(
+  ({ name: service, variant, pageTypes, isWorldService }) => {
+    if (isWorldService) {
+      const { mostReadPage } = pageTypes;
+
+      const urls =
+        mostReadPage.environments &&
+        mostReadPage.environments[getAppEnv()]?.paths;
+
+      urls?.forEach(currentPath => {
         describe(`${pageType} - ${currentPath}`, () => {
           before(() => {
             Cypress.env('currentPath', currentPath);
@@ -47,8 +25,31 @@ Object.keys(config)
             service,
             pageType,
             variant,
-            isAmp: true,
+          });
+          testsForCanonicalOnly({
+            service,
+            pageType,
+            variant,
           });
         });
       });
-  });
+
+      urls
+        ?.map(path => `${path}.amp`)
+        .forEach(currentPath => {
+          describe(`${pageType} - ${currentPath}`, () => {
+            before(() => {
+              Cypress.env('currentPath', currentPath);
+              visitPage(currentPath, pageType);
+            });
+            crossPlatformTests({
+              service,
+              pageType,
+              variant,
+              isAmp: true,
+            });
+          });
+        });
+    }
+  },
+);
