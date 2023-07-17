@@ -15,6 +15,7 @@ import {
 import mostReadShape from '#containers/MostRead/utilities/mostReadShape';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import Grid, { GelPageGrid } from '#components/Grid';
+import IndexHeading from '#containers/IndexHeading';
 import IndexPageContainer from '#components/PageLayout/IndexPageContainer';
 import Canonical from '../../components/MostRead/Canonical';
 import ATIAnalytics from '../../components/ATIAnalytics';
@@ -46,6 +47,7 @@ const MostReadPage = ({ pageData }) => {
 
   const MostReadWrapper = ({ children }) => (
     <>
+      <IndexHeading id="content">{header}</IndexHeading>
       <MarginWrapper>
         <GelPageGrid
           columns={{
