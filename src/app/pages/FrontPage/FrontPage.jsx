@@ -12,7 +12,6 @@ import MPUContainer from '#containers/Ad/MPU';
 import IndexPageContainer from '#components/PageLayout/IndexPageContainer';
 import IndexPageSection from '#containers/IndexPageSection';
 import RadioScheduleContainer from '#containers/RadioSchedule';
-// import MostReadSection from '#containers/MostRead/section';
 import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
 import { NEGATIVE_MARGIN } from '#lib/styles.const';
 import MostRead from '#app/components/MostRead';
