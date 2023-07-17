@@ -1,5 +1,4 @@
 import React, { Fragment, useContext } from 'react';
-import { node } from 'prop-types';
 import path from 'ramda/src/path';
 import findIndex from 'ramda/src/findIndex';
 import styled from '@emotion/styled';
@@ -14,7 +13,6 @@ import IndexPageContainer from '#components/PageLayout/IndexPageContainer';
 import IndexPageSection from '#containers/IndexPageSection';
 import RadioScheduleContainer from '#containers/RadioSchedule';
 import MostReadSection from '#containers/MostRead/section';
-import MostReadSectionLabel from '#containers/MostRead/label';
 import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
 import { NEGATIVE_MARGIN } from '#lib/styles.const';
 import MostRead from '#app/components/MostRead';
@@ -39,17 +37,6 @@ const StyledRadioScheduleContainer = styled(RadioScheduleContainer)`
   ${NEGATIVE_MARGIN}
 `;
 
-const MostReadWrapper = ({ children }) => (
-  <FrontPageMostReadSection>
-    <MostReadSectionLabel backgroundColor={GHOST} />
-    {children}
-  </FrontPageMostReadSection>
-);
-
-MostReadWrapper.propTypes = {
-  children: node.isRequired,
-};
-
 const FrontPage = ({ pageData }) => {
   const { product, serviceLocalizedName, translations, frontPageTitle } =
     useContext(ServiceContext);
@@ -68,12 +55,14 @@ const FrontPage = ({ pageData }) => {
   const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
 
   const renderMostRead = () => (
-    <MostRead
-      data={mostReadInitialData}
-      columnLayout="twoColumn"
-      size="default"
-      headingBackgroundColour={GHOST}
-    />
+    <FrontPageMostReadSection>
+      <MostRead
+        data={mostReadInitialData}
+        columnLayout="twoColumn"
+        size="default"
+        headingBackgroundColour={GHOST}
+      />
+    </FrontPageMostReadSection>
   );
 
   const offScreenText = (
@@ -113,7 +102,7 @@ const FrontPage = ({ pageData }) => {
         <IndexPageContainer>
           {groups.map((group, index) => (
             <Fragment key={group.title}>
-              {group.type === 'useful-links' && renderMostRead(pageData)}
+              {group.type === 'useful-links' && renderMostRead()}
               {radioScheduleData &&
                 radioSchedulePosition === group.semanticGroupName && (
                   <StyledRadioScheduleContainer
@@ -124,7 +113,7 @@ const FrontPage = ({ pageData }) => {
               {group.type === 'top-stories' && <MPUContainer />}
             </Fragment>
           ))}
-          {!hasUsefulLinks && renderMostRead(pageData)}
+          {!hasUsefulLinks && renderMostRead()}
         </IndexPageContainer>
       </main>
     </>
