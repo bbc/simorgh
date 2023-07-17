@@ -16,7 +16,7 @@ import mostReadShape from '#containers/MostRead/utilities/mostReadShape';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import Grid, { GelPageGrid } from '#components/Grid';
 import IndexPageContainer from '#components/PageLayout/IndexPageContainer';
-import MostRead from '../../components/MostRead';
+import Canonical from '../../components/MostRead/Canonical';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import MetadataContainer from '../../components/Metadata';
@@ -103,9 +103,7 @@ const MostReadPage = ({ pageData }) => {
       <main role="main">
         <IndexPageContainer>
           <MostReadWrapper>
-            <MostRead
-              headingAttributes={{ id: 'content', tabIndex: '-1' }}
-              overrideHeadingAs="h1"
+            <Canonical
               data={pageData}
               columnLayout="oneColumn"
               size="default"
