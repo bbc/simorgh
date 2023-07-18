@@ -31,6 +31,7 @@ const atiData = {
   contentType: 'index-home',
   pageIdentifier: 'kyrgyz.page',
   pageTitle: 'pageTitle',
+  categoryName: 'test category',
 };
 // timePublished and timeUpdated are not returned via BFF implementation so set to undefined in test
 const validPageURLParams = {
