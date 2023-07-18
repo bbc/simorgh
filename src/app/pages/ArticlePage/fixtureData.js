@@ -6,12 +6,19 @@ import {
 } from '#models/blocks';
 
 const blocksWithHeadlineAndText = blockValues => {
-  const [headlineText, paragraphText, ...additional] = blockValues;
+  const [headlineText, paragraphText] = blockValues;
 
   return [
     blockContainingText('headline', headlineText, 1),
     singleTextBlock(paragraphText, 2),
-    ...additional,
+    {
+      id: 'ef3a6bbd',
+      type: 'wsoj',
+      model: {
+        type: 'recommendations',
+      },
+      position: [9],
+    },
   ];
 };
 
@@ -132,26 +139,7 @@ export const articleDataNews = articleDataBuilder(
   'News',
   'en-gb',
   'http://www.bbc.co.uk/ontologies/passport/home/News',
-  [
-    'Article Headline',
-    'A paragraph.',
-    {
-      id: 'ef3a6bbd',
-      type: 'wsoj',
-      model: {
-        type: 'recommendations',
-      },
-      position: [9],
-    },
-    {
-      id: 'c9043147',
-      type: 'podcastPromo',
-      model: {
-        type: 'podcastPromo',
-      },
-      position: [9],
-    },
-  ],
+  ['Article Headline', 'A paragraph.'],
   'Article Headline for SEO',
   'Article Headline for Promo',
   'Article summary.',
@@ -1665,61 +1653,3 @@ export const passportPredicatesFormats = [
     type: 'formats',
   },
 ];
-
-export const promoSample = {
-  headlines: {
-    seoHeadline: 'Podcast Promo 8 Paragraphs (Valid)',
-    promoHeadline: {
-      blocks: [
-        {
-          type: 'text',
-          model: {
-            blocks: [
-              {
-                type: 'paragraph',
-                model: {
-                  text: 'Podcast Promo 8 text block Paragraphs (Valid)',
-                  blocks: [
-                    {
-                      type: 'fragment',
-                      model: {
-                        text: 'Podcast Promo 8 text block Paragraphs (Valid)',
-                        attributes: [],
-                      },
-                    },
-                  ],
-                },
-              },
-            ],
-          },
-        },
-      ],
-    },
-  },
-  summary: {
-    blocks: [
-      {
-        type: 'text',
-        model: {
-          blocks: [
-            {
-              type: 'paragraph',
-              model: {
-                text: '',
-                blocks: [
-                  {
-                    type: 'fragment',
-                    model: {
-                      text: '',
-                      attributes: [],
-                    },
-                  },
-                ],
-              },
-            },
-          ],
-        },
-      },
-    ],
-  },
-};
