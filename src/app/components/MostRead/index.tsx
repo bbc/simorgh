@@ -79,10 +79,8 @@ const MostRead = ({
     mostReadAmpPageTypes.includes(pageType) ? (
       <MostReadSection className={className}>
         <MostReadSectionLabel
-          overrideHeadingAs={overrideHeadingAs}
           mobileDivider={mobileDivider}
           backgroundColor={headingBackgroundColour}
-          headingAttributes={headingAttributes}
         />
         <Amp
           endpoint={`${process.env.SIMORGH_MOST_READ_CDN_URL}${endpoint}`}
@@ -96,10 +94,8 @@ const MostRead = ({
     data ? (
       <MostReadSection className={className}>
         <MostReadSectionLabel
-          overrideHeadingAs={overrideHeadingAs}
           mobileDivider={mobileDivider}
           backgroundColor={headingBackgroundColour}
-          headingAttributes={headingAttributes}
         />
         <Canonical
           data={data}
