@@ -3,7 +3,11 @@ import styled from '@emotion/styled';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING_DBL,
+  GEL_SPACING_TRPL,
+  GEL_SPACING_QUAD,
 } from '#psammead/gel-foundations/src/spacings';
+
+const GEL_GROUP_1_WIDTH_260PX = '16.25rem';
 
 const defaultAttrs = {
   focusable: 'false',
@@ -41,6 +45,15 @@ const GuidanceIcon = styled(MediaIcon)`
 const PodcastIcon = styled(MediaIcon)`
   width: ${GEL_SPACING_DBL};
   height: ${GEL_SPACING_DBL};
+  .podcastIconWrapper & {
+    width: ${GEL_SPACING_QUAD};
+    height: ${GEL_SPACING_QUAD};
+    margin: auto;
+    @media (max-width: ${GEL_GROUP_1_WIDTH_260PX}) {
+      width: ${GEL_SPACING_TRPL};
+      height: ${GEL_SPACING_TRPL};
+    }
+  }
 `;
 
 const SeriesStackIcon = styled(MediaIcon)`
