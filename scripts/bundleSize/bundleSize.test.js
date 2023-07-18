@@ -169,8 +169,8 @@ jest.unstable_mockModule('../../src/app/lib/config/services/loadableConfig.ts', 
 }));
 
 jest.unstable_mockModule('./bundleSizeConfig', () => ({
-  MIN_SIZE: 490,
-  MAX_SIZE: 583,
+  MIN_SIZE: 632,
+  MAX_SIZE: 728,
 }));
 
 jest.unstable_mockModule('fs', () => ({
@@ -198,12 +198,12 @@ jest.unstable_mockModule('ora', () => {
 
 jest.unstable_mockModule('chalk', () => ({
   default: {
-    red: jest.fn(),
-    green: jest.fn(),
-    blue: jest.fn(),
-    yellow: jest.fn(),
-    cyan: { bold: jest.fn() },
-    bold: jest.fn()
+    red: a => a,
+    green: a => a,
+    blue: a => a,
+    yellow: a => a,
+    cyan: { bold: b => b },
+    bold: a => a,
   }
 }));
 
@@ -291,6 +291,7 @@ describe('bundleSize', () => {
           const { default: bundleSize } = await import('./index.js');
           bundleSize();
         } catch (e) {
+          console.log(e);
           console.debug('ELTON JOHN BEANS')
           // silence error
         }
@@ -320,9 +321,9 @@ describe('bundleSize', () => {
 
         expect(calls).toMatchInlineSnapshot(`
         "
-
         Results
         MODERN service bundle sizes
+        MODERN service config bundle sizes
         ┌──────────────┬─────────────────────────────────┬────────────────────┬─────────────────┐
         │ Service name │ bundles                         │ Total size (Bytes) │ Total size (kB) │
         ├──────────────┼─────────────────────────────────┼────────────────────┼─────────────────┤
@@ -330,8 +331,8 @@ describe('bundleSize', () => {
         ├──────────────┼─────────────────────────────────┼────────────────────┼─────────────────┤
         │ service2     │ service2-12345.12345.js (146kB) │ 150000             │ 146             │
         └──────────────┴─────────────────────────────────┴────────────────────┴─────────────────┘
-
         MODERN service bundle sizes summary
+        MODERN service config bundle sizes summary
         ┌─────────────────────────────────┬─────┐
         │ Smallest total bundle size (kB) │ 142 │
         ├─────────────────────────────────┼─────┤
@@ -339,15 +340,27 @@ describe('bundleSize', () => {
         ├─────────────────────────────────┼─────┤
         │ Average total bundle size (kB)  │ 144 │
         └─────────────────────────────────┴─────┘
-
+        MODERN service theme bundle sizes
+        ┌──────────────┬──────────────────────────────────┬────────────────────┬─────────────────┐
+        │ Service name │ bundles                          │ Total size (Bytes) │ Total size (kB) │
+        ├──────────────┼──────────────────────────────────┼────────────────────┼─────────────────┤
+        │ service1     │ themes-service1.12345.js (142kB) │ 145000             │ 142             │
+        ├──────────────┼──────────────────────────────────┼────────────────────┼─────────────────┤
+        │ service2     │ themes-service2.12345.js (146kB) │ 150000             │ 146             │
+        └──────────────┴──────────────────────────────────┴────────────────────┴─────────────────┘
+        MODERN service theme bundle sizes summary
+        ┌─────────────────────────────────┬─────┐
+        │ Smallest total bundle size (kB) │ 142 │
+        ├─────────────────────────────────┼─────┤
+        │ Largest total bundle size (kB)  │ 146 │
+        ├─────────────────────────────────┼─────┤
+        │ Average total bundle size (kB)  │ 144 │
+        └─────────────────────────────────┴─────┘
         MODERN page type bundle sizes
         ┌───────────────────┬──────────────────────────┬──────────────────────────┬──────────────────────────┬──────────────────────────┬──────────────────────────┬──────────────────────────┬────────────────────┬─────────────────┐
         │ Page type         │ main                     │ framework                │ lib                      │ shared                   │ commons                  │ page                     │ Total size (Bytes) │ Total size (kB) │
         ├───────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼────────────────────┼─────────────────┤
         │ FrontPage         │ main-12345…345.js (20kB) │ framework-…111.js (98kB) │ 1111-lib-1…111.js (78kB) │ shared-111…111.js (39kB) │ commons-11…111.js (49kB) │ FrontPage-…07e.js (20kB) │ 360000             │ 353             │
-        │                   │                          │                          │                          │                          │ commons-22…222.js (49kB) │                          │                    │                 │
-        ├───────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼────────────────────┼─────────────────┤
-        │ HomePage          │ main-12345…345.js (20kB) │ framework-…111.js (98kB) │ 1111-lib-1…111.js (78kB) │ shared-111…111.js (39kB) │ commons-11…111.js (49kB) │ HomePage-3…c5c.js (20kB) │ 360000             │ 353             │
         │                   │                          │                          │                          │                          │ commons-22…222.js (49kB) │                          │                    │                 │
         ├───────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼────────────────────┼─────────────────┤
         │ OnDemandTvPage    │ main-12345…345.js (20kB) │ framework-…111.js (98kB) │ 1111-lib-1…111.js (78kB) │ shared-111…111.js (39kB) │ commons-11…111.js (49kB) │ OnDemandTv…b7f.js (20kB) │ 390000             │ 382             │
@@ -388,27 +401,27 @@ describe('bundleSize', () => {
         │                   │                          │                          │                          │ shared-222…222.js (39kB) │ commons-22…222.js (49kB) │                          │                    │                 │
         │                   │                          │                          │                          │ shared-333…333.js (39kB) │                          │                          │                    │                 │
         └───────────────────┴──────────────────────────┴──────────────────────────┴──────────────────────────┴──────────────────────────┴──────────────────────────┴──────────────────────────┴────────────────────┴─────────────────┘
-
         MODERN page bundle sizes summary (excludes service bundle)
         ┌─────────────────────────────────┬─────┐
         │ Smallest total bundle size (kB) │ 353 │
         ├─────────────────────────────────┼─────┤
         │ Largest total bundle size (kB)  │ 431 │
         ├─────────────────────────────────┼─────┤
-        │ Average total bundle size (kB)  │ 403 │
+        │ Average total bundle size (kB)  │ 407 │
         └─────────────────────────────────┴─────┘
-
         MODERN service + page bundle sizes summary
+        MODERN service config & theme + page bundle sizes summary
         ┌────────────────────────────────────────────────────────────────────┬─────┐
         │ Smallest total bundle size (kB) (smallest service + smallest page) │ 495 │
+        │ Smallest total bundle size (kB) (smallest service + smallest page) │ 637 │
         ├────────────────────────────────────────────────────────────────────┼─────┤
         │ Largest total bundle size (kB) (largest service + largest page)    │ 577 │
+        │ Largest total bundle size (kB) (largest service + largest page)    │ 723 │
         └────────────────────────────────────────────────────────────────────┴─────┘"
       `);
       });
     });
   });
-
   describe('when one or more of the service bundles are too small', () => {
     setUpFSMocks(2000, 150000);
 
