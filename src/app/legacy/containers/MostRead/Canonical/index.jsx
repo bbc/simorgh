@@ -8,7 +8,6 @@ import {
   MOST_READ_FETCH_ERROR,
 } from '#lib/logger.const';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
-import MostReadList from './List';
 import MostReadRank from './Rank';
 import processMostRead from '../utilities/processMostRead';
 import mostReadShape from '../utilities/mostReadShape';
@@ -93,23 +92,17 @@ const CanonicalMostRead = ({
 
   return (
     <Wrapper>
-      <MostReadList
-        numberOfItems={items.length}
-        dir={dir}
-        columnLayout={columnLayout}
-      >
-        {items.map((item, i) => (
-          <MostReadRank
-            service={service}
-            script={script}
-            listIndex={i + 1}
-            numberOfItems={items.length}
-            dir={dir}
-            columnLayout={columnLayout}
-            size={size}
-          />
-        ))}
-      </MostReadList>
+      {items.map((item, i) => (
+        <MostReadRank
+          service={service}
+          script={script}
+          listIndex={i + 1}
+          numberOfItems={items.length}
+          dir={dir}
+          columnLayout={columnLayout}
+          size={size}
+        />
+      ))}
     </Wrapper>
   );
 };
