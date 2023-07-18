@@ -10,7 +10,6 @@ import {
 } from '#lib/logger.const';
 import useViewTracker from '#hooks/useViewTracker';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
-import { MostReadLink, MostReadItemWrapper } from './Item';
 import MostReadList from './List';
 import MostReadRank from './Rank';
 import LastUpdated from './LastUpdated';
@@ -108,12 +107,6 @@ const CanonicalMostRead = ({
         columnLayout={columnLayout}
       >
         {items.map((item, i) => (
-          <MostReadItemWrapper
-            dir={dir}
-            key={item.id}
-            columnLayout={columnLayout}
-            ref={viewRef}
-          >
             <MostReadRank
               service={service}
               script={script}
@@ -123,15 +116,6 @@ const CanonicalMostRead = ({
               columnLayout={columnLayout}
               size={size}
             />
-            <MostReadLink
-              dir={dir}
-              service={service}
-              script={script}
-              title={item.title}
-              href={item.href}
-              size={size}
-              eventTrackingData={eventTrackingData}
-            >
               {shouldRenderLastUpdated(item.timestamp) && (
                 <LastUpdated
                   prefix={lastUpdated}
@@ -142,8 +126,6 @@ const CanonicalMostRead = ({
                   timezone={timezone}
                 />
               )}
-            </MostReadLink>
-          </MostReadItemWrapper>
         ))}
       </MostReadList>
     </Wrapper>

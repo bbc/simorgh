@@ -12,7 +12,6 @@ import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import pathOr from 'ramda/src/pathOr';
 import { getBodyCopy } from '#psammead/gel-foundations/src/typography';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
-import { MostReadItemWrapper, MostReadLink } from '../Canonical/Item';
 import MostReadRank, { serviceNumerals } from '../Canonical/Rank';
 import generateCSPHash from '../utilities/generateCPSHash';
 
@@ -121,26 +120,16 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
           </FallbackText>
 
           <template type="amp-mustache">
-            <MostReadItemWrapper dir={dir} columnLayout="oneColumn">
-              <MostReadRank
-                service={service}
-                script={script}
-                numberOfItems={numberOfItems}
-                listIndex="{{rankTranslation}}"
-                dir={dir}
-                columnLayout="oneColumn"
-                size={size}
-                isAmp
-              />
-              <MostReadLink
-                dir={dir}
-                service={service}
-                script={script}
-                title="{{promo.headlines.shortHeadline}}"
-                href="{{promo.locators.assetUri}}"
-                size={size}
-              />
-            </MostReadItemWrapper>
+            <MostReadRank
+              service={service}
+              script={script}
+              numberOfItems={numberOfItems}
+              listIndex="{{rankTranslation}}"
+              dir={dir}
+              columnLayout="oneColumn"
+              size={size}
+              isAmp
+            />
           </template>
         </amp-list>
       </Wrapper>
