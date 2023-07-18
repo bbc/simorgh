@@ -1,18 +1,15 @@
 import React, { useEffect, useState, useContext } from 'react';
 import 'isomorphic-fetch';
-import { oneOf, string, elementType, shape } from 'prop-types';
+import { oneOf, string, elementType } from 'prop-types';
 import { RequestContext } from '#contexts/RequestContext';
 import nodeLogger from '#lib/logger.node';
-import { shouldRenderLastUpdated } from '#lib/utilities/filterPopularStaleData/isDataStale';
 import {
   MOST_READ_CLIENT_REQUEST,
   MOST_READ_FETCH_ERROR,
 } from '#lib/logger.const';
-import useViewTracker from '#hooks/useViewTracker';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import MostReadList from './List';
 import MostReadRank from './Rank';
-import LastUpdated from './LastUpdated';
 import processMostRead from '../utilities/processMostRead';
 import mostReadShape from '../utilities/mostReadShape';
 
@@ -24,7 +21,6 @@ const CanonicalMostRead = ({
   size,
   initialData,
   wrapper: Wrapper,
-  eventTrackingData,
 }) => {
   const { isAmp } = useContext(RequestContext);
   const {
@@ -32,11 +28,9 @@ const CanonicalMostRead = ({
     script,
     dir,
     datetimeLocale,
-    serviceDatetimeLocale,
     timezone,
     mostRead: { lastUpdated, numberOfItems },
   } = useContext(ServiceContext);
-  const viewRef = useViewTracker(eventTrackingData);
 
   const filteredData = processMostRead({
     data: initialData,
@@ -97,8 +91,6 @@ const CanonicalMostRead = ({
     return null;
   }
 
-  const locale = serviceDatetimeLocale || datetimeLocale;
-
   return (
     <Wrapper>
       <MostReadList
@@ -107,25 +99,15 @@ const CanonicalMostRead = ({
         columnLayout={columnLayout}
       >
         {items.map((item, i) => (
-            <MostReadRank
-              service={service}
-              script={script}
-              listIndex={i + 1}
-              numberOfItems={items.length}
-              dir={dir}
-              columnLayout={columnLayout}
-              size={size}
-            />
-              {shouldRenderLastUpdated(item.timestamp) && (
-                <LastUpdated
-                  prefix={lastUpdated}
-                  script={script}
-                  service={service}
-                  timestamp={item.timestamp}
-                  locale={locale}
-                  timezone={timezone}
-                />
-              )}
+          <MostReadRank
+            service={service}
+            script={script}
+            listIndex={i + 1}
+            numberOfItems={items.length}
+            dir={dir}
+            columnLayout={columnLayout}
+            size={size}
+          />
         ))}
       </MostReadList>
     </Wrapper>
@@ -138,9 +120,6 @@ CanonicalMostRead.propTypes = {
   size: oneOf(['default', 'small']),
   initialData: mostReadShape,
   wrapper: elementType,
-  eventTrackingData: shape({
-    componentName: string,
-  }),
 };
 
 CanonicalMostRead.defaultProps = {
@@ -148,7 +127,6 @@ CanonicalMostRead.defaultProps = {
   size: 'default',
   initialData: null,
   wrapper: React.Fragment,
-  eventTrackingData: null,
 };
 
 export default CanonicalMostRead;
