@@ -11,18 +11,22 @@ const disclaimerBlock = {
   model: {},
 };
 
-const getDisclaimerInsertionPoint = pageData =>
-  getBlocks(pageData).findIndex(block => block.type === 'timestamp') + 1;
+const getDisclaimerInsertionPoint = (pageData, positionFromTimestamp) =>
+  getBlocks(pageData).findIndex(block => block.type === 'timestamp') +
+  positionFromTimestamp;
 
-const insertDisclaimer = pageData =>
+const insertDisclaimer = (pageData, positionFromTimestamp) =>
   setBlocks(
     insert(
-      getDisclaimerInsertionPoint(pageData),
+      getDisclaimerInsertionPoint(pageData, positionFromTimestamp),
       disclaimerBlock,
       getBlocks(pageData),
     ),
     pageData,
   );
 
-export default toggles => pageData =>
-  isDisclaimerToggledOn(toggles) ? insertDisclaimer(pageData) : pageData;
+export default ({ toggles, positionFromTimestamp }) =>
+  pageData =>
+    isDisclaimerToggledOn(toggles)
+      ? insertDisclaimer(pageData, positionFromTimestamp)
+      : pageData;

@@ -5,26 +5,26 @@
         "model": {
           "blocks": [
             {
-              "id": "71de8634",
+              "id": "473e1301",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "dcde7c3b",
+                    "id": "f13ade63",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "f4ac6e76",
+                          "id": "ad13a7a1",
                           "type": "paragraph",
                           "model": {
-                            "text": "Это заголовок этой тестовой статьи",
+                            "text": "Podcast Promo 9 Paragraphs (8 short)",
                             "blocks": [
                               {
-                                "id": "4040c055",
+                                "id": "0b55e889",
                                 "type": "fragment",
                                 "model": {
-                                  "text": "Это заголовок этой тестовой статьи",
+                                  "text": "Podcast Promo 9 Paragraphs (8 short)",
                                   "attributes": []
                                 },
                                 "position": [1, 1, 1, 1]
@@ -42,346 +42,158 @@
               "position": [1]
             },
             {
-              "id": "5fe806ab",
-              "type": "image",
+              "id": "dfab2694",
+              "type": "timestamp",
               "model": {
-                "blocks": [
-                  {
-                    "id": "f229b0cc",
-                    "type": "caption",
-                    "model": {
-                      "blocks": [
-                        {
-                          "id": "d49b474a",
-                          "type": "text",
-                          "model": {
-                            "blocks": [
-                              {
-                                "id": "75accdb4",
-                                "type": "paragraph",
-                                "model": {
-                                  "text": "Это тестовое изображение, авторское право BBC, показывает карту Франции. Изображение находится в первых трех блоках и имеет эту подпись.",
-                                  "blocks": [
-                                    {
-                                      "id": "fd079e85",
-                                      "type": "fragment",
-                                      "model": {
-                                        "text": "Это тестовое изображение, авторское право BBC, показывает карту Франции. Изображение находится в первых трех блоках и имеет эту подпись.",
-                                        "attributes": []
-                                      },
-                                      "position": [2, 1, 1, 1, 1]
-                                    }
-                                  ]
-                                },
-                                "position": [2, 1, 1, 1]
-                              }
-                            ]
-                          },
-                          "position": [2, 1, 1]
-                        }
-                      ]
-                    },
-                    "position": [2, 1]
-                  },
-                  {
-                    "id": "586b8dec",
-                    "type": "altText",
-                    "model": {
-                      "blocks": [
-                        {
-                          "id": "2c1ccdb4",
-                          "type": "text",
-                          "model": {
-                            "blocks": [
-                              {
-                                "id": "8b629c4c",
-                                "type": "paragraph",
-                                "model": {
-                                  "text": "Это тестовое изображение, авторское право BBC, показывает карту Франции. Изображение находится в первых трех блоках и имеет эту подпись.",
-                                  "blocks": [
-                                    {
-                                      "id": "8a637ef1",
-                                      "type": "fragment",
-                                      "model": {
-                                        "text": "Это тестовое изображение, авторское право BBC, показывает карту Франции. Изображение находится в первых трех блоках и имеет эту подпись.",
-                                        "attributes": []
-                                      },
-                                      "position": [2, 2, 1, 1, 1]
-                                    }
-                                  ]
-                                },
-                                "position": [2, 2, 1, 1]
-                              }
-                            ]
-                          },
-                          "position": [2, 2, 1]
-                        }
-                      ]
-                    },
-                    "position": [2, 2]
-                  },
-                  {
-                    "id": "586eba5c",
-                    "type": "rawImage",
-                    "model": {
-                      "width": 624,
-                      "height": 351,
-                      "locator": "40ef/test/09d6c9a0-f63d-11e9-9afe-1371928331c5.jpg",
-                      "originCode": "cpsdevpb",
-                      "copyrightHolder": "BBC"
-                    },
-                    "position": [2, 3]
-                  }
-                ]
+                "firstPublished": 1686659909047,
+                "lastPublished": 1687948092774
               },
               "position": [2]
             },
             {
-              "id": "089407ec",
-              "type": "timestamp",
-              "model": {
-                "firstPublished": 1562941784981,
-                "lastPublished": 1562941784981
-              },
-              "position": [3]
-            },
-            {
-              "id": "0711801c",
+              "id": "2e4868bf",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "c74c6cd9",
+                    "id": "aa389c5c",
                     "type": "paragraph",
                     "model": {
-                      "text": "Это текстовый блок, который содержит URL-ссылку на домашнюю страницу BBC Weather.",
+                      "text": "Para1 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vulputate mi sit amet mauris commodo quis imperdiet. In cursus turpis massa tincidunt dui ut ornare lectus. ",
                       "blocks": [
                         {
-                          "id": "d50e46c1",
+                          "id": "f8206eae",
                           "type": "fragment",
                           "model": {
-                            "text": "Это текстовый блок, который содержит URL-ссылку на домашнюю страницу ",
+                            "text": "Para1 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vulputate mi sit amet mauris commodo quis imperdiet. In cursus turpis massa tincidunt dui ut ornare lectus. ",
                             "attributes": []
                           },
-                          "position": [4, 1, 1]
-                        },
-                        {
-                          "id": "529306af",
-                          "type": "urlLink",
-                          "model": {
-                            "text": "BBC Weather",
-                            "blocks": [
-                              {
-                                "id": "46cd39e4",
-                                "type": "fragment",
-                                "model": {
-                                  "text": "BBC Weather",
-                                  "attributes": []
-                                },
-                                "position": [4, 1, 2, 1]
-                              }
-                            ],
-                            "locator": "https://www.bbc.co.uk/weather",
-                            "isExternal": false
-                          },
-                          "position": [4, 1, 2]
-                        },
-                        {
-                          "id": "19abc8c1",
-                          "type": "fragment",
-                          "model": { "text": ".", "attributes": [] },
-                          "position": [4, 1, 3]
+                          "position": [3, 1, 1]
                         }
                       ]
                     },
-                    "position": [4, 1]
+                    "position": [3, 1]
+                  },
+                  {
+                    "id": "82dc82fd",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Para2 - Tortor vitae purus faucibus ornare suspendisse sed nisi lacus. Cursus metus aliquam eleifend mi in nulla posuere. Dignissim diam quis enim lobortis scelerisque fermentum dui faucibus. Amet consectetur adipiscing elit ut aliquam purus. ",
+                      "blocks": [
+                        {
+                          "id": "9c3de35a",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Para2 - Tortor vitae purus faucibus ornare suspendisse sed nisi lacus. Cursus metus aliquam eleifend mi in nulla posuere. Dignissim diam quis enim lobortis scelerisque fermentum dui faucibus. Amet consectetur adipiscing elit ut aliquam purus. ",
+                            "attributes": []
+                          },
+                          "position": [3, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [3, 2]
+                  },
+                  {
+                    "id": "1929db9f",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Para3 - Id aliquet risus feugiat in ante. In hac habitasse platea dictumst vestibulum rhoncus est pellentesque. Sed risus pretium quam vulputate. Vel orci porta non pulvinar neque. Non enim praesent elementum facilisis leo vel. Augue ut lectus arcu bibendum at. ",
+                      "blocks": [
+                        {
+                          "id": "ecb8607c",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Para3 - Id aliquet risus feugiat in ante. In hac habitasse platea dictumst vestibulum rhoncus est pellentesque. Sed risus pretium quam vulputate. Vel orci porta non pulvinar neque. Non enim praesent elementum facilisis leo vel. Augue ut lectus arcu bibendum at. ",
+                            "attributes": []
+                          },
+                          "position": [3, 3, 1]
+                        }
+                      ]
+                    },
+                    "position": [3, 3]
+                  },
+                  {
+                    "id": "baa24d9a",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Para4 - Nulla porttitor massa id neque aliquam vestibulum morbi blandit. Ut porttitor leo a diam. Eros donec ac odio tempor orci dapibus. Faucibus pulvinar elementum integer enim neque volutpat ac. Eget arcu dictum varius duis at consectetur lorem donec massa. ",
+                      "blocks": [
+                        {
+                          "id": "f779cb57",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Para4 - Nulla porttitor massa id neque aliquam vestibulum morbi blandit. Ut porttitor leo a diam. Eros donec ac odio tempor orci dapibus. Faucibus pulvinar elementum integer enim neque volutpat ac. Eget arcu dictum varius duis at consectetur lorem donec massa. ",
+                            "attributes": []
+                          },
+                          "position": [3, 4, 1]
+                        }
+                      ]
+                    },
+                    "position": [3, 4]
                   }
                 ]
               },
+              "position": [3]
+            },
+            {
+              "id": "3ecf8470",
+              "type": "mpu",
+              "model": {},
               "position": [4]
             },
             {
-              "id": "39438530",
-              "type": "video",
+              "id": "3c3bfad0",
+              "type": "text",
               "model": {
-                "locator": "urn:bbc:pips:pid:p019dx64",
                 "blocks": [
                   {
-                    "id": "c61e91a7",
-                    "type": "caption",
+                    "id": "170fc566",
+                    "type": "paragraph",
                     "model": {
+                      "text": "Para5 - Nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper. Sit amet facilisis magna etiam tempor orci eu lobortis elementum. Porttitor rhoncus dolor purus non enim praesent elementum.",
                       "blocks": [
                         {
-                          "id": "41188b4c",
-                          "type": "text",
+                          "id": "4832d1cd",
+                          "type": "fragment",
                           "model": {
-                            "blocks": [
-                              {
-                                "id": "ed38b522",
-                                "type": "paragraph",
-                                "model": {
-                                  "text": "Египет нападает: коптские похороны в Каире перерастают в насилие",
-                                  "blocks": [
-                                    {
-                                      "id": "60b05252",
-                                      "type": "fragment",
-                                      "model": {
-                                        "text": "Египет нападает: коптские похороны в Каире перерастают в насилие",
-                                        "attributes": []
-                                      },
-                                      "position": [5, 1, 1, 1, 1]
-                                    }
-                                  ]
-                                },
-                                "position": [5, 1, 1, 1]
-                              }
-                            ]
+                            "text": "Para5 - Nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper. Sit amet facilisis magna etiam tempor orci eu lobortis elementum. Porttitor rhoncus dolor purus non enim praesent elementum.",
+                            "attributes": []
                           },
                           "position": [5, 1, 1]
                         }
                       ]
                     },
                     "position": [5, 1]
-                  },
-                  {
-                    "id": "c2f9981f",
-                    "type": "aresMedia",
-                    "model": {
-                      "blocks": [
-                        {
-                          "id": "e1fc279e",
-                          "blockId": "urn:bbc:ares::clip:p019dx64",
-                          "type": "aresMediaMetadata",
-                          "model": {
-                            "id": "p019dx64",
-                            "subType": "clip",
-                            "format": "video",
-                            "title": "Clashes at Coptic funerals in Egypt",
-                            "synopses": {
-                              "short": "Egypt attacks: Coptic funerals in Cairo break into violence",
-                              "long": "По меньшей мере 36 человек погибли в результате взрывов в двух церквях во время богослужений по случаю Вербного воскресенья.\n\nПервый взрыв прогремел в коптской церкви Св. Георгия в городе Танта, что в 130 км к юго-востоку от Александрии. Там на месте погибли 25 человек. Внутри этой церкви находился Патриарх христиан-коптов Тавадрос II. Официальные источники сообщили, что он не пострадал.\n\nЧерез некоторое время произошел второй теракт: взрывное устройство сработало в храме Св. Марка в самой Александрии. Там погибли 11 прихожан."
-                            },
-                            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p019dxfg.jpg",
-                            "embedding": false,
-                            "advertising": true,
-                            "caption": "Clashes broke out shortly after the funeral procession began",
-                            "versions": [
-                              {
-                                "versionId": "p019dx68",
-                                "types": ["Original"],
-                                "duration": 45,
-                                "durationISO8601": "PT45S",
-                                "warnings": {},
-                                "availableTerritories": {
-                                  "uk": true,
-                                  "nonUk": true
-                                },
-                                "availableFrom": 1491823686000
-                              }
-                            ],
-                            "syndication": { "destinations": [] },
-                            "smpKind": "programme"
-                          },
-                          "position": [5, 2, 1]
-                        },
-                        {
-                          "id": "e8f368aa",
-                          "type": "image",
-                          "model": {
-                            "blocks": [
-                              {
-                                "id": "8ae2e067",
-                                "type": "rawImage",
-                                "model": {
-                                  "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p019dxfg.jpg",
-                                  "originCode": "mpv"
-                                },
-                                "position": [5, 2, 2, 1]
-                              }
-                            ]
-                          },
-                          "position": [5, 2, 2]
-                        }
-                      ]
-                    },
-                    "position": [5, 2]
                   }
                 ]
               },
               "position": [5]
             },
             {
-              "id": "82ee84d2",
-              "type": "subheadline",
+              "id": "1cf01076",
+              "type": "wsoj",
               "model": {
-                "blocks": [
-                  {
-                    "id": "26917fa8",
-                    "type": "text",
-                    "model": {
-                      "blocks": [
-                        {
-                          "id": "e9eb6986",
-                          "type": "paragraph",
-                          "model": {
-                            "text": "Это подзаголовок",
-                            "blocks": [
-                              {
-                                "id": "d92619fd",
-                                "type": "fragment",
-                                "model": {
-                                  "text": "Это подзаголовок",
-                                  "attributes": []
-                                },
-                                "position": [6, 1, 1, 1]
-                              }
-                            ]
-                          },
-                          "position": [6, 1, 1]
-                        }
-                      ]
-                    },
-                    "position": [6, 1]
-                  }
-                ]
+                "type": "recommendations"
               },
               "position": [6]
             },
             {
-              "id": "aa5e6cd7",
-              "type": "image",
+              "id": "28f85cac",
+              "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "4d21792c",
-                    "type": "altText",
+                    "id": "8d7c4aba",
+                    "type": "paragraph",
                     "model": {
+                      "text": "Para6 - Et odio pellentesque diam volutpat commodo. Lorem ipsum dolor sit amet consectetur adipiscing elit ut. Faucibus nisl tincidunt eget nullam non nisi est sit amet. Sagittis orci a scelerisque purus semper eget duis at. ",
                       "blocks": [
                         {
-                          "id": "597c99d4",
-                          "type": "text",
+                          "id": "695e2f3f",
+                          "type": "fragment",
                           "model": {
-                            "blocks": [
-                              {
-                                "id": "10a6c76d",
-                                "type": "paragraph",
-                                "model": {
-                                  "text": "Это подзаголовок",
-                                  "blocks": [
-                                    {
-                                      "id": "ed93c1be",
-                                      "type": "fragment",
-                                      "model": {
-                                        "text": "Это подзаголовок",
-                                        "attributes": []
-                                      },
-                                      "position": [7, 1, 1, 1, 1]
-                                    }
-                                  ]
-                                },
-                                "position": [7, 1, 1, 1]
-                              }
-                            ]
+                            "text": "Para6 - Et odio pellentesque diam volutpat commodo. Lorem ipsum dolor sit amet consectetur adipiscing elit ut. Faucibus nisl tincidunt eget nullam non nisi est sit amet. Sagittis orci a scelerisque purus semper eget duis at. ",
+                            "attributes": []
                           },
                           "position": [7, 1, 1]
                         }
@@ -390,14 +202,21 @@
                     "position": [7, 1]
                   },
                   {
-                    "id": "49935043",
-                    "type": "rawImage",
+                    "id": "ebdf2de2",
+                    "type": "paragraph",
                     "model": {
-                      "width": 800,
-                      "height": 450,
-                      "locator": "0aff/test/e170c4a0-f63e-11e9-9afe-1371928331c5.jpg",
-                      "originCode": "cpsdevpb",
-                      "copyrightHolder": "Getty Images"
+                      "text": "Para7- Elementum curabitur vitae nunc sed velit dignissim sodales. Bibendum ut tristique et egestas quis. Et odio pellentesque diam volutpat commodo sed egestas. Interdum posuere lorem ipsum dolor sit. Nibh cras pulvinar mattis nunc sed. ",
+                      "blocks": [
+                        {
+                          "id": "2d674fc3",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Para7- Elementum curabitur vitae nunc sed velit dignissim sodales. Bibendum ut tristique et egestas quis. Et odio pellentesque diam volutpat commodo sed egestas. Interdum posuere lorem ipsum dolor sit. Nibh cras pulvinar mattis nunc sed. ",
+                            "attributes": []
+                          },
+                          "position": [7, 2, 1]
+                        }
+                      ]
                     },
                     "position": [7, 2]
                   }
@@ -406,143 +225,108 @@
               "position": [7]
             },
             {
-              "id": "3d662ce5",
+              "id": "926ff352",
+              "type": "podcastPromo",
+              "model": {
+                "type": "podcastPromo"
+              },
+              "position": [8]
+            },
+            {
+              "id": "174c5694",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "41a73093",
+                    "id": "d8a506e8",
                     "type": "paragraph",
                     "model": {
-                      "text": "Эта тестовая статья была создана для того, чтобы мы могли запускать тесты на нашем сайте.",
+                      "text": "Para8- Elementum curabitur vitae nunc sed velit dignissim sodales. Bibendum ut tristique et egestas quis. Et odio pellentesque diam volutpat commodo sed egestas. Interdum posuere lorem ipsum dolor sit. Nibh cras pulvinar mattis nunc sed.",
                       "blocks": [
                         {
-                          "id": "8891a698",
+                          "id": "57ba70be",
                           "type": "fragment",
                           "model": {
-                            "text": "Эта тестовая статья была создана для того, чтобы мы могли запускать тесты на нашем сайте.",
+                            "text": "Para8- Elementum curabitur vitae nunc sed velit dignissim sodales. Bibendum ut tristique et egestas quis. Et odio pellentesque diam volutpat commodo sed egestas. Interdum posuere lorem ipsum dolor sit. Nibh cras pulvinar mattis nunc sed.",
                             "attributes": []
                           },
-                          "position": [8, 1, 1]
+                          "position": [9, 1, 1]
                         }
                       ]
                     },
-                    "position": [8, 1]
+                    "position": [9, 1]
+                  },
+                  {
+                    "id": "f2f8897f",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Para 9 (Promo should wrap) - Aliquet eget sit amet tellus cras adipiscing enim. Lorem ipsum dolor sit amet. Enim neque volutpat ac tincidunt. Tortor posuere ac ut consequat semper viverra nam libero justo. Lacus vestibulum sed arcu non odio euismod. Id cursus metus aliquam eleifend mi. Massa eget egestas purus viverra accumsan in nisl nisi scelerisque. Integer eget aliquet nibh praesent tristique magna sit amet. In egestas erat imperdiet sed euismod nisi porta. Ut placerat orci nulla pellentesque dignissim enim sit amet. Sed pulvinar proin gravida hendrerit lectus a. Nisi est sit amet facilisis magna. Nulla facilisi morbi tempus iaculis urna. Enim praesent elementum facilisis leo vel fringilla est ullamcorper eget. Aliquet eget sit amet tellus cras adipiscing enim. Lorem ipsum dolor sit amet. Enim neque volutpat ac tincidunt. Tortor posuere ac ut consequat semper viverra nam libero justo. Lacus vestibulum sed arcu non odio euismod. Id cursus metus aliquam eleifend mi. Massa eget egestas purus viverra accumsan in nisl nisi scelerisque. Integer eget aliquet nibh praesent tristique magna sit amet. In egestas erat imperdiet sed euismod nisi porta. Ut placerat orci nulla pellentesque dignissim enim sit amet. Sed pulvinar proin gravida hendrerit lectus a. Nisi est sit amet facilisis magna. Nulla facilisi morbi tempus iaculis urna. Enim praesent elementum facilisis leo vel fringilla est ullamcorper eget.",
+                      "blocks": [
+                        {
+                          "id": "9d7881fe",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Para 9 (Promo should wrap) - Aliquet eget sit amet tellus cras adipiscing enim. Lorem ipsum dolor sit amet. Enim neque volutpat ac tincidunt. Tortor posuere ac ut consequat semper viverra nam libero justo. Lacus vestibulum sed arcu non odio euismod. Id cursus metus aliquam eleifend mi. Massa eget egestas purus viverra accumsan in nisl nisi scelerisque. Integer eget aliquet nibh praesent tristique magna sit amet. In egestas erat imperdiet sed euismod nisi porta. Ut placerat orci nulla pellentesque dignissim enim sit amet. Sed pulvinar proin gravida hendrerit lectus a. Nisi est sit amet facilisis magna. Nulla facilisi morbi tempus iaculis urna. Enim praesent elementum facilisis leo vel fringilla est ullamcorper eget. Aliquet eget sit amet tellus cras adipiscing enim. Lorem ipsum dolor sit amet. Enim neque volutpat ac tincidunt. Tortor posuere ac ut consequat semper viverra nam libero justo. Lacus vestibulum sed arcu non odio euismod. Id cursus metus aliquam eleifend mi. Massa eget egestas purus viverra accumsan in nisl nisi scelerisque. Integer eget aliquet nibh praesent tristique magna sit amet. In egestas erat imperdiet sed euismod nisi porta. Ut placerat orci nulla pellentesque dignissim enim sit amet. Sed pulvinar proin gravida hendrerit lectus a. Nisi est sit amet facilisis magna. Nulla facilisi morbi tempus iaculis urna. Enim praesent elementum facilisis leo vel fringilla est ullamcorper eget.",
+                            "attributes": []
+                          },
+                          "position": [9, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [9, 2]
                   }
                 ]
               },
-              "position": [8]
-            },
-            { "id": "e06e7336", "type": "mpu", "model": {}, "position": [9] },
-            {
-              "id": "523d3fa1",
-              "type": "wsoj",
-              "model": { "type": "recommendations" },
-              "position": [10]
+              "position": [9]
             }
           ]
         }
       },
       "metadata": {
-        "id": "urn:bbc:ares::article:ck7pz7re3zgo",
+        "id": "urn:bbc:ares::article:c61q94n3rm3o",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:ck7pz7re3zgo",
-          "canonicalUrl": "https://www.bbc.com/russian/articles/ck7pz7re3zgo"
+          "optimoUrn": "urn:bbc:optimo:asset:c61q94n3rm3o",
+          "canonicalUrl": "https://www.bbc.com/pidgin/articles/c61q94n3rm3o"
         },
         "type": "article",
         "createdBy": "Russian",
         "language": "ru",
-        "firstPublished": 1562941784981,
-        "lastPublished": 1562941784981,
+        "firstPublished": 1686659909047,
+        "lastPublished": 1687948092774,
         "analyticsLabels": {
-          "ldp_tags": "Russia",
-          "page": "russian.articles.ck7pz7re3zgo.page",
-          "ldp_ids": "39267b85-1784-4f4b-80ed-f8cb4a35f337",
-          "contentId": "urn:bbc:optimo:asset:ck7pz7re3zgo",
-          "producer": "Russian"
+          "contentId": "urn:bbc:optimo:asset:c61q94n3rm3o",
+          "producer": "Russian",
+          "page": "pidgin.articles.c61q94n3rm3o.page"
         },
         "passport": {
           "language": "ru",
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Russian",
           "taggings": [
             {
-              "predicate": "http://www.bbc.co.uk/ontologies/passport/predicate/About",
-              "value": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id"
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+              "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+              "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
             }
           ],
           "predicates": {
-            "about": [
+            "infoClass": [
               {
-                "value": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
-                "thingLabel": "Россия",
-                "thingUri": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
-                "thingId": "39267b85-1784-4f4b-80ed-f8cb4a35f337",
-                "thingType": ["core:Place", "tagging:TagConcept", "core:Thing"],
-                "thingSameAs": ["http://sws.geonames.org/2017370/"],
-                "thingEnglishLabel": "Russia",
-                "type": "about"
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                "type": "infoClass"
+              }
+            ],
+            "assetType": [
+              {
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                "type": "assetType"
               }
             ]
           }
         },
-        "tags": {
-          "about": [
-            {
-              "thingLabel": "Россия",
-              "thingUri": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
-              "thingId": "39267b85-1784-4f4b-80ed-f8cb4a35f337",
-              "thingType": ["core:Place", "tagging:TagConcept", "core:Thing"],
-              "thingSameAs": ["http://sws.geonames.org/2017370/"],
-              "topicName": "Россия",
-              "topicId": "cw6eyw7m0m1t",
-              "curationList": [
-                {
-                  "curationId": "3d1d4d60-3a85-42d9-9559-41b3291908dc",
-                  "curationType": "vivo-stream"
-                }
-              ],
-              "thingEnglishLabel": "Russia",
-              "thingLabelLanguage": "ru",
-              "thingPreferredLabel": "Russia"
-            }
-          ]
-        },
-        "blockTypes": [
-          "headline",
-          "text",
-          "paragraph",
-          "fragment",
-          "image",
-          "caption",
-          "altText",
-          "rawImage",
-          "urlLink",
-          "video",
-          "subheadline",
-          "aresMedia",
-          "aresMediaMetadata"
-        ],
-        "topics": [
-          {
-            "topicName": "Россия",
-            "topicId": "cw6eyw7m0m1t",
-            "subjectList": [
-              {
-                "subjectId": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
-                "subjectType": "tag"
-              }
-            ],
-            "curationList": [
-              {
-                "curationId": "3d1d4d60-3a85-42d9-9559-41b3291908dc",
-                "curationType": "vivo-stream",
-                "visualProminence": "NORMAL"
-              }
-            ],
-            "types": ["core:Place", "tagging:TagConcept", "core:Thing"],
-            "home": "http://www.bbc.co.uk/ontologies/passport/home/Russian"
-          }
-        ],
+        "blockTypes": ["headline", "text", "paragraph", "fragment"],
         "consumableAsSFV": false,
         "allowAdvertising": true,
         "consumableOnRedButton": false,
@@ -550,7 +334,7 @@
       },
       "promo": {
         "headlines": {
-          "seoHeadline": "Пугало полицейского с камерой следит за водителями под Ливерпулем",
+          "seoHeadline": "Podcast Promo 8 Paragraphs (Valid)",
           "promoHeadline": {
             "blocks": [
               {
@@ -560,12 +344,12 @@
                     {
                       "type": "paragraph",
                       "model": {
-                        "text": "Это заголовок этой тестовой статьи",
+                        "text": "Podcast Promo 9 Paragraphs (8 short)",
                         "blocks": [
                           {
                             "type": "fragment",
                             "model": {
-                              "text": "Это заголовок этой тестовой статьи",
+                              "text": "Podcast Promo 9 Paragraphs (8 short)",
                               "attributes": []
                             }
                           }
@@ -573,80 +357,6 @@
                       }
                     }
                   ]
-                }
-              }
-            ]
-          }
-        },
-        "images": {
-          "defaultPromoImage": {
-            "blocks": [
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Это тестовое изображение, авторское право BBC, показывает карту Франции. Изображение находится в первых трех блоках и имеет эту подпись.",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Это тестовое изображение, авторское право BBC, показывает карту Франции. Изображение находится в первых трех блоках и имеет эту подпись.",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Это тестовое изображение, авторское право BBC, показывает карту Франции. Изображение находится в первых трех блоках и имеет эту подпись.",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Это тестовое изображение, авторское право BBC, показывает карту Франции. Изображение находится в первых трех блоках и имеет эту подпись.",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "rawImage",
-                "model": {
-                  "width": 624,
-                  "height": 351,
-                  "locator": "40ef/test/09d6c9a0-f63d-11e9-9afe-1371928331c5.jpg",
-                  "originCode": "cpsdevpb",
-                  "copyrightHolder": "BBC"
                 }
               }
             ]
@@ -665,7 +375,10 @@
                       "blocks": [
                         {
                           "type": "fragment",
-                          "model": { "text": "", "attributes": [] }
+                          "model": {
+                            "text": "",
+                            "attributes": []
+                          }
                         }
                       ]
                     }
@@ -680,7 +393,9 @@
     "secondaryData": {
       "topStories": [
         {
-          "headlines": { "headline": "test_russian" },
+          "headlines": {
+            "headline": "test_russian"
+          },
           "locators": {
             "assetUri": "/russian/23303728",
             "curieCpsUrn": "urn:bbc:cps:curie:asset:b973244b-f0cd-fe4c-9cb4-d0a9c78d1ea3",
@@ -692,7 +407,10 @@
           "timestamp": 1589996345000,
           "language": "ru",
           "cpsType": "STY",
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Главная",
@@ -717,7 +435,10 @@
           "timestamp": 1560430132000,
           "language": "ru",
           "cpsType": "STY",
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Главная",
@@ -728,7 +449,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "Russian producer test" },
+          "headlines": {
+            "headline": "Russian producer test"
+          },
           "locators": {
             "assetUri": "/russian/23247448",
             "curieCpsUrn": "urn:bbc:cps:curie:asset:ccb3b0e4-adc4-4342-9208-dbab7ce6b8d7",
@@ -740,7 +463,10 @@
           "timestamp": 1567069704000,
           "language": "ru",
           "cpsType": "STY",
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Главная",
@@ -792,7 +518,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Главная",
@@ -842,7 +571,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Главная",
@@ -892,7 +624,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Главная",
@@ -942,7 +677,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Главная",
@@ -992,7 +730,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Главная",
@@ -1042,7 +783,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Главная",
@@ -1092,7 +836,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Главная",
@@ -1142,7 +889,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Главная",
@@ -1192,7 +942,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Главная",
@@ -1204,7 +957,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2023-07-04T09:16:57.29Z",
+        "generated": "2023-07-04T14:46:57.563Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T11:38:00Z",
         "items": [
@@ -1353,5 +1106,116 @@
       "latestMedia": null
     }
   },
-  "contentType": "application/json; charset=utf-8"
+  "contentType": "application/json; charset=utf-8",
+  "debug": {
+    "context": {
+      "runtimeContext": {
+        "moduleEnvironment": "local",
+        "apiPort": 3210,
+        "manifestFound": false,
+        "moduleVersion": "1.0.0",
+        "moduleName": "stub-fabl-module",
+        "personalisedRequest": "false",
+        "environment": "local",
+        "runtimeVersion": "4.4.3",
+        "nodeJSVersion": "v16.17.1",
+        "standardLibraryVersion": "4.4.1"
+      },
+      "systemContext": {
+        "debug": "1",
+        "sandboxEnabled": false,
+        "service-env": "test",
+        "pers-env": "test",
+        "call-stack": "simorgh-bff"
+      }
+    },
+    "serviceRequests": [
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 04 Jul 2023 15:01:46 GMT",
+            "content-type": "application/json;charset=utf-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "etag": "a6703d8a887454211e453c10b7ff6b1f75fa59ec",
+            "last-modified": "Wed, 28 Jun 2023 10:28:13 GMT",
+            "cache-control": "no-transform,max-age=60",
+            "x-ares-tracking-id": "b15ae362-8546-48d5-9233-80cdccf94b52",
+            "expires": "Tue, 04 Jul 2023 15:02:46 GMT",
+            "content-encoding": "gzip",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 145
+        },
+        "request": {
+          "service": "ares",
+          "path": "/article/c61q94n3rm3o",
+          "timeout": 4000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 04 Jul 2023 15:01:46 GMT",
+            "content-type": "application/json",
+            "content-length": "2895",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"3d04cf91d83c1a6c4dd895e99b75079d83f7153f\"",
+            "cache-control": "no-transform,max-age=5",
+            "expires": "Tue, 04 Jul 2023 15:01:51 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 124
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/onward-journeys/russian/front_page",
+          "timeout": 2000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 04 Jul 2023 15:01:46 GMT",
+            "content-type": "application/json",
+            "content-length": "2831",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"e7c96cf93aa7649810a0759acdfb0c2ef9d323a0\"",
+            "cache-control": "no-transform,max-age=5",
+            "expires": "Tue, 04 Jul 2023 15:01:51 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 264
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/most/read/russian",
+          "timeout": 2000
+        }
+      }
+    ],
+    "privateContext": {},
+    "params": {
+      "id": "c61q94n3rm3o",
+      "service": "russian",
+      "pageType": "article"
+    },
+    "sandboxViolations": [],
+    "nonFatalErrors": [{}]
+  }
 }
