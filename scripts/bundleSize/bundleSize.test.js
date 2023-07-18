@@ -161,9 +161,11 @@ jest.unstable_mockModule('./pageTypeBundleExtractor', () => ({
   },
 }));
 
-jest.unstable_mockModule('../../cypress/support/config/services', () => ({
-  service1: {},
-  service2: {},
+jest.unstable_mockModule('../../src/app/lib/config/services/loadableConfig.ts', () => ({
+  default: {
+    service1: {},
+    service2: {},
+  }
 }));
 
 jest.unstable_mockModule('./bundleSizeConfig', () => ({
@@ -213,6 +215,8 @@ const setUpFSMocks = (service1FileSize, service2FileSize) => {
       'modern.main-12345.js',
       'modern.service1-12345.12345.js',
       'modern.service2-12345.12345.js',
+      'modern.themes-service1.12345.js',
+      'modern.themes-service2.12345.js',
       'modern.1111-lib-1111.js',
       'modern.commons-1111.js',
       'modern.commons-2222.js',
@@ -250,7 +254,8 @@ describe('bundleSize', () => {
   const originalConsoleError = global.console.error;
 
   beforeAll(async () => {
-    // chalk.red.bold = a => a;
+    const chalk = await import('chalk');
+    chalk.default.red.bold = a => a;
 
     global.console.log = jest.fn();
     global.console.error = jest.fn();
@@ -275,8 +280,9 @@ describe('bundleSize', () => {
         } catch (e) {
           didThrow = true;
         }
+        expect(didThrow).toBe(false);
       });
-      expect(didThrow).toBe(false);
+
     });
 
     it('should use ora to show loading and success states', () => {
@@ -285,7 +291,7 @@ describe('bundleSize', () => {
           const { default: bundleSize } = await import('./index.js');
           bundleSize();
         } catch (e) {
-          console.debug('ERROR BEANS 2', e);
+          console.debug('ELTON JOHN BEANS')
           // silence error
         }
         expect(ora).toHaveBeenCalledWith(
@@ -304,16 +310,15 @@ describe('bundleSize', () => {
         } catch (e) {
           console.debug('DAMN BEANS', e);
         }
-      });
 
-      const calls = global.console.log.mock.calls.reduce(
-        (scriptOutput, [message]) => {
-          return scriptOutput + stripAnsi(message);
-        },
-        '',
-      );
+        const calls = global.console.log.mock.calls.reduce(
+          (scriptOutput, [message]) => {
+            return scriptOutput + stripAnsi(message);
+          },
+          '',
+        );
 
-      expect(calls).toMatchInlineSnapshot(`
+        expect(calls).toMatchInlineSnapshot(`
         "
 
         Results
@@ -400,6 +405,7 @@ describe('bundleSize', () => {
         │ Largest total bundle size (kB) (largest service + largest page)    │ 577 │
         └────────────────────────────────────────────────────────────────────┴─────┘"
       `);
+      });
     });
   });
 
