@@ -112,7 +112,10 @@ const ArticlePage = ({ pageData }) => {
   const embedProviderName = path(['model', 'provider'], embedBlock);
   const isUgcUploader = embedProviderName === 'ugc-uploader';
 
-  const { mostRead: mostReadInitialData } = pageData;
+  const {
+    metadata: { atiAnalytics },
+    mostRead: mostReadInitialData,
+  } = pageData;
 
   const componentsToRender = {
     visuallyHiddenHeadline,
@@ -182,7 +185,7 @@ const ArticlePage = ({ pageData }) => {
 
   return (
     <div css={styles.pageWrapper}>
-      <ATIAnalytics data={pageData} />
+      <ATIAnalytics atiData={atiAnalytics} />
       <ChartbeatAnalytics
         sectionName={pageData?.relatedContent?.section?.name}
         title={getPromoHeadline(pageData)}
