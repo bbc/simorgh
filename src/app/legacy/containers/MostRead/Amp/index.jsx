@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { useTheme } from '@emotion/react';
 import { Helmet } from 'react-helmet';
-import { string, oneOf, elementType } from 'prop-types';
+import { elementType } from 'prop-types';
 import styled from '@emotion/styled';
 import {
   AMP_LIST_JS,
@@ -12,54 +12,15 @@ import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import pathOr from 'ramda/src/pathOr';
 import { getBodyCopy } from '#psammead/gel-foundations/src/typography';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
-import MostReadRank, { serviceNumerals } from '../Canonical/Rank';
 import generateCSPHash from '../utilities/generateCPSHash';
 
-const rankTranslationScript = (endpoint, service) => {
-  const translation = serviceNumerals(service);
-  return `
-  const translations = ${JSON.stringify(translation)}
-  const getRemoteData = async () => {
-    try{
-      const response = await fetch("${endpoint}");
-      const data = await response.json();
-
-      if(data.records.length === 0){
-        throw new Error("Empty records from mostread endpoint");
-      }
-
-      data.records.forEach((item, index) => {
-        item.rankTranslation = translations[index+1];
-
-        if (!item.promo.headlines.shortHeadline) {
-          item.promo.headlines.shortHeadline = item.promo.headlines.seoHeadline;
-        }
-
-        if(!item.promo.locators.assetUri) {
-          item.promo.locators.assetUri = item.promo.locators.canonicalUrl;
-        }
-
-      });
-
-      return data;
-    } catch(error){
-      console.warn(error);
-      return [];
-    }
-  }
-    exportFunction('getRemoteData', getRemoteData);`;
-};
-
-const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
+const AmpMostRead = ({ wrapper: Wrapper }) => {
   const {
     service,
     script,
-    dir,
     mostRead: { numberOfItems },
     translations,
   } = useContext(ServiceContext);
-
-  const onlyinnerscript = rankTranslationScript(endpoint, service);
 
   const {
     palette: { SHADOW },
@@ -88,7 +49,6 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
               id: 'local-script',
               type: 'text/plain',
               target: 'amp-script',
-              innerHTML: onlyinnerscript,
             },
           ]}
         />
@@ -99,12 +59,7 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
           {AMP_SCRIPT_JS}
           <meta
             name="amp-script-src"
-            content={generateCSPHash(
-              onlyinnerscript,
-              'sha384',
-              'utf8',
-              'base64',
-            )}
+            content={generateCSPHash('sha384', 'utf8', 'base64')}
           />
         </Helmet>
         <amp-list
@@ -118,19 +73,6 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
           <FallbackText fallback="" service={service} script={script}>
             {fallbackText}
           </FallbackText>
-
-          <template type="amp-mustache">
-            <MostReadRank
-              service={service}
-              script={script}
-              numberOfItems={numberOfItems}
-              listIndex="{{rankTranslation}}"
-              dir={dir}
-              columnLayout="oneColumn"
-              size={size}
-              isAmp
-            />
-          </template>
         </amp-list>
       </Wrapper>
     </amp-script>
@@ -138,14 +80,10 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
 };
 
 AmpMostRead.propTypes = {
-  endpoint: string,
-  size: oneOf(['default', 'small']),
   wrapper: elementType,
 };
 
 AmpMostRead.defaultProps = {
-  endpoint: '',
-  size: 'default',
   wrapper: React.Fragment,
 };
 
