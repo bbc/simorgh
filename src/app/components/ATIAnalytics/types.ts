@@ -64,7 +64,7 @@ export interface PageData {
 }
 
 export interface ATIData {
-  categoryName: string;
+  categoryName?: string;
   contentId?: string;
   contentType?: string;
   language?: string;

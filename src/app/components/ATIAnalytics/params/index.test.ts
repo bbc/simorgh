@@ -182,6 +182,7 @@ const homePageAnalyticsData: ATIData = {
   contentType: 'index-home',
   pageIdentifier: 'kyrgyz.page',
   pageTitle: 'pageTitle',
+  categoryName: 'test category name',
 };
 
 describe('ATIAnalytics params', () => {
