@@ -12,8 +12,6 @@ const blockLevelEventTrackingData = {
   componentName: 'most-read',
 };
 
-// test commit
-
 const mostReadAmpPageTypes = ['STY', 'CSP', 'article'];
 
 const MostReadContainer = ({
