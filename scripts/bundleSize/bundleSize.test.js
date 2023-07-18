@@ -182,13 +182,17 @@ const start = jest.fn();
 const succeed = jest.fn();
 const fail = jest.fn();
 
-jest.unstable_mockModule('ora', () => ({
-  default: jest.fn({
+jest.unstable_mockModule('ora', () => {
+  const mock = jest.fn();
+  mock.mockReturnValue({
     start,
     succeed,
     fail
-  })
-}));
+  });
+  return {
+    default: mock
+  }
+});
 
 jest.unstable_mockModule('chalk', () => ({
   default: {
