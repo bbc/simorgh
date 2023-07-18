@@ -35,8 +35,6 @@ interface MostReadProps {
   headingBackgroundColour?: string;
   className?: string;
   renderCanonicalOnAmp?: boolean;
-  overrideHeadingAs?: string;
-  headingAttributes?: { id: string; tabIndex: string };
 }
 
 const MostRead = ({
@@ -47,8 +45,6 @@ const MostRead = ({
   headingBackgroundColour = WHITE,
   className = '',
   renderCanonicalOnAmp = false,
-  overrideHeadingAs = '',
-  headingAttributes,
 }: MostReadProps) => {
   const { isAmp, pageType, variant } = useContext(RequestContext);
   const {
