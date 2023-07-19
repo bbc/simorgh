@@ -1,8 +1,22 @@
-import { createRequire } from 'module';
-const require = createRequire(import.meta.url);
+import { readFile } from 'fs/promises';
 
 const modernBundleReport = require('../../reports/modern.webpackBundleReport.json');
 const legacyBundleReport = require('../../reports/legacy.webpackBundleReport.json');
+
+
+const modernBundleReport = JSON.parse(
+  await readFile(
+    new URL('../../reports/modern.webpackBundleReport.json', import.meta.url)
+  )
+);
+
+const legacyBundleReport = JSON.parse(
+  await readFile(
+    new URL('../../reports/legacy.webpackBundleReport.json', import.meta.url)
+  )
+);
+
+
 
 const bundleReports = {
   modern: modernBundleReport,
