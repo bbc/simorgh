@@ -593,6 +593,14 @@ describe('ATIAnalytics params', () => {
         producerId: 'atiAnalyticsProducerId',
         service: 'pidgin',
         statsDestination: 'statsDestination',
+        isUK: false,
+        ldpThingIds: undefined,
+        ldpThingLabels: undefined,
+        nationsProducer: undefined,
+        previousPath: 'http://www.example.com',
+        timePublished: undefined,
+        timeUpdated: undefined,
+        origin: 'origin',
       });
     });
 
