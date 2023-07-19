@@ -182,7 +182,6 @@ const homePageAnalyticsData: ATIData = {
   contentType: 'index-home',
   pageIdentifier: 'kyrgyz.page',
   pageTitle: 'pageTitle',
-  categoryName: 'test category name',
 };
 
 describe('ATIAnalytics params', () => {
@@ -281,6 +280,7 @@ describe('ATIAnalytics params', () => {
         p: 'kyrgyz.page',
         r: '0x0x24x24',
         re: '1024x768',
+        ref: 'originhttp://www.example.com',
         hl: '00-00-00',
         lng: 'en-US',
         x1: '[urn:bbc:tipo:topic:cm7682qz7v1t]',
@@ -288,6 +288,7 @@ describe('ATIAnalytics params', () => {
         x3: '[atiAnalyticsAppName]',
         x4: '[pcm]',
         x5: '[http%3A%2F%2Flocalhost%2F]',
+        x6: '[originhttp%3A%2F%2Fwww.example.com]',
         x7: '[index-home]',
         x8: '[simorgh]',
         x9: '[pageTitle]',
