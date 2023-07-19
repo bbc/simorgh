@@ -26,26 +26,32 @@ const serviceContext: ServiceConfig = {
   lang: 'pcm',
 };
 
-const atiData = {
+const homePageAtiData = {
   contentId: 'urn:bbc:tipo:topic:cm7682qz7v1t',
   contentType: 'index-home',
   pageIdentifier: 'kyrgyz.page',
   pageTitle: 'pageTitle',
-  categoryName: 'test category',
 };
 // timePublished and timeUpdated are not returned via BFF implementation so set to undefined in test
 const validPageURLParams = {
   appName: 'atiAnalyticsAppName',
+  categoryName: undefined,
   contentId: 'urn:bbc:tipo:topic:cm7682qz7v1t',
-  producerId: 'atiAnalyticsProducerId',
   contentType: 'index-home',
+  isUk: undefined,
+  language: 'pcm',
+  ldpThingIds: undefined,
+  ldpThingLabels: undefined,
+  libraryVersion: 'simorgh',
+  nationsProducer: undefined,
+  origin: undefined,
   pageIdentifier: 'kyrgyz.page',
   pageTitle: 'pageTitle',
   platform: 'canonical',
-  statsDestination: 'statsDestination',
+  previousPath: undefined,
+  producerId: 'atiAnalyticsProducerId',
   service: 'pidgin',
-  libraryVersion: 'simorgh',
-  language: 'pcm',
+  statsDestination: 'statsDestination',
   timePublished: undefined,
   timeUpdated: undefined,
 };
@@ -53,7 +59,7 @@ const validPageURLParams = {
 describe('implementation of buildPageATIParams and buildPageATIUrl', () => {
   it('should return the correct object for the page given the ATI configuration', () => {
     const result = buildPageATIParams({
-      atiData,
+      atiData: homePageAtiData,
       requestContext,
       serviceContext,
     });
@@ -61,7 +67,7 @@ describe('implementation of buildPageATIParams and buildPageATIUrl', () => {
   });
   it('should return the correct url for a page given the ATI configuration', () => {
     const url = buildPageATIUrl({
-      atiData,
+      atiData: homePageAtiData,
       requestContext,
       serviceContext,
     });
