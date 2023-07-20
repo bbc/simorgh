@@ -184,17 +184,61 @@ const homePageAnalyticsData: ATIData = {
   pageTitle: 'pageTitle',
 };
 
+const articlePageAnalyticsData: ATIData = {
+  categoryName: 'Nigeria~Education~Lagos%20state~Women',
+  contentId: 'urn:bbc:optimo:asset:crgrx86em6yo',
+  language: 'pcm',
+  ldpThingIds:
+    '3d5d5e30-dd50-4041-96d5-c970b20005b9~6942cb29-9d3f-4c9c-9806-0a0578c286d6~d651d520-a675-4911-8832-1596f257000b~e45cb5f8-3c87-4ebd-ac1c-058e9be22862',
+  ldpThingLabels: 'Nigeria~Education~Lagos%20state~Women',
+  nationsProducer: null,
+  pageIdentifier: 'pidgin.articles.crgrx86em6yo.page',
+  pageTitle:
+    'Aminat Yusuf: Tips to pass exam - Overall LASU best graduate drop update',
+  timePublished: '2023-07-19T15:57:54.500Z',
+  timeUpdated: '2023-07-19T15:57:54.500Z',
+};
+
 describe('ATIAnalytics params', () => {
   describe('buildATIUrl', () => {
     it('should return the correct article url', () => {
       const url = buildATIUrl({
         requestContext: { ...requestContext, pageType: ARTICLE_PAGE },
         data: article,
+        atiData: articlePageAnalyticsData,
         serviceContext,
       });
-      expect(url).toMatchInlineSnapshot(
-        `"s=598285&s2=atiAnalyticsProducerId&p=pidgin.articles.%2F%2Fwww.bbc.co.uk.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Aoptimo%3Aasset%3A54321]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http%253A%252F%252Flocalhost%252F]&x6=[originhttp%253A%252F%252Fwww.example.com]&x7=[article]&x8=[simorgh]&x9=[pageTitle]&x10=[scotland]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x13=[thing%2520english%2520label%25201~thing%2520english%2520label%25202]&x14=[thing%2520id%25201~thing%2520id%25202]&x17=[thing%2520english%2520label%25201~thing%2520english%2520label%25202]&ref=originhttp://www.example.com"`,
+
+      const parsedATIURLParams = Object.fromEntries(
+        new URLSearchParams(url as string),
       );
+
+      const expectedATIURLParams = {
+        s: '598285',
+        s2: 'atiAnalyticsProducerId',
+        p: 'pidgin.articles.%2F%2Fwww.bbc.co.uk.page',
+        r: '0x0x24x24',
+        re: '1024x768&hl: 00-00-00',
+        lng: 'en-US',
+        x1: '[urn%3Abbc%3Aoptimo%3Aasset%3A54321]',
+        x2: '[responsive]',
+        x3: '[atiAnalyticsAppName]',
+        x4: '[language]',
+        x5: '[http%253A%252F%252Flocalhost%252F]',
+        x6: '[originhttp%253A%252F%252Fwww.example.com]',
+        x7: '[article]',
+        x8: '[simorgh]',
+        x9: '[pageTitle]',
+        x10: '[scotland]',
+        x11: '[1970-01-01T00%3A00%3A00.000Z]',
+        x12: '[1970-01-01T00%3A00%3A00.000Z]',
+        x13: '[thing%2520english%2520label%25201~thing%2520english%2520label%25202]',
+        x14: '[thing%2520id%25201~thing%2520id%25202]',
+        x17: '[thing%2520english%2520label%25201~thing%2520english%2520label%25202]',
+        ref: 'originhttp://www.example.com',
+      };
+
+      expect(parsedATIURLParams).toEqual(expectedATIURLParams);
     });
 
     it('should return the correct media article url', () => {
