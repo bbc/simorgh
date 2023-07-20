@@ -1,0 +1,28 @@
+{
+  "lastUpdated": {
+    "day": 17,
+    "month": "July",
+    "year": 2023
+  },
+  "uxAccessibilityDoc": {
+    "done": true,
+    "reference": {
+      "url": "https://www.figma.com/file/U5b55Sl34Vh6vDxRKMwev1/Information-panel-(Russian-Disclaimer)-Optimo-PW-FINAL-20230622?type=design&node-id=203-450&mode=design&t=Kc3FIBkJFaIVU78M-0",
+      "label": "Screen Reader UX"
+    }
+  },
+  "acceptanceCriteria": {
+    "done": true,
+    "reference": {
+      "url": "https://paper.dropbox.com/doc/Information-panel-formerly-Russian-Disclaimer-accessibility-acceptance-criteria--B7aaG0aTtvJgbudZi_JkAbFEAg-kR9WZaIuJi73YyUIl3XKw",
+      "label": "Accessibility Acceptance Criteria"
+    }
+  },
+  "swarm": {
+    "done": true,
+    "reference": {
+      "url": "https://docs.google.com/spreadsheets/d/1C_-uuO3T7msh3A3r6qJLowTs5APXc7TmM_XwXuiWH7M/edit?usp=sharing",
+      "label": "A11y swarm notes"
+    }
+  }
+}
