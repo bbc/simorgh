@@ -161,20 +161,15 @@ jest.unstable_mockModule('./pageTypeBundleExtractor', () => ({
   },
 }));
 
-jest.unstable_mockModule(
-  '../../src/app/lib/config/services/loadableConfig.ts',
-  () => ({
-    default: {
-      service1: {},
-      service2: {},
-    },
-  }),
-);
-
 jest.unstable_mockModule('./bundleSizeConfig', () => ({
   MIN_SIZE: 632,
   MAX_SIZE: 728,
 }));
+
+jest.unstable_mockModule(
+  './serviceList.js',
+  () => ({ default: ["service1", "service2"] }),
+);
 
 jest.unstable_mockModule('fs', () => ({
   default: {

@@ -2,14 +2,12 @@
 /* eslint-disable import/extensions */
 import fs from 'fs';
 import { extractBundlesForPageType } from './pageTypeBundleExtractor.js';
-import serviceConfigs from '../../src/app/lib/config/services/loadableConfig.ts';
+import services from './serviceList.js'
 import { pages } from './pages.js';
 
 // need fake Cypress in global scope to require service configs:
 global.Cypress = { env: () => ({}) };
 const bundleType = process.env.bundleType || 'modern';
-
-const services = Object.keys(serviceConfigs);
 
 const getFileSize = filePath => fs.statSync(filePath).size;
 
