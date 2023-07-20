@@ -347,6 +347,7 @@ describe('ATIAnalytics params', () => {
         requestContext: { ...requestContext, pageType: ARTICLE_PAGE },
         data: article,
         serviceContext,
+        atiData: articlePageAnalyticsData,
       }) as string;
       const params = atiUrl.split('&');
 
@@ -359,6 +360,7 @@ describe('ATIAnalytics params', () => {
         requestContext: { ...requestContext, pageType: ARTICLE_PAGE },
         data: article,
         serviceContext,
+        atiData: articlePageAnalyticsData,
       }) as string;
       const params = atiUrl.split('&');
 
@@ -374,6 +376,7 @@ describe('ATIAnalytics params', () => {
         },
         data: article,
         serviceContext,
+        atiData: articlePageAnalyticsData,
       }) as string;
       const params = atiUrl.split('&');
 
