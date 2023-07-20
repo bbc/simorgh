@@ -57,9 +57,7 @@ const modernBundleReport = {
 jest.unstable_mockModule(
   'fs/promises',
   () => ({
-    default: {
-      readFile: jest.fn(() => JSON.stringify(modernBundleReport))
-    }
+    readFile: jest.fn(() => JSON.stringify(modernBundleReport))
   })
 );
 
