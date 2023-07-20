@@ -65,6 +65,19 @@ describe('implementation of buildPageATIParams and buildPageATIUrl - Home Page',
     });
     expect(result).toEqual(validPageURLParams);
   });
+
+  it('should use the atiData contentType in favour of the requestContext pageType', () => {
+    const result = buildPageATIParams({
+      atiData: homePageAtiData,
+      requestContext: {
+        ...requestContext,
+        pageType: 'home',
+      },
+      serviceContext,
+    });
+    expect(result).toEqual(validPageURLParams);
+  });
+
   it('should return the correct url for a page given the ATI configuration', () => {
     const url = buildPageATIUrl({
       atiData: homePageAtiData,
