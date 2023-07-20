@@ -438,29 +438,31 @@ describe('ATIAnalytics params', () => {
       const params = buildATIEventTrackingParams({
         requestContext: { ...requestContext, pageType: ARTICLE_PAGE },
         data: article,
+        atiData: articlePageAnalyticsData,
         serviceContext,
       });
       expect(params).toEqual({
         appName: 'atiAnalyticsAppName',
-        contentId: 'urn:bbc:optimo:asset:54321',
+        contentId: 'urn:bbc:optimo:asset:crgrx86em6yo',
         contentType: 'article',
-        categoryName: 'thing%20english%20label%201~thing%20english%20label%202',
+        categoryName: 'Nigeria~Education~Lagos%20state~Women',
         isUK: false,
-        language: 'language',
-        ldpThingIds: 'thing%20id%201~thing%20id%202',
-        ldpThingLabels:
-          'thing%20english%20label%201~thing%20english%20label%202',
+        language: 'pcm',
+        ldpThingIds:
+          '3d5d5e30-dd50-4041-96d5-c970b20005b9~6942cb29-9d3f-4c9c-9806-0a0578c286d6~d651d520-a675-4911-8832-1596f257000b~e45cb5f8-3c87-4ebd-ac1c-058e9be22862',
+        ldpThingLabels: 'Nigeria~Education~Lagos%20state~Women',
         origin: 'origin',
-        pageIdentifier: 'pidgin.articles.//www.bbc.co.uk.page',
-        pageTitle: 'pageTitle',
+        pageIdentifier: 'pidgin.articles.crgrx86em6yo.page',
+        pageTitle:
+          'Aminat Yusuf: Tips to pass exam - Overall LASU best graduate drop update',
         libraryVersion: 'simorgh',
         platform: 'canonical',
         previousPath: 'http://www.example.com',
         producerId: 'atiAnalyticsProducerId',
         service: 'pidgin',
         statsDestination: 'statsDestination',
-        timePublished: analyticsUtils.getPublishedDatetime(),
-        timeUpdated: analyticsUtils.getPublishedDatetime(),
+        timePublished: '2023-07-19T15:57:54.500Z',
+        timeUpdated: '2023-07-19T15:57:54.500Z',
         nationsProducer: 'scotland',
       });
     });
