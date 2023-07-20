@@ -113,7 +113,7 @@ describe('implementation of buildPageATIParams and buildPageATIUrl - Article Pag
     timePublished: '2023-07-13T05:03:56.214Z',
     timeUpdated: '2023-07-13T08:35:47.388Z',
   };
-  // timePublished and timeUpdated are not returned via BFF implementation so set to undefined in test
+
   const validPageURLParams = {
     appName: 'atiAnalyticsAppName',
     categoryName: 'Refugees%20and%20asylum%20seekers~Myanmar~Military',
@@ -142,6 +142,21 @@ describe('implementation of buildPageATIParams and buildPageATIUrl - Article Pag
   it('should return the correct object for the page given the ATI configuration', () => {
     const result = buildPageATIParams({
       atiData: articlePageAtiData,
+      requestContext: {
+        ...requestContext,
+        isUK: false,
+        origin: 'example.com',
+        pageType: 'article',
+        previousPath: 'previousPath',
+      },
+      serviceContext: { ...serviceContext, service: 'burmese', lang: 'my' },
+    });
+    expect(result).toEqual(validPageURLParams);
+  });
+
+  it('should use the serviceContext lang property if language is absent in atiData', () => {
+    const result = buildPageATIParams({
+      atiData: { ...articlePageAtiData, language: null },
       requestContext: {
         ...requestContext,
         isUK: false,
