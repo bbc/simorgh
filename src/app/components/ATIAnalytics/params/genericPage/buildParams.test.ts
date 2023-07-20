@@ -119,19 +119,19 @@ describe('implementation of buildPageATIParams and buildPageATIUrl - Article Pag
     categoryName: 'Refugees%20and%20asylum%20seekers~Myanmar~Military',
     contentId: 'urn:bbc:optimo:asset:c9wxnzvwp3mo',
     contentType: 'article',
-    isUk: undefined,
+    isUK: false,
     language: 'my',
     ldpThingIds:
       '0cd55773-e753-44ad-ad07-1366bf1aa6bc~a26174f5-fa3c-4cf8-95a2-29d877175eab~ce5c43ee-8982-4f88-9472-9aa79aeb09cc',
     ldpThingLabels: 'Refugees%20and%20asylum%20seekers~Myanmar~Military',
     libraryVersion: 'simorgh',
     nationsProducer: null,
-    origin: undefined,
+    origin: 'example.com',
     pageIdentifier: 'burmese.articles.c9wxnzvwp3mo.page',
     pageTitle:
       'ဇူလိုင်လ ၁၃ ရက်ထိပ်တန်းသတင်းများ- ဒုက္ခသည်စခန်းဗုံးကြဲခံရလို့ ထိုင်းကိုထွက်ပြေးသူတွေဆက်ရှိ ',
     platform: 'canonical',
-    previousPath: undefined,
+    previousPath: 'previousPath',
     producerId: 'atiAnalyticsProducerId',
     service: 'burmese',
     statsDestination: 'statsDestination',
@@ -142,16 +142,29 @@ describe('implementation of buildPageATIParams and buildPageATIUrl - Article Pag
   it('should return the correct object for the page given the ATI configuration', () => {
     const result = buildPageATIParams({
       atiData: articlePageAtiData,
-      requestContext,
-      serviceContext,
+      requestContext: {
+        ...requestContext,
+        isUK: false,
+        origin: 'example.com',
+        pageType: 'article',
+        previousPath: 'previousPath',
+      },
+      serviceContext: { ...serviceContext, service: 'burmese', lang: 'my' },
     });
     expect(result).toEqual(validPageURLParams);
   });
+
   it('should return the correct url for a page given the ATI configuration', () => {
     const url = buildPageATIUrl({
       atiData: articlePageAtiData,
-      requestContext,
-      serviceContext,
+      requestContext: {
+        ...requestContext,
+        isUK: false,
+        origin: 'example.com',
+        pageType: 'article',
+        previousPath: 'previousPath',
+      },
+      serviceContext: { ...serviceContext, service: 'burmese', lang: 'my' },
     });
 
     const parsedATIURLParams = Object.fromEntries(
@@ -161,19 +174,26 @@ describe('implementation of buildPageATIParams and buildPageATIUrl - Article Pag
     const expectedATIURLParams = {
       s: '598285',
       s2: 'atiAnalyticsProducerId',
-      p: 'kyrgyz.page',
+      p: 'burmese.articles.c9wxnzvwp3mo.page',
       r: '0x0x24x24',
       re: '1024x768',
+      ref: 'example.compreviousPath',
       hl: '00-00-00',
       lng: 'en-US',
-      x1: '[urn:bbc:tipo:topic:cm7682qz7v1t]',
+      x1: '[urn:bbc:optimo:asset:c9wxnzvwp3mo]',
       x2: '[responsive]',
       x3: '[atiAnalyticsAppName]',
-      x4: '[pcm]',
+      x4: '[my]',
       x5: '[http%3A%2F%2Flocalhost%2F]',
-      x7: '[index-home]',
+      x6: '[example.compreviousPath]',
+      x7: '[article]',
       x8: '[simorgh]',
-      x9: '[pageTitle]',
+      x9: '[ဇူလိုင်လ%20၁၃%20ရက်ထိပ်တန်းသတင်းများ-%20ဒုက္ခသည်စခန်းဗုံးကြဲခံရလို့%20ထိုင်းကိုထွက်ပြေးသူတွေဆက်ရှိ]',
+      x11: '[2023-07-13T05:03:56.214Z]',
+      x12: '[2023-07-13T08:35:47.388Z]',
+      x13: '[Refugees%20and%20asylum%20seekers~Myanmar~Military]',
+      x14: '[0cd55773-e753-44ad-ad07-1366bf1aa6bc~a26174f5-fa3c-4cf8-95a2-29d877175eab~ce5c43ee-8982-4f88-9472-9aa79aeb09cc]',
+      x17: '[Refugees%20and%20asylum%20seekers~Myanmar~Military]',
     };
 
     expect(parsedATIURLParams).toEqual(expectedATIURLParams);
