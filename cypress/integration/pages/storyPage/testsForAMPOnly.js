@@ -84,5 +84,5 @@ export const testsThatNeverRunDuringSmokeTestingForAMPOnly = ({
   service,
   pageType,
 }) => {
-  describe(`No testsToNeverSmokeTestForAMPOnly to run for ${service} ${pageType}`, () => { });
+  describe(`No testsToNeverSmokeTestForAMPOnly to run for ${service} ${pageType}`, () => {});
 };
