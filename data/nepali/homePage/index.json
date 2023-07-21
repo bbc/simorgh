@@ -91,10 +91,11 @@
       }
     ],
     "metadata": {
-      "analytics": {
+      "atiAnalytics": {
         "contentId": "urn:bbc:tipo:topic:c897lqqz91gt",
         "contentType": "index-home",
-        "pageIdentifier": "nepali.page"
+        "pageIdentifier": "nepali.page",
+        "pageTitle": "BBC News नेपाली"
       }
     }
   },

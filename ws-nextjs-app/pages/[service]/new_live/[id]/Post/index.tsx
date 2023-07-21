@@ -6,7 +6,7 @@ import headings from '#app/legacy/containers/Headings';
 import Blocks from '#app/legacy/containers/Blocks';
 import paragraph from '#app/legacy/containers/Paragraph';
 import Text from '#app/components/Text';
-import { Post, StreamResponse } from './types';
+import { Post as PostType } from './types';
 
 // temporary solution to render LI/ OL blocks.
 const unorderedList = ({ blocks }: { blocks: OptimoBlock[] }) => {
@@ -59,40 +59,26 @@ const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
   );
 };
 
-const PostItem = ({ postItem }: { postItem: Post }) => {
+const Post = ({ post }: { post: PostType }) => {
   const headerBlocks = pathOr<OptimoBlock[]>(
     [],
     ['header', 'model', 'blocks'],
-    postItem,
+    post,
   );
 
   const contentBlocks = pathOr<OptimoBlock[]>(
     [],
     ['content', 'model', 'blocks'],
-    postItem,
+    post,
   );
 
   return (
-    <div>
+    <>
       <PostHeadings headerBlocks={headerBlocks} />
       <PostContent contentBlocks={contentBlocks} />
       <hr />
-    </div>
+    </>
   );
 };
 
-const PostsList = ({ postData }: { postData: StreamResponse }) => {
-  const { results: postResults } = postData?.data;
-
-  if (postResults.length === 0) return null;
-
-  return (
-    <div>
-      {postResults.map(item => (
-        <PostItem key={item.urn} postItem={item} />
-      ))}
-    </div>
-  );
-};
-
-export default PostsList;
+export default Post;

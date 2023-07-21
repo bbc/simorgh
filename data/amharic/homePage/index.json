@@ -232,10 +232,11 @@
       }
     ],
     "metadata": {
-      "analytics": {
+      "atiAnalytics": {
         "contentId": "urn:bbc:tipo:topic:cx35pee6zw8t",
         "contentType": "index-home",
-        "pageIdentifier": "amharic.page"
+        "pageIdentifier": "amharic.page",
+        "pageTitle": "BBC News Amharic"
       }
     }
   },

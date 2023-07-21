@@ -585,9 +585,9 @@ exports[`Canonical Home Page SEO Twitter site 1`] = `"@bbckyrgyz"`;
 exports[`Canonical Home Page SEO Twitter title 1`] = `"Кабарлар, акыркы мүнөттөгү кабарлар, талдоо, видео - BBC News Кыргыз Кызматы"`;
 
 exports[`Canonical Home Page Timestamp should match text and date 1`] = `
-{
-  "date": "2023-03-06",
-  "text": "6 март 2023",
+Object {
+  "date": "2016-11-09",
+  "text": "Акыркы жаңылоо: 9 ноябрь 2016",
 }
 `;
 

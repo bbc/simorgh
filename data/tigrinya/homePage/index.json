@@ -189,10 +189,11 @@
       }
     ],
     "metadata": {
-      "analytics": {
+      "atiAnalytics": {
         "contentId": "urn:bbc:tipo:topic:c6zr6pp4e4xt",
         "contentType": "index-home",
-        "pageIdentifier": "tigrinya.page"
+        "pageIdentifier": "tigrinya.page",
+        "pageTitle": "ዜና - BBC News ትግርኛ"
       }
     }
   },

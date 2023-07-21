@@ -119,7 +119,7 @@ const HiearchicalGrid = ({ promos, headingLevel }: CurationGridProps) => {
                   {promo.description}
                 </Promo.Body>
                 <Promo.Timestamp className="promo-timestamp">
-                  {promo.firstPublished}
+                  {promo.lastPublished}
                 </Promo.Timestamp>
               </Promo>
             </li>
