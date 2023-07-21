@@ -1,4 +1,4 @@
-import flatten from 'ramda/src/flatten.js';
+import flatten from 'ramda/src/flatten';
 import { TopRow, LeadingRow, RegularRow } from '../../FrontPageStoryRows';
 
 const getFirstRowComponent = rowLength => {

@@ -1,5 +1,5 @@
-import path from 'ramda/src/path.js';
-import splitAt from 'ramda/src/splitAt.js';
+import path from 'ramda/src/path';
+import splitAt from 'ramda/src/splitAt';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import { getNthCpsParagraphIndex } from '../helpers';
 import deepClone from '../../../utils/jsonClone';

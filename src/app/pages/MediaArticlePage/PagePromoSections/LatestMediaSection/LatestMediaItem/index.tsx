@@ -2,7 +2,7 @@
 /** @jsx jsx */
 import { forwardRef } from 'react';
 import { jsx } from '@emotion/react';
-import isEmpty from 'ramda/src/isEmpty.js';
+import isEmpty from 'ramda/src/isEmpty';
 
 import Promo from '../../../../../legacy/components/OptimoPromos';
 import { LatestMediaItemProp } from '../types';

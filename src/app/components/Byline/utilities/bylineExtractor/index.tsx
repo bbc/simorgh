@@ -1,4 +1,4 @@
-import pathOr from 'ramda/src/pathOr.js';
+import pathOr from 'ramda/src/pathOr';
 import buildIChefURL from '../../../../lib/utilities/ichefURL';
 
 type BylineBlock = {

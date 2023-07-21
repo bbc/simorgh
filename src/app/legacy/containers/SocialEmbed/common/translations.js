@@ -1,4 +1,4 @@
-import pathOr from 'ramda/src/pathOr.js';
+import pathOr from 'ramda/src/pathOr';
 
 const createTranslations = ({ translations, index }) => {
   const skipLinkText = pathOr(

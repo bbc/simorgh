@@ -1,4 +1,4 @@
-import clone from 'ramda/src/clone.js';
+import clone from 'ramda/src/clone';
 import convertImage from '.';
 import {
   cpsImageBlock,

@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { arrayOf, shape, string, oneOfType, object, func } from 'prop-types';
 import styled from '@emotion/styled';
-import path from 'ramda/src/path.js';
-import pathOr from 'ramda/src/pathOr.js';
+import path from 'ramda/src/path';
+import pathOr from 'ramda/src/pathOr';
 import { getPica } from '#psammead/gel-foundations/src/typography';
 import { getSerifBold } from '#psammead/psammead-styles/src/font-styles';
 import { Link } from '#psammead/psammead-story-promo/src';

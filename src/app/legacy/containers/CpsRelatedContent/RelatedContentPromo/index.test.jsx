@@ -1,5 +1,5 @@
 import React from 'react';
-import path from 'ramda/src/path.js';
+import path from 'ramda/src/path';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import pidginPageData from '#data/pidgin/cpsAssets/tori-49450859';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';

@@ -1,5 +1,5 @@
-import path from 'ramda/src/path.js';
-import pathEq from 'ramda/src/pathEq.js';
+import path from 'ramda/src/path';
+import pathEq from 'ramda/src/pathEq';
 
 import envConfig from '../config/envs';
 

@@ -2,7 +2,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import { useContext, MouseEvent } from 'react';
-import pathOr from 'ramda/src/pathOr.js';
+import pathOr from 'ramda/src/pathOr';
 
 import Text from '../Text';
 import Paragraph from '../Paragraph';

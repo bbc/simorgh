@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import styled from '@emotion/styled';
-import path from 'ramda/src/path.js';
+import path from 'ramda/src/path';
 
 import {
   objectOf,

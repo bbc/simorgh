@@ -1,9 +1,9 @@
-import equals from 'ramda/src/equals.js';
-import lensPath from 'ramda/src/lensPath.js';
-import pipe from 'ramda/src/pipe.js';
-import prop from 'ramda/src/prop.js';
-import set from 'ramda/src/set.js';
-import view from 'ramda/src/view.js';
+import equals from 'ramda/src/equals';
+import lensPath from 'ramda/src/lensPath';
+import pipe from 'ramda/src/pipe';
+import prop from 'ramda/src/prop';
+import set from 'ramda/src/set';
+import view from 'ramda/src/view';
 
 const model = 'model';
 const firstItem = [0];

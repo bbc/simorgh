@@ -1,6 +1,6 @@
 import React from 'react';
-import dissocPath from 'ramda/src/dissocPath.js';
-import identity from 'ramda/src/identity.js';
+import dissocPath from 'ramda/src/dissocPath';
+import identity from 'ramda/src/identity';
 
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 

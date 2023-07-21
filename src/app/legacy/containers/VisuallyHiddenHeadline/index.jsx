@@ -1,5 +1,5 @@
 import React from 'react';
-import path from 'ramda/src/path.js';
+import path from 'ramda/src/path';
 import { textDefaultPropTypes } from '#models/propTypes';
 import { headlineModelPropTypes } from '#models/propTypes/headline';
 import VisuallyHiddenText from '../../../components/VisuallyHiddenText';

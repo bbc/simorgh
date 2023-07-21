@@ -1,8 +1,8 @@
-import pathOr from 'ramda/src/pathOr.js';
-import pathEq from 'ramda/src/pathEq.js';
-import assocPath from 'ramda/src/assocPath.js';
-import insert from 'ramda/src/insert.js';
-import slice from 'ramda/src/slice.js';
+import pathOr from 'ramda/src/pathOr';
+import pathEq from 'ramda/src/pathEq';
+import assocPath from 'ramda/src/assocPath';
+import insert from 'ramda/src/insert';
+import slice from 'ramda/src/slice';
 import findNthIndex from '#lib/utilities/findNthIndex';
 
 // Podcast promos are inserted if the page content has a continuous sequence of paragraph blocks

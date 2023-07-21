@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/aria-role */
 import React, { useContext } from 'react';
 import moment from 'moment';
-import path from 'ramda/src/path.js';
+import path from 'ramda/src/path';
 import formatDuration from '#app/lib/utilities/formatDuration';
 import Promo from '#components/Promo';
 import VisuallyHiddenText from '../../VisuallyHiddenText';

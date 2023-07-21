@@ -1,6 +1,6 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import path from 'ramda/src/path.js';
+import path from 'ramda/src/path';
 import { jsx } from '@emotion/react';
 import LatestMediaSection from './PagePromoSections/LatestMediaSection';
 import styles from './MediaArticlePage.styles';

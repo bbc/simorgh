@@ -1,6 +1,6 @@
 import React from 'react';
 import { useStorybookApi } from '@storybook/api';
-import path from 'ramda/src/path.js';
+import path from 'ramda/src/path';
 import { isExempt } from '../helpers/healthFactors';
 import HealthFactorsSidebarLabel from './HealthFactorsSidebarLabel';
 

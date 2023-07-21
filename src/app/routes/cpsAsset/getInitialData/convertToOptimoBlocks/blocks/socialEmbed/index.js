@@ -1,4 +1,4 @@
-import path from 'ramda/src/path.js';
+import path from 'ramda/src/path';
 
 const convertSocialEmbed = (block, pageData) => {
   const blocks = path(['content', 'blocks'], pageData);
