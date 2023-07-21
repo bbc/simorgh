@@ -373,7 +373,7 @@ test('weeks year starting sunday formatted', () => {
   assert.equal(
     moment([2012, 0, 1]).format('w ww wo'),
     '52 52 52',
-    'Jan  1 2012 should be week 52'
+    'Jan  1 2012 should be week 52'src / app / legacy / psammead / psammead - section - label / src / index.test.jsx
   );
   assert.equal(
     moment([2012, 0, 2]).format('w ww wo'),
