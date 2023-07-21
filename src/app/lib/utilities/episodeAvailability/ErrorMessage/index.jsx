@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { oneOf } from 'prop-types';
 import styled from '@emotion/styled';
-import pathOr from 'ramda/src/pathOr.js';
+import pathOr from 'ramda/src/pathOr';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,

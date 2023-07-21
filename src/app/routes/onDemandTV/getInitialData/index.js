@@ -1,4 +1,4 @@
-import pathOr from 'ramda/src/pathOr.js';
+import pathOr from 'ramda/src/pathOr';
 import pathWithLogging, {
   LOG_LEVELS,
 } from '#lib/utilities/logging/pathWithLogging';

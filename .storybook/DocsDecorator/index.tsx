@@ -1,6 +1,6 @@
 import React from 'react';
 import { DocsContainer, Title, DocsContextProps } from '@storybook/addon-docs';
-import path from 'ramda/src/path.js';
+import path from 'ramda/src/path';
 import ThemeProvider from '../../src/app/components/ThemeProvider';
 import HealthFactors from './HealthFactors';
 import HealthFactorsMetadata from './types';

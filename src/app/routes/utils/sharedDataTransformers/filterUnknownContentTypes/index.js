@@ -1,4 +1,4 @@
-import pathOr from 'ramda/src/pathOr.js';
+import pathOr from 'ramda/src/pathOr';
 
 const whitelist = ['STY', 'MAP', 'PGL', 'LIV', 'PRO'];
 const contentTypes = [

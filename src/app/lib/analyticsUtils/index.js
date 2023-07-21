@@ -1,7 +1,7 @@
 import Cookie from 'js-cookie';
 import { v4 as uuid } from 'uuid';
-import pathOr from 'ramda/src/pathOr.js';
-import path from 'ramda/src/path.js';
+import pathOr from 'ramda/src/pathOr';
+import path from 'ramda/src/path';
 import Url from 'url-parse';
 import onClient from '../utilities/onClient';
 import isOperaProxy from '../utilities/isOperaProxy';

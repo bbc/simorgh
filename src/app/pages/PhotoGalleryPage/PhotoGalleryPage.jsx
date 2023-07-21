@@ -10,8 +10,8 @@ import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
 import { node } from 'prop-types';
-import path from 'ramda/src/path.js';
-import pathOr from 'ramda/src/pathOr.js';
+import path from 'ramda/src/path';
+import pathOr from 'ramda/src/pathOr';
 import { GelPageGrid, GridItemLarge } from '#components/Grid';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';

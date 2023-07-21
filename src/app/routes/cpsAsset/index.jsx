@@ -1,5 +1,5 @@
 import React from 'react';
-import path from 'ramda/src/path.js';
+import path from 'ramda/src/path';
 import {
   ErrorPage,
   MediaAssetPage,

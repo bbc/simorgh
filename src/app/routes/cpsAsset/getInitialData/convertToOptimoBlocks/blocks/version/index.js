@@ -1,7 +1,7 @@
-import pick from 'ramda/src/pick.js';
-import path from 'ramda/src/path.js';
-import pathOr from 'ramda/src/pathOr.js';
-import isNil from 'ramda/src/isNil.js';
+import pick from 'ramda/src/pick';
+import path from 'ramda/src/path';
+import pathOr from 'ramda/src/pathOr';
+import isNil from 'ramda/src/isNil';
 
 const generateVideoBlock = (block, json) => {
   const headline = pathOr(

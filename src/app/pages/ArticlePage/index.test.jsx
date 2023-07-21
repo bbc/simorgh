@@ -2,7 +2,7 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { render, waitFor } from '@testing-library/react';
-import mergeDeepLeft from 'ramda/src/mergeDeepLeft.js';
+import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import {

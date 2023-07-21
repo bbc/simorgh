@@ -1,4 +1,4 @@
-import pipe from 'ramda/src/pipe.js';
+import pipe from 'ramda/src/pipe';
 import HomePage from './HomePage';
 import applyBasicPageHandlers from '../utils/applyBasicPageHandlers';
 

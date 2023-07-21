@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { TopicTag, TopicTags } from '#psammead/psammead-topic-tags/src';
-import pathOr from 'ramda/src/pathOr.js';
+import pathOr from 'ramda/src/pathOr';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import styled from '@emotion/styled';
 import { arrayOf, bool, shape, string } from 'prop-types';

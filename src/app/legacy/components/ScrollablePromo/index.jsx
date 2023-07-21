@@ -8,10 +8,10 @@ import {
 import { getDoublePica } from '#psammead/gel-foundations/src/typography';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import styled from '@emotion/styled';
-import path from 'ramda/src/path.js';
-import pathOr from 'ramda/src/pathOr.js';
-import isEmpty from 'ramda/src/isEmpty.js';
-import tail from 'ramda/src/tail.js';
+import path from 'ramda/src/path';
+import pathOr from 'ramda/src/pathOr';
+import isEmpty from 'ramda/src/isEmpty';
+import tail from 'ramda/src/tail';
 import {
   GEL_GROUP_0_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,

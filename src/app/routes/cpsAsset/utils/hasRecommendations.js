@@ -1,4 +1,4 @@
-import path from 'ramda/src/path.js';
+import path from 'ramda/src/path';
 import getConfig from '#app/routes/utils/getConfig';
 
 const hasRecommendations = async (service, variant, pageData) => {

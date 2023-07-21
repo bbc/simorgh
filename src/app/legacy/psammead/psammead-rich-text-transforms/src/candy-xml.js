@@ -1,8 +1,8 @@
 /* eslint-disable no-use-before-define */
 import xmldoc from 'xmldoc';
-import path from 'ramda/src/path.js';
-import pathOr from 'ramda/src/pathOr.js';
-import is from 'ramda/src/is.js';
+import path from 'ramda/src/path';
+import pathOr from 'ramda/src/pathOr';
+import is from 'ramda/src/is';
 import fragment from './models/fragment';
 import urlLink from './models/url-link';
 

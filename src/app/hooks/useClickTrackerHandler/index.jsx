@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import { useContext, useCallback, useState } from 'react';
-import path from 'ramda/src/path.js';
-import pathOr from 'ramda/src/pathOr.js';
+import path from 'ramda/src/path';
+import pathOr from 'ramda/src/pathOr';
 
 import { EventTrackingContext } from '../../contexts/EventTrackingContext';
 import useTrackingToggle from '../useTrackingToggle';

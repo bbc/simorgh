@@ -1,7 +1,7 @@
-import equals from 'ramda/src/equals.js';
-import either from 'ramda/src/either.js';
-import path from 'ramda/src/path.js';
-import pipe from 'ramda/src/pipe.js';
+import equals from 'ramda/src/equals';
+import either from 'ramda/src/either';
+import path from 'ramda/src/path';
+import pipe from 'ramda/src/pipe';
 
 const hasList = pipe(
   path(['model', 'blocks', 0, 'type']),

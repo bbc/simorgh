@@ -1,6 +1,6 @@
-import pathOr from 'ramda/src/pathOr.js';
-import assocPath from 'ramda/src/assocPath.js';
-import path from 'ramda/src/path.js';
+import pathOr from 'ramda/src/pathOr';
+import assocPath from 'ramda/src/assocPath';
+import path from 'ramda/src/path';
 import nodeLogger from '#lib/logger.node';
 import { NO_MEDIA_BLOCK } from '#lib/logger.const';
 import { logMediaError } from '#lib/utilities/logging';

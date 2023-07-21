@@ -1,7 +1,7 @@
-import pathOr from 'ramda/src/pathOr.js';
-import pathEq from 'ramda/src/pathEq.js';
-import assocPath from 'ramda/src/assocPath.js';
-import insert from 'ramda/src/insert.js';
+import pathOr from 'ramda/src/pathOr';
+import pathEq from 'ramda/src/pathEq';
+import assocPath from 'ramda/src/assocPath';
+import insert from 'ramda/src/insert';
 
 const getBlocks = pathOr([], ['content', 'model', 'blocks']);
 const setBlocks = assocPath(['content', 'model', 'blocks']);

@@ -1,4 +1,4 @@
-import path from 'ramda/src/path.js';
+import path from 'ramda/src/path';
 import { INCLUDE_MISSING_URL, INCLUDE_UNSUPPORTED } from '#lib/logger.const';
 import nodeLogger from '#lib/logger.node';
 import isAmpPath from '#app/routes/utils/isAmpPath';

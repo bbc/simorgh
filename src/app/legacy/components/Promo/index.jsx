@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import { arrayOf, element } from 'prop-types';
-import partition from 'ramda/src/partition.js';
+import partition from 'ramda/src/partition';
 
 import { ServiceContext } from '../../../contexts/ServiceContext';
 

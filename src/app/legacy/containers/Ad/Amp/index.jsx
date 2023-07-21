@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { oneOf } from 'prop-types';
 import styled from '@emotion/styled';
 import { Helmet } from 'react-helmet';
-import pathOr from 'ramda/src/pathOr.js';
+import pathOr from 'ramda/src/pathOr';
 import { RequestContext } from '#contexts/RequestContext';
 import {
   AMP_ACCESS_JS,

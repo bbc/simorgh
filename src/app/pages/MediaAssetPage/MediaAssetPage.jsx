@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import path from 'ramda/src/path.js';
+import path from 'ramda/src/path';
 import styled from '@emotion/styled';
 import {
   GEL_SPACING_DBL,
@@ -11,8 +11,8 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
-import pathOr from 'ramda/src/pathOr.js';
-import last from 'ramda/src/last.js';
+import pathOr from 'ramda/src/pathOr';
+import last from 'ramda/src/last';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
 import headings from '#containers/Headings';

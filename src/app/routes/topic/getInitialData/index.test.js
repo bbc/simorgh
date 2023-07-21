@@ -1,4 +1,4 @@
-import assocPath from 'ramda/src/assocPath.js';
+import assocPath from 'ramda/src/assocPath';
 import * as fetchPageData from '#app/routes/utils/fetchPageData';
 import getInitialData from '.';
 

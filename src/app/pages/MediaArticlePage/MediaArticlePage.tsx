@@ -2,8 +2,8 @@
 /** @jsx jsx */
 
 import { useContext } from 'react';
-import path from 'ramda/src/path.js';
-import pathOr from 'ramda/src/pathOr.js';
+import path from 'ramda/src/path';
+import pathOr from 'ramda/src/pathOr';
 import { jsx, useTheme } from '@emotion/react';
 
 import useToggle from '../../hooks/useToggle';

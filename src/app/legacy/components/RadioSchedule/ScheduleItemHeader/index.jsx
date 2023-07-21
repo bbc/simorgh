@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
-import pathOr from 'ramda/src/pathOr.js';
+import pathOr from 'ramda/src/pathOr';
 import { oneOfType, elementType, string, number } from 'prop-types';
 import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
 import detokenise from '#psammead/psammead-detokeniser/src';

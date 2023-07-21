@@ -1,4 +1,4 @@
-import path from 'ramda/src/path.js';
+import path from 'ramda/src/path';
 import envConfig from '../../../support/config/envs';
 import { overrideRendererOnTest } from '../../../support/helpers/onDemandRadioTv';
 import {
