@@ -11,7 +11,6 @@ import {
   articleDataPidgin,
   articleDataPidginWithAds,
   articleDataPidginWithByline,
-  promoSample,
   sampleRecommendations,
 } from '#pages/ArticlePage/fixtureData';
 import newsMostReadData from '#data/news/mostRead/index.json';
@@ -58,7 +57,6 @@ const Context = ({
   mostReadToggledOn = true,
   showAdsBasedOnLocation = false,
   isApp = false,
-  promo = null,
 } = {}) => {
   const appInput = {
     ...input,
@@ -81,7 +79,6 @@ const Context = ({
             cpsRecommendations: {
               enabled: true,
             },
-            podcastPromo: { enabled: promo != null },
           }}
         >
           <RequestContextProvider {...appInput}>
@@ -474,18 +471,4 @@ it('should render WSOJ recommendations when passed', async () => {
   );
 
   expect(getByText('SAMPLE RECOMMENDATION 1 - HEADLINE')).toBeInTheDocument();
-});
-
-it('should render PodcastPromos when passed', async () => {
-  const pageDataWithSecondaryColumn = {
-    ...articleDataNews,
-    promo: promoSample,
-  };
-  const { getByText } = render(
-    <Context service="russian" promo>
-      <ArticlePage pageData={pageDataWithSecondaryColumn} />
-    </Context>,
-  );
-
-  expect(getByText('Что это было?')).toBeInTheDocument();
 });

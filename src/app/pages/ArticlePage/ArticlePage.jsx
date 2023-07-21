@@ -8,6 +8,7 @@ import propEq from 'ramda/src/propEq';
 import { jsx, useTheme } from '@emotion/react';
 import { string } from 'prop-types';
 import useToggle from '#hooks/useToggle';
+
 import { singleTextBlock } from '#app/models/blocks';
 import { articleDataPropTypes } from '#models/propTypes/article';
 import ArticleMetadata from '#containers/ArticleMetadata';
@@ -24,7 +25,7 @@ import articleMediaPlayer from '#containers/ArticleMediaPlayer';
 import SocialEmbedContainer from '#containers/SocialEmbed';
 import AdContainer from '#containers/Ad';
 import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
-import { InlinePodcastPromo } from '#containers/PodcastPromo';
+
 import {
   getArticleId,
   getHeadline,
@@ -79,7 +80,7 @@ const ArticlePage = ({ pageData }) => {
   ].every(Boolean);
 
   const adcampaign = path(['metadata', 'adCampaignKeyword'], pageData);
-  const { enabled: podcastPromoEnabled } = useToggle('podcastPromo');
+
   const headline = getHeadline(pageData);
   const description = getSummary(pageData) || getHeadline(pageData);
   const firstPublished = getFirstPublished(pageData);
@@ -151,7 +152,6 @@ const ArticlePage = ({ pageData }) => {
     disclaimer: props => (
       <Disclaimer {...props} increasePaddingOnDesktop={false} />
     ),
-    podcastPromo: podcastPromoEnabled && (() => <InlinePodcastPromo />),
   };
 
   const visuallyHiddenBlock = {
