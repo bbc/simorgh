@@ -34,7 +34,6 @@ interface MostReadProps {
   mostReadToggle: boolean;
   pageType?: PageTypes;
   data?: MostReadData;
-  renderCanonicalOnAmp?: boolean;
 }
 
 const MostReadWithContext = ({
@@ -44,7 +43,6 @@ const MostReadWithContext = ({
   mostReadToggle,
   pageType = HOME_PAGE,
   data,
-  renderCanonicalOnAmp = false,
 }: MostReadProps) => (
   <ToggleContextProvider
     toggles={{
@@ -64,7 +62,7 @@ const MostReadWithContext = ({
       isApp={false}
     >
       <ServiceContextProvider service={service} variant={variant}>
-        <MostRead data={data} renderCanonicalOnAmp={renderCanonicalOnAmp} />
+        <MostRead data={data} />
       </ServiceContextProvider>
     </RequestContextProvider>
   </ToggleContextProvider>
@@ -225,31 +223,6 @@ describe('MostRead', () => {
 
         pageType: HOME_PAGE,
       },
-      {
-        description:
-          'should not render most read amp when renderCanonicalOnAmp is true',
-        service: 'mundo',
-        mostReadToggle: true,
-        isAmp: true,
-        variant: null,
-        renderCanonicalOnAmp: true,
-        renderExpectation: shouldNotRenderMostReadAmp,
-
-        pageType: MOST_READ_PAGE,
-      },
-      {
-        description:
-          'should render most read canonical when renderCanonicalOnAmp is true',
-        service: 'mundo',
-        mostReadToggle: true,
-        isAmp: true,
-        variant: null,
-        renderCanonicalOnAmp: true,
-        renderExpectation: shouldRenderMostRead,
-        dataResponse: mundoMostReadData,
-
-        pageType: MOST_READ_PAGE,
-      },
     ].forEach(
       ({
         description,
@@ -257,10 +230,8 @@ describe('MostRead', () => {
         mostReadToggle,
         isAmp,
         variant,
-        renderCanonicalOnAmp,
         renderExpectation,
         pageType,
-        dataResponse,
       }) => {
         it(description, async () => {
           await act(async () => {
@@ -271,8 +242,6 @@ describe('MostRead', () => {
                 isAmp={isAmp}
                 variant={variant}
                 pageType={pageType}
-                renderCanonicalOnAmp={renderCanonicalOnAmp}
-                data={dataResponse}
               />,
             );
           });

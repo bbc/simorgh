@@ -34,7 +34,6 @@ interface MostReadProps {
   mobileDivider?: boolean;
   headingBackgroundColour?: string;
   className?: string;
-  renderCanonicalOnAmp?: boolean;
 }
 
 const MostRead = ({
@@ -44,7 +43,6 @@ const MostRead = ({
   mobileDivider = false,
   headingBackgroundColour = WHITE,
   className = '',
-  renderCanonicalOnAmp = false,
 }: MostReadProps) => {
   const { isAmp, pageType, variant } = useContext(RequestContext);
   const {
@@ -101,15 +99,6 @@ const MostRead = ({
         />
       </MostReadSection>
     ) : null;
-
-  /**
-   * If renderCanonicalOnAmp is true, then use the canonical version of the component instead of the AMP version.
-   *
-   * This is to prevent double fetching of most read data.
-   */
-  if (isAmp && renderCanonicalOnAmp) {
-    AmpMostRead = CanonicalMostRead;
-  }
 
   return isAmp ? <AmpMostRead /> : <CanonicalMostRead />;
 };
