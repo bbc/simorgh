@@ -105,12 +105,7 @@ const MostReadPage = ({ pageData }) => {
       <main role="main" data-e2e="most-read">
         <IndexPageContainer>
           <MostReadWrapper>
-            <MostRead
-              data={pageData}
-              columnLayout="oneColumn"
-              size="default"
-              renderCanonicalOnAmp
-            />
+            <MostRead data={pageData} columnLayout="oneColumn" size="default" />
           </MostReadWrapper>
         </IndexPageContainer>
       </main>
