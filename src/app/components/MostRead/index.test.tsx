@@ -2,7 +2,6 @@ import React from 'react';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ToggleContextProvider } from '../../contexts/ToggleContext';
 import { data as pidginMostReadData } from '../../../../data/pidgin/mostRead/index.json';
-import { data as mundoMostReadData } from '../../../../data/mundo/mostRead/index.json';
 import serbianLatMostReadData from '../../../../data/serbian/mostRead/lat.json';
 import {
   FRONT_PAGE,
@@ -10,7 +9,6 @@ import {
   ARTICLE_PAGE,
   CORRESPONDENT_STORY_PAGE,
   HOME_PAGE,
-  MOST_READ_PAGE,
 } from '../../routes/utils/pageTypes';
 import { render, act } from '../react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
