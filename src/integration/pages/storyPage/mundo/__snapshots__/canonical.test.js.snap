@@ -175,6 +175,76 @@ exports[`Canonical Story Page Lead image I can see an image with a caption 1`] =
 
 exports[`Canonical Story Page Main heading should match text 1`] = `"Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea"`;
 
+exports[`Canonical Story Page Most Read has item with rank 1`] = `
+Object {
+  "text": "Qué se sabe de las 5 personas que viajan en el sumergible desaparecido que se dirigía al Titanic",
+  "url": "/mundo/noticias-internacional-65957893",
+}
+`;
+
+exports[`Canonical Story Page Most Read has item with rank 2`] = `
+Object {
+  "text": "Desaparece un sumergible que lleva a turistas y expertos a visitar los restos del Titanic",
+  "url": "/mundo/noticias-internacional-65936312",
+}
+`;
+
+exports[`Canonical Story Page Most Read has item with rank 3`] = `
+Object {
+  "text": "\\"Firmas un descargo de responsabilidad que enumera todas las formas en que podrías morir\\": cómo es viajar a bordo del sumergible Titán que se perdió camino al Titanic",
+  "url": "https://www.bbc.com/mundo/articles/cy0jjgx7579o",
+}
+`;
+
+exports[`Canonical Story Page Most Read has item with rank 4`] = `
+Object {
+  "text": "La compleja operación para rescatar el sumergible desaparecido con 5 personas que iban a visitar los restos del Titanic",
+  "url": "/mundo/noticias-internacional-65957851",
+}
+`;
+
+exports[`Canonical Story Page Most Read has item with rank 5`] = `
+Object {
+  "text": "Cómo es Titán, el sumergible con 5 personas a bordo que se perdió cuando iba a observar los restos del Titanic",
+  "url": "https://www.bbc.com/mundo/articles/c4n998dnnw2o",
+}
+`;
+
+exports[`Canonical Story Page Most Read has item with rank 6`] = `
+Object {
+  "text": "\\"Ahora que los selk’nam son la imagen de Chile, contemos cómo los matamos\\": Felipe Gálvez, director de la película premiada en Cannes \\"Los colonos\\"",
+  "url": "/mundo/noticias-65930070",
+}
+`;
+
+exports[`Canonical Story Page Most Read has item with rank 7`] = `
+Object {
+  "text": "\\"Sabes que tienen cosas muy diferentes y te angustia no saber por qué\\": la odisea de una madre hasta descubrir que sus hijos tienen altas capacidades",
+  "url": "/mundo/noticias-65372150",
+}
+`;
+
+exports[`Canonical Story Page Most Read has item with rank 8`] = `
+Object {
+  "text": "La innovadora solución de Japón para las escuelas abandonadas por falta de estudiantes",
+  "url": "/mundo/noticias-65919722",
+}
+`;
+
+exports[`Canonical Story Page Most Read has item with rank 9`] = `
+Object {
+  "text": "Dónde se hundió exactamente el Titanic y cómo encontraron sus restos en 1985",
+  "url": "/mundo/noticias-internacional-65957299",
+}
+`;
+
+exports[`Canonical Story Page Most Read has item with rank 10`] = `
+Object {
+  "text": "Cómo el nuevo gasoducto de 600 km de Vaca Muerta puede ayudar a Argentina a salir de la crisis económica",
+  "url": "/mundo/noticias-america-latina-65851160",
+}
+`;
+
 exports[`Canonical Story Page SEO Apple Touch Icon should match attributes 1`] = `
 Object {
   "sizes": null,
