@@ -621,8 +621,8 @@ exports[`Canonical Home Page SEO Twitter title 1`] = `"Кабарлар, акы�
 
 exports[`Canonical Home Page Timestamp should match text and date 1`] = `
 Object {
-  "date": "2023-03-06",
-  "text": "6 март 2023",
+  "date": "2016-11-09",
+  "text": "Акыркы жаңылоо: 9 ноябрь 2016",
 }
 `;
 
