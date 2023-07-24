@@ -287,6 +287,76 @@ exports[`AMP Most Read Page I can see the list items 10`] = `"10Bạo lực gia 
 
 exports[`AMP Most Read Page Main heading should match text 1`] = `"Đọc nhiều nhất"`;
 
+exports[`AMP Most Read Page Most Read has item with rank 1`] = `
+Object {
+  "text": "Vụ hai đồn công an ở Đắk Lắk bị tấn công: 'Tức nước vỡ bờ vì mâu thuẫn đất đai và tôn giáo'?",
+  "url": "/vietnamese/vietnam-65886929",
+}
+`;
+
+exports[`AMP Most Read Page Most Read has item with rank 2`] = `
+Object {
+  "text": "Chủ tịch Tập Cận Bình tiếp đón Ngoại trưởng Hoa Kỳ Antony Blinken",
+  "url": "https://www.bbc.com/vietnamese/articles/cyxgg4vqkr6o",
+}
+`;
+
+exports[`AMP Most Read Page Most Read has item with rank 3`] = `
+Object {
+  "text": "Bamboo Airways thua lỗ nhưng có đổi dàn lãnh đạo tại kỳ họp cổ đông tới?",
+  "url": "https://www.bbc.com/vietnamese/articles/crgddly302lo",
+}
+`;
+
+exports[`AMP Most Read Page Most Read has item with rank 4`] = `
+Object {
+  "text": "Trung Quốc có lập căn cứ do thám Mỹ ở Cuba hay không? ",
+  "url": "https://www.bbc.com/vietnamese/articles/c72m8pvmz5qo",
+}
+`;
+
+exports[`AMP Most Read Page Most Read has item with rank 5`] = `
+Object {
+  "text": "Việt Nam: Công tác quản trị ngôn luận chưa khoa học",
+  "url": "/vietnamese/forum-65949668",
+}
+`;
+
+exports[`AMP Most Read Page Most Read has item with rank 6`] = `
+Object {
+  "text": "Việt Nam: Thiếu điện bộc lộ hạn chế về cơ cấu và bộ máy quan liêu?",
+  "url": "https://www.bbc.com/vietnamese/articles/cll095l9jn4o",
+}
+`;
+
+exports[`AMP Most Read Page Most Read has item with rank 7`] = `
+Object {
+  "text": "45 người bị bắt: Thêm tin và ý kiến về vụ hai đồn công an ở Đắk Lắk bị tấn công",
+  "url": "https://www.bbc.com/vietnamese/articles/c6p3nx6ylego",
+}
+`;
+
+exports[`AMP Most Read Page Most Read has item with rank 8`] = `
+Object {
+  "text": "Trịnh Văn Quyết bị khởi tố thêm tội 'lừa đảo'",
+  "url": "/vietnamese/business-62678279",
+}
+`;
+
+exports[`AMP Most Read Page Most Read has item with rank 9`] = `
+Object {
+  "text": "Người Việt kêu cứu từ 'bẫy lừa đảo' ở Myanmar",
+  "url": "https://www.bbc.com/vietnamese/articles/cjk8zx3yygmo",
+}
+`;
+
+exports[`AMP Most Read Page Most Read has item with rank 10`] = `
+Object {
+  "text": "Bạo lực gia đình: 'Vợ tôi hãm hiếp tôi 10 năm'",
+  "url": "/vietnamese/world-52698761",
+}
+`;
+
 exports[`AMP Most Read Page SEO Apple Touch Icon should match attributes 1`] = `
 Object {
   "sizes": null,
