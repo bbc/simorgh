@@ -53,6 +53,7 @@ const StyledRadioScheduleContainer = styled(RadioScheduleContainer)`
 
 const IdxPage = ({ pageData, radioScheduleEndpointOverride }) => {
   const { mostRead, lang, radioSchedule } = useContext(ServiceContext);
+  console.log({ pageData });
 
   const groups = path(['content', 'groups'], pageData);
   const title = path(['metadata', 'title'], pageData);
