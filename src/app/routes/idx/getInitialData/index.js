@@ -59,7 +59,6 @@ export default async ({ path: pathname, service, variant, pageType }) => {
 
     const optHeaders = { 'ctx-service-env': getEnvironment(pathname) };
     const pageHasRadioSchedule = await hasRadioSchedule(service, variant);
-    console.log({ pageHasRadioSchedule });
     const pageDataPromise = fetchPageData({
       path: fetchUrl.toString(),
       ...(!isLocal && { agent, optHeaders }),
@@ -88,7 +87,6 @@ export default async ({ path: pathname, service, variant, pageType }) => {
       },
     };
   } catch ({ message, status = getErrorStatusCode() }) {
-    console.error(message);
     return { error: message, status };
   }
 };
