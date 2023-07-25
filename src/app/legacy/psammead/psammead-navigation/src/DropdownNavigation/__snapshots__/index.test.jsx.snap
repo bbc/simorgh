@@ -472,7 +472,7 @@ exports[`Dropdown navigation AMP Menu Button should render correctly 1`] = `
   <button
     aria-expanded="false"
     class="focusIndicatorRemove emotion-0 emotion-1"
-    data-amp-bind-aria-expanded="menuState.expanded ? \\"true\\" : \\"false\\""
+    data-amp-bind-aria-expanded="menuState.expanded ? "true" : "false""
     dir="ltr"
     on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),other-element.toggleVisibility"
     type="button"
@@ -596,7 +596,7 @@ exports[`Dropdown navigation AMP Menu Button should render rtl correctly 1`] = `
   <button
     aria-expanded="false"
     class="focusIndicatorRemove emotion-0 emotion-1"
-    data-amp-bind-aria-expanded="menuState.expanded ? \\"true\\" : \\"false\\""
+    data-amp-bind-aria-expanded="menuState.expanded ? "true" : "false""
     dir="rtl"
     on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),other-element.toggleVisibility"
     type="button"

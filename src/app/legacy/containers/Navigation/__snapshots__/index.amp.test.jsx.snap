@@ -203,7 +203,7 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
       <button
         aria-expanded="false"
         class="focusIndicatorRemove emotion-4 emotion-5"
-        data-amp-bind-aria-expanded="menuState.expanded ? \\"true\\" : \\"false\\""
+        data-amp-bind-aria-expanded="menuState.expanded ? "true" : "false""
         dir="ltr"
         on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),
         si-nav-dropdown-menu.toggleVisibility,
