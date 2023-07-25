@@ -5,11 +5,13 @@ import { getMostReadEndpoint } from '../../../../src/app/lib/utilities/getUrlHel
 import getAppEnv from '../../../support/helpers/getAppEnv';
 import ampOnlyServices from '../../../support/helpers/ampOnlyServices';
 
-export const crossPlatform = ({ service, variant }) => {
-  // news, newsround, and sport are services we serve on amp, but do not want to run most read tests on
-  if (!ampOnlyServices.includes(service)) {
-    const serviceID = config[service]?.name || service;
+// news, newsround, and sport are services we serve on amp, but do not want to run most read tests on
+const MOST_READ_EXCLUDED_SERVICES = [...ampOnlyServices, 'ukchina'];
 
+export const crossPlatform = ({ service, variant }) => {
+  const serviceID = config[service]?.name || service;
+
+  if (!MOST_READ_EXCLUDED_SERVICES.includes(serviceID)) {
     const {
       mostRead: { hasMostRead, numberOfItems },
     } = appConfig[serviceID][variant];
