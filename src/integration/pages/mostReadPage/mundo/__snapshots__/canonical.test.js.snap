@@ -167,6 +167,76 @@ exports[`Canonical Most Read Page I can see the list items 10`] = `"10La delicio
 
 exports[`Canonical Most Read Page Main heading should match text 1`] = `"Más leídas"`;
 
+exports[`Canonical Most Read Page Most Read has item with rank 1`] = `
+Object {
+  "text": "\\"Sabes que tienen cosas muy diferentes y te angustia no saber por qué\\": la odisea de una madre hasta descubrir que sus hijos tienen altas capacidades",
+  "url": "/mundo/noticias-65372150",
+}
+`;
+
+exports[`Canonical Most Read Page Most Read has item with rank 2`] = `
+Object {
+  "text": "La innovadora solución de Japón para las escuelas abandonadas por falta de estudiantes",
+  "url": "/mundo/noticias-65919722",
+}
+`;
+
+exports[`Canonical Most Read Page Most Read has item with rank 3`] = `
+Object {
+  "text": "Cómo Guatemala pasó de ser un ejemplo contra la corrupción a criminalizar a jueces, periodistas y candidatos electorales",
+  "url": "https://www.bbc.com/mundo/articles/cw8ld1799d3o",
+}
+`;
+
+exports[`Canonical Most Read Page Most Read has item with rank 4`] = `
+Object {
+  "text": "Diego García, la pequeña isla británica militarizada en el Índico que se convirtió en un \\"infierno\\" para decenas de migrantes varados",
+  "url": "/mundo/noticias-internacional-65874454",
+}
+`;
+
+exports[`Canonical Most Read Page Most Read has item with rank 5`] = `
+Object {
+  "text": "Las confesiones de un banquero que fue a prisión por la millonaria manipulación de tasas de interés de uno de los bancos más importantes del mundo",
+  "url": "/mundo/noticias-65941469",
+}
+`;
+
+exports[`Canonical Most Read Page Most Read has item with rank 6`] = `
+Object {
+  "text": "\\"Ahora que los selk’nam son la imagen de Chile, contemos cómo los matamos\\": Felipe Gálvez, director de la película premiada en Cannes \\"Los colonos\\"",
+  "url": "/mundo/noticias-65930070",
+}
+`;
+
+exports[`Canonical Most Read Page Most Read has item with rank 7`] = `
+Object {
+  "text": "Quién era Mesalina, la emperatriz con la reputación más escandalosa de la Antigua Roma",
+  "url": "/mundo/noticias-65827480",
+}
+`;
+
+exports[`Canonical Most Read Page Most Read has item with rank 8`] = `
+Object {
+  "text": "La polémica historia del mexicano que asegura haber inventado los Flamin’ Hot Cheetos en EE.UU. (y cuya vida llevó al cine Eva Longoria)",
+  "url": "/mundo/noticias-65936328",
+}
+`;
+
+exports[`Canonical Most Read Page Most Read has item with rank 9`] = `
+Object {
+  "text": "Entender si somos amigos por placer o por utilidad y otros consejos del filósofo griego Aristóteles para conservar la amistad",
+  "url": "/mundo/noticias-65787837",
+}
+`;
+
+exports[`Canonical Most Read Page Most Read has item with rank 10`] = `
+Object {
+  "text": "La deliciosa receta ancestral de Natalia Vallejo, la primera puertorriqueña en ganar el \\"Oscar\\" de la gastronomía",
+  "url": "https://www.bbc.com/mundo/articles/cn088dgrjyeo",
+}
+`;
+
 exports[`Canonical Most Read Page SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,

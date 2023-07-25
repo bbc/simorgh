@@ -108,6 +108,41 @@ exports[`Canonical Home Page Header Navigation link should match text and url 6`
 
 exports[`Canonical Home Page Main heading should match text 1`] = `"BBC News, Кыргыз КызMATы - Башталгыч бет"`;
 
+exports[`Canonical Home Page Most Read has item with rank 1`] = `
+Object {
+  "text": "АКШ: жаңы президент ким экенин аныктаган штаттар кайсылар?",
+  "url": "/kyrgyz/world-23090100",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 2`] = `
+Object {
+  "text": "Kyrgyzstanda soz erkindigi buzuluuda",
+  "url": "/kyrgyz/world-23089413",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 3`] = `
+Object {
+  "text": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 36",
+  "url": "/kyrgyz/kyrgyzstan-23087515",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 4`] = `
+Object {
+  "text": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 34",
+  "url": "/kyrgyz/kyrgyzstan-23087513",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 5`] = `
+Object {
+  "text": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 35",
+  "url": "/kyrgyz/kyrgyzstan-23087514",
+}
+`;
+
 exports[`Canonical Home Page Page content First item in the first curation is the correct headline 1`] = `"Аудио, Headline  edited in promo itself test May 2023"`;
 
 exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 1`] = `
