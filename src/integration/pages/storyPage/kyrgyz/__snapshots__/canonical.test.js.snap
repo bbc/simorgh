@@ -127,35 +127,35 @@ exports[`Canonical Story Page Lead image I can see an image with a caption 1`] =
 exports[`Canonical Story Page Main heading should match text 1`] = `"Test STY for social embeds"`;
 
 exports[`Canonical Story Page Most Read has item with rank 1`] = `
-Object {
+{
   "text": "АКШ: жаңы президент ким экенин аныктаган штаттар кайсылар?",
   "url": "/kyrgyz/world-23090100",
 }
 `;
 
 exports[`Canonical Story Page Most Read has item with rank 2`] = `
-Object {
+{
   "text": "Kyrgyzstanda soz erkindigi buzuluuda",
   "url": "/kyrgyz/world-23089413",
 }
 `;
 
 exports[`Canonical Story Page Most Read has item with rank 3`] = `
-Object {
+{
   "text": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 36",
   "url": "/kyrgyz/kyrgyzstan-23087515",
 }
 `;
 
 exports[`Canonical Story Page Most Read has item with rank 4`] = `
-Object {
+{
   "text": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 34",
   "url": "/kyrgyz/kyrgyzstan-23087513",
 }
 `;
 
 exports[`Canonical Story Page Most Read has item with rank 5`] = `
-Object {
+{
   "text": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 35",
   "url": "/kyrgyz/kyrgyzstan-23087514",
 }
