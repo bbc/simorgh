@@ -604,6 +604,7 @@ describe('Main page routes', () => {
     await renderRouter({
       pathname,
       pageType,
+      status: errorCode,
       errorCode,
       service: 'pidgin',
     });
