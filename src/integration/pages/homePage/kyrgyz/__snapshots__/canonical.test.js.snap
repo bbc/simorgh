@@ -3,56 +3,56 @@
 exports[`Canonical Home Page A11y I can see the skip to content link 1`] = `"Сайтка өтүү"`;
 
 exports[`Canonical Home Page Footer Anchors should match text and url 1`] = `
-Object {
+{
   "text": "BBC News, Кыргыз КызMATы",
   "url": "/kyrgyz",
 }
 `;
 
 exports[`Canonical Home Page Footer Anchors should match text and url 2`] = `
-Object {
+{
   "text": "Эмнеге BBC News ишенсе болот?",
   "url": "https://www.bbc.com/kyrgyz/institutional-49677275",
 }
 `;
 
 exports[`Canonical Home Page Footer Anchors should match text and url 3`] = `
-Object {
+{
   "text": "Колдонуу эрежелери",
   "url": "https://www.bbc.com/kyrgyz/institutional-38157280",
 }
 `;
 
 exports[`Canonical Home Page Footer Anchors should match text and url 4`] = `
-Object {
+{
   "text": "Би-Би-Си жөнүндө",
   "url": "https://www.bbc.com/kyrgyz/institutional-38157281",
 }
 `;
 
 exports[`Canonical Home Page Footer Anchors should match text and url 5`] = `
-Object {
+{
   "text": "Купуялык",
   "url": "https://www.bbc.com/kyrgyz/institutional-38157282",
 }
 `;
 
 exports[`Canonical Home Page Footer Anchors should match text and url 6`] = `
-Object {
+{
   "text": "Cookies",
   "url": "https://www.bbc.com/usingthebbc/cookies/",
 }
 `;
 
 exports[`Canonical Home Page Footer Anchors should match text and url 7`] = `
-Object {
+{
   "text": "Би-Би-Си менен байланышыңыз",
   "url": "https://www.bbc.co.uk/kyrgyz/send/u50853445",
 }
 `;
 
 exports[`Canonical Home Page Footer Anchors should match text and url 8`] = `
-Object {
+{
   "text": "Башка интернет сайттардын мазмуну боюнча биздин позиция.",
   "url": "https://www.bbc.com/editorialguidelines/guidance/feeds-and-links",
 }
@@ -65,42 +65,42 @@ exports[`Canonical Home Page Footer I can see the footer copyright and external 
 exports[`Canonical Home Page Header I can see the branding 1`] = `"BBC News, Кыргыз КызMATы"`;
 
 exports[`Canonical Home Page Header Navigation link should match text and url 1`] = `
-Object {
+{
   "text": "Ачылып турган баракча, Башталгыч бет",
   "url": "/kyrgyz",
 }
 `;
 
 exports[`Canonical Home Page Header Navigation link should match text and url 2`] = `
-Object {
+{
   "text": "Кыргызстан",
   "url": "/kyrgyz/topics/cz74kjpyk07t",
 }
 `;
 
 exports[`Canonical Home Page Header Navigation link should match text and url 3`] = `
-Object {
+{
   "text": "Дүйнө",
   "url": "/kyrgyz/topics/ck2l9z012nkt",
 }
 `;
 
 exports[`Canonical Home Page Header Navigation link should match text and url 4`] = `
-Object {
+{
   "text": "САПАР",
   "url": "/kyrgyz/topics/c6z8lg83w7mt",
 }
 `;
 
 exports[`Canonical Home Page Header Navigation link should match text and url 5`] = `
-Object {
+{
   "text": "Журнал",
   "url": "/kyrgyz/topics/czp8pjrkgp0t",
 }
 `;
 
 exports[`Canonical Home Page Header Navigation link should match text and url 6`] = `
-Object {
+{
   "text": "Подкасттар",
   "url": "/kyrgyz/podcasts/p0c80v81",
 }
@@ -108,73 +108,108 @@ Object {
 
 exports[`Canonical Home Page Main heading should match text 1`] = `"BBC News, Кыргыз КызMATы - Башталгыч бет"`;
 
+exports[`Canonical Home Page Most Read has item with rank 1`] = `
+{
+  "text": "АКШ: жаңы президент ким экенин аныктаган штаттар кайсылар?",
+  "url": "/kyrgyz/world-23090100",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 2`] = `
+{
+  "text": "Kyrgyzstanda soz erkindigi buzuluuda",
+  "url": "/kyrgyz/world-23089413",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 3`] = `
+{
+  "text": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 36",
+  "url": "/kyrgyz/kyrgyzstan-23087515",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 4`] = `
+{
+  "text": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 34",
+  "url": "/kyrgyz/kyrgyzstan-23087513",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 5`] = `
+{
+  "text": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 35",
+  "url": "/kyrgyz/kyrgyzstan-23087514",
+}
+`;
+
 exports[`Canonical Home Page Page content First item in the first curation is the correct headline 1`] = `"Аудио, Headline  edited in promo itself test May 2023"`;
 
 exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 1`] = `
-Object {
+{
   "sizes": null,
   "url": "http://localhost:7080/kyrgyz/images/icons/icon-192x192.png",
 }
 `;
 
 exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 2`] = `
-Object {
+{
   "sizes": "72x72",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/icons/icon-72x72.png",
 }
 `;
 
 exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 3`] = `
-Object {
+{
   "sizes": "96x96",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/icons/icon-96x96.png",
 }
 `;
 
 exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 4`] = `
-Object {
+{
   "sizes": "128x128",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/icons/icon-128x128.png",
 }
 `;
 
 exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 5`] = `
-Object {
+{
   "sizes": "144x144",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/icons/icon-144x144.png",
 }
 `;
 
 exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 6`] = `
-Object {
+{
   "sizes": "152x152",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/icons/icon-152x152.png",
 }
 `;
 
 exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 7`] = `
-Object {
+{
   "sizes": "180x180",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/icons/icon-180x180.png",
 }
 `;
 
 exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 8`] = `
-Object {
+{
   "sizes": "192x192",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/icons/icon-192x192.png",
 }
 `;
 
 exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 9`] = `
-Object {
+{
   "sizes": "384x384",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/icons/icon-384x384.png",
 }
 `;
 
 exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 10`] = `
-Object {
+{
   "sizes": "512x512",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/icons/icon-512x512.png",
 }
@@ -191,31 +226,31 @@ exports[`Canonical Home Page SEO Heading level 1 1`] = `"BBC News, Кыргыз 
 exports[`Canonical Home Page SEO Lang attribute 1`] = `"ky"`;
 
 exports[`Canonical Home Page SEO Linked data should match text 1`] = `
-Object {
+{
   "@context": "http://schema.org",
-  "@graph": Array [
-    Object {
+  "@graph": [
+    {
       "@type": "CollectionPage",
       "headline": "BBC News Кыргыз Кызматы - Top title from Tipo in the details section",
-      "image": Object {
+      "image": {
         "@type": "ImageObject",
         "height": 576,
         "url": "https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png",
         "width": 1024,
       },
-      "inLanguage": Object {
+      "inLanguage": {
         "@type": "Language",
         "alternateName": "ky",
         "name": "Kyrgyz",
       },
-      "mainEntityOfPage": Object {
+      "mainEntityOfPage": {
         "@id": "http://localhost:7080/kyrgyz",
         "@type": "WebPage",
         "name": "BBC News Кыргыз Кызматы - Top title from Tipo in the details section",
       },
-      "publisher": Object {
+      "publisher": {
         "@type": "NewsMediaOrganization",
-        "logo": Object {
+        "logo": {
           "@type": "ImageObject",
           "height": 576,
           "url": "https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png",
@@ -227,316 +262,316 @@ Object {
       "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png",
       "url": "http://localhost:7080/kyrgyz",
     },
-    Object {
+    {
       "@type": "ItemList",
-      "itemListElement": Array [
-        Object {
+      "itemListElement": [
+        {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 1,
           "url": "https://www.test.bbc.com/kyrgyz/articles/c1ldk6kl66wo",
         },
-        Object {
+        {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 2,
           "url": "https://www.bbc.com/kyrgyz/articles/cy0pvvd9jvpo",
         },
-        Object {
+        {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 3,
           "url": "https://www.bbc.com/kyrgyz/articles/cemg3359nwro",
         },
-        Object {
+        {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 4,
           "url": "https://www.bbc.com/kyrgyz/articles/cp56zz9mg01o",
         },
-        Object {
+        {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 5,
           "url": "https://www.bbc.com/kyrgyz/articles/cnk299l1mdgo",
         },
-        Object {
+        {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 6,
           "url": "https://www.bbc.com/kyrgyz/articles/c2qz889lr6do",
         },
-        Object {
+        {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 7,
           "url": "https://www.bbc.com/kyrgyz/articles/cy0z22ny3jwo",
         },
-        Object {
+        {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 8,
           "url": "https://www.bbc.com/kyrgyz/articles/c0n933z8qnyo",
         },
-        Object {
+        {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 9,
           "url": "https://www.bbc.com/kyrgyz/articles/cndr228x0y4o",
         },
-        Object {
+        {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 10,
           "url": "https://www.bbc.com/kyrgyz/articles/cx9exxrn6wlo",
         },
-        Object {
+        {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 11,
           "url": "https://www.bbc.com/kyrgyz/articles/c12pxxzkzjdo",
         },
-        Object {
+        {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 12,
           "url": "https://www.bbc.com/kyrgyz/articles/c4xljjkewl1o",
         },
-        Object {
+        {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 13,
           "url": "https://www.bbc.com/kyrgyz/articles/cemg3359nwro",
         },
-        Object {
+        {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 14,
           "url": "https://www.bbc.com/kyrgyz/articles/cy0pvvd9jvpo",
         },
-        Object {
+        {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 15,
           "url": "https://www.bbc.com/kyrgyz/articles/c1ldk6kl66wo",
         },
-        Object {
+        {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 16,
           "url": "https://www.bbc.com/kyrgyz/articles/cmel5j6wwk2o",
         },
-        Object {
+        {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 17,
           "url": "https://www.bbc.com/kyrgyz/articles/cd0x1jwnw66o",
         },
-        Object {
+        {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 18,
           "url": "https://www.bbc.com/kyrgyz/articles/c65eglnzz1vo",
         },
-        Object {
+        {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 19,
           "url": "https://www.bbc.com/kyrgyz/articles/cj2r5lzp6k0o",
         },
-        Object {
+        {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 20,
           "url": "https://www.bbc.com/kyrgyz/articles/c2qz8l2zn5eo",
         },
-        Object {
+        {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 21,
           "url": "https://www.bbc.com/kyrgyz/articles/cm18pzwq691o",
         },
-        Object {
+        {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 22,
           "url": "https://www.bbc.com/kyrgyz/articles/cr89pqv3el2o",
         },
-        Object {
+        {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 23,
           "url": "https://www.bbc.com/kyrgyz/articles/cr9p5rw62j7o",
         },
-        Object {
+        {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 24,
           "url": "https://www.bbc.com/kyrgyz/articles/cnk23wye4kyo",
         },
-        Object {
+        {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 25,
           "url": "https://www.bbc.com/kyrgyz/articles/c0n89302mwdo",
         },
-        Object {
+        {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 26,
           "url": "https://www.bbc.com/kyrgyz/articles/clygdvn0vepo",
         },
-        Object {
+        {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 27,
           "url": "https://www.bbc.com/kyrgyz/articles/c0n2glkxx13o",
         },
-        Object {
+        {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 28,
           "url": "https://www.bbc.com/kyrgyz/articles/c85pqkmwkw5o",
         },
-        Object {
+        {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 29,
           "url": "https://www.bbc.com/kyrgyz/articles/c85pqkmz8e2o",
         },
-        Object {
+        {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 30,
           "url": "https://www.bbc.com/kyrgyz/articles/ck42g152vl6o",
         },
-        Object {
+        {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 31,
           "url": "https://www.bbc.com/kyrgyz/articles/c6x9vjk8zy2o",
         },
-        Object {
+        {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 32,
           "url": "https://www.bbc.com/kyrgyz/articles/cw1kzjme384o",
         },
-        Object {
+        {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 33,
           "url": "https://www.bbc.com/kyrgyz/articles/c3d1vyrdx21o",
         },
-        Object {
+        {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 34,
           "url": "https://www.bbc.com/kyrgyz/articles/c86jzl31jm5o",
         },
-        Object {
+        {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 35,
           "url": "https://www.bbc.com/kyrgyz/articles/cp567nq7kx6o",
         },
-        Object {
+        {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 36,
           "url": "https://www.bbc.com/kyrgyz/articles/cv748vmk2pno",
         },
-        Object {
+        {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 37,
           "url": "https://www.bbc.com/kyrgyz/articles/ck9yxzvv7deo",
         },
-        Object {
+        {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 38,
           "url": "https://www.bbc.com/kyrgyz/articles/c380rxlx2z9o",
         },
-        Object {
+        {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 39,
           "url": "https://www.bbc.com/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=4",
         },
-        Object {
+        {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 40,
           "url": "https://www.bbc.com/kyrgyz/articles/cr91pzee4dro",
         },
-        Object {
+        {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 41,
           "url": "https://www.bbc.com/kyrgyz/articles/cd0nevdy25vo",
         },
-        Object {
+        {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 42,
           "url": "https://www.bbc.com/kyrgyz/articles/czmnz5184jeo",
         },
-        Object {
+        {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 43,
           "url": "https://www.bbc.com/kyrgyz/podcasts/p0c80v81/p0fpqkrq",
         },
-        Object {
+        {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 44,
           "url": "https://www.bbc.com/kyrgyz/podcasts/p0c80v81/p0fnzmkf",
         },
-        Object {
+        {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 45,
           "url": "https://www.bbc.com/kyrgyz/podcasts/p0c80v81/p0fnb85d",
         },
-        Object {
+        {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 46,
           "url": "https://www.bbc.com/kyrgyz/podcasts/p0c80v81/p0fkxv40",
         },
-        Object {
+        {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 47,
           "url": "https://www.bbc.com/kyrgyz/articles/c6rgpy2y00qo",
         },
-        Object {
+        {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 48,
           "url": "https://www.bbc.com/kyrgyz/articles/cd0nz6e5lj0o",
         },
-        Object {
+        {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 49,
           "url": "https://www.bbc.com/kyrgyz/articles/cle6ylr495ko",
         },
-        Object {
+        {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 50,
           "url": "https://www.bbc.com/kyrgyz/articles/cd0qkxer6rko",
         },
-        Object {
+        {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 51,
           "url": "https://www.bbc.com/kyrgyz/world-23089413",
         },
-        Object {
+        {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 52,
@@ -550,7 +585,7 @@ Object {
 }
 `;
 
-exports[`Canonical Home Page SEO OG description 1`] = `"Hello I am a description! I was added in the \\"Description\\" field from the Details section in Tipo"`;
+exports[`Canonical Home Page SEO OG description 1`] = `"Hello I am a description! I was added in the "Description" field from the Details section in Tipo"`;
 
 exports[`Canonical Home Page SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png"`;
 
@@ -574,7 +609,7 @@ exports[`Canonical Home Page SEO Twitter card 1`] = `"summary_large_image"`;
 
 exports[`Canonical Home Page SEO Twitter creator 1`] = `"@bbckyrgyz"`;
 
-exports[`Canonical Home Page SEO Twitter description 1`] = `"Hello I am a description! I was added in the \\"Description\\" field from the Details section in Tipo"`;
+exports[`Canonical Home Page SEO Twitter description 1`] = `"Hello I am a description! I was added in the "Description" field from the Details section in Tipo"`;
 
 exports[`Canonical Home Page SEO Twitter image alt 1`] = `"BBC News Кыргыз КызMATы"`;
 
@@ -585,45 +620,10 @@ exports[`Canonical Home Page SEO Twitter site 1`] = `"@bbckyrgyz"`;
 exports[`Canonical Home Page SEO Twitter title 1`] = `"Кабарлар, акыркы мүнөттөгү кабарлар, талдоо, видео - BBC News Кыргыз Кызматы"`;
 
 exports[`Canonical Home Page Timestamp should match text and date 1`] = `
-Object {
-  "date": "2023-03-06",
-  "text": "6 март 2023",
+{
+  "date": "2016-11-09",
+  "text": "Акыркы жаңылоо: 9 ноябрь 2016",
 }
 `;
 
 exports[`Canonical Home Page messageBanner has a link 1`] = `"https://www.bbc.com/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=4"`;
-
-exports[`Canonical Home Page mostRead has multiple items 1`] = `
-Object {
-  "text": "АКШ: жаңы президент ким экенин аныктаган штаттар кайсылар?",
-  "url": "/kyrgyz/world-23090100",
-}
-`;
-
-exports[`Canonical Home Page mostRead has multiple items 2`] = `
-Object {
-  "text": "Kyrgyzstanda soz erkindigi buzuluuda",
-  "url": "/kyrgyz/world-23089413",
-}
-`;
-
-exports[`Canonical Home Page mostRead has multiple items 3`] = `
-Object {
-  "text": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 36",
-  "url": "/kyrgyz/kyrgyzstan-23087515",
-}
-`;
-
-exports[`Canonical Home Page mostRead has multiple items 4`] = `
-Object {
-  "text": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 34",
-  "url": "/kyrgyz/kyrgyzstan-23087513",
-}
-`;
-
-exports[`Canonical Home Page mostRead has multiple items 5`] = `
-Object {
-  "text": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 35",
-  "url": "/kyrgyz/kyrgyzstan-23087514",
-}
-`;

@@ -1,11 +1,10 @@
-import { runCoreCanonicalTests } from '../../common';
+import { runCoreCanonicalTests, runMostReadTests } from '../../common';
 import runCrossPlatformTests from './crossPlatformTests';
-import mostReadTests from './mostReadTests';
 
 export default ({ service, pageData }) => {
   runCrossPlatformTests({ service, pageData });
   runCoreCanonicalTests();
-  mostReadTests();
+  runMostReadTests();
 
   it('should render the correct number of curations, including most read', () => {
     const curationsWithSummaries = pageData.curations.filter(

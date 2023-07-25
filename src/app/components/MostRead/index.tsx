@@ -42,7 +42,7 @@ const MostRead = ({
   size = 'default',
   mobileDivider = false,
   headingBackgroundColour = WHITE,
-  className,
+  className = '',
 }: MostReadProps) => {
   const { isAmp, pageType, variant } = useContext(RequestContext);
   const {
