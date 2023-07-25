@@ -5,14 +5,8 @@ import EmbedImages from '.';
 
 describe('EmbedImages', () => {
   beforeEach(() => {
-    process.env.SIMORGH_ATI_BASE_URL = 'https://www.test.bbc.com/ws/includes';
-  });
-
-  it('should render image', async () => {
-    render(<EmbedImages blocks={chartEmbedImages.blocks} />);
-
-    const chartEmbedImage = screen.queryByRole('img');
-    expect(chartEmbedImage).toBeInTheDocument();
+    process.env.SIMORGH_INCLUDES_BASE_URL =
+      'https://www.test.bbc.com/ws/includes';
   });
   it('should not render when empty embedImages array is passed in', async () => {
     const { container } = render(<EmbedImages blocks={[]} />);
@@ -34,4 +28,22 @@ describe('EmbedImages', () => {
       expect(container).toBeEmptyDOMElement();
     },
   );
+  describe('Canonical', () => {
+    it('should render a 1632px width image', async () => {
+      render(<EmbedImages blocks={chartEmbedImages.blocks} />);
+
+      const chartEmbedImage = screen.queryByRole('img');
+      expect(chartEmbedImage).toHaveAttribute('width', '1632');
+    });
+  });
+  describe('AMP', () => {
+    it('should render a 1280px width image', async () => {
+      render(<EmbedImages blocks={chartEmbedImages.blocks} />, {
+        isAmp: true,
+      });
+
+      const chartEmbedImage = screen.queryByRole('img');
+      expect(chartEmbedImage).toHaveAttribute('width', '1280');
+    });
+  });
 });

@@ -1,7 +1,8 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import { PropsWithChildren } from 'react';
+import { PropsWithChildren, useContext } from 'react';
 // import { OptimoBlock } from '#app/models/types/optimo';
+import { RequestContext } from '#app/contexts/RequestContext';
 import Image from '../../Image';
 // import styles from './index.styles';
 
@@ -18,7 +19,10 @@ type Props = {
 };
 
 const EmbedImages = ({ blocks: embedImages }: PropsWithChildren<Props>) => {
-  const image = embedImages?.slice(-1)?.[0]?.model?.blocks;
+  const { isAmp } = useContext(RequestContext);
+  const ampImage = embedImages?.[1]?.model?.blocks;
+  const canonicalImage = embedImages?.slice(-1)?.[0]?.model?.blocks;
+  const image = isAmp ? ampImage : canonicalImage;
   const rawImage = image?.[1]?.model;
   if (!rawImage) return null;
 
