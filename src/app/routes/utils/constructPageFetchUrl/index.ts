@@ -51,6 +51,10 @@ const getId = ({ pageType, service, variant, env }: GetIdProps) => {
       break;
     case CPS_ASSET:
       getIdFunction = (path: string) => {
+        /**
+         * Legacy Front Pages are curated in CPS and fetched from the BFF using the CPS_ASSET page type
+         * This functionality will be removed once all front pages migrated to the new HomePage
+         *  */
         return env !== 'local' && isFrontPage({ path, service, variant })
           ? getFrontPageId(path)
           : getCpsId(path);
