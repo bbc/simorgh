@@ -8,8 +8,8 @@ export default {
   component: EmbedImages,
 };
 
-export const Chart = () => <EmbedImages embedImages={chartEmbedImages} />;
+export const Chart = () => <EmbedImages blocks={chartEmbedImages.blocks} />;
 
-export const Map = () => <EmbedImages embedImages={mapEmbedImages} />;
+export const Map = () => <EmbedImages blocks={mapEmbedImages.blocks} />;
 
-export const Table = () => <EmbedImages embedImages={tableEmbedImages} />;
+export const Table = () => <EmbedImages blocks={tableEmbedImages.blocks} />;

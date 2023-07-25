@@ -5,27 +5,29 @@ import { PropsWithChildren } from 'react';
 import Image from '../../Image';
 // import styles from './index.styles';
 
-// interface OptimoImageBlock {
-//   type: 'image';
-//   model: {
-//     blocks: OptimoBlock[];
-//   };
-// }
+export interface OptimoImageBlock {
+  type: string;
+  model: {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    blocks: any;
+  };
+}
 
 type Props = {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  embedImages: any;
+  blocks: OptimoImageBlock[];
 };
 
-const EmbedImages = ({ embedImages }: PropsWithChildren<Props>) => {
-  const image =
-    embedImages?.model?.blocks?.slice(-1)[0]?.model?.blocks[1]?.model;
+const EmbedImages = ({ blocks: embedImages }: PropsWithChildren<Props>) => {
+  const image = embedImages?.slice(-1)?.[0]?.model?.blocks;
+  const rawImage = image?.[1]?.model;
+  if (!rawImage) return null;
 
-  const { width, height, locator } = image;
+  const { width, height, locator } = rawImage;
 
   const src = process.env.SIMORGH_INCLUDES_BASE_URL + locator;
   const alt =
-    image?.model?.blocks[0]?.model?.blocks[0]?.model?.blocks[0]?.model?.text;
+    image?.[0]?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.blocks?.[0]
+      ?.model?.text;
 
   if (!locator || !alt || !width || !height) return null;
 
