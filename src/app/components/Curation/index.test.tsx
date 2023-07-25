@@ -57,6 +57,8 @@ interface TestProps {
 
 describe('Curation', () => {
   suppressPropWarnings(['children', 'string', 'MediaIcon']);
+  suppressPropWarnings(['children', 'PromoTimestamp', 'undefined']);
+  suppressPropWarnings(['timestamp', 'TimestampContainer', 'undefined']);
 
   it.each(Object.entries(components))(
     `should render a %s component`,
