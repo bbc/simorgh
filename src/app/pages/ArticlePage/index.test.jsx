@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { render, act, waitFor } from '@testing-library/react';
 import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
@@ -14,7 +13,7 @@ import {
   promoSample,
   sampleRecommendations,
 } from '#pages/ArticlePage/fixtureData';
-import newsMostReadData from '#data/news/mostRead/index.json';
+import { data as newsMostReadData } from '#data/news/mostRead/index.json';
 import { data as persianMostReadData } from '#data/persian/mostRead/index.json';
 import { data as pidginMostReadData } from '#data/pidgin/mostRead/index.json';
 import {
@@ -23,10 +22,14 @@ import {
   singleTextBlock,
 } from '#models/blocks/index';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { suppressPropWarnings } from '#app/legacy/psammead/psammead-test-helpers/src';
+import {
+  render,
+  waitFor,
+} from '../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ArticlePage from './ArticlePage';
 import ThemeProvider from '../../components/ThemeProvider';
-import { suppressPropWarnings } from '../../legacy/psammead/psammead-test-helpers/src';
 
 jest.mock('../../components/ThemeProvider');
 
@@ -113,13 +116,13 @@ describe('Article Page', () => {
       },
       articleDataNews,
     );
-    await act(async () => {
-      render(
-        <Context service="news">
-          <ArticlePage pageData={articleDataNewsWithSummary} />
-        </Context>,
-      );
-    });
+
+    render(
+      <Context service="news">
+        <ArticlePage pageData={articleDataNewsWithSummary} />
+      </Context>,
+    );
+
     await waitFor(() => {
       expect(
         document
@@ -129,12 +132,149 @@ describe('Article Page', () => {
     });
   });
 
-  it('should render a news article correctly', async () => {
-    fetch.mockResponse(JSON.stringify(newsMostReadData));
+  it('should use the twitter handle where present in the byline block', async () => {
+    render(
+      <Context service="pidgin">
+        <ArticlePage pageData={articleDataPidginWithByline} />
+      </Context>,
+      { service: 'pidgin' },
+    );
 
+    await waitFor(() => {
+      expect(
+        document
+          .querySelector('meta[name="twitter:creator"]')
+          .getAttribute('content'),
+      ).toEqual('@mary_harper');
+    });
+  });
+
+  it('should use the default twitter handle where a byline block is missing in the content blocks', async () => {
+    render(
+      <Context service="persian">
+        <ArticlePage pageData={articleDataPersian} />
+      </Context>,
+      { service: 'persian' },
+    );
+
+    await waitFor(() => {
+      expect(
+        document
+          .querySelector('meta[name="twitter:creator"]')
+          .getAttribute('content'),
+      ).toEqual('@bbcpersian');
+    });
+  });
+
+  describe('ArticleMetadata get branded image', () => {
+    beforeEach(() => {
+      process.env.SIMORGH_ICHEF_BASE_URL = 'https://ichef.test.bbci.co.uk';
+      process.env.SIMORGH_APP_ENV = 'test';
+    });
+
+    afterEach(() => {
+      delete process.env.SIMORGH_APP_ENV;
+      delete process.env.SIMORGH_ICHEF_BASE_URL;
+    });
+
+    it('should use default images for opengraph if promo image does not exist', async () => {
+      render(
+        <Context service="news">
+          <ArticlePage pageData={articleDataNews} />
+        </Context>,
+      );
+
+      await waitFor(() => {
+        expect(
+          document
+            .querySelector('meta[property="og:image"]')
+            .getAttribute('content'),
+        ).toEqual(
+          'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png',
+        );
+      });
+    });
+
+    it('should use branded images for opengraph if promo image exists', async () => {
+      const articleDataNewsWithPromoImage = mergeDeepLeft(
+        {
+          promo: {
+            images: {
+              defaultPromoImage: {
+                blocks: [
+                  {
+                    type: 'altText',
+                    model: {
+                      blocks: [
+                        {
+                          type: 'text',
+                          model: {
+                            blocks: [
+                              {
+                                type: 'paragraph',
+                                model: {
+                                  text: 'Шайлоо 2020',
+                                  blocks: [
+                                    {
+                                      type: 'fragment',
+                                      model: {
+                                        text: 'Шайлоо 2020',
+                                        attributes: [],
+                                      },
+                                    },
+                                  ],
+                                },
+                              },
+                            ],
+                          },
+                        },
+                      ],
+                    },
+                  },
+                  {
+                    type: 'rawImage',
+                    model: {
+                      width: 749,
+                      height: 421,
+                      locator:
+                        'c34e/live/fea48140-27e5-11eb-a689-1f68cd2c5502.jpg',
+                      originCode: 'cpsprodpb',
+                      copyrightHolder: 'BBC',
+                      suitableForSyndication: true,
+                    },
+                  },
+                ],
+              },
+            },
+          },
+        },
+        articleDataNews,
+      );
+
+      render(
+        <Context service="news">
+          <ArticlePage pageData={articleDataNewsWithPromoImage} />
+        </Context>,
+      );
+
+      await waitFor(() => {
+        expect(
+          document
+            .querySelector('meta[property="og:image"]')
+            .getAttribute('content'),
+        ).toEqual(
+          'https://ichef.test.bbci.co.uk/news/1024/branded_news/c34e/live/fea48140-27e5-11eb-a689-1f68cd2c5502.jpg',
+        );
+      });
+    });
+  });
+
+  it('should render a news article correctly', async () => {
     const { container } = render(
       <Context service="news">
-        <ArticlePage pageData={articleDataNews} />
+        <ArticlePage
+          pageData={{ ...articleDataNews, mostRead: newsMostReadData }}
+        />
       </Context>,
     );
 
@@ -150,6 +290,7 @@ describe('Article Page', () => {
           pageData={{ ...articleDataPersian, mostRead: persianMostReadData }}
         />
       </Context>,
+      { service: 'persian' },
     );
 
     await waitFor(() => {
@@ -167,6 +308,7 @@ describe('Article Page', () => {
           pageData={{ ...articleDataPidgin, mostRead: pidginMostReadData }}
         />
       </Context>,
+      { service: 'pidgin' },
     );
 
     await waitFor(() => {
@@ -174,237 +316,102 @@ describe('Article Page', () => {
       expect(mostReadSection).not.toBeNull();
     });
 
-    describe('ArticleMetadata get branded image', () => {
-      beforeEach(() => {
-        process.env.SIMORGH_ICHEF_BASE_URL = 'https://ichef.test.bbci.co.uk';
-        process.env.SIMORGH_APP_ENV = 'test';
-      });
+    expect(container).toMatchSnapshot();
+  });
 
-      afterEach(() => {
-        delete process.env.SIMORGH_APP_ENV;
-        delete process.env.SIMORGH_ICHEF_BASE_URL;
-      });
+  it('should render a news article with headline in the middle correctly', async () => {
+    const headline = blockContainingText('headline', 'Article Headline', 1);
 
-      it('should use default images for opengraph if promo image does not exist', async () => {
-        await act(async () => {
-          render(
-            <Context service="news">
-              <ArticlePage pageData={articleDataNews} />
-            </Context>,
-          );
-        });
-        await waitFor(() => {
-          expect(
-            document
-              .querySelector('meta[property="og:image"]')
-              .getAttribute('content'),
-          ).toEqual(
-            'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png',
-          );
-        });
-      });
-
-      it('should use branded images for opengraph if promo image exists', async () => {
-        const articleDataNewsWithPromoImage = mergeDeepLeft(
-          {
-            promo: {
-              images: {
-                defaultPromoImage: {
-                  blocks: [
-                    {
-                      type: 'altText',
-                      model: {
-                        blocks: [
-                          {
-                            type: 'text',
-                            model: {
-                              blocks: [
-                                {
-                                  type: 'paragraph',
-                                  model: {
-                                    text: 'Шайлоо 2020',
-                                    blocks: [
-                                      {
-                                        type: 'fragment',
-                                        model: {
-                                          text: 'Шайлоо 2020',
-                                          attributes: [],
-                                        },
-                                      },
-                                    ],
-                                  },
-                                },
-                              ],
-                            },
-                          },
-                        ],
-                      },
-                    },
-                    {
-                      type: 'rawImage',
-                      model: {
-                        width: 749,
-                        height: 421,
-                        locator:
-                          'c34e/live/fea48140-27e5-11eb-a689-1f68cd2c5502.jpg',
-                        originCode: 'cpsprodpb',
-                        copyrightHolder: 'BBC',
-                        suitableForSyndication: true,
-                      },
-                    },
-                  ],
-                },
+    const articleWithSummaryHeadlineInTheMiddle = {
+      ...articleDataNews,
+      content: {
+        model: {
+          blocks: [
+            singleTextBlock('Paragraph above headline', 2),
+            {
+              ...headline,
+              model: {
+                ...headline.model,
+                blocks: [
+                  {
+                    ...headline.model.blocks[0],
+                    position: [2, 1],
+                  },
+                ],
               },
             },
-          },
-          articleDataNews,
-        );
-        await act(async () => {
-          render(
-            <Context service="news">
-              <ArticlePage pageData={articleDataNewsWithPromoImage} />
-            </Context>,
-          );
-        });
-        await waitFor(() => {
-          expect(
-            document
-              .querySelector('meta[property="og:image"]')
-              .getAttribute('content'),
-          ).toEqual(
-            'https://ichef.test.bbci.co.uk/news/1024/branded_news/c34e/live/fea48140-27e5-11eb-a689-1f68cd2c5502.jpg',
-          );
-        });
-      });
-    });
+            singleTextBlock('Paragraph below headline', 3),
+          ],
+        },
+      },
+      promo: {
+        ...articleDataNews.promo,
+        headlines: {
+          seoHeadline: 'SEO Headline',
+          promoHeadline: 'Promo Headline',
+        },
+      },
+    };
 
-    it('should render a news article correctly', async () => {
-      fetch.mockResponse(JSON.stringify(newsMostReadData));
-      let container;
-      await act(async () => {
-        ({ container } = render(
-          <Context service="news">
-            <ArticlePage pageData={articleDataNews} />
-          </Context>,
-        ));
-      });
-      await waitFor(() => {
-        expect(container).toMatchSnapshot();
-      });
-    });
+    const { container } = render(
+      <Context service="news">
+        <ArticlePage pageData={articleWithSummaryHeadlineInTheMiddle} />
+      </Context>,
+    );
 
-    it('should render a rtl article (persian) with most read correctly', async () => {
-      fetch.mockResponse(JSON.stringify(persianMostReadData));
-      let container;
-      await act(async () => {
-        ({ container } = render(
-          <Context service="persian">
-            <ArticlePage pageData={articleDataPersian} />
-          </Context>,
-        ));
-      });
-      await waitFor(() => {
-        const mostReadSection = container.querySelector('#Most-Read');
-        expect(mostReadSection).not.toBeNull();
-      });
-
+    await waitFor(() => {
       expect(container).toMatchSnapshot();
     });
+  });
 
-    it('should render a ltr article (pidgin) with most read correctly', async () => {
-      fetch.mockResponse(JSON.stringify(pidginMostReadData));
-      let container;
-      await act(async () => {
-        ({ container } = render(
-          <Context service="pidgin">
-            <ArticlePage pageData={articleDataPidgin} />
-          </Context>,
-        ));
-      });
-      await waitFor(() => {
-        const mostReadSection = container.querySelector('#Most-Read');
-        expect(mostReadSection).not.toBeNull();
-      });
+  it('should render a news article without headline correctly', async () => {
+    const articleWithoutHeadline = {
+      ...articleDataNews,
+      content: {
+        model: {
+          blocks: [singleTextBlock('Paragraph 1', 2)],
+        },
+      },
+      promo: {
+        ...articleDataNews.promo,
+        headlines: {
+          seoHeadline: 'Article Headline',
+          promoHeadline: 'Promo Headline',
+        },
+      },
+    };
 
+    const { container } = render(
+      <Context service="news">
+        <ArticlePage pageData={articleWithoutHeadline} />
+      </Context>,
+    );
+
+    await waitFor(() => {
       expect(container).toMatchSnapshot();
     });
+  });
 
-    it('should render a news article with headline in the middle correctly', async () => {
-      const headline = blockContainingText('headline', 'Article Headline', 1);
+  it('should render the top stories and features when passed', async () => {
+    const pageDataWithSecondaryColumn = {
+      ...articleDataNews,
+      secondaryColumn: {
+        topStories: [],
+        features: [],
+      },
+    };
+    const { getByTestId } = render(
+      <Context service="news">
+        <ArticlePage pageData={pageDataWithSecondaryColumn} />
+      </Context>,
+    );
 
-      const articleWithSummaryHeadlineInTheMiddle = {
-        ...articleDataNews,
-        content: {
-          model: {
-            blocks: [
-              singleTextBlock('Paragraph above headline', 2),
-              {
-                ...headline,
-                model: {
-                  ...headline.model,
-                  blocks: [
-                    {
-                      ...headline.model.blocks[0],
-                      position: [2, 1],
-                    },
-                  ],
-                },
-              },
-              singleTextBlock('Paragraph below headline', 3),
-            ],
-          },
-        },
-        promo: {
-          ...articleDataNews.promo,
-          headlines: {
-            seoHeadline: 'SEO Headline',
-            promoHeadline: 'Promo Headline',
-          },
-        },
-      };
-      let container;
-      await act(async () => {
-        ({ container } = render(
-          <Context service="news">
-            <ArticlePage pageData={articleWithSummaryHeadlineInTheMiddle} />
-          </Context>,
-        ));
-      });
-      await waitFor(() => {
-        expect(container).toMatchSnapshot();
-      });
-    });
+    expect(getByTestId('top-stories')).toBeInTheDocument();
+    expect(getByTestId('features')).toBeInTheDocument();
+  });
 
-    it('should render a news article without headline correctly', async () => {
-      const articleWithoutHeadline = {
-        ...articleDataNews,
-        content: {
-          model: {
-            blocks: [singleTextBlock('Paragraph 1', 2)],
-          },
-        },
-        promo: {
-          ...articleDataNews.promo,
-          headlines: {
-            seoHeadline: 'Article Headline',
-            promoHeadline: 'Promo Headline',
-          },
-        },
-      };
-      let container;
-      await act(async () => {
-        ({ container } = render(
-          <Context service="news">
-            <ArticlePage pageData={articleWithoutHeadline} />
-          </Context>,
-        ));
-      });
-      await waitFor(() => {
-        expect(container).toMatchSnapshot();
-      });
-    });
-
-    it('should render the top stories and features when passed', async () => {
+  describe('when isApp is true', () => {
+    it('should remove the top stories and features sections', async () => {
       const pageDataWithSecondaryColumn = {
         ...articleDataNews,
         secondaryColumn: {
@@ -412,88 +419,31 @@ describe('Article Page', () => {
           features: [],
         },
       };
-      let getByTestId;
-      await act(async () => {
-        ({ getByTestId } = render(
-          <Context service="news">
-            <ArticlePage pageData={pageDataWithSecondaryColumn} />
-          </Context>,
-        ));
-      });
-      expect(getByTestId('top-stories')).toBeInTheDocument();
-      expect(getByTestId('features')).toBeInTheDocument();
-    });
 
-    it('should remove the top stories and features sections when isApp is set to true', async () => {
-      const pageDataWithSecondaryColumn = {
-        ...articleDataNews,
-        secondaryColumn: {
-          topStories: [],
-          features: [],
-        },
-      };
-      let container;
-      await act(async () => {
-        ({ container } = render(
-          <Context service="news" isApp>
-            <ArticlePage pageData={pageDataWithSecondaryColumn} />
-          </Context>,
-        ));
-      });
+      const { container } = render(
+        <Context service="news" isApp>
+          <ArticlePage pageData={pageDataWithSecondaryColumn} />
+        </Context>,
+      );
+
       expect(
         container.querySelector(`div[data-testid="top-stories"]`),
       ).toBeNull();
       expect(container.querySelector(`div[data-testid="features"]`)).toBeNull();
     });
 
-    it('should show ads when enabled', async () => {
-      [
-        [true, true],
-        [true, false],
-        [false, true],
-        [false, false],
-      ].forEach(([adsToggledOn, showAdsBasedOnLocation]) => {
-        let container;
-        act(() => {
-          ({ container } = render(
-            <Context
-              service="pidgin"
-              adsToggledOn={adsToggledOn}
-              showAdsBasedOnLocation={showAdsBasedOnLocation}
-            >
-              <ArticlePage pageData={articleDataPidginWithAds} />
-            </Context>,
-          ));
-        });
-        const shouldShowAds = adsToggledOn && showAdsBasedOnLocation;
-        const adElement = container.querySelector('[data-e2e="advertisement"]');
+    it('should remove the most read section', async () => {
+      const { container } = render(
+        <Context service="pidgin" isApp>
+          <ArticlePage pageData={articleDataPidgin} />
+        </Context>,
+        { service: 'pidgin' },
+      );
 
-        if (shouldShowAds) {
-          expect(adElement).toBeInTheDocument();
-        } else {
-          expect(adElement).not.toBeInTheDocument();
-        }
+      await waitFor(() => {
+        const mostReadSection = container.querySelector('#Most-Read');
+        expect(mostReadSection).toBeNull();
       });
-    });
-
-    it('should render WSOJ recommendations when passed', async () => {
-      suppressPropWarnings(['optimizely', 'ForwardRef', 'null']);
-
-      const pageDataWithSecondaryColumn = {
-        ...articleDataNews,
-        recommendations: sampleRecommendations,
-      };
-      let getByText;
-      await act(async () => {
-        ({ getByText } = render(
-          <Context service="turkce">
-            <ArticlePage pageData={pageDataWithSecondaryColumn} />
-          </Context>,
-        ));
-      });
-      expect(
-        getByText('SAMPLE RECOMMENDATION 1 - HEADLINE'),
-      ).toBeInTheDocument();
     });
   });
 
@@ -512,6 +462,7 @@ describe('Article Page', () => {
         >
           <ArticlePage pageData={articleDataPidginWithAds} />
         </Context>,
+        { service: 'pidgin' },
       );
 
       const shouldShowAds = adsToggledOn && showAdsBasedOnLocation;
@@ -525,6 +476,7 @@ describe('Article Page', () => {
   });
 
   it('should render WSOJ recommendations when passed', async () => {
+    suppressPropWarnings(['optimizely', 'ForwardRef', 'null']);
     const pageDataWithSecondaryColumn = {
       ...articleDataNews,
       recommendations: sampleRecommendations,
@@ -533,12 +485,15 @@ describe('Article Page', () => {
       <Context service="turkce">
         <ArticlePage pageData={pageDataWithSecondaryColumn} />
       </Context>,
+      { service: 'turkce' },
     );
 
     expect(getByText('SAMPLE RECOMMENDATION 1 - HEADLINE')).toBeInTheDocument();
   });
 
   it('should render PodcastPromos when passed', async () => {
+    suppressPropWarnings(['pageData.promo.id', 'ArticlePage', 'undefined']);
+    suppressPropWarnings(['pageData.promo.id', 'SecondaryColumn', 'undefined']);
     const pageDataWithSecondaryColumn = {
       ...articleDataNews,
       promo: promoSample,
@@ -547,6 +502,7 @@ describe('Article Page', () => {
       <Context service="russian" promo>
         <ArticlePage pageData={pageDataWithSecondaryColumn} />
       </Context>,
+      { service: 'russian' },
     );
 
     expect(getByText('Что это было?')).toBeInTheDocument();
