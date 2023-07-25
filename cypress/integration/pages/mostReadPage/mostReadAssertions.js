@@ -53,9 +53,9 @@ export const crossPlatform = ({ service, variant }) => {
 };
 
 export const ampOnly = ({ service, variant }) => {
-  // news, newsround, and sport are services we serve on amp, but do not want to run most read tests on
-  if (!ampOnlyServices.includes(service)) {
-    const serviceID = config[service]?.name || service;
+  const serviceID = config[service]?.name || service;
+
+  if (!MOST_READ_EXCLUDED_SERVICES.includes(serviceID)) {
     const {
       mostRead: { hasMostRead },
     } = appConfig[serviceID][variant];
