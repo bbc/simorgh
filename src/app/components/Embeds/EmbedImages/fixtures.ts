@@ -498,8 +498,7 @@ const createEmbedImagesFixture = ({
               model: {
                 height: 852,
                 width: 920,
-                locator:
-                  '/idt2/793f648b-b17f-489a-a473-9e5a71f12684/image/460',
+                locator: '/idt2/793f648b-b17f-489a-a473-9e5a71f12684/image/460',
                 href: null,
                 originCode: 'idt2',
                 copyrightHolder: 'bbc',
@@ -547,8 +546,7 @@ const createEmbedImagesFixture = ({
               model: {
                 height: 1054,
                 width: 1280,
-                locator:
-                  '/idt2/793f648b-b17f-489a-a473-9e5a71f12684/image/640',
+                locator: '/idt2/793f648b-b17f-489a-a473-9e5a71f12684/image/640',
                 href: null,
                 originCode: 'idt2',
                 copyrightHolder: 'bbc',
