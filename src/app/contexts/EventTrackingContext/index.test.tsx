@@ -220,7 +220,7 @@ describe('Error handling', () => {
 
     expect(trackingData).toEqual({});
     expect(errorMessage).toBeUndefined();
-    expect(console.error).toHaveBeenCalledWith(
+    expect(console.warn).toHaveBeenCalledWith(
       expect.stringContaining(
         "ATI Event Tracking Error: Could not get the page type's campaign name",
       ),
