@@ -42,6 +42,8 @@ import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 import ScrollablePromo from '#components/ScrollablePromo';
 import CpsRecommendations from '#containers/CpsRecommendations';
+import EmbedImages from '../../components/Embeds/EmbedImages';
+import EmbedHtml from '../../components/Embeds/EmbedHtml';
 import MostRead from '../../components/MostRead';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
@@ -142,6 +144,8 @@ const ArticlePage = ({ pageData }) => {
       hasByline ? null : <Timestamp {...props} popOut={false} />,
     social: SocialEmbedContainer,
     embed: props => (isUgcUploader ? <Uploader {...props} /> : null),
+    embedHtml: props => <EmbedHtml {...props} />,
+    embedImages: props => <EmbedImages {...props} />,
     group: gist,
     links: props => <ScrollablePromo {...props} />,
     mpu: props =>
