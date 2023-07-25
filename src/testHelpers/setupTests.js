@@ -80,8 +80,7 @@ console.error = (message, ...rest) => {
       [
         chalk.red.bold(
           `
-${expect.getState().testPath} -> 
-${expect.getState().currentTestName}
+${expect.getState().testPath}: ${expect.getState().currentTestName}
           
 Please fix the following:
 `,
