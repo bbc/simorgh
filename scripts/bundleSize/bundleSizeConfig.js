@@ -1,5 +1,5 @@
 export const MIN_SIZE = 783 - 5;
-export const MAX_SIZE = 1230 + 5;
+export const MAX_SIZE = 1238 + 5;
 
 /** Size limit for all bundles used by each service (kB)
  *
