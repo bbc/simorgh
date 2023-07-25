@@ -13,6 +13,7 @@ import {
   LIVE_PAGE,
 } from '../../../routes/utils/pageTypes';
 import { buildATIUrl, buildATIEventTrackingParams } from '.';
+import * as buildPageATIFunctionImports from './genericPage/buildParams';
 import { RequestContextProps } from '../../../contexts/RequestContext';
 import { ServiceConfig } from '../../../models/types/serviceConfig';
 import { ATIData, PageData } from '../types';
@@ -333,6 +334,45 @@ describe('ATIAnalytics params', () => {
       expect(params).not.toContain('ref=');
     });
 
+    describe('buildPageATIUrl invocation', () => {
+      let buildPageATIUrlSpy: jest.SpyInstance;
+
+      beforeEach(() => {
+        buildPageATIUrlSpy = jest.spyOn(
+          buildPageATIFunctionImports,
+          'buildPageATIUrl',
+        );
+
+        jest.clearAllMocks();
+      });
+
+      it('should invoke buildPageATIUrl for supported page types', () => {
+        buildATIUrl({
+          requestContext: { ...requestContext, pageType: HOME_PAGE },
+          atiData: homePageAnalyticsData,
+          serviceContext,
+        });
+
+        expect(buildPageATIUrlSpy).toHaveBeenCalledWith(
+          expect.objectContaining({
+            requestContext: { ...requestContext, pageType: HOME_PAGE },
+            atiData: homePageAnalyticsData,
+            serviceContext,
+          }),
+        );
+      });
+
+      it('should not invoke buildPageATIUrl for an unsupported page types', () => {
+        buildATIUrl({
+          requestContext: { ...requestContext, pageType: MEDIA_ASSET_PAGE },
+          atiData: homePageAnalyticsData,
+          serviceContext,
+        });
+
+        expect(buildPageATIUrlSpy).not.toHaveBeenCalled();
+      });
+    });
+
     it.each([HOME_PAGE, ERROR_PAGE, LIVE_PAGE])(
       'should return empty object {} because %s page type is not supported',
       pageType => {
@@ -551,6 +591,45 @@ describe('ATIAnalytics params', () => {
         producerId: 'atiAnalyticsProducerId',
         service: 'pidgin',
         statsDestination: 'statsDestination',
+      });
+    });
+
+    describe('buildPageATIParams invocation', () => {
+      let buildPageATIParamsSpy: jest.SpyInstance;
+
+      beforeEach(() => {
+        buildPageATIParamsSpy = jest.spyOn(
+          buildPageATIFunctionImports,
+          'buildPageATIParams',
+        );
+
+        jest.clearAllMocks();
+      });
+
+      it('should invoke buildPageATIParams for supported page types', () => {
+        buildATIEventTrackingParams({
+          requestContext: { ...requestContext, pageType: HOME_PAGE },
+          atiData: homePageAnalyticsData,
+          serviceContext,
+        });
+
+        expect(buildPageATIParamsSpy).toHaveBeenCalledWith(
+          expect.objectContaining({
+            requestContext: { ...requestContext, pageType: HOME_PAGE },
+            atiData: homePageAnalyticsData,
+            serviceContext,
+          }),
+        );
+      });
+
+      it('should not invoke buildPageATIParams for an unsupported page types', () => {
+        buildATIEventTrackingParams({
+          requestContext: { ...requestContext, pageType: MEDIA_ASSET_PAGE },
+          atiData: homePageAnalyticsData,
+          serviceContext,
+        });
+
+        expect(buildPageATIParamsSpy).not.toHaveBeenCalled();
       });
     });
 
