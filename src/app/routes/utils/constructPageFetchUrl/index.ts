@@ -18,6 +18,7 @@ interface UrlConstructParams {
   service: Services;
   variant?: Variants;
   page?: string;
+  isAmp?: boolean;
 }
 
 const removeAmp = (path: string) => path.split('.')[0];
@@ -61,6 +62,7 @@ const constructPageFetchUrl = ({
   service,
   variant,
   page,
+  isAmp,
 }: UrlConstructParams) => {
   const env = getEnvironment(pathname);
   const isLocal = !env || env === 'local';
@@ -80,6 +82,9 @@ const constructPageFetchUrl = ({
     }),
     ...(page && {
       page,
+    }),
+    ...(isAmp && {
+      isAmp,
     }),
   };
 
