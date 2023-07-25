@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { compile } from 'path-to-regexp';
-import clone from 'ramda/src/clone.js';
+import clone from 'ramda/src/clone';
 import { string } from 'prop-types';
 import { useRouteMatch } from 'react-router-dom';
 import ScriptLink from '#psammead/psammead-script-link/src';

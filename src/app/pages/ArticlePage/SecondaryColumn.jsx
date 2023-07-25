@@ -1,7 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 
-import path from 'ramda/src/path.js';
+import path from 'ramda/src/path';
 import { jsx, useTheme } from '@emotion/react';
 
 import { articleDataPropTypes } from '#models/propTypes/article';

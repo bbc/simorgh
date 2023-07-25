@@ -1,8 +1,8 @@
-import lensPath from 'ramda/src/lensPath.js';
-import mergeDeepLeft from 'ramda/src/mergeDeepLeft.js';
-import path from 'ramda/src/path.js';
-import set from 'ramda/src/set.js';
-import view from 'ramda/src/view.js';
+import lensPath from 'ramda/src/lensPath';
+import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
+import path from 'ramda/src/path';
+import set from 'ramda/src/set';
+import view from 'ramda/src/view';
 
 /**
  * Returns a new deeply cloned enriched page data object. `addIndexToBlockGroups` iterates over page data's top level blocks (`pageData.content.model.blocks`) and

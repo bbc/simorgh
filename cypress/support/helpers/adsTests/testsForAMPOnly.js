@@ -1,4 +1,4 @@
-import path from 'ramda/src/path.js';
+import path from 'ramda/src/path';
 import config from '../../config/services';
 
 export default ({ service }) => {

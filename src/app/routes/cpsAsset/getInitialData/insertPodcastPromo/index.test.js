@@ -1,7 +1,7 @@
-import pipe from 'ramda/src/pipe.js';
-import groupBy from 'ramda/src/groupBy.js';
-import path from 'ramda/src/path.js';
-import pathEq from 'ramda/src/pathEq.js';
+import pipe from 'ramda/src/pipe';
+import groupBy from 'ramda/src/groupBy';
+import path from 'ramda/src/path';
+import pathEq from 'ramda/src/pathEq';
 import transformer from '.';
 
 const buildPageFixture = blocks => ({

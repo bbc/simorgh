@@ -10,14 +10,13 @@ import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
 import { node } from 'prop-types';
-import path from 'ramda/src/path.js';
-import pathOr from 'ramda/src/pathOr.js';
+import path from 'ramda/src/path';
+import pathOr from 'ramda/src/pathOr';
 import { GelPageGrid, GridItemLarge } from '#components/Grid';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
 import headings from '#containers/Headings';
 import Timestamp from '#containers/ArticleTimestamp';
-import disclaimer from '#containers/Disclaimer';
 import text from '#containers/Text';
 import Image from '#containers/Image';
 import MediaPlayer from '#containers/CpsAssetMediaPlayer';
@@ -38,6 +37,7 @@ import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import LinkedData from '../../components/LinkedData';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import Disclaimer from '../../components/Disclaimer';
 
 const PhotoGalleryPageGrid = ({ children, ...props }) => (
   <GelPageGrid
@@ -121,7 +121,7 @@ const PhotoGalleryPage = ({ pageData }) => {
       ) : null,
     video: props => <MediaPlayer {...props} assetUri={assetUri} />,
     version: props => <MediaPlayer {...props} assetUri={assetUri} />,
-    disclaimer,
+    disclaimer: props => <Disclaimer {...props} />,
   };
 
   const StyledPhotoGalleryPageGrid = styled(PhotoGalleryPageGrid)`

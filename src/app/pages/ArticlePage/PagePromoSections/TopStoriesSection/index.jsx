@@ -2,9 +2,9 @@ import React, { useContext } from 'react';
 import { useTheme } from '@emotion/react';
 import { arrayOf, shape } from 'prop-types';
 import { storyItem } from '#models/propTypes/storyItem';
-import pathOr from 'ramda/src/pathOr.js';
-import path from 'ramda/src/path.js';
-import isEmpty from 'ramda/src/isEmpty.js';
+import pathOr from 'ramda/src/pathOr';
+import path from 'ramda/src/path';
+import isEmpty from 'ramda/src/isEmpty';
 import useViewTracker from '#hooks/useViewTracker';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import {

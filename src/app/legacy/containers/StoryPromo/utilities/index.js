@@ -1,4 +1,4 @@
-import pathOr from 'ramda/src/pathOr.js';
+import pathOr from 'ramda/src/pathOr';
 import {
   MOST_WATCHED_PAGE,
   MEDIA_ASSET_PAGE,

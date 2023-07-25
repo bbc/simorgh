@@ -1,4 +1,4 @@
-import pathOr from 'ramda/src/pathOr.js';
+import pathOr from 'ramda/src/pathOr';
 import nodeLogger from '#lib/logger.node';
 import { MOST_WATCHED_PROCESS_ERROR } from '#lib/logger.const';
 import filterPopularStaleData from '#app/lib/utilities/filterPopularStaleData';

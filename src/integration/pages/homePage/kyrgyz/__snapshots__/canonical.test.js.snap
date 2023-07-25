@@ -108,6 +108,41 @@ exports[`Canonical Home Page Header Navigation link should match text and url 6`
 
 exports[`Canonical Home Page Main heading should match text 1`] = `"BBC News, Кыргыз КызMATы - Башталгыч бет"`;
 
+exports[`Canonical Home Page Most Read has item with rank 1`] = `
+{
+  "text": "АКШ: жаңы президент ким экенин аныктаган штаттар кайсылар?",
+  "url": "/kyrgyz/world-23090100",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 2`] = `
+{
+  "text": "Kyrgyzstanda soz erkindigi buzuluuda",
+  "url": "/kyrgyz/world-23089413",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 3`] = `
+{
+  "text": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 36",
+  "url": "/kyrgyz/kyrgyzstan-23087515",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 4`] = `
+{
+  "text": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 34",
+  "url": "/kyrgyz/kyrgyzstan-23087513",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 5`] = `
+{
+  "text": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 35",
+  "url": "/kyrgyz/kyrgyzstan-23087514",
+}
+`;
+
 exports[`Canonical Home Page Page content First item in the first curation is the correct headline 1`] = `"Аудио, Headline  edited in promo itself test May 2023"`;
 
 exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 1`] = `
@@ -586,44 +621,9 @@ exports[`Canonical Home Page SEO Twitter title 1`] = `"Кабарлар, акы�
 
 exports[`Canonical Home Page Timestamp should match text and date 1`] = `
 {
-  "date": "2023-03-06",
-  "text": "6 март 2023",
+  "date": "2016-11-09",
+  "text": "Акыркы жаңылоо: 9 ноябрь 2016",
 }
 `;
 
 exports[`Canonical Home Page messageBanner has a link 1`] = `"https://www.bbc.com/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=4"`;
-
-exports[`Canonical Home Page mostRead has multiple items 1`] = `
-{
-  "text": "АКШ: жаңы президент ким экенин аныктаган штаттар кайсылар?",
-  "url": "/kyrgyz/world-23090100",
-}
-`;
-
-exports[`Canonical Home Page mostRead has multiple items 2`] = `
-{
-  "text": "Kyrgyzstanda soz erkindigi buzuluuda",
-  "url": "/kyrgyz/world-23089413",
-}
-`;
-
-exports[`Canonical Home Page mostRead has multiple items 3`] = `
-{
-  "text": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 36",
-  "url": "/kyrgyz/kyrgyzstan-23087515",
-}
-`;
-
-exports[`Canonical Home Page mostRead has multiple items 4`] = `
-{
-  "text": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 34",
-  "url": "/kyrgyz/kyrgyzstan-23087513",
-}
-`;
-
-exports[`Canonical Home Page mostRead has multiple items 5`] = `
-{
-  "text": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 35",
-  "url": "/kyrgyz/kyrgyzstan-23087514",
-}
-`;

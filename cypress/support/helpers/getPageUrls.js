@@ -1,6 +1,6 @@
 import path from 'ramda/src/path.js';
 
-global.Cypress = { env: () => {} }; // Fake Cypress.env
+global.Cypress = { env: () => { } }; // Fake Cypress.env
 // eslint-disable-next-line import/first
 import services from '../config/services';
 

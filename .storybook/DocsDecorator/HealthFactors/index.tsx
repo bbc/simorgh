@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import path from 'ramda/src/path.js';
+import path from 'ramda/src/path';
 import moment from 'moment';
 import Text from '../../../src/app/components/Text';
 import { Recommend, Warning, Activity } from './Icons';

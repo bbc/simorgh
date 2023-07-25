@@ -1,7 +1,7 @@
 import React, { Fragment, useContext } from 'react';
 import { string, node } from 'prop-types';
-import path from 'ramda/src/path.js';
-import findIndex from 'ramda/src/findIndex.js';
+import path from 'ramda/src/path';
+import findIndex from 'ramda/src/findIndex';
 import styled from '@emotion/styled';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
 import { frontPageDataPropTypes } from '#models/propTypes/frontPage';

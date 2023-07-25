@@ -10,14 +10,13 @@ import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
 } from '#psammead/gel-foundations/src/breakpoints';
-import path from 'ramda/src/path.js';
-import pathOr from 'ramda/src/pathOr.js';
+import path from 'ramda/src/path';
+import pathOr from 'ramda/src/pathOr';
 
 import Grid, { GelPageGrid, GridItemLarge } from '#components/Grid';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
 import headings from '#containers/Headings';
-import Disclaimer from '#containers/Disclaimer';
 import Timestamp from '#containers/ArticleTimestamp';
 import text from '#containers/Text';
 import Image from '#containers/Image';
@@ -55,6 +54,7 @@ import LinkedData from '../../components/LinkedData';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import categoryType from './categoryMap/index';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
+import Disclaimer from '../../components/Disclaimer';
 import styles from './StoryPage.styles';
 
 const MpuContainer = styled(AdContainer)`

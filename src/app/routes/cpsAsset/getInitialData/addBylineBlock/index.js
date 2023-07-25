@@ -1,5 +1,5 @@
-import pathOr from 'ramda/src/pathOr.js';
-import path from 'ramda/src/path.js';
+import pathOr from 'ramda/src/pathOr';
+import path from 'ramda/src/path';
 import {
   STORY_PAGE,
   CORRESPONDENT_STORY_PAGE,

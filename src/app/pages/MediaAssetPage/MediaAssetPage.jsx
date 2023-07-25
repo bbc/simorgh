@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import path from 'ramda/src/path.js';
+import path from 'ramda/src/path';
 import styled from '@emotion/styled';
 import {
   GEL_SPACING_DBL,
@@ -11,11 +11,10 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
-import pathOr from 'ramda/src/pathOr.js';
-import last from 'ramda/src/last.js';
+import pathOr from 'ramda/src/pathOr';
+import last from 'ramda/src/last';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
-import disclaimer from '#containers/Disclaimer';
 import headings from '#containers/Headings';
 import Timestamp from '#containers/ArticleTimestamp';
 import text from '#containers/Text';
@@ -41,6 +40,7 @@ import LinkedData from '../../components/LinkedData';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 import MediaMessage from './MediaMessage';
+import Disclaimer from '../../components/Disclaimer';
 
 const StyledTimestamp = styled(Timestamp)`
   @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
@@ -161,7 +161,7 @@ const MediaAssetPage = ({ pageData }) => {
       />
     ),
     unavailableMedia: MediaMessage,
-    disclaimer,
+    disclaimer: props => <Disclaimer {...props} />,
   };
 
   const StyledMediaAssetPageGrid = styled(MediaAssetPageGrid)`

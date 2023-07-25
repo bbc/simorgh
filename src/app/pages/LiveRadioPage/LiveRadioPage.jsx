@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { string, shape } from 'prop-types';
 import { Headline } from '#psammead/psammead-headings/src';
-import pathOr from 'ramda/src/pathOr.js';
+import pathOr from 'ramda/src/pathOr';
 import Paragraph from '#psammead/psammead-paragraph/src';
 import { useLocation } from 'react-router-dom';
 import RadioScheduleContainer from '#containers/RadioSchedule';

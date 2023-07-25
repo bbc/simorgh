@@ -3,7 +3,7 @@
 import { useContext } from 'react';
 import { css, jsx, Theme } from '@emotion/react';
 import moment from 'moment';
-import path from 'ramda/src/path.js';
+import path from 'ramda/src/path';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 import formatDuration from '../../../lib/utilities/formatDuration';
 import Promo from '../../../legacy/components/Promo';
@@ -119,7 +119,7 @@ const HiearchicalGrid = ({ promos, headingLevel }: CurationGridProps) => {
                   {promo.description}
                 </Promo.Body>
                 <Promo.Timestamp className="promo-timestamp">
-                  {promo.firstPublished}
+                  {promo.lastPublished}
                 </Promo.Timestamp>
               </Promo>
             </li>

@@ -2,7 +2,7 @@
 import React from 'react';
 import { StaticRouter } from 'react-router-dom';
 import { render } from '@testing-library/react';
-import assocPath from 'ramda/src/assocPath.js';
+import assocPath from 'ramda/src/assocPath';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 

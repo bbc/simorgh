@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import path from 'ramda/src/path.js';
+import path from 'ramda/src/path';
 import Lazyload from 'react-lazyload';
 import {
   AmpSocialEmbed,

@@ -166,6 +166,76 @@ exports[`Canonical Articles Image should match snapshot 1`] = `
 
 exports[`Canonical Articles Main heading should match text 1`] = `"Royal wedding flowers given to Hackney hospice"`;
 
+exports[`Canonical Articles Most Read has item with rank 1`] = `
+{
+  "text": "Why the oxygen timeline on sub may not be so fixed",
+  "url": "/news/world-us-canada-65981277",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 2`] = `
+{
+  "text": "MasterChef contestant jailed for child abuse images",
+  "url": "/news/uk-wales-65986742",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 3`] = `
+{
+  "text": "Musk and Zuckerberg agree to hold cage fight",
+  "url": "/news/business-65981876",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 4`] = `
+{
+  "text": "Cindy Beale returns to EastEnders after 25 years",
+  "url": "/news/entertainment-arts-65986136",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 5`] = `
+{
+  "text": "Mosquito-borne diseases risk increasing in Europe",
+  "url": "/news/health-65985838",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 6`] = `
+{
+  "text": "Teenager guilty of murdering boy at train station",
+  "url": "/news/uk-scotland-65987986",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 7`] = `
+{
+  "text": "At least 30 migrants feared dead off Canary Islands",
+  "url": "/news/world-65983001",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 8`] = `
+{
+  "text": "Bank boss warns interest rate hike hard for many",
+  "url": "/news/business-65982981",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 9`] = `
+{
+  "text": "Ukraine strikes bridge to Crimea, says Russia",
+  "url": "/news/world-europe-65982817",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 10`] = `
+{
+  "text": "The woman who wants to end abortion in America",
+  "url": "/news/world-us-canada-65923956",
+}
+`;
+
 exports[`Canonical Articles SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,

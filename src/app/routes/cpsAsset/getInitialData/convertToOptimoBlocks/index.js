@@ -1,7 +1,7 @@
-import pathOr from 'ramda/src/pathOr.js';
-import path from 'ramda/src/path.js';
-import pick from 'ramda/src/pick.js';
-import identity from 'ramda/src/identity.js';
+import pathOr from 'ramda/src/pathOr';
+import path from 'ramda/src/path';
+import pick from 'ramda/src/pick';
+import identity from 'ramda/src/identity';
 import { UNSUPPORTED_BLOCK_TYPE } from '#lib/logger.const';
 import clone from '../../../utils/jsonClone';
 import paragraph from './blocks/paragraph';

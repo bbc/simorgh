@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import is from 'ramda/src/is.js';
+import is from 'ramda/src/is';
 
 const validateInputs = (n, predicate, inputArray) => {
   if (!(Number.isInteger(n) && n > 0)) {

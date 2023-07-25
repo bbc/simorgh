@@ -1,6 +1,6 @@
-import assocPath from 'ramda/src/assocPath.js';
-import path from 'ramda/src/path.js';
-import hasPath from 'ramda/src/hasPath.js';
+import assocPath from 'ramda/src/assocPath';
+import path from 'ramda/src/path';
+import hasPath from 'ramda/src/hasPath';
 
 const hasCounterName = hasPath(['metadata', 'analyticsLabels', 'counterName']);
 

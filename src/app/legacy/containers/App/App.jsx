@@ -2,9 +2,9 @@
 import { useEffect, useLayoutEffect, useState, useRef } from 'react';
 import { renderRoutes } from 'react-router-config';
 import { withRouter } from 'react-router';
-import pick from 'ramda/src/pick.js';
-import mergeAll from 'ramda/src/mergeAll.js';
-import path from 'ramda/src/path.js';
+import pick from 'ramda/src/pick';
+import mergeAll from 'ramda/src/mergeAll';
+import path from 'ramda/src/path';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
 import getToggles from '#lib/utilities/getToggles';
 import routes from '#app/routes';

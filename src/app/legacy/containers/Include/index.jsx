@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { string, bool, number } from 'prop-types';
-import pathOr from 'ramda/src/pathOr.js';
+import pathOr from 'ramda/src/pathOr';
 
 import EmbedError from '#psammead/psammead-embed-error/src';
 import { RequestContext } from '#contexts/RequestContext';

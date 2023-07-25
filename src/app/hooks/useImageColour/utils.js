@@ -1,4 +1,4 @@
-import is from 'ramda/src/is.js';
+import is from 'ramda/src/is';
 
 // https://stackoverflow.com/a/5624139
 export const hexToRgb = hex => {

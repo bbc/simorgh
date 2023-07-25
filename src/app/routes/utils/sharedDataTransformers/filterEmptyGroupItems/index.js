@@ -1,4 +1,4 @@
-import pathOr from 'ramda/src/pathOr.js';
+import pathOr from 'ramda/src/pathOr';
 
 const filterEmptyGroupItems = jsonRaw => {
   const json = jsonRaw;

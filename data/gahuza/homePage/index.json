@@ -360,10 +360,11 @@
       }
     ],
     "metadata": {
-      "analytics": {
+      "atiAnalytics": {
         "contentId": "urn:bbc:tipo:topic:c897lqqzkgkt",
         "contentType": "index-home",
-        "pageIdentifier": "gahuza.page"
+        "pageIdentifier": "gahuza.page",
+        "pageTitle": "BBC News Gahuza"
       }
     }
   },

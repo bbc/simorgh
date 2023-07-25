@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import path from 'ramda/src/path.js';
-import is from 'ramda/src/is.js';
+import path from 'ramda/src/path';
+import is from 'ramda/src/is';
 import styled from '@emotion/styled';
 import { shape, string, number, bool, func, node } from 'prop-types';
 import { GEL_SPACING_TRPL } from '#psammead/gel-foundations/src/spacings';
@@ -9,7 +9,7 @@ import {
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
 } from '#psammead/gel-foundations/src/breakpoints';
 import { useLocation } from 'react-router-dom';
-import pathOr from 'ramda/src/pathOr.js';
+import pathOr from 'ramda/src/pathOr';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import Grid, { GelPageGrid } from '#components/Grid';
 import { RequestContext } from '#contexts/RequestContext';

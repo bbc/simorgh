@@ -1,5 +1,5 @@
-import pick from 'ramda/src/pick.js';
-import path from 'ramda/src/path.js';
+import pick from 'ramda/src/pick';
+import path from 'ramda/src/path';
 
 import { blockContainingText } from '#app/models/blocks';
 import nodeLogger from '#lib/logger.node';

@@ -1,4 +1,4 @@
-import path from 'ramda/src/path.js';
+import path from 'ramda/src/path';
 
 const getAssetUri = pageData =>
   path(['metadata', 'locators', 'assetUri'], pageData);
