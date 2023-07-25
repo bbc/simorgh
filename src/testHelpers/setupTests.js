@@ -79,7 +79,12 @@ console.error = (message, ...rest) => {
     throw new Error(
       [
         chalk.red.bold(
-          'Test failed because a React warning was detected. Please fix the following:',
+          `
+${expect.getState().testPath} -> 
+${expect.getState().currentTestName}
+          
+Please fix the following:
+`,
         ),
         chalk.red(formattedMessage),
       ].join('\n'),
