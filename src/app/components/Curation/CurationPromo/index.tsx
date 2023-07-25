@@ -12,7 +12,7 @@ import { Promo as CurationPromoProps } from '../types';
 const CurationPromo = ({
   id,
   title,
-  firstPublished,
+  lastPublished,
   imageUrl,
   imageAlt,
   lazy,
@@ -74,7 +74,7 @@ const CurationPromo = ({
           </Promo.A>
         )}
       </Promo.Heading>
-      <Promo.Timestamp>{firstPublished}</Promo.Timestamp>
+      <Promo.Timestamp>{lastPublished}</Promo.Timestamp>
     </Promo>
   );
 };

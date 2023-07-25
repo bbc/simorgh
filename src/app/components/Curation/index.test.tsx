@@ -3,7 +3,7 @@ import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import fixture from '../../../../data/pidgin/topics/c95y35941vrt.json';
 import mundoFixture from '../../../../data/mundo/topics/c1en6xwmpkvt.json';
 import kyrgyzHomePage from '../../../../data/kyrgyz/homePage/index.json';
-import pidginMostRead from '../../../../data/pidgin/mostRead/index.json';
+import { data as kyrgyzMostRead } from '../../../../data/kyrgyz/mostRead/index.json';
 import { render } from '../react-testing-library-with-providers';
 import Curation from '.';
 import {
@@ -44,7 +44,7 @@ const components = {
   'most-read': {
     visualStyle: RANKED,
     visualProminence: NORMAL,
-    mostRead: pidginMostRead,
+    mostRead: kyrgyzMostRead,
   },
 };
 

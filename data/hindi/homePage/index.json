@@ -1,94 +1,102 @@
 {
-    "data": {
-      "title": "BBC News हिंदी",
-      "description": "हिंदी में ताज़ा समाचार, ब्रेकिंग न्यूज़, वीडियो, ऑडियो और फ़ीचर. बीबीसी हिंदी डॉटकॉम पर भारत, पाकिस्तान और चीन सहित दुनिया भर की ताज़ा ख़बरें. BBC HINDI for up-to-the-minute news, breaking news, video, audio and feature stories.",
-      "pageType": "home",
-      "curations": [
-        {
-          "summaries": [
-            {
-              "type": "article",
-              "title": "आनंद मोहन के 'अपराध' और बिहार की राजनीति में उनके उतार-चढ़ाव की कहानी",
-              "firstPublished": "2023-04-26T10:37:20.000Z",
-              "link": "https://www.bbc.com/hindi/india-65398572",
-              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/D908/production/_129506555_11.jpg",
-              "description": "कभी पूर्व प्रधानमंत्री चंद्रशेखर के करीब रहे आनंद मोहन 1990 के दशक में बिहार की राजनीति में प्रमुखता से उभरे. एक डीएम की हत्या ने उनके चढ़ते ग्राफ़ को थाम दिया. अब वो फिर चर्चा में हैं.",
-              "imageAlt": "आनंद मोहन",
-              "id": "f1a17d16-866e-433e-9f30-4de334eadd76"
-            },
-            {
-              "type": "article",
-              "title": "राजस्थानः दलित लड़कियों का घोड़ी पर बैठना दलितों को ही गवारा नहीं",
-              "firstPublished": "2023-04-26T03:37:25.000Z",
-              "link": "https://www.bbc.com/hindi/india-65388279",
-              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/17E1C/production/_129502879_img-20230422-wa0062.jpg",
-              "description": "बाड़मेर के मेली गांव में शादी से पहले लड़कियों को पहली बार घोड़ी पर बिठाया गया. इसके लिए उनके परिवार पर जुर्माना लगाया गया और न देने पर उन्हें समाज से निकाल दिया गया.",
-              "imageAlt": "राजस्थान",
-              "id": "12971e03-e015-4198-97de-c1547d49c2cd"
-            },
-            {
-              "type": "article",
-              "title": "छत्तीसगढ़ में माओवादी हमला, 10 जवानों समेत 11 की मौत",
-              "firstPublished": "2023-04-26T10:42:08.000Z",
-              "link": "https://www.bbc.com/hindi/india-65398579",
-              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/15162/production/_129507368_e16697cc-47c8-49a5-91f9-e56d6b416ba4.jpg",
-              "description": "पुलिस के मुताबिक दंतेवाड़ा के अरनपुर इलाके में संदिग्ध माओवादियों ने आईईडी से हमला किया. गृह मंत्री अमित शाह ने मुख्यमंत्री भूपेश बघेल से घटना की जानकारी ली है.",
-              "imageAlt": "घटनास्थल की तस्वीर",
-              "id": "cd8aa17a-c7fa-479a-832b-869803de3074"
-            }
-          ],
-          "activePage": 1,
-          "pageCount": 1,
-          "curationId": "urn:bbc:tipo:list:c5c30d41-8bb5-4681-8cd3-0d9231d9034a",
-          "curationType": "tipo-curation",
-          "position": 0,
-          "title": "Top Stories",
-          "visualProminence": "HIGH",
-          "visualStyle": "COLLECTION"
-        },
-        {
-          "summaries": [
-            {
-              "type": "article",
-              "title": "पॉडकास्ट",
-              "firstPublished": "2022-06-16T09:10:08.000Z",
-              "link": "https://www.bbc.com/hindi/institutional-61824775",
-              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1652D/production/_125873419_bsp_hindi.png",
-              "description": "बीबीसी हिंदी के पॉडकास्ट",
-              "imageAlt": "बात सरहद पार",
-              "id": "e7859d46-3530-483f-80b3-9c4b9ec329f2"
-            },
-            {
-              "type": "article",
-              "title": "करौली दंगे का ख़ौफ़ आज भी लोगों के ज़ेहन में ज़िंदा है: ग्राउंड रिपोर्ट",
-              "firstPublished": "2023-04-01T09:22:09.000Z",
-              "link": "https://www.bbc.com/hindi/india-65144626",
-              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/149C8/production/_129242448_kotia.png",
-              "description": "बीते साल करौली में हुए दंगे ने राजस्थान जैसे शांत माने जाने वाले प्रदेश को देशभर में चर्चाओं में ला दिया था. एक साल बाद भी यहां दंगे के दाग़ मिटाने के प्रयास किए जा रहे हैं.",
-              "imageAlt": "सुशीला नेमिचंद कोटिया",
-              "id": "f8d70bf5-be51-47d2-bf4e-b1e5844e11ba"
-            },
-            {
-              "type": "article",
-              "title": "आईपीएल 2023 के पहले मैच में गुजरात टाइटंस की चेन्नई सुपर किंग्स पर जीत",
-              "firstPublished": "2023-03-31T16:08:00.000Z",
-              "link": "https://www.bbc.com/hindi/sport-65142107",
-              "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/2259/production/_129239780_shubman_gill_ipl2023_ani.jpg",
-              "description": "ऋतुराज गायकवाड़ के 92 रनों की बदौलत चेन्नई सुपर किंग्स ने गुजरात टाइटंस के सामने जीत के लिए 179 रनों का लक्ष्य रखा था.",
-              "imageAlt": "शुभमन गिल",
-              "id": "de320fb1-2d32-470e-9c22-ac0b588b16f9"
-            }
-          ],
-          "activePage": 1,
-          "pageCount": 1,
-          "curationId": "urn:bbc:tipo:list:907e1c33-e9dc-4b9f-b6f2-6615e886bf74",
-          "curationType": "tipo-curation",
-          "position": 1,
-          "title": "ज़रूर पढ़ें",
-          "visualProminence": "HIGH"
-        }
-      ]
-    },
-    "contentType": "application/json; charset=utf-8",
-    "dataSource": "Data is from Live TIPO page"
-  }
+  "data": {
+    "title": "BBC News हिंदी",
+    "description": "हिंदी में ताज़ा समाचार, ब्रेकिंग न्यूज़, वीडियो, ऑडियो और फ़ीचर. बीबीसी हिंदी डॉटकॉम पर भारत, पाकिस्तान और चीन सहित दुनिया भर की ताज़ा ख़बरें. BBC HINDI for up-to-the-minute news, breaking news, video, audio and feature stories.",
+    "pageType": "home",
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "आनंद मोहन के 'अपराध' और बिहार की राजनीति में उनके उतार-चढ़ाव की कहानी",
+            "firstPublished": "2023-04-26T10:37:20.000Z",
+            "link": "https://www.bbc.com/hindi/india-65398572",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/D908/production/_129506555_11.jpg",
+            "description": "कभी पूर्व प्रधानमंत्री चंद्रशेखर के करीब रहे आनंद मोहन 1990 के दशक में बिहार की राजनीति में प्रमुखता से उभरे. एक डीएम की हत्या ने उनके चढ़ते ग्राफ़ को थाम दिया. अब वो फिर चर्चा में हैं.",
+            "imageAlt": "आनंद मोहन",
+            "id": "f1a17d16-866e-433e-9f30-4de334eadd76"
+          },
+          {
+            "type": "article",
+            "title": "राजस्थानः दलित लड़कियों का घोड़ी पर बैठना दलितों को ही गवारा नहीं",
+            "firstPublished": "2023-04-26T03:37:25.000Z",
+            "link": "https://www.bbc.com/hindi/india-65388279",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/17E1C/production/_129502879_img-20230422-wa0062.jpg",
+            "description": "बाड़मेर के मेली गांव में शादी से पहले लड़कियों को पहली बार घोड़ी पर बिठाया गया. इसके लिए उनके परिवार पर जुर्माना लगाया गया और न देने पर उन्हें समाज से निकाल दिया गया.",
+            "imageAlt": "राजस्थान",
+            "id": "12971e03-e015-4198-97de-c1547d49c2cd"
+          },
+          {
+            "type": "article",
+            "title": "छत्तीसगढ़ में माओवादी हमला, 10 जवानों समेत 11 की मौत",
+            "firstPublished": "2023-04-26T10:42:08.000Z",
+            "link": "https://www.bbc.com/hindi/india-65398579",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/15162/production/_129507368_e16697cc-47c8-49a5-91f9-e56d6b416ba4.jpg",
+            "description": "पुलिस के मुताबिक दंतेवाड़ा के अरनपुर इलाके में संदिग्ध माओवादियों ने आईईडी से हमला किया. गृह मंत्री अमित शाह ने मुख्यमंत्री भूपेश बघेल से घटना की जानकारी ली है.",
+            "imageAlt": "घटनास्थल की तस्वीर",
+            "id": "cd8aa17a-c7fa-479a-832b-869803de3074"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:c5c30d41-8bb5-4681-8cd3-0d9231d9034a",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "title": "Top Stories",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "पॉडकास्ट",
+            "firstPublished": "2022-06-16T09:10:08.000Z",
+            "link": "https://www.bbc.com/hindi/institutional-61824775",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1652D/production/_125873419_bsp_hindi.png",
+            "description": "बीबीसी हिंदी के पॉडकास्ट",
+            "imageAlt": "बात सरहद पार",
+            "id": "e7859d46-3530-483f-80b3-9c4b9ec329f2"
+          },
+          {
+            "type": "article",
+            "title": "करौली दंगे का ख़ौफ़ आज भी लोगों के ज़ेहन में ज़िंदा है: ग्राउंड रिपोर्ट",
+            "firstPublished": "2023-04-01T09:22:09.000Z",
+            "link": "https://www.bbc.com/hindi/india-65144626",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/149C8/production/_129242448_kotia.png",
+            "description": "बीते साल करौली में हुए दंगे ने राजस्थान जैसे शांत माने जाने वाले प्रदेश को देशभर में चर्चाओं में ला दिया था. एक साल बाद भी यहां दंगे के दाग़ मिटाने के प्रयास किए जा रहे हैं.",
+            "imageAlt": "सुशीला नेमिचंद कोटिया",
+            "id": "f8d70bf5-be51-47d2-bf4e-b1e5844e11ba"
+          },
+          {
+            "type": "article",
+            "title": "आईपीएल 2023 के पहले मैच में गुजरात टाइटंस की चेन्नई सुपर किंग्स पर जीत",
+            "firstPublished": "2023-03-31T16:08:00.000Z",
+            "link": "https://www.bbc.com/hindi/sport-65142107",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/2259/production/_129239780_shubman_gill_ipl2023_ani.jpg",
+            "description": "ऋतुराज गायकवाड़ के 92 रनों की बदौलत चेन्नई सुपर किंग्स ने गुजरात टाइटंस के सामने जीत के लिए 179 रनों का लक्ष्य रखा था.",
+            "imageAlt": "शुभमन गिल",
+            "id": "de320fb1-2d32-470e-9c22-ac0b588b16f9"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:907e1c33-e9dc-4b9f-b6f2-6615e886bf74",
+        "curationType": "tipo-curation",
+        "position": 1,
+        "title": "ज़रूर पढ़ें",
+        "visualProminence": "HIGH"
+      }
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:cg8nwjjm7vet",
+        "contentType": "index-home",
+        "pageIdentifier": "hindi.page",
+        "pageTitle": "BBC News हिंदी"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8",
+  "dataSource": "Data is from Live TIPO page"
+}

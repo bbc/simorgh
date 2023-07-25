@@ -28,6 +28,7 @@ import {
   buildCpsAssetPageATIParams,
   buildCpsAssetPageATIUrl,
 } from './cpsAssetPage/buildParams';
+import { buildPageATIUrl, buildPageATIParams } from './genericPage/buildParams';
 import {
   buildMostReadATIParams,
   buildMostReadATIUrl,
@@ -46,13 +47,19 @@ import {
 } from './topicPage/buildParams';
 import { RequestContextProps } from '../../../contexts/RequestContext';
 import { ServiceConfig } from '../../../models/types/serviceConfig';
-import { PageData, ATIPageTrackingProps } from '../types';
+import {
+  PageData,
+  ATIPageTrackingProps,
+  ATIConfigurationDetailsProviders,
+} from '../types';
 import { PageTypes } from '../../../models/types/global';
 
 const ARTICLE_MEDIA_ASSET = 'article-media-asset';
 const ARTICLE_PHOTO_GALLERY = 'article-photo-gallery';
 const ARTICLE_CORRESPONDENT_PIECE = 'article-correspondent';
 const ARTICLE_SHORT_FORM_VIDEO = 'article-sfv';
+
+const MIGRATED_PAGE_TYPES: PageTypes[] = [HOME_PAGE];
 
 const noOp = () => {
   return {};
@@ -194,6 +201,9 @@ type PageTypeHandlers = {
   [key in PageTypes]: BuilderFunction;
 };
 
+const isMigrated = (pageType: PageTypes) =>
+  MIGRATED_PAGE_TYPES.includes(pageType);
+
 const createBuilderFactory = (
   requestContext: RequestContextProps,
   pageTypeHandlers: PageTypeHandlers,
@@ -203,28 +213,50 @@ const createBuilderFactory = (
   return pageTypeHandlers[pageType];
 };
 
-export const buildATIUrl = (
-  data: PageData,
-  requestContext: RequestContextProps,
-  serviceContext: ServiceConfig,
-) => {
-  const buildUrl = createBuilderFactory(requestContext, pageTypeUrlBuilders);
+export const buildATIUrl = ({
+  requestContext,
+  serviceContext,
+  data,
+  atiData,
+}: ATIConfigurationDetailsProviders) => {
+  const { pageType } = requestContext;
+  if (atiData && isMigrated(pageType)) {
+    return buildPageATIUrl({ atiData, requestContext, serviceContext });
+  }
 
-  return buildUrl(data, requestContext, serviceContext);
+  if (data) {
+    return createBuilderFactory(requestContext, pageTypeUrlBuilders)(
+      data,
+      requestContext,
+      serviceContext,
+    );
+  }
+
+  return null;
 };
 
-export const buildATIEventTrackingParams = (
-  data: PageData,
-  requestContext: RequestContextProps,
-  serviceContext: ServiceConfig,
-) => {
+export const buildATIEventTrackingParams = ({
+  requestContext,
+  serviceContext,
+  data,
+  atiData,
+}: ATIConfigurationDetailsProviders) => {
   try {
+    const { pageType } = requestContext;
+    if (atiData && isMigrated(pageType)) {
+      return buildPageATIParams({
+        atiData,
+        requestContext,
+        serviceContext,
+      });
+    }
+
     const buildParams = createBuilderFactory(
       requestContext,
       pageTypeParamBuilders,
     );
 
-    return buildParams(data, requestContext, serviceContext);
+    return buildParams(data as PageData, requestContext, serviceContext);
   } catch (error: unknown) {
     const { message } = error as Error;
 

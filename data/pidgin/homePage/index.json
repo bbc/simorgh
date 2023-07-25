@@ -6021,7 +6021,15 @@
           ]
         }
       }
-    ]
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:c93v2kkz841t",
+        "contentType": "index-home",
+        "pageIdentifier": "pidgin.page",
+        "pageTitle": "BBC News Pidgin"
+      }
+    }
   },
   "contentType": "application/json; charset=utf-8",
   "dataSource": "Data is from live TIPO"

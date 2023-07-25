@@ -2,8 +2,6 @@ import React from 'react';
 import fetchMock from 'fetch-mock';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
-import pidginMostReadData from '#data/pidgin/mostRead';
-import serbianLatMostReadData from '#data/serbian/mostRead/lat';
 import { getMostReadEndpoint } from '#lib/utilities/getUrlHelpers/getMostReadUrls';
 import {
   FRONT_PAGE,
@@ -12,6 +10,8 @@ import {
   CORRESPONDENT_STORY_PAGE,
 } from '#app/routes/utils/pageTypes';
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
+import pidginMostReadData from './fixtureData/pidgin-most-read-legacy.json';
+import serbianLatMostReadData from './fixtureData/serbian-lat-most-read-legacy.json';
 import {
   render,
   act,

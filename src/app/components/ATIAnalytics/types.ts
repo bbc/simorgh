@@ -1,4 +1,6 @@
 import { Platforms, Services } from '../../models/types/global';
+import { RequestContextProps } from '../../contexts/RequestContext';
+import { ServiceConfig } from '../../models/types/serviceConfig';
 
 export interface AMPAnalyticsData {
   transport: {
@@ -49,7 +51,8 @@ export interface PageData {
   };
   promo?:
     | { headlines?: { seoHeadline?: string } }
-    | { headlines?: { headline?: string } };
+    | { headlines?: { headline?: string } }
+    | { subType: string; name: string; uri: string; id: string; type: string };
   id?: string;
   language?: string;
   pageIdentifier?: string;
@@ -58,6 +61,28 @@ export interface PageData {
   lastRecordTimeStamp?: string;
   contentType?: string;
   title?: string;
+}
+
+export interface ATIData {
+  contentId?: string;
+  contentType?: string;
+  pageIdentifier?: string;
+  timePublished?: string;
+  timeUpdated?: string;
+  pageTitle?: string;
+}
+
+export interface ATIDataWithContexts {
+  requestContext: RequestContextProps;
+  serviceContext: ServiceConfig;
+  atiData: ATIData;
+}
+
+export interface ATIConfigurationDetailsProviders {
+  requestContext: RequestContextProps;
+  serviceContext: ServiceConfig;
+  data?: PageData;
+  atiData?: ATIData;
 }
 
 export interface ATIAnalyticsProps {
@@ -102,5 +127,6 @@ export interface ATIPageTrackingProps {
 }
 
 export interface ATIProps {
-  data: PageData;
+  data?: PageData;
+  atiData?: ATIData;
 }

@@ -6,7 +6,7 @@ import { render, act } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import serbianFrontPageData from '#data/serbian/frontpage/lat.json';
-import pidginMostReadData from '#data/pidgin/mostRead';
+import { data as pidginMostReadData } from '#data/pidgin/mostRead/index.json';
 import getInitialData from '#app/routes/frontPage/getInitialData';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
@@ -199,7 +199,7 @@ describe('Front Page', () => {
       });
 
       const sections = container.querySelectorAll('section');
-      expect(sections).toHaveLength(8);
+      expect(sections).toHaveLength(9);
       sections.forEach(section => {
         expect(section.getAttribute('role')).toEqual('region');
       });

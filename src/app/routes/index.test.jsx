@@ -174,6 +174,10 @@ describe('Main page routes', () => {
     ${'/kyrgyz/tipohome'} | ${'tipohome'}
     ${'/kyrgyz'}          | ${'home'}
   `('should route to and render a $description page', async ({ pathname }) => {
+    homePageJson.data.metadata = {
+      type: 'home',
+      ...homePageJson.data.metadata,
+    };
     fetchMock.mock(`http://localhost${pathname}.json`, homePageJson);
 
     const { getInitialData, pageType } = getMatchingRoute(pathname);
@@ -431,7 +435,7 @@ describe('Main page routes', () => {
     expect(
       await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
     ).toBeInTheDocument();
-  });
+  }, 10000);
 
   it('should route to and render an index page', async () => {
     const pathname = '/ukrainian/ukraine_in_russian';

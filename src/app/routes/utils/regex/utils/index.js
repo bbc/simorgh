@@ -34,56 +34,22 @@ export const getArticleManifestRegex = services => {
   return `/:service(${serviceRegex})/:local(${articleLocalRegex})/manifest.json`;
 };
 
-const frontPageServicesToMigrate = [
-  'afaanoromoo',
-  'afrique',
-  'amharic',
-  'arabic',
-  'azeri',
-  'bengali',
-  'burmese',
-  'gahuza',
-  'gujarati',
-  'hausa',
-  'hindi',
-  'igbo',
-  'indonesia',
-  'japanese',
-  'korean',
-  'kyrgyz',
-  'marathi',
-  'mundo',
-  'nepali',
-  'pashto',
-  'persian',
-  'pidgin',
-  'portuguese',
-  'punjabi',
-  'russian',
-  'sinhala',
-  'somali',
-  'swahili',
-  'tamil',
-  'telugu',
-  'thai',
-  'tigrinya',
-  'turkce',
-  'ukrainian',
-  'urdu',
-  'uzbek',
-  'vietnamese',
-  'yoruba',
-];
+const homePageServices = ['azeri', 'burmese', 'kyrgyz'];
+
+const servicesWithVariants = ['serbian', 'ukchina', 'zhongwen'];
 
 export const getFrontPageRegex = services => {
-  // if environment is not live then filter out and remove kyrgyz from list of services
-  let frontPageServices = services;
-  if (!isLive()) {
-    frontPageServices = services.filter(
-      service => !frontPageServicesToMigrate.includes(service),
+  let frontPages = services;
+  if (isLive()) {
+    frontPages = services.filter(
+      service => !homePageServices.includes(service),
+    );
+  } else {
+    frontPages = services.filter(service =>
+      servicesWithVariants.includes(service),
     );
   }
-  const serviceRegex = getServiceRegex(frontPageServices);
+  const serviceRegex = getServiceRegex(frontPages);
   return `/:service(${serviceRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
 };
 
@@ -92,12 +58,17 @@ export const getTipoHomeRegex = services => {
   return `/:service(${serviceRegex}):variant(${variantRegex})?/tipohome:amp(${ampRegex})?`;
 };
 
-// eslint-disable-next-line consistent-return
-export const getHomePageRegex = () => {
-  if (!isLive()) {
-    const homePageServiceRegex = getServiceRegex(frontPageServicesToMigrate);
-    return `/:service(${homePageServiceRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
+export const getHomePageRegex = services => {
+  let homePages = services;
+  if (isLive()) {
+    homePages = services.filter(service => homePageServices.includes(service));
+  } else {
+    homePages = services.filter(
+      service => !servicesWithVariants.includes(service),
+    );
   }
+  const homePageServiceRegex = getServiceRegex(homePages);
+  return `/:service(${homePageServiceRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
 };
 
 export const getSwRegex = services => {

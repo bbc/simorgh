@@ -2213,119 +2213,115 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   }
 }
 
-.emotion-548 {
-  padding-top: 0.5rem;
-}
-
 @media (max-width: 14.9375rem) {
-  .emotion-557 {
+  .emotion-553 {
     min-width: 1rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-557 {
+  .emotion-553 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-557 {
+  .emotion-553 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-557 {
+  .emotion-553 {
     min-width: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-557 {
+  .emotion-553 {
     min-width: 2rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-557 {
+    .emotion-553 {
       min-width: 1.5rem;
     }
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-625 {
+  .emotion-605 {
     min-width: 1rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-625 {
+  .emotion-605 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-625 {
+  .emotion-605 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-625 {
+  .emotion-605 {
     min-width: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-625 {
+  .emotion-605 {
     min-width: 2rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-625 {
+    .emotion-605 {
       min-width: 2rem;
     }
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-642 {
+  .emotion-618 {
     min-width: 1rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-642 {
+  .emotion-618 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-642 {
+  .emotion-618 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-642 {
+  .emotion-618 {
     min-width: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-642 {
+  .emotion-618 {
     min-width: 1.5rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-642 {
+    .emotion-618 {
       min-width: 2rem;
     }
   }
@@ -4102,20 +4098,10 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
               >
                 <a
                   class="focusIndicatorDisplayTableCell emotion-546 emotion-547"
-                  href="/persian/world-50317704"
+                  href="https://www.bbc.com/persian/articles/c4n9j7rx27lo"
                 >
-                  توافق با جدایی‌طلبان یمن؛ ایران اعتراض کرد، سازمان ملل استقبال
+                  ایران در آستانه بحران بنزین؛ تابستانی دشوار برای دولت رئیسی در پیش است
                 </a>
-                <div
-                  class="emotion-548 emotion-549"
-                >
-                  <time
-                    class="emotion-36 emotion-37"
-                    datetime="2019-11-06"
-                  >
-                    به روز شده در ۶ نوامبر ۲۰۱۹
-                  </time>
-                </div>
               </div>
             </div>
           </li>
@@ -4128,7 +4114,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
               class="emotion-538 emotion-539"
             >
               <div
-                class="emotion-557 emotion-541"
+                class="emotion-553 emotion-541"
                 dir="rtl"
               >
                 <span
@@ -4143,20 +4129,10 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
               >
                 <a
                   class="focusIndicatorDisplayTableCell emotion-546 emotion-547"
-                  href="/persian/iran-50319870"
+                  href="https://www.bbc.com/persian/articles/cm58lxneyrvo"
                 >
-                  فراخوان آذری جهرمی برای مناظره اینستاگرامی - زرآبادی: در مجلس مناظره کنیم
+                  پرونده حمید نوری؛ وکلای مدافع: نوری فریب خورد
                 </a>
-                <div
-                  class="emotion-548 emotion-549"
-                >
-                  <time
-                    class="emotion-36 emotion-37"
-                    datetime="2019-11-06"
-                  >
-                    به روز شده در ۶ نوامبر ۲۰۱۹
-                  </time>
-                </div>
               </div>
             </div>
           </li>
@@ -4184,20 +4160,10 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
               >
                 <a
                   class="focusIndicatorDisplayTableCell emotion-546 emotion-547"
-                  href="/persian/world-50320610"
+                  href="https://www.bbc.com/persian/articles/cx7e0eexdeeo"
                 >
-                  ترکیه: همسر ابوبکر بغدادی را 'دستگیر کردیم'
+                  اما رادوکانو: گاهی آرزو می‌کنم که ای کاش قهرمان اوپن آمریکا نمی‌شدم
                 </a>
-                <div
-                  class="emotion-548 emotion-549"
-                >
-                  <time
-                    class="emotion-36 emotion-37"
-                    datetime="2019-11-06"
-                  >
-                    به روز شده در ۶ نوامبر ۲۰۱۹
-                  </time>
-                </div>
               </div>
             </div>
           </li>
@@ -4210,7 +4176,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
               class="emotion-538 emotion-539"
             >
               <div
-                class="emotion-557 emotion-541"
+                class="emotion-553 emotion-541"
                 dir="rtl"
               >
                 <span
@@ -4225,20 +4191,10 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
               >
                 <a
                   class="focusIndicatorDisplayTableCell emotion-546 emotion-547"
-                  href="/persian/world-50316456"
+                  href="https://www.bbc.com/persian/articles/cqe0045zrpdo"
                 >
-                  غنی سازی مجدد در فردو: مکرون اقدام ایران را 'عمیقا مایه نگرانی' خواند
+                  ملی‌پوش سابق هلند برای چاقو زدن به فامیلش به ۱۸ ماه حبس محکوم شد
                 </a>
-                <div
-                  class="emotion-548 emotion-549"
-                >
-                  <time
-                    class="emotion-36 emotion-37"
-                    datetime="2019-11-06"
-                  >
-                    به روز شده در ۶ نوامبر ۲۰۱۹
-                  </time>
-                </div>
               </div>
             </div>
           </li>
@@ -4266,20 +4222,10 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
               >
                 <a
                   class="focusIndicatorDisplayTableCell emotion-546 emotion-547"
-                  href="/persian/magazine-50249226"
+                  href="https://www.bbc.com/persian/articles/cjmyylvr1nvo"
                 >
-                  دوازده دلیل حکمرانی حشرات: سوسک می‌تواند دو هفته بدون سر زنده بماند
+                  وزیر خارجه آمریکا در پکن؛ شی: پیشرفت‌هایی در روابط حاصل شده است، بلینکن: رقابت نباید بدل به دشمنی شود
                 </a>
-                <div
-                  class="emotion-548 emotion-549"
-                >
-                  <time
-                    class="emotion-36 emotion-37"
-                    datetime="2019-11-06"
-                  >
-                    به روز شده در ۶ نوامبر ۲۰۱۹
-                  </time>
-                </div>
               </div>
             </div>
           </li>
@@ -4292,7 +4238,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
               class="emotion-538 emotion-539"
             >
               <div
-                class="emotion-625 emotion-541"
+                class="emotion-605 emotion-541"
                 dir="rtl"
               >
                 <span
@@ -4307,20 +4253,10 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
               >
                 <a
                   class="focusIndicatorDisplayTableCell emotion-546 emotion-547"
-                  href="/persian/world-50317700"
+                  href="https://www.bbc.com/persian/articles/cyxgqq1796qo"
                 >
-                  انتخابات ایالتی آمریکا؛ دموکرات‌ها از جمهوری‌خواهان پیش افتادند
+                  سگم سرطان پستان مرا تشخیص داد
                 </a>
-                <div
-                  class="emotion-548 emotion-549"
-                >
-                  <time
-                    class="emotion-36 emotion-37"
-                    datetime="2019-11-06"
-                  >
-                    به روز شده در ۶ نوامبر ۲۰۱۹
-                  </time>
-                </div>
               </div>
             </div>
           </li>
@@ -4333,7 +4269,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
               class="emotion-538 emotion-539"
             >
               <div
-                class="emotion-642 emotion-541"
+                class="emotion-618 emotion-541"
                 dir="rtl"
               >
                 <span
@@ -4348,20 +4284,10 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
               >
                 <a
                   class="focusIndicatorDisplayTableCell emotion-546 emotion-547"
-                  href="/persian/sport-50322486"
+                  href="https://www.bbc.com/persian/articles/cydg800g89yo"
                 >
-                  عراق اردن را به عنوان میزبان بازی با ایران معرفی کرد
+                  لوح ۲۸۰۰ ساله از ایتالیا به عراق بازگردانده شد
                 </a>
-                <div
-                  class="emotion-548 emotion-549"
-                >
-                  <time
-                    class="emotion-36 emotion-37"
-                    datetime="2019-11-06"
-                  >
-                    به روز شده در ۶ نوامبر ۲۰۱۹
-                  </time>
-                </div>
               </div>
             </div>
           </li>
@@ -4374,7 +4300,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
               class="emotion-538 emotion-539"
             >
               <div
-                class="emotion-625 emotion-541"
+                class="emotion-605 emotion-541"
                 dir="rtl"
               >
                 <span
@@ -4389,20 +4315,10 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
               >
                 <a
                   class="focusIndicatorDisplayTableCell emotion-546 emotion-547"
-                  href="/persian/iran-features-50310665"
+                  href="https://www.bbc.com/persian/articles/cgr664ezld5o"
                 >
-                  آیا تهران بازی هسته ای را به هم می‌زند؟
+                  نمایندگان کشورها و نهادها در اجلاس سازمان ملل خواستار پایان یافتن سیاست‌های تبعیض‌آمیز طالبان علیه زنان شدند
                 </a>
-                <div
-                  class="emotion-548 emotion-549"
-                >
-                  <time
-                    class="emotion-36 emotion-37"
-                    datetime="2019-11-06"
-                  >
-                    به روز شده در ۶ نوامبر ۲۰۱۹
-                  </time>
-                </div>
               </div>
             </div>
           </li>
@@ -4415,7 +4331,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
               class="emotion-538 emotion-539"
             >
               <div
-                class="emotion-642 emotion-541"
+                class="emotion-618 emotion-541"
                 dir="rtl"
               >
                 <span
@@ -4430,20 +4346,10 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
               >
                 <a
                   class="focusIndicatorDisplayTableCell emotion-546 emotion-547"
-                  href="/persian/world-50316450"
+                  href="https://www.bbc.com/persian/articles/c9wj7ejl17po"
                 >
-                  آمریکا: دو ایرانی اتهام جمع‌آوری اطلاعات علیه سازمان مجاهدین در خاک آمریکا را پذیرفتند
+                  چرا موبایل داغ می‌کند و چطور آن را خنک نگه داریم؟
                 </a>
-                <div
-                  class="emotion-548 emotion-549"
-                >
-                  <time
-                    class="emotion-36 emotion-37"
-                    datetime="2019-11-06"
-                  >
-                    به روز شده در ۶ نوامبر ۲۰۱۹
-                  </time>
-                </div>
               </div>
             </div>
           </li>
@@ -4456,7 +4362,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
               class="emotion-538 emotion-539"
             >
               <div
-                class="emotion-625 emotion-541"
+                class="emotion-605 emotion-541"
                 dir="rtl"
               >
                 <span
@@ -4471,20 +4377,10 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
               >
                 <a
                   class="focusIndicatorDisplayTableCell emotion-546 emotion-547"
-                  href="/persian/sport-50318030"
+                  href="https://www.bbc.com/persian/articles/c6plvgyz614o"
                 >
-                  فوتبال ایران و عراق؛ ایران: امن است بازی می‌کنیم، فیفا: ناامن است بازی نکنید
+                  هشتگ «داستان_ما_یکیست» در چهلمین سالگرد اعدام ۱۰ زن بهائی در شیراز
                 </a>
-                <div
-                  class="emotion-548 emotion-549"
-                >
-                  <time
-                    class="emotion-36 emotion-37"
-                    datetime="2019-11-06"
-                  >
-                    به روز شده در ۶ نوامبر ۲۰۱۹
-                  </time>
-                </div>
               </div>
             </div>
           </li>

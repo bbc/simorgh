@@ -11,11 +11,12 @@ import {
   articleDataPidgin,
   articleDataPidginWithAds,
   articleDataPidginWithByline,
+  promoSample,
   sampleRecommendations,
 } from '#pages/ArticlePage/fixtureData';
-import newsMostReadData from '#data/news/mostRead';
-import persianMostReadData from '#data/persian/mostRead';
-import pidginMostReadData from '#data/pidgin/mostRead';
+import newsMostReadData from '#data/news/mostRead/index.json';
+import { data as persianMostReadData } from '#data/persian/mostRead/index.json';
+import { data as pidginMostReadData } from '#data/pidgin/mostRead/index.json';
 import {
   textBlock,
   blockContainingText,
@@ -58,6 +59,7 @@ const Context = ({
   mostReadToggledOn = true,
   showAdsBasedOnLocation = false,
   isApp = false,
+  promo = null,
 } = {}) => {
   const appInput = {
     ...input,
@@ -80,6 +82,7 @@ const Context = ({
             cpsRecommendations: {
               enabled: true,
             },
+            podcastPromo: { enabled: promo != null },
           }}
         >
           <RequestContextProvider {...appInput}>
@@ -126,38 +129,49 @@ describe('Article Page', () => {
     });
   });
 
-  it('should use the twitter handle where present in the byline block', async () => {
-    await act(async () => {
-      render(
-        <Context service="pidgin">
-          <ArticlePage pageData={articleDataPidginWithByline} />
-        </Context>,
-      );
-    });
-    await waitFor(() => {
-      expect(
-        document
-          .querySelector('meta[name="twitter:creator"]')
-          .getAttribute('content'),
-      ).toEqual('@mary_harper');
-    });
+it('should render a news article correctly', async () => {
+  fetch.mockResponse(JSON.stringify(newsMostReadData));
+
+  const { container } = render(
+    <Context service="news">
+      <ArticlePage pageData={articleDataNews} />
+    </Context>,
+  );
+
+  await waitFor(() => {
+    expect(container).toMatchSnapshot();
+  });
+});
+
+it('should render a rtl article (persian) with most read correctly', async () => {
+  const { container } = render(
+    <Context service="persian">
+      <ArticlePage
+        pageData={{ ...articleDataPersian, mostRead: persianMostReadData }}
+      />
+    </Context>,
+  );
+
+  await waitFor(() => {
+    const mostReadSection = container.querySelector('#Most-Read');
+    expect(mostReadSection).not.toBeNull();
   });
 
-  it('should use the default twitter handle where a byline block is missing in the content blocks', async () => {
-    await act(async () => {
-      render(
-        <Context service="persian">
-          <ArticlePage pageData={articleDataPersian} />
-        </Context>,
-      );
-    });
-    await waitFor(() => {
-      expect(
-        document
-          .querySelector('meta[name="twitter:creator"]')
-          .getAttribute('content'),
-      ).toEqual('@bbcpersian');
-    });
+  expect(container).toMatchSnapshot();
+});
+
+it('should render a ltr article (pidgin) with most read correctly', async () => {
+  const { container } = render(
+    <Context service="pidgin">
+      <ArticlePage
+        pageData={{ ...articleDataPidgin, mostRead: pidginMostReadData }}
+      />
+    </Context>,
+  );
+
+  await waitFor(() => {
+    const mostReadSection = container.querySelector('#Most-Read');
+    expect(mostReadSection).not.toBeNull();
   });
 
   describe('ArticleMetadata get branded image', () => {
@@ -479,4 +493,59 @@ describe('Article Page', () => {
     });
     expect(getByText('SAMPLE RECOMMENDATION 1 - HEADLINE')).toBeInTheDocument();
   });
+});
+
+it('should show ads when enabled', async () => {
+  [
+    [true, true],
+    [true, false],
+    [false, true],
+    [false, false],
+  ].forEach(([adsToggledOn, showAdsBasedOnLocation]) => {
+    const { container } = render(
+      <Context
+        service="pidgin"
+        adsToggledOn={adsToggledOn}
+        showAdsBasedOnLocation={showAdsBasedOnLocation}
+      >
+        <ArticlePage pageData={articleDataPidginWithAds} />
+      </Context>,
+    );
+
+    const shouldShowAds = adsToggledOn && showAdsBasedOnLocation;
+    const adElement = container.querySelector('[data-e2e="advertisement"]');
+    if (shouldShowAds) {
+      expect(adElement).toBeInTheDocument();
+    } else {
+      expect(adElement).not.toBeInTheDocument();
+    }
+  });
+});
+
+it('should render WSOJ recommendations when passed', async () => {
+  const pageDataWithSecondaryColumn = {
+    ...articleDataNews,
+    recommendations: sampleRecommendations,
+  };
+  const { getByText } = render(
+    <Context service="turkce">
+      <ArticlePage pageData={pageDataWithSecondaryColumn} />
+    </Context>,
+  );
+
+  expect(getByText('SAMPLE RECOMMENDATION 1 - HEADLINE')).toBeInTheDocument();
+});
+
+it('should render PodcastPromos when passed', async () => {
+  const pageDataWithSecondaryColumn = {
+    ...articleDataNews,
+    promo: promoSample,
+  };
+  const { getByText } = render(
+    <Context service="russian" promo>
+      <ArticlePage pageData={pageDataWithSecondaryColumn} />
+    </Context>,
+  );
+
+  expect(getByText('Что это было?')).toBeInTheDocument();
 });

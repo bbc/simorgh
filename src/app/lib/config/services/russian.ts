@@ -299,18 +299,18 @@ export const service: DefaultServiceConfig = {
         href: 'https://www.bbc.com/russian/media-47937790',
       },
       skipLink: {
-        text: 'Пропустить %title% и продолжить чтение.',
-        endTextVisuallyHidden: 'Конец истории %title%',
+        text: 'Пропустить Реклама подкастов и продолжить чтение.',
+        endTextVisuallyHidden: 'Конец истории Реклама подкастов',
       },
     },
     disclaimer: {
-      para1: 'Подпишитесь на нашу рассылку ”',
+      para1: 'Подпишитесь на нашу рассылку «',
       para2: {
         text: 'Контекст',
         url: 'https://www.bbc.com/russian/resources/idt-b34bb7dd-f094-4722-92eb-cf7aff8cc1bc',
         isExternal: false,
       },
-      para3: '”: она поможет вам разобраться в событиях.',
+      para3: '»: она поможет вам разобраться в событиях.',
     },
     radioSchedule: {
       hasRadioSchedule: false,

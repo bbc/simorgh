@@ -89,6 +89,9 @@ console.error = (message, ...rest) => {
   error(message, ...rest);
 };
 
+global.setImmediate =
+  global.setImmediate || ((fn, ...args) => global.setTimeout(fn, 0, ...args));
+
 // eslint-disable-next-line no-console
 console.warn = (message, ...rest) => {
   if (didSuppressWarning(message, ...rest)) return;

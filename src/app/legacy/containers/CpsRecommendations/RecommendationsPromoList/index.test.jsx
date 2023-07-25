@@ -13,7 +13,7 @@ process.env.SIMORGH_BASE_URL = 'http://bbc.com';
 
 const promoItems = path(
   ['relatedContent', 'groups', 0, 'promos'],
-  pidginPageData,
+  pidginPageData.data.article,
 );
 
 const Fixture = () => (

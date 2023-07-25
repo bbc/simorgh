@@ -1009,7 +1009,15 @@
         "title": "Nos partenaires",
         "visualProminence": "NORMAL"
       }
-    ]
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:cjln1ww62p1t",
+        "contentType": "index-home",
+        "pageIdentifier": "afrique.page",
+        "pageTitle": "BBC News Afrique"
+      }
+    }
   },
   "contentType": "application/json; charset=utf-8",
   "dataSource": "data is from TIPO live home page"
