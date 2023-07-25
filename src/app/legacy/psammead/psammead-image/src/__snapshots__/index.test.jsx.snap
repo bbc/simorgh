@@ -26,7 +26,7 @@ exports[`Image - imported as '{ Img }' should render image with custom dimension
 
 <div>
   <img
-    alt="By Elisa Decker, from her series \\"Sidewalk\\""
+    alt="By Elisa Decker, from her series "Sidewalk""
     class="emotion-0 emotion-1"
     height="547"
     sizes="100vw"
@@ -153,7 +153,7 @@ exports[`Image - imported as default 'Image' should render image with custom dim
 
 <div>
   <img
-    alt="By Elisa Decker, from her series \\"Sidewalk\\""
+    alt="By Elisa Decker, from her series "Sidewalk""
     class="emotion-0 emotion-1"
     height="547"
     sizes="100vw"
@@ -280,7 +280,7 @@ exports[`Image - with Fade-in effect' should render image with custom dimensions
 
 <div>
   <img
-    alt="By Elisa Decker, from her series \\"Sidewalk\\""
+    alt="By Elisa Decker, from her series "Sidewalk""
     class="emotion-0 emotion-1"
     height="547"
     sizes="100vw"
