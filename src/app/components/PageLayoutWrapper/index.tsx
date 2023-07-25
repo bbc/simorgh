@@ -22,7 +22,7 @@ import styles from './index.styles';
 
 type Props = {
   pageData: {
-    metadata?: {
+    metadata: {
       type: string;
     };
   };
