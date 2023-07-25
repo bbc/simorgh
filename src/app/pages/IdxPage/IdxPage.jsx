@@ -70,7 +70,6 @@ const IdxPage = ({ pageData, radioScheduleEndpointOverride }) => {
       <MostRead
         data={mostReadInitialData}
         columnLayout="twoColumn"
-        size="default"
         headingBackgroundColour={GHOST}
       />
     </IdxMostReadSection>
