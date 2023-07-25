@@ -174,16 +174,24 @@ describe('Main page routes', () => {
     ${'/kyrgyz/tipohome'} | ${'tipohome'}
     ${'/kyrgyz'}          | ${'home'}
   `('should route to and render a $description page', async ({ pathname }) => {
+    suppressPropWarnings(['children', 'string', 'MediaIcon']);
+    suppressPropWarnings(['children', 'PromoTimestamp', 'undefined']);
+    suppressPropWarnings(['timestamp', 'TimestampContainer', 'undefined']);
+
+    process.env.SIMORGH_APP_ENV = 'local';
+
     homePageJson.data.metadata = {
       type: 'home',
       ...homePageJson.data.metadata,
     };
-    fetchMock.mock(`http://localhost${pathname}.json`, homePageJson);
+
+    fetch.mockResponse(JSON.stringify({ ...homePageJson }));
 
     const { getInitialData, pageType } = getMatchingRoute(pathname);
     const { pageData } = await getInitialData({
       path: pathname,
       service: 'kyrgyz',
+      pageType,
     });
 
     await renderRouter({
@@ -192,7 +200,8 @@ describe('Main page routes', () => {
       pageType,
       service: 'kyrgyz',
     });
-    const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'BBC News Кыргыз Кызматы';
+    const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
+      'АКШ: жаңы президент ким экенин аныктаган штаттар кайсылар?';
 
     expect(
       await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
@@ -491,9 +500,11 @@ describe('Main page routes', () => {
       path: pathname,
       pageType,
     });
+
     await renderRouter({
       pathname,
       pageType,
+      status: errorCode,
       errorCode,
       service: 'igbo',
     });
@@ -540,6 +551,7 @@ describe('Main page routes', () => {
     await renderRouter({
       pathname,
       pageType,
+      status: errorCode,
       errorCode,
       service: 'igbo',
     });
