@@ -47,6 +47,9 @@ describe('Topic Page', () => {
   suppressPropWarnings(['children', 'string', 'MediaIcon']);
 
   it('should not render an unordered list when there is only one promo', () => {
+    suppressPropWarnings(['timestamp', 'TimestampContainer', 'undefined']);
+    suppressPropWarnings(['children', 'PromoTimestamp', 'undefined']);
+
     const { queryByRole } = render(
       <TopicPage pageData={amharicSingleItem} />,
       getOptionParams({ service: 'amharic', lang: 'am' }),
