@@ -625,7 +625,7 @@ describe('ATIAnalytics params', () => {
       it('should not invoke buildPageATIParams for an unsupported page types', () => {
         buildATIEventTrackingParams({
           requestContext: { ...requestContext, pageType: MEDIA_ASSET_PAGE },
-          atiData: homePageAnalyticsData,
+          data: {},
           serviceContext,
         });
 
