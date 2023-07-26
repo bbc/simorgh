@@ -159,6 +159,76 @@ exports[`Canonical persian/afghanistan IDX page Header Navigation link should ma
 
 exports[`Canonical persian/afghanistan IDX page Main heading should match text 1`] = `"صفحه افغانستان"`;
 
+exports[`Canonical persian/afghanistan IDX page Most Read has item with rank 1`] = `
+{
+  "text": "خالق باربی: چرا بعضی مردها تصور عروسکی زنانه را نمی‌پسندیدند",
+  "url": "https://www.bbc.com/persian/articles/ckdnj50k8pyo",
+}
+`;
+
+exports[`Canonical persian/afghanistan IDX page Most Read has item with rank 2`] = `
+{
+  "text": "حمله افراد «مسلح» و با «لباس سپاه» به گردشگران در منطقه ییلاقی اوپرت: «سوم محرم، آمدید تفریح؟»",
+  "url": "https://www.bbc.com/persian/articles/c72rq9d44ggo",
+}
+`;
+
+exports[`Canonical persian/afghanistan IDX page Most Read has item with rank 3`] = `
+{
+  "text": "اصلاحات قضایی اسرائیل؛ نتانیاهو پیش از رای‌گیری کلیدی پارلمان بیمارستان را ترک کرد",
+  "url": "https://www.bbc.com/persian/articles/c97pld3q4gro",
+}
+`;
+
+exports[`Canonical persian/afghanistan IDX page Most Read has item with rank 4`] = `
+{
+  "text": "از لوگوی جدید توییتر رونمایی شد",
+  "url": "https://www.bbc.com/persian/articles/c4n5mzgk871o",
+}
+`;
+
+exports[`Canonical persian/afghanistan IDX page Most Read has item with rank 5`] = `
+{
+  "text": "روسیه، اوکراین را به «حمله پهپادی» به مسکو متهم کرد",
+  "url": "https://www.bbc.com/persian/articles/c6pv6n8j2zjo",
+}
+`;
+
+exports[`Canonical persian/afghanistan IDX page Most Read has item with rank 6`] = `
+{
+  "text": "۱۱ کشته در ریزش سقف سالن ورزشی در چین هنگام تمرین تیم والیبال دختران",
+  "url": "https://www.bbc.com/persian/articles/cl7njq8g5y0o",
+}
+`;
+
+exports[`Canonical persian/afghanistan IDX page Most Read has item with rank 7`] = `
+{
+  "text": "بلینکن: در شرایطی نیستیم که درباره بازگشت به برجام مذاکره کنیم",
+  "url": "https://www.bbc.com/persian/articles/c89re8wz9y4o",
+}
+`;
+
+exports[`Canonical persian/afghanistan IDX page Most Read has item with rank 8`] = `
+{
+  "text": "اوپنهایمر؛ روایتگر «ویرانگر دنیاها» و داستان ساخت اولین بمب اتمی  ",
+  "url": "https://www.bbc.com/persian/articles/c3gdngql0p3o",
+}
+`;
+
+exports[`Canonical persian/afghanistan IDX page Most Read has item with rank 9`] = `
+{
+  "text": "«ویرانگر دنیاها»؛ رابرت اوپنهایمر واقعی که بود؟",
+  "url": "/persian/world-features-66255722",
+}
+`;
+
+exports[`Canonical persian/afghanistan IDX page Most Read has item with rank 10`] = `
+{
+  "text": "انتخابات اسپانیا؛ محافظه‌کاران پیشتاز ولی فاقد اکثریت پارلمانی",
+  "url": "https://www.bbc.com/persian/articles/cw915nrp4e9o",
+}
+`;
+
 exports[`Canonical persian/afghanistan IDX page SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
