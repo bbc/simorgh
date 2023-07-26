@@ -1,6 +1,3 @@
-export const MIN_SIZE = 783 - 5;
-export const MAX_SIZE = 1238 + 5;
-
 /** Size limit for all bundles used by each service (kB)
  *
  * `MIN_SIZE` should be the value of "Smallest total bundle size (kB) (smallest service + smallest page)" &
@@ -9,3 +6,6 @@ export const MAX_SIZE = 1238 + 5;
  *
  * We are allowing a variance of -5 on `MIN_SIZE` and +5 on `MAX_SIZE` to avoid the need for frequent changes, as bundle sizes can fluctuate
  */
+
+export const MIN_SIZE = 783 - 5;
+export const MAX_SIZE = 1238 + 5;
