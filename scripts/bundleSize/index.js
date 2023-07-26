@@ -15,7 +15,6 @@ import {
 } from './getBundleData.js';
 import { MIN_SIZE, MAX_SIZE } from './bundleSizeConfig.js';
 export default () => {
-  console.debug('HELLO BEANS');
   const bundleType = process.env.bundleType || 'modern';
   const serviceConfigBundleData = sortByBundlesTotalAscending(
     getServiceConfigBundleData(),
