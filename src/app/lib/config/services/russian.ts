@@ -93,13 +93,13 @@ const headerFooterTranslations = {
             linkText: 'cookies',
             last: ', чтобы вам было удобно пользоваться сайтом. Сообщите нам, что вы согласны с использованием этих cookies.',
             linkUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
           },
         },
         accept: 'Да',
         reject: 'Нет, мне надо посмотреть настройки',
         rejectUrl:
-          'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
       },
     },
   },

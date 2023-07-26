@@ -197,13 +197,13 @@ const baseServiceConfig = {
               linkText: 'cookies',
               last: ', щоб вам було зручно користуватися сайтом. Повідомте нам, що ви погоджуєтесь з використанням цих файлів cookies.',
               linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
           },
           accept: 'Так, згоден',
           reject: 'Ні, мені потрібно переглянути налаштування',
           rejectUrl:
-            'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
         },
       },
     },

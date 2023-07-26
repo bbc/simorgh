@@ -182,13 +182,13 @@ export const service: DefaultServiceConfig = {
                 linkText: 'cookies',
                 last: ' to give you di best online experience. Abeg let us know if you gree to all od dif cookies dem.',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
             },
             accept: 'Yes, I agree',
             reject: 'No, cari me go settings',
             rejectUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+              'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           },
         },
       },

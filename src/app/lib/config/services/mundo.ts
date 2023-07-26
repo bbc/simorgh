@@ -187,13 +187,13 @@ export const service: DefaultServiceConfig = {
                 linkText: 'cookies',
                 last: ' para ofrecerte la mejor experiencia online. Déjanos saber si aceptas todas estas cookies.',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
             },
             accept: 'Sí, estoy de acuerdo',
             reject: 'No, llévame a la configuración',
             rejectUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+              'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           },
         },
       },

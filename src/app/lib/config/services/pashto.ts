@@ -191,13 +191,13 @@ export const service: DefaultServiceConfig = {
                 linkText: 'کوکیز',
                 last: ' کاروو. راته ووایاست چې ایا ډېټا در لېږلی شو',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
             },
             accept: 'هو، موافق یم',
             reject: 'نه، غواړم سېټنګز ته ولاړ شم',
             rejectUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+              'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           },
         },
       },

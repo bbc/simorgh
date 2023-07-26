@@ -188,13 +188,13 @@ export const service: DefaultServiceConfig = {
                 linkText: '쿠키',
                 last: ' 정보를 이용합니다. 쿠키 수집에 동의하십니까?',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
             },
             accept: '네, 동의합니다',
             reject: '아니요, 설정 화면으로 이동합니다',
             rejectUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+              'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           },
         },
       },

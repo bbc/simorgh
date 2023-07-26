@@ -183,13 +183,13 @@ export const service: DefaultServiceConfig = {
                 linkText: 'cookies',
                 last: ' колдонобуз. Cookies боюнча эрежелерге макулсузбу?',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
             },
             accept: 'Ооба, мен макулмун',
             reject: 'Жок, мени жөндөө баракчасына алып бар',
             rejectUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+              'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           },
         },
       },

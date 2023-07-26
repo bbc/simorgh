@@ -179,13 +179,13 @@ export const service: DefaultServiceConfig = {
                 linkText: 'クッキー',
                 last: ' を使用しています。すべてのクッキー使用に同意するか教えてください。',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
             },
             accept: 'はい、同意します',
             reject: 'いいえ、設定ページを開いてください',
             rejectUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+              'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           },
         },
       },
