@@ -4,16 +4,9 @@ import { PropsWithChildren, useContext } from 'react';
 import { RequestContext } from '#app/contexts/RequestContext';
 import Image from '../../Image';
 
-export interface OptimoImageBlock {
-  type: string;
-  model: {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    blocks: any;
-  };
-}
-
 type Props = {
-  blocks: OptimoImageBlock[];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  blocks: any;
 };
 
 const EmbedImages = ({ blocks: embedImages }: PropsWithChildren<Props>) => {
