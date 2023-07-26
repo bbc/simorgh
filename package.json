@@ -24,7 +24,7 @@
     "type-check": "tsc",
     "amp:validate": "wait-on -t 20000 http://localhost:7080/status && node ./scripts/ampHtmlValidator/cli.js",
     "build:local": "rm -rf build && cp envConfig/local.env .env && NODE_ENV=production webpack",
-    "build": "yarn build:local && yarn type-check && node --experimental-modules --es-module-specifier-resolution=node ./scripts/bundleSize/runBundleSize.js",
+    "build": "yarn build:local && yarn type-check && node --experimental-modules ./scripts/bundleSize/runBundleSize.js",
     "build:profile": "rm -rf build && cp envConfig/local.env .env && IS_PROD_PROFILE=true NODE_ENV=production webpack",
     "build:live": "cp envConfig/live.env .env && NODE_ENV=production webpack",
     "build:live:debug": "rm -rf build && awk '{sub(/LOG_DIR=.+/,\"LOG_DIR='log'\")}1' envConfig/live.env > .env && NODE_ENV=production webpack",
