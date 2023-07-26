@@ -1,4 +1,3 @@
-/* eslint-disable import/extensions */
 import stripAnsi from 'strip-ansi';
 import { jest } from '@jest/globals';
 
