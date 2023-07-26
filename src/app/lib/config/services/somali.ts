@@ -134,7 +134,7 @@ export const service: DefaultServiceConfig = {
                 linkText: 'cookies',
                 last: ', waxaana uruurinaa xogta booqashada bogga si aan khibradda ugu fiican ee adeegsiga intarnet-ka aan kuu siino, si aan kugu soo gudbiyo warar iyo xayeysiinno adiga gaar kuu ah. Fadlan aan ogaano haddii aad aqbashay.',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               manage: 'Maareynta qeybteyda',
             },
@@ -151,7 +151,7 @@ export const service: DefaultServiceConfig = {
                   'Si ay bogaggeena web-ka u shaqeeyaa, waxaan xog kooban ku keydineynaa qalabkaaga, adigoo aan ogolaan.',
                 para4: {
                   text: 'Akhriso xog dheeraad ah oo ku saabsan macluumaadka muhiimka ah ee aan qalabkaaga ku keydineyno si aan uga shaqeysiiyo bogaggeena.',
-                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5:
                   'Waxaan isticmaaleynaa keydin gudaha ah si aan ogolaanshahaaga ugu keydino qalabkaaga gudihiisa.',

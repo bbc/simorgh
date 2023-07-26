@@ -144,7 +144,7 @@ export const service: DefaultServiceConfig = {
                 linkText: 'குக்கிகள்',
                 last: ' போன்ற தொழில் நுட்பங்களை பயன்படுத்துகிறோம்; உங்கள் உலாவல் (பிரௌசிங்) தரவுகளையும் திரட்டுகிறோம். இவற்றுக்கு நீங்கள்உடன்படுகிறீர்களா என்பதை எங்களுக்குத் தெரிவியுங்கள்.',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               manage: 'என் செட்டிங்ஸ்-ஐ நிர்வகி',
             },
@@ -160,7 +160,7 @@ export const service: DefaultServiceConfig = {
                   'இணையப் பக்கங்கள் வேலை செய்வதற்காக உங்கள் ஒப்புதல் இல்லாமலேயே உங்கள் கருவியின் மிகச்சில தரவுகளை சேகரிப்போம்',
                 para4: {
                   text: 'இணையப் பக்கம் வேலை செய்ய அவசியமான தரவுகள் சேகரிக்கப்படுவது பற்றி மேலும் படிக்கவும்.',
-                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5:
                   'உங்கள் ஒப்புதலுடன் சேகரிக்கப்படும் தரவுகளுக்கு உங்கள் கருவியின் சேமிப்பகத்தை பயன்படுத்துவோம்',

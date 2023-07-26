@@ -132,7 +132,7 @@ export const service: DefaultServiceConfig = {
                 linkText: 'ìlànà òpó ìtàkùn àgbáyé',
                 last: ', láti mọ détà tí ẹ̀ ń lò, ká le è fun yín ní ìrírí lílo ojú òpó yélujára tó dára jùlọ, ká sì tún ri dájú pé ẹyin ìkan ló ń rí àwọn ohun ta kọ àti ìpolówó ọjà tí á ń fi hàn yín.Ẹ jọ̀wọ́, ẹ jẹ́ ká mọ̀ tẹ bá fara mọ́ ọ.',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               manage: 'Mojuto eto mi',
             },
@@ -148,7 +148,7 @@ export const service: DefaultServiceConfig = {
                   'Ki oju opo wa ba a le ṣiṣẹ, a ma n fi awọn akọsilẹ kan pamọ lori foonu rẹ, lai gba aṣẹ lọwọ rẹ.',
                 para4: {
                   text: 'Ka si nipa awọn akọsilẹ to sẹ koko ti a fi pamọ si ori foonu rẹ, ki oju opo wa le ṣiṣẹ.',
-                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5:
                   'A n lo aaye labẹle, lati fi awsn nakn ti o fọwọ si, lori foonu rẹ.',

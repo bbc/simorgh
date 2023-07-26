@@ -140,7 +140,7 @@ export const service: DefaultServiceConfig = {
                 linkText: 'kukilər',
                 last: ' kimi texnologiyalardan istifadə edərək sizə ən yaxşı onlayn təcrübəni vermək, məzmunu və reklamları sizə uyğunlaşdırmaq üçün brauzerinizdən axtarış məlumatlarını toplayırıq. Buna razı olduğunuzu, lütfən, bizə bildirin.',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               manage: 'Seçimlərimi idarə edin',
             },
@@ -156,7 +156,7 @@ export const service: DefaultServiceConfig = {
                   'Veb səhifələrimizin işləməsi üçün bəzi məhdud məlumatları razılığınız olmadan cihazınızda saxlayırıq.',
                 para4: {
                   text: 'Veb səhifələrimizin işləməsi üçün cihazınızda saxladığımız lazımi məlumatlar haqqında daha ətraflı oxuyun.',
-                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5:
                   'Seçim üstünlüklərinizi cihazınızda saxlamaq üçün lokal yaddaşdan istifadə edirik.',

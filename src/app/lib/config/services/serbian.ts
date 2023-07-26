@@ -241,7 +241,7 @@ export const service: SerbianConfig = {
                 linkText: 'kolačića',
                 last: ' i prikupljamo podatke pretraživača da bismo vam ponudili najkvalitetnije iskustvo na internetu i personalizovali sadržaj i oglase koji vam se prikazuju. Molimo vas da nas obavestite da li se slažete.',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               manage: 'Promenite moja podešavanja',
             },
@@ -257,7 +257,7 @@ export const service: SerbianConfig = {
                   'Da bi naše internet stranice funkcionisale, čuvamo određenu i ograničenu količinu podataka na vašem uređaju bez vaše saglasnosti.',
                 para4: {
                   text: 'Pročitajte više o neophodnim podacima koje čuvamo na vašem uređaju da bi naše stranice funkcionisale. (na engleskom jeziku)',
-                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5:
                   'Koristimo lokalne servere da bismo sačuvali vaše podatke o saglasnosti na vašem uređaju.',

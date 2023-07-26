@@ -452,7 +452,7 @@ export const service: ChineseConfig = {
                 linkText: 'cookies',
                 last: '的科技，收集瀏覽數據以便給您帶來最佳上網體驗，以及個人化內容和廣告配置。請告知是否可以。',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               manage: '管理我的設置',
             },
@@ -468,7 +468,7 @@ export const service: ChineseConfig = {
                   '為使網頁運作正常，我們或在未爭得許可時收集有限必要資訊。',
                 para4: {
                   text: '閲讀更多我們在您的瀏覽器上存儲必需數據，以便頁面正常運作的相關資訊',
-                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5: '我們使用本地存儲，將選項存儲於您的瀏覽工具上。',
                 heading3: '可選項數據收集',

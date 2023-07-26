@@ -120,7 +120,7 @@ export const service: DefaultServiceConfig = {
                 linkText: 'cookies',
                 last: ', and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               manage: 'Manage my settings',
             },
@@ -136,7 +136,7 @@ export const service: DefaultServiceConfig = {
                   'To make our web pages work, we store some limited information on your device without your consent.',
                 para4: {
                   text: 'Read more about the essential information we store on your device to make our web pages work.',
-                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5:
                   'We use local storage to store your consent preferences on your device.',

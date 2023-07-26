@@ -143,7 +143,7 @@ export const service: DefaultServiceConfig = {
                 linkText: 'cookies',
                 last: ', were na-amịị ozi banyere gị iji were na-enye gị ụdị ihe ị chọrọ dịka o si gbasaa ihe akụkọ anyị na ozi azụmahịa anyị na-egosi gị. Biko me ka anyị mata ma ọ dị gị mma.',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               manage: 'Hazie akara usoro m',
             },
@@ -159,7 +159,7 @@ export const service: DefaultServiceConfig = {
                   "Ime ka peeji anyị rụọ ọrụ, anyị na-edowe ozi ụfọdụ n'ekwenti gị na-agwaghị gị.",
                 para4: {
                   text: "Gụkọọ maka ozi dị mkpa anyị na-edowe n'igwe ekwenti gị n'iji me ka peeji websaịt anyị rụọ ọrụ.",
-                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5: "Anyị na-edowe nnabata gị n'ime igwe ekwenti gị.",
                 heading3: 'Nnabata gị ma ịchọ',

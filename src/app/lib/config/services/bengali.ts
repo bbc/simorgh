@@ -136,7 +136,7 @@ export const service: DefaultServiceConfig = {
                 linkText: 'কুকিগুলো',
                 last: ' তাতে অনলাইনে আপনার বিচরণ স্বচ্ছন্দ হয় এবং শুধু আপনার পছন্দমত বিষয় ও বিজ্ঞাপন যাতে আপনি দেখেন তার জন্য আপনার ব্রাউজিং ডেটা সংগ্রহ করা হয়। আপনি এতে সম্মতি দিচ্ছেন কিনা জানান।',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               manage: 'আমার সেটিং ম্যানেজ করার বোতাম',
             },
@@ -152,7 +152,7 @@ export const service: DefaultServiceConfig = {
                   'আমাদেের ওয়েবপেজ যাতে ঠিকমত কাজ করে তার জন্য আপনার সম্মতি ছাড়াই আপনার ডিভাইসে সীমিত কিছু তথ্য আমরা সংগ্রহ করে রেখেছি।',
                 para4: {
                   text: 'আমাদের ওয়েবপেজ যাতে কাজ করে তার জন্য আপনার ডিভাইসে জরুরি যেসব তথ্য আমরা মজুত রেখেছি সেগুলো এখানে পড়তে পারবেন',
-                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5:
                   'আপনার ডিভাইসে আপনার পছন্দ সংক্রান্ত সম্মতিগুলো আমরা স্থানীয়ভাবে মজুত করে রেখেছি।',

@@ -152,7 +152,7 @@ export const service: DefaultServiceConfig = {
                 linkText: 'tattara',
                 last: ' wasu bayanai game da ku duka domin mu samar maku da abubuwa masu kayatarwa a Intanet',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               manage: 'Na ba da damar aiwatar da tsare-tsarena',
             },
@@ -168,7 +168,7 @@ export const service: DefaultServiceConfig = {
                   'Domin shafukanmu su gudana, mun tattara wasu ƴan bayanai kan wayarku ba tare da izininku ba.',
                 para4: {
                   text: 'Karanta muhimman bayanan da muka tattara kan wayarku domin inganta shafukanmu.',
-                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5: 'Muna adana bayanan da kuka amice mu ɗauka na wayarku.',
                 heading3: 'Zaɓi kan tara bayanai',

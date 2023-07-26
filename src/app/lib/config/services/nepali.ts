@@ -134,7 +134,7 @@ export const service: DefaultServiceConfig = {
                 linkText: 'कुकीज',
                 last: 'जस्ता प्रविधि प्रयोग गरेर तपाईँले हाम्रो साइटमा गरेका क्रियाकलापका जानकारी सङ्ग्रह गर्छौँ। कृपया तपाईँलाई यो कुरा मान्य छ भने हामीलाई जानकारी दिनुहोस्।',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               manage: 'सेटिङ्गको व्यवस्थापन गर्ने',
             },
@@ -150,7 +150,7 @@ export const service: DefaultServiceConfig = {
                   'हाम्रो वेब पेज काम गर्ने बनाउन हामीले तपाईँको सहमति विना नै तपाईँको उपकरणमा केही सिमित जानकारीहरू राखेका छौँ।',
                 para4: {
                   text: 'हाम्रो वेेब पेजलाई काम गर्ने बनाउन तपाईँको उपकरणमा राखिएको अति जरूरी जानकारीकाबारे यहाँ पढ्नुहोस्।',
-                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5:
                   'तपाईँँको उपकरणमा सहमति सम्बन्धी जानकारीकालागि हामीले लोकल स्टोरेज प्रयोग गर्ने गर्छौँ।',

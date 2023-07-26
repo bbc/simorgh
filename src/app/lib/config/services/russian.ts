@@ -44,7 +44,7 @@ const headerFooterTranslations = {
             linkText: 'cookies',
             last: ', а также собираем данные, чтобы вам было удобно пользоваться сайтом и чтобы содержание и реклама, которую вы видите, соответствовали вашим запросам. Пожалуйста, сообщите, согласны ли вы.',
             linkUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
           },
           manage: 'Изменить мои установки',
         },
@@ -60,7 +60,7 @@ const headerFooterTranslations = {
               'Для того чтобы наши веб-страницы работали, мы храним ограниченную информацию о вашем девайсе без вашего согласия.',
             para4: {
               text: 'Прочесть подробнее о базовой информации, которую мы храним на вашем устройстве, чтобы на нем отображались наши веб-страницы (на англ. языке).',
-              url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+              url: 'https://www.bbc.com/usingthebbc/strictly-necessary-cookies/',
             },
             para5:
               'Мы используем местные серверы для хранения согласованных вами преференций для вашего девайса.',
