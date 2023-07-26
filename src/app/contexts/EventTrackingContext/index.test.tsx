@@ -23,16 +23,12 @@ const defaultATIData = {
   pageTitle: 'pageTitle',
 };
 
-const { error, warn } = console;
-
 beforeEach(() => {
   console.warn = jest.fn();
-  console.error = jest.fn();
 });
 
 afterEach(() => {
-  console.warn = warn;
-  console.error = error;
+  jest.clearAllMocks();
 });
 
 const TestComponent = () => {
