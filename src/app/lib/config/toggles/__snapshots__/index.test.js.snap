@@ -1,168 +1,168 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Toggles Config when application environment is live should contain correct default values 1`] = `
-Object {
+{
   "_environment": "live",
-  "ads": Object {
+  "ads": {
     "enabled": false,
   },
-  "chartbeatAnalytics": Object {
+  "chartbeatAnalytics": {
     "enabled": true,
   },
-  "cpsRecommendations": Object {
+  "cpsRecommendations": {
     "enabled": false,
   },
-  "enableFetchingToggles": Object {
+  "enableFetchingToggles": {
     "enabled": true,
     "value": "(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|portuguese|punjabi|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|vietnamese|yoruba|zhongwen)",
   },
-  "eventTracking": Object {
+  "eventTracking": {
     "enabled": false,
   },
-  "include": Object {
+  "include": {
     "enabled": true,
   },
-  "mostRead": Object {
+  "mostRead": {
     "enabled": true,
   },
-  "mostWatched": Object {
+  "mostWatched": {
     "enabled": false,
   },
-  "navOnArticles": Object {
+  "navOnArticles": {
     "enabled": true,
   },
-  "nielsenAnalytics": Object {
+  "nielsenAnalytics": {
     "enabled": true,
   },
-  "preloadLeadImage": Object {
+  "preloadLeadImage": {
     "enabled": true,
   },
-  "prerollAds": Object {
+  "prerollAds": {
     "enabled": true,
   },
-  "radioSchedule": Object {
+  "radioSchedule": {
     "enabled": true,
   },
-  "scriptLink": Object {
+  "scriptLink": {
     "enabled": true,
   },
-  "variantCookie": Object {
+  "variantCookie": {
     "enabled": true,
   },
-  "webVitalsMonitoring": Object {
+  "webVitalsMonitoring": {
     "enabled": true,
   },
 }
 `;
 
 exports[`Toggles Config when application environment is local should contain correct default values 1`] = `
-Object {
+{
   "_environment": "local",
-  "ads": Object {
+  "ads": {
     "enabled": false,
   },
-  "chartbeatAnalytics": Object {
+  "chartbeatAnalytics": {
     "enabled": true,
   },
-  "comscoreAnalytics": Object {
+  "comscoreAnalytics": {
     "enabled": true,
   },
-  "cpsRecommendations": Object {
+  "cpsRecommendations": {
     "enabled": true,
   },
-  "enableFetchingToggles": Object {
+  "enableFetchingToggles": {
     "enabled": true,
     "value": "(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|portuguese|punjabi|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|vietnamese|yoruba|zhongwen)",
   },
-  "eventTracking": Object {
+  "eventTracking": {
     "enabled": true,
   },
-  "include": Object {
+  "include": {
     "enabled": true,
   },
-  "mostRead": Object {
+  "mostRead": {
     "enabled": true,
   },
-  "mostWatched": Object {
+  "mostWatched": {
     "enabled": true,
   },
-  "navOnArticles": Object {
+  "navOnArticles": {
     "enabled": true,
   },
-  "nielsenAnalytics": Object {
+  "nielsenAnalytics": {
     "enabled": true,
   },
-  "preloadLeadImage": Object {
+  "preloadLeadImage": {
     "enabled": true,
   },
-  "prerollAds": Object {
+  "prerollAds": {
     "enabled": true,
   },
-  "radioSchedule": Object {
+  "radioSchedule": {
     "enabled": true,
   },
-  "scriptLink": Object {
+  "scriptLink": {
     "enabled": true,
   },
-  "variantCookie": Object {
+  "variantCookie": {
     "enabled": true,
   },
-  "webVitalsMonitoring": Object {
+  "webVitalsMonitoring": {
     "enabled": true,
   },
 }
 `;
 
 exports[`Toggles Config when application environment is test should contain correct default values 1`] = `
-Object {
+{
   "_environment": "test",
-  "ads": Object {
+  "ads": {
     "enabled": false,
   },
-  "chartbeatAnalytics": Object {
+  "chartbeatAnalytics": {
     "enabled": true,
   },
-  "cpsRecommendations": Object {
+  "cpsRecommendations": {
     "enabled": true,
   },
-  "enableFetchingToggles": Object {
+  "enableFetchingToggles": {
     "enabled": true,
     "value": "(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|portuguese|punjabi|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|vietnamese|yoruba|zhongwen)",
   },
-  "eventTracking": Object {
+  "eventTracking": {
     "enabled": true,
   },
-  "include": Object {
+  "include": {
     "enabled": true,
   },
-  "mostRead": Object {
+  "mostRead": {
     "enabled": true,
   },
-  "mostWatched": Object {
+  "mostWatched": {
     "enabled": true,
   },
-  "navOnArticles": Object {
+  "navOnArticles": {
     "enabled": true,
   },
-  "nielsenAnalytics": Object {
+  "nielsenAnalytics": {
     "enabled": true,
   },
-  "preloadLeadImage": Object {
+  "preloadLeadImage": {
     "enabled": true,
   },
-  "prerollAds": Object {
+  "prerollAds": {
     "enabled": true,
   },
-  "radioSchedule": Object {
+  "radioSchedule": {
     "enabled": true,
   },
-  "scriptLink": Object {
+  "scriptLink": {
     "enabled": true,
   },
-  "variantCookie": Object {
+  "variantCookie": {
     "enabled": true,
   },
-  "webVitalsMonitoring": Object {
+  "webVitalsMonitoring": {
     "enabled": true,
   },
 }
