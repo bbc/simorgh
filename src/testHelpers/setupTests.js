@@ -22,7 +22,7 @@ const REACT_ERRORS = [
 // Warnings
 const REACT_PSEUDO_CLASS_FIRST_CHILD = 'The pseudo class ":first-child"';
 const REACT_PSEUDO_CLASS_NTH_CHILD = 'The pseudo class ":nth-child"';
-const REACT_UNMATCHED_GET = 'Unmatched GET to';
+const REACT_UNMATCHED_GET = 'Unmatched GET to /undefined';
 const REACT_UNMOUNTED = 'React state update on an unmounted component';
 
 const REACT_SUPPRESSED_WARNINGS = [
