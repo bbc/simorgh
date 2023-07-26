@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import findNthIndex from '.';
 
 const buildArray = length =>
@@ -7,7 +8,7 @@ const buildArray = length =>
 
 describe('findNthIndex', () => {
   beforeEach(() => {
-    jest.spyOn(console, 'error');
+    console.error = jest.fn();
   });
 
   afterEach(() => {
@@ -35,9 +36,9 @@ describe('findNthIndex', () => {
       expect(findNthIndex(n, predicate, array)).toBe(expected);
 
       if (expectError) {
-        expect(global.console.error).toHaveBeenCalled();
+        expect(console.error).toHaveBeenCalled();
       } else {
-        expect(global.console.error).not.toHaveBeenCalled();
+        expect(console.error).not.toHaveBeenCalled();
       }
     },
   );
