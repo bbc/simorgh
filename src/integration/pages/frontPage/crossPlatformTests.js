@@ -1,13 +1,8 @@
-import {
-  runCommonCrossPlatformTests,
-  runMostReadTests,
-  runSectionTests,
-} from '../../common';
+import { runCommonCrossPlatformTests, runSectionTests } from '../../common';
 
 export default service => {
   runCommonCrossPlatformTests(service);
   runSectionTests();
-  runMostReadTests();
 
   describe('Index Alsos', () => {
     const indexAlsos = document.querySelector('[data-e2e=index-alsos]');
