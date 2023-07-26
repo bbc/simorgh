@@ -1,4 +1,4 @@
-import allServices from './settings';
+const allServices = require('./settings');
 
 // Allow runs to be limited to a single service via the CYPRESS_ONLY_SERVICE env var
 const runOnlyService =
@@ -6,11 +6,9 @@ const runOnlyService =
 
 let servicesToExport;
 if (runOnlyService && Object.keys(allServices()).includes(runOnlyService)) {
-  servicesToExport = {
+  module.exports = {
     [runOnlyService]: allServices()[runOnlyService],
   };
 } else {
-  servicesToExport = allServices();
+  module.exports = allServices();
 }
-
-export default servicesToExport;
