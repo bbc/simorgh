@@ -243,8 +243,7 @@ const setUpFSMocks = (service1FileSize, service2FileSize) => {
   });
 };
 
-const oraImport = await import('ora');
-const ora = oraImport.default;
+const { default: ora } = await import('ora');
 
 describe('bundleSize', () => {
   const originalConsoleLog = global.console.log;
