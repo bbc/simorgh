@@ -206,7 +206,7 @@ jest.unstable_mockModule('chalk', () => ({
 
 const setUpFSMocks = (service1FileSize, service2FileSize) => {
   beforeEach(async () => {
-    const fs = await import('fs');
+    const { default: fs } = await import('fs');
 
     const bundles = [
       'modern.main-12345.js',
@@ -222,7 +222,7 @@ const setUpFSMocks = (service1FileSize, service2FileSize) => {
       'modern.shared-2222.js',
       'modern.framework-1111.js',
     ];
-    fs.default.readdirSync.mockReturnValue(bundles);
+    fs.readdirSync.mockReturnValue(bundles);
 
     const filePatternToSizeMap = {
       service1: service1FileSize,
@@ -234,7 +234,7 @@ const setUpFSMocks = (service1FileSize, service2FileSize) => {
       framework: 100000,
       Page: 20000,
     };
-    fs.default.statSync.mockImplementation(filePath => {
+    fs.statSync.mockImplementation(filePath => {
       const filePattern = Object.keys(filePatternToSizeMap).find(key =>
         filePath.includes(key),
       );
