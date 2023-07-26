@@ -452,8 +452,13 @@ describe('Main page routes', () => {
   }, 10000);
 
   it('should route to and render an index page', async () => {
+    process.env.SIMORGH_APP_ENV = 'local';
     const pathname = '/ukrainian/ukraine_in_russian';
-    fetchMock.mock(`http://localhost${pathname}.json`, indexPageJson);
+    fetch.mockResponse(
+      JSON.stringify({
+        ...indexPageJson,
+      }),
+    );
 
     const { getInitialData, pageType } = getMatchingRoute(pathname);
     const { pageData } = await getInitialData({
@@ -467,7 +472,7 @@ describe('Main page routes', () => {
       service: 'ukrainian',
     });
     const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
-      'Многие украинцы из-за пандемии оказались заблокированными далеко за границей: из-за закрытия украинского неба добраться домой им очень сложно.';
+      'В Украине введено военное положение, во многих городах, в том числе Киеве, слышны взрывы.';
 
     expect(
       await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
