@@ -21,7 +21,7 @@ type Props = {
 const EmbedImages = ({ blocks: embedImages }: PropsWithChildren<Props>) => {
   const { isAmp, env } = useContext(RequestContext);
   const ampImage = embedImages?.[1]?.model?.blocks;
-  const canonicalImage = embedImages?.slice(-1)?.[0]?.model?.blocks;
+  const canonicalImage = embedImages?.[2]?.model?.blocks;
   const image = isAmp ? ampImage : canonicalImage;
   const rawImage = image?.[1]?.model;
   if (!rawImage) return null;
