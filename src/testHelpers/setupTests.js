@@ -2,40 +2,26 @@ import '@testing-library/jest-dom/extend-expect';
 import chalk from 'chalk';
 
 // Errors
-const REACT_FAILED_PROP_TYPE = 'Failed prop';
-const REACT_NO_KEYS = 'Each child in a list should have a unique "key" prop';
-const REACT_DUPLICATE_KEYS = 'Encountered two children with the same key';
-const REACT_DOM_RENDER = 'ReactDOM.render is no longer supported in React 18';
-const REACT_STATE_UPDATES_WRAPPED_IN_ACT =
-  'When testing, code that causes React state updates should be wrapped into act';
-const WEB_VITALS_NO_PAGE_TYPE = 'Web Vitals: No page type to report';
-
-const REACT_ERRORS = [
-  REACT_FAILED_PROP_TYPE,
-  REACT_NO_KEYS,
-  REACT_DUPLICATE_KEYS,
-  REACT_DOM_RENDER,
-  REACT_STATE_UPDATES_WRAPPED_IN_ACT,
-  WEB_VITALS_NO_PAGE_TYPE,
-];
+const FAILED_PROP = 'Failed prop';
 
 // Warnings
-const REACT_PSEUDO_CLASS_FIRST_CHILD = 'The pseudo class ":first-child"';
-const REACT_PSEUDO_CLASS_NTH_CHILD = 'The pseudo class ":nth-child"';
-const REACT_UNMATCHED_GET = 'Unmatched GET to /undefined';
+const PSEUDO_CLASS_FIRST_CHILD = 'The pseudo class ":first-child"';
+const PSEUDO_CLASS_NTH_CHILD = 'The pseudo class ":nth-child"';
+const UNMATCHED_GET = 'Unmatched GET to /undefined';
 const REACT_UNMOUNTED = 'React state update on an unmounted component';
+const TAG_HUNDEFINED = 'The tag <hundefined';
 
-const REACT_SUPPRESSED_WARNINGS = [
-  REACT_PSEUDO_CLASS_FIRST_CHILD,
-  REACT_PSEUDO_CLASS_NTH_CHILD,
-  REACT_UNMATCHED_GET,
+const SUPPRESSED_WARNINGS = [
+  PSEUDO_CLASS_FIRST_CHILD,
+  PSEUDO_CLASS_NTH_CHILD,
+  UNMATCHED_GET,
   REACT_UNMOUNTED,
+  TAG_HUNDEFINED,
 ];
 
-const REACT_ERRORS_REGEX = new RegExp(REACT_ERRORS.join('|'));
-const REACT_SUPPRESSED_REGEX = new RegExp(REACT_SUPPRESSED_WARNINGS.join('|'));
+const SUPPRESSED_REGEX = new RegExp(SUPPRESSED_WARNINGS.join('|'));
 
-const { error, warn } = console;
+const { warn } = console;
 
 const getFormattedMessage = (message, rest) => {
   let theMessage = message;
@@ -49,13 +35,13 @@ const getFormattedMessage = (message, rest) => {
 
 const didSuppressWarning = (message, ...rest) => {
   const { expectedWarnings } = window;
-  if (REACT_SUPPRESSED_REGEX.test(message)) {
+  if (SUPPRESSED_REGEX.test(message)) {
     return true;
   }
   if (expectedWarnings && Array.isArray(expectedWarnings)) {
     for (let i = 0; i < expectedWarnings.length; i += 1) {
       const warningsRegex = new RegExp(
-        [REACT_FAILED_PROP_TYPE, ...expectedWarnings[i]].join('*.*'),
+        [FAILED_PROP, ...expectedWarnings[i]].join('*.*'),
       );
 
       const consoleFormattedMessage = getFormattedMessage(message, rest);
@@ -75,22 +61,18 @@ console.error = (message, ...rest) => {
 
   const formattedMessage = getFormattedMessage(message, rest);
 
-  if (REACT_ERRORS_REGEX.test(formattedMessage)) {
-    throw new Error(
-      [
-        chalk.red.bold(
-          `
+  throw new Error(
+    [
+      chalk.red.bold(
+        `
 ${expect.getState().testPath}: ${expect.getState().currentTestName}
           
 Please fix the following:
 `,
-        ),
-        chalk.red(formattedMessage),
-      ].join('\n'),
-    );
-  }
-
-  error(message, ...rest);
+      ),
+      chalk.red(formattedMessage),
+    ].join('\n'),
+  );
 };
 
 global.setImmediate =
