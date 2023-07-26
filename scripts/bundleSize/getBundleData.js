@@ -25,7 +25,7 @@ const getBundlesData = bundles =>
     };
   });
 
-const getPageBundleData = () => {
+export const getPageBundleData = () => {
   const main = getBundlesData(
     jsFiles.filter(fileName => fileName.startsWith(`${bundleType}.main-`)),
   );
@@ -92,7 +92,7 @@ const getPageBundleData = () => {
   });
 };
 
-const getServiceConfigBundleData = () =>
+export const getServiceConfigBundleData = () =>
   services
     .map(service => {
       const bundlesData = getBundlesData(
@@ -112,7 +112,7 @@ const getServiceConfigBundleData = () =>
       ),
     }));
 
-const getServiceThemeBundleData = () =>
+export const getServiceThemeBundleData = () =>
   services
     .map(service => {
       const bundlesData = getBundlesData(
@@ -134,9 +134,3 @@ const getServiceThemeBundleData = () =>
       ),
     }));
 
-const _getPageBundleData = getPageBundleData;
-export { _getPageBundleData as getPageBundleData };
-const _getServiceConfigBundleData = getServiceConfigBundleData;
-export { _getServiceConfigBundleData as getServiceConfigBundleData };
-const _getServiceThemeBundleData = getServiceThemeBundleData;
-export { _getServiceThemeBundleData as getServiceThemeBundleData };
