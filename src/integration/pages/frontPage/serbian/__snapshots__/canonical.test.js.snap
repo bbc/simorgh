@@ -117,6 +117,76 @@ exports[`Canonical Front Page Header Navigation link should match text and url 7
 
 exports[`Canonical Front Page Main heading should match text 1`] = `"BBC News, na srpskom - Glavna stranica"`;
 
+exports[`Canonical Front Page Most Read has item with rank 1`] = `
+{
+  "text": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 26",
+  "url": "/serbian/lat/media-23169623",
+}
+`;
+
+exports[`Canonical Front Page Most Read has item with rank 2`] = `
+{
+  "text": "test, please ignore",
+  "url": "/serbian/lat/23200492",
+}
+`;
+
+exports[`Canonical Front Page Most Read has item with rank 3`] = `
+{
+  "text": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 6",
+  "url": "/serbian/lat/media-23169493",
+}
+`;
+
+exports[`Canonical Front Page Most Read has item with rank 4`] = `
+{
+  "text": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 29",
+  "url": "/serbian/lat/media-23169626",
+}
+`;
+
+exports[`Canonical Front Page Most Read has item with rank 5`] = `
+{
+  "text": "Otvorene ZOI 2014",
+  "url": "/serbian/lat/23181035",
+}
+`;
+
+exports[`Canonical Front Page Most Read has item with rank 6`] = `
+{
+  "text": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 27",
+  "url": "/serbian/lat/media-23169624",
+}
+`;
+
+exports[`Canonical Front Page Most Read has item with rank 7`] = `
+{
+  "text": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 8",
+  "url": "/serbian/lat/media-23169495",
+}
+`;
+
+exports[`Canonical Front Page Most Read has item with rank 8`] = `
+{
+  "text": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 7",
+  "url": "/serbian/lat/media-23169494",
+}
+`;
+
+exports[`Canonical Front Page Most Read has item with rank 9`] = `
+{
+  "text": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 11",
+  "url": "/serbian/lat/media-23169608",
+}
+`;
+
+exports[`Canonical Front Page Most Read has item with rank 10`] = `
+{
+  "text": "Beba panda odmara nakon prvog javnog nastupa",
+  "url": "/serbian/lat/23180965",
+}
+`;
+
 exports[`Canonical Front Page SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
