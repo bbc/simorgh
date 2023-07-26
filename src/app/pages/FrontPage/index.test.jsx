@@ -146,10 +146,6 @@ describe('Front Page', () => {
 
   describe('Assertions', () => {
     it('should render visually hidden text as h1', async () => {
-      fetchMock.mock(
-        'http://localhost/some-front-page-path.json',
-        JSON.stringify(serbianFrontPageData),
-      );
       const { pageData } = await getInitialData({
         path: '/serbian/lat',
         service: 'serbian',
