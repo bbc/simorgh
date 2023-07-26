@@ -365,7 +365,7 @@ describe('ATIAnalytics params', () => {
       it('should not invoke buildPageATIUrl for an unsupported page types', () => {
         buildATIUrl({
           requestContext: { ...requestContext, pageType: MEDIA_ASSET_PAGE },
-          atiData: homePageAnalyticsData,
+          data: {},
           serviceContext,
         });
 
