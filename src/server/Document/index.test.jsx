@@ -11,6 +11,7 @@ jest.mock('@loadable/server', () => ({
     getScriptElements: () => '__mock_script_elements__',
     getLinkElements: () => '__mock_link_elements__',
   })),
+  ChunkExtractorManager: jest.fn(),
 }));
 
 jest.mock('./component', () => jest.fn());
