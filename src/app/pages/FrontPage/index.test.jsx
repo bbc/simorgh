@@ -6,10 +6,8 @@ import { render, act } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import serbianFrontPageData from '#data/serbian/frontpage/lat.json';
-import { data as pidginMostReadData } from '#data/pidgin/mostRead/index.json';
 import getInitialData from '#app/routes/frontPage/getInitialData';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
-import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ThemeProvider from '../../components/ThemeProvider';
 import FrontPage from '.';
@@ -133,26 +131,30 @@ jest.mock('#containers/PageHandlers/withContexts', () => Component => {
 });
 
 describe('Front Page', () => {
+  beforeEach(() => {
+    delete process.env.SIMORGH_APP_ENV;
+    fetchMock.mock(
+      'begin:http://localhost/serbian/lat',
+      JSON.stringify(serbianFrontPageData),
+    );
+  });
+
   afterEach(() => {
+    jest.clearAllMocks();
     fetchMock.restore();
   });
 
   describe('Assertions', () => {
     it('should render visually hidden text as h1', async () => {
-      suppressPropWarnings(['id', 'LinkContents', 'null']);
-
       fetchMock.mock(
         'http://localhost/some-front-page-path.json',
         JSON.stringify(serbianFrontPageData),
       );
       const { pageData } = await getInitialData({
-        path: 'some-front-page-path',
-        service: 'pidgin',
+        path: '/serbian/lat',
+        service: 'serbian',
+        variant: 'lat',
       });
-      fetchMock.mock(
-        ' /pidgin/mostread.json',
-        JSON.stringify(pidginMostReadData),
-      );
 
       let container;
       await act(async () => {
@@ -178,17 +180,10 @@ describe('Front Page', () => {
     });
 
     it('should render front page sections', async () => {
-      fetchMock.mock(
-        'http://localhost/some-front-page-path.json',
-        JSON.stringify(serbianFrontPageData),
-      );
-      fetchMock.mock(
-        '/pidgin/mostread.json',
-        JSON.stringify(pidginMostReadData),
-      );
       const { pageData } = await getInitialData({
-        path: 'some-front-page-path',
-        service: 'pidgin',
+        path: '/serbian/lat',
+        service: 'serbian',
+        variant: 'lat',
       });
 
       let container;
@@ -199,7 +194,7 @@ describe('Front Page', () => {
       });
 
       const sections = container.querySelectorAll('section');
-      expect(sections).toHaveLength(9);
+      expect(sections).toHaveLength(6);
       sections.forEach(section => {
         expect(section.getAttribute('role')).toEqual('region');
       });
