@@ -45,7 +45,7 @@ export default async ({
 
   const fetchUrl = constructPageFetchUrl({
     pathname,
-    pageType: CPS_ASSET,
+    pageType: CPS_ASSET, // Legacy Front Pages are curated in CPS and fetched from the BFF using pageType = CPS_ASSET and id = service/front_page
     service,
     variant,
   });

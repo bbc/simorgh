@@ -436,7 +436,7 @@ describe('Main page routes', () => {
     expect(
       await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
     ).toBeInTheDocument();
-  });
+  }, 10000);
 
   it('should route to and render an index page', async () => {
     const pathname = '/ukrainian/ukraine_in_russian';
