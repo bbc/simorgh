@@ -38,6 +38,8 @@ import fauxHeadline from '../../legacy/containers/FauxHeadline';
 import RelatedTopics from '../../legacy/containers/RelatedTopics';
 import NielsenAnalytics from '../../legacy/containers/NielsenAnalytics';
 import ArticleMetadata from '../../legacy/containers/ArticleMetadata';
+import EmbedImages from '../../components/Embeds/EmbedImages';
+import EmbedHtml from '../../components/Embeds/EmbedHtml';
 
 import { OptimoBlock } from '../../models/types/optimo';
 import {
@@ -144,6 +146,8 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
     timestamp: (props: TimestampProps) =>
       hasByline ? null : <Timestamp {...props} popOut={false} />,
     social: SocialEmbedContainer,
+    embedHtml: props => <EmbedHtml {...props} />,
+    embedImages: props => <EmbedImages {...props} />,
     group: gist,
     links: (props: ComponentToRenderProps) => <ScrollablePromo {...props} />,
   };
