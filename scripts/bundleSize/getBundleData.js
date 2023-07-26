@@ -1,5 +1,3 @@
-/* eslint-disable no-underscore-dangle */
-/* eslint-disable import/extensions */
 import fs from 'fs';
 import { extractBundlesForPageType } from './pageTypeBundleExtractor.js';
 import services from './serviceList.js'
