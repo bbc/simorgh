@@ -1,7 +1,8 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import { PropsWithChildren } from 'react';
+import { PropsWithChildren, useContext } from 'react';
 // import { OptimoBlock } from '#app/models/types/optimo';
+import { RequestContext } from '#app/contexts/RequestContext';
 import Image from '../../Image';
 // import styles from './index.styles';
 
@@ -18,13 +19,15 @@ type Props = {
 };
 
 const EmbedImages = ({ blocks: embedImages }: PropsWithChildren<Props>) => {
+  const { env } = useContext(RequestContext);
   const image = embedImages?.slice(-1)?.[0]?.model?.blocks;
   const rawImage = image?.[1]?.model;
   if (!rawImage) return null;
 
+  const idt2EnvUrlSubPath = env === 'live' ? 'idt2' : 'idt2-test';
   const { width, height, locator } = rawImage;
 
-  const src = process.env.SIMORGH_INCLUDES_BASE_URL + locator;
+  const src = `${process.env.SIMORGH_ICHEF_BASE_URL}/news/${width}/${idt2EnvUrlSubPath}${locator}`;
   const alt =
     image?.[0]?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.blocks?.[0]
       ?.model?.text;
