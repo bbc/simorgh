@@ -20,7 +20,7 @@ const bundleReports = {
 };
 const bundleType = process.env.bundleType || 'modern';
 
-const extractBundlesForPageType = pageComponent => {
+export const extractBundlesForPageType = pageComponent => {
   const chunkGroup = bundleReports[bundleType].namedChunkGroups[pageComponent];
   if (chunkGroup) {
     return chunkGroup.assets
@@ -29,6 +29,3 @@ const extractBundlesForPageType = pageComponent => {
   }
   throw Error(`page type '${pageComponent}' not found`);
 };
-
-const _extractBundlesForPageType = extractBundlesForPageType;
-export { _extractBundlesForPageType as extractBundlesForPageType };
