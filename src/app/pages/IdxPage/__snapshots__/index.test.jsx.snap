@@ -9574,7 +9574,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   >
                     <picture>
                       <img
-                        alt="Автобусы для \\"эвакуации\\" мирного населения из Донецка, 18 февраля 2022 года"
+                        alt="Автобусы для "эвакуации" мирного населения из Донецка, 18 февраля 2022 года"
                         class="emotion-31"
                         height="549"
                         loading="lazy"
