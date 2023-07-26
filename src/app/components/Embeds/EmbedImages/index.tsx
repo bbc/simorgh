@@ -1,10 +1,8 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import { PropsWithChildren, useContext } from 'react';
-// import { OptimoBlock } from '#app/models/types/optimo';
 import { RequestContext } from '#app/contexts/RequestContext';
 import Image from '../../Image';
-// import styles from './index.styles';
 
 export interface OptimoImageBlock {
   type: string;

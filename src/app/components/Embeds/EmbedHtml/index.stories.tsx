@@ -1,4 +1,3 @@
-// Same as above but we will need React
 import React from 'react';
 import EmbedHtml from '.';
 import { dataPicEmbedHtml, quotePicEmbedHtml } from './fixtures';
