@@ -15,8 +15,9 @@ import {
 import mostReadShape from '#containers/MostRead/utilities/mostReadShape';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import Grid, { GelPageGrid } from '#components/Grid';
+import IndexHeading from '#containers/IndexHeading';
 import IndexPageContainer from '#components/PageLayout/IndexPageContainer';
-import MostRead from '../../components/MostRead';
+import MostRead from '../../components/MostRead/Canonical';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import MetadataContainer from '../../components/Metadata';
@@ -46,6 +47,7 @@ const MostReadPage = ({ pageData }) => {
 
   const MostReadWrapper = ({ children }) => (
     <>
+      <IndexHeading id="content">{header}</IndexHeading>
       <MarginWrapper>
         <GelPageGrid
           columns={{
@@ -100,17 +102,10 @@ const MostReadPage = ({ pageData }) => {
         openGraphType="website"
       />
       <LinkedData type="WebPage" seoTitle={header} />
-      <main role="main">
+      <main role="main" data-e2e="most-read">
         <IndexPageContainer>
           <MostReadWrapper>
-            <MostRead
-              headingAttributes={{ id: 'content', tabIndex: '-1' }}
-              overrideHeadingAs="h1"
-              data={pageData}
-              columnLayout="oneColumn"
-              size="default"
-              renderCanonicalOnAmp
-            />
+            <MostRead data={pageData} columnLayout="oneColumn" size="default" />
           </MostReadWrapper>
         </IndexPageContainer>
       </main>

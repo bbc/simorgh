@@ -261,7 +261,7 @@ exports[`burmese SVG should render correctly 1`] = `
 `;
 
 exports[`coreIcons SVG should render correctly 1`] = `
-Object {
+{
   "alert": <CoreIcon
     aria-hidden="true"
     focusable="false"
@@ -690,7 +690,7 @@ exports[`marathi SVG should render correctly 1`] = `
 `;
 
 exports[`mediaIcons SVG should render correctly 1`] = `
-Object {
+{
   "audio": <AudioMediaIcon
     aria-hidden="true"
     focusable="false"
@@ -842,7 +842,7 @@ exports[`naidheachdan SVG should render correctly 1`] = `
 `;
 
 exports[`navigationIcons SVG should render correctly 1`] = `
-Object {
+{
   "cross": <MenuIcon
     aria-hidden="true"
     focusable="false"
