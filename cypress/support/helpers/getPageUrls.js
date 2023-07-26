@@ -1,6 +1,6 @@
 const path = require('ramda/src/path');
 
-global.Cypress = { env: () => { } }; // Fake Cypress.env
+global.Cypress = { env: () => {} }; // Fake Cypress.env
 const services = require('../config/services');
 
 const getPageTypes = service => path([service, 'pageTypes'], services);
