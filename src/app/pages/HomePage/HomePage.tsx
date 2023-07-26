@@ -4,8 +4,12 @@ import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import ATIAnalytics from '../../components/ATIAnalytics';
-import { VisualProminence, VisualStyle } from '../../models/types/curationData';
-import { HomePageData } from '../../components/ATIAnalytics/types';
+import {
+  CurationData,
+  VisualProminence,
+  VisualStyle,
+} from '../../models/types/curationData';
+import { ATIData } from '../../components/ATIAnalytics/types';
 import Curation from '../../components/Curation';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import styles from './index.styles';
@@ -15,7 +19,16 @@ import getItemList from '../../lib/seoUtils/getItemList';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 
 export interface HomePageProps {
-  pageData: HomePageData;
+  pageData: {
+    id?: string;
+    title: string;
+    curations: CurationData[];
+    description: string;
+    metadata: {
+      atiAnalytics: ATIData;
+      type: string;
+    };
+  };
 }
 
 const HomePage = ({ pageData }: HomePageProps) => {
@@ -28,7 +41,12 @@ const HomePage = ({ pageData }: HomePageProps) => {
     brandName,
   } = useContext(ServiceContext);
   const { topStoriesTitle, home } = translations;
-  const { title, description, curations, metadata } = pageData;
+  const {
+    title,
+    description,
+    curations,
+    metadata: { atiAnalytics },
+  } = pageData;
 
   const itemList = getItemList({ curations, name: brandName });
 
@@ -49,7 +67,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
         entities={[itemList]}
       />
       <main css={styles.main}>
-        <ATIAnalytics atiData={{ ...metadata, title }} />
+        <ATIAnalytics atiData={atiAnalytics} />
         <VisuallyHiddenText id="content" tabIndex={-1} as="h1">
           {/* eslint-disable-next-line jsx-a11y/aria-role */}
           <span role="text">

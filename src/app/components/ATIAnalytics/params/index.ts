@@ -1,6 +1,3 @@
-import pathOr from 'ramda/src/pathOr';
-import isEmpty from 'ramda/src/isEmpty';
-
 import {
   HOME_PAGE,
   STORY_PAGE,
@@ -52,9 +49,8 @@ import { RequestContextProps } from '../../../contexts/RequestContext';
 import { ServiceConfig } from '../../../models/types/serviceConfig';
 import {
   PageData,
-  HomePageData,
   ATIPageTrackingProps,
-  ATIData,
+  ATIConfigurationDetailsProviders,
 } from '../types';
 import { PageTypes } from '../../../models/types/global';
 
@@ -62,6 +58,8 @@ const ARTICLE_MEDIA_ASSET = 'article-media-asset';
 const ARTICLE_PHOTO_GALLERY = 'article-photo-gallery';
 const ARTICLE_CORRESPONDENT_PIECE = 'article-correspondent';
 const ARTICLE_SHORT_FORM_VIDEO = 'article-sfv';
+
+const MIGRATED_PAGE_TYPES: PageTypes[] = [HOME_PAGE];
 
 const noOp = () => {
   return {};
@@ -203,6 +201,9 @@ type PageTypeHandlers = {
   [key in PageTypes]: BuilderFunction;
 };
 
+const isMigrated = (pageType: PageTypes) =>
+  MIGRATED_PAGE_TYPES.includes(pageType);
+
 const createBuilderFactory = (
   requestContext: RequestContextProps,
   pageTypeHandlers: PageTypeHandlers,
@@ -212,13 +213,14 @@ const createBuilderFactory = (
   return pageTypeHandlers[pageType];
 };
 
-export const buildATIUrl = (
-  requestContext: RequestContextProps,
-  serviceContext: ServiceConfig,
-  data?: PageData,
-  atiData?: ATIData,
-) => {
-  if (atiData) {
+export const buildATIUrl = ({
+  requestContext,
+  serviceContext,
+  data,
+  atiData,
+}: ATIConfigurationDetailsProviders) => {
+  const { pageType } = requestContext;
+  if (atiData && isMigrated(pageType)) {
     return buildPageATIUrl({ atiData, requestContext, serviceContext });
   }
 
@@ -233,18 +235,17 @@ export const buildATIUrl = (
   return null;
 };
 
-export const buildATIEventTrackingParams = (
-  data: PageData | HomePageData,
-  requestContext: RequestContextProps,
-  serviceContext: ServiceConfig,
-) => {
+export const buildATIEventTrackingParams = ({
+  requestContext,
+  serviceContext,
+  data,
+  atiData,
+}: ATIConfigurationDetailsProviders) => {
   try {
-    const analytics = pathOr({}, ['metadata', 'analytics'], data);
-    const title = pathOr('', ['title'], data);
-
-    if (!isEmpty(analytics)) {
+    const { pageType } = requestContext;
+    if (atiData && isMigrated(pageType)) {
       return buildPageATIParams({
-        atiData: { analytics, title },
+        atiData,
         requestContext,
         serviceContext,
       });
