@@ -140,7 +140,7 @@ describe('getThingAttributes', () => {
     const queryParamsArray = splitUrl(queryParams);
 
     expect(queryParamsArray).toMatchInlineSnapshot(`
-      Array [
+      [
         "s=getDestination",
         "idclient=getAtUserId",
         "r=getScreenInfo",
