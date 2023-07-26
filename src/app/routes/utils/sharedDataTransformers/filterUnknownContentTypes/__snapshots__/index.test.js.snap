@@ -1,15 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`filterUnknownContentTypes assetTypeCode rules should handle "real" data 1`] = `
-Object {
-  "content": Object {
-    "groups": Array [
-      Object {
-        "items": Array [
-          Object {
+{
+  "content": {
+    "groups": [
+      {
+        "items": [
+          {
             "assetTypeCode": "PRO",
             "contentType": "Text",
-            "indexImage": Object {
+            "indexImage": {
               "altText": "test",
               "copyrightHolder": "BBC",
               "height": 1152,
@@ -26,13 +26,13 @@ Object {
             "type": "link",
             "uri": "https://www.bbc.com/serbian/resources/idt-8a2fc374-12d4-4875-8aa6-d3612d93af96",
           },
-          Object {
+          {
             "cpsType": "MAP",
-            "headlines": Object {
+            "headlines": {
               "headline": "Ulična umetnost: „Donosim eksploziju boja u javni prostor“ MAP TEST 1",
             },
             "id": "urn:bbc:ares::asset:serbian/lat/23279016",
-            "indexImage": Object {
+            "indexImage": {
               "altText": "corona",
               "caption": "corna",
               "copyrightHolder": "BBC",
@@ -45,14 +45,14 @@ Object {
               "width": 624,
             },
             "language": "sr-Latn",
-            "locators": Object {
+            "locators": {
               "assetId": "23279016",
               "assetUri": "/serbian/lat/23279016",
               "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/23279016",
               "curie": "http://www.bbc.co.uk/asset/281f815b-b6dc-e240-87ec-2fdcc6fe4010",
               "curieCpsUrn": "urn:bbc:cps:curie:asset:281f815b-b6dc-e240-87ec-2fdcc6fe4010",
             },
-            "media": Object {
+            "media": {
               "advertising": false,
               "caption": "nnnnn",
               "embedding": true,
@@ -61,36 +61,36 @@ Object {
               "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01qjbvt.jpg",
               "smpKind": "programme",
               "subType": "clip",
-              "synopses": Object {
+              "synopses": {
                 "long": "koala ijm aus",
                 "medium": "australia",
                 "short": "koajaa",
               },
               "title": "koala",
               "type": "media",
-              "versions": Array [
-                Object {
+              "versions": [
+                {
                   "availableFrom": 1582890367000,
-                  "availableTerritories": Object {
+                  "availableTerritories": {
                     "nonUk": true,
                     "uk": true,
                   },
                   "duration": 15,
                   "durationISO8601": "PT15S",
-                  "types": Array [
+                  "types": [
                     "Editorial",
                   ],
                   "versionId": "p01qjbvb",
-                  "warnings": Object {},
+                  "warnings": {},
                 },
               ],
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
             "prominence": "standard",
-            "section": Object {
+            "section": {
               "name": "Početna strana",
               "subType": "IDX",
               "type": "simple",
@@ -100,13 +100,13 @@ Object {
             "timestamp": 1585040745000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "MAP",
-            "headlines": Object {
+            "headlines": {
               "headline": "Serbia MAP test",
             },
             "id": "urn:bbc:ares::asset:serbian/lat/srbija-23278974",
-            "indexImage": Object {
+            "indexImage": {
               "altText": "alt tag church image",
               "copyrightHolder": "Google",
               "height": 576,
@@ -118,14 +118,14 @@ Object {
               "width": 1024,
             },
             "language": "sr-Latn",
-            "locators": Object {
+            "locators": {
               "assetId": "23278974",
               "assetUri": "/serbian/lat/srbija-23278974",
               "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/srbija-23278974",
               "curie": "http://www.bbc.co.uk/asset/00f43a6d-42bb-7a4c-995c-44462411e647",
               "curieCpsUrn": "urn:bbc:cps:curie:asset:00f43a6d-42bb-7a4c-995c-44462411e647",
             },
-            "media": Object {
+            "media": {
               "advertising": false,
               "caption": "Audio test for articles, UK only",
               "embedding": false,
@@ -134,32 +134,32 @@ Object {
               "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01n6y7l.jpg",
               "smpKind": "radioProgramme",
               "subType": "episode",
-              "synopses": Object {
+              "synopses": {
                 "short": "Audio test for articles, UK only",
               },
               "title": "Audio test for articles, UK only",
               "type": "media",
-              "versions": Array [
-                Object {
+              "versions": [
+                {
                   "availableFrom": 1563782700000,
-                  "availableTerritories": Object {
+                  "availableTerritories": {
                     "nonUk": false,
                     "uk": true,
                   },
                   "duration": 343,
                   "durationISO8601": "PT5M43S",
-                  "types": Array [
+                  "types": [
                     "Original",
                   ],
                   "versionId": "p01n6yb1",
-                  "warnings": Object {
+                  "warnings": {
                     "long": "Contains some strong language.",
                     "short": "Contains some strong language.",
                   },
                 },
               ],
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -168,13 +168,13 @@ Object {
             "timestamp": 1585040685000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "Beba panda odmara nakon prvog javnog nastupa",
             },
             "id": "urn:bbc:ares::asset:serbian/lat/23180965",
-            "indexImage": Object {
+            "indexImage": {
               "altText": "p",
               "caption": "Juang Meng danas ima jednu obavezu menje",
               "copyrightHolder": "Reuters",
@@ -188,26 +188,26 @@ Object {
               "width": 2048,
             },
             "language": "sr-Latn",
-            "locators": Object {
+            "locators": {
               "assetId": "23180965",
               "assetUri": "/serbian/lat/23180965",
               "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/23180965",
               "curie": "http://www.bbc.co.uk/asset/151206d3-aff2-e949-976c-e9acb326ab45",
               "curieCpsUrn": "urn:bbc:cps:curie:asset:151206d3-aff2-e949-976c-e9acb326ab45",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
-            "passport": Object {
-              "category": Object {
+            "passport": {
+              "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
                 "categoryName": "News",
               },
-              "taggings": Array [],
+              "taggings": [],
             },
             "prominence": "standard",
-            "section": Object {
+            "section": {
               "name": "Početna strana",
               "subType": "IDX",
               "type": "simple",
@@ -217,13 +217,13 @@ Object {
             "timestamp": 1516029046000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "Pravoslavni Božić u svetu",
             },
             "id": "urn:bbc:ares::asset:serbian/lat/23181025",
-            "indexImage": Object {
+            "indexImage": {
               "altText": "*",
               "caption": "Riga",
               "copyrightHolder": "EPA",
@@ -237,19 +237,19 @@ Object {
               "width": 976,
             },
             "language": "sr-Latn",
-            "locators": Object {
+            "locators": {
               "assetId": "23181025",
               "assetUri": "/serbian/lat/23181025",
               "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/23181025",
               "curie": "http://www.bbc.co.uk/asset/91d1ed9d-78a1-0d48-ac45-25218323f1f7",
               "curieCpsUrn": "urn:bbc:cps:curie:asset:91d1ed9d-78a1-0d48-ac45-25218323f1f7",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
             "prominence": "standard",
-            "section": Object {
+            "section": {
               "name": "Početna strana",
               "subType": "IDX",
               "type": "simple",
@@ -261,21 +261,21 @@ Object {
           },
         ],
         "semanticGroupName": "Top Stories",
-        "strapline": Object {
+        "strapline": {
           "name": "Top Stories",
         },
         "title": "Top Stories",
         "type": "responsive-top-stories",
       },
-      Object {
-        "items": Array [
-          Object {
+      {
+        "items": [
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 15",
             },
             "id": "urn:bbc:ares::asset:serbian/lat/media-23169612",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -287,7 +287,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -301,14 +301,14 @@ Object {
               "width": 624,
             },
             "language": "sr-Latn",
-            "locators": Object {
+            "locators": {
               "assetId": "23169612",
               "assetUri": "/serbian/lat/media-23169612",
               "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169612",
               "curie": "http://www.bbc.co.uk/asset/c6bb4a52-3ea8-9f4a-a849-974dd8795a47",
               "curieCpsUrn": "urn:bbc:cps:curie:asset:c6bb4a52-3ea8-9f4a-a849-974dd8795a47",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -316,13 +316,13 @@ Object {
             "timestamp": 1512404913000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 16",
             },
             "id": "urn:bbc:ares::asset:serbian/lat/media-23169613",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -334,7 +334,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -348,14 +348,14 @@ Object {
               "width": 624,
             },
             "language": "sr-Latn",
-            "locators": Object {
+            "locators": {
               "assetId": "23169613",
               "assetUri": "/serbian/lat/media-23169613",
               "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169613",
               "curie": "http://www.bbc.co.uk/asset/60b74371-1d58-1547-9137-28d0647fbde1",
               "curieCpsUrn": "urn:bbc:cps:curie:asset:60b74371-1d58-1547-9137-28d0647fbde1",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -363,13 +363,13 @@ Object {
             "timestamp": 1512404932000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 17",
             },
             "id": "urn:bbc:ares::asset:serbian/lat/media-23169614",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -381,7 +381,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -395,14 +395,14 @@ Object {
               "width": 624,
             },
             "language": "sr-Latn",
-            "locators": Object {
+            "locators": {
               "assetId": "23169614",
               "assetUri": "/serbian/lat/media-23169614",
               "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169614",
               "curie": "http://www.bbc.co.uk/asset/76ddfd93-f5bb-9f40-8181-85796582795a",
               "curieCpsUrn": "urn:bbc:cps:curie:asset:76ddfd93-f5bb-9f40-8181-85796582795a",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -410,13 +410,13 @@ Object {
             "timestamp": 1512404944000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 18",
             },
             "id": "urn:bbc:ares::asset:serbian/lat/media-23169615",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -428,7 +428,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -442,14 +442,14 @@ Object {
               "width": 624,
             },
             "language": "sr-Latn",
-            "locators": Object {
+            "locators": {
               "assetId": "23169615",
               "assetUri": "/serbian/lat/media-23169615",
               "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169615",
               "curie": "http://www.bbc.co.uk/asset/925b9e5c-3059-f240-87ff-e69f979774d7",
               "curieCpsUrn": "urn:bbc:cps:curie:asset:925b9e5c-3059-f240-87ff-e69f979774d7",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -459,21 +459,21 @@ Object {
           },
         ],
         "semanticGroupName": "Cluster 1",
-        "strapline": Object {
+        "strapline": {
           "name": "Danas",
         },
         "title": "Cluster 1",
         "type": "responsive-cluster",
       },
-      Object {
-        "items": Array [
-          Object {
+      {
+        "items": [
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 25",
             },
             "id": "urn:bbc:ares::asset:serbian/lat/media-23169622",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -485,7 +485,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -499,14 +499,14 @@ Object {
               "width": 624,
             },
             "language": "sr-Latn",
-            "locators": Object {
+            "locators": {
               "assetId": "23169622",
               "assetUri": "/serbian/lat/media-23169622",
               "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169622",
               "curie": "http://www.bbc.co.uk/asset/46e86861-26ec-1e49-afb1-00896f661442",
               "curieCpsUrn": "urn:bbc:cps:curie:asset:46e86861-26ec-1e49-afb1-00896f661442",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -514,13 +514,13 @@ Object {
             "timestamp": 1512405043000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 26",
             },
             "id": "urn:bbc:ares::asset:serbian/lat/media-23169623",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -532,7 +532,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -546,14 +546,14 @@ Object {
               "width": 624,
             },
             "language": "sr-Latn",
-            "locators": Object {
+            "locators": {
               "assetId": "23169623",
               "assetUri": "/serbian/lat/media-23169623",
               "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169623",
               "curie": "http://www.bbc.co.uk/asset/bed59bb0-13e8-d441-9ac2-70d58ab92379",
               "curieCpsUrn": "urn:bbc:cps:curie:asset:bed59bb0-13e8-d441-9ac2-70d58ab92379",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -561,13 +561,13 @@ Object {
             "timestamp": 1512405053000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 27",
             },
             "id": "urn:bbc:ares::asset:serbian/lat/media-23169624",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -579,7 +579,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -593,14 +593,14 @@ Object {
               "width": 624,
             },
             "language": "sr-Latn",
-            "locators": Object {
+            "locators": {
               "assetId": "23169624",
               "assetUri": "/serbian/lat/media-23169624",
               "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169624",
               "curie": "http://www.bbc.co.uk/asset/9fdff7d7-a6c9-4840-b79f-d111bbb7a4e1",
               "curieCpsUrn": "urn:bbc:cps:curie:asset:9fdff7d7-a6c9-4840-b79f-d111bbb7a4e1",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -608,13 +608,13 @@ Object {
             "timestamp": 1512405063000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 28",
             },
             "id": "urn:bbc:ares::asset:serbian/lat/media-23169625",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -626,7 +626,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -640,14 +640,14 @@ Object {
               "width": 624,
             },
             "language": "sr-Latn",
-            "locators": Object {
+            "locators": {
               "assetId": "23169625",
               "assetUri": "/serbian/lat/media-23169625",
               "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169625",
               "curie": "http://www.bbc.co.uk/asset/419ff24e-4687-3741-a1d4-7d8c6a023b58",
               "curieCpsUrn": "urn:bbc:cps:curie:asset:419ff24e-4687-3741-a1d4-7d8c6a023b58",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -655,13 +655,13 @@ Object {
             "timestamp": 1512405074000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 29",
             },
             "id": "urn:bbc:ares::asset:serbian/lat/media-23169626",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -673,7 +673,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -687,14 +687,14 @@ Object {
               "width": 624,
             },
             "language": "sr-Latn",
-            "locators": Object {
+            "locators": {
               "assetId": "23169626",
               "assetUri": "/serbian/lat/media-23169626",
               "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169626",
               "curie": "http://www.bbc.co.uk/asset/1849c8f5-dac1-294b-a0b5-823b119b1e6e",
               "curieCpsUrn": "urn:bbc:cps:curie:asset:1849c8f5-dac1-294b-a0b5-823b119b1e6e",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -702,13 +702,13 @@ Object {
             "timestamp": 1512405084000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 30",
             },
             "id": "urn:bbc:ares::asset:serbian/lat/media-23169627",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -720,7 +720,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -734,14 +734,14 @@ Object {
               "width": 624,
             },
             "language": "sr-Latn",
-            "locators": Object {
+            "locators": {
               "assetId": "23169627",
               "assetUri": "/serbian/lat/media-23169627",
               "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169627",
               "curie": "http://www.bbc.co.uk/asset/ab3b3ff1-1cf3-1f43-b7b1-5779c8c60f22",
               "curieCpsUrn": "urn:bbc:cps:curie:asset:ab3b3ff1-1cf3-1f43-b7b1-5779c8c60f22",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -751,21 +751,21 @@ Object {
           },
         ],
         "semanticGroupName": "Section 2",
-        "strapline": Object {
+        "strapline": {
           "name": "Zanimljivo",
         },
         "title": "Section 2",
         "type": "responsive-inspire",
       },
-      Object {
-        "items": Array [
-          Object {
+      {
+        "items": [
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 31",
             },
             "id": "urn:bbc:ares::asset:serbian/lat/media-23169628",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -777,7 +777,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -791,14 +791,14 @@ Object {
               "width": 624,
             },
             "language": "sr-Latn",
-            "locators": Object {
+            "locators": {
               "assetId": "23169628",
               "assetUri": "/serbian/lat/media-23169628",
               "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169628",
               "curie": "http://www.bbc.co.uk/asset/dc35d343-6b9d-0e41-888c-fa036f1d4a62",
               "curieCpsUrn": "urn:bbc:cps:curie:asset:dc35d343-6b9d-0e41-888c-fa036f1d4a62",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -806,13 +806,13 @@ Object {
             "timestamp": 1512405111000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 32",
             },
             "id": "urn:bbc:ares::asset:serbian/lat/media-23169629",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -824,7 +824,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -838,14 +838,14 @@ Object {
               "width": 624,
             },
             "language": "sr-Latn",
-            "locators": Object {
+            "locators": {
               "assetId": "23169629",
               "assetUri": "/serbian/lat/media-23169629",
               "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169629",
               "curie": "http://www.bbc.co.uk/asset/aa00d55a-de84-c24f-82fa-8e203b76d0c5",
               "curieCpsUrn": "urn:bbc:cps:curie:asset:aa00d55a-de84-c24f-82fa-8e203b76d0c5",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -853,13 +853,13 @@ Object {
             "timestamp": 1512405121000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 33",
             },
             "id": "urn:bbc:ares::asset:serbian/lat/media-23169630",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -871,7 +871,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -885,14 +885,14 @@ Object {
               "width": 624,
             },
             "language": "sr-Latn",
-            "locators": Object {
+            "locators": {
               "assetId": "23169630",
               "assetUri": "/serbian/lat/media-23169630",
               "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169630",
               "curie": "http://www.bbc.co.uk/asset/8f52c324-d00c-f944-b299-f8f13c542b64",
               "curieCpsUrn": "urn:bbc:cps:curie:asset:8f52c324-d00c-f944-b299-f8f13c542b64",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -900,13 +900,13 @@ Object {
             "timestamp": 1512405132000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 34",
             },
             "id": "urn:bbc:ares::asset:serbian/lat/media-23169631",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -918,7 +918,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -932,14 +932,14 @@ Object {
               "width": 624,
             },
             "language": "sr-Latn",
-            "locators": Object {
+            "locators": {
               "assetId": "23169631",
               "assetUri": "/serbian/lat/media-23169631",
               "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169631",
               "curie": "http://www.bbc.co.uk/asset/60898e52-4a3e-aa44-88f5-861644dde52e",
               "curieCpsUrn": "urn:bbc:cps:curie:asset:60898e52-4a3e-aa44-88f5-861644dde52e",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -947,13 +947,13 @@ Object {
             "timestamp": 1512405146000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 35",
             },
             "id": "urn:bbc:ares::asset:serbian/lat/media-23169632",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -965,7 +965,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -979,14 +979,14 @@ Object {
               "width": 624,
             },
             "language": "sr-Latn",
-            "locators": Object {
+            "locators": {
               "assetId": "23169632",
               "assetUri": "/serbian/lat/media-23169632",
               "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169632",
               "curie": "http://www.bbc.co.uk/asset/1a8ff619-0767-5e4e-bff8-f665407588a2",
               "curieCpsUrn": "urn:bbc:cps:curie:asset:1a8ff619-0767-5e4e-bff8-f665407588a2",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -994,13 +994,13 @@ Object {
             "timestamp": 1512405155000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 36",
             },
             "id": "urn:bbc:ares::asset:serbian/lat/media-23169633",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -1012,7 +1012,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -1026,14 +1026,14 @@ Object {
               "width": 624,
             },
             "language": "sr-Latn",
-            "locators": Object {
+            "locators": {
               "assetId": "23169633",
               "assetUri": "/serbian/lat/media-23169633",
               "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169633",
               "curie": "http://www.bbc.co.uk/asset/8ec20548-be66-3545-8d55-9d3378dd4875",
               "curieCpsUrn": "urn:bbc:cps:curie:asset:8ec20548-be66-3545-8d55-9d3378dd4875",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -1043,21 +1043,21 @@ Object {
           },
         ],
         "semanticGroupName": "Section 3",
-        "strapline": Object {
+        "strapline": {
           "name": "In case you missed it",
         },
         "title": "Section 3",
         "type": "responsive-in-depth",
       },
-      Object {
-        "items": Array [
-          Object {
+      {
+        "items": [
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 11",
             },
             "id": "urn:bbc:ares::asset:serbian/lat/media-23169608",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -1069,7 +1069,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -1083,35 +1083,35 @@ Object {
               "width": 624,
             },
             "language": "sr-Latn",
-            "locators": Object {
+            "locators": {
               "assetId": "23169608",
               "assetUri": "/serbian/lat/media-23169608",
               "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169608",
               "curie": "http://www.bbc.co.uk/asset/7dcb9041-b854-1c49-beae-9cbfc39f7ad8",
               "curieCpsUrn": "urn:bbc:cps:curie:asset:7dcb9041-b854-1c49-beae-9cbfc39f7ad8",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
-            "passport": Object {
-              "category": Object {
+            "passport": {
+              "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Interactive",
                 "categoryName": "Interactive",
               },
-              "taggings": Array [],
+              "taggings": [],
             },
             "summary": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju",
             "timestamp": 1520349658000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 12",
             },
             "id": "urn:bbc:ares::asset:serbian/lat/media-23169609",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -1123,7 +1123,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -1137,14 +1137,14 @@ Object {
               "width": 624,
             },
             "language": "sr-Latn",
-            "locators": Object {
+            "locators": {
               "assetId": "23169609",
               "assetUri": "/serbian/lat/media-23169609",
               "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169609",
               "curie": "http://www.bbc.co.uk/asset/bb8e8b05-c110-c24f-ace7-8070aa8840bb",
               "curieCpsUrn": "urn:bbc:cps:curie:asset:bb8e8b05-c110-c24f-ace7-8070aa8840bb",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -1152,13 +1152,13 @@ Object {
             "timestamp": 1512404843000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 13",
             },
             "id": "urn:bbc:ares::asset:serbian/lat/media-23169610",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -1170,7 +1170,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -1184,14 +1184,14 @@ Object {
               "width": 624,
             },
             "language": "sr-Latn",
-            "locators": Object {
+            "locators": {
               "assetId": "23169610",
               "assetUri": "/serbian/lat/media-23169610",
               "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169610",
               "curie": "http://www.bbc.co.uk/asset/9dc640ae-90d1-c349-81a6-8e743c631c7f",
               "curieCpsUrn": "urn:bbc:cps:curie:asset:9dc640ae-90d1-c349-81a6-8e743c631c7f",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -1199,13 +1199,13 @@ Object {
             "timestamp": 1512404855000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 14",
             },
             "id": "urn:bbc:ares::asset:serbian/lat/media-23169611",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -1217,7 +1217,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -1231,14 +1231,14 @@ Object {
               "width": 624,
             },
             "language": "sr-Latn",
-            "locators": Object {
+            "locators": {
               "assetId": "23169611",
               "assetUri": "/serbian/lat/media-23169611",
               "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169611",
               "curie": "http://www.bbc.co.uk/asset/f6c242ea-6464-ec40-9b65-d63720333564",
               "curieCpsUrn": "urn:bbc:cps:curie:asset:f6c242ea-6464-ec40-9b65-d63720333564",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -1251,15 +1251,15 @@ Object {
         "title": "Special reports 2",
         "type": "special-reports",
       },
-      Object {
-        "items": Array [
-          Object {
+      {
+        "items": [
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 19",
             },
             "id": "urn:bbc:ares::asset:serbian/lat/media-23169616",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -1271,7 +1271,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -1285,14 +1285,14 @@ Object {
               "width": 624,
             },
             "language": "sr-Latn",
-            "locators": Object {
+            "locators": {
               "assetId": "23169616",
               "assetUri": "/serbian/lat/media-23169616",
               "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169616",
               "curie": "http://www.bbc.co.uk/asset/6f98837f-a378-a14b-b8b0-e098ddcaee98",
               "curieCpsUrn": "urn:bbc:cps:curie:asset:6f98837f-a378-a14b-b8b0-e098ddcaee98",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -1300,13 +1300,13 @@ Object {
             "timestamp": 1512404963000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 20",
             },
             "id": "urn:bbc:ares::asset:serbian/lat/media-23169617",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -1318,7 +1318,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -1332,14 +1332,14 @@ Object {
               "width": 624,
             },
             "language": "sr-Latn",
-            "locators": Object {
+            "locators": {
               "assetId": "23169617",
               "assetUri": "/serbian/lat/media-23169617",
               "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169617",
               "curie": "http://www.bbc.co.uk/asset/0bf6ef6e-d769-3346-81dd-7026b7f56ac1",
               "curieCpsUrn": "urn:bbc:cps:curie:asset:0bf6ef6e-d769-3346-81dd-7026b7f56ac1",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -1347,13 +1347,13 @@ Object {
             "timestamp": 1512404973000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 21",
             },
             "id": "urn:bbc:ares::asset:serbian/lat/media-23169618",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -1365,7 +1365,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -1379,14 +1379,14 @@ Object {
               "width": 624,
             },
             "language": "sr-Latn",
-            "locators": Object {
+            "locators": {
               "assetId": "23169618",
               "assetUri": "/serbian/lat/media-23169618",
               "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169618",
               "curie": "http://www.bbc.co.uk/asset/fae15535-6ec3-2e4c-ad18-808dc16f8bee",
               "curieCpsUrn": "urn:bbc:cps:curie:asset:fae15535-6ec3-2e4c-ad18-808dc16f8bee",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -1394,13 +1394,13 @@ Object {
             "timestamp": 1512404993000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 22",
             },
             "id": "urn:bbc:ares::asset:serbian/lat/media-23169619",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -1412,7 +1412,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -1426,14 +1426,14 @@ Object {
               "width": 624,
             },
             "language": "sr-Latn",
-            "locators": Object {
+            "locators": {
               "assetId": "23169619",
               "assetUri": "/serbian/lat/media-23169619",
               "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169619",
               "curie": "http://www.bbc.co.uk/asset/5f470c43-78fc-dc47-a396-b35b3f9bcfa6",
               "curieCpsUrn": "urn:bbc:cps:curie:asset:5f470c43-78fc-dc47-a396-b35b3f9bcfa6",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -1441,13 +1441,13 @@ Object {
             "timestamp": 1512405001000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 23",
             },
             "id": "urn:bbc:ares::asset:serbian/lat/media-23169620",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -1459,7 +1459,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -1473,14 +1473,14 @@ Object {
               "width": 624,
             },
             "language": "sr-Latn",
-            "locators": Object {
+            "locators": {
               "assetId": "23169620",
               "assetUri": "/serbian/lat/media-23169620",
               "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169620",
               "curie": "http://www.bbc.co.uk/asset/581e9c63-b91d-8640-b366-be6f3587e45e",
               "curieCpsUrn": "urn:bbc:cps:curie:asset:581e9c63-b91d-8640-b366-be6f3587e45e",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -1488,13 +1488,13 @@ Object {
             "timestamp": 1512405014000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 24",
             },
             "id": "urn:bbc:ares::asset:serbian/lat/media-23169621",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -1506,7 +1506,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -1520,14 +1520,14 @@ Object {
               "width": 624,
             },
             "language": "sr-Latn",
-            "locators": Object {
+            "locators": {
               "assetId": "23169621",
               "assetUri": "/serbian/lat/media-23169621",
               "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169621",
               "curie": "http://www.bbc.co.uk/asset/e9a2d913-2aaf-d748-8f16-4fc62bc02a97",
               "curieCpsUrn": "urn:bbc:cps:curie:asset:e9a2d913-2aaf-d748-8f16-4fc62bc02a97",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -1535,13 +1535,13 @@ Object {
             "timestamp": 1512405031000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 2",
             },
             "id": "urn:bbc:ares::asset:serbian/lat/media-23169489",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -1553,7 +1553,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -1567,14 +1567,14 @@ Object {
               "width": 624,
             },
             "language": "sr-Latn",
-            "locators": Object {
+            "locators": {
               "assetId": "23169489",
               "assetUri": "/serbian/lat/media-23169489",
               "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169489",
               "curie": "http://www.bbc.co.uk/asset/eca68bfa-610a-c04b-b184-bf37a0b6d9d2",
               "curieCpsUrn": "urn:bbc:cps:curie:asset:eca68bfa-610a-c04b-b184-bf37a0b6d9d2",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -1582,13 +1582,13 @@ Object {
             "timestamp": 1512404387000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 3",
             },
             "id": "urn:bbc:ares::asset:serbian/lat/media-23169490",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -1600,7 +1600,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -1614,14 +1614,14 @@ Object {
               "width": 624,
             },
             "language": "sr-Latn",
-            "locators": Object {
+            "locators": {
               "assetId": "23169490",
               "assetUri": "/serbian/lat/media-23169490",
               "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169490",
               "curie": "http://www.bbc.co.uk/asset/1f097a89-47d5-424d-a097-622de49e2b95",
               "curieCpsUrn": "urn:bbc:cps:curie:asset:1f097a89-47d5-424d-a097-622de49e2b95",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -1629,13 +1629,13 @@ Object {
             "timestamp": 1512404400000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 4",
             },
             "id": "urn:bbc:ares::asset:serbian/lat/media-23169491",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -1647,7 +1647,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -1661,14 +1661,14 @@ Object {
               "width": 624,
             },
             "language": "sr-Latn",
-            "locators": Object {
+            "locators": {
               "assetId": "23169491",
               "assetUri": "/serbian/lat/media-23169491",
               "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169491",
               "curie": "http://www.bbc.co.uk/asset/8d82b668-7eed-2c4b-b088-3c9877aad22e",
               "curieCpsUrn": "urn:bbc:cps:curie:asset:8d82b668-7eed-2c4b-b088-3c9877aad22e",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -1676,13 +1676,13 @@ Object {
             "timestamp": 1512404431000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 5",
             },
             "id": "urn:bbc:ares::asset:serbian/lat/media-23169492",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -1694,7 +1694,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -1708,14 +1708,14 @@ Object {
               "width": 624,
             },
             "language": "sr-Latn",
-            "locators": Object {
+            "locators": {
               "assetId": "23169492",
               "assetUri": "/serbian/lat/media-23169492",
               "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169492",
               "curie": "http://www.bbc.co.uk/asset/5246c7d9-500c-df4a-8aac-bed3ab682b3c",
               "curieCpsUrn": "urn:bbc:cps:curie:asset:5246c7d9-500c-df4a-8aac-bed3ab682b3c",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -1723,13 +1723,13 @@ Object {
             "timestamp": 1512404628000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 6",
             },
             "id": "urn:bbc:ares::asset:serbian/lat/media-23169493",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -1741,7 +1741,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -1755,14 +1755,14 @@ Object {
               "width": 624,
             },
             "language": "sr-Latn",
-            "locators": Object {
+            "locators": {
               "assetId": "23169493",
               "assetUri": "/serbian/lat/media-23169493",
               "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169493",
               "curie": "http://www.bbc.co.uk/asset/05a64eb2-12b3-1742-b149-6cd4b050b572",
               "curieCpsUrn": "urn:bbc:cps:curie:asset:05a64eb2-12b3-1742-b149-6cd4b050b572",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -1770,13 +1770,13 @@ Object {
             "timestamp": 1512404639000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 7",
             },
             "id": "urn:bbc:ares::asset:serbian/lat/media-23169494",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -1788,7 +1788,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -1802,14 +1802,14 @@ Object {
               "width": 624,
             },
             "language": "sr-Latn",
-            "locators": Object {
+            "locators": {
               "assetId": "23169494",
               "assetUri": "/serbian/lat/media-23169494",
               "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169494",
               "curie": "http://www.bbc.co.uk/asset/42765cca-a2ef-0742-8f78-f24c59d78caf",
               "curieCpsUrn": "urn:bbc:cps:curie:asset:42765cca-a2ef-0742-8f78-f24c59d78caf",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -1817,13 +1817,13 @@ Object {
             "timestamp": 1512404649000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 8",
             },
             "id": "urn:bbc:ares::asset:serbian/lat/media-23169495",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -1835,7 +1835,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -1849,14 +1849,14 @@ Object {
               "width": 624,
             },
             "language": "sr-Latn",
-            "locators": Object {
+            "locators": {
               "assetId": "23169495",
               "assetUri": "/serbian/lat/media-23169495",
               "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169495",
               "curie": "http://www.bbc.co.uk/asset/82cc4275-a7b5-6d4a-a6ff-59c592c2ba47",
               "curieCpsUrn": "urn:bbc:cps:curie:asset:82cc4275-a7b5-6d4a-a6ff-59c592c2ba47",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -1864,13 +1864,13 @@ Object {
             "timestamp": 1512404728000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "Po starom ili novom kalendaru, ona ne kasni",
             },
             "id": "urn:bbc:ares::asset:serbian/lat/23180995",
-            "indexImage": Object {
+            "indexImage": {
               "altText": "-",
               "caption": "Ukrajinci Novu godinu po starom kalendaru dočekuju pod maskama",
               "copyrightHolder": "EPA",
@@ -1884,19 +1884,19 @@ Object {
               "width": 976,
             },
             "language": "sr-Latn",
-            "locators": Object {
+            "locators": {
               "assetId": "23180995",
               "assetUri": "/serbian/lat/23180995",
               "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/23180995",
               "curie": "http://www.bbc.co.uk/asset/7c1fcd16-be90-9c4f-a745-67fa76656c95",
               "curieCpsUrn": "urn:bbc:cps:curie:asset:7c1fcd16-be90-9c4f-a745-67fa76656c95",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
             "overtypedSummary": "Nova godina po starom kalendaru proslavljena je uz vatromet, maskembal i ples",
-            "section": Object {
+            "section": {
               "name": "Početna strana",
               "subType": "IDX",
               "type": "simple",
@@ -1906,11 +1906,11 @@ Object {
             "timestamp": 1516026891000,
             "type": "cps",
           },
-          Object {
+          {
             "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/news/world-europe-16453975",
             "assetTypeCode": "PGL",
             "contentType": "Gallery",
-            "indexImage": Object {
+            "indexImage": {
               "altText": "Russian Prime Minister Vladimir Putin attends a Christmas service in the Spaso-Preobrazhensky Cathedral in St Petersburg, 6 January",
               "copyrightHolder": "Reuters",
               "height": 261,
@@ -1921,7 +1921,7 @@ Object {
               "type": "image",
               "width": 464,
             },
-            "indexThumbnail": Object {
+            "indexThumbnail": {
               "altText": "Russian Prime Minister Vladimir Putin attends a Christmas service in the Spaso-Preobrazhensky Cathedral in St Petersburg, 6 January",
               "copyrightHolder": "Reuters",
               "height": 81,
@@ -1938,13 +1938,13 @@ Object {
             "type": "link",
             "uri": "http://www.bbc.co.uk/news/world-europe-16453975",
           },
-          Object {
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 9",
             },
             "id": "urn:bbc:ares::asset:serbian/lat/media-23169496",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -1956,7 +1956,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -1970,14 +1970,14 @@ Object {
               "width": 624,
             },
             "language": "sr-Latn",
-            "locators": Object {
+            "locators": {
               "assetId": "23169496",
               "assetUri": "/serbian/lat/media-23169496",
               "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169496",
               "curie": "http://www.bbc.co.uk/asset/e4d48c23-b886-6741-92e7-f6b15dcc54d8",
               "curieCpsUrn": "urn:bbc:cps:curie:asset:e4d48c23-b886-6741-92e7-f6b15dcc54d8",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -1985,13 +1985,13 @@ Object {
             "timestamp": 1512404810000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 10",
             },
             "id": "urn:bbc:ares::asset:serbian/lat/media-23169607",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -2003,7 +2003,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "Kruševca",
               "caption": "Kruševca",
               "copyrightHolder": "BBC",
@@ -2017,23 +2017,23 @@ Object {
               "width": 624,
             },
             "language": "sr-Latn",
-            "locators": Object {
+            "locators": {
               "assetId": "23169607",
               "assetUri": "/serbian/lat/media-23169607",
               "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/media-23169607",
               "curie": "http://www.bbc.co.uk/asset/7e947ab1-4150-b34f-aa35-e902c58cf16f",
               "curieCpsUrn": "urn:bbc:cps:curie:asset:7e947ab1-4150-b34f-aa35-e902c58cf16f",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
-            "passport": Object {
-              "category": Object {
+            "passport": {
+              "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
                 "categoryName": "News",
               },
-              "taggings": Array [],
+              "taggings": [],
             },
             "summary": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju",
             "timestamp": 1512404823000,
@@ -2044,37 +2044,37 @@ Object {
         "title": "Frequency info",
         "type": "featured-site-top-stories",
       },
-      Object {
-        "items": Array [
-          Object {
+      {
+        "items": [
+          {
             "assetTypeCode": "PRO",
             "contentType": "Guide",
             "name": "Kontaktirajte nas 1",
             "type": "link",
             "uri": "/serbian/lat/popular/read",
           },
-          Object {
+          {
             "assetTypeCode": "PRO",
             "contentType": "Guide",
             "name": "Kontaktirajte nas 2",
             "type": "link",
             "uri": "/serbian/lat/popular/read",
           },
-          Object {
+          {
             "assetTypeCode": "PRO",
             "contentType": "Guide",
             "name": "Kontaktirajte nas 3",
             "type": "link",
             "uri": "/serbian/lat/popular/read",
           },
-          Object {
+          {
             "assetTypeCode": "PRO",
             "contentType": "Guide",
             "name": "Kontaktirajte nas 4",
             "type": "link",
             "uri": "/serbian/lat/popular/read",
           },
-          Object {
+          {
             "assetTypeCode": "PRO",
             "contentType": "Guide",
             "name": "Kontaktirajte nas 5",
@@ -2083,7 +2083,7 @@ Object {
           },
         ],
         "semanticGroupName": "Useful links",
-        "strapline": Object {
+        "strapline": {
           "name": "Korisni linkovi",
         },
         "title": "Useful links",
@@ -2091,18 +2091,18 @@ Object {
       },
     ],
   },
-  "metadata": Object {
-    "analyticsLabels": Object {
+  "metadata": {
+    "analyticsLabels": {
       "contentId": "urn:bbc:cps:curie:asset:5be5c72e-2538-caaf-e050-17ac2b8cd8a2",
       "counterName": "serbianlat.page",
       "cps_asset_id": "23159045",
       "cps_asset_type": "idx",
     },
-    "atiAnalytics": Object {
+    "atiAnalytics": {
       "producerId": "81",
       "producerName": "SERBIAN",
     },
-    "blockTypes": Array [
+    "blockTypes": [
       "responsive-top-stories",
       "responsive-cluster",
       "responsive-inspire",
@@ -2117,40 +2117,40 @@ Object {
     "language": "sr-Latn",
     "lastPublished": 1662050004000,
     "lastUpdated": 1662050009552,
-    "locators": Object {
+    "locators": {
       "assetId": "23159045",
       "assetUri": "/serbian/lat/front_page",
       "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/front_page",
       "curie": "http://www.bbc.co.uk/asset/5be5c72e-2538-caaf-e050-17ac2b8cd8a2/desktop/domestic",
       "curieCpsUrn": "urn:bbc:cps:curie:asset:5be5c72e-2538-caaf-e050-17ac2b8cd8a2/desktop/domestic",
     },
-    "options": Object {
+    "options": {
       "allowAdvertising": true,
     },
     "summary": "BBC na srpskom nudi ekskluzivan sadržaj - analitičko, istraživačko i nepristrasno izveštavanje u tekstovima i video prilozima prilagođenim i društvenim mrežama.",
-    "tags": Object {},
+    "tags": {},
     "timestamp": 1662049966000,
     "title": "Početna strana",
     "type": "IDX",
     "version": "v1.4.7",
   },
-  "promo": Object {
+  "promo": {
     "id": "urn:bbc:ares::index:serbian/lat/front_page/desktop/domestic",
     "name": "Početna strana",
     "subType": "IDX",
     "type": "simple",
     "uri": "/serbian/lat/front_page",
   },
-  "relatedContent": Object {
-    "groups": Array [],
-    "section": Object {
+  "relatedContent": {
+    "groups": [],
+    "section": {
       "name": "Početna strana",
       "subType": "index",
       "type": "simple",
       "uri": "/serbian/lat/front_page",
       "urlIdentifier": "/serbian/lat/front_page",
     },
-    "site": Object {
+    "site": {
       "name": "BBC News na srpskom",
       "subType": "site",
       "type": "simple",
@@ -2162,18 +2162,18 @@ Object {
 `;
 
 exports[`filterUnknownContentTypes cpsTypes rules should handle "real" data 1`] = `
-Object {
-  "content": Object {
-    "groups": Array [
-      Object {
-        "items": Array [
-          Object {
+{
+  "content": {
+    "groups": [
+      {
+        "items": [
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "نجاب سے تعلق رکھنے والے 15 افراد کی لاشیں برآمد",
             },
             "id": "urn:bbc:ares::asset:urdu/23165525",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "A farmer in Punjab",
               "caption": "Punjab farmer",
               "copyrightHolder": "RAMINDER PAL SINGH",
@@ -2185,7 +2185,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "A farmer in Punjab",
               "caption": "Punjab farmer",
               "copyrightHolder": "RAMINDER PAL SINGH",
@@ -2199,38 +2199,38 @@ Object {
               "width": 976,
             },
             "language": "ur",
-            "locators": Object {
+            "locators": {
               "assetId": "23165525",
               "assetUri": "/urdu/23165525",
               "cpsUrn": "urn:bbc:content:assetUri:urdu/23165525",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
-            "passport": Object {
-              "category": Object {
+            "passport": {
+              "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
                 "categoryName": "News",
               },
-              "taggings": Array [],
+              "taggings": [],
             },
             "prominence": "standard",
-            "relatedItems": Array [
-              Object {
+            "relatedItems": [
+              {
                 "name": "Farmers spawned most European men",
                 "timestamp": 1264004482000,
                 "type": "link",
                 "uri": "http://news.bbc.co.uk/1/hi/sci/tech/8467623.stm",
               },
-              Object {
+              {
                 "cpsType": "STY",
-                "headlines": Object {
+                "headlines": {
                   "headline": "Report badger baiting to police",
                 },
                 "id": "urn:bbc:ares::asset:news/uk-northern-ireland-17363900",
                 "language": "en-gb",
-                "locators": Object {
+                "locators": {
                   "assetUri": "/news/uk-northern-ireland-17363900",
                   "cpsUrn": "urn:bbc:content:assetUri:/news/uk-northern-ireland-17363900",
                 },
@@ -2239,7 +2239,7 @@ Object {
                 "type": "cps",
               },
             ],
-            "section": Object {
+            "section": {
               "name": "خبریں، تازہ خبریں، بریکنگ نیو | News, latest news, breaking news",
               "subType": "IDX",
               "type": "simple",
@@ -2249,37 +2249,37 @@ Object {
             "timestamp": 1510748439000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "Trump in China: US president strikes warmer tone with Xi",
             },
             "id": "urn:bbc:ares::asset:news/23187434",
             "language": "en-gb",
-            "locators": Object {
+            "locators": {
               "assetId": "23187434",
               "assetUri": "/news/23187434",
               "cpsUrn": "urn:bbc:content:assetUri:news/23187434",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
-            "passport": Object {
-              "category": Object {
+            "passport": {
+              "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
                 "categoryName": "News",
               },
-              "taggings": Array [],
+              "taggings": [],
             },
             "prominence": "standard",
-            "section": Object {
+            "section": {
               "name": "Home",
               "subType": "IDX",
               "type": "simple",
               "uri": "/news/front_page",
             },
-            "site": Object {
+            "site": {
               "name": "BBC News",
               "subType": "site",
               "type": "simple",
@@ -2292,21 +2292,21 @@ Object {
         ],
         "maxRelatedLinks": 4,
         "semanticGroupName": "Top story",
-        "strapline": Object {
+        "strapline": {
           "name": "top story",
         },
         "title": "Top story",
         "type": "top-story",
       },
-      Object {
-        "items": Array [
-          Object {
+      {
+        "items": [
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "پاکستان کی سمندری حدود کے قریب انڈین آبدوز کی نشاندہی",
             },
             "id": "urn:bbc:ares::asset:urdu/23092305",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "india navy",
               "caption": "indian navy ship",
               "copyrightHolder": "MANJUNATH KIRAN",
@@ -2318,7 +2318,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "india navy",
               "caption": "indian navy ship",
               "copyrightHolder": "MANJUNATH KIRAN",
@@ -2332,16 +2332,16 @@ Object {
               "width": 976,
             },
             "language": "ur",
-            "locators": Object {
+            "locators": {
               "assetId": "23092305",
               "assetUri": "/urdu/23092305",
               "cpsUrn": "urn:bbc:content:assetUri:urdu/23092305",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
-            "section": Object {
+            "section": {
               "name": "خبریں، تازہ خبریں، بریکنگ نیو | News, latest news, breaking news",
               "subType": "IDX",
               "type": "simple",
@@ -2351,13 +2351,13 @@ Object {
             "timestamp": 1479469009000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "روہنگیا مسلمانوں کی آمد، بنگلہ دیشی سرحد پر مزید فوج",
             },
             "id": "urn:bbc:ares::asset:urdu/23092285",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "روہنگیا",
               "copyrightHolder": "S. Yulinnas",
               "height": 180,
@@ -2368,7 +2368,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "روہنگیا",
               "copyrightHolder": "S. Yulinnas",
               "height": 549,
@@ -2381,23 +2381,23 @@ Object {
               "width": 976,
             },
             "language": "ur",
-            "locators": Object {
+            "locators": {
               "assetId": "23092285",
               "assetUri": "/urdu/23092285",
               "cpsUrn": "urn:bbc:content:assetUri:urdu/23092285",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
-            "passport": Object {
-              "category": Object {
+            "passport": {
+              "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
                 "categoryName": "News",
               },
-              "taggings": Array [],
+              "taggings": [],
             },
-            "section": Object {
+            "section": {
               "name": "خبریں، تازہ خبریں، بریکنگ نیو | News, latest news, breaking news",
               "subType": "IDX",
               "type": "simple",
@@ -2407,13 +2407,13 @@ Object {
             "timestamp": 1479468083000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "’شامی بچوں کی تکالیف کی کہیں مثال نہیں ملتی‘",
             },
             "id": "urn:bbc:ares::asset:urdu/23105530",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "رپورٹ میں مصدقہ اموات کا ہی ذکر کیا گیا ہے تاہم یہ تعداد کہیں زیادہ ہو سکتی ہے",
               "caption": "رپورٹ میں مصدقہ اموات کا ہی ذکر کیا گیا ہے تاہم یہ تعداد کہیں زیادہ ہو سکتی ہے",
               "copyrightHolder": "Reuters",
@@ -2425,7 +2425,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "رپورٹ میں مصدقہ اموات کا ہی ذکر کیا گیا ہے تاہم یہ تعداد کہیں زیادہ ہو سکتی ہے",
               "caption": "رپورٹ میں مصدقہ اموات کا ہی ذکر کیا گیا ہے تاہم یہ تعداد کہیں زیادہ ہو سکتی ہے",
               "copyrightHolder": "Reuters",
@@ -2439,23 +2439,23 @@ Object {
               "width": 976,
             },
             "language": "ur",
-            "locators": Object {
+            "locators": {
               "assetId": "23105530",
               "assetUri": "/urdu/23105530",
               "cpsUrn": "urn:bbc:content:assetUri:urdu/23105530",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
-            "passport": Object {
-              "category": Object {
+            "passport": {
+              "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
                 "categoryName": "News",
               },
-              "taggings": Array [],
+              "taggings": [],
             },
-            "section": Object {
+            "section": {
               "name": "خبریں، تازہ خبریں، بریکنگ نیو | News, latest news, breaking news",
               "subType": "IDX",
               "type": "simple",
@@ -2465,11 +2465,11 @@ Object {
             "timestamp": 1489404398000,
             "type": "cps",
           },
-          Object {
-            "byline": Object {
+          {
+            "byline": {
               "name": "Sunjoy Majumber",
-              "persons": Array [
-                Object {
+              "persons": [
+                {
                   "function": "BBC News, Delhi",
                   "name": "Sunjoy Majumber",
                 },
@@ -2477,11 +2477,11 @@ Object {
               "title": "BBC News, Delhi ",
             },
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "ٹرمپ، کلنٹن اور ٹی وی کا ڈرامہ",
             },
             "id": "urn:bbc:ares::asset:urdu/world-23078262",
-            "indexImage": Object {
+            "indexImage": {
               "altText": "Hillary and Trump",
               "caption": "ہلیری اور ٹرمپ",
               "copyrightHolder": "Reuters",
@@ -2495,12 +2495,12 @@ Object {
               "width": 976,
             },
             "language": "ur",
-            "locators": Object {
+            "locators": {
               "assetId": "23078262",
               "assetUri": "/urdu/world-23078262",
               "cpsUrn": "urn:bbc:content:assetUri:urdu/world-23078262",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -2508,13 +2508,13 @@ Object {
             "timestamp": 1474893699000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "MAP",
-            "headlines": Object {
+            "headlines": {
               "headline": "نیویارک: امام مسجد کے مبینہ قاتل پر فردِ جرم عا4 - -",
             },
             "id": "urn:bbc:ares::asset:urdu/regional-23068076",
-            "indexImage": Object {
+            "indexImage": {
               "altText": "a",
               "copyrightHolder": "AFP",
               "height": 1152,
@@ -2526,12 +2526,12 @@ Object {
               "width": 2048,
             },
             "language": "ur",
-            "locators": Object {
+            "locators": {
               "assetId": "23068076",
               "assetUri": "/urdu/regional-23068076",
               "cpsUrn": "urn:bbc:content:assetUri:urdu/regional-23068076",
             },
-            "media": Object {
+            "media": {
               "caption": "test clip short synopsis 1",
               "entityType": "Clip",
               "externalId": "p0128hn2",
@@ -2542,16 +2542,16 @@ Object {
               "subType": "index",
               "type": "external_vpid",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
-            "passport": Object {
-              "category": Object {
+            "passport": {
+              "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
                 "categoryName": "News",
               },
-              "taggings": Array [],
+              "taggings": [],
             },
             "summary": "نیویارک پولیس کا کہنا ہے کہ سنیچر کو قتل کیے جانے والے امام مسجد اور ان کے نائب کے قتل ک ے سلسلے",
             "timestamp": 1471521559000,
@@ -2563,15 +2563,15 @@ Object {
         "title": "More top stories",
         "type": "secondary-top-story",
       },
-      Object {
-        "items": Array [
-          Object {
+      {
+        "items": [
+          {
             "cpsType": "MAP",
-            "headlines": Object {
+            "headlines": {
               "headline": "نیویارک: امام مسجد کے مبینہ قاتل پر فردِ جرم عائد گشددشگ",
             },
             "id": "urn:bbc:ares::asset:urdu/regional-23068061",
-            "indexImage": Object {
+            "indexImage": {
               "altText": "a",
               "copyrightHolder": "AFP",
               "height": 1152,
@@ -2583,12 +2583,12 @@ Object {
               "width": 2048,
             },
             "language": "ur",
-            "locators": Object {
+            "locators": {
               "assetId": "23068061",
               "assetUri": "/urdu/regional-23068061",
               "cpsUrn": "urn:bbc:content:assetUri:urdu/regional-23068061",
             },
-            "media": Object {
+            "media": {
               "caption": "test clip short synopsis 1",
               "entityType": "Clip",
               "externalId": "p0128hn2",
@@ -2599,26 +2599,26 @@ Object {
               "subType": "index",
               "type": "external_vpid",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
-            "passport": Object {
-              "category": Object {
+            "passport": {
+              "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
                 "categoryName": "News",
               },
-              "taggings": Array [],
+              "taggings": [],
             },
             "summary": "نیویارک پولیس کا کہنا ہے کہ سنیچر کو قتل کیے جانے والے امام مسجد اور ان کے نائب کے قتل ک ے سلسلے",
             "timestamp": 1471520769000,
             "type": "cps",
           },
-          Object {
+          {
             "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/urdu/indepth/rio_olympics_2016_urdu",
             "assetTypeCode": "PRO",
             "contentType": "RadioBulletin",
-            "indexImage": Object {
+            "indexImage": {
               "altText": "trott and kenny",
               "copyrightHolder": "Getty Images",
               "height": 371,
@@ -2635,13 +2635,13 @@ Object {
             "type": "link",
             "uri": "http://www.bbc.com/urdu/indepth/rio_olympics_2016_urdu",
           },
-          Object {
+          {
             "cpsType": "MAP",
-            "headlines": Object {
+            "headlines": {
               "headline": "نیویارک: امام مسجد کے مبینہ قاتل پر فردِ جرم عا- 7",
             },
             "id": "urn:bbc:ares::asset:urdu/regional-23068079",
-            "indexImage": Object {
+            "indexImage": {
               "altText": "a",
               "copyrightHolder": "AFP",
               "height": 1152,
@@ -2653,12 +2653,12 @@ Object {
               "width": 2048,
             },
             "language": "ur",
-            "locators": Object {
+            "locators": {
               "assetId": "23068079",
               "assetUri": "/urdu/regional-23068079",
               "cpsUrn": "urn:bbc:content:assetUri:urdu/regional-23068079",
             },
-            "media": Object {
+            "media": {
               "caption": "test clip short synopsis 1",
               "entityType": "Clip",
               "externalId": "p0128hn2",
@@ -2669,7 +2669,7 @@ Object {
               "subType": "index",
               "type": "external_vpid",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -2677,13 +2677,13 @@ Object {
             "timestamp": 1471521654000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "MAP",
-            "headlines": Object {
+            "headlines": {
               "headline": "نیویارک: امام مسجد کے مبینہ قاتل پر فردِ جرم عائ3 - 2 -",
             },
             "id": "urn:bbc:ares::asset:urdu/regional-23068063",
-            "indexImage": Object {
+            "indexImage": {
               "altText": "a",
               "copyrightHolder": "AFP",
               "height": 1152,
@@ -2695,12 +2695,12 @@ Object {
               "width": 2048,
             },
             "language": "ur",
-            "locators": Object {
+            "locators": {
               "assetId": "23068063",
               "assetUri": "/urdu/regional-23068063",
               "cpsUrn": "urn:bbc:content:assetUri:urdu/regional-23068063",
             },
-            "media": Object {
+            "media": {
               "caption": "test clip short synopsis 1",
               "entityType": "Clip",
               "externalId": "p0128hn2",
@@ -2711,7 +2711,7 @@ Object {
               "subType": "index",
               "type": "external_vpid",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -2719,13 +2719,13 @@ Object {
             "timestamp": 1471520810000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "MAP",
-            "headlines": Object {
+            "headlines": {
               "headline": "نیویارک: امام مسجد کے مبینہ قاتل پر فردِ جرم عا- 5",
             },
             "id": "urn:bbc:ares::asset:urdu/regional-23068077",
-            "indexImage": Object {
+            "indexImage": {
               "altText": "a",
               "copyrightHolder": "AFP",
               "height": 1152,
@@ -2737,12 +2737,12 @@ Object {
               "width": 2048,
             },
             "language": "ur",
-            "locators": Object {
+            "locators": {
               "assetId": "23068077",
               "assetUri": "/urdu/regional-23068077",
               "cpsUrn": "urn:bbc:content:assetUri:urdu/regional-23068077",
             },
-            "media": Object {
+            "media": {
               "caption": "test clip short synopsis 1",
               "entityType": "Clip",
               "externalId": "p0128hn2",
@@ -2753,7 +2753,7 @@ Object {
               "subType": "index",
               "type": "external_vpid",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -2761,13 +2761,13 @@ Object {
             "timestamp": 1471521607000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "MAP",
-            "headlines": Object {
+            "headlines": {
               "headline": "نیویارک: امام مسجد کے مبینہ قاتل پر فردِ جرم عا- 6",
             },
             "id": "urn:bbc:ares::asset:urdu/regional-23068078",
-            "indexImage": Object {
+            "indexImage": {
               "altText": "a",
               "copyrightHolder": "AFP",
               "height": 1152,
@@ -2779,12 +2779,12 @@ Object {
               "width": 2048,
             },
             "language": "ur",
-            "locators": Object {
+            "locators": {
               "assetId": "23068078",
               "assetUri": "/urdu/regional-23068078",
               "cpsUrn": "urn:bbc:content:assetUri:urdu/regional-23068078",
             },
-            "media": Object {
+            "media": {
               "caption": "test clip short synopsis 1",
               "entityType": "Clip",
               "externalId": "p0128hn2",
@@ -2795,7 +2795,7 @@ Object {
               "subType": "index",
               "type": "external_vpid",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -2805,8 +2805,8 @@ Object {
           },
         ],
         "semanticGroupName": "Watch/Listen",
-        "strapline": Object {
-          "links": Object {
+        "strapline": {
+          "links": {
             "desktop": "http://www.bbc.co.uk/urdu/media/video",
             "highweb": "http://www.bbc.co.uk/urdu/media/video",
           },
@@ -2816,13 +2816,13 @@ Object {
         "title": "Watch/Listen",
         "type": "av-stories-now",
       },
-      Object {
-        "items": Array [
-          Object {
+      {
+        "items": [
+          {
             "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/urdu/regional/2016/09/160919_us_condemns_uri_attack_mb",
             "assetTypeCode": "PRO",
             "contentType": "Text",
-            "indexImage": Object {
+            "indexImage": {
               "altText": "حملے کے بعد سپیشل فورسز کو ہیلی کاپٹرز سے وہاں اترا گیا اور تقریبا چار گھنٹے جاری رہنے والے تصادم کے بعد حملہ آوروں کو خاموش کیا گیا",
               "caption": "حملے کے بعد سپیشل فورسز کو ہیلی کاپٹرز سے وہاں اترا گیا اور تقریبا چار گھنٹے جاری رہنے والے تصادم کے بعد حملہ آوروں کو خاموش کیا گیا",
               "copyrightHolder": "Getty Images",
@@ -2834,7 +2834,7 @@ Object {
               "type": "image",
               "width": 660,
             },
-            "indexThumbnail": Object {
+            "indexThumbnail": {
               "altText": "حملے کے بعد سپیشل فورسز کو ہیلی کاپٹرز سے وہاں اترا گیا اور تقریبا چار گھنٹے جاری رہنے والے تصادم کے بعد حملہ آوروں کو خاموش کیا گیا",
               "caption": "حملے کے بعد سپیشل فورسز کو ہیلی کاپٹرز سے وہاں اترا گیا اور تقریبا چار گھنٹے جاری رہنے والے تصادم کے بعد حملہ آوروں کو خاموش کیا گیا",
               "copyrightHolder": "Getty Images",
@@ -2854,19 +2854,19 @@ Object {
           },
         ],
         "semanticGroupName": "Special reports 1",
-        "strapline": Object {
+        "strapline": {
           "name": "اولمپکس 2016 - special reports",
         },
         "title": "Special reports 1",
         "type": "special-reports",
       },
-      Object {
-        "items": Array [
-          Object {
+      {
+        "items": [
+          {
             "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/urdu/indepth/rio_olympics_2016_urdu",
             "assetTypeCode": "PRO",
             "contentType": "Text",
-            "indexImage": Object {
+            "indexImage": {
               "altText": "trott and kenny",
               "copyrightHolder": "Getty Images",
               "height": 371,
@@ -2885,21 +2885,21 @@ Object {
           },
         ],
         "semanticGroupName": "Special reports 2",
-        "strapline": Object {
+        "strapline": {
           "name": "Special reports 2 - خصوصی ضمیمہ ",
         },
         "title": "Special reports 2 - خصوصی ضمیمہ ",
         "type": "special-reports",
       },
-      Object {
-        "items": Array [
-          Object {
+      {
+        "items": [
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "5 - وائرس صبح کے وقت زیادہ خطرناک ہوتے ہیں",
             },
             "id": "urn:bbc:ares::asset:urdu/world-23068073",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "the virus",
               "copyrightHolder": "BBC",
               "height": 180,
@@ -2910,7 +2910,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "the virus",
               "copyrightHolder": "BBC",
               "height": 490,
@@ -2923,12 +2923,12 @@ Object {
               "width": 872,
             },
             "language": "ur",
-            "locators": Object {
+            "locators": {
               "assetId": "23068073",
               "assetUri": "/urdu/world-23068073",
               "cpsUrn": "urn:bbc:content:assetUri:urdu/world-23068073",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -2936,13 +2936,13 @@ Object {
             "timestamp": 1471521405000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "6 - وائرس صبح کے وقت زیادہ خطرناک ہوتے ہیں",
             },
             "id": "urn:bbc:ares::asset:urdu/world-23068074",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "the virus",
               "copyrightHolder": "BBC",
               "height": 180,
@@ -2953,7 +2953,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "the virus",
               "copyrightHolder": "BBC",
               "height": 490,
@@ -2966,12 +2966,12 @@ Object {
               "width": 872,
             },
             "language": "ur",
-            "locators": Object {
+            "locators": {
               "assetId": "23068074",
               "assetUri": "/urdu/world-23068074",
               "cpsUrn": "urn:bbc:content:assetUri:urdu/world-23068074",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -2979,13 +2979,13 @@ Object {
             "timestamp": 1471521422000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "7 - وائرس صبح کے وقت زیادہ خطرناک ہوتے ہیں",
             },
             "id": "urn:bbc:ares::asset:urdu/world-23068075",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "the virus",
               "copyrightHolder": "BBC",
               "height": 180,
@@ -2996,7 +2996,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "the virus",
               "copyrightHolder": "BBC",
               "height": 490,
@@ -3009,12 +3009,12 @@ Object {
               "width": 872,
             },
             "language": "ur",
-            "locators": Object {
+            "locators": {
               "assetId": "23068075",
               "assetUri": "/urdu/world-23068075",
               "cpsUrn": "urn:bbc:content:assetUri:urdu/world-23068075",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -3024,8 +3024,8 @@ Object {
           },
         ],
         "semanticGroupName": "Section 1",
-        "strapline": Object {
-          "links": Object {
+        "strapline": {
+          "links": {
             "desktop": "http://www.bbc.com/urdu/pakistan",
             "highweb": "http://www.bbc.com/urdu/pakistan",
           },
@@ -3035,15 +3035,15 @@ Object {
         "title": "Section 1",
         "type": "single-section-digest",
       },
-      Object {
-        "items": Array [
-          Object {
+      {
+        "items": [
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "آئرلینڈ کی پاکستان کو پہلے بلے بازی کی دعوت -5",
             },
             "id": "urn:bbc:ares::asset:urdu/sport-23068070",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "cricketer",
               "copyrightHolder": "AFP",
               "height": 180,
@@ -3054,7 +3054,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "cricketer",
               "copyrightHolder": "AFP",
               "height": 371,
@@ -3067,12 +3067,12 @@ Object {
               "width": 660,
             },
             "language": "ur",
-            "locators": Object {
+            "locators": {
               "assetId": "23068070",
               "assetUri": "/urdu/sport-23068070",
               "cpsUrn": "urn:bbc:content:assetUri:urdu/sport-23068070",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -3080,13 +3080,13 @@ Object {
             "timestamp": 1471521325000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "آئرلینڈ کی پاکستان کو پہلے بلے بازی کی دعوت -6",
             },
             "id": "urn:bbc:ares::asset:urdu/sport-23068071",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "cricketer",
               "copyrightHolder": "AFP",
               "height": 180,
@@ -3097,7 +3097,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "cricketer",
               "copyrightHolder": "AFP",
               "height": 371,
@@ -3110,12 +3110,12 @@ Object {
               "width": 660,
             },
             "language": "ur",
-            "locators": Object {
+            "locators": {
               "assetId": "23068071",
               "assetUri": "/urdu/sport-23068071",
               "cpsUrn": "urn:bbc:content:assetUri:urdu/sport-23068071",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -3123,13 +3123,13 @@ Object {
             "timestamp": 1471521350000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "آئرلینڈ کی پاکستان کو پہلے بلے بازی کی دعوت -7",
             },
             "id": "urn:bbc:ares::asset:urdu/sport-23068072",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "cricketer",
               "copyrightHolder": "AFP",
               "height": 180,
@@ -3140,7 +3140,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "cricketer",
               "copyrightHolder": "AFP",
               "height": 371,
@@ -3153,12 +3153,12 @@ Object {
               "width": 660,
             },
             "language": "ur",
-            "locators": Object {
+            "locators": {
               "assetId": "23068072",
               "assetUri": "/urdu/sport-23068072",
               "cpsUrn": "urn:bbc:content:assetUri:urdu/sport-23068072",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -3168,8 +3168,8 @@ Object {
           },
         ],
         "semanticGroupName": "Sport",
-        "strapline": Object {
-          "links": Object {
+        "strapline": {
+          "links": {
             "desktop": "http://www.bbc.com/urdu/sport",
             "highweb": "http://www.bbc.com/urdu/sport",
           },
@@ -3179,15 +3179,15 @@ Object {
         "title": "Sport",
         "type": "featured-site-top-stories",
       },
-      Object {
-        "items": Array [
-          Object {
+      {
+        "items": [
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "12 - وائرس صبح کے وقت زیادہ خطرناک ہوتے ہیں",
             },
             "id": "urn:bbc:ares::asset:urdu/world-23068140",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "the virus",
               "copyrightHolder": "BBC",
               "height": 180,
@@ -3198,7 +3198,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "the virus",
               "copyrightHolder": "BBC",
               "height": 490,
@@ -3211,12 +3211,12 @@ Object {
               "width": 872,
             },
             "language": "ur",
-            "locators": Object {
+            "locators": {
               "assetId": "23068140",
               "assetUri": "/urdu/world-23068140",
               "cpsUrn": "urn:bbc:content:assetUri:urdu/world-23068140",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -3224,13 +3224,13 @@ Object {
             "timestamp": 1471531151000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "MAP",
-            "headlines": Object {
+            "headlines": {
               "headline": "نیویارک: امام مسجد کے مبینہ قاتل پر فردِ جرم عا- 87",
             },
             "id": "urn:bbc:ares::asset:urdu/regional-23068080",
-            "indexImage": Object {
+            "indexImage": {
               "altText": "a",
               "copyrightHolder": "AFP",
               "height": 1152,
@@ -3242,12 +3242,12 @@ Object {
               "width": 2048,
             },
             "language": "ur",
-            "locators": Object {
+            "locators": {
               "assetId": "23068080",
               "assetUri": "/urdu/regional-23068080",
               "cpsUrn": "urn:bbc:content:assetUri:urdu/regional-23068080",
             },
-            "media": Object {
+            "media": {
               "caption": "test clip short synopsis 1",
               "entityType": "Clip",
               "externalId": "p0128hn2",
@@ -3258,7 +3258,7 @@ Object {
               "subType": "index",
               "type": "external_vpid",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -3268,21 +3268,21 @@ Object {
           },
         ],
         "semanticGroupName": "Section 2",
-        "strapline": Object {
+        "strapline": {
           "name": "Special Feature 3 - Section 2",
         },
         "title": "Section 2",
         "type": "single-section-digest",
       },
-      Object {
-        "items": Array [
-          Object {
+      {
+        "items": [
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "15 - وائرس صبح کے وقت زیادہ خطرناک ہوتے ہیں",
             },
             "id": "urn:bbc:ares::asset:urdu/world-23068177",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "the virus",
               "copyrightHolder": "BBC",
               "height": 180,
@@ -3293,7 +3293,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "the virus",
               "copyrightHolder": "BBC",
               "height": 490,
@@ -3306,12 +3306,12 @@ Object {
               "width": 872,
             },
             "language": "ur",
-            "locators": Object {
+            "locators": {
               "assetId": "23068177",
               "assetUri": "/urdu/world-23068177",
               "cpsUrn": "urn:bbc:content:assetUri:urdu/world-23068177",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -3319,13 +3319,13 @@ Object {
             "timestamp": 1471533557000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "16 - وائرس صبح کے وقت زیادہ خطرناک ہوتے ہیں",
             },
             "id": "urn:bbc:ares::asset:urdu/world-23068178",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "the virus",
               "copyrightHolder": "BBC",
               "height": 180,
@@ -3336,7 +3336,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "the virus",
               "copyrightHolder": "BBC",
               "height": 490,
@@ -3349,12 +3349,12 @@ Object {
               "width": 872,
             },
             "language": "ur",
-            "locators": Object {
+            "locators": {
               "assetId": "23068178",
               "assetUri": "/urdu/world-23068178",
               "cpsUrn": "urn:bbc:content:assetUri:urdu/world-23068178",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -3362,13 +3362,13 @@ Object {
             "timestamp": 1471533603000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "17 - وائرس صبح کے وقت زیادہ خطرناک ہوتے ہیں",
             },
             "id": "urn:bbc:ares::asset:urdu/world-23068179",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "the virus",
               "copyrightHolder": "BBC",
               "height": 180,
@@ -3379,7 +3379,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "the virus",
               "copyrightHolder": "BBC",
               "height": 490,
@@ -3392,12 +3392,12 @@ Object {
               "width": 872,
             },
             "language": "ur",
-            "locators": Object {
+            "locators": {
               "assetId": "23068179",
               "assetUri": "/urdu/world-23068179",
               "cpsUrn": "urn:bbc:content:assetUri:urdu/world-23068179",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -3410,15 +3410,15 @@ Object {
         "title": "Section 3",
         "type": "single-section-digest",
       },
-      Object {
-        "items": Array [
-          Object {
+      {
+        "items": [
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "13 - وائرس صبح کے وقت زیادہ خطرناک ہوتے ہیں",
             },
             "id": "urn:bbc:ares::asset:urdu/world-23068149",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "the virus",
               "copyrightHolder": "BBC",
               "height": 180,
@@ -3429,7 +3429,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "the virus",
               "copyrightHolder": "BBC",
               "height": 490,
@@ -3442,12 +3442,12 @@ Object {
               "width": 872,
             },
             "language": "ur",
-            "locators": Object {
+            "locators": {
               "assetId": "23068149",
               "assetUri": "/urdu/world-23068149",
               "cpsUrn": "urn:bbc:content:assetUri:urdu/world-23068149",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -3455,13 +3455,13 @@ Object {
             "timestamp": 1471531476000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "14 - وائرس صبح کے وقت زیادہ خطرناک ہوتے ہیں",
             },
             "id": "urn:bbc:ares::asset:urdu/world-23068150",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "the virus",
               "copyrightHolder": "BBC",
               "height": 180,
@@ -3472,7 +3472,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "the virus",
               "copyrightHolder": "BBC",
               "height": 490,
@@ -3485,12 +3485,12 @@ Object {
               "width": 872,
             },
             "language": "ur",
-            "locators": Object {
+            "locators": {
               "assetId": "23068150",
               "assetUri": "/urdu/world-23068150",
               "cpsUrn": "urn:bbc:content:assetUri:urdu/world-23068150",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -3503,15 +3503,15 @@ Object {
         "title": "Also in the news",
         "type": "also-in-news",
       },
-      Object {
-        "items": Array [
-          Object {
+      {
+        "items": [
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "9 - وائرس صبح کے وقت زیادہ خطرناک ہوتے ہیں",
             },
             "id": "urn:bbc:ares::asset:urdu/world-23068137",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "the virus",
               "copyrightHolder": "BBC",
               "height": 180,
@@ -3522,7 +3522,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "the virus",
               "copyrightHolder": "BBC",
               "height": 490,
@@ -3535,12 +3535,12 @@ Object {
               "width": 872,
             },
             "language": "ur",
-            "locators": Object {
+            "locators": {
               "assetId": "23068137",
               "assetUri": "/urdu/world-23068137",
               "cpsUrn": "urn:bbc:content:assetUri:urdu/world-23068137",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -3548,13 +3548,13 @@ Object {
             "timestamp": 1471531089000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "10 - وائرس صبح کے وقت زیادہ خطرناک ہوتے ہیں",
             },
             "id": "urn:bbc:ares::asset:urdu/world-23068138",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "the virus",
               "copyrightHolder": "BBC",
               "height": 180,
@@ -3565,7 +3565,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "the virus",
               "copyrightHolder": "BBC",
               "height": 490,
@@ -3578,12 +3578,12 @@ Object {
               "width": 872,
             },
             "language": "ur",
-            "locators": Object {
+            "locators": {
               "assetId": "23068138",
               "assetUri": "/urdu/world-23068138",
               "cpsUrn": "urn:bbc:content:assetUri:urdu/world-23068138",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -3591,13 +3591,13 @@ Object {
             "timestamp": 1471531108000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "11 - وائرس صبح کے وقت زیادہ خطرناک ہوتے ہیں",
             },
             "id": "urn:bbc:ares::asset:urdu/world-23068139",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "the virus",
               "copyrightHolder": "BBC",
               "height": 180,
@@ -3608,7 +3608,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "the virus",
               "copyrightHolder": "BBC",
               "height": 490,
@@ -3621,12 +3621,12 @@ Object {
               "width": 872,
             },
             "language": "ur",
-            "locators": Object {
+            "locators": {
               "assetId": "23068139",
               "assetUri": "/urdu/world-23068139",
               "cpsUrn": "urn:bbc:content:assetUri:urdu/world-23068139",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -3636,21 +3636,21 @@ Object {
           },
         ],
         "semanticGroupName": "Features",
-        "strapline": Object {
+        "strapline": {
           "name": "فیچر اور تجزیے  - features",
         },
         "title": "Features",
         "type": "feature-main",
       },
-      Object {
-        "items": Array [
-          Object {
+      {
+        "items": [
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "5 - وائرس صبح کے وقت زیادہ خطرناک ہوتے ہیں",
             },
             "id": "urn:bbc:ares::asset:urdu/world-23068110",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "the virus",
               "copyrightHolder": "BBC",
               "height": 180,
@@ -3661,7 +3661,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "the virus",
               "copyrightHolder": "BBC",
               "height": 490,
@@ -3674,12 +3674,12 @@ Object {
               "width": 872,
             },
             "language": "ur",
-            "locators": Object {
+            "locators": {
               "assetId": "23068110",
               "assetUri": "/urdu/world-23068110",
               "cpsUrn": "urn:bbc:content:assetUri:urdu/world-23068110",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -3689,8 +3689,8 @@ Object {
           },
         ],
         "semanticGroupName": "Showcase 1",
-        "strapline": Object {
-          "links": Object {
+        "strapline": {
+          "links": {
             "desktop": "http://www.bbc.com/urdu/world",
             "highweb": "http://www.bbc.com/urdu/world",
           },
@@ -3700,15 +3700,15 @@ Object {
         "title": "Showcase 1",
         "type": "section-digest",
       },
-      Object {
-        "items": Array [
-          Object {
+      {
+        "items": [
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "6 - وائرس صبح کے وقت زیادہ خطرناک ہوتے ہیں",
             },
             "id": "urn:bbc:ares::asset:urdu/world-23068111",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "the virus",
               "copyrightHolder": "BBC",
               "height": 180,
@@ -3719,7 +3719,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "the virus",
               "copyrightHolder": "BBC",
               "height": 490,
@@ -3732,12 +3732,12 @@ Object {
               "width": 872,
             },
             "language": "ur",
-            "locators": Object {
+            "locators": {
               "assetId": "23068111",
               "assetUri": "/urdu/world-23068111",
               "cpsUrn": "urn:bbc:content:assetUri:urdu/world-23068111",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -3747,8 +3747,8 @@ Object {
           },
         ],
         "semanticGroupName": "Showcase 2",
-        "strapline": Object {
-          "links": Object {
+        "strapline": {
+          "links": {
             "desktop": "http://www.bbc.com/urdu/pakistan",
             "highweb": "http://www.bbc.com/urdu/pakistan",
           },
@@ -3758,15 +3758,15 @@ Object {
         "title": "Showcase 2",
         "type": "section-digest",
       },
-      Object {
-        "items": Array [
-          Object {
+      {
+        "items": [
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "7 - وائرس صبح کے وقت زیادہ خطرناک ہوتے ہیں",
             },
             "id": "urn:bbc:ares::asset:urdu/world-23068112",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "the virus",
               "copyrightHolder": "BBC",
               "height": 180,
@@ -3777,7 +3777,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "the virus",
               "copyrightHolder": "BBC",
               "height": 490,
@@ -3790,12 +3790,12 @@ Object {
               "width": 872,
             },
             "language": "ur",
-            "locators": Object {
+            "locators": {
               "assetId": "23068112",
               "assetUri": "/urdu/world-23068112",
               "cpsUrn": "urn:bbc:content:assetUri:urdu/world-23068112",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -3805,8 +3805,8 @@ Object {
           },
         ],
         "semanticGroupName": "Showcase 3",
-        "strapline": Object {
-          "links": Object {
+        "strapline": {
+          "links": {
             "desktop": "http://www.bbc.com/urdu/entertainment",
             "highweb": "http://www.bbc.com/urdu/entertainment",
           },
@@ -3816,15 +3816,15 @@ Object {
         "title": "Showcase 3",
         "type": "section-digest",
       },
-      Object {
-        "items": Array [
-          Object {
+      {
+        "items": [
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "8 - وائرس صبح کے وقت زیادہ خطرناک ہوتے ہیں",
             },
             "id": "urn:bbc:ares::asset:urdu/world-23068123",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "the virus",
               "copyrightHolder": "BBC",
               "height": 180,
@@ -3835,7 +3835,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "the virus",
               "copyrightHolder": "BBC",
               "height": 490,
@@ -3848,12 +3848,12 @@ Object {
               "width": 872,
             },
             "language": "ur",
-            "locators": Object {
+            "locators": {
               "assetId": "23068123",
               "assetUri": "/urdu/world-23068123",
               "cpsUrn": "urn:bbc:content:assetUri:urdu/world-23068123",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -3863,8 +3863,8 @@ Object {
           },
         ],
         "semanticGroupName": "Showcase 4",
-        "strapline": Object {
-          "links": Object {
+        "strapline": {
+          "links": {
             "desktop": "http://www.bbc.com/urdu/science",
             "highweb": "http://www.bbc.com/urdu/science",
           },
@@ -3874,9 +3874,9 @@ Object {
         "title": "Showcase 4",
         "type": "section-digest",
       },
-      Object {
-        "items": Array [
-          Object {
+      {
+        "items": [
+          {
             "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/urdu/multimedia/2013/04/000000_sairbeen_ondemand",
             "assetTypeCode": "PRO",
             "contentType": "Text",
@@ -3888,18 +3888,18 @@ Object {
           },
         ],
         "semanticGroupName": "Programmes",
-        "strapline": Object {
+        "strapline": {
           "name": "سیربین آن ڈیمانڈ - bulletin on demand",
         },
         "title": "Programmes",
         "type": "programmes-standard",
       },
-      Object {
-        "items": Array [
-          Object {
+      {
+        "items": [
+          {
             "assetTypeCode": "PRO",
             "contentType": "Text",
-            "indexImage": Object {
+            "indexImage": {
               "altText": "bbc",
               "copyrightHolder": "BBC",
               "height": 261,
@@ -3910,7 +3910,7 @@ Object {
               "type": "image",
               "width": 464,
             },
-            "indexThumbnail": Object {
+            "indexThumbnail": {
               "altText": "bbc",
               "copyrightHolder": "BBC",
               "height": 180,
@@ -3932,16 +3932,16 @@ Object {
         "title": "Podcasts",
         "type": "podcast-promotion",
       },
-      Object {
-        "items": Array [
-          Object {
+      {
+        "items": [
+          {
             "cpsType": "PGL",
-            "headlines": Object {
+            "headlines": {
               "headline": "پاکستان اور انگلینڈ کے درمیان واحد ٹی ٹوئنٹی",
               "overtyped": "پاکستان اور انگلینڈ کے درمیان واحد ٹی ٹوئنٹی ہوعرتیپع",
             },
             "id": "urn:bbc:ares::asset:urdu/sport-23075379",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "عماد وسیم جنھوں نے پاکستان کی جانب سے پہلا اوور کرایا فیلڈ سے باہر چلے گئے تھے۔ سہیل تنویر کی گیند پر ہیلز کی شاٹ کو روکنے میں عماد کے سر پر گیند لگی تھی۔",
               "caption": "عماد وسیم جنھوں نے پاکستان کی جانب سے پہلا اوور کرایا فیلڈ سے باہر چلے گئے تھے۔ سہیل تنویر کی گیند پر ہیلز کی شاٹ کو روکنے میں عماد کے سر پر گیند لگی تھی۔",
               "copyrightHolder": "حردح",
@@ -3953,7 +3953,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "عماد وسیم جنھوں نے پاکستان کی جانب سے پہلا اوور کرایا فیلڈ سے باہر چلے گئے تھے۔ سہیل تنویر کی گیند پر ہیلز کی شاٹ کو روکنے میں عماد کے سر پر گیند لگی تھی۔",
               "caption": "عماد وسیم جنھوں نے پاکستان کی جانب سے پہلا اوور کرایا فیلڈ سے باہر چلے گئے تھے۔ سہیل تنویر کی گیند پر ہیلز کی شاٹ کو روکنے میں عماد کے سر پر گیند لگی تھی۔",
               "copyrightHolder": "حردح",
@@ -3967,33 +3967,33 @@ Object {
               "width": 640,
             },
             "language": "ur",
-            "locators": Object {
+            "locators": {
               "assetId": "23075379",
               "assetUri": "/urdu/sport-23075379",
               "cpsUrn": "urn:bbc:content:assetUri:urdu/sport-23075379",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
-            "passport": Object {
-              "category": Object {
+            "passport": {
+              "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
                 "categoryName": "News",
               },
-              "taggings": Array [],
+              "taggings": [],
             },
             "summary": "پاکستان اور انگلینڈ کے مابین اولڈ ٹریفورڈ کےمیدان پر کھیلے جانے والے واحد ٹی ٹوئنٹی میچ کی تصاویر",
             "timestamp": 1474279265000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "PGL",
-            "headlines": Object {
+            "headlines": {
               "headline": "مالم جبہ کی چیئرلفٹ کے نظارے",
             },
             "id": "urn:bbc:ares::asset:urdu/pakistan-23068127",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "BBC Afrique vous propose une galerie-photo sur la vie du boxeur Mohamed Ali, décédé le 3 juin 2016, à Phoenix, en Arizona, aux Etats-Unis áäâç€àè.",
               "caption": "BBC Afrique vous propose une galerie-photo sur la vie du boxeur Mohamed Ali, décédé le 3 juin 2016, à Phoenix, en Arizona, aux Etats-Unis áäâç€àè.",
               "copyrightHolder": "BBC Sport",
@@ -4005,7 +4005,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "BBC Afrique vous propose une galerie-photo sur la vie du boxeur Mohamed Ali, décédé le 3 juin 2016, à Phoenix, en Arizona, aux Etats-Unis áäâç€àè.",
               "caption": "BBC Afrique vous propose une galerie-photo sur la vie du boxeur Mohamed Ali, décédé le 3 juin 2016, à Phoenix, en Arizona, aux Etats-Unis áäâç€àè.",
               "copyrightHolder": "BBC Sport",
@@ -4019,12 +4019,12 @@ Object {
               "width": 976,
             },
             "language": "ur",
-            "locators": Object {
+            "locators": {
               "assetId": "23068127",
               "assetUri": "/urdu/pakistan-23068127",
               "cpsUrn": "urn:bbc:content:assetUri:urdu/pakistan-23068127",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -4032,13 +4032,13 @@ Object {
             "timestamp": 1471530569000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "PGL",
-            "headlines": Object {
+            "headlines": {
               "headline": "مالم جبہ کی چیئرلفٹ کے نظا - 2",
             },
             "id": "urn:bbc:ares::asset:urdu/pakistan-23068129",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "BBC Afrique vous propose une galerie-photo sur la vie du boxeur Mohamed Ali, décédé le 3 juin 2016, à Phoenix, en Arizona, aux Etats-Unis áäâç€àè.",
               "caption": "BBC Afrique vous propose une galerie-photo sur la vie du boxeur Mohamed Ali, décédé le 3 juin 2016, à Phoenix, en Arizona, aux Etats-Unis áäâç€àè.",
               "copyrightHolder": "BBC Sport",
@@ -4050,7 +4050,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "BBC Afrique vous propose une galerie-photo sur la vie du boxeur Mohamed Ali, décédé le 3 juin 2016, à Phoenix, en Arizona, aux Etats-Unis áäâç€àè.",
               "caption": "BBC Afrique vous propose une galerie-photo sur la vie du boxeur Mohamed Ali, décédé le 3 juin 2016, à Phoenix, en Arizona, aux Etats-Unis áäâç€àè.",
               "copyrightHolder": "BBC Sport",
@@ -4064,12 +4064,12 @@ Object {
               "width": 976,
             },
             "language": "ur",
-            "locators": Object {
+            "locators": {
               "assetId": "23068129",
               "assetUri": "/urdu/pakistan-23068129",
               "cpsUrn": "urn:bbc:content:assetUri:urdu/pakistan-23068129",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -4079,8 +4079,8 @@ Object {
           },
         ],
         "semanticGroupName": "Picture galleries",
-        "strapline": Object {
-          "links": Object {
+        "strapline": {
+          "links": {
             "desktop": "http://www.bbc.com/urdu/media/photogalleries",
             "highweb": "http://www.bbc.com/urdu/media/photogalleries",
           },
@@ -4090,15 +4090,15 @@ Object {
         "title": "Picture galleries",
         "type": "picture-gallery-stories",
       },
-      Object {
-        "items": Array [
-          Object {
+      {
+        "items": [
+          {
             "cpsType": "MAP",
-            "headlines": Object {
+            "headlines": {
               "headline": "نیویارک: امام مسجد کے مبینہ قاتل پر فردِ جرم عائد2 -",
             },
             "id": "urn:bbc:ares::asset:urdu/regional-23068062",
-            "indexImage": Object {
+            "indexImage": {
               "altText": "a",
               "copyrightHolder": "AFP",
               "height": 1152,
@@ -4110,12 +4110,12 @@ Object {
               "width": 2048,
             },
             "language": "ur",
-            "locators": Object {
+            "locators": {
               "assetId": "23068062",
               "assetUri": "/urdu/regional-23068062",
               "cpsUrn": "urn:bbc:content:assetUri:urdu/regional-23068062",
             },
-            "media": Object {
+            "media": {
               "caption": "test clip short synopsis 1",
               "entityType": "Clip",
               "externalId": "p0128hn2",
@@ -4126,7 +4126,7 @@ Object {
               "subType": "index",
               "type": "external_vpid",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -4134,13 +4134,13 @@ Object {
             "timestamp": 1471520788000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "MAP",
-            "headlines": Object {
+            "headlines": {
               "headline": "دھلنرشعکا بنہ رو ممبجترن غسان",
             },
             "id": "urn:bbc:ares::asset:urdu/punjabi-video-23155102",
-            "indexImage": Object {
+            "indexImage": {
               "altText": "Keyframe #5",
               "caption": "ٹھوٹ",
               "copyrightHolder": "BBC",
@@ -4153,12 +4153,12 @@ Object {
               "width": 1024,
             },
             "language": "pa-PK",
-            "locators": Object {
+            "locators": {
               "assetId": "23155102",
               "assetUri": "/urdu/punjabi-video-23155102",
               "cpsUrn": "urn:bbc:content:assetUri:urdu/punjabi-video-23155102",
             },
-            "media": Object {
+            "media": {
               "advertising": false,
               "caption": "Video content to test the EBU subtitles",
               "embedding": true,
@@ -4167,51 +4167,51 @@ Object {
               "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01dhmtl.jpg",
               "smpKind": "programme",
               "subType": "clip",
-              "synopses": Object {
+              "synopses": {
                 "short": "Video content to test the EBU subtitles",
               },
               "title": "Panaroma - EBU-TT-D testing v0.8.4",
               "type": "media",
-              "versions": Array [
-                Object {
+              "versions": [
+                {
                   "availableFrom": 1506605180000,
-                  "availableTerritories": Object {
+                  "availableTerritories": {
                     "nonUk": false,
                     "uk": true,
                   },
                   "duration": 2726,
                   "durationISO8601": "PT45M26S",
-                  "types": Array [
+                  "types": [
                     "Original",
                   ],
                   "versionId": "p01dhmsy",
-                  "warnings": Object {},
+                  "warnings": {},
                 },
               ],
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
-            "passport": Object {
-              "category": Object {
+            "passport": {
+              "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
                 "categoryName": "News",
               },
-              "taggings": Array [],
+              "taggings": [],
             },
             "summary": "کرنہا شساہن جصحطتھ یوار ہانل پٹدلنر ہلھ شغے،",
             "timestamp": 1506611544000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "MAP",
-            "headlines": Object {
+            "headlines": {
               "headline": "’پاکستان میں صرف مہمان نوازی اور محبت ہی دکھائی دی‘ title کہانی حپدستعد",
               "overtyped": "’پاکستان میں صرف مہمان نوازی اور محبت ہی دکھائی دی‘ title کہانی حپدستعد ہوعرتیپع",
             },
             "id": "urn:bbc:ares::asset:urdu/pakistan-23075316",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "حردح سلت تسگ",
               "copyrightHolder": "Reuters",
               "height": 180,
@@ -4222,7 +4222,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "حردح سلت تسگ",
               "copyrightHolder": "Reuters",
               "height": 576,
@@ -4234,12 +4234,12 @@ Object {
               "width": 1024,
             },
             "language": "ur",
-            "locators": Object {
+            "locators": {
               "assetId": "23075316",
               "assetUri": "/urdu/pakistan-23075316",
               "cpsUrn": "urn:bbc:content:assetUri:urdu/pakistan-23075316",
             },
-            "media": Object {
+            "media": {
               "caption": "پاکستان میں صرف مہمان media caption حردح حپدستعد",
               "entityType": "Clip",
               "externalId": "p015lzlj",
@@ -4250,27 +4250,27 @@ Object {
               "subType": "index",
               "type": "external_vpid",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
             "overtypedSummary": "انڈیا کے معروف اداکار اوم پوری پاکستان تو کئی مرتبہ جا چکے ہیں لیکن انھوں نے پہلی بار ایک پاکستانی فلم میں کام BBC کیا ہے",
-            "passport": Object {
-              "category": Object {
+            "passport": {
+              "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
                 "categoryName": "News",
               },
-              "taggings": Array [],
+              "taggings": [],
             },
             "summary": "انڈیا کے معروف اداکار اوم پوری پاکستان تو کئی مرتبہ جا چکے ہیں لیکن انھوں نے پہلی بار ایک پاکستانی فلم میں کام BBC کیا ہے۔",
             "timestamp": 1474377995000,
             "type": "cps",
           },
-          Object {
-            "byline": Object {
+          {
+            "byline": {
               "name": "جان کربی نے",
-              "persons": Array [
-                Object {
+              "persons": [
+                {
                   "function": "بی بی سی اردو ڈاٹ کام، نئی دہلی",
                   "name": "جان کربی نے",
                   "thumbnail": "http://b.files.bbci.co.uk/CD0A/test/_63509425_160223140119_azam_sabeer_640x360_bbc_nocredit.jpg",
@@ -4280,12 +4280,12 @@ Object {
               "title": "بی بی سی اردو ڈاٹ کام، نئی دہلی",
             },
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "کرکٹ میں بدعنوانی پر مودی کی خاموشی pakistan",
               "overtyped": "کرکٹ میں بدعنوانی پر مودی کی خاموشی pakistan ہوعرتیپع",
             },
             "id": "urn:bbc:ares::asset:urdu/pakistan-23075815",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "نریندر مودی بھارت میں جاری پارلیمانی انتخابات میں بی جے پی کی جانب سے وزیراعظم کے عہدے کے نامزد امیدوار ہیں",
               "caption": "نریندر مودی بھارت میں جاری پارلیمانی انتخابات میں بی جے پی کی جانب سے وزیراعظم کے عہدے کے نامزد امیدوار ہیں",
               "copyrightHolder": "PTI",
@@ -4297,7 +4297,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "نریندر مودی بھارت میں جاری پارلیمانی انتخابات میں بی جے پی کی جانب سے وزیراعظم کے عہدے کے نامزد امیدوار ہیں",
               "caption": "نریندر مودی بھارت میں جاری پارلیمانی انتخابات میں بی جے پی کی جانب سے وزیراعظم کے عہدے کے نامزد امیدوار ہیں",
               "copyrightHolder": "PTI",
@@ -4311,34 +4311,34 @@ Object {
               "width": 624,
             },
             "language": "ur",
-            "locators": Object {
+            "locators": {
               "assetId": "23075815",
               "assetUri": "/urdu/pakistan-23075815",
               "cpsUrn": "urn:bbc:content:assetUri:urdu/pakistan-23075815",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
             "overtypedSummary": "بھارت میں اس بار عام انتخابات بدعنوانی کے مسئلے پر لڑے جا رہے ہیں۔ انتخابات کے نتائج 16 مئی کو آنے والے ہیں اور آئندہ آنے والے ممکنہ وزیر اعظم نریندر مودی کانگریس summary کی بدعنوانی کو اپنی تقریباً تمام ریلیوں میں تنقید کا نشانہ بنا رہے ہیں ہوعتریپع۔",
-            "passport": Object {
-              "category": Object {
+            "passport": {
+              "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
                 "categoryName": "News",
               },
-              "taggings": Array [],
+              "taggings": [],
             },
             "summary": "بھارت میں اس بار عام انتخابات بدعنوانی کے مسئلے پر لڑے جا رہے ہیں۔ انتخابات کے نتائج 16 مئی کو آنے والے ہیں اور آئندہ آنے والے ممکنہ وزیر اعظم نریندر مودی کانگریس summary کی بدعنوانی کو اپنی تقریباً تمام ریلیوں میں تنقید کا نشانہ بنا رہے ہیں۔",
             "timestamp": 1474369988000,
             "type": "cps",
           },
-          Object {
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "آئرلینڈ کی پاکستان کو پہلے بلے بازی کی دعوت -4",
             },
             "id": "urn:bbc:ares::asset:urdu/sport-23068058",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "cricketer",
               "copyrightHolder": "AFP",
               "height": 180,
@@ -4349,7 +4349,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "cricketer",
               "copyrightHolder": "AFP",
               "height": 371,
@@ -4362,12 +4362,12 @@ Object {
               "width": 660,
             },
             "language": "ur",
-            "locators": Object {
+            "locators": {
               "assetId": "23068058",
               "assetUri": "/urdu/sport-23068058",
               "cpsUrn": "urn:bbc:content:assetUri:urdu/sport-23068058",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -4377,21 +4377,21 @@ Object {
           },
         ],
         "semanticGroupName": "Special event 1",
-        "strapline": Object {
+        "strapline": {
           "name": "Special event 1",
         },
         "title": "Special event 1",
         "type": "single-section-digest",
       },
-      Object {
-        "items": Array [
-          Object {
+      {
+        "items": [
+          {
             "cpsType": "STY",
-            "headlines": Object {
+            "headlines": {
               "headline": "15 - وائرس صبح کے وقت زیادہ خطرناک ہوتے ہیں",
             },
             "id": "urn:bbc:ares::asset:urdu/world-23068153",
-            "imageThumbnail": Object {
+            "imageThumbnail": {
               "altText": "the virus",
               "copyrightHolder": "BBC",
               "height": 180,
@@ -4402,7 +4402,7 @@ Object {
               "type": "image",
               "width": 320,
             },
-            "indexImage": Object {
+            "indexImage": {
               "altText": "the virus",
               "copyrightHolder": "BBC",
               "height": 490,
@@ -4415,12 +4415,12 @@ Object {
               "width": 872,
             },
             "language": "ur",
-            "locators": Object {
+            "locators": {
               "assetId": "23068153",
               "assetUri": "/urdu/world-23068153",
               "cpsUrn": "urn:bbc:content:assetUri:urdu/world-23068153",
             },
-            "options": Object {
+            "options": {
               "isBreakingNews": false,
               "isFactCheck": false,
             },
@@ -4433,12 +4433,12 @@ Object {
         "title": "Interactivity",
         "type": "featured-site-top-stories",
       },
-      Object {
-        "items": Array [
-          Object {
+      {
+        "items": [
+          {
             "assetTypeCode": "PRO",
             "contentType": "Text",
-            "indexImage": Object {
+            "indexImage": {
               "altText": "bbc",
               "copyrightHolder": "BBC",
               "height": 261,
@@ -4449,7 +4449,7 @@ Object {
               "type": "image",
               "width": 464,
             },
-            "indexThumbnail": Object {
+            "indexThumbnail": {
               "altText": "bbc",
               "copyrightHolder": "BBC",
               "height": 180,
@@ -4468,8 +4468,8 @@ Object {
           },
         ],
         "semanticGroupName": "College of journalism",
-        "strapline": Object {
-          "links": Object {
+        "strapline": {
+          "links": {
             "desktop": "http://www.bbc.co.uk/academy/urdu",
             "highweb": "http://www.bbc.co.uk/academy/urdu",
           },
@@ -4479,19 +4479,19 @@ Object {
         "title": "College of journalism",
         "type": "featured-site-top-stories",
       },
-      Object {
-        "items": Array [],
+      {
+        "items": [],
         "semanticGroupName": "Useful links",
         "title": "Useful links",
         "type": "useful-links",
       },
-      Object {
-        "items": Array [
-          Object {
+      {
+        "items": [
+          {
             "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/urdu/multimedia/2013/04/000000_urdu_tv_programme",
             "assetTypeCode": "PRO",
             "contentType": "TVBulletin",
-            "indexImage": Object {
+            "indexImage": {
               "altText": "bbc",
               "copyrightHolder": "BBC",
               "height": 261,
@@ -4510,7 +4510,7 @@ Object {
           },
         ],
         "semanticGroupName": "AV stories live",
-        "strapline": Object {
+        "strapline": {
           "name": "سیربین ٹی وی لائیو - bulletin live",
         },
         "title": "AV stories live",
@@ -4518,18 +4518,18 @@ Object {
       },
     ],
   },
-  "metadata": Object {
-    "analyticsLabels": Object {
+  "metadata": {
+    "analyticsLabels": {
       "contentId": "urn:bbc:cps:curie:asset:3a2d5d46-2a66-450b-e050-a00a7ec03370",
       "counterName": "urdu.page",
       "cps_asset_id": "23067561",
       "cps_asset_type": "idx",
     },
-    "atiAnalytics": Object {
+    "atiAnalytics": {
       "producerId": "95",
       "producerName": "URDU",
     },
-    "blockTypes": Array [
+    "blockTypes": [
       "top-story",
       "secondary-top-story",
       "av-stories-now",
@@ -4551,39 +4551,39 @@ Object {
     "language": "ur",
     "lastPublished": 1580746984000,
     "lastUpdated": 1643972266231,
-    "locators": Object {
+    "locators": {
       "assetId": "23067561",
       "assetUri": "/urdu/front_page",
       "cpsUrn": "urn:bbc:content:assetUri:urdu/front_page",
       "curie": "http://www.bbc.co.uk/asset/3a2d5d46-2a66-450b-e050-a00a7ec03370/desktop/domestic",
     },
-    "options": Object {
+    "options": {
       "allowAdvertising": true,
     },
     "summary": "تازہ ترین خبروں، ویڈیوز اور آڈیوز کے لیے بی بی سی اردو پر آئیے۔ بی بی سی اردو دنیا بھر کی خبروں کے حصول کے لیے ایک قابلِ اعتماد ویب سائٹ ہے۔",
-    "tags": Object {},
+    "tags": {},
     "timestamp": 1580746979000,
     "title": "خبریں، تازہ خبریں، بریکنگ نیو | News, latest news, breaking news",
     "type": "IDX",
     "version": "v1.4.7",
   },
-  "promo": Object {
+  "promo": {
     "id": "urn:bbc:ares::index:urdu/front_page/desktop/domestic",
     "name": "خبریں، تازہ خبریں، بریکنگ نیو | News, latest news, breaking news",
     "subType": "IDX",
     "type": "simple",
     "uri": "/urdu/front_page",
   },
-  "relatedContent": Object {
-    "groups": Array [],
-    "section": Object {
+  "relatedContent": {
+    "groups": [],
+    "section": {
       "name": "خبریں، تازہ خبریں، بریکنگ نیو | News, latest news, breaking news",
       "subType": "index",
       "type": "simple",
       "uri": "/urdu/front_page",
       "urlIdentifier": "/urdu/front_page",
     },
-    "site": Object {
+    "site": {
       "name": "BBC Urdu",
       "subType": "site",
       "type": "simple",

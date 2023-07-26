@@ -59,6 +59,8 @@ const ARTICLE_PHOTO_GALLERY = 'article-photo-gallery';
 const ARTICLE_CORRESPONDENT_PIECE = 'article-correspondent';
 const ARTICLE_SHORT_FORM_VIDEO = 'article-sfv';
 
+const MIGRATED_PAGE_TYPES: PageTypes[] = [HOME_PAGE];
+
 const noOp = () => {
   return {};
 };
@@ -199,6 +201,9 @@ type PageTypeHandlers = {
   [key in PageTypes]: BuilderFunction;
 };
 
+const isMigrated = (pageType: PageTypes) =>
+  MIGRATED_PAGE_TYPES.includes(pageType);
+
 const createBuilderFactory = (
   requestContext: RequestContextProps,
   pageTypeHandlers: PageTypeHandlers,
@@ -214,7 +219,8 @@ export const buildATIUrl = ({
   data,
   atiData,
 }: ATIConfigurationDetailsProviders) => {
-  if (atiData) {
+  const { pageType } = requestContext;
+  if (atiData && isMigrated(pageType)) {
     return buildPageATIUrl({ atiData, requestContext, serviceContext });
   }
 
@@ -236,7 +242,8 @@ export const buildATIEventTrackingParams = ({
   atiData,
 }: ATIConfigurationDetailsProviders) => {
   try {
-    if (atiData) {
+    const { pageType } = requestContext;
+    if (atiData && isMigrated(pageType)) {
       return buildPageATIParams({
         atiData,
         requestContext,
