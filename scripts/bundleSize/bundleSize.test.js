@@ -285,8 +285,6 @@ describe('bundleSize', () => {
         const { default: bundleSize } = await import('./index.js');
         bundleSize();
       } catch (e) {
-        console.log(e);
-        console.debug('ELTON JOHN BEANS');
         // silence error
       }
       expect(ora).toHaveBeenCalledWith(
@@ -301,7 +299,7 @@ describe('bundleSize', () => {
         const { default: bundleSize } = await import('./index.js');
         bundleSize();
       } catch (e) {
-        console.debug('DAMN BEANS', e);
+        // silence error
       }
 
       const calls = global.console.log.mock.calls.reduce(
