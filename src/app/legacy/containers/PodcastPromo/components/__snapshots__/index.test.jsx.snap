@@ -271,7 +271,7 @@ exports[`Podcast Promo Card Title should match snapshot 1`] = `
 exports[`Podcast Promo Card should match snapshot 1`] = `
 .emotion-0 {
   position: relative;
-  background-color: #FDFDFD;
+  background-color: #F6F6F6;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -351,6 +351,19 @@ exports[`Podcast Promo Title should match snapshot 1`] = `
   fill: currentColor;
   width: 1rem;
   height: 1rem;
+}
+
+.podcastIconWrapper .emotion-4 {
+  width: 2rem;
+  height: 2rem;
+  margin: auto;
+}
+
+@media (max-width: 16.25rem) {
+  .podcastIconWrapper .emotion-4 {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
 }
 
 <div>
