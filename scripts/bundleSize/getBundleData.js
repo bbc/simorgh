@@ -3,8 +3,6 @@ import { extractBundlesForPageType } from './pageTypeBundleExtractor.js';
 import services from './serviceList.js'
 import { pages } from './pages.js';
 
-// need fake Cypress in global scope to require service configs:
-global.Cypress = { env: () => ({}) };
 const bundleType = process.env.bundleType || 'modern';
 
 const getFileSize = filePath => fs.statSync(filePath).size;
