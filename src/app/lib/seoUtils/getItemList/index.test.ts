@@ -9,16 +9,16 @@ describe('SEO Utils | getItemList', () => {
         name: 'BBC News Mundo',
       }),
     ).toMatchInlineSnapshot(`
-      Object {
+      {
         "@type": "ItemList",
-        "itemListElement": Array [
-          Object {
+        "itemListElement": [
+          {
             "@context": "http://schema.org",
             "@type": "ListItem",
             "position": 1,
             "url": "https://www.bbc.com/mundo/0",
           },
-          Object {
+          {
             "@context": "http://schema.org",
             "@type": "ListItem",
             "position": 2,

@@ -1,1502 +1,1115 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::index:persian/afghanistan/desktop/domestic",
-    "locators": {
-      "assetUri": "/persian/afghanistan",
-      "cpsUrn": "urn:bbc:content:assetUri:persian/afghanistan",
-      "curie": "http://www.bbc.co.uk/asset/3cda1d8c-ffa2-03ae-e050-380a4e8056f3/desktop/domestic",
-      "assetId": "37407535"
-    },
-    "type": "IDX",
-    "createdBy": "persian-v6",
-    "language": "fa",
-    "lastUpdated": 1589976180722,
-    "firstPublished": 1474387604000,
-    "lastPublished": 1589976174000,
-    "timestamp": 1589975675000,
-    "options": {
-      "allowAdvertising": true
-    },
-    "analyticsLabels": {
-      "counterName": "persian.afghanistan.page",
-      "cps_asset_id": "37407535",
-      "cps_asset_type": "idx"
-    },
-    "tags": {},
-    "version": "v1.3.0",
-    "blockTypes": [
-      "top-story",
-      "secondary-top-story",
-      "other-top-stories",
-      "av-stories-now",
-      "feature-main"
-    ],
-    "title": "صفحه افغانستان",
-    "summary": "سایت فارسی بی‌بی‌سی تازه‌ترین اخبار و گزارش ها درباره ایران و افغانستان و جهان در حوزه سیاست، اقتصاد، جامعه و فرهنگ و همچنین ویدیو، گزارش‌های تصویری و برنامه‌های تلویزیون فارسی را به شما ارائه می‌دهد."
-  },
-  "content": {
-    "groups": [
-      {
-        "type": "top-story",
-        "title": "Top story",
-        "maxRelatedLinks": 4,
-        "items": [
-          {
-            "headlines": {
-              "headline": "رهبر طالبان به آمریکا: اجازه ندهید موافقتنامه‌مان با ناکامی رو به رو شود؛ ارگ: پیام رهبر طالبان ارزش ندارد"
-            },
-            "locators": {
-              "assetUri": "/persian/afghanistan-52735886",
-              "cpsUrn": "urn:bbc:content:assetUri:persian/afghanistan-52735886",
-              "assetId": "52735886"
-            },
-            "summary": "ملا هبت الله آخوندزاده، رهبر طالبان در یک پیام به مناسبت عید فطر، از آمریکا خواسته که به کسی اجازه ندهد که موافقتنامه صلح آنها را با مانع، تاخیر و ناکامی رو به رو سازد. در همین حال سخنگوی رئیس جمهوری افغانستان گفته با ادامه خشونت‌ها از سوی طالبان، پیام عیدی رهبر این گروه \"ارزشی ندارد.\".",
-            "timestamp": 1589958223000,
-            "language": "fa",
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e4739461b000e9dabfc",
-                  "campaignName": "WS - Update me"
-                }
-              ],
-              "taggings": []
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "91750503",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg",
-              "path": "/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg",
-              "height": 351,
-              "width": 624,
-              "altText": "هبت الله آخوندزاده",
-              "caption": "هبت‌الله آخوندزاده پس از کشته شدن ملا اختر منصور، رهبر پیشین طالبان در حمله هواپیماهای آمریکایی، رهبری این گروه را به عهده گرفت",
-              "copyrightHolder": "BBC",
-              "type": "image"
-            },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "prominence": "standard",
-            "section": {
-              "subType": "IDX",
-              "name": "صفحه افغانستان",
-              "uri": "/persian/afghanistan",
-              "type": "simple"
-            },
-            "id": "urn:bbc:ares::asset:persian/afghanistan-52735886",
-            "type": "cps"
-          }
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::index:persian/afghanistan/mobile/domestic",
+        "locators": {
+          "assetUri": "/persian/afghanistan",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:3cda1d8c-ffa2-03ae-e050-380a4e8056f3/desktop/domestic",
+          "assetId": "37407535",
+          "cpsUrn": "urn:bbc:content:assetUri:persian/afghanistan",
+          "curie": "http://www.bbc.co.uk/asset/3cda1d8c-ffa2-03ae-e050-380a4e8056f3/desktop/domestic"
+        },
+        "type": "IDX",
+        "createdBy": "persian-v6",
+        "language": "fa",
+        "lastUpdated": 1690182734679,
+        "firstPublished": 1474387604000,
+        "lastPublished": 1690182728000,
+        "timestamp": 1690131471000,
+        "options": { "allowAdvertising": true },
+        "analyticsLabels": {
+          "cps_asset_type": "idx",
+          "counterName": "persian.afghanistan.page",
+          "cps_asset_id": "37407535",
+          "contentId": "urn:bbc:cps:curie:asset:3cda1d8c-ffa2-03ae-e050-380a4e8056f3"
+        },
+        "tags": {},
+        "version": "v1.4.31",
+        "blockTypes": [
+          "top-story",
+          "av-stories-now",
+          "feature-main",
+          "programmes-standard",
+          "also-in-news"
         ],
-        "semanticGroupName": "Top story",
-        "strapline": {
-          "name": "Top story - Afghanistan"
-        }
+        "title": "صفحه افغانستان",
+        "summary": "تازه ترین اخبار، گزارش ها و تحلیل ها درباره افغانستان؛ از سیاست، جامعه و مسائل امنیتی افغانستان گرفته تا گزارش های ویدیویی و برنامه های رادیو بی بی سی برای افغانستان.",
+        "atiAnalytics": { "producerName": "PERSIAN", "producerId": "69" }
       },
-      {
-        "type": "secondary-top-story",
-        "title": "More top stories",
-        "maxRelatedLinks": 4,
-        "items": [
+      "content": {
+        "groups": [
           {
-            "headlines": {
-              "headline": "روز جهانی زنبور عسل؛ صادرات عسل افغانستان راه خود را به امارات و هند باز کرد"
-            },
-            "locators": {
-              "assetUri": "/persian/afghanistan-52739625",
-              "cpsUrn": "urn:bbc:content:assetUri:persian/afghanistan-52739625",
-              "assetId": "52739625"
-            },
-            "summary": "مجمع عمومی سازمان ملل روز ۳۰ ثور/اردییبهشت را براساس پیشنهاد رسمی کشور اسلوونی به عنوان روزجهانی زنبورعسل نامگذاری کرده است. افغانستان سالانه دو هزار و ۱۰۰ تن عسل تولید می‌کند ولی ظرفیت تولید این کشور ۱۱ هزار تن اعلام شده است.",
-            "timestamp": 1589975321000,
-            "language": "fa",
-            "byline": {
-              "name": "زلمی  آشنا",
-              "title": "بی‌بی‌سی ",
-              "persons": [
-                {
-                  "name": "زلمی آشنا",
-                  "function": "بی‌بی‌سی"
-                }
-              ]
-            },
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-                "categoryName": "Feature"
+            "type": "top-story",
+            "title": "Top story",
+            "maxRelatedLinks": 4,
+            "items": [
+              {
+                "name": "بارندگی‌ و سیلاب ده‌ها کشته و تخریب صدها خانه‌ مسکونی در میدان‌وردک به‌جا گذاشته است",
+                "summary": "سیلاب‌ در میدان وردک ده‌ها کشته و ناپدید به جا گذاشته است. مسئولان طالبان می‌گویند کمک رسانی به آسیب‌دیدگان سیلاب شب گذشته در این ولایت جریان دارد. شفیع‌الله رحیمی، سخنگوی وزارت امور رسیدگی به حوادث طالبان، امروز در یک کنفرانس مطبوعاتی در کابل گفت براثر بارندگی‌ها و سرازیرشدن سیلاب‌ها در سه روز اخیر براساس گزارش‌های ابتدایی «۳۱ تن جان‌باخته، ۴۱ مفقود، و ۷۴ زخمی» شده‌اند.",
+                "indexImage": {
+                  "id": "130493466",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/10387/production/_130493466_5c460319-31fb-4d61-990d-e97c8239a4d1.jpg",
+                  "path": "/cpsprodpb/10387/production/_130493466_5c460319-31fb-4d61-990d-e97c8239a4d1.jpg",
+                  "height": 2304,
+                  "width": 4096,
+                  "altText": "خانه‌های آسیب دیده از سیلاب در میدان وردک",
+                  "caption": "خانه‌های آسیب دیده از سیلاب در میدان وردک",
+                  "copyrightHolder": "@AfghanistanNDMA",
+                  "allowSyndication": false,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/persian/articles/c72vnp2zn3xo",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c72vnp2zn3xo",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1690116248000,
+                "type": "link"
               },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e3739461b000e9dabfa",
-                  "campaignName": "WS - Give me perspective"
-                }
-              ],
-              "taggings": []
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "112378121",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/2F9B/production/_112378121_52739625.jpg",
-              "path": "/cpsprodpb/2F9B/production/_112378121_52739625.jpg",
-              "height": 570,
-              "width": 1014,
-              "altText": "تولید عسل افغانستان به بیشتر از دو هزار تن رسیده ولی ظرفیت تولید به گفته مسئولین 11 هزار تن عسل است",
-              "caption": "تولید عسل افغانستان به بیشتر از دو هزار تن رسیده ولی ظرفیت تولید به گفته مسئولین 11 هزار تن عسل است",
-              "copyrightHolder": "Getty Images",
-              "type": "image"
-            },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "section": {
-              "subType": "IDX",
-              "name": "صفحه افغانستان",
-              "uri": "/persian/afghanistan",
-              "type": "simple"
-            },
-            "id": "urn:bbc:ares::asset:persian/afghanistan-52739625",
-            "type": "cps"
+              {
+                "name": "بیانیه «جبهه مقاومت ملی» برای رفع محدودیت عزاداری شیعیان؛ «همزیستی سنی و شیعه سابقه طولانی دارد»",
+                "summary": "در اعلامیه این جبهه آمده است: «جبهه مقاومت ملی از موقف قاطبه مردم افغانستان که خواستار لغو محدودیت‌ها بر مراسم عزاداری عاشورای حسینی شده، حمایت نموده و اعمال هرگونه محدوديت در این زمینه را محکوم و‌ آن را تلاشی در جهت دامن‌زدن به اختلافات مذهبی و ترویج و نهادینه‌سازی تبعیض و نابرابری مذهبی، در کشور می‌داند.»",
+                "indexImage": {
+                  "id": "130493471",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/441F/production/_130493471_f1qil_dwiaifbdm.jpg",
+                  "path": "/cpsprodpb/441F/production/_130493471_f1qil_dwiaifbdm.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "احمد مسعود",
+                  "copyrightHolder": "BBC",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/persian/live/66281669?ns_mchannel=social&ns_source=twitter&ns_campaign=bbc_live&ns_linkname=64bd598674185e67860b2ab8%26%D8%A8%DB%8C%D8%A7%D9%86%DB%8C%D9%87%20%C2%AB%D8%AC%D8%A8%D9%87%D9%87%20%D9%85%D9%82%D8%A7%D9%88%D9%85%D8%AA%20%D9%85%D9%84%DB%8C%C2%BB%20%D8%A8%D8%B1%D8%A7%DB%8C%20%D8%B1%D9%81%D8%B9%20%D9%85%D8%AD%D8%AF%D9%88%D8%AF%DB%8C%D8%AA%20%D8%B9%D8%B2%D8%A7%D8%AF%D8%A7%D8%B1%DB%8C%20%D8%B4%DB%8C%D8%B9%DB%8C%D8%A7%D9%86%D8%9B%20%C2%AB%D9%87%D9%85%D8%B2%DB%8C%D8%B3%D8%AA%DB%8C%20%D8%B3%D9%86%DB%8C%20%D9%88%20%D8%B4%DB%8C%D8%B9%D9%87%20%D8%B3%D8%A7%D8%A8%D9%82%D9%87%20%D8%B7%D9%88%D9%84%D8%A7%D9%86%DB%8C%20%D8%AF%D8%A7%D8%B1%D8%AF%C2%BB%262023-07-23T16%3A53%3A24.216Z&ns_fee=0&pinned_post_locator=urn:asset:bda433c5-1e1a-4422-b7b3-a0c771bedd93&pinned_post_asset_id=64bd598674185e67860b2ab8&pinned_post_type=share",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1690131466000,
+                "type": "link"
+              },
+              {
+                "name": "معاون وزارت اقتصاد طالبان: ما خود را متکی و وابسته به کمک‌های خارجی نمی‌دانیم",
+                "summary": "عبدالطیف نظری، معاون وزارت اقتصاد طالبان گفت در دو سالی که از حکومت طالبان سپری شده با «خودیاری اقتصادی»، دیپلماسی اقتصادی خود را پیش برده است، «ما می‌خواهیم از ظرفیت‌های داخلی و بومی کشور استفاده کنیم».",
+                "indexImage": {
+                  "id": "130493464",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/B567/production/_130493464_f1tty82wyaeevzv.jpg",
+                  "path": "/cpsprodpb/B567/production/_130493464_f1tty82wyaeevzv.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "معاون وزارت اقتصاد",
+                  "copyrightHolder": "@GMICafghanistan",
+                  "allowSyndication": false,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/persian/live/66281669?ns_mchannel=social&ns_source=twitter&ns_campaign=bbc_live&ns_linkname=64bd1af7e3a72e6ac4243e5b%26%D9%85%D8%B9%D8%A7%D9%88%D9%86%20%D9%88%D8%B2%D8%A7%D8%B1%D8%AA%20%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%20%D8%B7%D8%A7%D9%84%D8%A8%D8%A7%D9%86%3A%20%D9%85%D8%A7%20%D8%AE%D9%88%D8%AF%20%D8%B1%D8%A7%20%D9%85%D8%AA%DA%A9%DB%8C%20%D9%88%20%D9%88%D8%A7%D8%A8%D8%B3%D8%AA%D9%87%20%D8%A8%D9%87%20%DA%A9%D9%85%DA%A9%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AE%D8%A7%D8%B1%D8%AC%DB%8C%20%D9%86%D9%85%DB%8C%E2%80%8C%D8%AF%D8%A7%D9%86%DB%8C%D9%85%262023-07-23T12%3A59%3A08.795Z&ns_fee=0&pinned_post_locator=urn:asset:740d81a2-3b22-4eaa-9b4a-9feafa1871d2&pinned_post_asset_id=64bd1af7e3a72e6ac4243e5b&pinned_post_type=share",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1690118485000,
+                "type": "link"
+              },
+              {
+                "name": "معاون سیاسی نخست وزیر طالبان: حاضر به معامله بر سر اصول اسلامی با جهان نیستیم",
+                "summary": "عبدالکبیر حقانی در سمینار استادان دانشکده شرعیات و «ثقافت اسلامی» در دانشگاه کابل گفته است حکومت طالبان «به دنبال تعامل مثبت با جهان و روابط خوب در فضای احترام متقابل است، هیچگاه حاضر به معامله برسر اصول اسلامی نمی‌باشد و بخاطر خوشی دیگران شعایر اسلامی را زیر پا نمی‌گذارد.»",
+                "indexImage": {
+                  "id": "130481884",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/BEB2/production/_130481884_f1qil_dwiaifbdm-1.jpg",
+                  "path": "/cpsprodpb/BEB2/production/_130481884_f1qil_dwiaifbdm-1.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "عبدالکبیر حقانی",
+                  "copyrightHolder": "ARG_1880",
+                  "allowSyndication": false,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/persian/live/66281669?ns_mchannel=social&ns_source=twitter&ns_campaign=bbc_live&ns_linkname=64bcfb8274185e67860b2957%26%D8%B3%D8%B1%D9%BE%D8%B1%D8%B3%D8%AA%20%D9%86%D8%AE%D8%B3%D8%AA%20%D9%88%D8%B2%DB%8C%D8%B1%DB%8C%20%D8%B7%D8%A7%D9%84%D8%A8%D8%A7%D9%86%3A%20%D8%AD%D8%A7%D8%B6%D8%B1%20%D8%A8%D9%87%20%D9%85%D8%B9%D8%A7%D9%85%D9%84%D9%87%20%D8%A8%D8%B1%20%D8%B3%D8%B1%20%D8%A7%D8%B5%D9%88%D9%84%20%D8%A7%D8%B3%D9%84%D8%A7%D9%85%DB%8C%20%D9%86%DB%8C%D8%B3%D8%AA%DB%8C%D9%85%262023-07-23T10%3A06%3A26.550Z&ns_fee=0&pinned_post_locator=urn:asset:61c9fdbb-605a-431c-8922-ff9c5b0046fe&pinned_post_asset_id=64bcfb8274185e67860b2957&pinned_post_type=share",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1690107174000,
+                "type": "link"
+              },
+              {
+                "name": "نماینده مجلس ایران: برای دریافت حقابه سفارت طالبان در تهران را تعطیل کنیم",
+                "summary": "فداحسین مالکی، نماینده زاهدان عضو کمیسون امنیت ملی و سیاست خارجی مجلس ایران گفته است برای دریافت حقابه هیرمند می‌توان سفارت افغانستان در تهران که به طالبان واگذار شده را بست.",
+                "indexImage": {
+                  "id": "130481881",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/4982/production/_130481881_157687471.jpg",
+                  "path": "/cpsprodpb/4982/production/_130481881_157687471.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "فدا حسین مالکی نماینده مجلس ایران",
+                  "copyrightHolder": "IRNA",
+                  "allowSyndication": false,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/persian/live/66281669?ns_mchannel=social&ns_source=twitter&ns_campaign=bbc_live&ns_linkname=64bcea93f11f793cf6e6a6c1%26%D9%86%D9%85%D8%A7%DB%8C%D9%86%D8%AF%D9%87%20%D9%85%D8%AC%D9%84%D8%B3%20%D8%A7%DB%8C%D8%B1%D8%A7%D9%86%3A%20%D8%A8%D8%B1%D8%A7%DB%8C%20%D8%AF%D8%B1%DB%8C%D8%A7%D9%81%D8%AA%20%D8%AD%D9%82%D8%A7%D8%A8%D9%87%20%D8%B3%D9%81%D8%A7%D8%B1%D8%AA%20%D8%B7%D8%A7%D9%84%D8%A8%D8%A7%D9%86%20%D8%AF%D8%B1%20%D8%AA%D9%87%D8%B1%D8%A7%D9%86%20%D8%B1%D8%A7%20%D8%AA%D8%B9%D8%B7%DB%8C%D9%84%20%DA%A9%D9%86%DB%8C%D9%85%262023-07-23T08%3A55%3A46.120Z&ns_fee=0&pinned_post_locator=urn:asset:72bfd4f5-d86e-4b53-918c-93a498d8229a&pinned_post_asset_id=64bcea93f11f793cf6e6a6c1&pinned_post_type=share",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1690103610000,
+                "type": "link"
+              },
+              {
+                "name": "شیعیان کابل خواستار رفع محدودیت طالبان بر عزاداری محرم شدند",
+                "summary": "شیعیان کابل از حکومت طالبان می‌خواهند محدودیت برپایی مراسم در مساجد و تکیه‌خانه‌های شیعیان را لغو کنند و به همه تکیه‌خانه‌ها و مساجد اجازه برگزاری مراسم داده شود. حکومت طالبان امسال «محدودیت‌های گسترده‌ای» در برگزاری مراسم دهه محرم در کابل را اعمال کرده‌اند. گفته شده ‎در روزهای اخیر طالبان پرچم‌های محرم را از دکان‌ها، خانه‌ها و حتی مساجد را در برخی ازمحلات شیعه‌نشین کابل برداشته‌اند. نیروهای طالبان امنیت مراسم‌های عزاداری شیعیان در دو سال گذشته را تامین کرده‌اند.",
+                "indexImage": {
+                  "id": "130488930",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/88f1/live/078490b0-287f-11ee-91a4-2926ae2b4924.jpg",
+                  "path": "/cpsprodpb/88f1/live/078490b0-287f-11ee-91a4-2926ae2b4924.jpg",
+                  "height": 513,
+                  "width": 912,
+                  "altText": "شیعیان کابل",
+                  "caption": "در شماری از نمازهای جمعه شیعیان در کابل، با امضای طومارهایی خواستار لغو محدودیت‌های طالبان بر عزاداری ماه محرم شدند",
+                  "copyrightHolder": "BBC",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/persian/articles/cld9l59dyzwo",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cld9l59dyzwo",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1690023674000,
+                "type": "link"
+              },
+              {
+                "name": "تجارت ایران و افغانستان در سال ۱۴۰۱؛ صادرات ۱.۶ میلیارد دلار و واردات ۲۸ میلیون دلار",
+                "summary": "گمرگ ایران می‌گوید با صادرات ۱.۶ میلیارد دلاری ایران به افغانستان، این کشور در رتبه ششمین مقصد صادراتی کالاهای ایرانی است.",
+                "indexImage": {
+                  "id": "130479420",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/09C1/production/_130479420_iranafghantrade.jpg",
+                  "path": "/cpsprodpb/09C1/production/_130479420_iranafghantrade.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "تجارت ایران وافغانستان",
+                  "copyrightHolder": "Mehrnews",
+                  "allowSyndication": false,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/persian/live/institutional-66255723?ns_mchannel=social&ns_source=twitter&ns_campaign=bbc_live&ns_linkname=64bb9557e3a72e6ac4243b5c%26%D8%AA%D8%AC%D8%A7%D8%B1%D8%AA%20%D8%A7%DB%8C%D8%B1%D8%A7%D9%86%20%D9%88%20%D8%A7%D9%81%D8%BA%D8%A7%D9%86%D8%B3%D8%AA%D8%A7%D9%86%20%D8%AF%D8%B1%20%D8%B3%D8%A7%D9%84%20%DB%B1%DB%B4%DB%B0%DB%B1%D8%9B%20%D8%B5%D8%A7%D8%AF%D8%B1%D8%A7%D8%AA%20%DB%B1.%DB%B6%20%D9%85%DB%8C%D9%84%DB%8C%D8%A7%D8%B1%D8%AF%20%D8%AF%D9%84%D8%A7%D8%B1%20%D9%88%20%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%20%DB%B2%DB%B8%20%D9%85%DB%8C%D9%84%DB%8C%D9%88%D9%86%20%D8%AF%D9%84%D8%A7%D8%B1%262023-07-22T08%3A45%3A47.290Z&ns_fee=0&pinned_post_locator=urn:asset:5f4e344f-bcc5-41cb-bf41-c12446d1daed&pinned_post_asset_id=64bb9557e3a72e6ac4243b5c&pinned_post_type=share",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1690041837000,
+                "type": "link"
+              },
+              {
+                "name": "واکنش طالبان به وزیر خارجه ایران: مقامات ایرانی به جای اظهارات نگران کننده روی روابط سازنده تمرکز کنند",
+                "summary": "وزارت خارجه طالبان در واکنش به اظهارات اخیر حسین امیرعبداللهیان در مورد فعالیت داعش در افغانستان گفته است که داعش در افغانستان «توانایی تخریبی خود را از دست داده است». مقام‌های ایرانی «به جای اظهارات نگران‌کننده در مورد افغانستان، ... روی روابط سازندهٔ تمرکز کنند.»",
+                "indexImage": {
+                  "id": "130479417",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/11749/production/_130479417_muttaqiandamirabdulahian.jpg",
+                  "path": "/cpsprodpb/11749/production/_130479417_muttaqiandamirabdulahian.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "متقی",
+                  "copyrightHolder": "BBC",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/persian/live/institutional-66255723?ns_mchannel=social&ns_source=twitter&ns_campaign=bbc_live&ns_linkname=64bb9ab8e3a72e6ac4243b67%26%D9%88%D8%A7%DA%A9%D9%86%D8%B4%20%D8%B7%D8%A7%D9%84%D8%A8%D8%A7%D9%86%20%D8%A8%D9%87%20%D9%88%D8%B2%DB%8C%D8%B1%20%D8%AE%D8%A7%D8%B1%D8%AC%D9%87%20%D8%A7%DB%8C%D8%B1%D8%A7%D9%86%3A%20%D9%85%D9%82%D8%A7%D9%85%D8%A7%D8%AA%20%D8%A7%DB%8C%D8%B1%D8%A7%D9%86%DB%8C%20%D8%A8%D9%87%20%D8%AC%D8%A7%DB%8C%20%D8%A7%D8%B8%D9%87%D8%A7%D8%B1%D8%A7%D8%AA%20%D9%86%DA%AF%D8%B1%D8%A7%D9%86%20%DA%A9%D9%86%D9%86%D8%AF%D9%87%20%D8%B1%D9%88%DB%8C%20%D8%B1%D9%88%D8%A7%D8%A8%D8%B7%20%D8%B3%D8%A7%D8%B2%D9%86%D8%AF%D9%87%20%D8%AA%D9%85%D8%B1%DA%A9%D8%B2%20%DA%A9%D9%86%D9%86%D8%AF%262023-07-22T10%3A38%3A38.186Z&ns_fee=0&pinned_post_locator=urn:asset:360fe466-a7a1-4b05-a190-7ae56230ee6f&pinned_post_asset_id=64bb9ab8e3a72e6ac4243b67&pinned_post_type=share",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1690028620000,
+                "type": "link"
+              },
+              {
+                "name": "«سالن زیبایی به ما کمک می‌کرد غم‌هایمان را پنهان کنیم»",
+                "summary": "«من حق نداشتم تنها از خانه بیرون بیایم اما شوهرم را راضی کرده بودم که اجازه بدهد دو تا سه بار در سال به آرایشگاه برو.» گپ و گفت در سالن آرایش برای زَرمینه ۲۳ ساله کافی بود تا در جامعه‌ای سرکوبگر و به‌شدت مرد‌سالار کمی احساس آزادی کند. او در ۱۶‌سالگی ازدواج کرده است. هرچند توانست دبیرستان را تمام کند اما خانواده شوهرش به او اجازه ادامه تحصیل در دانشگاه را ندادند. او فقط دلش به آرایشگاه رفتن خوش بود که طالبان از ۲۴ ژوئیه دستور تعطیلی همه آنها را صادر کرد.",
+                "indexImage": {
+                  "id": "130488725",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/1dd7/live/0205a7b0-286f-11ee-8c61-6fb1935700c2.jpg",
+                  "path": "/cpsprodpb/1dd7/live/0205a7b0-286f-11ee-8c61-6fb1935700c2.jpg",
+                  "height": 450,
+                  "width": 800,
+                  "altText": "زنی در حال آرایش در سالن زیبایی در کابل",
+                  "copyrightHolder": "Getty Images",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/persian/articles/cxekjgd4gklo",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cxekjgd4gklo",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1690021415000,
+                "type": "link"
+              },
+              {
+                "name": "آمریکا حسابرسی بانک مرکزی افغانستان برای آزادسازی ۳.۵ میلیارد دلار را «نپذیرفته است»",
+                "summary": "حسابرسی بانک مرکزی تحت کنترل طالبان برای آزادسازی ۳.۵ میلیارد دلار دارایی این بانک مورد پذیرش آمریکا قرار نگرفته است. دو مقام فعلی و یک مقام پیشین با اظهار این مطلب به رویترز گفتند که این حسابرسی از سوی آمریکا تمویل شده بود. یک مقام وزارت دارایی آمریکا گفته که این حسابرسی نظر وزارت دارایی آمریکا در این مورد را تغییر نداده است.",
+                "indexImage": {
+                  "id": "130482543",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/6734/live/a21e3190-27ac-11ee-99e8-913552f3bbd7.jpg",
+                  "path": "/cpsprodpb/6734/live/a21e3190-27ac-11ee-99e8-913552f3bbd7.jpg",
+                  "height": 576,
+                  "width": 1024,
+                  "altText": "بانک مرکزی افغانستان",
+                  "copyrightHolder": "Getty Images",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/persian/articles/cz7jlxe2rp0o",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cz7jlxe2rp0o",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1689945596000,
+                "type": "link"
+              },
+              {
+                "name": "احمد مسعود: ما هزاران هستیم اما متاسفانه حمایت و تدارکات نداریم",
+                "summary": "احمد مسعود که در مصاحبه با فرید ذکریا در انستیو مطالعاتی «اسپین» در واشنگتن صحبت می‌کرد، در مورد شرایط «جبهه مقاومت ملی» افغانستان در برابر طالبان گفت: «ما هزاران نفر هستیم اما متاسفانه به خاطر نبود حمایت و نبود تدارکات [فعالیت جبهه مقاومت] کاهش یافته است.»",
+                "indexImage": {
+                  "id": "130481876",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/108EA/production/_130481876_f1gttghxsaev1gg.jpg",
+                  "path": "/cpsprodpb/108EA/production/_130481876_f1gttghxsaev1gg.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "احمد مسعود",
+                  "copyrightHolder": "@AspenSecurity",
+                  "allowSyndication": false,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/persian/live/iran-66264538?ns_mchannel=social&ns_source=twitter&ns_campaign=bbc_live&ns_linkname=64ba6292e3a72e6ac42438f7%26%D8%A7%D8%AD%D9%85%D8%AF%20%D9%85%D8%B3%D8%B9%D9%88%D8%AF%20%D8%B1%D9%87%D8%A8%D8%B1%20%D8%AC%D8%A8%D9%87%D9%87%20%D9%85%D9%82%D8%A7%D9%88%D9%85%D8%AA%20%D8%B6%D8%AF%20%D8%B7%D8%A7%D9%84%D8%A8%D8%A7%D9%86%3A%20%D9%85%D8%A7%20%D9%87%D8%B2%D8%A7%D8%B1%D8%A7%D9%86%20%D9%87%D8%B3%D8%AA%DB%8C%D9%85%20%D8%A7%D9%85%D8%A7%20%D9%85%D8%AA%D8%A7%D8%B3%D9%81%D8%A7%D9%86%D9%87%20%D8%AD%D9%85%D8%A7%DB%8C%D8%AA%20%D9%88%20%D8%AA%D8%AF%D8%A7%D8%B1%DA%A9%D8%A7%D8%AA%20%D9%86%D8%AF%D8%A7%D8%B1%DB%8C%D9%85%262023-07-21T11%3A49%3A05.216Z&ns_fee=0&pinned_post_locator=urn:asset:58556113-f79c-48c7-b1fc-4e6466e65c4c&pinned_post_asset_id=64ba6292e3a72e6ac42438f7&pinned_post_type=share",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1689942295000,
+                "type": "link"
+              },
+              {
+                "name": "تحریم سه مقام رهبری طالبان از سوی اتحادیه اروپا به دلیل نقض حقوق زنان؛ طالبان: فایده‌ای ندارد",
+                "summary": "شورای اتحادیه اروپا گفته است سه مقام ارشد دولت طالبان، حبیب‌الله آغا وزیر معارف، عبدالحکیم حقانی قاضی‌القضات طالبان و شیخ عبدالحکیم شرعی سرپرست وزارت عدلیه حکومت طالبان را به اتهام نقض حقوق بشر، حذف زنان و دختران از زندگی اجتماعی و عمومی، گسترش تبعیض علیه زنان، جلوگیری از دسترسی آنان به آموزش، حقوق برابر و بهره‌برداری از وکیل و نمایندگی قضایی، در فهرست «اقدامات محدود کننده» خود قرار داده است. طالبان در واکنش این اقدام «تجربه ناکام» خوانده و گفته که «فایده ندارد».",
+                "indexImage": {
+                  "id": "130479415",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/C929/production/_130479415_talibansanctionlist.png",
+                  "path": "/cpsprodpb/C929/production/_130479415_talibansanctionlist.png",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "مقام های رهبری طالبان",
+                  "copyrightHolder": "BNA-RTA",
+                  "allowSyndication": false,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/persian/articles/c4nlk5p3nd6o",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c4nlk5p3nd6o",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1689932649000,
+                "type": "link"
+              },
+              {
+                "name": "واصف باختری، شاعر «دروازه‌های بسته تقویم» درگذشت",
+                "summary": "واصف باختری، شاعر، نویسنده، مترجم و پژوهشگر ادبی و از شاعران معروف معاصر افغانستان در ۸۱ سالگی در آمریکا درگذشت. از واصف باختری بیشتر از بیست عنوان کتاب به زبان فارسی شامل مجموعه‌های شعر و ترجمه در اوزان کلاسیک، نیمایی و آزاد و مقالات فلسفی، پژوهش‌‌های ادبی و فلسفی، ترجمه مقالات فلسفی و ادبی و ده‌ها مقاله دیگر چاپ شده است.",
+                "indexImage": {
+                  "id": "130447422",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/d63b/live/d41e8000-2711-11ee-af91-b5621465fc8a.jpg",
+                  "path": "/cpsprodpb/d63b/live/d41e8000-2711-11ee-af91-b5621465fc8a.jpg",
+                  "height": 715,
+                  "width": 1271,
+                  "altText": "واصف باختری",
+                  "copyrightHolder": "Social Media",
+                  "allowSyndication": false,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/persian/articles/c03xn0wxe4lo",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c03xn0wxe4lo",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1689869893000,
+                "type": "link"
+              },
+              {
+                "name": "امیرعبداللهیان: سران و نیروهای کارکشته داعش از عراق، سوریه و لیبی به افغانستان منتقل شده‌اند",
+                "summary": "حسین امیرعبداللهیان، وزیر امور خارجه ایران گفته است که «سران و نیروهای کارکشته داعش» از عراق، سوریه و لیبی به افغانستان منتقل شده‌اند. آقای امیرعبداللهیان در گفتگوی مفصلی در مورد «سیاست خارجی دولت سیزدهم» با خبرگزاری ایسنا در مورد رابطه ایران با افغانستان گفت: «با افغانستان۹۰۰ کیلومتر مرز مشترک داریم؛ لذا هرگونه تحولی در داخل افغانستان می‌تواند بر امنیت ما، بر شرایط اجتماعی ما در استان‌های مرزی، تأثیر بگذارد.»",
+                "indexImage": {
+                  "id": "96603877",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/13006/production/_96603877_a3cf2477-9858-4c8e-ab58-67104bf17e37.jpg",
+                  "path": "/cpsprodpb/13006/production/_96603877_a3cf2477-9858-4c8e-ab58-67104bf17e37.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "پرچم داعش",
+                  "caption": "روسیه مدعی شده که هلی‌کوپترهای ناشناس به داعش در افغانستان کمک‌رسانی می‌کند اما دولت افغانستان می‌گوید در این مورد مدرکی در دست نیست",
+                  "copyrightHolder": "BBC",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/persian/articles/cv219xel90ro",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cv219xel90ro",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1689855849000,
+                "type": "link"
+              },
+              {
+                "name": "عضو پارلمان بریتانیا به خاطر ستایش عملکرد طالبان عذرخواهی و ویدیوی «تبلیغاتی» خود را حذف کرد",
+                "summary": "توبایس الوود، رئیس کمیته دفاعی پارلمان بریتانیا از اظهارات اخیر خود درباره عملکرد «مثبت» حکومت طالبان ابراز پشیمانی کرد و ویدیویی را که در این رابطه از سفرش به افغانستان منتشر کرده بود از توییتر خود حذف کرد. او در بیانیه‌ای که در توییتر خود منتشر کرده است، گفته برداشت او از سفرش به افغانستان اشتباه بوده است. کمیته دفاعی گفته است که اعضای آن درخواست رای عدم اعتماد علیه آقای الوود را ارائه کرده‌اند.",
+                "indexImage": {
+                  "id": "130443490",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/24DA/production/_130443490_62d2a65a-4f9c-4887-9a18-80d5c2894d35.jpg",
+                  "path": "/cpsprodpb/24DA/production/_130443490_62d2a65a-4f9c-4887-9a18-80d5c2894d35.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "توبایس",
+                  "copyrightHolder": "Getty Images",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/persian/articles/cjj1q0v6pzjo",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cjj1q0v6pzjo",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1689849621000,
+                "relatedItems": [
+                  {
+                    "name": "آیا ادعاهای نماینده پارلمان بریتانیا درباره وضعیت افغانستان تحت حاکمیت طالبان درست است؟",
+                    "uri": "https://www.bbc.com/persian/articles/c06exrvrpe6o",
+                    "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c06exrvrpe6o",
+                    "timestamp": 1689826590000,
+                    "type": "link"
+                  }
+                ],
+                "type": "link"
+              },
+              {
+                "name": "واکنش‌های گسترده به اظهارات عضو پارلمان بریتانیا که از حکومت طالبان تمجید کرد",
+                "summary": "یکی از نمایندگان ارشد حزب محافظه‌کار در پارلمان بریتانیا در پی اظهارات خود مبنی بر «تغییرات مثبت» در افغانستان تحت حکومت طالبان از سوی گروه‌ها و افراد مختلف به شدت مورد انتقاد قرار گرفته است. توبایس الوود، معاون وزیر دفاع سابق، در ویدئویی که روز دوشنبه از افغانستان منتشر کرد گفت که فساد در این کشور کاهش یافته است و امنیت «به میزان قابل توجهی بهبود یافته است». مارک فرانسوا، عضو حزب محافظه‌کار، این ویدئو را «عجیب» خواند، در حالی که ایان دانکن اسمیت، رهبر سابق این حزب گفت که این اظهارات «خوشایند نیست».",
+                "indexImage": {
+                  "id": "130428847",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/42a6/live/b1aaff80-2635-11ee-b1d7-8fdc93c2782e.jpg",
+                  "path": "/cpsprodpb/42a6/live/b1aaff80-2635-11ee-b1d7-8fdc93c2782e.jpg",
+                  "height": 424,
+                  "width": 723,
+                  "altText": "توبیاس الیوود",
+                  "copyrightHolder": "Twitter",
+                  "allowSyndication": false,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/persian/articles/c4nr7r53489o",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c4nr7r53489o",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1689775928000,
+                "type": "link"
+              },
+              {
+                "name": "تجمع اعتراضی زنان به بستن آرایشگاه‌ها در افغانستان با شلیک هوایی و آب‌پاش از سوی طالبان متفرق شد",
+                "summary": "نیروهای طالبان در کابل تجمع اعتراضی گروهی از زنان را با تیراندازی هوایی و پاشیدن آب متفرق کردند. این زنان که گفته می‌شود آرایشگر هستند، در اعتراض به دستور بسته‌شدن آرایشگاه‌ها تجمع اعتراضی برگزار کرده بودند. آن‌ها با شعارهای «نان، کار، آزادی» و «خاک پاکم را گرفتی، آب و نانم را مگیر» در مرکز شهر کابل در برابر چند آرایشگاه‌ تجمع کرده بودند.",
+                "indexImage": {
+                  "id": "130422901",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/c6a2/live/bdb23360-2622-11ee-b5b0-f194bbe96e6b.jpg",
+                  "path": "/cpsprodpb/c6a2/live/bdb23360-2622-11ee-b5b0-f194bbe96e6b.jpg",
+                  "height": 466,
+                  "width": 829,
+                  "altText": "طالبان",
+                  "copyrightHolder": "Getty Images",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/persian/articles/c90vgw4241do",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c90vgw4241do",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1689767424000,
+                "type": "link"
+              }
+            ],
+            "strapline": { "name": "Top story - Afghanistan" },
+            "semanticGroupName": "Top story"
           },
           {
-            "headlines": {
-              "headline": "کرونا در افغانستان؛ بیشترین آمار مبتلایان در یک روز؛ مبتلایان ۷۶۵۳ نفر، جان باختگان ۱۷۸ نفر"
-            },
-            "locators": {
-              "assetUri": "/persian/afghanistan-52722862",
-              "cpsUrn": "urn:bbc:content:assetUri:persian/afghanistan-52722862",
-              "assetId": "52722862"
-            },
-            "summary": "وزارت صحت/بهداشت أفغانستان بیشترین آمار مبتلایان کرونا در یک روز را از آغاز شیوع آن در این کشور شناسایی کرده است. با ۵۸۱ مورد تازه مثبت کرونا شمار بیماران کووید ۱۹ در افغانستان به ۷۶۵۳ نفر رسید. با ثبت پنج مورد مرگ در نتیجه این بیماری شمار جان باختگان نیز به ۱۷۸ نفر افزایش یافت.",
-            "timestamp": 1589883990000,
-            "language": "fa",
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
+            "type": "av-stories-now",
+            "title": "Watch/Listen",
+            "items": [
+              {
+                "name": "واصف باختری؛ شاعری که هفتاد سال بعد از نخستین غزل در ایستگاه حوادث پیاده شد",
+                "summary": "همین که دستش با قلم آشنا شد، یا شاید همین که نوشتن و خواندن یاد گرفت،‌ به سرودن نیز آغاز کرد. در یازده سالگی غزلی نوشت که در نشریه «بیدار»، تنها روزنامه شهر مزارشریف در بلخ منتشر شد. از چاپ نخستین غزل محمدشاه واصف باختری که در آن هنگام «ثابت» تخلص می‌کرد، هفتاد سال می‌گذرد. با درگذشت او، ادبیات معاصر فارسی در افغانستان اکنون سوگوار مرگ یکی از ستون‌های اصلی خود است. واصف",
+                "indexImage": {
+                  "id": "130480018",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/68ed/live/bf2d7580-2792-11ee-ab0d-07ee5df4f217.jpg",
+                  "path": "/cpsprodpb/68ed/live/bf2d7580-2792-11ee-ab0d-07ee5df4f217.jpg",
+                  "height": 575,
+                  "width": 1022,
+                  "altText": "عکسی از او از سایت باختری",
+                  "copyrightHolder": "wasefbakhtari.com",
+                  "allowSyndication": false,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/persian/articles/cd1w2zg3v65o",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cd1w2zg3v65o",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1689935266000,
+                "type": "link"
               },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e4739461b000e9dabfc",
-                  "campaignName": "WS - Update me"
-                }
-              ],
-              "taggings": []
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "112348113",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/79D0/production/_112348113_coronatuesday.jpg",
-              "path": "/cpsprodpb/79D0/production/_112348113_coronatuesday.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "کرونا در افغانستان: بیشترین آمار مبتلایان در یک روز؛ مبتلایان ۷۶۵۳ نفر، جان باختگان ۱۷۸ نفر",
-              "caption": "کرونا در افغانستان: بیشترین آمار مبتلایان در یک روز؛ مبتلایان ۷۶۵۳ نفر، جان باختگان ۱۷۸ نفر",
-              "copyrightHolder": "Getty Images",
-              "type": "image"
-            },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "section": {
-              "subType": "IDX",
-              "name": "صفحه افغانستان",
-              "uri": "/persian/afghanistan",
-              "type": "simple"
-            },
-            "id": "urn:bbc:ares::asset:persian/afghanistan-52722862",
-            "type": "cps"
-          },
-          {
-            "headlines": {
-              "headline": "نمایندگان ایران، پاکستان، چین و روسیه درباره صلح افغانستان گفتگو کردند"
-            },
-            "locators": {
-              "assetUri": "/persian/afghanistan-52718665",
-              "cpsUrn": "urn:bbc:content:assetUri:persian/afghanistan-52718665",
-              "assetId": "52718665"
-            },
-            "summary": "وزارت خارجه ایران اعلام کرده که نمایندگان ویژه کشورهای ایران، پاکستان، چین و روسیه در مورد افغاستان با همدیگر گفتگو کرده‌اند. روند صلح افغانستان، خروج نیروهای خارجی از این کشور، بازگشت پناهندگان، مبارزه با تروریسم و مواد مخدر از مهمترین موضوعات مورد بحث بوده است. وزارت خارجه آمریکا نیز اعلام کرده که نماینده ویژه این کشور عازم دوحه و کابل شده است.",
-            "timestamp": 1589864578000,
-            "language": "fa",
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
+              {
+                "name": "آیا ادعاهای نماینده پارلمان بریتانیا درباره وضعیت افغانستان تحت حاکمیت طالبان درست است؟",
+                "summary": "توبایس الوود، نماینده ارشد محافظه‌کار در پارلمان بریتانیا به دلیل ادعای بهبودی وضعیت در افغانستان مورد انتقاد قرار گرفته است. آقای الوود، که رئیس کمیته دفاعی مجلس عوام است، پس از بازدید اخیر از افغانستان، آن را یک کشور «متحول‌شده» خواند. او همچنین خواستار تعامل مجدد دولت بریتانیا با طالبان و بازگشایی سفارت بریتانیا در کابل شد. او توئیتی همراه با ویدئویی منتشر کرد و گفت که در افغانستان امنیت بسیار بهبود یافته، فساد کاهش یافته و تجارت تریاک «پایان یافته است».",
+                "indexImage": {
+                  "id": "130443560",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/1986/production/_130443560_whatsubject.jpg",
+                  "path": "/cpsprodpb/1986/production/_130443560_whatsubject.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "تریاک",
+                  "copyrightHolder": "Getty Images",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/persian/articles/c06exrvrpe6o",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c06exrvrpe6o",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1689826590000,
+                "type": "link"
               },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e4739461b000e9dabfc",
-                  "campaignName": "WS - Update me"
-                }
-              ],
-              "taggings": []
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "112344580",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/2160/production/_112344580_52718665.jpg",
-              "path": "/cpsprodpb/2160/production/_112344580_52718665.jpg",
-              "height": 400,
-              "width": 711,
-              "altText": "این نشست روزگذشته میان نمایندگان ویژه سه کشور برگزار شده است",
-              "caption": "این نشست روزگذشته میان نمایندگان ویژه سه کشور برگزار شده است",
-              "copyrightHolder": "timesofislamabad.",
-              "type": "image"
-            },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "section": {
-              "subType": "IDX",
-              "name": "صفحه افغانستان",
-              "uri": "/persian/afghanistan",
-              "type": "simple"
-            },
-            "id": "urn:bbc:ares::asset:persian/afghanistan-52718665",
-            "type": "cps"
-          },
-          {
-            "headlines": {
-              "headline": "طالبان در واکنش به توافق غنی و عبدالله: زندانیان را آزاد و مذاکرات بین‌الافغانی را آغاز کنید"
-            },
-            "locators": {
-              "assetUri": "/persian/afghanistan-52702432",
-              "cpsUrn": "urn:bbc:content:assetUri:persian/afghanistan-52702432",
-              "assetId": "52702432"
-            },
-            "summary": "در پی امضای موافقتنامه سیاسی میان اشرف غنی و عبدالله عبدالله گروه طالبان این توافق را \"تکرار تجارب ناکام قبلی\" خوانده و گفته راه اصلی حل معضل کنونی افغانستان در عملی شدن توافقنامه میان آمریکا و طالبان نهفته است.",
-            "timestamp": 1589802322000,
-            "language": "fa",
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e4739461b000e9dabfc",
-                  "campaignName": "WS - Update me"
-                }
-              ],
-              "taggings": []
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "112333673",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/9301/production/_112333673_46d94090-df36-4b92-9dbb-47100d829ee1.jpg",
-              "path": "/cpsprodpb/9301/production/_112333673_46d94090-df36-4b92-9dbb-47100d829ee1.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "افغانستان",
-              "caption": "پایان ۵ ماه جنجال؛ موافقت‌نامه بین غنی و عبدالله امضا شد",
-              "copyrightHolder": "SAPIDAR",
-              "type": "image"
-            },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "section": {
-              "subType": "IDX",
-              "name": "صفحه افغانستان",
-              "uri": "/persian/afghanistan",
-              "type": "simple"
-            },
-            "relatedItems": [
               {
                 "headlines": {
-                  "headline": "واکنشها به توافق‌نامه غنی و عبدالله؛ آمریکا، سازمان ملل و ایران استقبال کردند"
+                  "headline": "پناهنده افغان: پس از دو سال اقامت در هتلی در بریتانیا، از آمدن به این کشور پشیمانم"
                 },
                 "locators": {
-                  "assetUri": "/persian/afghanistan-52698306",
-                  "cpsUrn": "urn:bbc:content:assetUri:/persian/afghanistan-52698306"
+                  "assetUri": "/persian/afghanistan-66200607",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:3065db1b-93b7-46c5-85b6-4d697196dbbd",
+                  "assetId": "66200607",
+                  "cpsUrn": "urn:bbc:content:assetUri:persian/afghanistan-66200607",
+                  "curie": "http://www.bbc.co.uk/asset/3065db1b-93b7-46c5-85b6-4d697196dbbd"
                 },
-                "summary": "مایک پومپئو، وزیر امور خارجه آمریکا در توییتی نوشته است که از شنیدن توافق محمد اشرف غنی و عبدالله عبدالله بر سر تشکیل دولت فراگیر خوشحال است. سازمان ملل نیز ابراز امیدواری کرده که دولت افغانستان به عنوان یک دولت متحد عمل کند. محمد جواد ظریف وزیر خارجه ایران هم ساعاتی پس از امضای توافق از \"پیشرفت حاصل شده در روند مصالحه ملی\" استقبال کرد.",
-                "timestamp": 1589734173000,
+                "summary": "یک پناهنده افغان می‌گوید که حالا و پس از حدود دو سال زندگی در یک هتل موقت پناهجویان در بریتانیا، از آمدن به این کشور پشیمان شده است. بوریس جانسون، نخست‌وزیر وقت، وعده حمایت از پناهندگان را به عنوان بخشی از «عملیات استقبال گرم» داد. اما به هزاران نفر از آنها که هنوز در هتل‌ها به سر می‌برند، از سوی وزارت کشور نامه‌های «اخراج» ارسال شده‌ است.",
+                "timestamp": 1689332809000,
                 "language": "fa",
+                "byline": {
+                  "name": "جرمی بال",
+                  "title": "بی‌بی‌سی",
+                  "persons": [
+                    {
+                      "name": "Jeremy Ball",
+                      "function": "Correspondent, BBC East Midlands Today"
+                    }
+                  ]
+                },
                 "cpsType": "STY",
-                "id": "urn:bbc:ares::asset:persian/afghanistan-52698306",
+                "indexImage": {
+                  "id": "130354911",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/2EA9/production/_130354911_6121898e2560ca393d778bc8a3173b6749d22eb8.jpg",
+                  "path": "/cpsprodpb/2EA9/production/_130354911_6121898e2560ca393d778bc8a3173b6749d22eb8.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "عملیات تخلیه پیتینگ از کابل",
+                  "caption": "در آگست سال ۲۰۲۱ پس از تسلط طالبان بر کشور بریتانیا هزاران نفر را از کابل تخلیه کرد",
+                  "copyrightHolder": "LPhot Ben Shread/MoD",
+                  "originCode": "cpsprodpb",
+                  "allowSyndication": false,
+                  "type": "image"
+                },
+                "options": { "isBreakingNews": false, "isFactCheck": false },
+                "section": {
+                  "subType": "IDX",
+                  "name": "صفحه افغانستان",
+                  "uri": "/persian/afghanistan",
+                  "type": "simple"
+                },
+                "id": "urn:bbc:ares::asset:persian/afghanistan-66200607",
+                "type": "cps"
+              },
+              {
+                "name": "طالبان بهره‌برداری از اولین چاه نفت در شمال افغانستان را با کمک چین آغاز کرد",
+                "summary": "طالبان بهره‌برداری نفت در شمال افغانستان را به کمک یک شرکت چینی آغاز کرده است. وزیر معادن طالبان می‌گوید در آینده نزدیک از چاه‌های نفت در سرپل روزانه ۱۰۰ تن نفت استخراج خواهد شد که میلیون‌ها دلار درآمد برای حکومت طالبان دارد. شرکت دولتی نفت و گاز طالبان و شرکت قراردادی چینی «افچین» به طور مشترک استخراج نفت خام در این منطقه را انجام می‌دهند.",
+                "indexImage": {
+                  "id": "130331308",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/139B9/production/_130331308_5ff31f9e-a99b-487c-b186-99f3f5a5a07e.jpg",
+                  "path": "/cpsprodpb/139B9/production/_130331308_5ff31f9e-a99b-487c-b186-99f3f5a5a07e.jpg",
+                  "height": 559,
+                  "width": 994,
+                  "altText": "در حال اففتاح نفت در شمال",
+                  "copyrightHolder": "@MoMPAfghanistan",
+                  "allowSyndication": false,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/persian/articles/cjmrl44prj1o",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cjmrl44prj1o",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1688896461000,
+                "type": "link"
+              },
+              {
+                "name": "طالبان و کودکان بی‌سرپرست بازمانده از دو طرف جنگ افغانستان در پرورشگاه‌ها",
+                "summary": "ساخت‌و‌ساز و تاسیس پرورشگاه‌ها برای حمایت و فراهم کردن زمینه آموزش برای کودکان یتیم بازمانده از جنگ در برخی ولایت‌های افغانستان در حال گسترش است. گزارش‌هایی نشر شده که شماری از چهره‌های بانفوذ طالبان هم «دارالایتام‌» تاسیس کرده‌اند.",
+                "indexImage": {
+                  "id": "130344265",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/DBB4/production/_130344265_eae86de8-58b3-406b-aacf-98a9042b3413.jpg",
+                  "path": "/cpsprodpb/DBB4/production/_130344265_eae86de8-58b3-406b-aacf-98a9042b3413.jpg",
+                  "height": 537,
+                  "width": 954,
+                  "altText": "۴۵ کودک یک پرورشگاه را به بند تفریحی قرغه در کابل",
+                  "caption": "عبدالطیف منصور، وزیر انرژی و آب طالبان ۴۵ کودک یک پرورشگاه را به بند تفریحی قرغه در کابل در روز عید فطر برد",
+                  "copyrightHolder": "@MEW_GOV_AF",
+                  "allowSyndication": false,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/persian/articles/cedew9z52kdo",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cedew9z52kdo",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1689005569000,
+                "type": "link"
+              },
+              {
+                "name": "دستور تعطیلی آرایشگاه‌های زنانه در افغانستان؛ «۶۰ هزار» زن کار خود از دست می‌دهند",
+                "summary": "منبعی در اتاق تجارت و صنایع افغانستان به بی‌بی‌سی گفته است که تصمیم اخیر طالبان برای بستن تمام آرایشگاه‌های زنانه باعث بیکاری حدود ۶۰ هزار زن در سراسر کشور خواهد شد. این منبع که نمی خواهد نامش فاش شود، افزود که ۳۱۰۰ سالن زیبایی زنان در کابل پایتخت و ۱۲ هزار آرایشگاه زنانه در کل کشور فعالیت دارد که در هر یک به طور متوسط پنج زن مشغول به کار هستند.",
+                "indexImage": {
+                  "id": "130295409",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/1615B/production/_130295409_43113b03-3046-48df-929e-e1e743aab8b3.jpg",
+                  "path": "/cpsprodpb/1615B/production/_130295409_43113b03-3046-48df-929e-e1e743aab8b3.jpg",
+                  "height": 386,
+                  "width": 686,
+                  "altText": "آرایشگاهی در کابل",
+                  "copyrightHolder": "Getty Images",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/persian/articles/c98e8yw3p4do",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c98e8yw3p4do",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1688558309000,
+                "type": "link"
+              },
+              {
+                "name": "بایدن: گفتم از طالبان کمک بگیریم که القاعده نباشد، می‌بینید که حق با من بود",
+                "summary": "در گزارش وزارت خارجه آمریکا آمده است که تصمیم‌های دو رئيس جمهور آمریکا برای خروج از افغانستان، دیپلمات‌های وزارت خارجه را با چالش‌های جدی مواجه ساخت که در پی حضور قوی و دوام‌دار در کابل بودند. در مصاحبه روز جمعه جو بایدن از در مورد خروج از افغانستان نیز سوالی پرسیده شد، که بایدن به طور مشخص به یافته‌های این گزارش یاد نکرد اما گفت: «نه، نه. همه شواهد در حال بازیابی هستند. یادتان است در مورد افغانستان چه می‌گفتم؟ گفتم القاعده [باید] آنجا نباشد. گفتم که آنجا نباشد. گفتم از طالبان [در این زمینه] کمک بگیریم. حالا چه رخ داده؟ چه می‌گذرد؟ رسانه‌ خود را مرور کنید. حق با من بود.»",
+                "indexImage": {
+                  "id": "130260255",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/4c60/live/ca6bc1b0-17f5-11ee-9408-85bdff3b1780.jpg",
+                  "path": "/cpsprodpb/4c60/live/ca6bc1b0-17f5-11ee-9408-85bdff3b1780.jpg",
+                  "height": 572,
+                  "width": 1017,
+                  "altText": "بایدن",
+                  "copyrightHolder": "Getty Images",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/persian/articles/c0wv69gw114o",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c0wv69gw114o",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1688207164000,
+                "type": "link"
+              },
+              {
+                "name": "سازمان ملل نقشه‌راه فعالیت خود در افغانستان برای دو سال آینده را منتشر کرد",
+                "summary": "سازمان ملل متحد در افغانستان امروز نقشه‌راه فعالیت خود را برای سال‌های ۲۰۲۳-۲۰۲۵ میلادی در این کشور منتشر کرد که در آن اولویت‌های این سازمان «در حمایت از مردم افغانستان» مشخص شده است. «چارچوب استراتژیک سازمان ملل برای افغانستان» که در ۷۴ صفحه منتشر شده، رویکرد این سازمان را برای رسیدگی به نیازهای اساسی انسانی در افغانستان، اولویت دادن به نیازها و حقوق آسیب پذیرترین افراد از جمله زنان و دختران، کودکان و جوانان، آوارگان داخلی، بازگشت‌کنندگان، پناهندگان، اقلیت‌های قومی و مذهبی بیان می‌کند.",
+                "indexImage": {
+                  "id": "130273898",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/344c/live/b24f7820-1998-11ee-a7b5-f3accae7bcbc.png",
+                  "path": "/cpsprodpb/344c/live/b24f7820-1998-11ee-a7b5-f3accae7bcbc.png",
+                  "height": 675,
+                  "width": 1200,
+                  "altText": "سازمان ملل",
+                  "copyrightHolder": "UN",
+                  "allowSyndication": false,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/persian/articles/c512ne1lqlyo",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c512ne1lqlyo",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1688387520000,
+                "type": "link"
+              },
+              {
+                "name": "سِتَم ملی چیست؟",
+                "summary": "ستم (Oppression) به مفهوم عام کلمه به شرایط غیر‌منصفانه و ظالمانه‌ای اطلاق می‌شود که طی آن افراد و یا گروه‌های اجتماعی از دست یابی به فرصت‌ها و آزادی‌های موجود در جامعه (بر مبنای زبان، دین، قوم، جنسیت و رنگ) محروم نگهداشته می‌شوند. لغات‌نامه آکسفورد ستم را برخورد ناعادلانه و ظالمانه با مردم تعریف کرده است که با امتناع از دادن حقوق و فرصت‌های مساوی به آنان، تحقق می‌یابد. در زبان فارسی ستم به معنی تعدی و ظلم به کار بسته می‌شود. اما ستم در سطح اجتماع چه معنایی می‌تواند داشه باشد؟ به عبارت دیگر، ستم ملی چیست؟",
+                "indexImage": {
+                  "id": "130252714",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/51b7/live/9c9820c0-1742-11ee-8cae-4785e93eadf1.jpg",
+                  "path": "/cpsprodpb/51b7/live/9c9820c0-1742-11ee-8cae-4785e93eadf1.jpg",
+                  "height": 450,
+                  "width": 800,
+                  "altText": "ستم ملی",
+                  "copyrightHolder": "Social Media",
+                  "allowSyndication": false,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/persian/articles/cv2jzy518vro",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cv2jzy518vro",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1688128885000,
+                "type": "link"
+              },
+              {
+                "name": "چرا «مهاجران وزیرستانی» را به شمال افغانستان انتقال می‌دهند؟",
+                "summary": "در هفته‌های اخیر انتقال اعضای تحریک طالبان پاکستانی (تی‌تی‌پی) به شمال افغانستان توجه بسیاری از آگاهان امور و طرف‌های اصلی منازعه افغانستان را جلب کرده است. به گونه‌ای که بسیاری از رخدادهای افغانستان در این روزها تحت تاثیر این موضوع قرار گرفته است.",
+                "indexImage": {
+                  "id": "130201085",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/7e0e/live/66f12a40-11c3-11ee-8650-cd8a2ac65df3.jpg",
+                  "path": "/cpsprodpb/7e0e/live/66f12a40-11c3-11ee-8650-cd8a2ac65df3.jpg",
+                  "height": 450,
+                  "width": 800,
+                  "altText": "مهاجرین وزیرستانی در ولایت خوست همجوار با پاکستان هنگام دریافت کمک غذایی",
+                  "caption": "مهاجرین وزیرستانی در ولایت خوست همجوار با پاکستان هنگام دریافت کمک غذایی",
+                  "copyrightHolder": "Getty Images",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/persian/articles/cgr65np97xjo",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cgr65np97xjo",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1687696477000,
+                "type": "link"
+              },
+              {
+                "name": "چرا فوتبال در افغانستان پیشرفت نمی‌کند؟",
+                "summary": "فوتبال در افغانستان جایگاه و محبوبیت فوق‌العاده زیاد‌ی در میان مردم دارد. قشر جوان افغانستان، همانند بسیاری از کشورهای دیگر آسیایی، قسمت مهمی از زندگی‌شان را یا صرف تماشای فوتبال می‌کنند و یا هم بازی آن. وقتی در سال ۲۰۱۷ کنفدراسیون فوتبال آسیا جایزه فدراسیون «سختکوش» آسیا را بخاطر تشویق و تقلای زیاد آن وقت برای حرفه‌ای شدن مستطیل‌سبز به فدراسیون فوتبال افغانستان داد، موجی از امیدواری در میان طرفداران در خصوص آینده فوتبال افغانستان ایجاد شد.",
+                "indexImage": {
+                  "id": "130214043",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/cf94/live/0c9c5260-1365-11ee-b52a-dda61f6e77a0.jpg",
+                  "path": "/cpsprodpb/cf94/live/0c9c5260-1365-11ee-b52a-dda61f6e77a0.jpg",
+                  "height": 449,
+                  "width": 798,
+                  "altText": "تیم ملی فوتبال افغانستان همراه با مربی کویتی خود",
+                  "caption": "تیم ملی فوتبال افغانستان همراه با مربی کویتی خود در بیشکیک قرقیزستان",
+                  "copyrightHolder": "AFF",
+                  "allowSyndication": false,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/persian/articles/cx8drggz03qo",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cx8drggz03qo",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1687840175000,
+                "type": "link"
+              },
+              {
+                "name": "رژیم طالبانی، زنان و تسلط فراگیر گفتمان سنتی در افغانستان",
+                "summary": "مجموعه «ناظران می‌گویند» بیانگر نظر نویسندگان آن است. بی‌بی‌سی فارسی می‌کوشد در این مجموعه، با انعکاس دیدگاه‌ها و افکار طیف‌های گوناگون، چشم‌اندازی متنوع و متوازن از موضوعات مختلف ارائه کند. انتشار این آرا و نقطه‌نظرها، به معنای تایید آن‌ها از طرف بی‌بی‌سی نیست.",
+                "indexImage": {
+                  "id": "130177316",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/8f8b/live/7adb6600-10e8-11ee-bee5-15ad4c790a63.jpg",
+                  "path": "/cpsprodpb/8f8b/live/7adb6600-10e8-11ee-bee5-15ad4c790a63.jpg",
+                  "height": 576,
+                  "width": 1024,
+                  "altText": "طالبان و نقاشی زن",
+                  "copyrightHolder": "Getty Images",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/persian/articles/c5194632jlyo",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c5194632jlyo",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1687436601000,
+                "type": "link"
+              },
+              {
+                "name": "نمایندگان کشورها و نهادها در اجلاس سازمان ملل خواستار پایان یافتن سیاست‌های تبعیض‌آمیز طالبان علیه زنان شدند",
+                "summary": "نمایندگان کشورها و سازمان‌های شرکت کننده در پنجاه و سومین نشست شورای حقوق بشر سازمان ملل از حکومت طالبان خواستند تا به سرعت به سیاست‌های تبعیض‌آمیزشان علیه دختران و زنان در افغانستان پایان دهند. معاون کمیساریای عالی حقوق بشر سازمان ملل، در این نشست تاثیرات منفی سیاست‌های طالبان علیه حقوق و آزادی‌ها را برشمرد و گفت این رویکرد طالبان باعث شده که شمار زیادی از زنان به خدمات اجتماعی و حقوقی دسترسی نداشته باشند.",
+                "indexImage": {
+                  "id": "130145179",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/4016/live/d1f550b0-0ea2-11ee-a2f8-83a375689b2b.jpg",
+                  "path": "/cpsprodpb/4016/live/d1f550b0-0ea2-11ee-a2f8-83a375689b2b.jpg",
+                  "height": 759,
+                  "width": 1348,
+                  "altText": "نمایندگان سازمان ملل",
+                  "caption": "ندى الناشف، معاون کمیساریای عالی حقوق بشر سازمان ملل (وسط)",
+                  "copyrightHolder": "UN",
+                  "allowSyndication": false,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/persian/articles/cgr664ezld5o",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cgr664ezld5o",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1687181309000,
+                "type": "link"
+              }
+            ],
+            "strapline": { "name": "تحلیل و گزارش" },
+            "semanticGroupName": "Watch/Listen"
+          },
+          {
+            "type": "feature-main",
+            "title": "Features",
+            "items": [
+              {
+                "name": "درس",
+                "summary": "«درس» برنامه‌ای آموزشی برای نوجوانان افغانستان به ویژه دختران محروم از مکتب است. همه قسمت‌های این برنامه را در لینک یوتیوب تماشا کنید.",
+                "indexImage": {
+                  "id": "129321685",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/E4F4/production/_129321685_970f70e6-75d7-4a12-b6b2-185b833ac1d7.jpg",
+                  "path": "/cpsprodpb/E4F4/production/_129321685_970f70e6-75d7-4a12-b6b2-185b833ac1d7.jpg",
+                  "height": 1080,
+                  "width": 1920,
+                  "altText": "برنامه درس",
+                  "copyrightHolder": "BBC",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.youtube.com/playlist?list=PLmdEvtplre622D7ucPBxnKbJkCHB1bKLa",
+                "contentType": "Guide",
+                "assetTypeCode": "PRO",
+                "timestamp": 1681131603000,
+                "type": "link"
+              }
+            ],
+            "strapline": { "name": "ویدیو" },
+            "semanticGroupName": "Features"
+          },
+          {
+            "type": "programmes-standard",
+            "title": "Programmes",
+            "items": [
+              {
+                "name": "گپ روز",
+                "summary": "گپ روز",
+                "indexImage": {
+                  "id": "113370004",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/9C47/production/_113370004_gettyimages-1145166058.jpg",
+                  "path": "/cpsprodpb/9C47/production/_113370004_gettyimages-1145166058.jpg",
+                  "height": 1152,
+                  "width": 2048,
+                  "altText": "میکروفون",
+                  "copyrightHolder": "Getty Images",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/persian/bbc_dari_radio/programmes/p0340yr5",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/ws-media/radio/persian/bbc_dari_radio/programmes/p0340yr5",
+                "contentType": "Guide",
+                "assetTypeCode": "PRO",
+                "timestamp": 1594641547000,
+                "type": "link"
+              },
+              {
+                "name": "چشم انداز بامدادی",
+                "summary": "چشم انداز بامدادی",
+                "indexImage": {
+                  "id": "113304606",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/ECE0/production/_113304606_gettyimages-895276050.jpg",
+                  "path": "/cpsprodpb/ECE0/production/_113304606_gettyimages-895276050.jpg",
+                  "height": 1152,
+                  "width": 2048,
+                  "altText": "رادیو",
+                  "copyrightHolder": "Getty Images",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/persian/bbc_dari_radio/programmes/p04xz36l",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/ws-media/radio/persian/bbc_dari_radio/programmes/p04xz36l",
+                "contentType": "Guide",
+                "assetTypeCode": "PRO",
+                "timestamp": 1594632440000,
+                "type": "link"
+              },
+              {
+                "name": "مجله شامگاهی",
+                "summary": "مجله شامگاهی",
+                "indexImage": {
+                  "id": "113304602",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/50A0/production/_113304602_gettyimages-614523672.jpg",
+                  "path": "/cpsprodpb/50A0/production/_113304602_gettyimages-614523672.jpg",
+                  "height": 1152,
+                  "width": 2048,
+                  "altText": "میکروفون",
+                  "copyrightHolder": "Getty Images",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/persian/bbc_dari_radio/programmes/p0340v11",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/ws-media/radio/persian/bbc_dari_radio/programmes/p0340v11",
+                "contentType": "Guide",
+                "assetTypeCode": "PRO",
+                "timestamp": 1594633228000,
+                "type": "link"
+              },
+              {
+                "name": "مجله زنان",
+                "summary": "برنامه زنان افغانستان",
+                "indexImage": {
+                  "id": "113370030",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/0BBF/production/_113370030_gettyimages-1131326005.jpg",
+                  "path": "/cpsprodpb/0BBF/production/_113370030_gettyimages-1131326005.jpg",
+                  "height": 1152,
+                  "width": 2048,
+                  "altText": "رادیو",
+                  "copyrightHolder": "Getty Images",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/persian/bbc_dari_radio/programmes/w13xtvnv",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/ws-media/radio/persian/bbc_dari_radio/programmes/w13xtvnv",
+                "contentType": "Guide",
+                "assetTypeCode": "PRO",
+                "timestamp": 1594642179000,
+                "type": "link"
+              }
+            ],
+            "strapline": {
+              "name": "گوش کنید: تازه‌ترین برنامه‌های رادیو",
+              "type": "LINK",
+              "links": {
+                "highweb": "https://www.bbc.com/persian/afghanistan-53392887",
+                "desktop": "https://www.bbc.com/persian/afghanistan-53392887",
+                "mobile": "https://www.bbc.com/persian/afghanistan-53392887",
+                "enhancedmobile": "https://www.bbc.com/persian/afghanistan-53392887"
+              }
+            },
+            "semanticGroupName": "Programmes"
+          },
+          {
+            "type": "also-in-news",
+            "title": "Also in the news",
+            "items": [
+              {
+                "headlines": {
+                  "headline": "آلبوم عکس؛ لویه جرگه مشورتی برای رهایی زندانیان طالبان"
+                },
+                "locators": {
+                  "assetUri": "/persian/afghanistan-53693671",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:57be8370-ddf7-4559-a1f6-dc740198a75e",
+                  "assetId": "53693671",
+                  "cpsUrn": "urn:bbc:content:assetUri:persian/afghanistan-53693671",
+                  "curie": "http://www.bbc.co.uk/asset/57be8370-ddf7-4559-a1f6-dc740198a75e"
+                },
+                "summary": "لویه جرگه مشورتی به منظور بحث روی رهایی زندانیان گروه طالبان روز جمعه ۱۷ اسد/مرداد در کابل برگزار شد. اعضای جرگه در ظرف دو روز باید روی رهایی زندانیان تصمیم بگیرد. در این جرگه ۳۲۰۰ تن از جمله ۷۰۰ زن، از سراسر افغانستان شرکت دارند. ریاست لویه جرگه را عبدالله عبدالله، رئیس عالی شورای مصالحه به عهده دارد. این جرگه برای دو روز روی آزادی زندانیان گروه طالبان بحث خواهد کرد. آمریکا از برگزاری لویه جرگه حمایت کرده و گروه طالبان آن را تخریب روند صلح افغانستان عنوان کرده اند.",
+                "timestamp": 1596801142000,
+                "language": "fa",
+                "cpsType": "PGL",
+                "indexImage": {
+                  "id": "113847945",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/D6BE/production/_113847945_capt.jpg",
+                  "path": "/cpsprodpb/D6BE/production/_113847945_capt.jpg",
+                  "height": 608,
+                  "width": 1081,
+                  "altText": ".",
+                  "copyrightHolder": "Gmic",
+                  "originCode": "cpsprodpb",
+                  "allowSyndication": false,
+                  "type": "image"
+                },
+                "options": { "isBreakingNews": false, "isFactCheck": false },
+                "section": {
+                  "subType": "IDX",
+                  "name": "صفحه افغانستان",
+                  "uri": "/persian/afghanistan",
+                  "type": "simple"
+                },
+                "id": "urn:bbc:ares::asset:persian/afghanistan-53693671",
                 "type": "cps"
               }
             ],
-            "id": "urn:bbc:ares::asset:persian/afghanistan-52702432",
-            "type": "cps"
+            "semanticGroupName": "Also in the news"
           }
-        ],
-        "semanticGroupName": "More top stories"
+        ]
       },
-      {
-        "type": "other-top-stories",
-        "title": "Top stories overflow",
-        "items": [
-          {
-            "headlines": {
-              "headline": "امنیت ملی افغانستان: شبکه حقانی جنگجویان داعش را حمایت می‌کند"
-            },
-            "locators": {
-              "assetUri": "/persian/afghanistan-52705797",
-              "cpsUrn": "urn:bbc:content:assetUri:persian/afghanistan-52705797",
-              "assetId": "52705797"
-            },
-            "summary": "مقام‌های ارشد امنیتی افغانستان می‌گویند که حملات طالبان در ماه‌های اخیر افزایش یافته و در پاسخ به این گروه، حملات تهاجمی نیروهای امنیتی نیز آغاز شده است. این مقام‌ها می‌گویند شبکه حقانی که هم‌پیمان طالبان است از جنگجویان داعش در این کشور حمایت می‌کند. به گفته آنها گروه طالبان پس از توافقنامه صلح با آمریکا تاکنون ۳۸۰۰ حمله انجام داده است.",
-            "timestamp": 1589795141000,
-            "language": "fa",
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e4739461b000e9dabfc",
-                  "campaignName": "WS - Update me"
-                }
-              ],
-              "taggings": []
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "94862005",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/C36A/production/_94862005_6cf5eeca-76de-4c9e-93bc-de03aa4f690e.jpg",
-              "path": "/cpsprodpb/C36A/production/_94862005_6cf5eeca-76de-4c9e-93bc-de03aa4f690e.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "پرچم داعش",
-              "copyrightHolder": "Reuters",
-              "type": "image"
-            },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "section": {
-              "subType": "IDX",
-              "name": "صفحه افغانستان",
-              "uri": "/persian/afghanistan",
-              "type": "simple"
-            },
-            "id": "urn:bbc:ares::asset:persian/afghanistan-52705797",
-            "type": "cps"
-          },
-          {
-            "headlines": {
-              "headline": "حمله انتحاری طالبان به ساختمان امنیت ملی در غزنی افغانستان؛ دستکم ۷ کشته، ۴۰زخمی"
-            },
-            "locators": {
-              "assetUri": "/persian/afghanistan-52702813",
-              "cpsUrn": "urn:bbc:content:assetUri:persian/afghanistan-52702813",
-              "assetId": "52702813"
-            },
-            "summary": "وزارت داخله/کشور افغانستان از وقوع یک انفجار در شهر غزنی در جنوب افغانستان خبر داده است. به گفته خبرنگاران بی بی سی انفجار با یک خودرو بمب گذاری شده انجام شده و هدف یک واحد نظامی بوده است. رئیس بیمارستان غزنی گفته همه قربانیان از نیروهای نظامی‌اند. طالبان مسئولیت این حمله را پذیرفته است.",
-            "timestamp": 1589789716000,
-            "language": "fa",
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e4739461b000e9dabfc",
-                  "campaignName": "WS - Update me"
-                }
-              ],
-              "taggings": []
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "112334250",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/147B/production/_112334250_c20e9f2f-67b2-4dc7-b001-c1a3558eafbd.jpg",
-              "path": "/cpsprodpb/147B/production/_112334250_c20e9f2f-67b2-4dc7-b001-c1a3558eafbd.jpg",
-              "height": 405,
-              "width": 720,
-              "altText": "حمله غزنی",
-              "copyrightHolder": "BBC",
-              "type": "image"
-            },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "section": {
-              "subType": "IDX",
-              "name": "صفحه افغانستان",
-              "uri": "/persian/afghanistan",
-              "type": "simple"
-            },
-            "id": "urn:bbc:ares::asset:persian/afghanistan-52702813",
-            "type": "cps"
-          },
-          {
-            "headlines": {
-              "headline": "واکنشها به توافق‌نامه غنی و عبدالله؛ آمریکا، سازمان ملل و ایران استقبال کردند"
-            },
-            "locators": {
-              "assetUri": "/persian/afghanistan-52698306",
-              "cpsUrn": "urn:bbc:content:assetUri:persian/afghanistan-52698306",
-              "assetId": "52698306"
-            },
-            "summary": "مایک پومپئو، وزیر امور خارجه آمریکا در توییتی نوشته است که از شنیدن توافق محمد اشرف غنی و عبدالله عبدالله بر سر تشکیل دولت فراگیر خوشحال است. سازمان ملل نیز ابراز امیدواری کرده که دولت افغانستان به عنوان یک دولت متحد عمل کند. محمد جواد ظریف وزیر خارجه ایران هم ساعاتی پس از امضای توافق از \"پیشرفت حاصل شده در روند مصالحه ملی\" استقبال کرد.",
-            "timestamp": 1589734173000,
-            "language": "fa",
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e4739461b000e9dabfc",
-                  "campaignName": "WS - Update me"
-                }
-              ],
-              "taggings": []
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "112328365",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/DC3E/production/_112328365_tawafoq.jpg",
-              "path": "/cpsprodpb/DC3E/production/_112328365_tawafoq.jpg",
-              "height": 576,
-              "width": 1024,
-              "altText": "وزارت خارجه آمریکا گفتهاست که از تعهد آقایان غنی و عبدالله برای گام برداشتن در راستای صلح در افغانستان استقبال می‌کنیم.",
-              "caption": "وزارت خارجه آمریکا گفتهاست که از تعهد آقایان غنی و عبدالله برای گام برداشتن در راستای صلح در افغانستان استقبال می‌کنیم.",
-              "copyrightHolder": "ARG",
-              "type": "image"
-            },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "section": {
-              "subType": "IDX",
-              "name": "صفحه افغانستان",
-              "uri": "/persian/afghanistan",
-              "type": "simple"
-            },
-            "id": "urn:bbc:ares::asset:persian/afghanistan-52698306",
-            "type": "cps"
-          },
-          {
-            "headlines": {
-              "headline": "وزارت خارجه افغانستان: هیات ایرانی اسناد افغانستان را درباره مهاجران غرق شده در رودخانه قبول نکرد"
-            },
-            "locators": {
-              "assetUri": "/persian/afghanistan-52702814",
-              "cpsUrn": "urn:bbc:content:assetUri:persian/afghanistan-52702814",
-              "assetId": "52702814"
-            },
-            "summary": "وزارت خارجه افغانستان اعلام کرده که به دلیل اینکه طرف ایرانی اسناد، شواهد و مدارک جمع آوری شده توسط کمیساران افغان را درباره \"به رودخانه انداختن مهاجران افغانستان توسط مرزبان ایرانی\" قبول نکرده، ادامه تحقیق به مراجع دیپلماتیک دو کشور واگذار شده است.",
-            "timestamp": 1589784856000,
-            "language": "fa",
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e4739461b000e9dabfc",
-                  "campaignName": "WS - Update me"
-                }
-              ],
-              "taggings": []
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "112314305",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/C4A5/production/_112314305_whatsubject.jpg",
-              "path": "/cpsprodpb/C4A5/production/_112314305_whatsubject.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "این حادثه در رودخانه مرزی هریرود اتفاق افتاده است",
-              "caption": "این حادثه در رودخانه مرزی هریرود اتفاق افتاده است",
-              "copyrightHolder": "Herat.Gov",
-              "type": "image"
-            },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "section": {
-              "subType": "IDX",
-              "name": "صفحه افغانستان",
-              "uri": "/persian/afghanistan",
-              "type": "simple"
-            },
-            "id": "urn:bbc:ares::asset:persian/afghanistan-52702814",
-            "type": "cps"
-          },
-          {
-            "headlines": {
-              "headline": "کرونا در افغانستان؛ شناسایی ده‌ها مورد جدید و نگرانی از کمبود خدمات در مراکز بهداشتی"
-            },
-            "locators": {
-              "assetUri": "/persian/afghanistan-52698301",
-              "cpsUrn": "urn:bbc:content:assetUri:persian/afghanistan-52698301",
-              "assetId": "52698301"
-            },
-            "summary": "وزارت صحت/بهداشت افغانستان می‌گوید با شناسایی 262 مورد مثبت تازه کرونا، شمار بیماران کووید ۱۹ در این کشور به 6664 نفر رسیده است. این نهاد از ثبت دو مرگ در نتیجه این بیماری نیز در یک شبانه روز گذشته خبر داده است. همزمان دیدبان شفافیت افغانستان با نشر تحقیقی از چالش‌های نگران کننده از جمله کمبود امکانات در مراکز بهداشتی خبر داده است.",
-            "timestamp": 1589716788000,
-            "language": "fa",
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e4739461b000e9dabfc",
-                  "campaignName": "WS - Update me"
-                }
-              ],
-              "taggings": []
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "112327558",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/14E44/production/_112327558_coronaafghanistantoday2.jpg",
-              "path": "/cpsprodpb/14E44/production/_112327558_coronaafghanistantoday2.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "دیدبان شفافیت افغانستان از دولت خواسته تا به نیازهای فوری عملیاتی، دارو، نیروی کاری و تجهیزات مراکز بهداشتی رسیدگی کند.",
-              "caption": "دیدبان شفافیت افغانستان از دولت خواسته تا به نیازهای فوری عملیاتی، دارو، نیروی کاری و تجهیزات مراکز بهداشتی رسیدگی کند.",
-              "copyrightHolder": "Getty Images",
-              "type": "image"
-            },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "section": {
-              "subType": "IDX",
-              "name": "صفحه افغانستان",
-              "uri": "/persian/afghanistan",
-              "type": "simple"
-            },
-            "id": "urn:bbc:ares::asset:persian/afghanistan-52698301",
-            "type": "cps"
-          },
-          {
-            "headlines": {
-              "headline": "پایان ۵ ماه جنجال؛ موافقت‌نامه بین غنی و عبدالله امضا شد"
-            },
-            "locators": {
-              "assetUri": "/persian/afghanistan-52696851",
-              "cpsUrn": "urn:bbc:content:assetUri:persian/afghanistan-52696851",
-              "assetId": "52696851"
-            },
-            "summary": "صدیق صدیقی، سخنگوی محمد اشرف غنی، رئیس جمهور افغانستان گفته است که موافقت‌نامه‌ای میان عبدالله عبدالله، رئیس اجرایی پیشین و آقای غنی، امروز امضا شده است. با امضای این موافقت‌نامه میان دو رقیب سیاسی، جنجال پس از اعلام نتیجه انتخابات اخیر افغانستان پس از نزدیک به پنج ماه پایان یافت. \"معرفی ۵۰ درصد از اعضای کابینه نیز توسط تیم ثبات و همگرایی به رهبری عبدالله عبدالله است که شامل وزارت خانه های کلیدی است.\"",
-            "timestamp": 1589711510000,
-            "language": "fa",
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e4739461b000e9dabfc",
-                  "campaignName": "WS - Update me"
-                }
-              ],
-              "taggings": []
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "112327561",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/40BC/production/_112327561_arg3.jpg",
-              "path": "/cpsprodpb/40BC/production/_112327561_arg3.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "پایان ۵ ماه جنجال؛ موافقت‌نامه بین غنی و عبدالله امضا شد",
-              "caption": "پایان ۵ ماه جنجال؛ موافقت‌نامه بین غنی و عبدالله امضا شد",
-              "copyrightHolder": "Sapidar",
-              "type": "image"
-            },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "section": {
-              "subType": "IDX",
-              "name": "صفحه افغانستان",
-              "uri": "/persian/afghanistan",
-              "type": "simple"
-            },
-            "id": "urn:bbc:ares::asset:persian/afghanistan-52696851",
-            "type": "cps"
-          },
-          {
-            "headlines": {
-              "headline": "دولت افغانستان: طالبان از تاکتیک 'حمله و تکذیب' استفاده می‌کند؛ خلیلزاد: طالبان نقش مهم در جنگ علیه داعش بازی کرده"
-            },
-            "locators": {
-              "assetUri": "/persian/afghanistan-52690181",
-              "cpsUrn": "urn:bbc:content:assetUri:persian/afghanistan-52690181",
-              "assetId": "52690181"
-            },
-            "summary": "در بیانیه مشترک نهادهای امنیتی افغانستان که امروز نشر شد آمده که \"حملات خونبار تروریستی\" روز سه‌شنبه بر یک زایشگاه صد تختی در دشت برچی، حمله بر مراسم تشیع جنازه در شرق افغانستان و حمله با خودرو انفجاری در شهر گردیز \"توسط طالبان انجام شده است.\" زلمی خلیلزاد، نماینده ویژه وزارت خارجه آمریکا روز گذشته گفته بود که حمله اخیر کابل و ننگرهار کار طالبان نیست.",
-            "timestamp": 1589630993000,
-            "language": "fa",
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "taggings": []
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "112305335",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/D066/production/_112305335_8c17c36b-0911-4f55-bc2b-bce7e3054ebb.jpg",
-              "path": "/cpsprodpb/D066/production/_112305335_8c17c36b-0911-4f55-bc2b-bce7e3054ebb.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "MOI",
-              "copyrightHolder": "MOI",
-              "type": "image"
-            },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "section": {
-              "subType": "IDX",
-              "name": "صفحه افغانستان",
-              "uri": "/persian/afghanistan",
-              "type": "simple"
-            },
-            "id": "urn:bbc:ares::asset:persian/afghanistan-52690181",
-            "type": "cps"
-          },
-          {
-            "headlines": {
-              "headline": "کرونا در افغانستان؛ شمار رسمی مبتلایان از ۶ هزار نفر گذشت؛ 'عید فطر را در خانه تجلیل کنید'"
-            },
-            "locators": {
-              "assetUri": "/persian/afghanistan-52676153",
-              "cpsUrn": "urn:bbc:content:assetUri:persian/afghanistan-52676153",
-              "assetId": "52676153"
-            },
-            "summary": "وزارت بهداشت افغانستان می‌گوید که در یک شبانه روز گذشته، ۱۱۲۲ نمونه مشکوک مورد آزمایش قرار گرفته و از میان آن، ۴۱۴ واقعه مثبت شناسایی شده است. به این ترتیب مجموع مبتلایان در این کشور به ۶هزارو ۵۳ نفر رسید.",
-            "timestamp": 1589543258000,
-            "language": "fa",
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e4739461b000e9dabfc",
-                  "campaignName": "WS - Update me"
-                }
-              ],
-              "taggings": []
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "112288939",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/16F24/production/_112288939_whatsubject.jpg",
-              "path": "/cpsprodpb/16F24/production/_112288939_whatsubject.jpg",
-              "height": 574,
-              "width": 1020,
-              "altText": "شمار بهبودیافتگان به 648 نفر رسیده است",
-              "caption": "شمار بهبودیافتگان به 648 نفر رسیده است",
-              "copyrightHolder": "Getty Images",
-              "type": "image"
-            },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "section": {
-              "subType": "IDX",
-              "name": "صفحه افغانستان",
-              "uri": "/persian/afghanistan",
-              "type": "simple"
-            },
-            "id": "urn:bbc:ares::asset:persian/afghanistan-52676153",
-            "type": "cps"
-          }
-        ],
-        "semanticGroupName": "Top stories overflow"
+      "promo": {
+        "subType": "IDX",
+        "name": "صفحه افغانستان",
+        "uri": "/persian/afghanistan",
+        "id": "urn:bbc:ares::index:persian/afghanistan/desktop/domestic",
+        "type": "simple"
       },
-      {
-        "type": "av-stories-now",
-        "title": "Watch/Listen",
-        "items": [
-          {
-            "headlines": {
-              "headline": "ابراز نگرانی سازمان ملل از افزایش کشتار غیر نظامیان در افغانستان"
-            },
-            "locators": {
-              "assetUri": "/persian/afghanistan-52726383",
-              "cpsUrn": "urn:bbc:content:assetUri:persian/afghanistan-52726383",
-              "assetId": "52726383"
-            },
-            "summary": "در حالیکه شمار رسمی مبتلایان به ویروس کرونا از چهار و نیم میلیون نفر عبور کرده، این روزها کشورهای آمریکای لاتین به کانون های اصلی شیوع تبدیل شده‌اند..",
-            "timestamp": 1589896725000,
-            "language": "fa",
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e2939461b000e9dabf8",
-                  "campaignName": "WS - Educate me"
-                }
-              ],
-              "taggings": []
-            },
-            "cpsType": "MAP",
-            "media": {
-              "id": "p08dlgmb",
-              "subType": "clip",
-              "format": "video",
-              "title": "ابراز نگرانی سازمان ملل از افزایش کشتار غیر نظامیان در افغانستان",
-              "synopses": {
-                "short": "ابراز نگرانی سازمان ملل از افزایش کشتار غیر نظامیان در افغانستان",
-                "long": "در حالیکه شمار رسمی مبتلایان به ویروس کرونا از چهار و نیم میلیون نفر عبور کرده، این روزها کشورهای آمریکای لاتین به کانون های اصلی شیوع تبدیل شده‌اند. همزمان آمریکا یک ماه به سازمان بهداشت جهانی مهلت داده که دست به اصلاحات اساسی بزند؛ وگرنه کمک‌های مالی به این سازمان را قطع می‌کند. چین می‌گوید آمریکا می‌خواهد تقصیر ناکارآمدی خودش در مهار بحران را به گردن این نهاد بین‌المللی بیندازد. سیاوش اردلان گزارش میدهد.",
-                "medium": "در حالیکه شمار رسمی مبتلایان به ویروس کرونا از چهار و نیم میلیون نفر عبور کرده، این روزها کشورهای آمریکای لاتین به کانون های اصلی شیوع تبدیل شده‌اند.."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08dlh0q.jpg",
-              "embedding": true,
-              "advertising": true,
-              "caption": "ابراز نگرانی سازمان ملل از افزایش کشتار غیر نظامیان در افغانستان",
-              "versions": [
-                {
-                  "versionId": "p08dlgmg",
-                  "types": [
-                    "Original"
-                  ],
-                  "duration": 152,
-                  "durationISO8601": "PT2M32S",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1589894790000
-                }
-              ],
-              "imageCopyright": "BBC",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "112360172",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/69E2/production/_112360172_p08dlh0q.jpg",
-              "path": "/cpsprodpb/69E2/production/_112360172_p08dlh0q.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "ابراز نگرانی سازمان ملل از افزایش کشتار غیر نظامیان در افغانستان",
-              "copyrightHolder": "BBC",
-              "type": "image"
-            },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "section": {
-              "subType": "IDX",
-              "name": "صفحه افغانستان",
-              "uri": "/persian/afghanistan",
-              "type": "simple"
-            },
-            "id": "urn:bbc:ares::asset:persian/afghanistan-52726383",
-            "type": "cps"
-          },
-          {
-            "headlines": {
-              "headline": "حمله انتحاری طالبان به دفتر امنیت ملی درغزنی"
-            },
-            "locators": {
-              "assetUri": "/persian/afghanistan-52710877",
-              "cpsUrn": "urn:bbc:content:assetUri:persian/afghanistan-52710877",
-              "assetId": "52710877"
-            },
-            "summary": "مقام‌های محلی غزنی گفته‌اند در حمله صبح امروز طالبان در شهر غزنی در جنوب افغانستان هفت نفر کشته و چهل نفر زخمی شده‌اند.",
-            "timestamp": 1589809474000,
-            "language": "fa",
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e2939461b000e9dabf8",
-                  "campaignName": "WS - Educate me"
-                }
-              ],
-              "taggings": []
-            },
-            "cpsType": "MAP",
-            "media": {
-              "id": "p08dhmb7",
-              "subType": "clip",
-              "format": "video",
-              "title": "حمله انتحاری طالبان به دفتر امنیت ملی درغزنی",
-              "synopses": {
-                "short": "حمله انتحاری طالبان به دفتر امنیت ملی درغزنی",
-                "long": "مقام‌های محلی غزنی گفته‌اند در حمله صبح امروز طالبان در شهر غزنی در جنوب افغانستان هفت نفر کشته و چهل نفر زخمی شده‌اند.\nوحیدالله جمعه زاده، سخنگوی والی غزنی گفته حمله‌کننده قطعه واحد 703 امنیت ملی را هدف قرار داده.\nگروه طالبان مسؤولیت حمله را به دوش گرفته.\nدر همین حال امروز مقام‌های امنیتی افغانستان از آغاز عملیات‌های تهاجمی نیروهای امنیتی علیه طالبان خبر داده‌اند.روئین رهنوش از کابل گزارش میدهد",
-                "medium": "مقام‌های محلی غزنی گفته‌اند در حمله صبح امروز طالبان در شهر غزنی در جنوب افغانستان هفت نفر کشته و چهل نفر زخمی شده‌اند."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08dhqgn.jpg",
-              "embedding": true,
-              "advertising": true,
-              "caption": "حمله انتحاری طالبان به دفتر امنیت ملی درغزنی",
-              "versions": [
-                {
-                  "versionId": "p08dhmb9",
-                  "types": [
-                    "Original"
-                  ],
-                  "duration": 132,
-                  "durationISO8601": "PT2M12S",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1589807661000
-                }
-              ],
-              "imageCopyright": "BBC",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "112338909",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/16367/production/_112338909_p08dhqgn.jpg",
-              "path": "/cpsprodpb/16367/production/_112338909_p08dhqgn.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "حمله انتحاری طالبان به دفتر امنیت ملی درغزنی",
-              "copyrightHolder": "Getty Images",
-              "type": "image"
-            },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "section": {
-              "subType": "IDX",
-              "name": "صفحه افغانستان",
-              "uri": "/persian/afghanistan",
-              "type": "simple"
-            },
-            "id": "urn:bbc:ares::asset:persian/afghanistan-52710877",
-            "type": "cps"
-          },
-          {
-            "headlines": {
-              "headline": "توافقنامه‌ای پایان بخش اختلافات چند ماهه غنی و عبدالله"
-            },
-            "locators": {
-              "assetUri": "/persian/afghanistan-52699256",
-              "cpsUrn": "urn:bbc:content:assetUri:persian/afghanistan-52699256",
-              "assetId": "52699256"
-            },
-            "summary": "در افغانستان عبدالله عبدالله با امضای یک توافق از ادعای خود به عنوان رییس جمهوری گذشت و اشرف غنی را به عنوان رییس دولت پذیرفت.",
-            "timestamp": 1589738409000,
-            "language": "fa",
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e2939461b000e9dabf8",
-                  "campaignName": "WS - Educate me"
-                }
-              ],
-              "taggings": []
-            },
-            "cpsType": "MAP",
-            "media": {
-              "id": "p08dg1t2",
-              "subType": "clip",
-              "format": "video",
-              "title": "توافقنامه‌ای پایان بخش اختلافات چند ماهه غنی و عبدالله",
-              "synopses": {
-                "short": "توافقنامه‌ای پایان بخش اختلافات چند ماهه غنی و عبدالله",
-                "long": "در افغانستان عبدالله عبدالله با امضای یک توافق از ادعای خود به عنوان رییس جمهوری گذشت و اشرف غنی را به عنوان رییس دولت پذیرفت. به این ترتیب زمینه خروج از بحرانی پنج ماهه فراهم شده، بحرانی سیاسی که با اعلام پیروزی دو نامزد انتخابات ریاست جمهوری،  اشرف غنی و عبدالله عبدالله بروز کرد. بر اساس این توافق آقای عبدالله در راس یک نهاد تازه تاسیس به نام شورای عالی مصالحه ملی قرار میگرد و اعضای تیم او نیمی از دولت به رهبری اشرف غنی را تشکیل می دهند. عبدالرشید دوستم، حامی عبدالله عبدالله در انتخابات هم به رتبه مارشالی ارتقا پیدا می کند، عالی ترین درجه نظامی در افغانستان. علی حسینی گزارش می‌دهد",
-                "medium": "در افغانستان عبدالله عبدالله با امضای یک توافق از ادعای خود به عنوان رییس جمهوری گذشت و اشرف غنی را به عنوان رییس دولت پذیرفت."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08dg29q.jpg",
-              "embedding": true,
-              "advertising": true,
-              "caption": "توافقنامه‌ای پایان بخش اختلافات چند ماهه غنی و عبدالله",
-              "versions": [
-                {
-                  "versionId": "p08dg1t5",
-                  "types": [
-                    "Original"
-                  ],
-                  "duration": 374,
-                  "durationISO8601": "PT6M14S",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1589737498000
-                }
-              ],
-              "imageCopyright": "BBC",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "112330092",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/714B/production/_112330092_p08dg29q.jpg",
-              "path": "/cpsprodpb/714B/production/_112330092_p08dg29q.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "توافقنامه‌ای پایان بخش اختلافات چند ماهه غنی و عبدالله",
-              "copyrightHolder": "AFP",
-              "type": "image"
-            },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "section": {
-              "subType": "IDX",
-              "name": "صفحه افغانستان",
-              "uri": "/persian/afghanistan",
-              "type": "simple"
-            },
-            "id": "urn:bbc:ares::asset:persian/afghanistan-52699256",
-            "type": "cps"
-          },
-          {
-            "headlines": {
-              "headline": "واکنش‌ها به حملات اخیر افغانستان؛ دعوت به همکاری طالبان با دولت"
-            },
-            "locators": {
-              "assetUri": "/persian/afghanistan-52651714",
-              "cpsUrn": "urn:bbc:content:assetUri:persian/afghanistan-52651714",
-              "assetId": "52651714"
-            },
-            "summary": "وزارت صحت افغانستان اعلام کرده که شمار قربانیان حمله به بیمارستان کابل به ۲۴ نفر رسیده‌است.",
-            "timestamp": 1589379876000,
-            "language": "fa",
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e2939461b000e9dabf8",
-                  "campaignName": "WS - Educate me"
-                }
-              ],
-              "taggings": []
-            },
-            "cpsType": "MAP",
-            "media": {
-              "id": "p08d2184",
-              "subType": "clip",
-              "format": "video",
-              "title": "واکنش‌ها به حملات اخیر افغانستان؛ دعوت به همکاری طالبان با دولت",
-              "synopses": {
-                "short": "واکنش‌ها به حملات اخیر افغانستان؛ دعوت به همکاری طالبان با دولت",
-                "long": "وزارت صحت افغانستان اعلام کرده که شمار قربانیان حمله به بیمارستان کابل به ۲۴ نفر رسیده. بیشتر قربانیان، مادر و نوزاد هستند. زایشگاه صد تخت خوابی دشت برچی در غرب کابل دیروز هدف حمله افراد مسلح قرار گرفت. هنوز هیچ گروهی مسئولیت آن‌را برعهده نگرفته. طالبان محکوم کرده، اما دولت این گروه را مسئول حمله معرفی کرده. علی حسینی از کابل گزارش می‌دهد.",
-                "medium": "وزارت صحت افغانستان اعلام کرده که شمار قربانیان حمله به بیمارستان کابل به ۲۴ نفر رسیده."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08d21ll.jpg",
-              "embedding": true,
-              "advertising": true,
-              "caption": "واکنش‌ها به حملات اخیر افغانستان؛ دعوت به همکاری طالبان با دولت",
-              "versions": [
-                {
-                  "versionId": "p08d2186",
-                  "types": [
-                    "Original"
-                  ],
-                  "duration": 201,
-                  "durationISO8601": "PT3M21S",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1589379231000
-                }
-              ],
-              "imageCopyright": "BBC",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "112257850",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/16F3/production/_112257850_p08d21ll.jpg",
-              "path": "/cpsprodpb/16F3/production/_112257850_p08d21ll.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "واکنش‌ها به حملات اخیر افغانستان؛ دعوت به همکاری طالبان با دولت",
-              "copyrightHolder": "BBC",
-              "type": "image"
-            },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "section": {
-              "subType": "IDX",
-              "name": "صفحه افغانستان",
-              "uri": "/persian/afghanistan",
-              "type": "simple"
-            },
-            "id": "urn:bbc:ares::asset:persian/afghanistan-52651714",
-            "type": "cps"
-          },
-          {
-            "headlines": {
-              "headline": "روایت بازماندگان از حادثه مرزی ایران و افغانستان"
-            },
-            "locators": {
-              "assetUri": "/persian/afghanistan-52640314",
-              "cpsUrn": "urn:bbc:content:assetUri:persian/afghanistan-52640314",
-              "assetId": "52640314"
-            },
-            "summary": "سخنگوی وزارت خارجه ایران، دست داشتن نیروی انتظامی در مرگ شهروندان افغانستان در مرز دو کشور را تکذیب کرده‌است.",
-            "timestamp": 1589308145000,
-            "language": "fa",
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e2939461b000e9dabf8",
-                  "campaignName": "WS - Educate me"
-                }
-              ],
-              "taggings": []
-            },
-            "cpsType": "MAP",
-            "media": {
-              "id": "p08czkdz",
-              "subType": "clip",
-              "format": "video",
-              "title": "روایت بازماندگان از حادثه مرزی ایران و افغانستان",
-              "synopses": {
-                "short": "روایت بازماندگان از حادثه مرزی ایران و افغانستان",
-                "long": "سخنگوی وزارت خارجه ایران، دست داشتن نیروی انتظامی در مرگ شهروندان افغانستان در مرز دو کشور را تکذیب کرده. پیش‌تر گزارش شده بود ‌که مرزبانان ایران، مهاجران افغان را دستگیر کرده‌اند و به رودخانه هریرود انداخته‌اند. علی همدانی در گزارشش می گوید جان به در بردگان این حادثه و خانواده قربانیان، دولت ایران را به دروغگویی متهم می کنند و روایت متفاوتی از آن‌چه بر سر این مسافران آمده، ارائه می‌دهند.",
-                "medium": "سخنگوی وزارت خارجه ایران، دست داشتن نیروی انتظامی در مرگ شهروندان افغانستان در مرز دو کشور را تکذیب کرده."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08czkfz.jpg",
-              "embedding": true,
-              "advertising": true,
-              "caption": "روایت بازماندگان از حادثه مرزی ایران و افغانستان",
-              "versions": [
-                {
-                  "versionId": "p08czkf1",
-                  "types": [
-                    "Original"
-                  ],
-                  "duration": 288,
-                  "durationISO8601": "PT4M48S",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1589306844000
-                }
-              ],
-              "imageCopyright": "BBC",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "112248702",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/5130/production/_112248702_p08czkfz.jpg",
-              "path": "/cpsprodpb/5130/production/_112248702_p08czkfz.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "روایت بازماندگان از حادثه مرزی ایران و افغانستان",
-              "copyrightHolder": "BBC",
-              "type": "image"
-            },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "section": {
-              "subType": "IDX",
-              "name": "صفحه افغانستان",
-              "uri": "/persian/afghanistan",
-              "type": "simple"
-            },
-            "id": "urn:bbc:ares::asset:persian/afghanistan-52640314",
-            "type": "cps"
-          }
-        ],
-        "strapline": {
-          "name": "ویدیو و صدا"
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "صفحه افغانستان",
+          "uri": "/persian/afghanistan",
+          "urlIdentifier": "/persian/afghanistan",
+          "type": "simple"
         },
-        "semanticGroupName": "Watch/Listen"
-      },
-      {
-        "type": "feature-main",
-        "title": "Features",
-        "items": [
-          {
-            "headlines": {
-              "headline": "پشت پرده توافق غنی و عبدالله؛ مارشال شدن دوستم و ماجراهای دیگر"
-            },
-            "locators": {
-              "assetUri": "/persian/afghanistan-52722865",
-              "cpsUrn": "urn:bbc:content:assetUri:persian/afghanistan-52722865",
-              "assetId": "52722865"
-            },
-            "summary": "چانه‌زنی برای دست‌یابی به یک توافق سیاسی بین اشرف غنی، رئیس جمهوری و عبدالله عبدالله که همزمان با او اعلام ریاست جمهوری کرده بود، از اوایل اسفند/حوت سال گذشته خورشیدی آغاز شد و حدود سه ماه زمان گرفت. مذاکراتی که پشت درهای بسته برگزار می‌شد به قول منابعی که با آنها صحبت کرده‌ام بارها به بن‌بست رسید و جلسات بارها با عصبانیت یکی از دو طرف مذاکره بی‌نتیجه پایان یافت.",
-            "timestamp": 1589973344000,
-            "language": "fa",
-            "byline": {
-              "name": "ارشاد هنریار",
-              "title": "بی‌بی‌سی ",
-              "persons": [
-                {
-                  "name": "ارشاد هنریار",
-                  "function": "بی‌بی‌سی"
-                }
-              ]
-            },
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
-                "categoryName": "Explainer"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e2139461b000e9dabf7",
-                  "campaignName": "WS - Inspire me"
-                }
-              ],
-              "taggings": []
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "112371690",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/2591/production/_112371690_ghaniabdullahdostum.jpg",
-              "path": "/cpsprodpb/2591/production/_112371690_ghaniabdullahdostum.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "تلاش‌ها برای مارشال ‌شدن دوستم از سال‌ها پیش آغاز شده بود. اطرافیان آقای دوستم برای این کار حتا امضای شماری نمایندگان دور شانزدهم مجلس را جمع آوری کرده بود",
-              "caption": "تلاش‌ها برای مارشال ‌شدن دوستم از سال‌ها پیش آغاز شده بود. اطرافیان آقای دوستم برای این کار حتا امضای شماری نمایندگان دور شانزدهم مجلس را جمع آوری کرده بود",
-              "copyrightHolder": "BBC",
-              "type": "image"
-            },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "section": {
-              "subType": "IDX",
-              "name": "صفحه افغانستان",
-              "uri": "/persian/afghanistan",
-              "type": "simple"
-            },
-            "id": "urn:bbc:ares::asset:persian/afghanistan-52722865",
-            "type": "cps"
-          },
-          {
-            "headlines": {
-              "headline": "کرونا گردشگران را در افغانستان زمین‌گیر کرد"
-            },
-            "locators": {
-              "assetUri": "/persian/afghanistan-52697976",
-              "cpsUrn": "urn:bbc:content:assetUri:persian/afghanistan-52697976",
-              "assetId": "52697976"
-            },
-            "summary": "شیوع ویروس کرونا در افغانستان گردشگری را در این کشور با رکود مواجه کرده و اماکن توریستی از شرق تا غرب و از شمال تا جنوب بر روی گردشگران بسته شده است. از صنعت توریزم که هم دولت نفع می‌برد و هم مردم، حالا با رکود بی‌سابقه مواجه شده است.",
-            "timestamp": 1589897702000,
-            "language": "fa",
-            "byline": {
-              "name": "نصیر بهزاد",
-              "title": "بی‌بی‌سی",
-              "persons": [
-                {
-                  "name": "نصیر بهزاد",
-                  "function": "بي بي سي"
-                }
-              ]
-            },
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-                "categoryName": "Feature"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e2139461b000e9dabf7",
-                  "campaignName": "WS - Inspire me"
-                }
-              ],
-              "taggings": []
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "112327258",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/14D18/production/_112327258_52697976.jpg",
-              "path": "/cpsprodpb/14D18/production/_112327258_52697976.jpg",
-              "height": 576,
-              "width": 1024,
-              "altText": "بامیان به دلیل داشتن آب و هوایی مطلوب جذابیت زیادی برای گردشگران دارد",
-              "caption": "بامیان به دلیل داشتن آب و هوایی مطلوب جذابیت زیادی برای گردشگران دارد",
-              "copyrightHolder": "Getty Images",
-              "type": "image"
-            },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "section": {
-              "subType": "IDX",
-              "name": "صفحه افغانستان",
-              "uri": "/persian/afghanistan",
-              "type": "simple"
-            },
-            "id": "urn:bbc:ares::asset:persian/afghanistan-52697976",
-            "type": "cps"
-          },
-          {
-            "headlines": {
-              "headline": "توافقنامه غنی و عبدالله؛ آخرین میخ بر تابوت دموکراسی افغانستان؟",
-              "overtyped": "ناظران می‌گویند؛ توافقنامه غنی و عبدالله؛ آخرین میخ بر تابوت دموکراسی افغانستان؟"
-            },
-            "locators": {
-              "assetUri": "/persian/blog-viewpoints-52616632",
-              "cpsUrn": "urn:bbc:content:assetUri:persian/blog-viewpoints-52616632",
-              "assetId": "52616632"
-            },
-            "summary": "سانگه صدیقی، فعال سیاسی و مدنی در مطلبی برای صفحه ناظران بی‌بی‌سی فارسی به توافق‌نامه بین محمد اشرف غنی و عبدالله پرداخته است و آن را \"زوال دموکراسی\" خوانده است.",
-            "timestamp": 1589815822000,
-            "language": "fa",
-            "byline": {
-              "name": " سانگه صدیقی",
-              "title": "فعال مدنی و سیاسی",
-              "persons": [
-                {
-                  "name": ". .",
-                  "function": "."
-                }
-              ]
-            },
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Opinion",
-                "categoryName": "Opinion"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e3739461b000e9dabfa",
-                  "campaignName": "WS - Give me perspective"
-                }
-              ],
-              "taggings": []
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "112337757",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/127FD/production/_112337757_mediaitem112337756.jpg",
-              "path": "/cpsprodpb/127FD/production/_112337757_mediaitem112337756.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "ykd",
-              "caption": "غنی",
-              "copyrightHolder": "Arg",
-              "type": "image"
-            },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "id": "urn:bbc:ares::asset:persian/blog-viewpoints-52616632",
-            "type": "cps"
-          },
-          {
-            "headlines": {
-              "headline": "توافق‌نامه غنی و عبدالله؛ اختلاف چه بود و چگونه حل شد؟"
-            },
-            "locators": {
-              "assetUri": "/persian/afghanistan-52700014",
-              "cpsUrn": "urn:bbc:content:assetUri:persian/afghanistan-52700014",
-              "assetId": "52700014"
-            },
-            "summary": "محمد اشرف غنی، رئیس جمهور افغانستان موافقت‌نامه‌ای با عبدالله عبدالله، رئیس اجرایی پیشین امضا کرده است. با امضای این موافقت‌نامه میان دو رقیب سیاسی، جنجال پس از اعلام نتیجه انتخابات اخیر افغانستان پس از نزدیک به پنج ماه پایان یافت. اختلاف بین این دو رهبر چه بود و چگونه حل شد؟",
-            "timestamp": 1589729155000,
-            "language": "fa",
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
-                "categoryName": "Explainer"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e2939461b000e9dabf8",
-                  "campaignName": "WS - Educate me"
-                }
-              ],
-              "taggings": []
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "112326493",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/9A26/production/_112326493_da218544-95c0-487b-8222-6cd0d67358f7.jpg",
-              "path": "/cpsprodpb/9A26/production/_112326493_da218544-95c0-487b-8222-6cd0d67358f7.jpg",
-              "height": 351,
-              "width": 624,
-              "altText": "غنی؛عبدالله",
-              "copyrightHolder": "ARG",
-              "type": "image"
-            },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "section": {
-              "subType": "IDX",
-              "name": "صفحه افغانستان",
-              "uri": "/persian/afghanistan",
-              "type": "simple"
-            },
-            "id": "urn:bbc:ares::asset:persian/afghanistan-52700014",
-            "type": "cps"
-          },
-          {
-            "headlines": {
-              "headline": "ناظران می‌گویند: 'آرمان ایران، داشتن نفوذ شبیه عراق در افغانستان نیست'",
-              "overtyped": "'آرمان ایران، داشتن نفوذ شبیه عراق در افغانستان نیست'"
-            },
-            "locators": {
-              "assetUri": "/persian/blog-viewpoints-52692067",
-              "cpsUrn": "urn:bbc:content:assetUri:persian/blog-viewpoints-52692067",
-              "assetId": "52692067"
-            },
-            "summary": "نویسنده در این یادداشت که برای صفحه ناظران فرستاده، می‌گوید که \"آرمان ایران، داشتنِ نفوذ شبیه به عراق در افغانستان نیست\" اما دارای منافع در افغانستان است از جمله صادرات و روابط تجاری و گاهی دشمن مشترک مانند داعش.",
-            "timestamp": 1589642417000,
-            "language": "fa",
-            "byline": {
-              "name": "محمدعمر کمال",
-              "title": "تحلیلگر روابط بین‌الملل در کابل ",
-              "persons": [
-                {
-                  "name": "آصف حسینی",
-                  "function": "پژوهش‌کر مطالعات صلح و منازعه"
-                }
-              ]
-            },
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Opinion",
-                "categoryName": "Opinion"
-              },
-              "taggings": []
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "112314837",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/12071/production/_112314837_c8f29fc99996dfa78f964234a3f76283_xl.jpg",
-              "path": "/cpsprodpb/12071/production/_112314837_c8f29fc99996dfa78f964234a3f76283_xl.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "ظریف و اتمر",
-              "caption": "جواد ظریف و محمدحنیف اتمر، وزیران خارجه ایران و افغانستان",
-              "copyrightHolder": "Alamy",
-              "type": "image"
-            },
-            "imageThumbnail": {
-              "id": "112314838",
-              "subType": "index-thumbnail",
-              "href": "http://c.files.bbci.co.uk/14781/production/_112314838_c8f29fc99996dfa78f964234a3f76283_xl.jpg",
-              "path": "/cpsprodpb/14781/production/_112314838_c8f29fc99996dfa78f964234a3f76283_xl.jpg",
-              "height": 180,
-              "width": 320,
-              "altText": "ظریف و اتمر",
-              "caption": "جواد ظریف و محمدحنیف اتمر، وزیران خارجه ایران و افغانستان",
-              "copyrightHolder": "Alamy",
-              "type": "image"
-            },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "includeComments": true,
-            "id": "urn:bbc:ares::asset:persian/blog-viewpoints-52692067",
-            "type": "cps"
-          }
-        ],
-        "strapline": {
-          "name": "تحلیل و گزارش"
+        "site": {
+          "subType": "site",
+          "name": "BBC Persian",
+          "uri": "/persian",
+          "urlIdentifier": "/persian",
+          "type": "simple"
         },
-        "semanticGroupName": "Features"
+        "groups": []
       }
-    ]
-  },
-  "promo": {
-    "subType": "IDX",
-    "name": "صفحه افغانستان",
-    "uri": "/persian/afghanistan",
-    "id": "urn:bbc:ares::index:persian/afghanistan/desktop/domestic",
-    "type": "simple"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "صفحه افغانستان",
-      "uri": "/persian/afghanistan",
-      "type": "simple"
     },
-    "site": {
-      "subType": "site",
-      "name": "BBC Persian",
-      "uri": "/persian",
-      "type": "simple"
-    },
-    "groups": []
-  }
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": {
+        "generated": "2023-07-24T10:32:27.834Z",
+        "lastRecordTimeStamp": "2023-07-24T10:29:00Z",
+        "firstRecordTimeStamp": "2023-07-24T10:14:00Z",
+        "items": [
+          {
+            "id": "urn:bbc:optimo:asset:ckdnj50k8pyo",
+            "rank": 1,
+            "title": "خالق باربی: چرا بعضی مردها تصور عروسکی زنانه را نمی‌پسندیدند",
+            "href": "https://www.bbc.com/persian/articles/ckdnj50k8pyo",
+            "timestamp": 1690178431296
+          },
+          {
+            "id": "urn:bbc:optimo:asset:c72rq9d44ggo",
+            "rank": 2,
+            "title": "حمله افراد «مسلح» و با «لباس سپاه» به گردشگران در منطقه ییلاقی اوپرت: «سوم محرم، آمدید تفریح؟»",
+            "href": "https://www.bbc.com/persian/articles/c72rq9d44ggo",
+            "timestamp": 1690127886722
+          },
+          {
+            "id": "urn:bbc:optimo:asset:c97pld3q4gro",
+            "rank": 3,
+            "title": "اصلاحات قضایی اسرائیل؛ نتانیاهو پیش از رای‌گیری کلیدی پارلمان بیمارستان را ترک کرد",
+            "href": "https://www.bbc.com/persian/articles/c97pld3q4gro",
+            "timestamp": 1690191796485
+          },
+          {
+            "id": "urn:bbc:optimo:asset:c4n5mzgk871o",
+            "rank": 4,
+            "title": "از لوگوی جدید توییتر رونمایی شد",
+            "href": "https://www.bbc.com/persian/articles/c4n5mzgk871o",
+            "timestamp": 1690194595328
+          },
+          {
+            "id": "urn:bbc:optimo:asset:c6pv6n8j2zjo",
+            "rank": 5,
+            "title": "روسیه، اوکراین را به «حمله پهپادی» به مسکو متهم کرد",
+            "href": "https://www.bbc.com/persian/articles/c6pv6n8j2zjo",
+            "timestamp": 1690176020084
+          },
+          {
+            "id": "urn:bbc:optimo:asset:cl7njq8g5y0o",
+            "rank": 6,
+            "title": "۱۱ کشته در ریزش سقف سالن ورزشی در چین هنگام تمرین تیم والیبال دختران",
+            "href": "https://www.bbc.com/persian/articles/cl7njq8g5y0o",
+            "timestamp": 1690177160222
+          },
+          {
+            "id": "urn:bbc:optimo:asset:c89re8wz9y4o",
+            "rank": 7,
+            "title": "بلینکن: در شرایطی نیستیم که درباره بازگشت به برجام مذاکره کنیم",
+            "href": "https://www.bbc.com/persian/articles/c89re8wz9y4o",
+            "timestamp": 1690149507797
+          },
+          {
+            "id": "urn:bbc:optimo:asset:c3gdngql0p3o",
+            "rank": 8,
+            "title": "اوپنهایمر؛ روایتگر «ویرانگر دنیاها» و داستان ساخت اولین بمب اتمی  ",
+            "href": "https://www.bbc.com/persian/articles/c3gdngql0p3o",
+            "timestamp": 1690119814341
+          },
+          {
+            "id": "537ecc45-e9c2-4fd3-b7fe-dbbf6686b7d7",
+            "rank": 9,
+            "title": "«ویرانگر دنیاها»؛ رابرت اوپنهایمر واقعی که بود؟",
+            "href": "/persian/world-features-66255722",
+            "timestamp": 1690108249000
+          },
+          {
+            "id": "urn:bbc:optimo:asset:cw915nrp4e9o",
+            "rank": 10,
+            "title": "انتخابات اسپانیا؛ محافظه‌کاران پیشتاز ولی فاقد اکثریت پارلمانی",
+            "href": "https://www.bbc.com/persian/articles/cw915nrp4e9o",
+            "timestamp": 1690167307580
+          },
+          {
+            "id": "urn:bbc:optimo:asset:cxekjgd4gklo",
+            "rank": 11,
+            "title": "«سالن زیبایی به ما کمک می‌کرد غم‌هایمان را پنهان کنیم»",
+            "href": "https://www.bbc.com/persian/articles/cxekjgd4gklo",
+            "timestamp": 1690021413357
+          },
+          {
+            "id": "urn:bbc:optimo:asset:clj5kkd6leno",
+            "rank": 12,
+            "title": "«رائفی‌پور»های نظام؛ از «شوخی‌های جنسی اهل بیت» تا «یوگی ودوستان» ",
+            "href": "https://www.bbc.com/persian/articles/clj5kkd6leno",
+            "timestamp": 1689870851807
+          },
+          {
+            "id": "urn:bbc:optimo:asset:cjl98p4r4lxo",
+            "rank": 13,
+            "title": "به دام انداختن مردانی که ویدئوی تعرض به زنان در مترو را می‌فروختند",
+            "href": "https://www.bbc.com/persian/articles/cjl98p4r4lxo",
+            "timestamp": 1689740592691
+          },
+          {
+            "id": "50a81dbf-58a0-42f3-a250-ef2dddc17767",
+            "rank": 14,
+            "title": "آیا ما هوش مصنوعی را پرستش خواهیم کرد؟",
+            "href": "/persian/world-features-66277953",
+            "timestamp": 1690095844000
+          },
+          {
+            "id": "9726a3f0-e690-47c7-b9de-3407d04c6659",
+            "rank": 15,
+            "title": "مردمانی که تا «سر‌حد مرگ رقصیدند»",
+            "href": "/persian/world-features-61771479",
+            "timestamp": 1689998629000
+          },
+          {
+            "id": "urn:bbc:optimo:asset:c72vnp2zn3xo",
+            "rank": 16,
+            "title": "بارندگی‌ و سیلاب ده‌ها کشته و تخریب صدها خانه‌ مسکونی  در میدان‌وردک به‌جا گذاشته است",
+            "href": "https://www.bbc.com/persian/articles/c72vnp2zn3xo",
+            "timestamp": 1690116246707
+          },
+          {
+            "id": "urn:bbc:optimo:asset:c1rzpx8jn1eo",
+            "rank": 17,
+            "title": "وزیر ارشاد اسلامی ایران یک جشنواره سینمایی را به بهانه عکس «بدون حجاب» سوسن تسلیمی در پوستر آن لغو کرد",
+            "href": "https://www.bbc.com/persian/articles/c1rzpx8jn1eo",
+            "timestamp": 1690112249203
+          },
+          {
+            "id": "6e84bac1-197c-40a7-8c92-9bb303d4adc1",
+            "rank": 18,
+            "title": "باربی: چطور کارزار تبلیغاتی فیلم آن را سر زبان‌ها انداخته",
+            "href": "/persian/world-features-66200514",
+            "timestamp": 1689340875000
+          },
+          {
+            "id": "urn:bbc:optimo:asset:c9wxrz13jnxo",
+            "rank": 19,
+            "title": "جلسه اضطراری رئیس‌جمهور و نخست‌وزیر اسرائیل در بیمارستان",
+            "href": "https://www.bbc.com/persian/articles/c9wxrz13jnxo",
+            "timestamp": 1690134315079
+          },
+          {
+            "id": "urn:bbc:optimo:asset:cd1w2zg3v65o",
+            "rank": 20,
+            "title": "شاعری که هفتاد سال بعد از نخستین غزل در ایستگاه حوادث پیاده شد",
+            "href": "https://www.bbc.com/persian/articles/cd1w2zg3v65o",
+            "timestamp": 1689935264730
+          }
+        ]
+      },
+      "mostWatched": null
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
 }

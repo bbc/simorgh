@@ -13,7 +13,6 @@ interface MostReadSectionLabelProps {
   linkText?: string;
   visuallyHidden?: boolean;
   overrideHeadingAs?: string;
-  headingAttributes?: { id: string; tabIndex: string };
 }
 
 const MostReadSectionLabel = ({
@@ -23,7 +22,6 @@ const MostReadSectionLabel = ({
   linkText,
   visuallyHidden,
   overrideHeadingAs,
-  headingAttributes,
 }: MostReadSectionLabelProps) => {
   const {
     service,
@@ -44,7 +42,6 @@ const MostReadSectionLabel = ({
       linkText={linkText}
       visuallyHidden={visuallyHidden}
       overrideHeadingAs={overrideHeadingAs}
-      headingAttributes={headingAttributes}
     >
       {header}
     </SectionLabel>
