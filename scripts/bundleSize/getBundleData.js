@@ -1,7 +1,9 @@
 import fs from 'fs';
 import { extractBundlesForPageType } from './pageTypeBundleExtractor.js';
-import services from './serviceList.js'
+import serviceConfigs from '#lib/config/services/loadableConfig.ts';
 import { pages } from './pages.js';
+
+const services = Object.keys(serviceConfigs);
 
 // need fake Cypress in global scope to require service configs:
 global.Cypress = { env: () => ({}) };

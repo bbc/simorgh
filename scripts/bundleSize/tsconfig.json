@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "baseUrl": "../../",
+    "target": "es6",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "jsx": "react",
+    "sourceMap": true,
+    "declaration": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "incremental": true,
+    "noFallthroughCasesInSwitch": true,
+    "paths": {
+      "#lib/*": ["src/app/lib/*"]
+    }
+  },
+  "include": ["../../src/app/lib/config/services/loadableConfig.ts", "/**/*"],
+  "exclude": ["node_modules", "build", "src/app/legacy/**/*"]
+}
