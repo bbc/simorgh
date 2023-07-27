@@ -7,6 +7,8 @@ export default {
   component: EmbedHtml,
 };
 
-export const DataPic = () => <EmbedHtml embedHtml={dataPicEmbedHtml} />;
+export const DataPic = () => <EmbedHtml embeddableContent={dataPicEmbedHtml} />;
 
-export const QuotePic = () => <EmbedHtml embedHtml={quotePicEmbedHtml} />;
+export const QuotePic = () => (
+  <EmbedHtml embeddableContent={quotePicEmbedHtml} />
+);

@@ -75,7 +75,7 @@ const BulletinContainer = ({ item, lazyLoadImage }) => {
 
   const headline = pathOr(null, ['name'], item);
   const ctaLink = pathOr(null, ['uri'], item);
-  const allyLink = ctaLink.split('/').pop();
+  const allyLink = ctaLink?.split('/').pop();
 
   if (!headline || !ctaLink) {
     return null;
