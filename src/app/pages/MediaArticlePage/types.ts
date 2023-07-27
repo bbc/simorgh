@@ -41,5 +41,5 @@ export type TimestampProps = {
 };
 
 export type EmbedHtmlProps = {
-  embedHtml: string;
+  embeddableContent: string;
 };
