@@ -1,4 +1,4 @@
-import { serviceNumerals } from '../../../../src/app/legacy/containers/MostRead/Canonical/Rank';
+import { serviceNumerals } from '../../../../src/app/components/MostRead/Canonical/Rank';
 import config from '../../../support/config/services';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import { getMostReadEndpoint } from '../../../../src/app/lib/utilities/getUrlHelpers/getMostReadUrls';
