@@ -17,6 +17,16 @@ export const crossPlatform = ({ service, variant }) => {
     if (hasMostRead) {
       describe('Most Read Component', () => {
         it(`should render ${numberOfItems} items`, () => {
+          const mostReadPath = getMostReadEndpoint({
+            service: serviceID,
+            variant: variant !== 'default' && variant,
+            isBff: getAppEnv() !== 'local',
+          });
+          cy.log(mostReadPath);
+          const bffUrl = `https://web-cdn.api.bbci.co.uk${mostReadPath}`;
+          cy.request(bffUrl).then(({ body: jsonData }) => {
+            cy.log(JSON.stringify(jsonData));
+          });
           cy.get('[data-e2e="most-read"]').scrollIntoView();
           cy.get('[data-e2e="most-read"] li').should(
             'have.length',

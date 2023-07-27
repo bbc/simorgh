@@ -3,7 +3,9 @@ import 'cypress-axe';
 import './commands';
 
 Cypress.Screenshot.defaults({
-  screenshotOnRunFailure: false,
+  screenshotOnRunFailure: true,
+  screenshotsFolder: 'cypress/screenshots',
+  trashAssetsBeforeRuns: true,
 });
 
 Cypress.on(`window:before:load`, win => {
