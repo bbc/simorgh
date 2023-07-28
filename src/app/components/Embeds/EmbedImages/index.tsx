@@ -2,6 +2,7 @@
 import { jsx } from '@emotion/react';
 import { PropsWithChildren, useContext } from 'react';
 import { RequestContext } from '#app/contexts/RequestContext';
+import styles from './index.styles';
 import Image from '../../Image';
 
 type Props = {
@@ -27,7 +28,11 @@ const EmbedImages = ({ blocks: embedImages }: PropsWithChildren<Props>) => {
 
   if (!locator || !alt || !width || !height) return null;
 
-  return <Image src={src} alt={alt} width={width} height={height} />;
+  return (
+    <div css={styles.embedDiv}>
+      <Image src={src} alt={alt} width={width} height={height} />
+    </div>
+  );
 };
 
 export default EmbedImages;
