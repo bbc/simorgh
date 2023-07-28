@@ -66,10 +66,7 @@ const Component = ({ pageData, service }) => (
             pageType={STORY_PAGE}
             bbcOrigin="https://www.test.bbc.com"
           >
-            <Page
-              pageData={pageData}
-              mostReadEndpointOverride="./data/mundo/mostRead/index.json"
-            />
+            <Page pageData={pageData} />
           </RequestContextProvider>
         </UserContextProvider>
       </ServiceContextProvider>
@@ -80,7 +77,6 @@ const Component = ({ pageData, service }) => (
 export default {
   Component,
   title: 'Pages/Story Page',
-  parameters: { chromatic: { disable: true } },
   decorators: [
     withKnobs,
     story => <WithTimeMachine>{story()}</WithTimeMachine>,

@@ -6,12 +6,12 @@ import IndexHeading from '#containers/IndexHeading';
 import IndexPageContainer from '#components/PageLayout/IndexPageContainer';
 import IndexPageSection from '#containers/IndexPageSection';
 import idxPageDataPropTypes from '#models/propTypes/idxPage';
-import ATIAnalytics from '#containers/ATIAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
 import useToggle from '#hooks/useToggle';
 import AdContainer from '#containers/Ad';
 import MPUContainer from '#containers/Ad/MPU';
+import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import MetadataContainer from '../../components/Metadata';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -41,7 +41,11 @@ const FeatureIdxPage = ({ pageData }) => {
       {/* dotcom and dotcomConfig need to be setup before the main dotcom javascript file is loaded */}
       {shouldBootstrapCanonicalAds && <CanonicalAdBootstrapJs />}
       <ATIAnalytics data={pageData} />
-      <ChartbeatAnalytics data={pageData} />
+      <ChartbeatAnalytics
+        sectionName={pageData?.relatedContent?.section?.name}
+        categoryName={pageData?.metadata?.passport?.category?.categoryName}
+        title={title}
+      />
       <ComscoreAnalytics />
       <MetadataContainer
         title={title}

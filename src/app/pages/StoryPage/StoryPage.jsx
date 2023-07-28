@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { node } from 'prop-types';
 import styled from '@emotion/styled';
 import {
   GEL_SPACING_DBL,
@@ -7,7 +6,6 @@ import {
   GEL_SPACING_QUAD,
   GEL_SPACING,
 } from '#psammead/gel-foundations/src/spacings';
-import SectionLabel from '#psammead/psammead-section-label/src';
 import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
@@ -19,7 +17,6 @@ import Grid, { GelPageGrid, GridItemLarge } from '#components/Grid';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
 import headings from '#containers/Headings';
-import Disclaimer from '#containers/Disclaimer';
 import Timestamp from '#containers/ArticleTimestamp';
 import text from '#containers/Text';
 import Image from '#containers/Image';
@@ -28,8 +25,6 @@ import Blocks from '#containers/Blocks';
 import CpsRelatedContent from '#containers/CpsRelatedContent';
 import TopStories from '#containers/CpsTopStories';
 import FeaturesAnalysis from '#containers/CpsFeaturesAnalysis';
-import MostReadContainer from '#containers/MostRead';
-import ATIAnalytics from '#containers/ATIAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import fauxHeadline from '#containers/FauxHeadline';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
@@ -51,26 +46,23 @@ import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
+import { GHOST } from '../../components/ThemeProvider/palette';
+import MostRead from '../../components/MostRead';
+import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import LinkedData from '../../components/LinkedData';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import categoryType from './categoryMap/index';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
+import Disclaimer from '../../components/Disclaimer';
+import styles from './StoryPage.styles';
 
 const MpuContainer = styled(AdContainer)`
   margin-bottom: ${GEL_SPACING_TRPL};
 `;
 
-const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
-  const {
-    dir,
-    mostRead: { header },
-    script,
-    service,
-    serviceLang,
-    lang,
-    showRelatedTopics,
-  } = useContext(ServiceContext);
+const StoryPage = ({ pageData }) => {
+  const { serviceLang, lang, showRelatedTopics } = useContext(ServiceContext);
 
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
   const title = path(['promo', 'headlines', 'headline'], pageData);
@@ -266,28 +258,6 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     }
   `;
 
-  const StyledSectionLabel = styled(SectionLabel)`
-    margin-top: 0;
-  `;
-
-  const MostReadWrapper = ({ children }) => (
-    <section role="region" aria-labelledby="Most-Read" data-e2e="most-read">
-      <StyledSectionLabel
-        script={script}
-        labelId="Most-Read"
-        service={service}
-        dir={dir}
-      >
-        {header}
-      </StyledSectionLabel>
-      {children}
-    </section>
-  );
-
-  MostReadWrapper.propTypes = {
-    children: node.isRequired,
-  };
-
   return (
     <>
       <CpsMetadata
@@ -314,7 +284,13 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
         imageLocator={indexImageLocator}
       />
       <ATIAnalytics data={pageData} />
-      <ChartbeatAnalytics data={pageData} />
+      <ChartbeatAnalytics
+        sectionName={pageData?.relatedContent?.section?.name}
+        categoryName={pageData?.metadata?.passport?.category?.categoryName}
+        title={title}
+        producer={pageData?.metadata?.analyticsLabels?.producer}
+        chapter={pageData?.metadata?.atiAnalytics?.chapter}
+      />
       <ComscoreAnalytics />
       <NielsenAnalytics />
       {/* dotcom and dotcomConfig need to be setup before the main dotcom javascript file is loaded */}
@@ -373,12 +349,13 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
             </ResponsiveComponentWrapper>
           )}
           <ComponentWrapper>
-            <MostReadContainer
-              mostReadEndpointOverride={mostReadEndpointOverride}
+            <MostRead
+              css={styles.mostReadSection}
+              data={mostReadInitialData}
               columnLayout="oneColumn"
               size="small"
-              wrapper={MostReadWrapper}
-              initialData={mostReadInitialData}
+              headingBackgroundColour={GHOST}
+              mobileDivider={showRelatedTopics && topics}
             />
           </ComponentWrapper>
         </GridSecondaryColumn>

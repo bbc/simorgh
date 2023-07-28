@@ -3,7 +3,6 @@
 import React, { useEffect } from 'react';
 import { Global } from '@emotion/react';
 import { addDecorator } from '@storybook/react';
-import { create } from '@storybook/theming';
 import isChromatic from 'chromatic';
 import { forceVisible } from 'react-lazyload';
 import GlobalStyles from '../src/app/legacy/psammead/psammead-styles/src/global-styles';
@@ -318,23 +317,12 @@ addDecorator(story => {
   );
 });
 
-const theme = create({
-  base: 'light',
-  brandTitle: 'BBC Simorgh',
-  brandUrl: 'https://github.com/bbc/simorgh',
-});
-
 export const globalTypes = {
   service: {
     name: 'service',
-    // Text that will be shown on icon hover
     description: 'Global service',
     defaultValue: { service: 'news', variant: 'default' },
     toolbar: {
-      /**
-       * You can check all available icons by this link:
-       * https://storybook.js.org/docs/riot/workflows/faq#what-icons-are-available-for-my-toolbar-or-my-addon
-       */
       icon: 'globe',
       items: [
         {
@@ -546,7 +534,6 @@ export const globalTypes = {
           title: 'ukrainian-ru-UA',
         },
       ],
-      // Should "Container size" be shown, or just the "circlehollow" icon
       dynamicTitle: true,
     },
   },
@@ -576,7 +563,6 @@ export const parameters = {
   options: {
     panelPosition: 'right',
     sidebarAnimcations: true,
-    theme,
   },
   docs: {
     container: ({ context, children }) => DocsDecorator({ context, children }),

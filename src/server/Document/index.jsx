@@ -17,6 +17,7 @@ const renderDocument = async ({
   bbcOrigin,
   data,
   isAmp,
+  isApp,
   routes,
   service,
   url,
@@ -67,6 +68,7 @@ const renderDocument = async ({
             context={context}
             service={service}
             isAmp={isAmp}
+            isApp={isApp}
           />
         </CacheProvider>
       </ChunkExtractorManager>,
@@ -99,6 +101,7 @@ const renderDocument = async ({
       data={data}
       helmet={headHelmet}
       isAmp={isAmp}
+      isApp={isApp}
     />,
   );
 

@@ -14,8 +14,8 @@ import {
   articleDataPidginWithByline,
 } from '#pages/ArticlePage/fixtureData';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import igboFrontPageData from '#data/igbo/frontpage/index.json';
-import somaliFrontPageData from '#data/somali/frontpage/index.json';
+import { data as serbianFrontPageData } from '#data/serbian/frontpage/lat.json';
+import { data as urduFrontPageData } from '#data/urdu/frontpage/index.json';
 import liveRadioPageData from '#data/korean/bbc_korean_radio/liveradio.json';
 import { getSummary } from '#lib/utilities/parseAssetData/index';
 import { Services, PageTypes } from '#app/models/types/global';
@@ -84,6 +84,7 @@ const MetadataWithContext = ({
       bbcOrigin={bbcOrigin}
       id={id}
       isAmp={platform === 'amp'}
+      isApp={false}
       pageType={pageType}
       pathname={pathname}
       service={service}
@@ -570,15 +571,15 @@ it('should render the twitter handle of the author', async () => {
 it('should render the default service twitter handle for a Front Page asset', async () => {
   render(
     <MetadataWithContext
-      service="somali"
+      service="serbian"
       bbcOrigin={dotComOrigin}
       platform="canonical"
       id={null}
       pageType={FRONT_PAGE}
-      pathname="/somali"
-      title="Somali"
-      lang={somaliFrontPageData.metadata.language}
-      description={somaliFrontPageData.metadata.summary}
+      pathname="/serbian"
+      title="Serbian"
+      lang={serbianFrontPageData.article.metadata.language}
+      description={serbianFrontPageData.article.metadata.summary}
       openGraphType="website"
     />,
   );
@@ -588,7 +589,7 @@ it('should render the default service twitter handle for a Front Page asset', as
       document
         .querySelector('meta[name="twitter:creator"]')
         ?.getAttribute('content'),
-    ).toEqual('@bbcsomali');
+    ).toEqual('@bbcnasrpskom');
   });
 });
 
@@ -866,15 +867,15 @@ describe('Snapshot', () => {
   it('should match for WS Frontpages', () => {
     render(
       <MetadataWithContext
-        service="igbo"
+        service="urdu"
         bbcOrigin={dotComOrigin}
         platform="canonical"
         id={null}
         pageType={FRONT_PAGE}
-        pathname="/igbo"
-        title="Ogbako"
-        lang={igboFrontPageData.metadata.language}
-        description={igboFrontPageData.metadata.summary}
+        pathname="/urdu"
+        title="خبریں، تازہ خبریں، بریکنگ نیو | News, latest news, breaking news"
+        lang={urduFrontPageData.article.metadata.language}
+        description={urduFrontPageData.article.metadata.summary}
         openGraphType="website"
       />,
     );

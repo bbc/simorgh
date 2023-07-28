@@ -11,11 +11,12 @@ import {
   articleDataPidgin,
   articleDataPidginWithAds,
   articleDataPidginWithByline,
+  promoSample,
   sampleRecommendations,
 } from '#pages/ArticlePage/fixtureData';
-import newsMostReadData from '#data/news/mostRead';
-import persianMostReadData from '#data/persian/mostRead';
-import pidginMostReadData from '#data/pidgin/mostRead';
+import newsMostReadData from '#data/news/mostRead/index.json';
+import { data as persianMostReadData } from '#data/persian/mostRead/index.json';
+import { data as pidginMostReadData } from '#data/pidgin/mostRead/index.json';
 import {
   textBlock,
   blockContainingText,
@@ -41,49 +42,61 @@ const recommendationSettings = {
   },
 };
 
+const input = {
+  bbcOrigin: 'https://www.test.bbc.co.uk',
+  id: 'c0000000000o',
+  isAmp: false,
+  pageType: ARTICLE_PAGE,
+  pathname: '/pathname',
+  statusCode: 200,
+};
+
 const Context = ({
   service = 'pidgin',
   children,
   adsToggledOn = false,
   mostReadToggledOn = true,
   showAdsBasedOnLocation = false,
-} = {}) => (
-  <BrowserRouter>
-    <ThemeProvider service={service} variant="default">
-      <ToggleContextProvider
-        toggles={{
-          mostRead: {
-            enabled: mostReadToggledOn,
-          },
-          ads: {
-            enabled: adsToggledOn,
-          },
-          cpsRecommendations: {
-            enabled: true,
-          },
-        }}
-      >
-        <RequestContextProvider
-          bbcOrigin="https://www.test.bbc.co.uk"
-          id="c0000000000o"
-          isAmp={false}
-          pageType={ARTICLE_PAGE}
-          pathname="/pathname"
-          service={service}
-          statusCode={200}
-          showAdsBasedOnLocation={showAdsBasedOnLocation}
+  isApp = false,
+  promo = null,
+} = {}) => {
+  const appInput = {
+    ...input,
+    service,
+    showAdsBasedOnLocation,
+    isApp,
+  };
+
+  return (
+    <BrowserRouter>
+      <ThemeProvider service={service} variant="default">
+        <ToggleContextProvider
+          toggles={{
+            mostRead: {
+              enabled: mostReadToggledOn,
+            },
+            ads: {
+              enabled: adsToggledOn,
+            },
+            cpsRecommendations: {
+              enabled: true,
+            },
+            podcastPromo: { enabled: promo != null },
+          }}
         >
-          <ServiceContextProvider
-            service={service}
-            recommendations={recommendationSettings}
-          >
-            {children}
-          </ServiceContextProvider>
-        </RequestContextProvider>
-      </ToggleContextProvider>
-    </ThemeProvider>
-  </BrowserRouter>
-);
+          <RequestContextProvider {...appInput}>
+            <ServiceContextProvider
+              service={service}
+              recommendations={recommendationSettings}
+            >
+              {children}
+            </ServiceContextProvider>
+          </RequestContextProvider>
+        </ToggleContextProvider>
+      </ThemeProvider>
+    </BrowserRouter>
+  );
+};
 
 beforeEach(() => {
   fetch.resetMocks();
@@ -264,11 +277,11 @@ it('should render a news article correctly', async () => {
 });
 
 it('should render a rtl article (persian) with most read correctly', async () => {
-  fetch.mockResponse(JSON.stringify(persianMostReadData));
-
   const { container } = render(
     <Context service="persian">
-      <ArticlePage pageData={articleDataPersian} />
+      <ArticlePage
+        pageData={{ ...articleDataPersian, mostRead: persianMostReadData }}
+      />
     </Context>,
   );
 
@@ -281,11 +294,11 @@ it('should render a rtl article (persian) with most read correctly', async () =>
 });
 
 it('should render a ltr article (pidgin) with most read correctly', async () => {
-  fetch.mockResponse(JSON.stringify(pidginMostReadData));
-
   const { container } = render(
     <Context service="pidgin">
-      <ArticlePage pageData={articleDataPidgin} />
+      <ArticlePage
+        pageData={{ ...articleDataPidgin, mostRead: pidginMostReadData }}
+      />
     </Context>,
   );
 
@@ -388,6 +401,40 @@ it('should render the top stories and features when passed', async () => {
   expect(getByTestId('features')).toBeInTheDocument();
 });
 
+it('should remove the top stories and features sections when isApp is set to true', async () => {
+  const pageDataWithSecondaryColumn = {
+    ...articleDataNews,
+    secondaryColumn: {
+      topStories: [],
+      features: [],
+    },
+  };
+
+  const { container } = render(
+    <Context service="news" isApp>
+      <ArticlePage pageData={pageDataWithSecondaryColumn} />
+    </Context>,
+  );
+
+  expect(container.querySelector(`div[data-testid="top-stories"]`)).toBeNull();
+  expect(container.querySelector(`div[data-testid="features"]`)).toBeNull();
+});
+
+it('should remove the most read section ', async () => {
+  fetch.mockResponse(JSON.stringify(pidginMostReadData));
+
+  const { container } = render(
+    <Context service="pidgin" isApp>
+      <ArticlePage pageData={articleDataPidgin} />
+    </Context>,
+  );
+
+  await waitFor(() => {
+    const mostReadSection = container.querySelector('#Most-Read');
+    expect(mostReadSection).toBeNull();
+  });
+});
+
 it('should show ads when enabled', async () => {
   [
     [true, true],
@@ -427,4 +474,18 @@ it('should render WSOJ recommendations when passed', async () => {
   );
 
   expect(getByText('SAMPLE RECOMMENDATION 1 - HEADLINE')).toBeInTheDocument();
+});
+
+it('should render PodcastPromos when passed', async () => {
+  const pageDataWithSecondaryColumn = {
+    ...articleDataNews,
+    promo: promoSample,
+  };
+  const { getByText } = render(
+    <Context service="russian" promo>
+      <ArticlePage pageData={pageDataWithSecondaryColumn} />
+    </Context>,
+  );
+
+  expect(getByText('Что это было?')).toBeInTheDocument();
 });

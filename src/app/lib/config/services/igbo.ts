@@ -257,7 +257,7 @@ export const service: DefaultServiceConfig = {
     mostRead: {
       header: 'Akachasị Gụọ',
       lastUpdated: 'Emelitere ikpeazụ na:',
-      numberOfItems: 10,
+      numberOfItems: 5,
       hasMostRead: true,
     },
     mostWatched: {
@@ -295,24 +295,24 @@ export const service: DefaultServiceConfig = {
         text: 'Ihe mere ị ga-eji nwee ntụkwasiobi na BBC News',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/feeds-and-links',
         text: 'Usoro anyị maka njikọ dị na mpụga.',
       },
       links: [
         {
-          href: 'https://www.bbc.co.uk/usingthebbc/terms',
+          href: 'https://www.bbc.com/usingthebbc/terms',
           text: 'Usoro Ojiji',
         },
         {
-          href: 'https://www.bbc.co.uk/aboutthebbc',
+          href: 'https://www.bbc.com/aboutthebbc',
           text: 'Gbasara BBC',
         },
         {
-          href: 'https://www.bbc.co.uk/usingthebbc/privacy/',
+          href: 'https://www.bbc.com/usingthebbc/privacy/',
           text: 'Iwu Nzuzo',
         },
         {
-          href: 'https://www.bbc.co.uk/usingthebbc/cookies/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/',
           text: 'Kuki',
         },
         {

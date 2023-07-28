@@ -1,7 +1,8 @@
-import { runCommonCrossPlatformTests } from '../../common';
+import { runCommonCrossPlatformTests, runMostReadTests } from '../../common';
 
 export default service => {
   runCommonCrossPlatformTests(service);
+  runMostReadTests();
 
   it('I can see the headline', () => {
     const h1El = document.querySelector('h1');

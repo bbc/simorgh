@@ -6,7 +6,7 @@ import RelatedContentPromoList from './index';
 
 const promoItems = path(
   ['relatedContent', 'groups', 0, 'promos'],
-  pidginPageData,
+  pidginPageData.data.article,
 );
 
 describe('RelatedContentPromoList', () => {

@@ -1,12 +1,13 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { getLocalMostReadEndpoint } from '#lib/utilities/getUrlHelpers/getMostReadUrls';
-import pidginMostReadData from '#data/pidgin/mostRead';
-import zhongwenSimpData from '#data/zhongwen/mostRead/simp.json';
+import { data as pidginMostReadData } from '../../../../data/pidgin/mostRead/index.json';
+import { data as zhongwenSimpData } from '../../../../data/zhongwen/mostRead/simp.json';
+import { data as japaneseMostReadData } from '../../../../data/japanese/mostRead/index.json';
+import { data as persianMostReadData } from '../../../../data/persian/mostRead/index.json';
+import { data as bengaliMostReadData } from '../../../../data/bengali/mostRead/index.json';
 import { MOST_READ_PAGE } from '#app/routes/utils/pageTypes';
 import MostReadPage from '.';
 
-// eslint-disable-next-line react/prop-types
 const Component = ({ service, pageData, variant } = {}) => (
   <BrowserRouter>
     <MostReadPage
@@ -17,10 +18,6 @@ const Component = ({ service, pageData, variant } = {}) => (
       pageData={pageData}
       service={service}
       variant={variant}
-      mostReadEndpointOverride={getLocalMostReadEndpoint({
-        service,
-        variant,
-      })}
     />
   </BrowserRouter>
 );
@@ -33,6 +30,19 @@ export default {
 export const Pidgin = () => (
   <Component service="pidgin" pageData={pidginMostReadData} />
 );
+
 export const ZhongwenSimple = () => (
   <Component service="zhongwen" variant="simp" pageData={zhongwenSimpData} />
+);
+
+export const Japanese = () => (
+  <Component service="japanese" pageData={japaneseMostReadData} />
+);
+
+export const Persian = () => (
+  <Component service="persian" pageData={persianMostReadData} />
+);
+
+export const Bengali = () => (
+  <Component service="bengali" pageData={bengaliMostReadData} />
 );

@@ -1,15 +1,14 @@
 import React from 'react';
 import { bool, element, string, number, object } from 'prop-types';
-import path from 'ramda/src/path';
 import variantPropType from '#models/propTypes/variants';
 import { pageDataPropType } from '#models/propTypes/data';
 import mvtExperimentPropType from '#models/propTypes/mvtExperiment';
 
 // context providers
-import { RequestContextProvider } from '#contexts/RequestContext';
-import { ToggleContextProvider } from '#contexts/ToggleContext';
-import { UserContextProvider } from '#contexts/UserContext';
-import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
+import { RequestContextProvider } from '../../../contexts/RequestContext';
+import { ToggleContextProvider } from '../../../contexts/ToggleContext';
+import { UserContextProvider } from '../../../contexts/UserContext';
+import { EventTrackingContextProvider } from '../../../contexts/EventTrackingContext';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 
 const WithContexts = Component => {
@@ -21,6 +20,7 @@ const WithContexts = Component => {
       id,
       service,
       isAmp,
+      isApp,
       pageType,
       pathname,
       previousPath,
@@ -32,18 +32,21 @@ const WithContexts = Component => {
       isNextJs,
     } = props;
 
+    const { metadata: { atiAnalytics } = {} } = pageData ?? {};
+
     return (
       <ToggleContextProvider toggles={toggles}>
         <ServiceContextProvider
           service={service}
           variant={variant}
-          pageLang={path(['metadata', 'language'], pageData)}
+          pageLang={pageData?.metadata?.language}
         >
           <RequestContextProvider
             bbcOrigin={bbcOrigin}
-            derivedPageType={path(['metadata', 'type'], pageData)}
+            derivedPageType={pageData?.metadata?.type}
             id={id}
             isAmp={isAmp}
+            isApp={isApp}
             pageType={pageType}
             service={service}
             statusCode={status}
@@ -55,7 +58,10 @@ const WithContexts = Component => {
             mvtExperiments={mvtExperiments}
             isNextJs={isNextJs}
           >
-            <EventTrackingContextProvider pageData={pageData}>
+            <EventTrackingContextProvider
+              atiData={atiAnalytics}
+              data={pageData}
+            >
               <UserContextProvider>
                 <Component {...props} />
               </UserContextProvider>
@@ -72,6 +78,7 @@ const WithContexts = Component => {
     status: number,
     id: string,
     isAmp: bool.isRequired,
+    isApp: bool.isRequired,
     pageData: pageDataPropType,
     pageType: string.isRequired,
     pathname: string.isRequired,

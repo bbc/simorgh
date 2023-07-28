@@ -13,7 +13,7 @@ import BulletinContainer from '../Bulletin';
 import StoryPromoContainer from '../StoryPromo';
 
 const isBulletin = item =>
-  item.contentType === 'TVBulletin' || item.contentType === 'RadioBulletin';
+  item?.contentType === 'TVBulletin' || item?.contentType === 'RadioBulletin';
 
 const renderPromo = ({
   item,

@@ -278,7 +278,7 @@ export const service: DefaultServiceConfig = {
     mostRead: {
       header: 'Paling banyak dibaca',
       lastUpdated: 'Terakhir diperbarui:',
-      numberOfItems: 10,
+      numberOfItems: 5,
       hasMostRead: true,
     },
     mostWatched: {
@@ -321,7 +321,7 @@ export const service: DefaultServiceConfig = {
           text: 'Kebijakan tentang Privasi',
         },
         {
-          href: 'https://www.bbc.co.uk/usingthebbc/cookies/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/',
           text: 'Cookies',
         },
         {

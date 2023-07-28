@@ -2,10 +2,7 @@ import React from 'react';
 import pathOr from 'ramda/src/pathOr';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-
-import igboData from '#data/igbo/frontpage/index.json';
-import pidginData from '#data/pidgin/frontpage/index.json';
-import russianData from '#data/russian/frontpage/index.json';
+import { data as serbianData } from '#data/serbian/frontpage/lat.json';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
@@ -40,18 +37,14 @@ export default {
   parameters: { chromatic: { disable: true } },
 };
 
-export const Igbo = () => (
-  <Component service="igbo" data={igboData.content.groups[0]} />
-);
-
-export const Pidgin = () => (
-  <Component service="pidgin" data={pidginData.content.groups[0]} />
+export const Serbian = () => (
+  <Component service="serbian" data={serbianData.article.content.groups[0]} />
 );
 
 export const LinkToMore = () => (
   <Component
-    service="pidgin"
-    data={pidginData.content.groups.find(
+    service="serbian"
+    data={serbianData.article.content.groups.find(
       sec => pathOr(null, ['strapline', 'type'], sec) === 'LINK',
     )}
   />
@@ -59,29 +52,24 @@ export const LinkToMore = () => (
 
 export const UsefulLinks = () => (
   <Component
-    service="igbo"
-    data={russianData.content.groups.find(
+    service="serbian"
+    data={serbianData.article.content.groups.find(
       sec => pathOr(null, ['semanticGroupName'], sec) === 'Useful links',
     )}
   />
 );
 
 // Amp
-export const IgboAmp = () => (
-  <Component isAmp service="igbo" data={igboData.content.groups[0]} />
+export const SerbianAmp = () => (
+  <Component isAmp service="serbian" data={serbianData.article.content.groups[0]} />
 );
-IgboAmp.decorators = [AmpDecorator];
-
-export const PidginAmp = () => (
-  <Component isAmp service="pidgin" data={pidginData.content.groups[0]} />
-);
-PidginAmp.decorators = [AmpDecorator];
+SerbianAmp.decorators = [AmpDecorator];
 
 export const LinkToMoreAmp = () => (
   <Component
     isAmp
-    service="pidgin"
-    data={pidginData.content.groups.find(
+    service="serbian"
+    data={serbianData.article.content.groups.find(
       sec => pathOr(null, ['strapline', 'type'], sec) === 'LINK',
     )}
   />
@@ -91,8 +79,8 @@ LinkToMoreAmp.decorators = [AmpDecorator];
 export const UsefulLinksAmp = () => (
   <Component
     isAmp
-    service="igbo"
-    data={russianData.content.groups.find(
+    service="serbian"
+    data={serbianData.article.content.groups.find(
       sec => pathOr(null, ['semanticGroupName'], sec) === 'Useful links',
     )}
   />
