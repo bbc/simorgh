@@ -5,11 +5,8 @@ const styles = {
     css({
       paddingLeft: `${spacings.FULL}rem`,
       paddingRight: `${spacings.FULL}rem`,
-      paddingBottom: `${spacings.DOUBLE}rem`,
+      paddingBottom: `${spacings.TRIPLE}rem`,
 
-      [mq.GROUP_1_MIN_WIDTH]: {
-        paddingBottom: `${spacings.TRIPLE}rem`,
-      },
       [mq.GROUP_2_MIN_WIDTH]: {
         paddingLeft: `${spacings.DOUBLE}rem`,
         paddingRight: `${spacings.DOUBLE}rem`,
