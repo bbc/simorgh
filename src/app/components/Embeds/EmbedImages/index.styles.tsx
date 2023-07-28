@@ -3,7 +3,6 @@ import { css, Theme } from '@emotion/react';
 const styles = {
   embedDiv: ({ spacings, mq }: Theme) =>
     css({
-      maxWidth: '100%',
       paddingLeft: `${spacings.FULL}rem`,
       paddingRight: `${spacings.FULL}rem`,
       paddingBottom: `${spacings.TRIPLE}rem`,

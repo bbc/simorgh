@@ -1,26 +1,20 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import { PropsWithChildren, useContext } from 'react';
-// import { OptimoBlock } from '#app/models/types/optimo';
 import { RequestContext } from '#app/contexts/RequestContext';
+import styles from './index.styles';
 import Image from '../../Image';
-// import styles from './index.styles';
-
-export interface OptimoImageBlock {
-  type: string;
-  model: {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    blocks: any;
-  };
-}
 
 type Props = {
-  blocks: OptimoImageBlock[];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  blocks: any;
 };
 
 const EmbedImages = ({ blocks: embedImages }: PropsWithChildren<Props>) => {
-  const { env } = useContext(RequestContext);
-  const image = embedImages?.slice(-1)?.[0]?.model?.blocks;
+  const { isAmp, env } = useContext(RequestContext);
+  const ampImage = embedImages?.[1]?.model?.blocks;
+  const canonicalImage = embedImages?.[2]?.model?.blocks;
+  const image = isAmp ? ampImage : canonicalImage;
   const rawImage = image?.[1]?.model;
   if (!rawImage) return null;
 
@@ -34,7 +28,11 @@ const EmbedImages = ({ blocks: embedImages }: PropsWithChildren<Props>) => {
 
   if (!locator || !alt || !width || !height) return null;
 
-  return <Image src={src} alt={alt} width={width} height={height} />;
+  return (
+    <div css={styles.embedDiv}>
+      <Image src={src} alt={alt} width={width} height={height} />
+    </div>
+  );
 };
 
 export default EmbedImages;
