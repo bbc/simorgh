@@ -13,7 +13,8 @@
     "@optimizely/js-sdk-utils": "0.4.0",
     "winston@3.8.2": "patch:winston@npm:3.8.2#.yarn/patches/winston-npm-3.8.2-2035e9cac4.patch",
     "stylelint-config-recommended": "5.0.0",
-    "uuid": "3.3.2"
+    "uuid": "3.3.2",
+    "react-is": "18.2.0"
   },
   "workspaces": {
     "packages": [
