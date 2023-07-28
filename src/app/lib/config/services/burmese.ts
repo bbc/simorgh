@@ -352,11 +352,11 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'ဆောင်းပါး',
-        url: '/burmese/in-depth-54539126',
+        url: '/burmese/topics/cl3rq8rkqgxt',
       },
       {
-        title: 'အားကစား',
-        url: '/burmese/topics/cxnykndgd87t',
+        title: 'အင်တာဗျူး',
+        url: '/burmese/topics/cdg42x4kek0t',
       },
       {
         title: 'ကုန်သွယ်စီးပွား',
