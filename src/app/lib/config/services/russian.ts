@@ -30,7 +30,7 @@ const headerFooterTranslations = {
       },
       accept: 'ОК',
       reject: 'Посмотреть, что изменилось',
-      rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
+      rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
     },
     cookie: {
       amp: {

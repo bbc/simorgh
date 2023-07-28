@@ -126,7 +126,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'OK',
           reject: 'Tìm hiểu các thay đổi',
-          rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
         },
         cookie: {
           amp: {

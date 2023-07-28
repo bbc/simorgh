@@ -112,7 +112,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'ሕራይ',
           reject: 'እንታይ ከምዝተለወጠ ረኣዩ',
-          rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
         },
         cookie: {
           amp: {

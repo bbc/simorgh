@@ -119,7 +119,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'OK',
           reject: 'Find out wetin don change',
-          rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
         },
         cookie: {
           amp: {

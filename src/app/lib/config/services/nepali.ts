@@ -119,7 +119,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'मान्य छ।',
           reject: 'परिमार्जित कुरा हेर्नुहोस्।',
-          rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
         },
         cookie: {
           amp: {
