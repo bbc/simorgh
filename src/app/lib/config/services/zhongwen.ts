@@ -254,7 +254,7 @@ export const service: ZhongwenConfig = {
                   '为使网页运作正常，我们或在未争得许可时收集有限必要资讯。',
                 para4: {
                   text: '阅读更多我们在您的浏览器上存储必需数据，以便页面正常运作的相关资讯',
-                  url: 'https://www.bbc.com/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
                 },
                 para5: '我们使用本地存储，将选项存储于您的浏览工具上。',
                 heading3: '可选项数据收集',

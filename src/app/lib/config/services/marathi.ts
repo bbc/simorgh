@@ -163,7 +163,7 @@ export const service: DefaultServiceConfig = {
                   'आमची वेबपेजेस सुलभपणे चालावीत यासाठी आम्ही मर्यादित प्रमाणात तुमच्या उपकरणाविषयीची काही माहिती विनाअनुमती साठवतो.',
                 para4: {
                   text: 'वेबपेजेस सुरळीतपणे चालावीत यासाठी तुमच्या उपकरणातील कोणती माहिती साठवली जाते याविषयी वाचा.',
-                  url: 'https://www.bbc.com/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
                 },
                 para5:
                   'तुमच्या परवानगीचे पर्याय साठवण्यासाठी आम्ही तुमच्या उपकरणातील लोकल स्टोरेजचा वापर करतो.',

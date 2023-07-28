@@ -171,7 +171,7 @@ export const service: DefaultServiceConfig = {
                   'لأجل ضمان عمل صفحاتنا بشكل سلس ومقبول، نقوم بخزن بعض المعلومات المحدودة على أجهزتكم دون الحصول على موافقتكم.',
                 para4: {
                   text: 'إقرأوا المزيد عن المعلومات الضرورية والحيوية التي نقوم بخزنها على أجهزتكم من أجل ضمان عمل صفحاتنا بشكل جيد.',
-                  url: 'https://www.bbc.com/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
                 },
                 para5: 'نقوم بخزن أفضلياتكم التي صرحتم بها في أجهزتكم.',
                 heading3: 'شروط اختيارية لجمع المعلومات',

@@ -468,7 +468,7 @@ export const service: ChineseConfig = {
                   '為使網頁運作正常，我們或在未爭得許可時收集有限必要資訊。',
                 para4: {
                   text: '閲讀更多我們在您的瀏覽器上存儲必需數據，以便頁面正常運作的相關資訊',
-                  url: 'https://www.bbc.com/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
                 },
                 para5: '我們使用本地存儲，將選項存儲於您的瀏覽工具上。',
                 heading3: '可選項數據收集',

@@ -156,7 +156,7 @@ export const service: DefaultServiceConfig = {
                   'Để làm cho các trang web của chúng tôi hoạt động, chúng tôi lưu trữ một số thông tin hạn chế trên thiết bị của bạn mà không có sự đồng ý của bạn.',
                 para4: {
                   text: 'Đọc thêm về thông tin cần thiết mà chúng tôi lưu trữ trên thiết bị của bạn để làm cho các trang web của chúng tôi hoạt động.',
-                  url: 'https://www.bbc.com/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
                 },
                 para5:
                   'Chúng tôi sử dụng bộ nhớ cục bộ để lưu trữ các tùy chọn đồng ý của bạn trên thiết bị của bạn.',

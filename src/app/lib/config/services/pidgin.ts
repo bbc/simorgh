@@ -149,7 +149,7 @@ export const service: DefaultServiceConfig = {
                   'To make our web pages work, we store some limited information ontop your device without your permision alias consent.',
                 para4: {
                   text: 'Read more about di very important alias essential information we store ontop your device to make our web page dem work.',
-                  url: 'https://www.bbc.com/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
                 },
                 para5:
                   'We use local storage to store your consent preferences ontop your device.',

@@ -149,7 +149,7 @@ export const service: DefaultServiceConfig = {
                   'අපගේ වෙබ් පිටු ක්‍රියාකාරීවීම සඳහා, ඔබේ අවසරයකින් තොරව සීමිත තොරතුරු ප්‍රමාණයක් අප විසින් ඔබේ සන්නිවේදන මෙවලමේ ගබඩා කරනු ලැබේ.',
                 para4: {
                   text: 'අපගේ වෙබ් පිටු ක්‍රියාකාරීවීම සඳහා, ඔබේ සන්නිවේදන මෙවලමේ අප විසින් ගබඩා කරනු ලබන අත්‍යවශ්‍ය තොරතුරු ගැන වැඩිදුර කියවන්න.',
-                  url: 'https://www.bbc.com/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
                 },
                 para5:
                   'ඔබේ අනුමැතිය ඇති රුචිකත්ව ඔබේ සන්නිවේදන මෙවලමේ ගබඩා කිරීම සඳහා එහි ඇති ඉඩකඩ අප විසින් භාවිත කරනු ලැබේ.',

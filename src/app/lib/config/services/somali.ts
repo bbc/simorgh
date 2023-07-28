@@ -151,7 +151,7 @@ export const service: DefaultServiceConfig = {
                   'Si ay bogaggeena web-ka u shaqeeyaa, waxaan xog kooban ku keydineynaa qalabkaaga, adigoo aan ogolaan.',
                 para4: {
                   text: 'Akhriso xog dheeraad ah oo ku saabsan macluumaadka muhiimka ah ee aan qalabkaaga ku keydineyno si aan uga shaqeysiiyo bogaggeena.',
-                  url: 'https://www.bbc.com/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
                 },
                 para5:
                   'Waxaan isticmaaleynaa keydin gudaha ah si aan ogolaanshahaaga ugu keydino qalabkaaga gudihiisa.',

@@ -146,7 +146,7 @@ export const service: DefaultServiceConfig = {
                   'サイト上ページの機能維持のため、読者の方の同意なしでご使用端末について限定的な情報を保存しています。',
                 para4: {
                   text: 'サイト上のページを機能させるため保存する、読者の使用端末に関する必要不可欠な情報について、さらに読む。',
-                  url: 'https://www.bbc.com/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
                 },
                 para5:
                   '読者の使用端末の同意設定をローカル･ストレージに保存しています。',

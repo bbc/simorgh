@@ -158,7 +158,7 @@ export const service: DefaultServiceConfig = {
                   'د دې لپاره چې زموږ پاڼه سم کار وکړي، موږ محدود مالومات ستاسې له اجازې پرته ستاسې پر موبایل خوندي کوو',
                 para4: {
                   text: 'دلته لوستلی شئ چې موږ کوم محدود مالومات ستاسې له اجازې پرته ستاسې پر موبایل خوندي کوو',
-                  url: 'https://www.bbc.com/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
                 },
                 para5:
                   'ستاسې د اجازې په اړه مالومات موږ ستاسې پر موبایل خوندي کوو',

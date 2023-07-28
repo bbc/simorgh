@@ -155,7 +155,7 @@ export const service: DefaultServiceConfig = {
                   "ਆਪਣੀ ਵੈੱਬਸਾਈਟ ਦੇ ਠੀਕ ਕੰਮ ਕਰਨ ਲਈ ਸਾਨੂੰ ਸੀਮਤ ਪੱਧਰ 'ਤੇ ਤੁਹਾਡੇ ਡਿਵਾਈਸ 'ਤੇ ਕੁਝ ਜਾਣਕਾਰੀਆਂ ਸੇਵ ਕਰਨੀਆਂ ਪੈਂਦੀਆਂ ਹਨ ਜਿਸ ਲਈ ਅਸੀਂ ਤੁਹਾਡੇ ਤੋਂ ਮਨਜ਼ੂਰੀ ਨਹੀਂ ਮੰਗਦੇ।",
                 para4: {
                   text: 'ਉਨ੍ਹਾਂ ਜ਼ਰੂਰੀ ਜਾਣਕਾਰੀਆਂ ਬਾਰੇ ਹੋਰ ਪੜ੍ਹੋ ਜੋ ਅਸੀਂ ਤੁਹਾਡੇ ਡਿਵਾਈਸ ’ਤੇ ਸਟੋਰ ਕੀਤੀਆਂ ਹਨ ਤਾਂ ਕਿ ਪੇਜ ਠੀਕ ਦਿਖਾਈ ਦੇ ਸਕੇ।',
-                  url: 'https://www.bbc.com/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
                 },
                 para5:
                   'ਅਸੀਂ ਤੁਹਾਡੀ ਮਨਜ਼ੂਰੀ ਅਤੇ ਪਸੰਦ ਨੂੰ ਤੁਹਾਡੇ ਡਿਵਾਈਸ ਦੇ ਲੋਕਲ ਸਟੋਰੇਜ ਵਿੱਚ ਸਟੋਰ ਕਰਦੇ ਹਾਂ।',
