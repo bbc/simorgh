@@ -190,6 +190,7 @@ describe('App', () => {
             toggles: {
               mockToggle: { enabled: false },
             },
+            isAmp: false,
           });
 
           expect(reactRouterConfig.renderRoutes).toHaveBeenNthCalledWith(
