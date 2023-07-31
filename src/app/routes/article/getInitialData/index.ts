@@ -21,6 +21,7 @@ type Props = {
   pageType: 'article' | 'cpsAsset';
   variant?: Variants;
   toggles?: Toggles;
+  isAmp?: boolean;
 };
 
 export default async ({
@@ -30,6 +31,7 @@ export default async ({
   path: pathname,
   variant,
   toggles,
+  isAmp,
 }: Props) => {
   try {
     const env = getEnvironment(pathname);
@@ -42,6 +44,7 @@ export default async ({
       pageType,
       service,
       variant,
+      isAmp,
     });
 
     const optHeaders = { 'ctx-service-env': env };
