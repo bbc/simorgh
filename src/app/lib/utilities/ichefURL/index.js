@@ -5,7 +5,8 @@ const buildPlaceholderSrc = (src, resolution) => {
   const imageSrc = !src
     ? 'https://ichef.bbci.co.uk/images/ic/640xn/p0b36kgx.png'
     : src;
-  if (imageSrc.includes('urn:') || imageSrc.includes('localhost:')) return imageSrc;
+  if (imageSrc.includes('urn:') || imageSrc.includes('localhost:'))
+    return imageSrc;
   const urlParts = imageSrc.replace(/https?:\/\//g, '').split('/');
   const [domain, mediaType, imgService, ...remainingUrlParts] = urlParts;
   const remainingUrlPartsWithoutResolution = remainingUrlParts.slice(1);
