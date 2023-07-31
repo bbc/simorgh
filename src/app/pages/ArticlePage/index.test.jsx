@@ -324,6 +324,13 @@ describe('Article Page', () => {
 
     const articleWithSummaryHeadlineInTheMiddle = {
       ...articleDataNews,
+      metadata: {
+        ...articleDataNews.metadata,
+        atiAnalytics: {
+          ...articleDataNews.metadata.atiAnalytics,
+          pageTitle: 'SEO Headline',
+        },
+      },
       content: {
         model: {
           blocks: [
@@ -367,6 +374,13 @@ describe('Article Page', () => {
   it('should render a news article without headline correctly', async () => {
     const articleWithoutHeadline = {
       ...articleDataNews,
+      metadata: {
+        ...articleDataNews.metadata,
+        atiAnalytics: {
+          ...articleDataNews.metadata.atiAnalytics,
+          pageTitle: 'Article Headline',
+        },
+      },
       content: {
         model: {
           blocks: [singleTextBlock('Paragraph 1', 2)],

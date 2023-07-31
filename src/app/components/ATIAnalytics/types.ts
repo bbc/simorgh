@@ -64,12 +64,17 @@ export interface PageData {
 }
 
 export interface ATIData {
-  contentId?: string;
+  categoryName?: string | null;
+  contentId?: string | null;
   contentType?: string;
+  language?: string | null;
+  ldpThingIds?: string | null;
+  ldpThingLabels?: string | null;
+  nationsProducer?: string | null;
   pageIdentifier?: string;
-  timePublished?: string;
-  timeUpdated?: string;
-  pageTitle?: string;
+  pageTitle?: string | null;
+  timePublished?: string | null;
+  timeUpdated?: string | null;
 }
 
 export interface ATIDataWithContexts {
