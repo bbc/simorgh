@@ -1,5 +1,5 @@
 import '@testing-library/jest-dom/extend-expect';
-import colours from 'colors';
+import chalk from 'chalk';
 
 // Errors
 const FAILED_PROP = 'Failed prop';
@@ -63,14 +63,14 @@ console.error = (message, ...rest) => {
 
   throw new Error(
     [
-      colours.red.bold(
+      chalk.red.bold(
         `
 ${expect.getState().testPath}: ${expect.getState().currentTestName}
           
 Please fix the following:
 `,
       ),
-      colours.red(formattedMessage),
+      chalk.red(formattedMessage),
     ].join('\n'),
   );
 };
