@@ -2,8 +2,9 @@
 const WEBP_ORIGIN_CODES = ['cpsdevpb', 'cpsprodpb'];
 
 const buildPlaceholderSrc = (src, resolution) => {
-  if (src.includes('urn:') || src.includes('localhost:')) return src;
-  const urlParts = src.replace(/https?:\/\//g, '').split('/');
+  const _src = !src ? 'https://ichef.bbci.co.uk/images/ic/640xn/p0b36kgx.png' : src; 
+  if (_src.includes('urn:') || _src.includes('localhost:')) return _src;
+  const urlParts = _src.replace(/https?:\/\//g, '').split('/');
   const [domain, mediaType, imgService, ...remainingUrlParts] = urlParts;
   const remainingUrlPartsWithoutResolution = remainingUrlParts.slice(1);
   const newResolution = `${resolution}xn`;
