@@ -37,12 +37,15 @@ describe('EmbedImages', () => {
     });
   });
   describe('AMP', () => {
-    it('should render a 1280px width image', async () => {
-      render(<EmbedImages blocks={chartEmbedImages.blocks} />, {
-        isAmp: true,
-      });
+    it('should render a 1280px width amp-image', async () => {
+      const { container } = render(
+        <EmbedImages blocks={chartEmbedImages.blocks} />,
+        {
+          isAmp: true,
+        },
+      );
 
-      const chartEmbedImage = screen.queryByRole('img');
+      const chartEmbedImage = container.getElementsByTagName('amp-img')[0];
       expect(chartEmbedImage).toHaveAttribute('width', '1280');
     });
   });
