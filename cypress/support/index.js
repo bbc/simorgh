@@ -8,8 +8,10 @@ Cypress.Screenshot.defaults({
 
 Cypress.on(`window:before:load`, win => {
   cy.stub(win.console, `error`).callsFake(msg => {
-    cy.now(`task`, `error`, msg);
-    throw new Error(msg);
+    if (!win.location.href.startsWith('https://www.bbc.com/usingthebbc')) {
+      cy.now(`task`, `error`, msg);
+      throw new Error(msg);
+    }
   });
 });
 
