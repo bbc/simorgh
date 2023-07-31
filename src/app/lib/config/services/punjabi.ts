@@ -123,7 +123,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'ਓਕੇ',
           reject: 'ਜਾਣੋ ਕੀ ਬਦਲਿਆ ਹੈ',
-          rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
         },
         cookie: {
           amp: {
@@ -138,7 +138,7 @@ export const service: DefaultServiceConfig = {
                 linkText: 'ਕੁਕੀਜ਼',
                 last: ' ਅਤੇ ਤੁਹਾਨੂੰ ਸਭ ਤੋਂ ਵਧੀਆ ਆਨਲਾਈਨ ਤਜਰਬਾ ਦੇਣ ਲਈ ਤੇ ਤੁਹਾਨੂੰ ਦਿਖਾਈ ਗਈ ਸਾਮਗਰੀ ਅਤੇ ਇਸ਼ਤਿਹਾਰਾਂ ਨੂੰ ਨਿੱਜੀ ਕਰਨ ਲਈ ਬ੍ਰਾਊਜ਼ਰ ਡਾਟਾ ਨੂੰ ਇਕੱਠਾ ਕਰਦੇ ਹਾਂ। ਜੇਕਰ ਤੁਸੀਂ ਸਹਿਮਤ ਹੋ ਤਾਂ ਸਾਨੂੰ ਦੱਸੋ।',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               manage: 'ਸੈਟਿੰਗਸ ਮੈਨੇਜ ਕਰੋ',
             },
@@ -155,7 +155,7 @@ export const service: DefaultServiceConfig = {
                   "ਆਪਣੀ ਵੈੱਬਸਾਈਟ ਦੇ ਠੀਕ ਕੰਮ ਕਰਨ ਲਈ ਸਾਨੂੰ ਸੀਮਤ ਪੱਧਰ 'ਤੇ ਤੁਹਾਡੇ ਡਿਵਾਈਸ 'ਤੇ ਕੁਝ ਜਾਣਕਾਰੀਆਂ ਸੇਵ ਕਰਨੀਆਂ ਪੈਂਦੀਆਂ ਹਨ ਜਿਸ ਲਈ ਅਸੀਂ ਤੁਹਾਡੇ ਤੋਂ ਮਨਜ਼ੂਰੀ ਨਹੀਂ ਮੰਗਦੇ।",
                 para4: {
                   text: 'ਉਨ੍ਹਾਂ ਜ਼ਰੂਰੀ ਜਾਣਕਾਰੀਆਂ ਬਾਰੇ ਹੋਰ ਪੜ੍ਹੋ ਜੋ ਅਸੀਂ ਤੁਹਾਡੇ ਡਿਵਾਈਸ ’ਤੇ ਸਟੋਰ ਕੀਤੀਆਂ ਹਨ ਤਾਂ ਕਿ ਪੇਜ ਠੀਕ ਦਿਖਾਈ ਦੇ ਸਕੇ।',
-                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
                 },
                 para5:
                   'ਅਸੀਂ ਤੁਹਾਡੀ ਮਨਜ਼ੂਰੀ ਅਤੇ ਪਸੰਦ ਨੂੰ ਤੁਹਾਡੇ ਡਿਵਾਈਸ ਦੇ ਲੋਕਲ ਸਟੋਰੇਜ ਵਿੱਚ ਸਟੋਰ ਕਰਦੇ ਹਾਂ।',
@@ -188,13 +188,13 @@ export const service: DefaultServiceConfig = {
                 linkText: 'ਕੁਕੀਜ਼',
                 last: ' ਦੀ ਵਰਤੋਂ ਕਰ ਰਹੇ ਹਾਂ। ਕ੍ਰਿਪਾ ਕਰਕੇ ਸਾਨੂੰ ਦੱਸੋ ਕਿ ਤੁਸੀਂ ਇਨ੍ਹਾਂ ਸਾਰੀਆਂ ਕੁਕੀਜ਼ ਨਾਲ ਸਹਿਮਤ ਹੋ',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
             },
             accept: 'ਹਾਂ, ਮੈਂ ਸਹਿਮਤ ਹਾਂ',
             reject: "ਨਹੀਂ, ਸੈਟਿੰਗ 'ਚ ਜਾਓ ",
             rejectUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+              'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           },
         },
       },
