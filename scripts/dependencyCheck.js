@@ -28,7 +28,7 @@ depcheck(
 
       return {
         ...obj,
-        key: missing[key],
+        [key]: missing[key],
       };
     }, {});
 
