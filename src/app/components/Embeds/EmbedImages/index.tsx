@@ -30,7 +30,7 @@ const EmbedImages = ({ blocks: embedImages }: PropsWithChildren<Props>) => {
 
   return (
     <div css={styles.embedDiv}>
-      <Image src={src} alt={alt} width={width} height={height} />
+      <Image src={src} alt={alt} width={width} height={height} isAmp={isAmp} />
     </div>
   );
 };
