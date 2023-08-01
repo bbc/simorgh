@@ -2,7 +2,7 @@
   "data": {
     "generated": "2023-06-19T14:52:20.864Z",
     "lastRecordTimeStamp": "2023-06-19T14:49:00Z",
-    "firstRecordTimeStamp": "2023-06-19T12:49:00Z",
+    "firstRecordTimeStamp": "2023-06-19T14:49:00Z",
     "items": [
       {
         "id": "urn:bbc:optimo:asset:c4n4wnn0x0po",
@@ -144,6 +144,14 @@
         "href": "https://www.bbc.com/afaanoromoo/articles/cyxpkjxdn87o",
         "timestamp": 1687071985668
       }
-    ]
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentType": "list-datadriven",
+        "pageIdentifier": "afaanoromoo.popular.read.page",
+        "timePublished": "2023-06-19T14:49:00Z",
+        "timeUpdated": "2023-06-19T14:49:00Z"
+      }
+    }
   }
 }
