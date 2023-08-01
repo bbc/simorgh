@@ -30,10 +30,10 @@ const dealWithCaretsAndTildes = (versionString, timeJson) => {
 
     let versionMatcherString = '';
     if (versionString.indexOf('^') !== -1) {
-        versionMatcherString = splitOurVersionArray[0];// tilde means we are going to get anything belonging to major
+        versionMatcherString = splitOurVersionArray[0];// caret means we are going to get anything belonging to major
     }
     if (versionString.indexOf('~') !== -1) {
-        splitOurVersionArray.pop();// caret means we get all patches of the minor
+        splitOurVersionArray.pop();// tilde means we get all patches of the minor
         versionMatcherString = splitOurVersionArray.join('\\.');
     }
     versionMatcherString = versionMatcherString + '\\.';
