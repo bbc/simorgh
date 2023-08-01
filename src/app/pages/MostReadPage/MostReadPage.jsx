@@ -94,11 +94,11 @@ const MostReadPage = ({ pageData }) => {
     metadata: { atiAnalytics },
   } = pageData;
 
+  const atiData = { ...atiAnalytics, pageTitle: `${header} - ${brandName}` };
+
   return (
     <>
-      <ATIAnalytics
-        atiData={{ ...atiAnalytics, pageTitle: `${header} - ${brandName}` }}
-      />
+      <ATIAnalytics atiData={atiData} />
       <ChartbeatAnalytics title={header} />
       <ComscoreAnalytics />
       <MetadataContainer
