@@ -22,7 +22,6 @@ const serviceFilter = service => {
       config,
     );
 
-  console.log(service, shouldSmokeTest);
   return Cypress.env('SMOKE') === shouldSmokeTest;
 };
 
