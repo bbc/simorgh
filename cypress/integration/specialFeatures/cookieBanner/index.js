@@ -8,10 +8,19 @@ import runAmpTests from './testsForAMPOnly';
 
 const serviceFilter = service => {
   // If smoke testing, check the special features config where smoke: true
-  const shouldSmokeTest = ramdaPath(
-    [service, 'specialFeatures', 'cookieBanner', 'smoke'],
-    config,
-  );
+  const shouldSmokeTest =
+    ramdaPath([service, 'specialFeatures', 'cookieBanner', 'smoke'], config) &&
+    ramdaPath(
+      [
+        service,
+        'specialFeatures',
+        'cookieBanner',
+        'environments',
+        environment(),
+        'enabled',
+      ],
+      config,
+    );
 
   return Cypress.env('SMOKE') === shouldSmokeTest;
 };
@@ -29,7 +38,7 @@ const getPaths = service =>
     config,
   );
 
-const pageType = 'any';
+const pageType = 'all';
 
 Object.keys(config)
   .filter(service => serviceFilter(service))

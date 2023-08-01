@@ -39,3 +39,7 @@ export type TimestampProps = {
   minutesTolerance?: number;
   className: string;
 };
+
+export type EmbedHtmlProps = {
+  embeddableContent: string;
+};

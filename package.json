@@ -13,7 +13,8 @@
     "@optimizely/js-sdk-utils": "0.4.0",
     "winston@3.8.2": "patch:winston@npm:3.8.2#.yarn/patches/winston-npm-3.8.2-2035e9cac4.patch",
     "stylelint-config-recommended": "5.0.0",
-    "uuid": "3.3.2"
+    "uuid": "3.3.2",
+    "react-is": "16.13.1"
   },
   "workspaces": {
     "packages": [
@@ -38,6 +39,7 @@
     "cypress:3rdParty": "yarn cypress -- --project ./3rdPartyCypress/. --config-file cypress-simorgh.json",
     "cypress:adhoc": "yarn cypress:interactive -- --project ./AdHocCypress/. --config-file cypress-simorgh.json",
     "setupDevEnv": "cp envConfig/local.env .env && rm -rf envConfig/secret.env && ./scripts/checkSecretEnvVariables.sh",
+    "dependencyFreshness": "node ./scripts/dependencyFreshness",
     "dev": "yarn setupDevEnv && rm -rf build && run-p webpack:dev:client webpack:dev:server",
     "lighthouse": "./scripts/lighthouseRun.sh",
     "postshrinkwrap": "test -z $CI && ./scripts/packagelockHttps.sh; git update-index --assume-unchanged .env",
@@ -56,7 +58,7 @@
     "test:puppeteer": "jest --ci --env=jsdom --colors ./puppeteer",
     "test:unit": "test -z $CI && NODE_OPTIONS=--experimental-vm-modules jest --env=jsdom --coverage --colors --testPathIgnorePatterns=\"src/integration\" \"puppeteer\" \"ws-nextjs-app\"  || NODE_OPTIONS=--experimental-vm-modules jest --ci --runInBand --env=jsdom --coverage --colors --testPathIgnorePatterns=\"src/integration\" \"puppeteer\" \"ws-nextjs-app\"",
     "test:unit:watch": "yarn test:unit -- --watch",
-    "test:unit:updatesnapshots": "jest --updateSnapshot --env=jsdom --coverage --colors --testPathIgnorePatterns=\"src/integration\" \"puppeteer\" \"ws-nextjs-app\"",
+    "test:unit:updatesnapshots": "NODE_OPTIONS=--experimental-vm-modules jest --updateSnapshot --env=jsdom --coverage --colors --testPathIgnorePatterns=\"src/integration\" \"puppeteer\" \"ws-nextjs-app\"",
     "test:integration": "node src/integration/utils/runTests/index.js",
     "test:integration:updatesnapshots": "node src/integration/utils/runTests/index.js  --updateSnapshot",
     "test:integration:ci": "JEST_SILENT_REPORTER_DOTS=true yarn test:integration -- --ci --onlyRunTests --reporters=jest-silent-reporter",
