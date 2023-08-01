@@ -6,9 +6,14 @@ Cypress.Screenshot.defaults({
   screenshotOnRunFailure: false,
 });
 
+const KNOWN_URLS = ['https://www.bbc.com/usingthebbc'];
+
+const isKnownUrl = testLocation =>
+  KNOWN_URLS.some(url => testLocation.startsWith(url));
+
 Cypress.on(`window:before:load`, win => {
   cy.stub(win.console, `error`).callsFake(msg => {
-    if (!win.location.href.startsWith('https://www.bbc.com/usingthebbc')) {
+    if (!isKnownUrl(win.location.href)) {
       cy.now(`task`, `error`, msg);
       throw new Error(msg);
     }
