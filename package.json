@@ -38,6 +38,7 @@
     "cypress:3rdParty": "yarn cypress -- --project ./3rdPartyCypress/. --config-file cypress-simorgh.json",
     "cypress:adhoc": "yarn cypress:interactive -- --project ./AdHocCypress/. --config-file cypress-simorgh.json",
     "setupDevEnv": "cp envConfig/local.env .env && rm -rf envConfig/secret.env && ./scripts/checkSecretEnvVariables.sh",
+    "dependencyFreshness": "node ./scripts/dependencyFreshness",
     "dev": "yarn setupDevEnv && rm -rf build && run-p webpack:dev:client webpack:dev:server",
     "lighthouse": "./scripts/lighthouseRun.sh",
     "postshrinkwrap": "test -z $CI && ./scripts/packagelockHttps.sh; git update-index --assume-unchanged .env",
