@@ -227,3 +227,90 @@ describe('implementation of buildPageATIParams and buildPageATIUrl - Article Pag
     expect(parsedATIURLParams).toEqual(expectedATIURLParams);
   });
 });
+
+describe('implementation of buildPageATIParams and buildPageATIUrl - Most Read Page', () => {
+  const mostReadPageAtiData = {
+    contentType: 'list-datadriven',
+    pageIdentifier: 'pidgin.popular.read.page',
+    pageTitle: 'MostReadPageTitle',
+    timePublished: '2023-08-01T12:00:00Z',
+    timeUpdated: '2023-08-01T12:15:00Z',
+  };
+
+  const validPageURLParams = {
+    appName: 'atiAnalyticsAppName',
+    categoryName: undefined,
+    contentId: undefined,
+    contentType: 'list-datadriven',
+    isUk: undefined,
+    language: 'pcm',
+    ldpThingIds: undefined,
+    ldpThingLabels: undefined,
+    libraryVersion: 'simorgh',
+    nationsProducer: undefined,
+    origin: undefined,
+    pageIdentifier: 'pidgin.popular.read.page',
+    pageTitle: 'MostReadPageTitle',
+    platform: 'canonical',
+    previousPath: undefined,
+    producerId: 'atiAnalyticsProducerId',
+    service: 'pidgin',
+    statsDestination: 'statsDestination',
+    timePublished: '2023-08-01T12:00:00Z',
+    timeUpdated: '2023-08-01T12:15:00Z',
+  };
+
+  it('should return the correct object for the page given the ATI configuration', () => {
+    const result = buildPageATIParams({
+      atiData: mostReadPageAtiData,
+      requestContext,
+      serviceContext,
+    });
+    expect(result).toEqual(validPageURLParams);
+  });
+
+  it('should use the atiData contentType in favour of the requestContext pageType', () => {
+    const result = buildPageATIParams({
+      atiData: mostReadPageAtiData,
+      requestContext: {
+        ...requestContext,
+        pageType: 'mostRead',
+      },
+      serviceContext,
+    });
+    expect(result).toEqual(validPageURLParams);
+  });
+
+  it('should return the correct url for a page given the ATI configuration', () => {
+    const url = buildPageATIUrl({
+      atiData: mostReadPageAtiData,
+      requestContext,
+      serviceContext,
+    });
+
+    const parsedATIURLParams = Object.fromEntries(
+      new URLSearchParams(url as string),
+    );
+
+    const expectedATIURLParams = {
+      s: '598285',
+      s2: 'atiAnalyticsProducerId',
+      p: 'pidgin.popular.read.page',
+      r: '0x0x24x24',
+      re: '1024x768',
+      hl: '00-00-00',
+      lng: 'en-US',
+      x2: '[responsive]',
+      x3: '[atiAnalyticsAppName]',
+      x4: '[pcm]',
+      x5: '[http%3A%2F%2Flocalhost%2F]',
+      x7: '[list-datadriven]',
+      x8: '[simorgh]',
+      x9: '[MostReadPageTitle]',
+      x11: '[2023-08-01T12:00:00Z]',
+      x12: '[2023-08-01T12:15:00Z]',
+    };
+
+    expect(parsedATIURLParams).toEqual(expectedATIURLParams);
+  });
+});
