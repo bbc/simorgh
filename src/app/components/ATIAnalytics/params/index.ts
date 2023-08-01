@@ -59,7 +59,7 @@ const ARTICLE_PHOTO_GALLERY = 'article-photo-gallery';
 const ARTICLE_CORRESPONDENT_PIECE = 'article-correspondent';
 const ARTICLE_SHORT_FORM_VIDEO = 'article-sfv';
 
-const MIGRATED_PAGE_TYPES: PageTypes[] = [HOME_PAGE, ARTICLE_PAGE];
+const MIGRATED_PAGE_TYPES: PageTypes[] = [HOME_PAGE, ARTICLE_PAGE, TOPIC_PAGE];
 
 const noOp = () => {
   return {};
