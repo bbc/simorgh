@@ -51,7 +51,9 @@ const dealWithCaretsAndTildes = (versionString, timeJson) => {
 };
 
 const collectResults = async ({ dep, modifiedDate, ourFreshness }) => {
+    console.log(`Checking ${dep} for download count`);
     await fetchResponse(downloadsBaseUrl + dep).then((response) => {
+        console.log(`Received download count data for ${dep}`);
         const responseJson = response.json().then((json) => {
             depenencyTable.push({
                 "name": dep,
@@ -71,6 +73,7 @@ const collectResults = async ({ dep, modifiedDate, ourFreshness }) => {
 };
 
 Object.keys(allDependencies).forEach((dep, i) => {
+    console.log(`Checking ${dep} for last modified date`);
     const cmd = exec(`npm view ${dep} time --json`, (err, stdout, stderr) => {
         if (err) {
             console.error(err);
