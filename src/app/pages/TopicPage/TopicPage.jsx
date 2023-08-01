@@ -27,7 +27,7 @@ const TopicPage = ({ pageData }) => {
     curations,
     pageCount,
     activePage,
-    metadata: { atiAnalytics },
+    metadata: { atiAnalytics } = {},
   } = pageData;
 
   const { enabled: adsEnabled } = useToggle('ads');
