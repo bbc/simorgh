@@ -13,7 +13,8 @@
     "@optimizely/js-sdk-utils": "0.4.0",
     "winston@3.8.2": "patch:winston@npm:3.8.2#.yarn/patches/winston-npm-3.8.2-2035e9cac4.patch",
     "stylelint-config-recommended": "5.0.0",
-    "uuid": "3.3.2"
+    "uuid": "3.3.2",
+    "react-is": "16.13.1"
   },
   "workspaces": {
     "packages": [
@@ -38,6 +39,7 @@
     "cypress:3rdParty": "yarn cypress -- --project ./3rdPartyCypress/. --config-file cypress-simorgh.json",
     "cypress:adhoc": "yarn cypress:interactive -- --project ./AdHocCypress/. --config-file cypress-simorgh.json",
     "setupDevEnv": "cp envConfig/local.env .env && rm -rf envConfig/secret.env && ./scripts/checkSecretEnvVariables.sh",
+    "dependencyFreshness": "node ./scripts/dependencyFreshness",
     "dev": "yarn setupDevEnv && rm -rf build && run-p webpack:dev:client webpack:dev:server",
     "lighthouse": "./scripts/lighthouseRun.sh",
     "postshrinkwrap": "test -z $CI && ./scripts/packagelockHttps.sh; git update-index --assume-unchanged .env",

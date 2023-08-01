@@ -7536,7 +7536,7 @@ module.exports = () => ({
               '/thai/international-51285795', // CPS MAP with video clip
               '/thai/thailand-49950038', // CPS PGL
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
@@ -7547,7 +7547,7 @@ module.exports = () => ({
               '/thai/international-23252840', // CPS PGL
               // '', // CPS STY
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: [
@@ -7557,7 +7557,7 @@ module.exports = () => ({
               '/thai/23122810', // CPS MAP
               '/thai/thailand-49950038', // CPS PGL
             ],
-            enabled: false,
+            enabled: true,
           },
         },
         smoke: true,
