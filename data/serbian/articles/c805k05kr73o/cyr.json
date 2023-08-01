@@ -246,6 +246,18 @@
       },
       "metadata": {
         "id": "urn:bbc:ares::article:c805k05kr73o",
+        "atiAnalytics": {
+          "categoryName": null,
+          "contentId": "urn:bbc:optimo:asset:c805k05kr73o",
+          "language": "sr-latn",
+          "ldpThingIds": null,
+          "ldpThingLabels": null,
+          "nationsProducer": null,
+          "pageIdentifier": null,
+          "pageTitle": "Ratovi zvezda: Niški džedaji pomažu decu bez roditelja",
+          "timePublished": "2019-07-12T14:55:37.219Z",
+          "timeUpdated": "2019-07-12T14:55:37.219Z"
+        },
         "locators": {
           "optimoUrn": "urn:bbc:optimo:asset:c805k05kr73o"
         },
