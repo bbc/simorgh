@@ -90,9 +90,13 @@ const MostReadPage = ({ pageData }) => {
     children: node.isRequired,
   };
 
+  const {
+    metadata: { atiAnalytics },
+  } = pageData;
+
   return (
     <>
-      <ATIAnalytics data={pageData} />
+      <ATIAnalytics atiData={{ ...atiAnalytics, pageTitle: header }} />
       <ChartbeatAnalytics title={header} />
       <ComscoreAnalytics />
       <MetadataContainer
