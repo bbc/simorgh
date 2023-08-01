@@ -96,7 +96,9 @@ const MostReadPage = ({ pageData }) => {
 
   return (
     <>
-      <ATIAnalytics atiData={{ ...atiAnalytics, pageTitle: header }} />
+      <ATIAnalytics
+        atiData={{ ...atiAnalytics, pageTitle: `${header} - ${brandName}` }}
+      />
       <ChartbeatAnalytics title={header} />
       <ComscoreAnalytics />
       <MetadataContainer
