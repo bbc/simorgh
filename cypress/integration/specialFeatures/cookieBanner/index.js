@@ -47,7 +47,7 @@ Object.keys(config)
 
     const paths = getPaths(service);
     paths.forEach(path => {
-      describeForEuOnly(`${path} - Canonical Cookie Banner`, () => {
+      describe(`${path} - Canonical Cookie Banner`, () => {
         if (service !== 'news') {
           runCanonicalTests({ service, variant, pageType, path });
         }
@@ -57,7 +57,7 @@ Object.keys(config)
     paths
       .map(path => `${path}.amp`)
       .forEach(path => {
-        describeForEuOnly(`${path} - AMP Cookie Banner`, () => {
+        describe(`${path} - AMP Cookie Banner`, () => {
           beforeEach(() => {
             visitPage(path, pageType);
           });
