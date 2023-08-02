@@ -18,6 +18,12 @@ Cypress.on(`window:before:load`, win => {
       throw new Error(msg);
     }
   });
+
+  if (Cypress.env('SKIP_EU') === 'true') {
+    cy.stub(win.navigator.geolocation, 'getCurrentPosition').callsFake(fn => {
+      fn({ coords: { longitude: -0.001545, latitude: 51.477928 } });
+    });
+  }
 });
 
 const KNOWN_ERRORS = [
