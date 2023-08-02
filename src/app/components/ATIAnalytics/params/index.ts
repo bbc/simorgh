@@ -42,7 +42,6 @@ import {
   buildIndexPageATIUrl,
 } from './indexPage/buildParams';
 import {
-  buildTopicPageATIUrl,
   buildTopicPageATIParams,
 } from './topicPage/buildParams';
 import { RequestContextProps } from '../../../contexts/RequestContext';
