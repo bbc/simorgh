@@ -30,7 +30,7 @@ export const amharicSingleItem = {
     atiAnalytics: {
       contentId: 'urn:bbc:tipo:topic:12345abcde',
       contentType: 'index-category',
-      pageIdentifier: 'kyrgyz.topics.12345abcde.page',
+      pageIdentifier: 'amharic.topics.12345abcde.page',
       pageTitle: 'pageTitleInAmharic',
     },
   },
