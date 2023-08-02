@@ -21,8 +21,8 @@ Cypress.on(`window:before:load`, win => {
 
   if (Cypress.env('SKIP_EU') === 'true') {
     cy.stub(win.navigator.geolocation, 'getCurrentPosition').callsFake(fn => {
-      // These are the co-ordinates of Greenwich, London
-      fn({ coords: { longitude: 0, latitude: 51.477928 } });
+      // These are the co-ordinates of Dublin, Ireland to match AWS eu-west-1
+      fn({ coords: { longitude: -6.266155, latitude: 53.35014 } });
     });
   }
 });
