@@ -41,9 +41,6 @@ import {
   buildIndexPageATIParams,
   buildIndexPageATIUrl,
 } from './indexPage/buildParams';
-import {
-  buildTopicPageATIParams,
-} from './topicPage/buildParams';
 import { RequestContextProps } from '../../../contexts/RequestContext';
 import { ServiceConfig } from '../../../models/types/serviceConfig';
 import {
@@ -142,7 +139,7 @@ const pageTypeParamBuilders = {
   [MOST_WATCHED_PAGE]: buildMostWatchedATIParams,
   [INDEX_PAGE]: buildIndexPageATIParams,
   [FEATURE_INDEX_PAGE]: buildIndexPageATIParams,
-  [TOPIC_PAGE]: buildTopicPageATIParams,
+  [TOPIC_PAGE]: noOp,
   [MEDIA_ASSET_PAGE]: (
     data: PageData,
     requestContext: RequestContextProps,
