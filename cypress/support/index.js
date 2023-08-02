@@ -21,7 +21,8 @@ Cypress.on(`window:before:load`, win => {
 
   if (Cypress.env('SKIP_EU') === 'true') {
     cy.stub(win.navigator.geolocation, 'getCurrentPosition').callsFake(fn => {
-      fn({ coords: { longitude: -0.001545, latitude: 51.477928 } });
+      // These are the co-ordinates of Greenwich, London
+      fn({ coords: { longitude: 0, latitude: 51.477928 } });
     });
   }
 });
