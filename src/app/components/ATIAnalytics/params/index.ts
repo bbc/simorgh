@@ -90,7 +90,7 @@ const pageTypeUrlBuilders = {
   [MOST_WATCHED_PAGE]: buildMostWatchedATIUrl,
   [INDEX_PAGE]: buildIndexPageATIUrl,
   [FEATURE_INDEX_PAGE]: buildIndexPageATIUrl,
-  [TOPIC_PAGE]: buildTopicPageATIUrl,
+  [TOPIC_PAGE]: noOp,
   [MEDIA_ASSET_PAGE]: (
     data: PageData,
     requestContext: RequestContextProps,
