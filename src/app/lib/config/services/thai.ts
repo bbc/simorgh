@@ -183,13 +183,13 @@ export const service: DefaultServiceConfig = {
                 linkText: 'คุกกีส์',
                 last: ' เพื่อให้คุณได้รับประสบการณ์ที่ดีที่สุดในโลกออนไลน์ กรุณาแจ้งให้เราทราบว่า คุณยอมรับคุกกีส์ทั้งหมดนี้',
                 linkUrl:
-                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  '/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
             },
             accept: 'ยอมรับ',
             reject: 'ไม่ยอมรับ ไปที่การตั้งค่า',
             rejectUrl:
-              'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+              '/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           },
         },
       },
@@ -319,7 +319,7 @@ export const service: DefaultServiceConfig = {
           text: 'นโยบายความเป็นส่วนตัว',
         },
         {
-          href: 'https://www.bbc.com/usingthebbc/cookies/',
+          href: '/usingthebbc/cookies/',
           text: 'คุกกีส์',
         },
         {
