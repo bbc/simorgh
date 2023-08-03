@@ -93,7 +93,10 @@ export default ({ service, variant, pageType, path }) => {
 
       visitPage(path, pageType);
 
-      cy.wait(1000);
+      cy.wait(3000);
+
+      getCookieBannerCanonical(service, variant).should('not.exist');
+      getPrivacyBanner(service, variant).should('not.exist');
 
       assertCookieHasOneOfValues(
         'ckns_explicit',
@@ -102,8 +105,6 @@ export default ({ service, variant, pageType, path }) => {
       assertCookieHasValue('ckns_privacy', 'july2019');
       assertCookieHasValue('ckns_policy', '000');
 
-      getCookieBannerCanonical(service, variant).should('not.exist');
-      getPrivacyBanner(service, variant).should('not.exist');
 
       ensureCookieExpiryDates();
     });
