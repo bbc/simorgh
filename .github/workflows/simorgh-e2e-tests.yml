@@ -21,9 +21,9 @@ jobs:
     env:
       CI: true
       LOG_LEVEL: 'error'
-      CYPRESS_SKIP_EU: true
       CYPRESS_SMOKE: true
-      CYPRESS_APP_ENV: 'local'
+      CYPRESS_APP_ENV: 'test'
+      CYPRESS_ONLY_SERVICE: 'thai'
 
     steps:
       - name: Checkout
