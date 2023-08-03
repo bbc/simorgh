@@ -104,8 +104,6 @@ export default ({ service, variant, pageType, path }) => {
       );
       assertCookieHasValue('ckns_privacy', 'july2019');
       assertCookieHasValue('ckns_policy', '000');
-
-
       ensureCookieExpiryDates();
     });
 
