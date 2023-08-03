@@ -95,15 +95,16 @@ export default ({ service, variant, pageType, path }) => {
 
       cy.wait(3000);
 
-      getCookieBannerCanonical(service, variant).should('not.exist');
-      getPrivacyBanner(service, variant).should('not.exist');
-
       assertCookieHasOneOfValues(
         'ckns_explicit',
         ACCEPTED_CKNS_EXPLICIT_COOKIE_VALUES,
       );
       assertCookieHasValue('ckns_privacy', 'july2019');
       assertCookieHasValue('ckns_policy', '000');
+
+      getCookieBannerCanonical(service, variant).should('not.exist');
+      getPrivacyBanner(service, variant).should('not.exist');
+
       ensureCookieExpiryDates();
     });
 
