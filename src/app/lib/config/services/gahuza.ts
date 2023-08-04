@@ -139,7 +139,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'OK',
           reject: 'Menya ivyahindutse',
-          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
           amp: {
@@ -152,7 +152,7 @@ export const service: DefaultServiceConfig = {
                 linkText: 'cookies',
                 last: ", kandi tugatororokanya amakuru y'ibikorerwa kuri internet kugira tugufashe kworoherwa cane hamwe no kwihitiramwo ivyo uraba hamwe n'abarata ibidandazwa ushaka kubona. Tugusavye kutumenyesha ko uvyemeye.",
                 linkUrl:
-                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               manage: 'Tunganya integurwa zanje',
             },
@@ -168,7 +168,7 @@ export const service: DefaultServiceConfig = {
                   "Kugira impapuro z'urubuga rwacu zikore, turabika amakuru amwe amwe ku cuma cawe utarinze kubitwemerera.",
                 para4: {
                   text: "Soma ibindi vyinshi ku makuru ya nkenerwa tubika ku cuma cawe kugira impapuro z'imbuga zacu zikore neza.",
-                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5:
                   'Dukoresha ububiko bwawe kugira tubike ku cuma cawe ivyo ushima wemeye.',
@@ -201,13 +201,13 @@ export const service: DefaultServiceConfig = {
                 linkText: 'cookies',
                 last: ' kugira woroherwe bishoboka kuri internet. Tugusavye kutumenyesha niba wemeye ibi vyose bijanye na cookies.',
                 linkUrl:
-                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
             },
             accept: 'Ego, ndavyemeye',
             reject: 'Oya, njana aho bihindurirwa',
             rejectUrl:
-              'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           },
         },
       },
