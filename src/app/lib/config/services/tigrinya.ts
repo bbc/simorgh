@@ -112,7 +112,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'ሕራይ',
           reject: 'እንታይ ከምዝተለወጠ ረኣዩ',
-          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
           amp: {
@@ -125,7 +125,7 @@ export const service: DefaultServiceConfig = {
                 linkText: 'ኩኪስ',
                 last: "  ዝኣመሰሉ ቴክኖሎጂ ክንጥቀም ዘድልየና፡ ብዛዕባ ናይ ኢንተርነት ኣጠቓቕማኹም ሓበሬታ ብምውህላል ንዓኹም ውልቃዊ ኣገዳስነት ዘለዎ ትሕዝቶ ወይ መወዓውዒ ብዝበለጸ ኣገባብ ንምቕራብ'ዩ። ትሰማምዑ እንተ ዄንኩም ኣፍልጡና።",
                 linkUrl:
-                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               manage: 'መሳርዕ ምርጫታተይ ክውስን',
             },
@@ -141,7 +141,7 @@ export const service: DefaultServiceConfig = {
                   'ናይ መርበብ ገጻትና ብግቡእ ንክሰርሕ፡ ብዛዕባ እቲ ንገጻትና ንምክትታል ትጥቀምሉ መሳርሒታት ዉሱን ሓበሬታ ብዘይ ፍቓድኩም ንዕቅብ ኢና።',
                 para4: {
                   text: 'ብዛዕባ ናይ መርበብ ገጻትና ብግቡእ ክሰርሑ ንምግባር ዝሕግዘና ኣብቲ እትጥቀምሉ መሳርሒ እንዕቅቦ ኣገዳሲ ሓበሬታ ንምፍላጥ ኣብዚ ኣንብቡ።',
-                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5: 'ንእተፍቅድዎ ምርጫታት ኣብቲ ኣብ መሳርሒኹም ዘሎ ማዕከን ኢና ንዕቅቦ',
                 heading3: 'ሓበሬታ ዝእከበሉ ኣማራጺ',
@@ -173,13 +173,13 @@ export const service: DefaultServiceConfig = {
                 linkText: "'ኩኪስ'",
                 last: " እንጥቀም። ንኹሎም እዞም 'ኩኪስ'  ከም እተሰማማዕኩምሎም ኣፍልጡና።",
                 linkUrl:
-                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
             },
             accept: 'እወ፡ እሰማማዕ እየ።',
             reject: 'ኣይፋል፡ ናብ መተዓራረዪ (ሴቲንግ) ውሰዱኒ።',
             rejectUrl:
-              'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           },
         },
       },
