@@ -55,6 +55,7 @@ export default async ({ getAgent, service, path: pathname, variant, page }) => {
         scriptSwitchId,
         renderScriptSwitch: Boolean(scriptSwitchId),
         metadata: {
+          ...data.metadata,
           type: 'Topic',
         },
       },
