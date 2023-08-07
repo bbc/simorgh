@@ -140,7 +140,7 @@ export const service: DefaultServiceConfig = {
                 linkText: 'vidakuzi au cookies',
                 last: ', na tunakusanya data katika mtandao kukufanya ufurahie matumizi ya mtandao na kukupa taarifa zinazokuvutia na matangazo unayoyaona. Tafadhali tufahamishe iwapo unakubali.',
                 linkUrl:
-                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               manage: 'Wezesha mpangilio wangu',
             },
@@ -156,7 +156,7 @@ export const service: DefaultServiceConfig = {
                   'Ili kuwezesha kurasa zetu kufanya kazi, tunahifadhi baadhi ya taarifa katika kifaa chako pasi na ridhaa yako.',
                 para4: {
                   text: 'Soma zaidi kuhusu taarifa muhimu tunazohifadhi katika kifaa chako ili kuwezesha kurasa zetu kufanya kazi.',
-                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5:
                   'Tunatumia hifadhi ya kifaa chako kuhifadhi mapendekezo yako ya ridhaa kwa kifaa hicho.',
@@ -189,13 +189,13 @@ export const service: DefaultServiceConfig = {
                 linkText: 'kuki',
                 last: ' kukufanya ufurahie mtandao. Tafadhali tufahamishe iwapo unakubali kupokea cookies au vidakuzi vyote hivi',
                 linkUrl:
-                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
             },
             accept: 'Ndio, ninakubali',
             reject: 'Hapana, nipeleke kwa mpangilio',
             rejectUrl:
-              'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           },
         },
       },
