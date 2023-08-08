@@ -64,6 +64,7 @@ export interface PageData {
 }
 
 export interface ATIData {
+  campaigns?: { campaignId?: string; campaignName?: string }[] | null;
   categoryName?: string | null;
   contentId?: string | null;
   contentType?: string;
@@ -73,6 +74,7 @@ export interface ATIData {
   nationsProducer?: string | null;
   pageIdentifier?: string;
   pageTitle?: string | null;
+  producerId?: string | null;
   timePublished?: string | null;
   timeUpdated?: string | null;
 }
