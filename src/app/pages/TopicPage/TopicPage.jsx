@@ -20,8 +20,15 @@ import getItemList from '../../lib/seoUtils/getItemList';
 
 const TopicPage = ({ pageData }) => {
   const { lang, translations, brandName } = useContext(ServiceContext);
-  const { title, description, imageData, curations, pageCount, activePage } =
-    pageData;
+  const {
+    title,
+    description,
+    imageData,
+    curations,
+    pageCount,
+    activePage,
+    metadata: { atiAnalytics } = {},
+  } = pageData;
 
   const { enabled: adsEnabled } = useToggle('ads');
   const { showAdsBasedOnLocation } = useContext(RequestContext);
@@ -53,7 +60,7 @@ const TopicPage = ({ pageData }) => {
       )}
       <main css={styles.main}>
         <div css={styles.inner}>
-          <ATIAnalytics data={pageData} />
+          <ATIAnalytics atiData={atiAnalytics} />
           <ChartbeatAnalytics title={title} />
           <MetadataContainer
             title={activePage >= 2 ? pageTitle : title}
