@@ -62,7 +62,7 @@ const MpuContainer = styled(AdContainer)`
 `;
 
 const StoryPage = ({ pageData }) => {
-  const { serviceLang, lang, showRelatedTopics } = useContext(ServiceContext);
+  const { brandName, serviceLang, lang, showRelatedTopics } = useContext(ServiceContext);
 
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
   const title = path(['promo', 'headlines', 'headline'], pageData);
@@ -160,6 +160,13 @@ const StoryPage = ({ pageData }) => {
     adsEnabled,
     showAdsBasedOnLocation,
   ].every(Boolean);
+
+  // ATI
+  const { atiAnalytics } = metadata;
+  const atiData = {
+    ...atiAnalytics,
+    pageTitle: `${atiAnalytics.pageTitle} - ${brandName}`,
+  };
 
   const componentsToRender = {
     fauxHeadline,
@@ -283,7 +290,7 @@ const StoryPage = ({ pageData }) => {
         aboutTags={aboutTags}
         imageLocator={indexImageLocator}
       />
-      <ATIAnalytics data={pageData} />
+      <ATIAnalytics atiData={atiData} />
       <ChartbeatAnalytics
         sectionName={pageData?.relatedContent?.section?.name}
         categoryName={pageData?.metadata?.passport?.category?.categoryName}
