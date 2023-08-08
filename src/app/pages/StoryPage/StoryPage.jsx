@@ -62,7 +62,8 @@ const MpuContainer = styled(AdContainer)`
 `;
 
 const StoryPage = ({ pageData }) => {
-  const { brandName, serviceLang, lang, showRelatedTopics } = useContext(ServiceContext);
+  const { brandName, serviceLang, lang, showRelatedTopics } =
+    useContext(ServiceContext);
 
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
   const title = path(['promo', 'headlines', 'headline'], pageData);
