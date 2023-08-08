@@ -99,10 +99,8 @@ export default ({ service, variant, pageType, path }) => {
       );
       assertCookieHasValue('ckns_privacy', 'july2019');
       assertCookieHasValue('ckns_policy', '000');
-
       getCookieBannerCanonical(service, variant).should('not.exist');
       getPrivacyBanner(service, variant).should('not.exist');
-
       ensureCookieExpiryDates();
     });
 

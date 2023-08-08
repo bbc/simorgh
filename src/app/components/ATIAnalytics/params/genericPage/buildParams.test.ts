@@ -227,3 +227,88 @@ describe('implementation of buildPageATIParams and buildPageATIUrl - Article Pag
     expect(parsedATIURLParams).toEqual(expectedATIURLParams);
   });
 });
+
+describe('implementation of buildPageATIParams and buildPageATIUrl - Topic Page', () => {
+  const topicPageAtiData = {
+    contentId: 'urn:bbc:tipo:topic:c95y35941vrt',
+    contentType: 'index-category',
+    pageIdentifier: 'pidgin.topics.c95y35941vrt.page',
+    pageTitle: 'Donald Trump',
+  };
+  // timePublished and timeUpdated are not returned via BFF implementation so set to undefined in test
+  const validPageURLParams = {
+    appName: 'atiAnalyticsAppName',
+    categoryName: undefined,
+    contentId: 'urn:bbc:tipo:topic:c95y35941vrt',
+    contentType: 'index-category',
+    isUk: undefined,
+    language: 'pcm',
+    ldpThingIds: undefined,
+    ldpThingLabels: undefined,
+    libraryVersion: 'simorgh',
+    nationsProducer: undefined,
+    origin: undefined,
+    pageIdentifier: 'pidgin.topics.c95y35941vrt.page',
+    pageTitle: 'Donald Trump',
+    platform: 'canonical',
+    previousPath: undefined,
+    producerId: 'atiAnalyticsProducerId',
+    service: 'pidgin',
+    statsDestination: 'statsDestination',
+    timePublished: undefined,
+    timeUpdated: undefined,
+  };
+
+  it('should return the correct object for the page given the ATI configuration', () => {
+    const result = buildPageATIParams({
+      atiData: topicPageAtiData,
+      requestContext,
+      serviceContext,
+    });
+    expect(result).toEqual(validPageURLParams);
+  });
+
+  it('should use the atiData contentType in favour of the requestContext pageType', () => {
+    const result = buildPageATIParams({
+      atiData: topicPageAtiData,
+      requestContext: {
+        ...requestContext,
+        pageType: 'TOPIC',
+      },
+      serviceContext,
+    });
+    expect(result).toEqual(validPageURLParams);
+  });
+
+  it('should return the correct url for a page given the ATI configuration', () => {
+    const url = buildPageATIUrl({
+      atiData: topicPageAtiData,
+      requestContext,
+      serviceContext,
+    });
+
+    const parsedATIURLParams = Object.fromEntries(
+      new URLSearchParams(url as string),
+    );
+
+    const expectedATIURLParams = {
+      s: '598285',
+      s2: 'atiAnalyticsProducerId',
+      p: 'pidgin.topics.c95y35941vrt.page',
+      r: '0x0x24x24',
+      re: '1024x768',
+      hl: '00-00-00',
+      lng: 'en-US',
+      x1: '[urn:bbc:tipo:topic:c95y35941vrt]',
+      x2: '[responsive]',
+      x3: '[atiAnalyticsAppName]',
+      x4: '[pcm]',
+      x5: '[http%3A%2F%2Flocalhost%2F]',
+      x7: '[index-category]',
+      x8: '[simorgh]',
+      x9: '[Donald%20Trump]',
+    };
+
+    expect(parsedATIURLParams).toEqual(expectedATIURLParams);
+  });
+});

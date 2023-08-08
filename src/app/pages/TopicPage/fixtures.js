@@ -22,7 +22,19 @@ export const amharicSingleItem = {
       visualProminence: 'NORMAL',
     },
   ],
-  metadata: { type: 'Topic' },
+  metadata: {
+    type: 'Topic',
+    analytics: {
+      name: 'amharic.topics.12345abcde.page',
+      producer: 'AMHARIC',
+    },
+    atiAnalytics: {
+      contentId: 'urn:bbc:tipo:topic:12345abcde',
+      contentType: 'index-category',
+      pageIdentifier: 'amharic.topics.12345abcde.page',
+      pageTitle: 'pageTitleInAmharic',
+    },
+  },
 };
 
 export const pidginMultipleItems = {
@@ -82,7 +94,19 @@ export const pidginMultipleItems = {
       visualProminence: 'NORMAL',
     },
   ],
-  metadata: { type: 'Topic' },
+  metadata: {
+    type: 'Topic',
+    analytics: {
+      name: 'pidgin.topics.c95y35941vrt.page',
+      producer: 'PIDGIN',
+    },
+    atiAnalytics: {
+      contentId: 'urn:bbc:tipo:topic:c95y35941vrt',
+      contentType: 'index-category',
+      pageIdentifier: 'pidgin.topics.c95y35941vrt.page',
+      pageTitle: 'Donald Trump',
+    },
+  },
 };
 
 export const mundoMultipleCurations = {
