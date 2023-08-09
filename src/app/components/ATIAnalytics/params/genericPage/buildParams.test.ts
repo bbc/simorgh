@@ -116,6 +116,7 @@ describe('implementation of buildPageATIParams and buildPageATIUrl', () => {
     const articlePageAtiData = {
       categoryName: 'Refugees%20and%20asylum%20seekers~Myanmar~Military',
       contentId: 'urn:bbc:optimo:asset:c9wxnzvwp3mo',
+      contentType: 'article',
       language: 'my',
       ldpThingIds:
         '0cd55773-e753-44ad-ad07-1366bf1aa6bc~a26174f5-fa3c-4cf8-95a2-29d877175eab~ce5c43ee-8982-4f88-9472-9aa79aeb09cc',
@@ -398,6 +399,124 @@ describe('implementation of buildPageATIParams and buildPageATIUrl', () => {
       };
 
       expect(parsedATIURLParams).toEqual(expectedATIURLParams);
+    });
+  });
+
+  describe('CPS Page', () => {
+    describe('STY', () => {
+      const cpsSTYAtiData = {
+        campaigns: [
+          {
+            campaignId: '5a988e4739461b000e9dabfc',
+            campaignName: 'WS - Update me',
+          },
+        ],
+        categoryName: 'Explainer',
+        contentId:
+          'urn:bbc:cps:curie:asset:3137d6de-62c2-4637-a002-29d2ab075990',
+        contentType: 'article',
+        language: 'es',
+        ldpThingIds:
+          '75612fa6-147c-4a43-97fa-fcf70d9cced3~7613abe4-1c05-4594-a5ec-3ccf6268b220~e0d04166-b92f-468e-9e68-d5f9330e6ae7',
+        ldpThingLabels: 'Politics~Nicaragua~Latin+America',
+        pageIdentifier:
+          'latin_america::mundo.latin_america.story.64591782.page',
+        pageTitle:
+          '4 claves para entender la "sorpresiva" liberación y envío a EE.UU. de 222 opositores nicaragüenses - BBC News Mundo',
+        producerId: null,
+        producerName: 'MUNDO',
+        timePublished: '2023-02-10T02:00:41.000Z',
+        timeUpdated: '2023-02-10T02:00:41.000Z',
+      };
+
+      const validPageURLParams = {
+        appName: 'atiAnalyticsAppName',
+        campaigns: [
+          {
+            campaignId: '5a988e4739461b000e9dabfc',
+            campaignName: 'WS - Update me',
+          },
+        ],
+        categoryName: 'Explainer',
+        contentId:
+          'urn:bbc:cps:curie:asset:3137d6de-62c2-4637-a002-29d2ab075990',
+        contentType: 'article',
+        isUK: undefined,
+        language: 'es',
+        ldpThingIds:
+          '75612fa6-147c-4a43-97fa-fcf70d9cced3~7613abe4-1c05-4594-a5ec-3ccf6268b220~e0d04166-b92f-468e-9e68-d5f9330e6ae7',
+        ldpThingLabels: 'Politics~Nicaragua~Latin+America',
+        libraryVersion: 'simorgh',
+        nationsProducer: undefined,
+        origin: undefined,
+        pageIdentifier:
+          'latin_america::mundo.latin_america.story.64591782.page',
+        pageTitle:
+          '4 claves para entender la "sorpresiva" liberación y envío a EE.UU. de 222 opositores nicaragüenses - BBC News Mundo',
+        platform: 'canonical',
+        previousPath: undefined,
+        producerId: 'atiAnalyticsProducerId',
+        service: 'mundo',
+        statsDestination: 'statsDestination',
+        timePublished: '2023-02-10T02:00:41.000Z',
+        timeUpdated: '2023-02-10T02:00:41.000Z',
+      };
+
+      it('should return the correct object for the page given the ATI configuration', () => {
+        const result = buildPageATIParams({
+          atiData: cpsSTYAtiData,
+          requestContext,
+          serviceContext: { ...serviceContext, service: 'mundo' },
+        });
+        expect(result).toStrictEqual(validPageURLParams);
+      });
+
+      it('should use the serviceContext lang property if language is absent in atiData', () => {
+        const result = buildPageATIParams({
+          atiData: { ...cpsSTYAtiData, language: null },
+          requestContext,
+          serviceContext: { ...serviceContext, service: 'mundo', lang: 'es' },
+        });
+        expect(result).toEqual(validPageURLParams);
+      });
+
+      it('should return the correct url for a page given the ATI configuration', () => {
+        const url = buildPageATIUrl({
+          atiData: cpsSTYAtiData,
+          requestContext,
+          serviceContext,
+        });
+
+        const parsedATIURLParams = Object.fromEntries(
+          new URLSearchParams(url as string),
+        );
+
+        const expectedATIURLParams = {
+          hl: '00-00-00',
+          lng: 'en-US',
+          p: 'latin_america::mundo.latin_america.story.64591782.page',
+          r: '0x0x24x24',
+          re: '1024x768',
+          s: '598285',
+          s2: 'atiAnalyticsProducerId',
+          x1: '[urn:bbc:cps:curie:asset:3137d6de-62c2-4637-a002-29d2ab075990]',
+          x2: '[responsive]',
+          x3: '[atiAnalyticsAppName]',
+          x4: '[es]',
+          x5: '[http%3A%2F%2Flocalhost%2F]',
+          x7: '[article]',
+          x8: '[simorgh]',
+          x9: '[4%20claves%20para%20entender%20la%20"sorpresiva"%20liberación%20y%20envío%20a%20EE.UU.%20de%20222%20opositores%20nicaragüenses%20-%20BBC%20News%20Mundo]',
+          x11: '[2023-02-10T02:00:41.000Z]',
+          x12: '[2023-02-10T02:00:41.000Z]',
+          x13: '[Politics~Nicaragua~Latin+America]',
+          x14: '[75612fa6-147c-4a43-97fa-fcf70d9cced3~7613abe4-1c05-4594-a5ec-3ccf6268b220~e0d04166-b92f-468e-9e68-d5f9330e6ae7]',
+          x16: '[WS - Update me]',
+          x17: '[Explainer]',
+        };
+
+        expect(parsedATIURLParams).toEqual(expectedATIURLParams);
+      });
     });
   });
 });
