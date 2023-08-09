@@ -144,6 +144,14 @@
         "href": "/azeri/international-48572830",
         "timestamp": 1560070702000
       }
-    ]
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentType": "list-datadriven",
+        "pageIdentifier": "azeri.popular.read.page",
+        "timePublished": "2023-06-19T12:48:00Z",
+        "timeUpdated": "2023-06-19T14:48:00Z"
+      }
+    }
   }
 }
