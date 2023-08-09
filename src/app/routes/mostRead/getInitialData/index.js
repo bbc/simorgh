@@ -35,7 +35,7 @@ export default async ({ service, variant, pageType, path: pathname }) => {
 
     return {
       status,
-      pageData: { ...data, metadata: { type: pageType } },
+      pageData: { ...data, metadata: { ...data.metadata, type: pageType } },
     };
   } catch ({ message, status = getErrorStatusCode() }) {
     return { error: message, status };

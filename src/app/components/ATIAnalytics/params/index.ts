@@ -26,10 +26,6 @@ import {
 } from './tvRadioPage/buildParams';
 import { buildPageATIUrl, buildPageATIParams } from './genericPage/buildParams';
 import {
-  buildMostReadATIParams,
-  buildMostReadATIUrl,
-} from './mostReadPage/buildParams';
-import {
   buildMostWatchedATIParams,
   buildMostWatchedATIUrl,
 } from './mostWatchedPage/buildParams';
@@ -52,6 +48,7 @@ const MIGRATED_PAGE_TYPES: PageTypes[] = [
   HOME_PAGE,
   ARTICLE_PAGE,
   TOPIC_PAGE,
+  MOST_READ_PAGE,
   STORY_PAGE,
   PHOTO_GALLERY_PAGE,
   MEDIA_ASSET_PAGE,
@@ -77,7 +74,7 @@ const pageTypeUrlBuilders = {
   [STORY_PAGE]: noOp,
   [FRONT_PAGE]: buildIndexPageATIUrl,
   [MEDIA_PAGE]: buildTvRadioATIUrl,
-  [MOST_READ_PAGE]: buildMostReadATIUrl,
+  [MOST_READ_PAGE]: noOp,
   [MOST_WATCHED_PAGE]: buildMostWatchedATIUrl,
   [INDEX_PAGE]: buildIndexPageATIUrl,
   [FEATURE_INDEX_PAGE]: buildIndexPageATIUrl,
@@ -100,7 +97,7 @@ const pageTypeParamBuilders = {
     buildArticleATIParams(data, requestContext, serviceContext, 'article-sfv'),
   [FRONT_PAGE]: buildIndexPageATIParams,
   [MEDIA_PAGE]: buildTvRadioATIParams,
-  [MOST_READ_PAGE]: buildMostReadATIParams,
+  [MOST_READ_PAGE]: noOp,
   [MOST_WATCHED_PAGE]: buildMostWatchedATIParams,
   [INDEX_PAGE]: buildIndexPageATIParams,
   [FEATURE_INDEX_PAGE]: buildIndexPageATIParams,

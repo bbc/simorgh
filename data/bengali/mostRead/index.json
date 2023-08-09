@@ -144,6 +144,14 @@
         "href": "/bengali/news-49151613",
         "timestamp": 1564394232000
       }
-    ]
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentType": "list-datadriven",
+        "pageIdentifier": "bengali.popular.read.page",
+        "timePublished": "2023-06-19T14:18:00Z",
+        "timeUpdated": "2023-06-19T14:48:00Z"
+      }
+    }
   }
 }
