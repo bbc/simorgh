@@ -632,5 +632,117 @@ describe('implementation of buildPageATIParams and buildPageATIUrl', () => {
         expect(parsedATIURLParams).toEqual(expectedATIURLParams);
       });
     });
+
+    describe('PGL', () => {
+      const cpsPGLAtiData = {
+        campaigns: [
+          {
+            campaignId: '5a988e3139461b000e9dabf9',
+            campaignName: 'WS - Divert me',
+          },
+        ],
+        categoryName: 'News',
+        contentId:
+          'urn:bbc:cps:curie:asset:08e22e90-7361-cd47-b586-7cb53fc5a012',
+        contentType: 'article-photo-gallery',
+        language: 'es',
+        ldpThingIds: '25844b6e-80b0-4de9-8ea0-7a35e7d4086f',
+        ldpThingLabels: 'Technology',
+        pageIdentifier: 'sport::mundo.sport.photo_gallery.36935058.page',
+        pageTitle:
+          'Río 2016, el antes y el ahora: cómo ha cambiado la ropa deportiva en más de un siglo de juegos olímpicos',
+        producerId: null,
+        producerName: 'MUNDO',
+        timePublished: '2016-08-07T09:21:02.000Z',
+        timeUpdated: '2016-08-07T09:21:02.000Z',
+      };
+
+      const validPageURLParams = {
+        appName: 'atiAnalyticsAppName',
+        campaigns: [
+          {
+            campaignId: '5a988e3139461b000e9dabf9',
+            campaignName: 'WS - Divert me',
+          },
+        ],
+        categoryName: 'News',
+        contentId:
+          'urn:bbc:cps:curie:asset:08e22e90-7361-cd47-b586-7cb53fc5a012',
+        contentType: 'article-photo-gallery',
+        isUK: undefined,
+        language: 'es',
+        ldpThingIds: '25844b6e-80b0-4de9-8ea0-7a35e7d4086f',
+        ldpThingLabels: 'Technology',
+        libraryVersion: 'simorgh',
+        nationsProducer: undefined,
+        origin: undefined,
+        pageIdentifier: 'sport::mundo.sport.photo_gallery.36935058.page',
+        pageTitle:
+          'Río 2016, el antes y el ahora: cómo ha cambiado la ropa deportiva en más de un siglo de juegos olímpicos',
+        platform: 'canonical',
+        previousPath: undefined,
+        producerId: 'atiAnalyticsProducerId',
+        service: 'mundo',
+        statsDestination: 'statsDestination',
+        timePublished: '2016-08-07T09:21:02.000Z',
+        timeUpdated: '2016-08-07T09:21:02.000Z',
+      };
+
+      it('should return the correct object for the page given the ATI configuration', () => {
+        const result = buildPageATIParams({
+          atiData: cpsPGLAtiData,
+          requestContext,
+          serviceContext: { ...serviceContext, service: 'mundo' },
+        });
+        expect(result).toStrictEqual(validPageURLParams);
+      });
+
+      it('should use the serviceContext lang property if language is absent in atiData', () => {
+        const result = buildPageATIParams({
+          atiData: { ...cpsPGLAtiData, language: null },
+          requestContext,
+          serviceContext: { ...serviceContext, service: 'mundo', lang: 'es' },
+        });
+        expect(result).toEqual(validPageURLParams);
+      });
+
+      it('should return the correct url for a page given the ATI configuration', () => {
+        const url = buildPageATIUrl({
+          atiData: cpsPGLAtiData,
+          requestContext,
+          serviceContext,
+        });
+
+        const parsedATIURLParams = Object.fromEntries(
+          new URLSearchParams(url as string),
+        );
+
+        const expectedATIURLParams = {
+          hl: '00-00-00',
+          lng: 'en-US',
+          p: 'sport::mundo.sport.photo_gallery.36935058.page',
+          r: '0x0x24x24',
+          re: '1024x768',
+          s: '598285',
+          s2: 'atiAnalyticsProducerId',
+          x1: '[urn:bbc:cps:curie:asset:08e22e90-7361-cd47-b586-7cb53fc5a012]',
+          x2: '[responsive]',
+          x3: '[atiAnalyticsAppName]',
+          x4: '[es]',
+          x5: '[http%3A%2F%2Flocalhost%2F]',
+          x7: '[article-photo-gallery]',
+          x8: '[simorgh]',
+          x9: '[Río%202016,%20el%20antes%20y%20el%20ahora:%20cómo%20ha%20cambiado%20la%20ropa%20deportiva%20en%20más%20de%20un%20siglo%20de%20juegos%20olímpicos]',
+          x11: '[2016-08-07T09:21:02.000Z]',
+          x12: '[2016-08-07T09:21:02.000Z]',
+          x13: '[Technology]',
+          x14: '[25844b6e-80b0-4de9-8ea0-7a35e7d4086f]',
+          x16: '[WS - Divert me]',
+          x17: '[News]',
+        };
+
+        expect(parsedATIURLParams).toEqual(expectedATIURLParams);
+      });
+    });
   });
 });
