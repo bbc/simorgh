@@ -184,17 +184,62 @@ const homePageAnalyticsData: ATIData = {
   pageTitle: 'pageTitle',
 };
 
+const articlePageAnalyticsData: ATIData = {
+  categoryName: 'Nigeria~Education~Lagos%20state~Women',
+  contentId: 'urn:bbc:optimo:asset:crgrx86em6yo',
+  language: 'pcm',
+  ldpThingIds:
+    '3d5d5e30-dd50-4041-96d5-c970b20005b9~6942cb29-9d3f-4c9c-9806-0a0578c286d6~d651d520-a675-4911-8832-1596f257000b~e45cb5f8-3c87-4ebd-ac1c-058e9be22862',
+  ldpThingLabels: 'Nigeria~Education~Lagos%20state~Women',
+  nationsProducer: 'scotland',
+  pageIdentifier: 'pidgin.articles.crgrx86em6yo.page',
+  pageTitle:
+    'Aminat Yusuf: Tips to pass exam - Overall LASU best graduate drop update',
+  timePublished: '2023-07-19T15:57:54.500Z',
+  timeUpdated: '2023-07-19T15:57:54.500Z',
+};
+
 describe('ATIAnalytics params', () => {
   describe('buildATIUrl', () => {
     it('should return the correct article url', () => {
       const url = buildATIUrl({
         requestContext: { ...requestContext, pageType: ARTICLE_PAGE },
         data: article,
+        atiData: articlePageAnalyticsData,
         serviceContext,
       });
-      expect(url).toMatchInlineSnapshot(
-        `"s=598285&s2=atiAnalyticsProducerId&p=pidgin.articles.%2F%2Fwww.bbc.co.uk.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Aoptimo%3Aasset%3A54321]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http%253A%252F%252Flocalhost%252F]&x6=[originhttp%253A%252F%252Fwww.example.com]&x7=[article]&x8=[simorgh]&x9=[pageTitle]&x10=[scotland]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x13=[thing%2520english%2520label%25201~thing%2520english%2520label%25202]&x14=[thing%2520id%25201~thing%2520id%25202]&x17=[thing%2520english%2520label%25201~thing%2520english%2520label%25202]&ref=originhttp://www.example.com"`,
+
+      const parsedATIURLParams = Object.fromEntries(
+        new URLSearchParams(url as string),
       );
+
+      const expectedATIURLParams = {
+        s: '598285',
+        s2: 'atiAnalyticsProducerId',
+        p: 'pidgin.articles.crgrx86em6yo.page',
+        r: '0x0x24x24',
+        re: '1024x768',
+        hl: '00-00-00',
+        lng: 'en-US',
+        x1: '[urn:bbc:optimo:asset:crgrx86em6yo]',
+        x2: '[responsive]',
+        x3: '[atiAnalyticsAppName]',
+        x4: '[pcm]',
+        x5: '[http%3A%2F%2Flocalhost%2F]',
+        x6: '[originhttp%3A%2F%2Fwww.example.com]',
+        x7: '[article]',
+        x8: '[simorgh]',
+        x9: '[Aminat%20Yusuf:%20Tips%20to%20pass%20exam%20-%20Overall%20LASU%20best%20graduate%20drop%20update]',
+        x10: '[scotland]',
+        x11: '[2023-07-19T15:57:54.500Z]',
+        x12: '[2023-07-19T15:57:54.500Z]',
+        x13: '[Nigeria~Education~Lagos%20state~Women]',
+        x14: '[3d5d5e30-dd50-4041-96d5-c970b20005b9~6942cb29-9d3f-4c9c-9806-0a0578c286d6~d651d520-a675-4911-8832-1596f257000b~e45cb5f8-3c87-4ebd-ac1c-058e9be22862]',
+        x17: '[Nigeria~Education~Lagos%20state~Women]',
+        ref: 'originhttp://www.example.com',
+      };
+
+      expect(parsedATIURLParams).toEqual(expectedATIURLParams);
     });
 
     it('should return the correct media article url', () => {
@@ -280,6 +325,7 @@ describe('ATIAnalytics params', () => {
         p: 'kyrgyz.page',
         r: '0x0x24x24',
         re: '1024x768',
+        ref: 'originhttp://www.example.com',
         hl: '00-00-00',
         lng: 'en-US',
         x1: '[urn:bbc:tipo:topic:cm7682qz7v1t]',
@@ -287,6 +333,7 @@ describe('ATIAnalytics params', () => {
         x3: '[atiAnalyticsAppName]',
         x4: '[pcm]',
         x5: '[http%3A%2F%2Flocalhost%2F]',
+        x6: '[originhttp%3A%2F%2Fwww.example.com]',
         x7: '[index-home]',
         x8: '[simorgh]',
         x9: '[pageTitle]',
@@ -300,6 +347,7 @@ describe('ATIAnalytics params', () => {
         requestContext: { ...requestContext, pageType: ARTICLE_PAGE },
         data: article,
         serviceContext,
+        atiData: articlePageAnalyticsData,
       }) as string;
       const params = atiUrl.split('&');
 
@@ -312,6 +360,7 @@ describe('ATIAnalytics params', () => {
         requestContext: { ...requestContext, pageType: ARTICLE_PAGE },
         data: article,
         serviceContext,
+        atiData: articlePageAnalyticsData,
       }) as string;
       const params = atiUrl.split('&');
 
@@ -327,6 +376,7 @@ describe('ATIAnalytics params', () => {
         },
         data: article,
         serviceContext,
+        atiData: articlePageAnalyticsData,
       }) as string;
       const params = atiUrl.split('&');
 
@@ -391,29 +441,31 @@ describe('ATIAnalytics params', () => {
       const params = buildATIEventTrackingParams({
         requestContext: { ...requestContext, pageType: ARTICLE_PAGE },
         data: article,
+        atiData: articlePageAnalyticsData,
         serviceContext,
       });
       expect(params).toEqual({
         appName: 'atiAnalyticsAppName',
-        contentId: 'urn:bbc:optimo:asset:54321',
+        contentId: 'urn:bbc:optimo:asset:crgrx86em6yo',
         contentType: 'article',
-        categoryName: 'thing%20english%20label%201~thing%20english%20label%202',
+        categoryName: 'Nigeria~Education~Lagos%20state~Women',
         isUK: false,
-        language: 'language',
-        ldpThingIds: 'thing%20id%201~thing%20id%202',
-        ldpThingLabels:
-          'thing%20english%20label%201~thing%20english%20label%202',
+        language: 'pcm',
+        ldpThingIds:
+          '3d5d5e30-dd50-4041-96d5-c970b20005b9~6942cb29-9d3f-4c9c-9806-0a0578c286d6~d651d520-a675-4911-8832-1596f257000b~e45cb5f8-3c87-4ebd-ac1c-058e9be22862',
+        ldpThingLabels: 'Nigeria~Education~Lagos%20state~Women',
         origin: 'origin',
-        pageIdentifier: 'pidgin.articles.//www.bbc.co.uk.page',
-        pageTitle: 'pageTitle',
+        pageIdentifier: 'pidgin.articles.crgrx86em6yo.page',
+        pageTitle:
+          'Aminat Yusuf: Tips to pass exam - Overall LASU best graduate drop update',
         libraryVersion: 'simorgh',
         platform: 'canonical',
         previousPath: 'http://www.example.com',
         producerId: 'atiAnalyticsProducerId',
         service: 'pidgin',
         statsDestination: 'statsDestination',
-        timePublished: analyticsUtils.getPublishedDatetime(),
-        timeUpdated: analyticsUtils.getPublishedDatetime(),
+        timePublished: '2023-07-19T15:57:54.500Z',
+        timeUpdated: '2023-07-19T15:57:54.500Z',
         nationsProducer: 'scotland',
       });
     });
@@ -579,18 +631,26 @@ describe('ATIAnalytics params', () => {
       });
       expect(params).toEqual({
         appName: 'atiAnalyticsAppName',
-        categoryName: undefined,
         campaigns: undefined,
+        categoryName: undefined,
         contentId: 'urn:bbc:tipo:topic:cm7682qz7v1t',
         contentType: 'index-home',
+        isUK: false,
         language: 'pcm',
+        ldpThingIds: undefined,
+        ldpThingLabels: undefined,
+        libraryVersion: 'simorgh',
+        nationsProducer: undefined,
+        origin: 'origin',
         pageIdentifier: 'kyrgyz.page',
         pageTitle: 'pageTitle',
-        libraryVersion: 'simorgh',
         platform: 'canonical',
+        previousPath: 'http://www.example.com',
         producerId: 'atiAnalyticsProducerId',
         service: 'pidgin',
         statsDestination: 'statsDestination',
+        timePublished: undefined,
+        timeUpdated: undefined,
       });
     });
 

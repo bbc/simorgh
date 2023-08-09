@@ -144,6 +144,14 @@
         "href": "/zhongwen/simp/world-65421317",
         "timestamp": 1682670660000
       }
-    ]
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentType": "list-datadriven",
+        "pageIdentifier": "zhongwen.popular.read.page",
+        "timePublished": "2023-06-19T14:57:00Z",
+        "timeUpdated": "2023-06-19T15:12:00Z"
+      }
+    }
   }
 }

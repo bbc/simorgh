@@ -144,6 +144,14 @@
         "href": "https://www.bbc.com/amharic/articles/cld3l3vw7n7o",
         "timestamp": 1686716187216
       }
-    ]
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentType": "list-datadriven",
+        "pageIdentifier": "amharic.popular.read.page",
+        "timePublished": "2023-06-19T12:47:00Z",
+        "timeUpdated": "2023-06-19T14:47:00Z"
+      }
+    }
   }
 }

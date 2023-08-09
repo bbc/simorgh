@@ -144,6 +144,14 @@
         "href": "https://www.bbc.com/tigrinya/articles/cl5zjqeljw0o",
         "timestamp": 1686903130525
       }
-    ]
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentType": "list-datadriven",
+        "pageIdentifier": "tigrinya.popular.read.page",
+        "timePublished": "2023-06-19T13:03:00Z",
+        "timeUpdated": "2023-06-19T15:03:00Z"
+      }
+    }
   }
 }

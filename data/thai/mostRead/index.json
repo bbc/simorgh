@@ -144,6 +144,14 @@
         "href": "https://www.bbc.com/thai/articles/cmjvzp50z5do",
         "timestamp": 1686994182637
       }
-    ]
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentType": "list-datadriven",
+        "pageIdentifier": "thai.popular.read.page",
+        "timePublished": "2023-06-19T14:52:00Z",
+        "timeUpdated": "2023-06-19T15:07:00Z"
+      }
+    }
   }
 }

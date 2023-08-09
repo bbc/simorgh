@@ -144,6 +144,14 @@
         "href": "/vietnamese/vietnam-61656478",
         "timestamp": 1654497580000
       }
-    ]
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentType": "list-datadriven",
+        "pageIdentifier": "vietnamese.popular.read.page",
+        "timePublished": "2023-06-19T14:57:00Z",
+        "timeUpdated": "2023-06-19T15:12:00Z"
+      }
+    }
   }
 }
