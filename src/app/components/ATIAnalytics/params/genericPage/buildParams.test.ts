@@ -744,5 +744,125 @@ describe('implementation of buildPageATIParams and buildPageATIUrl', () => {
         expect(parsedATIURLParams).toEqual(expectedATIURLParams);
       });
     });
+
+    describe('CSP', () => {
+      const cpsCSPAtiData = {
+        campaigns: null,
+        categoryName: 'News',
+        chapter: 'technology',
+        contentId:
+          'urn:bbc:cps:curie:asset:c1c8b1bf-4c9c-44e8-be0d-c81a2aa59e46',
+        contentType: 'article-correspondent',
+        language: 'en-gb',
+        ldpThingIds:
+          '0d358111-576d-4d61-a7c7-e2e71931b579~2c493367-e5a2-4c19-be5f-6e9342f5c591~2f2db234-3c2d-40a4-b4ac-eea661faadd0~31684f19-84d6-41f6-b033-7ae08098572a~65ba56b4-3f50-4217-ab8e-b3c1fe890364~6892384e-1966-4c03-9ce3-f694a8f9f69e~7a48b6e0-9074-4303-ae82-011003058e16~b054a2d3-6c1e-44de-b8db-0e2501c035c0~f7bf39da-286c-4e37-8ee0-a01395f09ac2',
+        ldpThingLabels:
+          'Intel~Technology+of+business~Business~Technology~Car+industry~China~Taiwan~Computer+chip~Semiconductors',
+        pageIdentifier:
+          'technology::news.technology.correspondent_story.56294493.page',
+        pageTitle: "Tech Tent: The new 'space race' for computer chips",
+        producerId: '64',
+        producerName: 'NEWS',
+        timePublished: '2021-03-05T13:37:50.000Z',
+        timeUpdated: '2021-03-05T13:37:50.000Z',
+      };
+
+      const validPageURLParams = {
+        appName: 'atiAnalyticsAppName',
+        campaigns: null,
+        categoryName: 'News',
+        contentId:
+          'urn:bbc:cps:curie:asset:c1c8b1bf-4c9c-44e8-be0d-c81a2aa59e46',
+        contentType: 'article-correspondent',
+        isUK: undefined,
+        language: 'en-gb',
+        ldpThingIds:
+          '0d358111-576d-4d61-a7c7-e2e71931b579~2c493367-e5a2-4c19-be5f-6e9342f5c591~2f2db234-3c2d-40a4-b4ac-eea661faadd0~31684f19-84d6-41f6-b033-7ae08098572a~65ba56b4-3f50-4217-ab8e-b3c1fe890364~6892384e-1966-4c03-9ce3-f694a8f9f69e~7a48b6e0-9074-4303-ae82-011003058e16~b054a2d3-6c1e-44de-b8db-0e2501c035c0~f7bf39da-286c-4e37-8ee0-a01395f09ac2',
+        ldpThingLabels:
+          'Intel~Technology+of+business~Business~Technology~Car+industry~China~Taiwan~Computer+chip~Semiconductors',
+        libraryVersion: 'simorgh',
+        nationsProducer: undefined,
+        origin: undefined,
+        pageIdentifier:
+          'technology::news.technology.correspondent_story.56294493.page',
+        pageTitle: "Tech Tent: The new 'space race' for computer chips",
+        platform: 'canonical',
+        previousPath: undefined,
+        producerId: '64',
+        service: 'news',
+        statsDestination: 'statsDestination',
+        timePublished: '2021-03-05T13:37:50.000Z',
+        timeUpdated: '2021-03-05T13:37:50.000Z',
+      };
+
+      it('should return the correct object for the page given the ATI configuration', () => {
+        const result = buildPageATIParams({
+          atiData: cpsCSPAtiData,
+          requestContext,
+          serviceContext: { ...serviceContext, service: 'news' },
+        });
+        expect(result).toStrictEqual(validPageURLParams);
+      });
+
+      it('should use the serviceContext lang property if language is absent in atiData', () => {
+        const result = buildPageATIParams({
+          atiData: { ...cpsCSPAtiData, language: null },
+          requestContext,
+          serviceContext: { ...serviceContext, service: 'news', lang: 'en-gb' },
+        });
+        expect(result).toEqual(validPageURLParams);
+      });
+
+      it('should use the serviceContext atiAnalyticsProducerId property if producerId is absent in atiData', () => {
+        const result = buildPageATIParams({
+          atiData: { ...cpsCSPAtiData, producerId: null },
+          requestContext,
+          serviceContext: {
+            ...serviceContext,
+            atiAnalyticsProducerId: '64',
+            service: 'news',
+            lang: 'en-gb',
+          },
+        });
+        expect(result).toEqual(validPageURLParams);
+      });
+
+      it('should return the correct url for a page given the ATI configuration', () => {
+        const url = buildPageATIUrl({
+          atiData: cpsCSPAtiData,
+          requestContext,
+          serviceContext,
+        });
+
+        const parsedATIURLParams = Object.fromEntries(
+          new URLSearchParams(url as string),
+        );
+
+        const expectedATIURLParams = {
+          hl: '00-00-00',
+          lng: 'en-US',
+          p: 'technology::news.technology.correspondent_story.56294493.page',
+          r: '0x0x24x24',
+          re: '1024x768',
+          s: '598285',
+          s2: '64',
+          x1: '[urn:bbc:cps:curie:asset:c1c8b1bf-4c9c-44e8-be0d-c81a2aa59e46]',
+          x2: '[responsive]',
+          x3: '[atiAnalyticsAppName]',
+          x4: '[en-gb]',
+          x5: '[http%3A%2F%2Flocalhost%2F]',
+          x7: '[article-correspondent]',
+          x8: '[simorgh]',
+          x9: "[Tech%20Tent:%20The%20new%20'space%20race'%20for%20computer%20chips]",
+          x11: '[2021-03-05T13:37:50.000Z]',
+          x12: '[2021-03-05T13:37:50.000Z]',
+          x13: '[Intel~Technology+of+business~Business~Technology~Car+industry~China~Taiwan~Computer+chip~Semiconductors]',
+          x14: '[0d358111-576d-4d61-a7c7-e2e71931b579~2c493367-e5a2-4c19-be5f-6e9342f5c591~2f2db234-3c2d-40a4-b4ac-eea661faadd0~31684f19-84d6-41f6-b033-7ae08098572a~65ba56b4-3f50-4217-ab8e-b3c1fe890364~6892384e-1966-4c03-9ce3-f694a8f9f69e~7a48b6e0-9074-4303-ae82-011003058e16~b054a2d3-6c1e-44de-b8db-0e2501c035c0~f7bf39da-286c-4e37-8ee0-a01395f09ac2]',
+          x17: '[News]',
+        };
+
+        expect(parsedATIURLParams).toEqual(expectedATIURLParams);
+      });
+    });
   });
 });
