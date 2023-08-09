@@ -144,6 +144,14 @@
         "href": "/serbian/cyr/srbija-64584762",
         "timestamp": 1675968848000
       }
-    ]
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentType": "list-datadriven",
+        "pageIdentifier": "serbian.popular.read.page",
+        "timePublished": "2023-06-19T13:05:00Z",
+        "timeUpdated": "2023-06-19T15:05:00Z"
+      }
+    }
   }
 }

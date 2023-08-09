@@ -144,6 +144,14 @@
         "href": "https://www.bbc.com/tamil/articles/clj256gp951o",
         "timestamp": 1673757693736
       }
-    ]
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentType": "list-datadriven",
+        "pageIdentifier": "tamil.popular.read.page",
+        "timePublished": "2023-06-19T14:36:00Z",
+        "timeUpdated": "2023-06-19T15:06:00Z"
+      }
+    }
   }
 }

@@ -144,6 +144,14 @@
         "href": "/serbian/lat/srbija-65759052",
         "timestamp": 1687155495000
       }
-    ]
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentType": "list-datadriven",
+        "pageIdentifier": "serbian.popular.read.page",
+        "timePublished": "2023-06-19T13:05:00Z",
+        "timeUpdated": "2023-06-19T15:05:00Z"
+      }
+    }
   }
 }
