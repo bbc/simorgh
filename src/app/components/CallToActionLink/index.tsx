@@ -11,7 +11,7 @@ const CallToActionLink = ({
   children,
 }: PropsWithChildren<CallToActionLinkProps>) => {
   return (
-    <a href={href} className={className} css={styles.linkBackground}>
+    <a href={href} target="_blank" className={className} css={styles.linkBackground}>
       <div css={styles.linkTextWrapper}>
         <Text size="pica" fontVariant="sansBold" css={styles.linkText}>
           {children}
