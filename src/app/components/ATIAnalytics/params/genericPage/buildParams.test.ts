@@ -518,5 +518,119 @@ describe('implementation of buildPageATIParams and buildPageATIUrl', () => {
         expect(parsedATIURLParams).toEqual(expectedATIURLParams);
       });
     });
+
+    describe('MAP', () => {
+      const cpsMAPAtiData = {
+        campaigns: [
+          {
+            campaignId: '5a988e4739461b000e9dabfc',
+            campaignName: 'WS - Update me',
+          },
+        ],
+        categoryName: 'News',
+        contentId:
+          'urn:bbc:cps:curie:asset:6d745333-c79d-e245-a5b2-f4acb7de35e1',
+        contentType: 'article-media-asset',
+        language: 'es',
+        ldpThingIds:
+          '75612fa6-147c-4a43-97fa-fcf70d9cced3~7613abe4-1c05-4594-a5ec-3ccf6268b220~e0d04166-b92f-468e-9e68-d5f9330e6ae7',
+        ldpThingLabels: 'Politics~Nicaragua~Latin+America',
+        pageIdentifier: 'media::mundo.media.media_asset.41174775.page',
+        pageTitle:
+          '¿Qué es el albur en México y cómo puedes saber si te están "albureando"?',
+        producerId: null,
+        producerName: 'MUNDO',
+        timePublished: '2017-09-14T14:09:14.000Z',
+        timeUpdated: '2017-09-14T14:09:14.000Z',
+      };
+
+      const validPageURLParams = {
+        appName: 'atiAnalyticsAppName',
+        campaigns: [
+          {
+            campaignId: '5a988e4739461b000e9dabfc',
+            campaignName: 'WS - Update me',
+          },
+        ],
+        categoryName: 'News',
+        contentId:
+          'urn:bbc:cps:curie:asset:6d745333-c79d-e245-a5b2-f4acb7de35e1',
+        contentType: 'article-media-asset',
+        isUK: undefined,
+        language: 'es',
+        ldpThingIds:
+          '75612fa6-147c-4a43-97fa-fcf70d9cced3~7613abe4-1c05-4594-a5ec-3ccf6268b220~e0d04166-b92f-468e-9e68-d5f9330e6ae7',
+        ldpThingLabels: 'Politics~Nicaragua~Latin+America',
+        libraryVersion: 'simorgh',
+        nationsProducer: undefined,
+        origin: undefined,
+        pageIdentifier: 'media::mundo.media.media_asset.41174775.page',
+        pageTitle:
+          '¿Qué es el albur en México y cómo puedes saber si te están "albureando"?',
+        platform: 'canonical',
+        previousPath: undefined,
+        producerId: 'atiAnalyticsProducerId',
+        service: 'mundo',
+        statsDestination: 'statsDestination',
+        timePublished: '2017-09-14T14:09:14.000Z',
+        timeUpdated: '2017-09-14T14:09:14.000Z',
+      };
+
+      it('should return the correct object for the page given the ATI configuration', () => {
+        const result = buildPageATIParams({
+          atiData: cpsMAPAtiData,
+          requestContext,
+          serviceContext: { ...serviceContext, service: 'mundo' },
+        });
+        expect(result).toStrictEqual(validPageURLParams);
+      });
+
+      it('should use the serviceContext lang property if language is absent in atiData', () => {
+        const result = buildPageATIParams({
+          atiData: { ...cpsMAPAtiData, language: null },
+          requestContext,
+          serviceContext: { ...serviceContext, service: 'mundo', lang: 'es' },
+        });
+        expect(result).toEqual(validPageURLParams);
+      });
+
+      it('should return the correct url for a page given the ATI configuration', () => {
+        const url = buildPageATIUrl({
+          atiData: cpsMAPAtiData,
+          requestContext,
+          serviceContext,
+        });
+
+        const parsedATIURLParams = Object.fromEntries(
+          new URLSearchParams(url as string),
+        );
+
+        const expectedATIURLParams = {
+          hl: '00-00-00',
+          lng: 'en-US',
+          p: 'media::mundo.media.media_asset.41174775.page',
+          r: '0x0x24x24',
+          re: '1024x768',
+          s: '598285',
+          s2: 'atiAnalyticsProducerId',
+          x1: '[urn:bbc:cps:curie:asset:6d745333-c79d-e245-a5b2-f4acb7de35e1]',
+          x2: '[responsive]',
+          x3: '[atiAnalyticsAppName]',
+          x4: '[es]',
+          x5: '[http%3A%2F%2Flocalhost%2F]',
+          x7: '[article-media-asset]',
+          x8: '[simorgh]',
+          x9: '[¿Qué%20es%20el%20albur%20en%20México%20y%20cómo%20puedes%20saber%20si%20te%20están%20"albureando"?]',
+          x11: '[2017-09-14T14:09:14.000Z]',
+          x12: '[2017-09-14T14:09:14.000Z]',
+          x13: '[Politics~Nicaragua~Latin+America]',
+          x14: '[75612fa6-147c-4a43-97fa-fcf70d9cced3~7613abe4-1c05-4594-a5ec-3ccf6268b220~e0d04166-b92f-468e-9e68-d5f9330e6ae7]',
+          x16: '[WS - Update me]',
+          x17: '[News]',
+        };
+
+        expect(parsedATIURLParams).toEqual(expectedATIURLParams);
+      });
+    });
   });
 });
