@@ -144,6 +144,14 @@
         "href": "/japanese/features-and-analysis-55226059",
         "timestamp": 1607408782000
       }
-    ]
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentType": "list-datadriven",
+        "pageIdentifier": "japanese.popular.read.page",
+        "timePublished": "2023-06-19T14:40:00Z",
+        "timeUpdated": "2023-06-19T14:55:00Z"
+      }
+    }
   }
 }

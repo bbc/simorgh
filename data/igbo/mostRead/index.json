@@ -144,7 +144,15 @@
         "href": "https://www.bbc.com/igbo/articles/cn064091958o",
         "timestamp": 1672983127718
       }
-    ]
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentType": "list-datadriven",
+        "pageIdentifier": "igbo.popular.read.page",
+        "timePublished": "2023-07-03T14:26:00Z",
+        "timeUpdated": "2023-07-03T16:26:00Z"
+      }
+    }
   },
   "contentType": "application/json; charset=utf-8"
 }

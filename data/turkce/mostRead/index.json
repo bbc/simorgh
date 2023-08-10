@@ -144,6 +144,14 @@
         "href": "/turkce/haberler-turkiye-57230730",
         "timestamp": 1667468338000
       }
-    ]
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentType": "list-datadriven",
+        "pageIdentifier": "turkce.popular.read.page",
+        "timePublished": "2023-06-19T14:52:00Z",
+        "timeUpdated": "2023-06-19T15:07:00Z"
+      }
+    }
   }
 }

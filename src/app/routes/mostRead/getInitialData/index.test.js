@@ -167,8 +167,26 @@ describe('MostReadPage - BFF Fetching', () => {
 
     const { pageData } = response;
 
+    expect(pageData).toHaveProperty('generated');
+    expect(pageData).toHaveProperty('lastRecordTimeStamp');
+    expect(pageData).toHaveProperty('firstRecordTimeStamp');
+    expect(pageData).toHaveProperty('items');
+    expect(pageData).toHaveProperty('metadata');
+    expect(pageData.metadata).toHaveProperty('type');
+    expect(pageData.metadata).toHaveProperty('atiAnalytics');
+    expect(pageData.metadata.atiAnalytics).toHaveProperty('contentType');
+    expect(pageData.metadata.atiAnalytics).toHaveProperty('pageIdentifier');
+    expect(pageData.metadata.atiAnalytics).toHaveProperty('timePublished');
+    expect(pageData.metadata.atiAnalytics).toHaveProperty('timeUpdated');
+
     expect(pageData.lastRecordTimeStamp).toEqual('2023-06-19T15:03:00Z');
     expect(pageData.metadata.type).toEqual('mostRead');
+    expect(pageData.metadata.atiAnalytics).toStrictEqual({
+      contentType: 'list-datadriven',
+      pageIdentifier: 'pidgin.popular.read.page',
+      timePublished: '2023-06-19T13:03:00Z',
+      timeUpdated: '2023-06-19T15:03:00Z',
+    });
     expect(pageData.items[0].timestamp).toEqual(1687171616901);
     expect(pageData.items[0].title).toEqual(
       'Teams wey qualify for Afcon 2023 and how things stand for each group',

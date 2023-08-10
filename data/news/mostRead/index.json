@@ -144,7 +144,15 @@
         "href": "/news/world-us-canada-65965665",
         "timestamp": 1687434283000
       }
-    ]
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentType": "list-datadriven",
+        "pageIdentifier": "news.popular.read.page",
+        "timePublished": "2023-06-22T13:22:00Z",
+        "timeUpdated": "2023-06-22T13:37:00Z"
+      }
+    }
   },
   "contentType": "application/json; charset=utf-8"
 }
