@@ -250,7 +250,6 @@ describe('ATIAnalytics params', () => {
     it('should return the correct article url', () => {
       const url = buildATIUrl({
         requestContext: { ...requestContext, pageType: ARTICLE_PAGE },
-        data: article,
         atiData: articlePageAnalyticsData,
         serviceContext,
       });
@@ -335,7 +334,6 @@ describe('ATIAnalytics params', () => {
     it('should return the correct MAP url', () => {
       const url = buildATIUrl({
         requestContext: { ...requestContext, pageType: MEDIA_ASSET_PAGE },
-        data: MAP,
         atiData: cpsMAPPageAnalyticsData,
         serviceContext,
       });
@@ -376,7 +374,6 @@ describe('ATIAnalytics params', () => {
     it('should return the correct PGL url', () => {
       const url = buildATIUrl({
         requestContext: { ...requestContext, pageType: PHOTO_GALLERY_PAGE },
-        data: PGL,
         atiData: cpsPGLPageAnalyticsData,
         serviceContext,
       });
@@ -451,7 +448,6 @@ describe('ATIAnalytics params', () => {
     it('should have both ref parameter and x6 referrer url parameter, if referrer url exists', () => {
       const atiUrl = buildATIUrl({
         requestContext: { ...requestContext, pageType: ARTICLE_PAGE },
-        data: article,
         serviceContext,
         atiData: articlePageAnalyticsData,
       }) as string;
@@ -464,7 +460,6 @@ describe('ATIAnalytics params', () => {
     it('should have ref parameter as the last parameter, if referrer url exists', () => {
       const atiUrl = buildATIUrl({
         requestContext: { ...requestContext, pageType: ARTICLE_PAGE },
-        data: article,
         serviceContext,
         atiData: articlePageAnalyticsData,
       }) as string;
@@ -480,7 +475,6 @@ describe('ATIAnalytics params', () => {
           pageType: ARTICLE_PAGE,
           previousPath: '',
         },
-        data: article,
         serviceContext,
         atiData: articlePageAnalyticsData,
       }) as string;
