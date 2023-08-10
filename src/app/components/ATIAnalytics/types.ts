@@ -75,6 +75,7 @@ export interface ATIData {
   pageIdentifier?: string;
   pageTitle?: string | null;
   producerId?: string | null;
+  producerName?: string | null;
   timePublished?: string | null;
   timeUpdated?: string | null;
 }

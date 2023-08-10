@@ -199,6 +199,51 @@ const articlePageAnalyticsData: ATIData = {
   timeUpdated: '2023-07-19T15:57:54.500Z',
 };
 
+const cpsMAPPageAnalyticsData: ATIData = {
+  campaigns: [
+    {
+      campaignId: '5a988e4739461b000e9dabfc',
+      campaignName: 'WS - Update me',
+    },
+  ],
+  categoryName: 'News',
+  contentId: 'urn:bbc:cps:4d36f80b-8711-0b4e-8da0-ef76ae8ac470',
+  contentType: 'article-media-asset',
+  language: 'es',
+  ldpThingIds:
+    '75612fa6-147c-4a43-97fa-fcf70d9cced3~7613abe4-1c05-4594-a5ec-3ccf6268b220~e0d04166-b92f-468e-9e68-d5f9330e6ae7',
+  ldpThingLabels: 'Politics~Nicaragua~Latin+America',
+  pageIdentifier: 'media::mundo.media.media_asset.41174775.page',
+  pageTitle:
+    '¿Qué es el albur en México y cómo puedes saber si te están "albureando"?',
+  producerId: null,
+  producerName: 'MUNDO',
+  timePublished: '2017-09-14T14:09:14.000Z',
+  timeUpdated: '2017-09-14T14:09:14.000Z',
+};
+
+const cpsPGLPageAnalyticsData: ATIData = {
+  campaigns: [
+    {
+      campaignId: '5a988e3139461b000e9dabf9',
+      campaignName: 'WS - Divert me',
+    },
+  ],
+  categoryName: 'News',
+  contentId: 'urn:bbc:cps:curie:asset:08e22e90-7361-cd47-b586-7cb53fc5a012',
+  contentType: 'article-photo-gallery',
+  language: 'es',
+  ldpThingIds: '25844b6e-80b0-4de9-8ea0-7a35e7d4086f',
+  ldpThingLabels: 'Technology',
+  pageIdentifier: 'sport::mundo.sport.photo_gallery.36935058.page',
+  pageTitle:
+    'Río 2016, el antes y el ahora: cómo ha cambiado la ropa deportiva en más de un siglo de juegos olímpicos',
+  producerId: null,
+  producerName: 'MUNDO',
+  timePublished: '2016-08-07T09:21:02.000Z',
+  timeUpdated: '2016-08-07T09:21:02.000Z',
+};
+
 describe('ATIAnalytics params', () => {
   describe('buildATIUrl', () => {
     it('should return the correct article url', () => {
@@ -290,22 +335,82 @@ describe('ATIAnalytics params', () => {
       const url = buildATIUrl({
         requestContext: { ...requestContext, pageType: MEDIA_ASSET_PAGE },
         data: MAP,
+        atiData: cpsMAPPageAnalyticsData,
         serviceContext,
       });
-      expect(url).toMatchInlineSnapshot(
-        `"s=598285&s2=atiAnalyticsProducerId&p=pageIdentifier&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Acps%3A4d36f80b-8711-0b4e-8da0-ef76ae8ac470]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http%253A%252F%252Flocalhost%252F]&x7=[article-media-asset]&x8=[simorgh]&x9=[headline%2520-%2520brandName]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x16=[WS%20-%20Inspire%20me]&x17=[News]"`,
+
+      const parsedATIURLParams = Object.fromEntries(
+        new URLSearchParams(url as string),
       );
+
+      const expectedATIURLParams = {
+        hl: '00-00-00',
+        lng: 'en-US',
+        p: 'media::mundo.media.media_asset.41174775.page',
+        r: '0x0x24x24',
+        re: '1024x768',
+        ref: 'originhttp://www.example.com',
+        s: '598285',
+        s2: 'atiAnalyticsProducerId',
+        x1: '[urn:bbc:cps:4d36f80b-8711-0b4e-8da0-ef76ae8ac470]',
+        x2: '[responsive]',
+        x3: '[atiAnalyticsAppName]',
+        x4: '[es]',
+        x5: '[http%3A%2F%2Flocalhost%2F]',
+        x6: '[originhttp%3A%2F%2Fwww.example.com]',
+        x7: '[article-media-asset]',
+        x8: '[simorgh]',
+        x9: '[¿Qué%20es%20el%20albur%20en%20México%20y%20cómo%20puedes%20saber%20si%20te%20están%20"albureando"?]',
+        x11: '[2017-09-14T14:09:14.000Z]',
+        x12: '[2017-09-14T14:09:14.000Z]',
+        x13: '[Politics~Nicaragua~Latin+America]',
+        x14: '[75612fa6-147c-4a43-97fa-fcf70d9cced3~7613abe4-1c05-4594-a5ec-3ccf6268b220~e0d04166-b92f-468e-9e68-d5f9330e6ae7]',
+        x16: '[WS - Update me]',
+        x17: '[News]',
+      };
+
+      expect(parsedATIURLParams).toEqual(expectedATIURLParams);
     });
 
     it('should return the correct PGL url', () => {
       const url = buildATIUrl({
         requestContext: { ...requestContext, pageType: PHOTO_GALLERY_PAGE },
         data: PGL,
+        atiData: cpsPGLPageAnalyticsData,
         serviceContext,
       });
-      expect(url).toMatchInlineSnapshot(
-        `"s=598285&s2=atiAnalyticsProducerId&p=pageIdentifier&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Acps%3A4d36f80b-8711-0b4e-8da0-ef76ae8ac470]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http%253A%252F%252Flocalhost%252F]&x7=[article-photo-gallery]&x8=[simorgh]&x9=[headline%2520-%2520brandName]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]"`,
+
+      const parsedATIURLParams = Object.fromEntries(
+        new URLSearchParams(url as string),
       );
+
+      const expectedATIURLParams = {
+        hl: '00-00-00',
+        lng: 'en-US',
+        p: 'sport::mundo.sport.photo_gallery.36935058.page',
+        r: '0x0x24x24',
+        re: '1024x768',
+        ref: 'originhttp://www.example.com',
+        s: '598285',
+        s2: 'atiAnalyticsProducerId',
+        x1: '[urn:bbc:cps:curie:asset:08e22e90-7361-cd47-b586-7cb53fc5a012]',
+        x2: '[responsive]',
+        x3: '[atiAnalyticsAppName]',
+        x4: '[es]',
+        x5: '[http%3A%2F%2Flocalhost%2F]',
+        x6: '[originhttp%3A%2F%2Fwww.example.com]',
+        x7: '[article-photo-gallery]',
+        x8: '[simorgh]',
+        x9: '[Río%202016,%20el%20antes%20y%20el%20ahora:%20cómo%20ha%20cambiado%20la%20ropa%20deportiva%20en%20más%20de%20un%20siglo%20de%20juegos%20olímpicos]',
+        x11: '[2016-08-07T09:21:02.000Z]',
+        x12: '[2016-08-07T09:21:02.000Z]',
+        x13: '[Technology]',
+        x14: '[25844b6e-80b0-4de9-8ea0-7a35e7d4086f]',
+        x16: '[WS - Divert me]',
+        x17: '[News]',
+      };
+
+      expect(parsedATIURLParams).toEqual(expectedATIURLParams);
     });
 
     it('should return the correct Homepage url', () => {
