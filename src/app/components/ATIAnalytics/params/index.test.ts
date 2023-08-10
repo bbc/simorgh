@@ -187,6 +187,7 @@ const homePageAnalyticsData: ATIData = {
 const articlePageAnalyticsData: ATIData = {
   categoryName: 'Nigeria~Education~Lagos%20state~Women',
   contentId: 'urn:bbc:optimo:asset:crgrx86em6yo',
+  contentType: 'article',
   language: 'pcm',
   ldpThingIds:
     '3d5d5e30-dd50-4041-96d5-c970b20005b9~6942cb29-9d3f-4c9c-9806-0a0578c286d6~d651d520-a675-4911-8832-1596f257000b~e45cb5f8-3c87-4ebd-ac1c-058e9be22862',
