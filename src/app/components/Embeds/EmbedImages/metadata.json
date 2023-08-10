@@ -1,0 +1,28 @@
+{
+  "lastUpdated": {
+    "day": 20,
+    "month": "July",
+    "year": 2023
+  },
+  "uxAccessibilityDoc": {
+    "done": false,
+    "reference": {
+      "url": "",
+      "label": "Documented screen reader UX"
+    }
+  },
+  "acceptanceCriteria": {
+    "done": false,
+    "reference": {
+      "url": "add link of resource",
+      "label": "Accessibility acceptance criteria"
+    }
+  },
+  "swarm": {
+    "done": false,
+    "reference": {
+      "url": "add link of resource",
+      "label": "Accessibility swarm results"
+    }
+  }
+}

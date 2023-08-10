@@ -144,6 +144,14 @@
         "href": "https://www.bbc.com/pidgin/articles/c72x94pnnn4o",
         "timestamp": 1687088487991
       }
-    ]
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentType": "list-datadriven",
+        "pageIdentifier": "pidgin.popular.read.page",
+        "timePublished": "2023-06-19T13:03:00Z",
+        "timeUpdated": "2023-06-19T15:03:00Z"
+      }
+    }
   }
 }

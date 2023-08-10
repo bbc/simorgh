@@ -30,10 +30,6 @@ import {
 } from './cpsAssetPage/buildParams';
 import { buildPageATIUrl, buildPageATIParams } from './genericPage/buildParams';
 import {
-  buildMostReadATIParams,
-  buildMostReadATIUrl,
-} from './mostReadPage/buildParams';
-import {
   buildMostWatchedATIParams,
   buildMostWatchedATIUrl,
 } from './mostWatchedPage/buildParams';
@@ -41,10 +37,6 @@ import {
   buildIndexPageATIParams,
   buildIndexPageATIUrl,
 } from './indexPage/buildParams';
-import {
-  buildTopicPageATIUrl,
-  buildTopicPageATIParams,
-} from './topicPage/buildParams';
 import { RequestContextProps } from '../../../contexts/RequestContext';
 import { ServiceConfig } from '../../../models/types/serviceConfig';
 import {
@@ -59,7 +51,12 @@ const ARTICLE_PHOTO_GALLERY = 'article-photo-gallery';
 const ARTICLE_CORRESPONDENT_PIECE = 'article-correspondent';
 const ARTICLE_SHORT_FORM_VIDEO = 'article-sfv';
 
-const MIGRATED_PAGE_TYPES: PageTypes[] = [HOME_PAGE];
+const MIGRATED_PAGE_TYPES: PageTypes[] = [
+  HOME_PAGE,
+  ARTICLE_PAGE,
+  TOPIC_PAGE,
+  MOST_READ_PAGE,
+];
 
 const noOp = () => {
   return {};
@@ -86,11 +83,11 @@ const pageTypeUrlBuilders = {
     buildCpsAssetPageATIUrl(data, requestContext, serviceContext, ARTICLE_PAGE),
   [FRONT_PAGE]: buildIndexPageATIUrl,
   [MEDIA_PAGE]: buildTvRadioATIUrl,
-  [MOST_READ_PAGE]: buildMostReadATIUrl,
+  [MOST_READ_PAGE]: noOp,
   [MOST_WATCHED_PAGE]: buildMostWatchedATIUrl,
   [INDEX_PAGE]: buildIndexPageATIUrl,
   [FEATURE_INDEX_PAGE]: buildIndexPageATIUrl,
-  [TOPIC_PAGE]: buildTopicPageATIUrl,
+  [TOPIC_PAGE]: noOp,
   [MEDIA_ASSET_PAGE]: (
     data: PageData,
     requestContext: RequestContextProps,
@@ -139,11 +136,11 @@ const pageTypeParamBuilders = {
     buildArticleATIParams(data, requestContext, serviceContext, 'article-sfv'),
   [FRONT_PAGE]: buildIndexPageATIParams,
   [MEDIA_PAGE]: buildTvRadioATIParams,
-  [MOST_READ_PAGE]: buildMostReadATIParams,
+  [MOST_READ_PAGE]: noOp,
   [MOST_WATCHED_PAGE]: buildMostWatchedATIParams,
   [INDEX_PAGE]: buildIndexPageATIParams,
   [FEATURE_INDEX_PAGE]: buildIndexPageATIParams,
-  [TOPIC_PAGE]: buildTopicPageATIParams,
+  [TOPIC_PAGE]: noOp,
   [MEDIA_ASSET_PAGE]: (
     data: PageData,
     requestContext: RequestContextProps,

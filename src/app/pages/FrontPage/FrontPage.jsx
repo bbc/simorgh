@@ -1,5 +1,4 @@
 import React, { Fragment, useContext } from 'react';
-import { string, node } from 'prop-types';
 import path from 'ramda/src/path';
 import findIndex from 'ramda/src/findIndex';
 import styled from '@emotion/styled';
@@ -13,11 +12,9 @@ import MPUContainer from '#containers/Ad/MPU';
 import IndexPageContainer from '#components/PageLayout/IndexPageContainer';
 import IndexPageSection from '#containers/IndexPageSection';
 import RadioScheduleContainer from '#containers/RadioSchedule';
-import MostReadContainer from '#containers/MostRead';
-import MostReadSection from '#containers/MostRead/section';
-import MostReadSectionLabel from '#containers/MostRead/label';
 import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
 import { NEGATIVE_MARGIN } from '#lib/styles.const';
+import MostRead from '../../components/MostRead';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import MetadataContainer from '../../components/Metadata';
@@ -26,7 +23,7 @@ import { GHOST } from '../../components/ThemeProvider/palette';
 import LinkedData from '../../components/LinkedData';
 import VisuallyHiddenText from '../../components/VisuallyHiddenText';
 
-const FrontPageMostReadSection = styled(MostReadSection)`
+const FrontPageMostReadSection = styled.div`
   /* To centre page layout for Group 4+ */
   margin: 0 auto;
   width: 100%; /* Needed for IE11 */
@@ -39,26 +36,7 @@ const StyledRadioScheduleContainer = styled(RadioScheduleContainer)`
   ${NEGATIVE_MARGIN}
 `;
 
-const MostReadWrapper = ({ children }) => (
-  <FrontPageMostReadSection>
-    <MostReadSectionLabel backgroundColor={GHOST} />
-    {children}
-  </FrontPageMostReadSection>
-);
-
-const renderMostRead = mostReadEndpointOverride => (
-  <MostReadContainer
-    mostReadEndpointOverride={mostReadEndpointOverride}
-    columnLayout="twoColumn"
-    wrapper={MostReadWrapper}
-  />
-);
-
-MostReadWrapper.propTypes = {
-  children: node.isRequired,
-};
-
-const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
+const FrontPage = ({ pageData }) => {
   const { product, serviceLocalizedName, translations, frontPageTitle } =
     useContext(ServiceContext);
 
@@ -71,7 +49,20 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
   const radioScheduleData = path(['radioScheduleData'], pageData);
   const radioSchedulePosition = path(['radioSchedulePosition'], pageData);
 
+  const { mostRead: mostReadInitialData } = pageData;
+
   const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
+
+  const renderMostRead = () => (
+    <FrontPageMostReadSection>
+      <MostRead
+        data={mostReadInitialData}
+        columnLayout="twoColumn"
+        size="default"
+        headingBackgroundColour={GHOST}
+      />
+    </FrontPageMostReadSection>
+  );
 
   const offScreenText = (
     // eslint-disable-next-line jsx-a11y/aria-role
@@ -110,8 +101,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
         <IndexPageContainer>
           {groups.map((group, index) => (
             <Fragment key={group.title}>
-              {group.type === 'useful-links' &&
-                renderMostRead(mostReadEndpointOverride)}
+              {group.type === 'useful-links' && renderMostRead()}
               {radioScheduleData &&
                 radioSchedulePosition === group.semanticGroupName && (
                   <StyledRadioScheduleContainer
@@ -122,7 +112,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
               {group.type === 'top-stories' && <MPUContainer />}
             </Fragment>
           ))}
-          {!hasUsefulLinks && renderMostRead(mostReadEndpointOverride)}
+          {!hasUsefulLinks && renderMostRead()}
         </IndexPageContainer>
       </main>
     </>
@@ -131,11 +121,6 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
 
 FrontPage.propTypes = {
   pageData: frontPageDataPropTypes.isRequired,
-  mostReadEndpointOverride: string,
-};
-
-FrontPage.defaultProps = {
-  mostReadEndpointOverride: null,
 };
 
 export default FrontPage;

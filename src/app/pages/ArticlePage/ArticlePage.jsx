@@ -41,6 +41,8 @@ import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 import ScrollablePromo from '#components/ScrollablePromo';
 import CpsRecommendations from '#containers/CpsRecommendations';
+import EmbedImages from '../../components/Embeds/EmbedImages';
+import EmbedHtml from '../../components/Embeds/EmbedHtml';
 import MostRead from '../../components/MostRead';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
@@ -111,7 +113,10 @@ const ArticlePage = ({ pageData }) => {
   const embedProviderName = path(['model', 'provider'], embedBlock);
   const isUgcUploader = embedProviderName === 'ugc-uploader';
 
-  const { mostRead: mostReadInitialData } = pageData;
+  const {
+    metadata: { atiAnalytics },
+    mostRead: mostReadInitialData,
+  } = pageData;
 
   const componentsToRender = {
     visuallyHiddenHeadline,
@@ -141,6 +146,8 @@ const ArticlePage = ({ pageData }) => {
       hasByline ? null : <Timestamp {...props} popOut={false} />,
     social: SocialEmbedContainer,
     embed: props => (isUgcUploader ? <Uploader {...props} /> : null),
+    embedHtml: props => <EmbedHtml {...props} />,
+    embedImages: props => <EmbedImages {...props} />,
     group: gist,
     links: props => <ScrollablePromo {...props} />,
     mpu: props =>
@@ -182,7 +189,7 @@ const ArticlePage = ({ pageData }) => {
 
   return (
     <div css={styles.pageWrapper}>
-      <ATIAnalytics data={pageData} />
+      <ATIAnalytics atiData={atiAnalytics} />
       <ChartbeatAnalytics
         sectionName={pageData?.relatedContent?.section?.name}
         title={getPromoHeadline(pageData)}

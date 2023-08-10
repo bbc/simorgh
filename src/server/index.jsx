@@ -213,6 +213,7 @@ server.get(
         pageType,
         toggles,
         getAgent,
+        isAmp,
       });
 
       data.toggles = toggles;
