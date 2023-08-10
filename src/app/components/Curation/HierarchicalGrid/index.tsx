@@ -8,12 +8,19 @@ import VisuallyHiddenText from '../../VisuallyHiddenText';
 import formatDuration from '../../../lib/utilities/formatDuration';
 import Promo from '../../../legacy/components/Promo';
 import { DESKTOP, TABLET, MOBILE, SMALL } from './dataStructures';
-import { styles } from './index.styles';
+import { CompactPromo, styles } from './index.styles';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { CurationGridProps } from '../types';
 import { RequestContext } from '../../../contexts/RequestContext';
 
-const getStyles = (promoCount: number, i: number, mq: Theme['mq']) => {
+const getStyles = (
+  promoCount: number,
+  i: number,
+  mq: Theme['mq'],
+  visualProminence?: string,
+) => {
+  const desktopStyle =
+    visualProminence === 'LOW' ? CompactPromo : DESKTOP[promoCount - 1][i];
   return css({
     [mq.GROUP_1_MAX_WIDTH]: {
       ...SMALL[promoCount - 1][i],
@@ -25,7 +32,7 @@ const getStyles = (promoCount: number, i: number, mq: Theme['mq']) => {
       ...TABLET[promoCount - 1][i],
     },
     [mq.GROUP_4_MIN_WIDTH]: {
-      ...DESKTOP[promoCount - 1][i],
+      ...desktopStyle,
     },
   });
 };
@@ -45,6 +52,7 @@ const HiearchicalGrid = ({ promos, headingLevel }: CurationGridProps) => {
     <div data-testid="hierarchical-grid">
       <ul role="list" css={styles.list} data-testid="topic-promos">
         {promoItems.map((promo, i) => {
+          console.log({ promo });
           const duration = moment.duration(promo.duration, 'seconds');
           const separator = ',';
           const formattedDuration = formatDuration({ duration, separator });
@@ -66,7 +74,7 @@ const HiearchicalGrid = ({ promos, headingLevel }: CurationGridProps) => {
               key={promo.id}
               css={({ mq }: Theme) => [
                 styles.item,
-                getStyles(promoItems.length, i, mq),
+                getStyles(promoItems.length, i, mq, promo.visualProminence),
               ]}
             >
               <Promo>
