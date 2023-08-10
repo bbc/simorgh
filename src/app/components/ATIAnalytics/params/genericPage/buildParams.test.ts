@@ -827,6 +827,24 @@ describe('implementation of buildPageATIParams and buildPageATIUrl', () => {
         expect(result).toEqual(validPageURLParams);
       });
 
+      it('should use the set producerId in atiData in favour of the serviceContext atiAnalyticsProducerId poperty', () => {
+        const result = buildPageATIParams({
+          atiData: { ...cpsCSPAtiData, producerId: 'overrideProducerId' },
+          requestContext,
+          serviceContext: {
+            ...serviceContext,
+            atiAnalyticsProducerId: '64',
+            service: 'news',
+            lang: 'en-gb',
+          },
+        });
+        const expectedParamsWithOverride = {
+          ...validPageURLParams,
+          producerId: 'overrideProducerId',
+        };
+        expect(result).toEqual(expectedParamsWithOverride);
+      });
+
       it('should return the correct url for a page given the ATI configuration', () => {
         const url = buildPageATIUrl({
           atiData: cpsCSPAtiData,
