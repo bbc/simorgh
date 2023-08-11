@@ -103,66 +103,6 @@ const media: PageData = {
   contentType: 'player-live',
 };
 
-const MAP: PageData = {
-  promo: {
-    headlines: {
-      headline: 'headline',
-    },
-  },
-  metadata: {
-    id: 'id',
-    language: 'language',
-    analyticsLabels: {
-      counterName: 'pageIdentifier',
-      pageIdentifier: 'pageIdentifier',
-      pageTitle: 'pageTitle',
-      contentId: 'urn:bbc:cps:4d36f80b-8711-0b4e-8da0-ef76ae8ac470',
-    },
-    firstPublished: 1566574729,
-    lastPublished: 1566577208,
-    locators: {
-      curie: 'http://www.bbc.co.uk/asset/4d36f80b-8711-0b4e-8da0-ef76ae8ac470',
-    },
-    passport: {
-      category: {
-        categoryId:
-          'http://www.bbc.co.uk/ontologies/applicationlogic-news/News',
-        categoryName: 'News',
-      },
-      campaigns: [
-        {
-          campaignId: '5a988e2139461b000e9dabf7',
-          campaignName: 'WS - Inspire me',
-        },
-      ],
-    },
-  },
-};
-
-const PGL: PageData = {
-  promo: {
-    headlines: {
-      headline: 'headline',
-    },
-  },
-  metadata: {
-    id: 'id',
-    language: 'language',
-    analyticsLabels: {
-      counterName: 'pageIdentifier',
-      pageIdentifier: 'pageIdentifier',
-      pageTitle: 'pageTitle',
-      contentId: 'urn:bbc:cps:4d36f80b-8711-0b4e-8da0-ef76ae8ac470',
-    },
-    firstPublished: 1566574729,
-    lastPublished: 1566577208,
-    locators: {
-      curie: 'http://www.bbc.co.uk/asset/4d36f80b-8711-0b4e-8da0-ef76ae8ac470',
-    },
-    passport: {},
-  },
-};
-
 const idxPage: PageData = {
   metadata: {
     analyticsLabels: {
@@ -540,7 +480,6 @@ describe('ATIAnalytics params', () => {
     it('should return the correct article params', () => {
       const params = buildATIEventTrackingParams({
         requestContext: { ...requestContext, pageType: ARTICLE_PAGE },
-        data: article,
         atiData: articlePageAnalyticsData,
         serviceContext,
       });
