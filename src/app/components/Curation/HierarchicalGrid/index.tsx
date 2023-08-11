@@ -11,6 +11,7 @@ import { DESKTOP, TABLET, MOBILE, SMALL } from './dataStructures';
 import {
   CompactPromo,
   HorizontalPromo,
+  SmallCompactPromo,
   styles,
   VerticalPromo,
 } from './index.styles';
@@ -25,13 +26,13 @@ const getStyles = (
   visualProminence?: string,
 ) => {
   const desktopStyle =
-    visualProminence === 'LOW' ? CompactPromo : DESKTOP[promoCount - 1][i];
+    visualProminence === 'LOW' ? SmallCompactPromo : DESKTOP[promoCount - 1][i];
   const smallStyle =
-    visualProminence === 'LOW' ? CompactPromo : SMALL[promoCount - 1][i];
+    visualProminence === 'LOW' ? SmallCompactPromo : SMALL[promoCount - 1][i];
   const mobileStyle =
-    visualProminence === 'LOW' ? CompactPromo : MOBILE[promoCount - 1][i];
+    visualProminence === 'LOW' ? SmallCompactPromo : MOBILE[promoCount - 1][i];
   const tabletStyle =
-    visualProminence === 'LOW' ? CompactPromo : TABLET[promoCount - 1][i];
+    visualProminence === 'LOW' ? SmallCompactPromo : TABLET[promoCount - 1][i];
   return css({
     [mq.GROUP_1_MAX_WIDTH]: {
       ...smallStyle,
