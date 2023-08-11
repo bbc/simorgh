@@ -8,7 +8,12 @@ import VisuallyHiddenText from '../../VisuallyHiddenText';
 import formatDuration from '../../../lib/utilities/formatDuration';
 import Promo from '../../../legacy/components/Promo';
 import { DESKTOP, TABLET, MOBILE, SMALL } from './dataStructures';
-import { CompactPromo, styles } from './index.styles';
+import {
+  CompactPromo,
+  HorizontalPromo,
+  styles,
+  VerticalPromo,
+} from './index.styles';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { CurationGridProps } from '../types';
 import { RequestContext } from '../../../contexts/RequestContext';
@@ -21,15 +26,21 @@ const getStyles = (
 ) => {
   const desktopStyle =
     visualProminence === 'LOW' ? CompactPromo : DESKTOP[promoCount - 1][i];
+  const smallStyle =
+    visualProminence === 'LOW' ? CompactPromo : SMALL[promoCount - 1][i];
+  const mobileStyle =
+    visualProminence === 'LOW' ? CompactPromo : MOBILE[promoCount - 1][i];
+  const tabletStyle =
+    visualProminence === 'LOW' ? CompactPromo : TABLET[promoCount - 1][i];
   return css({
     [mq.GROUP_1_MAX_WIDTH]: {
-      ...SMALL[promoCount - 1][i],
+      ...smallStyle,
     },
     [mq.GROUP_2_ONLY]: {
-      ...MOBILE[promoCount - 1][i],
+      ...mobileStyle,
     },
     [mq.GROUP_3_ONLY]: {
-      ...TABLET[promoCount - 1][i],
+      ...tabletStyle,
     },
     [mq.GROUP_4_MIN_WIDTH]: {
       ...desktopStyle,
