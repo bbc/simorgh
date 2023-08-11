@@ -216,7 +216,7 @@ const cpsMAPPageAnalyticsData: ATIData = {
   ldpThingLabels: 'Politics~Nicaragua~Latin+America',
   pageIdentifier: 'media::mundo.media.media_asset.41174775.page',
   pageTitle:
-    '¿Qué es el albur en México y cómo puedes saber si te están "albureando"?',
+    '¿Qué es el albur en México y cómo puedes saber si te están "albureando"? - BBC News Mundo',
   producerId: null,
   producerName: 'MUNDO',
   timePublished: '2017-09-14T14:09:14.000Z',
@@ -238,7 +238,7 @@ const cpsPGLPageAnalyticsData: ATIData = {
   ldpThingLabels: 'Technology',
   pageIdentifier: 'sport::mundo.sport.photo_gallery.36935058.page',
   pageTitle:
-    'Río 2016, el antes y el ahora: cómo ha cambiado la ropa deportiva en más de un siglo de juegos olímpicos',
+    'Río 2016, el antes y el ahora: cómo ha cambiado la ropa deportiva en más de un siglo de juegos olímpicos - BBC News Mundo',
   producerId: null,
   producerName: 'MUNDO',
   timePublished: '2016-08-07T09:21:02.000Z',
@@ -359,7 +359,7 @@ describe('ATIAnalytics params', () => {
         x6: '[originhttp%3A%2F%2Fwww.example.com]',
         x7: '[article-media-asset]',
         x8: '[simorgh]',
-        x9: '[¿Qué%20es%20el%20albur%20en%20México%20y%20cómo%20puedes%20saber%20si%20te%20están%20"albureando"?]',
+        x9: '[¿Qué%20es%20el%20albur%20en%20México%20y%20cómo%20puedes%20saber%20si%20te%20están%20"albureando"?%20-%20BBC%20News%20Mundo]',
         x11: '[2017-09-14T14:09:14.000Z]',
         x12: '[2017-09-14T14:09:14.000Z]',
         x13: '[Politics~Nicaragua~Latin+America]',
@@ -399,7 +399,7 @@ describe('ATIAnalytics params', () => {
         x6: '[originhttp%3A%2F%2Fwww.example.com]',
         x7: '[article-photo-gallery]',
         x8: '[simorgh]',
-        x9: '[Río%202016,%20el%20antes%20y%20el%20ahora:%20cómo%20ha%20cambiado%20la%20ropa%20deportiva%20en%20más%20de%20un%20siglo%20de%20juegos%20olímpicos]',
+        x9: '[Río%202016,%20el%20antes%20y%20el%20ahora:%20cómo%20ha%20cambiado%20la%20ropa%20deportiva%20en%20más%20de%20un%20siglo%20de%20juegos%20olímpicos%20-%20BBC%20News%20Mundo]',
         x11: '[2016-08-07T09:21:02.000Z]',
         x12: '[2016-08-07T09:21:02.000Z]',
         x13: '[Technology]',
@@ -514,7 +514,7 @@ describe('ATIAnalytics params', () => {
 
       it('should not invoke buildPageATIUrl for an unsupported page types', () => {
         buildATIUrl({
-          requestContext: { ...requestContext, pageType: MEDIA_ASSET_PAGE },
+          requestContext: { ...requestContext, pageType: MEDIA_PAGE },
           atiData: homePageAnalyticsData,
           serviceContext,
         });
@@ -671,7 +671,7 @@ describe('ATIAnalytics params', () => {
     it('should return the correct MAP params', () => {
       const params = buildATIEventTrackingParams({
         requestContext: { ...requestContext, pageType: MEDIA_ASSET_PAGE },
-        data: MAP,
+        atiData: cpsMAPPageAnalyticsData,
         serviceContext,
       });
       expect(params).toEqual({
@@ -679,47 +679,68 @@ describe('ATIAnalytics params', () => {
         categoryName: 'News',
         campaigns: [
           {
-            campaignId: '5a988e2139461b000e9dabf7',
-            campaignName: 'WS - Inspire me',
+            campaignId: '5a988e4739461b000e9dabfc',
+            campaignName: 'WS - Update me',
           },
         ],
         contentId: 'urn:bbc:cps:4d36f80b-8711-0b4e-8da0-ef76ae8ac470',
         contentType: 'article-media-asset',
-        language: 'language',
-        pageIdentifier: 'pageIdentifier',
-        pageTitle: 'headline - brandName',
+        isUK: false,
+        language: 'es',
+        ldpThingIds:
+          '75612fa6-147c-4a43-97fa-fcf70d9cced3~7613abe4-1c05-4594-a5ec-3ccf6268b220~e0d04166-b92f-468e-9e68-d5f9330e6ae7',
+        ldpThingLabels: 'Politics~Nicaragua~Latin+America',
         libraryVersion: 'simorgh',
+        nationsProducer: undefined,
+        origin: 'origin',
+        pageIdentifier: 'media::mundo.media.media_asset.41174775.page',
+        pageTitle:
+          '¿Qué es el albur en México y cómo puedes saber si te están "albureando"? - BBC News Mundo',
         platform: 'canonical',
+        previousPath: 'http://www.example.com',
         producerId: 'atiAnalyticsProducerId',
         service: 'pidgin',
         statsDestination: 'statsDestination',
-        timePublished: '1970-01-01T00:00:00.000Z',
-        timeUpdated: '1970-01-01T00:00:00.000Z',
+        timePublished: '2017-09-14T14:09:14.000Z',
+        timeUpdated: '2017-09-14T14:09:14.000Z',
       });
     });
 
     it('should return the correct PGL params', () => {
       const params = buildATIEventTrackingParams({
         requestContext: { ...requestContext, pageType: PHOTO_GALLERY_PAGE },
-        data: PGL,
+        atiData: cpsPGLPageAnalyticsData,
         serviceContext,
       });
       expect(params).toEqual({
         appName: 'atiAnalyticsAppName',
-        categoryName: undefined,
-        campaigns: undefined,
-        contentId: 'urn:bbc:cps:4d36f80b-8711-0b4e-8da0-ef76ae8ac470',
+        campaigns: [
+          {
+            campaignId: '5a988e3139461b000e9dabf9',
+            campaignName: 'WS - Divert me',
+          },
+        ],
+        categoryName: 'News',
+        contentId:
+          'urn:bbc:cps:curie:asset:08e22e90-7361-cd47-b586-7cb53fc5a012',
         contentType: 'article-photo-gallery',
-        language: 'language',
-        pageIdentifier: 'pageIdentifier',
-        pageTitle: 'headline - brandName',
+        isUK: false,
+        language: 'es',
+        ldpThingIds: '25844b6e-80b0-4de9-8ea0-7a35e7d4086f',
+        ldpThingLabels: 'Technology',
         libraryVersion: 'simorgh',
+        nationsProducer: undefined,
+        origin: 'origin',
+        pageIdentifier: 'sport::mundo.sport.photo_gallery.36935058.page',
+        pageTitle:
+          'Río 2016, el antes y el ahora: cómo ha cambiado la ropa deportiva en más de un siglo de juegos olímpicos - BBC News Mundo',
         platform: 'canonical',
+        previousPath: 'http://www.example.com',
         producerId: 'atiAnalyticsProducerId',
         service: 'pidgin',
         statsDestination: 'statsDestination',
-        timePublished: '1970-01-01T00:00:00.000Z',
-        timeUpdated: '1970-01-01T00:00:00.000Z',
+        timePublished: '2016-08-07T09:21:02.000Z',
+        timeUpdated: '2016-08-07T09:21:02.000Z',
       });
     });
 
@@ -784,7 +805,7 @@ describe('ATIAnalytics params', () => {
 
       it('should not invoke buildPageATIParams for an unsupported page types', () => {
         buildATIEventTrackingParams({
-          requestContext: { ...requestContext, pageType: MEDIA_ASSET_PAGE },
+          requestContext: { ...requestContext, pageType: MEDIA_PAGE },
           atiData: homePageAnalyticsData,
           serviceContext,
         });
@@ -812,9 +833,30 @@ describe('ATIAnalytics params', () => {
 
       const pageData = null;
       const params = buildATIEventTrackingParams({
-        requestContext: { ...requestContext, pageType: PHOTO_GALLERY_PAGE },
+        requestContext: { ...requestContext, pageType: MEDIA_PAGE },
         // @ts-expect-error - pass in null value to ensure error handling working as expected
         data: pageData,
+        serviceContext,
+      });
+
+      expect(params).toEqual({});
+      expect(console.error).toHaveBeenCalledWith(
+        expect.stringContaining(
+          'ATI Event Tracking Error: Could not parse tracking values from page data:',
+        ),
+      );
+      console.error = error;
+    });
+
+    it('should not throw exception and return empty object if no atiData is passed in', () => {
+      const { error } = console;
+      console.error = jest.fn();
+
+      const atiData = null;
+      const params = buildATIEventTrackingParams({
+        requestContext: { ...requestContext, pageType: MEDIA_PAGE },
+        // @ts-expect-error - pass in null value to ensure error handling working as expected
+        atiData,
         serviceContext,
       });
 
