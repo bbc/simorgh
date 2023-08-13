@@ -32,6 +32,7 @@ const advertisingDirectives = {
     'https://edigitalsurvey.com',
     'https://*.googlesyndication.com',
     'https://cdn.privacy-mgmt.com',
+    'https://*.google.com',
   ],
   imgSrc: [
     'https://*.adsafeprotected.com',
@@ -57,6 +58,7 @@ const advertisingDirectives = {
     'https://*.imrworldwide.com',
     'https://cdn.privacy-mgmt.com',
     'https://*.permutive.com',
+    'https://*.webcontentassessor.com',
     ...advertisingServiceCountryDomains,
   ],
   prefetchSrc: ['https://*.googlesyndication.com'],
