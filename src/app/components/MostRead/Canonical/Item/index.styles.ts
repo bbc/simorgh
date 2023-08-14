@@ -35,6 +35,11 @@ const styles = {
       },
     }),
 
+  breakwordText: () =>
+    css({
+      overflowWrap: 'break-word',
+    }),
+
   timestamp: ({ spacings }: Theme) =>
     css({
       paddingTop: `${spacings.FULL}rem`,

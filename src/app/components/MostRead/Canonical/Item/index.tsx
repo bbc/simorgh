@@ -22,7 +22,15 @@ export const getParentColumns = (columnLayout: ColumnLayout) => {
     : null;
 };
 
-const getItemCss = ({ dir, size }: { dir: Direction; size: Size }) => {
+const getItemCss = ({
+  dir,
+  size,
+  href,
+}: {
+  dir: Direction;
+  size: Size;
+  href: string;
+}) => {
   const itemCss = [];
 
   if (size === 'small') {
@@ -33,6 +41,10 @@ const getItemCss = ({ dir, size }: { dir: Direction; size: Size }) => {
     itemCss.push(styles.defaultItemPadding);
   }
 
+  if (href.includes('burmese')) {
+    itemCss.push(styles.breakwordText);
+    console.log(href);
+  }
   itemCss.push(dir === 'ltr' ? styles.gridPaddingLtr : styles.gridPaddingRtl);
 
   return itemCss;
@@ -47,9 +59,8 @@ export const MostReadLink = ({
   eventTrackingData,
 }: PropsWithChildren<MostReadLinkProps>) => {
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
-
   return (
-    <div css={getItemCss({ dir, size })} dir={dir}>
+    <div css={getItemCss({ dir, size, href })} dir={dir}>
       <a
         css={[styles.link, size === 'default' && styles.defaultLink]}
         href={href}
