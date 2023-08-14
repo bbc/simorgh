@@ -133,7 +133,7 @@ describe('getThingAttributes', () => {
 
     const queryParams = buildATIPageTrackPath({
       pageTitle: 'pageTitle',
-      platform: 'platform',
+      platform: 'canonical',
       statsDestination: 'statsDestination',
     });
 
@@ -157,6 +157,43 @@ describe('getThingAttributes', () => {
       ]
     `);
   });
+
+  it('should build query params for .app routes', () => {
+    analyticsUtilFunctions.forEach(func => {
+      mockAndSet(func, func.name);
+    });
+
+    mockAndSet(marketingCampaignFunc, 'email');
+
+    const queryParams = buildATIPageTrackPath({
+      pageTitle: 'pageTitle',
+      platform: 'app',
+      statsDestination: 'statsDestination',
+      appName: 'news',
+    });
+
+    const queryParamsArray = splitUrl(queryParams);
+
+    expect(queryParamsArray).toMatchInlineSnapshot(`
+      [
+        "s=getDestination",
+        "idclient=getAtUserId",
+        "r=getScreenInfo",
+        "re=getBrowserViewPort",
+        "hl=getCurrentTime",
+        "lng=getDeviceLanguage",
+        "x2=[getAppType]",
+        "x3=[news-app]",
+        "x5=[getHref]",
+        "x6=[getReferrer]",
+        "x9=[sanitise]",
+        "x18=[isLocServeCookieSet]",
+        "xto=-----%40",
+        "ref=getReferrer",
+      ]
+    `);
+  });
+
   it('if ref param is provided, it should be the very last param so that ATI can interpret it correctly as part of the referrer URL', () => {
     analyticsUtilFunctions.forEach(func => {
       mockAndSet(func, func.name);
@@ -172,7 +209,7 @@ describe('getThingAttributes', () => {
         ldpThingLabels: 'ldpThingLabels',
         pageIdentifier: 'pageIdentifier',
         pageTitle: 'pageTitle',
-        platform: 'platform',
+        platform: 'canonical',
         producerId: 'producerId',
         timePublished: 'timePublished',
         timeUpdated: 'timeUpdated',
