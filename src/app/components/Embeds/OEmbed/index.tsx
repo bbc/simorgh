@@ -21,7 +21,6 @@ type OEmbedBlock = {
 
 const OEmbedLoader = ({ oembed }: OEmbedBlock) => {
   const { html } = oembed;
-  console.log('CHECK', html);
   return <EmbedHtml embeddableContent={html} />;
 };
 
