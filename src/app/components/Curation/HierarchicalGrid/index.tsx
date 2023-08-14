@@ -25,14 +25,14 @@ const getStyles = (
   mq: Theme['mq'],
   visualProminence?: string,
 ) => {
-  const desktopStyle =
-    visualProminence === 'LOW' ? SmallCompactPromo : DESKTOP[promoCount - 1][i];
   const smallStyle =
     visualProminence === 'LOW' ? SmallCompactPromo : SMALL[promoCount - 1][i];
   const mobileStyle =
     visualProminence === 'LOW' ? SmallCompactPromo : MOBILE[promoCount - 1][i];
   const tabletStyle =
     visualProminence === 'LOW' ? SmallCompactPromo : TABLET[promoCount - 1][i];
+  const desktopStyle =
+    visualProminence === 'LOW' ? SmallCompactPromo : DESKTOP[promoCount - 1][i];
   return css({
     [mq.GROUP_1_MAX_WIDTH]: {
       ...smallStyle,
