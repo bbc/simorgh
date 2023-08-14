@@ -6,9 +6,8 @@ import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import propEq from 'ramda/src/propEq';
 import { jsx, useTheme } from '@emotion/react';
-import { string, node } from 'prop-types';
+import { string } from 'prop-types';
 import useToggle from '#hooks/useToggle';
-
 import { singleTextBlock } from '#app/models/blocks';
 import { articleDataPropTypes } from '#models/propTypes/article';
 import ArticleMetadata from '#containers/ArticleMetadata';
@@ -20,16 +19,12 @@ import text from '#containers/Text';
 import Image from '#containers/Image';
 import Blocks from '#containers/Blocks';
 import Timestamp from '#containers/ArticleTimestamp';
-import ATIAnalytics from '#containers/ATIAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import articleMediaPlayer from '#containers/ArticleMediaPlayer';
-import MostReadContainer from '#containers/MostRead';
-import MostReadSection from '#containers/MostRead/section';
-import MostReadSectionLabel from '#containers/MostRead/label';
 import SocialEmbedContainer from '#containers/SocialEmbed';
 import AdContainer from '#containers/Ad';
 import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
-
+import { InlinePodcastPromo } from '#containers/PodcastPromo';
 import {
   getArticleId,
   getHeadline,
@@ -46,6 +41,10 @@ import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 import ScrollablePromo from '#components/ScrollablePromo';
 import CpsRecommendations from '#containers/CpsRecommendations';
+import EmbedImages from '../../components/Embeds/EmbedImages';
+import EmbedHtml from '../../components/Embeds/EmbedHtml';
+import MostRead from '../../components/MostRead';
+import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import LinkedData from '../../components/LinkedData';
 import Uploader from '../../components/Uploader';
@@ -57,13 +56,14 @@ import {
 } from '../../components/Byline/utilities';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import RelatedContentSection from '../../components/RelatedContentSection';
+import Disclaimer from '../../components/Disclaimer';
 
 import SecondaryColumn from './SecondaryColumn';
 
 import styles from './ArticlePage.styles';
 import { getPromoHeadline } from '../../lib/analyticsUtils/article';
 
-const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
+const ArticlePage = ({ pageData }) => {
   const { isAmp, isApp, showAdsBasedOnLocation } = useContext(RequestContext);
   const { articleAuthor, isTrustProjectParticipant, showRelatedTopics } =
     useContext(ServiceContext);
@@ -81,7 +81,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   ].every(Boolean);
 
   const adcampaign = path(['metadata', 'adCampaignKeyword'], pageData);
-
+  const { enabled: podcastPromoEnabled } = useToggle('podcastPromo');
   const headline = getHeadline(pageData);
   const description = getSummary(pageData) || getHeadline(pageData);
   const firstPublished = getFirstPublished(pageData);
@@ -113,6 +113,11 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const embedProviderName = path(['model', 'provider'], embedBlock);
   const isUgcUploader = embedProviderName === 'ugc-uploader';
 
+  const {
+    metadata: { atiAnalytics },
+    mostRead: mostReadInitialData,
+  } = pageData;
+
   const componentsToRender = {
     visuallyHiddenHeadline,
     headline: headings,
@@ -141,6 +146,8 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
       hasByline ? null : <Timestamp {...props} popOut={false} />,
     social: SocialEmbedContainer,
     embed: props => (isUgcUploader ? <Uploader {...props} /> : null),
+    embedHtml: props => <EmbedHtml {...props} />,
+    embedImages: props => <EmbedImages {...props} />,
     group: gist,
     links: props => <ScrollablePromo {...props} />,
     mpu: props =>
@@ -148,6 +155,10 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
     wsoj: props => (
       <CpsRecommendations {...props} items={recommendationsData} />
     ),
+    disclaimer: props => (
+      <Disclaimer {...props} increasePaddingOnDesktop={false} />
+    ),
+    podcastPromo: podcastPromoEnabled && (() => <InlinePodcastPromo />),
   };
 
   const visuallyHiddenBlock = {
@@ -176,20 +187,9 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
     filterForBlockType(promoImageBlocks, 'rawImage'),
   );
 
-  const MostReadWrapper = ({ children }) => (
-    <MostReadSection css={styles.mostReadSection}>
-      <MostReadSectionLabel mobileDivider={showRelatedTopics && topics} />
-      {children}
-    </MostReadSection>
-  );
-
-  MostReadWrapper.propTypes = {
-    children: node.isRequired,
-  };
-
   return (
     <div css={styles.pageWrapper}>
-      <ATIAnalytics data={pageData} />
+      <ATIAnalytics atiData={atiAnalytics} />
       <ChartbeatAnalytics
         sectionName={pageData?.relatedContent?.section?.name}
         title={getPromoHeadline(pageData)}
@@ -248,9 +248,13 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
         {!isApp && <SecondaryColumn pageData={pageData} />}
       </div>
       {!isApp && (
-        <MostReadContainer
-          mostReadEndpointOverride={mostReadEndpointOverride}
-          wrapper={MostReadWrapper}
+        <MostRead
+          css={styles.mostReadSection}
+          data={mostReadInitialData}
+          columnLayout="multiColumn"
+          size="default"
+          headingBackgroundColour={GREY_2}
+          mobileDivider={showRelatedTopics && topics}
         />
       )}
     </div>

@@ -44,7 +44,7 @@ export default async ({
     });
 
     const {
-      data: { title, description, curations },
+      data: { title, description, curations, metadata },
     } = json;
 
     const id = isLocal ? null : HOME_PAGE_CONFIG[service][env];
@@ -54,7 +54,7 @@ export default async ({
       pageData: {
         id,
         title,
-        pageType,
+        metadata: { ...metadata, type: pageType },
         curations,
         description,
       },

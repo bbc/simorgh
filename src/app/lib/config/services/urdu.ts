@@ -296,7 +296,7 @@ export const service: DefaultServiceConfig = {
         text: 'جانیے کہ آپ بی بی سی پر کیوں اعتماد کر سکتے ہیں',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/feeds-and-links',
         text: 'بیرونی لنکس کے بارے میں ہماری پالیسی.',
       },
       links: [
@@ -313,7 +313,7 @@ export const service: DefaultServiceConfig = {
           text: 'پرائیویسی پالیسی',
         },
         {
-          href: 'https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html',
+          href: 'https://www.bbc.com/usingthebbc/cookies/',
           text: 'کوکیز',
         },
         {
@@ -339,6 +339,10 @@ export const service: DefaultServiceConfig = {
       {
         title: 'پاکستان',
         url: '/urdu/topics/cjgn7n9zzq7t',
+      },
+      {
+        title: 'الیکشن 2023',
+        url: '/urdu/topics/cynd7qxprq0t',
       },
       {
         title: 'آس پاس',

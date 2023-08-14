@@ -1,0 +1,28 @@
+{
+  "lastUpdated": {
+    "day": 9,
+    "month": "February",
+    "year": 2023
+  },
+  "uxAccessibilityDoc": {
+    "done": true,
+    "reference": {
+      "url": "https://paper.dropbox.com/doc/Storybook-Colour-List-Screen-Reader-UX--B3BL3HtIXjvDqSyl6qkIfOL3Ag-zg54vKjVPkvd9YUq8R8UP ",
+      "label": "Documented screen reader UX"
+    }
+  },
+  "acceptanceCriteria": {
+    "done": true,
+    "reference": {
+      "url": "https://paper.dropbox.com/doc/Storybook-Colour-list-Accessibility-Acceptance-Criteria--B3B2tMl~TnZ0pdGQz9HdihqaAg-GFM1ftKWkNzofBZ2hL6Oe",
+      "label": "Accessibility acceptance criteria"
+    }
+  },
+  "swarm": {
+    "done": true,
+    "reference": {
+      "url": "https://docs.google.com/spreadsheets/d/1Fg0jF-dUNyBL7rHY6wCLGYN_3Fpm8Rb33coN95koEPg/edit#gid=1748460042",
+      "label": "Accessibility swarm results"
+    }
+  }
+}

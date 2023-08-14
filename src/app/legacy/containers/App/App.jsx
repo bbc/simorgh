@@ -31,7 +31,7 @@ const mapToState = ({ pathname, initialData, routeProps, toggles }) => {
 
 const getNextPageState = async pathname => {
   const routeProps = getRouteProps(pathname);
-  const { service, variant, route } = routeProps;
+  const { service, variant, route, isAmp } = routeProps;
   const { pageType, getInitialData } = route;
   const toggles = await getToggles(service);
   const initialData = await getInitialData({
@@ -40,6 +40,7 @@ const getNextPageState = async pathname => {
     variant,
     pageType,
     toggles,
+    isAmp,
   });
 
   return mapToState({ pathname, initialData, routeProps, toggles });

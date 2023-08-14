@@ -1,4 +1,4 @@
-export default ({ pageData }) => {
+export default () => {
   describe('Page content', () => {
     const firstItemHeadline = document.querySelector(
       '[data-testid="topic-promos"] > li  h3 a',
@@ -16,16 +16,5 @@ export default ({ pageData }) => {
     );
 
     expect(hierarchicalGrid).toBeInTheDocument();
-  });
-
-  it('should render the correct number of curations', () => {
-    const curationsWithSummaries = pageData.curations.filter(
-      ({ summaries, mostRead }) =>
-        (summaries && summaries?.length > 0) || mostRead,
-    );
-
-    const numberOfcurations = document.querySelectorAll('main h2').length;
-
-    expect(numberOfcurations).toEqual(curationsWithSummaries.length);
   });
 };

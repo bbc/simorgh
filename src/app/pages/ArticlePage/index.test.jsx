@@ -11,11 +11,12 @@ import {
   articleDataPidgin,
   articleDataPidginWithAds,
   articleDataPidginWithByline,
+  promoSample,
   sampleRecommendations,
 } from '#pages/ArticlePage/fixtureData';
-import newsMostReadData from '#data/news/mostRead';
-import persianMostReadData from '#data/persian/mostRead';
-import pidginMostReadData from '#data/pidgin/mostRead';
+import newsMostReadData from '#data/news/mostRead/index.json';
+import { data as persianMostReadData } from '#data/persian/mostRead/index.json';
+import { data as pidginMostReadData } from '#data/pidgin/mostRead/index.json';
 import {
   textBlock,
   blockContainingText,
@@ -57,6 +58,7 @@ const Context = ({
   mostReadToggledOn = true,
   showAdsBasedOnLocation = false,
   isApp = false,
+  promo = null,
 } = {}) => {
   const appInput = {
     ...input,
@@ -79,6 +81,7 @@ const Context = ({
             cpsRecommendations: {
               enabled: true,
             },
+            podcastPromo: { enabled: promo != null },
           }}
         >
           <RequestContextProvider {...appInput}>
@@ -274,11 +277,11 @@ it('should render a news article correctly', async () => {
 });
 
 it('should render a rtl article (persian) with most read correctly', async () => {
-  fetch.mockResponse(JSON.stringify(persianMostReadData));
-
   const { container } = render(
     <Context service="persian">
-      <ArticlePage pageData={articleDataPersian} />
+      <ArticlePage
+        pageData={{ ...articleDataPersian, mostRead: persianMostReadData }}
+      />
     </Context>,
   );
 
@@ -291,11 +294,11 @@ it('should render a rtl article (persian) with most read correctly', async () =>
 });
 
 it('should render a ltr article (pidgin) with most read correctly', async () => {
-  fetch.mockResponse(JSON.stringify(pidginMostReadData));
-
   const { container } = render(
     <Context service="pidgin">
-      <ArticlePage pageData={articleDataPidgin} />
+      <ArticlePage
+        pageData={{ ...articleDataPidgin, mostRead: pidginMostReadData }}
+      />
     </Context>,
   );
 
@@ -312,6 +315,13 @@ it('should render a news article with headline in the middle correctly', async (
 
   const articleWithSummaryHeadlineInTheMiddle = {
     ...articleDataNews,
+    metadata: {
+      ...articleDataNews.metadata,
+      atiAnalytics: {
+        ...articleDataNews.metadata.atiAnalytics,
+        pageTitle: 'SEO Headline',
+      },
+    },
     content: {
       model: {
         blocks: [
@@ -355,6 +365,13 @@ it('should render a news article with headline in the middle correctly', async (
 it('should render a news article without headline correctly', async () => {
   const articleWithoutHeadline = {
     ...articleDataNews,
+    metadata: {
+      ...articleDataNews.metadata,
+      atiAnalytics: {
+        ...articleDataNews.metadata.atiAnalytics,
+        pageTitle: 'Article Headline',
+      },
+    },
     content: {
       model: {
         blocks: [singleTextBlock('Paragraph 1', 2)],
@@ -471,4 +488,18 @@ it('should render WSOJ recommendations when passed', async () => {
   );
 
   expect(getByText('SAMPLE RECOMMENDATION 1 - HEADLINE')).toBeInTheDocument();
+});
+
+it('should render PodcastPromos when passed', async () => {
+  const pageDataWithSecondaryColumn = {
+    ...articleDataNews,
+    promo: promoSample,
+  };
+  const { getByText } = render(
+    <Context service="russian" promo>
+      <ArticlePage pageData={pageDataWithSecondaryColumn} />
+    </Context>,
+  );
+
+  expect(getByText('Что это было?')).toBeInTheDocument();
 });

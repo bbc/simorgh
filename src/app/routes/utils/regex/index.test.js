@@ -105,8 +105,6 @@ describe('articleDataPath', () => {
 
 describe('frontPagePath', () => {
   const validRoutes = [
-    '/news',
-    '/news.amp',
     '/ukchina/simp',
     '/ukchina/trad',
     '/serbian/lat.amp',
@@ -120,14 +118,14 @@ describe('frontPagePath', () => {
     '/iplayer',
     '/news/foobar',
     '/news/foobar.amp',
-    '/persian',
-    '/persian.amp',
+    '/kyrgyz',
+    '/kyrgyz.amp',
   ];
   shouldNotMatchInvalidRoutes(invalidRoutes, frontPagePath);
 });
 
 describe('frontPageDataPath', () => {
-  const validRoutes = ['/news.json', '/serbian/cyr.json', '/ukchina/trad.json'];
+  const validRoutes = ['/serbian/cyr.json', '/ukchina/trad.json'];
   shouldMatchValidRoutes(validRoutes, frontPageDataPath);
 
   const invalidRoutes = [
@@ -529,8 +527,6 @@ describe('legacyAssetPageDataPath', () => {
 describe('frontPage -> homePage migration', () => {
   const services = Object.keys(serviceConfig);
 
-  const servicesWithVariants = ['serbian', 'ukchina', 'zhongwen'];
-
   const servicesNotCoveredByWorldService = [
     'sport',
     'scotland',
@@ -541,13 +537,27 @@ describe('frontPage -> homePage migration', () => {
     'archive',
   ];
 
-  const homePageServices = services.filter(
-    service =>
-      !servicesWithVariants.includes(service) &&
-      !servicesNotCoveredByWorldService.includes(service),
+  const worldServices = services.filter(
+    service => !servicesNotCoveredByWorldService.includes(service),
   );
 
-  const homePageRoutes = homePageServices.map(service => `/${service}`);
+  const serviceToRoute = service => `/${service}`;
+
+  const servicesWithVariants = ['serbian', 'ukchina', 'zhongwen'];
+  const servicesWithVariantsRoutes = servicesWithVariants.map(serviceToRoute);
+
+  const servicesWithoutVariantsRoutes = worldServices
+    .filter(service => !servicesWithVariants.includes(service))
+    .map(serviceToRoute);
+
+  const migratedServices = ['azeri', 'burmese', 'kyrgyz'];
+  const migratedWorldServiceRoutes = migratedServices.map(serviceToRoute);
+
+  const liveFrontPageServices = worldServices.filter(
+    service => !migratedServices.includes(service),
+  );
+
+  const liveFrontPageRoutes = liveFrontPageServices.map(serviceToRoute);
 
   const originalApplicationEnvironment = process.env.SIMORGH_APP_ENV;
 
@@ -562,7 +572,9 @@ describe('frontPage -> homePage migration', () => {
 
       const homePageRegex = getHomePageRegex(services);
 
-      shouldMatchValidRoutes(homePageRoutes, homePageRegex);
+      shouldMatchValidRoutes(servicesWithoutVariantsRoutes, homePageRegex);
+
+      shouldNotMatchInvalidRoutes(servicesWithVariantsRoutes, homePageRegex);
     },
   );
 
@@ -573,7 +585,12 @@ describe('frontPage -> homePage migration', () => {
 
       const frontPageRegex = getFrontPageRegex(services);
 
-      shouldNotMatchInvalidRoutes(homePageRoutes, frontPageRegex);
+      shouldMatchValidRoutes(servicesWithVariantsRoutes, frontPageRegex);
+
+      shouldNotMatchInvalidRoutes(
+        servicesWithoutVariantsRoutes,
+        frontPageRegex,
+      );
     },
   );
 
@@ -582,7 +599,9 @@ describe('frontPage -> homePage migration', () => {
 
     const frontPageRegex = getFrontPageRegex(services);
 
-    shouldMatchValidRoutes(homePageRoutes, frontPageRegex);
+    shouldMatchValidRoutes(liveFrontPageRoutes, frontPageRegex);
+
+    shouldNotMatchInvalidRoutes(migratedWorldServiceRoutes, frontPageRegex);
   });
 
   describe(`homePage regex on the live environment`, () => {
@@ -590,6 +609,8 @@ describe('frontPage -> homePage migration', () => {
 
     const homePageRegex = getHomePageRegex(services);
 
-    shouldNotMatchInvalidRoutes(homePageRoutes, homePageRegex);
+    shouldMatchValidRoutes(migratedWorldServiceRoutes, homePageRegex);
+
+    shouldNotMatchInvalidRoutes(liveFrontPageRoutes, homePageRegex);
   });
 });

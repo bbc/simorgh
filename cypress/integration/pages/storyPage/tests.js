@@ -3,6 +3,8 @@ import path from 'ramda/src/path';
 import getDataUrl from '../../../support/helpers/getDataUrl';
 import topicTagsTest from '../../../support/helpers/topicTagsTest';
 import envConfig from '../../../support/config/envs';
+import { crossPlatform as mostReadAssertions } from '../mostReadPage/mostReadAssertions';
+
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
 export const testsThatAlwaysRun = ({ service, pageType }) => {
@@ -14,45 +16,46 @@ export const testsThatFollowSmokeTestConfig = ({
   service,
   pageType,
   isAmp,
+  variant,
 }) => {
-  describe(`testsThatFollowSmokeTestConfig to run for ${service} ${pageType}`, () => {
+  describe(`testsThatFollowSmokeTestConfig to run for ${service} ${variant} ${pageType} `, () => {
     it('should render a description for the page', () => {
-      cy.getPageData({ service, pageType: 'cpsAsset' }).then(({ body }) => {
-        const descriptionBlock = (
-          Cypress.env('APP_ENV') !== 'local'
-            ? body.data.article.content.blocks
-            : body.content.blocks
-        ).find(block => block.role === 'introduction');
-        // Condition added because introduction is non-mandatory
-        if (descriptionBlock) {
-          const descriptionHtml = pathOr({}, ['text'], descriptionBlock);
-          // strip html from the description, so we get description as plain text
-          const elem = document.createElement('div');
-          elem.innerHTML = descriptionHtml;
-          const description = elem.innerText;
-          cy.get('main p').should('contain', description);
-        }
-      });
+      cy.getPageData({ service, pageType: 'cpsAsset', variant }).then(
+        ({ body }) => {
+          const descriptionBlock = body.data.article.content.blocks.find(
+            block => block.role === 'introduction',
+          );
+          // Condition added because introduction is non-mandatory
+          if (descriptionBlock) {
+            const descriptionHtml = pathOr({}, ['text'], descriptionBlock);
+            // strip html from the description, so we get description as plain text
+            const elem = document.createElement('div');
+            elem.innerHTML = descriptionHtml;
+            const description = elem.innerText;
+            cy.get('main p').should('contain', description);
+          }
+        },
+      );
     });
 
     it('should render paragraph text for the page', () => {
-      cy.getPageData({ service, pageType: 'cpsAsset' }).then(({ body }) => {
-        const paragraphBlock = (
-          Cypress.env('APP_ENV') !== 'local'
-            ? body.data.article.content.blocks
-            : body.content.blocks
-        ).find(block => block.type === 'paragraph');
-        // Conditional because in test assets the data model structure is sometimes variable and unusual
-        // so cannot be accessed in the same way across assets
-        if (paragraphBlock) {
-          const descriptionHtml = pathOr({}, ['text'], paragraphBlock);
-          // strip html from the description, so we get description as plain text
-          const elem = document.createElement('div');
-          elem.innerHTML = descriptionHtml;
-          const paragraph = elem.innerText;
-          cy.get('main p').should('contain', paragraph);
-        }
-      });
+      cy.getPageData({ service, pageType: 'cpsAsset', variant }).then(
+        ({ body }) => {
+          const paragraphBlock = body.data.article.content.blocks.find(
+            block => block.type === 'paragraph',
+          );
+          // Conditional because in test assets the data model structure is sometimes variable and unusual
+          // so cannot be accessed in the same way across assets
+          if (paragraphBlock) {
+            const descriptionHtml = pathOr({}, ['text'], paragraphBlock);
+            // strip html from the description, so we get description as plain text
+            const elem = document.createElement('div');
+            elem.innerHTML = descriptionHtml;
+            const paragraph = elem.innerText;
+            cy.get('main p').should('contain', paragraph);
+          }
+        },
+      );
     });
     it('FOR /news/technology-60561162.amp ONLY - should render topic tags if they are in the json, and they should navigate to correct topic page', () => {
       if (service === 'news' && Cypress.env('APP_ENV') !== 'local') {
@@ -127,6 +130,11 @@ export const testsThatFollowSmokeTestConfig = ({
         cy.log('Service is run in local.');
       }
     });
+
+    /**
+     * Most Read Component
+     */
+    mostReadAssertions({ service, variant });
   });
   describe(`Recommendations on ${service} ${pageType}`, () => {
     it('Recommendations have images', () => {
