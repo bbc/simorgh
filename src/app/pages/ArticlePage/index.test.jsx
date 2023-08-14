@@ -315,6 +315,13 @@ it('should render a news article with headline in the middle correctly', async (
 
   const articleWithSummaryHeadlineInTheMiddle = {
     ...articleDataNews,
+    metadata: {
+      ...articleDataNews.metadata,
+      atiAnalytics: {
+        ...articleDataNews.metadata.atiAnalytics,
+        pageTitle: 'SEO Headline',
+      },
+    },
     content: {
       model: {
         blocks: [
@@ -358,6 +365,13 @@ it('should render a news article with headline in the middle correctly', async (
 it('should render a news article without headline correctly', async () => {
   const articleWithoutHeadline = {
     ...articleDataNews,
+    metadata: {
+      ...articleDataNews.metadata,
+      atiAnalytics: {
+        ...articleDataNews.metadata.atiAnalytics,
+        pageTitle: 'Article Headline',
+      },
+    },
     content: {
       model: {
         blocks: [singleTextBlock('Paragraph 1', 2)],

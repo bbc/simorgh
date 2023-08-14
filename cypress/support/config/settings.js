@@ -7536,7 +7536,7 @@ module.exports = () => ({
               '/thai/international-51285795', // CPS MAP with video clip
               '/thai/thailand-49950038', // CPS PGL
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
@@ -7547,7 +7547,7 @@ module.exports = () => ({
               '/thai/international-23252840', // CPS PGL
               // '', // CPS STY
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: [
@@ -7557,7 +7557,7 @@ module.exports = () => ({
               '/thai/23122810', // CPS MAP
               '/thai/thailand-49950038', // CPS PGL
             ],
-            enabled: false,
+            enabled: true,
           },
         },
         smoke: true,
@@ -7971,10 +7971,10 @@ module.exports = () => ({
           },
           local: {
             paths: ['/ukchina/articles/c0e8weny66ko/simp'],
-            enabled: true,
+            enabled: false,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       errorPage404: {
         environments: {
@@ -7988,10 +7988,10 @@ module.exports = () => ({
           },
           local: {
             paths: ['/ukchina/articles/cabcdefghijo/simp'],
-            enabled: true,
+            enabled: false,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       frontPage: {
         environments: {
@@ -8005,10 +8005,10 @@ module.exports = () => ({
           },
           local: {
             paths: ['/ukchina/simp'],
-            enabled: true,
+            enabled: false,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
@@ -8028,14 +8028,14 @@ module.exports = () => ({
               '/ukchina/simp/23279012', // CPS video
               '/ukchina/simp/multimedia/2016/11/161104_tc2_testmap1', // TC2 video
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: [
               '/ukchina/simp/23279012', // CPS video
               '/ukchina/simp/multimedia/2016/11/161104_tc2_testmap1', // TC2 video
             ],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -8062,15 +8062,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/ukchina/simp/52836902'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/ukchina/simp/23307454'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/ukchina/simp/23307454'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -8105,7 +8105,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/ukchina/simp/in_depth/cluster_uk_election_2105'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -8149,10 +8149,10 @@ module.exports = () => ({
           },
           local: {
             paths: ['/ukchina/articles/c0e8weny66ko/trad'],
-            enabled: true,
+            enabled: false,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       errorPage404: {
         environments: {
@@ -8166,10 +8166,10 @@ module.exports = () => ({
           },
           local: {
             paths: ['/ukchina/articles/cabcdefghijo/trad'],
-            enabled: true,
+            enabled: false,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       frontPage: {
         environments: {
@@ -8183,10 +8183,10 @@ module.exports = () => ({
           },
           local: {
             paths: ['/ukchina/trad'],
-            enabled: true,
+            enabled: false,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
@@ -8199,21 +8199,21 @@ module.exports = () => ({
               '/ukchina/trad/52970385', // CPS video
               '/ukchina/trad/elt/2015/08/150908_are_326_barrel_of_laughs_audio', // TC2 audio
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
               '/ukchina/trad/23279012', // CPS video
               '/ukchina/trad/multimedia/2016/11/161104_tc2_testmap1', // TC2 video
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: [
               '/ukchina/trad/23279012', // CPS video
               '/ukchina/trad/multimedia/2016/11/161104_tc2_testmap1', // TC2 video
             ],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -8231,7 +8231,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/ukchina/trad/cool-britannia-38434549'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -8240,18 +8240,18 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/ukchina/trad/52836902'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/ukchina/trad/23307454'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/ukchina/trad/23307454'],
-            enabled: true,
+            enabled: false,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       mostReadPage: {
         environments: {
@@ -8283,7 +8283,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/ukchina/trad/in_depth/cluster_uk_election_2105'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,

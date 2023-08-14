@@ -144,7 +144,15 @@
         "href": "/indonesia/majalah-49764576",
         "timestamp": 1568939074000
       }
-    ]
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentType": "list-datadriven",
+        "pageIdentifier": "indonesia.popular.read.page",
+        "timePublished": "2023-07-14T08:23:00Z",
+        "timeUpdated": "2023-07-14T08:38:00Z"
+      }
+    }
   },
   "contentType": "application/json; charset=utf-8"
 }

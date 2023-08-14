@@ -144,6 +144,14 @@
         "href": "/somali/war-54739252",
         "timestamp": 1603988393000
       }
-    ]
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentType": "list-datadriven",
+        "pageIdentifier": "somali.popular.read.page",
+        "timePublished": "2023-06-19T13:03:00Z",
+        "timeUpdated": "2023-06-19T15:03:00Z"
+      }
+    }
   }
 }

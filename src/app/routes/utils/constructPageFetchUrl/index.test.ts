@@ -20,6 +20,7 @@ describe('constructPageFetchUrl', () => {
     const pageType = PAGE_TYPES.TOPIC;
     const variant = 'ru-UA';
     const page = '2';
+    const isAmp = true;
 
     const fetchUrl = constructPageFetchUrl({
       pathname,
@@ -27,6 +28,7 @@ describe('constructPageFetchUrl', () => {
       service,
       variant,
       page,
+      isAmp,
     });
 
     expect(fetchUrl.query).toEqual({
@@ -35,6 +37,7 @@ describe('constructPageFetchUrl', () => {
       pageType: 'topic',
       service: 'ukrainian',
       variant: 'ru-UA',
+      isAmp: true,
     });
   });
 

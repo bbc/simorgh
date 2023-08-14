@@ -144,6 +144,14 @@
         "href": "/afrique/monde-65905956",
         "timestamp": 1686813753000
       }
-    ]
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentType": "list-datadriven",
+        "pageIdentifier": "afrique.popular.read.page",
+        "timePublished": "2023-06-19T13:45:00Z",
+        "timeUpdated": "2023-06-19T14:45:00Z"
+      }
+    }
   }
 }
