@@ -823,6 +823,62 @@
         "title": "Vivo feed limitation to 8 Feed/Normal",
         "visualProminence": "NORMAL",
         "visualStyle": "FEED"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "BBC News Русская служба",
+            "firstPublished": "2023-06-12T08:41:37.000Z",
+            "lastPublished": "2023-06-12T18:10:06.000Z",
+            "link": "https://www.bbc.com/russian",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/cff8/live/50f3bff0-091c-11ee-b5af-25e80c61c11a.png",
+            "description": "На 87-м году жизни умер Сильвио Берлускони, бывший премьер-министр Италии.",
+            "imageAlt": "BBC News Russian",
+            "id": "af8aec60-3ff7-46ca-b2d2-125082c35310"
+          },
+          {
+            "type": "article",
+            "title": "BBC News Azərbaycanca",
+            "firstPublished": "2023-06-10T08:37:49.000Z",
+            "lastPublished": "2023-06-12T06:59:49.000Z",
+            "link": "https://www.bbc.com/azeri",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/ddfa/live/79ea5a40-091c-11ee-b5af-25e80c61c11a.png",
+            "description": "Bu gün Ukrayna ordusunun əks-hücum nəticəsində ələ keçirdiyi bir neçə kənddə şadyanalıq etdiyi görüntülər yayılıb. Bu yazıda, həmçinin BBC müxbiri Paul Adams Ukraynanın cənubunda hərbi baxımdan vacib olan vəziyyəti təhlil edir.",
+            "imageAlt": "BBC News Azerbaijean",
+            "id": "fe4c336e-2a26-4764-86c3-d55a9c34d902"
+          },
+          {
+            "type": "article",
+            "title": "BBC News Türkçe",
+            "firstPublished": "2023-06-12T01:34:13.000Z",
+            "lastPublished": "2023-06-12T01:34:13.000Z",
+            "link": "https://www.bbc.com/turkce",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/f932/live/a29e6d50-091c-11ee-b5af-25e80c61c11a.png",
+            "description": "Cumhurbaşkanı Recep Tayyip Erdoğan, yeniden göreve seçilmesinin ardından ilk yurt dışı ziyaretini Kuzey Kıbrıs'a yaptı. Erdoğan, \"Müzakere masasına geri dönülecekse, bunun yolu Kuzey Kıbrıs Türk Cumhuriyeti'nin tanınmasından geçmektedir\" ifadelerini kullandı. Gelişmeler canlı anlatım sayfamızda.",
+            "imageAlt": "BBC News Türkçe",
+            "id": "a8abee2b-dff0-4254-b0b8-160dd82bf374"
+          },
+          {
+            "type": "article",
+            "title": "BBC News O‘zbek",
+            "firstPublished": "2023-06-12T10:32:19.000Z",
+            "lastPublished": "2023-06-12T10:32:19.000Z",
+            "link": "https://www.bbc.com/uzbek",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/4758/live/d4d16110-091c-11ee-b5af-25e80c61c11a.png",
+            "description": "Афғонистон расмийлари кўкнори етиштиришга қарши ўзлари чиқарган қарорни қандай бажармоқда? Тадқиқот кутилмаган натижаларни кўрсатди.",
+            "imageAlt": "BBC News O‘zbek",
+            "id": "7d9665d6-ba24-4e98-9c34-1f3e9552a276"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:f5bc486d-7a76-4af5-9c0f-bdd28f04817d",
+        "curationType": "tipo-curation",
+        "position": 7,
+        "title": "Тектеш сайттар",
+        "visualProminence": "LOW",
+        "visualStyle": "LINKS"
       }
     ],
     "metadata": {

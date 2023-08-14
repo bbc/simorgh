@@ -72,7 +72,9 @@ const CurationPromo = ({
           </Promo.A>
         )}
       </Promo.Heading>
-      <Promo.Timestamp>{lastPublished}</Promo.Timestamp>
+      <Promo.Timestamp className="promo-timestamp">
+        {lastPublished}
+      </Promo.Timestamp>
     </Promo>
   );
 };

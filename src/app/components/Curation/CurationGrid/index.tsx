@@ -1,20 +1,39 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
+import {
+  VISUAL_PROMINENCE,
+  VISUAL_STYLE,
+} from '#app/models/types/curationData';
 import styles from './index.styles';
 import CurationPromo from '../CurationPromo';
 import { CurationGridProps } from '../types';
 
-const CurationGrid = ({ promos, headingLevel }: CurationGridProps) => {
+const CurationGrid = ({
+  promos,
+  headingLevel,
+  visualProminence,
+  visualStyle,
+}: CurationGridProps) => {
   const hasMultiplePromos = promos.length > 1;
   const firstPromo = promos[0];
 
   if (promos.length === 0) {
     return null;
   }
+
+  const listCss = [styles.list];
+
+  if (
+    visualProminence === VISUAL_PROMINENCE.LOW &&
+    visualStyle === VISUAL_STYLE.LINKS
+  ) {
+    listCss.push(styles.hideTimestamp);
+  }
+
   return (
     <div data-testid="curation-grid-normal">
       {hasMultiplePromos ? (
-        <ul css={styles.list} role="list" data-testid="topic-promos">
+        <ul css={listCss} role="list" data-testid="topic-promos">
           {promos.map((promo, index) => {
             const isFirstPromo = index === 0;
 

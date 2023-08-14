@@ -70,6 +70,11 @@ const styles = {
         },
       },
     }),
+  hideTimestamp: css({
+    '.promo-timestamp': {
+      display: 'none',
+    },
+  }),
 };
 
 export default styles;
