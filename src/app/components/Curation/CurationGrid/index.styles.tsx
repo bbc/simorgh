@@ -70,8 +70,11 @@ const styles = {
         },
       },
     }),
-  hideTimestamp: css({
+  hideTimestampAndImage: css({
     '.promo-timestamp': {
+      display: 'none',
+    },
+    '.promo-image': {
       display: 'none',
     },
   }),

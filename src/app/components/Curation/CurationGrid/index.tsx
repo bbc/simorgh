@@ -27,7 +27,7 @@ const CurationGrid = ({
     visualProminence === VISUAL_PROMINENCE.LOW &&
     visualStyle === VISUAL_STYLE.LINKS
   ) {
-    listCss.push(styles.hideTimestamp);
+    listCss.push(styles.hideTimestampAndImage);
   }
 
   return (
