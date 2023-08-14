@@ -321,15 +321,24 @@ describe('ATI Analytics Container', () => {
       // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       canonical.default = mockCanonical;
 
+      const {
+        metadata: { atiAnalytics },
+      } = styAssetData;
+
+      const atiData = {
+        ...atiAnalytics,
+        pageTitle: `${atiAnalytics.pageTitle} - BBC News Mundo`,
+      };
+
       render(
         <ContextWrap platform="canonical" pageType={STORY_PAGE} service="mundo">
-          <ATIAnalytics data={styAssetData} />
+          <ATIAnalytics atiData={atiData} />
         </ContextWrap>,
       );
 
       expect(mockCanonical.mock.calls[0][0]).toMatchInlineSnapshot(`
         {
-          "pageviewParams": "s=598343&s2=62&p=mundo.story.23263889.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x2=[responsive]&x3=[news-mundo]&x4=[es]&x5=[https%253A%252F%252Flocalhost]&x7=[article]&x8=[simorgh]&x9=[WS%2520STY%2520TEST%2520-%2520Full%2520Headline%2520-%2520BBC%2520News%2520Mundo]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x13=[Life~Fake%2520news]&x14=[0239ab33-1cfc-4f5d-babb-a8159711af3e~e7539dc8-5cfb-413a-b4fe-0ad77bc665aa]&x16=[Amuse%20me]&x17=[News]",
+          "pageviewParams": "s=598343&s2=62&p=mundo.story.23263889.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Acps%3Acurie%3Aasset%3Af776ad93-e486-b14a-b5ea-55955dd0644f]&x2=[responsive]&x3=[news-mundo]&x4=[es]&x5=[http%253A%252F%252Flocalhost%252F]&x7=[article]&x8=[simorgh]&x9=[WS%2520STY%2520TEST%2520-%2520Full%2520Headline%2520-%2520BBC%2520News%2520Mundo]&x11=[2020-02-03T15%3A58%3A27.000Z]&x12=[2020-05-06T11%3A02%3A07.000Z]&x13=[Life~Fake%2Bnews]&x14=[0239ab33-1cfc-4f5d-babb-a8159711af3e~e7539dc8-5cfb-413a-b4fe-0ad77bc665aa]&x16=[Amuse%20me]&x17=[News]",
         }
       `);
     });
@@ -339,15 +348,24 @@ describe('ATI Analytics Container', () => {
       // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       amp.default = mockAmp;
 
+      const {
+        metadata: { atiAnalytics },
+      } = styAssetData;
+
+      const atiData = {
+        ...atiAnalytics,
+        pageTitle: `${atiAnalytics.pageTitle} - BBC News Mundo`,
+      };
+
       render(
         <ContextWrap platform="amp" pageType={STORY_PAGE} service="mundo">
-          <ATIAnalytics data={styAssetData} />
+          <ATIAnalytics atiData={atiData} />
         </ContextWrap>,
       );
 
       expect(mockAmp.mock.calls[0][0]).toMatchInlineSnapshot(`
         {
-          "pageviewParams": "s=598343&s2=62&p=mundo.story.23263889.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=00-00-00&lng=\${browserLanguage}&x2=[amp]&x3=[news-mundo]&x4=[es]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article]&x8=[simorgh]&x9=[WS%2520STY%2520TEST%2520-%2520Full%2520Headline%2520-%2520BBC%2520News%2520Mundo]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x13=[Life~Fake%2520news]&x14=[0239ab33-1cfc-4f5d-babb-a8159711af3e~e7539dc8-5cfb-413a-b4fe-0ad77bc665aa]&x16=[Amuse%20me]&x17=[News]&ref=\${documentReferrer}",
+          "pageviewParams": "s=598343&s2=62&p=mundo.story.23263889.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=00-00-00&lng=\${browserLanguage}&x1=[urn%3Abbc%3Acps%3Acurie%3Aasset%3Af776ad93-e486-b14a-b5ea-55955dd0644f]&x2=[amp]&x3=[news-mundo]&x4=[es]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article]&x8=[simorgh]&x9=[WS%2520STY%2520TEST%2520-%2520Full%2520Headline%2520-%2520BBC%2520News%2520Mundo]&x11=[2020-02-03T15%3A58%3A27.000Z]&x12=[2020-05-06T11%3A02%3A07.000Z]&x13=[Life~Fake%2Bnews]&x14=[0239ab33-1cfc-4f5d-babb-a8159711af3e~e7539dc8-5cfb-413a-b4fe-0ad77bc665aa]&x16=[Amuse%20me]&x17=[News]&ref=\${documentReferrer}",
         }
       `);
     });
@@ -357,19 +375,29 @@ describe('ATI Analytics Container', () => {
       // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       amp.default = mockAmp;
 
+      const {
+        metadata: { atiAnalytics },
+      } = styAssetData;
+
+      const atiData = {
+        ...atiAnalytics,
+        contentType: 'article-correspondent',
+        pageTitle: `${atiAnalytics.pageTitle} - BBC News Mundo`,
+      };
+
       render(
         <ContextWrap
           platform="amp"
           pageType={CORRESPONDENT_STORY_PAGE}
           service="mundo"
         >
-          <ATIAnalytics data={styAssetData} />
+          <ATIAnalytics atiData={atiData} />
         </ContextWrap>,
       );
 
       expect(mockAmp.mock.calls[0][0]).toMatchInlineSnapshot(`
         {
-          "pageviewParams": "s=598343&s2=62&p=mundo.story.23263889.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=00-00-00&lng=\${browserLanguage}&x2=[amp]&x3=[news-mundo]&x4=[es]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article-correspondent]&x8=[simorgh]&x9=[WS%2520STY%2520TEST%2520-%2520Full%2520Headline%2520-%2520BBC%2520News%2520Mundo]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x13=[Life~Fake%2520news]&x14=[0239ab33-1cfc-4f5d-babb-a8159711af3e~e7539dc8-5cfb-413a-b4fe-0ad77bc665aa]&x16=[Amuse%20me]&x17=[News]&ref=\${documentReferrer}",
+          "pageviewParams": "s=598343&s2=62&p=mundo.story.23263889.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=00-00-00&lng=\${browserLanguage}&x1=[urn%3Abbc%3Acps%3Acurie%3Aasset%3Af776ad93-e486-b14a-b5ea-55955dd0644f]&x2=[amp]&x3=[news-mundo]&x4=[es]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article-correspondent]&x8=[simorgh]&x9=[WS%2520STY%2520TEST%2520-%2520Full%2520Headline%2520-%2520BBC%2520News%2520Mundo]&x11=[2020-02-03T15%3A58%3A27.000Z]&x12=[2020-05-06T11%3A02%3A07.000Z]&x13=[Life~Fake%2Bnews]&x14=[0239ab33-1cfc-4f5d-babb-a8159711af3e~e7539dc8-5cfb-413a-b4fe-0ad77bc665aa]&x16=[Amuse%20me]&x17=[News]&ref=\${documentReferrer}",
         }
       `);
     });
@@ -379,19 +407,28 @@ describe('ATI Analytics Container', () => {
       // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       canonical.default = mockCanonical;
 
+      const {
+        metadata: { atiAnalytics },
+      } = styUkrainianAssetData;
+
+      const atiData = {
+        ...atiAnalytics,
+        pageTitle: `${atiAnalytics.pageTitle} - BBC News Україна`,
+      };
+
       render(
         <ContextWrap
           platform="canonical"
           pageType={STORY_PAGE}
           service="ukrainian"
         >
-          <ATIAnalytics data={styUkrainianAssetData} />
+          <ATIAnalytics atiData={atiData} />
         </ContextWrap>,
       );
 
       expect(mockCanonical.mock.calls[0][0]).toMatchInlineSnapshot(`
         {
-          "pageviewParams": "s=598343&s2=94&p=news%3A%3Aukrainian.news.story.53561143.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x2=[responsive]&x3=[news-ukrainian]&x4=[uk]&x5=[https%253A%252F%252Flocalhost]&x7=[article]&x8=[simorgh]&x9=[%D0%92%D0%B8%D1%80%D0%BE%D0%B1%D0%BD%D0%B8%D1%86%D1%82%D0%B2%D0%BE%2520%D0%B3%D0%B5%D1%80%D0%BE%D1%97%D0%BD%D1%83%2520%D0%B7%D1%80%D0%BE%D1%81%D0%BB%D0%BE%2520%D0%B7%D0%B0%D0%B2%D0%B4%D1%8F%D0%BA%D0%B8%2520%D1%81%D0%BE%D0%BD%D1%8F%D1%87%D0%BD%D0%B8%D0%BC%2520%D0%B1%D0%B0%D1%82%D0%B0%D1%80%D0%B5%D1%8F%D0%BC.%2520%D0%9F%D0%BE%D0%B3%D0%BB%D1%8F%D0%B4%2520%D0%B7%2520%D0%91%D1%80%D0%B8%D1%82%D0%B0%D0%BD%D1%96%D1%97%2520-%2520BBC%2520News%2520%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B0]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x13=[Afghanistan~Drug%2520use~Drugs%2520trade~Ukraine]&x14=[1a5696c5-07d0-4a08-8b54-41ad5cd534b6~37cd3473-7b24-44b0-84c1-bf3c4801df5e~4b4cca1c-d458-4310-819e-dd48572b12c4~ee8750ed-a7fb-453f-bfca-2aa8b3fb064c]&x16=[WS%20-%20Educate%20me]&x17=[News]",
+          "pageviewParams": "s=598343&s2=94&p=news%3A%3Aukrainian.news.story.53561143.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Acps%3Acurie%3Aasset%3A9e539daf-1d79-4630-900c-7db33c4bf1ac]&x2=[responsive]&x3=[news-ukrainian]&x4=[uk]&x5=[https%253A%252F%252Flocalhost]&x7=[article]&x8=[simorgh]&x9=[%D0%92%D0%B8%D1%80%D0%BE%D0%B1%D0%BD%D0%B8%D1%86%D1%82%D0%B2%D0%BE%2520%D0%B3%D0%B5%D1%80%D0%BE%D1%97%D0%BD%D1%83%2520%D0%B7%D1%80%D0%BE%D1%81%D0%BB%D0%BE%2520%D0%B7%D0%B0%D0%B2%D0%B4%D1%8F%D0%BA%D0%B8%2520%D1%81%D0%BE%D0%BD%D1%8F%D1%87%D0%BD%D0%B8%D0%BC%2520%D0%B1%D0%B0%D1%82%D0%B0%D1%80%D0%B5%D1%8F%D0%BC.%2520%D0%9F%D0%BE%D0%B3%D0%BB%D1%8F%D0%B4%2520%D0%B7%2520%D0%91%D1%80%D0%B8%D1%82%D0%B0%D0%BD%D1%96%D1%97%2520-%2520BBC%2520News%2520%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B0]&x11=[2020-07-28T13%3A25%3A13.000Z]&x12=[2020-07-28T13%3A25%3A13.000Z]&x13=[Afghanistan~Drug%2Buse~Drugs%2Btrade~Ukraine]&x14=[1a5696c5-07d0-4a08-8b54-41ad5cd534b6~37cd3473-7b24-44b0-84c1-bf3c4801df5e~4b4cca1c-d458-4310-819e-dd48572b12c4~ee8750ed-a7fb-453f-bfca-2aa8b3fb064c]&x16=[WS%20-%20Educate%20me]&x17=[News]",
         }
       `);
     });
@@ -401,15 +438,24 @@ describe('ATI Analytics Container', () => {
       // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       amp.default = mockAmp;
 
+      const {
+        metadata: { atiAnalytics },
+      } = styUkrainianAssetData;
+
+      const atiData = {
+        ...atiAnalytics,
+        pageTitle: `${atiAnalytics.pageTitle} - BBC News Україна`,
+      };
+
       render(
         <ContextWrap platform="amp" pageType={STORY_PAGE} service="ukrainian">
-          <ATIAnalytics data={styUkrainianAssetData} />
+          <ATIAnalytics atiData={atiData} />
         </ContextWrap>,
       );
 
       expect(mockAmp.mock.calls[0][0]).toMatchInlineSnapshot(`
         {
-          "pageviewParams": "s=598343&s2=94&p=news%3A%3Aukrainian.news.story.53561143.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=00-00-00&lng=\${browserLanguage}&x2=[amp]&x3=[news-ukrainian]&x4=[uk]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article]&x8=[simorgh]&x9=[%D0%92%D0%B8%D1%80%D0%BE%D0%B1%D0%BD%D0%B8%D1%86%D1%82%D0%B2%D0%BE%2520%D0%B3%D0%B5%D1%80%D0%BE%D1%97%D0%BD%D1%83%2520%D0%B7%D1%80%D0%BE%D1%81%D0%BB%D0%BE%2520%D0%B7%D0%B0%D0%B2%D0%B4%D1%8F%D0%BA%D0%B8%2520%D1%81%D0%BE%D0%BD%D1%8F%D1%87%D0%BD%D0%B8%D0%BC%2520%D0%B1%D0%B0%D1%82%D0%B0%D1%80%D0%B5%D1%8F%D0%BC.%2520%D0%9F%D0%BE%D0%B3%D0%BB%D1%8F%D0%B4%2520%D0%B7%2520%D0%91%D1%80%D0%B8%D1%82%D0%B0%D0%BD%D1%96%D1%97%2520-%2520BBC%2520News%2520%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B0]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x13=[Afghanistan~Drug%2520use~Drugs%2520trade~Ukraine]&x14=[1a5696c5-07d0-4a08-8b54-41ad5cd534b6~37cd3473-7b24-44b0-84c1-bf3c4801df5e~4b4cca1c-d458-4310-819e-dd48572b12c4~ee8750ed-a7fb-453f-bfca-2aa8b3fb064c]&x16=[WS%20-%20Educate%20me]&x17=[News]&ref=\${documentReferrer}",
+          "pageviewParams": "s=598343&s2=94&p=news%3A%3Aukrainian.news.story.53561143.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=00-00-00&lng=\${browserLanguage}&x1=[urn%3Abbc%3Acps%3Acurie%3Aasset%3A9e539daf-1d79-4630-900c-7db33c4bf1ac]&x2=[amp]&x3=[news-ukrainian]&x4=[uk]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article]&x8=[simorgh]&x9=[%D0%92%D0%B8%D1%80%D0%BE%D0%B1%D0%BD%D0%B8%D1%86%D1%82%D0%B2%D0%BE%2520%D0%B3%D0%B5%D1%80%D0%BE%D1%97%D0%BD%D1%83%2520%D0%B7%D1%80%D0%BE%D1%81%D0%BB%D0%BE%2520%D0%B7%D0%B0%D0%B2%D0%B4%D1%8F%D0%BA%D0%B8%2520%D1%81%D0%BE%D0%BD%D1%8F%D1%87%D0%BD%D0%B8%D0%BC%2520%D0%B1%D0%B0%D1%82%D0%B0%D1%80%D0%B5%D1%8F%D0%BC.%2520%D0%9F%D0%BE%D0%B3%D0%BB%D1%8F%D0%B4%2520%D0%B7%2520%D0%91%D1%80%D0%B8%D1%82%D0%B0%D0%BD%D1%96%D1%97%2520-%2520BBC%2520News%2520%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B0]&x11=[2020-07-28T13%3A25%3A13.000Z]&x12=[2020-07-28T13%3A25%3A13.000Z]&x13=[Afghanistan~Drug%2Buse~Drugs%2Btrade~Ukraine]&x14=[1a5696c5-07d0-4a08-8b54-41ad5cd534b6~37cd3473-7b24-44b0-84c1-bf3c4801df5e~4b4cca1c-d458-4310-819e-dd48572b12c4~ee8750ed-a7fb-453f-bfca-2aa8b3fb064c]&x16=[WS%20-%20Educate%20me]&x17=[News]&ref=\${documentReferrer}",
         }
       `);
     });
@@ -419,19 +465,28 @@ describe('ATI Analytics Container', () => {
       // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       canonical.default = mockCanonical;
 
+      const {
+        metadata: { atiAnalytics },
+      } = styUkrainianInRussianAssetData;
+
+      const atiData = {
+        ...atiAnalytics,
+        pageTitle: `${atiAnalytics.pageTitle} - BBC News Україна`,
+      };
+
       render(
         <ContextWrap
           platform="canonical"
           pageType={STORY_PAGE}
           service="ukrainian"
         >
-          <ATIAnalytics data={styUkrainianInRussianAssetData} />
+          <ATIAnalytics atiData={atiData} />
         </ContextWrap>,
       );
 
       expect(mockCanonical.mock.calls[0][0]).toMatchInlineSnapshot(`
         {
-          "pageviewParams": "s=598343&s2=94&p=russian_features%3A%3Aukrainian.russian_features.story.53477115.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x2=[responsive]&x3=[news-ukrainian]&x4=[ru]&x5=[https%253A%252F%252Flocalhost]&x7=[article]&x8=[simorgh]&x9=[%D0%9A%D0%B0%D1%80%D1%82%D0%B0%2520%D0%BD%D0%BE%D0%B2%D1%8B%D1%85%2520%D1%80%D0%B0%D0%B9%D0%BE%D0%BD%D0%BE%D0%B2%2520%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D1%8B%3A%2520%D0%BA%D1%82%D0%BE%2520%D0%B8%2520%D0%BA%D0%BE%D0%B3%D0%BE%2520%D0%BF%D0%BE%D0%B3%D0%BB%D0%BE%D1%82%D0%B8%D0%BB%2520-%2520BBC%2520News%2520%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B0]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x13=[Society~Politics~Ukraine]&x14=[5307a8d9-f620-40f5-92d4-f99c919a6ffa~75612fa6-147c-4a43-97fa-fcf70d9cced3~ee8750ed-a7fb-453f-bfca-2aa8b3fb064c]&x16=[WS%20-%20Update%20me]&x17=[News]",
+          "pageviewParams": "s=598343&s2=94&p=russian_features%3A%3Aukrainian.russian_features.story.53477115.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Acps%3Acurie%3Aasset%3A307108d3-9bcc-4829-990c-4b42c1290258]&x2=[responsive]&x3=[news-ukrainian]&x4=[ru]&x5=[https%253A%252F%252Flocalhost]&x7=[article]&x8=[simorgh]&x9=[%D0%9A%D0%B0%D1%80%D1%82%D0%B0%2520%D0%BD%D0%BE%D0%B2%D1%8B%D1%85%2520%D1%80%D0%B0%D0%B9%D0%BE%D0%BD%D0%BE%D0%B2%2520%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D1%8B%3A%2520%D0%BA%D1%82%D0%BE%2520%D0%B8%2520%D0%BA%D0%BE%D0%B3%D0%BE%2520%D0%BF%D0%BE%D0%B3%D0%BB%D0%BE%D1%82%D0%B8%D0%BB%2520-%2520BBC%2520News%2520%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B0]&x11=[2020-07-21T13%3A00%3A09.000Z]&x12=[2020-07-21T13%3A00%3A09.000Z]&x13=[5307a8d9-f620-40f5-92d4-f99c919a6ffa~75612fa6-147c-4a43-97fa-fcf70d9cced3~ee8750ed-a7fb-453f-bfca-2aa8b3fb064c]&x14=[Society~Politics~Ukraine]&x16=[WS%20-%20Update%20me]&x17=[News]",
         }
       `);
     });
@@ -441,15 +496,24 @@ describe('ATI Analytics Container', () => {
       // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       amp.default = mockAmp;
 
+      const {
+        metadata: { atiAnalytics },
+      } = styUkrainianInRussianAssetData;
+
+      const atiData = {
+        ...atiAnalytics,
+        pageTitle: `${atiAnalytics.pageTitle} - BBC News Україна`,
+      };
+
       render(
         <ContextWrap platform="amp" pageType={STORY_PAGE} service="ukrainian">
-          <ATIAnalytics data={styUkrainianInRussianAssetData} />
+          <ATIAnalytics atiData={atiData} />
         </ContextWrap>,
       );
 
       expect(mockAmp.mock.calls[0][0]).toMatchInlineSnapshot(`
         {
-          "pageviewParams": "s=598343&s2=94&p=russian_features%3A%3Aukrainian.russian_features.story.53477115.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=00-00-00&lng=\${browserLanguage}&x2=[amp]&x3=[news-ukrainian]&x4=[ru]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article]&x8=[simorgh]&x9=[%D0%9A%D0%B0%D1%80%D1%82%D0%B0%2520%D0%BD%D0%BE%D0%B2%D1%8B%D1%85%2520%D1%80%D0%B0%D0%B9%D0%BE%D0%BD%D0%BE%D0%B2%2520%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D1%8B%3A%2520%D0%BA%D1%82%D0%BE%2520%D0%B8%2520%D0%BA%D0%BE%D0%B3%D0%BE%2520%D0%BF%D0%BE%D0%B3%D0%BB%D0%BE%D1%82%D0%B8%D0%BB%2520-%2520BBC%2520News%2520%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B0]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x13=[Society~Politics~Ukraine]&x14=[5307a8d9-f620-40f5-92d4-f99c919a6ffa~75612fa6-147c-4a43-97fa-fcf70d9cced3~ee8750ed-a7fb-453f-bfca-2aa8b3fb064c]&x16=[WS%20-%20Update%20me]&x17=[News]&ref=\${documentReferrer}",
+          "pageviewParams": "s=598343&s2=94&p=russian_features%3A%3Aukrainian.russian_features.story.53477115.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=00-00-00&lng=\${browserLanguage}&x1=[urn%3Abbc%3Acps%3Acurie%3Aasset%3A307108d3-9bcc-4829-990c-4b42c1290258]&x2=[amp]&x3=[news-ukrainian]&x4=[ru]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article]&x8=[simorgh]&x9=[%D0%9A%D0%B0%D1%80%D1%82%D0%B0%2520%D0%BD%D0%BE%D0%B2%D1%8B%D1%85%2520%D1%80%D0%B0%D0%B9%D0%BE%D0%BD%D0%BE%D0%B2%2520%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D1%8B%3A%2520%D0%BA%D1%82%D0%BE%2520%D0%B8%2520%D0%BA%D0%BE%D0%B3%D0%BE%2520%D0%BF%D0%BE%D0%B3%D0%BB%D0%BE%D1%82%D0%B8%D0%BB%2520-%2520BBC%2520News%2520%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B0]&x11=[2020-07-21T13%3A00%3A09.000Z]&x12=[2020-07-21T13%3A00%3A09.000Z]&x13=[5307a8d9-f620-40f5-92d4-f99c919a6ffa~75612fa6-147c-4a43-97fa-fcf70d9cced3~ee8750ed-a7fb-453f-bfca-2aa8b3fb064c]&x14=[Society~Politics~Ukraine]&x16=[WS%20-%20Update%20me]&x17=[News]&ref=\${documentReferrer}",
         }
       `);
     });
@@ -469,15 +533,24 @@ describe('ATI Analytics Container', () => {
       // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       canonical.default = mockCanonical;
 
+      const {
+        metadata: { atiAnalytics },
+      } = styAssetData;
+
+      const atiData = {
+        ...atiAnalytics,
+        pageTitle: `${atiAnalytics.pageTitle} - BBC News Mundo`,
+      };
+
       render(
         <ContextWrap platform="canonical" pageType={STORY_PAGE} service="mundo">
-          <ATIAnalytics data={styAssetData} />
+          <ATIAnalytics atiData={atiData} />
         </ContextWrap>,
       );
 
       expect(mockCanonical.mock.calls[0][0]).toMatchInlineSnapshot(`
         {
-          "pageviewParams": "s=598343&s2=62&p=mundo.story.23263889.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x2=[responsive]&x3=[news-mundo]&x4=[es]&x5=[https%253A%252F%252Flocalhost%253Fat_medium%253Demail%2526at_emailtype%253Dacquisition%2526at_creation%253Dmy_creation]&x7=[article]&x8=[simorgh]&x9=[WS%2520STY%2520TEST%2520-%2520Full%2520Headline%2520-%2520BBC%2520News%2520Mundo]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x13=[Life~Fake%2520news]&x14=[0239ab33-1cfc-4f5d-babb-a8159711af3e~e7539dc8-5cfb-413a-b4fe-0ad77bc665aa]&x16=[Amuse%20me]&x17=[News]&xto=EREC--%5Bmy_creation%5D---%40",
+          "pageviewParams": "s=598343&s2=62&p=mundo.story.23263889.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Acps%3Acurie%3Aasset%3Af776ad93-e486-b14a-b5ea-55955dd0644f]&x2=[responsive]&x3=[news-mundo]&x4=[es]&x5=[https%253A%252F%252Flocalhost%253Fat_medium%253Demail%2526at_emailtype%253Dacquisition%2526at_creation%253Dmy_creation]&x7=[article]&x8=[simorgh]&x9=[WS%2520STY%2520TEST%2520-%2520Full%2520Headline%2520-%2520BBC%2520News%2520Mundo]&x11=[2020-02-03T15%3A58%3A27.000Z]&x12=[2020-05-06T11%3A02%3A07.000Z]&x13=[Life~Fake%2Bnews]&x14=[0239ab33-1cfc-4f5d-babb-a8159711af3e~e7539dc8-5cfb-413a-b4fe-0ad77bc665aa]&x16=[Amuse%20me]&x17=[News]&xto=EREC--%5Bmy_creation%5D---%40",
         }
       `);
     });
@@ -489,15 +562,24 @@ describe('ATI Analytics Container', () => {
       // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       canonical.default = mockCanonical;
 
+      const {
+        metadata: { atiAnalytics },
+      } = styAssetData;
+
+      const atiData = {
+        ...atiAnalytics,
+        pageTitle: `${atiAnalytics.pageTitle} - BBC News Mundo`,
+      };
+
       render(
         <ContextWrap platform="canonical" pageType={STORY_PAGE} service="mundo">
-          <ATIAnalytics data={styAssetData} />
+          <ATIAnalytics atiData={atiData} />
         </ContextWrap>,
       );
 
       expect(mockCanonical.mock.calls[0][0]).toMatchInlineSnapshot(`
         {
-          "pageviewParams": "s=598343&s2=62&p=mundo.story.23263889.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x2=[responsive]&x3=[news-mundo]&x4=[es]&x5=[http%253A%252F%252Flocalhost%253Ffoo%253Dbar]&x7=[article]&x8=[simorgh]&x9=[WS%2520STY%2520TEST%2520-%2520Full%2520Headline%2520-%2520BBC%2520News%2520Mundo]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x13=[Life~Fake%2520news]&x14=[0239ab33-1cfc-4f5d-babb-a8159711af3e~e7539dc8-5cfb-413a-b4fe-0ad77bc665aa]&x16=[Amuse%20me]&x17=[News]",
+          "pageviewParams": "s=598343&s2=62&p=mundo.story.23263889.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Acps%3Acurie%3Aasset%3Af776ad93-e486-b14a-b5ea-55955dd0644f]&x2=[responsive]&x3=[news-mundo]&x4=[es]&x5=[http%253A%252F%252Flocalhost%253Ffoo%253Dbar]&x7=[article]&x8=[simorgh]&x9=[WS%2520STY%2520TEST%2520-%2520Full%2520Headline%2520-%2520BBC%2520News%2520Mundo]&x11=[2020-02-03T15%3A58%3A27.000Z]&x12=[2020-05-06T11%3A02%3A07.000Z]&x13=[Life~Fake%2Bnews]&x14=[0239ab33-1cfc-4f5d-babb-a8159711af3e~e7539dc8-5cfb-413a-b4fe-0ad77bc665aa]&x16=[Amuse%20me]&x17=[News]",
         }
       `);
     });
