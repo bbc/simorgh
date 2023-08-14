@@ -148,7 +148,7 @@ const ArticlePage = ({ pageData }) => {
     social: SocialEmbedContainer,
     embed: props => (isUgcUploader ? <Uploader {...props} /> : null),
     embedHtml: props => <EmbedHtml {...props} />,
-    oEmbed: props => <OEmbedLoader {...props} />,
+    oEmbed: props => <OEmbedLoader {...props} isAmp={isAmp} />,
     embedImages: props => <EmbedImages {...props} />,
     group: gist,
     links: props => <ScrollablePromo {...props} />,
