@@ -51,7 +51,6 @@ We added this command to the scripts for `build` and `test:unit`. This allows ES
 
 ![](./images/build%20script.png)
 
-
 ![](./images/tes%20unit%20script.png)
 
 
@@ -96,7 +95,6 @@ The way things are exported must be changed. Screenshots from https://dev.to/abb
 
 ![](./images/exports%20commonjs%20external.png)
 
-
 ![](./images/exports%20esm%20external.png)
 
 
@@ -105,11 +103,7 @@ And with examples in our code:
 
 ![](./images/export%20pages.png)
 
-
-
 ![](./images/export%20bundlesize%20config.png)
-
-
 
 ![](./images/service%20list.png)
 
@@ -201,5 +195,6 @@ We had some problems running the bundleSize script with typescript files from ou
 ![](./images/service%20list.png)
 
 
-For further examples of code changes we made to upgrade chalk, please refere to the [Upgrade Chalk Dependency (ESM) PR](https://github.com/bbc/simorgh/pull/10937/files)
+For further examples of code changes we made to upgrade chalk, please refer to the [Upgrade Chalk Dependency (ESM) PR](https://github.com/bbc/simorgh/pull/10937/files)
+
 
