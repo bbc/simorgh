@@ -49,8 +49,7 @@ const CurationPromo = ({
 
   return (
     <Promo>
-      {/* @ts-expect-error HACK */}
-      {showImage && (
+      {showImage ? (
         <Promo.Image
           src={imageUrl}
           alt={imageAlt}
@@ -61,9 +60,9 @@ const CurationPromo = ({
             {showDuration ? mediaDuration : ''}
           </Promo.MediaIcon>
         </Promo.Image>
+      ) : (
+        <></>
       )}
-
-      {/* @ts-expect-error HACK */}
       <Promo.Heading as={`h${headingLevel}`}>
         {isMedia ? (
           <Promo.A
@@ -87,10 +86,12 @@ const CurationPromo = ({
           </Promo.A>
         )}
       </Promo.Heading>
-      {showTimestamp && (
+      {showTimestamp ? (
         <Promo.Timestamp className="promo-timestamp">
           {lastPublished}
         </Promo.Timestamp>
+      ) : (
+        <></>
       )}
     </Promo>
   );
