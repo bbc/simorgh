@@ -95,10 +95,17 @@ const Curation = ({
           <GridComponent
             promos={promos}
             headingLevel={isFirstCuration ? 3 : headingLevel}
+            visualProminence={visualProminence}
+            visualStyle={visualStyle}
           />
         </section>
       ) : (
-        <GridComponent promos={promos} headingLevel={headingLevel} />
+        <GridComponent
+          promos={promos}
+          headingLevel={headingLevel}
+          visualProminence={visualProminence}
+          visualStyle={visualStyle}
+        />
       );
   }
 };

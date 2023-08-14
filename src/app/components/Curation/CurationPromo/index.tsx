@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/aria-role */
-import React, { useContext } from 'react';
+import React, { Fragment, useContext } from 'react';
 import moment from 'moment';
 import path from 'ramda/src/path';
 import formatDuration from '#app/lib/utilities/formatDuration';
@@ -20,6 +20,8 @@ const CurationPromo = ({
   type,
   duration: mediaDuration,
   headingLevel = 2,
+  hideImage = false,
+  hideTimestamp = false,
 }: CurationPromoProps) => {
   const { isAmp } = useContext(RequestContext);
   const { translations } = useContext(ServiceContext);
@@ -36,6 +38,9 @@ const CurationPromo = ({
   const durationString = `${durationTranslation}, ${formattedDuration}`;
 
   const showDuration = mediaDuration && ['video', 'audio'].includes(type);
+  const showTimestamp = !hideTimestamp;
+  const showImage = !hideImage;
+
   const isMedia = ['video', 'audio', 'photogallery'].includes(type);
   const typeTranslated =
     (type === 'audio' && `${audioTranslation}, `) ||
@@ -44,11 +49,21 @@ const CurationPromo = ({
 
   return (
     <Promo>
-      <Promo.Image src={imageUrl} alt={imageAlt} lazyLoad={lazy} isAmp={isAmp}>
-        <Promo.MediaIcon type={type}>
-          {showDuration ? mediaDuration : ''}
-        </Promo.MediaIcon>
-      </Promo.Image>
+      {/* @ts-expect-error HACK */}
+      {showImage && (
+        <Promo.Image
+          src={imageUrl}
+          alt={imageAlt}
+          lazyLoad={lazy}
+          isAmp={isAmp}
+        >
+          <Promo.MediaIcon type={type}>
+            {showDuration ? mediaDuration : ''}
+          </Promo.MediaIcon>
+        </Promo.Image>
+      )}
+
+      {/* @ts-expect-error HACK */}
       <Promo.Heading as={`h${headingLevel}`}>
         {isMedia ? (
           <Promo.A
@@ -72,7 +87,11 @@ const CurationPromo = ({
           </Promo.A>
         )}
       </Promo.Heading>
-      <Promo.Timestamp>{lastPublished}</Promo.Timestamp>
+      {showTimestamp && (
+        <Promo.Timestamp className="promo-timestamp">
+          {lastPublished}
+        </Promo.Timestamp>
+      )}
     </Promo>
   );
 };
