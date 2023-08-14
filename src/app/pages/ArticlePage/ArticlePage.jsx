@@ -49,7 +49,7 @@ import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import LinkedData from '../../components/LinkedData';
 import Uploader from '../../components/Uploader';
 import Byline from '../../components/Byline';
-import VJLoader from '../../components/VJLoader';
+import OEmbedLoader from '../../components/Embeds/OEmbed';
 import {
   bylineExtractor,
   categoryName,
@@ -148,7 +148,7 @@ const ArticlePage = ({ pageData }) => {
     social: SocialEmbedContainer,
     embed: props => (isUgcUploader ? <Uploader {...props} /> : null),
     embedHtml: props => <EmbedHtml {...props} />,
-    vj: props => <VJLoader {...props} />,
+    oEmbed: props => <OEmbedLoader {...props} />,
     embedImages: props => <EmbedImages {...props} />,
     group: gist,
     links: props => <ScrollablePromo {...props} />,
