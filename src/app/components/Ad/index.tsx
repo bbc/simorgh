@@ -20,7 +20,7 @@ const AdContainer = ({ slotType, className, adcampaign }: AdProps) => {
     <>
       {/* dotcom and dotcomConfig need to be setup before the main dotcom javascript file is loaded */}
       {!isAmp && <AdBootstrapJs adcampaign={adcampaign} />}
-      <Ad slotType={slotType} className={className} />;
+      <Ad slotType={slotType} className={className} />
     </>
   );
 };
