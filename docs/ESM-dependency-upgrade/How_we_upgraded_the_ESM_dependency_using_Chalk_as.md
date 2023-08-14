@@ -22,11 +22,13 @@ Here is a brief summary of the differences between these two ways of managing th
 
 We started by upgrading chalk in the package.json of the entire application.
 
-![chalk version update](https://github.com/bbc/simorgh/assets/54575620/ca7af992-b36f-44e8-9ee5-0a8e5a04b83f)
+![chalk version update](./chalk-version-update.png)
+
 
 After running `yarn`, you will also see changes in the yarn.lock file
 
-![](https://paper-attachments.dropboxusercontent.com/s_DB02F868F5C0D835A904CFC72EDD21E2E6A93B66DED3D2DA94BFE046AF7809A0_1690766347490_Screenshot+2023-07-31+at+02.19.04.png)
+![](./chalk%20yarn%20lock.png)
+
 
 After this, we allowed the github actions to run on the branch to see where we would get errors that informed us to where we needed to change syntax. The rest of the document will show what changes we had to make to use the ESM chalk. When you are upgrading other ESM dependencies, the places you need to make changes will differ, however some of the changes will be similar e.g adding the “type”: “module” declaration, changing the way you import and export files, using a different mocking method in tests and using asynchronous imports.
 
@@ -34,7 +36,8 @@ After this, we allowed the github actions to run on the branch to see where we w
 
 One important code change that needs to happen to be able to use an ESM in CJS is declaring “type”: “module” in a package.json that is within the folder of your code using the ESM. This is telling node that ESM syntax will be used in this folder’s files.
 
-![](https://paper-attachments.dropboxusercontent.com/s_DB02F868F5C0D835A904CFC72EDD21E2E6A93B66DED3D2DA94BFE046AF7809A0_1690766091237_Screenshot+2023-07-31+at+02.14.46.png)
+![](./chalk%20package%20json.png)
+
 
 In this screenshot, we have a package.json declaring this within the bundleSize folder. It is here because this is the folder in which Chalk, the ESM we are first using to test upgrading ESM dependencies, is being used in the code.
 
@@ -46,9 +49,11 @@ We also need to execute node with ` --``experimental-modules `. Yes it is still 
 
 We added this command to the scripts for `build` and `test:unit`. This allows ESM to work for command line script rather than CommonJS.
 
-![](https://paper-attachments.dropboxusercontent.com/s_DB02F868F5C0D835A904CFC72EDD21E2E6A93B66DED3D2DA94BFE046AF7809A0_1690765342111_Screenshot+2023-07-31+at+02.02.13.png)
+![](./images/build%20script.png)
 
-![](https://paper-attachments.dropboxusercontent.com/s_DB02F868F5C0D835A904CFC72EDD21E2E6A93B66DED3D2DA94BFE046AF7809A0_1690765370890_Screenshot+2023-07-31+at+02.02.47.png)
+
+![](./images/tes%20unit%20script.png)
+
 
 And to run this locally when developing, I would use ` --``experimental-modules ` in my terminal command.
 
@@ -64,51 +69,65 @@ Development of ESM tracking ticket https://github.com/jestjs/jest/issues/9430
 
 The way things are imported must be changed. Screenshot from https://dev.to/abbeyperini/tldr-commonjs-vs-esm-47dk.
 
-![](https://paper-attachments.dropboxusercontent.com/s_DB02F868F5C0D835A904CFC72EDD21E2E6A93B66DED3D2DA94BFE046AF7809A0_1690918550154_Screenshot+2023-08-01+at+20.35.42.png)
+![](./images/imports%20external%20screenshot.png)
+
 
 The `import` keyword must be used. Here are some examples of the import changes we made in our code:
 
-![](https://paper-attachments.dropboxusercontent.com/s_DB02F868F5C0D835A904CFC72EDD21E2E6A93B66DED3D2DA94BFE046AF7809A0_1690920369220_Screenshot+2023-08-01+at+21.06.05.png)
+![](./images/getBundleData%20imports.png)
 
-![](https://paper-attachments.dropboxusercontent.com/s_DB02F868F5C0D835A904CFC72EDD21E2E6A93B66DED3D2DA94BFE046AF7809A0_1690766019487_Screenshot+2023-07-31+at+02.13.36.png)
+
+![](./images/bundleSize%20index%20imports.png)
+
 
 As Andrew says here, JSON can no longer be directly imported and instead we need to use `readFile` to read the file and `JSON.parse` to parse the JSON.
 
-![](https://paper-attachments.dropboxusercontent.com/s_DB02F868F5C0D835A904CFC72EDD21E2E6A93B66DED3D2DA94BFE046AF7809A0_1690766117311_Screenshot+2023-07-31+at+02.15.13.png)
+![](./images/readFile%20JSON%20parse.png)
+
 
 Jest also needs to be imported into each test file.
 
-![](https://paper-attachments.dropboxusercontent.com/s_DB02F868F5C0D835A904CFC72EDD21E2E6A93B66DED3D2DA94BFE046AF7809A0_1690765451354_Screenshot+2023-07-31+at+02.04.06.png)
+![](./images/import%20jest.png)
+
 
 ## Exports
 
 The way things are exported must be changed. Screenshots from https://dev.to/abbeyperini/tldr-commonjs-vs-esm-47dk.
 
-![](https://paper-attachments.dropboxusercontent.com/s_DB02F868F5C0D835A904CFC72EDD21E2E6A93B66DED3D2DA94BFE046AF7809A0_1690917740261_Screenshot+2023-08-01+at+20.22.15.png)
+![](./images/exports%20commonjs%20external.png)
 
-![](https://paper-attachments.dropboxusercontent.com/s_DB02F868F5C0D835A904CFC72EDD21E2E6A93B66DED3D2DA94BFE046AF7809A0_1690917696435_Screenshot+2023-08-01+at+20.21.31.png)
+
+![](./images/exports%20esm%20external.png)
+
 
 The `export` keyword must be used.
 And with examples in our code:
 
-![](https://paper-attachments.dropboxusercontent.com/s_DB02F868F5C0D835A904CFC72EDD21E2E6A93B66DED3D2DA94BFE046AF7809A0_1690766248414_Screenshot+2023-07-31+at+02.17.24.png)
+![](./images/export%20pages.png)
 
-![](https://paper-attachments.dropboxusercontent.com/s_DB02F868F5C0D835A904CFC72EDD21E2E6A93B66DED3D2DA94BFE046AF7809A0_1690765850735_Screenshot+2023-07-31+at+02.10.45.png)
 
-![](https://paper-attachments.dropboxusercontent.com/s_DB02F868F5C0D835A904CFC72EDD21E2E6A93B66DED3D2DA94BFE046AF7809A0_1690766283234_Screenshot+2023-07-31+at+02.17.58.png)
 
-![](https://paper-attachments.dropboxusercontent.com/s_DB02F868F5C0D835A904CFC72EDD21E2E6A93B66DED3D2DA94BFE046AF7809A0_1690765952643_Screenshot+2023-07-31+at+02.12.28.png)
+![](./images/export%20bundlesize%20config.png)
 
-![](https://paper-attachments.dropboxusercontent.com/s_DB02F868F5C0D835A904CFC72EDD21E2E6A93B66DED3D2DA94BFE046AF7809A0_1690765883615_Screenshot+2023-07-31+at+02.11.20.png)
+
+
+![](./images/service%20list.png)
+
+![](images/export%20getBundleData.png)
+
+![](./images/export%20averagebundlesize.png)
+
 
 And an example with an `import` and an `export`:
 
-![](https://paper-attachments.dropboxusercontent.com/s_DB02F868F5C0D835A904CFC72EDD21E2E6A93B66DED3D2DA94BFE046AF7809A0_1690765865107_Screenshot+2023-07-31+at+02.10.59.png)
+![](./images/import%20and%20export.png)
+
 
 VScode recognises the need to change the type of export, and has a quick fix for it:
 Hover over the highlighted problem (3 dots may also appear underneath), and when the pop up appears with the Quick Fix, you can select the ‘Convert to ES module” and it will do some of this for you.
 
-![](https://paper-attachments.dropboxusercontent.com/s_DB02F868F5C0D835A904CFC72EDD21E2E6A93B66DED3D2DA94BFE046AF7809A0_1691510118824_image.png)
+![](./images/convert%20to%20es%20module%20vscode.png)
+
 
 ## Mocking
 
@@ -118,42 +137,56 @@ Jest doesn’t yet have full support for ES modules, but it does have experiment
 
 There are differences in how we use this, compared to `jest.mock()`. For `jest.unstable_mockModule`, the previously optional factory function is now mandatory. A factory function is a function that creates an object and returns it, and can be considered like a constructor function. ` j``est.mock() ` has a useful automatic mock that mocks classes or constructor functions for you. When using `jest.mock()` you might still want to mock manually for more control with fake data, but the great thing about it is it allows for concise code and speed - one line of code for your mocking and not needing to write all the rest in yourself. With `jest.unstable_mockModule` we do not have the auto-mocking ability, and we must write the inside of the mock out by hand - ‘manual’ mocking. You can see this in the following screenshots where we have had to specify the named export mock functions in `fs` that we want to use. We would not be able to access and use `readdirSync`, for example, automatically.
 
-![](https://paper-attachments.dropboxusercontent.com/s_DB02F868F5C0D835A904CFC72EDD21E2E6A93B66DED3D2DA94BFE046AF7809A0_1690765496358_Screenshot+2023-07-31+at+02.04.50.png)
+![](./images/unstable%20mockModule%20servicelist.png)
 
-![](https://paper-attachments.dropboxusercontent.com/s_DB02F868F5C0D835A904CFC72EDD21E2E6A93B66DED3D2DA94BFE046AF7809A0_1690766176871_Screenshot+2023-07-31+at+02.16.13.png)
 
-![](https://paper-attachments.dropboxusercontent.com/s_DB02F868F5C0D835A904CFC72EDD21E2E6A93B66DED3D2DA94BFE046AF7809A0_1690765553963_Screenshot+2023-07-31+at+02.05.50.png)
+![](./images/unstable%20mockModule%20fs%20promises.png)
 
-![](https://paper-attachments.dropboxusercontent.com/s_DB02F868F5C0D835A904CFC72EDD21E2E6A93B66DED3D2DA94BFE046AF7809A0_1690765513253_Screenshot+2023-07-31+at+02.05.06.png)
+
+![](./images/unstable%20mockModule%20chalk.png)
+
+
+![](./images/unstable%20mockModule%20ora.png)
+
 
 If you have defined mocks in a `__mocks__` folder , these now also need to be manually loaded.
 Example within a jest.unstable_mockModule:
 
-![](https://paper-attachments.dropboxusercontent.com/s_DB02F868F5C0D835A904CFC72EDD21E2E6A93B66DED3D2DA94BFE046AF7809A0_1691500833559_Screenshot+2023-08-08+at+14.20.29.png)
+![](./images/import%20mocks%20external%20screenshot.png)
+
 
 Example within our code of it in an import:
 
-![](https://paper-attachments.dropboxusercontent.com/s_DB02F868F5C0D835A904CFC72EDD21E2E6A93B66DED3D2DA94BFE046AF7809A0_1691661534727_Screenshot+2023-08-10+at+10.58.50.png)
+![](./images/import%20mocks%20internal%20screenshot.png)
+
 
 ## Asynchronous dynamic importing
 
 `jest.unstable_mockModule` must be called at the top level, before the import for the module you are mocking. Then we need to use a dynamic import (instead of `require`). If we were using CommonJS, jest would automatically hoist the mock calls so that the mocking would happen before the imports. This does not work in ESM, so we must _explicitly_ use `jest.unstable_mockModule` before the mock modules that use the module resources are imported. See the following screenshots for examples of importing dynamically and awaiting those imports:
 
-![](https://paper-attachments.dropboxusercontent.com/s_DB02F868F5C0D835A904CFC72EDD21E2E6A93B66DED3D2DA94BFE046AF7809A0_1690765611049_Screenshot+2023-07-31+at+02.06.45.png)
+![](./images/async%20import%20ora%20chalk.png)
 
-![](https://paper-attachments.dropboxusercontent.com/s_DB02F868F5C0D835A904CFC72EDD21E2E6A93B66DED3D2DA94BFE046AF7809A0_1690766221463_Screenshot+2023-07-31+at+02.16.55.png)
 
-![](https://paper-attachments.dropboxusercontent.com/s_DB02F868F5C0D835A904CFC72EDD21E2E6A93B66DED3D2DA94BFE046AF7809A0_1690765571415_Screenshot+2023-07-31+at+02.06.07.png)
+![](./images/async%20import%20pageTypeBundleExtractor.png)
 
-![](https://paper-attachments.dropboxusercontent.com/s_DB02F868F5C0D835A904CFC72EDD21E2E6A93B66DED3D2DA94BFE046AF7809A0_1690765763482_Screenshot+2023-07-31+at+02.09.18.png)
 
-![](https://paper-attachments.dropboxusercontent.com/s_DB02F868F5C0D835A904CFC72EDD21E2E6A93B66DED3D2DA94BFE046AF7809A0_1690765990543_Screenshot+2023-07-31+at+02.13.05.png)
+![](./images/async%20import%20fs.png)
 
-![](https://paper-attachments.dropboxusercontent.com/s_DB02F868F5C0D835A904CFC72EDD21E2E6A93B66DED3D2DA94BFE046AF7809A0_1690765747636_Screenshot+2023-07-31+at+02.09.03.png)
 
-![](https://paper-attachments.dropboxusercontent.com/s_DB02F868F5C0D835A904CFC72EDD21E2E6A93B66DED3D2DA94BFE046AF7809A0_1690765801272_Screenshot+2023-07-31+at+02.09.57.png)
+![](./images/async%20import%20bundlesize%20index.png)
 
-![](https://paper-attachments.dropboxusercontent.com/s_DB02F868F5C0D835A904CFC72EDD21E2E6A93B66DED3D2DA94BFE046AF7809A0_1690765816429_Screenshot+2023-07-31+at+02.10.12.png)
+
+![](./images/async%20import%20getPageBundleData.png)
+
+
+![](./images/async%20import%20bundlesize%20index%202.png)
+
+
+![](./images/async%20import%20bundlesize%20index%203.png)
+
+
+![](./images/async%20import%20bundlesize%20index%204.png)
+
 
 See how in all these examples we have the word ‘await’ and also the word ‘async’ as the function is now asyncronous.
 
@@ -165,28 +198,8 @@ During our work on updating this dependency and using `jest.unstable_mockModule`
 
 We had some problems running the bundleSize script with typescript files from outside the directory. We tried to use `loadableConfig.ts`, which had a list of all the services for use in the tests, but it is outside the bundle size tests folder, and we found that we had difficulty running the bundleSize script from the command line, as typescript compiles the script into JS to run on the command line. We couldn’t get this compilation to happen, and decided it was not worth the time trying to do it this way, and instead to make a new file with the list of service that isn’t typescript and was in the same directory.
 
-![](https://paper-attachments.dropboxusercontent.com/s_DB02F868F5C0D835A904CFC72EDD21E2E6A93B66DED3D2DA94BFE046AF7809A0_1691510973310_Screenshot+2023-08-08+at+17.09.30.png)
+![](./images/service%20list.png)
 
-More general screenshots if you want to see more, but the PR is here https://github.com/bbc/simorgh/pull/10937/files
 
-![](https://paper-attachments.dropboxusercontent.com/s_DB02F868F5C0D835A904CFC72EDD21E2E6A93B66DED3D2DA94BFE046AF7809A0_1690765715577_Screenshot+2023-07-31+at+02.08.28.png)
+For further examples of code changes we made to upgrade chalk, please refere to the [Upgrade Chalk Dependency (ESM) PR](https://github.com/bbc/simorgh/pull/10937/files)
 
-![](https://paper-attachments.dropboxusercontent.com/s_DB02F868F5C0D835A904CFC72EDD21E2E6A93B66DED3D2DA94BFE046AF7809A0_1690765780338_Screenshot+2023-07-31+at+02.09.36.png)
-
-![](https://paper-attachments.dropboxusercontent.com/s_DB02F868F5C0D835A904CFC72EDD21E2E6A93B66DED3D2DA94BFE046AF7809A0_1690765694784_Screenshot+2023-07-31+at+02.08.09.png)
-
-![](https://paper-attachments.dropboxusercontent.com/s_DB02F868F5C0D835A904CFC72EDD21E2E6A93B66DED3D2DA94BFE046AF7809A0_1690765675398_Screenshot+2023-07-31+at+02.07.49.png)
-
-![](https://paper-attachments.dropboxusercontent.com/s_DB02F868F5C0D835A904CFC72EDD21E2E6A93B66DED3D2DA94BFE046AF7809A0_1690765423717_Screenshot+2023-07-31+at+02.03.38.png)
-
-![](https://paper-attachments.dropboxusercontent.com/s_DB02F868F5C0D835A904CFC72EDD21E2E6A93B66DED3D2DA94BFE046AF7809A0_1690765477904_Screenshot+2023-07-31+at+02.04.32.png)
-
-![](https://paper-attachments.dropboxusercontent.com/s_DB02F868F5C0D835A904CFC72EDD21E2E6A93B66DED3D2DA94BFE046AF7809A0_1690765590247_Screenshot+2023-07-31+at+02.06.25.png)
-
-![](https://paper-attachments.dropboxusercontent.com/s_DB02F868F5C0D835A904CFC72EDD21E2E6A93B66DED3D2DA94BFE046AF7809A0_1690765639158_Screenshot+2023-07-31+at+02.07.14.png)
-
-![](https://paper-attachments.dropboxusercontent.com/s_DB02F868F5C0D835A904CFC72EDD21E2E6A93B66DED3D2DA94BFE046AF7809A0_1690765972709_Screenshot+2023-07-31+at+02.12.49.png)
-
-![](https://paper-attachments.dropboxusercontent.com/s_DB02F868F5C0D835A904CFC72EDD21E2E6A93B66DED3D2DA94BFE046AF7809A0_1690766147933_Screenshot+2023-07-31+at+02.15.42.png)
-
-![](https://paper-attachments.dropboxusercontent.com/s_DB02F868F5C0D835A904CFC72EDD21E2E6A93B66DED3D2DA94BFE046AF7809A0_1690766262061_Screenshot+2023-07-31+at+02.17.38.png)
