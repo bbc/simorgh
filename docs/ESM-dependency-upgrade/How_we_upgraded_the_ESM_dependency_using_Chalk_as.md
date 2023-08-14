@@ -22,12 +22,14 @@ Here is a brief summary of the differences between these two ways of managing th
 
 We started by upgrading chalk in the package.json of the entire application.
 
-![chalk version update](./chalk-version-update.png)
+![chalk version update](./images/chalk-version-update.png)
+
 
 
 After running `yarn`, you will also see changes in the yarn.lock file
 
-![](./chalk%20yarn%20lock.png)
+![](./images/chalk%20yarn%20lock.png)
+
 
 
 After this, we allowed the github actions to run on the branch to see where we would get errors that informed us to where we needed to change syntax. The rest of the document will show what changes we had to make to use the ESM chalk. When you are upgrading other ESM dependencies, the places you need to make changes will differ, however some of the changes will be similar e.g adding the “type”: “module” declaration, changing the way you import and export files, using a different mocking method in tests and using asynchronous imports.
@@ -36,7 +38,7 @@ After this, we allowed the github actions to run on the branch to see where we w
 
 One important code change that needs to happen to be able to use an ESM in CJS is declaring “type”: “module” in a package.json that is within the folder of your code using the ESM. This is telling node that ESM syntax will be used in this folder’s files.
 
-![](./chalk%20package%20json.png)
+![](./images/chalk%20package%20json.png)
 
 
 In this screenshot, we have a package.json declaring this within the bundleSize folder. It is here because this is the folder in which Chalk, the ESM we are first using to test upgrading ESM dependencies, is being used in the code.
