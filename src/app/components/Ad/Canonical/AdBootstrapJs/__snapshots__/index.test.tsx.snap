@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CanonicalAds Ads Snapshots should push dotcom bootstrap and configuration to a head script 1`] = `
+exports[`Canonical Ads Snapshots should push dotcom bootstrap and configuration to a head script 1`] = `
 {
   "innerHTML": "
     window.dotcom = window.dotcom || { cmd: [] };

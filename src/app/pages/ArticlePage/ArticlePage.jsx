@@ -39,7 +39,6 @@ import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 import ScrollablePromo from '#components/ScrollablePromo';
 import CpsRecommendations from '#containers/CpsRecommendations';
-import CanonicalAdBootstrapJs from '../../components/Ad/Canonical/CanonicalAdBootstrapJs';
 import AdContainer from '../../components/Ad';
 import EmbedImages from '../../components/Embeds/EmbedImages';
 import EmbedHtml from '../../components/Embeds/EmbedHtml';
@@ -64,7 +63,7 @@ import styles from './ArticlePage.styles';
 import { getPromoHeadline } from '../../lib/analyticsUtils/article';
 
 const ArticlePage = ({ pageData }) => {
-  const { isAmp, isApp, showAdsBasedOnLocation } = useContext(RequestContext);
+  const { isApp, showAdsBasedOnLocation } = useContext(RequestContext);
   const { articleAuthor, isTrustProjectParticipant, showRelatedTopics } =
     useContext(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
@@ -222,10 +221,7 @@ const ArticlePage = ({ pageData }) => {
         aboutTags={aboutTags}
         imageLocator={promoImage}
       />
-      {isAdsEnabled && !isAmp && (
-        <CanonicalAdBootstrapJs adcampaign={adcampaign} />
-      )}
-      {isAdsEnabled && <AdContainer slotType="leaderboard" />}
+      <AdContainer slotType="leaderboard" adcampaign={adcampaign} />
       <div css={styles.grid}>
         <div css={styles.primaryColumn}>
           <main css={styles.mainContent} role="main">

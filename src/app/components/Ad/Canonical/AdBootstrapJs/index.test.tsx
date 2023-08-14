@@ -5,12 +5,12 @@ import {
   act,
   waitFor,
 } from '../../../react-testing-library-with-providers';
-import CanonicalAdBootstrapJs from '.';
+import AdBootstrapJs from '.';
 
-describe('CanonicalAds Ads', () => {
+describe('Canonical Ads', () => {
   describe('Snapshots', () => {
     it('should push dotcom bootstrap and configuration to a head script', () => {
-      render(<CanonicalAdBootstrapJs />);
+      render(<AdBootstrapJs />);
 
       expect(Helmet.peek().scriptTags[0]).toMatchSnapshot();
     });
@@ -19,7 +19,7 @@ describe('CanonicalAds Ads', () => {
   describe('Assertions', () => {
     it('should set window.dotcomConfig with pageAds enabled', async () => {
       await act(async () => {
-        render(<CanonicalAdBootstrapJs />);
+        render(<AdBootstrapJs />);
       });
 
       await waitFor(() => {
@@ -33,7 +33,7 @@ describe('CanonicalAds Ads', () => {
 
     it('should set window.dotcomConfig with adCampaign value provided', async () => {
       await act(async () => {
-        render(<CanonicalAdBootstrapJs adcampaign="a-campaign" />);
+        render(<AdBootstrapJs adcampaign="a-campaign" />);
       });
 
       await waitFor(() => {

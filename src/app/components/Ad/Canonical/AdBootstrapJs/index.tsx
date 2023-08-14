@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-const CanonicalAdBootstrapJs = ({ adcampaign }: { adcampaign?: string }) => {
+const AdBootstrapJs = ({ adcampaign }: { adcampaign?: string }) => {
   let innerHTML;
 
   if (adcampaign) {
@@ -36,4 +36,4 @@ const CanonicalAdBootstrapJs = ({ adcampaign }: { adcampaign?: string }) => {
   );
 };
 
-export default CanonicalAdBootstrapJs;
+export default AdBootstrapJs;

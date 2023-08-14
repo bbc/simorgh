@@ -1,16 +1,13 @@
 import React, { useContext, Fragment } from 'react';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
-import { RequestContext } from '#contexts/RequestContext';
 import IndexHeading from '#containers/IndexHeading';
 import IndexPageContainer from '#components/PageLayout/IndexPageContainer';
 import IndexPageSection from '#containers/IndexPageSection';
 import idxPageDataPropTypes from '#models/propTypes/idxPage';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
-import useToggle from '#hooks/useToggle';
 import AdContainer from '../../components/Ad';
 import MPUContainer from '../../components/Ad/MPU';
-import CanonicalAdBootstrapJs from '../../components/Ad/Canonical/CanonicalAdBootstrapJs';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import MetadataContainer from '../../components/Metadata';
@@ -20,26 +17,13 @@ import flattenGroups from './flattenGroups';
 
 const FeatureIdxPage = ({ pageData }) => {
   const { lang } = useContext(ServiceContext);
-  const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
-  const { enabled: adsEnabled } = useToggle('ads');
-
   const groups = flattenGroups(pathOr([], ['content', 'groups'], pageData));
   const title = path(['metadata', 'title'], pageData);
   const summary = path(['metadata', 'summary'], pageData);
   const seoTitle = path(['promo', 'name'], pageData);
 
-  const isCanonical = !isAmp;
-
-  const shouldBootstrapCanonicalAds = [
-    adsEnabled,
-    showAdsBasedOnLocation,
-    isCanonical,
-  ].every(Boolean);
-
   return (
     <>
-      {/* dotcom and dotcomConfig need to be setup before the main dotcom javascript file is loaded */}
-      {shouldBootstrapCanonicalAds && <CanonicalAdBootstrapJs />}
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics
         sectionName={pageData?.relatedContent?.section?.name}
