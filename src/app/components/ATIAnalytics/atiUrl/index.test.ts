@@ -133,7 +133,8 @@ describe('getThingAttributes', () => {
 
     const queryParams = buildATIPageTrackPath({
       pageTitle: 'pageTitle',
-      platform: 'canonical',
+      // @ts-expect-error - required for testing purposes
+      platform: 'platform',
       statsDestination: 'statsDestination',
     });
 
@@ -209,7 +210,8 @@ describe('getThingAttributes', () => {
         ldpThingLabels: 'ldpThingLabels',
         pageIdentifier: 'pageIdentifier',
         pageTitle: 'pageTitle',
-        platform: 'canonical',
+        // @ts-expect-error - required for testing purposes
+        platform: 'platform',
         producerId: 'producerId',
         timePublished: 'timePublished',
         timeUpdated: 'timeUpdated',
