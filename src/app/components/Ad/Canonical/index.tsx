@@ -6,7 +6,6 @@ import React, { useEffect, useContext } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import pathOr from 'ramda/src/pathOr';
-import { RequestContext } from '../../../contexts/RequestContext';
 import isLive from '../../../lib/utilities/isLive';
 import useOperaMiniDetection from '../../../hooks/useOperaMiniDetection';
 import { ServiceContext } from '../../../contexts/ServiceContext';
