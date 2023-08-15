@@ -39,9 +39,12 @@ const homePageServices = ['azeri', 'burmese', 'kyrgyz'];
 const servicesWithVariants = ['serbian', 'ukchina', 'zhongwen'];
 
 export const getFrontPageRegex = services => {
-  const frontPages = services.filter(
-    service => !homePageServices.includes(service),
-  );
+  let frontPages = services;
+  if (isLive()) {
+    frontPages = services.filter(
+      service => !homePageServices.includes(service),
+    );
+  }
   const serviceRegex = getServiceRegex(frontPages);
   return `/:service(${serviceRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
 };
@@ -52,10 +55,14 @@ export const getTipoHomeRegex = services => {
 };
 
 export const getHomePageRegex = services => {
-  const homePages = services.filter(service =>
-    homePageServices.includes(service),
-  );
-
+  let homePages = services;
+  if (isLive()) {
+    homePages = services.filter(service => homePageServices.includes(service));
+  } else {
+    homePages = services.filter(
+      service => !servicesWithVariants.includes(service),
+    );
+  }
   const homePageServiceRegex = getServiceRegex(homePages);
   return `/:service(${homePageServiceRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
 };
