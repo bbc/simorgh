@@ -7,10 +7,16 @@ import {
 } from '../../../react-testing-library-with-providers';
 import AdBootstrapJs from '.';
 
-describe('Canonical Ads', () => {
+describe('AdBootstrapJs', () => {
   describe('Snapshots', () => {
     it('should push dotcom bootstrap and configuration to a head script', () => {
       render(<AdBootstrapJs />);
+
+      expect(Helmet.peek().scriptTags[0]).toMatchSnapshot();
+    });
+
+    it('should push dotcom bootstrap and configuration to a head script with adcampaign', () => {
+      render(<AdBootstrapJs adcampaign="test-ad-campaign" />);
 
       expect(Helmet.peek().scriptTags[0]).toMatchSnapshot();
     });
