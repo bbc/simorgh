@@ -63,22 +63,16 @@ import styles from './ArticlePage.styles';
 import { getPromoHeadline } from '../../lib/analyticsUtils/article';
 
 const ArticlePage = ({ pageData }) => {
-  const { isApp, showAdsBasedOnLocation } = useContext(RequestContext);
+  const { isApp } = useContext(RequestContext);
   const { articleAuthor, isTrustProjectParticipant, showRelatedTopics } =
     useContext(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
-  const { enabled: adsEnabled } = useToggle('ads');
 
   const {
     palette: { GREY_2, WHITE },
   } = useTheme();
 
-  const isAdsEnabled = [
-    path(['metadata', 'allowAdvertising'], pageData),
-    adsEnabled,
-    showAdsBasedOnLocation,
-  ].every(Boolean);
-
+  const allowAdvertising = path(['metadata', 'allowAdvertising'], pageData);
   const adcampaign = path(['metadata', 'adCampaignKeyword'], pageData);
   const { enabled: podcastPromoEnabled } = useToggle('podcastPromo');
   const headline = getHeadline(pageData);
@@ -150,7 +144,7 @@ const ArticlePage = ({ pageData }) => {
     group: gist,
     links: props => <ScrollablePromo {...props} />,
     mpu: props =>
-      isAdsEnabled ? <AdContainer {...props} slotType="mpu" /> : null,
+      allowAdvertising ? <AdContainer {...props} slotType="mpu" /> : null,
     wsoj: props => (
       <CpsRecommendations {...props} items={recommendationsData} />
     ),
@@ -221,7 +215,9 @@ const ArticlePage = ({ pageData }) => {
         aboutTags={aboutTags}
         imageLocator={promoImage}
       />
-      <AdContainer slotType="leaderboard" adcampaign={adcampaign} />
+      {allowAdvertising && (
+        <AdContainer slotType="leaderboard" adcampaign={adcampaign} />
+      )}
       <div css={styles.grid}>
         <div css={styles.primaryColumn}>
           <main css={styles.mainContent} role="main">
