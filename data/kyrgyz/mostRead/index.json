@@ -144,6 +144,14 @@
         "href": "https://www.bbc.com/kyrgyz/articles/cl04epydlxeo",
         "timestamp": 1640402808586
       }
-    ]
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentType": "list-datadriven",
+        "pageIdentifier": "kyrgyz.popular.read.page",
+        "timePublished": "2023-06-19T08:55:00Z",
+        "timeUpdated": "2023-06-19T14:55:00Z"
+      }
+    }
   }
 }

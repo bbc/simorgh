@@ -144,6 +144,14 @@
         "href": "/ukchina/simp/vert_fut/2016/01/160114_vert_fut_lethal-effects-of-london-fog",
         "timestamp": 1452782023000
       }
-    ]
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentType": "list-datadriven",
+        "pageIdentifier": "ukchina.popular.read.page",
+        "timePublished": "2023-06-19T15:00:00Z",
+        "timeUpdated": "2023-06-19T15:15:00Z"
+      }
+    }
   }
 }
