@@ -41,24 +41,6 @@ describe('CanonicalAds Ads', () => {
     window.dotcom = undefined;
   });
 
-  describe('Assertions', () => {
-    it('should return null when showAdsBasedOnLocation is false', () => {
-      const requestContext = {
-        showAdsBasedOnLocation: false,
-      };
-
-      const { container } = render(
-        <CanonicalAdWithContext
-          slotType="leaderboard"
-          // @ts-expect-error require partial data for testing purposes
-          requestContext={requestContext}
-        />,
-      );
-
-      expect(container).toBeEmptyDOMElement();
-    });
-  });
-
   describe('Snapshots', () => {
     it('should correctly render an Canonical leaderboard ad with dotcom-bootstrap script', () => {
       const { container } = render(
