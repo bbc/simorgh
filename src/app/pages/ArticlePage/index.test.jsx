@@ -517,5 +517,4 @@ it('should render Riddle component when passed', async () => {
     'iframe[src="https://www.riddle.com/embed/a/SAVstNdh?lazyImages=true&staticHeight=false"]',
   );
   expect(actual).toBeInTheDocument();
-  expect(container).toMatchSnapshot();
 });

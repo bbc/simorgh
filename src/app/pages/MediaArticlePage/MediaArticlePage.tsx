@@ -59,7 +59,6 @@ import {
 } from '../../components/Byline/utilities';
 
 import { ServiceContext } from '../../contexts/ServiceContext';
-import { RequestContext } from '../../contexts/RequestContext';
 import RelatedContentSection from '../../components/RelatedContentSection';
 
 import SecondaryColumn from './SecondaryColumn';
@@ -75,7 +74,6 @@ import {
 const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
   const { articleAuthor, isTrustProjectParticipant, showRelatedTopics } =
     useContext(ServiceContext);
-  const { isAmp } = useContext(RequestContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
 
   const {
@@ -152,7 +150,7 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
     social: SocialEmbedContainer,
     embedHtml: (props: EmbedHtmlProps) => <EmbedHtml {...props} />,
     embedImages: (props: ComponentToRenderProps) => <EmbedImages {...props} />,
-    oEmbed: (props: OEmbedProps) => <OEmbedLoader {...props} isAmp={isAmp} />,
+    oEmbed: (props: OEmbedProps) => <OEmbedLoader {...props} />,
     group: gist,
     links: (props: ComponentToRenderProps) => <ScrollablePromo {...props} />,
   };

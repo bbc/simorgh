@@ -1,7 +1,8 @@
 /* eslint-disable camelcase */
 import React, { useContext } from 'react';
-import { ServiceContext } from '#app/contexts/ServiceContext';
 import pathOr from 'ramda/src/pathOr';
+import { ServiceContext } from '../../../contexts/ServiceContext';
+import { RequestContext } from '../../../contexts/RequestContext';
 import EmbedHtml from '../EmbedHtml';
 import EmbedError from '../EmbedError';
 
@@ -9,7 +10,6 @@ export type OEmbedProps = {
   id: string;
   type: string;
   link: string;
-  isAmp: boolean;
   oembed: {
     version: string;
     provider_name: string;
@@ -22,10 +22,10 @@ export type OEmbedProps = {
   };
 };
 
-const OEmbedLoader = ({ oembed, isAmp, link }: OEmbedProps) => {
+const OEmbedLoader = ({ oembed, link }: OEmbedProps) => {
   const { html, url } = oembed;
   const { translations } = useContext(ServiceContext);
-
+  const { isAmp } = useContext(RequestContext);
   if (isAmp) {
     const errorMessage = pathOr(
       'Sorry, we can’t display this part of the story on this lightweight mobile page.',
