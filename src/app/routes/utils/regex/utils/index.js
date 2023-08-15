@@ -44,6 +44,10 @@ export const getFrontPageRegex = services => {
     frontPages = services.filter(
       service => !homePageServices.includes(service),
     );
+  } else {
+    frontPages = services.filter(service =>
+      servicesWithVariants.includes(service),
+    );
   }
   const serviceRegex = getServiceRegex(frontPages);
   return `/:service(${serviceRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
