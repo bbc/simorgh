@@ -39,10 +39,8 @@ describe('Amp AdSlot', () => {
 });
 
 describe('getDataSlot', () => {
-  const originalAppEnv = process.env.SIMORGH_APP_ENV;
-
   afterEach(() => {
-    process.env.SIMORGH_APP_ENV = originalAppEnv;
+    delete process.env.SIMORGH_APP_ENV;
   });
 
   describe('Is a World Service Site', () => {
