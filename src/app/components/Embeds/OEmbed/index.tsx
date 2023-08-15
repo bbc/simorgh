@@ -1,10 +1,9 @@
 /* eslint-disable camelcase */
 import React, { useContext } from 'react';
-import EmbedError from '#app/legacy/psammead/psammead-embed-error/src';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import pathOr from 'ramda/src/pathOr';
-import { GridItemMedium } from '../../../legacy/components/Grid';
 import EmbedHtml from '../EmbedHtml';
+import EmbedError from '../OEmbedError';
 
 type OEmbedBlock = {
   id: string;
@@ -24,7 +23,7 @@ type OEmbedBlock = {
 };
 
 const OEmbedLoader = ({ oembed, isAmp, link }: OEmbedBlock) => {
-  const { html } = oembed;
+  const { html, url } = oembed;
   const { translations } = useContext(ServiceContext);
 
   if (isAmp) {
@@ -41,15 +40,13 @@ const OEmbedLoader = ({ oembed, isAmp, link }: OEmbedBlock) => {
     );
 
     return (
-      <GridItemMedium gridColumnStart={0} gridSpan={5}>
-        <EmbedError
-          message={errorMessage}
-          link={{
-            text: linkText,
-            href: link,
-          }}
-        />
-      </GridItemMedium>
+      <EmbedError
+        message={errorMessage}
+        link={{
+          text: linkText,
+          href: url ?? link,
+        }}
+      />
     );
   }
 

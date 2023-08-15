@@ -29,3 +29,24 @@ describe('Canonical - OEmbed', () => {
     expect(actual).toBeInTheDocument();
   });
 });
+
+describe('AMP - OEmbed', () => {
+  it('Should show an error message with a link to the riddle', () => {
+    const { container, getByText } = render(
+      <OEmbedLoader {...riddleBlock} isAmp />,
+    );
+    const iFrameElement = container.querySelector(
+      'iframe[src="https://www.riddle.com/embed/a/SAVstNdh?lazyImages=true&staticHeight=false"]',
+    );
+    const linkToRiddle = container.querySelector(
+      'a[href="https://www.riddle.com/view/SAVstNdh"]',
+    );
+    const errorMessage = getByText(
+      'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+    );
+
+    expect(iFrameElement).toBe(null);
+    expect(linkToRiddle).toBeInTheDocument();
+    expect(errorMessage).toBeInTheDocument();
+  });
+});
