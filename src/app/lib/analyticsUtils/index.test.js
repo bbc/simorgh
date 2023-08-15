@@ -125,6 +125,11 @@ describe('getAppType', () => {
       summary: 'should return amp for amp',
     },
     {
+      platform: 'app',
+      expected: 'mobile-app',
+      summary: 'should return mobile-app for app',
+    },
+    {
       platform: 'canonical',
       expected: 'responsive',
       summary: 'should return responsive for amp',
