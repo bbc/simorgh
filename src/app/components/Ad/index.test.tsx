@@ -3,13 +3,13 @@ import { BrowserRouter } from 'react-router-dom';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
+import { Helmet } from 'react-helmet';
 import { render } from '../react-testing-library-with-providers';
 import latinDiacritics from '../ThemeProvider/fontScripts/latinWithDiacritics';
 import {
   ServiceContext,
   ServiceContextProvider,
 } from '../../contexts/ServiceContext';
-
 import AdContainer from './index';
 
 const context = {
@@ -45,9 +45,6 @@ describe('Ad Container', () => {
   describe('Snapshots', () => {
     const defaultToggleState = {
       ads: {
-        enabled: true,
-      },
-      ampAds: {
         enabled: true,
       },
     };
@@ -218,11 +215,8 @@ describe('Ad Container', () => {
     });
   });
 
-  describe('when adsEnabled is false ', () => {
+  describe('when adsEnabled is false', () => {
     const toggleState = {
-      ampAds: {
-        enabled: false,
-      },
       ads: {
         enabled: false,
       },
@@ -234,7 +228,7 @@ describe('Ad Container', () => {
       toggleState,
       toggleDispatch: mockToggleDispatch,
     };
-    describe('should return null for AMP', () => {
+    it('should return null for AMP', () => {
       const { container } = render(
         <ServiceContext.Provider
           // @ts-expect-error require partial data for testing purposes
@@ -260,7 +254,7 @@ describe('Ad Container', () => {
       expect(container).toBeEmptyDOMElement();
     });
 
-    describe('should return null for canonical', () => {
+    it('should return null for canonical', () => {
       const { container } = render(
         // @ts-expect-error require partial data for testing purposes
         <ServiceContext.Provider value={context}>
@@ -282,6 +276,143 @@ describe('Ad Container', () => {
         </ServiceContext.Provider>,
       );
       expect(container).toBeEmptyDOMElement();
+    });
+  });
+
+  describe('when showAdsBasedOnLocation is false', () => {
+    const toggleState = {
+      ads: {
+        enabled: true,
+      },
+    };
+
+    const mockToggleDispatch = jest.fn();
+
+    const toggleContextMock = {
+      toggleState,
+      toggleDispatch: mockToggleDispatch,
+    };
+    it('should return null for AMP', () => {
+      const { container } = render(
+        <ServiceContext.Provider
+          // @ts-expect-error require partial data for testing purposes
+          value={{ showAdPlaceholder: true, ...context }}
+        >
+          <RequestContextProvider
+            bbcOrigin="https://www.test.bbc.co.uk"
+            id="c0000000000o"
+            isAmp
+            isApp={false}
+            pageType={FRONT_PAGE}
+            service="mundo"
+            statusCode={200}
+            pathname="/mundo"
+            showAdsBasedOnLocation={false}
+          >
+            <ToggleContext.Provider value={toggleContextMock}>
+              <AdContainer slotType="leaderboard" />
+            </ToggleContext.Provider>
+          </RequestContextProvider>
+        </ServiceContext.Provider>,
+      );
+      expect(container).toBeEmptyDOMElement();
+    });
+
+    it('should return null for canonical', () => {
+      const { container } = render(
+        // @ts-expect-error require partial data for testing purposes
+        <ServiceContext.Provider value={context}>
+          <RequestContextProvider
+            bbcOrigin="https://www.test.bbc.co.uk"
+            isAmp={false}
+            isApp={false}
+            id="c0000000000o"
+            pageType={FRONT_PAGE}
+            service="mundo"
+            statusCode={200}
+            pathname="/mundo"
+            showAdsBasedOnLocation={false}
+          >
+            <ToggleContext.Provider value={toggleContextMock}>
+              <AdContainer slotType="leaderboard" />
+            </ToggleContext.Provider>
+          </RequestContextProvider>
+        </ServiceContext.Provider>,
+      );
+      expect(container).toBeEmptyDOMElement();
+    });
+  });
+
+  describe('Bootstrap script', () => {
+    const getBootstrapScript = () =>
+      Helmet.peek().scriptTags.find(({ innerHTML }) =>
+        innerHTML?.includes('window.dotcom'),
+      );
+
+    const toggleState = {
+      ads: {
+        enabled: true,
+      },
+    };
+
+    const mockToggleDispatch = jest.fn();
+
+    const toggleContextMock = {
+      toggleState,
+      toggleDispatch: mockToggleDispatch,
+    };
+    it('should not be included on AMP', () => {
+      render(
+        <ServiceContext.Provider
+          // @ts-expect-error require partial data for testing purposes
+          value={{ showAdPlaceholder: true, ...context }}
+        >
+          <RequestContextProvider
+            bbcOrigin="https://www.test.bbc.co.uk"
+            id="c0000000000o"
+            isAmp
+            isApp={false}
+            pageType={FRONT_PAGE}
+            service="mundo"
+            statusCode={200}
+            pathname="/mundo"
+            showAdsBasedOnLocation
+          >
+            <ToggleContext.Provider value={toggleContextMock}>
+              <AdContainer slotType="leaderboard" />
+            </ToggleContext.Provider>
+          </RequestContextProvider>
+        </ServiceContext.Provider>,
+      );
+
+      expect(getBootstrapScript()).toBeUndefined();
+    });
+
+    it('should be included for canonical', () => {
+      render(
+        // @ts-expect-error require partial data for testing purposes
+        <ServiceContext.Provider value={context}>
+          <RequestContextProvider
+            bbcOrigin="https://www.test.bbc.co.uk"
+            isAmp={false}
+            isApp={false}
+            id="c0000000000o"
+            pageType={FRONT_PAGE}
+            service="mundo"
+            statusCode={200}
+            pathname="/mundo"
+            showAdsBasedOnLocation
+          >
+            <ToggleContext.Provider value={toggleContextMock}>
+              <BrowserRouter>
+                <AdContainer slotType="leaderboard" />
+              </BrowserRouter>
+            </ToggleContext.Provider>
+          </RequestContextProvider>
+        </ServiceContext.Provider>,
+      );
+
+      expect(getBootstrapScript()).toBeTruthy();
     });
   });
 });
