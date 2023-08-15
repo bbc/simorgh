@@ -3,7 +3,7 @@ import React, { useContext } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import pathOr from 'ramda/src/pathOr';
 import EmbedHtml from '../EmbedHtml';
-import EmbedError from '../OEmbedError';
+import EmbedError from '../EmbedError';
 
 type OEmbedBlock = {
   id: string;
