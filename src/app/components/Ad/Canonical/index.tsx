@@ -14,6 +14,8 @@ import adStyles from '../utilities/adSlot.styles';
 import styles from './index.styles';
 import { AdProps, SLOT_TYPES } from '../types';
 
+const { LEADERBOARD } = SLOT_TYPES;
+
 export const getBootstrapSrc = (queryString: string, useLegacy = false) => {
   const adsTestScript =
     'https://gn-web-assets.api.bbc.com/ngas/latest/test/dotcom-bootstrap.js';
@@ -83,9 +85,7 @@ const CanonicalAd = ({ slotType, className }: AdProps) => {
       <section
         css={[
           styles.section,
-          slotType === SLOT_TYPES.LEADERBOARD
-            ? adStyles.leaderboard
-            : adStyles.mpu,
+          slotType === LEADERBOARD ? adStyles.leaderboard : adStyles.mpu,
         ]}
         aria-label={ariaLabel}
         aria-hidden="true"
