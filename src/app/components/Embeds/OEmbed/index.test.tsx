@@ -20,7 +20,9 @@ const riddleBlock = {
 
 describe('Canonical - OEmbed', () => {
   it('Should show an iframe with the appropriate link', () => {
-    const { container } = render(<OEmbedLoader {...riddleBlock} />);
+    const { container } = render(
+      <OEmbedLoader {...riddleBlock} isAmp={false} />,
+    );
     const actual = container.querySelector(
       'iframe[src="https://www.riddle.com/embed/a/SAVstNdh?lazyImages=true&staticHeight=false"]',
     );
