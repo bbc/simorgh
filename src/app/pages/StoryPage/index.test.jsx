@@ -271,10 +271,8 @@ describe('Story Page', () => {
         toggles: { ads: { enabled: false } },
       });
 
-      const leaderboardAd = container.querySelector(
-        '[id="dotcom-leaderboard"]',
-      );
-      expect(leaderboardAd).not.toBeInTheDocument();
+      const storyPageAds = container.querySelectorAll('[id^="dotcom-"]');
+      expect(storyPageAds).toHaveLength(0);
 
       expect(getBootstrapScript()).toBeUndefined();
     },
