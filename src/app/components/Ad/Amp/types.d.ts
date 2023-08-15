@@ -21,6 +21,5 @@ declare namespace JSX {
 
   interface IntrinsicElements {
     'amp-ad': AmpAd;
-    div: DivProps;
   }
 }
