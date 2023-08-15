@@ -18,35 +18,37 @@ const riddleBlock = {
   aresType: 'aresRiddle',
 };
 
-describe('Canonical - OEmbed', () => {
-  it('Riddle Embed - Should show an iframe with the appropriate link', () => {
-    const { container } = render(
-      <OEmbedLoader {...riddleBlock} isAmp={false} />,
-    );
-    const actual = container.querySelector(
-      'iframe[src="https://www.riddle.com/embed/a/SAVstNdh?lazyImages=true&staticHeight=false"]',
-    );
-    expect(actual).toBeInTheDocument();
+describe('OEmbed', () => {
+  describe('Canonical', () => {
+    it('Riddle Embed - Should show an iframe with the appropriate link', () => {
+      const { container } = render(
+        <OEmbedLoader {...riddleBlock} isAmp={false} />,
+      );
+      const actual = container.querySelector(
+        'iframe[src="https://www.riddle.com/embed/a/SAVstNdh?lazyImages=true&staticHeight=false"]',
+      );
+      expect(actual).toBeInTheDocument();
+    });
   });
-});
 
-describe('AMP - OEmbed', () => {
-  it('Riddle Embed - Should show an error message with a link to the riddle', () => {
-    const { container, getByText } = render(
-      <OEmbedLoader {...riddleBlock} isAmp />,
-    );
-    const iFrameElement = container.querySelector(
-      'iframe[src="https://www.riddle.com/embed/a/SAVstNdh?lazyImages=true&staticHeight=false"]',
-    );
-    const linkToRiddle = container.querySelector(
-      'a[href="https://www.riddle.com/view/SAVstNdh"]',
-    );
-    const errorMessage = getByText(
-      'Sorry, we can’t display this part of the story on this lightweight mobile page.',
-    );
+  describe('AMP', () => {
+    it('Riddle Embed - Should show an error message with a link to the riddle', () => {
+      const { container, getByText } = render(
+        <OEmbedLoader {...riddleBlock} isAmp />,
+      );
+      const iFrameElement = container.querySelector(
+        'iframe[src="https://www.riddle.com/embed/a/SAVstNdh?lazyImages=true&staticHeight=false"]',
+      );
+      const linkToRiddle = container.querySelector(
+        'a[href="https://www.riddle.com/view/SAVstNdh"]',
+      );
+      const errorMessage = getByText(
+        'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+      );
 
-    expect(iFrameElement).toBe(null);
-    expect(linkToRiddle).toBeInTheDocument();
-    expect(errorMessage).toBeInTheDocument();
+      expect(iFrameElement).toBe(null);
+      expect(linkToRiddle).toBeInTheDocument();
+      expect(errorMessage).toBeInTheDocument();
+    });
   });
 });

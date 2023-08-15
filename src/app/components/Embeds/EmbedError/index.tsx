@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import styles from './index.styles';
+import InlineLink from '../../InlineLink';
 
 type Props = {
   message: string;
@@ -16,11 +17,11 @@ const EmbedError = ({ message, link }: Props) => {
       <div>
         <strong css={styles.errorMessage}>{message}</strong>
       </div>
-      {link && link.text && link.href && (
-        <a href={link.href} css={styles.errorLink}>
-          {link.text}
-        </a>
-      )}
+      <div css={styles.errorLinkWrapper}>
+        {link && link.text && link.href && (
+          <InlineLink to={link.href} text={link.text} css={styles.inlineLink} />
+        )}
+      </div>
     </div>
   );
 };

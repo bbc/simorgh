@@ -3,30 +3,27 @@ import { css, Theme } from '@emotion/react';
 const styles = {
   embedDiv: ({ spacings, mq, palette }: Theme) =>
     css({
-      backgroundColor: palette.GHOST,
+      backgroundColor: palette.WHITE,
       maxWidth: '100%',
-      paddingLeft: `${spacings.FULL}rem`,
-      paddingRight: `${spacings.FULL}rem`,
-      paddingTop: `${spacings.TRIPLE}rem`,
-      paddingBottom: `${spacings.TRIPLE}rem`,
-      margin: `${spacings.TRIPLE}rem ${spacings.DOUBLE}rem`,
+      margin: `0 ${spacings.FULL}rem ${spacings.TRIPLE}rem`,
+      padding: `${spacings.DOUBLE}rem`,
       [mq.GROUP_2_MIN_WIDTH]: {
-        paddingLeft: `${spacings.DOUBLE}rem`,
-        paddingRight: `${spacings.DOUBLE}rem`,
+        margin: `0 ${spacings.DOUBLE}rem ${spacings.TRIPLE}rem`,
       },
       [mq.GROUP_4_MIN_WIDTH]: {
-        marginRight: `0`,
-        marginLeft: `0`,
+        margin: `0 0 ${spacings.TRIPLE}rem`,
       },
     }),
-  errorLink: ({ fontVariants }: Theme) =>
+  errorLinkWrapper: ({ fontVariants, spacings }: Theme) =>
     css({
       ...fontVariants.sansBold,
+      paddingTop: `${spacings.FULL}rem`,
     }),
   errorMessage: ({ fontVariants }: Theme) =>
     css({
       ...fontVariants.sansRegular,
     }),
+  inlineLink: ({ palette }: Theme) => css({ color: palette.BLACK }),
 };
 
 export default styles;
