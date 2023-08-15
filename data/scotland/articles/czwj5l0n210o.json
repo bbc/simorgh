@@ -695,6 +695,7 @@
         "atiAnalytics": {
           "categoryName": null,
           "contentId": "urn:bbc:optimo:asset:czwj5l0n210o",
+          "contentType": "article",
           "language": "en-gb",
           "ldpThingIds": null,
           "ldpThingLabels": null,

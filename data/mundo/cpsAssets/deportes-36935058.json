@@ -49,8 +49,19 @@
         ],
         "includeComments": false,
         "atiAnalytics": {
-          "producerName": "MUNDO",
-          "producerId": "62"
+          "campaigns": null,
+          "categoryName": null,
+          "contentId": "urn:bbc:cps:curie:asset:08e22e90-7361-cd47-b586-7cb53fc5a012",
+          "contentType": "article-photo-gallery",
+          "language": "es",
+          "ldpThingIds": null,
+          "ldpThingLabels": null,
+          "pageIdentifier": "sport::mundo.sport.photo_gallery.36935058.page",
+          "pageTitle": "Río 2016, el antes y el ahora: cómo ha cambiado la ropa deportiva en más de un siglo de juegos olímpicos",
+          "producerId": null,
+          "timePublished": "2016-08-07T09:21:02.000Z",
+          "timeUpdated": "2016-08-07T09:21:02.000Z",
+          "producerName": "MUNDO"
         },
         "readTime": 2,
         "siteUri": "/mundo",
