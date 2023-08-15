@@ -146,12 +146,12 @@ const StoryPage = ({ pageData }) => {
   const adcampaign = path(['metadata', 'adCampaignKeyword'], pageData);
 
   /**
-   * Should we display ads? We check:
-   * The CPS `allowAdvertising` field value.
+   * Should we display ads?:
+   * If CPS `allowAdvertising` field is true
    *
    * Within the ads container:
-   *  - The value of the 'ads' toggle
-   *  - whether showAdsBasedOnLocation is true
+   *  - if the value of the 'ads' toggle is true
+   *  - if showAdsBasedOnLocation is true
    */
   const allowAdvertising = path(
     ['metadata', 'options', 'allowAdvertising'],
