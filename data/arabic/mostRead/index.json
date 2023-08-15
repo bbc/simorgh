@@ -144,6 +144,14 @@
         "href": "/arabic/media-61824782",
         "timestamp": 1655797956000
       }
-    ]
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentType": "list-datadriven",
+        "pageIdentifier": "arabic.popular.read.page",
+        "timePublished": "2023-06-19T14:32:00Z",
+        "timeUpdated": "2023-06-19T14:47:00Z"
+      }
+    }
   }
 }

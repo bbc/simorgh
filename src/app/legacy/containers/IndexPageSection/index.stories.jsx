@@ -2,7 +2,7 @@ import React from 'react';
 import pathOr from 'ramda/src/pathOr';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import serbianData from '#data/serbian/frontpage/lat.json';
+import { data as serbianData } from '#data/serbian/frontpage/lat.json';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
@@ -38,13 +38,13 @@ export default {
 };
 
 export const Serbian = () => (
-  <Component service="serbian" data={serbianData.content.groups[0]} />
+  <Component service="serbian" data={serbianData.article.content.groups[0]} />
 );
 
 export const LinkToMore = () => (
   <Component
     service="serbian"
-    data={serbianData.content.groups.find(
+    data={serbianData.article.content.groups.find(
       sec => pathOr(null, ['strapline', 'type'], sec) === 'LINK',
     )}
   />
@@ -53,7 +53,7 @@ export const LinkToMore = () => (
 export const UsefulLinks = () => (
   <Component
     service="serbian"
-    data={serbianData.content.groups.find(
+    data={serbianData.article.content.groups.find(
       sec => pathOr(null, ['semanticGroupName'], sec) === 'Useful links',
     )}
   />
@@ -61,7 +61,7 @@ export const UsefulLinks = () => (
 
 // Amp
 export const SerbianAmp = () => (
-  <Component isAmp service="serbian" data={serbianData.content.groups[0]} />
+  <Component isAmp service="serbian" data={serbianData.article.content.groups[0]} />
 );
 SerbianAmp.decorators = [AmpDecorator];
 
@@ -69,7 +69,7 @@ export const LinkToMoreAmp = () => (
   <Component
     isAmp
     service="serbian"
-    data={serbianData.content.groups.find(
+    data={serbianData.article.content.groups.find(
       sec => pathOr(null, ['strapline', 'type'], sec) === 'LINK',
     )}
   />
@@ -80,7 +80,7 @@ export const UsefulLinksAmp = () => (
   <Component
     isAmp
     service="serbian"
-    data={serbianData.content.groups.find(
+    data={serbianData.article.content.groups.find(
       sec => pathOr(null, ['semanticGroupName'], sec) === 'Useful links',
     )}
   />

@@ -61,11 +61,10 @@ const SectionLabel = ({
   visuallyHidden,
   backgroundColor,
   overrideHeadingAs,
-  headingAttributes,
   ...props
 }) => (
   <SectionLabelWrapper visuallyHidden={visuallyHidden} {...props}>
-    <Heading as={overrideHeadingAs} {...headingAttributes}>
+    <Heading as={overrideHeadingAs}>
       {linkText && href ? (
         <LinkTitle
           dir={dir}
@@ -100,7 +99,6 @@ SectionLabel.defaultProps = {
   visuallyHidden: false,
   backgroundColor: GHOST,
   overrideHeadingAs: null,
-  headingAttributes: null,
 };
 
 SectionLabel.propTypes = {
@@ -114,7 +112,6 @@ SectionLabel.propTypes = {
   visuallyHidden: bool,
   backgroundColor: string,
   overrideHeadingAs: oneOf([null, 'strong']),
-  headingAttributes: shape({ id: string, tabIndex: string }),
 };
 
 export default SectionLabel;

@@ -1,15 +1,17 @@
-import { serviceNumerals } from '../../../../src/app/legacy/containers/MostRead/Canonical/Rank';
+import { serviceNumerals } from '../../../../src/app/components/MostRead/Canonical/Rank';
 import config from '../../../support/config/services';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import { getMostReadEndpoint } from '../../../../src/app/lib/utilities/getUrlHelpers/getMostReadUrls';
 import getAppEnv from '../../../support/helpers/getAppEnv';
 import ampOnlyServices from '../../../support/helpers/ampOnlyServices';
 
-export const crossPlatform = ({ service, variant }) => {
-  // news, newsround, and sport are services we serve on amp, but do not want to run most read tests on
-  if (!ampOnlyServices.includes(service)) {
-    const serviceID = config[service]?.name || service;
+// news, newsround, and sport are services we serve on amp, but do not want to run most read tests on
+const MOST_READ_EXCLUDED_SERVICES = [...ampOnlyServices, 'ukchina'];
 
+export const crossPlatform = ({ service, variant }) => {
+  const serviceID = config[service]?.name || service;
+
+  if (!MOST_READ_EXCLUDED_SERVICES.includes(serviceID)) {
     const {
       mostRead: { hasMostRead, numberOfItems },
     } = appConfig[serviceID][variant];
@@ -51,9 +53,9 @@ export const crossPlatform = ({ service, variant }) => {
 };
 
 export const ampOnly = ({ service, variant }) => {
-  // news, newsround, and sport are services we serve on amp, but do not want to run most read tests on
-  if (!ampOnlyServices.includes(service)) {
-    const serviceID = config[service]?.name || service;
+  const serviceID = config[service]?.name || service;
+
+  if (!MOST_READ_EXCLUDED_SERVICES.includes(serviceID)) {
     const {
       mostRead: { hasMostRead },
     } = appConfig[serviceID][variant];

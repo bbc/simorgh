@@ -18,21 +18,48 @@ interface UrlConstructParams {
   service: Services;
   variant?: Variants;
   page?: string;
+  isAmp?: boolean;
 }
 
 const removeAmp = (path: string) => path.split('.')[0];
 const getArticleId = (path: string) => path.match(/(c[a-zA-Z0-9]{10}o)/)?.[1];
 const getCpsId = (path: string) => path;
+const getFrontPageId = (path: string) => `${path}/front_page`;
 const getTipoId = (path: string) => path.match(/(c[a-zA-Z0-9]{10}t)/)?.[1];
 
-const getId = (pageType: PageTypes, service: Services, env: Environments) => {
+const isFrontPage = ({
+  path,
+  service,
+  variant,
+}: {
+  path: string;
+  service: Services;
+  variant?: Variants;
+}) => (variant ? path === `/${service}/${variant}` : path === `/${service}`);
+
+interface GetIdProps {
+  pageType: PageTypes;
+  service: Services;
+  variant?: Variants;
+  env: Environments;
+}
+
+const getId = ({ pageType, service, variant, env }: GetIdProps) => {
   let getIdFunction;
   switch (pageType) {
     case ARTICLE:
       getIdFunction = getArticleId;
       break;
     case CPS_ASSET:
-      getIdFunction = getCpsId;
+      getIdFunction = (path: string) => {
+        /**
+         * Legacy Front Pages are curated in CPS and fetched from the BFF using the CPS_ASSET page type
+         * This functionality will be removed once all front pages migrated to the new HomePage
+         *  */
+        return env !== 'local' && isFrontPage({ path, service, variant })
+          ? getFrontPageId(path)
+          : getCpsId(path);
+      };
       break;
     case HOME:
       getIdFunction = () => {
@@ -61,11 +88,12 @@ const constructPageFetchUrl = ({
   service,
   variant,
   page,
+  isAmp,
 }: UrlConstructParams) => {
   const env = getEnvironment(pathname);
   const isLocal = !env || env === 'local';
 
-  const id = getId(pageType, service, env)(pathname);
+  const id = getId({ pageType, service, env, variant })(pathname);
   const capitalisedPageType =
     pageType.charAt(0).toUpperCase() + pageType.slice(1);
 
@@ -80,6 +108,9 @@ const constructPageFetchUrl = ({
     }),
     ...(page && {
       page,
+    }),
+    ...(isAmp && {
+      isAmp,
     }),
   };
 

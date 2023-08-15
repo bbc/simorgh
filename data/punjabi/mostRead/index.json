@@ -144,6 +144,14 @@
         "href": "https://www.bbc.com/punjabi/articles/cjqzk1gynqqo",
         "timestamp": 1687136689016
       }
-    ]
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentType": "list-datadriven",
+        "pageIdentifier": "punjabi.popular.read.page",
+        "timePublished": "2023-06-19T12:53:00Z",
+        "timeUpdated": "2023-06-19T14:53:00Z"
+      }
+    }
   }
 }

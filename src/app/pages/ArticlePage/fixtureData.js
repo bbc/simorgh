@@ -6,19 +6,12 @@ import {
 } from '#models/blocks';
 
 const blocksWithHeadlineAndText = blockValues => {
-  const [headlineText, paragraphText] = blockValues;
+  const [headlineText, paragraphText, ...additional] = blockValues;
 
   return [
     blockContainingText('headline', headlineText, 1),
     singleTextBlock(paragraphText, 2),
-    {
-      id: 'ef3a6bbd',
-      type: 'wsoj',
-      model: {
-        type: 'recommendations',
-      },
-      position: [9],
-    },
+    ...additional,
   ];
 };
 
@@ -44,9 +37,11 @@ const articleDataBuilder = (
   things,
   allowAdvertising = false,
   articleBlocksPopulator = blocksWithHeadlineAndText,
+  atiAnalytics = {},
 ) => ({
   metadata: {
     id: `urn:bbc:ares::article:${id}`,
+    atiAnalytics,
     locators: {
       optimoUrn: `urn:bbc:optimo:asset:${id}`,
     },
@@ -139,11 +134,43 @@ export const articleDataNews = articleDataBuilder(
   'News',
   'en-gb',
   'http://www.bbc.co.uk/ontologies/passport/home/News',
-  ['Article Headline', 'A paragraph.'],
+  [
+    'Article Headline',
+    'A paragraph.',
+    {
+      id: 'ef3a6bbd',
+      type: 'wsoj',
+      model: {
+        type: 'recommendations',
+      },
+      position: [9],
+    },
+    {
+      id: 'c9043147',
+      type: 'podcastPromo',
+      model: {
+        type: 'podcastPromo',
+      },
+      position: [9],
+    },
+  ],
   'Article Headline for SEO',
   'Article Headline for Promo',
   'Article summary.',
   presetThings,
+  {
+    categoryName: 'Royal%20Wedding%202018~Duchess%20of%20Sussex',
+    contentId: 'urn:bbc:optimo:c0000000001o',
+    language: 'en-gb',
+    ldpThingIds:
+      '2351f2b2-ce36-4f44-996d-c3c4f7f90eaa~803eaeb9-c0c3-4f1b-9a66-90efac3df2dc',
+    ldpThingLabels: 'Royal%20Wedding%202018~Duchess%20of%20Sussex',
+    nationsProducer: null,
+    pageIdentifier: null,
+    pageTitle: 'Article Headline for SEO',
+    timePublished: '2018-01-01T12:01:00.000Z',
+    timeUpdated: '2018-01-01T14:00:00.000Z',
+  },
 );
 
 export const articleDataPersian = articleDataBuilder(
@@ -156,6 +183,18 @@ export const articleDataPersian = articleDataBuilder(
   'سرصفحه مقاله برای ارتقاء',
   'خلاصه مقاله',
   emptyThings,
+  {
+    categoryName: null,
+    contentId: 'urn:bbc:optimo:c0000000001o',
+    language: 'en-gb',
+    ldpThingIds: null,
+    ldpThingLabels: null,
+    nationsProducer: null,
+    pageIdentifier: null,
+    pageTitle: 'سرصفحه مقاله',
+    timePublished: '2018-01-01T12:01:00.000Z',
+    timeUpdated: '2018-01-01T14:00:00.000Z',
+  },
 );
 
 export const articleDataPidgin = articleDataBuilder(
@@ -168,6 +207,18 @@ export const articleDataPidgin = articleDataBuilder(
   'Article Headline for Promo in Pidgin',
   'Article summary in Pidgin',
   emptyThings,
+  {
+    categoryName: null,
+    contentId: 'urn:bbc:optimo:c0000000001o',
+    language: 'en-gb',
+    ldpThingIds: null,
+    ldpThingLabels: null,
+    nationsProducer: null,
+    pageIdentifier: null,
+    pageTitle: 'Article Headline for SEO in Pidgin',
+    timePublished: '2018-01-01T12:01:00.000Z',
+    timeUpdated: '2018-01-01T14:00:00.000Z',
+  },
 );
 
 export const articleDataPidginWithAds = articleDataBuilder(
@@ -1653,3 +1704,61 @@ export const passportPredicatesFormats = [
     type: 'formats',
   },
 ];
+
+export const promoSample = {
+  headlines: {
+    seoHeadline: 'Podcast Promo 8 Paragraphs (Valid)',
+    promoHeadline: {
+      blocks: [
+        {
+          type: 'text',
+          model: {
+            blocks: [
+              {
+                type: 'paragraph',
+                model: {
+                  text: 'Podcast Promo 8 text block Paragraphs (Valid)',
+                  blocks: [
+                    {
+                      type: 'fragment',
+                      model: {
+                        text: 'Podcast Promo 8 text block Paragraphs (Valid)',
+                        attributes: [],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+  summary: {
+    blocks: [
+      {
+        type: 'text',
+        model: {
+          blocks: [
+            {
+              type: 'paragraph',
+              model: {
+                text: '',
+                blocks: [
+                  {
+                    type: 'fragment',
+                    model: {
+                      text: '',
+                      attributes: [],
+                    },
+                  },
+                ],
+              },
+            },
+          ],
+        },
+      },
+    ],
+  },
+};
