@@ -338,7 +338,7 @@ describe('ATI Analytics Container', () => {
 
       expect(mockCanonical.mock.calls[0][0]).toMatchInlineSnapshot(`
         {
-          "pageviewParams": "s=598343&s2=62&p=mundo.story.23263889.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Acps%3Acurie%3Aasset%3Af776ad93-e486-b14a-b5ea-55955dd0644f]&x2=[responsive]&x3=[news-mundo]&x4=[es]&x5=[http%253A%252F%252Flocalhost%252F]&x7=[article]&x8=[simorgh]&x9=[WS%2520STY%2520TEST%2520-%2520Full%2520Headline%2520-%2520BBC%2520News%2520Mundo]&x11=[2020-02-03T15%3A58%3A27.000Z]&x12=[2020-05-06T11%3A02%3A07.000Z]&x13=[Life~Fake%2Bnews]&x14=[0239ab33-1cfc-4f5d-babb-a8159711af3e~e7539dc8-5cfb-413a-b4fe-0ad77bc665aa]&x16=[Amuse%20me]&x17=[News]",
+          "pageviewParams": "s=598343&s2=62&p=mundo.story.23263889.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Acps%3Acurie%3Aasset%3Af776ad93-e486-b14a-b5ea-55955dd0644f]&x2=[responsive]&x3=[news-mundo]&x4=[es]&x5=[https%253A%252F%252Flocalhost]&x7=[article]&x8=[simorgh]&x9=[WS%2520STY%2520TEST%2520-%2520Full%2520Headline%2520-%2520BBC%2520News%2520Mundo]&x11=[2020-02-03T15%3A58%3A27.000Z]&x12=[2020-05-06T11%3A02%3A07.000Z]&x13=[Life~Fake%2Bnews]&x14=[0239ab33-1cfc-4f5d-babb-a8159711af3e~e7539dc8-5cfb-413a-b4fe-0ad77bc665aa]&x16=[Amuse%20me]&x17=[News]",
         }
       `);
     });
