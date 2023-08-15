@@ -36,7 +36,6 @@ export const getBootstrapSrc = (queryString: string, useLegacy = false) => {
 };
 
 const CanonicalAd = ({ slotType, className }: AdProps) => {
-  const { showAdsBasedOnLocation } = useContext(RequestContext);
   const location = useLocation();
   const queryString = location.search;
   const { translations, dir } = useContext(ServiceContext);
@@ -70,7 +69,7 @@ const CanonicalAd = ({ slotType, className }: AdProps) => {
   }, [slotType, location]);
 
   const isOperaMini = useOperaMiniDetection();
-  if (!showAdsBasedOnLocation || isOperaMini) {
+  if (isOperaMini) {
     return null;
   }
 
