@@ -5,7 +5,7 @@ import pathOr from 'ramda/src/pathOr';
 import EmbedHtml from '../EmbedHtml';
 import EmbedError from '../EmbedError';
 
-type OEmbedBlock = {
+export type OEmbedProps = {
   id: string;
   type: string;
   link: string;
@@ -22,7 +22,7 @@ type OEmbedBlock = {
   };
 };
 
-const OEmbedLoader = ({ oembed, isAmp, link }: OEmbedBlock) => {
+const OEmbedLoader = ({ oembed, isAmp, link }: OEmbedProps) => {
   const { html, url } = oembed;
   const { translations } = useContext(ServiceContext);
 

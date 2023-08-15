@@ -40,6 +40,7 @@ import NielsenAnalytics from '../../legacy/containers/NielsenAnalytics';
 import ArticleMetadata from '../../legacy/containers/ArticleMetadata';
 import EmbedImages from '../../components/Embeds/EmbedImages';
 import EmbedHtml from '../../components/Embeds/EmbedHtml';
+import OEmbedLoader, { OEmbedProps } from '../../components/Embeds/OEmbed';
 
 import { OptimoBlock } from '../../models/types/optimo';
 import {
@@ -58,6 +59,7 @@ import {
 } from '../../components/Byline/utilities';
 
 import { ServiceContext } from '../../contexts/ServiceContext';
+import { RequestContext } from '../../contexts/RequestContext';
 import RelatedContentSection from '../../components/RelatedContentSection';
 
 import SecondaryColumn from './SecondaryColumn';
@@ -73,6 +75,7 @@ import {
 const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
   const { articleAuthor, isTrustProjectParticipant, showRelatedTopics } =
     useContext(ServiceContext);
+  const { isAmp } = useContext(RequestContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
 
   const {
@@ -149,6 +152,7 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
     social: SocialEmbedContainer,
     embedHtml: (props: EmbedHtmlProps) => <EmbedHtml {...props} />,
     embedImages: (props: ComponentToRenderProps) => <EmbedImages {...props} />,
+    oEmbed: (props: OEmbedProps) => <OEmbedLoader {...props} isAmp={isAmp} />,
     group: gist,
     links: (props: ComponentToRenderProps) => <ScrollablePromo {...props} />,
   };
