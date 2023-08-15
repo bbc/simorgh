@@ -19,7 +19,7 @@ const riddleBlock = {
 };
 
 describe('Canonical - OEmbed', () => {
-  it('Should show an iframe with the appropriate link', () => {
+  it('Riddle Embed - Should show an iframe with the appropriate link', () => {
     const { container } = render(
       <OEmbedLoader {...riddleBlock} isAmp={false} />,
     );
@@ -31,7 +31,7 @@ describe('Canonical - OEmbed', () => {
 });
 
 describe('AMP - OEmbed', () => {
-  it('Should show an error message with a link to the riddle', () => {
+  it('Riddle Embed - Should show an error message with a link to the riddle', () => {
     const { container, getByText } = render(
       <OEmbedLoader {...riddleBlock} isAmp />,
     );
