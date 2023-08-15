@@ -70,8 +70,18 @@ export const getDestination = (platform, statsDestination) => {
   return destinationIDs[statsDestination] || destinationIDs.NEWS_PS;
 };
 
-export const getAppType = platform =>
-  platform === 'amp' ? 'amp' : 'responsive';
+export const getAppType = platform => {
+  switch (platform) {
+    case 'amp':
+      return 'amp';
+    case 'app':
+      return 'mobile-app';
+    case 'canonical':
+      return 'responsive';
+    default:
+      return 'responsive';
+  }
+};
 
 export const isLocServeCookieSet = platform => {
   if (platform === 'amp') {
