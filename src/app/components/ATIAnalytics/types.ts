@@ -123,7 +123,7 @@ export interface ATIPageTrackingProps {
   pageTitle?: string | null;
   producerId?: string;
   libraryVersion?: string;
-  platform?: string;
+  platform?: Platforms;
   statsDestination?: string;
   timePublished?: string | null;
   timeUpdated?: string | null;
