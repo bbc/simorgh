@@ -45,6 +45,7 @@ const getItemCss = ({
     itemCss.push(styles.breakwordText);
     console.log(href);
   }
+  // itemCss.push(styles.breakwordText);
   itemCss.push(dir === 'ltr' ? styles.gridPaddingLtr : styles.gridPaddingRtl);
 
   return itemCss;

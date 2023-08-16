@@ -26,7 +26,6 @@ const styles = {
         whiteSpace: 'nowrap',
         zIndex: 1,
       },
-      ...css(styles.breakwordText() || {}),
     }),
 
   defaultLink: ({ mq, fontSizes }: Theme) =>
@@ -38,7 +37,7 @@ const styles = {
 
   breakwordText: () =>
     css({
-      overflowWrap: 'break-word',
+      overflowWrap: 'anywhere',
     }),
 
   timestamp: ({ spacings }: Theme) =>
