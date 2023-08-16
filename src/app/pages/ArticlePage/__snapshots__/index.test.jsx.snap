@@ -992,45 +992,45 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-97 {
+  .emotion-100 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-97 {
+  .emotion-100 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-97 {
+  .emotion-100 {
     min-width: 3rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-97 {
+  .emotion-100 {
     min-width: 4rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-97 {
+  .emotion-100 {
     min-width: 4rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-97 {
+    .emotion-100 {
       min-width: 4rem;
     }
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-97 {
+  .emotion-100 {
     min-width: 4rem;
   }
 }
@@ -1410,6 +1410,16 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
               >
                 Sharp-sharp facts about President Bola Tinubu special advisers
               </a>
+              <div
+                class="emotion-53"
+              >
+                <time
+                  class="emotion-54 emotion-55"
+                  datetime="2023-06-16"
+                >
+                  De one we dem update for: 16th June 2023
+                </time>
+              </div>
             </div>
           </div>
         </li>
@@ -1422,7 +1432,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
             class="emotion-27"
           >
             <div
-              class="emotion-97"
+              class="emotion-100"
               dir="ltr"
             >
               <span
