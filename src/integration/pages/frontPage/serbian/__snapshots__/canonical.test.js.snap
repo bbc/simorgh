@@ -2,59 +2,59 @@
 
 exports[`Canonical Front Page A11y I can see the skip to content link 1`] = `"Pređite na sadržaj"`;
 
-exports[`Canonical Front Page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=81&amp;p=serbianlat.page&amp;x1=[urn%3Abbc%3Acps%3A631e99d6-c1c4-73b7-e050-17ac8045512f]&amp;x2=[responsive]&amp;x3=[news-serbian]&amp;x4=[sr-Latn]&amp;x7=[index-home]&amp;x8=[simorgh-nojs]&amp;x9=[Po%C4%8Detna%2520strana%2520-%2520BBC%2520News%2520na%2520srpskom]&amp;x11=[2018-01-19T14%3A09%3A41.000Z]&amp;x12=[2019-09-08T20%3A45%3A38.000Z]\\"/>"`;
+exports[`Canonical Front Page Analytics ATI 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" src="https://logws1363.ati-host.net?s=598343&amp;s2=81&amp;p=serbianlat.page&amp;x1=[urn%3Abbc%3Acps%3A5be5c72e-2538-caaf-e050-17ac2b8cd8a2]&amp;x2=[responsive]&amp;x3=[news-serbian]&amp;x4=[sr-Latn]&amp;x7=[index-home]&amp;x8=[simorgh-nojs]&amp;x9=[Po%C4%8Detna%2520strana%2520-%2520BBC%2520News%2520na%2520srpskom]&amp;x11=[2017-10-19T14%3A06%3A28.000Z]&amp;x12=[2022-09-01T16%3A33%3A24.000Z]"/>"`;
 
 exports[`Canonical Front Page Footer Anchors should match text and url 1`] = `
-Object {
+{
   "text": "BBC News, na srpskom",
   "url": "/serbian",
 }
 `;
 
 exports[`Canonical Front Page Footer Anchors should match text and url 2`] = `
-Object {
+{
   "text": "Zašto BBC zaslužuje vaše poverenje",
   "url": "https://www.bbc.com/serbian/lat/institutional-50173730",
 }
 `;
 
 exports[`Canonical Front Page Footer Anchors should match text and url 3`] = `
-Object {
+{
   "text": "Pravila korišćenja",
   "url": "https://www.bbc.com/terms",
 }
 `;
 
 exports[`Canonical Front Page Footer Anchors should match text and url 4`] = `
-Object {
+{
   "text": "O BBC-ju",
   "url": "https://www.bbc.co.uk/aboutthebbc/",
 }
 `;
 
 exports[`Canonical Front Page Footer Anchors should match text and url 5`] = `
-Object {
+{
   "text": "Pravila privatnosti",
   "url": "https://www.bbc.com/privacy/",
 }
 `;
 
 exports[`Canonical Front Page Footer Anchors should match text and url 6`] = `
-Object {
+{
   "text": "Kolačići",
   "url": "https://www.bbc.com/usingthebbc/cookies/",
 }
 `;
 
 exports[`Canonical Front Page Footer Anchors should match text and url 7`] = `
-Object {
+{
   "text": "Kontaktirajte BBC",
   "url": "https://www.bbc.co.uk/serbian/send/u50853665",
 }
 `;
 
 exports[`Canonical Front Page Footer Anchors should match text and url 8`] = `
-Object {
+{
   "text": "Pročitajte naša pravila o linkovanju drugih sajtova.",
   "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
 }
@@ -67,123 +67,191 @@ exports[`Canonical Front Page Footer I can see the footer copyright and external
 exports[`Canonical Front Page Header I can see the branding 1`] = `"BBC News, na srpskom"`;
 
 exports[`Canonical Front Page Header Navigation link should match text and url 1`] = `
-Object {
+{
   "text": "Otvorena stranica, Početna strana",
   "url": "/serbian/lat",
 }
 `;
 
 exports[`Canonical Front Page Header Navigation link should match text and url 2`] = `
-Object {
+{
   "text": "Ukrajina",
   "url": "/serbian/lat/topics/c5wzvzzz5vrt",
 }
 `;
 
 exports[`Canonical Front Page Header Navigation link should match text and url 3`] = `
-Object {
+{
   "text": "Srbija",
   "url": "/serbian/lat/topics/cr50vdy9q6wt",
 }
 `;
 
 exports[`Canonical Front Page Header Navigation link should match text and url 4`] = `
-Object {
+{
   "text": "Balkan",
   "url": "/serbian/lat/topics/c06g87137jgt",
 }
 `;
 
 exports[`Canonical Front Page Header Navigation link should match text and url 5`] = `
-Object {
+{
   "text": "Svet",
   "url": "/serbian/lat/topics/c2lej05e1eqt",
 }
 `;
 
 exports[`Canonical Front Page Header Navigation link should match text and url 6`] = `
-Object {
+{
   "text": "Video",
   "url": "/serbian/lat/topics/c44vyp5g049t",
 }
 `;
 
 exports[`Canonical Front Page Header Navigation link should match text and url 7`] = `
-Object {
+{
   "text": "Najpopularnije",
   "url": "/serbian/lat/popular/read",
 }
 `;
 
-exports[`Canonical Front Page Index Alsos should match visually hidden text 1`] = `"Povezano"`;
-
 exports[`Canonical Front Page Main heading should match text 1`] = `"BBC News, na srpskom - Glavna stranica"`;
 
+exports[`Canonical Front Page Most Read has item with rank 1`] = `
+{
+  "text": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 26",
+  "url": "/serbian/lat/media-23169623",
+}
+`;
+
+exports[`Canonical Front Page Most Read has item with rank 2`] = `
+{
+  "text": "test, please ignore",
+  "url": "/serbian/lat/23200492",
+}
+`;
+
+exports[`Canonical Front Page Most Read has item with rank 3`] = `
+{
+  "text": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 6",
+  "url": "/serbian/lat/media-23169493",
+}
+`;
+
+exports[`Canonical Front Page Most Read has item with rank 4`] = `
+{
+  "text": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 29",
+  "url": "/serbian/lat/media-23169626",
+}
+`;
+
+exports[`Canonical Front Page Most Read has item with rank 5`] = `
+{
+  "text": "Otvorene ZOI 2014",
+  "url": "/serbian/lat/23181035",
+}
+`;
+
+exports[`Canonical Front Page Most Read has item with rank 6`] = `
+{
+  "text": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 27",
+  "url": "/serbian/lat/media-23169624",
+}
+`;
+
+exports[`Canonical Front Page Most Read has item with rank 7`] = `
+{
+  "text": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 8",
+  "url": "/serbian/lat/media-23169495",
+}
+`;
+
+exports[`Canonical Front Page Most Read has item with rank 8`] = `
+{
+  "text": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 7",
+  "url": "/serbian/lat/media-23169494",
+}
+`;
+
+exports[`Canonical Front Page Most Read has item with rank 9`] = `
+{
+  "text": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 11",
+  "url": "/serbian/lat/media-23169608",
+}
+`;
+
+exports[`Canonical Front Page Most Read has item with rank 10`] = `
+{
+  "text": "Beba panda odmara nakon prvog javnog nastupa",
+  "url": "/serbian/lat/23180965",
+}
+`;
+
 exports[`Canonical Front Page SEO Apple Touch Icon should match attributes 1`] = `
-Object {
+{
   "sizes": null,
   "url": "http://localhost:7080/serbian/images/icons/icon-192x192.png",
 }
 `;
 
 exports[`Canonical Front Page SEO Apple Touch Icon should match attributes 2`] = `
-Object {
+{
   "sizes": "72x72",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/icons/icon-72x72.png",
 }
 `;
 
 exports[`Canonical Front Page SEO Apple Touch Icon should match attributes 3`] = `
-Object {
+{
   "sizes": "96x96",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/icons/icon-96x96.png",
 }
 `;
 
 exports[`Canonical Front Page SEO Apple Touch Icon should match attributes 4`] = `
-Object {
+{
   "sizes": "128x128",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/icons/icon-128x128.png",
 }
 `;
 
 exports[`Canonical Front Page SEO Apple Touch Icon should match attributes 5`] = `
-Object {
+{
   "sizes": "144x144",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/icons/icon-144x144.png",
 }
 `;
 
 exports[`Canonical Front Page SEO Apple Touch Icon should match attributes 6`] = `
-Object {
+{
   "sizes": "152x152",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/icons/icon-152x152.png",
 }
 `;
 
 exports[`Canonical Front Page SEO Apple Touch Icon should match attributes 7`] = `
-Object {
+{
   "sizes": "180x180",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/icons/icon-180x180.png",
 }
 `;
 
 exports[`Canonical Front Page SEO Apple Touch Icon should match attributes 8`] = `
-Object {
+{
   "sizes": "192x192",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/icons/icon-192x192.png",
 }
 `;
 
 exports[`Canonical Front Page SEO Apple Touch Icon should match attributes 9`] = `
-Object {
+{
   "sizes": "384x384",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/icons/icon-384x384.png",
 }
 `;
 
 exports[`Canonical Front Page SEO Apple Touch Icon should match attributes 10`] = `
-Object {
+{
   "sizes": "512x512",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/icons/icon-512x512.png",
 }
@@ -200,30 +268,30 @@ exports[`Canonical Front Page SEO Heading level 1 1`] = `"BBC News, na srpskom -
 exports[`Canonical Front Page SEO Lang attribute 1`] = `"sr-Latn"`;
 
 exports[`Canonical Front Page SEO Linked data should match text 1`] = `
-Object {
+{
   "@context": "http://schema.org",
-  "@graph": Array [
-    Object {
+  "@graph": [
+    {
       "@type": "WebPage",
-      "image": Object {
+      "image": {
         "@type": "ImageObject",
         "height": 576,
         "url": "https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png",
         "width": 1024,
       },
-      "inLanguage": Object {
+      "inLanguage": {
         "@type": "Language",
         "alternateName": "sr-latn",
         "name": "Serbian",
       },
-      "mainEntityOfPage": Object {
+      "mainEntityOfPage": {
         "@id": "http://localhost:7080/serbian/lat",
         "@type": "WebPage",
         "name": "Početna strana",
       },
-      "publisher": Object {
+      "publisher": {
         "@type": "NewsMediaOrganization",
-        "logo": Object {
+        "logo": {
           "@type": "ImageObject",
           "height": 576,
           "url": "https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png",
@@ -273,29 +341,37 @@ exports[`Canonical Front Page SEO Twitter site 1`] = `"@bbcnasrpskom"`;
 
 exports[`Canonical Front Page SEO Twitter title 1`] = `"Glavna stranica - BBC News na srpskom"`;
 
-exports[`Canonical Front Page Sections should match headline text 1`] = `"Najvažnije"`;
+exports[`Canonical Front Page Sections should match headline text 1`] = `"Top Stories"`;
 
-exports[`Canonical Front Page Sections should match headline text 2`] = `"U toku"`;
+exports[`Canonical Front Page Sections should match headline text 2`] = `"Danas"`;
 
-exports[`Canonical Front Page Sections should match headline text 3`] = `"Saznanja "`;
+exports[`Canonical Front Page Sections should match headline text 3`] = `"Zanimljivo"`;
 
-exports[`Canonical Front Page Sections should match headline text 4`] = `"Zanimljivo"`;
+exports[`Canonical Front Page Sections should match headline text 4`] = `"In case you missed it"`;
 
-exports[`Canonical Front Page Sections should match headline text 5`] = `"Ako ste propustili"`;
+exports[`Canonical Front Page Sections should match headline text 5`] = `"Najčitanije"`;
 
-exports[`Canonical Front Page Sections should match headline text 6`] = `"Najgledanije"`;
+exports[`Canonical Front Page Sections should match headline text 6`] = `"Korisni linkovi"`;
 
-exports[`Canonical Front Page Sections should match headline text 7`] = `"2018 World Cup"`;
+exports[`Canonical Front Page Useful Links should match text and url 1`] = `"Kontaktirajte nas 1 - /serbian/lat/popular/read"`;
 
-exports[`Story Promo Headline should match text 1`] = `"Video, LAT - Sarajevo - „Neka ljubi ko god koga hoće\\", Trajanje 2,15"`;
+exports[`Canonical Front Page Useful Links should match text and url 2`] = `"Kontaktirajte nas 2 - /serbian/lat/popular/read"`;
+
+exports[`Canonical Front Page Useful Links should match text and url 3`] = `"Kontaktirajte nas 3 - /serbian/lat/popular/read"`;
+
+exports[`Canonical Front Page Useful Links should match text and url 4`] = `"Kontaktirajte nas 4 - /serbian/lat/popular/read"`;
+
+exports[`Canonical Front Page Useful Links should match text and url 5`] = `"Kontaktirajte nas 5 - /serbian/lat/popular/read"`;
+
+exports[`Story Promo Headline should match text 1`] = `"Promo test for cookie setting"`;
 
 exports[`Story Promo Image should match image 1`] = `
 <img
-  alt="I pevač Božo Vrećo došao je na Povorku ponosa"
+  alt="test"
   class="bbc-1uwua2r"
-  height="549"
-  src="https://ichef.bbci.co.uk/news/660/cpsprodpb/10118/production/_108661856_coversarajevo.jpg"
-  style="aspect-ratio:976 / 549"
-  width="976"
+  height="1152"
+  src="https://ichef.bbci.co.uk/news/660/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg"
+  style="aspect-ratio:2048 / 1152"
+  width="2048"
 />
 `;

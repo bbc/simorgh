@@ -168,7 +168,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
               },
               lang,
             );
-            cy.get('[data-e2e="media-player"] button').click();
+            cy.get('[data-e2e="media-player"] button').first().click();
             cy.get(`iframe[src*="${embedUrl}"]`).should('be.visible');
 
             cy.testResponseCodeAndTypeRetry({

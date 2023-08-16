@@ -1,3 +1,5 @@
+import { MostReadData } from '../../components/MostRead/types';
+
 export interface Summary {
   imageUrl?: string;
   link?: string;
@@ -7,6 +9,7 @@ export interface Summary {
   id?: string;
   type: string;
   firstPublished?: string | number;
+  lastPublished?: string | number;
 }
 
 export const VISUAL_STYLE = {
@@ -40,6 +43,7 @@ export interface CurationProps {
   position?: number;
   topStoriesTitle?: string;
   curationLength?: number;
+  mostRead?: MostReadData;
 }
 
 export interface CurationData {
@@ -53,5 +57,5 @@ export interface CurationData {
   activePage?: number;
   pageCount?: number;
   curationType?: string;
-  mostRead?: object;
+  mostRead?: MostReadData;
 }

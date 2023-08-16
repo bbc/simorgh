@@ -29,7 +29,7 @@ import text from '../../legacy/containers/Text';
 import Image from '../../legacy/containers/Image';
 import Blocks from '../../legacy/containers/Blocks';
 import Timestamp from '../../legacy/containers/ArticleTimestamp';
-import ATIAnalytics from '../../legacy/containers/ATIAnalytics';
+import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import ComscoreAnalytics from '../../legacy/containers/ComscoreAnalytics';
 import ArticleMediaPlayer from '../../legacy/containers/ArticleMediaPlayer';
@@ -38,6 +38,8 @@ import fauxHeadline from '../../legacy/containers/FauxHeadline';
 import RelatedTopics from '../../legacy/containers/RelatedTopics';
 import NielsenAnalytics from '../../legacy/containers/NielsenAnalytics';
 import ArticleMetadata from '../../legacy/containers/ArticleMetadata';
+import EmbedImages from '../../components/Embeds/EmbedImages';
+import EmbedHtml from '../../components/Embeds/EmbedHtml';
 
 import { OptimoBlock } from '../../models/types/optimo';
 import {
@@ -63,6 +65,7 @@ import SecondaryColumn from './SecondaryColumn';
 import styles from './MediaArticlePage.styles';
 import {
   ComponentToRenderProps,
+  EmbedHtmlProps,
   MediaArticlePageProps,
   TimestampProps,
 } from './types';
@@ -144,6 +147,8 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
     timestamp: (props: TimestampProps) =>
       hasByline ? null : <Timestamp {...props} popOut={false} />,
     social: SocialEmbedContainer,
+    embedHtml: (props: EmbedHtmlProps) => <EmbedHtml {...props} />,
+    embedImages: (props: ComponentToRenderProps) => <EmbedImages {...props} />,
     group: gist,
     links: (props: ComponentToRenderProps) => <ScrollablePromo {...props} />,
   };

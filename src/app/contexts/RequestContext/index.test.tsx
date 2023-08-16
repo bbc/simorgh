@@ -141,7 +141,7 @@ describe('RequestContext', () => {
       ...expectedOutput,
       isAmp: false,
       isApp: true,
-      platform: 'canonical',
+      platform: 'app',
     });
   });
 
@@ -174,7 +174,7 @@ describe('RequestContext', () => {
       });
     });
 
-    it('should be "canonical" when isAmp is false and isApp is true', () => {
+    it('should be "app" when isAmp is false and isApp is true', () => {
       render(
         <RequestContextProvider {...input} isAmp={false} isApp>
           <Component />
@@ -185,7 +185,7 @@ describe('RequestContext', () => {
         ...expectedOutput,
         isAmp: false,
         isApp: true,
-        platform: 'canonical',
+        platform: 'app',
       });
     });
 

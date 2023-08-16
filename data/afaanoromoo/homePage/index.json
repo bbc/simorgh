@@ -493,7 +493,15 @@
         "title": "Viidiyoo",
         "visualProminence": "NORMAL"
       }
-    ]
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:c93v2kkzl24t",
+        "contentType": "index-home",
+        "pageIdentifier": "afaanoromoo.page",
+        "pageTitle": "BBC News Afaan Oromoo"
+      }
+    }
   },
   "contentType": "application/json; charset=utf-8",
   "dataSource": "Data is from Live Tipo"

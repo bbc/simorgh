@@ -2,7 +2,7 @@ import * as PAGE_TYPES from '../../routes/utils/pageTypes';
 
 export type Environments = 'local' | 'test' | 'live';
 
-export type Platforms = 'amp' | 'canonical';
+export type Platforms = 'amp' | 'canonical' | 'app';
 
 export type SocialEmbedProviders =
   | 'facebook'
@@ -21,6 +21,12 @@ export type Toggles =
       };
     }
   | { _environment: string };
+
+export type MvtExperiment = {
+  experimentName: string;
+  variation: string;
+  type: 'experiment' | 'feature';
+};
 
 export type SerbianService = {
   service: 'serbian';
