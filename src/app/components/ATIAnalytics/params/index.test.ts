@@ -291,8 +291,6 @@ describe('ATIAnalytics params', () => {
         new URLSearchParams(url as string),
       );
 
-      console.log({ parsedATIParams });
-
       expect(parsedATIParams).toEqual({
         s: '598285',
         s2: 'atiAnalyticsProducerId',
@@ -324,8 +322,6 @@ describe('ATIAnalytics params', () => {
       const parsedATIParams = Object.fromEntries(
         new URLSearchParams(url as string),
       );
-
-      console.log({ parsedATIParams });
 
       expect(parsedATIParams).toEqual({
         s: '598285',
@@ -359,8 +355,6 @@ describe('ATIAnalytics params', () => {
         new URLSearchParams(url as string),
       );
 
-      console.log({ parsedATIParams });
-
       expect(parsedATIParams).toEqual({
         s: '598285',
         s2: 'atiAnalyticsProducerId',
@@ -390,8 +384,6 @@ describe('ATIAnalytics params', () => {
       const parsedATIParams = Object.fromEntries(
         new URLSearchParams(url as string),
       );
-
-      console.log({ parsedATIParams });
 
       expect(parsedATIParams).toEqual({
         s: '598285',
@@ -426,8 +418,6 @@ describe('ATIAnalytics params', () => {
       const parsedATIParams = Object.fromEntries(
         new URLSearchParams(url as string),
       );
-
-      console.log({ parsedATIParams });
 
       expect(parsedATIParams).toEqual({
         s: '598285',
