@@ -319,8 +319,6 @@ describe('ATI Analytics Container', () => {
         new URLSearchParams(pageviewParams),
       );
 
-      console.log({ parsedATIParams });
-
       expect(parsedATIParams).toEqual({
         s: '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598286, 598288)',
         s2: '64',
@@ -412,8 +410,6 @@ describe('ATI Analytics Container', () => {
         new URLSearchParams(pageviewParams),
       );
 
-      console.log({ parsedATIParams, pageviewParams });
-
       expect(parsedATIParams).toEqual({
         s: '598343',
         s2: '6',
@@ -459,8 +455,6 @@ describe('ATI Analytics Container', () => {
         new URLSearchParams(pageviewParams),
       );
 
-      console.log({ parsedATIParams });
-
       expect(parsedATIParams).toEqual({
         s: '598343',
         s2: '6',
@@ -505,8 +499,6 @@ describe('ATI Analytics Container', () => {
         new URLSearchParams(pageviewParams),
       );
 
-      console.log({ parsedATIParams });
-
       expect(parsedATIParams).toEqual({
         s: '598343',
         s2: '62',
@@ -547,8 +539,6 @@ describe('ATI Analytics Container', () => {
       const parsedATIParams = Object.fromEntries(
         new URLSearchParams(pageviewParams),
       );
-
-      console.log({ parsedATIParams });
 
       expect(parsedATIParams).toEqual({
         s: '598343',
@@ -597,8 +587,6 @@ describe('ATI Analytics Container', () => {
         new URLSearchParams(pageviewParams),
       );
 
-      console.log({ parsedATIParams });
-
       expect(parsedATIParams).toEqual({
         s: '598343',
         s2: '62',
@@ -646,8 +634,6 @@ describe('ATI Analytics Container', () => {
         new URLSearchParams(pageviewParams),
       );
 
-      console.log({ parsedATIParams });
-
       expect(parsedATIParams).toEqual({
         s: '598343',
         s2: '94',
@@ -688,8 +674,6 @@ describe('ATI Analytics Container', () => {
       const parsedATIParams = Object.fromEntries(
         new URLSearchParams(pageviewParams),
       );
-
-      console.log({ parsedATIParams });
 
       expect(parsedATIParams).toEqual({
         s: '598343',
@@ -738,8 +722,6 @@ describe('ATI Analytics Container', () => {
         new URLSearchParams(pageviewParams),
       );
 
-      console.log({ parsedATIParams });
-
       expect(parsedATIParams).toEqual({
         s: '598343',
         s2: '94',
@@ -780,8 +762,6 @@ describe('ATI Analytics Container', () => {
       const parsedATIParams = Object.fromEntries(
         new URLSearchParams(pageviewParams),
       );
-
-      console.log({ parsedATIParams });
 
       expect(parsedATIParams).toEqual({
         s: '598343',
@@ -836,8 +816,6 @@ describe('ATI Analytics Container', () => {
         new URLSearchParams(pageviewParams),
       );
 
-      console.log({ parsedATIParams });
-
       expect(parsedATIParams).toEqual({
         s: '598343',
         s2: '62',
@@ -881,8 +859,6 @@ describe('ATI Analytics Container', () => {
       const parsedATIParams = Object.fromEntries(
         new URLSearchParams(pageviewParams),
       );
-
-      console.log({ parsedATIParams });
 
       expect(parsedATIParams).toEqual({
         s: '598343',
@@ -930,8 +906,6 @@ describe('ATI Analytics Container', () => {
         new URLSearchParams(pageviewParams),
       );
 
-      console.log({ parsedATIParams });
-
       expect(parsedATIParams).toEqual({
         s: '598343',
         s2: '3',
@@ -973,8 +947,6 @@ describe('ATI Analytics Container', () => {
       const parsedATIParams = Object.fromEntries(
         new URLSearchParams(pageviewParams),
       );
-
-      console.log({ parsedATIParams });
 
       expect(parsedATIParams).toEqual({
         s: '598343',
