@@ -1,42 +1,21 @@
 import { BFF_FETCH_ERROR } from '#lib/logger.const';
 import nodeLogger from '#lib/logger.node';
-import Url from 'url-parse';
-import getEnvironment from '#app/routes/utils/getEnvironment';
-import fetchPageData from '../../utils/fetchPageData';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
-import constructPageFetchUrl from '../../utils/constructPageFetchUrl';
+import fetchDataFromBFF from '../../utils/fetchDataFromBFF';
+import { TOPIC_PAGE } from '../../utils/pageTypes';
 
 const logger = nodeLogger(__filename);
 
-const getServiceEnv = pathname => {
-  const url = Url(`https://www.bbc.com${pathname}`, true);
-
-  return url.query.renderer_env || 'live';
-};
-
-export default async ({ getAgent, service, path: pathname, variant, page }) => {
+export default async ({ service, path: pathname, variant, page }) => {
   try {
-    const env = getEnvironment(pathname);
-    const isLocal = !env || env === 'local';
-
-    const agent = isLocal ? null : await getAgent();
-
-    const fetchUrl = constructPageFetchUrl({
+    const { status, json } = await fetchDataFromBFF({
       pathname,
-      pageType: 'topic',
       service,
       variant,
+      pageType: TOPIC_PAGE,
       page,
     });
 
-    const serviceEnv = getServiceEnv(pathname);
-    const optHeaders = isLocal ? null : { 'ctx-service-env': serviceEnv };
-
-    const { status, json } = await fetchPageData({
-      path: fetchUrl.toString(),
-      agent,
-      optHeaders,
-    });
     const { data } = json;
 
     const imageData = data.imageData || null;

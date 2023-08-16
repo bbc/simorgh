@@ -274,7 +274,7 @@ describe('implementation of buildPageATIParams and buildPageATIUrl', () => {
         atiData: topicPageAtiData,
         requestContext: {
           ...requestContext,
-          pageType: 'TOPIC',
+          pageType: 'topic',
         },
         serviceContext,
       });

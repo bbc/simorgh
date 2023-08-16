@@ -1,30 +1,19 @@
-import getAgent from '#server/utilities/getAgent';
-import fetchPageData from '../../utils/fetchPageData';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
-import getEnvironment from '../../utils/getEnvironment';
-import constructPageFetchUrl from '../../utils/constructPageFetchUrl';
-import PAGE_TYPES from '../../utils/constructPageFetchUrl/page-types';
+import { MOST_READ_PAGE } from '../../utils/pageTypes';
 import handleError from '../../utils/handleError';
+import fetchDataFromBFF from '../../utils/fetchDataFromBFF';
+import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
+import nodeLogger from '../../../lib/logger.node';
+
+const logger = nodeLogger(__filename);
 
 export default async ({ service, variant, pageType, path: pathname }) => {
   try {
-    const env = getEnvironment(pathname);
-    const isLocal = !env || env === 'local';
-
-    const agent = !isLocal ? await getAgent() : null;
-
-    const fetchUrl = constructPageFetchUrl({
+    const { status, json } = await fetchDataFromBFF({
       pathname,
-      pageType: PAGE_TYPES.MOST_READ,
       service,
       variant,
-    });
-
-    const optHeaders = { 'ctx-service-env': env };
-
-    const { status, json } = await fetchPageData({
-      path: fetchUrl.toString(),
-      ...(!isLocal && { agent, optHeaders }),
+      pageType: MOST_READ_PAGE,
     });
 
     if (!json?.data) {
@@ -38,6 +27,13 @@ export default async ({ service, variant, pageType, path: pathname }) => {
       pageData: { ...data, metadata: { ...data.metadata, type: pageType } },
     };
   } catch ({ message, status = getErrorStatusCode() }) {
+    logger.error(BFF_FETCH_ERROR, {
+      service,
+      status,
+      pathname,
+      message,
+    });
+
     return { error: message, status };
   }
 };

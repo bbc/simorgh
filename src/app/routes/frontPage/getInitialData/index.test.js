@@ -1,7 +1,7 @@
 import fetchMock from 'fetch-mock';
 import frontPageJsonSerbian from '#data/serbian/frontpage/lat.json';
 import radioScheduleJson from '#data/hausa/bbc_hausa_radio/schedule.json';
-import { FRONT_PAGE as pageType } from '../../utils/pageTypes';
+import { CPS_ASSET as pageType } from '../../utils/pageTypes';
 import * as fetchPageData from '../../utils/fetchPageData';
 import nodeLogger from '../../../../testHelpers/loggerMock';
 import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
