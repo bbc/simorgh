@@ -36,14 +36,14 @@ describe('beacon', () => {
       );
 
       expect(parsedATIParams).toEqual({
-        atc: 'PUB-[]-[component]-[]-[]-[pageIdentifier]-[]-[]-[]',
-        hl: '00-00-00',
         idclient: '123-456-789',
-        lng: 'en-US',
+        s: '598285',
         p: 'pageIdentifier',
         r: '0x0x24x24',
         re: '1024x768',
-        s: '598285',
+        hl: '00-00-00',
+        lng: 'en-US',
+        atc: 'PUB-[]-[component]-[]-[]-[pageIdentifier]-[]-[]-[]',
         type: 'AT',
       });
     });
