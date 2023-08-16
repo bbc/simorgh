@@ -2,7 +2,7 @@ import * as PAGE_TYPES from '../../routes/utils/pageTypes';
 
 export type Environments = 'local' | 'test' | 'live';
 
-export type Platforms = 'amp' | 'canonical';
+export type Platforms = 'amp' | 'canonical' | 'app';
 
 export type SocialEmbedProviders =
   | 'facebook'
