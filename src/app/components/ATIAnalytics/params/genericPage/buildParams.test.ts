@@ -1,3 +1,4 @@
+import { TOPIC_PAGE } from '#app/routes/utils/pageTypes';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import { RequestContextProps } from '../../../../contexts/RequestContext';
 import { ServiceConfig } from '../../../../models/types/serviceConfig';
@@ -274,7 +275,7 @@ describe('implementation of buildPageATIParams and buildPageATIUrl', () => {
         atiData: topicPageAtiData,
         requestContext: {
           ...requestContext,
-          pageType: 'topic',
+          pageType: TOPIC_PAGE,
         },
         serviceContext,
       });
