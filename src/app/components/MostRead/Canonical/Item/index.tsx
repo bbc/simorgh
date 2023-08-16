@@ -62,7 +62,11 @@ export const MostReadLink = ({
   return (
     <div css={getItemCss({ dir, size, href })} dir={dir}>
       <a
-        css={[styles.link, size === 'default' && styles.defaultLink]}
+        css={[
+          styles.link,
+          size === 'default' && styles.defaultLink,
+          styles.breakwordText,
+        ]}
         href={href}
         onClick={clickTrackerHandler}
         className="focusIndicatorDisplayTableCell"

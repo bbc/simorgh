@@ -26,6 +26,7 @@ const styles = {
         whiteSpace: 'nowrap',
         zIndex: 1,
       },
+      ...css(styles.breakwordText() || {}),
     }),
 
   defaultLink: ({ mq, fontSizes }: Theme) =>
