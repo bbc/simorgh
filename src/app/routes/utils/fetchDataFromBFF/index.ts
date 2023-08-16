@@ -16,7 +16,7 @@ interface FetchDataFromBffParams {
   service: Services;
   variant?: Variants;
   isAmp?: boolean;
-  page?: number;
+  page?: string;
 }
 
 export default async ({

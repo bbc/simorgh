@@ -25,7 +25,7 @@ interface UrlConstructParams {
   pageType: PageTypes;
   service: Services;
   variant?: Variants;
-  page?: number;
+  page?: string;
   isAmp?: boolean;
 }
 
