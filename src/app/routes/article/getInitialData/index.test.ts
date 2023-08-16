@@ -5,6 +5,7 @@ import nodeLogger from '../../../../testHelpers/loggerMock';
 import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
 import getInitialData from '.';
 import pidginArticleWithLatestMedia from '../../../../../data/pidgin/articles/cw0x29n2pvqo.json';
+import { ARTICLE_PAGE } from '../../utils/pageTypes';
 
 process.env.BFF_PATH = 'https://mock-bff-path';
 
@@ -53,12 +54,12 @@ describe('Articles - BFF Fetching', () => {
     await getInitialData({
       path: '/kyrgyz/articles/c0000000000o',
       service: 'kyrgyz',
-      pageType: 'article',
+      pageType: ARTICLE_PAGE,
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
       path: 'http://localhost/kyrgyz/articles/c0000000000o',
-      pageType: 'article',
+      pageType: ARTICLE_PAGE,
     });
   });
 
@@ -76,7 +77,7 @@ describe('Articles - BFF Fetching', () => {
     await getInitialData({
       path: '/kyrgyz/articles/c0000000000o',
       service: 'kyrgyz',
-      pageType: 'article',
+      pageType: ARTICLE_PAGE,
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
@@ -85,7 +86,7 @@ describe('Articles - BFF Fetching', () => {
       optHeaders: {
         'ctx-service-env': 'test',
       },
-      pageType: 'article',
+      pageType: ARTICLE_PAGE,
     });
   });
 
@@ -103,7 +104,7 @@ describe('Articles - BFF Fetching', () => {
     await getInitialData({
       path: '/kyrgyz/articles/c0000000000o',
       service: 'kyrgyz',
-      pageType: 'article',
+      pageType: ARTICLE_PAGE,
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
@@ -112,7 +113,7 @@ describe('Articles - BFF Fetching', () => {
       optHeaders: {
         'ctx-service-env': 'live',
       },
-      pageType: 'article',
+      pageType: ARTICLE_PAGE,
     });
   });
 
@@ -132,7 +133,7 @@ describe('Articles - BFF Fetching', () => {
     await getInitialData({
       path: '/kyrgyz/articles/c0000000000o.amp?renderer_env=live',
       service: 'kyrgyz',
-      pageType: 'article',
+      pageType: ARTICLE_PAGE,
     });
 
     expect(getOnwardsPageDataSpy).toBeCalledWith({
@@ -159,7 +160,7 @@ describe('Articles - BFF Fetching', () => {
     await getInitialData({
       path: '/kyrgyz/articles/c0000000000o?renderer_env=test',
       service: 'kyrgyz',
-      pageType: 'article',
+      pageType: ARTICLE_PAGE,
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
@@ -168,7 +169,7 @@ describe('Articles - BFF Fetching', () => {
       optHeaders: {
         'ctx-service-env': 'test',
       },
-      pageType: 'article',
+      pageType: ARTICLE_PAGE,
     });
   });
 
@@ -186,7 +187,7 @@ describe('Articles - BFF Fetching', () => {
     await getInitialData({
       path: '/kyrgyz/articles/c0000000000o?renderer_env=live',
       service: 'kyrgyz',
-      pageType: 'article',
+      pageType: ARTICLE_PAGE,
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
@@ -195,7 +196,7 @@ describe('Articles - BFF Fetching', () => {
       optHeaders: {
         'ctx-service-env': 'live',
       },
-      pageType: 'article',
+      pageType: ARTICLE_PAGE,
     });
   });
 
@@ -207,7 +208,7 @@ describe('Articles - BFF Fetching', () => {
     await getInitialData({
       path: '/kyrgyz/articles/c0000000000o',
       service: 'kyrgyz',
-      pageType: 'article',
+      pageType: ARTICLE_PAGE,
     });
 
     expect(nodeLogger.error).toHaveBeenCalledWith(BFF_FETCH_ERROR, {
@@ -229,7 +230,7 @@ describe('Articles - BFF Fetching', () => {
     await getInitialData({
       path: '/kyrgyz/articles/c0000000000o',
       service: 'kyrgyz',
-      pageType: 'article',
+      pageType: ARTICLE_PAGE,
     });
 
     expect(nodeLogger.error).toHaveBeenCalledWith(BFF_FETCH_ERROR, {
@@ -252,7 +253,7 @@ describe('Articles - BFF Fetching', () => {
     await getInitialData({
       path: '/kyrgyz/articles/somethingelse',
       service: 'kyrgyz',
-      pageType: 'article',
+      pageType: ARTICLE_PAGE,
     });
 
     expect(nodeLogger.error).toHaveBeenCalledWith(BFF_FETCH_ERROR, {
@@ -282,7 +283,7 @@ describe('Articles - BFF Fetching', () => {
     await getInitialData({
       path: '/kyrgyz/articles/c0000000000o',
       service: 'kyrgyz',
-      pageType: 'article',
+      pageType: ARTICLE_PAGE,
     });
 
     expect(nodeLogger.error).toHaveBeenCalledWith(BFF_FETCH_ERROR, {
