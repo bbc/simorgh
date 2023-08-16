@@ -2987,6 +2987,16 @@ exports[`Story Page should render correctly when the secondary column data is no
                             >
                               Sharp-sharp facts about President Bola Tinubu special advisers
                             </a>
+                            <div
+                              class="emotion-224"
+                            >
+                              <time
+                                class="emotion-225 emotion-25"
+                                datetime="2023-06-16"
+                              >
+                                De one we dem update for: 16th June 2023
+                              </time>
+                            </div>
                           </div>
                         </div>
                       </li>
