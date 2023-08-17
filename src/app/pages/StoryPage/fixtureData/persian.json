@@ -14,6 +14,21 @@
     "createdBy": "persian-v6",
     "language": "fa",
     "timestamp": 1586020154000,
+    "atiAnalytics": {
+      "campaigns": null,
+      "categoryName": null,
+      "contentId": "urn:bbc:cps:curie:asset:d99c234d-5d8a-8749-914c-c19f2a95fbed",
+      "contentType": "article",
+      "language": "fa",
+      "ldpThingIds": null,
+      "ldpThingLabels": null,
+      "pageIdentifier": "arts::persian.arts.story.52166891.page",
+      "pageTitle": "هفته هنر و فرهنگ؛ 'هنر در بتمرگینگی، خدمت به جامعه مدنی'",
+      "producerId": null,
+      "timePublished": "2020-04-04T17:09:14.000Z",
+      "timeUpdated": "2020-04-04T17:09:14.000Z",
+      "producerName": "PERSIAN"
+    },
     "options": {
       "isIgorSeoTagsEnabled": false,
       "includeComments": false,

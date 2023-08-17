@@ -322,8 +322,28 @@
     "blockTypes": ["image", "paragraph", "list", "crosshead", "social_embed"],
     "includeComments": false,
     "atiAnalytics": {
-      "producerName": "BRASIL",
-      "producerId": "33"
+      "campaigns": [
+        {
+          "campaignId": "5a988e3739461b000e9dabfa",
+          "campaignName": "WS - Give me perspective"
+        },
+        {
+          "campaignId": "5a988e3e39461b000e9dabfb",
+          "campaignName": "WS - Keep me on trend"
+        }
+      ],
+      "categoryName": null,
+      "contentId": "urn:bbc:cps:curie:asset:53a183aa-d2d1-4b9d-9b71-d99c0745cb44",
+      "contentType": "article",
+      "language": "pt-br",
+      "ldpThingIds": "15f1bcf6-b6ab-48e8-b708-efed41e43d31~2f2db234-3c2d-40a4-b4ac-eea661faadd0~6892384e-1966-4c03-9ce3-f694a8f9f69e~ca170ae3-99c1-48db-9b67-2866f85e7342~cec5d136-f83d-4e00-a3be-d22a7b89401f~e0d04166-b92f-468e-9e68-d5f9330e6ae7",
+      "ldpThingLabels": "Brazil~Business~China~Economics~Trade~Latin+America",
+      "pageIdentifier": "world::portuguese.world.story.58982435.page",
+      "pageTitle": "A estratégica rede de portos que a China controla no mundo e avança até no Brasil",
+      "producerId": null,
+      "timePublished": "2021-10-20T13:15:20.000Z",
+      "timeUpdated": "2021-10-20T13:15:20.000Z",
+      "producerName": "BRASIL"
     },
     "readTime": 8,
     "siteUri": "/portuguese",
