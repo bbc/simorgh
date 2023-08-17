@@ -10,6 +10,7 @@
   ],
   "resolutions": {
     "@babel/runtime": "7.22.10",
+    "@types/react": "18.2.20",
     "@optimizely/js-sdk-utils": "0.4.0",
     "glob-parent": "5.1.2",
     "semver": "7.5.4",
