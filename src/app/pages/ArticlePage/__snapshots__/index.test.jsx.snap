@@ -904,133 +904,133 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-66 {
+  .emotion-69 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-66 {
+  .emotion-69 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-66 {
+  .emotion-69 {
     min-width: 3rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-66 {
+  .emotion-69 {
     min-width: 4rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-66 {
+  .emotion-69 {
     min-width: 4rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-66 {
+    .emotion-69 {
       min-width: 4rem;
     }
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-66 {
+  .emotion-69 {
     min-width: 2rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-76 {
+  .emotion-79 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-76 {
+  .emotion-79 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-76 {
+  .emotion-79 {
     min-width: 3rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-76 {
+  .emotion-79 {
     min-width: 4rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-76 {
+  .emotion-79 {
     min-width: 2rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-76 {
+    .emotion-79 {
       min-width: 4rem;
     }
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-76 {
+  .emotion-79 {
     min-width: 2rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-100 {
+  .emotion-103 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-100 {
+  .emotion-103 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-100 {
+  .emotion-103 {
     min-width: 3rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-100 {
+  .emotion-103 {
     min-width: 4rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-100 {
+  .emotion-103 {
     min-width: 4rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-100 {
+    .emotion-103 {
       min-width: 4rem;
     }
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-100 {
+  .emotion-103 {
     min-width: 4rem;
   }
 }
@@ -1276,6 +1276,16 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
               >
                 Tins to sabi about 2023 Sierra Leone general election
               </a>
+              <div
+                class="emotion-53"
+              >
+                <time
+                  class="emotion-54 emotion-55"
+                  datetime="2023-06-18"
+                >
+                  De one we dem update for: 18th June 2023
+                </time>
+              </div>
             </div>
           </div>
         </li>
@@ -1288,7 +1298,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
             class="emotion-27"
           >
             <div
-              class="emotion-66"
+              class="emotion-69"
               dir="ltr"
             >
               <span
@@ -1329,7 +1339,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
             class="emotion-27"
           >
             <div
-              class="emotion-76"
+              class="emotion-79"
               dir="ltr"
             >
               <span
@@ -1360,7 +1370,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
             class="emotion-27"
           >
             <div
-              class="emotion-66"
+              class="emotion-69"
               dir="ltr"
             >
               <span
@@ -1391,7 +1401,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
             class="emotion-27"
           >
             <div
-              class="emotion-76"
+              class="emotion-79"
               dir="ltr"
             >
               <span
@@ -1432,7 +1442,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
             class="emotion-27"
           >
             <div
-              class="emotion-100"
+              class="emotion-103"
               dir="ltr"
             >
               <span
