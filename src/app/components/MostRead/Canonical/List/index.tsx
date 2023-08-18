@@ -4,14 +4,18 @@ import { jsx } from '@emotion/react';
 import Grid from '../../../../legacy/psammead/psammead-grid/src';
 import { mostReadListGridProps } from '../../utilities/gridProps';
 import * as styles from './index.styles';
-import { MostReadBaseProps } from '../../types';
+import { MostReadBaseProps, MostReadRankProps } from '../../types';
 
 const MostReadList = ({
   numberOfItems,
   dir = 'ltr',
-  columnLayout = 'multiColumn',
+  columnLayout: initialColumnLayout = 'multiColumn',
   children,
+  service,
 }: PropsWithChildren<MostReadBaseProps>) => {
+  const columnLayout =
+    service === 'burmese' ? 'oneColumn' : initialColumnLayout;
+
   return (
     // @ts-expect-error: Legacy grid expects `children` to be passed as props. However, due to coding best practices, we must nest children between the opening and closing tags
     <Grid

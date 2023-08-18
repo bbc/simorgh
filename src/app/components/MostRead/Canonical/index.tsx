@@ -47,6 +47,7 @@ const MostRead = ({
       numberOfItems={items.length}
       dir={direction}
       columnLayout={columnLayout}
+      service={service}
     >
       {items.map(
         ({ id, timestamp, title, href }, i) =>
