@@ -3450,6 +3450,34 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
   }
 }
 
+.emotion-88 {
+  padding-top: 0.5rem;
+}
+
+.emotion-89 {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #545658;
+  display: block;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-89 {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-89 {
+    font-size: 0.8125rem;
+    line-height: 1.25rem;
+  }
+}
+
 @media (max-width: 14.9375rem) {
   .emotion-106 {
     min-width: 1rem;
@@ -3890,10 +3918,17 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
                 چرا موبایل داغ می‌کند و چطور آن را خنک نگه داریم؟
               </a>
               <div
+<<<<<<< HEAD
                 class="emotion-32"
               >
                 <time
                   class="emotion-33 emotion-34"
+=======
+                class="emotion-88"
+              >
+                <time
+                  class="emotion-89 emotion-90"
+>>>>>>> latest
                   datetime="2023-06-18"
                 >
                   به روز شده در ۱۸ ژوئن ۲۰۲۳
@@ -3911,7 +3946,11 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
             class="emotion-27"
           >
             <div
+<<<<<<< HEAD
               class="emotion-106"
+=======
+              class="emotion-94"
+>>>>>>> latest
               dir="rtl"
             >
               <span

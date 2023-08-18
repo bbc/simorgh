@@ -1,3 +1,4 @@
+/* eslint-disable no-template-curly-in-string */
 import React, { PropsWithChildren } from 'react';
 import { render } from '@testing-library/react';
 import { articleDataNews } from '#pages/ArticlePage/fixtureData';
@@ -95,7 +96,7 @@ describe('ATI Analytics Container', () => {
       const { pageviewParams } = mockCanonical.mock.calls[0][0];
 
       const parsedATIParams = Object.fromEntries(
-        new URLSearchParams(pageviewParams as string),
+        new URLSearchParams(pageviewParams),
       );
 
       expect(parsedATIParams).toEqual({
@@ -141,23 +142,23 @@ describe('ATI Analytics Container', () => {
       const { pageviewParams } = mockAmp.mock.calls[0][0];
 
       const parsedATIParams = Object.fromEntries(
-        new URLSearchParams(pageviewParams as string),
+        new URLSearchParams(pageviewParams),
       );
 
       expect(parsedATIParams).toEqual({
-        s: `$IF($EQUALS($MATCH(\${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598286, 598288)`,
+        s: '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598286, 598288)',
         s2: '64',
         p: 'news.articles.c0000000001o.page',
-        r: `\${screenWidth}x\${screenHeight}x\${screenColorDepth}`,
-        re: `\${availableScreenWidth}x\${availableScreenHeight}`,
+        r: '${screenWidth}x${screenHeight}x${screenColorDepth}',
+        re: '${availableScreenWidth}x${availableScreenHeight}',
         hl: '00-00-00',
-        lng: `\${browserLanguage}`,
+        lng: '${browserLanguage}',
         x1: '[urn:bbc:optimo:c0000000001o]',
         x2: '[amp]',
         x3: '[news]',
         x4: '[en-gb]',
-        x5: `[\${sourceUrl}]`,
-        x6: `[\${documentReferrer}]`,
+        x5: '[${sourceUrl}]',
+        x6: '[${documentReferrer}]',
         x7: '[article]',
         x8: '[simorgh]',
         x9: '[Article%20Headline%20for%20SEO]',
@@ -166,7 +167,7 @@ describe('ATI Analytics Container', () => {
         x13: '[Royal%20Wedding%202018~Duchess%20of%20Sussex]',
         x14: '[2351f2b2-ce36-4f44-996d-c3c4f7f90eaa~803eaeb9-c0c3-4f1b-9a66-90efac3df2dc]',
         x17: '[Royal%20Wedding%202018~Duchess%20of%20Sussex]',
-        ref: `\${documentReferrer}`,
+        ref: '${documentReferrer}',
       });
     });
   });
@@ -191,7 +192,7 @@ describe('ATI Analytics Container', () => {
       const { pageviewParams } = mockCanonical.mock.calls[0][0];
 
       const parsedATIParams = Object.fromEntries(
-        new URLSearchParams(pageviewParams as string),
+        new URLSearchParams(pageviewParams),
       );
 
       expect(parsedATIParams).toEqual({
@@ -238,23 +239,23 @@ describe('ATI Analytics Container', () => {
       const { pageviewParams } = mockAmp.mock.calls[0][0];
 
       const parsedATIParams = Object.fromEntries(
-        new URLSearchParams(pageviewParams as string),
+        new URLSearchParams(pageviewParams),
       );
 
       expect(parsedATIParams).toEqual({
-        s: `$IF($EQUALS($MATCH(\${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598286, 598288)`,
+        s: '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598286, 598288)',
         s2: '64',
         p: 'news.articles.c0000000001o.page',
-        r: `\${screenWidth}x\${screenHeight}x\${screenColorDepth}`,
-        re: `\${availableScreenWidth}x\${availableScreenHeight}`,
+        r: '${screenWidth}x${screenHeight}x${screenColorDepth}',
+        re: '${availableScreenWidth}x${availableScreenHeight}',
         hl: '00-00-00',
-        lng: `\${browserLanguage}`,
+        lng: '${browserLanguage}',
         x1: '[urn:bbc:optimo:c0000000001o]',
         x2: '[amp]',
         x3: '[news]',
         x4: '[en-gb]',
-        x5: `[\${sourceUrl}]`,
-        x6: `[\${documentReferrer}]`,
+        x5: '[${sourceUrl}]',
+        x6: '[${documentReferrer}]',
         x7: '[article-sfv]',
         x8: '[simorgh]',
         x9: '[Article%20Headline%20for%20SEO]',
@@ -263,16 +264,13 @@ describe('ATI Analytics Container', () => {
         x13: '[Royal%20Wedding%202018~Duchess%20of%20Sussex]',
         x14: '[2351f2b2-ce36-4f44-996d-c3c4f7f90eaa~803eaeb9-c0c3-4f1b-9a66-90efac3df2dc]',
         x17: '[Royal%20Wedding%202018~Duchess%20of%20Sussex]',
-        ref: `\${documentReferrer}`,
+        ref: '${documentReferrer}',
       });
     });
   });
 
   describe('pageType=frontPage', () => {
     it('should call CanonicalATIAnalytics when platform is canonical', () => {
-      setWindowValue('location', {
-        href: `https://localhost`,
-      });
       const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
       // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       canonical.default = mockCanonical;
@@ -287,7 +285,7 @@ describe('ATI Analytics Container', () => {
       const { pageviewParams } = mockCanonical.mock.calls[0][0];
 
       const parsedATIParams = Object.fromEntries(
-        new URLSearchParams(pageviewParams as string),
+        new URLSearchParams(pageviewParams),
       );
 
       expect(parsedATIParams).toEqual({
@@ -324,32 +322,32 @@ describe('ATI Analytics Container', () => {
       const { pageviewParams } = mockAmp.mock.calls[0][0];
 
       const parsedATIParams = Object.fromEntries(
-        new URLSearchParams(pageviewParams as string),
+        new URLSearchParams(pageviewParams),
       );
 
       expect(parsedATIParams).toEqual({
-        s: `$IF($EQUALS($MATCH(\${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598286, 598288)`,
+        s: '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598286, 598288)',
         s2: '64',
         p: 'news.page',
-        r: `\${screenWidth}x\${screenHeight}x\${screenColorDepth}`,
-        re: `\${availableScreenWidth}x\${availableScreenHeight}`,
+        r: '${screenWidth}x${screenHeight}x${screenColorDepth}',
+        re: '${availableScreenWidth}x${availableScreenHeight}',
         hl: '00-00-00',
-        lng: `\${browserLanguage}`,
+        lng: '${browserLanguage}',
         x2: '[amp]',
         x3: '[news]',
-        x5: `[\${sourceUrl}]`,
-        x6: `[\${documentReferrer}]`,
+        x5: '[${sourceUrl}]',
+        x6: '[${documentReferrer}]',
         x7: '[index-home]',
         x8: '[simorgh]',
         x11: '[1970-01-01T00:00:00.000Z]',
         x12: '[1970-01-01T00:00:00.000Z]',
-        ref: `\${documentReferrer}`,
+        ref: '${documentReferrer}',
       });
     });
   });
 
   describe('pageType=MAP', () => {
-    it('should call CanonicalATIAnalytics when platform is canonical', () => {
+    it('should call AmpATIAnalytics when platform is amp', () => {
       const mockAmp = jest.fn().mockReturnValue('amp-return-value');
 
       // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
@@ -377,23 +375,23 @@ describe('ATI Analytics Container', () => {
       const { pageviewParams } = mockAmp.mock.calls[0][0];
 
       const parsedATIParams = Object.fromEntries(
-        new URLSearchParams(pageviewParams as string),
+        new URLSearchParams(pageviewParams),
       );
 
       expect(parsedATIParams).toEqual({
         s: '598343',
         s2: '70',
         p: 'pidgin.media_asset.23248703.page',
-        r: `\${screenWidth}x\${screenHeight}x\${screenColorDepth}`,
-        re: `\${availableScreenWidth}x\${availableScreenHeight}`,
+        r: '${screenWidth}x${screenHeight}x${screenColorDepth}',
+        re: '${availableScreenWidth}x${availableScreenHeight}',
         hl: '00-00-00',
-        lng: `\${browserLanguage}`,
+        lng: '${browserLanguage}',
         x1: '[urn:bbc:cps:curie:asset:5679389a-3ea6-0b40-9de4-f4d33d6bcd9f]',
         x2: '[amp]',
         x3: '[news-pidgin]',
         x4: '[pcm]',
-        x5: `[\${sourceUrl}]`,
-        x6: `[\${documentReferrer}]`,
+        x5: '[${sourceUrl}]',
+        x6: '[${documentReferrer}]',
         x7: '[article-media-asset]',
         x8: '[simorgh]',
         x9: '[Simorgh:%20Media%20Pod%20Build%20First%20CPS%20Media%20Asset%20Page%20in%20Simorgh%20&%20<%20>%20-%20BBC%20News%20Pidgin]',
@@ -401,7 +399,7 @@ describe('ATI Analytics Container', () => {
         x12: '[2020-06-10T14:24:07.000Z]',
         x16: '[Inspire me~Give me perspective~Keep me on trend]',
         x17: '[Opinion]',
-        ref: `\${documentReferrer}`,
+        ref: '${documentReferrer}',
       });
     });
   });
@@ -434,7 +432,7 @@ describe('ATI Analytics Container', () => {
       const { pageviewParams } = mockCanonical.mock.calls[0][0];
 
       const parsedATIParams = Object.fromEntries(
-        new URLSearchParams(pageviewParams as string),
+        new URLSearchParams(pageviewParams),
       );
 
       expect(parsedATIParams).toEqual({
@@ -489,23 +487,23 @@ describe('ATI Analytics Container', () => {
       const { pageviewParams } = mockAmp.mock.calls[0][0];
 
       const parsedATIParams = Object.fromEntries(
-        new URLSearchParams(pageviewParams as string),
+        new URLSearchParams(pageviewParams),
       );
 
       expect(parsedATIParams).toEqual({
         s: '598343',
         s2: '6',
         p: 'azerbaijan::azeri.azerbaijan.photo_gallery.44208474.page',
-        r: `\${screenWidth}x\${screenHeight}x\${screenColorDepth}`,
-        re: `\${availableScreenWidth}x\${availableScreenHeight}`,
+        r: '${screenWidth}x${screenHeight}x${screenColorDepth}',
+        re: '${availableScreenWidth}x${availableScreenHeight}',
         hl: '00-00-00',
-        lng: `\${browserLanguage}`,
+        lng: '${browserLanguage}',
         x1: '[urn:bbc:cps:curie:asset:38229308-a0fb-654a-a274-19bec0414560]',
         x2: '[amp]',
         x3: '[news-azeri]',
         x4: '[az]',
-        x5: `[\${sourceUrl}]`,
-        x6: `[\${documentReferrer}]`,
+        x5: '[${sourceUrl}]',
+        x6: '[${documentReferrer}]',
         x7: '[article-photo-gallery]',
         x8: '[simorgh]',
         x9: '[Azərbaycan%20Xalq%20Cümhuriyyəti%20-%20Fotolarda%20-%20BBC%20News%20Azərbaycanca]',
@@ -514,7 +512,7 @@ describe('ATI Analytics Container', () => {
         x13: '[History~Azerbaijan~Society~Culture~Politics~Human+rights~Azerbaijan+Democratic+Republic+100th+anniversary~Caucasus~Law+and+order]',
         x14: '[03eb3674-6190-4cd7-8104-1a00991d67a3~0f8e45e2-6499-44b1-be1f-1a3dd81e8af7~5307a8d9-f620-40f5-92d4-f99c919a6ffa~6a73afa3-ea6b-45c1-80bb-49060b99f864~75612fa6-147c-4a43-97fa-fcf70d9cced3~8b04c2e8-5409-4e7d-9877-3ccaf04727af~9e6f8e15-894a-45cb-9db9-d8881e8e6ae2~a86bc15e-ccd0-4ea9-9903-df3d4575a176~d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa]',
         x17: '[News]',
-        ref: `\${documentReferrer}`,
+        ref: '${documentReferrer}',
       });
     });
   });
@@ -543,7 +541,7 @@ describe('ATI Analytics Container', () => {
       const { pageviewParams } = mockCanonical.mock.calls[0][0];
 
       const parsedATIParams = Object.fromEntries(
-        new URLSearchParams(pageviewParams as string),
+        new URLSearchParams(pageviewParams),
       );
 
       expect(parsedATIParams).toEqual({
@@ -594,23 +592,23 @@ describe('ATI Analytics Container', () => {
       const { pageviewParams } = mockAmp.mock.calls[0][0];
 
       const parsedATIParams = Object.fromEntries(
-        new URLSearchParams(pageviewParams as string),
+        new URLSearchParams(pageviewParams),
       );
 
       expect(parsedATIParams).toEqual({
         s: '598343',
         s2: '62',
         p: 'mundo.story.23263889.page',
-        r: `\${screenWidth}x\${screenHeight}x\${screenColorDepth}`,
-        re: `\${availableScreenWidth}x\${availableScreenHeight}`,
+        r: '${screenWidth}x${screenHeight}x${screenColorDepth}',
+        re: '${availableScreenWidth}x${availableScreenHeight}',
         hl: '00-00-00',
-        lng: `\${browserLanguage}`,
+        lng: '${browserLanguage}',
         x1: '[urn:bbc:cps:curie:asset:f776ad93-e486-b14a-b5ea-55955dd0644f]',
         x2: '[amp]',
         x3: '[news-mundo]',
         x4: '[es]',
-        x5: `[\${sourceUrl}]`,
-        x6: `[\${documentReferrer}]`,
+        x5: '[${sourceUrl}]',
+        x6: '[${documentReferrer}]',
         x7: '[article]',
         x8: '[simorgh]',
         x9: '[WS%20STY%20TEST%20-%20Full%20Headline%20-%20BBC%20News%20Mundo]',
@@ -620,7 +618,7 @@ describe('ATI Analytics Container', () => {
         x14: '[0239ab33-1cfc-4f5d-babb-a8159711af3e~e7539dc8-5cfb-413a-b4fe-0ad77bc665aa]',
         x16: '[Amuse me]',
         x17: '[News]',
-        ref: `\${documentReferrer}`,
+        ref: '${documentReferrer}',
       });
     });
 
@@ -652,23 +650,23 @@ describe('ATI Analytics Container', () => {
       const { pageviewParams } = mockAmp.mock.calls[0][0];
 
       const parsedATIParams = Object.fromEntries(
-        new URLSearchParams(pageviewParams as string),
+        new URLSearchParams(pageviewParams),
       );
 
       expect(parsedATIParams).toEqual({
         s: '598343',
         s2: '62',
         p: 'mundo.story.23263889.page',
-        r: `\${screenWidth}x\${screenHeight}x\${screenColorDepth}`,
-        re: `\${availableScreenWidth}x\${availableScreenHeight}`,
+        r: '${screenWidth}x${screenHeight}x${screenColorDepth}',
+        re: '${availableScreenWidth}x${availableScreenHeight}',
         hl: '00-00-00',
-        lng: `\${browserLanguage}`,
+        lng: '${browserLanguage}',
         x1: '[urn:bbc:cps:curie:asset:f776ad93-e486-b14a-b5ea-55955dd0644f]',
         x2: '[amp]',
         x3: '[news-mundo]',
         x4: '[es]',
-        x5: `[\${sourceUrl}]`,
-        x6: `[\${documentReferrer}]`,
+        x5: '[${sourceUrl}]',
+        x6: '[${documentReferrer}]',
         x7: '[article-correspondent]',
         x8: '[simorgh]',
         x9: '[WS%20STY%20TEST%20-%20Full%20Headline%20-%20BBC%20News%20Mundo]',
@@ -678,7 +676,7 @@ describe('ATI Analytics Container', () => {
         x14: '[0239ab33-1cfc-4f5d-babb-a8159711af3e~e7539dc8-5cfb-413a-b4fe-0ad77bc665aa]',
         x16: '[Amuse me]',
         x17: '[News]',
-        ref: `\${documentReferrer}`,
+        ref: '${documentReferrer}',
       });
     });
 
@@ -709,7 +707,7 @@ describe('ATI Analytics Container', () => {
       const { pageviewParams } = mockCanonical.mock.calls[0][0];
 
       const parsedATIParams = Object.fromEntries(
-        new URLSearchParams(pageviewParams as string),
+        new URLSearchParams(pageviewParams),
       );
 
       expect(parsedATIParams).toEqual({
@@ -760,23 +758,23 @@ describe('ATI Analytics Container', () => {
       const { pageviewParams } = mockAmp.mock.calls[0][0];
 
       const parsedATIParams = Object.fromEntries(
-        new URLSearchParams(pageviewParams as string),
+        new URLSearchParams(pageviewParams),
       );
 
       expect(parsedATIParams).toEqual({
         s: '598343',
         s2: '94',
         p: 'news::ukrainian.news.story.53561143.page',
-        r: `\${screenWidth}x\${screenHeight}x\${screenColorDepth}`,
-        re: `\${availableScreenWidth}x\${availableScreenHeight}`,
+        r: '${screenWidth}x${screenHeight}x${screenColorDepth}',
+        re: '${availableScreenWidth}x${availableScreenHeight}',
         hl: '00-00-00',
-        lng: `\${browserLanguage}`,
+        lng: '${browserLanguage}',
         x1: '[urn:bbc:cps:curie:asset:9e539daf-1d79-4630-900c-7db33c4bf1ac]',
         x2: '[amp]',
         x3: '[news-ukrainian]',
         x4: '[uk]',
-        x5: `[\${sourceUrl}]`,
-        x6: `[\${documentReferrer}]`,
+        x5: '[${sourceUrl}]',
+        x6: '[${documentReferrer}]',
         x7: '[article]',
         x8: '[simorgh]',
         x9: '[Виробництво%20героїну%20зросло%20завдяки%20сонячним%20батареям.%20Погляд%20з%20Британії%20-%20BBC%20News%20Україна]',
@@ -786,7 +784,7 @@ describe('ATI Analytics Container', () => {
         x14: '[1a5696c5-07d0-4a08-8b54-41ad5cd534b6~37cd3473-7b24-44b0-84c1-bf3c4801df5e~4b4cca1c-d458-4310-819e-dd48572b12c4~ee8750ed-a7fb-453f-bfca-2aa8b3fb064c]',
         x16: '[WS - Educate me]',
         x17: '[News]',
-        ref: `\${documentReferrer}`,
+        ref: '${documentReferrer}',
       });
     });
 
@@ -817,7 +815,7 @@ describe('ATI Analytics Container', () => {
       const { pageviewParams } = mockCanonical.mock.calls[0][0];
 
       const parsedATIParams = Object.fromEntries(
-        new URLSearchParams(pageviewParams as string),
+        new URLSearchParams(pageviewParams),
       );
 
       expect(parsedATIParams).toEqual({
@@ -838,8 +836,8 @@ describe('ATI Analytics Container', () => {
         x9: '[Карта%20новых%20районов%20Украины:%20кто%20и%20кого%20поглотил%20-%20BBC%20News%20Україна]',
         x11: '[2020-07-21T13:00:09.000Z]',
         x12: '[2020-07-21T13:00:09.000Z]',
-        x13: '[5307a8d9-f620-40f5-92d4-f99c919a6ffa~75612fa6-147c-4a43-97fa-fcf70d9cced3~ee8750ed-a7fb-453f-bfca-2aa8b3fb064c]',
-        x14: '[Society~Politics~Ukraine]',
+        x13: '[Society~Politics~Ukraine]',
+        x14: '[5307a8d9-f620-40f5-92d4-f99c919a6ffa~75612fa6-147c-4a43-97fa-fcf70d9cced3~ee8750ed-a7fb-453f-bfca-2aa8b3fb064c]',
         x16: '[WS - Update me]',
         x17: '[News]',
       });
@@ -868,33 +866,33 @@ describe('ATI Analytics Container', () => {
       const { pageviewParams } = mockAmp.mock.calls[0][0];
 
       const parsedATIParams = Object.fromEntries(
-        new URLSearchParams(pageviewParams as string),
+        new URLSearchParams(pageviewParams),
       );
 
       expect(parsedATIParams).toEqual({
         s: '598343',
         s2: '94',
         p: 'russian_features::ukrainian.russian_features.story.53477115.page',
-        r: `\${screenWidth}x\${screenHeight}x\${screenColorDepth}`,
-        re: `\${availableScreenWidth}x\${availableScreenHeight}`,
+        r: '${screenWidth}x${screenHeight}x${screenColorDepth}',
+        re: '${availableScreenWidth}x${availableScreenHeight}',
         hl: '00-00-00',
-        lng: `\${browserLanguage}`,
+        lng: '${browserLanguage}',
         x1: '[urn:bbc:cps:curie:asset:307108d3-9bcc-4829-990c-4b42c1290258]',
         x2: '[amp]',
         x3: '[news-ukrainian]',
         x4: '[ru]',
-        x5: `[\${sourceUrl}]`,
-        x6: `[\${documentReferrer}]`,
+        x5: '[${sourceUrl}]',
+        x6: '[${documentReferrer}]',
         x7: '[article]',
         x8: '[simorgh]',
         x9: '[Карта%20новых%20районов%20Украины:%20кто%20и%20кого%20поглотил%20-%20BBC%20News%20Україна]',
         x11: '[2020-07-21T13:00:09.000Z]',
         x12: '[2020-07-21T13:00:09.000Z]',
-        x13: '[5307a8d9-f620-40f5-92d4-f99c919a6ffa~75612fa6-147c-4a43-97fa-fcf70d9cced3~ee8750ed-a7fb-453f-bfca-2aa8b3fb064c]',
-        x14: '[Society~Politics~Ukraine]',
+        x13: '[Society~Politics~Ukraine]',
+        x14: '[5307a8d9-f620-40f5-92d4-f99c919a6ffa~75612fa6-147c-4a43-97fa-fcf70d9cced3~ee8750ed-a7fb-453f-bfca-2aa8b3fb064c]',
         x16: '[WS - Update me]',
         x17: '[News]',
-        ref: `\${documentReferrer}`,
+        ref: '${documentReferrer}',
       });
     });
   });
@@ -931,7 +929,7 @@ describe('ATI Analytics Container', () => {
       const { pageviewParams } = mockCanonical.mock.calls[0][0];
 
       const parsedATIParams = Object.fromEntries(
-        new URLSearchParams(pageviewParams as string),
+        new URLSearchParams(pageviewParams),
       );
 
       expect(parsedATIParams).toEqual({
@@ -985,7 +983,7 @@ describe('ATI Analytics Container', () => {
       const { pageviewParams } = mockCanonical.mock.calls[0][0];
 
       const parsedATIParams = Object.fromEntries(
-        new URLSearchParams(pageviewParams as string),
+        new URLSearchParams(pageviewParams),
       );
 
       expect(parsedATIParams).toEqual({
@@ -1032,7 +1030,7 @@ describe('ATI Analytics Container', () => {
       const { pageviewParams } = mockCanonical.mock.calls[0][0];
 
       const parsedATIParams = Object.fromEntries(
-        new URLSearchParams(pageviewParams as string),
+        new URLSearchParams(pageviewParams),
       );
 
       expect(parsedATIParams).toEqual({
@@ -1074,29 +1072,29 @@ describe('ATI Analytics Container', () => {
       const { pageviewParams } = mockAmp.mock.calls[0][0];
 
       const parsedATIParams = Object.fromEntries(
-        new URLSearchParams(pageviewParams as string),
+        new URLSearchParams(pageviewParams),
       );
 
       expect(parsedATIParams).toEqual({
         s: '598343',
         s2: '3',
         p: 'afrique.feature_index.48465371.page',
-        r: `\${screenWidth}x\${screenHeight}x\${screenColorDepth}`,
-        re: `\${availableScreenWidth}x\${availableScreenHeight}`,
+        r: '${screenWidth}x${screenHeight}x${screenColorDepth}',
+        re: '${availableScreenWidth}x${availableScreenHeight}',
         hl: '00-00-00',
-        lng: `\${browserLanguage}`,
+        lng: '${browserLanguage}',
         x1: '[urn:bbc:cps:447a95b6-1c9f-e544-bf60-e23452e7fa71]',
         x2: '[amp]',
         x3: '[news-afrique]',
         x4: '[fr]',
-        x5: `[\${sourceUrl}]`,
-        x6: `[\${documentReferrer}]`,
+        x5: '[${sourceUrl}]',
+        x6: '[${documentReferrer}]',
         x7: '[index-section]',
         x8: '[simorgh]',
         x9: '[Tout%20savoir%20sur%20la%20CAN%202019%20-%20BBC%20News%20Afrique]',
         x11: '[1970-01-01T00:00:00.000Z]',
         x12: '[1970-01-01T00:00:00.000Z]',
-        ref: `\${documentReferrer}`,
+        ref: '${documentReferrer}',
       });
     });
   });

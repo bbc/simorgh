@@ -233,9 +233,36 @@ describe('ATIAnalytics params', () => {
         data: article,
         serviceContext,
       });
-      expect(url).toMatchInlineSnapshot(
-        `"s=598285&s2=atiAnalyticsProducerId&p=pidgin.articles.%2F%2Fwww.bbc.co.uk.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Aoptimo%3Aasset%3A54321]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http%253A%252F%252Flocalhost%252F]&x6=[originhttp%253A%252F%252Fwww.example.com]&x7=[article-sfv]&x8=[simorgh]&x9=[pageTitle]&x10=[scotland]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x13=[thing%2520english%2520label%25201~thing%2520english%2520label%25202]&x14=[thing%2520id%25201~thing%2520id%25202]&x17=[thing%2520english%2520label%25201~thing%2520english%2520label%25202]&ref=originhttp://www.example.com"`,
+
+      const parsedATIParams = Object.fromEntries(
+        new URLSearchParams(url as string),
       );
+
+      expect(parsedATIParams).toEqual({
+        s: '598285',
+        s2: 'atiAnalyticsProducerId',
+        p: 'pidgin.articles.//www.bbc.co.uk.page',
+        r: '0x0x24x24',
+        re: '1024x768',
+        hl: '00-00-00',
+        lng: 'en-US',
+        x1: '[urn:bbc:optimo:asset:54321]',
+        x2: '[responsive]',
+        x3: '[atiAnalyticsAppName]',
+        x4: '[language]',
+        x5: '[http%3A%2F%2Flocalhost%2F]',
+        x6: '[originhttp%3A%2F%2Fwww.example.com]',
+        x7: '[article-sfv]',
+        x8: '[simorgh]',
+        x9: '[pageTitle]',
+        x10: '[scotland]',
+        x11: '[1970-01-01T00:00:00.000Z]',
+        x12: '[1970-01-01T00:00:00.000Z]',
+        x13: '[thing%20english%20label%201~thing%20english%20label%202]',
+        x14: '[thing%20id%201~thing%20id%202]',
+        x17: '[thing%20english%20label%201~thing%20english%20label%202]',
+        ref: 'originhttp://www.example.com',
+      });
     });
 
     it('should return the correct frontPage url', () => {
@@ -244,9 +271,30 @@ describe('ATIAnalytics params', () => {
         data: frontPage,
         serviceContext,
       });
-      expect(url).toMatchInlineSnapshot(
-        `"s=598285&s2=atiAnalyticsProducerId&p=service.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Acps%3A00000000-0000-0000-0000-000000000000]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http%253A%252F%252Flocalhost%252F]&x7=[index-home]&x8=[simorgh]&x9=[title%2520-%2520brandName]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]"`,
+
+      const parsedATIParams = Object.fromEntries(
+        new URLSearchParams(url as string),
       );
+
+      expect(parsedATIParams).toEqual({
+        s: '598285',
+        s2: 'atiAnalyticsProducerId',
+        p: 'service.page',
+        r: '0x0x24x24',
+        re: '1024x768',
+        hl: '00-00-00',
+        lng: 'en-US',
+        x1: '[urn:bbc:cps:00000000-0000-0000-0000-000000000000]',
+        x2: '[responsive]',
+        x3: '[atiAnalyticsAppName]',
+        x4: '[language]',
+        x5: '[http%3A%2F%2Flocalhost%2F]',
+        x7: '[index-home]',
+        x8: '[simorgh]',
+        x9: '[title%20-%20brandName]',
+        x11: '[1970-01-01T00:00:00.000Z]',
+        x12: '[1970-01-01T00:00:00.000Z]',
+      });
     });
 
     it('should return the correct IDX page url', () => {
@@ -255,9 +303,30 @@ describe('ATIAnalytics params', () => {
         data: idxPage,
         serviceContext,
       });
-      expect(url).toMatchInlineSnapshot(
-        `"s=598285&s2=atiAnalyticsProducerId&p=service.page.idxpage&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Acps%3A00000000-0000-0000-0000-000000000000]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http%253A%252F%252Flocalhost%252F]&x7=[index-section]&x8=[simorgh]&x9=[title%2520-%2520brandName]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]"`,
+
+      const parsedATIParams = Object.fromEntries(
+        new URLSearchParams(url as string),
       );
+
+      expect(parsedATIParams).toEqual({
+        s: '598285',
+        s2: 'atiAnalyticsProducerId',
+        p: 'service.page.idxpage',
+        r: '0x0x24x24',
+        re: '1024x768',
+        hl: '00-00-00',
+        lng: 'en-US',
+        x1: '[urn:bbc:cps:00000000-0000-0000-0000-000000000000]',
+        x2: '[responsive]',
+        x3: '[atiAnalyticsAppName]',
+        x4: '[language]',
+        x5: '[http%3A%2F%2Flocalhost%2F]',
+        x7: '[index-section]',
+        x8: '[simorgh]',
+        x9: '[title%20-%20brandName]',
+        x11: '[1970-01-01T00:00:00.000Z]',
+        x12: '[1970-01-01T00:00:00.000Z]',
+      });
     });
 
     it('should return the correct media url', () => {
@@ -266,9 +335,28 @@ describe('ATIAnalytics params', () => {
         data: media,
         serviceContext,
       });
-      expect(url).toMatchInlineSnapshot(
-        `"s=598285&s2=atiAnalyticsProducerId&p=pageIdentifier&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[id]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http%253A%252F%252Flocalhost%252F]&x7=[player-live]&x8=[simorgh]&x9=[pageTitle]"`,
+
+      const parsedATIParams = Object.fromEntries(
+        new URLSearchParams(url as string),
       );
+
+      expect(parsedATIParams).toEqual({
+        s: '598285',
+        s2: 'atiAnalyticsProducerId',
+        p: 'pageIdentifier',
+        r: '0x0x24x24',
+        re: '1024x768',
+        hl: '00-00-00',
+        lng: 'en-US',
+        x1: '[id]',
+        x2: '[responsive]',
+        x3: '[atiAnalyticsAppName]',
+        x4: '[language]',
+        x5: '[http%3A%2F%2Flocalhost%2F]',
+        x7: '[player-live]',
+        x8: '[simorgh]',
+        x9: '[pageTitle]',
+      });
     });
 
     it('should return the correct MAP url', () => {
@@ -362,7 +450,7 @@ describe('ATIAnalytics params', () => {
         new URLSearchParams(url as string),
       );
 
-      const expectedATIURLParams = {
+      expect(parsedATIURLParams).toEqual({
         s: '598285',
         s2: 'atiAnalyticsProducerId',
         p: 'kyrgyz.page',
@@ -380,9 +468,7 @@ describe('ATIAnalytics params', () => {
         x7: '[index-home]',
         x8: '[simorgh]',
         x9: '[pageTitle]',
-      };
-
-      expect(parsedATIURLParams).toEqual(expectedATIURLParams);
+      });
     });
 
     it('should have both ref parameter and x6 referrer url parameter, if referrer url exists', () => {
@@ -391,10 +477,11 @@ describe('ATIAnalytics params', () => {
         serviceContext,
         atiData: articlePageAnalyticsData,
       }) as string;
-      const params = atiUrl.split('&');
 
-      expect(params).toContain('x6=[originhttp%253A%252F%252Fwww.example.com]');
-      expect(params).toContain('ref=originhttp://www.example.com');
+      const params = Object.fromEntries(new URLSearchParams(atiUrl));
+
+      expect(params.x6).toBe('[originhttp%3A%2F%2Fwww.example.com]');
+      expect(params.ref).toBe('originhttp://www.example.com');
     });
 
     it('should have ref parameter as the last parameter, if referrer url exists', () => {
