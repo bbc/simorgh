@@ -1,6 +1,5 @@
 /* eslint-disable no-template-curly-in-string */
-import React, { PropsWithChildren } from 'react';
-import { render } from '@testing-library/react';
+import React from 'react';
 import { articleDataNews } from '#pages/ArticlePage/fixtureData';
 import mapAssetData from '#pages/MediaAssetPage/fixtureData.json';
 import pglAssetData from '#pages/PhotoGalleryPage/fixtureData.json';
@@ -8,12 +7,12 @@ import styAssetData from '#pages/StoryPage/fixtureData/mundo.json';
 import { data as fixData } from '#data/afrique/cpsAssets/48465371.json';
 import styUkrainianAssetData from '#data/ukrainian/cpsAssets/news-53561143.json';
 import styUkrainianInRussianAssetData from '#data/ukrainian/cpsAssets/features-russian-53477115.json';
-import { RequestContextProvider } from '#contexts/RequestContext';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import {
   setWindowValue,
   resetWindowValue,
 } from '#psammead/psammead-test-helpers/src';
+import { render } from '../react-testing-library-with-providers';
 import {
   ARTICLE_PAGE,
   FRONT_PAGE,
@@ -24,11 +23,9 @@ import {
   CORRESPONDENT_STORY_PAGE,
   MEDIA_ARTICLE_PAGE,
 } from '../../routes/utils/pageTypes';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ATIAnalytics from '.';
 import * as amp from './amp';
 import * as canonical from './canonical';
-import { PageTypes, Platforms, Services } from '../../models/types/global';
 
 const { article: fixAssetData } = fixData;
 
@@ -40,33 +37,13 @@ const { article: fixAssetData } = fixData;
   .fn()
   .mockReturnValue('1970-01-01T00:00:00.000Z');
 
-interface Props {
-  pageType: PageTypes;
-  platform: Platforms;
-  service: Services;
-}
-
-const ContextWrap = ({
-  pageType,
-  platform,
-  children,
-  service,
-}: PropsWithChildren<Props>) => (
-  <ServiceContextProvider service={service}>
-    <RequestContextProvider
-      bbcOrigin="https://www.test.bbc.co.uk"
-      id="c0000000000o"
-      isApp={false}
-      isAmp={platform === 'amp'}
-      pageType={pageType}
-      service={service}
-      statusCode={200}
-      pathname="/pathname"
-    >
-      {children}
-    </RequestContextProvider>
-  </ServiceContextProvider>
-);
+const defaultRenderProps = {
+  bbcOrigin: 'https://www.test.bbc.co.uk',
+  id: 'c0000000000o',
+  isApp: false,
+  statusCode: 200,
+  pathname: '/pathname',
+};
 
 describe('ATI Analytics Container', () => {
   beforeEach(() => {
@@ -83,15 +60,14 @@ describe('ATI Analytics Container', () => {
         metadata: { atiAnalytics },
       } = articleDataNews;
 
-      render(
-        <ContextWrap
-          platform="canonical"
-          pageType={ARTICLE_PAGE}
-          service="news"
-        >
-          <ATIAnalytics atiData={atiAnalytics} />
-        </ContextWrap>,
-      );
+      render(<ATIAnalytics atiData={atiAnalytics} />, {
+        ...defaultRenderProps,
+        atiData: atiAnalytics,
+        isAmp: false,
+        pageData: articleDataNews,
+        pageType: ARTICLE_PAGE,
+        service: 'news',
+      });
 
       const { pageviewParams } = mockCanonical.mock.calls[0][0];
 
@@ -133,11 +109,14 @@ describe('ATI Analytics Container', () => {
         metadata: { atiAnalytics },
       } = articleDataNews;
 
-      render(
-        <ContextWrap platform="amp" pageType={ARTICLE_PAGE} service="news">
-          <ATIAnalytics atiData={atiAnalytics} />
-        </ContextWrap>,
-      );
+      render(<ATIAnalytics atiData={atiAnalytics} />, {
+        ...defaultRenderProps,
+        atiData: atiAnalytics,
+        isAmp: true,
+        pageData: articleDataNews,
+        pageType: ARTICLE_PAGE,
+        service: 'news',
+      });
 
       const { pageviewParams } = mockAmp.mock.calls[0][0];
 
@@ -178,16 +157,14 @@ describe('ATI Analytics Container', () => {
       // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       canonical.default = mockCanonical;
 
-      render(
-        <ContextWrap
-          platform="canonical"
-          pageType={MEDIA_ARTICLE_PAGE}
-          service="news"
-        >
-          {/* @ts-expect-error - only partial data required for testing purposes */}
-          <ATIAnalytics data={articleDataNews} />
-        </ContextWrap>,
-      );
+      /* @ts-expect-error - only partial data required for testing purposes */
+      render(<ATIAnalytics data={articleDataNews} />, {
+        ...defaultRenderProps,
+        isAmp: false,
+        pageData: articleDataNews,
+        pageType: MEDIA_ARTICLE_PAGE,
+        service: 'news',
+      });
 
       const { pageviewParams } = mockCanonical.mock.calls[0][0];
 
@@ -225,16 +202,14 @@ describe('ATI Analytics Container', () => {
       // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       amp.default = mockAmp;
 
-      render(
-        <ContextWrap
-          platform="amp"
-          pageType={MEDIA_ARTICLE_PAGE}
-          service="news"
-        >
-          {/* @ts-expect-error - only partial data required for testing purposes */}
-          <ATIAnalytics data={articleDataNews} />
-        </ContextWrap>,
-      );
+      /* @ts-expect-error - only partial data required for testing purposes */
+      render(<ATIAnalytics data={articleDataNews} />, {
+        ...defaultRenderProps,
+        isAmp: true,
+        pageData: articleDataNews,
+        pageType: MEDIA_ARTICLE_PAGE,
+        service: 'news',
+      });
 
       const { pageviewParams } = mockAmp.mock.calls[0][0];
 
@@ -275,12 +250,14 @@ describe('ATI Analytics Container', () => {
       // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       canonical.default = mockCanonical;
 
-      render(
-        <ContextWrap platform="canonical" pageType={FRONT_PAGE} service="news">
-          {/* @ts-expect-error - only partial data required for testing purposes */}
-          <ATIAnalytics data={articleDataNews} />
-        </ContextWrap>,
-      );
+      /* @ts-expect-error - only partial data required for testing purposes */
+      render(<ATIAnalytics data={articleDataNews} />, {
+        ...defaultRenderProps,
+        isAmp: false,
+        pageData: articleDataNews,
+        pageType: FRONT_PAGE,
+        service: 'news',
+      });
 
       const { pageviewParams } = mockCanonical.mock.calls[0][0];
 
@@ -312,12 +289,14 @@ describe('ATI Analytics Container', () => {
       // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       amp.default = mockAmp;
 
-      render(
-        <ContextWrap platform="amp" pageType={FRONT_PAGE} service="news">
-          {/* @ts-expect-error - only partial data required for testing purposes */}
-          <ATIAnalytics data={articleDataNews} />
-        </ContextWrap>,
-      );
+      /* @ts-expect-error - only partial data required for testing purposes */
+      render(<ATIAnalytics data={articleDataNews} />, {
+        ...defaultRenderProps,
+        isAmp: true,
+        pageData: articleDataNews,
+        pageType: FRONT_PAGE,
+        service: 'news',
+      });
 
       const { pageviewParams } = mockAmp.mock.calls[0][0];
 
@@ -362,15 +341,14 @@ describe('ATI Analytics Container', () => {
         pageTitle: `${atiAnalytics.pageTitle} - BBC News Pidgin`,
       };
 
-      render(
-        <ContextWrap
-          platform="amp"
-          pageType={MEDIA_ASSET_PAGE}
-          service="pidgin"
-        >
-          <ATIAnalytics atiData={atiData} />
-        </ContextWrap>,
-      );
+      render(<ATIAnalytics atiData={atiData} />, {
+        ...defaultRenderProps,
+        atiData: atiAnalytics,
+        isAmp: true,
+        pageData: mapAssetData,
+        pageType: MEDIA_ASSET_PAGE,
+        service: 'pidgin',
+      });
 
       const { pageviewParams } = mockAmp.mock.calls[0][0];
 
@@ -419,15 +397,14 @@ describe('ATI Analytics Container', () => {
         pageTitle: `${atiAnalytics.pageTitle} - BBC News Azərbaycanca`,
       };
 
-      render(
-        <ContextWrap
-          platform="canonical"
-          pageType={PHOTO_GALLERY_PAGE}
-          service="azeri"
-        >
-          <ATIAnalytics atiData={atiData} />
-        </ContextWrap>,
-      );
+      render(<ATIAnalytics atiData={atiData} />, {
+        ...defaultRenderProps,
+        atiData: atiAnalytics,
+        isAmp: false,
+        pageData: pglAssetData,
+        pageType: PHOTO_GALLERY_PAGE,
+        service: 'azeri',
+      });
 
       const { pageviewParams } = mockCanonical.mock.calls[0][0];
 
@@ -474,15 +451,14 @@ describe('ATI Analytics Container', () => {
         pageTitle: `${atiAnalytics.pageTitle} - BBC News Azərbaycanca`,
       };
 
-      render(
-        <ContextWrap
-          platform="amp"
-          pageType={PHOTO_GALLERY_PAGE}
-          service="azeri"
-        >
-          <ATIAnalytics atiData={atiData} />
-        </ContextWrap>,
-      );
+      render(<ATIAnalytics atiData={atiData} />, {
+        ...defaultRenderProps,
+        atiData: atiAnalytics,
+        isAmp: true,
+        pageData: pglAssetData,
+        pageType: PHOTO_GALLERY_PAGE,
+        service: 'azeri',
+      });
 
       const { pageviewParams } = mockAmp.mock.calls[0][0];
 
@@ -532,11 +508,14 @@ describe('ATI Analytics Container', () => {
         pageTitle: `${atiAnalytics.pageTitle} - BBC News Mundo`,
       };
 
-      render(
-        <ContextWrap platform="canonical" pageType={STORY_PAGE} service="mundo">
-          <ATIAnalytics atiData={atiData} />
-        </ContextWrap>,
-      );
+      render(<ATIAnalytics atiData={atiData} />, {
+        ...defaultRenderProps,
+        atiData: atiAnalytics,
+        isAmp: false,
+        pageData: styAssetData,
+        pageType: STORY_PAGE,
+        service: 'mundo',
+      });
 
       const { pageviewParams } = mockCanonical.mock.calls[0][0];
 
@@ -583,11 +562,14 @@ describe('ATI Analytics Container', () => {
         pageTitle: `${atiAnalytics.pageTitle} - BBC News Mundo`,
       };
 
-      render(
-        <ContextWrap platform="amp" pageType={STORY_PAGE} service="mundo">
-          <ATIAnalytics atiData={atiData} />
-        </ContextWrap>,
-      );
+      render(<ATIAnalytics atiData={atiData} />, {
+        ...defaultRenderProps,
+        atiData: atiAnalytics,
+        isAmp: true,
+        pageData: styAssetData,
+        pageType: STORY_PAGE,
+        service: 'mundo',
+      });
 
       const { pageviewParams } = mockAmp.mock.calls[0][0];
 
@@ -637,15 +619,14 @@ describe('ATI Analytics Container', () => {
         pageTitle: `${atiAnalytics.pageTitle} - BBC News Mundo`,
       };
 
-      render(
-        <ContextWrap
-          platform="amp"
-          pageType={CORRESPONDENT_STORY_PAGE}
-          service="mundo"
-        >
-          <ATIAnalytics atiData={atiData} />
-        </ContextWrap>,
-      );
+      render(<ATIAnalytics atiData={atiData} />, {
+        ...defaultRenderProps,
+        atiData: atiAnalytics,
+        isAmp: true,
+        pageData: styAssetData,
+        pageType: CORRESPONDENT_STORY_PAGE,
+        service: 'mundo',
+      });
 
       const { pageviewParams } = mockAmp.mock.calls[0][0];
 
@@ -694,15 +675,14 @@ describe('ATI Analytics Container', () => {
         pageTitle: `${atiAnalytics.pageTitle} - BBC News Україна`,
       };
 
-      render(
-        <ContextWrap
-          platform="canonical"
-          pageType={STORY_PAGE}
-          service="ukrainian"
-        >
-          <ATIAnalytics atiData={atiData} />
-        </ContextWrap>,
-      );
+      render(<ATIAnalytics atiData={atiData} />, {
+        ...defaultRenderProps,
+        atiData,
+        isAmp: false,
+        pageData: styUkrainianAssetData,
+        pageType: STORY_PAGE,
+        service: 'ukrainian',
+      });
 
       const { pageviewParams } = mockCanonical.mock.calls[0][0];
 
@@ -749,11 +729,14 @@ describe('ATI Analytics Container', () => {
         pageTitle: `${atiAnalytics.pageTitle} - BBC News Україна`,
       };
 
-      render(
-        <ContextWrap platform="amp" pageType={STORY_PAGE} service="ukrainian">
-          <ATIAnalytics atiData={atiData} />
-        </ContextWrap>,
-      );
+      render(<ATIAnalytics atiData={atiData} />, {
+        ...defaultRenderProps,
+        atiData,
+        isAmp: true,
+        pageData: styUkrainianAssetData,
+        pageType: STORY_PAGE,
+        service: 'ukrainian',
+      });
 
       const { pageviewParams } = mockAmp.mock.calls[0][0];
 
@@ -802,15 +785,14 @@ describe('ATI Analytics Container', () => {
         pageTitle: `${atiAnalytics.pageTitle} - BBC News Україна`,
       };
 
-      render(
-        <ContextWrap
-          platform="canonical"
-          pageType={STORY_PAGE}
-          service="ukrainian"
-        >
-          <ATIAnalytics atiData={atiData} />
-        </ContextWrap>,
-      );
+      render(<ATIAnalytics atiData={atiData} />, {
+        ...defaultRenderProps,
+        atiData,
+        isAmp: false,
+        pageData: styUkrainianInRussianAssetData,
+        pageType: STORY_PAGE,
+        service: 'ukrainian',
+      });
 
       const { pageviewParams } = mockCanonical.mock.calls[0][0];
 
@@ -857,11 +839,14 @@ describe('ATI Analytics Container', () => {
         pageTitle: `${atiAnalytics.pageTitle} - BBC News Україна`,
       };
 
-      render(
-        <ContextWrap platform="amp" pageType={STORY_PAGE} service="ukrainian">
-          <ATIAnalytics atiData={atiData} />
-        </ContextWrap>,
-      );
+      render(<ATIAnalytics atiData={atiData} />, {
+        ...defaultRenderProps,
+        atiData,
+        isAmp: true,
+        pageData: styUkrainianInRussianAssetData,
+        pageType: STORY_PAGE,
+        service: 'ukrainian',
+      });
 
       const { pageviewParams } = mockAmp.mock.calls[0][0];
 
@@ -920,11 +905,14 @@ describe('ATI Analytics Container', () => {
         pageTitle: `${atiAnalytics.pageTitle} - BBC News Mundo`,
       };
 
-      render(
-        <ContextWrap platform="canonical" pageType={STORY_PAGE} service="mundo">
-          <ATIAnalytics atiData={atiData} />
-        </ContextWrap>,
-      );
+      render(<ATIAnalytics atiData={atiData} />, {
+        ...defaultRenderProps,
+        atiData,
+        isAmp: false,
+        pageData: styAssetData,
+        pageType: STORY_PAGE,
+        service: 'mundo',
+      });
 
       const { pageviewParams } = mockCanonical.mock.calls[0][0];
 
@@ -974,11 +962,14 @@ describe('ATI Analytics Container', () => {
         pageTitle: `${atiAnalytics.pageTitle} - BBC News Mundo`,
       };
 
-      render(
-        <ContextWrap platform="canonical" pageType={STORY_PAGE} service="mundo">
-          <ATIAnalytics atiData={atiData} />
-        </ContextWrap>,
-      );
+      render(<ATIAnalytics atiData={atiData} />, {
+        ...defaultRenderProps,
+        atiData,
+        isAmp: false,
+        pageData: styAssetData,
+        pageType: STORY_PAGE,
+        service: 'mundo',
+      });
 
       const { pageviewParams } = mockCanonical.mock.calls[0][0];
 
@@ -1017,15 +1008,13 @@ describe('ATI Analytics Container', () => {
       // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       canonical.default = mockCanonical;
 
-      render(
-        <ContextWrap
-          platform="canonical"
-          pageType={FEATURE_INDEX_PAGE}
-          service="afrique"
-        >
-          <ATIAnalytics data={fixAssetData} />
-        </ContextWrap>,
-      );
+      render(<ATIAnalytics data={fixAssetData} />, {
+        ...defaultRenderProps,
+        isAmp: false,
+        pageData: fixAssetData,
+        pageType: FEATURE_INDEX_PAGE,
+        service: 'afrique',
+      });
 
       const { pageviewParams } = mockCanonical.mock.calls[0][0];
 
@@ -1059,15 +1048,13 @@ describe('ATI Analytics Container', () => {
       // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       amp.default = mockAmp;
 
-      render(
-        <ContextWrap
-          platform="amp"
-          pageType={FEATURE_INDEX_PAGE}
-          service="afrique"
-        >
-          <ATIAnalytics data={fixAssetData} />
-        </ContextWrap>,
-      );
+      render(<ATIAnalytics data={fixAssetData} />, {
+        ...defaultRenderProps,
+        isAmp: true,
+        pageData: fixAssetData,
+        pageType: FEATURE_INDEX_PAGE,
+        service: 'afrique',
+      });
 
       const { pageviewParams } = mockAmp.mock.calls[0][0];
 
