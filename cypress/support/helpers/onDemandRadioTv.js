@@ -32,10 +32,12 @@ export const getEmbedUrl = ({ body, language, isAmp }) => {
   return isAmp ? `${embedUrl}/amp` : embedUrl;
 };
 
-export const isAvailable = pathEq(
-  ['content', 'blocks', '0', 'availability'],
-  'available',
-);
+export const isAvailable = pathEq('available', [
+  'content',
+  'blocks',
+  '0',
+  'availability',
+]);
 
 export const getEpisodeAvailability = path([
   'content',
