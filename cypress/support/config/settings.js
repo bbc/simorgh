@@ -1855,20 +1855,7 @@ module.exports = () => ({
         smoke: false,
       },
       frontPage: {
-        environments: {
-          live: {
-            paths: ['/gujarati'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/gujarati'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/gujarati'],
-            enabled: false,
-          },
-        },
+        environments: undefined,
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
