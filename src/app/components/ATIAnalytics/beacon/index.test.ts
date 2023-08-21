@@ -30,11 +30,22 @@ describe('beacon', () => {
         pageIdentifier: 'pageIdentifier',
       });
       expect(sendBeaconSpy).toHaveBeenCalledTimes(1);
-      expect(sendBeaconSpy.mock.calls[0]).toMatchInlineSnapshot(`
-        [
-          "https://foobar.com?idclient=123-456-789&s=598285&p=pageIdentifier&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&atc=PUB-[]-[component]-[]-[]-[pageIdentifier]-[]-[]-[]&type=AT",
-        ]
-      `);
+
+      const parsedATIParams = Object.fromEntries(
+        new URLSearchParams(new URL(sendBeaconSpy.mock.calls[0][0]).search),
+      );
+
+      expect(parsedATIParams).toEqual({
+        idclient: '123-456-789',
+        s: '598285',
+        p: 'pageIdentifier',
+        r: '0x0x24x24',
+        re: '1024x768',
+        hl: '00-00-00',
+        lng: 'en-US',
+        atc: 'PUB-[]-[component]-[]-[]-[pageIdentifier]-[]-[]-[]',
+        type: 'AT',
+      });
     });
   });
 });

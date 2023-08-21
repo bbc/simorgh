@@ -527,11 +527,11 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   }
 }
 
-.emotion-41 {
+.emotion-20 {
   padding-top: 0.5rem;
 }
 
-.emotion-42 {
+.emotion-21 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #545658;
@@ -542,14 +542,14 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-42 {
+  .emotion-21 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-42 {
+  .emotion-21 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -619,6 +619,16 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
                     >
                       Teams wey qualify for Afcon 2023 and how things stand for each group
                     </a>
+                    <div
+                      class="emotion-20"
+                    >
+                      <time
+                        class="emotion-21 emotion-22"
+                        datetime="2023-06-19"
+                      >
+                        De one we dem update for: 19th June 2023
+                      </time>
+                    </div>
                   </div>
                 </div>
               </li>
@@ -650,6 +660,16 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
                     >
                       'We dey hear gospel songs den screaming' - Woman tok of Uganda school attack 
                     </a>
+                    <div
+                      class="emotion-20"
+                    >
+                      <time
+                        class="emotion-21 emotion-22"
+                        datetime="2023-06-19"
+                      >
+                        De one we dem update for: 19th June 2023
+                      </time>
+                    </div>
                   </div>
                 </div>
               </li>
@@ -681,6 +701,16 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
                     >
                       Super Eagles qualify for Nations Cup afta beating Sierra Leone for Monrovia
                     </a>
+                    <div
+                      class="emotion-20"
+                    >
+                      <time
+                        class="emotion-21 emotion-22"
+                        datetime="2023-06-18"
+                      >
+                        De one we dem update for: 18th June 2023
+                      </time>
+                    </div>
                   </div>
                 </div>
               </li>
@@ -713,10 +743,10 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
                       Forbes top ten list of highest paid athletes for 2023 and wetin dem earn
                     </a>
                     <div
-                      class="emotion-41"
+                      class="emotion-20"
                     >
                       <time
-                        class="emotion-42 emotion-43"
+                        class="emotion-21 emotion-22"
                         datetime="2023-05-03"
                       >
                         De one we dem update for: 3rd May 2023
@@ -753,6 +783,16 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
                     >
                       Tins to sabi about 2023 Sierra Leone general election
                     </a>
+                    <div
+                      class="emotion-20"
+                    >
+                      <time
+                        class="emotion-21 emotion-22"
+                        datetime="2023-06-18"
+                      >
+                        De one we dem update for: 18th June 2023
+                      </time>
+                    </div>
                   </div>
                 </div>
               </li>
@@ -785,10 +825,10 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
                       CBN move to allow naira trade more freely against di dollar - Wetin e mean? 
                     </a>
                     <div
-                      class="emotion-41"
+                      class="emotion-20"
                     >
                       <time
-                        class="emotion-42 emotion-43"
+                        class="emotion-21 emotion-22"
                         datetime="2023-06-15"
                       >
                         De one we dem update for: 15th June 2023
@@ -825,6 +865,16 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
                     >
                       'We go flush out bad eggs for passport offices' - Acting Comptroller General Immigration 
                     </a>
+                    <div
+                      class="emotion-20"
+                    >
+                      <time
+                        class="emotion-21 emotion-22"
+                        datetime="2023-06-18"
+                      >
+                        De one we dem update for: 18th June 2023
+                      </time>
+                    </div>
                   </div>
                 </div>
               </li>
@@ -856,6 +906,16 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
                     >
                       South Africa taps don dry finish on top electricity kasala
                     </a>
+                    <div
+                      class="emotion-20"
+                    >
+                      <time
+                        class="emotion-21 emotion-22"
+                        datetime="2023-06-19"
+                      >
+                        De one we dem update for: 19th June 2023
+                      </time>
+                    </div>
                   </div>
                 </div>
               </li>
@@ -888,10 +948,10 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
                       Sharp-sharp facts about President Bola Tinubu special advisers
                     </a>
                     <div
-                      class="emotion-41"
+                      class="emotion-20"
                     >
                       <time
-                        class="emotion-42 emotion-43"
+                        class="emotion-21 emotion-22"
                         datetime="2023-06-16"
                       >
                         De one we dem update for: 16th June 2023
@@ -929,10 +989,10 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
                       Easter date, Workers day, Salah date plus oda public holidays for 2023
                     </a>
                     <div
-                      class="emotion-41"
+                      class="emotion-20"
                     >
                       <time
-                        class="emotion-42 emotion-43"
+                        class="emotion-21 emotion-22"
                         datetime="2022-12-31"
                       >
                         De one we dem update for: 31st December 2022
