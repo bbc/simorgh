@@ -7,25 +7,25 @@ import EmbedHtml from '../EmbedHtml';
 import EmbedError from '../EmbedError';
 
 export type OEmbedProps = {
+  id: string;
   type: string;
+  link: string;
   oembed: {
     version: string;
     provider_name: string;
     provider_url: string;
     html: string;
     url?: string;
-    source?: string;
     width?: number;
     height?: number;
     type: string;
   };
 };
 
-const OEmbedLoader = ({ oembed }: OEmbedProps) => {
+const OEmbedLoader = ({ oembed, link }: OEmbedProps) => {
+  const { html, url } = oembed;
   const { translations } = useContext(ServiceContext);
   const { isAmp } = useContext(RequestContext);
-  const { source = '', url, html } = oembed;
-
   if (isAmp) {
     const errorMessage = pathOr(
       'Sorry, we can’t display this part of the story on this lightweight mobile page.',
@@ -44,7 +44,7 @@ const OEmbedLoader = ({ oembed }: OEmbedProps) => {
         message={errorMessage}
         link={{
           text: linkText,
-          href: url ?? source,
+          href: url ?? link,
         }}
       />
     );
