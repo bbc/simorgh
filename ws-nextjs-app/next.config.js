@@ -10,6 +10,7 @@ const assetPrefix =
   clientEnvVars.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN +
   clientEnvVars.SIMORGH_PUBLIC_STATIC_ASSETS_PATH;
 
+/** @type {import('next').NextConfig} */
 module.exports = {
   reactStrictMode: true,
   distDir: 'build',
@@ -25,9 +26,6 @@ module.exports = {
     externalDir: true,
   },
   env: { ...clientEnvVars, LOG_TO_CONSOLE: 'true', NEXTJS: 'true' },
-  compiler: {
-    emotion: true,
-  },
   eslint: {
     ignoreDuringBuilds: true,
   },

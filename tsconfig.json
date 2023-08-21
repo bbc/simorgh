@@ -31,7 +31,7 @@
       "#lib/*": ["src/app/lib/*"],
       "#psammead/*": ["src/app/legacy/psammead/*"],
       "#models/*": ["src/app/models/*"],
-      "#testHelpers/*": ["./src/testHelpers/*"],
+      "#testHelpers/*": ["src/testHelpers/*"],
       "#pages/*": ["src/app/pages/*"],
       "#server/*": ["src/server/*"]
     }
