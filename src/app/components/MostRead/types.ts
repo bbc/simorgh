@@ -10,7 +10,7 @@ export interface MostReadBaseProps {
   dir?: Direction;
   columnLayout?: ColumnLayout;
   numberOfItems: number;
-  service: Services;
+  service?: Services;
 }
 
 export interface MostReadItemProps {
