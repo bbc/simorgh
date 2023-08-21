@@ -134,7 +134,7 @@ export const ArticlePage = props => (
   <ComponentWithContext {...props} data={articleData} />
 );
 export const Burmese = props => (
-  <ComponentWithContext {...props} data={articleDataBurmese} />
+  <ComponentWithServiceContext {...props} data={articleDataBurmese} service="burmese"/>
 );
 
 
