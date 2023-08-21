@@ -2853,6 +2853,16 @@ exports[`Story Page should render correctly when the secondary column data is no
                             >
                               Tins to sabi about 2023 Sierra Leone general election
                             </a>
+                            <div
+                              class="emotion-224"
+                            >
+                              <time
+                                class="emotion-225 emotion-25"
+                                datetime="2023-06-18"
+                              >
+                                De one we dem update for: 18th June 2023
+                              </time>
+                            </div>
                           </div>
                         </div>
                       </li>
