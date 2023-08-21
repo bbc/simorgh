@@ -419,7 +419,6 @@ const helmetCsp = ({ isAmp, isLive, reportOnlyOnLive }) => ({
     'style-src': generateStyleSrc({ isAmp, isLive }),
     'media-src': generateMediaSrc({ isAmp, isLive }),
     'worker-src': generateWorkerSrc({ isAmp }),
-    'prefetch-src': generatePrefetchSrc({ isAmp, isLive }),
     'report-to': 'worldsvc',
     'upgrade-insecure-requests': [],
   },

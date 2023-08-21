@@ -549,7 +549,6 @@ describe('cspHeader', () => {
             `style-src ${styleSrcExpectation.join(' ')};` +
             `media-src ${mediaSrcExpectation.join(' ')};` +
             `worker-src ${workerSrcExpectation.join(' ')};` +
-            `prefetch-src ${prefetchSrcExpectation.join(' ')};` +
             `report-to worldsvc;` +
             `upgrade-insecure-requests`;
 
