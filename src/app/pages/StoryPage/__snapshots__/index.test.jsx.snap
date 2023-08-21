@@ -2853,6 +2853,16 @@ exports[`Story Page should render correctly when the secondary column data is no
                             >
                               Tins to sabi about 2023 Sierra Leone general election
                             </a>
+                            <div
+                              class="emotion-224"
+                            >
+                              <time
+                                class="emotion-225 emotion-25"
+                                datetime="2023-06-18"
+                              >
+                                De one we dem update for: 18th June 2023
+                              </time>
+                            </div>
                           </div>
                         </div>
                       </li>
@@ -2884,6 +2894,16 @@ exports[`Story Page should render correctly when the secondary column data is no
                             >
                               CBN move to allow naira trade more freely against di dollar - Wetin e mean? 
                             </a>
+                            <div
+                              class="emotion-224"
+                            >
+                              <time
+                                class="emotion-225 emotion-25"
+                                datetime="2023-06-15"
+                              >
+                                De one we dem update for: 15th June 2023
+                              </time>
+                            </div>
                           </div>
                         </div>
                       </li>
@@ -2977,6 +2997,16 @@ exports[`Story Page should render correctly when the secondary column data is no
                             >
                               Sharp-sharp facts about President Bola Tinubu special advisers
                             </a>
+                            <div
+                              class="emotion-224"
+                            >
+                              <time
+                                class="emotion-225 emotion-25"
+                                datetime="2023-06-16"
+                              >
+                                De one we dem update for: 16th June 2023
+                              </time>
+                            </div>
                           </div>
                         </div>
                       </li>
