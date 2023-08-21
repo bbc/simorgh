@@ -4,31 +4,31 @@
       "metadata": {
         "atiAnalytics": {
           "categoryName": null,
-          "contentId": "urn:bbc:optimo:asset:c39rjygpmv1o",
+          "contentId": "urn:bbc:optimo:asset:cqwq7dm61zeo",
           "contentType": "article",
           "language": "pcm",
           "ldpThingIds": null,
           "ldpThingLabels": null,
           "nationsProducer": null,
-          "pageIdentifier": "pidgin.articles.c39rjygpmv1o.page",
-          "pageTitle": "Embed test- Riddle",
-          "timePublished": "2023-07-12T12:28:04.158Z",
-          "timeUpdated": "2023-08-03T10:18:46.993Z"
+          "pageIdentifier": "pidgin.articles.cqwq7dm61zeo.page",
+          "pageTitle": "Embed test- Flourish",
+          "timePublished": "2023-07-12T13:19:43.628Z",
+          "timeUpdated": "2023-08-03T10:27:50.674Z"
         },
-        "id": "urn:bbc:ares::article:c39rjygpmv1o",
+        "id": "urn:bbc:ares::article:cqwq7dm61zeo",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c39rjygpmv1o",
-          "canonicalUrl": "https://www.bbc.com/pidgin/articles/c39rjygpmv1o"
+          "optimoUrn": "urn:bbc:optimo:asset:cqwq7dm61zeo",
+          "canonicalUrl": "https://www.bbc.com/pidgin/articles/cqwq7dm61zeo"
         },
         "type": "article",
         "createdBy": "Pidgin",
         "language": "pcm",
-        "firstPublished": 1689164884158,
-        "lastPublished": 1691057926993,
+        "firstPublished": 1689167983628,
+        "lastPublished": 1691058470674,
         "analyticsLabels": {
-          "contentId": "urn:bbc:optimo:asset:c39rjygpmv1o",
+          "contentId": "urn:bbc:optimo:asset:cqwq7dm61zeo",
           "producer": "Pidgin",
-          "page": "pidgin.articles.c39rjygpmv1o.page"
+          "page": "pidgin.articles.cqwq7dm61zeo.page"
         },
         "passport": {
           "language": "pcm",
@@ -65,39 +65,39 @@
           "fragment",
           "subheadline",
           "embed",
-          "aresRiddle",
+          "aresFlourish",
           "aresOembed"
         ],
         "consumableAsSFV": false,
         "allowAdvertising": true,
         "consumableOnRedButton": false,
         "consumableOnlyOnRedButton": false,
-        "embedProviders": ["riddle"]
+        "embedProviders": ["flourish-visualisation"]
       },
       "content": {
         "model": {
           "blocks": [
             {
-              "id": "6dabc164",
+              "id": "e2aa8ab4",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "0956b64a",
+                    "id": "ab623135",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "85c2149a",
+                          "id": "c6d1a73c",
                           "type": "paragraph",
                           "model": {
-                            "text": "Embed test- Riddle",
+                            "text": "Embed test- Flourish",
                             "blocks": [
                               {
-                                "id": "8f11af65",
+                                "id": "1d699f28",
                                 "type": "fragment",
                                 "model": {
-                                  "text": "Embed test- Riddle",
+                                  "text": "Embed test- Flourish",
                                   "attributes": []
                                 },
                                 "position": [1, 1, 1, 1]
@@ -115,35 +115,35 @@
               "position": [1]
             },
             {
-              "id": "6ae05081",
+              "id": "aaa23061",
               "type": "timestamp",
               "model": {
-                "firstPublished": 1689164884158,
-                "lastPublished": 1691057926993
+                "firstPublished": 1689167983628,
+                "lastPublished": 1691058470674
               },
               "position": [2]
             },
             {
-              "id": "af9ed7ad",
+              "id": "8cf30fb7",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "9f2a362c",
+                    "id": "f0fe0acd",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "662a1dc7",
+                          "id": "30bac070",
                           "type": "paragraph",
                           "model": {
-                            "text": "Riddle",
+                            "text": "Flourish",
                             "blocks": [
                               {
-                                "id": "21d383d4",
+                                "id": "482845ab",
                                 "type": "fragment",
                                 "model": {
-                                  "text": "Riddle",
+                                  "text": "Flourish",
                                   "attributes": []
                                 },
                                 "position": [3, 1, 1, 1]
@@ -161,18 +161,18 @@
               "position": [3]
             },
             {
-              "id": "1ca84741",
+              "id": "23d78afc",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "fcf1fd5e",
+                    "id": "5e5b4981",
                     "type": "paragraph",
                     "model": {
                       "text": "Top",
                       "blocks": [
                         {
-                          "id": "4e874d1f",
+                          "id": "11150a4f",
                           "type": "fragment",
                           "model": {
                             "text": "Top",
@@ -189,34 +189,36 @@
               "position": [4]
             },
             {
-              "id": "efb7efa2",
+              "id": "79d992bf",
               "type": "oEmbed",
               "model": {
                 "oembed": {
                   "version": "1.0",
-                  "provider_name": "riddle",
-                  "provider_url": "https://www.riddle.com",
-                  "url": "https://www.riddle.com/view/SAVstNdh",
-                  "html": "<div class=\"riddle2-wrapper\" data-rid-id=\"SAVstNdh\" data-auto-scroll=\"true\" data-is-fixed-height-enabled=\"false\" data-bg=\"#fff\" data-fg=\"#00205b\" style=\"margin:0 auto; max-width:100%; width:640px;\" ><script src=\"https://www.riddle.com/embed/build-embedjs/embedV2.js\"></script><iframe src=\"https://www.riddle.com/embed/a/SAVstNdh?lazyImages=true&staticHeight=false\" allow=\"autoplay\" referrerpolicy=\"strict-origin\"><section data-block=\"SingleChoice\"><h2>How silly is Abby?</h2><p>&lt;p&gt;Babby&lt;/p&gt;</p><ul><li>Extremely silly</li><li>Not silly at all</li><li>Not very silly</li><li>Very silly</li></ul></section><section data-block=\"SingleChoice\"><h3>What is Abby&#039;s silliness level?</h3><ul><li>High</li><li>Low</li><li>Medium</li><li>None</li></ul></section><section data-block=\"SingleChoice\"><h3>How often is Abby silly?</h3><ul><li>Never</li><li>Rarely</li><li>Always</li><li>Sometimes</li></ul></section><section data-block=\"SingleChoice\"><h3>What is Abby&#039;s silliness like?</h3><ul><li>Outrageous</li><li>Non-existent</li><li>Mild</li><li>Moderate</li></ul></section><section data-block=\"SingleChoice\"><h3>How would you describe Abby&#039;s silliness?</h3><ul><li>Crazy</li><li>Calm</li><li>Boring</li><li>Sensible</li></ul></section></iframe></div>",
+                  "provider_name": "Flourish",
+                  "provider_url": "https://flourish.studio",
+                  "html": "<iframe src=\"https://flo.uri.sh/visualisation/8809119/embed\" frameborder=\"0\" scrolling=\"no\" height=\"575\" width=\"700\" style=\"width:100%;\" title=\"Interactive or visual content\"></iframe>",
+                  "width": 700,
+                  "height": 575,
                   "type": "rich",
-                  "aresType": "aresRiddle"
+                  "source": "https://public.flourish.studio/visualisation/8809119",
+                  "aresType": "aresFlourish"
                 }
               },
               "position": [5]
             },
             {
-              "id": "abc846f4",
+              "id": "70707f4f",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "49f2a881",
+                    "id": "45236f0d",
                     "type": "paragraph",
                     "model": {
                       "text": "Bottom",
                       "blocks": [
                         {
-                          "id": "c19f09c9",
+                          "id": "6a4961c8",
                           "type": "fragment",
                           "model": {
                             "text": "Bottom",
@@ -233,13 +235,13 @@
               "position": [6]
             },
             {
-              "id": "c745b9b7",
+              "id": "dc48da0f",
               "type": "mpu",
               "model": {},
               "position": [7]
             },
             {
-              "id": "86476461",
+              "id": "44df649c",
               "type": "wsoj",
               "model": {
                 "type": "recommendations"
@@ -251,7 +253,7 @@
       },
       "promo": {
         "headlines": {
-          "seoHeadline": "Embed test- Riddle",
+          "seoHeadline": "Embed test- Flourish",
           "promoHeadline": {
             "blocks": [
               {
@@ -261,12 +263,12 @@
                     {
                       "type": "paragraph",
                       "model": {
-                        "text": "Embed test- Riddle",
+                        "text": "Embed test- Flourish",
                         "blocks": [
                           {
                             "type": "fragment",
                             "model": {
-                              "text": "Embed test- Riddle",
+                              "text": "Embed test- Flourish",
                               "attributes": []
                             }
                           }
@@ -964,33 +966,33 @@
       {
         "response": {
           "headers": {
-            "date": "Wed, 16 Aug 2023 14:17:58 GMT",
+            "date": "Wed, 16 Aug 2023 14:17:32 GMT",
             "content-type": "application/json;charset=utf-8",
             "transfer-encoding": "chunked",
             "connection": "keep-alive",
             "personalised": "false",
             "vary": "accept-encoding, ctx-service-env",
-            "etag": "1622982479a21886bea136c117db905a801e6a41",
-            "last-modified": "Thu, 03 Aug 2023 10:19:03 GMT",
+            "etag": "0bd5e1036284bd1e4050497d11a98cc5f3a38ec2",
+            "last-modified": "Thu, 03 Aug 2023 10:27:51 GMT",
             "cache-control": "no-transform,max-age=60",
-            "x-ares-tracking-id": "892de5d1-b2be-4f10-9039-185345f16947",
-            "expires": "Wed, 16 Aug 2023 14:07:25 GMT",
+            "x-ares-tracking-id": "ad2c53b7-306c-47e0-8bdd-efa62861b416",
+            "expires": "Wed, 16 Aug 2023 14:07:52 GMT",
             "content-encoding": "gzip",
             "x-proxy-cache": "MISS"
           },
           "responseCode": 200,
-          "responseTime": 144
+          "responseTime": 247
         },
         "request": {
           "service": "ares",
-          "path": "/article/c39rjygpmv1o",
+          "path": "/article/cqwq7dm61zeo",
           "timeout": 4000
         }
       },
       {
         "response": {
           "headers": {
-            "date": "Wed, 16 Aug 2023 14:17:58 GMT",
+            "date": "Wed, 16 Aug 2023 14:17:32 GMT",
             "content-type": "application/json",
             "content-length": "3855",
             "connection": "keep-alive",
@@ -998,14 +1000,14 @@
             "vary": "accept-encoding, ctx-service-env",
             "content-encoding": "gzip",
             "etag": "\"5ebf720a35894be71f0bdbd9cc52eb6fdaa348e8\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Wed, 16 Aug 2023 14:17:37 GMT",
+            "cache-control": "no-transform,max-age=120",
+            "expires": "Wed, 16 Aug 2023 14:08:52 GMT",
             "content-language": "en-GB",
             "access-control-allow-origin": "*",
             "x-proxy-cache": "MISS"
           },
           "responseCode": 200,
-          "responseTime": 23
+          "responseTime": 54
         },
         "request": {
           "service": "onward-journeys",
@@ -1016,7 +1018,7 @@
       {
         "response": {
           "headers": {
-            "date": "Wed, 16 Aug 2023 14:17:58 GMT",
+            "date": "Wed, 16 Aug 2023 14:17:32 GMT",
             "content-type": "application/json",
             "content-length": "5292",
             "connection": "keep-alive",
@@ -1024,14 +1026,14 @@
             "vary": "accept-encoding, ctx-service-env",
             "content-encoding": "gzip",
             "etag": "\"2b070a0c8f57080c9b3b42b0c4ee13c9bda9885d\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Wed, 16 Aug 2023 14:17:37 GMT",
+            "cache-control": "no-transform,max-age=120",
+            "expires": "Wed, 16 Aug 2023 14:08:25 GMT",
             "content-language": "en-GB",
             "access-control-allow-origin": "*",
             "x-proxy-cache": "MISS"
           },
           "responseCode": 200,
-          "responseTime": 83
+          "responseTime": 116
         },
         "request": {
           "service": "onward-journeys",
@@ -1042,24 +1044,24 @@
     ],
     "tenantLogs": [
       {
-        "timestamp": 1692195478886,
+        "timestamp": 1692195452487,
         "message": "Unable to format oEmbed blocks: TypeError: Cannot read properties of undefined (reading '0')",
         "code": ""
       },
       {
-        "timestamp": 1692195478886,
+        "timestamp": 1692195452487,
         "message": "Unable to format oEmbed blocks: TypeError: Cannot read properties of undefined (reading '0')",
         "code": ""
       },
       {
-        "timestamp": 1692195478886,
+        "timestamp": 1692195452487,
         "message": "Unable to format oEmbed blocks: TypeError: Cannot read properties of undefined (reading '0')",
         "code": ""
       }
     ],
     "privateContext": {},
     "params": {
-      "id": "c39rjygpmv1o",
+      "id": "cqwq7dm61zeo",
       "service": "pidgin",
       "pageType": "article",
       "isAmp": ""
