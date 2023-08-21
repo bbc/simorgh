@@ -40,6 +40,7 @@ import NielsenAnalytics from '../../legacy/containers/NielsenAnalytics';
 import ArticleMetadata from '../../legacy/containers/ArticleMetadata';
 import EmbedImages from '../../components/Embeds/EmbedImages';
 import EmbedHtml from '../../components/Embeds/EmbedHtml';
+import OEmbedLoader, { OEmbedProps } from '../../components/Embeds/OEmbed';
 
 import { OptimoBlock } from '../../models/types/optimo';
 import {
@@ -149,6 +150,7 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
     social: SocialEmbedContainer,
     embedHtml: (props: EmbedHtmlProps) => <EmbedHtml {...props} />,
     embedImages: (props: ComponentToRenderProps) => <EmbedImages {...props} />,
+    oEmbed: (props: OEmbedProps) => <OEmbedLoader {...props} />,
     group: gist,
     links: (props: ComponentToRenderProps) => <ScrollablePromo {...props} />,
   };
