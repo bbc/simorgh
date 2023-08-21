@@ -2063,11 +2063,11 @@ exports[`Story Page should render correctly when the secondary column data is no
   z-index: 1;
 }
 
-.emotion-224 {
+.emotion-203 {
   padding-top: 0.5rem;
 }
 
-.emotion-225 {
+.emotion-204 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #545658;
@@ -2078,14 +2078,14 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-225 {
+  .emotion-204 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-225 {
+  .emotion-204 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -2719,6 +2719,16 @@ exports[`Story Page should render correctly when the secondary column data is no
                             >
                               Teams wey qualify for Afcon 2023 and how things stand for each group
                             </a>
+                            <div
+                              class="emotion-203"
+                            >
+                              <time
+                                class="emotion-204 emotion-25"
+                                datetime="2023-06-19"
+                              >
+                                De one we dem update for: 19th June 2023
+                              </time>
+                            </div>
                           </div>
                         </div>
                       </li>
@@ -2750,6 +2760,16 @@ exports[`Story Page should render correctly when the secondary column data is no
                             >
                               'We dey hear gospel songs den screaming' - Woman tok of Uganda school attack 
                             </a>
+                            <div
+                              class="emotion-203"
+                            >
+                              <time
+                                class="emotion-204 emotion-25"
+                                datetime="2023-06-19"
+                              >
+                                De one we dem update for: 19th June 2023
+                              </time>
+                            </div>
                           </div>
                         </div>
                       </li>
@@ -2781,6 +2801,16 @@ exports[`Story Page should render correctly when the secondary column data is no
                             >
                               Super Eagles qualify for Nations Cup afta beating Sierra Leone for Monrovia
                             </a>
+                            <div
+                              class="emotion-203"
+                            >
+                              <time
+                                class="emotion-204 emotion-25"
+                                datetime="2023-06-18"
+                              >
+                                De one we dem update for: 18th June 2023
+                              </time>
+                            </div>
                           </div>
                         </div>
                       </li>
@@ -2813,10 +2843,10 @@ exports[`Story Page should render correctly when the secondary column data is no
                               Forbes top ten list of highest paid athletes for 2023 and wetin dem earn
                             </a>
                             <div
-                              class="emotion-224"
+                              class="emotion-203"
                             >
                               <time
-                                class="emotion-225 emotion-25"
+                                class="emotion-204 emotion-25"
                                 datetime="2023-05-03"
                               >
                                 De one we dem update for: 3rd May 2023
@@ -2854,10 +2884,10 @@ exports[`Story Page should render correctly when the secondary column data is no
                               Tins to sabi about 2023 Sierra Leone general election
                             </a>
                             <div
-                              class="emotion-224"
+                              class="emotion-203"
                             >
                               <time
-                                class="emotion-225 emotion-25"
+                                class="emotion-204 emotion-25"
                                 datetime="2023-06-18"
                               >
                                 De one we dem update for: 18th June 2023
@@ -2895,10 +2925,10 @@ exports[`Story Page should render correctly when the secondary column data is no
                               CBN move to allow naira trade more freely against di dollar - Wetin e mean? 
                             </a>
                             <div
-                              class="emotion-224"
+                              class="emotion-203"
                             >
                               <time
-                                class="emotion-225 emotion-25"
+                                class="emotion-204 emotion-25"
                                 datetime="2023-06-15"
                               >
                                 De one we dem update for: 15th June 2023
@@ -2935,6 +2965,16 @@ exports[`Story Page should render correctly when the secondary column data is no
                             >
                               'We go flush out bad eggs for passport offices' - Acting Comptroller General Immigration 
                             </a>
+                            <div
+                              class="emotion-203"
+                            >
+                              <time
+                                class="emotion-204 emotion-25"
+                                datetime="2023-06-18"
+                              >
+                                De one we dem update for: 18th June 2023
+                              </time>
+                            </div>
                           </div>
                         </div>
                       </li>
@@ -2966,6 +3006,16 @@ exports[`Story Page should render correctly when the secondary column data is no
                             >
                               South Africa taps don dry finish on top electricity kasala
                             </a>
+                            <div
+                              class="emotion-203"
+                            >
+                              <time
+                                class="emotion-204 emotion-25"
+                                datetime="2023-06-19"
+                              >
+                                De one we dem update for: 19th June 2023
+                              </time>
+                            </div>
                           </div>
                         </div>
                       </li>
@@ -2998,10 +3048,10 @@ exports[`Story Page should render correctly when the secondary column data is no
                               Sharp-sharp facts about President Bola Tinubu special advisers
                             </a>
                             <div
-                              class="emotion-224"
+                              class="emotion-203"
                             >
                               <time
-                                class="emotion-225 emotion-25"
+                                class="emotion-204 emotion-25"
                                 datetime="2023-06-16"
                               >
                                 De one we dem update for: 16th June 2023
@@ -3039,10 +3089,10 @@ exports[`Story Page should render correctly when the secondary column data is no
                               Easter date, Workers day, Salah date plus oda public holidays for 2023
                             </a>
                             <div
-                              class="emotion-224"
+                              class="emotion-203"
                             >
                               <time
-                                class="emotion-225 emotion-25"
+                                class="emotion-204 emotion-25"
                                 datetime="2022-12-31"
                               >
                                 De one we dem update for: 31st December 2022
