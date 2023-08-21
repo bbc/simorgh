@@ -4,19 +4,16 @@
 import React from 'react';
 import userEvent from '@testing-library/user-event';
 import { waitFor } from '@testing-library/dom';
-import { RequestContextProvider } from '#contexts/RequestContext';
-import { ToggleContextProvider } from '#contexts/ToggleContext';
-import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import * as trackingToggle from '#hooks/useTrackingToggle';
 import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 import {
+  AllTheProviders,
   render,
   renderHook,
   act,
   fireEvent,
 } from '../../components/react-testing-library-with-providers';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import pidginData from './fixtureData/tori-51745682.json';
 import useClickTrackerHandler from '.';
 
@@ -47,26 +44,18 @@ const defaultToggles = {
   },
 };
 
-const WithContexts = ({ pageData, children, toggles = defaultToggles }) => (
-  <RequestContextProvider
+const wrapper = ({ children }) => (
+  <AllTheProviders
     bbcOrigin="https://www.test.bbc.com"
+    pageData={pidginData}
     pageType={STORY_PAGE}
     isAmp={false}
     service="pidgin"
     pathname="/pidgin/tori-51745682"
+    toggles={defaultToggles}
   >
-    <ServiceContextProvider service="pidgin">
-      <ToggleContextProvider toggles={toggles}>
-        <EventTrackingContextProvider data={pageData}>
-          {children}
-        </EventTrackingContextProvider>
-      </ToggleContextProvider>
-    </ServiceContextProvider>
-  </RequestContextProvider>
-);
-
-const wrapper = ({ children }) => (
-  <WithContexts pageData={pidginData}>{children}</WithContexts>
+    {children}
+  </AllTheProviders>
 );
 
 const TestComponent = ({ hookProps }) => {
