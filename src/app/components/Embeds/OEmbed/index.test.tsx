@@ -6,7 +6,7 @@ import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import { RequestContextProvider } from '../../../contexts/RequestContext';
 import { ARTICLE_PAGE } from '../../../routes/utils/pageTypes';
 import { Services } from '../../../models/types/global';
-import sampleRiddleProps from './fixture';
+import sampleRiddleProps, { sampleFlourishProps } from './fixture';
 
 const Component = ({
   props,
@@ -63,6 +63,25 @@ describe('OEmbed', () => {
 
       expect(iFrameElement).toBe(null);
       expect(linkToRiddle).toBeInTheDocument();
+      expect(errorMessage).toBeInTheDocument();
+    });
+
+    it('Flourish Embed - Should show a translated error message with a link to the flourish', () => {
+      const { container, getByText } = render(
+        <Component props={sampleFlourishProps} service="afrique" isAmp />,
+      );
+      const iFrameElement = container.querySelector(
+        'iframe[src="https://flo.uri.sh/visualisation/8809119/embed"]',
+      );
+      const linkToFlourish = container.querySelector(
+        'a[href="https://public.flourish.studio/visualisation/8809119"]',
+      );
+      const errorMessage = getByText(
+        'Consultez la version complète de la page pour voir tout le contenu.',
+      );
+
+      expect(iFrameElement).toBe(null);
+      expect(linkToFlourish).toBeInTheDocument();
       expect(errorMessage).toBeInTheDocument();
     });
   });
