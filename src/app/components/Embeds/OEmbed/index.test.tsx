@@ -3,10 +3,13 @@ import { render } from '../../react-testing-library-with-providers';
 
 import OEmbedLoader, { OEmbedProps } from '.';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
-import { RequestContextProvider } from '../../../contexts/RequestContext';
+import {
+  RequestContext,
+  RequestContextProps,
+} from '../../../contexts/RequestContext';
 import { ARTICLE_PAGE } from '../../../routes/utils/pageTypes';
 import { Services } from '../../../models/types/global';
-import sampleRiddleProps from './fixture';
+import sampleRiddleProps, { sampleFlourishProps } from './fixture';
 
 const Component = ({
   props,
@@ -17,20 +20,24 @@ const Component = ({
   isAmp: boolean;
   service?: Services;
 }) => (
-  <RequestContextProvider
-    bbcOrigin="https://www.test.bbc.co.uk"
-    id="c0000000000o"
-    isAmp={isAmp}
-    isApp={false}
-    pageType={ARTICLE_PAGE}
-    pathname="/pathname"
-    service={service}
-    statusCode={200}
+  <RequestContext.Provider
+    value={
+      {
+        id: 'c0000000000o',
+        isAmp,
+        isApp: false,
+        pageType: ARTICLE_PAGE,
+        pathname: '/pathname',
+        service,
+        statusCode: 200,
+        canonicalLink: 'canonical_link',
+      } as unknown as RequestContextProps
+    }
   >
     <ServiceContextProvider service={service}>
       <OEmbedLoader {...props} />
     </ServiceContextProvider>
-  </RequestContextProvider>
+  </RequestContext.Provider>
 );
 
 describe('OEmbed', () => {
@@ -47,22 +54,39 @@ describe('OEmbed', () => {
   });
 
   describe('AMP', () => {
-    it('Riddle Embed - Should show a translated error message with a link to the riddle', () => {
+    it('Riddle Embed - Should show a translated error message with a link to the canonical page', () => {
       const { container, getByText } = render(
         <Component props={sampleRiddleProps} service="afrique" isAmp />,
       );
       const iFrameElement = container.querySelector(
         'iframe[src="https://www.riddle.com/embed/a/SAVstNdh?lazyImages=true&staticHeight=false"]',
       );
-      const linkToRiddle = container.querySelector(
-        'a[href="https://www.riddle.com/view/SAVstNdh"]',
-      );
+      const linkToRiddle = container.querySelector('a[href="canonical_link"]');
       const errorMessage = getByText(
         'Consultez la version complète de la page pour voir tout le contenu.',
       );
 
       expect(iFrameElement).toBe(null);
       expect(linkToRiddle).toBeInTheDocument();
+      expect(errorMessage).toBeInTheDocument();
+    });
+
+    it('Flourish Embed - Should show a translated error message with a link to the canonical page', () => {
+      const { container, getByText } = render(
+        <Component props={sampleFlourishProps} service="afrique" isAmp />,
+      );
+      const iFrameElement = container.querySelector(
+        'iframe[src="https://flo.uri.sh/visualisation/8809119/embed"]',
+      );
+      const linkToFlourish = container.querySelector(
+        'a[href="canonical_link"]',
+      );
+      const errorMessage = getByText(
+        'Consultez la version complète de la page pour voir tout le contenu.',
+      );
+
+      expect(iFrameElement).toBe(null);
+      expect(linkToFlourish).toBeInTheDocument();
       expect(errorMessage).toBeInTheDocument();
     });
   });
