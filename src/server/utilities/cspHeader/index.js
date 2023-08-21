@@ -61,7 +61,6 @@ const advertisingDirectives = {
     'https://*.webcontentassessor.com',
     ...advertisingServiceCountryDomains,
   ],
-  prefetchSrc: ['https://*.googlesyndication.com'],
   defaultSrc: [...bbcDomains, 'https://*.googlesyndication.com'],
   styleSrc: ['https://fonts.googleapis.com'],
   fontSrc: ['https://fonts.gstatic.com'],
@@ -332,12 +331,6 @@ const directives = {
     ampNonLive: [...bbcDomains],
     canonicalNonLive: [...bbcDomains],
   },
-  prefetchSrc: {
-    ampLive: [...advertisingDirectives.prefetchSrc],
-    canonicalLive: [...advertisingDirectives.prefetchSrc],
-    ampNonLive: [...advertisingDirectives.prefetchSrc],
-    canonicalNonLive: [...advertisingDirectives.prefetchSrc],
-  },
 };
 
 export const generateChildSrc = ({ isAmp }) => (isAmp ? ['blob:'] : ["'self'"]);
@@ -399,13 +392,6 @@ export const generateWorkerSrc = ({ isAmp }) =>
   isAmp
     ? ['blob:', '*.bbc.co.uk', '*.bbc.com']
     : ['blob:', "'self'", '*.bbc.co.uk', '*.bbc.com'];
-
-export const generatePrefetchSrc = ({ isAmp, isLive }) => {
-  if (!isLive && isAmp) return directives.prefetchSrc.ampNonLive.sort();
-  if (!isLive && !isAmp) return directives.prefetchSrc.canonicalNonLive.sort();
-  if (isLive && isAmp) return directives.prefetchSrc.ampLive.sort();
-  return directives.prefetchSrc.canonicalLive.sort();
-};
 
 const helmetCsp = ({ isAmp, isLive, reportOnlyOnLive }) => ({
   directives: {

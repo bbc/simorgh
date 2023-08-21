@@ -9,7 +9,6 @@ import injectCspHeader, {
   generateStyleSrc,
   generateMediaSrc,
   generateWorkerSrc,
-  generatePrefetchSrc,
 } from '.';
 
 import { bbcDomains, advertisingServiceCountryDomains } from './domainLists';
@@ -121,7 +120,6 @@ describe('cspHeader', () => {
       styleSrcExpectation: [...bbcDomains, "'unsafe-inline'"].sort(),
       mediaSrcExpectation: [...bbcDomains].sort(),
       workerSrcExpectation: ['blob:', '*.bbc.co.uk', '*.bbc.com'],
-      prefetchSrcExpectation: ['https://*.googlesyndication.com'],
     },
     {
       isAmp: false,
@@ -241,7 +239,6 @@ describe('cspHeader', () => {
       ].sort(),
       mediaSrcExpectation: [...bbcDomains].sort(),
       workerSrcExpectation: ['blob:', "'self'", '*.bbc.co.uk', '*.bbc.com'],
-      prefetchSrcExpectation: ['https://*.googlesyndication.com'],
     },
     {
       isAmp: true,
@@ -323,7 +320,6 @@ describe('cspHeader', () => {
       styleSrcExpectation: [...bbcDomains, "'unsafe-inline'"].sort(),
       mediaSrcExpectation: [...bbcDomains].sort(),
       workerSrcExpectation: ['blob:', '*.bbc.co.uk', '*.bbc.com'],
-      prefetchSrcExpectation: ['https://*.googlesyndication.com'],
     },
     {
       isAmp: false,
@@ -448,7 +444,6 @@ describe('cspHeader', () => {
       ].sort(),
       mediaSrcExpectation: [...bbcDomains].sort(),
       workerSrcExpectation: ['blob:', "'self'", '*.bbc.co.uk', '*.bbc.com'],
-      prefetchSrcExpectation: ['https://*.googlesyndication.com'].sort(),
     },
   ].forEach(
     ({
@@ -466,7 +461,6 @@ describe('cspHeader', () => {
       styleSrcExpectation,
       mediaSrcExpectation,
       workerSrcExpectation,
-      prefetchSrcExpectation,
     }) => {
       describe(`Given isAmp ${isAmp} & isLive ${isLive}`, () => {
         it(`Then it has this childSrc`, () => {
@@ -523,12 +517,6 @@ describe('cspHeader', () => {
 
         it(`Then it has this workerSrc`, () => {
           expect(generateWorkerSrc({ isAmp })).toEqual(workerSrcExpectation);
-        });
-
-        it(`Then it has this prefetchSrc`, () => {
-          expect(generatePrefetchSrc({ isAmp, isLive })).toEqual(
-            prefetchSrcExpectation,
-          );
         });
 
         it(`Then injectCspHeader middleware applies the correct Content-Security-Policy header`, () => {
