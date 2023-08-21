@@ -23,8 +23,8 @@ export type OEmbedProps = {
 
 const OEmbedLoader = ({ oembed }: OEmbedProps) => {
   const { translations } = useContext(ServiceContext);
-  const { isAmp } = useContext(RequestContext);
-  const { source = '', url, html } = oembed;
+  const { isAmp, canonicalLink } = useContext(RequestContext);
+  const { html } = oembed;
 
   if (isAmp) {
     const errorMessage = pathOr(
@@ -44,7 +44,7 @@ const OEmbedLoader = ({ oembed }: OEmbedProps) => {
         message={errorMessage}
         link={{
           text: linkText,
-          href: url ?? source,
+          href: canonicalLink,
         }}
       />
     );
