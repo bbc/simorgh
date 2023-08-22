@@ -64,6 +64,6 @@ jobs:
 
       - name: Run Puppeteer Tests
         run: |
-          yarn add puppeteer
+          yarn add puppeteer@18.0.5
           yarn test:puppeteer
           yarn remove puppeteer
