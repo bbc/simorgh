@@ -2538,20 +2538,7 @@ module.exports = () => ({
         smoke: false,
       },
       frontPage: {
-        environments: {
-          live: {
-            paths: ['/igbo'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/igbo'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/igbo'],
-            enabled: false,
-          },
-        },
+        environments: undefined,
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
@@ -5046,20 +5033,7 @@ module.exports = () => ({
         smoke: false,
       },
       frontPage: {
-        environments: {
-          live: {
-            paths: ['/pidgin'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/pidgin'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/pidgin'],
-            enabled: false,
-          },
-        },
+        environments: undefined,
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
