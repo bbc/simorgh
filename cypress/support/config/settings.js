@@ -9241,20 +9241,7 @@ module.exports = () => ({
         smoke: false,
       },
       frontPage: {
-        environments: {
-          live: {
-            paths: ['/yoruba'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/yoruba'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/yoruba'],
-            enabled: false,
-          },
-        },
+        environments: undefined,
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
