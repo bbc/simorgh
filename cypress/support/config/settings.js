@@ -40,7 +40,6 @@ module.exports = () => ({
         smoke: false,
       },
       frontPage: {
-        environments: undefined,
         smoke: false,
       },
       liveRadio: {
@@ -9241,7 +9240,6 @@ module.exports = () => ({
         smoke: false,
       },
       frontPage: {
-        environments: undefined,
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
