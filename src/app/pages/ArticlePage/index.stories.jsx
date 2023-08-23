@@ -18,6 +18,7 @@ import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvi
 import ArticlePageComponent from './ArticlePage';
 import { service } from '#app/lib/config/services/news';
 import latin from '#app/components/ThemeProvider/fontScripts/latin';
+import { withServicesKnob } from '#app/legacy/psammead/psammead-storybook-helpers/src';
 
 const PageWithOptimizely = withOptimizelyProvider(ArticlePageComponent);
 const Page = withPageWrapper(PageWithOptimizely);
@@ -100,7 +101,7 @@ const ComponentWithServiceContext = ({
       }}
     >
       {/* Service set to news to enable most read. Article data is in english */}
-      <ServiceContext.Provider value={serviceContextMock}>
+      <ServiceContext.Provider value={{ ...serviceContextMock, service }}>
         <RequestContextProvider
           isAmp={false}
           pageType={ARTICLE_PAGE}
@@ -126,7 +127,7 @@ const ComponentWithServiceContext = ({
 export default {
   Component: ComponentWithContext,
   title: 'Pages/Article Page',
-  decorators: [withKnobs],
+  decorators: [withKnobs, withServicesKnob()],
   parameters: { layout: 'fullscreen' },
 };
 
