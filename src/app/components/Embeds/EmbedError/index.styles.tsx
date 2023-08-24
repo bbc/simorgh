@@ -19,12 +19,6 @@ const styles = {
       ...fontVariants.sansBold,
       paddingTop: `${spacings.FULL}rem`,
     }),
-  errorMessage: ({ fontVariants, palette, fontSizes }: Theme) =>
-    css({
-      color: palette.GREY_10,
-      ...fontVariants.sansRegular,
-      ...fontSizes.longPrimer,
-    }),
   inlineLink: ({ palette, fontVariants, fontSizes }: Theme) =>
     css({
       color: palette.BLACK,

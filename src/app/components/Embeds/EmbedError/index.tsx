@@ -2,6 +2,7 @@
 import { jsx } from '@emotion/react';
 import styles from './index.styles';
 import InlineLink from '../../InlineLink';
+import Text from '../../Text';
 
 type Props = {
   message: string;
@@ -15,7 +16,9 @@ const EmbedError = ({ message, link }: Props) => {
   return (
     <div css={styles.embedDiv}>
       <div>
-        <strong css={styles.errorMessage}>{message}</strong>
+        <Text as="strong" fontVariant="sansRegular" size="longPrimer">
+          {message}
+        </Text>
       </div>
       <div css={styles.errorLinkWrapper}>
         {link && link.text && link.href && (
