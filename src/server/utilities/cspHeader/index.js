@@ -61,7 +61,6 @@ const advertisingDirectives = {
     'https://*.webcontentassessor.com',
     ...advertisingServiceCountryDomains,
   ],
-  prefetchSrc: ['https://*.googlesyndication.com'],
   defaultSrc: [...bbcDomains, 'https://*.googlesyndication.com'],
   styleSrc: ['https://fonts.googleapis.com'],
   fontSrc: ['https://fonts.gstatic.com'],
@@ -256,6 +255,7 @@ const directives = {
       'https://*.xx.fbcdn.net', // Social Embeds
       'https://*.twimg.com', // Social Embeds
       'https://public.flourish.studio', // STY includes
+      'https://www.riddle.com',
       ...advertisingDirectives.scriptSrc,
       "'self'",
       "'unsafe-inline'",
@@ -283,6 +283,7 @@ const directives = {
       'https://*.xx.fbcdn.net', // Social Embeds
       'https://*.twimg.com', // Social Embeds
       'https://public.flourish.studio', // STY includes
+      'https://www.riddle.com',
       ...advertisingDirectives.scriptSrc,
       "'self'",
       "'unsafe-inline'",
@@ -331,12 +332,6 @@ const directives = {
     canonicalLive: [...bbcDomains],
     ampNonLive: [...bbcDomains],
     canonicalNonLive: [...bbcDomains],
-  },
-  prefetchSrc: {
-    ampLive: [...advertisingDirectives.prefetchSrc],
-    canonicalLive: [...advertisingDirectives.prefetchSrc],
-    ampNonLive: [...advertisingDirectives.prefetchSrc],
-    canonicalNonLive: [...advertisingDirectives.prefetchSrc],
   },
 };
 
@@ -400,13 +395,6 @@ export const generateWorkerSrc = ({ isAmp }) =>
     ? ['blob:', '*.bbc.co.uk', '*.bbc.com']
     : ['blob:', "'self'", '*.bbc.co.uk', '*.bbc.com'];
 
-export const generatePrefetchSrc = ({ isAmp, isLive }) => {
-  if (!isLive && isAmp) return directives.prefetchSrc.ampNonLive.sort();
-  if (!isLive && !isAmp) return directives.prefetchSrc.canonicalNonLive.sort();
-  if (isLive && isAmp) return directives.prefetchSrc.ampLive.sort();
-  return directives.prefetchSrc.canonicalLive.sort();
-};
-
 const helmetCsp = ({ isAmp, isLive, reportOnlyOnLive }) => ({
   directives: {
     'default-src': generateDefaultSrc(),
@@ -419,7 +407,6 @@ const helmetCsp = ({ isAmp, isLive, reportOnlyOnLive }) => ({
     'style-src': generateStyleSrc({ isAmp, isLive }),
     'media-src': generateMediaSrc({ isAmp, isLive }),
     'worker-src': generateWorkerSrc({ isAmp }),
-    'prefetch-src': generatePrefetchSrc({ isAmp, isLive }),
     'report-to': 'worldsvc',
     'upgrade-insecure-requests': [],
   },

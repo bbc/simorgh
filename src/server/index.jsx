@@ -84,6 +84,7 @@ server
   .use(compression())
   .use(
     helmet({
+      expectCt: false,
       frameguard: { action: 'deny' },
       contentSecurityPolicy: false,
     }),
@@ -181,7 +182,6 @@ server.get(
     injectResourceHintsHeader,
   ],
   async ({ url, query, headers, path: urlPath }, res) => {
-    res.removeHeader('Expect-CT');
     logger.info(SERVER_SIDE_RENDER_REQUEST_RECEIVED, {
       url,
       headers: removeSensitiveHeaders(headers),
