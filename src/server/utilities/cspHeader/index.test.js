@@ -9,7 +9,6 @@ import injectCspHeader, {
   generateStyleSrc,
   generateMediaSrc,
   generateWorkerSrc,
-  generatePrefetchSrc,
 } from '.';
 
 import { bbcDomains, advertisingServiceCountryDomains } from './domainLists';
@@ -121,7 +120,6 @@ describe('cspHeader', () => {
       styleSrcExpectation: [...bbcDomains, "'unsafe-inline'"].sort(),
       mediaSrcExpectation: [...bbcDomains].sort(),
       workerSrcExpectation: ['blob:', '*.bbc.co.uk', '*.bbc.com'],
-      prefetchSrcExpectation: ['https://*.googlesyndication.com'],
     },
     {
       isAmp: false,
@@ -242,7 +240,6 @@ describe('cspHeader', () => {
       ].sort(),
       mediaSrcExpectation: [...bbcDomains].sort(),
       workerSrcExpectation: ['blob:', "'self'", '*.bbc.co.uk', '*.bbc.com'],
-      prefetchSrcExpectation: ['https://*.googlesyndication.com'],
     },
     {
       isAmp: true,
@@ -324,7 +321,6 @@ describe('cspHeader', () => {
       styleSrcExpectation: [...bbcDomains, "'unsafe-inline'"].sort(),
       mediaSrcExpectation: [...bbcDomains].sort(),
       workerSrcExpectation: ['blob:', '*.bbc.co.uk', '*.bbc.com'],
-      prefetchSrcExpectation: ['https://*.googlesyndication.com'],
     },
     {
       isAmp: false,
@@ -450,7 +446,6 @@ describe('cspHeader', () => {
       ].sort(),
       mediaSrcExpectation: [...bbcDomains].sort(),
       workerSrcExpectation: ['blob:', "'self'", '*.bbc.co.uk', '*.bbc.com'],
-      prefetchSrcExpectation: ['https://*.googlesyndication.com'].sort(),
     },
   ].forEach(
     ({
@@ -468,7 +463,6 @@ describe('cspHeader', () => {
       styleSrcExpectation,
       mediaSrcExpectation,
       workerSrcExpectation,
-      prefetchSrcExpectation,
     }) => {
       describe(`Given isAmp ${isAmp} & isLive ${isLive}`, () => {
         it(`Then it has this childSrc`, () => {
@@ -527,12 +521,6 @@ describe('cspHeader', () => {
           expect(generateWorkerSrc({ isAmp })).toEqual(workerSrcExpectation);
         });
 
-        it(`Then it has this prefetchSrc`, () => {
-          expect(generatePrefetchSrc({ isAmp, isLive })).toEqual(
-            prefetchSrcExpectation,
-          );
-        });
-
         it(`Then injectCspHeader middleware applies the correct Content-Security-Policy header`, () => {
           process.env.SIMORGH_APP_ENV = isLive ? 'live' : 'test';
 
@@ -551,7 +539,6 @@ describe('cspHeader', () => {
             `style-src ${styleSrcExpectation.join(' ')};` +
             `media-src ${mediaSrcExpectation.join(' ')};` +
             `worker-src ${workerSrcExpectation.join(' ')};` +
-            `prefetch-src ${prefetchSrcExpectation.join(' ')};` +
             `report-to worldsvc;` +
             `upgrade-insecure-requests`;
 
