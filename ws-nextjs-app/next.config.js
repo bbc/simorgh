@@ -25,6 +25,9 @@ module.exports = {
   experimental: {
     externalDir: true,
   },
+  compiler: {
+    emotion: true,
+  },
   env: { ...clientEnvVars, LOG_TO_CONSOLE: 'true', NEXTJS: 'true' },
   eslint: {
     ignoreDuringBuilds: true,
