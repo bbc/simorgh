@@ -551,7 +551,6 @@ describe('frontPage -> homePage migration', () => {
     .map(serviceToRoute);
 
   const migratedServices = [
-    'afaanoromoo',
     'azeri',
     'burmese',
     'gujarati',
