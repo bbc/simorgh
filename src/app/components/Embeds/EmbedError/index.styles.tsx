@@ -19,16 +19,18 @@ const styles = {
       ...fontVariants.sansBold,
       paddingTop: `${spacings.FULL}rem`,
     }),
-  errorMessage: ({ fontVariants, palette }: Theme) =>
+  errorMessage: ({ fontVariants, palette, fontSizes }: Theme) =>
     css({
       color: palette.GREY_10,
       ...fontVariants.sansRegular,
+      ...fontSizes.longPrimer,
     }),
-  inlineLink: ({ palette, fontVariants }: Theme) =>
+  inlineLink: ({ palette, fontVariants, fontSizes }: Theme) =>
     css({
       color: palette.BLACK,
       borderBottom: `1px solid black`,
       ...fontVariants.sansRegular,
+      ...fontSizes.bodyCopy,
     }),
 };
 
