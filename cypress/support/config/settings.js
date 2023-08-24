@@ -41,7 +41,6 @@ module.exports = () => ({
       },
       frontPage: {
         environments: {
-          environments: undefined,
           live: {
             paths: ['/afaanoromoo'],
             enabled: false,
