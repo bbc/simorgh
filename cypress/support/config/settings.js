@@ -40,20 +40,7 @@ module.exports = () => ({
         smoke: false,
       },
       frontPage: {
-        environments: {
-          live: {
-            paths: ['/afaanoromoo'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/afaanoromoo'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/afaanoromoo'],
-            enabled: false,
-          },
-        },
+        environments: undefined,
         smoke: false,
       },
       liveRadio: {
