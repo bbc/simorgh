@@ -53,8 +53,19 @@
         ],
         "includeComments": false,
         "atiAnalytics": {
-          "producerName": "GAHUZA",
-          "producerId": "40"
+          "campaigns": null,
+          "categoryName": null,
+          "contentId": "urn:bbc:cps:curie:asset:48fe44a1-f432-4475-942d-ab017d13b4d0",
+          "contentType": "article",
+          "language": "rw",
+          "ldpThingIds": null,
+          "ldpThingLabels": null,
+          "pageIdentifier": "gahuza.story.23313911.page",
+          "pageTitle": "Test story with different IDT2 typess",
+          "producerId": null,
+          "timePublished": "2020-06-09T16:26:57.000Z",
+          "timeUpdated": "2020-06-09T17:09:42.000Z",
+          "producerName": "GAHUZA"
         },
         "readTime": 1,
         "siteUri": "/gahuza"
