@@ -15,11 +15,9 @@ type Props = {
 const EmbedError = ({ message, link }: Props) => {
   return (
     <div css={styles.embedDiv}>
-      <div>
-        <Text as="strong" fontVariant="sansRegular" size="longPrimer">
-          {message}
-        </Text>
-      </div>
+      <Text as="strong" fontVariant="sansRegular" size="longPrimer">
+        {message}
+      </Text>
       <div css={styles.errorLinkWrapper}>
         {link && link.text && link.href && (
           <InlineLink to={link.href} text={link.text} css={styles.inlineLink} />
