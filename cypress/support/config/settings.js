@@ -480,20 +480,7 @@ module.exports = () => ({
         smoke: false,
       },
       frontPage: {
-        environments: {
-          live: {
-            paths: ['/amharic'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/amharic'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/amharic'],
-            enabled: false,
-          },
-        },
+        environments: undefined,
         smoke: false,
       },
       liveRadio: {
