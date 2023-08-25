@@ -43,6 +43,7 @@ const homePageServices = [
   'igbo',
   'kyrgyz',
   'pidgin',
+  'tigrinya',
   'yoruba',
 ];
 
