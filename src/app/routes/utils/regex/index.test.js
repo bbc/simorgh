@@ -559,6 +559,7 @@ describe('frontPage -> homePage migration', () => {
     'igbo',
     'kyrgyz',
     'pidgin',
+    'tigrinya',
     'yoruba',
   ];
   const migratedWorldServiceRoutes = migratedServices.map(serviceToRoute);
