@@ -552,6 +552,7 @@ describe('frontPage -> homePage migration', () => {
 
   const migratedServices = [
     'afaanoromoo',
+    'amharic',
     'azeri',
     'burmese',
     'gujarati',
