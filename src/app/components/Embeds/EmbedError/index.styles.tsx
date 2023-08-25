@@ -1,4 +1,5 @@
 import { css, Theme } from '@emotion/react';
+import pixelsToRem from '../../../utilities/pixelsToRem';
 
 const styles = {
   embedDiv: ({ spacings, mq, palette }: Theme) =>
@@ -13,17 +14,21 @@ const styles = {
       [mq.GROUP_4_MIN_WIDTH]: {
         margin: `0 0 ${spacings.TRIPLE}rem`,
       },
+      [mq.HIGH_CONTRAST]: {
+        border: `${pixelsToRem(3)}rem solid transparent`,
+      },
     }),
-  errorLinkWrapper: ({ fontVariants, spacings }: Theme) =>
+  errorLinkWrapper: ({ spacings }: Theme) =>
     css({
-      ...fontVariants.sansBold,
       paddingTop: `${spacings.FULL}rem`,
     }),
-  errorMessage: ({ fontVariants }: Theme) =>
+  inlineLink: ({ palette, fontVariants, fontSizes }: Theme) =>
     css({
+      color: palette.BLACK,
+      borderBottom: `${pixelsToRem(1)}rem solid ${palette.BLACK}`,
       ...fontVariants.sansRegular,
+      ...fontSizes.bodyCopy,
     }),
-  inlineLink: ({ palette }: Theme) => css({ color: palette.BLACK }),
 };
 
 export default styles;

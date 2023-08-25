@@ -41,6 +41,7 @@ const homePageServices = [
   'igbo',
   'kyrgyz',
   'pidgin',
+  'yoruba',
 ];
 
 const servicesWithVariants = ['serbian', 'ukchina', 'zhongwen'];
