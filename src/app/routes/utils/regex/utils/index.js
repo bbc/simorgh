@@ -35,6 +35,7 @@ export const getArticleManifestRegex = services => {
 };
 
 const homePageServices = [
+  'afaanoromoo',
   'azeri',
   'burmese',
   'gujarati',
