@@ -7,6 +7,10 @@ import { TOPIC_PAGE } from '../../utils/pageTypes';
 const logger = nodeLogger(__filename);
 
 export default async ({ service, path: pathname, variant, page }) => {
+
+  if (!pathname.includes('renderer_env')) {
+  }
+
   try {
     const { status, json } = await fetchDataFromBFF({
       pathname,
