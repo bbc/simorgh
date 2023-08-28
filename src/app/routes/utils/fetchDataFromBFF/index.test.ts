@@ -8,8 +8,6 @@ import {
   TOPIC_PAGE,
 } from '../pageTypes';
 import * as fetchPageData from '../fetchPageData';
-import nodeLogger from '../../../../testHelpers/loggerMock';
-import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
 
 const mockAgent = { cert: 'cert', ca: 'ca', key: 'key' };
 
