@@ -140,23 +140,21 @@ describe('getThingAttributes', () => {
 
     const queryParamsArray = splitUrl(queryParams);
 
-    expect(queryParamsArray).toMatchInlineSnapshot(`
-      [
-        "s=getDestination",
-        "idclient=getAtUserId",
-        "r=getScreenInfo",
-        "re=getBrowserViewPort",
-        "hl=getCurrentTime",
-        "lng=getDeviceLanguage",
-        "x2=[getAppType]",
-        "x5=[getHref]",
-        "x6=[getReferrer]",
-        "x9=[sanitise]",
-        "x18=[isLocServeCookieSet]",
-        "xto=-----%40",
-        "ref=getReferrer",
-      ]
-    `);
+    expect(queryParamsArray).toEqual([
+      's=getDestination',
+      'idclient=getAtUserId',
+      'r=getScreenInfo',
+      're=getBrowserViewPort',
+      'hl=getCurrentTime',
+      'lng=getDeviceLanguage',
+      'x2=[getAppType]',
+      'x5=[getHref]',
+      'x6=[getReferrer]',
+      'x9=[sanitise]',
+      'x18=[isLocServeCookieSet]',
+      'xto=-----%40',
+      'ref=getReferrer',
+    ]);
   });
 
   it('should build query params for .app routes', () => {
@@ -175,24 +173,22 @@ describe('getThingAttributes', () => {
 
     const queryParamsArray = splitUrl(queryParams);
 
-    expect(queryParamsArray).toMatchInlineSnapshot(`
-      [
-        "s=getDestination",
-        "idclient=getAtUserId",
-        "r=getScreenInfo",
-        "re=getBrowserViewPort",
-        "hl=getCurrentTime",
-        "lng=getDeviceLanguage",
-        "x2=[getAppType]",
-        "x3=[news-app]",
-        "x5=[getHref]",
-        "x6=[getReferrer]",
-        "x9=[sanitise]",
-        "x18=[isLocServeCookieSet]",
-        "xto=-----%40",
-        "ref=getReferrer",
-      ]
-    `);
+    expect(queryParamsArray).toEqual([
+      's=getDestination',
+      'idclient=getAtUserId',
+      'r=getScreenInfo',
+      're=getBrowserViewPort',
+      'hl=getCurrentTime',
+      'lng=getDeviceLanguage',
+      'x2=[getAppType]',
+      'x3=[news-app]',
+      'x5=[getHref]',
+      'x6=[getReferrer]',
+      'x9=[sanitise]',
+      'x18=[isLocServeCookieSet]',
+      'xto=-----%40',
+      'ref=getReferrer',
+    ]);
   });
 
   it('if ref param is provided, it should be the very last param so that ATI can interpret it correctly as part of the referrer URL', () => {
@@ -235,20 +231,30 @@ describe('buildATIEventTrackUrl', () => {
 
   it('should return the correct url', () => {
     process.env.SIMORGH_ATI_BASE_URL = 'http://foobar.com?';
-    expect(
-      buildATIEventTrackUrl({
-        pageIdentifier: 'pageIdentifier',
-        service: 'news',
-        platform: 'canonical',
-        statsDestination: 'statsDestination',
-        componentName: 'component',
-        type: 'type',
-        campaignID: 'campaignID',
-        format: 'format',
-        url: 'url',
-      }),
-    ).toMatchInlineSnapshot(
-      `"http://foobar.com?idclient=getAtUserId&s=getDestination&p=pageIdentifier&r=getScreenInfo&re=getBrowserViewPort&hl=getCurrentTime&lng=getDeviceLanguage&atc=PUB-[campaignID]-[component]-[]-[format]-[pageIdentifier]-[]-[]-[url]&type=AT"`,
-    );
+
+    const atiEventTrackUrl = buildATIEventTrackUrl({
+      pageIdentifier: 'pageIdentifier',
+      service: 'news',
+      platform: 'canonical',
+      statsDestination: 'statsDestination',
+      componentName: 'component',
+      type: 'type',
+      campaignID: 'campaignID',
+      format: 'format',
+      url: 'url',
+    });
+
+    expect(splitUrl(atiEventTrackUrl)).toEqual([
+      'http://foobar.com',
+      'idclient=getAtUserId',
+      's=getDestination',
+      'p=pageIdentifier',
+      'r=getScreenInfo',
+      're=getBrowserViewPort',
+      'hl=getCurrentTime',
+      'lng=getDeviceLanguage',
+      'atc=PUB-[campaignID]-[component]-[]-[format]-[pageIdentifier]-[]-[]-[url]',
+      'type=AT',
+    ]);
   });
 });

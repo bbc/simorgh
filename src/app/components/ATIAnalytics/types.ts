@@ -64,6 +64,7 @@ export interface PageData {
 }
 
 export interface ATIData {
+  campaigns?: { campaignId?: string; campaignName?: string }[] | null;
   categoryName?: string | null;
   contentId?: string | null;
   contentType?: string;
@@ -73,6 +74,8 @@ export interface ATIData {
   nationsProducer?: string | null;
   pageIdentifier?: string;
   pageTitle?: string | null;
+  producerId?: string | null;
+  producerName?: string | null;
   timePublished?: string | null;
   timeUpdated?: string | null;
 }
@@ -127,7 +130,7 @@ export interface ATIPageTrackingProps {
   origin?: string;
   previousPath?: string | null;
   categoryName?: string | null;
-  campaigns?: { campaignId?: string; campaignName?: string }[];
+  campaigns?: { campaignId?: string; campaignName?: string }[] | null;
   nationsProducer?: string | null;
 }
 

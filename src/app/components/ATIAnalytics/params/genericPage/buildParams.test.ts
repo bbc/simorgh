@@ -117,6 +117,7 @@ describe('implementation of buildPageATIParams and buildPageATIUrl', () => {
     const articlePageAtiData = {
       categoryName: 'Refugees%20and%20asylum%20seekers~Myanmar~Military',
       contentId: 'urn:bbc:optimo:asset:c9wxnzvwp3mo',
+      contentType: 'article',
       language: 'my',
       ldpThingIds:
         '0cd55773-e753-44ad-ad07-1366bf1aa6bc~a26174f5-fa3c-4cf8-95a2-29d877175eab~ce5c43ee-8982-4f88-9472-9aa79aeb09cc',
@@ -399,6 +400,488 @@ describe('implementation of buildPageATIParams and buildPageATIUrl', () => {
       };
 
       expect(parsedATIURLParams).toEqual(expectedATIURLParams);
+    });
+  });
+
+  describe('CPS Page', () => {
+    describe('STY', () => {
+      const cpsSTYAtiData = {
+        campaigns: [
+          {
+            campaignId: '5a988e4739461b000e9dabfc',
+            campaignName: 'WS - Update me',
+          },
+        ],
+        categoryName: 'Explainer',
+        contentId:
+          'urn:bbc:cps:curie:asset:3137d6de-62c2-4637-a002-29d2ab075990',
+        contentType: 'article',
+        language: 'es',
+        ldpThingIds:
+          '75612fa6-147c-4a43-97fa-fcf70d9cced3~7613abe4-1c05-4594-a5ec-3ccf6268b220~e0d04166-b92f-468e-9e68-d5f9330e6ae7',
+        ldpThingLabels: 'Politics~Nicaragua~Latin+America',
+        pageIdentifier:
+          'latin_america::mundo.latin_america.story.64591782.page',
+        pageTitle:
+          '4 claves para entender la "sorpresiva" liberación y envío a EE.UU. de 222 opositores nicaragüenses - BBC News Mundo',
+        producerId: null,
+        producerName: 'MUNDO',
+        timePublished: '2023-02-10T02:00:41.000Z',
+        timeUpdated: '2023-02-10T02:00:41.000Z',
+      };
+
+      const validPageURLParams = {
+        appName: 'atiAnalyticsAppName',
+        campaigns: [
+          {
+            campaignId: '5a988e4739461b000e9dabfc',
+            campaignName: 'WS - Update me',
+          },
+        ],
+        categoryName: 'Explainer',
+        contentId:
+          'urn:bbc:cps:curie:asset:3137d6de-62c2-4637-a002-29d2ab075990',
+        contentType: 'article',
+        isUK: undefined,
+        language: 'es',
+        ldpThingIds:
+          '75612fa6-147c-4a43-97fa-fcf70d9cced3~7613abe4-1c05-4594-a5ec-3ccf6268b220~e0d04166-b92f-468e-9e68-d5f9330e6ae7',
+        ldpThingLabels: 'Politics~Nicaragua~Latin+America',
+        libraryVersion: 'simorgh',
+        nationsProducer: undefined,
+        origin: undefined,
+        pageIdentifier:
+          'latin_america::mundo.latin_america.story.64591782.page',
+        pageTitle:
+          '4 claves para entender la "sorpresiva" liberación y envío a EE.UU. de 222 opositores nicaragüenses - BBC News Mundo',
+        platform: 'canonical',
+        previousPath: undefined,
+        producerId: 'atiAnalyticsProducerId',
+        service: 'mundo',
+        statsDestination: 'statsDestination',
+        timePublished: '2023-02-10T02:00:41.000Z',
+        timeUpdated: '2023-02-10T02:00:41.000Z',
+      };
+
+      it('should return the correct object for the page given the ATI configuration', () => {
+        const result = buildPageATIParams({
+          atiData: cpsSTYAtiData,
+          requestContext,
+          serviceContext: { ...serviceContext, service: 'mundo' },
+        });
+        expect(result).toStrictEqual(validPageURLParams);
+      });
+
+      it('should use the serviceContext lang property if language is absent in atiData', () => {
+        const result = buildPageATIParams({
+          atiData: { ...cpsSTYAtiData, language: null },
+          requestContext,
+          serviceContext: { ...serviceContext, service: 'mundo', lang: 'es' },
+        });
+        expect(result).toEqual(validPageURLParams);
+      });
+
+      it('should return the correct url for a page given the ATI configuration', () => {
+        const url = buildPageATIUrl({
+          atiData: cpsSTYAtiData,
+          requestContext,
+          serviceContext,
+        });
+
+        const parsedATIURLParams = Object.fromEntries(
+          new URLSearchParams(url as string),
+        );
+
+        const expectedATIURLParams = {
+          hl: '00-00-00',
+          lng: 'en-US',
+          p: 'latin_america::mundo.latin_america.story.64591782.page',
+          r: '0x0x24x24',
+          re: '1024x768',
+          s: '598285',
+          s2: 'atiAnalyticsProducerId',
+          x1: '[urn:bbc:cps:curie:asset:3137d6de-62c2-4637-a002-29d2ab075990]',
+          x2: '[responsive]',
+          x3: '[atiAnalyticsAppName]',
+          x4: '[es]',
+          x5: '[http%3A%2F%2Flocalhost%2F]',
+          x7: '[article]',
+          x8: '[simorgh]',
+          x9: '[4%20claves%20para%20entender%20la%20"sorpresiva"%20liberación%20y%20envío%20a%20EE.UU.%20de%20222%20opositores%20nicaragüenses%20-%20BBC%20News%20Mundo]',
+          x11: '[2023-02-10T02:00:41.000Z]',
+          x12: '[2023-02-10T02:00:41.000Z]',
+          x13: '[Politics~Nicaragua~Latin+America]',
+          x14: '[75612fa6-147c-4a43-97fa-fcf70d9cced3~7613abe4-1c05-4594-a5ec-3ccf6268b220~e0d04166-b92f-468e-9e68-d5f9330e6ae7]',
+          x16: '[WS - Update me]',
+          x17: '[Explainer]',
+        };
+
+        expect(parsedATIURLParams).toEqual(expectedATIURLParams);
+      });
+    });
+
+    describe('MAP', () => {
+      const cpsMAPAtiData = {
+        campaigns: [
+          {
+            campaignId: '5a988e4739461b000e9dabfc',
+            campaignName: 'WS - Update me',
+          },
+        ],
+        categoryName: 'News',
+        contentId:
+          'urn:bbc:cps:curie:asset:6d745333-c79d-e245-a5b2-f4acb7de35e1',
+        contentType: 'article-media-asset',
+        language: 'es',
+        ldpThingIds:
+          '75612fa6-147c-4a43-97fa-fcf70d9cced3~7613abe4-1c05-4594-a5ec-3ccf6268b220~e0d04166-b92f-468e-9e68-d5f9330e6ae7',
+        ldpThingLabels: 'Politics~Nicaragua~Latin+America',
+        pageIdentifier: 'media::mundo.media.media_asset.41174775.page',
+        pageTitle:
+          '¿Qué es el albur en México y cómo puedes saber si te están "albureando"?',
+        producerId: null,
+        producerName: 'MUNDO',
+        timePublished: '2017-09-14T14:09:14.000Z',
+        timeUpdated: '2017-09-14T14:09:14.000Z',
+      };
+
+      const validPageURLParams = {
+        appName: 'atiAnalyticsAppName',
+        campaigns: [
+          {
+            campaignId: '5a988e4739461b000e9dabfc',
+            campaignName: 'WS - Update me',
+          },
+        ],
+        categoryName: 'News',
+        contentId:
+          'urn:bbc:cps:curie:asset:6d745333-c79d-e245-a5b2-f4acb7de35e1',
+        contentType: 'article-media-asset',
+        isUK: undefined,
+        language: 'es',
+        ldpThingIds:
+          '75612fa6-147c-4a43-97fa-fcf70d9cced3~7613abe4-1c05-4594-a5ec-3ccf6268b220~e0d04166-b92f-468e-9e68-d5f9330e6ae7',
+        ldpThingLabels: 'Politics~Nicaragua~Latin+America',
+        libraryVersion: 'simorgh',
+        nationsProducer: undefined,
+        origin: undefined,
+        pageIdentifier: 'media::mundo.media.media_asset.41174775.page',
+        pageTitle:
+          '¿Qué es el albur en México y cómo puedes saber si te están "albureando"?',
+        platform: 'canonical',
+        previousPath: undefined,
+        producerId: 'atiAnalyticsProducerId',
+        service: 'mundo',
+        statsDestination: 'statsDestination',
+        timePublished: '2017-09-14T14:09:14.000Z',
+        timeUpdated: '2017-09-14T14:09:14.000Z',
+      };
+
+      it('should return the correct object for the page given the ATI configuration', () => {
+        const result = buildPageATIParams({
+          atiData: cpsMAPAtiData,
+          requestContext,
+          serviceContext: { ...serviceContext, service: 'mundo' },
+        });
+        expect(result).toStrictEqual(validPageURLParams);
+      });
+
+      it('should use the serviceContext lang property if language is absent in atiData', () => {
+        const result = buildPageATIParams({
+          atiData: { ...cpsMAPAtiData, language: null },
+          requestContext,
+          serviceContext: { ...serviceContext, service: 'mundo', lang: 'es' },
+        });
+        expect(result).toEqual(validPageURLParams);
+      });
+
+      it('should return the correct url for a page given the ATI configuration', () => {
+        const url = buildPageATIUrl({
+          atiData: cpsMAPAtiData,
+          requestContext,
+          serviceContext,
+        });
+
+        const parsedATIURLParams = Object.fromEntries(
+          new URLSearchParams(url as string),
+        );
+
+        const expectedATIURLParams = {
+          hl: '00-00-00',
+          lng: 'en-US',
+          p: 'media::mundo.media.media_asset.41174775.page',
+          r: '0x0x24x24',
+          re: '1024x768',
+          s: '598285',
+          s2: 'atiAnalyticsProducerId',
+          x1: '[urn:bbc:cps:curie:asset:6d745333-c79d-e245-a5b2-f4acb7de35e1]',
+          x2: '[responsive]',
+          x3: '[atiAnalyticsAppName]',
+          x4: '[es]',
+          x5: '[http%3A%2F%2Flocalhost%2F]',
+          x7: '[article-media-asset]',
+          x8: '[simorgh]',
+          x9: '[¿Qué%20es%20el%20albur%20en%20México%20y%20cómo%20puedes%20saber%20si%20te%20están%20"albureando"?]',
+          x11: '[2017-09-14T14:09:14.000Z]',
+          x12: '[2017-09-14T14:09:14.000Z]',
+          x13: '[Politics~Nicaragua~Latin+America]',
+          x14: '[75612fa6-147c-4a43-97fa-fcf70d9cced3~7613abe4-1c05-4594-a5ec-3ccf6268b220~e0d04166-b92f-468e-9e68-d5f9330e6ae7]',
+          x16: '[WS - Update me]',
+          x17: '[News]',
+        };
+
+        expect(parsedATIURLParams).toEqual(expectedATIURLParams);
+      });
+    });
+
+    describe('PGL', () => {
+      const cpsPGLAtiData = {
+        campaigns: [
+          {
+            campaignId: '5a988e3139461b000e9dabf9',
+            campaignName: 'WS - Divert me',
+          },
+        ],
+        categoryName: 'News',
+        contentId:
+          'urn:bbc:cps:curie:asset:08e22e90-7361-cd47-b586-7cb53fc5a012',
+        contentType: 'article-photo-gallery',
+        language: 'es',
+        ldpThingIds: '25844b6e-80b0-4de9-8ea0-7a35e7d4086f',
+        ldpThingLabels: 'Technology',
+        pageIdentifier: 'sport::mundo.sport.photo_gallery.36935058.page',
+        pageTitle:
+          'Río 2016, el antes y el ahora: cómo ha cambiado la ropa deportiva en más de un siglo de juegos olímpicos',
+        producerId: null,
+        producerName: 'MUNDO',
+        timePublished: '2016-08-07T09:21:02.000Z',
+        timeUpdated: '2016-08-07T09:21:02.000Z',
+      };
+
+      const validPageURLParams = {
+        appName: 'atiAnalyticsAppName',
+        campaigns: [
+          {
+            campaignId: '5a988e3139461b000e9dabf9',
+            campaignName: 'WS - Divert me',
+          },
+        ],
+        categoryName: 'News',
+        contentId:
+          'urn:bbc:cps:curie:asset:08e22e90-7361-cd47-b586-7cb53fc5a012',
+        contentType: 'article-photo-gallery',
+        isUK: undefined,
+        language: 'es',
+        ldpThingIds: '25844b6e-80b0-4de9-8ea0-7a35e7d4086f',
+        ldpThingLabels: 'Technology',
+        libraryVersion: 'simorgh',
+        nationsProducer: undefined,
+        origin: undefined,
+        pageIdentifier: 'sport::mundo.sport.photo_gallery.36935058.page',
+        pageTitle:
+          'Río 2016, el antes y el ahora: cómo ha cambiado la ropa deportiva en más de un siglo de juegos olímpicos',
+        platform: 'canonical',
+        previousPath: undefined,
+        producerId: 'atiAnalyticsProducerId',
+        service: 'mundo',
+        statsDestination: 'statsDestination',
+        timePublished: '2016-08-07T09:21:02.000Z',
+        timeUpdated: '2016-08-07T09:21:02.000Z',
+      };
+
+      it('should return the correct object for the page given the ATI configuration', () => {
+        const result = buildPageATIParams({
+          atiData: cpsPGLAtiData,
+          requestContext,
+          serviceContext: { ...serviceContext, service: 'mundo' },
+        });
+        expect(result).toStrictEqual(validPageURLParams);
+      });
+
+      it('should use the serviceContext lang property if language is absent in atiData', () => {
+        const result = buildPageATIParams({
+          atiData: { ...cpsPGLAtiData, language: null },
+          requestContext,
+          serviceContext: { ...serviceContext, service: 'mundo', lang: 'es' },
+        });
+        expect(result).toEqual(validPageURLParams);
+      });
+
+      it('should return the correct url for a page given the ATI configuration', () => {
+        const url = buildPageATIUrl({
+          atiData: cpsPGLAtiData,
+          requestContext,
+          serviceContext,
+        });
+
+        const parsedATIURLParams = Object.fromEntries(
+          new URLSearchParams(url as string),
+        );
+
+        const expectedATIURLParams = {
+          hl: '00-00-00',
+          lng: 'en-US',
+          p: 'sport::mundo.sport.photo_gallery.36935058.page',
+          r: '0x0x24x24',
+          re: '1024x768',
+          s: '598285',
+          s2: 'atiAnalyticsProducerId',
+          x1: '[urn:bbc:cps:curie:asset:08e22e90-7361-cd47-b586-7cb53fc5a012]',
+          x2: '[responsive]',
+          x3: '[atiAnalyticsAppName]',
+          x4: '[es]',
+          x5: '[http%3A%2F%2Flocalhost%2F]',
+          x7: '[article-photo-gallery]',
+          x8: '[simorgh]',
+          x9: '[Río%202016,%20el%20antes%20y%20el%20ahora:%20cómo%20ha%20cambiado%20la%20ropa%20deportiva%20en%20más%20de%20un%20siglo%20de%20juegos%20olímpicos]',
+          x11: '[2016-08-07T09:21:02.000Z]',
+          x12: '[2016-08-07T09:21:02.000Z]',
+          x13: '[Technology]',
+          x14: '[25844b6e-80b0-4de9-8ea0-7a35e7d4086f]',
+          x16: '[WS - Divert me]',
+          x17: '[News]',
+        };
+
+        expect(parsedATIURLParams).toEqual(expectedATIURLParams);
+      });
+    });
+
+    describe('CSP', () => {
+      const cpsCSPAtiData = {
+        campaigns: null,
+        categoryName: 'News',
+        chapter: 'technology',
+        contentId:
+          'urn:bbc:cps:curie:asset:c1c8b1bf-4c9c-44e8-be0d-c81a2aa59e46',
+        contentType: 'article-correspondent',
+        language: 'en-gb',
+        ldpThingIds:
+          '0d358111-576d-4d61-a7c7-e2e71931b579~2c493367-e5a2-4c19-be5f-6e9342f5c591~2f2db234-3c2d-40a4-b4ac-eea661faadd0~31684f19-84d6-41f6-b033-7ae08098572a~65ba56b4-3f50-4217-ab8e-b3c1fe890364~6892384e-1966-4c03-9ce3-f694a8f9f69e~7a48b6e0-9074-4303-ae82-011003058e16~b054a2d3-6c1e-44de-b8db-0e2501c035c0~f7bf39da-286c-4e37-8ee0-a01395f09ac2',
+        ldpThingLabels:
+          'Intel~Technology+of+business~Business~Technology~Car+industry~China~Taiwan~Computer+chip~Semiconductors',
+        pageIdentifier:
+          'technology::news.technology.correspondent_story.56294493.page',
+        pageTitle: "Tech Tent: The new 'space race' for computer chips",
+        producerId: '64',
+        producerName: 'NEWS',
+        timePublished: '2021-03-05T13:37:50.000Z',
+        timeUpdated: '2021-03-05T13:37:50.000Z',
+      };
+
+      const validPageURLParams = {
+        appName: 'atiAnalyticsAppName',
+        campaigns: null,
+        categoryName: 'News',
+        contentId:
+          'urn:bbc:cps:curie:asset:c1c8b1bf-4c9c-44e8-be0d-c81a2aa59e46',
+        contentType: 'article-correspondent',
+        isUK: undefined,
+        language: 'en-gb',
+        ldpThingIds:
+          '0d358111-576d-4d61-a7c7-e2e71931b579~2c493367-e5a2-4c19-be5f-6e9342f5c591~2f2db234-3c2d-40a4-b4ac-eea661faadd0~31684f19-84d6-41f6-b033-7ae08098572a~65ba56b4-3f50-4217-ab8e-b3c1fe890364~6892384e-1966-4c03-9ce3-f694a8f9f69e~7a48b6e0-9074-4303-ae82-011003058e16~b054a2d3-6c1e-44de-b8db-0e2501c035c0~f7bf39da-286c-4e37-8ee0-a01395f09ac2',
+        ldpThingLabels:
+          'Intel~Technology+of+business~Business~Technology~Car+industry~China~Taiwan~Computer+chip~Semiconductors',
+        libraryVersion: 'simorgh',
+        nationsProducer: undefined,
+        origin: undefined,
+        pageIdentifier:
+          'technology::news.technology.correspondent_story.56294493.page',
+        pageTitle: "Tech Tent: The new 'space race' for computer chips",
+        platform: 'canonical',
+        previousPath: undefined,
+        producerId: '64',
+        service: 'news',
+        statsDestination: 'statsDestination',
+        timePublished: '2021-03-05T13:37:50.000Z',
+        timeUpdated: '2021-03-05T13:37:50.000Z',
+      };
+
+      it('should return the correct object for the page given the ATI configuration', () => {
+        const result = buildPageATIParams({
+          atiData: cpsCSPAtiData,
+          requestContext,
+          serviceContext: { ...serviceContext, service: 'news' },
+        });
+        expect(result).toStrictEqual(validPageURLParams);
+      });
+
+      it('should use the serviceContext lang property if language is absent in atiData', () => {
+        const result = buildPageATIParams({
+          atiData: { ...cpsCSPAtiData, language: null },
+          requestContext,
+          serviceContext: { ...serviceContext, service: 'news', lang: 'en-gb' },
+        });
+        expect(result).toEqual(validPageURLParams);
+      });
+
+      it('should use the serviceContext atiAnalyticsProducerId property if producerId is absent in atiData', () => {
+        const result = buildPageATIParams({
+          atiData: { ...cpsCSPAtiData, producerId: null },
+          requestContext,
+          serviceContext: {
+            ...serviceContext,
+            atiAnalyticsProducerId: '64',
+            service: 'news',
+            lang: 'en-gb',
+          },
+        });
+        expect(result).toEqual(validPageURLParams);
+      });
+
+      it('should use the set producerId in atiData in favour of the serviceContext atiAnalyticsProducerId poperty', () => {
+        const result = buildPageATIParams({
+          atiData: { ...cpsCSPAtiData, producerId: 'overrideProducerId' },
+          requestContext,
+          serviceContext: {
+            ...serviceContext,
+            atiAnalyticsProducerId: '64',
+            service: 'news',
+            lang: 'en-gb',
+          },
+        });
+        const expectedParamsWithOverride = {
+          ...validPageURLParams,
+          producerId: 'overrideProducerId',
+        };
+        expect(result).toEqual(expectedParamsWithOverride);
+      });
+
+      it('should return the correct url for a page given the ATI configuration', () => {
+        const url = buildPageATIUrl({
+          atiData: cpsCSPAtiData,
+          requestContext,
+          serviceContext,
+        });
+
+        const parsedATIURLParams = Object.fromEntries(
+          new URLSearchParams(url as string),
+        );
+
+        const expectedATIURLParams = {
+          hl: '00-00-00',
+          lng: 'en-US',
+          p: 'technology::news.technology.correspondent_story.56294493.page',
+          r: '0x0x24x24',
+          re: '1024x768',
+          s: '598285',
+          s2: '64',
+          x1: '[urn:bbc:cps:curie:asset:c1c8b1bf-4c9c-44e8-be0d-c81a2aa59e46]',
+          x2: '[responsive]',
+          x3: '[atiAnalyticsAppName]',
+          x4: '[en-gb]',
+          x5: '[http%3A%2F%2Flocalhost%2F]',
+          x7: '[article-correspondent]',
+          x8: '[simorgh]',
+          x9: "[Tech%20Tent:%20The%20new%20'space%20race'%20for%20computer%20chips]",
+          x11: '[2021-03-05T13:37:50.000Z]',
+          x12: '[2021-03-05T13:37:50.000Z]',
+          x13: '[Intel~Technology+of+business~Business~Technology~Car+industry~China~Taiwan~Computer+chip~Semiconductors]',
+          x14: '[0d358111-576d-4d61-a7c7-e2e71931b579~2c493367-e5a2-4c19-be5f-6e9342f5c591~2f2db234-3c2d-40a4-b4ac-eea661faadd0~31684f19-84d6-41f6-b033-7ae08098572a~65ba56b4-3f50-4217-ab8e-b3c1fe890364~6892384e-1966-4c03-9ce3-f694a8f9f69e~7a48b6e0-9074-4303-ae82-011003058e16~b054a2d3-6c1e-44de-b8db-0e2501c035c0~f7bf39da-286c-4e37-8ee0-a01395f09ac2]',
+          x17: '[News]',
+        };
+
+        expect(parsedATIURLParams).toEqual(expectedATIURLParams);
+      });
     });
   });
 });

@@ -9,8 +9,8 @@
     "build:test": "cp ../envConfig/test.env .env && NODE_ENV=production && next build",
     "build:live": "cp ../envConfig/live.env .env && NODE_ENV=production && next build",
     "build": "yarn build:local",
-    "dev": "yarn setupDevEnv && next dev -p 7081",
-    "start": "next start -p 7081 && NODE_ENV=production",
+    "dev": "yarn setupDevEnv && NODE_OPTIONS=--no-experimental-fetch next dev -p 7081",
+    "start": "NODE_OPTIONS=--no-experimental-fetch next start -p 7081 && NODE_ENV=production",
     "stop": "lsof -t -i:7081 | xargs kill",
     "test": "jest --ci --colors --selectProjects='Unit Tests'",
     "test:integration": "jest --ci --colors --selectProjects='Integration Tests - Canonical'",
@@ -21,8 +21,8 @@
     "test:e2e:interactive": "yarn stop && yarn build && run-p --race start cypress:interactive -- --e2e"
   },
   "devDependencies": {
-    "@babel/core": "7.21.8",
-    "@babel/plugin-proposal-export-default-from": "7.18.10",
+    "@babel/core": "7.22.10",
+    "@babel/plugin-proposal-export-default-from": "7.22.5",
     "@babel/preset-react": "^7.18.6",
     "@emotion/babel-plugin": "11.11.0",
     "@emotion/jest": "^11.11.0",
