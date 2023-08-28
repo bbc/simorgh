@@ -12,9 +12,9 @@ exports[`regex utils snapshots should create expected regex from getCpsAssetRege
 
 exports[`regex utils snapshots should create expected regex from getErrorPageRegex 1`] = `"/:service(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|marathi|mundo|naidheachdan|nepali|news|newsround|pashto|persian|pidgin|portuguese|punjabi|russian|scotland|serbian|sinhala|somali|sport|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|vietnamese|yoruba|zhongwen)/:errorCode(404|500):variant(/simp|/trad|/cyr|/lat)?"`;
 
-exports[`regex utils snapshots should create expected regex from getFrontPageRegex 1`] = `"/:service(serbian|ukchina|zhongwen):variant(/simp|/trad|/cyr|/lat)?:amp(.amp)?"`;
+exports[`regex utils snapshots should create expected regex from getFrontPageRegex 1`] = `"/:service(hausa|serbian|ukchina|zhongwen):variant(/simp|/trad|/cyr|/lat)?:amp(.amp)?"`;
 
-exports[`regex utils snapshots should create expected regex from getHomePageRegex 1`] = `"/:service(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|marathi|mundo|naidheachdan|nepali|news|newsround|pashto|persian|pidgin|portuguese|punjabi|russian|scotland|sinhala|somali|sport|swahili|tamil|telugu|thai|tigrinya|turkce|ukrainian|urdu|uzbek|vietnamese|yoruba):variant(/simp|/trad|/cyr|/lat)?:amp(.amp)?"`;
+exports[`regex utils snapshots should create expected regex from getHomePageRegex 1`] = `"/:service(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|gahuza|gujarati|hindi|igbo|indonesia|japanese|korean|kyrgyz|marathi|mundo|naidheachdan|nepali|news|newsround|pashto|persian|pidgin|portuguese|punjabi|russian|scotland|sinhala|somali|sport|swahili|tamil|telugu|thai|tigrinya|turkce|ukrainian|urdu|uzbek|vietnamese|yoruba):variant(/simp|/trad|/cyr|/lat)?:amp(.amp)?"`;
 
 exports[`regex utils snapshots should create expected regex from getIdxPageRegex 1`] = `"/:idx(persian/afghanistan|ukrainian/ukraine_in_russian):amp(.amp)?"`;
 
