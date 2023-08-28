@@ -1,7 +1,5 @@
-export default () => {
-  describe('Fetch Data from BFF', () => {
-    it('should do something', () => {
-      expect(true).toBe(false);
-    });
+describe('Fetch Data from BFF', () => {
+  it('should do something', () => {
+    expect(true).toBe(false);
   });
-};
+});
