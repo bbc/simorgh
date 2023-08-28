@@ -5,7 +5,7 @@ import {
   HOME_PAGE,
   LIVE_PAGE,
   TOPIC_PAGE,
-} from '../../pageTypes';
+} from '../pageTypes';
 
 process.env.BFF_PATH = 'https://mock-bff-path';
 
