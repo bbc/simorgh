@@ -2,15 +2,15 @@ import Url from 'url-parse';
 import pipe from 'ramda/src/pipe';
 import getEnvironment from '#app/routes/utils/getEnvironment';
 import { getMostReadEndpoint } from '#app/lib/utilities/getUrlHelpers/getMostReadUrls';
-import { getUrlPath } from '../../../lib/utilities/urlParser';
-import handleError from '../handleError';
+import { getUrlPath } from '../../../../lib/utilities/urlParser';
+import handleError from '../../handleError';
 import {
   Services,
   Variants,
   Environments,
   PageTypes,
-} from '../../../models/types/global';
-import HOME_PAGE_CONFIG from '../../homePage/getInitialData/page-config';
+} from '../../../../models/types/global';
+import HOME_PAGE_CONFIG from '../../../homePage/getInitialData/page-config';
 import {
   ARTICLE_PAGE,
   CPS_ASSET,
@@ -18,7 +18,7 @@ import {
   LIVE_PAGE,
   MOST_READ_PAGE,
   TOPIC_PAGE,
-} from '../pageTypes';
+} from '../../pageTypes';
 
 interface UrlConstructParams {
   pathname: string;
