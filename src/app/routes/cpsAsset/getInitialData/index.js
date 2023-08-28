@@ -98,7 +98,6 @@ const getDerivedServiceAndPath = (service, pathname) => {
 };
 
 export default async ({
-  getAgent,
   path: pathname,
   service,
   variant,
