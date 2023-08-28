@@ -100,6 +100,7 @@ describe('Fetch Data from BFF', () => {
       ${'local'}  | ${`${url}?renderer_env=test`} | ${'https://mock-bff-path/?id=c0000000000t&service=pidgin&pageType=topic'} | ${mockAgent} | ${{ 'ctx-service-env': 'test' }}
       ${'local'}  | ${`${url}?renderer_env=live`} | ${'https://mock-bff-path/?id=c0000000000t&service=pidgin&pageType=topic'} | ${mockAgent} | ${{ 'ctx-service-env': 'live' }}
       ${'test'}   | ${url}                        | ${'https://mock-bff-path/?id=c0000000000t&service=pidgin&pageType=topic'} | ${mockAgent} | ${{ 'ctx-service-env': 'test' }}
+      ${'test'}   | ${`${url}?renderer_env=test`} | ${'https://mock-bff-path/?id=c0000000000t&service=pidgin&pageType=topic'} | ${mockAgent} | ${{ 'ctx-service-env': 'test' }}
       ${'test'}   | ${`${url}?renderer_env=live`} | ${'https://mock-bff-path/?id=c0000000000t&service=pidgin&pageType=topic'} | ${mockAgent} | ${{ 'ctx-service-env': 'live' }}
       ${'live'}   | ${url}                        | ${'https://mock-bff-path/?id=c0000000000t&service=pidgin&pageType=topic'} | ${mockAgent} | ${{ 'ctx-service-env': 'live' }}
     `(
