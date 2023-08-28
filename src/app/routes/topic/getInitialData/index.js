@@ -8,7 +8,7 @@ import { TOPIC_PAGE } from '../../utils/pageTypes';
 
 const logger = nodeLogger(__filename);
 
-const getLivePathname = pathname => {
+const overrideRendererEnv = pathname => {
   const url = Url(pathname, true);
 
   if (!url.query.renderer_env) {
@@ -20,7 +20,7 @@ const getLivePathname = pathname => {
 export default async ({ service, path: pathname, variant, page }) => {
   try {
     const { status, json } = await fetchDataFromBFF({
-      pathname: getLivePathname(pathname),
+      pathname: overrideRendererEnv(pathname),
       service,
       variant,
       pageType: TOPIC_PAGE,
