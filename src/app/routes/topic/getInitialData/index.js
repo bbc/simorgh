@@ -1,19 +1,26 @@
+/* eslint-disable camelcase */
 import { BFF_FETCH_ERROR } from '#lib/logger.const';
 import nodeLogger from '#lib/logger.node';
+import Url from 'url-parse';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 import fetchDataFromBFF from '../../utils/fetchDataFromBFF';
 import { TOPIC_PAGE } from '../../utils/pageTypes';
 
 const logger = nodeLogger(__filename);
 
-export default async ({ service, path: pathname, variant, page }) => {
+const getLivePathname = pathname => {
+  const url = Url(pathname, true);
 
-  if (!pathname.includes('renderer_env')) {
+  if (!url.query.renderer_env) {
+    url.query.renderer_env = 'live';
   }
+  return url.toString();
+};
 
+export default async ({ service, path: pathname, variant, page }) => {
   try {
     const { status, json } = await fetchDataFromBFF({
-      pathname,
+      pathname: getLivePathname(pathname),
       service,
       variant,
       pageType: TOPIC_PAGE,
