@@ -165,13 +165,12 @@ module.exports = ({
               const cryptoName = crypto
                 .createHash('sha1')
                 .update(chunkName)
-                .digest('base64')
-                .replace(/\//g, '');
+                .digest('base64');
 
               return [
                 'shared',
                 chunkName === 'russian-ukrainian' ? chunkName : cryptoName,
-              ].join('-');
+              ].join('-').replace(/[=\+\/]/g, '');
             },
             priority: 10,
             minChunks: 2,
