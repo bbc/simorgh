@@ -11529,15 +11529,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"express-static-gzip@npm:2.1.7":
-  version: 2.1.7
-  resolution: "express-static-gzip@npm:2.1.7"
-  dependencies:
-    serve-static: ^1.14.1
-  checksum: 7415f5c44ae30c6dec7cd1028bc34e9d2f7fc263bcb97aca5b1b0be62ecf630757c27b864e3a5a8f413a52909de1ea81c6f104f1a578303cb8bdaeb293cafcd0
-  languageName: node
-  linkType: hard
-
 "express@npm:4.18.2, express@npm:^4.17.1, express@npm:^4.17.3":
   version: 4.18.2
   resolution: "express@npm:4.18.2"
@@ -20597,7 +20588,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"serve-static@npm:1.15.0, serve-static@npm:^1.14.1":
+"serve-static@npm:1.15.0":
   version: 1.15.0
   resolution: "serve-static@npm:1.15.0"
   dependencies:
@@ -20847,7 +20838,6 @@ __metadata:
     eslint-plugin-react: 7.32.2
     eslint-plugin-react-hooks: 4.6.0
     express: 4.18.2
-    express-static-gzip: 2.1.7
     fetch-mock: 9.11.0
     glob: 8.0.3
     helmet: 4.6.0
