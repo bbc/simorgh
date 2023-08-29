@@ -43,7 +43,7 @@ const insertTimestampBlock = (originalJson, timestampBlock) => {
 
   const blocks = path(blockPath, json);
   const gistPosition = pathOr([], blockPath, json).findIndex(
-    pathEq('group', ['type']),
+    pathEq(['type'], 'group'),
   );
 
   if (gistPosition >= 0) {

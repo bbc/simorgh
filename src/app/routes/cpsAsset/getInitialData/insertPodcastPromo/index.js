@@ -53,7 +53,7 @@ const getPromoPosition = pageData => {
   const blocks = getBlocks(pageData);
   const targetIndex = findNthIndex(
     EARLIEST_PARAGRAPH_INSERTION_POINT,
-    pathEq('paragraph', ['type']),
+    pathEq(['type'], 'paragraph'),
     blocks,
   );
   if (targetIndex < 0) return targetIndex;
