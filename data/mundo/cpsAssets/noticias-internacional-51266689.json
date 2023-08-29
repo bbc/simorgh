@@ -64,8 +64,24 @@
         ],
         "includeComments": false,
         "atiAnalytics": {
-          "producerName": "MUNDO",
-          "producerId": "62"
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "categoryName": "Explainer",
+          "contentId": "urn:bbc:cps:curie:asset:faf2993a-dcc0-0746-81a6-a6aca4cd59b1",
+          "contentType": "article",
+          "language": "es",
+          "ldpThingIds": null,
+          "ldpThingLabels": null,
+          "pageIdentifier": "world::mundo.world.story.51266689.page",
+          "pageTitle": "Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea",
+          "producerId": null,
+          "timePublished": "2020-01-30T06:35:49.000Z",
+          "timeUpdated": "2020-01-30T06:35:49.000Z",
+          "producerName": "MUNDO"
         },
         "readTime": 8,
         "siteUri": "/mundo",

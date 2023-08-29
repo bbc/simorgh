@@ -81,7 +81,7 @@ const getImageSizes = ({ blocks }) => {
 };
 
 const PhotoGalleryPage = ({ pageData }) => {
-  const { showRelatedTopics } = useContext(ServiceContext);
+  const { brandName, showRelatedTopics } = useContext(ServiceContext);
   const title = path(['promo', 'headlines', 'headline'], pageData);
   const shortHeadline = path(['promo', 'headlines', 'shortHeadline'], pageData);
   const summary = path(['promo', 'summary'], pageData);
@@ -103,6 +103,13 @@ const PhotoGalleryPage = ({ pageData }) => {
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
+
+  // ATI
+  const { atiAnalytics } = metadata;
+  const atiData = {
+    ...atiAnalytics,
+    pageTitle: `${atiAnalytics.pageTitle} - ${brandName}`,
+  };
 
   const componentsToRender = {
     fauxHeadline,
@@ -166,7 +173,7 @@ const PhotoGalleryPage = ({ pageData }) => {
         aboutTags={aboutTags}
         imageLocator={indexImageLocator}
       />
-      <ATIAnalytics data={pageData} />
+      <ATIAnalytics atiData={atiData} />
       <ChartbeatAnalytics title={title} />
       <ComscoreAnalytics />
 

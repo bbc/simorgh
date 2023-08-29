@@ -35,16 +35,19 @@ export const getArticleManifestRegex = services => {
 };
 
 const homePageServices = [
+  'afaanoromoo',
+  'amharic',
   'azeri',
   'burmese',
   'gujarati',
   'igbo',
   'kyrgyz',
   'pidgin',
+  'tigrinya',
   'yoruba',
 ];
 
-const servicesWithVariants = ['serbian', 'ukchina', 'zhongwen'];
+const servicesWithVariants = ['hausa', 'serbian', 'ukchina', 'zhongwen'];
 
 export const getFrontPageRegex = services => {
   let frontPages = services;
