@@ -170,7 +170,9 @@ module.exports = ({
               return [
                 'shared',
                 chunkName === 'russian-ukrainian' ? chunkName : cryptoName,
-              ].join('-').replace(/[=\+\/]/g, '');
+              ]
+                .join('-')
+                .replace(/[=+\/]/g, '');
             },
             priority: 10,
             minChunks: 2,
