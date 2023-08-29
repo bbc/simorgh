@@ -543,7 +543,7 @@ describe('frontPage -> homePage migration', () => {
 
   const serviceToRoute = service => `/${service}`;
 
-  const servicesWithVariants = ['serbian', 'ukchina', 'zhongwen'];
+  const servicesWithVariants = ['hausa', 'serbian', 'ukchina', 'zhongwen'];
   const servicesWithVariantsRoutes = servicesWithVariants.map(serviceToRoute);
 
   const servicesWithoutVariantsRoutes = worldServices
@@ -551,12 +551,15 @@ describe('frontPage -> homePage migration', () => {
     .map(serviceToRoute);
 
   const migratedServices = [
+    'afaanoromoo',
+    'amharic',
     'azeri',
     'burmese',
     'gujarati',
     'igbo',
     'kyrgyz',
     'pidgin',
+    'tigrinya',
     'yoruba',
   ];
   const migratedWorldServiceRoutes = migratedServices.map(serviceToRoute);
