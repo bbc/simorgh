@@ -37,7 +37,7 @@ describe('RadioSchedule', () => {
   });
 
   describe('Event Tracking', () => {
-    const blockLevelEventTrackingData = {
+    const eventTrackingData = {
       componentName: 'radio-schedule',
     };
 
@@ -53,7 +53,7 @@ describe('RadioSchedule', () => {
         }),
       );
 
-      expect(viewTrackerSpy).toHaveBeenCalledWith(blockLevelEventTrackingData);
+      expect(viewTrackerSpy).toHaveBeenCalledWith(eventTrackingData);
     });
 
     it('should call the click tracking hook with the correct params', () => {
