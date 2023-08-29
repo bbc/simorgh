@@ -40,20 +40,7 @@ module.exports = () => ({
         smoke: false,
       },
       frontPage: {
-        environments: {
-          live: {
-            paths: ['/afaanoromoo'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/afaanoromoo'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/afaanoromoo'],
-            enabled: false,
-          },
-        },
+        environments: undefined,
         smoke: false,
       },
       liveRadio: {
@@ -493,20 +480,7 @@ module.exports = () => ({
         smoke: false,
       },
       frontPage: {
-        environments: {
-          live: {
-            paths: ['/amharic'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/amharic'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/amharic'],
-            enabled: false,
-          },
-        },
+        environments: undefined,
         smoke: false,
       },
       liveRadio: {
@@ -7566,20 +7540,7 @@ module.exports = () => ({
         smoke: false,
       },
       frontPage: {
-        environments: {
-          live: {
-            paths: ['/tigrinya'],
-            enabled: true,
-          },
-          test: {
-            paths: ['/tigrinya'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/tigrinya'],
-            enabled: false,
-          },
-        },
+        environments: undefined,
         smoke: false,
       },
       liveRadio: {
