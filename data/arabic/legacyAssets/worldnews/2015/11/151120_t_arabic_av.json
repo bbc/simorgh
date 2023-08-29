@@ -28,7 +28,8 @@
         "analyticsLabels": {
           "cps_asset_type": "map",
           "cps_asset_id": "17694217",
-          "contentId": "urn:bbc:topcat:curie:asset:22d6ef3c-8f6e-11e5-b707-b2517c19ac20"
+          "contentId": "urn:bbc:topcat:curie:asset:22d6ef3c-8f6e-11e5-b707-b2517c19ac20",
+          "page": "arabic.worldnews.2015.11.151120_t_arabic_av.page"
         },
         "passport": {
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Arabic",
@@ -41,7 +42,20 @@
           "paragraph"
         ],
         "includeComments": false,
-        "atiAnalytics": {},
+        "atiAnalytics": {
+          "campaigns": null,
+          "categoryName": null,
+          "contentId": "urn:bbc:topcat:curie:asset:22d6ef3c-8f6e-11e5-b707-b2517c19ac20",
+          "contentType": "article-media-asset",
+          "language": "ar",
+          "ldpThingIds": null,
+          "ldpThingLabels": null,
+          "pageIdentifier": "worldnews::arabic.worldnews.2015.11.151120_t_arabic_av.page",
+          "pageTitle": "شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها",
+          "producerId": null,
+          "timePublished": "2015-11-20T10:09:33.000Z",
+          "timeUpdated": "2015-11-20T10:09:33.000Z"
+        },
         "readTime": 1,
         "siteUri": "/arabic",
         "mediaType": "video",

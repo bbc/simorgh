@@ -2,17 +2,18 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { renderHook } from '@testing-library/react-hooks';
-import { render, act, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { waitFor } from '@testing-library/dom';
-import { RequestContextProvider } from '#contexts/RequestContext';
-import { ToggleContextProvider } from '#contexts/ToggleContext';
-import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import * as trackingToggle from '#hooks/useTrackingToggle';
 import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import {
+  AllTheProviders,
+  render,
+  renderHook,
+  act,
+  fireEvent,
+} from '../../components/react-testing-library-with-providers';
 import pidginData from './fixtureData/tori-51745682.json';
 import useClickTrackerHandler from '.';
 
@@ -43,26 +44,18 @@ const defaultToggles = {
   },
 };
 
-const WithContexts = ({ pageData, children, toggles = defaultToggles }) => (
-  <RequestContextProvider
+const wrapper = ({ children }) => (
+  <AllTheProviders
     bbcOrigin="https://www.test.bbc.com"
+    pageData={pidginData}
     pageType={STORY_PAGE}
     isAmp={false}
     service="pidgin"
     pathname="/pidgin/tori-51745682"
+    toggles={defaultToggles}
   >
-    <ServiceContextProvider service="pidgin">
-      <ToggleContextProvider toggles={toggles}>
-        <EventTrackingContextProvider data={pageData}>
-          {children}
-        </EventTrackingContextProvider>
-      </ToggleContextProvider>
-    </ServiceContextProvider>
-  </RequestContextProvider>
-);
-
-const wrapper = ({ children }) => (
-  <WithContexts pageData={pidginData}>{children}</WithContexts>
+    {children}
+  </AllTheProviders>
 );
 
 const TestComponent = ({ hookProps }) => {
@@ -111,12 +104,19 @@ describe('Click tracking', () => {
   });
 
   it('should send a single tracking request on click', async () => {
+    const {
+      metadata: { atiAnalytics },
+    } = pidginData;
+
     const spyFetch = jest.spyOn(global, 'fetch');
-    const { getByTestId } = render(
-      <WithContexts pageData={pidginData}>
-        <TestComponent hookProps={defaultProps} />
-      </WithContexts>,
-    );
+    const { getByTestId } = render(<TestComponent hookProps={defaultProps} />, {
+      atiData: atiAnalytics,
+      pageData: pidginData,
+      pageType: STORY_PAGE,
+      pathname: '/pidgin',
+      service: 'pidgin',
+      toggles: defaultToggles,
+    });
 
     expect(spyFetch).not.toHaveBeenCalled();
 
@@ -150,12 +150,18 @@ describe('Click tracking', () => {
 
   it('should not send a tracking request if the toggle is disabled', async () => {
     trackingToggleSpy.mockImplementationOnce(() => false);
+    const {
+      metadata: { atiAnalytics },
+    } = pidginData;
 
-    const { getByTestId } = render(
-      <WithContexts pageData={pidginData}>
-        <TestComponent hookProps={defaultProps} />
-      </WithContexts>,
-    );
+    const { getByTestId } = render(<TestComponent hookProps={defaultProps} />, {
+      atiData: atiAnalytics,
+      pageData: pidginData,
+      pageType: STORY_PAGE,
+      pathname: '/pidgin',
+      service: 'pidgin',
+      toggles: defaultToggles,
+    });
 
     await act(() => userEvent.click(getByTestId('test-component')));
 
@@ -163,11 +169,18 @@ describe('Click tracking', () => {
   });
 
   it('should send tracking request on click of child element (button)', async () => {
-    const { getByText } = render(
-      <WithContexts pageData={pidginData}>
-        <TestComponent hookProps={defaultProps} />
-      </WithContexts>,
-    );
+    const {
+      metadata: { atiAnalytics },
+    } = pidginData;
+
+    const { getByText } = render(<TestComponent hookProps={defaultProps} />, {
+      atiData: atiAnalytics,
+      pageData: pidginData,
+      pageType: STORY_PAGE,
+      pathname: '/pidgin',
+      service: 'pidgin',
+      toggles: defaultToggles,
+    });
 
     await act(() => userEvent.click(getByText('Button')));
 
@@ -198,6 +211,10 @@ describe('Click tracking', () => {
       componentName: 'header',
     };
 
+    const {
+      metadata: { atiAnalytics },
+    } = pidginData;
+
     const TestComponentContainer = () => {
       const handleClick = useClickTrackerHandler(parentHookProps);
 
@@ -208,11 +225,14 @@ describe('Click tracking', () => {
       );
     };
 
-    const { getByText } = render(
-      <WithContexts pageData={pidginData}>
-        <TestComponentContainer />
-      </WithContexts>,
-    );
+    const { getByText } = render(<TestComponentContainer />, {
+      atiData: atiAnalytics,
+      pageData: pidginData,
+      pageType: STORY_PAGE,
+      pathname: '/pidgin',
+      service: 'pidgin',
+      toggles: defaultToggles,
+    });
 
     await act(() => userEvent.click(getByText('Button')));
 
@@ -243,14 +263,24 @@ describe('Click tracking', () => {
   it('should allow the user to navigate after clicking on a tracked link even if the tracking request fails', async () => {
     const url = 'https://bbc.com/pidgin';
 
+    const {
+      metadata: { atiAnalytics },
+    } = pidginData;
+
     global.fetch = jest.fn(() => {
       throw new Error('Failed to fetch');
     });
 
     const { getByText } = render(
-      <WithContexts pageData={pidginData}>
-        <TestComponentSingleLink hookProps={{ ...defaultProps, href: url }} />
-      </WithContexts>,
+      <TestComponentSingleLink hookProps={{ ...defaultProps, href: url }} />,
+      {
+        atiData: atiAnalytics,
+        pageData: pidginData,
+        pageType: STORY_PAGE,
+        pathname: '/pidgin',
+        service: 'pidgin',
+        toggles: defaultToggles,
+      },
     );
 
     await act(() => userEvent.click(getByText('Link')));
@@ -265,11 +295,18 @@ describe('Click tracking', () => {
   });
 
   it('should not send tracking request on right click', () => {
-    const { getByText } = render(
-      <WithContexts pageData={pidginData}>
-        <TestComponent hookProps={defaultProps} />
-      </WithContexts>,
-    );
+    const {
+      metadata: { atiAnalytics },
+    } = pidginData;
+
+    const { getByText } = render(<TestComponent hookProps={defaultProps} />, {
+      atiData: atiAnalytics,
+      pageData: pidginData,
+      pageType: STORY_PAGE,
+      pathname: '/pidgin',
+      service: 'pidgin',
+      toggles: defaultToggles,
+    });
 
     act(() => {
       fireEvent.contextMenu(getByText('Button'));
@@ -280,12 +317,22 @@ describe('Click tracking', () => {
 
   it('should not navigate to the next page if preventNavigation is true', async () => {
     const url = 'https://bbc.com/pidgin';
+    const {
+      metadata: { atiAnalytics },
+    } = pidginData;
+
     const { getByText } = render(
-      <WithContexts pageData={pidginData}>
-        <TestComponent
-          hookProps={{ ...defaultProps, href: url, preventNavigation: true }}
-        />
-      </WithContexts>,
+      <TestComponent
+        hookProps={{ ...defaultProps, href: url, preventNavigation: true }}
+      />,
+      {
+        atiData: atiAnalytics,
+        pageData: pidginData,
+        pageType: STORY_PAGE,
+        pathname: '/pidgin',
+        service: 'pidgin',
+        toggles: defaultToggles,
+      },
     );
 
     await act(() => userEvent.click(getByText('Link')));
@@ -298,10 +345,20 @@ describe('Click tracking', () => {
   it('should be able to override the campaignID that is sent to ATI', async () => {
     const spyFetch = jest.spyOn(global, 'fetch');
     const campaignID = 'custom-campaign';
+    const {
+      metadata: { atiAnalytics },
+    } = pidginData;
+
     const { getByTestId } = render(
-      <WithContexts pageData={pidginData}>
-        <TestComponent hookProps={{ ...defaultProps, campaignID }} />
-      </WithContexts>,
+      <TestComponent hookProps={{ ...defaultProps, campaignID }} />,
+      {
+        atiData: atiAnalytics,
+        pageData: pidginData,
+        pageType: STORY_PAGE,
+        pathname: '/pidgin',
+        service: 'pidgin',
+        toggles: defaultToggles,
+      },
     );
 
     await act(() => userEvent.click(getByTestId('test-component')));
@@ -327,11 +384,20 @@ describe('Click tracking', () => {
         user: { attributes: mockAttributes, id: mockUserId },
       },
     };
+    const {
+      metadata: { atiAnalytics },
+    } = pidginData;
 
     const { getByTestId } = render(
-      <WithContexts pageData={pidginData}>
-        <TestComponent hookProps={{ ...defaultProps, ...mockOptimizely }} />
-      </WithContexts>,
+      <TestComponent hookProps={{ ...defaultProps, ...mockOptimizely }} />,
+      {
+        atiData: atiAnalytics,
+        pageData: pidginData,
+        pageType: STORY_PAGE,
+        pathname: '/pidgin',
+        service: 'pidgin',
+        toggles: defaultToggles,
+      },
     );
 
     fireEvent.click(getByTestId('test-component'));
@@ -348,10 +414,20 @@ describe('Click tracking', () => {
     const mockOptimizelyTrack = jest.fn();
     const mockOptimizely = undefined;
 
+    const {
+      metadata: { atiAnalytics },
+    } = pidginData;
+
     const { getByTestId } = render(
-      <WithContexts pageData={pidginData}>
-        <TestComponent hookProps={{ ...defaultProps, ...mockOptimizely }} />
-      </WithContexts>,
+      <TestComponent hookProps={{ ...defaultProps, ...mockOptimizely }} />,
+      {
+        atiData: atiAnalytics,
+        pageData: pidginData,
+        pageType: STORY_PAGE,
+        pathname: '/pidgin',
+        service: 'pidgin',
+        toggles: defaultToggles,
+      },
     );
 
     fireEvent.click(getByTestId('test-component'));
@@ -362,10 +438,20 @@ describe('Click tracking', () => {
 
 describe('Error handling', () => {
   it('should not throw error and not send event to ATI when no tracking data passed into hook', async () => {
+    const {
+      metadata: { atiAnalytics },
+    } = pidginData;
+
     const { container, getByText } = render(
-      <WithContexts pageData={pidginData}>
-        <TestComponent hookProps={undefined} />
-      </WithContexts>,
+      <TestComponent hookProps={undefined} />,
+      {
+        atiData: atiAnalytics,
+        pageData: pidginData,
+        pageType: STORY_PAGE,
+        pathname: '/pidgin',
+        service: 'pidgin',
+        toggles: defaultToggles,
+      },
     );
 
     await act(() => userEvent.click(getByText('Button')));
@@ -376,9 +462,15 @@ describe('Error handling', () => {
 
   it('should not throw error and not send event to ATI when no pageData is provided from context providers', async () => {
     const { container, getByText } = render(
-      <WithContexts pageData={undefined}>
-        <TestComponent hookProps={defaultProps} />
-      </WithContexts>,
+      <TestComponent hookProps={defaultProps} />,
+      {
+        atiData: undefined,
+        pageData: undefined,
+        pageType: STORY_PAGE,
+        pathname: '/pidgin',
+        service: 'pidgin',
+        toggles: defaultToggles,
+      },
     );
 
     await act(() => userEvent.click(getByText('Button')));
@@ -392,10 +484,20 @@ describe('Error handling', () => {
       foo: 'bar',
     };
 
+    const {
+      metadata: { atiAnalytics },
+    } = pidginData;
+
     const { container, getByText } = render(
-      <WithContexts pageData={pidginData}>
-        <TestComponent hookProps={trackingData} />
-      </WithContexts>,
+      <TestComponent hookProps={trackingData} />,
+      {
+        atiData: atiAnalytics,
+        pageData: pidginData,
+        pageType: STORY_PAGE,
+        pathname: '/pidgin',
+        service: 'pidgin',
+        toggles: defaultToggles,
+      },
     );
 
     await act(() => userEvent.click(getByText('Button')));
@@ -407,10 +509,20 @@ describe('Error handling', () => {
   it('should not throw error and not send event to ATI when unexpected data type passed into hook', async () => {
     const trackingData = ['unexpected data type'];
 
+    const {
+      metadata: { atiAnalytics },
+    } = pidginData;
+
     const { container, getByText } = render(
-      <WithContexts pageData={pidginData}>
-        <TestComponent hookProps={trackingData} />
-      </WithContexts>,
+      <TestComponent hookProps={trackingData} />,
+      {
+        atiData: atiAnalytics,
+        pageData: pidginData,
+        pageType: STORY_PAGE,
+        pathname: '/pidgin',
+        service: 'pidgin',
+        toggles: defaultToggles,
+      },
     );
 
     await act(() => userEvent.click(getByText('Button')));

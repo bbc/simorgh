@@ -16,8 +16,9 @@
     "semver": "7.5.4",
     "stylelint-config-recommended": "5.0.0",
     "uuid": "3.3.2",
+    "react-is": "16.13.1",
     "winston@3.8.2": "patch:winston@npm:3.8.2#.yarn/patches/winston-npm-3.8.2-2035e9cac4.patch",
-    "react-is": "16.13.1"
+    "ramda@0.28.0": "patch:ramda@npm:0.28.0#.yarn/patches/ramda-npm-0.28.0-6a5fe8f6cc.patch"
   },
   "workspaces": {
     "packages": [
@@ -114,7 +115,7 @@
     "morgan": "1.10.0",
     "path-to-regexp": "6.2.1",
     "polyfill-crypto.getrandomvalues": "1.0.0",
-    "ramda": "0.29.0",
+    "ramda": "patch:ramda@npm:0.28.0#./patches/ramda-npm-0.28.0-6a5fe8f6cc.patch",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-helmet": "6.1.0",
@@ -166,7 +167,7 @@
     "@types/js-cookie": "^3.0.3",
     "@types/jsdom": "^20.0.0",
     "@types/loadable__component": "5.13.4",
-    "@types/ramda": "0.29.3",
+    "@types/ramda": "0.28.15",
     "@types/react": "18.2.20",
     "@types/react-dom": "18.2.7",
     "@types/react-helmet": "6.1.6",
