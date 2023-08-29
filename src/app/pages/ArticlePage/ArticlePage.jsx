@@ -63,9 +63,11 @@ import SecondaryColumn from './SecondaryColumn';
 
 import styles from './ArticlePage.styles';
 import { getPromoHeadline } from '../../lib/analyticsUtils/article';
+import { head } from 'ramda';
 
 const ArticlePage = ({ pageData }) => {
-  const { isAmp, isApp, showAdsBasedOnLocation } = useContext(RequestContext);
+  const { isAmp, isApp, showAdsBasedOnLocation, headersTEST } =
+    useContext(RequestContext);
   const { articleAuthor, isTrustProjectParticipant, showRelatedTopics } =
     useContext(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
@@ -189,6 +191,18 @@ const ArticlePage = ({ pageData }) => {
     filterForBlockType(promoImageBlocks, 'rawImage'),
   );
 
+  const list = [];
+  const entries = Object.entries(headersTEST);
+  for (let i = 0; i < entries.length; i += 1) {
+    const [key, value] = entries[i];
+    list.push(
+      <div>
+        <span style={{ color: 'blue' }}>{key}</span> TO{' '}
+        <span style={{ color: 'red' }}>{value}</span>
+      </div>,
+    );
+  }
+
   return (
     <div css={styles.pageWrapper}>
       <ATIAnalytics atiData={atiAnalytics} />
@@ -231,6 +245,7 @@ const ArticlePage = ({ pageData }) => {
       <div css={styles.grid}>
         <div css={styles.primaryColumn}>
           <main css={styles.mainContent} role="main">
+            <div>{list}</div>
             <Blocks
               blocks={articleBlocks}
               componentsToRender={componentsToRender}

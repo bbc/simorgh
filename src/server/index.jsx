@@ -220,6 +220,8 @@ server.get(
       data.path = urlPath;
       data.timeOnServer = Date.now();
       data.showAdsBasedOnLocation = headers['bbc-adverts'] === 'true';
+      data.isUK = headers.is_uk;
+      data.headersTEST = headers;
 
       let { status } = data;
       // Set derivedPageType based on returned page data

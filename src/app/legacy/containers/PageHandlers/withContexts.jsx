@@ -29,6 +29,8 @@ const WithContexts = Component => {
       pageData,
       showAdsBasedOnLocation,
       mvtExperiments,
+      // eslint-disable-next-line react/prop-types
+      headersTEST,
       isNextJs,
     } = props;
 
@@ -56,6 +58,7 @@ const WithContexts = Component => {
             timeOnServer={timeOnServer}
             showAdsBasedOnLocation={showAdsBasedOnLocation}
             mvtExperiments={mvtExperiments}
+            headersTEST={headersTEST}
             isNextJs={isNextJs}
           >
             <EventTrackingContextProvider

@@ -62,6 +62,7 @@ type RequestProviderProps = {
   timeOnServer?: number | null;
   mvtExperiments?: MvtExperiment[] | null;
   variant?: Variants | null;
+  headersTEST: unknown;
 };
 
 export const RequestContextProvider = ({
@@ -81,6 +82,7 @@ export const RequestContextProvider = ({
   statusCode = null,
   timeOnServer = null,
   variant = null,
+  headersTEST = null,
 }: PropsWithChildren<RequestProviderProps>) => {
   const { isUK, origin } = getOriginContext(bbcOrigin);
   const env: Environments = getEnv(origin);
@@ -130,6 +132,7 @@ export const RequestContextProvider = ({
     pathname,
     ...getMetaUrls(origin, pathname),
     mvtExperiments,
+    headersTEST,
   };
 
   return (
