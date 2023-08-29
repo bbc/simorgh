@@ -52,7 +52,8 @@ const StyledRadioScheduleContainer = styled(RadioScheduleContainer)`
 `;
 
 const IdxPage = ({ pageData, radioScheduleEndpointOverride }) => {
-  const { mostRead, lang, radioSchedule } = useContext(ServiceContext);
+  const { brandName, mostRead, lang, radioSchedule } =
+    useContext(ServiceContext);
 
   const groups = path(['content', 'groups'], pageData);
   const title = path(['metadata', 'title'], pageData);
@@ -64,6 +65,15 @@ const IdxPage = ({ pageData, radioScheduleEndpointOverride }) => {
   const radioScheduleIdxPosition = path(['idxPagePosition'], radioSchedule);
 
   const { mostRead: mostReadInitialData } = pageData;
+
+  // ATI
+  const {
+    metadata: { atiAnalytics },
+  } = pageData;
+  const atiData = {
+    ...atiAnalytics,
+    pageTitle: `${atiAnalytics.pageTitle} - ${brandName}`,
+  };
 
   const renderMostRead = () => (
     <IdxMostReadSection>
@@ -77,7 +87,7 @@ const IdxPage = ({ pageData, radioScheduleEndpointOverride }) => {
 
   return (
     <>
-      <ATIAnalytics data={pageData} />
+      <ATIAnalytics atiData={atiData} />
       <ChartbeatAnalytics title={title} />
       <ComscoreAnalytics />
       <MetadataContainer
