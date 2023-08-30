@@ -62,6 +62,7 @@ type RequestProviderProps = {
   timeOnServer?: number | null;
   mvtExperiments?: MvtExperiment[] | null;
   variant?: Variants | null;
+  isUK: boolean;
 };
 
 export const RequestContextProvider = ({
@@ -81,8 +82,9 @@ export const RequestContextProvider = ({
   statusCode = null,
   timeOnServer = null,
   variant = null,
+  isUK,
 }: PropsWithChildren<RequestProviderProps>) => {
-  const { isUK, origin } = getOriginContext(bbcOrigin);
+  const { origin } = getOriginContext(bbcOrigin);
   const env: Environments = getEnv(origin);
 
   const getPlatform = (): Platforms => {

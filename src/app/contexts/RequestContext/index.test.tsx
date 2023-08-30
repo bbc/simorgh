@@ -36,7 +36,6 @@ jest.mock('./getMetaUrls');
   'getStatsPageIdentifier',
 );
 (getOriginContext.default as jest.Mock).mockReturnValue({
-  isUK: true,
   origin: 'origin',
 });
 (getEnv.default as jest.Mock).mockReturnValue('getEnv');
@@ -61,6 +60,7 @@ const input = {
   variant: 'simp',
   showAdsBasedOnLocation: true,
   mvtExperiments: [{ experimentName: 'foo', variation: 'bar' }],
+  isUK: true,
 };
 
 const expectedOutput = {

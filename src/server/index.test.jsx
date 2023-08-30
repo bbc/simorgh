@@ -103,7 +103,10 @@ jest.mock('./utilities/mvtHeader');
 
 const renderDocumentSpy = jest.spyOn(renderDocument, 'default');
 
-const makeRequest = async requestPath => request(server).get(requestPath);
+const makeRequest = async (requestPath, headers = {}) =>
+  request(server)
+    .get(requestPath)
+    .set('x-bbc-edge-isuk', headers['x-bbc-edge-isuk'] ?? 'no');
 
 const QUERY_STRING = '?param=test&query=1';
 
@@ -1499,6 +1502,40 @@ describe('Server HTTP Headers - Page Endpoints', () => {
     const { header } = await makeRequest('/mundo/articles/c0000000001o');
 
     expect(header.vary).toBe('Accept-Encoding');
+  });
+
+  it(`should set isUK value to true when 'x-bbc-edge-isuk' is set to 'yes'`, async () => {
+    mockRouteProps({
+      dataResponse: successDataResponse,
+      isAmp: true,
+    });
+    getMvtVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
+
+    await makeRequest('/mundo/articles/c0000000001o', {
+      'x-bbc-edge-isuk': 'yes',
+    });
+
+    expect(renderDocumentSpy).toHaveBeenCalledWith(
+      expect.objectContaining({
+        data: expect.objectContaining({ isUK: true }),
+      }),
+    );
+  });
+
+  it(`should set isUK value to false when 'x-bbc-edge-isuk' is NOT 'yes'`, async () => {
+    mockRouteProps({
+      dataResponse: successDataResponse,
+      isAmp: true,
+    });
+    getMvtVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
+
+    await makeRequest('/mundo/articles/c0000000001o');
+
+    expect(renderDocumentSpy).toHaveBeenCalledWith(
+      expect.objectContaining({
+        data: expect.objectContaining({ isUK: false }),
+      }),
+    );
   });
 });
 
