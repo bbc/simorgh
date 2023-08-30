@@ -32,6 +32,7 @@ const Context = ({ children, service }: LinkedDataWithContext) => (
       pathname="/pathname"
       service="news"
       statusCode={200}
+      isUK
     >
       {children}
     </RequestContextProvider>

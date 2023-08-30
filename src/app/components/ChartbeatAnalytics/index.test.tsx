@@ -48,6 +48,7 @@ const ContextWrap = ({
     statusCode={200}
     bbcOrigin={origin}
     pathname="/pathname"
+    isUK
   >
     <ServiceContextProvider service="news">
       <ToggleContext.Provider

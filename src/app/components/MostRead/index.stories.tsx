@@ -38,6 +38,7 @@ const Component = ({
         statusCode={200}
         pathname={`/${service}`}
         variant={variant}
+        isUK
       >
         <ServiceContextProvider service={service} variant={variant}>
           <MostRead data={data} size={size} columnLayout={columnLayout} />

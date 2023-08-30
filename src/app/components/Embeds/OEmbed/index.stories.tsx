@@ -24,6 +24,7 @@ const Component = ({
     pathname="/pathname"
     service={service}
     statusCode={200}
+    isUK
   >
     <ServiceContextProvider service={service}>
       <OEmbedLoader {...props} />

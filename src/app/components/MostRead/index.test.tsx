@@ -58,6 +58,7 @@ const MostReadWithContext = ({
       pathname={`/${service}`}
       variant={variant}
       isApp={false}
+      isUK
     >
       <ServiceContextProvider service={service} variant={variant}>
         <MostRead data={data} />
