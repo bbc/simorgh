@@ -41,8 +41,13 @@ const TestComponent = () => {
 
 describe('Expected use', () => {
   it('should provide tracking data to all child components', () => {
+    const {
+      metadata: { atiAnalytics },
+    } = fixtureData;
+
     render(<TestComponent />, {
       pageData: fixtureData,
+      atiData: atiAnalytics,
       service: 'pidgin',
       toggles: defaultToggles,
       pageType: STORY_PAGE,
