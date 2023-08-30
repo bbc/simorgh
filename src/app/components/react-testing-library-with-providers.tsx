@@ -74,6 +74,7 @@ const AllTheProviders: FC<Props> = ({
           derivedPageType={derivedPageType}
           showAdsBasedOnLocation={showAdsBasedOnLocation}
           statusCode={statusCode}
+          isUK
         >
           <EventTrackingContextProvider data={pageData} atiData={atiData}>
             <UserContextProvider>

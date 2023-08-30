@@ -24,6 +24,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
       status: 404,
       timeOnServer: Date.now(), // TODO: check if needed? See https://github.com/bbc/simorgh/pull/10857/files#r1200274478
       variant: variant?.[0] || null,
+      isUK: reqHeaders['x-bbc-edge-isuk'] === 'yes',
     },
   };
 };

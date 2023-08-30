@@ -140,6 +140,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
       timeOnServer: Date.now(), // TODO: check if needed?
       toggles,
       variant: variant?.[0] || null,
+      isUK: reqHeaders['x-bbc-edge-isuk'] === 'yes',
     },
   };
 };
