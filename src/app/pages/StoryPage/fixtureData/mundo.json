@@ -3,6 +3,26 @@
     "firstPublished": 1580745507000,
     "lastPublished": 1582107805000,
     "lastUpdated": 1582107815082,
+    "atiAnalytics": {
+      "campaigns": [
+        {
+          "campaignId": "5ad86270c93a9f000eecb255",
+          "campaignName": "Amuse me"
+        }
+      ],
+      "categoryName": "News",
+      "contentId": "urn:bbc:cps:curie:asset:f776ad93-e486-b14a-b5ea-55955dd0644f",
+      "contentType": "article",
+      "language": "es",
+      "ldpThingIds": "0239ab33-1cfc-4f5d-babb-a8159711af3e~e7539dc8-5cfb-413a-b4fe-0ad77bc665aa",
+      "ldpThingLabels": "Life~Fake+news",
+      "pageIdentifier": "mundo.story.23263889.page",
+      "pageTitle": "WS STY TEST - Full Headline",
+      "producerId": null,
+      "timePublished": "2020-02-03T15:58:27.000Z",
+      "timeUpdated": "2020-05-06T11:02:07.000Z",
+      "producerName": "MUNDO"
+    },
     "id": "urn:bbc:ares::asset:mundo/23263889",
     "locators": {
       "assetUri": "/mundo/23263889",
@@ -31,9 +51,12 @@
       "allowPrintingSharingLinks": true
     },
     "analyticsLabels": {
-      "cps_asset_type": "sty",
+      "ldp_tags": "Life~Fake+news",
+      "cps_asset_id": "23263889",
+      "ldp_ids": "0239ab33-1cfc-4f5d-babb-a8159711af3e~e7539dc8-5cfb-413a-b4fe-0ad77bc665aa",
+      "contentId": "urn:bbc:cps:curie:asset:f776ad93-e486-b14a-b5ea-55955dd0644f",
       "counterName": "mundo.story.23263889.page",
-      "cps_asset_id": "23263889"
+      "cps_asset_type": "sty"
     },
     "passport": {
       "category": {
