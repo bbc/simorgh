@@ -72,8 +72,12 @@ import {
 } from './types';
 
 const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
-  const { articleAuthor, isTrustProjectParticipant, showRelatedTopics } =
-    useContext(ServiceContext);
+  const {
+    articleAuthor,
+    brandName,
+    isTrustProjectParticipant,
+    showRelatedTopics,
+  } = useContext(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
 
   const {
@@ -171,15 +175,23 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
     filterForBlockType(promoImageBlocks, 'rawImage'),
   );
 
+  // ATI
+  const {
+    metadata: { atiAnalytics },
+  } = pageData;
+  const atiData = {
+    ...atiAnalytics,
+    pageTitle: `${atiAnalytics.pageTitle} - ${brandName}`,
+  };
+
   return (
     <div css={styles.pageWrapper}>
-      <ATIAnalytics data={pageData} />
+      <ATIAnalytics atiData={atiData} />
       <ChartbeatAnalytics
         categoryName={pageData?.metadata?.passport?.category?.categoryName}
         title={headline}
         taggings={taggings}
         producer={pageData?.metadata?.analyticsLabels?.producer}
-        chapter={pageData?.metadata?.atiAnalytics?.chapter}
       />
       <ComscoreAnalytics />
       <NielsenAnalytics />
