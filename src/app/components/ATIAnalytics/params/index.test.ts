@@ -140,6 +140,21 @@ const articlePageAnalyticsData: ATIData = {
   timeUpdated: '2023-07-19T15:57:54.500Z',
 };
 
+const mediaArticlePageAnalyticsData: ATIData = {
+  categoryName: 'Environment~Narendra+Modi~Nature~India~Severe+weather',
+  contentId: 'urn:bbc:optimo:asset:c4nrpd0d4nro',
+  contentType: 'article-sfv',
+  language: 'ha',
+  ldpThingIds:
+    '0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f~103fc7e4-3a8d-491c-9a75-3c37c299d48f~12e69b92-a7ba-4463-84e0-be107b9805d0~5a08f030-710f-4168-acee-67294a90fc75~9b16a6c2-7c16-42b7-bff7-6549579622e8',
+  ldpThingLabels: 'Environment~Narendra+Modi~Nature~India~Severe+weather',
+  nationsProducer: null,
+  pageIdentifier: 'hausa.articles.c4nrpd0d4nro.page',
+  pageTitle: 'Kalli yadda ambaliya ta tagayyara wani yanki na Indiya',
+  timePublished: '2023-07-11T17:42:48.771Z',
+  timeUpdated: '2023-07-11T17:42:48.771Z',
+};
+
 const cpsMAPPageAnalyticsData: ATIData = {
   campaigns: [
     {
@@ -183,6 +198,22 @@ const cpsPGLPageAnalyticsData: ATIData = {
   producerName: 'MUNDO',
   timePublished: '2016-08-07T09:21:02.000Z',
   timeUpdated: '2016-08-07T09:21:02.000Z',
+};
+
+const idxPageAnalyticsData: ATIData = {
+  campaigns: null,
+  categoryName: null,
+  contentId: 'urn:bbc:cps:631e99d6-c1c4-73b7-e050-17ac8045512e',
+  contentType: 'index-section',
+  language: 'sr-Cyrl',
+  ldpThingIds: null,
+  ldpThingLabels: null,
+  pageIdentifier: 'serbiancyr.page',
+  pageTitle: 'Почетна страна - BBC News на српском',
+  producerId: null,
+  timePublished: '2018-01-19T14:09:41.000Z',
+  timeUpdated: '2023-08-31T16:48:38.000Z',
+  producerName: 'SERBIAN',
 };
 
 describe('ATIAnalytics params', () => {
@@ -230,7 +261,7 @@ describe('ATIAnalytics params', () => {
     it('should return the correct media article url', () => {
       const url = buildATIUrl({
         requestContext: { ...requestContext, pageType: MEDIA_ARTICLE_PAGE },
-        data: article,
+        atiData: mediaArticlePageAnalyticsData,
         serviceContext,
       });
 
@@ -241,26 +272,25 @@ describe('ATIAnalytics params', () => {
       expect(parsedATIParams).toEqual({
         s: '598285',
         s2: 'atiAnalyticsProducerId',
-        p: 'pidgin.articles.//www.bbc.co.uk.page',
+        p: 'hausa.articles.c4nrpd0d4nro.page',
         r: '0x0x24x24',
         re: '1024x768',
         hl: '00-00-00',
         lng: 'en-US',
-        x1: '[urn:bbc:optimo:asset:54321]',
+        x1: '[urn:bbc:optimo:asset:c4nrpd0d4nro]',
         x2: '[responsive]',
         x3: '[atiAnalyticsAppName]',
-        x4: '[language]',
+        x4: '[ha]',
         x5: '[http%3A%2F%2Flocalhost%2F]',
         x6: '[originhttp%3A%2F%2Fwww.example.com]',
         x7: '[article-sfv]',
         x8: '[simorgh]',
-        x9: '[pageTitle]',
-        x10: '[scotland]',
-        x11: '[1970-01-01T00:00:00.000Z]',
-        x12: '[1970-01-01T00:00:00.000Z]',
-        x13: '[thing%20english%20label%201~thing%20english%20label%202]',
-        x14: '[thing%20id%201~thing%20id%202]',
-        x17: '[thing%20english%20label%201~thing%20english%20label%202]',
+        x9: '[Kalli%20yadda%20ambaliya%20ta%20tagayyara%20wani%20yanki%20na%20Indiya]',
+        x11: '[2023-07-11T17:42:48.771Z]',
+        x12: '[2023-07-11T17:42:48.771Z]',
+        x13: '[Environment~Narendra+Modi~Nature~India~Severe+weather]',
+        x14: '[0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f~103fc7e4-3a8d-491c-9a75-3c37c299d48f~12e69b92-a7ba-4463-84e0-be107b9805d0~5a08f030-710f-4168-acee-67294a90fc75~9b16a6c2-7c16-42b7-bff7-6549579622e8]',
+        x17: '[Environment~Narendra+Modi~Nature~India~Severe+weather]',
         ref: 'originhttp://www.example.com',
       });
     });
@@ -300,7 +330,7 @@ describe('ATIAnalytics params', () => {
     it('should return the correct IDX page url', () => {
       const url = buildATIUrl({
         requestContext: { ...requestContext, pageType: INDEX_PAGE },
-        data: idxPage,
+        atiData: idxPageAnalyticsData,
         serviceContext,
       });
 
@@ -311,21 +341,23 @@ describe('ATIAnalytics params', () => {
       expect(parsedATIParams).toEqual({
         s: '598285',
         s2: 'atiAnalyticsProducerId',
-        p: 'service.page.idxpage',
+        p: 'serbiancyr.page',
         r: '0x0x24x24',
         re: '1024x768',
         hl: '00-00-00',
         lng: 'en-US',
-        x1: '[urn:bbc:cps:00000000-0000-0000-0000-000000000000]',
+        x1: '[urn:bbc:cps:631e99d6-c1c4-73b7-e050-17ac8045512e]',
         x2: '[responsive]',
         x3: '[atiAnalyticsAppName]',
-        x4: '[language]',
+        x4: '[sr-Cyrl]',
         x5: '[http%3A%2F%2Flocalhost%2F]',
+        x6: '[originhttp%3A%2F%2Fwww.example.com]',
         x7: '[index-section]',
         x8: '[simorgh]',
-        x9: '[title%20-%20brandName]',
-        x11: '[1970-01-01T00:00:00.000Z]',
-        x12: '[1970-01-01T00:00:00.000Z]',
+        x9: '[Почетна%20страна%20-%20BBC%20News%20на%20српском]',
+        x11: '[2018-01-19T14:09:41.000Z]',
+        x12: '[2023-08-31T16:48:38.000Z]',
+        ref: 'originhttp://www.example.com',
       });
     });
 
@@ -599,31 +631,32 @@ describe('ATIAnalytics params', () => {
     it('should return the correct media article params', () => {
       const params = buildATIEventTrackingParams({
         requestContext: { ...requestContext, pageType: MEDIA_ARTICLE_PAGE },
-        data: article,
+        atiData: mediaArticlePageAnalyticsData,
         serviceContext,
       });
       expect(params).toEqual({
         appName: 'atiAnalyticsAppName',
-        contentId: 'urn:bbc:optimo:asset:54321',
+        campaigns: undefined,
+        categoryName: 'Environment~Narendra+Modi~Nature~India~Severe+weather',
+        contentId: 'urn:bbc:optimo:asset:c4nrpd0d4nro',
         contentType: 'article-sfv',
-        categoryName: 'thing%20english%20label%201~thing%20english%20label%202',
         isUK: false,
-        language: 'language',
-        ldpThingIds: 'thing%20id%201~thing%20id%202',
-        ldpThingLabels:
-          'thing%20english%20label%201~thing%20english%20label%202',
+        language: 'ha',
+        ldpThingIds:
+          '0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f~103fc7e4-3a8d-491c-9a75-3c37c299d48f~12e69b92-a7ba-4463-84e0-be107b9805d0~5a08f030-710f-4168-acee-67294a90fc75~9b16a6c2-7c16-42b7-bff7-6549579622e8',
+        ldpThingLabels: 'Environment~Narendra+Modi~Nature~India~Severe+weather',
         origin: 'origin',
-        pageIdentifier: 'pidgin.articles.//www.bbc.co.uk.page',
-        pageTitle: 'pageTitle',
+        pageIdentifier: 'hausa.articles.c4nrpd0d4nro.page',
+        pageTitle: 'Kalli yadda ambaliya ta tagayyara wani yanki na Indiya',
         libraryVersion: 'simorgh',
+        nationsProducer: null,
         platform: 'canonical',
         previousPath: 'http://www.example.com',
         producerId: 'atiAnalyticsProducerId',
         service: 'pidgin',
         statsDestination: 'statsDestination',
-        timePublished: analyticsUtils.getPublishedDatetime(),
-        timeUpdated: analyticsUtils.getPublishedDatetime(),
-        nationsProducer: 'scotland',
+        timePublished: '2023-07-11T17:42:48.771Z',
+        timeUpdated: '2023-07-11T17:42:48.771Z',
       });
     });
 
@@ -653,23 +686,31 @@ describe('ATIAnalytics params', () => {
     it('should return the correct IDX page params', () => {
       const params = buildATIEventTrackingParams({
         requestContext: { ...requestContext, pageType: INDEX_PAGE },
-        data: idxPage,
+        atiData: idxPageAnalyticsData,
         serviceContext,
       });
       expect(params).toEqual({
         appName: 'atiAnalyticsAppName',
-        contentId: 'urn:bbc:cps:00000000-0000-0000-0000-000000000000',
+        campaigns: null,
+        categoryName: null,
+        contentId: 'urn:bbc:cps:631e99d6-c1c4-73b7-e050-17ac8045512e',
         contentType: 'index-section',
-        language: 'language',
-        pageIdentifier: 'service.page.idxpage',
-        pageTitle: 'title - brandName',
+        isUK: false,
+        language: 'sr-Cyrl',
+        ldpThingIds: null,
+        ldpThingLabels: null,
         libraryVersion: 'simorgh',
+        nationsProducer: undefined,
+        origin: 'origin',
+        pageIdentifier: 'serbiancyr.page',
+        pageTitle: 'Почетна страна - BBC News на српском',
         platform: 'canonical',
+        previousPath: 'http://www.example.com',
         producerId: 'atiAnalyticsProducerId',
         service: 'pidgin',
         statsDestination: 'statsDestination',
-        timePublished: '1970-01-01T00:00:00.000Z',
-        timeUpdated: '1970-01-01T00:00:00.000Z',
+        timePublished: '2018-01-19T14:09:41.000Z',
+        timeUpdated: '2023-08-31T16:48:38.000Z',
       });
     });
 
