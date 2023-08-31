@@ -38,7 +38,6 @@ const Component = ({
         service={service}
         pathname="/"
         pageType={STORY_PAGE}
-        isUK
       >
         <ToggleContextProvider
           toggles={{

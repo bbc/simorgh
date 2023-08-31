@@ -74,7 +74,6 @@ const renderContainer = (service: Services, pageData: ArticlePageType) => {
         pathname="/service/085965"
         service={service}
         statusCode={200}
-        isUK
       >
         <ToggleContext.Provider
           value={{ toggleState, toggleDispatch: jest.fn() }}

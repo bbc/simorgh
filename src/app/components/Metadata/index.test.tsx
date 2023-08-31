@@ -89,7 +89,6 @@ const MetadataWithContext = ({
       pathname={pathname}
       service={service}
       statusCode={200}
-      isUK
     >
       <MetadataContainer
         title={title}
