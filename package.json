@@ -179,7 +179,6 @@
     "babel-loader": "8.2.5",
     "babel-plugin-dynamic-import-node": "2.3.3",
     "babel-plugin-transform-react-remove-prop-types": "0.4.24",
-    "brotli-webpack-plugin": "1.1.0",
     "chalk": "5.0.1",
     "chromatic": "6.17.4",
     "cli-table": "0.3.11",
