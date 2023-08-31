@@ -62,7 +62,7 @@ type RequestProviderProps = {
   timeOnServer?: number | null;
   mvtExperiments?: MvtExperiment[] | null;
   variant?: Variants | null;
-  isUK: boolean;
+  isUK: boolean | null;
 };
 
 export const RequestContextProvider = ({
