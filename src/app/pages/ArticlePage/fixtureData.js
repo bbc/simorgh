@@ -177,13 +177,13 @@ export const articleDataNews = articleDataBuilder(
   false,
   blocksWithHeadlineAndText,
   {
-    categoryName: 'Royal%20Wedding%202018~Duchess%20of%20Sussex',
+    categoryName: 'Royal+Wedding+2018~Duchess+of+Sussex',
     contentId: 'urn:bbc:optimo:c0000000001o',
     contentType: 'article',
     language: 'en-gb',
     ldpThingIds:
       '2351f2b2-ce36-4f44-996d-c3c4f7f90eaa~803eaeb9-c0c3-4f1b-9a66-90efac3df2dc',
-    ldpThingLabels: 'Royal%20Wedding%202018~Duchess%20of%20Sussex',
+    ldpThingLabels: 'Royal+Wedding+2018~Duchess+of+Sussex',
     nationsProducer: null,
     pageIdentifier: 'news.articles.c0000000001o.page',
     pageTitle: 'Article Headline for SEO',
