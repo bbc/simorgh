@@ -62,6 +62,13 @@ exports[`Canonical Articles Footer Anchors should match text and url 8`] = `
 
 exports[`Canonical Articles Footer Anchors should match text and url 9`] = `
 {
+  "text": "Do not share or sell my info",
+  "url": "#",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 10`] = `
+{
   "text": "Read about our approach to external linking.",
   "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
 }

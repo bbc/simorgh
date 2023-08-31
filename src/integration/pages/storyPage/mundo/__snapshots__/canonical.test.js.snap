@@ -62,13 +62,6 @@ exports[`Canonical Story Page Footer Anchors should match text and url 7`] = `
 
 exports[`Canonical Story Page Footer Anchors should match text and url 8`] = `
 {
-  "text": "Do not share or sell my info",
-  "url": "#",
-}
-`;
-
-exports[`Canonical Story Page Footer Anchors should match text and url 9`] = `
-{
   "text": "Lee sobre nuestra postura acerca de enlaces externos.",
   "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
 }
