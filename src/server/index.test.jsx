@@ -104,9 +104,7 @@ jest.mock('./utilities/mvtHeader');
 const renderDocumentSpy = jest.spyOn(renderDocument, 'default');
 
 const makeRequest = async (requestPath, headers = {}) =>
-  request(server)
-    .get(requestPath)
-    .set('x-bbc-edge-isuk', headers['x-bbc-edge-isuk'] ?? 'no');
+  request(server).get(requestPath).set(headers);
 
 const QUERY_STRING = '?param=test&query=1';
 
@@ -1509,7 +1507,6 @@ describe('Server HTTP Headers - Page Endpoints', () => {
       dataResponse: successDataResponse,
       isAmp: true,
     });
-    getMvtVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
 
     await makeRequest('/mundo/articles/c0000000001o', {
       'x-bbc-edge-isuk': 'yes',
@@ -1522,18 +1519,54 @@ describe('Server HTTP Headers - Page Endpoints', () => {
     );
   });
 
-  it(`should set isUK value to false when 'x-bbc-edge-isuk' is NOT 'yes'`, async () => {
+  it(`should set isUK value to false when 'x-bbc-edge-isuk' is NOT 'no'`, async () => {
     mockRouteProps({
       dataResponse: successDataResponse,
       isAmp: true,
     });
     getMvtVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
 
-    await makeRequest('/mundo/articles/c0000000001o');
+    await makeRequest('/mundo/articles/c0000000001o', {
+      'x-bbc-edge-isuk': 'no',
+    });
 
     expect(renderDocumentSpy).toHaveBeenCalledWith(
       expect.objectContaining({
         data: expect.objectContaining({ isUK: false }),
+      }),
+    );
+  });
+
+  it(`should set isUK value to true when 'x-country' is set to 'gb' and 'x-bbc-edge-isuk' is not available`, async () => {
+    mockRouteProps({
+      dataResponse: successDataResponse,
+      isAmp: true,
+    });
+    getMvtVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
+
+    await makeRequest('/mundo/articles/c0000000001o', {
+      'x-country': 'gb',
+    });
+
+    expect(renderDocumentSpy).toHaveBeenCalledWith(
+      expect.objectContaining({
+        data: expect.objectContaining({ isUK: true }),
+      }),
+    );
+  });
+
+  it(`should set isUK value to null when 'x-country' and 'x-bbc-edge-isuk' is not available`, async () => {
+    mockRouteProps({
+      dataResponse: successDataResponse,
+      isAmp: true,
+    });
+    getMvtVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
+
+    await makeRequest('/mundo/articles/c0000000001o', {});
+
+    expect(renderDocumentSpy).toHaveBeenCalledWith(
+      expect.objectContaining({
+        data: expect.objectContaining({ isUK: null }),
       }),
     );
   });
