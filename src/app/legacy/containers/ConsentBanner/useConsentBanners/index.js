@@ -108,7 +108,7 @@ const setUserDidDismissCookieBanner = isUK =>
     sameSite: SAME_SITE_VALUE,
   });
 
-const useConsentBanner = (isUK = true) => {
+const useConsentBanner = (isUK = false) => {
   const [{ showPrivacyBanner, showCookieBanner }, dispatch] = useReducer(
     bannerReducer,
     initialState,

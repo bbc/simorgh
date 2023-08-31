@@ -82,7 +82,7 @@ export default function App({ Component, pageProps }: Props) {
           showAdsBasedOnLocation={showAdsBasedOnLocation}
           mvtExperiments={mvtExperiments}
           isNextJs={isNextJs}
-          isUK={isUK ?? true}
+          isUK={isUK ?? false}
         >
           <EventTrackingContextProvider data={pageData}>
             <UserContextProvider>

@@ -18,6 +18,7 @@ import getEnvironment from '#app/routes/utils/getEnvironment';
 import fetchPageData from '#app/routes/utils/fetchPageData';
 
 import LivePageLayout from './LivePageLayout';
+import extractHeaders from '../../../../utils/extractHeader';
 
 interface PageDataParams extends ParsedUrlQuery {
   id: string;
@@ -140,7 +141,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
       timeOnServer: Date.now(), // TODO: check if needed?
       toggles,
       variant: variant?.[0] || null,
-      isUK: reqHeaders['x-bbc-edge-isuk'] === 'yes',
+      ...extractHeaders(reqHeaders),
     },
   };
 };
