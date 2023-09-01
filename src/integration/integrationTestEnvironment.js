@@ -14,7 +14,7 @@ class IntegrationTestEnvironment extends JsdomEnvironment {
       service,
       runScripts = 'true',
       displayAds = 'false',
-      isInUK = 'false',
+      isInUK = 'no',
     } = context.docblockPragmas;
     const pageType = getPageTypeFromTestPath(context.testPath);
 
@@ -22,7 +22,7 @@ class IntegrationTestEnvironment extends JsdomEnvironment {
     this.service = service;
     this.runScripts = runScripts === 'true';
     this.displayAds = displayAds === 'true';
-    this.displayAds = isInUK === 'true';
+    this.isInUK = isInUK;
     this.url = `http://localhost:7080${pathname}${
       platform === 'amp' ? '.amp' : ''
     }`;
@@ -37,7 +37,7 @@ class IntegrationTestEnvironment extends JsdomEnvironment {
         runScripts: this.runScripts,
         headers: {
           ...(this.displayAds && { 'BBC-Adverts': 'true' }),
-          ...(this.isInUK && { 'x-bbc-edge-isuk': 'yes' }),
+          ...{ 'x-bbc-edge-isuk': this.isInUK },
         },
       });
 

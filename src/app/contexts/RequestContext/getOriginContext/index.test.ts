@@ -21,24 +21,11 @@ describe('getOriginContext', () => {
       assertion: 'should return defaults if no origin can be found',
     },
     {
-      bbcOrigin: 'https://foobar.com',
-      location: 'https://beepboop.co.uk',
-      expected: { origin: 'https://foobar.com' },
-      assertion:
-        'should return isUK and origin based off of bbcOrigin if provided',
-    },
-    {
       bbcOrigin: undefined,
       location: 'https://beepboop.com',
       expected: { origin: 'https://beepboop.com' },
       assertion:
-        'should return isUK and origin based off of location if bbcOrigin isnt provided',
-    },
-    {
-      bbcOrigin: 'https://beepboop.org',
-      location: 'https://beepboop.org',
-      expected: { origin: 'https://beepboop.org' },
-      assertion: 'should return isUK as true if tld isnt .com',
+        'should return origin based off of location if bbcOrigin isnt provided',
     },
   ];
 
