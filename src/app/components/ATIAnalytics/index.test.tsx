@@ -67,6 +67,7 @@ describe('ATI Analytics Container', () => {
         pageData: articleDataNews,
         pageType: ARTICLE_PAGE,
         service: 'news',
+        isUK: true,
       });
 
       const { pageviewParams } = mockCanonical.mock.calls[0][0];
@@ -164,6 +165,7 @@ describe('ATI Analytics Container', () => {
         pageData: articleDataNews,
         pageType: MEDIA_ARTICLE_PAGE,
         service: 'news',
+        isUK: true,
       });
 
       const { pageviewParams } = mockCanonical.mock.calls[0][0];
@@ -257,6 +259,7 @@ describe('ATI Analytics Container', () => {
         pageData: articleDataNews,
         pageType: FRONT_PAGE,
         service: 'news',
+        isUK: true,
       });
 
       const { pageviewParams } = mockCanonical.mock.calls[0][0];
