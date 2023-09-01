@@ -34,16 +34,16 @@ const modernBundleReport = {
         { name: 'static/js/modern.commons-92a4fe01.6f43e2d7.js' },
         { name: 'static/js/modern.commons-92a4fe01.6f43e2d7.js.map' },
         {
-          name: 'static/js/modern.shared-UddsGWzeoXsaLwaRPMwTQELcfA=-31ecd969.898fb3aa.js',
+          name: 'static/js/modern.shared-UddsGWzeoXsaLwaRPMwTQELcfA-31ecd969.898fb3aa.js',
         },
         {
-          name: 'static/js/modern.shared-UddsGWzeoXsaLwaRPMwTQELcfA=-31ecd969.898fb3aa.js.map',
+          name: 'static/js/modern.shared-UddsGWzeoXsaLwaRPMwTQELcfA-31ecd969.898fb3aa.js.map',
         },
         {
-          name: 'static/js/modern.shared-nj6qIml+EtJxDVgSunxJydSAIpY=-253ae210.3f8a9c3a.js',
+          name: 'static/js/modern.shared-nj6qImlEtJxDVgSunxJydSAIpY-253ae210.3f8a9c3a.js',
         },
         {
-          name: 'static/js/modern.shared-nj6qIml+EtJxDVgSunxJydSAIpY=-253ae210.3f8a9c3a.js.map',
+          name: 'static/js/modern.shared-nj6qImlEtJxDVgSunxJydSAIpY-253ae210.3f8a9c3a.js.map',
         },
         { name: 'static/js/modern.ArticlePage-31ecd969.ee810b86.js' },
         { name: 'static/js/modern.ArticlePage-31ecd969.ee810b86.js.map' },
@@ -73,8 +73,8 @@ describe('pageTypeBundleExtractor', () => {
       'modern.commons-7d359b94.ced895c9.js',
       'modern.commons-8493eda2.7bb97fc0.js',
       'modern.commons-92a4fe01.6f43e2d7.js',
-      'modern.shared-UddsGWzeoXsaLwaRPMwTQELcfA=-31ecd969.898fb3aa.js',
-      'modern.shared-nj6qIml+EtJxDVgSunxJydSAIpY=-253ae210.3f8a9c3a.js',
+      'modern.shared-UddsGWzeoXsaLwaRPMwTQELcfA-31ecd969.898fb3aa.js',
+      'modern.shared-nj6qImlEtJxDVgSunxJydSAIpY-253ae210.3f8a9c3a.js',
       'modern.ArticlePage-31ecd969.ee810b86.js',
     ]);
   });
