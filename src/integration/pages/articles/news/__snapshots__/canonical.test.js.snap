@@ -67,13 +67,6 @@ exports[`Canonical Articles Footer Anchors should match text and url 9`] = `
 }
 `;
 
-exports[`Canonical Articles Footer Anchors should match text and url 10`] = `
-{
-  "text": "Read about our approach to external linking.",
-  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
-}
-`;
-
 exports[`Canonical Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/news"`;
 
 exports[`Canonical Articles Footer I can see the footer copyright and external linking text 1`] = `"© 2023 BBC. The BBC is not responsible for the content of external sites. Read about our approach to external linking."`;
