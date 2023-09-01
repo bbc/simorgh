@@ -551,12 +551,15 @@ describe('frontPage -> homePage migration', () => {
     .map(serviceToRoute);
 
   const migratedServices = [
+    'afaanoromoo',
+    'amharic',
     'azeri',
     'burmese',
     'gujarati',
     'igbo',
     'kyrgyz',
     'pidgin',
+    'tigrinya',
     'yoruba',
   ];
   const migratedWorldServiceRoutes = migratedServices.map(serviceToRoute);

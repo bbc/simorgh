@@ -54,13 +54,7 @@ export default server => {
       const [shouldRedirect, redirectUrl] = removeTrailingSlash(req.url);
       return shouldRedirect ? res.redirect(301, redirectUrl) : next();
     })
-    .use(
-      expressStaticGzip(PUBLIC_DIRECTORY, {
-        enableBrotli: true,
-        orderPreference: ['br'],
-        redirect: false,
-      }),
-    )
+    .use(expressStaticGzip(PUBLIC_DIRECTORY, { redirect: false }))
     .get(articleDataPath, async ({ params }, res, next) => {
       const { service, id, variant } = params;
 
