@@ -17,10 +17,6 @@ import {
   LIVE_PAGE,
 } from '../../../routes/utils/pageTypes';
 import {
-  buildArticleATIParams,
-  buildArticleATIUrl,
-} from './article/buildParams';
-import {
   buildTvRadioATIParams,
   buildTvRadioATIUrl,
 } from './tvRadioPage/buildParams';
@@ -42,8 +38,6 @@ import {
 } from '../types';
 import { PageTypes } from '../../../models/types/global';
 
-const ARTICLE_SHORT_FORM_VIDEO = 'article-sfv';
-
 const MIGRATED_PAGE_TYPES: PageTypes[] = [
   HOME_PAGE,
   ARTICLE_PAGE,
@@ -63,18 +57,8 @@ const noOp = () => {
 };
 
 const pageTypeUrlBuilders = {
-  [ARTICLE_PAGE]: buildArticleATIUrl,
-  [MEDIA_ARTICLE_PAGE]: (
-    data: PageData,
-    requestContext: RequestContextProps,
-    serviceContext: ServiceConfig,
-  ) =>
-    buildArticleATIUrl(
-      data,
-      requestContext,
-      serviceContext,
-      ARTICLE_SHORT_FORM_VIDEO,
-    ),
+  [ARTICLE_PAGE]: noOp,
+  [MEDIA_ARTICLE_PAGE]: noOp,
   [STORY_PAGE]: noOp,
   [FRONT_PAGE]: buildIndexPageATIUrl,
   [MEDIA_PAGE]: buildTvRadioATIUrl,
@@ -92,13 +76,8 @@ const pageTypeUrlBuilders = {
 };
 
 const pageTypeParamBuilders = {
-  [ARTICLE_PAGE]: buildArticleATIParams,
-  [MEDIA_ARTICLE_PAGE]: (
-    data: PageData,
-    requestContext: RequestContextProps,
-    serviceContext: ServiceConfig,
-  ) =>
-    buildArticleATIParams(data, requestContext, serviceContext, 'article-sfv'),
+  [ARTICLE_PAGE]: noOp,
+  [MEDIA_ARTICLE_PAGE]: noOp,
   [FRONT_PAGE]: buildIndexPageATIParams,
   [MEDIA_PAGE]: buildTvRadioATIParams,
   [MOST_READ_PAGE]: noOp,
