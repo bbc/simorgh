@@ -18,7 +18,7 @@ import getEnvironment from '#app/routes/utils/getEnvironment';
 import fetchPageData from '#app/routes/utils/fetchPageData';
 
 import LivePageLayout from './LivePageLayout';
-import extractHeaders from '../../../../utils/extractHeader';
+import extractHeaders from '../../../../../src/server/utilities/extractHeader';
 
 interface PageDataParams extends ParsedUrlQuery {
   id: string;

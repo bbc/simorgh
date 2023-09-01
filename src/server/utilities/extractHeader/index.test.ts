@@ -1,4 +1,4 @@
-import extractHeaders from './extractHeader';
+import extractHeaders from '.';
 
 describe('extractHeader', () => {
   it(`sets isUK to true when 'x-bbc-edge-isuk' is set to yes`, () => {
