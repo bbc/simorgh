@@ -1,7 +1,7 @@
 import assocPath from 'ramda/src/assocPath';
-import * as fetchPageData from '#app/routes/utils/fetchPageData';
+import * as fetchPageData from '../../utils/fetchPageData';
 import getInitialData from '.';
-import { TOPIC_PAGE } from '#app/routes/utils/pageTypes';
+import { TOPIC_PAGE } from '../../utils/pageTypes';
 
 process.env.BFF_PATH = 'https://mock-bff-path';
 

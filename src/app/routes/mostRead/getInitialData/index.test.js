@@ -19,8 +19,6 @@ const bffMostReadPageJson = {
   },
 };
 
-const pageType = MOST_READ_PAGE;
-
 describe('MostReadPage - BFF Fetching', () => {
   afterEach(() => {
     jest.clearAllMocks();
