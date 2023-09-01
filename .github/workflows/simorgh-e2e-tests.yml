@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [18.x]
     env:
       CI: true
       LOG_LEVEL: 'error'
@@ -42,7 +42,7 @@ jobs:
           start: yarn start
 
       - name: Run Simorgh NextJS E2Es
-        uses: cypress-io/github-action@v5.8.1
+        uses: cypress-io/github-action@v5
         with:
           working-directory: ws-nextjs-app
           build: yarn build

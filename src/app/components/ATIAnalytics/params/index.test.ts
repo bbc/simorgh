@@ -103,66 +103,6 @@ const media: PageData = {
   contentType: 'player-live',
 };
 
-const MAP: PageData = {
-  promo: {
-    headlines: {
-      headline: 'headline',
-    },
-  },
-  metadata: {
-    id: 'id',
-    language: 'language',
-    analyticsLabels: {
-      counterName: 'pageIdentifier',
-      pageIdentifier: 'pageIdentifier',
-      pageTitle: 'pageTitle',
-      contentId: 'urn:bbc:cps:4d36f80b-8711-0b4e-8da0-ef76ae8ac470',
-    },
-    firstPublished: 1566574729,
-    lastPublished: 1566577208,
-    locators: {
-      curie: 'http://www.bbc.co.uk/asset/4d36f80b-8711-0b4e-8da0-ef76ae8ac470',
-    },
-    passport: {
-      category: {
-        categoryId:
-          'http://www.bbc.co.uk/ontologies/applicationlogic-news/News',
-        categoryName: 'News',
-      },
-      campaigns: [
-        {
-          campaignId: '5a988e2139461b000e9dabf7',
-          campaignName: 'WS - Inspire me',
-        },
-      ],
-    },
-  },
-};
-
-const PGL: PageData = {
-  promo: {
-    headlines: {
-      headline: 'headline',
-    },
-  },
-  metadata: {
-    id: 'id',
-    language: 'language',
-    analyticsLabels: {
-      counterName: 'pageIdentifier',
-      pageIdentifier: 'pageIdentifier',
-      pageTitle: 'pageTitle',
-      contentId: 'urn:bbc:cps:4d36f80b-8711-0b4e-8da0-ef76ae8ac470',
-    },
-    firstPublished: 1566574729,
-    lastPublished: 1566577208,
-    locators: {
-      curie: 'http://www.bbc.co.uk/asset/4d36f80b-8711-0b4e-8da0-ef76ae8ac470',
-    },
-    passport: {},
-  },
-};
-
 const idxPage: PageData = {
   metadata: {
     analyticsLabels: {
@@ -187,6 +127,7 @@ const homePageAnalyticsData: ATIData = {
 const articlePageAnalyticsData: ATIData = {
   categoryName: 'Nigeria~Education~Lagos%20state~Women',
   contentId: 'urn:bbc:optimo:asset:crgrx86em6yo',
+  contentType: 'article',
   language: 'pcm',
   ldpThingIds:
     '3d5d5e30-dd50-4041-96d5-c970b20005b9~6942cb29-9d3f-4c9c-9806-0a0578c286d6~d651d520-a675-4911-8832-1596f257000b~e45cb5f8-3c87-4ebd-ac1c-058e9be22862',
@@ -199,12 +140,56 @@ const articlePageAnalyticsData: ATIData = {
   timeUpdated: '2023-07-19T15:57:54.500Z',
 };
 
+const cpsMAPPageAnalyticsData: ATIData = {
+  campaigns: [
+    {
+      campaignId: '5a988e4739461b000e9dabfc',
+      campaignName: 'WS - Update me',
+    },
+  ],
+  categoryName: 'News',
+  contentId: 'urn:bbc:cps:4d36f80b-8711-0b4e-8da0-ef76ae8ac470',
+  contentType: 'article-media-asset',
+  language: 'es',
+  ldpThingIds:
+    '75612fa6-147c-4a43-97fa-fcf70d9cced3~7613abe4-1c05-4594-a5ec-3ccf6268b220~e0d04166-b92f-468e-9e68-d5f9330e6ae7',
+  ldpThingLabels: 'Politics~Nicaragua~Latin+America',
+  pageIdentifier: 'media::mundo.media.media_asset.41174775.page',
+  pageTitle:
+    '¿Qué es el albur en México y cómo puedes saber si te están "albureando"? - BBC News Mundo',
+  producerId: null,
+  producerName: 'MUNDO',
+  timePublished: '2017-09-14T14:09:14.000Z',
+  timeUpdated: '2017-09-14T14:09:14.000Z',
+};
+
+const cpsPGLPageAnalyticsData: ATIData = {
+  campaigns: [
+    {
+      campaignId: '5a988e3139461b000e9dabf9',
+      campaignName: 'WS - Divert me',
+    },
+  ],
+  categoryName: 'News',
+  contentId: 'urn:bbc:cps:curie:asset:08e22e90-7361-cd47-b586-7cb53fc5a012',
+  contentType: 'article-photo-gallery',
+  language: 'es',
+  ldpThingIds: '25844b6e-80b0-4de9-8ea0-7a35e7d4086f',
+  ldpThingLabels: 'Technology',
+  pageIdentifier: 'sport::mundo.sport.photo_gallery.36935058.page',
+  pageTitle:
+    'Río 2016, el antes y el ahora: cómo ha cambiado la ropa deportiva en más de un siglo de juegos olímpicos - BBC News Mundo',
+  producerId: null,
+  producerName: 'MUNDO',
+  timePublished: '2016-08-07T09:21:02.000Z',
+  timeUpdated: '2016-08-07T09:21:02.000Z',
+};
+
 describe('ATIAnalytics params', () => {
   describe('buildATIUrl', () => {
     it('should return the correct article url', () => {
       const url = buildATIUrl({
         requestContext: { ...requestContext, pageType: ARTICLE_PAGE },
-        data: article,
         atiData: articlePageAnalyticsData,
         serviceContext,
       });
@@ -248,9 +233,36 @@ describe('ATIAnalytics params', () => {
         data: article,
         serviceContext,
       });
-      expect(url).toMatchInlineSnapshot(
-        `"s=598285&s2=atiAnalyticsProducerId&p=pidgin.articles.%2F%2Fwww.bbc.co.uk.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Aoptimo%3Aasset%3A54321]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http%253A%252F%252Flocalhost%252F]&x6=[originhttp%253A%252F%252Fwww.example.com]&x7=[article-sfv]&x8=[simorgh]&x9=[pageTitle]&x10=[scotland]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x13=[thing%2520english%2520label%25201~thing%2520english%2520label%25202]&x14=[thing%2520id%25201~thing%2520id%25202]&x17=[thing%2520english%2520label%25201~thing%2520english%2520label%25202]&ref=originhttp://www.example.com"`,
+
+      const parsedATIParams = Object.fromEntries(
+        new URLSearchParams(url as string),
       );
+
+      expect(parsedATIParams).toEqual({
+        s: '598285',
+        s2: 'atiAnalyticsProducerId',
+        p: 'pidgin.articles.//www.bbc.co.uk.page',
+        r: '0x0x24x24',
+        re: '1024x768',
+        hl: '00-00-00',
+        lng: 'en-US',
+        x1: '[urn:bbc:optimo:asset:54321]',
+        x2: '[responsive]',
+        x3: '[atiAnalyticsAppName]',
+        x4: '[language]',
+        x5: '[http%3A%2F%2Flocalhost%2F]',
+        x6: '[originhttp%3A%2F%2Fwww.example.com]',
+        x7: '[article-sfv]',
+        x8: '[simorgh]',
+        x9: '[pageTitle]',
+        x10: '[scotland]',
+        x11: '[1970-01-01T00:00:00.000Z]',
+        x12: '[1970-01-01T00:00:00.000Z]',
+        x13: '[thing%20english%20label%201~thing%20english%20label%202]',
+        x14: '[thing%20id%201~thing%20id%202]',
+        x17: '[thing%20english%20label%201~thing%20english%20label%202]',
+        ref: 'originhttp://www.example.com',
+      });
     });
 
     it('should return the correct frontPage url', () => {
@@ -259,9 +271,30 @@ describe('ATIAnalytics params', () => {
         data: frontPage,
         serviceContext,
       });
-      expect(url).toMatchInlineSnapshot(
-        `"s=598285&s2=atiAnalyticsProducerId&p=service.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Acps%3A00000000-0000-0000-0000-000000000000]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http%253A%252F%252Flocalhost%252F]&x7=[index-home]&x8=[simorgh]&x9=[title%2520-%2520brandName]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]"`,
+
+      const parsedATIParams = Object.fromEntries(
+        new URLSearchParams(url as string),
       );
+
+      expect(parsedATIParams).toEqual({
+        s: '598285',
+        s2: 'atiAnalyticsProducerId',
+        p: 'service.page',
+        r: '0x0x24x24',
+        re: '1024x768',
+        hl: '00-00-00',
+        lng: 'en-US',
+        x1: '[urn:bbc:cps:00000000-0000-0000-0000-000000000000]',
+        x2: '[responsive]',
+        x3: '[atiAnalyticsAppName]',
+        x4: '[language]',
+        x5: '[http%3A%2F%2Flocalhost%2F]',
+        x7: '[index-home]',
+        x8: '[simorgh]',
+        x9: '[title%20-%20brandName]',
+        x11: '[1970-01-01T00:00:00.000Z]',
+        x12: '[1970-01-01T00:00:00.000Z]',
+      });
     });
 
     it('should return the correct IDX page url', () => {
@@ -270,9 +303,30 @@ describe('ATIAnalytics params', () => {
         data: idxPage,
         serviceContext,
       });
-      expect(url).toMatchInlineSnapshot(
-        `"s=598285&s2=atiAnalyticsProducerId&p=service.page.idxpage&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Acps%3A00000000-0000-0000-0000-000000000000]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http%253A%252F%252Flocalhost%252F]&x7=[index-section]&x8=[simorgh]&x9=[title%2520-%2520brandName]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]"`,
+
+      const parsedATIParams = Object.fromEntries(
+        new URLSearchParams(url as string),
       );
+
+      expect(parsedATIParams).toEqual({
+        s: '598285',
+        s2: 'atiAnalyticsProducerId',
+        p: 'service.page.idxpage',
+        r: '0x0x24x24',
+        re: '1024x768',
+        hl: '00-00-00',
+        lng: 'en-US',
+        x1: '[urn:bbc:cps:00000000-0000-0000-0000-000000000000]',
+        x2: '[responsive]',
+        x3: '[atiAnalyticsAppName]',
+        x4: '[language]',
+        x5: '[http%3A%2F%2Flocalhost%2F]',
+        x7: '[index-section]',
+        x8: '[simorgh]',
+        x9: '[title%20-%20brandName]',
+        x11: '[1970-01-01T00:00:00.000Z]',
+        x12: '[1970-01-01T00:00:00.000Z]',
+      });
     });
 
     it('should return the correct media url', () => {
@@ -281,31 +335,108 @@ describe('ATIAnalytics params', () => {
         data: media,
         serviceContext,
       });
-      expect(url).toMatchInlineSnapshot(
-        `"s=598285&s2=atiAnalyticsProducerId&p=pageIdentifier&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[id]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http%253A%252F%252Flocalhost%252F]&x7=[player-live]&x8=[simorgh]&x9=[pageTitle]"`,
+
+      const parsedATIParams = Object.fromEntries(
+        new URLSearchParams(url as string),
       );
+
+      expect(parsedATIParams).toEqual({
+        s: '598285',
+        s2: 'atiAnalyticsProducerId',
+        p: 'pageIdentifier',
+        r: '0x0x24x24',
+        re: '1024x768',
+        hl: '00-00-00',
+        lng: 'en-US',
+        x1: '[id]',
+        x2: '[responsive]',
+        x3: '[atiAnalyticsAppName]',
+        x4: '[language]',
+        x5: '[http%3A%2F%2Flocalhost%2F]',
+        x7: '[player-live]',
+        x8: '[simorgh]',
+        x9: '[pageTitle]',
+      });
     });
 
     it('should return the correct MAP url', () => {
       const url = buildATIUrl({
         requestContext: { ...requestContext, pageType: MEDIA_ASSET_PAGE },
-        data: MAP,
+        atiData: cpsMAPPageAnalyticsData,
         serviceContext,
       });
-      expect(url).toMatchInlineSnapshot(
-        `"s=598285&s2=atiAnalyticsProducerId&p=pageIdentifier&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Acps%3A4d36f80b-8711-0b4e-8da0-ef76ae8ac470]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http%253A%252F%252Flocalhost%252F]&x7=[article-media-asset]&x8=[simorgh]&x9=[headline%2520-%2520brandName]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x16=[WS%20-%20Inspire%20me]&x17=[News]"`,
+
+      const parsedATIURLParams = Object.fromEntries(
+        new URLSearchParams(url as string),
       );
+
+      const expectedATIURLParams = {
+        hl: '00-00-00',
+        lng: 'en-US',
+        p: 'media::mundo.media.media_asset.41174775.page',
+        r: '0x0x24x24',
+        re: '1024x768',
+        ref: 'originhttp://www.example.com',
+        s: '598285',
+        s2: 'atiAnalyticsProducerId',
+        x1: '[urn:bbc:cps:4d36f80b-8711-0b4e-8da0-ef76ae8ac470]',
+        x2: '[responsive]',
+        x3: '[atiAnalyticsAppName]',
+        x4: '[es]',
+        x5: '[http%3A%2F%2Flocalhost%2F]',
+        x6: '[originhttp%3A%2F%2Fwww.example.com]',
+        x7: '[article-media-asset]',
+        x8: '[simorgh]',
+        x9: '[¿Qué%20es%20el%20albur%20en%20México%20y%20cómo%20puedes%20saber%20si%20te%20están%20"albureando"?%20-%20BBC%20News%20Mundo]',
+        x11: '[2017-09-14T14:09:14.000Z]',
+        x12: '[2017-09-14T14:09:14.000Z]',
+        x13: '[Politics~Nicaragua~Latin+America]',
+        x14: '[75612fa6-147c-4a43-97fa-fcf70d9cced3~7613abe4-1c05-4594-a5ec-3ccf6268b220~e0d04166-b92f-468e-9e68-d5f9330e6ae7]',
+        x16: '[WS - Update me]',
+        x17: '[News]',
+      };
+
+      expect(parsedATIURLParams).toEqual(expectedATIURLParams);
     });
 
     it('should return the correct PGL url', () => {
       const url = buildATIUrl({
         requestContext: { ...requestContext, pageType: PHOTO_GALLERY_PAGE },
-        data: PGL,
+        atiData: cpsPGLPageAnalyticsData,
         serviceContext,
       });
-      expect(url).toMatchInlineSnapshot(
-        `"s=598285&s2=atiAnalyticsProducerId&p=pageIdentifier&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Acps%3A4d36f80b-8711-0b4e-8da0-ef76ae8ac470]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http%253A%252F%252Flocalhost%252F]&x7=[article-photo-gallery]&x8=[simorgh]&x9=[headline%2520-%2520brandName]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]"`,
+
+      const parsedATIURLParams = Object.fromEntries(
+        new URLSearchParams(url as string),
       );
+
+      const expectedATIURLParams = {
+        hl: '00-00-00',
+        lng: 'en-US',
+        p: 'sport::mundo.sport.photo_gallery.36935058.page',
+        r: '0x0x24x24',
+        re: '1024x768',
+        ref: 'originhttp://www.example.com',
+        s: '598285',
+        s2: 'atiAnalyticsProducerId',
+        x1: '[urn:bbc:cps:curie:asset:08e22e90-7361-cd47-b586-7cb53fc5a012]',
+        x2: '[responsive]',
+        x3: '[atiAnalyticsAppName]',
+        x4: '[es]',
+        x5: '[http%3A%2F%2Flocalhost%2F]',
+        x6: '[originhttp%3A%2F%2Fwww.example.com]',
+        x7: '[article-photo-gallery]',
+        x8: '[simorgh]',
+        x9: '[Río%202016,%20el%20antes%20y%20el%20ahora:%20cómo%20ha%20cambiado%20la%20ropa%20deportiva%20en%20más%20de%20un%20siglo%20de%20juegos%20olímpicos%20-%20BBC%20News%20Mundo]',
+        x11: '[2016-08-07T09:21:02.000Z]',
+        x12: '[2016-08-07T09:21:02.000Z]',
+        x13: '[Technology]',
+        x14: '[25844b6e-80b0-4de9-8ea0-7a35e7d4086f]',
+        x16: '[WS - Divert me]',
+        x17: '[News]',
+      };
+
+      expect(parsedATIURLParams).toEqual(expectedATIURLParams);
     });
 
     it('should return the correct Homepage url', () => {
@@ -319,7 +450,7 @@ describe('ATIAnalytics params', () => {
         new URLSearchParams(url as string),
       );
 
-      const expectedATIURLParams = {
+      expect(parsedATIURLParams).toEqual({
         s: '598285',
         s2: 'atiAnalyticsProducerId',
         p: 'kyrgyz.page',
@@ -337,28 +468,25 @@ describe('ATIAnalytics params', () => {
         x7: '[index-home]',
         x8: '[simorgh]',
         x9: '[pageTitle]',
-      };
-
-      expect(parsedATIURLParams).toEqual(expectedATIURLParams);
+      });
     });
 
     it('should have both ref parameter and x6 referrer url parameter, if referrer url exists', () => {
       const atiUrl = buildATIUrl({
         requestContext: { ...requestContext, pageType: ARTICLE_PAGE },
-        data: article,
         serviceContext,
         atiData: articlePageAnalyticsData,
       }) as string;
-      const params = atiUrl.split('&');
 
-      expect(params).toContain('x6=[originhttp%253A%252F%252Fwww.example.com]');
-      expect(params).toContain('ref=originhttp://www.example.com');
+      const params = Object.fromEntries(new URLSearchParams(atiUrl));
+
+      expect(params.x6).toBe('[originhttp%3A%2F%2Fwww.example.com]');
+      expect(params.ref).toBe('originhttp://www.example.com');
     });
 
     it('should have ref parameter as the last parameter, if referrer url exists', () => {
       const atiUrl = buildATIUrl({
         requestContext: { ...requestContext, pageType: ARTICLE_PAGE },
-        data: article,
         serviceContext,
         atiData: articlePageAnalyticsData,
       }) as string;
@@ -374,7 +502,6 @@ describe('ATIAnalytics params', () => {
           pageType: ARTICLE_PAGE,
           previousPath: '',
         },
-        data: article,
         serviceContext,
         atiData: articlePageAnalyticsData,
       }) as string;
@@ -414,7 +541,7 @@ describe('ATIAnalytics params', () => {
 
       it('should not invoke buildPageATIUrl for an unsupported page types', () => {
         buildATIUrl({
-          requestContext: { ...requestContext, pageType: MEDIA_ASSET_PAGE },
+          requestContext: { ...requestContext, pageType: MEDIA_PAGE },
           atiData: homePageAnalyticsData,
           serviceContext,
         });
@@ -440,7 +567,6 @@ describe('ATIAnalytics params', () => {
     it('should return the correct article params', () => {
       const params = buildATIEventTrackingParams({
         requestContext: { ...requestContext, pageType: ARTICLE_PAGE },
-        data: article,
         atiData: articlePageAnalyticsData,
         serviceContext,
       });
@@ -571,7 +697,7 @@ describe('ATIAnalytics params', () => {
     it('should return the correct MAP params', () => {
       const params = buildATIEventTrackingParams({
         requestContext: { ...requestContext, pageType: MEDIA_ASSET_PAGE },
-        data: MAP,
+        atiData: cpsMAPPageAnalyticsData,
         serviceContext,
       });
       expect(params).toEqual({
@@ -579,47 +705,68 @@ describe('ATIAnalytics params', () => {
         categoryName: 'News',
         campaigns: [
           {
-            campaignId: '5a988e2139461b000e9dabf7',
-            campaignName: 'WS - Inspire me',
+            campaignId: '5a988e4739461b000e9dabfc',
+            campaignName: 'WS - Update me',
           },
         ],
         contentId: 'urn:bbc:cps:4d36f80b-8711-0b4e-8da0-ef76ae8ac470',
         contentType: 'article-media-asset',
-        language: 'language',
-        pageIdentifier: 'pageIdentifier',
-        pageTitle: 'headline - brandName',
+        isUK: false,
+        language: 'es',
+        ldpThingIds:
+          '75612fa6-147c-4a43-97fa-fcf70d9cced3~7613abe4-1c05-4594-a5ec-3ccf6268b220~e0d04166-b92f-468e-9e68-d5f9330e6ae7',
+        ldpThingLabels: 'Politics~Nicaragua~Latin+America',
         libraryVersion: 'simorgh',
+        nationsProducer: undefined,
+        origin: 'origin',
+        pageIdentifier: 'media::mundo.media.media_asset.41174775.page',
+        pageTitle:
+          '¿Qué es el albur en México y cómo puedes saber si te están "albureando"? - BBC News Mundo',
         platform: 'canonical',
+        previousPath: 'http://www.example.com',
         producerId: 'atiAnalyticsProducerId',
         service: 'pidgin',
         statsDestination: 'statsDestination',
-        timePublished: '1970-01-01T00:00:00.000Z',
-        timeUpdated: '1970-01-01T00:00:00.000Z',
+        timePublished: '2017-09-14T14:09:14.000Z',
+        timeUpdated: '2017-09-14T14:09:14.000Z',
       });
     });
 
     it('should return the correct PGL params', () => {
       const params = buildATIEventTrackingParams({
         requestContext: { ...requestContext, pageType: PHOTO_GALLERY_PAGE },
-        data: PGL,
+        atiData: cpsPGLPageAnalyticsData,
         serviceContext,
       });
       expect(params).toEqual({
         appName: 'atiAnalyticsAppName',
-        categoryName: undefined,
-        campaigns: undefined,
-        contentId: 'urn:bbc:cps:4d36f80b-8711-0b4e-8da0-ef76ae8ac470',
+        campaigns: [
+          {
+            campaignId: '5a988e3139461b000e9dabf9',
+            campaignName: 'WS - Divert me',
+          },
+        ],
+        categoryName: 'News',
+        contentId:
+          'urn:bbc:cps:curie:asset:08e22e90-7361-cd47-b586-7cb53fc5a012',
         contentType: 'article-photo-gallery',
-        language: 'language',
-        pageIdentifier: 'pageIdentifier',
-        pageTitle: 'headline - brandName',
+        isUK: false,
+        language: 'es',
+        ldpThingIds: '25844b6e-80b0-4de9-8ea0-7a35e7d4086f',
+        ldpThingLabels: 'Technology',
         libraryVersion: 'simorgh',
+        nationsProducer: undefined,
+        origin: 'origin',
+        pageIdentifier: 'sport::mundo.sport.photo_gallery.36935058.page',
+        pageTitle:
+          'Río 2016, el antes y el ahora: cómo ha cambiado la ropa deportiva en más de un siglo de juegos olímpicos - BBC News Mundo',
         platform: 'canonical',
+        previousPath: 'http://www.example.com',
         producerId: 'atiAnalyticsProducerId',
         service: 'pidgin',
         statsDestination: 'statsDestination',
-        timePublished: '1970-01-01T00:00:00.000Z',
-        timeUpdated: '1970-01-01T00:00:00.000Z',
+        timePublished: '2016-08-07T09:21:02.000Z',
+        timeUpdated: '2016-08-07T09:21:02.000Z',
       });
     });
 
@@ -684,7 +831,7 @@ describe('ATIAnalytics params', () => {
 
       it('should not invoke buildPageATIParams for an unsupported page types', () => {
         buildATIEventTrackingParams({
-          requestContext: { ...requestContext, pageType: MEDIA_ASSET_PAGE },
+          requestContext: { ...requestContext, pageType: MEDIA_PAGE },
           atiData: homePageAnalyticsData,
           serviceContext,
         });
@@ -712,9 +859,30 @@ describe('ATIAnalytics params', () => {
 
       const pageData = null;
       const params = buildATIEventTrackingParams({
-        requestContext: { ...requestContext, pageType: PHOTO_GALLERY_PAGE },
+        requestContext: { ...requestContext, pageType: MEDIA_PAGE },
         // @ts-expect-error - pass in null value to ensure error handling working as expected
         data: pageData,
+        serviceContext,
+      });
+
+      expect(params).toEqual({});
+      expect(console.error).toHaveBeenCalledWith(
+        expect.stringContaining(
+          'ATI Event Tracking Error: Could not parse tracking values from page data:',
+        ),
+      );
+      console.error = error;
+    });
+
+    it('should not throw exception and return empty object if no atiData is passed in', () => {
+      const { error } = console;
+      console.error = jest.fn();
+
+      const atiData = null;
+      const params = buildATIEventTrackingParams({
+        requestContext: { ...requestContext, pageType: MEDIA_PAGE },
+        // @ts-expect-error - pass in null value to ensure error handling working as expected
+        atiData,
         serviceContext,
       });
 

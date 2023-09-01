@@ -38,7 +38,7 @@ const MostRead = ({
 
   const locale = serviceDatetimeLocale || datetimeLocale;
 
-  const items = data.items?.slice(0, numberOfItems);
+  const items = data.items?.slice(0, numberOfItems) || [];
 
   const direction = dir as Direction;
   const fontScript = script as TypographyScript;

@@ -75,13 +75,12 @@ export type ServiceConfig = {
   showRelatedTopics: boolean;
   podcastPromo?: PodcastPromo;
   disclaimer?: {
-    para1: string;
-    para2: {
+    para1: {
       text: string;
       url: string;
       isExternal: boolean;
     };
-    para3: string;
+    para2: string;
   };
   translations: Translations;
   mostRead: MostRead;
