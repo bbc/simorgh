@@ -1076,8 +1076,8 @@ describe('ATI Analytics Container', () => {
         x7: '[index-section]',
         x8: '[simorgh]',
         x9: '[Tout%20savoir%20sur%20la%20CAN%202019%20-%20BBC%20News%20Afrique]',
-        x11: '[1970-01-01T00:00:00.000Z]',
-        x12: '[1970-01-01T00:00:00.000Z]',
+        x11: '[2019-05-30T14:23:38.000Z]',
+        x12: '[2019-07-19T12:46:18.000Z]',
       });
     });
 
@@ -1127,8 +1127,8 @@ describe('ATI Analytics Container', () => {
         x7: '[index-section]',
         x8: '[simorgh]',
         x9: '[Tout%20savoir%20sur%20la%20CAN%202019%20-%20BBC%20News%20Afrique]',
-        x11: '[1970-01-01T00:00:00.000Z]',
-        x12: '[1970-01-01T00:00:00.000Z]',
+        x11: '[2019-05-30T14:23:38.000Z]',
+        x12: '[2019-07-19T12:46:18.000Z]',
         ref: '${documentReferrer}',
       });
     });

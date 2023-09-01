@@ -72,12 +72,8 @@ import {
 } from './types';
 
 const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
-  const {
-    articleAuthor,
-    brandName,
-    isTrustProjectParticipant,
-    showRelatedTopics,
-  } = useContext(ServiceContext);
+  const { articleAuthor, isTrustProjectParticipant, showRelatedTopics } =
+    useContext(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
 
   const {
@@ -179,14 +175,10 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
   const {
     metadata: { atiAnalytics },
   } = pageData;
-  const atiData = {
-    ...atiAnalytics,
-    pageTitle: `${atiAnalytics.pageTitle} - ${brandName}`,
-  };
 
   return (
     <div css={styles.pageWrapper}>
-      <ATIAnalytics atiData={atiData} />
+      <ATIAnalytics atiData={atiAnalytics} />
       <ChartbeatAnalytics
         categoryName={pageData?.metadata?.passport?.category?.categoryName}
         title={headline}

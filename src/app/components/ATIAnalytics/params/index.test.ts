@@ -45,42 +45,6 @@ const serviceContext: ServiceConfig = {
   lang: 'pcm',
 };
 
-const article: PageData = {
-  metadata: {
-    analyticsLabels: {
-      counterName: 'service.page',
-      contentId: 'urn:bbc:optimo:asset:54321',
-      nations_producer: 'scotland',
-    },
-    locators: {
-      optimoUrn: 'http://www.bbc.co.uk',
-    },
-    passport: {
-      language: 'language',
-    },
-    tags: {
-      about: [
-        {
-          thingId: 'thing id 1',
-          thingLabel: 'thing label 1',
-          thingEnglishLabel: 'thing english label 1',
-        },
-        {
-          thingId: 'thing id 2',
-          thingLabel: 'thing label 2',
-          thingEnglishLabel: 'thing english label 2',
-        },
-      ],
-    },
-    title: 'title',
-  },
-  promo: {
-    headlines: {
-      seoHeadline: 'pageTitle',
-    },
-  },
-};
-
 const frontPage: PageData = {
   metadata: {
     analyticsLabels: {
@@ -101,20 +65,6 @@ const media: PageData = {
   pageIdentifier: 'pageIdentifier',
   pageTitle: 'pageTitle',
   contentType: 'player-live',
-};
-
-const idxPage: PageData = {
-  metadata: {
-    analyticsLabels: {
-      counterName: 'service.page.idxpage',
-    },
-    locators: {
-      curie:
-        'http://www.bbc.co.uk/asset/00000000-0000-0000-0000-000000000000/desktop/domestic',
-    },
-    language: 'language',
-    title: 'title',
-  },
 };
 
 const homePageAnalyticsData: ATIData = {
