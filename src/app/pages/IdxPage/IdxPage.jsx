@@ -70,6 +70,7 @@ const IdxPage = ({ pageData, radioScheduleEndpointOverride }) => {
   const {
     metadata: { atiAnalytics },
   } = pageData;
+
   const atiData = {
     ...atiAnalytics,
     pageTitle: `${atiAnalytics.pageTitle} - ${brandName}`,
