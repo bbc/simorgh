@@ -5,8 +5,9 @@ import nodeLogger from '../../../lib/logger.node';
 import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
 import fetchPageData from '../../utils/fetchPageData';
 import constructPageFetchUrl from '../../utils/constructPageFetchUrl';
-import { Services, Variants } from '../../../models/types/global';
+import { Services, Toggles, Variants } from '../../../models/types/global';
 import getOnwardsPageData from '../utils/getOnwardsData';
+import addDisclaimer from '../utils/addDisclaimer';
 import { advertisingAllowed, isSfv } from '../utils/paramChecks';
 import { FetchError } from '../../../models/types/fetch';
 import handleError from '../../utils/handleError';
@@ -19,6 +20,8 @@ type Props = {
   path: string;
   pageType: 'article' | 'cpsAsset';
   variant?: Variants;
+  toggles?: Toggles;
+  isAmp?: boolean;
 };
 
 export default async ({
@@ -27,6 +30,8 @@ export default async ({
   pageType,
   path: pathname,
   variant,
+  toggles,
+  isAmp,
 }: Props) => {
   try {
     const env = getEnvironment(pathname);
@@ -39,6 +44,7 @@ export default async ({
       pageType,
       service,
       variant,
+      isAmp,
     });
 
     const optHeaders = { 'ctx-service-env': env };
@@ -74,15 +80,17 @@ export default async ({
       logger.error('Recommendations JSON malformed', error);
     }
 
-    const { topStories, features, mostRead, mostWatched } = secondaryData;
+    const { topStories, features, latestMedia, mostRead, mostWatched } =
+      secondaryData;
 
     const response = {
       status,
       pageData: {
-        ...article,
+        ...(await addDisclaimer(article, toggles, isArticleSfv)),
         secondaryColumn: {
           topStories,
           features,
+          latestMedia,
         },
         mostRead,
         mostWatched,

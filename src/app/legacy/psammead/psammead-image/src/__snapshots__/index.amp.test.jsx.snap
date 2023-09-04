@@ -3,7 +3,7 @@
 exports[`Image - AmpImg should render image with custom dimensions correctly 1`] = `
 <div>
   <amp-img
-    alt="By Elisa Decker, from her series \\"Sidewalk\\""
+    alt="By Elisa Decker, from her series "Sidewalk""
     attribution="Elisa Decker"
     fallback=""
     height="547"

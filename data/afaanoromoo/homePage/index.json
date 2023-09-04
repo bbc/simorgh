@@ -495,10 +495,11 @@
       }
     ],
     "metadata": {
-      "analytics": {
+      "atiAnalytics": {
         "contentId": "urn:bbc:tipo:topic:c93v2kkzl24t",
         "contentType": "index-home",
-        "pageIdentifier": "afaanoromoo.page"
+        "pageIdentifier": "afaanoromoo.page",
+        "pageTitle": "BBC News Afaan Oromoo"
       }
     }
   },

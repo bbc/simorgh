@@ -603,10 +603,11 @@
       }
     ],
     "metadata": {
-      "analytics": {
+      "atiAnalytics": {
         "contentId": "urn:bbc:tipo:topic:ck2nellj5ppt",
         "contentType": "index-home",
-        "pageIdentifier": "marathi.page"
+        "pageIdentifier": "marathi.page",
+        "pageTitle": "बातम्या - BBC News मराठी"
       }
     }
   },

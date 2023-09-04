@@ -47,10 +47,11 @@
       }
     ],
     "metadata": {
-      "analytics": {
+      "atiAnalytics": {
         "contentId": "urn:bbc:tipo:topic:cmvw7884exet",
         "contentType": "index-home",
-        "pageIdentifier": "turkce.page"
+        "pageIdentifier": "turkce.page",
+        "pageTitle": "Haberler - BBC News Türkçe"
       }
     }
   },

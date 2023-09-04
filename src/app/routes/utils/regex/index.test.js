@@ -550,7 +550,18 @@ describe('frontPage -> homePage migration', () => {
     .filter(service => !servicesWithVariants.includes(service))
     .map(serviceToRoute);
 
-  const migratedServices = ['kyrgyz'];
+  const migratedServices = [
+    'afaanoromoo',
+    'amharic',
+    'azeri',
+    'burmese',
+    'gujarati',
+    'igbo',
+    'kyrgyz',
+    'pidgin',
+    'tigrinya',
+    'yoruba',
+  ];
   const migratedWorldServiceRoutes = migratedServices.map(serviceToRoute);
 
   const liveFrontPageServices = worldServices.filter(

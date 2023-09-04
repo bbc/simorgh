@@ -47,10 +47,11 @@
       }
     ],
     "metadata": {
-      "analytics": {
+      "atiAnalytics": {
         "contentId": "urn:bbc:tipo:topic:c7pe2jj9l7mt",
         "contentType": "index-home",
-        "pageIdentifier": "portuguese.page"
+        "pageIdentifier": "portuguese.page",
+        "pageTitle": "Notícias, vídeos, análise e contexto em português - BBC News Brasil"
       }
     }
   },

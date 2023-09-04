@@ -2,7 +2,6 @@
 
 import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
-import Pagination from '#pages/TopicPage/Pagination';
 import Heading from '#app/components/Heading';
 import { ServiceContext } from '#contexts/ServiceContext';
 import nodeLogger from '#lib/logger.node';
@@ -10,19 +9,17 @@ import LegacyText from '#app/legacy/containers/Text';
 import Blocks from '#app/legacy/containers/Blocks';
 import MetadataContainer from '../../../../../src/app/components/Metadata';
 import LinkedDataContainer from '../../../../../src/app/components/LinkedData';
-import PostsList from './Posts/index';
-import Header from './Header/index';
+import Stream from './Stream';
+import Header from './Header';
 
 import styles from './styles';
-import { StreamResponse } from './Posts/types';
+import { StreamResponse } from './Post/types';
 
 const logger = nodeLogger(__filename);
 
 type ComponentProps = {
   bbcOrigin?: string;
   pageData: {
-    pageCount: number;
-    activePage: number;
     title: string;
     description?: string;
     isLive: boolean;
@@ -41,8 +38,6 @@ const LivePage = ({
 }: ComponentProps) => {
   const { lang } = useContext(ServiceContext);
   const {
-    pageCount,
-    activePage,
     title,
     description,
     isLive,
@@ -88,32 +83,26 @@ const LivePage = ({
           title={title}
           description={description}
         />
-        <div css={styles.wrapper}>
-          <Summary summaryBlocks={summaryContent?.model.blocks} />
-          {liveTextStream.content && (
-            <PostsList postData={liveTextStream.content} />
-          )}
-          <pre css={styles.code}>
-            <Heading level={4}>Headers</Heading>
-            {bbcOrigin && (
+        <div css={styles.outerGrid}>
+          <div css={styles.firstSection}>
+            <Summary summaryBlocks={summaryContent?.model.blocks} />
+          </div>
+          <div css={styles.secondSection}>
+            <Stream streamContent={liveTextStream.content} />
+            <pre css={styles.code}>
+              <Heading level={4}>Headers</Heading>
+              {bbcOrigin && (
+                <p>
+                  bbc-origin: <span>{bbcOrigin}</span>
+                </p>
+              )}
               <p>
-                bbc-origin: <span>{bbcOrigin}</span>
+                bbc-adverts:{' '}
+                <span>{showAdsBasedOnLocation ? 'true' : 'false'}</span>
               </p>
-            )}
-            <p>
-              bbc-adverts:{' '}
-              <span>{showAdsBasedOnLocation ? 'true' : 'false'}</span>
-            </p>
-          </pre>
-          <pre css={styles.code}>{JSON.stringify(pageData, null, 2)}</pre>
-          <Pagination
-            activePage={activePage}
-            pageCount={pageCount}
-            pageXOfY="Page {x} of {y}"
-            previousPage="Previous Page"
-            nextPage="Next Page"
-            page="Page"
-          />
+            </pre>
+            <pre css={styles.code}>{JSON.stringify(pageData, null, 2)}</pre>
+          </div>
         </div>
       </main>
     </>

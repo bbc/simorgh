@@ -6,19 +6,12 @@ import {
 } from '#models/blocks';
 
 const blocksWithHeadlineAndText = blockValues => {
-  const [headlineText, paragraphText] = blockValues;
+  const [headlineText, paragraphText, ...additional] = blockValues;
 
   return [
     blockContainingText('headline', headlineText, 1),
     singleTextBlock(paragraphText, 2),
-    {
-      id: 'ef3a6bbd',
-      type: 'wsoj',
-      model: {
-        type: 'recommendations',
-      },
-      position: [9],
-    },
+    ...additional,
   ];
 };
 
@@ -44,9 +37,11 @@ const articleDataBuilder = (
   things,
   allowAdvertising = false,
   articleBlocksPopulator = blocksWithHeadlineAndText,
+  atiAnalytics = {},
 ) => ({
   metadata: {
     id: `urn:bbc:ares::article:${id}`,
+    atiAnalytics,
     locators: {
       optimoUrn: `urn:bbc:optimo:asset:${id}`,
     },
@@ -139,11 +134,62 @@ export const articleDataNews = articleDataBuilder(
   'News',
   'en-gb',
   'http://www.bbc.co.uk/ontologies/passport/home/News',
-  ['Article Headline', 'A paragraph.'],
+  [
+    'Article Headline',
+    'A paragraph.',
+    {
+      id: 'ef3a6bbd',
+      type: 'wsoj',
+      model: {
+        type: 'recommendations',
+      },
+      position: [9],
+    },
+    {
+      id: 'c9043147',
+      type: 'podcastPromo',
+      model: {
+        type: 'podcastPromo',
+      },
+      position: [9],
+    },
+    {
+      id: '044a8578',
+      type: 'oEmbed',
+      model: {
+        oembed: {
+          version: '1.0',
+          provider_name: 'riddle',
+          provider_url: 'https://www.riddle.com',
+          url: 'https://www.riddle.com/view/SAVstNdh',
+          html: '<div class="riddle2-wrapper" data-rid-id="SAVstNdh" data-auto-scroll="true" data-is-fixed-height-enabled="false" data-bg="#fff" data-fg="#00205b" style="margin:0 auto; max-width:100%; width:640px;" ><script src="https://www.riddle.com/embed/build-embedjs/embedV2.js"></script><iframe src="https://www.riddle.com/embed/a/SAVstNdh?lazyImages=true&staticHeight=false" allow="autoplay" referrerpolicy="strict-origin"><section data-block="SingleChoice"><h2>How silly is Abby?</h2><p>&lt;p&gt;Babby&lt;/p&gt;</p><ul><li>Extremely silly</li><li>Not silly at all</li><li>Not very silly</li><li>Very silly</li></ul></section><section data-block="SingleChoice"><h3>What is Abby&#039;s silliness level?</h3><ul><li>High</li><li>Low</li><li>Medium</li><li>None</li></ul></section><section data-block="SingleChoice"><h3>How often is Abby silly?</h3><ul><li>Never</li><li>Rarely</li><li>Always</li><li>Sometimes</li></ul></section><section data-block="SingleChoice"><h3>What is Abby&#039;s silliness like?</h3><ul><li>Outrageous</li><li>Non-existent</li><li>Mild</li><li>Moderate</li></ul></section><section data-block="SingleChoice"><h3>How would you describe Abby&#039;s silliness?</h3><ul><li>Crazy</li><li>Calm</li><li>Boring</li><li>Sensible</li></ul></section></iframe></div>',
+          type: 'rich',
+          aresType: 'aresRiddle',
+        },
+      },
+      position: [5],
+    },
+  ],
   'Article Headline for SEO',
   'Article Headline for Promo',
   'Article summary.',
   presetThings,
+  false,
+  blocksWithHeadlineAndText,
+  {
+    categoryName: 'Royal%20Wedding%202018~Duchess%20of%20Sussex',
+    contentId: 'urn:bbc:optimo:c0000000001o',
+    contentType: 'article',
+    language: 'en-gb',
+    ldpThingIds:
+      '2351f2b2-ce36-4f44-996d-c3c4f7f90eaa~803eaeb9-c0c3-4f1b-9a66-90efac3df2dc',
+    ldpThingLabels: 'Royal%20Wedding%202018~Duchess%20of%20Sussex',
+    nationsProducer: null,
+    pageIdentifier: 'news.articles.c0000000001o.page',
+    pageTitle: 'Article Headline for SEO',
+    timePublished: '2018-01-01T12:01:00.000Z',
+    timeUpdated: '2018-01-01T14:00:00.000Z',
+  },
 );
 
 export const articleDataPersian = articleDataBuilder(
@@ -156,6 +202,21 @@ export const articleDataPersian = articleDataBuilder(
   'سرصفحه مقاله برای ارتقاء',
   'خلاصه مقاله',
   emptyThings,
+  false,
+  blocksWithHeadlineAndText,
+  {
+    categoryName: null,
+    contentId: 'urn:bbc:optimo:c0000000001o',
+    contentType: 'article',
+    language: 'en-gb',
+    ldpThingIds: null,
+    ldpThingLabels: null,
+    nationsProducer: null,
+    pageIdentifier: null,
+    pageTitle: 'سرصفحه مقاله',
+    timePublished: '2018-01-01T12:01:00.000Z',
+    timeUpdated: '2018-01-01T14:00:00.000Z',
+  },
 );
 
 export const articleDataPidgin = articleDataBuilder(
@@ -168,6 +229,20 @@ export const articleDataPidgin = articleDataBuilder(
   'Article Headline for Promo in Pidgin',
   'Article summary in Pidgin',
   emptyThings,
+  false,
+  blocksWithHeadlineAndText,
+  {
+    categoryName: null,
+    contentId: 'urn:bbc:optimo:c0000000001o',
+    language: 'en-gb',
+    ldpThingIds: null,
+    ldpThingLabels: null,
+    nationsProducer: null,
+    pageIdentifier: null,
+    pageTitle: 'Article Headline for SEO in Pidgin',
+    timePublished: '2018-01-01T12:01:00.000Z',
+    timeUpdated: '2018-01-01T14:00:00.000Z',
+  },
 );
 
 export const articleDataPidginWithAds = articleDataBuilder(
@@ -1653,3 +1728,61 @@ export const passportPredicatesFormats = [
     type: 'formats',
   },
 ];
+
+export const promoSample = {
+  headlines: {
+    seoHeadline: 'Podcast Promo 8 Paragraphs (Valid)',
+    promoHeadline: {
+      blocks: [
+        {
+          type: 'text',
+          model: {
+            blocks: [
+              {
+                type: 'paragraph',
+                model: {
+                  text: 'Podcast Promo 8 text block Paragraphs (Valid)',
+                  blocks: [
+                    {
+                      type: 'fragment',
+                      model: {
+                        text: 'Podcast Promo 8 text block Paragraphs (Valid)',
+                        attributes: [],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+  summary: {
+    blocks: [
+      {
+        type: 'text',
+        model: {
+          blocks: [
+            {
+              type: 'paragraph',
+              model: {
+                text: '',
+                blocks: [
+                  {
+                    type: 'fragment',
+                    model: {
+                      text: '',
+                      attributes: [],
+                    },
+                  },
+                ],
+              },
+            },
+          ],
+        },
+      },
+    ],
+  },
+};

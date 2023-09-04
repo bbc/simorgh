@@ -257,7 +257,7 @@ export const service: DefaultServiceConfig = {
     mostRead: {
       header: 'Akachasị Gụọ',
       lastUpdated: 'Emelitere ikpeazụ na:',
-      numberOfItems: 10,
+      numberOfItems: 5,
       hasMostRead: true,
     },
     mostWatched: {

@@ -826,10 +826,11 @@
       }
     ],
     "metadata": {
-      "analytics": {
+      "atiAnalytics": {
         "contentId": "urn:bbc:tipo:topic:cm7682qz7v1t",
         "contentType": "index-home",
-        "pageIdentifier": "kyrgyz.page"
+        "pageIdentifier": "kyrgyz.page",
+        "pageTitle": "BBC News Кыргыз Кызматы - Top title from Tipo in the details section"
       }
     }
   },

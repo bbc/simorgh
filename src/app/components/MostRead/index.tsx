@@ -42,7 +42,7 @@ const MostRead = ({
   size = 'default',
   mobileDivider = false,
   headingBackgroundColour = WHITE,
-  className,
+  className = '',
 }: MostReadProps) => {
   const { isAmp, pageType, variant } = useContext(RequestContext);
   const {
@@ -71,7 +71,7 @@ const MostRead = ({
   // We render amp on ONLY STY, CSP and ARTICLE pages using amp-list.
   const AmpMostRead = () =>
     mostReadAmpPageTypes.includes(pageType) ? (
-      <MostReadSection>
+      <MostReadSection className={className}>
         <MostReadSectionLabel
           mobileDivider={mobileDivider}
           backgroundColor={headingBackgroundColour}

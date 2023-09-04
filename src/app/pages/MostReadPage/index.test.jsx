@@ -40,7 +40,9 @@ const MostReadPageWithContext = () => (
 
 describe('Most Read Page Main', () => {
   it('should match snapshot for most read page', () => {
-    const { container } = render(<MostReadPageWithContext />);
+    const { container } = render(<MostReadPageWithContext service="pidgin" />, {
+      service: 'pidgin',
+    });
 
     expect(container).toMatchSnapshot();
   });
@@ -48,7 +50,9 @@ describe('Most Read Page Main', () => {
   it('shoulder render most read page', async () => {
     let container;
     await act(async () => {
-      container = await render(<MostReadPageWithContext />).container;
+      container = await render(<MostReadPageWithContext service="pidgin" />, {
+        service: 'pidgin',
+      }).container;
     });
 
     expect(container.querySelector('h1').textContent).toEqual(

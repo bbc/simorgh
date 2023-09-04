@@ -47,10 +47,11 @@
       }
     ],
     "metadata": {
-      "analytics": {
+      "atiAnalytics": {
         "contentId": "urn:bbc:tipo:topic:c44evppzrvjt",
         "contentType": "index-home",
-        "pageIdentifier": "korean.page"
+        "pageIdentifier": "korean.page",
+        "pageTitle": "BBC News 코리아"
       }
     }
   },

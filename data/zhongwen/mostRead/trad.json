@@ -144,6 +144,14 @@
         "href": "/zhongwen/trad/world-65705268",
         "timestamp": 1685065279000
       }
-    ]
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentType": "list-datadriven",
+        "pageIdentifier": "zhongwen.popular.read.page",
+        "timePublished": "2023-06-19T14:58:00Z",
+        "timeUpdated": "2023-06-19T15:13:00Z"
+      }
+    }
   }
 }

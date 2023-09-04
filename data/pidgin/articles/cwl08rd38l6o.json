@@ -874,6 +874,18 @@
       },
       "metadata": {
         "id": "urn:bbc:ares::article:cwl08rd38l6o",
+        "atiAnalytics": {
+          "categoryName": null,
+          "contentId": "urn:bbc:optimo:asset:cwl08rd38l6o",
+          "language": "pcm",
+          "ldpThingIds": null,
+          "ldpThingLabels": null,
+          "nationsProducer": null,
+          "pageIdentifier": "pidgin.articles.cwl08rd38l6o.page",
+          "pageTitle": "This is the SEO headline of this test article",
+          "timePublished": "2019-07-12T13:00:04.940Z",
+          "timeUpdated": "2022-10-13T15:10:19.230Z"
+        },
         "locators": {
           "optimoUrn": "urn:bbc:optimo:asset:cwl08rd38l6o",
           "canonicalUrl": "https://www.bbc.com/pidgin/articles/cwl08rd38l6o"

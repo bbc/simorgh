@@ -364,10 +364,11 @@
       }
     ],
     "metadata": {
-      "analytics": {
+      "atiAnalytics": {
         "contentId": "urn:bbc:tipo:topic:cw95pllwe11t",
         "contentType": "index-home",
-        "pageIdentifier": "swahili.page"
+        "pageIdentifier": "swahili.page",
+        "pageTitle": "BBC News Swahili"
       }
     }
   },

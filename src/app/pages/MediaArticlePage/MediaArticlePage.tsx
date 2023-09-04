@@ -38,6 +38,9 @@ import fauxHeadline from '../../legacy/containers/FauxHeadline';
 import RelatedTopics from '../../legacy/containers/RelatedTopics';
 import NielsenAnalytics from '../../legacy/containers/NielsenAnalytics';
 import ArticleMetadata from '../../legacy/containers/ArticleMetadata';
+import EmbedImages from '../../components/Embeds/EmbedImages';
+import EmbedHtml from '../../components/Embeds/EmbedHtml';
+import OEmbedLoader, { OEmbedProps } from '../../components/Embeds/OEmbed';
 
 import { OptimoBlock } from '../../models/types/optimo';
 import {
@@ -63,6 +66,7 @@ import SecondaryColumn from './SecondaryColumn';
 import styles from './MediaArticlePage.styles';
 import {
   ComponentToRenderProps,
+  EmbedHtmlProps,
   MediaArticlePageProps,
   TimestampProps,
 } from './types';
@@ -144,6 +148,9 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
     timestamp: (props: TimestampProps) =>
       hasByline ? null : <Timestamp {...props} popOut={false} />,
     social: SocialEmbedContainer,
+    embedHtml: (props: EmbedHtmlProps) => <EmbedHtml {...props} />,
+    embedImages: (props: ComponentToRenderProps) => <EmbedImages {...props} />,
+    oEmbed: (props: OEmbedProps) => <OEmbedLoader {...props} />,
     group: gist,
     links: (props: ComponentToRenderProps) => <ScrollablePromo {...props} />,
   };

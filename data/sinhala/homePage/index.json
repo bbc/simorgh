@@ -47,10 +47,11 @@
       }
     ],
     "metadata": {
-      "analytics": {
+      "atiAnalytics": {
         "contentId": "urn:bbc:tipo:topic:c3rpqvv9v6xt",
         "contentType": "index-home",
-        "pageIdentifier": "sinhala.page"
+        "pageIdentifier": "sinhala.page",
+        "pageTitle": "BBC News සිංහල"
       }
     }
   },

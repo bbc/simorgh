@@ -9,6 +9,7 @@ export interface Summary {
   id?: string;
   type: string;
   firstPublished?: string | number;
+  lastPublished?: string | number;
 }
 
 export const VISUAL_STYLE = {

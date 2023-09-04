@@ -13,23 +13,24 @@ jest.mock('./ThemeProvider');
 
 interface Props {
   children: JSX.Element | JSX.Element[];
+  id?: string | null;
   isAmp?: boolean;
   isApp?: boolean;
   pageData?: object;
   atiData?: {
-    analytics?: {
-      contentId?: string;
-      contentType?: string;
-      pageIdentifier?: string;
-    };
-    title?: string;
+    contentId?: string;
+    contentType?: string;
+    pageIdentifier?: string;
+    pageTitle?: string;
   };
+  bbcOrigin?: string | null;
   pageType?: PageTypes;
   derivedPageType?: string | null;
   pathname?: string;
   service?: Services;
   toggles?: Toggles;
   showAdsBasedOnLocation?: boolean;
+  statusCode?: number | null;
   variant?: Variants;
   isNextJs?: boolean;
   pageLang?: string;
@@ -39,8 +40,10 @@ const AllTheProviders: FC<Props> = ({
   children,
   pageData,
   atiData,
+  id = null,
   isAmp = false,
   isApp = false,
+  bbcOrigin = 'https://www.test.bbc.com',
   pageType = 'article',
   derivedPageType,
   pathname = '/news/articles/c0g992jmmkko',
@@ -49,6 +52,7 @@ const AllTheProviders: FC<Props> = ({
   variant = 'default',
   pageLang = undefined,
   showAdsBasedOnLocation = false,
+  statusCode = null,
   isNextJs = false,
 }: Props) => {
   return (
@@ -59,7 +63,8 @@ const AllTheProviders: FC<Props> = ({
         pageLang={pageLang}
       >
         <RequestContextProvider
-          bbcOrigin="https://www.test.bbc.com"
+          id={id}
+          bbcOrigin={bbcOrigin}
           pageType={pageType}
           isAmp={isAmp}
           isApp={isApp}
@@ -68,6 +73,7 @@ const AllTheProviders: FC<Props> = ({
           pathname={pathname}
           derivedPageType={derivedPageType}
           showAdsBasedOnLocation={showAdsBasedOnLocation}
+          statusCode={statusCode}
         >
           <EventTrackingContextProvider data={pageData} atiData={atiData}>
             <UserContextProvider>
@@ -87,8 +93,10 @@ const customRender = (
   options?: Omit<RenderOptions, 'wrapper'> & Omit<Props, 'children'>,
 ) => {
   const {
+    id,
     isAmp,
     isApp,
+    bbcOrigin,
     pageData,
     pageType,
     atiData,
@@ -98,6 +106,7 @@ const customRender = (
     toggles,
     variant,
     showAdsBasedOnLocation,
+    statusCode,
     isNextJs,
     pageLang,
   } = options || {};
@@ -105,8 +114,10 @@ const customRender = (
   return render(ui, {
     wrapper: ({ children }) => (
       <AllTheProviders
+        id={id}
         isAmp={isAmp}
         isApp={isApp}
+        bbcOrigin={bbcOrigin}
         pageData={pageData}
         atiData={atiData}
         pageType={pageType}
@@ -116,6 +127,7 @@ const customRender = (
         toggles={toggles}
         variant={variant}
         showAdsBasedOnLocation={showAdsBasedOnLocation}
+        statusCode={statusCode}
         isNextJs={isNextJs}
         pageLang={pageLang}
       >
@@ -127,4 +139,4 @@ const customRender = (
 };
 
 export * from '@testing-library/react';
-export { customRender as render };
+export { customRender as render, AllTheProviders };

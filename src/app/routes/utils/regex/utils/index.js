@@ -34,7 +34,18 @@ export const getArticleManifestRegex = services => {
   return `/:service(${serviceRegex})/:local(${articleLocalRegex})/manifest.json`;
 };
 
-const homePageServices = ['kyrgyz'];
+const homePageServices = [
+  'afaanoromoo',
+  'amharic',
+  'azeri',
+  'burmese',
+  'gujarati',
+  'igbo',
+  'kyrgyz',
+  'pidgin',
+  'tigrinya',
+  'yoruba',
+];
 
 const servicesWithVariants = ['serbian', 'ukchina', 'zhongwen'];
 

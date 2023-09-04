@@ -89,10 +89,11 @@
       }
     ],
     "metadata": {
-      "analytics": {
+      "atiAnalytics": {
         "contentId": "urn:bbc:tipo:topic:cx35pee6zvpt",
         "contentType": "index-home",
-        "pageIdentifier": "arabic.page"
+        "pageIdentifier": "arabic.page",
+        "pageTitle": "BBC News عربي"
       }
     }
   },

@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { render, act } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import urduPageData from '#data/urdu/cpsAssets/science-51314202';
+import urduPageData from '#data/urdu/cpsAssets/science-51314202.json';
 import getInitialData from '#app/routes/cpsAsset/getInitialData';
 import { FEATURE_INDEX_PAGE } from '#app/routes/utils/pageTypes';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
@@ -25,7 +25,7 @@ const mockToggles = {
 const requestContextData = ({ service = 'urdu', showAdsBasedOnLocation }) => ({
   pageType: FEATURE_INDEX_PAGE,
   service,
-  pathname: '/pathname',
+  pathname: '/urdu/science-51314202',
   data: { status: 200 },
   showAdsBasedOnLocation,
 });
@@ -131,9 +131,10 @@ describe('Feature Idx Page', () => {
 
   beforeEach(async () => {
     fetch.mockResponse(JSON.stringify(urduPageData));
+    delete process.env.SIMORGH_APP_ENV;
 
     ({ pageData } = await getInitialData({
-      path: 'some-feature-idx-page-path',
+      path: '/urdu/science-51314202',
       service: 'urdu',
     }));
   });

@@ -45,8 +45,11 @@ export default {
       marginBottom: `${pixelsToRem(16)}rem`,
       [mq.GROUP_4_MIN_WIDTH]: {
         paddingInlineStart: `${pixelsToRem(16)}rem`,
-        gridColumn: '1 / span 3',
+        gridColumn: '1 / span 4',
         marginBottom: 0,
+      },
+      [mq.GROUP_5_MIN_WIDTH]: {
+        gridColumn: '1 / span 3',
       },
     }),
   title: ({ palette }: Theme) =>
@@ -67,6 +70,9 @@ export default {
     css({
       [mq.GROUP_4_MIN_WIDTH]: {
         gridColumn: '5 / span 8',
+      },
+      [mq.GROUP_5_MIN_WIDTH]: {
+        gridColumn: '4 / span 9',
       },
     }),
 };

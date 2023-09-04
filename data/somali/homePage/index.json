@@ -678,10 +678,11 @@
       }
     ],
     "metadata": {
-      "analytics": {
+      "atiAnalytics": {
         "contentId": "urn:bbc:tipo:topic:cqe6npp928lt",
         "contentType": "index-home",
-        "pageIdentifier": "somali.page"
+        "pageIdentifier": "somali.page",
+        "pageTitle": "BBC News Somali"
       }
     }
   },

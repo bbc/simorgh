@@ -54,7 +54,7 @@ const processOptimoBlocks = toggles =>
     augmentWithTimestamp,
     only(
       [MEDIA_ASSET_PAGE, STORY_PAGE, PHOTO_GALLERY_PAGE],
-      augmentWithDisclaimer(toggles),
+      augmentWithDisclaimer({ toggles, positionFromTimestamp: 1 }),
     ),
     addBylineBlock,
     addRecommendationsBlock,

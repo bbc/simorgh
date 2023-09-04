@@ -144,6 +144,14 @@
         "href": "https://www.bbc.com/russian/articles/cqvq3p22jl8o",
         "timestamp": 1686820320147
       }
-    ]
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentType": "list-datadriven",
+        "pageIdentifier": "russian.popular.read.page",
+        "timePublished": "2023-06-19T14:44:00Z",
+        "timeUpdated": "2023-06-19T14:59:00Z"
+      }
+    }
   }
 }

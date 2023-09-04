@@ -597,7 +597,19 @@
     ],
     "activePage": 1,
     "pageCount": 1,
-    "variantTopicId": null
+    "variantTopicId": null,
+    "metadata": {
+      "analytics": {
+        "name": "kyrgyz.topics.cvpv9djp9qqt.page",
+        "producer": "KYRGYZ"
+      },
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:cvpv9djp9qqt",
+        "contentType": "index-category",
+        "pageIdentifier": "kyrgyz.topics.cvpv9djp9qqt.page",
+        "pageTitle": "pageTitleInKyrgyz"
+      }
+    }
   },
   "contentType": "application/json; charset=utf-8"
 }

@@ -47,10 +47,11 @@
       }
     ],
     "metadata": {
-      "analytics": {
+      "atiAnalytics": {
         "contentId": "urn:bbc:tipo:topic:c44evpp9wp1t",
         "contentType": "index-home",
-        "pageIdentifier": "urdu.page"
+        "pageIdentifier": "urdu.page",
+        "pageTitle": "BBC News اردو"
       }
     }
   },

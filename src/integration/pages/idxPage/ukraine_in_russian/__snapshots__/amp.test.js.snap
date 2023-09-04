@@ -3,21 +3,21 @@
 exports[`AMP ukrainian/ukraine_in_russian IDX page A11y I can see the skip to content link 1`] = `"Перейти к содержанию"`;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page AMP Consent config 1`] = `
-Object {
-  "consents": Object {
-    "user-consent": Object {
+{
+  "consents": {
+    "user-consent": {
       "promptIfUnknownForGeoGroup": "eea",
       "promptUI": "consent-prompt",
     },
   },
-  "policy": Object {
-    "default": Object {
-      "timeout": Object {
+  "policy": {
+    "default": {
+      "timeout": {
         "fallbackAction": "reject",
         "seconds": 0,
       },
-      "waitFor": Object {
-        "user-consent": Array [],
+      "waitFor": {
+        "user-consent": [],
       },
     },
   },
@@ -25,10 +25,10 @@ Object {
 `;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page AMP Geo config 1`] = `
-Object {
+{
   "AmpBind": true,
-  "ISOCountryGroups": Object {
-    "eea": Array [
+  "ISOCountryGroups": {
+    "eea": [
       "at",
       "ax",
       "be",
@@ -82,7 +82,7 @@ Object {
       "wf",
       "yt",
     ],
-    "gbOrUnknown": Array [
+    "gbOrUnknown": [
       "gb",
       "gg",
       "im",
@@ -95,18 +95,18 @@ Object {
 `;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Analytics ATI 1`] = `
-Object {
-  "requests": Object {
+{
+  "requests": {
     "base": "https://logws1363.ati-host.net?",
-    "pageview": "\${base}s=598343&s2=94&p=ukrainian.ukraine_in_russian.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn%3Abbc%3Acps%3A40c7c53a-ba2e-8679-e050-380a4e807947]&x2=[amp]&x3=[news-ukrainian]&x4=[ru]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[index-section]&x8=[simorgh]&x9=[%D0%A0%D0%A3%D0%A1%2520-%2520BBC%2520News%2520%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B0]&x11=[2016-11-22T07%3A16%3A56.000Z]&x12=[2020-05-19T14%3A28%3A22.000Z]&ref=\${documentReferrer}",
+    "pageview": "\${base}s=598343&s2=94&p=ukrainian.ukraine_in_russian.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn%3Abbc%3Acps%3A40c7c53a-ba2e-8679-e050-380a4e807947]&x2=[amp]&x3=[news-ukrainian]&x4=[ru]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[index-section]&x8=[simorgh]&x9=[%D0%A0%D0%A3%D0%A1%2520-%2520BBC%2520News%2520%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B0]&x11=[2016-11-22T07%3A16%3A56.000Z]&x12=[2022-02-24T13%3A24%3A42.000Z]&ref=\${documentReferrer}",
   },
-  "transport": Object {
+  "transport": {
     "beacon": false,
     "image": true,
     "xhrpost": false,
   },
-  "triggers": Object {
-    "trackPageview": Object {
+  "triggers": {
+    "trackPageview": {
       "on": "visible",
       "request": "pageview",
     },
@@ -115,8 +115,8 @@ Object {
 `;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Analytics chartbeat 1`] = `
-Object {
-  "vars": Object {
+{
+  "vars": {
     "contentType": "Index",
     "domain": "test.bbc.co.uk",
     "sections": "Ukrainian, Ukrainian - IDX",
@@ -128,67 +128,67 @@ Object {
 `;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Analytics comscore 1`] = `
-Object {
-  "extraUrlParams": Object {
+{
+  "extraUrlParams": {
     "comscorekw": "amp",
   },
-  "vars": Object {
+  "vars": {
     "c2": "17986528",
   },
 }
 `;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Anchors should match text and url 1`] = `
-Object {
+{
   "text": "BBC News, Україна",
   "url": "/ukrainian",
 }
 `;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Anchors should match text and url 2`] = `
-Object {
+{
   "text": "Чому BBC заслуговує на довіру",
   "url": "https://www.bbc.com/ukrainian/institutional-50170368",
 }
 `;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Anchors should match text and url 3`] = `
-Object {
+{
   "text": "Правила користування",
   "url": "https://www.bbc.com/ukrainian/institutional-38144387",
 }
 `;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Anchors should match text and url 4`] = `
-Object {
+{
   "text": "Особисті дані",
   "url": "https://www.bbc.com/ukrainian/institutional-38144827",
 }
 `;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Anchors should match text and url 5`] = `
-Object {
+{
   "text": "Cookies",
   "url": "https://www.bbc.com/usingthebbc/cookies/",
 }
 `;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Anchors should match text and url 6`] = `
-Object {
+{
   "text": "Напишіть на ВВС",
   "url": "https://www.bbc.co.uk/ukrainian/send/u50853885",
 }
 `;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Anchors should match text and url 7`] = `
-Object {
+{
   "text": "Ознайомтеся з нашими правилами зовнішніх посилань.",
   "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
 }
 `;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Cookie Settings Button should match text and on handler 1`] = `
-Object {
+{
   "on": "tap:consent.prompt, privacy.hide, cookie.show, AMP.setState({ isManagingSettings: true })",
   "text": "Do not share or sell my info",
 }
@@ -201,114 +201,116 @@ exports[`AMP ukrainian/ukraine_in_russian IDX page Footer I can see the footer c
 exports[`AMP ukrainian/ukraine_in_russian IDX page Header I can see the branding 1`] = `"BBC News, Україна"`;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 1`] = `
-Object {
+{
   "text": "Головна",
   "url": "/ukrainian",
 }
 `;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 2`] = `
-Object {
+{
   "text": "Війна з Росією",
   "url": "/ukrainian/topics/czp6w66edqpt",
 }
 `;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 3`] = `
-Object {
+{
   "text": "Історії",
   "url": "/ukrainian/53725237",
 }
 `;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 4`] = `
-Object {
+{
   "text": "Відео",
   "url": "/ukrainian/55425840",
 }
 `;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 5`] = `
-Object {
+{
   "text": "Книга року BBC",
   "url": "/ukrainian/features-50320117",
 }
 `;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 6`] = `
-Object {
+{
   "text": "Подкасти",
   "url": "/ukrainian/podcasts/p09jsy3h",
 }
 `;
 
+exports[`AMP ukrainian/ukraine_in_russian IDX page Index Alsos should match visually hidden text 1`] = `"Читайте также"`;
+
 exports[`AMP ukrainian/ukraine_in_russian IDX page Main heading should match text 1`] = `"РУС"`;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page SEO Apple Touch Icon should match attributes 1`] = `
-Object {
+{
   "sizes": null,
   "url": "http://localhost:7080/ukrainian/images/icons/icon-192x192.png",
 }
 `;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page SEO Apple Touch Icon should match attributes 2`] = `
-Object {
+{
   "sizes": "72x72",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-72x72.png",
 }
 `;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page SEO Apple Touch Icon should match attributes 3`] = `
-Object {
+{
   "sizes": "96x96",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-96x96.png",
 }
 `;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page SEO Apple Touch Icon should match attributes 4`] = `
-Object {
+{
   "sizes": "128x128",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-128x128.png",
 }
 `;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page SEO Apple Touch Icon should match attributes 5`] = `
-Object {
+{
   "sizes": "144x144",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-144x144.png",
 }
 `;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page SEO Apple Touch Icon should match attributes 6`] = `
-Object {
+{
   "sizes": "152x152",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-152x152.png",
 }
 `;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page SEO Apple Touch Icon should match attributes 7`] = `
-Object {
+{
   "sizes": "180x180",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-180x180.png",
 }
 `;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page SEO Apple Touch Icon should match attributes 8`] = `
-Object {
+{
   "sizes": "192x192",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-192x192.png",
 }
 `;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page SEO Apple Touch Icon should match attributes 9`] = `
-Object {
+{
   "sizes": "384x384",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-384x384.png",
 }
 `;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page SEO Apple Touch Icon should match attributes 10`] = `
-Object {
+{
   "sizes": "512x512",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-512x512.png",
 }
@@ -325,30 +327,30 @@ exports[`AMP ukrainian/ukraine_in_russian IDX page SEO Heading level 1 1`] = `"�
 exports[`AMP ukrainian/ukraine_in_russian IDX page SEO Lang attribute 1`] = `"ru-UA"`;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page SEO Linked data should match text 1`] = `
-Object {
+{
   "@context": "http://schema.org",
-  "@graph": Array [
-    Object {
+  "@graph": [
+    {
       "@type": "WebPage",
-      "image": Object {
+      "image": {
         "@type": "ImageObject",
         "height": 576,
         "url": "https://news.files.bbci.co.uk/ws/img/logos/og/ukrainian.png",
         "width": 1024,
       },
-      "inLanguage": Object {
+      "inLanguage": {
         "@type": "Language",
         "alternateName": "ru-UA",
         "name": "Russian",
       },
-      "mainEntityOfPage": Object {
+      "mainEntityOfPage": {
         "@id": "http://localhost:7080/ukrainian/ukraine_in_russian",
         "@type": "WebPage",
         "name": "РУС",
       },
-      "publisher": Object {
+      "publisher": {
         "@type": "NewsMediaOrganization",
-        "logo": Object {
+        "logo": {
           "@type": "ImageObject",
           "height": 576,
           "url": "https://news.files.bbci.co.uk/ws/img/logos/og/ukrainian.png",
@@ -398,27 +400,29 @@ exports[`AMP ukrainian/ukraine_in_russian IDX page SEO Twitter site 1`] = `"@BBC
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page SEO Twitter title 1`] = `"РУС - BBC News Україна"`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Sections should match headline text 1`] = `"BBC ЖурналПосмотреть все"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page Sections should match headline text 1`] = `"Главное"`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Sections should match headline text 2`] = `"Статьи"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page Sections should match headline text 2`] = `"Спецпроект"`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Sections should match headline text 3`] = `"Фото дняПосмотреть все"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page Sections should match headline text 3`] = `"BBC ЖурналПосмотреть все"`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Sections should match headline text 4`] = `"Подробно"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page Sections should match headline text 4`] = `"Статьи"`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Story Promo Headline should match text 1`] = `"Как не спиться на карантине"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page Sections should match headline text 5`] = `"Подробно"`;
+
+exports[`AMP ukrainian/ukraine_in_russian IDX page Story Promo Headline should match text 1`] = `"Россия напала на Украину. Москва наносит удары по целям в Киеве, Харькове и других городах"`;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Story Promo Image should match image 1`] = `
 <amp-img
-  alt="Чоловік з келихом"
+  alt="Чугуїв"
   attribution="Getty Images"
   class="bbc-image"
   fallback=""
-  height="549"
+  height="576"
   layout="responsive"
   sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
-  src="https://ichef.bbci.co.uk/news/660/cpsprodpb/DE34/production/_111648865_1stimage.png"
-  srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/DE34/production/_111648865_1stimage.png 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/DE34/production/_111648865_1stimage.png 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/DE34/production/_111648865_1stimage.png 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/DE34/production/_111648865_1stimage.png 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/DE34/production/_111648865_1stimage.png 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/DE34/production/_111648865_1stimage.png 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/DE34/production/_111648865_1stimage.png 660w"
-  width="976"
+  src="https://ichef.bbci.co.uk/news/660/cpsprodpb/38A3/production/_123399441_gettyimages-1238719408.jpg"
+  srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/38A3/production/_123399441_gettyimages-1238719408.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/38A3/production/_123399441_gettyimages-1238719408.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/38A3/production/_123399441_gettyimages-1238719408.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/38A3/production/_123399441_gettyimages-1238719408.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/38A3/production/_123399441_gettyimages-1238719408.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/38A3/production/_123399441_gettyimages-1238719408.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/38A3/production/_123399441_gettyimages-1238719408.jpg 660w"
+  width="1024"
 />
 `;

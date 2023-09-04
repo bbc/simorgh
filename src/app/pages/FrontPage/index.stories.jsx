@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
-import urduData from '#data/urdu/frontpage';
-import newsData from '#data/news/frontpage';
-import serbianCyrData from '#data/serbian/frontpage/cyr';
-import serbianLatData from '#data/serbian/frontpage/lat';
+import { data as urduData } from '#data/urdu/frontpage';
+import { data as newsData } from '#data/news/frontpage';
+import { data as serbianCyrData } from '#data/serbian/frontpage/cyr';
+import { data as serbianLatData } from '#data/serbian/frontpage/lat';
 import { service as urduConfig } from '../../lib/config/services/urdu';
 import { service as newsConfig } from '../../lib/config/services/news';
 import { service as serbianConfig } from '../../lib/config/services/serbian';
@@ -14,12 +14,12 @@ import ThemeProvider from '../../components/ThemeProvider';
 import FrontPage from '.';
 
 const serviceDataSets = {
-  urdu: { default: urduData },
-  news: { default: newsData },
+  urdu: { default: { ...urduData.article, mostRead: urduData.secondaryData.mostRead } },
+  news: { default: { ...newsData.article, mostRead: newsData.secondaryData.mostRead } },
   serbian: {
-    cyr: serbianCyrData,
-    lat: serbianLatData,
-  },
+    cyr: { ...serbianCyrData.article, mostRead: serbianCyrData.secondaryData.mostRead },
+    lat: { ...serbianLatData.article, mostRead: serbianLatData.secondaryData.mostRead },
+  }
 };
 
 const serviceConfigs = {

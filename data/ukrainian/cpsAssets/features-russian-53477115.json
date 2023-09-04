@@ -2718,13 +2718,31 @@
   },
   "metadata":{
     "analyticsLabels":{
+      "ldp_ids": "5307a8d9-f620-40f5-92d4-f99c919a6ffa~75612fa6-147c-4a43-97fa-fcf70d9cced3~ee8750ed-a7fb-453f-bfca-2aa8b3fb064c",
+      "ldp_tags": "Society~Politics~Ukraine",
       "counterName":"ukrainian.russian_features.story.53477115.page",
       "cps_asset_id":"53477115",
       "cps_asset_type":"sty"
     },
-    "atiAnalytics":{
-      "producerId":"94",
-      "producerName":"UKRAINIAN"
+    "atiAnalytics": {
+      "campaigns": [
+        {
+          "campaignId": "5a988e4739461b000e9dabfc",
+          "campaignName": "WS - Update me"
+        }
+      ],
+      "categoryName": "News",
+      "contentId": "urn:bbc:cps:curie:asset:307108d3-9bcc-4829-990c-4b42c1290258",
+      "contentType": "article",
+      "language": "ru",
+      "ldpThingLabels": "Society~Politics~Ukraine",
+      "ldpThingIds": "5307a8d9-f620-40f5-92d4-f99c919a6ffa~75612fa6-147c-4a43-97fa-fcf70d9cced3~ee8750ed-a7fb-453f-bfca-2aa8b3fb064c",
+      "pageIdentifier": "russian_features::ukrainian.russian_features.story.53477115.page",
+      "pageTitle": "Карта новых районов Украины: кто и кого поглотил",
+      "producerId": null,
+      "timePublished": "2020-07-21T13:00:09.000Z",
+      "timeUpdated": "2020-07-21T13:00:09.000Z",
+      "producerName": "UKRAINIAN"
     },
     "blockTypes":[
       "image",

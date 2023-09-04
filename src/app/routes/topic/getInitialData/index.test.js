@@ -29,6 +29,19 @@ const topicJSON = {
     activePage: 1,
     pageCount: 14,
     variantTopicId: null,
+    metadata: {
+      type: 'Topic',
+      analytics: {
+        name: 'pidgin.topics.c95y35941vrt.page',
+        producer: 'PIDGIN',
+      },
+      atiAnalytics: {
+        contentId: 'urn:bbc:tipo:topic:c95y35941vrt',
+        contentType: 'index-category',
+        pageIdentifier: 'pidgin.topics.c95y35941vrt.page',
+        pageTitle: 'Donald Trump',
+      },
+    },
   },
 };
 
@@ -253,6 +266,31 @@ describe('get initial data for topic', () => {
       path: 'https://mock-bff-path/?id=c0000000000t&service=pidgin&pageType=topic&page=20',
       agent,
       optHeaders,
+    });
+  });
+
+  it('should return type and metadata containing atiAnalytics and analytics from the BFF response', async () => {
+    fetch.mockResponse(JSON.stringify(topicJSON));
+
+    await expect(
+      getInitialData({
+        path: 'pidgin/topics/c0000000000t',
+        getAgent,
+        service: 'pidgin',
+        page: 20,
+      }),
+    ).resolves.toHaveProperty('pageData.metadata', {
+      type: 'Topic',
+      analytics: {
+        name: 'pidgin.topics.c95y35941vrt.page',
+        producer: 'PIDGIN',
+      },
+      atiAnalytics: {
+        contentId: 'urn:bbc:tipo:topic:c95y35941vrt',
+        contentType: 'index-category',
+        pageIdentifier: 'pidgin.topics.c95y35941vrt.page',
+        pageTitle: 'Donald Trump',
+      },
     });
   });
 });

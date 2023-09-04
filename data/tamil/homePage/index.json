@@ -47,10 +47,11 @@
       }
     ],
     "metadata": {
-      "analytics": {
+      "atiAnalytics": {
         "contentId": "urn:bbc:tipo:topic:cvp5j113jjwt",
         "contentType": "index-home",
-        "pageIdentifier": "tamil.page"
+        "pageIdentifier": "tamil.page",
+        "pageTitle": "முகப்பு - BBC News தமிழ்"
       }
     }
   },

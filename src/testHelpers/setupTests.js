@@ -1,5 +1,4 @@
 import '@testing-library/jest-dom/extend-expect';
-import chalk from 'chalk';
 
 const REACT_FAILED_PROP_TYPE = 'Failed prop';
 const REACT_NO_KEYS = 'Each child in a list should have a unique "key" prop';
@@ -49,16 +48,17 @@ console.error = (message, ...rest) => {
   if (REACT_ERRORS_REGEX.test(message)) {
     throw new Error(
       [
-        chalk.red.bold(
-          'Test failed because a React warning was detected. Please fix the following:',
-        ),
-        chalk.red(message),
+        'Test failed because a React warning was detected. Please fix the following:',
+        message,
       ].join('\n'),
     );
   }
 
   error(message, ...rest);
 };
+
+global.setImmediate =
+  global.setImmediate || ((fn, ...args) => global.setTimeout(fn, 0, ...args));
 
 // eslint-disable-next-line no-console
 console.warn = (message, ...rest) => {

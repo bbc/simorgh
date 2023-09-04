@@ -11,6 +11,7 @@ import {
   articleDataPidgin,
   articleDataPidginWithAds,
   articleDataPidginWithByline,
+  promoSample,
   sampleRecommendations,
 } from '#pages/ArticlePage/fixtureData';
 import newsMostReadData from '#data/news/mostRead/index.json';
@@ -57,6 +58,7 @@ const Context = ({
   mostReadToggledOn = true,
   showAdsBasedOnLocation = false,
   isApp = false,
+  promo = null,
 } = {}) => {
   const appInput = {
     ...input,
@@ -79,6 +81,7 @@ const Context = ({
             cpsRecommendations: {
               enabled: true,
             },
+            podcastPromo: { enabled: promo != null },
           }}
         >
           <RequestContextProvider {...appInput}>
@@ -312,6 +315,13 @@ it('should render a news article with headline in the middle correctly', async (
 
   const articleWithSummaryHeadlineInTheMiddle = {
     ...articleDataNews,
+    metadata: {
+      ...articleDataNews.metadata,
+      atiAnalytics: {
+        ...articleDataNews.metadata.atiAnalytics,
+        pageTitle: 'SEO Headline',
+      },
+    },
     content: {
       model: {
         blocks: [
@@ -355,6 +365,13 @@ it('should render a news article with headline in the middle correctly', async (
 it('should render a news article without headline correctly', async () => {
   const articleWithoutHeadline = {
     ...articleDataNews,
+    metadata: {
+      ...articleDataNews.metadata,
+      atiAnalytics: {
+        ...articleDataNews.metadata.atiAnalytics,
+        pageTitle: 'Article Headline',
+      },
+    },
     content: {
       model: {
         blocks: [singleTextBlock('Paragraph 1', 2)],
@@ -471,4 +488,33 @@ it('should render WSOJ recommendations when passed', async () => {
   );
 
   expect(getByText('SAMPLE RECOMMENDATION 1 - HEADLINE')).toBeInTheDocument();
+});
+
+it('should render PodcastPromos when passed', async () => {
+  const pageDataWithSecondaryColumn = {
+    ...articleDataNews,
+    promo: promoSample,
+  };
+  const { getByText } = render(
+    <Context service="russian" promo>
+      <ArticlePage pageData={pageDataWithSecondaryColumn} />
+    </Context>,
+  );
+
+  expect(getByText('Что это было?')).toBeInTheDocument();
+});
+
+it('should render Riddle component when passed', async () => {
+  const pageDataWithRiddle = {
+    ...articleDataNews,
+  };
+  const { container } = render(
+    <Context service="russian">
+      <ArticlePage pageData={pageDataWithRiddle} />
+    </Context>,
+  );
+  const actual = container.querySelector(
+    'iframe[src="https://www.riddle.com/embed/a/SAVstNdh?lazyImages=true&staticHeight=false"]',
+  );
+  expect(actual).toBeInTheDocument();
 });

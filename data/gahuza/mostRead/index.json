@@ -144,6 +144,14 @@
         "href": "/gahuza/50343091",
         "timestamp": 1671169107000
       }
-    ]
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentType": "list-datadriven",
+        "pageIdentifier": "gahuza.popular.read.page",
+        "timePublished": "2023-06-19T12:50:00Z",
+        "timeUpdated": "2023-06-19T14:50:00Z"
+      }
+    }
   }
 }

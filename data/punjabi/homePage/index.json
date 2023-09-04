@@ -47,10 +47,11 @@
       }
     ],
     "metadata": {
-      "analytics": {
+      "atiAnalytics": {
         "contentId": "urn:bbc:tipo:topic:ck2nell96g6t",
         "contentType": "index-home",
-        "pageIdentifier": "punjabi.page"
+        "pageIdentifier": "punjabi.page",
+        "pageTitle": "BBC News ਪੰਜਾਬੀ"
       }
     }
   },

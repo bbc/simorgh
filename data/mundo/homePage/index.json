@@ -90,10 +90,11 @@
       }
     ],
     "metadata": {
-      "analytics": {
+      "atiAnalytics": {
         "contentId": "urn:bbc:tipo:topic:c93v2kkze2rt",
         "contentType": "index-home",
-        "pageIdentifier": "mundo.page"
+        "pageIdentifier": "mundo.page",
+        "pageTitle": "Noticias - BBC News Mundo"
       }
     }
   },

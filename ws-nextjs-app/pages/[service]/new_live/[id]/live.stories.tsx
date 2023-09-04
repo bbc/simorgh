@@ -6,8 +6,6 @@ import Live from './LivePageLayout';
 
 const mockPageData = {
   ...liveFixture.data,
-  pageCount: 10,
-  activePage: 1,
   liveTextStream: {
     content: postFixture,
   },

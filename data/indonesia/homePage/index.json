@@ -90,10 +90,11 @@
       }
     ],
     "metadata": {
-      "analytics": {
+      "atiAnalytics": {
         "contentId": "urn:bbc:tipo:topic:ck2nelljke2t",
         "contentType": "index-home",
-        "pageIdentifier": "indonesia.page"
+        "pageIdentifier": "indonesia.page",
+        "pageTitle": "Berita - BBC News Indonesia"
       }
     }
   },

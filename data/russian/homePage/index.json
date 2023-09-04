@@ -48,10 +48,11 @@
       }
     ],
     "metadata": {
-      "analytics": {
+      "atiAnalytics": {
         "contentId": "urn:bbc:tipo:topic:c7pe2jj9q7zt",
         "contentType": "index-home",
-        "pageIdentifier": "russian.page"
+        "pageIdentifier": "russian.page",
+        "pageTitle": "Главная - BBC News Русская служба"
       }
     }
   },

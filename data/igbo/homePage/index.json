@@ -90,10 +90,11 @@
       }
     ],
     "metadata": {
-      "analytics": {
+      "atiAnalytics": {
         "contentId": "urn:bbc:tipo:topic:c44evppzkj4t",
         "contentType": "index-home",
-        "pageIdentifier": "igbo.page"
+        "pageIdentifier": "igbo.page",
+        "pageTitle": "BBC News Ìgbò"
       }
     }
   },

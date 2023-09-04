@@ -17,7 +17,6 @@ import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOpti
 import CpsMetadata from '#containers/CpsMetadata';
 import headings from '#containers/Headings';
 import Timestamp from '#containers/ArticleTimestamp';
-import disclaimer from '#containers/Disclaimer';
 import text from '#containers/Text';
 import Image from '#containers/Image';
 import MediaPlayer from '#containers/CpsAssetMediaPlayer';
@@ -38,6 +37,7 @@ import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import LinkedData from '../../components/LinkedData';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import Disclaimer from '../../components/Disclaimer';
 
 const PhotoGalleryPageGrid = ({ children, ...props }) => (
   <GelPageGrid
@@ -81,7 +81,7 @@ const getImageSizes = ({ blocks }) => {
 };
 
 const PhotoGalleryPage = ({ pageData }) => {
-  const { showRelatedTopics } = useContext(ServiceContext);
+  const { brandName, showRelatedTopics } = useContext(ServiceContext);
   const title = path(['promo', 'headlines', 'headline'], pageData);
   const shortHeadline = path(['promo', 'headlines', 'shortHeadline'], pageData);
   const summary = path(['promo', 'summary'], pageData);
@@ -104,6 +104,13 @@ const PhotoGalleryPage = ({ pageData }) => {
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
 
+  // ATI
+  const { atiAnalytics } = metadata;
+  const atiData = {
+    ...atiAnalytics,
+    pageTitle: `${atiAnalytics.pageTitle} - ${brandName}`,
+  };
+
   const componentsToRender = {
     fauxHeadline,
     visuallyHiddenHeadline,
@@ -121,7 +128,7 @@ const PhotoGalleryPage = ({ pageData }) => {
       ) : null,
     video: props => <MediaPlayer {...props} assetUri={assetUri} />,
     version: props => <MediaPlayer {...props} assetUri={assetUri} />,
-    disclaimer,
+    disclaimer: props => <Disclaimer {...props} />,
   };
 
   const StyledPhotoGalleryPageGrid = styled(PhotoGalleryPageGrid)`
@@ -166,7 +173,7 @@ const PhotoGalleryPage = ({ pageData }) => {
         aboutTags={aboutTags}
         imageLocator={indexImageLocator}
       />
-      <ATIAnalytics data={pageData} />
+      <ATIAnalytics atiData={atiData} />
       <ChartbeatAnalytics title={title} />
       <ComscoreAnalytics />
 

@@ -90,10 +90,11 @@
       }
     ],
     "metadata": {
-      "analytics": {
+      "atiAnalytics": {
         "contentId": "urn:bbc:tipo:topic:c3rpqvvzem3t",
         "contentType": "index-home",
-        "pageIdentifier": "persian.page"
+        "pageIdentifier": "persian.page",
+        "pageTitle": "BBC News فارسی"
       }
     }
   },

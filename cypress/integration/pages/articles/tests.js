@@ -6,6 +6,7 @@ import {
   getAllBlocksDataByType,
   getAllSocialBlocksByProviderName,
 } from './helpers';
+import { crossPlatform as mostReadAssertions } from '../mostReadPage/mostReadAssertions';
 
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
 const serviceHasFigure = service =>
@@ -232,6 +233,11 @@ export const testsThatFollowSmokeTestConfig = ({
           },
         );
       });
+
+      /**
+       * Most Read Component
+       */
+      mostReadAssertions({ service, variant });
     });
   });
 };

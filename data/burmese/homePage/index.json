@@ -90,10 +90,11 @@
       }
     ],
     "metadata": {
-      "analytics": {
+      "atiAnalytics": {
         "contentId": "urn:bbc:tipo:topic:c897lqqzk1zt",
         "contentType": "index-home",
-        "pageIdentifier": "burmese.page"
+        "pageIdentifier": "burmese.page",
+        "pageTitle": "ဘီဘီစီ မြန်မာ | အထူးသတင်း | နောက်ဆုံးရ သတင်း | နောက်ဆုံးရခေါင်းစဉ် သတင်း |မြန်မာသတင်း - BBC News မြန်မာ"
       }
     }
   },

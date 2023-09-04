@@ -73,7 +73,7 @@ describe('Inline', () => {
   it('should render podcast in a strong element', () => {
     const { getByText } = render(<PromoWithContext inline />);
 
-    expect(getByText(title).closest('strong')).toBeInTheDocument();
+    expect(getByText(brandTitle).closest('strong')).toBeInTheDocument();
   });
 
   it('should contain a link to skip to end of podcast component', () => {
@@ -96,18 +96,9 @@ describe('Inline', () => {
       />,
     );
 
-    expect(getByText(`Skip ${title} and continue reading`)).toBeInTheDocument();
-    expect(getByText(title)).toBeInTheDocument();
-  });
-
-  it('should render the section header/label', () => {
-    const { getByRole, getByText } = render(<PromoWithContext inline />);
-    const section = getByRole('region');
-    const ariaLabelledByAttr = section.getAttribute('aria-labelledby');
-
-    expect(getByText(title).closest('strong').getAttribute('id')).toEqual(
-      ariaLabelledByAttr,
-    );
+    expect(
+      getByText(`Skip podcast promotion and continue reading`),
+    ).toBeInTheDocument();
   });
 
   it('should render the title text in a <a> element', () => {

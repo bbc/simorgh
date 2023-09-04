@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 
-const JsdomEnvironment = require('jest-environment-jsdom');
+const JsdomEnvironment = require('jest-environment-jsdom').TestEnvironment;
 const fetchDom = require('./utils/fetchDom');
 const getPageTypeFromTestPath = require('./utils/getPageTypeFromTestPath');
 const camelCaseToText = require('./utils/camelCaseToText');
@@ -8,7 +8,7 @@ const camelCaseToText = require('./utils/camelCaseToText');
 class IntegrationTestEnvironment extends JsdomEnvironment {
   constructor(config, context) {
     super(config, context);
-    const { platform } = config.testEnvironmentOptions;
+    const { platform } = config.projectConfig.testEnvironmentOptions;
     const {
       pathname,
       service,

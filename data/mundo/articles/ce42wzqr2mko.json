@@ -497,6 +497,18 @@
       },
       "metadata": {
         "id": "urn:bbc:ares::article:ce42wzqr2mko",
+        "atiAnalytics": {
+          "categoryName": null,
+          "contentId": "urn:bbc:optimo:asset:ce42wzqr2mko",
+          "language": "es",
+          "ldpThingIds": null,
+          "ldpThingLabels": null,
+          "nationsProducer": null,
+          "pageIdentifier": "mundo.articles.ce42wzqr2mko.page",
+          "pageTitle": "Este artículo de prueba ha sido creado para que podamos ejecutar pruebas",
+          "timePublished": "2019-10-04T10:58:46.977Z",
+          "timeUpdated": "2019-10-04T10:58:46.977Z"
+        },
         "locators": {
           "optimoUrn": "urn:bbc:optimo:asset:ce42wzqr2mko",
           "canonicalUrl": "https://www.bbc.com/mundo/articles/ce42wzqr2mko"

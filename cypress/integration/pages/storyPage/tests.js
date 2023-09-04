@@ -3,6 +3,8 @@ import path from 'ramda/src/path';
 import getDataUrl from '../../../support/helpers/getDataUrl';
 import topicTagsTest from '../../../support/helpers/topicTagsTest';
 import envConfig from '../../../support/config/envs';
+import { crossPlatform as mostReadAssertions } from '../mostReadPage/mostReadAssertions';
+
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
 export const testsThatAlwaysRun = ({ service, pageType }) => {
@@ -128,6 +130,11 @@ export const testsThatFollowSmokeTestConfig = ({
         cy.log('Service is run in local.');
       }
     });
+
+    /**
+     * Most Read Component
+     */
+    mostReadAssertions({ service, variant });
   });
   describe(`Recommendations on ${service} ${pageType}`, () => {
     it('Recommendations have images', () => {

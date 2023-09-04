@@ -89,10 +89,11 @@
       }
     ],
     "metadata": {
-      "analytics": {
+      "atiAnalytics": {
         "contentId": "urn:bbc:tipo:topic:cg8nwjjm7vet",
         "contentType": "index-home",
-        "pageIdentifier": "hindi.page"
+        "pageIdentifier": "hindi.page",
+        "pageTitle": "BBC News हिंदी"
       }
     }
   },

@@ -1011,10 +1011,11 @@
       }
     ],
     "metadata": {
-      "analytics": {
+      "atiAnalytics": {
         "contentId": "urn:bbc:tipo:topic:cjln1ww62p1t",
         "contentType": "index-home",
-        "pageIdentifier": "afrique.page"
+        "pageIdentifier": "afrique.page",
+        "pageTitle": "BBC News Afrique"
       }
     }
   },

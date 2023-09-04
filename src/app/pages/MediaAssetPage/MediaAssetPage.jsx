@@ -15,7 +15,6 @@ import pathOr from 'ramda/src/pathOr';
 import last from 'ramda/src/last';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
-import disclaimer from '#containers/Disclaimer';
 import headings from '#containers/Headings';
 import Timestamp from '#containers/ArticleTimestamp';
 import text from '#containers/Text';
@@ -41,6 +40,7 @@ import LinkedData from '../../components/LinkedData';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 import MediaMessage from './MediaMessage';
+import Disclaimer from '../../components/Disclaimer';
 
 const StyledTimestamp = styled(Timestamp)`
   @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
@@ -74,7 +74,7 @@ MediaAssetPageGrid.propTypes = {
 };
 
 const MediaAssetPage = ({ pageData }) => {
-  const { showRelatedTopics } = useContext(ServiceContext);
+  const { brandName, showRelatedTopics } = useContext(ServiceContext);
   const { canonicalLink, isAmp } = useContext(RequestContext);
   const isLegacyMediaAssetPage = () => canonicalLink.split('/').length > 7;
 
@@ -109,6 +109,13 @@ const MediaAssetPage = ({ pageData }) => {
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
   const mostWatchedData = path(['mostWatched'], pageData);
+
+  // ATI
+  const { atiAnalytics } = metadata;
+  const atiData = {
+    ...atiAnalytics,
+    pageTitle: `${atiAnalytics.pageTitle} - ${brandName}`,
+  };
 
   const componentsToRender = {
     fauxHeadline,
@@ -161,7 +168,7 @@ const MediaAssetPage = ({ pageData }) => {
       />
     ),
     unavailableMedia: MediaMessage,
-    disclaimer,
+    disclaimer: props => <Disclaimer {...props} />,
   };
 
   const StyledMediaAssetPageGrid = styled(MediaAssetPageGrid)`
@@ -209,7 +216,7 @@ const MediaAssetPage = ({ pageData }) => {
         aboutTags={aboutTags}
         imageLocator={indexImageLocator}
       />
-      <ATIAnalytics data={pageData} />
+      <ATIAnalytics atiData={atiData} />
       <StyledMediaAssetPageGrid as="main" role="main">
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
       </StyledMediaAssetPageGrid>

@@ -154,6 +154,18 @@
       },
       "metadata": {
         "id": "urn:bbc:ares::article:c3xd4x9prgyo",
+        "atiAnalytics": {
+          "categoryName": null,
+          "contentId": "urn:bbc:optimo:asset:c3xd4x9prgyo",
+          "language": "zh-hans",
+          "ldpThingIds": null,
+          "ldpThingLabels": null,
+          "nationsProducer": null,
+          "pageIdentifier": null,
+          "pageTitle": "花木兰真人版：迪士尼斥巨资集结明星重拍的中国经典",
+          "timePublished": "2019-07-12T14:52:32.251Z",
+          "timeUpdated": "2019-07-12T14:52:32.251Z"
+        },
         "locators": {
           "optimoUrn": "urn:bbc:optimo:asset:c3xd4x9prgyo"
         },

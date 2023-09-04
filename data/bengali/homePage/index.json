@@ -90,10 +90,11 @@
       }
     ],
     "metadata": {
-      "analytics": {
+      "atiAnalytics": {
         "contentId": "urn:bbc:tipo:topic:c2eq2ggzz8kt",
         "contentType": "index-home",
-        "pageIdentifier": "bengali.page"
+        "pageIdentifier": "bengali.page",
+        "pageTitle": "খবর, সর্বশেষ খবর, ব্রেকিং নিউজ | News, latest news, breaking news - BBC News বাংলা"
       }
     }
   },

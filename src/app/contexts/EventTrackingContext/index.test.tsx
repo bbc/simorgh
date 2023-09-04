@@ -17,12 +17,10 @@ const defaultToggles = {
 };
 
 const defaultATIData = {
-  analytics: {
-    contentId: 'urn:bbc:tipo:topic:cm7682qz7v1t',
-    contentType: 'index-home',
-    pageIdentifier: 'kyrgyz.page',
-  },
-  title: 'pageTitle',
+  contentId: 'urn:bbc:tipo:topic:cm7682qz7v1t',
+  contentType: 'index-home',
+  pageIdentifier: 'kyrgyz.page',
+  pageTitle: 'pageTitle',
 };
 
 const { error } = console;
@@ -43,8 +41,13 @@ const TestComponent = () => {
 
 describe('Expected use', () => {
   it('should provide tracking data to all child components', () => {
+    const {
+      metadata: { atiAnalytics },
+    } = fixtureData;
+
     render(<TestComponent />, {
       pageData: fixtureData,
+      atiData: atiAnalytics,
       service: 'pidgin',
       toggles: defaultToggles,
       pageType: STORY_PAGE,
@@ -170,10 +173,7 @@ describe('Expected use', () => {
 
   it('should provide an empty object if atiData properties are undefined', () => {
     render(<TestComponent />, {
-      atiData: {
-        analytics: undefined,
-        title: undefined,
-      },
+      atiData: undefined,
       toggles: defaultToggles,
     });
 

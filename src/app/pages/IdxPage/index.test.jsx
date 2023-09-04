@@ -4,11 +4,10 @@ import fetchMock from 'fetch-mock';
 import dariRadioScheduleData from '#data/persian/bbc_dari_radio/schedule.json';
 import persianAfghanistanIdxData from '#data/persian/afghanistan/index.json';
 import ukraineInRussianIdxData from '#data/ukrainian/ukraine_in_russian';
-import { data as persianMostReadData } from '#data/persian/mostRead/index.json';
+import getInitialData from '#app/routes/idx/getInitialData';
 import IdxPageWithContext from './testHelpers';
 
-const mostReadEndpoint = '/data/persian/mostRead/index.json';
-const radioScheduleEndpoint = '/data/persian/bbc_dari_radio/schedule.json';
+const radioScheduleEndpoint = '/persian/bbc_dari_radio/schedule.json';
 
 jest.mock('../../components/ChartbeatAnalytics', () => {
   return () => <div>chartbeat</div>;
@@ -18,15 +17,29 @@ let container;
 
 describe('IdxPage - Persian', () => {
   beforeEach(async () => {
-    fetchMock.restore();
-    fetchMock.mock(mostReadEndpoint, persianMostReadData);
+    delete process.env.SIMORGH_APP_ENV;
+    fetchMock.mock(
+      'end:/persian/afghanistan',
+      JSON.stringify(persianAfghanistanIdxData),
+    );
+
     fetchMock.mock(radioScheduleEndpoint, dariRadioScheduleData);
 
-    await act(async () => {
-      container = render(
-        <IdxPageWithContext pageData={persianAfghanistanIdxData} />,
-      ).container;
+    const { pageData } = await getInitialData({
+      path: '/persian/afghanistan',
+      service: 'persian',
     });
+
+    await act(async () => {
+      container = render(<IdxPageWithContext pageData={pageData} />, {
+        service: 'persian',
+      }).container;
+    });
+  });
+
+  afterEach(() => {
+    jest.clearAllMocks();
+    fetchMock.restore();
   });
 
   describe('Snapshots', () => {
@@ -48,16 +61,29 @@ describe('IdxPage - Persian', () => {
 
 describe('IdxPage - Ukrainian', () => {
   beforeEach(async () => {
-    fetchMock.restore();
+    delete process.env.SIMORGH_APP_ENV;
+    fetchMock.mock(
+      'end:/ukrainian/ukraine_in_russian',
+      JSON.stringify(ukraineInRussianIdxData),
+    );
+
+    fetchMock.mock(`end:${radioScheduleEndpoint}`, dariRadioScheduleData);
+
+    const { pageData } = await getInitialData({
+      path: '/ukrainian/ukraine_in_russian',
+      service: 'ukrainian',
+    });
 
     await act(async () => {
-      container = render(
-        <IdxPageWithContext
-          service="ukrainian"
-          pageData={ukraineInRussianIdxData}
-        />,
-      ).container;
+      container = render(<IdxPageWithContext pageData={pageData} />, {
+        service: 'ukrainian',
+      }).container;
     });
+  });
+
+  afterEach(() => {
+    jest.clearAllMocks();
+    fetchMock.restore();
   });
 
   describe('Snapshots', () => {
