@@ -5364,23 +5364,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/punjabi'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/punjabi'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/punjabi'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
@@ -6171,23 +6155,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/sinhala'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/sinhala'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/sinhala'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
