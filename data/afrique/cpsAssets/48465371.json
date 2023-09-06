@@ -40,8 +40,19 @@
         "title": "Tout savoir sur la CAN 2019",
         "summary": "La Coupe d'Afrique des nations, compétition de football la plus importante dans le continent, se joue en Egypte du 21 juin au 19 juillet 2019.",
         "atiAnalytics": {
-          "producerName": "AFRIQUE",
-          "producerId": "3"
+          "campaigns": null,
+          "categoryName": null,
+          "contentId": "urn:bbc:cps:447a95b6-1c9f-e544-bf60-e23452e7fa71",
+          "contentType": "index-section",
+          "language": "fr",
+          "ldpThingIds": null,
+          "ldpThingLabels": null,
+          "pageIdentifier": "afrique.feature_index.48465371.page",
+          "pageTitle": "Tout savoir sur la CAN 2019",
+          "producerId": null,
+          "timePublished": "2019-05-30T14:23:38.000Z",
+          "timeUpdated": "2019-07-19T12:46:18.000Z",
+          "producerName": "AFRIQUE"
         }
       },
       "content": {
