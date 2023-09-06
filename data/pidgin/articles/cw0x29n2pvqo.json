@@ -809,6 +809,19 @@
       },
       "metadata": {
         "id": "urn:bbc:ares::article:cw0x29n2pvqo",
+        "atiAnalytics": {
+          "categoryName": "Nigeria~Politics~Nigeria+politics~Nigerian+elections+2023",
+          "contentId": "urn:bbc:optimo:asset:cw0x29n2pvqo",
+          "contentType": "article-sfv",
+          "language": "pcm",
+          "ldpThingIds": "3d5d5e30-dd50-4041-96d5-c970b20005b9~75612fa6-147c-4a43-97fa-fcf70d9cced3~7d65828a-85c1-41f4-96cf-c758da75e401~ad97dddb-ea75-4493-a4ed-95ad1477049f",
+          "ldpThingLabels": "Nigeria~Politics~Nigeria+politics~Nigerian+elections+2023",
+          "nationsProducer": null,
+          "pageIdentifier": "pidgin.articles.cw0x29n2pvqo.page",
+          "pageTitle": "Nigeria 2023 elections: INEC Chairman Mahmood Yakubu rule out postponement, tok about preparations for di polls",
+          "timePublished": "2023-01-20T09:43:06.574Z",
+          "timeUpdated": "2023-01-20T09:43:06.574Z"
+        },
         "locators": {
           "optimoUrn": "urn:bbc:optimo:asset:cw0x29n2pvqo",
           "canonicalUrl": "https://www.bbc.com/pidgin/articles/cw0x29n2pvqo"
