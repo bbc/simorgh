@@ -35,7 +35,21 @@
         ],
         "title": "РУС",
         "summary": "Новости BBC News Україна на русском",
-        "atiAnalytics": { "producerName": "UKRAINIAN", "producerId": "94" }
+        "atiAnalytics": {
+          "campaigns": null,
+          "categoryName": null,
+          "contentId": "urn:bbc:cps:40c7c53a-ba2e-8679-e050-380a4e807947",
+          "contentType": "index-section",
+          "language": "ru",
+          "ldpThingIds": null,
+          "ldpThingLabels": null,
+          "pageIdentifier": "ukrainian.ukraine_in_russian.page",
+          "pageTitle": "РУС",
+          "producerId": null,
+          "timePublished": "2016-11-22T07:16:56.000Z",
+          "timeUpdated": "2022-02-24T13:24:42.000Z",
+          "producerName": "UKRAINIAN"
+        }
       },
       "content": {
         "groups": [

@@ -19,7 +19,7 @@ import LinkedData from '../../components/LinkedData';
 import flattenGroups from './flattenGroups';
 
 const FeatureIdxPage = ({ pageData }) => {
-  const { lang } = useContext(ServiceContext);
+  const { brandName, lang } = useContext(ServiceContext);
   const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
   const { enabled: adsEnabled } = useToggle('ads');
 
@@ -36,11 +36,20 @@ const FeatureIdxPage = ({ pageData }) => {
     isCanonical,
   ].every(Boolean);
 
+  // ATI
+  const {
+    metadata: { atiAnalytics },
+  } = pageData;
+  const atiData = {
+    ...atiAnalytics,
+    pageTitle: `${atiAnalytics.pageTitle} - ${brandName}`,
+  };
+
   return (
     <>
       {/* dotcom and dotcomConfig need to be setup before the main dotcom javascript file is loaded */}
       {shouldBootstrapCanonicalAds && <CanonicalAdBootstrapJs />}
-      <ATIAnalytics data={pageData} />
+      <ATIAnalytics atiData={atiData} />
       <ChartbeatAnalytics
         sectionName={pageData?.relatedContent?.section?.name}
         categoryName={pageData?.metadata?.passport?.category?.categoryName}
