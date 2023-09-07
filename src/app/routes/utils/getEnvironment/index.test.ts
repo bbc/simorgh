@@ -1,10 +1,9 @@
 import getEnvironment from '.';
 
 describe('getEnvironment', () => {
-  const originalAppEnvironment = process.env.SIMORGH_APP_ENV;
-
   afterEach(() => {
-    process.env.SIMORGH_APP_ENV = originalAppEnvironment;
+    delete process.env.SIMORGH_APP_ENV;
+    delete process.env.CI;
   });
 
   it.each`
@@ -25,4 +24,11 @@ describe('getEnvironment', () => {
       expect(getEnvironment(url)).toBe(expected);
     },
   );
+
+  it('returns local when CI environment variable is true', () => {
+    // @ts-expect-error CI environment variable is a boolean and is set in the GitHub actions definitions
+    process.env.CI = true;
+
+    expect(getEnvironment('/mundo')).toBe('local');
+  });
 });
