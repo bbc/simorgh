@@ -123,6 +123,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
     pageType: LIVE_PAGE,
   });
 
+  context.res.statusCode = data.status;
   return {
     props: {
       bbcOrigin: reqHeaders['bbc-origin'] || null,
