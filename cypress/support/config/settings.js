@@ -1604,23 +1604,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/gahuza'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/gahuza'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/gahuza'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: {
         environments: {
           live: {
@@ -6363,23 +6347,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/somali'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/somali'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/somali'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: {
         environments: {
           live: {
