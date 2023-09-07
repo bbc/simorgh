@@ -39,10 +39,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: undefined,
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: {
         environments: {
           live: {
@@ -239,23 +236,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/afrique'],
-            enabled: true,
-          },
-          test: {
-            paths: ['/afrique'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/afrique'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: {
         environments: {
           live: {
@@ -479,10 +460,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: undefined,
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: {
         environments: {
           live: {
@@ -678,23 +656,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/arabic'],
-            enabled: true,
-          },
-          test: {
-            paths: ['/arabic'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/arabic'],
-            enabled: false,
-          },
-        },
-        smoke: true,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: {
         environments: {
           live: {
@@ -1080,23 +1042,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/bengali'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/bengali'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/bengali'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: {
         environments: {
           live: {
@@ -1812,10 +1758,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: undefined,
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: {
         environments: undefined,
@@ -1999,23 +1942,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/hausa'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/hausa'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/hausa'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: {
         environments: {
           live: {
@@ -2246,23 +2173,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/hindi'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/hindi'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/hindi'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: {
         environments: {
           live: {
@@ -2495,10 +2406,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: undefined,
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
@@ -2655,23 +2563,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/indonesia'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/indonesia'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/indonesia'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: {
         environments: {
           live: {
@@ -2881,23 +2773,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/japanese'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/japanese'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/japanese'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
@@ -3054,23 +2930,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/korean'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/korean'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/korean'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: {
         environments: {
           live: {
@@ -3509,23 +3369,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/marathi'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/marathi'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/marathi'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: {
         environments: {
@@ -3726,23 +3570,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/mundo'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/mundo'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/mundo'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
@@ -4001,23 +3829,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/nepali'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/nepali'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/nepali'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: {
         environments: {
           live: {
@@ -4382,23 +4194,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/pashto'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/pashto'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/pashto'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: {
         environments: {
           live: {
@@ -4664,23 +4460,7 @@ module.exports = () => ({
         },
         smoke: true,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/persian'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/persian'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/persian'],
-            enabled: false,
-          },
-        },
-        smoke: true,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: {
         environments: {
           live: {
@@ -4990,10 +4770,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: undefined,
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
@@ -5162,23 +4939,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/portuguese'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/portuguese'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/portuguese'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: {
         environments: {
@@ -5364,23 +5125,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/punjabi'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/punjabi'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/punjabi'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
@@ -5537,23 +5282,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/russian'],
-            enabled: true,
-          },
-          test: {
-            paths: ['/russian'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/russian'],
-            enabled: false,
-          },
-        },
-        smoke: true,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: {
         environments: {
@@ -6171,23 +5900,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/sinhala'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/sinhala'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/sinhala'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
@@ -6638,23 +6351,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/swahili'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/swahili'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/swahili'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: {
         environments: {
           live: {
@@ -6878,23 +6575,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/tamil'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/tamil'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/tamil'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: {
         environments: {
           live: {
@@ -7118,23 +6799,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/telugu'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/telugu'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/telugu'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: {
@@ -7315,23 +6980,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/thai'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/thai'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/thai'],
-            enabled: false,
-          },
-        },
-        smoke: true,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
@@ -7507,10 +7156,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: undefined,
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: {
         environments: {
           live: {
@@ -7705,23 +7351,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/turkce'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/turkce'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/turkce'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
@@ -7883,23 +7513,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/ukchina/simp'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/ukchina/simp'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/ukchina/simp'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
@@ -8061,23 +7675,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/ukchina/trad'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/ukchina/trad'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/ukchina/trad'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
@@ -8312,23 +7910,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/ukrainian'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/ukrainian'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/ukrainian'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: {
@@ -8520,23 +8102,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/urdu'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/urdu'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/urdu'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: {
         environments: {
           live: {
@@ -8760,23 +8326,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/uzbek'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/uzbek'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/uzbek'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: {
         environments: {
           live: {
@@ -9004,23 +8554,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/vietnamese'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/vietnamese'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/vietnamese'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
@@ -9182,10 +8716,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: undefined,
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
