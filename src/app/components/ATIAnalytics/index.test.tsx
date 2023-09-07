@@ -94,9 +94,9 @@ describe('ATI Analytics Container', () => {
         x9: '[Article%20Headline%20for%20SEO]',
         x11: '[2018-01-01T12:01:00.000Z]',
         x12: '[2018-01-01T14:00:00.000Z]',
-        x13: '[Royal%20Wedding%202018~Duchess%20of%20Sussex]',
+        x13: '[Royal+Wedding+2018~Duchess+of+Sussex]',
         x14: '[2351f2b2-ce36-4f44-996d-c3c4f7f90eaa~803eaeb9-c0c3-4f1b-9a66-90efac3df2dc]',
-        x17: '[Royal%20Wedding%202018~Duchess%20of%20Sussex]',
+        x17: '[Royal+Wedding+2018~Duchess+of+Sussex]',
       });
     });
 
@@ -144,9 +144,9 @@ describe('ATI Analytics Container', () => {
         x9: '[Article%20Headline%20for%20SEO]',
         x11: '[2018-01-01T12:01:00.000Z]',
         x12: '[2018-01-01T14:00:00.000Z]',
-        x13: '[Royal%20Wedding%202018~Duchess%20of%20Sussex]',
+        x13: '[Royal+Wedding+2018~Duchess+of+Sussex]',
         x14: '[2351f2b2-ce36-4f44-996d-c3c4f7f90eaa~803eaeb9-c0c3-4f1b-9a66-90efac3df2dc]',
-        x17: '[Royal%20Wedding%202018~Duchess%20of%20Sussex]',
+        x17: '[Royal+Wedding+2018~Duchess+of+Sussex]',
         ref: '${documentReferrer}',
       });
     });
@@ -158,15 +158,29 @@ describe('ATI Analytics Container', () => {
       // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       canonical.default = mockCanonical;
 
-      /* @ts-expect-error - only partial data required for testing purposes */
-      render(<ATIAnalytics data={articleDataNews} />, {
-        ...defaultRenderProps,
-        isAmp: false,
-        pageData: articleDataNews,
-        pageType: MEDIA_ARTICLE_PAGE,
-        service: 'news',
-        isUK: true,
-      });
+      const mediaArticleDataNews = {
+        ...articleDataNews,
+        metadata: {
+          ...articleDataNews.metadata,
+          atiAnalytics: {
+            ...articleDataNews.metadata.atiAnalytics,
+            contentType: 'article-sfv',
+          },
+          consumableAsSFV: true,
+        },
+      };
+
+      render(
+        <ATIAnalytics atiData={mediaArticleDataNews.metadata.atiAnalytics} />,
+        {
+          ...defaultRenderProps,
+          isAmp: false,
+          pageData: mediaArticleDataNews,
+          pageType: MEDIA_ARTICLE_PAGE,
+          service: 'news',
+          isUK: true,
+        },
+      );
 
       const { pageviewParams } = mockCanonical.mock.calls[0][0];
 
@@ -190,11 +204,11 @@ describe('ATI Analytics Container', () => {
         x7: '[article-sfv]',
         x8: '[simorgh]',
         x9: '[Article%20Headline%20for%20SEO]',
-        x11: '[1970-01-01T00:00:00.000Z]',
-        x12: '[1970-01-01T00:00:00.000Z]',
-        x13: '[Royal%20Wedding%202018~Duchess%20of%20Sussex]',
+        x11: '[2018-01-01T12:01:00.000Z]',
+        x12: '[2018-01-01T14:00:00.000Z]',
+        x13: '[Royal+Wedding+2018~Duchess+of+Sussex]',
         x14: '[2351f2b2-ce36-4f44-996d-c3c4f7f90eaa~803eaeb9-c0c3-4f1b-9a66-90efac3df2dc]',
-        x17: '[Royal%20Wedding%202018~Duchess%20of%20Sussex]',
+        x17: '[Royal+Wedding+2018~Duchess+of+Sussex]',
       });
     });
 
@@ -204,14 +218,28 @@ describe('ATI Analytics Container', () => {
       // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       amp.default = mockAmp;
 
-      /* @ts-expect-error - only partial data required for testing purposes */
-      render(<ATIAnalytics data={articleDataNews} />, {
-        ...defaultRenderProps,
-        isAmp: true,
-        pageData: articleDataNews,
-        pageType: MEDIA_ARTICLE_PAGE,
-        service: 'news',
-      });
+      const mediaArticleDataNews = {
+        ...articleDataNews,
+        metadata: {
+          ...articleDataNews.metadata,
+          atiAnalytics: {
+            ...articleDataNews.metadata.atiAnalytics,
+            contentType: 'article-sfv',
+          },
+          consumableAsSFV: true,
+        },
+      };
+
+      render(
+        <ATIAnalytics atiData={mediaArticleDataNews.metadata.atiAnalytics} />,
+        {
+          ...defaultRenderProps,
+          isAmp: true,
+          pageData: mediaArticleDataNews,
+          pageType: MEDIA_ARTICLE_PAGE,
+          service: 'news',
+        },
+      );
 
       const { pageviewParams } = mockAmp.mock.calls[0][0];
 
@@ -236,11 +264,11 @@ describe('ATI Analytics Container', () => {
         x7: '[article-sfv]',
         x8: '[simorgh]',
         x9: '[Article%20Headline%20for%20SEO]',
-        x11: '[1970-01-01T00:00:00.000Z]',
-        x12: '[1970-01-01T00:00:00.000Z]',
-        x13: '[Royal%20Wedding%202018~Duchess%20of%20Sussex]',
+        x11: '[2018-01-01T12:01:00.000Z]',
+        x12: '[2018-01-01T14:00:00.000Z]',
+        x13: '[Royal+Wedding+2018~Duchess+of+Sussex]',
         x14: '[2351f2b2-ce36-4f44-996d-c3c4f7f90eaa~803eaeb9-c0c3-4f1b-9a66-90efac3df2dc]',
-        x17: '[Royal%20Wedding%202018~Duchess%20of%20Sussex]',
+        x17: '[Royal+Wedding+2018~Duchess+of+Sussex]',
         ref: '${documentReferrer}',
       });
     });
@@ -1011,8 +1039,18 @@ describe('ATI Analytics Container', () => {
       // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       canonical.default = mockCanonical;
 
-      render(<ATIAnalytics data={fixAssetData} />, {
+      const {
+        metadata: { atiAnalytics },
+      } = fixAssetData;
+
+      const atiData = {
+        ...atiAnalytics,
+        pageTitle: `${atiAnalytics.pageTitle} - BBC News Afrique`,
+      };
+
+      render(<ATIAnalytics atiData={atiData} />, {
         ...defaultRenderProps,
+        atiData: atiAnalytics,
         isAmp: false,
         pageData: fixAssetData,
         pageType: FEATURE_INDEX_PAGE,
@@ -1041,8 +1079,8 @@ describe('ATI Analytics Container', () => {
         x7: '[index-section]',
         x8: '[simorgh]',
         x9: '[Tout%20savoir%20sur%20la%20CAN%202019%20-%20BBC%20News%20Afrique]',
-        x11: '[1970-01-01T00:00:00.000Z]',
-        x12: '[1970-01-01T00:00:00.000Z]',
+        x11: '[2019-05-30T14:23:38.000Z]',
+        x12: '[2019-07-19T12:46:18.000Z]',
       });
     });
 
@@ -1051,8 +1089,18 @@ describe('ATI Analytics Container', () => {
       // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       amp.default = mockAmp;
 
-      render(<ATIAnalytics data={fixAssetData} />, {
+      const {
+        metadata: { atiAnalytics },
+      } = fixAssetData;
+
+      const atiData = {
+        ...atiAnalytics,
+        pageTitle: `${atiAnalytics.pageTitle} - BBC News Afrique`,
+      };
+
+      render(<ATIAnalytics atiData={atiData} />, {
         ...defaultRenderProps,
+        atiData: atiAnalytics,
         isAmp: true,
         pageData: fixAssetData,
         pageType: FEATURE_INDEX_PAGE,
@@ -1082,8 +1130,8 @@ describe('ATI Analytics Container', () => {
         x7: '[index-section]',
         x8: '[simorgh]',
         x9: '[Tout%20savoir%20sur%20la%20CAN%202019%20-%20BBC%20News%20Afrique]',
-        x11: '[1970-01-01T00:00:00.000Z]',
-        x12: '[1970-01-01T00:00:00.000Z]',
+        x11: '[2019-05-30T14:23:38.000Z]',
+        x12: '[2019-07-19T12:46:18.000Z]',
         ref: '${documentReferrer}',
       });
     });

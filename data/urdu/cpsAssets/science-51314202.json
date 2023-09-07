@@ -7962,7 +7962,18 @@
             "cps_asset_type": "fix"
           },
           "atiAnalytics": {
-            "producerId": "95",
+            "campaigns": null,
+            "categoryName": null,
+            "contentId": "urn:bbc:cps:8c1f4760-de67-744b-bfd2-16eb1e9fd644",
+            "contentType": "index-section",
+            "language": "ur",
+            "ldpThingIds": null,
+            "ldpThingLabels": null,
+            "pageIdentifier": "urdu.science.feature_index.51314202.page",
+            "pageTitle": "کورونا وائرس: تحقیق، تشخیص اور احتیاط",
+            "producerId": null,
+            "timePublished": "2020-01-31T08:48:32.000Z",
+            "timeUpdated": "2020-09-29T10:13:59.000Z",
             "producerName": "URDU"
           },
           "blockTypes": [
