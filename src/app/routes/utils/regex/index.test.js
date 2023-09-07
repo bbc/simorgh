@@ -555,10 +555,12 @@ describe('frontPage -> homePage migration', () => {
     'amharic',
     'azeri',
     'burmese',
+    'gahuza',
     'gujarati',
     'igbo',
     'kyrgyz',
     'pidgin',
+    'somali',
     'tigrinya',
     'yoruba',
   ];
