@@ -38,6 +38,7 @@ const homePageServices = [
   'afaanoromoo',
   'amharic',
   'azeri',
+  'bengali',
   'burmese',
   'gahuza',
   'gujarati',
@@ -49,6 +50,7 @@ const homePageServices = [
   'punjabi',
   'sinhala',
   'somali',
+  'tamil',
   'tigrinya',
   'yoruba',
 ];
