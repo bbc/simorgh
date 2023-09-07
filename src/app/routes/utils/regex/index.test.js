@@ -559,6 +559,8 @@ describe('frontPage -> homePage migration', () => {
     'gujarati',
     'igbo',
     'kyrgyz',
+    'marathi',
+    'nepali',
     'pidgin',
     'punjabi',
     'sinhala',

@@ -43,6 +43,8 @@ const homePageServices = [
   'gujarati',
   'igbo',
   'kyrgyz',
+  'marathi',
+  'nepali',
   'pidgin',
   'punjabi',
   'sinhala',
