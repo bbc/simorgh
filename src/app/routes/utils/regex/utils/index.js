@@ -51,7 +51,9 @@ const homePageServices = [
   'sinhala',
   'somali',
   'tamil',
+  'telugu',
   'tigrinya',
+  'urdu',
   'yoruba',
 ];
 
