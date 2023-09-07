@@ -3509,23 +3509,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/marathi'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/marathi'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/marathi'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: {
         environments: {
@@ -4001,23 +3985,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/nepali'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/nepali'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/nepali'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: {
         environments: {
           live: {
