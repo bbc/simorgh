@@ -5,7 +5,6 @@ const extractHeaders = (headers: IncomingHttpHeaders) => {
   if (headers['x-bbc-edge-isuk']) {
     isUK = headers['x-bbc-edge-isuk'] === 'yes';
   } else if (headers['x-country']) {
-    // FOR PREVIEW ENV
     isUK = headers['x-country'] === 'gb';
   }
 
