@@ -21,7 +21,7 @@ const EmbedImages = ({ blocks: embedImages }: PropsWithChildren<Props>) => {
   const idt2EnvUrlSubPath = env === 'live' ? 'idt2' : 'idt2-test';
   const { width, height, locator } = rawImage;
 
-  const src = `${process.env.SIMORGH_ICHEF_BASE_URL}/news/${width}/${idt2EnvUrlSubPath}${locator}`;
+  const src = `${process.env.SIMORGH_ICHEF_BASE_URL}/news/${width}/${idt2EnvUrlSubPath}/${locator}`;
   const alt =
     image?.[0]?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.blocks?.[0]
       ?.model?.text;
