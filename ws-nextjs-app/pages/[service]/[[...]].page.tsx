@@ -17,6 +17,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
   const { headers: reqHeaders } = context.req;
 
+  context.res.statusCode = 404;
   return {
     props: {
       bbcOrigin: reqHeaders['bbc-origin'] || null,
