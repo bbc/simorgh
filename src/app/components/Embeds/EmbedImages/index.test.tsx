@@ -59,5 +59,20 @@ describe('EmbedImages', () => {
       const chartEmbedImage = container.getElementsByTagName('amp-img')[0];
       expect(chartEmbedImage).toHaveAttribute('width', '1280');
     });
+
+    it('should construct the correct URL', async () => {
+      const { container } = render(
+        <EmbedImages blocks={chartEmbedImages.blocks} />,
+        {
+          isAmp: true,
+        },
+      );
+
+      const chartEmbedImage = container.getElementsByTagName('amp-img')[0];
+      expect(chartEmbedImage).toHaveAttribute(
+        'src',
+        'https://ichef.bbci.co.uk/news/1280/idt2-test/idt2/793f648b-b17f-489a-a473-9e5a71f12684/image/640',
+      );
+    });
   });
 });
