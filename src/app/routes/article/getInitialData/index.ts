@@ -8,6 +8,7 @@ import handleError from '../../utils/handleError';
 import fetchDataFromBFF from '../../utils/fetchDataFromBFF';
 import getAgent from '../../../../server/utilities/getAgent';
 import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
+import certsRequired from '../../utils/certsRequired';
 
 const logger = nodeLogger(__filename);
 
@@ -37,7 +38,7 @@ export default async ({
       isAmp,
     });
 
-    const agent = await getAgent();
+    const agent = certsRequired(pathname) ? await getAgent() : null;
 
     if (!json?.data?.article) {
       throw handleError('Article data is malformed', 500);
