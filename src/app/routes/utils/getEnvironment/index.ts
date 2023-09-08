@@ -1,16 +1,25 @@
 import { Environments } from '#app/models/types/global';
 
 export default (pathname: string) => {
+  let environment = process.env.SIMORGH_APP_ENV;
+
   if (process.env.CI) {
-    return 'local';
+    environment = 'local';
   }
 
   if (pathname.includes('renderer_env=test')) {
-    return 'test';
+    environment = 'test';
   }
   if (pathname.includes('renderer_env=live')) {
-    return 'live';
+    environment = 'live';
   }
 
-  return process.env.SIMORGH_APP_ENV as Environments;
+  console.log({
+    CI: process.env.CI,
+    APP_ENV: process.env.SIMORGH_APP_ENV,
+    pathname,
+    environment,
+  });
+
+  return environment as Environments;
 };
