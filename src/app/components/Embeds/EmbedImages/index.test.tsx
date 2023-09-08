@@ -7,6 +7,7 @@ describe('EmbedImages', () => {
   beforeEach(() => {
     process.env.SIMORGH_INCLUDES_BASE_URL =
       'https://www.test.bbc.com/ws/includes';
+    process.env.SIMORGH_ICHEF_BASE_URL = 'https://ichef.bbci.co.uk';
   });
   it('should not render when empty embedImages array is passed in', async () => {
     const { container } = render(<EmbedImages blocks={[]} />);
@@ -34,6 +35,16 @@ describe('EmbedImages', () => {
 
       const chartEmbedImage = screen.queryByRole('img');
       expect(chartEmbedImage).toHaveAttribute('width', '1632');
+    });
+
+    it('should construct the correct URL', async () => {
+      render(<EmbedImages blocks={chartEmbedImages.blocks} />);
+
+      const chartEmbedImage = screen.queryByRole('img');
+      expect(chartEmbedImage).toHaveAttribute(
+        'src',
+        'https://ichef.bbci.co.uk/news/1632/idt2-test/idt2/793f648b-b17f-489a-a473-9e5a71f12684/image/816',
+      );
     });
   });
   describe('AMP', () => {
