@@ -6,7 +6,7 @@ import getInitialData from '.';
 process.env.BFF_PATH = 'https://mock-bff-path';
 
 const agent = { cert: 'cert', ca: 'ca', key: 'key' };
-jest.mock('#server/utilities/getAgent', () =>
+jest.mock('../../../../server/utilities/getAgent', () =>
   jest.fn(() => Promise.resolve(agent)),
 );
 
@@ -38,11 +38,12 @@ describe('MostReadPage - BFF Fetching', () => {
     await getInitialData({
       path: '/pidgin/popular/read',
       service: 'pidgin',
-      pageType: 'mostRead',
+      pageType: MOST_READ_PAGE,
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
       path: 'http://localhost/pidgin/mostread',
+      pageType: MOST_READ_PAGE,
     });
   });
 
@@ -60,7 +61,7 @@ describe('MostReadPage - BFF Fetching', () => {
     await getInitialData({
       path: '/pidgin/popular/read',
       service: 'pidgin',
-      pageType: 'mostRead',
+      pageType: MOST_READ_PAGE,
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
@@ -69,6 +70,7 @@ describe('MostReadPage - BFF Fetching', () => {
       optHeaders: {
         'ctx-service-env': 'test',
       },
+      pageType: MOST_READ_PAGE,
     });
   });
 
@@ -86,7 +88,7 @@ describe('MostReadPage - BFF Fetching', () => {
     await getInitialData({
       path: '/pidgin/popular/read',
       service: 'pidgin',
-      pageType: 'mostRead',
+      pageType: MOST_READ_PAGE,
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
@@ -95,6 +97,7 @@ describe('MostReadPage - BFF Fetching', () => {
       optHeaders: {
         'ctx-service-env': 'live',
       },
+      pageType: MOST_READ_PAGE,
     });
   });
 
@@ -112,7 +115,7 @@ describe('MostReadPage - BFF Fetching', () => {
     await getInitialData({
       path: '/pidgin/popular/read?renderer_env=test',
       service: 'pidgin',
-      pageType: 'mostRead',
+      pageType: MOST_READ_PAGE,
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
@@ -121,6 +124,7 @@ describe('MostReadPage - BFF Fetching', () => {
       optHeaders: {
         'ctx-service-env': 'test',
       },
+      pageType: MOST_READ_PAGE,
     });
   });
 
@@ -138,7 +142,7 @@ describe('MostReadPage - BFF Fetching', () => {
     await getInitialData({
       path: '/pidgin/popular/read?renderer_env=live',
       service: 'pidgin',
-      pageType: 'mostRead',
+      pageType: MOST_READ_PAGE,
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
@@ -147,6 +151,7 @@ describe('MostReadPage - BFF Fetching', () => {
       optHeaders: {
         'ctx-service-env': 'live',
       },
+      pageType: MOST_READ_PAGE,
     });
   });
 
