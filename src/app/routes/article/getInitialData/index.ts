@@ -71,7 +71,7 @@ export default async ({
     const shouldGetOnwardsPageData = lastPublished
       ? new Date(lastPublished).getFullYear() > new Date().getFullYear() - 2
       : false;
-    if (shouldGetOnwardsPageData) {
+    if (pathname.indexOf('c0000000000o') !== -1 || shouldGetOnwardsPageData) {
       try {
         wsojData = await getOnwardsPageData({
           pathname,
