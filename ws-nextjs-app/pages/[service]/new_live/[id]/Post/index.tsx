@@ -6,6 +6,7 @@ import headings from '#app/legacy/containers/Headings';
 import Blocks from '#app/legacy/containers/Blocks';
 import paragraph from '#app/legacy/containers/Paragraph';
 import Text from '#app/components/Text';
+import Image from '#app/components/Image';
 import { Post as PostType } from './types';
 
 // temporary solution to render LI/ OL blocks.
@@ -47,9 +48,22 @@ const PostHeadings = ({ headerBlocks }: { headerBlocks: OptimoBlock[] }) => {
 
 const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
   const componentsToRender = {
+    headline: headings,
+    subheadline: headings,
     paragraph,
     unorderedList,
     orderedList: unorderedList,
+    image: (props: { blocks: OptimoBlock[] }) => {
+      const { locator, width, originCode } = props.blocks.find(
+        block => block.type === 'rawImage',
+      )?.model;
+
+      const imageSrc = `${process.env.SIMORGH_ICHEF_BASE_URL}/ace/standard/${width}/${originCode}/${locator}.webp`;
+
+      return (
+        <Image sizes="(min-width: 1008px) 760px, 100vw" src={imageSrc} alt="" />
+      );
+    },
   };
 
   return (
@@ -74,8 +88,8 @@ const Post = ({ post }: { post: PostType }) => {
 
   return (
     <>
-      <PostHeadings headerBlocks={headerBlocks} />
-      <PostContent contentBlocks={contentBlocks} />
+      {/* <PostHeadings headerBlocks={headerBlocks} /> */}
+      <PostContent contentBlocks={[...headerBlocks, ...contentBlocks]} />
       <hr />
     </>
   );

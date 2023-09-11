@@ -18,7 +18,6 @@ import CpsMetadata from '#containers/CpsMetadata';
 import headings from '#containers/Headings';
 import Timestamp from '#containers/ArticleTimestamp';
 import text from '#containers/Text';
-import Image from '#containers/Image';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import CpsAssetMediaPlayer from '#containers/CpsAssetMediaPlayer';
 import Blocks from '#containers/Blocks';
@@ -34,6 +33,7 @@ import {
 import { RequestContext } from '#contexts/RequestContext';
 import { GelPageGrid, GridItemLarge } from '#components/Grid';
 import RelatedTopics from '#containers/RelatedTopics';
+import ImageWithCaption from '../../components/ImageWithCaption';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import LinkedData from '../../components/LinkedData';
@@ -124,7 +124,7 @@ const MediaAssetPage = ({ pageData }) => {
     subheadline: headings,
     text,
     image: props => (
-      <Image {...props} sizes="(min-width: 1008px) 760px, 100vw" />
+      <ImageWithCaption {...props} sizes="(min-width: 1008px) 760px, 100vw" />
     ),
     timestamp: props =>
       allowDateStamp ? (

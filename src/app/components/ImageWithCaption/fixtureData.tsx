@@ -1,19 +1,11 @@
 import React from 'react';
-import {
-  bool,
-  string,
-  number,
-  shape,
-  arrayOf,
-  oneOfType,
-  object,
-} from 'prop-types';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { blockContainingText } from '#models/blocks';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import FigureContainer from '.';
-import ThemeProvider from '../../../components/ThemeProvider';
+import ThemeProvider from '../ThemeProvider';
+import { Services } from '../../models/types/global';
 
 const imageAlt = 'Pauline Clayton';
 const imageHeight = 360;
@@ -21,8 +13,10 @@ const imageSrc =
   'https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg';
 const imageWidth = 640;
 const imageRatio = 56.25;
-const captionBlock = text => blockContainingText('caption', text, 'mock-id');
+const captionBlock = (text: string) =>
+  blockContainingText('caption', text, 'mock-id');
 
+// @ts-expect-error - TODO: fix types for blocks
 const createCaptionBlock = arrayOfBlocks => {
   const captionBlockSkeleton = {
     type: 'caption',
@@ -37,7 +31,9 @@ const createCaptionBlock = arrayOfBlocks => {
       ],
     },
   };
+  // @ts-expect-error - TODO: fix types for blocks
   arrayOfBlocks.forEach(block => {
+    // @ts-expect-error - TODO: fix types for blocks
     captionBlockSkeleton.model.blocks[0].model.blocks.push(block);
   });
   return captionBlockSkeleton;
@@ -154,16 +150,27 @@ const captionBlockWithLink = createCaptionBlock([paragraphBlockWithInlineLink]);
 
 const copyrightText = 'Getty Images';
 
+type GenerateFixtureDataProps = {
+  height?: number;
+  width?: number;
+  caption?: object | null;
+  copyright?: string | null;
+  lazyLoad?: boolean;
+  platform?: string;
+  type?: string;
+  service?: Services;
+};
+
 const GenerateFixtureData = ({
-  height,
-  width,
-  caption,
-  copyright,
-  lazyLoad,
-  platform,
-  type,
-  service,
-}) => (
+  height = imageHeight,
+  width = imageWidth,
+  caption = null,
+  copyright = null,
+  lazyLoad = false,
+  platform = 'canonical',
+  type = '',
+  service = 'news',
+}: GenerateFixtureDataProps) => (
   <ThemeProvider service={service || 'news'}>
     <ServiceContextProvider service={service || 'news'}>
       <RequestContextProvider
@@ -174,6 +181,7 @@ const GenerateFixtureData = ({
         pathname="/pathname"
         service="news"
         statusCode={200}
+        isApp={false}
       >
         <FigureContainer
           alt={imageAlt}
@@ -192,35 +200,9 @@ const GenerateFixtureData = ({
   </ThemeProvider>
 );
 
-GenerateFixtureData.propTypes = {
-  caption: shape({
-    model: shape({
-      blocks: arrayOf(oneOfType([string, object])),
-    }),
-  }),
-  copyright: string,
-  lazyLoad: bool,
-  platform: string,
-  type: string,
-  height: number,
-  width: number,
-  service: string,
-};
-
-GenerateFixtureData.defaultProps = {
-  caption: null,
-  copyright: null,
-  lazyLoad: false,
-  platform: 'canonical',
-  type: '',
-  height: imageHeight,
-  width: imageWidth,
-  service: 'news',
-};
-
 export const FigureImage = <GenerateFixtureData platform="canonical" />;
 
-export const FigureImageWithNestedGrid = (width, height) => (
+export const FigureImageWithNestedGrid = (width: number, height: number) => (
   <GenerateFixtureData platform="canonical" width={width} height={height} />
 );
 
@@ -230,7 +212,7 @@ export const FigureLazyLoadImage = (
 
 export const FigureAmpImage = <GenerateFixtureData platform="amp" />;
 
-export const FigureImageWithCaption = service => (
+export const FigureImageWithCaption = (service: Services) => (
   <GenerateFixtureData
     platform="canonical"
     type="image"
@@ -239,7 +221,7 @@ export const FigureImageWithCaption = service => (
   />
 );
 
-export const FigureAmpImageWithCaption = service => (
+export const FigureAmpImageWithCaption = (service: Services) => (
   <GenerateFixtureData
     platform="amp"
     type="image"

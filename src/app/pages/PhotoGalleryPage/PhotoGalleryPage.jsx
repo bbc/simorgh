@@ -8,6 +8,7 @@ import {
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
+  GEL_GROUP_5_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
 import { node } from 'prop-types';
 import path from 'ramda/src/path';
@@ -18,7 +19,6 @@ import CpsMetadata from '#containers/CpsMetadata';
 import headings from '#containers/Headings';
 import Timestamp from '#containers/ArticleTimestamp';
 import text from '#containers/Text';
-import Image from '#containers/Image';
 import MediaPlayer from '#containers/CpsAssetMediaPlayer';
 import Blocks from '#containers/Blocks';
 import CpsRelatedContent from '#containers/CpsRelatedContent';
@@ -33,6 +33,7 @@ import {
   getLastPublished,
 } from '#lib/utilities/parseAssetData';
 import RelatedTopics from '#containers/RelatedTopics';
+import ImageWithCaption from '../../components/ImageWithCaption';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import LinkedData from '../../components/LinkedData';
@@ -59,6 +60,17 @@ const PhotoGalleryPageGrid = ({ children, ...props }) => (
 PhotoGalleryPageGrid.propTypes = {
   children: node.isRequired,
 };
+
+const StyledImageWrapper = styled.div`
+  grid-column: 5 / span 12;
+  @media (max-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
+    grid-column: 2 / span 6;
+  }
+
+  @media (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    grid-column: 1 / span 6;
+  }
+`;
 
 const getImageSizes = ({ blocks }) => {
   if (!blocks) {
@@ -120,7 +132,11 @@ const PhotoGalleryPage = ({ pageData }) => {
     image: props => {
       const sizes = getImageSizes(props);
 
-      return <Image {...props} sizes={sizes} />;
+      return (
+        <StyledImageWrapper>
+          <ImageWithCaption {...props} sizes={sizes} />
+        </StyledImageWrapper>
+      );
     },
     timestamp: props =>
       allowDateStamp ? (

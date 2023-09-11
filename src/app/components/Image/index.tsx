@@ -58,6 +58,7 @@ const Image = ({
   sizes,
   src,
   width,
+  children,
 }: PropsWithChildren<Props>) => {
   const { pageType } = useContext(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -166,6 +167,7 @@ const Image = ({
             />
           </ImageWrapper>
         )}
+        {children}
       </div>
     </>
   );

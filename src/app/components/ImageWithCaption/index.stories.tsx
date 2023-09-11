@@ -15,16 +15,18 @@ import {
   FigureAmpImageWithCaptionContainingMultipleParagraphsAndLink,
   FigureLazyLoadImage,
 } from './fixtureData';
-import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
+import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
+import { Services } from '../../models/types/global';
 
 export default {
-  title: 'Containers/Article/Article Figure',
+  title: 'Components/ImageWithCaption',
   decorators: [withKnobs, withServicesKnob()],
   parameters: { chromatic: { disable: true } },
 };
 
 // Canonical
-export const WithACaption = ({ service }) => FigureImageWithCaption(service);
+export const WithACaption = ({ service }: { service: Services }) =>
+  FigureImageWithCaption(service);
 export const WithoutACaption = () => FigureImage;
 export const WithNonBBCCopyright = () => FigureImageWithCopyright;
 export const WithACaptionAndNonBBCCopyright = () =>
@@ -36,7 +38,7 @@ export const WithACaptionWithMultipleParagraphsWithALink = () =>
 export const WithALazyloadedImage = () => FigureLazyLoadImage;
 
 // AMP
-export const WithACaptionAmp = ({ service }) =>
+export const WithACaptionAmp = ({ service }: { service: Services }) =>
   FigureAmpImageWithCaption(service);
 WithACaptionAmp.decorators = [AmpDecorator];
 

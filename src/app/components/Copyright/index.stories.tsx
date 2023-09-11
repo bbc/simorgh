@@ -2,11 +2,12 @@ import React from 'react';
 import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import { withKnobs } from '@storybook/addon-knobs';
 import services from '#server/utilities/serviceConfigs';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import { ServiceContext } from '../../contexts/ServiceContext';
 import CopyrightContainer from '.';
+import { StoryProps } from '../../models/types/storybook';
 
 // eslint-disable-next-line react/prop-types
-const Component = ({ service, variant }) => {
+const Component = ({ service, variant }: StoryProps) => {
   const imageCaptionText =
     services[service][variant].imageCopyrightOffscreenText;
 
@@ -23,7 +24,7 @@ const Component = ({ service, variant }) => {
 };
 
 export default {
-  title: 'Containers/Copyright/Copyright',
+  title: 'Components/Copyright',
   Component,
   decorators: [withKnobs, withServicesKnob()],
   parameters: { chromatic: { disable: true } },
