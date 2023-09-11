@@ -16,6 +16,7 @@ exports[`should render Copyright with news service context 1`] = `
   bottom: 0;
   margin: 0;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
+  left: 0;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -50,7 +51,6 @@ exports[`should render Copyright with news service context 1`] = `
 <div>
   <p
     class="emotion-0"
-    position="left"
   >
     <span
       class="emotion-1"
@@ -78,6 +78,7 @@ exports[`should render Copyright with persian service context 1`] = `
   bottom: 0;
   margin: 0;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
+  right: 0;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -112,7 +113,6 @@ exports[`should render Copyright with persian service context 1`] = `
 <div>
   <p
     class="emotion-0"
-    position="right"
   >
     <span
       class="emotion-1"

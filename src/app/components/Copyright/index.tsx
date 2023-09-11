@@ -10,17 +10,16 @@ import styles from './index.styles';
 
 const CopyrightContainer = ({ children }: PropsWithChildren) => {
   const { dir, imageCopyrightOffscreenText, lang } = useContext(ServiceContext);
-  const copyrightProps = {
-    position: dir === 'rtl' ? 'right' : 'left',
-  };
 
   return (
     <Text
       as="p"
       fontVariant="sansRegular"
       size="minion"
-      css={styles.copyright}
-      {...copyrightProps}
+      css={[
+        styles.copyright,
+        { ...(dir === 'rtl' ? { right: 0 } : { left: 0 }) },
+      ]}
     >
       {imageCopyrightOffscreenText ? (
         <VisuallyHiddenText>{imageCopyrightOffscreenText}</VisuallyHiddenText>

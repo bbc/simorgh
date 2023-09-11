@@ -5011,6 +5011,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
   bottom: 0;
   margin: 0;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
+  left: 0;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -5189,7 +5190,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                     </picture>
                     <p
                       class="emotion-22"
-                      position="left"
                     >
                       <span
                         class="emotion-23"
@@ -5242,7 +5242,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                     </picture>
                     <p
                       class="emotion-22"
-                      position="left"
                     >
                       <span
                         class="emotion-23"
@@ -5295,7 +5294,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                     </picture>
                     <p
                       class="emotion-22"
-                      position="left"
                     >
                       <span
                         class="emotion-23"
@@ -5348,7 +5346,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                     </picture>
                     <p
                       class="emotion-22"
-                      position="left"
                     >
                       <span
                         class="emotion-23"
@@ -5401,7 +5398,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                     </picture>
                     <p
                       class="emotion-22"
-                      position="left"
                     >
                       <span
                         class="emotion-23"
@@ -5454,7 +5450,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                     </picture>
                     <p
                       class="emotion-22"
-                      position="left"
                     >
                       <span
                         class="emotion-23"
@@ -5507,7 +5502,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                     </picture>
                     <p
                       class="emotion-22"
-                      position="left"
                     >
                       <span
                         class="emotion-23"
@@ -6107,6 +6101,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   bottom: 0;
   margin: 0;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
+  left: 0;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -6982,7 +6977,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     </picture>
                     <p
                       class="emotion-22"
-                      position="left"
                     >
                       <span
                         class="emotion-23"
@@ -7035,7 +7029,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     </picture>
                     <p
                       class="emotion-22"
-                      position="left"
                     >
                       <span
                         class="emotion-23"
@@ -7088,7 +7081,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     </picture>
                     <p
                       class="emotion-22"
-                      position="left"
                     >
                       <span
                         class="emotion-23"
@@ -7141,7 +7133,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     </picture>
                     <p
                       class="emotion-22"
-                      position="left"
                     >
                       <span
                         class="emotion-23"
@@ -7194,7 +7185,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     </picture>
                     <p
                       class="emotion-22"
-                      position="left"
                     >
                       <span
                         class="emotion-23"
@@ -7247,7 +7237,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     </picture>
                     <p
                       class="emotion-22"
-                      position="left"
                     >
                       <span
                         class="emotion-23"
@@ -7300,7 +7289,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     </picture>
                     <p
                       class="emotion-22"
-                      position="left"
                     >
                       <span
                         class="emotion-23"
@@ -7353,7 +7341,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     </picture>
                     <p
                       class="emotion-22"
-                      position="left"
                     >
                       <span
                         class="emotion-23"
@@ -7406,7 +7393,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     </picture>
                     <p
                       class="emotion-22"
-                      position="left"
                     >
                       <span
                         class="emotion-23"
@@ -7459,7 +7445,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     </picture>
                     <p
                       class="emotion-22"
-                      position="left"
                     >
                       <span
                         class="emotion-23"
@@ -7512,7 +7497,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     </picture>
                     <p
                       class="emotion-22"
-                      position="left"
                     >
                       <span
                         class="emotion-23"
@@ -7565,7 +7549,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     </picture>
                     <p
                       class="emotion-22"
-                      position="left"
                     >
                       <span
                         class="emotion-23"
@@ -7618,7 +7601,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     </picture>
                     <p
                       class="emotion-22"
-                      position="left"
                     >
                       <span
                         class="emotion-23"
@@ -7671,7 +7653,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     </picture>
                     <p
                       class="emotion-22"
-                      position="left"
                     >
                       <span
                         class="emotion-23"
@@ -7724,7 +7705,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     </picture>
                     <p
                       class="emotion-22"
-                      position="left"
                     >
                       <span
                         class="emotion-23"
@@ -7777,7 +7757,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     </picture>
                     <p
                       class="emotion-22"
-                      position="left"
                     >
                       <span
                         class="emotion-23"
@@ -7830,7 +7809,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     </picture>
                     <p
                       class="emotion-22"
-                      position="left"
                     >
                       <span
                         class="emotion-23"
@@ -7883,7 +7861,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     </picture>
                     <p
                       class="emotion-22"
-                      position="left"
                     >
                       <span
                         class="emotion-23"
@@ -7936,7 +7913,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     </picture>
                     <p
                       class="emotion-22"
-                      position="left"
                     >
                       <span
                         class="emotion-23"
