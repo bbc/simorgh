@@ -139,6 +139,7 @@ const Image = ({
               sizes={getImgSizes()}
               fallback=""
               attribution={attribution}
+              {...(preload && { 'data-hero': true })}
             />
           </>
         ) : (

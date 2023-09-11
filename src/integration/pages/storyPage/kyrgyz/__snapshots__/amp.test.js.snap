@@ -254,11 +254,12 @@ exports[`AMP Story Page Image Caption should match text 1`] = `"Сүрөттүн
 exports[`AMP Story Page Image should match snapshot 1`] = `
 <amp-img
   alt="social media"
-  attribution=""
+  class="bbc-image"
   data-hero="true"
   fallback=""
   height="351"
   layout="responsive"
+  sizes="(min-width: 1008px) 645px, 100vw"
   src="https://ichef.bbci.co.uk/news/640/cpsdevpb/11D53/test/_63734037_socialmedia.jpg"
   srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/11D53/test/_63734037_socialmedia.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/11D53/test/_63734037_socialmedia.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/11D53/test/_63734037_socialmedia.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/11D53/test/_63734037_socialmedia.jpg 624w"
   width="624"

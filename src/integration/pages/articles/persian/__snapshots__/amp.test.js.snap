@@ -260,10 +260,12 @@ exports[`AMP Articles Image should match snapshot 1`] = `
 <amp-img
   alt="قهوه"
   attribution="Getty Images"
+  class="bbc-image"
   data-hero="true"
   fallback=""
   height="360"
   layout="responsive"
+  sizes="(min-width: 1008px) 760px, 100vw"
   src="https://ichef.bbci.co.uk/news/640/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg"
   srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg 624w, https://ichef.bbci.co.uk/news/640/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg 640w"
   width="640"
