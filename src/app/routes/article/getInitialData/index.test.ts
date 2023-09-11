@@ -22,6 +22,7 @@ const bffArticleJson = {
       metadata: {
         allowAdvertising: true,
         consumableAsSFV: true,
+        lastPublished: 2041342869000,
       },
       promo: {},
       relatedContent: {},

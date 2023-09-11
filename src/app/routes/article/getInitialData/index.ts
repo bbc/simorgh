@@ -51,17 +51,23 @@ export default async ({
     const isAdvertising = advertisingAllowed(pageType, article);
     const isArticleSfv = isSfv(article);
     let wsojData = [];
-    try {
-      wsojData = await getOnwardsPageData({
-        pathname,
-        service,
-        variant,
-        isAdvertising,
-        isArticleSfv,
-        agent,
-      });
-    } catch (error) {
-      logger.error('Recommendations JSON malformed', error);
+    const lastPublished = article?.metadata?.lastPublished;
+    const shouldGetOnwardsPageData = lastPublished
+      ? new Date(lastPublished).getFullYear() > new Date().getFullYear() - 2
+      : false;
+    if (shouldGetOnwardsPageData) {
+      try {
+        wsojData = await getOnwardsPageData({
+          pathname,
+          service,
+          variant,
+          isAdvertising,
+          isArticleSfv,
+          agent,
+        });
+      } catch (error) {
+        logger.error('Recommendations JSON malformed', error);
+      }
     }
 
     const { topStories, features, latestMedia, mostRead, mostWatched } =
