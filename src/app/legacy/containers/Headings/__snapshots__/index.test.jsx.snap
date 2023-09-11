@@ -102,14 +102,14 @@ exports[`Headings in the middle of articles should render correctly 1`] = `
 }
 
 .emotion-2 {
+  color: #141414;
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
-  color: #141414;
-  display: block;
+  font-weight: 500;
   margin: 0;
+  display: block;
   padding: 2rem 0;
   overflow-wrap: anywhere;
 }
@@ -144,7 +144,7 @@ exports[`Headings in the middle of articles should render correctly 1`] = `
     dir="ltr"
   >
     <strong
-      class="emotion-2 emotion-3"
+      class="emotion-2"
     >
       Sample headline
     </strong>
@@ -254,14 +254,14 @@ exports[`Headings with headline data should render correctly 1`] = `
 }
 
 .emotion-2 {
+  color: #141414;
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
-  color: #141414;
-  display: block;
+  font-weight: 500;
   margin: 0;
+  display: block;
   padding: 2rem 0;
   overflow-wrap: anywhere;
 }
@@ -296,7 +296,7 @@ exports[`Headings with headline data should render correctly 1`] = `
     dir="ltr"
   >
     <h1
-      class="emotion-2 emotion-3"
+      class="emotion-2"
       id="content"
       tabindex="-1"
     >
@@ -408,14 +408,14 @@ exports[`Headings with plain text headline should render h1 containing correct t
 }
 
 .emotion-2 {
+  color: #141414;
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
-  color: #141414;
-  display: block;
+  font-weight: 500;
   margin: 0;
+  display: block;
   padding: 2rem 0;
   overflow-wrap: anywhere;
 }
@@ -450,7 +450,7 @@ exports[`Headings with plain text headline should render h1 containing correct t
     dir="ltr"
   >
     <h1
-      class="emotion-2 emotion-3"
+      class="emotion-2"
       id="content"
       tabindex="-1"
     >
@@ -562,12 +562,12 @@ exports[`Headings with plain text subheadline should render h2 containing correc
 }
 
 .emotion-2 {
+  color: #141414;
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
-  color: #141414;
+  font-weight: 700;
   margin: 0;
   padding: 1.5rem 0;
 }
@@ -598,7 +598,7 @@ exports[`Headings with plain text subheadline should render h2 containing correc
     dir="ltr"
   >
     <h2
-      class="emotion-2 emotion-3"
+      class="emotion-2"
       id="Plain-subheadline"
       tabindex="-1"
     >
@@ -710,14 +710,14 @@ exports[`Headings with rich text headline with bold text should render h1 with <
 }
 
 .emotion-2 {
+  color: #141414;
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
-  color: #141414;
-  display: block;
+  font-weight: 500;
   margin: 0;
+  display: block;
   padding: 2rem 0;
   overflow-wrap: anywhere;
 }
@@ -752,7 +752,7 @@ exports[`Headings with rich text headline with bold text should render h1 with <
     dir="ltr"
   >
     <h1
-      class="emotion-2 emotion-3"
+      class="emotion-2"
       id="content"
       tabindex="-1"
     >
@@ -866,14 +866,14 @@ exports[`Headings with rich text headline with italic text should render h1 with
 }
 
 .emotion-2 {
+  color: #141414;
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
-  color: #141414;
-  display: block;
+  font-weight: 500;
   margin: 0;
+  display: block;
   padding: 2rem 0;
   overflow-wrap: anywhere;
 }
@@ -902,7 +902,7 @@ exports[`Headings with rich text headline with italic text should render h1 with
   outline: none;
 }
 
-.emotion-4 {
+.emotion-3 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: italic;
@@ -916,12 +916,12 @@ exports[`Headings with rich text headline with italic text should render h1 with
     dir="ltr"
   >
     <h1
-      class="emotion-2 emotion-3"
+      class="emotion-2"
       id="content"
       tabindex="-1"
     >
       <i
-        class="emotion-4 emotion-5"
+        class="emotion-3 emotion-4"
       >
         All is italic
       </i>
@@ -1032,14 +1032,14 @@ exports[`Headings with rich text should render headline with bold & italic text 
 }
 
 .emotion-2 {
+  color: #141414;
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
-  color: #141414;
-  display: block;
+  font-weight: 500;
   margin: 0;
+  display: block;
   padding: 2rem 0;
   overflow-wrap: anywhere;
 }
@@ -1068,7 +1068,7 @@ exports[`Headings with rich text should render headline with bold & italic text 
   outline: none;
 }
 
-.emotion-4 {
+.emotion-3 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: italic;
@@ -1082,12 +1082,12 @@ exports[`Headings with rich text should render headline with bold & italic text 
     dir="ltr"
   >
     <h1
-      class="emotion-2 emotion-3"
+      class="emotion-2"
       id="content"
       tabindex="-1"
     >
       <i
-        class="emotion-4 emotion-5"
+        class="emotion-3 emotion-4"
       >
         <b>
           All is bold and italic
@@ -1200,14 +1200,14 @@ exports[`Headings with rich text should render headline with italic & bold text 
 }
 
 .emotion-2 {
+  color: #141414;
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
-  color: #141414;
-  display: block;
+  font-weight: 500;
   margin: 0;
+  display: block;
   padding: 2rem 0;
   overflow-wrap: anywhere;
 }
@@ -1236,7 +1236,7 @@ exports[`Headings with rich text should render headline with italic & bold text 
   outline: none;
 }
 
-.emotion-4 {
+.emotion-3 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: italic;
@@ -1250,13 +1250,13 @@ exports[`Headings with rich text should render headline with italic & bold text 
     dir="ltr"
   >
     <h1
-      class="emotion-2 emotion-3"
+      class="emotion-2"
       id="content"
       tabindex="-1"
     >
       <b>
         <i
-          class="emotion-4 emotion-5"
+          class="emotion-3 emotion-4"
         >
           All is italic and bold
         </i>
@@ -1368,14 +1368,14 @@ exports[`Headings with rich text with different attributes should render headlin
 }
 
 .emotion-2 {
+  color: #141414;
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
-  color: #141414;
-  display: block;
+  font-weight: 500;
   margin: 0;
+  display: block;
   padding: 2rem 0;
   overflow-wrap: anywhere;
 }
@@ -1404,7 +1404,7 @@ exports[`Headings with rich text with different attributes should render headlin
   outline: none;
 }
 
-.emotion-4 {
+.emotion-3 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: italic;
@@ -1418,13 +1418,13 @@ exports[`Headings with rich text with different attributes should render headlin
     dir="ltr"
   >
     <h1
-      class="emotion-2 emotion-3"
+      class="emotion-2"
       id="content"
       tabindex="-1"
     >
       This is 
       <i
-        class="emotion-4 emotion-5"
+        class="emotion-3 emotion-4"
       >
         very
       </i>
@@ -1536,12 +1536,12 @@ exports[`Headings with subheadline data should render correctly 1`] = `
 }
 
 .emotion-2 {
+  color: #141414;
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
-  color: #141414;
+  font-weight: 700;
   margin: 0;
   padding: 1.5rem 0;
 }
@@ -1572,7 +1572,7 @@ exports[`Headings with subheadline data should render correctly 1`] = `
     dir="ltr"
   >
     <h2
-      class="emotion-2 emotion-3"
+      class="emotion-2"
       id="This-is-a-subheadline"
       tabindex="-1"
     >

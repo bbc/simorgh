@@ -48,11 +48,12 @@ const HeadingsContainer = ({ blocks, type }) => {
   const headingId = isFirstBlock ? 'content' : null; // Used for the skiplink
   const subHeadingId = sanitiseSubheadline(type, text);
   const isHeading = type === 'headline';
+  const isFirstHeading = isHeading && isFirstBlock;
 
   const headingProps = {
     headline: {
       id: headingId,
-      as: isHeading && !isFirstBlock ? 'strong' : null,
+      ...(!isFirstHeading && { as: 'strong' }),
       tabIndex: isHeading && !isFirstBlock ? null : '-1',
       // to change to level: headingLevel || 1,
       level: 1,
