@@ -9,6 +9,15 @@ import {
 } from '../pageTypes';
 import * as fetchPageData from '../fetchPageData';
 
+jest.mock('../fetchPageData', () =>
+  jest.fn().mockImplementation(() => {
+    return {
+      json: { data: {} },
+      status: 200,
+    };
+  }),
+);
+
 const mockAgent = { cert: 'cert', ca: 'ca', key: 'key' };
 
 jest.mock('../../../../server/utilities/getAgent', () =>
