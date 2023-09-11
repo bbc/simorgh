@@ -17,10 +17,6 @@ import {
   LIVE_PAGE,
 } from '../../../routes/utils/pageTypes';
 import {
-  buildArticleATIParams,
-  buildArticleATIUrl,
-} from './article/buildParams';
-import {
   buildTvRadioATIParams,
   buildTvRadioATIUrl,
 } from './tvRadioPage/buildParams';
@@ -42,17 +38,18 @@ import {
 } from '../types';
 import { PageTypes } from '../../../models/types/global';
 
-const ARTICLE_SHORT_FORM_VIDEO = 'article-sfv';
-
 const MIGRATED_PAGE_TYPES: PageTypes[] = [
   HOME_PAGE,
   ARTICLE_PAGE,
+  MEDIA_ARTICLE_PAGE,
   TOPIC_PAGE,
   MOST_READ_PAGE,
   STORY_PAGE,
   PHOTO_GALLERY_PAGE,
   MEDIA_ASSET_PAGE,
   CORRESPONDENT_STORY_PAGE,
+  FEATURE_INDEX_PAGE,
+  INDEX_PAGE,
 ];
 
 const noOp = () => {
@@ -60,25 +57,15 @@ const noOp = () => {
 };
 
 const pageTypeUrlBuilders = {
-  [ARTICLE_PAGE]: buildArticleATIUrl,
-  [MEDIA_ARTICLE_PAGE]: (
-    data: PageData,
-    requestContext: RequestContextProps,
-    serviceContext: ServiceConfig,
-  ) =>
-    buildArticleATIUrl(
-      data,
-      requestContext,
-      serviceContext,
-      ARTICLE_SHORT_FORM_VIDEO,
-    ),
+  [ARTICLE_PAGE]: noOp,
+  [MEDIA_ARTICLE_PAGE]: noOp,
   [STORY_PAGE]: noOp,
   [FRONT_PAGE]: buildIndexPageATIUrl,
   [MEDIA_PAGE]: buildTvRadioATIUrl,
   [MOST_READ_PAGE]: noOp,
   [MOST_WATCHED_PAGE]: buildMostWatchedATIUrl,
-  [INDEX_PAGE]: buildIndexPageATIUrl,
-  [FEATURE_INDEX_PAGE]: buildIndexPageATIUrl,
+  [INDEX_PAGE]: noOp,
+  [FEATURE_INDEX_PAGE]: noOp,
   [TOPIC_PAGE]: noOp,
   [MEDIA_ASSET_PAGE]: noOp,
   [PHOTO_GALLERY_PAGE]: noOp,
@@ -89,19 +76,14 @@ const pageTypeUrlBuilders = {
 };
 
 const pageTypeParamBuilders = {
-  [ARTICLE_PAGE]: buildArticleATIParams,
-  [MEDIA_ARTICLE_PAGE]: (
-    data: PageData,
-    requestContext: RequestContextProps,
-    serviceContext: ServiceConfig,
-  ) =>
-    buildArticleATIParams(data, requestContext, serviceContext, 'article-sfv'),
+  [ARTICLE_PAGE]: noOp,
+  [MEDIA_ARTICLE_PAGE]: noOp,
   [FRONT_PAGE]: buildIndexPageATIParams,
   [MEDIA_PAGE]: buildTvRadioATIParams,
   [MOST_READ_PAGE]: noOp,
   [MOST_WATCHED_PAGE]: buildMostWatchedATIParams,
-  [INDEX_PAGE]: buildIndexPageATIParams,
-  [FEATURE_INDEX_PAGE]: buildIndexPageATIParams,
+  [INDEX_PAGE]: noOp,
+  [FEATURE_INDEX_PAGE]: noOp,
   [TOPIC_PAGE]: noOp,
   [MEDIA_ASSET_PAGE]: noOp,
   [PHOTO_GALLERY_PAGE]: noOp,

@@ -39,15 +39,17 @@ const homePageServices = [
   'amharic',
   'azeri',
   'burmese',
+  'gahuza',
   'gujarati',
   'igbo',
   'kyrgyz',
   'pidgin',
+  'somali',
   'tigrinya',
   'yoruba',
 ];
 
-const servicesWithVariants = ['hausa', 'serbian', 'ukchina', 'zhongwen'];
+const servicesWithVariants = ['serbian', 'ukchina', 'zhongwen'];
 
 export const getFrontPageRegex = services => {
   let frontPages = services;
