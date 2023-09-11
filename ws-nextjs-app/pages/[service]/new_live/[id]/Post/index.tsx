@@ -34,6 +34,22 @@ const unorderedList = ({ blocks }: { blocks: OptimoBlock[] }) => {
   );
 };
 
+const PostBreakingNewsLabel = ({
+  isBreakingNews,
+  breakingNewsLabelText = 'Breaking',
+}: {
+  isBreakingNews: boolean;
+  breakingNewsLabelText?: string;
+}) => {
+  return (
+    isBreakingNews && (
+      <Text>
+        <span>{breakingNewsLabelText}</span>
+      </Text>
+    )
+  );
+};
+
 const PostHeadings = ({ headerBlocks }: { headerBlocks: OptimoBlock[] }) => {
   const componentsToRender = {
     headline: headings,
@@ -72,8 +88,11 @@ const Post = ({ post }: { post: PostType }) => {
     post,
   );
 
+  const isBreakingNews = pathOr(false, ['options', 'isBreakingNews'], post);
+
   return (
     <>
+      <PostBreakingNewsLabel isBreakingNews={isBreakingNews} />
       <PostHeadings headerBlocks={headerBlocks} />
       <PostContent contentBlocks={contentBlocks} />
       <hr />
