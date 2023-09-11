@@ -29,6 +29,7 @@ const sanitiseSubheadline = (type, text) => {
 };
 
 const HeadingsContainer = ({ blocks, type }) => {
+  // update the below to not be weird
   const Heading = Headings[type];
   const GridItem = GridItems[type];
 

@@ -612,12 +612,12 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
 }
 
 .emotion-44 {
+  color: #141414;
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
-  color: #141414;
+  font-weight: 700;
   margin: 0;
   padding: 1.5rem 0;
 }
@@ -642,7 +642,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   }
 }
 
-.emotion-48 {
+.emotion-47 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -654,21 +654,21 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-48 {
+  .emotion-47 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-48 {
+  .emotion-47 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-48 {
+  .emotion-47 {
     padding-right: 2.5rem;
   }
 }
@@ -816,7 +816,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
             dir="ltr"
           >
             <h2
-              class="emotion-44 emotion-45"
+              class="emotion-44"
               id="Headline"
               tabindex="-1"
             >
@@ -828,7 +828,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
             dir="ltr"
           >
             <p
-              class="emotion-48 emotion-49"
+              class="emotion-47 emotion-48"
               dir="ltr"
             >
               Page Text
