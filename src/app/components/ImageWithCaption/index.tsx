@@ -62,7 +62,7 @@ const ArticleFigure = ({
   const altTextBlock = filterForBlockType(blocks, 'altText');
   const captionBlock = filterForBlockType(blocks, 'caption');
 
-  const ShouldPreLoadLeadImage =
+  const shouldPreloadLeadImage =
     position[0] <= LAZYLOAD_FROM_BLOCK && shouldPreload;
 
   if (!rawImageBlock || !altTextBlock) {
@@ -100,7 +100,7 @@ const ArticleFigure = ({
         height={height}
         width={width}
         lazyLoad={lazyLoad}
-        preload={ShouldPreLoadLeadImage}
+        preload={shouldPreloadLeadImage}
         srcSet={primarySrcset || undefined}
         fallbackSrcSet={fallbackSrcset || undefined}
         mediaType={primaryMimeType || undefined}
