@@ -1,6 +1,6 @@
 import React from 'react';
 import pathOr from 'ramda/src/pathOr';
-import { string } from 'prop-types';
+import { string, number } from 'prop-types';
 import { textDefaultPropTypes } from '#models/propTypes';
 import { headlineModelPropTypes } from '#models/propTypes/headline';
 import idSanitiser from '#lib/utilities/idSanitiser';
@@ -28,7 +28,7 @@ const sanitiseSubheadline = (type, text) => {
   return null;
 };
 
-const HeadingsContainer = ({ blocks, type }) => {
+const HeadingsContainer = ({ blocks, type, headingLevel }) => {
   // update the below to not be weird
   const Heading = Headings[type];
   const GridItem = GridItems[type];
@@ -57,14 +57,14 @@ const HeadingsContainer = ({ blocks, type }) => {
       ...(!isFirstHeading && { as: 'strong' }),
       tabIndex: isHeading && !isFirstBlock ? null : '-1',
       // to change to level: headingLevel || 1,
-      level: 1,
+      level: headingLevel || 1,
       fontVariant: 'serifMedium',
       css: styles.headline,
     },
     subheadline: {
       id: subHeadingId,
       // to change to level: headingLevel || 2,
-      level: 2,
+      level: headingLevel || 2,
       fontVariant: 'sansBold',
       tabIndex: isHeading && !isFirstBlock ? null : '-1',
       css: styles.subHeading,
@@ -81,7 +81,7 @@ const HeadingsContainer = ({ blocks, type }) => {
 HeadingsContainer.propTypes = {
   ...headlineModelPropTypes,
   type: string.isRequired,
-  // headingLevel: string,
+  headingLevel: number,
 };
 
 HeadingsContainer.defaultProps = textDefaultPropTypes;

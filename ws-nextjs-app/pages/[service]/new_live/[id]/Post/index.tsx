@@ -2,7 +2,7 @@ import React from 'react';
 
 import pathOr from 'ramda/src/pathOr';
 import { OptimoBlock } from '#models/types/optimo';
-import headings from '#app/legacy/containers/Headings';
+import Heading from '#app/legacy/containers/Headings';
 import Blocks from '#app/legacy/containers/Blocks';
 import paragraph from '#app/legacy/containers/Paragraph';
 import Text from '#app/components/Text';
@@ -36,10 +36,11 @@ const unorderedList = ({ blocks }: { blocks: OptimoBlock[] }) => {
 
 const PostHeadings = ({ headerBlocks }: { headerBlocks: OptimoBlock[] }) => {
   const componentsToRender = {
-    headline: headings,
-    subheadline: headings,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    headline: (props: any) => <Heading {...props} headingLevel={3} />,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    subheadline: (props: any) => <Heading {...props} headingLevel={3} />,
   };
-
   return (
     <Blocks blocks={headerBlocks} componentsToRender={componentsToRender} />
   );
