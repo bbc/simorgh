@@ -48,8 +48,6 @@ const PostHeadings = ({ headerBlocks }: { headerBlocks: OptimoBlock[] }) => {
 
 const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
   const componentsToRender = {
-    headline: headings,
-    subheadline: headings,
     paragraph,
     unorderedList,
     orderedList: unorderedList,
