@@ -1,8 +1,6 @@
 import React from 'react';
 import pathOr from 'ramda/src/pathOr';
 import { string } from 'prop-types';
-import styled from '@emotion/styled';
-// import { Headline, SubHeading } from '#psammead/psammead-headings/src';
 import { textDefaultPropTypes } from '#models/propTypes';
 import { headlineModelPropTypes } from '#models/propTypes/headline';
 import idSanitiser from '#lib/utilities/idSanitiser';
@@ -54,7 +52,6 @@ const HeadingsContainer = ({ blocks, type }) => {
   const headingProps = {
     headline: {
       id: headingId,
-      // check this works
       as: isHeading && !isFirstBlock ? 'strong' : null,
       tabIndex: isHeading && !isFirstBlock ? null : '-1',
       // to change to level: headingLevel || 1,
@@ -67,6 +64,7 @@ const HeadingsContainer = ({ blocks, type }) => {
       // to change to level: headingLevel || 2,
       level: 2,
       fontVariant: 'sansBold',
+      tabIndex: isHeading && !isFirstBlock ? null : '-1',
       css: styles.subHeading,
     },
   };

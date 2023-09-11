@@ -8,6 +8,11 @@ const headline = blocksSingleFragment('This is a headline.', []);
 
 const subheadline = blocksSingleFragment('This is a subheadline.', []);
 
+const italicBold = blocksSingleFragment('All is italic and bold', [
+  'italic',
+  'bold',
+]);
+
 // eslint-disable-next-line react/prop-types
 const Component = ({ type, blocks }) => (
   <ServiceContext.Provider value={{ script: latin, service: 'news' }}>
@@ -24,4 +29,10 @@ export default {
 export const Heading = () => <Component type="headline" blocks={headline} />;
 export const Subheading = () => (
   <Component type="subheadline" blocks={subheadline} />
+);
+export const ItalicBoldHeadline = () => (
+  <Component type="headline" blocks={italicBold} />
+);
+export const ItalicBoldSubheadline = () => (
+  <Component type="subheadline" blocks={italicBold} />
 );
