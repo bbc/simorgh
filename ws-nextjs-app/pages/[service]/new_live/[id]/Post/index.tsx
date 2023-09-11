@@ -6,7 +6,7 @@ import headings from '#app/legacy/containers/Headings';
 import Blocks from '#app/legacy/containers/Blocks';
 import paragraph from '#app/legacy/containers/Paragraph';
 import Text from '#app/components/Text';
-import Image from '#app/components/Image';
+import ImageWithCaption from '../../../../../../src/app/components/ImageWithCaption';
 import { Post as PostType } from './types';
 
 // temporary solution to render LI/ OL blocks.
@@ -53,17 +53,9 @@ const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
     paragraph,
     unorderedList,
     orderedList: unorderedList,
-    image: (props: { blocks: OptimoBlock[] }) => {
-      const { locator, width, originCode } = props.blocks.find(
-        block => block.type === 'rawImage',
-      )?.model;
-
-      const imageSrc = `${process.env.SIMORGH_ICHEF_BASE_URL}/ace/standard/${width}/${originCode}/${locator}.webp`;
-
-      return (
-        <Image sizes="(min-width: 1008px) 760px, 100vw" src={imageSrc} alt="" />
-      );
-    },
+    image: (props: { blocks: OptimoBlock[] }) => (
+      <ImageWithCaption {...props} sizes="(min-width: 1008px) 760px, 100vw" />
+    ),
   };
 
   return (
@@ -88,8 +80,8 @@ const Post = ({ post }: { post: PostType }) => {
 
   return (
     <>
-      {/* <PostHeadings headerBlocks={headerBlocks} /> */}
-      <PostContent contentBlocks={[...headerBlocks, ...contentBlocks]} />
+      <PostHeadings headerBlocks={headerBlocks} />
+      <PostContent contentBlocks={contentBlocks} />
       <hr />
     </>
   );
