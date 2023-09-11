@@ -41,8 +41,6 @@ const Heading: FC<Props> = ({
 }: Props) => {
   const element: Element = `h${level}`;
 
-  console.log('i am the element', element);
-
   return (
     <Text
       as={element}
