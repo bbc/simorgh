@@ -205,6 +205,7 @@ exports[`Image with data should render an image with alt text and offscreen copy
   bottom: 0;
   margin: 0;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
+  left: 0;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -257,7 +258,6 @@ exports[`Image with data should render an image with alt text and offscreen copy
       </picture>
       <p
         class="emotion-3"
-        position="left"
       >
         <span
           class="emotion-4"
@@ -326,6 +326,7 @@ exports[`Image with data should render an image with other originCode - this wou
   bottom: 0;
   margin: 0;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
+  left: 0;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -378,7 +379,6 @@ exports[`Image with data should render an image with other originCode - this wou
       </picture>
       <p
         class="emotion-3"
-        position="left"
       >
         <span
           class="emotion-4"
