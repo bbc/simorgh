@@ -41,7 +41,7 @@ const renderCaption = (block: object, type: string, service: Services) =>
 type Props = {
   blocks: object[];
   position?: number[];
-  sizes: string;
+  sizes?: string;
   shouldPreload?: boolean;
 };
 
