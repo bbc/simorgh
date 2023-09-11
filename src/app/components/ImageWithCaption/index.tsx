@@ -105,7 +105,7 @@ const ArticleFigure = ({
         fallbackSrcSet={fallbackSrcset || undefined}
         mediaType={primaryMimeType || undefined}
         fallbackMediaType={fallbackMimeType || undefined}
-        sizes={sizes}
+        sizes={!isAmp ? sizes : undefined}
         isAmp={isAmp}
       >
         {renderCopyright(copyright || '')}
