@@ -16,15 +16,25 @@ import LinkedData from '../../components/LinkedData';
 import flattenGroups from './flattenGroups';
 
 const FeatureIdxPage = ({ pageData }) => {
-  const { lang } = useContext(ServiceContext);
+  const { brandName, lang } = useContext(ServiceContext);
+
   const groups = flattenGroups(pathOr([], ['content', 'groups'], pageData));
   const title = path(['metadata', 'title'], pageData);
   const summary = path(['metadata', 'summary'], pageData);
   const seoTitle = path(['promo', 'name'], pageData);
 
+  // ATI
+  const {
+    metadata: { atiAnalytics },
+  } = pageData;
+  const atiData = {
+    ...atiAnalytics,
+    pageTitle: `${atiAnalytics.pageTitle} - ${brandName}`,
+  };
+
   return (
     <>
-      <ATIAnalytics data={pageData} />
+      <ATIAnalytics atiData={atiData} />
       <ChartbeatAnalytics
         sectionName={pageData?.relatedContent?.section?.name}
         categoryName={pageData?.metadata?.passport?.category?.categoryName}
