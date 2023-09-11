@@ -55,8 +55,6 @@ export default async ({
       pageType,
     });
 
-    console.log({ status });
-
     return {
       status,
       json,
