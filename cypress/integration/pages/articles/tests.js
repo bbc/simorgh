@@ -90,6 +90,10 @@ export const testsThatFollowSmokeTestConfig = ({
       });
 
       if (serviceHasFigure(service)) {
+        it('should have a placeholder image', () => {
+          cy.get('figure div div div').eq(0).should('be.visible');
+        });
+
         if (serviceHasCaption(service)) {
           it('should have a visible image with a caption, and also not be lazyloaded', () => {
             cy.get('figure')
