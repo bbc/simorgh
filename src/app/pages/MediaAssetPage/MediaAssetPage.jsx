@@ -10,6 +10,7 @@ import { node } from 'prop-types';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
+  GEL_GROUP_5_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
 import pathOr from 'ramda/src/pathOr';
 import last from 'ramda/src/last';
@@ -73,6 +74,17 @@ MediaAssetPageGrid.propTypes = {
   children: node.isRequired,
 };
 
+const StyledImageWrapper = styled.div`
+  grid-column: 5 / span 12;
+  @media (max-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
+    grid-column: 2 / span 6;
+  }
+
+  @media (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    grid-column: 1 / span 6;
+  }
+`;
+
 const MediaAssetPage = ({ pageData }) => {
   const { brandName, showRelatedTopics } = useContext(ServiceContext);
   const { canonicalLink, isAmp } = useContext(RequestContext);
@@ -124,7 +136,9 @@ const MediaAssetPage = ({ pageData }) => {
     subheadline: headings,
     text,
     image: props => (
-      <ImageWithCaption {...props} sizes="(min-width: 1008px) 760px, 100vw" />
+      <StyledImageWrapper>
+        <ImageWithCaption {...props} sizes="(min-width: 1008px) 760px, 100vw" />
+      </StyledImageWrapper>
     ),
     timestamp: props =>
       allowDateStamp ? (
