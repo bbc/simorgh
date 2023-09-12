@@ -151,6 +151,28 @@
               {
                 "type": "paragraph",
                 "model": {
+                  "text": "Another example of short form text in bold and italic",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Another example of short form text in bold ",
+                        "attributes": ["bold"]
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "and italic",
+                        "attributes": ["italic"]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
                   "text": "Timestamp test",
                   "blocks": [
                     {

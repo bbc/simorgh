@@ -4,7 +4,7 @@ import pathOr from 'ramda/src/pathOr';
 import { OptimoBlock } from '#models/types/optimo';
 import Heading from '#app/legacy/containers/Headings';
 import Blocks from '#app/legacy/containers/Blocks';
-import paragraph from '#app/legacy/containers/Paragraph';
+import Paragraph from '#app/legacy/containers/Paragraph';
 import Text from '#app/components/Text';
 import { Post as PostType } from './types';
 import styles from './styles';
@@ -63,7 +63,8 @@ const PostHeadings = ({ headerBlocks }: { headerBlocks: OptimoBlock[] }) => {
 
 const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
   const componentsToRender = {
-    paragraph,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    paragraph: (props: any) => <Paragraph {...props} isPost />,
     unorderedList,
     orderedList: unorderedList,
   };

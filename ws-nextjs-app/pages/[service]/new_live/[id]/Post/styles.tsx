@@ -6,11 +6,12 @@ export default {
     css({
       backgroundColor: palette.GREY_2,
       margin: `${spacings.DOUBLE}rem 0`,
-      [mq.GROUP_1_MAX_WIDTH]: {
-        padding: `0 ${pixelsToRem(8)}rem`,
+      padding: `0 ${pixelsToRem(8)}rem ${pixelsToRem(8)}rem`,
+      [mq.GROUP_2_MIN_WIDTH]: {
+        padding: `0 0 ${pixelsToRem(8)}rem 0`,
       },
       [mq.GROUP_4_MIN_WIDTH]: {
-        padding: `0 ${pixelsToRem(16)}rem`,
+        padding: `0 ${pixelsToRem(16)}rem ${pixelsToRem(8)}rem`,
       },
     }),
 
