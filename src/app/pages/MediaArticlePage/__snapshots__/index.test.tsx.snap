@@ -779,13 +779,17 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
                   dir="ltr"
                 >
                   <span
-                    class="emotion-4"
+                    role="text"
                   >
-                    Video caption, 
+                    <span
+                      class="emotion-4"
+                    >
+                      Video caption, 
+                    </span>
+                    <p>
+                      BBC launch trailer for We Know Our Place women's sport campaign"
+                    </p>
                   </span>
-                  <p>
-                    BBC launch trailer for We Know Our Place women's sport campaign"
-                  </p>
                 </figcaption>
               </figure>
             </div>

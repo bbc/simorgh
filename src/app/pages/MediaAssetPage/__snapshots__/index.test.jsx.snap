@@ -3511,13 +3511,17 @@ exports[`Media Asset Page should render component 1`] = `
                     dir="ltr"
                   >
                     <span
-                      class="emotion-4"
+                      role="text"
                     >
-                      Wetin we call dis foto, 
+                      <span
+                        class="emotion-4"
+                      >
+                        Wetin we call dis foto, 
+                      </span>
+                      <p>
+                        A pretty little butterfly & &lt; &gt;
+                      </p>
                     </span>
-                    <p>
-                      A pretty little butterfly & &lt; &gt;
-                    </p>
                   </figcaption>
                 </figure>
               </div>
@@ -3563,13 +3567,17 @@ exports[`Media Asset Page should render component 1`] = `
                     dir="ltr"
                   >
                     <span
-                      class="emotion-4"
+                      role="text"
                     >
-                      Wetin we call dis foto, 
+                      <span
+                        class="emotion-4"
+                      >
+                        Wetin we call dis foto, 
+                      </span>
+                      <p>
+                        Psammead was named after the mythical sand creature
+                      </p>
                     </span>
-                    <p>
-                      Psammead was named after the mythical sand creature
-                    </p>
                   </figcaption>
                 </figure>
               </div>

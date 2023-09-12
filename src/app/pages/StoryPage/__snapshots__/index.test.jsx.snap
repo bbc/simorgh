@@ -1906,13 +1906,17 @@ exports[`Story Page should render correctly when the secondary column data is no
                       dir="ltr"
                     >
                       <span
-                        class="emotion-30"
+                        role="text"
                       >
-                        Wetin we call dis foto, 
+                        <span
+                          class="emotion-30"
+                        >
+                          Wetin we call dis foto, 
+                        </span>
+                        <p>
+                          Some people went to the NTA awards recently. This has "quotes" in it.
+                        </p>
                       </span>
-                      <p>
-                        Some people went to the NTA awards recently. This has "quotes" in it.
-                      </p>
                     </figcaption>
                   </figure>
                   <div
@@ -2224,13 +2228,17 @@ exports[`Story Page should render correctly when the secondary column data is no
                         dir="ltr"
                       >
                         <span
-                          class="emotion-30"
+                          role="text"
                         >
-                          Wetin we call dis Audio, 
+                          <span
+                            class="emotion-30"
+                          >
+                            Wetin we call dis Audio, 
+                          </span>
+                          <p>
+                            A caption for a test asset
+                          </p>
                         </span>
-                        <p>
-                          A caption for a test asset
-                        </p>
                       </figcaption>
                     </figure>
                   </div>
@@ -4985,13 +4993,17 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       dir="ltr"
                     >
                       <span
-                        class="emotion-30"
+                        role="text"
                       >
-                        Wetin we call dis foto, 
+                        <span
+                          class="emotion-30"
+                        >
+                          Wetin we call dis foto, 
+                        </span>
+                        <p>
+                          Some people went to the NTA awards recently. This has "quotes" in it.
+                        </p>
                       </span>
-                      <p>
-                        Some people went to the NTA awards recently. This has "quotes" in it.
-                      </p>
                     </figcaption>
                   </figure>
                   <div
@@ -5303,13 +5315,17 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         dir="ltr"
                       >
                         <span
-                          class="emotion-30"
+                          role="text"
                         >
-                          Wetin we call dis Audio, 
+                          <span
+                            class="emotion-30"
+                          >
+                            Wetin we call dis Audio, 
+                          </span>
+                          <p>
+                            A caption for a test asset
+                          </p>
                         </span>
-                        <p>
-                          A caption for a test asset
-                        </p>
                       </figcaption>
                     </figure>
                   </div>

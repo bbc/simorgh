@@ -80,13 +80,17 @@ exports[`should render caption text with example Farsi offscreen text 1`] = `
     dir="ltr"
   >
     <span
-      class="emotion-2"
+      role="text"
     >
-       ، عنوان
+      <span
+        class="emotion-2"
+      >
+         ، عنوان
+      </span>
+      <p>
+        Some caption text...
+      </p>
     </span>
-    <p>
-      Some caption text...
-    </p>
   </figcaption>
 </div>
 `;
@@ -171,13 +175,17 @@ exports[`should render caption text with example News offscreen text 1`] = `
     dir="ltr"
   >
     <span
-      class="emotion-2"
+      role="text"
     >
-      Caption, 
+      <span
+        class="emotion-2"
+      >
+        Caption, 
+      </span>
+      <p>
+        Some caption text...
+      </p>
     </span>
-    <p>
-      Some caption text...
-    </p>
   </figcaption>
 </div>
 `;
@@ -262,19 +270,23 @@ exports[`should render caption with multiple paragraphs 1`] = `
     dir="ltr"
   >
     <span
-      class="emotion-2"
+      role="text"
     >
-      Caption, 
+      <span
+        class="emotion-2"
+      >
+        Caption, 
+      </span>
+      <p>
+        This is paragraph 1
+      </p>
+      <p>
+        This is paragraph 2
+      </p>
+      <p>
+        Paragraph 3
+      </p>
     </span>
-    <p>
-      This is paragraph 1
-    </p>
-    <p>
-      This is paragraph 2
-    </p>
-    <p>
-      Paragraph 3
-    </p>
   </figcaption>
 </div>
 `;
@@ -382,27 +394,31 @@ exports[`should render correctly with inline block 1`] = `
     dir="ltr"
   >
     <span
-      class="emotion-2"
+      role="text"
     >
-      Caption, 
-    </span>
-    <p>
-      <b>
-        This is some text.
-      </b>
       <span
-        class="emotion-3 emotion-4"
-        lang="fa"
+        class="emotion-2"
       >
-        <a
-          aria-label="چیسربرگرundefined"
-          class="focusIndicatorReducedWidth emotion-5 emotion-6"
-          href="https://google.com"
-        >
-          چیسربرگر
-        </a>
+        Caption, 
       </span>
-    </p>
+      <p>
+        <b>
+          This is some text.
+        </b>
+        <span
+          class="emotion-3 emotion-4"
+          lang="fa"
+        >
+          <a
+            aria-label="چیسربرگرundefined"
+            class="focusIndicatorReducedWidth emotion-5 emotion-6"
+            href="https://google.com"
+          >
+            چیسربرگر
+          </a>
+        </span>
+      </p>
+    </span>
   </figcaption>
 </div>
 `;
