@@ -15,6 +15,7 @@ import { FetchError } from '#models/types/fetch';
 
 import getEnvironment from '#app/routes/utils/getEnvironment';
 import fetchPageData from '#app/routes/utils/fetchPageData';
+import certsRequired from '#app/routes/utils/certsRequired';
 import getAgent from '../../../../utilities/undiciAgent';
 
 import LivePageLayout from './LivePageLayout';
@@ -48,10 +49,8 @@ const getPageData = async ({
 
   const env = getEnvironment(pathname);
   const optHeaders = { 'ctx-service-env': env };
-  const isLocal = !env || env === 'local';
-  const certsNeeded = !isLocal && process.env.INTEGRATION_TEST_BUILD !== 'true';
 
-  const agent = certsNeeded ? await getAgent() : null;
+  const agent = certsRequired(pathname) ? await getAgent() : null;
 
   let pageStatus;
   let pageJson;

@@ -1,21 +1,18 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-import { Agent } from 'https';
-import getEnvironment from '#app/routes/utils/getEnvironment';
 import nodeLogger from '../../../lib/logger.node';
-import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
-import fetchPageData from '../../utils/fetchPageData';
-import constructPageFetchUrl from '../../utils/constructPageFetchUrl';
 import { Services, Toggles, Variants } from '../../../models/types/global';
 import getOnwardsPageData from '../utils/getOnwardsData';
 import addDisclaimer from '../utils/addDisclaimer';
 import { advertisingAllowed, isSfv } from '../utils/paramChecks';
 import { FetchError } from '../../../models/types/fetch';
 import handleError from '../../utils/handleError';
+import fetchDataFromBFF from '../../utils/fetchDataFromBFF';
+import getAgent from '../../../../server/utilities/getAgent';
+import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
+import certsRequired from '../../utils/certsRequired';
 
 const logger = nodeLogger(__filename);
 
 type Props = {
-  getAgent: () => Promise<Agent>;
   service: Services;
   path: string;
   pageType: 'article' | 'cpsAsset';
@@ -25,7 +22,6 @@ type Props = {
 };
 
 export default async ({
-  getAgent,
   service,
   pageType,
   path: pathname,
@@ -34,12 +30,7 @@ export default async ({
   isAmp,
 }: Props) => {
   try {
-    const env = getEnvironment(pathname);
-    const isLocal = !env || env === 'local';
-
-    const agent = !isLocal ? await getAgent() : null;
-
-    const fetchUrl = constructPageFetchUrl({
+    const { status, json } = await fetchDataFromBFF({
       pathname,
       pageType,
       service,
@@ -47,14 +38,7 @@ export default async ({
       isAmp,
     });
 
-    const optHeaders = { 'ctx-service-env': env };
-
-    // @ts-ignore - Ignore fetchPageData argument types
-    // eslint-disable-next-line prefer-const
-    let { status, json } = await fetchPageData({
-      path: fetchUrl.toString(),
-      ...(!isLocal && { agent, optHeaders }),
-    });
+    const agent = certsRequired(pathname) ? await getAgent() : null;
 
     if (!json?.data?.article) {
       throw handleError('Article data is malformed', 500);
