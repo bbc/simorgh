@@ -24,20 +24,7 @@ export default {
   },
 };
 
-export const LandscapeImage = () => (
-  <Component {...imageData({ image: landscape })} />
-);
-export const PortraitImage = () => (
-  <Component {...imageData({ image: portrait })} />
-);
-export const SquareImage = () => (
-  <Component {...imageData({ image: square })} />
-);
-export const CustomRatioImage = () => (
-  <Component {...imageData({ image: custom })} />
-);
-export const CaptionedImage = () => (
-  <Component
-    {...imageData({ image: landscape, caption: 'Some caption text...' })}
-  />
-);
+export const LandscapeImage = () => <Component {...imageData(landscape)} />;
+export const PortraitImage = () => <Component {...imageData(portrait)} />;
+export const SquareImage = () => <Component {...imageData(square)} />;
+export const CustomRatioImage = () => <Component {...imageData(custom)} />;

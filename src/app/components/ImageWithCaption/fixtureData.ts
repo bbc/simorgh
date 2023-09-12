@@ -45,13 +45,7 @@ type ImageProps = {
   attribution: string;
 };
 
-export const imageData = ({
-  image,
-  caption,
-}: {
-  image: ImageProps;
-  caption?: string;
-}) =>
+export const imageData = (image: ImageProps) =>
   blockArrayModel([
     {
       type: 'rawImage',
@@ -64,5 +58,5 @@ export const imageData = ({
       },
     },
     blockContainingText('altText', image.alt),
-    caption ? blockContainingText('caption', caption) : [],
+    blockContainingText('caption', 'Some caption text...'),
   ]);
