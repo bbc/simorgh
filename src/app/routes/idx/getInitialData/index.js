@@ -1,6 +1,5 @@
 import pathOr from 'ramda/src/pathOr';
 import pipe from 'ramda/src/pipe';
-import fetchPageData from '#app/routes/utils/fetchPageData';
 import filterUnknownContentTypes from '#app/routes/utils/sharedDataTransformers/filterUnknownContentTypes';
 import filterEmptyGroupItems from '#app/routes/utils/sharedDataTransformers/filterEmptyGroupItems';
 import squashTopStories from '#app/routes/utils/sharedDataTransformers/squashTopStories';
@@ -8,14 +7,14 @@ import addIdsToGroups from '#app/routes/utils/sharedDataTransformers/addIdsToGro
 import filterGroupsWithoutStraplines from '#app/routes/utils/sharedDataTransformers/filterGroupsWithoutStraplines';
 import getConfig from '#app/routes/utils/getConfig';
 import withRadioSchedule from '#app/routes/utils/withRadioSchedule';
-import getEnvironment from '#app/routes/utils/getEnvironment';
-import getAgent from '#server/utilities/getAgent';
-import constructPageFetchUrl from '#app/routes/utils/constructPageFetchUrl';
-import PAGE_TYPES from '#app/routes/utils/constructPageFetchUrl/page-types';
+import { CPS_ASSET } from '#app/routes/utils/pageTypes';
 import handleError from '#app/routes/utils/handleError';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
+import fetchDataFromBFF from '../../utils/fetchDataFromBFF';
+import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
+import nodeLogger from '../../../lib/logger.node';
 
-const { CPS_ASSET } = PAGE_TYPES;
+const logger = nodeLogger(__filename);
 
 const transformJson = pipe(
   filterUnknownContentTypes,
@@ -43,27 +42,16 @@ export const hasRadioSchedule = async (service, variant) => {
   return serviceHasRadioSchedule && radioScheduleOnIdx;
 };
 
-export default async ({ path: pathname, service, variant, pageType }) => {
+export default async ({ path: pathname, service, variant }) => {
   try {
-    const env = getEnvironment(pathname);
-    const isLocal = !env || env === 'local';
-
-    const agent = !isLocal ? await getAgent() : null;
-
-    const fetchUrl = constructPageFetchUrl({
+    const pageDataPromise = fetchDataFromBFF({
       pathname,
-      pageType: CPS_ASSET,
       service,
       variant,
+      pageType: CPS_ASSET,
     });
 
-    const optHeaders = { 'ctx-service-env': getEnvironment(pathname) };
     const pageHasRadioSchedule = await hasRadioSchedule(service, variant);
-    const pageDataPromise = fetchPageData({
-      path: fetchUrl.toString(),
-      ...(!isLocal && { agent, optHeaders }),
-      pageType,
-    });
 
     const { json, status } = pageHasRadioSchedule
       ? await withRadioSchedule({
@@ -87,6 +75,13 @@ export default async ({ path: pathname, service, variant, pageType }) => {
       },
     };
   } catch ({ message, status = getErrorStatusCode() }) {
+    logger.error(BFF_FETCH_ERROR, {
+      service,
+      status,
+      pathname,
+      message,
+    });
+
     return { error: message, status };
   }
 };
