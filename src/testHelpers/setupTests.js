@@ -1,5 +1,3 @@
-import '@testing-library/jest-dom';
-
 const REACT_FAILED_PROP_TYPE = 'Failed prop';
 const REACT_NO_KEYS = 'Each child in a list should have a unique "key" prop';
 const REACT_DUPLICATE_KEYS = 'Encountered two children with the same key';
