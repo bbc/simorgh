@@ -1,3 +1,5 @@
+'use client';
+
 import { useContext, useEffect, useState, useRef } from 'react';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';

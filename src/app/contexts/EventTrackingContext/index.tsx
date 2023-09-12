@@ -1,3 +1,5 @@
+'use client';
+
 import React, { createContext, PropsWithChildren, useContext } from 'react';
 
 import { RequestContext } from '../RequestContext';

@@ -1,3 +1,5 @@
+'use client';
+
 /* eslint-disable no-console */
 import { useContext, useCallback, useState } from 'react';
 import path from 'ramda/src/path';

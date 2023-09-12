@@ -5,14 +5,21 @@
     // We don't really need this enabled as we don't need explicit type definitions generated for our files as they aren't used anywhere else
     // https://github.com/microsoft/TypeScript/issues/47663
     "declaration": false,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "strictNullChecks": true
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     "next.config.js",
-    "integration/IntegrationTestEnvironment.ts"
+    "integration/IntegrationTestEnvironment.ts",
+    "build/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",

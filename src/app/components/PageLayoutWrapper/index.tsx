@@ -2,6 +2,8 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
 
+'use client';
+
 import React, { PropsWithChildren, useContext } from 'react';
 import { jsx } from '@emotion/react';
 import { Helmet } from 'react-helmet';
