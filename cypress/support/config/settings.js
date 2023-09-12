@@ -2388,9 +2388,7 @@ module.exports = () => ({
       articles: {
         environments: {
           live: {
-            paths: [
-              '/igbo/articles/c0jgdy9d841o',
-            ],
+            paths: ['/igbo/articles/c0jgdy9d841o'],
             enabled: false,
           },
           test: {
