@@ -29,6 +29,7 @@ const HeadingsContainer = ({
   headingLevel,
   fontVariant,
   size,
+  className,
 }) => {
   const GridItem = GridItems[type];
 
@@ -49,7 +50,6 @@ const HeadingsContainer = ({
   const subHeadingId = sanitiseSubheadline(type, text);
   const isHeading = type === 'headline';
   const isFirstHeading = isHeading && isFirstBlock;
-  const isPostHeading = headingLevel === 3;
 
   const headingProps = {
     headline: {
@@ -69,28 +69,12 @@ const HeadingsContainer = ({
     },
   };
 
-  const getHeadingCss = () => {
-    const itemCss = [];
-
-    if (isHeading && !isPostHeading) {
-      itemCss.push(styles.headline);
-    } else if (isPostHeading && isHeading) {
-      itemCss.push(styles.postHeading);
-    } else if (isPostHeading && !isHeading) {
-      itemCss.push(styles.postSubHeading);
-    } else {
-      itemCss.push(styles.subHeading);
-    }
-
-    return itemCss;
-  };
-
   return (
     <GridItem>
       <HeadingComponent
-        // replace with better logic?
-        css={getHeadingCss()}
+        css={isHeading ? styles.headline : styles.subHeading}
         {...headingProps[type]}
+        className={className}
       >
         {renderText()}
       </HeadingComponent>
@@ -102,6 +86,9 @@ HeadingsContainer.propTypes = {
   ...headlineModelPropTypes,
   type: string.isRequired,
   headingLevel: number,
+  fontVariant: string,
+  size: string,
+  className: string,
 };
 
 HeadingsContainer.defaultProps = textDefaultPropTypes;

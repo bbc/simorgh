@@ -44,6 +44,8 @@ const PostHeadings = ({ headerBlocks }: { headerBlocks: OptimoBlock[] }) => {
         headingLevel={3}
         fontVariant="sansBold"
         size="greatPrimer"
+        className="headingStyling"
+        css={styles.postHeading}
       />
     ),
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -53,6 +55,8 @@ const PostHeadings = ({ headerBlocks }: { headerBlocks: OptimoBlock[] }) => {
         headingLevel={3}
         fontVariant="sansRegular"
         size="brevier"
+        className="headingStyling"
+        css={styles.postSubHeading}
       />
     ),
   };
@@ -64,7 +68,9 @@ const PostHeadings = ({ headerBlocks }: { headerBlocks: OptimoBlock[] }) => {
 const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
   const componentsToRender = {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    paragraph: (props: any) => <Paragraph {...props} isPost />,
+    paragraph: (props: any) => (
+      <Paragraph {...props} className="blackText" css={styles.bodyText} />
+    ),
     unorderedList,
     orderedList: unorderedList,
   };

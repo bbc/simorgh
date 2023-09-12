@@ -11,18 +11,12 @@ import styles from './index.styles';
 
 const componentsToRender = { fragment, urlLink: InlineLink, inline: Inline };
 
-const ParagraphContainer = ({ blocks, isPost }) => {
+const ParagraphContainer = ({ blocks, className }) => {
   const { dir } = useContext(ServiceContext);
 
   return (
     <GridItemMedium>
-      <Paragraph
-        dir={dir}
-        css={[
-          styles.paragraph,
-          isPost ? styles.doubleSpacing : styles.tripleSpacing,
-        ]}
-      >
+      <Paragraph dir={dir} css={[styles.paragraph]} className={className}>
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
       </Paragraph>
     </GridItemMedium>

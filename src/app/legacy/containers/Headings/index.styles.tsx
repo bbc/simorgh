@@ -1,12 +1,10 @@
 import { css, Theme } from '@emotion/react';
-import pixelsToRem from '../../../utilities/pixelsToRem';
 
 export default {
   headline: ({ spacings, mq }: Theme) =>
     css({
       display: 'block' /* Explicitly set */,
       padding: `${spacings.QUADRUPLE}rem 0`,
-      // check eq to MEDIA_QUERY_TYPOGRAPHY.LAPTOP_AND_LARGE
       [mq.GROUP_3_MIN_WIDTH]: {
         padding: `${spacings.QUINTUPLE}rem 0`,
       },
@@ -14,23 +12,14 @@ export default {
         outline: 'none',
       },
       overflowWrap: 'anywhere',
+      margin: 0 /* Reset */,
     }),
   subHeading: ({ spacings, mq }: Theme) =>
     css({
       padding: `${spacings.TRIPLE}rem 0`,
-      // check eq to MEDIA_QUERY_TYPOGRAPHY.LAPTOP_AND_LARGER
       [mq.GROUP_3_MIN_WIDTH]: {
         paddingTop: `${spacings.QUADRUPLE}rem`,
       },
-    }),
-  postHeading: ({ spacings, palette }: Theme) =>
-    css({
-      color: palette.BLACK,
-      paddingTop: `${spacings.TRIPLE}rem`,
-    }),
-  postSubHeading: ({ palette }: Theme) =>
-    css({
-      color: palette.BLACK,
-      paddingTop: `${pixelsToRem(8)}rem`,
+      margin: 0 /* Reset */,
     }),
 };
