@@ -15,7 +15,6 @@ import { FetchError } from '#models/types/fetch';
 import fetchDataFromBFF from '#app/routes/utils/fetchDataFromBFF';
 
 import LivePageLayout from './LivePageLayout';
-import getAgent from '../../../../utilities/undiciAgent';
 
 interface PageDataParams extends ParsedUrlQuery {
   id: string;
@@ -47,7 +46,6 @@ const getPageData = async ({
       service,
       variant,
       page,
-      agentOverride: getAgent,
     }));
   } catch (error: unknown) {
     ({ message, status } = error as FetchError);
