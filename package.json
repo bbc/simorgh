@@ -57,7 +57,7 @@
     "test:e2e": "yarn stop && yarn build && run-p --race start cypress",
     "test:e2e:interactive": "yarn stop && yarn build && run-p --race start cypress:interactive",
     "test:lint": "eslint --ext .js,jsx,json,ts,tsx ./src ./data ./cypress ./.storybook ./webpack** && stylelint 'src/**/*.js' 'src/**/*.jsx'",
-    "test:lint:fix": "eslint --fix --ext .js,jsx,json,ts,tsx ./src/app/routes && stylelint 'src/app/routes/**/*.js' 'src/app/routes/**/*.jsx'",
+    "test:lint:fix": "eslint --fix --ext .js,jsx,json,ts,tsx ./src ./data ./cypress ./.storybook ./webpack** && stylelint 'src/**/*.js' 'src/**/*.jsx'",
     "test:puppeteer": "jest --ci --env=jsdom --colors ./puppeteer",
     "test:unit": "test -z $CI && NODE_OPTIONS=--experimental-vm-modules jest --env=jsdom --coverage --colors --testPathIgnorePatterns=\"src/integration\" \"puppeteer\" \"ws-nextjs-app\"  || NODE_OPTIONS=--experimental-vm-modules jest --ci --runInBand --env=jsdom --coverage --colors --testPathIgnorePatterns=\"src/integration\" \"puppeteer\" \"ws-nextjs-app\"",
     "test:unit:watch": "yarn test:unit -- --watch",
