@@ -3635,7 +3635,9 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: ['/mundo/noticias-66171332'],
+            paths: ['/mundo/noticias-54274735', 
+                    '/mundo/noticias-66171332',
+            ],
             enabled: true,
           },
           test: {
