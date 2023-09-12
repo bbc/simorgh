@@ -77,12 +77,12 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
   }
 }
 
-.emotion-3>p {
+.emotion-3>span>p {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.emotion-3>p:last-child {
+.emotion-3>span>p:last-child {
   padding-bottom: 0;
 }
 

@@ -444,12 +444,12 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
   }
 }
 
-.emotion-17>p {
+.emotion-17>span>p {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.emotion-17>p:last-child {
+.emotion-17>span>p:last-child {
   padding-bottom: 0;
 }
 
@@ -1752,12 +1752,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
   }
 }
 
-.emotion-22>p {
+.emotion-22>span>p {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.emotion-22>p:last-child {
+.emotion-22>span>p:last-child {
   padding-bottom: 0;
 }
 
@@ -3072,12 +3072,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   }
 }
 
-.emotion-22>p {
+.emotion-22>span>p {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.emotion-22>p:last-child {
+.emotion-22>span>p:last-child {
   padding-bottom: 0;
 }
 
@@ -5244,12 +5244,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
   }
 }
 
-.emotion-24>p {
+.emotion-24>span>p {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.emotion-24>p:last-child {
+.emotion-24>span>p:last-child {
   padding-bottom: 0;
 }
 
@@ -6362,12 +6362,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   }
 }
 
-.emotion-24>p {
+.emotion-24>span>p {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.emotion-24>p:last-child {
+.emotion-24>span>p:last-child {
   padding-bottom: 0;
 }
 

@@ -2401,12 +2401,12 @@ exports[`Media Asset Page should render component 1`] = `
   }
 }
 
-.emotion-108>p {
+.emotion-108>span>p {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.emotion-108>p:last-child {
+.emotion-108>span>p:last-child {
   padding-bottom: 0;
 }
 
