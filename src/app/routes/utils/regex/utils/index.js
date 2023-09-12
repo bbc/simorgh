@@ -44,6 +44,8 @@ const homePageServices = [
   'igbo',
   'kyrgyz',
   'pidgin',
+  'punjabi',
+  'sinhala',
   'somali',
   'tigrinya',
   'yoruba',
