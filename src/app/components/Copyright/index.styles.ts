@@ -9,6 +9,7 @@ const styles = {
       padding: `${theme.spacings.HALF}rem ${theme.spacings.FULL}rem`,
       position: 'absolute',
       bottom: 0,
+      insetInlineStart: 0,
       margin: 0,
       fontFamily: 'ReithSans, Helvetica, Arial, sans-serif',
 

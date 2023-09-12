@@ -207,9 +207,9 @@ exports[`Image with data should render an image with alt text and offscreen copy
   padding: 0.25rem 0.5rem;
   position: absolute;
   bottom: 0;
+  inset-inline-start: 0;
   margin: 0;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  left: 0;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -328,9 +328,9 @@ exports[`Image with data should render an image with other originCode - this wou
   padding: 0.25rem 0.5rem;
   position: absolute;
   bottom: 0;
+  inset-inline-start: 0;
   margin: 0;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  left: 0;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
