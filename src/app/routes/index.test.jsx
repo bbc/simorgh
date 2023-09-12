@@ -36,6 +36,7 @@ import {
   screen,
 } from '../components/react-testing-library-with-providers';
 import * as fetchPageData from './utils/fetchPageData';
+import * as fetchDataFromBFF from './utils/fetchDataFromBFF';
 
 fetchMock.config.fallbackToNetwork = true; // ensures non mocked requests fallback to an actual network request
 
@@ -554,7 +555,7 @@ describe('Main page routes', () => {
 
   it('should render a 404 error page if a data fetch responds with a 404', async () => {
     const pathname = '/pidgin/articles/cwl08rd38p6o';
-    const bffFetchSpy = jest.spyOn(fetchPageData, 'default');
+    const bffFetchSpy = jest.spyOn(fetchDataFromBFF, 'default');
 
     bffFetchSpy.mockRejectedValue({ message: 'Not found', status: 404 });
 
