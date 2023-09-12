@@ -1,5 +1,6 @@
+/** @jsx jsx */
 import React from 'react';
-
+import { jsx } from '@emotion/react';
 import pathOr from 'ramda/src/pathOr';
 import { OptimoBlock } from '#models/types/optimo';
 import headings from '#app/legacy/containers/Headings';
@@ -7,6 +8,7 @@ import Blocks from '#app/legacy/containers/Blocks';
 import paragraph from '#app/legacy/containers/Paragraph';
 import Text from '#app/components/Text';
 import { Post as PostType } from './types';
+import styles from './styles';
 
 // temporary solution to render LI/ OL blocks.
 const unorderedList = ({ blocks }: { blocks: OptimoBlock[] }) => {
@@ -41,12 +43,30 @@ const PostBreakingNewsLabel = ({
   isBreakingNews: boolean;
   breakingNewsLabelText?: string;
 }) => {
+  return isBreakingNews ? (
+    <Text css={styles.breakingNewsLabel}>
+      <span>{breakingNewsLabelText}</span>
+    </Text>
+  ) : null;
+};
+
+const PostHeaderBanner = ({
+  isBreakingNews,
+  breakingNewsLabelText,
+}: {
+  isBreakingNews: boolean;
+  breakingNewsLabelText?: string;
+}) => {
   return (
-    isBreakingNews && (
-      <Text>
-        <span>{breakingNewsLabelText}</span>
-      </Text>
-    )
+    <div css={styles.postHeaderBanner}>
+      {/* <Text>
+        <span>Timestamp placeholder</span>
+      </Text> */}
+      <PostBreakingNewsLabel
+        isBreakingNews={isBreakingNews}
+        breakingNewsLabelText={breakingNewsLabelText}
+      />
+    </div>
   );
 };
 
@@ -92,7 +112,7 @@ const Post = ({ post }: { post: PostType }) => {
 
   return (
     <>
-      <PostBreakingNewsLabel isBreakingNews={isBreakingNews} />
+      <PostHeaderBanner isBreakingNews={isBreakingNews} />
       <PostHeadings headerBlocks={headerBlocks} />
       <PostContent contentBlocks={contentBlocks} />
       <hr />
