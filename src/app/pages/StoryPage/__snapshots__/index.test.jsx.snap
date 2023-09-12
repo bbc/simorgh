@@ -1221,14 +1221,15 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 .emotion-48 {
+  color: #141414;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
+  margin: 0;
   color: #141414;
   padding-bottom: 1.5rem;
-  margin: 0;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1247,29 +1248,30 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width: 63rem) {
   .emotion-48 {
-    padding-right: 2.5rem;
+    -webkit-padding-end: 2.5rem;
+    padding-inline-end: 2.5rem;
   }
 }
 
-.emotion-50 {
+.emotion-49 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-50:visited {
+.emotion-49:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.emotion-50:focus,
-.emotion-50:hover {
+.emotion-49:focus,
+.emotion-49:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
 
-.emotion-56 {
+.emotion-54 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: italic;
@@ -1277,59 +1279,59 @@ exports[`Story Page should render correctly when the secondary column data is no
   font-weight: inherit;
 }
 
-.emotion-61 {
+.emotion-59 {
   margin-bottom: 1.5rem;
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-61 {
+  .emotion-59 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-61 {
+  .emotion-59 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-61 {
+  .emotion-59 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-61 {
+  .emotion-59 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-61 {
+  .emotion-59 {
     margin-left: 20%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-61 {
+  .emotion-59 {
     margin-left: 40%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-61 {
+  .emotion-59 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-61 {
+    .emotion-59 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -1338,7 +1340,7 @@ exports[`Story Page should render correctly when the secondary column data is no
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-61 {
+    .emotion-59 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -1347,7 +1349,7 @@ exports[`Story Page should render correctly when the secondary column data is no
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-61 {
+    .emotion-59 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -1356,7 +1358,7 @@ exports[`Story Page should render correctly when the secondary column data is no
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-61 {
+    .emotion-59 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       padding: 0 1rem;
@@ -1365,7 +1367,7 @@ exports[`Story Page should render correctly when the secondary column data is no
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-61 {
+    .emotion-59 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
@@ -1373,7 +1375,7 @@ exports[`Story Page should render correctly when the secondary column data is no
   }
 
   @media (min-width: 80rem) {
-    .emotion-61 {
+    .emotion-59 {
       grid-template-columns: repeat(10, 1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
@@ -1381,7 +1383,7 @@ exports[`Story Page should render correctly when the secondary column data is no
   }
 }
 
-.emotion-63 {
+.emotion-61 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1392,24 +1394,24 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-63 {
+  .emotion-61 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-63 {
+  .emotion-61 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
-.emotion-63>li {
+.emotion-61>li {
   position: relative;
 }
 
-.emotion-63>li::before {
+.emotion-61>li::before {
   top: 0.5rem;
   content: ' ';
   position: absolute;
@@ -1420,65 +1422,65 @@ exports[`Story Page should render correctly when the secondary column data is no
   left: -1rem;
 }
 
-.emotion-65 {
+.emotion-63 {
   margin-bottom: 1rem;
 }
 
-.emotion-133 {
+.emotion-126 {
   margin-bottom: 1.5rem;
   max-width: 31.25rem;
   min-height: 14rem;
 }
 
-.emotion-140 {
+.emotion-132 {
   margin-top: 0.5rem;
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-140 {
+  .emotion-132 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-140 {
+  .emotion-132 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-140 {
+  .emotion-132 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-140 {
+  .emotion-132 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-140 {
+  .emotion-132 {
     margin-left: 16.666666666666668%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-140 {
+  .emotion-132 {
     margin-left: 33.333333333333336%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-140 {
+  .emotion-132 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-140 {
+    .emotion-132 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -1486,7 +1488,7 @@ exports[`Story Page should render correctly when the secondary column data is no
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-140 {
+    .emotion-132 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -1494,7 +1496,7 @@ exports[`Story Page should render correctly when the secondary column data is no
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-140 {
+    .emotion-132 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -1502,7 +1504,7 @@ exports[`Story Page should render correctly when the secondary column data is no
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-140 {
+    .emotion-132 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -1510,7 +1512,7 @@ exports[`Story Page should render correctly when the secondary column data is no
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-140 {
+    .emotion-132 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -1518,7 +1520,7 @@ exports[`Story Page should render correctly when the secondary column data is no
   }
 
   @media (min-width: 80rem) {
-    .emotion-140 {
+    .emotion-132 {
       grid-template-columns: repeat(12, 1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -1527,37 +1529,37 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 @media (max-width: 24.9375rem) {
-  .emotion-140 {
+  .emotion-132 {
     margin-top: 0.5rem;
   }
 }
 
 @media (min-width: 25rem) {
-  .emotion-140 {
+  .emotion-132 {
     margin-top: 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-140 {
+  .emotion-132 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-140 {
+  .emotion-132 {
     padding: 0.5rem 0 0;
     margin-top: 2rem;
   }
 }
 
-.emotion-144 {
+.emotion-136 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
 }
 
-.emotion-146 {
+.emotion-138 {
   border: 0;
   left: 0;
   overflow: hidden;
@@ -1567,7 +1569,7 @@ exports[`Story Page should render correctly when the secondary column data is no
   height: 100%;
 }
 
-.emotion-153 {
+.emotion-145 {
   color: #141414;
   font-size: 1.25rem;
   line-height: 1.5rem;
@@ -1579,27 +1581,27 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-153 {
+  .emotion-145 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-153 {
+  .emotion-145 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-153 {
+  .emotion-145 {
     padding-top: 2rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-176 {
+  .emotion-164 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -1607,7 +1609,7 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-176 {
+  .emotion-164 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -1615,7 +1617,7 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-176 {
+  .emotion-164 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -1623,7 +1625,7 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-176 {
+  .emotion-164 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -1631,7 +1633,7 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-176 {
+  .emotion-164 {
     width: calc(33.333333333333336%);
     display: inline-block;
     vertical-align: top;
@@ -1639,7 +1641,7 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 @media (min-width: 80rem) {
-  .emotion-176 {
+  .emotion-164 {
     width: calc(33.333333333333336%);
     display: inline-block;
     vertical-align: top;
@@ -1647,49 +1649,49 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 @supports (display: grid) {
-  .emotion-176 {
+  .emotion-164 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-176 {
+    .emotion-164 {
       grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
     }
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-176 {
+    .emotion-164 {
       grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
     }
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-176 {
+    .emotion-164 {
       grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
     }
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-176 {
+    .emotion-164 {
       grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
     }
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-176 {
+    .emotion-164 {
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
     }
   }
 
   @media (min-width: 80rem) {
-    .emotion-176 {
+    .emotion-164 {
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
     }
@@ -1697,21 +1699,21 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 @media (min-width: 63rem) {
-  .emotion-176 {
+  .emotion-164 {
     margin-top: 2rem;
   }
 }
 
-.emotion-178 {
+.emotion-166 {
   margin-bottom: 1.5rem;
   padding: 1rem;
 }
 
-.emotion-180 {
+.emotion-168 {
   margin-top: 0;
 }
 
-.emotion-181 {
+.emotion-169 {
   position: relative;
   z-index: 0;
   color: #141414;
@@ -1719,29 +1721,29 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-181 {
+  .emotion-169 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-181 {
+  .emotion-169 {
     margin-bottom: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-181 {
+  .emotion-169 {
     margin-bottom: 1rem;
   }
 }
 
-.emotion-183 {
+.emotion-171 {
   margin: 0;
   padding: 0;
 }
 
-.emotion-185 {
+.emotion-173 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1751,7 +1753,7 @@ exports[`Story Page should render correctly when the secondary column data is no
   flex-direction: column;
 }
 
-.emotion-187 {
+.emotion-175 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1771,7 +1773,7 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-187 {
+  .emotion-175 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -1779,7 +1781,7 @@ exports[`Story Page should render correctly when the secondary column data is no
   }
 }
 
-.emotion-189 {
+.emotion-177 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1799,32 +1801,32 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-189 {
+  .emotion-177 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-189 {
+  .emotion-177 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-189 {
+  .emotion-177 {
     margin: 0;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-189 {
+  .emotion-177 {
     padding-right: 1rem;
   }
 }
 
-.emotion-191 {
+.emotion-179 {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -1833,7 +1835,7 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 @supports (display: grid) {
-  .emotion-191 {
+  .emotion-179 {
     display: grid;
     position: initial;
     width: initial;
@@ -1841,7 +1843,7 @@ exports[`Story Page should render correctly when the secondary column data is no
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-191 {
+    .emotion-179 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -1849,7 +1851,7 @@ exports[`Story Page should render correctly when the secondary column data is no
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-191 {
+    .emotion-179 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -1857,7 +1859,7 @@ exports[`Story Page should render correctly when the secondary column data is no
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-191 {
+    .emotion-179 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -1865,7 +1867,7 @@ exports[`Story Page should render correctly when the secondary column data is no
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-191 {
+    .emotion-179 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -1873,7 +1875,7 @@ exports[`Story Page should render correctly when the secondary column data is no
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-191 {
+    .emotion-179 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -1881,7 +1883,7 @@ exports[`Story Page should render correctly when the secondary column data is no
   }
 
   @media (min-width: 80rem) {
-    .emotion-191 {
+    .emotion-179 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -1889,62 +1891,62 @@ exports[`Story Page should render correctly when the secondary column data is no
   }
 }
 
-.emotion-193 {
+.emotion-181 {
   position: relative;
   padding-bottom: 1.5rem;
 }
 
 @supports (display: grid) {
-  .emotion-193 {
+  .emotion-181 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-193 {
+    .emotion-181 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-193 {
+    .emotion-181 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-193 {
+    .emotion-181 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-193 {
+    .emotion-181 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
     }
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-193 {
+    .emotion-181 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
     }
   }
 
   @media (min-width: 80rem) {
-    .emotion-193 {
+    .emotion-181 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
     }
   }
 }
 
-.emotion-195 {
+.emotion-183 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1957,30 +1959,30 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-196 {
+  .emotion-184 {
     min-width: 1.75rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-196 {
+  .emotion-184 {
     min-width: 1.75rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-196 {
+  .emotion-184 {
     min-width: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-196 {
+  .emotion-184 {
     min-width: 2.5rem;
   }
 }
 
-.emotion-197 {
+.emotion-185 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1993,32 +1995,32 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-197 {
+  .emotion-185 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-197 {
+  .emotion-185 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
-.emotion-198 {
+.emotion-186 {
   padding-top: 0.2rem;
   padding-left: 0.25rem;
   padding-right: 0.5rem;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-198 {
+  .emotion-186 {
     padding-right: 0;
   }
 }
 
-.emotion-199 {
+.emotion-187 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -2032,26 +2034,26 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-199 {
+  .emotion-187 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-199 {
+  .emotion-187 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-199:hover,
-.emotion-199:focus {
+.emotion-187:hover,
+.emotion-187:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-199:before {
+.emotion-187:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -2063,11 +2065,11 @@ exports[`Story Page should render correctly when the secondary column data is no
   z-index: 1;
 }
 
-.emotion-200 {
+.emotion-188 {
   padding-top: 0.5rem;
 }
 
-.emotion-201 {
+.emotion-189 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #545658;
@@ -2078,14 +2080,14 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-201 {
+  .emotion-189 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-201 {
+  .emotion-189 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -2246,14 +2248,14 @@ exports[`Story Page should render correctly when the secondary column data is no
                     dir="ltr"
                   >
                     <p
-                      class="emotion-48 emotion-49"
+                      class="emotion-48"
                       dir="ltr"
                     >
                       <b>
                          This is introduction text, it should be bold by default, but also support 
                       </b>
                       <a
-                        class="focusIndicatorReducedWidth emotion-50 emotion-51"
+                        class="focusIndicatorReducedWidth emotion-49 emotion-50"
                         href="/pidgin/23248703"
                       >
                         inline links
@@ -2268,18 +2270,18 @@ exports[`Story Page should render correctly when the secondary column data is no
                     dir="ltr"
                   >
                     <p
-                      class="emotion-48 emotion-49"
+                      class="emotion-48"
                       dir="ltr"
                     >
                       <i
-                        class="emotion-56 emotion-57"
+                        class="emotion-54 emotion-55"
                       >
                         <b>
                           This is a subheadline! that has 
                         </b>
                       </i>
                       <a
-                        class="focusIndicatorReducedWidth emotion-50 emotion-51"
+                        class="focusIndicatorReducedWidth emotion-49 emotion-50"
                         href="/pidgin/23248703"
                       >
                         a link
@@ -2287,22 +2289,22 @@ exports[`Story Page should render correctly when the secondary column data is no
                     </p>
                   </div>
                   <div
-                    class="emotion-60 emotion-61 emotion-2"
+                    class="emotion-58 emotion-59 emotion-2"
                     dir="ltr"
                   >
                     <ul
-                      class="emotion-63 emotion-64"
+                      class="emotion-61 emotion-62"
                       dir="ltr"
                       role="list"
                     >
                       <li
-                        class="emotion-65 emotion-66"
+                        class="emotion-63 emotion-64"
                         role="listitem"
                       >
                         This is a unordered list
                       </li>
                       <li
-                        class="emotion-65 emotion-66"
+                        class="emotion-63 emotion-64"
                         role="listitem"
                       >
                         It can have 
@@ -2312,22 +2314,22 @@ exports[`Story Page should render correctly when the secondary column data is no
                          in it
                       </li>
                       <li
-                        class="emotion-65 emotion-66"
+                        class="emotion-63 emotion-64"
                         role="listitem"
                       >
                         <a
-                          class="focusIndicatorReducedWidth emotion-50 emotion-51"
+                          class="focusIndicatorReducedWidth emotion-49 emotion-50"
                           href="/pidgin/23248703"
                         >
                           It can also have links
                         </a>
                       </li>
                       <li
-                        class="emotion-65 emotion-66"
+                        class="emotion-63 emotion-64"
                         role="listitem"
                       >
                         <i
-                          class="emotion-56 emotion-57"
+                          class="emotion-54 emotion-55"
                         >
                           It can even have italic text in it!
                         </i>
@@ -2339,12 +2341,12 @@ exports[`Story Page should render correctly when the secondary column data is no
                     dir="ltr"
                   >
                     <p
-                      class="emotion-48 emotion-49"
+                      class="emotion-48"
                       dir="ltr"
                     >
                       Feta the big cheese macaroni cheese. 
                       <a
-                        class="focusIndicatorReducedWidth emotion-50 emotion-51"
+                        class="focusIndicatorReducedWidth emotion-49 emotion-50"
                         href="/pidgin/23248703"
                       >
                         Caerphilly danish fontina
@@ -2409,7 +2411,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                     dir="ltr"
                   >
                     <p
-                      class="emotion-48 emotion-49"
+                      class="emotion-48"
                       dir="ltr"
                     >
                       <b>
@@ -2422,7 +2424,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                     dir="ltr"
                   >
                     <p
-                      class="emotion-48 emotion-49"
+                      class="emotion-48"
                       dir="ltr"
                     >
                       Dem say di medicine dey offer more protection against heart attack and stroke, if you take am before you go sleep instead of for morning, dat na wetin new study suggest.
@@ -2433,7 +2435,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                     dir="ltr"
                   >
                     <p
-                      class="emotion-48 emotion-49"
+                      class="emotion-48"
                       dir="ltr"
                     >
                       <b>
@@ -2446,12 +2448,12 @@ exports[`Story Page should render correctly when the secondary column data is no
                     dir="ltr"
                   >
                     <p
-                      class="emotion-48 emotion-49"
+                      class="emotion-48"
                       dir="ltr"
                     >
                       Rubber cheese macaroni 
                       <i
-                        class="emotion-56 emotion-57"
+                        class="emotion-54 emotion-55"
                       >
                         cheese cottage cheese
                       </i>
@@ -2459,22 +2461,22 @@ exports[`Story Page should render correctly when the secondary column data is no
                     </p>
                   </div>
                   <div
-                    class="emotion-60 emotion-61 emotion-2"
+                    class="emotion-58 emotion-59 emotion-2"
                     dir="ltr"
                   >
                     <ul
-                      class="emotion-63 emotion-64"
+                      class="emotion-61 emotion-62"
                       dir="ltr"
                       role="list"
                     >
                       <li
-                        class="emotion-65 emotion-66"
+                        class="emotion-63 emotion-64"
                         role="listitem"
                       >
                         This is a ordered list
                       </li>
                       <li
-                        class="emotion-65 emotion-66"
+                        class="emotion-63 emotion-64"
                         role="listitem"
                       >
                         It can have 
@@ -2484,22 +2486,22 @@ exports[`Story Page should render correctly when the secondary column data is no
                          in it
                       </li>
                       <li
-                        class="emotion-65 emotion-66"
+                        class="emotion-63 emotion-64"
                         role="listitem"
                       >
                         <a
-                          class="focusIndicatorReducedWidth emotion-50 emotion-51"
+                          class="focusIndicatorReducedWidth emotion-49 emotion-50"
                           href="/pidgin/23248703"
                         >
                           It can also have links
                         </a>
                       </li>
                       <li
-                        class="emotion-65 emotion-66"
+                        class="emotion-63 emotion-64"
                         role="listitem"
                       >
                         <i
-                          class="emotion-56 emotion-57"
+                          class="emotion-54 emotion-55"
                         >
                           It can even have italic text in it!
                         </i>
@@ -2511,7 +2513,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                     dir="ltr"
                   >
                     <div
-                      class="emotion-133 emotion-134"
+                      class="emotion-126 emotion-127"
                       data-e2e="twitter-embed-https://twitter.com/casualafro/status/1184522157050748929"
                     >
                       <div
@@ -2528,27 +2530,27 @@ exports[`Story Page should render correctly when the secondary column data is no
                     dir="ltr"
                   >
                     <p
-                      class="emotion-48 emotion-49"
+                      class="emotion-48"
                       dir="ltr"
                     >
                       Cauliflower cheese bocconcini hard cheese. Port-salut ricotta rubber cheese pecorino queso say cheese danish fontina parmesan. Port-salut lancashire pecorino say cheese stilton jarlsberg when the cheese comes out everybody's happy chalk and cheese. Squirty cheese cheese triangles swiss blue castello fromage mozzarella macaroni cheese cottage cheese. Chalk and cheese parmesan lancashire fondue.
                     </p>
                   </div>
                   <div
-                    class="emotion-139 emotion-140 emotion-2"
+                    class="emotion-131 emotion-132 emotion-2"
                     dir="ltr"
                   >
                     <figure
                       class="emotion-27 emotion-28"
                     >
                       <div
-                        class="emotion-144 emotion-145"
+                        class="emotion-136 emotion-137"
                         data-e2e="media-player"
                       >
                         <iframe
                           allow="autoplay"
                           allowfullscreen=""
-                          class="emotion-146 emotion-147"
+                          class="emotion-138 emotion-139"
                           height="362.953125"
                           loading="lazy"
                           scrolling="no"
@@ -2578,7 +2580,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                     dir="ltr"
                   >
                     <h2
-                      class="emotion-153"
+                      class="emotion-145"
                       id="This-is-a-heading"
                       tabindex="-1"
                     >
@@ -2590,7 +2592,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                     dir="ltr"
                   >
                     <p
-                      class="emotion-48 emotion-49"
+                      class="emotion-48"
                       dir="ltr"
                     >
                       Squirty cheese dolcelatte say cheese. Brie cut the cheese fondue cow queso cheese on toast dolcelatte chalk and cheese. Queso roquefort manchego pecorino cheese strings manchego melted cheese halloumi. Cream cheese when the cheese comes out everybody's happy rubber cheese macaroni cheese blue castello cheeseburger caerphilly lancashire. Fondue blue castello.
@@ -2601,7 +2603,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                     dir="ltr"
                   >
                     <h2
-                      class="emotion-153"
+                      class="emotion-145"
                       id="This-is-a-crosshead"
                       tabindex="-1"
                     >
@@ -2613,7 +2615,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                     dir="ltr"
                   >
                     <p
-                      class="emotion-48 emotion-49"
+                      class="emotion-48"
                       dir="ltr"
                     >
                       Brie parmesan camembert de normandie. Cottage cheese mozzarella cheesy grin red leicester hard cheese cheesy feet taleggio ricotta. Melted cheese say cheese cut the cheese brie cheese and biscuits cheese slices boursin squirty cheese. Say cheese camembert de normandie.
@@ -2624,12 +2626,12 @@ exports[`Story Page should render correctly when the secondary column data is no
                     dir="ltr"
                   >
                     <p
-                      class="emotion-48 emotion-49"
+                      class="emotion-48"
                       dir="ltr"
                     >
                       <a
                         aria-label="This is an external link to google!, outside"
-                        class="focusIndicatorReducedWidth emotion-50 emotion-51"
+                        class="focusIndicatorReducedWidth emotion-49 emotion-50"
                         href="https://www.google.com/"
                       >
                         This is an external link to google!
@@ -2641,7 +2643,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                     dir="ltr"
                   >
                     <p
-                      class="emotion-48 emotion-49"
+                      class="emotion-48"
                       dir="ltr"
                     >
                       Cheese strings stilton cheesy feet. Cheese strings fondue cow fromage edam halloumi cut the cheese cream cheese. Melted cheese brie rubber cheese parmesan cut the cheese queso st. agur blue cheese dolcelatte. Port-salut croque monsieur cheese and wine cheese triangles cheesy grin.
@@ -2650,33 +2652,33 @@ exports[`Story Page should render correctly when the secondary column data is no
                 </main>
               </div>
               <div
-                class="emotion-175 emotion-176 emotion-2"
+                class="emotion-163 emotion-164 emotion-2"
                 dir="ltr"
               >
                 <div
-                  class="emotion-178 emotion-179"
+                  class="emotion-166 emotion-167"
                 >
                   <section
                     aria-labelledby="Most-Read"
-                    class="emotion-180"
+                    class="emotion-168"
                     data-e2e="most-read"
                     data-testid="most-read"
                     role="region"
                   >
                     <div
-                      class="emotion-181 emotion-182"
+                      class="emotion-169 emotion-170"
                     >
                       <h2
-                        class="emotion-183 emotion-184"
+                        class="emotion-171 emotion-172"
                       >
                         <span
-                          class="emotion-185 emotion-186"
+                          class="emotion-173 emotion-174"
                         >
                           <span
-                            class="emotion-187 emotion-188"
+                            class="emotion-175 emotion-176"
                           >
                             <span
-                              class="emotion-189 emotion-190"
+                              class="emotion-177 emotion-178"
                               dir="ltr"
                               id="Most-Read"
                             >
@@ -2687,43 +2689,43 @@ exports[`Story Page should render correctly when the secondary column data is no
                       </h2>
                     </div>
                     <ol
-                      class="emotion-191 emotion-2"
+                      class="emotion-179 emotion-2"
                       dir="ltr"
                       role="list"
                     >
                       <li
-                        class="emotion-193 emotion-2"
+                        class="emotion-181 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-195"
+                          class="emotion-183"
                         >
                           <div
-                            class="emotion-196"
+                            class="emotion-184"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-197"
+                              class="emotion-185"
                             >
                               1
                             </span>
                           </div>
                           <div
-                            class="emotion-198"
+                            class="emotion-186"
                             dir="ltr"
                           >
                             <a
-                              class="focusIndicatorDisplayTableCell emotion-199"
+                              class="focusIndicatorDisplayTableCell emotion-187"
                               href="https://www.bbc.com/pidgin/articles/cz5kkgv41v0o"
                             >
                               Teams wey qualify for Afcon 2023 and how things stand for each group
                             </a>
                             <div
-                              class="emotion-200"
+                              class="emotion-188"
                             >
                               <time
-                                class="emotion-201 emotion-24"
+                                class="emotion-189 emotion-24"
                                 datetime="2023-06-19"
                               >
                                 De one we dem update for: 19th June 2023
@@ -2733,38 +2735,38 @@ exports[`Story Page should render correctly when the secondary column data is no
                         </div>
                       </li>
                       <li
-                        class="emotion-193 emotion-2"
+                        class="emotion-181 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-195"
+                          class="emotion-183"
                         >
                           <div
-                            class="emotion-196"
+                            class="emotion-184"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-197"
+                              class="emotion-185"
                             >
                               2
                             </span>
                           </div>
                           <div
-                            class="emotion-198"
+                            class="emotion-186"
                             dir="ltr"
                           >
                             <a
-                              class="focusIndicatorDisplayTableCell emotion-199"
+                              class="focusIndicatorDisplayTableCell emotion-187"
                               href="https://www.bbc.com/pidgin/articles/czd44wvly0qo"
                             >
                               'We dey hear gospel songs den screaming' - Woman tok of Uganda school attack 
                             </a>
                             <div
-                              class="emotion-200"
+                              class="emotion-188"
                             >
                               <time
-                                class="emotion-201 emotion-24"
+                                class="emotion-189 emotion-24"
                                 datetime="2023-06-19"
                               >
                                 De one we dem update for: 19th June 2023
@@ -2774,38 +2776,38 @@ exports[`Story Page should render correctly when the secondary column data is no
                         </div>
                       </li>
                       <li
-                        class="emotion-193 emotion-2"
+                        class="emotion-181 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-195"
+                          class="emotion-183"
                         >
                           <div
-                            class="emotion-196"
+                            class="emotion-184"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-197"
+                              class="emotion-185"
                             >
                               3
                             </span>
                           </div>
                           <div
-                            class="emotion-198"
+                            class="emotion-186"
                             dir="ltr"
                           >
                             <a
-                              class="focusIndicatorDisplayTableCell emotion-199"
+                              class="focusIndicatorDisplayTableCell emotion-187"
                               href="https://www.bbc.com/pidgin/articles/cgr6g81j2g8o"
                             >
                               Super Eagles qualify for Nations Cup afta beating Sierra Leone for Monrovia
                             </a>
                             <div
-                              class="emotion-200"
+                              class="emotion-188"
                             >
                               <time
-                                class="emotion-201 emotion-24"
+                                class="emotion-189 emotion-24"
                                 datetime="2023-06-18"
                               >
                                 De one we dem update for: 18th June 2023
@@ -2815,38 +2817,38 @@ exports[`Story Page should render correctly when the secondary column data is no
                         </div>
                       </li>
                       <li
-                        class="emotion-193 emotion-2"
+                        class="emotion-181 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-195"
+                          class="emotion-183"
                         >
                           <div
-                            class="emotion-196"
+                            class="emotion-184"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-197"
+                              class="emotion-185"
                             >
                               4
                             </span>
                           </div>
                           <div
-                            class="emotion-198"
+                            class="emotion-186"
                             dir="ltr"
                           >
                             <a
-                              class="focusIndicatorDisplayTableCell emotion-199"
+                              class="focusIndicatorDisplayTableCell emotion-187"
                               href="https://www.bbc.com/pidgin/articles/cx047w4gxqzo"
                             >
                               Forbes top ten list of highest paid athletes for 2023 and wetin dem earn
                             </a>
                             <div
-                              class="emotion-200"
+                              class="emotion-188"
                             >
                               <time
-                                class="emotion-201 emotion-24"
+                                class="emotion-189 emotion-24"
                                 datetime="2023-05-03"
                               >
                                 De one we dem update for: 3rd May 2023
@@ -2856,38 +2858,38 @@ exports[`Story Page should render correctly when the secondary column data is no
                         </div>
                       </li>
                       <li
-                        class="emotion-193 emotion-2"
+                        class="emotion-181 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-195"
+                          class="emotion-183"
                         >
                           <div
-                            class="emotion-196"
+                            class="emotion-184"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-197"
+                              class="emotion-185"
                             >
                               5
                             </span>
                           </div>
                           <div
-                            class="emotion-198"
+                            class="emotion-186"
                             dir="ltr"
                           >
                             <a
-                              class="focusIndicatorDisplayTableCell emotion-199"
+                              class="focusIndicatorDisplayTableCell emotion-187"
                               href="/pidgin/65817572"
                             >
                               Tins to sabi about 2023 Sierra Leone general election
                             </a>
                             <div
-                              class="emotion-200"
+                              class="emotion-188"
                             >
                               <time
-                                class="emotion-201 emotion-24"
+                                class="emotion-189 emotion-24"
                                 datetime="2023-06-18"
                               >
                                 De one we dem update for: 18th June 2023
@@ -2897,38 +2899,38 @@ exports[`Story Page should render correctly when the secondary column data is no
                         </div>
                       </li>
                       <li
-                        class="emotion-193 emotion-2"
+                        class="emotion-181 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-195"
+                          class="emotion-183"
                         >
                           <div
-                            class="emotion-196"
+                            class="emotion-184"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-197"
+                              class="emotion-185"
                             >
                               6
                             </span>
                           </div>
                           <div
-                            class="emotion-198"
+                            class="emotion-186"
                             dir="ltr"
                           >
                             <a
-                              class="focusIndicatorDisplayTableCell emotion-199"
+                              class="focusIndicatorDisplayTableCell emotion-187"
                               href="https://www.bbc.com/pidgin/articles/cv21n0qzvv6o"
                             >
                               CBN move to allow naira trade more freely against di dollar - Wetin e mean? 
                             </a>
                             <div
-                              class="emotion-200"
+                              class="emotion-188"
                             >
                               <time
-                                class="emotion-201 emotion-24"
+                                class="emotion-189 emotion-24"
                                 datetime="2023-06-15"
                               >
                                 De one we dem update for: 15th June 2023
@@ -2938,38 +2940,38 @@ exports[`Story Page should render correctly when the secondary column data is no
                         </div>
                       </li>
                       <li
-                        class="emotion-193 emotion-2"
+                        class="emotion-181 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-195"
+                          class="emotion-183"
                         >
                           <div
-                            class="emotion-196"
+                            class="emotion-184"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-197"
+                              class="emotion-185"
                             >
                               7
                             </span>
                           </div>
                           <div
-                            class="emotion-198"
+                            class="emotion-186"
                             dir="ltr"
                           >
                             <a
-                              class="focusIndicatorDisplayTableCell emotion-199"
+                              class="focusIndicatorDisplayTableCell emotion-187"
                               href="https://www.bbc.com/pidgin/articles/cd1k74e9pl1o"
                             >
                               'We go flush out bad eggs for passport offices' - Acting Comptroller General Immigration 
                             </a>
                             <div
-                              class="emotion-200"
+                              class="emotion-188"
                             >
                               <time
-                                class="emotion-201 emotion-24"
+                                class="emotion-189 emotion-24"
                                 datetime="2023-06-18"
                               >
                                 De one we dem update for: 18th June 2023
@@ -2979,38 +2981,38 @@ exports[`Story Page should render correctly when the secondary column data is no
                         </div>
                       </li>
                       <li
-                        class="emotion-193 emotion-2"
+                        class="emotion-181 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-195"
+                          class="emotion-183"
                         >
                           <div
-                            class="emotion-196"
+                            class="emotion-184"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-197"
+                              class="emotion-185"
                             >
                               8
                             </span>
                           </div>
                           <div
-                            class="emotion-198"
+                            class="emotion-186"
                             dir="ltr"
                           >
                             <a
-                              class="focusIndicatorDisplayTableCell emotion-199"
+                              class="focusIndicatorDisplayTableCell emotion-187"
                               href="https://www.bbc.com/pidgin/articles/cnd9g0p5p2lo"
                             >
                               South Africa taps don dry finish on top electricity kasala
                             </a>
                             <div
-                              class="emotion-200"
+                              class="emotion-188"
                             >
                               <time
-                                class="emotion-201 emotion-24"
+                                class="emotion-189 emotion-24"
                                 datetime="2023-06-19"
                               >
                                 De one we dem update for: 19th June 2023
@@ -3020,38 +3022,38 @@ exports[`Story Page should render correctly when the secondary column data is no
                         </div>
                       </li>
                       <li
-                        class="emotion-193 emotion-2"
+                        class="emotion-181 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-195"
+                          class="emotion-183"
                         >
                           <div
-                            class="emotion-196"
+                            class="emotion-184"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-197"
+                              class="emotion-185"
                             >
                               9
                             </span>
                           </div>
                           <div
-                            class="emotion-198"
+                            class="emotion-186"
                             dir="ltr"
                           >
                             <a
-                              class="focusIndicatorDisplayTableCell emotion-199"
+                              class="focusIndicatorDisplayTableCell emotion-187"
                               href="/pidgin/tori-65926540"
                             >
                               Sharp-sharp facts about President Bola Tinubu special advisers
                             </a>
                             <div
-                              class="emotion-200"
+                              class="emotion-188"
                             >
                               <time
-                                class="emotion-201 emotion-24"
+                                class="emotion-189 emotion-24"
                                 datetime="2023-06-16"
                               >
                                 De one we dem update for: 16th June 2023
@@ -3061,38 +3063,38 @@ exports[`Story Page should render correctly when the secondary column data is no
                         </div>
                       </li>
                       <li
-                        class="emotion-193 emotion-2"
+                        class="emotion-181 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-195"
+                          class="emotion-183"
                         >
                           <div
-                            class="emotion-196"
+                            class="emotion-184"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-197"
+                              class="emotion-185"
                             >
                               10
                             </span>
                           </div>
                           <div
-                            class="emotion-198"
+                            class="emotion-186"
                             dir="ltr"
                           >
                             <a
-                              class="focusIndicatorDisplayTableCell emotion-199"
+                              class="focusIndicatorDisplayTableCell emotion-187"
                               href="https://www.bbc.com/pidgin/articles/c0d81l304xdo"
                             >
                               Easter date, Workers day, Salah date plus oda public holidays for 2023
                             </a>
                             <div
-                              class="emotion-200"
+                              class="emotion-188"
                             >
                               <time
-                                class="emotion-201 emotion-24"
+                                class="emotion-189 emotion-24"
                                 datetime="2022-12-31"
                               >
                                 De one we dem update for: 31st December 2022
@@ -4335,14 +4337,15 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 .emotion-48 {
+  color: #141414;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
+  margin: 0;
   color: #141414;
   padding-bottom: 1.5rem;
-  margin: 0;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -4361,29 +4364,30 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width: 63rem) {
   .emotion-48 {
-    padding-right: 2.5rem;
+    -webkit-padding-end: 2.5rem;
+    padding-inline-end: 2.5rem;
   }
 }
 
-.emotion-50 {
+.emotion-49 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-50:visited {
+.emotion-49:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.emotion-50:focus,
-.emotion-50:hover {
+.emotion-49:focus,
+.emotion-49:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
 
-.emotion-56 {
+.emotion-54 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: italic;
@@ -4391,59 +4395,59 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   font-weight: inherit;
 }
 
-.emotion-61 {
+.emotion-59 {
   margin-bottom: 1.5rem;
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-61 {
+  .emotion-59 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-61 {
+  .emotion-59 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-61 {
+  .emotion-59 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-61 {
+  .emotion-59 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-61 {
+  .emotion-59 {
     margin-left: 20%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-61 {
+  .emotion-59 {
     margin-left: 40%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-61 {
+  .emotion-59 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-61 {
+    .emotion-59 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -4452,7 +4456,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-61 {
+    .emotion-59 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -4461,7 +4465,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-61 {
+    .emotion-59 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -4470,7 +4474,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-61 {
+    .emotion-59 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       padding: 0 1rem;
@@ -4479,7 +4483,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-61 {
+    .emotion-59 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
@@ -4487,7 +4491,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 
   @media (min-width: 80rem) {
-    .emotion-61 {
+    .emotion-59 {
       grid-template-columns: repeat(10, 1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
@@ -4495,7 +4499,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
-.emotion-63 {
+.emotion-61 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -4506,24 +4510,24 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-63 {
+  .emotion-61 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-63 {
+  .emotion-61 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
-.emotion-63>li {
+.emotion-61>li {
   position: relative;
 }
 
-.emotion-63>li::before {
+.emotion-61>li::before {
   top: 0.5rem;
   content: ' ';
   position: absolute;
@@ -4534,65 +4538,65 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   left: -1rem;
 }
 
-.emotion-65 {
+.emotion-63 {
   margin-bottom: 1rem;
 }
 
-.emotion-133 {
+.emotion-126 {
   margin-bottom: 1.5rem;
   max-width: 31.25rem;
   min-height: 14rem;
 }
 
-.emotion-140 {
+.emotion-132 {
   margin-top: 0.5rem;
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-140 {
+  .emotion-132 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-140 {
+  .emotion-132 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-140 {
+  .emotion-132 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-140 {
+  .emotion-132 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-140 {
+  .emotion-132 {
     margin-left: 16.666666666666668%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-140 {
+  .emotion-132 {
     margin-left: 33.333333333333336%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-140 {
+  .emotion-132 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-140 {
+    .emotion-132 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -4600,7 +4604,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-140 {
+    .emotion-132 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -4608,7 +4612,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-140 {
+    .emotion-132 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -4616,7 +4620,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-140 {
+    .emotion-132 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -4624,7 +4628,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-140 {
+    .emotion-132 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -4632,7 +4636,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 
   @media (min-width: 80rem) {
-    .emotion-140 {
+    .emotion-132 {
       grid-template-columns: repeat(12, 1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -4641,37 +4645,37 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (max-width: 24.9375rem) {
-  .emotion-140 {
+  .emotion-132 {
     margin-top: 0.5rem;
   }
 }
 
 @media (min-width: 25rem) {
-  .emotion-140 {
+  .emotion-132 {
     margin-top: 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-140 {
+  .emotion-132 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-140 {
+  .emotion-132 {
     padding: 0.5rem 0 0;
     margin-top: 2rem;
   }
 }
 
-.emotion-144 {
+.emotion-136 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
 }
 
-.emotion-146 {
+.emotion-138 {
   border: 0;
   left: 0;
   overflow: hidden;
@@ -4681,7 +4685,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   height: 100%;
 }
 
-.emotion-153 {
+.emotion-145 {
   color: #141414;
   font-size: 1.25rem;
   line-height: 1.5rem;
@@ -4693,27 +4697,27 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-153 {
+  .emotion-145 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-153 {
+  .emotion-145 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-153 {
+  .emotion-145 {
     padding-top: 2rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-176 {
+  .emotion-164 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -4721,7 +4725,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-176 {
+  .emotion-164 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -4729,7 +4733,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-176 {
+  .emotion-164 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -4737,7 +4741,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-176 {
+  .emotion-164 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -4745,7 +4749,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-176 {
+  .emotion-164 {
     width: calc(33.333333333333336%);
     display: inline-block;
     vertical-align: top;
@@ -4753,7 +4757,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 80rem) {
-  .emotion-176 {
+  .emotion-164 {
     width: calc(33.333333333333336%);
     display: inline-block;
     vertical-align: top;
@@ -4761,49 +4765,49 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @supports (display: grid) {
-  .emotion-176 {
+  .emotion-164 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-176 {
+    .emotion-164 {
       grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
     }
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-176 {
+    .emotion-164 {
       grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
     }
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-176 {
+    .emotion-164 {
       grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
     }
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-176 {
+    .emotion-164 {
       grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
     }
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-176 {
+    .emotion-164 {
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
     }
   }
 
   @media (min-width: 80rem) {
-    .emotion-176 {
+    .emotion-164 {
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
     }
@@ -4811,35 +4815,35 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 63rem) {
-  .emotion-176 {
+  .emotion-164 {
     margin-top: 2rem;
   }
 }
 
-.emotion-178 {
+.emotion-166 {
   margin-bottom: 1.5rem;
 }
 
 @media (min-width: 63rem) {
-  .emotion-178 {
+  .emotion-166 {
     margin-bottom: 0.5rem;
     padding: 1rem;
   }
 }
 
 @media (max-width: 24.9375rem) {
-  .emotion-180 {
+  .emotion-168 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 62.9375rem) {
-  .emotion-180 {
+  .emotion-168 {
     padding: 0 1rem;
   }
 }
 
-.emotion-183 {
+.emotion-171 {
   position: relative;
   z-index: 0;
   color: #141414;
@@ -4848,29 +4852,29 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-183 {
+  .emotion-171 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-183 {
+  .emotion-171 {
     margin-bottom: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-183 {
+  .emotion-171 {
     margin-top: 0;
   }
 }
 
-.emotion-185 {
+.emotion-173 {
   margin: 0;
   padding: 0;
 }
 
-.emotion-187 {
+.emotion-175 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4880,7 +4884,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   flex-direction: column;
 }
 
-.emotion-189 {
+.emotion-177 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4900,7 +4904,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-189 {
+  .emotion-177 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -4908,7 +4912,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
-.emotion-191 {
+.emotion-179 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -4928,102 +4932,102 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-191 {
+  .emotion-179 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-191 {
+  .emotion-179 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-191 {
+  .emotion-179 {
     margin: 0;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-191 {
+  .emotion-179 {
     padding-right: 1rem;
   }
 }
 
-.emotion-193 {
+.emotion-181 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.emotion-195 {
+.emotion-183 {
   padding: 0.5rem 0 1rem;
 }
 
 @media (max-width: 62.9375rem) {
-  .emotion-195 {
+  .emotion-183 {
     border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 
-.emotion-195:last-child {
+.emotion-183:last-child {
   border: none;
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-195 {
+  .emotion-183 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-195 {
+  .emotion-183 {
     padding: 0 0 1.5rem;
   }
 }
 
-.emotion-195:first-child {
+.emotion-183:first-child {
   padding-top: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-195:first-child {
+  .emotion-183:first-child {
     padding-top: 1rem;
   }
 }
 
-.emotion-195:last-child {
+.emotion-183:last-child {
   padding-bottom: 0;
 }
 
-.emotion-197 {
+.emotion-185 {
   position: relative;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-197 {
+  .emotion-185 {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-column-gap: 0.5rem;
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-197 {
+    .emotion-185 {
       grid-column-gap: 1rem;
     }
   }
 
   @media (min-width: 63rem) {
-    .emotion-197 {
+    .emotion-185 {
       display: block;
     }
   }
 }
 
-.emotion-199 {
+.emotion-187 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
@@ -5032,25 +5036,25 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-199 {
+  .emotion-187 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-199 {
+  .emotion-187 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
   }
 }
 
-.emotion-199>div {
+.emotion-187>div {
   vertical-align: middle;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-199 {
+  .emotion-187 {
     display: block;
     width: initial;
     padding: initial;
@@ -5059,22 +5063,22 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 
   @media (min-width: 63rem) {
-    .emotion-199 {
+    .emotion-187 {
       padding-top: 0;
     }
   }
 }
 
-.emotion-199>div {
+.emotion-187>div {
   display: inline-block;
   vertical-align: initial;
 }
 
-.emotion-199 svg {
+.emotion-187 svg {
   margin: 0;
 }
 
-.emotion-201 {
+.emotion-189 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -5087,20 +5091,20 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-201 {
+  .emotion-189 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-201 {
+  .emotion-189 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-203 {
+.emotion-191 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -5110,7 +5114,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   overflow-wrap: anywhere;
 }
 
-.emotion-203:before {
+.emotion-191:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -5122,17 +5126,17 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   z-index: 1;
 }
 
-.emotion-203:hover,
-.emotion-203:focus {
+.emotion-191:hover,
+.emotion-191:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-203:visited {
+.emotion-191:visited {
   color: #6E6E73;
 }
 
-.emotion-205 {
+.emotion-193 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #545658;
@@ -5143,27 +5147,27 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-205 {
+  .emotion-193 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-205 {
+  .emotion-193 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-246 {
+.emotion-234 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-246 {
+  .emotion-234 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     -webkit-column-gap: 1rem;
@@ -5172,76 +5176,76 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
-.emotion-248 {
+.emotion-236 {
   padding: 0.5rem 0 1rem;
   line-height: 0;
   height: 100%;
 }
 
-.emotion-248:last-child {
+.emotion-236:last-child {
   border: none;
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-248 {
+  .emotion-236 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-248 {
+  .emotion-236 {
     padding: 0 0 1.5rem;
   }
 }
 
-.emotion-248:first-child {
+.emotion-236:first-child {
   padding-top: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-248:first-child {
+  .emotion-236:first-child {
     padding-top: 1rem;
   }
 }
 
-.emotion-248:last-child {
+.emotion-236:last-child {
   padding-bottom: 0;
 }
 
-.emotion-248:first-child {
+.emotion-236:first-child {
   padding: 0 0 0.5rem 0;
 }
 
-.emotion-248:last-child {
+.emotion-236:last-child {
   padding: 0.5rem 0 0 0;
 }
 
-.emotion-248:not(:first-child):not(:last-child) {
+.emotion-236:not(:first-child):not(:last-child) {
   padding: 0.5rem 0 0.5rem 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-248 {
+  .emotion-236 {
     padding: 0;
   }
 
-  .emotion-248:first-child,
-  .emotion-248:last-child,
-  .emotion-248:not(:first-child):not(:last-child) {
+  .emotion-236:first-child,
+  .emotion-236:last-child,
+  .emotion-236:not(:first-child):not(:last-child) {
     padding: 0;
   }
 }
 
-.emotion-266 {
+.emotion-254 {
   margin-bottom: 1.5rem;
   padding: 1rem;
 }
 
-.emotion-268 {
+.emotion-256 {
   margin-top: 0;
 }
 
-.emotion-269 {
+.emotion-257 {
   position: relative;
   z-index: 0;
   color: #141414;
@@ -5249,24 +5253,24 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-269 {
+  .emotion-257 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-269 {
+  .emotion-257 {
     margin-bottom: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-269 {
+  .emotion-257 {
     margin-bottom: 1rem;
   }
 }
 
-.emotion-279 {
+.emotion-267 {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -5275,7 +5279,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @supports (display: grid) {
-  .emotion-279 {
+  .emotion-267 {
     display: grid;
     position: initial;
     width: initial;
@@ -5283,7 +5287,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-279 {
+    .emotion-267 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -5291,7 +5295,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-279 {
+    .emotion-267 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -5299,7 +5303,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-279 {
+    .emotion-267 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -5307,7 +5311,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-279 {
+    .emotion-267 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -5315,7 +5319,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-279 {
+    .emotion-267 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -5323,7 +5327,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 
   @media (min-width: 80rem) {
-    .emotion-279 {
+    .emotion-267 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -5331,62 +5335,62 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
-.emotion-281 {
+.emotion-269 {
   position: relative;
   padding-bottom: 1.5rem;
 }
 
 @supports (display: grid) {
-  .emotion-281 {
+  .emotion-269 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-281 {
+    .emotion-269 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-281 {
+    .emotion-269 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-281 {
+    .emotion-269 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-281 {
+    .emotion-269 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
     }
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-281 {
+    .emotion-269 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
     }
   }
 
   @media (min-width: 80rem) {
-    .emotion-281 {
+    .emotion-269 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
     }
   }
 }
 
-.emotion-283 {
+.emotion-271 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5399,30 +5403,30 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-284 {
+  .emotion-272 {
     min-width: 1.75rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-284 {
+  .emotion-272 {
     min-width: 1.75rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-284 {
+  .emotion-272 {
     min-width: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-284 {
+  .emotion-272 {
     min-width: 2.5rem;
   }
 }
 
-.emotion-285 {
+.emotion-273 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -5435,32 +5439,32 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-285 {
+  .emotion-273 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-285 {
+  .emotion-273 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
-.emotion-286 {
+.emotion-274 {
   padding-top: 0.2rem;
   padding-left: 0.25rem;
   padding-right: 0.5rem;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-286 {
+  .emotion-274 {
     padding-right: 0;
   }
 }
 
-.emotion-287 {
+.emotion-275 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -5474,26 +5478,26 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-287 {
+  .emotion-275 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-287 {
+  .emotion-275 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-287:hover,
-.emotion-287:focus {
+.emotion-275:hover,
+.emotion-275:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-287:before {
+.emotion-275:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -5505,7 +5509,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   z-index: 1;
 }
 
-.emotion-288 {
+.emotion-276 {
   padding-top: 0.5rem;
 }
 
@@ -5664,14 +5668,14 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                     dir="ltr"
                   >
                     <p
-                      class="emotion-48 emotion-49"
+                      class="emotion-48"
                       dir="ltr"
                     >
                       <b>
                          This is introduction text, it should be bold by default, but also support 
                       </b>
                       <a
-                        class="focusIndicatorReducedWidth emotion-50 emotion-51"
+                        class="focusIndicatorReducedWidth emotion-49 emotion-50"
                         href="/pidgin/23248703"
                       >
                         inline links
@@ -5686,18 +5690,18 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                     dir="ltr"
                   >
                     <p
-                      class="emotion-48 emotion-49"
+                      class="emotion-48"
                       dir="ltr"
                     >
                       <i
-                        class="emotion-56 emotion-57"
+                        class="emotion-54 emotion-55"
                       >
                         <b>
                           This is a subheadline! that has 
                         </b>
                       </i>
                       <a
-                        class="focusIndicatorReducedWidth emotion-50 emotion-51"
+                        class="focusIndicatorReducedWidth emotion-49 emotion-50"
                         href="/pidgin/23248703"
                       >
                         a link
@@ -5705,22 +5709,22 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                     </p>
                   </div>
                   <div
-                    class="emotion-60 emotion-61 emotion-2"
+                    class="emotion-58 emotion-59 emotion-2"
                     dir="ltr"
                   >
                     <ul
-                      class="emotion-63 emotion-64"
+                      class="emotion-61 emotion-62"
                       dir="ltr"
                       role="list"
                     >
                       <li
-                        class="emotion-65 emotion-66"
+                        class="emotion-63 emotion-64"
                         role="listitem"
                       >
                         This is a unordered list
                       </li>
                       <li
-                        class="emotion-65 emotion-66"
+                        class="emotion-63 emotion-64"
                         role="listitem"
                       >
                         It can have 
@@ -5730,22 +5734,22 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                          in it
                       </li>
                       <li
-                        class="emotion-65 emotion-66"
+                        class="emotion-63 emotion-64"
                         role="listitem"
                       >
                         <a
-                          class="focusIndicatorReducedWidth emotion-50 emotion-51"
+                          class="focusIndicatorReducedWidth emotion-49 emotion-50"
                           href="/pidgin/23248703"
                         >
                           It can also have links
                         </a>
                       </li>
                       <li
-                        class="emotion-65 emotion-66"
+                        class="emotion-63 emotion-64"
                         role="listitem"
                       >
                         <i
-                          class="emotion-56 emotion-57"
+                          class="emotion-54 emotion-55"
                         >
                           It can even have italic text in it!
                         </i>
@@ -5757,12 +5761,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                     dir="ltr"
                   >
                     <p
-                      class="emotion-48 emotion-49"
+                      class="emotion-48"
                       dir="ltr"
                     >
                       Feta the big cheese macaroni cheese. 
                       <a
-                        class="focusIndicatorReducedWidth emotion-50 emotion-51"
+                        class="focusIndicatorReducedWidth emotion-49 emotion-50"
                         href="/pidgin/23248703"
                       >
                         Caerphilly danish fontina
@@ -5827,7 +5831,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                     dir="ltr"
                   >
                     <p
-                      class="emotion-48 emotion-49"
+                      class="emotion-48"
                       dir="ltr"
                     >
                       <b>
@@ -5840,7 +5844,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                     dir="ltr"
                   >
                     <p
-                      class="emotion-48 emotion-49"
+                      class="emotion-48"
                       dir="ltr"
                     >
                       Dem say di medicine dey offer more protection against heart attack and stroke, if you take am before you go sleep instead of for morning, dat na wetin new study suggest.
@@ -5851,7 +5855,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                     dir="ltr"
                   >
                     <p
-                      class="emotion-48 emotion-49"
+                      class="emotion-48"
                       dir="ltr"
                     >
                       <b>
@@ -5864,12 +5868,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                     dir="ltr"
                   >
                     <p
-                      class="emotion-48 emotion-49"
+                      class="emotion-48"
                       dir="ltr"
                     >
                       Rubber cheese macaroni 
                       <i
-                        class="emotion-56 emotion-57"
+                        class="emotion-54 emotion-55"
                       >
                         cheese cottage cheese
                       </i>
@@ -5877,22 +5881,22 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                     </p>
                   </div>
                   <div
-                    class="emotion-60 emotion-61 emotion-2"
+                    class="emotion-58 emotion-59 emotion-2"
                     dir="ltr"
                   >
                     <ul
-                      class="emotion-63 emotion-64"
+                      class="emotion-61 emotion-62"
                       dir="ltr"
                       role="list"
                     >
                       <li
-                        class="emotion-65 emotion-66"
+                        class="emotion-63 emotion-64"
                         role="listitem"
                       >
                         This is a ordered list
                       </li>
                       <li
-                        class="emotion-65 emotion-66"
+                        class="emotion-63 emotion-64"
                         role="listitem"
                       >
                         It can have 
@@ -5902,22 +5906,22 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                          in it
                       </li>
                       <li
-                        class="emotion-65 emotion-66"
+                        class="emotion-63 emotion-64"
                         role="listitem"
                       >
                         <a
-                          class="focusIndicatorReducedWidth emotion-50 emotion-51"
+                          class="focusIndicatorReducedWidth emotion-49 emotion-50"
                           href="/pidgin/23248703"
                         >
                           It can also have links
                         </a>
                       </li>
                       <li
-                        class="emotion-65 emotion-66"
+                        class="emotion-63 emotion-64"
                         role="listitem"
                       >
                         <i
-                          class="emotion-56 emotion-57"
+                          class="emotion-54 emotion-55"
                         >
                           It can even have italic text in it!
                         </i>
@@ -5929,7 +5933,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                     dir="ltr"
                   >
                     <div
-                      class="emotion-133 emotion-134"
+                      class="emotion-126 emotion-127"
                       data-e2e="twitter-embed-https://twitter.com/casualafro/status/1184522157050748929"
                     >
                       <div
@@ -5946,27 +5950,27 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                     dir="ltr"
                   >
                     <p
-                      class="emotion-48 emotion-49"
+                      class="emotion-48"
                       dir="ltr"
                     >
                       Cauliflower cheese bocconcini hard cheese. Port-salut ricotta rubber cheese pecorino queso say cheese danish fontina parmesan. Port-salut lancashire pecorino say cheese stilton jarlsberg when the cheese comes out everybody's happy chalk and cheese. Squirty cheese cheese triangles swiss blue castello fromage mozzarella macaroni cheese cottage cheese. Chalk and cheese parmesan lancashire fondue.
                     </p>
                   </div>
                   <div
-                    class="emotion-139 emotion-140 emotion-2"
+                    class="emotion-131 emotion-132 emotion-2"
                     dir="ltr"
                   >
                     <figure
                       class="emotion-27 emotion-28"
                     >
                       <div
-                        class="emotion-144 emotion-145"
+                        class="emotion-136 emotion-137"
                         data-e2e="media-player"
                       >
                         <iframe
                           allow="autoplay"
                           allowfullscreen=""
-                          class="emotion-146 emotion-147"
+                          class="emotion-138 emotion-139"
                           height="362.953125"
                           loading="lazy"
                           scrolling="no"
@@ -5996,7 +6000,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                     dir="ltr"
                   >
                     <h2
-                      class="emotion-153"
+                      class="emotion-145"
                       id="This-is-a-heading"
                       tabindex="-1"
                     >
@@ -6008,7 +6012,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                     dir="ltr"
                   >
                     <p
-                      class="emotion-48 emotion-49"
+                      class="emotion-48"
                       dir="ltr"
                     >
                       Squirty cheese dolcelatte say cheese. Brie cut the cheese fondue cow queso cheese on toast dolcelatte chalk and cheese. Queso roquefort manchego pecorino cheese strings manchego melted cheese halloumi. Cream cheese when the cheese comes out everybody's happy rubber cheese macaroni cheese blue castello cheeseburger caerphilly lancashire. Fondue blue castello.
@@ -6019,7 +6023,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                     dir="ltr"
                   >
                     <h2
-                      class="emotion-153"
+                      class="emotion-145"
                       id="This-is-a-crosshead"
                       tabindex="-1"
                     >
@@ -6031,7 +6035,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                     dir="ltr"
                   >
                     <p
-                      class="emotion-48 emotion-49"
+                      class="emotion-48"
                       dir="ltr"
                     >
                       Brie parmesan camembert de normandie. Cottage cheese mozzarella cheesy grin red leicester hard cheese cheesy feet taleggio ricotta. Melted cheese say cheese cut the cheese brie cheese and biscuits cheese slices boursin squirty cheese. Say cheese camembert de normandie.
@@ -6042,12 +6046,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                     dir="ltr"
                   >
                     <p
-                      class="emotion-48 emotion-49"
+                      class="emotion-48"
                       dir="ltr"
                     >
                       <a
                         aria-label="This is an external link to google!, outside"
-                        class="focusIndicatorReducedWidth emotion-50 emotion-51"
+                        class="focusIndicatorReducedWidth emotion-49 emotion-50"
                         href="https://www.google.com/"
                       >
                         This is an external link to google!
@@ -6059,7 +6063,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                     dir="ltr"
                   >
                     <p
-                      class="emotion-48 emotion-49"
+                      class="emotion-48"
                       dir="ltr"
                     >
                       Cheese strings stilton cheesy feet. Cheese strings fondue cow fromage edam halloumi cut the cheese cream cheese. Melted cheese brie rubber cheese parmesan cut the cheese queso st. agur blue cheese dolcelatte. Port-salut croque monsieur cheese and wine cheese triangles cheesy grin.
@@ -6068,32 +6072,32 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                 </main>
               </div>
               <div
-                class="emotion-175 emotion-176 emotion-2"
+                class="emotion-163 emotion-164 emotion-2"
                 dir="ltr"
               >
                 <div
-                  class="emotion-178 emotion-179"
+                  class="emotion-166 emotion-167"
                 >
                   <section
                     aria-labelledby="top-stories-heading"
-                    class=" emotion-180 emotion-181"
+                    class=" emotion-168 emotion-169"
                     data-e2e="top-stories-heading"
                     role="region"
                   >
                     <div
-                      class="emotion-182 emotion-183 emotion-184"
+                      class="emotion-170 emotion-171 emotion-172"
                     >
                       <h2
-                        class="emotion-185 emotion-186"
+                        class="emotion-173 emotion-174"
                       >
                         <span
-                          class="emotion-187 emotion-188"
+                          class="emotion-175 emotion-176"
                         >
                           <span
-                            class="emotion-189 emotion-190"
+                            class="emotion-177 emotion-178"
                           >
                             <span
-                              class="emotion-191 emotion-192"
+                              class="emotion-179 emotion-180"
                               dir="ltr"
                               id="top-stories-heading"
                             >
@@ -6104,26 +6108,26 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </h2>
                     </div>
                     <ul
-                      class="emotion-193 emotion-194"
+                      class="emotion-181 emotion-182"
                       role="list"
                     >
                       <li
-                        class="emotion-195 emotion-196"
+                        class="emotion-183 emotion-184"
                       >
                         <div
-                          class="emotion-197 emotion-198"
+                          class="emotion-185 emotion-186"
                           data-e2e="story-promo"
                         >
                           <div
-                            class="emotion-199 emotion-200"
+                            class="emotion-187 emotion-188"
                             dir="ltr"
                           >
                             <h3
-                              class="emotion-201 emotion-202"
+                              class="emotion-189 emotion-190"
                             >
                               <a
                                 aria-labelledby="top-stories-promo-pidgin23248287-1"
-                                class="focusIndicatorDisplayInlineBlock emotion-203 emotion-204"
+                                class="focusIndicatorDisplayInlineBlock emotion-191 emotion-192"
                                 href="/pidgin/23248287"
                               >
                                 <span
@@ -6134,7 +6138,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               </a>
                             </h3>
                             <time
-                              class="emotion-205 emotion-24"
+                              class="emotion-193 emotion-24"
                               datetime="2019-09-10"
                             >
                               10th September 2019
@@ -6143,22 +6147,22 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         </div>
                       </li>
                       <li
-                        class="emotion-195 emotion-196"
+                        class="emotion-183 emotion-184"
                       >
                         <div
-                          class="emotion-197 emotion-198"
+                          class="emotion-185 emotion-186"
                           data-e2e="story-promo"
                         >
                           <div
-                            class="emotion-199 emotion-200"
+                            class="emotion-187 emotion-188"
                             dir="ltr"
                           >
                             <h3
-                              class="emotion-201 emotion-202"
+                              class="emotion-189 emotion-190"
                             >
                               <a
                                 aria-labelledby="top-stories-promo-pidgintori23146434-1"
-                                class="focusIndicatorDisplayInlineBlock emotion-203 emotion-204"
+                                class="focusIndicatorDisplayInlineBlock emotion-191 emotion-192"
                                 href="/pidgin/tori-23146434"
                               >
                                 <span
@@ -6169,7 +6173,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               </a>
                             </h3>
                             <time
-                              class="emotion-205 emotion-24"
+                              class="emotion-193 emotion-24"
                               datetime="2017-08-08"
                             >
                               8th August 2017
@@ -6178,22 +6182,22 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         </div>
                       </li>
                       <li
-                        class="emotion-195 emotion-196"
+                        class="emotion-183 emotion-184"
                       >
                         <div
-                          class="emotion-197 emotion-198"
+                          class="emotion-185 emotion-186"
                           data-e2e="story-promo"
                         >
                           <div
-                            class="emotion-199 emotion-200"
+                            class="emotion-187 emotion-188"
                             dir="ltr"
                           >
                             <h3
-                              class="emotion-201 emotion-202"
+                              class="emotion-189 emotion-190"
                             >
                               <a
                                 aria-labelledby="top-stories-promo-httpswwwtestbbccoukpidginarticlescg9yj3x13m0o-feature-1"
-                                class="focusIndicatorDisplayInlineBlock emotion-203 emotion-204"
+                                class="focusIndicatorDisplayInlineBlock emotion-191 emotion-192"
                                 href="https://www.test.bbc.co.uk/pidgin/articles/cg9yj3x13m0o"
                               >
                                 <span
@@ -6204,7 +6208,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               </a>
                             </h3>
                             <time
-                              class="emotion-205 emotion-24"
+                              class="emotion-193 emotion-24"
                               datetime="2021-05-10"
                             >
                               10th May 2021
@@ -6216,28 +6220,28 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                   </section>
                 </div>
                 <div
-                  class="emotion-178 emotion-179"
+                  class="emotion-166 emotion-167"
                 >
                   <section
                     aria-labelledby="features-analysis-heading"
-                    class=" emotion-180 emotion-181"
+                    class=" emotion-168 emotion-169"
                     data-e2e="features-analysis-heading"
                     role="region"
                   >
                     <div
-                      class="emotion-182 emotion-183 emotion-184"
+                      class="emotion-170 emotion-171 emotion-172"
                     >
                       <h2
-                        class="emotion-185 emotion-186"
+                        class="emotion-173 emotion-174"
                       >
                         <span
-                          class="emotion-187 emotion-188"
+                          class="emotion-175 emotion-176"
                         >
                           <span
-                            class="emotion-189 emotion-190"
+                            class="emotion-177 emotion-178"
                           >
                             <span
-                              class="emotion-191 emotion-192"
+                              class="emotion-179 emotion-180"
                               dir="ltr"
                               id="features-analysis-heading"
                             >
@@ -6248,67 +6252,67 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </h2>
                     </div>
                     <ul
-                      class="emotion-246 emotion-247"
+                      class="emotion-234 emotion-235"
                       role="list"
                     >
                       <li
-                        class="emotion-248 emotion-249"
+                        class="emotion-236 emotion-237"
                       >
                         <span
                           data-testid="frosted-promo-loader"
                         />
                       </li>
                       <li
-                        class="emotion-248 emotion-249"
+                        class="emotion-236 emotion-237"
                       >
                         <span
                           data-testid="frosted-promo-loader"
                         />
                       </li>
                       <li
-                        class="emotion-248 emotion-249"
+                        class="emotion-236 emotion-237"
                       >
                         <span
                           data-testid="frosted-promo-loader"
                         />
                       </li>
                       <li
-                        class="emotion-248 emotion-249"
+                        class="emotion-236 emotion-237"
                       >
                         <span
                           data-testid="frosted-promo-loader"
                         />
                       </li>
                       <li
-                        class="emotion-248 emotion-249"
+                        class="emotion-236 emotion-237"
                       >
                         <span
                           data-testid="frosted-promo-loader"
                         />
                       </li>
                       <li
-                        class="emotion-248 emotion-249"
+                        class="emotion-236 emotion-237"
                       >
                         <span
                           data-testid="frosted-promo-loader"
                         />
                       </li>
                       <li
-                        class="emotion-248 emotion-249"
+                        class="emotion-236 emotion-237"
                       >
                         <span
                           data-testid="frosted-promo-loader"
                         />
                       </li>
                       <li
-                        class="emotion-248 emotion-249"
+                        class="emotion-236 emotion-237"
                       >
                         <span
                           data-testid="frosted-promo-loader"
                         />
                       </li>
                       <li
-                        class="emotion-248 emotion-249"
+                        class="emotion-236 emotion-237"
                       >
                         <span
                           data-testid="frosted-promo-loader"
@@ -6318,29 +6322,29 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                   </section>
                 </div>
                 <div
-                  class="emotion-266 emotion-267"
+                  class="emotion-254 emotion-255"
                 >
                   <section
                     aria-labelledby="Most-Read"
-                    class="emotion-268"
+                    class="emotion-256"
                     data-e2e="most-read"
                     data-testid="most-read"
                     role="region"
                   >
                     <div
-                      class="emotion-269 emotion-184"
+                      class="emotion-257 emotion-172"
                     >
                       <h2
-                        class="emotion-185 emotion-186"
+                        class="emotion-173 emotion-174"
                       >
                         <span
-                          class="emotion-187 emotion-188"
+                          class="emotion-175 emotion-176"
                         >
                           <span
-                            class="emotion-189 emotion-190"
+                            class="emotion-177 emotion-178"
                           >
                             <span
-                              class="emotion-191 emotion-192"
+                              class="emotion-179 emotion-180"
                               dir="ltr"
                               id="Most-Read"
                             >
@@ -6351,43 +6355,43 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </h2>
                     </div>
                     <ol
-                      class="emotion-279 emotion-2"
+                      class="emotion-267 emotion-2"
                       dir="ltr"
                       role="list"
                     >
                       <li
-                        class="emotion-281 emotion-2"
+                        class="emotion-269 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-283"
+                          class="emotion-271"
                         >
                           <div
-                            class="emotion-284"
+                            class="emotion-272"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-285"
+                              class="emotion-273"
                             >
                               1
                             </span>
                           </div>
                           <div
-                            class="emotion-286"
+                            class="emotion-274"
                             dir="ltr"
                           >
                             <a
-                              class="focusIndicatorDisplayTableCell emotion-287"
+                              class="focusIndicatorDisplayTableCell emotion-275"
                               href="/pidgin/tori-23135359"
                             >
                               Fin - the secret Facebook group of Nigerian women 4
                             </a>
                             <div
-                              class="emotion-288"
+                              class="emotion-276"
                             >
                               <time
-                                class="emotion-205 emotion-24"
+                                class="emotion-193 emotion-24"
                                 datetime="2017-06-21"
                               >
                                 De one we dem update for: 21st June 2017
@@ -6397,38 +6401,38 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         </div>
                       </li>
                       <li
-                        class="emotion-281 emotion-2"
+                        class="emotion-269 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-283"
+                          class="emotion-271"
                         >
                           <div
-                            class="emotion-284"
+                            class="emotion-272"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-285"
+                              class="emotion-273"
                             >
                               2
                             </span>
                           </div>
                           <div
-                            class="emotion-286"
+                            class="emotion-274"
                             dir="ltr"
                           >
                             <a
-                              class="focusIndicatorDisplayTableCell emotion-287"
+                              class="focusIndicatorDisplayTableCell emotion-275"
                               href="/pidgin/tori-23146452"
                             >
                               Live Update: Voting Day for Kenya
                             </a>
                             <div
-                              class="emotion-288"
+                              class="emotion-276"
                             >
                               <time
-                                class="emotion-205 emotion-24"
+                                class="emotion-193 emotion-24"
                                 datetime="2017-08-08"
                               >
                                 De one we dem update for: 8th August 2017
@@ -6438,38 +6442,38 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         </div>
                       </li>
                       <li
-                        class="emotion-281 emotion-2"
+                        class="emotion-269 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-283"
+                          class="emotion-271"
                         >
                           <div
-                            class="emotion-284"
+                            class="emotion-272"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-285"
+                              class="emotion-273"
                             >
                               3
                             </span>
                           </div>
                           <div
-                            class="emotion-286"
+                            class="emotion-274"
                             dir="ltr"
                           >
                             <a
-                              class="focusIndicatorDisplayTableCell emotion-287"
+                              class="focusIndicatorDisplayTableCell emotion-275"
                               href="/pidgin/tori-23139944"
                             >
                               South Africa no Get Money for Army
                             </a>
                             <div
-                              class="emotion-288"
+                              class="emotion-276"
                             >
                               <time
-                                class="emotion-205 emotion-24"
+                                class="emotion-193 emotion-24"
                                 datetime="2017-08-08"
                               >
                                 De one we dem update for: 8th August 2017
@@ -6479,38 +6483,38 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         </div>
                       </li>
                       <li
-                        class="emotion-281 emotion-2"
+                        class="emotion-269 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-283"
+                          class="emotion-271"
                         >
                           <div
-                            class="emotion-284"
+                            class="emotion-272"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-285"
+                              class="emotion-273"
                             >
                               4
                             </span>
                           </div>
                           <div
-                            class="emotion-286"
+                            class="emotion-274"
                             dir="ltr"
                           >
                             <a
-                              class="focusIndicatorDisplayTableCell emotion-287"
+                              class="focusIndicatorDisplayTableCell emotion-275"
                               href="/pidgin/tori-23146754"
                             >
                               Kenya: Raila Odinga Don Reject Result
                             </a>
                             <div
-                              class="emotion-288"
+                              class="emotion-276"
                             >
                               <time
-                                class="emotion-205 emotion-24"
+                                class="emotion-193 emotion-24"
                                 datetime="2017-08-09"
                               >
                                 De one we dem update for: 9th August 2017
@@ -6520,38 +6524,38 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         </div>
                       </li>
                       <li
-                        class="emotion-281 emotion-2"
+                        class="emotion-269 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-283"
+                          class="emotion-271"
                         >
                           <div
-                            class="emotion-284"
+                            class="emotion-272"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-285"
+                              class="emotion-273"
                             >
                               5
                             </span>
                           </div>
                           <div
-                            class="emotion-286"
+                            class="emotion-274"
                             dir="ltr"
                           >
                             <a
-                              class="focusIndicatorDisplayTableCell emotion-287"
+                              class="focusIndicatorDisplayTableCell emotion-275"
                               href="/pidgin/23141241"
                             >
                               Kaduna: Government Order More Police
                             </a>
                             <div
-                              class="emotion-288"
+                              class="emotion-276"
                             >
                               <time
-                                class="emotion-205 emotion-24"
+                                class="emotion-193 emotion-24"
                                 datetime="2017-08-08"
                               >
                                 De one we dem update for: 8th August 2017
@@ -6561,38 +6565,38 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         </div>
                       </li>
                       <li
-                        class="emotion-281 emotion-2"
+                        class="emotion-269 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-283"
+                          class="emotion-271"
                         >
                           <div
-                            class="emotion-284"
+                            class="emotion-272"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-285"
+                              class="emotion-273"
                             >
                               6
                             </span>
                           </div>
                           <div
-                            class="emotion-286"
+                            class="emotion-274"
                             dir="ltr"
                           >
                             <a
-                              class="focusIndicatorDisplayTableCell emotion-287"
+                              class="focusIndicatorDisplayTableCell emotion-275"
                               href="/pidgin/23203390"
                             >
                               Holi festival photos
                             </a>
                             <div
-                              class="emotion-288"
+                              class="emotion-276"
                             >
                               <time
-                                class="emotion-205 emotion-24"
+                                class="emotion-193 emotion-24"
                                 datetime="2018-06-07"
                               >
                                 De one we dem update for: 7th June 2018
@@ -6602,38 +6606,38 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         </div>
                       </li>
                       <li
-                        class="emotion-281 emotion-2"
+                        class="emotion-269 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-283"
+                          class="emotion-271"
                         >
                           <div
-                            class="emotion-284"
+                            class="emotion-272"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-285"
+                              class="emotion-273"
                             >
                               7
                             </span>
                           </div>
                           <div
-                            class="emotion-286"
+                            class="emotion-274"
                             dir="ltr"
                           >
                             <a
-                              class="focusIndicatorDisplayTableCell emotion-287"
+                              class="focusIndicatorDisplayTableCell emotion-275"
                               href="/pidgin/sport-23135581"
                             >
                               Fin - the secret Facebook group of Nigerian women 18
                             </a>
                             <div
-                              class="emotion-288"
+                              class="emotion-276"
                             >
                               <time
-                                class="emotion-205 emotion-24"
+                                class="emotion-193 emotion-24"
                                 datetime="2017-06-22"
                               >
                                 De one we dem update for: 22nd June 2017
@@ -6643,38 +6647,38 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         </div>
                       </li>
                       <li
-                        class="emotion-281 emotion-2"
+                        class="emotion-269 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-283"
+                          class="emotion-271"
                         >
                           <div
-                            class="emotion-284"
+                            class="emotion-272"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-285"
+                              class="emotion-273"
                             >
                               8
                             </span>
                           </div>
                           <div
-                            class="emotion-286"
+                            class="emotion-274"
                             dir="ltr"
                           >
                             <a
-                              class="focusIndicatorDisplayTableCell emotion-287"
+                              class="focusIndicatorDisplayTableCell emotion-275"
                               href="/igbo/23170719"
                             >
                               Water Solutions for traffic gridlock in Lagos
                             </a>
                             <div
-                              class="emotion-288"
+                              class="emotion-276"
                             >
                               <time
-                                class="emotion-205 emotion-24"
+                                class="emotion-193 emotion-24"
                                 datetime="2017-12-08"
                               >
                                 De one we dem update for: 8th December 2017
@@ -6684,38 +6688,38 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         </div>
                       </li>
                       <li
-                        class="emotion-281 emotion-2"
+                        class="emotion-269 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-283"
+                          class="emotion-271"
                         >
                           <div
-                            class="emotion-284"
+                            class="emotion-272"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-285"
+                              class="emotion-273"
                             >
                               9
                             </span>
                           </div>
                           <div
-                            class="emotion-286"
+                            class="emotion-274"
                             dir="ltr"
                           >
                             <a
-                              class="focusIndicatorDisplayTableCell emotion-287"
+                              class="focusIndicatorDisplayTableCell emotion-275"
                               href="/pidgin/sport-23135580"
                             >
                               Fin - the secret Facebook group of Nigerian women 17
                             </a>
                             <div
-                              class="emotion-288"
+                              class="emotion-276"
                             >
                               <time
-                                class="emotion-205 emotion-24"
+                                class="emotion-193 emotion-24"
                                 datetime="2017-06-22"
                               >
                                 De one we dem update for: 22nd June 2017
@@ -6725,38 +6729,38 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         </div>
                       </li>
                       <li
-                        class="emotion-281 emotion-2"
+                        class="emotion-269 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-283"
+                          class="emotion-271"
                         >
                           <div
-                            class="emotion-284"
+                            class="emotion-272"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-285"
+                              class="emotion-273"
                             >
                               10
                             </span>
                           </div>
                           <div
-                            class="emotion-286"
+                            class="emotion-274"
                             dir="ltr"
                           >
                             <a
-                              class="focusIndicatorDisplayTableCell emotion-287"
+                              class="focusIndicatorDisplayTableCell emotion-275"
                               href="/pidgin/tori-23135358"
                             >
                               Fin - the secret Facebook group of Nigerian women 3
                             </a>
                             <div
-                              class="emotion-288"
+                              class="emotion-276"
                             >
                               <time
-                                class="emotion-205 emotion-24"
+                                class="emotion-193 emotion-24"
                                 datetime="2017-06-21"
                               >
                                 De one we dem update for: 21st June 2017

@@ -102,14 +102,15 @@ exports[`ParagraphContainer should render correctly 1`] = `
 }
 
 .emotion-2 {
+  color: #141414;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
+  margin: 0;
   color: #141414;
   padding-bottom: 1.5rem;
-  margin: 0;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -128,29 +129,30 @@ exports[`ParagraphContainer should render correctly 1`] = `
 
 @media (min-width: 63rem) {
   .emotion-2 {
-    padding-left: 2.5rem;
+    -webkit-padding-end: 2.5rem;
+    padding-inline-end: 2.5rem;
   }
 }
 
-.emotion-4 {
+.emotion-3 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-4:visited {
+.emotion-3:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.emotion-4:focus,
-.emotion-4:hover {
+.emotion-3:focus,
+.emotion-3:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
 
-.emotion-6 {
+.emotion-5 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: italic;
@@ -164,13 +166,13 @@ exports[`ParagraphContainer should render correctly 1`] = `
     dir="ltr"
   >
     <p
-      class="emotion-2 emotion-3"
+      class="emotion-2"
     >
       <b>
         This is some text.
       </b>
       <a
-        class="focusIndicatorReducedWidth emotion-4 emotion-5"
+        class="focusIndicatorReducedWidth emotion-3 emotion-4"
         href="/bbc-test"
       >
         Some text
@@ -178,7 +180,7 @@ exports[`ParagraphContainer should render correctly 1`] = `
            for the 
         </b>
         <i
-          class="emotion-6 emotion-7"
+          class="emotion-5 emotion-6"
         >
            link!
         </i>
@@ -290,14 +292,15 @@ exports[`ParagraphContainer should render correctly with inline block 1`] = `
 }
 
 .emotion-2 {
+  color: #141414;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
+  margin: 0;
   color: #141414;
   padding-bottom: 1.5rem;
-  margin: 0;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -316,29 +319,30 @@ exports[`ParagraphContainer should render correctly with inline block 1`] = `
 
 @media (min-width: 63rem) {
   .emotion-2 {
-    padding-left: 2.5rem;
+    -webkit-padding-end: 2.5rem;
+    padding-inline-end: 2.5rem;
   }
 }
 
-.emotion-4 {
+.emotion-3 {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.emotion-6 {
+.emotion-5 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-6:visited {
+.emotion-5:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.emotion-6:focus,
-.emotion-6:hover {
+.emotion-5:focus,
+.emotion-5:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
@@ -349,18 +353,18 @@ exports[`ParagraphContainer should render correctly with inline block 1`] = `
     dir="ltr"
   >
     <p
-      class="emotion-2 emotion-3"
+      class="emotion-2"
     >
       <b>
         This is some text.
       </b>
       <span
-        class="emotion-4 emotion-5"
+        class="emotion-3 emotion-4"
         lang="fa"
       >
         <a
           aria-label="چیسربرگرundefined"
-          class="focusIndicatorReducedWidth emotion-6 emotion-7"
+          class="focusIndicatorReducedWidth emotion-5 emotion-6"
           href="https://google.com"
         >
           چیسربرگر

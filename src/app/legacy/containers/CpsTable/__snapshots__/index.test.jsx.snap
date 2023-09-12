@@ -137,14 +137,15 @@ exports[`CpsTable should match snapshot - fixture 0 1`] = `
 }
 
 .emotion-8 {
+  color: #141414;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
+  margin: 0;
   color: #141414;
   padding-bottom: 1.5rem;
-  margin: 0;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -163,11 +164,12 @@ exports[`CpsTable should match snapshot - fixture 0 1`] = `
 
 @media (min-width: 63rem) {
   .emotion-8 {
-    padding-right: 2.5rem;
+    -webkit-padding-end: 2.5rem;
+    padding-inline-end: 2.5rem;
   }
 }
 
-.emotion-18 {
+.emotion-16 {
   border-bottom: 1px solid #DBDBDB;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -176,7 +178,7 @@ exports[`CpsTable should match snapshot - fixture 0 1`] = `
   text-align: left;
 }
 
-.emotion-18 p {
+.emotion-16 p {
   padding-bottom: 0;
 }
 
@@ -196,7 +198,7 @@ exports[`CpsTable should match snapshot - fixture 0 1`] = `
             dir="ltr"
           >
             <p
-              class="emotion-8 emotion-9"
+              class="emotion-8"
               dir="ltr"
             >
               Men
@@ -211,7 +213,7 @@ exports[`CpsTable should match snapshot - fixture 0 1`] = `
             dir="ltr"
           >
             <p
-              class="emotion-8 emotion-9"
+              class="emotion-8"
               dir="ltr"
             >
               Women
@@ -225,14 +227,14 @@ exports[`CpsTable should match snapshot - fixture 0 1`] = `
         class="emotion-2 emotion-3"
       >
         <td
-          class="emotion-18 emotion-5"
+          class="emotion-16 emotion-5"
         >
           <div
             class="emotion-6 emotion-7"
             dir="ltr"
           >
             <p
-              class="emotion-8 emotion-9"
+              class="emotion-8"
               dir="ltr"
             >
               Joe Root
@@ -240,14 +242,14 @@ exports[`CpsTable should match snapshot - fixture 0 1`] = `
           </div>
         </td>
         <td
-          class="emotion-18 emotion-5"
+          class="emotion-16 emotion-5"
         >
           <div
             class="emotion-6 emotion-7"
             dir="ltr"
           >
             <p
-              class="emotion-8 emotion-9"
+              class="emotion-8"
               dir="ltr"
             >
               Nat Sciver
@@ -259,14 +261,14 @@ exports[`CpsTable should match snapshot - fixture 0 1`] = `
         class="emotion-2 emotion-3"
       >
         <td
-          class="emotion-18 emotion-5"
+          class="emotion-16 emotion-5"
         >
           <div
             class="emotion-6 emotion-7"
             dir="ltr"
           >
             <p
-              class="emotion-8 emotion-9"
+              class="emotion-8"
               dir="ltr"
             >
               Rashid Khan
@@ -274,14 +276,14 @@ exports[`CpsTable should match snapshot - fixture 0 1`] = `
           </div>
         </td>
         <td
-          class="emotion-18 emotion-5"
+          class="emotion-16 emotion-5"
         >
           <div
             class="emotion-6 emotion-7"
             dir="ltr"
           >
             <p
-              class="emotion-8 emotion-9"
+              class="emotion-8"
               dir="ltr"
             >
               Katherine Brunt
@@ -293,14 +295,14 @@ exports[`CpsTable should match snapshot - fixture 0 1`] = `
         class="emotion-2 emotion-3"
       >
         <td
-          class="emotion-18 emotion-5"
+          class="emotion-16 emotion-5"
         >
           <div
             class="emotion-6 emotion-7"
             dir="ltr"
           >
             <p
-              class="emotion-8 emotion-9"
+              class="emotion-8"
               dir="ltr"
             >
               D'arcy Short
@@ -308,14 +310,14 @@ exports[`CpsTable should match snapshot - fixture 0 1`] = `
           </div>
         </td>
         <td
-          class="emotion-18 emotion-5"
+          class="emotion-16 emotion-5"
         >
           <div
             class="emotion-6 emotion-7"
             dir="ltr"
           >
             <p
-              class="emotion-8 emotion-9"
+              class="emotion-8"
               dir="ltr"
             >
               Elyse Villani
@@ -465,14 +467,15 @@ exports[`CpsTable should match snapshot - fixture 1 1`] = `
 }
 
 .emotion-8 {
+  color: #141414;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
+  margin: 0;
   color: #141414;
   padding-bottom: 1.5rem;
-  margin: 0;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -491,11 +494,12 @@ exports[`CpsTable should match snapshot - fixture 1 1`] = `
 
 @media (min-width: 63rem) {
   .emotion-8 {
-    padding-right: 2.5rem;
+    -webkit-padding-end: 2.5rem;
+    padding-inline-end: 2.5rem;
   }
 }
 
-.emotion-18 {
+.emotion-16 {
   border-bottom: 1px solid #DBDBDB;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -504,7 +508,7 @@ exports[`CpsTable should match snapshot - fixture 1 1`] = `
   text-align: left;
 }
 
-.emotion-18 p {
+.emotion-16 p {
   padding-bottom: 0;
 }
 
@@ -524,7 +528,7 @@ exports[`CpsTable should match snapshot - fixture 1 1`] = `
             dir="ltr"
           >
             <p
-              class="emotion-8 emotion-9"
+              class="emotion-8"
               dir="ltr"
             >
               Men
@@ -539,7 +543,7 @@ exports[`CpsTable should match snapshot - fixture 1 1`] = `
             dir="ltr"
           >
             <p
-              class="emotion-8 emotion-9"
+              class="emotion-8"
               dir="ltr"
             >
               Women
@@ -553,14 +557,14 @@ exports[`CpsTable should match snapshot - fixture 1 1`] = `
         class="emotion-2 emotion-3"
       >
         <td
-          class="emotion-18 emotion-5"
+          class="emotion-16 emotion-5"
         >
           <div
             class="emotion-6 emotion-7"
             dir="ltr"
           >
             <p
-              class="emotion-8 emotion-9"
+              class="emotion-8"
               dir="ltr"
             >
               Joe Root
@@ -568,14 +572,14 @@ exports[`CpsTable should match snapshot - fixture 1 1`] = `
           </div>
         </td>
         <td
-          class="emotion-18 emotion-5"
+          class="emotion-16 emotion-5"
         >
           <div
             class="emotion-6 emotion-7"
             dir="ltr"
           >
             <p
-              class="emotion-8 emotion-9"
+              class="emotion-8"
               dir="ltr"
             >
               Nat Sciver
@@ -587,14 +591,14 @@ exports[`CpsTable should match snapshot - fixture 1 1`] = `
         class="emotion-2 emotion-3"
       >
         <td
-          class="emotion-18 emotion-5"
+          class="emotion-16 emotion-5"
         >
           <div
             class="emotion-6 emotion-7"
             dir="ltr"
           >
             <p
-              class="emotion-8 emotion-9"
+              class="emotion-8"
               dir="ltr"
             >
               Rashid Khan
@@ -602,14 +606,14 @@ exports[`CpsTable should match snapshot - fixture 1 1`] = `
           </div>
         </td>
         <td
-          class="emotion-18 emotion-5"
+          class="emotion-16 emotion-5"
         >
           <div
             class="emotion-6 emotion-7"
             dir="ltr"
           >
             <p
-              class="emotion-8 emotion-9"
+              class="emotion-8"
               dir="ltr"
             >
               Katherine Brunt
@@ -621,14 +625,14 @@ exports[`CpsTable should match snapshot - fixture 1 1`] = `
         class="emotion-2 emotion-3"
       >
         <td
-          class="emotion-18 emotion-5"
+          class="emotion-16 emotion-5"
         >
           <div
             class="emotion-6 emotion-7"
             dir="ltr"
           >
             <p
-              class="emotion-8 emotion-9"
+              class="emotion-8"
               dir="ltr"
             >
               D'arcy Short
@@ -636,14 +640,14 @@ exports[`CpsTable should match snapshot - fixture 1 1`] = `
           </div>
         </td>
         <td
-          class="emotion-18 emotion-5"
+          class="emotion-16 emotion-5"
         >
           <div
             class="emotion-6 emotion-7"
             dir="ltr"
           >
             <p
-              class="emotion-8 emotion-9"
+              class="emotion-8"
               dir="ltr"
             >
               Elyse Villani
@@ -793,14 +797,15 @@ exports[`CpsTable should match snapshot - fixture 2 1`] = `
 }
 
 .emotion-8 {
+  color: #141414;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
+  margin: 0;
   color: #141414;
   padding-bottom: 1.5rem;
-  margin: 0;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -819,11 +824,12 @@ exports[`CpsTable should match snapshot - fixture 2 1`] = `
 
 @media (min-width: 63rem) {
   .emotion-8 {
-    padding-right: 2.5rem;
+    -webkit-padding-end: 2.5rem;
+    padding-inline-end: 2.5rem;
   }
 }
 
-.emotion-18 {
+.emotion-16 {
   border-bottom: 1px solid #DBDBDB;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -832,7 +838,7 @@ exports[`CpsTable should match snapshot - fixture 2 1`] = `
   text-align: left;
 }
 
-.emotion-18 p {
+.emotion-16 p {
   padding-bottom: 0;
 }
 
@@ -852,7 +858,7 @@ exports[`CpsTable should match snapshot - fixture 2 1`] = `
             dir="ltr"
           >
             <p
-              class="emotion-8 emotion-9"
+              class="emotion-8"
               dir="ltr"
             >
               Men
@@ -867,7 +873,7 @@ exports[`CpsTable should match snapshot - fixture 2 1`] = `
             dir="ltr"
           >
             <p
-              class="emotion-8 emotion-9"
+              class="emotion-8"
               dir="ltr"
             >
               Women
@@ -881,14 +887,14 @@ exports[`CpsTable should match snapshot - fixture 2 1`] = `
         class="emotion-2 emotion-3"
       >
         <td
-          class="emotion-18 emotion-5"
+          class="emotion-16 emotion-5"
         >
           <div
             class="emotion-6 emotion-7"
             dir="ltr"
           >
             <p
-              class="emotion-8 emotion-9"
+              class="emotion-8"
               dir="ltr"
             >
               Joe Root
@@ -896,14 +902,14 @@ exports[`CpsTable should match snapshot - fixture 2 1`] = `
           </div>
         </td>
         <td
-          class="emotion-18 emotion-5"
+          class="emotion-16 emotion-5"
         >
           <div
             class="emotion-6 emotion-7"
             dir="ltr"
           >
             <p
-              class="emotion-8 emotion-9"
+              class="emotion-8"
               dir="ltr"
             >
               Nat Sciver
@@ -915,14 +921,14 @@ exports[`CpsTable should match snapshot - fixture 2 1`] = `
         class="emotion-2 emotion-3"
       >
         <td
-          class="emotion-18 emotion-5"
+          class="emotion-16 emotion-5"
         >
           <div
             class="emotion-6 emotion-7"
             dir="ltr"
           >
             <p
-              class="emotion-8 emotion-9"
+              class="emotion-8"
               dir="ltr"
             >
               Rashid Khan
@@ -930,14 +936,14 @@ exports[`CpsTable should match snapshot - fixture 2 1`] = `
           </div>
         </td>
         <td
-          class="emotion-18 emotion-5"
+          class="emotion-16 emotion-5"
         >
           <div
             class="emotion-6 emotion-7"
             dir="ltr"
           >
             <p
-              class="emotion-8 emotion-9"
+              class="emotion-8"
               dir="ltr"
             >
               Katherine Brunt
@@ -949,14 +955,14 @@ exports[`CpsTable should match snapshot - fixture 2 1`] = `
         class="emotion-2 emotion-3"
       >
         <td
-          class="emotion-18 emotion-5"
+          class="emotion-16 emotion-5"
         >
           <div
             class="emotion-6 emotion-7"
             dir="ltr"
           >
             <p
-              class="emotion-8 emotion-9"
+              class="emotion-8"
               dir="ltr"
             >
               D'arcy Short
@@ -964,14 +970,14 @@ exports[`CpsTable should match snapshot - fixture 2 1`] = `
           </div>
         </td>
         <td
-          class="emotion-18 emotion-5"
+          class="emotion-16 emotion-5"
         >
           <div
             class="emotion-6 emotion-7"
             dir="ltr"
           >
             <p
-              class="emotion-8 emotion-9"
+              class="emotion-8"
               dir="ltr"
             >
               Elyse Villani

@@ -18,7 +18,10 @@ const ParagraphContainer = ({ blocks, isPost }) => {
     <GridItemMedium>
       <Paragraph
         dir={dir}
-        css={isPost ? styles.postParagraph : styles.paragraph}
+        css={[
+          styles.paragraph,
+          isPost ? styles.doubleSpacing : styles.tripleSpacing,
+        ]}
       >
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
       </Paragraph>

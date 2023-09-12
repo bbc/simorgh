@@ -102,14 +102,15 @@ exports[`TextContainer with data should render correctly 1`] = `
 }
 
 .emotion-2 {
+  color: #141414;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
+  margin: 0;
   color: #141414;
   padding-bottom: 1.5rem;
-  margin: 0;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -128,63 +129,64 @@ exports[`TextContainer with data should render correctly 1`] = `
 
 @media (min-width: 63rem) {
   .emotion-2 {
-    padding-right: 2.5rem;
+    -webkit-padding-end: 2.5rem;
+    padding-inline-end: 2.5rem;
   }
 }
 
-.emotion-21 {
+.emotion-16 {
   margin-bottom: 1.5rem;
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-21 {
+  .emotion-16 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-21 {
+  .emotion-16 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-21 {
+  .emotion-16 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-21 {
+  .emotion-16 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-21 {
+  .emotion-16 {
     margin-left: 20%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-21 {
+  .emotion-16 {
     margin-left: 40%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-21 {
+  .emotion-16 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-21 {
+    .emotion-16 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -193,7 +195,7 @@ exports[`TextContainer with data should render correctly 1`] = `
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-21 {
+    .emotion-16 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -202,7 +204,7 @@ exports[`TextContainer with data should render correctly 1`] = `
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-21 {
+    .emotion-16 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -211,7 +213,7 @@ exports[`TextContainer with data should render correctly 1`] = `
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-21 {
+    .emotion-16 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       padding: 0 1rem;
@@ -220,7 +222,7 @@ exports[`TextContainer with data should render correctly 1`] = `
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-21 {
+    .emotion-16 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
@@ -228,7 +230,7 @@ exports[`TextContainer with data should render correctly 1`] = `
   }
 
   @media (min-width: 80rem) {
-    .emotion-21 {
+    .emotion-16 {
       grid-template-columns: repeat(10, 1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
@@ -236,7 +238,7 @@ exports[`TextContainer with data should render correctly 1`] = `
   }
 }
 
-.emotion-23 {
+.emotion-18 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -247,24 +249,24 @@ exports[`TextContainer with data should render correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-23 {
+  .emotion-18 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-23 {
+  .emotion-18 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
-.emotion-23>li {
+.emotion-18>li {
   position: relative;
 }
 
-.emotion-23>li::before {
+.emotion-18>li::before {
   top: 0.5rem;
   content: ' ';
   position: absolute;
@@ -275,7 +277,7 @@ exports[`TextContainer with data should render correctly 1`] = `
   left: -1rem;
 }
 
-.emotion-25 {
+.emotion-20 {
   margin-bottom: 1rem;
 }
 
@@ -285,7 +287,7 @@ exports[`TextContainer with data should render correctly 1`] = `
     dir="ltr"
   >
     <p
-      class="emotion-2 emotion-3"
+      class="emotion-2"
       dir="ltr"
     >
       This is a 1st paragraph block.
@@ -296,7 +298,7 @@ exports[`TextContainer with data should render correctly 1`] = `
     dir="ltr"
   >
     <p
-      class="emotion-2 emotion-3"
+      class="emotion-2"
       dir="ltr"
     >
       This is a 2nd paragraph block.
@@ -307,7 +309,7 @@ exports[`TextContainer with data should render correctly 1`] = `
     dir="ltr"
   >
     <p
-      class="emotion-2 emotion-3"
+      class="emotion-2"
       dir="ltr"
     >
       This is a 3rd paragraph block.
@@ -318,7 +320,7 @@ exports[`TextContainer with data should render correctly 1`] = `
     dir="ltr"
   >
     <p
-      class="emotion-2 emotion-3"
+      class="emotion-2"
       dir="ltr"
     >
       This is a 4th paragraph block..
@@ -329,23 +331,23 @@ exports[`TextContainer with data should render correctly 1`] = `
     dir="ltr"
   >
     <p
-      class="emotion-2 emotion-3"
+      class="emotion-2"
       dir="ltr"
     >
       This is a 5th paragraph block.
     </p>
   </div>
   <div
-    class="emotion-20 emotion-21 emotion-1"
+    class="emotion-15 emotion-16 emotion-1"
     dir="ltr"
   >
     <ul
-      class="emotion-23 emotion-24"
+      class="emotion-18 emotion-19"
       dir="ltr"
       role="list"
     >
       <li
-        class="emotion-25 emotion-26"
+        class="emotion-20 emotion-21"
         role="listitem"
       >
         This is a list item
@@ -353,16 +355,16 @@ exports[`TextContainer with data should render correctly 1`] = `
     </ul>
   </div>
   <div
-    class="emotion-20 emotion-21 emotion-1"
+    class="emotion-15 emotion-16 emotion-1"
     dir="ltr"
   >
     <ul
-      class="emotion-23 emotion-24"
+      class="emotion-18 emotion-19"
       dir="ltr"
       role="list"
     >
       <li
-        class="emotion-25 emotion-26"
+        class="emotion-20 emotion-21"
         role="listitem"
       >
         This is a list item

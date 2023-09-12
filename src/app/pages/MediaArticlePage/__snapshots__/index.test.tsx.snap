@@ -643,14 +643,15 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
 }
 
 .emotion-47 {
+  color: #141414;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
+  margin: 0;
   color: #141414;
   padding-bottom: 1.5rem;
-  margin: 0;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -669,7 +670,8 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
 
 @media (min-width: 63rem) {
   .emotion-47 {
-    padding-right: 2.5rem;
+    -webkit-padding-end: 2.5rem;
+    padding-inline-end: 2.5rem;
   }
 }
 
@@ -828,7 +830,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
             dir="ltr"
           >
             <p
-              class="emotion-47 emotion-48"
+              class="emotion-47"
               dir="ltr"
             >
               Page Text

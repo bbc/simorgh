@@ -1,16 +1,19 @@
 import { Theme, css } from '@emotion/react';
 
 export default {
-  paragraph: ({ mq, spacings }: Theme) =>
+  paragraph: ({ mq, spacings, isDarkUi, palette }: Theme) =>
     css({
+      color: isDarkUi ? palette.GREY_2 : palette.GREY_10,
       [mq.GROUP_4_MIN_WIDTH]: { paddingInlineEnd: `${spacings.QUINTUPLE}rem` },
-      paddingBottom: `${spacings.TRIPLE}rem`,
     }),
-  postParagraph: ({ palette, spacings, mq }: Theme) =>
+  doubleSpacing: ({ spacings }: Theme) =>
     css({
-      [mq.GROUP_4_MIN_WIDTH]: { paddingInlineEnd: `${spacings.QUINTUPLE}rem` },
       // to review with UX, as colour does not automatically apply to inline links etc.
       // color: palette.BLACK,
       paddingBottom: `${spacings.DOUBLE}rem`,
+    }),
+  tripleSpacing: ({ spacings }: Theme) =>
+    css({
+      paddingBottom: `${spacings.TRIPLE}rem`,
     }),
 };
