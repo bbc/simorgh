@@ -11,6 +11,7 @@
   "resolutions": {
     "@babel/runtime": "7.22.15",
     "@optimizely/js-sdk-utils": "0.4.0",
+    "glob-parent": "5.1.2",
     "stylelint-config-recommended": "5.0.0",
     "uuid": "3.3.2",
     "react-is": "16.13.1",
