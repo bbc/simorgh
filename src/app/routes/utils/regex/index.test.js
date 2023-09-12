@@ -560,6 +560,8 @@ describe('frontPage -> homePage migration', () => {
     'igbo',
     'kyrgyz',
     'pidgin',
+    'punjabi',
+    'sinhala',
     'somali',
     'tigrinya',
     'yoruba',
