@@ -11,11 +11,6 @@ import Fragment from '../Fragment';
 import InlineContainer from '../InlineContainer';
 import Blocks from '../Blocks';
 
-const Headings = {
-  headline: HeadingComponent,
-  subheadline: HeadingComponent,
-};
-
 const GridItems = {
   headline: GridItemLarge,
   subheadline: GridItemMedium,
@@ -28,9 +23,13 @@ const sanitiseSubheadline = (type, text) => {
   return null;
 };
 
-const HeadingsContainer = ({ blocks, type, headingLevel }) => {
-  // update the below to not be weird
-  const Heading = Headings[type];
+const HeadingsContainer = ({
+  blocks,
+  type,
+  headingLevel,
+  fontVariant,
+  size,
+}) => {
   const GridItem = GridItems[type];
 
   const arrayOfFragments = blocks[0].model.blocks[0].model.blocks;
@@ -50,30 +49,51 @@ const HeadingsContainer = ({ blocks, type, headingLevel }) => {
   const subHeadingId = sanitiseSubheadline(type, text);
   const isHeading = type === 'headline';
   const isFirstHeading = isHeading && isFirstBlock;
+  const isPostHeading = headingLevel === 3;
 
   const headingProps = {
     headline: {
       id: headingId,
       ...(!isFirstHeading && { as: 'strong' }),
       tabIndex: isHeading && !isFirstBlock ? null : '-1',
-      // to change to level: headingLevel || 1,
       level: headingLevel || 1,
-      fontVariant: 'serifMedium',
-      css: styles.headline,
+      fontVariant: fontVariant || 'serifMedium',
+      size: size || null,
     },
     subheadline: {
       id: subHeadingId,
-      // to change to level: headingLevel || 2,
-      level: headingLevel || 2,
-      fontVariant: 'sansBold',
       tabIndex: isHeading && !isFirstBlock ? null : '-1',
-      css: styles.subHeading,
+      level: headingLevel || 2,
+      fontVariant: fontVariant || 'sansBold',
+      size: size || null,
     },
+  };
+
+  const getHeadingCss = () => {
+    const itemCss = [];
+
+    if (isHeading && !isPostHeading) {
+      itemCss.push(styles.headline);
+    } else if (isPostHeading && isHeading) {
+      itemCss.push(styles.postHeading);
+    } else if (isPostHeading && !isHeading) {
+      itemCss.push(styles.postSubHeading);
+    } else {
+      itemCss.push(styles.subHeading);
+    }
+
+    return itemCss;
   };
 
   return (
     <GridItem>
-      <Heading {...headingProps[type]}>{renderText()}</Heading>
+      <HeadingComponent
+        // replace with better logic?
+        css={getHeadingCss()}
+        {...headingProps[type]}
+      >
+        {renderText()}
+      </HeadingComponent>
     </GridItem>
   );
 };

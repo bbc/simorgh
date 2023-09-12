@@ -1,4 +1,5 @@
 import { css, Theme } from '@emotion/react';
+import pixelsToRem from '../../../utilities/pixelsToRem';
 
 export default {
   headline: ({ spacings, mq }: Theme) =>
@@ -21,5 +22,15 @@ export default {
       [mq.GROUP_3_MIN_WIDTH]: {
         paddingTop: `${spacings.QUADRUPLE}rem`,
       },
+    }),
+  postHeading: ({ spacings, palette }: Theme) =>
+    css({
+      color: palette.BLACK,
+      paddingTop: `${spacings.TRIPLE}rem`,
+    }),
+  postSubHeading: ({ palette }: Theme) =>
+    css({
+      color: palette.BLACK,
+      paddingTop: `${pixelsToRem(8)}rem`,
     }),
 };

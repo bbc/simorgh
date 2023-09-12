@@ -1,5 +1,5 @@
-import React from 'react';
-
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
 import pathOr from 'ramda/src/pathOr';
 import { OptimoBlock } from '#models/types/optimo';
 import Heading from '#app/legacy/containers/Headings';
@@ -7,6 +7,7 @@ import Blocks from '#app/legacy/containers/Blocks';
 import paragraph from '#app/legacy/containers/Paragraph';
 import Text from '#app/components/Text';
 import { Post as PostType } from './types';
+import styles from './styles';
 
 // temporary solution to render LI/ OL blocks.
 const unorderedList = ({ blocks }: { blocks: OptimoBlock[] }) => {
@@ -37,9 +38,23 @@ const unorderedList = ({ blocks }: { blocks: OptimoBlock[] }) => {
 const PostHeadings = ({ headerBlocks }: { headerBlocks: OptimoBlock[] }) => {
   const componentsToRender = {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    headline: (props: any) => <Heading {...props} headingLevel={3} />,
+    headline: (props: any) => (
+      <Heading
+        {...props}
+        headingLevel={3}
+        fontVariant="sansBold"
+        size="greatPrimer"
+      />
+    ),
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    subheadline: (props: any) => <Heading {...props} headingLevel={3} />,
+    subheadline: (props: any) => (
+      <Heading
+        {...props}
+        headingLevel={3}
+        fontVariant="sansRegular"
+        size="brevier"
+      />
+    ),
   };
   return (
     <Blocks blocks={headerBlocks} componentsToRender={componentsToRender} />
@@ -54,7 +69,7 @@ const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
   };
 
   return (
-    <div>
+    <div css={styles.postContent}>
       <Blocks blocks={contentBlocks} componentsToRender={componentsToRender} />
     </div>
   );
@@ -74,11 +89,10 @@ const Post = ({ post }: { post: PostType }) => {
   );
 
   return (
-    <>
+    <div css={styles.postBackground}>
       <PostHeadings headerBlocks={headerBlocks} />
       <PostContent contentBlocks={contentBlocks} />
-      <hr />
-    </>
+    </div>
   );
 };
 
