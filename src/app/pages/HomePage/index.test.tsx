@@ -147,7 +147,7 @@ describe('Home Page', () => {
       adsEnabled | showAdsBasedOnLocation | scenario
       ${true}    | ${false}               | ${'showAdsBasedOnLocation is false'}
       ${false}   | ${true}                | ${'adsEnabled is false'}
-      ${false}   | ${true}                | ${'both adsEnabled and showAdsBasedOnLocation is false'}
+      ${false}   | ${true}                | ${'both adsEnabled and showAdsBasedOnLocation are false'}
     `(
       'should not display ads because $scenario',
       ({ adsEnabled, showAdsBasedOnLocation }) => {
