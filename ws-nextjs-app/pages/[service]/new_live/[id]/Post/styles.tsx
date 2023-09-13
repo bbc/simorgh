@@ -21,6 +21,7 @@ export default {
       [mq.GROUP_3_MIN_WIDTH]: {
         padding: `${pixelsToRem(8)}rem 0 0`,
       },
+      margin: 0 /* Reset */,
     }),
 
   postBackground: ({ palette, spacings, mq }: Theme) =>

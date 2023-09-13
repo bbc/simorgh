@@ -19,6 +19,5 @@ export default {
       [mq.GROUP_3_MIN_WIDTH]: {
         paddingTop: `${spacings.QUADRUPLE}rem`,
       },
-      margin: 0 /* Reset */,
     }),
 };
