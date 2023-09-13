@@ -5,35 +5,9 @@ import { OptimoBlock } from '#models/types/optimo';
 import Heading from '#app/legacy/containers/Headings';
 import Blocks from '#app/legacy/containers/Blocks';
 import Paragraph from '#app/legacy/containers/Paragraph';
-import Text from '#app/components/Text';
+import unorderedList from '#app/legacy/containers/BulletedList';
 import { Post as PostType } from './types';
 import styles from './styles';
-
-// temporary solution to render LI/ OL blocks.
-const unorderedList = ({ blocks }: { blocks: OptimoBlock[] }) => {
-  const listItems: (string | null)[] = blocks
-    .map(item =>
-      pathOr<string | null>(
-        null,
-        ['model', 'blocks', 0, 'model', 'text'],
-        item,
-      ),
-    )
-    .filter(text => typeof text === 'string');
-
-  if (listItems.length === 0) return null;
-
-  return (
-    <Text>
-      <ul>
-        {listItems.map((item, index) => (
-          // eslint-disable-next-line react/no-array-index-key
-          <li key={index}>{item}</li>
-        ))}
-      </ul>
-    </Text>
-  );
-};
 
 const PostHeadings = ({ headerBlocks }: { headerBlocks: OptimoBlock[] }) => {
   const componentsToRender = {
