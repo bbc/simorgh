@@ -63,23 +63,23 @@ import SecondaryColumn from './SecondaryColumn';
 import styles from './ArticlePage.styles';
 import { getPromoHeadline } from '../../lib/analyticsUtils/article';
 
-const ArticlePage = ({ pageData }) => {
+const ArticlePage = props => {
+  const { pageData } = props;
   const { isApp, headTest } = useContext(RequestContext);
   const { articleAuthor, isTrustProjectParticipant, showRelatedTopics } =
     useContext(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
-  console.log('ARTICLE', headTest);
   const {
     palette: { GREY_2, WHITE },
   } = useTheme();
-
   const headers = [];
-
-  for (const [key, value] of Object.entries(headTest)) {
+  const head = Object.entries(headTest);
+  for (let i = 0; i < head.length; i += 1) {
+    const [key, val] = head[i];
     headers.push(
       <div>
-        <span style={{ color: blue }}>{key}</span> MAPS TO{' '}
-        <span style={{ color: red }}>{val}</span>
+        <span style={{ color: 'blue' }}>{key}</span>:{' '}
+        <span style={{ color: 'red' }}>{val}</span>
       </div>,
     );
   }
