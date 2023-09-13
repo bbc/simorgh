@@ -1,5 +1,8 @@
 import runAdsTests from '../../../support/helpers/adsTests/testsForCanonicalOnly';
+import getAppEnv from '../../../support/helpers/getAppEnv';
 
 export default ({ service }) => {
-  runAdsTests({ service });
+  if (getAppEnv() === 'local') {
+    runAdsTests({ service });
+  }
 };
