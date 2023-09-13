@@ -47,8 +47,19 @@
         ],
         "includeComments": false,
         "atiAnalytics": {
-          "producerName": "PERSIAN",
-          "producerId": "69"
+          "campaigns": null,
+          "categoryName": null,
+          "contentId": "urn:bbc:cps:curie:asset:43667729-4c50-834f-a4b5-c0c95c3cafcf",
+          "contentType": "article-media-asset",
+          "language": "fa",
+          "ldpThingIds": null,
+          "ldpThingLabels": null,
+          "pageIdentifier": "iran::persian.iran.media_asset.23231114.page",
+          "pageTitle": "Trump long headline",
+          "producerId": null,
+          "timePublished": "2019-02-15T12:47:51.000Z",
+          "timeUpdated": "2019-02-15T12:47:51.000Z",
+          "producerName": "PERSIAN"
         },
         "siteUri": "/persian",
         "mediaType": "audio",

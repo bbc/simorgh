@@ -83,7 +83,7 @@ const RelatedContentSection = ({ content }) => {
   const eventTrackingDataSend = path(['block'], eventTrackingData);
   const viewRef = useViewTracker(eventTrackingDataSend);
 
-  if (!pathEq('relatedContent', ['type'], blocks)) return null;
+  if (!pathEq(['type'], 'relatedContent', blocks)) return null;
 
   if (!blocks) return null;
 
@@ -91,7 +91,7 @@ const RelatedContentSection = ({ content }) => {
   const LABEL_ID = 'related-content-heading';
 
   const customTitle =
-    pathEq('title', [0, 'type'], items) &&
+    pathEq([0, 'type'], 'title', items) &&
     pathOr(
       [],
       [0, 'model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],

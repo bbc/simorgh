@@ -2,7 +2,6 @@ import React from 'react';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import { render } from '@testing-library/react';
 import Canonical from '.';
-import '@testing-library/jest-dom/extend-expect';
 
 const Player = additionalProps => {
   const func = jest.fn();
