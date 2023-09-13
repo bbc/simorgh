@@ -62,7 +62,7 @@
     "test:puppeteer": "jest --ci --env=jsdom --colors ./puppeteer",
     "test:unit": "test -z $CI && NODE_OPTIONS=--experimental-vm-modules jest --env=jsdom --coverage --colors --testPathIgnorePatterns=\"src/integration\" \"puppeteer\" \"ws-nextjs-app\"  || NODE_OPTIONS=--experimental-vm-modules jest --ci --runInBand --env=jsdom --coverage --colors --testPathIgnorePatterns=\"src/integration\" \"puppeteer\" \"ws-nextjs-app\"",
     "test:unit:watch": "yarn test:unit -- --watch",
-    "test:unit:updatesnapshots": "NODE_OPTIONS=--experimental-vm-modules jest --updateSnapshot --env=jsdom --coverage --silent=false --colors --testPathIgnorePatterns=\"src/integration\" \"src/app/legacy\" \"src/app/pages\" \"src/app/lib\" \"src/app/contexts\" \"src/app/components\" \"puppeteer\" \"ws-nextjs-app\"",
+    "test:unit:updatesnapshots": "NODE_OPTIONS=--experimental-vm-modules jest --updateSnapshot --env=jsdom --coverage --silent=false --colors --testPathIgnorePatterns=\"src/integration\" \"puppeteer\" \"ws-nextjs-app\"",
     "test:integration": "node src/integration/utils/runTests/index.js",
     "test:integration:updatesnapshots": "node src/integration/utils/runTests/index.js  --updateSnapshot",
     "test:integration:ci": "JEST_SILENT_REPORTER_DOTS=true yarn test:integration -- --ci --onlyRunTests --reporters=jest-silent-reporter",
