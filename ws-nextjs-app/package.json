@@ -37,6 +37,6 @@
   },
   "dependencies": {
     "next": "13.4.19",
-    "undici": "^5.23.0"
+    "undici": "5.23.0"
   }
 }
