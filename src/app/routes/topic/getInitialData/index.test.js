@@ -1,6 +1,7 @@
 import assocPath from 'ramda/src/assocPath';
-import * as fetchPageData from '#app/routes/utils/fetchPageData';
+import * as fetchPageData from '../../utils/fetchPageData';
 import getInitialData from '.';
+import { TOPIC_PAGE } from '../../utils/pageTypes';
 
 process.env.BFF_PATH = 'https://mock-bff-path';
 
@@ -29,14 +30,30 @@ const topicJSON = {
     activePage: 1,
     pageCount: 14,
     variantTopicId: null,
+    metadata: {
+      type: 'Topic',
+      analytics: {
+        name: 'pidgin.topics.c95y35941vrt.page',
+        producer: 'PIDGIN',
+      },
+      atiAnalytics: {
+        contentId: 'urn:bbc:tipo:topic:c95y35941vrt',
+        contentType: 'index-category',
+        pageIdentifier: 'pidgin.topics.c95y35941vrt.page',
+        pageTitle: 'Donald Trump',
+      },
+    },
   },
 };
 
 const optHeaders = { 'ctx-service-env': 'live' };
 
+const agent = { ca: 'ca', key: 'key' };
+jest.mock('../../../../server/utilities/getAgent', () =>
+  jest.fn(() => Promise.resolve(agent)),
+);
+
 describe('get initial data for topic', () => {
-  const agent = { ca: 'ca', key: 'key' };
-  const getAgent = jest.fn(() => agent);
   const originalApplicationEnvironment = process.env.SIMORGH_APP_ENV;
 
   beforeEach(() => {
@@ -52,7 +69,6 @@ describe('get initial data for topic', () => {
     fetch.mockResponse(JSON.stringify(topicJSON));
     const { pageData } = await getInitialData({
       path: 'pidgin/topics/c0000000000t',
-      getAgent,
       service: 'pidgin',
     });
     const { curations } = pageData;
@@ -83,7 +99,6 @@ describe('get initial data for topic', () => {
     fetch.mockResponse(JSON.stringify(topicJSONWithoutDescription));
     const { pageData } = await getInitialData({
       path: 'pidgin/topics/c0000000000t',
-      getAgent,
       service: 'pidgin',
     });
     expect(pageData.title).toEqual('Donald Trump');
@@ -99,7 +114,6 @@ describe('get initial data for topic', () => {
     fetch.mockResponse(JSON.stringify(topicJSONWithoutDescription));
     const { pageData } = await getInitialData({
       path: 'pidgin/topics/c0000000000t',
-      getAgent,
       service: 'pidgin',
     });
     expect(pageData.title).toEqual('Donald Trump');
@@ -111,7 +125,6 @@ describe('get initial data for topic', () => {
     const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
     await getInitialData({
       path: 'pidgin/topics/c0000000000t',
-      getAgent,
       service: 'pidgin',
     });
 
@@ -119,6 +132,7 @@ describe('get initial data for topic', () => {
       path: 'https://mock-bff-path/?id=c0000000000t&service=pidgin&pageType=topic',
       agent,
       optHeaders,
+      pageType: TOPIC_PAGE,
     });
   });
 
@@ -127,7 +141,6 @@ describe('get initial data for topic', () => {
     const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
     await getInitialData({
       path: 'serbian/cyr/topics/c0000000000t',
-      getAgent,
       service: 'serbian',
       variant: 'cyr',
     });
@@ -136,6 +149,7 @@ describe('get initial data for topic', () => {
       path: 'https://mock-bff-path/?id=c0000000000t&service=serbian&pageType=topic&variant=cyr',
       agent,
       optHeaders,
+      pageType: TOPIC_PAGE,
     });
   });
 
@@ -144,7 +158,6 @@ describe('get initial data for topic', () => {
     const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
     await getInitialData({
       path: 'pidgin/topics/c0000000000t.amp',
-      getAgent,
       service: 'pidgin',
     });
 
@@ -152,6 +165,7 @@ describe('get initial data for topic', () => {
       path: 'https://mock-bff-path/?id=c0000000000t&service=pidgin&pageType=topic',
       agent,
       optHeaders,
+      pageType: TOPIC_PAGE,
     });
   });
 
@@ -160,7 +174,6 @@ describe('get initial data for topic', () => {
     const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
     await getInitialData({
       path: 'pidgin/topics/c0000000000t?foo=bar',
-      getAgent,
       service: 'pidgin',
     });
 
@@ -168,6 +181,7 @@ describe('get initial data for topic', () => {
       path: 'https://mock-bff-path/?id=c0000000000t&service=pidgin&pageType=topic',
       agent,
       optHeaders,
+      pageType: TOPIC_PAGE,
     });
   });
 
@@ -176,7 +190,6 @@ describe('get initial data for topic', () => {
     const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
     await getInitialData({
       path: 'pidgin/topics/c0000000000t.amp?foo=bar',
-      getAgent,
       service: 'pidgin',
     });
 
@@ -184,6 +197,7 @@ describe('get initial data for topic', () => {
       path: 'https://mock-bff-path/?id=c0000000000t&service=pidgin&pageType=topic',
       agent,
       optHeaders,
+      pageType: TOPIC_PAGE,
     });
   });
 
@@ -193,14 +207,12 @@ describe('get initial data for topic', () => {
     const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
     await getInitialData({
       path: 'pidgin/topics/c0000000000t',
-      getAgent,
       service: 'pidgin',
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
       path: 'http://localhost/pidgin/topics/c0000000000t',
-      agent: null,
-      optHeaders: null,
+      pageType: TOPIC_PAGE,
     });
   });
 
@@ -209,7 +221,6 @@ describe('get initial data for topic', () => {
     const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
     await getInitialData({
       path: 'pidgin/topics/c0000000000t?renderer_env=test',
-      getAgent,
       service: 'pidgin',
     });
 
@@ -219,6 +230,7 @@ describe('get initial data for topic', () => {
       path: 'https://mock-bff-path/?id=c0000000000t&service=pidgin&pageType=topic',
       agent,
       optHeaders: testHeader,
+      pageType: TOPIC_PAGE,
     });
   });
 
@@ -228,7 +240,6 @@ describe('get initial data for topic', () => {
     const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
     await getInitialData({
       path: 'pidgin/topics/c0000000000t?renderer_env=live',
-      getAgent,
       service: 'pidgin',
     });
 
@@ -236,6 +247,7 @@ describe('get initial data for topic', () => {
       path: 'https://mock-bff-path/?id=c0000000000t&service=pidgin&pageType=topic',
       agent,
       optHeaders,
+      pageType: TOPIC_PAGE,
     });
   });
 
@@ -244,7 +256,6 @@ describe('get initial data for topic', () => {
     const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
     await getInitialData({
       path: 'pidgin/topics/c0000000000t',
-      getAgent,
       service: 'pidgin',
       page: 20,
     });
@@ -253,6 +264,31 @@ describe('get initial data for topic', () => {
       path: 'https://mock-bff-path/?id=c0000000000t&service=pidgin&pageType=topic&page=20',
       agent,
       optHeaders,
+      pageType: TOPIC_PAGE,
+    });
+  });
+
+  it('should return type and metadata containing atiAnalytics and analytics from the BFF response', async () => {
+    fetch.mockResponse(JSON.stringify(topicJSON));
+
+    await expect(
+      getInitialData({
+        path: 'pidgin/topics/c0000000000t',
+        service: 'pidgin',
+        page: 20,
+      }),
+    ).resolves.toHaveProperty('pageData.metadata', {
+      type: 'Topic',
+      analytics: {
+        name: 'pidgin.topics.c95y35941vrt.page',
+        producer: 'PIDGIN',
+      },
+      atiAnalytics: {
+        contentId: 'urn:bbc:tipo:topic:c95y35941vrt',
+        contentType: 'index-category',
+        pageIdentifier: 'pidgin.topics.c95y35941vrt.page',
+        pageTitle: 'Donald Trump',
+      },
     });
   });
 });

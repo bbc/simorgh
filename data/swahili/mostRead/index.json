@@ -144,6 +144,14 @@
         "href": "https://www.bbc.com/swahili/articles/c03kwdr5p0lo",
         "timestamp": 1678878175098
       }
-    ]
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentType": "list-datadriven",
+        "pageIdentifier": "swahili.popular.read.page",
+        "timePublished": "2023-06-19T14:03:00Z",
+        "timeUpdated": "2023-06-19T15:03:00Z"
+      }
+    }
   }
 }

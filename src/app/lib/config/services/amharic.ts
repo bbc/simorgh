@@ -122,7 +122,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'እሺ',
           reject: 'ምን እንደተቀየረ ይመልከቱ',
-          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
           amp: {
@@ -135,7 +135,7 @@ export const service: DefaultServiceConfig = {
                 linkText: 'ኩኪዎችን',
                 last: 'የመሳሰሉ ቴክኖሎጂዎችን የምንጠቀመውና መረጃዎችን የምንሰብስበው እርስዎ የሚፈልጉት መረጃና ማስታወቂያ ቅድሚያ እንዲደርስዎና የላቀ የድረገጽ አገልግሎት እንዲያገኙ ለማድረግ ነው። እባክዎ መስማማትዎን ያሳውቁን።',
                 linkUrl:
-                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               manage: 'የአጠቃቀም ምርጫዎን ለማስተካከል',
             },
@@ -150,7 +150,7 @@ export const service: DefaultServiceConfig = {
                   'ድረ ገጻችን እንዲሰራ ለማድረግ የእርስዎ ፈቃድ ሳያስፈልግ የተወሰኑ መረጃዎችን በሚገለገሉበት መሳሪያ ላይ እናስቀምጣለን።',
                 para4: {
                   text: 'ድረ ገጻችን እንዲሰራ ለማድረግ በሚገለገሉበት መሳሪያ ላይ ያስቀመጥነውን ጠቃሚ መረጃን በተመለከተ ተጨማሪ ያንብቡ',
-                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5: 'በመገልገያ መሳሪያዎ ላይ የስምምነት ምርጫዎችዎን እናስቀምጣለን።',
                 heading3: 'የግድ ያልሆነ መረጃ',
@@ -182,13 +182,13 @@ export const service: DefaultServiceConfig = {
                 linkText: 'የምናቀርበውን አገልግሎት ለማሻሻል በማሰብ ኩኪዎችን',
                 last: ' እንጠቀማለን። ኩኪዎችን መጠቀም ላይ መስማማትዎን እባክዎ ያሳውቁን.',
                 linkUrl:
-                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
             },
             accept: 'እሺ፣ እስማማለሁ',
             reject: 'ወደ ማውጫ መመለስ እፈልጋለሁ',
             rejectUrl:
-              'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           },
         },
       },

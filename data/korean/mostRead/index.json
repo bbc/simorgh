@@ -144,6 +144,14 @@
         "href": "https://www.bbc.com/korean/articles/c0dpx9m2neyo",
         "timestamp": 1687062533368
       }
-    ]
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentType": "list-datadriven",
+        "pageIdentifier": "korean.popular.read.page",
+        "timePublished": "2023-06-19T12:50:00Z",
+        "timeUpdated": "2023-06-19T14:50:00Z"
+      }
+    }
   }
 }

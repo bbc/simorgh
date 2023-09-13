@@ -119,7 +119,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'OK',
           reject: 'Find out wetin don change',
-          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
           amp: {
@@ -133,7 +133,7 @@ export const service: DefaultServiceConfig = {
                 linkText: 'cookies',
                 last: ', and collect browsing information to give you di best online experience and to make wetin dey inside personal and wetin pipo dey advertise appear for you. Abeg let us know if you agree.',
                 linkUrl:
-                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               manage: 'Manage my settings',
             },
@@ -149,7 +149,7 @@ export const service: DefaultServiceConfig = {
                   'To make our web pages work, we store some limited information ontop your device without your permision alias consent.',
                 para4: {
                   text: 'Read more about di very important alias essential information we store ontop your device to make our web page dem work.',
-                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5:
                   'We use local storage to store your consent preferences ontop your device.',
@@ -182,13 +182,13 @@ export const service: DefaultServiceConfig = {
                 linkText: 'cookies',
                 last: ' to give you di best online experience. Abeg let us know if you gree to all od dif cookies dem.',
                 linkUrl:
-                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
             },
             accept: 'Yes, I agree',
             reject: 'No, cari me go settings',
             rejectUrl:
-              'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           },
         },
       },

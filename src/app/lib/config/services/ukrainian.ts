@@ -4,7 +4,7 @@ import '#psammead/psammead-locales/moment/uk';
 import withContext from '../../../contexts/utils/withContext';
 import { mainTranslations as russianMainTranslations } from './russian';
 import { UkrainianConfig } from '../../../models/types/serviceConfig';
-import { Services } from '../../../models/types/global';
+import { Direction, Services } from '../../../models/types/global';
 
 const secondaryColumnTranslations = {
   topStoriesTitle: 'Головне',
@@ -22,7 +22,7 @@ const baseServiceConfig = {
   serviceLocalizedName: 'Україна',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/ukrainian.png',
   defaultImageAltText: 'BBC News Україна',
-  dir: `ltr`,
+  dir: 'ltr' as Direction,
   externalLinkText: ', зовнішнє',
   imageCaptionOffscreenText: 'Підпис до фото, ',
   videoCaptionOffscreenText: 'Підпис до відео, ',
@@ -133,7 +133,7 @@ const baseServiceConfig = {
         },
         accept: 'ОК',
         reject: 'Подивитися, що змінилося',
-        rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
+        rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
       },
       cookie: {
         amp: {
@@ -147,7 +147,7 @@ const baseServiceConfig = {
               linkText: 'cookies',
               last: ', а також збираємо дані, щоб вам було зручно користуватися сайтом і щоб контент і реклама, яку ви бачите, відповідали вашим запитам. Будь ласка, повідомте, чи ви згодні.',
               linkUrl:
-                'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
             manage: 'Керувати налаштуваннями',
           },
@@ -163,7 +163,7 @@ const baseServiceConfig = {
                 'Щоб забезпечити роботу наших сторінок, ми зберігаємо обмежену інформацію на вашому пристрої без вашої згоди.',
               para4: {
                 text: 'Тут можна почитати докладніше про необхідну інформацію, яку ми зберігаємо на вашому пристрої, щоб забезпечити роботу наших вебсторінок.',
-                url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
+                url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
               },
               para5:
                 "Ми використовуємо локальну пам'ять, щоб зберігати ваші уподобання щодо згоди на вашому пристрої.",
@@ -197,13 +197,13 @@ const baseServiceConfig = {
               linkText: 'cookies',
               last: ', щоб вам було зручно користуватися сайтом. Повідомте нам, що ви погоджуєтесь з використанням цих файлів cookies.',
               linkUrl:
-                'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
           },
           accept: 'Так, згоден',
           reject: 'Ні, мені потрібно переглянути налаштування',
           rejectUrl:
-            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+            'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
         },
       },
     },

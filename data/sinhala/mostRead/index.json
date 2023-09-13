@@ -144,6 +144,14 @@
         "href": "/sinhala/sri-lanka-55041539",
         "timestamp": 1606191571000
       }
-    ]
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentType": "list-datadriven",
+        "pageIdentifier": "sinhala.popular.read.page",
+        "timePublished": "2023-06-19T13:02:00Z",
+        "timeUpdated": "2023-06-19T15:02:00Z"
+      }
+    }
   }
 }

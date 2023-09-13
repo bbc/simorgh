@@ -120,7 +120,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'Маъқул',
           reject: 'Нималар ўзгарди?',
-          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
           amp: {
@@ -133,7 +133,7 @@ export const service: DefaultServiceConfig = {
                 linkText: 'кукисга',
                 last: ', сингари технологиядан фойдаланамиз ва уларни сизга янада яхшироқ онлайн маҳсулот тақдим этиш, контентни ва ҳамда сизга кўрсатилаётган рекламани айнан сизга мослаш мақсадида тўплаймиз. Агар рози бўлсангиз, марҳамат қилиб буни бизга маълум қилинг!',
                 linkUrl:
-                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               manage: 'Танловларимни бошқаринг',
             },
@@ -149,7 +149,7 @@ export const service: DefaultServiceConfig = {
                   'Веб саҳифамиз ишлаши учун биз сиз ҳақингизда чекланган маълумотларни сизнинг розилигингиз сақлаб қоламиз.',
                 para4: {
                   text: 'Сизнинг қурилмангизда веб саҳифамиз яхши ишлаши учун қандай муҳим маълумотлар сақланиши ҳақида кўпроқ маълумот',
-                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5:
                   'Биз сизнинг розилигингиз ва танловингиз маълумотларини ички хотирада сақлаймиз',
@@ -182,13 +182,13 @@ export const service: DefaultServiceConfig = {
                 linkText: 'кукидан',
                 last: ' сизга янада яхшироқ онлайн имконият бериш мақсадида фойдаланамиз. Марҳамат қилиб ушбу барча кукиларга розилигингизни билдиринг.',
                 linkUrl:
-                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
             },
             accept: 'Ҳа, мен розиман',
             reject: 'Йўқ, мени ўзгартириш саҳифасига етакланг',
             rejectUrl:
-              'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           },
         },
       },

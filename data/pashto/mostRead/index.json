@@ -144,6 +144,14 @@
         "href": "/pashto/arts-and-literature-65928717",
         "timestamp": 1686930861000
       }
-    ]
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentType": "list-datadriven",
+        "pageIdentifier": "pashto.popular.read.page",
+        "timePublished": "2023-06-19T14:29:00Z",
+        "timeUpdated": "2023-06-19T14:59:00Z"
+      }
+    }
   }
 }

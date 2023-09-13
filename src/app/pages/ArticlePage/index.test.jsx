@@ -503,3 +503,18 @@ it('should render PodcastPromos when passed', async () => {
 
   expect(getByText('Что это было?')).toBeInTheDocument();
 });
+
+it('should render Riddle component when passed', async () => {
+  const pageDataWithRiddle = {
+    ...articleDataNews,
+  };
+  const { container } = render(
+    <Context service="russian">
+      <ArticlePage pageData={pageDataWithRiddle} />
+    </Context>,
+  );
+  const actual = container.querySelector(
+    'iframe[src="https://www.riddle.com/embed/a/SAVstNdh?lazyImages=true&staticHeight=false"]',
+  );
+  expect(actual).toBeInTheDocument();
+});

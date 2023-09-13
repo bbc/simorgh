@@ -144,6 +144,14 @@
         "href": "/gujarati/international-59827802",
         "timestamp": 1640945470000
       }
-    ]
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentType": "list-datadriven",
+        "pageIdentifier": "gujarati.popular.read.page",
+        "timePublished": "2023-06-19T12:54:00Z",
+        "timeUpdated": "2023-06-19T14:54:00Z"
+      }
+    }
   }
 }

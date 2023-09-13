@@ -144,6 +144,14 @@
         "href": "https://www.bbc.com/ukrainian/articles/cedzjwz1zewo",
         "timestamp": 1686734506316
       }
-    ]
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentType": "list-datadriven",
+        "pageIdentifier": "ukrainian.popular.read.page",
+        "timePublished": "2023-06-19T14:53:00Z",
+        "timeUpdated": "2023-06-19T15:08:00Z"
+      }
+    }
   }
 }

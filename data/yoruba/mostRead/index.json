@@ -144,6 +144,14 @@
         "href": "https://www.bbc.com/yoruba/articles/c89lyejd882o",
         "timestamp": 1686988680403
       }
-    ]
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentType": "list-datadriven",
+        "pageIdentifier": "yoruba.popular.read.page",
+        "timePublished": "2023-06-19T13:12:00Z",
+        "timeUpdated": "2023-06-19T15:12:00Z"
+      }
+    }
   }
 }

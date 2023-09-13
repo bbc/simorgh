@@ -3,6 +3,21 @@
     "firstPublished": 1527410055000,
     "lastPublished": 1527410057000,
     "lastUpdated": 1563926718369,
+    "atiAnalytics": {
+      "campaigns": null,
+      "categoryName": "News",
+      "contentId": "urn:bbc:cps:curie:asset:38229308-a0fb-654a-a274-19bec0414560",
+      "contentType": "article-photo-gallery",
+      "language": "az",
+      "ldpThingIds": "03eb3674-6190-4cd7-8104-1a00991d67a3~0f8e45e2-6499-44b1-be1f-1a3dd81e8af7~5307a8d9-f620-40f5-92d4-f99c919a6ffa~6a73afa3-ea6b-45c1-80bb-49060b99f864~75612fa6-147c-4a43-97fa-fcf70d9cced3~8b04c2e8-5409-4e7d-9877-3ccaf04727af~9e6f8e15-894a-45cb-9db9-d8881e8e6ae2~a86bc15e-ccd0-4ea9-9903-df3d4575a176~d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa",
+      "ldpThingLabels": "History~Azerbaijan~Society~Culture~Politics~Human+rights~Azerbaijan+Democratic+Republic+100th+anniversary~Caucasus~Law+and+order",
+      "pageIdentifier": "azerbaijan::azeri.azerbaijan.photo_gallery.44208474.page",
+      "pageTitle": "Azərbaycan Xalq Cümhuriyyəti - Fotolarda",
+      "producerId": null,
+      "timePublished": "2018-05-27T08:34:15.000Z",
+      "timeUpdated": "2018-05-27T08:34:15.000Z",
+      "producerName": "AZERI"
+    },
     "id": "urn:bbc:ares::asset:azeri/azerbaijan-44208474",
     "locators": {
       "assetUri": "/azeri/azerbaijan-44208474",
@@ -29,7 +44,10 @@
       "allowPrintingSharingLinks": true
     },
     "analyticsLabels": {
+      "ldp_tags": "History~Azerbaijan~Society~Culture~Politics~Human+rights~Azerbaijan+Democratic+Republic+100th+anniversary~Caucasus~Law+and+order",
+      "ldp_ids": "03eb3674-6190-4cd7-8104-1a00991d67a3~0f8e45e2-6499-44b1-be1f-1a3dd81e8af7~5307a8d9-f620-40f5-92d4-f99c919a6ffa~6a73afa3-ea6b-45c1-80bb-49060b99f864~75612fa6-147c-4a43-97fa-fcf70d9cced3~8b04c2e8-5409-4e7d-9877-3ccaf04727af~9e6f8e15-894a-45cb-9db9-d8881e8e6ae2~a86bc15e-ccd0-4ea9-9903-df3d4575a176~d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa",
       "cps_asset_type": "pgl",
+      "contentId": "urn:bbc:cps:curie:asset:38229308-a0fb-654a-a274-19bec0414560",
       "counterName": "azeri.azerbaijan.photo_gallery.44208474.page",
       "cps_asset_id": "44208474"
     },

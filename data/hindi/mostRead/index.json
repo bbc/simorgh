@@ -144,6 +144,14 @@
         "href": "https://www.bbc.com/hindi/articles/c6pv54g64q1o",
         "timestamp": 1686711626781
       }
-    ]
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentType": "list-datadriven",
+        "pageIdentifier": "hindi.popular.read.page",
+        "timePublished": "2023-06-19T14:37:00Z",
+        "timeUpdated": "2023-06-19T14:52:00Z"
+      }
+    }
   }
 }

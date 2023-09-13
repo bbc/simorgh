@@ -84,7 +84,19 @@ export const RequestContextProvider = ({
 }: PropsWithChildren<RequestProviderProps>) => {
   const { isUK, origin } = getOriginContext(bbcOrigin);
   const env: Environments = getEnv(origin);
-  const platform: Platforms = isAmp ? 'amp' : 'canonical';
+
+  const getPlatform = (): Platforms => {
+    switch (true) {
+      case isApp:
+        return 'app';
+      case isAmp:
+        return 'amp';
+      default:
+        return 'canonical';
+    }
+  };
+
+  const platform = getPlatform();
   const statsDestination = getStatsDestination({
     isUK: platform === 'amp' ? true : isUK, // getDestination requires that statsDestination is a PS variant on AMP
     env,
