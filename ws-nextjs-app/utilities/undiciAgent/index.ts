@@ -1,4 +1,5 @@
 import { setGlobalDispatcher, Agent } from 'undici';
+import { createSecureContext } from 'node:tls';
 import getCert from './certs';
 
 let agentMemo: Agent;
@@ -10,9 +11,17 @@ const getAgent = async () => {
 
   const { certChain, key, ca } = await getCert();
 
-  const agentOptions = { cert: certChain, key, ca, rejectUnauthorized: false };
-
-  agentMemo = new Agent({ connect: agentOptions });
+  agentMemo = new Agent({
+    connect: {
+      keepAlive: true,
+      rejectUnauthorized: false,
+      secureContext: createSecureContext({
+        cert: certChain,
+        key,
+        ca,
+      }),
+    },
+  });
 
   return setGlobalDispatcher(agentMemo);
 };
