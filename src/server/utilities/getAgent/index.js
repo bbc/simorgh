@@ -1,5 +1,5 @@
 import { Agent } from 'https';
-import { createSecureContext } from 'node:tls';
+import { createSecureContext } from 'tls';
 import getCert from './certs';
 
 let agentMemo = null;

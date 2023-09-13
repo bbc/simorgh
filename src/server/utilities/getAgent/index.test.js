@@ -6,7 +6,7 @@ jest.mock('https', () => ({
   Agent: jest.fn(),
 }));
 
-jest.mock('node:tls', () => ({
+jest.mock('tls', () => ({
   createSecureContext: jest.fn().mockReturnValue({
     context: {
       ca: 'someCa',
