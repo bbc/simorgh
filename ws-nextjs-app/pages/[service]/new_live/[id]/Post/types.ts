@@ -66,7 +66,7 @@ export interface PostHeadingBlock {
         model: {
           blocks: [
             {
-              model: { text: string };
+              model: { text: string; blocks: OptimoBlock[] };
             },
           ];
         };

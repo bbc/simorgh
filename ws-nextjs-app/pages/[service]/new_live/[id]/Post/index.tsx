@@ -9,28 +9,21 @@ import UnorderedList from '#app/legacy/containers/BulletedList';
 import { Post as PostType, PostHeadingBlock } from './types';
 import styles from './styles';
 
-const PostHeadings = ({
-  headerBlocks,
-}: {
-  headerBlocks: PostHeadingBlock[];
-}) => {
-  const setHeadings = headerBlocks.map(block => {
-    const isHeadline = block.type === 'headline';
-    const headingText = block.model.blocks[0].model.blocks[0].model.text;
+const PostHeadings = ({ headerBlock }: { headerBlock: PostHeadingBlock }) => {
+  const isHeadline = headerBlock.type === 'headline';
+  const headingText = headerBlock.model.blocks[0].model.blocks[0].model.text;
 
-    return (
-      <Heading
-        level={3}
-        fontVariant={isHeadline ? 'sansBold' : 'sansRegular'}
-        size={isHeadline ? 'greatPrimer' : 'brevier'}
-        className="headingStyling"
-        css={isHeadline ? styles.postHeading : styles.postSubHeading}
-      >
-        {headingText}
-      </Heading>
-    );
-  });
-  return setHeadings;
+  return (
+    <Heading
+      level={3}
+      fontVariant={isHeadline ? 'sansBold' : 'sansRegular'}
+      size={isHeadline ? 'greatPrimer' : 'brevier'}
+      className="headingStyling"
+      css={isHeadline ? styles.postHeading : styles.postSubHeading}
+    >
+      {headingText}
+    </Heading>
+  );
 };
 
 const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
@@ -71,7 +64,9 @@ const Post = ({ post }: { post: PostType }) => {
 
   return (
     <div css={styles.postBackground}>
-      <PostHeadings headerBlocks={headerBlocks} />
+      {headerBlocks.map(headerBlock => (
+        <PostHeadings headerBlock={headerBlock} />
+      ))}
       <PostContent contentBlocks={contentBlocks} />
     </div>
   );
