@@ -65,8 +65,24 @@
         ],
         "includeComments": false,
         "atiAnalytics": {
-          "producerName": "PIDGIN",
-          "producerId": "70"
+          "campaigns": [
+            {
+              "campaignId": "5ad86265c93a9f000eecb254",
+              "campaignName": "Educate me"
+            }
+          ],
+          "categoryName": "News",
+          "contentId": "urn:bbc:cps:curie:asset:740a2911-be7a-d945-a968-d812272c2147",
+          "contentType": "article",
+          "language": "pcm",
+          "ldpThingIds": null,
+          "ldpThingLabels": null,
+          "pageIdentifier": "world::pidgin.world.story.23252817.page",
+          "pageTitle": "STY - Blood pressure drugs dey work better",
+          "producerId": null,
+          "timePublished": "2019-10-23T12:39:30.000Z",
+          "timeUpdated": "2019-10-23T12:39:30.000Z",
+          "producerName": "PIDGIN"
         },
         "readTime": 2,
         "siteUri": "/pidgin"

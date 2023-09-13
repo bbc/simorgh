@@ -77,161 +77,154 @@
     ]
   },
   "metadata":{
-    "analyticsLabels":{
-      "counterName":"ukrainian.news.story.53561143.page",
-      "cps_asset_id":"53561143",
-      "cps_asset_type":"sty"
+    "analyticsLabels": {
+      "ldp_ids": "1a5696c5-07d0-4a08-8b54-41ad5cd534b6~37cd3473-7b24-44b0-84c1-bf3c4801df5e~4b4cca1c-d458-4310-819e-dd48572b12c4~ee8750ed-a7fb-453f-bfca-2aa8b3fb064c",
+      "ldp_tags": "Afghanistan~Drug+use~Drugs+trade~Ukraine",
+      "counterName": "ukrainian.news.story.53561143.page",
+      "cps_asset_id": "53561143",
+      "cps_asset_type": "sty"
     },
-    "atiAnalytics":{
-      "producerId":"94",
-      "producerName":"UKRAINIAN"
-    },
-    "blockTypes":[
-      "social_embed",
-      "paragraph"
-    ],
-    "createdBy":"ukrainian-v6",
-    "firstPublished":1595942713000,
-    "id":"urn:bbc:ares::asset:ukrainian/news-53561143",
-    "includeComments":false,
-    "language":"uk",
-    "lastPublished":1595942713000,
-    "lastUpdated":1595945068228,
-    "locators":{
-      "assetId":"53561143",
-      "assetUri":"/ukrainian/news-53561143",
-      "cpsUrn":"urn:bbc:content:assetUri:ukrainian/news-53561143",
-      "curie":"http://www.bbc.co.uk/asset/9e539daf-1d79-4630-900c-7db33c4bf1ac"
-    },
-    "options":{
-      "allowAdvertising":true,
-      "allowDateStamp":true,
-      "allowHeadline":true,
-      "allowPrintingSharingLinks":true,
-      "allowRelatedStoriesBox":true,
-      "allowRightHandSide":true,
-      "hasContentWarning":false,
-      "hasNewsTracker":false,
-      "includeComments":false,
-      "isBreakingNews":false,
-      "isFactCheck":false,
-      "isIgorSeoTagsEnabled":false,
-      "isKeyContent":false,
-      "suitableForSyndication":true
-    },
-    "passport":{
-      "campaigns":[
+    "atiAnalytics": {
+      "campaigns": [
         {
-          "campaignId":"5a988e2939461b000e9dabf8",
-          "campaignName":"WS - Educate me"
+          "campaignId": "5a988e2939461b000e9dabf8",
+          "campaignName": "WS - Educate me"
         }
       ],
-      "category":{
-        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-        "categoryName":"News"
-      },
-      "taggings":[
-
-      ]
+      "categoryName": "News",
+      "contentId": "urn:bbc:cps:curie:asset:9e539daf-1d79-4630-900c-7db33c4bf1ac",
+      "contentType": "article",
+      "language": "uk",
+      "ldpThingIds": "1a5696c5-07d0-4a08-8b54-41ad5cd534b6~37cd3473-7b24-44b0-84c1-bf3c4801df5e~4b4cca1c-d458-4310-819e-dd48572b12c4~ee8750ed-a7fb-453f-bfca-2aa8b3fb064c",
+      "ldpThingLabels": "Afghanistan~Drug+use~Drugs+trade~Ukraine",
+      "pageIdentifier": "news::ukrainian.news.story.53561143.page",
+      "pageTitle": "Виробництво героїну зросло завдяки сонячним батареям. Погляд з Британії",
+      "producerId": null,
+      "timePublished": "2020-07-28T13:25:13.000Z",
+      "timeUpdated": "2020-07-28T13:25:13.000Z",
+      "producerName": "UKRAINIAN"
     },
-    "tags":{
-      "about":[
+    "blockTypes": ["social_embed", "paragraph"],
+    "createdBy": "ukrainian-v6",
+    "firstPublished": 1595942713000,
+    "id": "urn:bbc:ares::asset:ukrainian/news-53561143",
+    "includeComments": false,
+    "language": "uk",
+    "lastPublished": 1595942713000,
+    "lastUpdated": 1595945068228,
+    "locators": {
+      "assetId": "53561143",
+      "assetUri": "/ukrainian/news-53561143",
+      "cpsUrn": "urn:bbc:content:assetUri:ukrainian/news-53561143",
+      "curie": "http://www.bbc.co.uk/asset/9e539daf-1d79-4630-900c-7db33c4bf1ac"
+    },
+    "options": {
+      "allowAdvertising": true,
+      "allowDateStamp": true,
+      "allowHeadline": true,
+      "allowPrintingSharingLinks": true,
+      "allowRelatedStoriesBox": true,
+      "allowRightHandSide": true,
+      "hasContentWarning": false,
+      "hasNewsTracker": false,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "isFactCheck": false,
+      "isIgorSeoTagsEnabled": false,
+      "isKeyContent": false,
+      "suitableForSyndication": true
+    },
+    "passport": {
+      "campaigns": [
         {
-          "curationList":[
+          "campaignId": "5a988e2939461b000e9dabf8",
+          "campaignName": "WS - Educate me"
+        }
+      ],
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "taggings": []
+    },
+    "tags": {
+      "about": [
+        {
+          "curationList": [
             {
-              "curationId":"0a7394f6-125d-4892-a338-43d66113ec07",
-              "curationType":"vivo-stream"
+              "curationId": "0a7394f6-125d-4892-a338-43d66113ec07",
+              "curationType": "vivo-stream"
             }
           ],
-          "thingEnglishLabel":"Afghanistan",
-          "thingId":"1a5696c5-07d0-4a08-8b54-41ad5cd534b6",
-          "thingLabel":"Афганістан",
-          "thingSameAs":[
-            "http://sws.geonames.org/1149361/"
-          ],
-          "thingType":[
-            "tagging:TagConcept",
-            "core:Place",
-            "core:Thing"
-          ],
-          "thingUri":"http://www.bbc.co.uk/things/1a5696c5-07d0-4a08-8b54-41ad5cd534b6#id",
-          "topicId":"cvjp20q59z6t",
-          "topicName":"Афганістан"
+          "thingEnglishLabel": "Afghanistan",
+          "thingId": "1a5696c5-07d0-4a08-8b54-41ad5cd534b6",
+          "thingLabel": "Афганістан",
+          "thingSameAs": ["http://sws.geonames.org/1149361/"],
+          "thingType": ["tagging:TagConcept", "core:Place", "core:Thing"],
+          "thingUri": "http://www.bbc.co.uk/things/1a5696c5-07d0-4a08-8b54-41ad5cd534b6#id",
+          "topicId": "cvjp20q59z6t",
+          "topicName": "Афганістан"
         },
         {
-          "curationList":[
+          "curationList": [
             {
-              "curationId":"5238251a-289b-4711-b859-41b9a01f87d8",
-              "curationType":"vivo-stream"
+              "curationId": "5238251a-289b-4711-b859-41b9a01f87d8",
+              "curationType": "vivo-stream"
             }
           ],
-          "thingEnglishLabel":"Drug use",
-          "thingId":"37cd3473-7b24-44b0-84c1-bf3c4801df5e",
-          "thingLabel":"Вживання наркотиків",
-          "thingSameAs":[
+          "thingEnglishLabel": "Drug use",
+          "thingId": "37cd3473-7b24-44b0-84c1-bf3c4801df5e",
+          "thingLabel": "Вживання наркотиків",
+          "thingSameAs": [
             "http://www.wikidata.org/entity/Q7708739",
             "http://dbpedia.org/resource/Recreational_drug_use"
           ],
-          "thingType":[
-            "tagging:TagConcept",
-            "core:Theme",
-            "core:Thing"
-          ],
-          "thingUri":"http://www.bbc.co.uk/things/37cd3473-7b24-44b0-84c1-bf3c4801df5e#id",
-          "topicId":"cwr9j9xxrxxt",
-          "topicName":"Вживання наркотиків"
+          "thingType": ["tagging:TagConcept", "core:Theme", "core:Thing"],
+          "thingUri": "http://www.bbc.co.uk/things/37cd3473-7b24-44b0-84c1-bf3c4801df5e#id",
+          "topicId": "cwr9j9xxrxxt",
+          "topicName": "Вживання наркотиків"
         },
         {
-          "curationList":[
+          "curationList": [
             {
-              "curationId":"c6c0f417-e128-4bb8-91af-01574c1068c4",
-              "curationType":"vivo-stream"
+              "curationId": "c6c0f417-e128-4bb8-91af-01574c1068c4",
+              "curationType": "vivo-stream"
             }
           ],
-          "thingEnglishLabel":"Drugs trade",
-          "thingId":"4b4cca1c-d458-4310-819e-dd48572b12c4",
-          "thingLabel":"Наркоторгівля",
-          "thingSameAs":[
-            "http://dbpedia.org/resource/Illegal_drug_trade"
-          ],
-          "thingType":[
-            "tagging:TagConcept",
-            "core:Thing",
-            "core:Theme"
-          ],
-          "thingUri":"http://www.bbc.co.uk/things/4b4cca1c-d458-4310-819e-dd48572b12c4#id",
-          "topicId":"cwr9j9xxr90t",
-          "topicName":"Наркоторгівля"
+          "thingEnglishLabel": "Drugs trade",
+          "thingId": "4b4cca1c-d458-4310-819e-dd48572b12c4",
+          "thingLabel": "Наркоторгівля",
+          "thingSameAs": ["http://dbpedia.org/resource/Illegal_drug_trade"],
+          "thingType": ["tagging:TagConcept", "core:Thing", "core:Theme"],
+          "thingUri": "http://www.bbc.co.uk/things/4b4cca1c-d458-4310-819e-dd48572b12c4#id",
+          "topicId": "cwr9j9xxr90t",
+          "topicName": "Наркоторгівля"
         },
         {
-          "curationList":[
+          "curationList": [
             {
-              "curationId":"66aab782-10e3-47f5-a9cb-7432f6b24c83",
-              "curationType":"vivo-stream"
+              "curationId": "66aab782-10e3-47f5-a9cb-7432f6b24c83",
+              "curationType": "vivo-stream"
             }
           ],
-          "thingEnglishLabel":"Ukraine",
-          "thingId":"ee8750ed-a7fb-453f-bfca-2aa8b3fb064c",
-          "thingLabel":"Україна",
-          "thingSameAs":[
+          "thingEnglishLabel": "Ukraine",
+          "thingId": "ee8750ed-a7fb-453f-bfca-2aa8b3fb064c",
+          "thingLabel": "Україна",
+          "thingSameAs": [
             "http://dbpedia.org/resource/Ukraine",
             "http://www.wikidata.org/entity/Q212",
             "http://sws.geonames.org/690791/"
           ],
-          "thingType":[
-            "tagging:TagConcept",
-            "core:Thing",
-            "core:Place"
-          ],
-          "thingUri":"http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id",
-          "topicId":"c1gdqr12p11t",
-          "topicName":"Україна"
+          "thingType": ["tagging:TagConcept", "core:Thing", "core:Place"],
+          "thingUri": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id",
+          "topicId": "c1gdqr12p11t",
+          "topicName": "Україна"
         }
       ]
     },
-    "timestamp":1595942713000,
-    "type":"STY",
-    "version":"v1.3.2"
+    "timestamp": 1595942713000,
+    "type": "STY",
+    "version": "v1.3.2"
   },
   "promo":{
     "headlines":{

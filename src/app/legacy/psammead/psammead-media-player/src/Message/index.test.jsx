@@ -1,7 +1,6 @@
 import React from 'react';
 import { render } from '../../../../../components/react-testing-library-with-providers';
 import Message from './index';
-import '@testing-library/jest-dom/extend-expect';
 
 describe('Media Message', () => {
   it('should display the media message', () => {

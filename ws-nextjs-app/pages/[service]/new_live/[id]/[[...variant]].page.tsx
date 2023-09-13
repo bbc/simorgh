@@ -2,7 +2,6 @@ import { GetServerSideProps } from 'next';
 import { ParsedUrlQuery } from 'querystring';
 import omit from 'ramda/src/omit';
 import constructPageFetchUrl from '#app/routes/utils/constructPageFetchUrl';
-import getAgent from '#server/utilities/getAgent';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
 import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import nodeLogger from '#lib/logger.node';
@@ -16,6 +15,8 @@ import { FetchError } from '#models/types/fetch';
 
 import getEnvironment from '#app/routes/utils/getEnvironment';
 import fetchPageData from '#app/routes/utils/fetchPageData';
+import certsRequired from '#app/routes/utils/certsRequired';
+import getAgent from '../../../../utilities/undiciAgent';
 
 import LivePageLayout from './LivePageLayout';
 
@@ -48,10 +49,8 @@ const getPageData = async ({
 
   const env = getEnvironment(pathname);
   const optHeaders = { 'ctx-service-env': env };
-  const isLocal = !env || env === 'local';
-  const certsNeeded = !isLocal && process.env.INTEGRATION_TEST_BUILD !== 'true';
 
-  const agent = certsNeeded ? await getAgent() : null;
+  const agent = certsRequired(pathname) ? await getAgent() : null;
 
   let pageStatus;
   let pageJson;
@@ -123,6 +122,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
     pageType: LIVE_PAGE,
   });
 
+  context.res.statusCode = data.status;
   return {
     props: {
       bbcOrigin: reqHeaders['bbc-origin'] || null,
