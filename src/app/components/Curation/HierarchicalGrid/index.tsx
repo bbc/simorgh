@@ -61,6 +61,8 @@ const HiearchicalGrid = ({ promos, headingLevel }: CurationGridProps) => {
           const formattedDuration = formatDuration({ duration, separator });
           const durationString = `${durationTranslation}, ${formattedDuration}`;
 
+          const isFirstPromo = i === 0;
+
           const useLargeImages = i === 0 && promoItems.length >= 3;
           const showDuration =
             promo.duration && ['video', 'audio'].includes(promo.type);
@@ -85,7 +87,7 @@ const HiearchicalGrid = ({ promos, headingLevel }: CurationGridProps) => {
                   useLargeImages={useLargeImages}
                   src={promo.imageUrl || ''}
                   alt={promo.imageAlt}
-                  loading="lazy"
+                  lazyLoad={!isFirstPromo}
                   isAmp={isAmp}
                 >
                   <Promo.MediaIcon type={promo.type}>
