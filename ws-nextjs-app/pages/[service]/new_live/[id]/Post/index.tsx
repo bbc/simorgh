@@ -44,9 +44,7 @@ const PostBreakingNewsLabel = ({
   breakingNewsLabelText?: string;
 }) => {
   return isBreakingNews ? (
-    <Text css={styles.breakingNewsLabel}>
-      <span>{breakingNewsLabelText}</span>
-    </Text>
+    <Text css={styles.breakingNewsLabel}>{breakingNewsLabelText}</Text>
   ) : null;
 };
 
@@ -59,9 +57,6 @@ const PostHeaderBanner = ({
 }) => {
   return (
     <div css={styles.postHeaderBanner}>
-      {/* <Text>
-        <span>Timestamp placeholder</span>
-      </Text> */}
       <PostBreakingNewsLabel
         isBreakingNews={isBreakingNews}
         breakingNewsLabelText={breakingNewsLabelText}
