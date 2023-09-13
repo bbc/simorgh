@@ -7,6 +7,7 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import urduPageData from '#data/urdu/cpsAssets/science-51314202.json';
 import getInitialData from '#app/routes/cpsAsset/getInitialData';
 import { FEATURE_INDEX_PAGE } from '#app/routes/utils/pageTypes';
+import { Helmet } from 'react-helmet';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ThemeProvider from '../../components/ThemeProvider';
 import FeatureIdxPage from '.';
@@ -127,13 +128,6 @@ jest.mock('#containers/PageHandlers/withContexts', () => Component => {
   );
 });
 
-jest.mock('#containers/Ad/Canonical/CanonicalAdBootstrapJs', () => {
-  const CanonicalAdBootstrapJs = () => (
-    <div data-testid="adBootstrap">bootstrap</div>
-  );
-  return CanonicalAdBootstrapJs;
-});
-
 describe('Feature Idx Page', () => {
   let pageData;
 
@@ -234,15 +228,14 @@ describe('Feature Idx Page', () => {
           },
         };
 
-        let getByTestId;
         await act(async () => {
-          ({ getByTestId } = render(
+          render(
             <FeatureIdxPageWithContext
               pageData={pageData}
               showAdsBasedOnLocation
               toggles={toggles}
             />,
-          ));
+          );
         });
 
         const leaderboardAd = document.querySelector(
@@ -253,8 +246,11 @@ describe('Feature Idx Page', () => {
         const mpuAd = document.querySelector('[id="dotcom-mpu"]');
         expect(mpuAd).toBeInTheDocument();
 
-        const adBootstrap = getByTestId('adBootstrap');
-        expect(adBootstrap).toBeInTheDocument();
+        const bootstrapScript = Helmet.peek().scriptTags.find(({ innerHTML }) =>
+          innerHTML.includes('window.dotcom'),
+        );
+
+        expect(bootstrapScript).toBeTruthy();
       });
 
       it('should not render canonical ad bootstrap on amp', async () => {
