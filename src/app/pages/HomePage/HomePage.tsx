@@ -95,7 +95,6 @@ const HomePage = ({ pageData }: HomePageProps) => {
               ) => {
                 return (
                   <React.Fragment key={`${curationId}-${position}`}>
-                    {index === 1 && <MPU />}
                     <Curation
                       headingLevel={curationTitle ? 3 : 2}
                       visualStyle={visualStyle as VisualStyle}
@@ -108,6 +107,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       curationLength={curations && curations.length}
                       mostRead={mostRead}
                     />
+                    {index === 0 && <MPU />}
                   </React.Fragment>
                 );
               },
