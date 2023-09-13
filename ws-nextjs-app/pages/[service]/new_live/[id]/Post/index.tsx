@@ -5,7 +5,7 @@ import { OptimoBlock } from '#models/types/optimo';
 import Heading from '#app/legacy/containers/Headings';
 import Blocks from '#app/legacy/containers/Blocks';
 import Paragraph from '#app/legacy/containers/Paragraph';
-import unorderedList from '#app/legacy/containers/BulletedList';
+import UnorderedList from '#app/legacy/containers/BulletedList';
 import { Post as PostType } from './types';
 import styles from './styles';
 
@@ -43,10 +43,16 @@ const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
   const componentsToRender = {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     paragraph: (props: any) => (
-      <Paragraph {...props} className="blackText" css={styles.bodyText} />
+      <Paragraph {...props} className="postStyles" css={styles.bodyText} />
     ),
-    unorderedList,
-    orderedList: unorderedList,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    unorderedList: (props: any) => (
+      <UnorderedList {...props} className="postStyles" css={styles.bodyText} />
+    ),
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    orderedList: (props: any) => (
+      <UnorderedList {...props} className="postStyles" css={styles.bodyText} />
+    ),
   };
 
   return (

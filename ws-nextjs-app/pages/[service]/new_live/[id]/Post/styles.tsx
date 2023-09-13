@@ -4,17 +4,18 @@ import pixelsToRem from '../../../../../../src/app/utilities/pixelsToRem';
 export default {
   postHeading: ({ spacings, palette, mq }: Theme) =>
     css({
-      color: palette.POSTBOX,
+      color: palette.BLACK,
       padding: `${spacings.TRIPLE}rem 0 0`,
       // overwrite default heading padding
       [mq.GROUP_3_MIN_WIDTH]: {
         padding: `${spacings.TRIPLE}rem 0 0`,
       },
+      margin: 0 /* Reset */,
     }),
 
   postSubHeading: ({ palette, mq }: Theme) =>
     css({
-      color: palette.POSTBOX,
+      color: palette.BLACK,
       padding: `${pixelsToRem(8)}rem 0 0`,
       // overwrite default heading padding
       [mq.GROUP_3_MIN_WIDTH]: {
@@ -45,5 +46,8 @@ export default {
       color: palette.BLACK,
       margin: 0 /* Reset */,
       paddingBottom: `${spacings.DOUBLE}rem`,
+      '& li': {
+        marginBottom: `${pixelsToRem(8)}rem`,
+      },
     }),
 };

@@ -12,7 +12,6 @@ export default {
         outline: 'none',
       },
       overflowWrap: 'anywhere',
-      margin: 0 /* Reset */,
     }),
   subHeading: ({ spacings, mq }: Theme) =>
     css({
