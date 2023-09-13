@@ -2,41 +2,35 @@
 import { jsx } from '@emotion/react';
 import pathOr from 'ramda/src/pathOr';
 import { OptimoBlock } from '#models/types/optimo';
-import Heading from '#app/legacy/containers/Headings';
+import Heading from '#app/components/Heading';
 import Blocks from '#app/legacy/containers/Blocks';
 import Paragraph from '#app/legacy/containers/Paragraph';
 import UnorderedList from '#app/legacy/containers/BulletedList';
-import { Post as PostType } from './types';
+import { Post as PostType, PostHeadingBlock } from './types';
 import styles from './styles';
 
-const PostHeadings = ({ headerBlocks }: { headerBlocks: OptimoBlock[] }) => {
-  const componentsToRender = {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    headline: (props: any) => (
+const PostHeadings = ({
+  headerBlocks,
+}: {
+  headerBlocks: PostHeadingBlock[];
+}) => {
+  const setHeadings = headerBlocks.map(block => {
+    const isHeadline = block.type === 'headline';
+    const headingText = block.model.blocks[0].model.blocks[0].model.text;
+
+    return (
       <Heading
-        {...props}
-        headingLevel={3}
-        fontVariant="sansBold"
-        size="greatPrimer"
+        level={3}
+        fontVariant={isHeadline ? 'sansBold' : 'sansRegular'}
+        size={isHeadline ? 'greatPrimer' : 'brevier'}
         className="headingStyling"
-        css={styles.postHeading}
-      />
-    ),
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    subheadline: (props: any) => (
-      <Heading
-        {...props}
-        headingLevel={3}
-        fontVariant="sansRegular"
-        size="brevier"
-        className="headingStyling"
-        css={styles.postSubHeading}
-      />
-    ),
-  };
-  return (
-    <Blocks blocks={headerBlocks} componentsToRender={componentsToRender} />
-  );
+        css={isHeadline ? styles.postHeading : styles.postSubHeading}
+      >
+        {headingText}
+      </Heading>
+    );
+  });
+  return setHeadings;
 };
 
 const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
@@ -63,7 +57,7 @@ const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
 };
 
 const Post = ({ post }: { post: PostType }) => {
-  const headerBlocks = pathOr<OptimoBlock[]>(
+  const headerBlocks = pathOr<PostHeadingBlock[]>(
     [],
     ['header', 'model', 'blocks'],
     post,
