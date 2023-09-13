@@ -73,12 +73,16 @@ const ArticlePage = ({ pageData }) => {
     palette: { GREY_2, WHITE },
   } = useTheme();
 
-  const headers = headTest.map((key, val) => {
-    <div>
-      <span style={{ color: blue }}>{key}</span> MAPS TO{' '}
-      <span style={{ color: red }}>{val}</span>
-    </div>;
-  });
+  const headers = [];
+
+  for (const [key, value] of Object.entries(headTest)) {
+    headers.push(
+      <div>
+        <span style={{ color: blue }}>{key}</span> MAPS TO{' '}
+        <span style={{ color: red }}>{val}</span>
+      </div>,
+    );
+  }
 
   const allowAdvertising = path(['metadata', 'allowAdvertising'], pageData);
   const adcampaign = path(['metadata', 'adCampaignKeyword'], pageData);
@@ -191,7 +195,6 @@ const ArticlePage = ({ pageData }) => {
 
   return (
     <div css={styles.pageWrapper}>
-      {headers}
       <ATIAnalytics atiData={atiAnalytics} />
       <ChartbeatAnalytics
         sectionName={pageData?.relatedContent?.section?.name}
@@ -231,6 +234,7 @@ const ArticlePage = ({ pageData }) => {
       <div css={styles.grid}>
         <div css={styles.primaryColumn}>
           <main css={styles.mainContent} role="main">
+            <div>{headers}</div>
             <Blocks
               blocks={articleBlocks}
               componentsToRender={componentsToRender}
