@@ -1,5 +1,5 @@
 export default () => {
-  describe.skip(`Chartbeat analytics`, () => {
+  describe(`Chartbeat analytics`, () => {
     it('should have a script with src value set to chartbeat source', () => {
       cy.hasScriptWithChartbeatSrc();
     });
