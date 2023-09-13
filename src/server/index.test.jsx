@@ -1519,7 +1519,7 @@ describe('Server HTTP Headers - Page Endpoints', () => {
     );
   });
 
-  it(`should set isUK value to false when 'x-bbc-edge-isuk' is NOT 'no'`, async () => {
+  it(`should set isUK value to false when 'x-bbc-edge-isuk' is NOT 'yes'`, async () => {
     mockRouteProps({
       dataResponse: successDataResponse,
       isAmp: true,
