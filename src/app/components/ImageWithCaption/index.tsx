@@ -10,7 +10,7 @@ import { Services } from '../../models/types/global';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import Copyright from '../Copyright';
 import Caption from '../../legacy/containers/Caption';
-import IMAGE from '../Image';
+import Image from '../Image';
 import styles from './index.styles';
 import { RequestContext } from '../../contexts/RequestContext';
 
@@ -45,7 +45,7 @@ type Props = {
   shouldPreload?: boolean;
 };
 
-const ArticleFigure = ({
+const ImageWithCaption = ({
   blocks,
   position = [1],
   sizes,
@@ -93,7 +93,7 @@ const ArticleFigure = ({
 
   return (
     <figure css={styles.figure}>
-      <IMAGE
+      <Image
         alt={alt}
         attribution={copyright}
         src={src}
@@ -110,10 +110,10 @@ const ArticleFigure = ({
         placeholder
       >
         {renderCopyright(copyright || '')}
-      </IMAGE>
+      </Image>
       {captionBlock && renderCaption(captionBlock, 'image', service)}
     </figure>
   );
 };
 
-export default ArticleFigure;
+export default ImageWithCaption;
