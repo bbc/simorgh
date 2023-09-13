@@ -31,6 +31,7 @@ const WithContexts = Component => {
       mvtExperiments,
       isNextJs,
       isUK,
+      headTest,
     } = props;
 
     const { metadata: { atiAnalytics } = {} } = pageData ?? {};
@@ -59,6 +60,7 @@ const WithContexts = Component => {
             mvtExperiments={mvtExperiments}
             isNextJs={isNextJs}
             isUK={isUK}
+            headTest={headTest}
           >
             <EventTrackingContextProvider
               atiData={atiAnalytics}
@@ -91,6 +93,8 @@ const WithContexts = Component => {
     showAdsBasedOnLocation: bool,
     // eslint-disable-next-line react/forbid-prop-types
     toggles: object.isRequired,
+    // eslint-disable-next-line react/forbid-prop-types
+    headTest: object,
     mvtExperiments: mvtExperimentPropType,
     isNextJs: bool,
     isUK: bool,
@@ -109,6 +113,7 @@ const WithContexts = Component => {
     mvtExperiments: null,
     isNextJs: false,
     isUK: false,
+    headTest: null,
   };
 
   return WithContextsContainer;

@@ -224,6 +224,7 @@ server.get(
       data.timeOnServer = Date.now();
       data.showAdsBasedOnLocation = headers['bbc-adverts'] === 'true';
       data.isUK = isUK;
+      data.headTest = headers;
 
       let { status } = data;
       // Set derivedPageType based on returned page data

@@ -64,14 +64,21 @@ import styles from './ArticlePage.styles';
 import { getPromoHeadline } from '../../lib/analyticsUtils/article';
 
 const ArticlePage = ({ pageData }) => {
-  const { isApp } = useContext(RequestContext);
+  const { isApp, headTest } = useContext(RequestContext);
   const { articleAuthor, isTrustProjectParticipant, showRelatedTopics } =
     useContext(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
-
+  console.log('ARTICLE', headTest);
   const {
     palette: { GREY_2, WHITE },
   } = useTheme();
+
+  const headers = headTest.map((key, val) => {
+    <div>
+      <span style={{ color: blue }}>{key}</span> MAPS TO{' '}
+      <span style={{ color: red }}>{val}</span>
+    </div>;
+  });
 
   const allowAdvertising = path(['metadata', 'allowAdvertising'], pageData);
   const adcampaign = path(['metadata', 'adCampaignKeyword'], pageData);
@@ -184,6 +191,7 @@ const ArticlePage = ({ pageData }) => {
 
   return (
     <div css={styles.pageWrapper}>
+      {headers}
       <ATIAnalytics atiData={atiAnalytics} />
       <ChartbeatAnalytics
         sectionName={pageData?.relatedContent?.section?.name}
