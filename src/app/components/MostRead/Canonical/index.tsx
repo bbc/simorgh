@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { shouldRenderLastUpdated } from '#lib/utilities/filterPopularStaleData/isDataStale';
-import useViewTracker from '#hooks/useViewTracker';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import useViewTracker from '../../../hooks/useViewTracker';
 import { MostReadLink, MostReadItemWrapper } from './Item';
 import MostReadList from './List';
 import MostReadRank from './Rank';
@@ -48,6 +48,7 @@ const MostRead = ({
       numberOfItems={items.length}
       dir={direction}
       columnLayout={columnLayout}
+      service={service}
     >
       {items.map(
         ({ id, timestamp, title, href }, i) =>
