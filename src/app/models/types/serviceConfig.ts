@@ -5,6 +5,7 @@ import {
   ChineseService,
   ZhongwenService,
   UkrainianService,
+  Direction,
 } from './global';
 import { Translations } from './translations';
 
@@ -41,7 +42,7 @@ export type ServiceConfig = {
   serviceLocalizedName?: string;
   defaultImage: string;
   defaultImageAltText: string;
-  dir: string;
+  dir: Direction;
   externalLinkText: string;
   imageCaptionOffscreenText: string;
   videoCaptionOffscreenText: string;
