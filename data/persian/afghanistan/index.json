@@ -35,7 +35,21 @@
         ],
         "title": "صفحه افغانستان",
         "summary": "تازه ترین اخبار، گزارش ها و تحلیل ها درباره افغانستان؛ از سیاست، جامعه و مسائل امنیتی افغانستان گرفته تا گزارش های ویدیویی و برنامه های رادیو بی بی سی برای افغانستان.",
-        "atiAnalytics": { "producerName": "PERSIAN", "producerId": "69" }
+        "atiAnalytics": {
+          "campaigns": null,
+          "categoryName": null,
+          "contentId": "urn:bbc:cps:3cda1d8c-ffa2-03ae-e050-380a4e8056f3",
+          "contentType": "index-section",
+          "language": "fa",
+          "ldpThingIds": null,
+          "ldpThingLabels": null,
+          "pageIdentifier": "persian.afghanistan.page",
+          "pageTitle": "صفحه افغانستان",
+          "producerId": null,
+          "timePublished": "2016-09-20T16:06:44.000Z",
+          "timeUpdated": "2023-07-24T07:12:08.000Z",
+          "producerName": "PERSIAN"
+        }
       },
       "content": {
         "groups": [

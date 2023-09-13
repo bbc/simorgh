@@ -1,6 +1,4 @@
-import { Services } from '../../models/types/global';
-
-export type Direction = 'rtl' | 'ltr';
+import { Services, Direction } from '../../models/types/global';
 
 export type Size = 'default' | 'small';
 

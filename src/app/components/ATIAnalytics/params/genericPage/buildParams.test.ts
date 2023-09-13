@@ -1,3 +1,4 @@
+import { TOPIC_PAGE } from '#app/routes/utils/pageTypes';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import { RequestContextProps } from '../../../../contexts/RequestContext';
 import { ServiceConfig } from '../../../../models/types/serviceConfig';
@@ -230,6 +231,108 @@ describe('implementation of buildPageATIParams and buildPageATIUrl', () => {
     });
   });
 
+  describe('Media Article Page', () => {
+    const optimoMediaArticlePageAtiData = {
+      categoryName: 'Environment~Narendra+Modi~Nature~India~Severe+weather',
+      contentId: 'urn:bbc:optimo:asset:c4nrpd0d4nro',
+      contentType: 'article-sfv',
+      language: 'ha',
+      ldpThingIds:
+        '0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f~103fc7e4-3a8d-491c-9a75-3c37c299d48f~12e69b92-a7ba-4463-84e0-be107b9805d0~5a08f030-710f-4168-acee-67294a90fc75~9b16a6c2-7c16-42b7-bff7-6549579622e8',
+      ldpThingLabels: 'Environment~Narendra+Modi~Nature~India~Severe+weather',
+      nationsProducer: null,
+      pageIdentifier: 'hausa.articles.c4nrpd0d4nro.page',
+      pageTitle: 'Kalli yadda ambaliya ta tagayyara wani yanki na Indiya',
+      timePublished: '2023-07-11T17:42:48.771Z',
+      timeUpdated: '2023-07-11T17:42:48.771Z',
+    };
+
+    const validPageURLParams = {
+      appName: 'atiAnalyticsAppName',
+      campaigns: undefined,
+      categoryName: 'Environment~Narendra+Modi~Nature~India~Severe+weather',
+      contentId: 'urn:bbc:optimo:asset:c4nrpd0d4nro',
+      contentType: 'article-sfv',
+      isUK: false,
+      language: 'ha',
+      ldpThingIds:
+        '0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f~103fc7e4-3a8d-491c-9a75-3c37c299d48f~12e69b92-a7ba-4463-84e0-be107b9805d0~5a08f030-710f-4168-acee-67294a90fc75~9b16a6c2-7c16-42b7-bff7-6549579622e8',
+      ldpThingLabels: 'Environment~Narendra+Modi~Nature~India~Severe+weather',
+      libraryVersion: 'simorgh',
+      nationsProducer: null,
+      origin: 'example.com',
+      pageIdentifier: 'hausa.articles.c4nrpd0d4nro.page',
+      pageTitle: 'Kalli yadda ambaliya ta tagayyara wani yanki na Indiya',
+      platform: 'canonical',
+      previousPath: 'previousPath',
+      producerId: 'atiAnalyticsProducerId',
+      service: 'hausa',
+      statsDestination: 'statsDestination',
+      timePublished: '2023-07-11T17:42:48.771Z',
+      timeUpdated: '2023-07-11T17:42:48.771Z',
+    };
+
+    it('should return the correct object for the page given the ATI configuration', () => {
+      const result = buildPageATIParams({
+        atiData: optimoMediaArticlePageAtiData,
+        requestContext: {
+          ...requestContext,
+          isUK: false,
+          origin: 'example.com',
+          pageType: 'article',
+          previousPath: 'previousPath',
+        },
+        serviceContext: { ...serviceContext, service: 'hausa', lang: 'ha' },
+      });
+      expect(result).toEqual(validPageURLParams);
+    });
+
+    it('should return the correct url for a page given the ATI configuration', () => {
+      const url = buildPageATIUrl({
+        atiData: optimoMediaArticlePageAtiData,
+        requestContext: {
+          ...requestContext,
+          isUK: false,
+          origin: 'example.com',
+          pageType: 'article',
+          previousPath: 'previousPath',
+        },
+        serviceContext: { ...serviceContext, service: 'hausa', lang: 'ha' },
+      });
+
+      const parsedATIURLParams = Object.fromEntries(
+        new URLSearchParams(url as string),
+      );
+
+      const expectedATIURLParams = {
+        s: '598285',
+        s2: 'atiAnalyticsProducerId',
+        p: 'hausa.articles.c4nrpd0d4nro.page',
+        r: '0x0x24x24',
+        re: '1024x768',
+        ref: 'example.compreviousPath',
+        hl: '00-00-00',
+        lng: 'en-US',
+        x1: '[urn:bbc:optimo:asset:c4nrpd0d4nro]',
+        x2: '[responsive]',
+        x3: '[atiAnalyticsAppName]',
+        x4: '[ha]',
+        x5: '[http%3A%2F%2Flocalhost%2F]',
+        x6: '[example.compreviousPath]',
+        x7: '[article-sfv]',
+        x8: '[simorgh]',
+        x9: '[Kalli%20yadda%20ambaliya%20ta%20tagayyara%20wani%20yanki%20na%20Indiya]',
+        x11: '[2023-07-11T17:42:48.771Z]',
+        x12: '[2023-07-11T17:42:48.771Z]',
+        x13: '[Environment~Narendra+Modi~Nature~India~Severe+weather]',
+        x14: '[0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f~103fc7e4-3a8d-491c-9a75-3c37c299d48f~12e69b92-a7ba-4463-84e0-be107b9805d0~5a08f030-710f-4168-acee-67294a90fc75~9b16a6c2-7c16-42b7-bff7-6549579622e8]',
+        x17: '[Environment~Narendra+Modi~Nature~India~Severe+weather]',
+      };
+
+      expect(parsedATIURLParams).toEqual(expectedATIURLParams);
+    });
+  });
+
   describe('Topic Page', () => {
     const topicPageAtiData = {
       contentId: 'urn:bbc:tipo:topic:c95y35941vrt',
@@ -275,7 +378,7 @@ describe('implementation of buildPageATIParams and buildPageATIUrl', () => {
         atiData: topicPageAtiData,
         requestContext: {
           ...requestContext,
-          pageType: 'TOPIC',
+          pageType: TOPIC_PAGE,
         },
         serviceContext,
       });
@@ -877,6 +980,176 @@ describe('implementation of buildPageATIParams and buildPageATIUrl', () => {
           x13: '[Intel~Technology+of+business~Business~Technology~Car+industry~China~Taiwan~Computer+chip~Semiconductors]',
           x14: '[0d358111-576d-4d61-a7c7-e2e71931b579~2c493367-e5a2-4c19-be5f-6e9342f5c591~2f2db234-3c2d-40a4-b4ac-eea661faadd0~31684f19-84d6-41f6-b033-7ae08098572a~65ba56b4-3f50-4217-ab8e-b3c1fe890364~6892384e-1966-4c03-9ce3-f694a8f9f69e~7a48b6e0-9074-4303-ae82-011003058e16~b054a2d3-6c1e-44de-b8db-0e2501c035c0~f7bf39da-286c-4e37-8ee0-a01395f09ac2]',
           x17: '[News]',
+        };
+
+        expect(parsedATIURLParams).toEqual(expectedATIURLParams);
+      });
+    });
+
+    describe('FIX', () => {
+      const cpsFIXAtiData = {
+        campaigns: null,
+        categoryName: null,
+        contentId: 'urn:bbc:cps:8c1f4760-de67-744b-bfd2-16eb1e9fd644',
+        contentType: 'index-section',
+        language: 'ur',
+        ldpThingIds: null,
+        ldpThingLabels: null,
+        pageIdentifier: 'urdu.science.feature_index.51314202.page',
+        pageTitle: 'کورونا وائرس: تحقیق، تشخیص اور احتیاط',
+        producerId: null,
+        timePublished: '2020-01-31T08:48:32.000Z',
+        timeUpdated: '2021-05-10T11:00:25.000Z',
+        producerName: 'URDU',
+      };
+
+      const validPageURLParams = {
+        appName: 'atiAnalyticsAppName',
+        campaigns: null,
+        categoryName: null,
+        contentId: 'urn:bbc:cps:8c1f4760-de67-744b-bfd2-16eb1e9fd644',
+        contentType: 'index-section',
+        isUK: undefined,
+        language: 'ur',
+        ldpThingIds: null,
+        ldpThingLabels: null,
+        libraryVersion: 'simorgh',
+        nationsProducer: undefined,
+        origin: undefined,
+        pageIdentifier: 'urdu.science.feature_index.51314202.page',
+        pageTitle: 'کورونا وائرس: تحقیق، تشخیص اور احتیاط',
+        platform: 'canonical',
+        previousPath: undefined,
+        producerId: 'atiAnalyticsProducerId',
+        service: 'urdu',
+        statsDestination: 'statsDestination',
+        timePublished: '2020-01-31T08:48:32.000Z',
+        timeUpdated: '2021-05-10T11:00:25.000Z',
+      };
+
+      it('should return the correct object for the page given the ATI configuration', () => {
+        const result = buildPageATIParams({
+          atiData: cpsFIXAtiData,
+          requestContext,
+          serviceContext: { ...serviceContext, service: 'urdu' },
+        });
+        expect(result).toStrictEqual(validPageURLParams);
+      });
+
+      it('should return the correct url for a page given the ATI configuration', () => {
+        const url = buildPageATIUrl({
+          atiData: cpsFIXAtiData,
+          requestContext,
+          serviceContext: { ...serviceContext, service: 'urdu' },
+        });
+
+        const parsedATIURLParams = Object.fromEntries(
+          new URLSearchParams(url as string),
+        );
+
+        const expectedATIURLParams = {
+          s: '598285',
+          s2: 'atiAnalyticsProducerId',
+          p: 'urdu.science.feature_index.51314202.page',
+          r: '0x0x24x24',
+          re: '1024x768',
+          hl: '00-00-00',
+          lng: 'en-US',
+          x1: '[urn:bbc:cps:8c1f4760-de67-744b-bfd2-16eb1e9fd644]',
+          x2: '[responsive]',
+          x3: '[atiAnalyticsAppName]',
+          x4: '[ur]',
+          x5: '[http%3A%2F%2Flocalhost%2F]',
+          x7: '[index-section]',
+          x8: '[simorgh]',
+          x9: '[کورونا%20وائرس:%20تحقیق،%20تشخیص%20اور%20احتیاط]',
+          x11: '[2020-01-31T08:48:32.000Z]',
+          x12: '[2021-05-10T11:00:25.000Z]',
+        };
+
+        expect(parsedATIURLParams).toEqual(expectedATIURLParams);
+      });
+    });
+
+    describe('IDX', () => {
+      const cpsIDXAtiData = {
+        campaigns: null,
+        categoryName: null,
+        contentId: 'urn:bbc:cps:631e99d6-c1c4-73b7-e050-17ac8045512e',
+        contentType: 'index-section',
+        language: 'sr-Cyrl',
+        ldpThingIds: null,
+        ldpThingLabels: null,
+        pageIdentifier: 'serbiancyr.page',
+        pageTitle: 'Почетна страна',
+        producerId: null,
+        timePublished: '2018-01-19T14:09:41.000Z',
+        timeUpdated: '2023-08-30T15:39:57.000Z',
+        producerName: 'SERBIAN',
+      };
+
+      const validPageURLParams = {
+        appName: 'atiAnalyticsAppName',
+        campaigns: null,
+        categoryName: null,
+        contentId: 'urn:bbc:cps:631e99d6-c1c4-73b7-e050-17ac8045512e',
+        contentType: 'index-section',
+        isUK: undefined,
+        language: 'sr-Cyrl',
+        ldpThingIds: null,
+        ldpThingLabels: null,
+        libraryVersion: 'simorgh',
+        nationsProducer: undefined,
+        origin: undefined,
+        pageIdentifier: 'serbiancyr.page',
+        pageTitle: 'Почетна страна',
+        platform: 'canonical',
+        previousPath: undefined,
+        producerId: 'atiAnalyticsProducerId',
+        service: 'serbian',
+        statsDestination: 'statsDestination',
+        timePublished: '2018-01-19T14:09:41.000Z',
+        timeUpdated: '2023-08-30T15:39:57.000Z',
+      };
+
+      it('should return the correct object for the page given the ATI configuration', () => {
+        const result = buildPageATIParams({
+          atiData: cpsIDXAtiData,
+          requestContext,
+          serviceContext: { ...serviceContext, service: 'serbian' },
+        });
+        expect(result).toStrictEqual(validPageURLParams);
+      });
+
+      it('should return the correct url for a page given the ATI configuration', () => {
+        const url = buildPageATIUrl({
+          atiData: cpsIDXAtiData,
+          requestContext,
+          serviceContext: { ...serviceContext, service: 'serbian' },
+        });
+
+        const parsedATIURLParams = Object.fromEntries(
+          new URLSearchParams(url as string),
+        );
+
+        const expectedATIURLParams = {
+          s: '598285',
+          s2: 'atiAnalyticsProducerId',
+          p: 'serbiancyr.page',
+          r: '0x0x24x24',
+          re: '1024x768',
+          hl: '00-00-00',
+          lng: 'en-US',
+          x1: '[urn:bbc:cps:631e99d6-c1c4-73b7-e050-17ac8045512e]',
+          x2: '[responsive]',
+          x3: '[atiAnalyticsAppName]',
+          x4: '[sr-Cyrl]',
+          x5: '[http%3A%2F%2Flocalhost%2F]',
+          x7: '[index-section]',
+          x8: '[simorgh]',
+          x9: '[Почетна%20страна]',
+          x11: '[2018-01-19T14:09:41.000Z]',
+          x12: '[2023-08-30T15:39:57.000Z]',
         };
 
         expect(parsedATIURLParams).toEqual(expectedATIURLParams);

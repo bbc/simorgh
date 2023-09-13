@@ -171,15 +171,19 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
     filterForBlockType(promoImageBlocks, 'rawImage'),
   );
 
+  // ATI
+  const {
+    metadata: { atiAnalytics },
+  } = pageData;
+
   return (
     <div css={styles.pageWrapper}>
-      <ATIAnalytics data={pageData} />
+      <ATIAnalytics atiData={atiAnalytics} />
       <ChartbeatAnalytics
         categoryName={pageData?.metadata?.passport?.category?.categoryName}
         title={headline}
         taggings={taggings}
         producer={pageData?.metadata?.analyticsLabels?.producer}
-        chapter={pageData?.metadata?.atiAnalytics?.chapter}
       />
       <ComscoreAnalytics />
       <NielsenAnalytics />
