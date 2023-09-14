@@ -52,7 +52,7 @@ const HiearchicalGrid = ({ promos, headingLevel }: CurationGridProps) => {
 
           const useLargeImages = i === 0 && promoItems.length >= 3;
 
-          const isFirstPromo = i === 0;
+          const lazyLoadImages = i >= 0;
 
           const showDuration =
             promo.duration && ['video', 'audio'].includes(promo.type);
@@ -77,7 +77,7 @@ const HiearchicalGrid = ({ promos, headingLevel }: CurationGridProps) => {
                   useLargeImages={useLargeImages}
                   src={promo.imageUrl || ''}
                   alt={promo.imageAlt}
-                  lazyLoad={!isFirstPromo}
+                  lazyLoad={lazyLoadImages}
                   isAmp={isAmp}
                 >
                   <Promo.MediaIcon type={promo.type}>

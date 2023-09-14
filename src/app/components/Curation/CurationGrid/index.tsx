@@ -16,14 +16,14 @@ const CurationGrid = ({ promos, headingLevel }: CurationGridProps) => {
       {hasMultiplePromos ? (
         <ul css={styles.list} role="list" data-testid="topic-promos">
           {promos.map((promo, index) => {
-            const isFirstPromo = index === 0;
+            const lazyLoadImages = index >= 0;
 
             return (
               <li css={styles.item} key={promo.id}>
                 <CurationPromo
                   {...promo}
                   headingLevel={headingLevel}
-                  lazy={!isFirstPromo}
+                  lazy={lazyLoadImages}
                 />
               </li>
             );
