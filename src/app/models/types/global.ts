@@ -4,6 +4,8 @@ export type Environments = 'local' | 'test' | 'live';
 
 export type Platforms = 'amp' | 'canonical' | 'app';
 
+export type Direction = 'rtl' | 'ltr';
+
 export type SocialEmbedProviders =
   | 'facebook'
   | 'twitter'
