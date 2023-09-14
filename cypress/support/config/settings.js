@@ -6278,7 +6278,7 @@ module.exports = () => ({
             paths: [
               '/sport/rugby-union/56359986',
               '/sport/golf/56318994',
-              '/sport/cricket/20256774',
+              '/sport/formula1/66082301',
             ],
             enabled: true,
           },
