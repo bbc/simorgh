@@ -166,7 +166,7 @@
     "@types/js-cookie": "^3.0.3",
     "@types/jsdom": "^20.0.0",
     "@types/loadable__component": "5.13.5",
-    "@types/ramda": "0.28.15",
+    "@types/ramda": "0.29.4",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
     "@types/react-helmet": "6.1.6",
