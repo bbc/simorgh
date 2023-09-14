@@ -56,6 +56,7 @@ const HiearchicalGrid = ({ promos, headingLevel }: CurationGridProps) => {
     <div data-testid="hierarchical-grid">
       <ul role="list" css={styles.list} data-testid="topic-promos">
         {promoItems.map((promo, i) => {
+          console.log({ promo });
           const duration = moment.duration(promo.duration, 'seconds');
           const separator = ',';
           const formattedDuration = formatDuration({ duration, separator });
