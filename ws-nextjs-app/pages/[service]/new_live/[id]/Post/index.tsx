@@ -1,66 +1,56 @@
-import React from 'react';
-
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
 import pathOr from 'ramda/src/pathOr';
 import { OptimoBlock } from '#models/types/optimo';
-import headings from '#app/legacy/containers/Headings';
+import Heading from '#app/components/Heading';
 import Blocks from '#app/legacy/containers/Blocks';
-import paragraph from '#app/legacy/containers/Paragraph';
-import Text from '#app/components/Text';
-import { Post as PostType } from './types';
+import Paragraph from '#app/legacy/containers/Paragraph';
+import UnorderedList from '#app/legacy/containers/BulletedList';
+import { Post as PostType, PostHeadingBlock } from './types';
+import styles from './styles';
 
-// temporary solution to render LI/ OL blocks.
-const unorderedList = ({ blocks }: { blocks: OptimoBlock[] }) => {
-  const listItems: (string | null)[] = blocks
-    .map(item =>
-      pathOr<string | null>(
-        null,
-        ['model', 'blocks', 0, 'model', 'text'],
-        item,
-      ),
-    )
-    .filter(text => typeof text === 'string');
-
-  if (listItems.length === 0) return null;
+const PostHeadings = ({ headerBlock }: { headerBlock: PostHeadingBlock }) => {
+  const isHeadline = headerBlock.type === 'headline';
+  const headingText = headerBlock.model.blocks[0].model.blocks[0].model.text;
 
   return (
-    <Text>
-      <ul>
-        {listItems.map((item, index) => (
-          // eslint-disable-next-line react/no-array-index-key
-          <li key={index}>{item}</li>
-        ))}
-      </ul>
-    </Text>
-  );
-};
-
-const PostHeadings = ({ headerBlocks }: { headerBlocks: OptimoBlock[] }) => {
-  const componentsToRender = {
-    headline: headings,
-    subheadline: headings,
-  };
-
-  return (
-    <Blocks blocks={headerBlocks} componentsToRender={componentsToRender} />
+    <Heading
+      level={3}
+      fontVariant={isHeadline ? 'sansBold' : 'sansRegular'}
+      size={isHeadline ? 'greatPrimer' : 'brevier'}
+      className="headingStyling"
+      css={isHeadline ? styles.postHeading : styles.postSubHeading}
+    >
+      {headingText}
+    </Heading>
   );
 };
 
 const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
   const componentsToRender = {
-    paragraph,
-    unorderedList,
-    orderedList: unorderedList,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    paragraph: (props: any) => (
+      <Paragraph {...props} className="postStyles" css={styles.bodyText} />
+    ),
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    unorderedList: (props: any) => (
+      <UnorderedList {...props} className="postStyles" css={styles.bodyText} />
+    ),
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    orderedList: (props: any) => (
+      <UnorderedList {...props} className="postStyles" css={styles.bodyText} />
+    ),
   };
 
   return (
-    <div>
+    <div css={styles.postContent}>
       <Blocks blocks={contentBlocks} componentsToRender={componentsToRender} />
     </div>
   );
 };
 
 const Post = ({ post }: { post: PostType }) => {
-  const headerBlocks = pathOr<OptimoBlock[]>(
+  const headerBlocks = pathOr<PostHeadingBlock[]>(
     [],
     ['header', 'model', 'blocks'],
     post,
@@ -73,11 +63,12 @@ const Post = ({ post }: { post: PostType }) => {
   );
 
   return (
-    <>
-      <PostHeadings headerBlocks={headerBlocks} />
+    <div css={styles.postBackground}>
+      {headerBlocks.map(headerBlock => (
+        <PostHeadings headerBlock={headerBlock} />
+      ))}
       <PostContent contentBlocks={contentBlocks} />
-      <hr />
-    </>
+    </div>
   );
 };
 

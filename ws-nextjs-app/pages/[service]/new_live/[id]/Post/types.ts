@@ -57,3 +57,19 @@ export interface StreamResponse {
     page?: Page | null;
   };
 }
+export interface PostHeadingBlock {
+  type: 'headline' | 'subheadline';
+  model: {
+    blocks: [
+      {
+        model: {
+          blocks: [
+            {
+              model: { text: string; blocks: OptimoBlock[] };
+            },
+          ];
+        };
+      },
+    ];
+  };
+}
