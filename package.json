@@ -232,7 +232,7 @@
     "stylelint": "13.13.1",
     "stylelint-config-recommended": "7.0.0",
     "supertest": "6.3.3",
-    "terser-webpack-plugin": "5.3.8",
+    "terser-webpack-plugin": "5.3.9",
     "timemachine": "0.3.2",
     "ts-jest": "29.1.1",
     "ts-loader": "9.4.4",
