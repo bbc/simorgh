@@ -1,5 +1,4 @@
 import httpsAgent from '../../../../server/utilities/getAgent';
-import undiciAgent from '../../../../../ws-nextjs-app/utilities/undiciAgent';
 
 import constructPageFetchUrl from '../constructPageFetchUrl';
 import getEnvironment from '../getEnvironment';
@@ -19,6 +18,7 @@ interface FetchDataFromBffParams {
   variant?: Variants;
   isAmp?: boolean;
   page?: string;
+  agentOverride?: any;
 }
 
 export default async ({
@@ -28,8 +28,9 @@ export default async ({
   variant,
   isAmp,
   page,
+  agentOverride,
 }: FetchDataFromBffParams) => {
-  const getAgent = pageType === 'live' ? undiciAgent : httpsAgent;
+  const getAgent = agentOverride || httpsAgent;
 
   const environment = getEnvironment(pathname);
   const isLocal = !environment || environment === 'local';

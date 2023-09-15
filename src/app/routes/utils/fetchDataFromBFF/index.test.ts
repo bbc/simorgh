@@ -1,5 +1,4 @@
 import { Agent as HttpsAgent } from 'http';
-import { Agent as UndiciAgent } from 'undici';
 
 import fetchDataFromBFF from '.';
 import {
@@ -24,10 +23,6 @@ const mockAgent = { cert: 'cert', ca: 'ca', key: 'key' };
 
 jest.mock('../../../../server/utilities/getAgent', () =>
   jest.fn(() => Promise.resolve(mockAgent as unknown as HttpsAgent)),
-);
-
-jest.mock('../../../../../ws-nextjs-app/utilities/undiciAgent', () =>
-  jest.fn(() => Promise.resolve(mockAgent as unknown as UndiciAgent)),
 );
 
 describe('Fetch Data from BFF', () => {
