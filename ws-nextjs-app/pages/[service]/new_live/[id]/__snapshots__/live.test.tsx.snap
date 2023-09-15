@@ -474,55 +474,96 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   list-style-type: none;
 }
 
+.emotion-20 {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  background-color: #B80000;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.625rem;
+}
+
+.emotion-21 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #FFFFFF;
+  -webkit-flex: 1 0 0;
+  -ms-flex: 1 0 0;
+  flex: 1 0 0;
+  padding: 0.25rem 0.75rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-21 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-21 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
 @media (max-width: 14.9375rem) {
-  .emotion-20 {
+  .emotion-22 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-20 {
+  .emotion-22 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-20 {
+  .emotion-22 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-20 {
+  .emotion-22 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-20 {
+  .emotion-22 {
     margin-left: 16.666666666666668%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-20 {
+  .emotion-22 {
     margin-left: 33.333333333333336%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-20 {
+  .emotion-22 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-20 {
+    .emotion-22 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -531,7 +572,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-20 {
+    .emotion-22 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -540,7 +581,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-20 {
+    .emotion-22 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -549,7 +590,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-20 {
+    .emotion-22 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -558,7 +599,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-20 {
+    .emotion-22 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -566,7 +607,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 
   @media (min-width: 80rem) {
-    .emotion-20 {
+    .emotion-22 {
       grid-template-columns: repeat(12, 1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -574,7 +615,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 }
 
-.emotion-21 {
+.emotion-23 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -588,78 +629,78 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-21 {
+  .emotion-23 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-21 {
+  .emotion-23 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-21 {
+  .emotion-23 {
     padding: 2.5rem 0;
   }
 }
 
-.emotion-21:focus {
+.emotion-23:focus {
   outline: none;
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-22 {
+  .emotion-24 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-22 {
+  .emotion-24 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-22 {
+  .emotion-24 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-22 {
+  .emotion-24 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-22 {
+  .emotion-24 {
     margin-left: 20%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-22 {
+  .emotion-24 {
     margin-left: 40%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-22 {
+  .emotion-24 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-22 {
+    .emotion-24 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -668,7 +709,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-22 {
+    .emotion-24 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -677,7 +718,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-22 {
+    .emotion-24 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -686,7 +727,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-22 {
+    .emotion-24 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       padding: 0 1rem;
@@ -695,7 +736,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-22 {
+    .emotion-24 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
@@ -703,7 +744,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 
   @media (min-width: 80rem) {
-    .emotion-22 {
+    .emotion-24 {
       grid-template-columns: repeat(10, 1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
@@ -711,7 +752,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 }
 
-.emotion-23 {
+.emotion-25 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -723,26 +764,26 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-23 {
+  .emotion-25 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-23 {
+  .emotion-25 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-23 {
+  .emotion-25 {
     padding-right: 2.5rem;
   }
 }
 
-.emotion-33 {
+.emotion-37 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -754,26 +795,26 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-33 {
+  .emotion-37 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-33 {
+  .emotion-37 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-33 {
+  .emotion-37 {
     padding-top: 2rem;
   }
 }
 
-.emotion-36 {
+.emotion-40 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: italic;
@@ -781,7 +822,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   font-weight: inherit;
 }
 
-.emotion-37 {
+.emotion-41 {
   color: #141414;
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -791,38 +832,38 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-37 {
+  .emotion-41 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-37 {
+  .emotion-41 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-45 {
+.emotion-49 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-45:visited {
+.emotion-49:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.emotion-45:focus,
-.emotion-45:hover {
+.emotion-49:focus,
+.emotion-49:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
 
-.emotion-53 {
+.emotion-58 {
   white-space: pre-wrap;
   max-height: 50vh;
   overflow: auto;
@@ -831,17 +872,17 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   border-radius: 0.75rem;
 }
 
-.emotion-53>h4 {
+.emotion-58>h4 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   margin-bottom: 0.625rem;
 }
 
-.emotion-53>p {
+.emotion-58>p {
   margin: 0.25rem 0;
 }
 
-.emotion-54 {
+.emotion-59 {
   color: #141414;
   font-size: 1.125rem;
   line-height: 1.375rem;
@@ -852,14 +893,14 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-54 {
+  .emotion-59 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-54 {
+  .emotion-59 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
@@ -966,10 +1007,20 @@ exports[`Live Page creates snapshot of the live page 1`] = `
             >
               <div
                 class="emotion-20"
+              >
+                <span
+                  class="emotion-21"
+                  data-testid="breaking-news-label"
+                >
+                  Breaking
+                </span>
+              </div>
+              <div
+                class="emotion-22"
                 dir="ltr"
               >
                 <h1
-                  class="emotion-21"
+                  class="emotion-23"
                   id="content"
                   tabindex="-1"
                 >
@@ -978,11 +1029,11 @@ exports[`Live Page creates snapshot of the live page 1`] = `
               </div>
               <div>
                 <div
-                  class="emotion-22"
+                  class="emotion-24"
                   dir="ltr"
                 >
                   <p
-                    class="emotion-23"
+                    class="emotion-25"
                     dir="ltr"
                   >
                     Breaking news
@@ -996,10 +1047,13 @@ exports[`Live Page creates snapshot of the live page 1`] = `
             >
               <div
                 class="emotion-20"
+              />
+              <div
+                class="emotion-22"
                 dir="ltr"
               >
                 <h1
-                  class="emotion-21"
+                  class="emotion-23"
                   id="content"
                   tabindex="-1"
                 >
@@ -1008,11 +1062,11 @@ exports[`Live Page creates snapshot of the live page 1`] = `
               </div>
               <div>
                 <div
-                  class="emotion-22"
+                  class="emotion-24"
                   dir="ltr"
                 >
                   <p
-                    class="emotion-23"
+                    class="emotion-25"
                     dir="ltr"
                   >
                     Timestamp test
@@ -1026,10 +1080,13 @@ exports[`Live Page creates snapshot of the live page 1`] = `
             >
               <div
                 class="emotion-20"
+              />
+              <div
+                class="emotion-22"
                 dir="ltr"
               >
                 <h1
-                  class="emotion-21"
+                  class="emotion-23"
                   id="content"
                   tabindex="-1"
                 >
@@ -1037,11 +1094,11 @@ exports[`Live Page creates snapshot of the live page 1`] = `
                 </h1>
               </div>
               <div
-                class="emotion-22"
+                class="emotion-24"
                 dir="ltr"
               >
                 <h2
-                  class="emotion-33"
+                  class="emotion-37"
                   id="Another-post-sub-headline"
                   tabindex="-1"
                 >
@@ -1050,25 +1107,25 @@ exports[`Live Page creates snapshot of the live page 1`] = `
               </div>
               <div>
                 <div
-                  class="emotion-22"
+                  class="emotion-24"
                   dir="ltr"
                 >
                   <p
-                    class="emotion-23"
+                    class="emotion-25"
                     dir="ltr"
                   >
                     <b>
                       Another 
                     </b>
                     <i
-                      class="emotion-36"
+                      class="emotion-40"
                     >
                       short form text
                     </i>
                   </p>
                 </div>
                 <span
-                  class="emotion-37"
+                  class="emotion-41"
                 >
                   <ul>
                     <li>
@@ -1083,16 +1140,16 @@ exports[`Live Page creates snapshot of the live page 1`] = `
                   </ul>
                 </span>
                 <div
-                  class="emotion-22"
+                  class="emotion-24"
                   dir="ltr"
                 >
                   <p
-                    class="emotion-23"
+                    class="emotion-25"
                     dir="ltr"
                   />
                 </div>
                 <span
-                  class="emotion-37"
+                  class="emotion-41"
                 >
                   <ul>
                     <li>
@@ -1107,25 +1164,25 @@ exports[`Live Page creates snapshot of the live page 1`] = `
                   </ul>
                 </span>
                 <div
-                  class="emotion-22"
+                  class="emotion-24"
                   dir="ltr"
                 >
                   <p
-                    class="emotion-23"
+                    class="emotion-25"
                     dir="ltr"
                   />
                 </div>
                 <div
-                  class="emotion-22"
+                  class="emotion-24"
                   dir="ltr"
                 >
                   <p
-                    class="emotion-23"
+                    class="emotion-25"
                     dir="ltr"
                   >
                     Here is a 
                     <a
-                      class="focusIndicatorReducedWidth emotion-45"
+                      class="focusIndicatorReducedWidth emotion-49"
                       href="/new/pidgin"
                     >
                       Link
@@ -1140,10 +1197,13 @@ exports[`Live Page creates snapshot of the live page 1`] = `
             >
               <div
                 class="emotion-20"
+              />
+              <div
+                class="emotion-22"
                 dir="ltr"
               >
                 <h1
-                  class="emotion-21"
+                  class="emotion-23"
                   id="content"
                   tabindex="-1"
                 >
@@ -1151,11 +1211,11 @@ exports[`Live Page creates snapshot of the live page 1`] = `
                 </h1>
               </div>
               <div
-                class="emotion-22"
+                class="emotion-24"
                 dir="ltr"
               >
                 <h2
-                  class="emotion-33"
+                  class="emotion-37"
                   id="Post-sub-headline"
                   tabindex="-1"
                 >
@@ -1164,11 +1224,11 @@ exports[`Live Page creates snapshot of the live page 1`] = `
               </div>
               <div>
                 <div
-                  class="emotion-22"
+                  class="emotion-24"
                   dir="ltr"
                 >
                   <p
-                    class="emotion-23"
+                    class="emotion-25"
                     dir="ltr"
                   >
                     Some short form text
@@ -1180,10 +1240,10 @@ exports[`Live Page creates snapshot of the live page 1`] = `
           </ol>
         </div>
         <pre
-          class="emotion-53"
+          class="emotion-58"
         >
           <h4
-            class="emotion-54"
+            class="emotion-59"
           >
             Headers
           </h4>
@@ -1196,7 +1256,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
           </p>
         </pre>
         <pre
-          class="emotion-53"
+          class="emotion-58"
         >
           {
   "title": "Pidgin test 2",

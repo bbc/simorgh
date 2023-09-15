@@ -44,7 +44,9 @@ const PostBreakingNewsLabel = ({
   breakingNewsLabelText?: string;
 }) => {
   return isBreakingNews ? (
-    <Text css={styles.breakingNewsLabel}>{breakingNewsLabelText}</Text>
+    <Text css={styles.breakingNewsLabel} data-testid="breaking-news-label">
+      {breakingNewsLabelText}
+    </Text>
   ) : null;
 };
 
