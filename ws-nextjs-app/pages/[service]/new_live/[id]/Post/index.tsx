@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React from 'react';
+import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
 import pathOr from 'ramda/src/pathOr';
 import { OptimoBlock } from '#models/types/optimo';
@@ -7,8 +7,10 @@ import headings from '#app/legacy/containers/Headings';
 import Blocks from '#app/legacy/containers/Blocks';
 import paragraph from '#app/legacy/containers/Paragraph';
 import Text from '#app/components/Text';
+import moment from 'moment';
 import { Post as PostType } from './types';
 import styles from './styles';
+import { ServiceContext } from '../../../../../../src/app/contexts/ServiceContext';
 
 // temporary solution to render LI/ OL blocks.
 const unorderedList = ({ blocks }: { blocks: OptimoBlock[] }) => {
@@ -48,15 +50,28 @@ const PostBreakingNewsLabel = ({
   ) : null;
 };
 
+const TimeStamp = ({ curated }: { curated: string }) => {
+  const { timezone } = useContext(ServiceContext);
+  const formattedTime = moment(curated).tz(timezone).fromNow();
+  return (
+    <time style={{ color: 'white' }} dateTime={curated}>
+      {formattedTime}
+    </time>
+  );
+};
+
 const PostHeaderBanner = ({
   isBreakingNews,
   breakingNewsLabelText,
+  curated,
 }: {
   isBreakingNews: boolean;
   breakingNewsLabelText?: string;
+  curated: string;
 }) => {
   return (
     <div css={styles.postHeaderBanner}>
+      <TimeStamp curated={curated} />
       <PostBreakingNewsLabel
         isBreakingNews={isBreakingNews}
         breakingNewsLabelText={breakingNewsLabelText}
@@ -105,9 +120,11 @@ const Post = ({ post }: { post: PostType }) => {
 
   const isBreakingNews = pathOr(false, ['options', 'isBreakingNews'], post);
 
+  const curated = pathOr('', ['dates', 'curated'], post);
+
   return (
     <>
-      <PostHeaderBanner isBreakingNews={isBreakingNews} />
+      <PostHeaderBanner isBreakingNews={isBreakingNews} curated={curated} />
       <PostHeadings headerBlocks={headerBlocks} />
       <PostContent contentBlocks={contentBlocks} />
       <hr />

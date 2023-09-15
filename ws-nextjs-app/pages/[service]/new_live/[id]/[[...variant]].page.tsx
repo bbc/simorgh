@@ -47,7 +47,7 @@ const getPageData = async ({
   });
 
   const env = getEnvironment(pathname);
-  const optHeaders = { 'ctx-service-env': env };
+  const optHeaders = { 'ctx-service-env': 'test' };
   const isLocal = !env || env === 'local';
   const certsNeeded = !isLocal && process.env.INTEGRATION_TEST_BUILD !== 'true';
 
@@ -63,7 +63,6 @@ const getPageData = async ({
     // @ts-expect-error Due to jsdoc inference, and no TS within fetchPageData
     const { status, json } = await fetchPageData({
       path,
-      agent,
       optHeaders,
     });
     pageStatus = status;
