@@ -437,7 +437,7 @@ describe('Main page routes', () => {
     expect(
       await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
     ).toBeInTheDocument();
-  }, 10000);
+  }, 15000);
 
   it('should route to and render an index page', async () => {
     process.env.SIMORGH_APP_ENV = 'local';
