@@ -3635,7 +3635,7 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: ['/mundo/noticias-54274735'],
+            paths: ['/mundo/noticias-54274735', '/mundo/noticias-66171332'],
             enabled: true,
           },
           test: {
@@ -6275,11 +6275,7 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [
-              '/sport/rugby-union/56359986',
-              '/sport/golf/56318994',
-              '/sport/cricket/20256774',
-            ],
+            paths: ['/sport/rugby-union/56359986', '/sport/golf/56318994'],
             enabled: true,
           },
           test: {
@@ -6287,11 +6283,7 @@ module.exports = () => ({
             enabled: true,
           },
           local: {
-            paths: [
-              '/sport/rugby-union/56359986',
-              '/sport/golf/56318994',
-              '/sport/cricket/20256774',
-            ],
+            paths: ['/sport/rugby-union/56359986', '/sport/golf/56318994'],
             enabled: true,
           },
         },

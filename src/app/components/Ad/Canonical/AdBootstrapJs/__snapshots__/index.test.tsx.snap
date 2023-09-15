@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AdBootstrapJs Snapshots should push dotcom bootstrap and configuration to a head script 1`] = `
+{
+  "innerHTML": "
+    window.dotcom = window.dotcom || { cmd: [] };
+    window.dotcomConfig = {
+      pageAds: true,
+      playerAds: false
+    };
+    ",
+  "type": "text/javascript",
+}
+`;
+
+exports[`AdBootstrapJs Snapshots should push dotcom bootstrap and configuration to a head script with adcampaign 1`] = `
+{
+  "innerHTML": "
+    window.dotcom = window.dotcom || { cmd: [] };
+    window.dotcomConfig = {
+      pageAds: true,
+      playerAds: false,
+      adcampaign: 'test-ad-campaign'
+    };
+    ",
+  "type": "text/javascript",
+}
+`;
