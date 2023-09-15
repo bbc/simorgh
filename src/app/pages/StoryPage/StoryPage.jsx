@@ -40,12 +40,10 @@ import {
   getAboutTags,
 } from '#lib/utilities/parseAssetData';
 import Include from '#containers/Include';
-import AdContainer from '#containers/Ad';
-import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
-import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
+import AdContainer from '../../components/Ad';
 import { GHOST } from '../../components/ThemeProvider/palette';
 import MostRead from '../../components/MostRead';
 import ATIAnalytics from '../../components/ATIAnalytics';
@@ -145,22 +143,21 @@ const StoryPage = ({ pageData }) => {
   };
 
   // ads
-  const { enabled: adsEnabled } = useToggle('ads');
   const { enabled: podcastPromoEnabled } = useToggle('podcastPromo');
-  const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
   const adcampaign = path(['metadata', 'adCampaignKeyword'], pageData);
 
   /**
-   * Should we display ads? We check:
-   * 1. The CPS `allowAdvertising` field value.
-   * 2. A value local to the STY page type.
-   * - iSite toggles are handled by the Ad container.
+   * Should we display ads?:
+   * If CPS `allowAdvertising` field is true
+   *
+   * Within the ads container:
+   *  - if the value of the 'ads' toggle is true
+   *  - if showAdsBasedOnLocation is true
    */
-  const isAdsEnabled = [
-    path(['metadata', 'options', 'allowAdvertising'], pageData),
-    adsEnabled,
-    showAdsBasedOnLocation,
-  ].every(Boolean);
+  const allowAdvertising = path(
+    ['metadata', 'options', 'allowAdvertising'],
+    pageData,
+  );
 
   // ATI
   const { atiAnalytics } = metadata;
@@ -193,7 +190,7 @@ const StoryPage = ({ pageData }) => {
     social_embed: props => <CpsSocialEmbedContainer {...props} />,
     table: props => <CpsTable {...props} />,
     mpu: props =>
-      isAdsEnabled ? <MpuContainer {...props} slotType="mpu" /> : null,
+      allowAdvertising ? <MpuContainer {...props} slotType="mpu" /> : null,
     wsoj: props => (
       <CpsRecommendations {...props} items={recommendationsData} />
     ),
@@ -301,11 +298,9 @@ const StoryPage = ({ pageData }) => {
       />
       <ComscoreAnalytics />
       <NielsenAnalytics />
-      {/* dotcom and dotcomConfig need to be setup before the main dotcom javascript file is loaded */}
-      {isAdsEnabled && !isAmp && (
-        <CanonicalAdBootstrapJs adcampaign={adcampaign} />
+      {allowAdvertising && (
+        <AdContainer slotType="leaderboard" adcampaign={adcampaign} />
       )}
-      {isAdsEnabled && <AdContainer slotType="leaderboard" />}
       <StoryPageGrid
         columns={gridColumns}
         enableGelGutters
