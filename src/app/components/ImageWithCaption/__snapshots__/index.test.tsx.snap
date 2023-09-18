@@ -262,6 +262,7 @@ exports[`Image with data should render an image with alt text and offscreen copy
       </picture>
       <p
         class="emotion-3"
+        role="text"
       >
         <span
           class="emotion-4"
@@ -383,6 +384,7 @@ exports[`Image with data should render an image with other originCode - this wou
       </picture>
       <p
         class="emotion-3"
+        role="text"
       >
         <span
           class="emotion-4"

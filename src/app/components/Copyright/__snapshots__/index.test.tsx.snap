@@ -51,6 +51,7 @@ exports[`should render Copyright with news service context 1`] = `
 <div>
   <p
     class="emotion-0"
+    role="text"
   >
     <span
       class="emotion-1"
@@ -113,6 +114,7 @@ exports[`should render Copyright with persian service context 1`] = `
 <div>
   <p
     class="emotion-0"
+    role="text"
   >
     <span
       class="emotion-1"
