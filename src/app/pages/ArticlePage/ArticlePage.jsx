@@ -16,7 +16,6 @@ import headings from '#containers/Headings';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import gist from '#containers/Gist';
 import text from '#containers/Text';
-import Image from '#containers/Image';
 import Blocks from '#containers/Blocks';
 import Timestamp from '#containers/ArticleTimestamp';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
@@ -39,6 +38,7 @@ import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 import ScrollablePromo from '#components/ScrollablePromo';
 import CpsRecommendations from '#containers/CpsRecommendations';
+import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
 import EmbedImages from '../../components/Embeds/EmbedImages';
 import EmbedHtml from '../../components/Embeds/EmbedHtml';
@@ -130,7 +130,7 @@ const ArticlePage = ({ pageData }) => {
         </Byline>
       ) : null,
     image: props => (
-      <Image
+      <ImageWithCaption
         {...props}
         sizes="(min-width: 1008px) 760px, 100vw"
         shouldPreload={preloadLeadImageToggle}
