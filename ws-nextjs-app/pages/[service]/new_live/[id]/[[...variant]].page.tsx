@@ -62,7 +62,6 @@ const getPageData = async ({
     // @ts-expect-error Due to jsdoc inference, and no TS within fetchPageData
     const { status, json } = await fetchPageData({
       path,
-      agent,
       optHeaders,
     });
     pageStatus = status;

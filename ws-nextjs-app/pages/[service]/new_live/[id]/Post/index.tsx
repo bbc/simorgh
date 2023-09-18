@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React from 'react';
+import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
 import pathOr from 'ramda/src/pathOr';
 import { OptimoBlock } from '#models/types/optimo';
@@ -10,6 +10,9 @@ import Text from '#app/components/Text';
 import ImageWithCaption from '../../../../../../src/app/components/ImageWithCaption';
 import { Post as PostType } from './types';
 import styles from './styles';
+import TimeStampContainer from '../../../../../../src/app/legacy/psammead/psammead-timestamp-container/src';
+import isTenHoursAgo from '../../../../../../src/app/lib/utilities/isTenHoursAgo';
+import { ServiceContext } from '../../../../../../src/app/contexts/ServiceContext';
 
 // temporary solution to render LI/ OL blocks.
 const unorderedList = ({ blocks }: { blocks: OptimoBlock[] }) => {
@@ -56,15 +59,51 @@ const PostBreakingNewsLabel = ({
   ) : null;
 };
 
+const TimeStamp = ({ curated }: { curated: string }) => {
+  const {
+    timezone,
+    locale,
+    altCalendar,
+    service,
+    articleTimestampPrefix,
+    articleTimestampSuffix,
+    script,
+  } = useContext(ServiceContext);
+
+  const isRelative = isTenHoursAgo(new Date(curated).getTime());
+
+  return (
+    <TimeStampContainer
+      css={styles.timeStamp}
+      timestamp={curated}
+      dateTimeFormat="YYYY-MM-DD"
+      locale={locale}
+      timezone={timezone}
+      service={service}
+      prefix={articleTimestampPrefix}
+      suffix={articleTimestampSuffix}
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
+      script={script}
+      {...(altCalendar && { altCalendar })}
+      padding={false}
+      isRelative={isRelative}
+    />
+  );
+};
+
 const PostHeaderBanner = ({
   isBreakingNews,
   breakingNewsLabelText,
+  curated,
 }: {
   isBreakingNews: boolean;
   breakingNewsLabelText?: string;
+  curated: string;
 }) => {
   return (
     <div css={styles.postHeaderBanner}>
+      <TimeStamp curated={curated} />
       <PostBreakingNewsLabel
         isBreakingNews={isBreakingNews}
         breakingNewsLabelText={breakingNewsLabelText}
@@ -116,9 +155,11 @@ const Post = ({ post }: { post: PostType }) => {
 
   const isBreakingNews = pathOr(false, ['options', 'isBreakingNews'], post);
 
+  const curated = pathOr('', ['dates', 'curated'], post);
+
   return (
     <>
-      <PostHeaderBanner isBreakingNews={isBreakingNews} />
+      <PostHeaderBanner isBreakingNews={isBreakingNews} curated={curated} />
       <PostHeadings headerBlocks={headerBlocks} />
       <PostContent contentBlocks={contentBlocks} />
       <hr />
