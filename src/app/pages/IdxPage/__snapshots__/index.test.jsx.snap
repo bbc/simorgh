@@ -8518,6 +8518,10 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   }
 }
 
+.emotion-993 {
+  padding-top: 0.5rem;
+}
+
 <div>
   <noscript />
   <div>
@@ -11594,6 +11598,16 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   >
                     "Діти на повний робочий день". Чому молоді китайці кидають роботу, щоб працювати вдома на батьків
                   </a>
+                  <div
+                    class="emotion-993"
+                  >
+                    <time
+                      class="emotion-42 emotion-43"
+                      datetime="2023-07-19"
+                    >
+                      به روز شده در ۱۹ ژوئیه ۲۰۲۳
+                    </time>
+                  </div>
                 </div>
               </div>
             </li>
