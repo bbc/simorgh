@@ -127,7 +127,6 @@ describe('Home Page', () => {
         if (index === 0) {
           expect(image.getAttribute('loading')).toBeNull();
         } else {
-          console.log(image, index);
           expect(image.getAttribute('loading')).toBe('lazy');
         }
       });
