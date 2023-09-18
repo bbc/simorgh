@@ -6,7 +6,11 @@ import Heading from '#app/components/Heading';
 import Blocks from '#app/legacy/containers/Blocks';
 import Paragraph from '#app/legacy/containers/Paragraph';
 import UnorderedList from '#app/legacy/containers/BulletedList';
-import { Post as PostType, PostHeadingBlock } from './types';
+import {
+  Post as PostType,
+  PostHeadingBlock,
+  ComponentToRenderProps,
+} from './types';
 import styles from './styles';
 
 const PostHeadings = ({ headerBlock }: { headerBlock: PostHeadingBlock }) => {
@@ -28,17 +32,30 @@ const PostHeadings = ({ headerBlock }: { headerBlock: PostHeadingBlock }) => {
 
 const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
   const componentsToRender = {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    paragraph: (props: any) => (
-      <Paragraph {...props} className="postStyles" css={styles.bodyText} />
+    paragraph: (props: ComponentToRenderProps) => (
+      <Paragraph
+        blocks={props.blocks}
+        className="postStyles"
+        css={styles.bodyText}
+      />
     ),
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    unorderedList: (props: any) => (
-      <UnorderedList {...props} className="postStyles" css={styles.bodyText} />
+    unorderedList: (props: ComponentToRenderProps) => (
+      <UnorderedList
+        blocks={props.blocks}
+        blockGroupType={props.blockGroupType}
+        blockGroupIndex={props.blockGroupIndex}
+        className="postStyles"
+        css={styles.bodyText}
+      />
     ),
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    orderedList: (props: any) => (
-      <UnorderedList {...props} className="postStyles" css={styles.bodyText} />
+    orderedList: (props: ComponentToRenderProps) => (
+      <UnorderedList
+        blocks={props.blocks}
+        blockGroupType={props.blockGroupType}
+        blockGroupIndex={props.blockGroupIndex}
+        className="postStyles"
+        css={styles.bodyText}
+      />
     ),
   };
 

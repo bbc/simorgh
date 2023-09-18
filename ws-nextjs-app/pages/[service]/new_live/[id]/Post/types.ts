@@ -73,3 +73,10 @@ export interface PostHeadingBlock {
     ];
   };
 }
+
+export type ComponentToRenderProps = {
+  blocks: OptimoBlock[];
+  className: string;
+  blockGroupType?: string;
+  blockGroupIndex?: number;
+};
