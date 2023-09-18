@@ -12,7 +12,6 @@ import {
   MANIFEST_SENDFILE_ERROR,
   SERVER_SIDE_RENDER_REQUEST_RECEIVED,
   SERVER_SIDE_REQUEST_FAILED,
-  ROUTING_INFORMATION,
   SERVER_STATUS_ENDPOINT_ERROR,
 } from '#lib/logger.const';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
@@ -182,11 +181,6 @@ server.get(
     injectResourceHintsHeader,
   ],
   async ({ url, query, headers, path: urlPath }, res) => {
-    logger.debug(SERVER_SIDE_RENDER_REQUEST_RECEIVED, {
-      url,
-      headers: removeSensitiveHeaders(headers),
-    });
-
     let derivedPageType = 'Unknown';
     let mvtExperiments = [];
 
@@ -202,6 +196,12 @@ server.get(
 
       // Set derivedPageType based on matched route
       derivedPageType = pageType || derivedPageType;
+
+      logger.debug(SERVER_SIDE_RENDER_REQUEST_RECEIVED, {
+        url,
+        headers: removeSensitiveHeaders(headers),
+        pageType: derivedPageType,
+      });
 
       const toggles = await getToggles(service);
 
@@ -265,6 +265,7 @@ server.get(
           message,
           url,
           headers: removeSensitiveHeaders(headers),
+          pageType: derivedPageType,
         });
 
         result = await renderDocument({
@@ -278,12 +279,6 @@ server.get(
           variant,
         });
       }
-
-      logger.info(ROUTING_INFORMATION, {
-        url,
-        status,
-        pageType: derivedPageType,
-      });
 
       if (result.redirectUrl) {
         res.redirect(301, result.redirectUrl);
