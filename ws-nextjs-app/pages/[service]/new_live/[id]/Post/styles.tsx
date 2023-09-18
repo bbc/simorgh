@@ -2,37 +2,46 @@ import { Theme, css } from '@emotion/react';
 import pixelsToRem from '../../../../../../src/app/utilities/pixelsToRem';
 
 export default {
-  postHeading: ({ spacings, palette, mq }: Theme) =>
+  postHeadings: ({ palette }: Theme) =>
     css({
       color: palette.BLACK,
-      padding: `${spacings.TRIPLE}rem 0 0`,
-      // overwrite default heading padding
-      [mq.GROUP_3_MIN_WIDTH]: {
-        padding: `${spacings.TRIPLE}rem 0 0`,
-      },
+      display: `block`,
       margin: 0 /* Reset */,
     }),
-
-  postSubHeading: ({ palette, mq }: Theme) =>
+  postHeadline: ({ spacings, mq }: Theme) =>
     css({
-      color: palette.BLACK,
-      padding: `${pixelsToRem(8)}rem 0 0`,
-      // overwrite default heading padding
-      [mq.GROUP_3_MIN_WIDTH]: {
-        padding: `${pixelsToRem(8)}rem 0 0`,
+      padding: `${spacings.TRIPLE}rem ${pixelsToRem(8)}rem 0`,
+      [mq.GROUP_2_MIN_WIDTH]: {
+        padding: `${spacings.TRIPLE}rem ${pixelsToRem(16)}rem 0`,
       },
-      margin: 0 /* Reset */,
+      [mq.GROUP_4_MIN_WIDTH]: {
+        padding: `${spacings.TRIPLE}rem 0 0`,
+      },
+    }),
+
+  postSubHeadline: ({ mq, fontSizes }: Theme) =>
+    css({
+      padding: `${pixelsToRem(4)}rem ${pixelsToRem(8)}rem 0`,
+      [mq.GROUP_2_MIN_WIDTH]: {
+        padding: `${pixelsToRem(4)}rem ${pixelsToRem(16)}rem 0`,
+        ...fontSizes.longPrimer,
+      },
+      [mq.GROUP_4_MIN_WIDTH]: {
+        padding: `${pixelsToRem(4)}rem 0 0`,
+      },
     }),
 
   postBackground: ({ palette, spacings, mq }: Theme) =>
     css({
       backgroundColor: palette.GREY_2,
-      margin: `${spacings.DOUBLE}rem 0`,
+      margin: `0 0 ${spacings.DOUBLE}rem`,
       padding: `0 ${pixelsToRem(8)}rem ${pixelsToRem(8)}rem`,
       [mq.GROUP_2_MIN_WIDTH]: {
+        margin: `0 0 ${spacings.TRIPLE}rem`,
         padding: `0 0 ${pixelsToRem(8)}rem 0`,
       },
       [mq.GROUP_4_MIN_WIDTH]: {
+        margin: `0 0 ${spacings.DOUBLE}rem`,
         padding: `0 ${pixelsToRem(16)}rem ${pixelsToRem(8)}rem`,
       },
     }),

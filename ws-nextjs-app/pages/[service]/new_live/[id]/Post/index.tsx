@@ -3,6 +3,7 @@ import { jsx } from '@emotion/react';
 import pathOr from 'ramda/src/pathOr';
 import { OptimoBlock } from '#models/types/optimo';
 import Heading from '#app/components/Heading';
+import Text from '#app/components/Text';
 import Blocks from '#app/legacy/containers/Blocks';
 import Paragraph from '#app/legacy/containers/Paragraph';
 import UnorderedList from '#app/legacy/containers/BulletedList';
@@ -19,15 +20,17 @@ const PostHeadings = ({ headerBlock }: { headerBlock: PostHeadingBlock }) => {
   const headingText = headerBlock.model.blocks[0].model.blocks[0].model.text;
 
   return (
-    <Heading
-      level={3}
+    <Text
       fontVariant={isHeadline ? 'sansBold' : 'sansRegular'}
       size={isHeadline ? 'greatPrimer' : 'brevier'}
       className="headingStyling"
-      css={isHeadline ? styles.postHeading : styles.postSubHeading}
+      css={[
+        styles.postHeadings,
+        isHeadline ? styles.postHeadline : styles.postSubHeadline,
+      ]}
     >
       {headingText}
-    </Heading>
+    </Text>
   );
 };
 
@@ -85,9 +88,11 @@ const Post = ({ post }: { post: PostType }) => {
 
   return (
     <div css={styles.postBackground}>
-      {headerBlocks.map(headerBlock => (
-        <PostHeadings headerBlock={headerBlock} />
-      ))}
+      <Heading level={3}>
+        {headerBlocks.map(headerBlock => (
+          <PostHeadings headerBlock={headerBlock} />
+        ))}
+      </Heading>
       <PostContent contentBlocks={contentBlocks} />
     </div>
   );

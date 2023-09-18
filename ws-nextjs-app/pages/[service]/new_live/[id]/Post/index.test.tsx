@@ -22,7 +22,7 @@ describe('Post', () => {
       expect(screen.getByRole('heading', { level: 3 })).toBeTruthy();
     });
 
-    it('should render h3 title and h3 subtitle when provided', async () => {
+    it('should render h3 with title and subtitle when provided', async () => {
       await act(async () => {
         render(<Post post={singlePostWithTitleAndSubtitle} />);
       });
@@ -30,7 +30,7 @@ describe('Post', () => {
       expect(screen.getByText('Another post')).toBeInTheDocument();
       expect(screen.getByText('Another post sub headline')).toBeInTheDocument();
       expect(screen.getAllByRole('heading', { level: 3 })).toBeTruthy();
-      expect(screen.getAllByRole('heading', { level: 3 })).toHaveLength(2);
+      expect(screen.getAllByRole('heading', { level: 3 })).toHaveLength(1);
     });
   });
   describe('Content', () => {
