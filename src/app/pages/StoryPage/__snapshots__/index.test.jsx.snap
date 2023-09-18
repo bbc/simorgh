@@ -1888,6 +1888,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                       </picture>
                       <p
                         class="emotion-29"
+                        role="text"
                       >
                         <span
                           class="emotion-30"
@@ -2055,6 +2056,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                       </picture>
                       <p
                         class="emotion-29"
+                        role="text"
                       >
                         <span
                           class="emotion-30"
@@ -4975,6 +4977,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </picture>
                       <p
                         class="emotion-29"
+                        role="text"
                       >
                         <span
                           class="emotion-30"
@@ -5142,6 +5145,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </picture>
                       <p
                         class="emotion-29"
+                        role="text"
                       >
                         <span
                           class="emotion-30"

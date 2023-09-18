@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/aria-role */
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
@@ -11,7 +12,13 @@ const CopyrightContainer = ({ children }: PropsWithChildren) => {
   const { imageCopyrightOffscreenText, lang } = useContext(ServiceContext);
 
   return (
-    <Text as="p" fontVariant="sansRegular" size="minion" css={styles.copyright}>
+    <Text
+      as="p"
+      role="text"
+      fontVariant="sansRegular"
+      size="minion"
+      css={styles.copyright}
+    >
       {imageCopyrightOffscreenText ? (
         <VisuallyHiddenText>{imageCopyrightOffscreenText}</VisuallyHiddenText>
       ) : null}

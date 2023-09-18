@@ -1320,6 +1320,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                     </picture>
                     <p
                       class="emotion-113"
+                      role="text"
                     >
                       <span
                         class="emotion-4"
@@ -3493,6 +3494,7 @@ exports[`Media Asset Page should render component 1`] = `
                     </picture>
                     <p
                       class="emotion-106"
+                      role="text"
                     >
                       <span
                         class="emotion-4"
@@ -3549,6 +3551,7 @@ exports[`Media Asset Page should render component 1`] = `
                     </picture>
                     <p
                       class="emotion-106"
+                      role="text"
                     >
                       <span
                         class="emotion-4"
