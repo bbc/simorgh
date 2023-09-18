@@ -7,9 +7,10 @@ import headings from '#app/legacy/containers/Headings';
 import Blocks from '#app/legacy/containers/Blocks';
 import paragraph from '#app/legacy/containers/Paragraph';
 import Text from '#app/components/Text';
-import moment from 'moment';
 import { Post as PostType } from './types';
 import styles from './styles';
+import TimeStampContainer from '../../../../../../src/app/legacy/psammead/psammead-timestamp-container/src';
+import isTenHoursAgo from '../../../../../../src/app/lib/utilities/isTenHoursAgo';
 import { ServiceContext } from '../../../../../../src/app/contexts/ServiceContext';
 
 // temporary solution to render LI/ OL blocks.
@@ -51,12 +52,35 @@ const PostBreakingNewsLabel = ({
 };
 
 const TimeStamp = ({ curated }: { curated: string }) => {
-  const { timezone } = useContext(ServiceContext);
-  const formattedTime = moment(curated).tz(timezone).fromNow();
+  const {
+    timezone,
+    locale,
+    altCalendar,
+    service,
+    articleTimestampPrefix,
+    articleTimestampSuffix,
+    script,
+  } = useContext(ServiceContext);
+
+  const isRelative = isTenHoursAgo(new Date(curated).getTime());
+
   return (
-    <time style={{ color: 'white' }} dateTime={curated}>
-      {formattedTime}
-    </time>
+    <TimeStampContainer
+      css={styles.timeStamp}
+      timestamp={curated}
+      dateTimeFormat="YYYY-MM-DD"
+      locale={locale}
+      timezone={timezone}
+      service={service}
+      prefix={articleTimestampPrefix}
+      suffix={articleTimestampSuffix}
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
+      script={script}
+      {...(altCalendar && { altCalendar })}
+      padding={false}
+      isRelative={isRelative}
+    />
   );
 };
 
