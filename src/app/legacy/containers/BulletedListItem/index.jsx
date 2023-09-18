@@ -10,14 +10,7 @@ const withClickHandler = (Component, clickHandler) => props =>
   <Component {...props} onClick={clickHandler} />;
 
 const BulletedListItemContainer = ({ blocks, onClick }) => {
-  const contentBlocks = blocks
-    .map(block => {
-      if (block.model.blocks !== undefined) {
-        return block.model.blocks;
-      }
-      return block;
-    })
-    .flat();
+  const contentBlocks = blocks.map(block => block.model.blocks || block).flat();
 
   return (
     <BulletedListItem>
@@ -71,7 +64,6 @@ export const ParagraphPropTypes = {
   ).isRequired,
 };
 
-// causing a console error since it's expecting a paragraph
 export const ListItemPropTypes = {
   blocks: arrayOf(
     shape({
