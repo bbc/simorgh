@@ -47,13 +47,13 @@ export const textBlock = (text, id) => ({
   blocks: [singleTextBlock(text, id)],
 });
 
-export const blockContainingText = (type, text, id = null) =>
+export const blockContainingText = (type, text, id) =>
   optionalIdBlock(
     {
       type,
-      model: textBlock(text, id),
+      model: textBlock(text, id || null),
     },
-    id,
+    id || null,
   );
 
 export const blockBase = (blockType, blockModel) => ({

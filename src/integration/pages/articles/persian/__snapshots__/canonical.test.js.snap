@@ -162,11 +162,12 @@ exports[`Canonical Articles Image Caption should match text 1`] = `"توضیح �
 exports[`Canonical Articles Image should match snapshot 1`] = `
 <img
   alt="قهوه"
-  class="e3vrtyk0 bbc-rb7xa0 e1mo64ex0"
+  class="bbc-1uwua2r"
   height="360"
   sizes="(min-width: 1008px) 760px, 100vw"
   src="https://ichef.bbci.co.uk/news/640/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg"
   srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg 624w, https://ichef.bbci.co.uk/news/640/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg 640w"
+  style="aspect-ratio:640 / 360"
   width="640"
 />
 `;
