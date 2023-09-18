@@ -9,8 +9,9 @@ export default {
       display: 'flex',
       gap: `${pixelsToRem(10)}rem`,
     }),
-  breakingNewsLabel: ({ fontVariants, palette }: Theme) =>
+  breakingNewsLabel: ({ fontSizes, fontVariants, palette }: Theme) =>
     css({
+      ...fontSizes.brevier,
       ...fontVariants.sansBold,
       color: palette.WHITE,
       flex: '1 0 0',
