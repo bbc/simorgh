@@ -2,20 +2,42 @@
 
 exports[`should render Copyright with news service context 1`] = `
 .emotion-0 {
+  color: #141414;
   font-size: 0.75rem;
   line-height: 1rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
   background-color: rgba(34, 34, 34, 0.75);
   text-transform: uppercase;
   color: #FFFFFF;
   padding: 0.25rem 0.5rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
   position: absolute;
   bottom: 0;
+  inset-inline-start: 0;
   margin: 0;
-  left: 0;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
 }
 
-.emotion-2 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+.emotion-0 span {
+  font-size: 0.75rem;
+}
+
+.emotion-1 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -28,11 +50,10 @@ exports[`should render Copyright with news service context 1`] = `
 
 <div>
   <p
-    class="emotion-0 emotion-1"
-    role="text"
+    class="emotion-0"
   >
     <span
-      class="emotion-2"
+      class="emotion-1"
     >
       Image source, 
     </span>
@@ -43,20 +64,42 @@ exports[`should render Copyright with news service context 1`] = `
 
 exports[`should render Copyright with persian service context 1`] = `
 .emotion-0 {
+  color: #141414;
   font-size: 0.75rem;
   line-height: 1rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
   background-color: rgba(34, 34, 34, 0.75);
   text-transform: uppercase;
   color: #FFFFFF;
   padding: 0.25rem 0.5rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
   position: absolute;
   bottom: 0;
+  inset-inline-start: 0;
   margin: 0;
-  right: 0;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
 }
 
-.emotion-2 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+.emotion-0 span {
+  font-size: 0.75rem;
+}
+
+.emotion-1 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -69,11 +112,10 @@ exports[`should render Copyright with persian service context 1`] = `
 
 <div>
   <p
-    class="emotion-0 emotion-1"
-    role="text"
+    class="emotion-0"
   >
     <span
-      class="emotion-2"
+      class="emotion-1"
     >
        ، منبع تصویر
     </span>

@@ -37,7 +37,15 @@ export const custom = {
   height: 547,
 };
 
-export const imageData = image =>
+type ImageProps = {
+  width: number;
+  height: number;
+  locator: string;
+  alt: string;
+  attribution: string;
+};
+
+export const imageData = (image: ImageProps) =>
   blockArrayModel([
     {
       type: 'rawImage',
@@ -50,4 +58,5 @@ export const imageData = image =>
       },
     },
     blockContainingText('altText', image.alt),
+    blockContainingText('caption', 'Some caption text...'),
   ]);
