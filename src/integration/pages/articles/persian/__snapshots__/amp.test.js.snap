@@ -260,6 +260,7 @@ exports[`AMP Articles Image should match snapshot 1`] = `
 <amp-img
   alt="قهوه"
   attribution="Getty Images"
+  class="bbc-image"
   data-hero="true"
   fallback=""
   height="360"
