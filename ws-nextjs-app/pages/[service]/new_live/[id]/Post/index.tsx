@@ -7,6 +7,7 @@ import headings from '#app/legacy/containers/Headings';
 import Blocks from '#app/legacy/containers/Blocks';
 import paragraph from '#app/legacy/containers/Paragraph';
 import Text from '#app/components/Text';
+import ImageWithCaption from '../../../../../../src/app/components/ImageWithCaption';
 import { Post as PostType } from './types';
 import styles from './styles';
 
@@ -83,6 +84,9 @@ const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
     paragraph,
     unorderedList,
     orderedList: unorderedList,
+    image: (props: { blocks: OptimoBlock[] }) => (
+      <ImageWithCaption {...props} sizes="(min-width: 1008px) 760px, 100vw" />
+    ),
   };
 
   return (

@@ -1,25 +1,23 @@
 import React from 'react';
-import { GridWrapper } from '#components/Grid';
 import ImageContainer from '.';
-import {
-  custom,
-  imageData,
-  landscape,
-  portrait,
-  square,
-} from './helpers/fixtureData';
-import ThemeProvider from '../../../components/ThemeProvider';
+import { custom, imageData, landscape, portrait, square } from './fixtureData';
+import ThemeProvider from '../ThemeProvider';
 
-const Component = props => (
+type Props = {
+  blocks: object[];
+  position?: number[];
+  sizes?: string;
+  shouldPreload?: boolean;
+};
+
+const Component = (props: Props) => (
   <ThemeProvider service="news">
-    <GridWrapper>
-      <ImageContainer {...props} />
-    </GridWrapper>
+    <ImageContainer {...props} />
   </ThemeProvider>
 );
 
 export default {
-  title: 'Containers/Image within grid',
+  title: 'Components/Image with caption',
   Component,
   parameters: {
     chromatic: { disable: true },
