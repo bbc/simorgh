@@ -77,8 +77,8 @@ const HomePage = ({ pageData }: HomePageProps) => {
           </span>
         </VisuallyHiddenText>
         <div css={styles.inner}>
-          <Ad slotType="leaderboard" />
           <div css={styles.margins}>
+            <Ad slotType="leaderboard" />
             {curations.map(
               (
                 {
