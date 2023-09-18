@@ -489,11 +489,11 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 
 .emotion-21 {
   color: #141414;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   color: #FFFFFF;
   -webkit-flex: 1 0 0;
   -ms-flex: 1 0 0;
@@ -503,15 +503,15 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-21 {
-    font-size: 1rem;
-    line-height: 1.25rem;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-21 {
-    font-size: 1rem;
-    line-height: 1.25rem;
+    font-size: 0.8125rem;
+    line-height: 1rem;
   }
 }
 
