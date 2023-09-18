@@ -20,13 +20,13 @@
                             "id": "dc785876",
                             "type": "paragraph",
                             "model": {
-                              "text": "Breaking news",
+                              "text": "Breaking news headline",
                               "blocks": [
                                 {
                                   "id": "cd03d61a",
                                   "type": "fragment",
                                   "model": {
-                                    "text": "Breaking news",
+                                    "text": "Breaking news headline",
                                     "attributes": []
                                   }
                                 }
