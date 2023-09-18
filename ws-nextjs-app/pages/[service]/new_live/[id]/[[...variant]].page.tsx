@@ -100,7 +100,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
   const { headers: reqHeaders } = context.req;
 
-  logger.info(SERVER_SIDE_RENDER_REQUEST_RECEIVED, {
+  logger.debug(SERVER_SIDE_RENDER_REQUEST_RECEIVED, {
     url: context.resolvedUrl,
     headers: omit(
       (process.env.SENSITIVE_HTTP_HEADERS || '').split(','),

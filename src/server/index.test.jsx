@@ -1597,12 +1597,12 @@ describe('Exclusion of sensitive HTTP headers from logs', () => {
     await act();
 
     assertHeaderWasLogged(
-      loggerMock.info,
+      loggerMock.debug,
       SERVER_SIDE_RENDER_REQUEST_RECEIVED,
       SAFE_HEADER,
     );
     assertHeaderWasLogged(
-      loggerMock.info,
+      loggerMock.debug,
       SERVER_SIDE_RENDER_REQUEST_RECEIVED,
       SENSITIVE_HEADER,
     );
@@ -1612,12 +1612,12 @@ describe('Exclusion of sensitive HTTP headers from logs', () => {
     await act();
 
     assertHeaderWasLogged(
-      loggerMock.info,
+      loggerMock.debug,
       SERVER_SIDE_RENDER_REQUEST_RECEIVED,
       SAFE_HEADER,
     );
     assertHeaderWasNotLogged(
-      loggerMock.info,
+      loggerMock.debug,
       SERVER_SIDE_RENDER_REQUEST_RECEIVED,
       SENSITIVE_HEADER,
     );
@@ -1631,12 +1631,12 @@ describe('Exclusion of sensitive HTTP headers from logs', () => {
     await act();
 
     assertHeaderWasLogged(
-      loggerMock.info,
+      loggerMock.debug,
       SERVER_SIDE_RENDER_REQUEST_RECEIVED,
       SAFE_HEADER,
     );
     assertHeaderWasNotLogged(
-      loggerMock.info,
+      loggerMock.debug,
       SERVER_SIDE_RENDER_REQUEST_RECEIVED,
       SENSITIVE_HEADER,
     );
@@ -1658,12 +1658,12 @@ describe('Exclusion of sensitive HTTP headers from logs', () => {
     await act();
 
     assertHeaderWasLogged(
-      loggerMock.info,
+      loggerMock.debug,
       SERVER_SIDE_RENDER_REQUEST_RECEIVED,
       SAFE_HEADER,
     );
     assertHeaderWasNotLogged(
-      loggerMock.info,
+      loggerMock.debug,
       SERVER_SIDE_RENDER_REQUEST_RECEIVED,
       SENSITIVE_HEADER,
     );

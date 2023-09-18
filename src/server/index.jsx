@@ -182,7 +182,7 @@ server.get(
     injectResourceHintsHeader,
   ],
   async ({ url, query, headers, path: urlPath }, res) => {
-    logger.info(SERVER_SIDE_RENDER_REQUEST_RECEIVED, {
+    logger.debug(SERVER_SIDE_RENDER_REQUEST_RECEIVED, {
       url,
       headers: removeSensitiveHeaders(headers),
     });
