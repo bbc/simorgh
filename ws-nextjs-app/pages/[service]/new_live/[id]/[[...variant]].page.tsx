@@ -106,6 +106,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
       (process.env.SENSITIVE_HTTP_HEADERS || '').split(','),
       reqHeaders,
     ),
+    pageType: LIVE_PAGE,
   });
 
   const { data, toggles } = await getPageData({
