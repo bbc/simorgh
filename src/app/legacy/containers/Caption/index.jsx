@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/aria-role */
 import React, { useContext } from 'react';
 import { oneOfType, object, arrayOf, shape, string } from 'prop-types';
 import Caption from '#psammead/psammead-caption/src';
@@ -49,8 +50,12 @@ const renderCaption = (
   dir,
 ) => (
   <Caption script={script} service={service} dir={dir}>
-    {offscreenText && <VisuallyHiddenText>{offscreenText}</VisuallyHiddenText>}
-    {paragraphBlocks.map(block => renderParagraph(block))}
+    <span role="text">
+      {offscreenText && (
+        <VisuallyHiddenText>{offscreenText}</VisuallyHiddenText>
+      )}
+      {paragraphBlocks.map(block => renderParagraph(block))}
+    </span>
   </Caption>
 );
 
