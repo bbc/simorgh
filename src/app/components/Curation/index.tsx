@@ -95,10 +95,15 @@ const Curation = ({
           <GridComponent
             promos={promos}
             headingLevel={isFirstCuration ? 3 : headingLevel}
+            isFirstCuration={isFirstCuration}
           />
         </section>
       ) : (
-        <GridComponent promos={promos} headingLevel={headingLevel} />
+        <GridComponent
+          promos={promos}
+          headingLevel={headingLevel}
+          isFirstCuration={isFirstCuration}
+        />
       );
   }
 };

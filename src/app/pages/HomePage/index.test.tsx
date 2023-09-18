@@ -115,4 +115,21 @@ describe('Home Page', () => {
       expect(getByText('Chartbeat Analytics')).toBeInTheDocument();
     });
   });
+
+  describe('Lazy Loading', () => {
+    it('should lazy load all images except the first image in the first curation', () => {
+      render(<HomePage pageData={homePageData} />, {
+        service: 'kyrgyz',
+      });
+
+      const imageList = document.querySelectorAll('img');
+      imageList.forEach((image, index) => {
+        if (index === 0) {
+          expect(image.getAttribute('loading')).toBeNull();
+        } else {
+          expect(image.getAttribute('loading')).toBe('lazy');
+        }
+      });
+    });
+  });
 });
