@@ -26,7 +26,7 @@ describe('logResponseTime', () => {
   it('should log response time in nanoseconds with path', () => {
     logResponseTime(req, res, next);
 
-    expect(loggerMock.info).toBeCalledWith('server_response_time', {
+    expect(loggerMock.debug).toBeCalledWith('server_response_time', {
       nanoseconds: 1000012345,
       path: '/path',
     });
