@@ -58,6 +58,7 @@ const Image = ({
   sizes,
   src,
   width,
+  children,
 }: PropsWithChildren<Props>) => {
   const { pageType } = useContext(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -138,6 +139,7 @@ const Image = ({
               sizes={getImgSizes()}
               fallback=""
               attribution={attribution}
+              {...(preload && { 'data-hero': true })}
             />
           </>
         ) : (
@@ -166,6 +168,7 @@ const Image = ({
             />
           </ImageWrapper>
         )}
+        {children}
       </div>
     </>
   );

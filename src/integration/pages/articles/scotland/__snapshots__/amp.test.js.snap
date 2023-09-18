@@ -168,7 +168,7 @@ exports[`AMP Articles Image Caption should match text 1`] = `"Image caption, Thi
 exports[`AMP Articles Image should match snapshot 1`] = `
 <amp-img
   alt="Map of France showing Paris and Cognac"
-  attribution=""
+  class="bbc-image"
   data-hero="true"
   fallback=""
   height="351"
