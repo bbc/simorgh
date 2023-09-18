@@ -68,8 +68,8 @@ const HomePage = ({ pageData }: HomePageProps) => {
         headline={title}
         entities={[itemList]}
       />
-      <Ad slotType="leaderboard" />
       <main css={styles.main}>
+        <Ad slotType="leaderboard" />
         <ATIAnalytics atiData={atiAnalytics} />
         <VisuallyHiddenText id="content" tabIndex={-1} as="h1">
           {/* eslint-disable-next-line jsx-a11y/aria-role */}
