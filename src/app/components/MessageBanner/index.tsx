@@ -16,7 +16,6 @@ interface MessageBannerProps {
   link?: string;
   linkText: string;
   image?: string;
-  lazy: boolean;
 }
 
 const MessageBanner = ({
@@ -25,7 +24,6 @@ const MessageBanner = ({
   link,
   linkText,
   image,
-  lazy = true,
 }: MessageBannerProps) => {
   const { dir } = useContext(ServiceContext);
   const isRtl = dir === 'rtl';
@@ -67,7 +65,6 @@ const MessageBanner = ({
                 alt=""
                 src={image.replace('{width}', 'raw')}
                 placeholder={false}
-                lazyLoad={lazy}
               />
             </div>
           )}
