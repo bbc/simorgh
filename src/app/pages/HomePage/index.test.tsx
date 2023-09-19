@@ -147,13 +147,12 @@ describe('Home Page', () => {
 
       const imageList = document.querySelectorAll('img');
       imageList.forEach((image, index) => {
-        if (index === 0) {
+        const src = image.getAttribute('src') || '';
+
+        if (index === 0 || messageBannerImages.includes(src)) {
           expect(image.getAttribute('loading')).toBeNull();
-        } else {
-          const src = image.getAttribute('src') || '';
-          if (!messageBannerImages.includes(src)) {
-            expect(image.getAttribute('loading')).toBe('lazy');
-          }
+        } else if (!messageBannerImages.includes(src)) {
+          expect(image.getAttribute('loading')).toBe('lazy');
         }
       });
     });
