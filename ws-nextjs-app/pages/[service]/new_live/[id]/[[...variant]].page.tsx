@@ -19,6 +19,7 @@ import certsRequired from '#app/routes/utils/certsRequired';
 import getAgent from '../../../../utilities/undiciAgent';
 
 import LivePageLayout from './LivePageLayout';
+import extractHeaders from '../../../../../src/server/utilities/extractHeaders';
 
 interface PageDataParams extends ParsedUrlQuery {
   id: string;
@@ -140,6 +141,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
       timeOnServer: Date.now(), // TODO: check if needed?
       toggles,
       variant: variant?.[0] || null,
+      ...extractHeaders(reqHeaders),
     },
   };
 };
