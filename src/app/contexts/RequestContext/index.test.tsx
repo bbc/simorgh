@@ -36,7 +36,6 @@ jest.mock('./getMetaUrls');
   'getStatsPageIdentifier',
 );
 (getOriginContext.default as jest.Mock).mockReturnValue({
-  isUK: true,
   origin: 'origin',
 });
 (getEnv.default as jest.Mock).mockReturnValue('getEnv');
@@ -61,6 +60,7 @@ const input = {
   variant: 'simp',
   showAdsBasedOnLocation: true,
   mvtExperiments: [{ experimentName: 'foo', variation: 'bar' }],
+  isUK: true,
 };
 
 const expectedOutput = {
@@ -191,7 +191,6 @@ describe('RequestContext', () => {
 
     it('should return a PS statsDestination when isAmp is true and outside the UK', () => {
       (getOriginContext.default as jest.Mock).mockReturnValue({
-        isUK: false,
         origin: 'origin',
       });
       render(
@@ -204,6 +203,25 @@ describe('RequestContext', () => {
         env: 'getEnv',
         isUK: true,
         service: 'service',
+      });
+    });
+
+    it('should set isUK to false when the input isUK value is null', () => {
+      (getOriginContext.default as jest.Mock).mockReturnValue({
+        origin: 'origin',
+      });
+
+      const inputProps = { ...input, isUK: null };
+
+      render(
+        <RequestContextProvider {...inputProps}>
+          <Component />
+        </RequestContextProvider>,
+      );
+
+      expect(React.useContext).toHaveReturnedWith({
+        ...expectedOutput,
+        isUK: false,
       });
     });
   });
