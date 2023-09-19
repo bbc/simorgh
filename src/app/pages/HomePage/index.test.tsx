@@ -122,21 +122,28 @@ describe('Home Page', () => {
   });
 
   describe('Lazy Loading', () => {
-    const { BANNER } = VISUAL_STYLE;
-    const { NORMAL } = VISUAL_PROMINENCE;
-    const messageBannerImages = kyrgyzHomePageData.curations
-      .filter(
-        ({ visualStyle, visualProminence }) =>
-          visualStyle === BANNER && visualProminence === NORMAL,
-      )
-      .flatMap(curation => {
-        return curation.summaries?.map(summary => summary.imageUrl);
-      });
+    // const { BANNER } = VISUAL_STYLE;
+    // const { NORMAL } = VISUAL_PROMINENCE;
+    // const messageBannerImages = kyrgyzHomePageData.curations
+    //   .filter(
+    //     ({ visualStyle, visualProminence }) =>
+    //       visualStyle === BANNER && visualProminence === NORMAL,
+    //   )
+    //   .flatMap(curation => {
+    //     return curation.summaries?.map(summary => summary.imageUrl);
+    //   });
 
     it('Only the first image and message banner on the homepage are not lazy loaded, but all others are', () => {
       render(<HomePage pageData={homePageData} />, {
         service: 'kyrgyz',
       });
+
+      const messageBannerImages: string[] = [];
+      document
+        .querySelectorAll(`[data-testid^="message-banner"] img`)
+        .forEach(image =>
+          messageBannerImages.push(image.getAttribute(`src`) || ''),
+        );
 
       const imageList = document.querySelectorAll('img');
       imageList.forEach((image, index) => {
@@ -144,7 +151,7 @@ describe('Home Page', () => {
           expect(image.getAttribute('loading')).toBeNull();
         } else {
           const src = image.getAttribute('src') || '';
-          if (messageBannerImages.includes(src)) {
+          if (!messageBannerImages.includes(src)) {
             expect(image.getAttribute('loading')).toBe('lazy');
           }
         }
