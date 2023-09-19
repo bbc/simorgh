@@ -1,6 +1,7 @@
 import React from 'react';
-import { data as kyrgyzHomePageData } from '#data/kyrgyz/homePage/index.json';
+import { BrowserRouter } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import { data as kyrgyzHomePageData } from '#data/kyrgyz/homePage/index.json';
 import { render } from '../../components/react-testing-library-with-providers';
 import HomePage from './HomePage';
 import {
@@ -120,20 +121,19 @@ describe('Home Page', () => {
     });
   });
 
-  const { BANNER } = VISUAL_STYLE;
-  const { NORMAL } = VISUAL_PROMINENCE;
-
-  const messageBannerImages = kyrgyzHomePageData.curations
-    .filter(
-      ({ visualStyle, visualProminence }) =>
-        visualStyle === BANNER && visualProminence === NORMAL,
-    )
-    .flatMap(curation => {
-      return curation.summaries?.map(summary => summary.imageUrl);
-    });
-
   describe('Lazy Loading', () => {
-    it('should lazy load all images except the first image in the first curation and message banner image', () => {
+    const { BANNER } = VISUAL_STYLE;
+    const { NORMAL } = VISUAL_PROMINENCE;
+    const messageBannerImages = kyrgyzHomePageData.curations
+      .filter(
+        ({ visualStyle, visualProminence }) =>
+          visualStyle === BANNER && visualProminence === NORMAL,
+      )
+      .flatMap(curation => {
+        return curation.summaries?.map(summary => summary.imageUrl);
+      });
+
+    it('Only the first image and message banner on the homepage are not lazy loaded, but all others are', () => {
       render(<HomePage pageData={homePageData} />, {
         service: 'kyrgyz',
       });
@@ -150,5 +150,60 @@ describe('Home Page', () => {
         }
       });
     });
+  });
+
+  describe('Ads', () => {
+    const getBootstrapScript = () =>
+      Helmet.peek().scriptTags.find(({ innerHTML }) =>
+        innerHTML?.includes('window.dotcom'),
+      );
+
+    it('should display ads when ads toggle is enabled and showAdsBased on location is true', () => {
+      const { container } = render(
+        <BrowserRouter>
+          <HomePage pageData={homePageData} />
+        </BrowserRouter>,
+        {
+          service: 'kyrgyz',
+          toggles: {
+            ads: { enabled: true },
+          },
+          showAdsBasedOnLocation: true,
+        },
+      );
+
+      const homePageAds = container.querySelectorAll(`[id^="dotcom-"]`);
+      expect(homePageAds).toHaveLength(2);
+
+      expect(getBootstrapScript()).toBeTruthy();
+    });
+
+    it.each`
+      adsEnabled | showAdsBasedOnLocation | scenario
+      ${true}    | ${false}               | ${'showAdsBasedOnLocation is false'}
+      ${false}   | ${true}                | ${'adsEnabled is false'}
+      ${false}   | ${true}                | ${'both adsEnabled and showAdsBasedOnLocation are false'}
+    `(
+      'should not display ads because $scenario',
+      ({ adsEnabled, showAdsBasedOnLocation }) => {
+        const { container } = render(
+          <BrowserRouter>
+            <HomePage pageData={homePageData} />
+          </BrowserRouter>,
+          {
+            service: 'kyrgyz',
+            toggles: {
+              ads: { enabled: adsEnabled },
+            },
+            showAdsBasedOnLocation,
+          },
+        );
+
+        const homePageAds = container.querySelectorAll(`[id^="dotcom-"]`);
+        expect(homePageAds).toHaveLength(0);
+
+        expect(getBootstrapScript()).toBeUndefined();
+      },
+    );
   });
 });
