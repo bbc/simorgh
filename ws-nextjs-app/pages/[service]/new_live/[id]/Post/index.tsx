@@ -19,7 +19,7 @@ import styles from './styles';
 
 const PostBreakingNewsLabel = ({
   isBreakingNews,
-  breakingNewsLabelText = 'Breaking',
+  breakingNewsLabelText,
 }: {
   isBreakingNews: boolean;
   breakingNewsLabelText?: string;
@@ -30,6 +30,7 @@ const PostBreakingNewsLabel = ({
       size="brevier"
       fontVariant="sansBold"
       data-testid="breaking-news-label"
+      aria-hidden="true"
     >
       {breakingNewsLabelText}
     </Text>
@@ -129,13 +130,21 @@ const Post = ({ post }: { post: PostType }) => {
 
   const isBreakingNews = pathOr(false, ['options', 'isBreakingNews'], post);
 
+  const breakingNewsLabelText = 'Breaking';
+
   return (
     <>
-      <PostHeaderBanner isBreakingNews={isBreakingNews} />
+      <PostHeaderBanner
+        isBreakingNews={isBreakingNews}
+        breakingNewsLabelText={breakingNewsLabelText}
+      />
       <div css={styles.postBackground}>
         <Heading level={3}>
           {/* eslint-disable-next-line jsx-a11y/aria-role */}
           <span role="text">
+            {isBreakingNews && (
+              <VisuallyHiddenText>{breakingNewsLabelText}, </VisuallyHiddenText>
+            )}
             {headerBlocks.map(headerBlock => (
               <PostHeadings headerBlock={headerBlock} />
             ))}
