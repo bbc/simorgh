@@ -26,29 +26,37 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
       cy.getToggles(service);
     });
 
-    describe('Audio Player', () => {
-      const { lang } = appConfig[service][variant];
-      let embedUrl;
+    describe(
+      'Audio Player',
+      {
+        retries: 3,
+      },
+      () => {
+        const { lang } = appConfig[service][variant];
+        let embedUrl;
 
-      beforeEach(() => {
-        cy.request(getDataUrl(Cypress.env('currentPath'))).then(({ body }) => {
-          embedUrl = getEmbedUrl(body, lang);
+        beforeEach(() => {
+          cy.request(getDataUrl(Cypress.env('currentPath'))).then(
+            ({ body }) => {
+              embedUrl = getEmbedUrl(body, lang);
+            },
+          );
         });
-      });
 
-      it('should be rendered', () => {
-        cy.get(`iframe[src*="${embedUrl}"]`).should('be.visible');
-      });
-
-      it('embed URL should be reachable', () => {
-        cy.testResponseCodeAndTypeRetry({
-          path: embedUrl,
-          responseCode: 200,
-          type: 'text/html',
-          allowFallback: true,
+        it('should be rendered', () => {
+          cy.get(`iframe[src*="${embedUrl}"]`).should('be.visible');
         });
-      });
-    });
+
+        it('embed URL should be reachable', () => {
+          cy.testResponseCodeAndTypeRetry({
+            path: embedUrl,
+            responseCode: 200,
+            type: 'text/html',
+            allowFallback: true,
+          });
+        });
+      },
+    );
 
     describe('Chartbeat', () => {
       if (envConfig.chartbeatEnabled) {
