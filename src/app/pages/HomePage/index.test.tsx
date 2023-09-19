@@ -3,6 +3,10 @@ import { data as kyrgyzHomePageData } from '#data/kyrgyz/homePage/index.json';
 import { Helmet } from 'react-helmet';
 import { render } from '../../components/react-testing-library-with-providers';
 import HomePage from './HomePage';
+import {
+  VISUAL_STYLE,
+  VISUAL_PROMINENCE,
+} from '../../models/types/curationData';
 
 jest.mock('../../components/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>Chartbeat Analytics</div>;
@@ -116,8 +120,20 @@ describe('Home Page', () => {
     });
   });
 
+  const { BANNER } = VISUAL_STYLE;
+  const { NORMAL } = VISUAL_PROMINENCE;
+
+  const messageBannerImages = kyrgyzHomePageData.curations
+    .filter(
+      ({ visualStyle, visualProminence }) =>
+        visualStyle === BANNER && visualProminence === NORMAL,
+    )
+    .flatMap(curation => {
+      return curation.summaries?.map(summary => summary.imageUrl);
+    });
+
   describe('Lazy Loading', () => {
-    it('should lazy load all images except the first image in the first curation', () => {
+    it('should lazy load all images except the first image in the first curation and message banner image', () => {
       render(<HomePage pageData={homePageData} />, {
         service: 'kyrgyz',
       });
@@ -127,7 +143,10 @@ describe('Home Page', () => {
         if (index === 0) {
           expect(image.getAttribute('loading')).toBeNull();
         } else {
-          expect(image.getAttribute('loading')).toBe('lazy');
+          const src = image.getAttribute('src') || '';
+          if (messageBannerImages.includes(src)) {
+            expect(image.getAttribute('loading')).toBe('lazy');
+          }
         }
       });
     });
