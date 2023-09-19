@@ -730,6 +730,11 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 @media (min-width: 25rem) {
   .emotion-38 {
     padding: 0.25rem 1rem 0;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-38 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }

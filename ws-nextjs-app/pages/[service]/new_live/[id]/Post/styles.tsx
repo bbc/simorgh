@@ -24,6 +24,8 @@ export default {
       padding: `${pixelsToRem(4)}rem ${pixelsToRem(8)}rem 0`,
       [mq.GROUP_2_MIN_WIDTH]: {
         padding: `${pixelsToRem(4)}rem ${pixelsToRem(16)}rem 0`,
+      },
+      [mq.GROUP_3_MIN_WIDTH]: {
         ...fontSizes.longPrimer,
       },
       [mq.GROUP_4_MIN_WIDTH]: {
