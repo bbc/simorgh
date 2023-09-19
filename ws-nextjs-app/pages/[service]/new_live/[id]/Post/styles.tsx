@@ -7,7 +7,7 @@ export default {
       color: palette.WHITE,
       ...fontSizes.brevier,
       ...fontVariants.sansRegular,
-      padding: `${spacings.HALF}rem ${spacings.DOUBLE}rem`,
+      padding: `${spacings.HALF}rem ${pixelsToRem(12)}rem`,
     }),
   postHeaderBanner: ({ palette }: Theme) =>
     css({
