@@ -1,6 +1,7 @@
 import React from 'react';
-import { data as kyrgyzHomePageData } from '#data/kyrgyz/homePage/index.json';
+import { BrowserRouter } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import { data as kyrgyzHomePageData } from '#data/kyrgyz/homePage/index.json';
 import { render } from '../../components/react-testing-library-with-providers';
 import HomePage from './HomePage';
 
@@ -114,5 +115,60 @@ describe('Home Page', () => {
 
       expect(getByText('Chartbeat Analytics')).toBeInTheDocument();
     });
+  });
+
+  describe('Ads', () => {
+    const getBootstrapScript = () =>
+      Helmet.peek().scriptTags.find(({ innerHTML }) =>
+        innerHTML?.includes('window.dotcom'),
+      );
+
+    it('should display ads when ads toggle is enabled and showAdsBased on location is true', () => {
+      const { container } = render(
+        <BrowserRouter>
+          <HomePage pageData={homePageData} />
+        </BrowserRouter>,
+        {
+          service: 'kyrgyz',
+          toggles: {
+            ads: { enabled: true },
+          },
+          showAdsBasedOnLocation: true,
+        },
+      );
+
+      const homePageAds = container.querySelectorAll(`[id^="dotcom-"]`);
+      expect(homePageAds).toHaveLength(2);
+
+      expect(getBootstrapScript()).toBeTruthy();
+    });
+
+    it.each`
+      adsEnabled | showAdsBasedOnLocation | scenario
+      ${true}    | ${false}               | ${'showAdsBasedOnLocation is false'}
+      ${false}   | ${true}                | ${'adsEnabled is false'}
+      ${false}   | ${true}                | ${'both adsEnabled and showAdsBasedOnLocation are false'}
+    `(
+      'should not display ads because $scenario',
+      ({ adsEnabled, showAdsBasedOnLocation }) => {
+        const { container } = render(
+          <BrowserRouter>
+            <HomePage pageData={homePageData} />
+          </BrowserRouter>,
+          {
+            service: 'kyrgyz',
+            toggles: {
+              ads: { enabled: adsEnabled },
+            },
+            showAdsBasedOnLocation,
+          },
+        );
+
+        const homePageAds = container.querySelectorAll(`[id^="dotcom-"]`);
+        expect(homePageAds).toHaveLength(0);
+
+        expect(getBootstrapScript()).toBeUndefined();
+      },
+    );
   });
 });

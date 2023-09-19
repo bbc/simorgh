@@ -3,39 +3,19 @@ import React from 'react';
 import { jsx } from '@emotion/react';
 import pathOr from 'ramda/src/pathOr';
 import { OptimoBlock } from '#models/types/optimo';
-import headings from '#app/legacy/containers/Headings';
-import Blocks from '#app/legacy/containers/Blocks';
-import paragraph from '#app/legacy/containers/Paragraph';
+import Heading from '#app/components/Heading';
 import Text from '#app/components/Text';
+import Blocks from '#app/legacy/containers/Blocks';
+import Paragraph from '#app/legacy/containers/Paragraph';
+import UnorderedList from '#app/legacy/containers/BulletedList';
+import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
+import {
+  Post as PostType,
+  PostHeadingBlock,
+  ComponentToRenderProps,
+} from './types';
 import ImageWithCaption from '../../../../../../src/app/components/ImageWithCaption';
-import { Post as PostType } from './types';
 import styles from './styles';
-
-// temporary solution to render LI/ OL blocks.
-const unorderedList = ({ blocks }: { blocks: OptimoBlock[] }) => {
-  const listItems: (string | null)[] = blocks
-    .map(item =>
-      pathOr<string | null>(
-        null,
-        ['model', 'blocks', 0, 'model', 'text'],
-        item,
-      ),
-    )
-    .filter(text => typeof text === 'string');
-
-  if (listItems.length === 0) return null;
-
-  return (
-    <Text>
-      <ul>
-        {listItems.map((item, index) => (
-          // eslint-disable-next-line react/no-array-index-key
-          <li key={index}>{item}</li>
-        ))}
-      </ul>
-    </Text>
-  );
-};
 
 const PostBreakingNewsLabel = ({
   isBreakingNews,
@@ -73,36 +53,69 @@ const PostHeaderBanner = ({
   );
 };
 
-const PostHeadings = ({ headerBlocks }: { headerBlocks: OptimoBlock[] }) => {
-  const componentsToRender = {
-    headline: headings,
-    subheadline: headings,
-  };
+const PostHeadings = ({ headerBlock }: { headerBlock: PostHeadingBlock }) => {
+  const isHeadline = headerBlock.type === 'headline';
+  const headingText = headerBlock.model.blocks[0].model.blocks[0].model.text;
 
   return (
-    <Blocks blocks={headerBlocks} componentsToRender={componentsToRender} />
+    <>
+      {!isHeadline && <VisuallyHiddenText>{`, `}</VisuallyHiddenText>}
+      <Text
+        fontVariant={isHeadline ? 'sansBold' : 'sansRegular'}
+        size={isHeadline ? 'greatPrimer' : 'brevier'}
+        className="headingStyling"
+        css={[
+          styles.postHeadings,
+          isHeadline ? styles.postHeadline : styles.postSubHeadline,
+        ]}
+      >
+        {headingText}
+      </Text>
+    </>
   );
 };
 
 const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
   const componentsToRender = {
-    paragraph,
-    unorderedList,
-    orderedList: unorderedList,
+    paragraph: (props: ComponentToRenderProps) => (
+      <Paragraph
+        blocks={props.blocks}
+        className="postStyles"
+        css={styles.bodyText}
+      />
+    ),
+    unorderedList: (props: ComponentToRenderProps) => (
+      <UnorderedList
+        blocks={props.blocks}
+        blockGroupType={props.blockGroupType}
+        blockGroupIndex={props.blockGroupIndex}
+        className="postStyles"
+        css={styles.bodyText}
+      />
+    ),
+    orderedList: (props: ComponentToRenderProps) => (
+      <UnorderedList
+        blocks={props.blocks}
+        blockGroupType={props.blockGroupType}
+        blockGroupIndex={props.blockGroupIndex}
+        className="postStyles"
+        css={styles.bodyText}
+      />
+    ),
     image: (props: { blocks: OptimoBlock[] }) => (
       <ImageWithCaption {...props} sizes="(min-width: 1008px) 760px, 100vw" />
     ),
   };
 
   return (
-    <div>
+    <div css={styles.postContent}>
       <Blocks blocks={contentBlocks} componentsToRender={componentsToRender} />
     </div>
   );
 };
 
 const Post = ({ post }: { post: PostType }) => {
-  const headerBlocks = pathOr<OptimoBlock[]>(
+  const headerBlocks = pathOr<PostHeadingBlock[]>(
     [],
     ['header', 'model', 'blocks'],
     post,
@@ -119,9 +132,17 @@ const Post = ({ post }: { post: PostType }) => {
   return (
     <>
       <PostHeaderBanner isBreakingNews={isBreakingNews} />
-      <PostHeadings headerBlocks={headerBlocks} />
-      <PostContent contentBlocks={contentBlocks} />
-      <hr />
+      <div css={styles.postBackground}>
+        <Heading level={3}>
+          {/* eslint-disable-next-line jsx-a11y/aria-role */}
+          <span role="text">
+            {headerBlocks.map(headerBlock => (
+              <PostHeadings headerBlock={headerBlock} />
+            ))}
+          </span>
+        </Heading>
+        <PostContent contentBlocks={contentBlocks} />
+      </div>
     </>
   );
 };
