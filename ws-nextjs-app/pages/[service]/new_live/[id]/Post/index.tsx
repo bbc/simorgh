@@ -7,6 +7,7 @@ import Text from '#app/components/Text';
 import Blocks from '#app/legacy/containers/Blocks';
 import Paragraph from '#app/legacy/containers/Paragraph';
 import UnorderedList from '#app/legacy/containers/BulletedList';
+import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import {
   Post as PostType,
   PostHeadingBlock,
@@ -20,17 +21,20 @@ const PostHeadings = ({ headerBlock }: { headerBlock: PostHeadingBlock }) => {
   const headingText = headerBlock.model.blocks[0].model.blocks[0].model.text;
 
   return (
-    <Text
-      fontVariant={isHeadline ? 'sansBold' : 'sansRegular'}
-      size={isHeadline ? 'greatPrimer' : 'brevier'}
-      className="headingStyling"
-      css={[
-        styles.postHeadings,
-        isHeadline ? styles.postHeadline : styles.postSubHeadline,
-      ]}
-    >
-      {headingText}
-    </Text>
+    <>
+      {!isHeadline && <VisuallyHiddenText>{`, `}</VisuallyHiddenText>}
+      <Text
+        fontVariant={isHeadline ? 'sansBold' : 'sansRegular'}
+        size={isHeadline ? 'greatPrimer' : 'brevier'}
+        className="headingStyling"
+        css={[
+          styles.postHeadings,
+          isHeadline ? styles.postHeadline : styles.postSubHeadline,
+        ]}
+      >
+        {headingText}
+      </Text>
+    </>
   );
 };
 

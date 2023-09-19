@@ -36,6 +36,7 @@ export default {
       backgroundColor: palette.GREY_2,
       margin: `0 0 ${spacings.DOUBLE}rem`,
       padding: `0 ${pixelsToRem(8)}rem ${pixelsToRem(8)}rem`,
+      border: `solid ${pixelsToRem(3)}rem transparent`,
       [mq.GROUP_2_MIN_WIDTH]: {
         margin: `0 0 ${spacings.TRIPLE}rem`,
         padding: `0 0 ${pixelsToRem(8)}rem 0`,
