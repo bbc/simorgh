@@ -290,6 +290,7 @@ exports[`AMP Story Page Image should match snapshot 1`] = `
 <amp-img
   alt="A person holding a union jack umbrella in front of Big Ben"
   attribution="Getty Images"
+  class="bbc-image"
   data-hero="true"
   fallback=""
   height="549"
