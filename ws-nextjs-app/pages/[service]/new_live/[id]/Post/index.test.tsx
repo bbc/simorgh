@@ -32,6 +32,14 @@ describe('Post', () => {
       expect(screen.getAllByRole('heading', { level: 3 })).toBeTruthy();
       expect(screen.getAllByRole('heading', { level: 3 })).toHaveLength(1);
     });
+
+    it('should render a span with role=text to avoid text splitting in screenreaders', async () => {
+      await act(async () => {
+        render(<Post post={singlePostWithTitle} />);
+      });
+
+      expect(screen.getAllByRole('text')[0].closest('h3')).toBeInTheDocument();
+    });
   });
   describe('Content', () => {
     it('should render paragraphs when provided', async () => {

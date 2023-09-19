@@ -89,9 +89,12 @@ const Post = ({ post }: { post: PostType }) => {
   return (
     <div css={styles.postBackground}>
       <Heading level={3}>
-        {headerBlocks.map(headerBlock => (
-          <PostHeadings headerBlock={headerBlock} />
-        ))}
+        {/* eslint-disable-next-line jsx-a11y/aria-role */}
+        <span role="text">
+          {headerBlocks.map(headerBlock => (
+            <PostHeadings headerBlock={headerBlock} />
+          ))}
+        </span>
       </Heading>
       <PostContent contentBlocks={contentBlocks} />
     </div>
