@@ -7,12 +7,12 @@ import headings from '#app/legacy/containers/Headings';
 import Blocks from '#app/legacy/containers/Blocks';
 import paragraph from '#app/legacy/containers/Paragraph';
 import Text from '#app/components/Text';
+import TimeStampContainer from '#app/legacy/psammead/psammead-timestamp-container/src';
+import isTenHoursAgo from '#app/lib/utilities/isTenHoursAgo';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import ImageWithCaption from '../../../../../../src/app/components/ImageWithCaption';
 import { Post as PostType } from './types';
 import styles from './styles';
-import TimeStampContainer from '../../../../../../src/app/legacy/psammead/psammead-timestamp-container/src';
-import isTenHoursAgo from '../../../../../../src/app/lib/utilities/isTenHoursAgo';
-import { ServiceContext } from '../../../../../../src/app/contexts/ServiceContext';
 
 // temporary solution to render LI/ OL blocks.
 const unorderedList = ({ blocks }: { blocks: OptimoBlock[] }) => {
@@ -83,7 +83,7 @@ const TimeStamp = ({ curated }: { curated: string }) => {
       prefix={articleTimestampPrefix}
       suffix={articleTimestampSuffix}
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore
+      // @ts-expect-error
       script={script}
       {...(altCalendar && { altCalendar })}
       padding={false}

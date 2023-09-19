@@ -35,7 +35,7 @@ describe('Post', () => {
       );
     });
 
-    it('Shows timestamp as a stamp for articles over 10 hours old.', async () => {
+    it('Shows timestamp as a relative time for articles under 10 hours old.', async () => {
       jest.useFakeTimers().setSystemTime(new Date('2023-04-28T10:35:10.293Z'));
       const { container } = await act(async () => {
         const postData = {
