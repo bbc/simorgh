@@ -32,6 +32,7 @@ const ComponentWithContext = ({ data: { data } }) => {
           pageType={MEDIA_ARTICLE_PAGE}
           service="news"
           pathname="/news/articles/c000000000o"
+          isUK
         >
           <UserContextProvider>
             <MemoryRouter>
