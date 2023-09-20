@@ -154,7 +154,7 @@ const Post = ({ post }: { post: PostType }) => {
   );
 
   const isBreakingNews = pathOr(false, ['options', 'isBreakingNews'], post);
-  const timestamp = post?.dates?.curated || '';
+  const timestamp = post?.dates?.curated ?? '';
 
   return (
     <div css={styles.postContainer}>
