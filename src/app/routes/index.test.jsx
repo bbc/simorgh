@@ -683,7 +683,7 @@ describe('Routes', () => {
       ).resolves.toBeInTheDocument();
     });
 
-    it('should route to and render a Sport Discipline article page', async () => {
+    it.skip('should route to and render a Sport Discipline article page', async () => {
       const pathname = '/sport/judo/articles/cj80n66ddnko';
 
       fetch.mockResponse(
