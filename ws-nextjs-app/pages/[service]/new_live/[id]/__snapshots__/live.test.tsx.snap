@@ -475,19 +475,27 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 }
 
 .emotion-20 {
+  background-color: #F6F6F6;
+  margin: 0 0 1rem;
+}
+
+.emotion-21 {
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  background-color: #B80000;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.625rem;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  box-shadow: inset 0 0.125rem #B80000;
 }
 
-.emotion-21 {
+.emotion-22 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #545658;
@@ -501,38 +509,45 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 400;
-  padding: 0.25rem 1rem;
+  padding: 0.25rem 0.75rem;
+  background-color: #B80000;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-21 {
+  .emotion-22 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-21 {
+  .emotion-22 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-21 {
+  .emotion-22 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-21 {
+  .emotion-22 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-22 {
+@media (max-width: 14.9375rem) {
+  .emotion-22 {
+    width: 100%;
+  }
+}
+
+.emotion-23 {
   color: #141414;
   font-size: 0.875rem;
   line-height: 1.125rem;
@@ -540,6 +555,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   font-style: normal;
   font-weight: 700;
   color: #FFFFFF;
+  background-color: #B80000;
   -webkit-flex: 1 0 0;
   -ms-flex: 1 0 0;
   flex: 1 0 0;
@@ -547,41 +563,45 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-22 {
+  .emotion-23 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-22 {
+  .emotion-23 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-23 {
-  background-color: #F6F6F6;
-  margin: 0 0 1rem;
+@media (max-width: 14.9375rem) {
+  .emotion-23 {
+    padding-top: 0;
+  }
+}
+
+.emotion-24 {
   padding: 0 0.5rem 0.5rem;
   border: solid 0.1875rem transparent;
 }
 
 @media (min-width: 25rem) {
-  .emotion-23 {
+  .emotion-24 {
     margin: 0 0 1.5rem;
     padding: 0 0 0.5rem 0;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-23 {
+  .emotion-24 {
     margin: 0 0 1rem;
     padding: 0 1rem 0.5rem;
   }
 }
 
-.emotion-24 {
+.emotion-25 {
   color: #141414;
   font-size: 1.125rem;
   line-height: 1.375rem;
@@ -592,20 +612,20 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-24 {
+  .emotion-25 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-24 {
+  .emotion-25 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
-.emotion-25 {
+.emotion-26 {
   color: #141414;
   font-size: 1.125rem;
   line-height: 1.375rem;
@@ -619,84 +639,84 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-25 {
+  .emotion-26 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-25 {
+  .emotion-26 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 25rem) {
-  .emotion-25 {
+  .emotion-26 {
     padding: 1.5rem 1rem 0;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-25 {
+  .emotion-26 {
     padding: 1.5rem 0 0;
   }
 }
 
-.emotion-26 {
+.emotion-27 {
   padding-top: 1rem;
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-27 {
+  .emotion-28 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-27 {
+  .emotion-28 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-27 {
+  .emotion-28 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-27 {
+  .emotion-28 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-27 {
+  .emotion-28 {
     margin-left: 20%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-27 {
+  .emotion-28 {
     margin-left: 40%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-27 {
+  .emotion-28 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-27 {
+    .emotion-28 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -705,7 +725,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-27 {
+    .emotion-28 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -714,7 +734,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-27 {
+    .emotion-28 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -723,7 +743,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-27 {
+    .emotion-28 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       padding: 0 1rem;
@@ -732,7 +752,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-27 {
+    .emotion-28 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
@@ -740,7 +760,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 
   @media (min-width: 80rem) {
-    .emotion-27 {
+    .emotion-28 {
       grid-template-columns: repeat(10, 1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
@@ -748,7 +768,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 }
 
-.emotion-28 {
+.emotion-29 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -763,30 +783,30 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-28 {
+  .emotion-29 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-28 {
+  .emotion-29 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-28 {
+  .emotion-29 {
     padding-right: 2.5rem;
   }
 }
 
-.emotion-28 li {
+.emotion-29 li {
   margin-bottom: 0.5rem;
 }
 
-.emotion-45 {
+.emotion-48 {
   color: #141414;
   font-size: 0.875rem;
   line-height: 1.125rem;
@@ -800,40 +820,40 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-45 {
+  .emotion-48 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-45 {
+  .emotion-48 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width: 25rem) {
-  .emotion-45 {
+  .emotion-48 {
     padding: 0.25rem 1rem 0;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-45 {
+  .emotion-48 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 
   @media (min-width: 20rem) and (max-width: 37.4375rem) {
-    .emotion-45 {
+    .emotion-48 {
       font-size: 0.9375rem;
       line-height: 1.125rem;
     }
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-45 {
+    .emotion-48 {
       font-size: 0.875rem;
       line-height: 1.125rem;
     }
@@ -841,12 +861,12 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 }
 
 @media (min-width: 63rem) {
-  .emotion-45 {
+  .emotion-48 {
     padding: 0.25rem 0 0;
   }
 }
 
-.emotion-49 {
+.emotion-52 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: italic;
@@ -854,7 +874,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   font-weight: inherit;
 }
 
-.emotion-50 {
+.emotion-53 {
   margin-bottom: 1.5rem;
   color: #000000;
   margin: 0;
@@ -862,54 +882,54 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-50 {
+  .emotion-53 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-50 {
+  .emotion-53 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-50 {
+  .emotion-53 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-50 {
+  .emotion-53 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-50 {
+  .emotion-53 {
     margin-left: 20%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-50 {
+  .emotion-53 {
     margin-left: 40%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-50 {
+  .emotion-53 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-50 {
+    .emotion-53 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -918,7 +938,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-50 {
+    .emotion-53 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -927,7 +947,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-50 {
+    .emotion-53 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -936,7 +956,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-50 {
+    .emotion-53 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       padding: 0 1rem;
@@ -945,7 +965,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-50 {
+    .emotion-53 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
@@ -953,7 +973,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 
   @media (min-width: 80rem) {
-    .emotion-50 {
+    .emotion-53 {
       grid-template-columns: repeat(10, 1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
@@ -961,29 +981,29 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 }
 
-.emotion-50 li {
+.emotion-53 li {
   margin-bottom: 0.5rem;
 }
 
-.emotion-72 {
+.emotion-75 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-72:visited {
+.emotion-75:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.emotion-72:focus,
-.emotion-72:hover {
+.emotion-75:focus,
+.emotion-75:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
 
-.emotion-84 {
+.emotion-88 {
   white-space: pre-wrap;
   max-height: 50vh;
   overflow: auto;
@@ -992,17 +1012,17 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   border-radius: 0.75rem;
 }
 
-.emotion-84>h4 {
+.emotion-88>h4 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   margin-bottom: 0.625rem;
 }
 
-.emotion-84>p {
+.emotion-88>p {
   margin: 0.25rem 0;
 }
 
-.emotion-85 {
+.emotion-89 {
   color: #141414;
   font-size: 1.125rem;
   line-height: 1.375rem;
@@ -1013,14 +1033,14 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-85 {
+  .emotion-89 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-85 {
+  .emotion-89 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
@@ -1128,48 +1148,52 @@ exports[`Live Page creates snapshot of the live page 1`] = `
               <div
                 class="emotion-20"
               >
-                <time
+                <div
                   class="emotion-21"
-                  datetime="2023-05-09"
                 >
-                  Updated 9 May 2023, 17:24 BST
-                </time>
-                <span
-                  class="emotion-22"
-                  data-testid="breaking-news-label"
-                >
-                  Breaking
-                </span>
-              </div>
-              <div
-                class="emotion-23"
-              >
-                <h3
+                  <time
+                    class="emotion-22"
+                    datetime="09 May 2023"
+                  >
+                    09 May 2023
+                  </time>
+                  <span
+                    class="emotion-23"
+                    data-testid="breaking-news-label"
+                  >
+                    Breaking
+                  </span>
+                </div>
+                <div
                   class="emotion-24"
                 >
-                  <span
-                    role="text"
+                  <h3
+                    class="emotion-25"
                   >
                     <span
-                      class="headingStyling emotion-25"
+                      role="text"
                     >
-                      Breaking news
+                      <span
+                        class="headingStyling emotion-26"
+                      >
+                        Breaking news
+                      </span>
                     </span>
-                  </span>
-                </h3>
-                <div
-                  class="emotion-26"
-                >
+                  </h3>
                   <div
                     class="emotion-27"
-                    dir="ltr"
                   >
-                    <p
-                      class="postStyles emotion-28"
+                    <div
+                      class="emotion-28"
                       dir="ltr"
                     >
-                      Breaking news
-                    </p>
+                      <p
+                        class="postStyles emotion-29"
+                        dir="ltr"
+                      >
+                        Breaking news
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1180,42 +1204,46 @@ exports[`Live Page creates snapshot of the live page 1`] = `
               <div
                 class="emotion-20"
               >
-                <time
+                <div
                   class="emotion-21"
-                  datetime="2023-05-09"
                 >
-                  Updated 9 May 2023, 16:07 BST
-                </time>
-              </div>
-              <div
-                class="emotion-23"
-              >
-                <h3
+                  <time
+                    class="emotion-22"
+                    datetime="09 May 2023"
+                  >
+                    09 May 2023
+                  </time>
+                </div>
+                <div
                   class="emotion-24"
                 >
-                  <span
-                    role="text"
+                  <h3
+                    class="emotion-25"
                   >
                     <span
-                      class="headingStyling emotion-25"
+                      role="text"
                     >
-                      Published 6.07pm Tues 9th
+                      <span
+                        class="headingStyling emotion-26"
+                      >
+                        Published 6.07pm Tues 9th
+                      </span>
                     </span>
-                  </span>
-                </h3>
-                <div
-                  class="emotion-26"
-                >
+                  </h3>
                   <div
                     class="emotion-27"
-                    dir="ltr"
                   >
-                    <p
-                      class="postStyles emotion-28"
+                    <div
+                      class="emotion-28"
                       dir="ltr"
                     >
-                      Timestamp test
-                    </p>
+                      <p
+                        class="postStyles emotion-29"
+                        dir="ltr"
+                      >
+                        Timestamp test
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1226,176 +1254,180 @@ exports[`Live Page creates snapshot of the live page 1`] = `
               <div
                 class="emotion-20"
               >
-                <time
+                <div
                   class="emotion-21"
-                  datetime="2023-03-21"
                 >
-                  Updated 21 March 2023, 13:22 GMT
-                </time>
-              </div>
-              <div
-                class="emotion-23"
-              >
-                <h3
+                  <time
+                    class="emotion-22"
+                    datetime="21 March 2023"
+                  >
+                    21 March 2023
+                  </time>
+                </div>
+                <div
                   class="emotion-24"
                 >
-                  <span
-                    role="text"
+                  <h3
+                    class="emotion-25"
                   >
                     <span
-                      class="headingStyling emotion-25"
+                      role="text"
                     >
-                      Another post
+                      <span
+                        class="headingStyling emotion-26"
+                      >
+                        Another post
+                      </span>
+                      <span
+                        class="emotion-5"
+                      >
+                        , 
+                      </span>
+                      <span
+                        class="headingStyling emotion-48"
+                      >
+                        Another post sub headline
+                      </span>
                     </span>
-                    <span
-                      class="emotion-5"
-                    >
-                      , 
-                    </span>
-                    <span
-                      class="headingStyling emotion-45"
-                    >
-                      Another post sub headline
-                    </span>
-                  </span>
-                </h3>
-                <div
-                  class="emotion-26"
-                >
+                  </h3>
                   <div
                     class="emotion-27"
-                    dir="ltr"
                   >
-                    <p
-                      class="postStyles emotion-28"
+                    <div
+                      class="emotion-28"
                       dir="ltr"
                     >
-                      <b>
-                        Another 
-                      </b>
-                      <i
-                        class="emotion-49"
+                      <p
+                        class="postStyles emotion-29"
+                        dir="ltr"
                       >
-                        short form text
-                      </i>
-                    </p>
-                  </div>
-                  <div
-                    class="postStyles emotion-50"
-                    dir="ltr"
-                  >
-                    <ul
-                      class="emotion-12"
-                      dir="ltr"
-                      role="list"
-                    >
-                      <li
-                        class="emotion-13"
-                        role="listitem"
-                      >
+                        <b>
+                          Another 
+                        </b>
                         <i
-                          class="emotion-49"
+                          class="emotion-52"
                         >
-                          one
+                          short form text
                         </i>
-                      </li>
-                      <li
-                        class="emotion-13"
-                        role="listitem"
-                      >
-                        <i
-                          class="emotion-49"
-                        >
-                          two
-                        </i>
-                      </li>
-                      <li
-                        class="emotion-13"
-                        role="listitem"
-                      >
-                        <i
-                          class="emotion-49"
-                        >
-                          three
-                        </i>
-                      </li>
-                    </ul>
-                  </div>
-                  <div
-                    class="emotion-27"
-                    dir="ltr"
-                  >
-                    <p
-                      class="postStyles emotion-28"
-                      dir="ltr"
-                    />
-                  </div>
-                  <div
-                    class="postStyles emotion-50"
-                    dir="ltr"
-                  >
-                    <ul
-                      class="emotion-12"
-                      dir="ltr"
-                      role="list"
-                    >
-                      <li
-                        class="emotion-13"
-                        role="listitem"
-                      >
-                        <i
-                          class="emotion-49"
-                        >
-                          Bullet 1
-                        </i>
-                      </li>
-                      <li
-                        class="emotion-13"
-                        role="listitem"
-                      >
-                        <i
-                          class="emotion-49"
-                        >
-                          Bullet 2
-                        </i>
-                      </li>
-                      <li
-                        class="emotion-13"
-                        role="listitem"
-                      >
-                        <i
-                          class="emotion-49"
-                        >
-                          Bullet 3
-                        </i>
-                      </li>
-                    </ul>
-                  </div>
-                  <div
-                    class="emotion-27"
-                    dir="ltr"
-                  >
-                    <p
-                      class="postStyles emotion-28"
-                      dir="ltr"
-                    />
-                  </div>
-                  <div
-                    class="emotion-27"
-                    dir="ltr"
-                  >
-                    <p
-                      class="postStyles emotion-28"
+                      </p>
+                    </div>
+                    <div
+                      class="postStyles emotion-53"
                       dir="ltr"
                     >
-                      Here is a 
-                      <a
-                        class="focusIndicatorReducedWidth emotion-72"
-                        href="/new/pidgin"
+                      <ul
+                        class="emotion-12"
+                        dir="ltr"
+                        role="list"
                       >
-                        Link
-                      </a>
-                    </p>
+                        <li
+                          class="emotion-13"
+                          role="listitem"
+                        >
+                          <i
+                            class="emotion-52"
+                          >
+                            one
+                          </i>
+                        </li>
+                        <li
+                          class="emotion-13"
+                          role="listitem"
+                        >
+                          <i
+                            class="emotion-52"
+                          >
+                            two
+                          </i>
+                        </li>
+                        <li
+                          class="emotion-13"
+                          role="listitem"
+                        >
+                          <i
+                            class="emotion-52"
+                          >
+                            three
+                          </i>
+                        </li>
+                      </ul>
+                    </div>
+                    <div
+                      class="emotion-28"
+                      dir="ltr"
+                    >
+                      <p
+                        class="postStyles emotion-29"
+                        dir="ltr"
+                      />
+                    </div>
+                    <div
+                      class="postStyles emotion-53"
+                      dir="ltr"
+                    >
+                      <ul
+                        class="emotion-12"
+                        dir="ltr"
+                        role="list"
+                      >
+                        <li
+                          class="emotion-13"
+                          role="listitem"
+                        >
+                          <i
+                            class="emotion-52"
+                          >
+                            Bullet 1
+                          </i>
+                        </li>
+                        <li
+                          class="emotion-13"
+                          role="listitem"
+                        >
+                          <i
+                            class="emotion-52"
+                          >
+                            Bullet 2
+                          </i>
+                        </li>
+                        <li
+                          class="emotion-13"
+                          role="listitem"
+                        >
+                          <i
+                            class="emotion-52"
+                          >
+                            Bullet 3
+                          </i>
+                        </li>
+                      </ul>
+                    </div>
+                    <div
+                      class="emotion-28"
+                      dir="ltr"
+                    >
+                      <p
+                        class="postStyles emotion-29"
+                        dir="ltr"
+                      />
+                    </div>
+                    <div
+                      class="emotion-28"
+                      dir="ltr"
+                    >
+                      <p
+                        class="postStyles emotion-29"
+                        dir="ltr"
+                      >
+                        Here is a 
+                        <a
+                          class="focusIndicatorReducedWidth emotion-75"
+                          href="/new/pidgin"
+                        >
+                          Link
+                        </a>
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1406,52 +1438,56 @@ exports[`Live Page creates snapshot of the live page 1`] = `
               <div
                 class="emotion-20"
               >
-                <time
+                <div
                   class="emotion-21"
-                  datetime="2023-03-21"
                 >
-                  Updated 21 March 2023, 11:10 GMT
-                </time>
-              </div>
-              <div
-                class="emotion-23"
-              >
-                <h3
+                  <time
+                    class="emotion-22"
+                    datetime="21 March 2023"
+                  >
+                    21 March 2023
+                  </time>
+                </div>
+                <div
                   class="emotion-24"
                 >
-                  <span
-                    role="text"
+                  <h3
+                    class="emotion-25"
                   >
                     <span
-                      class="headingStyling emotion-25"
+                      role="text"
                     >
-                      Post headline
+                      <span
+                        class="headingStyling emotion-26"
+                      >
+                        Post headline
+                      </span>
+                      <span
+                        class="emotion-5"
+                      >
+                        , 
+                      </span>
+                      <span
+                        class="headingStyling emotion-48"
+                      >
+                        Post sub headline
+                      </span>
                     </span>
-                    <span
-                      class="emotion-5"
-                    >
-                      , 
-                    </span>
-                    <span
-                      class="headingStyling emotion-45"
-                    >
-                      Post sub headline
-                    </span>
-                  </span>
-                </h3>
-                <div
-                  class="emotion-26"
-                >
+                  </h3>
                   <div
                     class="emotion-27"
-                    dir="ltr"
                   >
-                    <p
-                      class="postStyles emotion-28"
+                    <div
+                      class="emotion-28"
                       dir="ltr"
                     >
-                      Some short form text
-                    </p>
+                      <p
+                        class="postStyles emotion-29"
+                        dir="ltr"
+                      >
+                        Some short form text
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1459,10 +1495,10 @@ exports[`Live Page creates snapshot of the live page 1`] = `
           </ol>
         </div>
         <pre
-          class="emotion-84"
+          class="emotion-88"
         >
           <h4
-            class="emotion-85"
+            class="emotion-89"
           >
             Headers
           </h4>
@@ -1475,7 +1511,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
           </p>
         </pre>
         <pre
-          class="emotion-84"
+          class="emotion-88"
         >
           {
   "title": "Pidgin test 2",
