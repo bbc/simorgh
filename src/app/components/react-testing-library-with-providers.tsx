@@ -34,6 +34,7 @@ interface Props {
   variant?: Variants;
   isNextJs?: boolean;
   pageLang?: string;
+  isUK?: boolean | null;
 }
 
 const AllTheProviders: FC<Props> = ({
@@ -54,6 +55,7 @@ const AllTheProviders: FC<Props> = ({
   showAdsBasedOnLocation = false,
   statusCode = null,
   isNextJs = false,
+  isUK = null,
 }: Props) => {
   return (
     <ToggleContextProvider toggles={toggles}>
@@ -74,6 +76,7 @@ const AllTheProviders: FC<Props> = ({
           derivedPageType={derivedPageType}
           showAdsBasedOnLocation={showAdsBasedOnLocation}
           statusCode={statusCode}
+          isUK={isUK}
         >
           <EventTrackingContextProvider data={pageData} atiData={atiData}>
             <UserContextProvider>
@@ -109,6 +112,7 @@ const customRender = (
     statusCode,
     isNextJs,
     pageLang,
+    isUK,
   } = options || {};
 
   return render(ui, {
@@ -130,6 +134,7 @@ const customRender = (
         statusCode={statusCode}
         isNextJs={isNextJs}
         pageLang={pageLang}
+        isUK={isUK}
       >
         {children}
       </AllTheProviders>

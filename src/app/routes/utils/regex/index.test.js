@@ -555,6 +555,7 @@ describe('frontPage -> homePage migration', () => {
     'afaanoromoo',
     'amharic',
     'azeri',
+    'bengali',
     'burmese',
     'gahuza',
     'gujarati',
@@ -566,6 +567,7 @@ describe('frontPage -> homePage migration', () => {
     'punjabi',
     'sinhala',
     'somali',
+    'tamil',
     'tigrinya',
     'yoruba',
   ];
