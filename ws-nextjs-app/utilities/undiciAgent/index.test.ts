@@ -7,6 +7,16 @@ jest.mock('undici', () => ({
   setGlobalDispatcher: jest.fn(),
 }));
 
+jest.mock('tls', () => ({
+  createSecureContext: jest.fn().mockReturnValue({
+    context: {
+      ca: 'someCa',
+      cert: 'someCert',
+      key: 'someKey',
+    },
+  }),
+}));
+
 jest.mock('./certs');
 
 describe('Agent', () => {
@@ -24,10 +34,15 @@ describe('Agent', () => {
     expect(Agent).toHaveBeenCalledTimes(1);
     expect(Agent).toHaveBeenCalledWith({
       connect: {
-        ca: 'someCa',
-        cert: 'someCert',
-        key: 'someKey',
+        keepAlive: true,
         rejectUnauthorized: false,
+        secureContext: {
+          context: {
+            ca: 'someCa',
+            cert: 'someCert',
+            key: 'someKey',
+          },
+        },
       },
     });
   });

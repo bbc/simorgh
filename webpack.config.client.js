@@ -70,6 +70,7 @@ module.exports = ({
         stream: require.resolve('stream-browserify'),
         https: false,
         http: false,
+        tls: false,
       },
     },
     experiments: {
