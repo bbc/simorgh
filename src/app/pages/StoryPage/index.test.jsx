@@ -17,6 +17,7 @@ import { data as pidginMostReadData } from '#data/pidgin/mostRead/index.json';
 import igboPageData from '#data/igbo/cpsAssets/afirika-23252735';
 import russianPageDataWithInlinePromo from '#data/russian/cpsAssets/news-55041160';
 import ukrainianInRussianPageData from '#data/ukrainian/cpsAssets/news-russian-23333960.json';
+import { Helmet } from 'react-helmet';
 import {
   render,
   act,
@@ -24,7 +25,6 @@ import {
 
 import russianPageDataWithoutInlinePromo from './fixtureData/russianPageDataWithoutPromo';
 import StoryPageIndex from '.';
-import { Helmet } from 'react-helmet';
 
 fetchMock.config.overwriteRoutes = false; // http://www.wheresrhys.co.uk/fetch-mock/#usageconfiguration allows us to mock the same endpoint multiple times
 
