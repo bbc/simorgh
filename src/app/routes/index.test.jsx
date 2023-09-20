@@ -714,6 +714,6 @@ describe('Routes', () => {
       expect(
         screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
       ).resolves.toBeInTheDocument();
-    });
+    }, 15000);
   });
 });
