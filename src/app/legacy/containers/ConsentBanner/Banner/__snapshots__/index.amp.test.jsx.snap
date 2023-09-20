@@ -638,7 +638,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
           نستخدم نحن وشركاؤنا تقنيات مثل 
           <a
             class="emotion-8 emotion-9"
-            href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/"
+            href="https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/"
           >
             <span>
               ملفات الارتباط
@@ -711,7 +711,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
         >
           <a
             class="emotion-8 emotion-9"
-            href="https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/"
+            href="https://www.bbc.com/usingthebbc/strictly-necessary-cookies/"
           >
             <span>
               إقرأوا المزيد عن المعلومات الضرورية والحيوية التي نقوم بخزنها على أجهزتكم من أجل ضمان عمل صفحاتنا بشكل جيد.
@@ -1354,7 +1354,7 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - R
           <span>
             <a
               data-terms-banner="reject"
-              href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+              href="https://www.bbc.com/usingthebbc/your-data-matters"
               on="tap:cookieId.show, privacyId.hide"
             >
               إطلع على التغييرات
