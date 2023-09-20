@@ -65,9 +65,9 @@ const PostHeaderBanner = ({
         timezone={timezone}
         service={service}
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-expect-error
+        // @ts-expect-error: type differences: script is outlined as a generic object in the service context, but as a more specific shape in TimeStampContainer.
         script={script}
-        {...(altCalendar && { altCalendar })}
+        altCalendar={altCalendar}
         padding={false}
         isRelative={isRelative}
       />
@@ -154,7 +154,7 @@ const Post = ({ post }: { post: PostType }) => {
   );
 
   const isBreakingNews = pathOr(false, ['options', 'isBreakingNews'], post);
-  const timestamp = pathOr('', ['dates', 'curated'], post);
+  const timestamp = post?.dates?.curated || '';
 
   return (
     <div css={styles.postContainer}>
