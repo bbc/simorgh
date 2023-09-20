@@ -315,8 +315,12 @@ export const service: DefaultServiceConfig = {
         url: '/sinhala/topics/c83plvepnq1t',
       },
       {
-        title: 'විශේෂාංග',
-        url: '/sinhala/51727586',
+        title: 'වීඩියෝ',
+        url: '/sinhala/topics/crldzm9n2lnt',
+      },
+      {
+        title: 'කලා',
+        url: '/sinhala/topics/c7zp5zxk8jxt',
       },
     ],
   },
