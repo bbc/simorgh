@@ -10,4 +10,5 @@ export interface Promo extends Summary {
 export interface CurationGridProps {
   promos: Promo[];
   headingLevel?: number;
+  isFirstCuration?: boolean;
 }

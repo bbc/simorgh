@@ -57,7 +57,6 @@ export default {
       color: palette.GREY_1,
       gridColumn: '1 / span 12',
     }),
-
   description: ({ palette }: Theme) =>
     css({
       color: palette.GREY_2,
@@ -65,7 +64,6 @@ export default {
       margin: 0,
       marginTop: `${pixelsToRem(16)}rem`,
     }),
-
   layoutWithLiveLabel: ({ mq }: Theme) =>
     css({
       [mq.GROUP_4_MIN_WIDTH]: {
