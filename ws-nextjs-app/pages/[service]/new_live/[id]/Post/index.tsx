@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/react';
 import React from 'react';
+import { jsx } from '@emotion/react';
 import pathOr from 'ramda/src/pathOr';
 import { OptimoBlock } from '#models/types/optimo';
 import Heading from '#app/components/Heading';
@@ -16,6 +16,42 @@ import {
 } from './types';
 import ImageWithCaption from '../../../../../../src/app/components/ImageWithCaption';
 import styles from './styles';
+
+const PostBreakingNewsLabel = ({
+  isBreakingNews,
+  breakingNewsLabelText = 'Breaking',
+}: {
+  isBreakingNews: boolean;
+  breakingNewsLabelText?: string;
+}) => {
+  return isBreakingNews ? (
+    <Text
+      css={styles.breakingNewsLabel}
+      size="brevier"
+      fontVariant="sansBold"
+      data-testid="breaking-news-label"
+    >
+      {breakingNewsLabelText}
+    </Text>
+  ) : null;
+};
+
+const PostHeaderBanner = ({
+  isBreakingNews,
+  breakingNewsLabelText,
+}: {
+  isBreakingNews: boolean;
+  breakingNewsLabelText?: string;
+}) => {
+  return (
+    <div css={styles.postHeaderBanner}>
+      <PostBreakingNewsLabel
+        isBreakingNews={isBreakingNews}
+        breakingNewsLabelText={breakingNewsLabelText}
+      />
+    </div>
+  );
+};
 
 const PostHeadings = ({ headerBlock }: { headerBlock: PostHeadingBlock }) => {
   const isHeadline = headerBlock.type === 'headline';
@@ -91,18 +127,23 @@ const Post = ({ post }: { post: PostType }) => {
     post,
   );
 
+  const isBreakingNews = pathOr(false, ['options', 'isBreakingNews'], post);
+
   return (
-    <div css={styles.postBackground}>
-      <Heading level={3}>
-        {/* eslint-disable-next-line jsx-a11y/aria-role */}
-        <span role="text">
-          {headerBlocks.map(headerBlock => (
-            <PostHeadings headerBlock={headerBlock} />
-          ))}
-        </span>
-      </Heading>
-      <PostContent contentBlocks={contentBlocks} />
-    </div>
+    <>
+      <PostHeaderBanner isBreakingNews={isBreakingNews} />
+      <div css={styles.postBackground}>
+        <Heading level={3}>
+          {/* eslint-disable-next-line jsx-a11y/aria-role */}
+          <span role="text">
+            {headerBlocks.map(headerBlock => (
+              <PostHeadings headerBlock={headerBlock} />
+            ))}
+          </span>
+        </Heading>
+        <PostContent contentBlocks={contentBlocks} />
+      </div>
+    </>
   );
 };
 
