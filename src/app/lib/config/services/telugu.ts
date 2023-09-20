@@ -126,7 +126,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'ఓకే',
           reject: 'ఏం మార్పులు చేశామో తెలుసుకోండి',
-          rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
         },
         cookie: {
           amp: {
@@ -141,7 +141,7 @@ export const service: DefaultServiceConfig = {
                 linkText: 'వంటి టెక్నాలజీలు',
                 last: ' కుకీలు ఉపయోగించి, బ్రౌజింగ్ వివరాలను సేకరిస్తాం. మీరు దీనికి అంగీకరిస్తే మాకు తెలియచేయండి.',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               manage: 'నా సెటింగ్స్‌ను మేనేజ్ చేయండి.',
             },
@@ -157,7 +157,7 @@ export const service: DefaultServiceConfig = {
                   'మా వెబ్ పేజీ పని చేసేందుకు మీ అనుమతి లేకుండానే మీ డివైస్‌లో కొంత పరిమితిలో సమాచారాన్ని స్టోర్ చేస్తాం.',
                 para4: {
                   text: 'మా వెబ్ పేజీలు పని చేసేందుకు మీ డివైస్‌లో స్టోర్ చేసిన అత్యవసర సమాచారం గురించి మరింత తెలుసుకోండి.',
-                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5:
                   'మీరు అనుమతించిన మీ ప్రాధాన్యాలను మీ డివైస్‌లో స్టోర్ చేసేందుకు మేము లోకల్ స్టోరేజిని ఉపయోగిస్తాం.',
@@ -190,13 +190,13 @@ export const service: DefaultServiceConfig = {
                 linkText: 'కుకీలు',
                 last: ' ఉపయోగిస్తాం. మీరు ఈ కుకీలన్నింటికి అంగీకరిస్తే మాకు తెలియచేయండి.',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
             },
             accept: 'అవును, అంగీకరిస్తున్నా',
             reject: 'లేదు, నన్ను సెట్టింగ్స్ పేజీకి తీసుకెళ్లండి',
             rejectUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+              'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           },
         },
       },
