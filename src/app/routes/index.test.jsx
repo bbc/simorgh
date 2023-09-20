@@ -25,7 +25,7 @@ import articlePageJson from '#data/persian/articles/c4vlle3q337o.json';
 import storyPageMostReadData from '#data/pidgin/mostRead/index.json';
 import mostWatchedData from '#data/pidgin/mostWatched/index.json';
 import frontPageJson from '#data/serbian/frontpage/lat.json';
-import sportArticlePageJson from '#data/sport/articles/cj80n66ddnko.json';
+import sportArticlePageJson from '#data/sport/judo/articles/cj80n66ddnko.json';
 import indexPageJson from '#data/ukrainian/ukraine_in_russian';
 import mediaAssetPageJson from '#data/yoruba/cpsAssets/media-23256797.json';
 
@@ -91,7 +91,9 @@ describe('Routes', () => {
 
   afterEach(() => {
     jest.clearAllMocks();
+    jest.restoreAllMocks();
     fetchMock.restore();
+    fetch.resetMocks();
     window.dotcom = undefined;
   });
 
@@ -600,8 +602,6 @@ describe('Routes', () => {
         getAgent,
       });
 
-      console.log({ status, error });
-
       await renderRouter({
         pathname,
         pageType,
@@ -659,6 +659,7 @@ describe('Routes', () => {
         }),
       );
 
+      process.env.SIMORGH_APP_ENV = 'local';
       const { getInitialData, pageType } = getMatchingRoute(pathname);
       const { pageData } = await getInitialData({
         path: pathname,
@@ -666,6 +667,8 @@ describe('Routes', () => {
         service: 'persian',
         pageType,
       });
+
+      console.log({ pageData });
 
       await renderRouter({
         pathname,
@@ -692,15 +695,13 @@ describe('Routes', () => {
       );
 
       const { getInitialData, pageType } = getMatchingRoute(pathname);
-      console.log({ getInitialData, pageType });
+      process.env.SIMORGH_APP_ENV = 'local';
       const { pageData } = await getInitialData({
         path: pathname,
         getAgent,
         service: 'sport',
         pageType,
       });
-
-      console.log({ pageData });
 
       await renderRouter({
         pathname,
