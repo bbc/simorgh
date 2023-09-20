@@ -2,6 +2,19 @@ import { Theme, css } from '@emotion/react';
 import pixelsToRem from '../../../../../../src/app/utilities/pixelsToRem';
 
 export default {
+  postHeaderBanner: ({ palette }: Theme) =>
+    css({
+      alignItems: 'flex-start',
+      backgroundColor: palette.BRAND_BACKGROUND,
+      display: 'flex',
+      gap: `${pixelsToRem(10)}rem`,
+    }),
+  breakingNewsLabel: ({ palette }: Theme) =>
+    css({
+      color: palette.WHITE,
+      flex: '1 0 0',
+      padding: `${pixelsToRem(4)}rem ${pixelsToRem(12)}rem`,
+    }),
   postHeadings: ({ palette }: Theme) =>
     css({
       color: palette.BLACK,
@@ -18,7 +31,6 @@ export default {
         padding: `${spacings.TRIPLE}rem 0 0`,
       },
     }),
-
   postSubHeadline: ({ mq, fontSizes }: Theme) =>
     css({
       padding: `${pixelsToRem(4)}rem ${pixelsToRem(8)}rem 0`,
@@ -32,7 +44,6 @@ export default {
         padding: `${pixelsToRem(4)}rem 0 0`,
       },
     }),
-
   postBackground: ({ palette, spacings, mq }: Theme) =>
     css({
       backgroundColor: palette.GREY_2,
@@ -48,12 +59,10 @@ export default {
         padding: `0 ${pixelsToRem(16)}rem ${pixelsToRem(8)}rem`,
       },
     }),
-
   postContent: ({ spacings }: Theme) =>
     css({
       paddingTop: `${spacings.DOUBLE}rem`,
     }),
-
   bodyText: ({ palette, spacings }: Theme) =>
     css({
       color: palette.BLACK,
