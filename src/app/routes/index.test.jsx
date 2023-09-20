@@ -668,8 +668,6 @@ describe('Routes', () => {
         pageType,
       });
 
-      console.log({ pageData });
-
       await renderRouter({
         pathname,
         pageData,
