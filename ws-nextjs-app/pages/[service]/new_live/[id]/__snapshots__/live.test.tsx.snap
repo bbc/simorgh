@@ -475,11 +475,51 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 }
 
 .emotion-20 {
-  background-color: #F6F6F6;
+  border: solid 0.1875rem transparent;
   margin: 0 0 1rem;
 }
 
+@media (min-width: 25rem) {
+  .emotion-20 {
+    margin: 0 0 1.5rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-20 {
+    margin: 0 0 1rem;
+  }
+}
+
 .emotion-21 {
+  background-color: #F6F6F6;
+}
+
+.emotion-22 {
+  color: #141414;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  margin: 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-22 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-22 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+.emotion-23 {
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
@@ -492,10 +532,10 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  box-shadow: inset 0 0.125rem #B80000;
+  border-top: solid 0.125rem #B80000;
 }
 
-.emotion-22 {
+.emotion-24 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #545658;
@@ -514,40 +554,40 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-22 {
+  .emotion-24 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-22 {
+  .emotion-24 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-22 {
+  .emotion-24 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-22 {
+  .emotion-24 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-22 {
+  .emotion-24 {
     width: 100%;
   }
 }
 
-.emotion-23 {
+.emotion-26 {
   color: #141414;
   font-size: 0.875rem;
   line-height: 1.125rem;
@@ -563,45 +603,435 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-23 {
+  .emotion-26 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-23 {
+  .emotion-26 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-23 {
+  .emotion-26 {
     padding-top: 0;
   }
 }
 
-.emotion-24 {
-  padding: 0 0.5rem 0.5rem;
-  border: solid 0.1875rem transparent;
+.emotion-28 {
+  color: #141414;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: #000000;
+  display: block;
+  margin: 0;
+  padding: 1.5rem 1rem 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-28 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-28 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
 }
 
 @media (min-width: 25rem) {
-  .emotion-24 {
-    margin: 0 0 1.5rem;
-    padding: 0 0 0.5rem 0;
+  .emotion-28 {
+    padding: 1.5rem 1rem 0;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-24 {
-    margin: 0 0 1rem;
-    padding: 0 1rem 0.5rem;
+  .emotion-28 {
+    padding: 1.5rem 1rem 0;
   }
 }
 
-.emotion-25 {
+.emotion-29 {
+  padding: 1rem 0.5rem 0.5rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-29 {
+    padding: 1rem 0 0.5rem 0;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-29 {
+    padding: 1rem 1rem 0.5rem;
+  }
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-30 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-30 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-30 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-30 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-30 {
+    margin-left: 20%;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-30 {
+    margin-left: 40%;
+  }
+}
+
+@supports (display: grid) {
+  .emotion-30 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-30 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-30 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-30 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-30 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-30 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      grid-column-start: 2;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-30 {
+      grid-template-columns: repeat(10, 1fr);
+      grid-column-end: span 10;
+      grid-column-start: 5;
+    }
+  }
+}
+
+.emotion-31 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #141414;
+  padding-bottom: 1.5rem;
+  margin: 0;
+  color: #000000;
+  margin: 0;
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-31 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-31 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-31 {
+    padding-right: 2.5rem;
+  }
+}
+
+.emotion-31 li {
+  margin-bottom: 0.5rem;
+}
+
+.emotion-52 {
+  color: #141414;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+  display: block;
+  margin: 0;
+  padding: 0.25rem 1rem 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-52 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-52 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 25rem) {
+  .emotion-52 {
+    padding: 0.25rem 1rem 0;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-52 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+
+  @media (min-width: 20rem) and (max-width: 37.4375rem) {
+    .emotion-52 {
+      font-size: 0.9375rem;
+      line-height: 1.125rem;
+    }
+  }
+
+  @media (min-width: 37.5rem) {
+    .emotion-52 {
+      font-size: 0.875rem;
+      line-height: 1.125rem;
+    }
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-52 {
+    padding: 0.25rem 1rem 0;
+  }
+}
+
+.emotion-56 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+.emotion-57 {
+  margin-bottom: 1.5rem;
+  color: #000000;
+  margin: 0;
+  padding-bottom: 1rem;
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-57 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-57 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-57 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-57 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-57 {
+    margin-left: 20%;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-57 {
+    margin-left: 40%;
+  }
+}
+
+@supports (display: grid) {
+  .emotion-57 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-57 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-57 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-57 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-57 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-57 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      grid-column-start: 2;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-57 {
+      grid-template-columns: repeat(10, 1fr);
+      grid-column-end: span 10;
+      grid-column-start: 5;
+    }
+  }
+}
+
+.emotion-57 li {
+  margin-bottom: 0.5rem;
+}
+
+.emotion-79 {
+  color: #222222;
+  border-bottom: 1px solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-79:visited {
+  color: #6E6E73;
+  border-bottom: 1px solid #6E6E73;
+}
+
+.emotion-79:focus,
+.emotion-79:hover {
+  border-bottom: 2px solid #B80000;
+  color: #B80000;
+}
+
+.emotion-93 {
+  white-space: pre-wrap;
+  max-height: 50vh;
+  overflow: auto;
+  background-color: #f6f8fa;
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+}
+
+.emotion-93>h4 {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  margin-bottom: 0.625rem;
+}
+
+.emotion-93>p {
+  margin: 0.25rem 0;
+}
+
+.emotion-94 {
   color: #141414;
   font-size: 1.125rem;
   line-height: 1.375rem;
@@ -612,30 +1042,17 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-25 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
+  .emotion-94 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-25 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
+  .emotion-94 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
   }
-}
-
-.emotion-26 {
-  color: #141414;
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  color: #000000;
-  display: block;
-  margin: 0;
-  padding: 1.5rem 0.5rem 0;
 }
 
 <div>
@@ -739,6 +1156,396 @@ exports[`Live Page creates snapshot of the live page 1`] = `
             >
               <div
                 class="emotion-20"
+              >
+                <div
+                  class="emotion-21"
+                >
+                  <h3
+                    class="emotion-22"
+                  >
+                    <span
+                      role="text"
+                    >
+                      <div
+                        class="emotion-23"
+                      >
+                        <time
+                          class="emotion-24"
+                          datetime="09 May 2023"
+                        >
+                          09 May 2023
+                        </time>
+                        <span
+                          class="emotion-5"
+                        >
+                          , 
+                        </span>
+                        <span
+                          class="emotion-26"
+                          data-testid="breaking-news-label"
+                        >
+                          Breaking
+                        </span>
+                        <span
+                          class="emotion-5"
+                        >
+                          , 
+                        </span>
+                      </div>
+                      <span
+                        class="headingStyling emotion-28"
+                      >
+                        Breaking news
+                      </span>
+                    </span>
+                  </h3>
+                  <div
+                    class="emotion-29"
+                  >
+                    <div
+                      class="emotion-30"
+                      dir="ltr"
+                    >
+                      <p
+                        class="postStyles emotion-31"
+                        dir="ltr"
+                      >
+                        Breaking news
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="emotion-19"
+            >
+              <div
+                class="emotion-20"
+              >
+                <div
+                  class="emotion-21"
+                >
+                  <h3
+                    class="emotion-22"
+                  >
+                    <span
+                      role="text"
+                    >
+                      <div
+                        class="emotion-23"
+                      >
+                        <time
+                          class="emotion-24"
+                          datetime="09 May 2023"
+                        >
+                          09 May 2023
+                        </time>
+                        <span
+                          class="emotion-5"
+                        >
+                          , 
+                        </span>
+                      </div>
+                      <span
+                        class="headingStyling emotion-28"
+                      >
+                        Published 6.07pm Tues 9th
+                      </span>
+                    </span>
+                  </h3>
+                  <div
+                    class="emotion-29"
+                  >
+                    <div
+                      class="emotion-30"
+                      dir="ltr"
+                    >
+                      <p
+                        class="postStyles emotion-31"
+                        dir="ltr"
+                      >
+                        Timestamp test
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="emotion-19"
+            >
+              <div
+                class="emotion-20"
+              >
+                <div
+                  class="emotion-21"
+                >
+                  <h3
+                    class="emotion-22"
+                  >
+                    <span
+                      role="text"
+                    >
+                      <div
+                        class="emotion-23"
+                      >
+                        <time
+                          class="emotion-24"
+                          datetime="21 March 2023"
+                        >
+                          21 March 2023
+                        </time>
+                        <span
+                          class="emotion-5"
+                        >
+                          , 
+                        </span>
+                      </div>
+                      <span
+                        class="headingStyling emotion-28"
+                      >
+                        Another post
+                      </span>
+                      <span
+                        class="emotion-5"
+                      >
+                        , 
+                      </span>
+                      <span
+                        class="headingStyling emotion-52"
+                      >
+                        Another post sub headline
+                      </span>
+                    </span>
+                  </h3>
+                  <div
+                    class="emotion-29"
+                  >
+                    <div
+                      class="emotion-30"
+                      dir="ltr"
+                    >
+                      <p
+                        class="postStyles emotion-31"
+                        dir="ltr"
+                      >
+                        <b>
+                          Another 
+                        </b>
+                        <i
+                          class="emotion-56"
+                        >
+                          short form text
+                        </i>
+                      </p>
+                    </div>
+                    <div
+                      class="postStyles emotion-57"
+                      dir="ltr"
+                    >
+                      <ul
+                        class="emotion-12"
+                        dir="ltr"
+                        role="list"
+                      >
+                        <li
+                          class="emotion-13"
+                          role="listitem"
+                        >
+                          <i
+                            class="emotion-56"
+                          >
+                            one
+                          </i>
+                        </li>
+                        <li
+                          class="emotion-13"
+                          role="listitem"
+                        >
+                          <i
+                            class="emotion-56"
+                          >
+                            two
+                          </i>
+                        </li>
+                        <li
+                          class="emotion-13"
+                          role="listitem"
+                        >
+                          <i
+                            class="emotion-56"
+                          >
+                            three
+                          </i>
+                        </li>
+                      </ul>
+                    </div>
+                    <div
+                      class="emotion-30"
+                      dir="ltr"
+                    >
+                      <p
+                        class="postStyles emotion-31"
+                        dir="ltr"
+                      />
+                    </div>
+                    <div
+                      class="postStyles emotion-57"
+                      dir="ltr"
+                    >
+                      <ul
+                        class="emotion-12"
+                        dir="ltr"
+                        role="list"
+                      >
+                        <li
+                          class="emotion-13"
+                          role="listitem"
+                        >
+                          <i
+                            class="emotion-56"
+                          >
+                            Bullet 1
+                          </i>
+                        </li>
+                        <li
+                          class="emotion-13"
+                          role="listitem"
+                        >
+                          <i
+                            class="emotion-56"
+                          >
+                            Bullet 2
+                          </i>
+                        </li>
+                        <li
+                          class="emotion-13"
+                          role="listitem"
+                        >
+                          <i
+                            class="emotion-56"
+                          >
+                            Bullet 3
+                          </i>
+                        </li>
+                      </ul>
+                    </div>
+                    <div
+                      class="emotion-30"
+                      dir="ltr"
+                    >
+                      <p
+                        class="postStyles emotion-31"
+                        dir="ltr"
+                      />
+                    </div>
+                    <div
+                      class="emotion-30"
+                      dir="ltr"
+                    >
+                      <p
+                        class="postStyles emotion-31"
+                        dir="ltr"
+                      >
+                        Here is a 
+                        <a
+                          class="focusIndicatorReducedWidth emotion-79"
+                          href="/new/pidgin"
+                        >
+                          Link
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="emotion-19"
+            >
+              <div
+                class="emotion-20"
+              >
+                <div
+                  class="emotion-21"
+                >
+                  <h3
+                    class="emotion-22"
+                  >
+                    <span
+                      role="text"
+                    >
+                      <div
+                        class="emotion-23"
+                      >
+                        <time
+                          class="emotion-24"
+                          datetime="21 March 2023"
+                        >
+                          21 March 2023
+                        </time>
+                        <span
+                          class="emotion-5"
+                        >
+                          , 
+                        </span>
+                      </div>
+                      <span
+                        class="headingStyling emotion-28"
+                      >
+                        Post headline
+                      </span>
+                      <span
+                        class="emotion-5"
+                      >
+                        , 
+                      </span>
+                      <span
+                        class="headingStyling emotion-52"
+                      >
+                        Post sub headline
+                      </span>
+                    </span>
+                  </h3>
+                  <div
+                    class="emotion-29"
+                  >
+                    <div
+                      class="emotion-30"
+                      dir="ltr"
+                    >
+                      <p
+                        class="postStyles emotion-31"
+                        dir="ltr"
+                      >
+                        Some short form text
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+        <pre
+          class="emotion-93"
+        >
+          <h4
+            class="emotion-94"
+          >
+            Headers
+          </h4>
+          <p>
+            bbc-adverts:
+             
+            <span>
+              false
+            </span>
+          </p>
+        </pre>
+        <pre
+          class="emotion-93"
         >
           {
   "title": "Pidgin test 2",

@@ -18,14 +18,14 @@ export default {
       alignItems: 'flex-start',
       display: 'flex',
       flexWrap: 'wrap',
-      boxShadow: `inset 0 ${pixelsToRem(2)}rem ${palette.BRAND_BACKGROUND}`,
+      borderTop: `solid ${pixelsToRem(2)}rem ${palette.BRAND_BACKGROUND}`,
     }),
-  breakingNewsLabel: ({ palette, mq }: Theme) =>
+  breakingNewsLabel: ({ palette, mq, spacings }: Theme) =>
     css({
       color: palette.WHITE,
       backgroundColor: palette.BRAND_BACKGROUND,
       flex: '1 0 0',
-      padding: `${pixelsToRem(4)}rem  ${pixelsToRem(12)}rem`,
+      padding: `${spacings.HALF}rem  ${pixelsToRem(12)}rem`,
       [mq.GROUP_0_MAX_WIDTH]: {
         paddingTop: '0',
       },
@@ -38,48 +38,52 @@ export default {
     }),
   postHeadline: ({ spacings, mq }: Theme) =>
     css({
-      padding: `${spacings.TRIPLE}rem ${pixelsToRem(8)}rem 0`,
+      padding: `${spacings.TRIPLE}rem ${spacings.DOUBLE}rem 0`,
       [mq.GROUP_2_MIN_WIDTH]: {
-        padding: `${spacings.TRIPLE}rem ${pixelsToRem(16)}rem 0`,
+        padding: `${spacings.TRIPLE}rem ${spacings.DOUBLE}rem 0`,
       },
       [mq.GROUP_4_MIN_WIDTH]: {
-        padding: `${spacings.TRIPLE}rem 0 0`,
+        padding: `${spacings.TRIPLE}rem ${spacings.DOUBLE}rem 0`,
       },
     }),
-  postSubHeadline: ({ mq, fontSizes }: Theme) =>
+  postSubHeadline: ({ mq, fontSizes, spacings }: Theme) =>
     css({
-      padding: `${pixelsToRem(4)}rem ${pixelsToRem(8)}rem 0`,
+      padding: `${spacings.HALF}rem ${spacings.DOUBLE}rem 0`,
       [mq.GROUP_2_MIN_WIDTH]: {
-        padding: `${pixelsToRem(4)}rem ${pixelsToRem(16)}rem 0`,
+        padding: `${spacings.HALF}rem ${spacings.DOUBLE}rem 0`,
       },
       [mq.GROUP_3_MIN_WIDTH]: {
         ...fontSizes.longPrimer,
       },
       [mq.GROUP_4_MIN_WIDTH]: {
-        padding: `${pixelsToRem(4)}rem 0 0`,
+        padding: `${spacings.HALF}rem ${spacings.DOUBLE}rem 0`,
       },
     }),
-  postContainer: ({ palette, spacings }: Theme) =>
+  postBackground: ({ palette }: Theme) =>
     css({
       backgroundColor: palette.GREY_2,
-      margin: `0 0 ${spacings.DOUBLE}rem`,
     }),
-  postBody: ({ spacings, mq }: Theme) =>
+  postContainer: ({ spacings, mq }: Theme) =>
     css({
-      padding: `0 ${pixelsToRem(8)}rem ${pixelsToRem(8)}rem`,
       border: `solid ${pixelsToRem(3)}rem transparent`,
+      margin: `0 0 ${spacings.DOUBLE}rem`,
       [mq.GROUP_2_MIN_WIDTH]: {
         margin: `0 0 ${spacings.TRIPLE}rem`,
-        padding: `0 0 ${pixelsToRem(8)}rem 0`,
       },
       [mq.GROUP_4_MIN_WIDTH]: {
         margin: `0 0 ${spacings.DOUBLE}rem`,
-        padding: `0 ${pixelsToRem(16)}rem ${pixelsToRem(8)}rem`,
       },
     }),
-  postContent: ({ spacings }: Theme) =>
+  postContent: ({ spacings, mq }: Theme) =>
     css({
-      paddingTop: `${spacings.DOUBLE}rem`,
+      padding: `${spacings.DOUBLE}rem ${spacings.FULL}rem ${spacings.FULL}rem`,
+
+      [mq.GROUP_2_MIN_WIDTH]: {
+        padding: `${spacings.DOUBLE}rem 0 ${spacings.FULL}rem 0`,
+      },
+      [mq.GROUP_4_MIN_WIDTH]: {
+        padding: `${spacings.DOUBLE}rem ${spacings.DOUBLE}rem ${spacings.FULL}rem`,
+      },
     }),
   bodyText: ({ palette, spacings }: Theme) =>
     css({
@@ -87,7 +91,7 @@ export default {
       margin: 0 /* Reset */,
       paddingBottom: `${spacings.DOUBLE}rem`,
       '& li': {
-        marginBottom: `${pixelsToRem(8)}rem`,
+        marginBottom: `${spacings.FULL}rem`,
       },
     }),
 };

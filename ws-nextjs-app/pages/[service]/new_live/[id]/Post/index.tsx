@@ -23,21 +23,23 @@ import TimeStampContainer from '#app/legacy/psammead/psammead-timestamp-containe
 
 const PostBreakingNewsLabel = ({
   isBreakingNews,
-  breakingNewsLabelText,
+  breakingNewsLabelText = 'Breaking',
 }: {
   isBreakingNews: boolean;
   breakingNewsLabelText?: string;
 }) => {
   return isBreakingNews ? (
-    <Text
-      css={styles.breakingNewsLabel}
-      size="brevier"
-      fontVariant="sansBold"
-      data-testid="breaking-news-label"
-      aria-hidden="true"
-    >
-      {breakingNewsLabelText}
-    </Text>
+    <>
+      <Text
+        css={styles.breakingNewsLabel}
+        size="brevier"
+        fontVariant="sansBold"
+        data-testid="breaking-news-label"
+      >
+        {breakingNewsLabelText}
+      </Text>
+      <VisuallyHiddenText>, </VisuallyHiddenText>
+    </>
   ) : null;
 };
 
@@ -71,6 +73,7 @@ const PostHeaderBanner = ({
         padding={false}
         isRelative={isRelative}
       />
+      <VisuallyHiddenText>, </VisuallyHiddenText>
       <PostBreakingNewsLabel
         isBreakingNews={isBreakingNews}
         breakingNewsLabelText={breakingNewsLabelText}
@@ -134,9 +137,7 @@ const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
   };
 
   return (
-    <div css={styles.postContent}>
-      <Blocks blocks={contentBlocks} componentsToRender={componentsToRender} />
-    </div>
+    <Blocks blocks={contentBlocks} componentsToRender={componentsToRender} />
   );
 };
 
@@ -156,24 +157,24 @@ const Post = ({ post }: { post: PostType }) => {
   const isBreakingNews = pathOr(false, ['options', 'isBreakingNews'], post);
   const timestamp = post?.dates?.curated ?? '';
 
-  const breakingNewsLabelText = 'Breaking';
-
   return (
     <div css={styles.postContainer}>
-      <PostHeaderBanner isBreakingNews={isBreakingNews} timestamp={timestamp} breakingNewsLabelText={breakingNewsLabelText}/>
       <div css={styles.postBackground}>
         <Heading level={3}>
           {/* eslint-disable-next-line jsx-a11y/aria-role */}
           <span role="text">
-            {isBreakingNews && (
-              <VisuallyHiddenText>{breakingNewsLabelText}, </VisuallyHiddenText>
-            )}
+            <PostHeaderBanner
+              isBreakingNews={isBreakingNews}
+              timestamp={timestamp}
+            />
             {headerBlocks.map(headerBlock => (
               <PostHeadings headerBlock={headerBlock} />
             ))}
           </span>
         </Heading>
-        <PostContent contentBlocks={contentBlocks} />
+        <div css={styles.postContent}>
+          <PostContent contentBlocks={contentBlocks} />
+        </div>
       </div>
     </div>
   );
