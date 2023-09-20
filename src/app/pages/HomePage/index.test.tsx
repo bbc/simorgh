@@ -118,17 +118,6 @@ describe('Home Page', () => {
   });
 
   describe('Lazy Loading', () => {
-    // const { BANNER } = VISUAL_STYLE;
-    // const { NORMAL } = VISUAL_PROMINENCE;
-    // const messageBannerImages = kyrgyzHomePageData.curations
-    //   .filter(
-    //     ({ visualStyle, visualProminence }) =>
-    //       visualStyle === BANNER && visualProminence === NORMAL,
-    //   )
-    //   .flatMap(curation => {
-    //     return curation.summaries?.map(summary => summary.imageUrl);
-    //   });
-
     it('Only the first image and message banner on the homepage are not lazy loaded, but all others are', () => {
       render(<HomePage pageData={homePageData} />, {
         service: 'kyrgyz',
