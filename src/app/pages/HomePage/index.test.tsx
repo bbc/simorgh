@@ -117,6 +117,32 @@ describe('Home Page', () => {
     });
   });
 
+  describe('Lazy Loading', () => {
+    it('Only the first image and message banner on the homepage are not lazy loaded, but all others are', () => {
+      render(<HomePage pageData={homePageData} />, {
+        service: 'kyrgyz',
+      });
+
+      const messageBannerImages: string[] = [];
+      document
+        .querySelectorAll(`[data-testid^="message-banner"] img`)
+        .forEach(image =>
+          messageBannerImages.push(image.getAttribute(`src`) || ''),
+        );
+
+      const imageList = document.querySelectorAll('img');
+      imageList.forEach((image, index) => {
+        const src = image.getAttribute('src') || '';
+
+        if (index === 0 || messageBannerImages.includes(src)) {
+          expect(image.getAttribute('loading')).toBeNull();
+        } else if (!messageBannerImages.includes(src)) {
+          expect(image.getAttribute('loading')).toBe('lazy');
+        }
+      });
+    });
+  });
+
   describe('Ads', () => {
     const getBootstrapScript = () =>
       Helmet.peek().scriptTags.find(({ innerHTML }) =>
