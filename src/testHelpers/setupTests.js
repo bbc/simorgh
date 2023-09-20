@@ -1,5 +1,5 @@
-import '@testing-library/jest-dom/extend-expect';
 import colours from 'colors';
+import '@testing-library/jest-dom';
 
 // Errors
 const FAILED_PROP = 'Failed prop';

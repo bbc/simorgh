@@ -895,11 +895,12 @@
       "metadata": {
         "id": "urn:bbc:ares::article:c0g992jmmkko",
         "atiAnalytics": {
-          "categoryName": "Wedding%20of%20Prince%20Harry%20and%20Meghan%20Markle~Duchess%20of%20Sussex~Hackney~Windsor",
+          "categoryName": "Wedding+of+Prince+Harry+and+Meghan+Markle~Duchess+of+Sussex~Hackney~Windsor",
           "contentId": "urn:bbc:optimo:asset:c0g992jmmkko",
+          "contentType": "article",
           "language": "en-gb",
           "ldpThingIds": "2351f2b2-ce36-4f44-996d-c3c4f7f90eaa~803eaeb9-c0c3-4f1b-9a66-90efac3df2dc~dba7dfeb-87d3-4801-80ba-fa8be6c9555e~f94940f0-476c-4ec7-b48d-e58120bb1956",
-          "ldpThingLabels": "Wedding%20of%20Prince%20Harry%20and%20Meghan%20Markle~Duchess%20of%20Sussex~Hackney~Windsor",
+          "ldpThingLabels": "Wedding+of+Prince+Harry+and+Meghan+Markle~Duchess+of+Sussex~Hackney~Windsor",
           "nationsProducer": null,
           "pageIdentifier": "news.articles.c0g992jmmkko.page",
           "pageTitle": "Royal wedding flowers given to Hackney hospice",

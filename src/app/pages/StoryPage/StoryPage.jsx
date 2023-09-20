@@ -19,7 +19,6 @@ import CpsMetadata from '#containers/CpsMetadata';
 import headings from '#containers/Headings';
 import Timestamp from '#containers/ArticleTimestamp';
 import text from '#containers/Text';
-import Image from '#containers/Image';
 import MediaPlayer from '#containers/CpsAssetMediaPlayer';
 import Blocks from '#containers/Blocks';
 import CpsRelatedContent from '#containers/CpsRelatedContent';
@@ -40,12 +39,10 @@ import {
   getAboutTags,
 } from '#lib/utilities/parseAssetData';
 import Include from '#containers/Include';
-import AdContainer from '#containers/Ad';
-import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
-import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
+import AdContainer from '../../components/Ad';
 import { GHOST } from '../../components/ThemeProvider/palette';
 import MostRead from '../../components/MostRead';
 import ATIAnalytics from '../../components/ATIAnalytics';
@@ -55,6 +52,8 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import categoryType from './categoryMap/index';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 import Disclaimer from '../../components/Disclaimer';
+import ImageWithCaption from '../../components/ImageWithCaption';
+
 import styles from './StoryPage.styles';
 
 const MpuContainer = styled(AdContainer)`
@@ -62,7 +61,8 @@ const MpuContainer = styled(AdContainer)`
 `;
 
 const StoryPage = ({ pageData }) => {
-  const { serviceLang, lang, showRelatedTopics } = useContext(ServiceContext);
+  const { brandName, serviceLang, lang, showRelatedTopics } =
+    useContext(ServiceContext);
 
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
   const title = path(['promo', 'headlines', 'headline'], pageData);
@@ -144,22 +144,28 @@ const StoryPage = ({ pageData }) => {
   };
 
   // ads
-  const { enabled: adsEnabled } = useToggle('ads');
   const { enabled: podcastPromoEnabled } = useToggle('podcastPromo');
-  const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
   const adcampaign = path(['metadata', 'adCampaignKeyword'], pageData);
 
   /**
-   * Should we display ads? We check:
-   * 1. The CPS `allowAdvertising` field value.
-   * 2. A value local to the STY page type.
-   * - iSite toggles are handled by the Ad container.
+   * Should we display ads?:
+   * If CPS `allowAdvertising` field is true
+   *
+   * Within the ads container:
+   *  - if the value of the 'ads' toggle is true
+   *  - if showAdsBasedOnLocation is true
    */
-  const isAdsEnabled = [
-    path(['metadata', 'options', 'allowAdvertising'], pageData),
-    adsEnabled,
-    showAdsBasedOnLocation,
-  ].every(Boolean);
+  const allowAdvertising = path(
+    ['metadata', 'options', 'allowAdvertising'],
+    pageData,
+  );
+
+  // ATI
+  const { atiAnalytics } = metadata;
+  const atiData = {
+    ...atiAnalytics,
+    pageTitle: `${atiAnalytics.pageTitle} - ${brandName}`,
+  };
 
   const componentsToRender = {
     fauxHeadline,
@@ -168,7 +174,7 @@ const StoryPage = ({ pageData }) => {
     subheadline: headings,
     text,
     image: props => (
-      <Image
+      <ImageWithCaption
         {...props}
         sizes="(min-width: 1008px) 645px, 100vw"
         shouldPreload={preloadLeadImageToggle}
@@ -185,7 +191,7 @@ const StoryPage = ({ pageData }) => {
     social_embed: props => <CpsSocialEmbedContainer {...props} />,
     table: props => <CpsTable {...props} />,
     mpu: props =>
-      isAdsEnabled ? <MpuContainer {...props} slotType="mpu" /> : null,
+      allowAdvertising ? <MpuContainer {...props} slotType="mpu" /> : null,
     wsoj: props => (
       <CpsRecommendations {...props} items={recommendationsData} />
     ),
@@ -283,7 +289,7 @@ const StoryPage = ({ pageData }) => {
         aboutTags={aboutTags}
         imageLocator={indexImageLocator}
       />
-      <ATIAnalytics data={pageData} />
+      <ATIAnalytics atiData={atiData} />
       <ChartbeatAnalytics
         sectionName={pageData?.relatedContent?.section?.name}
         categoryName={pageData?.metadata?.passport?.category?.categoryName}
@@ -293,11 +299,9 @@ const StoryPage = ({ pageData }) => {
       />
       <ComscoreAnalytics />
       <NielsenAnalytics />
-      {/* dotcom and dotcomConfig need to be setup before the main dotcom javascript file is loaded */}
-      {isAdsEnabled && !isAmp && (
-        <CanonicalAdBootstrapJs adcampaign={adcampaign} />
+      {allowAdvertising && (
+        <AdContainer slotType="leaderboard" adcampaign={adcampaign} />
       )}
-      {isAdsEnabled && <AdContainer slotType="leaderboard" />}
       <StoryPageGrid
         columns={gridColumns}
         enableGelGutters

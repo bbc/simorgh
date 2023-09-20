@@ -26,7 +26,7 @@ import headings from '../../legacy/containers/Headings';
 import visuallyHiddenHeadline from '../../legacy/containers/VisuallyHiddenHeadline';
 import gist from '../../legacy/containers/Gist';
 import text from '../../legacy/containers/Text';
-import Image from '../../legacy/containers/Image';
+import ImageWithCaption from '../../components/ImageWithCaption';
 import Blocks from '../../legacy/containers/Blocks';
 import Timestamp from '../../legacy/containers/ArticleTimestamp';
 import ATIAnalytics from '../../components/ATIAnalytics';
@@ -40,6 +40,7 @@ import NielsenAnalytics from '../../legacy/containers/NielsenAnalytics';
 import ArticleMetadata from '../../legacy/containers/ArticleMetadata';
 import EmbedImages from '../../components/Embeds/EmbedImages';
 import EmbedHtml from '../../components/Embeds/EmbedHtml';
+import OEmbedLoader, { OEmbedProps } from '../../components/Embeds/OEmbed';
 
 import { OptimoBlock } from '../../models/types/optimo';
 import {
@@ -138,7 +139,7 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
         </Byline>
       ) : null,
     image: (props: ComponentToRenderProps) => (
-      <Image
+      <ImageWithCaption
         {...props}
         sizes="(min-width: 1008px) 760px, 100vw"
         shouldPreload={preloadLeadImageToggle}
@@ -149,6 +150,7 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
     social: SocialEmbedContainer,
     embedHtml: (props: EmbedHtmlProps) => <EmbedHtml {...props} />,
     embedImages: (props: ComponentToRenderProps) => <EmbedImages {...props} />,
+    oEmbed: (props: OEmbedProps) => <OEmbedLoader {...props} />,
     group: gist,
     links: (props: ComponentToRenderProps) => <ScrollablePromo {...props} />,
   };
@@ -169,15 +171,19 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
     filterForBlockType(promoImageBlocks, 'rawImage'),
   );
 
+  // ATI
+  const {
+    metadata: { atiAnalytics },
+  } = pageData;
+
   return (
     <div css={styles.pageWrapper}>
-      <ATIAnalytics data={pageData} />
+      <ATIAnalytics atiData={atiAnalytics} />
       <ChartbeatAnalytics
         categoryName={pageData?.metadata?.passport?.category?.categoryName}
         title={headline}
         taggings={taggings}
         producer={pageData?.metadata?.analyticsLabels?.producer}
-        chapter={pageData?.metadata?.atiAnalytics?.chapter}
       />
       <ComscoreAnalytics />
       <NielsenAnalytics />

@@ -28,7 +28,7 @@ import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCo
 import isListWithLink from '../../utils/isListWithLink';
 import addIndexToBlockGroups from '../../utils/sharedDataTransformers/addIndexToBlockGroups';
 
-import bffFetch from '../../article/getInitialData';
+import getArticleInitialData from '../../article/getInitialData';
 
 export const only =
   (pageTypes, transformer) =>
@@ -98,7 +98,6 @@ const getDerivedServiceAndPath = (service, pathname) => {
 };
 
 export default async ({
-  getAgent,
   path: pathname,
   service,
   variant,
@@ -112,8 +111,7 @@ export default async ({
     const {
       status,
       pageData: { secondaryColumn, recommendations, ...article },
-    } = await bffFetch({
-      getAgent,
+    } = await getArticleInitialData({
       path: derivedPath,
       service: derivedService,
       variant,

@@ -12,7 +12,8 @@ import { ServiceContext } from '../../../contexts/ServiceContext';
 import { MostReadItemWrapper, MostReadLink } from '../Canonical/Item';
 import MostReadRank from '../Canonical/Rank';
 import generateCSPHash from '../utilities/generateCSPHash';
-import { Size, Direction } from '../types';
+import { Direction } from '../../../models/types/global';
+import { Size } from '../types';
 import styles from './index.styles';
 import getRemoteDataScript from './getRemoteDataScript';
 

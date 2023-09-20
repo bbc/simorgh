@@ -2,7 +2,7 @@
 
 exports[`Canonical Articles A11y I can see the skip to content link 1`] = `"Skip to content"`;
 
-exports[`Canonical Articles Analytics ATI 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" src="https://logws1363.ati-host.net?s=598286&amp;s2=64&amp;p=news.articles.c0g992jmmkko.page&amp;x1=[urn%3Abbc%3Aoptimo%3Aasset%3Ac0g992jmmkko]&amp;x2=[responsive]&amp;x3=[news]&amp;x4=[en-gb]&amp;x7=[article]&amp;x8=[simorgh-nojs]&amp;x9=[Royal%2520wedding%2520flowers%2520given%2520to%2520Hackney%2520hospice]&amp;x11=[2019-05-28T13%3A38%3A19.412Z]&amp;x12=[2019-05-28T13%3A38%3A19.412Z]&amp;x13=[Wedding%2520of%2520Prince%2520Harry%2520and%2520Meghan%2520Markle~Duchess%2520of%2520Sussex~Hackney~Windsor]&amp;x14=[2351f2b2-ce36-4f44-996d-c3c4f7f90eaa~803eaeb9-c0c3-4f1b-9a66-90efac3df2dc~dba7dfeb-87d3-4801-80ba-fa8be6c9555e~f94940f0-476c-4ec7-b48d-e58120bb1956]&amp;x17=[Wedding%2520of%2520Prince%2520Harry%2520and%2520Meghan%2520Markle~Duchess%2520of%2520Sussex~Hackney~Windsor]"/>"`;
+exports[`Canonical Articles Analytics ATI 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" src="https://logws1363.ati-host.net?s=598286&amp;s2=64&amp;p=news.articles.c0g992jmmkko.page&amp;x1=[urn%3Abbc%3Aoptimo%3Aasset%3Ac0g992jmmkko]&amp;x2=[responsive]&amp;x3=[news]&amp;x4=[en-gb]&amp;x7=[article]&amp;x8=[simorgh-nojs]&amp;x9=[Royal%2520wedding%2520flowers%2520given%2520to%2520Hackney%2520hospice]&amp;x11=[2019-05-28T13%3A38%3A19.412Z]&amp;x12=[2019-05-28T13%3A38%3A19.412Z]&amp;x13=[Wedding%2Bof%2BPrince%2BHarry%2Band%2BMeghan%2BMarkle~Duchess%2Bof%2BSussex~Hackney~Windsor]&amp;x14=[2351f2b2-ce36-4f44-996d-c3c4f7f90eaa~803eaeb9-c0c3-4f1b-9a66-90efac3df2dc~dba7dfeb-87d3-4801-80ba-fa8be6c9555e~f94940f0-476c-4ec7-b48d-e58120bb1956]&amp;x17=[Wedding%2Bof%2BPrince%2BHarry%2Band%2BMeghan%2BMarkle~Duchess%2Bof%2BSussex~Hackney~Windsor]"/>"`;
 
 exports[`Canonical Articles Footer Anchors should match text and url 1`] = `
 {
@@ -155,11 +155,12 @@ exports[`Canonical Articles Image Caption should match text 1`] = `"Image captio
 exports[`Canonical Articles Image should match snapshot 1`] = `
 <img
   alt="Pauline Clayton"
-  class="e3vrtyk0 bbc-rb7xa0 e1mo64ex0"
+  class="bbc-1uwua2r"
   height="360"
   sizes="(min-width: 1008px) 760px, 100vw"
   src="https://ichef.bbci.co.uk/news/640/cpsdevpb/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg"
   srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg 624w, https://ichef.bbci.co.uk/news/640/cpsdevpb/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg 640w"
+  style="aspect-ratio:640 / 360"
   width="640"
 />
 `;

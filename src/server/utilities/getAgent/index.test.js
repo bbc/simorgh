@@ -6,6 +6,16 @@ jest.mock('https', () => ({
   Agent: jest.fn(),
 }));
 
+jest.mock('tls', () => ({
+  createSecureContext: jest.fn().mockReturnValue({
+    context: {
+      ca: 'someCa',
+      cert: 'someCert',
+      key: 'someKey',
+    },
+  }),
+}));
+
 jest.mock('./certs');
 
 describe('Agent', () => {
@@ -21,9 +31,14 @@ describe('Agent', () => {
     expect(getCerts).toHaveBeenCalledTimes(1);
     expect(Agent).toHaveBeenCalledTimes(1);
     expect(Agent).toHaveBeenCalledWith({
-      ca: 'someCa',
-      cert: 'someCert',
-      key: 'someKey',
+      keepAlive: true,
+      secureContext: {
+        context: {
+          ca: 'someCa',
+          cert: 'someCert',
+          key: 'someKey',
+        },
+      },
     });
   });
 });
