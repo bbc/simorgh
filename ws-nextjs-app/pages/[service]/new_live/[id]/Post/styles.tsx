@@ -2,25 +2,33 @@ import { Theme, css } from '@emotion/react';
 import pixelsToRem from '../../../../../../src/app/utilities/pixelsToRem';
 
 export default {
-  timeStamp: ({ palette, fontSizes, fontVariants, spacings }: Theme) =>
+  timeStamp: ({ palette, fontSizes, fontVariants, spacings, mq }: Theme) =>
     css({
       color: palette.WHITE,
       ...fontSizes.brevier,
       ...fontVariants.sansRegular,
       padding: `${spacings.HALF}rem ${pixelsToRem(12)}rem`,
+      backgroundColor: palette.BRAND_BACKGROUND,
+      [mq.GROUP_0_MAX_WIDTH]: {
+        width: '100%',
+      },
     }),
   postHeaderBanner: ({ palette }: Theme) =>
     css({
       alignItems: 'flex-start',
-      backgroundColor: palette.BRAND_BACKGROUND,
       display: 'flex',
-      gap: `${pixelsToRem(10)}rem`,
+      flexWrap: 'wrap',
+      boxShadow: `inset 0 ${pixelsToRem(2)}rem ${palette.BRAND_BACKGROUND}`,
     }),
-  breakingNewsLabel: ({ palette }: Theme) =>
+  breakingNewsLabel: ({ palette, mq }: Theme) =>
     css({
       color: palette.WHITE,
+      backgroundColor: palette.BRAND_BACKGROUND,
       flex: '1 0 0',
-      padding: `${pixelsToRem(4)}rem ${pixelsToRem(12)}rem`,
+      padding: `${pixelsToRem(4)}rem  ${pixelsToRem(12)}rem`,
+      [mq.GROUP_0_MAX_WIDTH]: {
+        paddingTop: '0',
+      },
     }),
   postHeadings: ({ palette }: Theme) =>
     css({
@@ -51,10 +59,13 @@ export default {
         padding: `${pixelsToRem(4)}rem 0 0`,
       },
     }),
-  postBackground: ({ palette, spacings, mq }: Theme) =>
+  postContainer: ({ palette, spacings }: Theme) =>
     css({
       backgroundColor: palette.GREY_2,
       margin: `0 0 ${spacings.DOUBLE}rem`,
+    }),
+  postBody: ({ spacings, mq }: Theme) =>
+    css({
       padding: `0 ${pixelsToRem(8)}rem ${pixelsToRem(8)}rem`,
       border: `solid ${pixelsToRem(3)}rem transparent`,
       [mq.GROUP_2_MIN_WIDTH]: {

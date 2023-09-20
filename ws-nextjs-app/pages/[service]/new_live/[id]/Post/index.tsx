@@ -43,21 +43,14 @@ const PostBreakingNewsLabel = ({
 const PostHeaderBanner = ({
   isBreakingNews,
   breakingNewsLabelText,
-  curated,
+  timestamp: curated,
 }: {
   isBreakingNews: boolean;
   breakingNewsLabelText?: string;
-  curated: string;
+  timestamp: string;
 }) => {
-  const {
-    timezone,
-    locale,
-    altCalendar,
-    service,
-    articleTimestampPrefix,
-    articleTimestampSuffix,
-    script,
-  } = useContext(ServiceContext);
+  const { timezone, locale, altCalendar, service, script } =
+    useContext(ServiceContext);
 
   const isRelative = isTenHoursAgo(new Date(curated).getTime());
 
@@ -66,12 +59,11 @@ const PostHeaderBanner = ({
       <TimeStampContainer
         css={styles.timeStamp}
         timestamp={curated}
-        dateTimeFormat="YYYY-MM-DD"
+        dateTimeFormat="DD MMMM YYYY"
+        format="DD MMMM YYYY"
         locale={locale}
         timezone={timezone}
         service={service}
-        prefix={articleTimestampPrefix}
-        suffix={articleTimestampSuffix}
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-expect-error
         script={script}
@@ -162,12 +154,12 @@ const Post = ({ post }: { post: PostType }) => {
   );
 
   const isBreakingNews = pathOr(false, ['options', 'isBreakingNews'], post);
-  const curated = pathOr('', ['dates', 'curated'], post);
+  const timestamp = pathOr('', ['dates', 'curated'], post);
 
   return (
-    <>
-      <PostHeaderBanner isBreakingNews={isBreakingNews} curated={curated} />
-      <div css={styles.postBackground}>
+    <div css={styles.postContainer}>
+      <PostHeaderBanner isBreakingNews={isBreakingNews} timestamp={timestamp} />
+      <div css={styles.postBody}>
         <Heading level={3}>
           {/* eslint-disable-next-line jsx-a11y/aria-role */}
           <span role="text">
@@ -178,7 +170,7 @@ const Post = ({ post }: { post: PostType }) => {
         </Heading>
         <PostContent contentBlocks={contentBlocks} />
       </div>
-    </>
+    </div>
   );
 };
 

@@ -36,9 +36,7 @@ describe('Post', () => {
       });
 
       const time = container.querySelector('time');
-      expect(time?.textContent).toEqual(
-        'New Informate 28th April 2023, 11:33 WAT',
-      );
+      expect(time?.textContent).toEqual('28 April 2023');
     });
 
     it('Shows timestamp as a relative time for articles under 10 hours old.', async () => {
@@ -59,7 +57,7 @@ describe('Post', () => {
         });
       });
       const time = container.querySelector('time');
-      expect(time?.textContent).toEqual('New Informate 2 minutes wey don pass');
+      expect(time?.textContent).toEqual('2 minutes wey don pass');
     });
   });
   describe('Header', () => {
