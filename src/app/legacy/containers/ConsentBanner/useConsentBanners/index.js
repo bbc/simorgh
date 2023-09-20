@@ -11,6 +11,7 @@ const EXPLICIT_COOKIE_ACCEPTED_VALUES = ['1', '2'];
 const POLICY_ACCEPTED = '111';
 const POLICY_REJECTED = '000';
 const COOKIE_BANNER_EXPLICIT_CHOICE_MADE = '1';
+const COOKIE_BANNER_EXPLICIT_CHOICE_MADE_NON_UK = '2';
 const PRIVACY_COOKIE_CURRENT_VALUE = 'july2019';
 const PRIVACY_COOKIE_LEGACY_VALUES = ['0', '1'];
 const SHOW_PRIVACY_BANNER = 'SHOW_PRIVACY_BANNER';
@@ -98,14 +99,16 @@ const setUserDidAcceptPolicy = () =>
     explicit: true,
   });
 
-const setUserDidDismissCookieBanner = () =>
+const setUserDidDismissCookieBanner = isUK =>
   setCookie({
     name: EXPLICIT_COOKIE,
-    value: COOKIE_BANNER_EXPLICIT_CHOICE_MADE,
+    value: isUK
+      ? COOKIE_BANNER_EXPLICIT_CHOICE_MADE
+      : COOKIE_BANNER_EXPLICIT_CHOICE_MADE_NON_UK,
     sameSite: SAME_SITE_VALUE,
   });
 
-const useConsentBanner = () => {
+const useConsentBanner = (isUK = false) => {
   const [{ showPrivacyBanner, showCookieBanner }, dispatch] = useReducer(
     bannerReducer,
     initialState,
@@ -144,13 +147,13 @@ const useConsentBanner = () => {
 
   const handleCookieBannerAccepted = () => {
     dispatch(HIDE_COOKIE_BANNER);
-    setUserDidDismissCookieBanner();
+    setUserDidDismissCookieBanner(isUK);
     setUserDidAcceptPolicy();
   };
 
   const handleCookieBannerRejected = () => {
     dispatch(HIDE_COOKIE_BANNER);
-    setUserDidDismissCookieBanner();
+    setUserDidDismissCookieBanner(isUK);
   };
 
   return {
