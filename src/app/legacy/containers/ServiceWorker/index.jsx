@@ -31,17 +31,14 @@ const ServiceWorkerContainer = () => {
 
   useEffect(() => {
     const shouldInstallServiceWorker =
-      process.env.SIMORGH_APP_ENV !== 'local' &&
-      swPath &&
-      onClient() &&
-      'serviceWorker' in navigator;
+      swPath && onClient() && 'serviceWorker' in navigator;
 
     if (shouldInstallServiceWorker) {
       navigator.serviceWorker.register(`/${service}${swPath}`);
     }
   }, [envIsProduction, swPath, service]);
 
-  return isAmp && swPath && process.env.SIMORGH_APP_ENV !== 'local' ? (
+  return isAmp && swPath ? (
     <>
       <AmpHead />
       <AmpServiceWorker canonicalLink={canonicalLink} swSrc={swSrc} />
