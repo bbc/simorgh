@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import onClient from '#lib/utilities/onClient';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '../../../contexts/ServiceContext';
+import isLocal from '#app/lib/utilities/isLocal';
 
 const AmpHead = () => (
   <Helmet>
@@ -38,7 +39,7 @@ const ServiceWorkerContainer = () => {
     }
   }, [envIsProduction, swPath, service]);
 
-  return isAmp && swPath ? (
+  return isAmp && swPath && isLocal() ? (
     <>
       <AmpHead />
       <AmpServiceWorker canonicalLink={canonicalLink} swSrc={swSrc} />
