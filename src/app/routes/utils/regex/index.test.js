@@ -568,7 +568,9 @@ describe('frontPage -> homePage migration', () => {
     'sinhala',
     'somali',
     'tamil',
+    'telugu',
     'tigrinya',
+    'urdu',
     'yoruba',
   ];
   const migratedWorldServiceRoutes = migratedServices.map(serviceToRoute);
