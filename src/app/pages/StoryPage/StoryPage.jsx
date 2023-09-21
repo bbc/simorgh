@@ -19,7 +19,6 @@ import CpsMetadata from '#containers/CpsMetadata';
 import headings from '#containers/Headings';
 import Timestamp from '#containers/ArticleTimestamp';
 import text from '#containers/Text';
-import Image from '#containers/Image';
 import MediaPlayer from '#containers/CpsAssetMediaPlayer';
 import Blocks from '#containers/Blocks';
 import CpsRelatedContent from '#containers/CpsRelatedContent';
@@ -53,6 +52,8 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import categoryType from './categoryMap/index';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 import Disclaimer from '../../components/Disclaimer';
+import ImageWithCaption from '../../components/ImageWithCaption';
+
 import styles from './StoryPage.styles';
 
 const MpuContainer = styled(AdContainer)`
@@ -173,7 +174,7 @@ const StoryPage = ({ pageData }) => {
     subheadline: headings,
     text,
     image: props => (
-      <Image
+      <ImageWithCaption
         {...props}
         sizes="(min-width: 1008px) 645px, 100vw"
         shouldPreload={preloadLeadImageToggle}
