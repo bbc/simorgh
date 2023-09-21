@@ -150,7 +150,7 @@ export const service: DefaultServiceConfig = {
                   'Баракча тез жүктөлүшү үчүн сизден уруксат албай туруп телефонуңузга маалымат сакталат.',
                 para4: {
                   text: 'Баракча тез жүктөлүшү үчүн кандай маалымат сакталып жатканы тууралуу кеңири маалымат алыңыз.',
-                  url: 'https://www.bbc.com/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
                 },
                 para5:
                   'Ылайыктуу контент тууралуу маалымат телефонуңузда сакталат.',

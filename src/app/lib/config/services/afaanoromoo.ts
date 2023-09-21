@@ -159,7 +159,7 @@ export const service: DefaultServiceConfig = {
                   "Marsariitiin keenya akka hojjatu taasisuuf, fedhii keessan malee odeeffannoo waa'ee meeshaa itti fayyadamtanii muraasa ni olkeenya.",
                 para4: {
                   text: 'Marsariitiin keenyaa akka hojjatuuf odeeffannoo murteessoo meeshaa itti fayyadamtanii nuti olkeenyuu irratti caalaa dubbisaa.',
-                  url: 'https://www.bbc.com/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
                 },
                 para5:
                   "Filannoo fedhii keessaanii meeshaa keessan irratti olkaa'uuf kuusaa naannootti fayyadamna.",

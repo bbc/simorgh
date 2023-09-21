@@ -155,7 +155,7 @@ export const service: DefaultServiceConfig = {
                   '홈페이지를 가동하기 위해 사용자의 동의 없이 기기의 정보를 제한적으로 저장합니다.',
                 para4: {
                   text: '홈페이지를 가동하기 위해 사용자 기기에서 저장하는 필수적인 정보에 대해 더 읽어보기',
-                  url: 'https://www.bbc.com/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
                 },
                 para5:
                   '사용자의 정보 수집 동의 여부는 로컬 스토리지에 저장됩니다.',

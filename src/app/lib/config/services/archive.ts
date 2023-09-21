@@ -136,7 +136,7 @@ export const service: DefaultServiceConfig = {
                   'To make our web pages work, we store some limited information on your device without your consent.',
                 para4: {
                   text: 'Read more about the essential information we store on your device to make our web pages work.',
-                  url: 'https://www.bbc.com/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
                 },
                 para5:
                   'We use local storage to store your consent preferences on your device.',

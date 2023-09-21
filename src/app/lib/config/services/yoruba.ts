@@ -148,7 +148,7 @@ export const service: DefaultServiceConfig = {
                   'Ki oju opo wa ba a le ṣiṣẹ, a ma n fi awọn akọsilẹ kan pamọ lori foonu rẹ, lai gba aṣẹ lọwọ rẹ.',
                 para4: {
                   text: 'Ka si nipa awọn akọsilẹ to sẹ koko ti a fi pamọ si ori foonu rẹ, ki oju opo wa le ṣiṣẹ.',
-                  url: 'https://www.bbc.com/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
                 },
                 para5:
                   'A n lo aaye labẹle, lati fi awsn nakn ti o fọwọ si, lori foonu rẹ.',

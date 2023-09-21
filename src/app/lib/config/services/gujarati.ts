@@ -157,7 +157,7 @@ export const service: DefaultServiceConfig = {
                   'અમારી વેબસાઇટને યોગ્ય રીતે કાર્યરત રાખવા માટે સીમિત સ્તરે કેટલીક જાણકારીઓ સેવ કરવી પડે છે જેના માટે અમે આપની મંજૂરી નથી માગતા.',
                 para4: {
                   text: 'એ જરૂરી જાણકારીઓ વિશે વધારે વાંચો જે અમે આપની ડિવાઇસ પર સ્ટોર કર્યું છે જેથી અમારું પેજ આપને યોગ્ય રીતે દેખાય.',
-                  url: 'https://www.bbc.com/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
                 },
                 para5:
                   'અમે આપની મંજૂરી અને પસંદગીઓને આપની ડિવાઇસના લોકલ સ્ટોરેજમાં સ્ટોર કરીએ છીએ.',
