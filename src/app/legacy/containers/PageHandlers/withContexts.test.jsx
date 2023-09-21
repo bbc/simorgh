@@ -65,6 +65,7 @@ describe('withContexts HOC', () => {
       },
     },
     mvtExperiments: [{ experimentName: 'foo', variation: 'bar' }],
+    isUK: true,
   };
 
   shouldMatchSnapshot(

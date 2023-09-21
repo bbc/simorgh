@@ -253,6 +253,7 @@ exports[`AMP Articles Image should match snapshot 1`] = `
 <amp-img
   alt="Pauline Clayton"
   attribution="St Joseph's Hospice"
+  class="bbc-image"
   data-hero="true"
   fallback=""
   height="360"

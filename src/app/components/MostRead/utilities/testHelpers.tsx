@@ -6,9 +6,9 @@ import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import latin from '../../ThemeProvider/fontScripts/latin';
 import { MostReadItemWrapper, MostReadLink } from '../Canonical/Item';
 import MostReadRank from '../Canonical/Rank';
-import { Services } from '../../../models/types/global';
+import { Services, Direction } from '../../../models/types/global';
 import { TypographyScript } from '../../../models/types/theming';
-import { Direction, MostReadBaseProps, MostReadData, Size } from '../types';
+import { MostReadBaseProps, MostReadData, Size } from '../types';
 
 const lastUpdated = ({
   script,
