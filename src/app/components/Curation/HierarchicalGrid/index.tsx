@@ -61,7 +61,7 @@ const HiearchicalGrid = ({
           const lazyLoadImages = !(isFirstPromo && isFirstCuration);
 
           const fetchPriorityImages =
-            isFirstPromo && isFirstCuration ? 'high' : undefined;
+            isFirstPromo && isFirstCuration ? 'high' : 'auto';
 
           const showDuration =
             promo.duration && ['video', 'audio'].includes(promo.type);
