@@ -160,6 +160,7 @@ const Post = ({ post }: { post: PostType }) => {
   return (
     <div css={styles.postContainer}>
       <div css={styles.postBackground}>
+      <PostHeaderBanner isBreakingNews={isBreakingNews} timestamp={timestamp} />
         <Heading level={3}>
           {/* eslint-disable-next-line jsx-a11y/aria-role */}
           <span role="text">
