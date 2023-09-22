@@ -110,4 +110,18 @@ describe('MostReadList', () => {
     );
     expect(container).toMatchSnapshot();
   });
+  it('should render burmese most read with a one column layout', () => {
+    const { container } = render(
+      <MostReadList numberOfItems={5}>
+        {getItemWrapperArray({
+          numberOfItems: 5,
+          service: 'burmese',
+          dir: 'ltr',
+          size: 'default',
+        })}
+      </MostReadList>,
+      { service: 'burmese' },
+    );
+    expect(container).toMatchSnapshot();
+  });
 });
