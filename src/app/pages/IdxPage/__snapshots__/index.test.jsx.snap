@@ -2979,6 +2979,10 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   }
 }
 
+.emotion-908 {
+  padding-top: 0.5rem;
+}
+
 <div>
   <noscript />
   <div>
@@ -5817,6 +5821,16 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   >
                     «ویرانگر دنیاها»؛ رابرت اوپنهایمر واقعی که بود؟
                   </a>
+                  <div
+                    class="emotion-908"
+                  >
+                    <time
+                      class="emotion-42 emotion-43"
+                      datetime="2023-07-23"
+                    >
+                      به روز شده در ۲۳ ژوئیه ۲۰۲۳
+                    </time>
+                  </div>
                 </div>
               </div>
             </li>

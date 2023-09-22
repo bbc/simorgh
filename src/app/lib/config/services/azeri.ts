@@ -127,7 +127,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'OK',
           reject: 'Nəyin dəyişdiyini öyrənin',
-          rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
         },
         cookie: {
           amp: {
@@ -140,7 +140,7 @@ export const service: DefaultServiceConfig = {
                 linkText: 'kukilər',
                 last: ' kimi texnologiyalardan istifadə edərək sizə ən yaxşı onlayn təcrübəni vermək, məzmunu və reklamları sizə uyğunlaşdırmaq üçün brauzerinizdən axtarış məlumatlarını toplayırıq. Buna razı olduğunuzu, lütfən, bizə bildirin.',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               manage: 'Seçimlərimi idarə edin',
             },
@@ -156,7 +156,7 @@ export const service: DefaultServiceConfig = {
                   'Veb səhifələrimizin işləməsi üçün bəzi məhdud məlumatları razılığınız olmadan cihazınızda saxlayırıq.',
                 para4: {
                   text: 'Veb səhifələrimizin işləməsi üçün cihazınızda saxladığımız lazımi məlumatlar haqqında daha ətraflı oxuyun.',
-                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
                 },
                 para5:
                   'Seçim üstünlüklərinizi cihazınızda saxlamaq üçün lokal yaddaşdan istifadə edirik.',
@@ -189,13 +189,13 @@ export const service: DefaultServiceConfig = {
                 linkText: 'kukilərdən',
                 last: ' sizə ən yaxşı onlayn təcrübəni vermək üçün istifadə edirik. Lütfən, bütün bu kukilərlə razı olduğunuzu bizə bildirin.',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
             },
             accept: 'Bəli, razıyam',
             reject: 'Xeyr, kökləmələrə keçin',
             rejectUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+              'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           },
         },
       },

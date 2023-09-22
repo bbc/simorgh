@@ -126,7 +126,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'OK',
           reject: 'Tìm hiểu các thay đổi',
-          rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
         },
         cookie: {
           amp: {
@@ -140,7 +140,7 @@ export const service: DefaultServiceConfig = {
                 linkText: 'cookie',
                 last: ', và thu thập dữ liệu browsing để cho bạn trải nghiệm online tốt nhất và cá nhân hóa nội dung và quảng cáo cho bạn. Xin cho chúng tôi biết bạn có đồng ý không.',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               manage: 'Quản lý cài đặt của tôi',
             },
@@ -156,7 +156,7 @@ export const service: DefaultServiceConfig = {
                   'Để làm cho các trang web của chúng tôi hoạt động, chúng tôi lưu trữ một số thông tin hạn chế trên thiết bị của bạn mà không có sự đồng ý của bạn.',
                 para4: {
                   text: 'Đọc thêm về thông tin cần thiết mà chúng tôi lưu trữ trên thiết bị của bạn để làm cho các trang web của chúng tôi hoạt động.',
-                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
                 },
                 para5:
                   'Chúng tôi sử dụng bộ nhớ cục bộ để lưu trữ các tùy chọn đồng ý của bạn trên thiết bị của bạn.',
@@ -189,13 +189,13 @@ export const service: DefaultServiceConfig = {
                 linkText: 'cookie',
                 last: ' để cho bạn trải nghiệm online tốt nhất. Cho chúng tôi biết bạn đồng ý về mọi cookie này.',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
             },
             accept: 'Vâng, tôi đồng ý',
             reject: 'Không, đưa tôi xem phần Settings',
             rejectUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+              'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           },
         },
       },
