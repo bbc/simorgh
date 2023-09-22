@@ -2,22 +2,47 @@
 const { exec } = require('child_process');
 const fs = require('fs');
 const fetch = require('node-fetch');
+const dotenv = require('dotenv').config();
 const { dependencies, devDependencies } = require('../package.json');
 
 const allDependencies = { ...dependencies, ...devDependencies };
-const depenencyTable = [];
+const dependencyTable = [];
+const dateNow = new Date().getTime();
 const datediff = (first, second) =>
   Math.round((second - first) / (1000 * 60 * 60 * 24));
-const dateNow = new Date().getTime();
-const target = Object.keys(allDependencies).length;
-const downloadsBaseUrl = 'https://api.npmjs.org/downloads/point/last-week/';
+const gitToken = dotenv.parsed.GIT_TOKEN || false;
 
-const fetchResponse = async link => {
-  const fetchStatus = await fetch(link, { timeout: 20000 });
-  return fetchStatus;
+const getRemoteGitFile = async gitDepUrl => {
+  let url = `https://api.github.com/repos/${gitDepUrl}/contents/package.json`;
+  if (url.includes('/tree/')) {
+    url = url
+      .replace(/\/tree\/[^\/]+\//, '/contents/')
+      .replace('//contents/', '/')
+      .replace('/contents/package.json', '/package.json');
+  }
+
+  return await fetch(url, {
+    method: 'GET',
+    headers: {
+      Authorization: `token ${gitToken}`,
+      Accept: 'application/vnd.github.v3.raw',
+    },
+  }).then(res => {
+    if (res.status === 200) {
+      return res.json().then(data => {
+        if (!data.type) {
+          return 'commonjs';
+        } else if (data.type) {
+          return data.type;
+        }
+        return false;
+      });
+    } else {
+      return 'error';
+    }
+  });
 };
 
-// A lot of this function feels clunky. I'm sure there's a better way of doing this.
 const dealWithCaretsAndTildes = (versionString, timeJson) => {
   const plainVersion = versionString.match(/^[\d\.]+$/g);
   if (plainVersion) {
@@ -51,75 +76,86 @@ const dealWithCaretsAndTildes = (versionString, timeJson) => {
   return versionToReturn;
 };
 
-const collectResults = async ({ dep, modifiedDate, ourFreshness }) => {
-  console.log(`Checking ${dep} for download count`);
-  await fetchResponse(downloadsBaseUrl + dep).then(response => {
-    console.log(`Received download count data for ${dep}`);
-    const responseJson = response.json().then(json => {
-      depenencyTable.push({
-        name: dep,
-        freshness: datediff(modifiedDate.getTime(), dateNow),
-        ourfreshness: ourFreshness,
-        weeklyDownloads: json.downloads,
-      });
-      if (depenencyTable.length === target) {
-        let csvContents =
-          'dependency,Days since last activity,Freshness of our version in days,Downloads Last Week';
-        depenencyTable.forEach(
-          ({ name, freshness, ourfreshness, weeklyDownloads }) => {
-            csvContents += `\n${name},${freshness},${ourfreshness},${weeklyDownloads}`;
-          },
-        );
-        fs.writeFileSync('./esmDependencyTable.csv', csvContents);
-      }
-    });
-  });
+const getRepoFromNpmData = npmData => {
+  if (
+    npmData.hasOwnProperty('repository') &&
+    npmData.repository.hasOwnProperty('url')
+  ) {
+    return npmData.repository.url;
+  } else if (npmData.hasOwnProperty('repository')) {
+    return npmData.repository;
+  }
+  return npmData.url || npmData.homepage;
 };
 
 Object.keys(allDependencies).forEach((dep, i) => {
-  console.log(`Checking ${dep} for last modified date`);
-  if (dep === 'chalk') {
-    const cmd = exec(
-      `npm view ${dep} repository --json`,
-      (err, stdout, stderr) => {
-        if (err) {
-          console.error(err);
-        }
-
+  if (gitToken) {
+    let gitRepo;
+    const cmd = exec(`npm view ${dep} --json`, (err, stdout, stderr) => {
+      if (err) {
+        console.error(err);
+      }
+      if (stdout) {
         const depRepository = JSON.parse(stdout);
-        let gitDepUrl = depRepository.url;
-        console.log(gitDepUrl);
-        gitDepUrl = gitDepUrl.replace(
-          /^git\+https:\/\/github.com\/|\.git$/g,
-          '',
+        const modifiedDate = new Date(depRepository.time.modified);
+
+        const ourVersion = dealWithCaretsAndTildes(
+          allDependencies[dep],
+          stdout,
         );
-        console.log(gitDepUrl);
 
-        const gitDepUrlRaw = `https://raw.githubusercontent.com/${gitDepUrl}/main/package.json`;
-        console.log(gitDepUrlRaw);
-        const depJson = fetchResponse(gitDepUrlRaw).then(response => {
-          console.log(response);
-          const responseJson = response.json().then(json => {
-            if (json.type === 'module') {
-              console.log(json.name);
-            }
-            console.log(json);
+        const dateOfOurVersion = new Date(depRepository.time[ourVersion]);
+
+        const ourFreshnessInDays = datediff(
+          dateOfOurVersion.getTime(),
+          dateNow,
+        );
+
+        gitRepo = getRepoFromNpmData(depRepository);
+        if (gitRepo) {
+          gitRepo = gitRepo.replace(
+            /^(?:git)?(?:\+)?(https|ssh)?:\/\/(?:git@)?github.com\/|\.git(?:#?.*)$/g,
+            '',
+          );
+          const remoteGitFile = getRemoteGitFile(gitRepo).then(
+            gitDepModuleType => {
+              dependencyTable.push({
+                name: dep,
+                type: gitDepModuleType,
+                mostRecentVersion: modifiedDate,
+                ourVersion: dateOfOurVersion,
+                ourFreshnessInDays,
+              });
+            },
+          );
+        } else {
+          console.error(
+            `dep ${dep} has no public repo so we're reading from local`,
+          );
+          const depRepository = JSON.parse(
+            fs.readFileSync(`./node_modules/${dep}/package.json`),
+          );
+          const depType = depRepository.type ? depRepository.type : 'commonjs';
+          dependencyTable.push({
+            name: dep,
+            type: depType,
+            mostRecentVersion: modifiedDate,
+            ourVersion: dateOfOurVersion,
+            ourFreshnessInDays,
           });
-        });
+        }
+      } else {
+        console.log('no stdout', dep, stdout);
+      }
 
-        // const modifiedDate = new Date(stdoutJson.modified);
-        // const ourVersion = dealWithCaretsAndTildes(
-        //   allDependencies[dep],
-        //   stdoutJson,
-        // );
-        // const dateOfOurVersion = new Date(stdoutJson[ourVersion]);
-        // const ourFreshness = datediff(dateOfOurVersion.getTime(), dateNow);
-        // collectResults({
-        //   dep,
-        //   modifiedDate,
-        //   ourFreshness,
-        // });
-      },
-    );
+      let csvContents =
+        'Dependency,Type, Most Recent Version, Our Version, Our Version Freshness in Days';
+      dependencyTable.forEach(
+        ({ name, type, mostRecentVersion, ourVersion, ourFreshnessInDays }) => {
+          csvContents += `\n${name},${type},${mostRecentVersion},${ourVersion},${ourFreshnessInDays}`;
+        },
+      );
+      fs.writeFileSync('./esmDependencyTable.csv', csvContents);
+    });
   }
 });
