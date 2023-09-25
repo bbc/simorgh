@@ -263,7 +263,7 @@ export const service: DefaultServiceConfig = {
         linkText: 'View the full version of the page to see all the content.',
       },
       topStoriesTitle: 'मोठ्या बातम्या',
-      featuresAnalysisTitle: 'Features',
+      featuresAnalysisTitle: 'बीबीसी मराठी स्पेशल',
       latestMediaTitle: 'नवीनतम',
     },
     mostRead: {
