@@ -5,6 +5,7 @@ export interface Promo extends Summary {
   duration?: string | number;
   lazy?: boolean;
   headingLevel?: number;
+  fetchpriority: 'high' | 'auto';
 }
 
 export interface CurationGridProps {
