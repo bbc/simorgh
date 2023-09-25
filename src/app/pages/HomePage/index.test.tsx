@@ -141,7 +141,7 @@ describe('Home Page', () => {
         }
       });
     });
-    it('Only the first image on a homepage has Fetch Priority set to HIGH ', () => {
+    it('Only the first image on a homepage has Fetch Priority set to high ', () => {
       render(<HomePage pageData={homePageData} />, {
         service: 'kyrgyz',
       });
