@@ -10,7 +10,7 @@ const withClickHandler = (Component, clickHandler) => props =>
   <Component {...props} onClick={clickHandler} />;
 
 const BulletedListItemContainer = ({ blocks, onClick }) => {
-  const contentBlocks = blocks.map(block => block.model.blocks).flat();
+  const contentBlocks = blocks.map(block => block.model.blocks || block).flat();
 
   return (
     <BulletedListItem>

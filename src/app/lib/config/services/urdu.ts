@@ -143,7 +143,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'اوکے',
           reject: 'جانیے کہ تبدیلیاں کیا ہیں',
-          rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
         },
         cookie: {
           amp: {
@@ -157,7 +157,7 @@ export const service: DefaultServiceConfig = {
                 linkText: 'کوکیز',
                 last: ' استعمال کرتے ہوئے براؤزنگ ڈیٹا جمع کرتے ہیں تاکہ آپ کو بہترین آن لائن تجربہ دے سکیں اور مواد اور اشتہارات کو آپ کے لیے مخصوص بنا سکیں۔ ہمیں بتائیے کہ آپ کو اس پر کوئی اعتراض تو نہیں۔',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               manage: 'اپنی سیٹنگز کو ترتیب دیجیے',
             },
@@ -174,7 +174,7 @@ export const service: DefaultServiceConfig = {
                   'اپنے ویب صفحات کو جاری رکھنے کے لیے ہم آپ کی رضامندی کے بغیر آپ کے ڈیوائس پر موجود کچھ محدود معلومات محفوظ کرتے ہیں۔',
                 para4: {
                   text: 'ان محدود معلومات کے بارے میں پڑھیے جو ہم اپنے ویب صفحات کو جاری رکھنے کے لیے محفوظ کرتے ہیں۔',
-                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
                 },
                 para5:
                   'ہم آپ کے ڈیوائس  پر آپ کی رضامندی کی ترجیحات کو محفوظ کرنے کے لیے مقامی سٹوریج کا استعمال کرتے ہیں۔',
@@ -207,13 +207,13 @@ export const service: DefaultServiceConfig = {
                 linkText: 'کوکیز',
                 last: ' استعمال کرتے ہیں۔ برائے مہربانی ہمیں بتائیں کہ آپ ان تمام کوکیز کے استعمال سے متفق ہیں',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
             },
             accept: 'میں متفق ہوں',
             reject: 'نہیں، مجھے سیٹنگز میں لے جائیں',
             rejectUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+              'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           },
         },
       },
@@ -339,10 +339,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'پاکستان',
         url: '/urdu/topics/cjgn7n9zzq7t',
-      },
-      {
-        title: 'الیکشن 2023',
-        url: '/urdu/topics/cynd7qxprq0t',
       },
       {
         title: 'آس پاس',

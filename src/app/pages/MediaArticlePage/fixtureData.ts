@@ -315,6 +315,19 @@ const pidginPageData = {
     },
   },
   metadata: {
+    atiAnalytics: {
+      categoryName: null,
+      contentId: 'urn:bbc:optimo:asset:cvpde7nqj92o',
+      contentType: 'article-sfv',
+      language: 'pcm',
+      ldpThingIds: null,
+      ldpThingLabels: null,
+      nationsProducer: null,
+      pageIdentifier: 'pidgin.articles.cvpde7nqj92o.page',
+      pageTitle: 'WS Media First page (1)',
+      timePublished: '2023-01-17T14:03:06.410Z',
+      timeUpdated: '2023-01-17T14:15:57.894Z',
+    },
     id: 'urn:bbc:ares::article:cvpde7nqj92o',
     locators: {
       optimoUrn: 'urn:bbc:optimo:asset:cvpde7nqj92o',

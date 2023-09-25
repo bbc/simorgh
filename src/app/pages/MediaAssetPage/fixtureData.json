@@ -3,8 +3,37 @@
     "firstPublished": 1568388704000,
     "lastPublished": 1574252665000,
     "lastUpdated": 1574252675611,
+    "atiAnalytics": {
+      "campaigns": [
+        {
+          "campaignId": "5ad8625ac93a9f000eecb253",
+          "campaignName": "Inspire me"
+        },
+        {
+          "campaignId": "5ad86285c93a9f000eecb256",
+          "campaignName": "Give me perspective"
+        },
+        {
+          "campaignId": "5ad86291c93a9f000eecb257",
+          "campaignName": "Keep me on trend"
+        }
+      ],
+      "categoryName": "Opinion",
+      "contentId": "urn:bbc:cps:curie:asset:5679389a-3ea6-0b40-9de4-f4d33d6bcd9f",
+      "contentType": "article-media-asset",
+      "language": "pcm",
+      "ldpThingIds": null,
+      "ldpThingLabels": null,
+      "pageIdentifier": "pidgin.media_asset.23248703.page",
+      "pageTitle": "Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh & < >",
+      "producerId": null,
+      "timePublished": "2019-09-13T15:31:44.000Z",
+      "timeUpdated": "2020-06-10T14:24:07.000Z",
+      "producerName": "PIDGIN"
+    },
     "analyticsLabels": {
       "counterName": "pidgin.media_asset.23248703.page",
+      "contentId": "urn:bbc:cps:curie:asset:5679389a-3ea6-0b40-9de4-f4d33d6bcd9f",
       "cps_asset_id": "23248703",
       "cps_asset_type": "map"
     },
