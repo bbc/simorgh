@@ -32,6 +32,12 @@ interface PageDataParams extends ParsedUrlQuery {
 
 const logger = nodeLogger(__filename);
 
+const isValidPage = (page: string) => {
+  const parsedPageNumber = parseInt(page, 10);
+
+  return parsedPageNumber >= 1 && parsedPageNumber <= 40;
+};
+
 const getPageData = async ({
   id,
   page,
@@ -96,10 +102,25 @@ export const getServerSideProps: GetServerSideProps = async context => {
     service,
     variant,
     // renderer_env: rendererEnv,
-    page,
+    page = '1',
   } = context.query as PageDataParams;
 
   const { headers: reqHeaders } = context.req;
+
+  if (!isValidPage(page)) {
+    context.res.statusCode = 404;
+    return {
+      props: {
+        bbcOrigin: reqHeaders['bbc-origin'] || null,
+        isNextJs: true,
+        service,
+        status: 404,
+        timeOnServer: Date.now(),
+        variant: variant?.[0] || null,
+        ...extractHeaders(reqHeaders),
+      },
+    };
+  }
 
   logger.info(SERVER_SIDE_RENDER_REQUEST_RECEIVED, {
     url: context.resolvedUrl,
