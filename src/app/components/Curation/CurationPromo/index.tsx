@@ -20,6 +20,7 @@ const CurationPromo = ({
   type,
   duration: mediaDuration,
   headingLevel = 2,
+  fetchpriority,
 }: CurationPromoProps) => {
   const { isAmp } = useContext(RequestContext);
   const { translations } = useContext(ServiceContext);
@@ -44,7 +45,13 @@ const CurationPromo = ({
 
   return (
     <Promo>
-      <Promo.Image src={imageUrl} alt={imageAlt} lazyLoad={lazy} isAmp={isAmp}>
+      <Promo.Image
+        src={imageUrl}
+        alt={imageAlt}
+        lazyLoad={lazy}
+        isAmp={isAmp}
+        fetchpriority={fetchpriority}
+      >
         <Promo.MediaIcon type={type}>
           {showDuration ? mediaDuration : ''}
         </Promo.MediaIcon>

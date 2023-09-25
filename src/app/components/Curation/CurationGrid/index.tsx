@@ -22,6 +22,8 @@ const CurationGrid = ({
           {promos.map((promo, index) => {
             const isFirstPromo = index === 0;
             const lazyLoadImages = !(isFirstPromo && isFirstCuration);
+            const fetchPriority =
+              isFirstPromo && isFirstCuration ? 'high' : 'auto';
 
             return (
               <li css={styles.item} key={promo.id}>
@@ -29,6 +31,7 @@ const CurationGrid = ({
                   {...promo}
                   headingLevel={headingLevel}
                   lazy={lazyLoadImages}
+                  fetchpriority={fetchPriority}
                 />
               </li>
             );
