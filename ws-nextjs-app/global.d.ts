@@ -23,8 +23,13 @@ declare namespace JSX {
     imagesrcset?: string;
     imagesizes?: string;
   }
+
+  interface ImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
+    fetchpriority?: string;
+  }
   interface IntrinsicElements {
     'amp-img': AmpImgProps;
     link: LinkProps;
+    img: ImageProps;
   }
 }
