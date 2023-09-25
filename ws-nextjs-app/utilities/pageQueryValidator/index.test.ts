@@ -4,8 +4,8 @@ describe('Query Validator', () => {
   it.each([
     ['-1', false],
     ['1', true],
-    ['40', true],
-    ['41', false],
+    ['50', true],
+    ['51', false],
   ])(
     'should evaluate a page number %s to %s',
     (pageNumber, expectedValidationResult) => {
