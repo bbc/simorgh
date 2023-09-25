@@ -60,7 +60,7 @@ const HiearchicalGrid = ({
 
           const lazyLoadImages = !(isFirstPromo && isFirstCuration);
 
-          const fetchPriorityImages =
+          const fetchPriority =
             isFirstPromo && isFirstCuration ? 'high' : 'auto';
 
           const showDuration =
@@ -87,7 +87,7 @@ const HiearchicalGrid = ({
                   src={promo.imageUrl || ''}
                   alt={promo.imageAlt}
                   lazyLoad={lazyLoadImages}
-                  fetchpriority={fetchPriorityImages}
+                  fetchpriority={fetchPriority}
                   isAmp={isAmp}
                 >
                   <Promo.MediaIcon type={promo.type}>
