@@ -247,7 +247,7 @@ export const service: DefaultServiceConfig = {
         linkText: 'View the full version of the page to see all the content.',
       },
       topStoriesTitle: 'প্রধান খবর',
-      featuresAnalysisTitle: 'চিঠিপত্র ও মতামত',
+      featuresAnalysisTitle: 'নির্বাচিত খবর',
       latestMediaTitle: 'সর্বশেষ',
     },
     mostRead: {
@@ -346,6 +346,10 @@ export const service: DefaultServiceConfig = {
       {
         title: 'ভিডিও',
         url: '/bengali/topics/cxy7jg418e7t',
+      },
+      {
+        title: 'সর্বাধিক পঠিত',
+        url: '/bengali/popular/read',
       },
     ],
   },
