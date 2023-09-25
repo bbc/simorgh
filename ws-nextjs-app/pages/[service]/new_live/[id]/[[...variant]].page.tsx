@@ -20,6 +20,7 @@ import getAgent from '../../../../utilities/undiciAgent';
 
 import LivePageLayout from './LivePageLayout';
 import extractHeaders from '../../../../../src/server/utilities/extractHeaders';
+import isValidPageNumber from '../../../../utilities/pageQueryValidator';
 
 interface PageDataParams extends ParsedUrlQuery {
   id: string;
@@ -31,12 +32,6 @@ interface PageDataParams extends ParsedUrlQuery {
 }
 
 const logger = nodeLogger(__filename);
-
-const isValidPage = (page: string) => {
-  const parsedPageNumber = parseInt(page, 10);
-
-  return parsedPageNumber >= 1 && parsedPageNumber <= 40;
-};
 
 const getPageData = async ({
   id,
@@ -107,7 +102,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
   const { headers: reqHeaders } = context.req;
 
-  if (!isValidPage(page)) {
+  if (!isValidPageNumber(page)) {
     context.res.statusCode = 404;
     return {
       props: {
