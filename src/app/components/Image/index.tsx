@@ -31,7 +31,7 @@ type Props = {
   sizes?: string;
   src: string;
   width?: number;
-  fetchpriority?: 'high';
+  fetchpriority?: 'high' | 'auto';
 };
 
 const DEFAULT_ASPECT_RATIO = [16, 9];
