@@ -787,55 +787,11 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
   }
 }
 
-@media (max-width: 14.9375rem) {
-  .emotion-35 {
-    min-width: 2.5rem;
-  }
-}
-
-@media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-35 {
-    min-width: 2.5rem;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-35 {
-    min-width: 3rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-35 {
-    min-width: 4rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-35 {
-    min-width: 4rem;
-  }
-}
-
-@supports (grid-template-columns: fit-content(200px)) {
-  @media (min-width: 37.5rem) {
-    .emotion-35 {
-      min-width: 2rem;
-    }
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-35 {
-    min-width: 2rem;
-  }
-}
-
-.emotion-53 {
+.emotion-32 {
   padding-top: 0.5rem;
 }
 
-.emotion-54 {
+.emotion-33 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #545658;
@@ -846,191 +802,235 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-54 {
+  .emotion-33 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-54 {
+  .emotion-33 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-59 {
+  .emotion-38 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-59 {
+  .emotion-38 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-59 {
+  .emotion-38 {
     min-width: 3rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-59 {
+  .emotion-38 {
     min-width: 4rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-59 {
-    min-width: 2rem;
+  .emotion-38 {
+    min-width: 4rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-59 {
+    .emotion-38 {
       min-width: 2rem;
     }
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-59 {
-    min-width: 4rem;
-  }
-}
-
-@media (max-width: 14.9375rem) {
-  .emotion-66 {
-    min-width: 2.5rem;
-  }
-}
-
-@media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-66 {
-    min-width: 2.5rem;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-66 {
-    min-width: 3rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-66 {
-    min-width: 4rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-66 {
-    min-width: 4rem;
-  }
-}
-
-@supports (grid-template-columns: fit-content(200px)) {
-  @media (min-width: 37.5rem) {
-    .emotion-66 {
-      min-width: 4rem;
-    }
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-66 {
+  .emotion-38 {
     min-width: 2rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-76 {
+  .emotion-68 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-76 {
+  .emotion-68 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-76 {
+  .emotion-68 {
     min-width: 3rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-76 {
+  .emotion-68 {
     min-width: 4rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-76 {
+  .emotion-68 {
     min-width: 2rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-76 {
-      min-width: 4rem;
+    .emotion-68 {
+      min-width: 2rem;
     }
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-76 {
-    min-width: 2rem;
+  .emotion-68 {
+    min-width: 4rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-97 {
+  .emotion-78 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-97 {
+  .emotion-78 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-97 {
+  .emotion-78 {
     min-width: 3rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-97 {
+  .emotion-78 {
     min-width: 4rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-97 {
+  .emotion-78 {
     min-width: 4rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-97 {
+    .emotion-78 {
       min-width: 4rem;
     }
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-97 {
+  .emotion-78 {
+    min-width: 2rem;
+  }
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-88 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-88 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-88 {
+    min-width: 3rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-88 {
+    min-width: 4rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-88 {
+    min-width: 2rem;
+  }
+}
+
+@supports (grid-template-columns: fit-content(200px)) {
+  @media (min-width: 37.5rem) {
+    .emotion-88 {
+      min-width: 4rem;
+    }
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-88 {
+    min-width: 2rem;
+  }
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-118 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-118 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-118 {
+    min-width: 3rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-118 {
+    min-width: 4rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-118 {
+    min-width: 4rem;
+  }
+}
+
+@supports (grid-template-columns: fit-content(200px)) {
+  @media (min-width: 37.5rem) {
+    .emotion-118 {
+      min-width: 4rem;
+    }
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-118 {
     min-width: 4rem;
   }
 }
@@ -1142,6 +1142,16 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
               >
                 Teams wey qualify for Afcon 2023 and how things stand for each group
               </a>
+              <div
+                class="emotion-32"
+              >
+                <time
+                  class="emotion-33 emotion-34"
+                  datetime="2023-06-19"
+                >
+                  De one we dem update for: 19th June 2023
+                </time>
+              </div>
             </div>
           </div>
         </li>
@@ -1154,7 +1164,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
             class="emotion-27"
           >
             <div
-              class="emotion-35"
+              class="emotion-38"
               dir="ltr"
             >
               <span
@@ -1173,6 +1183,16 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
               >
                 'We dey hear gospel songs den screaming' - Woman tok of Uganda school attack 
               </a>
+              <div
+                class="emotion-32"
+              >
+                <time
+                  class="emotion-33 emotion-34"
+                  datetime="2023-06-19"
+                >
+                  De one we dem update for: 19th June 2023
+                </time>
+              </div>
             </div>
           </div>
         </li>
@@ -1204,6 +1224,16 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
               >
                 Super Eagles qualify for Nations Cup afta beating Sierra Leone for Monrovia
               </a>
+              <div
+                class="emotion-32"
+              >
+                <time
+                  class="emotion-33 emotion-34"
+                  datetime="2023-06-18"
+                >
+                  De one we dem update for: 18th June 2023
+                </time>
+              </div>
             </div>
           </div>
         </li>
@@ -1216,7 +1246,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
             class="emotion-27"
           >
             <div
-              class="emotion-35"
+              class="emotion-38"
               dir="ltr"
             >
               <span
@@ -1236,10 +1266,10 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
                 Forbes top ten list of highest paid athletes for 2023 and wetin dem earn
               </a>
               <div
-                class="emotion-53"
+                class="emotion-32"
               >
                 <time
-                  class="emotion-54 emotion-55"
+                  class="emotion-33 emotion-34"
                   datetime="2023-05-03"
                 >
                   De one we dem update for: 3rd May 2023
@@ -1257,7 +1287,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
             class="emotion-27"
           >
             <div
-              class="emotion-59"
+              class="emotion-68"
               dir="ltr"
             >
               <span
@@ -1276,6 +1306,16 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
               >
                 Tins to sabi about 2023 Sierra Leone general election
               </a>
+              <div
+                class="emotion-32"
+              >
+                <time
+                  class="emotion-33 emotion-34"
+                  datetime="2023-06-18"
+                >
+                  De one we dem update for: 18th June 2023
+                </time>
+              </div>
             </div>
           </div>
         </li>
@@ -1288,7 +1328,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
             class="emotion-27"
           >
             <div
-              class="emotion-66"
+              class="emotion-78"
               dir="ltr"
             >
               <span
@@ -1308,10 +1348,10 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
                 CBN move to allow naira trade more freely against di dollar - Wetin e mean? 
               </a>
               <div
-                class="emotion-53"
+                class="emotion-32"
               >
                 <time
-                  class="emotion-54 emotion-55"
+                  class="emotion-33 emotion-34"
                   datetime="2023-06-15"
                 >
                   De one we dem update for: 15th June 2023
@@ -1329,7 +1369,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
             class="emotion-27"
           >
             <div
-              class="emotion-76"
+              class="emotion-88"
               dir="ltr"
             >
               <span
@@ -1348,6 +1388,16 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
               >
                 'We go flush out bad eggs for passport offices' - Acting Comptroller General Immigration 
               </a>
+              <div
+                class="emotion-32"
+              >
+                <time
+                  class="emotion-33 emotion-34"
+                  datetime="2023-06-18"
+                >
+                  De one we dem update for: 18th June 2023
+                </time>
+              </div>
             </div>
           </div>
         </li>
@@ -1360,7 +1410,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
             class="emotion-27"
           >
             <div
-              class="emotion-66"
+              class="emotion-78"
               dir="ltr"
             >
               <span
@@ -1379,6 +1429,16 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
               >
                 South Africa taps don dry finish on top electricity kasala
               </a>
+              <div
+                class="emotion-32"
+              >
+                <time
+                  class="emotion-33 emotion-34"
+                  datetime="2023-06-19"
+                >
+                  De one we dem update for: 19th June 2023
+                </time>
+              </div>
             </div>
           </div>
         </li>
@@ -1391,7 +1451,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
             class="emotion-27"
           >
             <div
-              class="emotion-76"
+              class="emotion-88"
               dir="ltr"
             >
               <span
@@ -1410,6 +1470,16 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
               >
                 Sharp-sharp facts about President Bola Tinubu special advisers
               </a>
+              <div
+                class="emotion-32"
+              >
+                <time
+                  class="emotion-33 emotion-34"
+                  datetime="2023-06-16"
+                >
+                  De one we dem update for: 16th June 2023
+                </time>
+              </div>
             </div>
           </div>
         </li>
@@ -1422,7 +1492,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
             class="emotion-27"
           >
             <div
-              class="emotion-97"
+              class="emotion-118"
               dir="ltr"
             >
               <span
@@ -1442,10 +1512,10 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
                 Easter date, Workers day, Salah date plus oda public holidays for 2023
               </a>
               <div
-                class="emotion-53"
+                class="emotion-32"
               >
                 <time
-                  class="emotion-54 emotion-55"
+                  class="emotion-33 emotion-34"
                   datetime="2022-12-31"
                 >
                   De one we dem update for: 31st December 2022
@@ -1763,6 +1833,27 @@ exports[`should render a news article correctly 1`] = `
   }
 }
 
+.emotion-12 {
+  max-width: 100%;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-bottom: 1.5rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-12 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-12 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 <div>
   <div
     class="emotion-0"
@@ -1803,6 +1894,30 @@ exports[`should render a news article correctly 1`] = `
             >
               A paragraph.
             </p>
+          </div>
+          <div
+            class="emotion-12"
+          >
+            <div
+              class="riddle2-wrapper"
+              data-auto-scroll="true"
+              data-bg="#fff"
+              data-fg="#00205b"
+              data-is-fixed-height-enabled="false"
+              data-rid-id="SAVstNdh"
+              style="margin:0 auto; max-width:100%; width:640px;"
+            >
+              <script
+                src="https://www.riddle.com/embed/build-embedjs/embedV2.js"
+              />
+              <iframe
+                allow="autoplay"
+                referrerpolicy="strict-origin"
+                src="https://www.riddle.com/embed/a/SAVstNdh?lazyImages=true&staticHeight=false"
+              >
+                &lt;section data-block="SingleChoice"&gt;&lt;h2&gt;How silly is Abby?&lt;/h2&gt;&lt;p&gt;&lt;p&gt;Babby&lt;/p&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Extremely silly&lt;/li&gt;&lt;li&gt;Not silly at all&lt;/li&gt;&lt;li&gt;Not very silly&lt;/li&gt;&lt;li&gt;Very silly&lt;/li&gt;&lt;/ul&gt;&lt;/section&gt;&lt;section data-block="SingleChoice"&gt;&lt;h3&gt;What is Abby&#039;s silliness level?&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;High&lt;/li&gt;&lt;li&gt;Low&lt;/li&gt;&lt;li&gt;Medium&lt;/li&gt;&lt;li&gt;None&lt;/li&gt;&lt;/ul&gt;&lt;/section&gt;&lt;section data-block="SingleChoice"&gt;&lt;h3&gt;How often is Abby silly?&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;Never&lt;/li&gt;&lt;li&gt;Rarely&lt;/li&gt;&lt;li&gt;Always&lt;/li&gt;&lt;li&gt;Sometimes&lt;/li&gt;&lt;/ul&gt;&lt;/section&gt;&lt;section data-block="SingleChoice"&gt;&lt;h3&gt;What is Abby&#039;s silliness like?&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;Outrageous&lt;/li&gt;&lt;li&gt;Non-existent&lt;/li&gt;&lt;li&gt;Mild&lt;/li&gt;&lt;li&gt;Moderate&lt;/li&gt;&lt;/ul&gt;&lt;/section&gt;&lt;section data-block="SingleChoice"&gt;&lt;h3&gt;How would you describe Abby&#039;s silliness?&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;Crazy&lt;/li&gt;&lt;li&gt;Calm&lt;/li&gt;&lt;li&gt;Boring&lt;/li&gt;&lt;li&gt;Sensible&lt;/li&gt;&lt;/ul&gt;&lt;/section&gt;
+              </iframe>
+            </div>
           </div>
         </main>
       </div>
@@ -3196,222 +3311,250 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
   }
 }
 
+.emotion-32 {
+  padding-top: 0.5rem;
+}
+
+.emotion-33 {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #545658;
+  display: block;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-33 {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-33 {
+    font-size: 0.8125rem;
+    line-height: 1.25rem;
+  }
+}
+
 @media (max-width: 14.9375rem) {
-  .emotion-35 {
+  .emotion-38 {
     min-width: 1rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-35 {
+  .emotion-38 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-35 {
+  .emotion-38 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-35 {
+  .emotion-38 {
     min-width: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-35 {
+  .emotion-38 {
     min-width: 2rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-35 {
+    .emotion-38 {
       min-width: 1.5rem;
     }
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-35 {
+  .emotion-38 {
     min-width: 1.5rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-56 {
+  .emotion-68 {
     min-width: 1rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-56 {
+  .emotion-68 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-56 {
+  .emotion-68 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-56 {
+  .emotion-68 {
     min-width: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-56 {
+  .emotion-68 {
     min-width: 1.5rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-56 {
+    .emotion-68 {
       min-width: 1.5rem;
     }
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-56 {
+  .emotion-68 {
     min-width: 2rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-63 {
+  .emotion-78 {
     min-width: 1rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-63 {
+  .emotion-78 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-63 {
+  .emotion-78 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-63 {
+  .emotion-78 {
     min-width: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-63 {
+  .emotion-78 {
     min-width: 2rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-63 {
+    .emotion-78 {
       min-width: 2rem;
     }
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-63 {
+  .emotion-78 {
     min-width: 1.5rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-70 {
+  .emotion-88 {
     min-width: 1rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-70 {
+  .emotion-88 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-70 {
+  .emotion-88 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-70 {
+  .emotion-88 {
     min-width: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-70 {
+  .emotion-88 {
     min-width: 1.5rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-70 {
+    .emotion-88 {
       min-width: 2rem;
     }
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-70 {
+  .emotion-88 {
     min-width: 1.5rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-91 {
+  .emotion-118 {
     min-width: 1rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-91 {
+  .emotion-118 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-91 {
+  .emotion-118 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-91 {
+  .emotion-118 {
     min-width: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-91 {
+  .emotion-118 {
     min-width: 2rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-91 {
+    .emotion-118 {
       min-width: 2rem;
     }
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-91 {
+  .emotion-118 {
     min-width: 2rem;
   }
 }
@@ -3523,6 +3666,16 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
               >
                 ایران در آستانه بحران بنزین؛ تابستانی دشوار برای دولت رئیسی در پیش است
               </a>
+              <div
+                class="emotion-32"
+              >
+                <time
+                  class="emotion-33 emotion-34"
+                  datetime="2023-06-19"
+                >
+                  به روز شده در ۱۹ ژوئن ۲۰۲۳
+                </time>
+              </div>
             </div>
           </div>
         </li>
@@ -3535,7 +3688,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
             class="emotion-27"
           >
             <div
-              class="emotion-35"
+              class="emotion-38"
               dir="rtl"
             >
               <span
@@ -3554,6 +3707,16 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
               >
                 پرونده حمید نوری؛ وکلای مدافع: نوری فریب خورد
               </a>
+              <div
+                class="emotion-32"
+              >
+                <time
+                  class="emotion-33 emotion-34"
+                  datetime="2023-06-19"
+                >
+                  به روز شده در ۱۹ ژوئن ۲۰۲۳
+                </time>
+              </div>
             </div>
           </div>
         </li>
@@ -3585,6 +3748,16 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
               >
                 اما رادوکانو: گاهی آرزو می‌کنم که ای کاش قهرمان اوپن آمریکا نمی‌شدم
               </a>
+              <div
+                class="emotion-32"
+              >
+                <time
+                  class="emotion-33 emotion-34"
+                  datetime="2023-06-19"
+                >
+                  به روز شده در ۱۹ ژوئن ۲۰۲۳
+                </time>
+              </div>
             </div>
           </div>
         </li>
@@ -3597,7 +3770,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
             class="emotion-27"
           >
             <div
-              class="emotion-35"
+              class="emotion-38"
               dir="rtl"
             >
               <span
@@ -3616,6 +3789,16 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
               >
                 ملی‌پوش سابق هلند برای چاقو زدن به فامیلش به ۱۸ ماه حبس محکوم شد
               </a>
+              <div
+                class="emotion-32"
+              >
+                <time
+                  class="emotion-33 emotion-34"
+                  datetime="2023-06-19"
+                >
+                  به روز شده در ۱۹ ژوئن ۲۰۲۳
+                </time>
+              </div>
             </div>
           </div>
         </li>
@@ -3628,7 +3811,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
             class="emotion-27"
           >
             <div
-              class="emotion-56"
+              class="emotion-68"
               dir="rtl"
             >
               <span
@@ -3647,6 +3830,16 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
               >
                 وزیر خارجه آمریکا در پکن؛ شی: پیشرفت‌هایی در روابط حاصل شده است، بلینکن: رقابت نباید بدل به دشمنی شود
               </a>
+              <div
+                class="emotion-32"
+              >
+                <time
+                  class="emotion-33 emotion-34"
+                  datetime="2023-06-19"
+                >
+                  به روز شده در ۱۹ ژوئن ۲۰۲۳
+                </time>
+              </div>
             </div>
           </div>
         </li>
@@ -3659,7 +3852,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
             class="emotion-27"
           >
             <div
-              class="emotion-63"
+              class="emotion-78"
               dir="rtl"
             >
               <span
@@ -3678,6 +3871,16 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
               >
                 سگم سرطان پستان مرا تشخیص داد
               </a>
+              <div
+                class="emotion-32"
+              >
+                <time
+                  class="emotion-33 emotion-34"
+                  datetime="2023-06-18"
+                >
+                  به روز شده در ۱۸ ژوئن ۲۰۲۳
+                </time>
+              </div>
             </div>
           </div>
         </li>
@@ -3690,7 +3893,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
             class="emotion-27"
           >
             <div
-              class="emotion-70"
+              class="emotion-88"
               dir="rtl"
             >
               <span
@@ -3709,6 +3912,16 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
               >
                 لوح ۲۸۰۰ ساله از ایتالیا به عراق بازگردانده شد
               </a>
+              <div
+                class="emotion-32"
+              >
+                <time
+                  class="emotion-33 emotion-34"
+                  datetime="2023-06-18"
+                >
+                  به روز شده در ۱۸ ژوئن ۲۰۲۳
+                </time>
+              </div>
             </div>
           </div>
         </li>
@@ -3721,7 +3934,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
             class="emotion-27"
           >
             <div
-              class="emotion-63"
+              class="emotion-78"
               dir="rtl"
             >
               <span
@@ -3740,6 +3953,16 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
               >
                 نمایندگان کشورها و نهادها در اجلاس سازمان ملل خواستار پایان یافتن سیاست‌های تبعیض‌آمیز طالبان علیه زنان شدند
               </a>
+              <div
+                class="emotion-32"
+              >
+                <time
+                  class="emotion-33 emotion-34"
+                  datetime="2023-06-19"
+                >
+                  به روز شده در ۱۹ ژوئن ۲۰۲۳
+                </time>
+              </div>
             </div>
           </div>
         </li>
@@ -3752,7 +3975,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
             class="emotion-27"
           >
             <div
-              class="emotion-70"
+              class="emotion-88"
               dir="rtl"
             >
               <span
@@ -3771,6 +3994,16 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
               >
                 چرا موبایل داغ می‌کند و چطور آن را خنک نگه داریم؟
               </a>
+              <div
+                class="emotion-32"
+              >
+                <time
+                  class="emotion-33 emotion-34"
+                  datetime="2023-06-18"
+                >
+                  به روز شده در ۱۸ ژوئن ۲۰۲۳
+                </time>
+              </div>
             </div>
           </div>
         </li>
@@ -3783,7 +4016,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
             class="emotion-27"
           >
             <div
-              class="emotion-91"
+              class="emotion-118"
               dir="rtl"
             >
               <span
@@ -3802,6 +4035,16 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
               >
                 هشتگ «داستان_ما_یکیست» در چهلمین سالگرد اعدام ۱۰ زن بهائی در شیراز
               </a>
+              <div
+                class="emotion-32"
+              >
+                <time
+                  class="emotion-33 emotion-34"
+                  datetime="2023-06-18"
+                >
+                  به روز شده در ۱۸ ژوئن ۲۰۲۳
+                </time>
+              </div>
             </div>
           </div>
         </li>

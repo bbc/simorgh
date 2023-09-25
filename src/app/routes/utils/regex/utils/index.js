@@ -4,7 +4,7 @@ const idRegex = 'c[a-zA-Z0-9]{10}o';
 const ampRegex = '.amp';
 const appRegex = '.app';
 const nonCanonicalArticleRenderPlatform = `${ampRegex}|${appRegex}`;
-const assetUriRegex = '[a-z0-9-_]{0,}[0-9]{8,}';
+const assetUriRegex = '[a-z0-9-_+]{0,}[0-9]{8,}';
 const legacyAssetUriRegex = '[a-z0-9-_]{1,}/[a-z0-9-_/]{1,}';
 const variantRegex = '/simp|/trad|/cyr|/lat';
 const articleLocalRegex = 'articles|erthyglau|sgeulachdan';
@@ -34,7 +34,28 @@ export const getArticleManifestRegex = services => {
   return `/:service(${serviceRegex})/:local(${articleLocalRegex})/manifest.json`;
 };
 
-const homePageServices = ['azeri', 'burmese', 'kyrgyz'];
+const homePageServices = [
+  'afaanoromoo',
+  'amharic',
+  'azeri',
+  'bengali',
+  'burmese',
+  'gahuza',
+  'gujarati',
+  'igbo',
+  'kyrgyz',
+  'marathi',
+  'nepali',
+  'pidgin',
+  'punjabi',
+  'sinhala',
+  'somali',
+  'tamil',
+  'telugu',
+  'tigrinya',
+  'urdu',
+  'yoruba',
+];
 
 const servicesWithVariants = ['serbian', 'ukchina', 'zhongwen'];
 

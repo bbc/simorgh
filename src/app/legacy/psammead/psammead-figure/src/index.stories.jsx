@@ -2,7 +2,6 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text } from '@storybook/addon-knobs';
 import Caption from '#psammead/psammead-caption/src';
-import Copyright from '#psammead/psammead-copyright/src';
 import Image from '#psammead/psammead-image/src';
 import ImagePlaceholder from '#psammead/psammead-image-placeholder/src';
 import Paragraph from '#psammead/psammead-paragraph/src';
@@ -31,21 +30,11 @@ storiesOf('Components/Figure', module)
     { notes },
   )
   .add(
-    'containing Image, ImagePlaceholder, Copyright and Caption',
+    'containing Image, ImagePlaceholder and Caption',
     ({ text: textSnippet, script, service }) => (
       <Figure>
         <ImagePlaceholder ratio={imageRatio}>
           <Image alt={imageAlt} src={imageSrc} width={imageWidth} />
-          <Copyright>
-            <VisuallyHiddenText>
-              {text(
-                'visually hidden copyright',
-                'Image copyright, ',
-                'Visually Hidden Copyright',
-              )}
-            </VisuallyHiddenText>
-            {text('copyright', 'Copyright', 'Copyright')}
-          </Copyright>
         </ImagePlaceholder>
         <Caption service={service} script={script}>
           <VisuallyHiddenText>
