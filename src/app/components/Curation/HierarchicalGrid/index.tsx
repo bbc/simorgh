@@ -60,6 +60,9 @@ const HiearchicalGrid = ({
 
           const lazyLoadImages = !(isFirstPromo && isFirstCuration);
 
+          const fetchpriority =
+            isFirstPromo && isFirstCuration ? 'high' : undefined;
+
           const showDuration =
             promo.duration && ['video', 'audio'].includes(promo.type);
           const isMedia = ['video', 'audio', 'photogallery'].includes(
@@ -84,6 +87,7 @@ const HiearchicalGrid = ({
                   src={promo.imageUrl || ''}
                   alt={promo.imageAlt}
                   lazyLoad={lazyLoadImages}
+                  fetchpriority={fetchpriority}
                   isAmp={isAmp}
                 >
                   <Promo.MediaIcon type={promo.type}>
