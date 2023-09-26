@@ -50,7 +50,7 @@ const SocialEmbedContainer = ({ blocks, source }) => {
     endTextId:
       oEmbedPosition > 0
         ? `end-of-%provider%-content-${oEmbedPosition}`
-        : `end-of-%provider%-content${isLive && `-${blockId}`}`,
+        : `end-of-%provider%-content${isLive ? `-${blockId}` : ''}`,
   };
 
   return (
