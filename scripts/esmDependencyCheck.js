@@ -15,7 +15,7 @@ const gitToken = dotenv.parsed.GIT_TOKEN || false;
 
 let countedRepos = 0;
 
-const getRemoteGitFile = async gitDepUrl => {
+const getRemoteGitFile = async (gitDepUrl, args) => {
   let url = `https://api.github.com/repos/${gitDepUrl}/contents/package.json`;
   if (url.includes('/tree/')) {
     url = url
@@ -35,20 +35,20 @@ const getRemoteGitFile = async gitDepUrl => {
       if (res.status === 200) {
         return res.json().then(data => {
           if (!data.type) {
-            return 'commonjs';
+            return {type: 'commonjs', ...args};
           } else if (data.type) {
-            return data.type;
+            return {type: data.type, ...args};
           }
           return false;
         });
       } else {
-        return 'error';
+        return {type: 'error', ...args};
       }
     })
     .catch(e => {
       countedRepos++;
       console.error(e);
-      return 'error';
+      return {type: 'error', ...args};
     });
 };
 
@@ -155,18 +155,25 @@ latestVersion = depRepository.versions.at(-1);
               /^(?:git)?(?:\+)?(https|ssh)?:\/\/(?:git@)?github.com\/|\.git(?:#?.*)$/g,
               '',
             );
+            const gitRepoArgs = {
+                latestVersion,
+                ourVersion,
+                ourFreshnessInDays,
+                dateOfOurVersion,
+                modifiedDate
+            };
             try {
-              const remoteGitFile = getRemoteGitFile(gitRepo)
-                .then(gitDepModuleType => {
+              const remoteGitFile = getRemoteGitFile(gitRepo, gitRepoArgs)
+                .then(data => {
                   countedRepos++;
                   dependencyTable.push({
                     name: dep,
-                    type: gitDepModuleType,
-                    mostRecentVersion: latestVersion,
-                    mostRecentVersionDate: modifiedDate,
-                    ourVersionDate: dateOfOurVersion,
-                    ourVersion,
-                    ourFreshnessInDays,
+                    type: data.type,
+                    mostRecentVersion: data.latestVersion,
+                    mostRecentVersionDate: data.modifiedDate,
+                    ourVersionDate: data.dateOfOurVersion,
+                    ourVersion: data.ourVersion,
+                    ourFreshnessInDays: data.ourFreshnessInDays,
                   });
                   console.log(
                     `checking repo ${countedRepos} out of ${repoLength}: ${gitRepo}`,
@@ -199,9 +206,9 @@ latestVersion = depRepository.versions.at(-1);
               type: depType,
               mostRecentVersion: latestVersion,
               mostRecentVersionDate: modifiedDate,
-              ourVersion,
               ourVersionDate: dateOfOurVersion,
-              ourFreshnessInDays,
+                    ourVersion,
+                    ourFreshnessInDays,
             });
           }
         }, i * 50);
