@@ -141,6 +141,20 @@ describe('Home Page', () => {
         }
       });
     });
+    it('Only the first image on a homepage has Fetch Priority set to high', () => {
+      render(<HomePage pageData={homePageData} />, {
+        service: 'kyrgyz',
+      });
+
+      const imageList = document.querySelectorAll('img');
+      imageList.forEach((image, index) => {
+        if (index === 0) {
+          expect(image.getAttribute('fetchpriority')).toBe('high');
+        } else {
+          expect(image.getAttribute('fetchpriority')).toBeNull();
+        }
+      });
+    });
   });
 
   describe('Ads', () => {
