@@ -10,11 +10,11 @@ import {
 import { RequestContext } from '#contexts/RequestContext';
 import { GridItemMedium } from '#components/Grid';
 import { socialEmbedBlockPropTypes } from '#models/propTypes/socialEmbed';
+import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import createTranslations from './common/translations';
 import { LAZYLOAD_OFFSET, Wrapper } from './common/styles';
 import { getProviderFromSource, getIdFromSource } from './sourceHelpers';
-import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 
 const SocialEmbedContainer = ({ blocks, source }) => {
   const { isAmp, pageType } = useContext(RequestContext);
