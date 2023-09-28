@@ -383,7 +383,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 
 @media (min-width: 80rem) {
   .emotion-15 {
-    grid-column: 4/13;
+    grid-column: 4/10;
   }
 }
 
