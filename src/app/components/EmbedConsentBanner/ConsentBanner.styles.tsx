@@ -16,6 +16,16 @@ export default {
       }`,
     }),
 
+  parentLive: ({ palette }: Theme) =>
+    css({
+      backgroundColor: palette.WHITE,
+      padding: `${pixelsToRem(16)}rem`,
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'flex-start',
+    }),
+
   textBody: ({ spacings, palette }: Theme) =>
     css({
       margin: `${spacings.DOUBLE}rem 0`,
