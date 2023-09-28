@@ -254,7 +254,7 @@ exports[`AMP Story Page Image Caption should match text 1`] = `"Сүрөттүн
 exports[`AMP Story Page Image should match snapshot 1`] = `
 <amp-img
   alt="social media"
-  attribution=""
+  class="bbc-image"
   data-hero="true"
   fallback=""
   height="351"

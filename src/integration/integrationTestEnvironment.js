@@ -14,6 +14,7 @@ class IntegrationTestEnvironment extends JsdomEnvironment {
       service,
       runScripts = 'true',
       displayAds = 'false',
+      isInUK = 'no',
     } = context.docblockPragmas;
     const pageType = getPageTypeFromTestPath(context.testPath);
 
@@ -21,6 +22,7 @@ class IntegrationTestEnvironment extends JsdomEnvironment {
     this.service = service;
     this.runScripts = runScripts === 'true';
     this.displayAds = displayAds === 'true';
+    this.isInUK = isInUK;
     this.url = `http://localhost:7080${pathname}${
       platform === 'amp' ? '.amp' : ''
     }`;
@@ -33,11 +35,10 @@ class IntegrationTestEnvironment extends JsdomEnvironment {
       const dom = await fetchDom({
         url: this.url,
         runScripts: this.runScripts,
-        ...(this.displayAds && {
-          headers: {
-            'BBC-Adverts': 'true',
-          },
-        }),
+        headers: {
+          ...(this.displayAds && { 'BBC-Adverts': 'true' }),
+          ...{ 'x-bbc-edge-isuk': this.isInUK },
+        },
       });
 
       Object.defineProperties(this.global, {

@@ -30,6 +30,7 @@ const WithContexts = Component => {
       showAdsBasedOnLocation,
       mvtExperiments,
       isNextJs,
+      isUK,
     } = props;
 
     const { metadata: { atiAnalytics } = {} } = pageData ?? {};
@@ -57,6 +58,7 @@ const WithContexts = Component => {
             showAdsBasedOnLocation={showAdsBasedOnLocation}
             mvtExperiments={mvtExperiments}
             isNextJs={isNextJs}
+            isUK={isUK}
           >
             <EventTrackingContextProvider
               atiData={atiAnalytics}
@@ -91,6 +93,7 @@ const WithContexts = Component => {
     toggles: object.isRequired,
     mvtExperiments: mvtExperimentPropType,
     isNextJs: bool,
+    isUK: bool,
   };
 
   WithContextsContainer.defaultProps = {
@@ -105,6 +108,7 @@ const WithContexts = Component => {
     showAdsBasedOnLocation: false,
     mvtExperiments: null,
     isNextJs: false,
+    isUK: false,
   };
 
   return WithContextsContainer;

@@ -64,6 +64,7 @@ type RequestProviderProps = {
   timeOnServer?: number | null;
   mvtExperiments?: MvtExperiment[] | null;
   variant?: Variants | null;
+  isUK?: boolean | null;
 };
 
 export const RequestContextProvider = ({
@@ -83,9 +84,11 @@ export const RequestContextProvider = ({
   statusCode = null,
   timeOnServer = null,
   variant = null,
+  isUK = null,
 }: PropsWithChildren<RequestProviderProps>) => {
-  const { isUK, origin } = getOriginContext(bbcOrigin);
+  const { origin } = getOriginContext(bbcOrigin);
   const env: Environments = getEnv(origin);
+  const formattedIsUK = isUK ?? false;
 
   const getPlatform = (): Platforms => {
     switch (true) {
@@ -100,7 +103,7 @@ export const RequestContextProvider = ({
 
   const platform = getPlatform();
   const statsDestination = getStatsDestination({
-    isUK: platform === 'amp' ? true : isUK, // getDestination requires that statsDestination is a PS variant on AMP
+    isUK: platform === 'amp' ? true : formattedIsUK, // getDestination requires that statsDestination is a PS variant on AMP
     env,
     service,
   });
@@ -113,7 +116,7 @@ export const RequestContextProvider = ({
   const value = {
     env,
     id,
-    isUK,
+    isUK: formattedIsUK,
     origin,
     pageType,
     derivedPageType,
