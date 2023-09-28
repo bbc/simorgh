@@ -4,6 +4,8 @@ import { jsx } from '@emotion/react';
 import { useContext, MouseEvent } from 'react';
 import pathOr from 'ramda/src/pathOr';
 
+import { RequestContext } from '#app/contexts/RequestContext';
+import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import Text from '../Text';
 import Paragraph from '../Paragraph';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -173,6 +175,8 @@ const ConsentBanner = ({
   id,
 }: ConsentBannerContentProps) => {
   const { externalLinkText, translations } = useContext(ServiceContext);
+  const { pageType } = useContext(RequestContext);
+  const isLive = pageType === LIVE_PAGE;
 
   const consentTranslations = getTranslations(
     provider,
@@ -186,7 +190,7 @@ const ConsentBanner = ({
     <div
       data-testid="consentBanner"
       id={`consentBanner${id ? `-${id}` : ''}`}
-      css={consentBannerCss.parent}
+      css={isLive ? consentBannerCss.parentLive : consentBannerCss.parent}
       ref={viewRef}
     >
       <Text
