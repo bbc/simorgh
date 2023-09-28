@@ -2865,115 +2865,119 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   }
 }
 
+.emotion-852 {
+  padding-top: 0.5rem;
+}
+
 @media (max-width: 14.9375rem) {
-  .emotion-855 {
+  .emotion-858 {
     min-width: 1rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-855 {
+  .emotion-858 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-855 {
+  .emotion-858 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-855 {
+  .emotion-858 {
     min-width: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-855 {
+  .emotion-858 {
     min-width: 2rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-855 {
+    .emotion-858 {
       min-width: 1.5rem;
     }
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-883 {
+  .emotion-898 {
     min-width: 1rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-883 {
+  .emotion-898 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-883 {
+  .emotion-898 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-883 {
+  .emotion-898 {
     min-width: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-883 {
+  .emotion-898 {
     min-width: 2rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-883 {
+    .emotion-898 {
       min-width: 2rem;
     }
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-890 {
+  .emotion-908 {
     min-width: 1rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-890 {
+  .emotion-908 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-890 {
+  .emotion-908 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-890 {
+  .emotion-908 {
     min-width: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-890 {
+  .emotion-908 {
     min-width: 1.5rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-890 {
+    .emotion-908 {
       min-width: 2rem;
     }
   }
@@ -5569,6 +5573,16 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   >
                     خالق باربی: چرا بعضی مردها تصور عروسکی زنانه را نمی‌پسندیدند
                   </a>
+                  <div
+                    class="emotion-852"
+                  >
+                    <time
+                      class="emotion-42 emotion-43"
+                      datetime="2023-07-24"
+                    >
+                      به روز شده در ۲۴ ژوئیه ۲۰۲۳
+                    </time>
+                  </div>
                 </div>
               </div>
             </li>
@@ -5581,7 +5595,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 class="emotion-847"
               >
                 <div
-                  class="emotion-855"
+                  class="emotion-858"
                   dir="rtl"
                 >
                   <span
@@ -5600,6 +5614,16 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   >
                     حمله افراد «مسلح» و با «لباس سپاه» به گردشگران در منطقه ییلاقی اوپرت: «سوم محرم، آمدید تفریح؟»
                   </a>
+                  <div
+                    class="emotion-852"
+                  >
+                    <time
+                      class="emotion-42 emotion-43"
+                      datetime="2023-07-23"
+                    >
+                      به روز شده در ۲۳ ژوئیه ۲۰۲۳
+                    </time>
+                  </div>
                 </div>
               </div>
             </li>
@@ -5631,6 +5655,16 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   >
                     اصلاحات قضایی اسرائیل؛ نتانیاهو پیش از رای‌گیری کلیدی پارلمان بیمارستان را ترک کرد
                   </a>
+                  <div
+                    class="emotion-852"
+                  >
+                    <time
+                      class="emotion-42 emotion-43"
+                      datetime="2023-07-24"
+                    >
+                      به روز شده در ۲۴ ژوئیه ۲۰۲۳
+                    </time>
+                  </div>
                 </div>
               </div>
             </li>
@@ -5643,7 +5677,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 class="emotion-847"
               >
                 <div
-                  class="emotion-855"
+                  class="emotion-858"
                   dir="rtl"
                 >
                   <span
@@ -5662,6 +5696,16 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   >
                     از لوگوی جدید توییتر رونمایی شد
                   </a>
+                  <div
+                    class="emotion-852"
+                  >
+                    <time
+                      class="emotion-42 emotion-43"
+                      datetime="2023-07-24"
+                    >
+                      به روز شده در ۲۴ ژوئیه ۲۰۲۳
+                    </time>
+                  </div>
                 </div>
               </div>
             </li>
@@ -5693,6 +5737,16 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   >
                     روسیه، اوکراین را به «حمله پهپادی» به مسکو متهم کرد
                   </a>
+                  <div
+                    class="emotion-852"
+                  >
+                    <time
+                      class="emotion-42 emotion-43"
+                      datetime="2023-07-24"
+                    >
+                      به روز شده در ۲۴ ژوئیه ۲۰۲۳
+                    </time>
+                  </div>
                 </div>
               </div>
             </li>
@@ -5705,7 +5759,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 class="emotion-847"
               >
                 <div
-                  class="emotion-883"
+                  class="emotion-898"
                   dir="rtl"
                 >
                   <span
@@ -5724,6 +5778,16 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   >
                     ۱۱ کشته در ریزش سقف سالن ورزشی در چین هنگام تمرین تیم والیبال دختران
                   </a>
+                  <div
+                    class="emotion-852"
+                  >
+                    <time
+                      class="emotion-42 emotion-43"
+                      datetime="2023-07-24"
+                    >
+                      به روز شده در ۲۴ ژوئیه ۲۰۲۳
+                    </time>
+                  </div>
                 </div>
               </div>
             </li>
@@ -5736,7 +5800,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 class="emotion-847"
               >
                 <div
-                  class="emotion-890"
+                  class="emotion-908"
                   dir="rtl"
                 >
                   <span
@@ -5755,6 +5819,16 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   >
                     بلینکن: در شرایطی نیستیم که درباره بازگشت به برجام مذاکره کنیم
                   </a>
+                  <div
+                    class="emotion-852"
+                  >
+                    <time
+                      class="emotion-42 emotion-43"
+                      datetime="2023-07-23"
+                    >
+                      به روز شده در ۲۳ ژوئیه ۲۰۲۳
+                    </time>
+                  </div>
                 </div>
               </div>
             </li>
@@ -5767,7 +5841,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 class="emotion-847"
               >
                 <div
-                  class="emotion-883"
+                  class="emotion-898"
                   dir="rtl"
                 >
                   <span
@@ -5786,6 +5860,16 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   >
                     اوپنهایمر؛ روایتگر «ویرانگر دنیاها» و داستان ساخت اولین بمب اتمی  
                   </a>
+                  <div
+                    class="emotion-852"
+                  >
+                    <time
+                      class="emotion-42 emotion-43"
+                      datetime="2023-07-23"
+                    >
+                      به روز شده در ۲۳ ژوئیه ۲۰۲۳
+                    </time>
+                  </div>
                 </div>
               </div>
             </li>
@@ -5798,7 +5882,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 class="emotion-847"
               >
                 <div
-                  class="emotion-890"
+                  class="emotion-908"
                   dir="rtl"
                 >
                   <span
@@ -5817,6 +5901,16 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   >
                     «ویرانگر دنیاها»؛ رابرت اوپنهایمر واقعی که بود؟
                   </a>
+                  <div
+                    class="emotion-852"
+                  >
+                    <time
+                      class="emotion-42 emotion-43"
+                      datetime="2023-07-23"
+                    >
+                      به روز شده در ۲۳ ژوئیه ۲۰۲۳
+                    </time>
+                  </div>
                 </div>
               </div>
             </li>
@@ -5829,7 +5923,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 class="emotion-847"
               >
                 <div
-                  class="emotion-883"
+                  class="emotion-898"
                   dir="rtl"
                 >
                   <span
@@ -5848,6 +5942,16 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   >
                     انتخابات اسپانیا؛ محافظه‌کاران پیشتاز ولی فاقد اکثریت پارلمانی
                   </a>
+                  <div
+                    class="emotion-852"
+                  >
+                    <time
+                      class="emotion-42 emotion-43"
+                      datetime="2023-07-24"
+                    >
+                      به روز شده در ۲۴ ژوئیه ۲۰۲۳
+                    </time>
+                  </div>
                 </div>
               </div>
             </li>
@@ -5897,9 +6001,9 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 .emotion-2 {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #6E6E73;
@@ -5910,14 +6014,14 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-2 {
     font-size: 1.25rem;
-    line-height: 1.75rem;
+    line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-2 {
     font-size: 1.5rem;
-    line-height: 2rem;
+    line-height: 1.75rem;
   }
 }
 
@@ -6022,14 +6126,14 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 .emotion-14 {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
   background-color: #FDFDFD;
   margin: 1rem 0;
-  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6043,14 +6147,14 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-14 {
     font-size: 1.25rem;
-    line-height: 1.75rem;
+    line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-14 {
     font-size: 1.5rem;
-    line-height: 2rem;
+    line-height: 1.75rem;
   }
 }
 
@@ -6062,7 +6166,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 
 @media (min-width: 37.5rem) {
   .emotion-14 {
-    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 
@@ -6433,24 +6537,24 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
-  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 1.25rem;
-  line-height: 1.75rem;
+  line-height: 1.5rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-36 {
     font-size: 1.375rem;
-    line-height: 1.875rem;
+    line-height: 1.625rem;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-36 {
     font-size: 1.75rem;
-    line-height: 2.375rem;
+    line-height: 2rem;
   }
 }
 
@@ -6488,8 +6592,8 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 
 .emotion-40 {
   font-size: 0.9375rem;
-  line-height: 1.375rem;
-  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #3F3F42;
@@ -6500,14 +6604,14 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-40 {
     font-size: 0.9375rem;
-    line-height: 1.375rem;
+    line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-40 {
     font-size: 0.875rem;
-    line-height: 1.375rem;
+    line-height: 1.125rem;
   }
 }
 
@@ -6520,10 +6624,10 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 
 .emotion-42 {
   font-size: 0.875rem;
-  line-height: 1.25rem;
+  line-height: 1.125rem;
   color: #545658;
   display: block;
-  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -6531,14 +6635,14 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-42 {
     font-size: 0.875rem;
-    line-height: 1.25rem;
+    line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-42 {
     font-size: 0.8125rem;
-    line-height: 1.25rem;
+    line-height: 1rem;
   }
 }
 
@@ -6566,8 +6670,8 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 
 .emotion-49 {
   font-size: 0.875rem;
-  line-height: 1.25rem;
-  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
   color: #222222;
@@ -6579,14 +6683,14 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-49 {
     font-size: 0.875rem;
-    line-height: 1.25rem;
+    line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-49 {
     font-size: 0.8125rem;
-    line-height: 1.25rem;
+    line-height: 1rem;
   }
 }
 
@@ -6852,31 +6956,31 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
-  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 0.9375rem;
-  line-height: 1.5rem;
+  line-height: 1.25rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-66 {
     font-size: 1rem;
-    line-height: 1.5rem;
+    line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-66 {
     font-size: 1rem;
-    line-height: 1.5rem;
+    line-height: 1.25rem;
   }
 }
 
 .emotion-70 {
   font-size: 0.9375rem;
-  line-height: 1.375rem;
-  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #3F3F42;
@@ -6887,14 +6991,14 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-70 {
     font-size: 0.9375rem;
-    line-height: 1.375rem;
+    line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-70 {
     font-size: 0.875rem;
-    line-height: 1.375rem;
+    line-height: 1.125rem;
   }
 }
 
@@ -7101,7 +7205,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 
 @media (min-width: 37.5rem) {
   .emotion-163 {
-    padding-left: 0.5rem;
+    padding-right: 0.5rem;
     width: 50%;
   }
 }
@@ -7148,24 +7252,24 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
-  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-165 {
     font-size: 1.25rem;
-    line-height: 1.75rem;
+    line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-165 {
     font-size: 1.5rem;
-    line-height: 2rem;
+    line-height: 1.75rem;
   }
 }
 
@@ -7178,7 +7282,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 
 @media (min-width: 37.5rem) {
   .emotion-173 {
-    padding-left: 0.5rem;
+    padding-right: 0.5rem;
     width: 50%;
   }
 }
@@ -7226,15 +7330,15 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 
 .emotion-218 {
   font-size: 0.9375rem;
-  line-height: 1.375rem;
-  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
   margin: 1rem 0;
   color: #222222;
   background-color: #FDFDFD;
   white-space: nowrap;
-  padding-right: 1rem;
+  padding-left: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7248,14 +7352,14 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-218 {
     font-size: 0.9375rem;
-    line-height: 1.375rem;
+    line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-218 {
     font-size: 0.875rem;
-    line-height: 1.375rem;
+    line-height: 1.125rem;
   }
 }
 
@@ -7263,1263 +7367,6 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   .emotion-218 {
     margin: 0;
   }
-}
-
-.emotion-515 {
-  background-color: #F2F2F2;
-  padding: 0 1rem;
-  content-visibility: auto;
-  contain-intrinsic-size: 59.375rem;
-}
-
-@media (min-width: 15rem) {
-  .emotion-515 {
-    contain-intrinsic-size: 56.563rem;
-  }
-}
-
-@media (min-width: 25rem) {
-  .emotion-515 {
-    contain-intrinsic-size: 51.063rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-515 {
-    contain-intrinsic-size: 30.75rem;
-  }
-}
-
-@media (min-width: 63rem) {
-  .emotion-515 {
-    contain-intrinsic-size: 21.25rem;
-  }
-}
-
-@media (max-width: 24.9375rem) {
-  .emotion-515 {
-    margin: 2rem -0.5rem 0;
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width: 25rem) {
-  .emotion-515 {
-    margin: 2rem -1rem 0;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-515 {
-    margin: 1.5rem -1rem 0;
-  }
-}
-
-.emotion-518 {
-  position: relative;
-  z-index: 0;
-  color: #141414;
-  margin-top: 2rem;
-  margin: 0 auto;
-  width: 100%;
-  padding-top: 0.5rem;
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-518 {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width: 63rem) {
-  .emotion-518 {
-    margin-bottom: 1.5rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-518 {
-    margin: 0 auto;
-    padding-top: 1.5rem;
-  }
-}
-
-@media (min-width: 63rem) {
-  .emotion-518 {
-    max-width: 63rem;
-    padding-top: 2rem;
-  }
-}
-
-.emotion-526 {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  background-color: #F2F2F2;
-  margin: 1rem 0;
-  padding-left: 0.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-526 {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-526 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-526 {
-    margin: 0;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-526 {
-    padding-left: 1rem;
-  }
-}
-
-.emotion-528 {
-  margin: 0 auto;
-  width: 100%;
-  padding-bottom: 1rem;
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-528 {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width: 63rem) {
-  .emotion-528 {
-    max-width: 63rem;
-    padding-bottom: 1.5rem;
-  }
-}
-
-.emotion-531 {
-  padding: 0;
-  margin: 0;
-}
-
-@media (max-width: 14.9375rem) {
-  .emotion-531 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-531 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-531 {
-    padding: 0 1rem;
-  }
-}
-
-@supports (display: grid) {
-  .emotion-531 {
-    display: grid;
-    position: initial;
-    width: initial;
-    margin: 0;
-  }
-
-  @media (max-width: 14.9375rem) {
-    .emotion-531 {
-      grid-template-columns: repeat(4, 1fr);
-      grid-column-end: span 4;
-      grid-column-gap: 0.5rem;
-      padding: 0 0.5rem;
-    }
-  }
-
-  @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-531 {
-      grid-template-columns: repeat(4, 1fr);
-      grid-column-end: span 4;
-      grid-column-gap: 0.5rem;
-      padding: 0 0.5rem;
-    }
-  }
-
-  @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-531 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      grid-column-gap: 0.5rem;
-      padding: 0 1rem;
-    }
-  }
-
-  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-531 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      grid-column-gap: 1rem;
-    }
-  }
-
-  @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-531 {
-      grid-template-columns: repeat(8, 1fr);
-      grid-column-end: span 8;
-      grid-column-gap: 1rem;
-    }
-  }
-
-  @media (min-width: 80rem) {
-    .emotion-531 {
-      grid-template-columns: repeat(8, 1fr);
-      grid-column-end: span 8;
-      grid-column-gap: 1rem;
-    }
-  }
-}
-
-@media (max-width: 37.5rem) {
-  .emotion-531 {
-    padding: 0;
-  }
-}
-
-.emotion-534 {
-  position: relative;
-  padding-bottom: 1rem;
-}
-
-@media (max-width: 14.9375rem) {
-  .emotion-534 {
-    width: calc(4/4*(100% - 4 * 0.5rem) + 3 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-534 {
-    width: calc(4/4*(100% - 4 * 0.5rem) + 3 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-534 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-534 {
-    width: calc(3/6*(100% - 6 * 1rem) + 2 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-534 {
-    width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-534 {
-    width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@supports (display: grid) {
-  .emotion-534 {
-    display: block;
-    width: initial;
-    margin: 0;
-  }
-
-  @media (max-width: 14.9375rem) {
-    .emotion-534 {
-      grid-template-columns: repeat(4, 1fr);
-      grid-column-end: span 4;
-    }
-  }
-
-  @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-534 {
-      grid-template-columns: repeat(4, 1fr);
-      grid-column-end: span 4;
-    }
-  }
-
-  @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-534 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-    }
-  }
-
-  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-534 {
-      grid-template-columns: repeat(3, 1fr);
-      grid-column-end: span 3;
-    }
-  }
-
-  @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-534 {
-      grid-template-columns: repeat(2, 1fr);
-      grid-column-end: span 2;
-    }
-  }
-
-  @media (min-width: 80rem) {
-    .emotion-534 {
-      grid-template-columns: repeat(2, 1fr);
-      grid-column-end: span 2;
-    }
-  }
-}
-
-@supports (grid-template-columns: fit-content(200px)) {
-  .emotion-534 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-}
-
-.emotion-536 {
-  padding-bottom: 0.5rem;
-}
-
-.emotion-538 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-540 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding-left: 0.25rem;
-}
-
-.emotion-540>svg {
-  color: #5A5A5A;
-  margin: 0;
-  overflow: visible;
-}
-
-@media screen and (forced-colors: active) {
-  .emotion-540>svg {
-    fill: canvasText;
-  }
-}
-
-.emotion-542 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
-  color: #222222;
-  fill: currentColor;
-  width: 0.725rem;
-  height: 0.725rem;
-}
-
-.emotion-544 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  width: 100%;
-}
-
-.emotion-544>time {
-  color: #5A5A5A;
-  font-size: 0.75rem;
-  line-height: 1.125rem;
-  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-544>time {
-    font-size: 0.75rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-544>time {
-    font-size: 0.75rem;
-    line-height: 1.125rem;
-  }
-}
-
-.emotion-544::after {
-  content: '';
-  border-top: 0.0625rem solid #AEAEB5;
-  top: 1.0625rem;
-  margin-right: 0.625rem;
-  width: 100%;
-}
-
-.emotion-548 {
-  padding-top: 0.5rem;
-  background-color: #FFFFFF;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  outline: 0.0625rem solid transparent;
-  height: 100%;
-}
-
-.emotion-550 {
-  padding: 0 0.5rem;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-}
-
-.emotion-552 {
-  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.5rem;
-  color: #6E6E73;
-  margin: 0;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-552 {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-552 {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
-
-.emotion-555 {
-  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.5rem;
-  color: #11708C;
-  display: inline-block;
-  margin-left: 0.5rem;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-555 {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-555 {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
-
-.emotion-558 {
-  color: #6E6E73;
-  padding: 0.5rem 0 0 0;
-  display: inline-block;
-  width: 100%;
-  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.5rem;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-558 {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-558 {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
-
-.emotion-561 {
-  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  color: #6E6E73;
-  padding-top: 0.5rem;
-  padding-bottom: 1rem;
-  margin: 0;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-561 {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-561 {
-    font-size: 0.8125rem;
-    line-height: 1.25rem;
-  }
-}
-
-.emotion-563 {
-  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.75rem;
-  line-height: 1.125rem;
-  padding: 0.5rem;
-  background-color: #FFFFFF;
-  outline: 0.0625rem solid transparent;
-  color: #11708C;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-563 {
-    font-size: 0.75rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-563 {
-    font-size: 0.75rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media screen and (-ms-high-contrast: active) {
-  .emotion-563 {
-    background-color: transparent;
-    outline: none;
-  }
-}
-
-.emotion-565>svg {
-  color: #11708C;
-  fill: currentColor;
-  width: 1.0625rem;
-  height: 0.75rem;
-  margin: 0;
-}
-
-@media screen and (forced-colors: active) {
-  .emotion-565>svg {
-    fill: canvasText;
-  }
-}
-
-.emotion-567 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
-  color: #222222;
-  fill: currentColor;
-  width: 0.75rem;
-  height: 0.75rem;
-}
-
-.emotion-569 {
-  padding-right: 0.5rem;
-}
-
-.emotion-590 {
-  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.5rem;
-  color: #222222;
-  margin: 0;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-590 {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-590 {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
-
-.emotion-592 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-  display: inline-block;
-}
-
-.emotion-592:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.emotion-592:hover,
-.emotion-592:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-592:visited {
-  color: #6E6E73;
-}
-
-.emotion-592:hover .emotion-559 {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-592:focus .emotion-559 {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-596 {
-  color: #3F3F42;
-  padding: 0.5rem 0 0 0;
-  display: inline-block;
-  width: 100%;
-  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.5rem;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-596 {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-596 {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
-
-.emotion-601 {
-  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.75rem;
-  line-height: 1.125rem;
-  padding: 0.5rem;
-  background-color: #222222;
-  outline: 0.0625rem solid transparent;
-  color: #FFFFFF;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-601 {
-    font-size: 0.75rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-601 {
-    font-size: 0.75rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media screen and (-ms-high-contrast: active) {
-  .emotion-601 {
-    background-color: transparent;
-    outline: none;
-  }
-}
-
-.emotion-603>svg {
-  color: #FFFFFF;
-  fill: currentColor;
-  width: 1.0625rem;
-  height: 0.75rem;
-  margin: 0;
-}
-
-@media screen and (forced-colors: active) {
-  .emotion-603>svg {
-    fill: canvasText;
-  }
-}
-
-.emotion-930 {
-  margin: 0 auto;
-  width: 100%;
-}
-
-@media (min-width: 63rem) {
-  .emotion-930 {
-    max-width: 63rem;
-  }
-}
-
-.emotion-932 {
-  position: relative;
-  z-index: 0;
-  color: #141414;
-  margin-top: 2rem;
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-932 {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width: 63rem) {
-  .emotion-932 {
-    margin-bottom: 1.5rem;
-  }
-}
-
-@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-932 {
-    margin-bottom: 1rem;
-  }
-}
-
-.emotion-942 {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  grid-auto-flow: column;
-  grid-template-rows: repeat(10, auto);
-}
-
-@supports (display: grid) {
-  .emotion-942 {
-    display: grid;
-    position: initial;
-    width: initial;
-    margin: 0;
-  }
-
-  @media (max-width: 14.9375rem) {
-    .emotion-942 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      grid-column-gap: 0.5rem;
-    }
-  }
-
-  @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-942 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      grid-column-gap: 0.5rem;
-    }
-  }
-
-  @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-942 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      grid-column-gap: 0.5rem;
-    }
-  }
-
-  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-942 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      grid-column-gap: 1rem;
-    }
-  }
-
-  @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-942 {
-      grid-template-columns: repeat(8, 1fr);
-      grid-column-end: span 8;
-      grid-column-gap: 1rem;
-    }
-  }
-
-  @media (min-width: 80rem) {
-    .emotion-942 {
-      grid-template-columns: repeat(8, 1fr);
-      grid-column-end: span 8;
-      grid-column-gap: 1rem;
-    }
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-942 {
-    grid-template-rows: repeat(5, auto);
-  }
-}
-
-.emotion-944 {
-  position: relative;
-  padding-bottom: 1.5rem;
-}
-
-@media (max-width: 14.9375rem) {
-  .emotion-944 {
-    width: calc(100%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-944 {
-    width: calc(100%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-944 {
-    width: calc(100%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-944 {
-    width: calc(50%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-944 {
-    width: calc(50%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-944 {
-    width: calc(50%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@supports (display: grid) {
-  .emotion-944 {
-    display: block;
-    width: initial;
-    margin: 0;
-  }
-
-  @media (max-width: 14.9375rem) {
-    .emotion-944 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-    }
-  }
-
-  @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-944 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-    }
-  }
-
-  @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-944 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-    }
-  }
-
-  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-944 {
-      grid-template-columns: repeat(3, 1fr);
-      grid-column-end: span 3;
-    }
-  }
-
-  @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-944 {
-      grid-template-columns: repeat(4, 1fr);
-      grid-column-end: span 4;
-    }
-  }
-
-  @media (min-width: 80rem) {
-    .emotion-944 {
-      grid-template-columns: repeat(4, 1fr);
-      grid-column-end: span 4;
-    }
-  }
-}
-
-.emotion-946 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  margin: 0;
-  padding: 0;
-}
-
-@media (max-width: 14.9375rem) {
-  .emotion-947 {
-    min-width: 1rem;
-  }
-}
-
-@media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-947 {
-    min-width: 1.5rem;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-947 {
-    min-width: 1.5rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-947 {
-    min-width: 2rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-947 {
-    min-width: 1.5rem;
-  }
-}
-
-@supports (grid-template-columns: fit-content(200px)) {
-  @media (min-width: 37.5rem) {
-    .emotion-947 {
-      min-width: 1.5rem;
-    }
-  }
-}
-
-.emotion-948 {
-  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  position: relative;
-  color: #B80000;
-  margin: 0;
-  padding: 0;
-  font-size: 2rem;
-  line-height: 2.25rem;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-948 {
-    font-size: 2.5rem;
-    line-height: 2.75rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-948 {
-    font-size: 3.5rem;
-    line-height: 3.75rem;
-  }
-}
-
-.emotion-949 {
-  padding-top: 0.375rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-@supports (grid-template-columns: fit-content(200px)) {
-  .emotion-949 {
-    padding-left: 0;
-  }
-}
-
-.emotion-950 {
-  font-size: 0.9375rem;
-  line-height: 1.5rem;
-  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  margin-bottom: 0.5rem;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-950 {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-950 {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
-
-.emotion-950:hover,
-.emotion-950:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-950:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-@media (min-width: 25rem) {
-  .emotion-950 {
-    font-size: 1.125rem;
-    line-height: 1.625rem;
-  }
-
-  @media (min-width: 20rem) and (max-width: 37.4375rem) {
-    .emotion-950 {
-      font-size: 1.125rem;
-      line-height: 1.625rem;
-    }
-  }
-
-  @media (min-width: 37.5rem) {
-    .emotion-950 {
-      font-size: 1.25rem;
-      line-height: 1.75rem;
-    }
-  }
-}
-
-@media (max-width: 14.9375rem) {
-  .emotion-954 {
-    min-width: 1rem;
-  }
-}
-
-@media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-954 {
-    min-width: 1.5rem;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-954 {
-    min-width: 1.5rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-954 {
-    min-width: 2rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-954 {
-    min-width: 2rem;
-  }
-}
-
-@supports (grid-template-columns: fit-content(200px)) {
-  @media (min-width: 37.5rem) {
-    .emotion-954 {
-      min-width: 1.5rem;
-    }
-  }
-}
-
-@media (max-width: 14.9375rem) {
-  .emotion-982 {
-    min-width: 1rem;
-  }
-}
-
-@media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-982 {
-    min-width: 1.5rem;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-982 {
-    min-width: 1.5rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-982 {
-    min-width: 2rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-982 {
-    min-width: 2rem;
-  }
-}
-
-@supports (grid-template-columns: fit-content(200px)) {
-  @media (min-width: 37.5rem) {
-    .emotion-982 {
-      min-width: 2rem;
-    }
-  }
-}
-
-@media (max-width: 14.9375rem) {
-  .emotion-989 {
-    min-width: 1rem;
-  }
-}
-
-@media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-989 {
-    min-width: 1.5rem;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-989 {
-    min-width: 1.5rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-989 {
-    min-width: 2rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-989 {
-    min-width: 1.5rem;
-  }
-}
-
-@supports (grid-template-columns: fit-content(200px)) {
-  @media (min-width: 37.5rem) {
-    .emotion-989 {
-      min-width: 2rem;
-    }
-  }
-}
-
-.emotion-993 {
-  padding-top: 0.5rem;
 }
 
 <div>
@@ -8535,7 +7382,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
     >
       <h1
         class="emotion-2 emotion-3"
-        dir="rtl"
+        dir="ltr"
         id="content"
         tabindex="-1"
       >
@@ -8560,7 +7407,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
               >
                 <span
                   class="emotion-14 emotion-15"
-                  dir="rtl"
+                  dir="ltr"
                   id="Top-stories"
                 >
                   Главное
@@ -8574,12 +7421,12 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
         >
           <ul
             class="emotion-18 emotion-19 emotion-20"
-            dir="rtl"
+            dir="ltr"
             role="list"
           >
             <li
               class="emotion-18 emotion-22 emotion-23"
-              dir="rtl"
+              dir="ltr"
             >
               <div
                 class="emotion-24 emotion-25"
@@ -8587,7 +7434,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
               >
                 <div
                   class="emotion-26 emotion-27"
-                  dir="rtl"
+                  dir="ltr"
                 >
                   <div
                     class="emotion-28 emotion-29"
@@ -8615,7 +7462,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 </div>
                 <div
                   class="emotion-34 emotion-35"
-                  dir="rtl"
+                  dir="ltr"
                 >
                   <h3
                     class="emotion-36 emotion-37"
@@ -8641,7 +7488,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-42 emotion-43"
                     datetime="2022-02-24"
                   >
-                    ۵ اسفند ۱۴۰۰ - ۲۴ فوریه ۲۰۲۲
+                    24 февраля 2022
                   </time>
                   <div
                     class="emotion-44 emotion-45"
@@ -8650,7 +7497,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     <h4
                       class="emotion-46"
                     >
-                      مطالب مرتبط
+                      Читайте также
                     </h4>
                     <div
                       class="emotion-47 emotion-48"
@@ -8670,7 +7517,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </li>
             <li
               class="emotion-18 emotion-52 emotion-23"
-              dir="rtl"
+              dir="ltr"
             >
               <div
                 class="emotion-54 emotion-25"
@@ -8678,7 +7525,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
               >
                 <div
                   class="emotion-56 emotion-27"
-                  dir="rtl"
+                  dir="ltr"
                 >
                   <div
                     class="emotion-28 emotion-29"
@@ -8707,7 +7554,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 </div>
                 <div
                   class="emotion-64 emotion-35"
-                  dir="rtl"
+                  dir="ltr"
                 >
                   <h3
                     class="emotion-66 emotion-37"
@@ -8733,14 +7580,14 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-42 emotion-43"
                     datetime="2022-02-24"
                   >
-                    ۵ اسفند ۱۴۰۰ - ۲۴ فوریه ۲۰۲۲
+                    24 февраля 2022
                   </time>
                 </div>
               </div>
             </li>
             <li
               class="emotion-18 emotion-52 emotion-23"
-              dir="rtl"
+              dir="ltr"
             >
               <div
                 class="emotion-54 emotion-25"
@@ -8748,7 +7595,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
               >
                 <div
                   class="emotion-56 emotion-27"
-                  dir="rtl"
+                  dir="ltr"
                 >
                   <div
                     class="emotion-28 emotion-29"
@@ -8777,7 +7624,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 </div>
                 <div
                   class="emotion-64 emotion-35"
-                  dir="rtl"
+                  dir="ltr"
                 >
                   <h3
                     class="emotion-66 emotion-37"
@@ -8803,14 +7650,14 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-42 emotion-43"
                     datetime="2022-02-24"
                   >
-                    ۵ اسفند ۱۴۰۰ - ۲۴ فوریه ۲۰۲۲
+                    24 февраля 2022
                   </time>
                 </div>
               </div>
             </li>
             <li
               class="emotion-18 emotion-52 emotion-23"
-              dir="rtl"
+              dir="ltr"
             >
               <div
                 class="emotion-54 emotion-25"
@@ -8818,7 +7665,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
               >
                 <div
                   class="emotion-56 emotion-27"
-                  dir="rtl"
+                  dir="ltr"
                 >
                   <div
                     class="emotion-28 emotion-29"
@@ -8847,7 +7694,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 </div>
                 <div
                   class="emotion-64 emotion-35"
-                  dir="rtl"
+                  dir="ltr"
                 >
                   <h3
                     class="emotion-66 emotion-37"
@@ -8873,14 +7720,14 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-42 emotion-43"
                     datetime="2022-02-24"
                   >
-                    ۵ اسفند ۱۴۰۰ - ۲۴ فوریه ۲۰۲۲
+                    24 февраля 2022
                   </time>
                 </div>
               </div>
             </li>
             <li
               class="emotion-18 emotion-52 emotion-23"
-              dir="rtl"
+              dir="ltr"
             >
               <div
                 class="emotion-54 emotion-25"
@@ -8888,7 +7735,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
               >
                 <div
                   class="emotion-56 emotion-27"
-                  dir="rtl"
+                  dir="ltr"
                 >
                   <div
                     class="emotion-28 emotion-29"
@@ -8917,7 +7764,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 </div>
                 <div
                   class="emotion-64 emotion-35"
-                  dir="rtl"
+                  dir="ltr"
                 >
                   <h3
                     class="emotion-66 emotion-37"
@@ -8943,7 +7790,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-42 emotion-43"
                     datetime="2022-02-24"
                   >
-                    ۵ اسفند ۱۴۰۰ - ۲۴ فوریه ۲۰۲۲
+                    24 февраля 2022
                   </time>
                 </div>
               </div>
@@ -8970,7 +7817,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
               >
                 <span
                   class="emotion-14 emotion-15"
-                  dir="rtl"
+                  dir="ltr"
                   id="Спецпроект"
                 >
                   Спецпроект
@@ -8981,12 +7828,12 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
         </div>
         <ul
           class="emotion-18 emotion-19 emotion-20"
-          dir="rtl"
+          dir="ltr"
           role="list"
         >
           <li
             class="emotion-18 emotion-159 emotion-23"
-            dir="rtl"
+            dir="ltr"
           >
             <div
               class="emotion-161 emotion-25"
@@ -8994,7 +7841,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             >
               <div
                 class="emotion-163 emotion-35"
-                dir="rtl"
+                dir="ltr"
               >
                 <h3
                   class="emotion-165 emotion-37"
@@ -9020,12 +7867,12 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   class="emotion-42 emotion-43"
                   datetime="2022-02-24"
                 >
-                  ۵ اسفند ۱۴۰۰ - ۲۴ فوریه ۲۰۲۲
+                  24 февраля 2022
                 </time>
               </div>
               <div
                 class="emotion-173 emotion-27"
-                dir="rtl"
+                dir="ltr"
               >
                 <div
                   class="emotion-28 emotion-29"
@@ -9056,7 +7903,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
           </li>
           <li
             class="emotion-18 emotion-52 emotion-23"
-            dir="rtl"
+            dir="ltr"
           >
             <div
               class="emotion-54 emotion-25"
@@ -9064,7 +7911,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             >
               <div
                 class="emotion-56 emotion-27"
-                dir="rtl"
+                dir="ltr"
               >
                 <div
                   class="emotion-28 emotion-29"
@@ -9093,7 +7940,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
               </div>
               <div
                 class="emotion-64 emotion-35"
-                dir="rtl"
+                dir="ltr"
               >
                 <h3
                   class="emotion-66 emotion-37"
@@ -9119,7 +7966,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   class="emotion-42 emotion-43"
                   datetime="2022-02-21"
                 >
-                  ۲ اسفند ۱۴۰۰ - ۲۱ فوریه ۲۰۲۲
+                  21 февраля 2022
                 </time>
               </div>
             </div>
@@ -9150,7 +7997,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 >
                   <span
                     class="emotion-14 emotion-15"
-                    dir="rtl"
+                    dir="ltr"
                     id="Verticals"
                   >
                     BBC Журнал
@@ -9158,9 +8005,9 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   <span
                     aria-hidden="true"
                     class="emotion-218 emotion-219"
-                    dir="rtl"
+                    dir="ltr"
                   >
-                    بیشتر
+                    Посмотреть все
                   </span>
                 </span>
               </span>
@@ -9169,12 +8016,12 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
         </div>
         <ul
           class="emotion-18 emotion-19 emotion-20"
-          dir="rtl"
+          dir="ltr"
           role="list"
         >
           <li
             class="emotion-18 emotion-159 emotion-23"
-            dir="rtl"
+            dir="ltr"
           >
             <div
               class="emotion-161 emotion-25"
@@ -9182,7 +8029,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             >
               <div
                 class="emotion-163 emotion-35"
-                dir="rtl"
+                dir="ltr"
               >
                 <h3
                   class="emotion-165 emotion-37"
@@ -9208,12 +8055,12 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   class="emotion-42 emotion-43"
                   datetime="2022-02-23"
                 >
-                  ۴ اسفند ۱۴۰۰ - ۲۳ فوریه ۲۰۲۲
+                  23 февраля 2022
                 </time>
               </div>
               <div
                 class="emotion-173 emotion-27"
-                dir="rtl"
+                dir="ltr"
               >
                 <div
                   class="emotion-28 emotion-29"
@@ -9244,7 +8091,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
           </li>
           <li
             class="emotion-18 emotion-52 emotion-23"
-            dir="rtl"
+            dir="ltr"
           >
             <div
               class="emotion-54 emotion-25"
@@ -9252,7 +8099,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             >
               <div
                 class="emotion-56 emotion-27"
-                dir="rtl"
+                dir="ltr"
               >
                 <div
                   class="emotion-28 emotion-29"
@@ -9281,7 +8128,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
               </div>
               <div
                 class="emotion-64 emotion-35"
-                dir="rtl"
+                dir="ltr"
               >
                 <h3
                   class="emotion-66 emotion-37"
@@ -9307,7 +8154,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   class="emotion-42 emotion-43"
                   datetime="2022-02-24"
                 >
-                  ۵ اسفند ۱۴۰۰ - ۲۴ فوریه ۲۰۲۲
+                  24 февраля 2022
                 </time>
               </div>
             </div>
@@ -9333,7 +8180,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
               >
                 <span
                   class="emotion-14 emotion-15"
-                  dir="rtl"
+                  dir="ltr"
                   id="Also-in-the-news"
                 >
                   Статьи
@@ -9344,12 +8191,12 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
         </div>
         <ul
           class="emotion-18 emotion-19 emotion-20"
-          dir="rtl"
+          dir="ltr"
           role="list"
         >
           <li
             class="emotion-18 emotion-159 emotion-23"
-            dir="rtl"
+            dir="ltr"
           >
             <div
               class="emotion-161 emotion-25"
@@ -9357,7 +8204,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             >
               <div
                 class="emotion-163 emotion-35"
-                dir="rtl"
+                dir="ltr"
               >
                 <h3
                   class="emotion-165 emotion-37"
@@ -9383,12 +8230,12 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   class="emotion-42 emotion-43"
                   datetime="2022-02-22"
                 >
-                  ۳ اسفند ۱۴۰۰ - ۲۲ فوریه ۲۰۲۲
+                  22 февраля 2022
                 </time>
               </div>
               <div
                 class="emotion-173 emotion-27"
-                dir="rtl"
+                dir="ltr"
               >
                 <div
                   class="emotion-28 emotion-29"
@@ -9419,7 +8266,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
           </li>
           <li
             class="emotion-18 emotion-52 emotion-23"
-            dir="rtl"
+            dir="ltr"
           >
             <div
               class="emotion-54 emotion-25"
@@ -9427,7 +8274,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             >
               <div
                 class="emotion-56 emotion-27"
-                dir="rtl"
+                dir="ltr"
               >
                 <div
                   class="emotion-28 emotion-29"
@@ -9456,7 +8303,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
               </div>
               <div
                 class="emotion-64 emotion-35"
-                dir="rtl"
+                dir="ltr"
               >
                 <h3
                   class="emotion-66 emotion-37"
@@ -9482,14 +8329,14 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   class="emotion-42 emotion-43"
                   datetime="2021-12-22"
                 >
-                  ۱ دی ۱۴۰۰ - ۲۲ دسامبر ۲۰۲۱
+                  22 декабря 2021
                 </time>
               </div>
             </div>
           </li>
           <li
             class="emotion-18 emotion-52 emotion-23"
-            dir="rtl"
+            dir="ltr"
           >
             <div
               class="emotion-54 emotion-25"
@@ -9497,7 +8344,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             >
               <div
                 class="emotion-56 emotion-27"
-                dir="rtl"
+                dir="ltr"
               >
                 <div
                   class="emotion-28 emotion-29"
@@ -9526,7 +8373,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
               </div>
               <div
                 class="emotion-64 emotion-35"
-                dir="rtl"
+                dir="ltr"
               >
                 <h3
                   class="emotion-66 emotion-37"
@@ -9552,14 +8399,14 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   class="emotion-42 emotion-43"
                   datetime="2022-01-31"
                 >
-                  ۱۱ بهمن ۱۴۰۰ - ۳۱ ژانویه ۲۰۲۲
+                  31 января 2022
                 </time>
               </div>
             </div>
           </li>
           <li
             class="emotion-18 emotion-52 emotion-23"
-            dir="rtl"
+            dir="ltr"
           >
             <div
               class="emotion-54 emotion-25"
@@ -9567,7 +8414,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             >
               <div
                 class="emotion-56 emotion-27"
-                dir="rtl"
+                dir="ltr"
               >
                 <div
                   class="emotion-28 emotion-29"
@@ -9596,7 +8443,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
               </div>
               <div
                 class="emotion-64 emotion-35"
-                dir="rtl"
+                dir="ltr"
               >
                 <h3
                   class="emotion-66 emotion-37"
@@ -9622,14 +8469,14 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   class="emotion-42 emotion-43"
                   datetime="2022-02-19"
                 >
-                  ۳۰ بهمن ۱۴۰۰ - ۱۹ فوریه ۲۰۲۲
+                  19 февраля 2022
                 </time>
               </div>
             </div>
           </li>
           <li
             class="emotion-18 emotion-52 emotion-23"
-            dir="rtl"
+            dir="ltr"
           >
             <div
               class="emotion-54 emotion-25"
@@ -9637,7 +8484,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             >
               <div
                 class="emotion-56 emotion-27"
-                dir="rtl"
+                dir="ltr"
               >
                 <div
                   class="emotion-28 emotion-29"
@@ -9666,7 +8513,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
               </div>
               <div
                 class="emotion-64 emotion-35"
-                dir="rtl"
+                dir="ltr"
               >
                 <h3
                   class="emotion-66 emotion-37"
@@ -9692,14 +8539,14 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   class="emotion-42 emotion-43"
                   datetime="2022-02-15"
                 >
-                  ۲۶ بهمن ۱۴۰۰ - ۱۵ فوریه ۲۰۲۲
+                  15 февраля 2022
                 </time>
               </div>
             </div>
           </li>
           <li
             class="emotion-18 emotion-52 emotion-23"
-            dir="rtl"
+            dir="ltr"
           >
             <div
               class="emotion-54 emotion-25"
@@ -9707,7 +8554,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             >
               <div
                 class="emotion-56 emotion-27"
-                dir="rtl"
+                dir="ltr"
               >
                 <div
                   class="emotion-28 emotion-29"
@@ -9736,7 +8583,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
               </div>
               <div
                 class="emotion-64 emotion-35"
-                dir="rtl"
+                dir="ltr"
               >
                 <h3
                   class="emotion-66 emotion-37"
@@ -9762,14 +8609,14 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   class="emotion-42 emotion-43"
                   datetime="2022-02-17"
                 >
-                  ۲۸ بهمن ۱۴۰۰ - ۱۷ فوریه ۲۰۲۲
+                  17 февраля 2022
                 </time>
               </div>
             </div>
           </li>
           <li
             class="emotion-18 emotion-52 emotion-23"
-            dir="rtl"
+            dir="ltr"
           >
             <div
               class="emotion-54 emotion-25"
@@ -9777,7 +8624,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             >
               <div
                 class="emotion-56 emotion-27"
-                dir="rtl"
+                dir="ltr"
               >
                 <div
                   class="emotion-28 emotion-29"
@@ -9806,7 +8653,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
               </div>
               <div
                 class="emotion-64 emotion-35"
-                dir="rtl"
+                dir="ltr"
               >
                 <h3
                   class="emotion-66 emotion-37"
@@ -9832,14 +8679,14 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   class="emotion-42 emotion-43"
                   datetime="2021-11-25"
                 >
-                  ۴ آذر ۱۴۰۰ - ۲۵ نوامبر ۲۰۲۱
+                  25 ноября 2021
                 </time>
               </div>
             </div>
           </li>
           <li
             class="emotion-18 emotion-52 emotion-23"
-            dir="rtl"
+            dir="ltr"
           >
             <div
               class="emotion-54 emotion-25"
@@ -9847,7 +8694,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             >
               <div
                 class="emotion-56 emotion-27"
-                dir="rtl"
+                dir="ltr"
               >
                 <div
                   class="emotion-28 emotion-29"
@@ -9876,7 +8723,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
               </div>
               <div
                 class="emotion-64 emotion-35"
-                dir="rtl"
+                dir="ltr"
               >
                 <h3
                   class="emotion-66 emotion-37"
@@ -9902,14 +8749,14 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   class="emotion-42 emotion-43"
                   datetime="2022-02-09"
                 >
-                  ۲۰ بهمن ۱۴۰۰ - ۹ فوریه ۲۰۲۲
+                  9 февраля 2022
                 </time>
               </div>
             </div>
           </li>
           <li
             class="emotion-18 emotion-52 emotion-23"
-            dir="rtl"
+            dir="ltr"
           >
             <div
               class="emotion-54 emotion-25"
@@ -9917,7 +8764,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             >
               <div
                 class="emotion-56 emotion-27"
-                dir="rtl"
+                dir="ltr"
               >
                 <div
                   class="emotion-28 emotion-29"
@@ -9946,7 +8793,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
               </div>
               <div
                 class="emotion-64 emotion-35"
-                dir="rtl"
+                dir="ltr"
               >
                 <h3
                   class="emotion-66 emotion-37"
@@ -9972,14 +8819,14 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   class="emotion-42 emotion-43"
                   datetime="2022-02-08"
                 >
-                  ۱۹ بهمن ۱۴۰۰ - ۸ فوریه ۲۰۲۲
+                  8 февраля 2022
                 </time>
               </div>
             </div>
           </li>
           <li
             class="emotion-18 emotion-52 emotion-23"
-            dir="rtl"
+            dir="ltr"
           >
             <div
               class="emotion-54 emotion-25"
@@ -9987,7 +8834,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             >
               <div
                 class="emotion-56 emotion-27"
-                dir="rtl"
+                dir="ltr"
               >
                 <div
                   class="emotion-28 emotion-29"
@@ -10016,7 +8863,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
               </div>
               <div
                 class="emotion-64 emotion-35"
-                dir="rtl"
+                dir="ltr"
               >
                 <h3
                   class="emotion-66 emotion-37"
@@ -10042,574 +8889,12 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   class="emotion-42 emotion-43"
                   datetime="2022-02-03"
                 >
-                  ۱۴ بهمن ۱۴۰۰ - ۳ فوریه ۲۰۲۲
+                  3 февраля 2022
                 </time>
               </div>
             </div>
           </li>
         </ul>
-      </section>
-      <section
-        aria-labelledby="Radio-Schedule"
-        class=" emotion-514 emotion-515 emotion-516"
-        lang="fa-AF"
-        role="region"
-      >
-        <div
-          class="emotion-517 emotion-518 emotion-7"
-        >
-          <h2
-            class="emotion-8 emotion-9"
-          >
-            <span
-              class="emotion-10 emotion-11"
-            >
-              <span
-                class="emotion-12 emotion-13"
-              >
-                <span
-                  class="emotion-526 emotion-15"
-                  dir="rtl"
-                  id="Radio-Schedule"
-                >
-                  برنامه‌های رادیو
-                </span>
-              </span>
-            </span>
-          </h2>
-        </div>
-        <div
-          class="emotion-528 emotion-529"
-          data-e2e="radio-schedule"
-        >
-          <div
-            class="emotion-530 emotion-531 emotion-18"
-            dir="rtl"
-            role="list"
-          >
-            <li
-              class="emotion-533 emotion-534 emotion-18"
-              data-e2e="next"
-              dir="rtl"
-              role="listitem"
-            >
-              <div
-                class="emotion-536 emotion-537"
-              >
-                <div
-                  class="emotion-538 emotion-539"
-                >
-                  <span
-                    class="emotion-540 emotion-541"
-                    dir="rtl"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="emotion-542 emotion-543"
-                      focusable="false"
-                      height="13"
-                      viewBox="0 0 13 13"
-                      width="13"
-                    >
-                      <path
-                        d="M6.5 0A6.5 6.5 0 1013 6.5 6.5 6.5 0 006.5 0zm0 11.5a5 5 0 115-5 5 5 0 01-5 5z"
-                      />
-                      <path
-                        d="M7.34 2.9h-1v3.8L9.4 8.57l.41-.56-2.47-1.89V2.9z"
-                      />
-                    </svg>
-                  </span>
-                  <span
-                    aria-hidden="true"
-                    class="emotion-544 emotion-545"
-                    dir="rtl"
-                  >
-                    <time
-                      class="emotion-42 emotion-43"
-                      datetime="2030-01-01"
-                    >
-                      ۰۹:۰۰
-                    </time>
-                  </span>
-                </div>
-              </div>
-              <div
-                class="emotion-548 emotion-549"
-              >
-                <div
-                  class="emotion-550 emotion-551"
-                >
-                  <h3
-                    class="emotion-552 emotion-553"
-                  >
-                    <span
-                      id="scheduleItem-p086pmsf"
-                      role="text"
-                    >
-                      <span
-                        class="emotion-46"
-                      >
-                        به بعدی گوش کنید, 
-                      </span>
-                      <span
-                        aria-hidden="true"
-                        class="emotion-555 emotion-556"
-                        dir="rtl"
-                      >
-                        بعدی 
-                      </span>
-                      چشم انداز بامدادی 1
-                      <span
-                        class="emotion-46"
-                      >
-                        , ۰۹:۰۰, 
-                      </span>
-                      <span
-                        class="emotion-558 emotion-559"
-                      >
-                        ۱ ژانویه ۲۰۳۰
-                      </span>
-                      <span
-                        class="emotion-46"
-                      >
-                        , ۲۶،۳۰ المدة الزمنية 
-                      </span>
-                    </span>
-                  </h3>
-                  <p
-                    class="emotion-561 emotion-562"
-                  >
-                    تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان.
-                  </p>
-                </div>
-                <div
-                  class="emotion-563 emotion-564"
-                >
-                  <span
-                    class="emotion-565 emotion-566"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="emotion-567 emotion-568"
-                      focusable="false"
-                      height="12px"
-                      viewBox="0 0 13 12"
-                      width="13px"
-                    >
-                      <path
-                        d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
-                      />
-                      <path
-                        d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
-                      />
-                    </svg>
-                  </span>
-                  <time
-                    class="emotion-569 emotion-570"
-                    datetime="PT26M30S"
-                    dir="rtl"
-                  >
-                    <span
-                      aria-hidden="true"
-                    >
-                      ۲۶:۳۰
-                    </span>
-                  </time>
-                </div>
-              </div>
-            </li>
-            <li
-              class="emotion-533 emotion-534 emotion-18"
-              data-e2e="onDemand"
-              dir="rtl"
-              role="listitem"
-            >
-              <div
-                class="emotion-536 emotion-537"
-              >
-                <div
-                  class="emotion-538 emotion-539"
-                >
-                  <span
-                    class="emotion-540 emotion-541"
-                    dir="rtl"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="emotion-542 emotion-543"
-                      focusable="false"
-                      height="13"
-                      viewBox="0 0 13 13"
-                      width="13"
-                    >
-                      <path
-                        d="M6.5 0A6.5 6.5 0 1013 6.5 6.5 6.5 0 006.5 0zm0 11.5a5 5 0 115-5 5 5 0 01-5 5z"
-                      />
-                      <path
-                        d="M7.34 2.9h-1v3.8L9.4 8.57l.41-.56-2.47-1.89V2.9z"
-                      />
-                    </svg>
-                  </span>
-                  <span
-                    aria-hidden="true"
-                    class="emotion-544 emotion-545"
-                    dir="rtl"
-                  >
-                    <time
-                      class="emotion-42 emotion-43"
-                      datetime="2020-03-26"
-                    >
-                      ۰۵:۳۰
-                    </time>
-                  </span>
-                </div>
-              </div>
-              <div
-                class="emotion-548 emotion-549"
-              >
-                <div
-                  class="emotion-550 emotion-551"
-                >
-                  <h3
-                    class="emotion-590 emotion-553"
-                  >
-                    <a
-                      aria-labelledby="scheduleItem-p086pms9"
-                      class="focusIndicatorDisplayBlock emotion-592 emotion-593"
-                      href="/persian/bbc_dari_radio/w172x1rwggbcdq8"
-                    >
-                      <span
-                        id="scheduleItem-p086pms9"
-                        role="text"
-                      >
-                        <span
-                          class="emotion-46"
-                        >
-                          بشنوید, 
-                        </span>
-                        نبض خبر
-                        <span
-                          class="emotion-46"
-                        >
-                          , ۰۵:۳۰, 
-                        </span>
-                        <span
-                          class="emotion-596 emotion-559"
-                        >
-                          ۲۶ مارس ۲۰۲۰
-                        </span>
-                        <span
-                          class="emotion-46"
-                        >
-                          , ۰۳،۰۰ المدة الزمنية 
-                        </span>
-                      </span>
-                    </a>
-                  </h3>
-                  <p
-                    class="emotion-561 emotion-562"
-                  >
-                    تازه ترین خبرهای جهان
-                  </p>
-                </div>
-                <div
-                  class="emotion-601 emotion-564"
-                >
-                  <span
-                    class="emotion-603 emotion-566"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="emotion-567 emotion-568"
-                      focusable="false"
-                      height="12px"
-                      viewBox="0 0 13 12"
-                      width="13px"
-                    >
-                      <path
-                        d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
-                      />
-                      <path
-                        d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
-                      />
-                    </svg>
-                  </span>
-                  <time
-                    class="emotion-569 emotion-570"
-                    datetime="PT3M"
-                    dir="rtl"
-                  >
-                    <span
-                      aria-hidden="true"
-                    >
-                      ۰۳:۰۰
-                    </span>
-                  </time>
-                </div>
-              </div>
-            </li>
-            <li
-              class="emotion-533 emotion-534 emotion-18"
-              data-e2e="onDemand"
-              dir="rtl"
-              role="listitem"
-            >
-              <div
-                class="emotion-536 emotion-537"
-              >
-                <div
-                  class="emotion-538 emotion-539"
-                >
-                  <span
-                    class="emotion-540 emotion-541"
-                    dir="rtl"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="emotion-542 emotion-543"
-                      focusable="false"
-                      height="13"
-                      viewBox="0 0 13 13"
-                      width="13"
-                    >
-                      <path
-                        d="M6.5 0A6.5 6.5 0 1013 6.5 6.5 6.5 0 006.5 0zm0 11.5a5 5 0 115-5 5 5 0 01-5 5z"
-                      />
-                      <path
-                        d="M7.34 2.9h-1v3.8L9.4 8.57l.41-.56-2.47-1.89V2.9z"
-                      />
-                    </svg>
-                  </span>
-                  <span
-                    aria-hidden="true"
-                    class="emotion-544 emotion-545"
-                    dir="rtl"
-                  >
-                    <time
-                      class="emotion-42 emotion-43"
-                      datetime="2020-03-26"
-                    >
-                      ۰۲:۳۰
-                    </time>
-                  </span>
-                </div>
-              </div>
-              <div
-                class="emotion-548 emotion-549"
-              >
-                <div
-                  class="emotion-550 emotion-551"
-                >
-                  <h3
-                    class="emotion-590 emotion-553"
-                  >
-                    <a
-                      aria-labelledby="scheduleItem-p086pjpq"
-                      class="focusIndicatorDisplayBlock emotion-592 emotion-593"
-                      href="/persian/bbc_dari_radio/w3csz8fk"
-                    >
-                      <span
-                        id="scheduleItem-p086pjpq"
-                        role="text"
-                      >
-                        <span
-                          class="emotion-46"
-                        >
-                          بشنوید, 
-                        </span>
-                        چشم انداز بامدادی 2
-                        <span
-                          class="emotion-46"
-                        >
-                          , ۰۲:۳۰, 
-                        </span>
-                        <span
-                          class="emotion-596 emotion-559"
-                        >
-                          ۲۶ مارس ۲۰۲۰
-                        </span>
-                        <span
-                          class="emotion-46"
-                        >
-                          , ۲۹،۳۰ المدة الزمنية 
-                        </span>
-                      </span>
-                    </a>
-                  </h3>
-                  <p
-                    class="emotion-561 emotion-562"
-                  >
-                    تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان.
-                  </p>
-                </div>
-                <div
-                  class="emotion-601 emotion-564"
-                >
-                  <span
-                    class="emotion-603 emotion-566"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="emotion-567 emotion-568"
-                      focusable="false"
-                      height="12px"
-                      viewBox="0 0 13 12"
-                      width="13px"
-                    >
-                      <path
-                        d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
-                      />
-                      <path
-                        d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
-                      />
-                    </svg>
-                  </span>
-                  <time
-                    class="emotion-569 emotion-570"
-                    datetime="PT29M30S"
-                    dir="rtl"
-                  >
-                    <span
-                      aria-hidden="true"
-                    >
-                      ۲۹:۳۰
-                    </span>
-                  </time>
-                </div>
-              </div>
-            </li>
-            <li
-              class="emotion-533 emotion-534 emotion-18"
-              data-e2e="onDemand"
-              dir="rtl"
-              role="listitem"
-            >
-              <div
-                class="emotion-536 emotion-537"
-              >
-                <div
-                  class="emotion-538 emotion-539"
-                >
-                  <span
-                    class="emotion-540 emotion-541"
-                    dir="rtl"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="emotion-542 emotion-543"
-                      focusable="false"
-                      height="13"
-                      viewBox="0 0 13 13"
-                      width="13"
-                    >
-                      <path
-                        d="M6.5 0A6.5 6.5 0 1013 6.5 6.5 6.5 0 006.5 0zm0 11.5a5 5 0 115-5 5 5 0 01-5 5z"
-                      />
-                      <path
-                        d="M7.34 2.9h-1v3.8L9.4 8.57l.41-.56-2.47-1.89V2.9z"
-                      />
-                    </svg>
-                  </span>
-                  <span
-                    aria-hidden="true"
-                    class="emotion-544 emotion-545"
-                    dir="rtl"
-                  >
-                    <time
-                      class="emotion-42 emotion-43"
-                      datetime="2020-03-26"
-                    >
-                      ۰۱:۳۰
-                    </time>
-                  </span>
-                </div>
-              </div>
-              <div
-                class="emotion-548 emotion-549"
-              >
-                <div
-                  class="emotion-550 emotion-551"
-                >
-                  <h3
-                    class="emotion-590 emotion-553"
-                  >
-                    <a
-                      aria-labelledby="scheduleItem-p086phc8"
-                      class="focusIndicatorDisplayBlock emotion-592 emotion-593"
-                      href="/persian/bbc_dari_radio/w3csz7tn"
-                    >
-                      <span
-                        id="scheduleItem-p086phc8"
-                        role="text"
-                      >
-                        <span
-                          class="emotion-46"
-                        >
-                          بشنوید, 
-                        </span>
-                        چشم انداز بامدادی 1
-                        <span
-                          class="emotion-46"
-                        >
-                          , ۰۱:۳۰, 
-                        </span>
-                        <span
-                          class="emotion-596 emotion-559"
-                        >
-                          ۲۶ مارس ۲۰۲۰
-                        </span>
-                        <span
-                          class="emotion-46"
-                        >
-                          , ۲۹،۳۰ المدة الزمنية 
-                        </span>
-                      </span>
-                    </a>
-                  </h3>
-                  <p
-                    class="emotion-561 emotion-562"
-                  >
-                    تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان.
-                  </p>
-                </div>
-                <div
-                  class="emotion-601 emotion-564"
-                >
-                  <span
-                    class="emotion-603 emotion-566"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="emotion-567 emotion-568"
-                      focusable="false"
-                      height="12px"
-                      viewBox="0 0 13 12"
-                      width="13px"
-                    >
-                      <path
-                        d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
-                      />
-                      <path
-                        d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
-                      />
-                    </svg>
-                  </span>
-                  <time
-                    class="emotion-569 emotion-570"
-                    datetime="PT29M30S"
-                    dir="rtl"
-                  >
-                    <span
-                      aria-hidden="true"
-                    >
-                      ۲۹:۳۰
-                    </span>
-                  </time>
-                </div>
-              </div>
-            </li>
-          </div>
-        </div>
       </section>
       <section
         aria-labelledby="Features"
@@ -10630,7 +8915,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
               >
                 <span
                   class="emotion-14 emotion-15"
-                  dir="rtl"
+                  dir="ltr"
                   id="Features"
                 >
                   Подробно
@@ -10641,12 +8926,12 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
         </div>
         <ul
           class="emotion-18 emotion-19 emotion-20"
-          dir="rtl"
+          dir="ltr"
           role="list"
         >
           <li
             class="emotion-18 emotion-159 emotion-23"
-            dir="rtl"
+            dir="ltr"
           >
             <div
               class="emotion-161 emotion-25"
@@ -10654,7 +8939,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             >
               <div
                 class="emotion-163 emotion-35"
-                dir="rtl"
+                dir="ltr"
               >
                 <h3
                   class="emotion-165 emotion-37"
@@ -10680,12 +8965,12 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   class="emotion-42 emotion-43"
                   datetime="2022-01-13"
                 >
-                  ۲۳ دی ۱۴۰۰ - ۱۳ ژانویه ۲۰۲۲
+                  13 января 2022
                 </time>
               </div>
               <div
                 class="emotion-173 emotion-27"
-                dir="rtl"
+                dir="ltr"
               >
                 <div
                   class="emotion-28 emotion-29"
@@ -10716,7 +9001,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
           </li>
           <li
             class="emotion-18 emotion-52 emotion-23"
-            dir="rtl"
+            dir="ltr"
           >
             <div
               class="emotion-54 emotion-25"
@@ -10724,7 +9009,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             >
               <div
                 class="emotion-56 emotion-27"
-                dir="rtl"
+                dir="ltr"
               >
                 <div
                   class="emotion-28 emotion-29"
@@ -10753,7 +9038,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
               </div>
               <div
                 class="emotion-64 emotion-35"
-                dir="rtl"
+                dir="ltr"
               >
                 <h3
                   class="emotion-66 emotion-37"
@@ -10779,14 +9064,14 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   class="emotion-42 emotion-43"
                   datetime="2022-01-14"
                 >
-                  ۲۴ دی ۱۴۰۰ - ۱۴ ژانویه ۲۰۲۲
+                  14 января 2022
                 </time>
               </div>
             </div>
           </li>
           <li
             class="emotion-18 emotion-52 emotion-23"
-            dir="rtl"
+            dir="ltr"
           >
             <div
               class="emotion-54 emotion-25"
@@ -10794,7 +9079,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             >
               <div
                 class="emotion-56 emotion-27"
-                dir="rtl"
+                dir="ltr"
               >
                 <div
                   class="emotion-28 emotion-29"
@@ -10823,7 +9108,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
               </div>
               <div
                 class="emotion-64 emotion-35"
-                dir="rtl"
+                dir="ltr"
               >
                 <h3
                   class="emotion-66 emotion-37"
@@ -10849,14 +9134,14 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   class="emotion-42 emotion-43"
                   datetime="2022-01-11"
                 >
-                  ۲۱ دی ۱۴۰۰ - ۱۱ ژانویه ۲۰۲۲
+                  11 января 2022
                 </time>
               </div>
             </div>
           </li>
           <li
             class="emotion-18 emotion-52 emotion-23"
-            dir="rtl"
+            dir="ltr"
           >
             <div
               class="emotion-54 emotion-25"
@@ -10864,7 +9149,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             >
               <div
                 class="emotion-56 emotion-27"
-                dir="rtl"
+                dir="ltr"
               >
                 <div
                   class="emotion-28 emotion-29"
@@ -10893,7 +9178,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
               </div>
               <div
                 class="emotion-64 emotion-35"
-                dir="rtl"
+                dir="ltr"
               >
                 <h3
                   class="emotion-66 emotion-37"
@@ -10919,14 +9204,14 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   class="emotion-42 emotion-43"
                   datetime="2022-01-08"
                 >
-                  ۱۸ دی ۱۴۰۰ - ۸ ژانویه ۲۰۲۲
+                  8 января 2022
                 </time>
               </div>
             </div>
           </li>
           <li
             class="emotion-18 emotion-52 emotion-23"
-            dir="rtl"
+            dir="ltr"
           >
             <div
               class="emotion-54 emotion-25"
@@ -10934,7 +9219,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             >
               <div
                 class="emotion-56 emotion-27"
-                dir="rtl"
+                dir="ltr"
               >
                 <div
                   class="emotion-28 emotion-29"
@@ -10963,7 +9248,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
               </div>
               <div
                 class="emotion-64 emotion-35"
-                dir="rtl"
+                dir="ltr"
               >
                 <h3
                   class="emotion-66 emotion-37"
@@ -10989,14 +9274,14 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   class="emotion-42 emotion-43"
                   datetime="2021-12-24"
                 >
-                  ۳ دی ۱۴۰۰ - ۲۴ دسامبر ۲۰۲۱
+                  24 декабря 2021
                 </time>
               </div>
             </div>
           </li>
           <li
             class="emotion-18 emotion-52 emotion-23"
-            dir="rtl"
+            dir="ltr"
           >
             <div
               class="emotion-54 emotion-25"
@@ -11004,7 +9289,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             >
               <div
                 class="emotion-56 emotion-27"
-                dir="rtl"
+                dir="ltr"
               >
                 <div
                   class="emotion-28 emotion-29"
@@ -11033,7 +9318,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
               </div>
               <div
                 class="emotion-64 emotion-35"
-                dir="rtl"
+                dir="ltr"
               >
                 <h3
                   class="emotion-66 emotion-37"
@@ -11059,14 +9344,14 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   class="emotion-42 emotion-43"
                   datetime="2021-12-16"
                 >
-                  ۲۵ آذر ۱۴۰۰ - ۱۶ دسامبر ۲۰۲۱
+                  16 декабря 2021
                 </time>
               </div>
             </div>
           </li>
           <li
             class="emotion-18 emotion-52 emotion-23"
-            dir="rtl"
+            dir="ltr"
           >
             <div
               class="emotion-54 emotion-25"
@@ -11074,7 +9359,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             >
               <div
                 class="emotion-56 emotion-27"
-                dir="rtl"
+                dir="ltr"
               >
                 <div
                   class="emotion-28 emotion-29"
@@ -11103,7 +9388,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
               </div>
               <div
                 class="emotion-64 emotion-35"
-                dir="rtl"
+                dir="ltr"
               >
                 <h3
                   class="emotion-66 emotion-37"
@@ -11129,14 +9414,14 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   class="emotion-42 emotion-43"
                   datetime="2021-08-12"
                 >
-                  ۲۱ مرداد ۱۴۰۰ - ۱۲ اوت ۲۰۲۱
+                  12 августа 2021
                 </time>
               </div>
             </div>
           </li>
           <li
             class="emotion-18 emotion-52 emotion-23"
-            dir="rtl"
+            dir="ltr"
           >
             <div
               class="emotion-54 emotion-25"
@@ -11144,7 +9429,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             >
               <div
                 class="emotion-56 emotion-27"
-                dir="rtl"
+                dir="ltr"
               >
                 <div
                   class="emotion-28 emotion-29"
@@ -11173,7 +9458,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
               </div>
               <div
                 class="emotion-64 emotion-35"
-                dir="rtl"
+                dir="ltr"
               >
                 <h3
                   class="emotion-66 emotion-37"
@@ -11199,14 +9484,14 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   class="emotion-42 emotion-43"
                   datetime="2021-11-28"
                 >
-                  ۷ آذر ۱۴۰۰ - ۲۸ نوامبر ۲۰۲۱
+                  28 ноября 2021
                 </time>
               </div>
             </div>
           </li>
           <li
             class="emotion-18 emotion-52 emotion-23"
-            dir="rtl"
+            dir="ltr"
           >
             <div
               class="emotion-54 emotion-25"
@@ -11214,7 +9499,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             >
               <div
                 class="emotion-56 emotion-27"
-                dir="rtl"
+                dir="ltr"
               >
                 <div
                   class="emotion-28 emotion-29"
@@ -11243,7 +9528,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
               </div>
               <div
                 class="emotion-64 emotion-35"
-                dir="rtl"
+                dir="ltr"
               >
                 <h3
                   class="emotion-66 emotion-37"
@@ -11269,14 +9554,14 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   class="emotion-42 emotion-43"
                   datetime="2021-11-27"
                 >
-                  ۶ آذر ۱۴۰۰ - ۲۷ نوامبر ۲۰۲۱
+                  27 ноября 2021
                 </time>
               </div>
             </div>
           </li>
           <li
             class="emotion-18 emotion-52 emotion-23"
-            dir="rtl"
+            dir="ltr"
           >
             <div
               class="emotion-54 emotion-25"
@@ -11284,7 +9569,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             >
               <div
                 class="emotion-56 emotion-27"
-                dir="rtl"
+                dir="ltr"
               >
                 <div
                   class="emotion-28 emotion-29"
@@ -11313,7 +9598,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
               </div>
               <div
                 class="emotion-64 emotion-35"
-                dir="rtl"
+                dir="ltr"
               >
                 <h3
                   class="emotion-66 emotion-37"
@@ -11339,374 +9624,13 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   class="emotion-42 emotion-43"
                   datetime="2021-06-18"
                 >
-                  ۲۸ خرداد ۱۴۰۰ - ۱۸ ژوئن ۲۰۲۱
+                  18 июня 2021
                 </time>
               </div>
             </div>
           </li>
         </ul>
       </section>
-      <div
-        class="emotion-930 emotion-931"
-      >
-        <section
-          aria-labelledby="Most-Read"
-          class=""
-          data-e2e="most-read"
-          data-testid="most-read"
-          role="region"
-        >
-          <div
-            class="emotion-932 emotion-7"
-          >
-            <h2
-              class="emotion-8 emotion-9"
-            >
-              <span
-                class="emotion-10 emotion-11"
-              >
-                <span
-                  class="emotion-12 emotion-13"
-                >
-                  <span
-                    class="emotion-14 emotion-15"
-                    dir="rtl"
-                    id="Most-Read"
-                  >
-                    پربیننده‌ترین‌ها
-                  </span>
-                </span>
-              </span>
-            </h2>
-          </div>
-          <ol
-            class="emotion-942 emotion-18"
-            dir="rtl"
-            role="list"
-          >
-            <li
-              class="emotion-944 emotion-18"
-              dir="rtl"
-              role="listitem"
-            >
-              <div
-                class="emotion-946"
-              >
-                <div
-                  class="emotion-947"
-                  dir="rtl"
-                >
-                  <span
-                    class="emotion-948"
-                  >
-                    ۱
-                  </span>
-                </div>
-                <div
-                  class="emotion-949"
-                  dir="rtl"
-                >
-                  <a
-                    class="focusIndicatorDisplayTableCell emotion-950"
-                    href="/ukrainian/news-66286934"
-                  >
-                    Атака безпілотників на Москву і вибухи у Криму: що відомо
-                  </a>
-                </div>
-              </div>
-            </li>
-            <li
-              class="emotion-944 emotion-18"
-              dir="rtl"
-              role="listitem"
-            >
-              <div
-                class="emotion-946"
-              >
-                <div
-                  class="emotion-954"
-                  dir="rtl"
-                >
-                  <span
-                    class="emotion-948"
-                  >
-                    ۲
-                  </span>
-                </div>
-                <div
-                  class="emotion-949"
-                  dir="rtl"
-                >
-                  <a
-                    class="focusIndicatorDisplayTableCell emotion-950"
-                    href="/ukrainian/news-66286942"
-                  >
-                    Захід припустився помилок у підготовці та оснащенні ЗСУ - Observer
-                  </a>
-                </div>
-              </div>
-            </li>
-            <li
-              class="emotion-944 emotion-18"
-              dir="rtl"
-              role="listitem"
-            >
-              <div
-                class="emotion-946"
-              >
-                <div
-                  class="emotion-947"
-                  dir="rtl"
-                >
-                  <span
-                    class="emotion-948"
-                  >
-                    ۳
-                  </span>
-                </div>
-                <div
-                  class="emotion-949"
-                  dir="rtl"
-                >
-                  <a
-                    class="focusIndicatorDisplayTableCell emotion-950"
-                    href="https://www.bbc.com/ukrainian/articles/cj7j2zndjryo"
-                  >
-                    "Вичищайте всіх". Що не так зі справами про зрадників в СБУ, яким закидають допомогу Росії
-                  </a>
-                </div>
-              </div>
-            </li>
-            <li
-              class="emotion-944 emotion-18"
-              dir="rtl"
-              role="listitem"
-            >
-              <div
-                class="emotion-946"
-              >
-                <div
-                  class="emotion-954"
-                  dir="rtl"
-                >
-                  <span
-                    class="emotion-948"
-                  >
-                    ۴
-                  </span>
-                </div>
-                <div
-                  class="emotion-949"
-                  dir="rtl"
-                >
-                  <a
-                    class="focusIndicatorDisplayTableCell emotion-950"
-                    href="/ukrainian/features-66235750"
-                  >
-                    10 найкращих телесеріалів першої половини 2023 року
-                  </a>
-                </div>
-              </div>
-            </li>
-            <li
-              class="emotion-944 emotion-18"
-              dir="rtl"
-              role="listitem"
-            >
-              <div
-                class="emotion-946"
-              >
-                <div
-                  class="emotion-947"
-                  dir="rtl"
-                >
-                  <span
-                    class="emotion-948"
-                  >
-                    ۵
-                  </span>
-                </div>
-                <div
-                  class="emotion-949"
-                  dir="rtl"
-                >
-                  <a
-                    class="focusIndicatorDisplayTableCell emotion-950"
-                    href="/ukrainian/news-66283445"
-                  >
-                    ДБР затримало скандального одеського воєнкома. Звинувачення "тягнуть" на 10 років
-                  </a>
-                </div>
-              </div>
-            </li>
-            <li
-              class="emotion-944 emotion-18"
-              dir="rtl"
-              role="listitem"
-            >
-              <div
-                class="emotion-946"
-              >
-                <div
-                  class="emotion-982"
-                  dir="rtl"
-                >
-                  <span
-                    class="emotion-948"
-                  >
-                    ۶
-                  </span>
-                </div>
-                <div
-                  class="emotion-949"
-                  dir="rtl"
-                >
-                  <a
-                    class="focusIndicatorDisplayTableCell emotion-950"
-                    href="https://www.bbc.com/ukrainian/articles/c0457nlj902o"
-                  >
-                    Чому деякі частини нашого тіла не мають сенсу, а пряма хода шкідлива
-                  </a>
-                </div>
-              </div>
-            </li>
-            <li
-              class="emotion-944 emotion-18"
-              dir="rtl"
-              role="listitem"
-            >
-              <div
-                class="emotion-946"
-              >
-                <div
-                  class="emotion-989"
-                  dir="rtl"
-                >
-                  <span
-                    class="emotion-948"
-                  >
-                    ۷
-                  </span>
-                </div>
-                <div
-                  class="emotion-949"
-                  dir="rtl"
-                >
-                  <a
-                    class="focusIndicatorDisplayTableCell emotion-950"
-                    href="/ukrainian/features-66226717"
-                  >
-                    "Діти на повний робочий день". Чому молоді китайці кидають роботу, щоб працювати вдома на батьків
-                  </a>
-                  <div
-                    class="emotion-993"
-                  >
-                    <time
-                      class="emotion-42 emotion-43"
-                      datetime="2023-07-19"
-                    >
-                      به روز شده در ۱۹ ژوئیه ۲۰۲۳
-                    </time>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li
-              class="emotion-944 emotion-18"
-              dir="rtl"
-              role="listitem"
-            >
-              <div
-                class="emotion-946"
-              >
-                <div
-                  class="emotion-982"
-                  dir="rtl"
-                >
-                  <span
-                    class="emotion-948"
-                  >
-                    ۸
-                  </span>
-                </div>
-                <div
-                  class="emotion-949"
-                  dir="rtl"
-                >
-                  <a
-                    class="focusIndicatorDisplayTableCell emotion-950"
-                    href="https://www.bbc.com/ukrainian/articles/c19l4lnp83ko"
-                  >
-                    Віталій Портников: "Якщо не буде політичного рішення, ЗСУ не зможуть добитися закінчення війни"
-                  </a>
-                </div>
-              </div>
-            </li>
-            <li
-              class="emotion-944 emotion-18"
-              dir="rtl"
-              role="listitem"
-            >
-              <div
-                class="emotion-946"
-              >
-                <div
-                  class="emotion-989"
-                  dir="rtl"
-                >
-                  <span
-                    class="emotion-948"
-                  >
-                    ۹
-                  </span>
-                </div>
-                <div
-                  class="emotion-949"
-                  dir="rtl"
-                >
-                  <a
-                    class="focusIndicatorDisplayTableCell emotion-950"
-                    href="/ukrainian/news-66283437"
-                  >
-                    Ризик безвиході: брак зброї та підготовки може завести український наступ у глухий кут - WSJ
-                  </a>
-                </div>
-              </div>
-            </li>
-            <li
-              class="emotion-944 emotion-18"
-              dir="rtl"
-              role="listitem"
-            >
-              <div
-                class="emotion-946"
-              >
-                <div
-                  class="emotion-982"
-                  dir="rtl"
-                >
-                  <span
-                    class="emotion-948"
-                  >
-                    ۱۰
-                  </span>
-                </div>
-                <div
-                  class="emotion-949"
-                  dir="rtl"
-                >
-                  <a
-                    class="focusIndicatorDisplayTableCell emotion-950"
-                    href="/ukrainian/features-66268634"
-                  >
-                    "Онікс": що це за ракети, якими Росія обстрілює Одещину, та чи можна їх збити
-                  </a>
-                </div>
-              </div>
-            </li>
-          </ol>
-        </section>
-      </div>
     </div>
   </main>
 </div>

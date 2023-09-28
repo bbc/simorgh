@@ -30,6 +30,7 @@ const Component = ({ service, content }: PropsWithChildren<ComponentProps>) => (
     pageType={MEDIA_ARTICLE_PAGE}
     service={service}
     pathname=""
+    isUK
   >
     <ThemeProvider service={service}>
       <ServiceContextProvider service={service}>
