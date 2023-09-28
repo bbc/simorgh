@@ -3777,72 +3777,72 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/env@npm:13.4.20-canary.19":
-  version: 13.4.20-canary.19
-  resolution: "@next/env@npm:13.4.20-canary.19"
-  checksum: 89c6112a0d45c5136b5e7a8eb04e0ff50325996dfb93d032afca4aa7b38e9f53d06aab64cac7e6fa07c8f2529a48235c164a6906b177ef9380d860d440b821d7
+"@next/env@npm:13.5.3":
+  version: 13.5.3
+  resolution: "@next/env@npm:13.5.3"
+  checksum: ebea3bfca114ca66616557a534fbb37d580f1ab91143eb46ba3bdb5803864dc0e72c08814110809f207d625846f0053871adb75b51b68686ec3a9ed76d9d26bf
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-arm64@npm:13.4.20-canary.19":
-  version: 13.4.20-canary.19
-  resolution: "@next/swc-darwin-arm64@npm:13.4.20-canary.19"
+"@next/swc-darwin-arm64@npm:13.5.3":
+  version: 13.5.3
+  resolution: "@next/swc-darwin-arm64@npm:13.5.3"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-x64@npm:13.4.20-canary.19":
-  version: 13.4.20-canary.19
-  resolution: "@next/swc-darwin-x64@npm:13.4.20-canary.19"
+"@next/swc-darwin-x64@npm:13.5.3":
+  version: 13.5.3
+  resolution: "@next/swc-darwin-x64@npm:13.5.3"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-gnu@npm:13.4.20-canary.19":
-  version: 13.4.20-canary.19
-  resolution: "@next/swc-linux-arm64-gnu@npm:13.4.20-canary.19"
+"@next/swc-linux-arm64-gnu@npm:13.5.3":
+  version: 13.5.3
+  resolution: "@next/swc-linux-arm64-gnu@npm:13.5.3"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-musl@npm:13.4.20-canary.19":
-  version: 13.4.20-canary.19
-  resolution: "@next/swc-linux-arm64-musl@npm:13.4.20-canary.19"
+"@next/swc-linux-arm64-musl@npm:13.5.3":
+  version: 13.5.3
+  resolution: "@next/swc-linux-arm64-musl@npm:13.5.3"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-gnu@npm:13.4.20-canary.19":
-  version: 13.4.20-canary.19
-  resolution: "@next/swc-linux-x64-gnu@npm:13.4.20-canary.19"
+"@next/swc-linux-x64-gnu@npm:13.5.3":
+  version: 13.5.3
+  resolution: "@next/swc-linux-x64-gnu@npm:13.5.3"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-musl@npm:13.4.20-canary.19":
-  version: 13.4.20-canary.19
-  resolution: "@next/swc-linux-x64-musl@npm:13.4.20-canary.19"
+"@next/swc-linux-x64-musl@npm:13.5.3":
+  version: 13.5.3
+  resolution: "@next/swc-linux-x64-musl@npm:13.5.3"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@next/swc-win32-arm64-msvc@npm:13.4.20-canary.19":
-  version: 13.4.20-canary.19
-  resolution: "@next/swc-win32-arm64-msvc@npm:13.4.20-canary.19"
+"@next/swc-win32-arm64-msvc@npm:13.5.3":
+  version: 13.5.3
+  resolution: "@next/swc-win32-arm64-msvc@npm:13.5.3"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-win32-ia32-msvc@npm:13.4.20-canary.19":
-  version: 13.4.20-canary.19
-  resolution: "@next/swc-win32-ia32-msvc@npm:13.4.20-canary.19"
+"@next/swc-win32-ia32-msvc@npm:13.5.3":
+  version: 13.5.3
+  resolution: "@next/swc-win32-ia32-msvc@npm:13.5.3"
   conditions: os=win32 & cpu=ia32
   languageName: node
   linkType: hard
 
-"@next/swc-win32-x64-msvc@npm:13.4.20-canary.19":
-  version: 13.4.20-canary.19
-  resolution: "@next/swc-win32-x64-msvc@npm:13.4.20-canary.19"
+"@next/swc-win32-x64-msvc@npm:13.5.3":
+  version: 13.5.3
+  resolution: "@next/swc-win32-x64-msvc@npm:13.5.3"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -5298,12 +5298,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@swc/helpers@npm:0.5.1":
-  version: 0.5.1
-  resolution: "@swc/helpers@npm:0.5.1"
+"@swc/helpers@npm:0.5.2":
+  version: 0.5.2
+  resolution: "@swc/helpers@npm:0.5.2"
   dependencies:
     tslib: ^2.4.0
-  checksum: 71e0e27234590435e4c62b97ef5e796f88e786841a38c7116a5e27a3eafa7b9ead7cdec5249b32165902076de78446945311c973e59bddf77c1e24f33a8f272a
+  checksum: 51d7e3d8bd56818c49d6bfbd715f0dbeedc13cf723af41166e45c03e37f109336bbcb57a1f2020f4015957721aeb21e1a7fff281233d797ff7d3dd1f447fa258
   languageName: node
   linkType: hard
 
@@ -17299,21 +17299,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next@npm:canary":
-  version: 13.4.20-canary.19
-  resolution: "next@npm:13.4.20-canary.19"
+"next@npm:^13.5.3":
+  version: 13.5.3
+  resolution: "next@npm:13.5.3"
   dependencies:
-    "@next/env": 13.4.20-canary.19
-    "@next/swc-darwin-arm64": 13.4.20-canary.19
-    "@next/swc-darwin-x64": 13.4.20-canary.19
-    "@next/swc-linux-arm64-gnu": 13.4.20-canary.19
-    "@next/swc-linux-arm64-musl": 13.4.20-canary.19
-    "@next/swc-linux-x64-gnu": 13.4.20-canary.19
-    "@next/swc-linux-x64-musl": 13.4.20-canary.19
-    "@next/swc-win32-arm64-msvc": 13.4.20-canary.19
-    "@next/swc-win32-ia32-msvc": 13.4.20-canary.19
-    "@next/swc-win32-x64-msvc": 13.4.20-canary.19
-    "@swc/helpers": 0.5.1
+    "@next/env": 13.5.3
+    "@next/swc-darwin-arm64": 13.5.3
+    "@next/swc-darwin-x64": 13.5.3
+    "@next/swc-linux-arm64-gnu": 13.5.3
+    "@next/swc-linux-arm64-musl": 13.5.3
+    "@next/swc-linux-x64-gnu": 13.5.3
+    "@next/swc-linux-x64-musl": 13.5.3
+    "@next/swc-win32-arm64-msvc": 13.5.3
+    "@next/swc-win32-ia32-msvc": 13.5.3
+    "@next/swc-win32-x64-msvc": 13.5.3
+    "@swc/helpers": 0.5.2
     busboy: 1.6.0
     caniuse-lite: ^1.0.30001406
     postcss: 8.4.14
@@ -17351,7 +17351,7 @@ __metadata:
       optional: true
   bin:
     next: dist/bin/next
-  checksum: cfa90933351bdcae92e5f1816f44d1bf3f34d9750f8fc310b1340ead6c8281c4d61624f0bcc76bcaa0c775924cd9f7c3c8c0d1b2873a529164e267d12143ead2
+  checksum: bdf97002aee33e03859bc00c6b4115956c449e33ad5a8060ff6a6bcd1f32405fc3f0d0464c293ac94a45753f3d6da513af2cb7fe730e37163f7b0dda0567ac12
   languageName: node
   linkType: hard
 
@@ -20763,7 +20763,7 @@ __metadata:
     cypress: ^13.1.0
     jest: ^29.6.4
     jest-environment-jsdom: ^29.6.4
-    next: canary
+    next: ^13.5.3
     npm-run-all: ^4.1.5
     ts-node: ^10.9.1
     undici: ^5.23.0
