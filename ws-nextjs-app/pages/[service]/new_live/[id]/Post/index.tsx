@@ -63,7 +63,7 @@ const PostHeaderBanner = ({
         css={styles.timeStamp}
         timestamp={curated}
         dateTimeFormat="DD MMMM YYYY"
-        format="DD MMMM YYYY"
+        format="D MMMM YYYY"
         locale={locale}
         timezone={timezone}
         service={service}
@@ -158,7 +158,7 @@ const Post = ({ post }: { post: PostType }) => {
   const timestamp = post?.dates?.curated ?? '';
 
   return (
-    <div css={styles.postContainer}>
+    <article css={styles.postContainer}>
       <div css={styles.postBackground}>
         <Heading level={3}>
           {/* eslint-disable-next-line jsx-a11y/aria-role */}
@@ -176,7 +176,7 @@ const Post = ({ post }: { post: PostType }) => {
           <PostContent contentBlocks={contentBlocks} />
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 

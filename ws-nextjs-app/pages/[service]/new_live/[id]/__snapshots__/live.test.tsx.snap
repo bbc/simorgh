@@ -476,6 +476,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 
 .emotion-20 {
   border: solid 0.1875rem transparent;
+  border-top: solid 0.0625rem transparent;
   margin: 0 0 1rem;
 }
 
@@ -533,6 +534,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   border-top: solid 0.125rem #B80000;
+  border-bottom: solid 0.1875rem transparent;
 }
 
 .emotion-24 {
@@ -632,7 +634,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   color: #000000;
   display: block;
   margin: 0;
-  padding: 1.5rem 1rem 0;
+  padding: 1.3125rem 1rem 0;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -651,13 +653,13 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 
 @media (min-width: 25rem) {
   .emotion-28 {
-    padding: 1.5rem 1rem 0;
+    padding: 1.3125rem 1rem 0;
   }
 }
 
 @media (min-width: 63rem) {
   .emotion-28 {
-    padding: 1.5rem 1rem 0;
+    padding: 1.3125rem 1rem 0;
   }
 }
 
@@ -811,8 +813,22 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 }
 
+.emotion-31 ul {
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 63rem) {
+  .emotion-31 ul {
+    padding-bottom: 0;
+  }
+}
+
 .emotion-31 li {
   margin-bottom: 0.5rem;
+}
+
+.emotion-31 li:last-child {
+  margin-bottom: 0;
 }
 
 .emotion-52 {
@@ -990,8 +1006,22 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 }
 
+.emotion-57 ul {
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 63rem) {
+  .emotion-57 ul {
+    padding-bottom: 0;
+  }
+}
+
 .emotion-57 li {
   margin-bottom: 0.5rem;
+}
+
+.emotion-57 li:last-child {
+  margin-bottom: 0;
 }
 
 .emotion-79 {
@@ -1154,7 +1184,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
             <li
               class="emotion-19"
             >
-              <div
+              <article
                 class="emotion-20"
               >
                 <div
@@ -1173,7 +1203,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
                           class="emotion-24"
                           datetime="09 May 2023"
                         >
-                          09 May 2023
+                          9 May 2023
                         </time>
                         <span
                           class="emotion-5"
@@ -1215,12 +1245,12 @@ exports[`Live Page creates snapshot of the live page 1`] = `
                     </div>
                   </div>
                 </div>
-              </div>
+              </article>
             </li>
             <li
               class="emotion-19"
             >
-              <div
+              <article
                 class="emotion-20"
               >
                 <div
@@ -1239,7 +1269,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
                           class="emotion-24"
                           datetime="09 May 2023"
                         >
-                          09 May 2023
+                          9 May 2023
                         </time>
                         <span
                           class="emotion-5"
@@ -1270,12 +1300,12 @@ exports[`Live Page creates snapshot of the live page 1`] = `
                     </div>
                   </div>
                 </div>
-              </div>
+              </article>
             </li>
             <li
               class="emotion-19"
             >
-              <div
+              <article
                 class="emotion-20"
               >
                 <div
@@ -1459,12 +1489,12 @@ exports[`Live Page creates snapshot of the live page 1`] = `
                     </div>
                   </div>
                 </div>
-              </div>
+              </article>
             </li>
             <li
               class="emotion-19"
             >
-              <div
+              <article
                 class="emotion-20"
               >
                 <div
@@ -1524,7 +1554,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
                     </div>
                   </div>
                 </div>
-              </div>
+              </article>
             </li>
           </ol>
         </div>

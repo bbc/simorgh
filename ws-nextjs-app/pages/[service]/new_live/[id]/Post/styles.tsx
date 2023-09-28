@@ -19,6 +19,7 @@ export default {
       display: 'flex',
       flexWrap: 'wrap',
       borderTop: `solid ${pixelsToRem(2)}rem ${palette.BRAND_BACKGROUND}`,
+      borderBottom: `solid ${pixelsToRem(3)}rem transparent`,
     }),
   breakingNewsLabel: ({ palette, mq, spacings }: Theme) =>
     css({
@@ -38,12 +39,12 @@ export default {
     }),
   postHeadline: ({ spacings, mq }: Theme) =>
     css({
-      padding: `${spacings.TRIPLE}rem ${spacings.DOUBLE}rem 0`,
+      padding: `${pixelsToRem(21)}rem ${spacings.DOUBLE}rem 0`,
       [mq.GROUP_2_MIN_WIDTH]: {
-        padding: `${spacings.TRIPLE}rem ${spacings.DOUBLE}rem 0`,
+        padding: `${pixelsToRem(21)}rem ${spacings.DOUBLE}rem 0`,
       },
       [mq.GROUP_4_MIN_WIDTH]: {
-        padding: `${spacings.TRIPLE}rem ${spacings.DOUBLE}rem 0`,
+        padding: `${pixelsToRem(21)}rem ${spacings.DOUBLE}rem 0`,
       },
     }),
   postSubHeadline: ({ mq, fontSizes, spacings }: Theme) =>
@@ -66,6 +67,7 @@ export default {
   postContainer: ({ spacings, mq }: Theme) =>
     css({
       border: `solid ${pixelsToRem(3)}rem transparent`,
+      borderTop: `solid ${pixelsToRem(1)}rem transparent`,
       margin: `0 0 ${spacings.DOUBLE}rem`,
       [mq.GROUP_2_MIN_WIDTH]: {
         margin: `0 0 ${spacings.TRIPLE}rem`,
@@ -85,13 +87,22 @@ export default {
         padding: `${spacings.DOUBLE}rem ${spacings.DOUBLE}rem ${spacings.FULL}rem`,
       },
     }),
-  bodyText: ({ palette, spacings }: Theme) =>
+  bodyText: ({ palette, spacings, mq }: Theme) =>
     css({
       color: palette.BLACK,
       margin: 0 /* Reset */,
       paddingBottom: `${spacings.DOUBLE}rem`,
+      '& ul': {
+        paddingBottom: `${spacings.DOUBLE}rem`,
+        [mq.GROUP_4_MIN_WIDTH]: {
+          paddingBottom: 0,
+        },
+      },
       '& li': {
         marginBottom: `${spacings.FULL}rem`,
+        '&:last-child': {
+          marginBottom: 0,
+        },
       },
     }),
 };
