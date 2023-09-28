@@ -43,6 +43,7 @@ const homePageServices = [
   'gahuza',
   'gujarati',
   'igbo',
+  'indonesia',
   'kyrgyz',
   'marathi',
   'nepali',
@@ -52,8 +53,10 @@ const homePageServices = [
   'somali',
   'tamil',
   'telugu',
+  'thai',
   'tigrinya',
   'urdu',
+  'vietnamese',
   'yoruba',
 ];
 
