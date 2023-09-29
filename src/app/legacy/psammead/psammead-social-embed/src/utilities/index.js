@@ -39,7 +39,7 @@ export const dictionaryFactory = ({ provider }) => ({
 export const getCaptionText = ({ pageType, caption, provider }) => {
   if (!caption) return null;
 
-  if (pageType === ARTICLE_PAGE || LIVE_PAGE) {
+  if (pageType === ARTICLE_PAGE || pageType === LIVE_PAGE) {
     const dictionary = dictionaryFactory({ provider });
 
     const ADDITIONAL_TEXT_PROVIDERS = ['youtube', 'tiktok'];
