@@ -1,4 +1,4 @@
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { ARTICLE_PAGE, LIVE_PAGE } from '#app/routes/utils/pageTypes';
 
 /**
  * Returns a string of a known provider name.
@@ -39,7 +39,7 @@ export const dictionaryFactory = ({ provider }) => ({
 export const getCaptionText = ({ pageType, caption, provider }) => {
   if (!caption) return null;
 
-  if (pageType === ARTICLE_PAGE) {
+  if (pageType === ARTICLE_PAGE || LIVE_PAGE) {
     const dictionary = dictionaryFactory({ provider });
 
     const ADDITIONAL_TEXT_PROVIDERS = ['youtube', 'tiktok'];
