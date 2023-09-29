@@ -560,6 +560,7 @@ describe('frontPage -> homePage migration', () => {
     'gahuza',
     'gujarati',
     'igbo',
+    'indonesia',
     'kyrgyz',
     'marathi',
     'nepali',
@@ -569,8 +570,10 @@ describe('frontPage -> homePage migration', () => {
     'somali',
     'tamil',
     'telugu',
+    'thai',
     'tigrinya',
     'urdu',
+    'vietnamese',
     'yoruba',
   ];
   const migratedWorldServiceRoutes = migratedServices.map(serviceToRoute);
