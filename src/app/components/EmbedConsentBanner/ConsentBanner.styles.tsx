@@ -16,14 +16,9 @@ export default {
       }`,
     }),
 
-  parentLive: ({ palette }: Theme) =>
+  parentLive: () =>
     css({
-      backgroundColor: palette.WHITE,
-      padding: `${pixelsToRem(16)}rem`,
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems: 'flex-start',
+      border: 'none',
     }),
 
   textBody: ({ spacings, palette }: Theme) =>

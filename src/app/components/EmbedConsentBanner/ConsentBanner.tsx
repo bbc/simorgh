@@ -160,12 +160,12 @@ const getTranslations = (
 type ConsentBannerContentProps = {
   provider: ConsentBannerProviders;
   clickHandler:
-    | {
-        on: string;
-      }
-    | {
-        onClick: (e: MouseEvent<HTMLButtonElement>) => void;
-      };
+  | {
+    on: string;
+  }
+  | {
+    onClick: (e: MouseEvent<HTMLButtonElement>) => void;
+  };
   id?: string;
 };
 
@@ -190,7 +190,7 @@ const ConsentBanner = ({
     <div
       data-testid="consentBanner"
       id={`consentBanner${id ? `-${id}` : ''}`}
-      css={isLive ? consentBannerCss.parentLive : consentBannerCss.parent}
+      css={[consentBannerCss.parent, isLive && consentBannerCss.parentLive]}
       ref={viewRef}
     >
       <Text
