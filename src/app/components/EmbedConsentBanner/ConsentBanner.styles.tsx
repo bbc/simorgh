@@ -16,7 +16,7 @@ export default {
       }`,
     }),
 
-  parentLive: () =>
+  noBorder: () =>
     css({
       border: 'none',
     }),
