@@ -245,7 +245,7 @@ export const service: DefaultServiceConfig = {
         linkText: 'අන්තර්ගතයේ සියල්ල දැක ගැනීමට පිටුවේ සම්පූර්ණ අනුවාදය බලන්න',
       },
       topStoriesTitle: 'ප්‍රධාන පුවත',
-      featuresAnalysisTitle: 'දැක්ම',
+      featuresAnalysisTitle: 'විශේෂාංග',
       latestMediaTitle: 'අලුත්ම',
     },
     mostRead: {
