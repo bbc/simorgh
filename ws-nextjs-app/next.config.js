@@ -27,6 +27,11 @@ module.exports = {
   },
   generateEtags: false,
   output: 'standalone',
+  /*
+   Requires pages that are routed to have the .page extension, e.g. [variant].page.tsx,
+   which allows for co-locating components within the pages directory, e.g. styles.ts
+   - https://nextjs.org/docs/api-reference/next.config.js/custom-page-extensions#including-non-page-files-in-the-pages-directory
+  */
   pageExtensions: ['page.tsx', 'page.ts'],
   poweredByHeader: false,
   reactStrictMode: true,
