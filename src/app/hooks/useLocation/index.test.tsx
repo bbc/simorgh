@@ -1,5 +1,5 @@
 import { renderHook } from '@testing-library/react-hooks';
-import { useLocation } from 'react-router';
+import useLocation from '.';
 
 describe('useLocation', () => {
   it('should set location to the current window location', () => {
@@ -19,5 +19,13 @@ describe('useLocation', () => {
 
     expect(window.location.href).toBe(`${articleURL}#content`);
     expect(window.location.hash).toBe('#content');
+  });
+  it('should remove the event listeners when the component unmounts', () => {
+    const removeEventListenerSpy = jest.spyOn(window, 'removeEventListener');
+    const { unmount } = renderHook(() => useLocation());
+
+    unmount();
+
+    expect(removeEventListenerSpy).toHaveBeenCalled();
   });
 });

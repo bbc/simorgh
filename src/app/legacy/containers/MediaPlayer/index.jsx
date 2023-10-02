@@ -47,7 +47,7 @@ const MediaPlayerContainer = ({
 }) => {
   const { isAmp } = useContext(RequestContext);
   const { lang, translations, service } = useContext(ServiceContext);
-  const location = useLocation();
+
   if (!blocks) {
     return null;
   }
@@ -162,6 +162,11 @@ const MediaPlayerContainer = ({
       </StyledMessageContainer>
     );
   }
+
+  // Use of this conditional hook is consistent across each render.
+  // Hook is positioned here to prevent multiple renders of the missing media message above.
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const location = useLocation();
 
   const embedSource = getEmbedUrl({
     mediaId: `${assetId}/${isLegacyMedia ? blockId : versionId}/${lang}`,
