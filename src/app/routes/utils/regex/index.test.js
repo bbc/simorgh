@@ -435,6 +435,7 @@ describe('cpsAssetPagePath', () => {
     '/zhongwen/simp/test-12345678.amp',
     '/cymrufyw/etholiad-2017-39407507',
     '/cymrufyw/etholiad-2017-39407507.amp',
+    '/news/world-middle+east-10642960.amp',
   ];
 
   shouldMatchValidRoutes(validRoutes, cpsAssetPagePath);
@@ -554,16 +555,25 @@ describe('frontPage -> homePage migration', () => {
     'afaanoromoo',
     'amharic',
     'azeri',
+    'bengali',
     'burmese',
     'gahuza',
     'gujarati',
     'igbo',
+    'indonesia',
     'kyrgyz',
+    'marathi',
+    'nepali',
     'pidgin',
     'punjabi',
     'sinhala',
     'somali',
+    'tamil',
+    'telugu',
+    'thai',
     'tigrinya',
+    'urdu',
+    'vietnamese',
     'yoruba',
   ];
   const migratedWorldServiceRoutes = migratedServices.map(serviceToRoute);

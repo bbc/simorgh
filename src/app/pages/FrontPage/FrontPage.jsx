@@ -4,16 +4,13 @@ import findIndex from 'ramda/src/findIndex';
 import styled from '@emotion/styled';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
 import { frontPageDataPropTypes } from '#models/propTypes/frontPage';
-import { RequestContext } from '#contexts/RequestContext';
-import useToggle from '#hooks/useToggle';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
-import AdContainer from '#containers/Ad';
-import MPUContainer from '#containers/Ad/MPU';
 import IndexPageContainer from '#components/PageLayout/IndexPageContainer';
 import IndexPageSection from '#containers/IndexPageSection';
 import RadioScheduleContainer from '#containers/RadioSchedule';
-import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
 import { NEGATIVE_MARGIN } from '#lib/styles.const';
+import AdContainer from '../../components/Ad';
+import MPUContainer from '../../components/Ad/MPU';
 import MostRead from '../../components/MostRead';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
@@ -40,7 +37,6 @@ const FrontPage = ({ pageData }) => {
   const { product, serviceLocalizedName, translations, frontPageTitle } =
     useContext(ServiceContext);
 
-  const { enabled: adsEnabled } = useToggle('ads');
   const home = path(['home'], translations);
   const groups = path(['content', 'groups'], pageData);
   const lang = path(['metadata', 'language'], pageData);
@@ -50,8 +46,6 @@ const FrontPage = ({ pageData }) => {
   const radioSchedulePosition = path(['radioSchedulePosition'], pageData);
 
   const { mostRead: mostReadInitialData } = pageData;
-
-  const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
 
   const renderMostRead = () => (
     <FrontPageMostReadSection>
@@ -78,10 +72,6 @@ const FrontPage = ({ pageData }) => {
 
   return (
     <>
-      {/* dotcom and dotcomConfig need to be setup before the main dotcom javascript file is loaded */}
-      {adsEnabled && showAdsBasedOnLocation && !isAmp && (
-        <CanonicalAdBootstrapJs />
-      )}
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics title={pageData?.metadata?.title} />
       <ComscoreAnalytics />

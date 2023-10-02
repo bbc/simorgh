@@ -32,6 +32,7 @@ export const App = ({ initialData, bbcOrigin }) => {
     showAdsBasedOnLocation,
     toggles,
     mvtExperiments,
+    isUK,
   } = initialData;
 
   const routeProps = getRouteProps(pathname);
@@ -53,6 +54,7 @@ export const App = ({ initialData, bbcOrigin }) => {
     bbcOrigin,
     showAdsBasedOnLocation,
     mvtExperiments,
+    isUK,
   });
 };
 
