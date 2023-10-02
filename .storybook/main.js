@@ -22,6 +22,7 @@ module.exports = {
     './DocsDecorator/**/*.stories.@(t|j)sx',
     './StorybookComponents/**/*.stories.@(t|j)sx',
     './SidebarLabel/**/*.stories.@(t|j)sx',
+    '../src/app/legacy/psammead/psammead-live-label/src/index.stories.jsx',
   ],
   addons: [
     '@storybook/addon-knobs',
