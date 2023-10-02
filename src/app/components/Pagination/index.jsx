@@ -14,11 +14,11 @@ import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
 } from '#psammead/gel-foundations/src/breakpoints';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import { ServiceContext } from '../../contexts/ServiceContext';
 
 import buildBlocks, { TYPE, VISIBILITY } from './buildBlocks';
-import { Ellipsis, LeftChevron, RightChevron } from '../../../components/icons';
-import VisuallyHiddenText from '../../../components/VisuallyHiddenText';
+import { Ellipsis, LeftChevron, RightChevron } from '../icons';
+import VisuallyHiddenText from '../VisuallyHiddenText';
 
 const visibilityToMediaQuery = visibility =>
   ({
