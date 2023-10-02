@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 import { string, bool } from 'prop-types';
-import { useLocation } from 'react-router-dom';
 import moment from 'moment-timezone';
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
 import Figure from '#psammead/psammead-figure/src';
+import useLocation from '#hooks/useLocation';
 import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
