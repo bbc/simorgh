@@ -75,9 +75,12 @@ describe('IdxPage - Ukrainian', () => {
     });
 
     await act(async () => {
-      container = render(<IdxPageWithContext pageData={pageData} />, {
-        service: 'ukrainian',
-      }).container;
+      container = render(
+        <IdxPageWithContext pageData={pageData} service="ukrainian" />,
+        {
+          service: 'ukrainian',
+        },
+      ).container;
     });
   });
 
