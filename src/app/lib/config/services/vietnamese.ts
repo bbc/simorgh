@@ -246,7 +246,7 @@ export const service: DefaultServiceConfig = {
         linkText: 'Xin xem bản đầy đủ.',
       },
       topStoriesTitle: 'Tin chính',
-      featuresAnalysisTitle: 'Góc nhìn và chuyên mục',
+      featuresAnalysisTitle: 'BBC giới thiệu',
       latestMediaTitle: 'Mới nhất',
     },
     mostRead: {
@@ -323,10 +323,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Thế giới',
         url: '/vietnamese/topics/cnlv9j1ekq0t',
-      },
-      {
-        title: 'Diễn đàn',
-        url: '/vietnamese/forum-54540875',
       },
       {
         title: 'Kinh tế',
