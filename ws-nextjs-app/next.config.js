@@ -12,38 +12,26 @@ const assetPrefix =
 
 /** @type {import('next').NextConfig} */
 module.exports = {
-  reactStrictMode: true,
-  distDir: 'build',
-  output: 'standalone',
   assetPrefix: clientEnvVars.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN.includes(
     'localhost',
   )
     ? undefined
     : assetPrefix,
-  poweredByHeader: false,
-  generateEtags: false,
-  experimental: {
-    externalDir: true,
-  },
-  env: { ...clientEnvVars, LOG_TO_CONSOLE: 'true', NEXTJS: 'true' },
   compiler: {
     emotion: true,
   },
+  distDir: 'build',
+  env: { ...clientEnvVars, LOG_TO_CONSOLE: 'true', NEXTJS: 'true' },
   eslint: {
     ignoreDuringBuilds: true,
   },
-  /*
-   Requires pages that are routed to have the .page extension, e.g. [variant].page.tsx,
-   which allows for co-locating components within the pages directory, e.g. styles.ts
-   - https://nextjs.org/docs/api-reference/next.config.js/custom-page-extensions#including-non-page-files-in-the-pages-directory
-  */
+  generateEtags: false,
+  output: 'standalone',
   pageExtensions: ['page.tsx', 'page.ts'],
+  poweredByHeader: false,
+  reactStrictMode: true,
+  transpilePackages: [],
   webpack: (config, { webpack, isServer }) => {
-    config.resolve.fallback = {
-      ...config.resolve.fallback,
-      fs: false,
-    };
-
     config.plugins.push(
       new MomentTimezoneInclude({ startYear: 2010, endYear: 2025 }),
     );
@@ -64,6 +52,11 @@ module.exports = {
         ),
       );
     }
+
+    config.resolve.fallback = {
+      ...config.resolve.fallback,
+      fs: false,
+    };
 
     return config;
   },
