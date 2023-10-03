@@ -20,9 +20,10 @@ const FigCaption = styled.figcaption`
   ${({ service }) => getSansRegular(service)}
   ${GEL_BREVIER}
   
-  ${({ isTransparentPage }) => `
+  ${({ isTransparentPage, isLive }) => `
     color: ${isTransparentPage ? GREY_6 : WHITE};
     padding: ${isTransparentPage ? `${GEL_SPACING} 0` : GEL_SPACING};
+    ${isLive ? 'padding-bottom: 0;' : ''}
   `}
 
   > span {
@@ -38,12 +39,17 @@ const CaptionWrapper = ({
   additionalText,
 }) => {
   const { pageType } = useContext(RequestContext);
-  const isTransparentPage = pageType === ARTICLE_PAGE || pageType === LIVE_PAGE;
+  const isLive = pageType === LIVE_PAGE;
+  const isTransparentPage = pageType === ARTICLE_PAGE || isLive;
 
   return (
     <Figure isTransparentPage={isTransparentPage}>
       {children}
-      <FigCaption isTransparentPage={isTransparentPage} service={service}>
+      <FigCaption
+        isTransparentPage={isTransparentPage}
+        isLive={isLive}
+        service={service}
+      >
         {textPrefixVisuallyHidden && <span>{textPrefixVisuallyHidden}</span>}
         {`${text}${additionalText ? ` ${additionalText}` : ''}`}
       </FigCaption>
