@@ -190,7 +190,10 @@ const ConsentBanner = ({
     <div
       data-testid="consentBanner"
       id={`consentBanner${id ? `-${id}` : ''}`}
-      css={[consentBannerCss.parent, isLive && consentBannerCss.noBorder]}
+      css={[
+        consentBannerCss.parent,
+        isLive && consentBannerCss.tranparentBorder,
+      ]}
       ref={viewRef}
     >
       <Text

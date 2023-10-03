@@ -16,9 +16,9 @@ export default {
       }`,
     }),
 
-  noBorder: () =>
+  tranparentBorder: () =>
     css({
-      border: 'none',
+      border: `${pixelsToRem(1)}rem solid transparent`,
     }),
 
   textBody: ({ spacings, palette }: Theme) =>
