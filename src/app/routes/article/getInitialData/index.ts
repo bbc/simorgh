@@ -1,3 +1,4 @@
+import fetchSecondaryDataFromBFF from '#app/routes/utils/fetchSecondaryDataFromBFF';
 import nodeLogger from '../../../lib/logger.node';
 import { Services, Toggles, Variants } from '../../../models/types/global';
 import getOnwardsPageData from '../utils/getOnwardsData';
@@ -30,6 +31,7 @@ export default async ({
   isAmp,
 }: Props) => {
   try {
+    // Article page data
     const { status, json } = await fetchDataFromBFF({
       pathname,
       pageType,
@@ -37,6 +39,54 @@ export default async ({
       variant,
       isAmp,
     });
+
+    // Top stories and features
+    let topStoriesAndFeatures = {
+      json: { data: { topStories: {}, features: {} } },
+    };
+
+    try {
+      topStoriesAndFeatures = await fetchSecondaryDataFromBFF({
+        pathname,
+        service,
+        variant,
+        secondaryData: 'topStoriesAndFeatures',
+      });
+    } catch (error) {
+      logger.error('Secondary Data JSON malformed', error);
+    }
+
+    //  Most Read
+    let mostReadData = {
+      json: { data: {} },
+    };
+
+    try {
+      mostReadData = await fetchSecondaryDataFromBFF({
+        pathname,
+        service,
+        variant,
+        secondaryData: 'mostRead',
+      });
+    } catch (error) {
+      logger.error('Secondary Data JSON malformed', error);
+    }
+
+    //  Most Watched
+    let mostWatchedData = {
+      json: { data: {} },
+    };
+
+    try {
+      mostWatchedData = await fetchSecondaryDataFromBFF({
+        pathname,
+        service,
+        variant,
+        secondaryData: 'mostWatched',
+      });
+    } catch (error) {
+      logger.error('Secondary Data JSON malformed', error);
+    }
 
     const agent = certsRequired(pathname) ? await getAgent() : null;
 
@@ -70,8 +120,15 @@ export default async ({
       }
     }
 
-    const { topStories, features, latestMedia, mostRead, mostWatched } =
-      secondaryData;
+    const { latestMedia } = secondaryData;
+
+    const {
+      data: { topStories, features },
+    } = topStoriesAndFeatures?.json || {};
+
+    const { data: mostRead } = mostReadData?.json || {};
+
+    const { data: mostWatched } = mostWatchedData?.json || {};
 
     const response = {
       status,
