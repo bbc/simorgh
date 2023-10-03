@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
@@ -8,7 +9,11 @@ import LiveLabel from '../../legacy/psammead/psammead-live-label/src/index';
 import md from '../../legacy/psammead/psammead-live-label/README.md';
 import { StoryProps } from '../../models/types/storybook';
 import { ThemeProvider } from '../ThemeProvider';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import {
+  ServiceContext,
+  ServiceContextProvider,
+} from '../../contexts/ServiceContext';
+import services from '../../../server/utilities/serviceConfigs';
 import { ToggleContextProvider } from '../../contexts/ToggleContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ARTICLE_PAGE } from '../../routes/utils/pageTypes';
@@ -51,38 +56,43 @@ const Component = ({
   service,
   variant,
   dir,
-  liveText,
   ariaHidden,
   offScreenText = 'Watch Live',
-}: Props) => (
-  <ThemeProvider service={service} variant={variant}>
-    <ToggleContextProvider>
-      <RequestContextProvider
-        isAmp={false}
-        isApp={false}
-        pageType={ARTICLE_PAGE}
-        service={service}
-        statusCode={200}
-        pathname={`/${service}`}
-        variant={variant}
-      >
-        <ServiceContextProvider service={service} variant={variant}>
-          <Wrapper>
-            <Link href="https://www.bbc.co.uk/news">
-              <LiveLabel
-                service={service}
-                dir={dir}
-                ariaHidden
-                offScreenText="Live"
-                liveText={liveText}
-              />
-            </Link>
-          </Wrapper>
-        </ServiceContextProvider>
-      </RequestContextProvider>
-    </ToggleContextProvider>
-  </ThemeProvider>
-);
+}: Props) => {
+  const { liveLabel } = services[service].default.translations.media;
+  console.log(liveLabel);
+  console.log(services[service].default.translations.media.liveLabel);
+  console.log(service);
+  return (
+    <ThemeProvider service={service} variant={variant}>
+      <ToggleContextProvider>
+        <RequestContextProvider
+          isAmp={false}
+          isApp={false}
+          pageType={ARTICLE_PAGE}
+          service={service}
+          statusCode={200}
+          pathname={`/${service}`}
+          variant={variant}
+        >
+          <ServiceContextProvider service={service} variant={variant}>
+            <Wrapper>
+              <Link href="https://www.bbc.co.uk/news">
+                <LiveLabel
+                  service={service}
+                  dir={dir}
+                  ariaHidden
+                  offScreenText="Live"
+                  liveText={liveLabel}
+                />
+              </Link>
+            </Wrapper>
+          </ServiceContextProvider>
+        </RequestContextProvider>
+      </ToggleContextProvider>
+    </ThemeProvider>
+  );
+};
 
 export default {
   title: 'New Components/Live Label',
@@ -105,17 +115,11 @@ export const WithEnglishLiveText = ({ service, variant, dir }: Props) => (
   />
 );
 
-export const WithLocalisedLiveText = ({
-  service,
-  variant,
-  dir,
-  liveText,
-}: Props) => (
+export const WithLocalisedLiveText = ({ service, variant, dir }: Props) => (
   <Component
     service={service}
     variant={variant}
     dir={dir}
-    liveText="AS E DE HAPPEN"
     ariaHidden
     offScreenText="Live"
   />
