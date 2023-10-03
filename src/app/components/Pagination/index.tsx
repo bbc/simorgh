@@ -1,24 +1,19 @@
+/** @jsx jsx */
+import { Theme, jsx } from '@emotion/react';
 import React, { useContext } from 'react';
-import styled from '@emotion/styled';
 import { number, string } from 'prop-types';
-import {
-  getSansRegular,
-  getSansBold,
-} from '#psammead/psammead-styles/src/font-styles';
-
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
+  GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
-  GEL_GROUP_1_SCREEN_WIDTH_MAX,
-} from '#psammead/gel-foundations/src/breakpoints';
+} from '#app/legacy/psammead/gel-foundations/src/breakpoints';
 import { ServiceContext } from '../../contexts/ServiceContext';
-
 import buildBlocks, { TYPE, VISIBILITY } from './buildBlocks';
 import { Ellipsis, LeftChevron, RightChevron } from '../icons';
 import VisuallyHiddenText from '../VisuallyHiddenText';
+import styles from './index.styles';
 
 const visibilityToMediaQuery = visibility =>
   ({
@@ -37,109 +32,24 @@ const visibilityToMediaQuery = visibility =>
     [VISIBILITY.ALL]: `display: inline-block;`,
   }[visibility] || 'display: none;');
 
-const Nav = styled.nav`
-  display: block;
-  margin: 0 auto 2.5rem auto;
-  text-align: center;
-`;
-const StyledUnorderedList = styled.ul`
-  display: inline-block;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  position: relative;
-  top: 0.1rem;
-  text-align: center;
-  @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
-    display: none;
-  }
-`;
-
-const TextSummary = styled.div`
-  ${({ service }) => getSansRegular(service)};
-  color: ${props => props.theme.palette.GREY_6};
-  display: inline-block;
-  margin: 0 1.375rem;
-  b {
-    ${({ service }) => getSansBold(service)};
-  }
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    display: none;
-  }
-`;
-
-const Block = styled.li`
-  ${({ service }) => getSansBold(service)};
-  ${({ visibility }) => visibilityToMediaQuery(visibility)}
-  width: 2.75rem;
-  height: 2.75rem;
-  line-height: 2.75rem;
-  text-align: center;
-  margin: 0 0.125rem;
-  svg {
-    @media screen and (forced-colors: active) {
-      fill: linkText;
-    }
-    fill: currentColor;
-    width: 1rem;
-    height: 1rem;
-    position: relative;
-    top: 0.2rem;
-  }
-`;
-
-const EllipsisBlock = styled(Block)`
-  color: ${props => props.theme.palette.GREY_5};
-  svg {
-    @media screen and (forced-colors: active) {
-      fill: canvasText;
-    }
-  }
-`;
-
-const A = styled.a`
-  display: block;
-  color: ${props => props.theme.palette.GREY_10};
-  text-decoration: none;
-  height: 100%;
-  width: 100%;
-
-  ${({ isActive }) =>
-    props =>
-      isActive
-        ? `
-        padding: 0.0625rem 0.625rem 0 0.625rem;
-        border-bottom: 0.25rem ${props.theme.palette.POSTBOX} solid;
-        &:hover,
-        &:focus {
-         padding: 0;
-         border: 0.0625rem ${props.theme.palette.POSTBOX} solid;
-         border-bottom-width: 0.25rem;
-       }
-      `
-        : `
-       padding: 0.0625rem;
-       &:hover,
-       &:focus {
-         padding: 0;
-         border: 0.0625rem ${props.theme.palette.POSTBOX} solid;
-       }`}
-`;
-
 /* eslint-disable react/prop-types */
 const LinkComponent = ({ children, pageNumber, isActive, ...rest }) => (
-  <A
+  <a
+    css={isActive ? styles.activeA : styles.inactiveA}
     href={`?page=${pageNumber}`}
     className="focusIndicatorOutlineBlack"
     {...(isActive && { isActive: true, 'aria-current': 'page' })}
     {...rest}
   >
     {children}
-  </A>
+  </a>
 );
 
 const PreviousArrow = ({ activePage, children, dir }) => (
-  <Block as="span" visibility={VISIBILITY.ALL}>
+  <li
+    css={() => [styles.block, visibilityToMediaQuery(VISIBILITY.ALL)]}
+    as="span"
+  >
     <LinkComponent
       pageNumber={activePage - 1}
       aria-labelledby="pagination-previous-page"
@@ -149,11 +59,14 @@ const PreviousArrow = ({ activePage, children, dir }) => (
         <VisuallyHiddenText>{children}</VisuallyHiddenText>
       </span>
     </LinkComponent>
-  </Block>
+  </li>
 );
 
 const NextArrow = ({ activePage, children, dir }) => (
-  <Block as="span" visibility={VISIBILITY.ALL}>
+  <li
+    css={() => [styles.block, visibilityToMediaQuery(VISIBILITY.ALL)]}
+    as="span"
+  >
     <LinkComponent
       pageNumber={activePage + 1}
       aria-labelledby="pagination-next-page"
@@ -163,7 +76,7 @@ const NextArrow = ({ activePage, children, dir }) => (
         {dir === 'ltr' ? <RightChevron /> : <LeftChevron />}
       </span>
     </LinkComponent>
-  </Block>
+  </li>
 );
 
 const renderBlock = ({
@@ -176,26 +89,29 @@ const renderBlock = ({
 }) => {
   if (type === TYPE.NUMBER) {
     return (
-      <Block service={service} key={key} visibility={visibility}>
+      <li
+        css={() => [styles.block, visibilityToMediaQuery(visibility)]}
+        key={key}
+      >
         <LinkComponent
           isActive={pageNumber === activePage}
           pageNumber={pageNumber}
         >
           {pageNumber}
         </LinkComponent>
-      </Block>
+      </li>
     );
   }
 
   return (
-    <EllipsisBlock
+    <li
+      css={() => [styles.elipsisBlock, visibilityToMediaQuery(visibility)]}
       role="separator"
       data-testid="topic-pagination-ellipsis"
       key={key}
-      visibility={visibility}
     >
       <Ellipsis />
-    </EllipsisBlock>
+    </li>
   );
 };
 /* eslint-enable react/prop-types */
@@ -224,29 +140,34 @@ const Pagination = ({
   const showNextArrow = activePage < pageCount;
 
   return (
-    <Nav role="navigation" aria-label={page} data-testid="topic-pagination">
+    <nav
+      css={styles.nav}
+      role="navigation"
+      aria-label={page}
+      data-testid="topic-pagination"
+    >
       {showPreviousArrow && (
         <PreviousArrow activePage={activePage} dir={dir}>
           {previousPage}
         </PreviousArrow>
       )}
-      <TextSummary
-        service={service}
+      <div
+        css={styles.textSummary}
         data-testid="topic-pagination-summary"
         // eslint-disable-next-line jsx-a11y/aria-role
         role="text"
       >
         {tokens}
-      </TextSummary>
-      <StyledUnorderedList role="list">
+      </div>
+      <ul css={styles.unorderedList} role="list">
         {blocks.map(block => renderBlock({ ...block, activePage, service }))}
-      </StyledUnorderedList>
+      </ul>
       {showNextArrow && (
         <NextArrow activePage={activePage} dir={dir}>
           {nextPage}
         </NextArrow>
       )}
-    </Nav>
+    </nav>
   );
 };
 
