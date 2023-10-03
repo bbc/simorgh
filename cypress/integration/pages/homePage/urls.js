@@ -5,6 +5,12 @@ const urls = [
     test: '/kyrgyz',
     live: '/kyrgyz',
   },
+  {
+    service: 'arabic',
+    local: '/arabic',
+    test: '/arabic',
+    live: '/arabic',
+  },
 ];
 
 export default () => {

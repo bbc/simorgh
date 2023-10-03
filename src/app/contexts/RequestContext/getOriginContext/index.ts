@@ -1,6 +1,5 @@
 const getOriginContext = (bbcOrigin: string | null) => {
   let origin = 'https://www.bbc.co.uk';
-  let isUK = true;
 
   if (bbcOrigin) {
     origin = bbcOrigin;
@@ -19,13 +18,8 @@ const getOriginContext = (bbcOrigin: string | null) => {
     origin = window.location.origin; // eslint-disable-line prefer-destructuring
   }
 
-  if (origin.includes('.com')) {
-    isUK = false;
-  }
-
   return {
     origin,
-    isUK,
   };
 };
 

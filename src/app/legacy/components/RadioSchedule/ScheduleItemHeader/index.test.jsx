@@ -3,7 +3,6 @@ import { render } from '../../../../components/react-testing-library-with-provid
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import arabic from '../../../../components/ThemeProvider/fontScripts/arabic';
 import ScheduleItemHeader from '.';
-import '@testing-library/jest-dom/extend-expect';
 
 const service = 'arabic';
 const dir = 'rtl';
