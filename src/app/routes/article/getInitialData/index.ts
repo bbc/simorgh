@@ -120,7 +120,7 @@ export default async ({
       }
     }
 
-    const { latestMedia } = secondaryData;
+    const { latestMedia } = secondaryData || {};
 
     const {
       data: { topStories, features },
