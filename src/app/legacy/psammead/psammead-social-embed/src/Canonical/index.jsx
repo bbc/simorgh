@@ -1,7 +1,9 @@
 /* eslint-disable no-console */
-import React, { memo, useEffect } from 'react';
+import React, { memo, useContext, useEffect } from 'react';
 import { func, shape, string } from 'prop-types';
 import styled from '@emotion/styled';
+import { RequestContext } from '#app/contexts/RequestContext';
+import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import useScript from './useScript';
 
 const LANDSCAPE_RATIO = '56.25%';
@@ -14,6 +16,7 @@ const OEmbed = styled.div`
   ${({ styles }) => styles}
   display: flex;
   justify-content: center;
+  ${({ isLive }) => (isLive ? 'flex-wrap: wrap;' : '')}
 `;
 
 const getOnRenderError = providerName =>
@@ -23,7 +26,7 @@ const getOnRenderError = providerName =>
  * The following object declares a list of supported Canonical providers
  * and their attributes. Not all providers have the same attributes.
  */
-export const providers = provider =>
+export const providers = (provider, isLive) =>
   ({
     instagram: {
       script: 'https://www.instagram.com/embed.js',
@@ -47,9 +50,29 @@ export const providers = provider =>
       .twitter-tweet {
         margin-top: 0 !important;
         margin-bottom: ${PRE_RENDER_MARGIN} !important;
+        ${
+          isLive
+            ? `
+                text-align: center; 
+                background-color: white; 
+                padding-bottom: ${PRE_RENDER_MARGIN} !important;
+                margin-bottom: 0 !important;
+                width: 100%; 
+                margin: 0;
+              `
+            : ''
+        }
       }
       .twitter-tweet-rendered {
         margin-bottom: 0 !important;
+        ${
+          isLive
+            ? `
+                background-color: transparent; 
+                padding-bottom: 0 !important;
+              `
+            : ''
+        }
       }
     `,
       enrich: () => {
@@ -121,7 +144,9 @@ export const providers = provider =>
   }[provider]);
 
 const CanonicalEmbed = ({ provider, oEmbed, onRender }) => {
-  const { script, styles, enrich, onLibraryLoad } = providers(provider);
+  const { pageType } = useContext(RequestContext);
+  const isLive = pageType === LIVE_PAGE;
+  const { script, styles, enrich, onLibraryLoad } = providers(provider, isLive);
   const hasLoadedLibrary = useScript(script);
   useEffect(enrich);
 
@@ -133,7 +158,11 @@ const CanonicalEmbed = ({ provider, oEmbed, onRender }) => {
   }, [hasLoadedLibrary]);
 
   return (
-    <OEmbed styles={styles} dangerouslySetInnerHTML={{ __html: oEmbed.html }} />
+    <OEmbed
+      styles={styles}
+      isLive={isLive}
+      dangerouslySetInnerHTML={{ __html: oEmbed.html }}
+    />
   );
 };
 
