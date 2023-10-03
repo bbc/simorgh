@@ -20,6 +20,7 @@ import getAgent from '../../../../utilities/undiciAgent';
 
 import LivePageLayout from './LivePageLayout';
 import extractHeaders from '../../../../../src/server/utilities/extractHeaders';
+import isValidPageNumber from '../../../../utilities/pageQueryValidator';
 
 interface PageDataParams extends ParsedUrlQuery {
   id: string;
@@ -96,10 +97,25 @@ export const getServerSideProps: GetServerSideProps = async context => {
     service,
     variant,
     // renderer_env: rendererEnv,
-    page,
+    page = '1',
   } = context.query as PageDataParams;
 
   const { headers: reqHeaders } = context.req;
+
+  if (!isValidPageNumber(page)) {
+    context.res.statusCode = 404;
+    return {
+      props: {
+        bbcOrigin: reqHeaders['bbc-origin'] || null,
+        isNextJs: true,
+        service,
+        status: 404,
+        timeOnServer: Date.now(),
+        variant: variant?.[0] || null,
+        ...extractHeaders(reqHeaders),
+      },
+    };
+  }
 
   logger.info(SERVER_SIDE_RENDER_REQUEST_RECEIVED, {
     url: context.resolvedUrl,
