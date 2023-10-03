@@ -60,37 +60,18 @@ const Component = ({
   offScreenText = 'Watch Live',
 }: Props) => {
   const { liveLabel } = services[service].default.translations.media;
-  console.log(liveLabel);
-  console.log(services[service].default.translations.media.liveLabel);
-  console.log(service);
   return (
-    <ThemeProvider service={service} variant={variant}>
-      <ToggleContextProvider>
-        <RequestContextProvider
-          isAmp={false}
-          isApp={false}
-          pageType={ARTICLE_PAGE}
+    <Wrapper>
+      <Link href="https://www.bbc.co.uk/news">
+        <LiveLabel
           service={service}
-          statusCode={200}
-          pathname={`/${service}`}
-          variant={variant}
-        >
-          <ServiceContextProvider service={service} variant={variant}>
-            <Wrapper>
-              <Link href="https://www.bbc.co.uk/news">
-                <LiveLabel
-                  service={service}
-                  dir={dir}
-                  ariaHidden
-                  offScreenText="Live"
-                  liveText={liveLabel}
-                />
-              </Link>
-            </Wrapper>
-          </ServiceContextProvider>
-        </RequestContextProvider>
-      </ToggleContextProvider>
-    </ThemeProvider>
+          dir={dir}
+          ariaHidden
+          offScreenText="Live"
+          liveText={liveLabel}
+        />
+      </Link>
+    </Wrapper>
   );
 };
 
