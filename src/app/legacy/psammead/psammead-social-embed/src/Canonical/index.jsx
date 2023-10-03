@@ -8,6 +8,7 @@ import useScript from './useScript';
 
 const LANDSCAPE_RATIO = '56.25%';
 const PRE_RENDER_MARGIN = '10rem';
+const PRE_RENDER_PADDING = '5rem';
 
 /**
  * Apply provider-specific styles.
@@ -47,15 +48,25 @@ export const providers = (provider, isLive) =>
     twitter: {
       script: 'https://platform.twitter.com/widgets.js',
       styles: `
+      ${
+        isLive
+          ? ` .twitter-tweet a {
+                color: black; 
+                font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+              }
+              `
+          : ''
+      }
       .twitter-tweet {
         margin-top: 0 !important;
         margin-bottom: ${PRE_RENDER_MARGIN} !important;
         ${
           isLive
             ? `
-                text-align: center; 
                 background-color: white; 
-                padding-bottom: ${PRE_RENDER_MARGIN} !important;
+                padding-bottom: ${PRE_RENDER_PADDING} !important;
+                padding-top: ${PRE_RENDER_PADDING} !important;
+                padding-left: 1rem !important;
                 margin-bottom: 0 !important;
                 width: 100%; 
                 margin: 0;
@@ -70,6 +81,8 @@ export const providers = (provider, isLive) =>
             ? `
                 background-color: transparent; 
                 padding-bottom: 0 !important;
+                padding-top: 0 !important;
+                padding-left: 0 !important;
               `
             : ''
         }
