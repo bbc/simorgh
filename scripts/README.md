@@ -2,7 +2,7 @@
 
 ## Instructions for esmDependencyCheck
 
-This script was written with the intent to have a way to quickly check if any of our dependencies are ESM (instead of CommonJS), and with that knowledge make the decision if and when to upgrade or replace them based on the fact changing to ESM can be difficult. It may become less difficult in the future as the ecosystem matures.
+This script was written with the intent to have a way to quickly check if any of our dependencies are ESM (instead of CommonJS), and with that knowledge make the decision if and when to upgrade or replace them based on the fact that changing to ESM can be difficult. It may become less difficult in the future as the ecosystem matures.
 
 To run it use 'yarn run esmDependencyCheck'.
 
