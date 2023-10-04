@@ -31,34 +31,39 @@ export default {
   },
 };
 
-export const WithLocalisedLiveText = ({ service, dir }: Props) => (
+export const WithLocalisedLiveText = ({ service, variant, dir }: Props) => (
   <LiveLabel
     service={service}
     dir={dir}
-    liveText={services[service].default.translations.media.liveLabel}
+    liveText={services[service][variant].translations.media.liveLabel}
   />
 );
 
-export const WithCustomOffscreenText = ({ service, dir }: Props) => (
+export const WithCustomOffscreenText = ({ service, variant, dir }: Props) => (
   <LiveLabel
     service={service}
     dir={dir}
     ariaHidden
     offScreenText="Watch Live"
-    liveText={services[service].default.translations.media.liveLabel}
+    liveText={services[service][variant].translations.media.liveLabel}
   />
 );
 
-export const WithChildren = ({ text: headline, service, dir }: Props) => (
+export const WithChildren = ({
+  text: headline,
+  service,
+  variant,
+  dir,
+}: Props) => (
   <Wrapper>
     <Heading level={3}>
-        <LiveLabel
-          service={service}
-          dir={dir}
-          ariaHidden
-          offScreenText="Live"
-          liveText={services[service].default.translations.media.liveLabel}
-        />
+      <LiveLabel
+        service={service}
+        dir={dir}
+        ariaHidden
+        offScreenText="Live"
+        liveText={services[service][variant].translations.media.liveLabel}
+      />
       <InlineLink text={headline} to="https://www.bbc.co.uk/ws/languages" />
     </Heading>
   </Wrapper>
