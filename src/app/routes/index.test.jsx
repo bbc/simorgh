@@ -67,7 +67,7 @@ afterEach(() => {
 
 const getMatchingRoute = pathname => {
   const matchingRoutes = matchRoutes(routes, pathname);
-  return matchingRoutes[0].route;
+  return matchingRoutes?.[0]?.route;
 };
 
 const renderRouter = props =>

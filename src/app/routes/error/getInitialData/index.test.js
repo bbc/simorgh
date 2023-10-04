@@ -7,3 +7,17 @@ it('should resolve with status 200 and errorCode', async () => {
 
   expect(expected).toEqual(actual);
 });
+
+it('should resolve with status 200 and errorCode with 500 if pathRegex is null', async () => {
+  const expected = { status: 200, errorCode: 500 };
+  const actual = await getInitialData(null)({ path: '/pidgin/400' });
+
+  expect(expected).toEqual(actual);
+});
+
+it('should resolve with status 200 and errorCode with 500 if pathRegex and pathName is null', async () => {
+  const expected = { status: 200, errorCode: 500 };
+  const actual = await getInitialData(null)({ path: null });
+
+  expect(expected).toEqual(actual);
+});
