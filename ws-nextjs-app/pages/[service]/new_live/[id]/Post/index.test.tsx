@@ -6,7 +6,7 @@ import {
 } from '#app/components/react-testing-library-with-providers';
 import postFixture from '#data/pidgin/posts/postFixtureCleaned.json';
 import Post from '.';
-import samplePost from './fixture';
+import { samplePost, twitterSamplePost } from './fixture';
 
 const singlePostWithTitle = postFixture.data.results[0];
 
@@ -115,6 +115,18 @@ describe('Post', () => {
 
       expect(screen.getByRole('list')).toBeTruthy();
       expect(screen.getAllByRole('listitem')).toHaveLength(4);
+    });
+
+    it('should render a twitter embed when provided', async () => {
+      const { container } = await act(async () => {
+        return render(<Post post={twitterSamplePost} />);
+      });
+
+      expect(
+        container.querySelector(
+          '[data-e2e="twitter-embed-https://twitter.com/bbcnewspidgin/status/1700039661874282772"]',
+        ),
+      ).toBeTruthy();
     });
   });
 });
