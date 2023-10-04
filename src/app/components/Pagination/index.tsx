@@ -8,6 +8,8 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '#app/legacy/psammead/gel-foundations/src/breakpoints';
+import { RequestContext } from '#app/contexts/RequestContext';
+import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import buildBlocks, { VISIBILITY } from './buildBlocks';
 import { Ellipsis, LeftChevron, RightChevron } from '../icons';
@@ -150,7 +152,9 @@ const Pagination = ({
   page = 'Page',
 }: PaginationProps) => {
   const { dir } = useContext(ServiceContext);
+  const { pageType } = useContext(RequestContext);
   const blocks = buildBlocks(activePage, pageCount);
+  const isLive = pageType === LIVE_PAGE;
   if (!blocks) return null;
 
   const tokenMapper = (token: string, key: number) =>
@@ -166,7 +170,7 @@ const Pagination = ({
 
   return (
     <nav
-      css={styles.nav}
+      css={[styles.nav, isLive && styles.liveNavMargin]}
       role="navigation"
       aria-label={page}
       data-testid="topic-pagination"

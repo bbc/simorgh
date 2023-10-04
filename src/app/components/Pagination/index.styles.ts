@@ -7,6 +7,10 @@ const styles = {
       margin: '0 auto 2.5rem auto',
       textAlign: 'center',
     }),
+  liveNavMargin: () =>
+    css({
+      margin: '0 auto 2rem auto',
+    }),
   unorderedList: ({ mq }: Theme) =>
     css({
       display: 'inline-block',
