@@ -59,7 +59,7 @@ const dealWithCaretsAndTildes = (versionString, timeJson) => {
   }
   const lowestVersionMatches = versionString.match(/[\d\.]+$/g);
   if (!lowestVersionMatches) {
-    return 'Unkonwn'; // if it contains a string that doesn't end in numbers and dots we give up
+    return 'Unknown'; // if it contains a string that doesn't end in numbers and dots we give up
   }
   const splitOurVersionArray = lowestVersionMatches[0].split('.');
 
