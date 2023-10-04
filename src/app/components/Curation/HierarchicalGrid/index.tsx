@@ -8,7 +8,13 @@ import VisuallyHiddenText from '../../VisuallyHiddenText';
 import formatDuration from '../../../lib/utilities/formatDuration';
 import Promo from '../../../legacy/components/Promo';
 import { DESKTOP, TABLET, MOBILE, SMALL } from './dataStructures';
-import { SmallCompactPromo, styles } from './index.styles';
+import {
+  CompactPromo,
+  HorizontalPromo,
+  SmallCompactPromo,
+  styles,
+  VerticalPromo,
+} from './index.styles';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { CurationGridProps } from '../types';
 import { RequestContext } from '../../../contexts/RequestContext';
