@@ -46,11 +46,8 @@ export const App = ({ initialData, bbcOrigin }) => {
     }),
   );
 
-  const routeHasChanged = state.pathname !== pathname;
-
   return renderRoutes(routes, {
     ...state,
-    loading: routeHasChanged,
     bbcOrigin,
     showAdsBasedOnLocation,
     mvtExperiments,
