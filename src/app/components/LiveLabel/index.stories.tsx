@@ -14,7 +14,7 @@ interface Props extends StoryProps {
   ariaHidden: boolean;
   offScreenText: string;
   liveText?: string;
-  text?: string;
+  text: string;
 }
 
 const Wrapper = styled.div`
@@ -60,11 +60,11 @@ export const WithChildren = ({
       <LiveLabel
         service={service}
         dir={dir}
-        ariaHidden
         offScreenText="Live"
         liveText={services[service][variant].translations.media.liveLabel}
-      />
-      <InlineLink text={headline} to="https://www.bbc.co.uk/ws/languages" />
+      >
+        <InlineLink text={headline} to="https://www.bbc.co.uk/ws/languages" />
+      </LiveLabel>
     </Heading>
   </Wrapper>
 );
