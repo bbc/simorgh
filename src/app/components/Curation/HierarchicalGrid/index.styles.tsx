@@ -111,31 +111,6 @@ const CompactPromo = css({
   },
 });
 
-const SmallCompactPromo = css({
-  gridColumn: 'span 2',
-  gridRow: 'span 1',
-  paddingTop: '0.5rem',
-  marginTop: '0.5rem',
-  '.promo-image': {
-    display: 'none',
-  },
-  '.promo-paragraph': {
-    display: 'none',
-  },
-  '.promo-timestamp': {
-    display: 'none',
-  },
-  '::before': {
-    top: 0,
-    content: '""',
-    background: '#e6e8ea',
-    width: '100%',
-    height: `${1 / 16}rem`,
-    position: 'absolute',
-    left: 0,
-  },
-});
-
 const HorizontalPromo = css({
   gridColumn: 'span 2',
   gridRow: 'span 1',
@@ -178,5 +153,4 @@ export {
   TallPromo,
   CompactPromo,
   HorizontalPromo,
-  SmallCompactPromo,
 };
