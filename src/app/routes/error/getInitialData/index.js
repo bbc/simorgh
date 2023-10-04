@@ -5,7 +5,7 @@ export default pathRegex =>
     const matchingRoute = matchRoutes([{ path: pathRegex }], pathname);
 
     const errorCode = Number(
-      matchingRoute?.[0]?.match?.params?.errorCode || 500,
+      matchingRoute?.[0]?.match?.params?.errorCode || 404,
     );
 
     return Promise.resolve({ status: 200, errorCode });
