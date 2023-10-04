@@ -1,4 +1,4 @@
-import buildBlocks, { TYPE, VISIBILITY } from './buildBlocks';
+import buildBlocks, { VISIBILITY } from './buildBlocks';
 
 const DEVICE = {
   MOBILE: 'MOBILE',
@@ -38,7 +38,7 @@ const validate = ({
   if (!output && !expectedOutput) return true;
   const filteredBlocks = output.filter(block => isVisible(block, device));
   const compareBlock = (i, expected, actual) => {
-    if (expected === '.' && actual[i].type === TYPE.ELLIPSIS) {
+    if (expected === '.' && actual[i].type === 'ELLIPSIS') {
       return true;
     }
     if (expected === actual[i].pageNumber) {

@@ -1,7 +1,6 @@
 /** @jsx jsx */
-import { Theme, jsx } from '@emotion/react';
-import React, { useContext } from 'react';
-import { number, string } from 'prop-types';
+import { jsx } from '@emotion/react';
+import { useContext } from 'react';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
@@ -10,12 +9,41 @@ import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '#app/legacy/psammead/gel-foundations/src/breakpoints';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import buildBlocks, { TYPE, VISIBILITY } from './buildBlocks';
+import buildBlocks, { VISIBILITY } from './buildBlocks';
 import { Ellipsis, LeftChevron, RightChevron } from '../icons';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import styles from './index.styles';
 
-const visibilityToMediaQuery = visibility =>
+interface LinkComponentProps {
+  children: number | JSX.Element;
+  pageNumber: number;
+  isActive?: boolean;
+}
+
+interface ArrowProps {
+  activePage: number;
+  children: string | JSX.Element;
+  dir: string;
+}
+
+interface RenderBlockProps {
+  type: string;
+  pageNumber: number;
+  key: number;
+  visibility: string;
+  activePage: number;
+}
+
+interface PaginationProps {
+  activePage: number;
+  pageCount: number;
+  pageXOfY: string;
+  previousPage: string;
+  nextPage: string;
+  page: string;
+}
+
+const visibilityToMediaQuery = (visibility: string) =>
   ({
     [VISIBILITY.MOBILE_ONLY]: `display: none; @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
       display: inline-block;
@@ -32,8 +60,12 @@ const visibilityToMediaQuery = visibility =>
     [VISIBILITY.ALL]: `display: inline-block;`,
   }[visibility] || 'display: none;');
 
-/* eslint-disable react/prop-types */
-const LinkComponent = ({ children, pageNumber, isActive, ...rest }) => (
+const LinkComponent = ({
+  children,
+  pageNumber,
+  isActive,
+  ...rest
+}: LinkComponentProps) => (
   <a
     css={isActive ? styles.activeA : styles.inactiveA}
     href={`?page=${pageNumber}`}
@@ -45,11 +77,8 @@ const LinkComponent = ({ children, pageNumber, isActive, ...rest }) => (
   </a>
 );
 
-const PreviousArrow = ({ activePage, children, dir }) => (
-  <li
-    css={() => [styles.block, visibilityToMediaQuery(VISIBILITY.ALL)]}
-    as="span"
-  >
+const PreviousArrow = ({ activePage, children, dir }: ArrowProps) => (
+  <span css={() => [styles.block, visibilityToMediaQuery(VISIBILITY.ALL)]}>
     <LinkComponent
       pageNumber={activePage - 1}
       aria-labelledby="pagination-previous-page"
@@ -59,14 +88,11 @@ const PreviousArrow = ({ activePage, children, dir }) => (
         <VisuallyHiddenText>{children}</VisuallyHiddenText>
       </span>
     </LinkComponent>
-  </li>
+  </span>
 );
 
-const NextArrow = ({ activePage, children, dir }) => (
-  <li
-    css={() => [styles.block, visibilityToMediaQuery(VISIBILITY.ALL)]}
-    as="span"
-  >
+const NextArrow = ({ activePage, children, dir }: ArrowProps) => (
+  <span css={() => [styles.block, visibilityToMediaQuery(VISIBILITY.ALL)]}>
     <LinkComponent
       pageNumber={activePage + 1}
       aria-labelledby="pagination-next-page"
@@ -76,18 +102,17 @@ const NextArrow = ({ activePage, children, dir }) => (
         {dir === 'ltr' ? <RightChevron /> : <LeftChevron />}
       </span>
     </LinkComponent>
-  </li>
+  </span>
 );
 
 const renderBlock = ({
-  service,
   activePage,
+  key,
   type,
   pageNumber,
-  key,
   visibility,
-}) => {
-  if (type === TYPE.NUMBER) {
+}: RenderBlockProps) => {
+  if (type === 'NUMBER') {
     return (
       <li
         css={() => [styles.block, visibilityToMediaQuery(visibility)]}
@@ -117,18 +142,18 @@ const renderBlock = ({
 /* eslint-enable react/prop-types */
 
 const Pagination = ({
-  activePage,
-  pageCount,
-  pageXOfY,
-  previousPage,
-  nextPage,
-  page,
-}) => {
-  const { service, dir } = useContext(ServiceContext);
+  activePage = 1,
+  pageCount = 1,
+  pageXOfY = 'Page {x} of {y}',
+  previousPage = 'Previous Page',
+  nextPage = 'Next Page',
+  page = 'Page',
+}: PaginationProps) => {
+  const { dir } = useContext(ServiceContext);
   const blocks = buildBlocks(activePage, pageCount);
   if (!blocks) return null;
 
-  const tokenMapper = (token, key) =>
+  const tokenMapper = (token: string, key: number) =>
     ({
       '{x}': <b key={key}>{activePage}</b>,
       '{y}': <b key={key}>{pageCount}</b>,
@@ -160,7 +185,7 @@ const Pagination = ({
         {tokens}
       </div>
       <ul css={styles.unorderedList} role="list">
-        {blocks.map(block => renderBlock({ ...block, activePage, service }))}
+        {blocks.map(block => renderBlock({ ...block, activePage }))}
       </ul>
       {showNextArrow && (
         <NextArrow activePage={activePage} dir={dir}>
@@ -169,24 +194,6 @@ const Pagination = ({
       )}
     </nav>
   );
-};
-
-Pagination.propTypes = {
-  activePage: number,
-  pageCount: number,
-  pageXOfY: string,
-  previousPage: string,
-  nextPage: string,
-  page: string,
-};
-
-Pagination.defaultProps = {
-  activePage: 1,
-  pageCount: 1,
-  pageXOfY: 'Page {x} of {y}',
-  previousPage: 'Previous Page',
-  nextPage: 'Next Page',
-  page: 'Page',
 };
 
 export default Pagination;

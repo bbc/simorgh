@@ -2,11 +2,6 @@ import pipe from 'ramda/src/pipe';
 import clone from 'ramda/src/clone';
 import findNClosestIndices from '#lib/utilities/findNClosestIndicies';
 
-export const TYPE = {
-  ELLIPSIS: 'ELLIPSIS',
-  NUMBER: 'NUMBER',
-};
-
 export const VISIBILITY = {
   ALL: 'ALL',
   MOBILE_ONLY: 'MOBILE_ONLY',
@@ -14,22 +9,35 @@ export const VISIBILITY = {
   TABLET_UP: 'TABLET_UP',
   DESKTOP_ONLY: 'DESKTOP_ONLY',
 };
-
+type ResultItem = {
+  key: number;
+  type: 'NUMBER' | 'ELLIPSIS';
+  pageNumber: number;
+  visibility: string;
+};
+type StateType = {
+  result: Array<ResultItem>;
+  activePage: number;
+  activePageIndex: number;
+  activePageOnEdge: boolean;
+  pageCount: number;
+  pagesTruncatedOnLeft?: boolean;
+  pagesTruncatedOnRight?: boolean;
+};
 // The first page, last page, and active page should always be visible
-const setRequiredVisibility = _state => {
+const setRequiredVisibility = (_state: StateType) => {
   const state = clone(_state);
   state.result[0].visibility = VISIBILITY.ALL;
   state.result[state.activePageIndex].visibility = VISIBILITY.ALL;
   state.result[state.result.length - 1].visibility = VISIBILITY.ALL;
-
   return state;
 };
 
 // Iteratively radiate out from the active page, setting the visibility of pages
 // Pages closer to the active page are visible on more devices
-const setDynamicVisibility = _state => {
+const setDynamicVisibility = (_state: StateType) => {
   const state = clone(_state);
-  const iterations = [
+  const iterations: Array<[string, number]> = [
     [VISIBILITY.ALL, state.activePageOnEdge ? 1 : 0],
     [VISIBILITY.TABLET_UP, state.activePageOnEdge ? 1 : 2],
     [VISIBILITY.DESKTOP_ONLY, 4],
@@ -39,19 +47,19 @@ const setDynamicVisibility = _state => {
     findNClosestIndices({
       n: additionalPagesToShow,
       startingIndex: state.activePageIndex,
-      predicate: e => !e.visibility,
+      predicate: (e: ResultItem) => !e.visibility,
       array: state.result,
     }).forEach(index => {
       state.result[index].visibility = deviceSize;
     }),
   );
-
   return state;
 };
 
 // Ensure we do not have an ellipsis replacing a single number
-const fillEdges = _state => {
+const fillEdges = (_state: StateType) => {
   const state = clone(_state);
+
   // If page 2 is going to be rendered, it should have the same visibility as page 3
   const secondElement = state.result[1];
   const thirdElement = state.result[2];
@@ -73,7 +81,7 @@ const fillEdges = _state => {
 };
 
 // After setting the visibility of all the pages we want to show, we can remove the others
-const pruneInvisible = _state => {
+const pruneInvisible = (_state: StateType) => {
   const state = clone(_state);
   state.result = state.result.filter((page, index) => {
     if (!page.visibility) {
@@ -93,7 +101,7 @@ const pruneInvisible = _state => {
 };
 
 // Determine the devices that an ellipsis is displayed on
-const getEllipsisVisibility = (side, state) => {
+const getEllipsisVisibility = (side: string, state: StateType) => {
   // If we pruned some pages on this side, we display an ellipsis on all devices
   const wasTruncated =
     side === 'left' ? state.pagesTruncatedOnLeft : state.pagesTruncatedOnRight;
@@ -114,39 +122,46 @@ const getEllipsisVisibility = (side, state) => {
 };
 
 // Conditionally adding the ellipsis blocks to our return value
-const insertEllipsis = state => {
+// Page number and key set to zero as these are not used when rendering an elipsis, but are required by StateType
+const insertEllipsis = (state: StateType) => {
   const leftEllipsisVisibility = getEllipsisVisibility('left', state);
   const rightEllipsisVisibility = getEllipsisVisibility('right', state);
   if (leftEllipsisVisibility) {
     state.result.splice(1, 0, {
-      type: TYPE.ELLIPSIS,
+      type: 'ELLIPSIS',
       visibility: leftEllipsisVisibility,
+      pageNumber: 0,
+      key: 0,
     });
   }
 
   if (rightEllipsisVisibility) {
     state.result.splice(state.result.length - 1, 0, {
-      type: TYPE.ELLIPSIS,
+      type: 'ELLIPSIS',
       visibility: rightEllipsisVisibility,
+      pageNumber: 0,
+      key: 0,
     });
   }
 
   return state;
 };
 
-const addKeys = state => ({
+const addKeys = (state: StateType) => ({
   ...state,
   result: state.result.map((page, i) => ({ ...page, key: i })),
 });
 
-export default (activePage, pageCount) => {
+export default (activePage: number, pageCount: number) => {
   if (pageCount <= 1) return null;
-  const initialState = {
+  const initialState: StateType = {
     result: Array(pageCount)
-      .fill()
+      .fill(undefined)
       .map((_, i) => ({
-        type: TYPE.NUMBER,
+        type: 'NUMBER',
         pageNumber: i + 1,
+        key: 0,
+        visibility: '',
       })),
     activePage,
     activePageIndex: activePage - 1,
