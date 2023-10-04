@@ -25,14 +25,14 @@ const getStyles = (
   mq: Theme['mq'],
   visualProminence?: string,
 ) => {
+  const desktopStyle =
+    visualProminence === 'LOW' ? SmallCompactPromo : DESKTOP[promoCount - 1][i];
   const smallStyle =
     visualProminence === 'LOW' ? SmallCompactPromo : SMALL[promoCount - 1][i];
   const mobileStyle =
     visualProminence === 'LOW' ? SmallCompactPromo : MOBILE[promoCount - 1][i];
   const tabletStyle =
     visualProminence === 'LOW' ? SmallCompactPromo : TABLET[promoCount - 1][i];
-  const desktopStyle =
-    visualProminence === 'LOW' ? SmallCompactPromo : DESKTOP[promoCount - 1][i];
   return css({
     [mq.GROUP_1_MAX_WIDTH]: {
       ...smallStyle,
@@ -64,6 +64,7 @@ const HiearchicalGrid = ({ promos, headingLevel }: CurationGridProps) => {
     <div data-testid="hierarchical-grid">
       <ul role="list" css={styles.list} data-testid="topic-promos">
         {promoItems.map((promo, i) => {
+          console.log({ promo });
           const duration = moment.duration(promo.duration, 'seconds');
           const separator = ',';
           const formattedDuration = formatDuration({ duration, separator });
