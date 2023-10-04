@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 import { string, bool } from 'prop-types';
-import { useLocation } from 'react-router-dom';
 import moment from 'moment-timezone';
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
 import Figure from '#psammead/psammead-figure/src';
+import useLocation from '#hooks/useLocation';
 import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
@@ -47,7 +47,7 @@ const MediaPlayerContainer = ({
 }) => {
   const { isAmp } = useContext(RequestContext);
   const { lang, translations, service } = useContext(ServiceContext);
-  const location = useLocation();
+
   if (!blocks) {
     return null;
   }
@@ -162,6 +162,11 @@ const MediaPlayerContainer = ({
       </StyledMessageContainer>
     );
   }
+
+  // Use of this conditional hook is consistent across each render.
+  // Hook is positioned here to prevent multiple renders of the missing media message above.
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const location = useLocation();
 
   const embedSource = getEmbedUrl({
     mediaId: `${assetId}/${isLegacyMedia ? blockId : versionId}/${lang}`,
