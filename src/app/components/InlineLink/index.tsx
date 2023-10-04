@@ -12,7 +12,7 @@ interface Props extends HTMLAttributes<HTMLElement> {
   className?: string;
   fontVariant?: FontVariant;
   size?: GelFontSize;
-  text: string;
+  text?: string;
   to: string;
 }
 

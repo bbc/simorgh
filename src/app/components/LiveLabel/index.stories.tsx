@@ -7,6 +7,7 @@ import md from '../../legacy/psammead/psammead-live-label/README.md';
 import { StoryProps } from '../../models/types/storybook';
 import services from '../../../server/utilities/serviceConfigs';
 import Heading from '../Heading';
+import InlineLink from '../InlineLink';
 
 interface Props extends StoryProps {
   dir: string;
@@ -51,15 +52,14 @@ export const WithCustomOffscreenText = ({ service, dir }: Props) => (
 export const WithChildren = ({ text: headline, service, dir }: Props) => (
   <Wrapper>
     <Heading level={3}>
-      <LiveLabel
-        service={service}
-        dir={dir}
-        ariaHidden
-        offScreenText="Live"
-        liveText={services[service].default.translations.media.liveLabel}
-      >
-        {headline}
-      </LiveLabel>
+        <LiveLabel
+          service={service}
+          dir={dir}
+          ariaHidden
+          offScreenText="Live"
+          liveText={services[service].default.translations.media.liveLabel}
+        />
+      <InlineLink text={headline} to="https://www.bbc.co.uk/ws/languages" />
     </Heading>
   </Wrapper>
 );
