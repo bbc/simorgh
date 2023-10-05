@@ -1,83 +1,27 @@
-import React, { useContext } from 'react';
-import pathOr from 'ramda/src/pathOr';
+import React from 'react';
 import styled from '@emotion/styled';
-import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '../../legacy/psammead/psammead-storybook-helpers/src';
-import { Headline, Link } from '../../legacy/psammead/psammead-story-promo/src';
 import LiveLabel from '../../legacy/psammead/psammead-live-label/src/index';
 import md from '../../legacy/psammead/psammead-live-label/README.md';
 import { StoryProps } from '../../models/types/storybook';
-import { ThemeProvider } from '../ThemeProvider';
-import {
-  ServiceContext,
-  ServiceContextProvider,
-} from '../../contexts/ServiceContext';
 import services from '../../../server/utilities/serviceConfigs';
-import { ToggleContextProvider } from '../../contexts/ToggleContext';
-import { RequestContextProvider } from '../../contexts/RequestContext';
-import { ARTICLE_PAGE } from '../../routes/utils/pageTypes';
+import Heading from '../Heading';
 
 interface Props extends StoryProps {
   dir: string;
   ariaHidden: boolean;
   offScreenText: string;
   liveText?: string;
+  text?: string;
 }
 
 const Wrapper = styled.div`
   position: relative;
 `;
 
-//   .add(
-//     'with children',
-//     ({ text: headline, script, service, dir }) => (
-//       <Wrapper>
-//         <Headline script={script} service={service}>
-//           <Link href="https://www.bbc.co.uk/news">
-//             <LiveLabel
-//               service={service}
-//               dir={dir}
-//               ariaHidden
-//               offScreenText="Live"
-//             >
-//               {headline}
-//             </LiveLabel>
-//           </Link>
-//         </Headline>
-//       </Wrapper>
-//     ),
-//     {
-//       notes,
-//     },
-//   );
-
-const Component = ({
-  service,
-  variant,
-  dir,
-  ariaHidden,
-  offScreenText = 'Watch Live',
-}: Props) => {
-  const { liveLabel } = services[service].default.translations.media;
-  return (
-    <Wrapper>
-      <Link href="https://www.bbc.co.uk/news">
-        <LiveLabel
-          service={service}
-          dir={dir}
-          ariaHidden
-          offScreenText="Live"
-          liveText={liveLabel}
-        />
-      </Link>
-    </Wrapper>
-  );
-};
-
 export default {
   title: 'New Components/Live Label',
-  Component,
   decorators: [withKnobs(), withServicesKnob({ defaultService: 'pidgin' })],
   parameters: {
     docs: {
@@ -86,36 +30,36 @@ export default {
   },
 };
 
-export const WithEnglishLiveText = ({ service, variant, dir }: Props) => (
-  <Component
+export const WithLocalisedLiveText = ({ service, dir }: Props) => (
+  <LiveLabel
     service={service}
-    variant={variant}
     dir={dir}
-    ariaHidden
-    offScreenText="Live"
+    liveText={services[service].default.translations.media.liveLabel}
   />
 );
 
-export const WithLocalisedLiveText = ({ service, variant, dir }: Props) => (
-  <Component
+export const WithCustomOffscreenText = ({ service, dir }: Props) => (
+  <LiveLabel
     service={service}
-    variant={variant}
-    dir={dir}
-    ariaHidden
-    offScreenText="Live"
-  />
-);
-
-export const WithCustomOffscreenText = ({ service, variant, dir }: Props) => (
-  <Component
-    service={service}
-    variant={variant}
     dir={dir}
     ariaHidden
     offScreenText="Watch Live"
+    liveText={services[service].default.translations.media.liveLabel}
   />
 );
 
-// export const WithChildren = ({ service, variant, dir }:Props) => (
-
-// )
+export const WithChildren = ({ text: headline, service, dir }: Props) => (
+  <Wrapper>
+    <Heading level={3}>
+      <LiveLabel
+        service={service}
+        dir={dir}
+        ariaHidden
+        offScreenText="Live"
+        liveText={services[service].default.translations.media.liveLabel}
+      >
+        {headline}
+      </LiveLabel>
+    </Heading>
+  </Wrapper>
+);
