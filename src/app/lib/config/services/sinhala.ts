@@ -245,7 +245,7 @@ export const service: DefaultServiceConfig = {
         linkText: 'අන්තර්ගතයේ සියල්ල දැක ගැනීමට පිටුවේ සම්පූර්ණ අනුවාදය බලන්න',
       },
       topStoriesTitle: 'ප්‍රධාන පුවත',
-      featuresAnalysisTitle: 'දැක්ම',
+      featuresAnalysisTitle: 'විශේෂාංග',
       latestMediaTitle: 'අලුත්ම',
     },
     mostRead: {
@@ -315,8 +315,12 @@ export const service: DefaultServiceConfig = {
         url: '/sinhala/topics/c83plvepnq1t',
       },
       {
-        title: 'විශේෂාංග',
-        url: '/sinhala/51727586',
+        title: 'වීඩියෝ',
+        url: '/sinhala/topics/crldzm9n2lnt',
+      },
+      {
+        title: 'කලා',
+        url: '/sinhala/topics/c7zp5zxk8jxt',
       },
     ],
   },
