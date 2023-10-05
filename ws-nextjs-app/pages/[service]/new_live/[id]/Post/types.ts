@@ -25,7 +25,7 @@ interface Images {
   urlTemplate: string | null;
 }
 
-interface Page {
+export interface Page {
   index: number;
   total: number;
 }
