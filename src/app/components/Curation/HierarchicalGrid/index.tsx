@@ -8,35 +8,24 @@ import VisuallyHiddenText from '../../VisuallyHiddenText';
 import formatDuration from '../../../lib/utilities/formatDuration';
 import Promo from '../../../legacy/components/Promo';
 import { DESKTOP, TABLET, MOBILE, SMALL } from './dataStructures';
-import { SmallCompactPromo, styles } from './index.styles';
+import { styles } from './index.styles';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { CurationGridProps } from '../types';
 import { RequestContext } from '../../../contexts/RequestContext';
 
-const getStyles = (
-  promoCount: number,
-  i: number,
-  mq: Theme['mq'],
-  visualProminence?: string,
-) => {
-  const smallStyle =
-    visualProminence === 'LOW' ? SmallCompactPromo : SMALL[promoCount - 1][i];
-  const mobileStyle =
-    visualProminence === 'LOW' ? SmallCompactPromo : MOBILE[promoCount - 1][i];
-  const tabletStyle = TABLET[promoCount - 1][i];
-  const desktopStyle = DESKTOP[promoCount - 1][i];
+const getStyles = (promoCount: number, i: number, mq: Theme['mq']) => {
   return css({
     [mq.GROUP_1_MAX_WIDTH]: {
-      ...smallStyle,
+      ...SMALL[promoCount - 1][i],
     },
     [mq.GROUP_2_ONLY]: {
-      ...mobileStyle,
+      ...MOBILE[promoCount - 1][i],
     },
     [mq.GROUP_3_ONLY]: {
-      ...tabletStyle,
+      ...TABLET[promoCount - 1][i],
     },
     [mq.GROUP_4_MIN_WIDTH]: {
-      ...desktopStyle,
+      ...DESKTOP[promoCount - 1][i],
     },
   });
 };
@@ -77,7 +66,7 @@ const HiearchicalGrid = ({ promos, headingLevel }: CurationGridProps) => {
               key={promo.id}
               css={({ mq }: Theme) => [
                 styles.item,
-                getStyles(promoItems.length, i, mq, promo.visualProminence),
+                getStyles(promoItems.length, i, mq),
               ]}
             >
               <Promo>
