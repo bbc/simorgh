@@ -1,15 +1,16 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import { useContext } from 'react';
+import { PropsWithChildren, useContext } from 'react';
 import {
-  GEL_GROUP_2_SCREEN_WIDTH_MIN,
-  GEL_GROUP_2_SCREEN_WIDTH_MAX,
-  GEL_GROUP_3_SCREEN_WIDTH_MAX,
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '#app/legacy/psammead/gel-foundations/src/breakpoints';
+  GROUP_2_MIN_WIDTH_BP,
+  GROUP_2_MAX_WIDTH_BP,
+  GROUP_3_MIN_WIDTH_BP,
+  GROUP_3_MAX_WIDTH_BP,
+  GROUP_4_MIN_WIDTH_BP,
+} from '#app/components/ThemeProvider/mediaQueries';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
+import { Direction } from '#app/models/types/global';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import buildBlocks, { VISIBILITY } from './buildBlocks';
 import { Ellipsis, LeftChevron, RightChevron } from '../icons';
@@ -17,15 +18,13 @@ import VisuallyHiddenText from '../VisuallyHiddenText';
 import styles from './index.styles';
 
 interface LinkComponentProps {
-  children: number | JSX.Element;
   pageNumber: number;
   isActive?: boolean;
 }
 
 interface ArrowProps {
   activePage: number;
-  children: string | JSX.Element;
-  dir: string;
+  dir: Direction;
 }
 
 interface RenderBlockProps {
@@ -47,16 +46,16 @@ interface PaginationProps {
 
 const visibilityToMediaQuery = (visibility: string) =>
   ({
-    [VISIBILITY.MOBILE_ONLY]: `display: none; @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
+    [VISIBILITY.MOBILE_ONLY]: `display: none; @media (min-width: ${GROUP_2_MIN_WIDTH_BP}) and (max-width: ${GROUP_2_MAX_WIDTH_BP}) {
       display: inline-block;
     }`,
-    [VISIBILITY.TABLET_DOWN]: `display: none; @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+    [VISIBILITY.TABLET_DOWN]: `display: none; @media (max-width: ${GROUP_3_MAX_WIDTH_BP}) {
       display: inline-block;
     }`,
-    [VISIBILITY.TABLET_UP]: `display: none; @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    [VISIBILITY.TABLET_UP]: `display: none; @media (min-width: ${GROUP_3_MIN_WIDTH_BP}) {
       display: inline-block;
     }`,
-    [VISIBILITY.DESKTOP_ONLY]: `display: none; @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    [VISIBILITY.DESKTOP_ONLY]: `display: none; @media (min-width: ${GROUP_4_MIN_WIDTH_BP}) {
       display: inline-block;
     }`,
     [VISIBILITY.ALL]: `display: inline-block;`,
@@ -67,7 +66,7 @@ const LinkComponent = ({
   pageNumber,
   isActive,
   ...rest
-}: LinkComponentProps) => (
+}: PropsWithChildren<LinkComponentProps>) => (
   <a
     css={isActive ? styles.activeA : styles.inactiveA}
     href={`?page=${pageNumber}`}
@@ -79,7 +78,11 @@ const LinkComponent = ({
   </a>
 );
 
-const PreviousArrow = ({ activePage, children, dir }: ArrowProps) => (
+const PreviousArrow = ({
+  activePage,
+  children,
+  dir,
+}: PropsWithChildren<ArrowProps>) => (
   <span css={() => [styles.block, visibilityToMediaQuery(VISIBILITY.ALL)]}>
     <LinkComponent
       pageNumber={activePage - 1}
@@ -93,7 +96,11 @@ const PreviousArrow = ({ activePage, children, dir }: ArrowProps) => (
   </span>
 );
 
-const NextArrow = ({ activePage, children, dir }: ArrowProps) => (
+const NextArrow = ({
+  activePage,
+  children,
+  dir,
+}: PropsWithChildren<ArrowProps>) => (
   <span css={() => [styles.block, visibilityToMediaQuery(VISIBILITY.ALL)]}>
     <LinkComponent
       pageNumber={activePage + 1}
