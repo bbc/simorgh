@@ -20,6 +20,7 @@ import styles from './styles';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import isTenHoursAgo from '#app/lib/utilities/isTenHoursAgo';
 import TimeStampContainer from '#app/legacy/psammead/psammead-timestamp-container/src';
+import SocialEmbedContainer from '#app/legacy/containers/SocialEmbed';
 
 const PostBreakingNewsLabel = ({
   isBreakingNews,
@@ -130,6 +131,7 @@ const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
     image: (props: { blocks: OptimoBlock[] }) => (
       <ImageWithCaption {...props} sizes="(min-width: 1008px) 760px, 100vw" />
     ),
+    social: SocialEmbedContainer,
   };
 
   return (
