@@ -14,7 +14,15 @@ const mockPageData = {
     block: 'Its a block',
   },
   liveTextStream: {
-    content: null,
+    content: {
+      data: {
+        results: [],
+        page: {
+          index: 1,
+          total: 3,
+        },
+      },
+    },
   },
 };
 
