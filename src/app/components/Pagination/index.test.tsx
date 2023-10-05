@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '../../../components/react-testing-library-with-providers';
+import { render } from '../react-testing-library-with-providers';
 import PaginationComponent from '.';
 
 // eslint-disable-next-line react/prop-types
@@ -13,6 +13,9 @@ const renderComponent = ({
       activePage={activePage}
       pageCount={pageCount}
       pageXOfY={pageXOfY}
+      nextPage="Next Page"
+      previousPage="Previous Page"
+      page="Page"
     />,
   );
 
@@ -52,7 +55,7 @@ describe('Topic Pagination', () => {
 
     const currentPageLink = document.querySelector('a[href*="page=2"]');
     expect(currentPageLink).toBeInTheDocument();
-    expect(currentPageLink.getAttribute('aria-current')).toBe('page');
+    expect(currentPageLink?.getAttribute('aria-current')).toBe('page');
   });
 
   it('renders a limited number of page links', async () => {
@@ -65,7 +68,7 @@ describe('Topic Pagination', () => {
     expect(
       document
         .querySelector('[data-testid="topic-pagination-ellipsis"]')
-        .getAttribute('role'),
+        ?.getAttribute('role'),
     ).toBe('separator');
   });
 
