@@ -1,4 +1,20 @@
-import buildBlocks, { TYPE, VISIBILITY } from './buildBlocks';
+import buildBlocks, { VISIBILITY, ResultItem } from './buildBlocks';
+
+type ValidateProps = {
+  output: Array<ResultItem> | null;
+  expectedOutput: Array<number | '.'> | null;
+  device: string;
+  currentPage: number;
+  pageCount: number;
+};
+
+type PageCountType = {
+  currentPage: number;
+  pageCount: number;
+  mobileOutput: null | Array<number | '.'>;
+  tabletOutput: null | Array<number | '.'>;
+  desktopOutput: null | Array<number | '.'>;
+};
 
 const DEVICE = {
   MOBILE: 'MOBILE',
@@ -6,22 +22,22 @@ const DEVICE = {
   DESKTOP: 'DESKTOP',
 };
 
-export const isVisibleOnMobile = block =>
+export const isVisibleOnMobile = (block: ResultItem) =>
   [VISIBILITY.MOBILE_ONLY, VISIBILITY.TABLET_DOWN, VISIBILITY.ALL].includes(
     block.visibility,
   );
 
-export const isVisibleOnTablet = block =>
+export const isVisibleOnTablet = (block: ResultItem) =>
   [VISIBILITY.TABLET_DOWN, VISIBILITY.TABLET_UP, VISIBILITY.ALL].includes(
     block.visibility,
   );
 
-export const isVisibleOnDesktop = block =>
+export const isVisibleOnDesktop = (block: ResultItem) =>
   [VISIBILITY.DESKTOP_ONLY, VISIBILITY.TABLET_UP, VISIBILITY.ALL].includes(
     block.visibility,
   );
 
-const isVisible = (block, device) =>
+const isVisible = (block: ResultItem, device: string) =>
   ({
     [DEVICE.MOBILE]: isVisibleOnMobile,
     [DEVICE.TABLET]: isVisibleOnTablet,
@@ -34,29 +50,35 @@ const validate = ({
   device,
   currentPage,
   pageCount,
-}) => {
-  if (!output && !expectedOutput) return true;
-  const filteredBlocks = output.filter(block => isVisible(block, device));
-  const compareBlock = (i, expected, actual) => {
-    if (expected === '.' && actual[i].type === TYPE.ELLIPSIS) {
-      return true;
-    }
-    if (expected === actual[i].pageNumber) {
-      return true;
-    }
-    throw new Error(
-      `On ${device}, given currentPage ${currentPage} and pageCount ${pageCount}, expected block ${i} to be ${expected} but got ${JSON.stringify(
-        actual[i],
-      )}`,
-    );
-  };
+}: ValidateProps) => {
+  if (output && expectedOutput) {
+    const filteredBlocks = output.filter(block => isVisible(block, device));
+    const compareBlock = (
+      i: number,
+      expected: number | '.',
+      actual: Array<ResultItem>,
+    ) => {
+      if (expected === '.' && actual[i].type === 'ELLIPSIS') {
+        return true;
+      }
+      if (expected === actual[i].pageNumber) {
+        return true;
+      }
+      throw new Error(
+        `On ${device}, given currentPage ${currentPage} and pageCount ${pageCount}, expected block ${i} to be ${expected} but got ${JSON.stringify(
+          actual[i],
+        )}`,
+      );
+    };
 
-  return expectedOutput.every((block, i) =>
-    compareBlock(i, block, filteredBlocks),
-  );
+    return expectedOutput.every((block, i) =>
+      compareBlock(i, block, filteredBlocks),
+    );
+  }
+  return true;
 };
 
-const smallPageCounts = [
+const smallPageCounts: Array<PageCountType> = [
   {
     currentPage: 1,
     pageCount: 1,
@@ -136,7 +158,7 @@ const smallPageCounts = [
   },
 ];
 
-const bigPageCounts = [
+const bigPageCounts: Array<PageCountType> = [
   {
     currentPage: 1,
     pageCount: 100,
