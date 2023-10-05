@@ -9,7 +9,7 @@ export const VISIBILITY = {
   TABLET_UP: 'TABLET_UP',
   DESKTOP_ONLY: 'DESKTOP_ONLY',
 };
-type ResultItem = {
+export type ResultItem = {
   key: number;
   type: 'NUMBER' | 'ELLIPSIS';
   pageNumber: number;
