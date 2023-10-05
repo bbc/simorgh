@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { renderRoutes } from 'react-router-config';
 import pick from 'ramda/src/pick';
 import mergeAll from 'ramda/src/mergeAll';
@@ -37,14 +36,12 @@ export const App = ({ initialData, bbcOrigin }) => {
 
   const routeProps = getRouteProps(pathname);
 
-  const [state] = useState(
-    mapToState({
-      pathname,
-      initialData,
-      routeProps,
-      toggles,
-    }),
-  );
+  const state = mapToState({
+    pathname,
+    initialData,
+    routeProps,
+    toggles,
+  });
 
   return renderRoutes(routes, {
     ...state,
