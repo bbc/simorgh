@@ -17,7 +17,6 @@ interface LiveLabelProps {
 }
 
 const LiveLabel = ({
-  service,
   ariaHidden = false,
   liveText = 'LIVE',
   offScreenText = '',
@@ -32,11 +31,7 @@ const LiveLabel = ({
     // eslint-disable-next-line jsx-a11y/aria-role
     <span role="text" id={id}>
       <div css={styles.liveLabel}>
-        <div
-          // service={service}
-          dir={dir}
-          {...(ariaHidden && { 'aria-hidden': 'true' })}
-        >
+        <div dir={dir} {...(ariaHidden && { 'aria-hidden': 'true' })}>
           {isRtl ? (
             <div css={styles.textRtl}>{`${liveText} `}</div>
           ) : (

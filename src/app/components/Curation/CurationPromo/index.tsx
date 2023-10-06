@@ -4,6 +4,7 @@ import moment from 'moment';
 import path from 'ramda/src/path';
 import formatDuration from '#app/lib/utilities/formatDuration';
 import Promo from '#components/Promo';
+import LiveLabel from '#app/components/LiveLabel';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { RequestContext } from '../../../contexts/RequestContext';
@@ -22,7 +23,7 @@ const CurationPromo = ({
   headingLevel = 2,
 }: CurationPromoProps) => {
   const { isAmp } = useContext(RequestContext);
-  const { translations } = useContext(ServiceContext);
+  const { translations, service } = useContext(ServiceContext);
 
   const audioTranslation = path(['media', 'audio'], translations);
   const videoTranslation = path(['media', 'video'], translations);
@@ -50,6 +51,7 @@ const CurationPromo = ({
         </Promo.MediaIcon>
       </Promo.Image>
       <Promo.Heading as={`h${headingLevel}`}>
+        <LiveLabel service={service} />
         {isMedia ? (
           <Promo.A
             href={link}
