@@ -75,10 +75,28 @@ describe('mostWatched buildParams', () => {
         pageData,
         requestContext,
         serviceContext,
-      );
-      expect(result).toMatchInlineSnapshot(
-        `"s=598285&s2=70&p=pidgin.media.video.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x2=[responsive]&x3=[news-pidgin]&x4=[pcm]&x5=[http%253A%252F%252Flocalhost%252F]&x7=[list-datadriven]&x8=[simorgh]&x9=[De%2520one%2520we%2520dem%2520don%2520look%2520-%2520BBC%2520News%2520Pidgin]&x11=[2019-11-06T15%3A00%3A00Z]&x12=[2030-01-01T17%3A00%3A00Z]"`,
-      );
+      ) as string;
+
+      const params = Object.fromEntries(new URLSearchParams(result));
+
+      expect(params).toEqual({
+        s: '598285',
+        s2: '70',
+        p: 'pidgin.media.video.page',
+        r: '0x0x24x24',
+        re: '1024x768',
+        hl: '00-00-00',
+        lng: 'en-US',
+        x2: '[responsive]',
+        x3: '[news-pidgin]',
+        x4: '[pcm]',
+        x5: '[http%3A%2F%2Flocalhost%2F]',
+        x7: '[list-datadriven]',
+        x8: '[simorgh]',
+        x9: '[De%20one%20we%20dem%20don%20look%20-%20BBC%20News%20Pidgin]',
+        x11: '[2019-11-06T15:00:00Z]',
+        x12: '[2030-01-01T17:00:00Z]',
+      });
     });
   });
 });

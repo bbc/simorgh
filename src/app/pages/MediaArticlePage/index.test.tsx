@@ -56,6 +56,7 @@ const Context = ({
           service={service}
           statusCode={200}
           showAdsBasedOnLocation={showAdsBasedOnLocation}
+          isUK
         >
           <ServiceContextProvider service={service}>
             {children}

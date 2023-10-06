@@ -20,8 +20,11 @@ const { NONE, BANNER, RANKED, COLLECTION } = VISUAL_STYLE;
 const { NORMAL, HIGH, LOW, MAXIMUM, MINIMUM } = VISUAL_PROMINENCE;
 
 const messageBannerCuration = kyrgyzHomePage.data.curations.find(
-  ({ visualStyle, visualProminence }) =>
-    visualStyle === BANNER && visualProminence === NORMAL,
+  ({ visualStyle, visualProminence, summaries }) =>
+    visualStyle === BANNER &&
+    visualProminence === NORMAL &&
+    summaries &&
+    summaries.length > 0,
 );
 
 const components = {
@@ -119,4 +122,16 @@ describe('Curation', () => {
       expect(queryByText(title)).toBeNull();
     },
   );
+
+  describe('Message Banner', () => {
+    it('should not be displayed if there are no promos', () => {
+      render(
+        <Curation visualStyle={BANNER} visualProminence={NORMAL} promos={[]} />,
+      );
+
+      expect(
+        document.querySelector('[data-testid="message-banner-"]'),
+      ).not.toBeInTheDocument();
+    });
+  });
 });

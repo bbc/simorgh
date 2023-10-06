@@ -14,7 +14,15 @@ const mockPageData = {
     block: 'Its a block',
   },
   liveTextStream: {
-    content: null,
+    content: {
+      data: {
+        results: [],
+        page: {
+          index: 1,
+          total: 3,
+        },
+      },
+    },
   },
 };
 
@@ -65,6 +73,7 @@ describe('Live Page', () => {
     expect(screen.getByText('Timestamp test')).toBeInTheDocument();
     expect(screen.getByText('Another post')).toBeInTheDocument();
     expect(screen.getByText('Another post sub headline')).toBeInTheDocument();
+    expect(screen.getByTestId('breaking-news-label')).toBeInTheDocument();
   });
 
   it('creates snapshot of the live page', async () => {

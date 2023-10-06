@@ -1,11 +1,8 @@
 import React, { useContext } from 'react';
 import { shape, arrayOf, string } from 'prop-types';
 import path from 'ramda/src/path';
-import AdContainer from '#containers/Ad';
-import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
-import useToggle from '#hooks/useToggle';
-import { RequestContext } from '#contexts/RequestContext';
 import Curation from '#app/components/Curation';
+import AdContainer from '../../components/Ad';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import LinkedData from '../../components/LinkedData';
@@ -15,7 +12,7 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import TopicImage from './TopicImage';
 import TopicTitle from './TopicTitle';
 import TopicDescription from './TopicDescription';
-import Pagination from './Pagination';
+import Pagination from '../../components/Pagination';
 import getItemList from '../../lib/seoUtils/getItemList';
 
 const TopicPage = ({ pageData }) => {
@@ -30,8 +27,6 @@ const TopicPage = ({ pageData }) => {
     metadata: { atiAnalytics } = {},
   } = pageData;
 
-  const { enabled: adsEnabled } = useToggle('ads');
-  const { showAdsBasedOnLocation } = useContext(RequestContext);
   const topStoriesTitle = path(['topStoriesTitle'], translations);
 
   const { pageXOfY, previousPage, nextPage, page } = {
@@ -52,12 +47,7 @@ const TopicPage = ({ pageData }) => {
 
   return (
     <>
-      {adsEnabled && showAdsBasedOnLocation && (
-        <>
-          <CanonicalAdBootstrapJs />
-          <AdContainer slotType="leaderboard" />
-        </>
-      )}
+      <AdContainer slotType="leaderboard" />
       <main css={styles.main}>
         <div css={styles.inner}>
           <ATIAnalytics atiData={atiAnalytics} />
