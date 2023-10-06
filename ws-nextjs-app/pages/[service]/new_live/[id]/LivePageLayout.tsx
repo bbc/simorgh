@@ -14,6 +14,7 @@ import KeyPoints from './KeyPoints';
 
 import styles from './styles';
 import { StreamResponse, Page } from './Post/types';
+import { SummaryContent, SummaryList } from './KeyPoints/types';
 
 const logger = nodeLogger(__filename);
 
@@ -23,7 +24,7 @@ type ComponentProps = {
     title: string;
     description?: string;
     isLive: boolean;
-    summaryPoints: { content: { model: { blocks: object[] } } | null };
+    summaryPoints: { content: SummaryContent | null };
     liveTextStream: { content: StreamResponse | null };
   };
   pathname?: string;
@@ -85,7 +86,11 @@ const LivePage = ({
         />
         <div css={styles.outerGrid}>
           <div css={styles.firstSection}>
-            <KeyPoints keyPointBlocks={summaryContent?.model.blocks} />
+            <KeyPoints
+              keyPointBlocks={
+                summaryContent?.model.blocks as SummaryList[] | []
+              }
+            />
           </div>
           <div css={styles.secondSection}>
             <Stream streamContent={liveTextStream.content} />

@@ -7,9 +7,13 @@ import LegacyParagraph from '#app/legacy/containers/Paragraph';
 import BulletedList from '#app/legacy/containers/BulletedList';
 import Blocks from '#app/legacy/containers/Blocks';
 import styles from './styles';
+import { SummaryList, ComponentToRenderProps } from './types';
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const KeyPoints = ({ keyPointBlocks }: any) => {
+const KeyPoints = ({
+  keyPointBlocks,
+}: {
+  keyPointBlocks: SummaryList[] | [];
+}) => {
   const {
     palette: { GREY_10 },
   } = useTheme();
@@ -23,14 +27,14 @@ const KeyPoints = ({ keyPointBlocks }: any) => {
   const sectionTitle = 'Summary';
 
   const componentsToRender = () => ({
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    text: (props: any) => (
+    text: (props: ComponentToRenderProps) => (
       <LegacyText
-        {...props}
+        blocks={props.blocks}
         componentsToRender={{
           unorderedList: innerProps => (
             <BulletedList
               {...innerProps}
+              blocks={innerProps.blocks}
               bulletPointShape="square"
               bulletPointColour={GREY_10}
             />
