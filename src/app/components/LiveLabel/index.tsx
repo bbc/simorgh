@@ -1,6 +1,10 @@
-import React, { useContext } from 'react';
+/** @jsx jsx */
+/** @jsxRuntime classic */
+import { useContext } from 'react';
+import { jsx } from '@emotion/react';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import styles from './index.styles';
 
 interface LiveLabelProps {
   service: string;
@@ -27,18 +31,24 @@ const LiveLabel = ({
     // lines 27, 56,66, 31 concerning with id are a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
     // eslint-disable-next-line jsx-a11y/aria-role
     <span role="text" id={id}>
-      <div
-        // service={service}
-        dir={dir}
-        {...(ariaHidden && { 'aria-hidden': 'true' })}
-      >
-        {`${liveText} `}
+      <div css={styles.liveLabel}>
+        <div
+          // service={service}
+          dir={dir}
+          {...(ariaHidden && { 'aria-hidden': 'true' })}
+        >
+          {isRtl ? (
+            <div css={styles.textRtl}>{`${liveText} `}</div>
+          ) : (
+            <div css={styles.textLtr}>{`${liveText} `}</div>
+          )}
+        </div>
+        {offScreenText && (
+          <VisuallyHiddenText lang={lang}>
+            {`${offScreenText}, `}
+          </VisuallyHiddenText>
+        )}
       </div>
-      {offScreenText && (
-        <VisuallyHiddenText lang={lang}>
-          {`${offScreenText}, `}
-        </VisuallyHiddenText>
-      )}
     </span>
   );
 };
