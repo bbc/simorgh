@@ -5,13 +5,12 @@ import { jsx } from '@emotion/react';
 import Heading from '#app/components/Heading';
 import { ServiceContext } from '#contexts/ServiceContext';
 import nodeLogger from '#lib/logger.node';
-import LegacyText from '#app/legacy/containers/Text';
-import Blocks from '#app/legacy/containers/Blocks';
 import Pagination from '#app/components/Pagination';
 import MetadataContainer from '../../../../../src/app/components/Metadata';
 import LinkedDataContainer from '../../../../../src/app/components/LinkedData';
 import Stream from './Stream';
 import Header from './Header';
+import Summary from './Summary';
 
 import styles from './styles';
 import { StreamResponse, Page } from './Post/types';
@@ -67,23 +66,6 @@ const LivePage = ({
   logger.info('nextjs_client_render', {
     url: pathname,
   });
-
-  // Temp solution for rendering Summary
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const Summary = ({ summaryBlocks }: any) => {
-    if (!summaryBlocks) return null;
-    const componentsToRender = { text: LegacyText };
-
-    return (
-      <>
-        <Heading level={2}>Summary</Heading>
-        <Blocks
-          blocks={summaryBlocks}
-          componentsToRender={componentsToRender}
-        />
-      </>
-    );
-  };
 
   return (
     <>
