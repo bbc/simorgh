@@ -1,6 +1,6 @@
 import React from 'react';
-import { render } from '../../../../components/react-testing-library-with-providers';
-import arabic from '../../../../components/ThemeProvider/fontScripts/arabic';
+import { render } from '../react-testing-library-with-providers';
+import arabic from '../ThemeProvider/fontScripts/arabic';
 import LiveLabel from './index';
 
 describe('LiveLabel', () => {
