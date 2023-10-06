@@ -10,7 +10,7 @@ import MetadataContainer from '../../../../../src/app/components/Metadata';
 import LinkedDataContainer from '../../../../../src/app/components/LinkedData';
 import Stream from './Stream';
 import Header from './Header';
-import Summary from './Summary';
+import KeyPoints from './KeyPoints';
 
 import styles from './styles';
 import { StreamResponse, Page } from './Post/types';
@@ -85,7 +85,7 @@ const LivePage = ({
         />
         <div css={styles.outerGrid}>
           <div css={styles.firstSection}>
-            <Summary summaryBlocks={summaryContent?.model.blocks} />
+            <KeyPoints keyPointBlocks={summaryContent?.model.blocks} />
           </div>
           <div css={styles.secondSection}>
             <Stream streamContent={liveTextStream.content} />

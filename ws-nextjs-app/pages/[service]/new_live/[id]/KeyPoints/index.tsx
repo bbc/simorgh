@@ -7,9 +7,9 @@ import LegacyParagraph from '#app/legacy/containers/Paragraph';
 import Blocks from '#app/legacy/containers/Blocks';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const Summary = ({ summaryBlocks }: any) => {
-  if (!summaryBlocks) return null;
-  const listItems = summaryBlocks[0].model.blocks[0].model.blocks;
+const KeyPoints = ({ keyPointBlocks }: any) => {
+  if (!keyPointBlocks) return null;
+  const listItems = keyPointBlocks[0].model.blocks[0].model.blocks;
   const hasSingleKeyPoint = listItems.length === 1;
   const componentsToRender = { text: LegacyText };
   const singleKeyPointComponentsToRender = { paragraph: LegacyParagraph };
@@ -25,7 +25,7 @@ const Summary = ({ summaryBlocks }: any) => {
         />
       ) : (
         <Blocks
-          blocks={summaryBlocks}
+          blocks={keyPointBlocks}
           componentsToRender={componentsToRender}
         />
       )}
@@ -33,4 +33,4 @@ const Summary = ({ summaryBlocks }: any) => {
   );
 };
 
-export default Summary;
+export default KeyPoints;
