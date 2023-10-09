@@ -1,6 +1,6 @@
 /** @jsx jsx */
 /** @jsxRuntime classic */
-import { useContext } from 'react';
+import { PropsWithChildren, useContext } from 'react';
 import { jsx } from '@emotion/react';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -22,7 +22,8 @@ const LiveLabel = ({
   offScreenText = '',
   lang = 'en-GB',
   id = '',
-}: LiveLabelProps) => {
+  children,
+}: PropsWithChildren<LiveLabelProps>) => {
   const { dir } = useContext(ServiceContext);
   const isRtl = dir === 'rtl';
 
@@ -44,6 +45,7 @@ const LiveLabel = ({
           </VisuallyHiddenText>
         )}
       </div>
+      {children}
     </span>
   );
 };
