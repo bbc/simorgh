@@ -1,4 +1,3 @@
-import 'isomorphic-fetch';
 import nodeLogger from '#lib/logger.node';
 import {
   DATA_FETCH_RESPONSE_TIME,

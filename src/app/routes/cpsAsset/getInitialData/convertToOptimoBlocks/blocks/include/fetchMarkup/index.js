@@ -1,5 +1,3 @@
-import 'isomorphic-fetch';
-
 import nodeLogger from '#lib/logger.node';
 import { INCLUDE_ERROR, INCLUDE_FETCH_ERROR } from '#lib/logger.const';
 import { SECONDARY_DATA_TIMEOUT } from '#app/lib/utilities/getFetchTimeouts';
