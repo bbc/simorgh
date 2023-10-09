@@ -7,18 +7,18 @@ import LegacyParagraph from '#app/legacy/containers/Paragraph';
 import BulletedList from '#app/legacy/containers/BulletedList';
 import Blocks from '#app/legacy/containers/Blocks';
 import styles from './styles';
-import { SummaryList, ComponentToRenderProps } from './types';
+import { SummaryListWrapper, ComponentToRenderProps } from './types';
 
 const KeyPoints = ({
   keyPointBlocks,
 }: {
-  keyPointBlocks: SummaryList[] | [];
+  keyPointBlocks: SummaryListWrapper[] | [];
 }) => {
   const {
     palette: { GREY_10 },
   } = useTheme();
 
-  if (!keyPointBlocks) return null;
+  if (!keyPointBlocks || keyPointBlocks.length === 0) return null;
   const listItems = keyPointBlocks[0].model.blocks[0].model.blocks;
   const hasSingleKeyPoint = listItems.length === 1;
   const singleKeyPointComponentsToRender = { paragraph: LegacyParagraph };

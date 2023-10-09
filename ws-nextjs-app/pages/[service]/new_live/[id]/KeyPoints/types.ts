@@ -1,32 +1,23 @@
 import { OptimoBlock } from '#models/types/optimo';
 
-interface OptimoTextBlock {
-  type: 'text';
-  model: {
-    blocks: OptimoBlock[];
-  };
+interface ListItems {
+  type: string;
+  model: { blocks: OptimoBlock[] };
 }
 
-interface OptimoUnorderedListBlock {
-  type: 'unorderedList';
-  model: {
-    blocks: [
-      {
-        model: {
-          blocks: OptimoBlock[];
-        };
-      },
-    ];
-  };
+interface SummaryUnorderedList {
+  type: string;
+  model: { blocks: ListItems[] };
 }
 
-export interface SummaryList extends Omit<OptimoTextBlock, 'model'> {
-  model: { blocks: [OptimoUnorderedListBlock] };
+export interface SummaryListWrapper {
+  type: string;
+  model: { blocks: SummaryUnorderedList[] };
 }
 
 export interface SummaryContent {
   model: {
-    blocks: SummaryList[] | [];
+    blocks: SummaryListWrapper[] | [];
   };
 }
 
