@@ -14,6 +14,7 @@ describe('App', () => {
   let rerender;
   const timeOnServer = 1582534951721;
   const initialData = {
+    path: 'pathnameOne',
     pageData: 'Some initial data',
     timeOnServer,
     showAdsBasedOnLocation: false,
@@ -21,11 +22,10 @@ describe('App', () => {
       mockToggle: { enabled: true },
     },
   };
-  const error = 'Error!';
+
   const match = {
     params: { service: 'ukchina', amp: false, variant: '/simp' },
   };
-  const history = { action: 'POP' };
 
   const route = {
     getInitialData: jest.fn().mockResolvedValue({}),
@@ -45,12 +45,7 @@ describe('App', () => {
 
   beforeEach(() => {
     ({ rerender, container } = render(
-      <App
-        location={{ pathname: 'pathnameOne' }}
-        initialData={initialData}
-        bbcOrigin="https://www.bbc.co.uk"
-        history={history}
-      />,
+      <App initialData={initialData} bbcOrigin="https://www.bbc.co.uk" />,
     ));
   });
 
@@ -67,13 +62,11 @@ describe('App', () => {
       id: undefined,
       isAmp: false,
       isApp: false,
-      loading: false,
       pageType: 'article',
       service: 'ukchina',
       status: undefined,
       pathname: 'pathnameOne',
       showAdsBasedOnLocation: false,
-      previousPath: null,
       variant: 'simp',
       timeOnServer: initialData.timeOnServer,
     });
@@ -94,130 +87,15 @@ describe('App', () => {
         await act(async () => {
           await rerender(
             <App
-              location={{ pathname: 'pathnameOne' }}
+              location="pathnameOne"
               initialData={initialData}
               bbcOrigin="https://www.bbc.co.uk"
-              history={{ action: 'PUSH' }}
             />,
           );
         });
 
         expect(route.getInitialData).not.toHaveBeenCalled();
         expect(getToggles).not.toHaveBeenCalled();
-      });
-    });
-
-    describe('different location', () => {
-      beforeEach(() => {
-        // clear `route.getInitialData` and `reactRouterConfig.renderRoutes` mocks
-        jest.clearAllMocks();
-      });
-
-      describe('rejected getInitialData', () => {
-        it('should set state to the error', async () => {
-          route.getInitialData.mockResolvedValue({
-            pageData: null,
-            status: null,
-            error,
-            timeOnServer: null,
-          });
-
-          getToggles.mockResolvedValue(updatedToggles);
-
-          await act(async () => {
-            await rerender(
-              <App
-                location={{ pathname: 'pathnameTwo' }}
-                initialData={initialData}
-                bbcOrigin="https://www.bbc.co.uk"
-                history={{ action: 'PUSH' }}
-              />,
-            );
-          });
-
-          expect(reactRouterConfig.renderRoutes).toHaveBeenNthCalledWith(
-            2,
-            routes,
-            {
-              assetUri: undefined,
-              bbcOrigin: 'https://www.bbc.co.uk',
-              toggles: updatedToggles,
-              pageData: null,
-              status: null,
-              error: 'Error!',
-              errorCode: undefined,
-              id: undefined,
-              isAmp: false,
-              isApp: false,
-              loading: false,
-              pageType: 'article',
-              service: 'ukchina',
-              showAdsBasedOnLocation: false,
-              pathname: 'pathnameTwo',
-              previousPath: 'pathnameOne',
-              variant: 'simp',
-              timeOnServer: null,
-            },
-          );
-        });
-      });
-
-      describe('successful fetch of route, match, and initial props', () => {
-        it('should call set state with new data', async () => {
-          const data = {
-            pageData: 'Really cool data',
-            status: 200,
-          };
-
-          route.getInitialData.mockResolvedValue(data);
-
-          await act(async () => {
-            await rerender(
-              <App
-                location={{ pathname: 'pathnameTwo' }}
-                initialData={initialData}
-                bbcOrigin="https://www.bbc.co.uk"
-                history={{ action: 'PUSH' }}
-              />,
-            );
-          });
-
-          expect(route.getInitialData).toHaveBeenCalledWith({
-            path: 'pathnameTwo',
-            service: 'ukchina',
-            variant: 'simp',
-            pageType: 'article',
-            toggles: {
-              mockToggle: { enabled: false },
-            },
-            isAmp: false,
-          });
-
-          expect(reactRouterConfig.renderRoutes).toHaveBeenNthCalledWith(
-            2,
-            routes,
-            {
-              assetUri: undefined,
-              bbcOrigin: 'https://www.bbc.co.uk',
-              pageData: data.pageData,
-              toggles: updatedToggles,
-              status: data.status,
-              error: undefined,
-              errorCode: undefined,
-              id: undefined,
-              isAmp: false,
-              isApp: false,
-              loading: false,
-              pageType: 'article',
-              service: 'ukchina',
-              pathname: 'pathnameTwo',
-              previousPath: 'pathnameOne',
-              showAdsBasedOnLocation: false,
-              variant: 'simp',
-              timeOnServer: undefined,
-            },
-          );
-        });
       });
     });
   });
