@@ -1,16 +1,9 @@
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_GHOST,
-  C_POSTBOX_30,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
 import noAscendersOrDescenders from '../../../components/ThemeProvider/fontScripts/noAscOrDesc';
-import brandSVG from '../../chameleonLogos/zhongwen';
 import '#psammead/moment-timezone-include/tz/GMT';
 import 'moment/locale/zh-cn';
 import withContext from '../../../contexts/utils/withContext';
 import { ZhongwenConfig } from '../../../models/types/serviceConfig';
-import { Services } from '../../../models/types/global';
+import { Direction, Services } from '../../../models/types/global';
 
 const baseServiceConfig = {
   articleAuthor: `https://www.facebook.com/bbcworldservice/`,
@@ -24,12 +17,11 @@ const baseServiceConfig = {
   serviceLocalizedName: '中文',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/zhongwen.png',
   defaultImageAltText: 'BBC News 中文',
-  dir: `ltr`,
+  dir: 'ltr' as Direction,
   datetimeLocale: `zh-cn`,
   service: 'zhongwen' as Services,
   serviceName: 'News 中文',
   languageName: 'Chinese',
-  themeColor: `${C_POSTBOX}`,
   twitterCreator: '@bbcchinese',
   twitterSite: '@bbcchinese',
   isTrustProjectParticipant: true,
@@ -42,7 +34,6 @@ const baseServiceConfig = {
   recommendations: {
     hasStoryRecommendations: false,
   },
-  brandSVG,
   podcastPromo: {
     title: 'Podcast',
     brandTitle: 'BBC 時事一周 Newsweek (Cantonese)',
@@ -56,13 +47,6 @@ const baseServiceConfig = {
       text: '分集',
       href: 'https://www.bbc.com/zhongwen/trad/podcasts/p02pc9xp',
     },
-  },
-  theming: {
-    brandBackgroundColour: `${C_POSTBOX}`,
-    brandLogoColour: `${C_WHITE}`,
-    brandForegroundColour: `${C_GHOST}`,
-    brandHighlightColour: `${C_WHITE}`,
-    brandBorderColour: `${C_POSTBOX_30}`,
   },
   showAdPlaceholder: true,
   showRelatedTopics: true,
@@ -116,8 +100,8 @@ export const service: ZhongwenConfig = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-          text: 'AdChoices / Do Not Sell My Info',
+          href: '#',
+          text: 'Do not share or sell my info',
           lang: 'en-GB',
         },
       ],
@@ -161,7 +145,7 @@ export const service: ZhongwenConfig = {
       },
       {
         title: '视频材料',
-        url: '/zhongwen/simp/media/video',
+        url: '/zhongwen/simp/topics/ck5rznle6edt',
       },
       {
         title: 'BBC英伦网',
@@ -241,7 +225,7 @@ export const service: ZhongwenConfig = {
           },
           accept: '可以',
           reject: '了解更新内容',
-          rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
         },
         cookie: {
           amp: {
@@ -254,7 +238,7 @@ export const service: ZhongwenConfig = {
                 linkText: 'cookies',
                 last: '的科技，收集浏览数据以便给您带来最佳上网体验，以及个人化内容和广告配置。请告知是否可以。',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               manage: '管理我的设置',
             },
@@ -270,7 +254,7 @@ export const service: ZhongwenConfig = {
                   '为使网页运作正常，我们或在未争得许可时收集有限必要资讯。',
                 para4: {
                   text: '阅读更多我们在您的浏览器上存储必需数据，以便页面正常运作的相关资讯',
-                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
                 },
                 para5: '我们使用本地存储，将选项存储于您的浏览工具上。',
                 heading3: '可选项数据收集',
@@ -302,13 +286,13 @@ export const service: ZhongwenConfig = {
                 linkText: 'cookies',
                 last: '以便给您最好的网上体验。请告知您是否认同使cookies。',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
             },
             accept: '可以，我同意',
             reject: '不可，带我去设置页面',
             rejectUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+              'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           },
         },
       },
@@ -330,6 +314,7 @@ export const service: ZhongwenConfig = {
         duration: '节目全长',
         recentEpisodes: '存档节目',
         podcastExternalLinks: 'This podcast is also available on',
+        download: '下载本集节目',
       },
       socialEmbed: {
         caption: {
@@ -350,7 +335,7 @@ export const service: ZhongwenConfig = {
         },
         consentBanner: {
           heading: `允许[social_media_site]内容`,
-          body: `此文包含[social_media_site}提供的内容。由于这些内容会使用曲奇或小甜饼等科技，我们在加载任何内容前会寻求您的认可。  您可能在给与许可前愿意阅读[social_media_site][link]小甜饼政策[/link]和[link]隐私政策[/link]。 希望阅读上述内容，请点击“接受并继续”。`,
+          body: `此文包含[social_media_site]提供的内容。由于这些内容会使用曲奇或小甜饼等科技，我们在加载任何内容前会寻求您的认可。  您可能在给与许可前愿意阅读[social_media_site][link]小甜饼政策[/link]和[link]隐私政策[/link]。 希望阅读上述内容，请点击“接受并继续”。`,
         },
       },
       include: {
@@ -360,6 +345,7 @@ export const service: ZhongwenConfig = {
       },
       topStoriesTitle: '头条新闻',
       featuresAnalysisTitle: '特别推荐',
+      latestMediaTitle: '最新',
     },
   },
   trad: {
@@ -407,8 +393,8 @@ export const service: ZhongwenConfig = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-          text: 'AdChoices / Do Not Sell My Info',
+          href: '#',
+          text: 'Do not share or sell my info',
           lang: 'en-GB',
         },
       ],
@@ -452,7 +438,7 @@ export const service: ZhongwenConfig = {
       },
       {
         title: '視頻材料',
-        url: '/zhongwen/trad/media/video',
+        url: '/zhongwen/trad/topics/cgvl47l38e1t',
       },
       {
         title: 'BBC英倫網',
@@ -532,7 +518,7 @@ export const service: ZhongwenConfig = {
           },
           accept: '可以',
           reject: '了解更新內容',
-          rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
         },
         cookie: {
           amp: {
@@ -545,7 +531,7 @@ export const service: ZhongwenConfig = {
                 linkText: 'cookies',
                 last: '的科技，收集瀏覽數據以便給您帶來最佳上網體驗，以及個人化內容和廣告配置。請告知是否可以。',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               manage: '管理我的設置',
             },
@@ -561,7 +547,7 @@ export const service: ZhongwenConfig = {
                   '為使網頁運作正常，我們或在未爭得許可時收集有限必要資訊。',
                 para4: {
                   text: '閲讀更多我們在您的瀏覽器上存儲必需數據，以便頁面正常運作的相關資訊',
-                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
                 },
                 para5: '我們使用本地存儲，將選項存儲於您的瀏覽工具上。',
                 heading3: '可選項數據收集',
@@ -593,13 +579,13 @@ export const service: ZhongwenConfig = {
                 linkText: 'cookies',
                 last: '的科技，收集瀏覽數據以便給您帶來最佳上網體驗，以及個人化內容和廣告配置。請告知是否可以。',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
             },
             accept: '可以，我同意',
             reject: '不可，帶我去設置頁面',
             rejectUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+              'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           },
         },
       },
@@ -621,6 +607,7 @@ export const service: ZhongwenConfig = {
         duration: '節目全長',
         recentEpisodes: '存档节目',
         podcastExternalLinks: 'This podcast is also available on',
+        download: '下載本集節目',
       },
       socialEmbed: {
         caption: {
@@ -641,7 +628,7 @@ export const service: ZhongwenConfig = {
         },
         consentBanner: {
           heading: `允許[social_media_site]内容`,
-          body: `此文包含[social_media_site}提供的内容。由於這些内容會使用曲奇或小甜餅等科技，我們在加載任何内容前會尋求您的認可。  您可能在給予許可前希望閲讀[social_media_site][link]曲奇政策[/link]和[link]隱私政策[/link]。希望閲讀上述内容，請點擊“接受並繼續”。`,
+          body: `此文包含[social_media_site]提供的内容。由於這些内容會使用曲奇或小甜餅等科技，我們在加載任何内容前會尋求您的認可。  您可能在給予許可前希望閲讀[social_media_site][link]曲奇政策[/link]和[link]隱私政策[/link]。希望閲讀上述内容，請點擊“接受並繼續”。`,
         },
       },
       include: {
@@ -651,6 +638,7 @@ export const service: ZhongwenConfig = {
       },
       topStoriesTitle: '頭條新聞',
       featuresAnalysisTitle: '特別推薦',
+      latestMediaTitle: '最新',
     },
   },
 };

@@ -1,13 +1,5 @@
 import React, { useContext } from 'react';
-import {
-  shape,
-  bool,
-  oneOf,
-  oneOfType,
-  string,
-  number,
-  elementType,
-} from 'prop-types';
+import { shape, bool, oneOf, oneOfType, string, number } from 'prop-types';
 import styled from '@emotion/styled';
 import StoryPromo, {
   Headline,
@@ -32,14 +24,14 @@ import {
 } from '#lib/utilities/getStoryPromoInfo';
 import loggerNode from '#lib/logger.node';
 import { MEDIA_MISSING } from '#lib/logger.const';
-import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
+import { MEDIA_ASSET_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
 import PromoTimestamp from '#components/Promo/timestamp';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import LinkContents from './LinkContents';
 import MediaIndicatorContainer from './MediaIndicator';
 import IndexAlsosContainer from './IndexAlsos';
 import { getHeadingTagOverride, buildUniquePromoId } from './utilities';
-import ImageWithPlaceholder from '../ImageWithPlaceholder';
+import Image from '../../../components/Image';
 import useCombinedClickTrackerHandler from './useCombinedClickTrackerHandler';
 
 const logger = loggerNode(__filename);
@@ -53,19 +45,17 @@ const SingleColumnStoryPromo = styled(StoryPromo)`
 `;
 
 const StoryPromoImage = ({
+  isAmp,
   useLargeImages,
   imageValues,
   lazyLoad,
-  imageComponent,
+  pageType,
 }) => {
   if (!imageValues) {
     const landscapeRatio = (9 / 16) * 100;
     return <ImagePlaceholder ratio={landscapeRatio} />;
   }
-
-  const { height, width, path } = imageValues;
-
-  const ratio = (height / width) * 100;
+  const { height, width, path, altText, copyrightHolder } = imageValues;
   const originCode = getOriginCode(path);
   const locator = getLocator(path);
   const imageResolutions = [70, 95, 144, 183, 240, 320, 660];
@@ -76,9 +66,12 @@ const StoryPromoImage = ({
       originalImageWidth: width,
       imageResolutions,
     });
-  const sizes = useLargeImages
-    ? '(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px'
-    : '(max-width: 1008px) 33vw, 321px';
+  let sizes = useLargeImages
+    ? '(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw'
+    : '(min-width: 1020px) 232px, calc(31.86vw - 7px)';
+  if (pageType === STORY_PAGE) {
+    sizes = '(min-width: 1080px) 315px, 29.74vw';
+  }
   const DEFAULT_IMAGE_RES = 660;
   const src = buildIChefURL({
     originCode,
@@ -87,32 +80,33 @@ const StoryPromoImage = ({
   });
 
   return (
-    <ImageWithPlaceholder
-      alt={imageValues.altText}
-      ratio={ratio}
+    <Image
+      isAmp={isAmp}
       src={src}
-      fallback={false}
-      {...imageValues}
-      lazyLoad={lazyLoad}
-      copyright={imageValues.copyrightHolder}
-      srcset={primarySrcset}
-      fallbackSrcset={fallbackSrcset}
-      primaryMimeType={primaryMimeType}
-      fallbackMimeType={fallbackMimeType}
+      alt={altText}
+      srcSet={primarySrcset}
+      mediaType={primaryMimeType}
+      fallbackSrcSet={fallbackSrcset}
+      fallbackMediaType={fallbackMimeType}
       sizes={sizes}
-      imageComponent={imageComponent}
+      width={width}
+      height={height}
+      lazyLoad={lazyLoad}
+      attribution={copyrightHolder}
     />
   );
 };
 
 StoryPromoImage.propTypes = {
+  isAmp: bool,
   useLargeImages: bool.isRequired,
   lazyLoad: bool,
   imageValues: storyItem.indexImage,
-  imageComponent: elementType,
+  pageType: string,
 };
 
 StoryPromoImage.defaultProps = {
+  isAmp: false,
   lazyLoad: false,
   imageValues: shape({
     path: '',
@@ -120,7 +114,7 @@ StoryPromoImage.defaultProps = {
     height: '',
     width: '',
   }),
-  imageComponent: undefined,
+  pageType: '',
 };
 
 const StoryPromoContainer = ({
@@ -135,11 +129,10 @@ const StoryPromoContainer = ({
   serviceDatetimeLocale,
   eventTrackingData,
   labelId,
-  imageComponent,
   sectionType,
 }) => {
   const { script, service, translations } = useContext(ServiceContext);
-  const { pageType } = useContext(RequestContext);
+  const { isAmp, pageType } = useContext(RequestContext);
   const handleClickTracking = useCombinedClickTrackerHandler(eventTrackingData);
 
   const linkId = buildUniquePromoId({
@@ -234,6 +227,7 @@ const StoryPromoContainer = ({
           onClick={eventTrackingData ? handleClickTracking : null}
           // Aria-labelledby a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
           aria-labelledby={linkId}
+          className="focusIndicatorDisplayInlineBlock"
         >
           {isLive ? (
             <LiveLabel
@@ -278,14 +272,6 @@ const StoryPromoContainer = ({
   );
 
   const imageValues = pathOr(null, ['indexImage'], item);
-  const Image = (
-    <StoryPromoImage
-      useLargeImages={useLargeImages}
-      lazyLoad={lazyLoadImage}
-      imageValues={imageValues}
-      imageComponent={imageComponent}
-    />
-  );
 
   const MediaIndicator = (
     <MediaIndicatorContainer
@@ -304,7 +290,15 @@ const StoryPromoContainer = ({
   return (
     <StoryPromoComponent
       data-e2e="story-promo"
-      image={Image}
+      image={
+        <StoryPromoImage
+          isAmp={isAmp}
+          useLargeImages={useLargeImages}
+          lazyLoad={lazyLoadImage}
+          imageValues={imageValues}
+          pageType={pageType}
+        />
+      }
       info={Info}
       mediaIndicator={MediaIndicator}
       promoType={promoType}
@@ -335,7 +329,6 @@ StoryPromoContainer.propTypes = {
   }),
   labelId: string,
   index: number,
-  imageComponent: elementType,
   sectionType: string,
 };
 
@@ -350,7 +343,6 @@ StoryPromoContainer.defaultProps = {
   eventTrackingData: null,
   labelId: '',
   index: 0,
-  imageComponent: undefined,
   sectionType: '',
 };
 

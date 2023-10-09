@@ -1,10 +1,8 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import loggerMock from '#testHelpers/loggerMock';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { INCLUDE_RENDERED } from '#lib/logger.const';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
+import { render } from '../../../components/react-testing-library-with-providers';
 import IncludeContainer from '.';
 import * as idt2Amp from './amp/Idt2Amp';
 import * as vjAmp from './amp/VjAmp';
@@ -49,7 +47,6 @@ const includeProps = {
   type: 'idt2',
   isAmpSupported: true,
   index: 1,
-  href: '/idt2/cb1a5166-cfbb-4520-bdac-6159299acff6',
 };
 
 // eslint-disable-next-line react/prop-types
@@ -79,7 +76,6 @@ const IncludeContainerWithMockContext = ({ toggleState, isAmp, ...props }) => (
 describe('IncludeContainer', () => {
   afterEach(() => {
     jest.clearAllMocks();
-    loggerMock.info.mockClear();
   });
 
   it('should not render include for a Canonical page with toggles disabled', async () => {
@@ -96,7 +92,6 @@ describe('IncludeContainer', () => {
     );
     expect(container).toMatchSnapshot();
     expect(mockCanonical).not.toHaveBeenCalled();
-    expect(loggerMock.info).not.toHaveBeenCalled();
   });
 
   it('should render include for a Canonical page with toggles enabled', async () => {
@@ -114,11 +109,6 @@ describe('IncludeContainer', () => {
       />,
     );
 
-    expect(loggerMock.info).toHaveBeenCalledTimes(1);
-    expect(loggerMock.info).toHaveBeenCalledWith(INCLUDE_RENDERED, {
-      type: 'vj',
-      includeUrl: '/include/vjamericas/176-eclipse-lookup/mundo/app',
-    });
     expect(container).toMatchSnapshot();
     expect(mockCanonical).toHaveBeenCalledTimes(1);
   });
@@ -137,11 +127,6 @@ describe('IncludeContainer', () => {
     expect(container).toMatchSnapshot();
     expect(mockIdt2Amp).toHaveBeenCalledTimes(1);
     expect(mockIdt2Amp).toHaveBeenCalledWith(includeProps, {});
-    expect(loggerMock.info).toHaveBeenCalledTimes(1);
-    expect(loggerMock.info).toHaveBeenCalledWith(INCLUDE_RENDERED, {
-      type: 'idt2',
-      includeUrl: '/idt2/cb1a5166-cfbb-4520-bdac-6159299acff6',
-    });
   });
 
   it('should not render include for an Amp page with toggles disabled', async () => {
@@ -158,7 +143,6 @@ describe('IncludeContainer', () => {
     );
     expect(container).toMatchSnapshot();
     expect(mockIdt2Amp).not.toHaveBeenCalled();
-    expect(loggerMock.info).not.toHaveBeenCalled();
   });
 
   it('should render a VJ include on an Amp page with toggles enabled', () => {
@@ -188,12 +172,6 @@ describe('IncludeContainer', () => {
     expect(container).toMatchSnapshot();
     expect(mockVjAmp).toHaveBeenCalledTimes(1);
     expect(mockVjAmp).toHaveBeenCalledWith(vjProps, {});
-    expect(loggerMock.info).toHaveBeenCalledTimes(1);
-    expect(loggerMock.info).toHaveBeenCalledWith(INCLUDE_RENDERED, {
-      type: 'vj',
-      includeUrl:
-        '/include/newsspec/21841-green-diet/gahuza/app?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png',
-    });
   });
 
   it('should render a fallback for VJs on an Amp page when isAmpSupported is set to false', () => {

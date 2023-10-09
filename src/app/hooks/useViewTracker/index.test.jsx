@@ -87,7 +87,7 @@ const defaultToggles = {
   },
 };
 
-const wrapper = ({ pageData, children, toggles = defaultToggles }) => (
+const wrapper = ({ pageData, atiData, children, toggles = defaultToggles }) => (
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.com"
     pageType={STORY_PAGE}
@@ -97,7 +97,7 @@ const wrapper = ({ pageData, children, toggles = defaultToggles }) => (
   >
     <ServiceContextProvider service="pidgin">
       <ToggleContextProvider toggles={toggles}>
-        <EventTrackingContextProvider pageData={pageData}>
+        <EventTrackingContextProvider data={pageData} atiData={atiData}>
           {children}
         </EventTrackingContextProvider>
       </ToggleContextProvider>
@@ -200,10 +200,15 @@ describe('Expected use', () => {
   });
 
   it('should send event to ATI and return correct tracking url when element is 50% or more in view for more than 1 second', async () => {
+    const {
+      metadata: { atiAnalytics },
+    } = fixtureData;
+
     const { result } = renderHook(() => useViewTracker(trackingData), {
       wrapper,
       initialProps: {
         pageData: fixtureData,
+        atiData: atiAnalytics,
       },
     });
     const element = document.createElement('div');
@@ -248,10 +253,15 @@ describe('Expected use', () => {
   });
 
   it('should only send one view event when mutiple elements are viewed', async () => {
+    const {
+      metadata: { atiAnalytics },
+    } = fixtureData;
+
     const { result } = renderHook(() => useViewTracker(trackingData), {
       wrapper,
       initialProps: {
         pageData: fixtureData,
+        atiData: atiAnalytics,
       },
     });
     const elementA = document.createElement('div');
@@ -282,10 +292,15 @@ describe('Expected use', () => {
   });
 
   it('should send one view event for multiple observed elements when at least one of them is in view', async () => {
+    const {
+      metadata: { atiAnalytics },
+    } = fixtureData;
+
     const { result } = renderHook(() => useViewTracker(trackingData), {
       wrapper,
       initialProps: {
         pageData: fixtureData,
+        atiData: atiAnalytics,
       },
     });
     const element = document.createElement('div');
@@ -309,16 +324,22 @@ describe('Expected use', () => {
   });
 
   it('should send multiple view events for multiple hook instances', async () => {
+    const {
+      metadata: { atiAnalytics },
+    } = fixtureData;
+
     const { result: resultA } = renderHook(() => useViewTracker(trackingData), {
       wrapper,
       initialProps: {
         pageData: fixtureData,
+        atiData: atiAnalytics,
       },
     });
     const { result: resultB } = renderHook(() => useViewTracker(trackingData), {
       wrapper,
       initialProps: {
         pageData: fixtureData,
+        atiData: atiAnalytics,
       },
     });
     const elementA = document.createElement('div');
@@ -349,10 +370,15 @@ describe('Expected use', () => {
   });
 
   it('should disconnect IntersectionObserver after event is sent', async () => {
+    const {
+      metadata: { atiAnalytics },
+    } = fixtureData;
+
     const { result } = renderHook(() => useViewTracker(trackingData), {
       wrapper,
       initialProps: {
         pageData: fixtureData,
+        atiData: atiAnalytics,
       },
     });
 
@@ -447,10 +473,15 @@ describe('Expected use', () => {
   });
 
   it('should not send event to ATI more than once when element is scrolled in and out of view', async () => {
+    const {
+      metadata: { atiAnalytics },
+    } = fixtureData;
+
     const { result } = renderHook(() => useViewTracker(trackingData), {
       wrapper,
       initialProps: {
         pageData: fixtureData,
+        atiData: atiAnalytics,
       },
     });
     const element = document.createElement('div');
@@ -498,12 +529,17 @@ describe('Expected use', () => {
   });
 
   it('should be able to override the campaignID that is sent to ATI', async () => {
+    const {
+      metadata: { atiAnalytics },
+    } = fixtureData;
+
     const { result } = renderHook(
       () => useViewTracker({ ...trackingData, campaignID: 'custom-campaign' }),
       {
         wrapper,
         initialProps: {
           pageData: fixtureData,
+          atiData: atiAnalytics,
         },
       },
     );
@@ -546,12 +582,17 @@ describe('Expected use', () => {
       },
     };
 
+    const {
+      metadata: { atiAnalytics },
+    } = fixtureData;
+
     const { result } = renderHook(
       () => useViewTracker({ ...trackingData, ...mockOptimizely }),
       {
         wrapper,
         initialProps: {
           pageData: fixtureData,
+          atiData: atiAnalytics,
         },
       },
     );

@@ -226,6 +226,10 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
   text-decoration: underline;
 }
 
+.emotion-12 button:focus-visible {
+  outline: 0.1875rem solid #000000;
+}
+
 @media (min-width: 25rem) {
   .emotion-12 {
     width: 17.3125rem;
@@ -257,6 +261,7 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
         >
           We use 
           <a
+            class="focusIndicatorReducedWidth"
             href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/"
           >
             cookies
@@ -309,7 +314,7 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
 }
 
 .emotion-2 {
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   background-color: #323232;
@@ -525,6 +530,10 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
   text-decoration: underline;
 }
 
+.emotion-12 button:focus-visible {
+  outline: 0.1875rem solid #000000;
+}
+
 @media (min-width: 25rem) {
   .emotion-12 {
     width: 17.3125rem;
@@ -556,7 +565,8 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
         >
           نستخدم 
           <a
-            href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/"
+            class="focusIndicatorReducedWidth"
+            href="https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/"
           >
             ملفات ارتباط
           </a>
@@ -585,7 +595,7 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
             <span>
               <a
                 data-cookie-banner="reject"
-                href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
               >
                 كلا، أعدني إلى الإعدادات
               </a>
@@ -824,6 +834,10 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
   text-decoration: underline;
 }
 
+.emotion-12 button:focus-visible {
+  outline: 0.1875rem solid #000000;
+}
+
 @media (min-width: 25rem) {
   .emotion-12 {
     width: 17.3125rem;
@@ -865,6 +879,7 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
             dir="ltr"
           >
             <button
+              data-terms-banner="accept"
               type="button"
             >
               OK
@@ -876,6 +891,7 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
           >
             <span>
               <a
+                data-terms-banner="reject"
                 href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
               >
                 Find out what's changed
@@ -899,7 +915,7 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
 }
 
 .emotion-2 {
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   background-color: #323232;
@@ -1115,6 +1131,10 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
   text-decoration: underline;
 }
 
+.emotion-12 button:focus-visible {
+  outline: 0.1875rem solid #000000;
+}
+
 @media (min-width: 25rem) {
   .emotion-12 {
     width: 17.3125rem;
@@ -1156,6 +1176,7 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
             dir="rtl"
           >
             <button
+              data-terms-banner="accept"
               type="button"
             >
               موافق
@@ -1167,7 +1188,8 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
           >
             <span>
               <a
-                href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+                data-terms-banner="reject"
+                href="https://www.bbc.com/usingthebbc/your-data-matters"
               >
                 إطلع على التغييرات
               </a>

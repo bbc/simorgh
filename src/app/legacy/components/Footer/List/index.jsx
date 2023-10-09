@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { string, arrayOf, shape, element } from 'prop-types';
-import { C_SHADOW } from '#psammead/psammead-styles/src/colours';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
@@ -28,7 +27,7 @@ const getRowCount = (itemCount, columns, trustProjectLink) =>
     : Math.ceil(itemCount / columns);
 
 const StyledList = styled.ul`
-  border-bottom: 0.0625rem solid ${C_SHADOW};
+  border-bottom: 0.0625rem solid ${props => props.theme.palette.SHADOW};
   column-count: 4;
   margin: 0;
   list-style-type: none;
@@ -92,9 +91,10 @@ const StyledList = styled.ul`
   }
 
   ${({ trustProjectLink }) =>
-    trustProjectLink &&
-    `> li:first-of-type {
-    border-bottom: 0.0625rem solid ${C_SHADOW};
+    props =>
+      trustProjectLink &&
+      `> li:first-of-type {
+    border-bottom: 0.0625rem solid ${props.theme.palette.SHADOW};
     padding: ${GEL_SPACING} 0;
     margin-bottom: ${GEL_SPACING};
     grid-column: 1/-1;

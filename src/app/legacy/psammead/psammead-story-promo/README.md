@@ -125,7 +125,7 @@ import StoryPromo, {
 import MediaIndicator from '#psammead/psammead-media-indicator/src';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import LiveLabel from '#psammead/psammead-live-label/src';
-import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
+import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 
 const Image = <img src="https://foobar.com/image.jpg" />;
 

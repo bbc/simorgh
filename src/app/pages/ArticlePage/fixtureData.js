@@ -1,24 +1,47 @@
 import {
   blockContainingText,
+  bylineBlock,
   singleTextBlock,
   textBlock,
 } from '#models/blocks';
+
+const blocksWithHeadlineAndText = blockValues => {
+  const [headlineText, paragraphText, ...additional] = blockValues;
+
+  return [
+    blockContainingText('headline', headlineText, 1),
+    singleTextBlock(paragraphText, 2),
+    ...additional,
+  ];
+};
+
+const blocksWithHeadlineTexAndByline = blockValues => {
+  const [headlineText, paragraphText, twitterHandle] = blockValues;
+
+  return [
+    blockContainingText('headline', headlineText, 1),
+    bylineBlock(twitterHandle, 2),
+    singleTextBlock(paragraphText, 3),
+  ];
+};
 
 const articleDataBuilder = (
   id,
   createdBy,
   passportLanguage,
   home,
-  headlineText,
-  paragraphText,
+  blockValues,
   seoHeadline,
   promoHeadline,
   summary,
   things,
   allowAdvertising = false,
+  articleBlocksPopulator = blocksWithHeadlineAndText,
+  atiAnalytics = {},
 ) => ({
   metadata: {
     id: `urn:bbc:ares::article:${id}`,
+    atiAnalytics,
     locators: {
       optimoUrn: `urn:bbc:optimo:asset:${id}`,
     },
@@ -42,10 +65,7 @@ const articleDataBuilder = (
   },
   content: {
     model: {
-      blocks: [
-        blockContainingText('headline', headlineText, 1),
-        singleTextBlock(paragraphText, 2),
-      ],
+      blocks: articleBlocksPopulator(blockValues),
     },
   },
   promo: {
@@ -114,12 +134,62 @@ export const articleDataNews = articleDataBuilder(
   'News',
   'en-gb',
   'http://www.bbc.co.uk/ontologies/passport/home/News',
-  'Article Headline',
-  'A paragraph.',
+  [
+    'Article Headline',
+    'A paragraph.',
+    {
+      id: 'ef3a6bbd',
+      type: 'wsoj',
+      model: {
+        type: 'recommendations',
+      },
+      position: [9],
+    },
+    {
+      id: 'c9043147',
+      type: 'podcastPromo',
+      model: {
+        type: 'podcastPromo',
+      },
+      position: [9],
+    },
+    {
+      id: '044a8578',
+      type: 'oEmbed',
+      model: {
+        oembed: {
+          version: '1.0',
+          provider_name: 'riddle',
+          provider_url: 'https://www.riddle.com',
+          url: 'https://www.riddle.com/view/SAVstNdh',
+          html: '<div class="riddle2-wrapper" data-rid-id="SAVstNdh" data-auto-scroll="true" data-is-fixed-height-enabled="false" data-bg="#fff" data-fg="#00205b" style="margin:0 auto; max-width:100%; width:640px;" ><script src="https://www.riddle.com/embed/build-embedjs/embedV2.js"></script><iframe src="https://www.riddle.com/embed/a/SAVstNdh?lazyImages=true&staticHeight=false" allow="autoplay" referrerpolicy="strict-origin"><section data-block="SingleChoice"><h2>How silly is Abby?</h2><p>&lt;p&gt;Babby&lt;/p&gt;</p><ul><li>Extremely silly</li><li>Not silly at all</li><li>Not very silly</li><li>Very silly</li></ul></section><section data-block="SingleChoice"><h3>What is Abby&#039;s silliness level?</h3><ul><li>High</li><li>Low</li><li>Medium</li><li>None</li></ul></section><section data-block="SingleChoice"><h3>How often is Abby silly?</h3><ul><li>Never</li><li>Rarely</li><li>Always</li><li>Sometimes</li></ul></section><section data-block="SingleChoice"><h3>What is Abby&#039;s silliness like?</h3><ul><li>Outrageous</li><li>Non-existent</li><li>Mild</li><li>Moderate</li></ul></section><section data-block="SingleChoice"><h3>How would you describe Abby&#039;s silliness?</h3><ul><li>Crazy</li><li>Calm</li><li>Boring</li><li>Sensible</li></ul></section></iframe></div>',
+          type: 'rich',
+          aresType: 'aresRiddle',
+        },
+      },
+      position: [5],
+    },
+  ],
   'Article Headline for SEO',
   'Article Headline for Promo',
   'Article summary.',
   presetThings,
+  false,
+  blocksWithHeadlineAndText,
+  {
+    categoryName: 'Royal+Wedding+2018~Duchess+of+Sussex',
+    contentId: 'urn:bbc:optimo:c0000000001o',
+    contentType: 'article',
+    language: 'en-gb',
+    ldpThingIds:
+      '2351f2b2-ce36-4f44-996d-c3c4f7f90eaa~803eaeb9-c0c3-4f1b-9a66-90efac3df2dc',
+    ldpThingLabels: 'Royal+Wedding+2018~Duchess+of+Sussex',
+    nationsProducer: null,
+    pageIdentifier: 'news.articles.c0000000001o.page',
+    pageTitle: 'Article Headline for SEO',
+    timePublished: '2018-01-01T12:01:00.000Z',
+    timeUpdated: '2018-01-01T14:00:00.000Z',
+  },
 );
 
 export const articleDataPersian = articleDataBuilder(
@@ -127,12 +197,26 @@ export const articleDataPersian = articleDataBuilder(
   'Persian',
   'fa',
   'http://www.bbc.co.uk/ontologies/passport/home/Persian',
-  'سرصفحه مقاله',
-  'یک پاراگراف.',
+  ['سرصفحه مقاله', 'یک پاراگراف.'],
   'سرصفحه مقاله',
   'سرصفحه مقاله برای ارتقاء',
   'خلاصه مقاله',
   emptyThings,
+  false,
+  blocksWithHeadlineAndText,
+  {
+    categoryName: null,
+    contentId: 'urn:bbc:optimo:c0000000001o',
+    contentType: 'article',
+    language: 'en-gb',
+    ldpThingIds: null,
+    ldpThingLabels: null,
+    nationsProducer: null,
+    pageIdentifier: null,
+    pageTitle: 'سرصفحه مقاله',
+    timePublished: '2018-01-01T12:01:00.000Z',
+    timeUpdated: '2018-01-01T14:00:00.000Z',
+  },
 );
 
 export const articleDataPidgin = articleDataBuilder(
@@ -140,12 +224,25 @@ export const articleDataPidgin = articleDataBuilder(
   'Pidgin',
   'pcm',
   'http://www.bbc.co.uk/ontologies/passport/home/Pidgin',
-  'Article Headline in Pidgin',
-  'A paragraph in Pidgin.',
+  ['Article Headline in Pidgin', 'A paragraph in Pidgin.'],
   'Article Headline for SEO in Pidgin',
   'Article Headline for Promo in Pidgin',
   'Article summary in Pidgin',
   emptyThings,
+  false,
+  blocksWithHeadlineAndText,
+  {
+    categoryName: null,
+    contentId: 'urn:bbc:optimo:c0000000001o',
+    language: 'en-gb',
+    ldpThingIds: null,
+    ldpThingLabels: null,
+    nationsProducer: null,
+    pageIdentifier: null,
+    pageTitle: 'Article Headline for SEO in Pidgin',
+    timePublished: '2018-01-01T12:01:00.000Z',
+    timeUpdated: '2018-01-01T14:00:00.000Z',
+  },
 );
 
 export const articleDataPidginWithAds = articleDataBuilder(
@@ -153,11 +250,1539 @@ export const articleDataPidginWithAds = articleDataBuilder(
   'Pidgin',
   'pcm',
   'http://www.bbc.co.uk/ontologies/passport/home/Pidgin',
-  'Article Headline in Pidgin',
-  'A paragraph in Pidgin.',
+  ['Article Headline in Pidgin', 'A paragraph in Pidgin.'],
   'Article Headline for SEO in Pidgin',
   'Article Headline for Promo in Pidgin',
   'Article summary in Pidgin',
   emptyThings,
   true,
 );
+
+export const articleDataPidginWithByline = articleDataBuilder(
+  'cwl08rd38l6o',
+  'Pidgin',
+  'pcm',
+  'http://www.bbc.co.uk/ontologies/passport/home/Pidgin',
+  ['Article Headline in Pidgin', 'A paragraph in Pidgin.', 'mary_harper'],
+  'Article Headline for SEO in Pidgin',
+  'Article Headline for Promo in Pidgin',
+  'Article summary in Pidgin',
+  emptyThings,
+  undefined,
+  blocksWithHeadlineTexAndByline,
+);
+
+export const bylineWithNoRole = [
+  {
+    type: 'contributor',
+    model: {
+      topicId: '',
+      topicUrl: '/news/topics/c8qx38nq177t',
+      blocks: [
+        {
+          type: 'name',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Single Byline (all values)',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Single Byline (all values)',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'link',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'test',
+                        blocks: [
+                          {
+                            type: 'urlLink',
+                            model: {
+                              text: 'test',
+                              locator: 'https://twitter.com/test',
+                              blocks: [
+                                {
+                                  type: 'fragment',
+                                  model: {
+                                    text: 'test',
+                                    attributes: [],
+                                  },
+                                },
+                              ],
+                              isExternal: true,
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'location',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'London',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'London',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'images',
+          model: {
+            blocks: [
+              {
+                type: 'image',
+                model: {
+                  blocks: [
+                    {
+                      type: 'rawImage',
+                      model: {
+                        width: 640,
+                        height: 562,
+                        locator:
+                          'f974/live/36226e20-94aa-11ec-9acc-37a09ce5ea88.png',
+                        originCode: 'cpsprodpb',
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+];
+
+export const bylineWithNoAuthor = [
+  {
+    type: 'contributor',
+    model: {
+      topicId: '',
+      topicUrl: '',
+      blocks: [
+        {
+          type: 'role',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Test',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Test',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'link',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'test',
+                        blocks: [
+                          {
+                            type: 'urlLink',
+                            model: {
+                              text: 'test',
+                              locator: 'https://twitter.com/test',
+                              blocks: [
+                                {
+                                  type: 'fragment',
+                                  model: {
+                                    text: 'test',
+                                    attributes: [],
+                                  },
+                                },
+                              ],
+                              isExternal: true,
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'location',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'London',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'London',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'images',
+          model: {
+            blocks: [
+              {
+                type: 'image',
+                model: {
+                  blocks: [
+                    {
+                      type: 'rawImage',
+                      model: {
+                        width: 640,
+                        height: 562,
+                        locator:
+                          'f974/live/36226e20-94aa-11ec-9acc-37a09ce5ea88.png',
+                        originCode: 'cpsprodpb',
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+];
+
+export const bylineWithNoAuthorAndRole = [
+  {
+    type: 'contributor',
+    model: {
+      topicId: '',
+      topicUrl: '',
+      blocks: [
+        {
+          type: 'link',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'test',
+                        blocks: [
+                          {
+                            type: 'urlLink',
+                            model: {
+                              text: 'test',
+                              locator: 'https://twitter.com/test',
+                              blocks: [
+                                {
+                                  type: 'fragment',
+                                  model: {
+                                    text: 'test',
+                                    attributes: [],
+                                  },
+                                },
+                              ],
+                              isExternal: true,
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'location',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'London',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'London',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'images',
+          model: {
+            blocks: [
+              {
+                type: 'image',
+                model: {
+                  blocks: [
+                    {
+                      type: 'rawImage',
+                      model: {
+                        width: 640,
+                        height: 562,
+                        locator:
+                          'f974/live/36226e20-94aa-11ec-9acc-37a09ce5ea88.png',
+                        originCode: 'cpsprodpb',
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+];
+
+export const bylineWithNameAndRole = [
+  {
+    type: 'contributor',
+    model: {
+      topicId: '',
+      topicUrl: '',
+      blocks: [
+        {
+          type: 'name',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Single Byline (all values)',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Single Byline (all values)',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'role',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Test',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Test',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+];
+
+export const bylineWithLink = [
+  {
+    type: 'contributor',
+    model: {
+      topicId: '',
+      topicUrl: '/news/topics/c8qx38nq177t',
+      blocks: [
+        {
+          type: 'name',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Single Byline (all values)',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Single Byline (all values)',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'role',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Test',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Test',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'link',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'test',
+                        blocks: [
+                          {
+                            type: 'urlLink',
+                            model: {
+                              text: 'test',
+                              locator: 'https://twitter.com/test',
+                              blocks: [
+                                {
+                                  type: 'fragment',
+                                  model: {
+                                    text: 'test',
+                                    attributes: [],
+                                  },
+                                },
+                              ],
+                              isExternal: true,
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+];
+
+export const bylineWithLinkAndLocation = [
+  {
+    type: 'contributor',
+    model: {
+      topicId: '',
+      topicUrl: '',
+      blocks: [
+        {
+          type: 'name',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Single Byline (all values)',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Single Byline (all values)',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'role',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Test',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Test',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'link',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'test',
+                        blocks: [
+                          {
+                            type: 'urlLink',
+                            model: {
+                              text: 'test',
+                              locator: 'https://twitter.com/test',
+                              blocks: [
+                                {
+                                  type: 'fragment',
+                                  model: {
+                                    text: 'test',
+                                    attributes: [],
+                                  },
+                                },
+                              ],
+                              isExternal: true,
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'location',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'London',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'London',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+];
+
+export const bylineWithNonPngPhoto = [
+  {
+    type: 'contributor',
+    model: {
+      topicId: '',
+      topicUrl: '',
+      blocks: [
+        {
+          type: 'name',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Clark Kent',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Clark Kent',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'role',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Journalist',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Journalist',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'link',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'superman',
+                        blocks: [
+                          {
+                            type: 'urlLink',
+                            model: {
+                              text: 'superman',
+                              locator: 'https://twitter.com/Superman',
+                              blocks: [
+                                {
+                                  type: 'fragment',
+                                  model: {
+                                    text: 'superman',
+                                    attributes: [],
+                                  },
+                                },
+                              ],
+                              isExternal: true,
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'location',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Metropolis, US',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Metropolis, US',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'images',
+          model: {
+            blocks: [
+              {
+                type: 'image',
+                model: {
+                  blocks: [
+                    {
+                      type: 'rawImage',
+                      model: {
+                        width: 640,
+                        height: 562,
+                        locator:
+                          'https://scarletjourney.rutgers.edu/crm/wp-content/uploads/sites/393/2017/12/christopher-reeve-superman.jpg',
+                        originCode: 'cpsdevpb',
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+];
+
+export const bylineWithPngPhoto = [
+  {
+    type: 'contributor',
+    model: {
+      blocks: [
+        {
+          type: 'name',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Mayeni Jones',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Mayeni Jones',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'role',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Journalist',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Journalist',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'link',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'MayeniJones',
+                        blocks: [
+                          {
+                            type: 'urlLink',
+                            model: {
+                              text: 'MayeniJones',
+                              locator: 'https://twitter.com/MayeniJones',
+                              blocks: [
+                                {
+                                  type: 'fragment',
+                                  model: {
+                                    text: 'MayeniJones',
+                                    attributes: [],
+                                  },
+                                },
+                              ],
+                              isExternal: true,
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'location',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Lagos, Nigeria',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Lagos, Nigeria',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'images',
+          model: {
+            blocks: [
+              {
+                type: 'image',
+                model: {
+                  blocks: [
+                    {
+                      type: 'rawImage',
+                      model: {
+                        width: 640,
+                        height: 562,
+                        locator:
+                          'f974/live/36226e20-94aa-11ec-9acc-37a09ce5ea88.png',
+                        originCode: 'cpsprodpb',
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+];
+
+export const bylineWithAllData = [
+  {
+    type: 'contributor',
+    model: {
+      topicId: '',
+      topicUrl: '/news/topics/c8qx38nq177t',
+      blocks: [
+        {
+          type: 'name',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Mayeni Jones',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Mayeni Jones',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'role',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Journalist',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Journalist',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'link',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'MayeniJones',
+                        blocks: [
+                          {
+                            type: 'urlLink',
+                            model: {
+                              text: 'MayeniJones',
+                              locator: 'https://twitter.com/MayeniJones',
+                              blocks: [
+                                {
+                                  type: 'fragment',
+                                  model: {
+                                    text: 'MayeniJones',
+                                    attributes: [],
+                                  },
+                                },
+                              ],
+                              isExternal: true,
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'location',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Lagos, Nigeria',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Lagos, Nigeria',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'images',
+          model: {
+            blocks: [
+              {
+                type: 'image',
+                model: {
+                  blocks: [
+                    {
+                      type: 'rawImage',
+                      model: {
+                        width: 640,
+                        height: 562,
+                        locator:
+                          'f974/live/36226e20-94aa-11ec-9acc-37a09ce5ea88.png',
+                        originCode: 'cpsprodpb',
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+];
+
+export const sampleRecommendations = [
+  {
+    locators: {
+      optimoUrn: 'urn:bbc:optimo:asset:sample_1',
+      canonicalUrl: 'https://www.bbc.com/turkce/articles/sample_1',
+    },
+    timestamp: 1673623343213,
+    language: 'tr',
+    headlines: {
+      promoHeadline: {
+        blocks: [
+          {
+            type: 'text',
+            model: {
+              blocks: [
+                {
+                  type: 'paragraph',
+                  model: {
+                    text: 'SAMPLE RECOMMENDATION 1 - HEADLINE',
+                    blocks: [
+                      {
+                        type: 'fragment',
+                        model: {
+                          text: 'SAMPLE RECOMMENDATION 1 - HEADLINE',
+                          attributes: [],
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    },
+    images: {
+      defaultPromoImage: {
+        blocks: [
+          {
+            type: 'altText',
+            model: {
+              blocks: [
+                {
+                  type: 'text',
+                  model: {
+                    blocks: [
+                      {
+                        type: 'paragraph',
+                        model: {
+                          text: 'SAMPLE RECOMMENDATION 1',
+                          blocks: [
+                            {
+                              type: 'fragment',
+                              model: {
+                                text: 'SAMPLE RECOMMENDATION 1',
+                                attributes: [],
+                              },
+                            },
+                          ],
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+          {
+            type: 'rawImage',
+            model: {
+              width: 1024,
+              height: 576,
+              locator: '536b/live/62a1ce50-92c4-11ed-af5e-49f6c6402e4d.jpg',
+              originCode: 'cpsprodpb',
+              copyrightHolder: 'Getty Images',
+              suitableForSyndication: true,
+            },
+          },
+        ],
+      },
+    },
+    summary: {
+      blocks: [
+        {
+          type: 'text',
+          model: {
+            blocks: [
+              {
+                type: 'paragraph',
+                model: {
+                  text: 'SAMPLE RECOMMENDATION 1 - IMAGE TEXT',
+                  blocks: [
+                    {
+                      type: 'fragment',
+                      model: {
+                        text: 'SAMPLE RECOMMENDATION 1 - IMAGE TEXT',
+                        attributes: [],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+    id: 'urn:bbc:ares::article:sample_1',
+    type: 'optimo',
+  },
+  {
+    locators: {
+      optimoUrn: 'urn:bbc:optimo:asset:sample_2',
+      canonicalUrl: 'https://www.bbc.com/turkce/articles/sample_2',
+    },
+    timestamp: 1673623343213,
+    language: 'tr',
+    headlines: {
+      promoHeadline: {
+        blocks: [
+          {
+            type: 'text',
+            model: {
+              blocks: [
+                {
+                  type: 'paragraph',
+                  model: {
+                    text: 'SAMPLE RECOMMENDATION 2 - HEADLINE',
+                    blocks: [
+                      {
+                        type: 'fragment',
+                        model: {
+                          text: 'SAMPLE RECOMMENDATION 2 - HEADLINE',
+                          attributes: [],
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    },
+    images: {
+      defaultPromoImage: {
+        blocks: [
+          {
+            type: 'altText',
+            model: {
+              blocks: [
+                {
+                  type: 'text',
+                  model: {
+                    blocks: [
+                      {
+                        type: 'paragraph',
+                        model: {
+                          text: 'SAMPLE RECOMMENDATION 2',
+                          blocks: [
+                            {
+                              type: 'fragment',
+                              model: {
+                                text: 'SAMPLE RECOMMENDATION 2',
+                                attributes: [],
+                              },
+                            },
+                          ],
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+          {
+            type: 'rawImage',
+            model: {
+              width: 1024,
+              height: 576,
+              locator: '536b/live/62a1ce50-92c4-11ed-af5e-49f6c6402e4d.jpg',
+              originCode: 'cpsprodpb',
+              copyrightHolder: 'Getty Images',
+              suitableForSyndication: true,
+            },
+          },
+        ],
+      },
+    },
+    summary: {
+      blocks: [
+        {
+          type: 'text',
+          model: {
+            blocks: [
+              {
+                type: 'paragraph',
+                model: {
+                  text: 'SAMPLE RECOMMENDATION 2 - IMAGE TEXT',
+                  blocks: [
+                    {
+                      type: 'fragment',
+                      model: {
+                        text: 'SAMPLE RECOMMENDATION 2 - IMAGE TEXT',
+                        attributes: [],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+    id: 'urn:bbc:ares::article:sample_2',
+    type: 'optimo',
+  },
+];
+
+export const passportTaggings = [
+  {
+    predicate: 'http://www.bbc.co.uk/ontologies/creativework/format',
+    value:
+      'http://www.bbc.co.uk/things/b3c67683-6ada-46da-a329-16fbd4a12c96#id',
+  },
+  {
+    predicate: 'http://www.bbc.co.uk/ontologies/creativework/about',
+    value:
+      'http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id',
+  },
+  {
+    predicate: 'http://www.bbc.co.uk/ontologies/creativework/about',
+    value:
+      'http://www.bbc.co.uk/things/8b04c2e8-5409-4e7d-9877-3ccaf04727af#id',
+  },
+  {
+    predicate: 'http://www.bbc.co.uk/ontologies/audience/motivation',
+    value:
+      'http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id',
+  },
+  {
+    predicate: 'http://www.bbc.co.uk/ontologies/creativework/about',
+    value:
+      'http://www.bbc.co.uk/things/667ecf35-a325-4eed-adf9-80aac7d58eaf#id',
+  },
+  {
+    predicate: 'http://www.bbc.co.uk/ontologies/bbc/infoClass',
+    value:
+      'http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id',
+  },
+  {
+    predicate: 'http://www.bbc.co.uk/ontologies/creativework/about',
+    value:
+      'http://www.bbc.co.uk/things/df5b7d56-4f82-4fd9-a627-2c5ee1427422#id',
+  },
+  {
+    predicate: 'http://www.bbc.co.uk/ontologies/creativework/about',
+    value:
+      'http://www.bbc.co.uk/things/2465d7e4-05d0-4062-9a12-cb0eb10b24c1#id',
+  },
+];
+
+export const passportPredicatesFormats = [
+  {
+    value:
+      'http://www.bbc.co.uk/things/b3c67683-6ada-46da-a329-16fbd4a12c96#id',
+    thingLabel: 'Interview',
+    thingUri:
+      'http://www.bbc.co.uk/things/b3c67683-6ada-46da-a329-16fbd4a12c96#id',
+    thingId: 'b3c67683-6ada-46da-a329-16fbd4a12c96',
+    thingType: ['tagging:TagConcept', 'tagging:Format'],
+    thingSameAs: [
+      'http://www.wikidata.org/entity/Q178651',
+      'http://dbpedia.org/resource/Interview',
+    ],
+    thingEnglishLabel: 'Interview',
+    thingPreferredLabel: 'Interview',
+    thingLabelLanguage: 'ky',
+    type: 'formats',
+  },
+];
+
+export const promoSample = {
+  headlines: {
+    seoHeadline: 'Podcast Promo 8 Paragraphs (Valid)',
+    promoHeadline: {
+      blocks: [
+        {
+          type: 'text',
+          model: {
+            blocks: [
+              {
+                type: 'paragraph',
+                model: {
+                  text: 'Podcast Promo 8 text block Paragraphs (Valid)',
+                  blocks: [
+                    {
+                      type: 'fragment',
+                      model: {
+                        text: 'Podcast Promo 8 text block Paragraphs (Valid)',
+                        attributes: [],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+  summary: {
+    blocks: [
+      {
+        type: 'text',
+        model: {
+          blocks: [
+            {
+              type: 'paragraph',
+              model: {
+                text: '',
+                blocks: [
+                  {
+                    type: 'fragment',
+                    model: {
+                      text: '',
+                      attributes: [],
+                    },
+                  },
+                ],
+              },
+            },
+          ],
+        },
+      },
+    ],
+  },
+};

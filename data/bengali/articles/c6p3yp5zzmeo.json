@@ -1,421 +1,1759 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::article:c6p3yp5zzmeo",
-    "locators": {
-      "optimoUrn": "urn:bbc:optimo:asset:c6p3yp5zzmeo"
-    },
-    "type": "article",
-    "createdBy": "Bengali",
-    "language": "bn",
-    "lastUpdated": 1572879816559,
-    "firstPublished": 1562942411695,
-    "lastPublished": 1562942411695,
-    "options": {},
-    "analyticsLabels": {},
-    "passport": {
-      "language": "bn",
-      "home": "http://www.bbc.co.uk/ontologies/passport/home/Bengali"
-    },
-    "tags": {},
-    "version": "v1.1.2",
-    "blockTypes": [
-      "headline",
-      "text",
-      "paragraph",
-      "fragment",
-      "image",
-      "caption",
-      "altText",
-      "rawImage",
-      "urlLink",
-      "video",
-      "subheadline"
-    ]
-  },
-  "content": {
-    "model": {
-      "blocks": [
-        {
-          "type": "headline",
-          "model": {
-            "blocks": [
-              {
-                "type": "text",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "paragraph",
-                      "model": {
-                        "text": "এটি এই পরীক্ষার নিবন্ধটির শিরোনাম",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "এটি এই পরীক্ষার নিবন্ধটির শিরোনাম",
-                              "attributes": []
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "image",
-          "model": {
-            "blocks": [
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "এই পরীক্ষার চিত্র, কপিরাইট বিবিসি, ফ্রান্সের মানচিত্র দেখায়। চিত্রটি প্রথম তিনটি ব্লকের মধ্যে রয়েছে এবং এতে ক্যাপশন রয়েছে।\n",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "এই পরীক্ষার চিত্র, কপিরাইট বিবিসি, ফ্রান্সের মানচিত্র দেখায়। চিত্রটি প্রথম তিনটি ব্লকের মধ্যে রয়েছে এবং এতে ক্যাপশন রয়েছে।\n",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "এই পরীক্ষার চিত্র, কপিরাইট বিবিসি, ফ্রান্সের মানচিত্র দেখায়। চিত্রটি প্রথম তিনটি ব্লকের মধ্যে রয়েছে এবং এতে ক্যাপশন রয়েছে।",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "এই পরীক্ষার চিত্র, কপিরাইট বিবিসি, ফ্রান্সের মানচিত্র দেখায়। চিত্রটি প্রথম তিনটি ব্লকের মধ্যে রয়েছে এবং এতে ক্যাপশন রয়েছে।",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "rawImage",
-                "model": {
-                  "width": 624,
-                  "height": 351,
-                  "locator": "b06e/test/d8141e90-fcb8-11e9-9afe-1371928331c5.jpg",
-                  "originCode": "cpsdevpb",
-                  "copyrightHolder": "BBC"
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "text",
-          "model": {
-            "blocks": [
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "এটি একটি পাঠ্য ব্লক, এতে বিবিসি আবহাওয়ার হোমপেজে একটি ইউআরএল লিঙ্ক রয়েছে।",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "এটি একটি পাঠ্য ব্লক, এতে বিবিসি আবহাওয়ার হোমপেজে একটি ইউআরএল ",
-                        "attributes": []
-                      }
-                    },
-                    {
-                      "type": "urlLink",
-                      "model": {
-                        "text": "লিঙ্ক রয়েছে।",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "লিঙ্ক রয়েছে।",
-                              "attributes": []
-                            }
-                          }
-                        ],
-                        "locator": "https://www.bbc.co.uk/weather",
-                        "isExternal": false
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "video",
-          "model": {
-            "locator": "urn:bbc:pips:pid:p019qd7g",
-            "blocks": [
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "এটি একটি ভিডিওযুক্ত একটি ভিডিও ব্লক",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "এটি একটি ভিডিওযুক্ত একটি ভিডিও ব্লক",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "aresMedia",
-                "model": {
-                  "blocks": [
-                    {
-                      "blockId": "urn:bbc:ares::clip:p019qd7g",
-                      "type": "aresMediaMetadata",
-                      "model": {
-                        "id": "p019qd7g",
-                        "subType": "clip",
-                        "format": "audio_video",
-                        "title": "Test asset with square image",
-                        "synopses": {
-                          "short": "test asset"
-                        },
-                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p019qd93.jpg",
-                        "embedding": false,
-                        "advertising": true,
-                        "versions": [
-                          {
-                            "versionId": "p019qd7k",
-                            "types": ["Original"],
-                            "duration": 16,
-                            "durationISO8601": "PT16S",
-                            "warnings": {},
-                            "availableTerritories": {
-                              "uk": true,
-                              "nonUk": true
-                            },
-                            "availableFrom": 1493293493000
-                          }
-                        ],
-                        "syndication": {
-                          "destinations": []
+  "data": {
+    "article": {
+      "content": {
+        "model": {
+          "blocks": [
+            {
+              "id": "a12e609f",
+              "type": "headline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "3498f72c",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "dee2c240",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "এটি এই পরীক্ষার নিবন্ধটির শিরোনাম",
+                            "blocks": [
+                              {
+                                "id": "851a2e15",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "এটি এই পরীক্ষার নিবন্ধটির শিরোনাম",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
                         }
-                      }
+                      ]
                     },
-                    {
-                      "type": "image",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "rawImage",
-                            "model": {
-                              "height": 900,
-                              "width": 900,
-                              "copyrightHolder": "Sony",
-                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p019qd93.jpg",
-                              "originCode": "mpv"
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "subheadline",
-          "model": {
-            "blocks": [
-              {
-                "type": "text",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "paragraph",
-                      "model": {
-                        "text": "\rএটি একটি সাবহেডলাইন ব্লক",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "\rএটি একটি সাবহেডলাইন ব্লক",
-                              "attributes": []
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "image",
-          "model": {
-            "blocks": [
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "\rএটি একটি সাবহেডলাইন ব্লক",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "\rএটি একটি সাবহেডলাইন ব্লক",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
+                    "position": [
+                      1,
+                      1
+                    ]
+                  }
+                ]
               },
-              {
-                "type": "rawImage",
-                "model": {
-                  "width": 800,
-                  "height": 450,
-                  "locator": "baed/test/3c2cf780-fcb9-11e9-9afe-1371928331c5.jpg",
-                  "originCode": "cpsdevpb",
-                  "copyrightHolder": "Getty Images"
-                }
-              }
-            ]
-          }
+              "position": [
+                1
+              ]
+            },
+            {
+              "id": "cc80ce2e",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "d52ef2df",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "2831b278",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "afddf4b3",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "এই পরীক্ষার চিত্র, কপিরাইট বিবিসি, ফ্রান্সের মানচিত্র দেখায়। চিত্রটি প্রথম তিনটি ব্লকের মধ্যে রয়েছে এবং এতে ক্যাপশন রয়েছে।\n",
+                                  "blocks": [
+                                    {
+                                      "id": "2712dd01",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "এই পরীক্ষার চিত্র, কপিরাইট বিবিসি, ফ্রান্সের মানচিত্র দেখায়। চিত্রটি প্রথম তিনটি ব্লকের মধ্যে রয়েছে এবং এতে ক্যাপশন রয়েছে।\n",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        2,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  2,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            2,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      2,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "6939d8ad",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "f88b7ac1",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "34e7196d",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "এই পরীক্ষার চিত্র, কপিরাইট বিবিসি, ফ্রান্সের মানচিত্র দেখায়। চিত্রটি প্রথম তিনটি ব্লকের মধ্যে রয়েছে এবং এতে ক্যাপশন রয়েছে।",
+                                  "blocks": [
+                                    {
+                                      "id": "ea2e75c1",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "এই পরীক্ষার চিত্র, কপিরাইট বিবিসি, ফ্রান্সের মানচিত্র দেখায়। চিত্রটি প্রথম তিনটি ব্লকের মধ্যে রয়েছে এবং এতে ক্যাপশন রয়েছে।",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        2,
+                                        2,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  2,
+                                  2,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            2,
+                            2,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      2,
+                      2
+                    ]
+                  },
+                  {
+                    "id": "2acd4781",
+                    "type": "rawImage",
+                    "model": {
+                      "width": 624,
+                      "height": 351,
+                      "locator": "b06e/test/d8141e90-fcb8-11e9-9afe-1371928331c5.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "BBC"
+                    },
+                    "position": [
+                      2,
+                      3
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                2
+              ]
+            },
+            {
+              "id": "851bb6b9",
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1562942411695,
+                "lastPublished": 1562942411695
+              },
+              "position": [
+                3
+              ]
+            },
+            {
+              "id": "17e4a1b7",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "92b03de2",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "এটি একটি পাঠ্য ব্লক, এতে বিবিসি আবহাওয়ার হোমপেজে একটি ইউআরএল লিঙ্ক রয়েছে।",
+                      "blocks": [
+                        {
+                          "id": "41c7d45d",
+                          "type": "fragment",
+                          "model": {
+                            "text": "এটি একটি পাঠ্য ব্লক, এতে বিবিসি আবহাওয়ার হোমপেজে একটি ইউআরএল ",
+                            "attributes": []
+                          },
+                          "position": [
+                            4,
+                            1,
+                            1
+                          ]
+                        },
+                        {
+                          "id": "54b3440b",
+                          "type": "urlLink",
+                          "model": {
+                            "text": "লিঙ্ক রয়েছে।",
+                            "blocks": [
+                              {
+                                "id": "e2637ad1",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "লিঙ্ক রয়েছে।",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  4,
+                                  1,
+                                  2,
+                                  1
+                                ]
+                              }
+                            ],
+                            "locator": "https://www.bbc.co.uk/weather",
+                            "isExternal": false
+                          },
+                          "position": [
+                            4,
+                            1,
+                            2
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      4,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                4
+              ]
+            },
+            {
+              "id": "a3f9d93b",
+              "type": "video",
+              "model": {
+                "locator": "urn:bbc:pips:pid:p019qd7g",
+                "blocks": [
+                  {
+                    "id": "2879f6cc",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "41952b08",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "6f418934",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "এটি একটি ভিডিওযুক্ত একটি ভিডিও ব্লক",
+                                  "blocks": [
+                                    {
+                                      "id": "27c4bdb1",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "এটি একটি ভিডিওযুক্ত একটি ভিডিও ব্লক",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        5,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  5,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            5,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      5,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "103748e9",
+                    "type": "aresMedia",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "98f4cc48",
+                          "blockId": "urn:bbc:ares::clip:p019qd7g",
+                          "type": "aresMediaMetadata",
+                          "model": {
+                            "id": "p019qd7g",
+                            "subType": "clip",
+                            "format": "audio_video",
+                            "title": "Test asset with square image",
+                            "synopses": {
+                              "short": "test asset"
+                            },
+                            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p019qd93.jpg",
+                            "embedding": false,
+                            "advertising": true,
+                            "versions": [
+                              {
+                                "versionId": "p019qd7k",
+                                "types": [
+                                  "Original"
+                                ],
+                                "duration": 16,
+                                "durationISO8601": "PT16S",
+                                "warnings": {},
+                                "availableTerritories": {
+                                  "uk": true,
+                                  "nonUk": true
+                                },
+                                "availableFrom": 1493293493000
+                              }
+                            ],
+                            "syndication": {
+                              "destinations": []
+                            },
+                            "smpKind": "programme"
+                          },
+                          "position": [
+                            5,
+                            2,
+                            1
+                          ]
+                        },
+                        {
+                          "id": "890b192d",
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "c6c5d1d4",
+                                "type": "rawImage",
+                                "model": {
+                                  "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p019qd93.jpg",
+                                  "originCode": "mpv"
+                                },
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            5,
+                            2,
+                            2
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      5,
+                      2
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                5
+              ]
+            },
+            {
+              "id": "27348d22",
+              "type": "subheadline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "6c48c13b",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "45979807",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "\rএটি একটি সাবহেডলাইন ব্লক",
+                            "blocks": [
+                              {
+                                "id": "5db5fcff",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "\rএটি একটি সাবহেডলাইন ব্লক",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  6,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            6,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      6,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                6
+              ]
+            },
+            {
+              "id": "1e51554d",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "d05fa65e",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "fc43edb8",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "6606cf5b",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "\rএটি একটি সাবহেডলাইন ব্লক",
+                                  "blocks": [
+                                    {
+                                      "id": "37dffbb0",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "\rএটি একটি সাবহেডলাইন ব্লক",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        7,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  7,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            7,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      7,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "37c867af",
+                    "type": "rawImage",
+                    "model": {
+                      "width": 800,
+                      "height": 450,
+                      "locator": "baed/test/3c2cf780-fcb9-11e9-9afe-1371928331c5.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "Getty Images"
+                    },
+                    "position": [
+                      7,
+                      2
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                7
+              ]
+            },
+            {
+              "id": "b6ce1065",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "52c64998",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "এই পরীক্ষার নিবন্ধটি তৈরি করা হয়েছে যাতে আমরা আমাদের ওয়েবসাইটে পরীক্ষা চালাতে পারি।",
+                      "blocks": [
+                        {
+                          "id": "71540f34",
+                          "type": "fragment",
+                          "model": {
+                            "text": "এই পরীক্ষার নিবন্ধটি তৈরি করা হয়েছে যাতে আমরা আমাদের ওয়েবসাইটে পরীক্ষা চালাতে পারি।",
+                            "attributes": []
+                          },
+                          "position": [
+                            8,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      8,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                8
+              ]
+            },
+            {
+              "id": "e39d4e62",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                9
+              ]
+            },
+            {
+              "id": "775d8e9c",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                10
+              ]
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "id": "urn:bbc:ares::article:c6p3yp5zzmeo",
+        "locators": {
+          "optimoUrn": "urn:bbc:optimo:asset:c6p3yp5zzmeo",
+          "canonicalUrl": "https://www.bbc.com/bengali/articles/c6p3yp5zzmeo"
+        },
+        "type": "article",
+        "createdBy": "Bengali",
+        "language": "bn",
+        "firstPublished": 1562942411695,
+        "lastPublished": 1562942411695,
+        "analyticsLabels": {
+          "producer": "Bengali",
+          "page": "bengali.articles.c6p3yp5zzmeo.page"
+        },
+        "passport": {
+          "language": "bn",
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Bengali",
+          "taggings": []
+        },
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment",
+          "image",
+          "caption",
+          "altText",
+          "rawImage",
+          "urlLink",
+          "video",
+          "subheadline",
+          "aresMedia"
+        ],
+        "allowAdvertising": true
+      },
+      "promo": {
+        "headlines": {
+          "seoHeadline": "ক্রিকেট বিশ্বকাপ ২০১৯: ম্যান অফ দা টুর্নামেন্টের দৌড়ে এগিয়ে কারা?"
+        }
+      }
+    },
+    "secondaryData": {
+      "topStories": [
+        {
+          "headlines": {
+            "headline": "faceapp craze in social media"
+          },
+          "locators": {
+            "assetUri": "/bengali/23244764",
+            "cpsUrn": "urn:bbc:content:assetUri:bengali/23244764",
+            "curie": "http://www.bbc.co.uk/asset/5f27f7a3-8ab8-d74e-9cd5-103bc2a2e843",
+            "assetId": "23244764"
+          },
+          "summary": "faceapp is going viral",
+          "timestamp": 1563796056000,
+          "language": "bn",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63711027",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/1194B/test/_63711027_d6a708ae-c4c7-4099-ac7a-c63f7272e589.jpg",
+            "path": "/cpsdevpb/1194B/test/_63711027_d6a708ae-c4c7-4099-ac7a-c63f7272e589.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "faceapp",
+            "copyrightHolder": "AFP",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "prominence": "maximum",
+          "section": {
+            "subType": "IDX",
+            "name": "খবর, সর্বশেষ খবর, ব্রেকিং নিউজ, বিশ্লেষণ",
+            "uri": "/bengali/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:bengali/23244764",
+          "type": "cps"
         },
         {
-          "type": "text",
-          "model": {
-            "blocks": [
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "এই পরীক্ষার নিবন্ধটি তৈরি করা হয়েছে যাতে আমরা আমাদের ওয়েবসাইটে পরীক্ষা চালাতে পারি।",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "এই পরীক্ষার নিবন্ধটি তৈরি করা হয়েছে যাতে আমরা আমাদের ওয়েবসাইটে পরীক্ষা চালাতে পারি।",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        }
-      ]
-    }
-  },
-  "promo": {
-    "headlines": {
-      "seoHeadline": "ক্রিকেট বিশ্বকাপ ২০১৯: ম্যান অফ দা টুর্নামেন্টের দৌড়ে এগিয়ে কারা?"
-    },
-    "locators": {
-      "optimoUrn": "urn:bbc:optimo:asset:c6p3yp5zzmeo"
-    },
-    "summary": {
-      "blocks": [
+          "headlines": {
+            "headline": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে হুমকি 1"
+          },
+          "locators": {
+            "assetUri": "/bengali/23061364",
+            "cpsUrn": "urn:bbc:content:assetUri:bengali/23061364",
+            "curie": "http://www.bbc.co.uk/asset/43a02f6a-0c75-f34d-b38b-da9765b3b666",
+            "assetId": "23061364"
+          },
+          "summary": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে হুমকি",
+          "timestamp": 1468921656000,
+          "language": "bn",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63496587",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+            "path": "/cpsdevpb/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+            "height": 432,
+            "width": 768,
+            "altText": "বিবাহিত স্ত্রী সাহানা!",
+            "caption": "বিবাহিত স্ত্রী সাহানা!",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63496589",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/18109/test/_63496589_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+            "path": "/cpsdevpb/18109/test/_63496589_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "বিবাহিত স্ত্রী সাহানা!",
+            "caption": "বিবাহিত স্ত্রী সাহানা!",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "prominence": "maximum",
+          "section": {
+            "subType": "IDX",
+            "name": "খবর, সর্বশেষ খবর, ব্রেকিং নিউজ, বিশ্লেষণ",
+            "uri": "/bengali/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:bengali/23061364",
+          "type": "cps"
+        },
         {
-          "model": {
-            "blocks": [
+          "headlines": {
+            "headline": "Missing teenager Gaia found in London"
+          },
+          "locators": {
+            "assetUri": "/news/uk-england-dorset-23164553",
+            "cpsUrn": "urn:bbc:content:assetUri:news/uk-england-dorset-23164553",
+            "curie": "http://www.bbc.co.uk/asset/f66805cd-b1da-ab4a-8c71-896732c116d6",
+            "assetId": "23164553"
+          },
+          "summary": "A 22 year old man and a 73 year woman are arrested over the disappearance of Teenager Gaia Pope.",
+          "timestamp": 1510656652000,
+          "language": "en-gb",
+          "byline": {
+            "name": "By Faisal  Titumir",
+            "title": "Broadcast Journalist",
+            "persons": [
               {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "attributes": [],
-                        "text": ""
-                      },
-                      "type": "fragment"
-                    }
-                  ],
-                  "text": ""
-                },
-                "type": "paragraph"
+                "name": "Faisal Titumir",
+                "function": "BBC Bengali"
               }
             ]
           },
-          "type": "text"
+          "passport": {
+            "category": {
+              "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+              "categoryName": "News"
+            },
+            "taggings": []
+          },
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63600086",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/109A0/test/_63600086_mediaitem63600110.jpg",
+            "path": "/cpsdevpb/109A0/test/_63600086_mediaitem63600110.jpg",
+            "height": 1023,
+            "width": 1819,
+            "altText": "Gaia Pope teenage girl missing",
+            "copyrightHolder": "Getty Images",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "prominence": "maximum",
+          "section": {
+            "subType": "IDX",
+            "name": "Dorset",
+            "uri": "/news/england/dorset",
+            "type": "simple"
+          },
+          "site": {
+            "subType": "site",
+            "name": "BBC News",
+            "uri": "/news",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:news/uk-england-dorset-23164553",
+          "type": "cps"
         }
-      ]
-    },
-    "timestamp": 1562942411695,
-    "id": "urn:bbc:ares::article:c6p3yp5zzmeo",
-    "type": "cps"
+      ],
+      "features": [
+        {
+          "headlines": {
+            "headline": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে হুমকি 11"
+          },
+          "locators": {
+            "assetUri": "/bengali/23061404",
+            "cpsUrn": "urn:bbc:content:assetUri:bengali/23061404",
+            "curie": "http://www.bbc.co.uk/asset/67337037-b245-1846-bae0-35c863c89ee4",
+            "assetId": "23061404"
+          },
+          "summary": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে হুমকি",
+          "timestamp": 1468922102000,
+          "language": "bn",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63496587",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+            "path": "/cpsdevpb/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+            "height": 432,
+            "width": 768,
+            "altText": "বিবাহিত স্ত্রী সাহানা!",
+            "caption": "বিবাহিত স্ত্রী সাহানা!",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63496589",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/18109/test/_63496589_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+            "path": "/cpsdevpb/18109/test/_63496589_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "বিবাহিত স্ত্রী সাহানা!",
+            "caption": "বিবাহিত স্ত্রী সাহানা!",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "খবর, সর্বশেষ খবর, ব্রেকিং নিউজ, বিশ্লেষণ",
+            "uri": "/bengali/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:bengali/23061404",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে হুমকি 13"
+          },
+          "locators": {
+            "assetUri": "/bengali/23061405",
+            "cpsUrn": "urn:bbc:content:assetUri:bengali/23061405",
+            "curie": "http://www.bbc.co.uk/asset/2e5eada9-d88a-9040-9aaf-d7367e97a503",
+            "assetId": "23061405"
+          },
+          "summary": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে হুমকি",
+          "timestamp": 1468922436000,
+          "language": "bn",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63496587",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+            "path": "/cpsdevpb/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+            "height": 432,
+            "width": 768,
+            "altText": "বিবাহিত স্ত্রী সাহানা!",
+            "caption": "বিবাহিত স্ত্রী সাহানা!",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63496589",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/18109/test/_63496589_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+            "path": "/cpsdevpb/18109/test/_63496589_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "বিবাহিত স্ত্রী সাহানা!",
+            "caption": "বিবাহিত স্ত্রী সাহানা!",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "খবর, সর্বশেষ খবর, ব্রেকিং নিউজ, বিশ্লেষণ",
+            "uri": "/bengali/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:bengali/23061405",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে হুমকি 12"
+          },
+          "locators": {
+            "assetUri": "/bengali/23061406",
+            "cpsUrn": "urn:bbc:content:assetUri:bengali/23061406",
+            "curie": "http://www.bbc.co.uk/asset/9c7f3e95-2bd4-bb41-aff3-176833c74572",
+            "assetId": "23061406"
+          },
+          "summary": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে হুমকি",
+          "timestamp": 1468922482000,
+          "language": "bn",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63496587",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+            "path": "/cpsdevpb/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+            "height": 432,
+            "width": 768,
+            "altText": "বিবাহিত স্ত্রী সাহানা!",
+            "caption": "বিবাহিত স্ত্রী সাহানা!",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63496589",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/18109/test/_63496589_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+            "path": "/cpsdevpb/18109/test/_63496589_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "বিবাহিত স্ত্রী সাহানা!",
+            "caption": "বিবাহিত স্ত্রী সাহানা!",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "খবর, সর্বশেষ খবর, ব্রেকিং নিউজ, বিশ্লেষণ",
+            "uri": "/bengali/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:bengali/23061406",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে হুমকি 28"
+          },
+          "locators": {
+            "assetUri": "/bengali/23061447",
+            "cpsUrn": "urn:bbc:content:assetUri:bengali/23061447",
+            "curie": "http://www.bbc.co.uk/asset/d4fccfcf-4304-d84f-8a3b-aae6ad2ecda1",
+            "assetId": "23061447"
+          },
+          "summary": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে হুমকি",
+          "timestamp": 1468924178000,
+          "language": "bn",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63496587",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+            "path": "/cpsdevpb/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+            "height": 432,
+            "width": 768,
+            "altText": "বিবাহিত স্ত্রী সাহানা!",
+            "caption": "বিবাহিত স্ত্রী সাহানা!",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63496589",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/18109/test/_63496589_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+            "path": "/cpsdevpb/18109/test/_63496589_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "বিবাহিত স্ত্রী সাহানা!",
+            "caption": "বিবাহিত স্ত্রী সাহানা!",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "খবর, সর্বশেষ খবর, ব্রেকিং নিউজ, বিশ্লেষণ",
+            "uri": "/bengali/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:bengali/23061447",
+          "type": "cps"
+        }
+      ],
+      "mostRead": {
+        "generated": "2023-02-17T16:35:57.256Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T11:23:00Z",
+        "totalRecords": 20,
+        "records": [
+          {
+            "id": "bd633759-fbfd-7746-898d-e1aac6d5b170",
+            "rank": 1,
+            "count": 9285,
+            "urn": "urn:bbc:curie:asset:bd633759-fbfd-7746-898d-e1aac6d5b170",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "CPS working slow",
+                "headline": "CPS working slow in Dhaka so far BBC 3 xcv"
+              },
+              "locators": {
+                "assetUri": "/bengali/news-23070363",
+                "cpsUrn": "urn:bbc:content:assetUri:bengali/news-23070363",
+                "curie": "http://www.bbc.co.uk/asset/bd633759-fbfd-7746-898d-e1aac6d5b170",
+                "assetId": "23070363"
+              },
+              "summary": "Dhaka moves from Topcat to CPS, bu the speed is slow",
+              "timestamp": 1472541824000,
+              "language": "bn",
+              "byline": {
+                "name": "Mir Sabbir",
+                "title": "BBC Bangla",
+                "persons": [
+                  {
+                    "name": "Mir Sabbir",
+                    "function": "BBC Bangla",
+                    "twitterName": "mirsabbir"
+                  }
+                ]
+              },
+              "indexImage": {
+                "id": "63505486",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/10B62/test/_63505486_160830034058_bangladesh_mir_quasem_ali_640x360_getty_nocredit.jpg",
+                "path": "/cpsdevpb/10B62/test/_63505486_160830034058_bangladesh_mir_quasem_ali_640x360_getty_nocredit.jpg",
+                "height": 360,
+                "width": 640,
+                "altText": "Mir Quashem Ali",
+                "copyrightHolder": "AP",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:bengali/news-23070363",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "381c490e-6614-ac41-b250-446824e43dac",
+            "rank": 2,
+            "count": 9204,
+            "urn": "urn:bbc:curie:asset:381c490e-6614-ac41-b250-446824e43dac",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে হুমকি 6",
+                "headline": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে হুমকি 6"
+              },
+              "locators": {
+                "assetUri": "/bengali/23061369",
+                "cpsUrn": "urn:bbc:content:assetUri:bengali/23061369",
+                "curie": "http://www.bbc.co.uk/asset/381c490e-6614-ac41-b250-446824e43dac",
+                "assetId": "23061369"
+              },
+              "summary": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে হুমকি",
+              "timestamp": 1468921986000,
+              "language": "bn",
+              "indexImage": {
+                "id": "63496587",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+                "path": "/cpsdevpb/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+                "height": 432,
+                "width": 768,
+                "altText": "বিবাহিত স্ত্রী সাহানা!",
+                "caption": "বিবাহিত স্ত্রী সাহানা!",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:bengali/23061369",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "4193d38b-4952-4945-9669-8968bead257c",
+            "rank": 3,
+            "count": 8516,
+            "urn": "urn:bbc:curie:asset:4193d38b-4952-4945-9669-8968bead257c",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে হুমকি 21",
+                "headline": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে হুমকি 21"
+              },
+              "locators": {
+                "assetUri": "/bengali/23061420",
+                "cpsUrn": "urn:bbc:content:assetUri:bengali/23061420",
+                "curie": "http://www.bbc.co.uk/asset/4193d38b-4952-4945-9669-8968bead257c",
+                "assetId": "23061420"
+              },
+              "summary": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে হুমকি",
+              "timestamp": 1468923960000,
+              "language": "bn",
+              "indexImage": {
+                "id": "63496587",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+                "path": "/cpsdevpb/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+                "height": 432,
+                "width": 768,
+                "altText": "বিবাহিত স্ত্রী সাহানা!",
+                "caption": "বিবাহিত স্ত্রী সাহানা!",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:bengali/23061420",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "63223f72-981e-4e44-9292-7d2b18531f96",
+            "rank": 4,
+            "count": 8372,
+            "urn": "urn:bbc:curie:asset:63223f72-981e-4e44-9292-7d2b18531f96",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে হুমকি 4",
+                "headline": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে হুমকি 4"
+              },
+              "locators": {
+                "assetUri": "/bengali/23061367",
+                "cpsUrn": "urn:bbc:content:assetUri:bengali/23061367",
+                "curie": "http://www.bbc.co.uk/asset/63223f72-981e-4e44-9292-7d2b18531f96",
+                "assetId": "23061367"
+              },
+              "summary": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে হুমকি",
+              "timestamp": 1468921953000,
+              "language": "bn",
+              "indexImage": {
+                "id": "63496587",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+                "path": "/cpsdevpb/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+                "height": 432,
+                "width": 768,
+                "altText": "বিবাহিত স্ত্রী সাহানা!",
+                "caption": "বিবাহিত স্ত্রী সাহানা!",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:bengali/23061367",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "909fe43c-f1e2-e749-ab61-f7d1ba29bf16",
+            "rank": 5,
+            "count": 8121,
+            "urn": "urn:bbc:curie:asset:909fe43c-f1e2-e749-ab61-f7d1ba29bf16",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Pakistan blast at court leaves several dead in Mardan",
+                "headline": "Pakistan blast at court leaves several dead in Mardan in the north of Pakistan"
+              },
+              "locators": {
+                "assetUri": "/news/world-asia-pacific-23071364",
+                "cpsUrn": "urn:bbc:content:assetUri:news/world-asia-pacific-23071364",
+                "curie": "http://www.bbc.co.uk/asset/909fe43c-f1e2-e749-ab61-f7d1ba29bf16",
+                "assetId": "23071364"
+              },
+              "summary": "A suicide bomber has attacked a court in the northern Pakistani city of Mardan, killing at least 12 people and injuring more than 50, officials say.",
+              "timestamp": 1472827583000,
+              "language": "en-gb",
+              "indexImage": {
+                "id": "63506150",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/1428/test/_63506150_ba40f437-170b-4445-878b-6d66544390b0.jpg",
+                "path": "/cpsdevpb/1428/test/_63506150_ba40f437-170b-4445-878b-6d66544390b0.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Bomb damage inside a room",
+                "caption": "The suicide bomber tried to reach the court's bar room, where several lawyers had gathered",
+                "copyrightHolder": "AFP",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:news/world-asia-pacific-23071364",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "2e5eada9-d88a-9040-9aaf-d7367e97a503",
+            "rank": 6,
+            "count": 7867,
+            "urn": "urn:bbc:curie:asset:2e5eada9-d88a-9040-9aaf-d7367e97a503",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে হুমকি 13",
+                "headline": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে হুমকি 13"
+              },
+              "locators": {
+                "assetUri": "/bengali/23061405",
+                "cpsUrn": "urn:bbc:content:assetUri:bengali/23061405",
+                "curie": "http://www.bbc.co.uk/asset/2e5eada9-d88a-9040-9aaf-d7367e97a503",
+                "assetId": "23061405"
+              },
+              "summary": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে হুমকি",
+              "timestamp": 1468922436000,
+              "language": "bn",
+              "indexImage": {
+                "id": "63496587",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+                "path": "/cpsdevpb/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+                "height": 432,
+                "width": 768,
+                "altText": "বিবাহিত স্ত্রী সাহানা!",
+                "caption": "বিবাহিত স্ত্রী সাহানা!",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:bengali/23061405",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "61a0663b-cd3e-8c40-9891-764ede2427c9",
+            "rank": 7,
+            "count": 7269,
+            "urn": "urn:bbc:curie:asset:61a0663b-cd3e-8c40-9891-764ede2427c9",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে হুমকি 14",
+                "headline": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে হুমকি 14"
+              },
+              "locators": {
+                "assetUri": "/bengali/23061407",
+                "cpsUrn": "urn:bbc:content:assetUri:bengali/23061407",
+                "curie": "http://www.bbc.co.uk/asset/61a0663b-cd3e-8c40-9891-764ede2427c9",
+                "assetId": "23061407"
+              },
+              "summary": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে হুমকি",
+              "timestamp": 1468922500000,
+              "language": "bn",
+              "indexImage": {
+                "id": "63496587",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+                "path": "/cpsdevpb/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+                "height": 432,
+                "width": 768,
+                "altText": "বিবাহিত স্ত্রী সাহানা!",
+                "caption": "বিবাহিত স্ত্রী সাহানা!",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:bengali/23061407",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "2c0928b2-8e03-1f43-851b-32f426868a4e",
+            "rank": 8,
+            "count": 7111,
+            "urn": "urn:bbc:curie:asset:2c0928b2-8e03-1f43-851b-32f426868a4e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "test",
+                "headline": "test"
+              },
+              "locators": {
+                "assetUri": "/news/business-23150724",
+                "cpsUrn": "urn:bbc:content:assetUri:news/business-23150724",
+                "curie": "http://www.bbc.co.uk/asset/2c0928b2-8e03-1f43-851b-32f426868a4e",
+                "assetId": "23150724"
+              },
+              "summary": "test",
+              "timestamp": 1504099332000,
+              "language": "en-gb",
+              "id": "urn:bbc:ares::asset:news/business-23150724",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "02a2003d-26d9-c444-88bf-ce98805a1d11",
+            "rank": 9,
+            "count": 6886,
+            "urn": "urn:bbc:curie:asset:02a2003d-26d9-c444-88bf-ce98805a1d11",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Mystery over fate of Uzbek president",
+                "headline": "Islam Karimov: Mystery over fate of Uzbek president"
+              },
+              "locators": {
+                "assetUri": "/bengali/news-23071384",
+                "cpsUrn": "urn:bbc:content:assetUri:bengali/news-23071384",
+                "curie": "http://www.bbc.co.uk/asset/02a2003d-26d9-c444-88bf-ce98805a1d11",
+                "assetId": "23071384"
+              },
+              "summary": "Evidence is mounting that one of Asia's most authoritarian leaders, Uzbek President Islam Karimov, has died of an illness after 27 years in power.",
+              "timestamp": 1472831770000,
+              "language": "bn",
+              "indexImage": {
+                "id": "63506169",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/177A0/test/_63506169_c7a32676-6761-4046-b9de-12b692b90bfa.jpg",
+                "path": "/cpsdevpb/177A0/test/_63506169_c7a32676-6761-4046-b9de-12b692b90bfa.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "alt tag",
+                "caption": "Mr Karimov had governed Uzbekistan since 1989",
+                "copyrightHolder": "AP",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:bengali/news-23071384",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "4e43043b-c08b-124c-a032-baa33f2f12a1",
+            "rank": 10,
+            "count": 6783,
+            "urn": "urn:bbc:curie:asset:4e43043b-c08b-124c-a032-baa33f2f12a1",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে হুমকি 17",
+                "headline": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে হুমকি 17"
+              },
+              "locators": {
+                "assetUri": "/bengali/23061410",
+                "cpsUrn": "urn:bbc:content:assetUri:bengali/23061410",
+                "curie": "http://www.bbc.co.uk/asset/4e43043b-c08b-124c-a032-baa33f2f12a1",
+                "assetId": "23061410"
+              },
+              "summary": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে হুমকি",
+              "timestamp": 1468922581000,
+              "language": "bn",
+              "indexImage": {
+                "id": "63496587",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+                "path": "/cpsdevpb/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+                "height": 432,
+                "width": 768,
+                "altText": "বিবাহিত স্ত্রী সাহানা!",
+                "caption": "বিবাহিত স্ত্রী সাহানা!",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:bengali/23061410",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "960ade54-31ec-3842-8500-9fa7092faf7b",
+            "rank": 11,
+            "count": 6716,
+            "urn": "urn:bbc:curie:asset:960ade54-31ec-3842-8500-9fa7092faf7b",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে হুমকি 5",
+                "headline": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে হুমকি 5"
+              },
+              "locators": {
+                "assetUri": "/bengali/23061368",
+                "cpsUrn": "urn:bbc:content:assetUri:bengali/23061368",
+                "curie": "http://www.bbc.co.uk/asset/960ade54-31ec-3842-8500-9fa7092faf7b",
+                "assetId": "23061368"
+              },
+              "summary": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে হুমকি",
+              "timestamp": 1468921970000,
+              "language": "bn",
+              "indexImage": {
+                "id": "63496587",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+                "path": "/cpsdevpb/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+                "height": 432,
+                "width": 768,
+                "altText": "বিবাহিত স্ত্রী সাহানা!",
+                "caption": "বিবাহিত স্ত্রী সাহানা!",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:bengali/23061368",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "67337037-b245-1846-bae0-35c863c89ee4",
+            "rank": 12,
+            "count": 6484,
+            "urn": "urn:bbc:curie:asset:67337037-b245-1846-bae0-35c863c89ee4",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে হুমকি 11",
+                "headline": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে হুমকি 11"
+              },
+              "locators": {
+                "assetUri": "/bengali/23061404",
+                "cpsUrn": "urn:bbc:content:assetUri:bengali/23061404",
+                "curie": "http://www.bbc.co.uk/asset/67337037-b245-1846-bae0-35c863c89ee4",
+                "assetId": "23061404"
+              },
+              "summary": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে হুমকি",
+              "timestamp": 1468922102000,
+              "language": "bn",
+              "indexImage": {
+                "id": "63496587",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+                "path": "/cpsdevpb/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+                "height": 432,
+                "width": 768,
+                "altText": "বিবাহিত স্ত্রী সাহানা!",
+                "caption": "বিবাহিত স্ত্রী সাহানা!",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:bengali/23061404",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "8b4948fd-56ad-3540-bd0d-fd8763066044",
+            "rank": 13,
+            "count": 6168,
+            "urn": "urn:bbc:curie:asset:8b4948fd-56ad-3540-bd0d-fd8763066044",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে 15",
+                "headline": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে 15"
+              },
+              "locators": {
+                "assetUri": "/bengali/23061408",
+                "cpsUrn": "urn:bbc:content:assetUri:bengali/23061408",
+                "curie": "http://www.bbc.co.uk/asset/8b4948fd-56ad-3540-bd0d-fd8763066044",
+                "assetId": "23061408"
+              },
+              "summary": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে হুমকি",
+              "timestamp": 1468922531000,
+              "language": "bn",
+              "indexImage": {
+                "id": "63496587",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+                "path": "/cpsdevpb/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+                "height": 432,
+                "width": 768,
+                "altText": "বিবাহিত স্ত্রী সাহানা!",
+                "caption": "বিবাহিত স্ত্রী সাহানা!",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:bengali/23061408",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "b28da462-d101-d24d-9a02-973400956c98",
+            "rank": 14,
+            "count": 5449,
+            "urn": "urn:bbc:curie:asset:b28da462-d101-d24d-9a02-973400956c98",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে হুমকি 7",
+                "headline": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে হুমকি 7"
+              },
+              "locators": {
+                "assetUri": "/bengali/23061370",
+                "cpsUrn": "urn:bbc:content:assetUri:bengali/23061370",
+                "curie": "http://www.bbc.co.uk/asset/b28da462-d101-d24d-9a02-973400956c98",
+                "assetId": "23061370"
+              },
+              "summary": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে হুমকি",
+              "timestamp": 1468922016000,
+              "language": "bn",
+              "indexImage": {
+                "id": "63496587",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+                "path": "/cpsdevpb/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+                "height": 432,
+                "width": 768,
+                "altText": "বিবাহিত স্ত্রী সাহানা!",
+                "caption": "বিবাহিত স্ত্রী সাহানা!",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:bengali/23061370",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "a46ec95b-251e-8843-866e-b5197747e4b0",
+            "rank": 15,
+            "count": 5384,
+            "urn": "urn:bbc:curie:asset:a46ec95b-251e-8843-866e-b5197747e4b0",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Qadir's story",
+                "headline": "headlin longer2 nkgffdgfgf 3"
+              },
+              "locators": {
+                "assetUri": "/bengali/news-23070323",
+                "cpsUrn": "urn:bbc:content:assetUri:bengali/news-23070323",
+                "curie": "http://www.bbc.co.uk/asset/a46ec95b-251e-8843-866e-b5197747e4b0",
+                "assetId": "23070323"
+              },
+              "summary": "kKerry erry is in bangladesh now.",
+              "timestamp": 1472456799000,
+              "language": "bn",
+              "byline": {
+                "name": "Qadir Kallol",
+                "title": "BBC Bengali",
+                "persons": [
+                  {
+                    "name": "Qadir Kallol",
+                    "function": "BBC Bengali"
+                  }
+                ]
+              },
+              "indexImage": {
+                "id": "63505427",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/11B02/test/_63505427_c3c4fee6-b22f-4aa3-ba31-4fd609945727.jpg",
+                "path": "/cpsdevpb/11B02/test/_63505427_c3c4fee6-b22f-4aa3-ba31-4fd609945727.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "police arrest jamaat activist in dhaka.",
+                "caption": "bangladesh police",
+                "copyrightHolder": "AFP",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:bengali/news-23070323",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "9c7f3e95-2bd4-bb41-aff3-176833c74572",
+            "rank": 16,
+            "count": 5320,
+            "urn": "urn:bbc:curie:asset:9c7f3e95-2bd4-bb41-aff3-176833c74572",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে হুমকি 12",
+                "headline": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে হুমকি 12"
+              },
+              "locators": {
+                "assetUri": "/bengali/23061406",
+                "cpsUrn": "urn:bbc:content:assetUri:bengali/23061406",
+                "curie": "http://www.bbc.co.uk/asset/9c7f3e95-2bd4-bb41-aff3-176833c74572",
+                "assetId": "23061406"
+              },
+              "summary": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে হুমকি",
+              "timestamp": 1468922482000,
+              "language": "bn",
+              "indexImage": {
+                "id": "63496587",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+                "path": "/cpsdevpb/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+                "height": 432,
+                "width": 768,
+                "altText": "বিবাহিত স্ত্রী সাহানা!",
+                "caption": "বিবাহিত স্ত্রী সাহানা!",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:bengali/23061406",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "fdd2b493-1b4d-0a48-8a36-2e0ba8480b29",
+            "rank": 17,
+            "count": 5221,
+            "urn": "urn:bbc:curie:asset:fdd2b493-1b4d-0a48-8a36-2e0ba8480b29",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে হুমকি 22",
+                "headline": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে হুমকি 22"
+              },
+              "locators": {
+                "assetUri": "/bengali/23061421",
+                "cpsUrn": "urn:bbc:content:assetUri:bengali/23061421",
+                "curie": "http://www.bbc.co.uk/asset/fdd2b493-1b4d-0a48-8a36-2e0ba8480b29",
+                "assetId": "23061421"
+              },
+              "summary": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে হুমকি",
+              "timestamp": 1468923983000,
+              "language": "bn",
+              "indexImage": {
+                "id": "63496587",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+                "path": "/cpsdevpb/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+                "height": 432,
+                "width": 768,
+                "altText": "বিবাহিত স্ত্রী সাহানা!",
+                "caption": "বিবাহিত স্ত্রী সাহানা!",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:bengali/23061421",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "89ca6833-fc2f-2046-a91b-05b2365e28a9",
+            "rank": 18,
+            "count": 4766,
+            "urn": "urn:bbc:curie:asset:89ca6833-fc2f-2046-a91b-05b2365e28a9",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে হুমকি 2",
+                "headline": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে হুমকি 2"
+              },
+              "locators": {
+                "assetUri": "/bengali/23061365",
+                "cpsUrn": "urn:bbc:content:assetUri:bengali/23061365",
+                "curie": "http://www.bbc.co.uk/asset/89ca6833-fc2f-2046-a91b-05b2365e28a9",
+                "assetId": "23061365"
+              },
+              "summary": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে হুমকি",
+              "timestamp": 1468921854000,
+              "language": "bn",
+              "indexImage": {
+                "id": "63496587",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+                "path": "/cpsdevpb/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+                "height": 432,
+                "width": 768,
+                "altText": "বিবাহিত স্ত্রী সাহানা!",
+                "caption": "বিবাহিত স্ত্রী সাহানা!",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:bengali/23061365",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "3f9cc8f6-24ac-9844-aa5f-833b5d9cc85d",
+            "rank": 19,
+            "count": 4750,
+            "urn": "urn:bbc:curie:asset:3f9cc8f6-24ac-9844-aa5f-833b5d9cc85d",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে হুমকি 9",
+                "headline": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে হুমকি 9"
+              },
+              "locators": {
+                "assetUri": "/bengali/23061372",
+                "cpsUrn": "urn:bbc:content:assetUri:bengali/23061372",
+                "curie": "http://www.bbc.co.uk/asset/3f9cc8f6-24ac-9844-aa5f-833b5d9cc85d",
+                "assetId": "23061372"
+              },
+              "summary": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে হুমকি",
+              "timestamp": 1468922055000,
+              "language": "bn",
+              "indexImage": {
+                "id": "63496587",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+                "path": "/cpsdevpb/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+                "height": 432,
+                "width": 768,
+                "altText": "বিবাহিত স্ত্রী সাহানা!",
+                "caption": "বিবাহিত স্ত্রী সাহানা!",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:bengali/23061372",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "624df231-0bad-d443-98ac-f1ed195603ba",
+            "rank": 20,
+            "count": 4274,
+            "urn": "urn:bbc:curie:asset:624df231-0bad-d443-98ac-f1ed195603ba",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে হুমকি 25",
+                "headline": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে হুমকি 25"
+              },
+              "locators": {
+                "assetUri": "/bengali/23061444",
+                "cpsUrn": "urn:bbc:content:assetUri:bengali/23061444",
+                "curie": "http://www.bbc.co.uk/asset/624df231-0bad-d443-98ac-f1ed195603ba",
+                "assetId": "23061444"
+              },
+              "summary": "‘দাঁড়ি না কাটলে আত্মহত্যা’: ইমামকে হুমকি",
+              "timestamp": 1468924104000,
+              "language": "bn",
+              "indexImage": {
+                "id": "63496587",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+                "path": "/cpsdevpb/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+                "height": 432,
+                "width": 768,
+                "altText": "বিবাহিত স্ত্রী সাহানা!",
+                "caption": "বিবাহিত স্ত্রী সাহানা!",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:bengali/23061444",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   },
-  "relatedContent": {
-    "site": {
-      "subType": "site",
-      "name": "Bengali",
-      "uri": "/bengali",
-      "type": "simple"
-    },
-    "groups": []
-  }
+  "contentType": "application/json; charset=utf-8"
 }

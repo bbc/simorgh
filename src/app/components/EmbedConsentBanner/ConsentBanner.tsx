@@ -1,8 +1,11 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import { useContext, MouseEvent } from 'react';
 import pathOr from 'ramda/src/pathOr';
 
+import { RequestContext } from '#app/contexts/RequestContext';
+import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import Text from '../Text';
 import Paragraph from '../Paragraph';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -25,10 +28,16 @@ const BANNER_URLS: BannerUrls = {
   cookiesUrl: {
     youtube: 'https://policies.google.com/technologies/cookies',
     tiktok: 'https://www.tiktok.com/legal/cookie-policy',
+    facebook: 'https://www.facebook.com/privacy/policies/cookies',
+    instagram: 'https://privacycenter.instagram.com/policies/cookies/',
+    twitter: 'https://help.twitter.com/en/rules-and-policies/twitter-cookies',
   },
   privacyUrl: {
     youtube: 'https://policies.google.com/privacy',
     tiktok: 'https://www.tiktok.com/legal/privacy-policy',
+    facebook: 'https://www.facebook.com/privacy/policy/',
+    instagram: 'https://privacycenter.instagram.com/policy',
+    twitter: 'https://twitter.com/en/privacy',
   },
 };
 
@@ -42,6 +51,9 @@ const getProviderName = (provider: ConsentBannerProviders) => {
   return {
     youtube: 'Google YouTube',
     tiktok: 'TikTok',
+    facebook: 'Facebook',
+    instagram: 'Instagram',
+    twitter: 'Twitter',
   }[provider];
 };
 
@@ -80,10 +92,8 @@ const getTranslations = (
     providerNameDelimiter,
     providerName,
   );
-
   const linkTextElements =
     bodyText?.match(/(\[link]|\[\/link])(.*?)(\[\/link]|\[link])/g) || [];
-
   if (!linkTextElements.length) {
     return {
       heading: headerText,
@@ -99,14 +109,15 @@ const getTranslations = (
     linkTextElements.length > 0 && cookiesUrl && (
       <a
         href={cookiesUrl}
+        className="focusIndicatorReducedWidth"
         aria-label={`${linkTextElements[0]
-          .replaceAll('[link]', '')
+          ?.replaceAll('[link]', '')
           .replaceAll('[/link]', '')
           .trim()}${externalLinkText}`}
         key={cookiesUrl}
       >
         {linkTextElements[0]
-          .replaceAll('[link]', '')
+          ?.replaceAll('[link]', '')
           .replaceAll('[/link]', '')
           .trim()}
       </a>
@@ -114,14 +125,15 @@ const getTranslations = (
     linkTextElements.length > 1 && privacyUrl && (
       <a
         href={privacyUrl}
+        className="focusIndicatorReducedWidth"
         aria-label={`${linkTextElements[1]
-          .replaceAll('[link]', '')
+          ?.replaceAll('[link]', '')
           .replaceAll('[/link]', '')
           .trim()}${externalLinkText}`}
         key={privacyUrl}
       >
         {linkTextElements[1]
-          .replaceAll('[link]', '')
+          ?.replaceAll('[link]', '')
           .replaceAll('[/link]', '')
           .trim()}
       </a>
@@ -163,6 +175,8 @@ const ConsentBanner = ({
   id,
 }: ConsentBannerContentProps) => {
   const { externalLinkText, translations } = useContext(ServiceContext);
+  const { pageType } = useContext(RequestContext);
+  const isLive = pageType === LIVE_PAGE;
 
   const consentTranslations = getTranslations(
     provider,
@@ -176,7 +190,10 @@ const ConsentBanner = ({
     <div
       data-testid="consentBanner"
       id={`consentBanner${id ? `-${id}` : ''}`}
-      css={consentBannerCss.parent}
+      css={[
+        consentBannerCss.parent,
+        isLive && consentBannerCss.tranparentBorder,
+      ]}
       ref={viewRef}
     >
       <Text

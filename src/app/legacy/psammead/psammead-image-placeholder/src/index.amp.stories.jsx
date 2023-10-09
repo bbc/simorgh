@@ -29,7 +29,7 @@ storiesOf('Components/Images/ImagePlaceholderAmp', module)
         height="128px"
         layout="intrinsic"
       >
-        <ImagePlaceholderAmp darkMode />
+        <ImagePlaceholderAmp darkPlaceholder />
       </amp-img>
     ),
     { notes },

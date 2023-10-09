@@ -4,7 +4,7 @@ import serviceHasPageType from '../../../support/helpers/serviceHasPageType';
 
 import crossPlatformTests from './tests';
 import visitPage from '../../../support/helpers/visitPage';
-import { overrideRendererOnTest } from '../../../support/helpers/onDemandRadioTv';
+import { getTopicPagePath } from './helpers';
 
 const pageType = 'topicPage';
 Object.keys(config)
@@ -17,13 +17,7 @@ Object.keys(config)
       describe(`${pageType} - ${currentPath}`, () => {
         before(() => {
           Cypress.env('currentPath', currentPath);
-
-          const overrideSuffix = overrideRendererOnTest();
-          const newPath = `${
-            currentPath + overrideSuffix + (overrideSuffix ? '&' : '?')
-          }page=1`;
-
-          visitPage(newPath, pageType);
+          visitPage(getTopicPagePath(currentPath), pageType);
         });
         crossPlatformTests({
           service,

@@ -1,58 +1,79 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { render } from '../../../../components/react-testing-library-with-providers';
 import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import arabic from '../../../../components/ThemeProvider/fontScripts/arabic';
 import { Headline, SubHeading } from './index';
+import { MEDIA_ARTICLE_PAGE } from '../../../../routes/utils/pageTypes';
 
 describe('Headline component', () => {
-  shouldMatchSnapshot(
-    'should render correctly',
-    <Headline script={latin} service="news">
-      This is my headline.
-    </Headline>,
-  );
+  it('should render correctly', () => {
+    const { container } = render(
+      <Headline script={latin} service="news">
+        This is my headline.
+      </Headline>,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render correctly in dark mode',
-    <Headline script={latin} service="news" darkMode>
-      This is my headline.
-    </Headline>,
-  );
+  it('should render correctly on page types that support a dark ui', () => {
+    const { container } = render(
+      <Headline script={latin} service="news">
+        This is my headline.
+      </Headline>,
+      {
+        pageType: MEDIA_ARTICLE_PAGE,
+      },
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render correctly with arabic script typography values',
-    <Headline script={arabic} service="persian">
-      هذا هو العنوان الخاص بي
-    </Headline>,
-  );
+  it('should render correctly with arabic script typography values', () => {
+    const { container } = render(
+      <Headline script={arabic} service="persian">
+        هذا هو العنوان الخاص بي
+      </Headline>,
+    );
+    expect(container).toMatchSnapshot();
+  });
 });
 
 describe('SubHeading component', () => {
-  shouldMatchSnapshot(
-    'should render correctly',
-    <SubHeading script={latin} service="news">
-      This is a SubHeading
-    </SubHeading>,
-  );
+  it('should render correctly', () => {
+    const { container } = render(
+      <SubHeading script={latin} service="news">
+        This is a SubHeading
+      </SubHeading>,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render correctly in dark mode',
-    <SubHeading script={latin} service="news" darkMode>
-      This is a SubHeading
-    </SubHeading>,
-  );
+  it('should render correctly on page types that support a dark ui', () => {
+    const { container } = render(
+      <SubHeading script={latin} service="news">
+        This is a SubHeading
+      </SubHeading>,
+      {
+        pageType: MEDIA_ARTICLE_PAGE,
+      },
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render correctly with arabic script typography values',
-    <SubHeading script={arabic} service="news">
-      هذا عنوان فرعي
-    </SubHeading>,
-  );
+  it('should render correctly with arabic script typography values', () => {
+    const { container } = render(
+      <SubHeading script={arabic} service="news">
+        هذا عنوان فرعي
+      </SubHeading>,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render correctly with an ID',
-    <SubHeading id="This-is-a-SubHeading" script={latin} service="news">
-      This is a SubHeading
-    </SubHeading>,
-  );
+  it('should render correctly with an ID', () => {
+    const { container } = render(
+      <SubHeading id="This-is-a-SubHeading" script={latin} service="news">
+        This is a SubHeading
+      </SubHeading>,
+    );
+    expect(container).toMatchSnapshot();
+  });
 });

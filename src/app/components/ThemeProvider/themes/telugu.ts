@@ -3,6 +3,7 @@ import devanagariScript from '../fontScripts/devanagari';
 import { MALLANNA_REGULAR } from '../fontFaces';
 import teluguFontVariants from '../fontVariants/telugu';
 import withThemeProvider from '../withThemeProvider';
+import brandSVG from '../chameleonLogos/telugu';
 
 const teluguTheme = {
   palette: {
@@ -17,6 +18,7 @@ const teluguTheme = {
     fontVariants: teluguFontVariants,
     fontFaces: [MALLANNA_REGULAR],
   },
+  brandSVG,
 };
 
 export default withThemeProvider(teluguTheme);

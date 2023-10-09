@@ -1,7 +1,6 @@
 import React from 'react';
 import { string } from 'prop-types';
 import styled from '@emotion/styled';
-import { C_WHITE } from '#psammead/psammead-styles/src/colours';
 import {
   GEL_SPACING_DBL,
   GEL_SPACING,
@@ -19,7 +18,7 @@ const GuidanceWrapper = styled.div`
   height: 100%;
   position: absolute;
   border: 0.0625rem solid transparent;
-  color: ${C_WHITE};
+  color: ${props => props.theme.palette.WHITE};
   ${({ guidanceMessage }) =>
     guidanceMessage
       ? `

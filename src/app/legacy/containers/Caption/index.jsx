@@ -1,9 +1,10 @@
+/* eslint-disable jsx-a11y/aria-role */
 import React, { useContext } from 'react';
 import { oneOfType, object, arrayOf, shape, string } from 'prop-types';
-import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
 import Caption from '#psammead/psammead-caption/src';
 import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '../../../contexts/ServiceContext';
+import VisuallyHiddenText from '../../../components/VisuallyHiddenText';
 import Blocks from '../Blocks';
 import Fragment from '../Fragment';
 import InlineLink from '../InlineLink';
@@ -49,8 +50,12 @@ const renderCaption = (
   dir,
 ) => (
   <Caption script={script} service={service} dir={dir}>
-    {offscreenText && <VisuallyHiddenText>{offscreenText}</VisuallyHiddenText>}
-    {paragraphBlocks.map(block => renderParagraph(block))}
+    <span role="text">
+      {offscreenText && (
+        <VisuallyHiddenText>{offscreenText}</VisuallyHiddenText>
+      )}
+      {paragraphBlocks.map(block => renderParagraph(block))}
+    </span>
   </Caption>
 );
 

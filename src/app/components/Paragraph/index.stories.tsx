@@ -3,13 +3,12 @@ import { withKnobs, select } from '@storybook/addon-knobs';
 
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { withServicesKnob } from '../../legacy/psammead/psammead-storybook-helpers/src';
-import { Services, Variants } from '../../models/types/global';
 import ThemeProvider from '../ThemeProvider';
 import Paragraph from '.';
+import md from './README.md';
+import { StoryProps } from '../../models/types/storybook';
 
-interface Props {
-  service: Services;
-  variant: Variants;
+interface Props extends StoryProps {
   text: string;
 }
 
@@ -80,6 +79,12 @@ export default {
   parameters: {
     chromatic: {
       disable: true,
+    },
+    docs: {
+      component: {
+        title: 'Paragraph',
+      },
+      page: md,
     },
   },
 };

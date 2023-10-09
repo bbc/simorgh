@@ -5,8 +5,6 @@ import renderDocument from '.';
 import { ServerApp } from '../../app/legacy/containers/App';
 import DocumentComponent from './component';
 
-jest.mock('../utilities/getAssetOrigins', () => () => '__mock_asset_origins__');
-
 jest.mock('@loadable/server', () => ({
   ChunkExtractor: jest.fn().mockImplementation(() => ({
     collectChunks: arg => arg,
@@ -54,6 +52,7 @@ describe('Render Document', () => {
       bbcOrigin: 'https://www.test.bbc.co.uk',
       data: { test: 'data' },
       isAmp: false,
+      isApp: false,
       routes: ['someRoute'],
       service: 'news',
       url: '/',
@@ -69,14 +68,13 @@ describe('Render Document', () => {
           html: 'no',
           ids: [],
         },
-        assetOrigins: '__mock_asset_origins__',
         data: { test: 'data' },
         helmet: undefined,
         isAmp: false,
+        isApp: false,
         legacyScripts: '__mock_script_elements__',
         modernScripts: '__mock_script_elements__',
         links: '__mock_link_elements__',
-        service: 'news',
       });
 
       expect(
@@ -87,6 +85,7 @@ describe('Render Document', () => {
         context: {},
         data: { test: 'data' },
         isAmp: false,
+        isApp: false,
         location: '/',
         routes: ['someRoute'],
         service: 'news',

@@ -1,10 +1,8 @@
 import React, { useContext } from 'react';
 import { node, string, shape } from 'prop-types';
-import path from 'ramda/src/path';
 
 import Timestamp from '#components/Promo/timestamp';
 import LiveLabel from '#psammead/psammead-live-label/src';
-import useViewTracker from '#hooks/useViewTracker';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
 import Title from './Title';
@@ -21,15 +19,12 @@ const Promo = ({
   ariaLabelledBy,
   mediaType,
   eventTrackingData,
+  className,
 }) => {
   const { service } = useContext(ServiceContext);
 
-  const eventTrackingDataSend = path(['block'], eventTrackingData);
-
-  const viewRef = useViewTracker(eventTrackingDataSend);
-
   return (
-    <PromoWrapper ref={viewRef}>
+    <PromoWrapper className={className}>
       <PromoContext.Provider
         value={{ service, to, ariaLabelledBy, eventTrackingData, mediaType }}
       >
@@ -56,8 +51,14 @@ Promo.propTypes = {
   ariaLabelledBy: string.isRequired,
   mediaType: string,
   eventTrackingData: shape({ block: shape({ componentName: string }) }),
+  className: string,
 };
 
-Promo.defaultProps = { to: '', mediaType: '', eventTrackingData: null };
+Promo.defaultProps = {
+  to: '',
+  mediaType: '',
+  eventTrackingData: null,
+  className: undefined,
+};
 
 export default Promo;

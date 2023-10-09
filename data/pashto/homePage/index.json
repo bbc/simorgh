@@ -1,0 +1,104 @@
+{
+  "data": {
+    "title": "کور پاڼه - BBC News پښتو",
+    "description": "د افغانستان، سیمې او نړۍ په اړه تازه خبرونه، رپوټونه، شننې، څېړنې، مرکې، لوبې، ژوندۍ رادیويي خپرونې، ويډیوګانې، ستاسې نظرونه او نور ډېر په زړه پورې مطالب په بي بي سي پښتو انټرنېټ پاڼه کې.",
+    "pageType": "home",
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "روسیه: د طالبانو حکومت په رسمیت نه پېژنو، خو خبرې ورسره ضرور دي  ",
+            "firstPublished": "2023-04-26T12:33:45.566Z",
+            "link": "https://www.bbc.com/pashto/articles/crg3rkrl39ko",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/e7ff/live/d2d85e90-e42d-11ed-bfcf-0f0f6a84ee61.jpg",
+            "description": "د روسیې د بهرنیو چارو وزیر وايي، مسکو به تر هغې په افغانستان کې د طالبانو حکومت په رسمیت ونه پېژني چې \"نړیوال مسوولیتونه\"  پر ځای نه کړي.\nد روسیې د تاس خبري‌ ژانس په وینا،‌ سرګیې لاوروف دغه‌ څرګندونې په نیویارک کې خبریالانو ته کړې دي. \nښاغلي ‌لاوروف ویلي‌ \"فکر کوو طالبان یو حقیقت دی،‌ له هغوی سره خبرې ضرور دي.\"",
+            "imageAlt": "لاوروف ",
+            "id": "crg3rkrl39ko"
+          },
+          {
+            "type": "article",
+            "title": "طالبان په نشه روږدو راغونډو کړو کسانو ته حرفوي زدکړې ورکوي ",
+            "firstPublished": "2023-04-26T05:24:07.646Z",
+            "link": "https://www.bbc.com/pashto/articles/c190emd732wo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/19b1/live/73a5f2e0-e3b3-11ed-8df1-d74cbf1089d7.jpg",
+            "description": "",
+            "imageAlt": "کابل",
+            "id": "c190emd732wo"
+          },
+          {
+            "type": "article",
+            "title": "سوډان؛ د مخکیني ولسمشر عمر البشیر حکومتي چارواکي له زندانه بهر شوي",
+            "firstPublished": "2023-04-26T08:07:02.000Z",
+            "link": "https://www.bbc.com/pashto/world-65397681",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/E9B6/production/_129503895_harun.jpg",
+            "description": "د سوډان یو شمېر مخکیني حکومتي چارواکي چې په جنګي جرمونو تورن دي د خرطوم له زندانه بهر شوي دي.",
+            "imageAlt": "Harun (left) in 2010 when he was governor of the South Kordofan region",
+            "id": "d19245eb-97c4-44d8-b7da-0906dd510e38"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:e74e8e47-caa7-44f8-b744-4afb53c236b6",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "title": "Top Stories",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "امریکایۍ پوځي کورنۍ کې د یتیمې افغانې نجلۍ لورولي باطله اعلان شوه",
+            "firstPublished": "2023-04-01T23:31:44.475Z",
+            "link": "https://www.bbc.com/pashto/articles/cz90g7pe616o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/8154/live/5aa507d0-d0e0-11ed-b565-c9e23c8c2ac8.png",
+            "description": "",
+            "imageAlt": "نجلۍ",
+            "id": "cz90g7pe616o"
+          },
+          {
+            "type": "article",
+            "title": "د پېښور لوړې محکمې لومړنۍ ښځينه قاضۍ؛ 'مسرت هلالي د حق خبرې کولو جرات لري'",
+            "firstPublished": "2023-04-01T17:11:34.000Z",
+            "link": "https://www.bbc.com/pashto/pakhtunkhwa-65145491",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/9D34/production/_129244204_90e097db-8ec7-42e1-a382-4e3aa463206f.jpg",
+            "description": "د خيبر پښتونخوا په قضایي تاريخ کې لومړی ځل يوه ښځینه چې مسرت هلالي نومېږي د پېښور های کورټ يا لوړې محکمي مشره قاضۍ نومول شوې ده. د پېښور د های کورټ له خوا خپرې شوې اعلاميې له مخې نوموړې نن شنبې (د اپرېل لومړۍ) د مشرې قاضۍ په توګه کار پيل کړ. له دې وړاندې روح الامين د يوې ورځې لپاره مشر قاضي غوره شوی و.",
+            "imageAlt": "مسرت هلالي",
+            "id": "2533b486-b40a-4674-b8d6-65cc63432a3a"
+          },
+          {
+            "type": "video",
+            "duration": "PT11M56S",
+            "title": "مېرمن: د دودونو پالل د ښځو ژوند کې څه منفي او مثبت رول لري؟",
+            "firstPublished": "2023-04-01T23:43:08.000Z",
+            "link": "https://www.bbc.com/pashto/afghanistan-65145496",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1220E/production/_129245247_p0fdc8gs.jpg",
+            "description": "د مېرمن د دې اوونۍ خپرونه کې په دې بحث شوی چې د دودونو پالل د ښځو ژوند کې څه منفي او مثبت رول لري؟",
+            "imageAlt": "شازيه مېرمن خپرونه",
+            "id": "28a60bd9-d107-43cc-8b26-8e8eb1a28d38"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:827e2294-1a58-46bd-ac84-8f8f8540b60a",
+        "curationType": "tipo-curation",
+        "position": 1,
+        "title": "ځانګړي مطالب",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      }
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:c15er11z5g9t",
+        "contentType": "index-home",
+        "pageIdentifier": "pashto.page",
+        "pageTitle": "کور پاڼه - BBC News پښتو"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8",
+  "dataSource": "Data is from Live tipo"
+}

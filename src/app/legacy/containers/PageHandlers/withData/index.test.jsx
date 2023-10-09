@@ -3,7 +3,7 @@ import {
   articleDataNews,
   articleDataPersian,
 } from '#pages/ArticlePage/fixtureData';
-import frontPageDataPidgin from '#data/pidgin/frontpage';
+import serbianFrontPageData from '#data/serbian/frontpage/lat.json';
 import {
   shouldMatchSnapshot,
   suppressPropWarnings,
@@ -25,32 +25,38 @@ describe('withData HOC', () => {
 
   const noDataProps = {
     status: 500,
+    location: '',
   };
 
   const noAssetData = {
     status: 200,
+    location: '',
   };
 
   const non200StatusProps = {
     pageData: articleDataNews,
     status: 157,
+    location: '',
   };
 
   const validNewsProps = {
     pageData: articleDataNews,
     status: 200,
     service: 'news',
+    location: '',
   };
 
   const validPersianProps = {
     pageData: articleDataPersian,
     status: 200,
     service: 'news',
+    location: '',
   };
 
   const validFrontPagesProps = {
-    pageData: frontPageDataPidgin,
+    pageData: serbianFrontPageData,
     status: 200,
+    location: '',
   };
 
   describe('with no data', () => {

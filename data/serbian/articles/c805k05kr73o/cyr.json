@@ -1,229 +1,882 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::article:c805k05kr73o",
-    "locators": {
-      "optimoUrn": "urn:bbc:optimo:asset:c805k05kr73o"
+  "data": {
+    "article": {
+      "content": {
+        "model": {
+          "blocks": [
+            {
+              "id": "a7c3a27f",
+              "type": "headline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "a7df97ef",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "9af0a8be",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "Ratovi zvezda: Niški džedaji pomažu decu bez roditelja",
+                            "blocks": [
+                              {
+                                "id": "dc4dbfb6",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "Ratovi zvezda: Niški džedaji pomažu decu bez roditelja",
+                                  "attributes": []
+                                },
+                                "position": [1, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [1, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [1, 1]
+                  }
+                ]
+              },
+              "position": [1]
+            },
+            {
+              "id": "b9d34d26",
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1562943337219,
+                "lastPublished": 1562943337219
+              },
+              "position": [2]
+            },
+            {
+              "id": "acf18769",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "10435a6a",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "U dalekoj galaksiji, na jugu Srbije, u Nišu, sila se probudila.",
+                      "blocks": [
+                        {
+                          "id": "67344a27",
+                          "type": "fragment",
+                          "model": {
+                            "text": "U dalekoj galaksiji, na jugu Srbije, u Nišu, sila se probudila.",
+                            "attributes": []
+                          },
+                          "position": [3, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [3, 1]
+                  },
+                  {
+                    "id": "bb6fa33d",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Iako ih prema aktuelnim dešavanjima u serijalu Ratovi zvezda gotovo i nema, džedaji se već nekoliko godina uspešno okupljaju u Nišu.",
+                      "blocks": [
+                        {
+                          "id": "f508d81b",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Iako ih prema aktuelnim dešavanjima u serijalu ",
+                            "attributes": []
+                          },
+                          "position": [3, 2, 1]
+                        },
+                        {
+                          "id": "62e6cfc3",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Ratovi zvezda",
+                            "attributes": ["italic"]
+                          },
+                          "position": [3, 2, 2]
+                        },
+                        {
+                          "id": "cd7315c5",
+                          "type": "fragment",
+                          "model": {
+                            "text": " gotovo i nema, džedaji se već nekoliko godina uspešno okupljaju u Nišu.",
+                            "attributes": []
+                          },
+                          "position": [3, 2, 3]
+                        }
+                      ]
+                    },
+                    "position": [3, 2]
+                  },
+                  {
+                    "id": "c9f65e36",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Sa više od sto članova, niški Džedajski pokret možda ne održava mir u svemiru, ali pokušava da živote nekih Nišlija učini boljim.",
+                      "blocks": [
+                        {
+                          "id": "c1ad0005",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Sa više od sto članova, niški Džedajski pokret možda ne održava mir u svemiru, ali pokušava da živote nekih Nišlija učini boljim.",
+                            "attributes": []
+                          },
+                          "position": [3, 3, 1]
+                        }
+                      ]
+                    },
+                    "position": [3, 3]
+                  },
+                  {
+                    "id": "f6ac8476",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Pored popkulturnih konvencija na kojima okupljaju fanove Ratova zvezda, niški džedaji organizuju i humanitarne akcije.",
+                      "blocks": [
+                        {
+                          "id": "6c752efe",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Pored popkulturnih konvencija na kojima okupljaju fanove ",
+                            "attributes": []
+                          },
+                          "position": [3, 4, 1]
+                        },
+                        {
+                          "id": "7fea3f43",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Ratova zvezda",
+                            "attributes": ["italic"]
+                          },
+                          "position": [3, 4, 2]
+                        },
+                        {
+                          "id": "5822a2cb",
+                          "type": "fragment",
+                          "model": {
+                            "text": ", niški džedaji organizuju i humanitarne akcije.",
+                            "attributes": []
+                          },
+                          "position": [3, 4, 3]
+                        }
+                      ]
+                    },
+                    "position": [3, 4]
+                  }
+                ]
+              },
+              "position": [3]
+            },
+            {
+              "id": "ecd15384",
+              "type": "mpu",
+              "model": {},
+              "position": [4]
+            },
+            {
+              "id": "f793479e",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "0d400eed",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "A ovog leta su rešili da odu korak dalje i organizuju kamp namenjen deci bez roditelja.",
+                      "blocks": [
+                        {
+                          "id": "820ece0e",
+                          "type": "fragment",
+                          "model": {
+                            "text": "A ovog leta su rešili da odu korak dalje i organizuju kamp namenjen deci bez roditelja.",
+                            "attributes": []
+                          },
+                          "position": [5, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [5, 1]
+                  }
+                ]
+              },
+              "position": [5]
+            },
+            {
+              "id": "e3472dba",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [6]
+            },
+            {
+              "id": "0ecf1c38",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "90f30957",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Kamp, koji će biti održan na Vlasinskom jezeru, nosiće naziv „Sila prati hrabre\".",
+                      "blocks": [
+                        {
+                          "id": "3856de52",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Kamp, koji će biti održan na Vlasinskom jezeru, nosiće naziv „Sila prati hrabre\".",
+                            "attributes": []
+                          },
+                          "position": [7, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [7, 1]
+                  }
+                ]
+              },
+              "position": [7]
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "id": "urn:bbc:ares::article:c805k05kr73o",
+        "atiAnalytics": {
+          "categoryName": null,
+          "contentId": "urn:bbc:optimo:asset:c805k05kr73o",
+          "language": "sr-latn",
+          "ldpThingIds": null,
+          "ldpThingLabels": null,
+          "nationsProducer": null,
+          "pageIdentifier": null,
+          "pageTitle": "Ratovi zvezda: Niški džedaji pomažu decu bez roditelja",
+          "timePublished": "2019-07-12T14:55:37.219Z",
+          "timeUpdated": "2019-07-12T14:55:37.219Z"
+        },
+        "locators": {
+          "optimoUrn": "urn:bbc:optimo:asset:c805k05kr73o"
+        },
+        "type": "article",
+        "createdBy": "Serbian",
+        "language": "sr-latn",
+        "firstPublished": 1562943337219,
+        "lastPublished": 1562943337219,
+        "analyticsLabels": {
+          "contentId": "urn:bbc:optimo:asset:c805k05kr73o",
+          "producer": "Serbian"
+        },
+        "passport": {
+          "language": "sr-latn",
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Serbian",
+          "taggings": []
+        },
+        "blockTypes": ["headline", "text", "paragraph", "fragment"],
+        "allowAdvertising": true
+      },
+      "promo": {
+        "headlines": {
+          "seoHeadline": "Ratovi zvezda: Niški džedaji pomažu decu bez roditelja"
+        }
+      }
     },
-    "type": "article",
-    "createdBy": "Serbian",
-    "language": "sr-cyrl",
-    "lastUpdated": 1562943443816,
-    "firstPublished": 1562943437714,
-    "lastPublished": 1562943437714,
-    "options": {},
-    "analyticsLabels": {},
-    "passport": {
-      "language": "sr-cyrl",
-      "home": "http://www.bbc.co.uk/ontologies/passport/home/Serbian"
-    },
-    "tags": {},
-    "version": "v1.1.0",
-    "blockTypes": ["headline", "text", "paragraph", "fragment"]
-  },
-  "content": {
-    "model": {
-      "blocks": [
+    "secondaryData": {
+      "topStories": [
         {
-          "type": "headline",
-          "model": {
-            "blocks": [
-              {
-                "type": "text",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "paragraph",
-                      "model": {
-                        "text": "CYR - Ратови звезда: Нишки џедаји помажу децу без родитеља",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "CYR - Ратови звезда: Нишки џедаји помажу децу без родитеља",
-                              "attributes": []
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
+          "name": "Promo test for cookie setting",
+          "summary": "Promo test for cookie setting",
+          "indexImage": {
+            "id": "63941551",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/3C9A/test/_63941551_p09lw3dk.jpg",
+            "path": "/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg",
+            "height": 1152,
+            "width": 2048,
+            "altText": "test",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "uri": "https://www.bbc.com/serbian/resources/idt-8a2fc374-12d4-4875-8aa6-d3612d93af96",
+          "contentType": "Text",
+          "assetTypeCode": "PRO",
+          "timestamp": 1662049948000,
+          "type": "link"
         },
         {
-          "type": "text",
-          "model": {
-            "blocks": [
+          "headlines": {
+            "headline": "Улична уметност: „Доносим експлозију боја у јавни простор“ MAP TEST 1"
+          },
+          "locators": {
+            "assetUri": "/serbian/cyr/23279016",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:281f815b-b6dc-e240-87ec-2fdcc6fe401f",
+            "assetId": "23279016",
+            "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/23279016",
+            "curie": "http://www.bbc.co.uk/asset/281f815b-b6dc-e240-87ec-2fdcc6fe401f"
+          },
+          "summary": "Улична уметност: „Доносим експлозију боја у јавни простор“ MAP TEST 1",
+          "timestamp": 1585040745000,
+          "language": "sr-Cyrl",
+          "cpsType": "MAP",
+          "media": {
+            "id": "p01qjbpq",
+            "subType": "clip",
+            "format": "video",
+            "title": "koala",
+            "synopses": {
+              "short": "koajaa",
+              "long": "koala ijm aus",
+              "medium": "australia"
+            },
+            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01qjbvt.jpg",
+            "embedding": true,
+            "advertising": false,
+            "caption": "nnnnn",
+            "versions": [
               {
-                "type": "paragraph",
-                "model": {
-                  "text": "У далекој галаксији, на југу Србије, у Нишу, сила се пробудила.",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "У далекој галаксији, на југу Србије, у Нишу, сила се пробудила.",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "Иако их према актуелним дешавањима у серијалу Ратови звезда готово и нема, џедаји се већ неколико година успешно окупљају у Нишу.",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "Иако их према актуелним дешавањима у серијалу ",
-                        "attributes": []
-                      }
-                    },
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "Ратови звезда",
-                        "attributes": ["italic"]
-                      }
-                    },
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": " готово и нема, џедаји се већ неколико година успешно окупљају у Нишу.",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "Са више од сто чланова, нишки Џедајски покрет можда не одржава мир у свемиру, али покушава да животе неких Нишлија учини бољим.",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "Са више од сто чланова, нишки Џедајски покрет можда не одржава мир у свемиру, али покушава да животе неких Нишлија учини бољим.",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "Поред попкултурних конвенција на којима окупљају фанове Ратова звезда, нишки џедаји организују и хуманитарне акције.",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "Поред попкултурних конвенција на којима окупљају фанове ",
-                        "attributes": []
-                      }
-                    },
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "Ратова звезда",
-                        "attributes": ["italic"]
-                      }
-                    },
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": ", нишки џедаји организују и хуманитарне акције.",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "А овог лета су решили да оду корак даље и организују камп намењен деци без родитеља.",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "А овог лета су решили да оду корак даље и организују камп намењен деци без родитеља.",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "Камп, који ће бити одржан на Власинском језеру, носиће назив „Сила прати храбре\".",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "Камп, који ће бити одржан на Власинском језеру, носиће назив „Сила прати храбре\".",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
+                "versionId": "p01qjbvb",
+                "types": ["Editorial"],
+                "duration": 15,
+                "durationISO8601": "PT15S",
+                "warnings": {},
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
+                },
+                "availableFrom": 1582890367000
               }
-            ]
-          }
+            ],
+            "smpKind": "programme",
+            "type": "media"
+          },
+          "indexImage": {
+            "id": "63733071",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/4289/test/_63733071_coronavirus.jpg",
+            "path": "/cpsdevpb/4289/test/_63733071_coronavirus.jpg",
+            "height": 351,
+            "width": 624,
+            "altText": "corona",
+            "caption": "corna",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "prominence": "standard",
+          "section": {
+            "subType": "IDX",
+            "name": "Почетна страна",
+            "uri": "/serbian/cyr/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:serbian/cyr/23279016",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Serbia MAP test"
+          },
+          "locators": {
+            "assetUri": "/serbian/cyr/srbija-23278974",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:00f43a6d-42bb-7a4c-995c-44462411e646",
+            "assetId": "23278974",
+            "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/srbija-23278974",
+            "curie": "http://www.bbc.co.uk/asset/00f43a6d-42bb-7a4c-995c-44462411e646"
+          },
+          "summary": "test",
+          "timestamp": 1585040685000,
+          "language": "sr-Cyrl",
+          "cpsType": "MAP",
+          "media": {
+            "id": "p01n6y6z",
+            "subType": "episode",
+            "format": "audio",
+            "title": "Audio test for articles, UK only",
+            "synopses": {
+              "short": "Audio test for articles, UK only"
+            },
+            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01n6y7l.jpg",
+            "embedding": false,
+            "advertising": false,
+            "caption": "Audio test for articles, UK only",
+            "versions": [
+              {
+                "versionId": "p01n6yb1",
+                "types": ["Original"],
+                "duration": 343,
+                "durationISO8601": "PT5M43S",
+                "warnings": {
+                  "short": "Contains some strong language.",
+                  "long": "Contains some strong language."
+                },
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": false
+                },
+                "availableFrom": 1563782700000
+              }
+            ],
+            "smpKind": "radioProgramme",
+            "type": "media"
+          },
+          "indexImage": {
+            "id": "63733055",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/D6F9/test/_63733055_p01n6y7l.jpg",
+            "path": "/cpsdevpb/D6F9/test/_63733055_p01n6y7l.jpg",
+            "height": 576,
+            "width": 1024,
+            "altText": "alt tag church image",
+            "copyrightHolder": "Google",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "prominence": "standard",
+          "id": "urn:bbc:ares::asset:serbian/cyr/srbija-23278974",
+          "type": "cps"
         }
-      ]
+      ],
+      "features": [
+        {
+          "headlines": {
+            "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 31"
+          },
+          "locators": {
+            "assetUri": "/serbian/cyr/media-23169628",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:dc35d343-6b9d-0e41-888c-fa036f1d4a61",
+            "assetId": "23169628",
+            "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169628",
+            "curie": "http://www.bbc.co.uk/asset/dc35d343-6b9d-0e41-888c-fa036f1d4a61"
+          },
+          "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
+          "timestamp": 1512405111000,
+          "language": "sr-Cyrl",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63603672",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
+            "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
+            "height": 351,
+            "width": 624,
+            "altText": "Крушевца",
+            "caption": "Крушевца",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63603674",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
+            "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Крушевца",
+            "caption": "Крушевца",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "id": "urn:bbc:ares::asset:serbian/cyr/media-23169628",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 32"
+          },
+          "locators": {
+            "assetUri": "/serbian/cyr/media-23169629",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:aa00d55a-de84-c24f-82fa-8e203b76d0c4",
+            "assetId": "23169629",
+            "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169629",
+            "curie": "http://www.bbc.co.uk/asset/aa00d55a-de84-c24f-82fa-8e203b76d0c4"
+          },
+          "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
+          "timestamp": 1512405121000,
+          "language": "sr-Cyrl",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63603672",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
+            "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
+            "height": 351,
+            "width": 624,
+            "altText": "Крушевца",
+            "caption": "Крушевца",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63603674",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
+            "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Крушевца",
+            "caption": "Крушевца",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "id": "urn:bbc:ares::asset:serbian/cyr/media-23169629",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 33"
+          },
+          "locators": {
+            "assetUri": "/serbian/cyr/media-23169630",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:8f52c324-d00c-f944-b299-f8f13c542b63",
+            "assetId": "23169630",
+            "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169630",
+            "curie": "http://www.bbc.co.uk/asset/8f52c324-d00c-f944-b299-f8f13c542b63"
+          },
+          "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
+          "timestamp": 1512405132000,
+          "language": "sr-Cyrl",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63603672",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
+            "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
+            "height": 351,
+            "width": 624,
+            "altText": "Крушевца",
+            "caption": "Крушевца",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63603674",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
+            "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Крушевца",
+            "caption": "Крушевца",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "id": "urn:bbc:ares::asset:serbian/cyr/media-23169630",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 34"
+          },
+          "locators": {
+            "assetUri": "/serbian/cyr/media-23169631",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:60898e52-4a3e-aa44-88f5-861644dde52d",
+            "assetId": "23169631",
+            "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169631",
+            "curie": "http://www.bbc.co.uk/asset/60898e52-4a3e-aa44-88f5-861644dde52d"
+          },
+          "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
+          "timestamp": 1512405146000,
+          "language": "sr-Cyrl",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63603672",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
+            "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
+            "height": 351,
+            "width": 624,
+            "altText": "Крушевца",
+            "caption": "Крушевца",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63603674",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
+            "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Крушевца",
+            "caption": "Крушевца",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "id": "urn:bbc:ares::asset:serbian/cyr/media-23169631",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 35"
+          },
+          "locators": {
+            "assetUri": "/serbian/cyr/media-23169632",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:1a8ff619-0767-5e4e-bff8-f665407588a1",
+            "assetId": "23169632",
+            "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169632",
+            "curie": "http://www.bbc.co.uk/asset/1a8ff619-0767-5e4e-bff8-f665407588a1"
+          },
+          "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
+          "timestamp": 1512405155000,
+          "language": "sr-Cyrl",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63603672",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
+            "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
+            "height": 351,
+            "width": 624,
+            "altText": "Крушевца",
+            "caption": "Крушевца",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63603674",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
+            "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Крушевца",
+            "caption": "Крушевца",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "id": "urn:bbc:ares::asset:serbian/cyr/media-23169632",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 36"
+          },
+          "locators": {
+            "assetUri": "/serbian/cyr/media-23169633",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:8ec20548-be66-3545-8d55-9d3378dd4874",
+            "assetId": "23169633",
+            "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/media-23169633",
+            "curie": "http://www.bbc.co.uk/asset/8ec20548-be66-3545-8d55-9d3378dd4874"
+          },
+          "summary": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију",
+          "timestamp": 1512405163000,
+          "language": "sr-Cyrl",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63603672",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
+            "path": "/cpsdevpb/6BEE/test/_63603672__92965982_50things_promo_image_24new_1920x1080.jpg",
+            "height": 351,
+            "width": 624,
+            "altText": "Крушевца",
+            "caption": "Крушевца",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63603674",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
+            "path": "/cpsdevpb/BA0E/test/_63603674__92965982_50things_promo_image_24new_1920x1080.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Крушевца",
+            "caption": "Крушевца",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "id": "urn:bbc:ares::asset:serbian/cyr/media-23169633",
+          "type": "cps"
+        }
+      ],
+      "mostRead": {
+        "generated": "2023-06-19T15:07:35.17Z",
+        "lastRecordTimeStamp": "2023-06-19T15:05:00Z",
+        "firstRecordTimeStamp": "2023-06-19T13:05:00Z",
+        "items": [
+          {
+            "id": "c99d3e20-130b-401c-be6f-5fcba603b1c0",
+            "rank": 1,
+            "title": "Руски пилот који је пребегао: „Ја сам официр, а не саучесник у злочину“",
+            "href": "/serbian/cyr/svet-65882164",
+            "timestamp": 1686989261000
+          },
+          {
+            "id": "c0eaac36-0d0b-426e-bfad-c324562298c8",
+            "rank": 2,
+            "title": "„Путинов кувар\", оснивач плаћеничке групе Вагнер: Ко је Јевгениј Пригожин",
+            "href": "/serbian/cyr/svet-64315811",
+            "timestamp": 1674116591000
+          },
+          {
+            "id": "f604abfb-58b1-466b-8a9a-7cd32822977b",
+            "rank": 3,
+            "title": "Путиновом критичару Наваљнију прете деценије затворске казне",
+            "href": "/serbian/cyr/svet-65951134",
+            "timestamp": 1687177656000
+          },
+          {
+            "id": "739741f2-9764-4121-b66a-a99cb1ff731d",
+            "rank": 4,
+            "title": "„Као деца делили смо чоколаду, али наследство само за бату\": Зашто се неке жене и даље одричу наследства",
+            "href": "/serbian/cyr/srbija-62562521",
+            "timestamp": 1661412714000
+          },
+          {
+            "id": "ee0a0e39-ec37-49b0-8398-ceb17f407d72",
+            "rank": 5,
+            "title": "Одлазак Трита Вилијамса, звезде филма „Коса\"",
+            "href": "/serbian/cyr/svet-65888440",
+            "timestamp": 1686646109000
+          },
+          {
+            "id": "c0b3980b-cbed-4b64-803c-5a1afbfb3433",
+            "rank": 6,
+            "title": "Како се одрасли боре са аутизмом",
+            "href": "/serbian/cyr/svet-56609385",
+            "timestamp": 1617357370000
+          },
+          {
+            "id": "adb44621-fca7-904d-86a7-d156299f8a61",
+            "rank": 7,
+            "title": "Други светски рат, антифашизам и ревизионизам: „Сутјеска је данас вишеструко издана\"",
+            "href": "/serbian/cyr/balkan-53027167",
+            "timestamp": 1592296343000
+          },
+          {
+            "id": "aa92c83f-ab2c-4d70-bb7a-5f656667a316",
+            "rank": 8,
+            "title": "Руска плаћеничка група Вагнер привела руског официра који је пуцао на њих",
+            "href": "/serbian/cyr/svet-65812508",
+            "timestamp": 1685969813000
+          },
+          {
+            "id": "5571eca2-e75b-44f1-865b-f419e5445517",
+            "rank": 9,
+            "title": "Ко је био Адем Јашари - легендарни командант и „мудри визионар“ или „терориста и криминалац“",
+            "href": "/serbian/cyr/balkan-64842342",
+            "timestamp": 1678101041000
+          },
+          {
+            "id": "4e5b2c0a-783e-4148-97cd-4d4d390fd5a3",
+            "rank": 10,
+            "title": "Зашто људи напуштају Русију и куда иду",
+            "href": "/serbian/cyr/svet-65805511",
+            "timestamp": 1686122419000
+          },
+          {
+            "id": "2462c918-306c-fc45-8900-9c4d3286313f",
+            "rank": 11,
+            "title": "Како је некада возио камион из прибојске фабрике",
+            "href": "/serbian/cyr/srbija-50238561",
+            "timestamp": 1572452357000
+          },
+          {
+            "id": "1193b7f6-4103-4dcc-bdf0-65151961bfd5",
+            "rank": 12,
+            "title": "Чудесно бекство из Алкатраза изненађује и после скоро 60 година",
+            "href": "/serbian/cyr/svet-58132728",
+            "timestamp": 1628692738000
+          },
+          {
+            "id": "fc305102-9add-48f7-9b11-1bcc98f1c5eb",
+            "rank": 13,
+            "title": "Американци оборили још једну летелицу, Кина оптужује САД: „Бар 10 пута сте ушли у наш ваздушни простор\"",
+            "href": "/serbian/cyr/svet-64616370",
+            "timestamp": 1676286308000
+          },
+          {
+            "id": "f83f373e-fcf9-435f-9307-b9723a96b8ee",
+            "rank": 14,
+            "title": "Да ли купачи у Јадранском мору треба да страхују од напада ајкула",
+            "href": "/serbian/cyr/srbija-62039244",
+            "timestamp": 1656949366000
+          },
+          {
+            "id": "f79852c4-9c0d-44af-9c0e-b70375ec0c3f",
+            "rank": 15,
+            "title": "„Пљунути оригинал\" - како у Србији да препознате фалсификовани новац",
+            "href": "/serbian/cyr/srbija-60309144",
+            "timestamp": 1644826076000
+          },
+          {
+            "id": "f75f7ab2-034c-4216-b582-3dfc1354222b",
+            "rank": 16,
+            "title": "Рат против Америке био би катастрофа, упозорио кинески министар одбране",
+            "href": "/serbian/cyr/svet-65807933",
+            "timestamp": 1685952673000
+          },
+          {
+            "id": "f644d5df-adce-47e1-b229-414bb44f4f0d",
+            "rank": 17,
+            "title": "Осумњичени „криптокраљ\" До Квон уз кауцију излази из притвора у Црној Гори",
+            "href": "/serbian/cyr/balkan-65055149",
+            "timestamp": 1683899611000
+          },
+          {
+            "id": "f3614f4f-c8cc-476f-92fb-2ee6d1184dbe",
+            "rank": 18,
+            "title": "Џакови новца за почетак нове фудбалске ере: Кристијано Роналдо је нови играч Ал Насра из Саудијске Арабије",
+            "href": "/serbian/cyr/svet-64131703",
+            "timestamp": 1672438737000
+          },
+          {
+            "id": "f0b853d1-519d-5447-b75f-e75da23a257b",
+            "rank": 19,
+            "title": "Македонци - невидљива мањина у Грчкој",
+            "href": "/serbian/cyr/balkan-47378142",
+            "timestamp": 1551609602000
+          },
+          {
+            "id": "eb7a1821-2801-4993-afdf-548ab851d5d3",
+            "rank": 20,
+            "title": "Ко убудуће бира судије и тужиоце у Србији",
+            "href": "/serbian/cyr/srbija-64584762",
+            "timestamp": 1675968848000
+          }
+        ]
+      }
     }
   },
-  "promo": {
-    "headlines": {
-      "seoHeadline": "Ратови звезда: Нишки џедаји помажу децу без родитеља"
-    },
-    "locators": {
-      "optimoUrn": "urn:bbc:optimo:asset:c805k05kr73o"
-    },
-    "summary": {
-      "blocks": [
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "attributes": [],
-                        "text": ""
-                      },
-                      "type": "fragment"
-                    }
-                  ],
-                  "text": ""
-                },
-                "type": "paragraph"
-              }
-            ]
-          },
-          "type": "text"
-        }
-      ]
-    },
-    "timestamp": 1562943437714,
-    "id": "urn:bbc:ares::article:c805k05kr73o",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "site": {
-      "subType": "site",
-      "name": "Serbian",
-      "uri": "/serbian",
-      "type": "simple"
-    },
-    "groups": []
-  }
+  "contentType": "application/json; charset=utf-8"
 }

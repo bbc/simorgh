@@ -1,9 +1,8 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import * as viewTracking from '#hooks/useViewTracker';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
+import { render } from '../../../components/react-testing-library-with-providers';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import {
   threeLinks,
@@ -167,17 +166,23 @@ describe('ScrollablePromo', () => {
     });
   });
 
-  shouldMatchSnapshot(
-    'it should match a11y snapshot for single card',
-    <ScrollablePromoWithContext blocks={oneLinkOnly} />,
-  );
+  it('it should match a11y snapshot for single card', () => {
+    const { container } = render(
+      <ScrollablePromoWithContext blocks={oneLinkOnly} />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'it should match a11y snapshot for list',
-    <ScrollablePromoWithContext blocks={threeLinks} />,
-  );
-  shouldMatchSnapshot(
-    'it should match a11y snapshot for list with no title',
-    <ScrollablePromoWithContext blocks={oneLinkWithNoTitle} />,
-  );
+  it('it should match a11y snapshot for list', () => {
+    const { container } = render(
+      <ScrollablePromoWithContext blocks={threeLinks} />,
+    );
+    expect(container).toMatchSnapshot();
+  });
+  it('it should match a11y snapshot for list with no title', () => {
+    const { container } = render(
+      <ScrollablePromoWithContext blocks={oneLinkWithNoTitle} />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 });

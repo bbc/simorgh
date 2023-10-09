@@ -1,12 +1,4 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_POSTBOX_30,
-  C_GHOST,
-} from '#psammead/psammead-styles/src/colours';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import AmpNavigation from './index.amp';
 import {
@@ -15,6 +7,7 @@ import {
   dropdownListItems,
   scrollableListItems,
 } from './testHelpers';
+import { render } from '../../../components/react-testing-library-with-providers';
 
 const navigation = (
   <AmpNavigation
@@ -24,16 +17,15 @@ const navigation = (
     script={latin}
     service="news"
     dir="ltr"
-    brandBackgroundColour={C_POSTBOX}
-    brandForegroundColour={C_GHOST}
-    brandHighlightColour={C_WHITE}
-    brandBorderColour={C_POSTBOX_30}
   />
 );
 
 describe('AMP Navigation', () => {
   describe('Snapshots', () => {
-    shouldMatchSnapshot('should correctly render AMP navigation', navigation);
+    it('should correctly render AMP navigation', () => {
+      const { container } = render(navigation);
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('Assertions', () => {

@@ -127,7 +127,7 @@ exports[`AmpSocialEmbed should render a notice when the provider is unsupported 
     class="emotion-0 emotion-1"
   >
     <a
-      class="emotion-2 emotion-3"
+      class="focusIndicatorRemove emotion-2 emotion-3"
       href="#skip-unknown-content"
     >
       <span>
@@ -220,6 +220,134 @@ exports[`AmpSocialEmbed should render correctly for Facebook 1`] = `
 }
 
 .emotion-4 {
+  background-color: #FFFFFF;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  border: 0.0625rem solid #8A8C8E;
+}
+
+.emotion-5 {
+  color: #141414;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-5 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-5 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+.emotion-6 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0;
+  margin: 1rem 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-6 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-6 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+.emotion-6 a {
+  color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0.0625rem solid #141414;
+}
+
+.emotion-6 a:visited {
+  color: #545658;
+  border-bottom: 0.0625rem solid #545658;
+}
+
+.emotion-6 a:hover,
+.emotion-6 a:focus {
+  color: #B80000;
+  border-bottom: 0.125rem solid #B80000;
+}
+
+.emotion-7 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  background-color: #FFFFFF;
+  border: 0.0625rem solid #8A8C8E;
+  border-radius: 0;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-7 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-7 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-7:hover,
+.emotion-7:focus {
+  background-color: #B80000;
+  color: #FFFFFF;
+  border: 0.0625rem solid #B80000;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-7:focus-visible {
+  outline: 0.1875rem solid #000000;
+}
+
+.emotion-8 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -235,21 +363,68 @@ exports[`AmpSocialEmbed should render correctly for Facebook 1`] = `
     class="emotion-0 emotion-1"
   >
     <a
-      class="emotion-2 emotion-3"
+      class="focusIndicatorRemove emotion-2 emotion-3"
       href="#skip-facebook-content"
     >
       <span>
         Skip Facebook content
       </span>
     </a>
-    <amp-facebook
-      data-embed-as="post"
-      height="1"
-      layout="responsive"
-      width="1"
-    />
+    <div
+      class="emotion-4"
+      data-testid="consentBanner"
+      id="consentBanner-568952960644257"
+    >
+      <strong
+        class="emotion-5"
+        data-testid="banner-heading"
+      >
+        Allow Facebook content?
+      </strong>
+      <p
+        class="emotion-6"
+        data-testid="banner-body"
+      >
+        This article contains content provided by Facebook.  We ask for your permission before anything is loaded, as they may be using cookies and other technologies.  You may want to read Facebook 
+        <a
+          aria-label="cookie policy, external"
+          class="focusIndicatorReducedWidth"
+          href="https://www.facebook.com/privacy/policies/cookies"
+        >
+          cookie policy
+        </a>
+         and 
+        <a
+          aria-label="privacy policy, external"
+          class="focusIndicatorReducedWidth"
+          href="https://www.facebook.com/privacy/policy/"
+        >
+          privacy policy
+        </a>
+         before accepting. To view this content choose 'accept and continue'.
+      </p>
+      <button
+        class="emotion-7"
+        data-testid="banner-button"
+        on="tap:consentBanner-568952960644257.hide,embed-568952960644257.show"
+        type="button"
+      >
+        Accept and continue
+      </button>
+    </div>
+    <div
+      hidden=""
+      id="embed-568952960644257"
+    >
+      <amp-facebook
+        data-embed-as="post"
+        height="1"
+        layout="responsive"
+        width="1"
+      />
+    </div>
     <p
-      class="emotion-4 emotion-5"
+      class="emotion-8 emotion-9"
       id="skip-facebook-content"
       tabindex="-1"
     >
@@ -317,6 +492,134 @@ exports[`AmpSocialEmbed should render correctly for Instagram 1`] = `
 }
 
 .emotion-4 {
+  background-color: #FFFFFF;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  border: 0.0625rem solid #8A8C8E;
+}
+
+.emotion-5 {
+  color: #141414;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-5 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-5 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+.emotion-6 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0;
+  margin: 1rem 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-6 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-6 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+.emotion-6 a {
+  color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0.0625rem solid #141414;
+}
+
+.emotion-6 a:visited {
+  color: #545658;
+  border-bottom: 0.0625rem solid #545658;
+}
+
+.emotion-6 a:hover,
+.emotion-6 a:focus {
+  color: #B80000;
+  border-bottom: 0.125rem solid #B80000;
+}
+
+.emotion-7 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  background-color: #FFFFFF;
+  border: 0.0625rem solid #8A8C8E;
+  border-radius: 0;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-7 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-7 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-7:hover,
+.emotion-7:focus {
+  background-color: #B80000;
+  color: #FFFFFF;
+  border: 0.0625rem solid #B80000;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-7:focus-visible {
+  outline: 0.1875rem solid #000000;
+}
+
+.emotion-8 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -332,22 +635,69 @@ exports[`AmpSocialEmbed should render correctly for Instagram 1`] = `
     class="emotion-0 emotion-1"
   >
     <a
-      class="emotion-2 emotion-3"
+      class="focusIndicatorRemove emotion-2 emotion-3"
       href="#skip-instagram-content"
     >
       <span>
         Skip Instagram content
       </span>
     </a>
-    <amp-instagram
-      data-captioned="true"
-      data-shortcode="B8FPf4ZphHi"
-      height="1"
-      layout="responsive"
-      width="1"
-    />
+    <div
+      class="emotion-4"
+      data-testid="consentBanner"
+      id="consentBanner-B8FPf4ZphHi"
+    >
+      <strong
+        class="emotion-5"
+        data-testid="banner-heading"
+      >
+        Allow Instagram content?
+      </strong>
+      <p
+        class="emotion-6"
+        data-testid="banner-body"
+      >
+        This article contains content provided by Instagram.  We ask for your permission before anything is loaded, as they may be using cookies and other technologies.  You may want to read Instagram 
+        <a
+          aria-label="cookie policy, external"
+          class="focusIndicatorReducedWidth"
+          href="https://privacycenter.instagram.com/policies/cookies/"
+        >
+          cookie policy
+        </a>
+         and 
+        <a
+          aria-label="privacy policy, external"
+          class="focusIndicatorReducedWidth"
+          href="https://privacycenter.instagram.com/policy"
+        >
+          privacy policy
+        </a>
+         before accepting. To view this content choose 'accept and continue'.
+      </p>
+      <button
+        class="emotion-7"
+        data-testid="banner-button"
+        on="tap:consentBanner-B8FPf4ZphHi.hide,embed-B8FPf4ZphHi.show"
+        type="button"
+      >
+        Accept and continue
+      </button>
+    </div>
+    <div
+      hidden=""
+      id="embed-B8FPf4ZphHi"
+    >
+      <amp-instagram
+        data-captioned="true"
+        data-shortcode="B8FPf4ZphHi"
+        height="1"
+        layout="responsive"
+        width="1"
+      />
+    </div>
     <p
-      class="emotion-4 emotion-5"
+      class="emotion-8 emotion-9"
       id="skip-instagram-content"
       tabindex="-1"
     >
@@ -415,6 +765,134 @@ exports[`AmpSocialEmbed should render correctly for Twitter 1`] = `
 }
 
 .emotion-4 {
+  background-color: #FFFFFF;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  border: 0.0625rem solid #8A8C8E;
+}
+
+.emotion-5 {
+  color: #141414;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-5 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-5 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+.emotion-6 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0;
+  margin: 1rem 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-6 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-6 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+.emotion-6 a {
+  color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0.0625rem solid #141414;
+}
+
+.emotion-6 a:visited {
+  color: #545658;
+  border-bottom: 0.0625rem solid #545658;
+}
+
+.emotion-6 a:hover,
+.emotion-6 a:focus {
+  color: #B80000;
+  border-bottom: 0.125rem solid #B80000;
+}
+
+.emotion-7 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  background-color: #FFFFFF;
+  border: 0.0625rem solid #8A8C8E;
+  border-radius: 0;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-7 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-7 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-7:hover,
+.emotion-7:focus {
+  background-color: #B80000;
+  color: #FFFFFF;
+  border: 0.0625rem solid #B80000;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-7:focus-visible {
+  outline: 0.1875rem solid #000000;
+}
+
+.emotion-8 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -430,21 +908,68 @@ exports[`AmpSocialEmbed should render correctly for Twitter 1`] = `
     class="emotion-0 emotion-1"
   >
     <a
-      class="emotion-2 emotion-3"
+      class="focusIndicatorRemove emotion-2 emotion-3"
       href="#skip-twitter-content"
     >
       <span>
         Skip Twitter content
       </span>
     </a>
-    <amp-twitter
-      data-tweetid="1237210910835392512"
-      height="9"
-      layout="responsive"
-      width="16"
-    />
+    <div
+      class="emotion-4"
+      data-testid="consentBanner"
+      id="consentBanner-1237210910835392512"
+    >
+      <strong
+        class="emotion-5"
+        data-testid="banner-heading"
+      >
+        Allow Twitter content?
+      </strong>
+      <p
+        class="emotion-6"
+        data-testid="banner-body"
+      >
+        This article contains content provided by Twitter.  We ask for your permission before anything is loaded, as they may be using cookies and other technologies.  You may want to read Twitter 
+        <a
+          aria-label="cookie policy, external"
+          class="focusIndicatorReducedWidth"
+          href="https://help.twitter.com/en/rules-and-policies/twitter-cookies"
+        >
+          cookie policy
+        </a>
+         and 
+        <a
+          aria-label="privacy policy, external"
+          class="focusIndicatorReducedWidth"
+          href="https://twitter.com/en/privacy"
+        >
+          privacy policy
+        </a>
+         before accepting. To view this content choose 'accept and continue'.
+      </p>
+      <button
+        class="emotion-7"
+        data-testid="banner-button"
+        on="tap:consentBanner-1237210910835392512.hide,embed-1237210910835392512.show"
+        type="button"
+      >
+        Accept and continue
+      </button>
+    </div>
+    <div
+      hidden=""
+      id="embed-1237210910835392512"
+    >
+      <amp-twitter
+        data-tweetid="1237210910835392512"
+        height="9"
+        layout="responsive"
+        width="16"
+      />
+    </div>
     <p
-      class="emotion-4 emotion-5"
+      class="emotion-8 emotion-9"
       id="skip-twitter-content"
       tabindex="-1"
     >
@@ -546,7 +1071,7 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
   font-weight: 700;
 }
 
-@media (min-width: 20rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-7 {
     font-size: 1.125rem;
     line-height: 1.375rem;
@@ -571,7 +1096,7 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
   margin: 1rem 0;
 }
 
-@media (min-width: 20rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-8 {
     font-size: 1rem;
     line-height: 1.375rem;
@@ -617,7 +1142,7 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
   cursor: pointer;
 }
 
-@media (min-width: 20rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-9 {
     font-size: 1rem;
     line-height: 1.25rem;
@@ -638,6 +1163,10 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
   border: 0.0625rem solid #B80000;
   -webkit-text-decoration: underline;
   text-decoration: underline;
+}
+
+.emotion-9:focus-visible {
+  outline: 0.1875rem solid #000000;
 }
 
 .emotion-10 {
@@ -689,7 +1218,7 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
     class="emotion-0 emotion-1"
   >
     <a
-      class="emotion-2 emotion-3"
+      class="focusIndicatorRemove emotion-2 emotion-3"
       href="#skip-youtube-content"
     >
       <span>
@@ -717,6 +1246,7 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
           This article contains content provided by Google YouTube.  We ask for your permission before anything is loaded, as they may be using cookies and other technologies.  You may want to read Google YouTube 
           <a
             aria-label="cookie policy, external"
+            class="focusIndicatorReducedWidth"
             href="https://policies.google.com/technologies/cookies"
           >
             cookie policy
@@ -724,6 +1254,7 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
            and 
           <a
             aria-label="privacy policy, external"
+            class="focusIndicatorReducedWidth"
             href="https://policies.google.com/privacy"
           >
             privacy policy
@@ -858,7 +1389,7 @@ exports[`CanonicalSocialEmbed Instagram should render correctly for Instagram 1`
   class="emotion-0 emotion-1"
 >
   <a
-    class="emotion-2 emotion-3"
+    class="focusIndicatorRemove emotion-2 emotion-3"
     href="#skip-instagram-content"
   >
     <span>
@@ -1139,7 +1670,7 @@ exports[`CanonicalSocialEmbed Twitter should render correctly for Twitter 1`] = 
   class="emotion-0 emotion-1"
 >
   <a
-    class="emotion-2 emotion-3"
+    class="focusIndicatorRemove emotion-2 emotion-3"
     href="#skip-twitter-content"
   >
     <span>
@@ -1311,7 +1842,7 @@ exports[`CanonicalSocialEmbed YouTube should render correctly for YouTube 1`] = 
   class="emotion-0 emotion-1"
 >
   <a
-    class="emotion-2 emotion-3"
+    class="focusIndicatorRemove emotion-2 emotion-3"
     href="#skip-youtube-content"
   >
     <span>
@@ -1479,7 +2010,7 @@ exports[`CanonicalSocialEmbed should render a notice when the provider is unsupp
     class="emotion-0 emotion-1"
   >
     <a
-      class="emotion-2 emotion-3"
+      class="focusIndicatorRemove emotion-2 emotion-3"
       href="#skip-unknown-content"
     >
       <span>
@@ -1642,7 +2173,7 @@ exports[`CanonicalSocialEmbed should render a notice when there is no oEmbed res
     class="emotion-0 emotion-1"
   >
     <a
-      class="emotion-2 emotion-3"
+      class="focusIndicatorRemove emotion-2 emotion-3"
       href="#skip-twitter-content"
     >
       <span>

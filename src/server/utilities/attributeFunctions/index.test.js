@@ -20,14 +20,6 @@ describe('getLinkAttributes', () => {
     );
   });
 
-  it('includes rel attribute configured for module preload', () => {
-    const attributes = getLinkAttributes(chunk);
-
-    expect(attributes).toEqual(
-      expect.objectContaining({ rel: 'modulepreload' }),
-    );
-  });
-
   it('includes chunk url as href attribute', () => {
     const attributes = getLinkAttributes(chunk);
 

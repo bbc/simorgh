@@ -1,9 +1,9 @@
 import React from 'react';
-import { render } from '@testing-library/react';
 import {
   isNull,
   suppressPropWarnings,
 } from '#psammead/psammead-test-helpers/src';
+import { render } from '../../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import ArticleTimestamp from '.';
 import {

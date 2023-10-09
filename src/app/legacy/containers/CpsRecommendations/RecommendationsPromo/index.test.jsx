@@ -1,9 +1,8 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { render } from '@testing-library/react';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import { cpsRecommendation, optimoRecommendation } from './fixture';
+import { render } from '../../../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import RecommendationsPromo from '.';
 
@@ -24,10 +23,21 @@ const Component = ({ promo }) => {
 };
 
 describe('RecommendationsPromo', () => {
-  shouldMatchSnapshot(
-    'it renders a Story Promo wrapped in a Grid component',
-    <Component promo={cpsRecommendation} />,
-  );
+  it('it renders a Story Promo wrapped in a Grid component', () => {
+    const { container } = render(
+      <RecommendationsPromo promo={cpsRecommendation} dir="ltr" />,
+      {
+        service: 'pidgin',
+        toggles: {
+          eventTracking: {
+            enabled: true,
+          },
+        },
+        pageType: 'STY',
+      },
+    );
+    expect(container).toMatchSnapshot();
+  });
 
   it('should render the title of the article as a link', () => {
     const { getByText, container } = render(

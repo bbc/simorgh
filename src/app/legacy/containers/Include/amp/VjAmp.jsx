@@ -5,7 +5,6 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
-import { C_EBON } from '#psammead/psammead-styles/src/colours';
 import { getSansBold } from '#psammead/psammead-styles/src/font-styles';
 import { GEL_PICA } from '#psammead/gel-foundations/src/typography';
 import { Helmet } from 'react-helmet';
@@ -51,7 +50,7 @@ const StyledAmpIframe = styled(AmpIframe)`
 
     &::after {
       background-color: #fff;
-      border-top: ${KEYLINE_WIDTH} solid ${C_EBON};
+      border-top: ${KEYLINE_WIDTH} solid ${props => props.theme.palette.EBON};
       content: '';
       display: block;
       height: 50%;
@@ -65,7 +64,7 @@ const StyledAmpIframe = styled(AmpIframe)`
     button {
       ${({ service }) => getSansBold(service)}
       ${GEL_PICA}
-      background-color: ${C_EBON};
+      background-color: ${props => props.theme.palette.EBON};
       border: 0.0625rem solid transparent;
       color: #fff;
       cursor: pointer;

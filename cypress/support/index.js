@@ -6,23 +6,39 @@ Cypress.Screenshot.defaults({
   screenshotOnRunFailure: false,
 });
 
+const KNOWN_URLS = ['https://www.bbc.com/usingthebbc'];
+
+const isKnownUrl = testLocation =>
+  KNOWN_URLS.some(url => testLocation.startsWith(url));
+
 Cypress.on(`window:before:load`, win => {
   cy.stub(win.console, `error`).callsFake(msg => {
-    cy.now(`task`, `error`, msg);
-    throw new Error(msg);
+    if (!isKnownUrl(win.location.href)) {
+      cy.now(`task`, `error`, msg);
+      throw new Error(msg);
+    }
   });
 });
 
-// Catches an unexplained error experienced while running the following test:
-// https://github.com/bbc/simorgh/blob/49e5b72db84df57144a92963734bcd080938e45b/cypress/integration/pages/storyPage/testsForCanonicalOnly.js#L14
-// We decided we could not invest any more time in the unexplained error as the test
-// successfully functioned with this specific error caught and discarded.
+const KNOWN_ERRORS = [
+  // Catches an unexplained error experienced while running the following test:
+  // https://github.com/bbc/simorgh/blob/49e5b72db84df57144a92963734bcd080938e45b/cypress/integration/pages/storyPage/testsForCanonicalOnly.js#L14
+  // We decided we could not invest any more time in the unexplained error as the test
+  // successfully functioned with this specific error caught and discarded.
+  "Cannot read property 'postMessage' of undefined",
+  // Catches hydration errors that seem to occassionally occur. This happened since the React 18 upgrade:
+  // https://github.com/bbc/simorgh/pull/10550
+  // React 18 elevates hydration errors from 'warning' to 'error' level. So its likely this issue has
+  // always been present, but was not caught before.
+  'Minified React error #418',
+];
+
 // eslint-disable-next-line consistent-return
 Cypress.on('uncaught:exception', (err, runnable, promise) => {
   // returning false here prevents Cypress from failing the test
   if (
     err.message &&
-    err.message.includes("Cannot read property 'postMessage' of undefined")
+    KNOWN_ERRORS.some(knownErr => err.message.includes(knownErr))
   ) {
     return false;
   }

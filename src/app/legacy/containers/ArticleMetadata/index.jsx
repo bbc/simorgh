@@ -2,12 +2,13 @@ import React, { useContext } from 'react';
 import { string, shape, arrayOf } from 'prop-types';
 import getBrandedImage from '#lib/utilities/getBrandedImage';
 import { ServiceContext } from '../../../contexts/ServiceContext';
-import Metadata from '../Metadata';
+import Metadata from '../../../components/Metadata';
 
 const ArticleMetadata = ({
   articleId,
   title,
   author,
+  twitterHandle,
   firstPublished,
   lastPublished,
   section,
@@ -27,6 +28,7 @@ const ArticleMetadata = ({
       <Metadata
         title={title}
         lang={lang}
+        twitterHandle={twitterHandle}
         description={description}
         openGraphType="article"
         aboutTags={aboutTags}
@@ -58,6 +60,7 @@ ArticleMetadata.propTypes = {
   articleId: string,
   title: string.isRequired,
   author: string.isRequired,
+  twitterHandle: string,
   firstPublished: string.isRequired,
   lastPublished: string.isRequired,
   section: string,
@@ -71,6 +74,7 @@ ArticleMetadata.propTypes = {
 
 ArticleMetadata.defaultProps = {
   articleId: '',
+  twitterHandle: null,
   section: '',
   aboutTags: [],
   mentionsTags: [],

@@ -12,13 +12,14 @@ import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
 import { getLongPrimer } from '#psammead/gel-foundations/src/typography';
-import { C_METAL, C_GREY_6 } from '#psammead/psammead-styles/src/colours';
 import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 
-const rtlStyles = `
+const rtlStyles = ({ theme }) => `
   margin-right: ${GEL_MARGIN_BELOW_400PX};
-  border-right: 1px solid ${C_METAL};
+  border-right: 1px solid ${
+    theme.isDarkUi ? theme.palette.GREY_3 : theme.palette.METAL
+  };
 
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     width: calc(100% - ${GEL_MARGIN_ABOVE_400PX});
@@ -33,9 +34,11 @@ const rtlStyles = `
   }
 `;
 
-const ltrStyles = `
+const ltrStyles = ({ theme }) => `
   margin-left: ${GEL_MARGIN_BELOW_400PX};
-  border-left: 1px solid ${C_METAL};
+  border-left: 1px solid ${
+    theme.isDarkUi ? theme.palette.GREY_3 : theme.palette.METAL
+  };
 
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     width: calc(100% - ${GEL_MARGIN_ABOVE_400PX});
@@ -53,7 +56,8 @@ const ltrStyles = `
 const Caption = styled.figcaption`
   ${({ script }) => script && getLongPrimer(script)}
   ${({ service }) => getSansRegular(service)}
-  color: ${C_GREY_6};
+  color: ${({ theme }) =>
+    theme.isDarkUi ? theme.palette.GREY_3 : theme.palette.GREY_6};
   margin-top: ${GEL_SPACING};
   padding-left: ${GEL_MARGIN_BELOW_400PX};
   padding-right: ${GEL_MARGIN_BELOW_400PX};
@@ -63,11 +67,11 @@ const Caption = styled.figcaption`
     width: 100%;
     margin: ${GEL_SPACING} 0 0;
   }
-  & > p {
+  & > span > p {
     padding-bottom: ${GEL_SPACING_TRPL};
     margin: 0; /* reset */
   }
-  & > p:last-child {
+  & > span > p:last-child {
     padding-bottom: 0;
   }
   ${({ dir }) => (dir === 'rtl' ? rtlStyles : ltrStyles)}

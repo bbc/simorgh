@@ -8,6 +8,7 @@ import {
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
+  GEL_GROUP_5_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
 import { node } from 'prop-types';
 import path from 'ramda/src/path';
@@ -15,17 +16,12 @@ import pathOr from 'ramda/src/pathOr';
 import { GelPageGrid, GridItemLarge } from '#components/Grid';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
-import LinkedData from '#containers/LinkedData';
 import headings from '#containers/Headings';
 import Timestamp from '#containers/ArticleTimestamp';
-import disclaimer from '#containers/Disclaimer';
 import text from '#containers/Text';
-import Image from '#containers/Image';
 import MediaPlayer from '#containers/CpsAssetMediaPlayer';
 import Blocks from '#containers/Blocks';
 import CpsRelatedContent from '#containers/CpsRelatedContent';
-import ATIAnalytics from '#containers/ATIAnalytics';
-import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import cpsAssetPagePropTypes from '#models/propTypes/cpsAssetPage';
 import fauxHeadline from '#containers/FauxHeadline';
@@ -37,7 +33,12 @@ import {
   getLastPublished,
 } from '#lib/utilities/parseAssetData';
 import RelatedTopics from '#containers/RelatedTopics';
+import ImageWithCaption from '../../components/ImageWithCaption';
+import ATIAnalytics from '../../components/ATIAnalytics';
+import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
+import LinkedData from '../../components/LinkedData';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import Disclaimer from '../../components/Disclaimer';
 
 const PhotoGalleryPageGrid = ({ children, ...props }) => (
   <GelPageGrid
@@ -60,6 +61,17 @@ PhotoGalleryPageGrid.propTypes = {
   children: node.isRequired,
 };
 
+const StyledImageWrapper = styled.div`
+  grid-column: 5 / span 12;
+  @media (max-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
+    grid-column: 2 / span 6;
+  }
+
+  @media (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    grid-column: 1 / span 6;
+  }
+`;
+
 const getImageSizes = ({ blocks }) => {
   if (!blocks) {
     return null;
@@ -81,7 +93,7 @@ const getImageSizes = ({ blocks }) => {
 };
 
 const PhotoGalleryPage = ({ pageData }) => {
-  const { showRelatedTopics } = useContext(ServiceContext);
+  const { brandName, showRelatedTopics } = useContext(ServiceContext);
   const title = path(['promo', 'headlines', 'headline'], pageData);
   const shortHeadline = path(['promo', 'headlines', 'shortHeadline'], pageData);
   const summary = path(['promo', 'summary'], pageData);
@@ -104,6 +116,13 @@ const PhotoGalleryPage = ({ pageData }) => {
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
 
+  // ATI
+  const { atiAnalytics } = metadata;
+  const atiData = {
+    ...atiAnalytics,
+    pageTitle: `${atiAnalytics.pageTitle} - ${brandName}`,
+  };
+
   const componentsToRender = {
     fauxHeadline,
     visuallyHiddenHeadline,
@@ -113,7 +132,11 @@ const PhotoGalleryPage = ({ pageData }) => {
     image: props => {
       const sizes = getImageSizes(props);
 
-      return <Image {...props} sizes={sizes} />;
+      return (
+        <StyledImageWrapper>
+          <ImageWithCaption {...props} sizes={sizes} />
+        </StyledImageWrapper>
+      );
     },
     timestamp: props =>
       allowDateStamp ? (
@@ -121,7 +144,7 @@ const PhotoGalleryPage = ({ pageData }) => {
       ) : null,
     video: props => <MediaPlayer {...props} assetUri={assetUri} />,
     version: props => <MediaPlayer {...props} assetUri={assetUri} />,
-    disclaimer,
+    disclaimer: props => <Disclaimer {...props} />,
   };
 
   const StyledPhotoGalleryPageGrid = styled(PhotoGalleryPageGrid)`
@@ -166,8 +189,8 @@ const PhotoGalleryPage = ({ pageData }) => {
         aboutTags={aboutTags}
         imageLocator={indexImageLocator}
       />
-      <ATIAnalytics data={pageData} />
-      <ChartbeatAnalytics data={pageData} />
+      <ATIAnalytics atiData={atiData} />
+      <ChartbeatAnalytics title={title} />
       <ComscoreAnalytics />
 
       <StyledPhotoGalleryPageGrid as="main" role="main">

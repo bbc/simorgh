@@ -4,16 +4,19 @@ import { oneOfType, func, shape, any } from 'prop-types';
 import { UserContext } from '#contexts/UserContext';
 import Banner from './Banner/index.canonical';
 import useConsentBanners from './useConsentBanners';
+import { RequestContext } from '../../../contexts/RequestContext';
 
 const Canonical = ({ onDismissFocusRef }) => {
   const { updateCookiePolicy } = useContext(UserContext);
+  const { isUK } = useContext(RequestContext);
+
   const {
     showPrivacyBanner,
     showCookieBanner,
     handlePrivacyBannerAccepted,
     handleCookieBannerAccepted,
     handleCookieBannerRejected,
-  } = useConsentBanners();
+  } = useConsentBanners(isUK);
 
   return (
     <>

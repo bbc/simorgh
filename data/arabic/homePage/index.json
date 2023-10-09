@@ -1,0 +1,108 @@
+{
+  "data": {
+    "title": "BBC News عربي",
+    "description": "بي بي سي العربية هي شبكة لنقل الأخبار والمعلومات ومقاطع الفيديو إلى العالم عبر عدة وسائط، تشمل الإنترنت ومواقع التواصل الاجتماعي والراديو والتلفزيون والهواتف المحمولة.",
+    "pageType": "home",
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "مرأة الخارقة \"",
+            "firstPublished": "2019-03-13T15:31:50.000Z",
+            "lastPublished": "2019-03-13T15:31:50.000Z",
+            "link": "https://www.bbc.com/arabic/tv-and-radio-23233470",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/36C4/test/_63702041_tv000117434.jpg",
+            "description": "الممثلة الإسرائيلية",
+            "imageAlt": "الرياضه",
+            "id": "6bc4c1da-8b0d-544f-8e7f-a02d969e4236"
+          },
+          {
+            "type": "article",
+            "title": "مكتب نتنياهو يسرب فيديو لوزراء خارجية عرب يدافعون عن إسرائيل",
+            "firstPublished": "2019-02-15T12:08:58.000Z",
+            "lastPublished": "2019-02-15T12:08:58.000Z",
+            "link": "https://www.bbc.com/arabic/23231121",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/5014/test/_63700502_000085333-1.jpg",
+            "description": "كشفت وسائل إعلام إسرائيلية، الخميس، عن مقطع فيديو مسرب عن مكتب رئيس الوزراء بنيامين نتنياهو، ظهر فيه وزراء خارجية ثلاث دول عربية خليجية يدافعون عن إسرائيل ويهاجمون إيران.",
+            "imageAlt": "Netanyahu, Benjamin - Prime Minister of Israel",
+            "id": "af7513dc-be60-ef48-ba5a-a29705b5569e"
+          },
+          {
+            "type": "article",
+            "title": "نجمة الفيلم الأمريكي \" المرأة الخارقة \"",
+            "firstPublished": "2019-03-13T12:54:00.000Z",
+            "lastPublished": "2019-03-13T14:23:21.000Z",
+            "link": "https://www.bbc.com/arabic/tv-and-radio-23233465",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/885E/test/_63701943_mediaitem63701942.jpg",
+            "description": "المملثة الإسرائيلية غال غادوت تنتقد تصريحات بنيامين نتانياهو حول العرب.السامري",
+            "imageAlt": "الكلمة",
+            "id": "79a9117c-fd48-5a47-af27-e2bc8f393862"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:f465a1b6-50ff-4b5c-8f0d-a673153573bf",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "title": "Arabic Top Stories",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "Small Island and Long Song author dies aged 62",
+            "firstPublished": "2019-02-15T12:04:33.000Z",
+            "lastPublished": "2019-02-15T12:04:33.000Z",
+            "link": "https://www.bbc.com/swahili/23231091",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/09C4/test/_63700520_000964414-1.jpg",
+            "description": "British author Andrea Levy, whose award-winning novels captured the black British experience in the years after Windrush, has died at the age of 62.",
+            "imageAlt": "Andrea Levy black and white picture",
+            "id": "6f02f033-e855-784e-b408-b997eb03809e"
+          },
+          {
+            "type": "article",
+            "title": "\"نقطة نيمو\": أبعد بقعة عن اليابسة على كوكب الأرض 108",
+            "firstPublished": "2016-10-14T14:10:52.000Z",
+            "lastPublished": "2016-10-14T14:10:52.000Z",
+            "link": "https://www.bbc.com/arabic/trending-23083197",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/155F4/test/_63504578_e7d39065-cb22-4df2-999b-a64196b6f685.jpg",
+            "description": "ثمة بقعة في المحيط الهادئ تبعد أكثر من غيرها عن اليابسة، وهي على نحو ما ذات طابع غريب وخاص.",
+            "imageAlt": "planet",
+            "id": "897c1da8-656c-c743-88e4-ef5901fbfb50"
+          },
+          {
+            "type": "article",
+            "title": "\"نقطة نيمو\": أبعد بقعة عن اليابسة على كوكب الأرض 103",
+            "firstPublished": "2016-10-14T14:07:50.000Z",
+            "lastPublished": "2016-10-14T14:07:50.000Z",
+            "link": "https://www.bbc.com/arabic/business-23083189",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/155F4/test/_63504578_e7d39065-cb22-4df2-999b-a64196b6f685.jpg",
+            "description": "ثمة بقعة في المحيط الهادئ تبعد أكثر من غيرها عن اليابسة، وهي على نحو ما ذات طابع غريب وخاص.",
+            "imageAlt": "planet",
+            "id": "036ad2c9-654b-e74a-a832-f39bb3576a53"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:8b258037-2fac-40f8-a7d3-6d4b19deb140",
+        "curationType": "tipo-curation",
+        "position": 1,
+        "title": "اخترنا لكم",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      }
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:cx35pee6zvpt",
+        "contentType": "index-home",
+        "pageIdentifier": "arabic.page",
+        "pageTitle": "BBC News عربي"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}

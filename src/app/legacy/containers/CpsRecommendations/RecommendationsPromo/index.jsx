@@ -11,13 +11,11 @@ import {
 } from '#psammead/gel-foundations/src/breakpoints';
 import { getSerifMedium } from '#psammead/psammead-styles/src/font-styles';
 import { getPica } from '#psammead/gel-foundations/src/typography';
-import {
-  C_METAL,
-  C_GREY_2,
-  C_GREY_10,
-} from '#psammead/psammead-styles/src/colours';
 import { shape, string, oneOfType } from 'prop-types';
-import { storyItem } from '#models/propTypes/storyItem';
+import { optimoStoryItem, storyItem } from '#models/propTypes/storyItem';
+
+import { ARTICLE_PAGE } from '../../../../routes/utils/pageTypes';
+import { RequestContext } from '../../../../contexts/RequestContext';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import Grid from '../../../components/Grid';
 import RecommendationsImage from '../RecommendationsPromoImage';
@@ -28,7 +26,10 @@ const StyledPromoWrapper = styled.div`
   position: relative;
   padding: ${GEL_SPACING};
   margin-top: ${GEL_SPACING};
-  background-color: ${C_GREY_2};
+  background-color: ${props =>
+    props.isArticlePage
+      ? props.theme.palette.GHOST
+      : props.theme.palette.GREY_2};
 `;
 
 const ImageWrapper = styled.div`
@@ -64,7 +65,7 @@ const TextWrapper = styled.div`
 
 const Link = styled.a`
   position: static;
-  color: ${C_GREY_10};
+  color: ${props => props.theme.palette.GREY_10};
   text-decoration: none;
   overflow-wrap: break-word;
 
@@ -86,14 +87,14 @@ const Link = styled.a`
   }
 
   &:visited {
-    color: ${C_METAL};
+    color: ${props => props.theme.palette.METAL};
   }
 `;
 
 const StyledHeadline = styled.div`
   ${({ service }) => getSerifMedium(service)}
   ${({ script }) => getPica(script)}
-  color: ${C_GREY_10};
+  color: ${props => props.theme.palette.GREY_10};
   margin: 0;
   height: 100%;
   display: flex;
@@ -105,6 +106,9 @@ const RecommendationsPromo = ({ promo, eventTrackingData }) => {
   const handleClickTracking = useCombinedClickTrackerHandler(eventTrackingData);
 
   const { headline, url, indexImage } = extractPromoData({ promo });
+
+  const { pageType } = useContext(RequestContext);
+  const isArticle = pageType === ARTICLE_PAGE;
 
   return (
     <Grid
@@ -118,7 +122,10 @@ const RecommendationsPromo = ({ promo, eventTrackingData }) => {
       }}
       enableGelGutters
     >
-      <StyledPromoWrapper data-e2e="story-promo-wrapper">
+      <StyledPromoWrapper
+        data-e2e="story-promo-wrapper"
+        isArticlePage={isArticle}
+      >
         <ImageWrapper>
           <RecommendationsImage indexImage={indexImage} lazyLoad />
         </ImageWrapper>
@@ -138,7 +145,7 @@ const RecommendationsPromo = ({ promo, eventTrackingData }) => {
 };
 
 RecommendationsPromo.propTypes = {
-  promo: oneOfType([shape(storyItem)]).isRequired,
+  promo: oneOfType([shape(storyItem), shape(optimoStoryItem)]).isRequired,
   eventTrackingData: shape({
     block: shape({
       componentName: string,

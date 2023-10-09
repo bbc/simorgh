@@ -1,440 +1,1357 @@
 {
-  "content": {
-    "model": {
-      "blocks": [
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "attributes": [],
-                              "text": "Это заголовок этой тестовой статьи"
+  "data": {
+    "article": {
+      "content": {
+        "model": {
+          "blocks": [
+            {
+              "id": "71de8634",
+              "type": "headline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "dcde7c3b",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "f4ac6e76",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "Это заголовок этой тестовой статьи",
+                            "blocks": [
+                              {
+                                "id": "4040c055",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "Это заголовок этой тестовой статьи",
+                                  "attributes": []
+                                },
+                                "position": [1, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [1, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [1, 1]
+                  }
+                ]
+              },
+              "position": [1]
+            },
+            {
+              "id": "5fe806ab",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "f229b0cc",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "d49b474a",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "75accdb4",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Это тестовое изображение, авторское право BBC, показывает карту Франции. Изображение находится в первых трех блоках и имеет эту подпись.",
+                                  "blocks": [
+                                    {
+                                      "id": "fd079e85",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Это тестовое изображение, авторское право BBC, показывает карту Франции. Изображение находится в первых трех блоках и имеет эту подпись.",
+                                        "attributes": []
+                                      },
+                                      "position": [2, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [2, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [2, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [2, 1]
+                  },
+                  {
+                    "id": "586b8dec",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "2c1ccdb4",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "8b629c4c",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Это тестовое изображение, авторское право BBC, показывает карту Франции. Изображение находится в первых трех блоках и имеет эту подпись.",
+                                  "blocks": [
+                                    {
+                                      "id": "8a637ef1",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Это тестовое изображение, авторское право BBC, показывает карту Франции. Изображение находится в первых трех блоках и имеет эту подпись.",
+                                        "attributes": []
+                                      },
+                                      "position": [2, 2, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [2, 2, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [2, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [2, 2]
+                  },
+                  {
+                    "id": "586eba5c",
+                    "type": "rawImage",
+                    "model": {
+                      "width": 624,
+                      "height": 351,
+                      "locator": "40ef/test/09d6c9a0-f63d-11e9-9afe-1371928331c5.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "BBC"
+                    },
+                    "position": [2, 3]
+                  }
+                ]
+              },
+              "position": [2]
+            },
+            {
+              "id": "089407ec",
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1562941784981,
+                "lastPublished": 1562941784981
+              },
+              "position": [3]
+            },
+            {
+              "id": "0711801c",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "c74c6cd9",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Это текстовый блок, который содержит URL-ссылку на домашнюю страницу BBC Weather.",
+                      "blocks": [
+                        {
+                          "id": "d50e46c1",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Это текстовый блок, который содержит URL-ссылку на домашнюю страницу ",
+                            "attributes": []
+                          },
+                          "position": [4, 1, 1]
+                        },
+                        {
+                          "id": "529306af",
+                          "type": "urlLink",
+                          "model": {
+                            "text": "BBC Weather",
+                            "blocks": [
+                              {
+                                "id": "46cd39e4",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "BBC Weather",
+                                  "attributes": []
+                                },
+                                "position": [4, 1, 2, 1]
+                              }
+                            ],
+                            "locator": "https://www.bbc.co.uk/weather",
+                            "isExternal": false
+                          },
+                          "position": [4, 1, 2]
+                        },
+                        {
+                          "id": "19abc8c1",
+                          "type": "fragment",
+                          "model": { "text": ".", "attributes": [] },
+                          "position": [4, 1, 3]
+                        }
+                      ]
+                    },
+                    "position": [4, 1]
+                  }
+                ]
+              },
+              "position": [4]
+            },
+            {
+              "id": "39438530",
+              "type": "video",
+              "model": {
+                "locator": "urn:bbc:pips:pid:p019dx64",
+                "blocks": [
+                  {
+                    "id": "c61e91a7",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "41188b4c",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "ed38b522",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Египет нападает: коптские похороны в Каире перерастают в насилие",
+                                  "blocks": [
+                                    {
+                                      "id": "60b05252",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Египет нападает: коптские похороны в Каире перерастают в насилие",
+                                        "attributes": []
+                                      },
+                                      "position": [5, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [5, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [5, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [5, 1]
+                  },
+                  {
+                    "id": "c2f9981f",
+                    "type": "aresMedia",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "e1fc279e",
+                          "blockId": "urn:bbc:ares::clip:p019dx64",
+                          "type": "aresMediaMetadata",
+                          "model": {
+                            "id": "p019dx64",
+                            "subType": "clip",
+                            "format": "video",
+                            "title": "Clashes at Coptic funerals in Egypt",
+                            "synopses": {
+                              "short": "Egypt attacks: Coptic funerals in Cairo break into violence",
+                              "long": "По меньшей мере 36 человек погибли в результате взрывов в двух церквях во время богослужений по случаю Вербного воскресенья.\n\nПервый взрыв прогремел в коптской церкви Св. Георгия в городе Танта, что в 130 км к юго-востоку от Александрии. Там на месте погибли 25 человек. Внутри этой церкви находился Патриарх христиан-коптов Тавадрос II. Официальные источники сообщили, что он не пострадал.\n\nЧерез некоторое время произошел второй теракт: взрывное устройство сработало в храме Св. Марка в самой Александрии. Там погибли 11 прихожан."
                             },
-                            "type": "fragment"
-                          }
-                        ],
-                        "text": "Это заголовок этой тестовой статьи"
-                      },
-                      "type": "paragraph"
-                    }
-                  ]
-                },
-                "type": "text"
+                            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p019dxfg.jpg",
+                            "embedding": false,
+                            "advertising": true,
+                            "caption": "Clashes broke out shortly after the funeral procession began",
+                            "versions": [
+                              {
+                                "versionId": "p019dx68",
+                                "types": ["Original"],
+                                "duration": 45,
+                                "durationISO8601": "PT45S",
+                                "warnings": {},
+                                "availableTerritories": {
+                                  "uk": true,
+                                  "nonUk": true
+                                },
+                                "availableFrom": 1491823686000
+                              }
+                            ],
+                            "syndication": { "destinations": [] },
+                            "smpKind": "programme"
+                          },
+                          "position": [5, 2, 1]
+                        },
+                        {
+                          "id": "e8f368aa",
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "8ae2e067",
+                                "type": "rawImage",
+                                "model": {
+                                  "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p019dxfg.jpg",
+                                  "originCode": "mpv"
+                                },
+                                "position": [5, 2, 2, 1]
+                              }
+                            ]
+                          },
+                          "position": [5, 2, 2]
+                        }
+                      ]
+                    },
+                    "position": [5, 2]
+                  }
+                ]
+              },
+              "position": [5]
+            },
+            {
+              "id": "82ee84d2",
+              "type": "subheadline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "26917fa8",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "e9eb6986",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "Это подзаголовок",
+                            "blocks": [
+                              {
+                                "id": "d92619fd",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "Это подзаголовок",
+                                  "attributes": []
+                                },
+                                "position": [6, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [6, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [6, 1]
+                  }
+                ]
+              },
+              "position": [6]
+            },
+            {
+              "id": "aa5e6cd7",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "4d21792c",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "597c99d4",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "10a6c76d",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Это подзаголовок",
+                                  "blocks": [
+                                    {
+                                      "id": "ed93c1be",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Это подзаголовок",
+                                        "attributes": []
+                                      },
+                                      "position": [7, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [7, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [7, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [7, 1]
+                  },
+                  {
+                    "id": "49935043",
+                    "type": "rawImage",
+                    "model": {
+                      "width": 800,
+                      "height": 450,
+                      "locator": "0aff/test/e170c4a0-f63e-11e9-9afe-1371928331c5.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "Getty Images"
+                    },
+                    "position": [7, 2]
+                  }
+                ]
+              },
+              "position": [7]
+            },
+            {
+              "id": "3d662ce5",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "41a73093",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Эта тестовая статья была создана для того, чтобы мы могли запускать тесты на нашем сайте.",
+                      "blocks": [
+                        {
+                          "id": "8891a698",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Эта тестовая статья была создана для того, чтобы мы могли запускать тесты на нашем сайте.",
+                            "attributes": []
+                          },
+                          "position": [8, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [8, 1]
+                  }
+                ]
+              },
+              "position": [8]
+            },
+            { "id": "e06e7336", "type": "mpu", "model": {}, "position": [9] },
+            {
+              "id": "523d3fa1",
+              "type": "wsoj",
+              "model": { "type": "recommendations" },
+              "position": [10]
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "id": "urn:bbc:ares::article:ck7pz7re3zgo",
+        "locators": {
+          "optimoUrn": "urn:bbc:optimo:asset:ck7pz7re3zgo",
+          "canonicalUrl": "https://www.bbc.com/russian/articles/ck7pz7re3zgo"
+        },
+        "type": "article",
+        "createdBy": "Russian",
+        "language": "ru",
+        "firstPublished": 1562941784981,
+        "lastPublished": 1562941784981,
+        "analyticsLabels": {
+          "ldp_tags": "Russia",
+          "page": "russian.articles.ck7pz7re3zgo.page",
+          "ldp_ids": "39267b85-1784-4f4b-80ed-f8cb4a35f337",
+          "contentId": "urn:bbc:optimo:asset:ck7pz7re3zgo",
+          "producer": "Russian"
+        },
+        "passport": {
+          "language": "ru",
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Russian",
+          "taggings": [
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/passport/predicate/About",
+              "value": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id"
+            }
+          ],
+          "predicates": {
+            "about": [
+              {
+                "value": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
+                "thingLabel": "Россия",
+                "thingUri": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
+                "thingId": "39267b85-1784-4f4b-80ed-f8cb4a35f337",
+                "thingType": ["core:Place", "tagging:TagConcept", "core:Thing"],
+                "thingSameAs": ["http://sws.geonames.org/2017370/"],
+                "thingEnglishLabel": "Russia",
+                "type": "about"
               }
             ]
-          },
-          "type": "headline"
+          }
         },
-        {
-          "model": {
+        "tags": {
+          "about": [
+            {
+              "thingLabel": "Россия",
+              "thingUri": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
+              "thingId": "39267b85-1784-4f4b-80ed-f8cb4a35f337",
+              "thingType": ["core:Place", "tagging:TagConcept", "core:Thing"],
+              "thingSameAs": ["http://sws.geonames.org/2017370/"],
+              "topicName": "Россия",
+              "topicId": "cw6eyw7m0m1t",
+              "curationList": [
+                {
+                  "curationId": "3d1d4d60-3a85-42d9-9559-41b3291908dc",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Russia",
+              "thingLabelLanguage": "ru",
+              "thingPreferredLabel": "Russia"
+            }
+          ]
+        },
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment",
+          "image",
+          "caption",
+          "altText",
+          "rawImage",
+          "urlLink",
+          "video",
+          "subheadline",
+          "aresMedia",
+          "aresMediaMetadata"
+        ],
+        "topics": [
+          {
+            "topicName": "Россия",
+            "topicId": "cw6eyw7m0m1t",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "3d1d4d60-3a85-42d9-9559-41b3291908dc",
+                "curationType": "vivo-stream",
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": ["core:Place", "tagging:TagConcept", "core:Thing"],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Russian"
+          }
+        ],
+        "consumableAsSFV": false,
+        "allowAdvertising": true,
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false
+      },
+      "promo": {
+        "headlines": {
+          "seoHeadline": "Пугало полицейского с камерой следит за водителями под Ливерпулем",
+          "promoHeadline": {
             "blocks": [
               {
+                "type": "text",
                 "model": {
                   "blocks": [
                     {
+                      "type": "paragraph",
                       "model": {
+                        "text": "Это заголовок этой тестовой статьи",
                         "blocks": [
                           {
+                            "type": "fragment",
                             "model": {
-                              "blocks": [
-                                {
-                                  "model": {
-                                    "attributes": [],
-                                    "text": "Это тестовое изображение, авторское право BBC, показывает карту Франции. Изображение находится в первых трех блоках и имеет эту подпись."
-                                  },
-                                  "type": "fragment"
-                                }
-                              ],
-                              "text": "Это тестовое изображение, авторское право BBC, показывает карту Франции. Изображение находится в первых трех блоках и имеет эту подпись."
-                            },
-                            "type": "paragraph"
+                              "text": "Это заголовок этой тестовой статьи",
+                              "attributes": []
+                            }
                           }
                         ]
-                      },
-                      "type": "text"
+                      }
                     }
                   ]
-                },
-                "type": "caption"
-              },
+                }
+              }
+            ]
+          }
+        },
+        "images": {
+          "defaultPromoImage": {
+            "blocks": [
               {
+                "type": "caption",
                 "model": {
                   "blocks": [
                     {
+                      "type": "text",
                       "model": {
                         "blocks": [
                           {
+                            "type": "paragraph",
                             "model": {
+                              "text": "Это тестовое изображение, авторское право BBC, показывает карту Франции. Изображение находится в первых трех блоках и имеет эту подпись.",
                               "blocks": [
                                 {
+                                  "type": "fragment",
                                   "model": {
-                                    "attributes": [],
-                                    "text": "Это тестовое изображение, авторское право BBC, показывает карту Франции. Изображение находится в первых трех блоках и имеет эту подпись."
-                                  },
-                                  "type": "fragment"
+                                    "text": "Это тестовое изображение, авторское право BBC, показывает карту Франции. Изображение находится в первых трех блоках и имеет эту подпись.",
+                                    "attributes": []
+                                  }
                                 }
-                              ],
-                              "text": "Это тестовое изображение, авторское право BBC, показывает карту Франции. Изображение находится в первых трех блоках и имеет эту подпись."
-                            },
-                            "type": "paragraph"
+                              ]
+                            }
                           }
                         ]
-                      },
-                      "type": "text"
+                      }
                     }
                   ]
-                },
-                "type": "altText"
+                }
               },
               {
+                "type": "altText",
                 "model": {
-                  "copyrightHolder": "BBC",
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Это тестовое изображение, авторское право BBC, показывает карту Франции. Изображение находится в первых трех блоках и имеет эту подпись.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Это тестовое изображение, авторское право BBC, показывает карту Франции. Изображение находится в первых трех блоках и имеет эту подпись.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 624,
                   "height": 351,
                   "locator": "40ef/test/09d6c9a0-f63d-11e9-9afe-1371928331c5.jpg",
                   "originCode": "cpsdevpb",
-                  "width": 624
-                },
-                "type": "rawImage"
+                  "copyrightHolder": "BBC"
+                }
               }
             ]
-          },
-          "type": "image"
+          }
         },
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "attributes": [],
-                        "text": "Это текстовый блок, который содержит URL-ссылку на домашнюю страницу "
-                      },
-                      "type": "fragment"
-                    },
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "attributes": [],
-                              "text": "BBC Weather"
-                            },
-                            "type": "fragment"
-                          }
-                        ],
-                        "isExternal": false,
-                        "locator": "https://www.bbc.co.uk/weather",
-                        "text": "BBC Weather"
-                      },
-                      "type": "urlLink"
-                    },
-                    {
-                      "model": {
-                        "attributes": [],
-                        "text": "."
-                      },
-                      "type": "fragment"
+        "summary": {
+          "blocks": [
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": "",
+                      "blocks": [
+                        {
+                          "type": "fragment",
+                          "model": { "text": "", "attributes": [] }
+                        }
+                      ]
                     }
-                  ],
-                  "text": "Это текстовый блок, который содержит URL-ссылку на домашнюю страницу BBC Weather."
-                },
-                "type": "paragraph"
+                  }
+                ]
               }
-            ]
-          },
-          "type": "text"
-        },
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "blocks": [
-                                {
-                                  "model": {
-                                    "attributes": [],
-                                    "text": "Египет нападает: коптские похороны в Каире перерастают в насилие"
-                                  },
-                                  "type": "fragment"
-                                }
-                              ],
-                              "text": "Египет нападает: коптские похороны в Каире перерастают в насилие"
-                            },
-                            "type": "paragraph"
-                          }
-                        ]
-                      },
-                      "type": "text"
-                    }
-                  ]
-                },
-                "type": "caption"
-              },
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "blockId": "urn:bbc:ares::clip:p019dx64",
-                      "model": {
-                        "advertising": true,
-                        "caption": "Clashes broke out shortly after the funeral procession began",
-                        "embedding": false,
-                        "format": "audio_video",
-                        "id": "p019dx64",
-                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p019dxfg.jpg",
-                        "subType": "clip",
-                        "syndication": {
-                          "destinations": []
-                        },
-                        "synopses": {
-                          "long": "По меньшей мере 36 человек погибли в результате взрывов в двух церквях во время богослужений по случаю Вербного воскресенья.\n\nПервый взрыв прогремел в коптской церкви Св. Георгия в городе Танта, что в 130 км к юго-востоку от Александрии. Там на месте погибли 25 человек. Внутри этой церкви находился Патриарх христиан-коптов Тавадрос II. Официальные источники сообщили, что он не пострадал.\n\nЧерез некоторое время произошел второй теракт: взрывное устройство сработало в храме Св. Марка в самой Александрии. Там погибли 11 прихожан.",
-                          "short": "Egypt attacks: Coptic funerals in Cairo break into violence"
-                        },
-                        "title": "Clashes at Coptic funerals in Egypt",
-                        "versions": [
-                          {
-                            "availableFrom": 1491823686000,
-                            "availableTerritories": {
-                              "nonUk": true,
-                              "uk": true
-                            },
-                            "duration": 45,
-                            "durationISO8601": "PT45S",
-                            "types": ["Original"],
-                            "versionId": "p019dx68",
-                            "warnings": {}
-                          }
-                        ]
-                      },
-                      "type": "aresMediaMetadata"
-                    },
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "height": 1920,
-                              "width": 1080,
-                              "copyrightHolder": "BBC",
-                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p019dxfg.jpg",
-                              "originCode": "mpv"
-                            },
-                            "type": "rawImage"
-                          }
-                        ]
-                      },
-                      "type": "image"
-                    }
-                  ]
-                },
-                "type": "aresMedia"
-              }
-            ],
-            "locator": "urn:bbc:pips:pid:p019dx64"
-          },
-          "type": "video"
-        },
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "attributes": [],
-                              "text": "Это подзаголовок"
-                            },
-                            "type": "fragment"
-                          }
-                        ],
-                        "text": "Это подзаголовок"
-                      },
-                      "type": "paragraph"
-                    }
-                  ]
-                },
-                "type": "text"
-              }
-            ]
-          },
-          "type": "subheadline"
-        },
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "blocks": [
-                                {
-                                  "model": {
-                                    "attributes": [],
-                                    "text": "Это подзаголовок"
-                                  },
-                                  "type": "fragment"
-                                }
-                              ],
-                              "text": "Это подзаголовок"
-                            },
-                            "type": "paragraph"
-                          }
-                        ]
-                      },
-                      "type": "text"
-                    }
-                  ]
-                },
-                "type": "altText"
-              },
-              {
-                "model": {
-                  "copyrightHolder": "Getty Images",
-                  "height": 450,
-                  "locator": "0aff/test/e170c4a0-f63e-11e9-9afe-1371928331c5.jpg",
-                  "originCode": "cpsdevpb",
-                  "width": 800
-                },
-                "type": "rawImage"
-              }
-            ]
-          },
-          "type": "image"
-        },
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "attributes": [],
-                        "text": "Эта тестовая статья была создана для того, чтобы мы могли запускать тесты на нашем сайте."
-                      },
-                      "type": "fragment"
-                    }
-                  ],
-                  "text": "Эта тестовая статья была создана для того, чтобы мы могли запускать тесты на нашем сайте."
-                },
-                "type": "paragraph"
-              }
-            ]
-          },
-          "type": "text"
+            }
+          ]
         }
-      ]
+      }
+    },
+    "secondaryData": {
+      "topStories": [
+        {
+          "headlines": { "headline": "test_russian" },
+          "locators": {
+            "assetUri": "/russian/23303728",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:b973244b-f0cd-fe4c-9cb4-d0a9c78d1ea3",
+            "assetId": "23303728",
+            "cpsUrn": "urn:bbc:content:assetUri:russian/23303728",
+            "curie": "http://www.bbc.co.uk/asset/b973244b-f0cd-fe4c-9cb4-d0a9c78d1ea3"
+          },
+          "summary": "test",
+          "timestamp": 1589996345000,
+          "language": "ru",
+          "cpsType": "STY",
+          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "section": {
+            "subType": "IDX",
+            "name": "Главная",
+            "uri": "/russian/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:russian/23303728",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Tory leadership rivals face first party vote"
+          },
+          "locators": {
+            "assetUri": "/russian/23241517",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:1743c672-c7c8-8f4b-9841-bd04296a5812",
+            "assetId": "23241517",
+            "cpsUrn": "urn:bbc:content:assetUri:russian/23241517",
+            "curie": "http://www.bbc.co.uk/asset/1743c672-c7c8-8f4b-9841-bd04296a5812"
+          },
+          "summary": "Conservative MPs have begun voting for their new leader and next prime minister in the party's first ballot in Parliament.",
+          "timestamp": 1560430132000,
+          "language": "ru",
+          "cpsType": "STY",
+          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "section": {
+            "subType": "IDX",
+            "name": "Главная",
+            "uri": "/russian/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:russian/23241517",
+          "type": "cps"
+        },
+        {
+          "headlines": { "headline": "Russian producer test" },
+          "locators": {
+            "assetUri": "/russian/23247448",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:ccb3b0e4-adc4-4342-9208-dbab7ce6b8d7",
+            "assetId": "23247448",
+            "cpsUrn": "urn:bbc:content:assetUri:russian/23247448",
+            "curie": "http://www.bbc.co.uk/asset/ccb3b0e4-adc4-4342-9208-dbab7ce6b8d7"
+          },
+          "summary": "summary",
+          "timestamp": 1567069704000,
+          "language": "ru",
+          "cpsType": "STY",
+          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "section": {
+            "subType": "IDX",
+            "name": "Главная",
+            "uri": "/russian/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:russian/23247448",
+          "type": "cps"
+        }
+      ],
+      "features": [
+        {
+          "headlines": {
+            "headline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 8"
+          },
+          "locators": {
+            "assetUri": "/russian/23171293",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:15fab0aa-be8d-5c48-9c86-851bf79c60d3",
+            "assetId": "23171293",
+            "cpsUrn": "urn:bbc:content:assetUri:russian/23171293",
+            "curie": "http://www.bbc.co.uk/asset/15fab0aa-be8d-5c48-9c86-851bf79c60d3"
+          },
+          "summary": "Участие телеведущей Ксении Собчак в президентских выборах - идея Кремля. Помогать ей регистрироваться власти не планируют. Сама Собчак уже ищет руководителя предвыборного штаба. Пока безуспешно.",
+          "timestamp": 1512986529000,
+          "language": "ru",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63593151",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "path": "/cpsdevpb/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "выборы",
+            "caption": "Собчак хочет стать первой женщиной-президентом",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63593153",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/8943/test/_63593153_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "path": "/cpsdevpb/8943/test/_63593153_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "выборы",
+            "caption": "Собчак хочет стать первой женщиной-президентом",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "section": {
+            "subType": "IDX",
+            "name": "Главная",
+            "uri": "/russian/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:russian/23171293",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 7"
+          },
+          "locators": {
+            "assetUri": "/russian/23171289",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:a5c94c54-90d8-9449-b3f1-29acc7ec1af0",
+            "assetId": "23171289",
+            "cpsUrn": "urn:bbc:content:assetUri:russian/23171289",
+            "curie": "http://www.bbc.co.uk/asset/a5c94c54-90d8-9449-b3f1-29acc7ec1af0"
+          },
+          "summary": "Участие телеведущей Ксении Собчак в президентских выборах - идея Кремля. Помогать ей регистрироваться власти не планируют. Сама Собчак уже ищет руководителя предвыборного штаба. Пока безуспешно.",
+          "timestamp": 1512986516000,
+          "language": "ru",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63593151",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "path": "/cpsdevpb/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "выборы",
+            "caption": "Собчак хочет стать первой женщиной-президентом",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63593153",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/8943/test/_63593153_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "path": "/cpsdevpb/8943/test/_63593153_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "выборы",
+            "caption": "Собчак хочет стать первой женщиной-президентом",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "section": {
+            "subType": "IDX",
+            "name": "Главная",
+            "uri": "/russian/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:russian/23171289",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 6"
+          },
+          "locators": {
+            "assetUri": "/russian/23171283",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:2fa49e09-621d-a946-90ad-769ce65da15a",
+            "assetId": "23171283",
+            "cpsUrn": "urn:bbc:content:assetUri:russian/23171283",
+            "curie": "http://www.bbc.co.uk/asset/2fa49e09-621d-a946-90ad-769ce65da15a"
+          },
+          "summary": "Участие телеведущей Ксении Собчак в президентских выборах - идея Кремля. Помогать ей регистрироваться власти не планируют. Сама Собчак уже ищет руководителя предвыборного штаба. Пока безуспешно.",
+          "timestamp": 1512986437000,
+          "language": "ru",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63593151",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "path": "/cpsdevpb/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "выборы",
+            "caption": "Собчак хочет стать первой женщиной-президентом",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63593153",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/8943/test/_63593153_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "path": "/cpsdevpb/8943/test/_63593153_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "выборы",
+            "caption": "Собчак хочет стать первой женщиной-президентом",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "section": {
+            "subType": "IDX",
+            "name": "Главная",
+            "uri": "/russian/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:russian/23171283",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 5"
+          },
+          "locators": {
+            "assetUri": "/russian/23171279",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:c79bc53d-1cf3-644a-a52b-3a912332d7a1",
+            "assetId": "23171279",
+            "cpsUrn": "urn:bbc:content:assetUri:russian/23171279",
+            "curie": "http://www.bbc.co.uk/asset/c79bc53d-1cf3-644a-a52b-3a912332d7a1"
+          },
+          "summary": "Участие телеведущей Ксении Собчак в президентских выборах - идея Кремля. Помогать ей регистрироваться власти не планируют. Сама Собчак уже ищет руководителя предвыборного штаба. Пока безуспешно.",
+          "timestamp": 1512986410000,
+          "language": "ru",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63593151",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "path": "/cpsdevpb/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "выборы",
+            "caption": "Собчак хочет стать первой женщиной-президентом",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63593153",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/8943/test/_63593153_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "path": "/cpsdevpb/8943/test/_63593153_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "выборы",
+            "caption": "Собчак хочет стать первой женщиной-президентом",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "section": {
+            "subType": "IDX",
+            "name": "Главная",
+            "uri": "/russian/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:russian/23171279",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 4"
+          },
+          "locators": {
+            "assetUri": "/russian/23171245",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:91dbda32-7c1d-124d-8b89-12c95c5c4fa3",
+            "assetId": "23171245",
+            "cpsUrn": "urn:bbc:content:assetUri:russian/23171245",
+            "curie": "http://www.bbc.co.uk/asset/91dbda32-7c1d-124d-8b89-12c95c5c4fa3"
+          },
+          "summary": "Участие телеведущей Ксении Собчак в президентских выборах - идея Кремля. Помогать ей регистрироваться власти не планируют. Сама Собчак уже ищет руководителя предвыборного штаба. Пока безуспешно.",
+          "timestamp": 1512986396000,
+          "language": "ru",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63593151",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "path": "/cpsdevpb/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "выборы",
+            "caption": "Собчак хочет стать первой женщиной-президентом",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63593153",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/8943/test/_63593153_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "path": "/cpsdevpb/8943/test/_63593153_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "выборы",
+            "caption": "Собчак хочет стать первой женщиной-президентом",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "section": {
+            "subType": "IDX",
+            "name": "Главная",
+            "uri": "/russian/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:russian/23171245",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 3"
+          },
+          "locators": {
+            "assetUri": "/russian/23171241",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:1e483798-b1d3-f146-ba1b-beff668a205c",
+            "assetId": "23171241",
+            "cpsUrn": "urn:bbc:content:assetUri:russian/23171241",
+            "curie": "http://www.bbc.co.uk/asset/1e483798-b1d3-f146-ba1b-beff668a205c"
+          },
+          "summary": "Участие телеведущей Ксении Собчак в президентских выборах - идея Кремля. Помогать ей регистрироваться власти не планируют. Сама Собчак уже ищет руководителя предвыборного штаба. Пока безуспешно.",
+          "timestamp": 1512987701000,
+          "language": "ru",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63593151",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "path": "/cpsdevpb/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "выборы",
+            "caption": "Собчак хочет стать первой женщиной-президентом",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63593153",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/8943/test/_63593153_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "path": "/cpsdevpb/8943/test/_63593153_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "выборы",
+            "caption": "Собчак хочет стать первой женщиной-президентом",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "section": {
+            "subType": "IDX",
+            "name": "Главная",
+            "uri": "/russian/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:russian/23171241",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 37"
+          },
+          "locators": {
+            "assetUri": "/russian/23171429",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:37ca2941-d02e-aa4b-bf50-fc4dce9c1b27",
+            "assetId": "23171429",
+            "cpsUrn": "urn:bbc:content:assetUri:russian/23171429",
+            "curie": "http://www.bbc.co.uk/asset/37ca2941-d02e-aa4b-bf50-fc4dce9c1b27"
+          },
+          "summary": "Участие телеведущей Ксении Собчак в президентских выборах - идея Кремля. Помогать ей регистрироваться власти не планируют. Сама Собчак уже ищет руководителя предвыборного штаба. Пока безуспешно.",
+          "timestamp": 1512987272000,
+          "language": "ru",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63593151",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "path": "/cpsdevpb/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "выборы",
+            "caption": "Собчак хочет стать первой женщиной-президентом",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63593153",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/8943/test/_63593153_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "path": "/cpsdevpb/8943/test/_63593153_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "выборы",
+            "caption": "Собчак хочет стать первой женщиной-президентом",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "section": {
+            "subType": "IDX",
+            "name": "Главная",
+            "uri": "/russian/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:russian/23171429",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 39"
+          },
+          "locators": {
+            "assetUri": "/russian/23171437",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:6eb335ca-9edf-174a-82f6-cff442832fa4",
+            "assetId": "23171437",
+            "cpsUrn": "urn:bbc:content:assetUri:russian/23171437",
+            "curie": "http://www.bbc.co.uk/asset/6eb335ca-9edf-174a-82f6-cff442832fa4"
+          },
+          "summary": "Участие телеведущей Ксении Собчак в президентских выборах - идея Кремля. Помогать ей регистрироваться власти не планируют. Сама Собчак уже ищет руководителя предвыборного штаба. Пока безуспешно.",
+          "timestamp": 1512987302000,
+          "language": "ru",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63593151",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "path": "/cpsdevpb/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "выборы",
+            "caption": "Собчак хочет стать первой женщиной-президентом",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63593153",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/8943/test/_63593153_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "path": "/cpsdevpb/8943/test/_63593153_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "выборы",
+            "caption": "Собчак хочет стать первой женщиной-президентом",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "section": {
+            "subType": "IDX",
+            "name": "Главная",
+            "uri": "/russian/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:russian/23171437",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 38"
+          },
+          "locators": {
+            "assetUri": "/russian/23171433",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:3cb2da53-34b0-cf4d-907d-cc6c08233eda",
+            "assetId": "23171433",
+            "cpsUrn": "urn:bbc:content:assetUri:russian/23171433",
+            "curie": "http://www.bbc.co.uk/asset/3cb2da53-34b0-cf4d-907d-cc6c08233eda"
+          },
+          "summary": "Участие телеведущей Ксении Собчак в президентских выборах - идея Кремля. Помогать ей регистрироваться власти не планируют. Сама Собчак уже ищет руководителя предвыборного штаба. Пока безуспешно.",
+          "timestamp": 1512987287000,
+          "language": "ru",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63593151",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "path": "/cpsdevpb/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "выборы",
+            "caption": "Собчак хочет стать первой женщиной-президентом",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63593153",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/8943/test/_63593153_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "path": "/cpsdevpb/8943/test/_63593153_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "выборы",
+            "caption": "Собчак хочет стать первой женщиной-президентом",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "section": {
+            "subType": "IDX",
+            "name": "Главная",
+            "uri": "/russian/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:russian/23171433",
+          "type": "cps"
+        }
+      ],
+      "mostRead": {
+        "generated": "2023-07-04T09:16:57.29Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T11:38:00Z",
+        "items": [
+          {
+            "id": "73d1cf7d-bb96-7c44-8a2f-01323f5607c4",
+            "rank": 1,
+            "title": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 46",
+            "href": "/russian/23174367",
+            "timestamp": 1513859679000
+          },
+          {
+            "id": "a9d26e52-34f9-d54d-b8a2-659f3b25c9ae",
+            "rank": 2,
+            "title": "Лидера хакерской группы \"Шалтай-Болтай\" досрочно отпустили на свободу",
+            "href": "/russian/23210764",
+            "timestamp": 1533551291000
+          },
+          {
+            "id": "f2124cdb-8cbf-a94d-8bbf-4ef225cbd7bc",
+            "rank": 3,
+            "title": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 39",
+            "href": "/russian/23174290",
+            "timestamp": 1513859059000
+          },
+          {
+            "id": "ddc65414-8450-d64f-aeb4-a0f257307904",
+            "rank": 4,
+            "title": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 20",
+            "href": "/russian/23171341",
+            "timestamp": 1512986704000
+          },
+          {
+            "id": "3cb2da53-34b0-cf4d-907d-cc6c08233eda",
+            "rank": 5,
+            "title": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 38",
+            "href": "/russian/23171433",
+            "timestamp": 1512987287000
+          },
+          {
+            "id": "3f1f2ace-ba4d-8846-9764-e6366968750f",
+            "rank": 6,
+            "title": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 36",
+            "href": "/russian/23171425",
+            "timestamp": 1512987259000
+          },
+          {
+            "id": "181cd820-32ed-ea4a-8b16-7505cdec126d",
+            "rank": 7,
+            "title": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 44",
+            "href": "/russian/23174329",
+            "timestamp": 1513859646000
+          },
+          {
+            "id": "4a52b440-f480-1246-9a77-e21beda2a999",
+            "rank": 8,
+            "title": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 42",
+            "href": "/russian/23171401",
+            "timestamp": 1512986942000
+          },
+          {
+            "id": "b450aaae-70be-6b47-88c9-7fd9eae0d34f",
+            "rank": 9,
+            "title": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 28",
+            "href": "/russian/23171373",
+            "timestamp": 1512986806000
+          },
+          {
+            "id": "56bbb2c6-7b1d-ba46-b95e-0aa3aa5ab493",
+            "rank": 10,
+            "title": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 31",
+            "href": "/russian/23171405",
+            "timestamp": 1512987182000
+          },
+          {
+            "id": "3c996ef9-167c-ed46-a100-57bb6db90ee0",
+            "rank": 11,
+            "title": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 43",
+            "href": "/russian/23185597",
+            "timestamp": 1517846389000
+          },
+          {
+            "id": "da3bb5b2-45ed-fd4a-894c-0faad5f1c728",
+            "rank": 12,
+            "title": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 14",
+            "href": "/russian/23171317",
+            "timestamp": 1512986612000
+          },
+          {
+            "id": "1d59b9b7-7c52-f944-9a9e-26683e2f786e",
+            "rank": 13,
+            "title": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 45",
+            "href": "/russian/23174363",
+            "timestamp": 1513859663000
+          },
+          {
+            "id": "2b41ecda-cf85-cc44-aff9-e1fca1fb9e58",
+            "rank": 14,
+            "title": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 24",
+            "href": "/russian/23171357",
+            "timestamp": 1512986753000
+          },
+          {
+            "id": "baf0c365-9592-4941-9b81-1b84297b2f2e",
+            "rank": 15,
+            "title": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 41",
+            "href": "/russian/23174318",
+            "timestamp": 1513859412000
+          },
+          {
+            "id": "68b87501-61df-304f-9a18-14be332377b2",
+            "rank": 16,
+            "title": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 42",
+            "href": "/russian/23185593",
+            "timestamp": 1517846374000
+          },
+          {
+            "id": "2e80824b-981e-e14a-aaef-d00684b5f68a",
+            "rank": 17,
+            "title": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 12",
+            "href": "/russian/23171309",
+            "timestamp": 1512986587000
+          },
+          {
+            "id": "3ca2ec20-1187-4442-b059-f21f98658104",
+            "rank": 18,
+            "title": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 47",
+            "href": "/russian/23174371",
+            "timestamp": 1513859690000
+          },
+          {
+            "id": "a5c94c54-90d8-9449-b3f1-29acc7ec1af0",
+            "rank": 19,
+            "title": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 7",
+            "href": "/russian/23171289",
+            "timestamp": 1512986516000
+          },
+          {
+            "id": "c6121349-1a6d-a347-9894-39909ff529f2",
+            "rank": 20,
+            "title": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 48",
+            "href": "/russian/23174375",
+            "timestamp": 1513859724000
+          }
+        ]
+      },
+      "latestMedia": null
     }
   },
-  "metadata": {
-    "analyticsLabels": {},
-    "blockTypes": [
-      "headline",
-      "text",
-      "paragraph",
-      "fragment",
-      "image",
-      "caption",
-      "altText",
-      "rawImage",
-      "urlLink",
-      "video",
-      "subheadline"
-    ],
-    "createdBy": "Russian",
-    "firstPublished": 1562941784981,
-    "id": "urn:bbc:ares::article:ck7pz7re3zgo",
-    "language": "ru",
-    "lastPublished": 1562941784981,
-    "lastUpdated": 1571917178858,
-    "locators": {
-      "optimoUrn": "urn:bbc:optimo:asset:ck7pz7re3zgo"
-    },
-    "options": {},
-    "passport": {
-      "home": "http://www.bbc.co.uk/ontologies/passport/home/Russian",
-      "language": "ru"
-    },
-    "tags": {
-      "about": [
-        {
-          "thingId": "39267b85-1784-4f4b-80ed-f8cb4a35f337",
-          "thingLabel": "Russia",
-          "thingSameAs": ["http://sws.geonames.org/2017370/"],
-          "thingType": ["nsl:Topic", "Place", "Thing"],
-          "thingUri": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id"
-        }
-      ]
-    },
-    "type": "article",
-    "version": "v1.1.2"
-  },
-  "promo": {
-    "headlines": {
-      "seoHeadline": "Пугало полицейского с камерой следит за водителями под Ливерпулем"
-    },
-    "id": "urn:bbc:ares::article:ck7pz7re3zgo",
-    "locators": {
-      "optimoUrn": "urn:bbc:optimo:asset:ck7pz7re3zgo"
-    },
-    "summary": {
-      "blocks": [
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "attributes": [],
-                        "text": ""
-                      },
-                      "type": "fragment"
-                    }
-                  ],
-                  "text": ""
-                },
-                "type": "paragraph"
-              }
-            ]
-          },
-          "type": "text"
-        }
-      ]
-    },
-    "timestamp": 1562941784981,
-    "type": "cps"
-  },
-  "relatedContent": {
-    "groups": [],
-    "site": {
-      "name": "Russian",
-      "subType": "site",
-      "type": "simple",
-      "uri": "/russian"
-    }
-  }
+  "contentType": "application/json; charset=utf-8"
 }

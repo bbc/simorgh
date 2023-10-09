@@ -30,11 +30,16 @@ import sendCustomMetric from './utilities/customMetrics';
 import { NON_200_RESPONSE } from './utilities/customMetrics/metrics.const';
 import local from './local';
 import getAgent from './utilities/getAgent';
+import { getMvtExperiments, getMvtVaryHeaders } from './utilities/mvtHeader';
 import getAssetOrigins from './utilities/getAssetOrigins';
+import extractHeaders from './utilities/extractHeaders';
 
 const morgan = require('morgan');
 
 const logger = nodeLogger(__filename);
+
+const NORMAL_CACHE_TTL = 30;
+const EXPERIMENTAL_CACHE_TTL = 45;
 
 logger.debug(
   `Application outputting logs to directory '${process.env.LOG_DIR}'`,
@@ -49,6 +54,12 @@ class LoggerStream {
     logger.info(message.substring(0, message.lastIndexOf('\n')));
   }
 }
+
+const getDefaultMaxAge = req => {
+  return req.originalUrl.indexOf('arabic/') !== -1
+    ? EXPERIMENTAL_CACHE_TTL
+    : NORMAL_CACHE_TTL;
+};
 
 const server = express();
 
@@ -74,6 +85,7 @@ server
   .use(compression())
   .use(
     helmet({
+      expectCt: false,
       frameguard: { action: 'deny' },
       contentSecurityPolicy: false,
     }),
@@ -101,7 +113,7 @@ server
     res.sendFile(swPath, {}, error => {
       if (error) {
         logger.error(SERVICE_WORKER_SENDFILE_ERROR, { error });
-        res.status(500).send('Unable to find service worker.');
+        res.status(500).send(`Unable to find service worker in ${swPath}`);
       }
     });
   })
@@ -126,9 +138,16 @@ if (process.env.SIMORGH_APP_ENV === 'local') {
 }
 
 const injectDefaultCacheHeader = (req, res, next) => {
+  const defaultMaxAge = getDefaultMaxAge(req);
+  const maxAge =
+    req.originalUrl.indexOf('/topics/') !== -1
+      ? defaultMaxAge * 2
+      : defaultMaxAge;
   res.set(
-    'cache-control',
-    `public, stale-if-error=90, stale-while-revalidate=30, max-age=30`,
+    'Cache-Control',
+    `public, stale-if-error=${
+      maxAge * 4
+    }, stale-while-revalidate=${maxAge}, max-age=${maxAge}`,
   );
   next();
 };
@@ -136,18 +155,16 @@ const injectDefaultCacheHeader = (req, res, next) => {
 const injectResourceHintsHeader = (req, res, next) => {
   const thisService = req.originalUrl.split('/')[1];
 
-  if (['pidgin', 'hindi'].includes(thisService)) {
-    const assetOrigins = getAssetOrigins(thisService);
-    res.set(
-      'Link',
-      assetOrigins
-        .map(
-          domainName =>
-            `<${domainName}>; rel="dns-prefetch", <${domainName}>; rel="preconnect"`,
-        )
-        .join(','),
-    );
-  }
+  const assetOrigins = getAssetOrigins(thisService);
+  res.set(
+    'Link',
+    assetOrigins
+      .map(
+        domainName =>
+          `<${domainName}>; rel="dns-prefetch", <${domainName}>; rel="preconnect"`,
+      )
+      .join(','),
+  );
   next();
 };
 // Set Referrer-Policy
@@ -172,11 +189,13 @@ server.get(
     });
 
     let derivedPageType = 'Unknown';
+    let mvtExperiments = [];
 
     try {
       const {
         service,
         isAmp,
+        isApp,
         route: { getInitialData, pageType },
         variant,
       } = getRouteProps(urlPath);
@@ -195,17 +214,24 @@ server.get(
         pageType,
         toggles,
         getAgent,
+        isAmp,
       });
+
+      const { isUK } = extractHeaders(headers);
 
       data.toggles = toggles;
       data.path = urlPath;
       data.timeOnServer = Date.now();
       data.showAdsBasedOnLocation = headers['bbc-adverts'] === 'true';
+      data.isUK = isUK;
 
       let { status } = data;
       // Set derivedPageType based on returned page data
       if (status === OK) {
         derivedPageType = ramdaPath(['pageData', 'metadata', 'type'], data);
+
+        mvtExperiments = getMvtExperiments(headers, service, derivedPageType);
+        data.mvtExperiments = mvtExperiments;
       } else {
         sendCustomMetric({
           metricName: NON_200_RESPONSE,
@@ -216,12 +242,14 @@ server.get(
       }
 
       const bbcOrigin = headers['bbc-origin'];
+
       let result;
       try {
         result = await renderDocument({
           bbcOrigin,
           data,
           isAmp,
+          isApp,
           routes,
           service,
           url,
@@ -247,6 +275,7 @@ server.get(
           bbcOrigin,
           data: { error: true, status },
           isAmp,
+          isApp,
           routes,
           service,
           url,
@@ -267,6 +296,10 @@ server.get(
           'onion-location',
           `https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion${urlPath}`,
         );
+
+        const mvtVaryHeaders = !isAmp && getMvtVaryHeaders(mvtExperiments);
+
+        if (mvtVaryHeaders) res.set('vary', mvtVaryHeaders);
         res.status(status).send(result.html);
       } else {
         throw new Error('unknown result');

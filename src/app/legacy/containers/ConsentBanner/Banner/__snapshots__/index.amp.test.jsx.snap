@@ -396,7 +396,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
 
 exports[`Amp Consent Banner Container should correctly render cookie banner - RTL layout 1`] = `
 .emotion-0 {
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   background-color: #323232;
@@ -552,7 +552,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
 }
 
 .emotion-12 button {
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 0.9375rem;
@@ -638,7 +638,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
           نستخدم نحن وشركاؤنا تقنيات مثل 
           <a
             class="emotion-8 emotion-9"
-            href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/"
+            href="https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/"
           >
             <span>
               ملفات الارتباط
@@ -711,7 +711,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
         >
           <a
             class="emotion-8 emotion-9"
-            href="https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/"
+            href="https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/"
           >
             <span>
               إقرأوا المزيد عن المعلومات الضرورية والحيوية التي نقوم بخزنها على أجهزتكم من أجل ضمان عمل صفحاتنا بشكل جيد.
@@ -1007,6 +1007,10 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - L
   text-decoration: underline;
 }
 
+.emotion-10 button:focus-visible {
+  outline: 0.1875rem solid #000000;
+}
+
 @media (min-width: 25rem) {
   .emotion-10 {
     width: 17.3125rem;
@@ -1047,6 +1051,7 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - L
           dir="ltr"
         >
           <button
+            data-terms-banner="accept"
             on="tap:cookieId.show, privacyId.hide"
             type="button"
           >
@@ -1059,6 +1064,7 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - L
         >
           <span>
             <a
+              data-terms-banner="reject"
               href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
               on="tap:cookieId.show, privacyId.hide"
             >
@@ -1074,7 +1080,7 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - L
 
 exports[`Amp Consent Banner Container should correctly render privacy banner - RTL layout 1`] = `
 .emotion-0 {
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   background-color: #323232;
@@ -1290,6 +1296,10 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - R
   text-decoration: underline;
 }
 
+.emotion-10 button:focus-visible {
+  outline: 0.1875rem solid #000000;
+}
+
 @media (min-width: 25rem) {
   .emotion-10 {
     width: 17.3125rem;
@@ -1330,6 +1340,7 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - R
           dir="rtl"
         >
           <button
+            data-terms-banner="accept"
             on="tap:cookieId.show, privacyId.hide"
             type="button"
           >
@@ -1342,7 +1353,8 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - R
         >
           <span>
             <a
-              href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+              data-terms-banner="reject"
+              href="https://www.bbc.com/usingthebbc/your-data-matters"
               on="tap:cookieId.show, privacyId.hide"
             >
               إطلع على التغييرات

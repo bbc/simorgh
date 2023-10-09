@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { BrowserRouter } from 'react-router-dom';
 import InlineLink from '.';
 import { render, screen } from '../react-testing-library-with-providers';
 
@@ -166,54 +165,4 @@ describe('InlineLink', () => {
       });
     },
   );
-
-  it('should not render client side link when CSR is enabled and location does not match regex', () => {
-    render(
-      <BrowserRouter>
-        <InlineLink to="https://google.com" text="Google" allowCSR />
-      </BrowserRouter>,
-    );
-    const anchorEl = screen.queryByTestId('client-side-link');
-
-    expect(anchorEl).toBeNull();
-    expect(screen.getByText('Google')).toBeInTheDocument();
-  });
-
-  it('should render link when CSR is enabled and includes a hashtag', () => {
-    render(
-      <BrowserRouter>
-        <InlineLink
-          to="/mundo/articles/ce42wzqr2mko#test"
-          text="Hello World!"
-          allowCSR
-        />
-      </BrowserRouter>,
-    );
-    const anchorEl = screen.queryByTestId('client-side-link');
-
-    expect(anchorEl).toBeInTheDocument();
-    expect(screen.getByText('Hello World!')).toHaveAttribute(
-      'href',
-      '/mundo/articles/ce42wzqr2mko#test',
-    );
-  });
-
-  it('should render link when CSR is enabled and does not includes a hashtag', () => {
-    render(
-      <BrowserRouter>
-        <InlineLink
-          to="/mundo/articles/ce42wzqr2mko"
-          text="Hello World!"
-          allowCSR
-        />
-      </BrowserRouter>,
-    );
-    const anchorEl = screen.queryByTestId('client-side-link');
-
-    expect(anchorEl).toBeInTheDocument();
-    expect(screen.getByText('Hello World!')).toHaveAttribute(
-      'href',
-      '/mundo/articles/ce42wzqr2mko',
-    );
-  });
 });

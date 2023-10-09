@@ -24,14 +24,17 @@ interface Palette extends BrandPalette {
   GHOST: string;
   GREY_10: string;
   GREY_11: string;
+  GREY_1: string;
   GREY_2: string;
   GREY_3: string;
+  GREY_4: string;
   GREY_5: string;
   GREY_6: string;
   GREY_7: string;
   GREY_8: string;
   KINGFISHER: string;
   LE_TEAL: string;
+  LIVE_LIGHT: string;
   LUNAR: string;
   LUNAR_LIGHT: string;
   METAL: string;
@@ -414,6 +417,29 @@ export type FontStyles = {
   fontWeight: number;
 };
 
+export type BrandSVG = {
+  width?: number;
+  height?: number;
+  group: JSX.Element;
+  ratio?: number;
+  viewbox?: {
+    height?: number;
+    width?: number;
+    minY?: number;
+    minX?: number;
+  };
+};
+
+export type GridWidths = {
+  240: number;
+  360: number;
+  400: number;
+  600: number;
+  900: number;
+  1008: number;
+  1280: number;
+};
+
 declare module '@emotion/react' {
   export interface Theme {
     palette: Palette;
@@ -455,5 +481,8 @@ declare module '@emotion/react' {
       serifBold: FontStyles;
       serifLight: FontStyles;
     };
+    brandSVG: BrandSVG;
+    gridWidths: GridWidths;
+    isDarkUi: boolean;
   }
 }

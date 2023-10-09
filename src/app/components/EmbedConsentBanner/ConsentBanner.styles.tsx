@@ -1,16 +1,24 @@
 import { css, Theme } from '@emotion/react';
 import pixelsToRem from '../../utilities/pixelsToRem';
+import { focusIndicatorThickness } from '../ThemeProvider/focusIndicator';
 
 export default {
-  parent: ({ palette }: Theme) =>
+  parent: ({ palette, isDarkUi }: Theme) =>
     css({
-      backgroundColor: palette.WHITE,
+      backgroundColor: isDarkUi ? palette.GREY_3 : palette.WHITE,
       padding: `${pixelsToRem(16)}rem`,
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'flex-start',
-      border: `${pixelsToRem(1)}rem solid ${palette.GREY_5}`,
+      border: `${pixelsToRem(1)}rem solid ${
+        isDarkUi ? palette.GREY_2 : palette.GREY_5
+      }`,
+    }),
+
+  tranparentBorder: () =>
+    css({
+      border: `${pixelsToRem(1)}rem solid transparent`,
     }),
 
   textBody: ({ spacings, palette }: Theme) =>
@@ -34,10 +42,12 @@ export default {
       },
     }),
 
-  button: ({ spacings, palette }: Theme) =>
+  button: ({ spacings, palette, isDarkUi }: Theme) =>
     css({
-      backgroundColor: palette.WHITE,
-      border: `${pixelsToRem(1)}rem solid ${palette.PHILIPPINE_GREY}`,
+      backgroundColor: isDarkUi ? palette.GREY_3 : palette.WHITE,
+      border: `${pixelsToRem(1)}rem solid ${
+        isDarkUi ? palette.GREY_10 : palette.PHILIPPINE_GREY
+      }`,
       borderRadius: 0,
       padding: `${spacings.FULL}rem`,
       cursor: 'pointer',
@@ -47,6 +57,12 @@ export default {
         color: palette.WHITE,
         border: `${pixelsToRem(1)}rem solid ${palette.POSTBOX}`,
         textDecoration: 'underline',
+      },
+
+      // Applies focus indicator black outline.
+      // Overrides dotted Mozilla focus ring applied by Normalize global styles.
+      '&:focus-visible': {
+        outline: `${focusIndicatorThickness} solid ${palette.BLACK}`,
       },
     }),
 };

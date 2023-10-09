@@ -17,11 +17,13 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [18.x]
     env:
       CI: true
       LOG_LEVEL: 'error'
-
+      BFF_PATH: 'https://web-cdn.test.api.bbci.co.uk/fd/simorgh-bff'
+      INTEGRATION_TEST_BUILD: true
+      
     steps:
       - uses: actions/checkout@v3
 
@@ -34,12 +36,17 @@ jobs:
         id: cache
         uses: actions/cache@v3
         with:
-          path: node_modules
-          key: node-modules-${{ hashFiles('yarn.lock') }}
+          path: |
+            node_modules
+            ws-nextjs-app/node_modules
+          key: node-modules-${{ hashFiles('yarn.lock', 'ws-nextjs-app/yarn.lock') }}
 
       - name: Install Node Modules
         if: steps.cache.outputs.cache-hit != 'true'
         run: ./scripts/installNodeModules.sh
 
       - name: Integration Tests
-        run: yarn test:integration -- --ci
+        run: yarn test:integration:ci
+
+      - name: Integration Tests - Next
+        run: yarn test:integration --nextJS

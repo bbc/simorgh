@@ -1,8 +1,7 @@
 import styled from '@emotion/styled';
-import { C_METAL, C_EBON } from '#psammead/psammead-styles/src/colours';
 
 const CardLink = styled.a`
-  color: ${C_EBON};
+  color: ${props => props.theme.palette.EBON};
   text-decoration: none;
   :before {
     position: absolute;
@@ -16,7 +15,7 @@ const CardLink = styled.a`
   }
   &:visited {
     .podcast-promo--visited {
-      color: ${C_METAL};
+      color: ${props => props.theme.palette.METAL};
     }
   }
   &:focus {

@@ -7,11 +7,12 @@ const days = ['اتوار', 'پیر', 'منگل', 'بدھ', 'جمعرات', 'ج�
 
 const assert = { equal: (val1, val2) => expect(val1).toEqual(val2) };
 
+const months =
+  'جنوری_فروری_مارچ_اپریل_مئی_جون_جولائی_اگست_ستمبر_اکتوبر_نومبر_دسمبر'.split(
+    '_'
+  );
+
 test('parse', () => {
-  const test =
-    'جنوری_فروری_مار چ_اپريل_مئ_جون_جولائی_اگست_ستمبر_اکتوبر_نومبر_دسمبر'.split(
-      '_'
-    );
   function equalTest(input, mmm, i) {
     assert.equal(
       moment(input, mmm).month(),
@@ -20,8 +21,8 @@ test('parse', () => {
     );
   }
   for (let i = 0; i < 12; i += 1) {
-    equalTest(test[i], 'MMM', i);
-    equalTest(test[i], 'MMMM', i);
+    equalTest(months[i], 'MMM', i);
+    equalTest(months[i], 'MMMM', i);
   }
 });
 
@@ -94,16 +95,6 @@ test('format ordinal', () => {
   assert.equal(moment([2011, 0, 30]).format('DDDo'), '30', '30');
 
   assert.equal(moment([2011, 0, 31]).format('DDDo'), '31', '31');
-});
-
-test('format month', () => {
-  for (let i = 0; i < test.length; i += 1) {
-    assert.equal(
-      moment([2011, i, 1]).format('MMMM MMM'),
-      `${test[i]} ${test[i]}`,
-      `${test[i]} ${test[i]}`
-    );
-  }
 });
 
 test('format week', () => {

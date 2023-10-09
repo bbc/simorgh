@@ -3,15 +3,14 @@ import { withKnobs } from '@storybook/addon-knobs';
 
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { withServicesKnob } from '../../legacy/psammead/psammead-storybook-helpers/src';
-import { Services, Variants } from '../../models/types/global';
+import { StoryProps } from '../../models/types/storybook';
 import ThemeProvider from '../ThemeProvider';
 import InlineLink from '.';
 import Text from '../Text';
+import md from './README.md';
 
-interface Props {
+interface Props extends StoryProps {
   children: React.ReactNode;
-  service: Services;
-  variant: Variants;
   text: string;
 }
 
@@ -82,6 +81,12 @@ export default {
   parameters: {
     chromatic: {
       disable: true,
+    },
+    docs: {
+      component: {
+        title: 'InlineLink',
+      },
+      page: md,
     },
   },
 };

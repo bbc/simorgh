@@ -9,6 +9,7 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
 import CpsRelatedContent from '.';
+import ThemeProvider from '../../../components/ThemeProvider';
 
 const newsRelatedContentData = newsData.relatedContent.groups[0].promos;
 const pidginRelatedContentData = pidginData.relatedContent.groups[0].promos;
@@ -18,23 +19,27 @@ const arabicRelatedContentData = arabicData.relatedContent.groups[0].promos;
 const Component = ({ isAmp, service, dir, data }) => (
   <div dir={dir}>
     {/* The above simulates dir being added at the page level */}
-    <ServiceContextProvider service={service}>
-      <RequestContextProvider
-        bbcOrigin="https://www.test.bbc.com"
-        isAmp={isAmp}
-        pageType={MEDIA_ASSET_PAGE} /* Can also be one of other CPS pagetypes */
-        pathname="/"
-        service={service}
-      >
-        <ToggleContextProvider
-          toggles={{
-            eventTracking: { enabled: false },
-          }}
+    <ThemeProvider service={service}>
+      <ServiceContextProvider service={service}>
+        <RequestContextProvider
+          bbcOrigin="https://www.test.bbc.com"
+          isAmp={isAmp}
+          pageType={
+            MEDIA_ASSET_PAGE
+          } /* Can also be one of other CPS pagetypes */
+          pathname="/"
+          service={service}
         >
-          <CpsRelatedContent content={data} />
-        </ToggleContextProvider>
-      </RequestContextProvider>
-    </ServiceContextProvider>
+          <ToggleContextProvider
+            toggles={{
+              eventTracking: { enabled: false },
+            }}
+          >
+            <CpsRelatedContent content={data} />
+          </ToggleContextProvider>
+        </RequestContextProvider>
+      </ServiceContextProvider>
+    </ThemeProvider>
   </div>
 );
 

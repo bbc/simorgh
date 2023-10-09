@@ -1,11 +1,19 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
-import React, { Fragment, PropsWithChildren, useState } from 'react';
+import React, {
+  Fragment,
+  PropsWithChildren,
+  useState,
+  useContext,
+} from 'react';
 import { Global, jsx } from '@emotion/react';
 import { Helmet } from 'react-helmet';
 import styles from './index.styles';
+import { RequestContext } from '../../contexts/RequestContext';
+import { FRONT_PAGE } from '../../routes/utils/pageTypes';
 
-interface Props {
+type Props = {
   alt: string;
   aspectRatio?: [x: number, y: number];
   attribution?: string;
@@ -16,13 +24,15 @@ interface Props {
   isAmp?: boolean;
   lazyLoad?: boolean;
   placeholder?: boolean;
+  darkPlaceholder?: boolean;
   preload?: boolean;
   mediaType?: string;
   srcSet?: string;
   sizes?: string;
   src: string;
   width?: number;
-}
+  fetchpriority?: 'high';
+};
 
 const DEFAULT_ASPECT_RATIO = [16, 9];
 const roundNumber = (num: number) => Math.round(num * 100) / 100;
@@ -42,13 +52,17 @@ const Image = ({
   isAmp = false,
   lazyLoad = false,
   placeholder = true,
+  darkPlaceholder = false,
   preload = false,
   mediaType,
   srcSet,
   sizes,
   src,
   width,
+  children,
+  fetchpriority,
 }: PropsWithChildren<Props>) => {
+  const { pageType } = useContext(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
   const showPlaceholder = placeholder && !isLoaded;
   const hasDimensions = width && height;
@@ -63,6 +77,15 @@ const Image = ({
   const hasFallback = srcSet && fallbackSrcSet;
   const ImageWrapper = hasFallback ? 'picture' : Fragment;
   const ampImgLayout = hasDimensions ? 'responsive' : 'fill';
+  const getImgSrcSet = () => {
+    if (!hasFallback) return srcSet;
+    if (pageType !== FRONT_PAGE) return fallbackSrcSet;
+    return undefined;
+  };
+  const getImgSizes = () => {
+    if ((!hasFallback && srcSet) || pageType !== FRONT_PAGE) return sizes;
+    return undefined;
+  };
 
   return (
     <>
@@ -79,7 +102,17 @@ const Image = ({
       )}
       <div
         className={className}
-        css={[styles.wrapper, showPlaceholder && styles.placeholder]}
+        css={theme => [
+          styles.wrapper,
+          showPlaceholder && [
+            styles.placeholder,
+            {
+              backgroundColor: darkPlaceholder
+                ? theme.palette.SHADOW
+                : theme.palette.LUNAR,
+            },
+          ],
+        ]}
         style={{
           paddingBottom: legacyBrowserAspectRatio,
         }}
@@ -104,29 +137,16 @@ const Image = ({
               src={src}
               width={width}
               height={height}
-              srcSet={srcSet}
-              sizes={srcSet ? sizes : undefined}
+              srcSet={getImgSrcSet()}
+              sizes={getImgSizes()}
+              fallback=""
               attribution={attribution}
-            >
-              {fallbackSrcSet && (
-                <amp-img
-                  class="bbc-image"
-                  layout={ampImgLayout}
-                  alt={alt}
-                  src={src}
-                  width={width}
-                  height={height}
-                  srcSet={fallbackSrcSet}
-                  sizes={sizes}
-                  fallback=""
-                  attribution={attribution}
-                />
-              )}
-            </amp-img>
+              {...(preload && { 'data-hero': true })}
+            />
           </>
         ) : (
           <ImageWrapper>
-            {hasFallback && (
+            {hasFallback && pageType === FRONT_PAGE && (
               <>
                 <source srcSet={srcSet} type={mediaType} sizes={sizes} />
                 <source
@@ -139,17 +159,19 @@ const Image = ({
             <img
               onLoad={() => setIsLoaded(true)}
               src={src}
-              srcSet={!hasFallback ? srcSet : undefined}
-              sizes={!hasFallback && srcSet ? sizes : undefined}
+              srcSet={getImgSrcSet()}
+              sizes={getImgSizes()}
               alt={alt}
               loading={lazyLoad ? 'lazy' : undefined}
               width={width}
               height={height}
               css={styles.image}
+              fetchpriority={fetchpriority}
               style={{ aspectRatio: `${aspectRatioX} / ${aspectRatioY}` }} // aspectRatio used in combination with the objectFit:cover will center the image horizontally and vertically if aspectRatio prop is different from image's intrinsic aspect ratio
             />
           </ImageWrapper>
         )}
+        {children}
       </div>
     </>
   );

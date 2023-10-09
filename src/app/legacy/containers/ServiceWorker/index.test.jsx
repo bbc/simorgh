@@ -36,18 +36,6 @@ describe('Service Worker', () => {
     });
   });
 
-  describe('on dev environment', () => {
-    it('should not be installed', async () => {
-      process.env.NODE_ENV = 'dev';
-      wrapper = render(
-        <ServiceContext.Provider value={contextStub}>
-          <ServiceWorkerContainer />
-        </ServiceContext.Provider>,
-      );
-      expect(navigator.serviceWorker.register).not.toHaveBeenCalled();
-    });
-  });
-
   describe('when swPath is not set (to disable the service worker)', () => {
     it('should not be installed', async () => {
       process.env.NODE_ENV = 'production';

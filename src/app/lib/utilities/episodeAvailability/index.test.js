@@ -36,10 +36,6 @@ describe('Episode Availability', () => {
   });
 
   describe('getEpisodeAvailability', () => {
-    afterEach(() => {
-      jest.clearAllMocks();
-    });
-
     const testAvailability = pipe(
       availability =>
         assocPath(

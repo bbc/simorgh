@@ -1,463 +1,756 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::article:czwj5l0n210o",
-    "locators": {
-      "optimoUrn": "urn:bbc:optimo:asset:czwj5l0n210o"
-    },
-    "type": "article",
-    "createdBy": "Bbcscotland",
-    "language": "en-gb",
-    "lastUpdated": 1568378195777,
-    "firstPublished": 1568378189124,
-    "lastPublished": 1568378189124,
-    "options": {},
-    "analyticsLabels": {
-      "contentId": "urn:bbc:optimo:asset:czwj5l0n210o"
-    },
-    "passport": {
-      "language": "en-gb",
-      "home": "http://www.bbc.co.uk/ontologies/passport/home/BBCScotland"
-    },
-    "tags": {},
-    "version": "v1.1.2",
-    "blockTypes": [
-      "headline",
-      "text",
-      "paragraph",
-      "fragment",
-      "image",
-      "caption",
-      "altText",
-      "rawImage",
-      "urlLink",
-      "video",
-      "subheadline"
-    ]
-  },
-  "content": {
-    "model": {
-      "blocks": [
-        {
-          "type": "headline",
-          "model": {
-            "blocks": [
-              {
-                "type": "text",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "paragraph",
-                      "model": {
-                        "text": "This is the headline of this test article",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "This is the headline of this test article",
-                              "attributes": []
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "image",
-          "model": {
-            "blocks": [
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "This test image, copyright BBC, shows a map of France.  The image is in the first three blocks and has this caption.",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "This test image, copyright BBC, shows a map of France.  The image is in the first three blocks and has this caption.",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Map of France showing Paris and Cognac",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Map of France showing Paris and Cognac",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "rawImage",
-                "model": {
-                  "width": 624,
-                  "height": 351,
-                  "locator": "feb2/test/36ddabc0-d622-11e9-851e-f35866034a7a.jpg",
-                  "originCode": "cpsdevpb",
-                  "copyrightHolder": "BBC"
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "text",
-          "model": {
-            "blocks": [
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "This is a text block, which contains a url link to the BBC Weather homepage.",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "This is a text block, which contains a url link to ",
-                        "attributes": []
-                      }
-                    },
-                    {
-                      "type": "urlLink",
-                      "model": {
-                        "text": "the BBC Weather homepage",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "the BBC Weather homepage",
-                              "attributes": []
-                            }
-                          }
-                        ],
-                        "locator": "https://www.bbc.co.uk/weather",
-                        "isExternal": false
-                      }
-                    },
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": ".",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "video",
-          "model": {
-            "locator": "urn:bbc:pips:pid:p01k6msm",
-            "blocks": [
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "This is a video block containing a video about ants",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "This is a video block containing a video about ants",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "aresMedia",
-                "model": {
-                  "blocks": [
-                    {
-                      "blockId": "urn:bbc:ares::clip:p01k6msm",
-                      "type": "aresMediaMetadata",
-                      "model": {
-                        "id": "p01k6msm",
-                        "subType": "clip",
-                        "format": "audio_video",
-                        "title": "Five things ants can teach us about management",
-                        "synopses": {
-                          "short": "They may be tiny, but us humans could learn a thing or two from ants."
-                        },
-                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
-                        "imageCopyright": "BBC",
-                        "embedding": true,
-                        "advertising": true,
-                        "versions": [
-                          {
-                            "versionId": "p01k6msp",
-                            "types": ["Original"],
-                            "duration": 191,
-                            "durationISO8601": "PT3M11S",
-                            "warnings": {
-                              "short": "Contains strong language and adult humour.",
-                              "long": "Contains strong language and adult humour."
-                            },
-                            "availableTerritories": {
-                              "uk": true,
-                              "nonUk": true
-                            },
-                            "availableFrom": 1540218932000
-                          }
-                        ],
-                        "syndication": {
-                          "destinations": []
-                        }
-                      }
-                    },
-                    {
-                      "type": "image",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "rawImage",
-                            "model": {
-                              "width": 1920,
-                              "height": 1080,
-                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg",
-                              "originCode": "mpv",
-                              "copyrightHolder": "BBC"
-                            }
+  "data": {
+    "article": {
+      "content": {
+        "model": {
+          "blocks": [
+            {
+              "id": "3aef4d87",
+              "type": "headline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "4864b095",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "3d958f64",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "This is the headline of this test article",
+                            "blocks": [
+                              {
+                                "id": "ad3113f9",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "This is the headline of this test article",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
                           },
-                          {
-                            "type": "altText",
-                            "model": {
-                              "blocks": [
-                                {
-                                  "type": "text",
-                                  "model": {
-                                    "blocks": [
-                                      {
-                                        "type": "paragraph",
-                                        "model": {
-                                          "text": "Ants",
-                                          "blocks": [
-                                            {
-                                              "type": "fragment",
-                                              "model": {
-                                                "text": "Ants",
-                                                "attributes": []
-                                              }
-                                            }
-                                          ]
-                                        }
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "subheadline",
-          "model": {
-            "blocks": [
-              {
-                "type": "text",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "paragraph",
-                      "model": {
-                        "text": "This is a subheadline block",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "This is a subheadline block",
-                              "attributes": []
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "image",
-          "model": {
-            "blocks": [
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Footballers after a match",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Footballers after a match",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      1,
+                      1
+                    ]
+                  }
+                ]
               },
-              {
-                "type": "rawImage",
-                "model": {
-                  "width": 2048,
-                  "height": 1152,
-                  "locator": "7a0b/test/d3d5d830-d622-11e9-851e-f35866034a7a.jpg",
-                  "originCode": "cpsdevpb",
-                  "copyrightHolder": "Getty Images"
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "text",
-          "model": {
-            "blocks": [
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "This test article has been created so that we can run automated end-to-end tests on our website.",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "This test article has been created so that we can run automated end-to-end tests on our website.",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
+              "position": [
+                1
+              ]
+            },
+            {
+              "id": "0ee00073",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "7d83a534",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "1e418d47",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "67dd7fd6",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "This test image, copyright BBC, shows a map of France.  The image is in the first three blocks and has this caption.",
+                                  "blocks": [
+                                    {
+                                      "id": "4d5022c2",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "This test image, copyright BBC, shows a map of France.  The image is in the first three blocks and has this caption.",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        2,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  2,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            2,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      2,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "c1079686",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "765827e5",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "a87a7ab8",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Map of France showing Paris and Cognac",
+                                  "blocks": [
+                                    {
+                                      "id": "3aba3c4a",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Map of France showing Paris and Cognac",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        2,
+                                        2,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  2,
+                                  2,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            2,
+                            2,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      2,
+                      2
+                    ]
+                  },
+                  {
+                    "id": "9a88a08e",
+                    "type": "rawImage",
+                    "model": {
+                      "width": 624,
+                      "height": 351,
+                      "locator": "feb2/test/36ddabc0-d622-11e9-851e-f35866034a7a.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "BBC"
+                    },
+                    "position": [
+                      2,
+                      3
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                2
+              ]
+            },
+            {
+              "id": "4afc5a79",
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1568378189124,
+                "lastPublished": 1568378189124
+              },
+              "position": [
+                3
+              ]
+            },
+            {
+              "id": "14b70a3d",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "ffabc097",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "This is a text block, which contains a url link to the BBC Weather homepage.",
+                      "blocks": [
+                        {
+                          "id": "8e1f4dff",
+                          "type": "fragment",
+                          "model": {
+                            "text": "This is a text block, which contains a url link to ",
+                            "attributes": []
+                          },
+                          "position": [
+                            4,
+                            1,
+                            1
+                          ]
+                        },
+                        {
+                          "id": "fc112df9",
+                          "type": "urlLink",
+                          "model": {
+                            "text": "the BBC Weather homepage",
+                            "blocks": [
+                              {
+                                "id": "7e2f2c88",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "the BBC Weather homepage",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  4,
+                                  1,
+                                  2,
+                                  1
+                                ]
+                              }
+                            ],
+                            "locator": "https://www.bbc.co.uk/weather",
+                            "isExternal": false
+                          },
+                          "position": [
+                            4,
+                            1,
+                            2
+                          ]
+                        },
+                        {
+                          "id": "009783aa",
+                          "type": "fragment",
+                          "model": {
+                            "text": ".",
+                            "attributes": []
+                          },
+                          "position": [
+                            4,
+                            1,
+                            3
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      4,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                4
+              ]
+            },
+            {
+              "id": "b0871f61",
+              "type": "video",
+              "model": {
+                "locator": "urn:bbc:pips:pid:p01k6msm",
+                "blocks": [
+                  {
+                    "id": "726eeedb",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "8e386850",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "4528ffb4",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "This is a video block containing a video about ants",
+                                  "blocks": [
+                                    {
+                                      "id": "9690336f",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "This is a video block containing a video about ants",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        5,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  5,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            5,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      5,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "584435f7",
+                    "type": "aresMedia",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "297e59bd",
+                          "blockId": "urn:bbc:ares::clip:p01k6msm",
+                          "type": "aresMediaMetadata",
+                          "model": {
+                            "id": "p01k6msm",
+                            "subType": "clip",
+                            "format": "audio_video",
+                            "title": "Five things ants can teach us about management",
+                            "synopses": {
+                              "short": "They may be tiny, but us humans could learn a thing or two from ants."
+                            },
+                            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+                            "imageCopyright": "BBC",
+                            "embedding": true,
+                            "advertising": true,
+                            "versions": [
+                              {
+                                "versionId": "p01k6msp",
+                                "types": [
+                                  "Original"
+                                ],
+                                "duration": 191,
+                                "durationISO8601": "PT3M11S",
+                                "warnings": {
+                                  "short": "Contains strong language and adult humour.",
+                                  "long": "Contains strong language and adult humour."
+                                },
+                                "availableTerritories": {
+                                  "uk": true,
+                                  "nonUk": true
+                                },
+                                "availableFrom": 1540218932000
+                              }
+                            ],
+                            "syndication": {
+                              "destinations": []
+                            },
+                            "smpKind": "programme"
+                          },
+                          "position": [
+                            5,
+                            2,
+                            1
+                          ]
+                        },
+                        {
+                          "id": "df7ec229",
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "3c7468e8",
+                                "type": "rawImage",
+                                "model": {
+                                  "width": 1920,
+                                  "height": 1080,
+                                  "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg",
+                                  "originCode": "mpv",
+                                  "copyrightHolder": "BBC"
+                                },
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  1
+                                ]
+                              },
+                              {
+                                "id": "8af5e525",
+                                "type": "altText",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "7ceb3381",
+                                      "type": "text",
+                                      "model": {
+                                        "blocks": [
+                                          {
+                                            "id": "c2fc8bcb",
+                                            "type": "paragraph",
+                                            "model": {
+                                              "text": "Ants",
+                                              "blocks": [
+                                                {
+                                                  "id": "11811e47",
+                                                  "type": "fragment",
+                                                  "model": {
+                                                    "text": "Ants",
+                                                    "attributes": []
+                                                  },
+                                                  "position": [
+                                                    5,
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    1,
+                                                    1,
+                                                    1
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            "position": [
+                                              5,
+                                              2,
+                                              2,
+                                              2,
+                                              1,
+                                              1
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      "position": [
+                                        5,
+                                        2,
+                                        2,
+                                        2,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  2
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            5,
+                            2,
+                            2
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      5,
+                      2
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                5
+              ]
+            },
+            {
+              "id": "e6fab27d",
+              "type": "subheadline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "8dee9701",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "fe5ea20d",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "This is a subheadline block",
+                            "blocks": [
+                              {
+                                "id": "93bb8d58",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "This is a subheadline block",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  6,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            6,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      6,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                6
+              ]
+            },
+            {
+              "id": "f959cfba",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "ba352ae2",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "035e4c7c",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "a845d873",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Footballers after a match",
+                                  "blocks": [
+                                    {
+                                      "id": "37b96595",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Footballers after a match",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        7,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  7,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            7,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      7,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "aba9c23b",
+                    "type": "rawImage",
+                    "model": {
+                      "width": 2048,
+                      "height": 1152,
+                      "locator": "7a0b/test/d3d5d830-d622-11e9-851e-f35866034a7a.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "Getty Images"
+                    },
+                    "position": [
+                      7,
+                      2
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                7
+              ]
+            },
+            {
+              "id": "2417b633",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "989b262d",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "This test article has been created so that we can run automated end-to-end tests on our website.",
+                      "blocks": [
+                        {
+                          "id": "e5803eaf",
+                          "type": "fragment",
+                          "model": {
+                            "text": "This test article has been created so that we can run automated end-to-end tests on our website.",
+                            "attributes": []
+                          },
+                          "position": [
+                            8,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      8,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                8
+              ]
+            },
+            {
+              "id": "821f1501",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                9
+              ]
+            },
+            {
+              "id": "049ba9ba",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                10
+              ]
+            }
+          ]
         }
-      ]
+      },
+      "metadata": {
+        "id": "urn:bbc:ares::article:czwj5l0n210o",
+        "atiAnalytics": {
+          "categoryName": null,
+          "contentId": "urn:bbc:optimo:asset:czwj5l0n210o",
+          "contentType": "article",
+          "language": "en-gb",
+          "ldpThingIds": null,
+          "ldpThingLabels": null,
+          "nationsProducer": null,
+          "pageIdentifier": "scotland.articles.czwj5l0n210o.page",
+          "pageTitle": "This is the SEO headline of this test article",
+          "timePublished": "2019-09-13T12:36:29.124Z",
+          "timeUpdated": "2019-09-13T12:36:29.124Z"
+        },
+        "locators": {
+          "optimoUrn": "urn:bbc:optimo:asset:czwj5l0n210o",
+          "canonicalUrl": "https://www.bbc.com/scotland/articles/czwj5l0n210o"
+        },
+        "type": "article",
+        "createdBy": "Bbcscotland",
+        "language": "en-gb",
+        "firstPublished": 1568378189124,
+        "lastPublished": 1568378189124,
+        "analyticsLabels": {
+          "contentId": "urn:bbc:optimo:asset:czwj5l0n210o",
+          "producer": "BBC",
+          "page": "scotland.articles.czwj5l0n210o.page"
+        },
+        "passport": {
+          "language": "en-gb",
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/BBCScotland",
+          "taggings": []
+        },
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment",
+          "image",
+          "caption",
+          "altText",
+          "rawImage",
+          "urlLink",
+          "video",
+          "subheadline",
+          "aresMedia"
+        ],
+        "allowAdvertising": true
+      },
+      "promo": {
+        "headlines": {
+          "seoHeadline": "This is the SEO headline of this test article"
+        }
+      }
+    },
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null
     }
   },
-  "promo": {
-    "headlines": {
-      "seoHeadline": "This is the SEO headline of this test article"
-    },
-    "locators": {
-      "optimoUrn": "urn:bbc:optimo:asset:czwj5l0n210o"
-    },
-    "summary": {
-      "blocks": [
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "attributes": [],
-                        "text": ""
-                      },
-                      "type": "fragment"
-                    }
-                  ],
-                  "text": ""
-                },
-                "type": "paragraph"
-              }
-            ]
-          },
-          "type": "text"
-        }
-      ]
-    },
-    "timestamp": 1568378189124,
-    "id": "urn:bbc:ares::article:czwj5l0n210o",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "site": {
-      "subType": "site",
-      "name": "Bbcscotland",
-      "uri": "/bbcscotland",
-      "type": "simple"
-    },
-    "groups": []
-  }
+  "contentType": "application/json; charset=utf-8"
 }

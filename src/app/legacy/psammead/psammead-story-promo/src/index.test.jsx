@@ -1,11 +1,10 @@
 import React from 'react';
 import { arrayOf, bool, shape, string, oneOf } from 'prop-types';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import MediaIndicator from '#psammead/psammead-media-indicator/src';
-import { render } from '@testing-library/react';
 import LiveLabel from '#psammead/psammead-live-label/src';
 import styled from '@emotion/styled';
 import { GEL_SPACING_HLF } from '#psammead/gel-foundations/src/spacings';
+import { render } from '../../../../components/react-testing-library-with-providers';
 import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import StoryPromo, { Headline, Summary, Link } from './index';
 import relatedItems from '../testHelpers/relatedItems';
@@ -85,95 +84,120 @@ MediaInfo.defaultProps = {
 };
 
 describe('StoryPromo', () => {
-  shouldMatchSnapshot(
-    'should render correctly',
-    <StoryPromo image={Image} info={Info({})} />,
-  );
-  shouldMatchSnapshot(
-    'should render Live promo correctly',
-    <StoryPromo image={Image} info={Info({ isLive: true })} />,
-  );
+  it('should render correctly', () => {
+    const { container } = render(<StoryPromo image={Image} info={Info({})} />);
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render a RTL Live promo correctly',
-    <StoryPromo image={Image} info={Info({ isLive: true, dir: 'rtl' })} />,
-  );
+  it('should render Live promo correctly', () => {
+    const { container } = render(
+      <StoryPromo image={Image} info={Info({ isLive: true })} />,
+    );
+    expect(container).toMatchSnapshot();
+  });
+
+  it('should render a RTL Live promo correctly', () => {
+    const { container } = render(
+      <StoryPromo image={Image} info={Info({ isLive: true, dir: 'rtl' })} />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 });
 
 describe('StoryPromo with Media Indicator', () => {
-  shouldMatchSnapshot(
-    'should render correctly',
-    <StoryPromo image={Image} info={Info({})} mediaIndicator={<MediaInfo />} />,
-  );
+  it('should render correctly', () => {
+    const { container } = render(
+      <StoryPromo
+        image={Image}
+        info={Info({})}
+        mediaIndicator={<MediaInfo />}
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render a RTL promo with media indicator correctly',
-    <StoryPromo
-      image={Image}
-      info={Info({})}
-      mediaIndicator={<MediaInfo service="persian" dir="rtl" />}
-    />,
-  );
+  it('should render a RTL promo with media indicator correctly', () => {
+    const { container } = render(
+      <StoryPromo
+        image={Image}
+        info={Info({})}
+        mediaIndicator={<MediaInfo service="persian" dir="rtl" />}
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 });
 
 describe('StoryPromo - Top Story', () => {
-  shouldMatchSnapshot(
-    'should render correctly',
-    <StoryPromo
-      image={Image}
-      info={Info({ promoType: 'top' })}
-      promoType="top"
-    />,
-  );
+  it('should render correctly', () => {
+    const { container } = render(
+      <StoryPromo
+        image={Image}
+        info={Info({ promoType: 'top' })}
+        promoType="top"
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render with Media Indicator correctly',
-    <StoryPromo
-      image={Image}
-      info={Info({ promoType: 'top' })}
-      mediaIndicator={<MediaInfo />}
-      promoType="top"
-    />,
-  );
+  it('should render with Media Indicator correctly', () => {
+    const { container } = render(
+      <StoryPromo
+        image={Image}
+        info={Info({ promoType: 'top' })}
+        mediaIndicator={<MediaInfo />}
+        promoType="top"
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render with multiple Index Alsos correctly',
-    <StoryPromo
-      image={Image}
-      info={Info({ promoType: 'top', alsoItems: relatedItems })}
-      promoType="top"
-    />,
-  );
+  it('should render with multiple Index Alsos correctly', () => {
+    const { container } = render(
+      <StoryPromo
+        image={Image}
+        info={Info({ promoType: 'top', alsoItems: relatedItems })}
+        promoType="top"
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render with one Index Also correctly',
-    <StoryPromo
-      image={Image}
-      info={Info({ promoType: 'top', alsoItems: [relatedItems[0]] })}
-      promoType="top"
-    />,
-  );
+  it('should render with one Index Also correctly', () => {
+    const { container } = render(
+      <StoryPromo
+        image={Image}
+        info={Info({ promoType: 'top', alsoItems: [relatedItems[0]] })}
+        promoType="top"
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 });
 
 describe('StoryPromo - Leading Story', () => {
-  shouldMatchSnapshot(
-    'should render correctly',
-    <StoryPromo
-      image={Image}
-      info={Info({ promoType: 'leading' })}
-      promoType="leading"
-    />,
-  );
+  it('should render correctly', () => {
+    const { container } = render(
+      <StoryPromo
+        image={Image}
+        info={Info({ promoType: 'leading' })}
+        promoType="leading"
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render with Media Indicator correctly',
-    <StoryPromo
-      image={Image}
-      info={Info({ promoType: 'leading' })}
-      mediaIndicator={<MediaInfo />}
-      promoType="leading"
-    />,
-  );
+  it('should render with Media Indicator correctly', () => {
+    const { container } = render(
+      <StoryPromo
+        image={Image}
+        info={Info({ promoType: 'leading' })}
+        mediaIndicator={<MediaInfo />}
+        promoType="leading"
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 });
 
 describe('assertions', () => {

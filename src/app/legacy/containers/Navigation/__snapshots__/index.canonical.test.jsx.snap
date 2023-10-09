@@ -67,7 +67,7 @@ exports[`Canonical Navigation snapshots should correctly render Canonical naviga
   right: 0;
   bottom: 0;
   top: 0;
-  border: 0.25rem solid #B80000;
+  border: 0.25rem solid #000000;
 }
 
 @media (min-width: 37.5rem) {
@@ -111,7 +111,7 @@ exports[`Canonical Navigation snapshots should correctly render Canonical naviga
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-12 {
+  .emotion-11 {
     white-space: nowrap;
     overflow-x: scroll;
     scroll-behavior: auto;
@@ -120,11 +120,23 @@ exports[`Canonical Navigation snapshots should correctly render Canonical naviga
     -ms-overflow-style: none;
   }
 
-  .emotion-12::-webkit-scrollbar {
+  .emotion-11::-webkit-scrollbar {
     display: none;
   }
 
-  .emotion-12:after {
+  .emotion-11:focus-visible {
+    outline: none;
+  }
+
+  .emotion-11:focus-visible::after {
+    outline: 0.1875rem solid #000000;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .emotion-11:after {
     content: ' ';
     height: 100%;
     width: 3rem;
@@ -137,19 +149,18 @@ exports[`Canonical Navigation snapshots should correctly render Canonical naviga
     background: linear-gradient(
             to right,
             rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 1)
-              100%
+            rgba(255, 255, 255, 1) 100%
           );
   }
 
   @media (min-width: 25rem) {
-    .emotion-12:after {
+    .emotion-11:after {
       width: 6rem;
     }
   }
 }
 
-.emotion-14 {
+.emotion-13 {
   background-color: #FFFFFF;
   clear: both;
   overflow: hidden;
@@ -161,14 +172,14 @@ exports[`Canonical Navigation snapshots should correctly render Canonical naviga
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-14 {
+  .emotion-13 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .emotion-14 {
+  .emotion-13 {
     -webkit-transition: none;
     transition: none;
   }
@@ -188,7 +199,7 @@ exports[`Canonical Navigation snapshots should correctly render Canonical naviga
       >
         <button
           aria-expanded="false"
-          class="emotion-6 emotion-7"
+          class="focusIndicatorRemove emotion-6 emotion-7"
           dir="ltr"
           type="button"
         >
@@ -205,13 +216,13 @@ exports[`Canonical Navigation snapshots should correctly render Canonical naviga
             />
           </svg>
           <span
-            class="emotion-10 emotion-11"
+            class="emotion-10"
           >
             menu
           </span>
         </button>
         <div
-          class="emotion-12 emotion-13"
+          class="emotion-11 emotion-12"
           data-e2e="scrollable-nav"
           dir="ltr"
         >
@@ -225,7 +236,7 @@ exports[`Canonical Navigation snapshots should correctly render Canonical naviga
         </div>
       </div>
       <div
-        class="emotion-14 emotion-15"
+        class="emotion-13 emotion-14"
         data-e2e="dropdown-nav"
         height="0"
       >

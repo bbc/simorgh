@@ -55,7 +55,8 @@ describe('Text', () => {
       color: '#141414',
       fontSize: '0.9375rem',
       lineHeight: '1.5rem',
-      fontFamily: '"BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif',
+      fontFamily:
+        '"BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif',
       fontStyle: 'normal',
       fontWeight: 400,
     });
@@ -113,7 +114,8 @@ describe('Text', () => {
       color: '#141414',
       fontSize: '0.9375rem',
       lineHeight: '1.5rem',
-      fontFamily: '"BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif',
+      fontFamily:
+        '"BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif',
       fontStyle: 'normal',
       fontWeight: 400,
     });

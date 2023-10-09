@@ -1,6 +1,13 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { TOPIC_PAGE } from '#app/routes/utils/pageTypes';
+import { data as kyrgyzTopicWithMessageBanners } from '#data/kyrgyz/topics/cvpv9djp9qqt.json';
+import { data as mundoBannerVariations } from '#data/mundo/topics/cw90edn9kw4t.json';
+import {
+  VISUAL_PROMINENCE,
+  VISUAL_STYLE,
+} from '#app/models/types/curationData';
+import { Helmet } from 'react-helmet';
+import { TOPIC_PAGE } from '../../routes/utils/pageTypes';
 import { render } from '../../components/react-testing-library-with-providers';
 import TopicPage from './TopicPage';
 import {
@@ -12,8 +19,8 @@ import {
 } from './fixtures';
 
 jest.mock('../../components/ThemeProvider');
-jest.mock('../../legacy/containers/ChartbeatAnalytics', () => {
-  const ChartbeatAnalytics = () => <div>chartbeat</div>;
+jest.mock('../../components/ChartbeatAnalytics', () => {
+  const ChartbeatAnalytics = () => <div>Chartbeat Analytics</div>;
   return ChartbeatAnalytics;
 });
 
@@ -78,7 +85,7 @@ describe('Topic Page', () => {
     expect(container.getElementsByTagName('section').length).toEqual(0);
   });
 
-  it('should render curation subheading when curation title exists', () => {
+  it('should render curation subheading as h2 when curation title exists', () => {
     const { container } = render(
       <TopicPage pageData={mundoMultipleCurations} />,
       getOptionParams({ service: 'mundo', lang: 'es' }),
@@ -157,6 +164,109 @@ describe('Topic Page', () => {
       } else {
         expect(adElement).not.toBeInTheDocument();
       }
+    });
+  });
+
+  describe('Message Banner', () => {
+    it('should only render when visual style is banner and visual prominence is normal', () => {
+      const messageBannerCuration =
+        kyrgyzTopicWithMessageBanners.curations.find(
+          ({ visualStyle, visualProminence }) =>
+            visualProminence === VISUAL_PROMINENCE.NORMAL &&
+            visualStyle === VISUAL_STYLE.BANNER,
+        );
+
+      const { getByRole } = render(
+        <TopicPage pageData={kyrgyzTopicWithMessageBanners} />,
+        getOptionParams({ service: 'kyrgyz', lang: 'ky' }),
+      );
+
+      const messageBanner = getByRole('region', {
+        name: messageBannerCuration.title,
+      });
+
+      expect(messageBanner).toBeInTheDocument();
+    });
+
+    it('should render multiple message banners with unique ids', () => {
+      render(
+        <TopicPage pageData={mundoBannerVariations} />,
+        getOptionParams({ service: 'mundo', lang: 'es' }),
+      );
+      expect(document.querySelectorAll("[id^='message-banner']")).toHaveLength(
+        3,
+      );
+      expect(document.querySelectorAll("[id='message-banner']")).toHaveLength(
+        0,
+      );
+    });
+
+    it('should not render when visual style is banner and visual prominence is high', () => {
+      const { queryByRole } = render(
+        <TopicPage pageData={kyrgyzTopicWithMessageBanners} />,
+        getOptionParams({ service: 'kyrgyz', lang: 'ky' }),
+      );
+      const highProminenceBanner = kyrgyzTopicWithMessageBanners.curations.find(
+        curation =>
+          curation.visualStyle === VISUAL_STYLE.BANNER &&
+          curation.visualProminence === VISUAL_PROMINENCE.HIGH,
+      );
+      expect(
+        queryByRole('region', { name: highProminenceBanner.title }),
+      ).not.toBeInTheDocument();
+    });
+
+    it('should not render when visual style is not banner', () => {
+      render(
+        <TopicPage pageData={amharicSingleItem} />,
+        getOptionParams({ service: 'amharic', lang: 'am' }),
+      );
+
+      expect(document.querySelectorAll("[id^='message-banner']")).toHaveLength(
+        0,
+      );
+    });
+
+    it('should only render the first summary if there is more than one summary in the curation', () => {
+      const messageBannerCuration = mundoBannerVariations.curations.find(
+        ({ visualStyle, visualProminence, summaries }) =>
+          visualProminence === VISUAL_PROMINENCE.NORMAL &&
+          visualStyle === VISUAL_STYLE.BANNER &&
+          summaries.length > 1,
+      );
+      const { queryAllByRole } = render(
+        <TopicPage pageData={mundoBannerVariations} />,
+        getOptionParams({ service: 'mundo', lang: 'es' }),
+      );
+      const messageBanners = queryAllByRole('region', {
+        name: messageBannerCuration.title,
+      });
+      expect(messageBanners).toHaveLength(1);
+    });
+  });
+
+  describe('Analytics', () => {
+    it('should render a Chartbeat component', () => {
+      const { getByText } = render(
+        <TopicPage pageData={amharicSingleItem} />,
+        getOptionParams({ service: 'amharic', lang: 'am' }),
+      );
+
+      expect(getByText('Chartbeat Analytics')).toBeInTheDocument();
+    });
+  });
+
+  describe('SEO', () => {
+    it('should correctly render linked data', () => {
+      render(<TopicPage pageData={pidginMultipleItems} />, getOptionParams());
+
+      const getLinkedDataOutput = () => {
+        return Helmet.peek().scriptTags.map(({ innerHTML }) =>
+          JSON.parse(innerHTML),
+        );
+      };
+
+      expect(getLinkedDataOutput()).toMatchSnapshot();
     });
   });
 });

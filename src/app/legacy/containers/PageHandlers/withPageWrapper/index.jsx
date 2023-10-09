@@ -1,7 +1,7 @@
 import React from 'react';
 import { string, number } from 'prop-types';
 import { pageDataPropType } from '#models/propTypes/data';
-import PageWrapper from '#app/Layouts/defaultPageWrapper';
+import PageWrapper from '../../../../components/PageLayoutWrapper';
 
 const WithPageWrapper = Component => {
   const PageWrapperContainer = props => (

@@ -6,15 +6,16 @@ import assocPath from 'ramda/src/assocPath';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 
-import noOnwardJourneys from '#data/pidgin/cpsAssets/sport-23252855';
+import noOnwardJourneys from '#data/pidgin/cpsAssets/sport-23252855.json';
 import someCpsOnwardJourneys from '#data/azeri/cpsAssets/azerbaijan-44208474.json';
 import allCpsOnwardJourneys from '#data/pidgin/cpsAssets/tori-49221071.json';
-import pglAboutData from '#data/afaanoromoo/cpsAssets/oduu-41217768';
+import pglAboutData from '#data/afaanoromoo/cpsAssets/oduu-41217768.json';
 import getInitialData from '#app/routes/cpsAsset/getInitialData';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import ThemeProvider from '../../components/ThemeProvider';
 import PhotoGalleryPage from '.';
 
-jest.mock('#containers/ChartbeatAnalytics', () => {
+jest.mock('../../components/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
 });
@@ -24,22 +25,26 @@ jest.mock('#containers/ComscoreAnalytics', () => {
   return ComscoreAnalytics;
 });
 
+jest.mock('../../components/ThemeProvider');
+
 const Page = ({ pageData, service }) => (
   <StaticRouter>
-    <ToggleContextProvider>
-      <ServiceContextProvider service={service}>
-        <RequestContextProvider
-          bbcOrigin="https://www.test.bbc.co.uk"
-          isAmp={false}
-          pageType={pageData.metadata.type}
-          pathname={pageData.metadata.locators.assetUri}
-          service={service}
-          statusCode={200}
-        >
-          <PhotoGalleryPage service={service} pageData={pageData} />
-        </RequestContextProvider>
-      </ServiceContextProvider>
-    </ToggleContextProvider>
+    <ThemeProvider service={service} variant="default">
+      <ToggleContextProvider>
+        <ServiceContextProvider service={service}>
+          <RequestContextProvider
+            bbcOrigin="https://www.test.bbc.co.uk"
+            isAmp={false}
+            pageType={pageData.metadata.type}
+            pathname={pageData.metadata.locators.assetUri}
+            service={service}
+            statusCode={200}
+          >
+            <PhotoGalleryPage service={service} pageData={pageData} />
+          </RequestContextProvider>
+        </ServiceContextProvider>
+      </ToggleContextProvider>
+    </ThemeProvider>
   </StaticRouter>
 );
 
@@ -51,16 +56,6 @@ jest.mock('#containers/PageHandlers/withPageWrapper', () => Component => {
   );
 
   return PageWrapperContainer;
-});
-
-jest.mock('#containers/PageHandlers/withLoading', () => Component => {
-  const LoadingContainer = props => (
-    <div id="LoadingContainer">
-      <Component {...props} />
-    </div>
-  );
-
-  return LoadingContainer;
 });
 
 jest.mock('#containers/PageHandlers/withError', () => Component => {

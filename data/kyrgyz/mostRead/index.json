@@ -1,1081 +1,157 @@
 {
-  "generated": "2019-11-06T16:44:15.306Z",
-  "lastRecordTimeStamp": "2100-11-06T16:39:00Z",
-  "firstRecordTimeStamp": "2019-11-06T16:24:00Z",
-  "totalRecords": 20,
-  "records": [
-    {
-      "id": "ad632121-eff8-9542-85d5-d099fb4ccbb3",
-      "rank": 1,
-      "count": 1115,
-      "urn": "urn:bbc:curie:asset:ad632121-eff8-9542-85d5-d099fb4ccbb3",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "\"Шейшепти көрсөт\": Кавказдагы эскиден келе жаткан үйлөнүү салттары",
-          "headline": "\"Шейшепти көрсөт\": Кавказдагы эскиден келе жаткан үйлөнүү салттары"
-        },
-        "locators": {
-          "assetUri": "/kyrgyz/magazine-48659975",
-          "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/magazine-48659975",
-          "curie": "http://www.bbc.co.uk/asset/ad632121-eff8-9542-85d5-d099fb4ccbb3",
-          "assetId": "48659975"
-        },
-        "summary": "Үйлөнүү - адам өмүрүндөгү эң бактылуу жана маанилүү күн эмеспи. Бирок патриархалдык салттар бекем сакталган өлкөлөрдө айрым учурларда бул күн кыздар үчүн азапка айланат.",
-        "timestamp": 1560768556000,
-        "language": "ky",
-        "byline": {
-          "name": "Магеррам Зейналов",
-          "title": "Би-Би-Си",
-          "persons": [
-            {
-              "name": ". .",
-              "function": "."
-            }
-          ]
-        },
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-            "categoryName": "News"
-          },
-          "campaigns": [
-            {
-              "campaignId": "5a988e3739461b000e9dabfa",
-              "campaignName": "WS - Give me perspective"
-            }
-          ],
-          "taggings": []
-        },
-        "indexImage": {
-          "id": "107216544",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/AE11/production/_107216544_img_13391.jpg",
-          "path": "/cpsprodpb/AE11/production/_107216544_img_13391.jpg",
-          "height": 549,
-          "width": 976,
-          "altText": "Рисунок",
-          "copyrightHolder": "BBC",
-          "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:kyrgyz/magazine-48659975",
-        "type": "cps"
+  "data": {
+    "generated": "2023-06-19T14:58:49.656Z",
+    "lastRecordTimeStamp": "2023-06-19T14:55:00Z",
+    "firstRecordTimeStamp": "2023-06-19T08:55:00Z",
+    "items": [
+      {
+        "id": "urn:bbc:optimo:asset:cjqzkjgl1d3o",
+        "rank": 1,
+        "title": "Табытта кайра  тирилген эквадордук аял",
+        "href": "https://www.bbc.com/kyrgyz/articles/cjqzkjgl1d3o",
+        "timestamp": 1687139708235
+      },
+      {
+        "id": "b0f7f093-c002-3b4b-a594-c91004c94bea",
+        "rank": 2,
+        "title": "Ичеги эмнеге экинчи мээ деп аталат? Ичеги тууралуу таң калтырган алты факты",
+        "href": "/kyrgyz/magazine-45738765",
+        "timestamp": 1538624209000
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cd14rqz1p55o",
+        "rank": 3,
+        "title": "Кытай-Кыргызстан-Өзбекстан темир жолу: ТЭО дээрлик даяр ",
+        "href": "https://www.bbc.com/kyrgyz/articles/cd14rqz1p55o",
+        "timestamp": 1687150291556
+      },
+      {
+        "id": "urn:bbc:optimo:asset:crgzz44785no",
+        "rank": 4,
+        "title": "Украинанын контр чабуулу: сегизинчи кыштак бошотулду",
+        "href": "https://www.bbc.com/kyrgyz/articles/crgzz44785no",
+        "timestamp": 1687173128833
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c6p367y5z50o",
+        "rank": 5,
+        "title": "Кыйырга кеткен кыргыз сүтү",
+        "href": "https://www.bbc.com/kyrgyz/articles/c6p367y5z50o",
+        "timestamp": 1686821657905
+      },
+      {
+        "id": "0b47c5ab-37c5-454e-9b97-80f2de32ec49",
+        "rank": 6,
+        "title": "Эволюция тууралуу Дарвинден миң жыл мурун жазган мусулман окумуштуусу",
+        "href": "/kyrgyz/entertainment-47454377",
+        "timestamp": 1551853439000
+      },
+      {
+        "id": "a5b30972-ed50-cb46-85a3-ca7176923354",
+        "rank": 7,
+        "title": "Аң-сезимдүү эң байыркы адам качан пайда болгон?",
+        "href": "/kyrgyz/world-40248016",
+        "timestamp": 1497262417000
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c169n2278p4o",
+        "rank": 8,
+        "title": "\"Олуттуу коркунуч\". Бейөкмөт уюмдарды беймаза кылган долбоор ",
+        "href": "https://www.bbc.com/kyrgyz/articles/c169n2278p4o",
+        "timestamp": 1686895464507
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cd18ym47n8zo",
+        "rank": 9,
+        "title": "\"Сирияга барбай эле койгула\":  реабилитация бүттү, алдыда - интеграция",
+        "href": "https://www.bbc.com/kyrgyz/articles/cd18ym47n8zo",
+        "timestamp": 1686807737644
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cjejlj7ejndo",
+        "rank": 10,
+        "title": "\"Нервный болуп калгам\". Журналистке кол көтөргөн ишкердин жазасы кандай болот? ",
+        "href": "https://www.bbc.com/kyrgyz/articles/cjejlj7ejndo",
+        "timestamp": 1686887810198
+      },
+      {
+        "id": "3edd2cc8-d46d-47b7-9450-e32ef053460c",
+        "rank": 11,
+        "title": "Согуштун жүзү: Украинада курман болгон орус аскеринин бейнеси кандай өзгөрдү?",
+        "href": "/kyrgyz/world-65924515",
+        "timestamp": 1686893633000
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c6pln9p8npeo",
+        "rank": 12,
+        "title": "\"Кулдай садага чабылып\". Борбор Азиянын мигранттары Бахмутка кантип барып жатат? ",
+        "href": "https://www.bbc.com/kyrgyz/articles/c6pln9p8npeo",
+        "timestamp": 1686805393619
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cyx4l9y69weo",
+        "rank": 13,
+        "title": "Фото: Айдалган манаптардын такталып бүтө элек тарыхы",
+        "href": "https://www.bbc.com/kyrgyz/articles/cyx4l9y69weo",
+        "timestamp": 1644913245974
+      },
+      {
+        "id": "87e4bf4f-1b65-43ce-b129-6abe05ad56be",
+        "rank": 14,
+        "title": "Болот хандын Борбордук Азиянын тагдырын аныктаган саясий эрдиги",
+        "href": "/kyrgyz/blog-54823269",
+        "timestamp": 1604567305000
+      },
+      {
+        "id": "d786f163-31c6-a040-8646-1b6e71400a5d",
+        "rank": 15,
+        "title": "Гапыр Мадаминов: Ата-эне окумайын, бала окубайт",
+        "href": "/kyrgyz/kyrgyzstan-41524390",
+        "timestamp": 1507279487000
+      },
+      {
+        "id": "c201ed35-538e-ce4d-9f30-de7f3ea4c6f8",
+        "rank": 16,
+        "title": "Кылым карыткан сүрөттөр: Сергей Прокудин Борбор Азияда",
+        "href": "/kyrgyz/entertainment-45365328",
+        "timestamp": 1535691470000
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c41knv20gk7o",
+        "rank": 17,
+        "title": "Күн сайын пайдаланган кайсы азык-түлүктөр жетишсиз боло баштайт?",
+        "href": "https://www.bbc.com/kyrgyz/articles/c41knv20gk7o",
+        "timestamp": 1634128502799
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cpgx4k72wv4o",
+        "rank": 18,
+        "title": "Facebook компаниясынын базар наркы  $1 триллиндон  ашты",
+        "href": "https://www.bbc.com/kyrgyz/articles/cpgx4k72wv4o",
+        "timestamp": 1625115584553
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cp67l0ey84lo",
+        "rank": 19,
+        "title": "Путиндин сүйгөнү делген Алина Кабаева ким?",
+        "href": "https://www.bbc.com/kyrgyz/articles/cp67l0ey84lo",
+        "timestamp": 1652165189289
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cl04epydlxeo",
+        "rank": 20,
+        "title": "Бала ким менен укташы керек? Коляска керекпи? Ата-энелердин мифтерин талдайбыз",
+        "href": "https://www.bbc.com/kyrgyz/articles/cl04epydlxeo",
+        "timestamp": 1640402808586
       }
-    },
-    {
-      "id": "urn:bbc:optimo:c419vkyvj2go",
-      "rank": 2,
-      "count": 277,
-      "urn": "urn:bbc:optimo:asset:c419vkyvj2go",
-      "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c419vkyvj2go",
-          "canonicalUrl": "https://www.bbc.com/kyrgyz/articles/c419vkyvj2go"
-        },
-        "timestamp": 1588952256682,
-        "suitableForSyndication": true,
-        "language": "ky",
-        "headlines": {
-          "seoHeadline": "Бишкек: карылар үйүндөгү нааразылык, улгайган кишилерге ким кол көтөрдү?    ",
-          "promoHeadline": {
-            "blocks": [
-              {
-                "type": "text",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "paragraph",
-                      "model": {
-                        "text": "Бишкек: карылар үйүндөгү нааразылык, улгайган кишилерге ким кол көтөрдү?    ",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "Бишкек: карылар үйүндөгү нааразылык, улгайган кишилерге ким кол көтөрдү?    ",
-                              "attributes": []
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        "images": {
-          "defaultPromoImage": {
-            "blocks": [
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Сүрөттүн окуяга тиешеси жок",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Сүрөттүн окуяга тиешеси жок",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Сүрөттүн окуяга тиешеси жок",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Сүрөттүн окуяга тиешеси жок",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "rawImage",
-                "model": {
-                  "width": 1024,
-                  "height": 756,
-                  "locator": "4e46/live/22778700-913e-11ea-ac8d-9121bab3bab6.jpg",
-                  "originCode": "cpsprodpb",
-                  "copyrightHolder": "Getty Images",
-                  "suitableForSyndication": true
-                }
-              }
-            ]
-          }
-        },
-        "summary": {
-          "blocks": [
-            {
-              "type": "text",
-              "model": {
-                "blocks": [
-                  {
-                    "type": "paragraph",
-                    "model": {
-                      "text": "Бишкектеги карылар үйүнүн айрым кызматкерлери директорун кызматтан алуу талабы менен Башкы прокуратурга кайрылган. Алар карыяларга кол көтөрүп, дааратканага камап жазалаганын айтышкан. ",
-                      "blocks": [
-                        {
-                          "type": "fragment",
-                          "model": {
-                            "text": "Бишкектеги карылар үйүнүн айрым кызматкерлери директорун кызматтан алуу талабы менен Башкы прокуратурга кайрылган. Алар карыяларга кол көтөрүп, дааратканага камап жазалаганын айтышкан. ",
-                            "attributes": []
-                          }
-                        }
-                      ]
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        "id": "urn:bbc:ares::article:c419vkyvj2go",
-        "type": "optimo"
-      }
-    },
-    {
-      "id": "3439531c-2704-a647-b234-5290647837d3",
-      "rank": 3,
-      "count": 220,
-      "urn": "urn:bbc:curie:asset:3439531c-2704-a647-b234-5290647837d3",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "Атак-даңкты жакшы көргөн Брежнев",
-          "headline": "Атак-даңкты жакшы көргөн Брежнев"
-        },
-        "locators": {
-          "assetUri": "/kyrgyz/entertainment-43151726",
-          "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/entertainment-43151726",
-          "curie": "http://www.bbc.co.uk/asset/3439531c-2704-a647-b234-5290647837d3",
-          "assetId": "43151726"
-        },
-        "summary": "Мындан 40 жыл илгери советтик лидер Леонид Брежневге аскердик эң жогорку сыйлык - \"Жеңиш\" ордени ыйгарылган. Бул сыйлык Советтик армиянын түзүлгөндүгүнүн 60 жылдыгы алдында берилген.",
-        "timestamp": 1519278452000,
-        "language": "ky",
-        "byline": {
-          "name": "Артем Кречетников ",
-          "title": "Би-би-си",
-          "persons": [
-            {
-              "name": ". .",
-              "function": "."
-            }
-          ]
-        },
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-            "categoryName": "News"
-          },
-          "taggings": []
-        },
-        "indexImage": {
-          "id": "100156390",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/2495/production/_100156390_gettyimages-51399116.jpg",
-          "path": "/cpsprodpb/2495/production/_100156390_gettyimages-51399116.jpg",
-          "height": 549,
-          "width": 976,
-          "altText": "Леонид Брежнев",
-          "copyrightHolder": "AFP/Getty Images",
-          "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:kyrgyz/entertainment-43151726",
-        "type": "cps"
-      }
-    },
-    {
-      "id": "891e5a23-9eee-8248-b99f-9e1c1d77e97e",
-      "rank": 4,
-      "count": 194,
-      "urn": "urn:bbc:curie:asset:891e5a23-9eee-8248-b99f-9e1c1d77e97e",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "Кытай жылына 6 миллиард таракан өстүрөт. Эмнеге?",
-          "headline": "Кытай жылына 6 миллиард таракан өстүрөт. Эмнеге?"
-        },
-        "locators": {
-          "assetUri": "/kyrgyz/magazine-43919283",
-          "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/magazine-43919283",
-          "curie": "http://www.bbc.co.uk/asset/891e5a23-9eee-8248-b99f-9e1c1d77e97e",
-          "assetId": "43919283"
-        },
-        "summary": "Көптөр таракандарды курт-кумурскалардын эң эле жийиркеничтүүсү деп эсептешет. Бирок кытайлык фармацевтикалык индустрия үчүн таракандар жакшы бизнес болуп калды",
-        "timestamp": 1524824448000,
-        "language": "ky",
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-            "categoryName": "News"
-          },
-          "taggings": []
-        },
-        "indexImage": {
-          "id": "101064650",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/160E/production/_101064650_gettyimages-939740160.jpg",
-          "path": "/cpsprodpb/160E/production/_101064650_gettyimages-939740160.jpg",
-          "height": 549,
-          "width": 976,
-          "altText": "Таракан",
-          "caption": "Aдистер мындай көп сандагы курт-кумурскаларды бир жайда кармоонун өзү опурталдуу дешет.",
-          "copyrightHolder": "Getty Images",
-          "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:kyrgyz/magazine-43919283",
-        "type": "cps"
-      }
-    },
-    {
-      "id": "301f5663-e391-6345-9bc2-1d019db3a331",
-      "rank": 5,
-      "count": 179,
-      "urn": "urn:bbc:curie:asset:301f5663-e391-6345-9bc2-1d019db3a331",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "“Өкмөттүн адвокаты”: сын жукпаган спикер",
-          "headline": "“Өкмөттүн адвокаты”: сын жукпаган спикер"
-        },
-        "locators": {
-          "assetUri": "/kyrgyz/kyrgyzstan-52648816",
-          "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-52648816",
-          "curie": "http://www.bbc.co.uk/asset/301f5663-e391-6345-9bc2-1d019db3a331",
-          "assetId": "52648816"
-        },
-        "summary": "Кыргызстанда мөөнөтү аяктап бараткан Жогорку Кеңештин спикери Дастан Жумабековдун дарегине сындар күчөп жатат. Соңку пленардык жыйында төраганын кадр саясаты, финансылык чечимдери боюнча ыңгайсыз суроолор көтөрүлдү.",
-        "timestamp": 1589537631000,
-        "language": "ky",
-        "byline": {
-          "name": "Элеонора  Сагындык кызы",
-          "title": "Би-Би-Синин Бишкектеги кабарчысы",
-          "persons": [
-            {
-              "name": "Элеонора Сагындык кызы",
-              "function": "Би-Би-Синин Бишкектеги кабарчысы"
-            }
-          ]
-        },
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
-            "categoryName": "Analysis"
-          },
-          "campaigns": [
-            {
-              "campaignId": "5a988e3739461b000e9dabfa",
-              "campaignName": "WS - Give me perspective"
-            }
-          ],
-          "taggings": []
-        },
-        "indexImage": {
-          "id": "112267902",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/51F0/production/_112267902_a81ef2e4-3831-4f45-b078-63cf3b655661.jpg",
-          "path": "/cpsprodpb/51F0/production/_112267902_a81ef2e4-3831-4f45-b078-63cf3b655661.jpg",
-          "height": 549,
-          "width": 976,
-          "altText": "Жогорку Кеңеш төрагасы",
-          "copyrightHolder": "Official",
-          "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:kyrgyz/kyrgyzstan-52648816",
-        "type": "cps"
-      }
-    },
-    {
-      "id": "2192fa95-a047-4140-8e20-be56c3483cc8",
-      "rank": 6,
-      "count": 159,
-      "urn": "urn:bbc:curie:asset:2192fa95-a047-4140-8e20-be56c3483cc8",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "Түштүк Кореядагы вирустун экинчи толкуну, АКШда балдар вирустун оор түрүнө кабылууда",
-          "headline": "Түштүк Кореядагы вирустун экинчи толкуну, АКШда балдар вирустун оор түрүнө кабылууда"
-        },
-        "locators": {
-          "assetUri": "/kyrgyz/world-52594277",
-          "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-52594277",
-          "curie": "http://www.bbc.co.uk/asset/2192fa95-a047-4140-8e20-be56c3483cc8",
-          "assetId": "52594277"
-        },
-        "summary": "Дүйнө боюнча Covid-19 вирусуна кабылгандар саны төрт миллиондон ашты. Айрым мамлекеттердин карантин чектөөлөрүн жеңилдеткени вирустун жайылышына түрткү болду.",
-        "timestamp": 1589180526000,
-        "language": "ky",
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-            "categoryName": "News"
-          },
-          "campaigns": [
-            {
-              "campaignId": "5a988e1739461b000e9dabf6",
-              "campaignName": "WS - CS"
-            },
-            {
-              "campaignId": "5a988e4739461b000e9dabfc",
-              "campaignName": "WS - Update me"
-            }
-          ],
-          "taggings": []
-        },
-        "indexImage": {
-          "id": "112222298",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/15C86/production/_112222298_seul_epa.jpg",
-          "path": "/cpsprodpb/15C86/production/_112222298_seul_epa.jpg",
-          "height": 549,
-          "width": 976,
-          "altText": "Сеул",
-          "caption": "Карантинные меры в Южной Корее были смягчены",
-          "copyrightHolder": "EPA",
-          "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:kyrgyz/world-52594277",
-        "type": "cps"
-      }
-    },
-    {
-      "id": "97f94ba5-85b7-bc44-bb1c-02b855717b3c",
-      "rank": 7,
-      "count": 158,
-      "urn": "urn:bbc:curie:asset:97f94ba5-85b7-bc44-bb1c-02b855717b3c",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "Уханда кайрадан коронавирус, Нарында төрөтканадагы кызматкерлерден Covid-19 аныкталды",
-          "headline": "Уханда кайрадан коронавирус, Нарында төрөтканадагы кызматкерлерден Covid-19 аныкталды"
-        },
-        "locators": {
-          "assetUri": "/kyrgyz/world-52629046",
-          "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-52629046",
-          "curie": "http://www.bbc.co.uk/asset/97f94ba5-85b7-bc44-bb1c-02b855717b3c",
-          "assetId": "52629046"
-        },
-        "summary": "Кытайда коронавирустун жаңы учурлары аныкталды. Анын ичинде вирустун биринчи очогу болгон Ухандан беш кишиден Covid-19 табылды. 3-апрелден бери Ухандан бир дагы учур каттала элек болчу.",
-        "timestamp": 1589259903000,
-        "language": "ky",
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-            "categoryName": "News"
-          },
-          "campaigns": [
-            {
-              "campaignId": "5a988e4739461b000e9dabfc",
-              "campaignName": "WS - Update me"
-            }
-          ],
-          "taggings": []
-        },
-        "indexImage": {
-          "id": "112216465",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/DC8D/production/_112216465_f4d6fe59-c0ca-4c31-96b1-0d96643ea4a6.jpg",
-          "path": "/cpsprodpb/DC8D/production/_112216465_f4d6fe59-c0ca-4c31-96b1-0d96643ea4a6.jpg",
-          "height": 549,
-          "width": 976,
-          "altText": "Город Ухань",
-          "copyrightHolder": "AFP",
-          "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:kyrgyz/world-52629046",
-        "type": "cps"
-      }
-    },
-    {
-      "id": "8cbb1e2a-dcdf-11e3-8c64-eec53db9bd6e",
-      "rank": 8,
-      "count": 142,
-      "urn": "urn:bbc:curie:asset:8cbb1e2a-dcdf-11e3-8c64-eec53db9bd6e",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "Апалар күнү",
-          "headline": "Апалар күнү"
-        },
-        "locators": {
-          "assetUri": "/kyrgyz/kyrgyzstan/2014/05/140516_blog_mothers_day",
-          "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan/2014/05/140516_blog_mothers_day",
-          "curie": "http://www.bbc.co.uk/asset/8cbb1e2a-dcdf-11e3-8c64-eec53db9bd6e"
-        },
-        "summary": "Апакелер ар дайым жапжаш жүрө берсе кана... ",
-        "timestamp": 1400234032000,
-        "language": "ky",
-        "passport": {
-          "taggings": []
-        },
-        "indexImage": {
-          "id": "d5e184",
-          "subType": "index",
-          "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/05/16/140516094850_kyrgyz_blogger_tynchtykbek_kubatbekov_112x63_tynchtykbekkubatbekov_nocredit.jpg",
-          "path": "/amz/worldservice/live/assets/images/2014/05/16/140516094850_kyrgyz_blogger_tynchtykbek_kubatbekov_112x63_tynchtykbekkubatbekov_nocredit.jpg",
-          "height": 63,
-          "width": 112,
-          "altText": "",
-          "copyrightHolder": "Tynchtykbek Kubatbekov",
-          "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:kyrgyz/kyrgyzstan/2014/05/140516_blog_mothers_day",
-        "type": "cps"
-      }
-    },
-    {
-      "id": "33890648-4a53-db4b-a51d-e469bd6b7943",
-      "rank": 9,
-      "count": 103,
-      "urn": "urn:bbc:curie:asset:33890648-4a53-db4b-a51d-e469bd6b7943",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "Блог: Өз бактыбыз үчүн күрөшөлү, кыздар",
-          "headline": "Блог: Өз бактыбыз үчүн күрөшөлү, кыздар"
-        },
-        "locators": {
-          "assetUri": "/kyrgyz/blog-48690403",
-          "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/blog-48690403",
-          "curie": "http://www.bbc.co.uk/asset/33890648-4a53-db4b-a51d-e469bd6b7943",
-          "assetId": "48690403"
-        },
-        "summary": "Кыз ала качуунун курмандыгы болгон Бурулайдын кайгылуу окуясынан бери толук бир жыл өттү. Кыргыз коомун селт эттирип, үрөйүн учурган бул окуя баарыбир кыз ала качууга карата көз караштарды өзгөртө алган жок деп ойлойм.",
-        "timestamp": 1560937376000,
-        "language": "ky",
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-            "categoryName": "News"
-          },
-          "campaigns": [
-            {
-              "campaignId": "5a988e2139461b000e9dabf7",
-              "campaignName": "WS - Inspire me"
-            }
-          ],
-          "taggings": []
-        },
-        "indexImage": {
-          "id": "107455548",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/14A4B/production/_107455548_61920177_1678407642290398_767654378285826048_n.jpg",
-          "path": "/cpsprodpb/14A4B/production/_107455548_61920177_1678407642290398_767654378285826048_n.jpg",
-          "height": 549,
-          "width": 976,
-          "altText": "мээрим догдурбеков",
-          "caption": "Өзүм тарткан кыскаметраждуу көркөм тасмам менен бир нече өлкөдө Кыргызстандын атынан сынактарга катышып, жогору бааланды",
-          "copyrightHolder": "BBC",
-          "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:kyrgyz/blog-48690403",
-        "type": "cps"
-      }
-    },
-    {
-      "id": "25fb3960-99ea-4349-adaa-82c3bd715829",
-      "rank": 10,
-      "count": 102,
-      "urn": "urn:bbc:curie:asset:25fb3960-99ea-4349-adaa-82c3bd715829",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "Кыргызстанда кийинки кадам кандай болот? Орусия коронавирустан дүйнөдө үчүнчү орунга чыкты",
-          "headline": "Кыргызстанда кийинки кадам кандай болот? Орусия коронавирустан дүйнөдө үчүнчү орунга чыкты"
-        },
-        "locators": {
-          "assetUri": "/kyrgyz/world-52614379",
-          "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-52614379",
-          "curie": "http://www.bbc.co.uk/asset/25fb3960-99ea-4349-adaa-82c3bd715829",
-          "assetId": "52614379"
-        },
-        "summary": "Өлкөнүн бир катар аймактарында жарыяланган өзгөчө абал режими жана коменданттык саат алынды. Өкмөттүн карантинден чыгуу планына ылайык, ишкердиктин бир катар түрлөрүнө уруксат берилди. Бирок шаарларда коомдук транспортко уруксат берилген жок.",
-        "timestamp": 1589187474000,
-        "language": "ky",
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-            "categoryName": "News"
-          },
-          "campaigns": [
-            {
-              "campaignId": "5a988e4739461b000e9dabfc",
-              "campaignName": "WS - Update me"
-            }
-          ],
-          "taggings": []
-        },
-        "indexImage": {
-          "id": "112051393",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/9993/production/_112051393_5.jpg",
-          "path": "/cpsprodpb/9993/production/_112051393_5.jpg",
-          "height": 549,
-          "width": 976,
-          "altText": "Волонтер в защитной одежде на КПП",
-          "copyrightHolder": "VYACHESLAV OSELEDKO/AFP",
-          "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:kyrgyz/world-52614379",
-        "type": "cps"
-      }
-    },
-    {
-      "id": "ef97eebe-583f-be4c-9200-f8bcdbf7bc5f",
-      "rank": 11,
-      "count": 59,
-      "urn": "urn:bbc:curie:asset:ef97eebe-583f-be4c-9200-f8bcdbf7bc5f",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "Путиндин басма сөз катчысы коронавируска кабылды",
-          "headline": "Путиндин басма сөз катчысы коронавируска кабылды"
-        },
-        "locators": {
-          "assetUri": "/kyrgyz/world-52639329",
-          "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-52639329",
-          "curie": "http://www.bbc.co.uk/asset/ef97eebe-583f-be4c-9200-f8bcdbf7bc5f",
-          "assetId": "52639329"
-        },
-        "summary": "Орусия президентинин басма сөз катчысы Дмитрий Песков маалымат агентиктерине коронавирус жуктуруп алып, ооруканада жатканын билдирген.",
-        "timestamp": 1589297090000,
-        "language": "ky",
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-            "categoryName": "News"
-          },
-          "campaigns": [
-            {
-              "campaignId": "5a988e4739461b000e9dabfc",
-              "campaignName": "WS - Update me"
-            }
-          ],
-          "taggings": []
-        },
-        "indexImage": {
-          "id": "112242721",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/31B4/production/_112242721_gettyimages-1203639159.jpg",
-          "path": "/cpsprodpb/31B4/production/_112242721_gettyimages-1203639159.jpg",
-          "height": 549,
-          "width": 976,
-          "altText": "Песков",
-          "copyrightHolder": "Getty Images",
-          "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:kyrgyz/world-52639329",
-        "type": "cps"
-      }
-    },
-    {
-      "id": "3eff6bc8-c412-1b44-8b1d-ac69e1c45f10",
-      "rank": 12,
-      "count": 59,
-      "urn": "urn:bbc:curie:asset:3eff6bc8-c412-1b44-8b1d-ac69e1c45f10",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "Адамдын бою эмнеден өсөт же кыска болуп калуунун себеби эмне?",
-          "headline": "Адамдын бою эмнеден өсөт же кыска болуп калуунун себеби эмне?"
-        },
-        "locators": {
-          "assetUri": "/kyrgyz/magazine-42694529",
-          "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/magazine-42694529",
-          "curie": "http://www.bbc.co.uk/asset/3eff6bc8-c412-1b44-8b1d-ac69e1c45f10",
-          "assetId": "42694529"
-        },
-        "summary": "Орточо неандерталдын бою 165 см болгон, муну билесизби? Адам жаралгандан тарта анын бою 10 сантиметрге өстү. Британияда эркектердин боюнун орточо узундугу - 178 см, аялдардыкы -164 см.",
-        "timestamp": 1548760759000,
-        "language": "ky",
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-            "categoryName": "News"
-          },
-          "campaigns": [
-            {
-              "campaignId": "5a988e2939461b000e9dabf8",
-              "campaignName": "WS - Educate me"
-            }
-          ],
-          "taggings": []
-        },
-        "indexImage": {
-          "id": "105367230",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/0CCC/production/_105367230_vlcsnap-2019-01-29-11h06m18s30-1.jpg",
-          "path": "/cpsprodpb/0CCC/production/_105367230_vlcsnap-2019-01-29-11h06m18s30-1.jpg",
-          "height": 549,
-          "width": 976,
-          "altText": "лего оюнчуктар",
-          "copyrightHolder": "BBC",
-          "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:kyrgyz/magazine-42694529",
-        "type": "cps"
-      }
-    },
-    {
-      "id": "c6947ded-f3e7-0347-9c51-48d1b842dd9a",
-      "rank": 13,
-      "count": 57,
-      "urn": "urn:bbc:curie:asset:c6947ded-f3e7-0347-9c51-48d1b842dd9a",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "Кытай менен Индия чек арачылары мушташты",
-          "headline": "Кытай менен Индия чек арачылары мушташты"
-        },
-        "locators": {
-          "assetUri": "/kyrgyz/world-52614678",
-          "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-52614678",
-          "curie": "http://www.bbc.co.uk/asset/c6947ded-f3e7-0347-9c51-48d1b842dd9a",
-          "assetId": "52614678"
-        },
-        "summary": "Индия менен Кытайдын ондогон чек арачылары мушташа кеткен. Жети кытайлык жана төрт индиялык аскер жаракат алганы кабарланууда.",
-        "timestamp": 1589182089000,
-        "language": "ky",
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-            "categoryName": "News"
-          },
-          "campaigns": [
-            {
-              "campaignId": "5a988e4739461b000e9dabfc",
-              "campaignName": "WS - Update me"
-            }
-          ],
-          "taggings": []
-        },
-        "indexImage": {
-          "id": "112220090",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/232A/production/_112220090_gettyimages-82077247.jpg",
-          "path": "/cpsprodpb/232A/production/_112220090_gettyimages-82077247.jpg",
-          "height": 549,
-          "width": 976,
-          "altText": "A Chinese soldier and an Indian soldier at their shared border in 2008",
-          "caption": "China and India have frequently clashed over their shared border in the past",
-          "copyrightHolder": "Getty Images",
-          "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:kyrgyz/world-52614678",
-        "type": "cps"
-      }
-    },
-    {
-      "id": "338db66a-af8a-4f4f-8c1c-97e571b36520",
-      "rank": 14,
-      "count": 46,
-      "urn": "urn:bbc:curie:asset:338db66a-af8a-4f4f-8c1c-97e571b36520",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "Пандемияны жамааттык иммунитет аркылуу көзөмөлдөөгө мүмкүнбү?",
-          "headline": "Пандемияны жамааттык иммунитет аркылуу көзөмөлдөөгө мүмкүнбү?"
-        },
-        "locators": {
-          "assetUri": "/kyrgyz/world-52673383",
-          "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-52673383",
-          "curie": "http://www.bbc.co.uk/asset/338db66a-af8a-4f4f-8c1c-97e571b36520",
-          "assetId": "52673383"
-        },
-        "summary": "\"Биз чогулткан маалыматтар вакцина болмоюнча иммунитет жетишсиз экенин көрсөттү\",-дейт изилдөөчүлөр. Ошондуктан сактык чаралары күчүндө кала бериши керектигин эскертти.",
-        "timestamp": 1589522547000,
-        "language": "ky",
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-            "categoryName": "News"
-          },
-          "campaigns": [
-            {
-              "campaignId": "5a988e4739461b000e9dabfc",
-              "campaignName": "WS - Update me"
-            }
-          ],
-          "taggings": []
-        },
-        "indexImage": {
-          "id": "112271227",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/11A19/production/_112271227_486c9fdb-7e93-42be-ada9-ca1eeb699e31.jpg",
-          "path": "/cpsprodpb/11A19/production/_112271227_486c9fdb-7e93-42be-ada9-ca1eeb699e31.jpg",
-          "height": 549,
-          "width": 976,
-          "altText": "Метро",
-          "caption": "Францияда айрым карантин чаралары жеңилдетилди",
-          "copyrightHolder": "AFP",
-          "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:kyrgyz/world-52673383",
-        "type": "cps"
-      }
-    },
-    {
-      "id": "c3a170f0-e0fb-9145-9668-42ffd25f7c7c",
-      "rank": 15,
-      "count": 35,
-      "urn": "urn:bbc:curie:asset:c3a170f0-e0fb-9145-9668-42ffd25f7c7c",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "Ооганстан: төрөтканадагы кандуу калабада жарык дүйнөгө келген ымыркай",
-          "headline": "Ооганстан: төрөтканадагы кандуу калабада жарык дүйнөгө келген ымыркай"
-        },
-        "locators": {
-          "assetUri": "/kyrgyz/world-52673388",
-          "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-52673388",
-          "curie": "http://www.bbc.co.uk/asset/c3a170f0-e0fb-9145-9668-42ffd25f7c7c",
-          "assetId": "52673388"
-        },
-        "summary": "Кабулдагы төрөтканада жоочулар кандуу калаба салганда жарык дүйнөгө келген ымыркай аман калды. Бул тууралуу \"Чек арасыз дарыгерлер\" уюму билдирди. Ымыркайдын апасы дагы тирүү.",
-        "timestamp": 1589526118000,
-        "language": "ky",
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-            "categoryName": "News"
-          },
-          "campaigns": [
-            {
-              "campaignId": "5a988e4739461b000e9dabfc",
-              "campaignName": "WS - Update me"
-            }
-          ],
-          "taggings": []
-        },
-        "indexImage": {
-          "id": "112271221",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/2FB9/production/_112271221_e43d7db4-a75e-4f9a-94ba-e5fa863dfbc9.jpg",
-          "path": "/cpsprodpb/2FB9/production/_112271221_e43d7db4-a75e-4f9a-94ba-e5fa863dfbc9.jpg",
-          "height": 549,
-          "width": 976,
-          "altText": "Аман калган ымыркайларды башка ооруканага которушту",
-          "caption": "Аман калган ымыркайларды башка ооруканага которушту",
-          "copyrightHolder": "Reuters",
-          "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:kyrgyz/world-52673388",
-        "type": "cps"
-      }
-    },
-    {
-      "id": "88b7f59a-28e1-2342-a1a7-047a74e0d4d7",
-      "rank": 16,
-      "count": 32,
-      "urn": "urn:bbc:curie:asset:88b7f59a-28e1-2342-a1a7-047a74e0d4d7",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "Коронавирустар кантип пайда болот жана эмнеси менен кооптуу?",
-          "headline": "Коронавирустар кантип пайда болот жана эмнеси менен кооптуу?"
-        },
-        "locators": {
-          "assetUri": "/kyrgyz/world-51235070",
-          "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-51235070",
-          "curie": "http://www.bbc.co.uk/asset/88b7f59a-28e1-2342-a1a7-047a74e0d4d7",
-          "assetId": "51235070"
-        },
-        "summary": "2019-nCoV коронавирусту жуктургандар саны эки миңден, вирустан көз жумгандар саны болсо сексенден ашты.",
-        "timestamp": 1580116812000,
-        "language": "ky",
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-            "categoryName": "News"
-          },
-          "campaigns": [
-            {
-              "campaignId": "5a988e1739461b000e9dabf6",
-              "campaignName": "WS - CS"
-            },
-            {
-              "campaignId": "5a988e3739461b000e9dabfa",
-              "campaignName": "WS - Give me perspective"
-            }
-          ],
-          "taggings": []
-        },
-        "indexImage": {
-          "id": "110620086",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/109A2/production/_110620086_22569d38-7814-44da-8b50-f9f851a81a5c.jpg",
-          "path": "/cpsprodpb/109A2/production/_110620086_22569d38-7814-44da-8b50-f9f851a81a5c.jpg",
-          "height": 549,
-          "width": 976,
-          "altText": "People wearing face masks at a metro station in Taipei, Taiwan",
-          "caption": "Coronavirus caused the current Chinese outbreak as well as Sars (severe acute respiratory syndrome) and Mers (Middle East respiratory syndrome)",
-          "copyrightHolder": "EPA",
-          "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:kyrgyz/world-51235070",
-        "type": "cps"
-      }
-    },
-    {
-      "id": "bf65f721-3a14-0c48-a6ce-386e448cc404",
-      "rank": 17,
-      "count": 29,
-      "urn": "urn:bbc:curie:asset:bf65f721-3a14-0c48-a6ce-386e448cc404",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "Төрөт боюнча медициналык мифтер",
-          "headline": "Төрөт боюнча медициналык мифтер: көз жаруунун так күнү, ачуу тамак жана жатындан суу кетүү"
-        },
-        "locators": {
-          "assetUri": "/kyrgyz/magazine-42237932",
-          "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/magazine-42237932",
-          "curie": "http://www.bbc.co.uk/asset/bf65f721-3a14-0c48-a6ce-386e448cc404",
-          "assetId": "42237932"
-        },
-        "summary": "Төрөт боюнча айрым мифтер көптөн бери коомчулукта бар экени бышык. BBC Future баяндамачылары алардын үчөөнө токтолду.",
-        "timestamp": 1512471452000,
-        "language": "ky",
-        "byline": {
-          "name": "Клаудиа Хэммонд",
-          "title": "BBC Future",
-          "persons": [
-            {
-              "name": "Claudia Hammond",
-              "function": "BBC Future"
-            }
-          ]
-        },
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-            "categoryName": "News"
-          },
-          "campaigns": [
-            {
-              "campaignId": "5a988e2939461b000e9dabf8",
-              "campaignName": "WS - Educate me"
-            }
-          ],
-          "taggings": []
-        },
-        "indexImage": {
-          "id": "98969582",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/6FB4/production/_98969582_bornmotherchild.jpg",
-          "path": "/cpsprodpb/6FB4/production/_98969582_bornmotherchild.jpg",
-          "height": 1152,
-          "width": 2048,
-          "altText": "Новорожденный с матерью",
-          "copyrightHolder": "iStock",
-          "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:kyrgyz/magazine-42237932",
-        "type": "cps"
-      }
-    },
-    {
-      "id": "96508e1d-0643-9a4d-bbcc-7282a284dc44",
-      "rank": 18,
-      "count": 29,
-      "urn": "urn:bbc:curie:asset:96508e1d-0643-9a4d-bbcc-7282a284dc44",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "Чыңгыз Айтматовдун он эки керемети",
-          "headline": "Чыңгыз Айтматовдун он эки керемети"
-        },
-        "locators": {
-          "assetUri": "/kyrgyz/entertainment-45962297",
-          "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/entertainment-45962297",
-          "curie": "http://www.bbc.co.uk/asset/96508e1d-0643-9a4d-bbcc-7282a284dc44",
-          "assetId": "45962297"
-        },
-        "summary": "Кыргыз Республикасынын Жогорку Кеңешинин депутаты Каныбек Иманалиевдин Чыңгыз Айтматовдун 90 жылдыгына арналган илимий-практикалык конференцияда сүйлөгөн сөзү.",
-        "timestamp": 1540380553000,
-        "language": "ky",
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
-            "categoryName": "Analysis"
-          },
-          "campaigns": [
-            {
-              "campaignId": "5a988e2939461b000e9dabf8",
-              "campaignName": "Educate me"
-            }
-          ],
-          "taggings": []
-        },
-        "indexImage": {
-          "id": "104005298",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/15CA2/production/_104005298_8076cba7-7b4c-42cc-ba82-04208e2dd400.jpg",
-          "path": "/cpsprodpb/15CA2/production/_104005298_8076cba7-7b4c-42cc-ba82-04208e2dd400.jpg",
-          "height": 549,
-          "width": 976,
-          "altText": "Чынгыз Айтматовдун \"Ак кеме\" чыгармасынын негизинде тартылган көркөм тасма",
-          "caption": "Чынгыз Айтматовдун \"Ак кеме\" чыгармасынын негизинде тартылган көркөм тасма",
-          "copyrightHolder": "screenshot",
-          "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:kyrgyz/entertainment-45962297",
-        "type": "cps"
-      }
-    },
-    {
-      "id": "edc9c3c2-5d99-a445-b372-4e1f73c06c3d",
-      "rank": 19,
-      "count": 28,
-      "urn": "urn:bbc:curie:asset:edc9c3c2-5d99-a445-b372-4e1f73c06c3d",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "Коронавирус биз менен түбөлүк кала береби? ДССУ билдирүүсү",
-          "headline": "Коронавирус биз менен түбөлүк кала береби? ДССУ билдирүүсү"
-        },
-        "locators": {
-          "assetUri": "/kyrgyz/world-52658539",
-          "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-52658539",
-          "curie": "http://www.bbc.co.uk/asset/edc9c3c2-5d99-a445-b372-4e1f73c06c3d",
-          "assetId": "52658539"
-        },
-        "summary": "Дүйнөдөгү коронавирустун жайылышы боюнча абалды көзөмөлгө алуу үчүн беш жылдай убакыт керек. Мындай божомолду Дүйнөлүк саламаттыкты сактоо уюмунун жетекчи орун басары Сумия Сваминатан басма сөз жыйынында билдирди.",
-        "timestamp": 1589432868000,
-        "language": "ky",
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-            "categoryName": "News"
-          },
-          "campaigns": [
-            {
-              "campaignId": "5a988e4739461b000e9dabfc",
-              "campaignName": "WS - Update me"
-            }
-          ],
-          "taggings": []
-        },
-        "indexImage": {
-          "id": "112004904",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/9FEC/production/_112004904_ca3b1d11-59d8-4210-90f4-e7afca4750b2.jpg",
-          "path": "/cpsprodpb/9FEC/production/_112004904_ca3b1d11-59d8-4210-90f4-e7afca4750b2.jpg",
-          "height": 549,
-          "width": 976,
-          "altText": "Үйлөргө, коомдук жайларга дезинфекция кылып жатышат",
-          "copyrightHolder": "Akzhol aibashev",
-          "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:kyrgyz/world-52658539",
-        "type": "cps"
-      }
-    },
-    {
-      "id": "31de0cda-305e-5b49-9e1a-450f9b75023d",
-      "rank": 20,
-      "count": 28,
-      "urn": "urn:bbc:curie:asset:31de0cda-305e-5b49-9e1a-450f9b75023d",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "Эне сүтүнүн дагы бир керемети",
-          "headline": "Эне сүтүнүн дагы бир керемети"
-        },
-        "locators": {
-          "assetUri": "/kyrgyz/magazine-49394100",
-          "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/magazine-49394100",
-          "curie": "http://www.bbc.co.uk/asset/31de0cda-305e-5b49-9e1a-450f9b75023d",
-          "assetId": "49394100"
-        },
-        "summary": "Балалуу кишилер же бала баккандар ымыркай алгачкы апталарда күн менен түндү ажырата албасын жакшы түшүнөт. Мындай таанып-билүү төрөлгөндөн бир нече аптадан кийин гана калыптанат.",
-        "timestamp": 1566210471000,
-        "language": "ky",
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-            "categoryName": "News"
-          },
-          "campaigns": [
-            {
-              "campaignId": "5a988e2939461b000e9dabf8",
-              "campaignName": "WS - Educate me"
-            }
-          ],
-          "taggings": []
-        },
-        "indexImage": {
-          "id": "108329748",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/14B38/production/_108329748_483aa4d6-4411-4472-8d66-995f1ddc195e.jpg",
-          "path": "/cpsprodpb/14B38/production/_108329748_483aa4d6-4411-4472-8d66-995f1ddc195e.jpg",
-          "height": 549,
-          "width": 976,
-          "altText": "Женщина кормит грудью",
-          "copyrightHolder": "EPA",
-          "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:kyrgyz/magazine-49394100",
-        "type": "cps"
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentType": "list-datadriven",
+        "pageIdentifier": "kyrgyz.popular.read.page",
+        "timePublished": "2023-06-19T08:55:00Z",
+        "timeUpdated": "2023-06-19T14:55:00Z"
       }
     }
-  ]
+  }
 }

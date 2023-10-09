@@ -1,4 +1,4 @@
-const REITH_FONTS_DIR = 'https://gel.files.bbci.co.uk/r2.512/';
+const REITH_FONTS_DIR = 'https://static.files.bbci.co.uk/fonts/reith/r2.512/';
 
 const NOTO_SERIF_SINHALA_FONTS_DIR =
   'https://ws-downloads.files.bbci.co.uk/fonts/NotoSerifSinhala/v1.00/';

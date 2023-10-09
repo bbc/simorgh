@@ -9,40 +9,43 @@ import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { validVideoWithCaptionBlock } from './fixtureData';
 import MediaPlayerContainer from '.';
 import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
+import ThemeProvider from '../../../components/ThemeProvider';
 
 // eslint-disable-next-line react/prop-types
 const Component = ({ service, isAmp = false }) => {
   return (
-    <RequestContextProvider
-      isAmp={isAmp}
-      service={service}
-      platform={isAmp ? 'amp' : 'canonical'}
-      pathname="/pathname"
-      id="c3wmq4d1y3wo"
-      pageType={ARTICLE_PAGE}
-      bbcOrigin="https://www.test.bbc.com"
-    >
-      <ServiceContextProvider service="news">
-        <ToggleContext.Provider
-          value={{
-            toggleState: {
-              mediaPlayer: {
-                enabled: true,
+    <ThemeProvider service={service}>
+      <RequestContextProvider
+        isAmp={isAmp}
+        service={service}
+        platform={isAmp ? 'amp' : 'canonical'}
+        pathname="/pathname"
+        id="c3wmq4d1y3wo"
+        pageType={ARTICLE_PAGE}
+        bbcOrigin="https://www.test.bbc.com"
+      >
+        <ServiceContextProvider service="news">
+          <ToggleContext.Provider
+            value={{
+              toggleState: {
+                mediaPlayer: {
+                  enabled: true,
+                },
               },
-            },
-          }}
-        >
-          <BrowserRouter>
-            <MediaPlayerContainer
-              blocks={validVideoWithCaptionBlock}
-              assetId="c3wmq4d1y3wo"
-              assetType="articles"
-              showPlaceholder
-            />
-          </BrowserRouter>
-        </ToggleContext.Provider>
-      </ServiceContextProvider>
-    </RequestContextProvider>
+            }}
+          >
+            <BrowserRouter>
+              <MediaPlayerContainer
+                blocks={validVideoWithCaptionBlock}
+                assetId="c3wmq4d1y3wo"
+                assetType="articles"
+                showPlaceholder
+              />
+            </BrowserRouter>
+          </ToggleContext.Provider>
+        </ServiceContextProvider>
+      </RequestContextProvider>
+    </ThemeProvider>
   );
 };
 

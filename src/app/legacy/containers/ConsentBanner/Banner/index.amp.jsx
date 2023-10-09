@@ -7,12 +7,14 @@ import BannerText from './Text';
 import getDataAttribute from './getDataAttribute';
 
 const Button = (message, onClick, dataAttribute) => (
+  // eslint-disable-next-line react/no-unknown-property
   <button type="button" on={onClick} {...dataAttribute}>
     {message}
   </button>
 );
 
 const Anchor = (message, href, onClick, dataAttribute) => (
+  // eslint-disable-next-line react/no-unknown-property
   <a href={href} on={onClick} {...dataAttribute}>
     {message}
   </a>

@@ -4,6 +4,8 @@ import {
   getArticleSwRegex,
   getArticleManifestRegex,
   getFrontPageRegex,
+  getTipoHomeRegex,
+  getHomePageRegex,
   getSwRegex,
   getManifestRegex,
   getCpsAssetRegex,
@@ -12,7 +14,6 @@ import {
   getPodcastBrandRegex,
   getOnDemandRadioRegex,
   getOnDemandTvRegex,
-  getTemporaryTopicPageRegex,
   getTopicPageRegex,
   getErrorPageRegex,
   getLegacyAssetRegex,
@@ -40,6 +41,12 @@ export const frontPageDataPath = `${frontPagePath}.json`;
 export const frontPageSwPath = getSwRegex(allServices);
 export const frontPageManifestPath = getManifestRegex(allServices);
 
+export const tipoHomePath = getTipoHomeRegex(allServices);
+export const tipoHomeDataPath = `${tipoHomePath}.json`;
+
+export const homePagePath = getHomePageRegex(allServices);
+export const homePageDataPath = `${homePagePath}.json`;
+
 export const cpsAssetPagePath = getCpsAssetRegex(allServices);
 export const cpsAssetPageDataPath = `${cpsAssetPagePath}.json`;
 
@@ -58,7 +65,6 @@ export const podcastBrandDataPath = `${podcastBrandPath}.json`;
 export const onDemandTvPath = getOnDemandTvRegex(allServices);
 export const onDemandTvDataPath = `${onDemandTvPath}.json`;
 
-export const temporaryTopicPath = getTemporaryTopicPageRegex(allServices);
 export const topicPath = getTopicPageRegex(allServices);
 export const topicDataPath = `${topicPath}.json`;
 

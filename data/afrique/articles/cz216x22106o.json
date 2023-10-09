@@ -1,584 +1,1306 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::article:cz216x22106o",
-    "locators": {
-      "optimoUrn": "urn:bbc:optimo:asset:cz216x22106o"
-    },
-    "type": "article",
-    "createdBy": "Afrique",
-    "language": "fr",
-    "lastUpdated": 1570198604847,
-    "firstPublished": 1562936294950,
-    "lastPublished": 1569595708548,
-    "options": {},
-    "analyticsLabels": {},
-    "passport": {
-      "language": "fr",
-      "home": "http://www.bbc.co.uk/ontologies/passport/home/Afrique"
-    },
-    "tags": {},
-    "version": "v1.1.2",
-    "blockTypes": [
-      "headline",
-      "text",
-      "paragraph",
-      "fragment",
-      "image",
-      "caption",
-      "altText",
-      "rawImage",
-      "urlLink",
-      "video",
-      "subheadline"
-    ]
-  },
-  "content": {
-    "model": {
-      "blocks": [
-        {
-          "type": "headline",
-          "model": {
-            "blocks": [
-              {
-                "type": "text",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "paragraph",
-                      "model": {
-                        "text": "C'est le titre de cet article de test",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "C'est le titre de cet article de test",
-                              "attributes": []
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "image",
-          "model": {
-            "blocks": [
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Cette image test, sous copyright BBC, montre une carte de la France. L'image est dans les trois premiers blocs et porte cette légende.",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Cette image test, sous copyright BBC, montre une carte de la France. L'image est dans les trois premiers blocs et porte cette légende.",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Carte de France montrant Paris et Cognac",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Carte de France montrant Paris et Cognac",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "rawImage",
-                "model": {
-                  "width": 624,
-                  "height": 351,
-                  "locator": "2571/test/a4699550-e135-11e9-b23c-f1ac9644bb55.jpg",
-                  "originCode": "cpsdevpb",
-                  "copyrightHolder": "BBC"
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "text",
-          "model": {
-            "blocks": [
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "Ceci est un bloc de texte contenant un lien URL vers la page d'accueil BBC Weather.",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "Ceci est un bloc de texte contenant un lien URL vers ",
-                        "attributes": []
-                      }
-                    },
-                    {
-                      "type": "urlLink",
-                      "model": {
-                        "text": "la page d'accueil BBC Weather",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "la page d'accueil BBC Weather",
-                              "attributes": []
-                            }
-                          }
-                        ],
-                        "locator": "https://www.bbc.co.uk/weather",
-                        "isExternal": false
-                      }
-                    },
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": ".",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "video",
-          "model": {
-            "locator": "urn:bbc:pips:pid:p01k6msm",
-            "blocks": [
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Ceci est un bloc vidéo contenant une vidéo sur les fourmis",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Ceci est un bloc vidéo contenant une vidéo sur les fourmis",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "aresMedia",
-                "model": {
-                  "blocks": [
-                    {
-                      "blockId": "urn:bbc:ares::clip:p01k6msm",
-                      "type": "aresMediaMetadata",
-                      "model": {
-                        "id": "p01k6msm",
-                        "subType": "clip",
-                        "format": "audio_video",
-                        "title": "Five things ants can teach us about management",
-                        "synopses": {
-                          "short": "They may be tiny, but us humans could learn a thing or two from ants."
-                        },
-                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
-                        "imageCopyright": "BBC",
-                        "embedding": true,
-                        "advertising": true,
-                        "versions": [
-                          {
-                            "versionId": "p01k6msp",
-                            "types": ["Original"],
-                            "duration": 191,
-                            "durationISO8601": "PT3M11S",
-                            "warnings": {
-                              "short": "Contains strong language and adult humour.",
-                              "long": "Contains strong language and adult humour."
-                            },
-                            "availableTerritories": {
-                              "uk": true,
-                              "nonUk": true
-                            },
-                            "availableFrom": 1540218932000
-                          }
-                        ],
-                        "syndication": {
-                          "destinations": []
+  "data": {
+    "article": {
+      "content": {
+        "model": {
+          "blocks": [
+            {
+              "id": "2409f4ae",
+              "type": "headline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "56c1fcce",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "e60b948a",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "C'est le titre de cet article de test",
+                            "blocks": [
+                              {
+                                "id": "4146aa2f",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "C'est le titre de cet article de test",
+                                  "attributes": []
+                                },
+                                "position": [1, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [1, 1, 1]
                         }
-                      }
+                      ]
                     },
-                    {
-                      "type": "image",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "rawImage",
-                            "model": {
-                              "width": 1920,
-                              "height": 1080,
-                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg",
-                              "originCode": "mpv",
-                              "copyrightHolder": "BBC"
-                            }
-                          },
-                          {
-                            "type": "altText",
-                            "model": {
-                              "blocks": [
-                                {
-                                  "type": "text",
-                                  "model": {
-                                    "blocks": [
-                                      {
-                                        "type": "paragraph",
-                                        "model": {
-                                          "text": "Ants",
-                                          "blocks": [
-                                            {
-                                              "type": "fragment",
-                                              "model": {
-                                                "text": "Ants",
-                                                "attributes": []
-                                              }
-                                            }
-                                          ]
-                                        }
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "subheadline",
-          "model": {
-            "blocks": [
-              {
-                "type": "text",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "paragraph",
-                      "model": {
-                        "text": "Ceci est un bloc de sous-titre",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "Ceci est un bloc de sous-titre",
-                              "attributes": []
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "image",
-          "model": {
-            "blocks": [
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Footballeurs après un match",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Footballeurs après un match",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
+                    "position": [1, 1]
+                  }
+                ]
               },
-              {
-                "type": "rawImage",
-                "model": {
-                  "width": 2048,
-                  "height": 1152,
-                  "locator": "fef7/test/d4cc0ed0-e135-11e9-b23c-f1ac9644bb55.jpg",
-                  "originCode": "cpsdevpb",
-                  "copyrightHolder": "Getty Images"
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "text",
-          "model": {
-            "blocks": [
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "Cet article de test a été créé afin que nous puissions exécuter des tests automatisés de bout en bout sur notre site Web.",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "Cet article de test a été créé afin que nous puissions exécuter des tests automatisés de bout en bout sur notre site Web.",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "links",
-          "model": {
-            "blocks": [
-              {
-                "type": "title",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "This is my title",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "This is my title",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "link",
-                "model": {
-                  "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.com",
-                  "blocks": [
-                    {
-                      "type": "image",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "altText",
-                            "model": {
-                              "blocks": [
-                                {
-                                  "type": "text",
-                                  "model": {
-                                    "blocks": [
-                                      {
-                                        "type": "paragraph",
-                                        "model": {
-                                          "text": "Dog",
-                                          "blocks": [
-                                            {
-                                              "type": "fragment",
-                                              "model": {
-                                                "text": "Dog",
-                                                "attributes": []
-                                              }
-                                            }
-                                          ]
-                                        }
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
+              "position": [1]
+            },
+            {
+              "id": "d3153a22",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "fdfba903",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "aa39598f",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "e297cdb6",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Cette image test, sous copyright BBC, montre une carte de la France. L'image est dans les trois premiers blocs et porte cette légende.",
+                                  "blocks": [
+                                    {
+                                      "id": "ded7825c",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Cette image test, sous copyright BBC, montre une carte de la France. L'image est dans les trois premiers blocs et porte cette légende.",
+                                        "attributes": []
+                                      },
+                                      "position": [2, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [2, 1, 1, 1]
+                              }
+                            ]
                           },
-                          {
-                            "type": "rawImage",
-                            "model": {
-                              "width": 1200,
-                              "height": 602,
-                              "locator": "b498/test/67b83de0-7284-11ec-9534-9f1d59fb8b32.jpg",
-                              "imageType": "background",
-                              "originCode": "cpsdevpb",
-                              "copyrightHolder": "Getty Images"
-                            }
-                          }
-                        ]
-                      }
+                          "position": [2, 1, 1]
+                        }
+                      ]
                     },
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "This is a dog",
-                              "blocks": [
-                                {
-                                  "type": "urlLink",
-                                  "model": {
-                                    "text": "This is a dog",
-                                    "locator": "https://www.bbc.com",
-                                    "blocks": [
-                                      {
-                                        "type": "fragment",
-                                        "model": {
-                                          "text": "This is a dog",
-                                          "attributes": []
-                                        }
-                                      }
-                                    ],
-                                    "isExternal": false
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
+                    "position": [2, 1]
+                  },
+                  {
+                    "id": "d4fbe1c7",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "da208dc1",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "c3afcb53",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Carte de France montrant Paris et Cognac",
+                                  "blocks": [
+                                    {
+                                      "id": "0affefa8",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Carte de France montrant Paris et Cognac",
+                                        "attributes": []
+                                      },
+                                      "position": [2, 2, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [2, 2, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [2, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [2, 2]
+                  },
+                  {
+                    "id": "29b20771",
+                    "type": "rawImage",
+                    "model": {
+                      "width": 624,
+                      "height": 351,
+                      "locator": "2571/test/a4699550-e135-11e9-b23c-f1ac9644bb55.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "BBC"
+                    },
+                    "position": [2, 3]
+                  }
+                ]
+              },
+              "position": [2]
+            },
+            {
+              "id": "6d3f4e5f",
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1562936294950,
+                "lastPublished": 1569595708548
+              },
+              "position": [3]
+            },
+            {
+              "id": "f3cfedee",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "5ca29bad",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Ceci est un bloc de texte contenant un lien URL vers la page d'accueil BBC Weather.",
+                      "blocks": [
+                        {
+                          "id": "4b403b76",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Ceci est un bloc de texte contenant un lien URL vers ",
+                            "attributes": []
+                          },
+                          "position": [4, 1, 1]
+                        },
+                        {
+                          "id": "b063ced9",
+                          "type": "urlLink",
+                          "model": {
+                            "text": "la page d'accueil BBC Weather",
+                            "blocks": [
+                              {
+                                "id": "de27b443",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "la page d'accueil BBC Weather",
+                                  "attributes": []
+                                },
+                                "position": [4, 1, 2, 1]
+                              }
+                            ],
+                            "locator": "https://www.bbc.co.uk/weather",
+                            "isExternal": false
+                          },
+                          "position": [4, 1, 2]
+                        },
+                        {
+                          "id": "2a0c7a02",
+                          "type": "fragment",
+                          "model": {
+                            "text": ".",
+                            "attributes": []
+                          },
+                          "position": [4, 1, 3]
+                        }
+                      ]
+                    },
+                    "position": [4, 1]
+                  }
+                ]
+              },
+              "position": [4]
+            },
+            {
+              "id": "4ee93f7d",
+              "type": "video",
+              "model": {
+                "locator": "urn:bbc:pips:pid:p01k6msm",
+                "blocks": [
+                  {
+                    "id": "f1eaf5dd",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "227679cb",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "c647e564",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Ceci est un bloc vidéo contenant une vidéo sur les fourmis",
+                                  "blocks": [
+                                    {
+                                      "id": "0b95db54",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Ceci est un bloc vidéo contenant une vidéo sur les fourmis",
+                                        "attributes": []
+                                      },
+                                      "position": [5, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [5, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [5, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [5, 1]
+                  },
+                  {
+                    "id": "0d89615c",
+                    "type": "aresMedia",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "ed5adfb5",
+                          "blockId": "urn:bbc:ares::clip:p01k6msm",
+                          "type": "aresMediaMetadata",
+                          "model": {
+                            "id": "p01k6msm",
+                            "subType": "clip",
+                            "format": "audio_video",
+                            "title": "Five things ants can teach us about management",
+                            "synopses": {
+                              "short": "They may be tiny, but us humans could learn a thing or two from ants."
+                            },
+                            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+                            "imageCopyright": "BBC",
+                            "embedding": true,
+                            "advertising": true,
+                            "versions": [
+                              {
+                                "versionId": "p01k6msp",
+                                "types": ["Original"],
+                                "duration": 191,
+                                "durationISO8601": "PT3M11S",
+                                "warnings": {
+                                  "short": "Contains strong language and adult humour.",
+                                  "long": "Contains strong language and adult humour."
+                                },
+                                "availableTerritories": {
+                                  "uk": true,
+                                  "nonUk": true
+                                },
+                                "availableFrom": 1540218932000
+                              }
+                            ],
+                            "syndication": {
+                              "destinations": []
+                            },
+                            "smpKind": "programme"
+                          },
+                          "position": [5, 2, 1]
+                        },
+                        {
+                          "id": "612f53f1",
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "982f204a",
+                                "type": "rawImage",
+                                "model": {
+                                  "width": 1920,
+                                  "height": 1080,
+                                  "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg",
+                                  "originCode": "mpv",
+                                  "copyrightHolder": "BBC"
+                                },
+                                "position": [5, 2, 2, 1]
+                              },
+                              {
+                                "id": "a8784e72",
+                                "type": "altText",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "f10505de",
+                                      "type": "text",
+                                      "model": {
+                                        "blocks": [
+                                          {
+                                            "id": "de43ea5d",
+                                            "type": "paragraph",
+                                            "model": {
+                                              "text": "Ants",
+                                              "blocks": [
+                                                {
+                                                  "id": "dff01c90",
+                                                  "type": "fragment",
+                                                  "model": {
+                                                    "text": "Ants",
+                                                    "attributes": []
+                                                  },
+                                                  "position": [
+                                                    5, 2, 2, 2, 1, 1, 1
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            "position": [5, 2, 2, 2, 1, 1]
+                                          }
+                                        ]
+                                      },
+                                      "position": [5, 2, 2, 2, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [5, 2, 2, 2]
+                              }
+                            ]
+                          },
+                          "position": [5, 2, 2]
+                        }
+                      ]
+                    },
+                    "position": [5, 2]
+                  }
+                ]
+              },
+              "position": [5]
+            },
+            {
+              "id": "ecd2e59c",
+              "type": "subheadline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "df308163",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "0c2ffba6",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "Ceci est un bloc de sous-titre",
+                            "blocks": [
+                              {
+                                "id": "0321a03d",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "Ceci est un bloc de sous-titre",
+                                  "attributes": []
+                                },
+                                "position": [6, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [6, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [6, 1]
+                  }
+                ]
+              },
+              "position": [6]
+            },
+            {
+              "id": "205ac732",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "88212158",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "b20e7976",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "ea09cf67",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Footballeurs après un match",
+                                  "blocks": [
+                                    {
+                                      "id": "8330c9a9",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Footballeurs après un match",
+                                        "attributes": []
+                                      },
+                                      "position": [7, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [7, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [7, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [7, 1]
+                  },
+                  {
+                    "id": "922c7636",
+                    "type": "rawImage",
+                    "model": {
+                      "width": 2048,
+                      "height": 1152,
+                      "locator": "fef7/test/d4cc0ed0-e135-11e9-b23c-f1ac9644bb55.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "Getty Images"
+                    },
+                    "position": [7, 2]
+                  }
+                ]
+              },
+              "position": [7]
+            },
+            {
+              "id": "bfb239d2",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "19dbff3a",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Cet article de test a été créé afin que nous puissions exécuter des tests automatisés de bout en bout sur notre site Web.",
+                      "blocks": [
+                        {
+                          "id": "66bde8b8",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Cet article de test a été créé afin que nous puissions exécuter des tests automatisés de bout en bout sur notre site Web.",
+                            "attributes": []
+                          },
+                          "position": [8, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [8, 1]
+                  }
+                ]
+              },
+              "position": [8]
+            },
+            {
+              "id": "5ad70028",
+              "type": "mpu",
+              "model": {},
+              "position": [9]
+            },
+            {
+              "id": "4c7079fb",
+              "type": "relatedContent",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "7cde642e",
+                    "type": "title",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "7994857c",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "f0b55916",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "This is my title",
+                                  "blocks": [
+                                    {
+                                      "id": "2843a9b2",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "This is my title",
+                                        "attributes": []
+                                      },
+                                      "position": [10, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [10, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [10, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [10, 1]
+                  },
+                  {
+                    "id": "8b89f1c8",
+                    "type": "link",
+                    "model": {
+                      "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.com",
+                      "blocks": [
+                        {
+                          "id": "1de6ecb5",
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "7be16e23",
+                                "type": "altText",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "b9c8779e",
+                                      "type": "text",
+                                      "model": {
+                                        "blocks": [
+                                          {
+                                            "id": "769f0688",
+                                            "type": "paragraph",
+                                            "model": {
+                                              "text": "Dog",
+                                              "blocks": [
+                                                {
+                                                  "id": "b9b7ce0c",
+                                                  "type": "fragment",
+                                                  "model": {
+                                                    "text": "Dog",
+                                                    "attributes": []
+                                                  },
+                                                  "position": [
+                                                    10, 2, 1, 1, 1, 1, 1
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            "position": [10, 2, 1, 1, 1, 1]
+                                          }
+                                        ]
+                                      },
+                                      "position": [10, 2, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [10, 2, 1, 1]
+                              },
+                              {
+                                "id": "28f6cb3c",
+                                "type": "rawImage",
+                                "model": {
+                                  "width": 1200,
+                                  "height": 602,
+                                  "locator": "b498/test/67b83de0-7284-11ec-9534-9f1d59fb8b32.jpg",
+                                  "imageType": "background",
+                                  "originCode": "cpsdevpb",
+                                  "copyrightHolder": "Getty Images"
+                                },
+                                "position": [10, 2, 1, 2]
+                              }
+                            ]
+                          },
+                          "position": [10, 2, 1]
+                        },
+                        {
+                          "id": "0754ebb6",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "f340b46a",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "This is a Dog",
+                                  "blocks": [
+                                    {
+                                      "id": "2647b473",
+                                      "type": "urlLink",
+                                      "model": {
+                                        "text": "This is a Dog",
+                                        "locator": "https://www.bbc.com",
+                                        "blocks": [
+                                          {
+                                            "id": "635a2ba2",
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "This is a Dog",
+                                              "attributes": []
+                                            },
+                                            "position": [10, 2, 2, 1, 1, 1]
+                                          }
+                                        ],
+                                        "isExternal": false
+                                      },
+                                      "position": [10, 2, 2, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [10, 2, 2, 1]
+                              }
+                            ]
+                          },
+                          "position": [10, 2, 2]
+                        }
+                      ]
+                    },
+                    "position": [10, 2]
+                  }
+                ]
+              },
+              "position": [10]
+            }
+          ]
         }
-      ]
+      },
+      "metadata": {
+        "id": "urn:bbc:ares::article:cz216x22106o",
+        "locators": {
+          "optimoUrn": "urn:bbc:optimo:asset:cz216x22106o"
+        },
+        "type": "article",
+        "createdBy": "Afrique",
+        "language": "fr",
+        "firstPublished": 1562936294950,
+        "lastPublished": 1569595708548,
+        "options": {},
+        "analyticsLabels": {
+          "producer": "Afrique",
+          "page": "afrique.articles.cz216x22106o.page"
+        },
+        "passport": {
+          "language": "fr",
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Afrique",
+          "taggings": []
+        },
+        "tags": {},
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment",
+          "image",
+          "caption",
+          "altText",
+          "rawImage",
+          "urlLink",
+          "video",
+          "subheadline",
+          "aresMedia"
+        ],
+        "allowAdvertising": true
+      },
+      "promo": {
+        "locators": {},
+        "headlines": {
+          "seoHeadline": "CAN 2019 : Le Nigéria file en demi-finales au détriment de l'Afrique du Sud"
+        },
+        "images": {},
+        "passport": {}
+      }
+    },
+    "secondaryData": {
+      "topStories": [
+        {
+          "headlines": {
+            "headline": "Ethnicity pay gap revealed for academics"
+          },
+          "locators": {
+            "assetUri": "/news/23224388",
+            "cpsUrn": "urn:bbc:content:assetUri:news/23224388",
+            "curie": "http://www.bbc.co.uk/asset/cc11be5b-3e79-5a40-98c2-1317763d076a",
+            "assetId": "23224388"
+          },
+          "summary": "BBC Analysis shows a 26% ethnic pay gap at some of the UK's best known universities",
+          "timestamp": 1544185742000,
+          "language": "en-gb",
+          "passport": {
+            "category": {
+              "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+              "categoryName": "News"
+            },
+            "taggings": []
+          },
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63696123",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/7DA9/test/_63696123_050408914-1.jpg",
+            "path": "/cpsdevpb/7DA9/test/_63696123_050408914-1.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Three university graduates",
+            "caption": "The pay gap left Meenakshi Sarkar feeling depressed and devalued",
+            "copyrightHolder": "Press Association",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "prominence": "standard",
+          "section": {
+            "subType": "IDX",
+            "name": "Home",
+            "uri": "/news/front_page",
+            "type": "simple"
+          },
+          "site": {
+            "subType": "site",
+            "name": "BBC News",
+            "uri": "/news",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:news/23224388",
+          "type": "cps"
+        }
+      ],
+      "features": [
+        {
+          "headlines": {
+            "headline": "Commémoration du massacre de Soweto 35"
+          },
+          "locators": {
+            "assetUri": "/afrique/23053027",
+            "cpsUrn": "urn:bbc:content:assetUri:afrique/23053027",
+            "curie": "http://www.bbc.co.uk/asset/d4a17421-fa0c-d448-a3b6-230410ba601a",
+            "assetId": "23053027"
+          },
+          "summary": "Commémoration du massacre de Soweto",
+          "timestamp": 1466154789000,
+          "language": "fr",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63490121",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/2F4D/test/_63490121_110329105535_soweto_304x171_b_nocredit.gif",
+            "path": "/cpsdevpb/2F4D/test/_63490121_110329105535_soweto_304x171_b_nocredit.gif",
+            "height": 261,
+            "width": 464,
+            "altText": "Soweto",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63490119",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/163E5/test/_63490119_110329105535_soweto_304x171_b_nocredit.gif",
+            "path": "/cpsdevpb/163E5/test/_63490119_110329105535_soweto_304x171_b_nocredit.gif",
+            "height": 180,
+            "width": 320,
+            "altText": "Soweto",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Accueil",
+            "uri": "/afrique/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:afrique/23053027",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Commémoration du massacre de Soweto 36"
+          },
+          "locators": {
+            "assetUri": "/afrique/23053028",
+            "cpsUrn": "urn:bbc:content:assetUri:afrique/23053028",
+            "curie": "http://www.bbc.co.uk/asset/c140434e-ef3b-a347-b1fd-455fb263e139",
+            "assetId": "23053028"
+          },
+          "summary": "Commémoration du massacre de Soweto",
+          "timestamp": 1466154800000,
+          "language": "fr",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63490121",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/2F4D/test/_63490121_110329105535_soweto_304x171_b_nocredit.gif",
+            "path": "/cpsdevpb/2F4D/test/_63490121_110329105535_soweto_304x171_b_nocredit.gif",
+            "height": 261,
+            "width": 464,
+            "altText": "Soweto",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63490119",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/163E5/test/_63490119_110329105535_soweto_304x171_b_nocredit.gif",
+            "path": "/cpsdevpb/163E5/test/_63490119_110329105535_soweto_304x171_b_nocredit.gif",
+            "height": 180,
+            "width": 320,
+            "altText": "Soweto",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Accueil",
+            "uri": "/afrique/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:afrique/23053028",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Commémoration du massacre de Soweto 19"
+          },
+          "locators": {
+            "assetUri": "/afrique/23052941",
+            "cpsUrn": "urn:bbc:content:assetUri:afrique/23052941",
+            "curie": "http://www.bbc.co.uk/asset/32e4242e-43e4-d349-a0ac-cbaf76be2aae",
+            "assetId": "23052941"
+          },
+          "summary": "Commémoration du massacre de Soweto",
+          "timestamp": 1466092777000,
+          "language": "fr",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63490121",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/2F4D/test/_63490121_110329105535_soweto_304x171_b_nocredit.gif",
+            "path": "/cpsdevpb/2F4D/test/_63490121_110329105535_soweto_304x171_b_nocredit.gif",
+            "height": 261,
+            "width": 464,
+            "altText": "Soweto",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63490119",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/163E5/test/_63490119_110329105535_soweto_304x171_b_nocredit.gif",
+            "path": "/cpsdevpb/163E5/test/_63490119_110329105535_soweto_304x171_b_nocredit.gif",
+            "height": 180,
+            "width": 320,
+            "altText": "Soweto",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Accueil",
+            "uri": "/afrique/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:afrique/23052941",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Commémoration du massacre de Soweto 20"
+          },
+          "locators": {
+            "assetUri": "/afrique/23052943",
+            "cpsUrn": "urn:bbc:content:assetUri:afrique/23052943",
+            "curie": "http://www.bbc.co.uk/asset/8dfb243a-ab8d-374a-9dab-f478d9ce0bb4",
+            "assetId": "23052943"
+          },
+          "summary": "Commémoration du massacre de Soweto",
+          "timestamp": 1466092863000,
+          "language": "fr",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63490121",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/2F4D/test/_63490121_110329105535_soweto_304x171_b_nocredit.gif",
+            "path": "/cpsdevpb/2F4D/test/_63490121_110329105535_soweto_304x171_b_nocredit.gif",
+            "height": 261,
+            "width": 464,
+            "altText": "Soweto",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63490119",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/163E5/test/_63490119_110329105535_soweto_304x171_b_nocredit.gif",
+            "path": "/cpsdevpb/163E5/test/_63490119_110329105535_soweto_304x171_b_nocredit.gif",
+            "height": 180,
+            "width": 320,
+            "altText": "Soweto",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Accueil",
+            "uri": "/afrique/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:afrique/23052943",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Commémoration du massacre de Soweto 21"
+          },
+          "locators": {
+            "assetUri": "/afrique/23052944",
+            "cpsUrn": "urn:bbc:content:assetUri:afrique/23052944",
+            "curie": "http://www.bbc.co.uk/asset/d7e2c23f-e205-814b-945f-a0761b5cec96",
+            "assetId": "23052944"
+          },
+          "summary": "Commémoration du massacre de Soweto",
+          "timestamp": 1466092875000,
+          "language": "fr",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63490121",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/2F4D/test/_63490121_110329105535_soweto_304x171_b_nocredit.gif",
+            "path": "/cpsdevpb/2F4D/test/_63490121_110329105535_soweto_304x171_b_nocredit.gif",
+            "height": 261,
+            "width": 464,
+            "altText": "Soweto",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63490119",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/163E5/test/_63490119_110329105535_soweto_304x171_b_nocredit.gif",
+            "path": "/cpsdevpb/163E5/test/_63490119_110329105535_soweto_304x171_b_nocredit.gif",
+            "height": 180,
+            "width": 320,
+            "altText": "Soweto",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Accueil",
+            "uri": "/afrique/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:afrique/23052944",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Commémoration du massacre de Soweto 25"
+          },
+          "locators": {
+            "assetUri": "/afrique/23052995",
+            "cpsUrn": "urn:bbc:content:assetUri:afrique/23052995",
+            "curie": "http://www.bbc.co.uk/asset/b2eb81dc-f351-e346-85ce-ca4dfa1a77ad",
+            "assetId": "23052995"
+          },
+          "summary": "Commémoration du massacre de Soweto",
+          "timestamp": 1466154040000,
+          "language": "fr",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63490121",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/2F4D/test/_63490121_110329105535_soweto_304x171_b_nocredit.gif",
+            "path": "/cpsdevpb/2F4D/test/_63490121_110329105535_soweto_304x171_b_nocredit.gif",
+            "height": 261,
+            "width": 464,
+            "altText": "Soweto",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63490119",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/163E5/test/_63490119_110329105535_soweto_304x171_b_nocredit.gif",
+            "path": "/cpsdevpb/163E5/test/_63490119_110329105535_soweto_304x171_b_nocredit.gif",
+            "height": 180,
+            "width": 320,
+            "altText": "Soweto",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Accueil",
+            "uri": "/afrique/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:afrique/23052995",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Commémoration du massacre de Soweto 26"
+          },
+          "locators": {
+            "assetUri": "/afrique/23052996",
+            "cpsUrn": "urn:bbc:content:assetUri:afrique/23052996",
+            "curie": "http://www.bbc.co.uk/asset/1d7e9e57-3393-714e-850c-3b4b426b8998",
+            "assetId": "23052996"
+          },
+          "summary": "Commémoration du massacre de Soweto",
+          "timestamp": 1466154054000,
+          "language": "fr",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63490121",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/2F4D/test/_63490121_110329105535_soweto_304x171_b_nocredit.gif",
+            "path": "/cpsdevpb/2F4D/test/_63490121_110329105535_soweto_304x171_b_nocredit.gif",
+            "height": 261,
+            "width": 464,
+            "altText": "Soweto",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63490119",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/163E5/test/_63490119_110329105535_soweto_304x171_b_nocredit.gif",
+            "path": "/cpsdevpb/163E5/test/_63490119_110329105535_soweto_304x171_b_nocredit.gif",
+            "height": 180,
+            "width": 320,
+            "altText": "Soweto",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Accueil",
+            "uri": "/afrique/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:afrique/23052996",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Commémoration du massacre de Soweto 27"
+          },
+          "locators": {
+            "assetUri": "/afrique/23052997",
+            "cpsUrn": "urn:bbc:content:assetUri:afrique/23052997",
+            "curie": "http://www.bbc.co.uk/asset/8078e9b6-57bd-ee49-83c8-76ef49449be5",
+            "assetId": "23052997"
+          },
+          "summary": "Commémoration du massacre de Soweto",
+          "timestamp": 1466154067000,
+          "language": "fr",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63490121",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/2F4D/test/_63490121_110329105535_soweto_304x171_b_nocredit.gif",
+            "path": "/cpsdevpb/2F4D/test/_63490121_110329105535_soweto_304x171_b_nocredit.gif",
+            "height": 261,
+            "width": 464,
+            "altText": "Soweto",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63490119",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/163E5/test/_63490119_110329105535_soweto_304x171_b_nocredit.gif",
+            "path": "/cpsdevpb/163E5/test/_63490119_110329105535_soweto_304x171_b_nocredit.gif",
+            "height": 180,
+            "width": 320,
+            "altText": "Soweto",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Accueil",
+            "uri": "/afrique/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:afrique/23052997",
+          "type": "cps"
+        }
+      ],
+      "mostRead": {
+        "generated": "2023-06-19T14:48:19.798Z",
+        "lastRecordTimeStamp": "2023-06-19T14:45:00Z",
+        "firstRecordTimeStamp": "2023-06-19T13:45:00Z",
+        "items": [
+          {
+            "id": "urn:bbc:optimo:asset:cqqk2lgrzelo",
+            "rank": 1,
+            "title": "Les bienfaits du néré pour la santé ",
+            "href": "https://www.bbc.com/afrique/articles/cqqk2lgrzelo",
+            "timestamp": 1686847379086
+          },
+          {
+            "id": "df8eca14-b8c4-4fe6-8306-8a64ac2c81cd",
+            "rank": 2,
+            "title": "À l'intérieur d'un village ukrainien qui vient d'être libéré des forces russes",
+            "href": "/afrique/monde-65904070",
+            "timestamp": 1687021916000
+          },
+          {
+            "id": "urn:bbc:optimo:asset:clkxv7x1g79o",
+            "rank": 3,
+            "title": "Le Sénégalais qui s'est donné pour mission de planter cinq millions d'arbres",
+            "href": "https://www.bbc.com/afrique/articles/clkxv7x1g79o",
+            "timestamp": 1672309727969
+          },
+          {
+            "id": "urn:bbc:optimo:asset:cy977ggegvlo",
+            "rank": 4,
+            "title": "Pourquoi le Mali demande un retrait \"sans délai\" de la Minusma",
+            "href": "https://www.bbc.com/afrique/articles/cy977ggegvlo",
+            "timestamp": 1687182432268
+          },
+          {
+            "id": "1bcc5ec0-c4f7-4c89-97c6-4b89338aa35d",
+            "rank": 5,
+            "title": "Pourquoi le Japon redéfinit-il le viol ?",
+            "href": "/afrique/monde-65867581",
+            "timestamp": 1687089693000
+          },
+          {
+            "id": "d524b6fd-0528-4aa6-a935-6510e8512f93",
+            "rank": 6,
+            "title": "Comment apprendre aux pilotes ukrainiens à piloter des F-16",
+            "href": "/afrique/monde-65934685",
+            "timestamp": 1687169120000
+          },
+          {
+            "id": "e3dbd5c0-368a-364e-8151-f50d7bb4d56e",
+            "rank": 7,
+            "title": "'J'ai été violée à 14 ans, et la vidéo a fini sur un site porno'",
+            "href": "/afrique/monde-51446420",
+            "timestamp": 1585152911000
+          },
+          {
+            "id": "urn:bbc:optimo:asset:c28pmeezrgko",
+            "rank": 8,
+            "title": "Attaque d'une école en Ouganda : \"Des chants évangéliques puis des cris\"",
+            "href": "https://www.bbc.com/afrique/articles/c28pmeezrgko",
+            "timestamp": 1687176648459
+          },
+          {
+            "id": "c0ddbb21-e2d1-408a-9e27-b574f48595ad",
+            "rank": 9,
+            "title": "Le franc succès entrepreneurial de la styliste et actrice Ndèye Bineta Lèye",
+            "href": "/afrique/region-63727642",
+            "timestamp": 1671381000000
+          },
+          {
+            "id": "urn:bbc:optimo:asset:c2l4nvkgwk9o",
+            "rank": 10,
+            "title": "Quels sont les enjeux du référendum constitutionnel au Mali ?",
+            "href": "https://www.bbc.com/afrique/articles/c2l4nvkgwk9o",
+            "timestamp": 1686920230826
+          },
+          {
+            "id": "7685deca-9074-4c89-9ba2-507c560c60c6",
+            "rank": 11,
+            "title": "\"Je veux que mon histoire mette en lumière les cheveux afro-texturés\"",
+            "href": "/afrique/region-63528355",
+            "timestamp": 1668353343000
+          },
+          {
+            "id": "urn:bbc:optimo:asset:cydge2ev7dpo",
+            "rank": 12,
+            "title": "Les mystérieuses chaînes de montagnes qui se trouvent dans les profondeurs de la Terre",
+            "href": "https://www.bbc.com/afrique/articles/cydge2ev7dpo",
+            "timestamp": 1686585588125
+          },
+          {
+            "id": "87048428-d3d9-42dc-b40f-364c98bd1534",
+            "rank": 13,
+            "title": "Qui succèdera au milliardaire George Soros ?",
+            "href": "/afrique/monde-65904405",
+            "timestamp": 1687110518000
+          },
+          {
+            "id": "86790234-83f2-4249-9ee9-a984984deb70",
+            "rank": 14,
+            "title": "Comment des enfants ont survécu 40 jours dans la jungle colombienne",
+            "href": "/afrique/region-65904411",
+            "timestamp": 1686935660000
+          },
+          {
+            "id": "urn:bbc:optimo:asset:c0wvznxyrd9o",
+            "rank": 15,
+            "title": "Le sexe est-il vraiment un sport national en Suède ? Vérification ",
+            "href": "https://www.bbc.com/afrique/articles/c0wvznxyrd9o",
+            "timestamp": 1686226332030
+          },
+          {
+            "id": "fa57f4d1-0384-4f7f-a442-44d6ce4f118f",
+            "rank": 16,
+            "title": "Le seul endroit au monde où l'on peut manger de la viande cultivée en laboratoire",
+            "href": "/afrique/monde-65905964",
+            "timestamp": 1687080445000
+          },
+          {
+            "id": "urn:bbc:optimo:asset:c2ene0g52rlo",
+            "rank": 17,
+            "title": "Les 5 principaux avantages du moringa pour la santé ",
+            "href": "https://www.bbc.com/afrique/articles/c2ene0g52rlo",
+            "timestamp": 1658162354256
+          },
+          {
+            "id": "acefe87f-fcea-462d-a673-c56f927847ba",
+            "rank": 18,
+            "title": "Des satellites révèlent les défenses russes avant un assaut majeur",
+            "href": "/afrique/monde-65685618",
+            "timestamp": 1684917002000
+          },
+          {
+            "id": "ffcb1671-1c52-2147-b0e9-7805d9c382eb",
+            "rank": 19,
+            "title": "Ces femmes dont la nuit de noces s'est transformée en cauchemar",
+            "href": "/afrique/monde-50220876",
+            "timestamp": 1572445388000
+          },
+          {
+            "id": "7ed1fafb-c65e-4ec3-bb2f-1288f4b93d53",
+            "rank": 20,
+            "title": "L'homme à l'origine de la contre-offensive ukrainienne tant attendue",
+            "href": "/afrique/monde-65905956",
+            "timestamp": 1686813753000
+          }
+        ]
+      }
     }
   },
-  "promo": {
-    "headlines": {
-      "seoHeadline": "CAN 2019 : Le Nigéria file en demi-finales au détriment de l'Afrique du Sud"
-    },
-    "locators": {
-      "optimoUrn": "urn:bbc:optimo:asset:cz216x22106o"
-    },
-    "summary": {
-      "blocks": [
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "attributes": [],
-                        "text": ""
-                      },
-                      "type": "fragment"
-                    }
-                  ],
-                  "text": ""
-                },
-                "type": "paragraph"
-              }
-            ]
-          },
-          "type": "text"
-        }
-      ]
-    },
-    "timestamp": 1569595708548,
-    "id": "urn:bbc:ares::article:cz216x22106o",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "site": {
-      "subType": "site",
-      "name": "Afrique",
-      "uri": "/afrique",
-      "type": "simple"
-    },
-    "groups": []
-  }
+  "contentType": "application/json; charset=utf-8"
 }

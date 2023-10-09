@@ -1,10 +1,3 @@
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_GHOST,
-  C_POSTBOX_30,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
-import brandSVG from '../../chameleonLogos/persian';
 import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
 import 'moment/locale/fa';
 import '#psammead/moment-timezone-include/tz/GMT';
@@ -41,7 +34,6 @@ export const service: DefaultServiceConfig = {
     serviceName: 'Persian',
     languageName: 'Persian',
     altCalendar: jalaali,
-    themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcpersian',
     twitterSite: '@bbcpersian',
     noBylinesPolicy:
@@ -52,27 +44,20 @@ export const service: DefaultServiceConfig = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'صفحه اول',
-    theming: {
-      brandBackgroundColour: `${C_POSTBOX}`,
-      brandLogoColour: `${C_WHITE}`,
-      brandForegroundColour: `${C_GHOST}`,
-      brandHighlightColour: `${C_WHITE}`,
-      brandBorderColour: `${C_POSTBOX_30}`,
-    },
     showAdPlaceholder: true,
     showRelatedTopics: true,
     podcastPromo: {
       title: 'پادکست',
-      brandTitle: 'رادیو فارسی بی‌بی‌سی',
+      brandTitle: 'صفحه ۲',
       brandDescription:
-        'پادکست چشم‌انداز بامدادی رادیو بی‌بی‌سی – دوشنبه ۱۹ اردیبهشت ۱۴۰۱',
+        'در این برنامه با صاحب‌نظران درباره مسائل سیاسی و اجتماعی روز گفت‌ و‌ گو می‌کنیم.',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0bq9rkk.jpg',
-        alt: 'پادکست چشم‌انداز بامدادی رادیو بی‌بی‌سی',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p069d2yl.jpg',
+        alt: 'صفحه ۲',
       },
       linkLabel: {
         text: 'پادکست',
-        href: 'https://www.bbc.com/persian/podcasts/p02pc9mc',
+        href: 'https://www.bbc.com/persian/podcasts/p05gyy09',
       },
       skipLink: {
         text: 'از %title% رد شوید و به خواندن ادامه دهید',
@@ -165,7 +150,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'تایید',
           reject: 'ببنید چه تغییراتی ایجاد شده است',
-          rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
         },
         cookie: {
           amp: {
@@ -180,7 +165,7 @@ export const service: DefaultServiceConfig = {
                 linkText: 'کوکی ها',
                 last: ' یا برداشت از داده‌های مرورگر شما استفاده می‌کنیم؛ اگر موافق هستید تایید کنید',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               manage: 'مدیریت تنظیمات',
             },
@@ -196,7 +181,7 @@ export const service: DefaultServiceConfig = {
                   'برای کار با صفحات وب ما، ما اطلاعات محدودی را بدون رضایت شما در دستگاه شما ذخیره می کنیم.',
                 para4: {
                   text: 'درباره اطلاعات اساسی که برای کار با صفحات وب ما در دستگاه شما ذخیره می کنیم بیشتر بخوانید.',
-                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
                 },
                 para5:
                   'ما اطلاعات مربوط به  رضایت یا عدم رضایت شما را به صورت محلی در دستگاهتان  ذخیره می کنیم.',
@@ -229,13 +214,13 @@ export const service: DefaultServiceConfig = {
                 linkText: 'کوکی',
                 last: ' استفاده می‌کنیم. اگر موافق هستید دریافت کوکی‌ها را تایید کنید',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
             },
             accept: 'بله، موافقم',
             reject: 'خیر، بازگشت به صفحه تنظیمات',
             rejectUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+              'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           },
         },
       },
@@ -272,6 +257,7 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'برنامه رادیویی بعدی',
         duration: 'مدت',
         podcastExternalLinks: 'این پادکست در این زمان قابل دسترس است',
+        download: 'دانلود برنامه',
       },
       socialEmbed: {
         caption: {
@@ -294,6 +280,7 @@ export const service: DefaultServiceConfig = {
         consentBanner: {
           heading: `اجازه نشان دادن محتوای [social_media_site]  را می دهید؟`,
           body: `این مطلب شامل محتوایی از [social_media_site]  است. قبل از بارگیری این محتوا از شما اجازه می گیریم، زیرا ممکن است این سایت ها از کوکی ها و یا سایر انواع فن آوری استفاده کنند. می توانید سیاست [link]  [social_media_site]  را درباره کوکی ها [/link] و  [link] سیاست مربوط به حفظ حریم خصوصی[/link]  را پیش از موافقت بخوانید. برای دیدن این محتوا روی "موافقت و ادامه"‌کلیک کنید.`,
+          button: 'موافقت و ادامه',
         },
       },
       include: {
@@ -303,8 +290,8 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'مهمترین خبرها',
       featuresAnalysisTitle: 'گزارش و تحلیل',
+      latestMediaTitle: 'تازه ترین',
     },
-    brandSVG,
     mostRead: {
       header: 'پربیننده‌ترین‌ها',
       lastUpdated: 'به روز شده در',
@@ -325,7 +312,11 @@ export const service: DefaultServiceConfig = {
       durationLabel: '%duration% المدة الزمنية',
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      hasStoryRecommendations: true,
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {
@@ -350,7 +341,7 @@ export const service: DefaultServiceConfig = {
           text: 'سیاست حفظ حریم خصوصی',
         },
         {
-          href: 'https://www.bbc.co.uk/usingthebbc/cookies/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/',
           text: 'کوکی ها',
         },
         {
@@ -359,8 +350,8 @@ export const service: DefaultServiceConfig = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-          text: 'AdChoices / Do Not Sell My Info',
+          href: '#',
+          text: 'Do not share or sell my info',
           lang: 'en-GB',
         },
       ],
@@ -378,15 +369,11 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'ویدیو',
-        url: '/persian/media/video',
+        url: '/persian/topics/c6z7mnr559gt',
       },
       {
         title: 'تلویزیون',
         url: '/persian/tv-and-radio-37434377',
-      },
-      {
-        title: 'رادیو',
-        url: '/persian/tv-and-radio-37434376',
       },
       {
         title: 'ايران',
@@ -419,6 +406,10 @@ export const service: DefaultServiceConfig = {
       {
         title: 'ناظران می‌گویند',
         url: '/persian/blogs-54099951',
+      },
+      {
+        title: 'رادیو',
+        url: '/persian/tv-and-radio-37434376',
       },
     ],
   },

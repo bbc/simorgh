@@ -24,7 +24,8 @@ const BulletinImage = ({ imageValues, lazyLoad }) => {
       originalImageWidth: width,
       imageResolutions,
     });
-  const sizes = '(max-width: 1008px) 50vw, 496px';
+  const sizes =
+    '(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw';
   const DEFAULT_IMAGE_RES = 660;
   const src = buildIChefURL({
     originCode,
@@ -74,7 +75,7 @@ const BulletinContainer = ({ item, lazyLoadImage }) => {
 
   const headline = pathOr(null, ['name'], item);
   const ctaLink = pathOr(null, ['uri'], item);
-  const allyLink = ctaLink.split('/').pop();
+  const allyLink = ctaLink?.split('/').pop();
 
   if (!headline || !ctaLink) {
     return null;

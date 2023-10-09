@@ -263,6 +263,17 @@ exports[`Media Player: Canonical Entry renders a landscape container with a plac
   transition: background-color 300ms;
 }
 
+.emotion-9:focus-visible::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF inset;
+  border: 0.1875rem solid #000000;
+}
+
 .emotion-11 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -274,7 +285,7 @@ exports[`Media Player: Canonical Entry renders a landscape container with a plac
   margin: 0;
 }
 
-.emotion-13>svg {
+.emotion-12>svg {
   color: #FFFFFF;
   fill: currentColor;
   height: 1.5rem;
@@ -282,7 +293,7 @@ exports[`Media Player: Canonical Entry renders a landscape container with a plac
   width: 1.5rem;
 }
 
-.emotion-15 {
+.emotion-14 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -291,18 +302,12 @@ exports[`Media Player: Canonical Entry renders a landscape container with a plac
   height: 0.75rem;
 }
 
-.emotion-17 {
+.emotion-16 {
   display: block;
   margin-top: 0.5rem;
 }
 
-.emotion-19 {
-  display: block;
-  width: 100%;
-  visibility: visible;
-}
-
-.emotion-21 {
+.emotion-18 {
   display: block;
   width: 100%;
 }
@@ -325,47 +330,53 @@ exports[`Media Player: Canonical Entry renders a landscape container with a plac
         />
       </div>
       <button
-        class="emotion-8 emotion-9 emotion-10"
+        class="focusIndicatorRemove emotion-8 emotion-9 emotion-10"
       >
         <span
-          class="emotion-11 emotion-12"
+          class="emotion-11"
         >
           Play video, "Dog chases cat.", 2 minutes 30 seconds
         </span>
         <div
           aria-hidden="true"
-          class="emotion-13 emotion-14"
+          class="emotion-12 emotion-13"
         >
           <svg
             aria-hidden="true"
-            class="emotion-15 emotion-16"
+            class="emotion-14 emotion-15"
             focusable="false"
-            height="12px"
-            viewBox="0 0 32 32"
-            width="12px"
+            height="12"
+            viewBox="0 0 12 12"
+            width="12"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <polygon
-              points="3,32 29,16 3,0"
-            />
+            <g
+              fill="none"
+              fill-rule="evenodd"
+            >
+              <path
+                d="M.5.6h12v12H.5z"
+              />
+              <path
+                d="M2.144.96v11.28l8.712-5.64z"
+                fill="currentColor"
+              />
+            </g>
           </svg>
         </div>
         <time
           aria-hidden="true"
-          class="emotion-17 emotion-18"
+          class="emotion-16 emotion-17"
           datetime="PT2M30S"
         >
           2:30
         </time>
       </button>
-      <picture
-        class="emotion-19 emotion-20"
-      >
-        <img
-          alt=""
-          class="emotion-21 emotion-22"
-          src="http://foo.bar/placeholder.png"
-        />
-      </picture>
+      <img
+        alt=""
+        class="emotion-18 emotion-19"
+        src="http://foo.bar/placeholder.png"
+      />
     </div>
   </div>
 </div>
@@ -471,6 +482,17 @@ exports[`Media Player: Canonical Entry renders a placeholder image with guidance
   transition: background-color 300ms;
 }
 
+.emotion-11:focus-visible::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF inset;
+  border: 0.1875rem solid #000000;
+}
+
 .emotion-13 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -482,7 +504,7 @@ exports[`Media Player: Canonical Entry renders a placeholder image with guidance
   margin: 0;
 }
 
-.emotion-15>svg {
+.emotion-14>svg {
   color: #FFFFFF;
   fill: currentColor;
   height: 1.5rem;
@@ -490,7 +512,7 @@ exports[`Media Player: Canonical Entry renders a placeholder image with guidance
   width: 1.5rem;
 }
 
-.emotion-17 {
+.emotion-16 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -499,18 +521,12 @@ exports[`Media Player: Canonical Entry renders a placeholder image with guidance
   height: 0.75rem;
 }
 
-.emotion-19 {
+.emotion-18 {
   display: block;
   margin-top: 0.5rem;
 }
 
-.emotion-21 {
-  display: block;
-  width: 100%;
-  visibility: visible;
-}
-
-.emotion-23 {
+.emotion-20 {
   display: block;
   width: 100%;
 }
@@ -539,47 +555,53 @@ exports[`Media Player: Canonical Entry renders a placeholder image with guidance
         />
       </div>
       <button
-        class="emotion-10 emotion-11 emotion-12"
+        class="focusIndicatorRemove emotion-10 emotion-11 emotion-12"
       >
         <span
-          class="emotion-13 emotion-14"
+          class="emotion-13"
         >
           May contain strong language, sexual or violent content that may offend. Play video, "Dog chases cat.", 2 minutes 30 seconds
         </span>
         <div
           aria-hidden="true"
-          class="emotion-15 emotion-16"
+          class="emotion-14 emotion-15"
         >
           <svg
             aria-hidden="true"
-            class="emotion-17 emotion-18"
+            class="emotion-16 emotion-17"
             focusable="false"
-            height="12px"
-            viewBox="0 0 32 32"
-            width="12px"
+            height="12"
+            viewBox="0 0 12 12"
+            width="12"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <polygon
-              points="3,32 29,16 3,0"
-            />
+            <g
+              fill="none"
+              fill-rule="evenodd"
+            >
+              <path
+                d="M.5.6h12v12H.5z"
+              />
+              <path
+                d="M2.144.96v11.28l8.712-5.64z"
+                fill="currentColor"
+              />
+            </g>
           </svg>
         </div>
         <time
           aria-hidden="true"
-          class="emotion-19 emotion-20"
+          class="emotion-18 emotion-19"
           datetime="PT2M30S"
         >
           2:30
         </time>
       </button>
-      <picture
-        class="emotion-21 emotion-22"
-      >
-        <img
-          alt=""
-          class="emotion-23 emotion-24"
-          src="http://foo.bar/placeholder.png"
-        />
-      </picture>
+      <img
+        alt=""
+        class="emotion-20 emotion-21"
+        src="http://foo.bar/placeholder.png"
+      />
     </div>
   </div>
 </div>
@@ -659,6 +681,17 @@ exports[`Media Player: Canonical Entry renders a portrait container with a place
   transition: background-color 300ms;
 }
 
+.emotion-9:focus-visible::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF inset;
+  border: 0.1875rem solid #000000;
+}
+
 .emotion-11 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -670,7 +703,7 @@ exports[`Media Player: Canonical Entry renders a portrait container with a place
   margin: 0;
 }
 
-.emotion-13>svg {
+.emotion-12>svg {
   color: #FFFFFF;
   fill: currentColor;
   height: 1.5rem;
@@ -678,7 +711,7 @@ exports[`Media Player: Canonical Entry renders a portrait container with a place
   width: 1.5rem;
 }
 
-.emotion-15 {
+.emotion-14 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -687,18 +720,12 @@ exports[`Media Player: Canonical Entry renders a portrait container with a place
   height: 0.75rem;
 }
 
-.emotion-17 {
+.emotion-16 {
   display: block;
   margin-top: 0.5rem;
 }
 
-.emotion-19 {
-  display: block;
-  width: 100%;
-  visibility: visible;
-}
-
-.emotion-21 {
+.emotion-18 {
   display: block;
   width: 100%;
 }
@@ -721,47 +748,53 @@ exports[`Media Player: Canonical Entry renders a portrait container with a place
         />
       </div>
       <button
-        class="emotion-8 emotion-9 emotion-10"
+        class="focusIndicatorRemove emotion-8 emotion-9 emotion-10"
       >
         <span
-          class="emotion-11 emotion-12"
+          class="emotion-11"
         >
           Play video, "Dog chases cat.", 2 minutes 30 seconds
         </span>
         <div
           aria-hidden="true"
-          class="emotion-13 emotion-14"
+          class="emotion-12 emotion-13"
         >
           <svg
             aria-hidden="true"
-            class="emotion-15 emotion-16"
+            class="emotion-14 emotion-15"
             focusable="false"
-            height="12px"
-            viewBox="0 0 32 32"
-            width="12px"
+            height="12"
+            viewBox="0 0 12 12"
+            width="12"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <polygon
-              points="3,32 29,16 3,0"
-            />
+            <g
+              fill="none"
+              fill-rule="evenodd"
+            >
+              <path
+                d="M.5.6h12v12H.5z"
+              />
+              <path
+                d="M2.144.96v11.28l8.712-5.64z"
+                fill="currentColor"
+              />
+            </g>
           </svg>
         </div>
         <time
           aria-hidden="true"
-          class="emotion-17 emotion-18"
+          class="emotion-16 emotion-17"
           datetime="PT2M30S"
         >
           2:30
         </time>
       </button>
-      <picture
-        class="emotion-19 emotion-20"
-      >
-        <img
-          alt=""
-          class="emotion-21 emotion-22"
-          src="http://foo.bar/placeholder.png"
-        />
-      </picture>
+      <img
+        alt=""
+        class="emotion-18 emotion-19"
+        src="http://foo.bar/placeholder.png"
+      />
     </div>
   </div>
 </div>
@@ -793,9 +826,12 @@ exports[`Media Player: Canonical Entry renders an iframe when showPlaceholder is
       allow="autoplay"
       allowfullscreen=""
       class="emotion-2 emotion-3"
+      height="362.953125"
+      loading="lazy"
       scrolling="no"
       src="http://foo.bar/iframe"
       title="Media player"
+      width="645.25"
     />
     <noscript />
   </div>
@@ -834,9 +870,12 @@ exports[`Media Player: Canonical Entry renders the audio skin 1`] = `
       allow="autoplay"
       allowfullscreen=""
       class="emotion-2 emotion-3"
+      height="362.953125"
+      loading="lazy"
       scrolling="no"
       src="https://www.test.bbc.com/ws/av-embeds/media/bbc_korean_radio/liveradio"
       title="Audio player"
+      width="645.25"
     />
     <noscript />
   </div>
@@ -960,6 +999,17 @@ exports[`Media Player: Canonical Entry renders with no-js styles when noJsClassN
   display: none;
 }
 
+.emotion-11:focus-visible::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF inset;
+  border: 0.1875rem solid #000000;
+}
+
 .emotion-13 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -971,7 +1021,7 @@ exports[`Media Player: Canonical Entry renders with no-js styles when noJsClassN
   margin: 0;
 }
 
-.emotion-15>svg {
+.emotion-14>svg {
   color: #FFFFFF;
   fill: currentColor;
   height: 1.5rem;
@@ -979,7 +1029,7 @@ exports[`Media Player: Canonical Entry renders with no-js styles when noJsClassN
   width: 1.5rem;
 }
 
-.emotion-17 {
+.emotion-16 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -988,18 +1038,12 @@ exports[`Media Player: Canonical Entry renders with no-js styles when noJsClassN
   height: 0.75rem;
 }
 
-.emotion-19 {
+.emotion-18 {
   display: block;
   margin-top: 0.5rem;
 }
 
-.emotion-21 {
-  display: block;
-  width: 100%;
-  visibility: visible;
-}
-
-.emotion-23 {
+.emotion-20 {
   display: block;
   width: 100%;
 }
@@ -1028,47 +1072,53 @@ exports[`Media Player: Canonical Entry renders with no-js styles when noJsClassN
         />
       </div>
       <button
-        class="emotion-10 emotion-11 emotion-12"
+        class="focusIndicatorRemove emotion-10 emotion-11 emotion-12"
       >
         <span
-          class="emotion-13 emotion-14"
+          class="emotion-13"
         >
           May contain strong language, sexual or violent content that may offend. Play video, "Dog chases cat.", 2 minutes 30 seconds
         </span>
         <div
           aria-hidden="true"
-          class="emotion-15 emotion-16"
+          class="emotion-14 emotion-15"
         >
           <svg
             aria-hidden="true"
-            class="emotion-17 emotion-18"
+            class="emotion-16 emotion-17"
             focusable="false"
-            height="12px"
-            viewBox="0 0 32 32"
-            width="12px"
+            height="12"
+            viewBox="0 0 12 12"
+            width="12"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <polygon
-              points="3,32 29,16 3,0"
-            />
+            <g
+              fill="none"
+              fill-rule="evenodd"
+            >
+              <path
+                d="M.5.6h12v12H.5z"
+              />
+              <path
+                d="M2.144.96v11.28l8.712-5.64z"
+                fill="currentColor"
+              />
+            </g>
           </svg>
         </div>
         <time
           aria-hidden="true"
-          class="emotion-19 emotion-20"
+          class="emotion-18 emotion-19"
           datetime="PT2M30S"
         >
           2:30
         </time>
       </button>
-      <picture
-        class="emotion-21 emotion-22"
-      >
-        <img
-          alt=""
-          class="emotion-23 emotion-24"
-          src="http://foo.bar/placeholder.png"
-        />
-      </picture>
+      <img
+        alt=""
+        class="emotion-20 emotion-21"
+        src="http://foo.bar/placeholder.png"
+      />
     </div>
   </div>
 </div>
@@ -1137,9 +1187,12 @@ exports[`Media Player: Canonical Entry shows a loading image before the player i
       allow="autoplay"
       allowfullscreen=""
       class="emotion-2 emotion-3"
+      height="362.953125"
+      loading="lazy"
       scrolling="no"
       src="http://foo.bar/iframe"
       title="Media player"
+      width="645.25"
     />
     <div
       class="emotion-4 emotion-5"

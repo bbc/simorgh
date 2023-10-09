@@ -8,6 +8,7 @@ import {
 } from '../fontFaces';
 import reithFontVariants from '../fontVariants/reith';
 import withThemeProvider from '../withThemeProvider';
+import brandSVG from '../chameleonLogos/russian';
 
 const russianTheme = {
   palette: {
@@ -27,6 +28,7 @@ const russianTheme = {
       REITH_SERIF_LIGHT,
     ],
   },
+  brandSVG,
 };
 
 export default withThemeProvider(russianTheme);

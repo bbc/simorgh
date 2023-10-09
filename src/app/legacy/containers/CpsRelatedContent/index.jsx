@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { arrayOf, shape, number, bool, string, elementType } from 'prop-types';
+import { arrayOf, shape, number, bool, string } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
 import { GEL_SPACING_DBL } from '#psammead/gel-foundations/src/spacings';
@@ -26,7 +26,6 @@ const CpsRelatedContent = ({
   isMediaContent,
   title: _title,
   sectionLabelBackground,
-  imageComponent,
 }) => {
   const { translations } = useContext(ServiceContext);
 
@@ -48,7 +47,6 @@ const CpsRelatedContent = ({
       columnType="secondary"
       eventTrackingData={eventTrackingData}
       sectionLabelBackground={sectionLabelBackground}
-      imageComponent={imageComponent}
     />
   );
 };
@@ -69,7 +67,6 @@ CpsRelatedContent.propTypes = {
   isMediaContent: bool,
   title: string,
   sectionLabelBackground: string,
-  imageComponent: elementType,
 };
 
 CpsRelatedContent.defaultProps = {
@@ -78,7 +75,6 @@ CpsRelatedContent.defaultProps = {
   isMediaContent: false,
   title: null,
   sectionLabelBackground: undefined,
-  imageComponent: undefined,
 };
 
 export default CpsRelatedContent;

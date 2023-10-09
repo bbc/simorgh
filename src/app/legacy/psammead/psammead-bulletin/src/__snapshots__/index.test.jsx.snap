@@ -45,41 +45,35 @@ exports[`Bulletin should render audio correctly 1`] = `
 .emotion-4 {
   display: block;
   width: 100%;
-  visibility: visible;
 }
 
 .emotion-6 {
-  display: block;
-  width: 100%;
-}
-
-.emotion-8 {
   display: inline-block;
   width: 100%;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-8 {
+  .emotion-6 {
     width: 66.67%;
     padding-right: 1rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-8 {
+  .emotion-6 {
     width: initial;
     grid-column: 1/span 6;
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-8 {
+    .emotion-6 {
       grid-column: 3/span 4;
       padding: 0;
     }
   }
 }
 
-.emotion-10 {
+.emotion-8 {
   color: #222222;
   margin: 0;
   padding: 0.5rem;
@@ -91,36 +85,37 @@ exports[`Bulletin should render audio correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-10 {
+  .emotion-8 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-10 {
+  .emotion-8 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-10 {
+  .emotion-8 {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     padding-left: 0;
   }
 }
 
-.emotion-12 {
+.emotion-10 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
-.emotion-12:before {
+.emotion-10:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -132,17 +127,17 @@ exports[`Bulletin should render audio correctly 1`] = `
   z-index: 1;
 }
 
-.emotion-12:hover,
-.emotion-12:focus {
+.emotion-10:hover,
+.emotion-10:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-12:visited {
+.emotion-10:visited {
   color: #6E6E73;
 }
 
-.emotion-14 {
+.emotion-12 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -153,7 +148,7 @@ exports[`Bulletin should render audio correctly 1`] = `
   margin: 0;
 }
 
-.emotion-16 {
+.emotion-13 {
   color: #3F3F42;
   margin: 0;
   padding: 0 0.5rem 1rem;
@@ -165,26 +160,26 @@ exports[`Bulletin should render audio correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-16 {
+  .emotion-13 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-16 {
+  .emotion-13 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-16 {
+  .emotion-13 {
     padding-left: 0;
   }
 }
 
-.emotion-18 {
+.emotion-15 {
   background-color: #222222;
   border: 0.0625rem solid transparent;
   color: #FFFFFF;
@@ -209,21 +204,21 @@ exports[`Bulletin should render audio correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-18 {
+  .emotion-15 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-18 {
+  .emotion-15 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-18 {
+  .emotion-15 {
     display: -webkit-inline-box;
     display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
@@ -233,7 +228,7 @@ exports[`Bulletin should render audio correctly 1`] = `
   }
 }
 
-.emotion-20 {
+.emotion-17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -245,7 +240,7 @@ exports[`Bulletin should render audio correctly 1`] = `
   padding-right: 0.5rem;
 }
 
-.emotion-20>svg {
+.emotion-17>svg {
   color: #FFFFFF;
   fill: currentColor;
   width: 1.0625rem;
@@ -253,12 +248,12 @@ exports[`Bulletin should render audio correctly 1`] = `
   margin: 0;
 }
 
-.emotion-22 {
+.emotion-19 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
   fill: currentColor;
-  width: 0.8125rem;
+  width: 0.75rem;
   height: 0.75rem;
 }
 
@@ -269,35 +264,24 @@ exports[`Bulletin should render audio correctly 1`] = `
     <div
       class="emotion-2 emotion-3"
     >
-      <picture
+      <img
+        alt="Iron man"
         class="emotion-4 emotion-5"
-      >
-        <source
-          srcset="https://ichef.bbci.co.uk/news/300/cpsprodpb/11897/production/_106613817_999_al_.jpg.webp 300w, https://ichef.bbci.co.uk/news/450/cpsprodpb/11897/production/_106613817_999_al_.jpg.webp 450w, https://ichef.bbci.co.uk/news/600/cpsprodpb/11897/production/_106613817_999_al_.jpg.webp 600w, https://ichef.bbci.co.uk/news/1024/cpsprodpb/11897/production/_106613817_999_al_.jpg.webp 1024w"
-          type="image/webp"
-        />
-        <source
-          srcset="https://ichef.bbci.co.uk/news/300/cpsprodpb/11897/production/_106613817_999_al_.jpg 300w, https://ichef.bbci.co.uk/news/450/cpsprodpb/11897/production/_106613817_999_al_.jpg 450w, https://ichef.bbci.co.uk/news/600/cpsprodpb/11897/production/_106613817_999_al_.jpg 600w, https://ichef.bbci.co.uk/news/1024/cpsprodpb/11897/production/_106613817_999_al_.jpg 1024w"
-          type="image/jpeg"
-        />
-        <img
-          alt="Iron man"
-          class="emotion-6 emotion-7"
-          src="https://ichef.bbci.co.uk/news/[WIDTH]/cpsprodpb/11897/production/_106613817_999_al_.jpg"
-        />
-      </picture>
+        src="https://ichef.bbci.co.uk/news/[WIDTH]/cpsprodpb/11897/production/_106613817_999_al_.jpg"
+        srcset="https://ichef.bbci.co.uk/news/300/cpsprodpb/11897/production/_106613817_999_al_.jpg 300w, https://ichef.bbci.co.uk/news/450/cpsprodpb/11897/production/_106613817_999_al_.jpg 450w, https://ichef.bbci.co.uk/news/600/cpsprodpb/11897/production/_106613817_999_al_.jpg 600w, https://ichef.bbci.co.uk/news/1024/cpsprodpb/11897/production/_106613817_999_al_.jpg 1024w"
+      />
     </div>
     <div
-      class="emotion-8 emotion-9"
+      class="emotion-6 emotion-7"
       dir="ltr"
     >
       <h3
-        class="emotion-10 emotion-11"
+        class="emotion-8 emotion-9"
         dir="ltr"
       >
         <a
           aria-labelledby="bulletin-httpsbbccouk"
-          class="emotion-12 emotion-13"
+          class="focusIndicatorDisplayBlock emotion-10 emotion-11"
           href="https://bbc.co.uk"
         >
           <span
@@ -305,7 +289,7 @@ exports[`Bulletin should render audio correctly 1`] = `
             role="text"
           >
             <span
-              class="emotion-14 emotion-15"
+              class="emotion-12"
             >
               Listen, 
             </span>
@@ -316,23 +300,23 @@ exports[`Bulletin should render audio correctly 1`] = `
         </a>
       </h3>
       <p
-        class="emotion-16 emotion-17"
+        class="emotion-13 emotion-14"
         dir="ltr"
       >
         This is the summary text
       </p>
       <div
         aria-hidden="true"
-        class="emotion-18 emotion-19"
+        class="emotion-15 emotion-16"
         dir="ltr"
       >
         <span
-          class="emotion-20 emotion-21"
+          class="emotion-17 emotion-18"
           dir="ltr"
         >
           <svg
             aria-hidden="true"
-            class="emotion-22 emotion-23"
+            class="emotion-19 emotion-20"
             focusable="false"
             height="12px"
             viewBox="0 0 13 12"
@@ -398,45 +382,39 @@ exports[`Bulletin should render audio correctly with lang prop passed in 1`] = `
 .emotion-4 {
   display: block;
   width: 100%;
-  visibility: visible;
 }
 
 .emotion-6 {
-  display: block;
-  width: 100%;
-}
-
-.emotion-8 {
   display: inline-block;
   width: 100%;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-8 {
+  .emotion-6 {
     width: 66.67%;
     padding-right: 1rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-8 {
+  .emotion-6 {
     width: initial;
     grid-column: 1/span 6;
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-8 {
+    .emotion-6 {
       grid-column: 3/span 4;
       padding: 0;
     }
   }
 }
 
-.emotion-10 {
+.emotion-8 {
   color: #222222;
   margin: 0;
   padding: 0.5rem;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 0.9375rem;
@@ -444,36 +422,37 @@ exports[`Bulletin should render audio correctly with lang prop passed in 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-10 {
+  .emotion-8 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-10 {
+  .emotion-8 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-10 {
+  .emotion-8 {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     padding-right: 0;
   }
 }
 
-.emotion-12 {
+.emotion-10 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
-.emotion-12:before {
+.emotion-10:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -485,17 +464,17 @@ exports[`Bulletin should render audio correctly with lang prop passed in 1`] = `
   z-index: 1;
 }
 
-.emotion-12:hover,
-.emotion-12:focus {
+.emotion-10:hover,
+.emotion-10:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-12:visited {
+.emotion-10:visited {
   color: #6E6E73;
 }
 
-.emotion-14 {
+.emotion-12 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -506,38 +485,38 @@ exports[`Bulletin should render audio correctly with lang prop passed in 1`] = `
   margin: 0;
 }
 
-.emotion-16 {
+.emotion-13 {
   color: #3F3F42;
   margin: 0;
   padding: 0 0.5rem 1rem;
   font-size: 0.9375rem;
   line-height: 1.375rem;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-16 {
+  .emotion-13 {
     font-size: 0.9375rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-16 {
+  .emotion-13 {
     font-size: 0.875rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-16 {
+  .emotion-13 {
     padding-right: 0;
   }
 }
 
-.emotion-18 {
+.emotion-15 {
   background-color: #222222;
   border: 0.0625rem solid transparent;
   color: #FFFFFF;
@@ -556,27 +535,27 @@ exports[`Bulletin should render audio correctly with lang prop passed in 1`] = `
   justify-content: center;
   font-size: 0.9375rem;
   line-height: 1.5rem;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-18 {
+  .emotion-15 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-18 {
+  .emotion-15 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-18 {
+  .emotion-15 {
     display: -webkit-inline-box;
     display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
@@ -586,7 +565,7 @@ exports[`Bulletin should render audio correctly with lang prop passed in 1`] = `
   }
 }
 
-.emotion-20 {
+.emotion-17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -598,7 +577,7 @@ exports[`Bulletin should render audio correctly with lang prop passed in 1`] = `
   padding-left: 0.5rem;
 }
 
-.emotion-20>svg {
+.emotion-17>svg {
   color: #FFFFFF;
   fill: currentColor;
   width: 1.0625rem;
@@ -606,12 +585,12 @@ exports[`Bulletin should render audio correctly with lang prop passed in 1`] = `
   margin: 0;
 }
 
-.emotion-22 {
+.emotion-19 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
   fill: currentColor;
-  width: 0.8125rem;
+  width: 0.75rem;
   height: 0.75rem;
 }
 
@@ -622,35 +601,24 @@ exports[`Bulletin should render audio correctly with lang prop passed in 1`] = `
     <div
       class="emotion-2 emotion-3"
     >
-      <picture
+      <img
+        alt="Iron man"
         class="emotion-4 emotion-5"
-      >
-        <source
-          srcset="https://ichef.bbci.co.uk/news/300/cpsprodpb/11897/production/_106613817_999_al_.jpg.webp 300w, https://ichef.bbci.co.uk/news/450/cpsprodpb/11897/production/_106613817_999_al_.jpg.webp 450w, https://ichef.bbci.co.uk/news/600/cpsprodpb/11897/production/_106613817_999_al_.jpg.webp 600w, https://ichef.bbci.co.uk/news/1024/cpsprodpb/11897/production/_106613817_999_al_.jpg.webp 1024w"
-          type="image/webp"
-        />
-        <source
-          srcset="https://ichef.bbci.co.uk/news/300/cpsprodpb/11897/production/_106613817_999_al_.jpg 300w, https://ichef.bbci.co.uk/news/450/cpsprodpb/11897/production/_106613817_999_al_.jpg 450w, https://ichef.bbci.co.uk/news/600/cpsprodpb/11897/production/_106613817_999_al_.jpg 600w, https://ichef.bbci.co.uk/news/1024/cpsprodpb/11897/production/_106613817_999_al_.jpg 1024w"
-          type="image/jpeg"
-        />
-        <img
-          alt="Iron man"
-          class="emotion-6 emotion-7"
-          src="https://ichef.bbci.co.uk/news/[WIDTH]/cpsprodpb/11897/production/_106613817_999_al_.jpg"
-        />
-      </picture>
+        src="https://ichef.bbci.co.uk/news/[WIDTH]/cpsprodpb/11897/production/_106613817_999_al_.jpg"
+        srcset="https://ichef.bbci.co.uk/news/300/cpsprodpb/11897/production/_106613817_999_al_.jpg 300w, https://ichef.bbci.co.uk/news/450/cpsprodpb/11897/production/_106613817_999_al_.jpg 450w, https://ichef.bbci.co.uk/news/600/cpsprodpb/11897/production/_106613817_999_al_.jpg 600w, https://ichef.bbci.co.uk/news/1024/cpsprodpb/11897/production/_106613817_999_al_.jpg 1024w"
+      />
     </div>
     <div
-      class="emotion-8 emotion-9"
+      class="emotion-6 emotion-7"
       dir="rtl"
     >
       <h3
-        class="emotion-10 emotion-11"
+        class="emotion-8 emotion-9"
         dir="rtl"
       >
         <a
           aria-labelledby="bulletin-httpsbbccouk"
-          class="emotion-12 emotion-13"
+          class="focusIndicatorDisplayBlock emotion-10 emotion-11"
           href="https://bbc.co.uk"
         >
           <span
@@ -658,7 +626,7 @@ exports[`Bulletin should render audio correctly with lang prop passed in 1`] = `
             role="text"
           >
             <span
-              class="emotion-14 emotion-15"
+              class="emotion-12"
               lang="en-GB"
             >
               Listen, 
@@ -670,23 +638,23 @@ exports[`Bulletin should render audio correctly with lang prop passed in 1`] = `
         </a>
       </h3>
       <p
-        class="emotion-16 emotion-17"
+        class="emotion-13 emotion-14"
         dir="rtl"
       >
         This is the summary text
       </p>
       <div
         aria-hidden="true"
-        class="emotion-18 emotion-19"
+        class="emotion-15 emotion-16"
         dir="rtl"
       >
         <span
-          class="emotion-20 emotion-21"
+          class="emotion-17 emotion-18"
           dir="rtl"
         >
           <svg
             aria-hidden="true"
-            class="emotion-22 emotion-23"
+            class="emotion-19 emotion-20"
             focusable="false"
             height="12px"
             viewBox="0 0 13 12"
@@ -752,41 +720,35 @@ exports[`Bulletin should render live audio correctly 1`] = `
 .emotion-4 {
   display: block;
   width: 100%;
-  visibility: visible;
 }
 
 .emotion-6 {
-  display: block;
-  width: 100%;
-}
-
-.emotion-8 {
   display: inline-block;
   width: 100%;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-8 {
+  .emotion-6 {
     width: 66.67%;
     padding-right: 1rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-8 {
+  .emotion-6 {
     width: initial;
     grid-column: 1/span 6;
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-8 {
+    .emotion-6 {
       grid-column: 3/span 4;
       padding: 0;
     }
   }
 }
 
-.emotion-10 {
+.emotion-8 {
   color: #222222;
   margin: 0;
   padding: 0.5rem;
@@ -798,36 +760,37 @@ exports[`Bulletin should render live audio correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-10 {
+  .emotion-8 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-10 {
+  .emotion-8 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-10 {
+  .emotion-8 {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     padding-left: 0;
   }
 }
 
-.emotion-12 {
+.emotion-10 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
-.emotion-12:before {
+.emotion-10:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -839,17 +802,17 @@ exports[`Bulletin should render live audio correctly 1`] = `
   z-index: 1;
 }
 
-.emotion-12:hover,
-.emotion-12:focus {
+.emotion-10:hover,
+.emotion-10:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-12:visited {
+.emotion-10:visited {
   color: #6E6E73;
 }
 
-.emotion-14 {
+.emotion-12 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -858,7 +821,7 @@ exports[`Bulletin should render live audio correctly 1`] = `
   margin-right: 0.5rem;
 }
 
-.emotion-16 {
+.emotion-14 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -869,7 +832,7 @@ exports[`Bulletin should render live audio correctly 1`] = `
   margin: 0;
 }
 
-.emotion-18 {
+.emotion-15 {
   color: #3F3F42;
   margin: 0;
   padding: 0 0.5rem 1rem;
@@ -881,26 +844,26 @@ exports[`Bulletin should render live audio correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-18 {
+  .emotion-15 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-18 {
+  .emotion-15 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-18 {
+  .emotion-15 {
     padding-left: 0;
   }
 }
 
-.emotion-20 {
+.emotion-17 {
   background-color: #B80000;
   border: 0.0625rem solid transparent;
   color: #FFFFFF;
@@ -925,21 +888,21 @@ exports[`Bulletin should render live audio correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-20 {
+  .emotion-17 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-20 {
+  .emotion-17 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-20 {
+  .emotion-17 {
     display: -webkit-inline-box;
     display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
@@ -949,7 +912,7 @@ exports[`Bulletin should render live audio correctly 1`] = `
   }
 }
 
-.emotion-22 {
+.emotion-19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -961,7 +924,7 @@ exports[`Bulletin should render live audio correctly 1`] = `
   padding-right: 0.5rem;
 }
 
-.emotion-22>svg {
+.emotion-19>svg {
   color: #FFFFFF;
   fill: currentColor;
   width: 1.0625rem;
@@ -969,12 +932,12 @@ exports[`Bulletin should render live audio correctly 1`] = `
   margin: 0;
 }
 
-.emotion-24 {
+.emotion-21 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
   fill: currentColor;
-  width: 0.8125rem;
+  width: 0.75rem;
   height: 0.75rem;
 }
 
@@ -985,35 +948,24 @@ exports[`Bulletin should render live audio correctly 1`] = `
     <div
       class="emotion-2 emotion-3"
     >
-      <picture
+      <img
+        alt="Iron man"
         class="emotion-4 emotion-5"
-      >
-        <source
-          srcset="https://ichef.bbci.co.uk/news/300/cpsprodpb/11897/production/_106613817_999_al_.jpg.webp 300w, https://ichef.bbci.co.uk/news/450/cpsprodpb/11897/production/_106613817_999_al_.jpg.webp 450w, https://ichef.bbci.co.uk/news/600/cpsprodpb/11897/production/_106613817_999_al_.jpg.webp 600w, https://ichef.bbci.co.uk/news/1024/cpsprodpb/11897/production/_106613817_999_al_.jpg.webp 1024w"
-          type="image/webp"
-        />
-        <source
-          srcset="https://ichef.bbci.co.uk/news/300/cpsprodpb/11897/production/_106613817_999_al_.jpg 300w, https://ichef.bbci.co.uk/news/450/cpsprodpb/11897/production/_106613817_999_al_.jpg 450w, https://ichef.bbci.co.uk/news/600/cpsprodpb/11897/production/_106613817_999_al_.jpg 600w, https://ichef.bbci.co.uk/news/1024/cpsprodpb/11897/production/_106613817_999_al_.jpg 1024w"
-          type="image/jpeg"
-        />
-        <img
-          alt="Iron man"
-          class="emotion-6 emotion-7"
-          src="https://ichef.bbci.co.uk/news/[WIDTH]/cpsprodpb/11897/production/_106613817_999_al_.jpg"
-        />
-      </picture>
+        src="https://ichef.bbci.co.uk/news/[WIDTH]/cpsprodpb/11897/production/_106613817_999_al_.jpg"
+        srcset="https://ichef.bbci.co.uk/news/300/cpsprodpb/11897/production/_106613817_999_al_.jpg 300w, https://ichef.bbci.co.uk/news/450/cpsprodpb/11897/production/_106613817_999_al_.jpg 450w, https://ichef.bbci.co.uk/news/600/cpsprodpb/11897/production/_106613817_999_al_.jpg 600w, https://ichef.bbci.co.uk/news/1024/cpsprodpb/11897/production/_106613817_999_al_.jpg 1024w"
+      />
     </div>
     <div
-      class="emotion-8 emotion-9"
+      class="emotion-6 emotion-7"
       dir="ltr"
     >
       <h3
-        class="emotion-10 emotion-11"
+        class="emotion-8 emotion-9"
         dir="ltr"
       >
         <a
           aria-labelledby="bulletin-httpsbbccouk"
-          class="emotion-12 emotion-13"
+          class="focusIndicatorDisplayBlock emotion-10 emotion-11"
           href="https://bbc.co.uk"
         >
           <span
@@ -1022,13 +974,13 @@ exports[`Bulletin should render live audio correctly 1`] = `
           >
             <span
               aria-hidden="true"
-              class="emotion-14 emotion-15"
+              class="emotion-12 emotion-13"
               dir="ltr"
             >
               LIVE 
             </span>
             <span
-              class="emotion-16 emotion-17"
+              class="emotion-14"
               lang="en-GB"
             >
               Listen LIVE, 
@@ -1038,23 +990,23 @@ exports[`Bulletin should render live audio correctly 1`] = `
         </a>
       </h3>
       <p
-        class="emotion-18 emotion-19"
+        class="emotion-15 emotion-16"
         dir="ltr"
       >
         This is the summary text
       </p>
       <div
         aria-hidden="true"
-        class="emotion-20 emotion-21"
+        class="emotion-17 emotion-18"
         dir="ltr"
       >
         <span
-          class="emotion-22 emotion-23"
+          class="emotion-19 emotion-20"
           dir="ltr"
         >
           <svg
             aria-hidden="true"
-            class="emotion-24 emotion-25"
+            class="emotion-21 emotion-22"
             focusable="false"
             height="12px"
             viewBox="0 0 13 12"
@@ -1125,41 +1077,35 @@ exports[`Bulletin should render live video correctly 1`] = `
 .emotion-4 {
   display: block;
   width: 100%;
-  visibility: visible;
 }
 
 .emotion-6 {
-  display: block;
-  width: 100%;
-}
-
-.emotion-8 {
   display: inline-block;
   width: 100%;
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-8 {
+  .emotion-6 {
     width: 50%;
     padding-right: 1rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-8 {
+  .emotion-6 {
     width: initial;
     grid-column: 1/span 6;
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-8 {
+    .emotion-6 {
       grid-column: 4/span 3;
       padding: 0;
     }
   }
 }
 
-.emotion-10 {
+.emotion-8 {
   color: #222222;
   margin: 0;
   padding: 0.5rem;
@@ -1171,34 +1117,35 @@ exports[`Bulletin should render live video correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-10 {
+  .emotion-8 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-10 {
+  .emotion-8 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-10 {
+  .emotion-8 {
     padding: 0 0 0.5rem 0;
   }
 }
 
-.emotion-12 {
+.emotion-10 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
-.emotion-12:before {
+.emotion-10:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -1210,17 +1157,17 @@ exports[`Bulletin should render live video correctly 1`] = `
   z-index: 1;
 }
 
-.emotion-12:hover,
-.emotion-12:focus {
+.emotion-10:hover,
+.emotion-10:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-12:visited {
+.emotion-10:visited {
   color: #6E6E73;
 }
 
-.emotion-14 {
+.emotion-12 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -1229,7 +1176,7 @@ exports[`Bulletin should render live video correctly 1`] = `
   margin-right: 0.5rem;
 }
 
-.emotion-16 {
+.emotion-14 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -1240,7 +1187,7 @@ exports[`Bulletin should render live video correctly 1`] = `
   margin: 0;
 }
 
-.emotion-18 {
+.emotion-15 {
   color: #3F3F42;
   margin: 0;
   padding: 0 0.5rem 1rem;
@@ -1252,27 +1199,27 @@ exports[`Bulletin should render live video correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-18 {
+  .emotion-15 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-18 {
+  .emotion-15 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-18 {
+  .emotion-15 {
     padding-left: 0;
     padding-right: 0;
   }
 }
 
-.emotion-20 {
+.emotion-17 {
   background-color: #B80000;
   border: 0.0625rem solid transparent;
   color: #FFFFFF;
@@ -1297,21 +1244,21 @@ exports[`Bulletin should render live video correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-20 {
+  .emotion-17 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-20 {
+  .emotion-17 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-20 {
+  .emotion-17 {
     display: -webkit-inline-box;
     display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
@@ -1320,7 +1267,7 @@ exports[`Bulletin should render live video correctly 1`] = `
   }
 }
 
-.emotion-22 {
+.emotion-19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1332,7 +1279,7 @@ exports[`Bulletin should render live video correctly 1`] = `
   padding-right: 0.5rem;
 }
 
-.emotion-22>svg {
+.emotion-19>svg {
   color: #FFFFFF;
   fill: currentColor;
   width: 1.0625rem;
@@ -1340,7 +1287,7 @@ exports[`Bulletin should render live video correctly 1`] = `
   margin: 0;
 }
 
-.emotion-24 {
+.emotion-21 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -1356,35 +1303,24 @@ exports[`Bulletin should render live video correctly 1`] = `
     <div
       class="emotion-2 emotion-3"
     >
-      <picture
+      <img
+        alt="Iron man"
         class="emotion-4 emotion-5"
-      >
-        <source
-          srcset="https://ichef.bbci.co.uk/news/300/cpsprodpb/11897/production/_106613817_999_al_.jpg.webp 300w, https://ichef.bbci.co.uk/news/450/cpsprodpb/11897/production/_106613817_999_al_.jpg.webp 450w, https://ichef.bbci.co.uk/news/600/cpsprodpb/11897/production/_106613817_999_al_.jpg.webp 600w, https://ichef.bbci.co.uk/news/1024/cpsprodpb/11897/production/_106613817_999_al_.jpg.webp 1024w"
-          type="image/webp"
-        />
-        <source
-          srcset="https://ichef.bbci.co.uk/news/300/cpsprodpb/11897/production/_106613817_999_al_.jpg 300w, https://ichef.bbci.co.uk/news/450/cpsprodpb/11897/production/_106613817_999_al_.jpg 450w, https://ichef.bbci.co.uk/news/600/cpsprodpb/11897/production/_106613817_999_al_.jpg 600w, https://ichef.bbci.co.uk/news/1024/cpsprodpb/11897/production/_106613817_999_al_.jpg 1024w"
-          type="image/jpeg"
-        />
-        <img
-          alt="Iron man"
-          class="emotion-6 emotion-7"
-          src="https://ichef.bbci.co.uk/news/[WIDTH]/cpsprodpb/11897/production/_106613817_999_al_.jpg"
-        />
-      </picture>
+        src="https://ichef.bbci.co.uk/news/[WIDTH]/cpsprodpb/11897/production/_106613817_999_al_.jpg"
+        srcset="https://ichef.bbci.co.uk/news/300/cpsprodpb/11897/production/_106613817_999_al_.jpg 300w, https://ichef.bbci.co.uk/news/450/cpsprodpb/11897/production/_106613817_999_al_.jpg 450w, https://ichef.bbci.co.uk/news/600/cpsprodpb/11897/production/_106613817_999_al_.jpg 600w, https://ichef.bbci.co.uk/news/1024/cpsprodpb/11897/production/_106613817_999_al_.jpg 1024w"
+      />
     </div>
     <div
-      class="emotion-8 emotion-9"
+      class="emotion-6 emotion-7"
       dir="ltr"
     >
       <h3
-        class="emotion-10 emotion-11"
+        class="emotion-8 emotion-9"
         dir="ltr"
       >
         <a
           aria-labelledby="bulletin-httpsbbccouk"
-          class="emotion-12 emotion-13"
+          class="focusIndicatorDisplayBlock emotion-10 emotion-11"
           href="https://bbc.co.uk"
         >
           <span
@@ -1393,13 +1329,13 @@ exports[`Bulletin should render live video correctly 1`] = `
           >
             <span
               aria-hidden="true"
-              class="emotion-14 emotion-15"
+              class="emotion-12 emotion-13"
               dir="ltr"
             >
               LIVE 
             </span>
             <span
-              class="emotion-16 emotion-17"
+              class="emotion-14"
               lang="en-GB"
             >
               Watch LIVE, 
@@ -1409,31 +1345,41 @@ exports[`Bulletin should render live video correctly 1`] = `
         </a>
       </h3>
       <p
-        class="emotion-18 emotion-19"
+        class="emotion-15 emotion-16"
         dir="ltr"
       >
         This is the summary text
       </p>
       <div
         aria-hidden="true"
-        class="emotion-20 emotion-21"
+        class="emotion-17 emotion-18"
         dir="ltr"
       >
         <span
-          class="emotion-22 emotion-23"
+          class="emotion-19 emotion-20"
           dir="ltr"
         >
           <svg
             aria-hidden="true"
-            class="emotion-24 emotion-25"
+            class="emotion-21 emotion-22"
             focusable="false"
-            height="12px"
-            viewBox="0 0 32 32"
-            width="12px"
+            height="12"
+            viewBox="0 0 12 12"
+            width="12"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <polygon
-              points="3,32 29,16 3,0"
-            />
+            <g
+              fill="none"
+              fill-rule="evenodd"
+            >
+              <path
+                d="M.5.6h12v12H.5z"
+              />
+              <path
+                d="M2.144.96v11.28l8.712-5.64z"
+                fill="currentColor"
+              />
+            </g>
           </svg>
         </span>
         Watch Live
@@ -1488,41 +1434,35 @@ exports[`Bulletin should render radio bulletin without ariaId 1`] = `
 .emotion-4 {
   display: block;
   width: 100%;
-  visibility: visible;
 }
 
 .emotion-6 {
-  display: block;
-  width: 100%;
-}
-
-.emotion-8 {
   display: inline-block;
   width: 100%;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-8 {
+  .emotion-6 {
     width: 66.67%;
     padding-right: 1rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-8 {
+  .emotion-6 {
     width: initial;
     grid-column: 1/span 6;
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-8 {
+    .emotion-6 {
       grid-column: 3/span 4;
       padding: 0;
     }
   }
 }
 
-.emotion-10 {
+.emotion-8 {
   color: #222222;
   margin: 0;
   padding: 0.5rem;
@@ -1534,36 +1474,37 @@ exports[`Bulletin should render radio bulletin without ariaId 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-10 {
+  .emotion-8 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-10 {
+  .emotion-8 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-10 {
+  .emotion-8 {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     padding-left: 0;
   }
 }
 
-.emotion-12 {
+.emotion-10 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
-.emotion-12:before {
+.emotion-10:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -1575,17 +1516,17 @@ exports[`Bulletin should render radio bulletin without ariaId 1`] = `
   z-index: 1;
 }
 
-.emotion-12:hover,
-.emotion-12:focus {
+.emotion-10:hover,
+.emotion-10:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-12:visited {
+.emotion-10:visited {
   color: #6E6E73;
 }
 
-.emotion-14 {
+.emotion-12 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -1596,7 +1537,7 @@ exports[`Bulletin should render radio bulletin without ariaId 1`] = `
   margin: 0;
 }
 
-.emotion-16 {
+.emotion-13 {
   color: #3F3F42;
   margin: 0;
   padding: 0 0.5rem 1rem;
@@ -1608,26 +1549,26 @@ exports[`Bulletin should render radio bulletin without ariaId 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-16 {
+  .emotion-13 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-16 {
+  .emotion-13 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-16 {
+  .emotion-13 {
     padding-left: 0;
   }
 }
 
-.emotion-18 {
+.emotion-15 {
   background-color: #222222;
   border: 0.0625rem solid transparent;
   color: #FFFFFF;
@@ -1652,21 +1593,21 @@ exports[`Bulletin should render radio bulletin without ariaId 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-18 {
+  .emotion-15 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-18 {
+  .emotion-15 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-18 {
+  .emotion-15 {
     display: -webkit-inline-box;
     display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
@@ -1676,7 +1617,7 @@ exports[`Bulletin should render radio bulletin without ariaId 1`] = `
   }
 }
 
-.emotion-20 {
+.emotion-17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1688,7 +1629,7 @@ exports[`Bulletin should render radio bulletin without ariaId 1`] = `
   padding-right: 0.5rem;
 }
 
-.emotion-20>svg {
+.emotion-17>svg {
   color: #FFFFFF;
   fill: currentColor;
   width: 1.0625rem;
@@ -1696,12 +1637,12 @@ exports[`Bulletin should render radio bulletin without ariaId 1`] = `
   margin: 0;
 }
 
-.emotion-22 {
+.emotion-19 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
   fill: currentColor;
-  width: 0.8125rem;
+  width: 0.75rem;
   height: 0.75rem;
 }
 
@@ -1712,35 +1653,24 @@ exports[`Bulletin should render radio bulletin without ariaId 1`] = `
     <div
       class="emotion-2 emotion-3"
     >
-      <picture
+      <img
+        alt="Iron man"
         class="emotion-4 emotion-5"
-      >
-        <source
-          srcset="https://ichef.bbci.co.uk/news/300/cpsprodpb/11897/production/_106613817_999_al_.jpg.webp 300w, https://ichef.bbci.co.uk/news/450/cpsprodpb/11897/production/_106613817_999_al_.jpg.webp 450w, https://ichef.bbci.co.uk/news/600/cpsprodpb/11897/production/_106613817_999_al_.jpg.webp 600w, https://ichef.bbci.co.uk/news/1024/cpsprodpb/11897/production/_106613817_999_al_.jpg.webp 1024w"
-          type="image/webp"
-        />
-        <source
-          srcset="https://ichef.bbci.co.uk/news/300/cpsprodpb/11897/production/_106613817_999_al_.jpg 300w, https://ichef.bbci.co.uk/news/450/cpsprodpb/11897/production/_106613817_999_al_.jpg 450w, https://ichef.bbci.co.uk/news/600/cpsprodpb/11897/production/_106613817_999_al_.jpg 600w, https://ichef.bbci.co.uk/news/1024/cpsprodpb/11897/production/_106613817_999_al_.jpg 1024w"
-          type="image/jpeg"
-        />
-        <img
-          alt="Iron man"
-          class="emotion-6 emotion-7"
-          src="https://ichef.bbci.co.uk/news/[WIDTH]/cpsprodpb/11897/production/_106613817_999_al_.jpg"
-        />
-      </picture>
+        src="https://ichef.bbci.co.uk/news/[WIDTH]/cpsprodpb/11897/production/_106613817_999_al_.jpg"
+        srcset="https://ichef.bbci.co.uk/news/300/cpsprodpb/11897/production/_106613817_999_al_.jpg 300w, https://ichef.bbci.co.uk/news/450/cpsprodpb/11897/production/_106613817_999_al_.jpg 450w, https://ichef.bbci.co.uk/news/600/cpsprodpb/11897/production/_106613817_999_al_.jpg 600w, https://ichef.bbci.co.uk/news/1024/cpsprodpb/11897/production/_106613817_999_al_.jpg 1024w"
+      />
     </div>
     <div
-      class="emotion-8 emotion-9"
+      class="emotion-6 emotion-7"
       dir="ltr"
     >
       <h3
-        class="emotion-10 emotion-11"
+        class="emotion-8 emotion-9"
         dir="ltr"
       >
         <a
           aria-labelledby="bulletin-null"
-          class="emotion-12 emotion-13"
+          class="focusIndicatorDisplayBlock emotion-10 emotion-11"
           href="https://bbc.co.uk"
         >
           <span
@@ -1748,7 +1678,7 @@ exports[`Bulletin should render radio bulletin without ariaId 1`] = `
             role="text"
           >
             <span
-              class="emotion-14 emotion-15"
+              class="emotion-12"
             >
               Listen, 
             </span>
@@ -1759,23 +1689,23 @@ exports[`Bulletin should render radio bulletin without ariaId 1`] = `
         </a>
       </h3>
       <p
-        class="emotion-16 emotion-17"
+        class="emotion-13 emotion-14"
         dir="ltr"
       >
         This is the summary text
       </p>
       <div
         aria-hidden="true"
-        class="emotion-18 emotion-19"
+        class="emotion-15 emotion-16"
         dir="ltr"
       >
         <span
-          class="emotion-20 emotion-21"
+          class="emotion-17 emotion-18"
           dir="ltr"
         >
           <svg
             aria-hidden="true"
-            class="emotion-22 emotion-23"
+            class="emotion-19 emotion-20"
             focusable="false"
             height="12px"
             viewBox="0 0 13 12"
@@ -1841,41 +1771,35 @@ exports[`Bulletin should render radio bulletin without summary correctly 1`] = `
 .emotion-4 {
   display: block;
   width: 100%;
-  visibility: visible;
 }
 
 .emotion-6 {
-  display: block;
-  width: 100%;
-}
-
-.emotion-8 {
   display: inline-block;
   width: 100%;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-8 {
+  .emotion-6 {
     width: 66.67%;
     padding-right: 1rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-8 {
+  .emotion-6 {
     width: initial;
     grid-column: 1/span 6;
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-8 {
+    .emotion-6 {
       grid-column: 3/span 4;
       padding: 0;
     }
   }
 }
 
-.emotion-10 {
+.emotion-8 {
   color: #222222;
   margin: 0;
   padding: 0.5rem;
@@ -1887,36 +1811,37 @@ exports[`Bulletin should render radio bulletin without summary correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-10 {
+  .emotion-8 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-10 {
+  .emotion-8 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-10 {
+  .emotion-8 {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     padding-left: 0;
   }
 }
 
-.emotion-12 {
+.emotion-10 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
-.emotion-12:before {
+.emotion-10:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -1928,17 +1853,17 @@ exports[`Bulletin should render radio bulletin without summary correctly 1`] = `
   z-index: 1;
 }
 
-.emotion-12:hover,
-.emotion-12:focus {
+.emotion-10:hover,
+.emotion-10:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-12:visited {
+.emotion-10:visited {
   color: #6E6E73;
 }
 
-.emotion-14 {
+.emotion-12 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -1949,7 +1874,7 @@ exports[`Bulletin should render radio bulletin without summary correctly 1`] = `
   margin: 0;
 }
 
-.emotion-16 {
+.emotion-13 {
   background-color: #222222;
   border: 0.0625rem solid transparent;
   color: #FFFFFF;
@@ -1974,21 +1899,21 @@ exports[`Bulletin should render radio bulletin without summary correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-16 {
+  .emotion-13 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-16 {
+  .emotion-13 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-16 {
+  .emotion-13 {
     display: -webkit-inline-box;
     display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
@@ -1998,7 +1923,7 @@ exports[`Bulletin should render radio bulletin without summary correctly 1`] = `
   }
 }
 
-.emotion-18 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2010,7 +1935,7 @@ exports[`Bulletin should render radio bulletin without summary correctly 1`] = `
   padding-right: 0.5rem;
 }
 
-.emotion-18>svg {
+.emotion-15>svg {
   color: #FFFFFF;
   fill: currentColor;
   width: 1.0625rem;
@@ -2018,12 +1943,12 @@ exports[`Bulletin should render radio bulletin without summary correctly 1`] = `
   margin: 0;
 }
 
-.emotion-20 {
+.emotion-17 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
   fill: currentColor;
-  width: 0.8125rem;
+  width: 0.75rem;
   height: 0.75rem;
 }
 
@@ -2034,35 +1959,24 @@ exports[`Bulletin should render radio bulletin without summary correctly 1`] = `
     <div
       class="emotion-2 emotion-3"
     >
-      <picture
+      <img
+        alt="Iron man"
         class="emotion-4 emotion-5"
-      >
-        <source
-          srcset="https://ichef.bbci.co.uk/news/300/cpsprodpb/11897/production/_106613817_999_al_.jpg.webp 300w, https://ichef.bbci.co.uk/news/450/cpsprodpb/11897/production/_106613817_999_al_.jpg.webp 450w, https://ichef.bbci.co.uk/news/600/cpsprodpb/11897/production/_106613817_999_al_.jpg.webp 600w, https://ichef.bbci.co.uk/news/1024/cpsprodpb/11897/production/_106613817_999_al_.jpg.webp 1024w"
-          type="image/webp"
-        />
-        <source
-          srcset="https://ichef.bbci.co.uk/news/300/cpsprodpb/11897/production/_106613817_999_al_.jpg 300w, https://ichef.bbci.co.uk/news/450/cpsprodpb/11897/production/_106613817_999_al_.jpg 450w, https://ichef.bbci.co.uk/news/600/cpsprodpb/11897/production/_106613817_999_al_.jpg 600w, https://ichef.bbci.co.uk/news/1024/cpsprodpb/11897/production/_106613817_999_al_.jpg 1024w"
-          type="image/jpeg"
-        />
-        <img
-          alt="Iron man"
-          class="emotion-6 emotion-7"
-          src="https://ichef.bbci.co.uk/news/[WIDTH]/cpsprodpb/11897/production/_106613817_999_al_.jpg"
-        />
-      </picture>
+        src="https://ichef.bbci.co.uk/news/[WIDTH]/cpsprodpb/11897/production/_106613817_999_al_.jpg"
+        srcset="https://ichef.bbci.co.uk/news/300/cpsprodpb/11897/production/_106613817_999_al_.jpg 300w, https://ichef.bbci.co.uk/news/450/cpsprodpb/11897/production/_106613817_999_al_.jpg 450w, https://ichef.bbci.co.uk/news/600/cpsprodpb/11897/production/_106613817_999_al_.jpg 600w, https://ichef.bbci.co.uk/news/1024/cpsprodpb/11897/production/_106613817_999_al_.jpg 1024w"
+      />
     </div>
     <div
-      class="emotion-8 emotion-9"
+      class="emotion-6 emotion-7"
       dir="ltr"
     >
       <h3
-        class="emotion-10 emotion-11"
+        class="emotion-8 emotion-9"
         dir="ltr"
       >
         <a
           aria-labelledby="bulletin-httpsbbccouk"
-          class="emotion-12 emotion-13"
+          class="focusIndicatorDisplayBlock emotion-10 emotion-11"
           href="https://bbc.co.uk"
         >
           <span
@@ -2070,7 +1984,7 @@ exports[`Bulletin should render radio bulletin without summary correctly 1`] = `
             role="text"
           >
             <span
-              class="emotion-14 emotion-15"
+              class="emotion-12"
             >
               Listen, 
             </span>
@@ -2082,16 +1996,16 @@ exports[`Bulletin should render radio bulletin without summary correctly 1`] = `
       </h3>
       <div
         aria-hidden="true"
-        class="emotion-16 emotion-17"
+        class="emotion-13 emotion-14"
         dir="ltr"
       >
         <span
-          class="emotion-18 emotion-19"
+          class="emotion-15 emotion-16"
           dir="ltr"
         >
           <svg
             aria-hidden="true"
-            class="emotion-20 emotion-21"
+            class="emotion-17 emotion-18"
             focusable="false"
             height="12px"
             viewBox="0 0 13 12"
@@ -2162,41 +2076,35 @@ exports[`Bulletin should render video correctly 1`] = `
 .emotion-4 {
   display: block;
   width: 100%;
-  visibility: visible;
 }
 
 .emotion-6 {
-  display: block;
-  width: 100%;
-}
-
-.emotion-8 {
   display: inline-block;
   width: 100%;
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-8 {
+  .emotion-6 {
     width: 50%;
     padding-right: 1rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-8 {
+  .emotion-6 {
     width: initial;
     grid-column: 1/span 6;
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-8 {
+    .emotion-6 {
       grid-column: 4/span 3;
       padding: 0;
     }
   }
 }
 
-.emotion-10 {
+.emotion-8 {
   color: #222222;
   margin: 0;
   padding: 0.5rem;
@@ -2208,34 +2116,35 @@ exports[`Bulletin should render video correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-10 {
+  .emotion-8 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-10 {
+  .emotion-8 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-10 {
+  .emotion-8 {
     padding: 0 0 0.5rem 0;
   }
 }
 
-.emotion-12 {
+.emotion-10 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
-.emotion-12:before {
+.emotion-10:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -2247,17 +2156,17 @@ exports[`Bulletin should render video correctly 1`] = `
   z-index: 1;
 }
 
-.emotion-12:hover,
-.emotion-12:focus {
+.emotion-10:hover,
+.emotion-10:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-12:visited {
+.emotion-10:visited {
   color: #6E6E73;
 }
 
-.emotion-14 {
+.emotion-12 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -2268,7 +2177,7 @@ exports[`Bulletin should render video correctly 1`] = `
   margin: 0;
 }
 
-.emotion-16 {
+.emotion-13 {
   color: #3F3F42;
   margin: 0;
   padding: 0 0.5rem 1rem;
@@ -2280,27 +2189,27 @@ exports[`Bulletin should render video correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-16 {
+  .emotion-13 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-16 {
+  .emotion-13 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-16 {
+  .emotion-13 {
     padding-left: 0;
     padding-right: 0;
   }
 }
 
-.emotion-18 {
+.emotion-15 {
   background-color: #222222;
   border: 0.0625rem solid transparent;
   color: #FFFFFF;
@@ -2325,21 +2234,21 @@ exports[`Bulletin should render video correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-18 {
+  .emotion-15 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-18 {
+  .emotion-15 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-18 {
+  .emotion-15 {
     display: -webkit-inline-box;
     display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
@@ -2348,7 +2257,7 @@ exports[`Bulletin should render video correctly 1`] = `
   }
 }
 
-.emotion-20 {
+.emotion-17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2360,7 +2269,7 @@ exports[`Bulletin should render video correctly 1`] = `
   padding-right: 0.5rem;
 }
 
-.emotion-20>svg {
+.emotion-17>svg {
   color: #FFFFFF;
   fill: currentColor;
   width: 1.0625rem;
@@ -2368,7 +2277,7 @@ exports[`Bulletin should render video correctly 1`] = `
   margin: 0;
 }
 
-.emotion-22 {
+.emotion-19 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -2384,35 +2293,24 @@ exports[`Bulletin should render video correctly 1`] = `
     <div
       class="emotion-2 emotion-3"
     >
-      <picture
+      <img
+        alt="Iron man"
         class="emotion-4 emotion-5"
-      >
-        <source
-          srcset="https://ichef.bbci.co.uk/news/300/cpsprodpb/11897/production/_106613817_999_al_.jpg.webp 300w, https://ichef.bbci.co.uk/news/450/cpsprodpb/11897/production/_106613817_999_al_.jpg.webp 450w, https://ichef.bbci.co.uk/news/600/cpsprodpb/11897/production/_106613817_999_al_.jpg.webp 600w, https://ichef.bbci.co.uk/news/1024/cpsprodpb/11897/production/_106613817_999_al_.jpg.webp 1024w"
-          type="image/webp"
-        />
-        <source
-          srcset="https://ichef.bbci.co.uk/news/300/cpsprodpb/11897/production/_106613817_999_al_.jpg 300w, https://ichef.bbci.co.uk/news/450/cpsprodpb/11897/production/_106613817_999_al_.jpg 450w, https://ichef.bbci.co.uk/news/600/cpsprodpb/11897/production/_106613817_999_al_.jpg 600w, https://ichef.bbci.co.uk/news/1024/cpsprodpb/11897/production/_106613817_999_al_.jpg 1024w"
-          type="image/jpeg"
-        />
-        <img
-          alt="Iron man"
-          class="emotion-6 emotion-7"
-          src="https://ichef.bbci.co.uk/news/[WIDTH]/cpsprodpb/11897/production/_106613817_999_al_.jpg"
-        />
-      </picture>
+        src="https://ichef.bbci.co.uk/news/[WIDTH]/cpsprodpb/11897/production/_106613817_999_al_.jpg"
+        srcset="https://ichef.bbci.co.uk/news/300/cpsprodpb/11897/production/_106613817_999_al_.jpg 300w, https://ichef.bbci.co.uk/news/450/cpsprodpb/11897/production/_106613817_999_al_.jpg 450w, https://ichef.bbci.co.uk/news/600/cpsprodpb/11897/production/_106613817_999_al_.jpg 600w, https://ichef.bbci.co.uk/news/1024/cpsprodpb/11897/production/_106613817_999_al_.jpg 1024w"
+      />
     </div>
     <div
-      class="emotion-8 emotion-9"
+      class="emotion-6 emotion-7"
       dir="ltr"
     >
       <h3
-        class="emotion-10 emotion-11"
+        class="emotion-8 emotion-9"
         dir="ltr"
       >
         <a
           aria-labelledby="bulletin-httpsbbccouk"
-          class="emotion-12 emotion-13"
+          class="focusIndicatorDisplayBlock emotion-10 emotion-11"
           href="https://bbc.co.uk"
         >
           <span
@@ -2420,7 +2318,7 @@ exports[`Bulletin should render video correctly 1`] = `
             role="text"
           >
             <span
-              class="emotion-14 emotion-15"
+              class="emotion-12"
             >
               Watch, 
             </span>
@@ -2431,31 +2329,41 @@ exports[`Bulletin should render video correctly 1`] = `
         </a>
       </h3>
       <p
-        class="emotion-16 emotion-17"
+        class="emotion-13 emotion-14"
         dir="ltr"
       >
         This is the summary text
       </p>
       <div
         aria-hidden="true"
-        class="emotion-18 emotion-19"
+        class="emotion-15 emotion-16"
         dir="ltr"
       >
         <span
-          class="emotion-20 emotion-21"
+          class="emotion-17 emotion-18"
           dir="ltr"
         >
           <svg
             aria-hidden="true"
-            class="emotion-22 emotion-23"
+            class="emotion-19 emotion-20"
             focusable="false"
-            height="12px"
-            viewBox="0 0 32 32"
-            width="12px"
+            height="12"
+            viewBox="0 0 12 12"
+            width="12"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <polygon
-              points="3,32 29,16 3,0"
-            />
+            <g
+              fill="none"
+              fill-rule="evenodd"
+            >
+              <path
+                d="M.5.6h12v12H.5z"
+              />
+              <path
+                d="M2.144.96v11.28l8.712-5.64z"
+                fill="currentColor"
+              />
+            </g>
           </svg>
         </span>
         Watch

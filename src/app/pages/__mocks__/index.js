@@ -3,6 +3,7 @@
 export { default as ArticlePage } from '../ArticlePage';
 export { default as ErrorPage } from '../ErrorPage';
 export { default as FrontPage } from '../FrontPage';
+export { default as HomePage } from '../HomePage';
 export { default as MediaAssetPage } from '../MediaAssetPage';
 export { default as MostReadPage } from '../MostReadPage';
 export { default as MostWatchedPage } from '../MostWatchedPage';

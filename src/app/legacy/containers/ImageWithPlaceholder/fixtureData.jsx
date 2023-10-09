@@ -12,26 +12,29 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import FigureContainer from '.';
+import ThemeProvider from '../../../components/ThemeProvider';
 
 const serviceContextStubNews = {
   imageCaptionOffscreenText: 'Image caption, ',
 };
 
 const WrappedImageWithPlaceholder = ({ isAmp, ...otherProps }) => (
-  <ServiceContext.Provider value={serviceContextStubNews}>
-    <RequestContextProvider
-      isAmp={isAmp}
-      isUK
-      origin="https://www.bbc.co.uk"
-      id="c0000000000o"
-      service="news"
-      statusCode={200}
-      pathname="/pathname"
-      pageType={FRONT_PAGE}
-    >
-      <FigureContainer {...otherProps} />
-    </RequestContextProvider>
-  </ServiceContext.Provider>
+  <ThemeProvider service="news">
+    <ServiceContext.Provider value={serviceContextStubNews}>
+      <RequestContextProvider
+        isAmp={isAmp}
+        isUK
+        origin="https://www.bbc.co.uk"
+        id="c0000000000o"
+        service="news"
+        statusCode={200}
+        pathname="/pathname"
+        pageType={FRONT_PAGE}
+      >
+        <FigureContainer {...otherProps} />
+      </RequestContextProvider>
+    </ServiceContext.Provider>
+  </ThemeProvider>
 );
 
 WrappedImageWithPlaceholder.propTypes = {

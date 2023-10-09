@@ -1,14 +1,7 @@
 import React, { cloneElement, useRef } from 'react';
 import styled from '@emotion/styled';
 import { shape, string, bool, func, oneOf, node } from 'prop-types';
-import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
 import { navigationIcons } from '#psammead/psammead-assets/src/svgs';
-import {
-  C_WHITE,
-  C_POSTBOX,
-  C_GREY_10,
-  C_GREY_3,
-} from '#psammead/psammead-styles/src/colours';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,
@@ -22,17 +15,18 @@ import {
 import { getPica } from '#psammead/gel-foundations/src/typography';
 import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
+import VisuallyHiddenText from '../../../../../components/VisuallyHiddenText';
 
 export const NAV_BAR_TOP_BOTTOM_SPACING = 0.75; // 12px
 
-const getStyles = dir => {
+const getStyles = (dir, theme) => {
   const direction = dir === 'ltr' ? 'left' : 'right';
-  return `border-${direction}: ${GEL_SPACING_HLF} solid ${C_POSTBOX};
+  return `border-${direction}: ${GEL_SPACING_HLF} solid ${theme.palette.POSTBOX};
           padding-${direction}: ${GEL_SPACING};`;
 };
 
 const StyledDropdown = styled.div`
-  background-color: ${C_WHITE};
+  background-color: ${props => props.theme.palette.WHITE};
   clear: both;
   overflow: hidden;
 
@@ -76,7 +70,7 @@ CanonicalDropdown.propTypes = {
 };
 
 export const AmpDropdown = styled.div`
-  background-color: ${C_WHITE};
+  background-color: ${props => props.theme.palette.WHITE};
   clear: both;
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
@@ -89,7 +83,7 @@ export const DropdownUl = styled.ul`
   list-style-type: none;
   margin: 0;
   padding: 0 ${GEL_SPACING};
-  border-bottom: 0.0625rem solid ${C_GREY_3};
+  border-bottom: 0.0625rem solid ${props => props.theme.palette.GREY_3};
 `;
 
 DropdownUl.defaultProps = {
@@ -98,7 +92,7 @@ DropdownUl.defaultProps = {
 
 const StyledDropdownLi = styled.li`
   padding: 0.75rem 0;
-  border-bottom: 0.0625rem solid ${C_GREY_3};
+  border-bottom: 0.0625rem solid ${props => props.theme.palette.GREY_3};
 
   &:last-child {
     padding-bottom: ${GEL_SPACING_HLF};
@@ -109,7 +103,7 @@ const StyledDropdownLi = styled.li`
 const StyledDropdownLink = styled.a`
   ${({ script }) => script && getPica(script)};
   ${({ service }) => service && getSansRegular(service)}
-  color: ${C_GREY_10};
+  color: ${props => props.theme.palette.GREY_10};
   text-decoration: none;
   padding: ${GEL_SPACING_HLF_TRPL} 0;
   display: inline-block;
@@ -117,12 +111,12 @@ const StyledDropdownLink = styled.a`
   &:hover,
   &:focus {
     text-decoration: underline;
-    text-decoration-color: ${C_POSTBOX};
+    text-decoration-color: ${props => props.theme.palette.POSTBOX};
   }
 `;
 
 const StyledCurrentLink = styled.span`
-  ${({ dir }) => getStyles(dir)}
+  ${({ dir, theme }) => getStyles(dir, theme)}
 `;
 
 StyledCurrentLink.defaultProps = {
@@ -181,14 +175,13 @@ DropdownLi.defaultProps = {
   dir: 'ltr',
 };
 
-const iconBorder = `
+const iconBorderPosition = `
   content: '';
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
   top: 0;
-  border: ${GEL_SPACING_HLF} solid ${C_POSTBOX};
 `;
 
 // The sideLength of the button should be
@@ -217,9 +210,11 @@ const MenuButton = styled(Button)`
   &:hover,
   &:focus {
     cursor: pointer;
-    box-shadow: inset 0 0 0 ${GEL_SPACING_HLF} ${C_WHITE};
+    box-shadow: inset 0 0 0 ${GEL_SPACING_HLF}
+      ${props => props.theme.palette.WHITE};
     ::after {
-      ${iconBorder};
+      ${iconBorderPosition};
+      border: ${GEL_SPACING_HLF} solid ${props => props.theme.palette.BLACK};
     }
   }
 
@@ -249,6 +244,7 @@ export const CanonicalMenuButton = ({
     aria-expanded={isOpen ? 'true' : 'false'}
     dir={dir}
     script={script}
+    className="focusIndicatorRemove"
   >
     {isOpen ? navigationIcons.cross : navigationIcons.hamburger}
     <VisuallyHiddenText>{announcedText}</VisuallyHiddenText>
@@ -298,6 +294,7 @@ export const AmpMenuButton = ({ announcedText, onToggle, dir, script }) => (
       on={`tap:${expandedHandler},${onToggle}`}
       dir={dir}
       script={script}
+      className="focusIndicatorRemove"
     >
       {cloneElement(navigationIcons.hamburger, {
         'data-amp-bind-hidden': 'menuState.expanded',

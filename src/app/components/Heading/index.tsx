@@ -1,3 +1,4 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 
 import React, { FC, HTMLAttributes } from 'react';

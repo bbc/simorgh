@@ -7,7 +7,6 @@ import createEmotionServer from '@emotion/server/create-instance';
 import createCache from '@emotion/cache';
 import { Helmet } from 'react-helmet';
 import { ServerApp } from '#containers/App';
-import getAssetOrigins from '../utilities/getAssetOrigins';
 import DocumentComponent from './component';
 import {
   getLinkAttributes,
@@ -18,6 +17,7 @@ const renderDocument = async ({
   bbcOrigin,
   data,
   isAmp,
+  isApp,
   routes,
   service,
   url,
@@ -68,6 +68,7 @@ const renderDocument = async ({
             context={context}
             service={service}
             isAmp={isAmp}
+            isApp={isApp}
           />
         </CacheProvider>
       </ChunkExtractorManager>,
@@ -91,18 +92,16 @@ const renderDocument = async ({
 
   const links = modernExtractor.getLinkElements(getLinkAttributes); // TODO investigate a way to conditionally preload modern/legacy scripts
   const headHelmet = Helmet.renderStatic();
-  const assetOrigins = getAssetOrigins(service);
   const doc = renderToStaticMarkup(
     <DocumentComponent
-      assetOrigins={assetOrigins}
       modernScripts={modernScripts}
       legacyScripts={legacyScripts}
       links={links}
       app={app}
       data={data}
       helmet={headHelmet}
-      service={service}
       isAmp={isAmp}
+      isApp={isApp}
     />,
   );
 

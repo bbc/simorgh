@@ -80,6 +80,9 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline-block;
+  margin: 0.1875rem 0;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -97,7 +100,6 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
 }
 
 .emotion-8>span {
-  margin: 0.8125rem 0;
   display: inline-block;
 }
 
@@ -105,7 +107,7 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
   color: #6E6E73;
 }
 
-.emotion-8:focus,
+.emotion-8:focus>span,
 .emotion-8:hover>span {
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -158,7 +160,7 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
               Apple
             </span>
             <span
-              class="emotion-10 emotion-11"
+              class="emotion-10"
             >
               , A brand podcast, внешняя
             </span>
@@ -185,7 +187,7 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
               Spotify
             </span>
             <span
-              class="emotion-10 emotion-11"
+              class="emotion-10"
             >
               , A brand podcast, внешняя
             </span>
@@ -212,7 +214,34 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
               RSS
             </span>
             <span
-              class="emotion-10 emotion-11"
+              class="emotion-10"
+            >
+              , A brand podcast, внешняя
+            </span>
+          </span>
+        </a>
+      </li>
+      <li
+        class="emotion-6 emotion-7"
+        dir="ltr"
+      >
+        <a
+          aria-labelledby="externalLinkId-Загрузить-эпизод"
+          class="emotion-8 emotion-9"
+          dir="ltr"
+          href="https://bbc.com"
+        >
+          <span
+            id="externalLinkId-Загрузить-эпизод"
+            role="text"
+          >
+            <span
+              lang="ru"
+            >
+              Загрузить эпизод
+            </span>
+            <span
+              class="emotion-10"
             >
               , A brand podcast, внешняя
             </span>

@@ -1,0 +1,60 @@
+{
+  "data": {
+    "title": "BBC News සිංහල",
+    "description": "ශ්‍රී ලංකාව සම්බන්ධ නැවුම් පුවත්, අලුත්ම පුවත්, ක්‍රිකට්, විශේෂ සම්මුඛ සාකච්ඡා, හඬපට, වීඩියෝ පට, ප්‍රවෘත්ති විශ්ලේෂණ, විශේෂාංග, කාලීන ප්‍රවෘත්ති සහ ව්‍යාපාරික හා කලා තොරතුරු දැන ගැනීමට බීබීසී සිංහල වෙබ් අඩවියට පිවිසෙන්න. BBC Sandeshaya, BBC Sinhala",
+    "pageType": "home",
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "'වැඩිහිටි ස්ථුලභාවය සඳහා මූලික අත්තිවාරම යෙදෙන්නේ ළමා කාලෙදි'",
+            "firstPublished": "2023-03-04T02:31:49.381Z",
+            "link": "https://www.bbc.com/sinhala/articles/clkr8grvrvxo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/0adf/live/4ccce930-b9b5-11ed-8a76-55e4ad82e6e6.jpg",
+            "description": "අධිබර හා ස්ථුලතාව සඳහා දැන් රජයේ රෝහල්වලින් නොමිලයේ ලබාදෙන ප්‍රතිකර්ම තිබෙන අතර, ඒවා ලබාගැනීම ද ඉතාම වැදගත් ය. ඒ ප්‍රතිකර්ම ක්‍රම මොනවාදැ යි ඔබ දන්නවා ද? ඒ ගැන තොරතුරු සියල්ල ඇතුළත්ව ලෝක ස්ථුලතා දිනය වෙනුවෙන් අප සම්පාදනය කළ මේ ලිපිය ඔබට වැදගත් වනු ඇති. ",
+            "imageAlt": "සෑම පුරුෂයින් තිදෙනෙකුගෙන්ම එක් අයෙකු ද, සෑම කාන්තාවන් දෙදෙනෙකුගෙන්ම එක් අයෙකු ද තරබාරු තැනැත්තන් ය",
+            "id": "clkr8grvrvxo"
+          },
+          {
+            "type": "article",
+            "title": "ඩොලරයට මොකද වෙන්නේ ?",
+            "firstPublished": "2023-03-02T11:26:02.442Z",
+            "link": "https://www.bbc.com/sinhala/articles/cxx737n96r5o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/ac82/live/cefefe40-b8e6-11ed-bd02-87570addd2ae.jpg",
+            "description": "සැබවින්ම ඩොලරයට මොකද වෙන්නේ? ඩොලරයට සාපේක්ෂව රුපියල තවත් ශක්තිමත් වෙයිද? මෙය මුදල් වෙළෙඳපොල කටයුතුවලට කෙසේ බලපායිද? යන්න ගැන බොහෝ දෙනෙකු තුළ ඇත්තේ අවිනිශ්චිත තත්ත්වයකි.",
+            "imageAlt": "ඩොලරයට සාපේක්ෂව රුපියල ශක්තිමත් වෙමින් ඇත",
+            "id": "cxx737n96r5o"
+          },
+          {
+            "type": "article",
+            "title": "ලිංගික සබඳතාවන්ගෙන් තොර සහස්‍රකයන්ගේ විවාහ",
+            "firstPublished": "2023-02-27T05:54:05.500Z",
+            "link": "https://www.bbc.com/sinhala/articles/c1vxkw9elq2o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/0de5/live/67fa0ca0-b42a-11ed-b4bc-e32919748697.png",
+            "description": "සහස්‍රකයන් ඔවුන්ගේ ජීවිතයේ ලිංගිකත්වයෙන් උච්ච ස්ථානයක හෝ ඒ ආසන්නයේ සිටිය යුතුවුවත් ඒ පරම්පරාවේ සමහරුන් \"ලිංගිකත්වයෙන් ඈත්ව\" වෙසෙන බව ලොව නන් දෙසින් වාර්තා වෙයි.",
+            "imageAlt": "Sexless marriages",
+            "id": "c1vxkw9elq2o"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:a10379d8-4aa7-47e8-afa7-57973f700ada",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "title": "දැක්ම",
+        "visualProminence": "HIGH"
+      }
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:c3rpqvv9v6xt",
+        "contentType": "index-home",
+        "pageIdentifier": "sinhala.page",
+        "pageTitle": "BBC News සිංහල"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8",
+  "dataSource": "Data is from live TIPO"
+}

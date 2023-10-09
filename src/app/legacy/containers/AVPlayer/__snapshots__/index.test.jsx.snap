@@ -140,9 +140,12 @@ exports[`AVPlayer for Live Radio should match snapshot for canonical AVPlayer 1`
           allow="autoplay"
           allowfullscreen=""
           class="emotion-11 emotion-12"
+          height="362.953125"
+          loading="lazy"
           scrolling="no"
           src="https://test.bbc.com/ws/av-embeds/media/bbc_korean_radio/liveradio/ko"
           title="오디오 플레이어"
+          width="645.25"
         />
         <noscript />
       </div>
@@ -357,9 +360,12 @@ exports[`AVPlayer for On Demand TV should match snapshot for canonical AVPlayer 
         allow="autoplay"
         allowfullscreen=""
         class="emotion-4 emotion-5"
+        height="362.953125"
+        loading="lazy"
         scrolling="no"
         src="https://test.bbc.com/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps?morph_env=live"
         title="ویډیو پلیئر"
+        width="645.25"
       />
       <noscript />
     </div>

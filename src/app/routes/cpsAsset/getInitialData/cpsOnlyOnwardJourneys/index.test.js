@@ -1,13 +1,18 @@
 import path from 'ramda/src/path';
 import pglNoCpsPromos from '#data/arabic/cpsAssets/art-and-culture-38260491.json';
-import styNoCpsPromos from '#data/igbo/cpsAssets/afirika-23252735.json';
-import pglNoRelatedContent from '#data/pidgin/cpsAssets/sport-23252855.json';
-import pglAllCpsPromos from '#data/pidgin/cpsAssets/tori-49221071.json';
-import mapPageAllCpsPromos from '#data/pidgin/cpsAssets/23248703.json';
+import { data as styWithNoCpsPromoData } from '#data/igbo/cpsAssets/afirika-23252735.json';
+import { data as pglWithNoRelatedContentData } from '#data/pidgin/cpsAssets/sport-23252855.json';
+import { data as pglWithAllCpsPromosData } from '#data/pidgin/cpsAssets/tori-49221071.json';
+import { data as mapPageWithCpsPromoData } from '#data/pidgin/cpsAssets/23248703.json';
 import noSeeAlsoRelatedContent from '#data/sport/cpsAssets/football/55790817.json';
 import cpsOnlyPromos from '.';
 import seeAlsoGroup from './fixtures/pglSomeCpsOnwardJourneys/expectedSeeAlsoGroup.json';
 import fullAsset from './fixtures/pglSomeCpsOnwardJourneys/fullAsset.json';
+
+const { article: styNoCpsPromos } = styWithNoCpsPromoData;
+const { article: mapPageAllCpsPromos } = mapPageWithCpsPromoData;
+const { article: pglNoRelatedContent } = pglWithNoRelatedContentData;
+const { article: pglAllCpsPromos } = pglWithAllCpsPromosData;
 
 describe('cpsOnlyOnwardJourneys', () => {
   it("should remove promos in 'see-alsos' group without type: cps", () => {

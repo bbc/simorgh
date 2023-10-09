@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
-import { render } from '@testing-library/react';
+import { render } from '../../../../components/react-testing-library-with-providers';
 import arabic from '../../../../components/ThemeProvider/fontScripts/arabic';
 import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import { ConsentBanner, ConsentBannerText } from '.';
@@ -28,15 +27,15 @@ const rtlProps = {
 };
 
 describe('ConsentBanner', () => {
-  shouldMatchSnapshot(
-    'should correctly render for ltr service',
-    <ConsentBanner {...baseProps} />,
-  );
+  it('should correctly render for ltr service', () => {
+    const { container } = render(<ConsentBanner {...baseProps} />);
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should correctly render for rtl service',
-    <ConsentBanner {...rtlProps} />,
-  );
+  it('should correctly render for rtl service', () => {
+    const { container } = render(<ConsentBanner {...rtlProps} />);
+    expect(container).toMatchSnapshot();
+  });
 
   describe('with hidden attribute on wrapper', () => {
     const props = {
@@ -44,10 +43,10 @@ describe('ConsentBanner', () => {
       ...baseProps,
     };
 
-    shouldMatchSnapshot(
-      'should correctly render',
-      <ConsentBanner {...props} />,
-    );
+    it('should correctly render', () => {
+      const { container } = render(<ConsentBanner {...props} />);
+      expect(container).toMatchSnapshot();
+    });
   });
 });
 
@@ -76,11 +75,13 @@ it('heading should be externally focusable', () => {
 });
 
 describe('ConsentBannerText', () => {
-  shouldMatchSnapshot(
-    'should correctly render',
-    <ConsentBannerText dir="ltr" script={latin} service="news">
-      We have made some important changes to our Privacy and Cookies Policy and
-      we want you to know what this means for you and your data.
-    </ConsentBannerText>,
-  );
+  it('should correctly render', () => {
+    const { container } = render(
+      <ConsentBannerText dir="ltr" script={latin} service="news">
+        We have made some important changes to our Privacy and Cookies Policy
+        and we want you to know what this means for you and your data.
+      </ConsentBannerText>,
+    );
+    expect(container).toMatchSnapshot();
+  });
 });

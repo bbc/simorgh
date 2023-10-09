@@ -17,7 +17,7 @@ exports[`Story Promo Link Contents should render with visually hidden text for m
     role="text"
   >
     <span
-      class="emotion-0 emotion-1"
+      class="emotion-0"
     >
       Listen, 
     </span>
@@ -25,7 +25,7 @@ exports[`Story Promo Link Contents should render with visually hidden text for m
       An overtyped headline for a media item
     </span>
     <span
-      class="emotion-0 emotion-1"
+      class="emotion-0"
     >
       , Duration 11,06
     </span>
@@ -50,7 +50,7 @@ exports[`Story Promo Link Contents should render with visually hidden text for m
     role="text"
   >
     <span
-      class="emotion-0 emotion-1"
+      class="emotion-0"
     >
       Listen, 
     </span>
@@ -58,7 +58,7 @@ exports[`Story Promo Link Contents should render with visually hidden text for m
       An overtyped headline for a media item
     </span>
     <span
-      class="emotion-0 emotion-1"
+      class="emotion-0"
     >
       , Duration 11,06
     </span>
@@ -83,7 +83,7 @@ exports[`Story Promo Link Contents should render with visually hidden text for p
     role="text"
   >
     <span
-      class="emotion-0 emotion-1"
+      class="emotion-0"
     >
       Image gallery, 
     </span>

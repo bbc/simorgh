@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {
   Global,
   ThemeProvider as EmotionThemeProvider,
   Theme,
 } from '@emotion/react';
+import focusIndicator from './focusIndicator';
+import { RequestContext } from '../../contexts/RequestContext';
 
 import {
   ARCHIVE_BLUE,
@@ -23,14 +25,17 @@ import {
   GHOST,
   GREY_10,
   GREY_11,
+  GREY_1,
   GREY_2,
   GREY_3,
+  GREY_4,
   GREY_5,
   GREY_6,
   GREY_7,
   GREY_8,
   KINGFISHER,
   LE_TEAL,
+  LIVE_LIGHT,
   LUNAR,
   LUNAR_LIGHT,
   METAL,
@@ -117,7 +122,16 @@ import {
   GROUP_D_MIN_WIDTH,
 } from './fontMediaQueries';
 
-import { BrandPalette, Typography } from '../../models/types/theming';
+import gridWidths from './gridWidths';
+
+import { MEDIA_ARTICLE_PAGE, MEDIA_PAGE } from '../../routes/utils/pageTypes';
+import { BrandPalette, Typography, BrandSVG } from '../../models/types/theming';
+import { PageTypes } from '../../models/types/global';
+
+const isDarkUiPage = (pageType: PageTypes, derivedPageType: string | null) =>
+  pageType === MEDIA_ARTICLE_PAGE ||
+  (pageType === MEDIA_PAGE &&
+    derivedPageType?.toLowerCase() === 'on demand tv');
 
 type Props = {
   children: React.ReactNode;
@@ -126,9 +140,11 @@ type Props = {
 const withThemeProvider = ({
   typography,
   palette: brandPalette,
+  brandSVG,
 }: {
   palette: BrandPalette;
   typography: Typography;
+  brandSVG: BrandSVG;
 }) => {
   const { fontVariants, fontFaces, script } = typography;
   const {
@@ -138,7 +154,7 @@ const withThemeProvider = ({
     BRAND_HIGHLIGHT,
     BRAND_BORDER,
   } = brandPalette;
-  const theme: Theme = {
+  const themeConfig: Theme = {
     fontSizes: {
       atlas: getAtlasSize(script),
       elephant: getElephantSize(script),
@@ -210,14 +226,17 @@ const withThemeProvider = ({
       GHOST,
       GREY_10,
       GREY_11,
+      GREY_1,
       GREY_2,
       GREY_3,
+      GREY_4,
       GREY_5,
       GREY_6,
       GREY_7,
       GREY_8,
       KINGFISHER,
       LE_TEAL,
+      LIVE_LIGHT,
       LUNAR,
       LUNAR_LIGHT,
       METAL,
@@ -255,14 +274,27 @@ const withThemeProvider = ({
       QUINTUPLE,
       SEXTUPLE,
     },
+    brandSVG,
+    gridWidths,
+    isDarkUi: false,
   };
 
-  const ThemeProvider: React.FC<Props> = ({ children }) => (
-    <EmotionThemeProvider theme={theme}>
-      <Global styles={fontFaces} />
-      {children}
-    </EmotionThemeProvider>
-  );
+  const ThemeProvider: React.FC<Props> = ({ children }) => {
+    const { isAmp, pageType, derivedPageType } = useContext(RequestContext);
+
+    const theme = {
+      ...themeConfig,
+      isDarkUi: isDarkUiPage(pageType, derivedPageType),
+    };
+
+    return (
+      <EmotionThemeProvider theme={theme}>
+        {children}
+        {isAmp && <Global styles={fontFaces} />}
+        <Global styles={focusIndicator} />
+      </EmotionThemeProvider>
+    );
+  };
 
   return ThemeProvider;
 };

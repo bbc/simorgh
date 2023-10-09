@@ -1,3 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`CanonicalChartbeatAnalytics should return the helmet wrapper with the script snippet 1`] = `<div />`;

@@ -64,9 +64,9 @@ test('Log row returns the correct object', () => {
     category: 'category',
     scoreValue: 40,
     budgetValue: 50,
-    result: 'fail',
+    status: 'Fail',
   };
-  const result = logRow('category', 40, 50, 'fail');
+  const result = logRow('category', 40, 50, false);
 
   expect(result).toStrictEqual(expected);
 });
@@ -128,7 +128,7 @@ test('readReport reads a file and parses it to Json', () => {
 test('exitResult', () => {
   const mockExit = jest
     .spyOn(process, 'exit')
-    .mockImplementation((number) => number);
+    .mockImplementation(number => number);
 
   exitResult(false);
 

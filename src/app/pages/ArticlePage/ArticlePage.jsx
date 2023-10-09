@@ -1,30 +1,13 @@
-import React, { useContext } from 'react';
+/** @jsxRuntime classic */
+/** @jsx jsx */
+
+import { useContext } from 'react';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import propEq from 'ramda/src/propEq';
-import last from 'ramda/src/last';
-import styled from '@emotion/styled';
-import { string, node } from 'prop-types';
+import { jsx, useTheme } from '@emotion/react';
+import { string } from 'prop-types';
 import useToggle from '#hooks/useToggle';
-
-import {
-  GEL_GROUP_1_SCREEN_WIDTH_MAX,
-  GEL_GROUP_2_SCREEN_WIDTH_MIN,
-  GEL_GROUP_3_SCREEN_WIDTH_MAX,
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
-  GEL_GROUP_4_SCREEN_WIDTH_MAX,
-  GEL_GROUP_5_SCREEN_WIDTH_MIN,
-} from '#psammead/gel-foundations/src/breakpoints';
-import {
-  GEL_MARGIN_ABOVE_400PX,
-  GEL_MARGIN_BELOW_400PX,
-  GEL_SPACING,
-  GEL_SPACING_DBL,
-  GEL_SPACING_TRPL,
-  GEL_SPACING_QUAD,
-  GEL_SPACING_QUIN,
-} from '#psammead/gel-foundations/src/spacings';
-import { C_GREY_2, C_WHITE } from '#psammead/psammead-styles/src/colours';
 import { singleTextBlock } from '#app/models/blocks';
 import { articleDataPropTypes } from '#models/propTypes/article';
 import ArticleMetadata from '#containers/ArticleMetadata';
@@ -33,22 +16,12 @@ import headings from '#containers/Headings';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import gist from '#containers/Gist';
 import text from '#containers/Text';
-import Image from '#containers/Image';
 import Blocks from '#containers/Blocks';
 import Timestamp from '#containers/ArticleTimestamp';
-import ATIAnalytics from '#containers/ATIAnalytics';
-import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
-import OptimizelyPageViewTracking from '#containers/OptimizelyPageViewTracking';
 import articleMediaPlayer from '#containers/ArticleMediaPlayer';
-import LinkedData from '#containers/LinkedData';
-import MostReadContainer from '#containers/MostRead';
-import MostReadSection from '#containers/MostRead/section';
-import MostReadSectionLabel from '#containers/MostRead/label';
 import SocialEmbedContainer from '#containers/SocialEmbed';
-import AdContainer from '#containers/Ad';
-import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
-
+import { InlinePodcastPromo } from '#containers/PodcastPromo';
 import {
   getArticleId,
   getHeadline,
@@ -64,70 +37,45 @@ import filterForBlockType from '#lib/utilities/blockHandlers';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 import ScrollablePromo from '#components/ScrollablePromo';
-import Byline from './Byline';
+import CpsRecommendations from '#containers/CpsRecommendations';
+import ImageWithCaption from '../../components/ImageWithCaption';
+import AdContainer from '../../components/Ad';
+import EmbedImages from '../../components/Embeds/EmbedImages';
+import EmbedHtml from '../../components/Embeds/EmbedHtml';
+import MostRead from '../../components/MostRead';
+import ATIAnalytics from '../../components/ATIAnalytics';
+import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
+import LinkedData from '../../components/LinkedData';
+import Uploader from '../../components/Uploader';
+import Byline from '../../components/Byline';
+import OEmbedLoader from '../../components/Embeds/OEmbed';
+import {
+  bylineExtractor,
+  categoryName,
+  getAuthorTwitterHandle,
+} from '../../components/Byline/utilities';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import RelatedContentSection from './PagePromoSections/RelatedContentSection';
+import RelatedContentSection from '../../components/RelatedContentSection';
+import Disclaimer from '../../components/Disclaimer';
 
 import SecondaryColumn from './SecondaryColumn';
 
-import ArticlePageGrid, { Primary } from './ArticlePageGrid';
+import styles from './ArticlePage.styles';
+import { getPromoHeadline } from '../../lib/analyticsUtils/article';
 
-const Wrapper = styled.div`
-  background-color: ${C_GREY_2};
-`;
-
-const ArticlePageMostReadSection = styled(MostReadSection)`
-  @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
-    margin: 0 ${GEL_MARGIN_BELOW_400PX} 0 ${GEL_MARGIN_BELOW_400PX};
-    padding-bottom: ${GEL_SPACING_TRPL};
-  }
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-    margin: 0 ${GEL_MARGIN_ABOVE_400PX} 0 ${GEL_MARGIN_ABOVE_400PX};
-    padding-bottom: ${GEL_SPACING_QUAD};
-  }
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
-    margin: 0 ${GEL_MARGIN_ABOVE_400PX} 0 ${GEL_MARGIN_ABOVE_400PX};
-    padding-bottom: ${GEL_SPACING_QUIN};
-  }
-  @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
-    width: 100%; /* Needed for IE11 */
-    margin: 0 auto;
-    padding: 0 ${GEL_SPACING_DBL} ${GEL_SPACING_TRPL};
-    max-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN};
-  }
-`;
-
-const Main = styled.main`
-  padding-bottom: ${GEL_SPACING_TRPL};
-`;
-
-const StyledRelatedTopics = styled(RelatedTopics)`
-  margin: ${GEL_SPACING_DBL};
-  padding-bottom: ${GEL_SPACING};
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    margin: ${GEL_SPACING_QUAD} 0;
-    padding-bottom: ${GEL_SPACING_QUAD};
-  }
-`;
-
-const MpuContainer = styled(AdContainer)`
-  margin-bottom: ${GEL_SPACING_TRPL};
-`;
-
-const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
-  const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
-  const { articleAuthor, showRelatedTopics } = useContext(ServiceContext);
+const ArticlePage = ({ pageData }) => {
+  const { isApp } = useContext(RequestContext);
+  const { articleAuthor, isTrustProjectParticipant, showRelatedTopics } =
+    useContext(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
-  const { enabled: adsEnabled } = useToggle('ads');
 
-  const isAdsEnabled = [
-    path(['metadata', 'allowAdvertising'], pageData),
-    adsEnabled,
-    showAdsBasedOnLocation,
-  ].every(Boolean);
+  const {
+    palette: { GREY_2, WHITE },
+  } = useTheme();
 
+  const allowAdvertising = path(['metadata', 'allowAdvertising'], pageData);
   const adcampaign = path(['metadata', 'adCampaignKeyword'], pageData);
-
+  const { enabled: podcastPromoEnabled } = useToggle('podcastPromo');
   const headline = getHeadline(pageData);
   const description = getSummary(pageData) || getHeadline(pageData);
   const firstPublished = getFirstPublished(pageData);
@@ -136,7 +84,33 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const topics = path(['metadata', 'topics'], pageData);
   const blocks = pathOr([], ['content', 'model', 'blocks'], pageData);
   const startsWithHeading = propEq('type', 'headline')(blocks[0] || {});
-  const hasByline = blocks.find(block => block.type === 'byline');
+
+  const bylineBlock = blocks.find(block => block.type === 'byline');
+  const bylineContribBlocks = pathOr([], ['model', 'blocks'], bylineBlock);
+
+  const bylineLinkedData = bylineExtractor(bylineContribBlocks);
+
+  const hasByline = !!bylineLinkedData;
+
+  const articleAuthorTwitterHandle = hasByline
+    ? getAuthorTwitterHandle(blocks)
+    : null;
+
+  const taggings = path(['metadata', 'passport', 'taggings'], pageData);
+  const formats = path(
+    ['metadata', 'passport', 'predicates', 'formats'],
+    pageData,
+  );
+  const recommendationsData = pathOr([], ['recommendations'], pageData);
+
+  const embedBlock = blocks.find(block => block.type === 'embed');
+  const embedProviderName = path(['model', 'provider'], embedBlock);
+  const isUgcUploader = embedProviderName === 'ugc-uploader';
+
+  const {
+    metadata: { atiAnalytics },
+    mostRead: mostReadInitialData,
+  } = pageData;
 
   const componentsToRender = {
     visuallyHiddenHeadline,
@@ -156,7 +130,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
         </Byline>
       ) : null,
     image: props => (
-      <Image
+      <ImageWithCaption
         {...props}
         sizes="(min-width: 1008px) 760px, 100vw"
         shouldPreload={preloadLeadImageToggle}
@@ -165,10 +139,21 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
     timestamp: props =>
       hasByline ? null : <Timestamp {...props} popOut={false} />,
     social: SocialEmbedContainer,
+    embed: props => (isUgcUploader ? <Uploader {...props} /> : null),
+    embedHtml: props => <EmbedHtml {...props} />,
+    oEmbed: props => <OEmbedLoader {...props} />,
+    embedImages: props => <EmbedImages {...props} />,
     group: gist,
     links: props => <ScrollablePromo {...props} />,
     mpu: props =>
-      isAdsEnabled ? <MpuContainer {...props} slotType="mpu" /> : null,
+      allowAdvertising ? <AdContainer {...props} slotType="mpu" /> : null,
+    wsoj: props => (
+      <CpsRecommendations {...props} items={recommendationsData} />
+    ),
+    disclaimer: props => (
+      <Disclaimer {...props} increasePaddingOnDesktop={false} />
+    ),
+    podcastPromo: podcastPromoEnabled && (() => <InlinePodcastPromo />),
   };
 
   const visuallyHiddenBlock = {
@@ -197,28 +182,20 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
     filterForBlockType(promoImageBlocks, 'rawImage'),
   );
 
-  const MostReadWrapper = ({ children }) => (
-    <ArticlePageMostReadSection>
-      <MostReadSectionLabel mobileDivider={showRelatedTopics && topics} />
-      {children}
-    </ArticlePageMostReadSection>
-  );
-
-  MostReadWrapper.propTypes = {
-    children: node.isRequired,
-  };
-
   return (
-    <Wrapper>
-      <ATIAnalytics data={pageData} />
-      <ChartbeatAnalytics data={pageData} />
+    <div css={styles.pageWrapper}>
+      <ATIAnalytics atiData={atiAnalytics} />
+      <ChartbeatAnalytics
+        sectionName={pageData?.relatedContent?.section?.name}
+        title={getPromoHeadline(pageData)}
+      />
       <ComscoreAnalytics />
       <NielsenAnalytics />
-      <OptimizelyPageViewTracking />
       <ArticleMetadata
         articleId={getArticleId(pageData)}
         title={headline}
         author={articleAuthor}
+        twitterHandle={articleAuthorTwitterHandle}
         firstPublished={firstPublished}
         lastPublished={lastPublished}
         section={getArticleSection(pageData)}
@@ -231,7 +208,8 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
       />
       <LinkedData
         showAuthor
-        type="Article"
+        bylineLinkedData={bylineLinkedData}
+        type={categoryName(isTrustProjectParticipant, taggings, formats)}
         seoTitle={headline}
         headline={headline}
         datePublished={firstPublished}
@@ -239,35 +217,41 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
         aboutTags={aboutTags}
         imageLocator={promoImage}
       />
-      {isAdsEnabled && !isAmp && (
-        <CanonicalAdBootstrapJs adcampaign={adcampaign} />
+      {allowAdvertising && (
+        <AdContainer slotType="leaderboard" adcampaign={adcampaign} />
       )}
-      {isAdsEnabled && <AdContainer slotType="leaderboard" />}
-      <ArticlePageGrid>
-        <Primary>
-          <Main role="main">
+      <div css={styles.grid}>
+        <div css={styles.primaryColumn}>
+          <main css={styles.mainContent} role="main">
             <Blocks
               blocks={articleBlocks}
               componentsToRender={componentsToRender}
             />
-          </Main>
+          </main>
           {showRelatedTopics && topics && (
-            <StyledRelatedTopics
+            <RelatedTopics
+              css={styles.relatedTopics}
               topics={topics}
               mobileDivider={false}
-              backgroundColour={C_GREY_2}
-              tagBackgroundColour={C_WHITE}
+              backgroundColour={GREY_2}
+              tagBackgroundColour={WHITE}
             />
           )}
-          <RelatedContentSection content={last(blocks)} />
-        </Primary>
-        <SecondaryColumn pageData={pageData} />
-      </ArticlePageGrid>
-      <MostReadContainer
-        mostReadEndpointOverride={mostReadEndpointOverride}
-        wrapper={MostReadWrapper}
-      />
-    </Wrapper>
+          <RelatedContentSection content={blocks} />
+        </div>
+        {!isApp && <SecondaryColumn pageData={pageData} />}
+      </div>
+      {!isApp && (
+        <MostRead
+          css={styles.mostReadSection}
+          data={mostReadInitialData}
+          columnLayout="multiColumn"
+          size="default"
+          headingBackgroundColour={GREY_2}
+          mobileDivider={showRelatedTopics && topics}
+        />
+      )}
+    </div>
   );
 };
 

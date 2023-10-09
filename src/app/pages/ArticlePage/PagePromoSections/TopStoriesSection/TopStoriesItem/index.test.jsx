@@ -1,12 +1,16 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
+import {
+  render,
+  screen,
+} from '../../../../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../../../contexts/ServiceContext';
 import TopStoriesItem from '.';
 import {
   topStoriesItem,
   topStoriesLiveLabelItem,
   topStoriesMediaContentItem,
+  tipoFormattedTopStoriesItem,
 } from '../fixture';
 
 // eslint-disable-next-line react/prop-types
@@ -30,6 +34,23 @@ describe('Optimo Top Stories Promo Item', () => {
       'Covid antibodies in 1 in 10 people in December',
     );
     const timestamp = screen.getByText('19 January 2021');
+
+    expect(heading).toBeInTheDocument();
+    expect(timestamp).toBeInTheDocument();
+  });
+
+  it('should render Top Stories item when data is from Tipo', () => {
+    render(
+      <TopStoriesItemFixture
+        service="kyrgyz"
+        fixtureData={tipoFormattedTopStoriesItem}
+      />,
+    );
+
+    const heading = screen.getByText(
+      'Published at 12:19 - Индиянын Улуттук Конгресс партиясынын жаңы лидери шайланды',
+    );
+    const timestamp = screen.getByText('27 октябрь 2022');
 
     expect(heading).toBeInTheDocument();
     expect(timestamp).toBeInTheDocument();

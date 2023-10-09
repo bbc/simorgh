@@ -13,6 +13,7 @@ const logCodes = {
   DATA_FETCH_ERROR_SECONDARY_COLUMN: 'data_fetch_error_secondary_column',
   DATA_NOT_FOUND: 'data_response_404',
   DATA_REQUEST_RECEIVED: 'data_request_received',
+  DATA_RESPONSE_FROM_CACHE: 'data_response_from_cache',
   BFF_FETCH_ERROR: 'bff_fetch_error',
 
   // Files
@@ -43,7 +44,6 @@ const logCodes = {
 
   // Radio Schedule
   RADIO_SCHEDULE_FETCH_ERROR: 'radio_schedule_fetch_error',
-  RADIO_SCHEDULE_REQUEST_RECEIVED: 'radio_schedule_request_received',
   RADIO_SCHEDULE_DATA_INCOMPLETE_ERROR: 'radio_schedule_data_incomplete_error',
 
   // Server Side
@@ -58,6 +58,7 @@ const logCodes = {
   CONFIG_REQUEST_RECEIVED: 'config_request_received',
   CONFIG_FETCH_ERROR: 'config_fetch_error',
   CONFIG_ERROR: 'config_error',
+  CONFIG_RESPONSE_EMPTY_ERROR: 'config_response_empty_error',
 
   // Block Types
   UNSUPPORTED_BLOCK_TYPE: 'unsupported_block_type',
@@ -80,19 +81,16 @@ const logCodes = {
   INCLUDE_ERROR: 'include_error',
   INCLUDE_FETCH_ERROR: 'include_fetch_error',
   INCLUDE_MISSING_URL: 'include_missing_url',
-  INCLUDE_RENDERED: 'include_rendered',
-  INCLUDE_REQUEST_RECEIVED: 'include_request_received',
   INCLUDE_UNSUPPORTED: 'include_unsupported',
-  INCLUDE_IFRAME_REQUEST_RECEIVED: 'include_iframe_request_received',
-
-  // Social Embed
-  SOCIAL_EMBED_RENDERED: 'social_embed_rendered',
 
   // Toggle API
   TOGGLE_API_RESPONSE_TIME: 'toggle_api_response_time',
 
   // Recommendations
   RECOMMENDATIONS_MISSING_DATA: 'recommendations_missing_data',
+
+  // Logging
+  ATI_LOGGING_ERROR: 'ati_logging_error',
 };
 
 module.exports = logCodes;

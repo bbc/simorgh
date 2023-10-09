@@ -1,9 +1,9 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import StoryPromo, {
   Headline,
   Summary,
 } from '#psammead/psammead-story-promo/src';
+import { render } from '../../../../components/react-testing-library-with-providers';
 import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import { StoryPromoLi, StoryPromoLiBase, StoryPromoUl } from './index';
 
@@ -22,41 +22,49 @@ const Info = (
 );
 
 describe('StoryPromo list', () => {
-  shouldMatchSnapshot(
-    'should render correctly',
-    <StoryPromoUl>
-      <StoryPromoLi>
-        <StoryPromo image={Image} info={Info} />
-      </StoryPromoLi>
-    </StoryPromoUl>,
-  );
+  it('should render correctly', () => {
+    const { container } = render(
+      <StoryPromoUl>
+        <StoryPromoLi>
+          <StoryPromo image={Image} info={Info} />
+        </StoryPromoLi>
+      </StoryPromoUl>,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render correctly without border',
-    <StoryPromoUl>
-      <StoryPromoLi border={false}>
-        <StoryPromo image={Image} info={Info} />
-      </StoryPromoLi>
-    </StoryPromoUl>,
-  );
+  it('should render correctly without border', () => {
+    const { container } = render(
+      <StoryPromoUl>
+        <StoryPromoLi border={false}>
+          <StoryPromo image={Image} info={Info} />
+        </StoryPromoLi>
+      </StoryPromoUl>,
+    );
+    expect(container).toMatchSnapshot();
+  });
 });
 
 describe('StoryPromo list base', () => {
-  shouldMatchSnapshot(
-    'should render correctly',
-    <StoryPromoUl>
-      <StoryPromoLiBase>
-        <StoryPromo image={Image} info={Info} />
-      </StoryPromoLiBase>
-    </StoryPromoUl>,
-  );
+  it('should render correctly', () => {
+    const { container } = render(
+      <StoryPromoUl>
+        <StoryPromoLiBase>
+          <StoryPromo image={Image} info={Info} />
+        </StoryPromoLiBase>
+      </StoryPromoUl>,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render correctly without border',
-    <StoryPromoUl>
-      <StoryPromoLiBase border={false}>
-        <StoryPromo image={Image} info={Info} />
-      </StoryPromoLiBase>
-    </StoryPromoUl>,
-  );
+  it('should render correctly without border', () => {
+    const { container } = render(
+      <StoryPromoUl>
+        <StoryPromoLiBase border={false}>
+          <StoryPromo image={Image} info={Info} />
+        </StoryPromoLiBase>
+      </StoryPromoUl>,
+    );
+    expect(container).toMatchSnapshot();
+  });
 });

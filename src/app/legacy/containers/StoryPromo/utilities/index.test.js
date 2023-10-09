@@ -7,6 +7,7 @@ import { isMap, isPgl, getHeadingTagOverride, buildUniquePromoId } from '.';
 import {
   completeItem,
   standardLinkItem,
+  tipoFormattedTopStoriesItem,
   secondaryColumnNoAssetURI,
   secondaryColumnContentType,
 } from '../helpers/fixtureData';
@@ -107,6 +108,16 @@ describe('buildUniquePromoId', () => {
         promoIndex: 2,
       }),
     ).toEqual('promo-test-group-id-3');
+  });
+
+  it('should return id using canonicalUrl if assetUri does not exist and uri does not exist', () => {
+    expect(
+      buildUniquePromoId({
+        promoGroupId: labelId,
+        promoItem: tipoFormattedTopStoriesItem,
+        promoIndex: 2,
+      }),
+    ).toEqual('promo-test-group-id-kyrgyzarticlesc6vdqkm8yyvo-3');
   });
 
   it('should return id with contentType only if assetURI and URI do not exist', () => {

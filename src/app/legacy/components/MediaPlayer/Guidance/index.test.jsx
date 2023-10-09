@@ -1,24 +1,28 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import Guidance from '.';
+import { render } from '../../../../components/react-testing-library-with-providers';
 
 describe('Media Player: Guidance', () => {
-  shouldMatchSnapshot(
-    'should render Guidance',
-    <Guidance
-      guidanceMessage="Guidance: Contains strong language with adult humor"
-      service="news"
-      noJsMessage="no js"
-    />,
-  );
+  it('should render Guidance', () => {
+    const { container } = render(
+      <Guidance
+        guidanceMessage="Guidance: Contains strong language with adult humor"
+        service="news"
+        noJsMessage="no js"
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render no-js styles when noJsClassName prop is used',
-    <Guidance
-      guidanceMessage="Guidance: Contains strong language with adult humor"
-      service="news"
-      noJsMessage="This media cannot play in your browser. Please enable Javascript or a different browser."
-      noJsClassName="no-js"
-    />,
-  );
+  it('should render no-js styles when noJsClassName prop is used', () => {
+    const { container } = render(
+      <Guidance
+        guidanceMessage="Guidance: Contains strong language with adult humor"
+        service="news"
+        noJsMessage="This media cannot play in your browser. Please enable Javascript or a different browser."
+        noJsClassName="no-js"
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 });

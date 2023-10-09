@@ -1,12 +1,15 @@
 import React from 'react';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ErrorPage from './ErrorPage';
+import ThemeProvider from '../../components/ThemeProvider';
 
 // eslint-disable-next-line react/prop-types
 const Component = ({ service = 'news', status = 404 } = {}) => (
-  <ServiceContextProvider service={service}>
-    <ErrorPage errorCode={status} />
-  </ServiceContextProvider>
+  <ThemeProvider service={service}>
+    <ServiceContextProvider service={service}>
+      <ErrorPage errorCode={status} />
+    </ServiceContextProvider>
+  </ThemeProvider>
 );
 
 export default {

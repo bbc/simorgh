@@ -1,0 +1,133 @@
+{
+  "data": {
+    "title": "உணவு",
+    "description": "",
+    "imageData": null,
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "காபி அருந்துவோர் நீண்ட காலம் வாழ முடியுமா?",
+            "firstPublished": "2017-07-18T06:38:08.000Z",
+            "link": "https://www.bbc.com/tamil/23140136",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/A011/test/_63577904_149-1.jpg",
+            "description": "நாளொன்றுக்கு மூன்று கப் காபி அருந்துவது நீங்கள் நீண்ட காலம் வாழ உதவலாம், என்று 10 ஐரோப்பிய நாடுகளில் ஏறத்தாழ பாதி மில்லியன் மக்களிடையே நடத்தப்பட்ட ஆய்வு கூறுகிறது.",
+            "imageAlt": "கருப்பு காபி",
+            "id": "e9bc8055-652e-174a-93a4-b0f4131d60a4"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "link": "https://www.bbc.com/tamil",
+        "curationId": "urn:bbc:tipo:list:06c39130-d73e-4ff0-ba49-c3b29b1900c2",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "title": "தலைப்பு, விளக்கம், படம் மற்றும் இணைப்பு",
+        "visualProminence": "NORMAL",
+        "additionalText": {
+          "plainText": "வக்ஃப் வாரியம் என்றால் என்ன?"
+        },
+        "visualStyle": "BANNER",
+        "images": [
+          {
+            "url": "https://ichef.bbci.co.uk/ace/standard/480/cpsdevpb/5506/test/c17ca0b0-9d9d-11ed-8565-736fadc3edcb.jpg",
+            "urlTemplate": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/5506/test/c17ca0b0-9d9d-11ed-8565-736fadc3edcb.jpg",
+            "originalSize": {
+              "width": 976,
+              "height": 549
+            },
+            "altText": "Nintendo",
+            "copyright": "Nintendo",
+            "type": "background"
+          }
+        ],
+        "imageList": [
+          {
+            "imageType": "background",
+            "locator": "5506/test/c17ca0b0-9d9d-11ed-8565-736fadc3edcb.jpg",
+            "originCode": "cpsdevpb",
+            "height": 549,
+            "width": 976,
+            "copyrightHolder": "Nintendo",
+            "altText": "Nintendo"
+          }
+        ]
+      },
+      {
+        "summaries": [
+          {
+            "type": "video",
+            "title": "சிரியாவின் சிறைகளில் 18, 000 பேர் உயிரிழப்பு - காணொளி BBC rewrite av",
+            "firstPublished": "2016-12-06T15:53:33.000Z",
+            "link": "https://www.bbc.com/tamil/global-23095612",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/85C0/test/_63504243_p0158mcm.jpg",
+            "description": "சிரியாவில் இரண்டாயிரத்து பதினோராம் ஆண்டு முதல் பதினைந்தாம் ஆண்டுவரை அரசாங்க சிறையில் சுமார் பதினெட்டாயிரம் பேர் உயிரிழந்துள்ளனர்.",
+            "imageAlt": "18, 000 பேர் உயிரிழப்பு BBC",
+            "id": "cdb21693-77bc-ba40-a782-4862d440dc5c"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "link": "https://www.bbc.com/tamil",
+        "curationId": "urn:bbc:tipo:list:b57e08b4-9421-4ad2-8a83-c355e4d1925b",
+        "curationType": "tipo-curation",
+        "position": 1,
+        "title": "தலைப்பு, இணைப்பு, படம் (விளக்கம் இல்லை)",
+        "visualProminence": "NORMAL",
+        "visualStyle": "BANNER",
+        "images": [
+          {
+            "url": "https://ichef.bbci.co.uk/ace/standard/480/cpsdevpb/6031/test/b8948c50-9d9e-11ed-8565-736fadc3edcb.jpg",
+            "urlTemplate": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/6031/test/b8948c50-9d9e-11ed-8565-736fadc3edcb.jpg",
+            "originalSize": {
+              "width": 976,
+              "height": 549
+            },
+            "altText": "Overboard",
+            "copyright": "Overboard",
+            "type": "background"
+          }
+        ],
+        "imageList": [
+          {
+            "imageType": "background",
+            "locator": "6031/test/b8948c50-9d9e-11ed-8565-736fadc3edcb.jpg",
+            "originCode": "cpsdevpb",
+            "height": 549,
+            "width": 976,
+            "copyrightHolder": "Overboard",
+            "altText": "Overboard"
+          }
+        ]
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "கிளிக் - தொழில்நுட்ப காணொளி",
+            "firstPublished": "2016-08-02T13:59:18.000Z",
+            "link": "https://www.bbc.com/tamil/23064725",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/1770A/test/_63501069__90567143_gettyimages-540421476.jpg",
+            "description": "கிளிக் - தொழில்நுட்ப காணொளி",
+            "imageAlt": "வீடியோ",
+            "id": "956a877c-2d92-7d41-bea4-ddf8d61919af"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "link": "https://www.bbc.com/tamil",
+        "curationId": "urn:bbc:tipo:list:41fd4a2e-0cb8-45a3-add0-59648f68461b",
+        "curationType": "tipo-curation",
+        "position": 2,
+        "title": "தலைப்பு மற்றும் இணைப்பு மட்டும் (படம் மற்றும் விளக்கம் இல்லை)",
+        "visualProminence": "NORMAL",
+        "visualStyle": "BANNER"
+      }
+    ],
+    "activePage": 1,
+    "pageCount": 1,
+    "variantTopicId": null
+  },
+  "contentType": "application/json; charset=utf-8"
+}

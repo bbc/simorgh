@@ -3,8 +3,9 @@
 exports[`Image - AmpImg should render image with custom dimensions correctly 1`] = `
 <div>
   <amp-img
-    alt="By Elisa Decker, from her series \\"Sidewalk\\""
+    alt="By Elisa Decker, from her series "Sidewalk""
     attribution="Elisa Decker"
+    fallback=""
     height="547"
     layout="responsive"
     sizes="100vw"
@@ -19,11 +20,11 @@ exports[`Image - AmpImg should render image with only srcset correctly 1`] = `
   <amp-img
     alt="Student sitting an exam"
     attribution=""
+    fallback=""
     height="576"
     layout="responsive"
     sizes="100vw"
     src="https://ichef.bbci.co.uk/news/300/cpsprodpb/7098/production/_104842882_students.jpg"
-    srcset="https://ichef.bbci.co.uk/news/300/cpsprodpb/7098/production/_104842882_students.jpg.webp 300w, https://ichef.bbci.co.uk/news/450/cpsprodpb/7098/production/_104842882_students.jpg.webp 450w, https://ichef.bbci.co.uk/news/600/cpsprodpb/7098/production/_104842882_students.jpg.webp 600w, https://ichef.bbci.co.uk/news/1024/cpsprodpb/7098/production/_104842882_students.jpg.webp 1024w"
     width="1024"
   />
 </div>
@@ -34,25 +35,14 @@ exports[`Image - AmpImg should render image with srcset and fallbackSrcset corre
   <amp-img
     alt="Student sitting an exam"
     attribution=""
+    fallback=""
     height="576"
     layout="responsive"
     sizes="100vw"
     src="https://ichef.bbci.co.uk/news/300/cpsprodpb/7098/production/_104842882_students.jpg"
-    srcset="https://ichef.bbci.co.uk/news/300/cpsprodpb/7098/production/_104842882_students.jpg.webp 300w, https://ichef.bbci.co.uk/news/450/cpsprodpb/7098/production/_104842882_students.jpg.webp 450w, https://ichef.bbci.co.uk/news/600/cpsprodpb/7098/production/_104842882_students.jpg.webp 600w, https://ichef.bbci.co.uk/news/1024/cpsprodpb/7098/production/_104842882_students.jpg.webp 1024w"
+    srcset="https://ichef.bbci.co.uk/news/300/cpsprodpb/7098/production/_104842882_students.jpg 300w, https://ichef.bbci.co.uk/news/450/cpsprodpb/7098/production/_104842882_students.jpg 450w, https://ichef.bbci.co.uk/news/600/cpsprodpb/7098/production/_104842882_students.jpg 600w, https://ichef.bbci.co.uk/news/1024/cpsprodpb/7098/production/_104842882_students.jpg 1024w"
     width="1024"
-  >
-    <amp-img
-      alt="Student sitting an exam"
-      attribution=""
-      fallback=""
-      height="576"
-      layout="responsive"
-      sizes="100vw"
-      src="https://ichef.bbci.co.uk/news/300/cpsprodpb/7098/production/_104842882_students.jpg"
-      srcset="https://ichef.bbci.co.uk/news/300/cpsprodpb/7098/production/_104842882_students.jpg 300w, https://ichef.bbci.co.uk/news/450/cpsprodpb/7098/production/_104842882_students.jpg 450w, https://ichef.bbci.co.uk/news/600/cpsprodpb/7098/production/_104842882_students.jpg 600w, https://ichef.bbci.co.uk/news/1024/cpsprodpb/7098/production/_104842882_students.jpg 1024w"
-      width="1024"
-    />
-  </amp-img>
+  />
 </div>
 `;
 
@@ -61,6 +51,7 @@ exports[`Image - AmpImg should render landscape image correctly 1`] = `
   <amp-img
     alt="Student sitting an exam"
     attribution=""
+    fallback=""
     height="576"
     layout="responsive"
     sizes="100vw"
@@ -75,6 +66,7 @@ exports[`Image - AmpImg should render portrait image correctly 1`] = `
   <amp-img
     alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
     attribution="BBC"
+    fallback=""
     height="1280"
     layout="responsive"
     sizes="100vw"
@@ -89,6 +81,7 @@ exports[`Image - AmpImg should render square image correctly 1`] = `
   <amp-img
     alt="Tracks through the snow"
     attribution="BBC"
+    fallback=""
     height="1024"
     layout="responsive"
     sizes="100vw"

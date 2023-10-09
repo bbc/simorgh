@@ -1,43 +1,795 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::article:c4g19kgl85ko",
-    "locators": {
-      "optimoUrn": "urn:bbc:optimo:asset:c4g19kgl85ko"
-    },
-    "type": "article",
-    "createdBy": "Afaanoromoo",
-    "language": "om",
-    "lastUpdated": 1570031976502,
-    "firstPublished": 1562936153914,
-    "lastPublished": 1569857685157,
-    "options": {},
-    "analyticsLabels": {},
-    "passport": {
-      "language": "om",
-      "home": "http://www.bbc.co.uk/ontologies/passport/home/AfaanOromoo"
-    },
-    "tags": {},
-    "version": "v1.1.2",
-    "blockTypes": [
-      "headline",
-      "text",
-      "paragraph",
-      "fragment",
-      "image",
-      "caption",
-      "altText",
-      "rawImage",
-      "urlLink",
-      "video",
-      "subheadline"
-    ]
-  },
-  "content": {
-    "model": {
-      "blocks": [
-        {
-          "type": "headline",
-          "model": {
+  "data": {
+    "article": {
+      "content": {
+        "model": {
+          "blocks": [
+            {
+              "id": "c7bfe810",
+              "type": "headline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "f192e841",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "0efa4d28",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "Tiraampi yaada 'godaantota miila keessa dha'uu jedhu dhiyeessan'\n\n",
+                            "blocks": [
+                              {
+                                "id": "a4aeb169",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "Tiraampi yaada 'godaantota miila keessa dha'uu jedhu dhiyeessan'\n\n",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      1,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                1
+              ]
+            },
+            {
+              "id": "1d6abb07",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "1aa015ef",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "b17ac28d",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "3e97e175",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "",
+                                  "blocks": [
+                                    {
+                                      "id": "1966d6fe",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        2,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  2,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              },
+                              {
+                                "id": "72f1741c",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Akka baqqattoonni karaa daangaa kibba gara US hin seenne dhorkuudhaaf yaada Tiraamp dhiyeessan jedhan keessaa dallaa elektiriikaan ijaarame.",
+                                  "blocks": [
+                                    {
+                                      "id": "df8ab09b",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Akka baqqattoonni karaa daangaa kibba gara US hin seenne dhorkuudhaaf yaada Tiraamp dhiyeessan jedhan keessaa dallaa elektiriikaan ijaarame.",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        2,
+                                        1,
+                                        1,
+                                        2,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  2,
+                                  1,
+                                  1,
+                                  2
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            2,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      2,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "404679d2",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "3d223ddd",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "5a928a23",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Yaada dhiheenya kana ka'aa jiruuf ",
+                                  "blocks": [
+                                    {
+                                      "id": "5855f22a",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Yaada dhiheenya kana ka'aa jiruuf ",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        2,
+                                        2,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  2,
+                                  2,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            2,
+                            2,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      2,
+                      2
+                    ]
+                  },
+                  {
+                    "id": "d52e2675",
+                    "type": "rawImage",
+                    "model": {
+                      "width": 624,
+                      "height": 351,
+                      "locator": "dd9a/test/a7c87060-e138-11e9-b23c-f1ac9644bb55.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "BBC"
+                    },
+                    "position": [
+                      2,
+                      3
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                2
+              ]
+            },
+            {
+              "id": "4d61bf4a",
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1562936153914,
+                "lastPublished": 1569857685157
+              },
+              "position": [
+                3
+              ]
+            },
+            {
+              "id": "9d485ef1",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "5a7ea8e9",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Inline link Kitaaba kana keessa barreeffamni jiru akka jedhutti, pirezedaantichi akka dhuunfaa isaaniitti garee gargaarsaaf yaada yeroo dhiyeessan.",
+                      "blocks": [
+                        {
+                          "id": "785acf74",
+                          "type": "urlLink",
+                          "model": {
+                            "text": "Inline link",
+                            "blocks": [
+                              {
+                                "id": "36e73e15",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "Inline link",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  4,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ],
+                            "locator": "https://www.test.bbc.com/afrique/articles/cz216x22106o",
+                            "isExternal": false
+                          },
+                          "position": [
+                            4,
+                            1,
+                            1
+                          ]
+                        },
+                        {
+                          "id": "11ae4a56",
+                          "type": "fragment",
+                          "model": {
+                            "text": " Kitaaba kana keessa barreeffamni jiru akka jedhutti, pirezedaantichi akka dhuunfaa isaaniitti garee gargaarsaaf ",
+                            "attributes": []
+                          },
+                          "position": [
+                            4,
+                            1,
+                            2
+                          ]
+                        },
+                        {
+                          "id": "af81c456",
+                          "type": "urlLink",
+                          "model": {
+                            "text": "yaada yeroo dhiyeessan",
+                            "blocks": [
+                              {
+                                "id": "dfee7069",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "yaada yeroo dhiyeessan",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  4,
+                                  1,
+                                  3,
+                                  1
+                                ]
+                              }
+                            ],
+                            "locator": "https://www.bbc.co.uk/weather",
+                            "isExternal": false
+                          },
+                          "position": [
+                            4,
+                            1,
+                            3
+                          ]
+                        },
+                        {
+                          "id": "975e4c93",
+                          "type": "fragment",
+                          "model": {
+                            "text": ".",
+                            "attributes": []
+                          },
+                          "position": [
+                            4,
+                            1,
+                            4
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      4,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                4
+              ]
+            },
+            {
+              "id": "45b8091b",
+              "type": "video",
+              "model": {
+                "locator": "urn:bbc:pips:pid:p01k6msm",
+                "blocks": [
+                  {
+                    "id": "b91617ca",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "a1961aea",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "36cb15a1",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "This is a video block containing a video Daangaarratti maaltu ta'aa jira\n\n",
+                                  "blocks": [
+                                    {
+                                      "id": "e693430a",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "This is a video block containing a video Daangaarratti maaltu ta'aa jira\n\n",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        5,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  5,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            5,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      5,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "cf1b52e7",
+                    "type": "aresMedia",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "0753ab08",
+                          "blockId": "urn:bbc:ares::clip:p01k6msm",
+                          "type": "aresMediaMetadata",
+                          "model": {
+                            "id": "p01k6msm",
+                            "subType": "clip",
+                            "format": "audio_video",
+                            "title": "Five things ants can teach us about management",
+                            "synopses": {
+                              "short": "They may be tiny, but us humans could learn a thing or two from ants."
+                            },
+                            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+                            "imageCopyright": "BBC",
+                            "embedding": true,
+                            "advertising": true,
+                            "versions": [
+                              {
+                                "versionId": "p01k6msp",
+                                "types": [
+                                  "Original"
+                                ],
+                                "duration": 191,
+                                "durationISO8601": "PT3M11S",
+                                "warnings": {
+                                  "short": "Contains strong language and adult humour.",
+                                  "long": "Contains strong language and adult humour."
+                                },
+                                "availableTerritories": {
+                                  "uk": true,
+                                  "nonUk": true
+                                },
+                                "availableFrom": 1540218932000
+                              }
+                            ],
+                            "syndication": {
+                              "destinations": []
+                            },
+                            "smpKind": "programme"
+                          },
+                          "position": [
+                            5,
+                            2,
+                            1
+                          ]
+                        },
+                        {
+                          "id": "d0261f73",
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "80cfd12a",
+                                "type": "rawImage",
+                                "model": {
+                                  "width": 1920,
+                                  "height": 1080,
+                                  "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg",
+                                  "originCode": "mpv",
+                                  "copyrightHolder": "BBC"
+                                },
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  1
+                                ]
+                              },
+                              {
+                                "id": "2dfe625c",
+                                "type": "altText",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "0aa915fb",
+                                      "type": "text",
+                                      "model": {
+                                        "blocks": [
+                                          {
+                                            "id": "aa3ef4f3",
+                                            "type": "paragraph",
+                                            "model": {
+                                              "text": "Ants",
+                                              "blocks": [
+                                                {
+                                                  "id": "a0626dc3",
+                                                  "type": "fragment",
+                                                  "model": {
+                                                    "text": "Ants",
+                                                    "attributes": []
+                                                  },
+                                                  "position": [
+                                                    5,
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    1,
+                                                    1,
+                                                    1
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            "position": [
+                                              5,
+                                              2,
+                                              2,
+                                              2,
+                                              1,
+                                              1
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      "position": [
+                                        5,
+                                        2,
+                                        2,
+                                        2,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  2
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            5,
+                            2,
+                            2
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      5,
+                      2
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                5
+              ]
+            },
+            {
+              "id": "9a7ffd19",
+              "type": "subheadline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "1cc3be16",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "916fa289",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "Waliigalteen sun waltumsuuf\n\n",
+                            "blocks": [
+                              {
+                                "id": "7f73f111",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "Waliigalteen sun waltumsuuf\n\n",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  6,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            6,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      6,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                6
+              ]
+            },
+            {
+              "id": "bd3db46c",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "130bba14",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "5abdd636",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "b5c747de",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Footballers after a match",
+                                  "blocks": [
+                                    {
+                                      "id": "aeaa92cb",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Footballers after a match",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        7,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  7,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            7,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      7,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "e4d3435e",
+                    "type": "rawImage",
+                    "model": {
+                      "width": 2048,
+                      "height": 1152,
+                      "locator": "150e/test/d8a60d50-e138-11e9-b23c-f1ac9644bb55.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "Getty Images"
+                    },
+                    "position": [
+                      7,
+                      2
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                7
+              ]
+            },
+            {
+              "id": "729256eb",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "e18dcf52",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Haa ta'u malee, seeraan ala daangaa US ce'uun erga bara as akka walii galaati hir'achaa dhufus.\n\n",
+                      "blocks": [
+                        {
+                          "id": "f8ddf2b9",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Haa ta'u malee, seeraan ala daangaa US ce'uun erga bara as akka walii galaati hir'achaa dhufus.\n\n",
+                            "attributes": []
+                          },
+                          "position": [
+                            8,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      8,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                8
+              ]
+            },
+            {
+              "id": "2e9017b0",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                9
+              ]
+            },
+            {
+              "id": "08cef0cb",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                10
+              ]
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "id": "urn:bbc:ares::article:c4g19kgl85ko",
+        "locators": {
+          "optimoUrn": "urn:bbc:optimo:asset:c4g19kgl85ko",
+          "canonicalUrl": "https://www.bbc.com/afaanoromoo/articles/c4g19kgl85ko"
+        },
+        "type": "article",
+        "createdBy": "Afaanoromoo",
+        "language": "om",
+        "firstPublished": 1562936153914,
+        "lastPublished": 1569857685157,
+        "analyticsLabels": {
+          "producer": "Afaan Oromoo",
+          "page": "afaanoromoo.articles.c4g19kgl85ko.page"
+        },
+        "passport": {
+          "language": "om",
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/AfaanOromoo",
+          "taggings": []
+        },
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment",
+          "image",
+          "caption",
+          "altText",
+          "rawImage",
+          "urlLink",
+          "video",
+          "subheadline",
+          "aresMedia"
+        ],
+        "allowAdvertising": true
+      },
+      "promo": {
+        "headlines": {
+          "seoHeadline": "Namoonni godaanan kunneen hedduun isaanii biyya isaaniirraa miidhaa fi hiyyummaa warra baqatanii karaa.",
+          "promoHeadline": {
             "blocks": [
               {
                 "type": "text",
@@ -64,9 +816,8 @@
             ]
           }
         },
-        {
-          "type": "image",
-          "model": {
+        "images": {
+          "defaultPromoImage": {
             "blocks": [
               {
                 "type": "caption",
@@ -79,12 +830,27 @@
                           {
                             "type": "paragraph",
                             "model": {
-                              "text": "Akka baqqattoonni karaa daangaa kibba gara US hin seenne dhorkuudhaaf yaada Tiraamp dhiyeessan jedhan keessaa dallaa elektiriikaan ijaarame.\n\n",
+                              "text": "",
                               "blocks": [
                                 {
                                   "type": "fragment",
                                   "model": {
-                                    "text": "Akka baqqattoonni karaa daangaa kibba gara US hin seenne dhorkuudhaaf yaada Tiraamp dhiyeessan jedhan keessaa dallaa elektiriikaan ijaarame.\n\n",
+                                    "text": "",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Akka baqqattoonni karaa daangaa kibba gara US hin seenne dhorkuudhaaf yaada Tiraamp dhiyeessan jedhan keessaa dallaa elektiriikaan ijaarame.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Akka baqqattoonni karaa daangaa kibba gara US hin seenne dhorkuudhaaf yaada Tiraamp dhiyeessan jedhan keessaa dallaa elektiriikaan ijaarame.",
                                     "attributes": []
                                   }
                                 }
@@ -139,323 +905,1315 @@
             ]
           }
         },
-        {
-          "type": "text",
-          "model": {
-            "blocks": [
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "Kitaaba kana keessa barreeffamni jiru akka jedhutti, pirezedaantichi akka dhuunfaa isaaniitti garee gargaarsaaf yaada yeroo dhiyeessan.",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "Kitaaba kana keessa barreeffamni jiru akka jedhutti, pirezedaantichi akka dhuunfaa isaaniitti garee gargaarsaaf ",
-                        "attributes": []
-                      }
-                    },
-                    {
-                      "type": "urlLink",
-                      "model": {
-                        "text": "yaada yeroo dhiyeessan",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "yaada yeroo dhiyeessan",
-                              "attributes": []
-                            }
+        "summary": {
+          "blocks": [
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": "",
+                      "blocks": [
+                        {
+                          "type": "fragment",
+                          "model": {
+                            "text": "",
+                            "attributes": []
                           }
-                        ],
-                        "locator": "https://www.bbc.co.uk/weather",
-                        "isExternal": false
-                      }
-                    },
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": ".",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "video",
-          "model": {
-            "locator": "urn:bbc:pips:pid:p01k6msm",
-            "blocks": [
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "This is a video block containing a video Daangaarratti maaltu ta'aa jira\n\n",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "This is a video block containing a video Daangaarratti maaltu ta'aa jira\n\n",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "aresMedia",
-                "model": {
-                  "blocks": [
-                    {
-                      "blockId": "urn:bbc:ares::clip:p01k6msm",
-                      "type": "aresMediaMetadata",
-                      "model": {
-                        "id": "p01k6msm",
-                        "subType": "clip",
-                        "format": "audio_video",
-                        "title": "Five things ants can teach us about management",
-                        "synopses": {
-                          "short": "They may be tiny, but us humans could learn a thing or two from ants."
-                        },
-                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
-                        "imageCopyright": "BBC",
-                        "embedding": true,
-                        "advertising": true,
-                        "versions": [
-                          {
-                            "versionId": "p01k6msp",
-                            "types": ["Original"],
-                            "duration": 191,
-                            "durationISO8601": "PT3M11S",
-                            "warnings": {
-                              "short": "Contains strong language and adult humour.",
-                              "long": "Contains strong language and adult humour."
-                            },
-                            "availableTerritories": {
-                              "uk": true,
-                              "nonUk": true
-                            },
-                            "availableFrom": 1540218932000
-                          }
-                        ],
-                        "syndication": {
-                          "destinations": []
                         }
-                      }
-                    },
-                    {
-                      "type": "image",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "rawImage",
-                            "model": {
-                              "width": 1920,
-                              "height": 1080,
-                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg",
-                              "originCode": "mpv",
-                              "copyrightHolder": "BBC"
-                            }
-                          },
-                          {
-                            "type": "altText",
-                            "model": {
-                              "blocks": [
-                                {
-                                  "type": "text",
-                                  "model": {
-                                    "blocks": [
-                                      {
-                                        "type": "paragraph",
-                                        "model": {
-                                          "text": "Ants",
-                                          "blocks": [
-                                            {
-                                              "type": "fragment",
-                                              "model": {
-                                                "text": "Ants",
-                                                "attributes": []
-                                              }
-                                            }
-                                          ]
-                                        }
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
+                      ]
                     }
-                  ]
-                }
+                  }
+                ]
               }
-            ]
-          }
-        },
-        {
-          "type": "subheadline",
-          "model": {
-            "blocks": [
-              {
-                "type": "text",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "paragraph",
-                      "model": {
-                        "text": "Waliigalteen sun waltumsuuf\n\n",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "Waliigalteen sun waltumsuuf\n\n",
-                              "attributes": []
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "image",
-          "model": {
-            "blocks": [
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Footballers after a match",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Footballers after a match",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "rawImage",
-                "model": {
-                  "width": 2048,
-                  "height": 1152,
-                  "locator": "150e/test/d8a60d50-e138-11e9-b23c-f1ac9644bb55.jpg",
-                  "originCode": "cpsdevpb",
-                  "copyrightHolder": "Getty Images"
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "text",
-          "model": {
-            "blocks": [
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "Haa ta'u malee, seeraan ala daangaa US ce'uun erga bara as akka walii galaati hir'achaa dhufus.\n\n",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "Haa ta'u malee, seeraan ala daangaa US ce'uun erga bara as akka walii galaati hir'achaa dhufus.\n\n",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
+            }
+          ]
         }
-      ]
-    }
-  },
-  "promo": {
-    "headlines": {
-      "seoHeadline": "Namoonni godaanan kunneen hedduun isaanii biyya isaaniirraa miidhaa fi hiyyummaa warra baqatanii karaa."
+      }
     },
-    "locators": {
-      "optimoUrn": "urn:bbc:optimo:asset:c4g19kgl85ko"
-    },
-    "summary": {
-      "blocks": [
+    "secondaryData": {
+      "topStories": [
         {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
+          "headlines": {
+            "headline": "Masiriin Pireezidantii Filachuuf jirti"
+          },
+          "locators": {
+            "assetUri": "/afaanoromoo/23193700",
+            "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/23193700",
+            "curie": "http://www.bbc.co.uk/asset/981a804e-6ff9-244f-8574-1b83d5e69c18",
+            "assetId": "23193700"
+          },
+          "summary": "Filannoo wiixata eegaluun lammiileen Masirii pireezidantii haaraa filatu. Pireezidantiin amma aangoorra jira Abdulfattaa Alsiisii sagalee guddaan akka injifatu eegama.",
+          "timestamp": 1522068095000,
+          "language": "om",
+          "passport": {
+            "category": {
+              "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+              "categoryName": "News"
+            },
+            "taggings": []
+          },
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63662444",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/AD8A/test/_63662444_000011330-1.jpg",
+            "path": "/cpsdevpb/AD8A/test/_63662444_000011330-1.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Abdul fetah",
+            "caption": "Abdul fetah",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63662446",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/FBAA/test/_63662446_000011330-1.jpg",
+            "path": "/cpsdevpb/FBAA/test/_63662446_000011330-1.jpg",
+            "height": 175,
+            "width": 311,
+            "altText": "Abdul fetah",
+            "caption": "Abdul fetah",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "prominence": "standard",
+          "section": {
+            "subType": "IDX",
+            "name": "Oduu",
+            "uri": "/afaanoromoo/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:afaanoromoo/23193700",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Balaan abiddaa jiddugala gabaa Raashiyaa nama 64 ajjeese"
+          },
+          "locators": {
+            "assetUri": "/afaanoromoo/23193687",
+            "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/23193687",
+            "curie": "http://www.bbc.co.uk/asset/314a9828-a2bb-de46-84b0-11a50212fbf7",
+            "assetId": "23193687"
+          },
+          "summary": "Balaa abidda bakka gabaa Kemeeroovoo mudateen namoonni 64 yoo du'an ijoolleen 41 kan dhabaman ta'uun mirkaneeffameera jedhu angaawonni.",
+          "timestamp": 1522067828000,
+          "language": "om",
+          "passport": {
+            "category": {
+              "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+              "categoryName": "News"
+            },
+            "taggings": []
+          },
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63662364",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/B4F6/test/_63662364_000015674-1.jpg",
+            "path": "/cpsdevpb/B4F6/test/_63662364_000015674-1.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "fire fighters",
+            "caption": "Hoojjettoonni yeroo balaa hanga 660 ta'an bakka balaa kanaatti argamuun lubbu baraaruuf tattaaffii godhurratti argamu.",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63662367",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/12A26/test/_63662367_000015674-1.jpg",
+            "path": "/cpsdevpb/12A26/test/_63662367_000015674-1.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "fire fighters",
+            "caption": "Hoojjettoonni yeroo balaa hanga 660 ta'an bakka balaa kanaatti argamuun lubbu baraaruuf tattaaffii godhurratti argamu.",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "prominence": "standard",
+          "section": {
+            "subType": "IDX",
+            "name": "Oduu",
+            "uri": "/afaanoromoo/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:afaanoromoo/23193687",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Warri Buna dhugan tarii umurii dheeraa jiraachuu danda'u malu"
+          },
+          "locators": {
+            "assetUri": "/afaanoromoo/oduu-23141504",
+            "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-23141504",
+            "curie": "http://www.bbc.co.uk/asset/53cd0b56-3546-944f-a648-6f159572ccb9",
+            "assetId": "23141504"
+          },
+          "summary": "Guyyaatti hanga buna shiinii sadii dhuguun umurii dheeressuu akka malu qorannoon biyyoota Awurooppaa 10 tti gaggeefame tokko mul'iseera.",
+          "timestamp": 1503578690000,
+          "language": "om",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63579778",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/156F5/test/_63579778_bunaoromoo.jpg",
+            "path": "/cpsdevpb/156F5/test/_63579778_bunaoromoo.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Yeroo buna buusan",
+            "copyrightHolder": "Yadeta",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63579779",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/17E05/test/_63579779_bunaoromoo.jpg",
+            "path": "/cpsdevpb/17E05/test/_63579779_bunaoromoo.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Yeroo buna buusan",
+            "copyrightHolder": "Yadeta",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "prominence": "standard",
+          "id": "urn:bbc:ares::asset:afaanoromoo/oduu-23141504",
+          "type": "cps"
+        }
+      ],
+      "features": [
+        {
+          "headlines": {
+            "headline": "Qorichi walmakaa HIV dachaa baay'een hir'isa jedhame"
+          },
+          "locators": {
+            "assetUri": "/afaanoromoo/oduu-23142445",
+            "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-23142445",
+            "curie": "http://www.bbc.co.uk/asset/b99335df-55f6-9741-9240-8477ee889a39",
+            "assetId": "23142445"
+          },
+          "summary": "Akkaataa qoricha HIV itti kennamu fooyyeessuun lubbuu nama 10,000 olii waggaatti du'a irraa oolchuun ni danda'ama jedhu qoratoonni fayyaa.",
+          "timestamp": 1501077413000,
+          "language": "om",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63580963",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/902C/test/_63580963_2ed566fb-e91c-41fb-b610-c618ca1a60f4.jpg",
+            "path": "/cpsdevpb/902C/test/_63580963_2ed566fb-e91c-41fb-b610-c618ca1a60f4.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Qoricha HIV/AIDS kan walmakaa",
+            "caption": "Qoricha HIV/AIDS kan walmakaa",
+            "copyrightHolder": "Getty Images",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63581073",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/909A/test/_63581073_2ed566fb-e91c-41fb-b610-c618ca1a60f4.jpg",
+            "path": "/cpsdevpb/909A/test/_63581073_2ed566fb-e91c-41fb-b610-c618ca1a60f4.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Qoricha HIV/AIDS kan walmakaa",
+            "caption": "Qoricha HIV/AIDS kan walmakaa",
+            "copyrightHolder": "Getty Images",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "id": "urn:bbc:ares::asset:afaanoromoo/oduu-23142445",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Dacheen pilaaneetii pilaastikii ta’uuf deemti"
+          },
+          "locators": {
+            "assetUri": "/afaanoromoo/oduu-23141324",
+            "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-23141324",
+            "curie": "http://www.bbc.co.uk/asset/80c48109-3d27-454c-b366-f1367b0e3728",
+            "assetId": "23141324"
+          },
+          "summary": "Pilaastikiin hanga har'aatti Addunyaan oomishte ulfaatina arboota biliyoona 1 waliin wal-qixa ta'uu qorattoonni Ameerikaa himan.",
+          "timestamp": 1500545492000,
+          "language": "om",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63579513",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/7B6D/test/_63579513_904e4694-d349-4acd-a31c-1de0f9a577cc.jpg",
+            "path": "/cpsdevpb/7B6D/test/_63579513_904e4694-d349-4acd-a31c-1de0f9a577cc.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Dachee +Faalama qilleensaa",
+            "caption": "Omishnii Pilaastikii harki caalu meeshaalee saamsuuf oola.",
+            "copyrightHolder": "Getty Images",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "id": "urn:bbc:ares::asset:afaanoromoo/oduu-23141324",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Israa'el meeshaalee sakkata'iinsaa tibbana baha Jeerusaalemitti dhaabde buqqiste"
+          },
+          "locators": {
+            "assetUri": "/afaanoromoo/23142384",
+            "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/23142384",
+            "curie": "http://www.bbc.co.uk/asset/c9ea16d8-819c-fe46-bb49-6b1484b638f0",
+            "assetId": "23142384"
+          },
+          "summary": "Israa'el meeshaalee sakkata'iinsaa kunneen iddoo amantaa baha Jeerusaalemitti erga dhaabde turtullee mormii Paalaastaayinotaan akka buqqa'u taasifteetti.",
+          "timestamp": 1500991168000,
+          "language": "om",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63580942",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/614C/test/_63580942_e386a2fd-c16c-4c6e-bb28-d72b4051380c.jpg",
+            "path": "/cpsdevpb/614C/test/_63580942_e386a2fd-c16c-4c6e-bb28-d72b4051380c.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Meeshaaleen sakkata'iinsaa sibiilaa walgahii koreen tasgabbii halkan edaa taasiseen booda akka buqqa'an taasifameera",
+            "caption": "Meeshaaleen sakkata'iinsaa sibiilaa walgahii koreen tasgabbii halkan edaa taasiseen booda akka buqqa'an taasifameera",
+            "copyrightHolder": "Reuters",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63580938",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/147C4/test/_63580938_e386a2fd-c16c-4c6e-bb28-d72b4051380c.jpg",
+            "path": "/cpsdevpb/147C4/test/_63580938_e386a2fd-c16c-4c6e-bb28-d72b4051380c.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Meeshaaleen sakkata'iinsaa sibiilaa walgahii koreen tasgabbii halkan edaa taasiseen booda akka buqqa'an taasifameera",
+            "caption": "Meeshaaleen sakkata'iinsaa sibiilaa walgahii koreen tasgabbii halkan edaa taasiseen booda akka buqqa'an taasifameera",
+            "copyrightHolder": "Reuters",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Oduu",
+            "uri": "/afaanoromoo/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:afaanoromoo/23142384",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Guyyaa xumuraa dhiifama Saawudii"
+          },
+          "locators": {
+            "assetUri": "/afaanoromoo/oduu-23142374",
+            "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-23142374",
+            "curie": "http://www.bbc.co.uk/asset/b9821d9f-5bad-e14b-a1da-be550be3dbbb",
+            "assetId": "23142374"
+          },
+          "summary": "Saawudii Arabiyaan namoonni seeraan ala biyyattii keessa jiraatan akka ba'aniif guyyoota araaraa 90 kennitee turte. Guyyaan dhumaas har'a. Tarkaanfiin fudhatamu maali?",
+          "timestamp": 1500975975000,
+          "language": "om",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63580884",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/BEA8/test/_63580884_ethiopianimmigrantsreturningfromsaudiarabia.jpg",
+            "path": "/cpsdevpb/BEA8/test/_63580884_ethiopianimmigrantsreturningfromsaudiarabia.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Ethiopian immigrants returning from Saudi Arabia",
+            "copyrightHolder": "Getty Images",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63580934",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/AB84/test/_63580934_ethiopianimmigrantsreturningfromsaudiarabia.jpg",
+            "path": "/cpsdevpb/AB84/test/_63580934_ethiopianimmigrantsreturningfromsaudiarabia.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Ethiopian immigrants returning from Saudi Arabia",
+            "copyrightHolder": "Getty Images",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "id": "urn:bbc:ares::asset:afaanoromoo/oduu-23142374",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Waldhabbiiwwan gurguddoo taphattootaafi leenjistootaa shan"
+          },
+          "locators": {
+            "assetUri": "/afaanoromoo/oduu-23143414",
+            "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-23143414",
+            "curie": "http://www.bbc.co.uk/asset/f81b9dd7-7d93-7149-93c4-8b7f3ac600a3",
+            "assetId": "23143414"
+          },
+          "summary": "Atleet Caalaa Bayyuu leenjisaasaa buunyaan rukutuun, waldorgommiifi shaakallii kamuurraa waggoota lamaaf dhorgameera.",
+          "timestamp": 1501251390000,
+          "language": "om",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63582134",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/A878/test/_63582134_gettyimages-590223180.jpg",
+            "path": "/cpsdevpb/A878/test/_63582134_gettyimages-590223180.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Atleet Caalaa Baayyuun Atleetota Olompika Riyoo irratti hirmaatan keessaa tokko.",
+            "caption": "Atleet Caalaa Baayyuun Atleetota Olompika Riyoo irratti hirmaatan keessaa tokko.",
+            "copyrightHolder": "Getty Images",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63582253",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/899C/test/_63582253_gettyimages-590223180.jpg",
+            "path": "/cpsdevpb/899C/test/_63582253_gettyimages-590223180.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Atleet Caalaa Baayyuun Atleetota Olompika Riyoo irratti hirmaatan keessaa tokko.",
+            "caption": "Atleet Caalaa Baayyuun Atleetota Olompika Riyoo irratti hirmaatan keessaa tokko.",
+            "copyrightHolder": "Getty Images",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "id": "urn:bbc:ares::asset:afaanoromoo/oduu-23143414",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Taphattoonni kilabii Jimmaa shaampiyoonaa ta'an lafa badhaafamuufi"
+          },
+          "locators": {
+            "assetUri": "/afaanoromoo/oduu-23142344",
+            "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-23142344",
+            "curie": "http://www.bbc.co.uk/asset/331fc559-08df-134a-92d9-644a8c4ed3b9",
+            "assetId": "23142344"
+          },
+          "summary": "Taphattoota kilaba kubbaa miilaa bulchiinsa magaalaa Jimmaa shaampiyoonaa liigii olaanaa ta'anif badhaasni qophaa'e.",
+          "timestamp": 1500988312000,
+          "language": "om",
+          "cpsType": "STY",
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "id": "urn:bbc:ares::asset:afaanoromoo/oduu-23142344",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Harar: Kabaja Waggaa 1010ffaa Makkaa Afriikaa"
+          },
+          "locators": {
+            "assetUri": "/afaanoromoo/oduu-23141354",
+            "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-23141354",
+            "curie": "http://www.bbc.co.uk/asset/7d2ba3d6-d6a1-3c42-b049-e2c8c21562b5",
+            "assetId": "23141354"
+          },
+          "summary": "Magaalaan Makkaa Afriikaa keessaa jedhamuun beekamtu Harar, Madiinaa, Makkaafi Yerusaalemitti aantee magaalaa qulqulluu jedhamuunis beekamti.",
+          "timestamp": 1500543754000,
+          "language": "om",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63579681",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/4909/test/_63579681_23bdfe24-42ed-4708-957d-85764e4d9187.jpg",
+            "path": "/cpsdevpb/4909/test/_63579681_23bdfe24-42ed-4708-957d-85764e4d9187.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Harar",
+            "caption": "Karra seensaa Magaalaa Harar",
+            "copyrightHolder": "CNN",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "id": "urn:bbc:ares::asset:afaanoromoo/oduu-23141354",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Goondaan Awutobisii gurguddoo sochoosuu akka dandeessu beektuu?"
+          },
+          "locators": {
+            "assetUri": "/afaanoromoo/oduu-23141155",
+            "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-23141155",
+            "curie": "http://www.bbc.co.uk/asset/cc2c6b51-68e5-6c42-bc64-5216366a2aee",
+            "assetId": "23141155"
+          },
+          "summary": "Gareen barattootaa Yuunivarsiitii Neezarlaandis, Awutobisii guddaa asiidii goondaan maddisiistu \"Formic Acid\" jedhamuun socho'u kalaqan.",
+          "timestamp": 1500543932000,
+          "language": "om",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63579500",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/0255/test/_63579500_c60b8d41-a89e-44c6-91a7-4b14627beb8e.jpg",
+            "path": "/cpsdevpb/0255/test/_63579500_c60b8d41-a89e-44c6-91a7-4b14627beb8e.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Goondaa Awutobisii",
+            "caption": "Goondaan asiidii kana maddisiisu yoo waa ciniinu dha",
+            "copyrightHolder": "Getty Images",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "overtypedSummary": "Gareen barattootaa Awutobisii guddaa asiidii goondaan maddisiistu \"Formic Acid\" jedhamuun socho'u kalaqan.",
+          "id": "urn:bbc:ares::asset:afaanoromoo/oduu-23141155",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Amerikaafi Chaayinaan daldalarratti walii galuu dhaban"
+          },
+          "locators": {
+            "assetUri": "/afaanoromoo/oduu-23141334",
+            "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-23141334",
+            "curie": "http://www.bbc.co.uk/asset/f964fa57-e653-1940-9165-a696c81e4302",
+            "assetId": "23141334"
+          },
+          "summary": "Mariin haalaan eegame bu'aa malee xumuramuun isaa fuula-duratti biyyoota addunyaa kaan daldala isaan waliin qabanirrattii dhiibbaa uumuu mala.",
+          "timestamp": 1500544557000,
+          "language": "om",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63579523",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/7F55/test/_63579523_daladalaamerikaafichaayinaa.jpg",
+            "path": "/cpsdevpb/7F55/test/_63579523_daladalaamerikaafichaayinaa.jpg",
+            "height": 576,
+            "width": 1024,
+            "altText": "Daldala Amerikaafi Chaayinaa",
+            "copyrightHolder": "Getty Images",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63579502",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/5075/test/_63579502_daladalaamerikaafichaayinaa.jpg",
+            "path": "/cpsdevpb/5075/test/_63579502_daladalaamerikaafichaayinaa.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Daldala Amerikaafi Chaayinaa",
+            "copyrightHolder": "Getty Images",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "id": "urn:bbc:ares::asset:afaanoromoo/oduu-23141334",
+          "type": "cps"
+        }
+      ],
+      "mostRead": {
+        "generated": "2023-02-18T03:06:57.663Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
+        "totalRecords": 20,
+        "records": [
+          {
+            "id": "68ed70c1-995c-ba4e-ae14-1f6b6cf0c202",
+            "rank": 1,
+            "count": 9900,
+            "urn": "urn:bbc:curie:asset:68ed70c1-995c-ba4e-ae14-1f6b6cf0c202",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Giinii: Tulaan balfaa sigigaachuun namoota 10 galaafate",
+                "headline": "Giinii: Tulaan balfaa sigigaachuun namoota 10 galaafate"
+              },
+              "locators": {
+                "assetUri": "/afaanoromoo/23149852",
+                "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/23149852",
+                "curie": "http://www.bbc.co.uk/asset/68ed70c1-995c-ba4e-ae14-1f6b6cf0c202",
+                "assetId": "23149852"
+              },
+              "summary": "Itiyophiyaan hoo erga balaa Qosheetii as maal hojjatte?",
+              "timestamp": 1503563823000,
+              "language": "om",
+              "indexImage": {
+                "id": "63589730",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/0ED6/test/_63589730_gettyimages-837239342.jpg",
+                "path": "/cpsdevpb/0ED6/test/_63589730_gettyimages-837239342.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Haadha bo'aa jirtu",
+                "caption": "Balaa kanaan warra miidhaman",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afaanoromoo/23149852",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "a663a1a0-58b9-4f42-a326-d3315c8c76d4",
+            "rank": 2,
+            "count": 9107,
+            "urn": "urn:bbc:curie:asset:a663a1a0-58b9-4f42-a326-d3315c8c76d4",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Dararama shakkamtoota Bokkoo Haaraam",
+                "headline": "Dararama shakkamtoota Bokkoo Haaraam"
+              },
+              "locators": {
+                "assetUri": "/afaanoromoo/oduu-23141364",
+                "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-23141364",
+                "curie": "http://www.bbc.co.uk/asset/a663a1a0-58b9-4f42-a326-d3315c8c76d4",
+                "assetId": "23141364"
+              },
+              "summary": "Akka garee mirgaaf falmaniitti, shakkamtoonni waraana Bookoo Kameeruun keessatti Haaraam naga eegdootaan ‘gara jabiinaan dararaman’ akka gareen mirgootaa jedheetti",
+              "timestamp": 1500544954000,
+              "language": "om",
+              "indexImage": {
+                "id": "63579623",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/7FB9/test/_63579623_e9a3f679-b574-4570-bc33-a6acc2684a65.jpg",
+                "path": "/cpsdevpb/7FB9/test/_63579623_e9a3f679-b574-4570-bc33-a6acc2684a65.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Yeroo looltootnii Kaameeroon Bookkoo Haraamiin loluuf deeman",
+                "caption": "Kaameeroon yeroo dheeraaf loltoota Bookoo Haaraam lolaa turte",
+                "copyrightHolder": "AFP",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afaanoromoo/oduu-23141364",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "fc29a7e4-021a-3843-a61e-024a1bf34ce7",
+            "rank": 3,
+            "count": 8904,
+            "urn": "urn:bbc:curie:asset:fc29a7e4-021a-3843-a61e-024a1bf34ce7",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Waggaa 5 keessatti dhibamtoota moora ijaa kuma 600 agartuu sirreessuuf hojjatamaa jira",
+                "headline": "Waggaa 5 keessatti dhibamtoota moora ijaa kuma 600 agartuu sirreessuuf hojjatamaa jira"
+              },
+              "locators": {
+                "assetUri": "/afaanoromoo/23126958",
+                "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/23126958",
+                "curie": "http://www.bbc.co.uk/asset/fc29a7e4-021a-3843-a61e-024a1bf34ce7",
+                "assetId": "23126958"
+              },
+              "summary": "Waggaa 5 keessatti dhibamtoota moora ijaa kuma 600 agartuu sirreessuuf hojjatamaa jira - REAL OROMO TEXT",
+              "timestamp": 1495441949000,
+              "language": "om",
+              "indexImage": {
+                "id": "63537740",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/12A5/test/_63537740_160809182842-ethiopia-oromo-protest-exlarge-169.jpg",
+                "path": "/cpsdevpb/12A5/test/_63537740_160809182842-ethiopia-oromo-protest-exlarge-169.jpg",
+                "height": 360,
+                "width": 640,
+                "altText": "Afaan Oromoo",
+                "copyrightHolder": "OTHER",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afaanoromoo/23126958",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "a1c09b62-26ff-1b44-b16e-538706da05d5",
+            "rank": 4,
+            "count": 8573,
+            "urn": "urn:bbc:curie:asset:a1c09b62-26ff-1b44-b16e-538706da05d5",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Paartileen mormituu tooftaa garamitti jijjiirani?",
+                "headline": "Paartileen mormituu Itoophiyaa keessa jiran tooftaa qabsoo jijjiiranii?"
+              },
+              "locators": {
+                "assetUri": "/afaanoromoo/oduu-23149871",
+                "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-23149871",
+                "curie": "http://www.bbc.co.uk/asset/a1c09b62-26ff-1b44-b16e-538706da05d5",
+                "assetId": "23149871"
+              },
+              "summary": "Tooftaaleen qabsoo daandii cufuu, mana taa’uu, gabaa lagachuufi dubbachuu dhabuun maloota siyaasaa haaraa Itoophiyaa keessa baramaa dhufanidha. Hagasuma garuu mootummaa gaaga'an.",
+              "timestamp": 1503565837000,
+              "language": "om",
+              "indexImage": {
+                "id": "63589767",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/12BFE/test/_63589767_21103854_1834718383223908_91322132_o.jpg",
+                "path": "/cpsdevpb/12BFE/test/_63589767_21103854_1834718383223908_91322132_o.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Awutobisii",
+                "caption": "Dhangaggootti awutoobisiin akkasitti dhaaabatan",
+                "copyrightHolder": "Socail Media/Kefena Ifa",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afaanoromoo/oduu-23149871",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "c2df150e-684a-fd44-ba29-57bb78a64f99",
+            "rank": 5,
+            "count": 8328,
+            "urn": "urn:bbc:curie:asset:c2df150e-684a-fd44-ba29-57bb78a64f99",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "iPhone: Jalqabbii bilbila ismaartii",
+                "headline": "Waggaa 10ffaa iPhone: Jalqabbii bilbila ismaartii"
+              },
+              "locators": {
+                "assetUri": "/afaanoromoo/23149854",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:c2df150e-684a-fd44-ba29-57bb78a64f99",
+                "assetId": "23149854",
+                "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/23149854",
+                "curie": "http://www.bbc.co.uk/asset/c2df150e-684a-fd44-ba29-57bb78a64f99"
+              },
+              "summary": "Addunyaa kanarratti Apple - kaampaanii ayifoon oomishu, bu'aa ayfoonirraa buusu argatan lama yookaan sadi qofatu jira.",
+              "timestamp": 1503564831000,
+              "language": "om",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Afaanoromoo",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63589760",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/1A8E/test/_63589760_19139991-05e8-4f71-b4bc-d9c01f3e5b13.jpg",
+                "path": "/cpsdevpb/1A8E/test/_63589760_19139991-05e8-4f71-b4bc-d9c01f3e5b13.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Bilbiloota ismaart",
+                "caption": "Bilbiloota ismaart",
+                "copyrightHolder": "Thinkstock",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afaanoromoo/23149854",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "80c48109-3d27-454c-b366-f1367b0e3728",
+            "rank": 6,
+            "count": 8295,
+            "urn": "urn:bbc:curie:asset:80c48109-3d27-454c-b366-f1367b0e3728",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Dacheen pilaaneetii pilaastikii ta’uuf deemti",
+                "headline": "Dacheen keenya pilaaneetii pilaastikii ta’uuf deemti"
+              },
+              "locators": {
+                "assetUri": "/afaanoromoo/oduu-23141324",
+                "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-23141324",
+                "curie": "http://www.bbc.co.uk/asset/80c48109-3d27-454c-b366-f1367b0e3728",
+                "assetId": "23141324"
+              },
+              "summary": "Pilaastikiin hanga har'aatti Addunyaan oomishte ulfaatina arboota biliyoona 1 waliin wal-qixa ta'uu qorattoonni Ameerikaa himan.",
+              "timestamp": 1500545492000,
+              "language": "om",
+              "indexImage": {
+                "id": "63579513",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/7B6D/test/_63579513_904e4694-d349-4acd-a31c-1de0f9a577cc.jpg",
+                "path": "/cpsdevpb/7B6D/test/_63579513_904e4694-d349-4acd-a31c-1de0f9a577cc.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Dachee +Faalama qilleensaa",
+                "caption": "Omishnii Pilaastikii harki caalu meeshaalee saamsuuf oola.",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afaanoromoo/oduu-23141324",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "1d46df0f-af24-244d-8a06-73995c890ced",
+            "rank": 7,
+            "count": 8141,
+            "urn": "urn:bbc:curie:asset:1d46df0f-af24-244d-8a06-73995c890ced",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Atileetotii addunyaa jajjaboon maratoonii Londonii fi Bostoniif walti kophaa’uutti jiran 38",
+                "headline": "Atileetotii addunyaa jajjaboon maratoonii Londonii fi Bostoniif walti kophaa’uutti jiran 38"
+              },
+              "locators": {
+                "assetUri": "/afaanoromoo/news-23125173",
+                "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/news-23125173",
+                "curie": "http://www.bbc.co.uk/asset/1d46df0f-af24-244d-8a06-73995c890ced",
+                "assetId": "23125173"
+              },
+              "summary": "Atileetotii addunyaa jajjaboon maratoonii Londonii fi Bostoniif walti kophaa’uutti jiran",
+              "timestamp": 1494862704000,
+              "language": "om",
+              "indexImage": {
+                "id": "63536667",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/12B77/test/_63536667__96052386_trophy_getty.jpg",
+                "path": "/cpsdevpb/12B77/test/_63536667__96052386_trophy_getty.jpg",
+                "height": 270,
+                "width": 480,
+                "altText": "Oromo",
+                "caption": "Oromo",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afaanoromoo/news-23125173",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "cc2c6b51-68e5-6c42-bc64-5216366a2aee",
+            "rank": 8,
+            "count": 8097,
+            "urn": "urn:bbc:curie:asset:cc2c6b51-68e5-6c42-bc64-5216366a2aee",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Goondaan Awutobisii gurguddoo sochoosuu akka dandeessu beektuu?",
+                "headline": "Goondaan Awutobisii gurguddoo sochoosuu akka dandeessu beektuu?"
+              },
+              "locators": {
+                "assetUri": "/afaanoromoo/oduu-23141155",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:cc2c6b51-68e5-6c42-bc64-5216366a2aee",
+                "assetId": "23141155",
+                "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-23141155",
+                "curie": "http://www.bbc.co.uk/asset/cc2c6b51-68e5-6c42-bc64-5216366a2aee"
+              },
+              "summary": "Gareen barattootaa Yuunivarsiitii Neezarlaandis, Awutobisii guddaa asiidii goondaan maddisiistu \"Formic Acid\" jedhamuun socho'u kalaqan.",
+              "timestamp": 1500543932000,
+              "language": "om",
+              "indexImage": {
+                "id": "63579500",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/0255/test/_63579500_c60b8d41-a89e-44c6-91a7-4b14627beb8e.jpg",
+                "path": "/cpsdevpb/0255/test/_63579500_c60b8d41-a89e-44c6-91a7-4b14627beb8e.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Goondaa Awutobisii",
+                "caption": "Goondaan asiidii kana maddisiisu yoo waa ciniinu dha",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afaanoromoo/oduu-23141155",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "8ff54950-8e20-e347-bf97-44fcca1b7e69",
+            "rank": 9,
+            "count": 7213,
+            "urn": "urn:bbc:curie:asset:8ff54950-8e20-e347-bf97-44fcca1b7e69",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Bu'aalee kalaqaa Ardii Afriikaa keessaa",
+                "headline": "Bu'aalee kalaqaa Ardii Afriikaa beekuu qabnu keessaa"
+              },
+              "locators": {
+                "assetUri": "/afaanoromoo/oduu-23140964",
+                "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-23140964",
+                "curie": "http://www.bbc.co.uk/asset/8ff54950-8e20-e347-bf97-44fcca1b7e69",
+                "assetId": "23140964"
+              },
+              "summary": "Kalaqawwan bara kanaa ardii Afiikaa rakkoo ni furuu jedhamanii amanaman keessaa isaan muraasaa waliin isiin wal yaa barsiifnu",
+              "timestamp": 1502893086000,
+              "language": "om",
+              "id": "urn:bbc:ares::asset:afaanoromoo/oduu-23140964",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "4705274d-7fe0-e142-8219-1736f20f3a25",
+            "rank": 10,
+            "count": 6880,
+            "urn": "urn:bbc:curie:asset:4705274d-7fe0-e142-8219-1736f20f3a25",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Atileetotii addunyaa jajjaboon maratoonii Londonii fi Bostoniif walti kophaa’uutti jiran 51",
+                "headline": "Atileetotii addunyaa jajjaboon maratoonii Londonii fi Bostoniif walti kophaa’uutti jiran 51"
+              },
+              "locators": {
+                "assetUri": "/afaanoromoo/oduu-23146564",
+                "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-23146564",
+                "curie": "http://www.bbc.co.uk/asset/4705274d-7fe0-e142-8219-1736f20f3a25",
+                "assetId": "23146564"
+              },
+              "summary": "Atileetotii addunyaa jajjaboon maratoonii Londonii fi Bostoniif walti kophaa’uutti jiran",
+              "timestamp": 1502186573000,
+              "language": "om",
+              "indexImage": {
+                "id": "63536667",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/12B77/test/_63536667__96052386_trophy_getty.jpg",
+                "path": "/cpsdevpb/12B77/test/_63536667__96052386_trophy_getty.jpg",
+                "height": 270,
+                "width": 480,
+                "altText": "Oromo",
+                "caption": "Oromo",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afaanoromoo/oduu-23146564",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "267cfcf6-3d89-0949-b2bf-0ded15d64180",
+            "rank": 11,
+            "count": 6756,
+            "urn": "urn:bbc:curie:asset:267cfcf6-3d89-0949-b2bf-0ded15d64180",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Waa’ee Wal’aansa fayyaa Masirii durii kana beektuu?",
+                "headline": "Waa’ee Wal’aansa fayyaa Masirii durii kana beektuu?"
+              },
+              "locators": {
+                "assetUri": "/afaanoromoo/oduu-23144174",
+                "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-23144174",
+                "curie": "http://www.bbc.co.uk/asset/267cfcf6-3d89-0949-b2bf-0ded15d64180",
+                "assetId": "23144174"
+              },
+              "summary": "Lammiileen Masirii barmaatilee wal’aansa fayyaa waggoota 3000 dura itti fayyadamaa turan, kan wayita amma bifa ammayyaan addunyaan itti dhimma bahaa jiru hedduu qabu turan.",
+              "timestamp": 1501597556000,
+              "language": "om",
+              "indexImage": {
+                "id": "63582894",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/C2A4/test/_63582894_5a186ab2-b2c9-4db8-9b5f-b1c77317c3c4.jpg",
+                "path": "/cpsdevpb/C2A4/test/_63582894_5a186ab2-b2c9-4db8-9b5f-b1c77317c3c4.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Egypt Fayyaa",
+                "caption": "Fakkii barmaatilee wal'aansa fayyaa Masirii durii agarsiisu",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afaanoromoo/oduu-23144174",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "7d2ba3d6-d6a1-3c42-b049-e2c8c21562b5",
+            "rank": 12,
+            "count": 6520,
+            "urn": "urn:bbc:curie:asset:7d2ba3d6-d6a1-3c42-b049-e2c8c21562b5",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Harar: Kabaja Waggaa 1010ffaa Makkaa Afriikaa",
+                "headline": "Harar: Kabaja Waggaa 1010ffaa Makkaa Afriikaa"
+              },
+              "locators": {
+                "assetUri": "/afaanoromoo/oduu-23141354",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:7d2ba3d6-d6a1-3c42-b049-e2c8c21562b5",
+                "assetId": "23141354",
+                "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-23141354",
+                "curie": "http://www.bbc.co.uk/asset/7d2ba3d6-d6a1-3c42-b049-e2c8c21562b5"
+              },
+              "summary": "Magaalaan Makkaa Afriikaa keessaa jedhamuun beekamtu Harar, Madiinaa, Makkaafi Yerusaalemitti aantee magaalaa qulqulluu jedhamuunis beekamti.",
+              "timestamp": 1500543754000,
+              "language": "om",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Afaanoromoo",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63579681",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/4909/test/_63579681_23bdfe24-42ed-4708-957d-85764e4d9187.jpg",
+                "path": "/cpsdevpb/4909/test/_63579681_23bdfe24-42ed-4708-957d-85764e4d9187.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Harar",
+                "caption": "Karra seensaa Magaalaa Harar",
+                "copyrightHolder": "CNN",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afaanoromoo/oduu-23141354",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "e036e132-9162-aa47-b079-3e72ab6fe888",
+            "rank": 13,
+            "count": 6379,
+            "urn": "urn:bbc:curie:asset:e036e132-9162-aa47-b079-3e72ab6fe888",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Sababa Ertiraafi Tigraay dorgommii biskileetaan milkaa'aniif",
+                "headline": "Sababa Ertiraafi Tigraay dorgommii biskileetaan milkaa'aniif"
+              },
+              "locators": {
+                "assetUri": "/afaanoromoo/23149851",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:e036e132-9162-aa47-b079-3e72ab6fe888",
+                "assetId": "23149851",
+                "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/23149851",
+                "curie": "http://www.bbc.co.uk/asset/e036e132-9162-aa47-b079-3e72ab6fe888"
+              },
+              "summary": "Maraawiii Qidduus lammii Ertiraa dorgommii biskileetaan milkaa'an keessaa isa angafa",
+              "timestamp": 1503564013000,
+              "language": "om",
+              "indexImage": {
+                "id": "63589728",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/1436E/test/_63589728_gettyimages-182015733.jpg",
+                "path": "/cpsdevpb/1436E/test/_63589728_gettyimages-182015733.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Maraawiii Qidduus",
+                "caption": "Maraawiii Qidduus Filoorens, Itaaliitti",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afaanoromoo/23149851",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "f81b9dd7-7d93-7149-93c4-8b7f3ac600a3",
+            "rank": 14,
+            "count": 6237,
+            "urn": "urn:bbc:curie:asset:f81b9dd7-7d93-7149-93c4-8b7f3ac600a3",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Waldhabbiiwwan gurguddoo taphattootaafi leenjistootaa shan",
+                "headline": "Wal dhabdeewwan gurguddoo taphattootaafi leenjistoota gidduu uumame beektuu?"
+              },
+              "locators": {
+                "assetUri": "/afaanoromoo/oduu-23143414",
+                "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-23143414",
+                "curie": "http://www.bbc.co.uk/asset/f81b9dd7-7d93-7149-93c4-8b7f3ac600a3",
+                "assetId": "23143414"
+              },
+              "summary": "Atleet Caalaa Bayyuu leenjisaasaa buunyaan rukutuun, waldorgommiifi shaakallii kamuurraa waggoota lamaaf dhorgameera.",
+              "timestamp": 1501251390000,
+              "language": "om",
+              "passport": {
+                "language": "om",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/AfaanOromoo",
+                "locator": "urn:bbc:cps:curie:asset:f81b9dd7-7d93-7149-93c4-8b7f3ac600a3",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/coreconcepts/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/f2b5dd0e-dda0-454c-893d-792d46ff48c3#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/passport/predicate/About",
+                    "value": "http://www.bbc.co.uk/things/01be9174-f16e-4076-99eb-2a2ea4ddf695#id"
+                  }
+                ],
+                "predicates": {
+                  "about": [
                     {
-                      "model": {
-                        "attributes": [],
-                        "text": ""
-                      },
-                      "type": "fragment"
+                      "value": "http://www.bbc.co.uk/things/01be9174-f16e-4076-99eb-2a2ea4ddf695#id",
+                      "thingLabel": "Uummata Oromoo",
+                      "thingUri": "http://www.bbc.co.uk/things/01be9174-f16e-4076-99eb-2a2ea4ddf695#id",
+                      "thingId": "01be9174-f16e-4076-99eb-2a2ea4ddf695",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Oromo_people"
+                      ],
+                      "thingEnglishLabel": "Oromo people",
+                      "type": "about"
                     }
                   ],
-                  "text": ""
-                },
-                "type": "paragraph"
-              }
-            ]
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/f2b5dd0e-dda0-454c-893d-792d46ff48c3#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ]
+                }
+              },
+              "indexImage": {
+                "id": "63582134",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/A878/test/_63582134_gettyimages-590223180.jpg",
+                "path": "/cpsdevpb/A878/test/_63582134_gettyimages-590223180.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Atleet Caalaa Baayyuun Atleetota Olompika Riyoo irratti hirmaatan keessaa tokko.",
+                "caption": "Atleet Caalaa Baayyuun Atleetota Olompika Riyoo irratti hirmaatan keessaa tokko.",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afaanoromoo/oduu-23143414",
+              "type": "cps"
+            }
           },
-          "type": "text"
-        }
-      ]
-    },
-    "timestamp": 1569857685157,
-    "id": "urn:bbc:ares::article:c4g19kgl85ko",
-    "type": "cps"
+          {
+            "id": "b99335df-55f6-9741-9240-8477ee889a39",
+            "rank": 15,
+            "count": 5736,
+            "urn": "urn:bbc:curie:asset:b99335df-55f6-9741-9240-8477ee889a39",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Qorichi walmakaa HIV dachaa baay'een hir'isa jedhame",
+                "headline": "Qoricha walkeessa fudhachuun du'a HIV dhibbantaa 27'n gad-buusa, qorannoo"
+              },
+              "locators": {
+                "assetUri": "/afaanoromoo/oduu-23142445",
+                "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-23142445",
+                "curie": "http://www.bbc.co.uk/asset/b99335df-55f6-9741-9240-8477ee889a39",
+                "assetId": "23142445"
+              },
+              "summary": "Akkaataa qoricha HIV itti kennamu fooyyeessuun lubbuu nama 10,000 olii waggaatti du'a irraa oolchuun ni danda'ama jedhu qoratoonni fayyaa.",
+              "timestamp": 1501077413000,
+              "language": "om",
+              "indexImage": {
+                "id": "63580963",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/902C/test/_63580963_2ed566fb-e91c-41fb-b610-c618ca1a60f4.jpg",
+                "path": "/cpsdevpb/902C/test/_63580963_2ed566fb-e91c-41fb-b610-c618ca1a60f4.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Qoricha HIV/AIDS kan walmakaa",
+                "caption": "Qoricha HIV/AIDS kan walmakaa",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afaanoromoo/oduu-23142445",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "bf0e78ad-e965-2046-8900-c4f25e6caa84",
+            "rank": 16,
+            "count": 5449,
+            "urn": "urn:bbc:curie:asset:bf0e78ad-e965-2046-8900-c4f25e6caa84",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Dhiphinni waggoota afuriin sammuun dulloomsa jedha qo'annoon",
+                "headline": "Dhiphachuun waggoota afuriin sammuu dulloomsa"
+              },
+              "locators": {
+                "assetUri": "/afaanoromoo/oduu-23140526",
+                "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-23140526",
+                "curie": "http://www.bbc.co.uk/asset/bf0e78ad-e965-2046-8900-c4f25e6caa84",
+                "assetId": "23140526"
+              },
+              "summary": "Sammuun namoota dhiphatanii kan namoota kaanii caalaa dafee akka dulloomu qorannoon biyya Ameerikaatti adeemsifame tokko mul'ise.",
+              "timestamp": 1500542467000,
+              "language": "om",
+              "indexImage": {
+                "id": "63579462",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/6781/test/_63579462_828b4ee1-7888-43bd-a68f-93e4809126dd.jpg",
+                "path": "/cpsdevpb/6781/test/_63579462_828b4ee1-7888-43bd-a68f-93e4809126dd.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Dargaggeessa dhidhiphachaa jiru",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afaanoromoo/oduu-23140526",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "331fc559-08df-134a-92d9-644a8c4ed3b9",
+            "rank": 17,
+            "count": 5188,
+            "urn": "urn:bbc:curie:asset:331fc559-08df-134a-92d9-644a8c4ed3b9",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Taphattoonni kilabii Jimmaa shaampiyoonaa ta'an lafa badhaafamuufi",
+                "headline": "Mootummaan taphattoota kilaba Jimmaa reefu ol guddatanitti harka hiixate"
+              },
+              "locators": {
+                "assetUri": "/afaanoromoo/oduu-23142344",
+                "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-23142344",
+                "curie": "http://www.bbc.co.uk/asset/331fc559-08df-134a-92d9-644a8c4ed3b9",
+                "assetId": "23142344"
+              },
+              "summary": "Taphattoota kilaba kubbaa miilaa bulchiinsa magaalaa Jimmaa shaampiyoonaa liigii olaanaa ta'anif badhaasni qophaa'e.",
+              "timestamp": 1500988312000,
+              "language": "om",
+              "id": "urn:bbc:ares::asset:afaanoromoo/oduu-23142344",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "53cd0b56-3546-944f-a648-6f159572ccb9",
+            "rank": 18,
+            "count": 5068,
+            "urn": "urn:bbc:curie:asset:53cd0b56-3546-944f-a648-6f159572ccb9",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Warri Buna dhugan tarii umurii dheeraa jiraachuu danda'u malu",
+                "headline": "Guyyaatti buna Shiinii sadii dhuguun umurii dheeressa osoo jedhamtanii, dhuguu ni eegaltuu?"
+              },
+              "locators": {
+                "assetUri": "/afaanoromoo/oduu-23141504",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:53cd0b56-3546-944f-a648-6f159572ccb9",
+                "assetId": "23141504",
+                "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-23141504",
+                "curie": "http://www.bbc.co.uk/asset/53cd0b56-3546-944f-a648-6f159572ccb9"
+              },
+              "summary": "Guyyaatti hanga buna shiinii sadii dhuguun umurii dheeressuu akka malu qorannoon biyyoota Awurooppaa 10 tti gaggeefame tokko mul'iseera.",
+              "timestamp": 1503578690000,
+              "language": "om",
+              "indexImage": {
+                "id": "63579778",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/156F5/test/_63579778_bunaoromoo.jpg",
+                "path": "/cpsdevpb/156F5/test/_63579778_bunaoromoo.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Yeroo buna buusan",
+                "copyrightHolder": "Yadeta",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afaanoromoo/oduu-23141504",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "b60a8d0a-d44f-8348-8b03-6dda91386826",
+            "rank": 19,
+            "count": 5051,
+            "urn": "urn:bbc:curie:asset:b60a8d0a-d44f-8348-8b03-6dda91386826",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Ameerikaa fi Koriyaan Kibbaa mata mataan shaakala waraanaa eegalan",
+                "headline": "Ameerikaa fi Koriyaan Kibbaa mata mataan shaakala waraanaa eegalan"
+              },
+              "locators": {
+                "assetUri": "/afaanoromoo/oduu-23149140",
+                "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-23149140",
+                "curie": "http://www.bbc.co.uk/asset/b60a8d0a-d44f-8348-8b03-6dda91386826",
+                "assetId": "23149140"
+              },
+              "summary": "Dhadanno Koriyaan kaabaa kanaan dura gooteen walqabatee biyyi lamaan akka durii waliin shaakaluun irra caalaa dhekkamsiissu danda'a jechuun xinxaltoonni akeekkachisanii turan",
+              "timestamp": 1503311987000,
+              "language": "om",
+              "indexImage": {
+                "id": "63589462",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/6782/test/_63589462_b04c89b0-d557-4fbb-9901-10772c0ed8d0.jpg",
+                "path": "/cpsdevpb/6782/test/_63589462_b04c89b0-d557-4fbb-9901-10772c0ed8d0.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Humnni waraana Amerikaa fi Kooriyaa Kibbaa shakalarra utuu jiranii",
+                "caption": "Humnni waraana Amerikaa fi Kooriyaa Kibbaa, akkaataa qarqara bishaanii itti bakka qabatan, jalqaba waggaa kanarrattri yeroo shakkalan.",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afaanoromoo/oduu-23149140",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "e6004aab-cad2-bf48-92d5-1708f3fbb77b",
+            "rank": 20,
+            "count": 5009,
+            "urn": "urn:bbc:curie:asset:e6004aab-cad2-bf48-92d5-1708f3fbb77b",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Ofiisara Eegumsa Pilaanetootaa ta'u barbaadduu?",
+                "headline": "NASAn Ofiisara Eegumsa Pilaanetootaa mindaa olaanaan qaxaruuf barbaada"
+              },
+              "locators": {
+                "assetUri": "/amharic/news-23144974",
+                "cpsUrn": "urn:bbc:content:assetUri:amharic/news-23144974",
+                "curie": "http://www.bbc.co.uk/asset/e6004aab-cad2-bf48-92d5-1708f3fbb77b",
+                "assetId": "23144974"
+              },
+              "summary": "NASAn gita hojii harawaa Ofisara eegumsaa dachee uumama hinbeekamne irraa ittiisuu baasee",
+              "timestamp": 1502894128000,
+              "language": "om",
+              "indexImage": {
+                "id": "63583583",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/968A/test/_63583583_cb38989f-5850-4b2c-b1d3-6a74f2831fe2.jpg",
+                "path": "/cpsdevpb/968A/test/_63583583_cb38989f-5850-4b2c-b1d3-6a74f2831fe2.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "ምድር ከኃይለኛ ተፈጠሮኣዊ ብርሃኖች መከላከያ ቢኖራትም ናሳ ግን የራስዋን ልትቀጥር ወስናለች",
+                "caption": "ምድር ከኃይለኛ ተፈጠሮኣዊ ብርሃኖች መከላከያ ቢኖራትም ናሳ ግን የራስዋን ልትቀጥር ወስናለች",
+                "copyrightHolder": "ESA",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:amharic/news-23144974",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   },
-  "relatedContent": {
-    "site": {
-      "subType": "site",
-      "name": "Afaanoromoo",
-      "uri": "/afaanoromoo",
-      "type": "simple"
-    },
-    "groups": []
-  }
+  "contentType": "application/json; charset=utf-8"
 }

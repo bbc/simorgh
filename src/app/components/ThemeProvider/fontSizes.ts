@@ -1,5 +1,5 @@
 import pixelsToRem from '../../utilities/pixelsToRem';
-import { GROUP_B_MIN_WIDTH, GROUP_D_MIN_WIDTH } from './fontMediaQueries';
+import { GROUP_B_ONLY, GROUP_D_MIN_WIDTH } from './fontMediaQueries';
 import { GelFontSize, TypographyScript } from '../../models/types/theming';
 
 const getGelFontSizeStyles =
@@ -7,7 +7,7 @@ const getGelFontSizeStyles =
     fontSize: `${pixelsToRem(script[size].groupA.fontSize)}rem`,
     lineHeight: `${pixelsToRem(script[size].groupA.lineHeight)}rem`,
 
-    [GROUP_B_MIN_WIDTH]: {
+    [GROUP_B_ONLY]: {
       fontSize: `${pixelsToRem(script[size].groupB.fontSize)}rem`,
       lineHeight: `${pixelsToRem(script[size].groupB.lineHeight)}rem`,
     },

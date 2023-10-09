@@ -1,6 +1,6 @@
 import React from 'react';
 import { v4 as uuid } from 'uuid';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { render } from '../../../components/react-testing-library-with-providers';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import ParagraphContainer from '.';
@@ -70,13 +70,15 @@ const ParagraphContainerWithContext = blocks => (
 );
 
 describe('ParagraphContainer', () => {
-  shouldMatchSnapshot(
-    'should render correctly',
-    ParagraphContainerWithContext(blocksMock),
-  );
+  it('should render correctly', () => {
+    const { container } = render(ParagraphContainerWithContext(blocksMock));
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render correctly with inline block',
-    ParagraphContainerWithContext(blocksWithInline),
-  );
+  it('should render correctly with inline block', () => {
+    const { container } = render(
+      ParagraphContainerWithContext(blocksWithInline),
+    );
+    expect(container).toMatchSnapshot();
+  });
 });

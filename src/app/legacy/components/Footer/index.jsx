@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { arrayOf, shape, string, node, bool } from 'prop-types';
-import { C_EBON, C_WHITE } from '#psammead/psammead-styles/src/colours';
 import {
   getSansBold,
   getSansRegular,
@@ -25,7 +24,7 @@ import List from './List';
 const SitewideLinksWrapper = styled.div`
   ${({ script }) => script && getBrevier(script)}
   ${({ service }) => service && getSansRegular(service)}
-  background-color: ${C_EBON};
+  background-color: ${props => props.theme.palette.EBON};
 
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     padding: 0 ${GEL_MARGIN_BELOW_400PX};
@@ -43,16 +42,21 @@ const ConstrainedWrapper = styled.div`
 `;
 
 const StyledParagraph = styled.p`
-  color: ${C_WHITE};
+  color: ${props => props.theme.palette.WHITE};
   margin: 0;
   padding: ${GEL_SPACING_DBL} 0;
+
+  /* removes padding which creates touch target from the final inline link so the Focus Indicator doesn't obscure other text. */
+  a {
+    padding: 0;
+  }
 `;
 
 const StyledAmpCookieSettingsButton = styled(AmpCookieSettingsButton)`
   ${({ service }) => service && getSansBold(service)}
   background: none;
   border: none;
-  color: ${C_WHITE};
+  color: ${props => props.theme.palette.WHITE};
   cursor: pointer;
   display: block;
   padding: ${GEL_SPACING} 0 ${GEL_SPACING};
@@ -66,24 +70,49 @@ const StyledAmpCookieSettingsButton = styled(AmpCookieSettingsButton)`
   }
 `;
 
+const openPrivacyManagerModal = e => {
+  e.preventDefault();
+  if (window.dotcom && window.dotcom.openPrivacyManagerModal) {
+    window.dotcom.openPrivacyManagerModal();
+  }
+};
+
 const SitewideLinks = ({
   links,
   trustProjectLink,
   copyrightText,
   externalLink,
   isAmp,
+  showAdsBasedOnLocation,
   script,
   service,
 }) => {
   const elements = links.map(({ id, text, href, lang }) => {
-    if (isAmp && id === 'COOKIE_SETTINGS') {
-      return (
-        <StyledAmpCookieSettingsButton lang={lang} service={service}>
-          {text}
-        </StyledAmpCookieSettingsButton>
-      );
+    if (id === 'COOKIE_SETTINGS') {
+      if (isAmp) {
+        return (
+          <StyledAmpCookieSettingsButton lang={lang} service={service}>
+            {text}
+          </StyledAmpCookieSettingsButton>
+        );
+      }
+
+      if (showAdsBasedOnLocation) {
+        return (
+          <Link
+            service={service}
+            text={text}
+            href={href}
+            lang={lang}
+            onClick={openPrivacyManagerModal}
+            onlyShowIfJSenabled
+          />
+        );
+      }
+    } else {
+      return <Link service={service} text={text} href={href} lang={lang} />;
     }
-    return <Link service={service} text={text} href={href} lang={lang} />;
+    return null;
   });
 
   return (
@@ -119,6 +148,7 @@ SitewideLinks.propTypes = {
   trustProjectLink: linkPropTypes,
   externalLink: linkPropTypes.isRequired,
   isAmp: bool,
+  showAdsBasedOnLocation: bool,
   script: shape({}),
   service: string,
 };
@@ -128,6 +158,7 @@ SitewideLinks.defaultProps = {
   service: null,
   isAmp: false,
   trustProjectLink: null,
+  showAdsBasedOnLocation: false,
 };
 
 export default SitewideLinks;

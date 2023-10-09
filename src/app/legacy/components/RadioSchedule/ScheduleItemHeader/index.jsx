@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
 import { oneOfType, elementType, string, number } from 'prop-types';
-import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
 import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
 import detokenise from '#psammead/psammead-detokeniser/src';
 import LiveLabel from '#psammead/psammead-live-label/src';
@@ -12,14 +11,15 @@ import {
   getSansRegular,
 } from '#psammead/psammead-styles/src/font-styles';
 import { getPica } from '#psammead/gel-foundations/src/typography';
-import { C_KINGFISHER } from '#psammead/psammead-styles/src/colours';
 import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
+import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
+import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import durationDictionary, { programStateConfig } from '../utilities';
 
 const TitleWrapper = styled.span`
   color: ${({ titleColor }) => titleColor};
-  padding: ${GEL_SPACING} 0;
+  padding: ${GEL_SPACING} 0 0 0;
   display: inline-block;
   width: 100%;
   ${({ service }) => service && getSansRegular(service)}
@@ -39,7 +39,7 @@ const StyledLink = styled(Link)`
 const NextLabel = styled.span`
   ${({ service }) => service && getSansBold(service)}
   ${({ script }) => script && getPica(script)}
-  color: ${C_KINGFISHER};
+  color: ${props => props.theme.palette.KINGFISHER};
   display: inline-block;
 
   ${({ dir }) =>
@@ -67,6 +67,12 @@ const ScheduleItemHeader = ({
 
   const isLive = state === 'live';
   const isNext = state === 'next';
+
+  const eventTrackingData = {
+    componentName: `radio-schedule-${state}`,
+  };
+
+  const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
 
   const listenLive = pathOr(
     'Listen Live',
@@ -153,6 +159,8 @@ const ScheduleItemHeader = ({
       aria-labelledby={`scheduleItem-${id}`}
       as={linkComponent}
       {...linkProps}
+      className="focusIndicatorDisplayBlock"
+      onClick={clickTrackerHandler}
     >
       {content}
     </StyledLink>

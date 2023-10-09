@@ -82,13 +82,13 @@ exports[`Navigation should render correctly 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FDFDFD;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline-block;
   padding: 0.75rem 0.25rem;
+  outline: none;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -129,7 +129,18 @@ exports[`Navigation should render correctly 1`] = `
   bottom: 0;
   border-bottom: 0.25rem solid #B80000;
   top: 0;
-  border: 0.25rem solid #B80000;
+  border: 0.1875rem solid #000000;
+}
+
+.emotion-8:focus-visible::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+  top: 0;
+  border: 0.1875rem solid #000000;
 }
 
 .emotion-10::after {
@@ -152,42 +163,42 @@ exports[`Navigation should render correctly 1`] = `
   margin: 0;
 }
 
-.emotion-16 {
+.emotion-15 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FDFDFD;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline-block;
   padding: 0.75rem 0.25rem;
+  outline: none;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-16 {
+  .emotion-15 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-16 {
+  .emotion-15 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-16 {
+  .emotion-15 {
     padding: 0.75rem 0.5rem;
   }
 }
 
-.emotion-16:hover::after {
+.emotion-15:hover::after {
   content: '';
   position: absolute;
   left: 0;
@@ -196,7 +207,7 @@ exports[`Navigation should render correctly 1`] = `
   border-bottom: 0.25rem solid #B80000;
 }
 
-.emotion-16:focus::after {
+.emotion-15:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -204,7 +215,18 @@ exports[`Navigation should render correctly 1`] = `
   bottom: 0;
   border-bottom: 0.25rem solid #B80000;
   top: 0;
-  border: 0.25rem solid #B80000;
+  border: 0.1875rem solid #000000;
+}
+
+.emotion-15:focus-visible::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+  top: 0;
+  border: 0.1875rem solid #000000;
 }
 
 <div>
@@ -227,7 +249,7 @@ exports[`Navigation should render correctly 1`] = `
         >
           <a
             aria-labelledby="NavigationLinks-Akụkọ"
-            class="emotion-8 emotion-9"
+            class="focusIndicatorRemove emotion-8 emotion-9"
             data-navigation="test_navigation"
             href="/igbo"
           >
@@ -237,7 +259,7 @@ exports[`Navigation should render correctly 1`] = `
               role="text"
             >
               <span
-                class="emotion-12 emotion-13"
+                class="emotion-12"
               >
                 Current page, 
               </span>
@@ -251,7 +273,7 @@ exports[`Navigation should render correctly 1`] = `
           role="listitem"
         >
           <a
-            class="emotion-16 emotion-9"
+            class="focusIndicatorRemove emotion-15 emotion-9"
             data-navigation="test_navigation"
             href="/igbo/egwuregwu"
           >
@@ -264,7 +286,7 @@ exports[`Navigation should render correctly 1`] = `
           role="listitem"
         >
           <a
-            class="emotion-16 emotion-9"
+            class="focusIndicatorRemove emotion-15 emotion-9"
             data-navigation="test_navigation"
             href="/igbo/media/video"
           >
@@ -277,7 +299,7 @@ exports[`Navigation should render correctly 1`] = `
           role="listitem"
         >
           <a
-            class="emotion-16 emotion-9"
+            class="focusIndicatorRemove emotion-15 emotion-9"
             data-navigation="test_navigation"
             href="/igbo/popular/read"
           >
@@ -378,13 +400,13 @@ exports[`Navigation should render correctly when ampOpenClass prop is provided 1
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FDFDFD;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline-block;
   padding: 0.75rem 0.25rem;
+  outline: none;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -425,7 +447,18 @@ exports[`Navigation should render correctly when ampOpenClass prop is provided 1
   bottom: 0;
   border-bottom: 0.25rem solid #B80000;
   top: 0;
-  border: 0.25rem solid #B80000;
+  border: 0.1875rem solid #000000;
+}
+
+.emotion-8:focus-visible::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+  top: 0;
+  border: 0.1875rem solid #000000;
 }
 
 .emotion-10::after {
@@ -448,42 +481,42 @@ exports[`Navigation should render correctly when ampOpenClass prop is provided 1
   margin: 0;
 }
 
-.emotion-16 {
+.emotion-15 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FDFDFD;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline-block;
   padding: 0.75rem 0.25rem;
+  outline: none;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-16 {
+  .emotion-15 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-16 {
+  .emotion-15 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-16 {
+  .emotion-15 {
     padding: 0.75rem 0.5rem;
   }
 }
 
-.emotion-16:hover::after {
+.emotion-15:hover::after {
   content: '';
   position: absolute;
   left: 0;
@@ -492,7 +525,7 @@ exports[`Navigation should render correctly when ampOpenClass prop is provided 1
   border-bottom: 0.25rem solid #B80000;
 }
 
-.emotion-16:focus::after {
+.emotion-15:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -500,7 +533,18 @@ exports[`Navigation should render correctly when ampOpenClass prop is provided 1
   bottom: 0;
   border-bottom: 0.25rem solid #B80000;
   top: 0;
-  border: 0.25rem solid #B80000;
+  border: 0.1875rem solid #000000;
+}
+
+.emotion-15:focus-visible::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+  top: 0;
+  border: 0.1875rem solid #000000;
 }
 
 <div>
@@ -523,7 +567,7 @@ exports[`Navigation should render correctly when ampOpenClass prop is provided 1
         >
           <a
             aria-labelledby="NavigationLinks-Akụkọ"
-            class="emotion-8 emotion-9"
+            class="focusIndicatorRemove emotion-8 emotion-9"
             data-navigation="test_navigation"
             href="/igbo"
           >
@@ -533,7 +577,7 @@ exports[`Navigation should render correctly when ampOpenClass prop is provided 1
               role="text"
             >
               <span
-                class="emotion-12 emotion-13"
+                class="emotion-12"
               >
                 Current page, 
               </span>
@@ -547,7 +591,7 @@ exports[`Navigation should render correctly when ampOpenClass prop is provided 1
           role="listitem"
         >
           <a
-            class="emotion-16 emotion-9"
+            class="focusIndicatorRemove emotion-15 emotion-9"
             data-navigation="test_navigation"
             href="/igbo/egwuregwu"
           >
@@ -560,7 +604,7 @@ exports[`Navigation should render correctly when ampOpenClass prop is provided 1
           role="listitem"
         >
           <a
-            class="emotion-16 emotion-9"
+            class="focusIndicatorRemove emotion-15 emotion-9"
             data-navigation="test_navigation"
             href="/igbo/media/video"
           >
@@ -573,7 +617,7 @@ exports[`Navigation should render correctly when ampOpenClass prop is provided 1
           role="listitem"
         >
           <a
-            class="emotion-16 emotion-9"
+            class="focusIndicatorRemove emotion-15 emotion-9"
             data-navigation="test_navigation"
             href="/igbo/popular/read"
           >
@@ -668,13 +712,13 @@ exports[`Navigation should render correctly when isOpen is true 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FDFDFD;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline-block;
   padding: 0.75rem 0.25rem;
+  outline: none;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -715,7 +759,18 @@ exports[`Navigation should render correctly when isOpen is true 1`] = `
   bottom: 0;
   border-bottom: 0.25rem solid #B80000;
   top: 0;
-  border: 0.25rem solid #B80000;
+  border: 0.1875rem solid #000000;
+}
+
+.emotion-8:focus-visible::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+  top: 0;
+  border: 0.1875rem solid #000000;
 }
 
 .emotion-10::after {
@@ -738,42 +793,42 @@ exports[`Navigation should render correctly when isOpen is true 1`] = `
   margin: 0;
 }
 
-.emotion-16 {
+.emotion-15 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FDFDFD;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline-block;
   padding: 0.75rem 0.25rem;
+  outline: none;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-16 {
+  .emotion-15 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-16 {
+  .emotion-15 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-16 {
+  .emotion-15 {
     padding: 0.75rem 0.5rem;
   }
 }
 
-.emotion-16:hover::after {
+.emotion-15:hover::after {
   content: '';
   position: absolute;
   left: 0;
@@ -782,7 +837,7 @@ exports[`Navigation should render correctly when isOpen is true 1`] = `
   border-bottom: 0.25rem solid #B80000;
 }
 
-.emotion-16:focus::after {
+.emotion-15:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -790,7 +845,18 @@ exports[`Navigation should render correctly when isOpen is true 1`] = `
   bottom: 0;
   border-bottom: 0.25rem solid #B80000;
   top: 0;
-  border: 0.25rem solid #B80000;
+  border: 0.1875rem solid #000000;
+}
+
+.emotion-15:focus-visible::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+  top: 0;
+  border: 0.1875rem solid #000000;
 }
 
 <div>
@@ -813,7 +879,7 @@ exports[`Navigation should render correctly when isOpen is true 1`] = `
         >
           <a
             aria-labelledby="NavigationLinks-Akụkọ"
-            class="emotion-8 emotion-9"
+            class="focusIndicatorRemove emotion-8 emotion-9"
             data-navigation="test_navigation"
             href="/igbo"
           >
@@ -823,7 +889,7 @@ exports[`Navigation should render correctly when isOpen is true 1`] = `
               role="text"
             >
               <span
-                class="emotion-12 emotion-13"
+                class="emotion-12"
               >
                 Current page, 
               </span>
@@ -837,7 +903,7 @@ exports[`Navigation should render correctly when isOpen is true 1`] = `
           role="listitem"
         >
           <a
-            class="emotion-16 emotion-9"
+            class="focusIndicatorRemove emotion-15 emotion-9"
             data-navigation="test_navigation"
             href="/igbo/egwuregwu"
           >
@@ -850,7 +916,7 @@ exports[`Navigation should render correctly when isOpen is true 1`] = `
           role="listitem"
         >
           <a
-            class="emotion-16 emotion-9"
+            class="focusIndicatorRemove emotion-15 emotion-9"
             data-navigation="test_navigation"
             href="/igbo/media/video"
           >
@@ -863,7 +929,7 @@ exports[`Navigation should render correctly when isOpen is true 1`] = `
           role="listitem"
         >
           <a
-            class="emotion-16 emotion-9"
+            class="focusIndicatorRemove emotion-15 emotion-9"
             data-navigation="test_navigation"
             href="/igbo/popular/read"
           >
@@ -891,6 +957,18 @@ exports[`Scrollable Navigation should render correctly 1`] = `
     display: none;
   }
 
+  .emotion-0:focus-visible {
+    outline: none;
+  }
+
+  .emotion-0:focus-visible::after {
+    outline: 0.1875rem solid #000000;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
   .emotion-0:after {
     content: ' ';
     height: 100%;
@@ -904,8 +982,7 @@ exports[`Scrollable Navigation should render correctly 1`] = `
     background: linear-gradient(
             to right,
             rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 1)
-              100%
+            rgba(255, 255, 255, 1) 100%
           );
   }
 
@@ -997,13 +1074,13 @@ exports[`Scrollable Navigation should render correctly 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FDFDFD;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline-block;
   padding: 0.75rem 0.25rem;
+  outline: none;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1044,7 +1121,18 @@ exports[`Scrollable Navigation should render correctly 1`] = `
   bottom: 0;
   border-bottom: 0.25rem solid #B80000;
   top: 0;
-  border: 0.25rem solid #B80000;
+  border: 0.1875rem solid #000000;
+}
+
+.emotion-10:focus-visible::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+  top: 0;
+  border: 0.1875rem solid #000000;
 }
 
 .emotion-12::after {
@@ -1067,42 +1155,42 @@ exports[`Scrollable Navigation should render correctly 1`] = `
   margin: 0;
 }
 
-.emotion-18 {
+.emotion-17 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FDFDFD;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline-block;
   padding: 0.75rem 0.25rem;
+  outline: none;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-18 {
+  .emotion-17 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-18 {
+  .emotion-17 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-18 {
+  .emotion-17 {
     padding: 0.75rem 0.5rem;
   }
 }
 
-.emotion-18:hover::after {
+.emotion-17:hover::after {
   content: '';
   position: absolute;
   left: 0;
@@ -1111,7 +1199,7 @@ exports[`Scrollable Navigation should render correctly 1`] = `
   border-bottom: 0.25rem solid #B80000;
 }
 
-.emotion-18:focus::after {
+.emotion-17:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -1119,7 +1207,18 @@ exports[`Scrollable Navigation should render correctly 1`] = `
   bottom: 0;
   border-bottom: 0.25rem solid #B80000;
   top: 0;
-  border: 0.25rem solid #B80000;
+  border: 0.1875rem solid #000000;
+}
+
+.emotion-17:focus-visible::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+  top: 0;
+  border: 0.1875rem solid #000000;
 }
 
 <div>
@@ -1147,7 +1246,7 @@ exports[`Scrollable Navigation should render correctly 1`] = `
           >
             <a
               aria-labelledby="NavigationLinks-Akụkọ"
-              class="emotion-10 emotion-11"
+              class="focusIndicatorRemove emotion-10 emotion-11"
               data-navigation="test_navigation"
               href="/igbo"
             >
@@ -1157,7 +1256,7 @@ exports[`Scrollable Navigation should render correctly 1`] = `
                 role="text"
               >
                 <span
-                  class="emotion-14 emotion-15"
+                  class="emotion-14"
                 >
                   Current page, 
                 </span>
@@ -1171,7 +1270,7 @@ exports[`Scrollable Navigation should render correctly 1`] = `
             role="listitem"
           >
             <a
-              class="emotion-18 emotion-11"
+              class="focusIndicatorRemove emotion-17 emotion-11"
               data-navigation="test_navigation"
               href="/igbo/egwuregwu"
             >
@@ -1184,7 +1283,7 @@ exports[`Scrollable Navigation should render correctly 1`] = `
             role="listitem"
           >
             <a
-              class="emotion-18 emotion-11"
+              class="focusIndicatorRemove emotion-17 emotion-11"
               data-navigation="test_navigation"
               href="/igbo/media/video"
             >
@@ -1197,7 +1296,7 @@ exports[`Scrollable Navigation should render correctly 1`] = `
             role="listitem"
           >
             <a
-              class="emotion-18 emotion-11"
+              class="focusIndicatorRemove emotion-17 emotion-11"
               data-navigation="test_navigation"
               href="/igbo/popular/read"
             >

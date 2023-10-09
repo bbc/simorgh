@@ -5,7 +5,6 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
-import { C_METAL, C_WHITE } from '#psammead/psammead-styles/src/colours';
 import {
   getSansRegular,
   getSerifMedium,
@@ -23,7 +22,7 @@ import { programStateConfig } from '../utilities';
 
 const CardWrapper = styled.div`
   padding-top: ${GEL_SPACING};
-  background-color: ${C_WHITE};
+  background-color: ${props => props.theme.palette.WHITE};
   display: flex;
   flex-direction: column;
   outline: 0.0625rem solid transparent;
@@ -45,7 +44,8 @@ const StyledH3 = styled.h3`
 const SummaryWrapper = styled.p`
   ${({ service }) => service && getSansRegular(service)}
   ${({ script }) => script && getBrevier(script)}
-  color: ${C_METAL};
+  color: ${props => props.theme.palette.METAL};
+  padding-top: ${GEL_SPACING};
   padding-bottom: ${GEL_SPACING_DBL};
   margin: 0; /* Reset */
 `;
@@ -119,7 +119,7 @@ const ProgramCard = ({ program, id, ...props }) => {
         <IconWrapper {...programStateConfig[state]}>
           {mediaIcons.audio}
         </IconWrapper>
-        <DurationWrapper dir={dir} dateTime={duration}>
+        <DurationWrapper dir={dir} dateTime={duration} suppressHydrationWarning>
           <span aria-hidden="true">{formatDuration({ duration, locale })}</span>
         </DurationWrapper>
       </ButtonWrapper>

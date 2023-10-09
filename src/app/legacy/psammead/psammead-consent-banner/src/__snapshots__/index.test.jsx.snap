@@ -190,6 +190,10 @@ exports[`ConsentBanner should correctly render for ltr service 1`] = `
   text-decoration: underline;
 }
 
+.emotion-8 button:focus-visible {
+  outline: 0.1875rem solid #000000;
+}
+
 @media (min-width: 25rem) {
   .emotion-8 {
     width: 17.3125rem;
@@ -251,7 +255,7 @@ exports[`ConsentBanner should correctly render for ltr service 1`] = `
 
 exports[`ConsentBanner should correctly render for rtl service 1`] = `
 .emotion-0 {
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   background-color: #323232;
@@ -437,6 +441,10 @@ exports[`ConsentBanner should correctly render for rtl service 1`] = `
 .emotion-8 button:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
+}
+
+.emotion-8 button:focus-visible {
+  outline: 0.1875rem solid #000000;
 }
 
 @media (min-width: 25rem) {
@@ -686,6 +694,10 @@ exports[`ConsentBanner with hidden attribute on wrapper should correctly render 
 .emotion-8 button:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
+}
+
+.emotion-8 button:focus-visible {
+  outline: 0.1875rem solid #000000;
 }
 
 @media (min-width: 25rem) {

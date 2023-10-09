@@ -1,0 +1,105 @@
+{
+  "data": {
+    "title": "Pidgin test 2",
+    "description": "Pidgin test 2 - the description",
+    "language": "pcm",
+    "headerImage": null,
+    "promoImage": null,
+    "home": "pidgin",
+    "liveTextStream": {
+      "id": "8E1A80B519D1451FBF5DF6AB029B8B1C"
+    },
+    "sportDataEvent": {
+      "id": null
+    },
+    "article": {
+      "id": null
+    },
+    "mediaCollections": [
+      {
+        "id": null
+      }
+    ],
+    "seo": {
+      "seoTitle": "Pidgin test 2",
+      "seoDescription": "Pidgin test 2 - the description"
+    },
+    "endDateTime": "2023-04-06T10:21:00.000Z",
+    "startDateTime": "2023-04-05T10:22:00.000Z",
+    "analytics": {
+      "page": {
+        "name": "live_coverage.c7p765ynk9qt.page",
+        "contentId": "urn:bbc:tipo:topic:c7p765ynk9qt"
+      }
+    },
+    "isLive": true,
+    "summaryPoints": {
+      "id": "urn:bbc:optimo:asset:c5x3899j84ro",
+      "content": {
+        "model": {
+          "blocks": [
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "unorderedList",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "listItem",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "I am the summary box",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "I am the summary box",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "type": "listItem",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "I need to include bulletpoints",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "I need to include bulletpoints",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}

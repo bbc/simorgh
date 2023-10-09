@@ -6,7 +6,7 @@ module.exports = ({ resolvePath, START_DEV_SERVER }) => {
   const serverConfig = {
     target: 'node', // compile for server environment
     entry: START_DEV_SERVER ? ['webpack/hot/poll?100', './src'] : ['./src'],
-    devtool: false,
+    devtool: START_DEV_SERVER ? 'source-map' : false,
     output: {
       path: resolvePath('build'),
       filename: 'server.js',

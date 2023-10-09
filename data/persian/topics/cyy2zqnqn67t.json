@@ -1,0 +1,133 @@
+{
+  "data": {
+    "title": "ورزش زنان در ایران",
+    "description": "",
+    "imageData": null,
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "ئ﻿خپث حثقسهشد اثشیمهدث فثطف",
+            "firstPublished": "2022-11-29T10:22:43.977Z",
+            "link": "https://www.bbc.com/persian/articles/cg4806ez3j3o",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/526c/test/e19f1810-9d83-11ed-8565-736fadc3edcb.jpg",
+            "description": "",
+            "imageAlt": "Nintendo in the all days",
+            "id": "cg4806ez3j3o"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "link": "https://www.bbc.com/persian",
+        "curationId": "urn:bbc:tipo:list:afc353c5-e197-4d6f-9daf-fa3cac8b16d8",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "title": "عنوان، توضیحات، تصویر و لینک",
+        "visualProminence": "NORMAL",
+        "additionalText": {
+          "plainText": "چند متن اضافی"
+        },
+        "visualStyle": "BANNER",
+        "images": [
+          {
+            "url": "https://ichef.bbci.co.uk/ace/standard/480/cpsdevpb/af2c/test/3ce141c0-9d85-11ed-8565-736fadc3edcb.jpg",
+            "urlTemplate": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/af2c/test/3ce141c0-9d85-11ed-8565-736fadc3edcb.jpg",
+            "originalSize": {
+              "width": 1024,
+              "height": 576
+            },
+            "altText": "Nintendo",
+            "copyright": "BBC",
+            "type": "background"
+          }
+        ],
+        "imageList": [
+          {
+            "imageType": "background",
+            "locator": "af2c/test/3ce141c0-9d85-11ed-8565-736fadc3edcb.jpg",
+            "originCode": "cpsdevpb",
+            "height": 576,
+            "width": 1024,
+            "copyrightHolder": "BBC",
+            "altText": "Nintendo"
+          }
+        ]
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "مقامات ارشد ارتش پاکستان به رویکرد سختگیرانه در برابر طالبان  این کشور اشاره کردند",
+            "firstPublished": "2023-01-26T16:06:45.815Z",
+            "link": "https://www.bbc.com/persian/articles/c4xq92rm93mo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/9f48/test/6f226cf0-254d-11ed-883b-5f1a10dbc140.png",
+            "description": "",
+            "imageAlt": "یک سرباز ارتش پاکستان در یک پایانه مرزی  بین پاکستان و افغانستان ",
+            "id": "c4xq92rm93mo"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "link": "https://www.bbc.com/persian",
+        "curationId": "urn:bbc:tipo:list:2437dcc5-395f-4eda-8d06-0c3b1d7db4a7",
+        "curationType": "tipo-curation",
+        "position": 1,
+        "title": "عنوان، پیوند، تصویر (بدون شرح)",
+        "visualProminence": "NORMAL",
+        "visualStyle": "BANNER",
+        "images": [
+          {
+            "url": "https://ichef.bbci.co.uk/ace/standard/480/cpsdevpb/bf63/test/0fce2710-9d95-11ed-8565-736fadc3edcb.jpg",
+            "urlTemplate": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/bf63/test/0fce2710-9d95-11ed-8565-736fadc3edcb.jpg",
+            "originalSize": {
+              "width": 1024,
+              "height": 576
+            },
+            "altText": "Pikmin",
+            "copyright": "BBC",
+            "type": "background"
+          }
+        ],
+        "imageList": [
+          {
+            "imageType": "background",
+            "locator": "bf63/test/0fce2710-9d95-11ed-8565-736fadc3edcb.jpg",
+            "originCode": "cpsdevpb",
+            "height": 576,
+            "width": 1024,
+            "copyrightHolder": "BBC",
+            "altText": "Pikmin"
+          }
+        ]
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "کمیته مصونیت خبرنگاران خواستار رهایی روزنامه نگاران افغان شد",
+            "firstPublished": "2023-01-26T16:20:10.281Z",
+            "link": "https://www.bbc.com/persian/articles/cn81k1ljv6ko",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/48c1/test/4636ae30-9d95-11ed-ac0c-9362f75e453b.jpg",
+            "description": "",
+            "imageAlt": "اجمل نقش بندین یوتیوبر افغان از یکسال به این سو در بند طالبان است",
+            "id": "cn81k1ljv6ko"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "link": "https://www.bbc.com/persian",
+        "curationId": "urn:bbc:tipo:list:d9ba2986-4e37-47dc-8c19-5a7d795d2a6d",
+        "curationType": "tipo-curation",
+        "position": 2,
+        "title": "فقط عنوان و پیوند (بدون تصویر و بدون شرح)",
+        "visualProminence": "NORMAL",
+        "visualStyle": "BANNER"
+      }
+    ],
+    "activePage": 1,
+    "pageCount": 1,
+    "variantTopicId": null
+  },
+  "contentType": "application/json; charset=utf-8"
+}

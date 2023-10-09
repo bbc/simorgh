@@ -1,18 +1,23 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { render } from '../../../../components/react-testing-library-with-providers';
 import ImagePlaceholderAmp from './index.amp';
 
 describe('ImagePlaceholderAmp', () => {
-  shouldMatchSnapshot(
-    'should render normal version correctly',
-    <amp-img src="foo" width="645px" height="128px">
-      <ImagePlaceholderAmp />
-    </amp-img>,
-  );
-  shouldMatchSnapshot(
-    'should render dark mode version correctly',
-    <amp-img src="foo" width="645px" height="128px">
-      <ImagePlaceholderAmp darkMode />
-    </amp-img>,
-  );
+  it('should render normal version correctly', () => {
+    const { container } = render(
+      <amp-img src="foo" width="645px" height="128px">
+        <ImagePlaceholderAmp />
+      </amp-img>,
+    );
+    expect(container).toMatchSnapshot();
+  });
+
+  it('should render dark mode version correctly', () => {
+    const { container } = render(
+      <amp-img src="foo" width="645px" height="128px">
+        <ImagePlaceholderAmp darkPlaceholder />
+      </amp-img>,
+    );
+    expect(container).toMatchSnapshot();
+  });
 });

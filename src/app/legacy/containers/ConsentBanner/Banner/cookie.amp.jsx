@@ -4,15 +4,6 @@ import { bool, string, arrayOf, element, shape } from 'prop-types';
 import styled from '@emotion/styled';
 import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import {
-  C_CONSENT_BACKGROUND,
-  C_CONSENT_ACTION,
-  C_PEBBLE,
-  C_CONSENT_CONTENT,
-  C_WHITE,
-  C_EBON,
-  C_GHOST,
-} from '#psammead/psammead-styles/src/colours';
-import {
   getDoublePica,
   getLongPrimer,
   getBodyCopy,
@@ -42,7 +33,6 @@ const BORDER_WIDTH = '0.0625rem'; // 1px
 const BORDER_WIDTH_TRANSPARENT = '0.125rem'; // 2px
 
 const COMMON_HEADING_STYLES = `
-  color: ${C_WHITE};
   margin-top: ${GEL_SPACING_DBL};
   margin-bottom: 0;
 
@@ -57,7 +47,7 @@ const COMMON_HEADING_STYLES = `
 
 const Wrapper = styled.div`
   ${({ service }) => getSansRegular(service)}
-  background-color: ${C_CONSENT_BACKGROUND};
+  background-color: ${props => props.theme.palette.CONSENT_BACKGROUND};
   border: ${BORDER_WIDTH_TRANSPARENT} solid transparent;
   max-height: ${BANNER_MAX_HEIGHT};
 `;
@@ -79,16 +69,18 @@ const BannerPage = styled.div`
 
 const Title = styled.h2`
   ${({ script }) => getDoublePica(script)}
+  color: ${props => props.theme.palette.WHITE};
   ${COMMON_HEADING_STYLES}
 `;
 
 const Heading = styled.h3`
+  color: ${props => props.theme.palette.WHITE};
   ${COMMON_HEADING_STYLES}
 `;
 
 const Paragraph = styled.p`
   ${({ script }) => getBodyCopy(script)}
-  color: ${C_CONSENT_CONTENT};
+  color: ${props => props.theme.palette.CONSENT_CONTENT};
   margin-top: ${GEL_SPACING_DBL};
   margin-bottom: ${GEL_SPACING_DBL};
 `;
@@ -100,17 +92,17 @@ const Link = ({ text, href, className }) => (
 );
 
 const StyledLink = styled(Link)`
-  color: ${C_CONSENT_ACTION};
+  color: ${props => props.theme.palette.CONSENT_ACTION};
   text-decoration: none;
 
   span {
-    border-bottom: ${C_PEBBLE} solid ${BORDER_WIDTH};
+    border-bottom: ${props => props.theme.palette.PEBBLE} solid ${BORDER_WIDTH};
   }
 
   &:hover,
   &:focus {
-    background-color: ${C_CONSENT_ACTION};
-    color: ${C_EBON};
+    background-color: ${props => props.theme.palette.CONSENT_ACTION};
+    color: ${props => props.theme.palette.EBON};
 
     span {
       border-bottom: transparent solid ${BORDER_WIDTH_TRANSPARENT};
@@ -147,9 +139,9 @@ const OptionsItem = styled.li`
   button {
     ${({ service }) => getSansBold(service)}
     ${({ script }) => getLongPrimer(script)}
-    background: ${C_GHOST};
+    background: ${props => props.theme.palette.GHOST};
     border: none;
-    color: ${C_EBON};
+    color: ${props => props.theme.palette.EBON};
     cursor: pointer;
     display: block;
     height: 100%;
@@ -159,16 +151,16 @@ const OptionsItem = styled.li`
 
     &:hover,
     &:focus {
-      background-color: ${C_CONSENT_ACTION};
-      color: ${C_EBON};
+      background-color: ${props => props.theme.palette.CONSENT_ACTION};
+      color: ${props => props.theme.palette.EBON};
       text-decoration: underline;
     }
   }
 
   button[on='tap:AMP.setState({ isManagingSettings: true })'] {
     background: none;
-    border: ${BORDER_WIDTH} solid ${C_CONSENT_ACTION};
-    color: ${C_CONSENT_ACTION};
+    border: ${BORDER_WIDTH} solid ${props => props.theme.palette.CONSENT_ACTION};
+    color: ${props => props.theme.palette.CONSENT_ACTION};
   }
 `;
 
@@ -179,6 +171,7 @@ const OptionsItem = styled.li`
 // eslint-disable-next-line react/prop-types
 export const AmpCookieSettingsButton = ({ children, lang, className }) => (
   <button
+    // eslint-disable-next-line react/no-unknown-property
     on="tap:consent.prompt, privacy.hide, cookie.show, AMP.setState({ isManagingSettings: true })"
     type="button"
     data-testid="amp-cookie-settings-button"
@@ -232,6 +225,7 @@ const AmpCookieBanner = ({
             <OptionsItem script={script} service={service}>
               <button
                 type="button"
+                // eslint-disable-next-line react/no-unknown-property
                 on="tap:AMP.setState({ isManagingSettings: true }), manageCookiesHeading.focus"
               >
                 {initial.manage}

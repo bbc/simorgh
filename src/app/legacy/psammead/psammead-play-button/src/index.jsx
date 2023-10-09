@@ -2,26 +2,21 @@ import React from 'react';
 import { string, oneOf, func } from 'prop-types';
 import styled from '@emotion/styled';
 import {
-  C_EBON,
-  C_WHITE,
-  C_POSTBOX,
-} from '#psammead/psammead-styles/src/colours';
-import {
   GEL_SPACING,
   GEL_SPACING_TRPL,
 } from '#psammead/gel-foundations/src/spacings';
 import { GEL_MINION } from '#psammead/gel-foundations/src/typography';
 import { getSansBold } from '#psammead/psammead-styles/src/font-styles';
 import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
-import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
+import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 
 const GEL_SPACING_DEC = '5rem';
 const BGC_TRANSITION_DURATION = '300ms';
 
 const Button = styled.button`
-  background-color: ${C_EBON};
+  background-color: ${props => props.theme.palette.EBON};
   border: none;
-  color: ${C_WHITE};
+  color: ${props => props.theme.palette.WHITE};
   cursor: pointer;
   display: block;
   ${({ service }) => getSansBold(service)}
@@ -33,14 +28,14 @@ const Button = styled.button`
 
   &:hover,
   &:focus {
-    background-color: ${C_POSTBOX};
+    background-color: ${props => props.theme.palette.POSTBOX};
     transition: background-color ${BGC_TRANSITION_DURATION};
   }
 `;
 
 const IconWrapper = styled.div`
   > svg {
-    color: ${C_WHITE};
+    color: ${props => props.theme.palette.WHITE};
     fill: currentColor;
     height: ${GEL_SPACING_TRPL};
     ${({ datetime, duration, durationSpoken }) =>
@@ -88,7 +83,11 @@ const PlayButton = ({
         {mediaIcons[type]}
       </IconWrapper>
       {datetime && duration && durationSpoken && (
-        <TimeDuration dateTime={datetime} aria-hidden="true">
+        <TimeDuration
+          dateTime={datetime}
+          aria-hidden="true"
+          suppressHydrationWarning
+        >
           {duration}
         </TimeDuration>
       )}

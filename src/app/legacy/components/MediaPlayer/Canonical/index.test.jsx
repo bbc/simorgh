@@ -2,7 +2,6 @@ import React from 'react';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import { render } from '@testing-library/react';
 import Canonical from '.';
-import '@testing-library/jest-dom/extend-expect';
 
 const Player = additionalProps => {
   const func = jest.fn();
@@ -21,7 +20,7 @@ const Player = additionalProps => {
       onMediaEnded={func}
       onMediaPlaylistEnded={func}
       onMediaError={func}
-      darkMode={false}
+      darkPlaceholder={false}
       showLoadingImage={false}
       message="Message"
       {...additionalProps}
@@ -43,7 +42,7 @@ describe('Media Player: Canonical', () => {
       onMediaEnded={func}
       onMediaPlaylistEnded={func}
       onMediaError={func}
-      darkMode={false}
+      darkPlaceholder={false}
       showLoadingImage={false}
       showPlaceholder={false}
       noJsMessage="No JS"

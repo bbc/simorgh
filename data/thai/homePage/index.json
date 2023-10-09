@@ -1,0 +1,60 @@
+{
+  "data": {
+    "title": "ข่าว ข่าววันนี้ ข่าวล่าสุด วีดีโอ - BBC News ไทย",
+    "description": "บีบีซีไทย นำเสนอข่าวสารที่เชื่อถือได้จากไทยและทุกมุมโลก",
+    "pageType": "home",
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "เกิดอะไรขึ้นกับผืนโลก เมื่อฝนกระหน่ำลงมาไม่หยุด 2 ล้านปี",
+            "firstPublished": "2023-04-01T10:14:42.208Z",
+            "link": "https://www.bbc.com/thai/articles/cz9jr9l94mzo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/3bef/live/9a1a4f80-d075-11ed-be2e-754a65c11505.png",
+            "description": "ฝนที่ตกหนักอย่างเหลือเชื่อเมื่อ 234 ล้านปีก่อน เปิดทางให้เผ่าพันธุ์ไดโนเสาร์ขึ้นมาครองโลก",
+            "imageAlt": "ไดโนเสาร์กลางฝน",
+            "id": "cz9jr9l94mzo"
+          },
+          {
+            "type": "article",
+            "title": "แมลงสาบไม่กินหวานวิวัฒนาการไปอีกขั้น ใช้เทคนิคใหม่จับคู่ผสมพันธุ์ได้เร็วขึ้น",
+            "firstPublished": "2023-04-01T06:52:32.249Z",
+            "link": "https://www.bbc.com/thai/articles/cn0q1p9lpnro",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1cb3/live/083e8d20-d033-11ed-be2e-754a65c11505.png",
+            "description": "แมลงสาบตัวผู้ที่ไม่ติดรสหวาน หลอกล่อตัวเมียที่มีรสนิยมแบบเดียวกันด้วยของเหลวชนิดพิเศษ พร้อมทั้งจู่โจมอย่างรวดเร็ว จนมีโอกาสผสมพันธุ์ได้สำเร็จมากกว่าแมลงสาบที่ยังกินน้ำตาลกลูโคสอยู่หลายเท่า",
+            "imageAlt": "แมลงสาป",
+            "id": "cn0q1p9lpnro"
+          },
+          {
+            "type": "article",
+            "title": "โดนัลด์ ทรัมป์ : อดีตประธานาธิบดีสหรัฐฯ คนแรกที่เผชิญคดีอาญา และเสี่ยงติดคุก",
+            "firstPublished": "2023-03-31T07:48:59.921Z",
+            "link": "https://www.bbc.com/thai/articles/cn32v0r83mzo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/887e/live/d85a59b0-cf95-11ed-b8b7-a345b6f2573f.jpg",
+            "description": "",
+            "imageAlt": "Getty Images",
+            "id": "cn32v0r83mzo"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:a6e371ac-447d-46bf-a2dd-cc67df72eb79",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "title": "เรื่องน่าสนใจ",
+        "visualProminence": "HIGH"
+      }
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:cjln1ww9v13t",
+        "contentType": "index-home",
+        "pageIdentifier": "thai.page",
+        "pageTitle": "ข่าว ข่าววันนี้ ข่าวล่าสุด วีดีโอ - BBC News ไทย"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8",
+  "dataSource": "Data is from live TIPO"
+}

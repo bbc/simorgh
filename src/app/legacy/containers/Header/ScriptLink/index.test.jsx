@@ -1,7 +1,6 @@
 import React from 'react';
 import { node } from 'prop-types';
 import { MemoryRouter, Route } from 'react-router-dom';
-import { render, fireEvent } from '@testing-library/react';
 import { RequestContext } from '#contexts/RequestContext';
 import { UserContext } from '#contexts/UserContext';
 import { ToggleContext } from '#contexts/ToggleContext';
@@ -14,11 +13,15 @@ import {
   legacyAssetPagePath,
   topicPath,
 } from '#app/routes/utils/regex';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import {
+  render,
+  fireEvent,
+} from '../../../../components/react-testing-library-with-providers';
 import { service as ukChinaServiceConfig } from '../../../../lib/config/services/ukchina';
 import { service as serbianServiceConfig } from '../../../../lib/config/services/serbian';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import ScriptLinkContainer, { getVariantHref } from '.';
+import ThemeProvider from '../../../../components/ThemeProvider';
 
 const setPreferredVariantCookieSpy = jest.spyOn(
   cookies,
@@ -73,15 +76,17 @@ const ScriptLinkContainerWithContext = ({
   toggleContext = toggleContextMock,
   ...props
 }) => (
-  <ToggleContext.Provider value={toggleContext}>
-    <ServiceContext.Provider value={serviceContext}>
-      <UserContext.Provider value={userContextMock}>
-        <RequestContext.Provider value={requestContext}>
-          <ScriptLinkContainer {...props} />
-        </RequestContext.Provider>
-      </UserContext.Provider>
-    </ServiceContext.Provider>
-  </ToggleContext.Provider>
+  <ThemeProvider service="serbian" variant="lat">
+    <ToggleContext.Provider value={toggleContext}>
+      <ServiceContext.Provider value={serviceContext}>
+        <UserContext.Provider value={userContextMock}>
+          <RequestContext.Provider value={requestContext}>
+            <ScriptLinkContainer {...props} />
+          </RequestContext.Provider>
+        </UserContext.Provider>
+      </ServiceContext.Provider>
+    </ToggleContext.Provider>
+  </ThemeProvider>
 );
 
 describe(`Script Link`, () => {
@@ -89,14 +94,16 @@ describe(`Script Link`, () => {
     jest.clearAllMocks();
   });
 
-  shouldMatchSnapshot(
-    'should render correctly',
-    <MemoryRouter initialEntries={['/serbian/lat']}>
-      <Route path={frontPagePath}>
-        <ScriptLinkContainerWithContext />
-      </Route>
-    </MemoryRouter>,
-  );
+  it('should render correctly', () => {
+    const { container } = render(
+      <MemoryRouter initialEntries={['/serbian/lat']}>
+        <Route path={frontPagePath}>
+          <ScriptLinkContainerWithContext />
+        </Route>
+      </MemoryRouter>,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
   describe('assertions', () => {
     const testCases = {
@@ -334,6 +341,21 @@ describe(`Script Link`, () => {
         toggleContext={{
           toggleState: testToggles,
           toggleDispatch: mockToggleDispatch,
+        }}
+      />,
+      frontPagePath,
+      '/serbian/lat',
+    );
+    expect(container).toBeEmptyDOMElement();
+  });
+
+  it('should not render when app is Next.JS', () => {
+    const { container } = withRouter(
+      <ScriptLinkContainerWithContext
+        requestContext={{
+          variant: 'lat',
+          env: 'test',
+          isNextJs: true,
         }}
       />,
       frontPagePath,

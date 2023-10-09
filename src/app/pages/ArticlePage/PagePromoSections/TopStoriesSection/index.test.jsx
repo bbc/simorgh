@@ -1,8 +1,11 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 import * as viewTracking from '#hooks/useViewTracker';
+import {
+  render,
+  screen,
+} from '../../../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import TopStoriesSection from '.';
 import { topStoriesList, topStoriesSingleItem } from './fixture';
@@ -69,6 +72,10 @@ describe('Optimo Top Stories Promo', () => {
 });
 
 describe('Event Tracking', () => {
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
   it('should implement 3 BLOCK level click trackers(1 for each promo item) and 0 link level click trackers', () => {
     const expected = {
       componentName: 'top-stories',
@@ -110,5 +117,13 @@ describe('Event Tracking', () => {
     const [[blockLevelTracking]] = viewTrackerSpy.mock.calls;
 
     expect(blockLevelTracking).toEqual(expected);
+  });
+
+  it('should call view tracker once when multiple items are present', () => {
+    const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
+
+    render(<TopStoriesSectionFixture fixtureData={topStoriesList} />);
+
+    expect(viewTrackerSpy).toHaveBeenCalledTimes(1);
   });
 });

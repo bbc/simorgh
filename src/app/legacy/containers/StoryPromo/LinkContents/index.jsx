@@ -1,13 +1,14 @@
 import React, { useContext } from 'react';
 import moment from 'moment-timezone';
 import { shape, bool, string } from 'prop-types';
-import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
 import pathOr from 'ramda/src/pathOr';
 import pick from 'ramda/src/pick';
 import formatDuration from '#lib/utilities/formatDuration';
+import { getHeadline } from '#lib/utilities/getStoryPromoInfo';
 import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import { isPgl, isMap } from '../utilities';
+import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 
 const LinkContents = ({ item, isInline, id }) => {
   const {
@@ -16,21 +17,12 @@ const LinkContents = ({ item, isInline, id }) => {
 
   const isMedia = isMap(item);
   const isPhotoGallery = isPgl(item);
-  const headlines = pathOr(null, ['headlines'], item);
 
-  const getContent = () => {
-    if (headlines === null) {
-      return pathOr(null, ['name'], item);
-    }
-    const { headline, overtyped } = headlines;
-    return overtyped || headline;
-  };
-
-  const content = getContent();
+  const headline = getHeadline(item);
 
   if (!isPhotoGallery && !isMedia) {
     // This span is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
-    return <span id={id}>{content}</span>;
+    return <span id={id}>{headline}</span>;
   }
 
   const getAnnouncedType = () => {
@@ -69,7 +61,7 @@ const LinkContents = ({ item, isInline, id }) => {
     // eslint-disable-next-line jsx-a11y/aria-role
     <span role="text" id={id}>
       {mediaType && <VisuallyHiddenText>{`${mediaType}, `}</VisuallyHiddenText>}
-      <span>{content}</span>
+      <span>{headline}</span>
       {offScreenDuration}
     </span>
   );

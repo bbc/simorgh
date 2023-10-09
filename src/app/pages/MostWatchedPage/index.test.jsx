@@ -7,34 +7,39 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import mostWatchedData from '#data/pidgin/mostWatched/index.json';
 import { MOST_WATCHED_PAGE } from '#app/routes/utils/pageTypes';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import ThemeProvider from '../../components/ThemeProvider';
 import MostWatchedPage from './MostWatchedPage';
 
 const pageData = {
   mostWatched: mostWatchedData.records.slice(0, 3).map(item => item.promo),
 };
 
-jest.mock('../../legacy/containers/ChartbeatAnalytics', () => {
+jest.mock('../../components/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
 });
 
+jest.mock('../../components/ThemeProvider');
+
 const MostWatchedPageWithContext = ({ isAmp }) => (
-  <ToggleContextProvider>
-    <ServiceContextProvider service="pidgin">
-      <RequestContextProvider
-        bbcOrigin="https://www.test.bbc.com"
-        isAmp={isAmp}
-        pageType={MOST_WATCHED_PAGE}
-        pathname="/pathname"
-        service="pidgin"
-        statusCode={200}
-      >
-        <BrowserRouter>
-          <MostWatchedPage pageData={pageData} />
-        </BrowserRouter>
-      </RequestContextProvider>
-    </ServiceContextProvider>
-  </ToggleContextProvider>
+  <ThemeProvider service="pidgin" variant="default">
+    <ToggleContextProvider>
+      <ServiceContextProvider service="pidgin">
+        <RequestContextProvider
+          bbcOrigin="https://www.test.bbc.com"
+          isAmp={isAmp}
+          pageType={MOST_WATCHED_PAGE}
+          pathname="/pathname"
+          service="pidgin"
+          statusCode={200}
+        >
+          <BrowserRouter>
+            <MostWatchedPage pageData={pageData} />
+          </BrowserRouter>
+        </RequestContextProvider>
+      </ServiceContextProvider>
+    </ToggleContextProvider>
+  </ThemeProvider>
 );
 
 MostWatchedPageWithContext.propTypes = {

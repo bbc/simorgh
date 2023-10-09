@@ -1,11 +1,4 @@
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_GHOST,
-  C_POSTBOX_30,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
 import cyrillic from '../../../components/ThemeProvider/fontScripts/latin';
-import brandSVG from '../../chameleonLogos/russian';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/ru';
 import withContext from '../../../contexts/utils/withContext';
@@ -37,7 +30,7 @@ const headerFooterTranslations = {
       },
       accept: 'ОК',
       reject: 'Посмотреть, что изменилось',
-      rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
+      rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
     },
     cookie: {
       amp: {
@@ -51,7 +44,7 @@ const headerFooterTranslations = {
             linkText: 'cookies',
             last: ', а также собираем данные, чтобы вам было удобно пользоваться сайтом и чтобы содержание и реклама, которую вы видите, соответствовали вашим запросам. Пожалуйста, сообщите, согласны ли вы.',
             linkUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
           },
           manage: 'Изменить мои установки',
         },
@@ -67,7 +60,7 @@ const headerFooterTranslations = {
               'Для того чтобы наши веб-страницы работали, мы храним ограниченную информацию о вашем девайсе без вашего согласия.',
             para4: {
               text: 'Прочесть подробнее о базовой информации, которую мы храним на вашем устройстве, чтобы на нем отображались наши веб-страницы (на англ. языке).',
-              url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+              url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
             },
             para5:
               'Мы используем местные серверы для хранения согласованных вами преференций для вашего девайса.',
@@ -100,13 +93,13 @@ const headerFooterTranslations = {
             linkText: 'cookies',
             last: ', чтобы вам было удобно пользоваться сайтом. Сообщите нам, что вы согласны с использованием этих cookies.',
             linkUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
           },
         },
         accept: 'Да',
         reject: 'Нет, мне надо посмотреть настройки',
         rejectUrl:
-          'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
       },
     },
   },
@@ -202,6 +195,7 @@ export const mainTranslations = {
     recentEpisodes: 'Прошлые передачи',
     episodes: 'передачи',
     podcastExternalLinks: 'Этот подкаст доступен на',
+    download: 'Загрузить эпизод',
   },
   socialEmbed: {
     caption: {
@@ -267,7 +261,6 @@ export const service: DefaultServiceConfig = {
     service: 'russian',
     serviceName: 'Russian',
     languageName: 'Russian',
-    themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcrussian',
     twitterSite: '@bbcrussian',
     noBylinesPolicy:
@@ -279,16 +272,8 @@ export const service: DefaultServiceConfig = {
     swPath: '/sw.js',
     frontPageTitle: 'Главная',
     iTunesAppId: 504278066,
-    theming: {
-      brandBackgroundColour: `${C_POSTBOX}`,
-      brandLogoColour: `${C_WHITE}`,
-      brandForegroundColour: `${C_GHOST}`,
-      brandHighlightColour: `${C_WHITE}`,
-      brandBorderColour: `${C_POSTBOX_30}`,
-    },
     showAdPlaceholder: true,
     showRelatedTopics: true,
-    brandSVG,
     mostRead: {
       header: 'Самое популярное',
       lastUpdated: 'Последнее обновление:',
@@ -314,18 +299,17 @@ export const service: DefaultServiceConfig = {
         href: 'https://www.bbc.com/russian/media-47937790',
       },
       skipLink: {
-        text: 'Пропустить %title% и продолжить чтение.',
-        endTextVisuallyHidden: 'Конец истории %title%',
+        text: 'Пропустить Реклама подкастов и продолжить чтение.',
+        endTextVisuallyHidden: 'Конец истории Реклама подкастов',
       },
     },
     disclaimer: {
-      para1: 'Подпишитесь на нашу рассылку ”',
-      para2: {
-        text: 'Контекст',
+      para1: {
+        text: 'Подпишитесь на нашу рассылку «Контекст»:',
         url: 'https://www.bbc.com/russian/resources/idt-b34bb7dd-f094-4722-92eb-cf7aff8cc1bc',
         isExternal: false,
       },
-      para3: '”: она поможет вам разобраться в событиях.',
+      para2: ' она поможет вам разобраться в событиях.',
     },
     radioSchedule: {
       hasRadioSchedule: false,
@@ -365,8 +349,8 @@ export const service: DefaultServiceConfig = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-          text: 'AdChoices / Do Not Sell My Info',
+          href: '#',
+          text: 'Do not share or sell my info',
           lang: 'en-GB',
         },
       ],

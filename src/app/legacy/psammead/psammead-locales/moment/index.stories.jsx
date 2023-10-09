@@ -2,7 +2,6 @@ import React from 'react';
 import styled from '@emotion/styled';
 import moment from 'moment';
 import { storiesOf } from '@storybook/react';
-import { C_PEBBLE } from '#psammead/psammead-styles/src/colours';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,
@@ -156,13 +155,13 @@ const funcs = [
 
 const Table = styled.table`
   margin: ${GEL_SPACING_DBL};
-  border: 1px solid ${C_PEBBLE};
+  border: 1px solid ${(props) => props.theme.palette.PEBBLE};
   font-family: ${GEL_FF_REITH_SANS};
 
   & td,
   th {
     padding: ${GEL_SPACING_HLF} ${GEL_SPACING};
-    border: 1px solid ${C_PEBBLE};
+    border: 1px solid ${(props) => props.theme.palette.PEBBLE};
   }
 `;
 

@@ -1,467 +1,1960 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::article:ck62z3rjwdeo",
-    "locators": {
-      "optimoUrn": "urn:bbc:optimo:asset:ck62z3rjwdeo",
-      "canonicalUrl": "https://www.bbc.com/tigrinya/articles/ck62z3rjwdeo"
-    },
-    "type": "article",
-    "createdBy": "Tigrinya",
-    "language": "ti",
-    "lastUpdated": 1575558121313,
-    "firstPublished": 1574853904923,
-    "lastPublished": 1574853904923,
-    "options": {},
-    "analyticsLabels": {},
-    "passport": {
-      "language": "ti",
-      "home": "http://www.bbc.co.uk/ontologies/passport/home/Tigrinya",
-      "passportId": "ccc0f98f-1f49-4732-b061-71a9f820e12d",
-      "locator": "urn:bbc:optimo:asset:ck62z3rjwdeo",
-      "availability": "AVAILABLE",
-      "taggings": []
-    },
-    "tags": {},
-    "version": "v1.1.3",
-    "blockTypes": [
-      "headline",
-      "text",
-      "paragraph",
-      "fragment",
-      "image",
-      "caption",
-      "altText",
-      "rawImage",
-      "urlLink",
-      "video",
-      "subheadline"
-    ]
-  },
-  "content": {
-    "model": {
-      "blocks": [
-        {
-          "type": "headline",
-          "model": {
-            "blocks": [
-              {
-                "type": "text",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "paragraph",
-                      "model": {
-                        "text": "እትህቡና ውልቃዊ ሐበሬታ፡ ተሳትፎኹም ኮነ እተቕርቡዎ ጥርዓንን መልሰ ዕንጋለን",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "እትህቡና ውልቃዊ ሐበሬታ፡ ተሳትፎኹም ኮነ እተቕርቡዎ ጥርዓንን መልሰ ዕንጋለን",
-                              "attributes": []
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "image",
-          "model": {
-            "blocks": [
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "ንመስርሕ ዕቃበን ኣጠቓቕማ ውልቃዊ ሐበሬታ ብዘማልእ ኣገባብ ይሕዞ",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "ንመስርሕ ዕቃበን ኣጠቓቕማ ውልቃዊ ሐበሬታ ብዘማልእ ኣገባብ ይሕዞ",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "ንመስርሕ ዕቃበን ኣጠቓቕማ ውልቃዊ ሐበሬታ ብዘማልእ ኣገባብ ይሕዞ",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "ንመስርሕ ዕቃበን ኣጠቓቕማ ውልቃዊ ሐበሬታ ብዘማልእ ኣገባብ ይሕዞ",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "rawImage",
-                "model": {
-                  "width": 624,
-                  "height": 351,
-                  "locator": "fa95/test/0985b6b0-1108-11ea-acaa-cd607a38aea4.jpg",
-                  "originCode": "cpsdevpb",
-                  "copyrightHolder": "BBC"
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "text",
-          "model": {
-            "blocks": [
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "ንእትህቡና ሓበሬታ፡ ቢቢስን ካልኦት ዝደጋገፉና ወሃብቲ ኣገልግሎትን: ብሕግን ፖሊስን ዕቃበ ውልቃዊ ሓበሬታ ኢና ንሕዞ።",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "ንእትህቡና ሓበሬታ፡ ቢቢስን ካልኦት ዝደጋገፉና ወሃብቲ ኣገልግሎትን: ብሕግን ",
-                        "attributes": []
-                      }
-                    },
-                    {
-                      "type": "urlLink",
-                      "model": {
-                        "text": "ፖሊስን ዕቃበ ውልቃዊ ",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "ፖሊስን ዕቃበ ውልቃዊ ",
-                              "attributes": []
-                            }
-                          }
-                        ],
-                        "locator": "https://www.bbc.co.uk/weather",
-                        "isExternal": false
-                      }
-                    },
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "ሓበሬታ ኢና ንሕዞ።",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "video",
-          "model": {
-            "locator": "urn:bbc:pips:pid:p01k6msm",
-            "blocks": [
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "ንዝያዳ መብርሂ ክንምለሰኩም ንኽእል ንኸውን",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "ንዝያዳ መብርሂ ክንምለሰኩም ንኽእል ንኸውን",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "aresMedia",
-                "model": {
-                  "blocks": [
-                    {
-                      "blockId": "urn:bbc:ares::clip:p01k6msm",
-                      "type": "aresMediaMetadata",
-                      "model": {
-                        "id": "p01k6msm",
-                        "subType": "clip",
-                        "format": "audio_video",
-                        "title": "Five things ants can teach us about management",
-                        "synopses": {
-                          "short": "They may be tiny, but us humans could learn a thing or two from ants."
-                        },
-                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
-                        "imageCopyright": "BBC",
-                        "embedding": true,
-                        "advertising": true,
-                        "versions": [
-                          {
-                            "versionId": "p01k6msp",
-                            "types": ["Original"],
-                            "duration": 191,
-                            "durationISO8601": "PT3M11S",
-                            "warnings": {
-                              "short": "Contains strong language and adult humour.",
-                              "long": "Contains strong language and adult humour."
-                            },
-                            "availableTerritories": {
-                              "uk": true,
-                              "nonUk": true,
-                              "world": false
-                            },
-                            "availableFrom": 1540218932000
-                          }
-                        ],
-                        "syndication": {
-                          "destinations": []
-                        }
-                      }
-                    },
-                    {
-                      "type": "image",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "rawImage",
-                            "model": {
-                              "width": 1920,
-                              "height": 1080,
-                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg",
-                              "originCode": "mpv",
-                              "copyrightHolder": "BBC"
-                            }
+  "data": {
+    "article": {
+      "content": {
+        "model": {
+          "blocks": [
+            {
+              "id": "6fbac781",
+              "type": "headline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "e6046b3b",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "559e16df",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "እትህቡና ውልቃዊ ሐበሬታ፡ ተሳትፎኹም ኮነ እተቕርቡዎ ጥርዓንን መልሰ ዕንጋለን",
+                            "blocks": [
+                              {
+                                "id": "a31124b2",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "እትህቡና ውልቃዊ ሐበሬታ፡ ተሳትፎኹም ኮነ እተቕርቡዎ ጥርዓንን መልሰ ዕንጋለን",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
                           },
-                          {
-                            "type": "altText",
-                            "model": {
-                              "blocks": [
-                                {
-                                  "type": "text",
-                                  "model": {
-                                    "blocks": [
-                                      {
-                                        "type": "paragraph",
-                                        "model": {
-                                          "text": "Ants",
-                                          "blocks": [
-                                            {
-                                              "type": "fragment",
-                                              "model": {
-                                                "text": "Ants",
-                                                "attributes": []
-                                              }
-                                            }
-                                          ]
-                                        }
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "subheadline",
-          "model": {
-            "blocks": [
-              {
-                "type": "text",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "paragraph",
-                      "model": {
-                        "text": "ንዝያዳ መብርሂ ክንምለሰኩም ንኽእል ንኸውን",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "ንዝያዳ መብርሂ ክንምለሰኩም ንኽእል ንኸውን",
-                              "attributes": []
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "image",
-          "model": {
-            "blocks": [
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "ንዝያዳ መብርሂ ክንምለሰኩም ንኽእል ንኸውን",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "ንዝያዳ መብርሂ ክንምለሰኩም ንኽእል ንኸውን",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      1,
+                      1
+                    ]
+                  }
+                ]
               },
-              {
-                "type": "rawImage",
-                "model": {
-                  "width": 800,
-                  "height": 450,
-                  "locator": "f83c/test/4c7db9e0-1108-11ea-acaa-cd607a38aea4.jpg",
-                  "originCode": "cpsdevpb",
-                  "copyrightHolder": "Getty Images"
-                }
-              }
-            ]
-          }
+              "position": [
+                1
+              ]
+            },
+            {
+              "id": "4f87fa85",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "4acb49d8",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "b9b5acf3",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "5abf6c9b",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "ንመስርሕ ዕቃበን ኣጠቓቕማ ውልቃዊ ሐበሬታ ብዘማልእ ኣገባብ ይሕዞ",
+                                  "blocks": [
+                                    {
+                                      "id": "f445df62",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "ንመስርሕ ዕቃበን ኣጠቓቕማ ውልቃዊ ሐበሬታ ብዘማልእ ኣገባብ ይሕዞ",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        2,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  2,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            2,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      2,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "58ed1581",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "6364e7f5",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "d6b28303",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "ንመስርሕ ዕቃበን ኣጠቓቕማ ውልቃዊ ሐበሬታ ብዘማልእ ኣገባብ ይሕዞ",
+                                  "blocks": [
+                                    {
+                                      "id": "223ba2dc",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "ንመስርሕ ዕቃበን ኣጠቓቕማ ውልቃዊ ሐበሬታ ብዘማልእ ኣገባብ ይሕዞ",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        2,
+                                        2,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  2,
+                                  2,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            2,
+                            2,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      2,
+                      2
+                    ]
+                  },
+                  {
+                    "id": "fafe1ce0",
+                    "type": "rawImage",
+                    "model": {
+                      "width": 624,
+                      "height": 351,
+                      "locator": "fa95/test/0985b6b0-1108-11ea-acaa-cd607a38aea4.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "BBC"
+                    },
+                    "position": [
+                      2,
+                      3
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                2
+              ]
+            },
+            {
+              "id": "25808681",
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1574853904923,
+                "lastPublished": 1574853904923
+              },
+              "position": [
+                3
+              ]
+            },
+            {
+              "id": "d2ccdf66",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "6dc68f8f",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "ንእትህቡና ሓበሬታ፡ ቢቢስን ካልኦት ዝደጋገፉና ወሃብቲ ኣገልግሎትን: ብሕግን ፖሊስን ዕቃበ ውልቃዊ ሓበሬታ ኢና ንሕዞ።",
+                      "blocks": [
+                        {
+                          "id": "0ac97493",
+                          "type": "fragment",
+                          "model": {
+                            "text": "ንእትህቡና ሓበሬታ፡ ቢቢስን ካልኦት ዝደጋገፉና ወሃብቲ ኣገልግሎትን: ብሕግን ",
+                            "attributes": []
+                          },
+                          "position": [
+                            4,
+                            1,
+                            1
+                          ]
+                        },
+                        {
+                          "id": "c4b72dfd",
+                          "type": "urlLink",
+                          "model": {
+                            "text": "ፖሊስን ዕቃበ ውልቃዊ ",
+                            "blocks": [
+                              {
+                                "id": "1d2f8e80",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "ፖሊስን ዕቃበ ውልቃዊ ",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  4,
+                                  1,
+                                  2,
+                                  1
+                                ]
+                              }
+                            ],
+                            "locator": "https://www.bbc.co.uk/weather",
+                            "isExternal": false
+                          },
+                          "position": [
+                            4,
+                            1,
+                            2
+                          ]
+                        },
+                        {
+                          "id": "9bab59c6",
+                          "type": "fragment",
+                          "model": {
+                            "text": "ሓበሬታ ኢና ንሕዞ።",
+                            "attributes": []
+                          },
+                          "position": [
+                            4,
+                            1,
+                            3
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      4,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                4
+              ]
+            },
+            {
+              "id": "690d4d97",
+              "type": "video",
+              "model": {
+                "locator": "urn:bbc:pips:pid:p01k6msm",
+                "blocks": [
+                  {
+                    "id": "730a1e2c",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "c2ba6a9e",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "2499ae96",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "ንዝያዳ መብርሂ ክንምለሰኩም ንኽእል ንኸውን",
+                                  "blocks": [
+                                    {
+                                      "id": "4b700fb5",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "ንዝያዳ መብርሂ ክንምለሰኩም ንኽእል ንኸውን",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        5,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  5,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            5,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      5,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "cb5f80e4",
+                    "type": "aresMedia",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "c6bc38a9",
+                          "blockId": "urn:bbc:ares::clip:p01k6msm",
+                          "type": "aresMediaMetadata",
+                          "model": {
+                            "id": "p01k6msm",
+                            "subType": "clip",
+                            "format": "audio_video",
+                            "title": "Five things ants can teach us about management",
+                            "synopses": {
+                              "short": "They may be tiny, but us humans could learn a thing or two from ants."
+                            },
+                            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+                            "imageCopyright": "BBC",
+                            "embedding": true,
+                            "advertising": true,
+                            "versions": [
+                              {
+                                "versionId": "p01k6msp",
+                                "types": [
+                                  "Original"
+                                ],
+                                "duration": 191,
+                                "durationISO8601": "PT3M11S",
+                                "warnings": {
+                                  "short": "Contains strong language and adult humour.",
+                                  "long": "Contains strong language and adult humour."
+                                },
+                                "availableTerritories": {
+                                  "uk": true,
+                                  "nonUk": true
+                                },
+                                "availableFrom": 1540218932000
+                              }
+                            ],
+                            "syndication": {
+                              "destinations": []
+                            },
+                            "smpKind": "programme"
+                          },
+                          "position": [
+                            5,
+                            2,
+                            1
+                          ]
+                        },
+                        {
+                          "id": "301f846f",
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "1c922c1c",
+                                "type": "rawImage",
+                                "model": {
+                                  "width": 1920,
+                                  "height": 1080,
+                                  "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg",
+                                  "originCode": "mpv",
+                                  "copyrightHolder": "BBC"
+                                },
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  1
+                                ]
+                              },
+                              {
+                                "id": "d00901b0",
+                                "type": "altText",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "4e50b18a",
+                                      "type": "text",
+                                      "model": {
+                                        "blocks": [
+                                          {
+                                            "id": "0a4de125",
+                                            "type": "paragraph",
+                                            "model": {
+                                              "text": "Ants",
+                                              "blocks": [
+                                                {
+                                                  "id": "52b0abbf",
+                                                  "type": "fragment",
+                                                  "model": {
+                                                    "text": "Ants",
+                                                    "attributes": []
+                                                  },
+                                                  "position": [
+                                                    5,
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    1,
+                                                    1,
+                                                    1
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            "position": [
+                                              5,
+                                              2,
+                                              2,
+                                              2,
+                                              1,
+                                              1
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      "position": [
+                                        5,
+                                        2,
+                                        2,
+                                        2,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  2
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            5,
+                            2,
+                            2
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      5,
+                      2
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                5
+              ]
+            },
+            {
+              "id": "085d8df5",
+              "type": "subheadline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "28c7269a",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "4370b76e",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "ንዝያዳ መብርሂ ክንምለሰኩም ንኽእል ንኸውን",
+                            "blocks": [
+                              {
+                                "id": "80523d97",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "ንዝያዳ መብርሂ ክንምለሰኩም ንኽእል ንኸውን",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  6,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            6,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      6,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                6
+              ]
+            },
+            {
+              "id": "27a391f2",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "d0f85d55",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "b1e9ad62",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "91c3bc63",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "ንዝያዳ መብርሂ ክንምለሰኩም ንኽእል ንኸውን",
+                                  "blocks": [
+                                    {
+                                      "id": "d3870246",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "ንዝያዳ መብርሂ ክንምለሰኩም ንኽእል ንኸውን",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        7,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  7,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            7,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      7,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "46e73a5c",
+                    "type": "rawImage",
+                    "model": {
+                      "width": 800,
+                      "height": 450,
+                      "locator": "f83c/test/4c7db9e0-1108-11ea-acaa-cd607a38aea4.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "Getty Images"
+                    },
+                    "position": [
+                      7,
+                      2
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                7
+              ]
+            },
+            {
+              "id": "d05ca816",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "e47f7f75",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "ቢቢሲ፡ ንውልቃዊ ሐበሬታ ተኸታተልቱን ሰዓብቱን፡ ብኸመይ ከምዝዕቅቦ ኢልኩም ክትውከሱን ተወሳኺ ሐበሬታን ክትረኽቡ ትኽእሉ።",
+                      "blocks": [
+                        {
+                          "id": "5e21a1be",
+                          "type": "fragment",
+                          "model": {
+                            "text": "ቢቢሲ፡ ንውልቃዊ ሐበሬታ ተኸታተልቱን ሰዓብቱን፡ ብኸመይ ከምዝዕቅቦ ኢልኩም ክትውከሱን ተወሳኺ ሐበሬታን ክትረኽቡ ትኽእሉ።",
+                            "attributes": []
+                          },
+                          "position": [
+                            8,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      8,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                8
+              ]
+            },
+            {
+              "id": "bffb6519",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                9
+              ]
+            },
+            {
+              "id": "07ed5db4",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                10
+              ]
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "id": "urn:bbc:ares::article:ck62z3rjwdeo",
+        "locators": {
+          "optimoUrn": "urn:bbc:optimo:asset:ck62z3rjwdeo",
+          "canonicalUrl": "https://www.bbc.com/tigrinya/articles/ck62z3rjwdeo"
+        },
+        "type": "article",
+        "createdBy": "Tigrinya",
+        "language": "ti",
+        "firstPublished": 1574853904923,
+        "lastPublished": 1574853904923,
+        "analyticsLabels": {
+          "producer": "Tigrinya",
+          "page": "tigrinya.articles.ck62z3rjwdeo.page"
+        },
+        "passport": {
+          "language": "ti",
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Tigrinya",
+          "taggings": []
+        },
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment",
+          "image",
+          "caption",
+          "altText",
+          "rawImage",
+          "urlLink",
+          "video",
+          "subheadline",
+          "aresMedia"
+        ],
+        "allowAdvertising": true
+      },
+      "promo": {
+        "headlines": {
+          "seoHeadline": "እትህቡና ውልቃዊ ሐበሬታ፡ ተሳትፎኹም ኮነ እተቕርቡዎ ጥርዓንን መልሰ ዕንጋለን"
+        }
+      }
+    },
+    "secondaryData": {
+      "topStories": [
+        {
+          "headlines": {
+            "headline": "Jewish Groups in scathing attack on Corbyn"
+          },
+          "locators": {
+            "assetUri": "/tigrinya/23193856",
+            "cpsUrn": "urn:bbc:content:assetUri:tigrinya/23193856",
+            "assetId": "23193856"
+          },
+          "summary": "\"Enough is enough,\" Jewish groups have said in a letter accusing Jeremy Corbyn of failing to tackle anti-Semitism.",
+          "timestamp": 1522070148000,
+          "language": "ti",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63662184",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/BBFE/test/_63662184_000008267-1.jpg",
+            "path": "/cpsdevpb/BBFE/test/_63662184_000008267-1.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Jeremy Corbyn",
+            "caption": "Labour leader Jeremy Corbyn would be meeting jewish community representatives",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63662186",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/10A1E/test/_63662186_000008267-1.jpg",
+            "path": "/cpsdevpb/10A1E/test/_63662186_000008267-1.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Jeremy Corbyn",
+            "caption": "Labour leader Jeremy Corbyn would be meeting jewish community representatives",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "prominence": "standard",
+          "section": {
+            "subType": "IDX",
+            "name": "ዜና",
+            "uri": "/tigrinya/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:tigrinya/23193856",
+          "type": "cps"
         },
         {
-          "type": "text",
-          "model": {
-            "blocks": [
+          "headlines": {
+            "headline": "Hello"
+          },
+          "locators": {
+            "assetUri": "/tigrinya/23160271",
+            "cpsUrn": "urn:bbc:content:assetUri:tigrinya/23160271",
+            "assetId": "23160271"
+          },
+          "summary": "Tesfalem is undertaking a cps training",
+          "timestamp": 1508937288000,
+          "language": "ti",
+          "byline": {
+            "name": "Tesfalem  Araia",
+            "title": "BBC Tigrinya",
+            "persons": [
               {
-                "type": "paragraph",
-                "model": {
-                  "text": "ቢቢሲ፡ ንውልቃዊ ሐበሬታ ተኸታተልቱን ሰዓብቱን፡ ብኸመይ ከምዝዕቅቦ ኢልኩም ክትውከሱን ተወሳኺ ሐበሬታን ክትረኽቡ ትኽእሉ።",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "ቢቢሲ፡ ንውልቃዊ ሐበሬታ ተኸታተልቱን ሰዓብቱን፡ ብኸመይ ከምዝዕቅቦ ኢልኩም ክትውከሱን ተወሳኺ ሐበሬታን ክትረኽቡ ትኽእሉ።",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        }
-      ]
-    }
-  },
-  "promo": {
-    "headlines": {
-      "seoHeadline": "እትህቡና ውልቃዊ ሐበሬታ፡ ተሳትፎኹም ኮነ እተቕርቡዎ ጥርዓንን መልሰ ዕንጋለን"
-    },
-    "locators": {
-      "optimoUrn": "urn:bbc:optimo:asset:ck62z3rjwdeo"
-    },
-    "summary": {
-      "blocks": [
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "attributes": [],
-                        "text": ""
-                      },
-                      "type": "fragment"
-                    }
-                  ],
-                  "text": ""
-                },
-                "type": "paragraph"
+                "name": "Tesfalem Araia",
+                "function": "BBC Tigrinya"
               }
             ]
           },
-          "type": "text"
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63597581",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/4893/test/_63597581_042592668-1.jpg",
+            "path": "/cpsdevpb/4893/test/_63597581_042592668-1.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Chinese president Xi Jinping",
+            "caption": "The powerful leader in the wrold",
+            "copyrightHolder": "Reuters",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "prominence": "standard",
+          "section": {
+            "subType": "IDX",
+            "name": "ዜና",
+            "uri": "/tigrinya/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:tigrinya/23160271",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "ኣል-ሸባብ መን እዩ?"
+          },
+          "locators": {
+            "assetUri": "/tigrinya/news-23144324",
+            "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-23144324",
+            "assetId": "23144324"
+          },
+          "summary": "ኣብታ ሃገር መሓውራቱ ካብ ዝዝርግሕ ጀሚሩ ኣሸሓት ሂወቶምን ንብረቶምነ ስኢኖም፤ ሚልዮናት ድማ ካብ ሃገሮም ተመዛቢሎም። እዚ ጉጅለ መን እዩ? ዝፈፀሞም መጥቃዐቲታት",
+          "timestamp": 1503390366000,
+          "language": "ti",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63583243",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/85BE/test/_63583243__93837400_alshabab2012getty.jpg",
+            "path": "/cpsdevpb/85BE/test/_63583243__93837400_alshabab2012getty.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "ኣል-ሸባብ",
+            "caption": "ኣልሸባብ ኣብ ልዕሊኡ ብዝፍፀም ዘሎ መጥቃዕቲ ኣብ ምድኻም ይረከብ",
+            "copyrightHolder": "ግቲ ኢሜጅ",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63583247",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/121FE/test/_63583247__92641315_f776c258-6e44-4f63-b2fc-dca0f465bc7a.jpg",
+            "path": "/cpsdevpb/121FE/test/_63583247__92641315_f776c258-6e44-4f63-b2fc-dca0f465bc7a.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "መጥቃዕቲ ኣል-ሸባብ ኣብ ኬንያ",
+            "caption": "ኣብ ኬንያ ተዳጋጋሚ መጥቃዐቲ ዝፍንወሉ ምኽንያት እታ ሃገር ኣንፃሩ ሰራዊት ክተውፍረ ብምኽኣላ እዩ።",
+            "copyrightHolder": "ኤፒ",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "prominence": "standard",
+          "id": "urn:bbc:ares::asset:tigrinya/news-23144324",
+          "type": "cps"
         }
-      ]
-    },
-    "timestamp": 1574853904923,
-    "id": "urn:bbc:ares::article:ck62z3rjwdeo",
-    "type": "cps"
+      ],
+      "features": [
+        {
+          "headlines": {
+            "headline": "\"ዓለም እንተረሰዓትና ፈጣሪ ኣሎና\""
+          },
+          "locators": {
+            "assetUri": "/tigrinya/news-23149942",
+            "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-23149942",
+            "assetId": "23149942"
+          },
+          "summary": "ኣሻሓት ኤርትራውያን ብቕልውላው የመን ይሳቐዩ ኣለዉ።",
+          "timestamp": 1503572004000,
+          "language": "ti",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63589830",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/0F3A/test/_63589830_gettyimages-679086218.jpg",
+            "path": "/cpsdevpb/0F3A/test/_63589830_gettyimages-679086218.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "ተቓውሞ የመን",
+            "caption": "የመን ንነዊሕ ኣዋን ኣብ ከቢድ ቅልውላው ተሸሚማ ትርከብ",
+            "copyrightHolder": "Getty Images",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "id": "urn:bbc:ares::asset:tigrinya/news-23149942",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "ጉዕዞ፡ ብሓይሊ ጻጸ፡ ብእትንቅሳቕስ ኣውቶቡስ"
+          },
+          "locators": {
+            "assetUri": "/tigrinya/news-23141494",
+            "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-23141494",
+            "assetId": "23141494"
+          },
+          "summary": "ኣስታት 40 ዝኾኑ ተማሃሮ ዩኒቨሪሲቲ ቴክኖሎጂ ኢንዶሄቨን ኔዘርላንድስ ክሊማዊ ዕንወት ኣብ ምግታእ ተራ ዘለዋ ብፎርሚክ ኣሲድ እትንቅሳቕስ ኣውቶቡስ ይሰርሑ።",
+          "timestamp": 1500898164000,
+          "language": "ti",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63579735",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/D225/test/_63579735_af4355b4-6cb8-44fb-bf45-6454ffd9b73a.jpg",
+            "path": "/cpsdevpb/D225/test/_63579735_af4355b4-6cb8-44fb-bf45-6454ffd9b73a.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "ጻጸ",
+            "caption": "Some types of ant squirt formic acid as a defence mechanism",
+            "copyrightHolder": "Getty Images ጌቲይ ኢሜጅ",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63580605",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/C5B0/test/_63580605_3766c76c-2054-4b16-bfe2-e520f348f941.jpg",
+            "path": "/cpsdevpb/C5B0/test/_63580605_3766c76c-2054-4b16-bfe2-e520f348f941.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "ሓይሊ ጻጸ ክሪሰተ ክሊጅስተን",
+            "caption": "ብፎርሚክ ኣሲድ እትንቅሳቕስ ኣውቶቡስ ዝሰርሑ ተማሃሮ ዩኒቨሪሲቲ ቴክኖሎጂ ኢንዶሄቨን ኔዘርላንድስ",
+            "copyrightHolder": "ሓይሊ ጻጸ ክሪሰተ ክሊጅስተን (CHRIST CLIJSEN)",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "id": "urn:bbc:ares::asset:tigrinya/news-23141494",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "መራሕቲ ሃገራት ዓለም ስደተኛታት ኮይኖም እንተዝርከቡኸ?"
+          },
+          "locators": {
+            "assetUri": "/tigrinya/news-23143804",
+            "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-23143804",
+            "assetId": "23143804"
+          },
+          "summary": "ዓብደላ ኣል ኦማሪ ሶርያዊ ስደተኛ እዩ። መራሕቲ ሃገራት ዓለም ኣብቲ ንሱን ካልኦትን ግዳያት ዝኾኑሉ ስደት እንተዝርከቡስ እንታይኮን ምመሰሉ ንዝብል ሕቶ ብስእሊ ገሊፅዎሎ። ካብ ቅብኢታቱ ገሊኦም",
+          "timestamp": 1503390202000,
+          "language": "ti",
+          "cpsType": "PGL",
+          "indexImage": {
+            "id": "63583888",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/15B06/test/_63583888_mediaitem63582643.jpg",
+            "path": "/cpsdevpb/15B06/test/_63583888_mediaitem63582643.jpg",
+            "height": 1152,
+            "width": 2048,
+            "altText": "ትራምፕ",
+            "caption": "ኣብ ቅብኢታቱ ንኣዘራራብቲ መራሕቲ ዓለም ዝተገለለሉ፥ ዝተመዛበሉ ወይ ድማ ስደተኛ ኣምሲሉ እዩ ወኪልዎም። ከምዚ ንመራሒ ኣሜሪካ ዶናልድ ትራምፕ ዝገለፀሉ ቅብኢ ንኹሎም መራሕቲ ዝተፈላለዩ ባህርያት ኣልቢስዎም ኣሎ።",
+            "copyrightHolder": "ዓብደላ ኣል ኦማሪ ",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63583889",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/18216/test/_63583889_mediaitem63583293.jpg",
+            "path": "/cpsdevpb/18216/test/_63583889_mediaitem63583293.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "መስርዕ መራሕቲ",
+            "caption": "''ብዓውታ፡ ኣነ ድኹም እየ: ንስኹም እውን.። ጥንኩራት ዝበሃሉ እውን ኣይጥነኩራትን በሉ። ፈፂምና ከይነድሐርሕር\" ክብል የተሓሳሳብ ኣል-ኦማሪ። ስራሕቲ ኣብ http://www.abdallaomari.com/ ይርከቡ።",
+            "copyrightHolder": "ዓብደላ ኣል ኦማሪ ",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "id": "urn:bbc:ares::asset:tigrinya/news-23143804",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "ዕዙዝ ረብሓ እትህብ ደቃቐ ክኒን"
+          },
+          "locators": {
+            "assetUri": "/tigrinya/news-23126238",
+            "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-23126238",
+            "assetId": "23126238"
+          },
+          "summary": "ኣብ ማሀዕበራዊ ኩነታት ወዲሰብ ብፍላይ ከዓ ደቂኣንስትዮ ወሳኒ ለውጢ ከረጋገፅ ዘገበረት መከላኸሊ ጥንሲ ንኻልኦት ዓበይቲ ለውጥታት'ውን መሰረት ኾይና።",
+          "timestamp": 1495028610000,
+          "language": "ti",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63589426",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/F422/test/_63589426_.jpg",
+            "path": "/cpsdevpb/F422/test/_63589426_.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "ክኒን",
+            "caption": "ምከላኸሊ ጥንሲ ኣብ ማሀዕበራዊ ሂወት ወዲሰብ ዓብይ ለውጢ ኣምፂኡ",
+            "copyrightHolder": "Getty Images",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "id": "urn:bbc:ares::asset:tigrinya/news-23126238",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "ቆልሓታ ዝሰኣነ፡ታሪኽ ኣፍሪካ!"
+          },
+          "locators": {
+            "assetUri": "/tigrinya/news-23140725",
+            "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-23140725",
+            "assetId": "23140725"
+          },
+          "summary": "ታሪኽ ኣፍሪካውያን በሰንኪ ባዕዳውያን መግዛእቲ ኣውሮፓውያን ክሃስስ ብምኽኣሉ ኣፍሪካውያን ብዛዕብኦም ዘለዎም ታሪኻዊ ኣፍልጦ ኣብዚ እቶ ዝበሃል ከምዘይኮነ ጋዜጠኛ ቢቢሲ ዘይና በዳዊ ዝዳህሰሰቶ ፀብፃብ የመልክት።",
+          "timestamp": 1503391531000,
+          "language": "ti",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63579294",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/C091/test/_63579294__96750433_gettyimages-3018911.jpg",
+            "path": "/cpsdevpb/C091/test/_63579294__96750433_gettyimages-3018911.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "ሓወልቲ ኣኹሱም",
+            "caption": "ዘይተገንፀለ ታሪኽ ኣኹሱማዊያን",
+            "copyrightHolder": "AFP",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "id": "urn:bbc:ares::asset:tigrinya/news-23140725",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "ጃኮብ ፉገር፡ ቀንዲል ሃፋትም ዓለም"
+          },
+          "locators": {
+            "assetUri": "/tigrinya/news-23140669",
+            "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-23140669",
+            "assetId": "23140669"
+          },
+          "summary": "ብሂወት ዘየለ ቀንዲል ሃፋትም ዓለም ወናኒ ባንኪን ነጋዳይን ጀርመናዊ ጃኮብ ፉገር 400 ሽሕ ሚልየን ዶላር ኣሜሪካ ይውንን ነይሩ።",
+          "timestamp": 1503391434000,
+          "language": "ti",
+          "byline": {
+            "name": "ላየን ፅጋብ",
+            "title": "Broadcast journalist",
+            "persons": [
+              {
+                "name": "Line Tsigab",
+                "function": "Broadcast journalist"
+              }
+            ]
+          },
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63579073",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/90E9/test/_63579073_e8cbc54d-0dae-40e4-b6d3-9ba67b5bb671.jpg",
+            "path": "/cpsdevpb/90E9/test/_63579073_e8cbc54d-0dae-40e4-b6d3-9ba67b5bb671.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "ጃኮብ ፉገር",
+            "caption": "ከም ኣገላልፃ ፀሓፊ ሂወት ታሪኹ ጃኮብ ፉገር 400 ሚልየን ዶላር ኣሜሪካ ይውንን ነይሩ።",
+            "copyrightHolder": "Getty Images",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "id": "urn:bbc:ares::asset:tigrinya/news-23140669",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "ዛጊት ተጠቃምነቱ ዘይጥፈአ ጥንታዊ መሳርሒታት ሕክምና ግብጺ"
+          },
+          "locators": {
+            "assetUri": "/tigrinya/news-23141714",
+            "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-23141714",
+            "assetId": "23141714"
+          },
+          "summary": "ቅድሚ 3ሽሕ ዓመታት ኣብ ኣገልግሎት ሕክምና ጥንታዊት ግብጺ ዝሰርሑ ዝነበሩ መሳሪሒታት ሕጂ እውን ኣብ ጥቕሚ ይርከቡ",
+          "timestamp": 1503404129000,
+          "language": "ti",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63581697",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/13702/test/_63581697_bb416950-0dde-4516-8881-c3f560ecdc1a.jpg",
+            "path": "/cpsdevpb/13702/test/_63581697_bb416950-0dde-4516-8881-c3f560ecdc1a.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "GETTY IMAGES",
+            "caption": "ብሓሙሽተ መወልዳን ተደጊፋ እትሓርስ ሰበይቲ",
+            "copyrightHolder": "Getty Images",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63589699",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/18572/test/_63589699_510498f6-418f-4958-add4-60068c1944f2.jpg",
+            "path": "/cpsdevpb/18572/test/_63589699_510498f6-418f-4958-add4-60068c1944f2.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Egypt",
+            "caption": "Prosthetic finger of Ancient Egypt made of wood and moored to the foot with leather.",
+            "copyrightHolder": "JON BODSWORTH",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "id": "urn:bbc:ares::asset:tigrinya/news-23141714",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "ኣብ ኣፍጋኒስታን ዓርሰ ቕትለታዊ መጥቃዕቲ 30 ሰባት ቀቲሉ"
+          },
+          "locators": {
+            "assetUri": "/tigrinya/news-23142045",
+            "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-23142045",
+            "assetId": "23142045"
+          },
+          "summary": "ነቲ መጥቃዕቲ ሓላፍነት ዝወሰደ ታሊባን ኣብ ልዕሊ ደሕንነት ዝተወሰደ እዩ ይብል",
+          "timestamp": 1500896379000,
+          "language": "ti",
+          "cpsType": "STY",
+          "imageThumbnail": {
+            "id": "63580442",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/5F58/test/_63580442__97054727_040761496-1-1.jpg",
+            "path": "/cpsdevpb/5F58/test/_63580442__97054727_040761496-1-1.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "ኣፈገሃነ",
+            "caption": "ኣፈገሃነ",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "id": "urn:bbc:ares::asset:tigrinya/news-23142045",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "ጋዜጠኛታት ቱርኪ ብግብረ ሸበራ ክፍረዱ ጀሚሮም"
+          },
+          "locators": {
+            "assetUri": "/tigrinya/news-23142054",
+            "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-23142054",
+            "assetId": "23142054"
+          },
+          "summary": "ዓሰርተ ሸውዓተ ጋዜጠኛታትን ኣካየድቲ ስራሕን ጋዜጣ ቹምሁሪያት ኣብ ዝመጽእ ሰኑይ ብግብረ ሽበራ ክፍረዱ እዮም",
+          "timestamp": 1500896908000,
+          "language": "ti",
+          "cpsType": "STY",
+          "imageThumbnail": {
+            "id": "63580596",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/10F84/test/_63580596_ab4b2236-110a-4840-be28-491f0ce0481c.jpg",
+            "path": "/cpsdevpb/10F84/test/_63580596_ab4b2236-110a-4840-be28-491f0ce0481c.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "ቢቢሲ",
+            "caption": "ኢሊን፡ ካብ ኣቡኣ ብምፍላያ ትሓዝን",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "id": "urn:bbc:ares::asset:tigrinya/news-23142054",
+          "type": "cps"
+        }
+      ],
+      "mostRead": {
+        "generated": "2023-02-18T03:05:56.866Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
+        "totalRecords": 20,
+        "records": [
+          {
+            "id": "1efe1406-f372-af4d-83ad-d059463ffcb3",
+            "rank": 1,
+            "count": 9154,
+            "urn": "urn:bbc:curie:asset:1efe1406-f372-af4d-83ad-d059463ffcb3",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ውቁባት ሕብሪ ምስልታት ኣብዚ ሰሙን።",
+                "headline": "ውቁባት ሕብሪ ምስልታት ኣብዚ ሰሙን።"
+              },
+              "locators": {
+                "assetUri": "/tigrinya/news-23142084",
+                "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-23142084",
+                "curie": "http://www.bbc.co.uk/asset/1efe1406-f372-af4d-83ad-d059463ffcb3",
+                "assetId": "23142084"
+              },
+              "summary": "ኣብዚ ሰሙን ተኸታተልትና ካብ ዝለኣኹልና ሕብራዊ ምስልታት ምቐደም በሉታ።",
+              "timestamp": 1503476495000,
+              "language": "ti",
+              "indexImage": {
+                "id": "63580489",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/18068/test/_63580489__97015216_1051028.jpg",
+                "path": "/cpsdevpb/18068/test/_63580489__97015216_1051028.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "ሕብራዊ ስእልታት ክልተ ኣዕዋፍ",
+                "caption": "ብትሬሲ ክለርክ ዝተሰኣለ ሕብራዊ ስእልታት ክልተ ኣዕዋፍ።",
+                "copyrightHolder": "TRACEY CLARKE",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:tigrinya/news-23142084",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "badc25a0-e7d4-f042-a821-841bbf1058b8",
+            "rank": 2,
+            "count": 8977,
+            "urn": "urn:bbc:curie:asset:badc25a0-e7d4-f042-a821-841bbf1058b8",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ኣብ ቀርኒ ኣፍሪቃ ሚልዮናት ሰባት ኣብ ሃገራቶም ብዘጋጠመ ደርቂ፡ 34",
+                "headline": "ኣብ ቀርኒ ኣፍሪቃ ሚልዮናት ሰባት ኣብ ሃገራቶም ብዘጋጠመ ደርቂ፡ 34"
+              },
+              "locators": {
+                "assetUri": "/tigrinya/news-23126253",
+                "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-23126253",
+                "curie": "http://www.bbc.co.uk/asset/badc25a0-e7d4-f042-a821-841bbf1058b8",
+                "assetId": "23126253"
+              },
+              "summary": "ኣብ ቀርኒ ኣፍሪቃ ሚልዮናት ሰባት ኣብ ሃገራቶም ብዘጋጠመ ደርቂ፡",
+              "timestamp": 1495028168000,
+              "language": "ti",
+              "indexImage": {
+                "id": "63537242",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/5ED1/test/_63537242__96071455_vespa976.jpg",
+                "path": "/cpsdevpb/5ED1/test/_63537242__96071455_vespa976.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "ደርቂ",
+                "caption": "ደርቂ",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:tigrinya/news-23126253",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "2427b4f0-0fd1-7641-93e2-0fa77b53d892",
+            "rank": 3,
+            "count": 8778,
+            "urn": "urn:bbc:curie:asset:2427b4f0-0fd1-7641-93e2-0fa77b53d892",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ሕሱም ጓሂ፥ ኣእምሮ ኣብዘይ አዋኑ ክህሰ ይገብር",
+                "headline": "ሕሱም ጓሂ፥ ኣእምሮ ኣብዘይ አዋኑ ክህሰ ይገብር"
+              },
+              "locators": {
+                "assetUri": "/tigrinya/news-23141304",
+                "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-23141304",
+                "curie": "http://www.bbc.co.uk/asset/2427b4f0-0fd1-7641-93e2-0fa77b53d892",
+                "assetId": "23141304"
+              },
+              "summary": "በሕሱም ጓሂ ዝመፅእ ናይ ኣእምሮ ምህሳይ ሳዕቤን ኣብ ናይ ምመሃር ክእለት ፥ ናይ ምዝካርንን ካልኦት ናይ ጥዕና ሕልኽላካትን የስዕብ።",
+              "timestamp": 1503641549000,
+              "language": "ti",
+              "indexImage": {
+                "id": "63579443",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/86C1/test/_63579443_568c7182-d05d-46f2-89ff-6145a04a41ad.jpg",
+                "path": "/cpsdevpb/86C1/test/_63579443_568c7182-d05d-46f2-89ff-6145a04a41ad.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Stresful experience brain",
+                "caption": "ሓዳር እንትብተን ዝፍጠር ጭንቂ ኣብ ኣእምሮ ሓደጋ የስዕብ",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:tigrinya/news-23141304",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "13538d2a-a7e2-a544-a711-80ffc295c8b6",
+            "rank": 4,
+            "count": 8771,
+            "urn": "urn:bbc:curie:asset:13538d2a-a7e2-a544-a711-80ffc295c8b6",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "''ካብዚ ናበይ ከም ነብል ኣይንፈልጥን'' ኤርትራውያን ስደተኛታት",
+                "headline": "ኣብ ኢትዮጵያ ዝፍጠር ናይ ስራሕ ዕድል ንኤርትራውያን ስደተኛታት ከርግኦም'ዶ ይኽእል ይኸውን?"
+              },
+              "locators": {
+                "assetUri": "/tigrinya/news-23145304",
+                "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-23145304",
+                "curie": "http://www.bbc.co.uk/asset/13538d2a-a7e2-a544-a711-80ffc295c8b6",
+                "assetId": "23145304"
+              },
+              "summary": "ኣብ ዓዶም ንዘይምፅናሕ ዝወሰኑ ኤርትራውያን ብፍላይ መናእሰይ ናብ ጎረቤት ሃገር ኢትዮጵያ ኣብ ምስጋር ይርከቡ። ኣብ ኢትዮጵያ ክፀንሑ ዘይደለዩ ድማ ጉዕዞኦም ይቕፀሉ። ህይወት ብዙሓት ካብ ዝበልዐ ስደት ንምትራፍ ክሕገዝ ዶብ ሰጊሮም ኣብ ዝመፁላ ጎረቤት ሃገር ዕድል ስራሕ ምፍጣር ከም ኣማራፂ ተሓሲቡሎ።",
+              "timestamp": 1503390772000,
+              "language": "ti",
+              "indexImage": {
+                "id": "63584003",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/7560/test/_63584003__96776349_eritrea.jpg",
+                "path": "/cpsdevpb/7560/test/_63584003__96776349_eritrea.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "ኤርትራውያን ስደተኛታት",
+                "caption": "ካብቲ ዝፍጠር ዕድል ስራሕ 30% ንስደተኛታት እዩ",
+                "copyrightHolder": "ቢቢሲ",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:tigrinya/news-23145304",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "db99a172-2886-394c-bbb4-da2b8a2c6495",
+            "rank": 5,
+            "count": 8728,
+            "urn": "urn:bbc:curie:asset:db99a172-2886-394c-bbb4-da2b8a2c6495",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Hello",
+                "headline": "Tesfalem"
+              },
+              "locators": {
+                "assetUri": "/tigrinya/23160271",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:db99a172-2886-394c-bbb4-da2b8a2c6495",
+                "assetId": "23160271",
+                "cpsUrn": "urn:bbc:content:assetUri:tigrinya/23160271",
+                "curie": "http://www.bbc.co.uk/asset/db99a172-2886-394c-bbb4-da2b8a2c6495"
+              },
+              "summary": "Tesfalem is undertaking a cps training",
+              "timestamp": 1508937288000,
+              "language": "ti",
+              "byline": {
+                "name": "Tesfalem  Araia",
+                "title": "BBC Tigrinya",
+                "persons": [
+                  {
+                    "name": "Tesfalem Araia",
+                    "function": "BBC Tigrinya"
+                  }
+                ]
+              },
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Tigrinya",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63597581",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/4893/test/_63597581_042592668-1.jpg",
+                "path": "/cpsdevpb/4893/test/_63597581_042592668-1.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Chinese president Xi Jinping",
+                "caption": "The powerful leader in the wrold",
+                "copyrightHolder": "Reuters",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:tigrinya/23160271",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "cd8e9298-2ed5-e447-b91f-1f2de038ef90",
+            "rank": 6,
+            "count": 8405,
+            "urn": "urn:bbc:curie:asset:cd8e9298-2ed5-e447-b91f-1f2de038ef90",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ኣብ ቀርኒ ኣፍሪቃ ሚልዮናት ሰባት ኣብ ሃገራቶም ብዘጋጠመ ደርቂ፡ 35",
+                "headline": "ኣብ ቀርኒ ኣፍሪቃ ሚልዮናት ሰባት ኣብ ሃገራቶም ብዘጋጠመ ደርቂ፡ 35"
+              },
+              "locators": {
+                "assetUri": "/tigrinya/news-23126254",
+                "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-23126254",
+                "curie": "http://www.bbc.co.uk/asset/cd8e9298-2ed5-e447-b91f-1f2de038ef90",
+                "assetId": "23126254"
+              },
+              "summary": "ኣብ ቀርኒ ኣፍሪቃ ሚልዮናት ሰባት ኣብ ሃገራቶም ብዘጋጠመ ደርቂ፡",
+              "timestamp": 1495028179000,
+              "language": "ti",
+              "indexImage": {
+                "id": "63537242",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/5ED1/test/_63537242__96071455_vespa976.jpg",
+                "path": "/cpsdevpb/5ED1/test/_63537242__96071455_vespa976.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "ደርቂ",
+                "caption": "ደርቂ",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:tigrinya/news-23126254",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "02526c47-ba31-8645-beca-242755b32a8a",
+            "rank": 7,
+            "count": 8298,
+            "urn": "urn:bbc:curie:asset:02526c47-ba31-8645-beca-242755b32a8a",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ምርኢት ሙዚቃ ኔዘርላንድ ብሰንኪ ስግኣት ግብረ ራዕዲ ተሰሪዙ",
+                "headline": "ምርኢት ሙዚቃ ኔዘርላንድ ብሰንኪ ስግኣት ግብረ ራዕዲ ተሰሪዙ"
+              },
+              "locators": {
+                "assetUri": "/tigrinya/news-23149922",
+                "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-23149922",
+                "curie": "http://www.bbc.co.uk/asset/02526c47-ba31-8645-beca-242755b32a8a",
+                "assetId": "23149922"
+              },
+              "summary": "እቲ ምርኢት ሙዚቃ ክስረዝ ካብ መንግስቲ ስፔን መጠንቀቕታ ምቕራቡ ስዒቡ መንብዒ ትኪ ጋዝ ዝፀዓነት ናይ ስፔን መኪና ኣብ ትሕቲ ቀይዲ ውዒላ።",
+              "timestamp": 1503572218000,
+              "language": "ti",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63589808",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/13C02/test/_63589808_7eeb02f2-4e7e-4254-b2b2-b6f57caddc01.jpg",
+                "path": "/cpsdevpb/13C02/test/_63589808_7eeb02f2-4e7e-4254-b2b2-b6f57caddc01.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "መንብዒ ትኪ ዝፀዓነት መኪና ኣብ ጥቓ እቲ ሙዚቃ ዝቐርበሉ ከባቢ ተረኺባ",
+                "caption": "መንብዒ ትኪ ዝፀዓነት መኪና ኣብ ጥቓ እቲ ሙዚቃ ዝቐርበሉ ከባቢ ተረኺባ",
+                "copyrightHolder": "EPA",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:tigrinya/news-23149922",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "69129126-4200-9d44-9fbf-c008a84ff08e",
+            "rank": 8,
+            "count": 8008,
+            "urn": "urn:bbc:curie:asset:69129126-4200-9d44-9fbf-c008a84ff08e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ኣል-ሸባብ መን እዩ?",
+                "headline": "ኣብ ሶማሊያ ዝዓረደ ኣል-ሸባብን ተግባራቱን"
+              },
+              "locators": {
+                "assetUri": "/tigrinya/news-23144324",
+                "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-23144324",
+                "curie": "http://www.bbc.co.uk/asset/69129126-4200-9d44-9fbf-c008a84ff08e",
+                "assetId": "23144324"
+              },
+              "summary": "ኣብታ ሃገር መሓውራቱ ካብ ዝዝርግሕ ጀሚሩ ኣሸሓት ሂወቶምን ንብረቶምነ ስኢኖም፤ ሚልዮናት ድማ ካብ ሃገሮም ተመዛቢሎም። እዚ ጉጅለ መን እዩ? ዝፈፀሞም መጥቃዐቲታት",
+              "timestamp": 1503390366000,
+              "language": "ti",
+              "indexImage": {
+                "id": "63583243",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/85BE/test/_63583243__93837400_alshabab2012getty.jpg",
+                "path": "/cpsdevpb/85BE/test/_63583243__93837400_alshabab2012getty.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "ኣል-ሸባብ",
+                "caption": "ኣልሸባብ ኣብ ልዕሊኡ ብዝፍፀም ዘሎ መጥቃዕቲ ኣብ ምድኻም ይረከብ",
+                "copyrightHolder": "ግቲ ኢሜጅ",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:tigrinya/news-23144324",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "07635e36-17a8-d443-b5cc-3e64566e3eaa",
+            "rank": 9,
+            "count": 7947,
+            "urn": "urn:bbc:curie:asset:07635e36-17a8-d443-b5cc-3e64566e3eaa",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ካብ ኩዕሶ ናብ ምድላውን መሸጣን ኣልኮላዊ መስተ",
+                "headline": "ተጻዋቲ ኩዕሶ እግሪ እንግሊዛዊት ጋንታ ኣብ ምድላውን መሸጣን መስተ ኮኛክ ወፊሩ ይርከብ"
+              },
+              "locators": {
+                "assetUri": "/tigrinya/news-23141624",
+                "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-23141624",
+                "curie": "http://www.bbc.co.uk/asset/07635e36-17a8-d443-b5cc-3e64566e3eaa",
+                "assetId": "23141624"
+              },
+              "summary": "ኣይቮሪኮስታዊ ነበር ኣባል እንግሊዛዊት ጋንታ በርሚንግሃም ሲቲ ድሕሪ ምቁራጽ ኩዕሶ እግሪ ኣብ ምድላው ኣልኮላዊ መስተ ኮኛክ ክወፍር መሪጹ።",
+              "timestamp": 1503388840000,
+              "language": "ti",
+              "indexImage": {
+                "id": "63580146",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/FA6C/test/_63580146__96909742_img_1837.jpg",
+                "path": "/cpsdevpb/FA6C/test/_63580146__96909742_img_1837.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "ዘዳለዎ ኮኛክ",
+                "caption": "ኮኛክ",
+                "copyrightHolder": "ቢቢሲ",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:tigrinya/news-23141624",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "d8c32191-4eaa-4e4a-bc82-b1bee13d7e2d",
+            "rank": 10,
+            "count": 7871,
+            "urn": "urn:bbc:curie:asset:d8c32191-4eaa-4e4a-bc82-b1bee13d7e2d",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ሓዳር ምግባር ጥዕንኦም ክሕሎ ይገብር",
+                "headline": "ሓዳር ሙሉእ ጥዕና ክህልዎም ይገብር"
+              },
+              "locators": {
+                "assetUri": "/tigrinya/news-23141426",
+                "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-23141426",
+                "curie": "http://www.bbc.co.uk/asset/d8c32191-4eaa-4e4a-bc82-b1bee13d7e2d",
+                "assetId": "23141426"
+              },
+              "summary": "ሓዳር ካብ ሕማማት ልቢ፥ ኮሌስትሮልን ፀቕጢ ደምን ከም ዘድሕን ተመራመርቲ ገሊፆም።",
+              "timestamp": 1503392254000,
+              "language": "ti",
+              "indexImage": {
+                "id": "63579753",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/8BD5/test/_63579753_70f61033-02b7-424a-8f1a-2c603b2c6c54.jpg",
+                "path": "/cpsdevpb/8BD5/test/_63579753_70f61033-02b7-424a-8f1a-2c603b2c6c54.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "ሓዳር ንሙሉእ ጥዕና።",
+                "caption": "ሓዳር ንሙሉእ ጥዕና።",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:tigrinya/news-23141426",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "84b2f436-8517-af45-948a-6c03f90d4991",
+            "rank": 11,
+            "count": 7745,
+            "urn": "urn:bbc:curie:asset:84b2f436-8517-af45-948a-6c03f90d4991",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ኣብ ቀርኒ ኣፍሪቃ ሚልዮናት ሰባት ኣብ ሃገራቶም ብዘጋጠመ ደርቂ፡ 33",
+                "headline": "ኣብ ቀርኒ ኣፍሪቃ ሚልዮናት ሰባት ኣብ ሃገራቶም ብዘጋጠመ ደርቂ፡ 33"
+              },
+              "locators": {
+                "assetUri": "/tigrinya/news-23126252",
+                "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-23126252",
+                "curie": "http://www.bbc.co.uk/asset/84b2f436-8517-af45-948a-6c03f90d4991",
+                "assetId": "23126252"
+              },
+              "summary": "ኣብ ቀርኒ ኣፍሪቃ ሚልዮናት ሰባት ኣብ ሃገራቶም ብዘጋጠመ ደርቂ፡",
+              "timestamp": 1495028157000,
+              "language": "ti",
+              "indexImage": {
+                "id": "63537242",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/5ED1/test/_63537242__96071455_vespa976.jpg",
+                "path": "/cpsdevpb/5ED1/test/_63537242__96071455_vespa976.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "ደርቂ",
+                "caption": "ደርቂ",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:tigrinya/news-23126252",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "f6d72067-eddd-7d48-b221-ba6399a967a6",
+            "rank": 12,
+            "count": 7541,
+            "urn": "urn:bbc:curie:asset:f6d72067-eddd-7d48-b221-ba6399a967a6",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ክትዕ መሰል ቅዳሕ ሙዚቃ ዓለም ንከይዓቢ እናዓፈነ ዶ ይኸውን?",
+                "headline": "ክትዕ መሰል ቅዳሕ ሙዚቃ ዓለም ንከይዓቢ እናዓፈነ ዶ ይኸውን?"
+              },
+              "locators": {
+                "assetUri": "/tigrinya/news-23148020",
+                "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-23148020",
+                "curie": "http://www.bbc.co.uk/asset/f6d72067-eddd-7d48-b221-ba6399a967a6",
+                "assetId": "23148020"
+              },
+              "summary": "'ብለርድ ላይንስ' ዝተብሃለ ናይ ሮቢን ቲኬ ሙዚቃ መበገሲ ዜምኡ ካብ ማርቪን ጌይ 'ጋ ቱ ጊቭ ኢት አፕ' ብምውሳዱ እቲ ደራፋይ ንስድራ ማርቪን 7.3 ሚሊዮን ዶላር ካሕሳ ከፊሉ።",
+              "timestamp": 1503392545000,
+              "language": "ti",
+              "indexImage": {
+                "id": "63588763",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/8FB4/test/_63588763_e6d7d175-28aa-415d-bba3-0c2bd2b490c1.jpg",
+                "path": "/cpsdevpb/8FB4/test/_63588763_e6d7d175-28aa-415d-bba3-0c2bd2b490c1.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "'ብለርድ ላይንስ'",
+                "caption": "ሮቢን ቲኬ ምስ ፋረል ዊሊያምስ ዝደረፍዎ 'ብለርድ ላይንስ' ዝተብሃለ ሙዚቃ ልዕሊ 5 ሚሊዮን ዶላር ኣታዊ ረኺቡ።",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:tigrinya/news-23148020",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "4ceee736-49b6-cb42-b585-32440cf25eed",
+            "rank": 13,
+            "count": 7026,
+            "urn": "urn:bbc:curie:asset:4ceee736-49b6-cb42-b585-32440cf25eed",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "መራሕቲ ሃገራት ዓለም ስደተኛታት ኮይኖም እንተዝርከቡኸ?",
+                "headline": "ሶርያዊ ቀባኣይ ንፍሉጣት መራሕቲ ዓለም ከም ስደተኛ ዝርኣየሉ መነፅር ስነ-ጥበብ"
+              },
+              "locators": {
+                "assetUri": "/tigrinya/news-23143804",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:4ceee736-49b6-cb42-b585-32440cf25eed",
+                "assetId": "23143804",
+                "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-23143804",
+                "curie": "http://www.bbc.co.uk/asset/4ceee736-49b6-cb42-b585-32440cf25eed"
+              },
+              "summary": "ዓብደላ ኣል ኦማሪ ሶርያዊ ስደተኛ እዩ። መራሕቲ ሃገራት ዓለም ኣብቲ ንሱን ካልኦትን ግዳያት ዝኾኑሉ ስደት እንተዝርከቡስ እንታይኮን ምመሰሉ ንዝብል ሕቶ ብስእሊ ገሊፅዎሎ። ካብ ቅብኢታቱ ገሊኦም",
+              "timestamp": 1503390202000,
+              "language": "ti",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Tigrinya",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63583888",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/15B06/test/_63583888_mediaitem63582643.jpg",
+                "path": "/cpsdevpb/15B06/test/_63583888_mediaitem63582643.jpg",
+                "height": 1152,
+                "width": 2048,
+                "altText": "ትራምፕ",
+                "caption": "ኣብ ቅብኢታቱ ንኣዘራራብቲ መራሕቲ ዓለም ዝተገለለሉ፥ ዝተመዛበሉ ወይ ድማ ስደተኛ ኣምሲሉ እዩ ወኪልዎም። ከምዚ ንመራሒ ኣሜሪካ ዶናልድ ትራምፕ ዝገለፀሉ ቅብኢ ንኹሎም መራሕቲ ዝተፈላለዩ ባህርያት ኣልቢስዎም ኣሎ።",
+                "copyrightHolder": "ዓብደላ ኣል ኦማሪ ",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:tigrinya/news-23143804",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "f51c402a-b1d5-9641-87b2-b1040b8f11a9",
+            "rank": 14,
+            "count": 6940,
+            "urn": "urn:bbc:curie:asset:f51c402a-b1d5-9641-87b2-b1040b8f11a9",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ሰብ ሞያ ደቂ ኣንስትዮ ወርሓዊ ፅግየአን",
+                "headline": "ሰብ ሞያ ደቂ ኣንስትዮ ዋሕዲ ሰብኣይ ኣጋጢሙወን"
+              },
+              "locators": {
+                "assetUri": "/tigrinya/news-23141134",
+                "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-23141134",
+                "curie": "http://www.bbc.co.uk/asset/f51c402a-b1d5-9641-87b2-b1040b8f11a9",
+                "assetId": "23141134"
+              },
+              "summary": "gfbrcfr",
+              "timestamp": 1504788103000,
+              "language": "ti",
+              "indexImage": {
+                "id": "63579015",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/C799/test/_63579015_fbbd8474-3c06-4a1f-8cdf-aa5d37eefcab.jpg",
+                "path": "/cpsdevpb/C799/test/_63579015_fbbd8474-3c06-4a1f-8cdf-aa5d37eefcab.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Woman UK Egg",
+                "caption": "ንወርሐዓዊ ፀግያት ዝበቐዐ እንቋቖሖ",
+                "copyrightHolder": "Science Photo Library",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:tigrinya/news-23141134",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "2597be98-1178-8c4d-95f3-25c9c52ca5ec",
+            "rank": 15,
+            "count": 6318,
+            "urn": "urn:bbc:curie:asset:2597be98-1178-8c4d-95f3-25c9c52ca5ec",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "መእከቢት ብላይ ክዳዉንቲ፡ፒናፔት",
+                "headline": "ህንዲ በሊዮም ዝኣረጉ ክዳውንቲ ምዕራባውያን ብምዕዳግ ቀዳመይ ደረጃ ተሰሪዓ!"
+              },
+              "locators": {
+                "assetUri": "/tigrinya/news-23140724",
+                "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-23140724",
+                "curie": "http://www.bbc.co.uk/asset/2597be98-1178-8c4d-95f3-25c9c52ca5ec",
+                "assetId": "23140724"
+              },
+              "summary": "ሴሜናዊት ከተማ ህንዲ ፔናፒት ዝኣረጉን ዝተወድኡን ክዳዉንቲ ዓለም ብምእካብን ዳግማይ ብምትዕርራይን ናብ ሃገራት ኣፍሪካ ብምሻጥን ተወዳዳሪት ዘይረኸበት ከተማ ኮይና ኣላ።",
+              "timestamp": 1503391485000,
+              "language": "ti",
+              "id": "urn:bbc:ares::asset:tigrinya/news-23140724",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "23f1e74b-8edd-064a-bfb2-3570b3359528",
+            "rank": 16,
+            "count": 5896,
+            "urn": "urn:bbc:curie:asset:23f1e74b-8edd-064a-bfb2-3570b3359528",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ኣሜሪካ ኣብ ልዕሊ ኤርትራ ማዕቀብ ከምተንብር ኣጠንቂቓ።",
+                "headline": "ኤርትራ ዝተጠረዙ ዜጋታታ ብዘይምቕባላ ማዕቀብ ክንበረላ ይኽእል እዩ።"
+              },
+              "locators": {
+                "assetUri": "/tigrinya/23149931",
+                "cpsUrn": "urn:bbc:content:assetUri:tigrinya/23149931",
+                "curie": "http://www.bbc.co.uk/asset/23f1e74b-8edd-064a-bfb2-3570b3359528",
+                "assetId": "23149931"
+              },
+              "summary": "መንግስቲ ኣሜሪካ ካብ ዝተፈላለዩ ሃገራት ዝተባረሩ ዜጋታት ኣብ ልዕሊ ዘይቕበላ 12 ሃገራት ተወሳኺ ክልከላ ክተንብር ከመእትኽእል ኣፍሊጣ ኣላ።",
+              "timestamp": 1503572226000,
+              "language": "ti",
+              "indexImage": {
+                "id": "63589841",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/3A32/test/_63589841_a788784a-5c31-4c2e-95f2-cddc9d2aa75a.jpg",
+                "path": "/cpsdevpb/3A32/test/_63589841_a788784a-5c31-4c2e-95f2-cddc9d2aa75a.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "ካርታ ኤርትራ",
+                "caption": "ኤርትራ ዝተጠረዙ ዜጋትት ኣብዘ ይምቕባላ ሃገራት ተሰሪዓ",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:tigrinya/23149931",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "8fbbc340-9c26-ce44-9a43-8b817a71c3f9",
+            "rank": 17,
+            "count": 5677,
+            "urn": "urn:bbc:curie:asset:8fbbc340-9c26-ce44-9a43-8b817a71c3f9",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Jewish Groups in scathing attack on Corbyn",
+                "headline": "Jewish groups attack Jeremy Corbyn over anti-Semitism"
+              },
+              "locators": {
+                "assetUri": "/tigrinya/23193856",
+                "cpsUrn": "urn:bbc:content:assetUri:tigrinya/23193856",
+                "curie": "http://www.bbc.co.uk/asset/8fbbc340-9c26-ce44-9a43-8b817a71c3f9",
+                "assetId": "23193856"
+              },
+              "summary": "\"Enough is enough,\" Jewish groups have said in a letter accusing Jeremy Corbyn of failing to tackle anti-Semitism.",
+              "timestamp": 1522070148000,
+              "language": "ti",
+              "indexImage": {
+                "id": "63662184",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/BBFE/test/_63662184_000008267-1.jpg",
+                "path": "/cpsdevpb/BBFE/test/_63662184_000008267-1.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Jeremy Corbyn",
+                "caption": "Labour leader Jeremy Corbyn would be meeting jewish community representatives",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:tigrinya/23193856",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "83764748-abde-a34a-9fdc-dbd32f8b4b28",
+            "rank": 18,
+            "count": 5300,
+            "urn": "urn:bbc:curie:asset:83764748-abde-a34a-9fdc-dbd32f8b4b28",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ኣብ ዘይወዓልኦ ዝህሰያ ዘለዋ ማዕበልቲ ሃገራት ዓለም",
+                "headline": "ኣብ ዘይወዓልኦ ዝህሰያ ዘለዋ ማዕበልቲ ሃገራት ዓለም"
+              },
+              "locators": {
+                "assetUri": "/tigrinya/news-23144314",
+                "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-23144314",
+                "curie": "http://www.bbc.co.uk/asset/83764748-abde-a34a-9fdc-dbd32f8b4b28",
+                "assetId": "23144314"
+              },
+              "summary": "ሙሁራት ከባቢ ኣየር ዛጊድ ብዘካየድዎ መፅናዕቲ ዋዒ ኩነታት ኣየር በቲ ዘለዎ ኩነታት እንተድኣ ቀፂሉ ህቦቡላ ንፋስ፡ዕልቕልቕን ውሕጅን ዘስዓቦም ሓደጋታት መጠን ሞት ደቂ ሰባት ክውስኽ ከምዝኽእል የመላኽት።",
+              "timestamp": 1503390911000,
+              "language": "ti",
+              "id": "urn:bbc:ares::asset:tigrinya/news-23144314",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "0be7dd84-2b59-144f-8795-24b55ac59ac6",
+            "rank": 19,
+            "count": 4954,
+            "urn": "urn:bbc:curie:asset:0be7dd84-2b59-144f-8795-24b55ac59ac6",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ቡን ይስተዩ፥ ዕደመኦም የናውሑ",
+                "headline": "ቡን ምስታይ ዕድመ ደቂ-ሰባት ኣብ ምንዋሕ ዕዙዝ ብጽሒት ከምዘለዎ ተመራመርቲ ሓቢሮም።"
+              },
+              "locators": {
+                "assetUri": "/tigrinya/news-23140897",
+                "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-23140897",
+                "curie": "http://www.bbc.co.uk/asset/0be7dd84-2b59-144f-8795-24b55ac59ac6",
+                "assetId": "23140897"
+              },
+              "summary": "''ኣብ መዓልቲ ብውሑድ ሰለስተ ኩባያ ቡን ምስታይ ኣብ ዕድመና ኣርባዕተ ዓመታት ክንውስኽ ይሕግዘና'' ተመራመርቲ",
+              "timestamp": 1503311450000,
+              "language": "ti",
+              "indexImage": {
+                "id": "63579036",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/F679/test/_63579036_3_gettyimages-685762044.jpg",
+                "path": "/cpsdevpb/F679/test/_63579036_3_gettyimages-685762044.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "ፍንጃል ቡን",
+                "copyrightHolder": "ጌቲ ኢሜጅ",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:tigrinya/news-23140897",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "38abf8fc-d4c7-934e-91af-343e2191b859",
+            "rank": 20,
+            "count": 4922,
+            "urn": "urn:bbc:curie:asset:38abf8fc-d4c7-934e-91af-343e2191b859",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ቆልሓታ ዝሰኣነ፡ታሪኽ ኣፍሪካ!",
+                "headline": "ሀይማኖት ክርስትና ናብ ኣፍሪካ መዓዝን ብመንን ከምዝኣተወ ዶ ይፈልጡ?"
+              },
+              "locators": {
+                "assetUri": "/tigrinya/news-23140725",
+                "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-23140725",
+                "curie": "http://www.bbc.co.uk/asset/38abf8fc-d4c7-934e-91af-343e2191b859",
+                "assetId": "23140725"
+              },
+              "summary": "ታሪኽ ኣፍሪካውያን በሰንኪ ባዕዳውያን መግዛእቲ ኣውሮፓውያን ክሃስስ ብምኽኣሉ ኣፍሪካውያን ብዛዕብኦም ዘለዎም ታሪኻዊ ኣፍልጦ ኣብዚ እቶ ዝበሃል ከምዘይኮነ ጋዜጠኛ ቢቢሲ ዘይና በዳዊ ዝዳህሰሰቶ ፀብፃብ የመልክት።",
+              "timestamp": 1503391531000,
+              "language": "ti",
+              "indexImage": {
+                "id": "63579294",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/C091/test/_63579294__96750433_gettyimages-3018911.jpg",
+                "path": "/cpsdevpb/C091/test/_63579294__96750433_gettyimages-3018911.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "ሓወልቲ ኣኹሱም",
+                "caption": "ዘይተገንፀለ ታሪኽ ኣኹሱማዊያን",
+                "copyrightHolder": "AFP",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:tigrinya/news-23140725",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   },
-  "relatedContent": {
-    "site": {
-      "subType": "site",
-      "name": "Tigrinya",
-      "uri": "/tigrinya",
-      "type": "simple"
-    },
-    "groups": []
-  }
+  "contentType": "application/json; charset=utf-8"
 }

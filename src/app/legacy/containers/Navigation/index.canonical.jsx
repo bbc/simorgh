@@ -22,10 +22,6 @@ const CanonicalNavigationContainer = ({
   menuAnnouncedText,
   scrollableListItems,
   dropdownListItems,
-  brandBackgroundColour,
-  brandForegroundColour,
-  brandHighlightColour,
-  brandBorderColour,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -36,16 +32,7 @@ const CanonicalNavigationContainer = ({
   });
 
   return (
-    <Navigation
-      script={script}
-      service={service}
-      dir={dir}
-      isOpen={isOpen}
-      brandBackgroundColour={brandBackgroundColour}
-      brandForegroundColour={brandForegroundColour}
-      brandHighlightColour={brandHighlightColour}
-      brandBorderColour={brandBorderColour}
-    >
+    <Navigation script={script} service={service} dir={dir} isOpen={isOpen}>
       <ScrollableWrapper>
         <CanonicalMenuButton
           announcedText={menuAnnouncedText}
@@ -55,13 +42,7 @@ const CanonicalNavigationContainer = ({
           script={script}
         />
         {!isOpen && (
-          <ScrollableNavigation
-            dir={dir}
-            brandBackgroundColour={brandBackgroundColour}
-            brandForegroundColour={brandForegroundColour}
-            brandHighlightColour={brandHighlightColour}
-            brandBorderColour={brandBorderColour}
-          >
+          <ScrollableNavigation dir={dir}>
             {scrollableListItems}
           </ScrollableNavigation>
         )}
@@ -78,10 +59,6 @@ CanonicalNavigationContainer.propTypes = {
   scrollableListItems: node.isRequired,
   dropdownListItems: node.isRequired,
   menuAnnouncedText: string.isRequired,
-  brandBackgroundColour: string.isRequired,
-  brandForegroundColour: string.isRequired,
-  brandHighlightColour: string.isRequired,
-  brandBorderColour: string.isRequired,
 };
 
 export default CanonicalNavigationContainer;

@@ -1,11 +1,4 @@
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_GHOST,
-  C_POSTBOX_30,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
 import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
-import brandSVG from '../../chameleonLogos/pashto';
 import '#psammead/psammead-locales/moment/ps';
 import '#psammead/moment-timezone-include/tz/GMT';
 import jalaali from '../../../legacy/psammead/psammead-calendars/src';
@@ -41,7 +34,6 @@ export const service: DefaultServiceConfig = {
     serviceName: 'Pashto',
     languageName: 'Pashto',
     altCalendar: jalaali,
-    themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcpashto',
     twitterSite: '@bbcpashto',
     noBylinesPolicy:
@@ -52,13 +44,6 @@ export const service: DefaultServiceConfig = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'کور پاڼه',
-    theming: {
-      brandBackgroundColour: `${C_POSTBOX}`,
-      brandLogoColour: `${C_WHITE}`,
-      brandForegroundColour: `${C_GHOST}`,
-      brandHighlightColour: `${C_WHITE}`,
-      brandBorderColour: `${C_POSTBOX_30}`,
-    },
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
@@ -141,7 +126,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'اوکې',
           reject: 'دلته وګورئ چې څه بدل شوي',
-          rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
         },
         cookie: {
           amp: {
@@ -157,7 +142,7 @@ export const service: DefaultServiceConfig = {
                 linkText: 'کوکیز',
                 last: ' په څېر تکنالوژي کاروي او د براوزر ډېټا راټولوي. دا هر څه ستاسې د اسانۍ لپآره کېږي. که ورسره موافق یاست نو راته ولیکئ',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               manage: 'خپل سېټنګز مدیریت کړئ',
             },
@@ -173,7 +158,7 @@ export const service: DefaultServiceConfig = {
                   'د دې لپاره چې زموږ پاڼه سم کار وکړي، موږ محدود مالومات ستاسې له اجازې پرته ستاسې پر موبایل خوندي کوو',
                 para4: {
                   text: 'دلته لوستلی شئ چې موږ کوم محدود مالومات ستاسې له اجازې پرته ستاسې پر موبایل خوندي کوو',
-                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
                 },
                 para5:
                   'ستاسې د اجازې په اړه مالومات موږ ستاسې پر موبایل خوندي کوو',
@@ -206,13 +191,13 @@ export const service: DefaultServiceConfig = {
                 linkText: 'کوکیز',
                 last: ' کاروو. راته ووایاست چې ایا ډېټا در لېږلی شو',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
             },
             accept: 'هو، موافق یم',
             reject: 'نه، غواړم سېټنګز ته ولاړ شم',
             rejectUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+              'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           },
         },
       },
@@ -277,7 +262,6 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'مهم خبرونه',
       featuresAnalysisTitle: 'ځانګړي مطالب',
     },
-    brandSVG,
     mostRead: {
       header: 'ډېر لوستل شوي',
       lastUpdated: 'د خپرېدو نیټه',
@@ -331,8 +315,8 @@ export const service: DefaultServiceConfig = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-          text: 'AdChoices / Do Not Sell My Info',
+          href: '#',
+          text: 'Do not share or sell my info',
           lang: 'en-GB',
         },
       ],
@@ -366,7 +350,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'ويډيوګانې',
-        url: '/pashto/media/video',
+        url: '/pashto/topics/c2m45zyk0mmt',
       },
       {
         title: 'ځانګړې پاڼې',
@@ -375,6 +359,10 @@ export const service: DefaultServiceConfig = {
       {
         title: 'کالم',
         url: '/pashto/columns-54029178',
+      },
+      {
+        title: 'پر سټلایت خپرونې',
+        url: '/pashto/articles/c4n55eygdn0o',
       },
     ],
   },

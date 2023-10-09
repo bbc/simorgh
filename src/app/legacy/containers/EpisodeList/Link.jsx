@@ -2,11 +2,6 @@
 import React from 'react';
 import { node, string, bool, number } from 'prop-types';
 import styled from '@emotion/styled';
-import {
-  C_METAL,
-  C_POSTBOX,
-  C_STONE,
-} from '#psammead/psammead-styles/src/colours';
 import MediaIndicator from './MediaIndicator';
 import { withEpisodeContext } from './helpers';
 
@@ -16,7 +11,10 @@ const MediaIndicatorWrapper = styled.div`
   top: 0;
 `;
 
+// `display: block` has been used to resolve Focus Indicator bug in Firefox high contrast mode.
 const StyledAnchor = styled.a`
+  display: block;
+
   :before {
     position: absolute;
     top: 0;
@@ -42,7 +40,7 @@ const StyledAnchor = styled.a`
     .rounded-play-button__ring,
     .rounded-play-button__inner {
       fill: currentColor;
-      color: ${C_POSTBOX};
+      color: ${props => props.theme.palette.POSTBOX};
     }
     .rounded-play-button__triangle {
       fill: transparent;
@@ -50,7 +48,8 @@ const StyledAnchor = styled.a`
   }
   &:visited {
     [class*='--visited'] {
-      color: ${({ darkMode }) => (darkMode ? C_STONE : C_METAL)};
+      color: ${({ theme }) =>
+        theme.isDarkUi ? theme.palette.STONE : theme.palette.METAL};
     }
   }
 `;
@@ -61,6 +60,7 @@ const Link = ({ children, showMediaIndicator, dir, index, ...props }) => {
       showMediaIndicator={showMediaIndicator}
       // This is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
       aria-labelledby={`episodeLinkIndex-${index}`}
+      className="focusIndicatorDisplayBlock focusIndicatorInvert"
       {...props}
     >
       {showMediaIndicator && (

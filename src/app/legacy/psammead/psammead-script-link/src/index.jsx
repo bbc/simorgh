@@ -8,7 +8,6 @@ import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
 } from '#psammead/gel-foundations/src/breakpoints';
-import { C_WHITE } from '#psammead/psammead-styles/src/colours';
 import { getPica } from '#psammead/gel-foundations/src/typography';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { string, shape, node, func } from 'prop-types';
@@ -18,10 +17,10 @@ const StyledLink = styled.a`
   ${({ script }) => script && getPica(script)}
   ${({ service }) => service && getSansRegular(service)}
   display: inline-block;
-  color: ${C_WHITE};
+  color: ${props => props.theme.palette.WHITE};
   text-decoration: none;
   height: 2.25rem;
-  border: 0.0625rem solid ${C_WHITE};
+  border: 0.0625rem solid ${props => props.theme.palette.WHITE};
   margin: ${GEL_SPACING} 0 ${GEL_SPACING} ${GEL_SPACING};
 
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
@@ -43,7 +42,7 @@ const StyledSpan = styled.span`
   ${StyledLink}:hover &,
   ${StyledLink}:focus & {
     margin: 0;
-    border: 0.1875rem solid ${C_WHITE};
+    border: 0.1875rem solid ${props => props.theme.palette.WHITE};
   }
   /* stylelint-enable */
 
@@ -59,6 +58,7 @@ const ScriptLink = ({ children, script, service, href, variant, onClick }) => (
     href={href}
     data-variant={variant}
     onClick={onClick}
+    className="focusIndicatorRemove"
   >
     <StyledSpan>{children}</StyledSpan>
   </StyledLink>

@@ -30,7 +30,7 @@ exports[`LiveLabel should correctly render for RTL service 1`] = `
       LIVE 
     </span>
     <span
-      class="emotion-2 emotion-3"
+      class="emotion-2"
       lang="en-GB"
     >
       Live, 
@@ -72,7 +72,7 @@ exports[`LiveLabel should render correctly with custom offscreen text 1`] = `
       LIVE 
     </span>
     <span
-      class="emotion-2 emotion-3"
+      class="emotion-2"
       lang="en-GB"
     >
       Watch Live, 
@@ -114,7 +114,7 @@ exports[`LiveLabel should render correctly with english live text 1`] = `
       LIVE 
     </span>
     <span
-      class="emotion-2 emotion-3"
+      class="emotion-2"
       lang="en-GB"
     >
       Live, 

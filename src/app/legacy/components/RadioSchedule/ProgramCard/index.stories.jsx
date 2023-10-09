@@ -2,6 +2,7 @@ import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import { renderProgramCard as Component } from '../testHelpers/helper';
+import ThemeProvider from '../../../../components/ThemeProvider';
 
 export default {
   title: 'Components/Radio Schedule/Program Card',
@@ -9,6 +10,18 @@ export default {
   decorators: [withKnobs, withServicesKnob()],
 };
 
-export const OnDemand = props => <Component {...props} state="onDemand" />;
-export const Live = props => <Component {...props} state="live" />;
-export const Next = props => <Component {...props} state="next" />;
+export const OnDemand = props => (
+  <ThemeProvider service="news">
+    <Component {...props} state="onDemand" />
+  </ThemeProvider>
+);
+export const Live = props => (
+  <ThemeProvider service="news">
+    <Component {...props} state="live" />
+  </ThemeProvider>
+);
+export const Next = props => (
+  <ThemeProvider service="news">
+    <Component {...props} state="next" />
+  </ThemeProvider>
+);

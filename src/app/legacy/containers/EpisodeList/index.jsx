@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { C_CLOUD_LIGHT } from '#psammead/psammead-styles/src/colours';
 import { GEL_SPACING_DBL } from '#psammead/gel-foundations/src/spacings';
-import { string, shape, arrayOf, oneOf, element, bool } from 'prop-types';
+import { string, shape, arrayOf, oneOf, element } from 'prop-types';
 import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 
 import { EpisodeContext } from './helpers';
@@ -30,25 +29,17 @@ const StyledEpisodeListItem = styled.li`
     padding-bottom: 0;
   }
   &:not(:last-child) {
-    border-bottom: 1px ${C_CLOUD_LIGHT} solid;
+    border-bottom: 1px ${props => props.theme.palette.CLOUD_LIGHT} solid;
   }
 `;
 
-const EpisodeList = ({
-  children,
-  script,
-  service,
-  dir,
-  darkMode,
-  ulProps,
-  liProps,
-}) => {
+const EpisodeList = ({ children, script, service, dir, ulProps, liProps }) => {
   if (!children.length) return null;
 
   const hasMultipleChildren = children.length > 1;
 
   return (
-    <EpisodeContext.Provider value={{ script, service, dir, darkMode }}>
+    <EpisodeContext.Provider value={{ script, service, dir }}>
       {hasMultipleChildren ? (
         <StyledEpisodeList role="list" {...ulProps}>
           {children.map(child => (
@@ -69,7 +60,6 @@ EpisodeList.propTypes = {
   script: shape(scriptPropType).isRequired,
   service: string.isRequired,
   dir: oneOf(['ltr', 'rtl']),
-  darkMode: bool,
   ulProps: shape({}),
   liProps: shape({}),
 };
@@ -77,7 +67,6 @@ EpisodeList.propTypes = {
 EpisodeList.defaultProps = {
   children: [],
   dir: 'ltr',
-  darkMode: false,
   ulProps: {},
   liProps: {},
 };

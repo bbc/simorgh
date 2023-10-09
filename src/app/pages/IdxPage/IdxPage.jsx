@@ -1,7 +1,7 @@
 import React, { useContext, Fragment } from 'react';
 import path from 'ramda/src/path';
 import styled from '@emotion/styled';
-import { node, string } from 'prop-types';
+import { string } from 'prop-types';
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
@@ -14,23 +14,21 @@ import {
   GEL_MARGIN_BELOW_400PX,
   GEL_MARGIN_ABOVE_400PX,
 } from '#psammead/gel-foundations/src/spacings';
-import { C_GHOST } from '#psammead/psammead-styles/src/colours';
-import MetadataContainer from '#containers/Metadata';
-import LinkedData from '#containers/LinkedData';
 import IndexHeading from '#containers/IndexHeading';
 import IndexPageContainer from '#components/PageLayout/IndexPageContainer';
-import MostReadContainer from '#containers/MostRead';
-import MostReadSection from '#containers/MostRead/section';
-import MostReadSectionLabel from '#containers/MostRead/label';
 import RadioScheduleContainer from '#containers/RadioSchedule';
 import IndexPageSection from '#containers/IndexPageSection';
 import idxPageDataPropTypes from '#models/propTypes/idxPage';
-import ATIAnalytics from '#containers/ATIAnalytics';
-import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
+import MostRead from '#app/components/MostRead';
+import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
+import ATIAnalytics from '../../components/ATIAnalytics';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import MetadataContainer from '../../components/Metadata';
+import { GHOST } from '../../components/ThemeProvider/palette';
+import LinkedData from '../../components/LinkedData';
 
-const IdxMostReadSection = styled(MostReadSection)`
+const IdxMostReadSection = styled.div`
   /* To centre page layout for Group 4+ */
   margin: 0 auto;
   width: 100%; /* Needed for IE11 */
@@ -53,31 +51,9 @@ const StyledRadioScheduleContainer = styled(RadioScheduleContainer)`
   }
 `;
 
-const MostReadWrapper = ({ children }) => (
-  <IdxMostReadSection>
-    <MostReadSectionLabel backgroundColor={C_GHOST} />
-    {children}
-  </IdxMostReadSection>
-);
-
-const renderMostRead = mostReadEndpointOverride => (
-  <MostReadContainer
-    mostReadEndpointOverride={mostReadEndpointOverride}
-    columnLayout="twoColumn"
-    wrapper={MostReadWrapper}
-  />
-);
-
-MostReadWrapper.propTypes = {
-  children: node.isRequired,
-};
-
-const IdxPage = ({
-  pageData,
-  mostReadEndpointOverride,
-  radioScheduleEndpointOverride,
-}) => {
-  const { mostRead, lang, radioSchedule } = useContext(ServiceContext);
+const IdxPage = ({ pageData, radioScheduleEndpointOverride }) => {
+  const { brandName, mostRead, lang, radioSchedule } =
+    useContext(ServiceContext);
 
   const groups = path(['content', 'groups'], pageData);
   const title = path(['metadata', 'title'], pageData);
@@ -88,10 +64,32 @@ const IdxPage = ({
   const mostReadOnIdxPage = path(['onIdxPage'], mostRead);
   const radioScheduleIdxPosition = path(['idxPagePosition'], radioSchedule);
 
+  const { mostRead: mostReadInitialData } = pageData;
+
+  // ATI
+  const {
+    metadata: { atiAnalytics },
+  } = pageData;
+
+  const atiData = {
+    ...atiAnalytics,
+    pageTitle: `${atiAnalytics.pageTitle} - ${brandName}`,
+  };
+
+  const renderMostRead = () => (
+    <IdxMostReadSection>
+      <MostRead
+        data={mostReadInitialData}
+        columnLayout="twoColumn"
+        headingBackgroundColour={GHOST}
+      />
+    </IdxMostReadSection>
+  );
+
   return (
     <>
-      <ATIAnalytics data={pageData} />
-      <ChartbeatAnalytics data={pageData} />
+      <ATIAnalytics atiData={atiData} />
+      <ChartbeatAnalytics title={title} />
       <ComscoreAnalytics />
       <MetadataContainer
         title={title}
@@ -120,7 +118,7 @@ const IdxPage = ({
               <IndexPageSection group={group} sectionNumber={index} />
             </Fragment>
           ))}
-          {mostReadOnIdxPage && renderMostRead(mostReadEndpointOverride)}
+          {mostReadOnIdxPage && renderMostRead()}
         </IndexPageContainer>
       </main>
     </>
@@ -129,12 +127,10 @@ const IdxPage = ({
 
 IdxPage.propTypes = {
   pageData: idxPageDataPropTypes.isRequired,
-  mostReadEndpointOverride: string,
   radioScheduleEndpointOverride: string,
 };
 
 IdxPage.defaultProps = {
-  mostReadEndpointOverride: null,
   radioScheduleEndpointOverride: null,
 };
 

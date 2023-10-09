@@ -5,12 +5,21 @@ import {
   MOST_WATCHED_STALE_DATA,
 } from '#lib/logger.const';
 import processMostWatched from '.';
+import isLive from '../../../lib/utilities/isLive';
+
+jest.mock('../../../lib/utilities/isLive', () =>
+  jest.fn().mockImplementation(() => false),
+);
 
 const toggles = {
   mostPopularMedia: { enabled: true, value: '5' },
 };
 
 describe('processMostWatched', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
   it('should return null if data is null', () => {
     const data = processMostWatched({
       data: null,
@@ -21,7 +30,8 @@ describe('processMostWatched', () => {
     expect(data).toBe(null);
   });
 
-  it('should return null if data is stale', () => {
+  it('should return null if data is stale on live environment', () => {
+    isLive.mockImplementationOnce(() => true);
     const staleData = {
       lastRecordTimeStamp: '2019-11-06T16:28:00Z',
       generated: '2019-11-06T17:05:17.981Z',

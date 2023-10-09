@@ -2,66 +2,59 @@
 
 exports[`Canonical Articles A11y I can see the skip to content link 1`] = `"مشاهده محتوا"`;
 
-exports[`Canonical Articles Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=69&amp;p=persian.articles.c4vlle3q337o.page&amp;x1=[urn%3Abbc%3Aoptimo%3Aasset%3Ac4vlle3q337o]&amp;x2=[responsive]&amp;x3=[news-persian]&amp;x4=[fa]&amp;x7=[article]&amp;x8=[simorgh-nojs]&amp;x9=[%D9%BE%D9%87%D9%BE%D8%A7%D8%AF%DB%8C%2B%DA%A9%D9%87%2B%D8%A8%D8%B1%D8%A7%DB%8C%D8%AA%D8%A7%D9%86%2B%D9%82%D9%87%D9%88%D9%87%2B%D9%85%DB%8C%E2%80%8C%D8%A2%D9%88%D8%B1%D8%AF]&amp;x11=[2018-08-24T14%3A57%3A42.000Z]&amp;x12=[2018-08-24T14%3A57%3A42.000Z]&amp;x13=[Drones]&amp;x14=[c6176220-b6bb-4a1c-b3b4-3a6fcdc283b1]\\"/>"`;
+exports[`Canonical Articles Analytics ATI 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" src="https://logws1363.ati-host.net?s=598343&amp;s2=69&amp;p=persian.articles.c4vlle3q337o.page&amp;x1=[urn%3Abbc%3Aoptimo%3Aasset%3Ac4vlle3q337o]&amp;x2=[responsive]&amp;x3=[news-persian]&amp;x4=[fa]&amp;x7=[article]&amp;x8=[simorgh-nojs]&amp;x9=[%D9%BE%D9%87%D9%BE%D8%A7%D8%AF%DB%8C%2520%DA%A9%D9%87%2520%D8%A8%D8%B1%D8%A7%DB%8C%D8%AA%D8%A7%D9%86%2520%D9%82%D9%87%D9%88%D9%87%2520%D9%85%DB%8C%E2%80%8C%D8%A2%D9%88%D8%B1%D8%AF]&amp;x11=[2019-05-28T13%3A42%3A44.996Z]&amp;x12=[2019-07-23T15%3A47%3A11.893Z]"/>"`;
 
 exports[`Canonical Articles Footer Anchors should match text and url 1`] = `
-Object {
+{
   "text": "BBC News, فارسی",
   "url": "/persian",
 }
 `;
 
 exports[`Canonical Articles Footer Anchors should match text and url 2`] = `
-Object {
+{
   "text": "چرا می‌توانید به بی‌بی‌سی اطمینان کنید؟",
   "url": "https://www.bbc.com/persian/institutional-49283091",
 }
 `;
 
 exports[`Canonical Articles Footer Anchors should match text and url 3`] = `
-Object {
+{
   "text": "شرایط استفاده",
   "url": "https://www.bbc.com/persian/institutional-37474133",
 }
 `;
 
 exports[`Canonical Articles Footer Anchors should match text and url 4`] = `
-Object {
+{
   "text": "درباره بی بی سی",
   "url": "https://www.bbc.com/persian/institutional-37474136",
 }
 `;
 
 exports[`Canonical Articles Footer Anchors should match text and url 5`] = `
-Object {
+{
   "text": "سیاست حفظ حریم خصوصی",
   "url": "https://www.bbc.com/persian/institutional-37540067",
 }
 `;
 
 exports[`Canonical Articles Footer Anchors should match text and url 6`] = `
-Object {
+{
   "text": "کوکی ها",
-  "url": "https://www.bbc.co.uk/usingthebbc/cookies/",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
 }
 `;
 
 exports[`Canonical Articles Footer Anchors should match text and url 7`] = `
-Object {
+{
   "text": "تماس با بی بی سی",
   "url": "https://www.bbc.co.uk/persian/send/u50853555",
 }
 `;
 
 exports[`Canonical Articles Footer Anchors should match text and url 8`] = `
-Object {
-  "text": "AdChoices / Do Not Sell My Info",
-  "url": "https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/",
-}
-`;
-
-exports[`Canonical Articles Footer Anchors should match text and url 9`] = `
-Object {
+{
   "text": "سیاست ما درباره لینک دادن به سایت های دیگر.",
   "url": "https://www.bbc.com/persian/institutional/2011/04/000001_links",
 }
@@ -69,180 +62,253 @@ Object {
 
 exports[`Canonical Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/persian"`;
 
-exports[`Canonical Articles Footer I can see the footer copyright and external linking text 1`] = `"© 2022 بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر."`;
+exports[`Canonical Articles Footer I can see the footer copyright and external linking text 1`] = `"© 2023 بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر."`;
 
 exports[`Canonical Articles Header I can see the branding 1`] = `"BBC News, فارسی"`;
 
 exports[`Canonical Articles Header Navigation link should match text and url 1`] = `
-Object {
+{
   "text": "صفحه اول",
   "url": "/persian",
 }
 `;
 
 exports[`Canonical Articles Header Navigation link should match text and url 2`] = `
-Object {
+{
   "text": "پخش زنده",
   "url": "/persian/media-49522521",
 }
 `;
 
 exports[`Canonical Articles Header Navigation link should match text and url 3`] = `
-Object {
+{
   "text": "ویدیو",
-  "url": "/persian/media/video",
+  "url": "/persian/topics/c6z7mnr559gt",
 }
 `;
 
 exports[`Canonical Articles Header Navigation link should match text and url 4`] = `
-Object {
+{
   "text": "تلویزیون",
   "url": "/persian/tv-and-radio-37434377",
 }
 `;
 
 exports[`Canonical Articles Header Navigation link should match text and url 5`] = `
-Object {
-  "text": "رادیو",
-  "url": "/persian/tv-and-radio-37434376",
-}
-`;
-
-exports[`Canonical Articles Header Navigation link should match text and url 6`] = `
-Object {
+{
   "text": "ايران",
   "url": "/persian/topics/ckdxnwvwwjnt",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 7`] = `
-Object {
+exports[`Canonical Articles Header Navigation link should match text and url 6`] = `
+{
   "text": "افغانستان",
   "url": "/persian/afghanistan",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 8`] = `
-Object {
+exports[`Canonical Articles Header Navigation link should match text and url 7`] = `
+{
   "text": "جهان",
   "url": "/persian/topics/c1d8ye58xl8t",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 9`] = `
-Object {
+exports[`Canonical Articles Header Navigation link should match text and url 8`] = `
+{
   "text": "هنر",
   "url": "/persian/topics/c9wpm0epm45t",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 10`] = `
-Object {
+exports[`Canonical Articles Header Navigation link should match text and url 9`] = `
+{
   "text": "ورزش",
   "url": "/persian/topics/cnq6879k7yjt",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 11`] = `
-Object {
+exports[`Canonical Articles Header Navigation link should match text and url 10`] = `
+{
   "text": "اقتصاد",
   "url": "/persian/topics/cl8l9mvlllqt",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 12`] = `
-Object {
+exports[`Canonical Articles Header Navigation link should match text and url 11`] = `
+{
   "text": "دانش",
   "url": "/persian/topics/ckdxnwr4r1yt",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 13`] = `
-Object {
+exports[`Canonical Articles Header Navigation link should match text and url 12`] = `
+{
   "text": "ناظران می‌گویند",
   "url": "/persian/blogs-54099951",
 }
 `;
 
-exports[`Canonical Articles Image Caption should match text 1`] = `"توضیح تصویر، نوشیدنی‌ها داغ در بسته‌های سربسته توزیع می‌شوند"`;
+exports[`Canonical Articles Header Navigation link should match text and url 13`] = `
+{
+  "text": "رادیو",
+  "url": "/persian/tv-and-radio-37434376",
+}
+`;
+
+exports[`Canonical Articles Image Caption should match text 1`] = `"توضیح تصویر، نوشیدنی‌ها داغ در بسته‌های سربسته توزیع می‌شوند "`;
 
 exports[`Canonical Articles Image should match snapshot 1`] = `
 <img
   alt="قهوه"
-  class="e3vrtyk0 bbc-rb7xa0 e1mo64ex0"
-  height="576"
-  src="https://ichef.bbci.co.uk/news/640/cpsprodpb/87F5/production/_103150843_mediaitem103146787.jpg"
-  width="1024"
+  class="bbc-1uwua2r"
+  height="360"
+  sizes="(min-width: 1008px) 760px, 100vw"
+  src="https://ichef.bbci.co.uk/news/640/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg"
+  srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg 624w, https://ichef.bbci.co.uk/news/640/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg 640w"
+  style="aspect-ratio:640 / 360"
+  width="640"
 />
 `;
 
 exports[`Canonical Articles Main heading should match text 1`] = `"پهپادی که برایتان قهوه می‌آورد"`;
 
+exports[`Canonical Articles Most Read has item with rank 1`] = `
+{
+  "text": "ایران در آستانه بحران بنزین؛ تابستانی دشوار برای دولت رئیسی در پیش است",
+  "url": "https://www.bbc.com/persian/articles/c4n9j7rx27lo",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 2`] = `
+{
+  "text": "پرونده حمید نوری؛ وکلای مدافع: نوری فریب خورد",
+  "url": "https://www.bbc.com/persian/articles/cm58lxneyrvo",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 3`] = `
+{
+  "text": "اما رادوکانو: گاهی آرزو می‌کنم که ای کاش قهرمان اوپن آمریکا نمی‌شدم",
+  "url": "https://www.bbc.com/persian/articles/cx7e0eexdeeo",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 4`] = `
+{
+  "text": "ملی‌پوش سابق هلند برای چاقو زدن به فامیلش به ۱۸ ماه حبس محکوم شد",
+  "url": "https://www.bbc.com/persian/articles/cqe0045zrpdo",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 5`] = `
+{
+  "text": "وزیر خارجه آمریکا در پکن؛ شی: پیشرفت‌هایی در روابط حاصل شده است، بلینکن: رقابت نباید بدل به دشمنی شود",
+  "url": "https://www.bbc.com/persian/articles/cjmyylvr1nvo",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 6`] = `
+{
+  "text": "سگم سرطان پستان مرا تشخیص داد",
+  "url": "https://www.bbc.com/persian/articles/cyxgqq1796qo",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 7`] = `
+{
+  "text": "لوح ۲۸۰۰ ساله از ایتالیا به عراق بازگردانده شد",
+  "url": "https://www.bbc.com/persian/articles/cydg800g89yo",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 8`] = `
+{
+  "text": "نمایندگان کشورها و نهادها در اجلاس سازمان ملل خواستار پایان یافتن سیاست‌های تبعیض‌آمیز طالبان علیه زنان شدند",
+  "url": "https://www.bbc.com/persian/articles/cgr664ezld5o",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 9`] = `
+{
+  "text": "چرا موبایل داغ می‌کند و چطور آن را خنک نگه داریم؟",
+  "url": "https://www.bbc.com/persian/articles/c9wj7ejl17po",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 10`] = `
+{
+  "text": "هشتگ «داستان_ما_یکیست» در چهلمین سالگرد اعدام ۱۰ زن بهائی در شیراز",
+  "url": "https://www.bbc.com/persian/articles/c6plvgyz614o",
+}
+`;
+
 exports[`Canonical Articles SEO Apple Touch Icon should match attributes 1`] = `
-Object {
+{
   "sizes": null,
   "url": "http://localhost:7080/persian/images/icons/icon-192x192.png",
 }
 `;
 
 exports[`Canonical Articles SEO Apple Touch Icon should match attributes 2`] = `
-Object {
+{
   "sizes": "72x72",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-72x72.png",
 }
 `;
 
 exports[`Canonical Articles SEO Apple Touch Icon should match attributes 3`] = `
-Object {
+{
   "sizes": "96x96",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-96x96.png",
 }
 `;
 
 exports[`Canonical Articles SEO Apple Touch Icon should match attributes 4`] = `
-Object {
+{
   "sizes": "128x128",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-128x128.png",
 }
 `;
 
 exports[`Canonical Articles SEO Apple Touch Icon should match attributes 5`] = `
-Object {
+{
   "sizes": "144x144",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-144x144.png",
 }
 `;
 
 exports[`Canonical Articles SEO Apple Touch Icon should match attributes 6`] = `
-Object {
+{
   "sizes": "152x152",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-152x152.png",
 }
 `;
 
 exports[`Canonical Articles SEO Apple Touch Icon should match attributes 7`] = `
-Object {
+{
   "sizes": "180x180",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-180x180.png",
 }
 `;
 
 exports[`Canonical Articles SEO Apple Touch Icon should match attributes 8`] = `
-Object {
+{
   "sizes": "192x192",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-192x192.png",
 }
 `;
 
 exports[`Canonical Articles SEO Apple Touch Icon should match attributes 9`] = `
-Object {
+{
   "sizes": "384x384",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-384x384.png",
 }
 `;
 
 exports[`Canonical Articles SEO Apple Touch Icon should match attributes 10`] = `
-Object {
+{
   "sizes": "512x512",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-512x512.png",
 }
@@ -252,8 +318,6 @@ exports[`Canonical Articles SEO Canonical link 1`] = `"http://localhost:7080/per
 
 exports[`Canonical Articles SEO Dir attribute 1`] = `"rtl"`;
 
-exports[`Canonical Articles SEO FB admins 1`] = `"100004154058350"`;
-
 exports[`Canonical Articles SEO FB app ID 1`] = `"1609039196070050"`;
 
 exports[`Canonical Articles SEO Heading level 1 1`] = `"پهپادی که برایتان قهوه می‌آورد"`;
@@ -261,20 +325,14 @@ exports[`Canonical Articles SEO Heading level 1 1`] = `"پهپادی که برا
 exports[`Canonical Articles SEO Lang attribute 1`] = `"fa"`;
 
 exports[`Canonical Articles SEO Linked data should match text 1`] = `
-Object {
+{
   "@context": "http://schema.org",
-  "@graph": Array [
-    Object {
-      "@type": "Article",
-      "about": Array [
-        Object {
-          "@type": "Thing",
-          "name": " پهپاد",
-        },
-      ],
-      "author": Object {
+  "@graph": [
+    {
+      "@type": "NewsArticle",
+      "author": {
         "@type": "NewsMediaOrganization",
-        "logo": Object {
+        "logo": {
           "@type": "ImageObject",
           "height": 576,
           "url": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
@@ -283,28 +341,28 @@ Object {
         "name": "BBC News فارسی",
         "noBylinesPolicy": "https://www.bbc.com/persian/institutional-49283091#authorexpertise",
       },
-      "dateModified": "2018-08-24T14:57:42.000Z",
-      "datePublished": "2018-08-24T14:57:42.000Z",
+      "dateModified": "2019-07-23T15:47:11.893Z",
+      "datePublished": "2019-05-28T13:42:44.996Z",
       "headline": "پهپادی که برایتان قهوه می‌آورد",
-      "image": Object {
+      "image": {
         "@type": "ImageObject",
         "height": 576,
         "url": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
         "width": 1024,
       },
-      "inLanguage": Object {
+      "inLanguage": {
         "@type": "Language",
         "alternateName": "fa",
         "name": "Persian",
       },
-      "mainEntityOfPage": Object {
+      "mainEntityOfPage": {
         "@id": "http://localhost:7080/persian/articles/c4vlle3q337o",
         "@type": "WebPage",
         "name": "پهپادی که برایتان قهوه می‌آورد",
       },
-      "publisher": Object {
+      "publisher": {
         "@type": "NewsMediaOrganization",
-        "logo": Object {
+        "logo": {
           "@type": "ImageObject",
           "height": 576,
           "url": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
@@ -355,8 +413,8 @@ exports[`Canonical Articles SEO Twitter site 1`] = `"@bbcpersian"`;
 exports[`Canonical Articles SEO Twitter title 1`] = `"پهپادی که برایتان قهوه می‌آورد - BBC News فارسی"`;
 
 exports[`Canonical Articles Timestamp should match text and date 1`] = `
-Object {
-  "date": "2018-08-24",
-  "text": "۲ شهریور ۱۳۹۷ - ۲۴ اوت ۲۰۱۸",
+{
+  "date": "2019-05-28",
+  "text": "۷ خرداد ۱۳۹۸ - ۲۸ مه ۲۰۱۹",
 }
 `;

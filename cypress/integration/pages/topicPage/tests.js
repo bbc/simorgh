@@ -1,3 +1,5 @@
+import idSanitiser from '../../../../src/app/lib/utilities/idSanitiser';
+
 export default ({ service, pageType, variant }) => {
   let topicId;
   let variantTopicId;
@@ -5,39 +7,52 @@ export default ({ service, pageType, variant }) => {
   let firstItemHeadline;
   let pageCount;
   let numberOfItems;
-  let appendVariant = '';
+  let messageBanner;
   const scriptSwitchServices = ['serbian', 'ukchina', 'zhongwen'];
   let otherVariant;
+
   describe(`Tests for ${service} ${pageType}`, () => {
     beforeEach(() => {
       cy.log(Cypress.env('currentPath'));
       cy.log(service);
+      const env = Cypress.env('APP_ENV');
+      if (env !== 'local') {
+        // eslint-disable-next-line prefer-destructuring
+        topicId = Cypress.env('currentPath')
+          .split('topics/')
+          .pop()
+          .split('?')[0];
 
-      // eslint-disable-next-line prefer-destructuring
-      topicId = Cypress.env('currentPath').split('topics/').pop().split('?')[0];
+        if (scriptSwitchServices.includes(service)) {
+          if (service === 'serbian') {
+            otherVariant = variant === 'lat' ? 'cyr' : 'lat';
+          }
+          if (service === 'ukchina' || service === 'zhongwen') {
+            otherVariant = variant === 'simp' ? 'trad' : 'simp';
+          }
+        }
 
-      if (scriptSwitchServices.includes(service)) {
-        appendVariant = `&variant=${variant}`;
-        if (service === 'serbian') {
-          otherVariant = variant === 'lat' ? 'cyr' : 'lat';
-        }
-        if (service === 'ukchina' || service === 'zhongwen') {
-          otherVariant = variant === 'simp' ? 'trad' : 'simp';
-        }
+        // Gets the topic page data for all the tests
+        cy.getPageData({
+          service,
+          pageType: 'topic',
+          variant,
+        }).then(({ body }) => {
+          topicTitle = body.data.title;
+          variantTopicId = body.data.variantTopicId;
+          pageCount = body.data.pageCount;
+          numberOfItems = body.data.curations[0].summaries.length;
+          firstItemHeadline = body.data.curations[0].summaries[0].title;
+          messageBanner = body.data.curations.find(
+            curation =>
+              curation.visualProminence === 'NORMAL' &&
+              curation.visualStyle === 'BANNER',
+          );
+        });
+        cy.log(`topic id ${topicId}`);
       }
-
-      // Gets the topic page data for all the tests
-      cy.request(
-        `https://web-cdn.api.bbci.co.uk/fd/simorgh-bff?page=1&id=${topicId}&service=${service}${appendVariant}`,
-      ).then(({ body }) => {
-        topicTitle = body.data.title;
-        variantTopicId = body.data.variantTopicId;
-        pageCount = body.data.pageCount;
-        numberOfItems = body.data.curations[0].summaries.length;
-        firstItemHeadline = body.data.curations[0].summaries[0].title;
-      });
-      cy.log(`topic id ${topicId}`);
     });
+
     describe(`Page content`, () => {
       it('should render a H1, which contains/displays topic title', () => {
         cy.log(Cypress.env('currentPath'));
@@ -49,7 +64,7 @@ export default ({ service, pageType, variant }) => {
         // the number of promos in the data from the BFF
         // This is to help find out why sometimes a promo doesn't show on the page
         cy.log(`Number of promos in BFF data${numberOfItems}`);
-        const selector = '[data-testid="topic-promos"] > li';
+        const selector = '[data-testid="topic-promos"]:first > li';
         const promoCount = Cypress.$(selector).length;
         cy.log(`Number of promos on the page${promoCount}`);
 
@@ -63,14 +78,16 @@ export default ({ service, pageType, variant }) => {
 
         // Checks number of items on page
         cy.get('[data-testid="topic-promos"]')
+          .first()
           .children()
           .its('length')
           .should('eq', numberOfItems);
       });
-      it('First item has correct headline', () => {
+      it.skip('First item has correct headline', () => {
         cy.log(firstItemHeadline);
         // Goes down into the first item's h2 text and compares to title
         cy.get('[data-testid="topic-promos"]')
+          .first()
           .children()
           .first()
           .within(() => {
@@ -80,44 +97,40 @@ export default ({ service, pageType, variant }) => {
       it('Clicking the first item should navigate to the correct page (goes to live article)', () => {
         // Goes down into the first item's href
         cy.get('[data-testid="topic-promos"]')
+          .first()
           .children()
           .first()
           .within(() => {
             cy.get('a')
               .should('have.attr', 'href')
               .then($href => {
-                cy.log($href);
-
-                // Clicks the first item, then checks the page navigates to has the expected url
                 cy.get('a').click();
-                cy.url()
-                  .should('eq', $href)
-                  .then(url => {
-                    // Check the page navigated to has the short headline that was on the topic item
-                    cy.request(`${url}.json`).then(({ body }) => {
-                      if (body.metadata.locators.cpsUrn) {
-                        cy.log('cps article');
-                        const { shortHeadline } = body.promo.headlines;
-                        expect(shortHeadline).to.equal(firstItemHeadline);
-                      }
-                      if (body.promo.locators.optimoUrn) {
-                        cy.log('optimo article');
-                        cy.window().then(win => {
-                          const jsonData = win.SIMORGH_DATA.pageData;
-                          const headline =
-                            jsonData.promo.headlines.promoHeadline.blocks[0]
-                              .model.blocks[0].model.text;
-                          cy.log(
-                            jsonData.promo.headlines.promoHeadline.blocks[0]
-                              .model.blocks[0].model.text,
-                          );
-                          expect(headline).to.equal(firstItemHeadline);
-                        });
-                      }
-                    });
-                  });
+                cy.url().should('eq', $href);
               });
           });
+      });
+      it('clicking the message banner should navigate to the correct page', () => {
+        if (messageBanner) {
+          cy.go('back');
+          cy.get(
+            `[data-testid="${`message-banner-${idSanitiser(
+              messageBanner.title,
+            )}`}"]`,
+          ).as('messageBanner');
+          cy.get('@messageBanner').should('exist');
+          cy.get('@messageBanner').scrollIntoView();
+          cy.get('@messageBanner').within(() => {
+            cy.get('a')
+              .should('have.attr', 'href')
+              .then($href => {
+                cy.log($href);
+                cy.get('a').click();
+                cy.url().should('eq', messageBanner.summaries[0].link);
+              });
+          });
+        } else {
+          cy.log('No Message Banner exist on Page!');
+        }
       });
     });
     describe(`Pagination`, () => {

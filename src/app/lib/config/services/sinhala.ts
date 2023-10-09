@@ -1,11 +1,4 @@
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_GHOST,
-  C_POSTBOX_30,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
 import sinhalese from '../../../components/ThemeProvider/fontScripts/sinhalese';
-import brandSVG from '../../chameleonLogos/sinhala';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/si';
 import withContext from '../../../contexts/utils/withContext';
@@ -39,7 +32,6 @@ export const service: DefaultServiceConfig = {
     service: 'sinhala',
     serviceName: 'Sinhala',
     languageName: 'Sinhala',
-    themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcsinhala',
     twitterSite: '@bbcsinhala',
     noBylinesPolicy:
@@ -50,13 +42,6 @@ export const service: DefaultServiceConfig = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'මුල් පිටුව',
-    theming: {
-      brandBackgroundColour: `${C_POSTBOX}`,
-      brandLogoColour: `${C_WHITE}`,
-      brandForegroundColour: `${C_GHOST}`,
-      brandHighlightColour: `${C_WHITE}`,
-      brandBorderColour: `${C_POSTBOX_30}`,
-    },
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
@@ -135,7 +120,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'හරි',
           reject: 'වෙනස් කර ඇත්තේ මොනවාදැයි දැනගන්න',
-          rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
         },
         cookie: {
           amp: {
@@ -148,7 +133,7 @@ export const service: DefaultServiceConfig = {
                 linkText: 'වැනි තාක්ෂණය',
                 last: ' භාවිත කරමින් බ්‍රවුසිං දත්ත රැස්කරන්නේ ඔබට හොඳම ඔන්ලයින් අත්දැකීම ලබාදීම සහ ඔබට පෙනෙන අන්තර්ගතය හා වෙළෙඳ ප්‍රචාරණ ඔබටම සමීප කිරීම සඳහාය. මීට ඔබ එකඟ නම් කරුණාකර ඒ බව අපට දන්වන්න.',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               manage: 'මගේ සැකසුම් කළමනාකරණය කරන්න',
             },
@@ -164,7 +149,7 @@ export const service: DefaultServiceConfig = {
                   'අපගේ වෙබ් පිටු ක්‍රියාකාරීවීම සඳහා, ඔබේ අවසරයකින් තොරව සීමිත තොරතුරු ප්‍රමාණයක් අප විසින් ඔබේ සන්නිවේදන මෙවලමේ ගබඩා කරනු ලැබේ.',
                 para4: {
                   text: 'අපගේ වෙබ් පිටු ක්‍රියාකාරීවීම සඳහා, ඔබේ සන්නිවේදන මෙවලමේ අප විසින් ගබඩා කරනු ලබන අත්‍යවශ්‍ය තොරතුරු ගැන වැඩිදුර කියවන්න.',
-                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
                 },
                 para5:
                   'ඔබේ අනුමැතිය ඇති රුචිකත්ව ඔබේ සන්නිවේදන මෙවලමේ ගබඩා කිරීම සඳහා එහි ඇති ඉඩකඩ අප විසින් භාවිත කරනු ලැබේ.',
@@ -197,13 +182,13 @@ export const service: DefaultServiceConfig = {
                 linkText: 'භාවිත කරන්නේ',
                 last: ' හොඳම ඔන්ලයින් අත්දැකීම ඔබට ගෙන දීම සඳහාය. මේ කුකීස් සියල්ල සමග ඔබ එකඟදැයි කරුණාකර අපට දන්වන්න.',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
             },
             accept: 'ඔව්, මම එකඟයි',
             reject: 'නැහැ, සැකසුම වෙත මා ගෙනයන්න',
             rejectUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+              'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           },
         },
       },
@@ -260,9 +245,9 @@ export const service: DefaultServiceConfig = {
         linkText: 'අන්තර්ගතයේ සියල්ල දැක ගැනීමට පිටුවේ සම්පූර්ණ අනුවාදය බලන්න',
       },
       topStoriesTitle: 'ප්‍රධාන පුවත',
-      featuresAnalysisTitle: 'දැක්ම',
+      featuresAnalysisTitle: 'විශේෂාංග',
+      latestMediaTitle: 'අලුත්ම',
     },
-    brandSVG,
     mostRead: {
       header: 'වැඩිපුරම කියැවූ',
       lastUpdated: 'අවසන් යාවත්කාලීනවීම:',
@@ -308,8 +293,8 @@ export const service: DefaultServiceConfig = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-          text: 'AdChoices / Do Not Sell My Info',
+          href: '#',
+          text: 'Do not share or sell my info',
           lang: 'en-GB',
         },
       ],
@@ -323,15 +308,19 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'ශ්‍රී ලංකා',
-        url: '/sinhala/sri_lanka',
+        url: '/sinhala/topics/cg7267dz901t',
       },
       {
         title: 'ලෝකය',
-        url: '/sinhala/world',
+        url: '/sinhala/topics/c83plvepnq1t',
       },
       {
-        title: 'විශේෂාංග',
-        url: '/sinhala/51727586',
+        title: 'වීඩියෝ',
+        url: '/sinhala/topics/crldzm9n2lnt',
+      },
+      {
+        title: 'කලා',
+        url: '/sinhala/topics/c7zp5zxk8jxt',
       },
     ],
   },

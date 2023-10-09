@@ -1,7 +1,7 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
+import { render } from '../../../components/react-testing-library-with-providers';
 import ErrorMain from './index';
 
 describe('ErrorMain', () => {
@@ -16,17 +16,25 @@ describe('ErrorMain', () => {
     callToActionLast: ' thing',
     service: 'news',
   };
-
-  shouldMatchSnapshot(
-    'should correctly render for an error page for News',
-    <ErrorMain {...messaging} dir="ltr" script={latin} service="news" />,
-  );
+  it('should correctly render for an error page for News', () => {
+    const { container } = render(
+      <ErrorMain {...messaging} dir="ltr" script={latin} service="news" />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
   const arabicServices = ['persian', 'arabic', 'pashto', 'urdu'];
   arabicServices.forEach(service => {
-    shouldMatchSnapshot(
-      `should correctly render for an error page for ${service}`,
-      <ErrorMain {...messaging} dir="rtl" script={arabic} service={service} />,
-    );
+    it(`should correctly render for an error page for ${service}`, () => {
+      const { container } = render(
+        <ErrorMain
+          {...messaging}
+          dir="rtl"
+          script={arabic}
+          service={service}
+        />,
+      );
+      expect(container).toMatchSnapshot();
+    });
   });
 });

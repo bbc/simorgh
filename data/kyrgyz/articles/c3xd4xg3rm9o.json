@@ -1,430 +1,1199 @@
 {
-  "content": {
-    "model": {
-      "blocks": [
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "attributes": [],
-                              "text": "Бул сыноо макалада сөздүү кабарында"
-                            },
-                            "type": "fragment"
-                          }
-                        ],
-                        "text": "Бул сыноо макалада сөздүү кабарында"
-                      },
-                      "type": "paragraph"
-                    }
-                  ]
-                },
-                "type": "text"
-              }
-            ]
-          },
-          "type": "headline"
-        },
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "blocks": [
-                                {
-                                  "model": {
-                                    "attributes": [],
-                                    "text": "Бул сынак сүрөтүнүн, укук Би-Би-Си, France картасын көрсөтүп турат. Сүрөт алгачкы үч блоктон турат жана бул жазууну бар."
-                                  },
-                                  "type": "fragment"
-                                }
-                              ],
-                              "text": "Бул сынак сүрөтүнүн, укук Би-Би-Си, France картасын көрсөтүп турат. Сүрөт алгачкы үч блоктон турат жана бул жазууну бар."
-                            },
-                            "type": "paragraph"
-                          }
-                        ]
-                      },
-                      "type": "text"
-                    }
-                  ]
-                },
-                "type": "caption"
-              },
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "blocks": [
-                                {
-                                  "model": {
-                                    "attributes": [],
-                                    "text": "Бул сынак сүрөтүнүн, укук Би-Би-Си, France картасын көрсөтүп турат. Сүрөт алгачкы үч блоктон турат жана бул жазууну бар."
-                                  },
-                                  "type": "fragment"
-                                }
-                              ],
-                              "text": "Бул сынак сүрөтүнүн, укук Би-Би-Си, France картасын көрсөтүп турат. Сүрөт алгачкы үч блоктон турат жана бул жазууну бар."
-                            },
-                            "type": "paragraph"
-                          }
-                        ]
-                      },
-                      "type": "text"
-                    }
-                  ]
-                },
-                "type": "altText"
-              },
-              {
-                "model": {
-                  "copyrightHolder": "BBC",
-                  "height": 351,
-                  "locator": "1b40/test/b97149a0-f640-11e9-9afe-1371928331c5.jpg",
-                  "originCode": "cpsdevpb",
-                  "width": 624
-                },
-                "type": "rawImage"
-              }
-            ]
-          },
-          "type": "image"
-        },
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "attributes": [],
-                        "text": "Бул "
-                      },
-                      "type": "fragment"
+  "data": {
+    "article": {
+      "content": {
+        "model": {
+          "blocks": [
+            {
+              "id": "b195ae43",
+              "type": "headline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "c629676a",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "2f33adbb",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "Бул сыноо макалада сөздүү кабарында",
+                            "blocks": [
+                              {
+                                "id": "3d85cf70",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "Бул сыноо макалада сөздүү кабарында",
+                                  "attributes": []
+                                },
+                                "position": [1, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [1, 1, 1]
+                        }
+                      ]
                     },
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "attributes": [],
-                              "text": "Би-Би-Си ырайы башкы"
-                            },
-                            "type": "fragment"
-                          }
-                        ],
-                        "isExternal": false,
-                        "locator": "https://www.bbc.co.uk/weather",
-                        "text": "Би-Би-Си ырайы башкы"
-                      },
-                      "type": "urlLink"
-                    },
-                    {
-                      "model": {
-                        "attributes": [],
-                        "text": " бир нускага шилтемени камтыган текст бөлүгү болуп саналат."
-                      },
-                      "type": "fragment"
-                    }
-                  ],
-                  "text": "Бул Би-Би-Си ырайы башкы бир нускага шилтемени камтыган текст бөлүгү болуп саналат."
-                },
-                "type": "paragraph"
-              }
-            ]
-          },
-          "type": "text"
-        },
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "blocks": [
-                                {
-                                  "model": {
-                                    "attributes": [],
-                                    "text": "Египет салуулар: зомбулук Каир тыныгуу менен копт сөөк"
-                                  },
-                                  "type": "fragment"
-                                }
-                              ],
-                              "text": "Египет салуулар: зомбулук Каир тыныгуу менен копт сөөк"
-                            },
-                            "type": "paragraph"
-                          }
-                        ]
-                      },
-                      "type": "text"
-                    }
-                  ]
-                },
-                "type": "caption"
+                    "position": [1, 1]
+                  }
+                ]
               },
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "blockId": "urn:bbc:ares::clip:p019dx64",
-                      "model": {
-                        "advertising": true,
-                        "caption": "Clashes broke out shortly after the funeral procession began",
-                        "embedding": false,
-                        "format": "audio_video",
-                        "id": "p019dx64",
-                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p019dxfg.jpg",
-                        "subType": "clip",
-                        "syndication": {
-                          "destinations": []
+              "position": [1]
+            },
+            {
+              "id": "199f8816",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "24847f87",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "d42fb62f",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "072ff5fb",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Бул сынак сүрөтүнүн, укук Би-Би-Си, France картасын көрсөтүп турат. Сүрөт алгачкы үч блоктон турат жана бул жазууну бар.",
+                                  "blocks": [
+                                    {
+                                      "id": "7f3229f9",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Бул сынак сүрөтүнүн, укук Би-Би-Си, France картасын көрсөтүп турат. Сүрөт алгачкы үч блоктон турат жана бул жазууну бар.",
+                                        "attributes": []
+                                      },
+                                      "position": [2, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [2, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [2, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [2, 1]
+                  },
+                  {
+                    "id": "014fc52f",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "7db29676",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "7d66dd82",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Бул сынак сүрөтүнүн, укук Би-Би-Си, France картасын көрсөтүп турат. Сүрөт алгачкы үч блоктон турат жана бул жазууну бар.",
+                                  "blocks": [
+                                    {
+                                      "id": "3026cfbe",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Бул сынак сүрөтүнүн, укук Би-Би-Си, France картасын көрсөтүп турат. Сүрөт алгачкы үч блоктон турат жана бул жазууну бар.",
+                                        "attributes": []
+                                      },
+                                      "position": [2, 2, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [2, 2, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [2, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [2, 2]
+                  },
+                  {
+                    "id": "7d7ff9dc",
+                    "type": "rawImage",
+                    "model": {
+                      "width": 624,
+                      "height": 351,
+                      "locator": "1b40/test/b97149a0-f640-11e9-9afe-1371928331c5.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "BBC"
+                    },
+                    "position": [2, 3]
+                  }
+                ]
+              },
+              "position": [2]
+            },
+            {
+              "id": "794c82b0",
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1562941862686,
+                "lastPublished": 1562941862686
+              },
+              "position": [3]
+            },
+            {
+              "id": "d14ea738",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "1e3aeb3b",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Бул Би-Би-Си ырайы башкы бир нускага шилтемени камтыган текст бөлүгү болуп саналат.",
+                      "blocks": [
+                        {
+                          "id": "7c6d0452",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Бул ",
+                            "attributes": []
+                          },
+                          "position": [4, 1, 1]
                         },
-                        "synopses": {
-                          "long": "По меньшей мере 36 человек погибли в результате взрывов в двух церквях во время богослужений по случаю Вербного воскресенья.\n\nПервый взрыв прогремел в коптской церкви Св. Георгия в городе Танта, что в 130 км к юго-востоку от Александрии. Там на месте погибли 25 человек. Внутри этой церкви находился Патриарх христиан-коптов Тавадрос II. Официальные источники сообщили, что он не пострадал.\n\nЧерез некоторое время произошел второй теракт: взрывное устройство сработало в храме Св. Марка в самой Александрии. Там погибли 11 прихожан.",
-                          "short": "Egypt attacks: Coptic funerals in Cairo break into violence"
+                        {
+                          "id": "e548ea28",
+                          "type": "urlLink",
+                          "model": {
+                            "text": "Би-Би-Си ырайы башкы",
+                            "blocks": [
+                              {
+                                "id": "0496f297",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "Би-Би-Си ырайы башкы",
+                                  "attributes": []
+                                },
+                                "position": [4, 1, 2, 1]
+                              }
+                            ],
+                            "locator": "https://www.bbc.co.uk/weather",
+                            "isExternal": false
+                          },
+                          "position": [4, 1, 2]
                         },
-                        "title": "Clashes at Coptic funerals in Egypt",
-                        "versions": [
-                          {
-                            "availableFrom": 1491823686000,
-                            "availableTerritories": {
-                              "nonUk": true,
-                              "uk": true
-                            },
-                            "duration": 45,
-                            "durationISO8601": "PT45S",
-                            "types": ["Original"],
-                            "versionId": "p019dx68",
-                            "warnings": {}
-                          }
-                        ]
-                      },
-                      "type": "aresMediaMetadata"
+                        {
+                          "id": "be9ccec6",
+                          "type": "fragment",
+                          "model": {
+                            "text": " бир нускага шилтемени камтыган текст бөлүгү болуп саналат.",
+                            "attributes": []
+                          },
+                          "position": [4, 1, 3]
+                        }
+                      ]
                     },
+                    "position": [4, 1]
+                  }
+                ]
+              },
+              "position": [4]
+            },
+            {
+              "id": "2c2bc192",
+              "type": "video",
+              "model": {
+                "locator": "urn:bbc:pips:pid:p019dx64",
+                "blocks": [
+                  {
+                    "id": "fa08d585",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "f5556449",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "23283944",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Египет салуулар: зомбулук Каир тыныгуу менен копт сөөк",
+                                  "blocks": [
+                                    {
+                                      "id": "e42ca63f",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Египет салуулар: зомбулук Каир тыныгуу менен копт сөөк",
+                                        "attributes": []
+                                      },
+                                      "position": [5, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [5, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [5, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [5, 1]
+                  },
+                  {
+                    "id": "76d96011",
+                    "type": "aresMedia",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "36036a73",
+                          "blockId": "urn:bbc:ares::clip:p019dx64",
+                          "type": "aresMediaMetadata",
+                          "model": {
+                            "id": "p019dx64",
+                            "subType": "clip",
+                            "format": "audio_video",
+                            "title": "Clashes at Coptic funerals in Egypt",
+                            "synopses": {
+                              "short": "Egypt attacks: Coptic funerals in Cairo break into violence",
+                              "long": "По меньшей мере 36 человек погибли в результате взрывов в двух церквях во время богослужений по случаю Вербного воскресенья.\n\nПервый взрыв прогремел в коптской церкви Св. Георгия в городе Танта, что в 130 км к юго-востоку от Александрии. Там на месте погибли 25 человек. Внутри этой церкви находился Патриарх христиан-коптов Тавадрос II. Официальные источники сообщили, что он не пострадал.\n\nЧерез некоторое время произошел второй теракт: взрывное устройство сработало в храме Св. Марка в самой Александрии. Там погибли 11 прихожан."
+                            },
+                            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p019dxfg.jpg",
+                            "embedding": false,
+                            "advertising": true,
+                            "caption": "Clashes broke out shortly after the funeral procession began",
+                            "versions": [
+                              {
+                                "versionId": "p019dx68",
+                                "types": ["Original"],
+                                "duration": 45,
+                                "durationISO8601": "PT45S",
+                                "warnings": {},
+                                "availableTerritories": {
+                                  "uk": true,
+                                  "nonUk": true
+                                },
+                                "availableFrom": 1491823686000
+                              }
+                            ],
+                            "syndication": {
+                              "destinations": []
+                            },
+                            "smpKind": "programme"
+                          },
+                          "position": [5, 2, 1]
+                        },
+                        {
+                          "id": "b1067066",
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "2bfbc6c5",
+                                "type": "rawImage",
+                                "model": {
+                                  "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p019dxfg.jpg",
+                                  "originCode": "mpv"
+                                },
+                                "position": [5, 2, 2, 1]
+                              }
+                            ]
+                          },
+                          "position": [5, 2, 2]
+                        }
+                      ]
+                    },
+                    "position": [5, 2]
+                  }
+                ]
+              },
+              "position": [5]
+            },
+            {
+              "id": "10b0168f",
+              "type": "subheadline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "7af067b0",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "442b2eb3",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "Бул subheadline болуп саналат",
+                            "blocks": [
+                              {
+                                "id": "c5c2d4a4",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "Бул subheadline болуп саналат",
+                                  "attributes": []
+                                },
+                                "position": [6, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [6, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [6, 1]
+                  }
+                ]
+              },
+              "position": [6]
+            },
+            {
+              "id": "6d2ed6c0",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "0007f6a2",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "adfcc2ea",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "81d71c53",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Бул subheadline болуп саналат",
+                                  "blocks": [
+                                    {
+                                      "id": "2bd8f909",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Бул subheadline болуп саналат",
+                                        "attributes": []
+                                      },
+                                      "position": [7, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [7, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [7, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [7, 1]
+                  },
+                  {
+                    "id": "cd0f45f5",
+                    "type": "rawImage",
+                    "model": {
+                      "width": 800,
+                      "height": 450,
+                      "locator": "d22a/test/2ec8f5e0-f641-11e9-9afe-1371928331c5.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "Getty Images"
+                    },
+                    "position": [7, 2]
+                  }
+                ]
+              },
+              "position": [7]
+            },
+            {
+              "id": "db389137",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "efc77898",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Бул сыноо макалада айтылгандай, биз сайтында сыноолорду алышы үчүн жаратылган.",
+                      "blocks": [
+                        {
+                          "id": "ed5b2709",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Бул сыноо макалада айтылгандай, биз сайтында сыноолорду алышы үчүн жаратылган.",
+                            "attributes": []
+                          },
+                          "position": [8, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [8, 1]
+                  }
+                ]
+              },
+              "position": [8]
+            },
+            {
+              "id": "89ffad44",
+              "type": "mpu",
+              "model": {},
+              "position": [9]
+            },
+            {
+              "id": "992b1976",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [10]
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "id": "urn:bbc:ares::article:c3xd4xg3rm9o",
+        "locators": {
+          "optimoUrn": "urn:bbc:optimo:asset:c3xd4xg3rm9o",
+          "canonicalUrl": "https://www.bbc.com/kyrgyz/articles/c3xd4xg3rm9o"
+        },
+        "type": "article",
+        "createdBy": "Kyrgyz",
+        "language": "ky",
+        "firstPublished": 1562941862686,
+        "lastPublished": 1562941862686,
+        "analyticsLabels": {
+          "producer": "Kyrgyz",
+          "page": "kyrgyz.articles.c3xd4xg3rm9o.page"
+        },
+        "passport": {
+          "language": "ky",
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Kyrgyz",
+          "taggings": []
+        },
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment",
+          "image",
+          "caption",
+          "altText",
+          "rawImage",
+          "urlLink",
+          "video",
+          "subheadline",
+          "aresMedia"
+        ],
+        "allowAdvertising": true
+      },
+      "promo": {
+        "headlines": {
+          "seoHeadline": "Интернет жылдызына айланган таксист опера ырчысы болду"
+        }
+      }
+    },
+    "secondaryData": {
+      "topStories": [
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:c6vdqkm8yyvo",
+            "canonicalUrl": "https://www.bbc.com/kyrgyz/articles/c6vdqkm8yyvo"
+          },
+          "timestamp": 1666869583946,
+          "suitableForSyndication": true,
+          "language": "ky",
+          "headlines": {
+            "seoHeadline": "Индиянын Улуттук Конгресс партиясынын жаңы лидери шайланды ",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "Published at 12:19 - Индиянын Улуттук Конгресс партиясынын жаңы лидери шайланды ",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "Published at 12:19 - Индиянын Улуттук Конгресс партиясынын жаңы лидери шайланды ",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "test",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "test",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 800,
+                    "height": 450,
+                    "locator": "31a5/test/568cc3f0-508d-11ed-9488-854f10e82c4c.jpg",
+                    "originCode": "cpsdevpb",
+                    "copyrightHolder": "BBC",
+                    "suitableForSyndication": true
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
                     {
+                      "type": "paragraph",
                       "model": {
+                        "text": "Индиянын Улуттук Конгресс партиясынын жаңы лидери шайланды ",
                         "blocks": [
                           {
+                            "type": "fragment",
                             "model": {
-                              "height": 1920,
-                              "width": 1080,
-                              "copyrightHolder": "BBC",
-                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p019dxfg.jpg",
-                              "originCode": "mpv"
-                            },
-                            "type": "rawImage"
+                              "text": "Индиянын Улуттук Конгресс партиясынын жаңы лидери шайланды ",
+                              "attributes": []
+                            }
                           }
                         ]
-                      },
-                      "type": "image"
+                      }
                     }
                   ]
-                },
-                "type": "aresMedia"
+                }
+              }
+            ]
+          },
+          "passport": {
+            "language": "ky",
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Kyrgyz",
+            "locator": "urn:bbc:optimo:asset:c6vdqkm8yyvo",
+            "availability": "AVAILABLE",
+            "taggings": [
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
               }
             ],
-            "locator": "urn:bbc:pips:pid:p019dx64"
+            "schemaVersion": "1.4.0",
+            "publishedState": "PUBLISHED",
+            "predicates": {
+              "infoClass": [
+                {
+                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                  "type": "infoClass"
+                }
+              ]
+            }
           },
-          "type": "video"
+          "id": "urn:bbc:ares::article:c6vdqkm8yyvo",
+          "type": "optimo"
         },
         {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "attributes": [],
-                              "text": "Бул subheadline болуп саналат"
-                            },
-                            "type": "fragment"
-                          }
-                        ],
-                        "text": "Бул subheadline болуп саналат"
-                      },
-                      "type": "paragraph"
-                    }
-                  ]
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:cd0kn0v57e5o",
+            "canonicalUrl": "https://www.bbc.com/kyrgyz/articles/cd0kn0v57e5o"
+          },
+          "timestamp": 1666279674236,
+          "suitableForSyndication": true,
+          "language": "ky",
+          "headlines": {
+            "seoHeadline": "Улуу Британиянын премьер-министри Лиз Трасс отставкага кетти ",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "Улуу Британиянын премьер-министри Лиз Трасс отставкага кетти ",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "Улуу Британиянын премьер-министри Лиз Трасс отставкага кетти ",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Улуу Британиянын премьер-министри Лиз Трасс отставкага кетти ",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Улуу Британиянын премьер-министри Лиз Трасс отставкага кетти ",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
                 },
-                "type": "text"
-              }
-            ]
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 624,
+                    "height": 351,
+                    "locator": "e73c/test/9c9c5240-508b-11ed-9488-854f10e82c4c.jpg",
+                    "originCode": "cpsdevpb",
+                    "copyrightHolder": "AFP",
+                    "suitableForSyndication": true
+                  }
+                }
+              ]
+            }
           },
-          "type": "subheadline"
-        },
-        {
-          "model": {
+          "summary": {
             "blocks": [
               {
+                "type": "text",
                 "model": {
                   "blocks": [
                     {
+                      "type": "paragraph",
                       "model": {
+                        "text": "",
                         "blocks": [
                           {
+                            "type": "fragment",
                             "model": {
-                              "blocks": [
-                                {
-                                  "model": {
-                                    "attributes": [],
-                                    "text": "Бул subheadline болуп саналат"
-                                  },
-                                  "type": "fragment"
-                                }
-                              ],
-                              "text": "Бул subheadline болуп саналат"
-                            },
-                            "type": "paragraph"
+                              "text": "",
+                              "attributes": []
+                            }
                           }
                         ]
-                      },
-                      "type": "text"
+                      }
                     }
                   ]
-                },
-                "type": "altText"
-              },
-              {
-                "model": {
-                  "copyrightHolder": "Getty Images",
-                  "height": 450,
-                  "locator": "d22a/test/2ec8f5e0-f641-11e9-9afe-1371928331c5.jpg",
-                  "originCode": "cpsdevpb",
-                  "width": 800
-                },
-                "type": "rawImage"
+                }
               }
             ]
           },
-          "type": "image"
+          "passport": {
+            "language": "ky",
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Kyrgyz",
+            "locator": "urn:bbc:optimo:asset:cd0kn0v57e5o",
+            "availability": "AVAILABLE",
+            "taggings": [
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+              }
+            ],
+            "schemaVersion": "1.4.0",
+            "publishedState": "PUBLISHED",
+            "predicates": {
+              "infoClass": [
+                {
+                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                  "type": "infoClass"
+                }
+              ]
+            }
+          },
+          "id": "urn:bbc:ares::article:cd0kn0v57e5o",
+          "type": "optimo"
         },
         {
-          "model": {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:cd0gd0lxnlxo",
+            "canonicalUrl": "https://www.bbc.com/kyrgyz/articles/cd0gd0lxnlxo"
+          },
+          "timestamp": 1666281059010,
+          "suitableForSyndication": true,
+          "language": "ky",
+          "headlines": {
+            "seoHeadline": "Индиянын Улуттук Конгресс партиясынын жаңы лидери шайланды ",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "2 Индиянын Улуттук Конгресс партиясынын жаңы лидери шайланды ",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "2 Индиянын Улуттук Конгресс партиясынын жаңы лидери шайланды ",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "test",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "test",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 800,
+                    "height": 450,
+                    "locator": "31a5/test/568cc3f0-508d-11ed-9488-854f10e82c4c.jpg",
+                    "originCode": "cpsdevpb",
+                    "copyrightHolder": "BBC",
+                    "suitableForSyndication": true
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
             "blocks": [
               {
+                "type": "text",
                 "model": {
                   "blocks": [
                     {
+                      "type": "paragraph",
                       "model": {
-                        "attributes": [],
-                        "text": "Бул сыноо макалада айтылгандай, биз сайтында сыноолорду алышы үчүн жаратылган."
-                      },
-                      "type": "fragment"
+                        "text": "",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
                     }
-                  ],
-                  "text": "Бул сыноо макалада айтылгандай, биз сайтында сыноолорду алышы үчүн жаратылган."
-                },
-                "type": "paragraph"
+                  ]
+                }
               }
             ]
           },
-          "type": "text"
+          "passport": {
+            "language": "ky",
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Kyrgyz",
+            "locator": "urn:bbc:optimo:asset:cd0gd0lxnlxo",
+            "availability": "AVAILABLE",
+            "taggings": [
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+              }
+            ],
+            "schemaVersion": "1.4.0",
+            "publishedState": "PUBLISHED",
+            "predicates": {
+              "infoClass": [
+                {
+                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                  "type": "infoClass"
+                }
+              ]
+            }
+          },
+          "id": "urn:bbc:ares::article:cd0gd0lxnlxo",
+          "type": "optimo"
         }
-      ]
-    }
-  },
-  "metadata": {
-    "analyticsLabels": {},
-    "blockTypes": [
-      "headline",
-      "text",
-      "paragraph",
-      "fragment",
-      "image",
-      "caption",
-      "altText",
-      "rawImage",
-      "urlLink",
-      "video",
-      "subheadline"
-    ],
-    "createdBy": "Kyrgyz",
-    "firstPublished": 1562941862686,
-    "id": "urn:bbc:ares::article:c3xd4xg3rm9o",
-    "language": "ky",
-    "lastPublished": 1562941862686,
-    "lastUpdated": 1571917178498,
-    "locators": {
-      "optimoUrn": "urn:bbc:optimo:asset:c3xd4xg3rm9o"
-    },
-    "options": {},
-    "passport": {
-      "home": "http://www.bbc.co.uk/ontologies/passport/home/Kyrgyz",
-      "language": "ky"
-    },
-    "tags": {},
-    "type": "article",
-    "version": "v1.1.2"
-  },
-  "promo": {
-    "headlines": {
-      "seoHeadline": "Интернет жылдызына айланган таксист опера ырчысы болду"
-    },
-    "id": "urn:bbc:ares::article:c3xd4xg3rm9o",
-    "locators": {
-      "optimoUrn": "urn:bbc:optimo:asset:c3xd4xg3rm9o"
-    },
-    "summary": {
-      "blocks": [
+      ],
+      "features": [
         {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "attributes": [],
-                        "text": ""
-                      },
-                      "type": "fragment"
-                    }
-                  ],
-                  "text": ""
-                },
-                "type": "paragraph"
-              }
-            ]
+          "headlines": {
+            "headline": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 42"
           },
-          "type": "text"
+          "locators": {
+            "assetUri": "/kyrgyz/kyrgyzstan-23087521",
+            "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-23087521",
+            "curie": "http://www.bbc.co.uk/asset/eda3de40-cfd2-7449-87b4-2a26392fa543",
+            "assetId": "23087521"
+          },
+          "summary": "Ушул аптанын башында Кыргызстан акыркы он жылдан бери биринчи жолу Өзбекстандын расмий делегациясын кабыл алды.",
+          "timestamp": 1477898711000,
+          "language": "ky",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63486487",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/13284/test/_63486487_63486486.jpg",
+            "path": "/cpsdevpb/13284/test/_63486487_63486486.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Өзбекстандын",
+            "caption": "Өзбекстандын",
+            "copyrightHolder": "Getty Images",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "id": "urn:bbc:ares::asset:kyrgyz/kyrgyzstan-23087521",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 41"
+          },
+          "locators": {
+            "assetUri": "/kyrgyz/kyrgyzstan-23087520",
+            "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-23087520",
+            "curie": "http://www.bbc.co.uk/asset/731b4ac3-ed79-b34d-93b0-64d1693c92e8",
+            "assetId": "23087520"
+          },
+          "summary": "Ушул аптанын башында Кыргызстан акыркы он жылдан бери биринчи жолу Өзбекстандын расмий делегациясын кабыл алды.",
+          "timestamp": 1477898715000,
+          "language": "ky",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63486487",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/13284/test/_63486487_63486486.jpg",
+            "path": "/cpsdevpb/13284/test/_63486487_63486486.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Өзбекстандын",
+            "caption": "Өзбекстандын",
+            "copyrightHolder": "Getty Images",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "id": "urn:bbc:ares::asset:kyrgyz/kyrgyzstan-23087520",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 03"
+          },
+          "locators": {
+            "assetUri": "/kyrgyz/in-depth-23087490",
+            "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/in-depth-23087490",
+            "curie": "http://www.bbc.co.uk/asset/6829e4fc-8741-4043-ba6d-f9e3bdc16542",
+            "assetId": "23087490"
+          },
+          "summary": "Ушул аптанын башында Кыргызстан акыркы он жылдан бери биринчи жолу Өзбекстандын расмий делегациясын кабыл алды.",
+          "timestamp": 1477850398000,
+          "language": "ky",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63486487",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/13284/test/_63486487_63486486.jpg",
+            "path": "/cpsdevpb/13284/test/_63486487_63486486.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Өзбекстандын",
+            "caption": "Өзбекстандын",
+            "copyrightHolder": "Getty Images",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Атайын репортаж",
+            "uri": "/kyrgyz/in_depth",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:kyrgyz/in-depth-23087490",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 03"
+          },
+          "locators": {
+            "assetUri": "/kyrgyz/entertainment-23087489",
+            "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/entertainment-23087489",
+            "curie": "http://www.bbc.co.uk/asset/d9d4314d-5936-8c49-96fb-4f072339c527",
+            "assetId": "23087489"
+          },
+          "summary": "Ушул аптанын башында Кыргызстан акыркы он жылдан бери биринчи жолу Өзбекстандын расмий делегациясын кабыл алды.",
+          "timestamp": 1477850376000,
+          "language": "ky",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63486487",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/13284/test/_63486487_63486486.jpg",
+            "path": "/cpsdevpb/13284/test/_63486487_63486486.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Өзбекстандын",
+            "caption": "Өзбекстандын",
+            "copyrightHolder": "Getty Images",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "id": "urn:bbc:ares::asset:kyrgyz/entertainment-23087489",
+          "type": "cps"
         }
-      ]
-    },
-    "timestamp": 1562941862686,
-    "type": "cps"
-  },
-  "relatedContent": {
-    "groups": [],
-    "site": {
-      "name": "Kyrgyz",
-      "subType": "site",
-      "type": "simple",
-      "uri": "/kyrgyz"
+      ],
+      "mostRead": {
+        "generated": "2023-06-19T14:27:56.971Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T05:53:00Z",
+        "items": [
+          {
+            "id": "cd68f2bc-efd5-a043-9500-a3891a13353b",
+            "rank": 1,
+            "title": "АКШ: жаңы президент ким экенин аныктаган штаттар кайсылар?",
+            "href": "/kyrgyz/world-23090100",
+            "timestamp": 1478663803000
+          },
+          {
+            "id": "82567d2d-eb50-b644-b9a4-6523bd62bf2c",
+            "rank": 2,
+            "title": "Kyrgyzstanda soz erkindigi buzuluuda",
+            "href": "/kyrgyz/world-23089413",
+            "timestamp": 1478506660000
+          },
+          {
+            "id": "5ac26713-7ec6-824f-a179-53f95a372408",
+            "rank": 3,
+            "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 36",
+            "href": "/kyrgyz/kyrgyzstan-23087515",
+            "timestamp": 1477898731000
+          },
+          {
+            "id": "429a5345-bc55-5947-b11b-19ae662817a5",
+            "rank": 4,
+            "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 34",
+            "href": "/kyrgyz/kyrgyzstan-23087513",
+            "timestamp": 1477898586000
+          },
+          {
+            "id": "a1445694-7c18-5547-928e-97f5f454bebe",
+            "rank": 5,
+            "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 35",
+            "href": "/kyrgyz/kyrgyzstan-23087514",
+            "timestamp": 1477898591000
+          },
+          {
+            "id": "f8e5c9d1-877b-a142-805f-e435cdf9e99c",
+            "rank": 6,
+            "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 10",
+            "href": "/kyrgyz/sapar-tv-23087494",
+            "timestamp": 1477850970000
+          },
+          {
+            "id": "08c8102e-c7e2-7b49-a38c-cb31312984a0",
+            "rank": 7,
+            "title": "ට්‍රම්ප්ට අලුත් ආරක්‍ෂක උපදේශකයෙක්",
+            "href": "/kyrgyz/23103391",
+            "timestamp": 1487940772000
+          },
+          {
+            "id": "87ba62ed-5442-ef47-94c4-312e65400d4f",
+            "rank": 8,
+            "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 21",
+            "href": "/kyrgyz/media-23087507",
+            "timestamp": 1477898550000
+          },
+          {
+            "id": "91d192e9-38dd-4f44-882b-c724bb41331f",
+            "rank": 9,
+            "title": "Мирзиёевнинг илк давлат сафари Қозоғистон",
+            "href": "/kyrgyz/23103378",
+            "timestamp": 1569397958000
+          },
+          {
+            "id": "731b4ac3-ed79-b34d-93b0-64d1693c92e8",
+            "rank": 10,
+            "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 41",
+            "href": "/kyrgyz/kyrgyzstan-23087520",
+            "timestamp": 1477898715000
+          },
+          {
+            "id": "53a3f3b0-45bf-5d41-ac4c-9fc485dae11b",
+            "rank": 11,
+            "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 32",
+            "href": "/kyrgyz/kyrgyzstan-23087511",
+            "timestamp": 1477899573000
+          },
+          {
+            "id": "3ab470b8-18c1-4c37-ae2c-9f0177c60845",
+            "rank": 12,
+            "title": "Үй-бүлөдөгү зомбулуктан эң көп аялдар жабыркайт",
+            "href": "/kyrgyz/kyrgyzstan-23088783",
+            "timestamp": 1478184211000
+          },
+          {
+            "id": "42fadb3a-fb0a-c549-b83d-da4243588a34",
+            "rank": 13,
+            "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 11",
+            "href": "/kyrgyz/blog-23087495",
+            "timestamp": 1477850987000
+          },
+          {
+            "id": "99e5af12-a546-cd4c-885a-694a637a69b2",
+            "rank": 14,
+            "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 14",
+            "href": "/kyrgyz/institutional-23087498",
+            "timestamp": 1477851087000
+          },
+          {
+            "id": "7e65aff4-c3b1-5d41-aede-777d8cd755a3",
+            "rank": 15,
+            "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 08",
+            "href": "/kyrgyz/world-23087493",
+            "timestamp": 1477850702000
+          },
+          {
+            "id": "d9d4314d-5936-8c49-96fb-4f072339c527",
+            "rank": 16,
+            "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 03",
+            "href": "/kyrgyz/entertainment-23087489",
+            "timestamp": 1477850376000
+          },
+          {
+            "id": "175bd205-8b6e-4548-a24a-1b984c16e790",
+            "rank": 17,
+            "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 44",
+            "href": "/kyrgyz/kyrgyzstan-23087523",
+            "timestamp": 1477898702000
+          },
+          {
+            "id": "dd71b59e-ce18-2347-8eb5-43e9393a1f27",
+            "rank": 18,
+            "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 48",
+            "href": "/kyrgyz/kyrgyzstan-23087528",
+            "timestamp": 1477898672000
+          },
+          {
+            "id": "30d42ae7-a72f-574a-88f2-392a2dfe7c52",
+            "rank": 19,
+            "title": "Түштүк Корея президенти кечирим сурады",
+            "href": "/kyrgyz/kyrgyzstan-23089035",
+            "timestamp": 1478260541000
+          },
+          {
+            "id": "11dd0fa3-7b4f-174b-9234-ac1d59d04a34",
+            "rank": 20,
+            "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 32",
+            "href": "/kyrgyz/kyrgyzstan-23087510",
+            "timestamp": 1477898574000
+          }
+        ]
+      }
     }
-  }
+  },
+  "contentType": "application/json; charset=utf-8"
 }

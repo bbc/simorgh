@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EmbedError renders a default embed error 1`] = `
+exports[`EmbedError should render a default embed error 1`] = `
 .emotion-0 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -84,7 +84,7 @@ exports[`EmbedError renders a default embed error 1`] = `
 </div>
 `;
 
-exports[`EmbedError renders an embed error that fills the viewport 1`] = `
+exports[`EmbedError should render an embed error that fills the viewport 1`] = `
 .emotion-0 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -173,7 +173,7 @@ exports[`EmbedError renders an embed error that fills the viewport 1`] = `
 </div>
 `;
 
-exports[`EmbedError renders an embed error with a link 1`] = `
+exports[`EmbedError should render an embed error with a link 1`] = `
 .emotion-0 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;

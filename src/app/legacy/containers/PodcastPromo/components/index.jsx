@@ -2,7 +2,6 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { string, shape, arrayOf, element } from 'prop-types';
 import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
-import { C_LUNAR } from '#psammead/psammead-styles/src/colours';
 import { GEL_SPACING_DBL } from '#psammead/gel-foundations/src/spacings';
 
 import Title from './title';
@@ -23,7 +22,7 @@ const withPodcastContext = Component => props =>
   );
 
 const Wrapper = styled.section`
-  background-color: ${C_LUNAR};
+  background-color: ${props => props.theme.palette.LUNAR};
   padding: ${GEL_SPACING_DBL};
 `;
 

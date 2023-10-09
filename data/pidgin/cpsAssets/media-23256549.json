@@ -1,136 +1,249 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:pidgin/media-23256549",
-    "locators": {
-      "assetUri": "/pidgin/media-23256549",
-      "cpsUrn": "urn:bbc:content:assetUri:pidgin/media-23256549",
-      "curie": "http://www.bbc.co.uk/asset/b9b9ec2e-206e-8f4c-84db-82450c7ee29e",
-      "assetId": "23256549"
-    },
-    "type": "MAP",
-    "createdBy": "pidgin-v6",
-    "language": "pcm",
-    "lastUpdated": 1588581523688,
-    "firstPublished": 1574703355000,
-    "lastPublished": 1574703355000,
-    "timestamp": 1574703355000,
-    "options": {
-      "isIgorSeoTagsEnabled": false,
-      "includeComments": false,
-      "allowRightHandSide": true,
-      "isFactCheck": false,
-      "allowDateStamp": true,
-      "suitableForSyndication": true,
-      "hasNewsTracker": false,
-      "allowRelatedStoriesBox": true,
-      "isKeyContent": false,
-      "allowHeadline": true,
-      "allowAdvertising": true,
-      "hasContentWarning": false,
-      "isBreakingNews": false,
-      "allowPrintingSharingLinks": true
-    },
-    "analyticsLabels": {
-      "cps_asset_type": "map",
-      "counterName": "pidgin.embedded_media.media_asset.23256549.page",
-      "cps_asset_id": "23256549"
-    },
-    "passport": {
-      "taggings": []
-    },
-    "tags": {},
-    "version": "v1.2.1",
-    "blockTypes": ["version", "paragraph"],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "63501280",
-        "subType": "primary",
-        "format": "video",
-        "externalId": "bbc_one_hd",
-        "duration": "PT0S",
-        "caption": "Test",
-        "image": {
-          "id": "63501280",
-          "subType": "thumbnail",
-          "href": "http://b.files.bbci.co.uk/13CA6/test/_63726018_test66.jpg",
-          "path": "/cpsdevpb/13CA6/test/_63726018_test66.jpg",
-          "height": 360,
-          "width": 640,
-          "altText": "test images",
-          "copyrightHolder": "Google",
-          "type": "image"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:pidgin/media-23256549",
+        "locators": {
+          "assetUri": "/pidgin/media-23256549",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:b9b9ec2e-206e-8f4c-84db-82450c7ee29e",
+          "assetId": "23256549",
+          "cpsUrn": "urn:bbc:content:assetUri:pidgin/media-23256549",
+          "curie": "http://www.bbc.co.uk/asset/b9b9ec2e-206e-8f4c-84db-82450c7ee29e"
         },
-        "embedding": false,
-        "available": false,
-        "live": true,
-        "type": "version"
+        "type": "MAP",
+        "createdBy": "pidgin-v6",
+        "language": "pcm",
+        "lastUpdated": 1687177291164,
+        "firstPublished": 1574703355000,
+        "lastPublished": 1574703355000,
+        "timestamp": 1574703355000,
+        "options": {
+          "isIgorSeoTagsEnabled": false,
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "isFactCheck": false,
+          "allowDateStamp": true,
+          "suitableForSyndication": true,
+          "hasNewsTracker": false,
+          "allowRelatedStoriesBox": true,
+          "isKeyContent": false,
+          "allowHeadline": true,
+          "allowAdvertising": true,
+          "hasContentWarning": false,
+          "isBreakingNews": false,
+          "allowPrintingSharingLinks": true
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "counterName": "pidgin.embedded_media.media_asset.23256549.page",
+          "cps_asset_id": "23256549",
+          "contentId": "urn:bbc:cps:curie:asset:b9b9ec2e-206e-8f4c-84db-82450c7ee29e"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Pidgin",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.28",
+        "blockTypes": [
+          "version",
+          "paragraph"
+        ],
+        "includeComments": false,
+        "atiAnalytics": {
+          "producerName": "PIDGIN",
+          "producerId": "70"
+        },
+        "readTime": 1,
+        "siteUri": "/pidgin",
+        "mediaType": "video",
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false
       },
-      {
-        "text": "News International Video Worldwide Expired",
-        "markupType": "plain_text",
-        "type": "paragraph"
+      "content": {
+        "blocks": [
+          {
+            "id": "63501280",
+            "subType": "primary",
+            "format": "video",
+            "externalId": "bbc_one_hd",
+            "duration": "PT0S",
+            "caption": "Test",
+            "image": {
+              "id": "63501280",
+              "subType": "thumbnail",
+              "href": "http://b.files.bbci.co.uk/13CA6/test/_63726018_test66.jpg",
+              "path": "/cpsdevpb/13CA6/test/_63726018_test66.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "test images",
+              "copyrightHolder": "Google",
+              "allowSyndication": false,
+              "type": "image"
+            },
+            "embedding": false,
+            "available": false,
+            "live": true,
+            "type": "version"
+          },
+          {
+            "text": "News International Video Worldwide Expired",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          }
+        ]
+      },
+      "promo": {
+        "headlines": {
+          "shortHeadline": "News International Video Worldwide Expired",
+          "headline": "News International Video Worldwide Expired"
+        },
+        "locators": {
+          "assetUri": "/pidgin/media-23256549",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:b9b9ec2e-206e-8f4c-84db-82450c7ee29e",
+          "assetId": "23256549",
+          "cpsUrn": "urn:bbc:content:assetUri:pidgin/media-23256549",
+          "curie": "http://www.bbc.co.uk/asset/b9b9ec2e-206e-8f4c-84db-82450c7ee29e"
+        },
+        "summary": "News International Video Worldwide Expired",
+        "timestamp": 1574703355000,
+        "language": "pcm",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Pidgin",
+          "taggings": []
+        },
+        "media": {
+          "id": "63501280",
+          "subType": "primary",
+          "format": "video",
+          "externalId": "bbc_one_hd",
+          "duration": "PT0S",
+          "caption": "Test",
+          "image": {
+            "id": "63501280",
+            "subType": "thumbnail",
+            "href": "http://b.files.bbci.co.uk/13CA6/test/_63726018_test66.jpg",
+            "path": "/cpsdevpb/13CA6/test/_63726018_test66.jpg",
+            "height": 360,
+            "width": 640,
+            "altText": "test images",
+            "copyrightHolder": "Google",
+            "allowSyndication": false,
+            "type": "image"
+          },
+          "embedding": false,
+          "available": false,
+          "live": true,
+          "type": "version"
+        },
+        "id": "urn:bbc:ares::asset:pidgin/media-23256549",
+        "type": "cps"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Media",
+          "uri": "/pidgin/media",
+          "urlIdentifier": "/pidgin/media",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBC Pidgin",
+          "uri": "/pidgin",
+          "urlIdentifier": "/pidgin",
+          "type": "simple"
+        },
+        "groups": []
       }
-    ]
+    },
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-06-21T08:34:59.893Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T07:53:00Z",
+        "totalRecords": 1,
+        "records": [
+          {
+            "id": "53dce379-a0bd-554e-a3f3-cc2bc3353043",
+            "rank": 1,
+            "count": 9326,
+            "urn": "urn:bbc:curie:asset:53dce379-a0bd-554e-a3f3-cc2bc3353043",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Ivory Coast's hair sculptor",
+                "headline": "Ivory Coast's hair sculptor Laetitia Ky"
+              },
+              "locators": {
+                "assetUri": "/igbo/23170911",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:53dce379-a0bd-554e-a3f3-cc2bc3353043",
+                "assetId": "23170911",
+                "cpsUrn": "urn:bbc:content:assetUri:igbo/23170911",
+                "curie": "http://www.bbc.co.uk/asset/53dce379-a0bd-554e-a3f3-cc2bc3353043"
+              },
+              "summary": "Ivory Coast artist Laetitia Ky has a unique way of styling her hair.",
+              "timestamp": 1512731788000,
+              "language": "ig",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Igbo",
+                "taggings": []
+              },
+              "media": {
+                "id": "p01fcrpx",
+                "subType": "clip",
+                "format": "video",
+                "title": "Ivory Coast's hair sculptor",
+                "synopses": {
+                  "short": "Ivory Coast's hair sculptor Laetitia Ky",
+                  "medium": "Ivory Coast artist Laetitia Ky has a unique way of styling her hair.",
+                  "long": "Ivory Coast artist Laetitia Ky has a unique way of styling her hair. She uses it to create art, piled up high on top of her head. Sometimes it’s political, sometimes it’s beautiful and sometimes it’s simply bizarre."
+                },
+                "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01fcsfg.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Ivory Coast's hair sculptor Laetitia Ky",
+                "versions": [
+                  {
+                    "versionId": "p01fcrpz",
+                    "types": [
+                      "Original"
+                    ],
+                    "duration": 105,
+                    "durationISO8601": "PT1M45S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1512485360000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "63661933",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/847C/test/_63661933_hi008224031.jpg",
+                "path": "/cpsdevpb/847C/test/_63661933_hi008224031.jpg",
+                "height": 1152,
+                "width": 2048,
+                "altText": "hh",
+                "caption": "hh",
+                "copyrightHolder": "Hh",
+                "allowSyndication": false,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:igbo/23170911",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "News International Video Worldwide Expired",
-      "headline": "News International Video Worldwide Expired"
-    },
-    "locators": {
-      "assetUri": "/pidgin/media-23256549",
-      "cpsUrn": "urn:bbc:content:assetUri:pidgin/media-23256549",
-      "curie": "http://www.bbc.co.uk/asset/b9b9ec2e-206e-8f4c-84db-82450c7ee29e",
-      "assetId": "23256549"
-    },
-    "summary": "News International Video Worldwide Expired",
-    "timestamp": 1574703355000,
-    "language": "pcm",
-    "passport": {
-      "taggings": []
-    },
-    "media": {
-      "id": "63501280",
-      "subType": "primary",
-      "format": "video",
-      "externalId": "bbc_one_hd",
-      "duration": "PT0S",
-      "caption": "Test",
-      "image": {
-        "id": "63501280",
-        "subType": "thumbnail",
-        "href": "http://b.files.bbci.co.uk/13CA6/test/_63726018_test66.jpg",
-        "path": "/cpsdevpb/13CA6/test/_63726018_test66.jpg",
-        "height": 360,
-        "width": 640,
-        "altText": "test images",
-        "copyrightHolder": "Google",
-        "type": "image"
-      },
-      "embedding": false,
-      "available": false,
-      "live": true,
-      "type": "version"
-    },
-    "id": "urn:bbc:ares::asset:pidgin/media-23256549",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "Media",
-      "uri": "/pidgin/media",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "BBC Pidgin",
-      "uri": "/pidgin",
-      "type": "simple"
-    },
-    "groups": []
-  }
+  "contentType": "application/json; charset=utf-8"
 }

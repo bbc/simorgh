@@ -1,26 +1,34 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { render } from '../../../../components/react-testing-library-with-providers';
 import arabic from '../../../../components/ThemeProvider/fontScripts/arabic';
 import LiveLabel from './index';
 
 describe('LiveLabel', () => {
-  shouldMatchSnapshot(
-    'should render correctly with english live text',
-    <LiveLabel service="news" ariaHidden offScreenText="Live" />,
-  );
+  it('should render correctly with english live text', () => {
+    const { container } = render(
+      <LiveLabel service="news" ariaHidden offScreenText="Live" />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render correctly with localised live text',
-    <LiveLabel service="news" liveText="AS E DE HAPPEN" />,
-  );
+  it('should render correctly with localised live text', () => {
+    const { container } = render(
+      <LiveLabel service="news" liveText="AS E DE HAPPEN" />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render correctly with custom offscreen text',
-    <LiveLabel service="news" ariaHidden offScreenText="Watch Live" />,
-  );
+  it('should render correctly with custom offscreen text', () => {
+    const { container } = render(
+      <LiveLabel service="news" ariaHidden offScreenText="Watch Live" />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should correctly render for RTL service',
-    <LiveLabel service={arabic} dir="rtl" ariaHidden offScreenText="Live" />,
-  );
+  it('should correctly render for RTL service', () => {
+    const { container } = render(
+      <LiveLabel service={arabic} dir="rtl" ariaHidden offScreenText="Live" />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 });

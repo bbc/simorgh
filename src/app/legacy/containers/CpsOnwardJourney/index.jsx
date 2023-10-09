@@ -24,7 +24,6 @@ import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
 } from '#psammead/gel-foundations/src/spacings';
-import { C_GHOST } from '#psammead/psammead-styles/src/colours';
 
 import { storyItem } from '#models/propTypes/storyItem';
 import { RequestContext } from '#contexts/RequestContext';
@@ -32,6 +31,7 @@ import Grid, { GridWrapper, GridItemLarge } from '#components/Grid';
 import { MOST_WATCHED_PAGE } from '#app/routes/utils/pageTypes';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import SkipLinkWrapper from '../../components/SkipLinkWrapper';
+import { GHOST } from '../../../components/ThemeProvider/palette';
 
 const LargeGridColumns = {
   group0: 1,
@@ -167,7 +167,6 @@ const CpsOnwardJourney = ({
   parentColumns,
   promoListComponent: PromoListComponent,
   promoComponent: PromoComponent,
-  imageComponent,
   sectionLabelOverrideAs,
   sectionLabelBar,
   sectionLabelBackground,
@@ -227,7 +226,6 @@ const CpsOnwardJourney = ({
               promo={singleContent}
               dir={dir}
               eventTrackingData={eventTrackingData}
-              imageComponent={imageComponent}
             />
           </SingleContentWrapper>
         ) : (
@@ -236,7 +234,6 @@ const CpsOnwardJourney = ({
             dir={dir}
             isMediaContent={isMediaContent}
             eventTrackingData={eventTrackingData}
-            imageComponent={imageComponent}
           />
         )}
       </OptionallyRenderedSkipWrapper>
@@ -273,7 +270,6 @@ CpsOnwardJourney.propTypes = {
   eventTrackingData: shape({
     componentName: string,
   }),
-  imageComponent: elementType,
 };
 
 CpsOnwardJourney.defaultProps = {
@@ -285,10 +281,9 @@ CpsOnwardJourney.defaultProps = {
   parentColumns: null,
   sectionLabelOverrideAs: null,
   sectionLabelBar: true,
-  sectionLabelBackground: C_GHOST,
+  sectionLabelBackground: GHOST,
   skipLink: null,
   eventTrackingData: null,
-  imageComponent: undefined,
 };
 
 export default CpsOnwardJourney;

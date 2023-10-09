@@ -109,10 +109,10 @@ exports[`AmpIncludeContainer should render for a valid IDT2 include without fall
     <amp-img
       alt="image alt text"
       attribution=""
+      fallback=""
       height="1864"
       layout="responsive"
       src="https://foobar.com/includes/image/816"
-      srcset="https://foobar.com/includes/image/470 470w,https://foobar.com/includes/image/816 816w"
       width="1632"
     />
   </div>

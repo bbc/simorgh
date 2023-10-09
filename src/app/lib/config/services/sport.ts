@@ -1,10 +1,3 @@
-import {
-  C_SPORT_YELLOW,
-  C_MIDNIGHT_BLACK,
-  C_SPORT_YELLOW_30,
-  C_BLACK,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
-import brandSVG from '../../chameleonLogos/sport';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import '#psammead/psammead-locales/moment/en-gb';
 import '#psammead/moment-timezone-include/tz/Europe/London';
@@ -37,20 +30,12 @@ export const service: DefaultServiceConfig = {
     service: 'sport',
     serviceName: 'Sport',
     languageName: 'English',
-    themeColor: `${C_SPORT_YELLOW}`,
     twitterCreator: '@BBCSport',
     twitterSite: '@BBCSport',
     isTrustProjectParticipant: false,
     script: latin,
     manifestPath: '/articles/manifest.json',
     frontPageTitle: 'Home',
-    theming: {
-      brandBackgroundColour: `${C_SPORT_YELLOW}`,
-      brandLogoColour: `${C_BLACK}`,
-      brandForegroundColour: `${C_MIDNIGHT_BLACK}`,
-      brandBorderColour: `${C_SPORT_YELLOW_30}`,
-      brandHighlightColour: `${C_BLACK}`,
-    },
     showAdPlaceholder: false,
     showRelatedTopics: false,
     translations: {
@@ -208,7 +193,6 @@ export const service: DefaultServiceConfig = {
       },
       socialEmbed: {},
     },
-    brandSVG,
     mostRead: {
       header: 'Most read',
       lastUpdated: 'Last updated:',
@@ -258,8 +242,8 @@ export const service: DefaultServiceConfig = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-          text: 'AdChoices / Do Not Sell My Info',
+          href: '#',
+          text: 'Do not share or sell my info',
           lang: 'en-GB',
         },
       ],

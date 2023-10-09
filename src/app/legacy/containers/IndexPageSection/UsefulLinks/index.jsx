@@ -51,7 +51,12 @@ const UsefulLinksComponent = ({ items, script, service }) => {
           return (
             // eslint-disable-next-line react/no-array-index-key
             <UsefulLinksLi key={`${item.timestamp}${index}`}>
-              <UsefulLink script={script} service={service} href={item.uri}>
+              <UsefulLink
+                script={script}
+                service={service}
+                href={item.uri}
+                className="focusIndicatorDisplayBlock"
+              >
                 {item.name}
               </UsefulLink>
             </UsefulLinksLi>
@@ -61,7 +66,12 @@ const UsefulLinksComponent = ({ items, script, service }) => {
     </UsefulLinksWrapper>
   ) : (
     <UsefulLinkWrapper data-e2e="useful-links">
-      <UsefulLink script={script} service={service} href={items[0].uri}>
+      <UsefulLink
+        script={script}
+        service={service}
+        href={items[0].uri}
+        className="focusIndicatorDisplayBlock"
+      >
         {items[0].name}
       </UsefulLink>
     </UsefulLinkWrapper>

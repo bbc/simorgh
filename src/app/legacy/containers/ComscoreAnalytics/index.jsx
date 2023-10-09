@@ -7,6 +7,7 @@ import CanonicalComscoreAnalytics from './Canonical';
 const ComscoreAnalytics = () => {
   const { isAmp } = useContext(RequestContext);
   const { enabled } = useToggle('comscoreAnalytics');
+
   if (!enabled) {
     return null;
   }

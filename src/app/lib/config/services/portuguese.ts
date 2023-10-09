@@ -1,11 +1,4 @@
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_GHOST,
-  C_POSTBOX_30,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
 import latinWithDiacritics from '../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
-import brandSVG from '../../chameleonLogos/portuguese';
 import '#psammead/moment-timezone-include/tz/America/Sao_Paulo';
 import '#psammead/psammead-locales/moment/pt-br';
 import withContext from '../../../contexts/utils/withContext';
@@ -40,7 +33,6 @@ export const service: DefaultServiceConfig = {
     service: 'portuguese',
     serviceName: 'News Brasil',
     languageName: 'Portuguese',
-    themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcbrasil',
     twitterSite: '@bbcbrasil',
     noBylinesPolicy:
@@ -53,27 +45,19 @@ export const service: DefaultServiceConfig = {
     swPath: '/sw.js',
     frontPageTitle: 'Notícias, vídeos, análise e contexto em português',
     passportHomes: ['brasil'],
-    theming: {
-      brandBackgroundColour: `${C_POSTBOX}`,
-      brandLogoColour: `${C_WHITE}`,
-      brandForegroundColour: `${C_GHOST}`,
-      brandHighlightColour: `${C_WHITE}`,
-      brandBorderColour: `${C_POSTBOX_30}`,
-    },
     showAdPlaceholder: true,
     showRelatedTopics: true,
     podcastPromo: {
       title: 'Podcast',
-      brandTitle: 'Brasil Partido',
-      brandDescription:
-        'João Fellet tenta entender como brasileiros chegaram ao grau atual de divisão.',
+      brandTitle: 'BBC Lê',
+      brandDescription: 'Podcast traz áudios com reportagens selecionadas.',
       image: {
-        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0d67gkg.jpg',
-        alt: 'Logo: Brasil Partido',
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p09qw181.jpg',
+        alt: 'Logo: BBC Lê',
       },
       linkLabel: {
         text: 'Episódios',
-        href: 'https://www.bbc.com/portuguese/podcasts/p0cyhvny',
+        href: 'https://www.bbc.com/portuguese/topics/cxndrr1qgllt',
       },
       skipLink: {
         text: 'Pule %title% e continue lendo',
@@ -157,7 +141,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'OK',
           reject: 'Saiba o que foi alterado',
-          rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
         },
         cookie: {
           amp: {
@@ -171,7 +155,7 @@ export const service: DefaultServiceConfig = {
                 linkText: 'cookies',
                 last: ' e coletamos dados durante a navegação para lhe proporcionar a melhor experiência online e para personalizar o conteúdo e os anúncios publicitários que são exibidos para você. Diga-nos se concorda com o uso de todos estes tipos de cookies.',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               manage: 'Administre minhas configurações',
             },
@@ -188,7 +172,7 @@ export const service: DefaultServiceConfig = {
                   'Para que nossas páginas possam funcionar, nós armazenamos em seu dispositivo uma pequena quantidade de informação sem o seu consentimento.',
                 para4: {
                   text: 'Leia mais sobre a informação essencial que foi armazenada no seu dispositivo para que nossas páginas possam funcionar.',
-                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
                 },
                 para5:
                   'Nós utilizamos capacidade local de armazenamento para guardar no seu dispositivo as preferências de seu consentimento.',
@@ -221,13 +205,13 @@ export const service: DefaultServiceConfig = {
                 linkText: 'cookies',
                 last: ' para lhe proporcionar a melhor experiência online. Diga-nos se concorda com o uso de todos estes tipos de cookies.',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
             },
             accept: 'Sim, concordo',
             reject: 'Não concordo, volte para Configurações',
             rejectUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+              'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           },
         },
       },
@@ -250,6 +234,7 @@ export const service: DefaultServiceConfig = {
         duration: 'Duration',
         recentEpisodes: 'Mais',
         podcastExternalLinks: 'O podcast está disponível em',
+        download: 'Baixar episódio',
       },
       socialEmbed: {
         caption: {
@@ -272,8 +257,8 @@ export const service: DefaultServiceConfig = {
           endTextVisuallyHidden: 'Final de %provider_name% post',
         },
         consentBanner: {
-          heading: `Aceita conteúdo de [social_media_site]?`,
-          body: `Este item inclui conteúdo extraído de [social_media_site]. Pedimos sua autorzação antes que algo seja carregado, pois eles podem estar utilizando cookies e outras tecnologias. Você pode consultar a [link] política de uso de cookies [/link] e [link] os termos de privacidade  [/link] do [social_media_site] antes de concordar. Para acessar o conteúdo clique em "aceitar e continuar".`,
+          heading: `Aceita conteúdo do [social_media_site]?`,
+          body: `Este item inclui conteúdo extraído do [social_media_site]. Pedimos sua autorização antes que algo seja carregado, pois eles podem estar utilizando cookies e outras tecnologias. Você pode consultar a [link] política de uso de cookies [/link] e [link] os termos de privacidade [/link] do [social_media_site] antes de concordar. Para acessar o conteúdo clique em "aceitar e continuar".`,
           button: 'Aceite e continue',
         },
       },
@@ -286,7 +271,6 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'Principais notícias',
       featuresAnalysisTitle: 'Leia mais',
     },
-    brandSVG,
     mostRead: {
       header: 'Mais lidas',
       lastUpdated: 'Última atualização:',
@@ -340,8 +324,8 @@ export const service: DefaultServiceConfig = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-          text: 'AdChoices / Do Not Sell My Info',
+          href: '#',
+          text: 'Do not share or sell my info',
           lang: 'en-GB',
         },
       ],
@@ -353,10 +337,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Notícias',
         url: '/portuguese',
-      },
-      {
-        title: 'Eleições 2022',
-        url: '/portuguese/topics/c20d7ez6mqpt',
       },
       {
         title: 'Brasil',

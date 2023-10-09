@@ -1,6 +1,8 @@
 // components to test
-import styJson from '#data/mundo/cpsAssets/23263889.json';
+import { data } from '#data/mundo/cpsAssets/23263889.json';
 import getAssetUri from './getAssetUri';
+
+const { article: styJson } = data;
 
 // mock data
 

@@ -1,7 +1,6 @@
 import React from 'react';
 import { string } from 'prop-types';
 import styled from '@emotion/styled';
-import { C_WHITE } from '#psammead/psammead-styles/src/colours';
 import {
   GEL_SPACING_DBL,
   GEL_SPACING,
@@ -30,7 +29,7 @@ const MessageWrapper = styled.div`
   top: 0;
   left: 0;
   border: 0.0625rem solid transparent;
-  color: ${C_WHITE};
+  color: ${props => props.theme.palette.WHITE};
   background-color: ${NOJS_BACKGROUND_COLOUR};
   @media screen and (-ms-high-contrast: active) {
     background-color: transparent;

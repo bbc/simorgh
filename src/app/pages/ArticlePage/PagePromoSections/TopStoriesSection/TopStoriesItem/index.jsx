@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, forwardRef } from 'react';
 import { shape, string } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import isEmpty from 'ramda/src/isEmpty';
@@ -13,91 +13,106 @@ import {
   StyledTopStoriesWrapper,
 } from './index.styles';
 
-const TopStoriesItem = ({ item, ariaLabelledBy }) => {
-  const { script, translations } = useContext(ServiceContext);
+const TopStoriesItem = forwardRef(
+  ({ item, ariaLabelledBy, eventTrackingData }, viewRef) => {
+    const { script, translations } = useContext(ServiceContext);
 
-  if (!item || isEmpty(item)) return null;
+    if (!item || isEmpty(item)) return null;
 
-  const eventTrackingData = {
-    block: {
-      componentName: 'top-stories',
-    },
-  };
+    const overtypedHeadline = pathOr('', ['headlines', 'overtyped'], item);
+    const headline =
+      overtypedHeadline ||
+      pathOr('', ['headlines', 'headline'], item) ||
+      pathOr(
+        '',
+        [
+          'headlines',
+          'promoHeadline',
+          'blocks',
+          0,
+          'model',
+          'blocks',
+          0,
+          'model',
+          'text',
+        ],
+        item,
+      ) ||
+      pathOr('', ['name'], item);
 
-  const overtypedHeadline = pathOr('', ['headlines', 'overtyped'], item);
-  const headline =
-    overtypedHeadline ||
-    pathOr('', ['headlines', 'headline'], item) ||
-    pathOr('', ['name'], item);
+    const mediaType = pathOr(null, ['media', 'format'], item);
+    const mediaDuration = pathOr(null, ['media', 'duration'], item);
+    const isPhotoGallery = pathOr(null, ['cpsType'], item) === 'PGL';
 
-  const mediaType = pathOr(null, ['media', 'format'], item);
-  const mediaDuration = pathOr(null, ['media', 'duration'], item);
-  const isPhotoGallery = pathOr(null, ['cpsType'], item) === 'PGL';
+    const timestamp = pathOr(null, ['timestamp'], item);
 
-  const timestamp = pathOr(null, ['timestamp'], item);
+    const assetUri = pathOr('', ['locators', 'assetUri'], item);
+    const canonicalUrl = pathOr('', ['locators', 'canonicalUrl'], item);
+    const uri = pathOr('', ['uri'], item);
 
-  const assetUri = pathOr('', ['locators', 'assetUri'], item);
-  const uri = pathOr('', ['uri'], item);
+    const isLive = getIsLive(item);
 
-  const isLive = getIsLive(item);
+    const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
 
-  const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
+    // As screenreaders mispronounce the word 'LIVE', we use visually hidden
+    // text to read 'Live' instead, which screenreaders pronounce correctly.
+    const liveLabelIsEnglish = liveLabel === 'LIVE';
 
-  // As screenreaders mispronounce the word 'LIVE', we use visually hidden
-  // text to read 'Live' instead, which screenreaders pronounce correctly.
-  const liveLabelIsEnglish = liveLabel === 'LIVE';
+    const titleTag = timestamp || isLive ? 'h3' : 'div';
 
-  const titleTag = timestamp || isLive ? 'h3' : 'div';
+    const titleHasContent = titleTag === 'h3';
 
-  const titleHasContent = titleTag === 'h3';
+    const Title = titleHasContent ? TitleWithContent : StyledTitle;
 
-  const Title = titleHasContent ? TitleWithContent : StyledTitle;
-
-  return (
-    <StyledTopStoriesWrapper>
-      <Promo
-        to={assetUri || uri}
-        ariaLabelledBy={ariaLabelledBy}
-        mediaType={mediaType}
-        eventTrackingData={eventTrackingData}
-      >
-        <Promo.ContentWrapper>
-          {mediaType && <Promo.MediaIndicator />}
-          <Title as={titleTag} script={script}>
-            <Promo.Link>
-              {isLive ? (
-                <Promo.LiveLabel
-                  liveText={liveLabel}
-                  ariaHidden={liveLabelIsEnglish}
-                  offScreenText={liveLabelIsEnglish ? 'Live' : null}
-                  id={ariaLabelledBy}
-                >
+    return (
+      <StyledTopStoriesWrapper ref={viewRef}>
+        <Promo
+          to={assetUri || uri || canonicalUrl}
+          ariaLabelledBy={ariaLabelledBy}
+          mediaType={mediaType}
+          eventTrackingData={eventTrackingData}
+        >
+          <Promo.ContentWrapper>
+            <Title as={titleTag} script={script}>
+              <Promo.Link>
+                {mediaType && <Promo.MediaIndicator />}
+                {isLive ? (
+                  <Promo.LiveLabel
+                    liveText={liveLabel}
+                    ariaHidden={liveLabelIsEnglish}
+                    offScreenText={liveLabelIsEnglish ? 'Live' : null}
+                    id={ariaLabelledBy}
+                  >
+                    <Promo.Content
+                      mediaDuration={mediaDuration}
+                      headline={headline}
+                      isPhotoGallery={isPhotoGallery}
+                      isLive={isLive}
+                    />
+                  </Promo.LiveLabel>
+                ) : (
                   <Promo.Content
                     mediaDuration={mediaDuration}
                     headline={headline}
                     isPhotoGallery={isPhotoGallery}
-                    isLive={isLive}
                   />
-                </Promo.LiveLabel>
-              ) : (
-                <Promo.Content
-                  mediaDuration={mediaDuration}
-                  headline={headline}
-                  isPhotoGallery={isPhotoGallery}
-                />
-              )}
-            </Promo.Link>
-          </Title>
-          <StyledTimestamp>{timestamp}</StyledTimestamp>
-        </Promo.ContentWrapper>
-      </Promo>
-    </StyledTopStoriesWrapper>
-  );
-};
+                )}
+              </Promo.Link>
+            </Title>
+            <StyledTimestamp>{timestamp}</StyledTimestamp>
+          </Promo.ContentWrapper>
+        </Promo>
+      </StyledTopStoriesWrapper>
+    );
+  },
+);
 
 TopStoriesItem.propTypes = {
   item: shape(storyItem).isRequired,
   ariaLabelledBy: string.isRequired,
+  eventTrackingData: shape({ block: shape({ componentName: string }) }),
 };
+
+TopStoriesItem.defaultProps = { eventTrackingData: null };
 
 export default TopStoriesItem;

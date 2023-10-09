@@ -2,13 +2,12 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { node, bool, string, oneOf } from 'prop-types';
 import { getSansBold } from '#psammead/psammead-styles/src/font-styles';
-import { C_POSTBOX } from '#psammead/psammead-styles/src/colours';
 import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
-import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
+import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 
 const StyledSpan = styled.span`
   ${({ service }) => getSansBold(service)}
-  color: ${C_POSTBOX};
+  color: ${props => props.theme.palette.POSTBOX};
   display: inline-block;
   ${({ dir }) =>
     dir === 'rtl'

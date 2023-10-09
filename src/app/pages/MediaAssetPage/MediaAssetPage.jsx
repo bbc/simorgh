@@ -10,24 +10,20 @@ import { node } from 'prop-types';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
+  GEL_GROUP_5_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
 import pathOr from 'ramda/src/pathOr';
 import last from 'ramda/src/last';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
-import LinkedData from '#containers/LinkedData';
-import disclaimer from '#containers/Disclaimer';
 import headings from '#containers/Headings';
 import Timestamp from '#containers/ArticleTimestamp';
 import text from '#containers/Text';
-import Image from '#containers/Image';
-import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import CpsAssetMediaPlayer from '#containers/CpsAssetMediaPlayer';
 import Blocks from '#containers/Blocks';
 import CpsRelatedContent from '#containers/CpsRelatedContent';
 import MostWatchedContainer from '#containers/MostWatched';
-import ATIAnalytics from '#containers/ATIAnalytics';
 import fauxHeadline from '#containers/FauxHeadline';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import {
@@ -38,9 +34,14 @@ import {
 import { RequestContext } from '#contexts/RequestContext';
 import { GelPageGrid, GridItemLarge } from '#components/Grid';
 import RelatedTopics from '#containers/RelatedTopics';
+import ImageWithCaption from '../../components/ImageWithCaption';
+import ATIAnalytics from '../../components/ATIAnalytics';
+import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
+import LinkedData from '../../components/LinkedData';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 import MediaMessage from './MediaMessage';
+import Disclaimer from '../../components/Disclaimer';
 
 const StyledTimestamp = styled(Timestamp)`
   @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
@@ -73,8 +74,19 @@ MediaAssetPageGrid.propTypes = {
   children: node.isRequired,
 };
 
+const StyledImageWrapper = styled.div`
+  grid-column: 5 / span 12;
+  @media (max-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
+    grid-column: 2 / span 6;
+  }
+
+  @media (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    grid-column: 1 / span 6;
+  }
+`;
+
 const MediaAssetPage = ({ pageData }) => {
-  const { showRelatedTopics } = useContext(ServiceContext);
+  const { brandName, showRelatedTopics } = useContext(ServiceContext);
   const { canonicalLink, isAmp } = useContext(RequestContext);
   const isLegacyMediaAssetPage = () => canonicalLink.split('/').length > 7;
 
@@ -110,6 +122,13 @@ const MediaAssetPage = ({ pageData }) => {
   const aboutTags = getAboutTags(pageData);
   const mostWatchedData = path(['mostWatched'], pageData);
 
+  // ATI
+  const { atiAnalytics } = metadata;
+  const atiData = {
+    ...atiAnalytics,
+    pageTitle: `${atiAnalytics.pageTitle} - ${brandName}`,
+  };
+
   const componentsToRender = {
     fauxHeadline,
     visuallyHiddenHeadline,
@@ -117,7 +136,9 @@ const MediaAssetPage = ({ pageData }) => {
     subheadline: headings,
     text,
     image: props => (
-      <Image {...props} sizes="(min-width: 1008px) 760px, 100vw" />
+      <StyledImageWrapper>
+        <ImageWithCaption {...props} sizes="(min-width: 1008px) 760px, 100vw" />
+      </StyledImageWrapper>
     ),
     timestamp: props =>
       allowDateStamp ? (
@@ -161,7 +182,7 @@ const MediaAssetPage = ({ pageData }) => {
       />
     ),
     unavailableMedia: MediaMessage,
-    disclaimer,
+    disclaimer: props => <Disclaimer {...props} />,
   };
 
   const StyledMediaAssetPageGrid = styled(MediaAssetPageGrid)`
@@ -178,7 +199,13 @@ const MediaAssetPage = ({ pageData }) => {
 
   return (
     <>
-      <ChartbeatAnalytics data={pageData} />
+      <ChartbeatAnalytics
+        sectionName={pageData?.relatedContent?.section?.name}
+        categoryName={pageData?.metadata?.passport?.category?.categoryName}
+        title={title}
+        producer={pageData?.metadata?.analyticsLabels?.producer}
+        chapter={pageData?.metadata?.atiAnalytics?.chapter}
+      />
       <ComscoreAnalytics />
       <CpsMetadata
         title={title}
@@ -203,7 +230,7 @@ const MediaAssetPage = ({ pageData }) => {
         aboutTags={aboutTags}
         imageLocator={indexImageLocator}
       />
-      <ATIAnalytics data={pageData} />
+      <ATIAnalytics atiData={atiData} />
       <StyledMediaAssetPageGrid as="main" role="main">
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
       </StyledMediaAssetPageGrid>

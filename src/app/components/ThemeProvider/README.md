@@ -224,3 +224,31 @@ You can use `spacings` like this:
   This is a div with 16px of padding (DOUBLE spacing).
 </div>
 ```
+
+### focus indicator
+
+By default, the double ring focus indicator is applied on all focusable button and anchor elements on World Service pages. You do not need to do anything to enable it.
+
+You can change the default focus indicator by using the following `classNames`:
+
+- `focusIndicatorRemove`: Removes the default focus indicator.
+- `focusIndicatorDisplayBlock`: Adds a `display: block` declaration.\*
+- `focusIndicatorDisplayInlineBlock`: Adds a `display: inline-block` and `width: 100%;` declaration.\*
+- `focusIndicatorDisplayTableCell`: Adds a `display: table-cell` declaration.\*
+- `focusIndicatorReducedWidth`: Overrides the default focus indicator with a thinner version
+- `focusIndicatorOutlineBlack`: Overrides the default focus indicator with a black outline only version
+- `focusIndicatorInvert`: Overrides the default focus indicator with an inverted version.
+
+You can use focus indicator `classNames` like this:
+
+```jsx
+<StyledLink {...linkProps} className="focusIndicatorDisplayBlock">
+  {content}
+</StyledLink>
+```
+
+\*Changing Display Properties
+
+Extra display properties are used to make the default focus indicator appear as a solid bounding box around the focusable element.
+
+Display properties have been added to certain components to a fix a bug in Firefox High Contrast Mode whereby the focus indicator would make the focused element temporarily disappear to the user.

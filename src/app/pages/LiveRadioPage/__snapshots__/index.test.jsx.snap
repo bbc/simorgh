@@ -349,7 +349,7 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
     <script
       type="application/json"
     >
-      {"transport":{"beacon":false,"xhrpost":false,"image":true},"requests":{"pageview":"\${base}s=598343&s2=3&p=afrique.bbc_afrique_radio.liveradio.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn%3Abbc%3Aares%3Aws_media%3Alive%3Abbc_afrique_radio]&x2=[amp]&x3=[news-afrique]&x4=[fr]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[player-live]&x8=[simorgh]&x9=[BBC%2BAfrique%2BRadio%2B-%2BBBC%2BNews%2BAfrique]&ref=\${documentReferrer}"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}
+      {"transport":{"beacon":false,"xhrpost":false,"image":true},"requests":{"pageview":"\${base}s=598343&s2=3&p=afrique.bbc_afrique_radio.liveradio.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn%3Abbc%3Aares%3Aws_media%3Alive%3Abbc_afrique_radio]&x2=[amp]&x3=[news-afrique]&x4=[fr]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[player-live]&x8=[simorgh]&x9=[BBC%2520Afrique%2520Radio%2520-%2520BBC%2520News%2520Afrique]&ref=\${documentReferrer}"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}
     </script>
   </amp-analytics>
   <div>
@@ -1196,7 +1196,6 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 
 @media screen and (forced-colors: active) {
   .emotion-47>svg {
-    padding-right: 0.25rem;
     fill: canvasText;
   }
 }
@@ -1332,6 +1331,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-61:before {
@@ -1356,12 +1356,12 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   color: #6E6E73;
 }
 
-.emotion-61:hover .emotion-68 {
+.emotion-61:hover .emotion-66 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-61:focus .emotion-68 {
+.emotion-61:focus .emotion-66 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
@@ -1377,9 +1377,9 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   margin: 0;
 }
 
-.emotion-67 {
+.emotion-65 {
   color: #3F3F42;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0 0 0;
   display: inline-block;
   width: 100%;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1390,45 +1390,46 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-67 {
+  .emotion-65 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-67 {
+  .emotion-65 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-71 {
+.emotion-68 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
+  padding-top: 0.5rem;
   padding-bottom: 1rem;
   margin: 0;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-71 {
+  .emotion-68 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-71 {
+  .emotion-68 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-73 {
+.emotion-70 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -1441,27 +1442,27 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-73 {
+  .emotion-70 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-73 {
+  .emotion-70 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media screen and (-ms-high-contrast: active) {
-  .emotion-73 {
+  .emotion-70 {
     background-color: transparent;
     outline: none;
   }
 }
 
-.emotion-75>svg {
+.emotion-72>svg {
   color: #FFFFFF;
   fill: currentColor;
   width: 1.0625rem;
@@ -1470,25 +1471,25 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-75>svg {
+  .emotion-72>svg {
     fill: canvasText;
   }
 }
 
-.emotion-77 {
+.emotion-74 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
   fill: currentColor;
-  width: 0.8125rem;
+  width: 0.75rem;
   height: 0.75rem;
 }
 
-.emotion-79 {
+.emotion-76 {
   padding-left: 0.5rem;
 }
 
-.emotion-182 {
+.emotion-173 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -1499,20 +1500,20 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-182 {
+  .emotion-173 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-182 {
+  .emotion-173 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-186 {
+.emotion-176 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -1524,22 +1525,22 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-186 {
+  .emotion-176 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-186 {
+  .emotion-176 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-190 {
+.emotion-179 {
   color: #6E6E73;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0 0 0;
   display: inline-block;
   width: 100%;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1550,20 +1551,20 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-190 {
+  .emotion-179 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-190 {
+  .emotion-179 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-196 {
+.emotion-184 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -1576,27 +1577,27 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-196 {
+  .emotion-184 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-196 {
+  .emotion-184 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media screen and (-ms-high-contrast: active) {
-  .emotion-196 {
+  .emotion-184 {
     background-color: transparent;
     outline: none;
   }
 }
 
-.emotion-198>svg {
+.emotion-186>svg {
   color: #11708C;
   fill: currentColor;
   width: 1.0625rem;
@@ -1605,7 +1606,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-198>svg {
+  .emotion-186>svg {
     fill: canvasText;
   }
 }
@@ -1681,9 +1682,12 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
               allow="autoplay"
               allowfullscreen=""
               class="emotion-20 emotion-21"
+              height="362.953125"
+              loading="lazy"
               scrolling="no"
               src="/ws/av-embeds/media/bbc_afrique_radio/liveradio/fr?morph_env=live"
               title="Lecteur audio"
+              width="645.25"
             />
             <noscript />
           </div>
@@ -1785,7 +1789,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
               >
                 <a
                   aria-labelledby="scheduleItem-p086pmts"
-                  class="emotion-61 emotion-62"
+                  class="focusIndicatorDisplayBlock emotion-61 emotion-62"
                   href="/afrique/bbc_afrique_radio/w172x371xccjp2q"
                 >
                   <span
@@ -1793,23 +1797,23 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
                     role="text"
                   >
                     <span
-                      class="emotion-63 emotion-64"
+                      class="emotion-63"
                     >
                       Ecoutez, 
                     </span>
                     Actu Monde
                     <span
-                      class="emotion-63 emotion-64"
+                      class="emotion-63"
                     >
                       , 05:30, 
                     </span>
                     <span
-                      class="emotion-67 emotion-68"
+                      class="emotion-65 emotion-66"
                     >
                       26 mars 2020
                     </span>
                     <span
-                      class="emotion-63 emotion-64"
+                      class="emotion-63"
                     >
                       , Durée 06,00 
                     </span>
@@ -1817,20 +1821,20 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
                 </a>
               </h3>
               <p
-                class="emotion-71 emotion-72"
+                class="emotion-68 emotion-69"
               >
                 C'est la principale tranche dédiée à l'actualité internationale. De 5H 30 à 6H 30, des interviews d'analystes et des information
               </p>
             </div>
             <div
-              class="emotion-73 emotion-74"
+              class="emotion-70 emotion-71"
             >
               <span
-                class="emotion-75 emotion-76"
+                class="emotion-72 emotion-73"
               >
                 <svg
                   aria-hidden="true"
-                  class="emotion-77 emotion-78"
+                  class="emotion-74 emotion-75"
                   focusable="false"
                   height="12px"
                   viewBox="0 0 13 12"
@@ -1845,7 +1849,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
                 </svg>
               </span>
               <time
-                class="emotion-79 emotion-80"
+                class="emotion-76 emotion-77"
                 datetime="PT6M"
                 dir="ltr"
               >
@@ -1915,7 +1919,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
               >
                 <a
                   aria-labelledby="scheduleItem-p086pmv1"
-                  class="emotion-61 emotion-62"
+                  class="focusIndicatorDisplayBlock emotion-61 emotion-62"
                   href="/afrique/bbc_afrique_radio/w172x6djbb3rg44"
                 >
                   <span
@@ -1923,23 +1927,23 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
                     role="text"
                   >
                     <span
-                      class="emotion-63 emotion-64"
+                      class="emotion-63"
                     >
                       Ecoutez, 
                     </span>
                     Reportage
                     <span
-                      class="emotion-63 emotion-64"
+                      class="emotion-63"
                     >
                       , 05:16, 
                     </span>
                     <span
-                      class="emotion-67 emotion-68"
+                      class="emotion-65 emotion-66"
                     >
                       26 mars 2020
                     </span>
                     <span
-                      class="emotion-63 emotion-64"
+                      class="emotion-63"
                     >
                       , Durée 08,00 
                     </span>
@@ -1947,20 +1951,20 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
                 </a>
               </h3>
               <p
-                class="emotion-71 emotion-72"
+                class="emotion-68 emotion-69"
               >
                 Un sujet traité en profondeur et qui fait appel aux différents genres journalistiques.
               </p>
             </div>
             <div
-              class="emotion-73 emotion-74"
+              class="emotion-70 emotion-71"
             >
               <span
-                class="emotion-75 emotion-76"
+                class="emotion-72 emotion-73"
               >
                 <svg
                   aria-hidden="true"
-                  class="emotion-77 emotion-78"
+                  class="emotion-74 emotion-75"
                   focusable="false"
                   height="12px"
                   viewBox="0 0 13 12"
@@ -1975,7 +1979,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
                 </svg>
               </span>
               <time
-                class="emotion-79 emotion-80"
+                class="emotion-76 emotion-77"
                 datetime="PT8M"
                 dir="ltr"
               >
@@ -2045,7 +2049,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
               >
                 <a
                   aria-labelledby="scheduleItem-p086pmtq"
-                  class="emotion-61 emotion-62"
+                  class="focusIndicatorDisplayBlock emotion-61 emotion-62"
                   href="/afrique/bbc_afrique_radio/w172x5n20y5f68g"
                 >
                   <span
@@ -2053,23 +2057,23 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
                     role="text"
                   >
                     <span
-                      class="emotion-63 emotion-64"
+                      class="emotion-63"
                     >
                       Ecoutez, 
                     </span>
                     Bulletin D'informations
                     <span
-                      class="emotion-63 emotion-64"
+                      class="emotion-63"
                     >
                       , 05:15, 
                     </span>
                     <span
-                      class="emotion-67 emotion-68"
+                      class="emotion-65 emotion-66"
                     >
                       26 mars 2020
                     </span>
                     <span
-                      class="emotion-63 emotion-64"
+                      class="emotion-63"
                     >
                       , Durée 01,00 
                     </span>
@@ -2077,20 +2081,20 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
                 </a>
               </h3>
               <p
-                class="emotion-71 emotion-72"
+                class="emotion-68 emotion-69"
               >
                 Le tour du monde de l'actualité en 2 minutes 
               </p>
             </div>
             <div
-              class="emotion-73 emotion-74"
+              class="emotion-70 emotion-71"
             >
               <span
-                class="emotion-75 emotion-76"
+                class="emotion-72 emotion-73"
               >
                 <svg
                   aria-hidden="true"
-                  class="emotion-77 emotion-78"
+                  class="emotion-74 emotion-75"
                   focusable="false"
                   height="12px"
                   viewBox="0 0 13 12"
@@ -2105,7 +2109,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
                 </svg>
               </span>
               <time
-                class="emotion-79 emotion-80"
+                class="emotion-76 emotion-77"
                 datetime="PT1M"
                 dir="ltr"
               >
@@ -2171,57 +2175,57 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
               class="emotion-57 emotion-58"
             >
               <h3
-                class="emotion-182 emotion-60"
+                class="emotion-173 emotion-60"
               >
                 <span
                   id="scheduleItem-p086pmtv"
                   role="text"
                 >
                   <span
-                    class="emotion-63 emotion-64"
+                    class="emotion-63"
                   >
                     Listen Next, 
                   </span>
                   <span
                     aria-hidden="true"
-                    class="emotion-186 emotion-187"
+                    class="emotion-176 emotion-177"
                     dir="ltr"
                   >
                     SUIVANT 
                   </span>
                   A Vous L'antenne
                   <span
-                    class="emotion-63 emotion-64"
+                    class="emotion-63"
                   >
                     , 09:00, 
                   </span>
                   <span
-                    class="emotion-190 emotion-68"
+                    class="emotion-179 emotion-66"
                   >
                     1 janvier 2030
                   </span>
                   <span
-                    class="emotion-63 emotion-64"
+                    class="emotion-63"
                   >
                     , Durée 15,00 
                   </span>
                 </span>
               </h3>
               <p
-                class="emotion-71 emotion-72"
+                class="emotion-68 emotion-69"
               >
                 Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité 
               </p>
             </div>
             <div
-              class="emotion-196 emotion-74"
+              class="emotion-184 emotion-71"
             >
               <span
-                class="emotion-198 emotion-76"
+                class="emotion-186 emotion-73"
               >
                 <svg
                   aria-hidden="true"
-                  class="emotion-77 emotion-78"
+                  class="emotion-74 emotion-75"
                   focusable="false"
                   height="12px"
                   viewBox="0 0 13 12"
@@ -2236,7 +2240,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
                 </svg>
               </span>
               <time
-                class="emotion-79 emotion-80"
+                class="emotion-76 emotion-77"
                 datetime="PT15M"
                 dir="ltr"
               >

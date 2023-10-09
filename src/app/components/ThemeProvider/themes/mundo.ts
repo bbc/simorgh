@@ -8,6 +8,7 @@ import {
 } from '../fontFaces';
 import withThemeProvider from '../withThemeProvider';
 import reithVariants from '../fontVariants/reith';
+import brandSVG from '../chameleonLogos/mundo';
 
 const mundoTheme = {
   palette: {
@@ -27,6 +28,7 @@ const mundoTheme = {
     ],
     fontVariants: reithVariants,
   },
+  brandSVG,
 };
 
 export default withThemeProvider(mundoTheme);

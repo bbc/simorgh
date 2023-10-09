@@ -460,6 +460,5 @@ exports[`RecommendationsPromoList it renders a list of Story Promos wrapped in G
       </div>
     </li>
   </ul>
-  ,
 </div>
 `;

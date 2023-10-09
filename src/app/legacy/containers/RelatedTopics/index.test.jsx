@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { render } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
@@ -8,7 +7,7 @@ import RelatedTopics from '#containers/RelatedTopics';
 import * as clickTracker from '#hooks/useClickTrackerHandler';
 import * as viewTracker from '#hooks/useViewTracker';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { render } from '../../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 
 beforeEach(() => {
@@ -48,33 +47,39 @@ const WithContexts = ({
 };
 
 describe('Expected use', () => {
-  shouldMatchSnapshot(
-    'should render correctly with no tags',
-    <WithContexts>
-      <RelatedTopics />
-    </WithContexts>,
-  );
+  it('should render correctly with no tags', () => {
+    const { container } = render(
+      <WithContexts>
+        <RelatedTopics />
+      </WithContexts>,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render correctly with a single tag',
-    <WithContexts>
-      <RelatedTopics topics={[{ topicName: 'topic', topicId: '123' }]} />
-    </WithContexts>,
-  );
+  it('should render correctly with a single tag', () => {
+    const { container } = render(
+      <WithContexts>
+        <RelatedTopics topics={[{ topicName: 'topic', topicId: '123' }]} />
+      </WithContexts>,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render correctly with multiple tags',
-    <WithContexts>
-      <RelatedTopics
-        topics={[
-          { topicName: 'topic1', topicId: '1' },
-          { topicName: 'topic2', topicId: '2' },
-          { topicName: 'topic3', topicId: '3' },
-        ]}
-      />
-      ,
-    </WithContexts>,
-  );
+  it('should render correctly with multiple tags', () => {
+    const { container } = render(
+      <WithContexts>
+        <RelatedTopics
+          topics={[
+            { topicName: 'topic1', topicId: '1' },
+            { topicName: 'topic2', topicId: '2' },
+            { topicName: 'topic3', topicId: '3' },
+          ]}
+        />
+        ,
+      </WithContexts>,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
   it('should construct the correct topics href given a topic id without a variant', () => {
     const topic = {

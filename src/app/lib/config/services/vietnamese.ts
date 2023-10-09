@@ -1,11 +1,4 @@
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_GHOST,
-  C_POSTBOX_30,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
 import latinWithDiacritics from '../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
-import brandSVG from '../../chameleonLogos/vietnamese';
 import '#psammead/moment-timezone-include/tz/Asia/Ho_Chi_Minh';
 import 'moment/locale/vi';
 import withContext from '../../../contexts/utils/withContext';
@@ -40,7 +33,6 @@ export const service: DefaultServiceConfig = {
     service: 'vietnamese',
     serviceName: 'Tiếng Việt',
     languageName: 'Vietnamese',
-    themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcvietnamese',
     twitterSite: '@bbcvietnamese',
     noBylinesPolicy:
@@ -52,13 +44,6 @@ export const service: DefaultServiceConfig = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Tin chính',
-    theming: {
-      brandBackgroundColour: `${C_POSTBOX}`,
-      brandLogoColour: `${C_WHITE}`,
-      brandForegroundColour: `${C_GHOST}`,
-      brandHighlightColour: `${C_WHITE}`,
-      brandBorderColour: `${C_POSTBOX_30}`,
-    },
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
@@ -70,6 +55,7 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'Quảng cáo',
       },
+      recommendationTitle: 'Recommended articles',
       seeAll: 'Xem tất cả',
       home: 'Tin chính',
       currentPage: 'Trang hiện nay',
@@ -140,7 +126,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'OK',
           reject: 'Tìm hiểu các thay đổi',
-          rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
         },
         cookie: {
           amp: {
@@ -154,7 +140,7 @@ export const service: DefaultServiceConfig = {
                 linkText: 'cookie',
                 last: ', và thu thập dữ liệu browsing để cho bạn trải nghiệm online tốt nhất và cá nhân hóa nội dung và quảng cáo cho bạn. Xin cho chúng tôi biết bạn có đồng ý không.',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               manage: 'Quản lý cài đặt của tôi',
             },
@@ -170,7 +156,7 @@ export const service: DefaultServiceConfig = {
                   'Để làm cho các trang web của chúng tôi hoạt động, chúng tôi lưu trữ một số thông tin hạn chế trên thiết bị của bạn mà không có sự đồng ý của bạn.',
                 para4: {
                   text: 'Đọc thêm về thông tin cần thiết mà chúng tôi lưu trữ trên thiết bị của bạn để làm cho các trang web của chúng tôi hoạt động.',
-                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
                 },
                 para5:
                   'Chúng tôi sử dụng bộ nhớ cục bộ để lưu trữ các tùy chọn đồng ý của bạn trên thiết bị của bạn.',
@@ -203,13 +189,13 @@ export const service: DefaultServiceConfig = {
                 linkText: 'cookie',
                 last: ' để cho bạn trải nghiệm online tốt nhất. Cho chúng tôi biết bạn đồng ý về mọi cookie này.',
                 linkUrl:
-                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+                  'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
             },
             accept: 'Vâng, tôi đồng ý',
             reject: 'Không, đưa tôi xem phần Settings',
             rejectUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+              'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           },
         },
       },
@@ -260,9 +246,9 @@ export const service: DefaultServiceConfig = {
         linkText: 'Xin xem bản đầy đủ.',
       },
       topStoriesTitle: 'Tin chính',
-      featuresAnalysisTitle: 'Góc nhìn và chuyên mục',
+      featuresAnalysisTitle: 'BBC giới thiệu',
+      latestMediaTitle: 'Mới nhất',
     },
-    brandSVG,
     mostRead: {
       header: 'Đọc nhiều nhất',
       lastUpdated: 'Cập nhật gần nhất:',
@@ -278,7 +264,11 @@ export const service: DefaultServiceConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      hasStoryRecommendations: true,
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {
@@ -286,7 +276,7 @@ export const service: DefaultServiceConfig = {
         text: 'Tại sao bạn có thể tin tưởng BBC News',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/feeds-and-links',
         text: 'Tìm hiểu cách chúng tôi tiếp cận việc dẫn tới trang ngoài',
       },
       links: [
@@ -303,7 +293,7 @@ export const service: DefaultServiceConfig = {
           text: 'Chính sách riêng tư',
         },
         {
-          href: 'https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html',
+          href: 'https://www.bbc.com/usingthebbc/cookies/',
           text: 'Cookie',
         },
         {
@@ -312,8 +302,8 @@ export const service: DefaultServiceConfig = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
-          text: 'AdChoices / Do Not Sell My Info',
+          href: '#',
+          text: 'Do not share or sell my info',
           lang: 'en-GB',
         },
       ],
@@ -335,10 +325,6 @@ export const service: DefaultServiceConfig = {
         url: '/vietnamese/topics/cnlv9j1ekq0t',
       },
       {
-        title: 'Diễn đàn',
-        url: '/vietnamese/forum-54540875',
-      },
-      {
         title: 'Kinh tế',
         url: '/vietnamese/topics/cez1ey7nzj3t',
       },
@@ -352,7 +338,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'Video',
-        url: '/vietnamese/media/video',
+        url: '/vietnamese/topics/cl29j0ekkvdt',
       },
     ],
   },

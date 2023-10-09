@@ -10,21 +10,18 @@ import {
 import { RequestContext } from '#contexts/RequestContext';
 import { GridItemMedium } from '#components/Grid';
 import { socialEmbedBlockPropTypes } from '#models/propTypes/socialEmbed';
-import nodeLogger from '#lib/logger.node';
-import { SOCIAL_EMBED_RENDERED } from '#lib/logger.const';
+import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import createTranslations from './common/translations';
 import { LAZYLOAD_OFFSET, Wrapper } from './common/styles';
 import { getProviderFromSource, getIdFromSource } from './sourceHelpers';
 
-const logger = nodeLogger(__filename);
-
 const SocialEmbedContainer = ({ blocks, source }) => {
-  const { isAmp } = useContext(RequestContext);
+  const { isAmp, pageType } = useContext(RequestContext);
   const { service, translations } = useContext(ServiceContext);
 
   if (!blocks || !source) return null;
-  const { model } = blocks[0];
+  const { model, id: blockId } = blocks[0];
   const provider = getProviderFromSource(source);
 
   const id = getIdFromSource(source);
@@ -34,6 +31,8 @@ const SocialEmbedContainer = ({ blocks, source }) => {
   const oEmbed = path(['blocks', 0, 'model', 'oembed'], model);
   const oEmbedIndexOfType = path(['indexOfType'], oEmbed);
   const oEmbedPosition = is(Number, oEmbedIndexOfType) && oEmbedIndexOfType + 1;
+
+  const isLive = pageType === LIVE_PAGE;
 
   const {
     fallback: fallbackTranslations,
@@ -50,14 +49,9 @@ const SocialEmbedContainer = ({ blocks, source }) => {
     ...skipLinkTranslations,
     endTextId:
       oEmbedPosition > 0
-        ? `end-of-%provider%-content-${oEmbedPosition}`
-        : `end-of-%provider%-content`,
+        ? `end-of-%provider%-content-${isLive ? blockId : oEmbedPosition}`
+        : `end-of-%provider%-content${isLive ? `-${blockId}` : ''}`,
   };
-
-  logger.info(SOCIAL_EMBED_RENDERED, {
-    provider,
-    href: source,
-  });
 
   return (
     <GridItemMedium>

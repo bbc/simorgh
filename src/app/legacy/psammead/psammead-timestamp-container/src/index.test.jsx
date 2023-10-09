@@ -1,10 +1,7 @@
 import React from 'react';
-import {
-  isNull,
-  shouldMatchSnapshot,
-} from '#psammead/psammead-test-helpers/src';
-import { render } from '@testing-library/react';
+import { isNull } from '#psammead/psammead-test-helpers/src';
 import moment from 'moment';
+import { render } from '../../../../components/react-testing-library-with-providers';
 import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import '#psammead/psammead-locales/moment/ha';
 import Timestamp from '.';
@@ -29,30 +26,34 @@ describe('Timestamp', () => {
     isNull('should return null', <Timestamp />);
   });
 
-  shouldMatchSnapshot(
-    'should render without a leading zero on the day',
-    <Timestamp
-      timestamp={noLeadingZeroTimestamp}
-      dateTimeFormat="YYYY-MM-DD"
-      format="D MMMM YYYY"
-      isRelative={false}
-      script={latin}
-      locale="fa"
-      service="persian"
-    />,
-  );
+  it('should render without a leading zero on the day', () => {
+    const { container } = render(
+      <Timestamp
+        timestamp={noLeadingZeroTimestamp}
+        dateTimeFormat="YYYY-MM-DD"
+        format="D MMMM YYYY"
+        isRelative={false}
+        script={latin}
+        locale="fa"
+        service="persian"
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render correctly',
-    <Timestamp
-      timestamp={defaultTimestamp}
-      dateTimeFormat="YYYY-MM-DD"
-      format="D MMMM YYYY"
-      isRelative={false}
-      script={latin}
-      service="news"
-    />,
-  );
+  it('should render correctly', () => {
+    const { container } = render(
+      <Timestamp
+        timestamp={defaultTimestamp}
+        dateTimeFormat="YYYY-MM-DD"
+        format="D MMMM YYYY"
+        isRelative={false}
+        script={latin}
+        service="news"
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
   isNull(
     'should handle invalid date',
@@ -66,19 +67,21 @@ describe('Timestamp', () => {
     />,
   );
 
-  shouldMatchSnapshot(
-    'should add prefix and suffix',
-    <Timestamp
-      timestamp={defaultTimestamp}
-      dateTimeFormat="YYYY-MM-DD"
-      format="D MMMM YYYY"
-      isRelative={false}
-      prefix="Prefix here"
-      suffix="suffix here"
-      script={latin}
-      service="news"
-    />,
-  );
+  it('should add prefix and suffix', () => {
+    const { container } = render(
+      <Timestamp
+        timestamp={defaultTimestamp}
+        dateTimeFormat="YYYY-MM-DD"
+        format="D MMMM YYYY"
+        isRelative={false}
+        prefix="Prefix here"
+        suffix="suffix here"
+        script={latin}
+        service="news"
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
   describe('assertions', () => {
     describe('with alternative calendar props', () => {

@@ -11,6 +11,7 @@ import {
   suppressPropWarnings,
 } from '#psammead/psammead-test-helpers/src';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import ThemeProvider from '../../../components/ThemeProvider';
 import {
   completeItem,
   itemWithOvertypedSummary,
@@ -29,6 +30,8 @@ import {
 } from './helpers/fixtureData';
 import StoryPromoContainer from '.';
 import { buildUniquePromoId } from './utilities';
+
+jest.mock('../../../components/ThemeProvider');
 
 const onlyOneRelatedItem = {
   ...indexAlsosItem,
@@ -50,27 +53,29 @@ const fixtures = {
 
 // eslint-disable-next-line react/prop-types
 const WrappedStoryPromo = ({ service, platform, ...props }) => (
-  <ServiceContextProvider service={service}>
-    <RequestContextProvider
-      bbcOrigin="https://www.test.bbc.co.uk"
-      id="c0000000000o"
-      isAmp={platform === 'amp'}
-      pageType={ARTICLE_PAGE}
-      service={service}
-      statusCode={200}
-      pathname="/pathname"
-    >
-      <ToggleContextProvider
-        toggles={{
-          eventTracking: {
-            enabled: true,
-          },
-        }}
+  <ThemeProvider service={service} variant="default">
+    <ServiceContextProvider service={service}>
+      <RequestContextProvider
+        bbcOrigin="https://www.test.bbc.co.uk"
+        id="c0000000000o"
+        isAmp={platform === 'amp'}
+        pageType={ARTICLE_PAGE}
+        service={service}
+        statusCode={200}
+        pathname="/pathname"
       >
-        <StoryPromoContainer {...props} />
-      </ToggleContextProvider>
-    </RequestContextProvider>
-  </ServiceContextProvider>
+        <ToggleContextProvider
+          toggles={{
+            eventTracking: {
+              enabled: true,
+            },
+          }}
+        >
+          <StoryPromoContainer {...props} />
+        </ToggleContextProvider>
+      </RequestContextProvider>
+    </ServiceContextProvider>
+  </ThemeProvider>
 );
 
 WrappedStoryPromo.defaultProps = {
@@ -275,7 +280,7 @@ describe('StoryPromo Container', () => {
         <WrappedStoryPromo platform="amp" item={cpsItem} />,
       );
 
-      expect(container.getElementsByTagName('amp-img').length).toEqual(2);
+      expect(container.getElementsByTagName('amp-img').length).toEqual(1);
       expect(container.getElementsByTagName('img').length).toEqual(0);
       expect(
         container.getElementsByTagName('amp-img')[0].getAttribute('src'),
@@ -344,6 +349,13 @@ describe('StoryPromo Container', () => {
         delete assetTypeItem.indexImage;
       });
       it('should not include an img element', () => {
+        cpsContainer = render(
+          <WrappedStoryPromo item={cpsItem} labelId={labelId} />,
+        ).container;
+        assetTypeContainer = render(
+          <WrappedStoryPromo item={assetTypeItem} labelId={labelId} />,
+        ).container;
+
         expect(cpsContainer.getElementsByTagName('img').length).toEqual(0);
         expect(assetTypeContainer.getElementsByTagName('img').length).toEqual(
           0,

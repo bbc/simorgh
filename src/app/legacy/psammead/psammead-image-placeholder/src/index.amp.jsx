@@ -1,7 +1,6 @@
 /* eslint react/prop-types: 0 */
 import React from 'react';
 import { bool } from 'prop-types';
-import { C_LUNAR, C_SHADOW } from '#psammead/psammead-styles/src/colours';
 import {
   BBC_BLOCKS,
   BBC_BLOCKS_DARK_MODE,
@@ -17,14 +16,16 @@ const bgImageDark = `data:image/svg+xml;base64,${BBC_BLOCKS_DARK_MODE}`;
 const bgImageRegular = `data:image/svg+xml;base64,${BBC_BLOCKS}`;
 
 const AmpImgPlaceholderContainer = ({
-  darkMode,
+  darkPlaceholder,
   fallback,
   placeholder,
   children,
 }) => {
   return (
     <div
-      style={{ backgroundColor: `${darkMode ? C_SHADOW : C_LUNAR}` }}
+      css={({ palette }) => ({
+        backgroundColor: `${darkPlaceholder ? palette.SHADOW : palette.LUNAR}`,
+      })}
       fallback={fallback}
       placeholder={placeholder}
     >
@@ -45,50 +46,53 @@ const AmpImgPlaceholder = props => (
   />
 );
 
-const AmpImgMediaQueries = ({ darkMode }) => {
+const AmpImgMediaQueries = ({ darkPlaceholder }) => {
   return (
     <>
       <AmpImgPlaceholder
         media={`(max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX})`}
         width="60px"
         height="17px"
-        src={darkMode ? bgImageDark : bgImageRegular}
+        src={darkPlaceholder ? bgImageDark : bgImageRegular}
       />
       <AmpImgPlaceholder
         media={`(min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX})`}
         width="77px"
         height="22px"
-        src={darkMode ? bgImageDark : bgImageRegular}
+        src={darkPlaceholder ? bgImageDark : bgImageRegular}
       />
       <AmpImgPlaceholder
         media={`(min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN})`}
         width="93px"
         height="27px"
-        src={darkMode ? bgImageDark : bgImageRegular}
+        src={darkPlaceholder ? bgImageDark : bgImageRegular}
       />
     </>
   );
 };
 
-const ImagePlaceholderAmp = ({ darkMode }) => {
+const ImagePlaceholderAmp = ({ darkPlaceholder }) => {
   return (
     <>
-      <AmpImgPlaceholderContainer darkMode={darkMode} placeholder="">
-        <AmpImgMediaQueries darkMode={darkMode} />
+      <AmpImgPlaceholderContainer
+        darkPlaceholder={darkPlaceholder}
+        placeholder=""
+      >
+        <AmpImgMediaQueries darkPlaceholder={darkPlaceholder} />
       </AmpImgPlaceholderContainer>
-      <AmpImgPlaceholderContainer darkMode={darkMode} fallback="">
-        <AmpImgMediaQueries darkMode={darkMode} />
+      <AmpImgPlaceholderContainer darkPlaceholder={darkPlaceholder} fallback="">
+        <AmpImgMediaQueries darkPlaceholder={darkPlaceholder} />
       </AmpImgPlaceholderContainer>
     </>
   );
 };
 
 ImagePlaceholderAmp.propTypes = {
-  darkMode: bool,
+  darkPlaceholder: bool,
 };
 
 ImagePlaceholderAmp.defaultProps = {
-  darkMode: false,
+  darkPlaceholder: false,
 };
 
 export default ImagePlaceholderAmp;

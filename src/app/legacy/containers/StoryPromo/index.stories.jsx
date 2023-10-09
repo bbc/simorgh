@@ -4,6 +4,7 @@ import { withKnobs, select, boolean } from '@storybook/addon-knobs';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
+import ThemeProvider from '../../../components/ThemeProvider';
 import { ARTICLE_PAGE, MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 import fixture from './helpers/storiesFixture';
 import StoryPromoContainer from '.';
@@ -45,28 +46,30 @@ const Component = ({
   isSingleColumnLayout = false,
 }) => {
   return (
-    <ServiceContextProvider service="news">
-      <RequestContextProvider
-        bbcOrigin="https://www.test.bbc.co.uk"
-        id="c0000000000o"
-        isAmp={isAmp}
-        pathname="/pathname"
-        pageType={ARTICLE_PAGE}
-        service="news"
-      >
-        <ToggleContextProvider
-          toggles={{
-            eventTracking: { enabled: false },
-          }}
+    <ThemeProvider service="news">
+      <ServiceContextProvider service="news">
+        <RequestContextProvider
+          bbcOrigin="https://www.test.bbc.co.uk"
+          id="c0000000000o"
+          isAmp={isAmp}
+          pathname="/pathname"
+          pageType={ARTICLE_PAGE}
+          service="news"
         >
-          <StoryPromoContainer
-            item={item}
-            promoType={promoType}
-            isSingleColumnLayout={isSingleColumnLayout}
-          />
-        </ToggleContextProvider>
-      </RequestContextProvider>
-    </ServiceContextProvider>
+          <ToggleContextProvider
+            toggles={{
+              eventTracking: { enabled: false },
+            }}
+          >
+            <StoryPromoContainer
+              item={item}
+              promoType={promoType}
+              isSingleColumnLayout={isSingleColumnLayout}
+            />
+          </ToggleContextProvider>
+        </RequestContextProvider>
+      </ServiceContextProvider>
+    </ThemeProvider>
   );
 };
 

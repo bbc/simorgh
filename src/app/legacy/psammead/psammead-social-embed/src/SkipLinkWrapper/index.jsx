@@ -1,19 +1,12 @@
 import React from 'react';
 import { node, string } from 'prop-types';
 import styled from '@emotion/styled';
-import {
-  C_EBON,
-  C_WHITE,
-  C_POSTBOX,
-} from '#psammead/psammead-styles/src/colours';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { GEL_BREVIER } from '#psammead/gel-foundations/src/typography';
 
-import {
-  detokenise,
-  dictionaryFactory,
-  visuallyHiddenStyle,
-} from '../utilities';
+import { detokenise, dictionaryFactory } from '../utilities';
+
+import { visuallyHiddenStyle } from '../../../../../lib/styles.const';
 
 const BORDER_WEIGHT = '0.125rem';
 const GEL_SPACING_THREE_QRTS = `0.75rem`;
@@ -25,8 +18,8 @@ const Wrapper = styled.div`
 const SkipLink = styled.a`
   ${({ service }) => getSansRegular(service)}
   ${GEL_BREVIER}
-  background-color: ${C_WHITE};
-  border: ${BORDER_WEIGHT} solid ${C_EBON};
+  background-color: ${props => props.theme.palette.WHITE};
+  border: ${BORDER_WEIGHT} solid ${props => props.theme.palette.EBON};
   display: block;
   left: 0;
   line-height: 1;
@@ -37,14 +30,14 @@ const SkipLink = styled.a`
   z-index: 10;
 
   span {
-    color: ${C_EBON};
+    color: ${props => props.theme.palette.EBON};
   }
 
   &:hover,
   &:focus {
     span {
-      color: ${C_POSTBOX};
-      border-bottom: 2px solid ${C_POSTBOX};
+      color: ${props => props.theme.palette.POSTBOX};
+      border-bottom: 2px solid ${props => props.theme.palette.POSTBOX};
     }
   }
 
@@ -71,6 +64,7 @@ const SkipLinkWrapper = ({
       <SkipLink
         service={service}
         href={`#${detokenise(endTextId, dictionary)}`}
+        className="focusIndicatorRemove"
       >
         <span>{detokenise(text, dictionary)}</span>
       </SkipLink>

@@ -3,7 +3,6 @@ import styled from '@emotion/styled';
 import { string, func, shape, oneOf } from 'prop-types';
 import Image from '#psammead/psammead-image/src';
 import PlayButton from '#psammead/psammead-play-button/src';
-import { C_POSTBOX } from '#psammead/psammead-styles/src/colours';
 import Guidance from '../Guidance';
 
 const StyledPlayButton = styled(PlayButton)`
@@ -27,7 +26,7 @@ const StyledPlaceholder = styled.div`
 
   &:hover, &:focus {
     ${StyledPlayButton} {
-      background-color: ${C_POSTBOX};
+      background-color: ${props => props.theme.palette.POSTBOX};
     }
   }
 `;

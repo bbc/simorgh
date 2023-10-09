@@ -2,8 +2,6 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { arrayOf, oneOf, shape } from 'prop-types';
 
-import { C_SPORT_MIST } from '#psammead/psammead-styles/src/colours';
-
 import { textBlockPropTypes } from '#models/propTypes/text';
 
 import Blocks from '../../Blocks';
@@ -11,7 +9,7 @@ import CpsTableCell from '../CpsTableCell';
 
 const StyledTr = styled.tr`
   &:hover {
-    background-color: ${C_SPORT_MIST};
+    background-color: ${props => props.theme.palette.SPORT_MIST};
   }
 `;
 

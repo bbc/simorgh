@@ -10,6 +10,7 @@ import WithTimeMachine from '#testHelpers/withTimeMachine';
 import { getLocalRadioScheduleEndpoint } from '#lib/utilities/getUrlHelpers/getRadioSchedulesUrls';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 import RadioScheduleContainer from '.';
+import ThemeProvider from '../../../components/ThemeProvider';
 
 // Currently, only these services have radio schedule data
 const radioServices = {
@@ -33,31 +34,33 @@ const radioServices = {
 
 // eslint-disable-next-line react/prop-types
 const Component = ({ service }) => (
-  <BrowserRouter>
-    <ToggleContextProvider>
-      <RequestContextProvider
-        isAmp={false}
-        pageType={FRONT_PAGE}
-        service={service}
-        pathname={`/${service}`}
-      >
-        <ServiceContextProvider service={service}>
-          <RadioScheduleContainer
-            radioScheduleEndpointOverride={getLocalRadioScheduleEndpoint({
-              service,
-              radioService: radioServices[service],
-            })}
-          />
-        </ServiceContextProvider>
-      </RequestContextProvider>
-    </ToggleContextProvider>
-  </BrowserRouter>
+  <ThemeProvider service={service}>
+    <BrowserRouter>
+      <ToggleContextProvider>
+        <RequestContextProvider
+          isAmp={false}
+          pageType={FRONT_PAGE}
+          service={service}
+          pathname={`/${service}`}
+        >
+          <ServiceContextProvider service={service}>
+            <RadioScheduleContainer
+              radioScheduleEndpointOverride={getLocalRadioScheduleEndpoint({
+                service,
+                radioService: radioServices[service],
+              })}
+            />
+          </ServiceContextProvider>
+        </RequestContextProvider>
+      </ToggleContextProvider>
+    </BrowserRouter>
+  </ThemeProvider>
 );
 
 moment.locale('en-GB'); // needed for Time Machine date string
 
 export default {
-  title: 'Containers/Radio Schedule',
+  title: 'Containers/Radio Schedule/Radio Schedule',
   Component,
   parameters: { chromatic: { disable: true } },
   decorators: [

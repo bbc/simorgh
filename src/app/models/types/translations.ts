@@ -147,6 +147,7 @@ export interface Translations {
     duration?: string;
     recentEpisodes?: string;
     podcastExternalLinks?: string;
+    download?: string;
   };
   socialEmbed: {
     caption?: {
@@ -177,6 +178,8 @@ export interface Translations {
   };
   topStoriesTitle?: string;
   featuresAnalysisTitle?: string;
+  latestMediaTitle?: string;
+  infoBannerLabel?: string;
 }
 
 export interface TranslationsError {
