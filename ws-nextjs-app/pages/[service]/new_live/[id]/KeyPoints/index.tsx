@@ -12,18 +12,18 @@ import { SummaryListWrapper, ComponentToRenderProps } from './types';
 const KeyPoints = ({
   keyPointBlocks,
 }: {
-  keyPointBlocks: SummaryListWrapper[] | [];
+  keyPointBlocks: SummaryListWrapper[];
 }) => {
   const {
     palette: { GREY_10 },
   } = useTheme();
 
-  if (!keyPointBlocks || keyPointBlocks.length === 0) return null;
   const listItems = keyPointBlocks[0].model.blocks[0].model.blocks;
+  if (listItems.length === 0) return null;
   const hasSingleKeyPoint = listItems.length === 1;
   const singleKeyPointComponentsToRender = { paragraph: LegacyParagraph };
 
-  // Requires translations
+  // Requires translations.
   const sectionTitle = 'Summary';
 
   const componentsToRender = () => ({
@@ -45,7 +45,7 @@ const KeyPoints = ({
   });
 
   return (
-    <section role="region" aria-label={sectionTitle}>
+    <section role="region" aria-label={sectionTitle} data-e2e="key-points">
       <Heading level={2} css={styles.headingStyles}>
         {sectionTitle}
       </Heading>

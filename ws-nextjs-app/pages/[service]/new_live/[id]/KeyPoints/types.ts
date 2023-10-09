@@ -7,7 +7,7 @@ interface ListItems {
 
 interface SummaryUnorderedList {
   type: string;
-  model: { blocks: ListItems[] };
+  model: { blocks: ListItems[] | [] };
 }
 
 export interface SummaryListWrapper {
@@ -17,7 +17,7 @@ export interface SummaryListWrapper {
 
 export interface SummaryContent {
   model: {
-    blocks: SummaryListWrapper[] | [];
+    blocks: SummaryListWrapper[];
   };
 }
 
