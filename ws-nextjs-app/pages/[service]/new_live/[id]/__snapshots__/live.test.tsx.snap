@@ -1220,6 +1220,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
       >
         <section
           aria-label="Summary"
+          data-e2e="key-points"
           role="region"
         >
           <h2
