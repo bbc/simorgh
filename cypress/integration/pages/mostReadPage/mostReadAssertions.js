@@ -6,7 +6,7 @@ import getAppEnv from '../../../support/helpers/getAppEnv';
 import ampOnlyServices from '../../../support/helpers/ampOnlyServices';
 
 // news, newsround, and sport are services we serve on amp, but do not want to run most read tests on
-const MOST_READ_EXCLUDED_SERVICES = [...ampOnlyServices, 'ukchina'];
+const MOST_READ_EXCLUDED_SERVICES = [...ampOnlyServices, 'ukchina', 'russian'];
 
 export const crossPlatform = ({ service, variant }) => {
   const serviceID = config[service]?.name || service;
