@@ -118,12 +118,7 @@ const ScheduleItemHeader = ({
     // eslint-disable-next-line jsx-a11y/aria-role
     <span role="text" id={`scheduleItem-${id}`}>
       <VisuallyHiddenText>{`${listenLabelTranslations[state]}, `}</VisuallyHiddenText>
-      {isLive && (
-        <LiveLabel
-          liveText={liveLabel}
-          ariaHidden
-        />
-      )}
+      {isLive && <LiveLabel liveText={liveLabel} ariaHidden />}
       {isNext && (
         <NextLabel
           aria-hidden="true"
