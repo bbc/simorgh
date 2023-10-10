@@ -31,7 +31,7 @@ const LiveLabel = ({
     // lines 27, 56,66, 31 concerning with id are a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
     // eslint-disable-next-line jsx-a11y/aria-role
     <span role="text" id={id}>
-      <div css={styles.liveLabel}>
+      <span css={styles.liveLabel}>
         <div dir={dir} {...(ariaHidden && { 'aria-hidden': 'true' })}>
           {isRtl ? (
             <div css={styles.textRtl}>{`${liveText} `}</div>
@@ -44,7 +44,7 @@ const LiveLabel = ({
             {`${offScreenText}, `}
           </VisuallyHiddenText>
         )}
-      </div>
+      </span>
       {children}
     </span>
   );
