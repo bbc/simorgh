@@ -99,6 +99,7 @@ describe('StoryPromo', () => {
   it('should render a RTL Live promo correctly', () => {
     const { container } = render(
       <StoryPromo image={Image} info={Info({ isLive: true, dir: 'rtl' })} />,
+      { service: 'arabic' },
     );
     expect(container).toMatchSnapshot();
   });
