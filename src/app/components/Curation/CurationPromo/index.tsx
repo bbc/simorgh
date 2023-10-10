@@ -51,7 +51,6 @@ const CurationPromo = ({
         </Promo.MediaIcon>
       </Promo.Image>
       <Promo.Heading as={`h${headingLevel}`}>
-        <LiveLabel service={service} />
         {isMedia ? (
           <Promo.A
             href={link}

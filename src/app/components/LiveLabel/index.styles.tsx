@@ -18,15 +18,3 @@ const styles = {
 };
 
 export default styles;
-
-// Old CSS below leaving in for reference until work is completed
-
-// const StyledSpan = styled.span`
-//   ${({ service }) => getSansBold(service)}
-//   color: ${props => props.theme.palette.POSTBOX};
-//   display: inline-block;
-//   ${({ dir }) =>
-//     dir === 'rtl'
-//       ? `margin-left: ${GEL_SPACING};`
-//       : `margin-right: ${GEL_SPACING};`}
-// `;
