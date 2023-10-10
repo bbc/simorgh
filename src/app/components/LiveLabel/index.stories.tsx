@@ -7,7 +7,6 @@ import md from './README.md';
 import { StoryProps } from '../../models/types/storybook';
 import services from '../../../server/utilities/serviceConfigs';
 import Heading from '../Heading';
-import InlineLink from '../InlineLink';
 
 interface Props extends StoryProps {
   dir: string;
@@ -50,13 +49,15 @@ export const WithCustomOffscreenText = ({ service, variant }: Props) => (
 export const WithChildren = ({ text: headline, service, variant }: Props) => (
   <Wrapper>
     <Heading level={3}>
-      <LiveLabel
-        service={service}
-        offScreenText="Live"
-        liveText={services[service][variant].translations.media.liveLabel}
-      >
-        <InlineLink text={headline} to="https://www.bbc.co.uk/ws/languages" />
-      </LiveLabel>
+      <a href="https://www.bbc.co.uk/ws/languages">
+        <LiveLabel
+          service={service}
+          offScreenText="Live"
+          liveText={services[service][variant].translations.media.liveLabel}
+        >
+          {headline}
+        </LiveLabel>
+      </a>
     </Heading>
   </Wrapper>
 );
