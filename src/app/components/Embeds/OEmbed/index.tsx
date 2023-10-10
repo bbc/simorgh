@@ -3,7 +3,7 @@ import React, { useContext, useEffect, useRef } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { RequestContext } from '../../../contexts/RequestContext';
-// import EmbedHtml from '../EmbedHtml';
+import EmbedHtml from '../EmbedHtml';
 import EmbedError from '../EmbedError';
 
 export type OEmbedProps = {
@@ -24,11 +24,8 @@ export type OEmbedProps = {
 const OEmbedLoader = ({ oembed }: OEmbedProps) => {
   const { translations } = useContext(ServiceContext);
   const { isAmp, canonicalLink } = useContext(RequestContext);
-  const { html } = oembed;
+  const { html, width, height, provider_name } = oembed;
   const iframeRef = useRef<HTMLIFrameElement>(null);
-
-  const iframeSrc = html.match(/(?<=src=").*?(?=[\?"])/)?.[0];
-  // const iframeSrc = 'https://flo.uri.sh/visualisation/14983252/embed?auto=1';
 
   useEffect(() => {
     const onMessage = (event: MessageEvent) => {
@@ -71,18 +68,23 @@ const OEmbedLoader = ({ oembed }: OEmbedProps) => {
     );
   }
 
-  return (
-    <iframe
-      src={`${iframeSrc}?auto=1`}
-      ref={iframeRef}
-      frameBorder="0"
-      scrolling="no"
-      height="575"
-      width="700"
-      style={{ width: '100%' }}
-      title="Interactive or visual content"
-    />
-  );
+  if (provider_name === 'Flourish') {
+    const iframeSrc = html.match(/(?<=src=").*?(?=[?"])/)?.[0];
+    return (
+      <iframe
+        src={`${iframeSrc}?auto=1`}
+        ref={iframeRef}
+        frameBorder="0"
+        scrolling="no"
+        height={height}
+        width={width}
+        style={{ width: '100%' }}
+        title="Interactive or visual content"
+      />
+    );
+  }
+
+  return <EmbedHtml embeddableContent={html} />;
 };
 
 export default OEmbedLoader;
