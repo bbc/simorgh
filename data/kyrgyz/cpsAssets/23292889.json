@@ -53,8 +53,19 @@
         ],
         "includeComments": false,
         "atiAnalytics": {
-          "producerName": "KYRGYZ",
-          "producerId": "58"
+          "campaigns": null,
+          "categoryName": null,
+          "contentId": "urn:bbc:cps:curie:asset:bb9390aa-4b35-e448-b295-cbd7369fe457",
+          "contentType": "article",
+          "language": "ky",
+          "ldpThingIds": null,
+          "ldpThingLabels": null,
+          "pageIdentifier": "kyrgyz.story.23292889.page",
+          "pageTitle": "Test STY for social embeds",
+          "producerId": null,
+          "timePublished": "2020-04-24T14:51:17.000Z",
+          "timeUpdated": "2020-04-24T14:51:17.000Z",
+          "producerName": "KYRGYZ"
         },
         "readTime": 1,
         "siteUri": "/kyrgyz",

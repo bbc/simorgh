@@ -2,7 +2,6 @@ import React from 'react';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import { render } from '@testing-library/react';
 import Amp from '.';
-import '@testing-library/jest-dom/extend-expect';
 
 describe('Media Player: Amp', () => {
   shouldMatchSnapshot(

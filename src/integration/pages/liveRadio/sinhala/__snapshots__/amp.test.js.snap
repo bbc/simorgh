@@ -223,8 +223,15 @@ exports[`AMP Sinhala Live Radio Page Header Navigation link should match text an
 
 exports[`AMP Sinhala Live Radio Page Header Navigation link should match text and url 4`] = `
 {
-  "text": "විශේෂාංග",
-  "url": "/sinhala/51727586",
+  "text": "වීඩියෝ",
+  "url": "/sinhala/topics/crldzm9n2lnt",
+}
+`;
+
+exports[`AMP Sinhala Live Radio Page Header Navigation link should match text and url 5`] = `
+{
+  "text": "කලා",
+  "url": "/sinhala/topics/c7zp5zxk8jxt",
 }
 `;
 

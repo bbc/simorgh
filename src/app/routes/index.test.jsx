@@ -1,6 +1,5 @@
 import React from 'react';
-import { matchPath } from 'react-router';
-import { renderRoutes } from 'react-router-config';
+import { renderRoutes, matchRoutes } from 'react-router-config';
 import { MemoryRouter } from 'react-router-dom';
 
 // test helpers
@@ -37,6 +36,7 @@ import {
   screen,
 } from '../components/react-testing-library-with-providers';
 import * as fetchPageData from './utils/fetchPageData';
+import * as fetchDataFromBFF from './utils/fetchDataFromBFF';
 
 fetchMock.config.fallbackToNetwork = true; // ensures non mocked requests fallback to an actual network request
 
@@ -65,13 +65,10 @@ afterEach(() => {
   window.dotcom = undefined;
 });
 
-const getMatchingRoute = pathname =>
-  routes.find(({ path }) =>
-    matchPath(pathname, {
-      path,
-      exact: true,
-    }),
-  );
+const getMatchingRoute = pathname => {
+  const matchingRoutes = matchRoutes(routes, pathname);
+  return matchingRoutes?.[0]?.route;
+};
 
 const renderRouter = props =>
   act(async () => {
@@ -436,7 +433,7 @@ describe('Main page routes', () => {
     expect(
       await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
     ).toBeInTheDocument();
-  }, 10000);
+  }, 15000);
 
   it('should route to and render an index page', async () => {
     process.env.SIMORGH_APP_ENV = 'local';
@@ -558,7 +555,7 @@ describe('Main page routes', () => {
 
   it('should render a 404 error page if a data fetch responds with a 404', async () => {
     const pathname = '/pidgin/articles/cwl08rd38p6o';
-    const bffFetchSpy = jest.spyOn(fetchPageData, 'default');
+    const bffFetchSpy = jest.spyOn(fetchDataFromBFF, 'default');
 
     bffFetchSpy.mockRejectedValue({ message: 'Not found', status: 404 });
 

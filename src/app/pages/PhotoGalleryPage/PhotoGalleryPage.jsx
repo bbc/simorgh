@@ -8,6 +8,7 @@ import {
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
+  GEL_GROUP_5_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
 import { node } from 'prop-types';
 import path from 'ramda/src/path';
@@ -18,7 +19,6 @@ import CpsMetadata from '#containers/CpsMetadata';
 import headings from '#containers/Headings';
 import Timestamp from '#containers/ArticleTimestamp';
 import text from '#containers/Text';
-import Image from '#containers/Image';
 import MediaPlayer from '#containers/CpsAssetMediaPlayer';
 import Blocks from '#containers/Blocks';
 import CpsRelatedContent from '#containers/CpsRelatedContent';
@@ -33,6 +33,7 @@ import {
   getLastPublished,
 } from '#lib/utilities/parseAssetData';
 import RelatedTopics from '#containers/RelatedTopics';
+import ImageWithCaption from '../../components/ImageWithCaption';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import LinkedData from '../../components/LinkedData';
@@ -60,6 +61,17 @@ PhotoGalleryPageGrid.propTypes = {
   children: node.isRequired,
 };
 
+const StyledImageWrapper = styled.div`
+  grid-column: 5 / span 12;
+  @media (max-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
+    grid-column: 2 / span 6;
+  }
+
+  @media (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    grid-column: 1 / span 6;
+  }
+`;
+
 const getImageSizes = ({ blocks }) => {
   if (!blocks) {
     return null;
@@ -81,7 +93,7 @@ const getImageSizes = ({ blocks }) => {
 };
 
 const PhotoGalleryPage = ({ pageData }) => {
-  const { showRelatedTopics } = useContext(ServiceContext);
+  const { brandName, showRelatedTopics } = useContext(ServiceContext);
   const title = path(['promo', 'headlines', 'headline'], pageData);
   const shortHeadline = path(['promo', 'headlines', 'shortHeadline'], pageData);
   const summary = path(['promo', 'summary'], pageData);
@@ -104,6 +116,13 @@ const PhotoGalleryPage = ({ pageData }) => {
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
 
+  // ATI
+  const { atiAnalytics } = metadata;
+  const atiData = {
+    ...atiAnalytics,
+    pageTitle: `${atiAnalytics.pageTitle} - ${brandName}`,
+  };
+
   const componentsToRender = {
     fauxHeadline,
     visuallyHiddenHeadline,
@@ -113,7 +132,11 @@ const PhotoGalleryPage = ({ pageData }) => {
     image: props => {
       const sizes = getImageSizes(props);
 
-      return <Image {...props} sizes={sizes} />;
+      return (
+        <StyledImageWrapper>
+          <ImageWithCaption {...props} sizes={sizes} />
+        </StyledImageWrapper>
+      );
     },
     timestamp: props =>
       allowDateStamp ? (
@@ -166,7 +189,7 @@ const PhotoGalleryPage = ({ pageData }) => {
         aboutTags={aboutTags}
         imageLocator={indexImageLocator}
       />
-      <ATIAnalytics data={pageData} />
+      <ATIAnalytics atiData={atiData} />
       <ChartbeatAnalytics title={title} />
       <ComscoreAnalytics />
 

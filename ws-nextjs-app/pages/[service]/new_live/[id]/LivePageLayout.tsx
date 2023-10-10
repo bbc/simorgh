@@ -7,13 +7,14 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import nodeLogger from '#lib/logger.node';
 import LegacyText from '#app/legacy/containers/Text';
 import Blocks from '#app/legacy/containers/Blocks';
+import Pagination from '#app/components/Pagination';
 import MetadataContainer from '../../../../../src/app/components/Metadata';
 import LinkedDataContainer from '../../../../../src/app/components/LinkedData';
 import Stream from './Stream';
 import Header from './Header';
 
 import styles from './styles';
-import { StreamResponse } from './Post/types';
+import { StreamResponse, Page } from './Post/types';
 
 const logger = nodeLogger(__filename);
 
@@ -36,7 +37,7 @@ const LivePage = ({
   pathname,
   showAdsBasedOnLocation,
 }: ComponentProps) => {
-  const { lang } = useContext(ServiceContext);
+  const { lang, translations } = useContext(ServiceContext);
   const {
     title,
     description,
@@ -44,6 +45,23 @@ const LivePage = ({
     summaryPoints: { content: summaryContent },
     liveTextStream,
   } = pageData;
+
+  const { index: activePage, total: pageCount } =
+    (liveTextStream?.content?.data?.page as Page) || {};
+
+  const { pageXOfY, previousPage, nextPage, page } = {
+    pageXOfY: 'Page {x} of {y}',
+    previousPage: 'Previous Page',
+    nextPage: 'Next Page',
+    page: 'Page',
+    ...translations.pagination,
+  };
+
+  const translatedPage = pageXOfY
+    .replace('{x}', activePage.toString())
+    .replace('{y}', pageCount.toString());
+
+  const pageTitle = `Test Live Page, ${translatedPage}`;
 
   // TODO: Remove after testing
   logger.info('nextjs_client_render', {
@@ -70,7 +88,7 @@ const LivePage = ({
   return (
     <>
       <MetadataContainer
-        title="Test Live Page"
+        title={activePage >= 2 ? pageTitle : title}
         lang={lang}
         description="A test Live Page using Next.JS"
         openGraphType="website"
@@ -104,6 +122,14 @@ const LivePage = ({
             <pre css={styles.code}>{JSON.stringify(pageData, null, 2)}</pre>
           </div>
         </div>
+        <Pagination
+          activePage={activePage}
+          pageCount={pageCount}
+          pageXOfY={pageXOfY}
+          previousPage={previousPage}
+          nextPage={nextPage}
+          page={page}
+        />
       </main>
     </>
   );

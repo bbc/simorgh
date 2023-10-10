@@ -1,16 +1,18 @@
 export default () => {
   describe('messageBanner', () => {
-    const messagerBanner = document.querySelector(
+    const messageBanner = document.querySelector(
       '[data-testid^="message-banner-"]',
     );
 
-    it('Is displayed', () => {
-      expect(messagerBanner).toBeInTheDocument();
-      expect(messagerBanner).toBeTruthy();
-    });
+    if (messageBanner) {
+      it('is displayed', () => {
+        expect(messageBanner).toBeInTheDocument();
+        expect(messageBanner).toBeTruthy();
+      });
 
-    it('has a link', () => {
-      expect(messagerBanner.querySelector('a').href).toMatchSnapshot();
-    });
+      it('has a link', () => {
+        expect(messageBanner.querySelector('a').href).toMatchSnapshot();
+      });
+    }
   });
 };

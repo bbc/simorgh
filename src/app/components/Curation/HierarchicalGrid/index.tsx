@@ -30,7 +30,11 @@ const getStyles = (promoCount: number, i: number, mq: Theme['mq']) => {
   });
 };
 
-const HiearchicalGrid = ({ promos, headingLevel }: CurationGridProps) => {
+const HiearchicalGrid = ({
+  promos,
+  headingLevel,
+  isFirstCuration,
+}: CurationGridProps) => {
   const { isAmp } = useContext(RequestContext);
   const { translations } = useContext(ServiceContext);
 
@@ -51,6 +55,14 @@ const HiearchicalGrid = ({ promos, headingLevel }: CurationGridProps) => {
           const durationString = `${durationTranslation}, ${formattedDuration}`;
 
           const useLargeImages = i === 0 && promoItems.length >= 3;
+
+          const isFirstPromo = i === 0;
+
+          const lazyLoadImages = !(isFirstPromo && isFirstCuration);
+
+          const fetchpriority =
+            isFirstPromo && isFirstCuration ? 'high' : undefined;
+
           const showDuration =
             promo.duration && ['video', 'audio'].includes(promo.type);
           const isMedia = ['video', 'audio', 'photogallery'].includes(
@@ -74,7 +86,8 @@ const HiearchicalGrid = ({ promos, headingLevel }: CurationGridProps) => {
                   useLargeImages={useLargeImages}
                   src={promo.imageUrl || ''}
                   alt={promo.imageAlt}
-                  loading="lazy"
+                  lazyLoad={lazyLoadImages}
+                  fetchpriority={fetchpriority}
                   isAmp={isAmp}
                 >
                   <Promo.MediaIcon type={promo.type}>
