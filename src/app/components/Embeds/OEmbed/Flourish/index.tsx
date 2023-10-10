@@ -1,6 +1,9 @@
+/** @jsx jsx */
 /* eslint-disable camelcase */
-import React, { useEffect, useRef } from 'react';
+import { jsx } from '@emotion/react';
+import { useEffect, useRef } from 'react';
 import { OEmbedProps } from '../types';
+import styles from './index.styles';
 
 const Flourish = ({ oembed }: OEmbedProps) => {
   const { html, width, height } = oembed;
@@ -27,6 +30,7 @@ const Flourish = ({ oembed }: OEmbedProps) => {
 
   return (
     <iframe
+      css={styles.iframe}
       src={`${iframeSrc}?auto=1`}
       ref={iframeRef}
       frameBorder="0"
