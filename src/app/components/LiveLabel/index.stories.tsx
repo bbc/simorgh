@@ -31,35 +31,27 @@ export default {
   },
 };
 
-export const WithLocalisedLiveText = ({ service, variant, dir }: Props) => (
+export const WithLocalisedLiveText = ({ service, variant }: Props) => (
   <LiveLabel
     service={service}
-    dir={dir}
     liveText={services[service][variant].translations.media.liveLabel}
   />
 );
 
-export const WithCustomOffscreenText = ({ service, variant, dir }: Props) => (
+export const WithCustomOffscreenText = ({ service, variant }: Props) => (
   <LiveLabel
     service={service}
-    dir={dir}
     ariaHidden
     offScreenText="Watch Live"
     liveText={services[service][variant].translations.media.liveLabel}
   />
 );
 
-export const WithChildren = ({
-  text: headline,
-  service,
-  variant,
-  dir,
-}: Props) => (
+export const WithChildren = ({ text: headline, service, variant }: Props) => (
   <Wrapper>
     <Heading level={3}>
       <LiveLabel
         service={service}
-        dir={dir}
         offScreenText="Live"
         liveText={services[service][variant].translations.media.liveLabel}
       >
