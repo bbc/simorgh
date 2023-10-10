@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '../../react-testing-library-with-providers';
 
-import OEmbedLoader, { OEmbedProps } from '.';
+import OEmbedLoader from '.';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import {
   RequestContext,
@@ -10,6 +10,7 @@ import {
 import { ARTICLE_PAGE } from '../../../routes/utils/pageTypes';
 import { Services } from '../../../models/types/global';
 import sampleRiddleProps, { sampleFlourishProps } from './fixture';
+import { OEmbedProps } from './types';
 
 const Component = ({
   props,
