@@ -6,20 +6,7 @@ import { RequestContext } from '../../../contexts/RequestContext';
 import EmbedHtml from '../EmbedHtml';
 import EmbedError from '../EmbedError';
 import Flourish from './Flourish';
-
-export type OEmbedProps = {
-  oembed: {
-    version: string;
-    provider_name: string;
-    provider_url: string;
-    html: string;
-    url?: string;
-    source?: string;
-    width?: number;
-    height?: number;
-    type: string;
-  };
-};
+import { OEmbedProps } from './types';
 
 const OEmbedLoader = ({ oembed }: OEmbedProps) => {
   const { translations } = useContext(ServiceContext);

@@ -1,19 +1,6 @@
 /* eslint-disable camelcase */
 import React, { useEffect, useRef } from 'react';
-
-export type OEmbedProps = {
-  oembed: {
-    version: string;
-    provider_name: string;
-    provider_url: string;
-    html: string;
-    url?: string;
-    source?: string;
-    width?: number;
-    height?: number;
-    type: string;
-  };
-};
+import { OEmbedProps } from '../types';
 
 const Flourish = ({ oembed }: OEmbedProps) => {
   const { html, width, height } = oembed;
