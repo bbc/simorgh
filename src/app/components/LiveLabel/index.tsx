@@ -8,7 +8,6 @@ import styles from './index.styles';
 
 interface LiveLabelProps {
   service: string;
-  dir?: string;
   ariaHidden?: boolean;
   liveText?: string;
   offScreenText?: string;
