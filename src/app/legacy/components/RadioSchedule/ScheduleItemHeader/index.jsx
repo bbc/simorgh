@@ -113,8 +113,6 @@ const ScheduleItemHeader = ({
       <VisuallyHiddenText>{`${listenLabelTranslations[state]}, `}</VisuallyHiddenText>
       {isLive && (
         <LiveLabel
-          service={service}
-          dir={dir}
           liveText={liveLabel}
           ariaHidden
         />
