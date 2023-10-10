@@ -33,11 +33,9 @@ const LiveLabel = ({
     <span role="text" id={id}>
       <span css={styles.liveLabel}>
         <div dir={dir} {...(ariaHidden && { 'aria-hidden': 'true' })}>
-          {isRtl ? (
-            <div css={styles.textRtl}>{`${liveText} `}</div>
-          ) : (
-            <div css={styles.textLtr}>{`${liveText} `}</div>
-          )}
+          <div
+            css={isRtl ? styles.textRtl : styles.textLtr}
+          >{`${liveText} `}</div>
         </div>
         {offScreenText && (
           <VisuallyHiddenText lang={lang}>
