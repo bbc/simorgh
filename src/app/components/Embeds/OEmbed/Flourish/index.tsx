@@ -37,7 +37,6 @@ const Flourish = ({ oembed }: OEmbedProps) => {
       scrolling="no"
       height={height}
       width={width}
-      style={{ width: '100%' }}
       title="Interactive or visual content"
     />
   );
