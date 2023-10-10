@@ -5,7 +5,7 @@ export default {
   headingStyles: ({ spacings, mq, fontSizes }: Theme) =>
     css({
       padding: `${spacings.FULL}rem 0 ${spacings.DOUBLE}rem`,
-      [mq.GROUP_2_MIN_WIDTH]: {
+      [mq.GROUP_2_ONLY]: {
         paddingTop: 0,
       },
       [mq.GROUP_3_MIN_WIDTH]: {

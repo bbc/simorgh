@@ -225,7 +225,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 }
 
-@media (min-width: 25rem) {
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
   .emotion-10 {
     padding-top: 0;
   }
