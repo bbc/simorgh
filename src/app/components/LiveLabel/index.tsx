@@ -7,7 +7,6 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import styles from './index.styles';
 
 interface LiveLabelProps {
-  // service: string;
   ariaHidden?: boolean;
   liveText?: string;
   offScreenText?: string;
@@ -23,10 +22,9 @@ const LiveLabel = ({
   id = '',
   children,
 }: PropsWithChildren<LiveLabelProps>) => {
-  const { dir, service } = useContext(ServiceContext);
+  const { dir } = useContext(ServiceContext);
   const isRtl = dir === 'rtl';
 
-  console.log(service);
 
   return (
     // lines 27, 56,66, 31 concerning with id are a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
