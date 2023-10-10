@@ -7,7 +7,7 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import styles from './index.styles';
 
 interface LiveLabelProps {
-  service: string;
+  // service: string;
   ariaHidden?: boolean;
   liveText?: string;
   offScreenText?: string;
@@ -23,19 +23,22 @@ const LiveLabel = ({
   id = '',
   children,
 }: PropsWithChildren<LiveLabelProps>) => {
-  const { dir } = useContext(ServiceContext);
+  const { dir, service } = useContext(ServiceContext);
   const isRtl = dir === 'rtl';
+
+  console.log(service);
 
   return (
     // lines 27, 56,66, 31 concerning with id are a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
     // eslint-disable-next-line jsx-a11y/aria-role
     <span role="text" id={id}>
-      <span css={styles.liveLabel}>
-        <div dir={dir} {...(ariaHidden && { 'aria-hidden': 'true' })}>
-          <div
-            css={isRtl ? styles.textRtl : styles.textLtr}
-          >{`${liveText} `}</div>
-        </div>
+      <span
+        css={[styles.liveLabel, isRtl ? styles.textRtl : styles.textLtr]}
+        dir={dir}
+        {...(ariaHidden && { 'aria-hidden': 'true' })}
+      >
+        {`${liveText} `}
+
         {offScreenText && (
           <VisuallyHiddenText lang={lang}>
             {`${offScreenText}, `}
