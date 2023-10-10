@@ -1,33 +1,31 @@
 import React from 'react';
 import { render } from '../react-testing-library-with-providers';
-import arabic from '../ThemeProvider/fontScripts/arabic';
-import LiveLabel from './index';
+import LiveLabel from '.';
 
 describe('LiveLabel', () => {
   it('should render correctly with english live text', () => {
-    const { container } = render(
-      <LiveLabel service="news" ariaHidden offScreenText="Live" />,
-    );
+    const { container } = render(<LiveLabel ariaHidden offScreenText="Live" />);
     expect(container).toMatchSnapshot();
   });
 
   it('should render correctly with localised live text', () => {
-    const { container } = render(
-      <LiveLabel service="news" liveText="AS E DE HAPPEN" />,
-    );
+    const { container } = render(<LiveLabel liveText="AS E DE HAPPEN" />, {
+      service: 'pidgin',
+    });
     expect(container).toMatchSnapshot();
   });
 
   it('should render correctly with custom offscreen text', () => {
     const { container } = render(
-      <LiveLabel service="news" ariaHidden offScreenText="Watch Live" />,
+      <LiveLabel ariaHidden offScreenText="Watch Live" />,
     );
     expect(container).toMatchSnapshot();
   });
 
   it('should correctly render for RTL service', () => {
     const { container } = render(
-      <LiveLabel service={arabic} dir="rtl" ariaHidden offScreenText="Live" />,
+      <LiveLabel ariaHidden offScreenText="Live" />,
+      { service: 'arabic' },
     );
     expect(container).toMatchSnapshot();
   });

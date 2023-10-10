@@ -19,12 +19,11 @@ const LiveLabel = ({
   liveText = 'LIVE',
   offScreenText = '',
   lang = 'en-GB',
-  id = '',
+  id,
   children,
 }: PropsWithChildren<LiveLabelProps>) => {
   const { dir } = useContext(ServiceContext);
   const isRtl = dir === 'rtl';
-
 
   return (
     // lines 27, 56,66, 31 concerning with id are a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
@@ -36,13 +35,13 @@ const LiveLabel = ({
         {...(ariaHidden && { 'aria-hidden': 'true' })}
       >
         {`${liveText} `}
-
-        {offScreenText && (
-          <VisuallyHiddenText lang={lang}>
-            {`${offScreenText}, `}
-          </VisuallyHiddenText>
-        )}
       </span>
+
+      {offScreenText && (
+        <VisuallyHiddenText lang={lang}>
+          {`${offScreenText}, `}
+        </VisuallyHiddenText>
+      )}
       {children}
     </span>
   );
