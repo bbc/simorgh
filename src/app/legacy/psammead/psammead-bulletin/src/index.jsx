@@ -1,4 +1,4 @@
-import React from 'react';
+ import React from 'react';
 import styled from '@emotion/styled';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
@@ -210,8 +210,6 @@ const Bulletin = ({
           >
             {isLive ? (
               <LiveLabel
-                service={service}
-                dir={dir}
                 liveText={liveText}
                 ariaHidden
                 offScreenText={offScreenText}

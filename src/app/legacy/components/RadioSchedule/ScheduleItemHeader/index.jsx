@@ -12,6 +12,7 @@ import {
 } from '#psammead/psammead-styles/src/font-styles';
 import { getPica } from '#psammead/gel-foundations/src/typography';
 import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
+import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import durationDictionary, { programStateConfig } from '../utilities';
@@ -67,6 +68,12 @@ const ScheduleItemHeader = ({
   const isLive = state === 'live';
   const isNext = state === 'next';
 
+  const eventTrackingData = {
+    componentName: `radio-schedule-${state}`,
+  };
+
+  const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
+
   const listenLive = pathOr(
     'Listen Live',
     ['media', 'listenLive'],
@@ -113,8 +120,6 @@ const ScheduleItemHeader = ({
       <VisuallyHiddenText>{`${listenLabelTranslations[state]}, `}</VisuallyHiddenText>
       {isLive && (
         <LiveLabel
-          service={service}
-          dir={dir}
           liveText={liveLabel}
           ariaHidden
         />
@@ -153,6 +158,7 @@ const ScheduleItemHeader = ({
       as={linkComponent}
       {...linkProps}
       className="focusIndicatorDisplayBlock"
+      onClick={clickTrackerHandler}
     >
       {content}
     </StyledLink>
