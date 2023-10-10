@@ -53,18 +53,18 @@ export default {
   },
 };
 
-export const WithLocalisedLiveText = ({ service, variant }: Props) => {
-  <Component service={service} variant={variant} />;
-};
+export const WithLocalisedLiveText = ({ service, variant }: Props) => (
+  <Component service={service} variant={variant} />
+);
 
-export const WithCustomOffscreenText = ({ service, variant }: Props) => {
+export const WithCustomOffscreenText = ({ service, variant }: Props) => (
   <Component
     ariaHidden
     offScreenText="Watch Live"
     service={service}
     variant={variant}
-  />;
-};
+  />
+);
 
 export const WithChildren = ({ text: headline, service, variant }: Props) => (
   <Wrapper>
