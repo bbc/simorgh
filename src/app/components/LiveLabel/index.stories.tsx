@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from 'react';
+import React from 'react';
 import styled from '@emotion/styled';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '../../legacy/psammead/psammead-storybook-helpers/src';
