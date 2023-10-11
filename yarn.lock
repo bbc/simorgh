@@ -13833,7 +13833,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"inherits@npm:2, inherits@npm:2.0.4, inherits@npm:^2.0.0, inherits@npm:^2.0.1, inherits@npm:^2.0.3, inherits@npm:^2.0.4, inherits@npm:~2.0.1, inherits@npm:~2.0.3, inherits@npm:~2.0.4":
+"inherits@npm:2, inherits@npm:2.0.4, inherits@npm:^2.0.0, inherits@npm:^2.0.1, inherits@npm:^2.0.3, inherits@npm:^2.0.4, inherits@npm:~2.0.1, inherits@npm:~2.0.3":
   version: 2.0.4
   resolution: "inherits@npm:2.0.4"
   checksum: 4a48a733847879d6cf6691860a6b1e3f0f4754176e4d71494c41f3475553768b10f84b5ce1d40fbd0e34e6bfbb864ee35858ad4dd2cf31e02fc4a154b724d7f1
@@ -19630,7 +19630,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"readable-stream@npm:^3.0.6, readable-stream@npm:^3.1.1, readable-stream@npm:^3.4.0, readable-stream@npm:^3.5.0, readable-stream@npm:^3.6.0":
+"readable-stream@npm:^3.0.6, readable-stream@npm:^3.1.1, readable-stream@npm:^3.4.0, readable-stream@npm:^3.6.0":
   version: 3.6.2
   resolution: "readable-stream@npm:3.6.2"
   dependencies:
@@ -20726,7 +20726,6 @@ __metadata:
     next: 13.5.4
     npm-run-all: ^4.1.5
     ts-node: ^10.9.1
-    undici: ^5.25.3
   languageName: unknown
   linkType: soft
 
@@ -20866,7 +20865,6 @@ __metadata:
     retry: 0.13.1
     start-server-nestjs-webpack-plugin: 2.2.5
     storybook-addon-designs: ^6.3.1
-    stream-browserify: 3.0.0
     strip-ansi: 6.0.1
     stylelint: 13.13.1
     stylelint-config-recommended: 7.0.0
@@ -20876,6 +20874,7 @@ __metadata:
     ts-jest: 29.1.1
     ts-loader: 9.4.4
     typescript: 4.9.5
+    undici: ^5.26.0
     url-parse: 1.5.10
     uuid: 8.3.2
     wait-on: 6.0.1
@@ -21373,16 +21372,6 @@ __metadata:
   dependencies:
     "@figspec/react": ^1.0.0
   checksum: 63d91358540a59801028b4fe2fe61a2cad52ac2354efde0959f081379045230af4ea6dea6a8abddae2a7eb14699fd04024dec44b6fd396065e0e585d31980635
-  languageName: node
-  linkType: hard
-
-"stream-browserify@npm:3.0.0":
-  version: 3.0.0
-  resolution: "stream-browserify@npm:3.0.0"
-  dependencies:
-    inherits: ~2.0.4
-    readable-stream: ^3.5.0
-  checksum: 4c47ef64d6f03815a9ca3874e2319805e8e8a85f3550776c47ce523b6f4c6cd57f40e46ec6a9ab8ad260fde61863c2718f250d3bedb3fe9052444eb9abfd9921
   languageName: node
   linkType: hard
 
@@ -22662,12 +22651,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"undici@npm:^5.25.3":
-  version: 5.25.3
-  resolution: "undici@npm:5.25.3"
+"undici@npm:^5.26.0":
+  version: 5.26.0
+  resolution: "undici@npm:5.26.0"
   dependencies:
     "@fastify/busboy": ^2.0.0
-  checksum: 65b814b7d8b06dab2d41c250d123663fe94edb78cf1a891cf3476569ea66dc425c7d4ba52b91d6f8ed6eba24613dd28e4a5070c372063532c3b997cd343ccc96
+  checksum: e2c5771e3a5c349fb27d1e73fad16d3eebba1799c73c4f5c1e12748b8456f790db81b9b32d104d92e09f17a867c25d1652b5fd128c917a2ef23ba3e86389d45b
   languageName: node
   linkType: hard
 

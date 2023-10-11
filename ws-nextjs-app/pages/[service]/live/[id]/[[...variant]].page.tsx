@@ -16,7 +16,7 @@ import { FetchError } from '#models/types/fetch';
 import getEnvironment from '#app/routes/utils/getEnvironment';
 import fetchPageData from '#app/routes/utils/fetchPageData';
 import certsRequired from '#app/routes/utils/certsRequired';
-import getAgent from '../../../../utilities/undiciAgent';
+import getAgent from '#server/utilities/getAgent';
 
 import LivePageLayout from './LivePageLayout';
 import extractHeaders from '../../../../../src/server/utilities/extractHeaders';
