@@ -14,7 +14,7 @@ const emptyKeyPointsBlocks = emptyKeyPoints.model.blocks;
 describe('Key Points', () => {
   it('should render a section with data-e2e, role and aria-label attributes', async () => {
     const { container } = await act(async () => {
-      return render(<KeyPoints keyPointBlocks={singleKeyPointBlocks} />);
+      return render(<KeyPoints keyPointsContent={singleKeyPointBlocks} />);
     });
 
     expect(container.querySelector('section')).toHaveAttribute('aria-label');
@@ -30,7 +30,7 @@ describe('Key Points', () => {
   });
   it('should render a h2 heading', async () => {
     await act(async () => {
-      render(<KeyPoints keyPointBlocks={multipleKeyPointsBlocks} />);
+      render(<KeyPoints keyPointsContent={multipleKeyPointsBlocks} />);
     });
 
     expect(screen.getAllByRole('heading')).toHaveLength(1);
@@ -38,7 +38,7 @@ describe('Key Points', () => {
   });
   it('should render a single key point as a paragraph', async () => {
     await act(async () => {
-      render(<KeyPoints keyPointBlocks={singleKeyPointBlocks} />);
+      render(<KeyPoints keyPointsContent={singleKeyPointBlocks} />);
     });
 
     expect(
@@ -49,7 +49,7 @@ describe('Key Points', () => {
 
   it('should render mutliple key points as a list', async () => {
     await act(async () => {
-      render(<KeyPoints keyPointBlocks={multipleKeyPointsBlocks} />);
+      render(<KeyPoints keyPointsContent={multipleKeyPointsBlocks} />);
     });
 
     expect(screen.getByText('I am the summary box')).toBeInTheDocument();
@@ -62,7 +62,7 @@ describe('Key Points', () => {
 
   it('should not render if there are no key points', async () => {
     const { container } = await act(async () => {
-      return render(<KeyPoints keyPointBlocks={emptyKeyPointsBlocks} />);
+      return render(<KeyPoints keyPointsContent={emptyKeyPointsBlocks} />);
     });
 
     expect(container.querySelector('[data-e2e="key-points"]')).toBeFalsy();

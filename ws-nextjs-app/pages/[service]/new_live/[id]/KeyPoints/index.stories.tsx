@@ -6,7 +6,7 @@ import { withServicesKnob } from '../../../../../../src/app/legacy/psammead/psam
 import ThemeProvider from '../../../../../../src/app/components/ThemeProvider';
 import KeyPoints from '.';
 import { StoryProps } from '../../../../../../src/app/models/types/storybook';
-import { SummaryListWrapper } from './types';
+import { KeyPointsContent } from './types';
 import { singleKeyPoint, multipleKeyPoints } from './fixture';
 import metadata from './metadata.json';
 
@@ -14,14 +14,14 @@ const singleKeyPointBlocks = singleKeyPoint.model.blocks;
 const multipleKeyPointsBlocks = multipleKeyPoints.model.blocks;
 
 interface ComponentProps extends StoryProps {
-  keyPointBlocks: SummaryListWrapper[] | [];
+  keyPointsContent: KeyPointsContent[] | [];
 }
 
-const Component = ({ service, variant, keyPointBlocks }: ComponentProps) => {
+const Component = ({ service, variant, keyPointsContent }: ComponentProps) => {
   return (
     <ThemeProvider service={service} variant={variant}>
       <ServiceContextProvider service={service} variant={variant}>
-        <KeyPoints keyPointBlocks={keyPointBlocks} />
+        <KeyPoints keyPointsContent={keyPointsContent} />
       </ServiceContextProvider>
     </ThemeProvider>
   );
@@ -65,7 +65,7 @@ export default {
 
 export const SingleKeyPoint = ({ service, variant }: StoryProps) => (
   <Component
-    keyPointBlocks={singleKeyPointBlocks}
+    keyPointsContent={singleKeyPointBlocks}
     service={service}
     variant={variant}
   />
@@ -73,7 +73,7 @@ export const SingleKeyPoint = ({ service, variant }: StoryProps) => (
 
 export const MultipleKeyPoints = ({ service, variant }: StoryProps) => (
   <Component
-    keyPointBlocks={multipleKeyPointsBlocks}
+    keyPointsContent={multipleKeyPointsBlocks}
     service={service}
     variant={variant}
   />

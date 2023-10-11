@@ -5,19 +5,19 @@ interface ListItems {
   model: { blocks: OptimoBlock[] };
 }
 
-interface SummaryUnorderedList {
+interface KeyPointsUnorderedList {
   type: string;
   model: { blocks: ListItems[] | [] };
 }
 
-export interface SummaryListWrapper {
+export interface KeyPointsContent {
   type: string;
-  model: { blocks: SummaryUnorderedList[] };
+  model: { blocks: KeyPointsUnorderedList[] };
 }
 
-export interface SummaryContent {
+export interface KeyPointsResponse {
   model: {
-    blocks: SummaryListWrapper[];
+    blocks: KeyPointsContent[];
   };
 }
 
