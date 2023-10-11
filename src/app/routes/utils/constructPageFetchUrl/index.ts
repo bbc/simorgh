@@ -120,6 +120,7 @@ const constructPageFetchUrl = ({
     ...(isAmp && {
       isAmp,
     }),
+    serviceEnv: env,
   };
 
   let fetchUrl = Url(process.env.BFF_PATH as string).set(
