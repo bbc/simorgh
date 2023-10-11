@@ -5,9 +5,8 @@ const styles = {
     css({
       color: palette.POSTBOX,
       display: 'inline-block',
-      marginInline:`${spacings.FULL}rem`
+      marginInline: `${spacings.FULL}rem`,
     }),
-
 };
 
 export default styles;
