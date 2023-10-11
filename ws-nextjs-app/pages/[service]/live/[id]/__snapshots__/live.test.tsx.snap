@@ -254,7 +254,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 
 @media (min-width: 63rem) {
   .emotion-10 {
-    padding-top: 1.5rem;
+    padding-top: 1rem;
   }
 }
 
@@ -305,7 +305,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 }
 
 .emotion-11 a:visited {
-  color: #6E6E73;
+  color: #545658;
 }
 
 .emotion-12 {
@@ -518,7 +518,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   .emotion-19 {
     font-size: 1.125rem;
     line-height: 1.375rem;
-    padding: 1.5rem 0 1rem;
+    padding-top: 1.5rem;
   }
 
   @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -533,6 +533,12 @@ exports[`Live Page creates snapshot of the live page 1`] = `
       font-size: 1.5rem;
       line-height: 1.75rem;
     }
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-19 {
+    padding-top: 1rem;
   }
 }
 

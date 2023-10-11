@@ -12,7 +12,7 @@ export default {
         ...fontSizes.doublePica,
       },
       [mq.GROUP_4_MIN_WIDTH]: {
-        paddingTop: `${spacings.TRIPLE}rem`,
+        paddingTop: `${spacings.DOUBLE}rem`,
       },
     }),
   bodyStyles: ({ spacings, palette, mq, fontVariants }: Theme) =>
@@ -45,7 +45,7 @@ export default {
         ...fontVariants.sansBold,
         borderBottom: `${pixelsToRem(1)}rem solid ${palette.GREY_10}`,
         '&:visited': {
-          color: palette.METAL,
+          color: palette.GREY_6,
         },
       },
     }),
