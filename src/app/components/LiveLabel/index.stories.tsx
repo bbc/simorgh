@@ -23,13 +23,14 @@ const Component = ({
   offScreenText,
   children,
   ariaHidden = false,
+  liveText,
 }: PropsWithChildren<Props>) => {
   return (
     <ThemeProvider service={service} variant={variant}>
       <ServiceContextProvider service={service} variant={variant}>
         <LiveLabel
           ariaHidden={ariaHidden}
-          liveText={services[service][variant].translations.media.liveLabel}
+          liveText={liveText}
           offScreenText={offScreenText}
         >
           {children}
@@ -57,6 +58,14 @@ export const WithLocalisedLiveText = ({ service, variant }: Props) => (
   <Component service={service} variant={variant} />
 );
 
+export const WithCustomLiveText = ({ service, variant }: Props) => (
+  <Component
+    service={service}
+    variant={variant}
+    liveText="This is a Live Promo"
+  />
+);
+
 export const WithCustomOffscreenText = ({ service, variant }: Props) => (
   <Component
     ariaHidden
@@ -70,7 +79,7 @@ export const WithChildren = ({ text: headline, service, variant }: Props) => (
   <Wrapper>
     <Heading level={3}>
       <a href="https://www.bbc.co.uk/ws/languages">
-        <Component service={service} variant={variant} offScreenText="Live">
+        <Component service={service} variant={variant}>
           {headline}
         </Component>
       </a>
