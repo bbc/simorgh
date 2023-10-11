@@ -66,16 +66,6 @@ jest.mock('#containers/PageHandlers/withPageWrapper', () => Component => {
   return PageWrapperContainer;
 });
 
-jest.mock('#containers/PageHandlers/withLoading', () => Component => {
-  const LoadingContainer = props => (
-    <div id="LoadingContainer">
-      <Component {...props} />
-    </div>
-  );
-
-  return LoadingContainer;
-});
-
 jest.mock('#containers/PageHandlers/withError', () => Component => {
   const ErrorContainer = props => (
     <div id="ErrorContainer">

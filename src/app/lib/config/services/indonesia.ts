@@ -344,6 +344,10 @@ export const service: DefaultServiceConfig = {
         url: '/indonesia',
       },
       {
+        title: 'Pemilu 2024',
+        url: '/indonesia/topics/ck0mgrlgyplt',
+      },
+      {
         title: 'Indonesia',
         url: '/indonesia/topics/cjgn7k8yx4gt',
       },

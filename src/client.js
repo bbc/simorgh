@@ -7,7 +7,6 @@ import { hydrateRoot } from 'react-dom/client';
 import { template, templateStyles } from '#lib/joinUsTemplate';
 import loggerNode from '#lib/logger.node';
 import { ClientApp } from './app/legacy/containers/App';
-import routes from './app/routes';
 
 const logger = loggerNode();
 const data = window.SIMORGH_DATA || {};
@@ -27,7 +26,7 @@ if (window.SIMORGH_DATA.path === window.location.pathname) {
       hydrateRoot(
         root,
         <CacheProvider value={cache}>
-          <ClientApp data={data} routes={routes} />
+          <ClientApp data={data} />
         </CacheProvider>,
       );
     },
