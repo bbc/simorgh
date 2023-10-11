@@ -16,14 +16,27 @@ interface LiveLabelProps {
 
 const LiveLabel = ({
   ariaHidden = false,
-  liveText = 'LIVE',
+  liveText,
   offScreenText = '',
   lang = 'en-GB',
   id,
   children,
 }: PropsWithChildren<LiveLabelProps>) => {
-  const { dir } = useContext(ServiceContext);
+  const { dir, translations } = useContext(ServiceContext);
   const isRtl = dir === 'rtl';
+
+  const { liveLabel } = translations.media;
+
+  // As screenreaders mispronounce the word 'LIVE', we use visually hidden
+  // text to read 'Live' instead, which screenreaders pronounce correctly.
+  const liveLabelIsEnglish = liveLabel === 'LIVE';
+
+  let screenReaderText;
+  if (offScreenText) {
+    screenReaderText = offScreenText;
+  } else if (liveLabelIsEnglish) {
+    screenReaderText = 'Live';
+  }
 
   return (
     // lines 27, 56,66, 31 concerning with id are a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
@@ -34,12 +47,12 @@ const LiveLabel = ({
         dir={dir}
         {...(ariaHidden && { 'aria-hidden': 'true' })}
       >
-        {`${liveText} `}
+        {`${liveText || liveLabel} `}
       </span>
 
-      {offScreenText && (
+      {screenReaderText && (
         <VisuallyHiddenText lang={lang}>
-          {`${offScreenText}, `}
+          {`${screenReaderText}, `}
         </VisuallyHiddenText>
       )}
       {children}
