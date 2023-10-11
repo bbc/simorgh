@@ -12,7 +12,7 @@ import IndexAlsosContainer from '../testHelpers/IndexAlsosContainer';
 
 const Image = <img src="https://foobar.com/image.png" alt="Alt text" />;
 
-const Info = ({ promoType, isLive, dir, alsoItems, promoHasImage }) => (
+const Info = ({ promoType, isLive, alsoItems, promoHasImage }) => (
   <>
     <Headline
       script={latin}
@@ -22,7 +22,7 @@ const Info = ({ promoType, isLive, dir, alsoItems, promoHasImage }) => (
     >
       <Link href="https://www.bbc.co.uk/news">
         {isLive ? (
-          <LiveLabel service="news" dir={dir} ariaHidden offScreenText="Live">
+          <LiveLabel service="news" ariaHidden offScreenText="Live">
             The live promo headline
           </LiveLabel>
         ) : (
@@ -52,14 +52,12 @@ const Info = ({ promoType, isLive, dir, alsoItems, promoHasImage }) => (
 Info.propTypes = {
   promoType: string,
   isLive: bool.isRequired,
-  dir: oneOf(['rtl', 'ltr']),
   alsoItems: arrayOf(shape()).isRequired,
   promoHasImage: bool,
 };
 
 Info.defaultProps = {
   promoType: 'regular',
-  dir: 'ltr',
   promoHasImage: true,
 };
 
