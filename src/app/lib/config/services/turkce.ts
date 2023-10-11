@@ -314,14 +314,6 @@ export const service: DefaultServiceConfig = {
         url: '/turkce',
       },
       {
-        title: '14 Mayıs Seçimleri',
-        url: '/turkce/topics/cg5mgyyvjd0t',
-      },
-      {
-        title: '6 Şubat Depremi',
-        url: '/turkce/topics/c383emwewmqt',
-      },
-      {
         title: 'Türkiye',
         url: '/turkce/topics/ckdxn2xk95gt',
       },
