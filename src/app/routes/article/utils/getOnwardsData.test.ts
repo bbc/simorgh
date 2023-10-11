@@ -1,4 +1,4 @@
-import { Agent } from 'https';
+import { Agent } from 'undici';
 import recommendationsJson from '#data/mundo/recommendations/index.json';
 import hasArticleRecommendations from './hasArticleRecommendations';
 import getOnwardsPageData from './getOnwardsData';

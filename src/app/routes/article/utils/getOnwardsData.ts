@@ -1,4 +1,4 @@
-import { Agent } from 'https';
+import { Agent } from 'undici';
 import path from 'ramda/src/path';
 import isEmpty from 'ramda/src/isEmpty';
 
@@ -81,7 +81,7 @@ const getOnwardsPageData = async ({
   variant?: string;
   isAdvertising: boolean;
   isArticleSfv?: boolean;
-  agent: Agent | null;
+  agent: void | Agent | null;
 }) => {
   const recommendationsAllowed = await hasArticleRecommendations(
     service,

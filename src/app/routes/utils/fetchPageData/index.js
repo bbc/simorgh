@@ -114,7 +114,6 @@ const fetchPageData = async ({
 
     throw error;
   } catch (aresError) {
-    console.log('error', aresError);
     const { message, status } = aresError;
     const simorghError = new Error(message);
 

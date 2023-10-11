@@ -1,4 +1,4 @@
-import { Agent } from 'https';
+import { Agent } from 'undici';
 import * as getOnwardsPageData from '../utils/getOnwardsData';
 import * as fetchPageData from '../../utils/fetchPageData';
 import nodeLogger from '../../../../testHelpers/loggerMock';
