@@ -5,6 +5,7 @@ import { jsx } from '@emotion/react';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import styles from './index.styles';
+import Text from '../Text';
 
 interface LiveLabelProps {
   ariaHidden?: boolean;
@@ -19,11 +20,10 @@ const LiveLabel = ({
   liveText,
   offScreenText = '',
   lang = 'en-GB',
-  id,
+  id = '',
   children,
 }: PropsWithChildren<LiveLabelProps>) => {
   const { dir, translations } = useContext(ServiceContext);
-  const isRtl = dir === 'rtl';
 
   const { liveLabel } = translations.media;
 
@@ -41,9 +41,9 @@ const LiveLabel = ({
   return (
     // lines 27, 56,66, 31 concerning with id are a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
     // eslint-disable-next-line jsx-a11y/aria-role
-    <span role="text" id={id}>
+    <Text as="span" id={id} fontVariant="sansBold" size="pica">
       <span
-        css={[styles.liveLabel, isRtl ? styles.textRtl : styles.textLtr]}
+        css={styles.liveLabel}
         dir={dir}
         {...(ariaHidden && { 'aria-hidden': 'true' })}
       >
@@ -56,7 +56,7 @@ const LiveLabel = ({
         </VisuallyHiddenText>
       )}
       {children}
-    </span>
+    </Text>
   );
 };
 
