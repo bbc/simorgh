@@ -35,13 +35,13 @@ const LiveLabel = ({
         {...(ariaHidden && { 'aria-hidden': 'true' })}
       >
         {`${liveText} `}
-
-        {offScreenText && (
-          <VisuallyHiddenText lang={lang}>
-            {`${offScreenText}, `}
-          </VisuallyHiddenText>
-        )}
       </span>
+      {offScreenText && (
+        <VisuallyHiddenText lang={lang}>
+          {`${offScreenText}, `}
+        </VisuallyHiddenText>
+      )}
+
       {children}
     </Text>
   );

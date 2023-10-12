@@ -2,15 +2,36 @@
 
 exports[`LiveLabel should correctly render for RTL service 1`] = `
 .emotion-0 {
-  color: #B80000;
-  display: inline-block;
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-style: normal;
   font-weight: 700;
-  margin-left: 0.5rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 }
 
 .emotion-1 {
+  color: #B80000;
+  display: inline-block;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
+}
+
+.emotion-2 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -23,17 +44,18 @@ exports[`LiveLabel should correctly render for RTL service 1`] = `
 
 <div>
   <span
-    role="text"
+    class="emotion-0"
+    id=""
   >
     <span
       aria-hidden="true"
-      class="emotion-0"
+      class="emotion-1"
       dir="rtl"
     >
       LIVE 
     </span>
     <span
-      class="emotion-1"
+      class="emotion-2"
       lang="en-GB"
     >
       Live, 
@@ -44,15 +66,36 @@ exports[`LiveLabel should correctly render for RTL service 1`] = `
 
 exports[`LiveLabel should render correctly with custom offscreen text 1`] = `
 .emotion-0 {
-  color: #B80000;
-  display: inline-block;
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
-  margin-right: 0.5rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
 }
 
 .emotion-1 {
+  color: #B80000;
+  display: inline-block;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
+}
+
+.emotion-2 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -65,17 +108,18 @@ exports[`LiveLabel should render correctly with custom offscreen text 1`] = `
 
 <div>
   <span
-    role="text"
+    class="emotion-0"
+    id=""
   >
     <span
       aria-hidden="true"
-      class="emotion-0"
+      class="emotion-1"
       dir="ltr"
     >
       LIVE 
     </span>
     <span
-      class="emotion-1"
+      class="emotion-2"
       lang="en-GB"
     >
       Watch Live, 
@@ -86,15 +130,36 @@ exports[`LiveLabel should render correctly with custom offscreen text 1`] = `
 
 exports[`LiveLabel should render correctly with english live text 1`] = `
 .emotion-0 {
-  color: #B80000;
-  display: inline-block;
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
-  margin-right: 0.5rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
 }
 
 .emotion-1 {
+  color: #B80000;
+  display: inline-block;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
+}
+
+.emotion-2 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -107,17 +172,18 @@ exports[`LiveLabel should render correctly with english live text 1`] = `
 
 <div>
   <span
-    role="text"
+    class="emotion-0"
+    id=""
   >
     <span
       aria-hidden="true"
-      class="emotion-0"
+      class="emotion-1"
       dir="ltr"
     >
       LIVE 
     </span>
     <span
-      class="emotion-1"
+      class="emotion-2"
       lang="en-GB"
     >
       Live, 
@@ -128,20 +194,42 @@ exports[`LiveLabel should render correctly with english live text 1`] = `
 
 exports[`LiveLabel should render correctly with localised live text 1`] = `
 .emotion-0 {
-  color: #B80000;
-  display: inline-block;
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
-  margin-right: 0.5rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-1 {
+  color: #B80000;
+  display: inline-block;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
 }
 
 <div>
   <span
-    role="text"
+    class="emotion-0"
+    id=""
   >
     <span
-      class="emotion-0"
+      class="emotion-1"
       dir="ltr"
     >
       AS E DE HAPPEN 

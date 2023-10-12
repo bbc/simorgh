@@ -6844,15 +6844,36 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
 }
 
 .emotion-15 {
-  color: #B80000;
-  display: inline-block;
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
-  margin-right: 0.5rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-15 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-15 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
 }
 
 .emotion-16 {
+  color: #B80000;
+  display: inline-block;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
+}
+
+.emotion-17 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -6864,28 +6885,28 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-16 {
+  .emotion-17 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-16 {
+  .emotion-17 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-16 {
+  .emotion-17 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-16 {
+  .emotion-17 {
     display: none;
     visibility: hidden;
   }
@@ -6938,11 +6959,11 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
           href="https://www.bbc.co.uk"
         >
           <span
+            class="emotion-15"
             id="promo-1"
-            role="text"
           >
             <span
-              class="emotion-15"
+              class="emotion-16"
               dir="ltr"
             >
               NA EME UGBU A 
@@ -6954,7 +6975,7 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
         </a>
       </h3>
       <p
-        class="emotion-16 emotion-17"
+        class="emotion-17 emotion-18"
       >
         Summary text
       </p>
@@ -7159,15 +7180,36 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
 }
 
 .emotion-16 {
-  color: #B80000;
-  display: inline-block;
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
-  margin-right: 0.5rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-16 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-16 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
 }
 
 .emotion-17 {
+  color: #B80000;
+  display: inline-block;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
+}
+
+.emotion-18 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -7179,28 +7221,28 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-17 {
+  .emotion-18 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-17 {
+  .emotion-18 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-17 {
+  .emotion-18 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-17 {
+  .emotion-18 {
     display: none;
     visibility: hidden;
   }
@@ -7253,11 +7295,11 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
           href="https://www.bbc.co.uk"
         >
           <span
+            class="emotion-16"
             id="promo-1"
-            role="text"
           >
             <span
-              class="emotion-16"
+              class="emotion-17"
               dir="ltr"
             >
               NA EME UGBU A 
@@ -7269,7 +7311,7 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
         </a>
       </h3>
       <p
-        class="emotion-17 emotion-18"
+        class="emotion-18 emotion-19"
       >
         Summary text
       </p>
@@ -7406,15 +7448,36 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
 }
 
 .emotion-8 {
-  color: #B80000;
-  display: inline-block;
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
-  margin-right: 0.5rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
 }
 
 .emotion-9 {
+  color: #B80000;
+  display: inline-block;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
+}
+
+.emotion-10 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -7426,34 +7489,34 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-9 {
+  .emotion-10 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-9 {
+  .emotion-10 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-9 {
+  .emotion-10 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-9 {
+  .emotion-10 {
     display: none;
     visibility: hidden;
   }
 }
 
-.emotion-11 {
+.emotion-12 {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -7461,20 +7524,20 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-11 {
+  .emotion-12 {
     padding-right: 0.5rem;
     width: 50%;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-11 {
+  .emotion-12 {
     width: 66.67%;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-11 {
+  .emotion-12 {
     width: initial;
     padding: 0;
     grid-template-columns: repeat(6, 1fr);
@@ -7482,25 +7545,25 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-11 {
+    .emotion-12 {
       grid-template-columns: repeat(3, 1fr);
       grid-column-end: span 3;
     }
   }
 
   @media (min-width: 63rem) {
-    .emotion-11 {
+    .emotion-12 {
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
     }
   }
 }
 
-.emotion-13 {
+.emotion-14 {
   position: relative;
 }
 
-.emotion-15 {
+.emotion-16 {
   height: 0;
   overflow: hidden;
   position: relative;
@@ -7514,25 +7577,25 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
 }
 
 @media (min-width: 25rem) {
-  .emotion-15 {
+  .emotion-16 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-15 {
+  .emotion-16 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-.emotion-16 {
+.emotion-17 {
   position: absolute;
   bottom: 0;
 }
 
-.emotion-16>* {
+.emotion-17>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
@@ -7555,11 +7618,11 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
           href="https://www.bbc.co.uk"
         >
           <span
+            class="emotion-8"
             id="promo-1"
-            role="text"
           >
             <span
-              class="emotion-8"
+              class="emotion-9"
               dir="ltr"
             >
               NA EME UGBU A 
@@ -7571,20 +7634,20 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
         </a>
       </h3>
       <p
-        class="emotion-9 emotion-10"
+        class="emotion-10 emotion-11"
       >
         Summary text
       </p>
     </div>
     <div
-      class="emotion-11 emotion-12"
+      class="emotion-12 emotion-13"
       dir="ltr"
     >
       <div
-        class="emotion-13 emotion-14"
+        class="emotion-14 emotion-15"
       >
         <div
-          class="emotion-15"
+          class="emotion-16"
           style="padding-bottom: 56.25%;"
         >
           <amp-img
@@ -7601,7 +7664,7 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
           />
         </div>
         <div
-          class="emotion-16 emotion-17"
+          class="emotion-17 emotion-18"
         />
       </div>
     </div>
@@ -7806,15 +7869,36 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
 }
 
 .emotion-15 {
-  color: #B80000;
-  display: inline-block;
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
-  margin-right: 0.5rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-15 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-15 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
 }
 
 .emotion-16 {
+  color: #B80000;
+  display: inline-block;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
+}
+
+.emotion-17 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -7826,21 +7910,21 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-16 {
+  .emotion-17 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-16 {
+  .emotion-17 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-16 {
+  .emotion-17 {
     display: none;
     visibility: hidden;
   }
@@ -7893,11 +7977,11 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
           href="https://www.bbc.co.uk"
         >
           <span
+            class="emotion-15"
             id="promo-1"
-            role="text"
           >
             <span
-              class="emotion-15"
+              class="emotion-16"
               dir="ltr"
             >
               NA EME UGBU A 
@@ -7909,7 +7993,7 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
         </a>
       </h3>
       <p
-        class="emotion-16 emotion-17"
+        class="emotion-17 emotion-18"
       >
         Summary text
       </p>
