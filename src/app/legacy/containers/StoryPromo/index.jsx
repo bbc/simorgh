@@ -131,7 +131,7 @@ const StoryPromoContainer = ({
   labelId,
   sectionType,
 }) => {
-  const { script, service, translations } = useContext(ServiceContext);
+  const { script, service } = useContext(ServiceContext);
   const { isAmp, pageType } = useContext(RequestContext);
   const handleClickTracking = useCombinedClickTrackerHandler(eventTrackingData);
 
@@ -142,11 +142,8 @@ const StoryPromoContainer = ({
     promoIndex: index,
   });
 
-  const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
-
   // As screenreaders mispronounce the word 'LIVE', we use visually hidden
   // text to read 'Live' instead, which screenreaders pronounce correctly.
-  const liveLabelIsEnglish = liveLabel === 'LIVE';
 
   const isAssetTypeCode = getAssetTypeCode(item);
   const isStoryPromoPodcast =
@@ -230,14 +227,7 @@ const StoryPromoContainer = ({
           className="focusIndicatorDisplayInlineBlock"
         >
           {isLive ? (
-            <LiveLabel
-              id={linkId}
-              liveText={liveLabel}
-              ariaHidden={liveLabelIsEnglish}
-              offScreenText={liveLabelIsEnglish ? 'Live' : null}
-            >
-              {linkcontents}
-            </LiveLabel>
+            <LiveLabel id={linkId}>{linkcontents}</LiveLabel>
           ) : (
             linkcontents
           )}
