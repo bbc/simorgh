@@ -5,7 +5,7 @@ const styles = {
     css({
       color: palette.POSTBOX,
       display: 'inline-block',
-      marginInline: `${spacings.FULL}rem`,
+      marginInlineEnd: `${spacings.FULL}rem`,
     }),
 };
 
