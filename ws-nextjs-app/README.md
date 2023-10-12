@@ -8,4 +8,4 @@ It utilises existing Simorgh components so as to practice 'evolutionary architec
 
 - Run `yarn install` to install dependencies
 - Run `yarn dev` to start the development server on `http://localhost:7081`
-- Navigate to `http://localhost:7081/kyrgyz/new_live/cz74kjpyk07t` to see the page
+- Navigate to `http://localhost:7081/kyrgyz/live/cz74kjpyk07t` to see the page
