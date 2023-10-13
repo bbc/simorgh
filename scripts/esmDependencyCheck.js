@@ -2,7 +2,6 @@
 const { exec } = require('child_process');
 const fs = require('fs');
 const fetch = require('node-fetch');
-const dotenv = require('dotenv').config();
 const { dependencies, devDependencies } = require('../package.json');
 
 const allDependencies = { ...dependencies, ...devDependencies };
@@ -11,7 +10,7 @@ const dependencyTable = [];
 const dateNow = new Date().getTime();
 const datediff = (first, second) =>
   Math.round((second - first) / (1000 * 60 * 60 * 24));
-const gitToken = dotenv.parsed.GIT_TOKEN || false;
+const gitHubToken = process.env.GITHUB_TOKEN;
 
 let countedRepos = 0;
 
@@ -27,7 +26,7 @@ const getRemoteGitFile = async (gitDepUrl, args) => {
   return await fetch(url, {
     method: 'GET',
     headers: {
-      Authorization: `token ${gitToken}`,
+      Authorization: `token ${gitHubToken}`,
       Accept: 'application/vnd.github.v3.raw',
     },
   })
@@ -59,7 +58,7 @@ const dealWithCaretsAndTildes = (versionString, timeJson) => {
   }
   const lowestVersionMatches = versionString.match(/[\d\.]+$/g);
   if (!lowestVersionMatches) {
-    return 'Unknown'; // if it contains a string that doesn't end in numbers and dots we give up
+    return 'Unkonwn'; // if it contains a string that doesn't end in numbers and dots we give up
   }
   const splitOurVersionArray = lowestVersionMatches[0].split('.');
 
@@ -120,7 +119,7 @@ const writeCsvFile = data => {
 const repoLength = Object.keys(allDependencies).length;
 
 Object.keys(allDependencies).forEach((dep, i) => {
-  if (gitToken) {
+  if (gitHubToken) {
     let gitRepo;
     const cmd = exec(`npm view ${dep} --json`, (err, stdout, stderr) => {
       if (err) {
