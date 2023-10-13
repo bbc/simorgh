@@ -6,7 +6,6 @@ import { withServicesKnob } from '../../legacy/psammead/psammead-storybook-helpe
 import LiveLabel from './index';
 import md from './README.md';
 import { StoryProps } from '../../models/types/storybook';
-import services from '../../../server/utilities/serviceConfigs';
 import Heading from '../Heading';
 import ThemeProvider from '../ThemeProvider';
 
