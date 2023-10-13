@@ -52,10 +52,6 @@ const getRemoteGitFile = async (gitDepUrl, args) => {
 };
 
 const dealWithNonNumericCharacters = (versionString, timeJson, dep) => {
-  if (dep === 'winston' || dep === 'ramda') {
-    console.log('in dealwith timemachine', versionString, timeJson);
-  }
-
   const patchVersion = versionString.match(/patch/);
   if (patchVersion) {
     const possibleVersionStrings = versionString.match(
@@ -72,9 +68,6 @@ const dealWithNonNumericCharacters = (versionString, timeJson, dep) => {
   }
   const lowestVersionMatches = versionString.match(/[\d\.]+$/g);
   if (!lowestVersionMatches) {
-    if (dep === 'winston') {
-      console.log('before unknown', versionString, timeJson);
-    }
     return 'Unknown'; // if it contains a string that doesn't end in numbers and dots we give up
   }
   const splitOurVersionArray = lowestVersionMatches[0].split('.');
@@ -153,20 +146,11 @@ Object.keys(allDependencies).forEach((dep, i) => {
         const depRepository = JSON.parse(stdout);
         const modifiedDate = new Date(depRepository.time.modified);
         const simplifiedModifiedDate = simplifyDate(modifiedDate);
-        if (dep === 'winston') {
-          console.log('winston', dep, depRepository.time);
-        }
-        if (dep === 'timemachine') {
-          console.log('timemachine', dep, depRepository.time);
-        }
         const ourVersion = dealWithNonNumericCharacters(
           allDependencies[dep],
           depRepository.time,
           dep,
         );
-        if (dep === 'winston') {
-          console.log('winston', ourVersion);
-        }
 
         const dateOfOurVersion = new Date(depRepository.time[ourVersion]);
         const simplifiedDateOfOurVersion = simplifyDate(dateOfOurVersion);
